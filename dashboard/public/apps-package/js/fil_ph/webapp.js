@@ -12441,7 +12441,7 @@ exports.catVariables = function(d){return "Mga variable"};
 
 exports.continue = function(d){return "Magpatuloy"};
 
-exports.createHtmlBlock = function(d){return "gumawa ng html block"};
+exports.createHtmlBlock = function(d){return "lumikha ng html block"};
 
 exports.createHtmlBlockTooltip = function(d){return "Lumilikha ng isang block ng HTML sa app."};
 
@@ -12473,7 +12473,7 @@ exports.stepOver = function(d){return "Hakbang sa paglipas ng"};
 
 exports.stepOut = function(d){return "Umalis"};
 
-exports.turnBlack = function(d){return "gawing black"};
+exports.turnBlack = function(d){return "gawing itim"};
 
 exports.turnBlackTooltip = function(d){return "Pinapa-itim ang screen."};
 

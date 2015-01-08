@@ -12542,9 +12542,9 @@ exports.parseElement = function(text) {
 
 },{}],40:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.sq=function(n){return n===1?"one":"other"}
-exports.bounceBall = function(d){return "bounce ball"};
+exports.bounceBall = function(d){return "Gjuajtje rikoshet"};
 
-exports.bounceBallTooltip = function(d){return "Bounce a ball off of an object."};
+exports.bounceBallTooltip = function(d){return "Gjuaj një objekt rikoshet."};
 
 exports.continue = function(d){return "Vazhdo"};
 
@@ -12574,15 +12574,15 @@ exports.ifelseTooltip = function(d){return "Nese eshte nje rruge ne drejtimin e 
 
 exports.incrementOpponentScore = function(d){return "rezultati i oponentit/es"};
 
-exports.incrementOpponentScoreTooltip = function(d){return "Add one to the current opponent score."};
+exports.incrementOpponentScoreTooltip = function(d){return "Shto një në rezultatin aktual të oponentit."};
 
-exports.incrementPlayerScore = function(d){return "increment player score"};
+exports.incrementPlayerScore = function(d){return "rezultati"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Add one to the current player score."};
+exports.incrementPlayerScoreTooltip = function(d){return "Shto një në rezultatin aktual të lojtarit."};
 
 exports.isWall = function(d){return "a është muri"};
 
-exports.isWallTooltip = function(d){return "Returns true if there is a wall here"};
+exports.isWallTooltip = function(d){return "Kthehet në \" i vërtetë\" nëse këtu egziston një mur."};
 
 exports.launchBall = function(d){return "nis nje top te ri"};
 
@@ -12592,23 +12592,23 @@ exports.makeYourOwn = function(d){return "Krijo Lojen Tende"};
 
 exports.moveDown = function(d){return "lëviz poshtë"};
 
-exports.moveDownTooltip = function(d){return "Move the paddle down."};
+exports.moveDownTooltip = function(d){return "Vendos pedalen poshtë."};
 
 exports.moveForward = function(d){return "levis perpara"};
 
 exports.moveForwardTooltip = function(d){return "Me leviz perpara nje hapesire."};
 
-exports.moveLeft = function(d){return "move left"};
+exports.moveLeft = function(d){return "lëviz majtas"};
 
-exports.moveLeftTooltip = function(d){return "Move the paddle to the left."};
+exports.moveLeftTooltip = function(d){return "Lëvize pedalen në të majtë."};
 
-exports.moveRight = function(d){return "move right"};
+exports.moveRight = function(d){return "lëviz djathtas"};
 
-exports.moveRightTooltip = function(d){return "Move the paddle to the right."};
+exports.moveRightTooltip = function(d){return "Lëviz pedalen në të djathtë."};
 
-exports.moveUp = function(d){return "move up"};
+exports.moveUp = function(d){return "lëviz sipër"};
 
-exports.moveUpTooltip = function(d){return "Move the paddle up."};
+exports.moveUpTooltip = function(d){return "Lëviz pedalen sipër."};
 
 exports.nextLevel = function(d){return "Urime! Ju keni perfunduar kete enigme."};
 
@@ -12630,31 +12630,31 @@ exports.pathRight = function(d){return "nese ka rruge ne te djathte"};
 
 exports.pilePresent = function(d){return "eshte nje grumbull"};
 
-exports.playSoundCrunch = function(d){return "play crunch sound"};
+exports.playSoundCrunch = function(d){return "vendos tingullin \"e kërcitjes\""};
 
-exports.playSoundGoal1 = function(d){return "play goal 1 sound"};
+exports.playSoundGoal1 = function(d){return "vendos tingullin \"qëllimi 1\""};
 
-exports.playSoundGoal2 = function(d){return "play goal 2 sound"};
+exports.playSoundGoal2 = function(d){return "vendos tingullin \"qëllimi 2\""};
 
-exports.playSoundHit = function(d){return "play hit sound"};
+exports.playSoundHit = function(d){return "vendos tingullin \"e goditjes\""};
 
-exports.playSoundLosePoint = function(d){return "play lose point sound"};
+exports.playSoundLosePoint = function(d){return "vendos tingullin \"humb pikë\""};
 
-exports.playSoundLosePoint2 = function(d){return "play lose point 2 sound"};
+exports.playSoundLosePoint2 = function(d){return "vendos tingullin \"humb pikë 2\""};
 
-exports.playSoundRetro = function(d){return "play retro sound"};
+exports.playSoundRetro = function(d){return "vendos tingullin \"retro\""};
 
-exports.playSoundRubber = function(d){return "play rubber sound"};
+exports.playSoundRubber = function(d){return "vendos tingullin e \"gomës\""};
 
-exports.playSoundSlap = function(d){return "play slap sound"};
+exports.playSoundSlap = function(d){return "vendos tingullin e \"goditjes\""};
 
-exports.playSoundTooltip = function(d){return "Play a sound."};
+exports.playSoundTooltip = function(d){return "Vendos tingullin e zgjedhur."};
 
-exports.playSoundWinPoint = function(d){return "play win point sound"};
+exports.playSoundWinPoint = function(d){return "vendos tingullin e \"fitoj pikë\""};
 
-exports.playSoundWinPoint2 = function(d){return "play win point 2 sound"};
+exports.playSoundWinPoint2 = function(d){return "vendos tingullin e \" fitoj pikë 2\""};
 
-exports.playSoundWood = function(d){return "play wood sound"};
+exports.playSoundWood = function(d){return "vendos tingullin \"e pyllit\""};
 
 exports.putdownTower = function(d){return "vendos ne toke nje kulle"};
 
@@ -12680,49 +12680,49 @@ exports.setBackgroundTooltip = function(d){return "Rregullo sfondin e imazhit"};
 
 exports.setBallRandom = function(d){return "rregullo topin e rastesishem"};
 
-exports.setBallHardcourt = function(d){return "set hardcourt ball"};
+exports.setBallHardcourt = function(d){return "vendos topin në fushë"};
 
-exports.setBallRetro = function(d){return "set retro ball"};
+exports.setBallRetro = function(d){return "vendos topin në retrospektivë"};
 
-exports.setBallTooltip = function(d){return "Sets the ball image"};
+exports.setBallTooltip = function(d){return "Pamje nga pozicionet e topit"};
 
-exports.setBallSpeedRandom = function(d){return "set random ball speed"};
+exports.setBallSpeedRandom = function(d){return "vendos topin në shpejtësi të zakonshme"};
 
-exports.setBallSpeedVerySlow = function(d){return "set very slow ball speed"};
+exports.setBallSpeedVerySlow = function(d){return "vendos topin në shpejtësi shumë të ulët"};
 
-exports.setBallSpeedSlow = function(d){return "set slow ball speed"};
+exports.setBallSpeedSlow = function(d){return "vendos topin në shpejtësi të ulët"};
 
-exports.setBallSpeedNormal = function(d){return "set normal ball speed"};
+exports.setBallSpeedNormal = function(d){return "vendos topin në shpejtësi normale"};
 
-exports.setBallSpeedFast = function(d){return "set fast ball speed"};
+exports.setBallSpeedFast = function(d){return "vendos topin në shpejtësi të lartë"};
 
-exports.setBallSpeedVeryFast = function(d){return "set very fast ball speed"};
+exports.setBallSpeedVeryFast = function(d){return "Vendos topin në shpejtësi shumë të lartë"};
 
-exports.setBallSpeedTooltip = function(d){return "Sets the speed of the ball"};
+exports.setBallSpeedTooltip = function(d){return "Vendos shpejtësinë e topit"};
 
-exports.setPaddleRandom = function(d){return "set random paddle"};
+exports.setPaddleRandom = function(d){return "Vendos një lopatë çfarëdo"};
 
-exports.setPaddleHardcourt = function(d){return "set hardcourt paddle"};
+exports.setPaddleHardcourt = function(d){return "vendos lopatën në fushë"};
 
-exports.setPaddleRetro = function(d){return "set retro paddle"};
+exports.setPaddleRetro = function(d){return "vendos lopatën në retrospektivë"};
 
-exports.setPaddleTooltip = function(d){return "Sets the ball paddle"};
+exports.setPaddleTooltip = function(d){return "Pamje nga pozicionet e lopatës"};
 
-exports.setPaddleSpeedRandom = function(d){return "set random paddle speed"};
+exports.setPaddleSpeedRandom = function(d){return "vendos lopatën në shpejtësi të zakonshme"};
 
-exports.setPaddleSpeedVerySlow = function(d){return "set very slow paddle speed"};
+exports.setPaddleSpeedVerySlow = function(d){return "vendos lopatën në shpejtësi shumë të ulët"};
 
-exports.setPaddleSpeedSlow = function(d){return "set slow paddle speed"};
+exports.setPaddleSpeedSlow = function(d){return "vendos lopatën në shpejtësi të ulët"};
 
-exports.setPaddleSpeedNormal = function(d){return "set normal paddle speed"};
+exports.setPaddleSpeedNormal = function(d){return "vendos lopatën në shpejtësi normale"};
 
-exports.setPaddleSpeedFast = function(d){return "set fast paddle speed"};
+exports.setPaddleSpeedFast = function(d){return "vendos lopatën në shpejtësi të lartë"};
 
-exports.setPaddleSpeedVeryFast = function(d){return "set very fast paddle speed"};
+exports.setPaddleSpeedVeryFast = function(d){return "Vendos lopatën në shpejtësi shumë të lartë"};
 
-exports.setPaddleSpeedTooltip = function(d){return "Sets the speed of the paddle"};
+exports.setPaddleSpeedTooltip = function(d){return "Vendos shpejtësinë e lopatës"};
 
-exports.shareBounceTwitter = function(d){return "Check out the Bounce game I made. I wrote it myself with @codeorg"};
+exports.shareBounceTwitter = function(d){return "Hidhi një sy lojës së topit që bëra. E krijova vet me @codeorg"};
 
 exports.shareGame = function(d){return "Share your game:"};
 
@@ -12732,41 +12732,41 @@ exports.turnRight = function(d){return "kthehu djathtas"};
 
 exports.turnTooltip = function(d){return "Te kthen majtas ose djathtas prej 90 gradesh."};
 
-exports.whenBallInGoal = function(d){return "when ball in goal"};
+exports.whenBallInGoal = function(d){return "kur kthehet topi në qëllim"};
 
-exports.whenBallInGoalTooltip = function(d){return "Execute the actions below when a ball enters the goal."};
+exports.whenBallInGoalTooltip = function(d){return "Kryej veprimet si më poshtë kur një top hyn në rrjetë."};
 
-exports.whenBallMissesPaddle = function(d){return "when ball misses paddle"};
+exports.whenBallMissesPaddle = function(d){return "kur një top nuk prek lopatën"};
 
-exports.whenBallMissesPaddleTooltip = function(d){return "Execute the actions below when a ball misses the paddle."};
+exports.whenBallMissesPaddleTooltip = function(d){return "Kryej veprimet si më poshtë kur një top nuk a arrin lopatën."};
 
-exports.whenDown = function(d){return "when Down arrow"};
+exports.whenDown = function(d){return "me kursorin poshtë"};
 
-exports.whenDownTooltip = function(d){return "Execute the actions below when the Down arrow button is pressed."};
+exports.whenDownTooltip = function(d){return "Kryej veprimet si më poshtë kur celësi i kursorit për poshtë të jetë i shtypur."};
 
 exports.whenGameStarts = function(d){return "when game starts"};
 
 exports.whenGameStartsTooltip = function(d){return "Execute the actions below when the game starts."};
 
-exports.whenLeft = function(d){return "when Left arrow"};
+exports.whenLeft = function(d){return "me kursorin e majtë"};
 
-exports.whenLeftTooltip = function(d){return "Execute the actions below when the Left arrow button is pressed."};
+exports.whenLeftTooltip = function(d){return "Kryej veprimet si më poshtë me  celësin e kursorit të majtë të shtypur."};
 
-exports.whenPaddleCollided = function(d){return "when ball hits paddle"};
+exports.whenPaddleCollided = function(d){return "kur topi godet lopatën"};
 
-exports.whenPaddleCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a paddle."};
+exports.whenPaddleCollidedTooltip = function(d){return "Kryej veprimet si më poshtë kur topi përplaset me lopatën."};
 
-exports.whenRight = function(d){return "when Right arrow"};
+exports.whenRight = function(d){return "me kursorin e djathtë"};
 
-exports.whenRightTooltip = function(d){return "Execute the actions below when the Right arrow button is pressed."};
+exports.whenRightTooltip = function(d){return "Kryej veprimet si më poshtë me kursorin e djathtë të shtypur."};
 
-exports.whenUp = function(d){return "when Up arrow"};
+exports.whenUp = function(d){return "me kursorin lartë"};
 
-exports.whenUpTooltip = function(d){return "Execute the actions below when the Up arrow button is pressed."};
+exports.whenUpTooltip = function(d){return "Kryej veprimet si më poshtë me çelësin e kursorit për lartë të shtypur."};
 
-exports.whenWallCollided = function(d){return "when ball hits wall"};
+exports.whenWallCollided = function(d){return "kur topi të godasi në mur"};
 
-exports.whenWallCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a wall."};
+exports.whenWallCollidedTooltip = function(d){return "Kryej veprimet si më poshtë kur një top të përplaset në mur."};
 
 exports.whileMsg = function(d){return "ndersa"};
 
@@ -12789,7 +12789,7 @@ exports.catActions = function(d){return "Veprimet"};
 
 exports.catColour = function(d){return "Ngjyra"};
 
-exports.catLogic = function(d){return "Logic"};
+exports.catLogic = function(d){return "Logjika"};
 
 exports.catLists = function(d){return "Listat"};
 
@@ -12803,11 +12803,11 @@ exports.catText = function(d){return "Tekst"};
 
 exports.catVariables = function(d){return "variabla"};
 
-exports.codeTooltip = function(d){return "Shikoni kodin e gjenerua JavaScript."};
+exports.codeTooltip = function(d){return "Shikoni kodin e gjeneruar në JavaScript."};
 
 exports.continue = function(d){return "Vazhdo"};
 
-exports.dialogCancel = function(d){return "Anulo"};
+exports.dialogCancel = function(d){return "Anullo"};
 
 exports.dialogOK = function(d){return "Ne rregull"};
 
@@ -12819,141 +12819,141 @@ exports.directionEastLetter = function(d){return "E"};
 
 exports.directionWestLetter = function(d){return "W"};
 
-exports.end = function(d){return "end"};
+exports.end = function(d){return "fundi"};
 
-exports.emptyBlocksErrorMsg = function(d){return "The \"Repeat\" or \"If\" block needs to have other blocks inside it to work. Make sure the inner block fits properly inside the containing block."};
+exports.emptyBlocksErrorMsg = function(d){return "Blloku \"Përsërit\" ose \"Nëse\"  ka nevojë të ketë blloqe të tjera brënda në mënyrë që të funksionojë. Sigurohu që blloku i brendshëm të përshtatet në mënyrë sa më të mirë brenda bllokut që e përmban."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Blloku i funksionit ka nevojë për blloqe të tjera brënda, në mënyrë që të funksionojë."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "Duhet që të ketë blloqe brenda përcaktimit të funksionit tënd. Kliko \"redakto\" dhe zhvendos blloqet brenda bllokut të gjelbër."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "Kliko \"redakto\" për tu siguruar që nuk mungon ndonjë bllok brenda përcaktimit të funksionit tënd."};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "Kujtohu që të bashkangjitësh një bllok në çdo parametër që futet në bllokun e funksionit tek zona juaj e punimit."};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "Ti shtove një bllok parametër, por nuk e përdore atë në përcaktim. Sigurohu që të përdorësh parametrin tënd duke klikuar \"redakto\" dhe duke vendosur këtë parametër bllok brenda bllokut të gjelbër."};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "Krijo një parametër për funksionin tënd duke klikuar \"redakto\" dhe duke shtuar parametrat e nevojshëm. Zhvendos blloqet e reja me parametra brenda në përcaktimin e funksionit tënd."};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "Ti krijove një funksion, por nuk e përdore asnjëherë në hapësirën tënde të punës! Kliko tek \"Funksionet\" në grupin e komandave dhe sigurohu që ta përdorësh atë në programin tënd."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "Përpiqu të zëvendësosh \"???\" me një vlerë."};
 
-exports.extraTopBlocks = function(d){return "You have extra blocks that aren't attached to an event block."};
+exports.extraTopBlocks = function(d){return "Ti ke blloqe që nuk janë të bashkuar. Mendove të bashkosh ato me bllokun \"kur vrapon\"?"};
 
 exports.finalStage = function(d){return "Urime! Ju sapo perfunduat fazen finale "};
 
 exports.finalStageTrophies = function(d){return "Congratulations! You have completed the final stage and won "+p(d,"numTrophies",0,"sq",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Përfundo"};
 
-exports.generatedCodeInfo = function(d){return "The blocks for your program can also be represented in JavaScript, the world's most widely adopted programming language:"};
+exports.generatedCodeInfo = function(d){return "Even top universities teach block-based coding (e.g., "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). But under the hood, the blocks you have assembled can also be shown in JavaScript, the world's most widely used coding language:"};
 
-exports.hashError = function(d){return "Sorry, '%1' doesn't correspond with any saved program."};
+exports.hashError = function(d){return "Më vjen keq, '%1' nuk përputhet me asnjë program të ruajtur."};
 
 exports.help = function(d){return "Ndihmë"};
 
 exports.hintTitle = function(d){return "Ndihmes:"};
 
-exports.jump = function(d){return "jump"};
+exports.jump = function(d){return "hidhu"};
 
-exports.levelIncompleteError = function(d){return "You are using all of the necessary types of blocks but not in the right way."};
+exports.levelIncompleteError = function(d){return "Ti je duke përdorur të gjithë tipet e nevojshëm të blloqeve, por jo në mënyrën e duhur."};
 
 exports.listVariable = function(d){return "listë"};
 
-exports.makeYourOwnFlappy = function(d){return "Make Your Own Flappy Game"};
+exports.makeYourOwnFlappy = function(d){return "Bëj lojën tënde Flappy"};
 
-exports.missingBlocksErrorMsg = function(d){return "Try one or more of the blocks below to solve this puzzle."};
+exports.missingBlocksErrorMsg = function(d){return "Përdor një ose më shumë nga blloqet e mëposhtme për të zgjidhur këtë puzzle."};
 
 exports.nextLevel = function(d){return "Urime ju e perfunduat Puzzle-n "+v(d,"puzzleNumber")+"."};
 
 exports.nextLevelTrophies = function(d){return "Congratulations! You completed Puzzle "+v(d,"puzzleNumber")+" and won "+p(d,"numTrophies",0,"sq",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
-exports.nextStage = function(d){return "Congratulations! You completed Stage "+v(d,"stageNumber")+"."};
+exports.nextStage = function(d){return "Urime! Ti përfundove "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Congratulations! You completed Stage "+v(d,"stageNumber")+" and won "+p(d,"numTrophies",0,"sq",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
+exports.nextStageTrophies = function(d){return "Congratulations! You completed "+v(d,"stageName")+" and won "+p(d,"numTrophies",0,"sq",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Congratulations! You completed Puzzle "+v(d,"puzzleNumber")+". (However, you could have used only "+p(d,"numBlocks",0,"sq",{"one":"1 block","other":n(d,"numBlocks")+" blocks"})+".)"};
 
 exports.numLinesOfCodeWritten = function(d){return "You just wrote "+p(d,"numLines",0,"sq",{"one":"1 line","other":n(d,"numLines")+" lines"})+" of code!"};
 
-exports.play = function(d){return "play"};
+exports.play = function(d){return "luaj"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Shtyp"};
 
-exports.puzzleTitle = function(d){return "Puzzle "+v(d,"puzzle_number")+" of "+v(d,"stage_total")};
+exports.puzzleTitle = function(d){return "Puzzle "+v(d,"puzzle_number")+" i "+v(d,"stage_total")};
 
 exports.repeat = function(d){return "përsërit"};
 
-exports.resetProgram = function(d){return "Reset"};
+exports.resetProgram = function(d){return "Rivendosni"};
 
-exports.runProgram = function(d){return "Run Program"};
+exports.runProgram = function(d){return "Ekzekuto"};
 
-exports.runTooltip = function(d){return "Run the program defined by the blocks in the workspace."};
+exports.runTooltip = function(d){return "Ekzekuto programin e përcaktuar nga blloqet, në hapësirën tënde të punës."};
 
-exports.score = function(d){return "score"};
+exports.score = function(d){return "rezultati"};
 
 exports.showCodeHeader = function(d){return "Shfaq kodin"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Shfaq Blloqet"};
 
 exports.showGeneratedCode = function(d){return "Shfaq kodin"};
 
-exports.stringEquals = function(d){return "string=?"};
+exports.stringEquals = function(d){return "vargu=?"};
 
-exports.subtitle = function(d){return "a visual programming environment"};
+exports.subtitle = function(d){return "një mjedis i dukshëm programimi"};
 
-exports.textVariable = function(d){return "text"};
+exports.textVariable = function(d){return "teksti"};
 
-exports.tooFewBlocksMsg = function(d){return "You are using all of the necessary types of blocks, but try using more  of these types of blocks to complete this puzzle."};
+exports.tooFewBlocksMsg = function(d){return "Ti je duke i përdorur të gjithë tipet e nevojshëm të blloqeve, por përpiqu të përdorësh më shumë nga këto tipe blloqesh për të përfunduar këtë puzzle."};
 
-exports.tooManyBlocksMsg = function(d){return "This puzzle can be solved with <x id='START_SPAN'/><x id='END_SPAN'/> blocks."};
+exports.tooManyBlocksMsg = function(d){return "Ky puzzle mund të zgjidhet me blloqet <x id='START_SPAN'/><x id='END_SPAN'/>."};
 
-exports.tooMuchWork = function(d){return "You made me do a lot of work!  Could you try repeating fewer times?"};
+exports.tooMuchWork = function(d){return "Ti më detyrove të bëj shumë veprime! Mund të përpiqesh ta përsërisësh me më pak hapa?"};
 
 exports.toolboxHeader = function(d){return "blloqe"};
 
-exports.openWorkspace = function(d){return "How It Works"};
+exports.openWorkspace = function(d){return "Si Funksionon"};
 
 exports.totalNumLinesOfCodeWritten = function(d){return "All-time total: "+p(d,"numLines",0,"sq",{"one":"1 line","other":n(d,"numLines")+" lines"})+" of code."};
 
 exports.tryAgain = function(d){return "Provo perseri"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Shih ndihmën"};
 
-exports.backToPreviousLevel = function(d){return "Kthehu ne nivelin e meparshem"};
+exports.backToPreviousLevel = function(d){return "Kthehu në nivelin e mëparshëm"};
 
-exports.saveToGallery = function(d){return "Save to your gallery"};
+exports.saveToGallery = function(d){return "Ruaj tek galeria"};
 
-exports.savedToGallery = function(d){return "Saved to your gallery!"};
+exports.savedToGallery = function(d){return "U ruajt në galeri!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Më vjen keq, ne nuk mund ta ndajmë këtë program."};
 
-exports.workspaceHeader = function(d){return "Assemble your blocks here: "};
+exports.workspaceHeader = function(d){return "Vendosi blloqet e tua këtu: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Shtyp kodin tënd JavaScript këtu"};
 
-exports.infinity = function(d){return "Infinity"};
+exports.infinity = function(d){return "Pafundësi"};
 
-exports.rotateText = function(d){return "Rotate your device."};
+exports.rotateText = function(d){return "Rrotullo pajisjen tënde."};
 
-exports.orientationLock = function(d){return "Turn off orientation lock in device settings."};
+exports.orientationLock = function(d){return "Fik orientimet në konfigurimet e pajisjes."};
 
-exports.wantToLearn = function(d){return "Want to learn to code?"};
+exports.wantToLearn = function(d){return "Dëshiron të mësosh se si të kodosh?"};
 
-exports.watchVideo = function(d){return "Watch the Video"};
+exports.watchVideo = function(d){return "Shiko Videon"};
 
-exports.when = function(d){return "when"};
+exports.when = function(d){return "kur"};
 
-exports.whenRun = function(d){return "when run"};
+exports.whenRun = function(d){return "kur vrapon"};
 
-exports.tryHOC = function(d){return "Try the Hour of Code"};
+exports.tryHOC = function(d){return "Provo Orën e Kodimit"};
 
-exports.signup = function(d){return "Sign up for the intro course"};
+exports.signup = function(d){return "Rregjistrohu për kursin hyrës"};
 
-exports.hintHeader = function(d){return "Here's a tip:"};
+exports.hintHeader = function(d){return "Ja ku është një këshillë:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "Shiko se si përfundove dhe përpiqu të rregullosh programin tënd."};
 
 exports.defaultTwitterText = function(d){return "Check out what I made"};
 

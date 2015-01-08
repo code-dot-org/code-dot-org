@@ -15227,7 +15227,7 @@ exports.moveTooltip = function(d){return "Déplace l'artiste vers l'avant ou l'a
 
 exports.notBlackColour = function(d){return "Vous devez dessiner avec une autre couleur que le noir pour résoudre cette énigme."};
 
-exports.numBlocksNeeded = function(d){return "Ce puzzle peut être résolu avec %1 blocs. Vous en avez utilisé %2."};
+exports.numBlocksNeeded = function(d){return "Ce puzzle peut être résolu avec %1 blocs. Tu en as utilisé %2."};
 
 exports.penDown = function(d){return "baisser le crayon"};
 
@@ -15253,7 +15253,7 @@ exports.sizeParameter = function(d){return "taille"};
 
 exports.step = function(d){return "étape"};
 
-exports.tooFewColours = function(d){return "Vous devez utiliser au moins %1 couleurs différentes pour ce puzzle. Vous n'en avez utilisé que %2."};
+exports.tooFewColours = function(d){return "Tu dois utiliser au moins %1 couleurs différentes pour ce puzzle. Tu en as seulement utilisé %2."};
 
 exports.turnLeft = function(d){return "tourner à gauche de"};
 

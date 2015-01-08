@@ -12452,7 +12452,7 @@ exports.listVariable = function(d){return "lista"};
 
 exports.makeYourOwnFlappy = function(d){return "Készíts saját Flappy játékot"};
 
-exports.missingBlocksErrorMsg = function(d){return "Próbáld meg a lenti blokkokat használni, hogy megoldd a rejtvényt."};
+exports.missingBlocksErrorMsg = function(d){return "A feladvány megoldásához használj egy vagy több blokkot az alábbiak közül."};
 
 exports.nextLevel = function(d){return "Gratulálok! Megoldottad a "+v(d,"puzzleNumber")+". feladványt."};
 
@@ -12518,7 +12518,7 @@ exports.savedToGallery = function(d){return "Elmentve a galériába!"};
 
 exports.shareFailure = function(d){return "Sajnálom, de nem tudjuk megosztani ezt a programot."};
 
-exports.workspaceHeader = function(d){return "Építsd össze a blokkokat itt: "};
+exports.workspaceHeader = function(d){return "Itt fűzd fel a blokkokat: "};
 
 exports.workspaceHeaderJavaScript = function(d){return "Ide írd a JavaScript kódodat"};
 
@@ -12563,17 +12563,17 @@ exports.finalLevel = function(d){return "Gratulálok! A megoldottad az utolsó f
 
 exports.flap = function(d){return "Csapj"};
 
-exports.flapRandom = function(d){return "Véletlen számút csap"};
+exports.flapRandom = function(d){return "véletlen nagyságút csap"};
 
-exports.flapVerySmall = function(d){return "Nagyon keveset csap"};
+exports.flapVerySmall = function(d){return "nagyon kicsit csap"};
 
-exports.flapSmall = function(d){return "keveset csap"};
+exports.flapSmall = function(d){return "kicsit csap"};
 
-exports.flapNormal = function(d){return "normál számút csap"};
+exports.flapNormal = function(d){return "átlagosat csap"};
 
-exports.flapLarge = function(d){return "sokat csap"};
+exports.flapLarge = function(d){return "nagyot csap"};
 
-exports.flapVeryLarge = function(d){return "nagyon sokat csap"};
+exports.flapVeryLarge = function(d){return "nagyon nagyot csap"};
 
 exports.flapTooltip = function(d){return "Szálljon Flappy felfelé."};
 
@@ -12603,7 +12603,7 @@ exports.playSoundPoint = function(d){return "játssz le mutató hangot"};
 
 exports.playSoundSwoosh = function(d){return "játssz le suhanó hangot"};
 
-exports.playSoundWing = function(d){return "játssz le szárcsapás hangot"};
+exports.playSoundWing = function(d){return "játssz le szárnycsapás hangot"};
 
 exports.playSoundJet = function(d){return "játssz le repülő hangot"};
 
@@ -12651,7 +12651,7 @@ exports.setGapLarge = function(d){return "rés beállítása : Nagy"};
 
 exports.setGapVeryLarge = function(d){return "rés beállítása : Nagyon nagy"};
 
-exports.setGapHeightTooltip = function(d){return "Függőleges akadály beállítása akadályban"};
+exports.setGapHeightTooltip = function(d){return "Az akadályban levő rés magasságának  beállítása"};
 
 exports.setGravityRandom = function(d){return "Véletlenszerű gravitáció beállítása"};
 
@@ -12789,11 +12789,11 @@ exports.speedVeryFast = function(d){return "Nagyon magas sebesség beállítása
 
 exports.whenClick = function(d){return "Klikkelésre"};
 
-exports.whenClickTooltip = function(d){return "Hajtsd végre a lenti műveletet klikkelésre."};
+exports.whenClickTooltip = function(d){return "Kattintáskor a lenti műveleteteket hajtsd végre."};
 
 exports.whenCollideGround = function(d){return "ha becsapódik a talajba"};
 
-exports.whenCollideGroundTooltip = function(d){return "Hajtsd végre a lenti műveletet, ha Flappy becsapódik a talajba."};
+exports.whenCollideGroundTooltip = function(d){return "Hajtsd végre a lenti műveleteteket, ha Flappy becsapódik a talajba."};
 
 exports.whenCollideObstacle = function(d){return "ha akadálynak ütközik"};
 
@@ -12801,7 +12801,7 @@ exports.whenCollideObstacleTooltip = function(d){return "Végrehajtja a lenti ut
 
 exports.whenEnterObstacle = function(d){return "ha átjut egy akadályon"};
 
-exports.whenEnterObstacleTooltip = function(d){return "Hajtsd végre a lenti utasítást, ha Flappy átmegy egy akadályon."};
+exports.whenEnterObstacleTooltip = function(d){return "Hajtsd végre a lenti műveleteket, ha Flappy átmegy egy akadályon."};
 
 exports.whenRunButtonClick = function(d){return "amikor a játék elindul"};
 

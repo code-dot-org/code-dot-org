@@ -21441,7 +21441,7 @@ exports.listVariable = function(d){return "lista"};
 
 exports.makeYourOwnFlappy = function(d){return "Készíts saját Flappy játékot"};
 
-exports.missingBlocksErrorMsg = function(d){return "Próbáld meg a lenti blokkokat használni, hogy megoldd a rejtvényt."};
+exports.missingBlocksErrorMsg = function(d){return "A feladvány megoldásához használj egy vagy több blokkot az alábbiak közül."};
 
 exports.nextLevel = function(d){return "Gratulálok! Megoldottad a "+v(d,"puzzleNumber")+". feladványt."};
 
@@ -21507,7 +21507,7 @@ exports.savedToGallery = function(d){return "Elmentve a galériába!"};
 
 exports.shareFailure = function(d){return "Sajnálom, de nem tudjuk megosztani ezt a programot."};
 
-exports.workspaceHeader = function(d){return "Építsd össze a blokkokat itt: "};
+exports.workspaceHeader = function(d){return "Itt fűzd fel a blokkokat: "};
 
 exports.workspaceHeaderJavaScript = function(d){return "Ide írd a JavaScript kódodat"};
 
@@ -21538,7 +21538,7 @@ exports.defaultTwitterText = function(d){return "Nézd meg, mit csináltam"};
 
 },{"messageformat":61}],49:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.hu=function(n){return "other"}
-exports.actor = function(d){return "színész"};
+exports.actor = function(d){return "szereplő"};
 
 exports.alienInvasion = function(d){return "Földönkívüli invázió!"};
 
@@ -21622,15 +21622,15 @@ exports.makeProjectilePurpleHearts = function(d){return "csinálj lila szíveket
 
 exports.makeProjectileRedHearts = function(d){return "csinálj piros szíveket"};
 
-exports.makeProjectileTooltip = function(d){return "Állítsd be az éppen ütköző lövedéket hogy eltűnjön vagy visszapattanjon."};
+exports.makeProjectileTooltip = function(d){return "Állítsd be, hogy az éppen ütköző lövedék eltűnjön vagy visszapattanjon."};
 
 exports.makeYourOwn = function(d){return "Készíts saját Play Lab alkalmazást"};
 
 exports.moveDirectionDown = function(d){return "le"};
 
-exports.moveDirectionLeft = function(d){return "bal"};
+exports.moveDirectionLeft = function(d){return "balra"};
 
-exports.moveDirectionRight = function(d){return "jobb"};
+exports.moveDirectionRight = function(d){return "jobbra"};
 
 exports.moveDirectionUp = function(d){return "fel"};
 
@@ -21674,7 +21674,7 @@ exports.moveUp = function(d){return "feljebb"};
 
 exports.moveUpTooltip = function(d){return "Mozgass egy szereplőt felfele."};
 
-exports.moveTooltip = function(d){return "mozogjon a művész."};
+exports.moveTooltip = function(d){return "Mozgass egy szereplőt."};
 
 exports.nextLevel = function(d){return "Gratulálok! Ezt a feladatot megoldottad."};
 
@@ -21854,9 +21854,9 @@ exports.setSpriteDinosaur = function(d){return "dinoszurusszá"};
 
 exports.setSpriteDog = function(d){return "kutyává"};
 
-exports.setSpriteDragon = function(d){return "sárkány képre"};
+exports.setSpriteDragon = function(d){return "sárkánnyá"};
 
-exports.setSpriteGhost = function(d){return "szellem képre"};
+exports.setSpriteGhost = function(d){return "szellemmé"};
 
 exports.setSpriteHidden = function(d){return "rejtett képre"};
 
@@ -22034,7 +22034,7 @@ exports.waitFor5Seconds = function(d){return "várj 5 másodpercet"};
 
 exports.waitFor10Seconds = function(d){return "várj 10 másodpercet"};
 
-exports.waitParamsTooltip = function(d){return "Várj a megadott számú másodpercig vagy a nulla használatával, amíg nem történik kattintás."};
+exports.waitParamsTooltip = function(d){return "Várj a megadott számú másodpercig vagy adj meg nullát kattintásra várakozáshoz."};
 
 exports.waitTooltip = function(d){return "Várj a megadott ideig vagy amíg nem történik kattintás."};
 
@@ -22052,7 +22052,7 @@ exports.whenDown = function(d){return "Ha van lefelé nyíl"};
 
 exports.whenDownTooltip = function(d){return "Végrehajtja az alábbi parancsokat, ha a lefelé nyíl le van nyomva."};
 
-exports.whenGameStarts = function(d){return "Amikor a történet kezdődik"};
+exports.whenGameStarts = function(d){return "amikor a történet kezdődik"};
 
 exports.whenGameStartsTooltip = function(d){return "Hajtsd végre az alábbi műveleteket, a történet indulásakor."};
 
@@ -22066,25 +22066,25 @@ exports.whenRightTooltip = function(d){return "Végrehajtja az alábbi parancsok
 
 exports.whenSpriteClicked = function(d){return "amikor a szereplőre kattintunk"};
 
-exports.whenSpriteClickedN = function(d){return "Amikor a "+v(d,"spriteIndex")+". szereplőre kattint"};
+exports.whenSpriteClickedN = function(d){return "amikor a "+v(d,"spriteIndex")+". szereplőre kattint"};
 
 exports.whenSpriteClickedTooltip = function(d){return "Hajtsd végre az alábbi műveleteket, ha egy szereplőre kattintanak."};
 
-exports.whenSpriteCollidedN = function(d){return "Amikor a "+v(d,"spriteIndex")+". szereplő"};
+exports.whenSpriteCollidedN = function(d){return "amikor a "+v(d,"spriteIndex")+". szereplő"};
 
 exports.whenSpriteCollidedTooltip = function(d){return "Hajtsd végre az alábbi műveleteket, ha az egyik szereplő hozzáér egy másikhoz."};
 
 exports.whenSpriteCollidedWith = function(d){return "megérinti"};
 
-exports.whenSpriteCollidedWithAnyActor = function(d){return "színész érintése"};
+exports.whenSpriteCollidedWithAnyActor = function(d){return "bármely szereplő érintése"};
 
-exports.whenSpriteCollidedWithAnyEdge = function(d){return "szegély érintése"};
+exports.whenSpriteCollidedWithAnyEdge = function(d){return "bármely szegély érintése"};
 
-exports.whenSpriteCollidedWithAnyProjectile = function(d){return "tárgyvonal érintése"};
+exports.whenSpriteCollidedWithAnyProjectile = function(d){return "bármely lövedék érintése"};
 
 exports.whenSpriteCollidedWithAnything = function(d){return "bármi érintése"};
 
-exports.whenSpriteCollidedWithN = function(d){return "színész "+v(d,"spriteIndex")+" érintése"};
+exports.whenSpriteCollidedWithN = function(d){return v(d,"spriteIndex")+". szereplő érintése"};
 
 exports.whenSpriteCollidedWithBlueFireball = function(d){return "kék tűzgolyó érintése"};
 

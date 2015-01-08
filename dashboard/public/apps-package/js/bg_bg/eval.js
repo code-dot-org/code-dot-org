@@ -14720,7 +14720,7 @@ exports.subtitle = function(d){return "визуална среда за прог
 
 exports.textVariable = function(d){return "текст"};
 
-exports.tooFewBlocksMsg = function(d){return "Вие използвате всички нужни блокове, но в недостатъчно количество, за да завършите този пъзел."};
+exports.tooFewBlocksMsg = function(d){return "Използвали сте всички необходими видове блокове, но ще ви трябват още от същите видове, за да завършите този пъзел."};
 
 exports.tooManyBlocksMsg = function(d){return "Този пъзел може да бъде решен с <x id='START_SPAN'/><x id='END_SPAN'/> блокове."};
 
@@ -14803,7 +14803,7 @@ exports.starBlockTitle = function(d){return "звезда (радиус, сти�
 
 exports.radialStarBlockTitle = function(d){return "радиално-звезда (точки, вътрешна, външна, стил, цвят)"};
 
-exports.polygonBlockTitle = function(d){return "polygon (sides, length, style, color)"};
+exports.polygonBlockTitle = function(d){return "многоъгълник (страни, дължина, стил, цвят)"};
 
 exports.stringAppendBlockTitle = function(d){return "Добавяне на поредица (първо, второ)"};
 

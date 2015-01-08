@@ -12441,9 +12441,9 @@ exports.catVariables = function(d){return "চলকগুলো"};
 
 exports.continue = function(d){return "চালিয়ে যান"};
 
-exports.createHtmlBlock = function(d){return "create html block"};
+exports.createHtmlBlock = function(d){return "html ব্লক তৈরি করুন"};
 
-exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
+exports.createHtmlBlockTooltip = function(d){return "অ্যাপে একটি HTML ব্লক তৈরি করে।"};
 
 exports.finalLevel = function(d){return "Congratulations! You have solved the final puzzle."};
 
@@ -12453,7 +12453,7 @@ exports.no = function(d){return "না"};
 
 exports.numBlocksNeeded = function(d){return "This puzzle can be solved with %1 blocks."};
 
-exports.pause = function(d){return "Pause"};
+exports.pause = function(d){return "বিরতি"};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
 
@@ -12465,7 +12465,7 @@ exports.repeatForeverTooltip = function(d){return "Execute the actions in this b
 
 exports.shareWebappTwitter = function(d){return "Check out the app I made. I wrote it myself with @codeorg"};
 
-exports.shareGame = function(d){return "Share your app:"};
+exports.shareGame = function(d){return "আপনার অ্যাপটি শেয়ার করুন:"};
 
 exports.stepIn = function(d){return "Step in"};
 

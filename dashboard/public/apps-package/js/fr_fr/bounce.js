@@ -12542,9 +12542,9 @@ exports.parseElement = function(text) {
 
 },{}],40:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.fr=function(n){return n===0||n==1?"one":"other"}
-exports.bounceBall = function(d){return "rebondir balle"};
+exports.bounceBall = function(d){return "Faire rebondir une balle"};
 
-exports.bounceBallTooltip = function(d){return "Fait rebondir une balle sur un objet."};
+exports.bounceBallTooltip = function(d){return "Faites rebondir une balle sur un objet."};
 
 exports.continue = function(d){return "Continuer"};
 
@@ -12582,13 +12582,13 @@ exports.incrementPlayerScoreTooltip = function(d){return "Ajouter un point au sc
 
 exports.isWall = function(d){return "est-ce un mur"};
 
-exports.isWallTooltip = function(d){return "Retourne vrai s'il y a un mur ici"};
+exports.isWallTooltip = function(d){return "Valide vrai s'il y a un mur ici"};
 
-exports.launchBall = function(d){return "lancer une nouvelle balle"};
+exports.launchBall = function(d){return "lance une nouvelle balle"};
 
 exports.launchBallTooltip = function(d){return "Mets une balle en jeu."};
 
-exports.makeYourOwn = function(d){return "Créez votre propre jeu Pong"};
+exports.makeYourOwn = function(d){return "Créez votre propre jeu à Rebond"};
 
 exports.moveDown = function(d){return "déplacer vers le bas"};
 
@@ -12670,7 +12670,7 @@ exports.repeatUntilFinish = function(d){return "répéter jusqu'à la fin"};
 
 exports.scoreText = function(d){return "Pointage: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
 
-exports.setBackgroundRandom = function(d){return "choisir un arrière-plan au hasard"};
+exports.setBackgroundRandom = function(d){return "choisir une scène aléatoire"};
 
 exports.setBackgroundHardcourt = function(d){return "choisir l'arrière-plan Tennis de table"};
 

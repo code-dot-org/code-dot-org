@@ -11054,7 +11054,7 @@ exports.hintHeader = function(d){return "Подсказка:"};
 
 exports.genericFeedback = function(d){return "Посмотрите, что у вас получилось, и попытайтесь исправить вашу программу."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Проверить, что я сделал"};
 
 
 },{"messageformat":49}],37:[function(require,module,exports){

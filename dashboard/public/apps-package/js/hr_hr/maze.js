@@ -16915,25 +16915,25 @@ exports.make = function(d){return "napravi"};
 
 exports.moveBackward = function(d){return "idi unatrag"};
 
-exports.moveEastTooltip = function(d){return "Pomiče me za jedno polje na Istok."};
+exports.moveEastTooltip = function(d){return "Premjesti me za jedno polje na Istok."};
 
 exports.moveForward = function(d){return "idi naprijed"};
 
 exports.moveForwardTooltip = function(d){return "Pomakni me naprijed za jedno polje."};
 
-exports.moveNorthTooltip = function(d){return "Pomiče me za jedno polje na Sjever."};
+exports.moveNorthTooltip = function(d){return "Premjesti me za jedno polje na Sjever."};
 
-exports.moveSouthTooltip = function(d){return "Pomiče me za jedno polje na Jug."};
+exports.moveSouthTooltip = function(d){return "Premjesti me za jedno polje na Jug."};
 
-exports.moveTooltip = function(d){return "Pomicanje naprijed ili nazad za jedno polje"};
+exports.moveTooltip = function(d){return "Premjesti me naprijed ili nazad za jedno polje"};
 
-exports.moveWestTooltip = function(d){return "Pomiče me za jedno polje na Zapad."};
+exports.moveWestTooltip = function(d){return "Premjesti me za jedno polje na Zapad."};
 
 exports.nectar = function(d){return "pokupi nektar"};
 
 exports.nectarRemaining = function(d){return "nektar"};
 
-exports.nectarTooltip = function(d){return "Skuplja nektar sa cvijeta"};
+exports.nectarTooltip = function(d){return "Pokupi nektar sa cvijeta"};
 
 exports.nextLevel = function(d){return "Čestitamo! Ovaj zadatak je riješen."};
 
@@ -16957,7 +16957,7 @@ exports.pathLeft = function(d){return "ako je staza lijevo"};
 
 exports.pathRight = function(d){return "ako je staza desno"};
 
-exports.pilePresent = function(d){return "ovdje je gomila"};
+exports.pilePresent = function(d){return "ovdje je hrpa"};
 
 exports.putdownTower = function(d){return "spusti kulu"};
 
@@ -16967,7 +16967,7 @@ exports.removeN = function(d){return "ukloni "+v(d,"shovelfuls")};
 
 exports.removePile = function(d){return "ukloni gomilu"};
 
-exports.removeStack = function(d){return "ukloni "+v(d,"shovelfuls")+" gomila"};
+exports.removeStack = function(d){return "ukloni hrpu od "+v(d,"shovelfuls")+" lopata"};
 
 exports.removeSquare = function(d){return "ukloni kvadrat"};
 

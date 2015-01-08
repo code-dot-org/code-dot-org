@@ -12905,7 +12905,7 @@ exports.subtitle = function(d){return "визуална среда за прог
 
 exports.textVariable = function(d){return "текст"};
 
-exports.tooFewBlocksMsg = function(d){return "Вие използвате всички нужни блокове, но в недостатъчно количество, за да завършите този пъзел."};
+exports.tooFewBlocksMsg = function(d){return "Използвали сте всички необходими видове блокове, но ще ви трябват още от същите видове, за да завършите този пъзел."};
 
 exports.tooManyBlocksMsg = function(d){return "Този пъзел може да бъде решен с <x id='START_SPAN'/><x id='END_SPAN'/> блокове."};
 

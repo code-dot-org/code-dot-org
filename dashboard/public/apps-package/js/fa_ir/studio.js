@@ -21357,9 +21357,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.fa=function(n){return "other"}
 exports.and = function(d){return "و"};
 
-exports.booleanTrue = function(d){return "درست"};
+exports.booleanTrue = function(d){return "صحیح"};
 
-exports.booleanFalse = function(d){return "نادرست\nغلط"};
+exports.booleanFalse = function(d){return "ناصحیح"};
 
 exports.blocklyMessage = function(d){return "بلاکلی"};
 
@@ -21533,7 +21533,7 @@ exports.hintHeader = function(d){return "نکته اینجاست:"};
 
 exports.genericFeedback = function(d){return "ببینبد چطور تمامش کردید,و سعی به رفع مشکلات برنامه خود کنید."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "آنچه من ساخته ام را امتحان کن "};
 
 
 },{"messageformat":61}],49:[function(require,module,exports){
@@ -21622,9 +21622,9 @@ exports.makeProjectilePurpleHearts = function(d){return "قلب های بنفش 
 
 exports.makeProjectileRedHearts = function(d){return "قلب های  قرمز بساز"};
 
-exports.makeProjectileTooltip = function(d){return "Make the projectile that just collided disappear or bounce."};
+exports.makeProjectileTooltip = function(d){return "موشکی که تازه برخورد کرده را ناپدید کنید یا بالا و پایین ببرید."};
 
-exports.makeYourOwn = function(d){return "داستان خودتو بساز"};
+exports.makeYourOwn = function(d){return "برنامه ی آزمایشگاه بازی خودتان را بسازید"};
 
 exports.moveDirectionDown = function(d){return "پایین"};
 
@@ -21824,7 +21824,7 @@ exports.setPlayerSpeed = function(d){return "تنظیم سرعت پخش"};
 
 exports.setScoreText = function(d){return "تنظیم امتیاز"};
 
-exports.setScoreTextTooltip = function(d){return "Sets the text to be displayed in the score area."};
+exports.setScoreTextTooltip = function(d){return "نوشته را تنظیم می کند تا در ناحیه ی امتیاز نمایش داده شود."};
 
 exports.setSpriteEmotionAngry = function(d){return "تبدیل احساس به حالت عصبانی"};
 
@@ -21964,13 +21964,13 @@ exports.showTSDefTitle = function(d){return "عنوان را اینجا بنوی
 
 exports.showTSDefText = function(d){return "متن را اینجا بنویس"};
 
-exports.showTitleScreenTooltip = function(d){return "Show a title screen with the associated title and text."};
+exports.showTitleScreenTooltip = function(d){return "یک صفحه ی عنوان با عنوان و نوشته ی مرتبط نشان دهید."};
 
 exports.size = function(d){return "اندازه"};
 
 exports.setSprite = function(d){return "مجموعه"};
 
-exports.setSpriteN = function(d){return "set actor "+v(d,"spriteIndex")};
+exports.setSpriteN = function(d){return "عملگر را تنظیم کنید "+v(d,"spriteIndex")};
 
 exports.soundCrunch = function(d){return "خرد شدن"};
 
@@ -22002,13 +22002,13 @@ exports.stopSprite = function(d){return "بایست"};
 
 exports.stopSpriteN = function(d){return "توقف بازیگر "+v(d,"spriteIndex")};
 
-exports.stopTooltip = function(d){return "Stops an actor's movement."};
+exports.stopTooltip = function(d){return "حرکت یک عملگر را متوقف می کند."};
 
 exports.throwSprite = function(d){return "پرتاب"};
 
-exports.throwSpriteN = function(d){return "actor "+v(d,"spriteIndex")+" throw"};
+exports.throwSpriteN = function(d){return "عملگر "+v(d,"spriteIndex")+" پرتاب"};
 
-exports.throwTooltip = function(d){return "Throws a projectile from the specified actor."};
+exports.throwTooltip = function(d){return "یک موشک را از عملگر مشخصی پرتاب می کند."};
 
 exports.vanish = function(d){return "ناپدید شدن"};
 
@@ -22022,7 +22022,7 @@ exports.waitSeconds = function(d){return "ثانیه"};
 
 exports.waitForClick = function(d){return "برای کلیک کردن صبر کنید"};
 
-exports.waitForRandom = function(d){return "wait for random"};
+exports.waitForRandom = function(d){return "منتظر انتخاب تصادفی باشید"};
 
 exports.waitForHalfSecond = function(d){return "برای نیم ثانیه صبر کنید"};
 
@@ -22034,9 +22034,9 @@ exports.waitFor5Seconds = function(d){return "برای 5 ثانیه صبر کن�
 
 exports.waitFor10Seconds = function(d){return "برای 10 ثانیه صبر کنید"};
 
-exports.waitParamsTooltip = function(d){return "Waits for a specified number of seconds or use zero to wait until a click occurs."};
+exports.waitParamsTooltip = function(d){return "به مقدار ثانیه های مشخصی وقفه ایجاد کنید یا از صفر استفاده کنید برای ایجاد وقفه  تا زمانی که کلیک  کردن رخ بدهد."};
 
-exports.waitTooltip = function(d){return "Waits for a specified amount of time or until a click occurs."};
+exports.waitTooltip = function(d){return "وقفه ای ایجاد کنید به مقدار زمان مشخصی  یا تا زمانی که کلیک کردن رخ دهد."};
 
 exports.whenArrowDown = function(d){return "فلش سمت پایین"};
 
@@ -22046,21 +22046,21 @@ exports.whenArrowRight = function(d){return "فلش سمت راست"};
 
 exports.whenArrowUp = function(d){return "فلش سمت بالا"};
 
-exports.whenArrowTooltip = function(d){return "Execute the actions below when the specified arrow key is pressed."};
+exports.whenArrowTooltip = function(d){return "وقتی کلید جهت دار مشخصی فشرده شده است عملیات زیر را اجرا میکند."};
 
-exports.whenDown = function(d){return "وقتی که کلید فلش پایین فشار داده می شود"};
+exports.whenDown = function(d){return "وقتی که فلش پایین"};
 
-exports.whenDownTooltip = function(d){return "کارهای زیر را انجام بده وقتی که فلش پایین فشار داده می شود."};
+exports.whenDownTooltip = function(d){return "کارهای زیر را انجام بده وقتی که کلید فلش پایین فشار داده میشود."};
 
 exports.whenGameStarts = function(d){return "وقتی که داستان شروع می شود"};
 
 exports.whenGameStartsTooltip = function(d){return "وقتی که داستان شروع می شود اقدامات زیر را انجام دهید."};
 
-exports.whenLeft = function(d){return "وقتی که کلید فلش چپ فشار داده می شود"};
+exports.whenLeft = function(d){return "وقتی که فلش چپ"};
 
 exports.whenLeftTooltip = function(d){return "کارهای زیر را انجام بده وقتی که کلید فلش چپ فشار داده می شود."};
 
-exports.whenRight = function(d){return "وقتی که کلید فلش راست فشار داده می شود"};
+exports.whenRight = function(d){return "وقتی که فلش راست"};
 
 exports.whenRightTooltip = function(d){return "کارهای زیر را انجام بده وقتی که کلید فلش راست فشار داده می شود."};
 

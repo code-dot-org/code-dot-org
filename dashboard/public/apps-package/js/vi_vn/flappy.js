@@ -12685,7 +12685,7 @@ exports.setGroundLava = function(d){return "chọn đất Nham thạch"};
 
 exports.setGroundTooltip = function(d){return "Thiết lập hình ảnh của đất"};
 
-exports.setObstacle = function(d){return "thiết lập các trở ngại/chướng ngại"};
+exports.setObstacle = function(d){return "thiết lập trở ngại"};
 
 exports.setObstacleRandom = function(d){return "chọn vật cản ngẫu nhiên"};
 

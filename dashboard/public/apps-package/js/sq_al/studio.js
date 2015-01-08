@@ -21367,7 +21367,7 @@ exports.catActions = function(d){return "Veprimet"};
 
 exports.catColour = function(d){return "Ngjyra"};
 
-exports.catLogic = function(d){return "Logic"};
+exports.catLogic = function(d){return "Logjika"};
 
 exports.catLists = function(d){return "Listat"};
 
@@ -21381,11 +21381,11 @@ exports.catText = function(d){return "Tekst"};
 
 exports.catVariables = function(d){return "variabla"};
 
-exports.codeTooltip = function(d){return "Shikoni kodin e gjenerua JavaScript."};
+exports.codeTooltip = function(d){return "Shikoni kodin e gjeneruar në JavaScript."};
 
 exports.continue = function(d){return "Vazhdo"};
 
-exports.dialogCancel = function(d){return "Anulo"};
+exports.dialogCancel = function(d){return "Anullo"};
 
 exports.dialogOK = function(d){return "Ne rregull"};
 
@@ -21397,184 +21397,184 @@ exports.directionEastLetter = function(d){return "E"};
 
 exports.directionWestLetter = function(d){return "W"};
 
-exports.end = function(d){return "end"};
+exports.end = function(d){return "fundi"};
 
-exports.emptyBlocksErrorMsg = function(d){return "The \"Repeat\" or \"If\" block needs to have other blocks inside it to work. Make sure the inner block fits properly inside the containing block."};
+exports.emptyBlocksErrorMsg = function(d){return "Blloku \"Përsërit\" ose \"Nëse\"  ka nevojë të ketë blloqe të tjera brënda në mënyrë që të funksionojë. Sigurohu që blloku i brendshëm të përshtatet në mënyrë sa më të mirë brenda bllokut që e përmban."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Blloku i funksionit ka nevojë për blloqe të tjera brënda, në mënyrë që të funksionojë."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "Duhet që të ketë blloqe brenda përcaktimit të funksionit tënd. Kliko \"redakto\" dhe zhvendos blloqet brenda bllokut të gjelbër."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "Kliko \"redakto\" për tu siguruar që nuk mungon ndonjë bllok brenda përcaktimit të funksionit tënd."};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "Kujtohu që të bashkangjitësh një bllok në çdo parametër që futet në bllokun e funksionit tek zona juaj e punimit."};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "Ti shtove një bllok parametër, por nuk e përdore atë në përcaktim. Sigurohu që të përdorësh parametrin tënd duke klikuar \"redakto\" dhe duke vendosur këtë parametër bllok brenda bllokut të gjelbër."};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "Krijo një parametër për funksionin tënd duke klikuar \"redakto\" dhe duke shtuar parametrat e nevojshëm. Zhvendos blloqet e reja me parametra brenda në përcaktimin e funksionit tënd."};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "Ti krijove një funksion, por nuk e përdore asnjëherë në hapësirën tënde të punës! Kliko tek \"Funksionet\" në grupin e komandave dhe sigurohu që ta përdorësh atë në programin tënd."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "Përpiqu të zëvendësosh \"???\" me një vlerë."};
 
-exports.extraTopBlocks = function(d){return "You have extra blocks that aren't attached to an event block."};
+exports.extraTopBlocks = function(d){return "Ti ke blloqe që nuk janë të bashkuar. Mendove të bashkosh ato me bllokun \"kur vrapon\"?"};
 
 exports.finalStage = function(d){return "Urime! Ju sapo perfunduat fazen finale "};
 
 exports.finalStageTrophies = function(d){return "Congratulations! You have completed the final stage and won "+p(d,"numTrophies",0,"sq",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Përfundo"};
 
-exports.generatedCodeInfo = function(d){return "The blocks for your program can also be represented in JavaScript, the world's most widely adopted programming language:"};
+exports.generatedCodeInfo = function(d){return "Even top universities teach block-based coding (e.g., "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). But under the hood, the blocks you have assembled can also be shown in JavaScript, the world's most widely used coding language:"};
 
-exports.hashError = function(d){return "Sorry, '%1' doesn't correspond with any saved program."};
+exports.hashError = function(d){return "Më vjen keq, '%1' nuk përputhet me asnjë program të ruajtur."};
 
 exports.help = function(d){return "Ndihmë"};
 
 exports.hintTitle = function(d){return "Ndihmes:"};
 
-exports.jump = function(d){return "jump"};
+exports.jump = function(d){return "hidhu"};
 
-exports.levelIncompleteError = function(d){return "You are using all of the necessary types of blocks but not in the right way."};
+exports.levelIncompleteError = function(d){return "Ti je duke përdorur të gjithë tipet e nevojshëm të blloqeve, por jo në mënyrën e duhur."};
 
 exports.listVariable = function(d){return "listë"};
 
-exports.makeYourOwnFlappy = function(d){return "Make Your Own Flappy Game"};
+exports.makeYourOwnFlappy = function(d){return "Bëj lojën tënde Flappy"};
 
-exports.missingBlocksErrorMsg = function(d){return "Try one or more of the blocks below to solve this puzzle."};
+exports.missingBlocksErrorMsg = function(d){return "Përdor një ose më shumë nga blloqet e mëposhtme për të zgjidhur këtë puzzle."};
 
 exports.nextLevel = function(d){return "Urime ju e perfunduat Puzzle-n "+v(d,"puzzleNumber")+"."};
 
 exports.nextLevelTrophies = function(d){return "Congratulations! You completed Puzzle "+v(d,"puzzleNumber")+" and won "+p(d,"numTrophies",0,"sq",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
-exports.nextStage = function(d){return "Congratulations! You completed Stage "+v(d,"stageNumber")+"."};
+exports.nextStage = function(d){return "Urime! Ti përfundove "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Congratulations! You completed Stage "+v(d,"stageNumber")+" and won "+p(d,"numTrophies",0,"sq",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
+exports.nextStageTrophies = function(d){return "Congratulations! You completed "+v(d,"stageName")+" and won "+p(d,"numTrophies",0,"sq",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Congratulations! You completed Puzzle "+v(d,"puzzleNumber")+". (However, you could have used only "+p(d,"numBlocks",0,"sq",{"one":"1 block","other":n(d,"numBlocks")+" blocks"})+".)"};
 
 exports.numLinesOfCodeWritten = function(d){return "You just wrote "+p(d,"numLines",0,"sq",{"one":"1 line","other":n(d,"numLines")+" lines"})+" of code!"};
 
-exports.play = function(d){return "play"};
+exports.play = function(d){return "luaj"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Shtyp"};
 
-exports.puzzleTitle = function(d){return "Puzzle "+v(d,"puzzle_number")+" of "+v(d,"stage_total")};
+exports.puzzleTitle = function(d){return "Puzzle "+v(d,"puzzle_number")+" i "+v(d,"stage_total")};
 
 exports.repeat = function(d){return "përsërit"};
 
-exports.resetProgram = function(d){return "Reset"};
+exports.resetProgram = function(d){return "Rivendosni"};
 
-exports.runProgram = function(d){return "Run Program"};
+exports.runProgram = function(d){return "Ekzekuto"};
 
-exports.runTooltip = function(d){return "Run the program defined by the blocks in the workspace."};
+exports.runTooltip = function(d){return "Ekzekuto programin e përcaktuar nga blloqet, në hapësirën tënde të punës."};
 
-exports.score = function(d){return "score"};
+exports.score = function(d){return "rezultati"};
 
 exports.showCodeHeader = function(d){return "Shfaq kodin"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Shfaq Blloqet"};
 
 exports.showGeneratedCode = function(d){return "Shfaq kodin"};
 
-exports.stringEquals = function(d){return "string=?"};
+exports.stringEquals = function(d){return "vargu=?"};
 
-exports.subtitle = function(d){return "a visual programming environment"};
+exports.subtitle = function(d){return "një mjedis i dukshëm programimi"};
 
-exports.textVariable = function(d){return "text"};
+exports.textVariable = function(d){return "teksti"};
 
-exports.tooFewBlocksMsg = function(d){return "You are using all of the necessary types of blocks, but try using more  of these types of blocks to complete this puzzle."};
+exports.tooFewBlocksMsg = function(d){return "Ti je duke i përdorur të gjithë tipet e nevojshëm të blloqeve, por përpiqu të përdorësh më shumë nga këto tipe blloqesh për të përfunduar këtë puzzle."};
 
-exports.tooManyBlocksMsg = function(d){return "This puzzle can be solved with <x id='START_SPAN'/><x id='END_SPAN'/> blocks."};
+exports.tooManyBlocksMsg = function(d){return "Ky puzzle mund të zgjidhet me blloqet <x id='START_SPAN'/><x id='END_SPAN'/>."};
 
-exports.tooMuchWork = function(d){return "You made me do a lot of work!  Could you try repeating fewer times?"};
+exports.tooMuchWork = function(d){return "Ti më detyrove të bëj shumë veprime! Mund të përpiqesh ta përsërisësh me më pak hapa?"};
 
 exports.toolboxHeader = function(d){return "blloqe"};
 
-exports.openWorkspace = function(d){return "How It Works"};
+exports.openWorkspace = function(d){return "Si Funksionon"};
 
 exports.totalNumLinesOfCodeWritten = function(d){return "All-time total: "+p(d,"numLines",0,"sq",{"one":"1 line","other":n(d,"numLines")+" lines"})+" of code."};
 
 exports.tryAgain = function(d){return "Provo perseri"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Shih ndihmën"};
 
-exports.backToPreviousLevel = function(d){return "Kthehu ne nivelin e meparshem"};
+exports.backToPreviousLevel = function(d){return "Kthehu në nivelin e mëparshëm"};
 
-exports.saveToGallery = function(d){return "Save to your gallery"};
+exports.saveToGallery = function(d){return "Ruaj tek galeria"};
 
-exports.savedToGallery = function(d){return "Saved to your gallery!"};
+exports.savedToGallery = function(d){return "U ruajt në galeri!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Më vjen keq, ne nuk mund ta ndajmë këtë program."};
 
-exports.workspaceHeader = function(d){return "Assemble your blocks here: "};
+exports.workspaceHeader = function(d){return "Vendosi blloqet e tua këtu: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Shtyp kodin tënd JavaScript këtu"};
 
-exports.infinity = function(d){return "Infinity"};
+exports.infinity = function(d){return "Pafundësi"};
 
-exports.rotateText = function(d){return "Rotate your device."};
+exports.rotateText = function(d){return "Rrotullo pajisjen tënde."};
 
-exports.orientationLock = function(d){return "Turn off orientation lock in device settings."};
+exports.orientationLock = function(d){return "Fik orientimet në konfigurimet e pajisjes."};
 
-exports.wantToLearn = function(d){return "Want to learn to code?"};
+exports.wantToLearn = function(d){return "Dëshiron të mësosh se si të kodosh?"};
 
-exports.watchVideo = function(d){return "Watch the Video"};
+exports.watchVideo = function(d){return "Shiko Videon"};
 
-exports.when = function(d){return "when"};
+exports.when = function(d){return "kur"};
 
-exports.whenRun = function(d){return "when run"};
+exports.whenRun = function(d){return "kur vrapon"};
 
-exports.tryHOC = function(d){return "Try the Hour of Code"};
+exports.tryHOC = function(d){return "Provo Orën e Kodimit"};
 
-exports.signup = function(d){return "Sign up for the intro course"};
+exports.signup = function(d){return "Rregjistrohu për kursin hyrës"};
 
-exports.hintHeader = function(d){return "Here's a tip:"};
+exports.hintHeader = function(d){return "Ja ku është një këshillë:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "Shiko se si përfundove dhe përpiqu të rregullosh programin tënd."};
 
 exports.defaultTwitterText = function(d){return "Check out what I made"};
 
 
 },{"messageformat":61}],49:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.sq=function(n){return n===1?"one":"other"}
-exports.actor = function(d){return "actor"};
+exports.actor = function(d){return "aktor"};
 
-exports.alienInvasion = function(d){return "Alien Invasion!"};
+exports.alienInvasion = function(d){return "Invazioni i Huaj!"};
 
-exports.backgroundBlack = function(d){return "black"};
+exports.backgroundBlack = function(d){return "e zezë"};
 
-exports.backgroundCave = function(d){return "cave"};
+exports.backgroundCave = function(d){return "shpellë"};
 
-exports.backgroundCloudy = function(d){return "cloudy"};
+exports.backgroundCloudy = function(d){return "me re"};
 
-exports.backgroundHardcourt = function(d){return "hardcourt"};
+exports.backgroundHardcourt = function(d){return "terren i fortë"};
 
-exports.backgroundNight = function(d){return "night"};
+exports.backgroundNight = function(d){return "natë"};
 
-exports.backgroundUnderwater = function(d){return "underwater"};
+exports.backgroundUnderwater = function(d){return "nën ujë"};
 
-exports.backgroundCity = function(d){return "city"};
+exports.backgroundCity = function(d){return "qyteti"};
 
-exports.backgroundDesert = function(d){return "desert"};
+exports.backgroundDesert = function(d){return "shkretëtira"};
 
-exports.backgroundRainbow = function(d){return "rainbow"};
+exports.backgroundRainbow = function(d){return "ylberi"};
 
-exports.backgroundSoccer = function(d){return "soccer"};
+exports.backgroundSoccer = function(d){return "futboll"};
 
-exports.backgroundSpace = function(d){return "space"};
+exports.backgroundSpace = function(d){return "hapësirë"};
 
-exports.backgroundTennis = function(d){return "tennis"};
+exports.backgroundTennis = function(d){return "tenis"};
 
-exports.backgroundWinter = function(d){return "winter"};
+exports.backgroundWinter = function(d){return "dimër"};
 
 exports.catActions = function(d){return "Veprimet"};
 
 exports.catControl = function(d){return "perseritje"};
 
-exports.catEvents = function(d){return "Events"};
+exports.catEvents = function(d){return "Ngjarjet"};
 
-exports.catLogic = function(d){return "Logic"};
+exports.catLogic = function(d){return "Logjika"};
 
 exports.catMath = function(d){return "Matematikë"};
 
@@ -21584,43 +21584,43 @@ exports.catText = function(d){return "Tekst"};
 
 exports.catVariables = function(d){return "variabla"};
 
-exports.changeScoreTooltip = function(d){return "Add or remove a point to the score."};
+exports.changeScoreTooltip = function(d){return "Shto ose hiq një pikë tek rezultati."};
 
-exports.changeScoreTooltipK1 = function(d){return "Add a point to the score."};
+exports.changeScoreTooltipK1 = function(d){return "Shto një pikë tek rezultati."};
 
 exports.continue = function(d){return "Vazhdo"};
 
-exports.decrementPlayerScore = function(d){return "remove point"};
+exports.decrementPlayerScore = function(d){return "hiq pikën"};
 
-exports.defaultSayText = function(d){return "type here"};
+exports.defaultSayText = function(d){return "shtyp këtu"};
 
-exports.emotion = function(d){return "mood"};
+exports.emotion = function(d){return "humori"};
 
 exports.finalLevel = function(d){return "Urime! Ju keni perfunduar enigmen perfundimatare."};
 
-exports.for = function(d){return "for"};
+exports.for = function(d){return "për"};
 
-exports.hello = function(d){return "hello"};
+exports.hello = function(d){return "përshëndetje"};
 
-exports.helloWorld = function(d){return "Hello World!"};
+exports.helloWorld = function(d){return "Përshëndetje Botë!"};
 
-exports.incrementPlayerScore = function(d){return "increment player score"};
+exports.incrementPlayerScore = function(d){return "rezultati"};
 
-exports.makeProjectileDisappear = function(d){return "disappear"};
+exports.makeProjectileDisappear = function(d){return "zhduket"};
 
-exports.makeProjectileBounce = function(d){return "bounce"};
+exports.makeProjectileBounce = function(d){return "kërce"};
 
-exports.makeProjectileBlueFireball = function(d){return "make blue fireball"};
+exports.makeProjectileBlueFireball = function(d){return "bëj topa zjarri blu"};
 
-exports.makeProjectilePurpleFireball = function(d){return "make purple fireball"};
+exports.makeProjectilePurpleFireball = function(d){return "bëj topa zjarri lejla"};
 
-exports.makeProjectileRedFireball = function(d){return "make red fireball"};
+exports.makeProjectileRedFireball = function(d){return "bëj topa zjarri të kuq"};
 
-exports.makeProjectileYellowHearts = function(d){return "make yellow hearts"};
+exports.makeProjectileYellowHearts = function(d){return "bëj zemra e verdha"};
 
-exports.makeProjectilePurpleHearts = function(d){return "make purple hearts"};
+exports.makeProjectilePurpleHearts = function(d){return "bëj zemra lejla"};
 
-exports.makeProjectileRedHearts = function(d){return "make red hearts"};
+exports.makeProjectileRedHearts = function(d){return "bëj zemra të kuqe"};
 
 exports.makeProjectileTooltip = function(d){return "Make the projectile that just collided disappear or bounce."};
 
@@ -21662,15 +21662,15 @@ exports.moveDown = function(d){return "lëviz poshtë"};
 
 exports.moveDownTooltip = function(d){return "Move the paddle down."};
 
-exports.moveLeft = function(d){return "move left"};
+exports.moveLeft = function(d){return "lëviz majtas"};
 
 exports.moveLeftTooltip = function(d){return "Move the paddle to the left."};
 
-exports.moveRight = function(d){return "move right"};
+exports.moveRight = function(d){return "lëviz djathtas"};
 
 exports.moveRightTooltip = function(d){return "Move the paddle to the right."};
 
-exports.moveUp = function(d){return "move up"};
+exports.moveUp = function(d){return "lëviz sipër"};
 
 exports.moveUpTooltip = function(d){return "Move the paddle up."};
 
@@ -21684,31 +21684,31 @@ exports.numBlocksNeeded = function(d){return "Kjo enigme mund te zgjidhet me %1 
 
 exports.ouchExclamation = function(d){return "Ouch!"};
 
-exports.playSoundCrunch = function(d){return "play crunch sound"};
+exports.playSoundCrunch = function(d){return "vendos tingullin \"e kërcitjes\""};
 
-exports.playSoundGoal1 = function(d){return "play goal 1 sound"};
+exports.playSoundGoal1 = function(d){return "vendos tingullin \"qëllimi 1\""};
 
-exports.playSoundGoal2 = function(d){return "play goal 2 sound"};
+exports.playSoundGoal2 = function(d){return "vendos tingullin \"qëllimi 2\""};
 
-exports.playSoundHit = function(d){return "play hit sound"};
+exports.playSoundHit = function(d){return "vendos tingullin \"e goditjes\""};
 
-exports.playSoundLosePoint = function(d){return "play lose point sound"};
+exports.playSoundLosePoint = function(d){return "vendos tingullin \"humb pikë\""};
 
-exports.playSoundLosePoint2 = function(d){return "play lose point 2 sound"};
+exports.playSoundLosePoint2 = function(d){return "vendos tingullin \"humb pikë 2\""};
 
-exports.playSoundRetro = function(d){return "play retro sound"};
+exports.playSoundRetro = function(d){return "vendos tingullin \"retro\""};
 
-exports.playSoundRubber = function(d){return "play rubber sound"};
+exports.playSoundRubber = function(d){return "vendos tingullin e \"gomës\""};
 
-exports.playSoundSlap = function(d){return "play slap sound"};
+exports.playSoundSlap = function(d){return "vendos tingullin e \"goditjes\""};
 
-exports.playSoundTooltip = function(d){return "Play a sound."};
+exports.playSoundTooltip = function(d){return "Vendos tingullin e zgjedhur."};
 
-exports.playSoundWinPoint = function(d){return "play win point sound"};
+exports.playSoundWinPoint = function(d){return "vendos tingullin e \"fitoj pikë\""};
 
-exports.playSoundWinPoint2 = function(d){return "play win point 2 sound"};
+exports.playSoundWinPoint2 = function(d){return "vendos tingullin e \" fitoj pikë 2\""};
 
-exports.playSoundWood = function(d){return "play wood sound"};
+exports.playSoundWood = function(d){return "vendos tingullin \"e pyllit\""};
 
 exports.positionOutTopLeft = function(d){return "to the above top left position"};
 
@@ -21958,7 +21958,7 @@ exports.showTitleScreen = function(d){return "show title screen"};
 
 exports.showTitleScreenTitle = function(d){return "title"};
 
-exports.showTitleScreenText = function(d){return "text"};
+exports.showTitleScreenText = function(d){return "teksti"};
 
 exports.showTSDefTitle = function(d){return "type title here"};
 
@@ -22048,21 +22048,21 @@ exports.whenArrowUp = function(d){return "up arrow"};
 
 exports.whenArrowTooltip = function(d){return "Execute the actions below when the specified arrow key is pressed."};
 
-exports.whenDown = function(d){return "when Down arrow"};
+exports.whenDown = function(d){return "me kursorin poshtë"};
 
-exports.whenDownTooltip = function(d){return "Execute the actions below when the Down arrow button is pressed."};
+exports.whenDownTooltip = function(d){return "Kryej veprimet si më poshtë kur celësi i kursorit për poshtë të jetë i shtypur."};
 
 exports.whenGameStarts = function(d){return "when game starts"};
 
 exports.whenGameStartsTooltip = function(d){return "Execute the actions below when the game starts."};
 
-exports.whenLeft = function(d){return "when Left arrow"};
+exports.whenLeft = function(d){return "me kursorin e majtë"};
 
-exports.whenLeftTooltip = function(d){return "Execute the actions below when the Left arrow button is pressed."};
+exports.whenLeftTooltip = function(d){return "Kryej veprimet si më poshtë me  celësin e kursorit të majtë të shtypur."};
 
-exports.whenRight = function(d){return "when Right arrow"};
+exports.whenRight = function(d){return "me kursorin e djathtë"};
 
-exports.whenRightTooltip = function(d){return "Execute the actions below when the Right arrow button is pressed."};
+exports.whenRightTooltip = function(d){return "Kryej veprimet si më poshtë me kursorin e djathtë të shtypur."};
 
 exports.whenSpriteClicked = function(d){return "when actor clicked"};
 
@@ -22106,9 +22106,9 @@ exports.whenSpriteCollidedWithRightEdge = function(d){return "touches right edge
 
 exports.whenSpriteCollidedWithTopEdge = function(d){return "touches top edge"};
 
-exports.whenUp = function(d){return "when Up arrow"};
+exports.whenUp = function(d){return "me kursorin lartë"};
 
-exports.whenUpTooltip = function(d){return "Execute the actions below when the Up arrow button is pressed."};
+exports.whenUpTooltip = function(d){return "Kryej veprimet si më poshtë me çelësin e kursorit për lartë të shtypur."};
 
 exports.yes = function(d){return "Po"};
 

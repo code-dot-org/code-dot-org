@@ -14801,23 +14801,23 @@ exports.squareBlockTitle = function(d){return "carré (taille, style, couleur)"}
 
 exports.starBlockTitle = function(d){return "Etoile (rayon, style, couleur)"};
 
-exports.radialStarBlockTitle = function(d){return "radial-star (points, inner, outer, style, color)"};
+exports.radialStarBlockTitle = function(d){return "étoile-radiale (points, intérieur, extérieur, style, couleur)"};
 
-exports.polygonBlockTitle = function(d){return "polygon (sides, length, style, color)"};
+exports.polygonBlockTitle = function(d){return "polygone (côtés, longueur, style, couleur)"};
 
-exports.stringAppendBlockTitle = function(d){return "string-append (premier, second)"};
+exports.stringAppendBlockTitle = function(d){return "ajoute-chaine (premier, second)"};
 
-exports.stringLengthBlockTitle = function(d){return "string-length (chaîne)"};
+exports.stringLengthBlockTitle = function(d){return "longeur-chaine (chaîne)"};
 
 exports.textBlockTitle = function(d){return "texte (string, taille, couleur)"};
 
 exports.triangleBlockTitle = function(d){return "triangle (taille, style, couleur)"};
 
-exports.underlayBlockTitle = function(d){return "underlay (bas, haut)"};
+exports.underlayBlockTitle = function(d){return "arriere-plan (bas, haut)"};
 
 exports.outline = function(d){return "contour"};
 
-exports.solid = function(d){return "solide"};
+exports.solid = function(d){return "unie"};
 
 exports.string = function(d){return "chaîne"};
 

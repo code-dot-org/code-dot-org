@@ -15173,7 +15173,7 @@ exports.degrees = function(d){return "stupnjevi"};
 
 exports.depth = function(d){return "dubina"};
 
-exports.dots = function(d){return "pikseli"};
+exports.dots = function(d){return "piksela"};
 
 exports.drawASquare = function(d){return "nacrtaj kvadrat"};
 

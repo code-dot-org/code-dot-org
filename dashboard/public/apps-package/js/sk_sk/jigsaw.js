@@ -10921,7 +10921,7 @@ exports.emptyFunctionBlocksErrorMsg = function(d){return "Funkčný blok musí o
 
 exports.errorEmptyFunctionBlockModal = function(d){return "Musia existovať bloky vo vnútri tvojej definície funkcie. Kliknite na \"upraviť\" a presuňte bloky do vnútra zeleného bloku."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "Kliknite na tlačidlo \"upraviť\" aby ste sa uistili, že nemáte žiadne chýbajúce bloky vnútri funkcie."};
 
 exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
 

@@ -12544,7 +12544,7 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.fa=function(n){return "other"}
 exports.bounceBall = function(d){return "توپ جهنده"};
 
-exports.bounceBallTooltip = function(d){return "جهیدن توپ را از شی متوقف کنید."};
+exports.bounceBallTooltip = function(d){return "توپ را از روی یک شئ بپرانید."};
 
 exports.continue = function(d){return "ادامه"};
 
@@ -12574,7 +12574,7 @@ exports.ifelseTooltip = function(d){return "اگر راهی در مسیر مشخ
 
 exports.incrementOpponentScore = function(d){return "افزایش امتیاز رقیب"};
 
-exports.incrementOpponentScoreTooltip = function(d){return "به امتیاز نمره فعلی حریف یکی اضافه کنید."};
+exports.incrementOpponentScoreTooltip = function(d){return "یک امتیاز به حریف اضافه کنید."};
 
 exports.incrementPlayerScore = function(d){return "نمره امتیاز"};
 
@@ -12582,13 +12582,13 @@ exports.incrementPlayerScoreTooltip = function(d){return "یکی به امتیا
 
 exports.isWall = function(d){return "آیا این دیوار است؟"};
 
-exports.isWallTooltip = function(d){return "اگر دیواری آنجا بود برگرد"};
+exports.isWallTooltip = function(d){return "صحیح را برمیگرداند اگر اینجا دیواری باشد"};
 
-exports.launchBall = function(d){return "پرتاب توپ جدید"};
+exports.launchBall = function(d){return "توپ جدید آماده کن"};
 
 exports.launchBallTooltip = function(d){return "یک توپ وارد بازی کن."};
 
-exports.makeYourOwn = function(d){return "بازی خودتان را درست کنید"};
+exports.makeYourOwn = function(d){return "بازی پرشی خودتان را بسازید"};
 
 exports.moveDown = function(d){return "برو پایین"};
 
@@ -12632,9 +12632,9 @@ exports.pilePresent = function(d){return "آنجا یک توده وجود دار
 
 exports.playSoundCrunch = function(d){return "پخش صدای خرد شدن"};
 
-exports.playSoundGoal1 = function(d){return "پخش صدای هدف 1"};
+exports.playSoundGoal1 = function(d){return "پخش صدای گل 1"};
 
-exports.playSoundGoal2 = function(d){return "پخش صدای هدف 2"};
+exports.playSoundGoal2 = function(d){return "پخش صدای گل 2"};
 
 exports.playSoundHit = function(d){return "پخش صدای ضربه"};
 
@@ -12672,7 +12672,7 @@ exports.scoreText = function(d){return "امتیاز: "+v(d,"playerScore")+" : "
 
 exports.setBackgroundRandom = function(d){return "تنظیم تصادفی منظره"};
 
-exports.setBackgroundHardcourt = function(d){return "قرار دادن مرحله هاردکورت"};
+exports.setBackgroundHardcourt = function(d){return "منظرۀ ز مین بازی را تنظیم کن"};
 
 exports.setBackgroundRetro = function(d){return "قرار دادن منظره ریترو"};
 
@@ -12680,49 +12680,49 @@ exports.setBackgroundTooltip = function(d){return "تنظیم تصویر صحن�
 
 exports.setBallRandom = function(d){return "تنظیم توپ تصادفی"};
 
-exports.setBallHardcourt = function(d){return "تنظیم توپ هاردکورت"};
+exports.setBallHardcourt = function(d){return "توپ زمین بازی را تنظیم کن"};
 
-exports.setBallRetro = function(d){return "تنظیم توپ ریترو"};
+exports.setBallRetro = function(d){return "توپ چهل تیکه را تنظیم کن"};
 
-exports.setBallTooltip = function(d){return "قرار دادن تصویر توپها"};
+exports.setBallTooltip = function(d){return "تصویر توپ را تنطیم میکند"};
 
-exports.setBallSpeedRandom = function(d){return "تنظیم سرعت توپ تصادفی"};
+exports.setBallSpeedRandom = function(d){return "سرعت توپ را تصادفی کن"};
 
-exports.setBallSpeedVerySlow = function(d){return "تنظیم سرعت بسیار آهسته توپ"};
+exports.setBallSpeedVerySlow = function(d){return "سرعت توپ را بسیار آهسته کن"};
 
-exports.setBallSpeedSlow = function(d){return "تنظیم سرعت توپ آهسته"};
+exports.setBallSpeedSlow = function(d){return "سرعت توپ را آهسته کن"};
 
-exports.setBallSpeedNormal = function(d){return "تنظیم سرعت نرمال توپ"};
+exports.setBallSpeedNormal = function(d){return "سرعت توپ را معمولی کن"};
 
-exports.setBallSpeedFast = function(d){return "تنظیم سرعت سریع توپ"};
+exports.setBallSpeedFast = function(d){return "سرعت توپ را تند کن"};
 
-exports.setBallSpeedVeryFast = function(d){return "تنظیم سرعت توپ بسیار سریع"};
+exports.setBallSpeedVeryFast = function(d){return "سرعت توپ را بسیار تند کن"};
 
-exports.setBallSpeedTooltip = function(d){return "تنظیمات سرعت توپ"};
+exports.setBallSpeedTooltip = function(d){return "سرعت توپ را تنظیم میکند"};
 
-exports.setPaddleRandom = function(d){return "تنظیم راکت تصادفی"};
+exports.setPaddleRandom = function(d){return "راکت را تصادفی تنظیم کن"};
 
-exports.setPaddleHardcourt = function(d){return "تنظیم راکت هاردکورت"};
+exports.setPaddleHardcourt = function(d){return "راکت زمین بازی را تنظیم کن"};
 
-exports.setPaddleRetro = function(d){return "تنظیم راکت ریترو"};
+exports.setPaddleRetro = function(d){return "راکت قدیمی را تنظیم کن"};
 
-exports.setPaddleTooltip = function(d){return "تصویری برای راکت قرار می دهد"};
+exports.setPaddleTooltip = function(d){return "تصویر راکت را تنظیم میکند"};
 
-exports.setPaddleSpeedRandom = function(d){return "تنظیم سرعت راکت تصادفی"};
+exports.setPaddleSpeedRandom = function(d){return "سرعت راکت را تصادفی کن"};
 
-exports.setPaddleSpeedVerySlow = function(d){return "تنظیم سرعت بسیار آهسته راکت"};
+exports.setPaddleSpeedVerySlow = function(d){return "سرعت راکت را بسیار آهسته کن"};
 
-exports.setPaddleSpeedSlow = function(d){return "تنظیم سرعت آهسته راکت"};
+exports.setPaddleSpeedSlow = function(d){return "سرعت راکت را آهسته کن"};
 
-exports.setPaddleSpeedNormal = function(d){return "تنظیم سرعت نرمال راکت"};
+exports.setPaddleSpeedNormal = function(d){return "سرعت راکت را معمولی کن"};
 
-exports.setPaddleSpeedFast = function(d){return "تنظیم سرعت سریع راکت"};
+exports.setPaddleSpeedFast = function(d){return "سرعت راکت را تند کن"};
 
-exports.setPaddleSpeedVeryFast = function(d){return "تنظیم سرعت سریع بسیار سریع راکت"};
+exports.setPaddleSpeedVeryFast = function(d){return "سرعت راکت را بسیار تند کن"};
 
-exports.setPaddleSpeedTooltip = function(d){return "تنظیم سرعت راکت ها"};
+exports.setPaddleSpeedTooltip = function(d){return "سرعت راکت را تنظیم میکند"};
 
-exports.shareBounceTwitter = function(d){return "بازی Bounce که من ساخته ام را نگاه کن. من خودم با @codeorg آن را نوشته ام"};
+exports.shareBounceTwitter = function(d){return "بازی جهش را، که من ساخته ام، نگاه کن. من خودم با @codeorg آن را نوشته ام"};
 
 exports.shareGame = function(d){return "بازی خود را به اشتراک بگذارید:"};
 
@@ -12734,21 +12734,21 @@ exports.turnTooltip = function(d){return "من را به راست یا چپ 90 �
 
 exports.whenBallInGoal = function(d){return "زمانی که توپ در هدف قرار دارد"};
 
-exports.whenBallInGoalTooltip = function(d){return "کارهای زیر را انجام بده وقتی که یک توپ به هدف وارد می شود."};
+exports.whenBallInGoalTooltip = function(d){return "کارهای زیر را انجام بده وقتی که یک توپ وارد هدف می شود."};
 
 exports.whenBallMissesPaddle = function(d){return "وقتی که توپ به راکت نخورد"};
 
 exports.whenBallMissesPaddleTooltip = function(d){return "کارهای زیر را انجام بده وقتی که یک توپ به راکت نمی خورد."};
 
-exports.whenDown = function(d){return "وقتی که کلید فلش پایین فشار داده می شود"};
+exports.whenDown = function(d){return "وقتی که فلش پایین"};
 
-exports.whenDownTooltip = function(d){return "کارهای زیر را انجام بده وقتی که فلش پایین فشار داده می شود."};
+exports.whenDownTooltip = function(d){return "کارهای زیر را انجام بده وقتی که کلید فلش پایین فشار داده میشود."};
 
 exports.whenGameStarts = function(d){return "وقتی که بازی شروع می شود"};
 
 exports.whenGameStartsTooltip = function(d){return "هنگامیکه بازی شروع می‌شود، اقدامات زیر را اجرا کن."};
 
-exports.whenLeft = function(d){return "وقتی که کلید فلش چپ فشار داده می شود"};
+exports.whenLeft = function(d){return "وقتی که فلش چپ"};
 
 exports.whenLeftTooltip = function(d){return "کارهای زیر را انجام بده وقتی که کلید فلش چپ فشار داده می شود."};
 
@@ -12756,7 +12756,7 @@ exports.whenPaddleCollided = function(d){return "وقتی توپ به راکت �
 
 exports.whenPaddleCollidedTooltip = function(d){return "کارهای زیر را انجام بده وقتی که یک توپ به راکت می خورد."};
 
-exports.whenRight = function(d){return "وقتی که کلید فلش راست فشار داده می شود"};
+exports.whenRight = function(d){return "وقتی که فلش راست"};
 
 exports.whenRightTooltip = function(d){return "کارهای زیر را انجام بده وقتی که کلید فلش راست فشار داده می شود."};
 
@@ -12779,9 +12779,9 @@ exports.yes = function(d){return "بله"};
 var MessageFormat = require("messageformat");MessageFormat.locale.fa=function(n){return "other"}
 exports.and = function(d){return "و"};
 
-exports.booleanTrue = function(d){return "درست"};
+exports.booleanTrue = function(d){return "صحیح"};
 
-exports.booleanFalse = function(d){return "نادرست\nغلط"};
+exports.booleanFalse = function(d){return "ناصحیح"};
 
 exports.blocklyMessage = function(d){return "بلاکلی"};
 
@@ -12955,7 +12955,7 @@ exports.hintHeader = function(d){return "نکته اینجاست:"};
 
 exports.genericFeedback = function(d){return "ببینبد چطور تمامش کردید,و سعی به رفع مشکلات برنامه خود کنید."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "آنچه من ساخته ام را امتحان کن "};
 
 
 },{"messageformat":53}],42:[function(require,module,exports){
