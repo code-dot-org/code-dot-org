@@ -21,7 +21,7 @@
   </script>
 </head>
 <body>
-<div id="blockly" class="readonly"></div>
+<div id="blockly" class="readonly embed-block"></div>
 <style>
   html, body {
     background-color: transparent;
@@ -46,6 +46,9 @@
     overflow: hidden;
     height: 100%;
     width: 100%;
+  }
+  #blockly.readonly.embed-block .userHidden {
+    display: none;
   }
 </style>
 </body>
