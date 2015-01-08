@@ -63,7 +63,7 @@ def generate_professional_development_workshop_teachers_report
         teacher_name: teacher[:name],
         teacher_email: teacher[:email],
         affiliate_name: affiliate[:name],
-        affiliate_email: affiliate[:email],
+        affiliate_email: affiliate[:user_id],
         students_count: students.count,
         students_average_lifetime_days: lifetime.round,
         students_average_levels_completed: levels.round(2)
