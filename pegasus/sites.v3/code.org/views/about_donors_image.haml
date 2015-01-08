@@ -19,7 +19,8 @@
       %td{style: "width: #{780/columns}px; height: #{height}px"}
         - fontsize = fontsize || "14px"
         %a{:href=>supporter[:url_s], :target=>"_blank"}
-          %img{:src=>avatar_url, :style=>"max-width: 100%; max-height: #{height*0.8}px"}
+          - if avatar_url
+            %img{:src=>avatar_url, :style=>"max-width: 100%; max-height: #{height*0.8}px"}
           %p{style: "font-size: #{fontsize}px"}
             - if supporter[:kind_s] != "corporate" && supporter[:name_s] != "Omidyar Network"
               =supporter[:name_s]
