@@ -63,5 +63,3 @@ for locale in $locales; do
 
 
 done
-
-git commit --message=Translations --edit

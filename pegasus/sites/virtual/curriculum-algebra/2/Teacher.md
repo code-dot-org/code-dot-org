@@ -115,6 +115,11 @@ The programming language you are going to learn uses Evaluation Blocks to visual
 - A-SSE.1-2: The student interprets the structure of expressions to solve problems in context.
 - N-Q: The student reasons quantitatively in using units to solve problems.
 
+### CSTA K-12 Computer Science Standards
+
+- L1:6:CPP.6: Implement problem solutions using a block-based visual programming language. 
+
+
 </details>
 
 [/standards]

@@ -87,6 +87,10 @@ In this activity you'll use the new data types String and Image to compose art w
 - F-IF.1-3: The student uses function notation to describe, evaluate, and interpret functions in terms of domain and range.
 - N-Q: The student reasons quantitatively in using units to solve problems.
 
+### CSTA K-12 Computer Science Standards
+
+- L1:6:CPP.6: Implement problem solutions using a block-based visual programming language. 
+
 </details>
 
 [/standards]
