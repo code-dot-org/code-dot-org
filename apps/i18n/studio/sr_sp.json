@@ -58,6 +58,7 @@
   "moveDistanceTooltip": "Помери учесника за одређено растојање у одређеном смеру.",
   "moveSprite": "помери",
   "moveSpriteN": "помери учесника {spriteIndex}",
+  "toXY": "to x,y",
   "moveDown": "помери доле",
   "moveDownTooltip": "Помери учесника на доле.",
   "moveLeft": "помери лево",

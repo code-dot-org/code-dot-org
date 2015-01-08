@@ -60,6 +60,7 @@
   "CONTROLS_WHILEUNTIL_OPERATOR_WHILE":"повтаря дотогава ",
   "CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL":"Докато стойността е грешна, изпълнява следните действия.",
   "CONTROLS_WHILEUNTIL_TOOLTIP_WHILE":"Докато стойността е вярна, направи следните действия.",
+  "DEFINE_HEADER_DEFINITION":"Дефиниция",
   "DEFINE_FUNCTION_DEFINE":"Дефиниране",
   "DELETE_BLOCK":"Изтриване на блока",
   "DELETE_PARAMETER":"Изтрий параметъра...",

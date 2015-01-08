@@ -13,6 +13,7 @@
   "squareBlockTitle": "neliö (koko, tyyli, väri)",
   "starBlockTitle": "tähti (säde, tyyli, väri)",
   "radialStarBlockTitle": "sädetähti (pisteet, sisä, ulko, tyyli, väri)",
+  "polygonBlockTitle": "polygon (sides, length, style, color)",
   "stringAppendBlockTitle": "merkkijono liitä (ensimmäinen, toinen)",
   "stringLengthBlockTitle": "merkkijonon pituus (merkkijono)",
   "textBlockTitle": "teksti (merkkijono, koko, väri)",

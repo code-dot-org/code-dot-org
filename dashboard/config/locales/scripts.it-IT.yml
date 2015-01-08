@@ -323,6 +323,7 @@
           description: Una selezione di 4 livelli del corso per i test di usabilità.
           Variables: Variabili
           For Loops: Cicli con Contatore
+          Binary: Binario
         potus:
           title: speciale
           description_short: speciale
@@ -333,3 +334,43 @@
           description_short: speciale
           description: speciale
           Special: Speciale
+          Binary: Binario
+        usabilitymsm:
+          Usability testing for MSM: Usability testing for MSM
+          Evaluation Blocks: Evaluation Blocks
+          Blocks to Math: Dai Blocchi alla Matematica
+          Strings and Images: Strings and Images
+          Defining Variables: Defining Variables
+          Defining Functions: Defining Functions
+          Design Recipe: Design Recipe
+          Booleans: Valori Booleani
+          Conditionals: Istruzioni condizionali
+          Free Play: Free Play
+        algebra:
+          title: Computer Science in Algebra
+          description: Learn Functional Programming through Algebra
+          'Unplugged: Video Games and Coordinate Planes': 'Senza Rete: Videogiochi
+            e Piani Cartesiani'
+          'Calc: Evaluation Blocks': 'Calcolo: Blocchi di Valutazione'
+          'Eval: Strings and Images': 'Valutazione: Stringhe e Immagini'
+          'Unplugged: Contracts': 'Senza Rete: Contratti'
+          'Eval: Writing Contracts': 'Valutazione: Scrittura di Contratti'
+          'Calc: Defining Variables': 'Calcolo: Definizione di Variabili'
+          'Play Lab: Defining Variables (Big Game)': 'Laboratorio: Definizione di
+            Variabili (Big Game)'
+          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Unplugged: The Design Recipe': 'Senza rete: La Ricetta della Progettazione'
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Eval: Functions': 'Eval: Functions'
+          'Play Lab: Animation (Big Game)': 'Laboratorio: Animazione (Big Game)'
+          'Unplugged: Booleans': 'Senza Rete: Valori Booleani'
+          'Eval: Boolean Operators': 'Valutazione: Operatori Booleani'
+          'Play Lab: Booleans': 'Laboratorio: Valori Booleani'
+          'Play Lab: Boolean (Big Game)': 'Laboratorio: Valori Booleani (Big Game)'
+          'Unplugged: Conditionals and Piecewise Functions': 'Lezione Senza Rete:
+            Istruzioni Condizionali e Funzioni a Tratti'
+          'Eval: Conditionals': 'Valutazione: Istruzioni Condizionali'
+          'Unplugged: Collision Detection and the Distance Formula': 'Senza Rete:
+            Rilevamento delle Collisioni e Formula per la Distanza'
+          'Play Lab: Collision Detection (Big Game)': 'Laboratorio: Rilevamento delle
+            Collisioni (Big Game)'

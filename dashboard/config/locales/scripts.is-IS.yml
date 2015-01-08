@@ -313,6 +313,7 @@
           description: Valdir áfangar úr Námskeiði 4 til notkunarprófunar.
           Variables: Breytur
           For Loops: Frá lykkjur
+          Binary: Tvíundir
         potus:
           title: sérstakt
           description_short: sérstakt
@@ -323,3 +324,43 @@
           description_short: sérstakt
           description: sérstakt
           Special: Sérstakt
+          Binary: Tvíundir
+        usabilitymsm:
+          Usability testing for MSM: Usability testing for MSM
+          Evaluation Blocks: Evaluation Blocks
+          Blocks to Math: Kubbar og stærðfræði
+          Strings and Images: Strings and Images
+          Defining Variables: Defining Variables
+          Defining Functions: Defining Functions
+          Design Recipe: Design Recipe
+          Booleans: Boolean gildi
+          Conditionals: Skilyrði
+          Free Play: Free Play
+        algebra:
+          title: Computer Science in Algebra
+          description: Learn Functional Programming through Algebra
+          'Unplugged: Video Games and Coordinate Planes': 'Verkefni án tölvu: Tölvuleikir
+            og hnitakerfi'
+          'Calc: Evaluation Blocks': 'Reiknir: Greiningarkubbar'
+          'Eval: Strings and Images': 'Greining: Strengir og myndir'
+          'Unplugged: Contracts': 'Verkefni án tölvu: Samningar'
+          'Eval: Writing Contracts': 'Greining: Ritun samninga'
+          'Calc: Defining Variables': 'Reiknir: Skilgreining breytna'
+          'Play Lab: Defining Variables (Big Game)': 'Leikjasmiðjan: Skilgreina breytur
+            (Stórleikur)'
+          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Unplugged: The Design Recipe': 'Verkefni án tölvu: Hönnunaruppskriftin'
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Eval: Functions': 'Eval: Functions'
+          'Play Lab: Animation (Big Game)': 'Leikjasmiðjan: Hreyfing (Stórleikur)'
+          'Unplugged: Booleans': 'Verkefni án tölvu: Boolean gildi'
+          'Eval: Boolean Operators': 'Greining: Boolean virkjar'
+          'Play Lab: Booleans': 'Leikjasmiðjan: Boolean gildi'
+          'Play Lab: Boolean (Big Game)': 'Leikjasmiðjan: Boolean gildi (Stórleikur)'
+          'Unplugged: Conditionals and Piecewise Functions': 'Verkefni án tölvu: Skilyrði
+            og Piecewise föll'
+          'Eval: Conditionals': 'Greining: Skilyrði'
+          'Unplugged: Collision Detection and the Distance Formula': 'Verkefni án
+            tölvu: Skynjun árekstra og fjarlægðarformúlan'
+          'Play Lab: Collision Detection (Big Game)': 'Leikjasmiðjan: Skynjun árekstra
+            (Stórleikur)'

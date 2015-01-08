@@ -13,6 +13,7 @@
   "squareBlockTitle": "Quadrat (Größe, Stil, Farbe)",
   "starBlockTitle": "Stern (Radius, Stil, Farbe)",
   "radialStarBlockTitle": "Radial-Star (Punkte, innere, äußere, Stil, Farbe)",
+  "polygonBlockTitle": "polygon (sides, length, style, color)",
   "stringAppendBlockTitle": "String anhängen (erster, zweiter)",
   "stringLengthBlockTitle": "Länge der Zeichenfolge (String)",
   "textBlockTitle": "Text (String, Größe, Farbe)",

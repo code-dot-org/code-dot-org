@@ -296,10 +296,10 @@ km:
     email_resend_confirm: Resend confirmation instructions
     new_password_hint: "(leave blank if you don't want to change it)"
     current_password_hint: (we need your current password to confirm your changes)
-    cancel:
-      title: បោះបង់​គណនី​របស់​ខ្ញុំ
-      hint: មិន​សប្បាយ​ចិត្ត?
-      button: បោះបង់​គណនី​របស់​ខ្ញុំ
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: បាន​បញ្ចប់
     tried: បាន​ព្យាយាម
@@ -332,7 +332,7 @@ km:
     see_details: See details
     prize_info: 'Prizes for participation (U.S. public school teachers only): Up to $1,000 in classroom rewards.'
     tryfirst: 'Or, you can try it first, and sign up later:'
-    trynow: Try now
+    trynow: សាកល្បង​ឥឡូវ
     add_hint_help: Please help us to add smart hints to Code.org tutorials
     20hour_overview: This 20-hour course introduces core computer science and programming concepts. The course is designed for use in classrooms for grades K-8, but it is fun to learn at all ages.
     test_videos_help: Test our new video player at your school
@@ -494,7 +494,7 @@ km:
           title: Jigsaw
           description: ""
         step:
-          title: Step
+          title: ជំហាន
           description: ""
         sample_level_builder:
           title: Sample Level Builder

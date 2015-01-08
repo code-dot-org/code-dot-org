@@ -334,9 +334,9 @@ fi:
       frozen perpendicular:
         instructions: 'Kokeillaanpa nyt luoda kaksi viivaa, jotka ovat 90 asteen kulmassa toisiinsa nähden. Sinun täytyy käyttää "Käännä"-lohkoa sekä "Liiku"-lohkoa.'
       frozen square iterative:
-        instructions: Näyttää siltä, että olemme puolessa välissä neliön piirtämiseksi. Laitetaan 4 viivaa yhteen neliön luomiseksi.
+        instructions: Näyttää siltä, että olemme puolessa välissä neliön piirtämiseksi. Laitetaan 4 viivaa yhteen, niin saamme neliön.
       frozen square loop:
-        instructions: 'Hei, olen Arendelin Anna! Tehdäänpä neliö "Toista"-lohkolla, joka käyttää vähemmän lohkoja. Kuinka monta kertaa (???) pitäisi "Toista"-lohkon toistaa sen sisällä olevat lohkot saadakseen aikaan neliön?'
+        instructions: 'Hei, olen Arendelin Anna! Tehdäänpä neliö "Toista"-lohkolla. Siten säästämme lohkoja. Kuinka monta kertaa "Toista"-lohkon pitäisi toistaa sen sisällä olevat lohkot saadakseen aikaan neliön?'
       frozen square loop 3x:
         instructions: Luodaanpa kolme neliötä, kääntyen kunkin neliön jälkeen. Pidä huolta että käännyt täsmälleen 120 astetta ennen kutakin uutta neliötä.
       frozen square snowflake:
@@ -350,7 +350,7 @@ fi:
       frozen diamond:
         instructions: 'Luodaanpa suunnikas. Se on kuin neliö, mutta sillä on erilaiset kulmat: esim. 60 ja 120 asteen kulmat 90 asteen kulmien sijaan.'
       frozen diamond mini snowflake:
-        instructions: 'Tiesitkö että jokainen lumihiutale on eri muotoinen? Luodaanpa uusi lumihiutale käyttäen "Toista"-lohkoa toistamaan suunnikas neljä kertaa, kääntyen oikealle 90 astetta jokaisen suunnikkaan välissä.'
+        instructions: 'Tiesitkö, että jokainen lumihiutale on eri muotoinen? Luodaanpa uusi lumihiutale käyttäen "Toista"-lohkoa toistamaan suunnikas neljä kertaa, kääntyen oikealle 90 astetta jokaisen suunnikkaan välissä.'
       frozen diamond snowflake:
         instructions: Luo nyt uusi lumihiutale käyttäen toista-lohkoa toistaaksesi suunnikkaan 19 kertaa, kääntyen 36 astetta kunkin välissä.
       frozen circle:
@@ -364,7 +364,7 @@ fi:
       frozen snowflower:
         instructions: Monimutkaisia lumikuvioita voi luoda hyvin yksinkertaisilla muodoilla. Voitko tehdä kuvion toistamalla 5 ympyrää kokoa 5 ja 5 ympyrää kokoa 10?
       frozen snowflake branch:
-        instructions: 'Kokeile "Luo lumihiutalehaara" lohkoa ja piirrä kolme haaraa siten, että se alkaa näyttää lumihiutaleelta.'
+        instructions: 'Kokeile "Luo lumihiutalehaara" -lohkoa ja piirrä kolme haaraa siten, että se alkaa näyttää lumihiutaleelta.'
       frozen snowflake full:
         instructions: Toista sitä nyt 8 kertaa tehdäksesi kaunis lumihiutale!
       frozen freeplay:
@@ -500,7 +500,7 @@ fi:
         playlab_repeat_forever: 'Pelilabra: ikuinen toisto'
     callout:
       text:
-        drag_blocks: 'Vedä "liikuta"-lohko ja napsauta se kiinni toisen lohkon alalaitaan'
+        drag_blocks: 'Vedä "liiku"-lohko ja napsauta se kiinni toisen lohkon alalaitaan'
         run: 'Paina "Suorita" kokeillaksesi ohjelmaa'
         watch_again: Klikkaa tästä jos haluat katsella videon uudelleen
         gray_block_explanation: Harmaita lohkoja ei voi poistaa. Pystytkö silti ratkaisemaan tehtävän?
@@ -516,7 +516,7 @@ fi:
         replace_questions_degree: 'Käytä alasvetovalikkoa ja korvaa "???" oikealla astekulmalla'
         repeat_blocks: 'Käytä "Toista" lohkoa ja laita se työtilassa olevien toisten lohkojen ympärille'
         repeat_blocks_1: (1) Käytä tätä lohkoa ja laita se harmaiden lohkojen ympärille työtilassa
-        repeat_blocks_2: '(2) Liikuta "Toista"-lohko tähän, ja laita harmaat lohkot sen sisälle'
+        repeat_blocks_2: '(2) Vedä "Toista"-lohko tähän, ja laita harmaat lohkot sen sisälle'
         snowflake_dropdown: Käytä tätä alasvetovalikkoa luodaksesi erilaisia lumihiutaleita!
         degrees_per_side: Jaa 360 sivujen määrällä saadaksesi kunkin kulman koko asteissa.
         set_sides: Käytä tätä lohkoa asettaaksesi sivujen lukumäärän tehtävän ratkaisun mukaiseksi.

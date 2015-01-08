@@ -333,10 +333,11 @@
     new_password_hint: (השאר ריק אם אין ברצונך לשנות)
     current_password_hint: (אנחנו צריכים את הסיסמה הנוכחית שלך כדי לאשר את השינויים
       שלך)
-    cancel:
-      title: בטל את החשבון שלי
-      hint: לא שמח?
-      button: בטל את החשבון שלי
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: 'Please note: deleting your account will not delete
+      your students'' accounts.'
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: הושלם
     tried: נוסה

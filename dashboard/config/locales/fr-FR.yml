@@ -358,10 +358,11 @@
     new_password_hint: (laissez vide pour conserver)
     current_password_hint: (nous avons besoin de votre mot de passe actuel pour confirmer
       vos modifications)
-    cancel:
-      title: Annuler mon compte
-      hint: Insatisfait ?
-      button: Annuler mon compte
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: 'Please note: deleting your account will not delete
+      your students'' accounts.'
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Terminé
     tried: Essayé

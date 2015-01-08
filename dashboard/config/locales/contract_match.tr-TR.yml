@@ -1,0 +1,52 @@
+"tr":
+  data:
+    contract_match:
+      Enter name here:
+        Enter title here: Başlığı buraya girin
+        Enter prompt here: Bilgiyi buraya girin
+        Contract Name|Number|Domain1:Number|Domain2:string: Sözleşme adı|Numara|Alan1:Numara|Alan2:Dizi
+      Eval Contracts 1 B:
+        Eval Contracts 1 B: Eval sözleşmeleri 1 B
+        Write a contract for the star function: Yıldız işlevi için bir sözleşme yaz
+        Eval Contracts 1.solution_blocks, 200: Eval sözleşmeleri 1.çözüm_bloklar,
+          200
+        Contract star|image|Domain1:Number|Domain2:string|Domain3:string: Sözleşme
+          yıldızı|Görüntü|Alan1:Numara|Alan2:dizi|Alan3:dizi
+        Eval Contracts 1.solution_blocks: Eval sözleşmeleri 1.çözüm_bloklar
+        Contract star|image|radius:Number|style:string|color:string: Sözleşme yıldızı|görüntü|yarıçap:Numara|stil:dizi|renk:dizi
+        star|image|radius:Number|style:string|color:string: Yıldız|görüntü|yarıçap:Numara|stil:dizi|renk:dizi
+        Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks,
+          300
+      Eval Contracts 2 B:
+        Eval Contracts 2 B: Eval sözleşmeleri 1 B
+        Write a contract for the rotate function: Döndürme işlevi için bir sözleşme
+          yaz
+        Eval Contracts 2 A.solution_blocks, 300: Eval sözleşmeleri 2 A.çözüm_bloklar,
+          300
+        rotate|image|degrees:Number|image:image: Döndür|görüntü|Derece:Numara|görüntü:görüntü
+      Eval Contracts 3 B:
+        Eval Contracts 3 B: Eval sözleşmeleri 1 B
+        Write a contract for the text function: Metin işlevi için bir sözleşme yaz
+        Eval Contracts 3 A.solution_blocks, 300: Eval sözleşmeleri 2 A.çözüm_bloklar,
+          300
+        text|image|string:string|size:Number|color:string: Metin|görüntü|dizi:dizi|boyut:Numara|Renk:dizi
+      Eval Contracts 4 B:
+        Eval Contracts 4 B: Eval sözleşmeleri 4 B
+        Write a contract for the scale function: Ölçek işlevi için bir sözleşme yaz
+        Eval Contracts 4 A.solution_blocks, 300: Eval sözleşmeleri 4 A.çözüm_bloklar,
+          300
+        scale|image|factor:Number|image:image: Ölçek|görüntü|Faktör:Numara|görüntü:görüntü
+      Design Recipe 1.contract:
+        Design Recipe 1 Contract: Tasarım tarifi 1 sözleşme
+        0: ?"wide-rect" olarak anılan işlev için bir sözleşme yaz. Bu işlev bir dikdörtgen
+          yaratmak için yükseklik ve iki katı kadar geniş ve uzun olan bir renk verir.
+        1: ': Write the contract for function called "wide-rect" which creates a rectangle
+          of given height and color that is twice as wide as it is tall.'
+        wide-rect|Image|height:Number|color:string: wide-rect|Image|height:Number|color:string
+      Eval Design Recipe 1.contract:
+        Design Recipe 1 Contract: Tasarım tarifi 1 sözleşme
+        0: ?"wide-rect" olarak anılan işlev için bir sözleşme yaz. Bu işlev bir dikdörtgen
+          yaratmak için yükseklik ve iki katı kadar geniş ve uzun olan bir renk verir.
+        1: ': Write the contract for function called "wide-rect" which creates a rectangle
+          of given height and color that is twice as wide as it is tall.'
+        wide-rect|Image|height:Number|color:string: wide-rect|Image|height:Number|color:string

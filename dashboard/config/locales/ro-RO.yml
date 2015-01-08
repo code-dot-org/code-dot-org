@@ -352,10 +352,11 @@
     email_resend_confirm: Retrimite instrucțiunile de confirmare
     new_password_hint: (lasă necompletat dacă nu dorești să schimbi)
     current_password_hint: (avem nevoie de parola ta curentă pentru a confirma modificările)
-    cancel:
-      title: Anulează-mi contul
-      hint: Nefericit?
-      button: Anulează-mi contul
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: 'Please note: deleting your account will not delete
+      your students'' accounts.'
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Finalizat
     tried: Încercat

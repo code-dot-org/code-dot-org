@@ -10,7 +10,7 @@ fr-FR:
   n_have_learned_an_hoc: '<h1>#</h1><h3>personnes ont essayé une</h3><h2>Heure de Code</h2>'
   anybody_can_learn: Tout le monde peut apprendre.
   learn_now: Apprends Maintenant
-  petition_message: "Tous les élèves dans toutes les écoles devraient avoir la possibilité d'apprendre l'informatique"
+  petition_message: "Tout étudiant dans toute école doit avoir la possibilité d'apprendre l'informatique"
   petition_sign_message: "Si tu es d'accord, mets ton nom. Rejoins # les autres."
   name: Nom
   email: E-mail
@@ -22,13 +22,13 @@ fr-FR:
     Rejoignez<a href="http://hourofcode.com"> l'heure de Code</a> <br/> le 8-14 décembre 2014 <br/>
   hoc2014_students: Élèves
   hoc2014_try: Participez
-  hoc2014_teachers: Professeurs
-  hoc2014_host: Enseignez
+  hoc2014_teachers: Enseignants
+  hoc2014_host: Hébergez le
   hoc2014_everyone: Tout le monde
   hoc2014_support: Soutenez-nous
-  hoc2014_whatishoc: "Qu'est-ce que l'heure de code?"
+  hoc2014_whatishoc: "Qu'est-ce que l'Heure de Code?"
   twentyhours_trynow: Essaie maintenant
-  california_heading: "Demandez à votre école pour enseigner l'informatique"
+  california_heading: "Demandez à votre école d'enseigner l'Informatique"
   california_text: |-
     Tout enseignant peut offrir notre <a href="http://learn.code.org"> cours d'introduction gratuit</a>.  Toute école élémentaire peut <a href="http://code.org/educate/k5"> enseigner les sciences informatiques</a>. Demander aux lycées de <a href="http://code.org/educate/districts">collaborer avec nous</a>.
   california_button: En savoir plus
@@ -49,12 +49,12 @@ fr-FR:
   get_a_certificate_of_achievement: Obtenir une attestation de réussite
   enter_valid_email: Veuillez introduire une adresse mail valide
   get_a_certificate_message: "Nous vous enverrons un certificat et des informations sur comment <a href='/learn/beyond'>Apprendre au-delà d'Une Heure</a>"
-  get_a_certificate_message_after: "Cliquez sur le certificat à télécharger ou à imprimer. Maintenant, continuez avec nos <a href='http://studio.code.org'> autres cours</a>, ou voir plus d'options sur <a href='/learn/beyond'> Apprendre au-delà d'une heure</a>."
+  get_a_certificate_message_after: "Cliques sur le certificat pour le télécharger ou l'imprimer. Maintenant, continues avec nos <a href='http://studio.code.org'> autres cours</a>, ou voir plus d'options sur <a href='/learn/beyond'> Apprendre au-delà d'Une Heure</a>."
   thanks_for_submitting: Merci pour votre participation !
   if_you_enjoyed: Si vous avez apprécié apprendre, proposez à des amis de participer aussi ! Nous voulons que le monde entier apprenne.
-  personalize_certificate: Personnalisez votre certificat
+  personalize_certificate: Personnalises ton certificat
   share_achievement: Partagez votre travail
-  beyond_hour_message: "Continuez avec nos <a href='http://studio.code.org'> autres cours</a>, ou voir plus d'options sur <a href='/learn/beyond'> Apprendre au-delà d'une heure</a>."
+  beyond_hour_message: "Continues avec nos <a href='http://studio.code.org'> autres cours</a>, ou voir plus d'options sur <a href='/learn/beyond'> Apprendre au-delà d'Une Heure</a>."
   leaderboards_for_hoc: "Classements pour l'Heure de Code."
   support_url: http://support.code.org/
   country: Pays
@@ -64,12 +64,12 @@ fr-FR:
   girls: Filles
   give_my_hour: 'Donner mon Heure à:'
   girls_team: Équipe des filles
-  boys_team: Équipe masculine
+  boys_team: Équipe des garçons
   tell_the_world: Partagez !
   thanks_for_voting: Merci pour votre vote !
   share_on_facebook: Partagez sur Facebook
   share_on_twitter: Partagez sur Twitter
-  beyond_an_hour: "Au-delà d'une heure de Code"
+  beyond_an_hour: "Au-delà d'Une Heure de Code"
   get_started: Commencer
   i_agree: "Je suis d'accord"
   participant_select: -Sélectionner-
@@ -77,8 +77,8 @@ fr-FR:
   participant_parent: Parent
   participant_educator: Éducateur
   participant_engineer: Ingénieur logiciel
-  participant_other: Autre
-  print_all: Imprimer tout
+  participant_other: Aucun de ce qui se trouve au-dessus
+  print_all: Tout imprimer
   print_ice_art: Imprimez votre oeuvre de glace
   create_art_with_zombie: "ou faites de l'art avancé avec zombie"
   i_am_a: Je suis un
@@ -92,64 +92,71 @@ fr-FR:
   learn_next_level: Continuer au prochain niveau
   learn_online: "Essayez d'autres cours en ligne"
   learn_classes: Trouver des écoles près de chez vous
-  hoc_is_here: 'La #HourOfCode est ici - jetez-y un oeil ! @codeorg'
-  just_did_hoc: 'Je viens de faire la #HourOfCode - jetez-y un oeil ! @codeorg'
+  hoc_is_here: "L' #HeureDeCode est ici - jetez-y un œil ! @codeorg"
+  just_did_hoc: "Je viens de faire l' #HeureDeCode - jetez-y un œil ! @codeorg"
   learn_hoc: Apprendre une Heure de Code
-  beyond_hoc: "Au delà d'Une heure"
+  beyond_hoc: "Au delà d'Une Heure"
   what_gender: De quel sexe êtes vous ?
   girl: Fille
   boy: Garçon
-  help_recruit_coders: Aidez-nous à recruter plus de programmeurs dans votre équipe !
-  help_recruit: Aidez-nous à recruter plus de programmeurs !
+  help_recruit_coders: Aides-nous à recruter plus de programmeurs dans ton équipe !
+  help_recruit: Aides-nous à recruter plus de programmeurs !
   lines_of_code: 'PLUS DE <b># LIGNES DE CODE</b> ECRITES A CE JOUR.'
   lines_of_code_alt: '<b>#</b> LIGNES DE CODE ÉCRIT PAR DES ÉTUDIANTS'
-  who_has_done_hoc: 'Qui à crée la #HourOfCode? @codeorg'
-  hoc_leaderboards: Le classement de Hour of Code
+  who_has_done_hoc: "Qui à crée l' #HeureDeCode? @codeorg"
+  hoc_leaderboards: "Le tableau de classement de l'Heure de Code"
   students_and_lines: '%{students} élèves ont participé à Hour of Code et ont écrit %{lines} lignes de code.'
-  start_hoc: Commencez dès maintenant la Hour of Code
+  start_hoc: "Commence dès maintenant l'Heure de Code"
   contact_form_topic_press: Presse/médias (interview ou allocution)
+  stats_michael: |-
+    Je n'ai vraiment <b>jamais</b> vu mes élèves aussi empressés d'apprendre. "-Michael Clark, professeur
+  stats_nina: '"Chaque jour, nous avons obtenu les mêmes résultats &mdash; une mobilisation à 100%."-Nina Nichols Peery, enseignante'
+  stats_student: |-
+    "Je savais que c'était une chance <b>unique</b> ."-Mariana Alzate, élève de 5e
   studiobar_title: "Essayez <a href='http://studio.code.org'>Code Studio</a>"
   studiobar_elementary_title: Cours pour débutants
-  studiobar_elementary_body: Nos différents cours pour débuter
+  studiobar_elementary_body: 'Nos trois nouveaux cours pour K&#8209;5'
   studiobar_hoc_title: "L'Heure de Code"
-  studiobar_hoc_body: Apprenez à programmer avec Angry Birds
+  studiobar_hoc_body: Apprends à programmer avec Angry Birds
   studiobar_flappy_title: Le code de Flappy
-  studiobar_flappy_body: Programmez et partagez votre propre jeu Flappy bird
-  studiobar_teacher_title: Pour les professeurs
-  studiobar_teacher_body: Introduction à Code Studio dans votre salle de classe
+  studiobar_flappy_body: Programmes et partages ton propre jeu Flappy
+  studiobar_teacher_title: Pour les enseignants
+  studiobar_teacher_body: Introduction à Code Studio dans ta salle de classe
   studiobar_frozen_title: Heure de Code
-  studiobar_frozen_body: Créez un paradis hivernal avec Anna et Elsa
+  studiobar_frozen_body: Crée un paradis hivernal avec Anna et Elsa
   studiobar_donate_title: Faire un don
   studiobar_donate_body: Un enfant apprend pour chaque dollar donné
+  studiobar_shop_title: Boutique
+  studiobar_shop_body: Briser les stéréotypes. Porter notre logo avec fierté.
   contact_form_topic_student: Je suis un étudiant
   contact_form_topic_parent: Je suis un parent
   contact_form_topic_teacher: Je suis un enseignant/éducateur
   contact_form_topic_outside_us: Je suis en dehors des États-Unis.
   contact_form_topic_contribution: Contribution charitable
-  contact_form_topic_partner: Je tiens à partenaire
+  contact_form_topic_partner: Je souhaiterais être un partenaire
   contact_form_topic_other: Autre
   contact_form_label_topic: Sujet
-  contact_form_label_email: Votre adresse email
+  contact_form_label_email: Ton adresse email
   contact_form_label_message: Message
   contact_form_label_submit: Envoyer un message
   class_submission_in_school: "À l'école"
-  class_submission_in_school_daily_programming_course: Cours de programmation quotidien
+  class_submission_in_school_daily_programming_course: Cours de programmation journalier
   class_submission_in_school_ap_computer_science: "Examen d'informatique AP"
   class_submission_in_school_full_university_cs_curriculum: "Programme complet d'études universitaires informatiques"
-  class_submission_in_school_robotics_club: Club de robotique
+  class_submission_in_school_robotics_club: Club de Robotique
   class_submission_in_school_programming_integrated_in_other_classes: "Cours de programmation intégrés dans d'autres matières (maths, sciences, etc.)"
   class_submission_in_school_summer_school_cs_program: "Cours d'été en informatique"
   class_submission_in_school_exploring_computer_science: "Découverte de l'informatique"
-  class_submission_in_school_other: Autre dans le milieu scolaire ou étudiant
+  class_submission_in_school_other: "Autre à l'école"
   class_submission_out_of_school: "En dehors de l'école"
   class_submission_out_of_school_summer_camp: "Camp d'été"
   class_submission_out_of_school_afterschool_program: Programme parascolaire
   class_submission_out_of_school_all-day_workshop: "Atelier toute la journée (jusqu'à 1 semaine)"
-  class_submission_out_of_school_multi-week_workshop: Atelier de plusieurs semaine
+  class_submission_out_of_school_multi-week_workshop: Atelier de plusieurs semaines
   class_submission_out_of_school_other: "Autre en dehors de l'école"
   class_submission_online: En ligne
-  class_submission_online_programming_class: Classe programmant en ligne
-  class_submission_online_teacher_resource: "Ressource en ligne pour l'enseignement"
+  class_submission_online_programming_class: Classe de programmation en ligne
+  class_submission_online_teacher_resource: Ressource en ligne pour les enseignants
   class_submission_online_other: Autre en ligne
   class_submission_level_preschool: Maternelle
   class_submission_level_elementary: École primaire
@@ -157,8 +164,8 @@ fr-FR:
   class_submission_level_high_school: Lycée
   class_submission_level_college: Université
   class_submission_level_vocational: Professionnelle
-  class_submission_languages_other: Autre langue(s)
-  volunteer_engineer_submission_commitment_uncertain: Indéterminé
+  class_submission_languages_other: Autre(s) langue(s)
+  volunteer_engineer_submission_commitment_uncertain: Incertain
   volunteer_engineer_submission_commitment_now_and_then: Occasionnellement
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 heure par semaine
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 heures par semaine
@@ -173,23 +180,23 @@ fr-FR:
   petition_age: Age
   dashboard_landing_title: "Page d'accueil des enseignants"
   dashboard_landing_welcome: Bienvenue dans la nouvelle version améliorée du tableau de bord des enseignants.
-  dashboard_landing_video: Regardez cette vidéo
-  dashboard_landing_watch_video: pour un tour des nouvelles fonctionnalités !
-  dashboard_landing_view_as_student: Voir ce site comme un élève
-  dashboard_landing_students_title: Vos élèves
-  dashboard_landing_students_manage: Visualisez et gérez vos élèves
-  dashboard_landing_news_title: Ressources pour les enseignants du primaire (anglais seulement)
-  dashboard_landing_new_beta: Nouveau! Testez nos cours pour les élèves de primaires (version bêta).
+  dashboard_landing_video: Regarde cette vidéo
+  dashboard_landing_watch_video: pour un aperçu des nouvelles fonctionnalités!
+  dashboard_landing_view_as_student: "Visitez ce site en tant qu'étudiant"
+  dashboard_landing_students_title: Vos étudiants
+  dashboard_landing_students_manage: Aperçu et gestion de vos étudiants
+  dashboard_landing_news_title: Ressources pour les enseignants du primaire (en anglais uniquement)
+  dashboard_landing_new_beta: Nouveau! Testez nos cours en beta pour les élèves du primaire.
   dashboard_landing_new_k5courses: Nouveau! Essayez nos cours pour les élèves de primaire.
-  dashboard_landing_useful_links: Autres liens utiles (en anglais uniquement)
-  dashboard_landing_office_hours: Posez votre question en personne durant nos vidéos-chat tous les mois.
+  dashboard_landing_useful_links: Autres liens utiles (en Anglais uniquement)
+  dashboard_landing_office_hours: Posez votre question en live! Visitez notre vidéo mensuel durant les heures de bureau.
   dashboard_landing_print_certificates: Imprimer les certificats pour les élèves ayant terminé ce cours
   dashboard_landing_educator_blog: "Lisez l'actualité et les mises à jour de notre matériel sur notre Blog Enseignant"
   dashboard_landing_smart_hints: Aidez-nous à ajouter des astuces pertinentes aux tutoriels de Code.org
   dashboard_landing_video_player: Essayez notre nouveau lecteur vidéo dans votre école
-  dashboard_landing_progress_title: Progrès de la classe
+  dashboard_landing_progress_title: Progression de la classe
   dashboard_landing_progress_biggest: Progression de votre plus grande section.
-  dashboard_landing_view_progress: 'Voir la progressions de %{biggest_section}'
+  dashboard_landing_view_progress: 'Voir la progression de %{biggest_section}'
   dashboard_landing_available_title: Cours disponibles
   dashboard_landing_available_courses: Voici les cours disponibles actuellement pour vous et vos élèves.
   dashboard_landing_loading: Chargement...
@@ -198,14 +205,16 @@ fr-FR:
   dashboard_action_save_all: Tout sauvergarder
   dashboard_action_cancel: Annuler
   dashboard_action_delete: Supprimer
-  dashboard_action_confirm: Supprimer ?
   dashboard_action_delete_yes: Oui
   dashboard_action_delete_no: Non
+  dashboard_action_confirm: Supprimer ?
+  dashboard_action_remove: Supprimer 
+  dashboard_action_remove_confirm: Supprimer ?
   dashboard_action_done: Fait
   dashboard_action_required: requis
   dashboard_navigation_home_page: "Page d'accueil de l'enseignant"
   dashboard_navigation_section_student_progress: Comptes et progrès des élèves
-  dashboard_navigation_section_teacher_progress: "L'avancement de votre cours"
+  dashboard_navigation_section_teacher_progress: La progression de votre cours
   dashboard_navigation_section_lesson_plans: Plans de cours et ressources
   dashboard_navigation_section_community: Aide et Communauté
   dashboard_navigation_section_pd: Perfectionnement professionnel

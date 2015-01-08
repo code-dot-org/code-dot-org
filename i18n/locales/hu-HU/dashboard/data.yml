@@ -121,7 +121,7 @@ hu:
         parameters: Paraméterezett függvények
     level:
       instructions:
-        maze_2_2: 'Tudsz nekem segíteni hogy elkapjuk a rakoncátlan malacot? Rakj össze néhány "lépj előre" blokkot, és nyomd meg a "Run"gombot, hogy eljussunk oda. '
+        maze_2_2: 'Tudsz nekem segíteni hogy elkapjuk a rakoncátlan malacot? Rakj össze néhány "lépj előre" blokkot, és nyomd meg a "Futtatás " gombot, hogy eljussunk oda. '
         maze_2_1: Ez a malac bosszantó. Segíts megtalálni!
         maze_2_2_5: Tervezd meg az utat a malacig. A TNT-t viszont kerüld el mindenképp, vagy repülsz!
         maze_2_3: Vezess el a zöld förtelemig! (Vigyázz a TNT-vel)
@@ -224,7 +224,7 @@ hu:
         maze_3_1: El kell kapnom a malacot. Gépelj be néhány move(); (mozgás()) utasítást, hogy visszakapjam a tojásaimat.
         maze_3_2: Írj egy programot, hogy megtehessem az egész utat a malachoz.
         maze_3_3: Hogy jussak el a malachoz? Vigyázz, nehogy belefussak egy doboz TNT-be!
-        maze_3_4: Ahh! Írj nekem egy programot amivel megkerülhetem a TNT-t és eljuthatok a malachoz.
+        maze_3_4: Ahh! Írj nekem egy programot amivel elkerülhetem a TNT-t és eljuthatok a malachoz.
         bounce_1: 'Csatolj egy blokkot a "mikor bal nyíl" blokkhoz, majd nyomd meg a "Futtatás" gombot. Mozgasd az evezőt a bal nyíllal, hogy elérd a célt.'
         bounce_2: 'Csatolja a blokkot  az "Amikor jobb nyíl" blokkhoz, és nyomja meg a "Program futtatásá"-t. Mozgassa a lapátot a bal nyíl segítségével hogy elérje célját.'
         bounce_3: 'Most csinálja meg ugyanezt  a "Mikor fel nyíl" blokkal, és mozgassa a lapátot a, hogy elérje fent a célt.'

@@ -13,6 +13,7 @@
   "squareBlockTitle": "čtverec (velikost, styl, barva)",
   "starBlockTitle": "hvězda (poloměr, styl, barva)",
   "radialStarBlockTitle": "radial-star (body, vnitřní, vnější, styl, barva)",
+  "polygonBlockTitle": "polygon (sides, length, style, color)",
   "stringAppendBlockTitle": "spojit řetězce (první, druhý)",
   "stringLengthBlockTitle": "Délka řetězce (string)",
   "textBlockTitle": "text (řetězec, velikost, barva)",

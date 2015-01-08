@@ -36,7 +36,7 @@
   of: /
   more: DAHA FAZLA
   less: DAHA AZ
-  beta: beta
+  beta: Beta
   try_hoc: 'Kod Saati''ni denemek için buraya tıklayın >> '
   try_k8intro: İlköğretim okullarına yönelik Bilgisayar Bilimlerine Giriş dersimizi
     deneyin (15-25 saat)
@@ -338,10 +338,11 @@
     email_resend_confirm: Onay yönergelerini yeniden gönder
     new_password_hint: (Eğer değiştirmek iştemiyorsanız boş bırakın)
     current_password_hint: (Değişikliklerinizi onaylamak için geçerli parolanız gerekiyor)
-    cancel:
-      title: Hesabımı iptal et
-      hint: Mutsuz?
-      button: Hesabımı iptal et
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: 'Please note: deleting your account will not delete
+      your students'' accounts.'
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Tamamlandı
     tried: Denenmiş
@@ -592,6 +593,6 @@
     completed_perfect: tamamlandı, harika
     furthest_level_attempted: denenen en yüksek seviye
   studio:
-    courses_working_on: Courses you're working on
-    completed_courses: Completed courses
-    all_courses: All courses
+    courses_working_on: Üzerinde çalışmakta olduğunuz dersler
+    completed_courses: Tamamladığınız dersler
+    all_courses: Tüm dersler

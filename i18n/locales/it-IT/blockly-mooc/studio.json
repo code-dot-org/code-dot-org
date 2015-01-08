@@ -58,6 +58,7 @@
   "moveDistanceTooltip":"Sposta un personaggio della distanza specificata nella direzione specificata.",
   "moveSprite":"sposta",
   "moveSpriteN":"sposta il personaggio {spriteIndex}",
+  "toXY":"to x,y",
   "moveDown":"sposta in basso",
   "moveDownTooltip":"Sposta un personaggio verso il basso.",
   "moveLeft":"sposta a sinistra",

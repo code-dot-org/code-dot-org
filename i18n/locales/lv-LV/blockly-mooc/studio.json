@@ -58,6 +58,7 @@
   "moveDistanceTooltip":"Pārvietot aktieri noteiktā attālumā, norādītajā virzienā.",
   "moveSprite":"pārvietot",
   "moveSpriteN":"pārvietot aktieri {spriteIndex}",
+  "toXY":"to x,y",
   "moveDown":"pārvietot uz leju",
   "moveDownTooltip":"Pārvietot aktieri uz leju.",
   "moveLeft":"pārvietot pa kreisi",

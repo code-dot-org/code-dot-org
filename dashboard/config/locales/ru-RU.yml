@@ -36,7 +36,7 @@
   of: из
   more: ЕЩЁ
   less: СВЕРНУТЬ
-  beta: beta
+  beta: Бета-версия
   try_hoc: Для участия в "Часе кода" нажми здесь >> 
   try_k8intro: Попробуйте наш курс "Введение в информатику" (15-25 часов)
   k8intro: Курс "Введение в информатику" (15-25 часов)
@@ -275,13 +275,13 @@
       section: 'Раздел:'
       stages: 'Этап(ы) для отображения:'
       show_past: 'Показать деятельность ученика (%{bullet_html}) в прошлом:'
-      levels_key: Levels key
+      levels_key: Ключевые уровни
       perfect: Завершено, отлично
       completed: Завершено, но использовано слишком много блоков
       tried: Пытался, но не завершено
       not_tried: Ещё не пытался
       activity: Показывает активность студента за последние %{plural} %{hours}
-      no_section: No assigned section
+      no_section: Нет назначенного раздела
       trophies: трофеи
     students:
       name: Имя
@@ -301,7 +301,7 @@
         забудет свой пароль, Вы будете иметь возможность сбросить пароль за него.
       register: Попросите ваших учеников зарегистрироваться самостоятельно
       vist: Предложите Вашим ученикам посетить
-      section_code: 'and enter their section-code:'
+      section_code: 'И ввести их в section-code:'
       first_please: Во-первых, пожалуйста %{add_section}
       for: Для
       enter: 'введите:'
@@ -311,7 +311,7 @@
       section: Раздел
       students: Ученики
       section_code: Код раздела
-      add_section_code: Add Students Section-Code
+      add_section_code: Добавить раздел Студенты в раздел кода
       secret: Секретный тип
       grade: Оценка
       course: Курс
@@ -334,10 +334,11 @@
     email_resend_confirm: Выслать инструкции для подтверждения
     new_password_hint: (оставьте пустым, если не хотите ничего менять)
     current_password_hint: (нам нужен Ваш текущий пароль для подтверждения изменений)
-    cancel:
-      title: Аннулировать регистрацию
-      hint: Недоволен?
-      button: Аннулирование регистрации
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: 'Please note: deleting your account will not delete
+      your students'' accounts.'
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Завершено
     tried: Пытался
@@ -385,8 +386,8 @@
     try_beta_courses: Новинка! Попробуйте наши бета-курсы для дошкольников и начальной
       школы
     use_as_teacher: Используйте этот сайт как учитель
-    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
-    heading_elementary: <h2>20-часовые курсы для</h2><h1>Учащихся начальной школы</h1>
+    heading_hoc2014: <h2>Час Кода для</h2><h1>Для всех возрастов</h1>
+    heading_elementary: <h2>20-часовые курсы для</h2><h1>Начинающих (всех возрастов)</h1>
     heading_apps: <h2>Развлечения для</h2><h1>всех</h1>
     heading_legacy: <h2>Наш общий курс для</h2><h1>Для всех возрастов</h1>
     your_gallery: Галерея
@@ -443,27 +444,26 @@
       button: Take me to the list of supported browsers
   slow_loading: Это занимает больше времени, чем обычно...
   try_reloading: Попробуйте перезагрузить страницу
-  next_stage: Закончил! Перейти к следующему этапу
+  next_stage: Завершено! Перейти к следующему этапу
   download_pdf: Показать план урока
   lesson_plan: План урока
   view_lesson_plan: Посмотреть план урока
   pdf_download: Скачать PDF
   download_coming_soon: Downloadable activity coming soon.
-  video_coming_soon: Video Coming Soon!
+  video_coming_soon: Данное видео скоро появится!
   share_code:
     title: Нажмите кнопку «Run», чтобы увидеть мою программу в действии
     bounce_og_title: Check out my Bounce Game
     flappy_og_title: Проверь мои Flappy игру
     studio_og_title: Посмотреть свою историю
-    check_out_what_i_made: Check out what I made
+    check_out_what_i_made: Проверить, что я сделал
     og_description: Я сам написал код  на Code.org
     phone_number_not_allowed: Похоже, здесь есть номер телефона. Попробуйте изменить
       текст.
     address_not_allowed: Похоже, здесь есть адрес. Попробуйте изменить текст.
     email_not_allowed: Похоже, здесь есть адрес электронной почты. Попробуйте изменить
       текст.
-    profanity_not_allowed: It looks like there is profanity in it. Try changing the
-      text.
+    profanity_not_allowed: Кажется, в коде есть неточности. Попробуйте изменить текст.
   builder:
     created: Вы создали новый скрипт.
     destroyed: Вы уничтожили скрипт.
@@ -487,11 +487,11 @@
       title: Вводный курс
       body: Попробуйте наш 20-часовой курс Введение в информатику.
     hoc2014:
-      try_new_tutorial: Try our new Hour of Code tutorial in beta
+      try_new_tutorial: Попробуй наше новое пособие "Час кода" в бета-версии
       try_frozen: Рисуй вместе с Анной и Эльзой из "Холодного сердца"
     gallery:
       title: Галерея
-      body: View a gallery of app and artist images created by our users
+      body: Показать галерею приложений и картинок, созданных нашими пользователями
     frozen:
       title: '"Холодное сердце"'
   gallery:
@@ -500,12 +500,13 @@
     picture_count: За прошедшие <b>%{days}</b> дней, ученики нарисовали <b>%{count}</b>
       рисунков, написав свои собственные компьютерные программы. Нажмите на картинку,
       чтобы увидеть каждую программу в действии.
-    activity_count: In the past <b>%{days}</b> days, students have made <b>%{count}</b>
-      apps and pictures by writing their own computer programs. Click on the pictures
-      and screenshots to see each program in action.
+    activity_count: За последние несколько <b>%{days}</b> дней, студенты сделали  <b>%{count}</b>
+      приложений и картинок, посредством написания своих собственных компьютерных
+      программ. Нажмите на картинки и скриншоты, чтобы увидеть каждую программу в
+      действии.
     want_to_make_your_own: Хотите сделать свой собственный?
     more: Больше &rarr;
-    caption_by_name_age: by %{name}, age %{age}
+    caption_by_name_age: Создатель %{name}, возраст %{age}
     caption_time_ago: '%{time_ago} назад'
     header: Галерея
     header_playlab: Лаборатория игр
@@ -532,7 +533,7 @@
     correct_title: Верно
     correct_body: Это правильный ответ.
   text_match:
-    placeholder: Enter your answer here
+    placeholder: Внеси сюда свой ответ
   dialog:
     ok: Продолжить
   time:
@@ -557,7 +558,7 @@
           title: События
           description: ''
         builder:
-          title: Builder
+          title: Конструктор
           description: ''
         flappy:
           title: Порхающий код
@@ -586,11 +587,11 @@
     без авторизации или попросить своих родителей или учителя связаться с нами за
     тебя.
   progress:
-    not_completed: not completed
-    completed_too_many_blocks: completed, too many blocks
-    completed_perfect: completed, perfect
+    not_completed: Не завершено
+    completed_too_many_blocks: Завершено, слишком много блоков
+    completed_perfect: Завершено, отлично
     furthest_level_attempted: furthest level attempted
   studio:
-    courses_working_on: Courses you're working on
-    completed_courses: Completed courses
-    all_courses: All courses
+    courses_working_on: Курсы, в процессе изучения
+    completed_courses: Завершенные курсы
+    all_courses: Все курсы

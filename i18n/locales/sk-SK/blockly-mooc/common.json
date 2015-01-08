@@ -24,7 +24,7 @@
   "emptyBlocksErrorMsg":"Bloky \"Opakuj\" alebo \"Ak\" musia obsahovať ďalšie bloky vo vnútri, aby pracovali. Uistite sa, že vnútorný blok je správne umiestnený vo vnútri týchto blokov.",
   "emptyFunctionBlocksErrorMsg":"Funkčný blok musí obsahovať ďalšie bloky vo vnútri, aby pracoval správne.",
   "errorEmptyFunctionBlockModal":"Musia existovať bloky vo vnútri tvojej definície funkcie. Kliknite na \"upraviť\" a presuňte bloky do vnútra zeleného bloku.",
-  "errorIncompleteBlockInFunction":"Click \"edit\" to make sure you don't have any blocks missing inside your function definition.",
+  "errorIncompleteBlockInFunction":"Kliknite na tlačidlo \"upraviť\" aby ste sa uistili, že nemáte žiadne chýbajúce bloky vnútri funkcie.",
   "errorParamInputUnattached":"Remember to attach a block to each parameter input on the function block in your workspace.",
   "errorUnusedParam":"You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block.",
   "errorRequiredParamsMissing":"Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition.",

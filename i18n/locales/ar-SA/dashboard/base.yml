@@ -36,7 +36,7 @@ ar:
   of: من
   more: أكثر
   less: أقل
-  beta: beta
+  beta: تجريبي
   try_hoc: 'قم بتجربة ساعة من البرمجة, انقر هنا>> '
   try_k8intro: 'جرب مقدمة عن درس "علوم الكمبيوتر" للمستوى المبتدئ والمتوسط  (من 15 الى 25 ساعة)'
   k8intro: 'مقدمة عن درس "علوم الكمبيوتر" للمستوى المبتدئ والمتوسط  (من 15 الى 25 ساعة)'
@@ -297,10 +297,10 @@ ar:
     email_resend_confirm: إعادة إرسال رسالة تأكيد تعليمات
     new_password_hint: (اتركه فارغاً إذا كنت لا ترغب في تغييره)
     current_password_hint: (أدخل كلمة المرور الحالية لتأكيد التغييرات الخاصة بحسابك)
-    cancel:
-      title: إلغاء حسابي
-      hint: غير سعيد؟
-      button: إلغاء حسابي
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: أكمل
     tried: حاول
@@ -511,6 +511,6 @@ ar:
     completed_perfect: مكتمل, ممتاز
     furthest_level_attempted: حاول المستوى الأبعد
   studio:
-    courses_working_on: "Courses you're working on"
-    completed_courses: Completed courses
-    all_courses: All courses
+    courses_working_on: إذا كنت تعمل على الدورات
+    completed_courses: الدورات المكتملة
+    all_courses: جميع الدورات

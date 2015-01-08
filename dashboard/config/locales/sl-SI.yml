@@ -335,10 +335,11 @@
     email_resend_confirm: Ponovno pošlji potrditvena navodila
     new_password_hint: (pusti prazno, če tega nočeš spremeniti)
     current_password_hint: (potrebujemo tvoje trenutno geslo, da potrdimo tvoje spremembe)
-    cancel:
-      title: Prekliči moj račun
-      hint: Nezadovoljen?
-      button: Prekliči moj račun
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: 'Please note: deleting your account will not delete
+      your students'' accounts.'
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Zaključeno
     tried: Poskus

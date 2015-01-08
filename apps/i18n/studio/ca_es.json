@@ -58,6 +58,7 @@
   "moveDistanceTooltip": "Moure un actor d'una distància concreta a la direcció especificada.",
   "moveSprite": "moure's",
   "moveSpriteN": "moure actor {spriteIndex}",
+  "toXY": "to x,y",
   "moveDown": "Desplaça avall",
   "moveDownTooltip": "Mou un actor avall.",
   "moveLeft": "desplaça a l'esquerra",

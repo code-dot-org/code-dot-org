@@ -233,7 +233,8 @@
           description_short: Liitymme Annan ja Elsan matkaan, kun he tutkivat jään
             taikaa ja kauneutta ohjelmoinnin avulla.
         course4:
-          description_short: On suositeltavaa käydä kurssit 2 ja 3 ennen kurssia 4.
+          description_short: Suosittelemme kurssien 2 ja 3 suorittamista ennen kurssia
+            4.
           description: Kurssi 4 on suunniteltu opiskelijoille, jotka ovat jo käyneet
             kurssit 2 ja 3. Opiskelijat kaivautuvat syvemmälle ohjelmointiin liittyviin
             monimutkaisempiin ongelmiin, jotka on tuttuja aikaisempien kurssien pohjalta.
@@ -314,6 +315,7 @@
           description: Valikoima kurssin 4 tasoista käytettävyystestaukseen.
           Variables: Muuttujat
           For Loops: Silmukat
+          Binary: Binääri
         potus:
           title: erikoistoiminnot
           description_short: erikoistoiminnot
@@ -324,3 +326,43 @@
           description_short: erikoistoiminnot
           description: erikoistoiminnot
           Special: Erikoistoiminnot
+          Binary: Binääri
+        usabilitymsm:
+          Usability testing for MSM: Usability testing for MSM
+          Evaluation Blocks: Evaluation Blocks
+          Blocks to Math: Matematiikkalohkot
+          Strings and Images: Strings and Images
+          Defining Variables: Defining Variables
+          Defining Functions: Defining Functions
+          Design Recipe: Design Recipe
+          Booleans: Totuusarvot
+          Conditionals: Ehtolausekkeet
+          Free Play: Free Play
+        algebra:
+          title: Computer Science in Algebra
+          description: Learn Functional Programming through Algebra
+          'Unplugged: Video Games and Coordinate Planes': 'Tietokoneeton tekeminen:
+            videopelit ja koordinaattitasot'
+          'Calc: Evaluation Blocks': 'Calc: laskentalohkot'
+          'Eval: Strings and Images': 'Eval: merkkijonot ja kuvat'
+          'Unplugged: Contracts': 'Tietokoneeton tekeminen: sopimukset'
+          'Eval: Writing Contracts': 'Eval: sopimusten kirjoittaminen'
+          'Calc: Defining Variables': 'Calc: muuttujien määrittely'
+          'Play Lab: Defining Variables (Big Game)': 'Pelilabra: muuttujien määrittely
+            (Big Game)'
+          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Unplugged: The Design Recipe': 'Tietokoneeton tekeminen: suunnitteluresepti'
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Eval: Functions': 'Eval: Functions'
+          'Play Lab: Animation (Big Game)': 'Pelilabra: Animaatio (Iso Peli)'
+          'Unplugged: Booleans': 'TIetokoneeton tekeminen: totuusarvot'
+          'Eval: Boolean Operators': 'Eval: totuusarvo-operaattorit'
+          'Play Lab: Booleans': 'Pelilabra: Totuusarvot'
+          'Play Lab: Boolean (Big Game)': 'Pelilabra: Totuusarvomuuttuja (Iso Peli)'
+          'Unplugged: Conditionals and Piecewise Functions': 'Tietokoneeton tekeminen:
+            ehtolauseet ja paloittaiset funktiot'
+          'Eval: Conditionals': 'Eval: ehtolausekkeet'
+          'Unplugged: Collision Detection and the Distance Formula': 'Tietokoneeton
+            tekeminen: törmäyksen havaitseminen ja etäisyyskaava'
+          'Play Lab: Collision Detection (Big Game)': 'Pelilabra: Törmäyksen tunnistaminen
+            (Iso Peli)'

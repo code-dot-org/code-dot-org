@@ -324,6 +324,7 @@
           description: Válogatás a 4. tanfolyam szakaszaiból a használhatósági teszthez.
           Variables: Változók
           For Loops: Számláló ciklusok
+          Binary: Bináris
         potus:
           title: különleges
           description_short: különleges
@@ -334,3 +335,43 @@
           description_short: különleges
           description: különleges
           Special: Különleges
+          Binary: Bináris
+        usabilitymsm:
+          Usability testing for MSM: Usability testing for MSM
+          Evaluation Blocks: Evaluation Blocks
+          Blocks to Math: Matematikai blokkok
+          Strings and Images: Strings and Images
+          Defining Variables: Defining Variables
+          Defining Functions: Defining Functions
+          Design Recipe: Design Recipe
+          Booleans: Logikai adattípus
+          Conditionals: Feltételek
+          Free Play: Free Play
+        algebra:
+          title: Computer Science in Algebra
+          description: Learn Functional Programming through Algebra
+          'Unplugged: Video Games and Coordinate Planes': 'Gép nélküli feladatok:
+            videojátékok és a koordináta síkok'
+          'Calc: Evaluation Blocks': 'Számológép: Kiértékelési blokkok'
+          'Eval: Strings and Images': 'Kiértékelés: Szöveges típus és a képek'
+          'Unplugged: Contracts': 'Számítógép nélkül: Szerződések'
+          'Eval: Writing Contracts': 'Kiértékelés: Szerződések írása'
+          'Calc: Defining Variables': 'Számológép: Változók deklarációja'
+          'Play Lab: Defining Variables (Big Game)': 'Játéklabor: változók deklarálása
+            (A Nagy Játék)'
+          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Unplugged: The Design Recipe': 'Gép nélküli feladatok: a dizájn receptje'
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Eval: Functions': 'Eval: Functions'
+          'Play Lab: Animation (Big Game)': 'Játéklabor: Animáció (A Nagy Játék)'
+          'Unplugged: Booleans': 'Gép nélküli feladatok: logikai változók'
+          'Eval: Boolean Operators': 'Kiértékelés: Logikai műveletek'
+          'Play Lab: Booleans': 'Játéklabor: a logikai típus'
+          'Play Lab: Boolean (Big Game)': 'Játéklabor: logikai változók (A Nagy Játék)'
+          'Unplugged: Conditionals and Piecewise Functions': 'Gép nélküli feladatok:
+            Feltételes utasítások és összetett függvények'
+          'Eval: Conditionals': 'Kiértékelés: feltételes utasítások'
+          'Unplugged: Collision Detection and the Distance Formula': 'Gép nélküli
+            feladatok: Ütközés észlelése és a távolság képlete'
+          'Play Lab: Collision Detection (Big Game)': 'Játéklabor: az ütközés észlelése
+            (A Nagy Játék)'

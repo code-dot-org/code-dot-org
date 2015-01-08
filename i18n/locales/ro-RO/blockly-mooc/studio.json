@@ -58,6 +58,7 @@
   "moveDistanceTooltip":"Mută un actor o distanță anume în direcția specificată.",
   "moveSprite":"mută",
   "moveSpriteN":"muta actorul {spriteIndex}",
+  "toXY":"to x,y",
   "moveDown":"mută în jos",
   "moveDownTooltip":"Mută un actor în jos.",
   "moveLeft":"mută la stânga",

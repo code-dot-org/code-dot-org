@@ -6,17 +6,17 @@ fr:
           "Jigsaw: Learn to drag and drop": 'Puzzle : Apprendre à faire un glisser-déposer'
           The Maze: Le labyrinthe
           Multi: Multi
-          Match: Match
-          Math Image: Math Image
-          title: Test Course
-          description: Just an internal test course.
+          Match: Correspondance
+          Math Image: Image mathématique
+          title: Test de connaissance
+          description: Juste un test interne de connaissances.
         course1:
           "Jigsaw: Learn to drag and drop": 'Puzzle : Apprendre à faire un glisser-déposer'
           "Maze: Sequence": 'Labyrinthe : Parcours'
           "Maze: Debugging": 'Labyrinthe : Le débogage'
           "Artist 1: Intro": 'Artiste 1: Intro'
           Artists 2: Artistes 2
-          Spelling Bee: Spelling Bee
+          Spelling Bee: Dictée de lettres
           Spelling Bee not blockly: Spelling Bee not blockly
           "Bee 1: Intro": 'Abeille 1: Intro'
           "Maze 2: Loops": 'Labyrinthe 2 : Les boucles'
@@ -30,11 +30,11 @@ fr:
           Move it, Move it: Move it, Move it
           "Real-life Algorithms: Plant a Seed": 'Les algorithmes : Planter une graine'
           Building a Foundation: Building a Foundation
-          Getting Loopy: Getting Loopy
+          Getting Loopy: Tourner en rond
           The Big Event: Le Grand Evénement
-          Going Places Safely: Going Places Safely
-          description: Course 1 is designed to allow early readers to create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.
-          "Bee: Sequence": 'Bee: Sequence'
+          Going Places Safely: Se déplacer en toute sécurité
+          description: "Ce 1er cours est conçu pour les lecteurs débutants, afin de leur permettre de créer des programmes informatiques qui les aideront à apprendre à collaborer les uns avec les autres, développer les compétences de résolution de problèmes et persister à travers des tâches difficiles. A la fin de ce cours, les élèves créeront leur propre jeu personnalisé ou une histoire qu'ils pourront partager. Recommandé pour les maternelles moyenne-section."
+          "Bee: Sequence": 'Abeille : séquence'
           "Artist: Sequence": 'Artist: Sequence'
           "Artist: Shapes": "L'Artiste : les Formes"
           "Maze: Loops": 'Labyrinthe : les boucles'
@@ -62,13 +62,13 @@ fr:
           Maze Loops: Labyrinthe et boucles
           Graph Paper Programming: Programmation sur papier quadrillé
           "Real-life Algorithms: Paper Planes": 'Les algorithmes : Les avions en papier'
-          Getting Loopy: Getting Loopy
+          Getting Loopy: Tourner en rond
           Relay programming: Les relais
           Conditionals: Instructions conditionnelles
           Binary Bracelets: Les bracelets binaires
           The Big Event: Le Grand Evénement
           Your Digital Footprint: Votre empreinte numérique
-          description: "Le cours 2 s'adresse aux élèves qui savent lire et n'ont aucune expérience en programmation. Dans ce cours les élèves créeront des programmes pour résoudre des problèmes et de développer des jeux interactifs qu'ils pourront partager. Recommandé pour les CE1-CM2."
+          description: "Le cours 2 s'adresse aux élèves qui savent lire et n'ont aucune expérience en programmation. Dans ce cours les élèves créeront des programmes pour résoudre des problèmes et développer des jeux interactifs qu'ils pourront partager. Recommandé pour les CE1-CM2."
           "Maze: Sequence": 'Labyrinthe : Parcours'
           "Artist: Sequence": 'Artist: Sequence'
           "Maze: Loops": 'Labyrinthe : les boucles'
@@ -132,30 +132,30 @@ fr:
           "Artist: Patterns": 'Artist: Patterns'
           Songwriting: Écriture de chansons
           description_audience: 8 ans et + (après le cours 2)
-          description_short: Course 3 is a follow-up to Course 2.
+          description_short: Le cours 3 fait suite au cours 2.
         msm:
           title: Middle School Math
-          description: Private work in progress for Middle School Math.
+          description: Chantier interdit au public dans le collège Middle School Math.
           Graph Paper Programming: Programmation sur papier quadrillé
           Assessments: Évaluations
           Unit 1: Unité 1
           Unit 2: Unité 2
           Ninja Cat and the Coordinate Plane: Ninja Cat and the Coordinate Plane
           "Calc: Circles of Evaluation": 'Calc: Circles of Evaluation'
-          "Artist: Strings and Images": 'Artist: Strings and Images'
+          "Artist: Strings and Images": 'Artiste : Textes et Images'
           Contracts: Contrats
           "Artist: Writing Contracts": 'Artist: Writing Contracts'
           "Calc: Defining Variables": 'Calc: Defining Variables'
-          "Play Lab: Defining Variables": 'Play Lab: Defining Variables'
+          "Play Lab: Defining Variables": 'Labo : Definir des variables'
           The Design Recipe: The Design Recipe
           "Artist: Defining Functions": 'Artist: Defining Functions'
           "Play Lab: Defining Functions": 'Play Lab: Design Recipe'
           "Artist: Functions": 'Artiste : les fonctions'
           "Play Lab: Animation": 'Play Lab: Animation'
-          Booleans: Booleans
-          "Play Lab: Booleans": 'Play Lab: Booleans'
-          "Calc: Boolean Operators": 'Calc: Boolean Operators'
-          "Play Lab: Boolean Operators": 'Play Lab: Boolean Operators'
+          Booleans: Booléens
+          "Play Lab: Booleans": 'Play Lab : Booléens'
+          "Calc: Boolean Operators": 'Calc: Opérateurs Booléens'
+          "Play Lab: Boolean Operators": 'Play Lab : Opérateurs Booléens'
           Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
           "Artist: Conditionals": 'Artist: Conditionals'
           Collision Detection and the Distance Formula: Collision Detection and the Distance Formula
@@ -173,7 +173,7 @@ fr:
           "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Distance Formula'
           "Calc: Evaluation Blocks": 'Calc: Evaluation Blocks'
           "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
-          "Eval: Boolean Operators": 'Eval: Boolean Operators'
+          "Eval: Boolean Operators": 'Eval : Opérateurs Booléens'
           Blocks to Math: Blocks to Math
           "Play Lab: Defining Variables (Big Game)": 'Play Lab: Defining Variables (Big Game)'
           "Play Lab: Animation (Big Game)": 'Play Lab: Animation (Big Game)'
@@ -208,37 +208,37 @@ fr:
           Artist: Artiste
           description_short: Aidons Anna et Elsa à explorer la magie et la beauté de la glace.
         course4:
-          description_short: Students taking Course 4 should have already taken Courses 2 and 3.
-          description: Course 4 is designed for students who have taken Course 2 and 3. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8.
-          "Artist: Variables": 'Artist: Variables'
+          description_short: Les cours 2 et 3 sont nécessaires pour suivre le cours 4.
+          description: "Le cours 4 s'adresse aux élèves qui ont suivit les cours 2 et 3. Ils vont approfondir les sujets introduits dans les cours précédents pour donner des solutions adaptables à des problèmes plus complexes. A la fin de ce cours, les élèves créeront des histoires interactives et des jeux, qu'ils pourront partager. Convient à partir du CM1 jusqu'à la 4è."
+          "Artist: Variables": 'Artiste : Les variables'
           "Bee: For Loops": 'Abeille : Les boucles pour'
           title: Cours 4
-          "Algorithms: Tangrams": 'Algorithms: Tangrams'
+          "Algorithms: Tangrams": 'Algorithme : Tangrams'
           Variables: Variables
           "Play Lab: Variables": 'Labo : Variables'
           "Play Lab: Functions with Parameters": 'Labo : Fonctions avec paramètres'
-          "Bee: Functions with Parameters": 'Bee: Functions with Parameters'
+          "Bee: Functions with Parameters": 'Abeille : Fonctions avec Paramètres'
           "Artist: For Loops": 'Artiste : Les boucles pour'
           "Play Lab: For Loops": 'Labo : Pour les boucles'
           "Artist: Functions": 'Artiste : les fonctions'
-          "Artist: Functions with Paraqmeters": 'Artist: Functions with Paraqmeters'
+          "Artist: Functions with Paraqmeters": 'Artiste : Fonctions avec Paramètres'
           "Unplugged: Tangrams": 'Unplugged: Tangrams'
           Artist: Artiste
           Bee: Abeille
           "Unplugged: Envelope Variables": 'Unplugged: Envelope Variables'
           "Unplugged: Madlibs": 'Unplugged: Madlibs'
-          "Unplugged: For Loop Fun": 'Unplugged: For Loop Fun'
-          "Unplugged: Songwriting with Parameters": 'Unplugged: Songwriting with Parameters'
-          "Artist: Functions with Parameters": 'Artist: Functions with Parameters'
+          "Unplugged: For Loop Fun": 'Travaux libres : des boucles pour le plaisir'
+          "Unplugged: Songwriting with Parameters": 'Travaux libres : utiliser des paramètres pour écrire des chansons'
+          "Artist: Functions with Parameters": 'Artiste : Fonctions avec Paramètres'
           "Unplugged: Binary": 'Unplugged: Binary'
           Bee Binary: Bee Binary
           Farmer Binary: Farmer Binary
-          Maze and Bee: Maze and Bee
+          Maze and Bee: Labyrinthe et abeille
           Artist Binary: Artist Binary
           description_audience: 10 ans et + (après le Cours 3)
         Course4pre:
-          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
+          description_short: "Un court rattrapage des concepts pour les élèves n'ayant pas suivi les cours 2 et 3."
+          Course 4 Prerequisite: Cours 4 prérequis
           "Maze: Sequence": 'Labyrinthe : Parcours'
           "Artist: Sequence": 'Artist: Sequence'
           "Artist: Loops": 'Artiste : Les boucles'
@@ -249,8 +249,8 @@ fr:
           "Artist: Functions": 'Artiste : les fonctions'
           "Bee: Debugging": 'Abeilles : Le débogage'
         course4pre:
-          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
+          description_short: "Un court rattrapage des concepts pour les élèves n'ayant pas suivi les cours 2 et 3."
+          Course 4 Prerequisite: Cours 4 prérequis
           "Maze: Sequence": 'Labyrinthe : Parcours'
           "Artist: Sequence": 'Artist: Sequence'
           "Artist: Loops": 'Artiste : Les boucles'
@@ -261,8 +261,8 @@ fr:
           "Artist: Functions": 'Artiste : les fonctions'
           "Bee: Debugging": 'Abeilles : Le débogage'
         Course4pre (Case Conflict):
-          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
+          description_short: "Un court rattrapage des concepts pour les élèves n'ayant pas suivi les cours 2 et 3."
+          Course 4 Prerequisite: Cours 4 prérequis
           "Maze: Sequence": 'Labyrinthe : Parcours'
           "Artist: Sequence": 'Artist: Sequence'
           "Artist: Loops": 'Artiste : Les boucles'
@@ -274,20 +274,56 @@ fr:
           "Bee: Debugging": 'Abeilles : Le débogage'
         usability:
           Intro: Intro
-          Variables and For Loops: Variables and For Loops
+          Variables and For Loops: Variables et boucles for
           Functions and Functions with Parameters: Fonctions et fonctions avec paramètres
-          title: Usability Testing
+          title: "Tests d'utilisabilité"
           description_short: ""
-          description: A selection of Course 4 levels for usability testing.
+          description: "Une sélection des cours du niveau 4 pour les tests d'utilisabilité."
           Variables: Variables
-          For Loops: For Loops
+          For Loops: Boucles for
+          Binary: Binaire
         potus:
-          title: special
-          description_short: special
-          description: special
+          title: particulier
+          description_short: particulier
+          description: particulier
           Special: Special
         special:
-          title: special
-          description_short: special
-          description: special
+          title: particulier
+          description_short: particulier
+          description: particulier
           Special: Special
+          Binary: Binaire
+        usabilitymsm:
+          Usability testing for MSM: Usability testing for MSM
+          Evaluation Blocks: Evaluation Blocks
+          Blocks to Math: Blocks to Math
+          Strings and Images: Textes et Images
+          Defining Variables: Définition de Variables
+          Defining Functions: Définition de fonctions
+          Design Recipe: Design Recipe
+          Booleans: Booléens
+          Conditionals: Instructions conditionnelles
+          Free Play: Travail libre
+        algebra:
+          title: Computer Science in Algebra
+          description: Learn Functional Programming through Algebra
+          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
+          "Calc: Evaluation Blocks": 'Calc: Evaluation Blocks'
+          "Eval: Strings and Images": 'Eval: Strings and Images'
+          "Unplugged: Contracts": 'Unplugged: Contracts'
+          "Eval: Writing Contracts": 'Eval: Writing Contracts'
+          "Calc: Defining Variables": 'Calc: Defining Variables'
+          "Play Lab: Defining Variables (Big Game)": 'Play Lab: Defining Variables (Big Game)'
+          "Eval: Defining Functions": 'Eval: Defining Functions'
+          "Unplugged: The Design Recipe": 'Unplugged: The Design Recipe'
+          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
+          "Eval: Functions": 'Eval: Functions'
+          "Play Lab: Animation (Big Game)": 'Play Lab: Animation (Big Game)'
+          "Unplugged: Booleans": 'Unplugged: Booleans'
+          "Eval: Boolean Operators": 'Eval : Opérateurs Booléens'
+          "Play Lab: Booleans": 'Play Lab : Booléens'
+          "Play Lab: Boolean (Big Game)": 'Play Lab: Boolean (Big Game)'
+          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals and Piecewise Functions'
+          "Eval: Conditionals": 'Eval: Conditionals'
+          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Distance Formula'
+          "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'

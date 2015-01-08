@@ -104,6 +104,9 @@ ko-KR:
   students_and_lines: '%{students}명의 학생들이 Hour of Code 를 수행하였고, %{lines}의 코드를 작성하였습니다.'
   start_hoc: Hour of Code 를 지금 바로! 시작해 보세요!
   contact_form_topic_press: 보도/언론 (인터뷰, 발표)
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
+  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
+  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
   studiobar_title: "<a href='http://studio.code.org'>Code Studio</a> 살펴보기"
   studiobar_elementary_title: 초등학생 코스
   studiobar_elementary_body: 'K&#8209;5 학생들을 위한 새로운 3개의 코스'
@@ -117,6 +120,8 @@ ko-KR:
   studiobar_frozen_body: 안나, 엘사와 함께 겨울왕국을 만들어보세요.
   studiobar_donate_title: 기부하기
   studiobar_donate_body: 여러분이 기부할 때 마다 더 많은 학생들이 배울 수 있습니다.
+  studiobar_shop_title: Shop
+  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   contact_form_topic_student: 학생입니다.
   contact_form_topic_parent: 부모입니다.
   contact_form_topic_teacher: 교사/교육자입니다.
@@ -194,9 +199,11 @@ ko-KR:
   dashboard_action_save_all: 모두 저장
   dashboard_action_cancel: 취소
   dashboard_action_delete: 삭제
-  dashboard_action_confirm: 삭제하시겠습니까?
   dashboard_action_delete_yes: 예
   dashboard_action_delete_no: 아니요
+  dashboard_action_confirm: 삭제하시겠습니까?
+  dashboard_action_remove: Remove
+  dashboard_action_remove_confirm: Remove?
   dashboard_action_done: 완료
   dashboard_action_required: 필수 항목
   dashboard_navigation_home_page: 교사 홈페이지

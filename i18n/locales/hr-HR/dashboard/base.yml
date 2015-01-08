@@ -29,7 +29,7 @@ hr:
     submit: Dodaj pomoć
   appname: Code.org
   stage: Nivo
-  stage_number: 'Faza %{number}'
+  stage_number: 'Nivo %{number}'
   puzzle: Zadatak
   trophies: Trofeji
   courses: Tečaji
@@ -293,10 +293,10 @@ hr:
     email_resend_confirm: Ponovno slanje uputa za potvrđivanje
     new_password_hint: (ostavite prazno ako ne želite promijeniti)
     current_password_hint: (za potvrdu promjene treba nam vaša trenutna lozinka)
-    cancel:
-      title: Otkaži moj račun
-      hint: Nesretan?
-      button: Otkaži moj račun
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Završen
     tried: Pokušan

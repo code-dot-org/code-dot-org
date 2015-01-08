@@ -46,9 +46,8 @@
           'Bee: Loops': 'النحلة : الحلقات'
           'Studio: Create a Story': 'مختبر اللعب: إنشاء قصة'
           'Artist: Loops': 'الرسام : الحلقات'
-          description_audience: Ages 4+ (pre-readers)
-          description_short: الدورة 1 مصممة للقراء الصغار في الصفوف الدنيا من المرحلة
-            الابتدائية .
+          description_audience: أكبر من أربع سنوات +4 (الغير قادرون على القرائة)
+          description_short: الدورة 1 مصممة لطلاب المبتدئين في القرائة.
         course2:
           The Maze: المتاهة
           Suzi: سوزي
@@ -89,9 +88,9 @@
           'Artist: Sequence2': 'الرسام : التسلسل 2'
           'Maze: Sequence2': 'المتاهة : التسلسل 2'
           'Artist: Nested Loops': 'الرسام : الحلقات المتداخلة'
-          description_audience: Ages  6+ (reading required)
-          description_short: الدورة 2 مصممة للطلاب الذين يستطيعون القراءة في الصفوف
-            الابتدائية , الدنيا والمتوسطة.
+          description_audience: أكبر من أربع سنوات +6 (يتطلب أن يكونوا قادرين على
+            القرائة)
+          description_short: الدورة 2 مصممة لطلاب القادرين على القرائة.
         course3:
           The Maze: المتاهة
           'Studio: Create a Story': 'مختبر اللعب: إنشاء قصة'
@@ -144,9 +143,8 @@
           'Bee: Debugging2': 'النحلة: تصحيح الأخطاء 2'
           'Artist: Patterns': 'الفنان: أنماط'
           Songwriting: تأليف الأغاني
-          description_audience: Ages 8+ (after Course 2)
-          description_short: الطلاب الذين يأخذون الدورة 3 يجب أن يكونوا قد أنهوا الدورة
-            2 .
+          description_audience: أكبر من 8 سنوات ( بعد الدورة 2)
+          description_short: الدورة 3 تعتبر تكملة لدورة 2.
         msm:
           title: مدرسة الرياضيات المتوسطة
           description: العمل الخاص في التقدم لمدرسة الرياضيات المتوسطة .
@@ -214,40 +212,41 @@
           Artist: الرسام
           description_short: ارسم صور رائعة و صمم مع الرسام !
         scrat:
-          title: Scrat
-          description_short: Scrat short description.
-          description: Scrat long description
+          title: القنفذ سكرات
+          description_short: وصف قصير للقنفذ سكرات.
+          description: وصف طويل للقنفذ سكرات
           'Maze: Sequence': 'المتاهة : التسلسل'
         hourofcode:
           Maze: المتاهة
           title: ساعة من البرمجة
-          description: Try the basics of computer science with characters from Angry
-            Birds, Plants vs. Zombies, and Scrat from Ice Age!
-          description_short: Try the basics of computer science with characters from
-            Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
+          description: جرب تعلم مبادئ الحاسب الآلي من خلال شخصيات لعبة الطيور الغاضبة
+            (Angry Birds) ، ولعبة المزروعات ضذ الزومبي (Plants vs. Zombies) ، وشخصية
+            القنفذ سكارت من فيلم عصر الجليد (Ice Age) !
+          description_short: جرب تعلم مبادئ الحاسب الآلي من خلال الغديد من الشخصيات
+            الممتعة!
         frozen:
-          title: Frozen
-          description: Join the Royal Sisters of Arendelle, Anna and Elsa, as they
-            explore the magic and beauty of ice. You will write code to create snowflakes
-            and patterns as you ice-skate and make a winter wonderland that you can
-            then share with your friends!
+          title: برمج مع آنا و إليسا
+          description: دعونا نستخدام التعليمات البرمجية لنشارك آنا وإليسا حال استكشافهم
+            لسحر وجمال الجليد، سوف تصنع رقاقات الثلج و تزحلقك لتترك تلك الخطوط على
+            الجليد ورائك لتصنع بذلك أرض الأحلام الخاصة بك التي سوف تتمكن من مشاركتها
+            مع أصدقائك!
           Artist: الرسام
           description_short: دعونا استخدام التعليمات البرمجية للانضمام إلى آنا و إليسا,
             و نستكشف سحر وجمال الجليد.
         course4:
-          description_short: Students taking Course 4 should have already taken Courses
-            2 and 3.
+          description_short: يجب على الطالب أخذ الدورة 2 و 3 ليتمكنوا من أخذ الدورة
+            4.
           description: Course 4 is designed for students who have taken Course 2 and
             3. Students will delve deeper into programming topics introduced in previous
             courses to flexible solutions to more complex problems. By the end of
             this course, students create interactive stories and games they can share
             with anyone. Recommended for grades 4-8.
-          'Artist: Variables': 'Artist: Variables'
-          'Bee: For Loops': 'Bee: For Loops'
-          title: Course 4
-          'Algorithms: Tangrams': 'Algorithms: Tangrams'
+          'Artist: Variables': 'الفنان: المتغيرات'
+          'Bee: For Loops': 'النحل: للحلقات'
+          title: الدورة 4
+          'Algorithms: Tangrams': 'خوارزميات: تانقرامس (أشكال عشوائية داخل مربع)'
           Variables: المتغيرات
-          'Play Lab: Variables': 'Play Lab: Variables'
+          'Play Lab: Variables': 'تشغيل مختبر: المتغيرات'
           'Play Lab: Functions with Parameters': 'Play Lab: Functions with Parameters'
           'Bee: Functions with Parameters': 'Bee: Functions with Parameters'
           'Artist: For Loops': 'Artist: For Loops'
@@ -316,6 +315,7 @@
           description: A selection of Course 4 levels for usability testing.
           Variables: المتغيرات
           For Loops: For Loops
+          Binary: ثنائي
         potus:
           title: special
           description_short: special
@@ -326,3 +326,44 @@
           description_short: special
           description: special
           Special: Special
+          Binary: ثنائي
+        usabilitymsm:
+          Usability testing for MSM: Usability testing for MSM
+          Evaluation Blocks: Evaluation Blocks
+          Blocks to Math: كتل للرياضيات
+          Strings and Images: Strings and Images
+          Defining Variables: Defining Variables
+          Defining Functions: Defining Functions
+          Design Recipe: Design Recipe
+          Booleans: القيم المنطقية
+          Conditionals: الجمل الشرطية
+          Free Play: Free Play
+        algebra:
+          title: Computer Science in Algebra
+          description: Learn Functional Programming through Algebra
+          'Unplugged: Video Games and Coordinate Planes': 'موصول: ألعاب الفيديو وتنسيق
+            طائرات'
+          'Calc: Evaluation Blocks': 'احسب: كتل التقييم'
+          'Eval: Strings and Images': 'Eval: سلاسل والصور'
+          'Unplugged: Contracts': 'موصول: العقود'
+          'Eval: Writing Contracts': 'Eval: كتابة العقود'
+          'Calc: Defining Variables': 'احسب: تعريف المتغيرات'
+          'Play Lab: Defining Variables (Big Game)': 'مختبر اللعب: تعريف المتغيرات
+            (اللعبة الكبرى)'
+          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Unplugged: The Design Recipe': 'موصول: الوصفة التصميم'
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Eval: Functions': 'Eval: Functions'
+          'Play Lab: Animation (Big Game)': 'مختبر اللعب: الرسوم المتحركة (اللعبة
+            الكبرى)'
+          'Unplugged: Booleans': 'موصول: القيم المنطقية'
+          'Eval: Boolean Operators': 'Eval: عوامل التشغيل المنطقية'
+          'Play Lab: Booleans': 'تشغيل مختبر: القيم المنطقية'
+          'Play Lab: Boolean (Big Game)': 'مختبر اللعب: قيمة منطقية (اللعبة الكبرى)'
+          'Unplugged: Conditionals and Piecewise Functions': 'موصول: الشرطية ووظائف
+            Piecewise'
+          'Eval: Conditionals': 'Eval: الجمل الشرطية'
+          'Unplugged: Collision Detection and the Distance Formula': 'موصول: الكشف
+            عن التصادم وصيغة المسافة'
+          'Play Lab: Collision Detection (Big Game)': 'مختبر اللعب: الكشف عن التصادم
+            (اللعبة الكبرى)'
