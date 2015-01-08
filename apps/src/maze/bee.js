@@ -61,7 +61,7 @@ Bee.prototype.finished = function () {
   if (this.honey_ < this.honeyGoal_ || this.nectars_.length < this.nectarGoal_) {
     return false;
   }
-  
+
   if (!this.checkedAllClouded() || !this.checkedAllPurple()) {
     return false;
   }
@@ -138,9 +138,12 @@ Bee.prototype.getTestResults = function (terminationValue) {
     case TerminationValue.UNCHECKED_PURPLE:
     case TerminationValue.INSUFFICIENT_NECTAR:
     case TerminationValue.INSUFFICIENT_HONEY:
-      // non-app failures take precendence over these.
       var testResults = StudioApp.getTestResults(true);
-      if (testResults === TestResults.ALL_PASS) {
+      // If we have a non-app specific failure, we want that to take precedence.
+      // Values over TOO_MANY_BLOCKS_FAIL are not true failures, but indicate
+      // a suboptimal solution, so in those cases we want to return our
+      // app specific fail
+      if (testResults >= TestResults.TOO_MANY_BLOCKS_FAIL) {
         testResults = TestResults.APP_SPECIFIC_FAIL;
       }
       return testResults;
