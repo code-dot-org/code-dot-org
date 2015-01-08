@@ -1640,6 +1640,7 @@ Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_UNTIL = "Gentag indtil";
 Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_WHILE = "gentag mens";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = "Mens en værdi er falsk, så udfør nogle udsagn.";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = "Mens en værdi er sand, så udfør nogle udsagn.";
+Blockly.Msg.DEFINE_HEADER_DEFINITION = "Definition";
 Blockly.Msg.DEFINE_FUNCTION_DEFINE = "Definer";
 Blockly.Msg.DELETE_BLOCK = "Slet blok";
 Blockly.Msg.DELETE_PARAMETER = "Slet parameter...";

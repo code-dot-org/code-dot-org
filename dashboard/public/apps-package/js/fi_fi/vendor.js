@@ -1640,6 +1640,7 @@ Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_UNTIL = "toista kunnes";
 Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_WHILE = "toista niin kauan kuin";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = "Niin kauan kuin arvo on epätosi, suorita joukko lausekkeita.";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = "Niin kauan kuin arvo on tosi, suorita joukko lausekkeita.";
+Blockly.Msg.DEFINE_HEADER_DEFINITION = "Definition";
 Blockly.Msg.DEFINE_FUNCTION_DEFINE = "Määritä";
 Blockly.Msg.DELETE_BLOCK = "Poista lohko";
 Blockly.Msg.DELETE_PARAMETER = "Poista parametri...";

@@ -1640,6 +1640,7 @@ Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_UNTIL = "atkārtot līdz";
 Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_WHILE = "atkārtot, kamēr";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = "Tikmēr, kamēr vērtība ir nepatiesa, tad izpildi vienu vai vairākas darbības.";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = "Tikmēr, kamēr vērtība ir patiesa, izpildi vienu vai vairākas darbības.";
+Blockly.Msg.DEFINE_HEADER_DEFINITION = "Definition";
 Blockly.Msg.DEFINE_FUNCTION_DEFINE = "Definēt";
 Blockly.Msg.DELETE_BLOCK = "Izdzēst bloku";
 Blockly.Msg.DELETE_PARAMETER = "Izdzēst parametru...";

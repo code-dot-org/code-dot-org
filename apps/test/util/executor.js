@@ -123,6 +123,7 @@ function runTestFromCollection (collection, index) {
 
 function runLevel (app, skinId, level, onAttempt, beforeClick) {
   require(buildDir + '/js/' + app + '/main');
+  global.StudioApp = require(buildDir + '/js/base');
 
   setAppSpecificGlobals(app);
 
@@ -137,7 +138,7 @@ function runLevel (app, skinId, level, onAttempt, beforeClick) {
       if (beforeClick) {
         beforeClick(assert);
       }
-      window.StudioApp.runButtonClick();
+      global.StudioApp.runButtonClick();
     },
     onAttempt: onAttempt
   });
@@ -146,12 +147,6 @@ function runLevel (app, skinId, level, onAttempt, beforeClick) {
 function setAppSpecificGlobals (app) {
   // app specific hacks
   switch (app.toLowerCase()) {
-    case 'turtle':
-      global.Turtle = window.Turtle;
-      // hack drawTurtle to be a noop, as it's not needed to verify solutions,
-      // and drawImage was having issues in a node environment
-      global.Turtle.drawTurtle = function () {};
-      break;
     case 'calc':
       global.Calc = window.Calc;
       break;
