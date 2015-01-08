@@ -1,4 +1,5 @@
 #! /usr/bin/env ruby
+require 'fileutils'
 
 dashboard_files = [
   'contract_match',
@@ -13,13 +14,13 @@ dashboard_files = [
   'unplugged'
 ]
 
-#base files
+# base files
 ruby file = "../Documents/workspace/code-dot-org/code-dot-org/dashboard/config/locales/pt-BR.yml"
 File.write(file, File.read(file).gsub(/"pt-BR":/, '"pt":'))
 file = "../Documents/workspace/code-dot-org/code-dot-org/dashboard/config/locales/pt-PT.yml"
 File.write(file, File.read(file).gsub(/"pt":/, '"pt-PT":'))
 
-#all other files
+# all other files
 dashboard_files.each do |dashboard|
   file = "../Documents/workspace/code-dot-org/code-dot-org/dashboard/config/locales/#{dashboard}.pt-BR.yml"
   File.write(file, File.read(file).gsub(/"pt-BR":/, '"pt":'))
@@ -28,4 +29,7 @@ dashboard_files.each do |dashboard|
   File.write(file, File.read(file).gsub(/"pt":/, '"pt-PT":'))
 end
 
+# rebuild blockly js files
+`./../../blockly-core/i18n/codeorg-messages.sh`
+FileUtils.cp_r '../../blockly-core/msg/js/.', '../../apps/lib/blockly/'
 
