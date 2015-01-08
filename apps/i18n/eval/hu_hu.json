@@ -13,6 +13,7 @@
   "squareBlockTitle": "négyzet (méret, stílus, szín)",
   "starBlockTitle": "csillag (sugár, stílus, szín)",
   "radialStarBlockTitle": "radiális-csillag (pontok, belső, külső, stílus, szín)",
+  "polygonBlockTitle": "polygon (sides, length, style, color)",
   "stringAppendBlockTitle": "szöveg-összefűzés (első, második)",
   "stringLengthBlockTitle": "szöveg hossz (szöveg)",
   "textBlockTitle": "szöveg (szöveg, méret, szín)",

@@ -60,6 +60,7 @@
   "CONTROLS_WHILEUNTIL_OPERATOR_WHILE":"repeteix mentre",
   "CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL":"Fes un bloc d'ordres mentre un valor sigui fals.",
   "CONTROLS_WHILEUNTIL_TOOLTIP_WHILE":"Fes un bloc d'ordres mentre un valor sigui cert.",
+  "DEFINE_HEADER_DEFINITION":"Definition",
   "DEFINE_FUNCTION_DEFINE":"Defineix",
   "DELETE_BLOCK":"Elimina el bloc",
   "DELETE_PARAMETER":"Suprimeix el paràmetre...",

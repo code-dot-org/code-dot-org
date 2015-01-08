@@ -554,12 +554,13 @@
           2) wollen "hallo" zueinander sagen. Kannst du ihnen dabei helfen den "reden"
           Block zweimal zu benutzen?
         studio_playlab_3: Kannst du dem Tennis Mädchen helfen die Fahne zu bekommen?
-        studio_playlab_4: Kannst du ein Programm schreiben, bei welchem der Hund zur
-          Katze geht und die Katze "Hallo" sagt, sobal der Hund sie erreicht?
-        studio_playlab_5: Kannst du ein Programm schreiben, bei welchem der Tintenfisch
-          "Hallo" sagt, wenn er geklickt wird?
-        studio_playlab_6: Kannst du ein Programm schreiben um den Pinguin mit den
-          Pfeilttasten zu steuern und alle Ziele zu treffen?
+        studio_playlab_4: Kannst du dem Tennisspieler (Schauspieler 1) helfen zur
+          Tennisspielerin (Schauspielerin 2) zu kommen und ein Geräusch abzuspielen
+          wenn er ankommt?
+        studio_playlab_5: Kannst du Spacebot helfen "Willkommen Erdlinge" zu sagen,
+          wenn es geklickt wird? Vergiss nach dem ausführen nicht das Klicken
+        studio_playlab_6: Kannst du der Hexe helfen sich zu bewegen, um alle magischen
+          Feuerbälle einzusammeln? Nutze die Tasten hoch/runter/rechts/links.
         studio_playlab_7: Der "wiederholen für immer" Baustein erlaubt es dir Code
           ohne Unterbruch auszuführen. Kannst du mehr Bausteine hinzufügen um den
           Dinosaurier wiederholt auf und ab laufen zu lassen?
@@ -613,16 +614,16 @@
           zu zeichnen.
       frozen perpendicular:
         instructions: Jetzt schauen wir mal, ob wir zwei Linien zeichnen können, die
-          in einem 90° Winkel zueinander stehen. Du musst sowohl den "Drehen" Block
-          als auch den "Bewegen" Block benutzen.
+          in einem 90° Winkel zueinander stehen. Du musst sowohl den „Drehen“-Block
+          als auch den „Bewegen“-Block benutzen.
       frozen square iterative:
         instructions: Es scheint, als hätten wir die Hälfte eines Quadrates geschafft.
           Lass uns 4 Linien benutzen, um ein Quadrat zu erstellen.
       frozen square loop:
-        instructions: Hallo, bin ich Anna von Arendelle! Lass uns ein Quadrat mit
-          dem "Wiederholen"-Block erstellen, um weniger Blöcke zu verwenden. Wie oft
-          (???) soll der "Wiederholung" Block die enthaltenen Blöcke ausführen, um
-          ein Quadrat zu machen?
+        instructions: Hallo, ich bin Anna von Arendelle! Lass uns ein Quadrat mit
+          dem „Wiederholen“-Block erstellen, um weniger Blöcke zu verwenden. Wie oft
+          (???) soll der „Wiederholen“-Block die in ihm enthaltenen Blöcke ausführen,
+          um ein Quadrat zu erstellen?
       frozen square loop 3x:
         instructions: Lass uns drei Quadrate erstellen und nach jedem Quadrat drehen.
           Stell sicher, dass du vor jedem neuen Quadrat um 120° drehst.
@@ -809,17 +810,17 @@
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Funktionale Sonnenfänger
         C3_songwriting_with_parameters: Komponieren mit Parametern
-        C4_intro: Introduction
+        C4_intro: Einführung
         C4_bee_conditional: Biene Bedingungen
-        C4_variables_artist: Variables - Artist
-        C4_variables_playlab: Variables - Play Lab
+        C4_variables_artist: Variablen - Künstler
+        C4_variables_playlab: Variablen - Spiele Labor
         C4_for_loops: '"For"-Schleifen'
-        C4_math_artist: Programming the Artist with Math
-        C4_function_edit: Editing Functions
-        C4_function_create: Creating Functions
+        C4_math_artist: Programmiere den Künstler mit Mathematik
+        C4_function_edit: Funktionen bearbeiten
+        C4_function_create: Funktionen erstellen
         C4_function_parameters: Funktionen mit Parametern
         C4_conditionals: Bedingungen
-        C4_unplugged_algorithms: Algorithms with Tangrams
+        C4_unplugged_algorithms: Algorithmen mit Tangrammen
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variables in Envelopes
         C4_unplugged_forloops: '"For"-Schleifen'
@@ -828,9 +829,9 @@
         frozen_intro: Hour of Code Einführung
         frozen_loops: Einführung in Wiederholungen (Schleifen)
         frozen_functions: Einführung in Funktionen
-        playlab_intro: Introduction to Play Lab
-        playlab_events: Play Lab Events
-        playlab_repeat_forever: Play Lab Repeat Forever
+        playlab_intro: Einführung ins Spiele Labor
+        playlab_events: Spiele Labor Ereignisse
+        playlab_repeat_forever: Spiele Labor für immer wiederholen
     callout:
       text:
         drag_blocks: Ziehen Sie einen "bewegen" Block und lassen Sie es unter den
@@ -860,10 +861,10 @@
           richtigen Grad zum drehen zu ersetzen
         repeat_blocks: Verwenden Sie den "Repeat" Block und wickeln Sie es um die
           Blöcke im Arbeitsbereich
-        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the
-          workspace
-        repeat_blocks_2: (2) Move the "Repeat" block here, and place the gray blocks
-          inside
+        repeat_blocks_1: (1) Nutze diesen Block und platziere ihn um die grauen Blöcke
+          im Arbeitsraum
+        repeat_blocks_2: (2) Bewege den "Wiederholen" Block hierher und platziere
+          die grauen Blöcke im Inneren
         snowflake_dropdown: Verwenden Sie dieses Dropdown-Menü, um verschiedene Schneeflocken
           zu erstellen!
         degrees_per_side: Teilen Sie 360 durch die Anzahl der Seiten, um die Größe
@@ -872,8 +873,8 @@
           sie mit der Anzahl der Teile die für das Puzzel noch gebraucht werden übereinstimmen.
         set_length: Verwenden Sie diesen Codeblock "Länge" auf den richtigen Wert
           festzulegen.
-        which_equation: Welche Gleichung macht jede der Seite kürzer bei Formen mit
-          mehr Seiten?  Versuchen Sie jede Gleichung!
+        which_equation: Welche Gleichung macht jede Seite kleiner und Formen mit mehr
+          Seiten?
         get_nectar: Verwenden Sie den neuen "get-Nektar"-Block.
         actions_category: Die Tool-Box hat einen neuen Look! Die "Aktionen"-Blöcke
           sind jetzt drin.
@@ -891,11 +892,11 @@
         logic_category: Öffne das "Logik"-Fenster um den "if/else"-Absatz zu finden.
         length_parameter: Kannst Du diese Funktion so anpassen, dass sie den "Länge"
           Parameter benutzt?
-        frozen_diamond_repeat: Use the repeat block to create this shape.
-        frozen_circle_function_in_circle_turn: Don't forget to turn after creating
-          each circle.
-        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
-          and change the size.
+        frozen_diamond_repeat: Nutze den Wiederholen Block um diese Form zu erstellen.
+        frozen_circle_function_in_circle_turn: Vergiss nicht zu drehen, nachdem erstellen
+          eines Kreises.
+        frozen_circle_function_with_parameter_circle: Nutze den "Kreis erstellen"
+          Block und ändere die Größe.
         frozen_snowflake_branch: Use the "create a snowflake branch" block
         frozen_create_square: Attach more blocks here to create a square
         playlab_drag_say: Drag the "say" block here and type "hello"

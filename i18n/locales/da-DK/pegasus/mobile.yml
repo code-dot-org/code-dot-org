@@ -104,6 +104,9 @@ da-DK:
   students_and_lines: '%{students} studerende har lavet Hour of Code and har skrevet %{lines} linjer af kode.'
   start_hoc: Start Hour of Code nu
   contact_form_topic_press: Pressen/medierne (interview eller taler-arrangementer)
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
+  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
+  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
   studiobar_title: "Udforsk <a href='http://studio.code.org'>kodeskolen</a>"
   studiobar_elementary_title: Grundlæggende kurser
   studiobar_elementary_body: Vores tre nye kurser for indskoling og melemtrin
@@ -117,6 +120,8 @@ da-DK:
   studiobar_frozen_body: Skab et eventyrligt vinterlandskab med Anna og Elsa
   studiobar_donate_title: Donér
   studiobar_donate_body: Hver gang du donerer hvad der svarer til en dollar, lærer et barn mere
+  studiobar_shop_title: Shop
+  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   contact_form_topic_student: Jeg er elev
   contact_form_topic_parent: Jeg er en forælder
   contact_form_topic_teacher: Jeg er en lærer/pædagog
@@ -194,9 +199,11 @@ da-DK:
   dashboard_action_save_all: Gem alt
   dashboard_action_cancel: Annuller
   dashboard_action_delete: Slet
-  dashboard_action_confirm: Slet?
   dashboard_action_delete_yes: Ja
   dashboard_action_delete_no: Nej
+  dashboard_action_confirm: Slet?
+  dashboard_action_remove: Remove
+  dashboard_action_remove_confirm: Remove?
   dashboard_action_done: Udfør
   dashboard_action_required: kræves
   dashboard_navigation_home_page: Lærerens Startside

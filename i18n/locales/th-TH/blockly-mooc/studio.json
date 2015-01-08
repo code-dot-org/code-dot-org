@@ -58,6 +58,7 @@
   "moveDistanceTooltip":"ย้ายตัวละครไปตามระยะทางและทิศทางที่ระบุ",
   "moveSprite":"move",
   "moveSpriteN":"move actor {spriteIndex}",
+  "toXY":"to x,y",
   "moveDown":"move down",
   "moveDownTooltip":"ย้ายตัวละครลงข้างล่าง",
   "moveLeft":"ย้ายไปทางซ้าย",

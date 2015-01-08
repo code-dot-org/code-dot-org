@@ -301,10 +301,10 @@ ca:
     email_resend_confirm: Torna a enviar les instruccions de confirmació
     new_password_hint: (deixa-ho en blanc si no vols canviar-lo)
     current_password_hint: (necessitem la teva contrasenya actual per a confirmar els canvis)
-    cancel:
-      title: Cancel·la el meu compte
-      hint: Insatisfet?
-      button: Cancel·la el meu compte
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Completat
     tried: Provat

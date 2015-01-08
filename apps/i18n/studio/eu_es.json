@@ -58,6 +58,7 @@
   "moveDistanceTooltip": "Mugitu aktorea distantzia zehatz batean eta norabide zehatzean.",
   "moveSprite": "mugitu",
   "moveSpriteN": "move actor {spriteIndex}",
+  "toXY": "to x,y",
   "moveDown": "mugiru behera",
   "moveDownTooltip": "Mugitu aktore bat behera.",
   "moveLeft": "mugitu ezkerrera",

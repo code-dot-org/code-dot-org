@@ -60,10 +60,30 @@ Return to your Big Game to use collision detection logic so that you know when y
 
 [standards]
 
-## Connections and Background Information
+<details>
+<summary>Standards Alignment</summary>
 
+### Common Core Mathematical Practices
+ 
+- 1. Make sense of problems and persevere in solving them.
+- 2. Reason abstractly and quantitatively.
+- 3. Construct viable arguments and critique the reasoning of others.
+- 4. Model with mathematics.
+- 5. Use appropriate tools strategically.
+- 6. Attend to precision.
+- 7. Look for and make use of structure.
+- 8. Look for and express regularity in repeated reasoning.
 
+### Common Core Math Standards
 
+- 6.NS.5-8: The student performs operations with negative numbers, works with the number line and coordinate plane, order and absolute value of numbers, and solves real-world problems with rational numbers.
+- 8.F.1-3: The student defines, evaluates, and compares functions.
+- 8.G.6-8: The student uses the Pythagorean Theorem to solve real-world and mathematical problems.
+- A-SSE.1-2: The student interprets the structure of expressions to solve problems in context.
+- F-IF.1-3: The student uses function notation to describe, evaluate, and interpret functions in terms of domain and range.
+- F-IF.4-6: The student interprets the behavior of functions that arise in applications in terms of the context.
+
+</details>
 
 [/standards]
 

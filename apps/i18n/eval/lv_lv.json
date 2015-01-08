@@ -13,6 +13,7 @@
   "squareBlockTitle": "kvadrāts (izmērs, stils, krāsa)",
   "starBlockTitle": "zvaignze (rādius, stils, krāsa)",
   "radialStarBlockTitle": "radiāla zvaigzne (punkti, iekšējā, ārējā, stils, krāsa)",
+  "polygonBlockTitle": "polygon (sides, length, style, color)",
   "stringAppendBlockTitle": "apvienot-virkni(pirmā, otrā)",
   "stringLengthBlockTitle": "virknes-garums(virkne)",
   "textBlockTitle": "teksts(virkne, izmērs, krāsa)",

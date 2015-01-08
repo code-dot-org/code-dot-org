@@ -75,7 +75,7 @@ sk:
     birthday: Narodený (voliteľné)
     age: Vek
     user_type: Ste študent/žiak alebo učiteľ?
-    submit: Sign up
+    submit: Zaregistrovať sa
     teacher: Ste učiteľ?
     valid_username: Dostupné!
     invalid_username: Užívateľské meno musí obsahovať aspoň 5 znakov
@@ -91,7 +91,7 @@ sk:
     login: E-mail alebo užívateľské meno
     password: Heslo
     remember: Pamätaj si moje prihlásenie
-    submit: Sign in
+    submit: Prihlásiť sa
   signin:
     try_heading: Chcete skúsiť kódovanie bez prihlásenia?
     try_hoc: Skúste najprv jednu Hodinu kódovania
@@ -101,7 +101,7 @@ sk:
     name: Vyberte vaše meno
     picture: Teraz nájdite váš tajný obrázok
     words: Teraz zadajte vaše tajné slová
-    login: Sign in
+    login: Prihlásiť sa
   password:
     reset_form:
       title: Zabudli ste heslo?
@@ -146,14 +146,14 @@ sk:
       access_denied: "You don't have access to this person's stats"
   redeem_prizes:
     title: 'Redeem Prizes: %{name}'
-    provider: 'Provider:'
-    code: 'Code:'
-    redeem_header: 'To redeem:'
-    donorschoose_register: Register as a teacher on DonorsChoose.org
-    donorschoose_project: Post a project
-    donorschoose_how_to: How to use your code
-    success: Your prize was succesfully redeemed, see code below.
-    error: Your prize could not be redeemed, please try again.
+    provider: 'Poskytovateľ:'
+    code: 'Kód:'
+    redeem_header: 'Uplatniť:'
+    donorschoose_register: Registrovať sa ako učiteľ na DonorsChoose.org
+    donorschoose_project: Vytvoriť projekt
+    donorschoose_how_to: Ako použiť váš kód
+    success: Vaša cena bola úspešne uplatnená, pozrite si nižšie uvedený kód.
+    error: Vaša cena nemôže byť uplatnená, prosím skúste to znova.
     error_us_only: The prize offer is only valid for U.S. users.
     error_not_earned: You have not yet earned this prize.
     error_already_redeemed: Your prize has already been redeemed.
@@ -161,18 +161,18 @@ sk:
     teacher_info_required: 'Teacher prizes require school name and address information:'
     teacher_email_required: 'Teacher prizes require a confirmed email address:'
     confirm:
-      title: Please Confirm
+      title: Potvrďte prosím
       "no": Nie
       "yes": Áno
       msg: 'Are you sure you want to claim the %{prize_name} prize?'
       msg_student: 'NOTE: You can only choose one type of prize.'
       msg_publicschool: Please confirm that you are a U.S. public school teacher.
-      msg_visit_website: Visit website
+      msg_visit_website: Navštíviť webovú stránku
     providers:
       apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
-      dropbox: 10GB of Dropbox Space
+      dropbox: 10GB miesta na Dropbox
       valve: Portal 2 (PC or Mac game download)
       ea_bejeweled: Bejeweled 3 (PC game download)
       ea_fifa: FIFA Soccer 13 (PC game download)
@@ -211,22 +211,22 @@ sk:
       finished_hoc: "I've finished my Hour of Code"
       sign_in_to_save: Sign in to save progress
       free_play:
-        playlab: Make an App
-        artist: Draw Something
+        playlab: Vytvoriť aplikáciu
+        artist: Nakresliť niečo
     user:
       classroom: Domovská stránka učiteľa
-      label: 'Hi %{username}'
-      stats: My progress
-      settings: My account
-      prizes: Prizes
-      logout: Sign out
-      signin: Sign in
-      signup: Sign up
-      already_registered: Already registered?
+      label: 'Ahoj %{username}'
+      stats: Môj pokrok
+      settings: Môj účet
+      prizes: Ceny
+      logout: Odhlásiť sa
+      signin: Prihlásiť sa
+      signup: Zaregistrovať sa
+      already_registered: Ste už zaregistrovaný?
     popup:
-      progress: Your progress
-      lines: 'Total lines of code: %{lines}'
-      close: CLOSE
+      progress: Váš pokrok
+      lines: 'Počet riadkov kódu: %{lines}'
+      close: ZAVRIEŤ
       mastery: Concepts
       puzzle_map: Stages
       prizes: 'Collect all %{total_trophies} trophies and win prizes!'
@@ -260,29 +260,29 @@ sk:
       manage: Manage students
       dashboard: Go to Teacher Dashboard
       add: Add students
-      remove: remove student
-      confirm_remove: Are you sure you want to remove this student?
+      remove: odstrániť študenta
+      confirm_remove: Naozaj chcete odstrániť tohto študenta?
       help_reassign: To divide your class into multiple sections, select students to assign to a new section.
       help_register: Instead of making you spend a lot of time individually importing student data, you can set up your class quickly by asking them to signup. Your students will need to choose usernames and passwords, but they WILL NOT be required to provide an email address. If a student forgets their password, you will be able to reset it for them.
       register: Ask your students to register themselves
       vist: Ask your students to visit
       section_code: 'and enter their section-code:'
-      first_please: 'First, please %{add_section}'
-      for: For
-      enter: 'enter:'
+      first_please: 'Po prvé, prosím, %{add_section}'
+      for: Pre
+      enter: 'zadajte:'
     sections:
-      add: Add section
-      manage: Manage sections
-      section: Section
-      students: Students
-      section_code: Section Code
+      add: Pridať sekciu
+      manage: Spravovať sekcie
+      section: Sekcia
+      students: Študenti
+      section_code: Kód sekcie
       add_section_code: Add Students Section-Code
       secret: Secret type
       grade: Grade
       course: Course
-      rename: rename
-      edit: edit
-      delete: delete
+      rename: premenovať
+      edit: upraviť
+      delete: odstrániť
       confirm_delete: Are you sure you want to delete this section?
       email: Send in email
     rollup: Progress Dashboard
@@ -296,10 +296,10 @@ sk:
     email_resend_confirm: Resend confirmation instructions
     new_password_hint: "(leave blank if you don't want to change it)"
     current_password_hint: (we need your current password to confirm your changes)
-    cancel:
-      title: Cancel my account
-      hint: Unhappy?
-      button: Cancel my account
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Completed
     tried: Tried

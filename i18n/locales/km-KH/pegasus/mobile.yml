@@ -1,31 +1,31 @@
 km-KH:
   hello: សួស្ដី​ពិភពលោក
-  select_language: Please select your language
+  select_language: សូម​ជ្រើសយក​ភាសា​របស់​អ្នក
   computer_science: វិទ្យាសាស្ត្រ​កុំព្យូទ័រ
   computer_science_edweek: សប្ដាហ៍​នៃ​ការ​សិក្សា​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ
-  csedweek_dates: December 9-15, 2013
+  csedweek_dates: ខែធ្នូ 9-15, 2013
   csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">plan your Hour of Code</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
   n_have_learned_an_hoc: '<h1>#</h1><h3>have tried an</h3><h2>Hour of Code</h2>'
-  anybody_can_learn: Anybody can learn.
+  anybody_can_learn: គ្រប់គ្នាអាចរៀនបាន។
   learn_now: ចាប់ផ្ដើមរៀននៅពេលនេះ
   petition_message: សិស្សទាំងអស់ដែលរៀននៅសាលារៀន គួរតែមានឱកាសបានរៀនអំពីវិទ្យាសាស្រ្តកុំព្យូទ័រ
   petition_sign_message: 'If you agree, sign your name.  Join # others.'
   name: ឈ្មោះ
   email: អ៊ីមែល
-  zipcode: ZIP code or country
-  submit: Submit
+  zipcode: កូដ​ប្រៃសណីយ៍​ឬ​ប្រទេស
+  submit: បញ្ជូន
   twentyhours_heading: Try our Intro to Computer Science Course
   twentyhours_text: Finished your first Hour of Code? Learn more core computer science and programming concepts in this follow-up course.
   hoc2014_heading: 'Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December 8 - 14, 2014<br/>'
   hoc2014_students: Students
-  hoc2014_try: Try it
-  hoc2014_teachers: Teachers
+  hoc2014_try: សាកល្បង
+  hoc2014_teachers: គ្រូបង្រៀន
   hoc2014_host: Host it
-  hoc2014_everyone: Everyone
-  hoc2014_support: Support it
+  hoc2014_everyone: គ្រប់គ្នា
+  hoc2014_support: គាំទ្រ
   hoc2014_whatishoc: What is the Hour of Code?
-  twentyhours_trynow: Try now
+  twentyhours_trynow: សាកល្បង​ឥឡូវ
   california_heading: Ask your school to teach computer science
   california_text: "Any teacher can offer our <a href='http://studio.code.org/'>free courses</a>.  Any elementary school can <a href='http://code.org/educate/k5'>teach computer science</a>. Ask high schools to <a href='http://code.org/educate/districts'>partner with us."
   california_button: រៀនបន្ថែមទៀត
@@ -104,6 +104,9 @@ km-KH:
   students_and_lines: '%{students} students have done the Hour of Code and written %{lines} lines of code.'
   start_hoc: Start the Hour of Code now
   contact_form_topic_press: Press/media (interview or speaking engagement)
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
+  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
+  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
   studiobar_title: "Explore <a href='http://studio.code.org'>Code Studio</a>"
   studiobar_elementary_title: Elementary courses
   studiobar_elementary_body: 'Our three new courses for K&#8209;5'
@@ -117,6 +120,8 @@ km-KH:
   studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
   studiobar_donate_title: Donate
   studiobar_donate_body: One child learns for each dollar you donate
+  studiobar_shop_title: Shop
+  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   contact_form_topic_student: ខ្ញុំគឺជាសិស្ស
   contact_form_topic_parent: "I'm a parent"
   contact_form_topic_teacher: ខ្ញុំគឺជាគ្រូបង្រៀន
@@ -194,9 +199,11 @@ km-KH:
   dashboard_action_save_all: Save all
   dashboard_action_cancel: បោះបង់
   dashboard_action_delete: Delete
-  dashboard_action_confirm: Delete?
   dashboard_action_delete_yes: យល់ព្រម
   dashboard_action_delete_no: ទេ
+  dashboard_action_confirm: Delete?
+  dashboard_action_remove: Remove
+  dashboard_action_remove_confirm: Remove?
   dashboard_action_done: Done
   dashboard_action_required: required
   dashboard_navigation_home_page: Teacher home page

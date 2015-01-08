@@ -60,6 +60,7 @@
   "CONTROLS_WHILEUNTIL_OPERATOR_WHILE":"~인 동안 반복",
   "CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL":"조건이 거짓인 동안, 반복적으로 명령들을 실행합니다.",
   "CONTROLS_WHILEUNTIL_TOOLTIP_WHILE":"조건이 참인 동안, 반복적으로 명령들을 실행합니다.",
+  "DEFINE_HEADER_DEFINITION":"Definition",
   "DEFINE_FUNCTION_DEFINE":"함수 정의",
   "DELETE_BLOCK":"블럭 삭제",
   "DELETE_PARAMETER":"매개 변수 삭제...",

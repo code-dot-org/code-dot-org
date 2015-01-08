@@ -60,6 +60,7 @@
   "CONTROLS_WHILEUNTIL_OPERATOR_WHILE":"korda tingimusel",
   "CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL":"Täida käske korduvalt, lõpetades siis, kui tingimus kehtib.",
   "CONTROLS_WHILEUNTIL_TOOLTIP_WHILE":"Täida käske korduvalt, lõpetades siis, kui tingimus enam ei kehti.",
+  "DEFINE_HEADER_DEFINITION":"Definition",
   "DEFINE_FUNCTION_DEFINE":"Määra",
   "DELETE_BLOCK":"Kustuta plokk",
   "DELETE_PARAMETER":"Kustuta parameeter...",

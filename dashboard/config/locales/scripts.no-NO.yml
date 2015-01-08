@@ -310,6 +310,7 @@
           description: Et utvalg av kurs på nivå 4 for testing av brukervennlighet.
           Variables: Variabler
           For Loops: For-løkker
+          Binary: Binær
         potus:
           title: spesielle
           description_short: spesielle
@@ -320,3 +321,43 @@
           description_short: spesielle
           description: spesielle
           Special: Spesial
+          Binary: Binær
+        usabilitymsm:
+          Usability testing for MSM: Usability testing for MSM
+          Evaluation Blocks: Evaluation Blocks
+          Blocks to Math: Blokker til matematikk
+          Strings and Images: Strings and Images
+          Defining Variables: Defining Variables
+          Defining Functions: Defining Functions
+          Design Recipe: Design Recipe
+          Booleans: Boolske verdier
+          Conditionals: Betingelser
+          Free Play: Free Play
+        algebra:
+          title: Computer Science in Algebra
+          description: Learn Functional Programming through Algebra
+          'Unplugged: Video Games and Coordinate Planes': 'Frakoblet: Videospill og
+            koordinatplan'
+          'Calc: Evaluation Blocks': 'Beregning: Evaluering blokker'
+          'Eval: Strings and Images': 'Evaluere: Tekst og bilder'
+          'Unplugged: Contracts': 'Frakoblet: kontrakter'
+          'Eval: Writing Contracts': 'Evaluering: Skriver kontrakter'
+          'Calc: Defining Variables': 'Regning: Definere variabler'
+          'Play Lab: Defining Variables (Big Game)': 'Spill-Lab: Definere variabler
+            (Stort spill)'
+          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Unplugged: The Design Recipe': 'Frakoblet: Design oppskriften'
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Eval: Functions': 'Eval: Functions'
+          'Play Lab: Animation (Big Game)': 'Spill-Lab: Animasjon (Big Game)'
+          'Unplugged: Booleans': 'Frakoblet: boolske verdier'
+          'Eval: Boolean Operators': 'Evaueringl: Boolske operatorer'
+          'Play Lab: Booleans': 'Spill-Lab: Boolske verdier'
+          'Play Lab: Boolean (Big Game)': 'Spille Lab: Logiske verdier (Big Game)'
+          'Unplugged: Conditionals and Piecewise Functions': 'Frakoblet: Betingelser
+            og stykkevise funksjoner'
+          'Eval: Conditionals': 'Evaluering: Betingelser'
+          'Unplugged: Collision Detection and the Distance Formula': 'Frakoblet: Oppdage
+            kollisjoner og formel for avstand'
+          'Play Lab: Collision Detection (Big Game)': 'Spill-Lab: Oppdage kollisjoner
+            (Big Game)'

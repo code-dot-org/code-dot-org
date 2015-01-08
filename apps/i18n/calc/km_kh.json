@@ -1,8 +1,8 @@
 {
   "compute": "គិត​លេខ",
-  "equivalentExpression": "Try reordering your arguments to get exactly the same expression.",
-  "extraTopBlocks": "You have unattached blocks. Did you mean to attach these to the \"compute\" block?",
+  "equivalentExpression": "សូមព្យាយាម ធ្វើការរៀបចំ អំណះអំណាងរបស់អ្នកដើម្បីទទួលបានកន្សោមពិតដូចគ្នា។",
+  "extraTopBlocks": "អ្នកមានប្លុក មិនជាប់គ្នា មួយ។ តើអ្នកចង់មានន័យថាការភ្ជាប់ទាំងនេះទៅប្លុក \"គណនា\"មែនទេ?",
   "goal": "គោលដៅ៖",
-  "reinfFeedbackMsg": "Does this look like what you want? You can press the \"Try again\" button to see your drawing.",
+  "reinfFeedbackMsg": "រឿងរបស់អ្នកនៅទីនេះគឺ! បន្តធ្វើការលើវាឬប្តូទៅផ្ដុំរូបបន្ទាប់!",
   "yourExpression": "កន្សោម​របស់​អ្នក៖"
 }

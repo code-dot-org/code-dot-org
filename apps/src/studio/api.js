@@ -80,6 +80,14 @@ exports.setSpritePosition = function (id, spriteIndex, value) {
   });
 };
 
+exports.setSpriteXY = function (id, spriteIndex, xpos, ypos) {
+  Studio.queueCmd(id, 'setSpriteXY', {
+    'spriteIndex': spriteIndex,
+    'x': Number(xpos),
+    'y': Number(ypos)
+  });
+};
+
 exports.playSound = function(id, soundName) {
   Studio.queueCmd(id, 'playSound', {'soundName': soundName});
 };

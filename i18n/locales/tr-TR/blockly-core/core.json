@@ -1,5 +1,5 @@
 {
-  "ACTUAL":"Güncel",
+  "ACTUAL":"gerçek",
   "ADD":"Ekle",
   "ADD_COMMENT":"Yorum Ekle",
   "ADD_PARAMETER":"Değer ekle",
@@ -60,6 +60,7 @@
   "CONTROLS_WHILEUNTIL_OPERATOR_WHILE":"Şu doğru oldukça tekrarla:",
   "CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL":"Bir değer yanlış ise olayları gerçekleştirir.",
   "CONTROLS_WHILEUNTIL_TOOLTIP_WHILE":"Bir değer doğru ise olayları gerçekleştirir.",
+  "DEFINE_HEADER_DEFINITION":"Definition",
   "DEFINE_FUNCTION_DEFINE":"Tanımla",
   "DELETE_BLOCK":"Bloğu Sil",
   "DELETE_PARAMETER":"Değer sil...",

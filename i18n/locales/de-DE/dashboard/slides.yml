@@ -33,7 +33,7 @@ de:
         text: 'Jeder Baustein ist eine Anweisung. Wenn du einen "vorwärts bewegen"-Baustein auf deinen Arbeitsbereich ziehst und anschließend "Programm Starten" drückst, dann bewegt sich der Vogel im Labyrinth einen Schritt nach vorne.'
       11:
         image: notes/hoc1_11.jpg
-        text: To do more than one action, you can drag many blocks to your workspace and attach them together. The bird will do the commands from top to bottom.
+        text: Um mehr als eine Handlung ausführen zu lassen, kannst du viele Bausteine auf deinen Arbeitsplatz ziehen und aneinandersetzen. Der Vogel wird die Anweisungen von oben nach unten ausführen.
       12:
         image: notes/hoc1_12.jpg
         text: 'Wenn Du ein Programm reparieren und es nochmals versuchen möchtest, dann drücke den "Zurücksetzen" Knopf.'
@@ -160,34 +160,32 @@ de:
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: |-
-          Hi, my name is Saloni. I use computer science to help solve problems in health and medicine. Let's learn about the "if else" block. It looks like the "if" block, but it has an extra part at the end that says "else".
+        text: 'Hallo, ich heiße Saloni. Ich benutze Informatik, um Probleme im Gesundheitswesen und in der Medizin zu lösen. Wir wollen etwas über den "wenn ansonsten"- Baustein lernen. Er sieht aus wie der "Wenn"- Baustein, hat aber noch einen Teil am Ende, auf dem "ansonsten" steht.'
       2:
         image: notes/hoc5_2.jpg
-        text: |-
-          If I put a "move forward" block in the spot where it says "do" and a "turn left" block where it says "else" that means that the zombie will choose between 2 options. IF there is a path ahead, the zombie will move forward, and OTHERWISE (there isn't a path ahead), the zombie will turn left.
+        text: 'Wenn ich den "vorwärts bewegen"-Baustein an die Stelle setze, wo "machen" steht, und einen "nach links drehen"-Baustein dorthin, wo "ansonsten" steht, dann bedeutet das, dass der Zombie zwischen zwei Möglichkeiten wählt. Wenn es einen Weg gibt, der geradeaus führt, dann wird der Zombie geradeaus gehen, und andernfalls (wenn es keinen Weg gibt, der geradeaus führt), wird der Zombie sich nach links drehen.'
       3:
         image: notes/hoc5_3.jpg
-        text: |-
-          Just like the "if" block, we can put "if else" blocks inside a "repeat" blocks so that the zombie keeps moving and the "if else" block will keep checking if there's somewhere to turn.
+        text: |
+          Genau wie den "Wenn"- Baustein können wir "wenn ansonsten"- Bausteine in
+          "wiederholen"- Bausteine einsetzen, so dass der Zobmbie sich weiter bewegt und der 
+          "wenn ansonsten"- Baustein überprüft, ob eine Drehung erfolgen muss.
       4:
         image: notes/hoc5_4.jpg
         text: Jetzt bring die Zombies dahin, wo sie hingehören!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
-        text: "An if-else statement is a decision between two things. Let's see how we can use an if-else statement with our buddy Scrat the squirrel."
+        text: 'Eine "wenn ansonsten"- Anweisung ist eine Entscheidung zwischen zwei Sachen. Wir wollen uns ansehen, wie wir eine "wenn ansonsten"- Anweisung bei unserem Freund Scrat, dem Eichhörnchen, anwenden können.'
       2:
         image: notes/saloni_ifelse_scrat2.jpg
-        text: |-
-          This block looks the same as the "if" block, but there's an extra part at the bottom that says "else". If I put a "move forward" block where it says "do" and a "turn left" block where it says "else", that means Scrat the squirrel will move forward if there's a path ahead. If there's not a path ahead, Scrat will turn left.
+        text: 'Dieser Baustein sieht aus wie der "Wenn"- Baustein, hat aber noch einen Teil am Ende, auf dem "ansonsten" steht. Wenn ich einen "vorwärts bewegen"- Baustein dahin setze, wo "machen" steht und einen "nach links drehen"-Baustein dorthin, wo "ansonsten" steht, bedeutet das: Das Eichhörnchen wird sich vorwärts bewegen, wenn es einen Weg geradeaus gibt. Wenn es keinen Weg geradeaus gibt, wird sich  Scrat nach links drehen.'
       3:
         image: notes/saloni_ifelse_scrat3.jpg
-        text: |-
-          It's making a decision and doing one of the two actions based on that decision. And just like "if" blocks, you can put "if-else" blocks inside "repeat" blocks.
+        text: 'Es trifft eine Entscheidung and führt eine der beiden möglichen Handlungen aus. Und genau wie "wenn"- Bausteine, kann man "wenn-ansonsten"-Bausteine in "wiederholen"- Bausteine einsetzen.'
       4:
         image: notes/saloni_ifelse_scrat4.jpg
-        text: "Now let's help Scrat the squirrel get that acorn!"
+        text: Jetzt wollen wir Scrat dem Eichhörnchen dabei helfen, diese Eichel zu kriegen!
     function:
       1:
         image: notes/stage13_1.jpg
@@ -273,7 +271,7 @@ de:
     frozen_intro:
       1:
         image: notes/frozen1_1.jpg
-        text: "Hi, my name is Lyndsey. I model, act, and write my own apps. Let's use code to join Anna and Elsa as they explore the magic and beauty of ice."
+        text: Hallo, ich heiße Lyndsey. Ich bin Model, Schauspielerin und schreibe meinen eigenen Apps. Wir wollen ein Programm schreiben, um Anna und Elsa zu treffen, wenn sie den Zauber und die Schönheit des Eises erkunden.
       2:
         image: notes/frozen1_2.jpg
         text: "You'll create snowflakes and patterns as you ice skate and make a winter wonderland that you can then share with your friends."

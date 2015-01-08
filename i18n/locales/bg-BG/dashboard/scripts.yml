@@ -281,6 +281,7 @@ bg:
           description: Избор на курс 4 нива за ползваемост.
           Variables: Променливи
           For Loops: За циклите
+          Binary: Двоичен код
         potus:
           title: специален
           description_short: специален
@@ -291,3 +292,38 @@ bg:
           description_short: специален
           description: специален
           Special: Специален
+          Binary: Двоичен код
+        usabilitymsm:
+          Usability testing for MSM: Тестиране за ползваемост за MSM
+          Evaluation Blocks: Блокове за оценка
+          Blocks to Math: Блокове за математика
+          Strings and Images: Стрингове и изображения
+          Defining Variables: Дефиниране на променливите
+          Defining Functions: Дефиниране на функции
+          Design Recipe: Рецепта за дизайн
+          Booleans: Booleans
+          Conditionals: Условия
+          Free Play: Свободна игра
+        algebra:
+          title: Компютърни науки в алгебрата
+          description: Научете функционално програмиране чрез алгебра
+          "Unplugged: Video Games and Coordinate Planes": 'Ънплъгд: видео игрите и координатните системи'
+          "Calc: Evaluation Blocks": 'Калколиране: Оценка блокове'
+          "Eval: Strings and Images": 'Оценка: Низове и изображения'
+          "Unplugged: Contracts": 'Ънплъгд: договори'
+          "Eval: Writing Contracts": 'Оценка: Писане на договори'
+          "Calc: Defining Variables": 'Изчисление: Определяне на променливите'
+          "Play Lab: Defining Variables (Big Game)": 'Игрална лаборатория: Дефиниране на променливи (голямата игра)'
+          "Eval: Defining Functions": 'Eval: Defining Functions'
+          "Unplugged: The Design Recipe": 'Ънплъгд: Напиши рецепта'
+          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
+          "Eval: Functions": 'Eval: Functions'
+          "Play Lab: Animation (Big Game)": 'Игрална лаборатория: Анимация (голямата игра)'
+          "Unplugged: Booleans": 'Ънплъгд: Booleans'
+          "Eval: Boolean Operators": 'Оценка: Булеви оператори'
+          "Play Lab: Booleans": 'Театрална лаборатория: Booleans'
+          "Play Lab: Boolean (Big Game)": 'Игрална лаборатория: Boolean(голямата игра)'
+          "Unplugged: Conditionals and Piecewise Functions": 'Ънплъгд: Условия и Piecewise функции'
+          "Eval: Conditionals": 'Оценка: Условия'
+          "Unplugged: Collision Detection and the Distance Formula": 'Ънплъгд: Collision Detection и формула за разстояние'
+          "Play Lab: Collision Detection (Big Game)": 'Игрална лаборатория: Collision Detection (голямата игра)'

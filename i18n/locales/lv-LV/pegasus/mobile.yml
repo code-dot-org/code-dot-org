@@ -106,6 +106,9 @@ lv-LV:
   students_and_lines: '%{students} skolēni ir piedalījušies Programmēšanas stundā un uzrakstījuši %{lines} rindas koda.'
   start_hoc: Sāc Programmēšanas stundu tagad
   contact_form_topic_press: Prese/mediji (intervija vai uzaicinājums sniegt runu)
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
+  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
+  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
   studiobar_title: "Izpēti <a href='http://studio.code.org'>Kodu studiju</a>"
   studiobar_elementary_title: Vienkāršākie kursi
   studiobar_elementary_body: 'Mūsu trīs  jaunie kursi priekš K&#8209;5'
@@ -119,6 +122,8 @@ lv-LV:
   studiobar_frozen_body: Veido ziemas brīnumzemi ar Annu un Elzu
   studiobar_donate_title: Ziedot
   studiobar_donate_body: Viens bērns par katru dolāru, ko ziedosi
+  studiobar_shop_title: Shop
+  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   contact_form_topic_student: Skolēniem
   contact_form_topic_parent: Vecākiem
   contact_form_topic_teacher: Pasniedzējiem/skolotājiem
@@ -196,9 +201,11 @@ lv-LV:
   dashboard_action_save_all: Saglabāt visu
   dashboard_action_cancel: Atcelt
   dashboard_action_delete: Izdzēst
-  dashboard_action_confirm: Izdzēst?
   dashboard_action_delete_yes: Jā
   dashboard_action_delete_no: Nē
+  dashboard_action_confirm: Izdzēst?
+  dashboard_action_remove: Remove
+  dashboard_action_remove_confirm: Remove?
   dashboard_action_done: Gatavs
   dashboard_action_required: nepieciešams
   dashboard_navigation_home_page: Skolotāju mājaslapa

@@ -244,7 +244,8 @@ class Documents < Sinatra::Base
     get_head_or_post %r{^\/dashboardapi\/?} do
       env = request.env.merge('PATH_INFO'=>request.path_info.sub(/^\/dashboardapi/, '/api'))
 
-      document = Pegasus::Proxy.new(server:canonical_hostname('learn.code.org') + ":#{CDO.dashboard_port}", host:'learn.code.org').call(env)
+      host_and_port = canonical_hostname('studio.code.org') + ':' + CDO.dashboard_port.to_s
+      document = Pegasus::Proxy.new(server: host_and_port, host: host_and_port).call(env)
       pass unless document
 
       status(document.status)

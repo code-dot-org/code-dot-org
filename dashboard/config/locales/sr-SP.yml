@@ -338,10 +338,11 @@
     new_password_hint: (остави празно ако не желиш промијенити)
     current_password_hint: (потребна нам је твоја тренутна лозинка како би потврдили
       твоје промјене)
-    cancel:
-      title: Угаси мој рачун
-      hint: Незадоволјни?
-      button: Угаси мој рачун
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: 'Please note: deleting your account will not delete
+      your students'' accounts.'
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Готово
     tried: Покушао

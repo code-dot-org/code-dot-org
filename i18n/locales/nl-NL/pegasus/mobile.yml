@@ -104,6 +104,9 @@ nl-NL:
   students_and_lines: '%{students} leerlingen hebben het Uur Code gedaan en %{lines} regels code geschreven.'
   start_hoc: Start het Uur Code nu
   contact_form_topic_press: Pers/media (interview of met betrokkenen spreken)
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
+  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
+  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
   studiobar_title: "ontdek <a href='http://studio.code.org'>Code Studio</a>"
   studiobar_elementary_title: Cursussen voor gevorderden
   studiobar_elementary_body: 'Onze drie Nieuwe Cursussen voor K&#8209;5'
@@ -117,6 +120,8 @@ nl-NL:
   studiobar_frozen_body: Maak een winterlandschap met Anna en Elsa
   studiobar_donate_title: Doneer
   studiobar_donate_body: Eén kind leert voor elke euro die u doneert
+  studiobar_shop_title: Shop
+  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   contact_form_topic_student: Ik ben een leerling
   contact_form_topic_parent: Ik ben een ouder
   contact_form_topic_teacher: Ik ben een leraar
@@ -194,9 +199,11 @@ nl-NL:
   dashboard_action_save_all: Alles opslaan
   dashboard_action_cancel: Annuleren
   dashboard_action_delete: Verwijderen
-  dashboard_action_confirm: Verwijderen?
   dashboard_action_delete_yes: Ja
   dashboard_action_delete_no: Nee
+  dashboard_action_confirm: Verwijderen?
+  dashboard_action_remove: Remove
+  dashboard_action_remove_confirm: Remove?
   dashboard_action_done: Voltooid
   dashboard_action_required: verplicht
   dashboard_navigation_home_page: Startpagina voor de leerkracht
