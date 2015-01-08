@@ -1,17 +1,26 @@
-var StudioApp = require('../base');
 var utils = require('../utils');
 var _ = utils.getLodash();
 
-exports.log = [];
+/**
+ * An instantiable Artist API logic. The methods on this object are called by
+ * generated user code. As they are called, they insert commands into this.log.
+ * NOTE: this.log is also modified in some cases externally (both accessed and
+ * I think cleared).
+ */
+var ArtistAPI = function () {
+  this.log = [];
+};
 
-exports.drawCircle = function (size, id) {
+module.exports = ArtistAPI;
+
+ArtistAPI.prototype.drawCircle = function (size, id) {
   for (var i = 0; i < 36; i++) {
     exports.moveForward(size, id);
     exports.turnRight(10, id);
   }
 };
 
-exports.drawSnowflake = function (type, id) {
+ArtistAPI.prototype.drawSnowflake = function (type, id) {
   var i, j, k;
 
   // mirors Blockly.JavaScript.colour_random.
@@ -94,90 +103,90 @@ exports.drawSnowflake = function (type, id) {
 };
 
 
-exports.moveForward = function(distance, id) {
+ArtistAPI.prototype.moveForward = function(distance, id) {
   this.log.push(['FD', distance, id]);
 };
 
-exports.moveBackward = function(distance, id) {
+ArtistAPI.prototype.moveBackward = function(distance, id) {
   this.log.push(['FD', -distance, id]);
 };
 
-exports.moveUp = function(distance, id) {
+ArtistAPI.prototype.moveUp = function(distance, id) {
   this.log.push(['MV', distance, 0, id]);
 };
 
-exports.moveDown = function(distance, id) {
+ArtistAPI.prototype.moveDown = function(distance, id) {
   this.log.push(['MV', distance, 180, id]);
 };
 
-exports.moveLeft = function(distance, id) {
+ArtistAPI.prototype.moveLeft = function(distance, id) {
   this.log.push(['MV', distance, 270, id]);
 };
 
-exports.moveRight = function(distance, id) {
+ArtistAPI.prototype.moveRight = function(distance, id) {
   this.log.push(['MV', distance, 90, id]);
 };
 
-exports.jumpUp = function(distance, id) {
+ArtistAPI.prototype.jumpUp = function(distance, id) {
   this.log.push(['JD', distance, 0, id]);
 };
 
-exports.jumpDown = function(distance, id) {
+ArtistAPI.prototype.jumpDown = function(distance, id) {
   this.log.push(['JD', distance, 180, id]);
 };
 
-exports.jumpLeft = function(distance, id) {
+ArtistAPI.prototype.jumpLeft = function(distance, id) {
   this.log.push(['JD', distance, 270, id]);
 };
 
-exports.jumpRight = function(distance, id) {
+ArtistAPI.prototype.jumpRight = function(distance, id) {
   this.log.push(['JD', distance, 90, id]);
 };
 
-exports.jumpForward = function(distance, id) {
+ArtistAPI.prototype.jumpForward = function(distance, id) {
   this.log.push(['JF', distance, id]);
 };
 
-exports.jumpBackward = function(distance, id) {
+ArtistAPI.prototype.jumpBackward = function(distance, id) {
   this.log.push(['JF', -distance, id]);
 };
 
-exports.turnRight = function(angle, id) {
+ArtistAPI.prototype.turnRight = function(angle, id) {
   this.log.push(['RT', angle, id]);
 };
 
-exports.turnLeft = function(angle, id) {
+ArtistAPI.prototype.turnLeft = function(angle, id) {
   this.log.push(['RT', -angle, id]);
 };
 
-exports.penUp = function(id) {
+ArtistAPI.prototype.penUp = function(id) {
   this.log.push(['PU', id]);
 };
 
-exports.penDown = function(id) {
+ArtistAPI.prototype.penDown = function(id) {
   this.log.push(['PD', id]);
 };
 
-exports.penWidth = function(width, id) {
+ArtistAPI.prototype.penWidth = function(width, id) {
   this.log.push(['PW', Math.max(width, 0), id]);
 };
 
-exports.penColour = function(colour, id) {
+ArtistAPI.prototype.penColour = function(colour, id) {
   this.log.push(['PC', colour, id]);
 };
 
-exports.penPattern = function(pattern, id) {
+ArtistAPI.prototype.penPattern = function(pattern, id) {
   this.log.push(['PS', pattern, id]);
 };
 
-exports.hideTurtle = function(id) {
+ArtistAPI.prototype.hideTurtle = function(id) {
   this.log.push(['HT', id]);
 };
 
-exports.showTurtle = function(id) {
+ArtistAPI.prototype.showTurtle = function(id) {
   this.log.push(['ST', id]);
 };
 
-exports.drawStamp = function(stamp, id) {
+ArtistAPI.prototype.drawStamp = function(stamp, id) {
   this.log.push(['stamp', stamp, id]);
 };
