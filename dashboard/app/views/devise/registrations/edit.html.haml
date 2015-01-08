@@ -67,8 +67,8 @@
     = f.select :user_type, user_type_options
 
   %div= f.submit t('crud.update'), class: 'btn btn-default'
-%h3= t('user.delete')
-%p
+-#%h3= t('user.delete')
+-#%p
   = t('user.delete_text')
   - if current_user.teacher?
     = t('user.delete_text_teacher_note')

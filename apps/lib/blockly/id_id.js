@@ -61,6 +61,7 @@ Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_UNTIL = "Ulangi sampai";
 Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_WHILE = "Ulangi selama";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = "Selama hasilnya salah lakukan beberapa perintah.";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = "Selama hasilnya benar lakukan beberapa perintah.";
+Blockly.Msg.DEFINE_HEADER_DEFINITION = "Definition";
 Blockly.Msg.DEFINE_FUNCTION_DEFINE = "Definisikan";
 Blockly.Msg.DELETE_BLOCK = "Hapus blok";
 Blockly.Msg.DELETE_PARAMETER = "Hapus parameter...";
