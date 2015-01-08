@@ -1,8 +1,10 @@
 $:.unshift File.expand_path('../lib', __FILE__)
+$:.unshift File.expand_path('../shared/middleware', __FILE__)
 require 'csv'
 require 'yaml'
 require 'cdo/erb'
 require 'cdo/slog'
+require 'os'
 
 def load_yaml_file(path)
   return nil unless File.file?(path)
@@ -45,6 +47,7 @@ def load_configuration()
     'build_pegasus'               => true,
     'dashboard_db_name'           => "dashboard_#{rack_env}",
     'dashboard_devise_pepper'     => 'not a pepper!',
+    'dashboard_secret_key_base'   => 'not a secret',
     'dashboard_honeybadger_api_key' =>'00000000',
     'dashboard_port'              => 3000,
     'dashboard_unicorn_name'      => 'dashboard',
@@ -57,6 +60,7 @@ def load_configuration()
     'languages'                   => load_languages(File.join(root_dir, 'pegasus', 'data', 'cdo-languages.csv')),
     'localize_apps'            => false,
     'name'                        => hostname,
+    'npm_use_sudo'                => ((rack_env != :development) && OS.linux?),
     'pegasus_db_name'             => rack_env == :production ? 'pegasus' : "pegasus_#{rack_env}",
     'pegasus_honeybadger_api_key' =>'00000000',
     'pegasus_port'                => 9393,
@@ -67,6 +71,7 @@ def load_configuration()
     'rack_env'                    => rack_env,
     'rack_envs'                   => [:development, :production, :staging, :test, :levelbuilder],
     'read_only'                   => false,
+    'ruby_installer'              => rack_env == :development ? 'rbenv' : 'system',
     'root_dir'                    => root_dir,
     'sendy_db_reader'             => 'mysql://root@localhost/',
     'sendy_db_writer'             => 'mysql://root@localhost/',
@@ -75,6 +80,8 @@ def load_configuration()
     raise "'#{rack_env}' is not known environment." unless config['rack_envs'].include?(rack_env)
     ENV['RACK_ENV'] = rack_env.to_s unless ENV['RACK_ENV']
     raise "RACK_ENV ('#{ENV['RACK_ENV']}') does not match configuration ('#{rack_env}')" unless ENV['RACK_ENV'] == rack_env.to_s
+
+    config['bundler_use_sudo'] = config['ruby_installer'] == 'system'
 
     config.merge! default_config
     config.merge! env_config
@@ -109,6 +116,25 @@ class CDOImpl < OpenStruct
     return "#{self.name}.#{domain}" if ['console', 'hoc-levels'].include?(self.name)
     return domain if rack_env?(:production)
     "#{rack_env}.#{domain}"
+  end
+
+  def site_url(domain, path = '')
+    host = canonical_hostname(domain)
+    if rack_env?(:development)
+      port = ['studio.code.org'].include?(domain) ? CDO.dashboard_port : CDO.pegasus_port
+      host += ":#{port}"
+    end
+
+    path = '/' + path unless path.empty? || path[0] == '/'
+    return "//#{host}#{path}"
+  end
+
+  def studio_url(path = '')
+    site_url('studio.code.org', path)
+  end
+
+  def code_org_url(path = '')
+    site_url('code.org', path)
   end
 
   def dir(*dirs)

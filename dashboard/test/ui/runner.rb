@@ -203,13 +203,13 @@ Parallel.map($browsers, :in_processes => $options.parallel_limit) do |browser|
 
   succeeded, return_value = run_tests(arguments)
 
-  if !succeeded && $options.auto_retry
-    print "UI tests for #{browser_name} failed, retrying\n"
-    HipChat.log "Retrying <b>dashboard</b> UI with <b>#{browser_name}</b>..."
-    succeeded, return_value = run_tests(arguments)
-  end
-
   $lock.synchronize do
+    if !succeeded && $options.auto_retry
+      print "UI tests for #{browser_name} failed, retrying\n"
+      HipChat.log "Retrying <b>dashboard</b> UI with <b>#{browser_name}</b>..."
+      succeeded, return_value = run_tests(arguments)
+    end
+
     if succeeded
       log_success Time.now
       log_success browser.to_yaml

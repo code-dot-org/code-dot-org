@@ -1,6 +1,5 @@
 $(document).ready(function() {
-  randomizeOrder($(".platinum"));
-  randomizeOrder($(".gold"));
+  randomizeOrder($(".badge"));
   var platinum = $(".platinum");
   var gold = $(".gold");
 

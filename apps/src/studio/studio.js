@@ -1858,6 +1858,10 @@ Studio.callCmd = function (cmd) {
       StudioApp.highlight(cmd.id);
       Studio.setSpritePosition(cmd.opts);
       break;
+    case 'setSpriteXY':
+      StudioApp.highlight(cmd.id);
+      Studio.setSpriteXY(cmd.opts);
+      break;
     case 'playSound':
       StudioApp.highlight(cmd.id);
       StudioApp.playAudio(cmd.opts.soundName, { volume: 1.0 });
@@ -2493,6 +2497,23 @@ Studio.setSpritePosition = function (opts) {
                'dontResetCollisions': samePosition});
   sprite.x = opts.x;
   sprite.y = opts.y;
+  // Reset to "no direction" so no turn animation will take place
+  sprite.dir = Direction.NONE;
+};
+
+Studio.setSpriteXY = function (opts) {
+  var sprite = Studio.sprite[opts.spriteIndex];
+  var x = opts.x - sprite.width / 2;
+  var y = opts.y - sprite.height / 2;
+  var samePosition = (sprite.x === x && sprite.y === y);
+  
+  // Don't reset collisions inside stop() if we're in the same position
+  Studio.stop({
+    'spriteIndex': opts.spriteIndex,
+    'dontResetCollisions': samePosition
+  });
+  sprite.x = x;
+  sprite.y = y;
   // Reset to "no direction" so no turn animation will take place
   sprite.dir = Direction.NONE;
 };

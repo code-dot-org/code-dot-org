@@ -12,8 +12,9 @@ def generate_professional_development_workshop_payment_report(from=nil, to=nil)
     next if from && to && (stopped_at < from || stopped_at > to)
 
     {
-     email: row[:email],
      name: row[:name],
+     user_id: row[:user_id],
+     email: row[:email],
      section_url: "http://code.org/teacher-dashboard#/sections/#{data['section_id_s']}",
      stopped_at: stopped_at.to_s,
      total_attendee_count: processed_data['total_attendee_count_i'],
@@ -63,7 +64,7 @@ def generate_professional_development_workshop_teachers_report
         teacher_name: teacher[:name],
         teacher_email: teacher[:email],
         affiliate_name: affiliate[:name],
-        affiliate_email: affiliate[:email],
+        affiliate_email: affiliate[:user_id],
         students_count: students.count,
         students_average_lifetime_days: lifetime.round,
         students_average_levels_completed: levels.round(2)

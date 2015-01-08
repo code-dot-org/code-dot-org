@@ -130,6 +130,12 @@
     এরা লেখেছে।'
   start_hoc: Hour of Code শুরু করুন
   contact_form_topic_press: সংবাদ/গণমাধ্যম (সাক্ষাৎকার অথবা আলোচনার আয়োজন)
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
+    - Michael Clark, Teacher'
+  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
+    - Nina Nichols Peery, Teacher'
+  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
+    Alzate, 5th grader'
   studiobar_title: <a href='http://studio.code.org'> কোড স্টুডিও</a> অনুসন্ধান করো।
   studiobar_elementary_title: মৌলিক কোর্স।
   studiobar_elementary_body: আমাদের তিনটি নতুন কোর্স জন্য K &#8209; 5
@@ -144,6 +150,8 @@
     করো '
   studiobar_donate_title: স্বেচ্ছায় অর্থায়ন করুন
   studiobar_donate_body: আপনার প্রতি ডলার অর্থায়নে একটি শিশু শেখে
+  studiobar_shop_title: Shop
+  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   contact_form_topic_student: আমি একজন ছাত্র
   contact_form_topic_parent: আমি ছাত্রের বাবা/মা
   contact_form_topic_teacher: আমি একজন শিক্ষক/শিক্ষাবিদ
@@ -201,7 +209,7 @@
     বিশ্ববিদ্যালয় ছাত্র (বা গবেষক)
   volunteer_engineer_submission_experience_software_professional: পেশাদার সফটওয়্যার
     বিসয়ক
-  petition_age: Age
+  petition_age: বয়স
   dashboard_landing_title: শিক্ষক হোম পেজ
   dashboard_landing_welcome: নতুন ও উন্নত শিক্ষক dashboard-এ আপনাকে স্বাগতম।
   dashboard_landing_video: এই ভিডিও টি দেখুন
@@ -235,9 +243,11 @@
   dashboard_action_save_all: সমস্ত সংরক্ষণ করুন
   dashboard_action_cancel: বাতিল করুন
   dashboard_action_delete: বাদ দিন
-  dashboard_action_confirm: বাদ দিবেন কি?
   dashboard_action_delete_yes: '"হ্যাঁ"'
   dashboard_action_delete_no: না
+  dashboard_action_confirm: বাদ দিবেন কি?
+  dashboard_action_remove: Remove
+  dashboard_action_remove_confirm: Remove?
   dashboard_action_done: হয়ে গেছে
   dashboard_action_required: প্রয়োজনীয়
   dashboard_navigation_home_page: শিক্ষক হোম পেজ
@@ -278,22 +288,22 @@
   dashboard_sections_print_secrets: You may then print a sheet of cards containing
     account information to be distributed to your students individually.
   dashboard_sections_switch_section: 'Switch section:'
-  dashboard_students_add_student: Add student
-  dashboard_students_add_students: Add multiple students
-  dashboard_students_add_multiple: 'Type or paste the names of your students, one
-    per line:'
+  dashboard_students_add_student: শিক্ষার্থী যুক্ত করুন
+  dashboard_students_add_students: একাধিক শিক্ষার্থী যুক্ত করুন
+  dashboard_students_add_multiple: 'প্রতি লাইনে একজন করে, শিক্ষার্থীদের নাম লিখুন
+    বা পেস্ট করুন:'
   dashboard_students_new_section: You've created a new section! Now add your students
     using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
-  dashboard_students_placeholder_name: Student Name
+  dashboard_students_placeholder_name: শিক্ষার্থীর নাম
   dashboard_students_name: নাম
-  dashboard_students_age: Age
+  dashboard_students_age: বয়স
   dashboard_students_gender: লিঙ্গ
   dashboard_students_male: Male
   dashboard_students_female: Female
-  dashboard_students_secret: Secret
+  dashboard_students_secret: গোপন
   dashboard_students_password: পাসওআর্ড
-  dashboard_students_username: 'Username: %{student_username}'
-  dashboard_students_email: 'Email: %{student_email}'
+  dashboard_students_username: 'ব্যবহারকারীর নাম: %{student_username}'
+  dashboard_students_email: 'ইমেইল: %{student_email}'
   dashboard_students_completed_levels: সফলভা্বে পার করেছেন
   dashboard_students_total_lines: কোড লিখেছেন
   dashboard_students_show_secret: গোপনে দেখান
@@ -349,7 +359,7 @@
   dashboard_sections_email_question: সকল ছাত্রের কি একটি বৈধ ই-মেইল ঠিকানা আছে?
   dashboard_sections_account_creation_question: কে ছাত্রের একাউন্ট তৈরি করে?
   dashboard_sections_password_question: What do students use as a "password"?
-  dashboard_sections_picture_account_creation: A picture assigned by Code.org
+  dashboard_sections_picture_account_creation: Code.org কর্তৃক সংযুক্ত ছবি
   dashboard_sections_word_account_creation: A simple word assigned by Code.org
   dashboard_sections_sign_in_question: Where do students sign-in?
   dashboard_sections_sign_in_unique: Unique web-page listed on "Manage Students" tab
@@ -363,9 +373,9 @@
   learn_more: আরও জানুন
   hoc2014_try_new_tutorials: Try our new Hour of Code tutorials
   hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
-  hoc2014_try_scrat: Angry Birds, PvZ, and Scrat
+  hoc2014_try_scrat: Angry Birds, PvZ, এবং Scrat
   hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
-  carousel_heading_international: Tutorials in your language
+  carousel_heading_international: নিজের ভাষায় টিউটোরিয়াল
   carousel_heading_domestic: Tutorials available in English
   carousel_heading_beginners: Tutorials for Beginners
   carousel_heading_javascript: Tutorials that teach Javascript
@@ -374,12 +384,12 @@
   carousel_heading_languages: Tutorials in other programming languages
   carousel_heading_apps_games: Make your own apps or games
   carousel_heading_university: University courses online
-  carousel_heading_webpages: Learn to make web pages
+  carousel_heading_webpages: ওয়েব পেজ তৈরি করতে শিখুন
   carousel_heading_robots: Learn to program with robots
   carousel_heading_ide: Platforms popular among teachers
   educator_notes: Educator Notes
   more_resources_educators: More resources for teachers and educators
-  participants: participants
+  participants: অংশগ্রহণকারী
   teachers_notes: Teacher's Notes
   teachers_notes_hoc: 'Teachers: Read important educator notes here'
   previous: পূর্ববর্তী

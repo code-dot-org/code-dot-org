@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :omniauthable, :confirmable,
          :recoverable, :rememberable, :trackable
 
+#  acts_as_paranoid # use deleted_at column instead of deleting rows
+
   PROVIDER_MANUAL = 'manual' # "old" user created by a teacher -- logs in w/ username + password
   PROVIDER_SPONSORED = 'sponsored' # "new" user created by a teacher -- logs in w/ name + secret picture/word 
 
@@ -614,6 +616,9 @@ SQL
     self.activities.order('id desc').limit(limit)
   end
 
+  # make some random-ish fake progress for a user. As you may have
+  # guessed, this is for developer testing purposes and should not be
+  # used by any user-facing features.
   def hack_progress(options = {})
     options[:script_id] ||= Script.twenty_hour_script.id
     script = Script.find(options[:script_id])
