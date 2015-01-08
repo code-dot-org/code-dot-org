@@ -9,13 +9,16 @@ if (typeof global !== 'undefined') {
 var addReadyListener = require('./dom').addReadyListener;
 var blocksCommon = require('./blocksCommon');
 
-function StubDialog() {
-  for (var argument in arguments) {
-    console.log(argument);
-  }
+function StubDialog(options) {
+  this.options = options;
+  console.log("Creating Dialog");
+  console.log(options);
 }
 StubDialog.prototype.show = function() {
   console.log("Showing Dialog");
+  if (this.options.body) {
+    console.log(this.options.body.innerHTML);
+  }
   console.log(this);
 };
 StubDialog.prototype.hide = function() {
