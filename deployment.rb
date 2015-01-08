@@ -3,6 +3,7 @@ require 'csv'
 require 'yaml'
 require 'cdo/erb'
 require 'cdo/slog'
+require 'os'
 
 def load_yaml_file(path)
   return nil unless File.file?(path)
