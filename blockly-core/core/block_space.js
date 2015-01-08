@@ -54,6 +54,12 @@ Blockly.BlockSpace = function(blockSpaceEditor, getMetrics, setMetrics) {
    */
   this.topBlocks_ = [];
 
+  /**
+   * @type {!Array.<!goog.math.Rect>}
+   * @private
+   */
+  this.deleteAreas_ = [];
+
   /** @type {number} */
   this.maxBlocks = Infinity;
 
@@ -497,8 +503,6 @@ Blockly.BlockSpace.prototype.remainingCapacity = function() {
 * Make a list of all the delete areas for this blockSpace.
 */
 Blockly.BlockSpace.prototype.recordDeleteAreas = function() {
-  this.deleteAreas_ = [];
-
   if (this.trashcan) {
     goog.array.extend(this.deleteAreas_, this.trashcan.getRect());
     this.deleteAreaTrash_ = this.trashcan.getRect();
