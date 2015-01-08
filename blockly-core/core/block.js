@@ -611,8 +611,8 @@ Blockly.Block.prototype.onMouseUp_ = function(e) {
       thisBlockSpace.trashcan.close();
     }
   } else if (Blockly.selected &&
-             Blockly.selected.isDeletable() &&
-             thisBlockSpace.isDeleteArea(e)) {
+      Blockly.selected.isDeletable() &&
+      thisBlockSpace.isDeleteArea(e)) {
     // The ordering of the statement above is important because isDeleteArea()
     // has a side effect of opening the trash can.
     var trashcan = thisBlockSpace.trashcan;
