@@ -278,13 +278,17 @@ Blockly.Block.terminateDrag_ = function() {
       Blockly.fireUiEvent(window, 'resize');
     }
   }
-  var selectedEditorSvg = null;
+  // When we have a selected block, we should use its editor to run
+  // the cursor change so that the editor's SVG gets a cursor change
+  // as well.
   if (selected) {
     selected.blockSpace.fireChangeEvent();
-    selectedEditorSvg = selected.blockSpace.blockSpaceEditor.svg_;
+    selected.blockSpace.blockSpaceEditor.setCursor(Blockly.Css.Cursor.OPEN);
+  } else {
+    // If not, at least trigger a cursor change on blocks.
+    Blockly.Css.setCursor(Blockly.Css.Cursor.OPEN, null);
   }
   Blockly.Block.dragMode_ = Blockly.Block.DRAG_MODE_NOT_DRAGGING;
-  Blockly.Css.setCursor(Blockly.Css.Cursor.OPEN, selectedEditorSvg)
 };
 
 /**
