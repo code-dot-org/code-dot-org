@@ -58,12 +58,13 @@ nav: educate_nav
           </div>
 
 <div style='clear:both'></div>
-<a id="posters"></a>
+
 ## 2. Student of the Week and Teacher of the Month
 Share these inspiring stories about students and teachers who are changing the face of computer science right now. Nominate one you know.
 
 [<button>Student of the Week</button>](/sotw)&nbsp;&nbsp;[<button>Teacher of the Month</button>](/totm)
 
+<a id="posters"></a>
 ## 3. Put up these posters:
 
 [![image](/images/fit-260/mark-poster.png)](/files/mark-poster.pdf)
