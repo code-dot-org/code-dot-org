@@ -1,6 +1,12 @@
 var utils = require('../utils');
 var _ = utils.getLodash();
 
+/**
+ * An instantiable Artist API logic. The methods on this object are called by
+ * generated user code. As they are called, they insert commands into this.log.
+ * NOTE: this.log is also modified in some cases externally (both accessed and
+ * I think cleared).
+ */
 var ArtistAPI = function () {
   this.log = [];
 };

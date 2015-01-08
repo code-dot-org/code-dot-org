@@ -6,6 +6,12 @@ var msg = require('../locale/current/common');
 var dom = require('./dom');
 var xml = require('./xml');
 var _ = utils.getLodash();
+
+// TODO (br-pair): This is a hack. We initially set our studioAppSingleton to
+// be the global StudioApp. This will be the case for all apps other than Artist.
+// For artist, we instead pass it our singleon via applySingleton. This approach
+// was taken to avoid a circular require chain between base, StudioAppClass,
+// and feedback.
 var studioAppSingleton = window.StudioApp || global.StudioApp;
 
 exports.applySingleton = function (singleton) {
@@ -110,7 +116,7 @@ exports.displayFeedback = function(options) {
   var onlyContinue = continueButton && !againButton && !previousLevelButton;
 
   var onHidden = onlyContinue ? options.onContinue : null;
-  var icon = canContinue ? studioAppSingleton.WIN_ICON : studioAppSingleton.FAILURE_ICON;
+  var icon = canContinue ? studioAppSingleton.winIcon : studioAppSingleton.failureIcon;
   var defaultBtnSelector = onlyContinue ? '#continue-button' : '#again-button';
 
   var feedbackDialog = exports.createModalDialogWithIcon({
@@ -739,7 +745,7 @@ exports.showGeneratedCode = function(Dialog) {
   var dialog = exports.createModalDialogWithIcon({
       Dialog: Dialog,
       contentDiv: codeDiv,
-      icon: studioAppSingleton.ICON,
+      icon: studioAppSingleton.icon,
       defaultBtnSelector: '#ok-button'
       });
 
