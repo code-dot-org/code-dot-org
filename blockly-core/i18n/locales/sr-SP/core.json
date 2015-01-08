@@ -60,6 +60,7 @@
   "CONTROLS_WHILEUNTIL_OPERATOR_WHILE": "понављај док је",
   "CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL": "Све док вредност није тачна, извршавај наредбе.",
   "CONTROLS_WHILEUNTIL_TOOLTIP_WHILE": "Док је вредност тачна, извршавај наредбе.",
+  "DEFINE_HEADER_DEFINITION": "Definition",
   "DEFINE_FUNCTION_DEFINE": "Дефинисати",
   "DELETE_BLOCK": "Избриши Блок",
   "DELETE_PARAMETER": "Обриши параметар...",
