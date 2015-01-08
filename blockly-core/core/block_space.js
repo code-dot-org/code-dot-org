@@ -503,6 +503,8 @@ Blockly.BlockSpace.prototype.remainingCapacity = function() {
 * Make a list of all the delete areas for this blockSpace.
 */
 Blockly.BlockSpace.prototype.recordDeleteAreas = function() {
+  this.deleteAreas_ = [];
+  
   if (this.trashcan) {
     goog.array.extend(this.deleteAreas_, this.trashcan.getRect());
     this.deleteAreaTrash_ = this.trashcan.getRect();
