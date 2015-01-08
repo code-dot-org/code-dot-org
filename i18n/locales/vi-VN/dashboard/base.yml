@@ -292,10 +292,10 @@ vi:
     email_resend_confirm: Resend confirmation instructions
     new_password_hint: (để trống nếu bạn không muốn thay đổi nó)
     current_password_hint: (chúng tôi cần mật khẩu của bạn để xác nhận thay đổi)
-    cancel:
-      title: Hủy bỏ tài khoản của tôi
-      hint: Bạn không hài lòng?
-      button: Hủy bỏ tài khoản của tôi
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Đã hoàn thành
     tried: Cố gắng

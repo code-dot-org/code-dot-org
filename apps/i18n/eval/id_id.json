@@ -13,6 +13,7 @@
   "squareBlockTitle": "persegi (ukuran, gaya, warna)",
   "starBlockTitle": "bintang (jari-jari, gaya, warna)",
   "radialStarBlockTitle": "bintang-melingkar (ujung, dalam, luar, gaya, warna)",
+  "polygonBlockTitle": "polygon (sides, length, style, color)",
   "stringAppendBlockTitle": "gabung-kata (pertama, kedua)",
   "stringLengthBlockTitle": "panjang-kata (kata)",
   "textBlockTitle": "teks (kata, ukuran, warna)",

@@ -60,7 +60,8 @@
     need_confirmation: 確認Eメールが届かない
     need_unlock: ロック解除用のEメールが届いていない
   signup_form:
-    overview_student: Sign up for an account to track your progress.
+    overview_student: 登録することで、あなた自身の進み具合を管理できるようになります。あなたのメールアドレスは、主にパスワードを忘れた際、パスワードを再設定するために使用します。もっと詳しいことが知りたいかたは、<a
+      href="http://code.org/privacy">個人情報の取扱いについて</a>をご覧ください。
     overview_teacher: Teach computer science in your classroom by signing up for an
       account.<p/> You'll be able to track your students' progress and get rewards.
     no_signup_message: <a target="_blank"href="http://learn.code.org"> いろいろなステージとパズルを見られます。</a>あなたの進捗状況を保存するためにはサインアップしてください
@@ -285,7 +286,7 @@
         Your students will need to choose usernames and passwords, but they WILL NOT
         be required to provide an email address. If a student forgets their password,
         you will be able to reset it for them.
-      register: Ask your students to register themselves
+      register: 生徒が自分で登録するよう促してください
       vist: Ask your students to visit
       section_code: 'and enter their section-code:'
       first_please: First, please %{add_section}
@@ -318,10 +319,11 @@
     email_resend_confirm: 確認手順の再送信
     new_password_hint: （変更したくない場合は空白のままにしてください）
     current_password_hint: (変更を確認するためにあなたの現在のパスワードが必要です)
-    cancel:
-      title: アカウントをキャンセルします。
-      hint: 不満足ですか？
-      button: アカウントをキャンセルします。
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: 'Please note: deleting your account will not delete
+      your students'' accounts.'
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: 完了
     tried: 試してみました
@@ -357,13 +359,13 @@
       completion and up to $1,000 in classroom rewards for public school teachers'
     tryfirst: または、まずは最初に試して、後でサインアップできます
     trynow: 今すぐ試す
-    add_hint_help: Please help us to add smart hints to Code.org tutorials
+    add_hint_help: Code.org のチュートリアルに、気の利いたヒントを充実させるため、ご協力をお願いします。
     20hour_overview: この20時間コースではコンピューターサイエンスの核となる部分やプログラミングの概念について紹介します。このコースは等級K-8用の授業に使われることを考慮して設計されました。しかし、ご安心ください全年齢を対象としており、楽しくプログラミングを学ぶことができます。
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
-    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
-    heading_elementary: <h2>20 時間コース</h2><h1>小学生向け</h1>
+    heading_hoc2014: <h2>Hour of Code</h2> <h1>全年齢対象</h1>
+    heading_elementary: <h2>20時間コース</h2> <h1>全年齢の初心者対象</h1>
     heading_apps: <h2>お楽しみ</h2><h1>みんなの</h1>
     heading_legacy: <h2>Our previous course for</h2><h1>Existing Students</h1>
     your_gallery: Gallery
@@ -393,8 +395,8 @@
     subtitle: ビデオやヒントを見る
     teacher: 解答を参照する
     auth_error: 解答を見る権限がありません
-    submit: Update Artist Location
-    direction: Start Direction
+    submit: 制作者の居住地を変更する
+    direction: 最初の方向 (度)
   video:
     tab: 動画
     notes: 動画の代わりにノートを見る
@@ -422,25 +424,22 @@
   try_reloading: ページを再読み込みする
   next_stage: 完成 ！次のステージへ
   download_pdf: オープン レッスン ・ プラン
-  lesson_plan: Lesson Plan
+  lesson_plan: 学習計画
   view_lesson_plan: レッスン・プランを見る
   pdf_download: PDF をダウンロード
-  download_coming_soon: Downloadable activity coming soon.
-  video_coming_soon: Video Coming Soon!
+  download_coming_soon: 間もなく、ダウンロードできる教材が利用できるようになります。
+  video_coming_soon: 間もなく、ビデオを視聴できるようになります。
   share_code:
     title: 「実行」をクリックして私のプログラムが動くところを見てください
-    bounce_og_title: Check out my Bounce Game
+    bounce_og_title: 私が作った Bounce Game を試してみてください
     flappy_og_title: わたしのFlappyゲームをみてください！
-    studio_og_title: Check out my story
-    check_out_what_i_made: Check out what I made
+    studio_og_title: 私が作った Play Lab のアプリを試してみてください
+    check_out_what_i_made: 私の作品を試してみてください
     og_description: Code.org でコード（プログラム）を書きました
-    phone_number_not_allowed: It looks like there is a phone number in it. Try changing
-      the text.
-    address_not_allowed: It looks like there is an address in it. Try changing the
-      text.
-    email_not_allowed: It looks like there is an email in it. Try changing the text.
-    profanity_not_allowed: It looks like there is profanity in it. Try changing the
-      text.
+    phone_number_not_allowed: 電話番号が書かれているかもしれません。そこを変更してください。
+    address_not_allowed: 住所が書かれているかもしれません。そこを変更してください。
+    email_not_allowed: メールアドレスが書かれているかもしれません。そこを変更してください。
+    profanity_not_allowed: 不適切な言葉が書かれているかもしれません。そこを変更してください。
   builder:
     created: 新しいスクリプトを作成しました
     destroyed: スクリプトを破棄しました
@@ -463,7 +462,7 @@
       title: 入門コース
       body: コンピュータサイエンスコースの入門編（20時間）に挑戦する
     hoc2014:
-      try_new_tutorial: Try our new Hour of Code tutorial in beta
+      try_new_tutorial: 動作試験中の新しい Hour of Code チュートリアルをお試しください。
       try_frozen: Artist with Anna and Elsa, from Frozen
     gallery:
       title: Gallery
@@ -471,16 +470,14 @@
     frozen:
       title: Frozen
   gallery:
-    students_drew_these_with_code: Students drew these with code!
-    students_made_these_with_code: Students made these with code!
-    picture_count: In the past <b>%{days}</b> days, students have drawn <b>%{count}</b>
-      pictures by writing their own computer programs. Click on the pictures to see
-      each program in action.
-    activity_count: In the past <b>%{days}</b> days, students have made <b>%{count}</b>
-      apps and pictures by writing their own computer programs. Click on the pictures
-      and screenshots to see each program in action.
-    want_to_make_your_own: Want to make your own?
-    more: More &rarr;
+    students_drew_these_with_code: これらの作品は、生徒たちがコードを使って描きました！
+    students_made_these_with_code: これらの作品は、生徒たちがコードを使って創りました！
+    picture_count: コンピュータ・プログラムを用いて生徒たちが描いた絵は、これまでの <b>%{days}</b> 日間に <b>%{count}</b>
+      作品です。それぞれの絵をクリックすると、その絵を描くプログラムを見ることができます。
+    activity_count: コンピュータ・プログラムを用いて生徒たちが作ったアプリは、これまでの <b>%{days}</b> 日間に <b>%{count}</b>
+      作品です。それぞれのスクリーンショットをクリックすると、そのアプリのプログラムを見ることができます。
+    want_to_make_your_own: 自分でも創ってみたいですか？
+    more: つづきを読む &rarr;
     caption_by_name_age: 作成者： %{name} ( %{age} 歳)
     caption_time_ago: '%{time_ago} 前'
     header: Gallery
@@ -490,22 +487,22 @@
     prerelease: This page is still under development.
     prerelease_hoc2014: This tutorial is in <span class='betatext'>beta</span>.  It
       is subject to revision as feedback is received and improvements are made.
-    feedback: Give Feedback
+    feedback: 不具合を報告
     report_bug: バグを報告
-    support: Get Help
+    support: 説明を見る
     support_url: //support.code.org
   multi:
     wrong_title: 不正解
-    wrong_body: The answer you've entered is not correct.  Please try again!
+    wrong_body: 不正解です。やりなおしてみてください。
     correct_title: 正解
-    correct_body: That is the correct answer.
+    correct_body: 正解です。
   match:
-    wrong_title: Incorrect solution
-    wrong_body: The solution you've entered is not correct.  Please try again!
+    wrong_title: うまく解決できていません。
+    wrong_body: うまく解決できていません。もう一度やってみてください。
     correct_title: 正解
-    correct_body: That is the correct answer.
+    correct_body: 正解です。
   text_match:
-    placeholder: Enter your answer here
+    placeholder: ここに答えを入力
   dialog:
     ok: OK
   time:

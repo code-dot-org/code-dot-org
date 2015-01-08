@@ -54,10 +54,10 @@
       to sign out of %{provider}.
     already_signedup: Naka signed up na?
     notyet_signedup: Hindi pa nakakasali?
-    google_oauth2: Google Account
+    google_oauth2: Account sa Google
     twitter: Twitter
     facebook: Facebook
-    windowslive: Microsoft Account
+    windowslive: Account sa Microsoft
     forgot_password: Hindi matandaan ang password?
     need_confirmation: Hindi nakatanggap ng kumpirmasyon?
     need_unlock: Hindi nakatanggap kung paano mag unlock?
@@ -81,7 +81,7 @@
     gender: Kasarian (optional)
     birthday: Kaarawan (optional)
     age: Edad
-    user_type: Are you a student or teacher?
+    user_type: Ikaw ba ay mag-aaral o guro?
     submit: Sign up
     teacher: Ikaw ba ay isang guro?
     valid_username: Mayroon!
@@ -109,9 +109,9 @@
     try_20hours: Subukan ang 20 oras Intro to Computer Science
   signinsection:
     welcome: Welcome to %{section_name}
-    name: Choose your name
-    picture: Now find your secret picture
-    words: Now enter your secret words
+    name: Piliin ang iyong pangalan
+    picture: Hanapin ngayon ang iyong sikretong larawan
+    words: Ilagay ngayon ang iyong mga sikretong salita
     login: Sign in
   password:
     reset_form:
@@ -233,13 +233,13 @@
             used by teachers in U.S. public schools.
   crud:
     new_model: New %{model}
-    show: Show
+    show: Ipakita
     edit: Edit
     edit_model: Edit %{model}
-    update: Update
+    update: I-update
     destroy: Destroy
-    back: Back
-    confirm: Are you sure?
+    back: Bumalik
+    confirm: Sigurado ka?
     created: '%{model} was successfully created.'
     updated: '%{model} was successfully updated.'
     destroyed: '%{model} was successfully deleted.'
@@ -249,14 +249,14 @@
       finished_hoc: I've finished my Hour of Code
       sign_in_to_save: Sign in to save progress
       free_play:
-        playlab: Make an App
-        artist: Draw Something
+        playlab: Lumikha ng App
+        artist: Gumuhit ng isang bagay
     user:
       classroom: Home Page ng Teacher
-      label: Hi %{username}
+      label: Mabuhay %{username}
       stats: My progress
       settings: My account
-      prizes: Prizes
+      prizes: Mga Premyo
       logout: Sign out
       signin: Sign in
       signup: Sign up
@@ -273,14 +273,14 @@
       prizes_link: Para sa maraming kaalaman
   teacher:
     title:
-      one: Your teacher is %{name}
-      other: 'Your teachers:'
-    remove: (remove teacher)
+      one: 'Ang iyong guro:'
+      other: 'Ang iyong mga guro:'
+    remove: (tanggalin ang guro)
     confirm:
       remove: Are you sure you want to remove this teacher?
     tools: Teacher Tools
     followers:
-      section: 'Section:'
+      section: 'Bahagi:'
       stages: 'Stage(s) to display:'
       show_past: 'Show student activity (%{bullet_html}) in the past:'
       levels_key: Levels key
@@ -315,15 +315,15 @@
       for: For
       enter: 'enter:'
     sections:
-      add: Add section
+      add: Magdagdag ng bahagi
       manage: Manage sections
-      section: Section
-      students: Students
+      section: Bahagi
+      students: Mga mag-aaral
       section_code: Section Code
       add_section_code: Add Students Section-Code
       secret: Secret type
       grade: Grade
-      course: Course
+      course: Kurso
       rename: rename
       edit: edit
       delete: delete
@@ -343,16 +343,17 @@
     email_resend_confirm: Resend confirmation instructions
     new_password_hint: (leave blank if you don't want to change it)
     current_password_hint: (we need your current password to confirm your changes)
-    cancel:
-      title: Cancel my account
-      hint: Unhappy?
-      button: Cancel my account
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: 'Please note: deleting your account will not delete
+      your students'' accounts.'
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Completed
-    tried: Tried
+    tried: Sinubukan
   user_stats:
     recent_activity: Recent activity
-    show_more: Show more
+    show_more: Magpakita pa
     classroom_activity: Unplugged Activity
   home:
     title: Code Studio
@@ -399,8 +400,8 @@
     heading_legacy: <h2>Our previous course for</h2><h1>Existing Students</h1>
     your_gallery: Gallery
   gender:
-    male: Male
-    female: Female
+    male: Lalaki
+    female: Babae
     none: Prefer not to answer
   user_type:
     student: Estudyante
@@ -417,12 +418,12 @@
     feedback: Provide feedback
     translate: Help us translate to your language
     support: Support
-    support_url: http://support.code.org
+    support_url: http://support.code.org/
     tos: Terms of service
     privacy: Privacy Policy
     secure: Secure Version
   reference_area:
-    title: Need help?
+    title: Kailangan mo ba ng tulong?
     subtitle: See these videos and hints
     teacher: See the solution
     auth_error: You are not authorized to see the solution.
@@ -584,7 +585,7 @@
           title: Sample Level Builder
           description: ''
   age_interstitial:
-    age: Your age
+    age: Ang iyong edad
     header: Account Information Update
     message: We're in the process of updating our experience to provide you with even
       stronger privacy protections. To do this, we need existing users to enter their
@@ -596,7 +597,7 @@
     You may browse <a href="http://support.code.org">support.code.org</a> without
     signing in or ask your parent or teacher to contact us for you.
   progress:
-    not_completed: not completed
+    not_completed: hindi natapos
     completed_too_many_blocks: completed, too many blocks
     completed_perfect: completed, perfect
     furthest_level_attempted: furthest level attempted

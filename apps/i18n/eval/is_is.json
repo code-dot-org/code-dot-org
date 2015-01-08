@@ -13,6 +13,7 @@
   "squareBlockTitle": "ferningur (hlið, gerð, litur)",
   "starBlockTitle": "stjarna (radíus, gerð, litur)",
   "radialStarBlockTitle": "geislastjarna (armar, innri, ytri, stílsnið, litur)",
+  "polygonBlockTitle": "polygon (sides, length, style, color)",
   "stringAppendBlockTitle": "textatengja (texti1, texti2)",
   "stringLengthBlockTitle": "textalengd (texti)",
   "textBlockTitle": "texti (strengur, lengd, litur)",

@@ -36,7 +36,7 @@
   of: di
   more: DI PIÙ
   less: DI MENO
-  beta: beta
+  beta: versione provvisoria
   try_hoc: 'Prova l''Ora del Codice, clicca qui >> '
   try_k8intro: Prova il nostro corso introduttivo di informatica per scuole elementari
     e medie inferiori (in 20 lezioni)
@@ -360,10 +360,11 @@
     email_resend_confirm: Reinvia le istruzioni di conferma
     new_password_hint: (lascialo vuoto se non vuoi cambiarlo)
     current_password_hint: (inserisci la tua password corrente per confermare i cambiamenti)
-    cancel:
-      title: Cancella il mio account
-      hint: Deluso?
-      button: Cancella il mio account
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: 'Please note: deleting your account will not delete
+      your students'' accounts.'
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Completato
     tried: Provato
@@ -558,12 +559,12 @@
     wrong_title: Risposta non corretta
     wrong_body: La risposta che hai inserito non è corretta.  Per favore riprova!
     correct_title: Corretto
-    correct_body: Quella è la risposta corretta.
+    correct_body: Questa è la risposta corretta.
   match:
     wrong_title: Soluzione non corretta
     wrong_body: La soluzione che hai inserito non è corretta.  Per favore riprova!
     correct_title: Corretto
-    correct_body: Quella è la risposta corretta.
+    correct_body: Questa è la risposta corretta.
   text_match:
     placeholder: Inserisci qui la tua risposta
   dialog:

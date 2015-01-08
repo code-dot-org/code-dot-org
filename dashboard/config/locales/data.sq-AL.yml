@@ -538,11 +538,12 @@
           let friends try your game on their phones.
     levelbuilder:
       frozen line:
-        instructions: Hi! I'm Elsa of Arendelle. Help me create a single line.
+        instructions: Përshëndetje! Unë jam Elsa e Arendelle. Më ndihmo të krijoj
+          një rresht të vetëm.
       frozen perpendicular:
-        instructions: Now let's see if we can create two lines that are at a 90 degree
-          angle to each other. You will need to use the "Turn" block as well as the
-          "Move" block.
+        instructions: Tani le të shohim nëse ne mund të krijojmë dy rreshta që janë
+          në një kënd 90 gradë nga njëri tjetri. Ti duhet të përdorësh bllokun "Kthehu"
+          ashtu si edhe bllokun "Leviz".
       frozen square iterative:
         instructions: It seems like we're halfway to making a square. Let's put 4
           lines together to create a square.

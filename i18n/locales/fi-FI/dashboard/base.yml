@@ -87,7 +87,7 @@ fi:
     teacher_terms: "Sitoudun noudattamaan Code.org <a href='http://code.org/tos'>käyttöehtoja</a>."
     additional_information: Tarvitsemme joitakin lisätietoja voidaksesi jatkaa kirjautumista.
   signin_form:
-    title: Oletko jo liittynyt? Kirjaudu sisään
+    title: Oletko jo rekisteröitynyt? Kirjaudu sisään
     login: Sähköpostiosoite tai käyttäjätunnus
     password: Salasana
     remember: Muista minut
@@ -287,7 +287,7 @@ fi:
       section_code: Ryhmän tunnus
       add_section_code: Lisää oppilaiden ryhmän tunnus
       secret: Salainen tyyppi
-      grade: Arvosana
+      grade: Taso
       course: Kurssi
       rename: nimeä uudelleen
       edit: muokkaa
@@ -305,10 +305,10 @@ fi:
     email_resend_confirm: Lähetä vahvistusohjeet uudestaan
     new_password_hint: (jätä tyhjäksi jos et halua vaihtaa)
     current_password_hint: (anna nykyinen salasanasi, jotta voimme vahvistaa muutokset)
-    cancel:
-      title: Tilin poistaminen
-      hint: Onneton?
-      button: Poista tili
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Valmis
     tried: Kokeili

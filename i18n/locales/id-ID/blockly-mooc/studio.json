@@ -1,5 +1,5 @@
 {
-  "actor":"pelaku",
+  "actor":"aktor",
   "alienInvasion":"Serangan Alien!",
   "backgroundBlack":"hitam",
   "backgroundCave":"gua",
@@ -58,6 +58,7 @@
   "moveDistanceTooltip":"memindahkan karakter dengan jarak dan arah yang telah ditentukan.",
   "moveSprite":"bergerak",
   "moveSpriteN":"pindahkan karakter.",
+  "toXY":"to x,y",
   "moveDown":"Pindahkan ke bawah",
   "moveDownTooltip":"menurunkan karakter.",
   "moveLeft":"Gerak ke kiri",

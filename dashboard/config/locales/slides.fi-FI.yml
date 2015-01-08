@@ -456,7 +456,7 @@
         image: notes/frozen3_3.jpg
         text: Opetettuasi tietokoneen tekemään toiminnon käyttäen tätä toimintosarjaa,
           voit keksiä sille nimen ja sillä tavalla tehdä sen toistamisesta helpompaa.
-          Kun määritellä oman käskysi ja antaa sille nimen, sitä kutsutaan funktioksi.
+          Kun määritellet oman käskysi ja antanet sille nimen, sitä kutsutaan funktioksi.
       4:
         image: notes/frozen3_4.jpg
         text: Hei, olen Jess. Ohjelmoidessasi lohkoilla, voit käyttää funktioita kun

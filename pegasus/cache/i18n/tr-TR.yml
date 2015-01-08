@@ -129,6 +129,12 @@
     satırlarının % {hatları} yazılır.'
   start_hoc: Kod saatine başla
   contact_form_topic_press: Basın / medya ( röportaj veya konuşma randevusu)
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
+    - Michael Clark, Teacher'
+  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
+    - Nina Nichols Peery, Teacher'
+  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
+    Alzate, 5th grader'
   studiobar_title: <a href='http://studio.code.org'>Code Studio</a>'yu Keşfedin
   studiobar_elementary_title: Temel dersler
   studiobar_elementary_body: K&#8209;5 hazırlanan üç yeni dersimiz
@@ -142,6 +148,8 @@
   studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
   studiobar_donate_title: Donate
   studiobar_donate_body: One child learns for each dollar you donate
+  studiobar_shop_title: Shop
+  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   contact_form_topic_student: Bir öğrenciyim
   contact_form_topic_parent: Bir ebeveynim
   contact_form_topic_teacher: Bir öğretmen/eğitimciyim
@@ -230,9 +238,11 @@
   dashboard_action_save_all: Tümünü Kaydet
   dashboard_action_cancel: İptal
   dashboard_action_delete: Sil
-  dashboard_action_confirm: Silinsin mi?
   dashboard_action_delete_yes: Evet
   dashboard_action_delete_no: Hayır
+  dashboard_action_confirm: Silinsin mi?
+  dashboard_action_remove: Remove
+  dashboard_action_remove_confirm: Remove?
   dashboard_action_done: Bitti
   dashboard_action_required: gerekli
   dashboard_navigation_home_page: Öğretmen Ana Sayfa

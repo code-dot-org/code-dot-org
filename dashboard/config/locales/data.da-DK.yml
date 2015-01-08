@@ -832,16 +832,16 @@
         logic_category: Åbn "Logik" undermenuen for at finde "if/else" blokken.
         length_parameter: Kan du opdatere denne funktion, så det bruger parameteren
           "længde"?
-        frozen_diamond_repeat: Use the repeat block to create this shape.
-        frozen_circle_function_in_circle_turn: Don't forget to turn after creating
-          each circle.
+        frozen_diamond_repeat: Benyt Gentag Blok, for at oprette denne form.
+        frozen_circle_function_in_circle_turn: Glem ikke at dreje efter oprettelse
+          af hver cirkel.
         frozen_circle_function_with_parameter_circle: Brug "lav en cirkel" blokken
           og skift størrelsen.
-        frozen_snowflake_branch: Use the "create a snowflake branch" block
+        frozen_snowflake_branch: Benyt "Opret en snefnug-gren"-blokken
         frozen_create_square: Tilføj flere blokke her for at lave et kvadrat
         playlab_drag_say: Træk "sig"-blokken herhen og skriv "Hej"
         playlab_use_twice: Brug denne blok to gange og husk at ændre tallet for figuren
-        playlab_move_girl: Use the "move right" block to move Tennis Girl
+        playlab_move_girl: Benyt "Flyt til højre"-blokken til at flytte Tennis-pige
         playlab_play_sound: Tilføj "afspil lyd"-blok her
         playlab_arrow_keys: Husk at bruge disse til at flytte heksen efter du klikker
           på Kør
@@ -858,21 +858,20 @@
         change_here: Lav dine ændringer her
         write_draw_square_function: Træk blokke fra værktøjskassen som tegner et kvadrat
           hertil
-        write_draw_triangle_function: Drag blocks from the toolbox into here that
-          draw a triangle
-        edit_add_parameter: Click edit to add a parameter in your function
-        add_and_drag_parameter: Write in the name of your parameter here, click add,
-          and then drag it into your function definition
-        fill_in_actor: Fill in the ??? with numbers that correspond to each actor
-          (1, 2, and 3)
-        repeat: Put blocks inside the loop to repeat commands
-        if_bee_nectar: Use the "if" block to decide if the bee should get nectar
-        if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower,
-          and makes honey if it's not a flower
-        repeat_full_circle: Enter in the number of times the zombie has to move to
-          make a full circle
-        place_length_variable: Drag the length variable here to replace the question
-          marks
+        write_draw_triangle_function: Træk blokke fra værktøjskassen herind for at
+          tegne en trekant
+        edit_add_parameter: Klik Redigér for at tilføje en parameter i din funktion
+        add_and_drag_parameter: Angiv parameternavn hér, klik Tilføj, og træk den
+          derefter ind i din funktionsdefinition
+        fill_in_actor: Udfyld ??? med tal, der modsvarer hver skuespiller (1, 2 og
+          3)
+        repeat: Sæt blokke indeni løkken for at gentage kommandoer
+        if_bee_nectar: Benyt "if"-blokken til at afgøre, om bien skal have nektar
+        if_else_bee: Bruge "if/else"-blokken, så bierne får nektar fra en blomst og
+          producerer honning hvis det ikke er en blomst
+        repeat_full_circle: Angiv antallet af gange zombien skal bevæge sig for at
+          have gennemført en fuld cirkel
+        place_length_variable: Træk længdevariablen hertil for at erstatte spørgsmålstegnene
         arrows_move_actor: Brug pilene til at flytte figuren
         right_arrow_fireball: Brug højre pil til at skyde ildkugler
         name_function: Skriv navnet på din funktion her

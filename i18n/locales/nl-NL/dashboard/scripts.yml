@@ -281,6 +281,7 @@ nl:
           description: Een selectie van cursus 4 puzzels voor gebruiksvriendelijkheidstesten.
           Variables: Variabelen
           For Loops: For-lussen
+          Binary: Binaire
         potus:
           title: speciale
           description_short: speciale
@@ -291,3 +292,38 @@ nl:
           description_short: speciale
           description: speciale
           Special: Speciale
+          Binary: Binaire
+        usabilitymsm:
+          Usability testing for MSM: Usability testing for MSM
+          Evaluation Blocks: Evaluation Blocks
+          Blocks to Math: Blokken naar Wiskunde
+          Strings and Images: Strings and Images
+          Defining Variables: Defining Variables
+          Defining Functions: Defining Functions
+          Design Recipe: Design Recipe
+          Booleans: Booleans
+          Conditionals: Voorwaardelijke instructies
+          Free Play: Free Play
+        algebra:
+          title: Computer Science in Algebra
+          description: Learn Functional Programming through Algebra
+          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video-Games en Coordinaat Vliegtuigen'
+          "Calc: Evaluation Blocks": 'Calc: Evaluatie blokken'
+          "Eval: Strings and Images": 'Eval: Tekenreeksen en afbeeldingen'
+          "Unplugged: Contracts": 'Unplugged: Contracten'
+          "Eval: Writing Contracts": 'Eval: Schrijven van contracten'
+          "Calc: Defining Variables": 'Calc: Variabelen definiëren'
+          "Play Lab: Defining Variables (Big Game)": 'Speel Lab: Variabelen definiëren (Groot Spel)'
+          "Eval: Defining Functions": 'Eval: Defining Functions'
+          "Unplugged: The Design Recipe": 'Unplugged: Het ontwerp recept'
+          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
+          "Eval: Functions": 'Eval: Functions'
+          "Play Lab: Animation (Big Game)": 'Speel Lab: Animatie (Groot Spel)'
+          "Unplugged: Booleans": 'Unplugged: Booleans'
+          "Eval: Boolean Operators": 'Eval: Booleaanse operatoren'
+          "Play Lab: Booleans": 'Speel Lab: Booleans'
+          "Play Lab: Boolean (Big Game)": 'Speel Lab: Booleans (Groot Spel)'
+          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals en stuksgewijze functies'
+          "Eval: Conditionals": 'Eval: Conditionals'
+          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Botsingdetectie en de afstand formule'
+          "Play Lab: Collision Detection (Big Game)": 'Speel Lab: Botsingdetectie (Groot Spel)'

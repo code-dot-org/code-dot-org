@@ -58,6 +58,7 @@
   "moveDistanceTooltip":"Presunie postavu o zadanú vzdialenosť v určenom smere.",
   "moveSprite":"presunúť",
   "moveSpriteN":"posuň postavu {spriteIndex}",
+  "toXY":"to x,y",
   "moveDown":"posunúť nadol",
   "moveDownTooltip":"Posunúť postavu nadol.",
   "moveLeft":"posunúť doľava",

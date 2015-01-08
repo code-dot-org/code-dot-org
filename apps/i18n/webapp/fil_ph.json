@@ -8,10 +8,9 @@
   "catText": "Text",
   "catVariables": "Mga variable",
   "continue": "Magpatuloy",
-  "createHtmlBlock": "gumawa ng html block",
+  "createHtmlBlock": "lumikha ng html block",
   "createHtmlBlockTooltip": "Lumilikha ng isang block ng HTML sa app.",
   "finalLevel": "Maligayang pagbati! Nalutas mo na ang pinakahuling puzzle.",
-  "makeYourOwn": "Gumawa ng Sarili Mong App",
   "nextLevel": "Maligayang pagbati! Natapos mo ang puzzle na ito.",
   "no": "Hindi",
   "numBlocksNeeded": "Ang puzzle na ito ay maaaring malutas sa %1 na mga block.",
@@ -25,7 +24,7 @@
   "stepIn": "Hakbang sa",
   "stepOver": "Hakbang sa paglipas ng",
   "stepOut": "Umalis",
-  "turnBlack": "gawing black",
+  "turnBlack": "gawing itim",
   "turnBlackTooltip": "Pinapa-itim ang screen.",
   "yes": "Oo"
 }

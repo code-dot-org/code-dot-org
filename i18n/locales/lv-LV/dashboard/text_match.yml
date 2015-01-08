@@ -19,12 +19,15 @@ lv:
         Enter answer here: Ievadiet atbildi šeit
         4 + 5: 4 + 5
         Type the arithmetic expression here: Ievadi aritmētisko izteiksmi šeit
+        Blocks to Math 1.blocks.start_blocks: Blocks to Math 1.blocks.start_blocks
+        Blocks to Math 1.blocks.start_blocks, 200: Blocks to Math 1.blocks.start_blocks, 200
       Blocks to Math 2:
         Convert Blocks to Math: Pārvērst blokus izteiksmē
         Type out the arithmetic expression that matches this code: Uzraksti aritmētisku izteiksmi, kura atbilst šim kodam
         /script_assets/msm/unit1/blockstomath2.png: /script_assets/msm/unit1/blockstomath2.png
         7 * 6: '7 * 6'
         Type the arithmetic expression here: Ievadi aritmētisko izteiksmi šeit
+        Blocks to Math 2.blocks.start_blocks, 200: Blocks to Math 2.blocks.start_blocks, 200
       Blocks to Math 3:
         Convert Blocks to Math: Pārvērst blokus izteiksmē
         Type out the arithmetic expression that matches this code: Uzraksti aritmētisku izteiksmi, kura atbilst šim kodam
@@ -32,6 +35,7 @@ lv:
         (2 * 3) - (1 + 0): '(2 * 3) - (1 + 0)'
         2 * 3 - (1 + 0): '2 * 3 - (1 + 0)'
         Type the arithmetic expression here: Ievadi aritmētisko izteiksmi šeit
+        Blocks to Math 3.blocks.start_blocks: Blocks to Math 3.blocks.start_blocks
       Blocks to Math 4:
         Convert Blocks to Math: Pārvērst blokus izteiksmē
         Type out the arithmetic expression that matches this code: Uzraksti aritmētisku izteiksmi, kura atbilst šim kodam
@@ -39,6 +43,8 @@ lv:
         (5 + 8) - 12: '(5 + 8) - 12'
         5 + 8 - 12: '5 + 8 - 12'
         Type the arithmetic expression here: Ievadi aritmētisko izteiksmi šeit
+        Blocks to Math 4.blocks.start_blocks: Blocks to Math 4.blocks.start_blocks
+        Blocks to Math 4.blocks.start_blocks, 200: Blocks to Math 4.blocks.start_blocks, 200
       Blocks to Math 5:
         Convert Blocks to Math: Pārvērst blokus izteiksmē
         Type out the arithmetic expression that matches this code: Uzraksti aritmētisku izteiksmi, kura atbilst šim kodam
@@ -47,6 +53,7 @@ lv:
           - 
             2 * -6: '-2 * -6'
         Type the arithmetic expression here: Ievadi aritmētisko izteiksmi šeit
+        Blocks to Math 5.blocks.start_blocks: Blocks to Math 5.blocks.start_blocks
       Blocks to Math 6:
         Convert Blocks to Math: Pārvērst blokus izteiksmē
         Type out the arithmetic expression that matches this code: Uzraksti aritmētisku izteiksmi, kura atbilst šim kodam
@@ -56,12 +63,14 @@ lv:
         (4 - 1) * (-2) + 12: '(4 - 1) * (-2) + 12'
         (4 - 1) * -2 + 12: '(4 - 1) * -2 + 12'
         Type the arithmetic expression here: Ievadi aritmētisko izteiksmi šeit
+        Blocks to Math 6.blocks.start_blocks: Blocks to Math 6.blocks.start_blocks
       Blocks to Math 7:
         Convert Blocks to Math: Pārvērst blokus izteiksmē
         Type out the arithmetic expression that matches this code: Uzraksti aritmētisku izteiksmi, kura atbilst šim kodam
         /script_assets/msm/unit1/blockstomath7.png: /script_assets/msm/unit1/blockstomath7.png
         10 / (2 * (3 + 1)): '10 / (2 * (3 + 1))'
         Type the arithmetic expression here: Ievadi aritmētisko izteiksmi šeit
+        Blocks to Math 7.blocks.start_blocks: Blocks to Math 7.blocks.start_blocks
       Blocks to Bools 1:
         Convert Blocks to Math: Pārvērst blokus izteiksmē
         Type out the arithmetic expression that matches this code: Uzraksti aritmētisku izteiksmi, kura atbilst šim kodam

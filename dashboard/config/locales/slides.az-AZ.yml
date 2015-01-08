@@ -242,23 +242,23 @@
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
-        text: An if-else statement is a decision between two things. Let's see how
-          we can use an if-else statement with our buddy Scrat the squirrel.
+        text: Bir "əgər-əks halda" ifadəsi iki şeyin arasında qərar qəbul etməkdir.
+          Gəlin, görək biz dostumuz Cıramqla "əgər-əks halda" ifadəsini necə istifadə
+          edə bilərik.
       2:
         image: notes/saloni_ifelse_scrat2.jpg
-        text: This block looks the same as the "if" block, but there's an extra part
-          at the bottom that says "else". If I put a "move forward" block where it
-          says "do" and a "turn left" block where it says "else", that means Scrat
-          the squirrel will move forward if there's a path ahead. If there's not a
-          path ahead, Scrat will turn left.
+        text: Bu blok "əgər" bloku kimi görünür, lakin onun altında "əks halda" yazılmış
+          əlavə hissəsi var. Əgər "et" deyən yerə "get" bloku və "əks halda" yazılmış
+          yerə "sola dön" bloku qoysam, bu o deməkdir ki, qabaqda yol varsa, dələ
+          Cırmaq irəli hərəkət edəcək. Əgər qabaqda yol yoxdursa, Cırmaq sola dönəcək.
       3:
         image: notes/saloni_ifelse_scrat3.jpg
-        text: It's making a decision and doing one of the two actions based on that
-          decision. And just like "if" blocks, you can put "if-else" blocks inside
-          "repeat" blocks.
+        text: O, qərar qəbul edir və bu qərara əsasən iki hərəkətdən birini edir.
+          "Əgər" blokunda da olduğu kimi "əgər-əks halda" bloklarını da "təkrar et"
+          bloklarının içinə yerləşdirə bilərsiniz.
       4:
         image: notes/saloni_ifelse_scrat4.jpg
-        text: Now let's help Scrat the squirrel get that acorn!
+        text: İndi isə, gəlin, Cırmağa kömək edək ki, o palıd qozasını ələ keçirsin!
     function:
       1:
         image: notes/stage13_1.jpg

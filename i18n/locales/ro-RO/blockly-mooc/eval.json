@@ -13,6 +13,7 @@
   "squareBlockTitle":"pătrat(mărime, stil, culoare)",
   "starBlockTitle":"stea (rază, stil, culoare)",
   "radialStarBlockTitle":"stea-radială (puncte, interior, exterior, stil, culoare)",
+  "polygonBlockTitle":"polygon (sides, length, style, color)",
   "stringAppendBlockTitle":"șir-adăugare (primul, al_doilea)",
   "stringLengthBlockTitle":"șir-lungime (șir)",
   "textBlockTitle":"text(șir, mărime, culoare)",

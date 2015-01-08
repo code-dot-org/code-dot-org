@@ -13,6 +13,7 @@
   "squareBlockTitle":"τετράγωνο (μέγεθος, στυλ, χρώμα)",
   "starBlockTitle":"αστέρι (ακτίνα, στυλ, χρώμα)",
   "radialStarBlockTitle":"Ακτινωτό-αστέρι (σημεία, εσωτερική ακτίνα, εξωτερική ακτίνα, στυλ, χρώμα)",
+  "polygonBlockTitle":"polygon (sides, length, style, color)",
   "stringAppendBlockTitle":"συμβολοσειρά-πρoσάρτησε (πρώτη, δεύτερη)",
   "stringLengthBlockTitle":"μήκος συμβολοσειράς (συμβολοσειρά)",
   "textBlockTitle":"κείμενο (συμβολοσειρά, μέγεθος, χρώμα)",

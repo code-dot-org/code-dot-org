@@ -2,34 +2,34 @@
   activerecord:
     errors:
       messages:
-        blank: is required
+        blank: kërkohet
     attributes:
       user:
-        name: Emri
+        name: Shfaq Emrin
         email: email adresa
         username: pseudonimi
         password: fjalekalim
         password_confirmation: Konfirmim i fjalekalimit
         current_password: Fjalekalimi aktual
         locale: Gjuha
-        age: Age
+        age: Mosha
         gender: Gjini
         edit_header: Ndrysho detaje te llogarise
         error:
-          future: can't be in the future
+          future: nuk mund të jetë në të ardhmen
   hello: Pershendetje Botë
   welcome_back: Pershendetje %{name}
   add_teacher_form:
     code:
-      label: 'Add a teacher by section code:'
-      placeholder: Code (ABCDEF)
+      label: 'Shto një mësues:'
+      placeholder: Pjesa e Kodit (ABCDEF)
     submit: Shto mesues
   add_hint_form:
-    placeholder: Please enter your hint here
-    submit: Add hint
+    placeholder: Të lutem fut udhëzimin tënd këtu
+    submit: Shto udhëzim
   appname: Code.org
   stage: fazë
-  stage_number: Stage %{number}
+  stage_number: Fazë %{number}
   puzzle: Pjesë
   trophies: trofetë
   courses: kurse
@@ -38,47 +38,50 @@
   less: ME PAK
   beta: beta
   try_hoc: Provo "Nje ore kodim" kliko ketu >>
-  try_k8intro: Ose, provo hyrjen tone K-8 ne Kursin per shkenca kompjuterike (15-25
-    ore)
-  k8intro: K-8 Intro to Computer Science Course (15-25 hours)
+  try_k8intro: Provo Hyrjen tonë K-8 tek Kursi i Shkencave Kompjuterike (15-25 orë)
+  k8intro: Hyrja K-8 tek Kursi i Shkencave Kompjuterike (15-25 orë)
   already_started: Keni filluar nje here? Vazhdoni ketu >>
   demos: 'Admin: Te gjitha demonstrimet'
   continue: Vazhdo
-  prize: prize
+  prize: çmim
   more_info: Me shume informacion
   auth:
     sign_in_with: Logohu me
     signed_in: U loguat!
-    signed_out: You have signed out of <a href="%{url}">Code.org</a>.
-    sign_out_of: You used %{provider} to sign in. <a href="%{url}">Click here</a>
-      to sign out of %{provider}.
+    signed_out: Ti ke dalë nga <a href="%{url}">Code.org</a>.
+    sign_out_of: Ti përdore %{provider} për tu futur. <a href="%{url}">Kliko këtu</a>
+      për të dalë %{provider}.
     already_signedup: Jeni regjistruar?
     notyet_signedup: Nuk jeni te regjistruar?
-    google_oauth2: Google Account
+    google_oauth2: Llogaria e Google
     twitter: Twitter
     facebook: Facebook
-    windowslive: Microsoft Account
+    windowslive: Llogaria e Microsoft
     forgot_password: Keni harruar fjalekalimin?
     need_confirmation: Nuk keni marre instruksionet e konfirmimit?
     need_unlock: Nuk keni marre instruksionet e cbllokimit?
   signup_form:
-    overview_student: Sign up for an account to track your progress.
-    overview_teacher: Teach computer science in your classroom by signing up for an
-      account.<p/> You'll be able to track your students' progress and get rewards.
+    overview_student: Rregjistrohu në një llogari për të parë progresin tënd. Emaili
+      yt, fillimisht, përdoret për të të lejuar ty të futesh dhe të rigjesh fjalëkalimin.
+      Për më shumë informacione, shiko në <a href="http://code.org/privacy">Politikat
+      e Privatësisë</a>.
+    overview_teacher: Jep mësim në shkencat kompjuterike tek klasa jote duke u rregjistruar
+      në një llogari.<p/> Ti do kesh mundësi të shtosh studentët e tu dhe të ndjekësh
+      progresin e tyre.
     no_signup_message: Ti mund te shfletosh faza te ndryshme dhe enigma ne Code.org,
       por te duhet te regjistrohesh qe te ruash progresin tend.
     teacher_educator_guide: Shiko guiden e edukimit
-    teacher_pitch: Meso hyrjen e shkencave kompjuterike K-8 ne klasen tuaj
+    teacher_pitch: Mësuesit rregjistrohen për Code.org
     teacher_title: Regjistrimi per mesuesit
-    student_pitch: 'Me shume se nje ore: provo hyrjen K-8 ne shkencat kompjuterike'
-    student_title: Regjistrohu
+    student_pitch: Studentët rregjistrohen për Code.org
+    student_title: Studentët rregjistrohen
     school_name: Emri i shkolles (fakultativ)
     school_address: Adresa e shkolles (fakultative)
     address_placeholder: adresa, qyteti, shteti, kodi postar
     gender: Gjinia (fakultative)
     birthday: Datelindje (fakultative)
-    age: Age (optional)
-    user_type: Are you a student or teacher?
+    age: Mosha
+    user_type: A je ti student apo mësues?
     submit: Regjistrohu
     teacher: Jeni nje mesues?
     valid_username: I disponueshem!
@@ -87,27 +90,27 @@
     valid_password: Fjalekalim i vlefshem!
     invalid_password: Fjalekalimi duhet te jete te pakten 6 karaktere
     mismatch_password: Dy fjalekalimet qe vendoset nuk perputhen
-    student_terms: Une pranoj kushtet e perdorimit te Code.org. Nese jam nen 13 vjec,
-      une pranoj duke paraqitur kete formular qe kam lejen e prinderve ose kujdestarit
-      per te perdorur sherbimet e Code.org .
-    teacher_terms: Une pranoj kushtet e perdorimit te Code.org.
-    additional_information: We need some additional information to continue signing
-      you up.
+    student_terms: |
+      Unë bie dakord me kushtet e përdorimit të Code.org<a href='http://code.org/tos'> </a>. Nëse unë jam nën 13 vjeç, konfirmoj ta plotësoj këtë formë, që kam lejen e prindërve ose mbikqyrësit të ligjshëm, për të përdorur shërbimet e Code.org.<br/> Për përdorues nën 13 vjeç, adresat e emaileve nuk do të ruhen në formë që ne ti kontaktojmë ata.
+    teacher_terms: Unë bie dakord me kushtet e përdorimit të Code.org <a href='http://code.org/tos'>
+      </a>.
+    additional_information: Ne kemi nevojë për disa informacione shtesë për të vazhduar
+      me rregjistrimin tuaj.
   signin_form:
-    title: Logohu
+    title: Ke një llogari ekzistente? Futu
     login: Email ose emri i perdoruesit
     password: fjalekalim
     remember: Me mbaj mend
     submit: logohu
   signin:
-    try_heading: Want to try coding without signing up?
-    try_hoc: Try one Hour of Code first
-    try_20hours: Try our 20 hour Intro to Computer Science
+    try_heading: Dëshiron ta provosh të kodosh pa u rregjistruar?
+    try_hoc: Provo një Orë Kodimi si fillim
+    try_20hours: Provo 20 orët tona Hyrje në Shkencat Kompjuterike
   signinsection:
-    welcome: Welcome to %{section_name}
-    name: Choose your name
-    picture: Now find your secret picture
-    words: Now enter your secret words
+    welcome: Mirë se erdhët në %{section_name}
+    name: Zgjidh emrin tënd
+    picture: Tani gjej figurën tënde të fshehur
+    words: Tani fut fjalët e tua të fshehura
     login: logohu
   password:
     reset_form:
@@ -121,14 +124,11 @@
       submit: Ndrysho fjalekalimin tim
   welcome_email:
     subject: Behu pjese e klases time (ne Code.org)
-    body: |
-      Click the link below to sign up for computer science tutorials on Code.org (with me as your "teacher"):
-
-      %{link}
-
-      The tutorials are fun, visually engaging, and teach the basic concepts of computer science using a simple, guided, game-like experience. Learn to code from Bill Gates, Mark Zuckerberg, Angry Birds, and Plants vs. Zombies! :-)
-
-      %{name}
+    body: "Kliko linkun e mëposhtëm për tu rregjistruar tek tutorialet e shkencave
+      kompjuterike në Code.org (me mua si \"mësuesin\" tënd):\n\n%{link} \n\nTutorialet
+      janë zbavitës, tërheqës, dhe të mësojnë konceptet bazë të shkencave kompjuterike
+      duke përdorur një përvojë loje të thjeshtë. Mëso të kodosh nga Bill Gates, Mark
+      Zuckerberg, Angry Birds dhe Plants vs. Zombies! :-)\n\n%{name}\n"
   follower:
     invite_sent: Ftesa u dergua
     added_teacher: '%{name} u shtua si mesuesi juaj'
@@ -139,9 +139,9 @@
       username_in_use: '%{username} eshte i zene, ju lutemi zgjidhni nje tjeter'
       no_teacher: Nuk mund te gjenim ndonje te loguar me '%{teacher_email_or_code}'.
         Kerkojuni atyre te regjistrohen ketu dhe provo ti shtosh ato perseri
-      section_not_found: Could not find a section with code '%{section_code}'.
-      blank_code: Please enter a code or your teacher's email address
-      cant_join_own_section: Sorry, you can't join your own section.
+      section_not_found: Nuk mund të gjejmë asnjë pjesë me kodin '%{section_code}'.
+      blank_code: Të lutem fut një pjesë kodi
+      cant_join_own_section: Më vjen keq, ti nuk mund të bashkosh dot pjesën tënde.
     mail:
       invite_student:
         subject: Join a class with %{teacher_name} at Code.org!
@@ -337,10 +337,11 @@
     email_resend_confirm: Resend confirmation instructions
     new_password_hint: (leave blank if you don't want to change it)
     current_password_hint: (we need your current password to confirm your changes)
-    cancel:
-      title: Cancel my account
-      hint: Unhappy?
-      button: Cancel my account
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: 'Please note: deleting your account will not delete
+      your students'' accounts.'
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Completed
     tried: Tried
@@ -543,7 +544,7 @@
     script:
       name:
         20-hour:
-          title: K-8 Intro to Computer Science Course (15-25 hours)
+          title: Hyrja K-8 tek Kursi i Shkencave Kompjuterike (15-25 orë)
           description: Ky kurs qe zgjat 20 ore na njeh me bazen e shkences kompjuterike
             dhe konceptet e programimit. Kursi eshte dizenjuar te perdoret nga klasat
             e nivelit K-8, por eshte argetuese te mesohet nga te gjitha moshat.
@@ -554,7 +555,7 @@
           title: Ndrysho kodin
           description: ''
         events:
-          title: Events
+          title: Ngjarjet
           description: ''
         builder:
           title: Builder
@@ -567,7 +568,7 @@
           title: Jigsaw
           description: ''
         step:
-          title: Step
+          title: NJë Hap
           description: ''
         sample_level_builder:
           title: Sample Level Builder

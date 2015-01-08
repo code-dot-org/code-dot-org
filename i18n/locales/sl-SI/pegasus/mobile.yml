@@ -104,6 +104,9 @@ sl-SI:
   students_and_lines: '%{students} učencev je opravilo uro za kodo in pri tem napisalo %{lines} vrstic kode.'
   start_hoc: Začni Uro za kodo zdaj
   contact_form_topic_press: Tisk/mediji (intervju ali ustno udejstvovanje)
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
+  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
+  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
   studiobar_title: "Raziščite <a href='http://studio.code.org'> Studio za kodo</a>"
   studiobar_elementary_title: Osnovni tečaji
   studiobar_elementary_body: 'Naši trije novi tečaji za K&#8209;5'
@@ -117,6 +120,8 @@ sl-SI:
   studiobar_frozen_body: Ustvari čudežni svet z Anno in Elso
   studiobar_donate_title: Doniraj
   studiobar_donate_body: En otrok se nauči programirati za vsak doniran dolar
+  studiobar_shop_title: Shop
+  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   contact_form_topic_student: Sem študent
   contact_form_topic_parent: Sem starš
   contact_form_topic_teacher: Sem učitelj/vzgojitelj
@@ -194,9 +199,11 @@ sl-SI:
   dashboard_action_save_all: Shrani vse
   dashboard_action_cancel: Prekliči
   dashboard_action_delete: Izbriši
-  dashboard_action_confirm: Izbriši?
   dashboard_action_delete_yes: Da
   dashboard_action_delete_no: Ne
+  dashboard_action_confirm: Izbriši?
+  dashboard_action_remove: Remove
+  dashboard_action_remove_confirm: Remove?
   dashboard_action_done: Končano
   dashboard_action_required: zahtevano
   dashboard_navigation_home_page: Učiteljeva domača stran

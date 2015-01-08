@@ -58,6 +58,7 @@
   "moveDistanceTooltip": "Bir oyuncuyu belirli bir yönde belirli bir mesafe hareket ettirin.",
   "moveSprite": "hareket et",
   "moveSpriteN": "taşı aktör {spriteIndex}",
+  "toXY": "to x,y",
   "moveDown": "aşağı yönde ilerle",
   "moveDownTooltip": "Bir oyuncuyu aşağı yönde hareket ettirin.",
   "moveLeft": "sola ilerle",

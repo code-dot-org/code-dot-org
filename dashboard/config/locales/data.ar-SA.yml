@@ -714,7 +714,7 @@
         C4_intro: مقدمة
         C4_bee_conditional: النحل الشرطية
         C4_variables_artist: المتغيرات-الفنان
-        C4_variables_playlab: Variables - Play Lab
+        C4_variables_playlab: المتغيرات - مختبر اللعب
         C4_for_loops: For Loops
         C4_math_artist: برمجة الفنان مع الرياضيات
         C4_function_edit: تغيير الدوال
@@ -769,7 +769,7 @@
         get_nectar: استخدام الكتلة الجديدة "الحصول على رحيق".
         actions_category: أداة مربع حصلت على نظرة جديدة! كتل "الإجراءات" هنا الآن.
         draw_square_hint: 'تلميح: استخدام حلقة مربعة كنت للتو في لغز آخر.'
-        edit_function: استخدم هذا الزر لتحرير الدالة.
+        edit_function: انقر هنا لتحرير وظيفتك.
         create_function: انقر هنا لفتح القائمة المنبثقة "المهام"، ثم انقر فوق الزر
           "إنشاء مهمة".
         house_hint: موافق إذا كانت الصورة لا تبدو وكأنها منزل حتى الآن. سيتم إصلاحه
@@ -820,5 +820,5 @@
         place_length_variable: Drag the length variable here to replace the question
           marks
         arrows_move_actor: Use the arrows to move the actor
-        right_arrow_fireball: Use the right arrow to shoot fireballs
-        name_function: Write the name of your function here
+        right_arrow_fireball: استخدم السهم الايمن لإطلاق الكرات النارية
+        name_function: اكتب أسم وظيفتك هنا

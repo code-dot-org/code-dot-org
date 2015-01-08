@@ -60,6 +60,7 @@
   "CONTROLS_WHILEUNTIL_OPERATOR_WHILE":"ทำซ้ำ ถ้า",
   "CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL":"ถ้าค่านี้ยังคงเป็นเท็จ ก็ให้ทำอะไรสักอย่าง",
   "CONTROLS_WHILEUNTIL_TOOLTIP_WHILE":"ถ้าค่านี้ยังคงเป็นจริง ก็ให้ทำอะไรสักอย่าง",
+  "DEFINE_HEADER_DEFINITION":"Definition",
   "DEFINE_FUNCTION_DEFINE":"Define",
   "DELETE_BLOCK":"ลบบล็อค",
   "DELETE_PARAMETER":"Delete parameter...",

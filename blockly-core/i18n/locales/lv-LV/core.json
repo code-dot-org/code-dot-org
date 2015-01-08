@@ -60,6 +60,7 @@
   "CONTROLS_WHILEUNTIL_OPERATOR_WHILE": "atkārtot, kamēr",
   "CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL": "Tikmēr, kamēr vērtība ir nepatiesa, tad izpildi vienu vai vairākas darbības.",
   "CONTROLS_WHILEUNTIL_TOOLTIP_WHILE": "Tikmēr, kamēr vērtība ir patiesa, izpildi vienu vai vairākas darbības.",
+  "DEFINE_HEADER_DEFINITION": "Definition",
   "DEFINE_FUNCTION_DEFINE": "Definēt",
   "DELETE_BLOCK": "Izdzēst bloku",
   "DELETE_PARAMETER": "Izdzēst parametru...",

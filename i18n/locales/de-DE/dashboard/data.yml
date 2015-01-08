@@ -298,9 +298,9 @@ de:
         studio_playlab_1: 'Der Pinguin will "hallo" sagen - kannst du ihm helfen?'
         studio_playlab_2: 'Höhlenjunge (Schauspieler 1) und Höhlenmädchen (Schauspieler 2) wollen "hallo" zueinander sagen. Kannst du ihnen dabei helfen den "reden" Block zweimal zu benutzen?'
         studio_playlab_3: Kannst du dem Tennis Mädchen helfen die Fahne zu bekommen?
-        studio_playlab_4: Can you help Tennis Boy (actor 1) get to Tennis Girl (actor 2) and play a sound when he gets there?
-        studio_playlab_5: 'Can you help the Spacebot say "greetings earthlings" when it is clicked? Don’t forget to click it after you click Run'
-        studio_playlab_6: Can you help the Witch move around using the up/down/right/left arrow keys to get to all the magical fireballs?
+        studio_playlab_4: Kannst du dem Tennisspieler (Schauspieler 1) helfen zur Tennisspielerin (Schauspielerin 2) zu kommen und ein Geräusch abzuspielen wenn er ankommt?
+        studio_playlab_5: 'Kannst du Spacebot helfen "Willkommen Erdlinge" zu sagen, wenn es geklickt wird? Vergiss nach dem ausführen nicht das Klicken'
+        studio_playlab_6: Kannst du der Hexe helfen sich zu bewegen, um alle magischen Feuerbälle einzusammeln? Nutze die Tasten hoch/runter/rechts/links.
         studio_playlab_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help the wizard move right and left repeatedly?'
         studio_playlab_8: Can you add a block to score a point and a block to play a sound when the unicorn runs into the wizard, and then move him with the arrows until you score?
         studio_playlab_9: Set the background for this alien invasion and help the Spacebot get to the alien faster by changing its speed. Then move him with the arrow keys to get to the Spacebot and alert everyone else
@@ -330,11 +330,11 @@ de:
       frozen line:
         instructions: Hallo! Ich bin Elsa von Arendelle. Hilf mir, eine einzige Linie zu zeichnen.
       frozen perpendicular:
-        instructions: 'Jetzt schauen wir mal, ob wir zwei Linien zeichnen können, die in einem 90° Winkel zueinander stehen. Du musst sowohl den "Drehen" Block als auch den "Bewegen" Block benutzen.'
+        instructions: Jetzt schauen wir mal, ob wir zwei Linien zeichnen können, die in einem 90° Winkel zueinander stehen. Du musst sowohl den „Drehen“-Block als auch den „Bewegen“-Block benutzen.
       frozen square iterative:
         instructions: Es scheint, als hätten wir die Hälfte eines Quadrates geschafft. Lass uns 4 Linien benutzen, um ein Quadrat zu erstellen.
       frozen square loop:
-        instructions: 'Hallo, bin ich Anna von Arendelle! Lass uns ein Quadrat mit dem "Wiederholen"-Block erstellen, um weniger Blöcke zu verwenden. Wie oft (???) soll der "Wiederholung" Block die enthaltenen Blöcke ausführen, um ein Quadrat zu machen?'
+        instructions: Hallo, ich bin Anna von Arendelle! Lass uns ein Quadrat mit dem „Wiederholen“-Block erstellen, um weniger Blöcke zu verwenden. Wie oft (???) soll der „Wiederholen“-Block die in ihm enthaltenen Blöcke ausführen, um ein Quadrat zu erstellen?
       frozen square loop 3x:
         instructions: Lass uns drei Quadrate erstellen und nach jedem Quadrat drehen. Stell sicher, dass du vor jedem neuen Quadrat um 120° drehst.
       frozen square snowflake:
@@ -475,17 +475,17 @@ de:
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Funktionale Sonnenfänger
         C3_songwriting_with_parameters: Komponieren mit Parametern
-        C4_intro: Introduction
+        C4_intro: Einführung
         C4_bee_conditional: Biene Bedingungen
-        C4_variables_artist: 'Variables - Artist'
-        C4_variables_playlab: 'Variables - Play Lab'
+        C4_variables_artist: 'Variablen - Künstler'
+        C4_variables_playlab: 'Variablen - Spiele Labor'
         C4_for_loops: '"For"-Schleifen'
-        C4_math_artist: Programming the Artist with Math
-        C4_function_edit: Editing Functions
-        C4_function_create: Creating Functions
+        C4_math_artist: Programmiere den Künstler mit Mathematik
+        C4_function_edit: Funktionen bearbeiten
+        C4_function_create: Funktionen erstellen
         C4_function_parameters: Funktionen mit Parametern
         C4_conditionals: Bedingungen
-        C4_unplugged_algorithms: Algorithms with Tangrams
+        C4_unplugged_algorithms: Algorithmen mit Tangrammen
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variables in Envelopes
         C4_unplugged_forloops: '"For"-Schleifen'
@@ -494,9 +494,9 @@ de:
         frozen_intro: Hour of Code Einführung
         frozen_loops: Einführung in Wiederholungen (Schleifen)
         frozen_functions: Einführung in Funktionen
-        playlab_intro: Introduction to Play Lab
-        playlab_events: Play Lab Events
-        playlab_repeat_forever: Play Lab Repeat Forever
+        playlab_intro: Einführung ins Spiele Labor
+        playlab_events: Spiele Labor Ereignisse
+        playlab_repeat_forever: Spiele Labor für immer wiederholen
     callout:
       text:
         drag_blocks: 'Ziehen Sie einen "bewegen" Block und lassen Sie es unter den anderen Block einrasten'
@@ -514,13 +514,13 @@ de:
         replace_questions: 'Verwenden Sie den Dropdown-Pfeil, um  "???" mit einer Nummer zu ersetzen'
         replace_questions_degree: 'Verwenden Sie den Dropdown-Pfeil, um "???" mit dem richtigen Grad zum drehen zu ersetzen'
         repeat_blocks: 'Verwenden Sie den "Repeat" Block und wickeln Sie es um die Blöcke im Arbeitsbereich'
-        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the workspace
-        repeat_blocks_2: '(2) Move the "Repeat" block here, and place the gray blocks inside'
+        repeat_blocks_1: (1) Nutze diesen Block und platziere ihn um die grauen Blöcke im Arbeitsraum
+        repeat_blocks_2: '(2) Bewege den "Wiederholen" Block hierher und platziere die grauen Blöcke im Inneren'
         snowflake_dropdown: Verwenden Sie dieses Dropdown-Menü, um verschiedene Schneeflocken zu erstellen!
         degrees_per_side: Teilen Sie 360 durch die Anzahl der Seiten, um die Größe der einzelnen Winkel in Grad zu erhalten.
         set_sides: 'Verwenden Sie diesen Codeblock um "Seiten" so einzustellen, dass sie mit der Anzahl der Teile die für das Puzzel noch gebraucht werden übereinstimmen.'
         set_length: 'Verwenden Sie diesen Codeblock "Länge" auf den richtigen Wert festzulegen.'
-        which_equation: Which equation makes each side shorter for shapes with more sides?
+        which_equation: Welche Gleichung macht jede Seite kleiner und Formen mit mehr Seiten?
         get_nectar: 'Verwenden Sie den neuen "get-Nektar"-Block.'
         actions_category: 'Die Tool-Box hat einen neuen Look! Die "Aktionen"-Blöcke sind jetzt drin.'
         draw_square_hint: 'Tipp: Verwenden Sie die quadratische Schleife, die Sie gerade im letzten Rätsel gemacht haben.'
@@ -531,9 +531,9 @@ de:
         edit_get_nectar: Verwenden Sie diese Schaltfläche, um die Funktion zu bearbeiten und ändern Sie die Richtung, der die Biene sich zuwendet um den Nektar zuerhalten.
         logic_category: 'Öffne das "Logik"-Fenster um den "if/else"-Absatz zu finden.'
         length_parameter: 'Kannst Du diese Funktion so anpassen, dass sie den "Länge" Parameter benutzt?'
-        frozen_diamond_repeat: Use the repeat block to create this shape.
-        frozen_circle_function_in_circle_turn: "Don't forget to turn after creating each circle."
-        frozen_circle_function_with_parameter_circle: 'Use the "create a circle" block and change the size.'
+        frozen_diamond_repeat: Nutze den Wiederholen Block um diese Form zu erstellen.
+        frozen_circle_function_in_circle_turn: Vergiss nicht zu drehen, nachdem erstellen eines Kreises.
+        frozen_circle_function_with_parameter_circle: 'Nutze den "Kreis erstellen" Block und ändere die Größe.'
         frozen_snowflake_branch: 'Use the "create a snowflake branch" block'
         frozen_create_square: Attach more blocks here to create a square
         playlab_drag_say: 'Drag the "say" block here and type "hello"'

@@ -11322,7 +11322,7 @@ exports.generateDropletPalette = function (codeFunctions, categoryInfo) {
       block += ")";
       var blockPair = {
         block: block,
-        title: cf.func
+        title: cf.title || cf.func
       };
       categoryInfo[cf.category || 'Actions'].blocks.push(blockPair);
     }

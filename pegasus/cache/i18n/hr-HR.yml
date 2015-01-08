@@ -126,6 +126,12 @@
     %{lines} linija koda.'
   start_hoc: Kreni s Hour of Code sada
   contact_form_topic_press: Tisak/mediji (intervju ili govor)
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
+    - Michael Clark, Teacher'
+  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
+    - Nina Nichols Peery, Teacher'
+  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
+    Alzate, 5th grader'
   studiobar_title: Istraži<a href='http://studio.code.org'>Code Studio</a>
   studiobar_elementary_title: Osnovni tečajevi
   studiobar_elementary_body: Naša tri nova tečaja za K&#8209;5
@@ -139,6 +145,8 @@
   studiobar_frozen_body: Stvori zimsku čarobnu zemlju s Annom i Elsom
   studiobar_donate_title: Doniraj
   studiobar_donate_body: Svaki dolar koji donirate omogućuje da jedno dijete uči
+  studiobar_shop_title: Shop
+  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   contact_form_topic_student: Ja sam učenik
   contact_form_topic_parent: Ja sam roditelj
   contact_form_topic_teacher: Ja sam učitelj
@@ -228,9 +236,11 @@
   dashboard_action_save_all: Spremi sve
   dashboard_action_cancel: Odustani
   dashboard_action_delete: izbriši
-  dashboard_action_confirm: Izbrisati?
   dashboard_action_delete_yes: Da
   dashboard_action_delete_no: Ne
+  dashboard_action_confirm: Izbrisati?
+  dashboard_action_remove: Remove
+  dashboard_action_remove_confirm: Remove?
   dashboard_action_done: Gotovo
   dashboard_action_required: potrebno
   dashboard_navigation_home_page: Učiteljeva Početna stranica

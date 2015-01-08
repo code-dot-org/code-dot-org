@@ -60,6 +60,7 @@
   "CONTROLS_WHILEUNTIL_OPERATOR_WHILE":"повторювати поки",
   "CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL":"Поки значення хибне, виконувати деякі команди.",
   "CONTROLS_WHILEUNTIL_TOOLTIP_WHILE":"Поки значення істинне, виконувати деякі команди.",
+  "DEFINE_HEADER_DEFINITION":"Definition",
   "DEFINE_FUNCTION_DEFINE":"Визначити",
   "DELETE_BLOCK":"Видалити блок",
   "DELETE_PARAMETER":"Видалити параметр...",

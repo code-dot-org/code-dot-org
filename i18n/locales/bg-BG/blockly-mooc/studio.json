@@ -58,6 +58,7 @@
   "moveDistanceTooltip":"Премества актьорът на определена дистанция в определената посока.",
   "moveSprite":"премести",
   "moveSpriteN":"премести актьор {spriteIndex}",
+  "toXY":"to x,y",
   "moveDown":"премести надолу",
   "moveDownTooltip":"Премести актьора надолу.",
   "moveLeft":"предвижване наляво",

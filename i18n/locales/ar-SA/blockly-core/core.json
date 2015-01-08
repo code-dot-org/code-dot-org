@@ -60,6 +60,7 @@
   "CONTROLS_WHILEUNTIL_OPERATOR_WHILE":"اكرّر طالما",
   "CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL":"بما ان القيمة خاطئة, نفّذ بعض الأوامر.",
   "CONTROLS_WHILEUNTIL_TOOLTIP_WHILE":"بما ان القيمة صحيحة, نفّذ بعض الأوامر.",
+  "DEFINE_HEADER_DEFINITION":"Definition",
   "DEFINE_FUNCTION_DEFINE":"عرّف",
   "DELETE_BLOCK":"إحذف القطعة",
   "DELETE_PARAMETER":"حذف المعامل...",

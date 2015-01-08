@@ -289,9 +289,9 @@
         (480, 100): (480, 100)
         (320, 240): (320, 240)
       Match math to circles:
-        Converting Math to Circles of Evaluation: Converting Math to Circles of Evaluation
-        Match each mathematical expression with the correct circle of evaluation!: Match
-          each mathematical expression with the correct circle of evaluation!
+        Converting Math to Circles of Evaluation: Matematiikan kääntäminen ratkaisumalleiksi
+        Match each mathematical expression with the correct circle of evaluation!: Yhdistä
+          jokainen matemaattinen lauseke oikeaan ratkaisumalliin!
         (2 + 3) * 5 / 2: (2 + 3) * 5 / 2
         2 + 3 * (5 / 2): 2 + 3 * (5 / 2)
         (2 + 3 * 5) / 2: (2 + 3 * 5) / 2
@@ -305,8 +305,8 @@
           1/Exercise_4_question_4.png
       Match circles to code:
         Converting Circles to Code: Ympyröiden muuntaminen koodiksi
-        Match each circle of evaluation with the correct code!: Match each circle
-          of evaluation with the correct code!
+        Match each circle of evaluation with the correct code!: Yhdistä jokainen ratkaisumalli
+          oikealla koodilla!
         (+ (- (/ 4 7) 9) 3): (+ (-(/ 4 7) 9) 3)
         (+ (- 9 3) (* 4 7)): (+ (-9-3) (* 4 7))
         (/ (+ 4 7) 3): (/ (+ 4 7) 3)
@@ -349,17 +349,17 @@
         Match each example with the correct contract!: Match each example with the
           correct contract!
         (big-string? "gigantic" 5): (big-string? "gigantic" 5)
-        (find-price 4): (find-price 4)
-        (small-star "blue"): (small-star "blue")
-        (bigger-string "big" "little"): (bigger-string "big" "little")
-        (small-star "solid"): (small-star "solid")
-        (find-price "cheese"): (find-price "cheese")
+        (find-price 4): (etsi-hinta 4)
+        (small-star "blue"): (pieni-tähti "sininen")
+        (bigger-string "big" "little"): (isompi-merkkijono "iso" "pieni")
+        (small-star "solid"): (pieni-tähti "kiinteä")
+        (find-price "cheese"): (etsi-hinta "juusto" )
         'big-string: string number -> boolean': 'big-string: string number -> boolean'
-        'find-price: number -> number': 'find-price: number -> number'
-        'small-star: string -> image': 'small-star: string -> image'
+        'find-price: number -> number': 'etsi-hinta: numero-> numero'
+        'small-star: string -> image': 'pieni-tähti: merkkijono-> kuva'
         'bigger-string: string string -> string': 'bigger-string: string string ->
           string'
-        'find-price: string -> number': 'find-price: string -> number'
+        'find-price: string -> number': 'etsi-hinta: merkkijono-> numero'
       test matching image:
         Matching Images Two: 'Yhdistely: kuvat 2'
         Match up all the flowers by colour!: Yhdistä kukat värien perusteella!
