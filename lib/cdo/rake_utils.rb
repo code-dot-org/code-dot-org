@@ -17,10 +17,10 @@ module RakeUtils
   end
 
   def self.start_service(id)
-    sudo 'service', id.to_s, 'start' if OS.linux? && !CDO.rack_env?(:development)
+    sudo 'service', id.to_s, 'start' if OS.linux?
   end
   def self.stop_service(id)
-    sudo 'service', id.to_s, 'stop' if OS.linux? && !CDO.rack_env?(:development)
+    sudo 'service', id.to_s, 'stop' if OS.linux?
   end
 
   def self.system_(*args)
