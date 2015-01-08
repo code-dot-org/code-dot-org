@@ -748,6 +748,35 @@ exports.showGeneratedCode = function(Dialog) {
   dialog.show();
 };
 
+exports.showToggleBlocksError = function(Dialog) {
+  var contentDiv = document.createElement('div');
+  contentDiv.innerHTML = msg.toggleBlocksErrorMsg();
+
+  var buttons = document.createElement('div');
+  buttons.innerHTML = require('./templates/buttons.html')({
+    data: {
+      ok: true
+    }
+  });
+  contentDiv.appendChild(buttons);
+
+  var dialog = exports.createModalDialogWithIcon({
+      Dialog: Dialog,
+      contentDiv: contentDiv,
+      icon: StudioApp.ICON,
+      defaultBtnSelector: '#ok-button'
+  });
+
+  var okayButton = buttons.querySelector('#ok-button');
+  if (okayButton) {
+    dom.addClickTouchEvent(okayButton, function() {
+      dialog.hide();
+    });
+  }
+
+  dialog.show();
+};
+
 /**
  * Check user's code for empty container blocks, such as "repeat".
  * @return {boolean} true if a block is empty (no blocks are nested inside).
