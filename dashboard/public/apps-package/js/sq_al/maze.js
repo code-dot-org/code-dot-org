@@ -16644,7 +16644,7 @@ exports.catActions = function(d){return "Veprimet"};
 
 exports.catColour = function(d){return "Ngjyra"};
 
-exports.catLogic = function(d){return "Logic"};
+exports.catLogic = function(d){return "Logjika"};
 
 exports.catLists = function(d){return "Listat"};
 
@@ -16658,11 +16658,11 @@ exports.catText = function(d){return "Tekst"};
 
 exports.catVariables = function(d){return "variabla"};
 
-exports.codeTooltip = function(d){return "Shikoni kodin e gjenerua JavaScript."};
+exports.codeTooltip = function(d){return "Shikoni kodin e gjeneruar në JavaScript."};
 
 exports.continue = function(d){return "Vazhdo"};
 
-exports.dialogCancel = function(d){return "Anulo"};
+exports.dialogCancel = function(d){return "Anullo"};
 
 exports.dialogOK = function(d){return "Ne rregull"};
 
@@ -16674,158 +16674,158 @@ exports.directionEastLetter = function(d){return "E"};
 
 exports.directionWestLetter = function(d){return "W"};
 
-exports.end = function(d){return "end"};
+exports.end = function(d){return "fundi"};
 
-exports.emptyBlocksErrorMsg = function(d){return "The \"Repeat\" or \"If\" block needs to have other blocks inside it to work. Make sure the inner block fits properly inside the containing block."};
+exports.emptyBlocksErrorMsg = function(d){return "Blloku \"Përsërit\" ose \"Nëse\"  ka nevojë të ketë blloqe të tjera brënda në mënyrë që të funksionojë. Sigurohu që blloku i brendshëm të përshtatet në mënyrë sa më të mirë brenda bllokut që e përmban."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Blloku i funksionit ka nevojë për blloqe të tjera brënda, në mënyrë që të funksionojë."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "Duhet që të ketë blloqe brenda përcaktimit të funksionit tënd. Kliko \"redakto\" dhe zhvendos blloqet brenda bllokut të gjelbër."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "Kliko \"redakto\" për tu siguruar që nuk mungon ndonjë bllok brenda përcaktimit të funksionit tënd."};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "Kujtohu që të bashkangjitësh një bllok në çdo parametër që futet në bllokun e funksionit tek zona juaj e punimit."};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "Ti shtove një bllok parametër, por nuk e përdore atë në përcaktim. Sigurohu që të përdorësh parametrin tënd duke klikuar \"redakto\" dhe duke vendosur këtë parametër bllok brenda bllokut të gjelbër."};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "Krijo një parametër për funksionin tënd duke klikuar \"redakto\" dhe duke shtuar parametrat e nevojshëm. Zhvendos blloqet e reja me parametra brenda në përcaktimin e funksionit tënd."};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "Ti krijove një funksion, por nuk e përdore asnjëherë në hapësirën tënde të punës! Kliko tek \"Funksionet\" në grupin e komandave dhe sigurohu që ta përdorësh atë në programin tënd."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "Përpiqu të zëvendësosh \"???\" me një vlerë."};
 
-exports.extraTopBlocks = function(d){return "You have extra blocks that aren't attached to an event block."};
+exports.extraTopBlocks = function(d){return "Ti ke blloqe që nuk janë të bashkuar. Mendove të bashkosh ato me bllokun \"kur vrapon\"?"};
 
 exports.finalStage = function(d){return "Urime! Ju sapo perfunduat fazen finale "};
 
 exports.finalStageTrophies = function(d){return "Congratulations! You have completed the final stage and won "+p(d,"numTrophies",0,"sq",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Përfundo"};
 
-exports.generatedCodeInfo = function(d){return "The blocks for your program can also be represented in JavaScript, the world's most widely adopted programming language:"};
+exports.generatedCodeInfo = function(d){return "Even top universities teach block-based coding (e.g., "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). But under the hood, the blocks you have assembled can also be shown in JavaScript, the world's most widely used coding language:"};
 
-exports.hashError = function(d){return "Sorry, '%1' doesn't correspond with any saved program."};
+exports.hashError = function(d){return "Më vjen keq, '%1' nuk përputhet me asnjë program të ruajtur."};
 
 exports.help = function(d){return "Ndihmë"};
 
 exports.hintTitle = function(d){return "Ndihmes:"};
 
-exports.jump = function(d){return "jump"};
+exports.jump = function(d){return "hidhu"};
 
-exports.levelIncompleteError = function(d){return "You are using all of the necessary types of blocks but not in the right way."};
+exports.levelIncompleteError = function(d){return "Ti je duke përdorur të gjithë tipet e nevojshëm të blloqeve, por jo në mënyrën e duhur."};
 
 exports.listVariable = function(d){return "listë"};
 
-exports.makeYourOwnFlappy = function(d){return "Make Your Own Flappy Game"};
+exports.makeYourOwnFlappy = function(d){return "Bëj lojën tënde Flappy"};
 
-exports.missingBlocksErrorMsg = function(d){return "Try one or more of the blocks below to solve this puzzle."};
+exports.missingBlocksErrorMsg = function(d){return "Përdor një ose më shumë nga blloqet e mëposhtme për të zgjidhur këtë puzzle."};
 
 exports.nextLevel = function(d){return "Urime ju e perfunduat Puzzle-n "+v(d,"puzzleNumber")+"."};
 
 exports.nextLevelTrophies = function(d){return "Congratulations! You completed Puzzle "+v(d,"puzzleNumber")+" and won "+p(d,"numTrophies",0,"sq",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
-exports.nextStage = function(d){return "Congratulations! You completed Stage "+v(d,"stageNumber")+"."};
+exports.nextStage = function(d){return "Urime! Ti përfundove "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Congratulations! You completed Stage "+v(d,"stageNumber")+" and won "+p(d,"numTrophies",0,"sq",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
+exports.nextStageTrophies = function(d){return "Congratulations! You completed "+v(d,"stageName")+" and won "+p(d,"numTrophies",0,"sq",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Congratulations! You completed Puzzle "+v(d,"puzzleNumber")+". (However, you could have used only "+p(d,"numBlocks",0,"sq",{"one":"1 block","other":n(d,"numBlocks")+" blocks"})+".)"};
 
 exports.numLinesOfCodeWritten = function(d){return "You just wrote "+p(d,"numLines",0,"sq",{"one":"1 line","other":n(d,"numLines")+" lines"})+" of code!"};
 
-exports.play = function(d){return "play"};
+exports.play = function(d){return "luaj"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Shtyp"};
 
-exports.puzzleTitle = function(d){return "Puzzle "+v(d,"puzzle_number")+" of "+v(d,"stage_total")};
+exports.puzzleTitle = function(d){return "Puzzle "+v(d,"puzzle_number")+" i "+v(d,"stage_total")};
 
 exports.repeat = function(d){return "përsërit"};
 
-exports.resetProgram = function(d){return "Reset"};
+exports.resetProgram = function(d){return "Rivendosni"};
 
-exports.runProgram = function(d){return "Run Program"};
+exports.runProgram = function(d){return "Ekzekuto"};
 
-exports.runTooltip = function(d){return "Run the program defined by the blocks in the workspace."};
+exports.runTooltip = function(d){return "Ekzekuto programin e përcaktuar nga blloqet, në hapësirën tënde të punës."};
 
-exports.score = function(d){return "score"};
+exports.score = function(d){return "rezultati"};
 
 exports.showCodeHeader = function(d){return "Shfaq kodin"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Shfaq Blloqet"};
 
 exports.showGeneratedCode = function(d){return "Shfaq kodin"};
 
-exports.stringEquals = function(d){return "string=?"};
+exports.stringEquals = function(d){return "vargu=?"};
 
-exports.subtitle = function(d){return "a visual programming environment"};
+exports.subtitle = function(d){return "një mjedis i dukshëm programimi"};
 
-exports.textVariable = function(d){return "text"};
+exports.textVariable = function(d){return "teksti"};
 
-exports.tooFewBlocksMsg = function(d){return "You are using all of the necessary types of blocks, but try using more  of these types of blocks to complete this puzzle."};
+exports.tooFewBlocksMsg = function(d){return "Ti je duke i përdorur të gjithë tipet e nevojshëm të blloqeve, por përpiqu të përdorësh më shumë nga këto tipe blloqesh për të përfunduar këtë puzzle."};
 
-exports.tooManyBlocksMsg = function(d){return "This puzzle can be solved with <x id='START_SPAN'/><x id='END_SPAN'/> blocks."};
+exports.tooManyBlocksMsg = function(d){return "Ky puzzle mund të zgjidhet me blloqet <x id='START_SPAN'/><x id='END_SPAN'/>."};
 
-exports.tooMuchWork = function(d){return "You made me do a lot of work!  Could you try repeating fewer times?"};
+exports.tooMuchWork = function(d){return "Ti më detyrove të bëj shumë veprime! Mund të përpiqesh ta përsërisësh me më pak hapa?"};
 
 exports.toolboxHeader = function(d){return "blloqe"};
 
-exports.openWorkspace = function(d){return "How It Works"};
+exports.openWorkspace = function(d){return "Si Funksionon"};
 
 exports.totalNumLinesOfCodeWritten = function(d){return "All-time total: "+p(d,"numLines",0,"sq",{"one":"1 line","other":n(d,"numLines")+" lines"})+" of code."};
 
 exports.tryAgain = function(d){return "Provo perseri"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Shih ndihmën"};
 
-exports.backToPreviousLevel = function(d){return "Kthehu ne nivelin e meparshem"};
+exports.backToPreviousLevel = function(d){return "Kthehu në nivelin e mëparshëm"};
 
-exports.saveToGallery = function(d){return "Save to your gallery"};
+exports.saveToGallery = function(d){return "Ruaj tek galeria"};
 
-exports.savedToGallery = function(d){return "Saved to your gallery!"};
+exports.savedToGallery = function(d){return "U ruajt në galeri!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Më vjen keq, ne nuk mund ta ndajmë këtë program."};
 
-exports.workspaceHeader = function(d){return "Assemble your blocks here: "};
+exports.workspaceHeader = function(d){return "Vendosi blloqet e tua këtu: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Shtyp kodin tënd JavaScript këtu"};
 
-exports.infinity = function(d){return "Infinity"};
+exports.infinity = function(d){return "Pafundësi"};
 
-exports.rotateText = function(d){return "Rotate your device."};
+exports.rotateText = function(d){return "Rrotullo pajisjen tënde."};
 
-exports.orientationLock = function(d){return "Turn off orientation lock in device settings."};
+exports.orientationLock = function(d){return "Fik orientimet në konfigurimet e pajisjes."};
 
-exports.wantToLearn = function(d){return "Want to learn to code?"};
+exports.wantToLearn = function(d){return "Dëshiron të mësosh se si të kodosh?"};
 
-exports.watchVideo = function(d){return "Watch the Video"};
+exports.watchVideo = function(d){return "Shiko Videon"};
 
-exports.when = function(d){return "when"};
+exports.when = function(d){return "kur"};
 
-exports.whenRun = function(d){return "when run"};
+exports.whenRun = function(d){return "kur vrapon"};
 
-exports.tryHOC = function(d){return "Try the Hour of Code"};
+exports.tryHOC = function(d){return "Provo Orën e Kodimit"};
 
-exports.signup = function(d){return "Sign up for the intro course"};
+exports.signup = function(d){return "Rregjistrohu për kursin hyrës"};
 
-exports.hintHeader = function(d){return "Here's a tip:"};
+exports.hintHeader = function(d){return "Ja ku është një këshillë:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "Shiko se si përfundove dhe përpiqu të rregullosh programin tënd."};
 
 exports.defaultTwitterText = function(d){return "Check out what I made"};
 
 
 },{"messageformat":72}],60:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.sq=function(n){return n===1?"one":"other"}
-exports.atHoneycomb = function(d){return "at honeycomb"};
+exports.atHoneycomb = function(d){return "tek kosherja"};
 
-exports.atFlower = function(d){return "at flower"};
+exports.atFlower = function(d){return "tek lulja"};
 
-exports.avoidCowAndRemove = function(d){return "shmang lopen dhe hiq 1"};
+exports.avoidCowAndRemove = function(d){return "shmang lopën dhe hiq 1"};
 
 exports.continue = function(d){return "Vazhdo"};
 
 exports.dig = function(d){return "hiq 1"};
 
-exports.digTooltip = function(d){return "hiq 1 njesi dheu"};
+exports.digTooltip = function(d){return "hiq 1 njësi dheu"};
 
 exports.dirE = function(d){return "E"};
 
@@ -16841,87 +16841,87 @@ exports.elseCode = function(d){return "perndryshe"};
 
 exports.fill = function(d){return "mbush 1"};
 
-exports.fillN = function(d){return "mbush lopata"+v(d,"shovelfuls")};
+exports.fillN = function(d){return "mbush "+v(d,"shovelfuls")};
 
-exports.fillStack = function(d){return "fill stack of "+v(d,"shovelfuls")+" holes"};
+exports.fillStack = function(d){return "mbush raftet "+v(d,"shovelfuls")+" e vrimave"};
 
 exports.fillSquare = function(d){return "mbush katrorin"};
 
-exports.fillTooltip = function(d){return "vendos nje njesi dheu"};
+exports.fillTooltip = function(d){return "vendos 1 njësi dheu"};
 
-exports.finalLevel = function(d){return "Urime! Ju keni perfunduar enigmen perfundimatare."};
+exports.finalLevel = function(d){return "Urime! Ju keni përfunduar puzzle përfundimatar."};
 
-exports.flowerEmptyError = function(d){return "The flower you're on has no more nectar."};
+exports.flowerEmptyError = function(d){return "Lulja në të cilën je ti, nuk ka më nektar."};
 
 exports.get = function(d){return "merr"};
 
 exports.heightParameter = function(d){return "gjatësia"};
 
-exports.holePresent = function(d){return "eshte nje grope"};
+exports.holePresent = function(d){return "është një gropë"};
 
-exports.honey = function(d){return "make honey"};
+exports.honey = function(d){return "bëj mjaltë"};
 
-exports.honeyAvailable = function(d){return "honey"};
+exports.honeyAvailable = function(d){return "mjaltë"};
 
-exports.honeyTooltip = function(d){return "Make honey from nectar"};
+exports.honeyTooltip = function(d){return "Bëj mjaltë nga nektari"};
 
-exports.honeycombFullError = function(d){return "This honeycomb does not have room for more honey."};
+exports.honeycombFullError = function(d){return "Kjo koshere nuk ka më hapsira për më shumë mjaltë."};
 
 exports.ifCode = function(d){return "nese"};
 
-exports.ifInRepeatError = function(d){return "You need an \"if\" block inside a \"repeat\" block. If you're having trouble, try the previous level again to see how it worked."};
+exports.ifInRepeatError = function(d){return "Ti ke nevojë për një bllok \"nëse\" brenda një blloku \"përsërit\". Nëse ke probleme, provo nivelin e mëparshëm përsëri, për të parë se si funksionoi atje."};
 
-exports.ifPathAhead = function(d){return "nese ka vend perpara"};
+exports.ifPathAhead = function(d){return "nëse ka vend përpara"};
 
-exports.ifTooltip = function(d){return "Nese ka vend ne nje drejtim te caktuar, atehere bej nje veprim te caktuar."};
+exports.ifTooltip = function(d){return "Nëse ka vend në një drejtim të caktuar, atëhere bëj disa veprime."};
 
-exports.ifelseTooltip = function(d){return "Nese eshte nje rruge ne drejtimin e caktuar, atehere bej veprimet e grupit te pare. Perndryshe, bej veprimet e grupit te dyte."};
+exports.ifelseTooltip = function(d){return "Nëse ka një rrugë në drejtimin e caktuar, atëherë bëj veprimet e bllokut të parë. Përndryshe, bëj veprimet e grupit të dytë."};
 
-exports.ifFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do some actions."};
+exports.ifFlowerTooltip = function(d){return "Nëse ka një lule/koshere në drejtimin e caktuar, atëhere bëj disa veprime."};
 
-exports.ifelseFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do the first block of actions. Otherwise, do the second block of actions."};
+exports.ifelseFlowerTooltip = function(d){return "Nëse ka një lule/koshere në drejtimin e caktuar, atëhere bëj bllokun e parë të veprimeve. Përndryshe, bëj bllokun e dytë të veprimeve."};
 
-exports.insufficientHoney = function(d){return "You're using all the right blocks, but you need to make the right amount of honey."};
+exports.insufficientHoney = function(d){return "Ti je duke përdorur blloqet e duhura, por duhet të bësh sasinë e duhur të mjaltit."};
 
-exports.insufficientNectar = function(d){return "You're using all the right blocks, but you need to collect the right amount of nectar."};
+exports.insufficientNectar = function(d){return "Ti je duke përdorur blloqet e duhura, por ti duhet të mbledhësh sainë e duhur të nektarit."};
 
-exports.make = function(d){return "make"};
+exports.make = function(d){return "bëj"};
 
-exports.moveBackward = function(d){return "move backward"};
+exports.moveBackward = function(d){return "lëviz mbrapa"};
 
-exports.moveEastTooltip = function(d){return "Move me east one space."};
+exports.moveEastTooltip = function(d){return "Më lëviz me një hapësirë në lindje."};
 
 exports.moveForward = function(d){return "levis perpara"};
 
-exports.moveForwardTooltip = function(d){return "Me leviz perpara nje hapesire."};
+exports.moveForwardTooltip = function(d){return "Më lëviz përpara me një hapësirë."};
 
-exports.moveNorthTooltip = function(d){return "Move me north one space."};
+exports.moveNorthTooltip = function(d){return "Më lëviz me një hapësirë në veri."};
 
-exports.moveSouthTooltip = function(d){return "Move me south one space."};
+exports.moveSouthTooltip = function(d){return "Më lëviz me një hapësirë në jug."};
 
-exports.moveTooltip = function(d){return "Move me forward/backward one space"};
+exports.moveTooltip = function(d){return "Më lëviz me një hapësirë përpara/mbrapa"};
 
-exports.moveWestTooltip = function(d){return "Move me west one space."};
+exports.moveWestTooltip = function(d){return "Më lëviz me një hapësirë në perëndim."};
 
-exports.nectar = function(d){return "get nectar"};
+exports.nectar = function(d){return "merr nektar"};
 
-exports.nectarRemaining = function(d){return "nectar"};
+exports.nectarRemaining = function(d){return "nektar"};
 
-exports.nectarTooltip = function(d){return "Get nectar from a flower"};
+exports.nectarTooltip = function(d){return "Merr nektar nga një lule"};
 
-exports.nextLevel = function(d){return "Urime! Ju keni perfunduar kete enigme."};
+exports.nextLevel = function(d){return "Urime! Ti ke përfunduar këtë puzzle."};
 
 exports.no = function(d){return "Jo"};
 
-exports.noPathAhead = function(d){return "rruga eshte bllokuar"};
+exports.noPathAhead = function(d){return "rruga është e bllokuar"};
 
-exports.noPathLeft = function(d){return "nuk ka hapesire ne te majte"};
+exports.noPathLeft = function(d){return "nuk ka rrugë në të majtë"};
 
-exports.noPathRight = function(d){return "nuk ka hapesire ne te djathte"};
+exports.noPathRight = function(d){return "nuk ka rrugë në të djathtë"};
 
-exports.notAtFlowerError = function(d){return "You can only get nectar from a flower."};
+exports.notAtFlowerError = function(d){return "Ti mund të marrësh nektar vetëm nga një lule."};
 
-exports.notAtHoneycombError = function(d){return "You can only make honey at a honeycomb."};
+exports.notAtHoneycombError = function(d){return "Ti mund të bësh mjaltë vetëm në një koshere."};
 
 exports.numBlocksNeeded = function(d){return "Kjo enigme mund te zgjidhet me %1 rreshta."};
 
@@ -16941,43 +16941,43 @@ exports.removeN = function(d){return "hiq lopata"+v(d,"shovelfuls")};
 
 exports.removePile = function(d){return "hiq grumbullin"};
 
-exports.removeStack = function(d){return "hiq nje grumbull prej lopatash"+v(d,"shovelfuls")};
+exports.removeStack = function(d){return "hiq një grumbull prej "+v(d,"shovelfuls")};
 
-exports.removeSquare = function(d){return "hiq katror"};
+exports.removeSquare = function(d){return "hiq katrorin"};
 
-exports.repeatCarefullyError = function(d){return "To solve this, think carefully about the pattern of two moves and one turn to put in the \"repeat\" block.  It's okay to have an extra turn at the end."};
+exports.repeatCarefullyError = function(d){return "Për ta zgjidhur këtë, mendo me kujdes rreth modelit të dy lëvizjeve dhe të një kthimi për ti vendosur në bllokun \"përsërit\". Nuk ka problem nëse ke një kthesë në fund."};
 
 exports.repeatUntil = function(d){return "perserit derisa"};
 
-exports.repeatUntilBlocked = function(d){return "perderisa ka hapesire perpara"};
+exports.repeatUntilBlocked = function(d){return "ndërsa përpara ke rrugë"};
 
-exports.repeatUntilFinish = function(d){return "perserit deri sa te mbaroje"};
+exports.repeatUntilFinish = function(d){return "përsërit deri sa të mbarojë"};
 
-exports.step = function(d){return "Step"};
+exports.step = function(d){return "NJë Hap"};
 
-exports.totalHoney = function(d){return "total honey"};
+exports.totalHoney = function(d){return "totali i mjaltit"};
 
-exports.totalNectar = function(d){return "total nectar"};
+exports.totalNectar = function(d){return "totali i nektarit"};
 
 exports.turnLeft = function(d){return "kthehu majtas"};
 
 exports.turnRight = function(d){return "kthehu djathtas"};
 
-exports.turnTooltip = function(d){return "Te kthen majtas ose djathtas prej 90 gradesh."};
+exports.turnTooltip = function(d){return "Më kthen majtas ose djathtas me 90 gradë."};
 
-exports.uncheckedCloudError = function(d){return "Make sure to check all clouds to see if they're flowers or honeycombs."};
+exports.uncheckedCloudError = function(d){return "Sigurohu të kontrollosh të gjitha retë, për të parë nëse janë lule apo koshere."};
 
-exports.uncheckedPurpleError = function(d){return "Make sure to check all purple flowers to see if they have nectar"};
+exports.uncheckedPurpleError = function(d){return "Sigurohu të kontrollosh të gjitha lulet lejla për të parë nëse ato kanë nektar"};
 
 exports.whileMsg = function(d){return "ndersa"};
 
-exports.whileTooltip = function(d){return "Perserit veprimet e brendshme derisa pika e mbarimit arritet."};
+exports.whileTooltip = function(d){return "Përsërit veprimet e brendshme derisa të arrihet pika e mbarimit."};
 
-exports.word = function(d){return "Find the word"};
+exports.word = function(d){return "Gjej fjalën"};
 
 exports.yes = function(d){return "Po"};
 
-exports.youSpelled = function(d){return "You spelled"};
+exports.youSpelled = function(d){return "Ti gërmëzove"};
 
 
 },{"messageformat":72}],61:[function(require,module,exports){

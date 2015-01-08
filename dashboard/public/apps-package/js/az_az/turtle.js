@@ -15086,7 +15086,7 @@ exports.orientationLock = function(d){return "Cihaz nizamlamalarında səmt kili
 
 exports.wantToLearn = function(d){return "Want to learn to code?"};
 
-exports.watchVideo = function(d){return "Vidəo izle"};
+exports.watchVideo = function(d){return "Videoya baxın"};
 
 exports.when = function(d){return "when"};
 
@@ -15125,7 +15125,7 @@ exports.catLogic = function(d){return "Məntiq"};
 
 exports.colourTooltip = function(d){return "Karandaşın rəngini dəyişir."};
 
-exports.createACircle = function(d){return "create a circle"};
+exports.createACircle = function(d){return "bir çevrə çək"};
 
 exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
 

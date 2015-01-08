@@ -11440,7 +11440,7 @@ exports.extraTopBlocks = function(d){return "شما بلوک های متصل ن�
 
 exports.goal = function(d){return "هدف:"};
 
-exports.reinfFeedbackMsg = function(d){return "داستان از این قرار است! کار کردن روی آن را ادامه دهید, یا به پازل بعدی بروید!"};
+exports.reinfFeedbackMsg = function(d){return "این داستان شماست! کار کردن روی آن را ادامه دهید, یا به پازل بعدی بروید!"};
 
 exports.yourExpression = function(d){return "عبارت شما:"};
 
@@ -11449,9 +11449,9 @@ exports.yourExpression = function(d){return "عبارت شما:"};
 var MessageFormat = require("messageformat");MessageFormat.locale.fa=function(n){return "other"}
 exports.and = function(d){return "و"};
 
-exports.booleanTrue = function(d){return "درست"};
+exports.booleanTrue = function(d){return "صحیح"};
 
-exports.booleanFalse = function(d){return "نادرست\nغلط"};
+exports.booleanFalse = function(d){return "ناصحیح"};
 
 exports.blocklyMessage = function(d){return "بلاکلی"};
 
@@ -11625,7 +11625,7 @@ exports.hintHeader = function(d){return "نکته اینجاست:"};
 
 exports.genericFeedback = function(d){return "ببینبد چطور تمامش کردید,و سعی به رفع مشکلات برنامه خود کنید."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "آنچه من ساخته ام را امتحان کن "};
 
 
 },{"messageformat":54}],43:[function(require,module,exports){

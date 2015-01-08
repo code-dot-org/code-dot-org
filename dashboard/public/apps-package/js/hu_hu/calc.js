@@ -11533,7 +11533,7 @@ exports.listVariable = function(d){return "lista"};
 
 exports.makeYourOwnFlappy = function(d){return "Készíts saját Flappy játékot"};
 
-exports.missingBlocksErrorMsg = function(d){return "Próbáld meg a lenti blokkokat használni, hogy megoldd a rejtvényt."};
+exports.missingBlocksErrorMsg = function(d){return "A feladvány megoldásához használj egy vagy több blokkot az alábbiak közül."};
 
 exports.nextLevel = function(d){return "Gratulálok! Megoldottad a "+v(d,"puzzleNumber")+". feladványt."};
 
@@ -11599,7 +11599,7 @@ exports.savedToGallery = function(d){return "Elmentve a galériába!"};
 
 exports.shareFailure = function(d){return "Sajnálom, de nem tudjuk megosztani ezt a programot."};
 
-exports.workspaceHeader = function(d){return "Építsd össze a blokkokat itt: "};
+exports.workspaceHeader = function(d){return "Itt fűzd fel a blokkokat: "};
 
 exports.workspaceHeaderJavaScript = function(d){return "Ide írd a JavaScript kódodat"};
 

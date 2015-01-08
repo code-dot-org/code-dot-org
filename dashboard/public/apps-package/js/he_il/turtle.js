@@ -14966,33 +14966,33 @@ exports.directionWestLetter = function(d){return "מע"};
 
 exports.end = function(d){return "סוף"};
 
-exports.emptyBlocksErrorMsg = function(d){return "בלוקי ה\"חזור שוב\" או \"אם\" צריכים להיות בעלי בלוקים פנימיים כדי לעבוד. וודא כי הבלוק הפנימי מתאים בבלוק המכיל."};
+exports.emptyBlocksErrorMsg = function(d){return "בלוקי ה\"חזור שוב\" או ה\"אם\" צריכים בלוקים אחרים בתוכם כדי לעבוד. וודא כי הבלוק הפנימי מתאים בבלוק החיצוני."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "פונקציית הבלוק דורשת בלוקים אחרים בתוך לעבודה."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "פונקציית הבלוק דורשת בלוקים אחרים בתוכה כדי לעבוד."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "צריכים להיות בלוקים בתוך הגדרת הפונקציה שלך. לחץ על \"עריכה\" וגרור את הבלוקים שבתוך הבלוק הירוק."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "לחץ על \"ערוך\" כדי לוודא שאין לך בלוקים חסרים בתוך הגדרת הפונקציה שלך."};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "זכור להצמיד בלוק לכל פרמטר קלט שבבלוק הפונקציה בסביבת העבודה שלך."};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "הוספת בלוק פרמטר, אבל לא ביצעת בו שימוש בהגדרה. הקפד להשתמש בפרמטר על ידי לחיצה על \"עריכה\" והצבת בלוק הפרמטר בתוך הבלוק הירוק."};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "תיצור פרמטר לפונקציה שלך ע\"י לחיצה על \"עריכה\" והוספת הפרמטים הנחוצים. גרור את בלוק הפרמטר החדש אל תוך הגדרת הפונקציה שלך."};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "יצרת פונקציה, אך לא ביצעת בה שימוש בסביבת העבודה שלך! לחץ על \"פונקציות\" בארגז הכלים ותוודא שאתה משתמש בה בתוכנית שלך."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "נסה להחליף \"???\" בערך כלשהו."};
 
 exports.extraTopBlocks = function(d){return "יש לך אבני כעיגולים בצבע. התכוונת לצרף אלה כדי לחסום את \"בעת הפעלת\"?"};
 
-exports.finalStage = function(d){return "כל הכבוד! השלמת את השלב הסופי."};
+exports.finalStage = function(d){return "מזל טוב! השלמת את השלב הסופי."};
 
-exports.finalStageTrophies = function(d){return "כל הכבוד! השלמת את השלב הסופי וזכית ב"+p(d,"numTrophies",0,"he",{"one":"פרס","other":n(d,"numTrophies")+" פרסים"})+"."};
+exports.finalStageTrophies = function(d){return "מזל טוב! השלמת את השלב הסופי וזכית ב"+p(d,"numTrophies",0,"he",{"one":"פרס","other":n(d,"numTrophies")+" פרסים"})+"."};
 
 exports.finish = function(d){return "סיים"};
 
-exports.generatedCodeInfo = function(d){return "אפילו האוניברסטאות העליונות מלמדות קידוד מבוסס בלוק (לדוגמה, "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). אבל מתחת למכסה המנוע, האבנים שאספת ניתנות לצפייה גם בג'אווה סקריפט, שפת הקידוד המדוברת בעולם:"};
+exports.generatedCodeInfo = function(d){return "אפילו האוניברסטאות הטובות ביותר מלמדות תכנות בשיטת בלוקים (לדוגמה, "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). אבל מתחת למכסה המנוע, המיומנויות שרכשת ניתנות למימוש גם בג'אווה סקריפט, שפת התכנות הפופלרית בעולם:"};
 
 exports.hashError = function(d){return "סליחה, אך '%1' אינו תואם לאף תוכנית שנשמרה."};
 
@@ -15006,25 +15006,25 @@ exports.levelIncompleteError = function(d){return "הנך משתמש בכל סו
 
 exports.listVariable = function(d){return "רשימה"};
 
-exports.makeYourOwnFlappy = function(d){return "תיצור משחק פלפי משלך"};
+exports.makeYourOwnFlappy = function(d){return "תיצור משחק Flappy משלך"};
 
-exports.missingBlocksErrorMsg = function(d){return "השתמש באחד או יותר מהבלוקים להלן כדי לפתור את החידה."};
+exports.missingBlocksErrorMsg = function(d){return "השתמש באחד או יותר מהבלוקים להלן כדי לפתור את הפאזל."};
 
-exports.nextLevel = function(d){return "כל הכבוד! השלמת את חידה "+v(d,"puzzleNumber")+"."};
+exports.nextLevel = function(d){return "מזל טוב! השלמת את פאזל "+v(d,"puzzleNumber")+"."};
 
-exports.nextLevelTrophies = function(d){return "כל הכבוד! השלמת את חידה "+v(d,"puzzleNumber")+" וזכית ב"+p(d,"numTrophies",0,"he",{"one":"פרס","other":n(d,"numTrophies")+" פרסים"})+"."};
+exports.nextLevelTrophies = function(d){return "מזל טוב! השלמת את פאזל "+v(d,"puzzleNumber")+" וזכית ב"+p(d,"numTrophies",0,"he",{"one":"פרס","other":n(d,"numTrophies")+" פרסים"})+"."};
 
 exports.nextStage = function(d){return "מזל טוב! השלמת "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "כל הכבוד! השלמת את שלב "+v(d,"stageNumber")+" וזכית ב"+p(d,"numTrophies",0,"he",{"one":"פרס","other":n(d,"numTrophies")+" פרסים"})+"."};
+exports.nextStageTrophies = function(d){return "Congratulations! You completed "+v(d,"stageName")+" and won "+p(d,"numTrophies",0,"he",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.numBlocksNeeded = function(d){return "כל הכבוד! השלמת את חידה "+v(d,"puzzleNumber")+". (עם זאת, יכולת להשתמש רק ב "+p(d,"numBlocks",0,"he",{"one":"1 בלוק","other":n(d,"numBlocks")+" בלוקים"})+".)"};
 
 exports.numLinesOfCodeWritten = function(d){return "כתבת "+p(d,"numLines",0,"he",{"one":"שורת","other":n(d,"numLines")+" שורות"})+" קוד!"};
 
-exports.play = function(d){return "לשחק"};
+exports.play = function(d){return "הפעל"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "הדפס"};
 
 exports.puzzleTitle = function(d){return "חידה "+v(d,"puzzle_number")+" מ- "+v(d,"stage_total")};
 
@@ -15032,7 +15032,7 @@ exports.repeat = function(d){return "חזור על"};
 
 exports.resetProgram = function(d){return "אפס"};
 
-exports.runProgram = function(d){return "ריצה"};
+exports.runProgram = function(d){return "הרץ"};
 
 exports.runTooltip = function(d){return "הפעל את התוכנית המוגדרת על-ידי הבלוקים בסביבת העבודה."};
 
@@ -15044,7 +15044,7 @@ exports.showBlocksHeader = function(d){return "הצג בלוקים"};
 
 exports.showGeneratedCode = function(d){return "הצג קוד"};
 
-exports.stringEquals = function(d){return "string=?"};
+exports.stringEquals = function(d){return "מחרוזת=?"};
 
 exports.subtitle = function(d){return "סביבת תיכנות חזותית"};
 
@@ -15068,9 +15068,9 @@ exports.hintRequest = function(d){return "ראה רמז"};
 
 exports.backToPreviousLevel = function(d){return "חזרה לשלב הקודם"};
 
-exports.saveToGallery = function(d){return "לשמור את הגלריה שלך"};
+exports.saveToGallery = function(d){return "שמור לגלריה"};
 
-exports.savedToGallery = function(d){return "נשמר לגלריה שלך!"};
+exports.savedToGallery = function(d){return "נשמר בגלריה!"};
 
 exports.shareFailure = function(d){return "מצטערים, אנחנו לא יכולים לשתף תוכנית זו."};
 
@@ -15107,7 +15107,7 @@ exports.defaultTwitterText = function(d){return "Check out what I made"};
 var MessageFormat = require("messageformat");MessageFormat.locale.he=function(n){return n===1?"one":"other"}
 exports.blocksUsed = function(d){return "בלוקים בשימוש: %1"};
 
-exports.branches = function(d){return "branches"};
+exports.branches = function(d){return "ענפים"};
 
 exports.catColour = function(d){return "צבע"};
 
@@ -15125,27 +15125,27 @@ exports.catLogic = function(d){return "לוגיקה"};
 
 exports.colourTooltip = function(d){return "משנה את הצבע של העיפרון."};
 
-exports.createACircle = function(d){return "create a circle"};
+exports.createACircle = function(d){return "צור עיגול"};
 
-exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
+exports.createSnowflakeSquare = function(d){return "צור פתית שלג בצורת מרובע"};
 
-exports.createSnowflakeParallelogram = function(d){return "create a snowflake of type parallelogram"};
+exports.createSnowflakeParallelogram = function(d){return "צור פתית שלג מסוג מקבילית"};
 
-exports.createSnowflakeLine = function(d){return "create a snowflake of type line"};
+exports.createSnowflakeLine = function(d){return "צור פתית שלג מסוג קו"};
 
-exports.createSnowflakeSpiral = function(d){return "create a snowflake of type spiral"};
+exports.createSnowflakeSpiral = function(d){return "צור פתית שלג מסוג ספירלה"};
 
-exports.createSnowflakeFlower = function(d){return "create a snowflake of type flower"};
+exports.createSnowflakeFlower = function(d){return "צור פתית שלג מסוג פרח"};
 
-exports.createSnowflakeFractal = function(d){return "create a snowflake of type fractal"};
+exports.createSnowflakeFractal = function(d){return "צור פתית שלג מסוג פרקטל"};
 
-exports.createSnowflakeRandom = function(d){return "create a snowflake of type random"};
+exports.createSnowflakeRandom = function(d){return "צור פתית שלג מסוג אקראי"};
 
-exports.createASnowflakeBranch = function(d){return "create a snowflake branch"};
+exports.createASnowflakeBranch = function(d){return "צור ענף של פתיתי שלג"};
 
 exports.degrees = function(d){return "מעלות"};
 
-exports.depth = function(d){return "depth"};
+exports.depth = function(d){return "עומק"};
 
 exports.dots = function(d){return "פיקסלים"};
 
@@ -15155,33 +15155,33 @@ exports.drawATriangle = function(d){return "צייר משולש"};
 
 exports.drawACircle = function(d){return "צייר מעגל"};
 
-exports.drawAFlower = function(d){return "draw a flower"};
+exports.drawAFlower = function(d){return "צייר פרח"};
 
-exports.drawAHexagon = function(d){return "draw a hexagon"};
+exports.drawAHexagon = function(d){return "צייר משושה"};
 
 exports.drawAHouse = function(d){return "צייר בית"};
 
-exports.drawAPlanet = function(d){return "draw a planet"};
+exports.drawAPlanet = function(d){return "צייר כוכב לכת"};
 
-exports.drawARhombus = function(d){return "draw a rhombus"};
+exports.drawARhombus = function(d){return "צייר מעויין"};
 
-exports.drawARobot = function(d){return "draw a robot"};
+exports.drawARobot = function(d){return "צייר רובוט"};
 
-exports.drawARocket = function(d){return "draw a rocket"};
+exports.drawARocket = function(d){return "צייר טיל"};
 
-exports.drawASnowflake = function(d){return "draw a snowflake"};
+exports.drawASnowflake = function(d){return "צייר פתית שלג"};
 
 exports.drawASnowman = function(d){return "צייר איש שלג"};
 
-exports.drawAStar = function(d){return "draw a star"};
+exports.drawAStar = function(d){return "צייר כוכב"};
 
 exports.drawATree = function(d){return "צייר עץ"};
 
-exports.drawUpperWave = function(d){return "draw upper wave"};
+exports.drawUpperWave = function(d){return "צייר גל עליון"};
 
-exports.drawLowerWave = function(d){return "draw lower wave"};
+exports.drawLowerWave = function(d){return "צייר גל תחתון"};
 
-exports.drawStamp = function(d){return "draw stamp"};
+exports.drawStamp = function(d){return "צייר חותמת"};
 
 exports.heightParameter = function(d){return "גובה"};
 
@@ -15203,7 +15203,7 @@ exports.jumpSouthTooltip = function(d){return "הזז/י את האומן דרו�
 
 exports.jumpWestTooltip = function(d){return "הזז/י את האומן מערבה בלי להשאיר אף סימן."};
 
-exports.lengthFeedback = function(d){return "You got it right except for the lengths to move."};
+exports.lengthFeedback = function(d){return "תשובה נכונה, למעט אורכי התזוזה."};
 
 exports.lengthParameter = function(d){return "אורך"};
 
@@ -15235,11 +15235,11 @@ exports.penTooltip = function(d){return "מרים או מוריד את העפר�
 
 exports.penUp = function(d){return "הרם את העיפרון"};
 
-exports.reinfFeedbackMsg = function(d){return "האם זה נראה כמו מה שרצית? באפשרותך להקיש על לחצן 'נסה שוב' כדי לראות את הציור שלך."};
+exports.reinfFeedbackMsg = function(d){return "הנה הציור שלך! המשך לעבוד עליו או המשך לחידה הבאה."};
 
 exports.setColour = function(d){return "צבע קבוע"};
 
-exports.setPattern = function(d){return "set pattern"};
+exports.setPattern = function(d){return "הגדר דפוס קבוע"};
 
 exports.setWidth = function(d){return "העובי הקבוע"};
 
@@ -15251,7 +15251,7 @@ exports.showTurtle = function(d){return "הראה את האמן"};
 
 exports.sizeParameter = function(d){return "size"};
 
-exports.step = function(d){return "step"};
+exports.step = function(d){return "צעד"};
 
 exports.tooFewColours = function(d){return "צריך להשתמש בלפחות %1 צבעים שונים בשביל החידה הזאת. השתמשת רק ב %2."};
 
@@ -15261,7 +15261,7 @@ exports.turnRight = function(d){return "פנה ימינה"};
 
 exports.turnRightTooltip = function(d){return "סובב את האמן ימינה במעלות המצויינות."};
 
-exports.turnTooltip = function(d){return "סובב את האמן שמאלה או ימינה במספר מסויים של מעלות."};
+exports.turnTooltip = function(d){return "סובב את האמן שמאלה או ימינה על פי מספר המעלות שמצויין."};
 
 exports.turtleVisibilityTooltip = function(d){return "הפוך את האמן לנראה או בלתי-נראה."};
 

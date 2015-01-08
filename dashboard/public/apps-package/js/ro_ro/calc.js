@@ -11449,7 +11449,7 @@ exports.extraTopBlocks = function(d){return "Aveţi blocuri neataşate. Aţi vru
 
 exports.goal = function(d){return "Obiectiv:"};
 
-exports.reinfFeedbackMsg = function(d){return "Aici este povestea dvs.! Continuați să lucrați la ea sau treceți la următorul puzzle-ul!"};
+exports.reinfFeedbackMsg = function(d){return "Iată povestea ta! Continuă să lucrezi la ea, sau treci la următorul puzzle!"};
 
 exports.yourExpression = function(d){return "Expresia dvs.:"};
 

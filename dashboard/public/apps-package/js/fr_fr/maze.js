@@ -16843,7 +16843,7 @@ exports.fill = function(d){return "remplir 1"};
 
 exports.fillN = function(d){return "remplir "+v(d,"shovelfuls")};
 
-exports.fillStack = function(d){return "remplir pile de "+v(d,"shovelfuls")+" trous"};
+exports.fillStack = function(d){return "remplir la pile de "+v(d,"shovelfuls")+" trous"};
 
 exports.fillSquare = function(d){return "remplir le carré"};
 
@@ -16851,13 +16851,13 @@ exports.fillTooltip = function(d){return "placer 1 unité de terre"};
 
 exports.finalLevel = function(d){return "Félicitations ! Vous avez résolu l'énigme finale."};
 
-exports.flowerEmptyError = function(d){return "La fleur sur laquelle vous êtes n'a plus de nectar."};
+exports.flowerEmptyError = function(d){return "La fleur sur laquelle tu es n'a plus de nectar."};
 
 exports.get = function(d){return "obtenir"};
 
 exports.heightParameter = function(d){return "hauteur"};
 
-exports.holePresent = function(d){return "trou présent"};
+exports.holePresent = function(d){return "Il y a un trou"};
 
 exports.honey = function(d){return "faire du miel"};
 
@@ -16877,7 +16877,7 @@ exports.ifTooltip = function(d){return "S'il y a un chemin dans la direction ind
 
 exports.ifelseTooltip = function(d){return "S'il y a un chemin dans la direction indiquée, alors exécuter le premier bloc d'actions. Sinon, exécuter le deuxième bloc d'actions."};
 
-exports.ifFlowerTooltip = function(d){return "S'il y a une fleur/un nid d'abeilles dans la direction indiquée, alors agissez (actions)."};
+exports.ifFlowerTooltip = function(d){return "S'il y a une fleur/une ruche dans la direction indiquée, alors fais quelque chose."};
 
 exports.ifelseFlowerTooltip = function(d){return "S'il y a une fleur ou une ruche dans la direction indiquée, alors le premier bloc d'actions est exécuté. Sinon, on exécute le deuxième bloc d'actions."};
 
@@ -16901,7 +16901,7 @@ exports.moveSouthTooltip = function(d){return "Déplace-moi d'un espace vers le 
 
 exports.moveTooltip = function(d){return "Déplace moi d'une case vers l'avant ou l'arrière"};
 
-exports.moveWestTooltip = function(d){return "Déplace-moi d'un espace vers l'Ouest."};
+exports.moveWestTooltip = function(d){return "Déplace-moi d'une case vers l'Ouest."};
 
 exports.nectar = function(d){return "prendre du nectar"};
 
@@ -16919,9 +16919,9 @@ exports.noPathLeft = function(d){return "pas de chemin à gauche"};
 
 exports.noPathRight = function(d){return "pas de chemin à droite"};
 
-exports.notAtFlowerError = function(d){return "Vous ne pouvez récupérer du nectar que depuis une fleur."};
+exports.notAtFlowerError = function(d){return "Tu ne peux récupérer du nectar que depuis une fleur."};
 
-exports.notAtHoneycombError = function(d){return "Vous ne pouvez faire du miel que lorsque vous êtes à une ruche."};
+exports.notAtHoneycombError = function(d){return "Tu ne peux faire du miel que lorsque tu es à une ruche."};
 
 exports.numBlocksNeeded = function(d){return "Cette enigme peut être résolue avec %1 blocs."};
 
@@ -16945,7 +16945,7 @@ exports.removeStack = function(d){return "retirer une pile de "+v(d,"shovelfuls"
 
 exports.removeSquare = function(d){return "retirer le carré"};
 
-exports.repeatCarefullyError = function(d){return "Pour résoudre cette énigme, pense à la suite d'instructions contenant deux déplacements et une rotation, que tu pourrais insérer dans le bloc « répéter ». Ce n'est pas grave de se tourner une fois de trop à la fin."};
+exports.repeatCarefullyError = function(d){return "Pour résoudre cette énigme, pense à la suite d'instructions contenant deux déplacements et un changement de direction, que tu pourrais insérer dans le bloc « répéter ». Ce n'est pas grave de se tourner une fois de trop à la fin."};
 
 exports.repeatUntil = function(d){return "répéter jusqu’à"};
 
@@ -16965,9 +16965,9 @@ exports.turnRight = function(d){return "tourner à droite"};
 
 exports.turnTooltip = function(d){return "Me tourne 90 degrés à gauche ou à droite."};
 
-exports.uncheckedCloudError = function(d){return "Vérifiez bien tous les nuages pour voir s'ils cachent des fleurs ou des ruches."};
+exports.uncheckedCloudError = function(d){return "Vérifie bien tous les nuages pour voir s'ils cachent des fleurs ou des ruches."};
 
-exports.uncheckedPurpleError = function(d){return "Vérifiez bien toutes les fleurs violettes pour voir si elles contiennent du nectar"};
+exports.uncheckedPurpleError = function(d){return "Vérifie bien toutes les fleurs violettes pour voir si elles contiennent du nectar"};
 
 exports.whileMsg = function(d){return "tant que"};
 
@@ -16977,7 +16977,7 @@ exports.word = function(d){return "Trouver le mot"};
 
 exports.yes = function(d){return "Oui"};
 
-exports.youSpelled = function(d){return "Vous avez épelé"};
+exports.youSpelled = function(d){return "Tu as épelé"};
 
 
 },{"messageformat":72}],61:[function(require,module,exports){

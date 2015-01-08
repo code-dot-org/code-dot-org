@@ -11,7 +11,7 @@ exports.builderForm = function(onAttemptCallback) {
   var dialog = feedback.createModalDialogWithIcon({
     Dialog: StudioApp.Dialog,
     contentDiv: builderDetails,
-    icon: StudioApp.ICON
+    icon: StudioApp.icon
   });
   var createLevelButton = document.getElementById('create-level-button');
   dom.addClickTouchEvent(createLevelButton, function() {

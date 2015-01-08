@@ -12574,7 +12574,7 @@ exports.ifelseTooltip = function(d){return "Si hi ha un camí en la direcció es
 
 exports.incrementOpponentScore = function(d){return "punt de puntuació per l'oponent"};
 
-exports.incrementOpponentScoreTooltip = function(d){return "Afegeix u a la puntuació de l'oponent."};
+exports.incrementOpponentScoreTooltip = function(d){return "Incrementar en u la puntuació de l'oponent actual."};
 
 exports.incrementPlayerScore = function(d){return "punt"};
 

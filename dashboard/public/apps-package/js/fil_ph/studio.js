@@ -21538,9 +21538,9 @@ exports.defaultTwitterText = function(d){return "Check out what I made"};
 
 },{"messageformat":61}],49:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.fil=function(n){return n===0||n==1?"one":"other"}
-exports.actor = function(d){return "actor"};
+exports.actor = function(d){return "aktor"};
 
-exports.alienInvasion = function(d){return "Alien Invasion!"};
+exports.alienInvasion = function(d){return "Pagsugod ng mga Alien!"};
 
 exports.backgroundBlack = function(d){return "itim"};
 

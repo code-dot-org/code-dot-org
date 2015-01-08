@@ -21538,7 +21538,7 @@ exports.defaultTwitterText = function(d){return "Lihat apa yang saya buat"};
 
 },{"messageformat":61}],49:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.id=function(n){return "other"}
-exports.actor = function(d){return "pelaku"};
+exports.actor = function(d){return "aktor"};
 
 exports.alienInvasion = function(d){return "Serangan Alien!"};
 

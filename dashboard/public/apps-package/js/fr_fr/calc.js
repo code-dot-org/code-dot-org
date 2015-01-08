@@ -11436,7 +11436,7 @@ exports.compute = function(d){return "calculer"};
 
 exports.equivalentExpression = function(d){return "Essayez de réorganiser vos arguments pour obtenir exactement la même expression."};
 
-exports.extraTopBlocks = function(d){return "Vous avez des blocs libres. Vouliez vous les rattacher au bloc « calcul » ?"};
+exports.extraTopBlocks = function(d){return "Vous avez des blocs non attachés. Vouliez-vous les rattacher au bloc \"calcul\"?"};
 
 exports.goal = function(d){return "Objectif :"};
 

@@ -1,21 +1,30 @@
 var utils = require('./utils');
+var _ = utils.getLodash();
 var requiredBlockUtils = require('./required_block_utils');
-window.StudioApp = require('./base');
+var StudioAppClass = require('./StudioApp');
 
-if (typeof global !== 'undefined') {
-  global.StudioApp = window.StudioApp;
-}
+var studioAppSingleton = require('./base');
+window.StudioApp = studioAppSingleton;
+
+// TODO (br-pair) : This is to expose methods we need in the global namespace
+// for testing purpose. Would be nice to eliminate this eventually.
+window.__TestInterface = {
+  loadBlocks: _.bind(studioAppSingleton.loadBlocks, studioAppSingleton)
+};
 
 var addReadyListener = require('./dom').addReadyListener;
 var blocksCommon = require('./blocksCommon');
 
-function StubDialog() {
-  for (var argument in arguments) {
-    console.log(argument);
-  }
+function StubDialog(options) {
+  this.options = options;
+  console.log("Creating Dialog");
+  console.log(options);
 }
 StubDialog.prototype.show = function() {
   console.log("Showing Dialog");
+  if (this.options.body) {
+    console.log(this.options.body.innerHTML);
+  }
   console.log(this);
 };
 StubDialog.prototype.hide = function() {
@@ -45,27 +54,11 @@ module.exports = function(app, levels, options) {
 
   options.Dialog = options.Dialog || StubDialog;
 
-  StudioApp.BASE_URL = options.baseUrl;
-  StudioApp.CACHE_BUST = options.cacheBust;
-  StudioApp.LOCALE = options.locale || StudioApp.LOCALE;
-  // NOTE: editCode (which currently implies droplet) and usingBlockly are
-  // currently mutually exclusive.
-  StudioApp.editCode = options.level && options.level.editCode;
-  StudioApp.usingBlockly = !StudioApp.editCode;
-  StudioApp.cdoSounds = options.cdoSounds;
+  studioAppSingleton.configure(options);
 
-  StudioApp.assetUrl = function(path) {
-    var url = options.baseUrl + path;
-    /*if (StudioApp.CACHE_BUST) {
-      return url + '?v=' + options.cacheBust;
-    } else {*/
-      return url;
-    /*}*/
-  };
+  options.skin = options.skinsModule.load(studioAppSingleton.assetUrl, options.skinId);
 
-  options.skin = options.skinsModule.load(StudioApp.assetUrl, options.skinId);
-
-  if (StudioApp.usingBlockly) {
+  if (studioAppSingleton.usingBlockly) {
     var blockInstallOptions = {
       skin: options.skin,
       isK1: options.level && options.level.isK1
@@ -84,7 +77,7 @@ module.exports = function(app, levels, options) {
       if (app.initReadonly) {
         app.initReadonly(options);
       } else {
-        StudioApp.initReadonly(options);
+        studioAppSingleton.initReadonly(options);
       }
     } else {
       app.init(options);

@@ -16841,9 +16841,9 @@ var MessageFormat = require("messageformat");MessageFormat.locale.sr = function 
   }
   return 'other';
 };
-exports.atHoneycomb = function(d){return "at honeycomb"};
+exports.atHoneycomb = function(d){return "на саћу"};
 
-exports.atFlower = function(d){return "at flower"};
+exports.atFlower = function(d){return "на цвету"};
 
 exports.avoidCowAndRemove = function(d){return "избегни краву и уклони 1"};
 
@@ -16851,7 +16851,7 @@ exports.continue = function(d){return "Настави"};
 
 exports.dig = function(d){return "уклони 1"};
 
-exports.digTooltip = function(d){return "уклони 1 једииницу землје"};
+exports.digTooltip = function(d){return "уклони 1 јединицу земље"};
 
 exports.dirE = function(d){return "Исток"};
 
@@ -16865,19 +16865,19 @@ exports.doCode = function(d){return "уради"};
 
 exports.elseCode = function(d){return "иначе"};
 
-exports.fill = function(d){return "упишите број 1"};
+exports.fill = function(d){return "испуни 1"};
 
-exports.fillN = function(d){return "упишите "+v(d,"shovelfuls")};
+exports.fillN = function(d){return "испуни "+v(d,"shovelfuls")};
 
-exports.fillStack = function(d){return "fill stack of "+v(d,"shovelfuls")+" holes"};
+exports.fillStack = function(d){return "испуни низ од  "+v(d,"shovelfuls")+" рупа"};
 
 exports.fillSquare = function(d){return "попуните квадрат"};
 
-exports.fillTooltip = function(d){return "поставите 1 јединицу прљавштине"};
+exports.fillTooltip = function(d){return "постави 1 комад земље"};
 
 exports.finalLevel = function(d){return "Честитамо! Решили сте финалну слагалицу."};
 
-exports.flowerEmptyError = function(d){return "The flower you're on has no more nectar."};
+exports.flowerEmptyError = function(d){return "Цвет на којем се налазиш нема више нектара."};
 
 exports.get = function(d){return "узми"};
 
@@ -16885,13 +16885,13 @@ exports.heightParameter = function(d){return "висина"};
 
 exports.holePresent = function(d){return "ту је рупа"};
 
-exports.honey = function(d){return "make honey"};
+exports.honey = function(d){return "направи мед"};
 
-exports.honeyAvailable = function(d){return "honey"};
+exports.honeyAvailable = function(d){return "мед"};
 
-exports.honeyTooltip = function(d){return "Make honey from nectar"};
+exports.honeyTooltip = function(d){return "Направи мед од нектара"};
 
-exports.honeycombFullError = function(d){return "This honeycomb does not have room for more honey."};
+exports.honeycombFullError = function(d){return "Ово саће више нема места за мед."};
 
 exports.ifCode = function(d){return "ако"};
 
@@ -16903,11 +16903,11 @@ exports.ifTooltip = function(d){return "ако постоји путања у н
 
 exports.ifelseTooltip = function(d){return "ако постоји путања у наведеном смеру, онда уради први блок акција. У супротном, уради други блок акција."};
 
-exports.ifFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do some actions."};
+exports.ifFlowerTooltip = function(d){return "Ако у наведеном смеру постоји цвет или саће, онда направи неку акцију."};
 
-exports.ifelseFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do the first block of actions. Otherwise, do the second block of actions."};
+exports.ifelseFlowerTooltip = function(d){return "Ако у наведеном смеру постоји цвет или саће, онда изврши први блок акција. Иначе, изврши други блок акција."};
 
-exports.insufficientHoney = function(d){return "You're using all the right blocks, but you need to make the right amount of honey."};
+exports.insufficientHoney = function(d){return "Користиш све одговарајуће блокове, али требаш направити задату количину меда."};
 
 exports.insufficientNectar = function(d){return "You're using all the right blocks, but you need to collect the right amount of nectar."};
 
@@ -16967,7 +16967,7 @@ exports.removeN = function(d){return "уклони "+v(d,"shovelfuls")};
 
 exports.removePile = function(d){return "уклони гомилу"};
 
-exports.removeStack = function(d){return "уклони наслагане гомиле "+v(d,"shovelfuls")};
+exports.removeStack = function(d){return "уклони гомилу од "+v(d,"shovelfuls")+" лопата"};
 
 exports.removeSquare = function(d){return "уклони квадрат"};
 

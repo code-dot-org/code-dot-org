@@ -12494,7 +12494,7 @@ exports.subtitle = function(d){return "визуална среда за прог
 
 exports.textVariable = function(d){return "текст"};
 
-exports.tooFewBlocksMsg = function(d){return "Вие използвате всички нужни блокове, но в недостатъчно количество, за да завършите този пъзел."};
+exports.tooFewBlocksMsg = function(d){return "Използвали сте всички необходими видове блокове, но ще ви трябват още от същите видове, за да завършите този пъзел."};
 
 exports.tooManyBlocksMsg = function(d){return "Този пъзел може да бъде решен с <x id='START_SPAN'/><x id='END_SPAN'/> блокове."};
 
@@ -12563,7 +12563,7 @@ exports.finalLevel = function(d){return "Поздравления! Вие реш
 
 exports.flap = function(d){return "пляскане с крила"};
 
-exports.flapRandom = function(d){return "пляскане с крила неопределен брой пъти"};
+exports.flapRandom = function(d){return "случайно количество пляскания"};
 
 exports.flapVerySmall = function(d){return "много малък брой пляскания"};
 
@@ -12575,11 +12575,11 @@ exports.flapLarge = function(d){return "голямо количество пля
 
 exports.flapVeryLarge = function(d){return "пляскане с крила много продължително"};
 
-exports.flapTooltip = function(d){return "Flappy полет нагоре."};
+exports.flapTooltip = function(d){return "Придвижва героя нагоре."};
 
 exports.flappySpecificFail = function(d){return "Вашият код изглежда добре - героят ще пляска с всяко щракване. Но вие трябва да щракнете много пъти за да прелети до целта."};
 
-exports.incrementPlayerScore = function(d){return "въвежда точка"};
+exports.incrementPlayerScore = function(d){return "спечели точка"};
 
 exports.incrementPlayerScoreTooltip = function(d){return "Добавя една точка към текущия резултат на играча."};
 
@@ -12589,119 +12589,119 @@ exports.no = function(d){return "Не"};
 
 exports.numBlocksNeeded = function(d){return "Този пъзел може да бъде решен с %1 блока."};
 
-exports.playSoundRandom = function(d){return "пусни случаен звук"};
+exports.playSoundRandom = function(d){return "изпълни случаен звук"};
 
-exports.playSoundBounce = function(d){return "пусни звук \"Подскок\""};
+exports.playSoundBounce = function(d){return "изпълни звук \"Подскок\""};
 
 exports.playSoundCrunch = function(d){return "възпроизвежда звук на болка"};
 
-exports.playSoundDie = function(d){return "възпроизвеждане тъжен звук"};
+exports.playSoundDie = function(d){return "изпълни тъжен звук"};
 
-exports.playSoundHit = function(d){return "възпроизвеждане на размазващ звук"};
+exports.playSoundHit = function(d){return "изпълни звук \"Размазване\""};
 
-exports.playSoundPoint = function(d){return "възпроизвеждане на звук за точка"};
+exports.playSoundPoint = function(d){return "изпълни звук \"Отбележи Точка\""};
 
-exports.playSoundSwoosh = function(d){return "Възпроизвеждане на  swoosh звук"};
+exports.playSoundSwoosh = function(d){return "изпълни звук \"Фучене\""};
 
-exports.playSoundWing = function(d){return "възпроизвеждане на звук от пляскане с крила"};
+exports.playSoundWing = function(d){return "изпълни звук \"Плясък с Крила\""};
 
-exports.playSoundJet = function(d){return "Възпроизвеждане на звук за струя"};
+exports.playSoundJet = function(d){return "изпълни звук \"Реактивен Самолет\""};
 
-exports.playSoundCrash = function(d){return "възпроизвеждане на  звук за катастрофа"};
+exports.playSoundCrash = function(d){return "изпълни звук \"Катастрофа\""};
 
-exports.playSoundJingle = function(d){return "Възпроизвеждане на звук за звънене"};
+exports.playSoundJingle = function(d){return "изпълни звук \"Звънчета\""};
 
-exports.playSoundSplash = function(d){return "Възпроизвеждане на звук от плясък във вода"};
+exports.playSoundSplash = function(d){return "изпълни звук \"Воден плясък\""};
 
-exports.playSoundLaser = function(d){return "възпроизвеждане на звук от лазер"};
+exports.playSoundLaser = function(d){return "изпълни звук \"Лазер\""};
 
 exports.playSoundTooltip = function(d){return "Възпроизвежда избраният звук."};
 
-exports.reinfFeedbackMsg = function(d){return "Може да натиснете бутона \"Опитай отново\", за да се върнете да играете играта си."};
+exports.reinfFeedbackMsg = function(d){return "Може да натиснете бутона \"Опитай отново\", за да се върнете към играта си."};
 
 exports.scoreText = function(d){return "Резултат: "+v(d,"playerScore")};
 
-exports.setBackground = function(d){return "Задай сцена"};
+exports.setBackground = function(d){return "зареди сцена"};
 
-exports.setBackgroundRandom = function(d){return "Зареждай случайна сцена"};
+exports.setBackgroundRandom = function(d){return "зареди случайна сцена"};
 
-exports.setBackgroundFlappy = function(d){return "Задава сцена \"Град\" (ден)"};
+exports.setBackgroundFlappy = function(d){return "зареди сцена \"Град\" (ден)"};
 
-exports.setBackgroundNight = function(d){return "Задаване на сцена \"Град\" (нощ)"};
+exports.setBackgroundNight = function(d){return "зареди сцена \"Град\" (нощ)"};
 
-exports.setBackgroundSciFi = function(d){return "сцената Sci-Fi"};
+exports.setBackgroundSciFi = function(d){return "зареди научнофантастична сцена"};
 
-exports.setBackgroundUnderwater = function(d){return "Задава сцена под водата"};
+exports.setBackgroundUnderwater = function(d){return "зареди подводна сцена"};
 
-exports.setBackgroundCave = function(d){return "Задава сцена \"пещера\""};
+exports.setBackgroundCave = function(d){return "зареди сцена \"пещера\""};
 
-exports.setBackgroundSanta = function(d){return "Задава сцена \"Дядо Коледа\""};
+exports.setBackgroundSanta = function(d){return "зареди сцена \"Дядо Коледа\""};
 
-exports.setBackgroundTooltip = function(d){return "Задаване на фоновото изображение"};
+exports.setBackgroundTooltip = function(d){return "Този блок променя изображението на фона на играта."};
 
-exports.setGapRandom = function(d){return "задава случайна пролука"};
+exports.setGapRandom = function(d){return "задай случайна пролука"};
 
-exports.setGapVerySmall = function(d){return "задава много малка пролука"};
+exports.setGapVerySmall = function(d){return "задай много малка пролука"};
 
-exports.setGapSmall = function(d){return "задава малка пролука"};
+exports.setGapSmall = function(d){return "задай малка пролука"};
 
-exports.setGapNormal = function(d){return "задава нормална пролука"};
+exports.setGapNormal = function(d){return "задай нормална пролука"};
 
-exports.setGapLarge = function(d){return "поставяне на голяма пролука"};
+exports.setGapLarge = function(d){return "задай голяма пролука"};
 
-exports.setGapVeryLarge = function(d){return "Задаване на много голяма пролука"};
+exports.setGapVeryLarge = function(d){return "задай много голяма пролука"};
 
-exports.setGapHeightTooltip = function(d){return "Задава вертикална пролука между препятствията"};
+exports.setGapHeightTooltip = function(d){return "Задава вертикалната пролука между препятствията"};
 
-exports.setGravityRandom = function(d){return "Задаване гравитация на случаен принцип"};
+exports.setGravityRandom = function(d){return "задай гравитация случайна"};
 
-exports.setGravityVeryLow = function(d){return "Задаване  на много ниска гравитация"};
+exports.setGravityVeryLow = function(d){return "задай гравитация много малка"};
 
-exports.setGravityLow = function(d){return "Задаване ниска гравитация"};
+exports.setGravityLow = function(d){return "задай гравитация малка"};
 
-exports.setGravityNormal = function(d){return "Задаване нормална гравитация"};
+exports.setGravityNormal = function(d){return "задай гравитация нормална"};
 
-exports.setGravityHigh = function(d){return "Задаване на силна гравитация"};
+exports.setGravityHigh = function(d){return "задай гравитация силна"};
 
-exports.setGravityVeryHigh = function(d){return "Задаване на много силна гравитация"};
+exports.setGravityVeryHigh = function(d){return "задай гравитация много силна"};
 
-exports.setGravityTooltip = function(d){return "Задаване ниво на гравитацията"};
+exports.setGravityTooltip = function(d){return "Задава силата на гравитацията"};
 
-exports.setGround = function(d){return "Задайте терен"};
+exports.setGround = function(d){return "зареди терен"};
 
-exports.setGroundRandom = function(d){return "Задай  терена на случаен принцип"};
+exports.setGroundRandom = function(d){return "зареди случаен терен"};
 
-exports.setGroundFlappy = function(d){return "терен \"Земя\""};
+exports.setGroundFlappy = function(d){return "зареди терен \"Земя\""};
 
-exports.setGroundSciFi = function(d){return "терен \"Sci-Fi\""};
+exports.setGroundSciFi = function(d){return "зареди терен \"Научна Фантастика\""};
 
-exports.setGroundUnderwater = function(d){return "терен \"Под водата\""};
+exports.setGroundUnderwater = function(d){return "зареди терен \"Под водата\""};
 
-exports.setGroundCave = function(d){return "терен \"Пещера\""};
+exports.setGroundCave = function(d){return "зареди терен \"Пещера\""};
 
-exports.setGroundSanta = function(d){return "терен \"Дядо Коледа\""};
+exports.setGroundSanta = function(d){return "зареди терен \"Дядо Коледа\""};
 
-exports.setGroundLava = function(d){return "терен \"Лава\""};
+exports.setGroundLava = function(d){return "зареди терен \"Лава\""};
 
-exports.setGroundTooltip = function(d){return "Задаване фон на терена"};
+exports.setGroundTooltip = function(d){return "Този блок променя изображението на терена."};
 
-exports.setObstacle = function(d){return "Задай препятствие"};
+exports.setObstacle = function(d){return "задай препятствие"};
 
-exports.setObstacleRandom = function(d){return "Задайте случайно препятствие"};
+exports.setObstacleRandom = function(d){return "задай случайно препятствие"};
 
-exports.setObstacleFlappy = function(d){return "Задайте препятствие \"Тръба\""};
+exports.setObstacleFlappy = function(d){return "задай препятствие \"Тръба\""};
 
-exports.setObstacleSciFi = function(d){return "Задайте препятствие \"Sci-Fi\""};
+exports.setObstacleSciFi = function(d){return "задай препятствие \"Научна фантастика\""};
 
-exports.setObstacleUnderwater = function(d){return "Задайте препятствие \"Растение\""};
+exports.setObstacleUnderwater = function(d){return "задай препятствие \"Растение\""};
 
-exports.setObstacleCave = function(d){return "задайте препятствие \"Пещера\""};
+exports.setObstacleCave = function(d){return "задай препятствие \"Пещера\""};
 
-exports.setObstacleSanta = function(d){return "задайте препятствие \"комин\""};
+exports.setObstacleSanta = function(d){return "задай препятствие \"комин\""};
 
 exports.setObstacleLaser = function(d){return "задай препятствие \"лазер\""};
 
-exports.setObstacleTooltip = function(d){return "Задава фон на препятствието"};
+exports.setObstacleTooltip = function(d){return "Задава типа на препяствията, които ще се появят от този момент до следващата промяна."};
 
 exports.setPlayer = function(d){return "задай герой"};
 
@@ -12719,33 +12719,33 @@ exports.setPlayerCave = function(d){return "задай герой \"прилеп
 
 exports.setPlayerSanta = function(d){return "задай герой \"Дядо Коледа\""};
 
-exports.setPlayerShark = function(d){return "Задай като герой \"акула\""};
+exports.setPlayerShark = function(d){return "задай герой \"акула\""};
 
-exports.setPlayerEaster = function(d){return "Задай като герой великденският заек"};
+exports.setPlayerEaster = function(d){return "задай герой \"Великденски Заек\""};
 
-exports.setPlayerBatman = function(d){return "Задай герой \"човекът прилеп\""};
+exports.setPlayerBatman = function(d){return "задай герой \"човекът прилеп\""};
 
-exports.setPlayerSubmarine = function(d){return "Задай герой \"подводница\""};
+exports.setPlayerSubmarine = function(d){return "задай герой \"подводница\""};
 
-exports.setPlayerUnicorn = function(d){return "Задай герой \"еднорог\""};
+exports.setPlayerUnicorn = function(d){return "задай герой \"еднорог\""};
 
-exports.setPlayerFairy = function(d){return "Задаване герой фея"};
+exports.setPlayerFairy = function(d){return "задай герой \"фея\""};
 
-exports.setPlayerSuperman = function(d){return "Задай герой \"Flappy птица\""};
+exports.setPlayerSuperman = function(d){return "задай герой \"Пляскащ Човек\""};
 
-exports.setPlayerTurkey = function(d){return "Задай герой \"пуйка\""};
+exports.setPlayerTurkey = function(d){return "задай герой \"пуйка\""};
 
-exports.setPlayerTooltip = function(d){return "Задава изображение на герой"};
+exports.setPlayerTooltip = function(d){return "Задава вида на героя, от този момент до следващата промяна."};
 
-exports.setScore = function(d){return "поставя резултат"};
+exports.setScore = function(d){return "задай резултат"};
 
-exports.setScoreTooltip = function(d){return "Задава резултата на играча"};
+exports.setScoreTooltip = function(d){return "Променя броя точки на играча."};
 
 exports.setSpeed = function(d){return "задай скорост"};
 
-exports.setSpeedTooltip = function(d){return "Задава нивото на скоростта"};
+exports.setSpeedTooltip = function(d){return "Определя скоростта на играта."};
 
-exports.shareFlappyTwitter = function(d){return "Вижте Flappy играта, която съм създал. Аз сам я написал с @codeorg"};
+exports.shareFlappyTwitter = function(d){return "Вижте Flappy играта, която създадох. Написах я сам с @codeorg"};
 
 exports.shareGame = function(d){return "Споделете играта си:"};
 
@@ -12775,37 +12775,37 @@ exports.soundSplash = function(d){return "плясък"};
 
 exports.soundLaser = function(d){return "лазер"};
 
-exports.speedRandom = function(d){return "задава случайна скорост"};
+exports.speedRandom = function(d){return "задай случайна скорост"};
 
-exports.speedVerySlow = function(d){return "задава много бавна скорост"};
+exports.speedVerySlow = function(d){return "задай много бавна скорост"};
 
-exports.speedSlow = function(d){return "задава бавна скорост"};
+exports.speedSlow = function(d){return "задай бавна скорост"};
 
-exports.speedNormal = function(d){return "задава нормална скорост"};
+exports.speedNormal = function(d){return "задай нормална скорост"};
 
-exports.speedFast = function(d){return "Задава бърза скорост"};
+exports.speedFast = function(d){return "задай бърза скорост"};
 
-exports.speedVeryFast = function(d){return "задава много бърза скорост"};
+exports.speedVeryFast = function(d){return "задай много бърза скорост"};
 
-exports.whenClick = function(d){return "Когато е кликнато "};
+exports.whenClick = function(d){return "при кликване"};
 
-exports.whenClickTooltip = function(d){return "За да се случи събитието, изпълни действията по-долу с кликване."};
+exports.whenClickTooltip = function(d){return "При всяко кликване, компютърът ще изпълни действията, изброени под този блок."};
 
-exports.whenCollideGround = function(d){return "когато се удари в земната повърхност"};
+exports.whenCollideGround = function(d){return "при сблъсък с терена"};
 
-exports.whenCollideGroundTooltip = function(d){return "Изпълни действията по-долу когато Flappy удари  земята."};
+exports.whenCollideGroundTooltip = function(d){return "Когато героят се сблъска със земната повърхност, компютърът ще изпълни изброените под този блок действия."};
 
-exports.whenCollideObstacle = function(d){return "когато се удари в препятствие"};
+exports.whenCollideObstacle = function(d){return "при сблъсък с препятствие"};
 
-exports.whenCollideObstacleTooltip = function(d){return "Изпълни действията по-долу когато Flappy се удря в препятствие."};
+exports.whenCollideObstacleTooltip = function(d){return "Когато героят се сблъска с препятствие, компютърът ще изпълни изброените под този блок действия."};
 
-exports.whenEnterObstacle = function(d){return "когато премине препятствие"};
+exports.whenEnterObstacle = function(d){return "при преминаване на препятствие"};
 
-exports.whenEnterObstacleTooltip = function(d){return "Изпълни действията по-долу когато Flappy се удря в препятствие."};
+exports.whenEnterObstacleTooltip = function(d){return "Когато героят премине препятсвие, компютърът ще изпълни изброените под този блок действия."};
 
-exports.whenRunButtonClick = function(d){return "когато играта започва"};
+exports.whenRunButtonClick = function(d){return "при стартиране на играта"};
 
-exports.whenRunButtonClickTooltip = function(d){return "Изпълни действията по-долу при стартиране на играта."};
+exports.whenRunButtonClickTooltip = function(d){return "При стартиране на нова игра, компютърът ще изпълни действията изброени под този блок."};
 
 exports.yes = function(d){return "Да"};
 

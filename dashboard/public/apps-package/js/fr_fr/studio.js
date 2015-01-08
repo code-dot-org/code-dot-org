@@ -21548,7 +21548,7 @@ exports.backgroundCave = function(d){return "grotte"};
 
 exports.backgroundCloudy = function(d){return "nuageux"};
 
-exports.backgroundHardcourt = function(d){return "hardcourt"};
+exports.backgroundHardcourt = function(d){return "Terrain"};
 
 exports.backgroundNight = function(d){return "nuit"};
 

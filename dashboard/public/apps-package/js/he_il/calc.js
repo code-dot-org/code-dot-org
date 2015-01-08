@@ -11434,9 +11434,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.he=function(n){return n===1?"one":"other"}
 exports.compute = function(d){return "חשב"};
 
-exports.equivalentExpression = function(d){return "נסה לסדר מחדש את הפרמטרים שלך על מנת לקבל בדיוק את אותה התוצאה."};
+exports.equivalentExpression = function(d){return "נסה לסדר מחדש את הפרמטרים שלך על מנת לקבל בדיוק אותו ביטוי."};
 
-exports.extraTopBlocks = function(d){return "קיימים בלוקים לא מחוברים.  האם התכוונת לצרף אותם לבלוק \"חשב\" ?"};
+exports.extraTopBlocks = function(d){return "יש לך בלוקים לא מחוברים.  האם התכוונת לצרף אותם לבלוק \"חשב\" ?"};
 
 exports.goal = function(d){return "מטרה:"};
 
@@ -11491,33 +11491,33 @@ exports.directionWestLetter = function(d){return "מע"};
 
 exports.end = function(d){return "סוף"};
 
-exports.emptyBlocksErrorMsg = function(d){return "בלוקי ה\"חזור שוב\" או \"אם\" צריכים להיות בעלי בלוקים פנימיים כדי לעבוד. וודא כי הבלוק הפנימי מתאים בבלוק המכיל."};
+exports.emptyBlocksErrorMsg = function(d){return "בלוקי ה\"חזור שוב\" או ה\"אם\" צריכים בלוקים אחרים בתוכם כדי לעבוד. וודא כי הבלוק הפנימי מתאים בבלוק החיצוני."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "פונקציית הבלוק דורשת בלוקים אחרים בתוך לעבודה."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "פונקציית הבלוק דורשת בלוקים אחרים בתוכה כדי לעבוד."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "צריכים להיות בלוקים בתוך הגדרת הפונקציה שלך. לחץ על \"עריכה\" וגרור את הבלוקים שבתוך הבלוק הירוק."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "לחץ על \"ערוך\" כדי לוודא שאין לך בלוקים חסרים בתוך הגדרת הפונקציה שלך."};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "זכור להצמיד בלוק לכל פרמטר קלט שבבלוק הפונקציה בסביבת העבודה שלך."};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "הוספת בלוק פרמטר, אבל לא ביצעת בו שימוש בהגדרה. הקפד להשתמש בפרמטר על ידי לחיצה על \"עריכה\" והצבת בלוק הפרמטר בתוך הבלוק הירוק."};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "תיצור פרמטר לפונקציה שלך ע\"י לחיצה על \"עריכה\" והוספת הפרמטים הנחוצים. גרור את בלוק הפרמטר החדש אל תוך הגדרת הפונקציה שלך."};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "יצרת פונקציה, אך לא ביצעת בה שימוש בסביבת העבודה שלך! לחץ על \"פונקציות\" בארגז הכלים ותוודא שאתה משתמש בה בתוכנית שלך."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "נסה להחליף \"???\" בערך כלשהו."};
 
 exports.extraTopBlocks = function(d){return "יש לך אבני כעיגולים בצבע. התכוונת לצרף אלה כדי לחסום את \"בעת הפעלת\"?"};
 
-exports.finalStage = function(d){return "כל הכבוד! השלמת את השלב הסופי."};
+exports.finalStage = function(d){return "מזל טוב! השלמת את השלב הסופי."};
 
-exports.finalStageTrophies = function(d){return "כל הכבוד! השלמת את השלב הסופי וזכית ב"+p(d,"numTrophies",0,"he",{"one":"פרס","other":n(d,"numTrophies")+" פרסים"})+"."};
+exports.finalStageTrophies = function(d){return "מזל טוב! השלמת את השלב הסופי וזכית ב"+p(d,"numTrophies",0,"he",{"one":"פרס","other":n(d,"numTrophies")+" פרסים"})+"."};
 
 exports.finish = function(d){return "סיים"};
 
-exports.generatedCodeInfo = function(d){return "אפילו האוניברסטאות העליונות מלמדות קידוד מבוסס בלוק (לדוגמה, "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). אבל מתחת למכסה המנוע, האבנים שאספת ניתנות לצפייה גם בג'אווה סקריפט, שפת הקידוד המדוברת בעולם:"};
+exports.generatedCodeInfo = function(d){return "אפילו האוניברסטאות הטובות ביותר מלמדות תכנות בשיטת בלוקים (לדוגמה, "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). אבל מתחת למכסה המנוע, המיומנויות שרכשת ניתנות למימוש גם בג'אווה סקריפט, שפת התכנות הפופלרית בעולם:"};
 
 exports.hashError = function(d){return "סליחה, אך '%1' אינו תואם לאף תוכנית שנשמרה."};
 
@@ -11531,25 +11531,25 @@ exports.levelIncompleteError = function(d){return "הנך משתמש בכל סו
 
 exports.listVariable = function(d){return "רשימה"};
 
-exports.makeYourOwnFlappy = function(d){return "תיצור משחק פלפי משלך"};
+exports.makeYourOwnFlappy = function(d){return "תיצור משחק Flappy משלך"};
 
-exports.missingBlocksErrorMsg = function(d){return "השתמש באחד או יותר מהבלוקים להלן כדי לפתור את החידה."};
+exports.missingBlocksErrorMsg = function(d){return "השתמש באחד או יותר מהבלוקים להלן כדי לפתור את הפאזל."};
 
-exports.nextLevel = function(d){return "כל הכבוד! השלמת את חידה "+v(d,"puzzleNumber")+"."};
+exports.nextLevel = function(d){return "מזל טוב! השלמת את פאזל "+v(d,"puzzleNumber")+"."};
 
-exports.nextLevelTrophies = function(d){return "כל הכבוד! השלמת את חידה "+v(d,"puzzleNumber")+" וזכית ב"+p(d,"numTrophies",0,"he",{"one":"פרס","other":n(d,"numTrophies")+" פרסים"})+"."};
+exports.nextLevelTrophies = function(d){return "מזל טוב! השלמת את פאזל "+v(d,"puzzleNumber")+" וזכית ב"+p(d,"numTrophies",0,"he",{"one":"פרס","other":n(d,"numTrophies")+" פרסים"})+"."};
 
 exports.nextStage = function(d){return "מזל טוב! השלמת "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "כל הכבוד! השלמת את שלב "+v(d,"stageNumber")+" וזכית ב"+p(d,"numTrophies",0,"he",{"one":"פרס","other":n(d,"numTrophies")+" פרסים"})+"."};
+exports.nextStageTrophies = function(d){return "Congratulations! You completed "+v(d,"stageName")+" and won "+p(d,"numTrophies",0,"he",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.numBlocksNeeded = function(d){return "כל הכבוד! השלמת את חידה "+v(d,"puzzleNumber")+". (עם זאת, יכולת להשתמש רק ב "+p(d,"numBlocks",0,"he",{"one":"1 בלוק","other":n(d,"numBlocks")+" בלוקים"})+".)"};
 
 exports.numLinesOfCodeWritten = function(d){return "כתבת "+p(d,"numLines",0,"he",{"one":"שורת","other":n(d,"numLines")+" שורות"})+" קוד!"};
 
-exports.play = function(d){return "לשחק"};
+exports.play = function(d){return "הפעל"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "הדפס"};
 
 exports.puzzleTitle = function(d){return "חידה "+v(d,"puzzle_number")+" מ- "+v(d,"stage_total")};
 
@@ -11557,7 +11557,7 @@ exports.repeat = function(d){return "חזור על"};
 
 exports.resetProgram = function(d){return "אפס"};
 
-exports.runProgram = function(d){return "ריצה"};
+exports.runProgram = function(d){return "הרץ"};
 
 exports.runTooltip = function(d){return "הפעל את התוכנית המוגדרת על-ידי הבלוקים בסביבת העבודה."};
 
@@ -11569,7 +11569,7 @@ exports.showBlocksHeader = function(d){return "הצג בלוקים"};
 
 exports.showGeneratedCode = function(d){return "הצג קוד"};
 
-exports.stringEquals = function(d){return "string=?"};
+exports.stringEquals = function(d){return "מחרוזת=?"};
 
 exports.subtitle = function(d){return "סביבת תיכנות חזותית"};
 
@@ -11593,9 +11593,9 @@ exports.hintRequest = function(d){return "ראה רמז"};
 
 exports.backToPreviousLevel = function(d){return "חזרה לשלב הקודם"};
 
-exports.saveToGallery = function(d){return "לשמור את הגלריה שלך"};
+exports.saveToGallery = function(d){return "שמור לגלריה"};
 
-exports.savedToGallery = function(d){return "נשמר לגלריה שלך!"};
+exports.savedToGallery = function(d){return "נשמר בגלריה!"};
 
 exports.shareFailure = function(d){return "מצטערים, אנחנו לא יכולים לשתף תוכנית זו."};
 

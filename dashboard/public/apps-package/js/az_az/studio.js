@@ -21519,7 +21519,7 @@ exports.orientationLock = function(d){return "Cihaz nizamlamalarında səmt kili
 
 exports.wantToLearn = function(d){return "Want to learn to code?"};
 
-exports.watchVideo = function(d){return "Vidəo izle"};
+exports.watchVideo = function(d){return "Videoya baxın"};
 
 exports.when = function(d){return "when"};
 

@@ -12735,7 +12735,7 @@ exports.setPaddleSpeedVeryFast = function(d){return "postavi vrlo veliku brzinu 
 
 exports.setPaddleSpeedTooltip = function(d){return "Postavlja brzinu reketa"};
 
-exports.shareBounceTwitter = function(d){return "Pogledaj igru Odbijanca koju sam napravio sam uz pomoć @codeorg"};
+exports.shareBounceTwitter = function(d){return "Pogledaj igru Odskakanja koju sam napravio sam uz pomoć @codeorg"};
 
 exports.shareGame = function(d){return "Podijeli svoju igru:"};
 

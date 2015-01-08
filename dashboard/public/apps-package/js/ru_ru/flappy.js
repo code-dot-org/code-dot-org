@@ -12557,7 +12557,7 @@ exports.hintHeader = function(d){return "Подсказка:"};
 
 exports.genericFeedback = function(d){return "Посмотрите, что у вас получилось, и попытайтесь исправить вашу программу."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Проверить, что я сделал"};
 
 
 },{"messageformat":52}],40:[function(require,module,exports){
@@ -12695,7 +12695,7 @@ exports.setGravityTooltip = function(d){return "Задать уровень сл
 
 exports.setGround = function(d){return "задать основание"};
 
-exports.setGroundRandom = function(d){return "задать случайное основане"};
+exports.setGroundRandom = function(d){return "задать случайное основание"};
 
 exports.setGroundFlappy = function(d){return "задать основание Земля"};
 

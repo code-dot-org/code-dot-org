@@ -16680,17 +16680,17 @@ exports.emptyBlocksErrorMsg = function(d){return "”Repeat”または\"If\"の
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "関数ブロックは、中に他のブロックがないと動きません。"};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "関数の中に他のブロックがありません。「編集」をクリックしてから緑色のブロックの中にほかのブロックを持ってきてください。"};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "「編集」をクリックして、関数定義の中に足りないブロックがないか確認してください。"};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "ワークスペースにある関数ブロックのそれぞれのパラメーター入力にブロックをくっつけるのを忘れないでください。"};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "パラメーターブロックをたしましたが、使われていません。「編集」をクリックしてから緑色のブロックの中にパラメーターブロックを置くことでパラメータを使うようにしてください"};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "関数に必要なパラメータを作るために、「編集」をクリックして必要なパラメータを足してください。新しいパラメーターブロックを関数の定義にドラッグして持ってきます。"};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "関数を作りましたが、ワークスペースの中では使われていません！ツールボックスの「関数」をクリックして、プログラムで使われるようにしてください。"};
 
 exports.errorQuestionMarksInNumberField = function(d){return "\"???\"を何かの値に置きかえてみて。"};
 
@@ -16754,7 +16754,7 @@ exports.showBlocksHeader = function(d){return "ブロックを表示"};
 
 exports.showGeneratedCode = function(d){return "コードの表示"};
 
-exports.stringEquals = function(d){return "string=?"};
+exports.stringEquals = function(d){return "文字列 =？"};
 
 exports.subtitle = function(d){return "ビジュアル・プログラミング環境"};
 
@@ -16810,22 +16810,22 @@ exports.hintHeader = function(d){return "ちょび技があるよ:"};
 
 exports.genericFeedback = function(d){return "どうなったかよく見て、プログラムを直してみよう。"};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "私の作品を試してみてください"};
 
 
 },{"messageformat":72}],60:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.ja=function(n){return "other"}
-exports.atHoneycomb = function(d){return "ハチの巣で"};
+exports.atHoneycomb = function(d){return "はちのす"};
 
-exports.atFlower = function(d){return "はなで"};
+exports.atFlower = function(d){return "はな"};
 
-exports.avoidCowAndRemove = function(d){return "牛を回避し、1 つ取り除く"};
+exports.avoidCowAndRemove = function(d){return "うしにぶつからないように つちをかたづけよう"};
 
 exports.continue = function(d){return "続行"};
 
-exports.dig = function(d){return "1つ取り除く"};
+exports.dig = function(d){return "つちをかたづける"};
 
-exports.digTooltip = function(d){return "泥を1つ取り除く"};
+exports.digTooltip = function(d){return "つちをかたづける"};
 
 exports.dirE = function(d){return "東"};
 
@@ -16839,33 +16839,33 @@ exports.doCode = function(d){return "実行"};
 
 exports.elseCode = function(d){return "他"};
 
-exports.fill = function(d){return "1つ埋める"};
+exports.fill = function(d){return "あなをうめる"};
 
-exports.fillN = function(d){return " "+v(d,"shovelfuls")+"個、埋める"};
+exports.fillN = function(d){return v(d,"shovelfuls")+"かい あなをうめる"};
 
-exports.fillStack = function(d){return v(d,"shovelfuls")+" 個の穴を埋める"};
+exports.fillStack = function(d){return v(d,"shovelfuls")+"つのあなをうめる"};
 
-exports.fillSquare = function(d){return "四角を塗りつぶす"};
+exports.fillSquare = function(d){return "しかくのなかを ぬる"};
 
-exports.fillTooltip = function(d){return "泥を1つ置きます。"};
+exports.fillTooltip = function(d){return "つちを１かい おく"};
 
 exports.finalLevel = function(d){return "おめでとうございます ！最後のパズルを解決しました。"};
 
-exports.flowerEmptyError = function(d){return "あなたが止まっている花にもうミツはありません。"};
+exports.flowerEmptyError = function(d){return "このはなには みつがないよ。"};
 
 exports.get = function(d){return "取得"};
 
 exports.heightParameter = function(d){return "高さ"};
 
-exports.holePresent = function(d){return "穴があります。"};
+exports.holePresent = function(d){return "あながある"};
 
-exports.honey = function(d){return "ハチミツを作る"};
+exports.honey = function(d){return "はちみつをつくる"};
 
-exports.honeyAvailable = function(d){return "ハチミツ"};
+exports.honeyAvailable = function(d){return "はちみつ"};
 
-exports.honeyTooltip = function(d){return "花のミツからハチミツをつくる"};
+exports.honeyTooltip = function(d){return "はなのみつを はちみつにする"};
 
-exports.honeycombFullError = function(d){return "ハチの巣がいっぱいで、ハチミツ用の場所がありません。"};
+exports.honeycombFullError = function(d){return "はちのすは いっぱいになりました。はちみつをつくれません。"};
 
 exports.ifCode = function(d){return "もし"};
 
@@ -16877,37 +16877,37 @@ exports.ifTooltip = function(d){return "指定した方向に道がある場合�
 
 exports.ifelseTooltip = function(d){return "指定した方向にパスがある場合は、最初のブロックにアクションを行います。それ以外の場合は、2 番目のブロックにアクションを行います。"};
 
-exports.ifFlowerTooltip = function(d){return "ある向きに花/ハチの巣がある場合、何かをします。"};
+exports.ifFlowerTooltip = function(d){return "はなや はちのすがあるときにだけ、どうぐをつかいます。"};
 
-exports.ifelseFlowerTooltip = function(d){return "ある向きに花/ハチの巣がある場合、アクションの最初のブロックを実行します。そうでなければ、アクションにある２番目のブロックを実行します。"};
+exports.ifelseFlowerTooltip = function(d){return "はなや はちのすがあるときにだけ、うえのどうぐをつかいます。ないときには、したのどうぐをつかいます。"};
 
-exports.insufficientHoney = function(d){return "すべて正しいブロックを使いました。しかし、ハチミツの量がたりません。"};
+exports.insufficientHoney = function(d){return "どうぐをただしくつかうことができたね！ でも、はちみつがたりないよ！"};
 
-exports.insufficientNectar = function(d){return "すべて正しいブロックを使いました。しかし、集めたミツの量がたりません。"};
+exports.insufficientNectar = function(d){return "どうぐをただしくつかうことができたね！ でも、はなのみつがたりないよ！"};
 
 exports.make = function(d){return "つくる"};
 
 exports.moveBackward = function(d){return "うしろにすすむ"};
 
-exports.moveEastTooltip = function(d){return "みぎに1つうごかしてください。"};
+exports.moveEastTooltip = function(d){return "いっぽみぎにうごくよ。"};
 
 exports.moveForward = function(d){return "前方に移動します。"};
 
 exports.moveForwardTooltip = function(d){return "私を前方に 1スペース 移動させてください。"};
 
-exports.moveNorthTooltip = function(d){return "うえに1つうごかしてください。"};
+exports.moveNorthTooltip = function(d){return "いっぽうえにうごくよ。"};
 
-exports.moveSouthTooltip = function(d){return "したに1つうごかしてください。"};
+exports.moveSouthTooltip = function(d){return "いっぽしたにうごくよ。"};
 
-exports.moveTooltip = function(d){return "まえかうしろに1個うごかしてください。"};
+exports.moveTooltip = function(d){return "いっぽまえかうしろにうごくよ。"};
 
 exports.moveWestTooltip = function(d){return "ひだりに1つうごかしてください。"};
 
-exports.nectar = function(d){return "ミツをあつめる。"};
+exports.nectar = function(d){return "はなのみつをとる"};
 
-exports.nectarRemaining = function(d){return "花のみつ"};
+exports.nectarRemaining = function(d){return "はなのみつ"};
 
-exports.nectarTooltip = function(d){return "花からみつをとります。"};
+exports.nectarTooltip = function(d){return "はなのみつをとるよ。"};
 
 exports.nextLevel = function(d){return "おめでとうございます ！このパズルを完了しました。"};
 
@@ -16919,9 +16919,9 @@ exports.noPathLeft = function(d){return "左に道がありません"};
 
 exports.noPathRight = function(d){return "右に道がありません"};
 
-exports.notAtFlowerError = function(d){return "ミツは花からしか集められません。"};
+exports.notAtFlowerError = function(d){return "ここでは、はなのみつをとれないよ。"};
 
-exports.notAtHoneycombError = function(d){return "ハチミツはハチの巣でしかつくれません。"};
+exports.notAtHoneycombError = function(d){return "ここでは、はちみつをつくれないよ。"};
 
 exports.numBlocksNeeded = function(d){return "このパズルは%1個のブロックで解けます。"};
 
@@ -16935,17 +16935,17 @@ exports.pilePresent = function(d){return "山があります。"};
 
 exports.putdownTower = function(d){return "タワーを置く"};
 
-exports.removeAndAvoidTheCow = function(d){return "1 を削除し、牛を避ける"};
+exports.removeAndAvoidTheCow = function(d){return "うしにぶつからないように つちをかたづける"};
 
-exports.removeN = function(d){return v(d,"shovelfuls")+" を削除します。"};
+exports.removeN = function(d){return v(d,"shovelfuls")+"かい つちをかたづける"};
 
-exports.removePile = function(d){return "杭を削除します。"};
+exports.removePile = function(d){return "つちをかたづける"};
 
-exports.removeStack = function(d){return v(d,"shovelfuls")+" 杭の山を削除します。"};
+exports.removeStack = function(d){return v(d,"shovelfuls")+"かい つちをかたづける"};
 
 exports.removeSquare = function(d){return "正方形を削除します。"};
 
-exports.repeatCarefullyError = function(d){return "この問題を解くには、２つの移動と１つの方向転換を\"繰り返し\"ブロックの中に配置しなくてはなりません。注意深く考えましょう。最後に余計な方向転換が行われてもかまいません。"};
+exports.repeatCarefullyError = function(d){return "くりかえすどうぐのなかで、２かいすすむ、１かいほうこうをかえるといいね。そのあとに、もういっかい ほうこうをかえるといいよ。"};
 
 exports.repeatUntil = function(d){return "までを繰り返します"};
 
@@ -16955,9 +16955,9 @@ exports.repeatUntilFinish = function(d){return "完了するまで繰り返し�
 
 exports.step = function(d){return "ステップ"};
 
-exports.totalHoney = function(d){return "ハチミツの合計"};
+exports.totalHoney = function(d){return "ぜんぶのはちみつ"};
 
-exports.totalNectar = function(d){return "ミツの合計"};
+exports.totalNectar = function(d){return "ぜんぶのはなのみつ"};
 
 exports.turnLeft = function(d){return "左に曲がる"};
 
@@ -16965,9 +16965,9 @@ exports.turnRight = function(d){return "右に回転"};
 
 exports.turnTooltip = function(d){return "私を左もしくは右に90 度曲がらせてください。"};
 
-exports.uncheckedCloudError = function(d){return "花かハチの巣かどうか確認するために全ての雲をチェックしてください。"};
+exports.uncheckedCloudError = function(d){return "くものなかにあるのは、もしかしたらはなですか？ はちのすですか？ どうぐをつかってしらべよう。"};
 
-exports.uncheckedPurpleError = function(d){return "ムラサキの花にミツがあるかすべてチェックしてください。"};
+exports.uncheckedPurpleError = function(d){return "むらさきのはなに、みつがあるかどうか。どうぐをつかってしらべてみよう。"};
 
 exports.whileMsg = function(d){return "以下の間"};
 

@@ -21598,7 +21598,7 @@ exports.emotion = function(d){return "mieliala"};
 
 exports.finalLevel = function(d){return "Onneksi olkoon! Olet suorittanut viimeisen pulman."};
 
-exports.for = function(d){return "varten"};
+exports.for = function(d){return "koska"};
 
 exports.hello = function(d){return "hei"};
 

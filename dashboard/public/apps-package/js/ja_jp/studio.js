@@ -21403,17 +21403,17 @@ exports.emptyBlocksErrorMsg = function(d){return "”Repeat”または\"If\"の
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "関数ブロックは、中に他のブロックがないと動きません。"};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "関数の中に他のブロックがありません。「編集」をクリックしてから緑色のブロックの中にほかのブロックを持ってきてください。"};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "「編集」をクリックして、関数定義の中に足りないブロックがないか確認してください。"};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "ワークスペースにある関数ブロックのそれぞれのパラメーター入力にブロックをくっつけるのを忘れないでください。"};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "パラメーターブロックをたしましたが、使われていません。「編集」をクリックしてから緑色のブロックの中にパラメーターブロックを置くことでパラメータを使うようにしてください"};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "関数に必要なパラメータを作るために、「編集」をクリックして必要なパラメータを足してください。新しいパラメーターブロックを関数の定義にドラッグして持ってきます。"};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "関数を作りましたが、ワークスペースの中では使われていません！ツールボックスの「関数」をクリックして、プログラムで使われるようにしてください。"};
 
 exports.errorQuestionMarksInNumberField = function(d){return "\"???\"を何かの値に置きかえてみて。"};
 
@@ -21477,7 +21477,7 @@ exports.showBlocksHeader = function(d){return "ブロックを表示"};
 
 exports.showGeneratedCode = function(d){return "コードの表示"};
 
-exports.stringEquals = function(d){return "string=?"};
+exports.stringEquals = function(d){return "文字列 =？"};
 
 exports.subtitle = function(d){return "ビジュアル・プログラミング環境"};
 
@@ -21533,14 +21533,14 @@ exports.hintHeader = function(d){return "ちょび技があるよ:"};
 
 exports.genericFeedback = function(d){return "どうなったかよく見て、プログラムを直してみよう。"};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "私の作品を試してみてください"};
 
 
 },{"messageformat":61}],49:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.ja=function(n){return "other"}
 exports.actor = function(d){return "キャラクター"};
 
-exports.alienInvasion = function(d){return "Alien Invasion!"};
+exports.alienInvasion = function(d){return "外来の侵入"};
 
 exports.backgroundBlack = function(d){return "まっくろ"};
 
@@ -21598,7 +21598,7 @@ exports.emotion = function(d){return "気分"};
 
 exports.finalLevel = function(d){return "おめでとうございます ！最後のパズルを解決しました。"};
 
-exports.for = function(d){return "for"};
+exports.for = function(d){return "ため"};
 
 exports.hello = function(d){return "こんにちは"};
 
@@ -21782,7 +21782,7 @@ exports.saySprite = function(d){return "という"};
 
 exports.saySpriteN = function(d){return "と、スプライト "+v(d,"spriteIndex")+" が言う"};
 
-exports.saySpriteTooltip = function(d){return "Pop up a speech bubble with the associated text from the specified character."};
+exports.saySpriteTooltip = function(d){return "指定した俳優から会話気泡と関連の原文がポップアップする"};
 
 exports.scoreText = function(d){return "得点："};
 
@@ -21858,7 +21858,7 @@ exports.setSpriteDragon = function(d){return "竜に"};
 
 exports.setSpriteGhost = function(d){return "おばけに"};
 
-exports.setSpriteHidden = function(d){return "to a hidden image"};
+exports.setSpriteHidden = function(d){return "隠れた像へ"};
 
 exports.setSpriteHideK1 = function(d){return "かくす"};
 

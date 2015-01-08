@@ -61,6 +61,7 @@ Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_UNTIL = "korda kuni";
 Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_WHILE = "korda tingimusel";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = "Täida käske korduvalt, lõpetades siis, kui tingimus kehtib.";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = "Täida käske korduvalt, lõpetades siis, kui tingimus enam ei kehti.";
+Blockly.Msg.DEFINE_HEADER_DEFINITION = "Definition";
 Blockly.Msg.DEFINE_FUNCTION_DEFINE = "Määra";
 Blockly.Msg.DELETE_BLOCK = "Kustuta plokk";
 Blockly.Msg.DELETE_PARAMETER = "Kustuta parameeter...";

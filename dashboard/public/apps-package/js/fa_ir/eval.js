@@ -14594,9 +14594,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.fa=function(n){return "other"}
 exports.and = function(d){return "و"};
 
-exports.booleanTrue = function(d){return "درست"};
+exports.booleanTrue = function(d){return "صحیح"};
 
-exports.booleanFalse = function(d){return "نادرست\nغلط"};
+exports.booleanFalse = function(d){return "ناصحیح"};
 
 exports.blocklyMessage = function(d){return "بلاکلی"};
 
@@ -14770,7 +14770,7 @@ exports.hintHeader = function(d){return "نکته اینجاست:"};
 
 exports.genericFeedback = function(d){return "ببینبد چطور تمامش کردید,و سعی به رفع مشکلات برنامه خود کنید."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "آنچه من ساخته ام را امتحان کن "};
 
 
 },{"messageformat":63}],51:[function(require,module,exports){
@@ -14803,7 +14803,7 @@ exports.starBlockTitle = function(d){return "ستاره (شعاع، سبک، ر�
 
 exports.radialStarBlockTitle = function(d){return "ستاره شعاعی (نقاط درونی، بیرونی، سبک، رنگ)"};
 
-exports.polygonBlockTitle = function(d){return "polygon (sides, length, style, color)"};
+exports.polygonBlockTitle = function(d){return "چند ضلعی( کناره ها، طول، مدل، رنگ)"};
 
 exports.stringAppendBlockTitle = function(d){return "رشته ی-الحاق (اول، دوم)"};
 
