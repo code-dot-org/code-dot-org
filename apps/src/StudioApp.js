@@ -216,7 +216,12 @@ StudioAppClass.prototype.init = function(config) {
   if (showCode && this.enableShowCode) {
     dom.addClickTouchEvent(showCode, _.bind(function() {
       if (this.editCode) {
-        this.editor.toggleBlocks();
+        var result = this.editor.toggleBlocks();
+        if (result.error) {
+          // TODO (cpirich) We could extract error.loc to determine where the
+          // error occurred and highlight that error
+          this.feedback_.showToggleBlocksError(this.Dialog);
+        }
         this.updateHeadersAfterDropletToggle_(this.editor.currentlyUsingBlocks);
         if (!this.editor.currentlyUsingBlocks) {
           this.editor.aceEditor.focus();

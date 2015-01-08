@@ -38,35 +38,3 @@ module.exports = studioAppSingleton;
 // our singleton StudioApp object. We can almost certainly do this more cleanly..
 feedback.applySingleton(studioAppSingleton);
 studioAppSingleton.feedback_ = feedback;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Methods for determining and displaying feedback.

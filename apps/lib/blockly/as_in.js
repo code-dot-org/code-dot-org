@@ -61,6 +61,7 @@ Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_UNTIL = "যেতিয়ালৈকে
 Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_WHILE = "যেতিয়ালৈকে হয় পুনৰায় কৰক";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = "যেতিয়ালৈকে মান অশুদ্ধ থাকে, কাৰ্য্য কেইটা কৰক ৷";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = "যেতিয়ালৈকে মান শুদ্ধ থাকে, কাৰ্য্য কেইটা কৰক ৷.";
+Blockly.Msg.DEFINE_HEADER_DEFINITION = "Definition";
 Blockly.Msg.DEFINE_FUNCTION_DEFINE = "Define";
 Blockly.Msg.DELETE_BLOCK = "খন্দটো মচি পেলাৱক";
 Blockly.Msg.DELETE_PARAMETER = "Delete parameter...";
