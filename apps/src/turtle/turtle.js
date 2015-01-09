@@ -29,11 +29,10 @@
 var commonMsg = require('../../locale/current/common');
 var turtleMsg = require('../../locale/current/turtle');
 var levels = require('./levels');
-var Colours = require('./core').Colours;
+var Colours = require('./colours');
 var codegen = require('../codegen');
 var ArtistAPI = require('./api');
 var page = require('../templates/page.html');
-var feedback = require('../feedback.js');
 var utils = require('../utils');
 var Slider = require('../slider');
 var _ = utils.getLodash();
@@ -88,6 +87,7 @@ var Artist = function () {
 
   // image icons and image paths for the 'set pattern block'
   this.lineStylePatternOptions = [];
+  this.stamps = [];
 
   // PID of animation task currently executing.
   this.pid = 0;
@@ -155,17 +155,15 @@ Artist.prototype.init = function(config) {
   this.skin = config.skin;
   this.level = config.level;
 
-  this.lineStylePatternOptions = [
-    [this.skin.patternDefault, 'DEFAULT'], //  signals return to default path drawing
-    [this.skin.rainbowMenu, 'rainbowLine'],  // set to property name for image within skin
-    [this.skin.ropeMenu, 'ropeLine'],  // referenced as skin[pattern];
-    [this.skin.squigglyMenu, 'squigglyLine'],
-    [this.skin.swirlyMenu, 'swirlyLine'],
-    [this.skin.annaLine, 'annaLine'],
-    [this.skin.elsaLine, 'elsaLine'],
-    [this.skin.annaLine_2x, 'annaLine_2x'],
-    [this.skin.elsaLine_2x, 'elsaLine_2x'],
-  ];
+  // Preload stamp images
+  this.stamps = [];
+  for (var i = 0; i < this.skin.stampValues.length; i++) {
+    var url = this.skin.stampValues[i][0];
+    var key = this.skin.stampValues[i][1];
+    var img = new Image();
+    img.src = url;
+    this.stamps[key] = img;
+  }
 
   if (this.skin.id == "anna" || this.skin.id == "elsa") {
     // let's try adding a background image
@@ -253,60 +251,62 @@ Artist.prototype.afterInject_ = function (config) {
 
   // TODO (br-pair): - pull this out?
   if (this.studioApp_.usingBlockly && (this.skin.id === "anna" || this.skin.id === "elsa")) {
+    // Override colour_random to only generate random colors from within our frozen
+    // palette
     Blockly.JavaScript.colour_random = function() {
       // Generate a random colour.
       if (!Blockly.JavaScript.definitions_.colour_random) {
         var functionName = Blockly.JavaScript.variableDB_.getDistinctName(
           'colour_random', Blockly.Generator.NAME_TYPE);
-          Blockly.JavaScript.colour_random.functionName = functionName;
-          var func = [];
-          func.push('function ' + functionName + '() {');
-          func.push('   var colors = ' + JSON.stringify(Blockly.FieldColour.COLOURS) + ';');
-          func.push('  return colors[Math.floor(Math.random()*colors.length)];');
-          func.push('}');
-          Blockly.JavaScript.definitions_.colour_random = func.join('\n');
-        }
-        var code = Blockly.JavaScript.colour_random.functionName + '()';
-        return [code, Blockly.JavaScript.ORDER_FUNCTION_CALL];
-      };
-    }
+        Blockly.JavaScript.colour_random.functionName = functionName;
+        var func = [];
+        func.push('function ' + functionName + '() {');
+        func.push('   var colors = ' + JSON.stringify(Blockly.FieldColour.COLOURS) + ';');
+        func.push('  return colors[Math.floor(Math.random()*colors.length)];');
+        func.push('}');
+        Blockly.JavaScript.definitions_.colour_random = func.join('\n');
+      }
+      var code = Blockly.JavaScript.colour_random.functionName + '()';
+      return [code, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+    };
+  }
 
-    this.loadDecorationAnimation();
+  this.loadDecorationAnimation();
 
-    // Set their initial contents.
-    this.loadTurtle();
-    this.drawImages();
-    this.isDrawingAnswer_ = true;
-    this.drawAnswer();
-    this.isDrawingAnswer_ = false;
-    if (this.level.predraw_blocks) {
-      this.isPredrawing_ = true;
-      this.drawBlocksOnCanvas(this.level.predraw_blocks, this.ctxPredraw);
-      this.isPredrawing_ = false;
-    }
+  // Set their initial contents.
+  this.loadTurtle();
+  this.drawImages();
+  this.isDrawingAnswer_ = true;
+  this.drawAnswer();
+  this.isDrawingAnswer_ = false;
+  if (this.level.predraw_blocks) {
+    this.isPredrawing_ = true;
+    this.drawBlocksOnCanvas(this.level.predraw_blocks, this.ctxPredraw);
+    this.isPredrawing_ = false;
+  }
 
-    // pre-load image for line pattern block. Creating the image object and setting source doesn't seem to be
-    // enough in this case, so we're actually creating and reusing the object within the document body.
+  // pre-load image for line pattern block. Creating the image object and setting source doesn't seem to be
+  // enough in this case, so we're actually creating and reusing the object within the document body.
 
-    if (this.skin.id == "anna" || this.skin.id == "elsa") {
-      var imageContainer = document.createElement('div');
-      imageContainer.style.display='none';
-      document.body.appendChild(imageContainer);
+  if (this.skin.id == "anna" || this.skin.id == "elsa") {
+    var imageContainer = document.createElement('div');
+    imageContainer.style.display='none';
+    document.body.appendChild(imageContainer);
 
-      for( var i = 0; i < this.lineStylePatternOptions.length; i++) {
-        var pattern = this.lineStylePatternOptions[i][1];
-        if (this.skin[pattern]) {
-          var img = new Image();
-          img.src = this.skin[pattern];
-          this.loadedPathPatterns[pattern] = img;
-        }
+    for( var i = 0; i < this.skin.lineStylePatternOptions.length; i++) {
+      var pattern = this.skin.lineStylePatternOptions[i][1];
+      if (this.skin[pattern]) {
+        var img = new Image();
+        img.src = this.skin[pattern];
+        this.loadedPathPatterns[pattern] = img;
       }
     }
+  }
 
-    // Adjust visualizationColumn width.
-    var visualizationColumn = document.getElementById('visualizationColumn');
-    visualizationColumn.style.width = '400px';
-  };
+  // Adjust visualizationColumn width.
+  var visualizationColumn = document.getElementById('visualizationColumn');
+  visualizationColumn.style.width = '400px';
+};
 
 /**
  * On startup draw the expected answer and save it to the answer canvas.
@@ -712,7 +712,7 @@ Artist.prototype.execute = function() {
   // Reset the graphic.
   this.studioApp_.reset();
 
-  if (feedback.hasExtraTopBlocks()) {
+  if (this.studioApp_.hasExtraTopBlocks()) {
     // immediately check answer, which will fail and report top level blocks
     this.checkAnswer();
     return;

@@ -29,7 +29,6 @@ var tiles = require('./tiles');
 var codegen = require('../codegen');
 var api = require('./api');
 var page = require('../templates/page.html');
-var feedback = require('../feedback.js');
 var dom = require('../dom');
 var utils = require('../utils');
 var mazeUtils = require('./mazeUtils');
