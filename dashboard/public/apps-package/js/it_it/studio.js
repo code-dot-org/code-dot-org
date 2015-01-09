@@ -6101,20 +6101,22 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
   return retVal;
 };
 
-exports.marshalInterpreterToNative = function (interpreterVar) {
+exports.marshalInterpreterToNative = function (interpreter, interpreterVar) {
   if (interpreterVar.isPrimitive) {
     return interpreterVar.data;
-  } else if (Webapp.interpreter.isa(interpreterVar, Webapp.interpreter.ARRAY)) {
+  } else if (interpreter.isa(interpreterVar, interpreter.ARRAY)) {
     var nativeArray = [];
     nativeArray.length = interpreterVar.length;
     for (var i = 0; i < nativeArray.length; i++) {
-      nativeArray[i] = exports.marshalInterpreterToNative(interpreterVar.properties[i]);
+      nativeArray[i] = exports.marshalInterpreterToNative(interpreter,
+                                                          interpreterVar.properties[i]);
     }
     return nativeArray;
-  } else if (Webapp.interpreter.isa(interpreterVar, Webapp.interpreter.OBJECT)) {
+  } else if (interpreter.isa(interpreterVar, interpreter.OBJECT)) {
     var nativeObject = {};
     for (var prop in interpreterVar.properties) {
-      nativeObject[prop] = exports.marshalInterpreterToNative(interpreterVar.properties[prop]);
+      nativeObject[prop] = exports.marshalInterpreterToNative(interpreter,
+                                                              interpreterVar.properties[prop]);
     }
     return nativeObject;
   } else {
@@ -6132,7 +6134,7 @@ exports.makeNativeMemberFunction = function (interpreter, nativeFunc, nativePare
     // Call the native function:
     var nativeArgs = [];
     for (var i = 0; i < arguments.length; i++) {
-      nativeArgs[i] = exports.marshalInterpreterToNative(arguments[i]);
+      nativeArgs[i] = exports.marshalInterpreterToNative(interpreter, arguments[i]);
     }
     var nativeRetVal = nativeFunc.apply(nativeParentObj, nativeArgs);
     return exports.marshalNativeToInterpreter(interpreter, nativeRetVal, null, maxDepth);
@@ -6258,7 +6260,7 @@ exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
   var userCodeRow = -1;
   if (interpreter.stateStack[0]) {
     var node = interpreter.stateStack[0].node;
-    // Adjust start/end by Webapp.userCodeStartOffset since the code running
+    // Adjust start/end by userCodeStartOffset since the code running
     // has been expanded vs. what the user sees in the editor window:
     var start = node.start - userCodeStartOffset;
     var end = node.end - userCodeStartOffset;
@@ -19220,7 +19222,7 @@ var displayFeedback = function() {
       feedbackImage: Studio.feedbackImage,
       twitter: twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
-      saveToGalleryUrl: level.freePlay && Studio.response.save_to_gallery_url,
+      saveToGalleryUrl: level.freePlay && Studio.response && Studio.response.save_to_gallery_url,
       appStrings: {
         reinfFeedbackMsg: studioMsg.reinfFeedbackMsg(),
         sharingText: studioMsg.shareGame()
