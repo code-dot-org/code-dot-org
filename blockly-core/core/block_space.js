@@ -30,6 +30,8 @@ goog.provide('Blockly.BlockSpace');
 goog.require('Blockly.ScrollbarPair');
 goog.require('Blockly.Trashcan');
 goog.require('Blockly.Xml');
+goog.require('goog.array');
+goog.require('goog.math.Coordinate');
 
 
 /**
@@ -51,6 +53,12 @@ Blockly.BlockSpace = function(blockSpaceEditor, getMetrics, setMetrics) {
    * @private
    */
   this.topBlocks_ = [];
+
+  /**
+   * @type {!Array.<!goog.math.Rect>}
+   * @private
+   */
+  this.deleteAreas_ = [];
 
   /** @type {number} */
   this.maxBlocks = Infinity;
@@ -196,6 +204,10 @@ Blockly.BlockSpace.prototype.dispose = function() {
   }
   this.svgBlockCanvas_ = null;
   this.svgBubbleCanvas_ = null;
+  if (this.flyout_) {
+    this.flyout_.dispose();
+    this.flyout_ = null;
+  }
   if (this.trashcan) {
     this.trashcan.dispose();
     this.trashcan = null;
@@ -485,4 +497,59 @@ Blockly.BlockSpace.prototype.remainingCapacity = function() {
     return Infinity;
   }
   return this.maxBlocks - this.getAllBlocks().length;
+};
+
+/**
+* Make a list of all the delete areas for this blockSpace.
+*/
+Blockly.BlockSpace.prototype.recordDeleteAreas = function() {
+  this.deleteAreas_ = [];
+  
+  if (this.trashcan) {
+    goog.array.extend(this.deleteAreas_, this.trashcan.getRect());
+    this.deleteAreaTrash_ = this.trashcan.getRect();
+  } else {
+    this.deleteAreaTrash_ = null;
+  }
+
+  if (this.flyout_) {
+    goog.array.extend(this.deleteAreas_, this.flyout_.getRect());
+  }
+
+  if (this.blockSpaceEditor) {
+    goog.array.extend(this.deleteAreas_,
+        this.blockSpaceEditor.getDeleteAreas());
+  }
+};
+
+/**
+* Is the mouse event over a delete area (toolbar or non-closing flyout)?
+* Opens or closes the trashcan and sets the cursor as a side effect.
+* @param {!Event} e Mouse move event.
+* @return {boolean} True if event is in a delete area.
+*/
+Blockly.BlockSpace.prototype.isDeleteArea = function(e) {
+  var mouseXY = Blockly.mouseToSvg(e);
+  var xy = new goog.math.Coordinate(mouseXY.x, mouseXY.y);
+
+  // Update trash can visual state
+  // Might be nice to do this side-effect elsewhere.
+  if (this.deleteAreaTrash_) {
+    if (this.deleteAreaTrash_.contains(xy)) {
+      this.trashcan.setOpen_(true);
+    } else {
+      this.trashcan.setOpen_(false);
+    }
+  }
+
+  // Check against all delete areas
+  for (var i = 0, area; area = this.deleteAreas_[i]; i++) {
+    if (area.contains(xy)) {
+      this.blockSpaceEditor.setCursor(Blockly.Css.Cursor.DELETE);
+      return true;
+    }
+  }
+
+  this.blockSpaceEditor.setCursor(Blockly.Css.Cursor.CLOSED);
+  return false;
 };

@@ -27,6 +27,7 @@ goog.provide('Blockly.Flyout');
 
 goog.require('Blockly.Block');
 goog.require('Blockly.Comment');
+goog.require('goog.math.Rect');
 
 
 /**
@@ -568,7 +569,7 @@ Blockly.Flyout.prototype.blockMouseDown_ = function(block) {
     } else {
       // Left-click (or middle click)
       Blockly.removeAllRanges();
-      flyout.blockSpace_.blockSpaceEditor.setCursorHand_(true);
+      flyout.blockSpace_.blockSpaceEditor.setCursor(Blockly.Css.Cursor.CLOSED);
       // Record the current mouse position.
       Blockly.Flyout.startDragMouseX_ = e.clientX;
       Blockly.Flyout.startDragMouseY_ = e.clientY;
@@ -679,10 +680,6 @@ Blockly.Flyout.prototype.createBlockFunc_ = function(originBlock) {
       flyout.hide();
     } else {
       flyout.filterForCapacity_();
-      if (Blockly.hasConcreteBlocks) {
-        originBlock.setVisible(false);
-        originBlock.setDisabled(true);
-      }
     }
     // Start a dragging operation on the new block.
     block.onMouseDown_(e);
@@ -700,15 +697,7 @@ Blockly.Flyout.prototype.filterForCapacity_ = function() {
   for (var i = 0, block; block = blocks[i]; i++) {
     var allBlocks = block.getDescendants();
     var disabled = allBlocks.length > remainingCapacity;
-
-    if (Blockly.hasConcreteBlocks && !disabled) {
-      // It's not clear to me that this code should ever be changing blocks
-      // from disabled to enabled, but I don't understand it so well that I want
-      // to change it across the bored.  In the case of hasConcreteBlocks lets
-      // not mysteriously reenable blocks.
-    } else {
-      block.setDisabled(disabled);
-    }
+    block.setDisabled(disabled);
   }
 };
 
@@ -732,33 +721,25 @@ Blockly.Flyout.terminateDrag_ = function() {
 };
 
 /**
- * Handles a block being dragged and dropped onto the flyout.  If concreteBlocks
- * is set, we'll look for toolbox blocks that need to be made visible again. If
- * it isn't, just delete the block.
- */
-Blockly.Flyout.prototype.onBlockDropped = function (originBlock) {
-  var self = this;
-  if (Blockly.hasConcreteBlocks) {
-    // First add back children
-    originBlock.getChildren().forEach(function(child) {
-      self.onBlockDropped(child);
-    });
-    var blocks = this.blockSpace_.getAllBlocks();
-    for (var i = 0, block; block = blocks[i]; i++) {
-      if (block.type === originBlock.type) {
-        block.setVisible(true);
-        block.setDisabled(false);
-        break;
-      }
-    }
-  }
-
-  originBlock.dispose(false, true);
-};
-
-/**
  * When disabled, block clicks on blocks will be ignored.
  */
 Blockly.Flyout.prototype.setEnabled = function (enabled) {
   this.enabled_ = enabled;
+};
+
+/**
+* Return the deletion rectangle for this flyout.
+* @return {goog.math.Rect} Rectangle in which to delete.
+*/
+Blockly.Flyout.prototype.getRect = function() {
+  // BIG_NUM is offscreen padding so that blocks dragged beyond the shown flyout
+  // area are still deleted.  Must be smaller than Infinity, but larger than
+  // the largest screen size.
+  var BIG_NUM = 10000000;
+  var x = Blockly.getSvgXY_(this.svgGroup_).x;
+  if (!Blockly.RTL) {
+    x -= BIG_NUM;
+  }
+  return new goog.math.Rect(x, -BIG_NUM,
+    BIG_NUM + this.width_, this.height_ + 2 * BIG_NUM);
 };

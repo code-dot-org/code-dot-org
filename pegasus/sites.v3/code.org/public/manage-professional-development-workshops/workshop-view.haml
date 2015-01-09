@@ -100,8 +100,8 @@ theme: none
   %a#btn-cancel.btn.btn-link{"ng-click" => "cancel_workshop()"} Cancel
 
 
-%div{'ng-show' => 'workshop_signups.length > 0'}
-  %h2 Signups
+%div{'ng-show' => 'active_signups.length > 0'}
+  %h2 Active signups
   %table{style: "width:970px; table-layout:fixed;"}
     %colgroup
       %col{style: 'width: 170px;'}/
@@ -119,15 +119,41 @@ theme: none
       %th.manage-th
         School
       %th.manage-th
-    %tr{"ng-repeat" => "signup in workshop_signups | orderBy:order", style: "vertical-align:top"}
+    %tr{"ng-repeat" => "signup in active_signups | orderBy:order", style: "vertical-align:top"}
       %td {{signup.name_s}}
       %td {{signup.email_s}}
       %td {{signup.teacher_role_ss.concat(signup.teacher_role_other_ss).join(', ')}}
       %td {{signup.school_name_s}}
       %td{nowrap: true, style: 'white-space: nowrap;'}
-        %span{"ng-show" => "signup.confirmSignupDelete"}
-          %span Delete?
-          %a.btn.btn-danger.btn-xs{"ng-click"=>'delete_signup(signup)'} Yes
-          %a.btn.btn-success.btn-xs{"ng-click"=>'signup.confirmSignupDelete = false'} No
-        %span{"ng-hide" => "signup.confirmSignupDelete"}
-          %a.btn.btn-white.btn-xs{"ng-click" => "confirm_signup_delete(signup)"} Delete
+        %span{"ng-show" => "signup.confirmSignupCancel"}
+          %span Cancel?
+          %a.btn.btn-danger.btn-xs{"ng-click"=>'cancel_signup(signup)'} Yes
+          %a.btn.btn-success.btn-xs{"ng-click"=>'signup.confirmSignupCancel = false'} No
+        %span{"ng-hide" => "signup.confirmSignupCancel"}
+          %a.btn.btn-white.btn-xs{"ng-click" => "confirm_signup_cancel(signup)"} Cancel
+
+%div{'ng-show' => 'cancelled_signups.length > 0'}
+  %h2 Cancelled signups
+  %table{style: "width:970px; table-layout:fixed;"}
+    %colgroup
+      %col{style: 'width: 170px;'}/
+      %col{style: 'width: 310px;'}/
+      %col{style: 'width: 200px;'}/
+      %col{style: 'width: 200px;'}/
+      %col{style: 'width: 90px;'}/
+    %tr
+      %th.manage-th
+        Name
+      %th.manage-th
+        Email
+      %th.manage-th
+        Title
+      %th.manage-th
+        School
+      %th.manage-th
+    %tr{"ng-repeat" => "signup in cancelled_signups | orderBy:order", style: "vertical-align:top"}
+      %td {{signup.name_s}}
+      %td {{signup.email_s}}
+      %td {{signup.teacher_role_ss.concat(signup.teacher_role_other_ss).join(', ')}}
+      %td {{signup.school_name_s}}
+      %td{nowrap: true, style: 'white-space: nowrap;'}
