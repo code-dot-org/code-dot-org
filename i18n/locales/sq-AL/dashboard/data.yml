@@ -28,13 +28,13 @@ sq:
           desc: Ora e Kodit
           Maze: Faza 1
         Edit Code:
-          desc: Edit Code (beta)
+          desc: Redakto Kodin (beta)
           MazeEC: Faza 1
         2014 Levels:
-          desc: Bounce (beta)
+          desc: Hidhu (beta)
           Bounce: Faza 1
         Builder Levels:
-          desc: User-Created Puzzles (beta)
+          desc: Puzzle-at e krijuar nga Vetë-Përdoruesit (beta)
           Custom: Faza 1
         Flappy Levels:
           desc: Flappy Bird
@@ -44,19 +44,19 @@ sq:
           Jigsaw: Faza 1
         Step Levels:
           desc: Maze (beta)
-          MazeStep: Stage Step
+          MazeStep: Hapi i Fazës
         edit-code:
-          desc: Edit Code (beta)
+          desc: Redakto Kodin (beta)
           MazeEC: Faza 1
           Webapp: Faza 2
           ArtistEC: Faza 3
           StudioEC: Faza 4
         events:
-          desc: Bounce (beta)
+          desc: Hidhu (beta)
           Bounce: Faza 1
           Studio: Faza 2
         builder:
-          desc: User-Created Puzzles (beta)
+          desc: Puzzle-at e krijuar nga Vetë-Përdoruesit (beta)
           Custom: Faza 1
         flappy:
           desc: Flappy Bird
@@ -66,7 +66,7 @@ sq:
           Jigsaw: Faza 1
         step:
           desc: Maze (beta)
-          MazeStep: Stage Step
+          MazeStep: Hapi i Fazës
         wordsearch:
           desc: Spelling Bee (beta)
           WordSearch: Faza 1
@@ -74,7 +74,7 @@ sq:
       name:
         Unplug1: Hyrje ne Informatike
         Maze: Labirinti
-        Multi: Multiple Choice Stuffs
+        Multi: Lojërat me zgjedhje të shumta
         Unplug2: Te menduarit si kompjuter
         Unplug3: Programimi grafik me leter
         Artist: Artisti
@@ -88,92 +88,87 @@ sq:
         Farmer2: Fermeri 2
         Unplug8: Abstraksion
         Artist4: Artisti 4
-        Unplug9: Relay Programming
+        Unplug9: Programimi i Besuar
         Farmer3: Fermeri 3
         Unplug10: Interneti
         Artist5: Artisti 5
-        Unplug11: Wrap-up
+        Unplug11: Mbështjell
         MazeEC: Labirinti
-        Bounce: Bounce
+        Bounce: Hidhu
         Flappy: Flappy Bird
         Jigsaw: Jigsaw
-        MazeStep: Maze Step Mode
-        Wordsearch: Wordsearch
+        MazeStep: Lloji i Fazës Maze
+        Wordsearch: Kërkimi i Fjalëve
         Webapp: Webapp
         ArtistEC: Artisti
-        TextMatch: Text Match
+        TextMatch: Përshtatja e Tekstit
         StudioEC: Play Lab
     trophy:
       name:
-        Bronze: Bronze
-        Silver: Silver
-        Gold: Gold
+        Bronze: Bronx
+        Silver: Argjend
+        Gold: Flori
     concept:
       description:
-        sequence: Sequence
-        if: If block
-        if_else: If-else block
-        loop_times: Repeat times block
-        loop_until: Repeat until block
-        loop_while: While block
-        loop_for: Counter block
+        sequence: Sekuencë
+        if: blloku Nëse
+        if_else: blloku Nëse-Përndryshe
+        loop_times: blloku i kohës së Përsëritur
+        loop_until: blloku Përsërit derisa
+        loop_while: blloku Ndërsa
+        loop_for: blloku Numërimit
         function: Funksionet
         parameters: Funksione me parametra
     level:
       instructions:
-        maze_2_2: 'Can you help me to catch the naughty pig? Stack a couple of "move forward" blocks together and press "Run" to help me get there. '
-        maze_2_1: This pig is ruffling my feathers. Help me to find him!
-        maze_2_2_5: Trace the path and lead me to the silly pig. Avoid TNT or the feathers will fly!
-        maze_2_3: Guide me to the green evilness! (Watch out for TNT)
-        maze_2_4: Keep calm and help me to find the bad pig. Otherwise I might get angry!
-        maze_2_5: "There's a way I can get to the silly pig using only 2 blocks. Can you figure it out?"
-        maze_2_6: Try to get me to the green intruder using only three blocks.
-        maze_2_7: 'Help me banish this bad piggy using the fewest number of blocks. Try using more than one "repeat times" block.'
-        maze_2_8: |-
-          When a block is grey, that means you can't delete it. Solve this puzzle using the "repeat" block that repeats 3 times. Try putting these 3 blocks inside the grey "repeat" block: move, move, turn.
-        maze_2_9: 'Ok, try the new "repeat until" block - it will repeat until I reach the annoying pig.'
-        maze_2_10: 'Ok, one last time for practice - can you solve this one using only 4 blocks?'
-        maze_2_11: 'Dear person.  Me zombie. Me hungry. Must... get... to sunflower... Can you get me there with only 5 blocks?'
-        maze_2_12: Ok, this is similar, but slightly different. Can you do it in only 5 blocks?
-        maze_2_13: 'Use the new "if" block to let me decide when to turn. Hint: you only need one more block, but learn how we set it up so you can do it on your own next time.'
-        maze_2_14: 'Ok, this is just like the last puzzle, but you need to remember how you used the "if" block and the "repeat" block together.'
-        maze_2_15: 'Me want sunflower! Use an "if" block to get me there with the fewest number of blocks.'
-        maze_2_16: "Ok, let's do that again for practice - this isn't very different, but watch out for the chompers!"
-        maze_2_17: 'The "If-else" blocks checks a condition, and then does one thing OR another. To get me to the sunflower try to use this new block.'
-        maze_2_18: 'One more practice of the "if-else" block, can you get it right on your first try?'
-        maze_2_19: Can you add just 3 blocks to help me solve a more complex maze? If you do it right, I can walk any curvy path no matter the length.
-        turtle_1_1: "Hi, I'm an artist. You can write code to make me draw almost anything. Use a few blocks to make me draw over the grey lines in the picture."
-        turtle_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "set color" block.'
-        turtle_1_3: Make a square using only 3 blocks.
-        turtle_1_4: |-
-          Draw a triangle whose sides are all in different colors, using the "random color" option that picks a different color each time. Hint: you'll have to figure out how far to turn by clicking on the number in the turn block.
-        turtle_1_5: Now, for practice, draw a triangle and then a square to draw an envelope.
-        turtle_1_6: 'Can you figure out how draw this triangle and square? Hint: Do the triangle first, then figure out how much to turn before drawing the square.'
-        turtle_1_7: "Ok, let's make it a bit harder - see if you can draw these green glasses. The squares are 100 pixels on each side, and they're 50 pixels apart. Don't forget to draw in green!"
-        turtle_1_8: 'Ok, try to figure out what happens if you run this code (or press "Run" to try it). Then, repeat it enough times to complete the drawing. The colors will be different every time.'
-        turtle_1_9: Can you figure out what number to replace the question marks with to draw a circle?
-        turtle_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new "set width" block. Have fun!'
-        turtle_4_1: 'Can you draw a triangle (with edges of 100 pixels) with only 3 blocks? Hint: use a "repeat" block.'
-        turtle_4_2: 'Add a "turn right by 90 degrees" block somewhere in the middle of the program already out on the workspace to draw these triangles.'
-        turtle_4_3: |-
-          Ok, here's the code you wrote to draw a single triangle. Can you add a "repeat" and "turn" block to make a pretty flower?
-        turtle_4_4: "Here's the same code from the previous puzzle, but turning only 36 degrees after drawing each triangle. How many times does this need to repeat? (Hint: after 360 degrees of turning the drawing will come full circle)"
-        turtle_4_5: "Here's the same code from the previous puzzle, but repeating the turns 36 times. How many degrees should the turns be? (Hint: after 360 degrees of turning the drawing will come full circle)"
-        turtle_4_6: Using only 3 blocks, can you draw a square with edges of 20 pixels?
-        turtle_4_7: "Here's the code for drawing the square from last puzzle. Can you repeat it to draw 10 adjacent squares like a ladder? Hint: you only need 2 more blocks."
-        turtle_4_8: "Here's the solution to the previous puzzle. Can you add just 2 more blocks to complete the drawing?"
-        turtle_4_9: "Here's the solution to the previous puzzle. How many degrees should you turn to complete the drawing? (You probably need to guess a few times)"
-        turtle_4_10: "Here's the solution to the previous puzzle. How many times should you repeat to complete the drawing?"
-        turtle_4_11: 'Try changing the numbers in the "turn" and "repeat" blocks to make different patterns. Or, experiment changing the rest of the code to draw anything you want.'
-        maze_karel_1_1: |-
-          Hi, I'm a farmer. I need your help to flatten the field on my farm so it's ready for planting. Move me to the pile of dirt and use the "remove" block to remove it.
-        maze_karel_1_2: 'Next, move me to the hole and fill it with TWO shovelfuls of dirt, using the "fill" block.'
-        maze_karel_1_3: Move me to the pile of dirt and tell me how many shovelfuls to remove using as few blocks as possible.
-        maze_karel_1_4: 'Can you help me remove all four piles of dirt? Hint: use a repeat block if you can.'
-        maze_karel_1_5: 'Help me fill in all these holes with 5 shovelfuls of dirt. Hint: you can put a "repeat" block inside the "while" block.'
-        maze_karel_1_6: |-
-          Remove all the piles of dirt, using as few blocks as possible. The new options in the dropdown menu on the "while" block tell me if I'm standing on a pile or a hole.
-        maze_karel_1_7: "Wow, I found a really deep hole! I don't know how many shovelfuls of dirt it needs. Can you write a program that fills it until the ground is even?"
+        maze_2_2: 'A mund të më ndihmosh mua që të kap derrkucin e pa bindur? Grumbullo bashkë disa blloqe "ec përpara" dhe shtyp "Vrapo" të më ndihmosh mua të arrij atje. '
+        maze_2_1: Ky derrkuci po më bezdis. Më ndihmo ta gjej atë!
+        maze_2_2_5: Gjurmo rrugën dhe më drejto tek derrkuci budalla. Shmang TNT ose përndryshe do më ikin puplat!
+        maze_2_3: Me udhëhiq për tek green evilness! (Kujdes nga TNT)
+        maze_2_4: Ruaj qetësinë dhe më ndihmo të gjej derrkucin e keq! Përndryshe do të nevrikosem!
+        maze_2_5: Ka një mënyrë për të shkuar tek derrkuci budalla duke përdorur 2 blloqe. Mund ta gjesh?
+        maze_2_6: Përpiqu të më çosh tek ai i keqi i gjelbër duke përdorur vetëm tre blloqe.
+        maze_2_7: 'Më ndihmo ta dëboj këtë derkkuc të keq duke përodrur numrin më të ulët të blloqeve. Përpiqu të përdorësh më shumë se një bllok "repeat times".'
+        maze_2_8: 'Kur një bllok është gri, kjo do të thotë që ti nuk mund ta fshish atë. Zgjidh këtë puzzle duke përdorur bllokun "repeat", që përsëritet 3 herë. Përpiqu të vendosësh këto 3 blloqe brenda bllokut gri "repeat": lëviz, lëviz, kthehu.'
+        maze_2_9: 'Në rregull, provo bllokune ri "repeat until" - do të [ërsëritet derisa unë të arrij derrkucin e mërzitshëm.'
+        maze_2_10: 'Në rregull, edhe një herë të fundit për tu praktikuar - a mund ta zgidhësh këtë duke përdorur vetëm 4 blloqe?'
+        maze_2_11: I dashur person. Unë zombie. Unë i uritur. Duhet...të shkoj...te lulja e diellit...A mund të më çosh atje vetëm me 5 blloqe?
+        maze_2_12: Në rregull, kjo është e njëjtë, por me pak ndryshime. A mund ta bësh vetë me 5 blloqe?
+        maze_2_13: 'Përdor bllokun e ri "if" për të më lënë të vendos se ku të kthehem. Ndihmë: ty të duhet një bllok më shumë, por mëso se si e vendosim ne, që ti të mund ta bësh më vonë vetë.'
+        maze_2_14: 'Në rregull, kjo është njësoj si puzlle i fundit, por ti duhet të kujtohesh se si  përdore bllokun "if" dhe "repeat" bashkë.'
+        maze_2_15: 'Une dua lulen e diellit! Përdor një bllok "if", për të më çuar mua atje me numrin më të ulët të blloqeve.'
+        maze_2_16: 'Në rregull, le ta bëjmë përsëri për tu praktikuar - kjo nuk është shumë e ndryshme, por kujdes nga chompers!'
+        maze_2_17: 'Blloqet "if-else" kërkojnë një kusht që bën një gjë OSE një gjë tjetër. Për të më çuar tek luledielli përpiqu të përodrësh këtë bllok të ri.'
+        maze_2_18: Edhe një herë praktikohu me bllokun if-else, mund ta bësh si duhet me përpjekjen e parë?
+        maze_2_19: A mund të shtosh thjesht 3 blloqe për të më ndihmuar mua të zgjidh një maze të vështirësuar? Nëse e bën si duhet, unë mund të ec në çdo rrugë të dredhuar pa marrë parasysh gjatësinë.
+        turtle_1_1: Përshëndetje! Unë jam një artist. Ti mund të shkruash kod për të më bërë mua të vizatoj çdo gjë. Përdor pak blloqe për të më bërë mua të vizatoj vijat gri në figurë.
+        turtle_1_2: 'Tani, vizato një katror. Shënim: përdor ngjyrën e preferuar duke e zgjedhur atë në bllokun e ri "set color".'
+        turtle_1_3: Bëj një katror duke përdorurvetë 3 blloqe.
+        turtle_1_4: 'Vizato një trekëndor ku anët e tij janë me ngjyra të ndryshme, duke përdorur opsionin "random color" që zgjedh një ngjyrë të ndryshme në çdo kohë. Ndihmë: ti duhet të zbulosh sa larg të kthehesh duke klikuar tek numri në bllokun e kthimit.'
+        turtle_1_5: Tani, sa për tu praktikuar, vizato një trekëndor dhe më pas një katror për të vizatuar një zarf.
+        turtle_1_6: 'A mund ta dish se si u vizatua ky trekëndor dhe katror?Ndihmë: Bëj së pari trekëndorin, më pas shiko se sa duhet të kthehesh përpara se të vizatosh katrorin.'
+        turtle_1_7: 'Në rregull, le ta bëjmë pak më të vështirë - Shih nëse mund të vizatosh këto xhamat e gjelbër. Katrorët janë 100 piksela në secilën anë dhe janë 50 piksela të veçuar. Mos harro të vizatosh me ngjyrën jeshile!'
+        turtle_1_8: 'Në rregull, përpiqu të kuptosh se çfarë ndodh nëse ekzekuton këtë kod (ose shtyp "Run" për ta provuar atë). Më pas, përsërite atë aq herë sa ta mbarosh vizatimin. Ngjyrat do të jenë të ndryshme çdo herë.'
+        turtle_1_9: A mund të zbulosh se me çfarë numri ti zëvëndësosh pikëpyetjet për të vizatuar një rreth?
+        turtle_1_10: 'Ti ja dole! Tani vizato çfarë të duash. Disa ide argëtuese: një figurë ngjitëse, flok dëbore ose spirale. Gjithashtu, provo bllokun e ri "set width". Bëfsh qejf!'
+        turtle_4_1: 'A mund të vizatosh një trekëndor (me cepa 100 piksela) me vetëm 3 blloqe? Ndihmë: përdor bllokun "repeat".'
+        turtle_4_2: 'Shto një bllok "turn right by 90 degrees" diku në mes të programit, jashtë zonës tënde të punës, për të vizatuar këto trekëndorë.'
+        turtle_4_3: 'Në rregull, ja ku është kodi që shkruajte për të vizatuar një trekëndor. Mund të shtosh një bllok "repeat" dhe "turn" për të bërë një lule të bukur?'
+        turtle_4_4: 'Këtu është i njëjti kod si me atë të puzzle-it të mëparshëm, por duke u kthyer vetëm me 36 gradë pas vizatimit të secilit trekëndor. Sa herë duhet të përsëritet kjo? (Ndihmë: pas 360 gradësh kthimi të vizatimit do të vijë rrethi i plotë)'
+        turtle_4_5: 'Këtu është i njëjti kod si ai i puzzle-it të mëparshëm, por duke përsëritur kthimet 36 herë. Sa gradë duhet të jetë kthimi? (Ndihmë: pas 360 gradësh kthimi, vizatimi do të jetë rreth i plotë)'
+        turtle_4_6: Duke përdorur 3 blloqe, a mund të vizatosh një katror me cepa 20 piksela?
+        turtle_4_7: 'Ja ku është kodi për të vizatuar katrorin e puzzle-it të fundit. A mund ta përsërisësh atë që të vizatosh 10 katorrë të ndryshëm si një shkallë? Ndihmë: ty të duhen 2 blloqe më shumë.'
+        turtle_4_8: Ja ku është zgjidhja e puzzle-it të mëparshëm. A mund të shtosh 2 blloqe më shumë për të përfunduar vizatimin?
+        turtle_4_9: Ja ku është zgjidhja e puzzle-it të mëparshëm. Sa gradë duhet të kthehesh për të përfunduar vizatimin? ( Ti ndoshta duhet ta gjesh me pak herë)
+        turtle_4_10: Ja ku është zgjidhja për puzzle-in e mëparshëm. Sa herë duhet ta përsërisësh që të përfundosh vizatimin?
+        turtle_4_11: 'Përpiqu të ndryshosh numrat në blloqet "turn" dhe "repeat" për të bërë modele të ndryshme. Ose eksperimento në ndryshimin e pjesës së kodit për të vizatuar çfarë të duash.'
+        maze_karel_1_1: 'Përshëndetje, unë jam një fermer. Kam nevojë për ndihmën tënde që të zbukuroj fushën në fermën time, që të jetë gati për mbjellje. Më zhvendos mua në grumbullin e dheut dhe përdor bllokun "remove" për ta hequr atë.'
+        maze_karel_1_2: 'Më pas, më zhvendos tek gropa dhe mbushe atë me DY lopata plot me dhe duke përdorur bllokun "fill".'
+        maze_karel_1_3: Më zhvendos mua tek grumbulli me dhe dhe më thuaj mua sa lopata plot të heq duke përdorur sa më pak blloqe të jetë e mundur.
+        maze_karel_1_4: 'A mund të më ndohmosh mua të heq të katërt grumbujt me dhe? Ndihmë : përdor një bllok përsëritës nëse ke mundësi.'
+        maze_karel_1_5: 'Më ndihmo mua ti mbush të gjitha gropat me 5 lopata me dhe. Ndihmë: ti mund të vendosësh një bllok "repeat" brenda bllokut "while".'
+        maze_karel_1_6: 'Hiq të gjithë grumbujt me dhe duke përdorur sa më pak blloqe të jetë e mundur. Opsionet në menunë dropdown tek blloku "while" më tregojnë nëse jam duke qëndruar në grumbull ose në një gropë.'
+        maze_karel_1_7: Wow, unë gjeta një gropë vërtet të thellë! Nuk e di se sa lopata me dhe nevojiten. A mund të shkruash një program që e mbush atë derisa toka të jetë e shtruar?
         maze_karel_1_8: Help me fill in the hole at the end of the field, using as few blocks as possible.
         maze_karel_1_9: 'Make me remove all these piles of dirt. Try to use as few blocks as possible. Hint: try using a "while" block.'
         maze_karel_1_10: "I'm working late, so it's dark out, and I can't tell how large the piles are. Now I don't have all the options I used to have on the while block. Move me along the field, and if there is a pile, remove it."
@@ -198,58 +193,55 @@ sq:
         maze_karel_2_1: 'Try using the blocks to help me remove all the piles and fill in all the holes on the ground. Try to use loops instead of using too many blocks. Hint: you can put a loop inside another loop.'
         maze_karel_2_2: |-
           We've defined our own block called "fill 5", which is now in the Functions category. Use it to help me fill in this hole.
-        maze_karel_2_3: |-
-          Use the new "fill 5" function block to make me fill in all the holes. You'll have to drag out the "fill 5" block out from the Functions category.
-        maze_karel_2_4: Define a new function that removes 7 shovelfuls. Then use it to write a program that helps me remove all the piles.
-        maze_karel_2_5: Create a new function that removes 6 shovelfuls from a pile, and use it to help me level out all the piles.
-        maze_karel_2_6: 'Use two new functions, "fill 8" and "remove 8", to help me level out the pile and fill in the hole.'
-        maze_karel_2_7: "There's a cow in my field! Write a new function that helps me avoid the cow and remove the pile. Put all your blocks inside the new function."
-        maze_karel_2_8: 'Use this new function, "avoid the cow and remove 1", to help me remove all the piles.'
-        maze_karel_2_9: "Ok, here's a function that removes 4 different piles of dirt in a vertical column. Try putting this function inside a loop, so that you remove all the piles of dirt using only a few new blocks."
-        maze_karel_2_10: Move me across the field, and use these two functions to help me remove all the piles and fill all the holes.
-        turtle_3_1: |-
-          This puzzle shows you how the "draw a square" and "draw a circle" functions are defined.  Defining a function doesn't run its blocks.  You have to pull out the "draw a square" block to actually draw a square.
-        turtle_3_2: 'Using the "draw a square" function as an example, create a "draw a triangle" function and use it.'
-        turtle_3_3: 'Draw triangular fences around the cats and a square fence around the cow.  Tip: test the program as you go along.'
-        turtle_3_4: 'See if you can figure out how to use "draw a square" and "draw a triangle" (and some other blocks) to draw a house around the lion.'
-        turtle_3_5: 'Now create a new "draw a house" function and use it to house two cats. Hint: create a new function using the "do something" block, and type your own text to name the block.'
-        turtle_3_6: 'Using "draw a square" as an example, add an input named "length" to "draw a triangle". Then, draw triangles in different sizes. (Hint: click the star to add an input to a function)'
-        turtle_3_7: 'Add an input named "length" to "draw a house" and build a big house for the elephant (with edges 150 pixels long)'
-        turtle_3_8: 'Here are all of the blocks from the previous puzzle.  Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
-        turtle_3_9: 'Can you re-create the "draw a house" function without help? Try it, and then draw a row of houses.'
-        turtle_3_10: "You've learned a lot! Now use it to draw whatever you want. Try to draw a star, or a spiral, or a fancy snowflake."
-        maze_karel_debug_seq_1: "Welcome to debugging! My code doesn't work right. Can you spot the problem and fix it so that I can get my field flat and ready for planting?"
-        maze_karel_debug_seq_2: "What's wrong with this program? How should you fix it so I can remove that pile?"
-        maze_karel_debug_repeat: De-bug this program for me so my field will be nice and flat.
-        maze_karel_debug_while: How should you change this program to help me fill the hole?
-        maze_karel_debug_if: Help! Fix the program so my field will be completely flat.
-        maze_karel_debug_if_else: De-bug this program so I can fill in the holes and remove all the piles.
-        maze_karel_debug_function_1: What should you change about this program to help me remove all the piles?
-        maze_karel_debug_function_2: Can you de-bug this program for me so I can make my field flat?
-        maze_karel_debug_function_3: "Edit this program so I'll remove all the piles on my field. "
-        turtle_5_1: Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)
-        turtle_5_2: Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)
-        turtle_5_3: Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)
-        turtle_5_4: Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)
-        turtle_5_5: Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)
-        turtle_5_6: Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)
-        maze_3_1: I need to get to that pig! Type in a couple of calls to move(); so I can get my eggs back.
-        maze_3_2: Write me a program, so I can make it all the way to the pig.
-        maze_3_3: "How should I get to the pig? Make sure I don't run into the box of TNT!"
-        maze_3_4: Argh! Write me a program that gets me around the TNT and to the pig.
-        bounce_1: 'Attach a block to the "when left arrow" block and press "Run". Move the paddle using the left arrow to reach the finish target.'
-        bounce_2: 'Attach a block to the "when right arrow" and "when left arrow" blocks. Move the paddle to reach both finish targets.'
-        bounce_3: 'Now try something similar with the "when up arrow" block. Move the paddle to the finish target at the top.'
-        bounce_4: This time you need to add four blocks. Move the paddle to all four finish targets to complete this puzzle.
-        bounce_5: |-
-          We're going to send a ball flying down towards the paddle. Attach a block to the "when ball hits paddle" block to ensure the ball reaches the finish target.
-        bounce_6: 'Now the finish target is on the top. You need to attach blocks to both of the "when ball hits" blocks to solve this puzzle.'
-        bounce_7: 'Attach blocks to each of the "when" blocks. Bounce the ball until it hits the finish target.'
-        bounce_10: 'There is a now a goal at the top. Attach the "score point" and "score opponent point" blocks to the "when ball in goal" and "when ball misses paddle" blocks to make a game. See how many points you can score before your opponent scores twice.'
-        bounce_11: 'You can now attach blocks to the "when run" block. You have to attach the new "launch new ball" block in more than one place. Also, try changing the scene or the speed of the paddle and the ball and see how many points you can score before your opponent scores twice.'
-        bounce_12: "Create your own Bounce game. You can change all the visuals and the rules. When you're done, click Finish to let friends try your game on their phones."
-        Custom_builder: 'Drag blocks from the toolbox to the workspace to draw the level you wish to create. Press "Run" when you are ready.'
-        flappy_1: 'Attach a block to the "when click" block, then press "Run". Click or tap the screen to move Flappy to the target.'
+        maze_karel_2_3: 'Përdor bllokun e funksionit të ri "fill 5" për të më bërë mua të mbush gjithë gropat. Ti duhet të zvarrisësh bllokun "fill 5" nga kategoria e Funksioneve.'
+        maze_karel_2_4: Përcakto një funksion të ri që heq 7 lopata të mbushura. Më pas përodre atë për të shkruar një program që më ndihmon të heq të gjithë grumbujt.
+        maze_karel_2_5: Krijo një funksion të ri që heq 6 lopata të mbushura nga grumbulli dhe përdore atë për të më ndihmuar mua të niveloj të gjithë grumbujt.
+        maze_karel_2_6: 'Përdor dy funkisone të reja. "fill 8" dhe "remove 8", për të më ndihmuar mua të niveloj grumbullin dhe të mbush gropën.'
+        maze_karel_2_7: Ka një lopë në fushën time! Shkruaj një funksion të ri që më ndihmon mua të shmang lopën dhe të heq grumbullin. Vendos të gjithë blloqet brenda funkisonit të ri.
+        maze_karel_2_8: 'Përodr këtë funksion të ri, "avoid the cow and remove 1", për të më ndihmuar mua të heq të gjithë grumbujt.'
+        maze_karel_2_9: Në rregull, këtu ka një funksion që heq 4 grumbuj të ndryshëm dheu në një kolonë vertikale. Përpiqu të vendosësh këtë funksion brenda një cikli, që të mund të heqësh të gjithë grumbujt e dheut duke përdorur disa blloqe të reja.
+        maze_karel_2_10: Më lëviz mua përmes fushës dhe përdor këto dy funksione, për të më ndihmuar mua të heq gjithë grumbujt dhe të mbush gjithë gropat.
+        turtle_3_1: 'Ky puzzle të tregon se si janë përcaktuar funksionet "draw a square" dhe "draw a circle". Për të përcaktuar një funksion nuk përdoren blloqet e tij. Ti duhet të zvarrisësh bllokun "draw a square" për të vizatuar një katror.'
+        turtle_3_2: 'Duke përdorur funksionin "draw a square" si nje shembull, krijo nje funksion "draw a triangle" dhe përodre atë.'
+        turtle_3_3: 'Vizato gardhe trekëndorë rreth maceve dhe gardh katror rreth lopës.Tip: Testo programin ndërkohë që punon.'
+        turtle_3_4: 'Shih nëse mund të gjesh se si të përdorësh "draw a square" dhe "draw a triangle" (dhe disa blloqe të tjera) për të vizatuar një shtëpi rreth luanit.'
+        turtle_3_5: 'Tani, krijo një funksion "draw a house" dhe përdore atë të strehosh dy mace. Ndihmë: krijo një funksion të ri duke përdorur bllokun "do somehting" dhe shtyp tekstin tënd për të emëruar bllokun.'
+        turtle_3_6: 'Duke përdorur "draw a square" si një shembull, shto një të dhënë të emëruar "length" të "draw a triangle". Më pas, vizato trekëndorët në madhësi të ndryshëm. (Ndihmë: kliko yllin të shtosh një të dhënë në funksion)'
+        turtle_3_7: 'Shto një të dhënë të emëruar "length" të "draw a house" dhe ndërto një shtëpi të madhe për elefantin (me gjatësi cepash 150 piksela)'
+        turtle_3_8: 'Këu janë të gjithë blloqet nga puzzle i mëparshëm. Ndrysho "draw a house" dhe unë përfundoj në cepin e djathtë poshtë pasi vizatimit të një shtëpie të re. Përodre këtë funksion të ndryshuar për të vizatuar 3 shtëpi.'
+        turtle_3_9: 'A mund të rikrijosh funksionin "draw a house" pa ndihmë? Provoje dhe pastaj vizato një rresht me shtëpi.'
+        turtle_3_10: Ti ke mësuar shumë! Tani përdore për të vizatuar çfarëdo që ti dëshiron. Përpiqu të vizatosh një yll ose një spirale ose një flok dëbore të bukur.
+        maze_karel_debug_seq_1: MIrë se vini në debugging! Kodi im nuk punon si duhet. Mund ta shënoni si problem dhe ta rregulloni në mënyrë që të më shtrohet fusha dhe të jetë gati për mbjellje?
+        maze_karel_debug_seq_2: Çfarë problemi ka me këtë program? Si mund ta rregullosh në mënyrë që të heq këtë grumbull?
+        maze_karel_debug_repeat: Rregulloje këtë program për mua, që fusha ime të jetë e sheshtë dhe e mirë.
+        maze_karel_debug_while: Si mund të ndryshosh këtë program për të më ndihmuar mua të mbush gropën?
+        maze_karel_debug_if: Ndihmë! Rregullo programin, që fusha ime të jetë totalisht e sheshtë.
+        maze_karel_debug_if_else: Rregullo këtë program në mënyrë që të mbush gropat dhe të heq gjithë grumbujt.
+        maze_karel_debug_function_1: Çfarë duhet të ndryshosh për këtë program që të më ndihmosh mua të heq gjithë grumbujt?
+        maze_karel_debug_function_2: A mund të rregullosh këtë program për mua që ta bëj fushën time të sheshtë?
+        maze_karel_debug_function_3: 'Redakto këtë program që të heq gjithë grumbujt nga fusha. '
+        turtle_5_1: Përpiqu ta ekzekutosh këtë program dhe bëj ndryshime për të parë se çfarë ndodh. A mund ta imagjinosh se si punon? (Ose fshije atë dhe zëvëndësoje atë me diçka komplet ndryshe)
+        turtle_5_2: Përpiqu ta ekzekutosh këtë program dhe bëj ndryshime për të parë se çfarë ndodh. A mund ta imagjinosh se si punon? (Ose fshije atë dhe zëvëndësoje atë me diçka komplet ndryshe)
+        turtle_5_3: Përpiqu ta ekzekutosh këtë program dhe bëj ndryshime për të parë se çfarë ndodh. A mund ta imagjinosh se si punon? (Ose fshije atë dhe zëvëndësoje atë me diçka komplet ndryshe)
+        turtle_5_4: Përpiqu ta ekzekutosh këtë program dhe bëj ndryshime për të parë se çfarë ndodh. A mund ta imagjinosh se si punon? (Ose fshije atë dhe zëvëndësoje atë me diçka komplet ndryshe)
+        turtle_5_5: Përpiqu ta ekzekutosh këtë program dhe bëj ndryshime për të parë se çfarë ndodh. A mund ta imagjinosh se si punon? (Ose fshije atë dhe zëvëndësoje atë me diçka komplet ndryshe)
+        turtle_5_6: Përpiqu ta ekzekutosh këtë program dhe bëj ndryshime për të parë se çfarë ndodh. A mund ta imagjinosh se si punon? (Ose fshije atë dhe zëvëndësoje atë me diçka komplet ndryshe)
+        maze_3_1: Unë kam nevojë të arrij tek ai derrkuc! Shkruaj disa thirrje për të lëvizur(); që unë të marr mbrapsht vezët e mia.
+        maze_3_2: Më shkruaj një program që unë të shkoj tek ai derrkuc me çdo kusht.
+        maze_3_3: Si të shkoj te derrkuci? Sigurohu që unë nuk vrapoj brenda kutisë së TNT!
+        maze_3_4: Argh! Më shkruaj një program që më nxjerr nga TNT dhe më çon drejt derrkucit.
+        bounce_1: 'Bashkangjit një bllok me bllokun "when left arrow" dhe shtyp "Run". Lëviz lopatën duke përodrur shigjetën e majtë për të arritur në objektivin e fundit.'
+        bounce_2: 'Bashkangjit një bllok me blloqet "when right arrow" dhe "when left arrow" . Lëviz lopatën për të arritur  të dy objektivët e fundit.'
+        bounce_3: 'Tani provo dicka të ngjashëm me bllokun "when up arrow". Lëviz lopatën për tek objektivi i fundit në majë.'
+        bounce_4: Këtë herë ti duhet të shtosh katër blloqe. Lëviz lopatën tek të katërt objektivët e fundit për të përfunduar këtë puzzle.
+        bounce_5: 'Ne jemi duke dërguar një top fluturues poshtë drejt lopatës. Bashkangjit një bllok tek blloku "when ball hits paddle" për tu siguruar që topi arrin objektivin final.'
+        bounce_6: 'Tani, objektivi final është në majë.Ti duhe të bashkangjitësh blloqe tek të dy blloqet "when ball hits" për të zgjidhur këtë puzzle.'
+        bounce_7: 'Bashkangjit blloqe tek çdo bllok "when". Hidh topin derisa të godasë objektivin final.'
+        bounce_10: 'Tani është një objektiv në majë. Bashkangjit blloqet "score point" dhe "score opponent point" tek blloqet "when ball in goal" dhe "when ball misses paddle" për të bërë një lojë. Shih se sa shumë pikë mund të realizosh përpara se kundërshtari yt të shënojë dy herë.'
+        bounce_11: 'Ti, tani, mund të bashkangjitësh blloqe tek blloku "when run". Ti duhet të bashkangjitësh bllokun e ri "launch new ball" në më shumë se një vend. Gjithashtu, përpiqu të ndryshosh vendngjarjen ose shpejtësinë e lopatës dhe topit dhe shiko se sa shumë pikë mund të shënosh përpara se kundërshtari jot të shënojë dy herë.'
+        bounce_12: Krijo lojën tënde Bounce. Ti mund të ndryshosh të gjithë pamjet dhe rregullat. Kur të mbarosh, kliko Përfundova për të lejuar shokët të provojnë lojën tënde në telefonat e tyre.
+        Custom_builder: 'Lëviz blloqet nga toolboxi tek vendi i punës për të vizatuar nivelin që dëshiron të krijosh. Shtyp "Run" kur të jesh gati.'
+        flappy_1: 'Bashkangjit një bllok tek blloku "when click" dhemë pas shtyp "Run". Kliko ose shtyp ekranin për të lëvizur Flappyn tek objektivi.'
         flappy_2: |-
           Now we've added some ground.  Attach a block to the "when hit the ground" block.  Your code needs to 'END GAME' when Flappy crashes.
         flappy_3: 'The "when run" block allows you to run code when your game starts.  Try setting the level speed and flapping to the target.'
@@ -263,7 +255,7 @@ sq:
         flappy_9: To mix things up, when hitting an obstacle or the ground, instead of ending the game try setting the score back to 0.
         flappy_11: "Create your own Flappy game. You can change all the visuals and all the rules, even the gravity. When you're done, click Finish to let friends try your game on their phones."
         flappy_k1_1: Play Flappy
-        flappy_k1_2: 'Attach a block to the "when click" block, then press "Run". Click or tap the screen to move Flappy to the target.'
+        flappy_k1_2: 'Bashkangjit një bllok tek blloku "when click" dhemë pas shtyp "Run". Kliko ose shtyp ekranin për të lëvizur Flappyn tek objektivi.'
         flappy_k1_3: |-
           Now we've added some ground.  Attach a block to the "when hit the ground" block.  Your code needs to 'END GAME' when Flappy crashes.
         flappy_k1_4: 'The "when run" block allows you to run code when your game starts.  Try setting the level speed and flapping to the target.'
@@ -399,7 +391,7 @@ sq:
       scrat 18:
         instructions: 'The "If-else" blocks checks a condition, and then does one thing OR another. To get me to the acorn try to use this new block.'
       scrat 19:
-        instructions: 'One more practice of the "if-else" block, can you get it right on your first try?'
+        instructions: Edhe një herë praktikohu me bllokun if-else, mund ta bësh si duhet me përpjekjen e parë?
       scrat 20:
         instructions: Can you add just 3 blocks to help me solve a more complex maze? If you do it right, I can walk any curvy path no matter the length. Hurry! The ice is melting!
       Standalone_Artist_1:
@@ -449,7 +441,7 @@ sq:
         Unplug8: Abstraksion
         Unplug9: Relay programming
         Unplug10: Internet
-        Unplug11: Wrap-up
+        Unplug11: Mbështjell
         C1_happy_maps_unplugged: Happy Maps
         C1_moveitmoveit_unplugged: Move It, Move It
         C1_bigevent_unplugged: The Big Event
@@ -479,7 +471,7 @@ sq:
         C2_graph_paper: Programimi grafik me leter
         C2_conditionals_with_cards: Kushtoret
         C2_binary_bracelets: Binary Bracelets
-        C2_relay_programming: Relay Programming
+        C2_relay_programming: Programimi i Besuar
         C2_paper_airplanes: Paper Airplanes
         C2_digital_footprint: Your Digital Footprint
         C3_maze_level_4: Maze Loops
@@ -492,7 +484,7 @@ sq:
         C3_farmer_while: While Loops
         C3_bee_nested_loops: Nested Loops
         C3_bee_debugging: Bee Debugging
-        C3_bounce: Bounce
+        C3_bounce: Hidhu
         C3_playlab_create_game: 'Play Lab - Create a Game'
         C3_computational_thinking: Te menduarit si kompjuter
         C3_dice_race: Dice Race

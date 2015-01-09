@@ -30,7 +30,7 @@
   appname: Code.org
   stage: étape
   stage_number: étape %{number}
-  puzzle: Énigme
+  puzzle: Puzzle
   trophies: trophées
   courses: cours
   of: de
@@ -81,7 +81,7 @@
     address_placeholder: adresse, ville, état, code postal
     gender: Sexe (facultatif)
     birthday: Date de naissance (optionnel)
-    age: Âge (facultatif)
+    age: Age
     user_type: Es-tu un élève ou un professeur?
     submit: S’inscrire
     teacher: Etes-vous un professeur?
@@ -278,7 +278,7 @@
       progress: Votre progression
       lines: 'Nombre de lignes de code : %{lines}'
       close: FERMER
-      mastery: Conceptes
+      mastery: Concepts
       puzzle_map: Étapes
       prizes: Remportez les %{total_trophies} trophées et gagnez des prix !
       prize_earned: Les %{total_trophies} trophées ont été remportés. Vous avez gagné

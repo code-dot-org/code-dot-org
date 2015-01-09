@@ -54,7 +54,7 @@
         baru anda.
       updated: Anda telah berhasil memperbarui akun Anda.
     sessions:
-      signed_in: Berhasil masuk.
+      signed_in: ''
       signed_out: Berhasil Keluar.
     unlocks:
       send_instructions: Anda akan menerima sebuah email dalam beberapa menit dengan

@@ -32,9 +32,9 @@
   "playSoundJingle": "play jingle sound",
   "playSoundSplash": "play splash sound",
   "playSoundLaser": "play laser sound",
-  "playSoundTooltip": "Play a sound.",
+  "playSoundTooltip": "Play the chosen sound.",
   "reinfFeedbackMsg": "You can press the \"Try again\" button to go back to playing your game.",
-  "scoreText": "Score: {playerScore} : {opponentScore}",
+  "scoreText": "Score: {playerScore}",
   "setBackground": "set scene",
   "setBackgroundRandom": "set scene Random",
   "setBackgroundFlappy": "set scene City (day)",
@@ -96,7 +96,7 @@
   "setScore": "set score",
   "setScoreTooltip": "Sets the player's score",
   "setSpeed": "set speed",
-  "setSpeedTooltip": "Sets the levels speed",
+  "setSpeedTooltip": "Sets the level's speed",
   "shareFlappyTwitter": "Check out the Flappy game I made. I wrote it myself with @codeorg",
   "shareGame": "Oyununuzu bölüşün:",
   "soundRandom": "təsadüfi",
@@ -127,6 +127,6 @@
   "whenEnterObstacle": "when pass obstacle",
   "whenEnterObstacleTooltip": "Execute the actions below when Flappy enters an obstacle.",
   "whenRunButtonClick": "oyun başladıqda",
-  "whenRunButtonClickTooltip": "Execute the actions below when the run button is pressed.",
+  "whenRunButtonClickTooltip": "Execute the actions below when the game starts.",
   "yes": "Bəli"
 }

@@ -34,33 +34,33 @@ it:
       Blocks to Math 1:
         Convert Blocks to Math: Converti i blocchi in matematica
         Type out the arithmetic expression that matches this code: "Scrivi qua l'espressione aritmetica che corrisponde a questo codice"
-        /script_assets/msm/unit1/blockstomath1.png: /script_assets/msm/unit1/blockstomath1.png
+        Blocks to Math 1.blocks.start_blocks, 200: Blocks to Math 1.blocks.start_blocks, 200
         4 + 5: 4 + 5
         Type the arithmetic expression here: "Scrivi qua l'espressione aritmetica"
       Blocks to Math 2:
         Convert Blocks to Math: Converti i blocchi in matematica
         Type out the arithmetic expression that matches this code: "Scrivi qua l'espressione aritmetica che corrisponde a questo codice"
-        /script_assets/msm/unit1/blockstomath2.png: /script_assets/msm/unit1/blockstomath2.png
+        Blocks to Math 2.blocks.start_blocks, 200: Blocks to Math 2.blocks.start_blocks, 200
         7 * 6: '7 * 6'
         Type the arithmetic expression here: "Scrivi qua l'espressione aritmetica"
       Blocks to Math 3:
         Convert Blocks to Math: Converti i blocchi in matematica
         Type out the arithmetic expression that matches this code: "Scrivi qua l'espressione aritmetica che corrisponde a questo codice"
-        /script_assets/msm/unit1/blockstomath3.png: /script_assets/msm/unit1/blockstomath3.png
+        Blocks to Math 3.blocks.start_blocks: Blocks to Math 3.blocks.start_blocks
         (2 * 3) - (1 + 0): '(2 * 3) - (1 + 0)'
         2 * 3 - (1 + 0): '2 * 3 - (1 + 0)'
         Type the arithmetic expression here: "Scrivi qua l'espressione aritmetica"
       Blocks to Math 4:
         Convert Blocks to Math: Converti i blocchi in matematica
         Type out the arithmetic expression that matches this code: "Scrivi qua l'espressione aritmetica che corrisponde a questo codice"
-        /script_assets/msm/unit1/blockstomath4.png: /script_assets/msm/unit1/blockstomath4.png
+        Blocks to Math 4.blocks.start_blocks: Blocks to Math 4.blocks.start_blocks
         (5 + 8) - 12: '(5 + 8) - 12'
         5 + 8 - 12: '5 + 8 - 12'
         Type the arithmetic expression here: "Scrivi qua l'espressione aritmetica"
       Blocks to Math 5:
         Convert Blocks to Math: Converti i blocchi in matematica
         Type out the arithmetic expression that matches this code: "Scrivi qua l'espressione aritmetica che corrisponde a questo codice"
-        /script_assets/msm/unit1/blockstomath5.png: /script_assets/msm/unit1/blockstomath5.png
+        Blocks to Math 5.blocks.start_blocks: Blocks to Math 5.blocks.start_blocks
         (-2) * (-6):
           - 
             2 * -6: '-2 * -6'
@@ -68,7 +68,7 @@ it:
       Blocks to Math 6:
         Convert Blocks to Math: Converti i blocchi in matematica
         Type out the arithmetic expression that matches this code: "Scrivi qua l'espressione aritmetica che corrisponde a questo codice"
-        /script_assets/msm/unit1/blockstomath6.png: /script_assets/msm/unit1/blockstomath6.png
+        Blocks to Math 6.blocks.start_blocks: Blocks to Math 6.blocks.start_blocks
         ((4 - 1) * (-2)) + 12: '((4 - 1) * (-2)) + 12'
         ((4 - 1) * -2) + 12: '((4 - 1) * -2) + 12'
         (4 - 1) * (-2) + 12: '(4 - 1) * (-2) + 12'
@@ -77,7 +77,7 @@ it:
       Blocks to Math 7:
         Convert Blocks to Math: Converti i blocchi in matematica
         Type out the arithmetic expression that matches this code: "Scrivi qua l'espressione aritmetica che corrisponde a questo codice"
-        /script_assets/msm/unit1/blockstomath7.png: /script_assets/msm/unit1/blockstomath7.png
+        Blocks to Math 7.blocks.start_blocks: Blocks to Math 7.blocks.start_blocks
         10 / (2 * (3 + 1)): '10 / (2 * (3 + 1))'
         Type the arithmetic expression here: "Scrivi qua l'espressione aritmetica"
       text match test:
@@ -88,3 +88,38 @@ it:
         (9-3)+4: null
         9-3+4: null
         Type the arithmetic expression here: "Scrivi qua l'espressione aritmetica"
+    contract_match:
+      Design Recipe 1.contract:
+        Design Recipe 1 Contract: Design Recipe 1 Contract
+        0: '? Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.'
+        1: ': Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.'
+        "wide-rect|Image|height:Number|color:string": wide-rect|Image|height:Number|color:string
+      Enter name here:
+        Enter title here: Enter title here
+        Enter prompt here: Enter prompt here
+        "Contract Name|Number|Domain1:Number|Domain2:string": Contract Name|Number|Domain1:Number|Domain2:string
+      Eval Contracts 1 B:
+        Eval Contracts 1 B: Eval Contracts 1 B
+        Write a contract for the star function: Write a contract for the star function
+        Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks, 300
+        "star|image|radius:Number|style:string|color:string": star|image|radius:Number|style:string|color:string
+      Eval Contracts 2 B:
+        Eval Contracts 2 B: Eval Contracts 2 B
+        Write a contract for the rotate function: Write a contract for the rotate function
+        Eval Contracts 2 A.solution_blocks, 300: Eval Contracts 2 A.solution_blocks, 300
+        "rotate|image|degrees:Number|image:image": rotate|image|degrees:Number|image:image
+      Eval Contracts 3 B:
+        Eval Contracts 3 B: Eval Contracts 3 B
+        Write a contract for the text function: Write a contract for the text function
+        Eval Contracts 3 A.solution_blocks, 300: Eval Contracts 3 A.solution_blocks, 300
+        "text|image|string:string|size:Number|color:string": text|image|string:string|size:Number|color:string
+      Eval Contracts 4 B:
+        Eval Contracts 4 B: Eval Contracts 4 B
+        Write a contract for the scale function: Write a contract for the scale function
+        Eval Contracts 4 A.solution_blocks, 300: Eval Contracts 4 A.solution_blocks, 300
+        "scale|image|factor:Number|image:image": scale|image|factor:Number|image:image
+      Eval Design Recipe 1.contract:
+        Design Recipe 1 Contract: Design Recipe 1 Contract
+        0: '? Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.'
+        1: ': Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.'
+        "wide-rect|Image|height:Number|color:string": wide-rect|Image|height:Number|color:string

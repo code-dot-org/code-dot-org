@@ -550,7 +550,7 @@
   text_match:
     placeholder: Wprowadź swoją odpowiedź tutaj
   dialog:
-    ok: Ok
+    ok: OK
   time:
     hour: 1 godzina
     day: dzień

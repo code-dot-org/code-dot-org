@@ -3,7 +3,7 @@ sk-SK:
   select_language: Prosím, zvoľte si jazyk
   computer_science: Počítačová veda
   computer_science_edweek: Počítačová veda Vzdelávací týždeň
-  csedweek_dates: December 9-15,2013
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hodina Kódu</a> sa blíži. Vyzývame všetkých učiteľov a organizátorov, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> naplánujte si svoju Hodinu Kódu</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Učíte informatiku? Pozrite sa aj na ďalšie zdroje CSEdWeek</a>'
   n_have_learned_an_hoc: '<h1>#</h1><h3>have tried an</h3><h2>Hodina Kódu</h2>'
@@ -323,6 +323,7 @@ sk-SK:
   carousel_heading_robots: Naučte sa programovať s robotmi
   carousel_heading_ide: Platformy, ktoré sú populárne medzi učiteľmi
   educator_notes: Poznámky pedagógov
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Ďalšie zdroje pre učiteľov
   participants: účastníci
   teachers_notes: Poznámky učiteľov

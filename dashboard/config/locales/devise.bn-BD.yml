@@ -1,7 +1,7 @@
 "bn":
   devise:
     confirmations:
-      confirmed: সফলভাবে আপনার একাউন্ট নিশ্চিত হল। আপনি এখন সাইন ইন করেছেন।
+      confirmed: Your email address was successfully confirmed.
       send_instructions: কয়েক মিনিটের মধ্যে আপনার একাউন্ট কিভাবে নিশ্চিত করতে হবে
         সে সম্পর্কে নির্দেশনা সম্বলিত একটি ইমেইল আপনি পাবেন।
       send_paranoid_instructions: যদি আমাদের ডাটাবেসে আপনার ইমেইল ঠিকানা থাকে, তাহলে
@@ -19,9 +19,9 @@
       unconfirmed: You have to confirm your account before continuing.
     mailer:
       confirmation_instructions:
-        subject: Confirmation instructions
+        subject: Code.org confirmation instructions
       reset_password_instructions:
-        subject: Reset password instructions
+        subject: Code.org reset password instructions
       unlock_instructions:
         subject: Unlock Instructions
     omniauth_callbacks:
@@ -52,7 +52,7 @@
         confirm link to finalize confirming your new email address.
       updated: You updated your account successfully.
     sessions:
-      signed_in: Signed in successfully.
+      signed_in: ''
       signed_out: Signed out successfully.
     unlocks:
       send_instructions: You will receive an email with instructions about how to

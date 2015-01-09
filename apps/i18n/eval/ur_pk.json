@@ -13,6 +13,7 @@
   "squareBlockTitle": "مربع (سائز، سٹائل، رنگ)",
   "starBlockTitle": "ستارہ (رداس، سٹائل، رنگ)",
   "radialStarBlockTitle": "شعاعی ستارہ (نکات، داخلی، خارجی، سٹائل، رنگ)",
+  "polygonBlockTitle": "polygon (sides, length, style, color)",
   "stringAppendBlockTitle": "سٹرنگ ملانا (پہلی، دوسری)",
   "stringLengthBlockTitle": "string-length (string)",
   "textBlockTitle": "text (string, size, color)",

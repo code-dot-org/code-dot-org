@@ -13,7 +13,7 @@
   "squareBlockTitle":"quadrato (dimensione, stile, colore)",
   "starBlockTitle":"stella (raggio, stile, colore)",
   "radialStarBlockTitle":"stella a raggi (punti, interno, esterno, stile, colore)",
-  "polygonBlockTitle":"polygon (sides, length, style, color)",
+  "polygonBlockTitle":"poligono (lati, lunghezza, stile, colore)",
   "stringAppendBlockTitle":"concatena-stringa (prima, seconda)",
   "stringLengthBlockTitle":"lunghezza-stringa (stringa)",
   "textBlockTitle":"testo (stringa, dimensione, colore)",

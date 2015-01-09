@@ -137,7 +137,7 @@
           'Bee: Conditionals2': 'Bi: Betingelser 2'
           'Maze: Conditionals2': 'Labyrint: Betingelser 2'
           'Artist: Nested Loops2': 'Kunstner: Indlejrede løkker 2'
-          'Farmer: While Loops2': 'Landmand: Når sløjfer 2'
+          'Farmer: While Loops2': 'Farmer: While Loops2'
           'Bee: Nested Loops2': 'Bi: Indlejrede løkker 2'
           'Bee: Debugging2': 'Bi: Fejlfinding 2'
           'Artist: Patterns': 'Kunstner: Mønstre'
@@ -162,7 +162,7 @@
           'Artist: Defining Functions': 'Kunstner: Definere funktioner'
           'Play Lab: Defining Functions': 'Play Lab: Design opskrift'
           'Artist: Functions': 'Kunstner: Funktioner'
-          'Play Lab: Animation': 'Spille Lab: Animation'
+          'Play Lab: Animation': 'Play Lab: Animation'
           Booleans: Booleans
           'Play Lab: Booleans': 'Play Lab: Boolske operatorer'
           'Calc: Boolean Operators': 'Calc: Boolean Operatorer'
@@ -193,7 +193,7 @@
           Blocks to Math: Blokke til matematik
           'Play Lab: Defining Variables (Big Game)': 'Play Lab: Definere variabler
             (Big Game)'
-          'Play Lab: Animation (Big Game)': 'Spille Lab: Animation (Big Game)'
+          'Play Lab: Animation (Big Game)': 'Play Lab: Animation (Big Game)'
           'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
             (Big Game)'
@@ -201,7 +201,7 @@
           'Play Lab: Design Recipe': 'Play Lab: Design opskrift'
           'Eval: Design Recipe': 'Eval: Design opskrift'
         playlab:
-          title: Spille Lab
+          title: Play Lab
           description: Opret en historie eller lav et spil med Play Lab!
           Play Lab: Spille Lab
           description_short: Opret en historie eller lav et spil med Play Lab!
@@ -217,7 +217,7 @@
           'Maze: Sequence': 'Labyrint: Sekvens'
         hourofcode:
           Maze: Labyrint
-          title: En Time af Kode
+          title: Hour of Code
           description: Prøv grundlæggende programmering med firgurer fra Angry Birds,
             Plants vs. Zombies og Scrat fra Ice Age!
           description_short: Prøv grundlæggende programmering med masser af sjove

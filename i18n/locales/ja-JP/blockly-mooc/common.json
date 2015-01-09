@@ -88,5 +88,6 @@
   "signup":"イントロのコースに申し込む",
   "hintHeader":"ちょび技があるよ:",
   "genericFeedback":"どうなったかよく見て、プログラムを直してみよう。",
+  "toggleBlocksErrorMsg":"You need to correct an error in your program before it can be shown as blocks.",
   "defaultTwitterText":"私の作品を試してみてください"
 }

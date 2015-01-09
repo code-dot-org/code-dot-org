@@ -618,10 +618,10 @@
         (rectangle (+ 8 2) (- 7 5) solid red): (прямокутник (+ 8 2) (- 7 5) суцільний
           червоний)
       Multi Strings Images 1:
-        Strings and Images Multiple Choice: Strings and Images Multiple Choice
+        Strings and Images Multiple Choice: 'Множинний вибір: рядки та зображення'
         Multi Strings Images 1.blocks3.level: Multi Strings Images 1.blocks3.level
-        Which of these Evaluation Blocks will draw the image: Which of these Evaluation
-          Blocks will draw the image
+        Which of these Evaluation Blocks will draw the image: Які з цих оцінкових
+          блоків намалюють зображення
         Multi Strings Images 1.blocks1.start_blocks, 300, 100: Multi Strings Images
           1.blocks1.start_blocks, 300, 100
         Multi Strings Images 1.blocks2.start_blocks, 300, 100: Multi Strings Images

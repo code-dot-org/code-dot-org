@@ -38,10 +38,10 @@
           desc: Teka-teki buatan pengguna (beta)
           Custom: Tahap 1
         Flappy Levels:
-          desc: Burung Flappy
+          desc: Flappy Bird
           Flappy: Tahap 1
         Jigsaw Levels:
-          desc: Teka-teki (beta)
+          desc: Jigsaw (beta)
           Jigsaw: Tahap 1
         Step Levels:
           desc: Labirin (beta)
@@ -855,7 +855,7 @@
         set_length: Gunakan blok ini untuk menetapkan "panjang" dengan nilai yang
           benar.
         which_equation: Which equation makes each side shorter for shapes with more
-          sides?  Try each equation!
+          sides?
         get_nectar: Gunakan blok baru "dapatkan nektar".
         actions_category: The tool box got a new look! The "Actions" blocks are in
           here now.

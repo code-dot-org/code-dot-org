@@ -88,5 +88,6 @@
   "signup": "Rregjistrohu për kursin hyrës",
   "hintHeader": "Ja ku është një këshillë:",
   "genericFeedback": "Shiko se si përfundove dhe përpiqu të rregullosh programin tënd.",
-  "defaultTwitterText": "Check out what I made"
+  "toggleBlocksErrorMsg": "You need to correct an error in your program before it can be shown as blocks.",
+  "defaultTwitterText": "Shiko se çfarë bëra"
 }

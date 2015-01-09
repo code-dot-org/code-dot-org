@@ -25,7 +25,7 @@
           Artist5: Trin 19
           Unplug11: Trin 20
         Hour of Code:
-          desc: En Time af Kode
+          desc: Hour of Code
           Maze: Trin 1
         Edit Code:
           desc: Rediger program (beta)
@@ -102,7 +102,7 @@
         Webapp: WebApp
         ArtistEC: Kunstneren
         TextMatch: Tekst Match
-        StudioEC: Spille Lab
+        StudioEC: Play Lab
     trophy:
       name:
         Bronze: Bronze

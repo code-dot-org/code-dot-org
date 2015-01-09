@@ -24,6 +24,7 @@
 
 goog.provide('Blockly.BlockSpaceEditor');
 goog.require('Blockly.BlockSpace');
+goog.require('goog.array');
 
 /**
  * Class for a top-level block editing blockSpace.
@@ -191,6 +192,10 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
     // Determine if there needs to be a category tree, or a simple list of
     // blocks.  This cannot be changed later, since the UI is very different.
     this.addToolboxOrFlyout_();
+
+    // Add a handler that allows the workspace to bump undeletable blocks
+    // back into its working area.
+    this.addChangeListener(this.bumpOrDeleteOutOfBoundsBlocks_);
   }
 
   /**
@@ -233,8 +238,25 @@ Blockly.BlockSpaceEditor.prototype.addFlyout_ = function() {
   flyout.autoClose = false;
   // Insert the flyout behind the blockSpace so that blocks appear on top.
   goog.dom.insertSiblingBefore(flyoutSvg, this.blockSpace.svgGroup_);
+};
 
-  this.addChangeListener(this.flyoutBumpOrDeleteOutOfBoundsBlocks_);
+/**
+ * Gather and return a list of delete rectangles related to this editor.
+ * @public
+ * @return {Array.<Rect>} A list of delete area rectangles.
+ */
+Blockly.BlockSpaceEditor.prototype.getDeleteAreas = function() {
+  var deleteAreas = [];
+
+  if (this.flyout_) {
+    goog.array.extend(deleteAreas, this.flyout_.getRect());
+  }
+
+  if (this.toolbox) {
+    goog.array.extend(deleteAreas, this.toolbox.getRect());
+  }
+
+  return deleteAreas;
 };
 
 /**
@@ -243,7 +265,7 @@ Blockly.BlockSpaceEditor.prototype.addFlyout_ = function() {
  * 2. delete blocks on top of flyout
  * @private
  */
-Blockly.BlockSpaceEditor.prototype.flyoutBumpOrDeleteOutOfBoundsBlocks_ = function() {
+Blockly.BlockSpaceEditor.prototype.bumpOrDeleteOutOfBoundsBlocks_ = function() {
   if (Blockly.Block.isDragging()) {
     return;
   }
@@ -261,20 +283,14 @@ Blockly.BlockSpaceEditor.prototype.flyoutBumpOrDeleteOutOfBoundsBlocks_ = functi
   }
 
   var MARGIN = 25;
+  var MARGIN_TOP = 15;
   var overflow;
   var blocks = this.blockSpace.getTopBlocks(false);
   for (var b = 0, block; block = blocks[b]; b++) {
     var blockXY = block.getRelativeToSurfaceXY();
     var blockHW = block.getHeightWidth();
-    // Have flyout handle any blocks that have been dropped on it
-    if (block.isDeletable() && (Blockly.RTL ?
-        blockXY.x - 2 * metrics.viewLeft - metrics.viewWidth :
-        -blockXY.x) > MARGIN * 2) {
-      this.flyout_.onBlockDropped(block);
-      return;
-    }
     // Bump any block that's above the top back inside.
-    overflow = metrics.viewTop + MARGIN - blockHW.height -
+    overflow = metrics.viewTop + MARGIN_TOP -
       blockXY.y;
     if (overflow > 0) {
       block.moveBy(0, overflow);
@@ -460,6 +476,14 @@ Blockly.BlockSpaceEditor.prototype.getToolboxWidth = function() {
 };
 
 /**
+* Set the cursor to be displayed when over something draggable.
+* @param {Blockly.Cursor} cursorType Enum.
+*/
+Blockly.BlockSpaceEditor.prototype.setCursor = function(cursorType) {
+  Blockly.Css.setCursor(cursorType, this.svg_);
+}
+
+/**
  * Handle a mouse-down on SVG drawing surface.
  * @param {!Event} e Mouse down event.
  * @private
@@ -501,7 +525,7 @@ Blockly.BlockSpaceEditor.prototype.onMouseDown_ = function(e) {
  * @private
  */
 Blockly.BlockSpaceEditor.prototype.onMouseUp_ = function(e) {
-  this.setCursorHand_(false);
+  this.setCursor(Blockly.Css.Cursor.OPEN);
   this.blockSpace.dragMode = false;
 };
 
@@ -692,30 +716,6 @@ Blockly.BlockSpaceEditor.prototype.hideChaff = function(opt_allowToolbox) {
     this.toolbox.flyout_ && this.toolbox.flyout_.autoClose) {
     this.toolbox.clearSelection();
   }
-};
-
-/**
- * Set the mouse cursor to be either a closed hand or the default.
- * @param {boolean} closed True for closed hand.
- * @private
- */
-Blockly.BlockSpaceEditor.prototype.setCursorHand_ = function(closed) {
-  if (Blockly.readOnly) {
-    return;
-  }
-  /* Hotspot coordinates are baked into the CUR file, but they are still
-   required due to a Chrome bug.
-   http://code.google.com/p/chromium/issues/detail?id=1446 */
-  var cursor = '';
-  if (closed) {
-    cursor = 'url(' + Blockly.assetUrl('media/handclosed.cur') + ') 7 3, auto';
-  }
-  if (Blockly.selected) {
-    Blockly.selected.getSvgRoot().style.cursor = cursor;
-  }
-  // Set cursor on the SVG surface as well as block so that rapid movements
-  // don't result in cursor changing to an arrow momentarily.
-  this.svg_.style.cursor = cursor;
 };
 
 /**

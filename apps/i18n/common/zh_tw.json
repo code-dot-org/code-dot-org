@@ -2,7 +2,7 @@
   "and": "且",
   "booleanTrue": "真",
   "booleanFalse": "否",
-  "blocklyMessage": "模組化",
+  "blocklyMessage": "Blockly",
   "catActions": "動作類別",
   "catColour": "顏色",
   "catLogic": "邏輯類別",
@@ -88,5 +88,6 @@
   "signup": "報名參加簡介課程",
   "hintHeader": "提示：",
   "genericFeedback": "看看你的成果如何, 並試著修正你的程式",
+  "toggleBlocksErrorMsg": "You need to correct an error in your program before it can be shown as blocks.",
   "defaultTwitterText": "Check out what I made"
 }

@@ -13,6 +13,7 @@
   "squareBlockTitle": "cuadrado (tamaño, estilo, color)",
   "starBlockTitle": "estrella (radio, estilo, color)",
   "radialStarBlockTitle": "estrella-radial (puntos, interior, exterior, estilo, color)",
+  "polygonBlockTitle": "polygon (sides, length, style, color)",
   "stringAppendBlockTitle": "anexar-cadena (primera, segunda)",
   "stringLengthBlockTitle": "longitud de cadena (cadena)",
   "textBlockTitle": "texto (cadena, tamaño, color)",
