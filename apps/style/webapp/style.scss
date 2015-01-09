@@ -213,3 +213,12 @@ button.arrow:focus {
     display: none;
   }
 }
+
+#view-data-cell {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 10px;
+  &.view-data-cell-none {
+    display: none;
+  }
+}
