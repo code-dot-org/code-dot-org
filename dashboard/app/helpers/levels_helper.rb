@@ -237,6 +237,9 @@ module LevelsHelper
       open_function_definition
       callout_json
       disable_sharing
+      hide_source
+      share
+      no_padding
     ).map{ |x| x.include?(':') ? x.split(':') : [x,x.camelize(:lower)]}]
     .each do |dashboard, blockly|
       # Select first valid value from 1. local_assigns, 2. property of @level object, 3. named instance variable, 4. properties json
@@ -277,7 +280,10 @@ module LevelsHelper
     end
 
     # Set some values that Blockly expects on the root of its options string
-    app_options = {'levelId' => @level.level_num}
+    app_options = {
+      app: @game.try(:app),
+      levelId: @level.level_num,
+    }
     app_options['scriptId'] = @script.id if @script
     app_options['levelGameName'] = @level.game.name if @level.game
     app_options['scrollbars'] = blockly_value(@level.scrollbars) if @level.is_a?(Blockly) && @level.scrollbars

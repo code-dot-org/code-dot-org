@@ -21,7 +21,7 @@
   -# If no param, take default
   - pretty = params.fetch(:pretty, Rails.configuration.pretty_apps)
   %link{href: "#{blockly_path}css/common.css", rel: 'stylesheet', type: 'text/css'}
-  %link{href: "#{blockly_path}css/#{app}.css", rel: 'stylesheet', type: 'text/css'}
+  %link{href: "#{blockly_path}css/#{@game.app}.css", rel: 'stylesheet', type: 'text/css'}
 
   - if @game.uses_droplet?
     %script{src: "#{blockly_path}js/jsinterpreter/acorn_interpreter.js"}
@@ -32,7 +32,7 @@
     %link{href: "#{blockly_path}css/droplet/droplet.min.css", rel: 'stylesheet', type: 'text/css'}
   - else
     %script{src: "#{blockly_path}js/#{js_locale}/vendor.js"}
-  %script{src: "#{blockly_path}js/#{js_locale}/#{app}#{pretty ? '' : '.min'}.js"}
+  %script{src: "#{blockly_path}js/#{js_locale}/#{@game.app}#{pretty ? '' : '.min'}.js"}
 
   - if @autoplay_video_info
     :javascript
@@ -205,13 +205,9 @@
           showInstructions();
         }
       },
-      hide_source: #{local[:hide_source]},
-      share: #{local[:share]},
-      no_padding: #{local[:no_padding]},
       position: { blockYCoordinateInterval: 25 },
       cdoSounds: CDOSounds
     };
     $.extend(appOptions, #{app_options.to_json});
-    #{'console.log(appOptions)' unless Rails.env.production?};
-    #{app}Main(appOptions);
+    window[appOptions.app + 'Main'](appOptions);
     //]]>
