@@ -1,4 +1,4 @@
-"th-TH":
+"en-US":
   hello: สวัสดีชาวโลก
   select_language: โปรดเลือกภาษาของคุณ
   computer_science: วิทยาการคอมพิวเตอร์
@@ -361,6 +361,7 @@
   carousel_heading_robots: เรียนเขียนโปรแกรมกับหุ่นยนต์
   carousel_heading_ide: แพลตฟอร์มที่นิยมในหมู่คุณครู
   educator_notes: บันทึกของผู้สอน
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: แหล่งข้อมูลเพิ่มเติมสำหรับครูและนักศึกษา
   participants: ผู้เข้าร่วม
   teachers_notes: บันทึกของครู

@@ -1,4 +1,4 @@
-"sk-SK":
+"en-US":
   hello: Ahoj svet
   select_language: Prosím, zvoľte si jazyk
   computer_science: Počítačová veda
@@ -386,6 +386,7 @@
   carousel_heading_robots: Naučte sa programovať s robotmi
   carousel_heading_ide: Platformy, ktoré sú populárne medzi učiteľmi
   educator_notes: Poznámky pedagógov
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Ďalšie zdroje pre učiteľov
   participants: účastníci
   teachers_notes: Poznámky učiteľov

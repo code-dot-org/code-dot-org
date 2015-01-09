@@ -1,4 +1,4 @@
-"ar-SA":
+"en-US":
   hello: مرحباً بالعالم
   select_language: الرجاء تحديد اللغة الخاصة بك
   computer_science: علوم الكمبيوتر
@@ -377,6 +377,7 @@
   carousel_heading_robots: تعلم البرمجة مع الروبوتات
   carousel_heading_ide: منصات شعبية بين المعلمين
   educator_notes: ملاحظات المربي
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: المزيد من الموارد للمعلمين والمربين
   participants: المشتركون
   teachers_notes: ملاحظات المعلم

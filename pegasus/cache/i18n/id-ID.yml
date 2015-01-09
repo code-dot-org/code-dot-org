@@ -1,4 +1,4 @@
-"id-ID":
+"en-US":
   hello: Halo dunia
   select_language: Silahkan pilih bahasa Anda
   computer_science: Ilmu komputer
@@ -396,6 +396,7 @@
   carousel_heading_robots: Belajar pemrogaman bersama robot-robot
   carousel_heading_ide: Sarana yang populer di kalangan guru
   educator_notes: Catatan pendidik
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Lebih banyak sumber daya bagi guru dan pendidik
   participants: peserta
   teachers_notes: Catatan Guru

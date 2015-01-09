@@ -1,4 +1,4 @@
-"sr-SP":
+"en-US":
   hello: Здраво свете
   select_language: Молимо изаберите свој језик
   computer_science: Информатика
@@ -385,6 +385,7 @@
   carousel_heading_robots: Научите да програмирате са роботима
   carousel_heading_ide: Платформе популарне са учитељима
   educator_notes: Белешке за едукаторе
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Више ресурса за учитеље и едукаторе
   participants: учесници
   teachers_notes: Белешке учитеља

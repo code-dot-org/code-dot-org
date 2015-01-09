@@ -1,4 +1,4 @@
-"nn-NO":
+"en-US":
   hello: Hei, verden
   select_language: Vel språk
   computer_science: Informatikk
@@ -125,6 +125,12 @@
     kodelinjer.'
   start_hoc: Start  kodetimen nå
   contact_form_topic_press: Media (Intervju eller talar)
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
+    - Michael Clark, Teacher'
+  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
+    - Nina Nichols Peery, Teacher'
+  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
+    Alzate, 5th grader'
   studiobar_title: Prøv ut <a href='http://studio.code.org'>«Kode Studio»</a>
   studiobar_elementary_title: Grunnleggande kurs
   studiobar_elementary_body: Våre tre nye kurs for barnetrinnet
@@ -138,6 +144,8 @@
   studiobar_frozen_body: Lag eit vinterlandskap med Anna og Elsa
   studiobar_donate_title: Donèr
   studiobar_donate_body: Eit barn lærer for hver dollar du donerer
+  studiobar_shop_title: Shop
+  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   contact_form_topic_student: Eg er ein elev
   contact_form_topic_parent: Eg er ein forelder
   contact_form_topic_teacher: Eg er ein lærar
@@ -226,9 +234,11 @@
   dashboard_action_save_all: Lagre alle
   dashboard_action_cancel: Avbryt
   dashboard_action_delete: Slett
-  dashboard_action_confirm: Slette?
   dashboard_action_delete_yes: Ja
   dashboard_action_delete_no: Nei
+  dashboard_action_confirm: Slette?
+  dashboard_action_remove: Remove
+  dashboard_action_remove_confirm: Remove?
   dashboard_action_done: Ferdig
   dashboard_action_required: obligatorisk
   dashboard_navigation_home_page: Lærar heimeside
@@ -369,6 +379,7 @@
   carousel_heading_robots: Lær å programmere med robotar
   carousel_heading_ide: Plattformer som er populære blant lærarar
   educator_notes: Lærarnotat
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Fleire ressursar for lærarar og utdannarar
   participants: deltakarar
   teachers_notes: Læraren sine notat

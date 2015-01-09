@@ -1,4 +1,4 @@
-"sq-AL":
+"en-US":
   hello: Pershendetje Botë
   select_language: Ju lutem zgjedheni gjuhën tuaj
   computer_science: Shkenca Kompjuterike
@@ -378,6 +378,7 @@
   carousel_heading_robots: Learn to program with robots
   carousel_heading_ide: Platforms popular among teachers
   educator_notes: Educator Notes
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: More resources for teachers and educators
   participants: participants
   teachers_notes: Teacher's Notes

@@ -1,4 +1,4 @@
-"ru-RU":
+"en-US":
   hello: Привет, мир!
   select_language: Выберите язык
   computer_science: Информатика
@@ -392,6 +392,7 @@
   carousel_heading_robots: Научись программировать роботов
   carousel_heading_ide: Популярные среди преподавателей платформы
   educator_notes: Заметки педагога
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Больше ресурсов для учителей и преподавателей
   participants: участники
   teachers_notes: Заметки учителя
