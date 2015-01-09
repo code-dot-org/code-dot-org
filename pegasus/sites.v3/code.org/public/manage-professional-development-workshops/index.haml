@@ -172,7 +172,7 @@ angular: professionalDevelopmentWorkshop
         workshop_signups.$promise.then(function(workshop_signups){
           var active_signups_count = 0;
           for (var j = 0; j < workshop_signups.length; j++) {
-            if (workshop_signups[j].status != 'cancelled') {
+            if (workshop_signups[j].status_s != 'cancelled') {
               active_signups_count ++;
             }
           }
@@ -236,7 +236,7 @@ angular: professionalDevelopmentWorkshop
         var workshop_signups = workshopSignupsService.get({parent_secret: $routeParams.secret});
         workshop_signups.$promise.then(function(workshop_signups){
           for (var i = 0; i < workshop_signups.length; i++) {
-            if (workshop_signups[i].status == 'cancelled') {
+            if (workshop_signups[i].status_s == 'cancelled') {
               cancelled_signups.push(workshop_signups[i]);
             }
             else {
