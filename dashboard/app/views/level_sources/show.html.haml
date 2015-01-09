@@ -55,7 +55,7 @@ fjs.parentNode.insertBefore(js, fjs);
 - if !@game.share_mobile_fullscreen?
   - @page_title = t('share_code.title')
   %h1= @page_title
-= render partial: "levels/blockly", locals: { start_blocks: @start_blocks, app: @game.app, hide_source: @hide_source, share: @share, slider_speed: "0.9", no_padding: @no_padding }
+= render partial: "levels/blockly", locals: { slider_speed: "0.9" }
 
 - if current_user.try(:admin) && current_user.admin?
   = render partial: 'level_sources/admin'
