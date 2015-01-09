@@ -67,6 +67,8 @@ levels.ec_simple = {
     {'func': 'canvasGetImageData', 'title': 'Get the ImageData for a rectangle (x, y, width, height) within a canvas', 'category': 'Canvas', 'params': ["'id'", "0", "0", "400", "600"], 'type': 'value' },
     {'func': 'canvasPutImageData', 'title': 'Set the ImageData for a rectangle within a canvas with x, y as the top left coordinates', 'category': 'Canvas', 'params': ["'id'", "imageData", "0", "0"] },
     {'func': 'canvasClear', 'title': 'Clear all data on a canvas', 'category': 'Canvas', 'params': ["'id'"] },
+    {'func': 'createRecord', 'category': 'General', 'params': ["{tableName: 'abc',name:'Alice',age:7,male:false}", "function(record) {\n  for (var prop in record) {\n    createHtmlBlock('id2', 'record.' + prop + ': ' + record[prop]);\n  }\n}"] },
+    {'func': 'readRecords', 'category': 'General', 'params': ["{tableName: 'abc',key1:'value1'}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    for (var prop in records[i]) {\n      createHtmlBlock('id2', 'records[' + i + '].' + prop + ': ' + records[i][prop]);\n    }\n  }\n}"] },
   ],
   'categoryInfo': {
     'General': {

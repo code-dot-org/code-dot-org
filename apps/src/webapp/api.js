@@ -270,3 +270,16 @@ exports.clearTimeout = function (blockId, timeoutId) {
                            {'timeoutId': timeoutId });
 };
 
+exports.createRecord = function (blockId, record, callback) {
+  return Webapp.executeCmd(blockId,
+                          'createRecord',
+                          {'record': record,
+                           'callback': callback });
+};
+
+exports.readRecords = function (blockId, searchParams, callback) {
+  return Webapp.executeCmd(blockId,
+                          'readRecords',
+                          {'searchParams': searchParams,
+                           'callback': callback });
+};
