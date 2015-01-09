@@ -1032,6 +1032,8 @@ Webapp.callCmd = function (cmd) {
     case 'createCheckbox':
     case 'createRadio':
     case 'createDropdown':
+    case 'getAttribute':
+    case 'setAttribute':
     case 'getText':
     case 'setText':
     case 'getChecked':
@@ -1341,6 +1343,30 @@ Webapp.createDropdown = function (opts) {
   newSelect.id = opts.elementId;
 
   return Boolean(divWebapp.appendChild(newSelect));
+};
+
+Webapp.getAttribute = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var element = document.getElementById(opts.elementId);
+  var attribute = String(opts.attribute);
+  return divWebapp.contains(element) ? element[attribute] : false;
+};
+
+// Whitelist of HTML Element attributes which can be modified, to
+// prevent DOM manipulation which would violate the sandbox.
+Webapp.mutableAttributes = ['innerHTML', 'scrollTop'];
+
+Webapp.setAttribute = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var element = document.getElementById(opts.elementId);
+  var attribute = String(opts.attribute);
+  var value = String(opts.value);
+  if (divWebapp.contains(element) &&
+      Webapp.mutableAttributes.indexOf(attribute) !== -1) {
+    element[attribute] = value;
+    return true;
+  }
+  return false;
 };
 
 Webapp.getText = function (opts) {
