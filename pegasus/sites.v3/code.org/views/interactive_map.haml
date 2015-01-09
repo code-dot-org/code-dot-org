@@ -3,7 +3,7 @@
 %script{:src=>"/js/raphael.js"}
 %script{:src=>"/js/extended_us_map.js"}
 
-%div{:id=>'map', :style=>'width: 56%; min-height: 350px; float: left; margin-top: 25px'}
+%div#map
 %div{:id=>'infobox', :class=>'greybox', :style=>'width: 44%; min-hieght: 350px; text-align:left; float:left'}
   %p{:style=>'color: rgb(185,191,21); text-shadow: 1px 1px rgba(0, 0, 0, .5); font-size:36px; line-height: 24px; font-weight: bold; text-align:center'}
   %p{:id=>'info', :style=>"font-size:18px;"}
@@ -84,3 +84,11 @@
       }
     });
   };
+
+:css
+  #map {
+  width: 56%;
+  min-height: 350px;
+  float: left;
+  margin-top: 25px
+  }
