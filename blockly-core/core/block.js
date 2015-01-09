@@ -611,7 +611,7 @@ Blockly.Block.prototype.onMouseUp_ = function(e) {
       thisBlockSpace.trashcan.close();
     }
   } else if (Blockly.selected &&
-      Blockly.selected.isDeletable() &&
+      Blockly.selected.areBlockAndDescendantsDeletable() &&
       thisBlockSpace.isDeleteArea(e)) {
     // The ordering of the statement above is important because isDeleteArea()
     // has a side effect of opening the trash can.
@@ -1020,7 +1020,7 @@ Blockly.Block.prototype.onMouseMove_ = function(e) {
     }
     // Provide visual indication of whether the block will be
     // deleted if dropped here.
-    if (this.isDeletable()) {
+    if (this.areBlockAndDescendantsDeletable()) {
       this.blockSpace.isDeleteArea(e);
     }
   }
@@ -1217,6 +1217,22 @@ Blockly.Block.prototype.getDescendants = function() {
   }
   return blocks;
 };
+
+/**
+ * Get whether this block and all of its connected descendants
+ * are configured as deletable. Used when deciding whether the
+ * user can trash a group of blocks - all of the blocks must
+ * be deletable.
+ * @return {boolean} True if this block and all blocks connected
+ *    below it are deleteable.
+ */
+Blockly.Block.prototype.areBlockAndDescendantsDeletable = function() {
+  var deleteBlockedByChildren = this.childBlocks_.some(
+    function (child) {
+      return !child.areBlockAndDescendantsDeletable();
+    });
+  return !deleteBlockedByChildren && this.isDeletable();
+}
 
 /**
  * Get whether this block is deletable or not.
