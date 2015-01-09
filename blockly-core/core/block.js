@@ -1231,7 +1231,7 @@ Blockly.Block.prototype.areBlockAndDescendantsDeletable = function() {
     function (child) {
       return !child.areBlockAndDescendantsDeletable();
     });
-  return !deleteBlockedByChildren && this.isDeletable();
+  return this.isDeletable() && !deleteBlockedByChildren;
 }
 
 /**
