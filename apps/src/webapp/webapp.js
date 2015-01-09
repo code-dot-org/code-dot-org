@@ -705,7 +705,8 @@ var consoleApi = {};
 consoleApi.log = function() {
   var nativeArgs = [];
   for (var i = 0; i < arguments.length; i++) {
-    nativeArgs[i] = codegen.marshalInterpreterToNative(arguments[i]);
+    nativeArgs[i] = codegen.marshalInterpreterToNative(Webapp.interpreter,
+                                                       arguments[i]);
   }
   var output = '';
   var firstArg = nativeArgs[0];
