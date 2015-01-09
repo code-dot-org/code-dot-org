@@ -38,7 +38,7 @@ theme: none
           {{date.date_s}}, {{date.start_time_s}}-{{date.end_time_s}}
       %td {{workshop.location_name_s}}
       %td {{workshop.type_s}}
-      %td {{workshop.signups.length}} / {{workshop.capacity_s}}
+      %td {{workshop.active_signups_count}} / {{workshop.capacity_s}}
       %td
         %span{'ng-show' => 'workshop.state() == "not_started"'}
           Not Started
