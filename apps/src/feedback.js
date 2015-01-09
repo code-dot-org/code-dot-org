@@ -1,6 +1,5 @@
 var trophy = require('./templates/trophy.html');
 var utils = require('./utils');
-var readonly = require('./templates/readonly.html');
 var codegen = require('./codegen');
 var msg = require('../locale/current/common');
 var dom = require('./dom');
@@ -50,7 +49,8 @@ exports.displayFeedback = function(options) {
   if (hadShareFailure) {
     trackEvent('Share', 'Failure', options.response.share_failure.type);
   }
-  var feedbackBlocks = new FeedbackBlocks(options);
+  var feedbackBlocks = new FeedbackBlocks(options, getMissingRequiredBlocks(),
+    studioAppSingleton);
   // feedbackMessage must be initialized after feedbackBlocks
   // because FeedbackBlocks can mutate options.response.hint.
   var feedbackMessage = getFeedbackMessage(options);
@@ -796,6 +796,7 @@ var getMissingRequiredBlocks = function () {
   var missingBlocks = [];
   var customMessage = null;
   var code = null;  // JavaScript code, which is initialized lazily.
+  // TODO (br-pair) : we should probably just pass required_blocks
   if (studioAppSingleton.REQUIRED_BLOCKS && studioAppSingleton.REQUIRED_BLOCKS.length) {
     var userBlocks = getUserBlocks();
     // For each list of required blocks
@@ -970,57 +971,6 @@ exports.createModalDialogWithIcon = function(options) {
     onKeydown: btn ? keydownHandler : undefined,
     id: options.id
   });
-};
-
-/**
- * Creates the XML for blocks to be displayed in a read-only frame.
- * @param {Array} blocks An array of blocks to display (with optional args).
- * @return {string} The generated string of XML.
- */
-var generateXMLForBlocks = function(blocks) {
-  var blockXMLStrings = [];
-  var blockX = 10;  // Prevent left output plugs from being cut off.
-  var blockY = 0;
-  var blockXPadding = 200;
-  var blockYPadding = 120;
-  var blocksPerLine = 2;
-  var k, name;
-  for (var i = 0; i < blocks.length; i++) {
-    var block = blocks[i];
-    if (block.blockDisplayXML) {
-      blockXMLStrings.push(block.blockDisplayXML);
-      continue;
-    }
-    blockXMLStrings.push('<block', ' type="', block.type, '" x="',
-                        blockX.toString(), '" y="', blockY, '">');
-    if (block.titles) {
-      var titleNames = Object.keys(block.titles);
-      for (k = 0; k < titleNames.length; k++) {
-        name = titleNames[k];
-        blockXMLStrings.push('<title name="', name, '">',
-                            block.titles[name], '</title>');
-      }
-    }
-    if (block.values) {
-      var valueNames = Object.keys(block.values);
-      for (k = 0; k < valueNames.length; k++) {
-        name = valueNames[k];
-        blockXMLStrings.push('<value name="', name, '">',
-                            block.values[name], '</value>');
-      }
-    }
-    if (block.extra) {
-      blockXMLStrings.push(block.extra);
-    }
-    blockXMLStrings.push('</block>');
-    if ((i + 1) % blocksPerLine === 0) {
-      blockY += blockYPadding;
-      blockX = 0;
-    } else {
-      blockX += blockXPadding;
-    }
-  }
-  return blockXMLStrings.join('');
 };
 
 /**
