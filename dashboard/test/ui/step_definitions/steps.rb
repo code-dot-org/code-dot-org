@@ -82,6 +82,16 @@ When /^I click selector "([^"]*)"$/ do |jquery_selector|
   @browser.execute_script("$(\"#{jquery_selector}\").click();")
 end
 
+When /^I press delete$/ do
+  script = "Blockly.mainBlockSpaceEditor.onKeyDown_("
+  script +="{"
+  script +="  target: {},"
+  script +="  preventDefault: function() {},"
+  script +="  keyCode: $.simulate.keyCode['DELETE']"
+  script +="})"
+  @browser.execute_script(script)
+end
+
 When /^I hold key "([^"]*)"$/ do |keyCode|
   script ="$(window).simulate('keydown',  {keyCode: $.simulate.keyCode['#{keyCode}']})"
   @browser.execute_script(script)

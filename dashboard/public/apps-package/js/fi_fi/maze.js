@@ -1321,7 +1321,7 @@ StudioAppClass.prototype.handleUsingBlockly_ = function (config) {
     editBlocks: config.level.edit_blocks === undefined ?
         false : config.level.edit_blocks
   };
-  ['trashcan', 'concreteBlocks', 'varsInGlobals',
+  ['trashcan', 'varsInGlobals',
     'grayOutUndeletableBlocks', 'disableParamEditing'].forEach(
     function (prop) {
       if (config[prop] !== undefined) {
@@ -2010,20 +2010,22 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
   return retVal;
 };
 
-exports.marshalInterpreterToNative = function (interpreterVar) {
+exports.marshalInterpreterToNative = function (interpreter, interpreterVar) {
   if (interpreterVar.isPrimitive) {
     return interpreterVar.data;
-  } else if (Webapp.interpreter.isa(interpreterVar, Webapp.interpreter.ARRAY)) {
+  } else if (interpreter.isa(interpreterVar, interpreter.ARRAY)) {
     var nativeArray = [];
     nativeArray.length = interpreterVar.length;
     for (var i = 0; i < nativeArray.length; i++) {
-      nativeArray[i] = exports.marshalInterpreterToNative(interpreterVar.properties[i]);
+      nativeArray[i] = exports.marshalInterpreterToNative(interpreter,
+                                                          interpreterVar.properties[i]);
     }
     return nativeArray;
-  } else if (Webapp.interpreter.isa(interpreterVar, Webapp.interpreter.OBJECT)) {
+  } else if (interpreter.isa(interpreterVar, interpreter.OBJECT)) {
     var nativeObject = {};
     for (var prop in interpreterVar.properties) {
-      nativeObject[prop] = exports.marshalInterpreterToNative(interpreterVar.properties[prop]);
+      nativeObject[prop] = exports.marshalInterpreterToNative(interpreter,
+                                                              interpreterVar.properties[prop]);
     }
     return nativeObject;
   } else {
@@ -2041,7 +2043,7 @@ exports.makeNativeMemberFunction = function (interpreter, nativeFunc, nativePare
     // Call the native function:
     var nativeArgs = [];
     for (var i = 0; i < arguments.length; i++) {
-      nativeArgs[i] = exports.marshalInterpreterToNative(arguments[i]);
+      nativeArgs[i] = exports.marshalInterpreterToNative(interpreter, arguments[i]);
     }
     var nativeRetVal = nativeFunc.apply(nativeParentObj, nativeArgs);
     return exports.marshalNativeToInterpreter(interpreter, nativeRetVal, null, maxDepth);
@@ -2167,7 +2169,7 @@ exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
   var userCodeRow = -1;
   if (interpreter.stateStack[0]) {
     var node = interpreter.stateStack[0].node;
-    // Adjust start/end by Webapp.userCodeStartOffset since the code running
+    // Adjust start/end by userCodeStartOffset since the code running
     // has been expanded vs. what the user sees in the editor window:
     var start = node.start - userCodeStartOffset;
     var end = node.end - userCodeStartOffset;
@@ -9125,7 +9127,7 @@ Bee.prototype.finished = function () {
   if (this.honey_ < this.honeyGoal_ || this.nectars_.length < this.nectarGoal_) {
     return false;
   }
-  
+
   if (!this.checkedAllClouded() || !this.checkedAllPurple()) {
     return false;
   }
@@ -9202,9 +9204,12 @@ Bee.prototype.getTestResults = function (terminationValue) {
     case TerminationValue.UNCHECKED_PURPLE:
     case TerminationValue.INSUFFICIENT_NECTAR:
     case TerminationValue.INSUFFICIENT_HONEY:
-      // non-app failures take precendence over these.
       var testResults = StudioApp.getTestResults(true);
-      if (testResults === TestResults.ALL_PASS) {
+      // If we have a non-app specific failure, we want that to take precedence.
+      // Values over TOO_MANY_BLOCKS_FAIL are not true failures, but indicate
+      // a suboptimal solution, so in those cases we want to return our
+      // app specific fail
+      if (testResults >= TestResults.TOO_MANY_BLOCKS_FAIL) {
         testResults = TestResults.APP_SPECIFIC_FAIL;
       }
       return testResults;
