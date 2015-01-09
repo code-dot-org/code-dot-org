@@ -1,10 +1,9 @@
 function AppProperties(app_id)
 {
   var object = {
-    api_base_url:"/v2/apps/" + app_id + "/properties",
+    api_base_url: "/v2/apps/" + app_id + "/properties",
 
-    all:function(callback)
-    {
+    all: function(callback) {
       $.ajax({
         url: this.api_base_url,
         type: "get",
@@ -16,8 +15,7 @@ function AppProperties(app_id)
       });
     },
   
-    get:function(key, callback)
-    {
+    get: function(key, callback) {
       $.ajax({
         url: this.api_base_url + "/" + key,
         type: "get",
@@ -29,8 +27,7 @@ function AppProperties(app_id)
       });  
     },
   
-    set:function(key, value, callback)
-    {
+    set: function(key, value, callback) {
       $.ajax({
         url: this.api_base_url + "/" + key,
         type: "post",
@@ -43,8 +40,7 @@ function AppProperties(app_id)
       });
     },
 
-    delete:function(key, callback)
-    {
+    delete: function(key, callback) {
       $.ajax({
         url: this.api_base_url + "/" + key + "/delete",
         type: "post",
@@ -62,7 +58,7 @@ function AppProperties(app_id)
 
 function UserProperties(app_id)
 {
-  properties = AppProperties(app_id)
-  properties.api_base_url = "/v2/apps/" + app_id + "/user-properties"
+  properties = AppProperties(app_id);
+  properties.api_base_url = "/v2/apps/" + app_id + "/user-properties";
   return properties;
 }
