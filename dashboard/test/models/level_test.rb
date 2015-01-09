@@ -106,11 +106,9 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test "create turtle level from level builder" do
-    program = '<xml>hey</xml>'
-    level = Artist.create_from_level_builder(@turtle_data.merge!(program: program), {name: 'create_turtle_name'})
+    level = Artist.create_from_level_builder(@turtle_data, {name: 'create_turtle_name'})
 
     assert_equal "Artist", level.type
-    assert_equal program, level.properties['solution_blocks']
     assert_equal 'custom', level.level_num
   end
 
