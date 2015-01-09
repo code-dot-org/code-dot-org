@@ -27,6 +27,28 @@ goog.provide('Blockly.Css');
 
 goog.require('goog.cssom');
 
+/**
+ * List of cursors.
+ * @enum {string}
+ */
+Blockly.Css.Cursor = {
+  OPEN: 'handopen',
+  CLOSED: 'handclosed',
+  DELETE: 'handdelete'
+};
+
+/**
+* Current cursor (cached value).
+* @type string
+*/
+Blockly.Css.currentCursor_ = '';
+
+/**
+ * Large stylesheet added by Blockly.Css.inject.
+ * @type Element
+ * @private
+ */
+Blockly.Css.styleSheet_ = null;
 
 /**
  * Inject the CSS into the DOM.  This is preferable over using a regular CSS
@@ -37,18 +59,84 @@ goog.require('goog.cssom');
  */
 Blockly.Css.inject = function() {
   var text = Blockly.Css.CONTENT.join('\n');
+
   // Expand paths.
   text = text
     .replace('%HAND_OPEN_PATH%', Blockly.assetUrl('media/handopen.cur'))
+    .replace('%HAND_CLOSED_PATH%', Blockly.assetUrl('media/handclosed.cur'))
+    .replace('%HAND_DELETE_PATH%', Blockly.assetUrl('media/handdelete.cur'))
     .replace('%TREE_PATH%', Blockly.assetUrl('media/tree.png'))
     .replace('%SPRITES_PATH%', Blockly.assetUrl('media/sprites.png'));
-  goog.cssom.addCssText(text);
+  Blockly.Css.styleSheet_ = goog.cssom.addCssText(text).sheet;
+  Blockly.Css.setCursor(Blockly.Css.Cursor.OPEN);
+};
+
+/**
+ * Set the cursor to be displayed when over something draggable.
+ * In most cases, it may be easier to call the setCursor helper on
+ * BlockSpaceEditor than to use this method directly.
+ * @param {Blockly.Cursor} cursor Enum.
+ * @param {?SVGElement} opt_svg The blockSpace svg object to also set the cursor on.
+ */
+Blockly.Css.setCursor = function(cursor, opt_svg) {
+  if (Blockly.readOnly) {
+    return;
+  }
+
+  if (Blockly.Css.currentCursor_ != cursor) {
+    Blockly.Css.currentCursor_ = cursor;
+
+    /*
+    Hotspot coordinates are baked into the CUR file, but they are still
+    required in the CSS due to a Chrome bug.
+    https://code.google.com/p/chromium/issues/detail?id=1446
+    */
+    if (cursor == Blockly.Css.Cursor.OPEN) {
+      var xy = '8 5';
+    } else {
+      var xy = '7 3';
+    }
+    var cursorRuleRHS = 'url(' +
+    Blockly.assetUrl('media/' + cursor + '.cur') +
+    ') ' + xy + ', auto';
+    var rule = '.blocklyDraggable {\ncursor: ' + cursorRuleRHS + ';\n}\n';
+    var ruleIndex = 0;
+    // Guard against empty stylesheet for tests.
+    if (Blockly.Css.styleSheet_ && Blockly.Css.styleSheet_.cssRules.length > ruleIndex) {
+      // There are potentially hundreds of draggable objects.  Changing their style
+      // properties individually is too slow, so change the CSS rule instead.
+      goog.cssom.replaceCssRule('', rule, Blockly.Css.styleSheet_, ruleIndex);
+    }
+  }
+
+  var setCursorOnBackgroundElement = function(element) {
+    if (cursor == Blockly.Css.Cursor.OPEN) {
+      element.style.cursor = '';
+    } else {
+      element.style.cursor = cursorRuleRHS;
+    }
+  };
+
+  // There is probably only one toolbox, so just change its style property.
+  var toolboxen = document.getElementsByClassName('blocklyToolboxDiv');
+  for (var i = 0, toolbox; toolbox = toolboxen[i]; i++) {
+    setCursorOnBackgroundElement(toolbox);
+  }
+
+  // Set cursor on the SVG surface as well, so that rapid movements
+  // don't result in cursor changing to an arrow momentarily.
+  if (opt_svg) {
+    setCursorOnBackgroundElement(opt_svg);
+  }
 };
 
 /**
  * Array making up the CSS content for Blockly.
  */
 Blockly.Css.CONTENT = [
+  '.blocklyDraggable {',
+    // Placeholder for cursor rule. Must be first rule (index 0).
+  '}',
   '#blockly {',
   '  border: 1px solid #ddd;',
   '}',
@@ -84,12 +172,6 @@ Blockly.Css.CONTENT = [
   '  position: absolute;',
   '  display: none;',
   '  z-index: 999;',
-  '}',
-  '.blocklyDraggable {',
-  '  /* Hotspot coordinates are baked into the CUR file, but they are still',
-  '     required in the CSS due to a Chrome bug.',
-  '     http://code.google.com/p/chromium/issues/detail?id=1446 */',
-  '  cursor: url(%HAND_OPEN_PATH%) 8 5, auto;',
   '}',
   '.blocklyResizeSE {',
   '  fill: #aaa;',
@@ -291,7 +373,7 @@ Blockly.Css.CONTENT = [
   '  fill: #ddd;',
   '  fill-opacity: 0.8;',
   '}',
-  '.blocklyColourBackground {',
+  '.blocklyBackground {',
   '  fill: #666;',
   '}',
   '.blocklyScrollbarBackground {',
