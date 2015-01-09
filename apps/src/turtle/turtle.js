@@ -258,55 +258,55 @@ Artist.prototype.afterInject_ = function (config) {
       if (!Blockly.JavaScript.definitions_.colour_random) {
         var functionName = Blockly.JavaScript.variableDB_.getDistinctName(
           'colour_random', Blockly.Generator.NAME_TYPE);
-          Blockly.JavaScript.colour_random.functionName = functionName;
-          var func = [];
-          func.push('function ' + functionName + '() {');
-          func.push('   var colors = ' + JSON.stringify(Blockly.FieldColour.COLOURS) + ';');
-          func.push('  return colors[Math.floor(Math.random()*colors.length)];');
-          func.push('}');
-          Blockly.JavaScript.definitions_.colour_random = func.join('\n');
-        }
-        var code = Blockly.JavaScript.colour_random.functionName + '()';
-        return [code, Blockly.JavaScript.ORDER_FUNCTION_CALL];
-      };
-    }
+        Blockly.JavaScript.colour_random.functionName = functionName;
+        var func = [];
+        func.push('function ' + functionName + '() {');
+        func.push('   var colors = ' + JSON.stringify(Blockly.FieldColour.COLOURS) + ';');
+        func.push('  return colors[Math.floor(Math.random()*colors.length)];');
+        func.push('}');
+        Blockly.JavaScript.definitions_.colour_random = func.join('\n');
+      }
+      var code = Blockly.JavaScript.colour_random.functionName + '()';
+      return [code, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+    };
+  }
 
-    this.loadDecorationAnimation();
+  this.loadDecorationAnimation();
 
-    // Set their initial contents.
-    this.loadTurtle();
-    this.drawImages();
-    this.isDrawingAnswer_ = true;
-    this.drawAnswer();
-    this.isDrawingAnswer_ = false;
-    if (this.level.predraw_blocks) {
-      this.isPredrawing_ = true;
-      this.drawBlocksOnCanvas(this.level.predraw_blocks, this.ctxPredraw);
-      this.isPredrawing_ = false;
-    }
+  // Set their initial contents.
+  this.loadTurtle();
+  this.drawImages();
+  this.isDrawingAnswer_ = true;
+  this.drawAnswer();
+  this.isDrawingAnswer_ = false;
+  if (this.level.predraw_blocks) {
+    this.isPredrawing_ = true;
+    this.drawBlocksOnCanvas(this.level.predraw_blocks, this.ctxPredraw);
+    this.isPredrawing_ = false;
+  }
 
-    // pre-load image for line pattern block. Creating the image object and setting source doesn't seem to be
-    // enough in this case, so we're actually creating and reusing the object within the document body.
+  // pre-load image for line pattern block. Creating the image object and setting source doesn't seem to be
+  // enough in this case, so we're actually creating and reusing the object within the document body.
 
-    if (this.skin.id == "anna" || this.skin.id == "elsa") {
-      var imageContainer = document.createElement('div');
-      imageContainer.style.display='none';
-      document.body.appendChild(imageContainer);
+  if (this.skin.id == "anna" || this.skin.id == "elsa") {
+    var imageContainer = document.createElement('div');
+    imageContainer.style.display='none';
+    document.body.appendChild(imageContainer);
 
-      for( var i = 0; i < this.lineStylePatternOptions.length; i++) {
-        var pattern = this.lineStylePatternOptions[i][1];
-        if (this.skin[pattern]) {
-          var img = new Image();
-          img.src = this.skin[pattern];
-          this.loadedPathPatterns[pattern] = img;
-        }
+    for( var i = 0; i < this.lineStylePatternOptions.length; i++) {
+      var pattern = this.lineStylePatternOptions[i][1];
+      if (this.skin[pattern]) {
+        var img = new Image();
+        img.src = this.skin[pattern];
+        this.loadedPathPatterns[pattern] = img;
       }
     }
+  }
 
-    // Adjust visualizationColumn width.
-    var visualizationColumn = document.getElementById('visualizationColumn');
-    visualizationColumn.style.width = '400px';
-  };
+  // Adjust visualizationColumn width.
+  var visualizationColumn = document.getElementById('visualizationColumn');
+  visualizationColumn.style.width = '400px';
+};
 
 /**
  * On startup draw the expected answer and save it to the answer canvas.
