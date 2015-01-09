@@ -79,6 +79,19 @@ post '/v2/forms/:kind/:secret/review' do |kind, secret|
   call(env.merge('REQUEST_METHOD'=>'REVIEW', 'PATH_INFO'=>"/v2/forms/#{kind}/#{secret}"))
 end
 
+get '/v2/forms/:kind/:secret/status/:status' do |kind, secret, status|
+  dont_cache
+  form = DB[:forms].where(kind:kind, secret:secret).first
+  forbidden! if form.empty?
+  data = JSON.parse(form[:data])
+  pass unless ['cancelled'].include?(status)
+  data['status'] = status
+  DB[:forms].where(kind:kind, secret:secret).update(data:data.to_json, indexed_at:nil)
+
+  content_type :json
+  data.to_json
+end
+
 get '/v2/forms/:parent_kind/:parent_secret/children/:kind' do |parent_kind, parent_secret, kind|
   dont_cache
   results = []
