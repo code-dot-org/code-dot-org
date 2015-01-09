@@ -3,7 +3,7 @@ var TestResults = require('../../../src/constants.js').TestResults;
 
 var rblocks = function () {
   // stick this inside a function so that it's only loaded when needed
-  return testUtils.requireWithGlobalsCheckSrcFolder('turtle/requiredBlocks.js');
+  return testUtils.requireWithGlobalsCheckBuildFolder('turtle/requiredBlocks.js');
 };
 
 var studioAppSingleton = require(testUtils.buildPath('base'));
