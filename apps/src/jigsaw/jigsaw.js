@@ -7,7 +7,7 @@
 
 'use strict';
 
-var StudioApp = require('../base');
+var studioAppSingleton = require('../base');
 var skins = require('../skins');
 var page = require('../templates/page.html');
 var feedback = require('../feedback.js');
@@ -21,9 +21,12 @@ var Jigsaw = module.exports;
 var level;
 var skin;
 
-StudioApp.CHECK_FOR_EMPTY_BLOCKS = true;
+var ResultType = studioAppSingleton.ResultType;
+var TestResults = studioAppSingleton.TestResults;
+
+studioAppSingleton.CHECK_FOR_EMPTY_BLOCKS = true;
 //The number of blocks to show as feedback.
-StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
+studioAppSingleton.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
 // Never bump neighbors for Jigsaw
 Blockly.BUMP_UNCONNECTED = false;
@@ -119,19 +122,20 @@ Jigsaw.init = function(config) {
   Blockly.SNAP_RADIUS = level.snapRadius || 90;
 
   config.html = page({
-    assetUrl: StudioApp.assetUrl,
+    assetUrl: studioAppSingleton.assetUrl,
     data: {
-      localeDirection: StudioApp.localeDirection(),
-      controls: require('./controls.html')({assetUrl: StudioApp.assetUrl}),
+      localeDirection: studioAppSingleton.localeDirection(),
+      controls: require('./controls.html')({assetUrl: studioAppSingleton.assetUrl}),
       editCode: level.editCode,
       blockCounterClass: 'block-counter-default'
     }
   });
 
+  // TODO (br-pair) : I think this is something that's happening in all apps?
   config.loadAudio = function() {
-    StudioApp.loadAudio(skin.winSound, 'win');
-    StudioApp.loadAudio(skin.startSound, 'start');
-    StudioApp.loadAudio(skin.failureSound, 'failure');
+    studioAppSingleton.loadAudio(skin.winSound, 'win');
+    studioAppSingleton.loadAudio(skin.startSound, 'start');
+    studioAppSingleton.loadAudio(skin.failureSound, 'failure');
   };
 
   config.afterInject = function() {
@@ -153,7 +157,7 @@ Jigsaw.init = function(config) {
   config.enableShowCode = false;
   config.enableShowBlockCount = false;
 
-  StudioApp.init(config);
+  studioAppSingleton.init(config);
 
   document.getElementById('runButton').style.display = 'none';
   Jigsaw.successListener = Blockly.mainBlockSpaceEditor.addChangeListener(function(evt) {
@@ -174,18 +178,18 @@ function checkForSuccess() {
   if (success) {
     Blockly.removeChangeListener(Jigsaw.successListener);
 
-    Jigsaw.result = StudioApp.ResultType.SUCCESS;
+    Jigsaw.result = ResultType.SUCCESS;
     Jigsaw.onPuzzleComplete();
   }
 }
 
 /**
  * App specific displayFeedback function that calls into
- * StudioApp.displayFeedback when appropriate
+ * studioAppSingleton.displayFeedback when appropriate
  */
 var displayFeedback = function() {
   if (!Jigsaw.waitingForReport) {
-    StudioApp.displayFeedback({
+    studioAppSingleton.displayFeedback({
       app: 'Jigsaw',
       skin: skin.id,
       feedbackType: Jigsaw.testResults,
@@ -216,16 +220,16 @@ Jigsaw.onPuzzleComplete = function() {
 
   // If we know they succeeded, mark levelComplete true
   // Note that we have not yet animated the succesful run
-  var levelComplete = (Jigsaw.result == StudioApp.ResultType.SUCCESS);
+  var levelComplete = (Jigsaw.result == ResultType.SUCCESS);
 
-  Jigsaw.testResults = StudioApp.getTestResults(levelComplete, {
+  Jigsaw.testResults = studioAppSingleton.getTestResults(levelComplete, {
     allowTopBlocks: true
   });
 
-  if (Jigsaw.testResults >= StudioApp.TestResults.FREE_PLAY) {
-    StudioApp.playAudio('win');
+  if (Jigsaw.testResults >= TestResults.FREE_PLAY) {
+    studioAppSingleton.playAudio('win');
   } else {
-    StudioApp.playAudio('failure');
+    studioAppSingleton.playAudio('failure');
   }
 
   var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
@@ -234,10 +238,10 @@ Jigsaw.onPuzzleComplete = function() {
   Jigsaw.waitingForReport = true;
 
   // Report result to server.
-  StudioApp.report({
+  studioAppSingleton.report({
      app: 'Jigsaw',
      level: level.id,
-     result: Jigsaw.result === StudioApp.ResultType.SUCCESS,
+     result: Jigsaw.result === ResultType.SUCCESS,
      testResult: Jigsaw.testResults,
      program: encodeURIComponent(textBlocks),
      onComplete: Jigsaw.onReportComplete
