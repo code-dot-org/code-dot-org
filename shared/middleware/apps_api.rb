@@ -167,6 +167,9 @@ class AppsApi < Sinatra::Base
   #
   class PropertyBag
   
+    class NotFound < Sinatra::NotFound
+    end
+
     def initialize(app_id, storage_id)
       @app_id = app_id # TODO(if/when needed): Ensure this is a registered app?
       @storage_id = storage_id
