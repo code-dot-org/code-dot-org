@@ -1,4 +1,4 @@
-"en-US":
+"pt-BR":
   hello: Olá, mundo
   select_language: Selecione seu idioma
   computer_science: Ciência da Computação
@@ -127,12 +127,6 @@
     escreveram %{lines} linhas de programação.'
   start_hoc: Comece a Hora do Código agora
   contact_form_topic_press: Imprensa/mídia (entrevista ou falando de compromisso)
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
-    - Michael Clark, Teacher'
-  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
-    - Nina Nichols Peery, Teacher'
-  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
-    Alzate, 5th grader'
   studiobar_title: Explore o <a href='http://studio.code.org'>Code Studio</a>
   studiobar_elementary_title: Cursos para o Ensino Fundamental
   studiobar_elementary_body: Nossos três novos cursos para Ensino Fundamental
@@ -146,8 +140,6 @@
   studiobar_frozen_body: Crie um país das maravilhas congelante com Anna e Elsa
   studiobar_donate_title: Faça uma doação
   studiobar_donate_body: Para cada dólar doado, uma criança aprende
-  studiobar_shop_title: Shop
-  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   contact_form_topic_student: Sou um estudante
   contact_form_topic_parent: Sou um pai
   contact_form_topic_teacher: Sou um professor/educador
@@ -241,11 +233,9 @@
   dashboard_action_save_all: Salvar tudo
   dashboard_action_cancel: Cancelar
   dashboard_action_delete: Excluir
+  dashboard_action_confirm: Excluir?
   dashboard_action_delete_yes: Sim
   dashboard_action_delete_no: Não
-  dashboard_action_confirm: Excluir?
-  dashboard_action_remove: Remove
-  dashboard_action_remove_confirm: Remove?
   dashboard_action_done: Feito
   dashboard_action_required: obrigatório
   dashboard_navigation_home_page: Página inicial do professor
@@ -394,7 +384,6 @@
   carousel_heading_robots: Aprenda a programar com robôs
   carousel_heading_ide: Plataformas populares entre professores
   educator_notes: Observações do Educador
-  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Mais recursos para professores e educadores
   participants: participantes
   teachers_notes: Observações do Professor
@@ -1081,3 +1070,14 @@
   sphero_beyond_longdescription: Se você é educador ou pai, as lições do SPRK dão
     às crianças um curso divertido sobre programação de robôs, e, ao mesmo tempo,
     melhoram habilidades de matemática e ciências.
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
+    - Michael Clark, Teacher'
+  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
+    - Nina Nichols Peery, Teacher'
+  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
+    Alzate, 5th grader'
+  studiobar_shop_title: Shop
+  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
+  dashboard_action_remove: Remove
+  dashboard_action_remove_confirm: Remove?
+  how_to_teach_hoc: How to Teach an Hour of Code

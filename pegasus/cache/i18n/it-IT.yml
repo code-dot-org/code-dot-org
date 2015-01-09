@@ -1,4 +1,4 @@
-"en-US":
+"it-IT":
   hello: Ciao a tutti
   select_language: Seleziona per favore la tua lingua
   computer_science: Informatica
@@ -399,7 +399,6 @@
   carousel_heading_robots: Impara a programmare giocando con un robot
   carousel_heading_ide: Piattaforme didattiche popolari tra gli insegnanti
   educator_notes: Note per gli insegnanti
-  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Ulteriori risorse per insegnanti ed educatori in generale
   participants: partecipanti
   teachers_notes: Note per gli insegnanti
@@ -1092,3 +1091,4 @@
     permetteranno ai ragazzi di seguire un divertente corso accelerato per imparare
     a programmare dei robot ed affinare allo stesso tempo le loro capacità in scienze
     e matematica.
+  how_to_teach_hoc: How to Teach an Hour of Code

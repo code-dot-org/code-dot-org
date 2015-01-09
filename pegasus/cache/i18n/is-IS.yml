@@ -1,4 +1,4 @@
-"en-US":
+"is-IS":
   hello: Halló heimur
   select_language: Vinsamlegast veldu tungumál þitt
   computer_science: Tölvunarfræði
@@ -390,7 +390,6 @@
   carousel_heading_robots: Lærðu að forrita með vélmennum
   carousel_heading_ide: Tækni vinsæl meðal kennara
   educator_notes: Minnispunktar leiðbeinenda
-  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Fleiri tilföng fyrir kennara og leiðbeinendur
   participants: þátttakendur
   teachers_notes: Minnispunktar kennara
@@ -1029,3 +1028,4 @@
   sphero_beyond_longdescription: Hvort sem þú ert foreldri eða fræðari þá er SPRK
     kennsluefnið skemmtilegt hraðnámskeið fyrir börn í forritun vélmenna og eflir
     þau um leið í raungreinum.
+  how_to_teach_hoc: How to Teach an Hour of Code

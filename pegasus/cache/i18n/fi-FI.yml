@@ -1,4 +1,4 @@
-"en-US":
+"fi-FI":
   hello: Hei maailma
   select_language: Valitse kieli
   computer_science: Tietotekniikka
@@ -379,7 +379,6 @@
   carousel_heading_robots: Opi ohjelmoimaan robottien kanssa
   carousel_heading_ide: Opettajien keskuudessa suositut alustat
   educator_notes: Opettajan muistiinpanot
-  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Lisämateriaalit opettajille
   participants: osallistujat
   teachers_notes: Opettajan muistiinpanot
@@ -1022,3 +1021,4 @@
     ja eri luokka-asteille.
   sphero_beyond_longdescription: Robottikurssilla lapset oppivat leikin lomassa ohjelmoimaan.
     Samalla tulee harjoiteltua myös matematiikan ja luonnontieteiden taitoja.
+  how_to_teach_hoc: How to Teach an Hour of Code

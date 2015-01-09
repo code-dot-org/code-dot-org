@@ -7,17 +7,17 @@ function cp_in() {
   cp $1 $2
 }
 
-locales=$(ls ../locales | grep -v 'en-US')
-
-for locale in $locales; do
-
 	# Bring in new strings to i18n/locales
 	orig_dir=../../pegasus/cache/i18n
-	loc_dir=../locales/$locale/pegasus
+	loc_dir=../locales/en-US/pegasus
 	mkdir -p $loc_dir
 
 	perl -i ./lib/fix-ruby-yml.pl $orig_dir/en-US.yml
 	cp_in $orig_dir/en-US.yml $loc_dir/mobile.yml
+
+locales=$(ls ../locales | grep -v 'en-US')
+
+for locale in $locales; do
 
 	# Export to pegasus/cache/i18n/locales
 	orig_dir=../../pegasus/cache/i18n

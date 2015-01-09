@@ -1,4 +1,4 @@
-"en-US":
+"el-GR":
   hello: Γεια σου κόσμε
   select_language: Παρακαλώ επιλέξτε τη γλώσσα σας
   computer_science: Επιστήμη Υπολογιστών
@@ -408,7 +408,6 @@
   carousel_heading_robots: Μάθετε να προγραμματίζετε με ρομπότ
   carousel_heading_ide: Δημοφιλείς ψηφιακές πλατφόρμες μεταξύ των εκπαιδευτικών
   educator_notes: Σημειώσεις επιμορφωτή
-  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Περισσότεροι πόροι για τους εκπαιδευτικούς και τους επιμορφωτές
   participants: συμμετέχοντες
   teachers_notes: Σημειώσεις εκπαιδευτικού
@@ -1124,3 +1123,4 @@
   sphero_beyond_longdescription: Είστε είστε εκπαιδευτικός είτε γονέας, τα μαθήματα
     SPRK προσφέρουν στα παιδιά ένα διασκεδαστικό εντατικό μάθημα στον προγραμματισμό
     των ρομπότ, καθώς ακονίζουν τις δεξιότητές τους στα μαθηματικά και την επιστήμη.
+  how_to_teach_hoc: How to Teach an Hour of Code
