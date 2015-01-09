@@ -10,7 +10,6 @@
 var studioAppSingleton = require('../base');
 var skins = require('../skins');
 var page = require('../templates/page.html');
-var feedback = require('../feedback.js');
 var dom = require('../dom');
 
 /**
