@@ -23,7 +23,7 @@
  */
 'use strict';
 
-var Colours = require('./core').Colours;
+var Colours = require('./colours');
 var msg = require('../../locale/current/turtle');
 var commonMsg = require('../../locale/current/common');
 
