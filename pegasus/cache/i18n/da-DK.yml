@@ -3,7 +3,7 @@
   select_language: Vælg dit sprog
   computer_science: Computer videnskab
   computer_science_edweek: Computer Videnskabs Uddannelses Uge
-  csedweek_dates: December 9-15, 2013
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold"> Hour of Code</a> kommer. Opråb til alle lærere og arrangørerne,
     <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -85,7 +85,7 @@
   share_on_facebook: Del på Facebook
   share_on_twitter: Del på Twitter
   beyond_an_hour: Lær mere når du har gennemført Hour of Code
-  get_started: Kom i gang
+  get_started: Start
   i_agree: Jeg er enig
   participant_select: '- Vælg -'
   participant_student: studerende
@@ -140,7 +140,7 @@
   studiobar_flappy_body: Lav og del dit eget Flappy spil
   studiobar_teacher_title: Lavet til lærere
   studiobar_teacher_body: Brug Code Studio i din klasse
-  studiobar_frozen_title: En Time af Kode
+  studiobar_frozen_title: Hour of Code
   studiobar_frozen_body: Skab et eventyrligt vinterlandskab med Anna og Elsa
   studiobar_donate_title: Donér
   studiobar_donate_body: Hver gang du donerer hvad der svarer til en dollar, lærer
@@ -382,6 +382,7 @@
   carousel_heading_robots: Lære at programmere med robotter
   carousel_heading_ide: Platforme populære blandt lærere
   educator_notes: Lærervejledning
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Flere ressourcer til lærere og undervisere
   participants: deltagerne
   teachers_notes: Lærerens noter
@@ -432,7 +433,7 @@
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Sten, saks, papir
   hourofcode_name: Pladsholder for nye code.org/hoc
-  playlab_name: Spille Lab
+  playlab_name: Play Lab
   codeorg_gradelevel: For 4-104-årige
   codeintl_gradelevel: For 4-104-årige
   thinkersmithspanish_gradelevel: Por todos
@@ -573,9 +574,10 @@
     og Plants vs Zombier. Lære gentag-løkker, betingede og grundlæggende algoritmer.
     Tilgængelige i 34 sprog.
   thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
-    los estudiantes descubriran como guiarse de modo tal de llevar a cabo tareas especificas
-    sin ser estas discutidas previamente. Este segmento ensena a los estudiantes la
-    conexion entre simbolos y acciones asi como la valiosa habilidad de depuracion.
+    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
+    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
+    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
+    como la valiosa habilidad de depuraci&oacute;n.
   khan_longdescription: Lær grundlæggende i JavaScript programmering samtidig skabe
     sjove tegninger med din kode. Gøre det på egen hånd eller med din klasse!
   khanes_longdescription: Lær grundlæggende i JavaScript programmering samtidig skabe
@@ -1021,4 +1023,3 @@
   sphero_beyond_longdescription: Uanset om du er lærer eller forælder, vil SPRK lektionerne
     giver børnene et sjovt kursus i at programmere robotter, og samtidig skærpe deres
     færdigheder i matematik og naturfag.
-  how_to_teach_hoc: How to Teach an Hour of Code
