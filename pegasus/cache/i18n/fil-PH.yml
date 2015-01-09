@@ -1,4 +1,4 @@
-"fil-PH":
+"en-US":
   hello: Mabuhay!
   select_language: Piliin ang iyong wika
   computer_science: Computer Science
@@ -402,6 +402,7 @@
   carousel_heading_robots: Matuto mag-program gamit ang mga robot
   carousel_heading_ide: Mga platform na sikat sa mga guro
   educator_notes: Educator Notes
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Marami pang mga resource para sa mga guro at mga educator
   participants: mga kalahok
   teachers_notes: Mga Note ng Guro

@@ -1,4 +1,4 @@
-"de-DE":
+"en-US":
   hello: Hallo Welt
   select_language: Bitte wähle Deine Sprache
   computer_science: Informatik
@@ -397,6 +397,7 @@
   carousel_heading_robots: Lerne, mit Robotern zu programmieren
   carousel_heading_ide: Bei Lehrern beliebte Plattformen
   educator_notes: Erläuterungen für Erzieher/-innen
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Weitere Quellen für Lehrer und Erzieher
   participants: Teilnehmer
   teachers_notes: Anmerkungen des Lehrers

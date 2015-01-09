@@ -1,4 +1,4 @@
-"eu-ES":
+"en-US":
   hello: Kaixo mundua
   select_language: Please select your language
   computer_science: Konputazio zientzia
@@ -379,6 +379,7 @@
   carousel_heading_robots: Learn to program with robots
   carousel_heading_ide: Platforms popular among teachers
   educator_notes: Educator Notes
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: More resources for teachers and educators
   participants: participants
   teachers_notes: Teacher's Notes

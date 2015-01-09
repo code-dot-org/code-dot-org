@@ -1,4 +1,4 @@
-"bg-BG":
+"en-US":
   hello: Здравей, свят
   select_language: Моля, изберете вашия език
   computer_science: Компютърни науки
@@ -391,6 +391,7 @@
   carousel_heading_robots: Научете се да програмирате с роботи
   carousel_heading_ide: Платформи, популярни сред учителите
   educator_notes: Бележки за учители
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Повече ресурси за учители и възпитатели
   participants: участници
   teachers_notes: Указания за учители
