@@ -14782,7 +14782,7 @@ Blockly.Block.prototype.areBlockAndDescendantsDeletable = function() {
   var deleteBlockedByChildren = this.childBlocks_.some(function(child) {
     return!child.areBlockAndDescendantsDeletable()
   });
-  return!deleteBlockedByChildren && this.isDeletable()
+  return this.isDeletable() && !deleteBlockedByChildren
 };
 Blockly.Block.prototype.isDeletable = function() {
   return this.deletable_ && !Blockly.readOnly
