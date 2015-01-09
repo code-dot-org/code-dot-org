@@ -29,7 +29,7 @@
 var commonMsg = require('../../locale/current/common');
 var turtleMsg = require('../../locale/current/turtle');
 var levels = require('./levels');
-var Colours = require('./core').Colours;
+var Colours = require('./colours');
 var codegen = require('../codegen');
 var ArtistAPI = require('./api');
 var page = require('../templates/page.html');
@@ -253,6 +253,8 @@ Artist.prototype.afterInject_ = function (config) {
 
   // TODO (br-pair): - pull this out?
   if (this.studioApp_.usingBlockly && (this.skin.id === "anna" || this.skin.id === "elsa")) {
+    // Override colour_random to only generate random colors from within our frozen
+    // palette
     Blockly.JavaScript.colour_random = function() {
       // Generate a random colour.
       if (!Blockly.JavaScript.definitions_.colour_random) {
