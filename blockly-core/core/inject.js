@@ -91,7 +91,6 @@ Blockly.parseOptions_ = function(options) {
     var hasCategories = false;
     var hasTrashcan = false;
     var hasCollapse = false;
-    var hasConcreteBlocks = false;
     var grayOutUndeletableBlocks = false;
     var tree = null;
   } else {
@@ -129,17 +128,11 @@ Blockly.parseOptions_ = function(options) {
   if (tree && !hasCategories) {
     // Scrollbars are not compatible with a non-flyout toolbox.
     var hasScrollbars = false;
-    var hasConcreteBlocks = options['concreteBlocks'];
-    if (hasConcreteBlocks === undefined) {
-      hasConcreteBlocks = false;
-    }
   } else {
     var hasScrollbars = options['scrollbars'];
     if (hasScrollbars === undefined) {
       hasScrollbars = false;
     }
-    // concrete blocks are not compatible with category toolbox
-    var hasConcreteBlocks = false;
   }
   return {
     RTL: !!options['rtl'],
@@ -151,7 +144,6 @@ Blockly.parseOptions_ = function(options) {
     },
     hasCategories: hasCategories,
     hasScrollbars: hasScrollbars,
-    hasConcreteBlocks: hasConcreteBlocks,
     hasTrashcan: hasTrashcan,
     varsInGlobals: varsInGlobals,
     languageTree: tree,
