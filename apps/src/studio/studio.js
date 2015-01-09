@@ -554,10 +554,10 @@ Studio.onTick = function() {
          stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK && !doneUserCodeStep;
          stepsThisTick++) {
       var userCodeRow = codegen.selectCurrentCode(Studio.interpreter,
-                                                  StudioApp.editor,
                                                   Studio.cumulativeLength,
                                                   Studio.userCodeStartOffset,
-                                                  Studio.userCodeLength);
+                                                  Studio.userCodeLength,
+                                                  StudioApp.editor);
       try {
         Studio.interpreter.step();
         doneUserCodeStep = (-1 !== userCodeRow) &&
