@@ -989,20 +989,9 @@ StudioAppClass.prototype.setConfigValues_ = function (config) {
   }
 
   // Store configuration.
-  //TODO (br-pair) : test code should pass in these instead of defaulting in app code
-  this.onAttempt = config.onAttempt || function(report) {
-    console.log('Attempt!');
-    console.log(report);
-    if (report.onComplete) {
-      report.onComplete();
-    }
-  };
-  this.onContinue = config.onContinue || function() {
-    console.log('Continue!');
-  };
-  this.onResetPressed = config.onResetPressed || function() {
-    console.log('Reset!');
-  };
+  this.onAttempt = config.onAttempt || function () {};
+  this.onContinue = config.onContinue || function() {};
+  this.onResetPressed = config.onResetPressed || function() {};
   this.backToPreviousLevel = config.backToPreviousLevel || function () {};
 };
 
