@@ -58,6 +58,7 @@
   "moveDistanceTooltip":"Move an actor a specific distance in the specified direction.",
   "moveSprite":"mover",
   "moveSpriteN":"move actor {spriteIndex}",
+  "toXY":"to x,y",
   "moveDown":"move para baixo",
   "moveDownTooltip":"Move an actor down.",
   "moveLeft":"move para a esquerda",

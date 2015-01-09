@@ -16906,7 +16906,7 @@ exports.removeStack = function(d){return "уклони гомилу од "+v(d,"
 
 exports.removeSquare = function(d){return "уклони квадрат"};
 
-exports.repeatCarefullyError = function(d){return "Како бих сте решили ово, пронађите сличност која се понавља. Користите \"понови\" блок са ова 3 блока унутар: крени, крени, скрени десно."};
+exports.repeatCarefullyError = function(d){return "To solve this, think carefully about the pattern of two moves and one turn to put in the \"repeat\" block.  It's okay to have an extra turn at the end."};
 
 exports.repeatUntil = function(d){return "понављај до испуњења"};
 

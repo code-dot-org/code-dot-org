@@ -21536,7 +21536,7 @@ exports.hello = function(d){return "kumusta"};
 
 exports.helloWorld = function(d){return "Mabuhay!"};
 
-exports.incrementPlayerScore = function(d){return "iskor puntos ng manlalaro"};
+exports.incrementPlayerScore = function(d){return "score point"};
 
 exports.makeProjectileDisappear = function(d){return "mawala"};
 

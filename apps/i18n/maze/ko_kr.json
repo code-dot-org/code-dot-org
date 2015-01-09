@@ -37,7 +37,7 @@
   "make": "만들기",
   "moveBackward": "뒤로 이동하기",
   "moveEastTooltip": "오른쪽으로 한칸 이동합니다.",
-  "moveForward": "앞으로 움직이기",
+  "moveForward": "move forward",
   "moveForwardTooltip": "한 칸 앞으로 이동합니다.",
   "moveNorthTooltip": "북쪽으로 한 칸 움직여 주세요.",
   "moveSouthTooltip": "위쪽으로 한칸 이동합니다.",

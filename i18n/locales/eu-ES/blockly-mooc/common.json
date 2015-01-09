@@ -88,5 +88,6 @@
   "signup":"Izena eman sarrera kurtsorako",
   "hintHeader":"Hemen aholkua:",
   "genericFeedback":"See how you ended up, and try to fix your program.",
+  "toggleBlocksErrorMsg":"You need to correct an error in your program before it can be shown as blocks.",
   "defaultTwitterText":"Check out what I made"
 }

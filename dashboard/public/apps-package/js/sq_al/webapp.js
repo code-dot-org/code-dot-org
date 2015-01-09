@@ -12616,7 +12616,7 @@ exports.genericFeedback = function(d){return "Shiko se si përfundove dhe përpi
 
 exports.toggleBlocksErrorMsg = function(d){return "You need to correct an error in your program before it can be shown as blocks."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Shiko se çfarë bëra"};
 
 
 },{"messageformat":53}],41:[function(require,module,exports){
@@ -12655,7 +12655,7 @@ exports.pause = function(d){return "Pushim"};
 
 exports.reinfFeedbackMsg = function(d){return "Ti mund të shtypësh butonin \"Përpiqu përsëri\" për tu kthyer që të vazhdosh me aplikacionin tënd."};
 
-exports.repeatForever = function(d){return "repeat forever"};
+exports.repeatForever = function(d){return "përsërit përgjithmonë"};
 
 exports.repeatDo = function(d){return "ekzekuto"};
 

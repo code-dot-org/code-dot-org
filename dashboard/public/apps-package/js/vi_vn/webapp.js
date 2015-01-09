@@ -12442,7 +12442,7 @@ exports.booleanTrue = function(d){return "đúng"};
 
 exports.booleanFalse = function(d){return "sai"};
 
-exports.blocklyMessage = function(d){return "Mảnh ghép"};
+exports.blocklyMessage = function(d){return "Blockly"};
 
 exports.catActions = function(d){return "Các hành động"};
 
@@ -12582,9 +12582,9 @@ exports.hintRequest = function(d){return "Xem gợi ý"};
 
 exports.backToPreviousLevel = function(d){return "Chơi lại màn trước"};
 
-exports.saveToGallery = function(d){return "Lưu vào thư viện của bạn"};
+exports.saveToGallery = function(d){return "Save to gallery"};
 
-exports.savedToGallery = function(d){return "Lưu vào thư viện của bạn!"};
+exports.savedToGallery = function(d){return "Saved in gallery!"};
 
 exports.shareFailure = function(d){return "Sorry, we can't share this program."};
 
@@ -12639,9 +12639,9 @@ exports.catVariables = function(d){return "Các biến"};
 
 exports.continue = function(d){return "Tiếp tục"};
 
-exports.createHtmlBlock = function(d){return "create html block"};
+exports.createHtmlBlock = function(d){return "tạo khối mã html"};
 
-exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
+exports.createHtmlBlockTooltip = function(d){return "Tạo ra một khối HTML trong ứng dụng."};
 
 exports.finalLevel = function(d){return "Xin chúc mừng! Bạn đã hoàn thành câu đố cuối cùng."};
 
@@ -12651,29 +12651,29 @@ exports.no = function(d){return "Không"};
 
 exports.numBlocksNeeded = function(d){return "Câu đố này có thể được giải quyết chỉ với %1 khối."};
 
-exports.pause = function(d){return "Pause"};
+exports.pause = function(d){return "Phá vỡ"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
+exports.reinfFeedbackMsg = function(d){return "Bạn có thể bấm nút \"Thử lại\" để quay trở lại và chạy ứng dụng của bạn."};
 
 exports.repeatForever = function(d){return "Lặp lại mãi mãi"};
 
 exports.repeatDo = function(d){return "thực hiện"};
 
-exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
+exports.repeatForeverTooltip = function(d){return "Thực hiện các hành động trong khối này nhiều lần trong khi các ứng dụng đang chạy."};
 
-exports.shareWebappTwitter = function(d){return "Check out the app I made. I wrote it myself with @codeorg"};
+exports.shareWebappTwitter = function(d){return "Kiểm tra các ứng dụng tôi thực hiện. Tôi tự viết nó với @codeorg"};
 
-exports.shareGame = function(d){return "Share your app:"};
+exports.shareGame = function(d){return "Chia sẻ các ứng dụng của bạn:"};
 
-exports.stepIn = function(d){return "Step in"};
+exports.stepIn = function(d){return "Bước vào"};
 
-exports.stepOver = function(d){return "Step over"};
+exports.stepOver = function(d){return "Bước qua"};
 
-exports.stepOut = function(d){return "Step out"};
+exports.stepOut = function(d){return "Bước ra ngoài"};
 
-exports.turnBlack = function(d){return "turn black"};
+exports.turnBlack = function(d){return "chuyển sang màu đen"};
 
-exports.turnBlackTooltip = function(d){return "Turns the screen black."};
+exports.turnBlackTooltip = function(d){return "Chuyển màn hình sang màu đen."};
 
 exports.yes = function(d){return "Đồng ý"};
 

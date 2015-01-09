@@ -12524,7 +12524,7 @@ exports.moveDown = function(d){return "아래로 움직이기"};
 
 exports.moveDownTooltip = function(d){return "라켓을 아래로 내립니다."};
 
-exports.moveForward = function(d){return "앞으로 움직이기"};
+exports.moveForward = function(d){return "move forward"};
 
 exports.moveForwardTooltip = function(d){return "한 칸 앞으로 이동합니다."};
 

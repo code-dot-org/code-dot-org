@@ -326,22 +326,22 @@
         Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!: Associe
           cada expressão matemática com o código correto. Use um círculo de avaliação
           para ajudá-lo a conseguir a resposta!
-        (15 + 3) x (72 - 19): (15 + 3) x (72-19)
+        (15 + 3) x (72 - 19): (15 + 3) x (72 - 19)
         3 x 15 + (- 72 19): 3 x 15 + (- 72 19)
-        72 + 3 - 19 x 15: 72 + 3-19 x 15
-        3 x 15 - 72 + 19: 3 x 15-72 + 19
-        (* (+ 15 3) (- 72 19)): (* (+ 15-3) (- 72 19))
+        72 + 3 - 19 x 15: 72 + 3 - 19 x 15
+        3 x 15 - 72 + 19: 3 x 15 - 72 + 19
+        (* (+ 15 3) (- 72 19)): (* (+ 15 3) (- 72 19))
         (+ (3 x 15) (- 72 19)): (+ (3 x 15) (- 72 19))
-        (- (+ 72 3) (* 19 15)): (-(+ 72 3) (* 19 15))
-        (+ (- (* 3 15) 72) 19): (+ (-(* 3 de 15) 72) 19)
+        (- (+ 72 3) (* 19 15)): (- (+ 72 3) (* 19 15))
+        (+ (- (* 3 15) 72) 19): (+ (- (* 3 15) 72) 19)
       parts of contract:
         Parts of a Contract: Partes de um contrato
         Here is a contract for a new function. Match each item with the word that describes it.: Este
           é um contrato para uma nova função. Associe cada item à palavra que o descreve.
-        yearbook-picture: Anuário de imagens
-        string numer: número de seqüência de caracteres
+        yearbook-picture: yearbook-picture
+        string numer: string numer
         image: imagem
-        (yearbook-picture "Sally" 1992): (anuário de imagens "Sally" 1992)
+        (yearbook-picture "Sally" 1992): (yearbook-picture "Sally" 1992)
         function name: nome da função
         domain: domínio
         range: intervalo
@@ -350,18 +350,18 @@
         Contracts of Functions: Contratos de funções
         Match each example with the correct contract!: Associe cada exemplo ao contrato
           correto!
-        (big-string? "gigantic" 5): (big-string? "gigantic", 5)
-        (find-price 4): (find-preço 4)
-        (small-star "blue"): (pequena-estrela "azul")
-        (bigger-string "big" "little"): (grande-string "grande" "pequeno")
-        (small-star "solid"): (pequena-estrela "sólido")
-        (find-price "cheese"): (encontre-preço "queijo")
-        'big-string: string number -> boolean': 'big-string: string número-> boolean'
-        'find-price: number -> number': 'busca-preço: número-> número'
-        'small-star: string -> image': 'pequena-estrela: string-> imagem'
+        (big-string? "gigantic" 5): (big-string? "gigantic" 5)
+        (find-price 4): (find-price 4)
+        (small-star "blue"): (small-star "blue")
+        (bigger-string "big" "little"): (bigger-string "big" "little")
+        (small-star "solid"): (small-star "solid")
+        (find-price "cheese"): (find-price "cheese")
+        'big-string: string number -> boolean': 'big-string: string number -> boolean'
+        'find-price: number -> number': 'find-price: number -> number'
+        'small-star: string -> image': 'small-star: string -> image'
         'bigger-string: string string -> string': 'bigger-string: string string ->
           string'
-        'find-price: string -> number': 'busca-preço: string-> número'
+        'find-price: string -> number': 'find-price: string -> number'
       test matching image:
         Matching Images Two: Associando Imagens Dois
         Match up all the flowers by colour!: Conecte todas as flores pela cor!

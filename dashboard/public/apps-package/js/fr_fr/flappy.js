@@ -12685,7 +12685,7 @@ exports.soundRandom = function(d){return "aléatoire"};
 
 exports.soundBounce = function(d){return "rebondir"};
 
-exports.soundCrunch = function(d){return "accroupir"};
+exports.soundCrunch = function(d){return "crunch"};
 
 exports.soundDie = function(d){return "défaite"};
 

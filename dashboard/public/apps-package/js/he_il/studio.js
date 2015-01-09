@@ -21582,7 +21582,7 @@ exports.moveDistancePixels = function(d){return "פיקסלים"};
 
 exports.moveDistanceRandom = function(d){return "פיקסלים אקראיים"};
 
-exports.moveDistanceTooltip = function(d){return "Move a character a specific distance in the specified direction."};
+exports.moveDistanceTooltip = function(d){return "Move an actor a specific distance in the specified direction."};
 
 exports.moveSprite = function(d){return "move"};
 
@@ -21592,21 +21592,21 @@ exports.toXY = function(d){return "to x,y"};
 
 exports.moveDown = function(d){return "הזז למטה"};
 
-exports.moveDownTooltip = function(d){return "העבר את המשוט למטה."};
+exports.moveDownTooltip = function(d){return "Move an actor down."};
 
 exports.moveLeft = function(d){return "זוז שמאלה"};
 
-exports.moveLeftTooltip = function(d){return "הזז את המשוט לשמאל."};
+exports.moveLeftTooltip = function(d){return "Move an actor to the left."};
 
 exports.moveRight = function(d){return "זוז ימינה"};
 
-exports.moveRightTooltip = function(d){return "הזז את המשוט לימין."};
+exports.moveRightTooltip = function(d){return "Move an actor to the right."};
 
 exports.moveUp = function(d){return "זוז למעלה"};
 
-exports.moveUpTooltip = function(d){return "הזז את המשוט למעלה."};
+exports.moveUpTooltip = function(d){return "Move an actor up."};
 
-exports.moveTooltip = function(d){return "Move a character."};
+exports.moveTooltip = function(d){return "Move an actor."};
 
 exports.nextLevel = function(d){return "מזל טוב! השלמת את הפאזל הזה."};
 
@@ -21714,13 +21714,13 @@ exports.saySprite = function(d){return "say"};
 
 exports.saySpriteN = function(d){return "actor "+v(d,"spriteIndex")+" say"};
 
-exports.saySpriteTooltip = function(d){return "Pop up a speech bubble with the associated text from the specified character."};
+exports.saySpriteTooltip = function(d){return "Pop up a speech bubble with the associated text from the specified actor."};
 
 exports.scoreText = function(d){return "ציון: "+v(d,"playerScore")};
 
 exports.setBackground = function(d){return "set background"};
 
-exports.setBackgroundRandom = function(d){return "set random scene"};
+exports.setBackgroundRandom = function(d){return "set random background"};
 
 exports.setBackgroundBlack = function(d){return "set black background"};
 
@@ -21728,7 +21728,7 @@ exports.setBackgroundCave = function(d){return "set cave background"};
 
 exports.setBackgroundCloudy = function(d){return "set cloudy background"};
 
-exports.setBackgroundHardcourt = function(d){return "set hardcourt scene"};
+exports.setBackgroundHardcourt = function(d){return "set hardcourt background"};
 
 exports.setBackgroundNight = function(d){return "set night background"};
 
@@ -21758,17 +21758,17 @@ exports.setScoreText = function(d){return "הגדר ניקוד"};
 
 exports.setScoreTextTooltip = function(d){return "Sets the text to be displayed in the score area."};
 
-exports.setSpriteEmotionAngry = function(d){return "to a angry emotion"};
+exports.setSpriteEmotionAngry = function(d){return "to a angry mood"};
 
-exports.setSpriteEmotionHappy = function(d){return "to a happy emotion"};
+exports.setSpriteEmotionHappy = function(d){return "to a happy mood"};
 
-exports.setSpriteEmotionNormal = function(d){return "to a normal emotion"};
+exports.setSpriteEmotionNormal = function(d){return "to a normal mood"};
 
-exports.setSpriteEmotionRandom = function(d){return "to a random emotion"};
+exports.setSpriteEmotionRandom = function(d){return "to a random mood"};
 
-exports.setSpriteEmotionSad = function(d){return "to a sad emotion"};
+exports.setSpriteEmotionSad = function(d){return "to a sad mood"};
 
-exports.setSpriteEmotionTooltip = function(d){return "Sets the actor emotion"};
+exports.setSpriteEmotionTooltip = function(d){return "Sets the actor mood"};
 
 exports.setSpriteAlien = function(d){return "to an alien image"};
 
@@ -21846,7 +21846,7 @@ exports.setSpritePositionTooltip = function(d){return "Instantly moves an actor 
 
 exports.setSpriteK1Tooltip = function(d){return "Shows or hides the specified actor."};
 
-exports.setSpriteTooltip = function(d){return "Sets the character image"};
+exports.setSpriteTooltip = function(d){return "Sets the actor image"};
 
 exports.setSpriteSizeRandom = function(d){return "to a random size"};
 
@@ -21874,7 +21874,7 @@ exports.setSpriteSpeedFast = function(d){return "to a fast speed"};
 
 exports.setSpriteSpeedVeryFast = function(d){return "to a very fast speed"};
 
-exports.setSpriteSpeedTooltip = function(d){return "Sets the speed of a character"};
+exports.setSpriteSpeedTooltip = function(d){return "Sets the speed of an actor"};
 
 exports.setSpriteZombie = function(d){return "to a zombie image"};
 
@@ -21984,9 +21984,9 @@ exports.whenDown = function(d){return "כאשר חץ למטה"};
 
 exports.whenDownTooltip = function(d){return "בצע את הפעולות להלן כאשר נלחץ על המקש חץ למטה."};
 
-exports.whenGameStarts = function(d){return "when game starts"};
+exports.whenGameStarts = function(d){return "when story starts"};
 
-exports.whenGameStartsTooltip = function(d){return "Execute the actions below when the game starts."};
+exports.whenGameStartsTooltip = function(d){return "Execute the actions below when the story starts."};
 
 exports.whenLeft = function(d){return "כאשר חץ שמאלה"};
 
@@ -22000,11 +22000,11 @@ exports.whenSpriteClicked = function(d){return "when actor clicked"};
 
 exports.whenSpriteClickedN = function(d){return "when actor "+v(d,"spriteIndex")+" clicked"};
 
-exports.whenSpriteClickedTooltip = function(d){return "Execute the actions below when a character is clicked."};
+exports.whenSpriteClickedTooltip = function(d){return "Execute the actions below when an actor is clicked."};
 
 exports.whenSpriteCollidedN = function(d){return "when actor "+v(d,"spriteIndex")};
 
-exports.whenSpriteCollidedTooltip = function(d){return "Execute the actions below when a character touches another character."};
+exports.whenSpriteCollidedTooltip = function(d){return "Execute the actions below when an actor touches another actor."};
 
 exports.whenSpriteCollidedWith = function(d){return "touches"};
 

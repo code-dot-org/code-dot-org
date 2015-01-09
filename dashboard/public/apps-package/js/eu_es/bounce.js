@@ -12506,7 +12506,7 @@ exports.incrementOpponentScore = function(d){return "gehitu puntua aurkariari"};
 
 exports.incrementOpponentScoreTooltip = function(d){return "Add one to the current opponent score."};
 
-exports.incrementPlayerScore = function(d){return "increment player score"};
+exports.incrementPlayerScore = function(d){return "score point"};
 
 exports.incrementPlayerScoreTooltip = function(d){return "Gehitu bat jokalariaren markagailura."};
 
@@ -12769,7 +12769,7 @@ exports.errorUnusedFunction = function(d){return "You created a function, but ne
 
 exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
 
-exports.extraTopBlocks = function(d){return "Ekintza blokeei lotu gabeko blokeak soberan daude."};
+exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"};
 
 exports.finalStage = function(d){return "Zorionak! Azkeneko eszenatokia osatu duzu."};
 
@@ -12853,9 +12853,9 @@ exports.hintRequest = function(d){return "See hint"};
 
 exports.backToPreviousLevel = function(d){return "Atzera aurreko mailara"};
 
-exports.saveToGallery = function(d){return "Gorde zure galerian"};
+exports.saveToGallery = function(d){return "Save to gallery"};
 
-exports.savedToGallery = function(d){return "Zure galerian gordeta!"};
+exports.savedToGallery = function(d){return "Saved in gallery!"};
 
 exports.shareFailure = function(d){return "Sorry, we can't share this program."};
 

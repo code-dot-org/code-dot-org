@@ -285,7 +285,7 @@ pt-BR:
         0: '? Qual é a maior parte dessa música que você pode definir como refrão, de forma que o refrão se repita a cada vez que ela for chamada?'
         1: ': Qual é a maior parte dessa música que você pode definir como o refrão, de forma que o refrão se repita a cada vez que ela for chamada?'
         Lou, Lou, skip to my Lou,: Lou, Lou, skip to my Lou,
-        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: 'Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.'
+        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: 'Lou, Lou, pule para o Lou, <br/>Lou, Lou, pule para o Lou, <br/>Lou, Lou, pule para o Lou, <br/>Pule para o Lou, minha querida.'
         2: "? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,"
         3: ": Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,"
         4: "? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin."
@@ -517,6 +517,14 @@ pt-BR:
         (rectangle 10 2 "solid" "red"): '(rectangle 10 2 "solid" "red")'
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): '(rectangle (+ 8 2) (- 7 5) "solid" "red")'
         (rectangle (+ 8 2) (- 7 5) solid red): '(rectangle (+ 8 2) (- 7 5) solid red)'
+      Multi Strings Images 1:
+        Strings and Images Multiple Choice: Múltipla escolha de imagens e strings
+        Multi Strings Images 1.blocks3.level: Imagens multi strings 1.blocks3.level
+        Which of these Evaluation Blocks will draw the image: Qual desses blocos de avaliação vai desenhar a imagem
+        Multi Strings Images 1.blocks1.start_blocks, 300, 100: Imagens multi strings 1.blocks1.start_blocks, 300, 100
+        Multi Strings Images 1.blocks2.start_blocks, 300, 100: Imagens multi strings 1.blocks2.start_blocks, 300, 100
+        Multi Strings Images 1.blocks3.start_blocks, 300, 100: Imagens multi strings 1.blocks3.start_blocks, 300, 100
+        Multi Strings Images 1.blocks4.start_blocks, 300, 100: Imagens multi strings 1.blocks4.start_blocks, 300, 100
       test multi image:
         Maze Multiple Choice Two: Labirinto de Múltipla Escolha Dois
         /script_assets/matches/images/head.jpg,400: /script_assets/matches/images/head.jpg,400

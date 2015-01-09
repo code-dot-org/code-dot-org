@@ -15139,7 +15139,7 @@ exports.booleanTrue = function(d){return "đúng"};
 
 exports.booleanFalse = function(d){return "sai"};
 
-exports.blocklyMessage = function(d){return "Mảnh ghép"};
+exports.blocklyMessage = function(d){return "Blockly"};
 
 exports.catActions = function(d){return "Các hành động"};
 
@@ -15279,9 +15279,9 @@ exports.hintRequest = function(d){return "Xem gợi ý"};
 
 exports.backToPreviousLevel = function(d){return "Chơi lại màn trước"};
 
-exports.saveToGallery = function(d){return "Lưu vào thư viện của bạn"};
+exports.saveToGallery = function(d){return "Save to gallery"};
 
-exports.savedToGallery = function(d){return "Lưu vào thư viện của bạn!"};
+exports.savedToGallery = function(d){return "Saved in gallery!"};
 
 exports.shareFailure = function(d){return "Sorry, we can't share this program."};
 
@@ -15340,21 +15340,21 @@ exports.colourTooltip = function(d){return "Thay đổi màu của cây bút ch�
 
 exports.createACircle = function(d){return "tạo ra một vòng tròn"};
 
-exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
+exports.createSnowflakeSquare = function(d){return "tạo một bông tuyết của loại hình vuông"};
 
-exports.createSnowflakeParallelogram = function(d){return "create a snowflake of type parallelogram"};
+exports.createSnowflakeParallelogram = function(d){return "tạo một bông tuyết của loại hình bình hành"};
 
-exports.createSnowflakeLine = function(d){return "create a snowflake of type line"};
+exports.createSnowflakeLine = function(d){return "tạo một bông tuyết của loại đường thẳng"};
 
-exports.createSnowflakeSpiral = function(d){return "create a snowflake of type spiral"};
+exports.createSnowflakeSpiral = function(d){return "tạo một bông tuyết kiểu xoắn ốc"};
 
-exports.createSnowflakeFlower = function(d){return "create a snowflake of type flower"};
+exports.createSnowflakeFlower = function(d){return "tạo một bông tuyết của kiểu bông hoa"};
 
-exports.createSnowflakeFractal = function(d){return "create a snowflake of type fractal"};
+exports.createSnowflakeFractal = function(d){return "tạo một bông tuyết của kiểu phân dạng"};
 
-exports.createSnowflakeRandom = function(d){return "create a snowflake of type random"};
+exports.createSnowflakeRandom = function(d){return "tạo một bông tuyết của kiểu ngẫu nhiên"};
 
-exports.createASnowflakeBranch = function(d){return "create a snowflake branch"};
+exports.createASnowflakeBranch = function(d){return "tạo ra một nhánh bông tuyết"};
 
 exports.degrees = function(d){return "độ"};
 
@@ -15394,7 +15394,7 @@ exports.drawUpperWave = function(d){return "vẽ làn sóng nhấp nhô cao"};
 
 exports.drawLowerWave = function(d){return "vẽ làn sóng nhấp nhô thấp"};
 
-exports.drawStamp = function(d){return "draw stamp"};
+exports.drawStamp = function(d){return "vẽ con dấu"};
 
 exports.heightParameter = function(d){return "chiều cao"};
 
@@ -15448,11 +15448,11 @@ exports.penTooltip = function(d){return "nâng lên hay hạ bút xuống, để
 
 exports.penUp = function(d){return "nâng bút lên"};
 
-exports.reinfFeedbackMsg = function(d){return "Hình này có giống với những gì bạn muốn? Bạn có thể bấm nút \"Thử lại\" để xem bản vẽ của bạn."};
+exports.reinfFeedbackMsg = function(d){return "Đây là bản vẽ của bạn! Tiếp tục làm việc trên nó hoặc tiếp tục câu đố tiếp theo."};
 
 exports.setColour = function(d){return "chỉnh màu"};
 
-exports.setPattern = function(d){return "set pattern"};
+exports.setPattern = function(d){return "thiết lập thiết kế mẫu"};
 
 exports.setWidth = function(d){return "chỉnh độ rộng"};
 

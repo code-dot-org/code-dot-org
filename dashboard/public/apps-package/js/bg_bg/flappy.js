@@ -12302,7 +12302,7 @@ exports.booleanTrue = function(d){return "вярно"};
 
 exports.booleanFalse = function(d){return "грешно"};
 
-exports.blocklyMessage = function(d){return "Блокли"};
+exports.blocklyMessage = function(d){return "Blockly"};
 
 exports.catActions = function(d){return "Действия"};
 
@@ -12487,35 +12487,35 @@ exports.doCode = function(d){return "прави"};
 
 exports.elseCode = function(d){return "иначе"};
 
-exports.endGame = function(d){return "край на играта"};
+exports.endGame = function(d){return "прекрати играта"};
 
-exports.endGameTooltip = function(d){return "Завършва играта."};
+exports.endGameTooltip = function(d){return "Приключва играта."};
 
-exports.finalLevel = function(d){return "Поздравления! Вие решихте последния пъзел."};
+exports.finalLevel = function(d){return "Поздравления! Ти реши последния пъзел."};
 
-exports.flap = function(d){return "пляскане с крила"};
+exports.flap = function(d){return "плесни с крила"};
 
-exports.flapRandom = function(d){return "случайно количество пляскания"};
+exports.flapRandom = function(d){return "плесни на случайно разстояние"};
 
-exports.flapVerySmall = function(d){return "много малък брой пляскания"};
+exports.flapVerySmall = function(d){return "плесни на много малко разстояние"};
 
-exports.flapSmall = function(d){return "малък брой пляскания"};
+exports.flapSmall = function(d){return "плесни на малко разстояние"};
 
-exports.flapNormal = function(d){return "нормалното количество пляскания"};
+exports.flapNormal = function(d){return "плесни на нормално разстояние"};
 
-exports.flapLarge = function(d){return "голямо количество пляскания"};
+exports.flapLarge = function(d){return "плесни на голямо разстояние"};
 
-exports.flapVeryLarge = function(d){return "пляскане с крила много продължително"};
+exports.flapVeryLarge = function(d){return "плесни на много голямо разстояние"};
 
 exports.flapTooltip = function(d){return "Придвижва героя нагоре."};
 
 exports.flappySpecificFail = function(d){return "Вашият код изглежда добре - героят ще пляска с всяко щракване. Но вие трябва да щракнете много пъти за да прелети до целта."};
 
-exports.incrementPlayerScore = function(d){return "спечели точка"};
+exports.incrementPlayerScore = function(d){return "отбележи точка"};
 
 exports.incrementPlayerScoreTooltip = function(d){return "Добавя една точка към текущия резултат на играча."};
 
-exports.nextLevel = function(d){return "Поздравления! Вие завършихте този пъзел."};
+exports.nextLevel = function(d){return "Поздравления! Ти завърши този пъзел."};
 
 exports.no = function(d){return "Не"};
 
@@ -12525,7 +12525,7 @@ exports.playSoundRandom = function(d){return "изпълни случаен зв
 
 exports.playSoundBounce = function(d){return "изпълни звук \"Подскок\""};
 
-exports.playSoundCrunch = function(d){return "възпроизвежда звук на болка"};
+exports.playSoundCrunch = function(d){return "изпълни звук на болка"};
 
 exports.playSoundDie = function(d){return "изпълни тъжен звук"};
 
@@ -12549,25 +12549,25 @@ exports.playSoundLaser = function(d){return "изпълни звук \"Лазе�
 
 exports.playSoundTooltip = function(d){return "Възпроизвежда избраният звук."};
 
-exports.reinfFeedbackMsg = function(d){return "Може да натиснете бутона \"Опитай отново\", за да се върнете към играта си."};
+exports.reinfFeedbackMsg = function(d){return "Можеш да натиснеш бутона \"Опитай отново\", за да се върнеш към играта си."};
 
 exports.scoreText = function(d){return "Резултат: "+v(d,"playerScore")};
 
-exports.setBackground = function(d){return "зареди сцена"};
+exports.setBackground = function(d){return "задай сцена"};
 
-exports.setBackgroundRandom = function(d){return "зареди случайна сцена"};
+exports.setBackgroundRandom = function(d){return "задай случайна сцена"};
 
-exports.setBackgroundFlappy = function(d){return "зареди сцена \"Град\" (ден)"};
+exports.setBackgroundFlappy = function(d){return "задай сцена \"Град\" (ден)"};
 
-exports.setBackgroundNight = function(d){return "зареди сцена \"Град\" (нощ)"};
+exports.setBackgroundNight = function(d){return "задай сцена \"Град\" (нощ)"};
 
-exports.setBackgroundSciFi = function(d){return "зареди научнофантастична сцена"};
+exports.setBackgroundSciFi = function(d){return "задай сцена \"Научна фантастика\""};
 
-exports.setBackgroundUnderwater = function(d){return "зареди подводна сцена"};
+exports.setBackgroundUnderwater = function(d){return "задай сцена \"Под водата\""};
 
-exports.setBackgroundCave = function(d){return "зареди сцена \"пещера\""};
+exports.setBackgroundCave = function(d){return "задай сцена \"Пещера\""};
 
-exports.setBackgroundSanta = function(d){return "зареди сцена \"Дядо Коледа\""};
+exports.setBackgroundSanta = function(d){return "задай сцена \"Дядо Коледа\""};
 
 exports.setBackgroundTooltip = function(d){return "Този блок променя изображението на фона на играта."};
 
@@ -12583,7 +12583,7 @@ exports.setGapLarge = function(d){return "задай голяма пролука
 
 exports.setGapVeryLarge = function(d){return "задай много голяма пролука"};
 
-exports.setGapHeightTooltip = function(d){return "Задава вертикалната пролука между препятствията"};
+exports.setGapHeightTooltip = function(d){return "Задава големината на вертикалната пролука между препятствията"};
 
 exports.setGravityRandom = function(d){return "задай гравитация случайна"};
 
@@ -12599,21 +12599,21 @@ exports.setGravityVeryHigh = function(d){return "задай гравитация
 
 exports.setGravityTooltip = function(d){return "Задава силата на гравитацията"};
 
-exports.setGround = function(d){return "зареди терен"};
+exports.setGround = function(d){return "задай терен"};
 
-exports.setGroundRandom = function(d){return "зареди случаен терен"};
+exports.setGroundRandom = function(d){return "задай терен случаен"};
 
-exports.setGroundFlappy = function(d){return "зареди терен \"Земя\""};
+exports.setGroundFlappy = function(d){return "задай терен \"Земя\""};
 
-exports.setGroundSciFi = function(d){return "зареди терен \"Научна Фантастика\""};
+exports.setGroundSciFi = function(d){return "задай терен \"Научна фантастика\""};
 
-exports.setGroundUnderwater = function(d){return "зареди терен \"Под водата\""};
+exports.setGroundUnderwater = function(d){return "задай терен \"Под водата\""};
 
-exports.setGroundCave = function(d){return "зареди терен \"Пещера\""};
+exports.setGroundCave = function(d){return "задай терен \"Пещера\""};
 
-exports.setGroundSanta = function(d){return "зареди терен \"Дядо Коледа\""};
+exports.setGroundSanta = function(d){return "задай терен \"Дядо Коледа\""};
 
-exports.setGroundLava = function(d){return "зареди терен \"Лава\""};
+exports.setGroundLava = function(d){return "задай терен \"Лава\""};
 
 exports.setGroundTooltip = function(d){return "Този блок променя изображението на терена."};
 
@@ -12731,7 +12731,7 @@ exports.whenCollideObstacle = function(d){return "при сблъсък с пр�
 
 exports.whenCollideObstacleTooltip = function(d){return "Когато героят се сблъска с препятствие, компютърът ще изпълни изброените под този блок действия."};
 
-exports.whenEnterObstacle = function(d){return "при преминаване на препятствие"};
+exports.whenEnterObstacle = function(d){return "при преминато препятствие"};
 
 exports.whenEnterObstacleTooltip = function(d){return "Когато героят премине препятсвие, компютърът ще изпълни изброените под този блок действия."};
 

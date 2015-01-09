@@ -352,10 +352,11 @@
     email_resend_confirm: Reenviar las instrucciones de confirmación
     new_password_hint: (déjalo en blanco si no quieres cambiarlo)
     current_password_hint: (necesitamos tu contraseña actual para confirmar los cambios)
-    cancel:
-      title: Cancelar mi cuenta
-      hint: ¿No estás contento?
-      button: Cancelar mi cuenta
+    delete: Eliminar tu cuenta
+    delete_text: Haz click en el botón de abajo para eliminar su cuenta.
+    delete_text_teacher_note: 'Nota: Eliminar su cuenta no eliminará la cuenta de
+      sus alumnos.'
+    delete_confirm: ¿Estás seguro que desea eliminar su cuenta?
   user_level:
     completed: Completada
     tried: Intentaste

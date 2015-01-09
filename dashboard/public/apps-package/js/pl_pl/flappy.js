@@ -12344,13 +12344,13 @@ exports.dialogCancel = function(d){return "Anuluj"};
 
 exports.dialogOK = function(d){return "OK"};
 
-exports.directionNorthLetter = function(d){return "N (Północ)"};
+exports.directionNorthLetter = function(d){return "N"};
 
-exports.directionSouthLetter = function(d){return "S (Południe)"};
+exports.directionSouthLetter = function(d){return "S"};
 
-exports.directionEastLetter = function(d){return "E (Wschód)"};
+exports.directionEastLetter = function(d){return "E"};
 
-exports.directionWestLetter = function(d){return "W (Zachód)"};
+exports.directionWestLetter = function(d){return "W"};
 
 exports.end = function(d){return "koniec"};
 
@@ -12725,7 +12725,7 @@ exports.soundSwoosh = function(d){return "szum"};
 
 exports.soundWing = function(d){return "skrzydło"};
 
-exports.soundJet = function(d){return "Jet"};
+exports.soundJet = function(d){return "jet"};
 
 exports.soundCrash = function(d){return "wypadek"};
 

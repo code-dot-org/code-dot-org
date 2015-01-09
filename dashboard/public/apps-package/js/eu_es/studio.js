@@ -21347,7 +21347,7 @@ exports.errorUnusedFunction = function(d){return "You created a function, but ne
 
 exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
 
-exports.extraTopBlocks = function(d){return "Ekintza blokeei lotu gabeko blokeak soberan daude."};
+exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"};
 
 exports.finalStage = function(d){return "Zorionak! Azkeneko eszenatokia osatu duzu."};
 
@@ -21431,9 +21431,9 @@ exports.hintRequest = function(d){return "See hint"};
 
 exports.backToPreviousLevel = function(d){return "Atzera aurreko mailara"};
 
-exports.saveToGallery = function(d){return "Gorde zure galerian"};
+exports.saveToGallery = function(d){return "Save to gallery"};
 
-exports.savedToGallery = function(d){return "Zure galerian gordeta!"};
+exports.savedToGallery = function(d){return "Saved in gallery!"};
 
 exports.shareFailure = function(d){return "Sorry, we can't share this program."};
 
@@ -21536,7 +21536,7 @@ exports.hello = function(d){return "hello"};
 
 exports.helloWorld = function(d){return "Hello World!"};
 
-exports.incrementPlayerScore = function(d){return "increment player score"};
+exports.incrementPlayerScore = function(d){return "score point"};
 
 exports.makeProjectileDisappear = function(d){return "disappear"};
 
@@ -21556,7 +21556,7 @@ exports.makeProjectileRedHearts = function(d){return "make red hearts"};
 
 exports.makeProjectileTooltip = function(d){return "Make the projectile that just collided disappear or bounce."};
 
-exports.makeYourOwn = function(d){return "Egin zure istorio propioa"};
+exports.makeYourOwn = function(d){return "Make Your Own Play Lab App"};
 
 exports.moveDirectionDown = function(d){return "behera"};
 
@@ -21758,17 +21758,17 @@ exports.setScoreText = function(d){return "ezarri markagailua"};
 
 exports.setScoreTextTooltip = function(d){return "Sets the text to be displayed in the score area."};
 
-exports.setSpriteEmotionAngry = function(d){return "to a angry emotion"};
+exports.setSpriteEmotionAngry = function(d){return "to a angry mood"};
 
-exports.setSpriteEmotionHappy = function(d){return "to a happy emotion"};
+exports.setSpriteEmotionHappy = function(d){return "to a happy mood"};
 
-exports.setSpriteEmotionNormal = function(d){return "to a normal emotion"};
+exports.setSpriteEmotionNormal = function(d){return "to a normal mood"};
 
-exports.setSpriteEmotionRandom = function(d){return "to a random emotion"};
+exports.setSpriteEmotionRandom = function(d){return "to a random mood"};
 
-exports.setSpriteEmotionSad = function(d){return "to a sad emotion"};
+exports.setSpriteEmotionSad = function(d){return "to a sad mood"};
 
-exports.setSpriteEmotionTooltip = function(d){return "Sets the actor emotion"};
+exports.setSpriteEmotionTooltip = function(d){return "Sets the actor mood"};
 
 exports.setSpriteAlien = function(d){return "to an alien image"};
 

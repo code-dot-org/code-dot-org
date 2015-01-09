@@ -15165,7 +15165,7 @@ exports.continue = function(d){return "Prosegui"};
 
 exports.dialogCancel = function(d){return "Annulla"};
 
-exports.dialogOK = function(d){return "Ok"};
+exports.dialogOK = function(d){return "OK"};
 
 exports.directionNorthLetter = function(d){return "N"};
 

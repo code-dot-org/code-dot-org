@@ -12498,7 +12498,7 @@ exports.errorUnusedFunction = function(d){return "You created a function, but ne
 
 exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
 
-exports.extraTopBlocks = function(d){return "Tens blocos extras que não estão ligados a um bloco de evento."};
+exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"};
 
 exports.finalStage = function(d){return "Parabéns! Completaste a etapa final."};
 
@@ -12546,7 +12546,7 @@ exports.repeat = function(d){return "repita"};
 
 exports.resetProgram = function(d){return "Repor"};
 
-exports.runProgram = function(d){return "Executa o programa"};
+exports.runProgram = function(d){return "Run"};
 
 exports.runTooltip = function(d){return "Executa o programa definido pelos blocos na área de trabalho."};
 
@@ -12582,9 +12582,9 @@ exports.hintRequest = function(d){return "See hint"};
 
 exports.backToPreviousLevel = function(d){return "Voltar ao nível anterior"};
 
-exports.saveToGallery = function(d){return "Guarda na tua galeria de imagens"};
+exports.saveToGallery = function(d){return "Save to gallery"};
 
-exports.savedToGallery = function(d){return "Saved to your gallery!"};
+exports.savedToGallery = function(d){return "Saved in gallery!"};
 
 exports.shareFailure = function(d){return "Sorry, we can't share this program."};
 
@@ -12651,7 +12651,7 @@ exports.no = function(d){return "Não"};
 
 exports.numBlocksNeeded = function(d){return "Este puzzle pode ser resolvido com blocos de  %1 ."};
 
-exports.pause = function(d){return "Pause"};
+exports.pause = function(d){return "Break"};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
 

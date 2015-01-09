@@ -12651,7 +12651,7 @@ exports.no = function(d){return "Nej"};
 
 exports.numBlocksNeeded = function(d){return "Denne opgave kan løses med %1 blokke."};
 
-exports.pause = function(d){return "Pause"};
+exports.pause = function(d){return "Break"};
 
 exports.reinfFeedbackMsg = function(d){return "Du kan trykke på \"Prøv igen\" knappen for at gå tilbage til at køre din app."};
 

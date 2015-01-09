@@ -14528,7 +14528,7 @@ exports.booleanTrue = function(d){return "đúng"};
 
 exports.booleanFalse = function(d){return "sai"};
 
-exports.blocklyMessage = function(d){return "Mảnh ghép"};
+exports.blocklyMessage = function(d){return "Blockly"};
 
 exports.catActions = function(d){return "Các hành động"};
 
@@ -14668,9 +14668,9 @@ exports.hintRequest = function(d){return "Xem gợi ý"};
 
 exports.backToPreviousLevel = function(d){return "Chơi lại màn trước"};
 
-exports.saveToGallery = function(d){return "Lưu vào thư viện của bạn"};
+exports.saveToGallery = function(d){return "Save to gallery"};
 
-exports.savedToGallery = function(d){return "Lưu vào thư viện của bạn!"};
+exports.savedToGallery = function(d){return "Saved in gallery!"};
 
 exports.shareFailure = function(d){return "Sorry, we can't share this program."};
 

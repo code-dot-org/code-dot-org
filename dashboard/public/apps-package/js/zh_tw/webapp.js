@@ -12442,7 +12442,7 @@ exports.booleanTrue = function(d){return "真"};
 
 exports.booleanFalse = function(d){return "否"};
 
-exports.blocklyMessage = function(d){return "模組化"};
+exports.blocklyMessage = function(d){return "Blockly"};
 
 exports.catActions = function(d){return "動作類別"};
 
@@ -12659,9 +12659,9 @@ exports.repeatForever = function(d){return "永遠重複"};
 
 exports.repeatDo = function(d){return "執行"};
 
-exports.repeatForeverTooltip = function(d){return "當app執行時不斷的重複執行這個積木裡的動作"};
+exports.repeatForeverTooltip = function(d){return "當app運作時，這個程式積木裡的動作會重複執行"};
 
-exports.shareWebappTwitter = function(d){return "快來看我自己用@codeorg寫出來的app!"};
+exports.shareWebappTwitter = function(d){return "快來看看我在 @codeorg 做的 app"};
 
 exports.shareGame = function(d){return "分享你的app:"};
 
@@ -12673,7 +12673,7 @@ exports.stepOut = function(d){return "走出去"};
 
 exports.turnBlack = function(d){return "變黑"};
 
-exports.turnBlackTooltip = function(d){return "把螢幕轉成黑色"};
+exports.turnBlackTooltip = function(d){return "把螢幕變成黑色"};
 
 exports.yes = function(d){return "是"};
 

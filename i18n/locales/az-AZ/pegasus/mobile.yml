@@ -3,7 +3,7 @@ az-AZ:
   select_language: Zəhmət olmazsa, dilinizi seçin
   computer_science: İnformatika
   computer_science_edweek: İnformatika təhsili həftəsi
-  csedweek_dates: 9-15 dekabr 2013-cü il
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">plan your Hour of Code</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
   n_have_learned_an_hoc: '<h1>#</h1><h3>nəfər artıq </h3><h2>Kod Saatı</h2>nda özünü sınayıb'
@@ -323,6 +323,7 @@ az-AZ:
   carousel_heading_robots: Learn to program with robots
   carousel_heading_ide: Platforms popular among teachers
   educator_notes: Educator Notes
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: More resources for teachers and educators
   participants: participants
   teachers_notes: "Teacher's Notes"

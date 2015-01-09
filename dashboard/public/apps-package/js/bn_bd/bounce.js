@@ -12502,11 +12502,11 @@ exports.ifTooltip = function(d){return "If there is a path in the specified dire
 
 exports.ifelseTooltip = function(d){return "If there is a path in the specified direction, then do the first block of actions. Otherwise, do the second block of actions."};
 
-exports.incrementOpponentScore = function(d){return "increment opponent score"};
+exports.incrementOpponentScore = function(d){return "score opponent point"};
 
 exports.incrementOpponentScoreTooltip = function(d){return "Add one to the current opponent score."};
 
-exports.incrementPlayerScore = function(d){return "increment player score"};
+exports.incrementPlayerScore = function(d){return "score point"};
 
 exports.incrementPlayerScoreTooltip = function(d){return "Add one to the current player score."};
 
@@ -12578,7 +12578,7 @@ exports.playSoundRubber = function(d){return "play rubber sound"};
 
 exports.playSoundSlap = function(d){return "play slap sound"};
 
-exports.playSoundTooltip = function(d){return "Play a sound."};
+exports.playSoundTooltip = function(d){return "Play the chosen sound."};
 
 exports.playSoundWinPoint = function(d){return "play win point sound"};
 
@@ -12670,29 +12670,29 @@ exports.whenBallMissesPaddle = function(d){return "when ball misses paddle"};
 
 exports.whenBallMissesPaddleTooltip = function(d){return "Execute the actions below when a ball misses the paddle."};
 
-exports.whenDown = function(d){return "when Down arrow"};
+exports.whenDown = function(d){return "when down arrow"};
 
-exports.whenDownTooltip = function(d){return "Execute the actions below when the Down arrow button is pressed."};
+exports.whenDownTooltip = function(d){return "Execute the actions below when the down arrow key is pressed."};
 
 exports.whenGameStarts = function(d){return "যখন খেলা শুরু"};
 
 exports.whenGameStartsTooltip = function(d){return "যখন খেলা শুরু করে নিচে কর্ম সম্পাদন করে."};
 
-exports.whenLeft = function(d){return "when Left arrow"};
+exports.whenLeft = function(d){return "when left arrow"};
 
-exports.whenLeftTooltip = function(d){return "Execute the actions below when the Left arrow button is pressed."};
+exports.whenLeftTooltip = function(d){return "Execute the actions below when the left arrow key is pressed."};
 
 exports.whenPaddleCollided = function(d){return "when ball hits paddle"};
 
 exports.whenPaddleCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a paddle."};
 
-exports.whenRight = function(d){return "when Right arrow"};
+exports.whenRight = function(d){return "when right arrow"};
 
-exports.whenRightTooltip = function(d){return "Execute the actions below when the Right arrow button is pressed."};
+exports.whenRightTooltip = function(d){return "Execute the actions below when the right arrow key is pressed."};
 
-exports.whenUp = function(d){return "when Up arrow"};
+exports.whenUp = function(d){return "when up arrow"};
 
-exports.whenUpTooltip = function(d){return "Execute the actions below when the Up arrow button is pressed."};
+exports.whenUpTooltip = function(d){return "Execute the actions below when the up arrow key is pressed."};
 
 exports.whenWallCollided = function(d){return "when ball hits wall"};
 
@@ -12769,7 +12769,7 @@ exports.errorUnusedFunction = function(d){return "You created a function, but ne
 
 exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
 
-exports.extraTopBlocks = function(d){return "You have extra blocks that aren't attached to an event block."};
+exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"};
 
 exports.finalStage = function(d){return "Congratulations! You have completed the final stage."};
 
@@ -12777,7 +12777,7 @@ exports.finalStageTrophies = function(d){return "Congratulations! You have compl
 
 exports.finish = function(d){return "Finish"};
 
-exports.generatedCodeInfo = function(d){return "The blocks for your program can also be represented in JavaScript, the world's most widely adopted programming language:"};
+exports.generatedCodeInfo = function(d){return "Even top universities teach block-based coding (e.g., "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). But under the hood, the blocks you have assembled can also be shown in JavaScript, the world's most widely used coding language:"};
 
 exports.hashError = function(d){return "Sorry, '%1' doesn't correspond with any saved program."};
 
@@ -12799,9 +12799,9 @@ exports.nextLevel = function(d){return "Congratulations! You completed Puzzle "+
 
 exports.nextLevelTrophies = function(d){return "Congratulations! You completed Puzzle "+v(d,"puzzleNumber")+" and won "+p(d,"numTrophies",0,"bn",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
-exports.nextStage = function(d){return "Congratulations! You completed Stage "+v(d,"stageNumber")+"."};
+exports.nextStage = function(d){return "Congratulations! You completed "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Congratulations! You completed Stage "+v(d,"stageNumber")+" and won "+p(d,"numTrophies",0,"bn",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
+exports.nextStageTrophies = function(d){return "Congratulations! You completed "+v(d,"stageName")+" and won "+p(d,"numTrophies",0,"bn",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Congratulations! You completed Puzzle "+v(d,"puzzleNumber")+". (However, you could have used only "+p(d,"numBlocks",0,"bn",{"one":"1 block","other":n(d,"numBlocks")+" blocks"})+".)"};
 
@@ -12817,7 +12817,7 @@ exports.repeat = function(d){return "পুনরাই"};
 
 exports.resetProgram = function(d){return "পুনরায় সেট করুন"};
 
-exports.runProgram = function(d){return "প্রোগ্রাম চালান"};
+exports.runProgram = function(d){return "Run"};
 
 exports.runTooltip = function(d){return "Run the program defined by the blocks in the workspace."};
 
@@ -12853,9 +12853,9 @@ exports.hintRequest = function(d){return "See hint"};
 
 exports.backToPreviousLevel = function(d){return "Back to previous level"};
 
-exports.saveToGallery = function(d){return "Save to your gallery"};
+exports.saveToGallery = function(d){return "Save to gallery"};
 
-exports.savedToGallery = function(d){return "Saved to your gallery!"};
+exports.savedToGallery = function(d){return "Saved in gallery!"};
 
 exports.shareFailure = function(d){return "Sorry, we can't share this program."};
 

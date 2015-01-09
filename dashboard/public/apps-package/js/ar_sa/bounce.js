@@ -12495,13 +12495,13 @@ exports.bounceBallTooltip = function(d){return "اجعل الكرة تنط خا�
 
 exports.continue = function(d){return "إستمرار"};
 
-exports.dirE = function(d){return "ش"};
+exports.dirE = function(d){return "E"};
 
-exports.dirN = function(d){return "شم"};
+exports.dirN = function(d){return "N"};
 
-exports.dirS = function(d){return "ج"};
+exports.dirS = function(d){return "S"};
 
-exports.dirW = function(d){return "شر"};
+exports.dirW = function(d){return "W"};
 
 exports.doCode = function(d){return "نفّذ"};
 
@@ -12529,7 +12529,7 @@ exports.incrementPlayerScoreTooltip = function(d){return "اضف واحد إلى
 
 exports.isWall = function(d){return "هل هذا حائط"};
 
-exports.isWallTooltip = function(d){return "إذا كان هناك حائط إرجاع (true)"};
+exports.isWallTooltip = function(d){return "يرجع \"true\" اذا كان هناك حائط"};
 
 exports.launchBall = function(d){return "إطلاق كرة جديدة"};
 
@@ -12539,7 +12539,7 @@ exports.makeYourOwn = function(d){return "أصنع لعبة الوثب الخا�
 
 exports.moveDown = function(d){return "تحريك لأسفل"};
 
-exports.moveDownTooltip = function(d){return "نقل المجداف إلى أسفل."};
+exports.moveDownTooltip = function(d){return "حرك المجداف الى الاسفل."};
 
 exports.moveForward = function(d){return "تقدم للامام"};
 
@@ -12547,15 +12547,15 @@ exports.moveForwardTooltip = function(d){return "تقدم الاعب خطوة و
 
 exports.moveLeft = function(d){return "تحرك لليسار"};
 
-exports.moveLeftTooltip = function(d){return "تحريك المجداف إلى اليسار."};
+exports.moveLeftTooltip = function(d){return "حرك المجداف الى اليسار."};
 
 exports.moveRight = function(d){return "تحريك لليمين"};
 
-exports.moveRightTooltip = function(d){return "تحريك المجداف إلى اليمين."};
+exports.moveRightTooltip = function(d){return "حرك المجداف الى اليمين."};
 
 exports.moveUp = function(d){return "تحريك لأعلى"};
 
-exports.moveUpTooltip = function(d){return "نقل المجداف الي الأعلى."};
+exports.moveUpTooltip = function(d){return "حرك المجداف للاعلى."};
 
 exports.nextLevel = function(d){return "تهانينا! لقد قمت بإكمال هذا اللغز."};
 
@@ -12679,11 +12679,11 @@ exports.turnRight = function(d){return "اتجه الى اليمين"};
 
 exports.turnTooltip = function(d){return "تحويل اتجاه الرسام يمينا او يسارا بمقدار 90 درجة ."};
 
-exports.whenBallInGoal = function(d){return "عندمة يكون الكرة في الهدف"};
+exports.whenBallInGoal = function(d){return "عندما تكون الكرة في الهدف"};
 
-exports.whenBallInGoalTooltip = function(d){return "يتم تنفيذ الاجراءات ادناها عندما يدخل الكرة في الهدف ."};
+exports.whenBallInGoalTooltip = function(d){return "قم بتنفيذ الانشطة ادناه عندما تدخل كرة الى المرمى."};
 
-exports.whenBallMissesPaddle = function(d){return "عندما لا تصيب المضرب الكرة"};
+exports.whenBallMissesPaddle = function(d){return "عندما لا تصيب الكرة المجداف"};
 
 exports.whenBallMissesPaddleTooltip = function(d){return "يتم تنفيذ الاجراءات ادناها عندما لا تصيب المضرب الكرة."};
 
@@ -12701,7 +12701,7 @@ exports.whenLeftTooltip = function(d){return "تنفيذ الإجراءات أد
 
 exports.whenPaddleCollided = function(d){return "عندما تصيب الكرة المضرب"};
 
-exports.whenPaddleCollidedTooltip = function(d){return "يتم تنفيذ الاجراءات ادناها عندما تصطدم الكرة بالمضرب."};
+exports.whenPaddleCollidedTooltip = function(d){return "نفذ الأنشطة أدناه عندما تصطدم الكرة مع المجداف."};
 
 exports.whenRight = function(d){return "السهم الأيمن"};
 
@@ -12711,9 +12711,9 @@ exports.whenUp = function(d){return "عند الضغط على السهم لاع�
 
 exports.whenUpTooltip = function(d){return "تنفيذ الإجراءات أدناه عند الضغط على مفتاح سهم لأعلى."};
 
-exports.whenWallCollided = function(d){return "عندما تضرب الكرة الجدار"};
+exports.whenWallCollided = function(d){return "عندما تضرب كرة الحائط"};
 
-exports.whenWallCollidedTooltip = function(d){return "يتم تنفيذ الإجراءات أدناه عندما تصطدم الكرة مع الجدار."};
+exports.whenWallCollidedTooltip = function(d){return "نفذ الانشطة ادناه عندما تصطدم كرة بالحائط."};
 
 exports.whileMsg = function(d){return "أكرر طالما"};
 

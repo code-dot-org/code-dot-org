@@ -16635,7 +16635,7 @@ exports.finalStageTrophies = function(d){return "Təbriklər! Siz sonuncu mərh�
 
 exports.finish = function(d){return "Finish"};
 
-exports.generatedCodeInfo = function(d){return "Proqramınızın blokları dünyanın ən geniş qəbul olunmuş proqramlaşdırma dili olan \"JavaScript\"də (\"cavaskript\") də yazıla bilər:"};
+exports.generatedCodeInfo = function(d){return "Even top universities teach block-based coding (e.g., "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). But under the hood, the blocks you have assembled can also be shown in JavaScript, the world's most widely used coding language:"};
 
 exports.hashError = function(d){return "Təəssüf ki, '%1' yaddaşa verilmiş heç bir proqramla uyğunlaşmır."};
 
@@ -16880,7 +16880,7 @@ exports.removeStack = function(d){return "dalbadal "+v(d,"shovelfuls")+" təpəc
 
 exports.removeSquare = function(d){return "kvadratı yığışdır"};
 
-exports.repeatCarefullyError = function(d){return "Bu məsələni həll etmək üçün təkrar olunan hissəni tapın. İçərisində növbəti 3 blok olan \"təkrar et\" blokundan istifadə edin: get, get, sağa dön."};
+exports.repeatCarefullyError = function(d){return "To solve this, think carefully about the pattern of two moves and one turn to put in the \"repeat\" block.  It's okay to have an extra turn at the end."};
 
 exports.repeatUntil = function(d){return "təkrar et, ta ki"};
 
@@ -16908,7 +16908,7 @@ exports.whileMsg = function(d){return "hələ ki,"};
 
 exports.whileTooltip = function(d){return "Hasarlanmış əmrləri son nöqtəyə çatana qədər təkrarla."};
 
-exports.word = function(d){return "Word"};
+exports.word = function(d){return "Find the word"};
 
 exports.yes = function(d){return "Bəli"};
 

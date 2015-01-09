@@ -12366,7 +12366,7 @@ exports.finalStageTrophies = function(d){return "Təbriklər! Siz sonuncu mərh�
 
 exports.finish = function(d){return "Finish"};
 
-exports.generatedCodeInfo = function(d){return "Proqramınızın blokları dünyanın ən geniş qəbul olunmuş proqramlaşdırma dili olan \"JavaScript\"də (\"cavaskript\") də yazıla bilər:"};
+exports.generatedCodeInfo = function(d){return "Even top universities teach block-based coding (e.g., "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). But under the hood, the blocks you have assembled can also be shown in JavaScript, the world's most widely used coding language:"};
 
 exports.hashError = function(d){return "Təəssüf ki, '%1' yaddaşa verilmiş heç bir proqramla uyğunlaşmır."};
 
@@ -12547,11 +12547,11 @@ exports.playSoundSplash = function(d){return "play splash sound"};
 
 exports.playSoundLaser = function(d){return "play laser sound"};
 
-exports.playSoundTooltip = function(d){return "Play a sound."};
+exports.playSoundTooltip = function(d){return "Play the chosen sound."};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to playing your game."};
 
-exports.scoreText = function(d){return "Score: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
+exports.scoreText = function(d){return "Score: "+v(d,"playerScore")};
 
 exports.setBackground = function(d){return "set scene"};
 
@@ -12675,7 +12675,7 @@ exports.setScoreTooltip = function(d){return "Sets the player's score"};
 
 exports.setSpeed = function(d){return "set speed"};
 
-exports.setSpeedTooltip = function(d){return "Sets the levels speed"};
+exports.setSpeedTooltip = function(d){return "Sets the level's speed"};
 
 exports.shareFlappyTwitter = function(d){return "Check out the Flappy game I made. I wrote it myself with @codeorg"};
 
@@ -12737,7 +12737,7 @@ exports.whenEnterObstacleTooltip = function(d){return "Execute the actions below
 
 exports.whenRunButtonClick = function(d){return "oyun başladıqda"};
 
-exports.whenRunButtonClickTooltip = function(d){return "Execute the actions below when the run button is pressed."};
+exports.whenRunButtonClickTooltip = function(d){return "Execute the actions below when the game starts."};
 
 exports.yes = function(d){return "Bəli"};
 

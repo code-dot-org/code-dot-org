@@ -11557,7 +11557,7 @@ exports.genericFeedback = function(d){return "Shiko se si përfundove dhe përpi
 
 exports.toggleBlocksErrorMsg = function(d){return "You need to correct an error in your program before it can be shown as blocks."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Shiko se çfarë bëra"};
 
 
 },{"messageformat":54}],43:[function(require,module,exports){

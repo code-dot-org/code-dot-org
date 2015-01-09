@@ -143,8 +143,7 @@
           'Artist: Patterns': 'Художник: Узоры'
           Songwriting: Написание песен
           description_audience: Возраст 8+ (для закончивших Курс 2)
-          description_short: Курс 3 является продолжением Курса 2.  Рекомендуется
-            для 4-5 классов.
+          description_short: Course 3 is a follow-up to Course 2.
         msm:
           title: Математика средней школы
           description: Private work in progress for Middle School Math.
@@ -161,7 +160,7 @@
           'Play Lab: Defining Variables': 'Play Lab: Defining Variables'
           The Design Recipe: The Design Recipe
           'Artist: Defining Functions': 'Художник: Определение процедур'
-          'Play Lab: Defining Functions': 'Лаборатория игр: Определение процедур'
+          'Play Lab: Defining Functions': 'Play Lab: Design Recipe'
           'Artist: Functions': 'Художник: Процедуры'
           'Play Lab: Animation': 'Play Lab: Animation'
           Booleans: Booleans

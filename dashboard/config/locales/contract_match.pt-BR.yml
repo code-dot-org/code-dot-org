@@ -2,50 +2,54 @@
   data:
     contract_match:
       Enter name here:
-        Enter title here: Enter title here
-        Enter prompt here: Enter prompt here
-        Contract Name|Number|Domain1:Number|Domain2:string: Contract Name|Number|Domain1:Number|Domain2:string
+        Enter title here: Insira o título aqui
+        Enter prompt here: Digite aqui
+        Contract Name|Number|Domain1:Number|Domain2:string: Nome do contrato|Número|Domínio1:Número|Domínio2:string
       Eval Contracts 1 B:
-        Eval Contracts 1 B: Eval Contracts 1 B
-        Write a contract for the star function: Write a contract for the star function
-        Eval Contracts 1.solution_blocks, 200: Eval Contracts 1.solution_blocks, 200
-        Contract star|image|Domain1:Number|Domain2:string|Domain3:string: Contract
-          star|image|Domain1:Number|Domain2:string|Domain3:string
-        Eval Contracts 1.solution_blocks: Eval Contracts 1.solution_blocks
-        Contract star|image|radius:Number|style:string|color:string: Contract star|image|radius:Number|style:string|color:string
-        star|image|radius:Number|style:string|color:string: star|image|radius:Number|style:string|color:string
+        Eval Contracts 1 B: Avaliar Contratos 1 B
+        Write a contract for the star function: Escrever um contrato para a função
+          estrela
+        Eval Contracts 1.solution_blocks, 200: Avaliar Contratos 1.solution_blocks,
+          200
+        Contract star|image|Domain1:Number|Domain2:string|Domain3:string: Contrato
+          estrela|imagem|Domínio1:Número|Domínio2:string|Domínio3:string
+        Eval Contracts 1.solution_blocks: Avaliar Contratos 1.solution_blocks
+        Contract star|image|radius:Number|style:string|color:string: Contrato estrela|imagem|raio:Número|estilo:string|cor:string
+        star|image|radius:Number|style:string|color:string: estrela|imagem|raio:Número|estilo:string|cor:string
         Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks,
           300
       Eval Contracts 2 B:
-        Eval Contracts 2 B: Eval Contracts 2 B
-        Write a contract for the rotate function: Write a contract for the rotate
-          function
-        Eval Contracts 2 A.solution_blocks, 300: Eval Contracts 2 A.solution_blocks,
+        Eval Contracts 2 B: Avaliar Contratos 2 B
+        Write a contract for the rotate function: Escreva um contrato para a função
+          de rotação
+        Eval Contracts 2 A.solution_blocks, 300: Avaliar Contratos 2 A.solution_blocks,
           300
-        rotate|image|degrees:Number|image:image: rotate|image|degrees:Number|image:image
+        rotate|image|degrees:Number|image:image: rotação|imagem|graus:Número|imagem:imagem
       Eval Contracts 3 B:
-        Eval Contracts 3 B: Eval Contracts 3 B
-        Write a contract for the text function: Write a contract for the text function
-        Eval Contracts 3 A.solution_blocks, 300: Eval Contracts 3 A.solution_blocks,
+        Eval Contracts 3 B: Avaliar Contratos 3 B
+        Write a contract for the text function: Escreva um contrato para a função
+          de texto
+        Eval Contracts 3 A.solution_blocks, 300: Avaliar Contratos 3 A.solution_blocks,
           300
-        text|image|string:string|size:Number|color:string: text|image|string:string|size:Number|color:string
+        text|image|string:string|size:Number|color:string: texto|imagem|string:string|tamanho:Número|cor:string
       Eval Contracts 4 B:
-        Eval Contracts 4 B: Eval Contracts 4 B
-        Write a contract for the scale function: Write a contract for the scale function
-        Eval Contracts 4 A.solution_blocks, 300: Eval Contracts 4 A.solution_blocks,
+        Eval Contracts 4 B: Avaliar Contratos 4 B
+        Write a contract for the scale function: Escreva um contrato para a função
+          de escala
+        Eval Contracts 4 A.solution_blocks, 300: Avaliar Contratos 4 A.solution_blocks,
           300
-        scale|image|factor:Number|image:image: scale|image|factor:Number|image:image
+        scale|image|factor:Number|image:image: escala|imagem|fator:Número|imagem:imagem
       Design Recipe 1.contract:
-        Design Recipe 1 Contract: Design Recipe 1 Contract
-        0: '? Write the contract for function called "wide-rect" which creates a rectangle
-          of given height and color that is twice as wide as it is tall.'
-        1: ': Write the contract for function called "wide-rect" which creates a rectangle
-          of given height and color that is twice as wide as it is tall.'
-        wide-rect|Image|height:Number|color:string: wide-rect|Image|height:Number|color:string
+        Design Recipe 1 Contract: Receita de design 1 Contrato
+        0: '? Escreva o contrato para a função chamada "wide-rect" que cria um retângulo
+          de altura e cores dadas e cuja largura seja duas vezes maior que a altura.'
+        1: ': Escreva o contrato para a função chamada "wide-rect" que cria um retângulo
+          de altura e cores dadas e cuja largura seja duas vezes maior que a altura.'
+        wide-rect|Image|height:Number|color:string: wide-rect|Imagem|altura:Número|cor:string
       Eval Design Recipe 1.contract:
-        Design Recipe 1 Contract: Design Recipe 1 Contract
-        0: '? Write the contract for function called "wide-rect" which creates a rectangle
-          of given height and color that is twice as wide as it is tall.'
-        1: ': Write the contract for function called "wide-rect" which creates a rectangle
-          of given height and color that is twice as wide as it is tall.'
-        wide-rect|Image|height:Number|color:string: wide-rect|Image|height:Number|color:string
+        Design Recipe 1 Contract: Receita de design 1 Contrato
+        0: '? Escreva o contrato para a função chamada "wide-rect" que cria um retângulo
+          de altura e cores dadas e cuja largura seja duas vezes maior que a altura.'
+        1: ': Escreva o contrato para a função chamada "wide-rect" que cria um retângulo
+          de altura e cores dadas e cuja largura seja duas vezes maior que a altura.'
+        wide-rect|Image|height:Number|color:string: wide-rect|Imagem|altura:Número|cor:string

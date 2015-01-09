@@ -21295,7 +21295,7 @@ exports.blocklyMessage = function(d){return "Blockly"};
 
 exports.catActions = function(d){return "การดำเนินการ"};
 
-exports.catColour = function(d){return "สี"};
+exports.catColour = function(d){return "Color"};
 
 exports.catLogic = function(d){return "ตรรกะ"};
 
@@ -21347,7 +21347,7 @@ exports.errorUnusedFunction = function(d){return "You created a function, but ne
 
 exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
 
-exports.extraTopBlocks = function(d){return "คุณมีบล็อกพิเศษที่ไม่ได้แนบมาที่บล็อกในปัจจุบัน."};
+exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"};
 
 exports.finalStage = function(d){return "ขอแสดงความยินดี ขั้นตอนสุดท้ายสำเร็จแล้ว."};
 
@@ -21431,9 +21431,9 @@ exports.hintRequest = function(d){return "See hint"};
 
 exports.backToPreviousLevel = function(d){return "กลับไปยังระดับก่อนหน้า"};
 
-exports.saveToGallery = function(d){return "บันทึกไว้ในแกลลอรี่"};
+exports.saveToGallery = function(d){return "Save to gallery"};
 
-exports.savedToGallery = function(d){return "บันทึกแล้ว!"};
+exports.savedToGallery = function(d){return "Saved in gallery!"};
 
 exports.shareFailure = function(d){return "Sorry, we can't share this program."};
 
@@ -21536,7 +21536,7 @@ exports.hello = function(d){return "hello"};
 
 exports.helloWorld = function(d){return "Hello World!"};
 
-exports.incrementPlayerScore = function(d){return "increment player score"};
+exports.incrementPlayerScore = function(d){return "score point"};
 
 exports.makeProjectileDisappear = function(d){return "disappear"};
 
@@ -21556,7 +21556,7 @@ exports.makeProjectileRedHearts = function(d){return "make red hearts"};
 
 exports.makeProjectileTooltip = function(d){return "Make the projectile that just collided disappear or bounce."};
 
-exports.makeYourOwn = function(d){return "สร้างเรื่องของคุณเอง"};
+exports.makeYourOwn = function(d){return "Make Your Own Play Lab App"};
 
 exports.moveDirectionDown = function(d){return "ลง"};
 
@@ -21600,13 +21600,13 @@ exports.moveLeftTooltip = function(d){return "ย้ายตัวละคร�
 
 exports.moveRight = function(d){return "ย้ายไปทางขวา"};
 
-exports.moveRightTooltip = function(d){return "Move the paddle to the right."};
+exports.moveRightTooltip = function(d){return "Move an actor to the right."};
 
 exports.moveUp = function(d){return "move up"};
 
-exports.moveUpTooltip = function(d){return "Move the paddle up."};
+exports.moveUpTooltip = function(d){return "Move an actor up."};
 
-exports.moveTooltip = function(d){return "Move a character."};
+exports.moveTooltip = function(d){return "Move an actor."};
 
 exports.nextLevel = function(d){return "ขอแสดงความยินดีคุณสำเร็จปริศนานี้."};
 
@@ -21714,13 +21714,13 @@ exports.saySprite = function(d){return "say"};
 
 exports.saySpriteN = function(d){return "actor "+v(d,"spriteIndex")+" say"};
 
-exports.saySpriteTooltip = function(d){return "Pop up a speech bubble with the associated text from the specified character."};
+exports.saySpriteTooltip = function(d){return "Pop up a speech bubble with the associated text from the specified actor."};
 
 exports.scoreText = function(d){return "คะแนน: "+v(d,"playerScore")};
 
 exports.setBackground = function(d){return "set background"};
 
-exports.setBackgroundRandom = function(d){return "set random scene"};
+exports.setBackgroundRandom = function(d){return "set random background"};
 
 exports.setBackgroundBlack = function(d){return "set black background"};
 
@@ -21728,7 +21728,7 @@ exports.setBackgroundCave = function(d){return "set cave background"};
 
 exports.setBackgroundCloudy = function(d){return "set cloudy background"};
 
-exports.setBackgroundHardcourt = function(d){return "set hardcourt scene"};
+exports.setBackgroundHardcourt = function(d){return "set hardcourt background"};
 
 exports.setBackgroundNight = function(d){return "set night background"};
 
@@ -21758,17 +21758,17 @@ exports.setScoreText = function(d){return "set score"};
 
 exports.setScoreTextTooltip = function(d){return "Sets the text to be displayed in the score area."};
 
-exports.setSpriteEmotionAngry = function(d){return "to a angry emotion"};
+exports.setSpriteEmotionAngry = function(d){return "to a angry mood"};
 
-exports.setSpriteEmotionHappy = function(d){return "to a happy emotion"};
+exports.setSpriteEmotionHappy = function(d){return "to a happy mood"};
 
-exports.setSpriteEmotionNormal = function(d){return "to a normal emotion"};
+exports.setSpriteEmotionNormal = function(d){return "to a normal mood"};
 
-exports.setSpriteEmotionRandom = function(d){return "to a random emotion"};
+exports.setSpriteEmotionRandom = function(d){return "to a random mood"};
 
-exports.setSpriteEmotionSad = function(d){return "to a sad emotion"};
+exports.setSpriteEmotionSad = function(d){return "to a sad mood"};
 
-exports.setSpriteEmotionTooltip = function(d){return "Sets the actor emotion"};
+exports.setSpriteEmotionTooltip = function(d){return "Sets the actor mood"};
 
 exports.setSpriteAlien = function(d){return "to an alien image"};
 
@@ -21846,7 +21846,7 @@ exports.setSpritePositionTooltip = function(d){return "ย้ายตัวล�
 
 exports.setSpriteK1Tooltip = function(d){return "Shows or hides the specified actor."};
 
-exports.setSpriteTooltip = function(d){return "Sets the character image"};
+exports.setSpriteTooltip = function(d){return "Sets the actor image"};
 
 exports.setSpriteSizeRandom = function(d){return "to a random size"};
 
@@ -21874,7 +21874,7 @@ exports.setSpriteSpeedFast = function(d){return "to a fast speed"};
 
 exports.setSpriteSpeedVeryFast = function(d){return "to a very fast speed"};
 
-exports.setSpriteSpeedTooltip = function(d){return "Sets the speed of a character"};
+exports.setSpriteSpeedTooltip = function(d){return "Sets the speed of an actor"};
 
 exports.setSpriteZombie = function(d){return "to a zombie image"};
 
@@ -21982,29 +21982,29 @@ exports.whenArrowTooltip = function(d){return "Execute the actions below when th
 
 exports.whenDown = function(d){return "เมื่อกดลูกศรลง"};
 
-exports.whenDownTooltip = function(d){return "Execute the actions below when the Down arrow button is pressed."};
+exports.whenDownTooltip = function(d){return "Execute the actions below when the down arrow key is pressed."};
 
-exports.whenGameStarts = function(d){return "when game starts"};
+exports.whenGameStarts = function(d){return "when story starts"};
 
-exports.whenGameStartsTooltip = function(d){return "Execute the actions below when the game starts."};
+exports.whenGameStartsTooltip = function(d){return "Execute the actions below when the story starts."};
 
 exports.whenLeft = function(d){return "เมื่อกดลูกศรซ้าย"};
 
-exports.whenLeftTooltip = function(d){return "Execute the actions below when the Left arrow button is pressed."};
+exports.whenLeftTooltip = function(d){return "Execute the actions below when the left arrow key is pressed."};
 
 exports.whenRight = function(d){return "เมื่อกดลูกศรขวา"};
 
-exports.whenRightTooltip = function(d){return "Execute the actions below when the Right arrow button is pressed."};
+exports.whenRightTooltip = function(d){return "Execute the actions below when the right arrow key is pressed."};
 
 exports.whenSpriteClicked = function(d){return "เมื่อคลิกที่ตัวละคร"};
 
 exports.whenSpriteClickedN = function(d){return "when actor "+v(d,"spriteIndex")+" clicked"};
 
-exports.whenSpriteClickedTooltip = function(d){return "Execute the actions below when a character is clicked."};
+exports.whenSpriteClickedTooltip = function(d){return "Execute the actions below when an actor is clicked."};
 
 exports.whenSpriteCollidedN = function(d){return "when actor "+v(d,"spriteIndex")};
 
-exports.whenSpriteCollidedTooltip = function(d){return "Execute the actions below when a character touches another character."};
+exports.whenSpriteCollidedTooltip = function(d){return "Execute the actions below when an actor touches another actor."};
 
 exports.whenSpriteCollidedWith = function(d){return "touches"};
 
@@ -22040,7 +22040,7 @@ exports.whenSpriteCollidedWithTopEdge = function(d){return "touches top edge"};
 
 exports.whenUp = function(d){return "เมื่อกดลูกศรขึ้น"};
 
-exports.whenUpTooltip = function(d){return "Execute the actions below when the Up arrow button is pressed."};
+exports.whenUpTooltip = function(d){return "Execute the actions below when the up arrow key is pressed."};
 
 exports.yes = function(d){return "ใช่"};
 

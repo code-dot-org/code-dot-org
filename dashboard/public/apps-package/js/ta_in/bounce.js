@@ -12578,7 +12578,7 @@ exports.playSoundRubber = function(d){return "play rubber sound"};
 
 exports.playSoundSlap = function(d){return "play slap sound"};
 
-exports.playSoundTooltip = function(d){return "Play a sound."};
+exports.playSoundTooltip = function(d){return "Play the chosen sound."};
 
 exports.playSoundWinPoint = function(d){return "play win point sound"};
 
@@ -12636,7 +12636,7 @@ exports.setPaddleHardcourt = function(d){return "set hardcourt paddle"};
 
 exports.setPaddleRetro = function(d){return "set retro paddle"};
 
-exports.setPaddleTooltip = function(d){return "Sets the ball paddle"};
+exports.setPaddleTooltip = function(d){return "Sets the paddle image"};
 
 exports.setPaddleSpeedRandom = function(d){return "set random paddle speed"};
 
@@ -12670,29 +12670,29 @@ exports.whenBallMissesPaddle = function(d){return "when ball misses paddle"};
 
 exports.whenBallMissesPaddleTooltip = function(d){return "Execute the actions below when a ball misses the paddle."};
 
-exports.whenDown = function(d){return "when Down arrow"};
+exports.whenDown = function(d){return "when down arrow"};
 
-exports.whenDownTooltip = function(d){return "Execute the actions below when the Down arrow button is pressed."};
+exports.whenDownTooltip = function(d){return "Execute the actions below when the down arrow key is pressed."};
 
 exports.whenGameStarts = function(d){return "விளையாட்டு தொடங்கும் போது"};
 
 exports.whenGameStartsTooltip = function(d){return "விளையாட்டு தொடங்கும் போது, கீழே கொடுக்கப்பட்டுள்ள செயல்களை செய்து முடிக்கவும்."};
 
-exports.whenLeft = function(d){return "when Left arrow"};
+exports.whenLeft = function(d){return "when left arrow"};
 
-exports.whenLeftTooltip = function(d){return "Execute the actions below when the Left arrow button is pressed."};
+exports.whenLeftTooltip = function(d){return "Execute the actions below when the left arrow key is pressed."};
 
 exports.whenPaddleCollided = function(d){return "when ball hits paddle"};
 
 exports.whenPaddleCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a paddle."};
 
-exports.whenRight = function(d){return "when Right arrow"};
+exports.whenRight = function(d){return "when right arrow"};
 
-exports.whenRightTooltip = function(d){return "Execute the actions below when the Right arrow button is pressed."};
+exports.whenRightTooltip = function(d){return "Execute the actions below when the right arrow key is pressed."};
 
-exports.whenUp = function(d){return "when Up arrow"};
+exports.whenUp = function(d){return "when up arrow"};
 
-exports.whenUpTooltip = function(d){return "Execute the actions below when the Up arrow button is pressed."};
+exports.whenUpTooltip = function(d){return "Execute the actions below when the up arrow key is pressed."};
 
 exports.whenWallCollided = function(d){return "when ball hits wall"};
 
@@ -12769,7 +12769,7 @@ exports.errorUnusedFunction = function(d){return "You created a function, but ne
 
 exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
 
-exports.extraTopBlocks = function(d){return "You have extra blocks that aren't attached to an event block."};
+exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"};
 
 exports.finalStage = function(d){return "வாழ்த்துக்கள்! நீங்கள் இறுதிக் கட்டத்தை நிறைவு செய்துள்ளீர்கள்."};
 
@@ -12777,7 +12777,7 @@ exports.finalStageTrophies = function(d){return "Congratulations! You have compl
 
 exports.finish = function(d){return "Finish"};
 
-exports.generatedCodeInfo = function(d){return "The blocks for your program can also be represented in JavaScript, the world's most widely adopted programming language:"};
+exports.generatedCodeInfo = function(d){return "Even top universities teach block-based coding (e.g., "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). But under the hood, the blocks you have assembled can also be shown in JavaScript, the world's most widely used coding language:"};
 
 exports.hashError = function(d){return "மன்னிக்கவும், '%1' எந்த சேமிக்கப்பட்ட நிரலுடனும் பொருந்தவில்லை."};
 
@@ -12799,9 +12799,9 @@ exports.nextLevel = function(d){return "வாழ்த்துக்கள்!
 
 exports.nextLevelTrophies = function(d){return "Congratulations! You completed Puzzle "+v(d,"puzzleNumber")+" and won "+p(d,"numTrophies",0,"ta",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
-exports.nextStage = function(d){return "வாழ்த்துக்கள்! நீங்கள் "+v(d,"stageNumber")+" ஆவது நிலையை நிறைவு செய்துள்ளீர்கள்."};
+exports.nextStage = function(d){return "Congratulations! You completed "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Congratulations! You completed Stage "+v(d,"stageNumber")+" and won "+p(d,"numTrophies",0,"ta",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
+exports.nextStageTrophies = function(d){return "Congratulations! You completed "+v(d,"stageName")+" and won "+p(d,"numTrophies",0,"ta",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Congratulations! You completed Puzzle "+v(d,"puzzleNumber")+". (However, you could have used only "+p(d,"numBlocks",0,"ta",{"one":"1 block","other":n(d,"numBlocks")+" blocks"})+".)"};
 
@@ -12817,7 +12817,7 @@ exports.repeat = function(d){return "மறுபடி"};
 
 exports.resetProgram = function(d){return "மீட்டமை"};
 
-exports.runProgram = function(d){return "நிரலை இயக்கு"};
+exports.runProgram = function(d){return "Run"};
 
 exports.runTooltip = function(d){return "Run the program defined by the blocks in the workspace."};
 
@@ -12853,9 +12853,9 @@ exports.hintRequest = function(d){return "See hint"};
 
 exports.backToPreviousLevel = function(d){return "முந்தைய நிலைக்கு திரும்பவும்"};
 
-exports.saveToGallery = function(d){return "Save to your gallery"};
+exports.saveToGallery = function(d){return "Save to gallery"};
 
-exports.savedToGallery = function(d){return "Saved to your gallery!"};
+exports.savedToGallery = function(d){return "Saved in gallery!"};
 
 exports.shareFailure = function(d){return "Sorry, we can't share this program."};
 

@@ -133,8 +133,9 @@
         maze_2_6: נסה להביא אותי לפולש הירוק תוך שימוש רק בשלושה בלוקים.
         maze_2_7: עזור לי לגרש את החזרזיר הרע באמצעות כמה שפחות בלוקים. נסה להשתמש
           בבלוק "חזור על הפקודה" יותר מפעם אחת.
-        maze_2_8: 'על מנת לפתור את המקרה הזה, השתמש בבלוק "חזור שוב" עם שלושה בלוקים
-          בתוכו: קדימה, קדימה, הסתובב.'
+        maze_2_8: 'When a block is grey, that means you can''t delete it. Solve this
+          puzzle using the "repeat" block that repeats 3 times. Try putting these
+          3 blocks inside the grey "repeat" block: move, move, turn.'
         maze_2_9: 'נסה להשתמש בבלוק החדש: "חזור עד ש" -  הוא יחזור על עצמו עד שאגיע
           לחזרזיר המעצבן.'
         maze_2_10: טוב, בפעם האחרונה לאימון - האם אתה יכול לפתור זאת באמצעות רק 4
@@ -157,8 +158,8 @@
         maze_2_18: עוד תרגול אחד של הבלוק "אם - אז", האם אתה יכול להצליח בנסיון הראשון?
         maze_2_19: האם אתה יכול להוסיף רק 3 בלוקים על מנת לעזור לי לפתור מבוך מסובך
           יותר? אם תעשה זאת נכון, אני אוכל ללכת  בכל דרך מפותלת לא משנה מה אורכה.
-        turtle_1_1: שלום, אני אמן. באפשרותך לכתוב קוד על מנת לעזור לי לצייר כמעט כל
-          דבר. השתמש בכמה בלוקים על מנת לגרום לי לצייר על הקוים האפורים בתמונה.
+        turtle_1_1: Hi, I'm an artist. You can write code to make me draw almost anything.
+          Use a few blocks to make me draw over the grey lines in the picture.
         turtle_1_2: 'עכשיו צייר ריבוע. הערה: השתמש בצבע האהוב עלייך ע"י בחירתו בבלוק
           החדש "הגדר צבע".'
         turtle_1_3: צור ריבוע באמצעות 3 בלוקים בלבד.
@@ -180,8 +181,8 @@
           פתית שלג או ספירלה. כמו כן נסה את הבלוק החדש "קבע עובי". תהנה!'
         turtle_4_1: 'האם אתה יכול לצייר משולש (עם קצוות של 100 פיקסלים) בעזרת 3 בלוקים
           בלבד? רמז: השתמש בבלוק "חזור".'
-        turtle_4_2: 'נסה להוסיף בלוק אחד נוסף על מנת להשלים את החידה. רמז: אנחנו מספקים
-          בלוקים על מנת לצייר 2 משולשים זהים, עליך "לסובב" ביניהם, ולהחליט בכמה לסובב.'
+        turtle_4_2: Add a "turn right by 90 degrees" block somewhere in the middle
+          of the program already out on the workspace to draw these triangles.
         turtle_4_3: בסדר, הנה הקוד שכתבת על מנת לצייר משולש. האם אתה יכול להוסיף בלוקים
           של "חזור שוב" ו"סובב" על מנת לצייר פרח יפה?
         turtle_4_4: 'הנה אותו קוד מהחידה הקודמת, אך מסובבת  ב36 מעלות אחרי ציור של
@@ -335,10 +336,10 @@
         maze_3_2: כתוב לי תוכנה כדי שאוכל להגיע עד לחזיר.
         maze_3_3: איך אני אגיע לחזיר? תזהר שאני לא יתקל בTNT!
         maze_3_4: אוף! כתוב לי תוכנה שעוזרת לי לעבור מסביב לTNT ולהגיע לחזיר.
-        bounce_1: חבר בלוק לבלוק "כאשר חץ שמאלי", ואז לחץ "הרץ תוכנית" והזז את המשוט
-          עם המקש חץ שמאלה כדי להגיע למטרת הסיום.
-        bounce_2: הוסף בלוק לבלוקים "כאשר חץ ימין" ו"כאשר חץ שמאל", ואז הרץ והזז את
-          המשוט אם שני מקשי החצים כדי להגיע לשתי מטרות הסיום.
+        bounce_1: Attach a block to the "when left arrow" block and press "Run". Move
+          the paddle using the left arrow to reach the finish target.
+        bounce_2: Attach a block to the "when right arrow" and "when left arrow" blocks.
+          Move the paddle to reach both finish targets.
         bounce_3: עכשיו נסה משהו דומה עם הבלוק "כאשר חץ למעלה". הזז את המשוט כדי להגיע
           למטרת הסיום בלמעלה.
         bounce_4: הפעם תצטרך להוסיף ארבע בלוקים. הזז את המשוט לכל ארבע מטרות הסיום
@@ -347,44 +348,45 @@
           פוגע במשוט" כדי לוודע שהכדור מגיע למטרת הסיום.
         bounce_6: עכשיו מטרת הסיום היא למעלה. אתה צריך להוסיף בלוקים לשני הבלוקים
           "כאשר כדור פוגע" כדי לפתור את החידה הזאת.
-        bounce_7: 'הוסף בלוקים לבלוקים: "כאשר חץ ימין", "כאשר חץ שמאל", "כאשר כדור
-          פוגע בקיר, ו"כאשר כדור פוגע במשוט".'
-        bounce_10: יש עכשיו מטרה בלמעלה. הוסף את הבלוקים "הגדל ניקוד" לבלוקים "כאשר
-          כדור בתוך השער" ו"כאשר כדור מפספס משוט" כדי להכין משחק.
-        bounce_11: You can now attach blocks to the "when run" block. Try changing
-          the speed of the paddle and the ball and see how many points you can score
+        bounce_7: Attach blocks to each of the "when" blocks. Bounce the ball until
+          it hits the finish target.
+        bounce_10: There is a now a goal at the top. Attach the "score point" and
+          "score opponent point" blocks to the "when ball in goal" and "when ball
+          misses paddle" blocks to make a game. See how many points you can score
           before your opponent scores twice.
+        bounce_11: You can now attach blocks to the "when run" block. You have to
+          attach the new "launch new ball" block in more than one place. Also, try
+          changing the scene or the speed of the paddle and the ball and see how many
+          points you can score before your opponent scores twice.
         bounce_12: Create your own Bounce game. You can change all the visuals and
-          the rules. When you're done, click Share to let friends try your game on
+          the rules. When you're done, click Finish to let friends try your game on
           their phones.
-        Custom_builder: גרור בלוקים מתיבת הכלים לאזור העבודה כדי לצייר את השלב שאתה
-          רוצה ליצור. כשאתה גומר, לחץ "הרץ תוכנית".
-        flappy_1: Attach a block to the "when click" block, then press "Run Program"
-          and click or tap to move Flappy to the target.
+        Custom_builder: Drag blocks from the toolbox to the workspace to draw the
+          level you wish to create. Press "Run" when you are ready.
+        flappy_1: Attach a block to the "when click" block, then press "Run". Click
+          or tap the screen to move Flappy to the target.
         flappy_2: Now we've added some ground.  Attach a block to the "when hit the
-          ground" block, then press "Run Program". To pass this puzzle, your code
-          needs to 'END GAME' when Flappy crashes into the ground.
-        flappy_3: The "when Run is clicked" block allows you to run code when your
-          game first starts.  Try setting the level speed and flapping to the target.
+          ground" block.  Your code needs to 'END GAME' when Flappy crashes.
+        flappy_3: The "when run" block allows you to run code when your game starts.  Try
+          setting the level speed and flapping to the target.
         flappy_4: Flappy will fly through obstacles unless you write code to make
-          him crash. Attach a block to the "when hit an obstacle" block. To pass the
-          puzzle, your code needs to 'END GAME' and make Flappy crash into the first
-          pipe so he can reach the target.
+          him crash. Attach a block to the "when hit an obstacle" block. Your code
+          needs to 'END GAME' when Flappy crashes into the first set of pipes.
         flappy_5: Let's add a scoreboard, and count points when Flappy makes it past
           obstacles. Add to the "when pass an obstacle" block, and then score a point
           by flying Flappy through the first set of pipes.
         flappy_6: See if you can still score a point after making Flappy flap either
           a smaller or larger amount.
         flappy_7: Next, try changing the scene by attaching another block to the "when
-          Run is clicked".
+          run" block.
         flappy_8: You can set visuals anytime, not just when the game starts. Try
           setting a RANDOM scene when other events happen, for example, when passing
           an obstacle.
         flappy_9: To mix things up, when hitting an obstacle or the ground, instead
           of ending the game try setting the score back to 0.
-        flappy_11: Create your own Flappy game and share it. You can change the visuals,
-          or even the rules. Try changing visuals each time Flappy passes an obstacle.
-          Or make Flappy invincible so he never dies.
+        flappy_11: Create your own Flappy game. You can change all the visuals and
+          all the rules, even the gravity. When you're done, click Finish to let friends
+          try your game on their phones.
         flappy_k1_1: Play Flappy
         flappy_k1_2: Attach a block to the "when click" block, then press "Run". Click
           or tap the screen to move Flappy to the target.
@@ -465,36 +467,38 @@
         studio_c3_game_6: Can you add blocks to change the background and the speed
           of the penguin, and then move him with the arrows until you score?
         studio_c3_game_7: Create your own game. When you're done, click Finish to
-          let friends try your story on their phones.
-        studio_playlab_1: Can you make this dog say "hello world"?
-        studio_playlab_2: Can you make the dog say something and then have the cat
-          say something afterwards?
-        studio_playlab_3: Can you write a program to make this dog move to the cat?
-        studio_playlab_4: Can you write a program that makes the dog move to the cat,
-          and have the cat say "hello" when the dog reaches him?
-        studio_playlab_5: Can you write a program to make the octopus say "hello"
-          when it is clicked?
-        studio_playlab_6: Can you write a program to make this penguin move around
-          using the up / down / left /right keys to hit all of the targets?
+          let friends try your game on their phones.
+        studio_playlab_1: Penguin wants to say "hello" - can you help him?
+        studio_playlab_2: Cave Boy (actor 1) and Cave Girl (actor 2) would like to
+          say "hello" to each other. Can you help them by using the "say" block twice?
+        studio_playlab_3: Can you help Tennis Girl get to the flag?
+        studio_playlab_4: Can you help Tennis Boy (actor 1) get to Tennis Girl (actor
+          2) and play a sound when he gets there?
+        studio_playlab_5: Can you help the Spacebot say "greetings earthlings" when
+          it is clicked? Don’t forget to click it after you click Run
+        studio_playlab_6: Can you help the Witch move around using the up/down/right/left
+          arrow keys to get to all the magical fireballs?
         studio_playlab_7: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to move this dinosaur up and down repeatedly?
-        studio_playlab_8: Can you add a block to score a point when the penguin runs
-          into the octopus, and then move him with the arrows until you score?
-        studio_playlab_9: Can you add blocks to change the background and the speed
-          of the penguin, and then move him with the arrows until you score?
+          Can you attach blocks to it to help the wizard move right and left repeatedly?
+        studio_playlab_8: Can you add a block to score a point and a block to play
+          a sound when the unicorn runs into the wizard, and then move him with the
+          arrows until you score?
+        studio_playlab_9: Set the background for this alien invasion and help the
+          Spacebot get to the alien faster by changing its speed. Then move him with
+          the arrow keys to get to the Spacebot and alert everyone else
         studio_playlab_10: Create your own game. When you're done, click Finish to
-          let friends try your story on their phones.
+          let friends try your game on their phones.
         studio_full_sandbox: Create your own game. When you're done, click Finish
-          to let friends try your story on their phones.
+          to let friends try your game on their phones.
         studio_k1_1: Can you make this dog say "hello world"?
         studio_k1_2: Can you make the dog say something and then have the cat say
           something afterwards?
-        studio_k1_3: Can you write a program to make this dog move to the target?
+        studio_k1_3: Can you write a program to make this dog move to the cat?
         studio_k1_4: Make the dog move to the cat and the cat say "hello" when he
           gets there.
         studio_k1_5: Can you add a block to make the octopus happy?
-        studio_k1_6: Can you write a program to make this penguin move around using
-          the up / down / left /right keys to hit all of the targets?
+        studio_k1_6: Create your own story! Move around the cat and dog, and make
+          them say things.
         maze_wordsearch_k_1: Move me to spell the word EAST
         maze_wordsearch_k_2: Move me to spell the word SOUTH
         maze_wordsearch_k_3: Move me to spell the word WEST
@@ -508,7 +512,7 @@
           the word STORY
         webapp_ec_simple: Create your web app by using createHtmlBlock.
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
-          it in the new "penColour" block.'
+          it in the new "penColor" block.'
         turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:
           a stick figure, snowflake, or spiral. Also try the new "penWidth" block.
           Have fun!'
@@ -735,8 +739,8 @@
         drag_blocks: Drag a "move" block and snap it below the other block
         run: Hit "Run" to try your program
         watch_again: Click here to watch the video again
-        gray_block_explanation: Blocks that are grey can't be moved or deleted. Can
-          you solve the puzzle anyway?
+        gray_block_explanation: Blocks that are grey can't be deleted. Can you solve
+          the puzzle anyway?
         show_code_explanation: Click here to see the code for the program you're making
         instructions_repeat_explanation: The instructions for each puzzle are repeated
           here
@@ -766,12 +770,12 @@
           the puzzle.
         set_length: Use this block to set "length" to the correct value.
         which_equation: Which equation makes each side shorter for shapes with more
-          sides?  Try each equation!
+          sides?
         get_nectar: Use the new "get nectar" block.
         actions_category: The tool box got a new look! The "Actions" blocks are in
           here now.
         draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
-        edit_function: Use this button to edit the function.
+        edit_function: Click here to edit your function.
         create_function: Click here to open the "Functions" flyout, then click the
           "Create a Function" button.
         house_hint: It's ok if the picture doesn't look like a house yet. We will

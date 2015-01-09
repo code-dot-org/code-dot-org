@@ -88,5 +88,6 @@
   "signup": "Rekisteröidy johdantokurssille",
   "hintHeader": "Tässä on Vihje:",
   "genericFeedback": "Katso miten päädyit tähän, ja koita korjata ohjelmasi.",
+  "toggleBlocksErrorMsg": "You need to correct an error in your program before it can be shown as blocks.",
   "defaultTwitterText": "Katso mitä tein"
 }

@@ -88,5 +88,6 @@
   "signup":"Зачлени се за го посетиш воведувачкиот курс",
   "hintHeader":"Еве еден совет :",
   "genericFeedback":"Погледни како заврши и обиди се да го поправиш програмот.",
+  "toggleBlocksErrorMsg":"You need to correct an error in your program before it can be shown as blocks.",
   "defaultTwitterText":"Check out what I made"
 }

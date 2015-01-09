@@ -31,7 +31,7 @@ fa-AF:
           desc: ویرایش کد (آزمایشی)
           MazeEC: مرحله 1
         2014 Levels:
-          desc: Bounce (beta)
+          desc: جهش (بتا)
           Bounce: مرحله 1
         Builder Levels:
           desc: پازل‌های ایجاد شده توسط کاربر (آزمایشی)
@@ -52,7 +52,7 @@ fa-AF:
           ArtistEC: مرحله 3
           StudioEC: مرحله 4
         events:
-          desc: Bounce (beta)
+          desc: جهش (بتا)
           Bounce: مرحله 1
           Studio: مرحله 2
         builder:

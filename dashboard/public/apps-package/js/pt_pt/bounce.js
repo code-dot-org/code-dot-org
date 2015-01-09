@@ -12662,9 +12662,9 @@ exports.turnRight = function(d){return "Virar à direita"};
 
 exports.turnTooltip = function(d){return "Vira à esquerda ou à direita 90 graus."};
 
-exports.whenBallInGoal = function(d){return "when ball in goal"};
+exports.whenBallInGoal = function(d){return "Quando a bola marca golo"};
 
-exports.whenBallInGoalTooltip = function(d){return "Execute the actions below when a ball enters the goal."};
+exports.whenBallInGoalTooltip = function(d){return "Execute as ações abaixo quando a bola marca golo."};
 
 exports.whenBallMissesPaddle = function(d){return "quando a bola falha a raquete"};
 
@@ -12769,7 +12769,7 @@ exports.errorUnusedFunction = function(d){return "You created a function, but ne
 
 exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
 
-exports.extraTopBlocks = function(d){return "Tens blocos extras que não estão ligados a um bloco de evento."};
+exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"};
 
 exports.finalStage = function(d){return "Parabéns! Completaste a etapa final."};
 
@@ -12817,7 +12817,7 @@ exports.repeat = function(d){return "repita"};
 
 exports.resetProgram = function(d){return "Repor"};
 
-exports.runProgram = function(d){return "Executa o programa"};
+exports.runProgram = function(d){return "Run"};
 
 exports.runTooltip = function(d){return "Executa o programa definido pelos blocos na área de trabalho."};
 
@@ -12853,9 +12853,9 @@ exports.hintRequest = function(d){return "See hint"};
 
 exports.backToPreviousLevel = function(d){return "Voltar ao nível anterior"};
 
-exports.saveToGallery = function(d){return "Guarda na tua galeria de imagens"};
+exports.saveToGallery = function(d){return "Save to gallery"};
 
-exports.savedToGallery = function(d){return "Saved to your gallery!"};
+exports.savedToGallery = function(d){return "Saved in gallery!"};
 
 exports.shareFailure = function(d){return "Sorry, we can't share this program."};
 

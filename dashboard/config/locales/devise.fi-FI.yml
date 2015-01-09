@@ -50,7 +50,7 @@
         klikkaat vahvistusviestissä olevaa linkkiä vahvistaaksesi osoitteen toimivuuden.
       updated: Tilisi on päivitetty onnistuneesti.
     sessions:
-      signed_in: Olet kirjautunut sisään.
+      signed_in: ''
       signed_out: Olet kirjautunut ulos.
     unlocks:
       send_instructions: Saat muutaman minuutin päästä sähköpostitse ohjeet tilisi
