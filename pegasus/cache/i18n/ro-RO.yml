@@ -1,4 +1,4 @@
-"en-US":
+"ro-RO":
   hello: Salutare lume
   select_language: Vă rugăm să selectaţi limba dvs.
   computer_science: Informatică
@@ -401,7 +401,6 @@
   carousel_heading_robots: Învață să programezi cu roboți
   carousel_heading_ide: Platforme populare printre profesori
   educator_notes: Notițe pentru educatori
-  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Mai multe resurse pentru profesori și educatori
   participants: participanți
   teachers_notes: Notițele profesorului

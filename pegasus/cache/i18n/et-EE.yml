@@ -1,4 +1,4 @@
-"en-US":
+"et-EE":
   hello: Hello world
   select_language: Palun vali oma keel
   computer_science: Informaatika
@@ -377,7 +377,6 @@
   carousel_heading_robots: Õpi roboteid programmeerima
   carousel_heading_ide: Õpetajate seas populaarsed platvormid
   educator_notes: Õpetaja märkmed
-  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Rohkem vahendeid õpetajatele
   participants: osalejad
   teachers_notes: Õpetaja märkmed

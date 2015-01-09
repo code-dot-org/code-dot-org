@@ -1,4 +1,4 @@
-"en-US":
+"lt-LT":
   hello: Sveikas, pasauli
   select_language: Pasirinkite kalbą
   computer_science: Informatika
@@ -375,7 +375,6 @@
   carousel_heading_robots: Išmokite programuoti robotus
   carousel_heading_ide: Populiaru tarp mokytojų
   educator_notes: Pedagogų pastabos
-  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Daugiau išteklių mokytojams ir švietimo atstovams
   participants: dalyviai
   teachers_notes: Mokytojo pastabos

@@ -1,4 +1,4 @@
-"en-US":
+"uk-UA":
   hello: Привіт, світ!
   select_language: Будь ласка, виберіть мову
   computer_science: Інформатика
@@ -386,7 +386,6 @@
   carousel_heading_robots: Навчіться програмувати роботів
   carousel_heading_ide: Платформи, популярні серед вчителів
   educator_notes: Інформація для вчителя
-  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Більше ресурсів для вчителів та освітян
   participants: учасники
   teachers_notes: Інформація для вчителя

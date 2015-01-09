@@ -1,4 +1,4 @@
-"en-US":
+"nl-NL":
   hello: Hallo wereld
   select_language: Kies de gewenste taal
   computer_science: Informatica
@@ -391,7 +391,6 @@
   carousel_heading_robots: Leer robots te programmeren
   carousel_heading_ide: Platformen populair onder docenten
   educator_notes: Opvoeder notities
-  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Meer middelen voor leraren en opvoeders
   participants: Deelnemers
   teachers_notes: Leraar-nota's

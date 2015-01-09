@@ -1,4 +1,4 @@
-"en-US":
+"fr-FR":
   hello: Bonjour tout le monde
   select_language: Veuillez sélectionner votre langue
   computer_science: Informatique
@@ -401,7 +401,6 @@
   carousel_heading_robots: Apprenez à programmer avec des robots
   carousel_heading_ide: Plates-formes populaires parmi les enseignants
   educator_notes: Notes de l'éducateur
-  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Plus de ressources pour enseignants et éducateurs
   participants: participants
   teachers_notes: Notes de l'enseignant

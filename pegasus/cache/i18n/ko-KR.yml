@@ -1,4 +1,4 @@
-"en-US":
+"ko-KR":
   hello: Hello world
   select_language: 언어를 선택하세요.
   computer_science: 컴퓨터과학(Computer Science, 정보과학)
@@ -351,7 +351,6 @@
   carousel_heading_robots: 로봇 프로그래밍
   carousel_heading_ide: 선생님들이 자주 사용하는 양식들
   educator_notes: 교육자 참고사항들
-  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: 선생님들과 교육자를 위한 더 많은 자료들
   participants: 참여자
   teachers_notes: 선생님 참고사항들

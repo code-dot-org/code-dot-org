@@ -1,4 +1,4 @@
-"en-US":
+"tr-TR":
   hello: Merhaba dünya
   select_language: Lütfen dilinizi seçiniz
   computer_science: Bilgisayar Bilimleri
@@ -392,7 +392,6 @@
   carousel_heading_robots: Robotlar ile programlamayı öğrenin
   carousel_heading_ide: Öğretmenler arasında popüler platformlar
   educator_notes: Eğitimci notları
-  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Öğretmenler ve eğitimciler için daha fazla kaynak
   participants: katılımcılar
   teachers_notes: Öğretmen notları
