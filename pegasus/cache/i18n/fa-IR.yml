@@ -1,4 +1,4 @@
-"en-US":
+"fa-IR":
   hello: سلام دنیا
   select_language: لطفا زبان خود را انتخاب کنید
   computer_science: علوم رایانه
@@ -400,7 +400,6 @@
   carousel_heading_robots: یادگیری برنامه با ربات
   carousel_heading_ide: محیط های برنامه ریزی محبوب در میان معلمان
   educator_notes: یادداشت های آموزگار
-  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: منابع بیشتر برای معلمان و آموزگاران
   participants: شرکت کنندگان
   teachers_notes: یادداشت های معلم
@@ -1068,3 +1067,4 @@
   sphero_beyond_longdescription: اگر یک آموزگار یا پدر و مادر هستید، درس های SPRK
     یک دوره ی فشرده ی جالب در برنامه نویسی ربات به بچه ها می دهد و هم زمان توانایی
     های آن ها در ریاضی و علوم را تقویت می کند.
+  how_to_teach_hoc: How to Teach an Hour of Code

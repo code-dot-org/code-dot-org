@@ -1,4 +1,4 @@
-"en-US":
+"ru-RU":
   hello: Привет, мир!
   select_language: Выберите язык
   computer_science: Информатика
@@ -392,7 +392,6 @@
   carousel_heading_robots: Научись программировать роботов
   carousel_heading_ide: Популярные среди преподавателей платформы
   educator_notes: Заметки педагога
-  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Больше ресурсов для учителей и преподавателей
   participants: участники
   teachers_notes: Заметки учителя
@@ -1061,3 +1060,4 @@
   sphero_beyond_longdescription: Неважно, являетесь ли вы педагогом или родителем,
     уроки SPRK позволят детишкам пройти интенсивный курс по программированию роботов,
     одновременно улучшая их навыки в математике и точных науках.
+  how_to_teach_hoc: How to Teach an Hour of Code

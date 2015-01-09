@@ -1,4 +1,4 @@
-"en-US":
+"id-ID":
   hello: Halo dunia
   select_language: Silahkan pilih bahasa Anda
   computer_science: Ilmu komputer
@@ -396,7 +396,6 @@
   carousel_heading_robots: Belajar pemrogaman bersama robot-robot
   carousel_heading_ide: Sarana yang populer di kalangan guru
   educator_notes: Catatan pendidik
-  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Lebih banyak sumber daya bagi guru dan pendidik
   participants: peserta
   teachers_notes: Catatan Guru
@@ -1037,3 +1036,4 @@
     program because we believe play is a powerful teacher. Whether you're an educator
     or a parent, SPRK lessons give kids a fun crash course in programming robots while
     sharpening their skills in math and science.
+  how_to_teach_hoc: How to Teach an Hour of Code

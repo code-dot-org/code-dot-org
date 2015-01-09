@@ -1,4 +1,4 @@
-"en-US":
+"hu-HU":
   hello: Helló világ
   select_language: Válassz nyelvet
   computer_science: Számítógép-tudomány
@@ -386,7 +386,6 @@
   carousel_heading_robots: Tanulj robotprogramozást
   carousel_heading_ide: A tanárok közt népszerű platformok
   educator_notes: Oktatói jegyzetek
-  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: További segédletek tanárok és oktatók részére
   participants: résztvevők
   teachers_notes: Tanári jegyzetek
@@ -1061,3 +1060,4 @@
   sphero_beyond_longdescription: Akár oktató vagy akár szülő, az SPRK órák egy szórakoztató
     gyorstalpalót jelentenek a gyerekeknek a robotok programozásával, a matematikai
     és tudományos képzettségük fejlesztése közben.
+  how_to_teach_hoc: How to Teach an Hour of Code

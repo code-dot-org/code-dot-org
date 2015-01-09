@@ -1,4 +1,4 @@
-"en-US":
+"th-TH":
   hello: สวัสดีชาวโลก
   select_language: โปรดเลือกภาษาของคุณ
   computer_science: วิทยาการคอมพิวเตอร์
@@ -361,7 +361,6 @@
   carousel_heading_robots: เรียนเขียนโปรแกรมกับหุ่นยนต์
   carousel_heading_ide: แพลตฟอร์มที่นิยมในหมู่คุณครู
   educator_notes: บันทึกของผู้สอน
-  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: แหล่งข้อมูลเพิ่มเติมสำหรับครูและนักศึกษา
   participants: ผู้เข้าร่วม
   teachers_notes: บันทึกของครู
@@ -946,3 +945,4 @@
     3D โครงการ Alice มีเครื่องมือและวัสดุสำหรับการสอนและการเรียนเรียนรู้เกี่ยวกับ
     การคิดคำนวณ การแก้ปัญหา และการเขียนโปรแกรมสำหรับทุกเพศทุกวัย
   sphero_beyond_longdescription: ไม่ว่าคุณจะเป็นผู้สอหรือผู้ปกครอง บทเรียน SPRK จะสอนให้เด็กๆสนุกกับการเขียนโปรแกรมหุ่นยนต์ในขณะที่ฝึกทักษะในทางคณิตศาสตร์และวิทยาศาสตร์ไปพร้อมๆกัน
+  how_to_teach_hoc: How to Teach an Hour of Code

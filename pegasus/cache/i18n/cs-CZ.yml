@@ -1,4 +1,4 @@
-"en-US":
+"cs-CZ":
   hello: Ahoj světe
   select_language: Prosím, zvolte jazyk
   computer_science: Informatika
@@ -383,7 +383,6 @@
   carousel_heading_robots: Naučte se programovat s roboty
   carousel_heading_ide: Platformy, které jsou populární mezi učiteli
   educator_notes: Poznámky pro pedagogy
-  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Další zdroje pro učitele
   participants: účastníci
   teachers_notes: Poznámky pro učitele
@@ -1015,3 +1014,4 @@
   sphero_beyond_longdescription: Ať už jste pedagog nebo rodič, SPRK lekce přináší
     dětem zábavný rychlý kurz programování robotů zatímco také zdokonaluje jejich
     znalosti v matematice a vědě.
+  how_to_teach_hoc: How to Teach an Hour of Code
