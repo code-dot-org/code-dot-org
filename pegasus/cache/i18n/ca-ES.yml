@@ -1,4 +1,4 @@
-"en-US":
+"ca-ES":
   hello: Hola món
   select_language: Seleccioneu l'idioma
   computer_science: Informàtica
@@ -398,7 +398,6 @@
   carousel_heading_robots: Aprèn a programar amb robots
   carousel_heading_ide: Plataformes populars entre professors
   educator_notes: Notes d'educador
-  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Més recursos per a mestres i educadors
   participants: Participants
   teachers_notes: Notes del professor

@@ -1,4 +1,4 @@
-"en-US":
+"da-DK":
   hello: Hej verden
   select_language: Vælg dit sprog
   computer_science: Computer videnskab
@@ -382,7 +382,6 @@
   carousel_heading_robots: Lære at programmere med robotter
   carousel_heading_ide: Platforme populære blandt lærere
   educator_notes: Lærervejledning
-  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Flere ressourcer til lærere og undervisere
   participants: deltagerne
   teachers_notes: Lærerens noter

@@ -1,4 +1,4 @@
-"en-US":
+"fa-AF":
   hello: سلام دنیا
   select_language: لطفا زبان خود را انتخاب کنید
   computer_science: علوم رایانه
@@ -131,12 +131,6 @@
     خط کد نوشته شده است.'
   start_hoc: هم اکنون ساعتِ کدنویسی را آغاز کنید
   contact_form_topic_press: انتشارات/ رسانه ها (مصاحبه یا سخنرانی)
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
-    - Michael Clark, Teacher'
-  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
-    - Nina Nichols Peery, Teacher'
-  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
-    Alzate, 5th grader'
   studiobar_title: ' <a href=''http://studio.code.org''>استودیوی برنامه نویسی</a>
     ما را کشف کنید'
   studiobar_elementary_title: دوره‌های آموزشیِ مقدماتی
@@ -152,8 +146,6 @@
   studiobar_frozen_body: یک سرزمین عجایب یخی با آنا و السا بسازید
   studiobar_donate_title: کمک مالی بدهید
   studiobar_donate_body: با هر دلاری که کمک می کنید یک کودک یاد می گیرد
-  studiobar_shop_title: Shop
-  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   contact_form_topic_student: من دانش آموز هستم
   contact_form_topic_parent: من پدر/مادر هستم
   contact_form_topic_teacher: من دبیر/استاد هستم
@@ -242,11 +234,9 @@
   dashboard_action_save_all: ذخیره‌ی همه
   dashboard_action_cancel: لغو
   dashboard_action_delete: پاک کردن
+  dashboard_action_confirm: پاک گردد؟
   dashboard_action_delete_yes: بله
   dashboard_action_delete_no: نه
-  dashboard_action_confirm: پاک گردد؟
-  dashboard_action_remove: Remove
-  dashboard_action_remove_confirm: Remove?
   dashboard_action_done: انجام شد
   dashboard_action_required: اجباری
   dashboard_navigation_home_page: صفحه اصلی معلم
@@ -399,7 +389,6 @@
   carousel_heading_robots: یادگیری برنامه با ربات
   carousel_heading_ide: سیستم عامل محبوب در میان معلمان
   educator_notes: یادداشت های استاد
-  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: منابع بیشتر برای دبیران و استادان
   participants: شرکت کنندگان
   teachers_notes: یادداشت‌های دبیر

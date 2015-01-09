@@ -1,4 +1,4 @@
-"en-US":
+"sl-SI":
   hello: Pozdravljen svet
   select_language: Prosimo izberite vaš jezik
   computer_science: Računalništvo
@@ -383,7 +383,6 @@
   carousel_heading_robots: Nauči se programirati z roboti
   carousel_heading_ide: Platforme, ki so priljubljena med učitelji
   educator_notes: Zapiski učitelja
-  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Več virov za učitelje in vzgojitelje
   participants: udeleženci
   teachers_notes: Zapiski učitelja

@@ -1,4 +1,4 @@
-"en-US":
+"pl-PL":
   hello: Witaj świecie
   select_language: Wybierz język
   computer_science: Informatyka
@@ -394,7 +394,6 @@
   carousel_heading_robots: Naucz się programować roboty
   carousel_heading_ide: Platformy popularne wśród nauczycieli
   educator_notes: Notatki nauczyciela
-  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Więcej zasobów dla nauczycieli i wychowawców
   participants: uczestnicy
   teachers_notes: Notatki nauczyciela
