@@ -1,8 +1,8 @@
 # Code.org Community Internationalization
 
-Code.org's various projects are translated by volunteers using Crowdin. For more information about our translation process, please visit [code.org/translate](http://code.org/translate). Join our [Code.org project]() on Crowdin to start translating immediately!
+Code.org's various projects are translated by volunteers using Crowdin. For more information about our translation process, please visit [code.org/translate](http://code.org/translate). Join our [Code.org project](https://crowdin.com/project/codeorg/invite) on Crowdin to start translating immediately!
 
-This project provides scripts for centralizing source assets to be localized, synchronizing with Crowdin, and then re-integrated the localized assets back in to their respective projects.
+This project provides scripts for centralizing source assets to be localized, synchronizing with Crowdin, and then re-integrating the localized assets back in to their respective projects.
 
 ## Set Up
 
@@ -38,19 +38,25 @@ git push
 1. `cd code-dot-org/i18n/curriculum`
 2. `./sync.rb`
 
-## Adding a new string
+## Modifying/Adding a new string
 
 ### Pegasus
 
+#### Modifying
+1. Update the string in the [i18n Gsheet](https://docs.google.com/a/code.org/spreadsheet/ccc?key=0AuZfRa__4CAYdHhObnJqQkViMUx0cGpESHc3VWtDUXc&usp=sharing)
+2. `ssh staging.code.org` and check that your changes were synced to `staging/pegasus/cache/i18n/en-US.yml`
+3. Commit and push `en-US.yml`
+
+#### Adding
 1. Add a unique key and your string value to the [i18n Gsheet](https://docs.google.com/a/code.org/spreadsheet/ccc?key=0AuZfRa__4CAYdHhObnJqQkViMUx0cGpESHc3VWtDUXc&usp=sharing). NOTE: Make sure your string value only has plain HTML. Organization is by category/page; try to prepend each string of a common category with the same key. For example, all teacher dashboard strings begin with 'dashboard'
 2. `ssh staging.code.org` and check that your changes were synced to `staging/pegasus/cache/i18n/en-US.yml`
-3. Commit and push en-US.yml
+3. Commit and push `en-US.yml`
 4. On your development environment, pull staging branch and do the following to sync the string for all locales.
 ```bash
 cd i18n/code.org
 ./sync-pegasus.sh
 ```
-5. Commit and push all locale files (i18n/locales and pegasus/cache/i18n)
+5. Commit and push all locale files
 ```bash
 git add .
 git commit -m "new pegasus string XYZ"
@@ -67,6 +73,21 @@ git push
 
 [Example changelist adding a new string.](https://github.com/code-dot-org/code-dot-org/commit/d7fa8719bef9ec2e46ab2f6c91f722288218d517)
 
+### Apps
+1. Make changes in `apps/i18n/<app>/en_us.json`
+
+### Dashboard
+1. Make changes in `dashboard/config/locales` NOTE: Choose from the following files depending on where it best fits categorically.
+* contract_match.en.yml
+* data.en.yml
+* devise.en.yml
+* dsls.en.yml
+* en.yml
+* scripts.en.yml
+* slides.en.yml
+* text_match.en.yml
+* unplugged.en.yml
+2. DO NOT directly modify `match.en.yml` or `multi.en.yml` Please make changes to the levels directly in levelbuilder.
 
 ## Common Issues
 
