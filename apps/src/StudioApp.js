@@ -64,6 +64,7 @@ var StudioAppClass = function () {
   /**
   * Whether to alert user to empty blocks, short-circuiting all other tests.
   */
+  // TODO (br-pair) : this isnt actually a constant
   this.CHECK_FOR_EMPTY_BLOCKS = undefined;
 
   /**
@@ -806,7 +807,7 @@ StudioAppClass.prototype.clearHighlighting = function () {
 * Display feedback based on test results.  The test results must be
 * explicitly provided.
 * @param {{feedbackType: number}} Test results (a constant property of
-*     StudioApp.TestResults).
+*     this.TestResults).
 */
 StudioAppClass.prototype.displayFeedback = function(options) {
   options.Dialog = this.Dialog;
