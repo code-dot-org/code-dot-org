@@ -283,13 +283,14 @@ Blockly.BlockSpaceEditor.prototype.bumpOrDeleteOutOfBoundsBlocks_ = function() {
   }
 
   var MARGIN = 25;
+  var MARGIN_TOP = 15;
   var overflow;
   var blocks = this.blockSpace.getTopBlocks(false);
   for (var b = 0, block; block = blocks[b]; b++) {
     var blockXY = block.getRelativeToSurfaceXY();
     var blockHW = block.getHeightWidth();
     // Bump any block that's above the top back inside.
-    overflow = metrics.viewTop + MARGIN - blockHW.height -
+    overflow = metrics.viewTop + MARGIN_TOP -
       blockXY.y;
     if (overflow > 0) {
       block.moveBy(0, overflow);
