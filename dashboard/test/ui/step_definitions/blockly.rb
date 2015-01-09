@@ -103,6 +103,16 @@ Then(/^the workspace has "(.*?)" blocks of type "(.*?)"$/) do |n, type|
   result.should eq n.to_i
 end
 
+Then(/^block "([^"]*)" has (not )?been deleted$/) do |blockId, negation|
+  code = "return Blockly.mainBlockSpace.getAllBlocks().some(function (block) { return block.id == '" + blockId + "'; })"
+  result = @browser.execute_script(code)
+  if negation.nil? then
+    result.should eq false
+  else
+    result.should eq true
+  end
+end
+
 Then /^block "([^"]*)" has class "(.*?)"$/ do |blockId, className|
   item = @browser.find_element(:css, "g[block-id='#{blockId}']")
   classes = item.attribute("class")

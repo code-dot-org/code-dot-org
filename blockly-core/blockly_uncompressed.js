@@ -14402,7 +14402,7 @@ Blockly.Block.prototype.onMouseUp_ = function(e) {
       thisBlockSpace.trashcan.close()
     }
   }else {
-    if(Blockly.selected && (Blockly.selected.isDeletable() && thisBlockSpace.isDeleteArea(e))) {
+    if(Blockly.selected && (Blockly.selected.areBlockAndDescendantsDeletable() && thisBlockSpace.isDeleteArea(e))) {
       var trashcan = thisBlockSpace.trashcan;
       if(trashcan) {
         goog.Timer.callOnce(trashcan.close, 100, trashcan)
@@ -14661,7 +14661,7 @@ Blockly.Block.prototype.onMouseMove_ = function(e) {
       Blockly.highlightedConnection_ = closestConnection;
       Blockly.localConnection_ = localConnection
     }
-    if(this.isDeletable()) {
+    if(this.areBlockAndDescendantsDeletable()) {
       this.blockSpace.isDeleteArea(e)
     }
   }
@@ -14777,6 +14777,12 @@ Blockly.Block.prototype.getDescendants = function() {
     blocks = blocks.concat(child.getDescendants())
   }
   return blocks
+};
+Blockly.Block.prototype.areBlockAndDescendantsDeletable = function() {
+  var deleteBlockedByChildren = this.childBlocks_.some(function(child) {
+    return!child.areBlockAndDescendantsDeletable()
+  });
+  return!deleteBlockedByChildren && this.isDeletable()
 };
 Blockly.Block.prototype.isDeletable = function() {
   return this.deletable_ && !Blockly.readOnly
@@ -22782,12 +22788,13 @@ Blockly.BlockSpaceEditor.prototype.bumpOrDeleteOutOfBoundsBlocks_ = function() {
     return
   }
   var MARGIN = 25;
+  var MARGIN_TOP = 15;
   var overflow;
   var blocks = this.blockSpace.getTopBlocks(false);
   for(var b = 0, block;block = blocks[b];b++) {
     var blockXY = block.getRelativeToSurfaceXY();
     var blockHW = block.getHeightWidth();
-    overflow = metrics.viewTop + MARGIN - blockHW.height - blockXY.y;
+    overflow = metrics.viewTop + MARGIN_TOP - blockXY.y;
     if(overflow > 0) {
       block.moveBy(0, overflow)
     }
