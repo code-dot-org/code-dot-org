@@ -2,7 +2,7 @@ var TestResults = require('../../../src/constants.js').TestResults;
 
 var reqBlocks = function () {
   // stick this inside a function so that it's only loaded when needed
-  return require('../../util/testUtils').requireWithGlobalsCheckSrcFolder('maze/requiredBlocks.js');
+  return require('../../util/testUtils').requireWithGlobalsCheckBuildFolder('maze/requiredBlocks.js');
 };
 
 module.exports = {

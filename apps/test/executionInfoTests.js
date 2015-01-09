@@ -6,7 +6,7 @@ global.navigator = {};
 global.window = {};
 global.document = {};
 
-var ExecutionInfo = testUtils.requireWithGlobalsCheckSrcFolder('maze/executionInfo');
+var ExecutionInfo = testUtils.requireWithGlobalsCheckBuildFolder('maze/executionInfo');
 
 describe("ExecutionInfo tests", function () {
   it("single action queue/dequeue", function () {

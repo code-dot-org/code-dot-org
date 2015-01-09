@@ -2,7 +2,7 @@ var TestResults = require('../../../src/constants.js').TestResults;
 
 var rblocks = function () {
   // stick this inside a function so that it's only loaded when needed
-  return require('../../util/testUtils').requireWithGlobalsCheckSrcFolder('turtle/requiredBlocks.js');
+  return require('../../util/testUtils').requireWithGlobalsCheckBuildFolder('turtle/requiredBlocks.js');
 };
 
 module.exports = {
