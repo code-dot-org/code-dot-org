@@ -858,7 +858,7 @@ exports.install = function(blockly, blockInstallOptions) {
       this.appendDummyInput()
            .appendTitle(msg.setPattern())
            .appendTitle( new blockly.FieldImageDropdown(
-              Turtle.lineStylePatternOptions, 150, 20 ), 'VALUE' );
+              skin.lineStylePatternOptions, 150, 20 ), 'VALUE' );
       this.setTooltip(msg.setPattern());
     }
   };
@@ -933,19 +933,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
   // block is currently unused. if we want to add it back in the future, add
   // stamp images here
-  blockly.Blocks.turtle_stamp.VALUES = [
-    [skin.avatar, 'DEFAULT']
-  ];
-
-  // Preload stamp images
-  Turtle.stamps = [];
-  for (var i = 0; i < blockly.Blocks.turtle_stamp.VALUES.length; i++) {
-    var url = blockly.Blocks.turtle_stamp.VALUES[i][0];
-    var key = blockly.Blocks.turtle_stamp.VALUES[i][1];
-    var img = new Image();
-    img.src = url;
-    Turtle.stamps[key] = img;
-  }
+  blockly.Blocks.turtle_stamp.VALUES = skin.stampValues;
 
   generator.turtle_stamp = function () {
     return 'Turtle.drawStamp("' + this.getTitleValue('VALUE') +

@@ -20,7 +20,8 @@ exports.applySingleton = function (singleton) {
 
 var TestResults = require('./constants').TestResults;
 
-exports.HintRequestPlacement = {
+// NOTE: These must be kept in sync with activity_hint.rb in dashboard.
+var HintRequestPlacement = {
   NONE: 0,  // This value must not be changed.
   LEFT: 1,  // Hint request button is on left.
   RIGHT: 2  // Hint request button is on right.
@@ -291,7 +292,7 @@ var getFeedbackButtons = function(options) {
       nextLevel: exports.canContinueToNextLevel(options.feedbackType),
       isK1: options.isK1,
       hintRequestExperiment: options.hintRequestExperiment &&
-          (options.hintRequestExperiment === exports.HintRequestPlacement.LEFT ?
+          (options.hintRequestExperiment === HintRequestPlacement.LEFT ?
               'left' : 'right'),
       assetUrl: studioAppSingleton.assetUrl,
       freePlay: options.freePlay

@@ -18,7 +18,6 @@ global.document = {};
  * options.expectedResult
  */
 describe("getMissingRequiredBlocks tests", function () {
-  var feedback;
   var studioAppSingleton;
 
   /**
@@ -86,19 +85,14 @@ describe("getMissingRequiredBlocks tests", function () {
     assert(!options.userBlockXml || loaded, "either we didnt have  input xml" +
       "or we did, and we loaded something");
 
-    var missing = feedback.__testonly__.getMissingRequiredBlocks();
+    var missing = studioAppSingleton.feedback_.__testonly__.getMissingRequiredBlocks();
     validateMissingRequiredBlocks(missing.blocksToDisplay, options.expectedResult);
   }
-
 
   // create our environment
   beforeEach(function () {
     testUtils.setupTestBlockly();
     studioAppSingleton = testUtils.getStudioAppSingleton();
-    // TODO (br-pair) : this might change once we figure out how feedback and
-    /// StudioApp integrate
-    // feedback = testUtils.requireWithGlobalsCheckSrcFolder('/feedback');
-    feedback = studioAppSingleton.feedback_;
   });
 
   // missing multiple blocks

@@ -33,7 +33,6 @@ var Colours = require('./colours');
 var codegen = require('../codegen');
 var ArtistAPI = require('./api');
 var page = require('../templates/page.html');
-var feedback = require('../feedback.js');
 var utils = require('../utils');
 var Slider = require('../slider');
 var _ = utils.getLodash();
@@ -88,6 +87,7 @@ var Artist = function () {
 
   // image icons and image paths for the 'set pattern block'
   this.lineStylePatternOptions = [];
+  this.stamps = [];
 
   // PID of animation task currently executing.
   this.pid = 0;
@@ -155,17 +155,15 @@ Artist.prototype.init = function(config) {
   this.skin = config.skin;
   this.level = config.level;
 
-  this.lineStylePatternOptions = [
-    [this.skin.patternDefault, 'DEFAULT'], //  signals return to default path drawing
-    [this.skin.rainbowMenu, 'rainbowLine'],  // set to property name for image within skin
-    [this.skin.ropeMenu, 'ropeLine'],  // referenced as skin[pattern];
-    [this.skin.squigglyMenu, 'squigglyLine'],
-    [this.skin.swirlyMenu, 'swirlyLine'],
-    [this.skin.annaLine, 'annaLine'],
-    [this.skin.elsaLine, 'elsaLine'],
-    [this.skin.annaLine_2x, 'annaLine_2x'],
-    [this.skin.elsaLine_2x, 'elsaLine_2x'],
-  ];
+  // Preload stamp images
+  this.stamps = [];
+  for (var i = 0; i < this.skin.stampValues.length; i++) {
+    var url = this.skin.stampValues[i][0];
+    var key = this.skin.stampValues[i][1];
+    var img = new Image();
+    img.src = url;
+    this.stamps[key] = img;
+  }
 
   if (this.skin.id == "anna" || this.skin.id == "elsa") {
     // let's try adding a background image
@@ -295,8 +293,8 @@ Artist.prototype.afterInject_ = function (config) {
     imageContainer.style.display='none';
     document.body.appendChild(imageContainer);
 
-    for( var i = 0; i < this.lineStylePatternOptions.length; i++) {
-      var pattern = this.lineStylePatternOptions[i][1];
+    for( var i = 0; i < this.skin.lineStylePatternOptions.length; i++) {
+      var pattern = this.skin.lineStylePatternOptions[i][1];
       if (this.skin[pattern]) {
         var img = new Image();
         img.src = this.skin[pattern];
@@ -714,7 +712,7 @@ Artist.prototype.execute = function() {
   // Reset the graphic.
   this.studioApp_.reset();
 
-  if (feedback.hasExtraTopBlocks()) {
+  if (this.studioApp_.hasExtraTopBlocks()) {
     // immediately check answer, which will fail and report top level blocks
     this.checkAnswer();
     return;
