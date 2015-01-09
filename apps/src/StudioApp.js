@@ -988,8 +988,8 @@ StudioAppClass.prototype.setConfigValues_ = function (config) {
 
   // Store configuration.
   this.onAttempt = config.onAttempt || function () {};
-  this.onContinue = config.onContinue || function() {};
-  this.onResetPressed = config.onResetPressed || function() {};
+  this.onContinue = config.onContinue || function () {};
+  this.onResetPressed = config.onResetPressed || function () {};
   this.backToPreviousLevel = config.backToPreviousLevel || function () {};
 };
 
