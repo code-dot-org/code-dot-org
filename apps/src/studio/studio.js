@@ -1308,7 +1308,7 @@ var displayFeedback = function() {
       feedbackImage: Studio.feedbackImage,
       twitter: twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
-      saveToGalleryUrl: level.freePlay && Studio.response.save_to_gallery_url,
+      saveToGalleryUrl: level.freePlay && Studio.response && Studio.response.save_to_gallery_url,
       appStrings: {
         reinfFeedbackMsg: studioMsg.reinfFeedbackMsg(),
         sharingText: studioMsg.shareGame()
