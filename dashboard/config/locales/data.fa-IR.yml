@@ -31,7 +31,7 @@
           desc: ویرایش کد (آزمایشی)
           MazeEC: مرحله 1
         2014 Levels:
-          desc: 2014 Puzzles (beta)
+          desc: جهش (بتا)
           Bounce: مرحله 1
         Builder Levels:
           desc: پازل‌های ایجاد شده توسط کاربر (آزمایشی)
@@ -52,7 +52,7 @@
           ArtistEC: مرحله 3
           StudioEC: مرحله 4
         events:
-          desc: Bounce (beta)
+          desc: جهش (بتا)
           Bounce: مرحله 1
           Studio: مرحله 2
         builder:
@@ -134,8 +134,9 @@
         maze_2_6: سعی کن فقط با استفاده از 3 بلوک من رو به این مزاحم سبز رنگ برسونی.
         maze_2_7: به من کمک کن تا با کمترین تعداد بلوک این خوک بد رو نابود کنم. سعی
           کن بیش از یک بلوک "تکرار" استفاده کنی.
-        maze_2_8: برای حل این سوال، سعی کن یک جعبه تکرار استفاده کنی که در آن جعبه
-          های حرکت، حرکت و گردش باشد.
+        maze_2_8: 'When a block is grey, that means you can''t delete it. Solve this
+          puzzle using the "repeat" block that repeats 3 times. Try putting these
+          3 blocks inside the grey "repeat" block: move, move, turn.'
         maze_2_9: خوب! سعی کن از بلوک جدید "تکرار کن تا" استفاده کنی. تا زمانی که
           من به خوک مزاحم برسم اون تکرار میشه.
         maze_2_10: خب، آخرین بار تمرین - آیا شما می توانید فقط با استفاده از ۴ بلوک
@@ -358,24 +359,31 @@
           برخورد نکنم!
         maze_3_4: آخ! یه برنامه برام بنویس که من رو از کنار بمب ها بگذرونه و به خوک
           برسونه.
-        bounce_1: Attach a block to the "when left arrow" block, then run and move
-          the paddle with the left arrow key to the finish target.
-        bounce_2: Attach a block to the "when right arrow" and "when left arrow" blocks,
-          then run and move the paddle with the both arrow key to both finish targets.
-        bounce_3: TBD
-        bounce_4: TBD
-        bounce_5: Attach a blocks to the "when right arrow", "when left arrow", "when
-          ball hits wall", and "when ball hits paddle" blocks.
-        bounce_6: Try again with more balls.
-        bounce_7: Now it is getting crazy!
-        bounce_10: There is a now a goal at the top. Attach "increment score" blocks
-          to the the "when ball in goal" and "when ball misses paddle" blocks to make
-          a game.
-        bounce_11: You can now attach blocks to the "when run" block. Try changing
-          the speed of the paddle and the ball and see how many points you can score
+        bounce_1: Attach a block to the "when left arrow" block and press "Run". Move
+          the paddle using the left arrow to reach the finish target.
+        bounce_2: Attach a block to the "when right arrow" and "when left arrow" blocks.
+          Move the paddle to reach both finish targets.
+        bounce_3: Now try something similar with the "when up arrow" block. Move the
+          paddle to the finish target at the top.
+        bounce_4: This time you need to add four blocks. Move the paddle to all four
+          finish targets to complete this puzzle.
+        bounce_5: We're going to send a ball flying down towards the paddle. Attach
+          a block to the "when ball hits paddle" block to ensure the ball reaches
+          the finish target.
+        bounce_6: Now the finish target is on the top. You need to attach blocks to
+          both of the "when ball hits" blocks to solve this puzzle.
+        bounce_7: Attach blocks to each of the "when" blocks. Bounce the ball until
+          it hits the finish target.
+        bounce_10: There is a now a goal at the top. Attach the "score point" and
+          "score opponent point" blocks to the "when ball in goal" and "when ball
+          misses paddle" blocks to make a game. See how many points you can score
           before your opponent scores twice.
+        bounce_11: You can now attach blocks to the "when run" block. You have to
+          attach the new "launch new ball" block in more than one place. Also, try
+          changing the scene or the speed of the paddle and the ball and see how many
+          points you can score before your opponent scores twice.
         bounce_12: Create your own Bounce game. You can change all the visuals and
-          the rules. When you're done, click Share to let friends try your game on
+          the rules. When you're done, click Finish to let friends try your game on
           their phones.
         Custom_builder: بلوک‌ها را از جعبه‌ابزار به فضای کاری بکش تا مرحله دلخواه
           خود را بسازی. وقتی آماده شد، "اجرا" را بزن.
@@ -383,8 +391,8 @@
           یا صفحه را لمس کن تا Flappy حرکت کرده و به هدف برسد.
         flappy_2: حالا کمی زمین اضافه کردیم. یک بلوک به بلوک "هنگام برخورد با زمین"
           بچسبان. وقتی پرنده زمین می‌خورد، برنامه‌ات باید بازی را تمام کند.
-        flappy_3: بلوک "هنگام شروع بازی" امکان اجرای کد هنگام شروع بازی را می‌دهد.
-          سعی کن سرعت مرحله را تعیین کرده و به سمت مقصد پرواز کنی.
+        flappy_3: The "when run" block allows you to run code when your game starts.  Try
+          setting the level speed and flapping to the target.
         flappy_4: Flappy از وسط موانع پرواز میکنه مگر اینکه کدی بنویسی تا باعث برخوردش
           بشه. یک بلوک به بلوک "هنگام برخورد با مانع" بچسبان. هنگامیکه Flappy با اولین
           سری از لوله ها برخورد کنه، برنامه‌ات باید بازی رو تموم کنه.
@@ -393,16 +401,16 @@
           با پرواز دادن Flappy از بین اولین سری از لوله‌ها، یک امتیاز بگیر.
         flappy_6: حالا ببین می‌تونی هنوز امتیاز بگیری بعد از اینکه میزان پرش Flappy
           را کمتر یا بیشتر کردی.
-        flappy_7: سپس، سعی کن صحنه را با چسباندن بلوک دیگری به بلوک "هنگام شروع بازی"،
-          عوض کنی.
+        flappy_7: Next, try changing the scene by attaching another block to the "when
+          run" block.
         flappy_8: امکان تغییر ظاهر در هر زمانی وجود داره، نه فقط وقتی که بازی شروع
           میشه. سعی کن هنگامیکه اتفاقات دیگری رخ میده، یک صحنه تصادفی قرار بدی، مثلا،
           هنگام عبور از یک مانع.
         flappy_9: برای پیچیده‌تر کردن قضیه، هنگام برخورد با یک مانع یا زمین، بجای
           پایان دادن به بازی، سعی کن امتیاز رو به 0 برگردونی.
-        flappy_11: بازی "پرنده شل و ول" خودت رو بساز. می‌تونی همه ظواهر و قوانین رو
-          عوض کنی، حتی جاذبه. وقتی تموم شد، اشتراک گذاری رو بزن تا دوستات بازی خودت
-          رو روی گوشی‌هاشون انجام بدن.
+        flappy_11: Create your own Flappy game. You can change all the visuals and
+          all the rules, even the gravity. When you're done, click Finish to let friends
+          try your game on their phones.
         flappy_k1_1: Play Flappy
         flappy_k1_2: یک بلوک به بلوک "هنگام کلیک" بچسبان و سپس "اجرا" را بزن. کلیک
           کن یا صفحه را لمس کن تا Flappy حرکت کرده و به هدف برسد.
@@ -483,36 +491,38 @@
         studio_c3_game_6: Can you add blocks to change the background and the speed
           of the penguin, and then move him with the arrows until you score?
         studio_c3_game_7: Create your own game. When you're done, click Finish to
-          let friends try your story on their phones.
-        studio_playlab_1: می‌تونی کاری کنی که این سگ بگه "سلام بر جهان"؟
-        studio_playlab_2: Can you make the dog say something and then have the cat
-          say something afterwards?
-        studio_playlab_3: Can you write a program to make this dog move to the cat?
-        studio_playlab_4: می‌تونی برنامه‌ای بنویسی که باعث حرکت این سگ به سمت گربه
-          بشه، و وقتی به گربه رسید، کاری کنی که گربه بگه "سلام"؟
-        studio_playlab_5: Can you write a program to make the octopus say "hello"
-          when it is clicked?
-        studio_playlab_6: Can you write a program to make this penguin move around
-          using the up / down / left /right keys to hit all of the targets?
+          let friends try your game on their phones.
+        studio_playlab_1: Penguin wants to say "hello" - can you help him?
+        studio_playlab_2: Cave Boy (actor 1) and Cave Girl (actor 2) would like to
+          say "hello" to each other. Can you help them by using the "say" block twice?
+        studio_playlab_3: Can you help Tennis Girl get to the flag?
+        studio_playlab_4: Can you help Tennis Boy (actor 1) get to Tennis Girl (actor
+          2) and play a sound when he gets there?
+        studio_playlab_5: Can you help the Spacebot say "greetings earthlings" when
+          it is clicked? Don’t forget to click it after you click Run
+        studio_playlab_6: Can you help the Witch move around using the up/down/right/left
+          arrow keys to get to all the magical fireballs?
         studio_playlab_7: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to move this dinosaur up and down repeatedly?
-        studio_playlab_8: Can you add a block to score a point when the penguin runs
-          into the octopus, and then move him with the arrows until you score?
-        studio_playlab_9: Can you add blocks to change the background and the speed
-          of the penguin, and then move him with the arrows until you score?
+          Can you attach blocks to it to help the wizard move right and left repeatedly?
+        studio_playlab_8: Can you add a block to score a point and a block to play
+          a sound when the unicorn runs into the wizard, and then move him with the
+          arrows until you score?
+        studio_playlab_9: Set the background for this alien invasion and help the
+          Spacebot get to the alien faster by changing its speed. Then move him with
+          the arrow keys to get to the Spacebot and alert everyone else
         studio_playlab_10: Create your own game. When you're done, click Finish to
-          let friends try your story on their phones.
+          let friends try your game on their phones.
         studio_full_sandbox: Create your own game. When you're done, click Finish
-          to let friends try your story on their phones.
+          to let friends try your game on their phones.
         studio_k1_1: می‌تونی کاری کنی که این سگ بگه "سلام بر جهان"؟
         studio_k1_2: Can you make the dog say something and then have the cat say
           something afterwards?
-        studio_k1_3: Can you write a program to make this dog move to the target?
+        studio_k1_3: Can you write a program to make this dog move to the cat?
         studio_k1_4: Make the dog move to the cat and the cat say "hello" when he
           gets there.
         studio_k1_5: Can you add a block to make the octopus happy?
-        studio_k1_6: Can you write a program to make this penguin move around using
-          the up / down / left /right keys to hit all of the targets?
+        studio_k1_6: Create your own story! Move around the cat and dog, and make
+          them say things.
         maze_wordsearch_k_1: Move me to spell the word EAST
         maze_wordsearch_k_2: Move me to spell the word SOUTH
         maze_wordsearch_k_3: Move me to spell the word WEST
@@ -526,7 +536,7 @@
           the word STORY
         webapp_ec_simple: Create your web app by using createHtmlBlock.
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
-          it in the new "penColour" block.'
+          it in the new "penColor" block.'
         turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:
           a stick figure, snowflake, or spiral. Also try the new "penWidth" block.
           Have fun!'
@@ -758,8 +768,8 @@
         drag_blocks: یک بلوک "حرکت" را بکش و آن را زیر بلوک دیگری بچسبان
         run: '"اجرا" را بزن تا برنامه‌ات اجرا بشه'
         watch_again: 'برای تماشای دوباره این ویدیو اینجا را کلیک کنید '
-        gray_block_explanation: Blocks that are grey can't be moved or deleted. Can
-          you solve the puzzle anyway?
+        gray_block_explanation: Blocks that are grey can't be deleted. Can you solve
+          the puzzle anyway?
         show_code_explanation: اینجا را کلیک کن تا کد برنامه‌ای که می‌سازی را ببینی
         instructions_repeat_explanation: دستورالعمل‌های هر معما اینجا تکرار شدن
         category_explanation: تمام اون بلوک‌ها رو داری اما حالا داخل دسته‌بندی قرار
@@ -789,12 +799,12 @@
           the puzzle.
         set_length: Use this block to set "length" to the correct value.
         which_equation: Which equation makes each side shorter for shapes with more
-          sides?  Try each equation!
+          sides?
         get_nectar: Use the new "get nectar" block.
         actions_category: The tool box got a new look! The "Actions" blocks are in
           here now.
         draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
-        edit_function: Use this button to edit the function.
+        edit_function: Click here to edit your function.
         create_function: Click here to open the "Functions" flyout, then click the
           "Create a Function" button.
         house_hint: It's ok if the picture doesn't look like a house yet. We will

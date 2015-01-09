@@ -25,7 +25,7 @@
           Artist5: Этап 19
           Unplug11: Этап 20
         Hour of Code:
-          desc: Час кода
+          desc: Hour of Code
           Maze: Этап 1
         Edit Code:
           desc: Редактировать код (beta)
@@ -391,21 +391,21 @@
           очко сопернику" к блокам "когда шар у цели" и, "когда шар промазал", чтобы
           сделать игру. Посмотрите, сколько очков Вы можете заработать, прежде чем
           Ваш противник забьет в двое больше.
-        bounce_11: Теперь вы можете прикреплять блок «когда начинается игра». Вы должны
-          прикрепить новый блок «начать новый мяч» в более чем одном месте. Кроме
-          того попробуйте изменить сцену или скорость ракетки и мяча, чтобы увидеть,
-          сколько очков вы можете забить прежде чем ваш противник забьет дважды.
-        bounce_12: Создайте свою собственную игру Bounce. Вы можете изменить всю графику
-          и правила. Когда вы закончите, нажмите кнопку Поделиться, чтобы друзья поиграли
-          в вашу игру на своих телефонах.
+        bounce_11: You can now attach blocks to the "when run" block. You have to
+          attach the new "launch new ball" block in more than one place. Also, try
+          changing the scene or the speed of the paddle and the ball and see how many
+          points you can score before your opponent scores twice.
+        bounce_12: Create your own Bounce game. You can change all the visuals and
+          the rules. When you're done, click Finish to let friends try your game on
+          their phones.
         Custom_builder: Перетаскивайте блоки из панели инструментов в рабочую область,
           чтобы создать уровень. Нажмите "Запустить", когда вы будете готовы.
         flappy_1: Прикрепите блок к блоку "когда клик", затем нажмите "Запустить".
           Нажмите на экран, чтобы передвинуть Флаппи к цели.
         flappy_2: Мы также добавили немного земли. Добавь блок "когда коснется земли".
           Ваш код должен содержать "закончить игру", когда Птичка касается земли.
-        flappy_3: Блок "когда начнется игра" позволяет вам запустить задачи после
-          начала игры. Поробуйте настроить скорость полета и сколько осталось до цели.
+        flappy_3: The "when run" block allows you to run code when your game starts.  Try
+          setting the level speed and flapping to the target.
         flappy_4: Птичка будет лететь через препятствие до тех пор, как вы не вставите
           команду, чтобы она могла разбиться. Подключите блок "когда врежешься в препятствие".
           Вам надо закончить игру, когда Птичка врежется на определенном количестве
@@ -415,17 +415,17 @@
           тогда получи очко за пролет Птички через определенное количество труб. '
         flappy_6: Посмотри можешь ли ты заработать очко в более маленьком или более
           большом разрыве труб.
-        flappy_7: Теперь попробуй изменить сцены, присоединив другой блок на блок,
-          «когда начинется игра».
+        flappy_7: Next, try changing the scene by attaching another block to the "when
+          run" block.
         flappy_8: Визуальные эффекты можно задать в любое время, не только при запуске
           игры. Попробуй установить СЛУЧАЙНАЯ сцена, когда происходят другие события,
           например, когда проходятся препятствия.
         flappy_9: Чтобы разнообразить игру, попробуйте когда птичка врежется об препятствие
           или ударится о землю вместо "конец игры" задать "присвоить значение очков
           0".
-        flappy_11: Создайте свою собственную игру. Вы можете поменять все визуальные
-          эффекты и все правила, даже сложность. Когда вы закончите, нажмите поделиться,
-          чтобы ваши друзья могли попробовать игру на своих телефонах.
+        flappy_11: Create your own Flappy game. You can change all the visuals and
+          all the rules, even the gravity. When you're done, click Finish to let friends
+          try your game on their phones.
         flappy_k1_1: Play Flappy
         flappy_k1_2: Прикрепите блок к блоку "когда клик", затем нажмите "Запустить".
           Нажмите на экран, чтобы передвинуть Флаппи к цели.
@@ -510,28 +510,29 @@
         studio_c3_game_6: Can you add blocks to change the background and the speed
           of the penguin, and then move him with the arrows until you score?
         studio_c3_game_7: Create your own game. When you're done, click Finish to
-          let friends try your story on their phones.
-        studio_playlab_1: Вы можете заставить собаку сказать «hello world»?
-        studio_playlab_2: Can you make the dog say something and then have the cat
-          say something afterwards?
-        studio_playlab_3: Ты можешь написать программу, чтобы собака двигалась к кошке?
-        studio_playlab_4: Вы можете написать программу, которая заставит собаку подойти
-          к кошке, и сказать «hello», когда собака подойдет к нему?
-        studio_playlab_5: Можешь написать программу, чтобы осьминог сказал «Привет»,
-          при выборе его мышкой?
-        studio_playlab_6: Вы можете написать программу, чтобы заставить пингвина передвигаться
-          с помощью клавиш вверх / вниз / влево / вправо и поразить все цели?
-        studio_playlab_7: Блок «repeat forever» позволяет запускать код непрерывно.
-          Вы сможете прикрепить блоки, чтобы переместить этого динозавра вверх и вниз
-          несколько раз?
-        studio_playlab_8: Can you add a block to score a point when the penguin runs
-          into the octopus, and then move him with the arrows until you score?
-        studio_playlab_9: Can you add blocks to change the background and the speed
-          of the penguin, and then move him with the arrows until you score?
+          let friends try your game on their phones.
+        studio_playlab_1: Penguin wants to say "hello" - can you help him?
+        studio_playlab_2: Cave Boy (actor 1) and Cave Girl (actor 2) would like to
+          say "hello" to each other. Can you help them by using the "say" block twice?
+        studio_playlab_3: Can you help Tennis Girl get to the flag?
+        studio_playlab_4: Can you help Tennis Boy (actor 1) get to Tennis Girl (actor
+          2) and play a sound when he gets there?
+        studio_playlab_5: Can you help the Spacebot say "greetings earthlings" when
+          it is clicked? Don’t forget to click it after you click Run
+        studio_playlab_6: Can you help the Witch move around using the up/down/right/left
+          arrow keys to get to all the magical fireballs?
+        studio_playlab_7: The "repeat forever" block allows you to run code continuously.
+          Can you attach blocks to it to help the wizard move right and left repeatedly?
+        studio_playlab_8: Can you add a block to score a point and a block to play
+          a sound when the unicorn runs into the wizard, and then move him with the
+          arrows until you score?
+        studio_playlab_9: Set the background for this alien invasion and help the
+          Spacebot get to the alien faster by changing its speed. Then move him with
+          the arrow keys to get to the Spacebot and alert everyone else
         studio_playlab_10: Create your own game. When you're done, click Finish to
-          let friends try your story on their phones.
+          let friends try your game on their phones.
         studio_full_sandbox: Create your own game. When you're done, click Finish
-          to let friends try your story on their phones.
+          to let friends try your game on their phones.
         studio_k1_1: Вы можете заставить собаку сказать «hello world»?
         studio_k1_2: Can you make the dog say something and then have the cat say
           something afterwards?
@@ -539,8 +540,8 @@
         studio_k1_4: Make the dog move to the cat and the cat say "hello" when he
           gets there.
         studio_k1_5: Can you add a block to make the octopus happy?
-        studio_k1_6: Can you write a program to make this penguin move around using
-          the up / down / left /right keys to hit all of the targets?
+        studio_k1_6: Create your own story! Move around the cat and dog, and make
+          them say things.
         maze_wordsearch_k_1: Перемести меня по буквам EAST
         maze_wordsearch_k_2: Перемести меня по буквам SOUTH
         maze_wordsearch_k_3: Перемести меня по буквам WEST
@@ -558,7 +559,7 @@
           в другом, по буквам STORY
         webapp_ec_simple: Create your web app by using createHtmlBlock.
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
-          it in the new "penColour" block.'
+          it in the new "penColor" block.'
         turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:
           a stick figure, snowflake, or spiral. Also try the new "penWidth" block.
           Have fun!'
@@ -791,8 +792,8 @@
         drag_blocks: Перетащите блок «переместить» и поставьте его ниже другого блока
         run: Нажмите «Выполнить», чтобы протестировать вашу программу
         watch_again: Нажмите здесь, чтобы посмотреть видео еще раз
-        gray_block_explanation: Серые блоки не могут быть перемещены или удалены.
-          Сможете решить головоломку?
+        gray_block_explanation: Blocks that are grey can't be deleted. Can you solve
+          the puzzle anyway?
         show_code_explanation: Нажмите здесь, чтобы увидеть код программы, которую
           вы делаете
         instructions_repeat_explanation: Инструкции для каждой головоломки здесь повторяются
@@ -822,12 +823,12 @@
           the puzzle.
         set_length: Use this block to set "length" to the correct value.
         which_equation: Which equation makes each side shorter for shapes with more
-          sides?  Try each equation!
+          sides?
         get_nectar: Use the new "get nectar" block.
         actions_category: The tool box got a new look! The "Actions" blocks are in
           here now.
         draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
-        edit_function: Use this button to edit the function.
+        edit_function: Click here to edit your function.
         create_function: Click here to open the "Functions" flyout, then click the
           "Create a Function" button.
         house_hint: It's ok if the picture doesn't look like a house yet. We will

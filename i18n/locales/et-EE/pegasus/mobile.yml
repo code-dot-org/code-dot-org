@@ -3,7 +3,7 @@ et-EE:
   select_language: Palun vali oma keel
   computer_science: Informaatika
   computer_science_edweek: Informaatika Hariduse Nädal
-  csedweek_dates: 9-15 detsember, 2013
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Koodi Tund</a> on saabumas. Üleskutse kõigile õpetajatele ja korraldajatele,<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">planeeri oma Koodi Tund</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Oled sa informaatika õpetaja? Vaata teisi Informaatika Hariduse Nädala materjale</a>'
   n_have_learned_an_hoc: '<h1>#</h1><h3>on proovinud</h3><h2>Koodi Tundi</h2>'
@@ -323,6 +323,7 @@ et-EE:
   carousel_heading_robots: Õpi roboteid programmeerima
   carousel_heading_ide: Õpetajate seas populaarsed platvormid
   educator_notes: Õpetaja märkmed
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Rohkem vahendeid õpetajatele
   participants: osalejad
   teachers_notes: Õpetaja märkmed

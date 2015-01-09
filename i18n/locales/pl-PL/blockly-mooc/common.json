@@ -88,5 +88,6 @@
   "signup":"Zapisz się na kurs wprowadzający",
   "hintHeader":"Oto wskazówka:",
   "genericFeedback":"Zobacz jak zakończyłeś i spróbuj naprawić swój program.",
+  "toggleBlocksErrorMsg":"You need to correct an error in your program before it can be shown as blocks.",
   "defaultTwitterText":"Sprawdź, co zrobiłem"
 }

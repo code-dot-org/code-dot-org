@@ -3,7 +3,7 @@ ro-RO:
   select_language: Vă rugăm să selectaţi limba dvs.
   computer_science: Informatică
   computer_science_edweek: Săptămâna Informaticii
-  csedweek_dates: 9-15 Decembrie 2013
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: 'Se apropie <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> Ora de cod</a>. Chemând toți profesorii şi organizatorii, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> planificați-vă Ora de cod</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400"> Sunteți profesor de informatică ? Vedeți alte resurse CSEdWeek</a>'
   n_have_learned_an_hoc: '<h1>#</h1><h3>a încercat o</h3><h2>Oră de Cod</h2>'
@@ -324,6 +324,7 @@ ro-RO:
   carousel_heading_robots: Învață să programezi cu roboți
   carousel_heading_ide: Platforme populare printre profesori
   educator_notes: Notițe pentru educatori
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Mai multe resurse pentru profesori și educatori
   participants: participanți
   teachers_notes: Notițele profesorului

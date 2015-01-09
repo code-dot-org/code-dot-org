@@ -3,7 +3,7 @@ nl-NL:
   select_language: Kies de gewenste taal
   computer_science: Informatica
   computer_science_edweek: Week van het Informaticaonderwijs
-  csedweek_dates: 9-15 december 2013
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: 'Het <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> "Hour of Code"</a> komt eraan. Dit is een oproep aan alle leerkrachten en organisatoren, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">plan uw "Hour of Code"</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Bent u een Informaticadocent? Zie andere bronnen voor CSEdWeek</a>'
   n_have_learned_an_hoc: '<h1>#</h1><h3>heeft een</h3><h2>Hour of Code</h2><h3>geprobeerd</h3>'
@@ -325,6 +325,7 @@ nl-NL:
   carousel_heading_robots: Leer robots te programmeren
   carousel_heading_ide: Platformen populair onder docenten
   educator_notes: Opvoeder notities
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Meer middelen voor leraren en opvoeders
   participants: Deelnemers
   teachers_notes: "Leraar-nota's"

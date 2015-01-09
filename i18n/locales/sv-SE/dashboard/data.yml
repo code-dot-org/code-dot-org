@@ -386,7 +386,7 @@ sv:
       Standalone_Artist_4:
         instructions: Nu har du fått ett nytt block att leka med, slingan(loop). Den upprepar en uppsättning kommandon. Vad händer om du upprepar dessa kommandon 6 gånger?
       Standalone_Artist_5:
-        instructions: Hur många gånger behöver du denna diamant loopa för att rita en blomma?
+        instructions: Hur många gånger behöver du loopa denna diamant för att rita en blomma?
       Standalone_Artist_5.5:
         instructions: 'Lägg märke till hur vi förenklat diamant koden genom att köra den i en loop. Du kan upprepa hela sekvensen 12 gånger för att  rita blomman. Tips: Du måste svänga 30 grader efter din diamant-loop så du inte ritar över samma diamant.'
       Standalone_Artist_6:
@@ -476,17 +476,17 @@ sv:
         C3_songwriting_with_parameters: Låtskrivande Med parametrar
         C4_intro: Introduktion
         C4_bee_conditional: Bee Villkorssatser
-        C4_variables_artist: 'Variables - Artist'
-        C4_variables_playlab: 'Variables - Play Lab'
+        C4_variables_artist: 'Variabler - Konstnär'
+        C4_variables_playlab: 'Variabler - Play Lab'
         C4_for_loops: "'För' loopar"
-        C4_math_artist: Programming the Artist with Math
+        C4_math_artist: Programmera Konstnären med matematik
         C4_function_edit: Redigera funktioner
         C4_function_create: Skapa funktioner
         C4_function_parameters: Funktioner med parametrar
         C4_conditionals: Villkor
-        C4_unplugged_algorithms: Algorithms with Tangrams
+        C4_unplugged_algorithms: Algoritmer med Tangram
         C4_unplugged_madlibs: Mad Libs
-        C4_unplugged_variables: Variables in Envelopes
+        C4_unplugged_variables: Variabler i kuvert
         C4_unplugged_forloops: "'För' loopar"
         C4_unplugged_parameters: Låtskrivande Med parametrar
         C4_unplugged_binary: Binära
@@ -494,8 +494,8 @@ sv:
         frozen_loops: Introduktion till loopar
         frozen_functions: Introduktion till funktioner
         playlab_intro: Introduktion till Play Lab
-        playlab_events: Play Lab Events
-        playlab_repeat_forever: Play Lab Repeat Forever
+        playlab_events: Play Lab händelser
+        playlab_repeat_forever: Play Lab Upprepa för evigt
     callout:
       text:
         drag_blocks: 'Dra ett "flytta" block och fäst det under det andra blocket'
@@ -528,7 +528,7 @@ sv:
         house_hint: Det är ok om bilden inte ser ut som ett hus ännu. Vi kommer att fixa det i nästa pussel.
         edit_draw_square: Använd den här knappen för att redigera funktionen och lägga till slingan.
         edit_get_nectar: Använd den här knappen om du vill redigera funktionen och ändra den riktning i vilken biet kommer att vända sig för att få nektar.
-        logic_category: 'Öppna den "Logik" menyn för att hitta "om/annars" blocket.'
+        logic_category: 'Öppna "Logik"-menyn för att hitta "om/annars" blocket.'
         length_parameter: 'Kan du uppdatera den här funktionen så att den använder parametern "längd"?'
         frozen_diamond_repeat: Använd upprepa blocket för att skapa den här formen.
         frozen_circle_function_in_circle_turn: Glöm inte att svänga efter varje cirkel du skapar.
@@ -551,16 +551,15 @@ sv:
         function_editor_draw_square: 'Detta är din funktionsdefinition. Dessa block  körs varje gång du använder  blocket "Rita en fyrkant"'
         change_here: Gör din ändring här
         write_draw_square_function: 'Dra block från verktygslådan hit för  att rita en fyrkant'
-        write_draw_triangle_function: Drag blocks from the toolbox into here that draw a triangle
-        edit_add_parameter: Click edit to add a parameter in your function
-        add_and_drag_parameter: Write in the name of your parameter here, click add, and then drag it into your function definition
-        fill_in_actor: Fill in the ??? with numbers that correspond to each actor (1, 2, and 3)
-        repeat: Put blocks inside the loop to repeat commands
-        if_bee_nectar: 'Use the "if" block to decide if the bee should get nectar'
-        if_else_bee: |-
-          Use the "if/else" block so that the Bee gets nectar from a flower, and makes honey if it's not a flower
-        repeat_full_circle: Enter in the number of times the zombie has to move to make a full circle
-        place_length_variable: Drag the length variable here to replace the question marks
+        write_draw_triangle_function: Dra block från verktygslådan hit för att rita en triangel
+        edit_add_parameter: Klicka på Redigera för att lägga till en parameter i din funktion
+        add_and_drag_parameter: Skriv in namnet på din parameter här, klicka på Lägg till och sedan dra den till din funktionsdefinition
+        fill_in_actor: Fyll i ??? med nummer som motsvarar varje skådespelare (1, 2 och 3)
+        repeat: Sätt block inuti loopen för att upprepa kommandon
+        if_bee_nectar: 'Använda "Om"-blocket för att besluta om biet bör få nektar'
+        if_else_bee: 'Använd "om/annars" blocket så att biet får nektar från en blomma, och gör honung om det inte är en blomma'
+        repeat_full_circle: Skriv in hur många gånger zombien behöver flytta sig för göra en hel cirkel
+        place_length_variable: Dra variabeln längd hit om du vill ersätta frågetecknen
         arrows_move_actor: Använd piltangenterna för att flytta figuren
         right_arrow_fireball: Använd högerpiltangenten för att skjuta eldklot
         name_function: Skriv namnet på din funktion här

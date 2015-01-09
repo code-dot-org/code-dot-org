@@ -3,7 +3,7 @@
   select_language: لطفا زبان خود را انتخاب کنید
   computer_science: علوم رایانه
   computer_science_edweek: هفته‌ی آموزش علوم رایانه
-  csedweek_dates: 9 تا 15 دسامبر 2013
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">ساعتِ کدنویسی</a> دارد میآید. همه‌ی دبیران و برنامه گزاران را
     صدا میزند، <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -400,6 +400,7 @@
   carousel_heading_robots: یادگیری برنامه با ربات
   carousel_heading_ide: محیط های برنامه ریزی محبوب در میان معلمان
   educator_notes: یادداشت های آموزگار
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: منابع بیشتر برای معلمان و آموزگاران
   participants: شرکت کنندگان
   teachers_notes: یادداشت های معلم
@@ -445,7 +446,7 @@
   makegameswithus_name: یک بازی آیفون در مرورگر خود بسازید!
   touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor ساعت کد نویسی
-  blockly_name: بلاکلی
+  blockly_name: بلوکی
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: سنگ، کاغذ، قیچی
@@ -1067,4 +1068,3 @@
   sphero_beyond_longdescription: اگر یک آموزگار یا پدر و مادر هستید، درس های SPRK
     یک دوره ی فشرده ی جالب در برنامه نویسی ربات به بچه ها می دهد و هم زمان توانایی
     های آن ها در ریاضی و علوم را تقویت می کند.
-  how_to_teach_hoc: How to Teach an Hour of Code

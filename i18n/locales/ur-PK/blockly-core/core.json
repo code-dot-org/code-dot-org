@@ -60,6 +60,7 @@
   "CONTROLS_WHILEUNTIL_OPERATOR_WHILE":"جبکہ دوبارہ",
   "CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL":"While a value is false, then do some statements.",
   "CONTROLS_WHILEUNTIL_TOOLTIP_WHILE":"While a value is true, then do some statements.",
+  "DEFINE_HEADER_DEFINITION":"Definition",
   "DEFINE_FUNCTION_DEFINE":"واضح کرنا",
   "DELETE_BLOCK":"بلاک ڈیلیٹ کریں",
   "DELETE_PARAMETER":"پیرامیٹر کو مٹانا...",

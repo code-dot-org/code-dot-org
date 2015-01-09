@@ -3,7 +3,7 @@ hr-HR:
   select_language: Odaberite svoj jezik
   computer_science: Računalstvo
   computer_science_edweek: Tjedan podučavanja Računalstva
-  csedweek_dates: '9. - 15. prosinca 2013.'
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Sat Kodiranja</a> dolazi. Pozivamo sve učitelje i organizatore, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">planirajte vaš Sat Kodiranja</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Jeste li učitelj Informatike? Pogledajte i druge CSEdWeek resurse</a>'
   n_have_learned_an_hoc: '<h1>#</h1><h3>je isprobao</h3><h2>Sat Kodiranja</h2>'
@@ -325,6 +325,7 @@ hr-HR:
   carousel_heading_robots: Nauči programirati s robotima
   carousel_heading_ide: Platforme popularne među učiteljima
   educator_notes: Edukatorove bilješke
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Dodatni resursi za učitelje i edukatore
   participants: sudionici
   teachers_notes: Učiteljeve bilješke

@@ -3,7 +3,7 @@ cs-CZ:
   select_language: Prosím, zvolte jazyk
   computer_science: Informatika
   computer_science_edweek: Týden vzdělávání Informatiky
-  csedweek_dates: 9-15. prosince 2013
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hodina kódu</a> se blíží. Vyzýváme všechny učitele a organizátory, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> naplánujte si svou Hodinu kódu</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Učíte informatiku? Podívejte se také na další zdroje CSEdWeek</a>'
   n_have_learned_an_hoc: '<h1>#</h1><h3>si vyzkoušel</h3><h2>Hodinu kódu</h2>'
@@ -120,7 +120,7 @@ cs-CZ:
   studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
   studiobar_donate_title: Přispějte
   studiobar_donate_body: 'Jedno dítě se učí za každý dollar, který darujetehttps://crowdin.com/translate/codeorg/56/enus-cs#'
-  studiobar_shop_title: Shop
+  studiobar_shop_title: Obchod
   studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   contact_form_topic_student: Jsem student
   contact_form_topic_parent: Jsem rodič
@@ -202,8 +202,8 @@ cs-CZ:
   dashboard_action_delete_yes: Ano
   dashboard_action_delete_no: Ne
   dashboard_action_confirm: Odstranit?
-  dashboard_action_remove: Remove
-  dashboard_action_remove_confirm: Remove?
+  dashboard_action_remove: Odstranit
+  dashboard_action_remove_confirm: Odstranit?
   dashboard_action_done: Hotovo
   dashboard_action_required: požadováno
   dashboard_navigation_home_page: Učitelská domovská stránka
@@ -323,6 +323,7 @@ cs-CZ:
   carousel_heading_robots: Naučte se programovat s roboty
   carousel_heading_ide: Platformy, které jsou populární mezi učiteli
   educator_notes: Poznámky pro pedagogy
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Další zdroje pro učitele
   participants: účastníci
   teachers_notes: Poznámky pro učitele

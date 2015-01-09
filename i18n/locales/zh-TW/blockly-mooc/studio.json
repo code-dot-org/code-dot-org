@@ -58,6 +58,7 @@
   "moveDistanceTooltip":"將角色在指定的方向移動指定的距離",
   "moveSprite":"移動",
   "moveSpriteN":"移動演員{spriteIndex}",
+  "toXY":"to x,y",
   "moveDown":"向下移動",
   "moveDownTooltip":"將角色向下移動。",
   "moveLeft":"向左移動",

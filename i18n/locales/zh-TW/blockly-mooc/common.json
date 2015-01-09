@@ -88,5 +88,6 @@
   "signup":"報名參加簡介課程",
   "hintHeader":"提示：",
   "genericFeedback":"看看你的成果如何, 並試著修正你的程式",
+  "toggleBlocksErrorMsg":"You need to correct an error in your program before it can be shown as blocks.",
   "defaultTwitterText":"Check out what I made"
 }

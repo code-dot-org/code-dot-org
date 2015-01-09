@@ -3,7 +3,7 @@ lv-LV:
   select_language: Lūdzu izvēlieties savu valodu
   computer_science: Datorzinātne
   computer_science_edweek: Datorzinātnes Izglītības nedēļa
-  csedweek_dates: '2013. gada 9. - 15. decembris'
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Programmēšanas stunda</a> tuvojas. Aicinam visus skolotājus un organizatorus, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">ieplānot savu Programmēšanas stundu</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Ja esi informātikas skolotājs, apskati citus CSEdWeek resursus</a>'
   n_have_learned_an_hoc: '<h1>#</h1><h3>ir izmēģinājuši </h3><h2> "Programmēšanas stundu"</h2>'
@@ -325,6 +325,7 @@ lv-LV:
   carousel_heading_robots: Iemāčies programēt ar robotiem
   carousel_heading_ide: Skolotāju starpā populāras platformas
   educator_notes: Pasniedzēju pieraksti
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Vairāk resursi priekš skolotājiem un pasniedzējiem
   participants: 'Paslēpt kontekstu - Pieprasīt kontekstu'
   teachers_notes: Skolotāju pieraksti

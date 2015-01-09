@@ -3,7 +3,7 @@ ta-IN:
   select_language: உங்கள் மொழியை தேர்ந்தெடுக்கவும்
   computer_science: கணினி அறிவியல்
   computer_science_edweek: கணினி அறிவியல் கல்வி வாரம்
-  csedweek_dates: மார்கழி 9-15, 2013
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">ஒரு மணியில் குறியீடு </a> இதோ வருகிறது. அனைத்து ஆசிரியர்கள் மற்றும் அமைப்பாளர்களுக்கு, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> திட்டமிடுங்கள் உங்கள் ஒரு மணியில் குறியீட்டை</a> '
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400"> CS நீங்கள் ஒரு கணனி ஆசிரியர? மற்ற CSEdWeek ஆதாரங்களை பார்க்கவும்</a>'
   n_have_learned_an_hoc: '<h1>#</h1><h3>have tried an</h3><h2>Hour of Code</h2>'
@@ -323,6 +323,7 @@ ta-IN:
   carousel_heading_robots: Learn to program with robots
   carousel_heading_ide: Platforms popular among teachers
   educator_notes: Educator Notes
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: More resources for teachers and educators
   participants: participants
   teachers_notes: "Teacher's Notes"

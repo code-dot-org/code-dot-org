@@ -8,9 +8,9 @@
         tona, ateher ju do te mirni mbrenda disa minutave nje emaili me instrukcione
         se si ta konfirmoni llogarin tuaj.
     failure:
-      already_authenticated: Ju veq me jeni te regjistruar.
-      inactive: Llogaria juaj nuk eshte aktivizuar akoma.
-      invalid: Gabim emaili ose fjalkalimi.
+      already_authenticated: Ju tanimë jeni të regjistruar.
+      inactive: Llogaria juaj nuk është aktivizuar akoma.
+      invalid: ' email ose fjalkalim jo i vlefshëm.'
       invalid_token: Invalid authentication token.
       locked: Your account is locked.
       not_found_in_database: Gabim emaili ose fjalkalimi.
@@ -19,9 +19,9 @@
       unconfirmed: You have to confirm your account before continuing.
     mailer:
       confirmation_instructions:
-        subject: Confirmation instructions
+        subject: Code.org confirmation instructions
       reset_password_instructions:
-        subject: Reset password instructions
+        subject: Code.org reset password instructions
       unlock_instructions:
         subject: Unlock Instructions
     omniauth_callbacks:
@@ -52,7 +52,7 @@
         confirm link to finalize confirming your new email address.
       updated: You updated your account successfully.
     sessions:
-      signed_in: Signed in successfully.
+      signed_in: ''
       signed_out: Signed out successfully.
     unlocks:
       send_instructions: You will receive an email with instructions about how to

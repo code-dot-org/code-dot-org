@@ -3,7 +3,7 @@ ar-SA:
   select_language: الرجاء تحديد اللغة الخاصة بك
   computer_science: علوم الكمبيوتر
   computer_science_edweek: الاسبوع التعليمي لعلوم الكمبيوتر
-  csedweek_dates: 9-15 كانون الأول/ديسمبر، عام 2013
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: 'قادم<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> حدث ساعة البرمجة</a>. دعوة إلى جميع المعلمين والمنظمين، <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> قم بتخطيط "ساعة البرمجة" </a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400"> هل أنت مدرس علوم الحاسوب؟ انظر موارد أخرى CSEdWeek</a>'
   n_have_learned_an_hoc: '<h1>#</h1><h3>هل جربت</h3><h2>ساعة من البرمجة</h2>'
@@ -78,7 +78,7 @@ ar-SA:
   print_ice_art: |
     إطبع فن الثلج الخاص بك
     
-  create_art_with_zombie: or make advanced art with zombie
+  create_art_with_zombie: او القيام بعمل فني متقدم مع زومبي
   i_am_a: انا
   never_spam: نحن لن نزعجك
   enter_country: أدخل اسم البلد اذا كنت خارج الولايات المتحدة
@@ -122,7 +122,7 @@ ar-SA:
   studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
   studiobar_donate_title: تبرع
   studiobar_donate_body: طفل واحد يتعلم البرمجه مع كل دولار تتبرع به
-  studiobar_shop_title: Shop
+  studiobar_shop_title: تسوق
   studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   contact_form_topic_student: أنا طالب
   contact_form_topic_parent: أنا والد
@@ -327,6 +327,7 @@ ar-SA:
   carousel_heading_robots: تعلم البرمجة مع الروبوتات
   carousel_heading_ide: منصات شعبية بين المعلمين
   educator_notes: ملاحظات المربي
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: المزيد من الموارد للمعلمين والمربين
   participants: المشتركون
   teachers_notes: ملاحظات المعلم

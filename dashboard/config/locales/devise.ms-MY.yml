@@ -53,7 +53,7 @@
         akhir alamat e-mel baru anda.
       updated: Akaun anda berjaya dikemas kini.
     sessions:
-      signed_in: Daftar masuk berjaya.
+      signed_in: ''
       signed_out: Berjaya didaftar keluar.
     unlocks:
       send_instructions: Anda akan menerima e-mel dengan arahan tentang bagaimana

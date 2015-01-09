@@ -3,7 +3,7 @@ uk-UA:
   select_language: Будь ласка, виберіть мову
   computer_science: Інформатика
   computer_science_edweek: Тиждень інформатичної освіти
-  csedweek_dates: 9-15 грудня 2013 року
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: 'Наближається <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Година коду</a>Закликаємо усіх вчителів та організаторів<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">спланувати свою Годину коду</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Ви вчитель інформатики? Перегляньте інші ресурси з предмету</a>'
   n_have_learned_an_hoc: '<h1>#</h1><h3>спробували</h3><h2>Годину коду</h2>'
@@ -104,9 +104,9 @@ uk-UA:
   students_and_lines: '%{students} учнів пройшли Годину коду і написали  %{lines} рядків коду.'
   start_hoc: Почати Годину коду
   contact_form_topic_press: Преса/ЗМІ (інтерв’ю або розмова)
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
-  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
-  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
+  stats_michael: '"Я <b>ніколи раніше</b> не бачив своїх учнів так схвильованими навчанням." - Майкл Кларк, педагог'
+  stats_nina: '"Кожен день давав однаковий результат &mdash; 100% інтересу."-Ніна Ніколс Пірі, педагог'
+  stats_student: '"Я знала, що це був <b> унікальний</b> шанс." - Маріана Альсате, 5 клас'
   studiobar_title: "Познайомтесь зі <a href='http://studio.code.org'> Студією коду</a>"
   studiobar_elementary_title: Базові курси
   studiobar_elementary_body: 'Три нові курси для K&#8209;5'
@@ -120,8 +120,8 @@ uk-UA:
   studiobar_frozen_body: Створіть зимову казку з Анною та Ельзою
   studiobar_donate_title: Підтримати
   studiobar_donate_body: На кожен долар пожертв ми навчимо одну дитину
-  studiobar_shop_title: Shop
-  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
+  studiobar_shop_title: Магазин
+  studiobar_shop_body: Ламайте стереотипи. Гордо носіть наш логотип.
   contact_form_topic_student: Я учень
   contact_form_topic_parent: Я батько/мати
   contact_form_topic_teacher: Я вчитель/педагог
@@ -202,8 +202,8 @@ uk-UA:
   dashboard_action_delete_yes: Так
   dashboard_action_delete_no: Ні
   dashboard_action_confirm: Видалити?
-  dashboard_action_remove: Remove
-  dashboard_action_remove_confirm: Remove?
+  dashboard_action_remove: Видалити
+  dashboard_action_remove_confirm: Видалити?
   dashboard_action_done: Готово
   dashboard_action_required: необхідні
   dashboard_navigation_home_page: Домашня сторінка вчителя
@@ -323,6 +323,7 @@ uk-UA:
   carousel_heading_robots: Навчіться програмувати роботів
   carousel_heading_ide: Платформи, популярні серед вчителів
   educator_notes: Інформація для вчителя
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Більше ресурсів для вчителів та освітян
   participants: учасники
   teachers_notes: Інформація для вчителя
