@@ -115,15 +115,11 @@ var StudioAppClass = function () {
   /**
   * Enumeration of user program execution outcomes.
   */
-  // TODO (br-pair) : ResultType shouldn't really live on StudioApp. Places
-  // that want this should just require constants themselves.
   this.ResultType = constants.ResultType;
 
   /**
   * Enumeration of test results.
   */
-  // TODO (br-pair) : TestResults shouldn't really live on StudioApp. Places
-  // that want this should just require constants themselves.
   this.TestResults = constants.TestResults;
 
   /**
@@ -165,7 +161,8 @@ StudioAppClass.prototype.configure = function (options) {
   this.cdoSounds = options.cdoSounds;
   this.Dialog = options.Dialog;
 
-  // TODO (br-pair) : should callers instead be the ones binding the context?
+  // Bind assetUrl to the instance so that we don't need to depend on callers
+  // binding correctly as they pass this function around.
   this.assetUrl = _.bind(this.assetUrl_, this);
 };
 

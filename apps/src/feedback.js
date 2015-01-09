@@ -503,7 +503,7 @@ exports.createSharingDiv = function(options) {
     options.facebookUrl = facebookUrl;
   }
 
-  options.assetUrl = _.bind(studioAppSingleton.assetUrl, studioAppSingleton);
+  options.assetUrl = studioAppSingleton.assetUrl;
 
   var sharingDiv = document.createElement('div');
   sharingDiv.setAttribute('style', 'display:inline-block');
