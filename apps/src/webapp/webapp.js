@@ -504,6 +504,14 @@ Webapp.init = function(config) {
     }
   }
 
+  var viewDataButton = document.getElementById('viewDataButton');
+  dom.addClickTouchEvent(viewDataButton, Webapp.onViewData);
+
+  if (!StudioApp.hideSource) {
+    var viewDataCell = document.getElementById('view-data-cell');
+    viewDataCell.className = 'view-data-cell-enabled';
+  }
+
   if (StudioApp.share) {
     // automatically run in share mode:
     window.setTimeout(StudioApp.runButtonClick, 0);
@@ -902,6 +910,10 @@ Webapp.onStepOutButton = function() {
 
 Webapp.feedbackImage = '';
 Webapp.encodedFeedbackImage = '';
+
+Webapp.onViewData = function() {
+  window.open('//' + getPegasusHost() + '/edit-csp-app/ededb6d4a8ced65f8a011ce0e194094e', '_blank');
+};
 
 Webapp.onPuzzleComplete = function() {
   if (Webapp.executionError) {
@@ -1616,6 +1628,28 @@ var checkFinished = function () {
   }
 
   return false;
+};
+
+// TODO(dave): move this logic to dashboard.
+var getPegasusHost = function() {
+  switch (window.location.hostname) {
+    case 'studio.code.org':
+    case 'learn.code.org':
+      return 'code.org';
+    default:
+      var name = window.location.hostname.split('.')[0];
+      switch(name) {
+        case 'localhost':
+          return 'localhost.code.org:9393';
+        case 'development':
+        case 'staging':
+        case 'test':
+        case 'levelbuilder':
+          return name + '.code.org';
+        default:
+          return null;
+      }
+  }
 };
 
 /*jshint asi:true */
