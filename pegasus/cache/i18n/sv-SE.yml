@@ -3,7 +3,7 @@
   select_language: Vänligen välj ditt språk
   computer_science: Datavetenskap
   computer_science_edweek: Utbildningsvecka för Dataveteskap
-  csedweek_dates: Den 9-15 december 2013
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold"> Kodtimmen</a> kommer. Kalla till dig alla lärare och arrangörer,
     <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -84,7 +84,7 @@
   share_on_facebook: Dela på Facebook
   share_on_twitter: Dela på Twitter
   beyond_an_hour: Efter kodtimmen
-  get_started: Sätt igång
+  get_started: Start
   i_agree: Jag håller med
   participant_select: '- Välj -'
   participant_student: Student
@@ -124,6 +124,12 @@
     rader med kod.'
   start_hoc: Starta en Timme med Kod nu
   contact_form_topic_press: Press/media (intervjuer eller föredrag)
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
+    - Michael Clark, Teacher'
+  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
+    - Nina Nichols Peery, Teacher'
+  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
+    Alzate, 5th grader'
   studiobar_title: Utforska <a href='http://studio.code.org'>kodstudion</a>
   studiobar_elementary_title: Grundkurser
   studiobar_elementary_body: Våra tre nya kurser för grundskolan
@@ -137,6 +143,8 @@
   studiobar_frozen_body: Skapa ett vinterlandskap med Anna och Elsa
   studiobar_donate_title: Donera
   studiobar_donate_body: Ett barn lär sig för varje dollar du donerar
+  studiobar_shop_title: Shop
+  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   contact_form_topic_student: Jag är en elev
   contact_form_topic_parent: Jag är förälder
   contact_form_topic_teacher: Jag är lärare/utbildare
@@ -223,18 +231,20 @@
   dashboard_action_save_all: Spara alla
   dashboard_action_cancel: Avbryt
   dashboard_action_delete: Ta bort
-  dashboard_action_confirm: Ta bort?
   dashboard_action_delete_yes: Ja
   dashboard_action_delete_no: Nej
+  dashboard_action_confirm: Ta bort?
+  dashboard_action_remove: Remove
+  dashboard_action_remove_confirm: Remove?
   dashboard_action_done: Klart
   dashboard_action_required: obligatorisk
   dashboard_navigation_home_page: Lärare hemsida
   dashboard_navigation_section_student_progress: Elevkonton och framsteg
-  dashboard_navigation_section_teacher_progress: Your Course Progress
+  dashboard_navigation_section_teacher_progress: Dina kurser
   dashboard_navigation_section_lesson_plans: Lektionsplaner och resurser
-  dashboard_navigation_section_community: Help and Community
-  dashboard_navigation_section_pd: Professional Development
-  dashboard_navigation_section_speakers: Computer Science <br/> Guest Speakers
+  dashboard_navigation_section_community: Hjälp och Community
+  dashboard_navigation_section_pd: Professionell utveckling
+  dashboard_navigation_section_speakers: Datavetenskap <br/> Gästföreläsare
   dashboard_navigation_all_sections: Elevkonton och framsteg
   dashboard_navigation_view_progress: Visa framsteg
   dashboard_navigation_add_students: Lägg till elever
@@ -368,6 +378,7 @@
   carousel_heading_robots: Lär dig att programmera med robotar
   carousel_heading_ide: Plattformar som är populära bland lärare
   educator_notes: Pedagog anteckningar
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Mer resurser för lärare och utbildare
   participants: deltagare
   teachers_notes: Lärarens anteckningar
@@ -417,8 +428,8 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Sten, sax, påse
-  hourofcode_name: Placeholder for new code.org/hoc
-  playlab_name: Placeholder for code.org/s/playlab
+  hourofcode_name: Platshållare för nya code.org/hoc
+  playlab_name: Play Lab
   codeorg_gradelevel: Åldrarna 4-104
   codeintl_gradelevel: Åldrarna 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -469,14 +480,14 @@
   khanfr_platformtext: Moderna webbläsare
   khanpl_platformtext: Moderna webbläsare
   tynker_platformtext: Moderna webbläsare
-  scratch_platformtext: ALLA webbläsare
+  scratch_platformtext: Endast desktop-webbläsare (inte surfplattor)
   lightbot_platformtext: ALLA webbläsare och iOS, Android eller spelkonsol
   thinkersmith_platformtext: Ouppkopplad
   condcards_platformtext: Ouppkopplad
   lightbotintl_platformtext: iOS, Android (eller webbläsare)
   codehs_platformtext: Moderna webbläsare. (Den uppföljande kursen kräver $$)
   codecademy_platformtext: Moderna webbläsare. iOS, Android apps
-  codecombat_platformtext: Moderna webbläsare
+  codecombat_platformtext: Moderna webbläsare. (Den uppföljande kursen kostar pengar)
   codemonkey_platformtext: Moderna webbläsare
   codeavengers_platformtext: Moderna webbläsare
   processing_platformtext: Moderna webbläsare
@@ -535,8 +546,7 @@
     pussel. '
   robomindnl_shortdescription: Skriv kod för en virtuell robot
   flappy_shortdescription: Gör ditt eget spel - Flappy Bird, Haj eller Ubåt
-  bitsbox_shortdescription: Koda en serie av apps att spela och dela, genom att använda
-    Javascript-kod.
+  bitsbox_shortdescription: Koda en rad appar att spela och dela, med riktig Javascript-kod.
   makegameswithus_shortdescription: Gör ett iPhone spel! Lär dig genom att skriva
     kod som lära ditt monster nya rörelser!
   touchdevelop_shortdescription: 'Lösa pussel, skapa spel och lär kodning, allt på
@@ -547,7 +557,7 @@
     representerar information
   kodableunplugged_shortdescription: En rolig ouppkopplad övning
   projguts_shortdescription: Prova modellering och simulering med hjälp av sten/papper/sax
-  hourofcode_shortdescription: Placeholder for new code.org/hoc
+  hourofcode_shortdescription: Platshållare för nya code.org/hoc
   frozen_shortdescription: Vi kan använda kod för att följa Anna och Elsa när de utforskar
     isens magi och skönhet.
   playlab_shortdescription: Skapa en berättelse eller gör ett spel med Play Lab!
@@ -561,11 +571,11 @@
     video föreläsningar med Bill Gates, Mark Zuckerberg, Angry Birds och Plants vs.
     Zombies. Lär dig upprepa-loopar, villkorssatser och grundläggande algoritmer.
     Tillgänglig på 34 språk.
-  thinkersmithspanish_longdescription: Genom att använda en fördefinierad 'Robotvokabulär'
-    kan eleverna fundera ut hur de leda varandra att klara vissa uppgifter utan att
-    diskutera dem först. Den här lektionen lär eleverna sambandet mellan symboler
-    och handlingar, liksom den ovärderliga förmågan till felsökning. 'Min Robotvän'
-    fungerar bäst som gruppaktivitet och en handledning för lärare finns.
+  thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
+    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
+    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
+    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
+    como la valiosa habilidad de depuraci&oacute;n.
   khan_longdescription: Lär dig grunderna i JavaScript programmering samtidigt som
     du skapar roliga teckningar med din kod. Gör det på egen hand eller med din klass!
   khanes_longdescription: Lär dig grunderna i JavaScript programmering samtidigt som
@@ -658,12 +668,12 @@
     Santa, vad som helst. Lägg till spelet på smartphonen med ett klick.
   bitsbox_longdescription: Anpassa din egen virtuella surfplatta och koda en rad appar
     för att spela och dela. Enkla genomgångar gör det möjligt för ännu yngre barn
-    att skriva verkliga Javascript, och ju mer avancerad du är ju längre du kommer
+    att skriva riktiga Javascript, och ju mer avancerad du är ju längre du kommer
     att gå.
-  makegameswithus_longdescription: Lär dig koda genom att skapa ett iPhone spel som
+  makegameswithus_longdescription: Lär dig koda genom att skapa ett iPhone-spel som
     använder ett helt nytt och nybörjarvänligt programmeringsspråk som kallas Swift!
-    Skapa ett Pokemon-inspirerat actionspel och skriv kod tför att lära ditt nya monster
-    fnya rörelsemönster. Du kommer attlära dig att använda objekt, metoder och variabler
+    Skapa ett Pok&eacute;mon-inspirerat actionspel och skriv kod för att lära ditt
+    nya monster nya rörelser. Du kommer att lära dig att använda variabler, metoobjekt  objekt
     för att hjälpa ditt monster vinna!
   touchdevelop_longdescription: 'Touch-vänlig redigerare hjälper dig att skapa pixel
     konst, lösa Björn pusslet eller bygga ditt egna  ''Jumping Bird'' spel. '
@@ -687,11 +697,13 @@
     sig hur modellering och simulering fungerar genom att en grupp elever spelar olika
     versioner av sten / papper / sax spelet, och studerar resultaten som olika modellerings
     experiment.
-  hourofcode_longdescription: Placeholder for new code.org/hoc
+  hourofcode_longdescription: Platshållare för nya code.org/hoc
   frozen_longdescription: Vi kan använda kod för att följa Anna och Elsa när de utforskar
     isens magi och skönhet. Du kommer att skapa snöflingor och mönster genom skridskoåkning
     och skapa ett underbart vinterland som du kan dela med dina vänner!
-  playlab_longdescription: Placeholder for code.org/s/playlab
+  playlab_longdescription: Skapa en berättelse eller gör ett spel med Play Lab! Gör
+    så att djur, zombies, pirater, ninjor, och många fler figurer rör på sig, låter,
+    får poäng, och till och med kastar eldklot!
   codeorg_beyond_name: Introduktion datavetenskap (årskurs 0-8)
   khan_beyond_name: Lär dig  datorprogrammering
   tynker_beyond_name: Lär dig datorprogrammering hemma
@@ -1011,14 +1023,3 @@
   sphero_beyond_longdescription: Oavsett om du är en pedagog eller förälder, ger SPRK
     lektioner barnen en rolig snabbkurs i att programmera robotar samtidigt som de
     övar upp sina färdigheter i matematik och naturvetenskap.
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
-    - Michael Clark, Teacher'
-  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
-    - Nina Nichols Peery, Teacher'
-  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
-    Alzate, 5th grader'
-  studiobar_shop_title: Shop
-  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
-  dashboard_action_remove: Remove
-  dashboard_action_remove_confirm: Remove?
-  how_to_teach_hoc: How to Teach an Hour of Code
