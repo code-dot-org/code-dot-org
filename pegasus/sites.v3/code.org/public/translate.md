@@ -36,9 +36,6 @@ The process for translating video captions is as follows:
 
 Note, that when you click "Publish to YouTube" it will give you an error message because you don't have access to do so. This is OK. It will not actually publish it to YouTube, but it will still send me the e-mail notifying me that you're done. Since it sends me an e-mail, you do not need to send me another one telling me that you finished. 
 
-## Be a Lead Translator
-If you'd like to be a lead translator, please e-mail translations@code.org with your name, language, and credentials. A lead translator will be the first point of contact when we need something translated immediately. We will ask that you translate regularly, as we update the site constantly. The commitment is about 5-10 hours per week. As a thank you for your dedication, we feature [Lead Translators](/translators).
-
 
 ## How to Use CrowdIn
 
@@ -73,6 +70,10 @@ The tone is informal and conversational, and we prefer short phrases to long one
 
 ### CrowdIn Etiquette
 As a translator, please do not submit a translation that is identical to another user's submission. If you think a proofreader has made a mistake, please leave a comment in the comment section to bring it to their attention. As a proofreader, please do not delete translations.
+
+
+## Be a Lead Translator
+If you'd like to be a lead translator, please e-mail translations@code.org with your name, language, and credentials. A lead translator will be the first point of contact when we need something translated immediately. We will ask that you translate regularly, as we update the site constantly. The commitment is about 5-10 hours per week. As a thank you for your dedication, we feature [Lead Translators](/translators).
 
 ---
 
