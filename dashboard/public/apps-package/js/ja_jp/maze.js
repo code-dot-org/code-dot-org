@@ -16766,7 +16766,7 @@ exports.dirE = function(d){return "東"};
 
 exports.dirN = function(d){return "北"};
 
-exports.dirS = function(d){return "南"};
+exports.dirS = function(d){return "S"};
 
 exports.dirW = function(d){return "西"};
 

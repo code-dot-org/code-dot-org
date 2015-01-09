@@ -21291,7 +21291,7 @@ exports.booleanTrue = function(d){return "真"};
 
 exports.booleanFalse = function(d){return "否"};
 
-exports.blocklyMessage = function(d){return "模組化"};
+exports.blocklyMessage = function(d){return "Blockly"};
 
 exports.catActions = function(d){return "動作類別"};
 
@@ -21534,7 +21534,7 @@ exports.for = function(d){return "為"};
 
 exports.hello = function(d){return "你好"};
 
-exports.helloWorld = function(d){return "世界 您好！"};
+exports.helloWorld = function(d){return "Hello World!"};
 
 exports.incrementPlayerScore = function(d){return "得分"};
 

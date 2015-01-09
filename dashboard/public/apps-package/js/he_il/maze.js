@@ -16762,13 +16762,13 @@ exports.dig = function(d){return "הסר 1"};
 
 exports.digTooltip = function(d){return "הסר 1 יחידה של עפר"};
 
-exports.dirE = function(d){return "מז"};
+exports.dirE = function(d){return "E"};
 
-exports.dirN = function(d){return "צ"};
+exports.dirN = function(d){return "N"};
 
-exports.dirS = function(d){return "ד"};
+exports.dirS = function(d){return "S"};
 
-exports.dirW = function(d){return "מע"};
+exports.dirW = function(d){return "W"};
 
 exports.doCode = function(d){return "בצע"};
 
@@ -16880,7 +16880,7 @@ exports.removeStack = function(d){return "הסר ערמה של "+v(d,"shovelfuls
 
 exports.removeSquare = function(d){return "הסר ריבוע"};
 
-exports.repeatCarefullyError = function(d){return "כדי לפתור את זה, נסה למצוא את התבנית שחוזרת. השתמש בבלוק 'חזור שוב' עם שלושת הבלוקים האלו בתוכו: זוז, זוז, פנה ימינה."};
+exports.repeatCarefullyError = function(d){return "To solve this, think carefully about the pattern of two moves and one turn to put in the \"repeat\" block.  It's okay to have an extra turn at the end."};
 
 exports.repeatUntil = function(d){return "חזור עד אשר"};
 

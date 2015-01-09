@@ -21908,7 +21908,7 @@ exports.showTitleScreen = function(d){return "arată ecranul titlu"};
 
 exports.showTitleScreenTitle = function(d){return "titlu"};
 
-exports.showTitleScreenText = function(d){return "scris"};
+exports.showTitleScreenText = function(d){return "text"};
 
 exports.showTSDefTitle = function(d){return "scrie titlul aici"};
 

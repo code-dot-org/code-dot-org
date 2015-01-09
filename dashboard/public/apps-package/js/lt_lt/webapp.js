@@ -12669,7 +12669,7 @@ exports.no = function(d){return "Ne"};
 
 exports.numBlocksNeeded = function(d){return "Ši užduotis gali būti išspręsta su %1 blokų(-ais)."};
 
-exports.pause = function(d){return "Pauzė"};
+exports.pause = function(d){return "Break"};
 
 exports.reinfFeedbackMsg = function(d){return "Gali paspaust \"Bandyti dar kartą\""};
 

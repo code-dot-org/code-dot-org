@@ -15313,7 +15313,7 @@ exports.genericFeedback = function(d){return "Shiko se si përfundove dhe përpi
 
 exports.toggleBlocksErrorMsg = function(d){return "You need to correct an error in your program before it can be shown as blocks."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Shiko se çfarë bëra"};
 
 
 },{"messageformat":58}],46:[function(require,module,exports){
@@ -15462,7 +15462,7 @@ exports.showMe = function(d){return "Ma trego"};
 
 exports.showTurtle = function(d){return "shfaq artistin"};
 
-exports.sizeParameter = function(d){return "size"};
+exports.sizeParameter = function(d){return "madhësia"};
 
 exports.step = function(d){return "ec"};
 

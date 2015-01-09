@@ -15326,7 +15326,7 @@ exports.catColour = function(d){return "Couleur"};
 
 exports.catControl = function(d){return "boucles"};
 
-exports.catMath = function(d){return "Calculs"};
+exports.catMath = function(d){return "Math"};
 
 exports.catProcedures = function(d){return "fonctions"};
 

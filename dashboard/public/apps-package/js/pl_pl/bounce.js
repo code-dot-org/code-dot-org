@@ -12492,13 +12492,13 @@ exports.bounceBallTooltip = function(d){return "Odbij piłkę od obiektu."};
 
 exports.continue = function(d){return "Kontynuuj"};
 
-exports.dirE = function(d){return "E (Wschód)"};
+exports.dirE = function(d){return "E"};
 
-exports.dirN = function(d){return "N (Północ)"};
+exports.dirN = function(d){return "N"};
 
-exports.dirS = function(d){return "S (Południe)"};
+exports.dirS = function(d){return "S"};
 
-exports.dirW = function(d){return "W (Zachód)"};
+exports.dirW = function(d){return "W"};
 
 exports.doCode = function(d){return "wykonaj"};
 
@@ -12769,13 +12769,13 @@ exports.dialogCancel = function(d){return "Anuluj"};
 
 exports.dialogOK = function(d){return "OK"};
 
-exports.directionNorthLetter = function(d){return "N (Północ)"};
+exports.directionNorthLetter = function(d){return "N"};
 
-exports.directionSouthLetter = function(d){return "S (Południe)"};
+exports.directionSouthLetter = function(d){return "S"};
 
-exports.directionEastLetter = function(d){return "E (Wschód)"};
+exports.directionEastLetter = function(d){return "E"};
 
-exports.directionWestLetter = function(d){return "W (Zachód)"};
+exports.directionWestLetter = function(d){return "W"};
 
 exports.end = function(d){return "koniec"};
 

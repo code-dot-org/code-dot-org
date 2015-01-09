@@ -12598,7 +12598,7 @@ exports.repeatUntilBlocked = function(d){return "så lenge det er en sti foran"}
 
 exports.repeatUntilFinish = function(d){return "gjenta til ferdig"};
 
-exports.scoreText = function(d){return "Resultat: "+v(d,"playerScore")+": "+v(d,"opponentScore")};
+exports.scoreText = function(d){return "Score: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
 
 exports.setBackgroundRandom = function(d){return "Vis ei tilfeldig scene"};
 

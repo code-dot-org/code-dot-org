@@ -15195,7 +15195,7 @@ exports.errorUnusedFunction = function(d){return "You created a function, but ne
 
 exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
 
-exports.extraTopBlocks = function(d){return "Ekintza blokeei lotu gabeko blokeak soberan daude."};
+exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"};
 
 exports.finalStage = function(d){return "Zorionak! Azkeneko eszenatokia osatu duzu."};
 
@@ -15279,9 +15279,9 @@ exports.hintRequest = function(d){return "See hint"};
 
 exports.backToPreviousLevel = function(d){return "Atzera aurreko mailara"};
 
-exports.saveToGallery = function(d){return "Gorde zure galerian"};
+exports.saveToGallery = function(d){return "Save to gallery"};
 
-exports.savedToGallery = function(d){return "Zure galerian gordeta!"};
+exports.savedToGallery = function(d){return "Saved in gallery!"};
 
 exports.shareFailure = function(d){return "Sorry, we can't share this program."};
 
@@ -15448,7 +15448,7 @@ exports.penTooltip = function(d){return "Arkatza igo edo jeisten du, marrazten h
 
 exports.penUp = function(d){return "Arkatza gora"};
 
-exports.reinfFeedbackMsg = function(d){return "Nahi duzun itxura du honek? \"Berriro saiatu\" botoia sakatu dezakezu zure marrazkia ikusteko."};
+exports.reinfFeedbackMsg = function(d){return "Here is your drawing! Keep working on it or continue to the next puzzle."};
 
 exports.setColour = function(d){return "Ezarri kolorea"};
 

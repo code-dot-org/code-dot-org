@@ -14567,13 +14567,13 @@ exports.dialogCancel = function(d){return "Prekliči"};
 
 exports.dialogOK = function(d){return "Vredu"};
 
-exports.directionNorthLetter = function(d){return "S"};
+exports.directionNorthLetter = function(d){return "N"};
 
-exports.directionSouthLetter = function(d){return "J"};
+exports.directionSouthLetter = function(d){return "S"};
 
-exports.directionEastLetter = function(d){return "V"};
+exports.directionEastLetter = function(d){return "E"};
 
-exports.directionWestLetter = function(d){return "Z"};
+exports.directionWestLetter = function(d){return "W"};
 
 exports.end = function(d){return "konec"};
 

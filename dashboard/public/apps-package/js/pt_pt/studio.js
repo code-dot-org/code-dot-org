@@ -21347,7 +21347,7 @@ exports.errorUnusedFunction = function(d){return "You created a function, but ne
 
 exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
 
-exports.extraTopBlocks = function(d){return "Tens blocos extras que não estão ligados a um bloco de evento."};
+exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"};
 
 exports.finalStage = function(d){return "Parabéns! Completaste a etapa final."};
 
@@ -21395,7 +21395,7 @@ exports.repeat = function(d){return "repita"};
 
 exports.resetProgram = function(d){return "Repor"};
 
-exports.runProgram = function(d){return "Executa o programa"};
+exports.runProgram = function(d){return "Run"};
 
 exports.runTooltip = function(d){return "Executa o programa definido pelos blocos na área de trabalho."};
 
@@ -21431,9 +21431,9 @@ exports.hintRequest = function(d){return "See hint"};
 
 exports.backToPreviousLevel = function(d){return "Voltar ao nível anterior"};
 
-exports.saveToGallery = function(d){return "Guarda na tua galeria de imagens"};
+exports.saveToGallery = function(d){return "Save to gallery"};
 
-exports.savedToGallery = function(d){return "Saved to your gallery!"};
+exports.savedToGallery = function(d){return "Saved in gallery!"};
 
 exports.shareFailure = function(d){return "Sorry, we can't share this program."};
 
@@ -21556,7 +21556,7 @@ exports.makeProjectileRedHearts = function(d){return "criar corações vermelhos
 
 exports.makeProjectileTooltip = function(d){return "Make the projectile that just collided disappear or bounce."};
 
-exports.makeYourOwn = function(d){return "Faz a tua própria história"};
+exports.makeYourOwn = function(d){return "Make Your Own Play Lab App"};
 
 exports.moveDirectionDown = function(d){return "para baixo"};
 
@@ -21582,7 +21582,7 @@ exports.moveDistancePixels = function(d){return "pixels"};
 
 exports.moveDistanceRandom = function(d){return "random pixels"};
 
-exports.moveDistanceTooltip = function(d){return "Move a character a specific distance in the specified direction."};
+exports.moveDistanceTooltip = function(d){return "Move an actor a specific distance in the specified direction."};
 
 exports.moveSprite = function(d){return "mover"};
 
@@ -21592,21 +21592,21 @@ exports.toXY = function(d){return "to x,y"};
 
 exports.moveDown = function(d){return "move para baixo"};
 
-exports.moveDownTooltip = function(d){return "Move the paddle down."};
+exports.moveDownTooltip = function(d){return "Move an actor down."};
 
 exports.moveLeft = function(d){return "move para a esquerda"};
 
-exports.moveLeftTooltip = function(d){return "Move the paddle to the left."};
+exports.moveLeftTooltip = function(d){return "Move an actor to the left."};
 
 exports.moveRight = function(d){return "move para a direita"};
 
-exports.moveRightTooltip = function(d){return "Move the paddle to the right."};
+exports.moveRightTooltip = function(d){return "Move an actor to the right."};
 
 exports.moveUp = function(d){return "move para cima"};
 
-exports.moveUpTooltip = function(d){return "Move the paddle up."};
+exports.moveUpTooltip = function(d){return "Move an actor up."};
 
-exports.moveTooltip = function(d){return "Move a character."};
+exports.moveTooltip = function(d){return "Move an actor."};
 
 exports.nextLevel = function(d){return "Parabéns! Completaste este puzzle."};
 
@@ -21714,13 +21714,13 @@ exports.saySprite = function(d){return "say"};
 
 exports.saySpriteN = function(d){return "actor "+v(d,"spriteIndex")+" say"};
 
-exports.saySpriteTooltip = function(d){return "Pop up a speech bubble with the associated text from the specified character."};
+exports.saySpriteTooltip = function(d){return "Pop up a speech bubble with the associated text from the specified actor."};
 
 exports.scoreText = function(d){return "Pontuação: "+v(d,"playerScore")};
 
 exports.setBackground = function(d){return "set background"};
 
-exports.setBackgroundRandom = function(d){return "set random scene"};
+exports.setBackgroundRandom = function(d){return "set random background"};
 
 exports.setBackgroundBlack = function(d){return "set black background"};
 
@@ -21728,7 +21728,7 @@ exports.setBackgroundCave = function(d){return "set cave background"};
 
 exports.setBackgroundCloudy = function(d){return "set cloudy background"};
 
-exports.setBackgroundHardcourt = function(d){return "set hardcourt scene"};
+exports.setBackgroundHardcourt = function(d){return "set hardcourt background"};
 
 exports.setBackgroundNight = function(d){return "set night background"};
 
@@ -21758,17 +21758,17 @@ exports.setScoreText = function(d){return "definir pontuação"};
 
 exports.setScoreTextTooltip = function(d){return "Sets the text to be displayed in the score area."};
 
-exports.setSpriteEmotionAngry = function(d){return "to a angry emotion"};
+exports.setSpriteEmotionAngry = function(d){return "to a angry mood"};
 
-exports.setSpriteEmotionHappy = function(d){return "to a happy emotion"};
+exports.setSpriteEmotionHappy = function(d){return "to a happy mood"};
 
-exports.setSpriteEmotionNormal = function(d){return "to a normal emotion"};
+exports.setSpriteEmotionNormal = function(d){return "to a normal mood"};
 
-exports.setSpriteEmotionRandom = function(d){return "to a random emotion"};
+exports.setSpriteEmotionRandom = function(d){return "to a random mood"};
 
-exports.setSpriteEmotionSad = function(d){return "to a sad emotion"};
+exports.setSpriteEmotionSad = function(d){return "to a sad mood"};
 
-exports.setSpriteEmotionTooltip = function(d){return "Sets the actor emotion"};
+exports.setSpriteEmotionTooltip = function(d){return "Sets the actor mood"};
 
 exports.setSpriteAlien = function(d){return "to an alien image"};
 
@@ -21846,7 +21846,7 @@ exports.setSpritePositionTooltip = function(d){return "Instantly moves an actor 
 
 exports.setSpriteK1Tooltip = function(d){return "Shows or hides the specified actor."};
 
-exports.setSpriteTooltip = function(d){return "Sets the character image"};
+exports.setSpriteTooltip = function(d){return "Sets the actor image"};
 
 exports.setSpriteSizeRandom = function(d){return "to a random size"};
 
@@ -21874,7 +21874,7 @@ exports.setSpriteSpeedFast = function(d){return "to a fast speed"};
 
 exports.setSpriteSpeedVeryFast = function(d){return "to a very fast speed"};
 
-exports.setSpriteSpeedTooltip = function(d){return "Sets the speed of a character"};
+exports.setSpriteSpeedTooltip = function(d){return "Sets the speed of an actor"};
 
 exports.setSpriteZombie = function(d){return "to a zombie image"};
 
@@ -21984,9 +21984,9 @@ exports.whenDown = function(d){return "quando seta para baixo"};
 
 exports.whenDownTooltip = function(d){return "Executar as ações abaixo quando a seta para baixo é clicada."};
 
-exports.whenGameStarts = function(d){return "when game starts"};
+exports.whenGameStarts = function(d){return "when story starts"};
 
-exports.whenGameStartsTooltip = function(d){return "Execute the actions below when the game starts."};
+exports.whenGameStartsTooltip = function(d){return "Execute the actions below when the story starts."};
 
 exports.whenLeft = function(d){return "quando seta para a esquerda"};
 
@@ -22000,11 +22000,11 @@ exports.whenSpriteClicked = function(d){return "when actor clicked"};
 
 exports.whenSpriteClickedN = function(d){return "when actor "+v(d,"spriteIndex")+" clicked"};
 
-exports.whenSpriteClickedTooltip = function(d){return "Execute the actions below when a character is clicked."};
+exports.whenSpriteClickedTooltip = function(d){return "Execute the actions below when an actor is clicked."};
 
 exports.whenSpriteCollidedN = function(d){return "when actor "+v(d,"spriteIndex")};
 
-exports.whenSpriteCollidedTooltip = function(d){return "Execute the actions below when a character touches another character."};
+exports.whenSpriteCollidedTooltip = function(d){return "Execute the actions below when an actor touches another actor."};
 
 exports.whenSpriteCollidedWith = function(d){return "touches"};
 

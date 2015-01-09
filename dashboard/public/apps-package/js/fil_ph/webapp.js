@@ -12651,7 +12651,7 @@ exports.no = function(d){return "Hindi"};
 
 exports.numBlocksNeeded = function(d){return "Ang puzzle na ito ay maaaring malutas sa %1 na mga block."};
 
-exports.pause = function(d){return "Pause"};
+exports.pause = function(d){return "Break"};
 
 exports.reinfFeedbackMsg = function(d){return "Maaari mong pindutin ang \" Subukang muli \" na pindutan upang bumalik sa pagtakbo ang iyong mga  app."};
 

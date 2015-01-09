@@ -14528,7 +14528,7 @@ exports.booleanTrue = function(d){return "вярно"};
 
 exports.booleanFalse = function(d){return "грешно"};
 
-exports.blocklyMessage = function(d){return "Блокли"};
+exports.blocklyMessage = function(d){return "Blockly"};
 
 exports.catActions = function(d){return "Действия"};
 

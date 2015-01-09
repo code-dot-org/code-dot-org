@@ -12551,7 +12551,7 @@ exports.playSoundTooltip = function(d){return "Afspil den valgte lyd."};
 
 exports.reinfFeedbackMsg = function(d){return "Du kan trykke på knappen \"Prøv igen\", for at gå tilbage til dit spil."};
 
-exports.scoreText = function(d){return "Score: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
+exports.scoreText = function(d){return "Score: "+v(d,"playerScore")};
 
 exports.setBackground = function(d){return "sæt scene"};
 

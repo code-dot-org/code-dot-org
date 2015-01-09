@@ -21313,11 +21313,11 @@ exports.catVariables = function(d){return "Variáveis"};
 
 exports.codeTooltip = function(d){return "Veja o código JavaScript gerado."};
 
-exports.continue = function(d){return "Continuar"};
+exports.continue = function(d){return "Continue"};
 
 exports.dialogCancel = function(d){return "Cancelar"};
 
-exports.dialogOK = function(d){return "Confirma"};
+exports.dialogOK = function(d){return "OK"};
 
 exports.directionNorthLetter = function(d){return "N"};
 
@@ -21463,7 +21463,7 @@ exports.hintHeader = function(d){return "Aqui vai uma dica:"};
 
 exports.genericFeedback = function(d){return "Veja como você terminou e tente consertar seu programa."};
 
-exports.toggleBlocksErrorMsg = function(d){return "You need to correct an error in your program before it can be shown as blocks."};
+exports.toggleBlocksErrorMsg = function(d){return "Você precisa corrigir um erro em seu programa antes que ele possa ser mostrado como blocos."};
 
 exports.defaultTwitterText = function(d){return "Veja o que eu fiz"};
 
@@ -21588,7 +21588,7 @@ exports.moveSprite = function(d){return "mova"};
 
 exports.moveSpriteN = function(d){return "mova o personagem "+v(d,"spriteIndex")};
 
-exports.toXY = function(d){return "to x,y"};
+exports.toXY = function(d){return "para x,y"};
 
 exports.moveDown = function(d){return "mova para baixo"};
 

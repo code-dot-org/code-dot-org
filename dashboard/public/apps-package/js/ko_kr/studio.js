@@ -21578,7 +21578,7 @@ exports.moveDistance200 = function(d){return "200 픽셀"};
 
 exports.moveDistance400 = function(d){return "400 픽셀"};
 
-exports.moveDistancePixels = function(d){return "픽셀"};
+exports.moveDistancePixels = function(d){return "pixels"};
 
 exports.moveDistanceRandom = function(d){return "랜덤 픽셀"};
 
@@ -21706,7 +21706,7 @@ exports.reinfFeedbackMsg = function(d){return "\"다시 시작\"을 누르면 �
 
 exports.repeatForever = function(d){return "무한반복"};
 
-exports.repeatDo = function(d){return "실행"};
+exports.repeatDo = function(d){return "do"};
 
 exports.repeatForeverTooltip = function(d){return "이 블럭 안에 들어있는 동작들을 스토리가 실행되는 동안 무한히 반복시킵니다."};
 
@@ -21900,7 +21900,7 @@ exports.showTitleScreenTooltip = function(d){return "제목과 내용을 보여�
 
 exports.size = function(d){return "크기"};
 
-exports.setSprite = function(d){return "케릭터 설정"};
+exports.setSprite = function(d){return "set"};
 
 exports.setSpriteN = function(d){return "캐릭터 설정 "+v(d,"spriteIndex")};
 

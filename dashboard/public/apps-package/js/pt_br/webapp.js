@@ -12464,11 +12464,11 @@ exports.catVariables = function(d){return "Variáveis"};
 
 exports.codeTooltip = function(d){return "Veja o código JavaScript gerado."};
 
-exports.continue = function(d){return "Continuar"};
+exports.continue = function(d){return "Continue"};
 
 exports.dialogCancel = function(d){return "Cancelar"};
 
-exports.dialogOK = function(d){return "Confirma"};
+exports.dialogOK = function(d){return "OK"};
 
 exports.directionNorthLetter = function(d){return "N"};
 
@@ -12614,7 +12614,7 @@ exports.hintHeader = function(d){return "Aqui vai uma dica:"};
 
 exports.genericFeedback = function(d){return "Veja como você terminou e tente consertar seu programa."};
 
-exports.toggleBlocksErrorMsg = function(d){return "You need to correct an error in your program before it can be shown as blocks."};
+exports.toggleBlocksErrorMsg = function(d){return "Você precisa corrigir um erro em seu programa antes que ele possa ser mostrado como blocos."};
 
 exports.defaultTwitterText = function(d){return "Veja o que eu fiz"};
 
@@ -12651,7 +12651,7 @@ exports.no = function(d){return "Não"};
 
 exports.numBlocksNeeded = function(d){return "Este desafio pode ser resolvido com %1 blocos."};
 
-exports.pause = function(d){return "Interromper"};
+exports.pause = function(d){return "Break"};
 
 exports.reinfFeedbackMsg = function(d){return "Você pode pressionar o botão \"Tentar novamente\" para voltar a executar seu aplicativo."};
 

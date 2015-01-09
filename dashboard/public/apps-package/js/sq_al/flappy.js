@@ -12476,7 +12476,7 @@ exports.genericFeedback = function(d){return "Shiko se si përfundove dhe përpi
 
 exports.toggleBlocksErrorMsg = function(d){return "You need to correct an error in your program before it can be shown as blocks."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Shiko se çfarë bëra"};
 
 
 },{"messageformat":52}],40:[function(require,module,exports){
@@ -12551,7 +12551,7 @@ exports.playSoundTooltip = function(d){return "Vendos tingullin e zgjedhur."};
 
 exports.reinfFeedbackMsg = function(d){return "Ju mund te shtypni butonin \"Provo Perseri\" per tu kthyer mrapa dhe per te luajtur lojen tuaj."};
 
-exports.scoreText = function(d){return "Score: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
+exports.scoreText = function(d){return "Score: "+v(d,"playerScore")};
 
 exports.setBackground = function(d){return "set scene"};
 
@@ -12675,7 +12675,7 @@ exports.setScoreTooltip = function(d){return "Sets the player's score"};
 
 exports.setSpeed = function(d){return "set speed"};
 
-exports.setSpeedTooltip = function(d){return "Sets the levels speed"};
+exports.setSpeedTooltip = function(d){return "Sets the level's speed"};
 
 exports.shareFlappyTwitter = function(d){return "Check out the Flappy game I made. I wrote it myself with @codeorg"};
 
@@ -12735,9 +12735,9 @@ exports.whenEnterObstacle = function(d){return "when pass obstacle"};
 
 exports.whenEnterObstacleTooltip = function(d){return "Execute the actions below when Flappy enters an obstacle."};
 
-exports.whenRunButtonClick = function(d){return "when Run is clicked"};
+exports.whenRunButtonClick = function(d){return "when game starts"};
 
-exports.whenRunButtonClickTooltip = function(d){return "Execute the actions below when the run button is pressed."};
+exports.whenRunButtonClickTooltip = function(d){return "Execute the actions below when the game starts."};
 
 exports.yes = function(d){return "Po"};
 

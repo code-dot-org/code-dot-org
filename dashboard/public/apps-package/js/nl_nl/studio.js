@@ -21716,7 +21716,7 @@ exports.saySpriteN = function(d){return "speler "+v(d,"spriteIndex")+" zegt"};
 
 exports.saySpriteTooltip = function(d){return "Toon een tekstballon met de tekst van de speler."};
 
-exports.scoreText = function(d){return "Punten: "+v(d,"playerScore")};
+exports.scoreText = function(d){return "Score: "+v(d,"playerScore")};
 
 exports.setBackground = function(d){return "stel de achtergrond in"};
 

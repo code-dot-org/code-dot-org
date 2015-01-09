@@ -12483,9 +12483,9 @@ exports.defaultTwitterText = function(d){return "만든 작품 확인하기"};
 var MessageFormat = require("messageformat");MessageFormat.locale.ko=function(n){return "other"}
 exports.continue = function(d){return "계속하기"};
 
-exports.doCode = function(d){return "코드 실행"};
+exports.doCode = function(d){return "do"};
 
-exports.elseCode = function(d){return "그렇지 않으면"};
+exports.elseCode = function(d){return "else"};
 
 exports.endGame = function(d){return "게임 끝내기"};
 

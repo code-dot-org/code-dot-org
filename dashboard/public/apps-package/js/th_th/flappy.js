@@ -12306,7 +12306,7 @@ exports.blocklyMessage = function(d){return "Blockly"};
 
 exports.catActions = function(d){return "การดำเนินการ"};
 
-exports.catColour = function(d){return "สี"};
+exports.catColour = function(d){return "Color"};
 
 exports.catLogic = function(d){return "ตรรกะ"};
 
@@ -12358,7 +12358,7 @@ exports.errorUnusedFunction = function(d){return "You created a function, but ne
 
 exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
 
-exports.extraTopBlocks = function(d){return "คุณมีบล็อกพิเศษที่ไม่ได้แนบมาที่บล็อกในปัจจุบัน."};
+exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"};
 
 exports.finalStage = function(d){return "ขอแสดงความยินดี ขั้นตอนสุดท้ายสำเร็จแล้ว."};
 
@@ -12442,9 +12442,9 @@ exports.hintRequest = function(d){return "See hint"};
 
 exports.backToPreviousLevel = function(d){return "กลับไปยังระดับก่อนหน้า"};
 
-exports.saveToGallery = function(d){return "บันทึกไว้ในแกลลอรี่"};
+exports.saveToGallery = function(d){return "Save to gallery"};
 
-exports.savedToGallery = function(d){return "บันทึกแล้ว!"};
+exports.savedToGallery = function(d){return "Saved in gallery!"};
 
 exports.shareFailure = function(d){return "Sorry, we can't share this program."};
 
@@ -12675,7 +12675,7 @@ exports.setScoreTooltip = function(d){return "Sets the player's score"};
 
 exports.setSpeed = function(d){return "set speed"};
 
-exports.setSpeedTooltip = function(d){return "Sets the levels speed"};
+exports.setSpeedTooltip = function(d){return "Sets the level's speed"};
 
 exports.shareFlappyTwitter = function(d){return "Check out the Flappy game I made. I wrote it myself with @codeorg"};
 
@@ -12737,7 +12737,7 @@ exports.whenEnterObstacleTooltip = function(d){return "Execute the actions below
 
 exports.whenRunButtonClick = function(d){return "เมื่อเกมเริ่ม"};
 
-exports.whenRunButtonClickTooltip = function(d){return "Execute the actions below when the run button is pressed."};
+exports.whenRunButtonClickTooltip = function(d){return "Execute the actions below when the game starts."};
 
 exports.yes = function(d){return "ใช่"};
 

@@ -12506,7 +12506,7 @@ exports.incrementOpponentScore = function(d){return "iskor puntos ng kalaban"};
 
 exports.incrementOpponentScoreTooltip = function(d){return "Magdagdag ng isa sa kasalukuyang score ng kalaban."};
 
-exports.incrementPlayerScore = function(d){return "increment player score"};
+exports.incrementPlayerScore = function(d){return "score point"};
 
 exports.incrementPlayerScoreTooltip = function(d){return "Magdagdag ng isa sa kasalukuyang score ng manlalaro."};
 

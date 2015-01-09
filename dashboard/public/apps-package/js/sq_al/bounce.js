@@ -12654,7 +12654,7 @@ exports.setPaddleSpeedTooltip = function(d){return "Vendos shpejtësinë e lopat
 
 exports.shareBounceTwitter = function(d){return "Hidhi një sy lojës së topit që bëra. E krijova vet me @codeorg"};
 
-exports.shareGame = function(d){return "Share your game:"};
+exports.shareGame = function(d){return "Shpërndaj lojën tënde:"};
 
 exports.turnLeft = function(d){return "kthehu majtas"};
 
@@ -12887,7 +12887,7 @@ exports.genericFeedback = function(d){return "Shiko se si përfundove dhe përpi
 
 exports.toggleBlocksErrorMsg = function(d){return "You need to correct an error in your program before it can be shown as blocks."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Shiko se çfarë bëra"};
 
 
 },{"messageformat":53}],42:[function(require,module,exports){

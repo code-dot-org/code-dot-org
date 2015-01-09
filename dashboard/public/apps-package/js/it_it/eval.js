@@ -14554,7 +14554,7 @@ exports.continue = function(d){return "Prosegui"};
 
 exports.dialogCancel = function(d){return "Annulla"};
 
-exports.dialogOK = function(d){return "Ok"};
+exports.dialogOK = function(d){return "OK"};
 
 exports.directionNorthLetter = function(d){return "N"};
 
@@ -14735,7 +14735,7 @@ exports.starBlockTitle = function(d){return "stella (raggio, stile, colore)"};
 
 exports.radialStarBlockTitle = function(d){return "stella a raggi (punti, interno, esterno, stile, colore)"};
 
-exports.polygonBlockTitle = function(d){return "polygon (sides, length, style, color)"};
+exports.polygonBlockTitle = function(d){return "poligono (lati, lunghezza, stile, colore)"};
 
 exports.stringAppendBlockTitle = function(d){return "concatena-stringa (prima, seconda)"};
 

@@ -15360,7 +15360,7 @@ exports.degrees = function(d){return "도"};
 
 exports.depth = function(d){return "깊이"};
 
-exports.dots = function(d){return "픽셀"};
+exports.dots = function(d){return "pixels"};
 
 exports.drawASquare = function(d){return "사각형 그리기"};
 
@@ -15418,9 +15418,9 @@ exports.jumpWestTooltip = function(d){return "예술가를 왼쪽으로 점프�
 
 exports.lengthFeedback = function(d){return "이동 거리를 벗어났습니다."};
 
-exports.lengthParameter = function(d){return "길이"};
+exports.lengthParameter = function(d){return "length"};
 
-exports.loopVariable = function(d){return "카운터"};
+exports.loopVariable = function(d){return "counter"};
 
 exports.moveBackward = function(d){return "뒤로 이동:"};
 
@@ -15454,7 +15454,7 @@ exports.setColour = function(d){return "색 설정:"};
 
 exports.setPattern = function(d){return "패턴 설정"};
 
-exports.setWidth = function(d){return "두께 설정:"};
+exports.setWidth = function(d){return "set width"};
 
 exports.shareDrawing = function(d){return "그림 공개하기:"};
 

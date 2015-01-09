@@ -14761,7 +14761,7 @@ exports.starBlockTitle = function(d){return "зірка (радіус, стил�
 
 exports.radialStarBlockTitle = function(d){return "радіально зірковий (точки, внутрішні, зовнішні, стиль, колір)"};
 
-exports.polygonBlockTitle = function(d){return "polygon (sides, length, style, color)"};
+exports.polygonBlockTitle = function(d){return "багатокутник (сторони, довжина, стиль, колір)"};
 
 exports.stringAppendBlockTitle = function(d){return "з'єднати-рядки (перший, другий)"};
 

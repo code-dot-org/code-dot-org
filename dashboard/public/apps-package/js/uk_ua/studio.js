@@ -21614,7 +21614,7 @@ exports.moveSprite = function(d){return "переміститись"};
 
 exports.moveSpriteN = function(d){return "перемістити персонажа "+v(d,"spriteIndex")};
 
-exports.toXY = function(d){return "to x,y"};
+exports.toXY = function(d){return "до x,y"};
 
 exports.moveDown = function(d){return "рухатися вниз"};
 

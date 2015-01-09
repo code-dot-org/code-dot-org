@@ -21582,7 +21582,7 @@ exports.makeProjectileRedHearts = function(d){return "направи црвен�
 
 exports.makeProjectileTooltip = function(d){return "Учини да пројектил који се сударио нестане или се одбије."};
 
-exports.makeYourOwn = function(d){return "Направи своју причу"};
+exports.makeYourOwn = function(d){return "Make Your Own Play Lab App"};
 
 exports.moveDirectionDown = function(d){return "доле"};
 
@@ -21630,9 +21630,9 @@ exports.moveRightTooltip = function(d){return "Помери учесника у 
 
 exports.moveUp = function(d){return "помери се горе"};
 
-exports.moveUpTooltip = function(d){return "Move the paddle up."};
+exports.moveUpTooltip = function(d){return "Move an actor up."};
 
-exports.moveTooltip = function(d){return "Move a character."};
+exports.moveTooltip = function(d){return "Move an actor."};
 
 exports.nextLevel = function(d){return "Честитке! Завршили сте пузлу."};
 
@@ -21784,17 +21784,17 @@ exports.setScoreText = function(d){return "постави резултат"};
 
 exports.setScoreTextTooltip = function(d){return "Подешавање текста који се приказује поред резултата."};
 
-exports.setSpriteEmotionAngry = function(d){return "to a angry emotion"};
+exports.setSpriteEmotionAngry = function(d){return "to a angry mood"};
 
-exports.setSpriteEmotionHappy = function(d){return "to a happy emotion"};
+exports.setSpriteEmotionHappy = function(d){return "to a happy mood"};
 
-exports.setSpriteEmotionNormal = function(d){return "to a normal emotion"};
+exports.setSpriteEmotionNormal = function(d){return "to a normal mood"};
 
-exports.setSpriteEmotionRandom = function(d){return "to a random emotion"};
+exports.setSpriteEmotionRandom = function(d){return "to a random mood"};
 
-exports.setSpriteEmotionSad = function(d){return "to a sad emotion"};
+exports.setSpriteEmotionSad = function(d){return "to a sad mood"};
 
-exports.setSpriteEmotionTooltip = function(d){return "Sets the actor emotion"};
+exports.setSpriteEmotionTooltip = function(d){return "Sets the actor mood"};
 
 exports.setSpriteAlien = function(d){return "to an alien image"};
 
@@ -21872,7 +21872,7 @@ exports.setSpritePositionTooltip = function(d){return "Instantly moves an actor 
 
 exports.setSpriteK1Tooltip = function(d){return "Shows or hides the specified actor."};
 
-exports.setSpriteTooltip = function(d){return "Sets the character image"};
+exports.setSpriteTooltip = function(d){return "Sets the actor image"};
 
 exports.setSpriteSizeRandom = function(d){return "to a random size"};
 
@@ -21900,7 +21900,7 @@ exports.setSpriteSpeedFast = function(d){return "to a fast speed"};
 
 exports.setSpriteSpeedVeryFast = function(d){return "to a very fast speed"};
 
-exports.setSpriteSpeedTooltip = function(d){return "Sets the speed of a character"};
+exports.setSpriteSpeedTooltip = function(d){return "Sets the speed of an actor"};
 
 exports.setSpriteZombie = function(d){return "to a zombie image"};
 
@@ -22010,9 +22010,9 @@ exports.whenDown = function(d){return "кад је стрелица на дол�
 
 exports.whenDownTooltip = function(d){return "Изврши акције испод кад се притисне стрелица на доле."};
 
-exports.whenGameStarts = function(d){return "when game starts"};
+exports.whenGameStarts = function(d){return "when story starts"};
 
-exports.whenGameStartsTooltip = function(d){return "Execute the actions below when the game starts."};
+exports.whenGameStartsTooltip = function(d){return "Execute the actions below when the story starts."};
 
 exports.whenLeft = function(d){return "када је стрелица на лево"};
 
@@ -22026,11 +22026,11 @@ exports.whenSpriteClicked = function(d){return "when actor clicked"};
 
 exports.whenSpriteClickedN = function(d){return "when actor "+v(d,"spriteIndex")+" clicked"};
 
-exports.whenSpriteClickedTooltip = function(d){return "Execute the actions below when a character is clicked."};
+exports.whenSpriteClickedTooltip = function(d){return "Execute the actions below when an actor is clicked."};
 
 exports.whenSpriteCollidedN = function(d){return "when actor "+v(d,"spriteIndex")};
 
-exports.whenSpriteCollidedTooltip = function(d){return "Execute the actions below when a character touches another character."};
+exports.whenSpriteCollidedTooltip = function(d){return "Execute the actions below when an actor touches another actor."};
 
 exports.whenSpriteCollidedWith = function(d){return "touches"};
 

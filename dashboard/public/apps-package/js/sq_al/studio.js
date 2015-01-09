@@ -21465,12 +21465,12 @@ exports.genericFeedback = function(d){return "Shiko se si përfundove dhe përpi
 
 exports.toggleBlocksErrorMsg = function(d){return "You need to correct an error in your program before it can be shown as blocks."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Shiko se çfarë bëra"};
 
 
 },{"messageformat":61}],49:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.sq=function(n){return n===1?"one":"other"}
-exports.actor = function(d){return "aktor"};
+exports.actor = function(d){return "pjesmarrës"};
 
 exports.alienInvasion = function(d){return "Invazioni i Huaj!"};
 
@@ -21486,11 +21486,11 @@ exports.backgroundNight = function(d){return "natë"};
 
 exports.backgroundUnderwater = function(d){return "nën ujë"};
 
-exports.backgroundCity = function(d){return "qyteti"};
+exports.backgroundCity = function(d){return "qytet"};
 
-exports.backgroundDesert = function(d){return "shkretëtira"};
+exports.backgroundDesert = function(d){return "shkretëtirë"};
 
-exports.backgroundRainbow = function(d){return "ylberi"};
+exports.backgroundRainbow = function(d){return "ylber"};
 
 exports.backgroundSoccer = function(d){return "futboll"};
 
@@ -21554,59 +21554,59 @@ exports.makeProjectilePurpleHearts = function(d){return "bëj zemra lejla"};
 
 exports.makeProjectileRedHearts = function(d){return "bëj zemra të kuqe"};
 
-exports.makeProjectileTooltip = function(d){return "Make the projectile that just collided disappear or bounce."};
+exports.makeProjectileTooltip = function(d){return "Bëj që raketa, e cila sapo u përplas, të zhduket ose të kërcejë."};
 
-exports.makeYourOwn = function(d){return "Make Your Own Story"};
+exports.makeYourOwn = function(d){return "Bëj aplikacionin tënd Play Lab"};
 
-exports.moveDirectionDown = function(d){return "down"};
+exports.moveDirectionDown = function(d){return "poshtë"};
 
-exports.moveDirectionLeft = function(d){return "left"};
+exports.moveDirectionLeft = function(d){return "majtas"};
 
-exports.moveDirectionRight = function(d){return "right"};
+exports.moveDirectionRight = function(d){return "djathtas"};
 
-exports.moveDirectionUp = function(d){return "up"};
+exports.moveDirectionUp = function(d){return "lart"};
 
 exports.moveDirectionRandom = function(d){return "zakonshem"};
 
-exports.moveDistance25 = function(d){return "25 pixels"};
+exports.moveDistance25 = function(d){return "25 piksela"};
 
-exports.moveDistance50 = function(d){return "50 pixels"};
+exports.moveDistance50 = function(d){return "50 piksela"};
 
-exports.moveDistance100 = function(d){return "100 pixels"};
+exports.moveDistance100 = function(d){return "100 piksela"};
 
-exports.moveDistance200 = function(d){return "200 pixels"};
+exports.moveDistance200 = function(d){return "200 piksela"};
 
-exports.moveDistance400 = function(d){return "400 pixels"};
+exports.moveDistance400 = function(d){return "400 piksela"};
 
 exports.moveDistancePixels = function(d){return "piksela"};
 
-exports.moveDistanceRandom = function(d){return "random pixels"};
+exports.moveDistanceRandom = function(d){return "piksela të rastësishëm"};
 
-exports.moveDistanceTooltip = function(d){return "Move a character a specific distance in the specified direction."};
+exports.moveDistanceTooltip = function(d){return "Lëviz një pjesmarrës tek një largësi e caktuar në drejtimin e caktuar."};
 
-exports.moveSprite = function(d){return "move"};
+exports.moveSprite = function(d){return "lëviz"};
 
-exports.moveSpriteN = function(d){return "move actor "+v(d,"spriteIndex")};
+exports.moveSpriteN = function(d){return "lëviz pjesmarrësin "+v(d,"spriteIndex")};
 
-exports.toXY = function(d){return "to x,y"};
+exports.toXY = function(d){return "tek x,y"};
 
 exports.moveDown = function(d){return "lëviz poshtë"};
 
-exports.moveDownTooltip = function(d){return "Move the paddle down."};
+exports.moveDownTooltip = function(d){return "Lëviz një pjesmarrës poshtë."};
 
 exports.moveLeft = function(d){return "lëviz majtas"};
 
-exports.moveLeftTooltip = function(d){return "Move the paddle to the left."};
+exports.moveLeftTooltip = function(d){return "Lëviz një pjesmarrës majtas."};
 
 exports.moveRight = function(d){return "lëviz djathtas"};
 
-exports.moveRightTooltip = function(d){return "Move the paddle to the right."};
+exports.moveRightTooltip = function(d){return "Lëviz një pjesmarrës djathtas."};
 
 exports.moveUp = function(d){return "lëviz sipër"};
 
-exports.moveUpTooltip = function(d){return "Move the paddle up."};
+exports.moveUpTooltip = function(d){return "Lëviz një pjesmarrës lart."};
 
-exports.moveTooltip = function(d){return "Move a character."};
+exports.moveTooltip = function(d){return "Lëviz një pjesmarrës."};
 
 exports.nextLevel = function(d){return "Urime! Ju keni perfunduar kete enigme."};
 
@@ -21642,53 +21642,53 @@ exports.playSoundWinPoint2 = function(d){return "vendos tingullin e \" fitoj pik
 
 exports.playSoundWood = function(d){return "vendos tingullin \"e pyllit\""};
 
-exports.positionOutTopLeft = function(d){return "to the above top left position"};
+exports.positionOutTopLeft = function(d){return "në pozicionin sipër në të majtë"};
 
-exports.positionOutTopRight = function(d){return "to the above top right position"};
+exports.positionOutTopRight = function(d){return "në pozicionin lart në të djathtë"};
 
-exports.positionTopOutLeft = function(d){return "to the top outside left position"};
+exports.positionTopOutLeft = function(d){return "në pozicionin e jashtëm lart në të majtë"};
 
-exports.positionTopLeft = function(d){return "to the top left position"};
+exports.positionTopLeft = function(d){return "në pozicionin lart në të majtë"};
 
-exports.positionTopCenter = function(d){return "to the top center position"};
+exports.positionTopCenter = function(d){return "në pozicionin lart në qendër"};
 
-exports.positionTopRight = function(d){return "to the top right position"};
+exports.positionTopRight = function(d){return "në pozicionin lart në të djathtë"};
 
-exports.positionTopOutRight = function(d){return "to the top outside right position"};
+exports.positionTopOutRight = function(d){return "në pozicionin e jashtëm lart në të djathtë"};
 
-exports.positionMiddleLeft = function(d){return "to the middle left position"};
+exports.positionMiddleLeft = function(d){return "në pozicionin në mes majtas"};
 
-exports.positionMiddleCenter = function(d){return "to the middle center position"};
+exports.positionMiddleCenter = function(d){return "në pozicionin në mes të qendrës"};
 
-exports.positionMiddleRight = function(d){return "to the middle right position"};
+exports.positionMiddleRight = function(d){return "në pozicionin në mes në të djathtë"};
 
-exports.positionBottomOutLeft = function(d){return "to the bottom outside left position"};
+exports.positionBottomOutLeft = function(d){return "në pozicionin e poshtëm nga jashtë"};
 
-exports.positionBottomLeft = function(d){return "to the bottom left position"};
+exports.positionBottomLeft = function(d){return "në pozicionin majtas poshtë"};
 
-exports.positionBottomCenter = function(d){return "to the bottom center position"};
+exports.positionBottomCenter = function(d){return "në pozicionin poshtë në mes"};
 
-exports.positionBottomRight = function(d){return "to the bottom right position"};
+exports.positionBottomRight = function(d){return "në pozicionin në mes në të djathtë"};
 
-exports.positionBottomOutRight = function(d){return "to the bottom outside right position"};
+exports.positionBottomOutRight = function(d){return "në pozicionin poshtë nga jashtë në të djathtë"};
 
-exports.positionOutBottomLeft = function(d){return "to the below bottom left position"};
+exports.positionOutBottomLeft = function(d){return "në pozicionin poshtë në fund majtas"};
 
-exports.positionOutBottomRight = function(d){return "to the below bottom right position"};
+exports.positionOutBottomRight = function(d){return "në pozicionin poshtë në fund djathtas"};
 
-exports.positionRandom = function(d){return "to the random position"};
+exports.positionRandom = function(d){return "në pozicionin e çfarëdoshëm"};
 
-exports.projectileBlueFireball = function(d){return "blue fireball"};
+exports.projectileBlueFireball = function(d){return "top zjarri blu"};
 
-exports.projectilePurpleFireball = function(d){return "purple fireball"};
+exports.projectilePurpleFireball = function(d){return "top zjarri lejla"};
 
-exports.projectileRedFireball = function(d){return "red fireball"};
+exports.projectileRedFireball = function(d){return "top zjarri i kuq"};
 
-exports.projectileYellowHearts = function(d){return "yellow hearts"};
+exports.projectileYellowHearts = function(d){return "zemrat e verdha"};
 
-exports.projectilePurpleHearts = function(d){return "purple hearts"};
+exports.projectilePurpleHearts = function(d){return "zemrat lejla"};
 
-exports.projectileRedHearts = function(d){return "red hearts"};
+exports.projectileRedHearts = function(d){return "zemrat e kuqe"};
 
 exports.projectileRandom = function(d){return "zakonshem"};
 
@@ -21702,345 +21702,345 @@ exports.projectileBaymax = function(d){return "Baymax"};
 
 exports.projectileRapunzel = function(d){return "Rapunzel"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to playing your story."};
+exports.reinfFeedbackMsg = function(d){return "Ti mund të shtypësh butonin \"Përpiqu përsëri\" për tu kthyer mbrpasht që të luash ngjarjen tënde."};
 
-exports.repeatForever = function(d){return "repeat forever"};
+exports.repeatForever = function(d){return "përsërit përgjithmonë"};
 
 exports.repeatDo = function(d){return "bej"};
 
-exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the story is running."};
+exports.repeatForeverTooltip = function(d){return "Kryej veprimet në këtë bllok herë pas here, ndërkohë që ngjarja juaj po vazhdon."};
 
-exports.saySprite = function(d){return "say"};
+exports.saySprite = function(d){return "thuaj"};
 
-exports.saySpriteN = function(d){return "actor "+v(d,"spriteIndex")+" say"};
+exports.saySpriteN = function(d){return "pjesmarrës "+v(d,"spriteIndex")+" thuaj"};
 
-exports.saySpriteTooltip = function(d){return "Pop up a speech bubble with the associated text from the specified character."};
+exports.saySpriteTooltip = function(d){return "Shfaq një flluskë të shoqëruar me tekstin përkatës nga pjesmarësi i caktuar."};
 
-exports.scoreText = function(d){return "Score: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
+exports.scoreText = function(d){return "Pikë: "+v(d,"playerScore")};
 
-exports.setBackground = function(d){return "set background"};
+exports.setBackground = function(d){return "vendos sfond"};
 
-exports.setBackgroundRandom = function(d){return "set random scene"};
+exports.setBackgroundRandom = function(d){return "vendos sfond të çfarëdoshëm"};
 
-exports.setBackgroundBlack = function(d){return "set black background"};
+exports.setBackgroundBlack = function(d){return "vendos sfond të zi"};
 
-exports.setBackgroundCave = function(d){return "set cave background"};
+exports.setBackgroundCave = function(d){return "vcendos sfond shpelle"};
 
-exports.setBackgroundCloudy = function(d){return "set cloudy background"};
+exports.setBackgroundCloudy = function(d){return "vendos sfond me re"};
 
-exports.setBackgroundHardcourt = function(d){return "set hardcourt scene"};
+exports.setBackgroundHardcourt = function(d){return "vendos sfond me terren të fortë"};
 
-exports.setBackgroundNight = function(d){return "set night background"};
+exports.setBackgroundNight = function(d){return "vendos sfond nate"};
 
-exports.setBackgroundUnderwater = function(d){return "set underwater background"};
+exports.setBackgroundUnderwater = function(d){return "vendos sfond nën ujor"};
 
-exports.setBackgroundCity = function(d){return "set city background"};
+exports.setBackgroundCity = function(d){return "vendos sfond qyteti"};
 
-exports.setBackgroundDesert = function(d){return "set desert background"};
+exports.setBackgroundDesert = function(d){return "vendos sfond shkretëtire"};
 
-exports.setBackgroundRainbow = function(d){return "set rainbow background"};
+exports.setBackgroundRainbow = function(d){return "vendos sfond ylberi"};
 
-exports.setBackgroundSoccer = function(d){return "set soccer background"};
+exports.setBackgroundSoccer = function(d){return "vendos sfond futbolli"};
 
-exports.setBackgroundSpace = function(d){return "set space background"};
+exports.setBackgroundSpace = function(d){return "vendos sfond hapësire"};
 
-exports.setBackgroundTennis = function(d){return "set tennis background"};
+exports.setBackgroundTennis = function(d){return "vendos sfond tenisi"};
 
-exports.setBackgroundWinter = function(d){return "set winter background"};
+exports.setBackgroundWinter = function(d){return "vendos sfond dimri"};
 
 exports.setBackgroundTooltip = function(d){return "Rregullo sfondin e imazhit"};
 
-exports.setEnemySpeed = function(d){return "set enemy speed"};
+exports.setEnemySpeed = function(d){return "vendos shpejtësinë e armikut"};
 
-exports.setPlayerSpeed = function(d){return "set player speed"};
+exports.setPlayerSpeed = function(d){return "vendos shpejtësinë e lojtarit"};
 
-exports.setScoreText = function(d){return "set score"};
+exports.setScoreText = function(d){return "vendos pikët"};
 
-exports.setScoreTextTooltip = function(d){return "Sets the text to be displayed in the score area."};
+exports.setScoreTextTooltip = function(d){return "Vendos tekstin, që të shfaqet në fushën e pikëve."};
 
-exports.setSpriteEmotionAngry = function(d){return "to a angry emotion"};
+exports.setSpriteEmotionAngry = function(d){return "në gjëndje të nxehur"};
 
-exports.setSpriteEmotionHappy = function(d){return "to a happy emotion"};
+exports.setSpriteEmotionHappy = function(d){return "në gjëndje të gëzuar"};
 
-exports.setSpriteEmotionNormal = function(d){return "to a normal emotion"};
+exports.setSpriteEmotionNormal = function(d){return "në gjëndje normale"};
 
-exports.setSpriteEmotionRandom = function(d){return "to a random emotion"};
+exports.setSpriteEmotionRandom = function(d){return "në një gjëndje të rastit"};
 
-exports.setSpriteEmotionSad = function(d){return "to a sad emotion"};
+exports.setSpriteEmotionSad = function(d){return "në gjëndje të mërzitur"};
 
-exports.setSpriteEmotionTooltip = function(d){return "Sets the actor emotion"};
+exports.setSpriteEmotionTooltip = function(d){return "Vendos gjëndjen e pjesmarrësit"};
 
-exports.setSpriteAlien = function(d){return "to an alien image"};
+exports.setSpriteAlien = function(d){return "në një imazh të huaj"};
 
-exports.setSpriteBat = function(d){return "to a bat image"};
+exports.setSpriteBat = function(d){return "në një imazh lakuriqi nate"};
 
-exports.setSpriteBird = function(d){return "to a bird image"};
+exports.setSpriteBird = function(d){return "në një imazh zogu"};
 
-exports.setSpriteCat = function(d){return "to a cat image"};
+exports.setSpriteCat = function(d){return "në një imazh maceje"};
 
-exports.setSpriteCaveBoy = function(d){return "to a cave boy image"};
+exports.setSpriteCaveBoy = function(d){return "në një imazh djali prej shpelle"};
 
-exports.setSpriteCaveGirl = function(d){return "to a cave girl image"};
+exports.setSpriteCaveGirl = function(d){return "në një imazh vajze prej shpelle"};
 
-exports.setSpriteDinosaur = function(d){return "to a dinosaur image"};
+exports.setSpriteDinosaur = function(d){return "në një imazh dinosauri"};
 
-exports.setSpriteDog = function(d){return "to a dog image"};
+exports.setSpriteDog = function(d){return "në një imazh qeni"};
 
-exports.setSpriteDragon = function(d){return "to a dragon image"};
+exports.setSpriteDragon = function(d){return "në një imazh dragoi"};
 
-exports.setSpriteGhost = function(d){return "to a ghost image"};
+exports.setSpriteGhost = function(d){return "në një imazh fantazme"};
 
-exports.setSpriteHidden = function(d){return "to a hidden image"};
+exports.setSpriteHidden = function(d){return "në një imazh të fshehur"};
 
-exports.setSpriteHideK1 = function(d){return "hide"};
+exports.setSpriteHideK1 = function(d){return "fsheh"};
 
-exports.setSpriteAnna = function(d){return "to a Anna image"};
+exports.setSpriteAnna = function(d){return "në një imazh Anna"};
 
-exports.setSpriteElsa = function(d){return "to a Elsa image"};
+exports.setSpriteElsa = function(d){return "në një imazh Elsa"};
 
-exports.setSpriteHiro = function(d){return "to a Hiro image"};
+exports.setSpriteHiro = function(d){return "në një imazh Hiro"};
 
-exports.setSpriteBaymax = function(d){return "to a Baymax image"};
+exports.setSpriteBaymax = function(d){return "në një imazh Baymax"};
 
-exports.setSpriteRapunzel = function(d){return "to a Rapunzel image"};
+exports.setSpriteRapunzel = function(d){return "në një imazh Rapunzel"};
 
-exports.setSpriteKnight = function(d){return "to a knight image"};
+exports.setSpriteKnight = function(d){return "në një imazh kalorësi"};
 
-exports.setSpriteMonster = function(d){return "to a monster image"};
+exports.setSpriteMonster = function(d){return "në një imazh përbindëshi"};
 
-exports.setSpriteNinja = function(d){return "to a masked ninja image"};
+exports.setSpriteNinja = function(d){return "në një imazh ninja të maskuar"};
 
-exports.setSpriteOctopus = function(d){return "to an octopus image"};
+exports.setSpriteOctopus = function(d){return "në një imazh oktapodi"};
 
-exports.setSpritePenguin = function(d){return "to a penguin image"};
+exports.setSpritePenguin = function(d){return "në një imazh pinguini"};
 
-exports.setSpritePirate = function(d){return "to a pirate image"};
+exports.setSpritePirate = function(d){return "në një imazh pirati"};
 
-exports.setSpritePrincess = function(d){return "to a princess image"};
+exports.setSpritePrincess = function(d){return "në një imazh princeshe"};
 
-exports.setSpriteRandom = function(d){return "to a random image"};
+exports.setSpriteRandom = function(d){return "në një imazh të rastësishëm"};
 
-exports.setSpriteRobot = function(d){return "to a robot image"};
+exports.setSpriteRobot = function(d){return "në një imazh roboti"};
 
-exports.setSpriteShowK1 = function(d){return "show"};
+exports.setSpriteShowK1 = function(d){return "trego"};
 
-exports.setSpriteSpacebot = function(d){return "to a spacebot image"};
+exports.setSpriteSpacebot = function(d){return "në një imazh spacebot"};
 
-exports.setSpriteSoccerGirl = function(d){return "to a soccer girl image"};
+exports.setSpriteSoccerGirl = function(d){return "në një imazh vajze futbolliste"};
 
-exports.setSpriteSoccerBoy = function(d){return "to a soccer boy image"};
+exports.setSpriteSoccerBoy = function(d){return "në një imazh djali futbollist"};
 
-exports.setSpriteSquirrel = function(d){return "to a squirrel image"};
+exports.setSpriteSquirrel = function(d){return "në një imazh ketri"};
 
-exports.setSpriteTennisGirl = function(d){return "to a tennis girl image"};
+exports.setSpriteTennisGirl = function(d){return "në një imazh vajze teniste"};
 
-exports.setSpriteTennisBoy = function(d){return "to a tennis boy image"};
+exports.setSpriteTennisBoy = function(d){return "në një imazh djali tenist"};
 
-exports.setSpriteUnicorn = function(d){return "to a unicorn image"};
+exports.setSpriteUnicorn = function(d){return "në një imazh njëbrirëshi"};
 
-exports.setSpriteWitch = function(d){return "to a witch image"};
+exports.setSpriteWitch = function(d){return "në një imazh shtrige"};
 
-exports.setSpriteWizard = function(d){return "to a wizard image"};
+exports.setSpriteWizard = function(d){return "në një imazh magjistari"};
 
-exports.setSpritePositionTooltip = function(d){return "Instantly moves an actor to the specified location."};
+exports.setSpritePositionTooltip = function(d){return "Lëviz menjëherë pjesmarrësin në vendin e caktuar."};
 
-exports.setSpriteK1Tooltip = function(d){return "Shows or hides the specified actor."};
+exports.setSpriteK1Tooltip = function(d){return "Tregon ose fsheh pjesmarrësin e përcaktuar."};
 
-exports.setSpriteTooltip = function(d){return "Sets the character image"};
+exports.setSpriteTooltip = function(d){return "Vendos imazhin e pjesmarrësit"};
 
-exports.setSpriteSizeRandom = function(d){return "to a random size"};
+exports.setSpriteSizeRandom = function(d){return "në një madhësi të çfarëdoshme"};
 
-exports.setSpriteSizeVerySmall = function(d){return "to a very small size"};
+exports.setSpriteSizeVerySmall = function(d){return "në një madhësi shumë të vogël"};
 
-exports.setSpriteSizeSmall = function(d){return "to a small size"};
+exports.setSpriteSizeSmall = function(d){return "në një madhësi të vogël"};
 
-exports.setSpriteSizeNormal = function(d){return "to a normal size"};
+exports.setSpriteSizeNormal = function(d){return "në një madhësi normale"};
 
-exports.setSpriteSizeLarge = function(d){return "to a large size"};
+exports.setSpriteSizeLarge = function(d){return "në një madhësi të madhe"};
 
-exports.setSpriteSizeVeryLarge = function(d){return "to a very large size"};
+exports.setSpriteSizeVeryLarge = function(d){return "në një madhësi shumë të madhe"};
 
-exports.setSpriteSizeTooltip = function(d){return "Sets the size of an actor"};
+exports.setSpriteSizeTooltip = function(d){return "Vendos madhësinë e pjesmarrësit"};
 
-exports.setSpriteSpeedRandom = function(d){return "to a random speed"};
+exports.setSpriteSpeedRandom = function(d){return "në një shpejtsi të çfarëdoshme"};
 
-exports.setSpriteSpeedVerySlow = function(d){return "to a very slow speed"};
+exports.setSpriteSpeedVerySlow = function(d){return "me një shpejtësi shumë të ngadaltë"};
 
-exports.setSpriteSpeedSlow = function(d){return "to a slow speed"};
+exports.setSpriteSpeedSlow = function(d){return "me një shpejtësi të ngadaltë"};
 
-exports.setSpriteSpeedNormal = function(d){return "to a normal speed"};
+exports.setSpriteSpeedNormal = function(d){return "me një shpejtësi normale"};
 
-exports.setSpriteSpeedFast = function(d){return "to a fast speed"};
+exports.setSpriteSpeedFast = function(d){return "me një shpejtësi shumë të shpejtë"};
 
-exports.setSpriteSpeedVeryFast = function(d){return "to a very fast speed"};
+exports.setSpriteSpeedVeryFast = function(d){return "me një shpejtësi akoma edhe më të shpejtë"};
 
-exports.setSpriteSpeedTooltip = function(d){return "Sets the speed of a character"};
+exports.setSpriteSpeedTooltip = function(d){return "Vendos shpejtësinë e pjesmarrësit"};
 
-exports.setSpriteZombie = function(d){return "to a zombie image"};
+exports.setSpriteZombie = function(d){return "në një imazh zombi"};
 
-exports.shareStudioTwitter = function(d){return "Check out the story I made. I wrote it myself with @codeorg"};
+exports.shareStudioTwitter = function(d){return "Shiko ngjarjen që bëra unë. E shkruajta vetë me @codeorg"};
 
-exports.shareGame = function(d){return "Share your story:"};
+exports.shareGame = function(d){return "Ndaj ngjarjen tënde:"};
 
-exports.showCoordinates = function(d){return "show coordinates"};
+exports.showCoordinates = function(d){return "trego koordinatat"};
 
-exports.showCoordinatesTooltip = function(d){return "show the protagonist's coordinates on the screen"};
+exports.showCoordinatesTooltip = function(d){return "shfaq koordinatat e protagonistëve në ekran"};
 
-exports.showTitleScreen = function(d){return "show title screen"};
+exports.showTitleScreen = function(d){return "shfaq ekranin e titullit"};
 
-exports.showTitleScreenTitle = function(d){return "title"};
+exports.showTitleScreenTitle = function(d){return "titull"};
 
-exports.showTitleScreenText = function(d){return "teksti"};
+exports.showTitleScreenText = function(d){return "tekst"};
 
-exports.showTSDefTitle = function(d){return "type title here"};
+exports.showTSDefTitle = function(d){return "shtyp titullin këtu"};
 
-exports.showTSDefText = function(d){return "type text here"};
+exports.showTSDefText = function(d){return "shtyp tekstin këtu"};
 
-exports.showTitleScreenTooltip = function(d){return "Show a title screen with the associated title and text."};
+exports.showTitleScreenTooltip = function(d){return "Shfaq një ekran shoqëruar me titullin dhe tekstin përkatës."};
 
-exports.size = function(d){return "size"};
+exports.size = function(d){return "madhësia"};
 
 exports.setSprite = function(d){return "vendos"};
 
-exports.setSpriteN = function(d){return "set actor "+v(d,"spriteIndex")};
+exports.setSpriteN = function(d){return "vendos pjesmarrësin "+v(d,"spriteIndex")};
 
-exports.soundCrunch = function(d){return "crunch"};
+exports.soundCrunch = function(d){return "përtyp"};
 
-exports.soundGoal1 = function(d){return "goal 1"};
+exports.soundGoal1 = function(d){return "qëllimi 1"};
 
-exports.soundGoal2 = function(d){return "goal 2"};
+exports.soundGoal2 = function(d){return "qëllimi 2"};
 
-exports.soundHit = function(d){return "hit"};
+exports.soundHit = function(d){return "godit"};
 
-exports.soundLosePoint = function(d){return "lose point"};
+exports.soundLosePoint = function(d){return "humb pikë"};
 
-exports.soundLosePoint2 = function(d){return "lose point 2"};
+exports.soundLosePoint2 = function(d){return "humb pikën 2"};
 
 exports.soundRetro = function(d){return "retro"};
 
-exports.soundRubber = function(d){return "rubber"};
+exports.soundRubber = function(d){return "gomë"};
 
-exports.soundSlap = function(d){return "slap"};
+exports.soundSlap = function(d){return "gjuaj"};
 
-exports.soundWinPoint = function(d){return "win point"};
+exports.soundWinPoint = function(d){return "fito pikë"};
 
-exports.soundWinPoint2 = function(d){return "win point 2"};
+exports.soundWinPoint2 = function(d){return "fito pikë 2"};
 
-exports.soundWood = function(d){return "wood"};
+exports.soundWood = function(d){return "druri"};
 
-exports.speed = function(d){return "speed"};
+exports.speed = function(d){return "shpejtësia"};
 
-exports.stopSprite = function(d){return "stop"};
+exports.stopSprite = function(d){return "ndalo"};
 
-exports.stopSpriteN = function(d){return "stop actor "+v(d,"spriteIndex")};
+exports.stopSpriteN = function(d){return "ndalo pjesmarrësin "+v(d,"spriteIndex")};
 
-exports.stopTooltip = function(d){return "Stops an actor's movement."};
+exports.stopTooltip = function(d){return "Ndalon lëvizjen e një pjemsarrësi."};
 
-exports.throwSprite = function(d){return "throw"};
+exports.throwSprite = function(d){return "hedh"};
 
-exports.throwSpriteN = function(d){return "actor "+v(d,"spriteIndex")+" throw"};
+exports.throwSpriteN = function(d){return "pjesmarrës "+v(d,"spriteIndex")+" hedh"};
 
-exports.throwTooltip = function(d){return "Throws a projectile from the specified actor."};
+exports.throwTooltip = function(d){return "Hedh një raketë nga një pjesmarrës i caktuar."};
 
-exports.vanish = function(d){return "vanish"};
+exports.vanish = function(d){return "zhduket"};
 
-exports.vanishActorN = function(d){return "vanish actor "+v(d,"spriteIndex")};
+exports.vanishActorN = function(d){return "zhduk pjesmarrësin "+v(d,"spriteIndex")};
 
-exports.vanishTooltip = function(d){return "Vanishes the actor."};
+exports.vanishTooltip = function(d){return "Zhduk pjesmarrësin."};
 
-exports.waitFor = function(d){return "wait for"};
+exports.waitFor = function(d){return "prit për"};
 
-exports.waitSeconds = function(d){return "seconds"};
+exports.waitSeconds = function(d){return "sekondat"};
 
-exports.waitForClick = function(d){return "wait for click"};
+exports.waitForClick = function(d){return "prit për klikimin"};
 
-exports.waitForRandom = function(d){return "wait for random"};
+exports.waitForRandom = function(d){return "prit për çfarëdo"};
 
-exports.waitForHalfSecond = function(d){return "wait for a half second"};
+exports.waitForHalfSecond = function(d){return "prit për gjysëm sekonde"};
 
-exports.waitFor1Second = function(d){return "wait for 1 second"};
+exports.waitFor1Second = function(d){return "prit për një sekondë"};
 
-exports.waitFor2Seconds = function(d){return "wait for 2 seconds"};
+exports.waitFor2Seconds = function(d){return "prit 2 sekonda"};
 
-exports.waitFor5Seconds = function(d){return "wait for 5 seconds"};
+exports.waitFor5Seconds = function(d){return "prit 5 sekonda"};
 
-exports.waitFor10Seconds = function(d){return "wait for 10 seconds"};
+exports.waitFor10Seconds = function(d){return "prit 10 sekonda"};
 
-exports.waitParamsTooltip = function(d){return "Waits for a specified number of seconds or use zero to wait until a click occurs."};
+exports.waitParamsTooltip = function(d){return "Pret për një numër të caktuar sekondash ose përdor zeron për të pritur derisa të ndodhë klikimi."};
 
-exports.waitTooltip = function(d){return "Waits for a specified amount of time or until a click occurs."};
+exports.waitTooltip = function(d){return "Pret për një sasi të caktuar kohe ose pret derisa të ndodhë klikimi."};
 
-exports.whenArrowDown = function(d){return "down arrow"};
+exports.whenArrowDown = function(d){return "shigjetë drejtuar poshtë"};
 
-exports.whenArrowLeft = function(d){return "left arrow"};
+exports.whenArrowLeft = function(d){return "shigjetë drejtuar majtas"};
 
-exports.whenArrowRight = function(d){return "right arrow"};
+exports.whenArrowRight = function(d){return "shigjetë drejtuar djathtas"};
 
-exports.whenArrowUp = function(d){return "up arrow"};
+exports.whenArrowUp = function(d){return "shigjetë drejtuar lart"};
 
-exports.whenArrowTooltip = function(d){return "Execute the actions below when the specified arrow key is pressed."};
+exports.whenArrowTooltip = function(d){return "Kryej veprimet e mëposhtme kur tasti i shigjetës së caktuar të shtypet."};
 
-exports.whenDown = function(d){return "me kursorin poshtë"};
+exports.whenDown = function(d){return "kur shigjeta është poshtë"};
 
-exports.whenDownTooltip = function(d){return "Kryej veprimet si më poshtë kur celësi i kursorit për poshtë të jetë i shtypur."};
+exports.whenDownTooltip = function(d){return "Kryej veprimet më poshtë kur tasti i shigjetës poshtë të shtypet."};
 
-exports.whenGameStarts = function(d){return "when game starts"};
+exports.whenGameStarts = function(d){return "kur ngjarjafillon"};
 
-exports.whenGameStartsTooltip = function(d){return "Execute the actions below when the game starts."};
+exports.whenGameStartsTooltip = function(d){return "Kryej veprimet e mëposhtme kur ngjarja fillon."};
 
-exports.whenLeft = function(d){return "me kursorin e majtë"};
+exports.whenLeft = function(d){return "kur shigjeta është majtas"};
 
-exports.whenLeftTooltip = function(d){return "Kryej veprimet si më poshtë me  celësin e kursorit të majtë të shtypur."};
+exports.whenLeftTooltip = function(d){return "Kryej veprimet më poshtë kur tasti i shigjetës majtas të shtypet."};
 
-exports.whenRight = function(d){return "me kursorin e djathtë"};
+exports.whenRight = function(d){return "kur shigjeta është djathtas"};
 
-exports.whenRightTooltip = function(d){return "Kryej veprimet si më poshtë me kursorin e djathtë të shtypur."};
+exports.whenRightTooltip = function(d){return "Kryej veprimet më poshtë kur tasti i shigjetës djathtas të shtypet."};
 
-exports.whenSpriteClicked = function(d){return "when actor clicked"};
+exports.whenSpriteClicked = function(d){return "kur klikoi pjesmarrësi"};
 
-exports.whenSpriteClickedN = function(d){return "when actor "+v(d,"spriteIndex")+" clicked"};
+exports.whenSpriteClickedN = function(d){return "kur klikoi pjesmarrësi "+v(d,"spriteIndex")};
 
-exports.whenSpriteClickedTooltip = function(d){return "Execute the actions below when a character is clicked."};
+exports.whenSpriteClickedTooltip = function(d){return "Kryej veprimet më poshtë kur pjesmarrësi klikohet."};
 
-exports.whenSpriteCollidedN = function(d){return "when actor "+v(d,"spriteIndex")};
+exports.whenSpriteCollidedN = function(d){return "kur pjesmarrësi "+v(d,"spriteIndex")};
 
-exports.whenSpriteCollidedTooltip = function(d){return "Execute the actions below when a character touches another character."};
+exports.whenSpriteCollidedTooltip = function(d){return "Kryej veprimet më poshtë kur pjesmarrësi prek pjesmarrësin tjetër."};
 
-exports.whenSpriteCollidedWith = function(d){return "touches"};
+exports.whenSpriteCollidedWith = function(d){return "prek"};
 
-exports.whenSpriteCollidedWithAnyActor = function(d){return "touches any actor"};
+exports.whenSpriteCollidedWithAnyActor = function(d){return "prek ndonjë pjesmarrës"};
 
-exports.whenSpriteCollidedWithAnyEdge = function(d){return "touches any edge"};
+exports.whenSpriteCollidedWithAnyEdge = function(d){return "prek ndonjë cep"};
 
-exports.whenSpriteCollidedWithAnyProjectile = function(d){return "touches any projectile"};
+exports.whenSpriteCollidedWithAnyProjectile = function(d){return "prek ndonjë raketë"};
 
-exports.whenSpriteCollidedWithAnything = function(d){return "touches anything"};
+exports.whenSpriteCollidedWithAnything = function(d){return "prek ndonjë gjë"};
 
-exports.whenSpriteCollidedWithN = function(d){return "touches actor "+v(d,"spriteIndex")};
+exports.whenSpriteCollidedWithN = function(d){return "prek pjesmarrësin "+v(d,"spriteIndex")};
 
-exports.whenSpriteCollidedWithBlueFireball = function(d){return "touches blue fireball"};
+exports.whenSpriteCollidedWithBlueFireball = function(d){return "prek topin e zjarrtë blu"};
 
-exports.whenSpriteCollidedWithPurpleFireball = function(d){return "touches purple fireball"};
+exports.whenSpriteCollidedWithPurpleFireball = function(d){return "prek topin e zjarrit lejla"};
 
-exports.whenSpriteCollidedWithRedFireball = function(d){return "touches red fireball"};
+exports.whenSpriteCollidedWithRedFireball = function(d){return "prek topin e zjarrit të kuq"};
 
-exports.whenSpriteCollidedWithYellowHearts = function(d){return "touches yellow hearts"};
+exports.whenSpriteCollidedWithYellowHearts = function(d){return "prek zemrat e verdha"};
 
-exports.whenSpriteCollidedWithPurpleHearts = function(d){return "touches purple hearts"};
+exports.whenSpriteCollidedWithPurpleHearts = function(d){return "prek zemrat lejla"};
 
-exports.whenSpriteCollidedWithRedHearts = function(d){return "touches red hearts"};
+exports.whenSpriteCollidedWithRedHearts = function(d){return "prek zemrat e kuqe"};
 
-exports.whenSpriteCollidedWithBottomEdge = function(d){return "touches bottom edge"};
+exports.whenSpriteCollidedWithBottomEdge = function(d){return "prek cepin në fund"};
 
-exports.whenSpriteCollidedWithLeftEdge = function(d){return "touches left edge"};
+exports.whenSpriteCollidedWithLeftEdge = function(d){return "prek cepin e majtë"};
 
-exports.whenSpriteCollidedWithRightEdge = function(d){return "touches right edge"};
+exports.whenSpriteCollidedWithRightEdge = function(d){return "prek cepin e djathtë"};
 
-exports.whenSpriteCollidedWithTopEdge = function(d){return "touches top edge"};
+exports.whenSpriteCollidedWithTopEdge = function(d){return "prek cepin në majë"};
 
-exports.whenUp = function(d){return "me kursorin lartë"};
+exports.whenUp = function(d){return "kur shigjeta është lart"};
 
-exports.whenUpTooltip = function(d){return "Kryej veprimet si më poshtë me çelësin e kursorit për lartë të shtypur."};
+exports.whenUpTooltip = function(d){return "Kryej veprimet më poshtë kur tasti i shigjetës lart shtypet."};
 
 exports.yes = function(d){return "Po"};
 

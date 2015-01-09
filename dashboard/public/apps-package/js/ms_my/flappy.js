@@ -12330,13 +12330,13 @@ exports.dialogCancel = function(d){return "Batal"};
 
 exports.dialogOK = function(d){return "OK"};
 
-exports.directionNorthLetter = function(d){return "U"};
+exports.directionNorthLetter = function(d){return "N"};
 
 exports.directionSouthLetter = function(d){return "S"};
 
-exports.directionEastLetter = function(d){return "T"};
+exports.directionEastLetter = function(d){return "E"};
 
-exports.directionWestLetter = function(d){return "B"};
+exports.directionWestLetter = function(d){return "W"};
 
 exports.end = function(d){return "tamat"};
 
@@ -12358,7 +12358,7 @@ exports.errorUnusedFunction = function(d){return "You created a function, but ne
 
 exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
 
-exports.extraTopBlocks = function(d){return "You have extra blocks that aren't attached to an event block."};
+exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"};
 
 exports.finalStage = function(d){return "Tahniah! Anda telah melengkapkan peringkat akhir."};
 
@@ -12442,9 +12442,9 @@ exports.hintRequest = function(d){return "See hint"};
 
 exports.backToPreviousLevel = function(d){return "Kembali ke tahap yang sebelumnya"};
 
-exports.saveToGallery = function(d){return "Simpan ke galeri anda"};
+exports.saveToGallery = function(d){return "Save to gallery"};
 
-exports.savedToGallery = function(d){return "Disimpan ke galeri anda!"};
+exports.savedToGallery = function(d){return "Saved in gallery!"};
 
 exports.shareFailure = function(d){return "Sorry, we can't share this program."};
 
@@ -12511,7 +12511,7 @@ exports.flapTooltip = function(d){return "Fly Flappy upwards."};
 
 exports.flappySpecificFail = function(d){return "Your code looks good - it will flap with each click. But you need to click many times to flap to the target."};
 
-exports.incrementPlayerScore = function(d){return "increment player score"};
+exports.incrementPlayerScore = function(d){return "score a point"};
 
 exports.incrementPlayerScoreTooltip = function(d){return "Add one to the current player score."};
 
@@ -12547,11 +12547,11 @@ exports.playSoundSplash = function(d){return "play splash sound"};
 
 exports.playSoundLaser = function(d){return "play laser sound"};
 
-exports.playSoundTooltip = function(d){return "Play a sound."};
+exports.playSoundTooltip = function(d){return "Play the chosen sound."};
 
 exports.reinfFeedbackMsg = function(d){return "Anda boleh tekan butang \"Cuba lagi\" untuk kembali bermain."};
 
-exports.scoreText = function(d){return "Score: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
+exports.scoreText = function(d){return "Score: "+v(d,"playerScore")};
 
 exports.setBackground = function(d){return "set scene"};
 
@@ -12675,7 +12675,7 @@ exports.setScoreTooltip = function(d){return "Sets the player's score"};
 
 exports.setSpeed = function(d){return "set speed"};
 
-exports.setSpeedTooltip = function(d){return "Sets the levels speed"};
+exports.setSpeedTooltip = function(d){return "Sets the level's speed"};
 
 exports.shareFlappyTwitter = function(d){return "Check out the Flappy game I made. I wrote it myself with @codeorg"};
 
@@ -12737,7 +12737,7 @@ exports.whenEnterObstacleTooltip = function(d){return "Execute the actions below
 
 exports.whenRunButtonClick = function(d){return "Apabila permainan bermula"};
 
-exports.whenRunButtonClickTooltip = function(d){return "Execute the actions below when the run button is pressed."};
+exports.whenRunButtonClickTooltip = function(d){return "Execute the actions below when the game starts."};
 
 exports.yes = function(d){return "Ya"};
 

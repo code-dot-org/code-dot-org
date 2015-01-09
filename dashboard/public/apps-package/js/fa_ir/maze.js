@@ -16571,7 +16571,7 @@ exports.booleanTrue = function(d){return "صحیح"};
 
 exports.booleanFalse = function(d){return "ناصحیح"};
 
-exports.blocklyMessage = function(d){return "بلاکلی"};
+exports.blocklyMessage = function(d){return "بلوکی"};
 
 exports.catActions = function(d){return "اقدامات"};
 
@@ -16579,11 +16579,11 @@ exports.catColour = function(d){return "رنگ"};
 
 exports.catLogic = function(d){return "منطق"};
 
-exports.catLists = function(d){return "لیست ها"};
+exports.catLists = function(d){return "فهرست‌ها"};
 
 exports.catLoops = function(d){return "حلقه ها"};
 
-exports.catMath = function(d){return "محاسبات ریاضی"};
+exports.catMath = function(d){return "ریاضی"};
 
 exports.catProcedures = function(d){return "توابع"};
 
@@ -16593,11 +16593,11 @@ exports.catVariables = function(d){return "متغیرها"};
 
 exports.codeTooltip = function(d){return "کد جاوا اسکریپت تولید شده رو ببین."};
 
-exports.continue = function(d){return "ادامه"};
+exports.continue = function(d){return "ادامه بده"};
 
-exports.dialogCancel = function(d){return "لغو"};
+exports.dialogCancel = function(d){return "لغو کن"};
 
-exports.dialogOK = function(d){return "Ok"};
+exports.dialogOK = function(d){return "باشه"};
 
 exports.directionNorthLetter = function(d){return "شمال"};
 
@@ -16609,31 +16609,31 @@ exports.directionWestLetter = function(d){return "غرب"};
 
 exports.end = function(d){return "پایان"};
 
-exports.emptyBlocksErrorMsg = function(d){return "بلوک های \"تکرار\" (Repeat) یا \"شرطی\" (If)  برای کار کردن، نیاز به بلوکهای دیگری در داخل خود دارند. مطمئن شوید که بلوک داخلی، به درستی درون بلوک اصلی قرار گرفته است."};
+exports.emptyBlocksErrorMsg = function(d){return "بلوکهای \"تکرار\" یا \"شرطی\" برای کار کردن نیاز به بلوکهای دیگری در داخل خود دارند. مطمئن شوید که بلوک داخلی به درستی درون بلوک اصلی قرار گرفته است."};
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "بلوک تابع برای به کار افتادن نیاز به بلوک های دیگری در داخل خود دارد."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "باید بلوک هایی در تعریف تابع تو باشد. روی اصلاح کلیک کن و بلوک هایی را به داخل بلوک سبز بکش."};
+exports.errorEmptyFunctionBlockModal = function(d){return "باید بلوکهایی در تعریف تابع تو باشند. روی ویرایش کلیک کن و بلوکها را به داخل بلوک سبز بکش."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "روی اصلاح کلیک کن تا مطمئن بشوی هیچ بلوکی را داخل تعریف تابعت کم نگذاشته ایی."};
+exports.errorIncompleteBlockInFunction = function(d){return "روی ویرایش کلیک کن که مطمئن بشوی داخل تعریف تابعت هیچ بلوکی را از قلم نینداختی."};
 
-exports.errorParamInputUnattached = function(d){return "مطمئن شو که در بلوک تابع در فضای کاری،‌ به هر پارامتر ورودی یک بلوک چسبانده باشی."};
+exports.errorParamInputUnattached = function(d){return "یادت باشه که روی بلوک تابع در فضای کاریت، به هر پارامتر ورودی یک بلوک بچسبانی."};
 
-exports.errorUnusedParam = function(d){return "تو یک بلوک پارامتر اضافه کردی اما از آن در تعریف استفاده نکردی. با کلیک کردن اصلاح و قرار دادن بلوک پارامتر داخل بلوک سبز مطمئن شو که از پارامترت استفاده کرده ایی."};
+exports.errorUnusedParam = function(d){return "تو یک بلوک پارامتر اضافه کردی اما از آن در تعریف استفاده نکردی. مطمئن شو که از پارامترت استفاده میکنی با کلیک کردن روی \"ویرایش\" و قرار دادن بلوک پارامتر داخل بلوک سبز."};
 
-exports.errorRequiredParamsMissing = function(d){return "بر روی \"ویرایش\" کلیک کرده و پارامترهای لازم را ایجاد کنید. بلوک های پارامتر جدید را به تابع خود اضافه کنید."};
+exports.errorRequiredParamsMissing = function(d){return "یک پارامتر برای تابعت بساز با کلیک کردن روی \"ویرایش\" و اضافه کردن پارامترهای لازم. بلوکهای پارامترهای جدید را بکش به داخل تعریف تابعت."};
 
-exports.errorUnusedFunction = function(d){return "شما یک تابع ساخته اید، اما هرگز آن را در فضای کاری خود استفاده نکردید! روی \"توابع\" در جعبه ابزار کلیک کنید و از آن در برنامه خود استفاده کنید."};
+exports.errorUnusedFunction = function(d){return "شما یک تابع ساختید اما هرگز آن را در فضای کاری خود استفاده نکردید! روی \"توابع\" در جعبه ابزار کلیک کنید و از آن در برنامه خود استفاده کنید."};
 
 exports.errorQuestionMarksInNumberField = function(d){return "سعی کنید به جای \"؟؟؟\" یک مقدار قرار دهید ."};
 
-exports.extraTopBlocks = function(d){return "بلوک‌های نچسبیده‌ای هنوز باقی مانده است. آیا قصد دارید اینها را به بلوک \"هنگام اجرا\" وصل کنید؟"};
+exports.extraTopBlocks = function(d){return "تو بلوک‌های نچسبیده‌ داری. آیا میخواستی که اینها را به بلوک \"زمان اجرا\" وصل کنی؟"};
 
-exports.finalStage = function(d){return "تبریک می‌گوییم! شما مرحله‌ی نهایی را به پایان رساندید."};
+exports.finalStage = function(d){return "آفرین! شما مرحله‌ی نهایی را به پایان رساندید."};
 
-exports.finalStageTrophies = function(d){return "تبریک می‌گوییم! شما مرحله‌ی آخر را به پایان رساندید و برنده‌ی "+p(d,"numTrophies",0,"fa",{"one":"یک جایزه","other":n(d,"numTrophies")+" جایزه"})+" شدید."};
+exports.finalStageTrophies = function(d){return "آفرین! شما مرحله‌ی نهایی را به پایان رساندید و برنده‌ی "+p(d,"numTrophies",0,"fa",{"one":"یک جایزه","other":n(d,"numTrophies")+" جایزه"})+" شدید."};
 
-exports.finish = function(d){return "پایان"};
+exports.finish = function(d){return "تمام کن"};
 
 exports.generatedCodeInfo = function(d){return "دانشگاههای برتر نیز کدنویسی بر اساس بلوک ها را آموزش می دهند (مثل "+v(d,"berkeleyLink")+" و "+v(d,"harvardLink")+"). اما در پشت پرده، بلوک هایی که شما سر هم کرده اید را می توان به زبان جاوا اسکریپت نشان داد، که پر استفاده ترین زبان کدنویسی در دنیاست:"};
 
@@ -16649,41 +16649,41 @@ exports.levelIncompleteError = function(d){return "شما همه‌ی بلوک�
 
 exports.listVariable = function(d){return "فهرست"};
 
-exports.makeYourOwnFlappy = function(d){return "Flappy Bird خودتان را بسازید"};
+exports.makeYourOwnFlappy = function(d){return "پرنده ی فلاپیِ خودتان را بسازید"};
 
-exports.missingBlocksErrorMsg = function(d){return "برای حل این معما، یک یا چند تا از بلوک‌های زیر را بکار ببرید."};
+exports.missingBlocksErrorMsg = function(d){return "برای حل این پازل، یک یا چند تا از بلوک‌های زیر را بکار ببرید."};
 
-exports.nextLevel = function(d){return "تبریک ! شما پازل "+v(d,"puzzleNumber")+" را به پایان رساندید."};
+exports.nextLevel = function(d){return "آفرین! شما پازل "+v(d,"puzzleNumber")+" را به پایان رساندید."};
 
-exports.nextLevelTrophies = function(d){return "تبریک می‌گوییم! شما معمای "+v(d,"puzzleNumber")+" را به پایان رساندید و برنده‌ی "+p(d,"numTrophies",0,"fa",{"one":"یک جایزه","other":n(d,"numTrophies")+" جایزه"})+" شدید."};
+exports.nextLevelTrophies = function(d){return "آفرین! شما معمای "+v(d,"puzzleNumber")+" را به پایان رساندید و برنده‌ی "+p(d,"numTrophies",0,"fa",{"one":"یک جایزه","other":n(d,"numTrophies")+" جایزه"})+" شدید."};
 
-exports.nextStage = function(d){return "تبریک! شما "+v(d,"stageName")+" را به پایان رساندید."};
+exports.nextStage = function(d){return "آفرین! شما "+v(d,"stageName")+" را به پایان رساندید."};
 
-exports.nextStageTrophies = function(d){return "تبریک! شما مرحله‌ی "+v(d,"stageName")+" را به پایان رساندید و برنده‌ی "+p(d,"numTrophies",0,"fa",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+" شدید."};
+exports.nextStageTrophies = function(d){return "آفرین! شما مرحله‌ی "+v(d,"stageName")+" را به پایان رساندید و برنده‌ی "+p(d,"numTrophies",0,"fa",{"one":"یک جایزه","other":n(d,"numTrophies")+" جایزه"})+" شدید."};
 
-exports.numBlocksNeeded = function(d){return "تبریک می‌گوییم! شما معمای "+v(d,"puzzleNumber")+" را به پایان رساندید. (اگرچه می‌توانستید تنها "+p(d,"numBlocks",0,"fa",{"one":"یک بلوک","other":n(d,"numBlocks")+" بلوک"})+" بکار ببرید.)"};
+exports.numBlocksNeeded = function(d){return "آفرین! شما پازل "+v(d,"puzzleNumber")+" را به پایان رساندید. (اگرچه می‌توانستید تنها "+p(d,"numBlocks",0,"fa",{"one":"یک بلوک","other":n(d,"numBlocks")+" بلوک"})+" بکار ببرید.)"};
 
-exports.numLinesOfCodeWritten = function(d){return "شما "+p(d,"numLines",0,"fa",{"one":"یک خط","other":n(d,"numLines")+" خط"})+" کد نوشتید!"};
+exports.numLinesOfCodeWritten = function(d){return "شما همین الان  "+p(d,"numLines",0,"fa",{"one":"یک خط","other":n(d,"numLines")+" خط"})+" کد نوشتید!"};
 
-exports.play = function(d){return "بازی"};
+exports.play = function(d){return "بازی کن"};
 
-exports.print = function(d){return "چاپ"};
+exports.print = function(d){return "چاپ کن"};
 
-exports.puzzleTitle = function(d){return "معمای "+v(d,"puzzle_number")+" از "+v(d,"stage_total")};
+exports.puzzleTitle = function(d){return "پازل "+v(d,"puzzle_number")+"  از"+v(d,"stage_total")};
 
 exports.repeat = function(d){return "تکرار کن"};
 
-exports.resetProgram = function(d){return "بازنشانی"};
+exports.resetProgram = function(d){return "تنظیم مجدد"};
 
-exports.runProgram = function(d){return "اجرا"};
+exports.runProgram = function(d){return "اجرا کن"};
 
-exports.runTooltip = function(d){return "اجرای برنامه‌ی تعریف شده با بلوک‌های فضای کار."};
+exports.runTooltip = function(d){return "برنامه‌ای را اجرا کن که با بلوک‌های داخل فضای کار تعریف شده."};
 
-exports.score = function(d){return "نمره"};
+exports.score = function(d){return "امتیاز"};
 
-exports.showCodeHeader = function(d){return "کد نمایش"};
+exports.showCodeHeader = function(d){return "کد را نشان بده"};
 
-exports.showBlocksHeader = function(d){return "نمایش بلوک‌ها"};
+exports.showBlocksHeader = function(d){return "بلوک‌ها را نشان بده"};
 
 exports.showGeneratedCode = function(d){return "نمایشِ کد"};
 
@@ -16693,29 +16693,29 @@ exports.subtitle = function(d){return "یک محیط برنامه نویسیِ �
 
 exports.textVariable = function(d){return "متن"};
 
-exports.tooFewBlocksMsg = function(d){return "شما همه‌ی بلوک‌های مورد نیاز را بکار بردید، ولی برای حل این معما باید تعداد بیشتری از این بلوک‌ها را بکار ببرید."};
+exports.tooFewBlocksMsg = function(d){return "شما از همه‌ی بلوک‌های لازم داری استفاده میکنی، ولی برای حل این پازل تعداد بیشتری از این بلوک‌ها را استفاده کن."};
 
-exports.tooManyBlocksMsg = function(d){return "این معما را می‌توان با <x id='START_SPAN'/><x id='END_SPAN'/> بلوک حل کرد."};
+exports.tooManyBlocksMsg = function(d){return "این معما را می‌توان با بلوکهای <x id='START_SPAN'/><x id='END_SPAN'/> حل کرد."};
 
 exports.tooMuchWork = function(d){return "شما منو مجبور به انجام مقدار زیادی کار کردید. میشه تعداد تکرار رو کمتر کنید؟"};
 
 exports.toolboxHeader = function(d){return "بلوک ها"};
 
-exports.openWorkspace = function(d){return "چگونگیِ کار"};
+exports.openWorkspace = function(d){return "چگونه کار می کند"};
 
 exports.totalNumLinesOfCodeWritten = function(d){return "در مجموع: "+p(d,"numLines",0,"fa",{"one":"یک خط","other":n(d,"numLines")+" خط"})+" کد."};
 
-exports.tryAgain = function(d){return "دوباره تلاش کنید"};
+exports.tryAgain = function(d){return "دوباره تلاش کن"};
 
-exports.hintRequest = function(d){return "تذکر را ببینید"};
+exports.hintRequest = function(d){return "راهنمایی را ببینید"};
 
 exports.backToPreviousLevel = function(d){return "برگرد به سطح قبلی"};
 
-exports.saveToGallery = function(d){return "ذخیره در گالری"};
+exports.saveToGallery = function(d){return "در گالری ذخیره کن"};
 
 exports.savedToGallery = function(d){return "در گالری ذخیره شد!"};
 
-exports.shareFailure = function(d){return "شرمنده، ما نمیتوانیم این برنامه را به اشتراک بگذاریم."};
+exports.shareFailure = function(d){return "با عرض پوزش، ما نمیتوانیم این برنامه را به اشتراک بگذاریم."};
 
 exports.workspaceHeader = function(d){return "بلوک‌های خودت رو اینجا سرهم کن: "};
 
@@ -16723,25 +16723,25 @@ exports.workspaceHeaderJavaScript = function(d){return "کد جاوا اسکری
 
 exports.infinity = function(d){return "بی نهایت"};
 
-exports.rotateText = function(d){return "بچرخان دستگاه خود را."};
+exports.rotateText = function(d){return "دستگاهت  را بچرخان."};
 
-exports.orientationLock = function(d){return "حالت افقی را در تنظیمات دستگاه خاموش کنید."};
+exports.orientationLock = function(d){return "قفل جهت یابی را در تنظیمات دستگاه باز کنید."};
 
-exports.wantToLearn = function(d){return "می‌خواید کد نویسی را یاد بگیرید؟"};
+exports.wantToLearn = function(d){return "آیا می‌خواهید کد نویسی را یاد بگیرید؟"};
 
 exports.watchVideo = function(d){return "ویدیو را ببینید"};
 
 exports.when = function(d){return "وقتی"};
 
-exports.whenRun = function(d){return "هنگامی که اجرا"};
+exports.whenRun = function(d){return "زمان اجرا"};
 
 exports.tryHOC = function(d){return "ساعتِ کد نویسی را امتحان کنید"};
 
 exports.signup = function(d){return "برای دوره‌ی مقدماتی نام نویسی کنید"};
 
-exports.hintHeader = function(d){return "نکته اینجاست:"};
+exports.hintHeader = function(d){return "این هم یک راهنمایی:"};
 
-exports.genericFeedback = function(d){return "ببینبد چطور تمامش کردید,و سعی به رفع مشکلات برنامه خود کنید."};
+exports.genericFeedback = function(d){return "ببین چطور به اینجا رسیدی، و سعی کن برنامه ات را درست کنی."};
 
 exports.toggleBlocksErrorMsg = function(d){return "You need to correct an error in your program before it can be shown as blocks."};
 

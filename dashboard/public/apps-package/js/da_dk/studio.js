@@ -21536,7 +21536,7 @@ exports.hello = function(d){return "hej"};
 
 exports.helloWorld = function(d){return "Hej verden!"};
 
-exports.incrementPlayerScore = function(d){return "spiller point"};
+exports.incrementPlayerScore = function(d){return "score point"};
 
 exports.makeProjectileDisappear = function(d){return "forsvind"};
 
@@ -21568,7 +21568,7 @@ exports.moveDirectionUp = function(d){return "op"};
 
 exports.moveDirectionRandom = function(d){return "tilfældig"};
 
-exports.moveDistance25 = function(d){return "25 pixel"};
+exports.moveDistance25 = function(d){return "25 pixels"};
 
 exports.moveDistance50 = function(d){return "50 pixels"};
 
@@ -21716,7 +21716,7 @@ exports.saySpriteN = function(d){return "spilleren "+v(d,"spriteIndex")+" siger"
 
 exports.saySpriteTooltip = function(d){return "En taleboble med den tilhørende tekst fra det angivne karakter."};
 
-exports.scoreText = function(d){return "Point: "+v(d,"playerScore")+": "+v(d,"opponentScore")};
+exports.scoreText = function(d){return "Score: "+v(d,"playerScore")};
 
 exports.setBackground = function(d){return "sæt baggrund"};
 

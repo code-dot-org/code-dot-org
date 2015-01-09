@@ -12502,11 +12502,11 @@ exports.ifTooltip = function(d){return "Jika ada laluan ke arah yang ditentukan,
 
 exports.ifelseTooltip = function(d){return "Jika terdapat lorong dalam arah yang ditentukan, maka lakukan tindakan blok pertama. Sebaliknya, lakukan tindakan untuk blok kedua."};
 
-exports.incrementOpponentScore = function(d){return "increment opponent score"};
+exports.incrementOpponentScore = function(d){return "score opponent point"};
 
 exports.incrementOpponentScoreTooltip = function(d){return "Add one to the current opponent score."};
 
-exports.incrementPlayerScore = function(d){return "increment player score"};
+exports.incrementPlayerScore = function(d){return "score point"};
 
 exports.incrementPlayerScoreTooltip = function(d){return "Add one to the current player score."};
 
@@ -12578,7 +12578,7 @@ exports.playSoundRubber = function(d){return "play rubber sound"};
 
 exports.playSoundSlap = function(d){return "play slap sound"};
 
-exports.playSoundTooltip = function(d){return "Play a sound."};
+exports.playSoundTooltip = function(d){return "Play the chosen sound."};
 
 exports.playSoundWinPoint = function(d){return "play win point sound"};
 
@@ -12636,7 +12636,7 @@ exports.setPaddleHardcourt = function(d){return "set hardcourt paddle"};
 
 exports.setPaddleRetro = function(d){return "set retro paddle"};
 
-exports.setPaddleTooltip = function(d){return "Sets the ball paddle"};
+exports.setPaddleTooltip = function(d){return "Sets the paddle image"};
 
 exports.setPaddleSpeedRandom = function(d){return "set random paddle speed"};
 
@@ -12670,29 +12670,29 @@ exports.whenBallMissesPaddle = function(d){return "when ball misses paddle"};
 
 exports.whenBallMissesPaddleTooltip = function(d){return "Execute the actions below when a ball misses the paddle."};
 
-exports.whenDown = function(d){return "when Down arrow"};
+exports.whenDown = function(d){return "when down arrow"};
 
-exports.whenDownTooltip = function(d){return "Execute the actions below when the Down arrow button is pressed."};
+exports.whenDownTooltip = function(d){return "Execute the actions below when the down arrow key is pressed."};
 
 exports.whenGameStarts = function(d){return "Apabila permainan bermula"};
 
 exports.whenGameStartsTooltip = function(d){return "Execute the actions below when the game starts."};
 
-exports.whenLeft = function(d){return "when Left arrow"};
+exports.whenLeft = function(d){return "when left arrow"};
 
-exports.whenLeftTooltip = function(d){return "Execute the actions below when the Left arrow button is pressed."};
+exports.whenLeftTooltip = function(d){return "Execute the actions below when the left arrow key is pressed."};
 
 exports.whenPaddleCollided = function(d){return "when ball hits paddle"};
 
 exports.whenPaddleCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a paddle."};
 
-exports.whenRight = function(d){return "when Right arrow"};
+exports.whenRight = function(d){return "when right arrow"};
 
-exports.whenRightTooltip = function(d){return "Execute the actions below when the Right arrow button is pressed."};
+exports.whenRightTooltip = function(d){return "Execute the actions below when the right arrow key is pressed."};
 
-exports.whenUp = function(d){return "when Up arrow"};
+exports.whenUp = function(d){return "when up arrow"};
 
-exports.whenUpTooltip = function(d){return "Execute the actions below when the Up arrow button is pressed."};
+exports.whenUpTooltip = function(d){return "Execute the actions below when the up arrow key is pressed."};
 
 exports.whenWallCollided = function(d){return "when ball hits wall"};
 
@@ -12741,13 +12741,13 @@ exports.dialogCancel = function(d){return "Batal"};
 
 exports.dialogOK = function(d){return "OK"};
 
-exports.directionNorthLetter = function(d){return "U"};
+exports.directionNorthLetter = function(d){return "N"};
 
 exports.directionSouthLetter = function(d){return "S"};
 
-exports.directionEastLetter = function(d){return "T"};
+exports.directionEastLetter = function(d){return "E"};
 
-exports.directionWestLetter = function(d){return "B"};
+exports.directionWestLetter = function(d){return "W"};
 
 exports.end = function(d){return "tamat"};
 
@@ -12769,7 +12769,7 @@ exports.errorUnusedFunction = function(d){return "You created a function, but ne
 
 exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
 
-exports.extraTopBlocks = function(d){return "You have extra blocks that aren't attached to an event block."};
+exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"};
 
 exports.finalStage = function(d){return "Tahniah! Anda telah melengkapkan peringkat akhir."};
 
@@ -12853,9 +12853,9 @@ exports.hintRequest = function(d){return "See hint"};
 
 exports.backToPreviousLevel = function(d){return "Kembali ke tahap yang sebelumnya"};
 
-exports.saveToGallery = function(d){return "Simpan ke galeri anda"};
+exports.saveToGallery = function(d){return "Save to gallery"};
 
-exports.savedToGallery = function(d){return "Disimpan ke galeri anda!"};
+exports.savedToGallery = function(d){return "Saved in gallery!"};
 
 exports.shareFailure = function(d){return "Sorry, we can't share this program."};
 

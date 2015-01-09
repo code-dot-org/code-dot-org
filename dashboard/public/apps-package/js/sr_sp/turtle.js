@@ -15474,7 +15474,7 @@ exports.penTooltip = function(d){return "листа лјубителја оло�
 
 exports.penUp = function(d){return "Узми оловку"};
 
-exports.reinfFeedbackMsg = function(d){return "Да ли овако изгледа оно што сте желјели? Можете изабрати опцију \"Try again\" да видите свој цртеж."};
+exports.reinfFeedbackMsg = function(d){return "Here is your drawing! Keep working on it or continue to the next puzzle."};
 
 exports.setColour = function(d){return "постави боју"};
 

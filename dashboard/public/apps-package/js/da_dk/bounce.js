@@ -12506,7 +12506,7 @@ exports.incrementOpponentScore = function(d){return "modstanderen point"};
 
 exports.incrementOpponentScoreTooltip = function(d){return "Tilføj \"1\" til den nuværende modstanders score."};
 
-exports.incrementPlayerScore = function(d){return "increment player score"};
+exports.incrementPlayerScore = function(d){return "score point"};
 
 exports.incrementPlayerScoreTooltip = function(d){return "Tilføj en til den aktuelle spillers score."};
 

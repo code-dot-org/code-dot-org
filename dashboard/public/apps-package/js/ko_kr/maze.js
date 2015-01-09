@@ -16826,7 +16826,7 @@ exports.moveBackward = function(d){return "뒤로 이동하기"};
 
 exports.moveEastTooltip = function(d){return "오른쪽으로 한칸 이동합니다."};
 
-exports.moveForward = function(d){return "앞으로 움직이기"};
+exports.moveForward = function(d){return "move forward"};
 
 exports.moveForwardTooltip = function(d){return "한 칸 앞으로 이동합니다."};
 

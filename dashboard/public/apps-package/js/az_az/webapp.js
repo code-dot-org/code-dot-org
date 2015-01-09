@@ -12506,7 +12506,7 @@ exports.finalStageTrophies = function(d){return "Təbriklər! Siz sonuncu mərh�
 
 exports.finish = function(d){return "Finish"};
 
-exports.generatedCodeInfo = function(d){return "Proqramınızın blokları dünyanın ən geniş qəbul olunmuş proqramlaşdırma dili olan \"JavaScript\"də (\"cavaskript\") də yazıla bilər:"};
+exports.generatedCodeInfo = function(d){return "Even top universities teach block-based coding (e.g., "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). But under the hood, the blocks you have assembled can also be shown in JavaScript, the world's most widely used coding language:"};
 
 exports.hashError = function(d){return "Təəssüf ki, '%1' yaddaşa verilmiş heç bir proqramla uyğunlaşmır."};
 
@@ -12651,7 +12651,7 @@ exports.no = function(d){return "Xeyr"};
 
 exports.numBlocksNeeded = function(d){return "Bu  tapmaca %1 blokla həll oluna bilər."};
 
-exports.pause = function(d){return "Pause"};
+exports.pause = function(d){return "Break"};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
 
