@@ -43,6 +43,7 @@ level 'Eval Strings Images 8'
 level 'Multi Strings Images 1'
 level 'Eval Strings Images Free Play'
 
+
 stage 'Unplugged: Contracts'
 level 'Contracts'
 
@@ -55,6 +56,9 @@ level 'Eval Contracts 3'
 level 'Eval Contracts 3 B'
 level 'Eval Contracts 4'
 level 'Eval Contracts 4 B'
+level 'CREATING CONTRACTS FROM EXAMPLES 1'
+level 'Creating Contracts From Examples 2'
+
 
 stage 'Calc: Defining Variables'
 level 'Calc Vars 1'

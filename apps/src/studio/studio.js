@@ -16,7 +16,6 @@ var codegen = require('../codegen');
 var api = require('./api');
 var blocks = require('./blocks');
 var page = require('../templates/page.html');
-var feedback = require('../feedback.js');
 var dom = require('../dom');
 var Collidable = require('./collidable');
 var Projectile = require('./projectile');
@@ -1308,7 +1307,7 @@ var displayFeedback = function() {
       feedbackImage: Studio.feedbackImage,
       twitter: twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
-      saveToGalleryUrl: level.freePlay && Studio.response.save_to_gallery_url,
+      saveToGalleryUrl: level.freePlay && Studio.response && Studio.response.save_to_gallery_url,
       appStrings: {
         reinfFeedbackMsg: studioMsg.reinfFeedbackMsg(),
         sharingText: studioMsg.shareGame()
@@ -2506,7 +2505,7 @@ Studio.setSpriteXY = function (opts) {
   var x = opts.x - sprite.width / 2;
   var y = opts.y - sprite.height / 2;
   var samePosition = (sprite.x === x && sprite.y === y);
-  
+
   // Don't reset collisions inside stop() if we're in the same position
   Studio.stop({
     'spriteIndex': opts.spriteIndex,

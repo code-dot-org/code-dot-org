@@ -1,11 +1,9 @@
-if ENV["CODECLIMATE_REPO_TOKEN"]
-  require "codeclimate-test-reporter"
-  CodeClimate::TestReporter.start
-else
-# there can be only one code coverage tool
-  require 'simplecov'
-  SimpleCov.start :rails
-end
+# uncomment the below if you want to see code coverage
+#  require 'simplecov'
+#  SimpleCov.start :rails
+
+require 'minitest/reporters'
+MiniTest::Reporters.use!
 
 ENV["RAILS_ENV"] ||= "test"
 

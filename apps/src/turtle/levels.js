@@ -1,5 +1,5 @@
 var levelBase = require('../level_base');
-var Colours = require('./core').Colours;
+var Colours = require('./colours');
 var answer = require('./answers').answer;
 var msg = require('../../locale/current/turtle');
 var blockUtils = require('../block_utils');

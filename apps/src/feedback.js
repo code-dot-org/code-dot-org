@@ -1,11 +1,12 @@
 var trophy = require('./templates/trophy.html');
 var utils = require('./utils');
-var readonly = require('./templates/readonly.html');
 var codegen = require('./codegen');
 var msg = require('../locale/current/common');
 var dom = require('./dom');
 var xml = require('./xml');
 var _ = utils.getLodash();
+
+var FeedbackBlocks = require('./feedbackBlocks');
 
 // TODO (br-pair): This is a hack. We initially set our studioAppSingleton to
 // be the global StudioApp. This will be the case for all apps other than Artist.
@@ -19,7 +20,8 @@ exports.applySingleton = function (singleton) {
 
 var TestResults = require('./constants').TestResults;
 
-exports.HintRequestPlacement = {
+// NOTE: These must be kept in sync with activity_hint.rb in dashboard.
+var HintRequestPlacement = {
   NONE: 0,  // This value must not be changed.
   LEFT: 1,  // Hint request button is on left.
   RIGHT: 2  // Hint request button is on right.
@@ -48,7 +50,8 @@ exports.displayFeedback = function(options) {
   if (hadShareFailure) {
     trackEvent('Share', 'Failure', options.response.share_failure.type);
   }
-  var feedbackBlocks = new FeedbackBlocks(options);
+  var feedbackBlocks = new FeedbackBlocks(options, getMissingRequiredBlocks(),
+    studioAppSingleton);
   // feedbackMessage must be initialized after feedbackBlocks
   // because FeedbackBlocks can mutate options.response.hint.
   var feedbackMessage = getFeedbackMessage(options);
@@ -289,7 +292,7 @@ var getFeedbackButtons = function(options) {
       nextLevel: exports.canContinueToNextLevel(options.feedbackType),
       isK1: options.isK1,
       hintRequestExperiment: options.hintRequestExperiment &&
-          (options.hintRequestExperiment === exports.HintRequestPlacement.LEFT ?
+          (options.hintRequestExperiment === HintRequestPlacement.LEFT ?
               'left' : 'right'),
       assetUrl: studioAppSingleton.assetUrl,
       freePlay: options.freePlay
@@ -503,7 +506,7 @@ exports.createSharingDiv = function(options) {
     options.facebookUrl = facebookUrl;
   }
 
-  options.assetUrl = _.bind(studioAppSingleton.assetUrl, studioAppSingleton);
+  options.assetUrl = studioAppSingleton.assetUrl;
 
   var sharingDiv = document.createElement('div');
   sharingDiv.setAttribute('style', 'display:inline-block');
@@ -639,78 +642,6 @@ var getGeneratedCodeString = function() {
   }
   else {
     return codegen.workspaceCode(Blockly);
-  }
-};
-
-var FeedbackBlocks = function(options) {
-  // Check whether blocks are embedded in the hint returned from dashboard.
-  // See below comment for format.
-  var embeddedBlocks = options.response && options.response.hint &&
-      options.response.hint.indexOf("[{") !== 0;
-  if (!embeddedBlocks &&
-      options.feedbackType !==
-      TestResults.MISSING_BLOCK_UNFINISHED &&
-      options.feedbackType !==
-      TestResults.MISSING_BLOCK_FINISHED) {
-      return;
-  }
-
-  var blocksToDisplay = [];
-  if (embeddedBlocks) {
-    // Hint should be of the form: SOME TEXT [{..}, {..}, ..] IGNORED.
-    // Example: 'Try the following block: [{"type": "maze_moveForward"}]'
-    // Note that double quotes are required by the JSON parser.
-    var parts = options.response.hint.match(/(.*)(\[.*\])/);
-    if (!parts) {
-      return;
-    }
-    options.response.hint = parts[1].trim();  // Remove blocks from hint.
-    try {
-      blocksToDisplay = JSON.parse(parts[2]);
-    } catch(err) {
-      // The blocks could not be parsed.  Ignore them.
-      return;
-    }
-  } else {
-    var missingRequiredBlocks = getMissingRequiredBlocks();
-    blocksToDisplay = missingRequiredBlocks.blocksToDisplay;
-    if (missingRequiredBlocks.message) {
-      options.message = missingRequiredBlocks.message;
-    }
-  }
-
-  if (blocksToDisplay.length === 0) {
-    return;
-  }
-
-  this.div = document.createElement('div');
-  this.html = readonly({
-    app: options.app,
-    assetUrl: studioAppSingleton.assetUrl,
-    options: {
-      readonly: true,
-      locale: studioAppSingleton.LOCALE,
-      localeDirection: studioAppSingleton.localeDirection(),
-      baseUrl: studioAppSingleton.BASE_URL,
-      cacheBust: studioAppSingleton.CACHE_BUST,
-      skinId: options.skin,
-      level: options.level,
-      blocks: generateXMLForBlocks(blocksToDisplay)
-    }
-  });
-  this.iframe = document.createElement('iframe');
-  this.iframe.setAttribute('id', 'feedbackBlocks');
-  this.iframe.setAttribute('allowtransparency', 'true');
-  this.div.appendChild(this.iframe);
-};
-
-FeedbackBlocks.prototype.show = function() {
-  var iframe = document.getElementById('feedbackBlocks');
-  if (iframe) {
-    var doc = iframe.contentDocument || iframe.contentWindow.document;
-    doc.open();
-    doc.write(this.html);
-    doc.close();
   }
 };
 
@@ -866,6 +797,7 @@ var getMissingRequiredBlocks = function () {
   var missingBlocks = [];
   var customMessage = null;
   var code = null;  // JavaScript code, which is initialized lazily.
+  // TODO (br-pair) : we should probably just pass required_blocks
   if (studioAppSingleton.REQUIRED_BLOCKS && studioAppSingleton.REQUIRED_BLOCKS.length) {
     var userBlocks = getUserBlocks();
     // For each list of required blocks
@@ -1040,57 +972,6 @@ exports.createModalDialogWithIcon = function(options) {
     onKeydown: btn ? keydownHandler : undefined,
     id: options.id
   });
-};
-
-/**
- * Creates the XML for blocks to be displayed in a read-only frame.
- * @param {Array} blocks An array of blocks to display (with optional args).
- * @return {string} The generated string of XML.
- */
-var generateXMLForBlocks = function(blocks) {
-  var blockXMLStrings = [];
-  var blockX = 10;  // Prevent left output plugs from being cut off.
-  var blockY = 0;
-  var blockXPadding = 200;
-  var blockYPadding = 120;
-  var blocksPerLine = 2;
-  var k, name;
-  for (var i = 0; i < blocks.length; i++) {
-    var block = blocks[i];
-    if (block.blockDisplayXML) {
-      blockXMLStrings.push(block.blockDisplayXML);
-      continue;
-    }
-    blockXMLStrings.push('<block', ' type="', block.type, '" x="',
-                        blockX.toString(), '" y="', blockY, '">');
-    if (block.titles) {
-      var titleNames = Object.keys(block.titles);
-      for (k = 0; k < titleNames.length; k++) {
-        name = titleNames[k];
-        blockXMLStrings.push('<title name="', name, '">',
-                            block.titles[name], '</title>');
-      }
-    }
-    if (block.values) {
-      var valueNames = Object.keys(block.values);
-      for (k = 0; k < valueNames.length; k++) {
-        name = valueNames[k];
-        blockXMLStrings.push('<value name="', name, '">',
-                            block.values[name], '</value>');
-      }
-    }
-    if (block.extra) {
-      blockXMLStrings.push(block.extra);
-    }
-    blockXMLStrings.push('</block>');
-    if ((i + 1) % blocksPerLine === 0) {
-      blockY += blockYPadding;
-      blockX = 0;
-    } else {
-      blockX += blockXPadding;
-    }
-  }
-  return blockXMLStrings.join('');
 };
 
 /**

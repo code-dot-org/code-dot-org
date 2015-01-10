@@ -166,20 +166,6 @@
       onAttempt: function(report) {
         report.fallbackResponse = #{@fallback_response.to_json};
         report.callback = '#{@callback}';
-        if (#{@artist_builder.to_json}) {
-          $('#builder-error').text('');
-          ['program', 'name', 'instructions', 'type'].forEach(function(key) {
-            report['level[' + key + ']'] = report[key];
-          });
-          delete report.level;
-          report.onComplete = function(response) {
-            if(lastServerResponse.nextRedirect) {
-              window.location.href = lastServerResponse.nextRedirect;
-            } else {
-              $('#builder-error').text(lastServerResponse.report_error);
-            }
-          };
-        }
         // Track puzzle attempt event
         trackEvent('Puzzle', 'Attempt', script_path, report.pass ? 1 : 0);
         if (report.pass) {
