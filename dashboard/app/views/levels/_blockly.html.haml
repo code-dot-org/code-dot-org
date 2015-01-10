@@ -106,17 +106,17 @@
             config.position.my = reverseCallout(config.position.my);
             config.position.at = reverseCallout(config.position.at);
             if (config.position.adjust) {
-               config.position.adjust.x *= -1;
+              config.position.adjust.x *= -1;
             }
           }
 
           if (callout.on) {
-           window.addEventListener(callout.on, function() {
-             if (!callout.seen && $(selector).length > 0) {
-               callout.seen = true;
-               $(selector).qtip(config).qtip('show');
-             }
-           });
+            window.addEventListener(callout.on, function() {
+              if (!callout.seen && $(selector).length > 0) {
+                callout.seen = true;
+                $(selector).qtip(config).qtip('show');
+              }
+            });
           } else {
             $(selector).qtip(config).qtip('show');
           }
