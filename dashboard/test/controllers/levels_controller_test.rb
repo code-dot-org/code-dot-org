@@ -496,6 +496,9 @@ class LevelsControllerTest < ActionController::TestCase
     get :show, id: level
     assert_response :redirect
 
+    get :edit, id: level, embed:true
+    assert_response :redirect
+
     get :show, id: level, embed:true
     assert_response :success
   end
