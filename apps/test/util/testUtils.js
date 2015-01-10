@@ -3,7 +3,6 @@ chai.Assertion.includeStack = true;
 var assert = chai.assert;
 exports.assert = assert;
 
-// TODO (brent) - unify around using built files instead of src files
 exports.buildPath = function (path) {
   return __dirname + '/../../build/js/' + path;
 };

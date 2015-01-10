@@ -1,4 +1,6 @@
-var TestResults = require('../../../src/constants.js').TestResults;
+var testUtils = require('../../util/testUtils');
+var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
+
 
 // Test edge collisions
 // Start with a sprite in the top left and a srpite in the lower right.
