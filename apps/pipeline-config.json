@@ -1,0 +1,9 @@
+{
+  "public": "./dashboard/public",
+  "javascripts": {
+    "./shared/js/*.scss": "./build/package/css"
+  },
+  "stylesheets": {
+    "./style/*.scss": "./build/package/css"
+  }
+}

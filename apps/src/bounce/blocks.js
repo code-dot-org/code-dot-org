@@ -6,7 +6,7 @@
  */
 'use strict';
 
-var msg = require('../../locale/current/bounce');
+var msg = window.blockly.bounce_locale;
 var codegen = require('../codegen');
 
 var generateSetterCode = function (ctx, name) {

@@ -8,9 +8,9 @@
 /* global Studio */
 
 var studioApp = require('../StudioApp').singleton;
-var msg = require('../../locale/current/studio');
+var msg = window.blockly.studio_locale;
 var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
-var commonMsg = require('../../locale/current/common');
+var commonMsg = window.blockly.locale;
 var codegen = require('../codegen');
 var constants = require('./constants');
 var utils = require('../utils');

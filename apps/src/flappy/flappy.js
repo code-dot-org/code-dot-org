@@ -8,12 +8,12 @@
 'use strict';
 
 var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('../../locale/current/common');
-var flappyMsg = require('../../locale/current/flappy');
+var commonMsg = window.blockly.locale;
+var flappyMsg = window.blockly.flappy_locale;
 var skins = require('../skins');
 var codegen = require('../codegen');
 var api = require('./api');
-var page = require('../templates/page.html');
+var page = require('../templates/page.html.ejs');
 var dom = require('../dom');
 var constants = require('./constants');
 var utils = require('../utils');
@@ -495,8 +495,8 @@ Flappy.init = function(config) {
     assetUrl: studioApp.assetUrl,
     data: {
       localeDirection: studioApp.localeDirection(),
-      visualization: require('./visualization.html')(),
-      controls: require('./controls.html')({assetUrl: studioApp.assetUrl, shareable: level.shareable}),
+      visualization: require('./visualization.html.ejs')(),
+      controls: require('./controls.html.ejs')({assetUrl: studioApp.assetUrl, shareable: level.shareable}),
       blockUsed: undefined,
       idealBlockNumber: undefined,
       editCode: level.editCode,

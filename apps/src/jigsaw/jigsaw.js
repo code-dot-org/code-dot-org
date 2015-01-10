@@ -9,7 +9,7 @@
 
 var studioApp = require('../StudioApp').singleton;
 var skins = require('../skins');
-var page = require('../templates/page.html');
+var page = require('../templates/page.html.ejs');
 var dom = require('../dom');
 
 /**
@@ -128,7 +128,7 @@ Jigsaw.init = function(config) {
     assetUrl: studioApp.assetUrl,
     data: {
       localeDirection: studioApp.localeDirection(),
-      controls: require('./controls.html')({assetUrl: studioApp.assetUrl}),
+      controls: require('./controls.html.ejs')({assetUrl: studioApp.assetUrl}),
       editCode: level.editCode,
       blockCounterClass: 'block-counter-default'
     }

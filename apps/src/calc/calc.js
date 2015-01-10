@@ -23,11 +23,11 @@ var Calc = module.exports;
  */
 var studioApp = require('../StudioApp').singleton;
 var Calc = module.exports;
-var commonMsg = require('../../locale/current/common');
-var calcMsg = require('../../locale/current/calc');
+var commonMsg = window.blockly.locale;
+var calcMsg = window.blockly.calc_locale;
 var skins = require('../skins');
 var levels = require('./levels');
-var page = require('../templates/page.html');
+var page = require('../templates/page.html.ejs');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
 var _ = require('../utils').getLodash();
@@ -114,8 +114,8 @@ Calc.init = function(config) {
     assetUrl: studioApp.assetUrl,
     data: {
       localeDirection: studioApp.localeDirection(),
-      visualization: require('./visualization.html')(),
-      controls: require('./controls.html')({
+      visualization: require('./visualization.html.ejs')(),
+      controls: require('./controls.html.ejs')({
         assetUrl: studioApp.assetUrl
       }),
       blockUsed : undefined,

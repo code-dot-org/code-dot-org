@@ -3,7 +3,7 @@
  */
 'use strict';
 
-var commonMsg = require('../locale/current/common');
+var commonMsg = window.blockly.locale;
 
 /**
  * Install extensions to Blockly's language and JavaScript generator

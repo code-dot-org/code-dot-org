@@ -23,13 +23,13 @@ var Eval = module.exports;
  */
 var studioApp = require('../StudioApp').singleton;
 var Eval = module.exports;
-var commonMsg = require('../../locale/current/common');
-var evalMsg = require('../../locale/current/eval');
+var commonMsg = window.blockly.locale;
+var evalMsg = window.blockly.eval_locale;
 var skins = require('../skins');
 var levels = require('./levels');
 var codegen = require('../codegen');
 var api = require('./api');
-var page = require('../templates/page.html');
+var page = require('../templates/page.html.ejs');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
 var CustomEvalError = require('./evalError');
@@ -71,8 +71,8 @@ Eval.init = function(config) {
     assetUrl: studioApp.assetUrl,
     data: {
       localeDirection: studioApp.localeDirection(),
-      visualization: require('./visualization.html')(),
-      controls: require('./controls.html')({
+      visualization: require('./visualization.html.ejs')(),
+      controls: require('./controls.html.ejs')({
         assetUrl: studioApp.assetUrl
       }),
       blockUsed : undefined,
