@@ -311,7 +311,7 @@ module LevelsHelper
       level.delete key
     end
 
-    [level, app_options]
+    app_options
   end
 
   def string_or_image(prefix, text)
