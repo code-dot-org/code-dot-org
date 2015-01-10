@@ -146,7 +146,9 @@ class LevelsController < ApplicationController
     # Can't use case/when because a constantized string does not === the class by that name.
     if @type_class
       if @type_class == Artist
-        artist_builder
+        @game = Game.custom_artist
+        @level = @type_class.new
+        render :edit
       elsif @type_class <= Studio
         @game = Game.custom_studio
         @level = @type_class.new
@@ -181,21 +183,6 @@ class LevelsController < ApplicationController
     name = "#{old_level.name} (copy 0)"
     begin result = @level.update(name: name.next!) end until result
     redirect_to(edit_level_url(@level))
-  end
-
-  def artist_builder
-    authorize! :create, :level
-    @level = Artist.builder
-    @game = @level.game
-    @full_width = true
-    @artist_builder = true
-    @callback = levels_path(game_id: @game.id)
-    @level.x = Integer(params[:x]) rescue nil
-    @level.y = Integer(params[:y]) rescue nil
-    @level.start_direction = Integer(params[:start_direction]) rescue nil
-    @level.toolbox_blocks = @level.complete_toolbox('toolbox_blocks')  # Provide complete toolbox for editing start/toolbox blocks.
-    show
-    render :show
   end
 
   def can_modify?
