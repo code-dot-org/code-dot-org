@@ -65,11 +65,11 @@ FeedbackUtils.displayFeedback = function(options) {
   var hadShareFailure = (options.response && options.response.share_failure);
   var showingSharing = options.showingSharing && !hadShareFailure;
 
-  var canContinue = FeedbackUtils.canContinueToNextLevel(options.feedbackType);
+  var canContinue = feedbackSingleton.canContinueToNextLevel(options.feedbackType);
   var displayShowCode = studioAppSingleton.enableShowCode && canContinue && !showingSharing;
   var feedback = document.createElement('div');
   var sharingDiv = (canContinue && showingSharing) ? FeedbackUtils.createSharingDiv(options) : null;
-  var showCode = displayShowCode ? getShowCodeElement(options) : null;
+  var showCode = displayShowCode ? feedbackSingleton.getShowCodeElement_(options) : null;
   var shareFailureDiv = hadShareFailure ? getShareFailure(options) : null;
   if (hadShareFailure) {
     trackEvent('Share', 'Failure', options.response.share_failure.type);
@@ -272,7 +272,7 @@ FeedbackUtils.getNumBlocksUsed = function() {
   if (studioAppSingleton.editCode) {
     var codeLines = 0;
     // quick and dirty method to count non-blank lines that don't start with //
-    var lines = getGeneratedCodeString().split("\n");
+    var lines = feedbackSingleton.getGeneratedCodeString_().split("\n");
     for (i = 0; i < lines.length; i++) {
       if ((lines[i].length > 1) && (lines[i][0] != '/' || lines[i][1] != '/')) {
         codeLines++;
@@ -293,7 +293,7 @@ FeedbackUtils.getNumCountableBlocks = function() {
   if (studioAppSingleton.editCode) {
     var codeLines = 0;
     // quick and dirty method to count non-blank lines that don't start with //
-    var lines = getGeneratedCodeString().split("\n");
+    var lines = feedbackSingleton.getGeneratedCodeString_().split("\n");
     for (i = 0; i < lines.length; i++) {
       if ((lines[i].length > 1) && (lines[i][0] != '/' || lines[i][1] != '/')) {
         codeLines++;
@@ -310,10 +310,10 @@ var getFeedbackButtons = function(options) {
   buttons.innerHTML = require('./templates/buttons.html')({
     data: {
       previousLevel:
-        !FeedbackUtils.canContinueToNextLevel(options.feedbackType) &&
+        !feedbackSingleton.canContinueToNextLevel(options.feedbackType) &&
         options.showPreviousButton,
       tryAgain: options.feedbackType !== TestResults.ALL_PASS,
-      nextLevel: FeedbackUtils.canContinueToNextLevel(options.feedbackType),
+      nextLevel: feedbackSingleton.canContinueToNextLevel(options.feedbackType),
       isK1: options.isK1,
       hintRequestExperiment: options.hintRequestExperiment &&
           (options.hintRequestExperiment === HINT_REQUEST_PLACEMENT.LEFT ?
@@ -620,7 +620,7 @@ var getTrophiesElement = function(options) {
   return trophies;
 };
 
-var getShowCodeElement = function(options) {
+FeedbackUtils.prototype.getShowCodeElement_ = function(options) {
   var showCodeDiv = document.createElement('div');
   showCodeDiv.setAttribute('id', 'show-code');
 
@@ -637,10 +637,10 @@ var getShowCodeElement = function(options) {
   });
 
   var showCodeButton = showCodeDiv.querySelector('#show-code-button');
-  showCodeButton.addEventListener('click', function () {
-    showCodeDiv.appendChild(feedbackSingleton.getGeneratedCodeElement_());
+  showCodeButton.addEventListener('click', _.bind(function () {
+    showCodeDiv.appendChild(this.getGeneratedCodeElement_());
     showCodeButton.style.display = 'none';
-  });
+  }, this));
 
   return showCodeDiv;
 };
@@ -650,7 +650,7 @@ var getShowCodeElement = function(options) {
  * @param {number} feedbackType A constant property of TestResults,
  *     typically produced by studioAppSingleton.getTestResults().
  */
-FeedbackUtils.canContinueToNextLevel = function(feedbackType) {
+FeedbackUtils.prototype.canContinueToNextLevel = function(feedbackType) {
   return (feedbackType === TestResults.ALL_PASS ||
     feedbackType === TestResults.TOO_MANY_BLOCKS_FAIL ||
     feedbackType ===  TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL ||
@@ -660,9 +660,9 @@ FeedbackUtils.canContinueToNextLevel = function(feedbackType) {
 /**
  * Retrieve a string containing the user's generated Javascript code.
  */
-var getGeneratedCodeString = function() {
-  if (studioAppSingleton.editCode) {
-    return studioAppSingleton.editor ? studioAppSingleton.editor.getValue() : '';
+FeedbackUtils.prototype.getGeneratedCodeString_ = function() {
+  if (this.studioApp_.editCode) {
+    return this.studioApp_.editor ? this.studioApp_.editor.getValue() : '';
   }
   else {
     return codegen.workspaceCode(Blockly);
@@ -676,7 +676,7 @@ FeedbackUtils.prototype.getGeneratedCodeElement_ = function() {
   };
 
   var infoMessage = this.studioApp_.editCode ?  "" : msg.generatedCodeInfo(codeInfoMsgParams);
-  var code = getGeneratedCodeString();
+  var code = this.getGeneratedCodeString_();
 
   var codeDiv = document.createElement('div');
   codeDiv.innerHTML = require('./templates/code.html')({

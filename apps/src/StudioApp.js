@@ -873,7 +873,7 @@ StudioAppClass.prototype.builderForm_ = function(onAttemptCallback) {
 StudioAppClass.prototype.report = function(options) {
   // copy from options: app, level, result, testResult, program, onComplete
   var report = options;
-  report.pass = this.feedback_.canContinueToNextLevel(options.testResult);
+  report.pass = this.feedbackInstance_.canContinueToNextLevel(options.testResult);
   report.time = ((new Date().getTime()) - this.initTime);
   report.attempt = this.attempts;
   report.lines = this.feedback_.getNumBlocksUsed();
