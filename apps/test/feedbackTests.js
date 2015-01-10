@@ -85,7 +85,7 @@ describe("getMissingRequiredBlocks tests", function () {
     assert(!options.userBlockXml || loaded, "either we didnt have  input xml" +
       "or we did, and we loaded something");
 
-    var missing = studioAppSingleton.feedback_.getMissingRequiredBlocks_();
+    var missing = studioAppSingleton.feedbackInstance_.getMissingRequiredBlocks_();
     validateMissingRequiredBlocks(missing.blocksToDisplay, options.expectedResult);
   }
 

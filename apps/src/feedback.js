@@ -74,7 +74,7 @@ FeedbackUtils.displayFeedback = function(options) {
   if (hadShareFailure) {
     trackEvent('Share', 'Failure', options.response.share_failure.type);
   }
-  var feedbackBlocks = new FeedbackBlocks(options, FeedbackUtils.getMissingRequiredBlocks_(),
+  var feedbackBlocks = new FeedbackBlocks(options, feedbackSingleton.getMissingRequiredBlocks_(),
     studioAppSingleton);
   // feedbackMessage must be initialized after feedbackBlocks
   // because FeedbackBlocks can mutate options.response.hint.
@@ -777,7 +777,7 @@ var getEmptyContainerBlock = function() {
  * @return {boolean} true if all blocks are present, false otherwise.
  */
 var hasAllRequiredBlocks = function() {
-  return FeedbackUtils.getMissingRequiredBlocks_().blocksToDisplay.length === 0;
+  return feedbackSingleton.getMissingRequiredBlocks_().blocksToDisplay.length === 0;
 };
 
 /**
@@ -817,22 +817,22 @@ var getCountableBlocks = function() {
  * of an id in the corresponding template.soy. 'message' is an optional message
  * to override the default error text.
  */
-FeedbackUtils.getMissingRequiredBlocks_ = function () {
+FeedbackUtils.prototype.getMissingRequiredBlocks_ = function () {
   var missingBlocks = [];
   var customMessage = null;
   var code = null;  // JavaScript code, which is initialized lazily.
   // TODO (br-pair) : we should probably just pass required_blocks
-  if (studioAppSingleton.REQUIRED_BLOCKS && studioAppSingleton.REQUIRED_BLOCKS.length) {
+  if (this.studioApp_.REQUIRED_BLOCKS && this.studioApp_.REQUIRED_BLOCKS.length) {
     var userBlocks = getUserBlocks();
     // For each list of required blocks
     // Keep track of the number of the missing block lists. It should not be
     // bigger than studioAppSingleton.NUM_REQUIRED_BLOCKS_TO_FLAG
     var missingBlockNum = 0;
     for (var i = 0;
-         i < studioAppSingleton.REQUIRED_BLOCKS.length &&
-             missingBlockNum < studioAppSingleton.NUM_REQUIRED_BLOCKS_TO_FLAG;
+         i < this.studioApp_.REQUIRED_BLOCKS.length &&
+             missingBlockNum < this.studioApp_.NUM_REQUIRED_BLOCKS_TO_FLAG;
          i++) {
-      var requiredBlock = studioAppSingleton.REQUIRED_BLOCKS[i];
+      var requiredBlock = this.studioApp_.REQUIRED_BLOCKS[i];
       // For each of the test
       // If at least one of the tests succeeded, we consider the required block
       // is used
@@ -860,7 +860,7 @@ FeedbackUtils.getMissingRequiredBlocks_ = function () {
       }
       if (!usedRequiredBlock) {
         missingBlockNum++;
-        missingBlocks = missingBlocks.concat(studioAppSingleton.REQUIRED_BLOCKS[i][0]);
+        missingBlocks = missingBlocks.concat(this.studioApp_.REQUIRED_BLOCKS[i][0]);
       }
     }
   }
