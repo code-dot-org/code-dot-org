@@ -159,6 +159,23 @@
             <title name="OP">ADD</title>
           </block>
         </category>
+        <category name="Variables" custom="VARIABLE">
+          <block type="variables_get">
+            <title name="VAR">counter</title>
+          </block>
+          <block type="variables_set" inline="false">
+            <title name="VAR">i</title>
+          </block>
+          <block type="variables_get">
+            <title name="VAR">i</title>
+          </block>
+          <block type="variables_set" inline="false">
+            <title name="VAR">points</title>
+          </block>
+          <block type="variables_get">
+            <title name="VAR">points</title>
+          </block>
+        </category>
       </xml>
     </toolbox_blocks>
   </blocks>

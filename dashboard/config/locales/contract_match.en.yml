@@ -75,3 +75,9 @@ en:
         EXAMPLE 2.solution_blocks, 300: EXAMPLE 2.solution_blocks, 300
         Square|image|color:string|size:Number: Square|image|color:string|size:Number
         Example 2.solution_blocks, 300: Example 2.solution_blocks, 300
+      Creating Contracts From Examples 3:
+        Creating Contracts From Examples 3: Creating Contracts From Examples 3
+        Try using the "text" function to write this red text at size 40.: Try using the "text" function to write this red text at size 40.
+        Example 3.solution_blocks, 300: Example 3.solution_blocks, 300
+        Text|image|color:string|text:string|size:number: Text|image|color:string|text:string|size:number
+        text|image|color:string|text:string|size:number: text|image|color:string|text:string|size:number
