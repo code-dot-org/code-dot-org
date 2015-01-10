@@ -648,7 +648,7 @@ StudioAppClass.prototype.sortBlocksByVisibility = function(xmlBlocks) {
 };
 
 StudioAppClass.prototype.createModalDialogWithIcon = function(options) {
-  return this.feedback_.createModalDialogWithIcon(options);
+  return this.feedbackInstance_.createModalDialogWithIcon(options);
 };
 
 StudioAppClass.prototype.showInstructions_ = function(level, autoClose) {
