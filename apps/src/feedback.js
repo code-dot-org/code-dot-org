@@ -17,6 +17,9 @@ var FeedbackUtils = function (studioApp) {
 };
 module.exports = FeedbackUtils;
 
+// Globals used in this file:
+//   Blockly
+
 var trophy = require('./templates/trophy.html');
 var utils = require('./utils');
 var codegen = require('./codegen');
@@ -924,7 +927,7 @@ FeedbackUtils.getTestResults = function(levelComplete, options) {
     if (hasParamInputUnattached()) {
       return TestResults.PARAM_INPUT_UNATTACHED;
     }
-    if (hasIncompleteBlockInFunction()) {
+    if (feedbackSingleton.hasIncompleteBlockInFunction_()) {
       return TestResults.INCOMPLETE_BLOCK_IN_FUNCTION;
     }
   }
@@ -1060,13 +1063,14 @@ function hasUnusedFunction() {
 /**
  * Ensure there are no incomplete blocks inside any function definitions.
  */
-function hasIncompleteBlockInFunction() {
+FeedbackUtils.prototype.hasIncompleteBlockInFunction_ = function () {
+  var self = this;
   return Blockly.mainBlockSpace.getAllBlocks().some(function(userBlock) {
     // Only search procedure definitions
     if (!userBlock.parameterNames_) {
       return false;
     }
-    return feedbackSingleton.hasMatchingDescendant_(userBlock, function(block) {
+    return self.hasMatchingDescendant_(userBlock, function(block) {
       // Incomplete block if any input connection target is null
       return block.inputList.some(function(input) {
         return input.type === Blockly.INPUT_VALUE &&
@@ -1074,7 +1078,7 @@ function hasIncompleteBlockInFunction() {
       });
     });
   });
-}
+};
 
 /**
  * Returns true if any descendant (inclusive) of the given node matches the
