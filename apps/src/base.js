@@ -36,7 +36,7 @@ module.exports = studioAppSingleton;
 
 // TODO (br-pair) : This is how we associate our singleton feedback object with
 // our singleton StudioApp object. We can almost certainly do this more cleanly..
-FeedbackUtils.applySingleton(studioAppSingleton);
-studioAppSingleton.feedback_ = FeedbackUtils;
 var feedbackInstance = new FeedbackUtils(studioAppSingleton);
+FeedbackUtils.applySingleton(studioAppSingleton, feedbackInstance);
+studioAppSingleton.feedback_ = FeedbackUtils;
 studioAppSingleton.feedbackInstance_ = feedbackInstance;
