@@ -1,5 +1,7 @@
 var testUtils = require('../../util/testUtils');
-var TestResults = require('../../../src/constants.js').TestResults;
+var testUtils = require('../../util/testUtils');
+var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
+
 var studioAppSingleton = require(testUtils.buildPath('base'));
 
 module.exports = {
