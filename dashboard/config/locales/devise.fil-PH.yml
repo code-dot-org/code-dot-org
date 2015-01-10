@@ -55,7 +55,7 @@
         bagong email address.
       updated: Ang pag-update mo ang iyong  account ay matagumpay.
     sessions:
-      signed_in: Signed in successfully.
+      signed_in: ''
       signed_out: Matagumpay na-sign out.
     unlocks:
       send_instructions: Makakatanggap ka ng isang email na may mga tagubilin tungkol

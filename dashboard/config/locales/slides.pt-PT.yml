@@ -45,9 +45,8 @@
           espaço no labirinto.
       11:
         image: notes/hoc1_11.jpg
-        text: Para fazer mais do que uma ação, podes arrastar muitos blocos para a
-          tua área de trabalho e juntá-los. O pássaro vai fazer os comandos de cima
-          para baixo.
+        text: To do more than one action, you can drag many blocks to your workspace
+          and attach them together. The bird will do the commands from top to bottom.
       12:
         image: notes/hoc1_12.jpg
         text: Se corres um programa e depois quiseres corrigi-lo e tentar novamente,
@@ -223,23 +222,23 @@
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: Olá, o meu nome é Saloni. Eu uso as ciências da computação para resolver
-          problemas em medicina e saúde. Vamos aprender o bloco "se-senão". É muito
-          parecido com o bloco "se" mas tem mais uma parte no final que diz "senão".
+        text: Hi, my name is Saloni. I use computer science to help solve problems
+          in health and medicine. Let's learn about the "if else" block. It looks
+          like the "if" block, but it has an extra part at the end that says "else".
       2:
         image: notes/hoc5_2.jpg
-        text: Se eu puser um bloco "avançar" no sitio que diz "faz" e um bloco "virar
-          esquerda" onde diz "senão" isso quer dizer que o zombie irá escolher entre
-          duas opções. SE existe um caminho em frente, o zombie irá avançar e caso
-          não exista (não existe um caminho em frente) o zombie irá virar à esquerda.
+        text: If I put a "move forward" block in the spot where it says "do" and a
+          "turn left" block where it says "else" that means that the zombie will choose
+          between 2 options. IF there is a path ahead, the zombie will move forward,
+          and OTHERWISE (there isn't a path ahead), the zombie will turn left.
       3:
         image: notes/hoc5_3.jpg
-        text: Tal como no bloco "se", podemos por blocos "se-senão" dentro de blocos
-          "repetir" para que o zombie continue a ir em frente e o bloco "se-senão"
-          irá verificar sempre se existe algum sítio para virar.
+        text: Just like the "if" block, we can put "if else" blocks inside a "repeat"
+          blocks so that the zombie keeps moving and the "if else" block will keep
+          checking if there's somewhere to turn.
       4:
         image: notes/hoc5_4.jpg
-        text: Agora, leva os zombie até onde eles pertencem!
+        text: Now, get those zombies where they belong!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg

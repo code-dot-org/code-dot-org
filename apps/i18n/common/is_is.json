@@ -88,5 +88,6 @@
   "signup": "Skráning á inngangsnámskeiðið",
   "hintHeader": "Vísbending:",
   "genericFeedback": "Athugaðu hvernig þetta fór og reyndu að laga forritið.",
+  "toggleBlocksErrorMsg": "You need to correct an error in your program before it can be shown as blocks.",
   "defaultTwitterText": "Skoðaðu það sem ég bjó til"
 }

@@ -51,7 +51,7 @@ sq:
           - unplug8
         video: Unplug8
       Unplug9:
-        title: Relay Programming
+        title: Programimi i Besuar
         desc: 'This lesson will take an idea from a previous activity (4. Graph Paper Programming) and use those skills to emphasize the importance of completing programs that operate in sequence and frequently checking programs for "bugs".'
         pdfs:
           - unplug9

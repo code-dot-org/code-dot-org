@@ -16,7 +16,7 @@
   "ifelseTooltip": "Zehaztutako norabidean bidea bada, orduan lehenengo blokeko ekintzak egin. Bestela, egin bigarren blokeko ekintzak.",
   "incrementOpponentScore": "gehitu puntua aurkariari",
   "incrementOpponentScoreTooltip": "Add one to the current opponent score.",
-  "incrementPlayerScore": "increment player score",
+  "incrementPlayerScore": "score point",
   "incrementPlayerScoreTooltip": "Gehitu bat jokalariaren markagailura.",
   "isWall": "is this a wall",
   "isWallTooltip": "Returns true if there is a wall here",

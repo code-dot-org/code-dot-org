@@ -1,0 +1,52 @@
+"fa-AF":
+  data:
+    contract_match:
+      Enter name here:
+        Enter title here: عنوان را اینجا وارد کنید
+        Enter prompt here: پیغام را اینجا وارد کنید
+        Contract Name|Number|Domain1:Number|Domain2:string: 'نام قرارداد|شماره|دامنه1:
+          شماره|دامنه2: رشته'
+      Eval Contracts 1 B:
+        Eval Contracts 1 B: قراردادهای ایوال 1 ب
+        Write a contract for the star function: یک قرارداد برای تابع ستاره بنویس
+        Eval Contracts 1.solution_blocks, 200: قراردادهای ایوال 1. بلوکهای راه حل،
+          200
+        Contract star|image|Domain1:Number|Domain2:string|Domain3:string: 'ستاره قرارداد|تصویر|دامنه1:
+          شماره|دامنه2:رشته|دامنه3:رشته'
+        Eval Contracts 1.solution_blocks: قراردادهای ایوال 1. بلوکهای راه حل
+        Contract star|image|radius:Number|style:string|color:string: ستاره قرارداد|تصویر|شعاع:شماره|سبک:رشته|رنگ:رشته
+        star|image|radius:Number|style:string|color:string: ستاره|تصویر|شعاع:شماره|سبک:رشته|رنگ:رشته
+        Eval Contracts 1 A.solution_blocks, 300: قراردادهای ایوال 1 آ. بلوکهای راه
+          حل، 300
+      Eval Contracts 2 B:
+        Eval Contracts 2 B: قراردادهای ایوال 2 ب
+        Write a contract for the rotate function: یک قرارداد برای تابع چرخش بنویس
+        Eval Contracts 2 A.solution_blocks, 300: قراردادهای ایوال 2 آ. بلوکهای راه
+          حل، 300
+        rotate|image|degrees:Number|image:image: چرخش|تصویر|درجه:شماره|تصویر:تصویر
+      Eval Contracts 3 B:
+        Eval Contracts 3 B: قراردادهای ایوال 3 ب
+        Write a contract for the text function: یک قرارداد برای تابع متن بنویس
+        Eval Contracts 3 A.solution_blocks, 300: قراردادهای ایوال 3 آ. بلوکهای راه
+          حل، 300
+        text|image|string:string|size:Number|color:string: متن|تصویر|رشته:رشته|اندازه:شماره|رنگ:رشته
+      Eval Contracts 4 B:
+        Eval Contracts 4 B: قراردادهای ایوال 4 ب
+        Write a contract for the scale function: یک قرارداد برای تابع مقیاس بنویس
+        Eval Contracts 4 A.solution_blocks, 300: قراردادهای ایوال 4 آ. بلوکهای راه
+          حل، 300
+        scale|image|factor:Number|image:image: مقیاس|تصویر|فاکتور:شماره|تصویر:تصویر
+      Design Recipe 1.contract:
+        Design Recipe 1 Contract: قرارداد دستور 1 را طراحی کن
+        0: ؟ قرارداد تابع ای به اسم "مستطیل-عریض" را بنویس که  با ارتفاع و رنگ داده
+          شده یک مستطیل میسازد که دوبرابر ارتفاعش عرض دارد.
+        1: ': قرارداد تابع ای به نام "مستطیل-عریض" را بنویس که باعث ایجاد یک مستطیل
+          با ارتفاع و رنگ داده شده میشود که دوبرابر ارتفاعش عریض است.'
+        wide-rect|Image|height:Number|color:string: مستطیل-عریض|تصویر|ارتفاع:شماره|رنگ:رشته
+      Eval Design Recipe 1.contract:
+        Design Recipe 1 Contract: قرارداد دستور 1 را طراحی کن
+        0: ؟ قرارداد تابع ای به اسم "مستطیل-عریض" را بنویس که  با ارتفاع و رنگ داده
+          شده یک مستطیل میسازد که دوبرابر ارتفاعش عرض دارد.
+        1: ': قرارداد تابع ای به نام "مستطیل-عریض" را بنویس که باعث ایجاد یک مستطیل
+          با ارتفاع و رنگ داده شده میشود که دوبرابر ارتفاعش عریض است.'
+        wide-rect|Image|height:Number|color:string: مستطیل-عریض|تصویر|ارتفاع:شماره|رنگ:رشته

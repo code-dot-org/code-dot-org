@@ -53,7 +53,7 @@
         para confirmar seu novo endereço.
       updated: Você atualizou sua conta com sucesso.
     sessions:
-      signed_in: Autenticado com sucesso.
+      signed_in: ''
       signed_out: Desconectado com sucesso.
     unlocks:
       send_instructions: Você receberá um email, em poucos minutos, com instruções

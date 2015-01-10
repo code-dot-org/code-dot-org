@@ -3,7 +3,7 @@
   select_language: Seleziona per favore la tua lingua
   computer_science: Informatica
   computer_science_edweek: Settimana di Educazione all'Informatica
-  csedweek_dates: 9-15 dicembre 2013
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: 'L''<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Ora del Codice</a> è in arrivo. Insegnanti ed educatori, <a
     href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">programmate
@@ -130,12 +130,12 @@
   start_hoc: Inizia l'Ora del Codice adesso
   contact_form_topic_press: Stampa/media (appuntamento per un'intervista o per un
     intervento)
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
-    - Michael Clark, Teacher'
-  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
-    - Nina Nichols Peery, Teacher'
-  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
-    Alzate, 5th grader'
+  stats_michael: '"Non ho <b>mai e poi mai</b> visto i miei studenti così entusiasti
+    di imparare." - Michael Clark, Insegnante'
+  stats_nina: '"Ogni giorno sempre lo stesso risultato &mdash; il 100% di attenzione."-Nina
+    Nichols Peery, Insegnante'
+  stats_student: '"Sapevo che questa era una occasione <b>irripetibile</b>."-Mariana
+    Alzate, 5a Elementare'
   studiobar_title: Esplora l'<a href='http://studio.code.org'>Officina del Codice</a>
   studiobar_elementary_title: Scuola Primaria
   studiobar_elementary_body: I nostri tre nuovi corsi, specifici per la Scuola Primaria
@@ -150,8 +150,8 @@
   studiobar_donate_title: Sostienici
   studiobar_donate_body: Per ogni dollaro che dai un bambino ha la possibilità di
     imparare
-  studiobar_shop_title: Shop
-  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
+  studiobar_shop_title: Acquista
+  studiobar_shop_body: Rompete gli stereotipi. Indossate con orgoglio il nostro logo.
   contact_form_topic_student: Io sono uno studente
   contact_form_topic_parent: Io sono un genitore
   contact_form_topic_teacher: Io sono un insegnante
@@ -216,7 +216,7 @@
   dashboard_landing_view_as_student: Guarda come appare il sito ad uno studente
   dashboard_landing_students_title: I tuoi studenti
   dashboard_landing_students_manage: Vedi e gestisci i tuoi studenti
-  dashboard_landing_news_title: Ultime notizie
+  dashboard_landing_news_title: K-5 Educator Resources (in English only)
   dashboard_landing_new_beta: Novità! Prova i nostri corsi specifici per studenti
     delle scuole elementari (in versione provvisoria).
   dashboard_landing_new_k5courses: Nuovo! Prova i nostri corsi per gli studenti della
@@ -247,17 +247,17 @@
   dashboard_action_delete_yes: Sì
   dashboard_action_delete_no: 'No'
   dashboard_action_confirm: Elimina?
-  dashboard_action_remove: Remove
-  dashboard_action_remove_confirm: Remove?
+  dashboard_action_remove: Elimina
+  dashboard_action_remove_confirm: Eliminare?
   dashboard_action_done: Fatto
   dashboard_action_required: obbligatorio
   dashboard_navigation_home_page: Cruscotto di Controllo dell'insegnante
   dashboard_navigation_section_student_progress: Gestione delle classi e degli studenti
   dashboard_navigation_section_teacher_progress: I tuoi progressi
   dashboard_navigation_section_lesson_plans: Lesson Plans and Resources
-  dashboard_navigation_section_community: Aiuto e Comunità
-  dashboard_navigation_section_pd: Sviluppo Professionale
-  dashboard_navigation_section_speakers: Informatica<br/>Relatori Invitati
+  dashboard_navigation_section_community: Help and Community
+  dashboard_navigation_section_pd: Professional Development
+  dashboard_navigation_section_speakers: Computer Science <br/> Guest Speakers
   dashboard_navigation_all_sections: Gestione delle classi e degli studenti
   dashboard_navigation_view_progress: Controlla i progressi
   dashboard_navigation_add_students: Aggiungi i tuoi studenti
@@ -336,22 +336,21 @@
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Clicca
     qui</a> per il nostro documento sulla privacy che puoi stampare e distribuire
     ai tuoi studenti.
-  dashboard_curriculum_overview: Panoramica del curriculum specifico per le scuole
-    elementari
-  dashboard_view_all_lesson_plans: Mostra i Piani di Lavoro di tutte le lezioni
+  dashboard_curriculum_overview: K-5 Curriculum Overview
+  dashboard_view_all_lesson_plans: View all lesson plans
   dashboard_course1: 'Corso 1:'
   dashboard_course2: 'Corso 2:'
   dashboard_course3: 'Corso 3:'
   dashboard_sequence: Sequenza
-  dashboard_framework: Quadro di riferimento
+  dashboard_framework: Framework
   dashboard_standards: Livelli di riferimento
-  dashboard_implementation_guide: Guida alla realizzazione
-  dashboard_glossary: Glossario
-  dashboard_classroom_strategies: Strategie di aula per gli insegnanti
-  dashboard_debugging: 'Correzione di errori:'
-  dashboard_puzzle_solving: 'Risoluzione di problemi:'
-  dashboard_student_worksheet: piano di lavoro dello studente
-  dashboard_teacher_worksheet: piano di lavoro dell'insegnante
+  dashboard_implementation_guide: Implementation Guide
+  dashboard_glossary: Glossary
+  dashboard_classroom_strategies: Classroom strategies for teachers
+  dashboard_debugging: 'Debugging:'
+  dashboard_puzzle_solving: 'Puzzle-solving:'
+  dashboard_student_worksheet: student worksheet
+  dashboard_teacher_worksheet: teacher worksheet
   dashboard_grade_k: livello
   dashboard_grade_other: Altro
   dashboard_login_word: Parola
@@ -399,6 +398,7 @@
   carousel_heading_robots: Impara a programmare giocando con un robot
   carousel_heading_ide: Piattaforme didattiche popolari tra gli insegnanti
   educator_notes: Note per gli insegnanti
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Ulteriori risorse per insegnanti ed educatori in generale
   participants: partecipanti
   teachers_notes: Note per gli insegnanti
@@ -1091,4 +1091,3 @@
     permetteranno ai ragazzi di seguire un divertente corso accelerato per imparare
     a programmare dei robot ed affinare allo stesso tempo le loro capacità in scienze
     e matematica.
-  how_to_teach_hoc: How to Teach an Hour of Code

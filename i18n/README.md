@@ -22,10 +22,9 @@ TODO: how to use Chef to update crowdin.yaml with API Key
 2. `./in.sh` Gather files from each subproject and store them in ../locales/en-US
 3. `./up.sh` Upload new and updated strings to Crowdin
 4. `./down.sh` Download latest translations from Crowdin. NOTE: You might not see output for a few minutes while Crowdin builds.
-5. `./out.sh` Move translated files out to each subproject
+5. `./out.sh` Move translated files out to each subproject. NOTE: This takes a while too.
 6. Commit and push all translations
 ```bash
-git add .
 git commit -m "code.org translations mm/dd" # use today's date
 git push
 ```
@@ -50,7 +49,12 @@ git push
 #### Adding
 1. Add a unique key and your string value to the [i18n Gsheet](https://docs.google.com/a/code.org/spreadsheet/ccc?key=0AuZfRa__4CAYdHhObnJqQkViMUx0cGpESHc3VWtDUXc&usp=sharing). NOTE: Make sure your string value only has plain HTML. Organization is by category/page; try to prepend each string of a common category with the same key. For example, all teacher dashboard strings begin with 'dashboard'
 2. `ssh staging.code.org` and check that your changes were synced to `staging/pegasus/cache/i18n/en-US.yml`
-3. Commit and push `en-US.yml`
+3. Commit and push `en-US.yml` NOTE: If you see that it switched from "en-US" to en-US, it's OK to commit.
+```bash
+@@ -1,4 +1,4 @@
+-"en-US":
++en-US:
+```
 4. On your development environment, pull staging branch and do the following to sync the string for all locales.
 ```bash
 cd i18n/code.org
@@ -58,7 +62,6 @@ cd i18n/code.org
 ```
 5. Commit and push all locale files
 ```bash
-git add .
 git commit -m "new pegasus string XYZ"
 git push
 ```

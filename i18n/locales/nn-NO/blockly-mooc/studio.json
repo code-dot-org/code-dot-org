@@ -58,6 +58,7 @@
   "moveDistanceTooltip":"Flytt ein skodepeler ein bestemd avstand i den gitte retninga.",
   "moveSprite":"flytt",
   "moveSpriteN":"flytt skodespelar {spriteIndex}",
+  "toXY":"to x,y",
   "moveDown":"flytt ned",
   "moveDownTooltip":"Flytt ein skodespelar ned.",
   "moveLeft":"flytt til venstre",

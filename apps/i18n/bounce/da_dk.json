@@ -16,7 +16,7 @@
   "ifelseTooltip": "Hvis der er en sti i den angivne retning, så udfør den første blok af handlinger. Ellers udfør den anden blok af handlinger.",
   "incrementOpponentScore": "modstanderen point",
   "incrementOpponentScoreTooltip": "Tilføj \"1\" til den nuværende modstanders score.",
-  "incrementPlayerScore": "increment player score",
+  "incrementPlayerScore": "score point",
   "incrementPlayerScoreTooltip": "Tilføj en til den aktuelle spillers score.",
   "isWall": "er dette en væg",
   "isWallTooltip": "Returnerer sand, hvis der er en væg her",

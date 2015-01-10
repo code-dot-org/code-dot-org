@@ -34,7 +34,7 @@
   "playSoundLaser": "afspil laserlyd",
   "playSoundTooltip": "Afspil den valgte lyd.",
   "reinfFeedbackMsg": "Du kan trykke på knappen \"Prøv igen\", for at gå tilbage til dit spil.",
-  "scoreText": "Score: {playerScore} : {opponentScore}",
+  "scoreText": "Score: {playerScore}",
   "setBackground": "sæt scene",
   "setBackgroundRandom": "Vælg tilfældig baggrund",
   "setBackgroundFlappy": "Vælg By (dag) som baggrund",

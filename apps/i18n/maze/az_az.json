@@ -64,7 +64,7 @@
   "removePile": "təpəciyi yiğışdır",
   "removeStack": "dalbadal {shovelfuls} təpəciyi yığışdır",
   "removeSquare": "kvadratı yığışdır",
-  "repeatCarefullyError": "Bu məsələni həll etmək üçün təkrar olunan hissəni tapın. İçərisində növbəti 3 blok olan \"təkrar et\" blokundan istifadə edin: get, get, sağa dön.",
+  "repeatCarefullyError": "To solve this, think carefully about the pattern of two moves and one turn to put in the \"repeat\" block.  It's okay to have an extra turn at the end.",
   "repeatUntil": "təkrar et, ta ki",
   "repeatUntilBlocked": "hələ ki, qabaqda yol var",
   "repeatUntilFinish": "bitənə qədər təkrar et",
@@ -78,7 +78,7 @@
   "uncheckedPurpleError": "Make sure to check all purple flowers to see if they have nectar",
   "whileMsg": "hələ ki,",
   "whileTooltip": "Hasarlanmış əmrləri son nöqtəyə çatana qədər təkrarla.",
-  "word": "Word",
+  "word": "Find the word",
   "yes": "Bəli",
   "youSpelled": "You spelled"
 }

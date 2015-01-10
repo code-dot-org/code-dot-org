@@ -351,10 +351,11 @@
     email_resend_confirm: Reenviar instruções de confirmação
     new_password_hint: (deixe em branco se não quiser fazer alteração)
     current_password_hint: (precisamos de sua senha atual para confirmar suas alterações)
-    cancel:
-      title: Cancelar minha conta
-      hint: Não está feliz?
-      button: Cancelar minha conta
+    delete: Excluir sua conta
+    delete_text: Clicando no botão abaixo, você vai excluir sua conta.
+    delete_text_teacher_note: 'Lembre-se: a exclusão da sua conta não vai excluir
+      as contas dos seus alunos.'
+    delete_confirm: Tem certeza de que deseja excluir sua conta?
   user_level:
     completed: Concluído
     tried: Provado
@@ -388,7 +389,7 @@
     student_finished: Você completou todos os tutoriais, escolha outra aula em %{online_link}
       ou %{local_school_link}
     local_school: escola local
-    online: on-line
+    online: online
     see_details: Ver detalhes
     prize_info: 'Prêmios de participação (somente para professores de escolas públicas
       dos EUA.): até $1.000 em prêmios para sala de aula.'

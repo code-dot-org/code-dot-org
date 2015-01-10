@@ -45,9 +45,8 @@
           satu petak dalam labirin.
       11:
         image: notes/hoc1_11.jpg
-        text: Untuk melakukan lebih banyak aksi, anda dapat menarik beberapa blok
-          pada area kerja dan melampirkannya secara bersama. Burung tersebut kemudian
-          akan melakukan perintah dari yang teratas sampai terbawah.
+        text: To do more than one action, you can drag many blocks to your workspace
+          and attach them together. The bird will do the commands from top to bottom.
       12:
         image: notes/hoc1_12.jpg
         text: Jika anda menjalankan program dan ingin meperbaiki dan mencobanya kembali,
@@ -223,25 +222,23 @@
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: Hai, nama saya adalah Saloni. Saya mengunakan ilmu komputer untuk membantu
-          menyelesaikan masalah dalam kesehatan dan obat-obatan. Mari kita belajar
-          mengenai blok "jika tidak" (if else). Ini terlihat seperti blok "jika" (if),
-          tetapi ini memiliki bagian extra yang mengatakan "jika tidak" (else).
+        text: Hi, my name is Saloni. I use computer science to help solve problems
+          in health and medicine. Let's learn about the "if else" block. It looks
+          like the "if" block, but it has an extra part at the end that says "else".
       2:
         image: notes/hoc5_2.jpg
-        text: Jika saya menaruh blok "gerak" (move) di tempat bertanda blok "lakukan",
-          dan menaruh blok "belok kiri" (turn left)  ditempat bertanda blok "jika
-          tidak" (else) yang berarti bahwa zombie akan memilih antara 2 pilihan. Jika
-          ada jalan ke depan, zombie akan bergerak maju, dan sebaliknya (tidak ada
-          jalan ke depan), zombie akan berbelok ke kiri.
+        text: If I put a "move forward" block in the spot where it says "do" and a
+          "turn left" block where it says "else" that means that the zombie will choose
+          between 2 options. IF there is a path ahead, the zombie will move forward,
+          and OTHERWISE (there isn't a path ahead), the zombie will turn left.
       3:
         image: notes/hoc5_3.jpg
-        text: Seperti blok "jika" (if), kita dapat menempatkan blok "jika tidak" (else)
-          dalam blok "Ulangi" (repeat)  sehingga zombie terus bergerak dan blok "jika
-          tidak" (else) akan terus menerus mengecek apakah ada tempat untuk belok.
+        text: Just like the "if" block, we can put "if else" blocks inside a "repeat"
+          blocks so that the zombie keeps moving and the "if else" block will keep
+          checking if there's somewhere to turn.
       4:
         image: notes/hoc5_4.jpg
-        text: Sekarang, ayo dapatkan zombie-zombie itu!
+        text: Now, get those zombies where they belong!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg

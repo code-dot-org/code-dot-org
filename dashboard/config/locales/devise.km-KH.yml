@@ -50,7 +50,7 @@
         confirm link to finalize confirming your new email address.
       updated: You updated your account successfully.
     sessions:
-      signed_in: បាន​ចូល​ដោយ​ជោគជ័យ។
+      signed_in: ''
       signed_out: បាន​ចាកចេញ​ដោយ​ជោគជ័យ។
     unlocks:
       send_instructions: You will receive an email with instructions about how to

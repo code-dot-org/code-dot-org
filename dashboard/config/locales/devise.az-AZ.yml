@@ -55,7 +55,7 @@
         göndərilmiş təsdiq keçidinə klikləyəsiniz.
       updated: Hesabınızı müvəffəqiyyətlə yenilədiniz.
     sessions:
-      signed_in: Hesabınıza müvəffəqiyyətlə daxil oldunuz.
+      signed_in: ''
       signed_out: Hesabınızdan müvəffəqiyyətlə çıxdınız.
     unlocks:
       send_instructions: Bir neçə dəqiqəyə hesabınızın kilidini necə açacağınız barədə

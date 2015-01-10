@@ -54,7 +54,7 @@
         abzuschließen.
       updated: Sie haben Ihr Konto erfolgreich aktualisiert.
     sessions:
-      signed_in: Erfolgreich angemeldet.
+      signed_in: ''
       signed_out: Erfolgreich abgemeldet.
     unlocks:
       send_instructions: Du wirst in wenigen Minuten eine Email mit Aweisungen erhalten,

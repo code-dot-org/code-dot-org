@@ -323,6 +323,7 @@
           description: Una selección de los niveles del Curso 4 para pruebas de usabilidad.
           Variables: Variables
           For Loops: Bucles Para
+          Binary: Binario
         potus:
           title: especial
           description_short: especial
@@ -333,3 +334,44 @@
           description_short: especial
           description: especial
           Special: Especial
+          Binary: Binario
+        usabilitymsm:
+          Usability testing for MSM: Usability testing for MSM
+          Evaluation Blocks: Evaluation Blocks
+          Blocks to Math: Bloques para matemáticas
+          Strings and Images: Strings and Images
+          Defining Variables: Defining Variables
+          Defining Functions: Defining Functions
+          Design Recipe: Design Recipe
+          Booleans: Valores booleanos
+          Conditionals: Condicionales
+          Free Play: Free Play
+        algebra:
+          title: Computer Science in Algebra
+          description: Learn Functional Programming through Algebra
+          'Unplugged: Video Games and Coordinate Planes': 'Desconectado: videojuegos
+            y planos de coordenadas'
+          'Calc: Evaluation Blocks': 'Calc: Bloques de evaluación'
+          'Eval: Strings and Images': 'Eval: Cadenas e imágenes'
+          'Unplugged: Contracts': 'Desconectado: contratos'
+          'Eval: Writing Contracts': 'Eval: Redacción de contratos'
+          'Calc: Defining Variables': 'Calc: Definiendo Variables'
+          'Play Lab: Defining Variables (Big Game)': 'Laboratorio de juegos: Definición
+            de Variables (Big Game)'
+          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Unplugged: The Design Recipe': 'Desconectado: La receta de diseño'
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Eval: Functions': 'Eval: Functions'
+          'Play Lab: Animation (Big Game)': 'Laboratorio de juegos: Animación (Big
+            Game)'
+          'Unplugged: Booleans': 'Desconectado: Booleanos'
+          'Eval: Boolean Operators': 'Eval: Operadores booleanos'
+          'Play Lab: Booleans': 'Laboratorio de juegos: valores booleanos'
+          'Play Lab: Boolean (Big Game)': 'Laboratorio de juegos: Booleano (Big Game)'
+          'Unplugged: Conditionals and Piecewise Functions': 'Desconectado: Condicionales
+            y funciones por partes'
+          'Eval: Conditionals': 'Eval: condicionales'
+          'Unplugged: Collision Detection and the Distance Formula': 'Desconectado:
+            Detección de colisiones y la fórmula de distancia'
+          'Play Lab: Collision Detection (Big Game)': 'Laboratorio de juegos: Detección
+            de colisiones (Big Game)'

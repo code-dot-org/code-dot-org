@@ -44,9 +44,8 @@
           się o jedno pole w labiryncie.
       11:
         image: uwagi/hoc1_11.jpg
-        text: Aby wykonać więcej niż jeden ruch, możesz przeciągnąć wiele bloków do
-          swojego obszaru roboczego i połączyć je ze sobą. Angry Bird wykona wszystkie
-          polecenia od góry do dołu.
+        text: To do more than one action, you can drag many blocks to your workspace
+          and attach them together. The bird will do the commands from top to bottom.
       12:
         image: uwagi/hoc1_12.jpg
         text: Jeśli uruchomiłeś program i chcesz go później poprawić i uruchomić ponownie,
@@ -218,24 +217,23 @@
     if_else:
       1:
         image: uwagi/hoc5_1.jpg
-        text: Cześć, mam na imię Saloni. Informatyka służy mi do rozwiązywania problemów
-          w dziedzinie zdrowia i medycyny. Nauczymy się o bloku jeśli-w przeciwnym
-          razie. Ten blok wygląda jak blok jeśli, ale ma dodatkową część w przeciwnym
-          razie na końcu.
+        text: Hi, my name is Saloni. I use computer science to help solve problems
+          in health and medicine. Let's learn about the "if else" block. It looks
+          like the "if" block, but it has an extra part at the end that says "else".
       2:
         image: uwagi/hoc5_2.jpg
-        text: Jeśli umieszczę blok idź do przodu w miejscu, które mówi wykonaj, i
-          blok skręć w lewo w miejscu, które mówi w przeciwnym razie, to oznacza,
-          że zombie będzie miał do wyboru 2 opcje. Jeśli jest droga do przodu, zombie
-          ruszy do przodu, a jeśli nie ma takiej drogi, to zombie skręci w lewo.
+        text: If I put a "move forward" block in the spot where it says "do" and a
+          "turn left" block where it says "else" that means that the zombie will choose
+          between 2 options. IF there is a path ahead, the zombie will move forward,
+          and OTHERWISE (there isn't a path ahead), the zombie will turn left.
       3:
         image: uwagi/hoc5_3.jpg
-        text: Podobnie jak blok jeśli, możemy umieścić bloki jeśli-w przeciwnym razie
-          wewnątrz bloków powtórz tak, że zombie będzie się poruszał i blok Jeśli-w
-          przeciwnym razie będzie sprawdzał, czy jest możliwość skręcenia.
+        text: Just like the "if" block, we can put "if else" blocks inside a "repeat"
+          blocks so that the zombie keeps moving and the "if else" block will keep
+          checking if there's somewhere to turn.
       4:
         image: uwagi/hoc5_4.jpg
-        text: Zabierz teraz te potwory (zombies), gdzie ich miejsce!
+        text: Now, get those zombies where they belong!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
