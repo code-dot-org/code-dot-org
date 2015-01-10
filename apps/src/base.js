@@ -131,14 +131,14 @@ StudioApp.init = function(config) {
   // if true, dont provide links to share on fb/twitter
   StudioApp.disableSocialShare = config.disableSocialShare;
   StudioApp.sendToPhone = config.sendToPhone;
-  StudioApp.noPadding = config.no_padding;
+  StudioApp.noPadding = config.noPadding;
 
   StudioApp.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
   StudioApp.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
   StudioApp.REQUIRED_BLOCKS = config.level.requiredBlocks || [];
 
   // enableShowCode defaults to true if not defined
-  StudioApp.enableShowCode = (config.enableShowCode === false) ? false : true;
+  StudioApp.enableShowCode = (config.enableShowCode === false);
 
   // If the level has no ideal block count, don't show a block count. If it does
   // have an ideal, show block count unless explicitly configured not to.
@@ -199,7 +199,7 @@ StudioApp.init = function(config) {
     // Enable param & var editing in levelbuilder, regardless of level setting
     config.level.disableParamEditing = false;
     config.level.disableVariableEditing = false;
-  } else if (!config.hide_source) {
+  } else if (!config.hideSource) {
     visualizationColumn.style.minHeight =
         StudioApp.MIN_WORKSPACE_HEIGHT + 'px';
   }
@@ -210,7 +210,7 @@ StudioApp.init = function(config) {
     visualizationColumn.className += " responsive";
   }
 
-  if (config.hide_source) {
+  if (config.hideSource) {
     StudioApp.hideSource = true;
     var workspaceDiv = StudioApp.editCode ?
                         document.getElementById('codeWorkspace') :
