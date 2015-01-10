@@ -28,7 +28,7 @@ var MAX_PHONE_WIDTH = 500;
 
 
 var StudioAppClass = function () {
-  this.feedbackInstance_ = new FeedbackUtils(this);
+  this.feedback_ = new FeedbackUtils(this);
 
   /**
   * The parent directory of the apps. Contains common.js.
@@ -219,14 +219,14 @@ StudioAppClass.prototype.init = function(config) {
         if (result.error) {
           // TODO (cpirich) We could extract error.loc to determine where the
           // error occurred and highlight that error
-          this.feedbackInstance_.showToggleBlocksError(this.Dialog);
+          this.feedback_.showToggleBlocksError(this.Dialog);
         }
         this.updateHeadersAfterDropletToggle_(this.editor.currentlyUsingBlocks);
         if (!this.editor.currentlyUsingBlocks) {
           this.editor.aceEditor.focus();
         }
       } else {
-        this.feedbackInstance_.showGeneratedCode(this.Dialog);
+        this.feedback_.showGeneratedCode(this.Dialog);
       }
     }, this));
   }
@@ -648,7 +648,7 @@ StudioAppClass.prototype.sortBlocksByVisibility = function(xmlBlocks) {
 };
 
 StudioAppClass.prototype.createModalDialogWithIcon = function(options) {
-  return this.feedbackInstance_.createModalDialogWithIcon(options);
+  return this.feedback_.createModalDialogWithIcon(options);
 };
 
 StudioAppClass.prototype.showInstructions_ = function(level, autoClose) {
@@ -824,14 +824,14 @@ StudioAppClass.prototype.displayFeedback = function(options) {
     options.feedbackType = this.TestResults.EDIT_BLOCKS;
   }
 
-  this.feedbackInstance_.displayFeedback(options);
+  this.feedback_.displayFeedback(options);
 };
 
 /**
  *
  */
 StudioAppClass.prototype.getTestResults = function(levelComplete, options) {
-  return this.feedbackInstance_.getTestResults(levelComplete, options);
+  return this.feedback_.getTestResults(levelComplete, options);
 };
 
 // Builds the dom to get more info from the user. After user enters info
@@ -873,10 +873,10 @@ StudioAppClass.prototype.builderForm_ = function(onAttemptCallback) {
 StudioAppClass.prototype.report = function(options) {
   // copy from options: app, level, result, testResult, program, onComplete
   var report = options;
-  report.pass = this.feedbackInstance_.canContinueToNextLevel(options.testResult);
+  report.pass = this.feedback_.canContinueToNextLevel(options.testResult);
   report.time = ((new Date().getTime()) - this.initTime);
   report.attempt = this.attempts;
-  report.lines = this.feedbackInstance_.getNumBlocksUsed();
+  report.lines = this.feedback_.getNumBlocksUsed();
 
   // If hideSource is enabled, the user is looking at a shared level that
   // they cannot have modified. In that case, don't report it to the service
@@ -924,7 +924,7 @@ StudioAppClass.prototype.updateBlockCount = function() {
   // If the number of block used is bigger than the ideal number of blocks,
   // set it to be yellow, otherwise, keep it as black.
   var element = document.getElementById('blockUsed');
-  if (this.IDEAL_BLOCK_NUM < this.feedbackInstance_.getNumCountableBlocks()) {
+  if (this.IDEAL_BLOCK_NUM < this.feedback_.getNumCountableBlocks()) {
     element.className = "block-counter-overflow";
   } else {
     element.className = "block-counter-default";
@@ -934,7 +934,7 @@ StudioAppClass.prototype.updateBlockCount = function() {
   if (element) {
     element.innerHTML = '';  // Remove existing children or text.
     element.appendChild(document.createTextNode(
-      this.feedbackInstance_.getNumCountableBlocks()));
+      this.feedback_.getNumCountableBlocks()));
   }
 };
 
@@ -1094,7 +1094,7 @@ StudioAppClass.prototype.handleHideSource_ = function (options) {
     openWorkspace.appendChild(document.createTextNode(msg.openWorkspace()));
 
     var belowViz = document.getElementById('belowVisualization');
-    belowViz.appendChild(this.feedbackInstance_.createSharingDiv({
+    belowViz.appendChild(this.feedback_.createSharingDiv({
       response: {
         level_source: window.location,
         level_source_id: options.level_source_id,
@@ -1245,5 +1245,5 @@ StudioAppClass.prototype.updateHeadersAfterDropletToggle_ = function (usingBlock
  * Do we have any floating blocks not attached to an event block or function block?
  */
 StudioAppClass.prototype.hasExtraTopBlocks = function () {
-  return this.feedbackInstance_.hasExtraTopBlocks();
+  return this.feedback_.hasExtraTopBlocks();
 };
