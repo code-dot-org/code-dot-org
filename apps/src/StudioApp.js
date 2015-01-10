@@ -876,7 +876,7 @@ StudioAppClass.prototype.report = function(options) {
   report.pass = this.feedbackInstance_.canContinueToNextLevel(options.testResult);
   report.time = ((new Date().getTime()) - this.initTime);
   report.attempt = this.attempts;
-  report.lines = this.feedback_.getNumBlocksUsed();
+  report.lines = this.feedbackInstance_.getNumBlocksUsed();
 
   // If hideSource is enabled, the user is looking at a shared level that
   // they cannot have modified. In that case, don't report it to the service
@@ -924,7 +924,7 @@ StudioAppClass.prototype.updateBlockCount = function() {
   // If the number of block used is bigger than the ideal number of blocks,
   // set it to be yellow, otherwise, keep it as black.
   var element = document.getElementById('blockUsed');
-  if (this.IDEAL_BLOCK_NUM < this.feedback_.getNumCountableBlocks()) {
+  if (this.IDEAL_BLOCK_NUM < this.feedbackInstance_.getNumCountableBlocks()) {
     element.className = "block-counter-overflow";
   } else {
     element.className = "block-counter-default";
@@ -934,7 +934,7 @@ StudioAppClass.prototype.updateBlockCount = function() {
   if (element) {
     element.innerHTML = '';  // Remove existing children or text.
     element.appendChild(document.createTextNode(
-      this.feedback_.getNumCountableBlocks()));
+      this.feedbackInstance_.getNumCountableBlocks()));
   }
 };
 
@@ -1094,7 +1094,7 @@ StudioAppClass.prototype.handleHideSource_ = function (options) {
     openWorkspace.appendChild(document.createTextNode(msg.openWorkspace()));
 
     var belowViz = document.getElementById('belowVisualization');
-    belowViz.appendChild(this.feedback_.createSharingDiv({
+    belowViz.appendChild(this.feedbackInstance_.createSharingDiv({
       response: {
         level_source: window.location,
         level_source_id: options.level_source_id,

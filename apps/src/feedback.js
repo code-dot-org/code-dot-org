@@ -55,7 +55,7 @@ FeedbackUtils.displayFeedback = function(options) {
   options.hintRequestExperiment = options.response &&
       options.response.hint_request_placement;
   options.level = options.level || {};
-  options.numTrophies = numTrophiesEarned(options);
+  options.numTrophies = feedbackSingleton.numTrophiesEarned_(options);
 
   // Tracking event for level newly completed
   if (options.response && options.response.new_level_completed) {
@@ -68,9 +68,9 @@ FeedbackUtils.displayFeedback = function(options) {
   var canContinue = feedbackSingleton.canContinueToNextLevel(options.feedbackType);
   var displayShowCode = studioAppSingleton.enableShowCode && canContinue && !showingSharing;
   var feedback = document.createElement('div');
-  var sharingDiv = (canContinue && showingSharing) ? FeedbackUtils.createSharingDiv(options) : null;
+  var sharingDiv = (canContinue && showingSharing) ? feedbackSingleton.createSharingDiv(options) : null;
   var showCode = displayShowCode ? feedbackSingleton.getShowCodeElement_(options) : null;
-  var shareFailureDiv = hadShareFailure ? getShareFailure(options) : null;
+  var shareFailureDiv = hadShareFailure ? feedbackSingleton.getShareFailure_(options) : null;
   if (hadShareFailure) {
     trackEvent('Share', 'Failure', options.response.share_failure.type);
   }
@@ -78,7 +78,7 @@ FeedbackUtils.displayFeedback = function(options) {
     studioAppSingleton);
   // feedbackMessage must be initialized after feedbackBlocks
   // because FeedbackBlocks can mutate options.response.hint.
-  var feedbackMessage = getFeedbackMessage(options);
+  var feedbackMessage = feedbackSingleton.getFeedbackMessage_(options);
 
   if (feedbackMessage) {
     feedback.appendChild(feedbackMessage);
@@ -92,11 +92,11 @@ FeedbackUtils.displayFeedback = function(options) {
         trackEvent('Trophy', concept_name, trophy_name);
       }
     }
-    var trophies = getTrophiesElement(options);
+    var trophies = feedbackSingleton.getTrophiesElement_(options);
     feedback.appendChild(trophies);
   }
   if (feedbackBlocks.div) {
-    if (feedbackMessage && useSpecialFeedbackDesign(options)) {
+    if (feedbackMessage && feedbackSingleton.useSpecialFeedbackDesign_(options)) {
       // put the blocks iframe inside the feedbackMessage for this special case:
       feedbackMessage.appendChild(feedbackBlocks.div);
     } else {
@@ -125,7 +125,7 @@ FeedbackUtils.displayFeedback = function(options) {
   }
 
   feedback.appendChild(
-    getFeedbackButtons({
+    feedbackSingleton.getFeedbackButtons_({
       feedbackType: options.feedbackType,
       showPreviousButton: options.level.showPreviousLevelButton,
       isK1: options.level.isK1,
@@ -155,7 +155,7 @@ FeedbackUtils.displayFeedback = function(options) {
   });
 
   // Update the background color if it is set to be in special design.
-  if (useSpecialFeedbackDesign(options)) {
+  if (feedbackSingleton.useSpecialFeedbackDesign_(options)) {
     if (options.response.design == "white_background") {
       document.getElementById('feedback-dialog')
           .className += " white-background";
@@ -182,7 +182,7 @@ FeedbackUtils.displayFeedback = function(options) {
   // hint if the button gets pressed.
   if (hintRequestButton) {
     // Swap out the specific feedback message with a generic one.
-    var genericFeedback = getFeedbackMessage({message: msg.genericFeedback()});
+    var genericFeedback = feedbackSingleton.getFeedbackMessage_({message: msg.genericFeedback()});
     var parentNode = feedbackMessage.parentNode;
     parentNode.replaceChild(genericFeedback, feedbackMessage);
 
@@ -267,12 +267,12 @@ FeedbackUtils.displayFeedback = function(options) {
  * not disabled, are deletable.
  * @return {number} Number of blocks used.
  */
-FeedbackUtils.getNumBlocksUsed = function() {
+FeedbackUtils.prototype.getNumBlocksUsed = function() {
   var i;
-  if (studioAppSingleton.editCode) {
+  if (this.studioApp_.editCode) {
     var codeLines = 0;
     // quick and dirty method to count non-blank lines that don't start with //
-    var lines = feedbackSingleton.getGeneratedCodeString_().split("\n");
+    var lines = this.getGeneratedCodeString_().split("\n");
     for (i = 0; i < lines.length; i++) {
       if ((lines[i].length > 1) && (lines[i][0] != '/' || lines[i][1] != '/')) {
         codeLines++;
@@ -280,7 +280,7 @@ FeedbackUtils.getNumBlocksUsed = function() {
     }
     return codeLines;
   }
-  return feedbackSingleton.getUserBlocks_().length;
+  return this.getUserBlocks_().length;
 };
 
 /**
@@ -288,12 +288,12 @@ FeedbackUtils.getNumBlocksUsed = function() {
  * not disabled.
  * @return {number} Total number of blocks.
  */
-FeedbackUtils.getNumCountableBlocks = function() {
+FeedbackUtils.prototype.getNumCountableBlocks = function() {
   var i;
-  if (studioAppSingleton.editCode) {
+  if (this.studioApp_.editCode) {
     var codeLines = 0;
     // quick and dirty method to count non-blank lines that don't start with //
-    var lines = feedbackSingleton.getGeneratedCodeString_().split("\n");
+    var lines = this.getGeneratedCodeString_().split("\n");
     for (i = 0; i < lines.length; i++) {
       if ((lines[i].length > 1) && (lines[i][0] != '/' || lines[i][1] != '/')) {
         codeLines++;
@@ -301,24 +301,24 @@ FeedbackUtils.getNumCountableBlocks = function() {
     }
     return codeLines;
   }
-  return feedbackSingleton.getCountableBlocks_().length;
+  return this.getCountableBlocks_().length;
 };
 
-var getFeedbackButtons = function(options) {
+FeedbackUtils.prototype.getFeedbackButtons_ = function(options) {
   var buttons = document.createElement('div');
   buttons.id = 'feedbackButtons';
   buttons.innerHTML = require('./templates/buttons.html')({
     data: {
       previousLevel:
-        !feedbackSingleton.canContinueToNextLevel(options.feedbackType) &&
+        !this.canContinueToNextLevel(options.feedbackType) &&
         options.showPreviousButton,
       tryAgain: options.feedbackType !== TestResults.ALL_PASS,
-      nextLevel: feedbackSingleton.canContinueToNextLevel(options.feedbackType),
+      nextLevel: this.canContinueToNextLevel(options.feedbackType),
       isK1: options.isK1,
       hintRequestExperiment: options.hintRequestExperiment &&
           (options.hintRequestExperiment === HINT_REQUEST_PLACEMENT.LEFT ?
               'left' : 'right'),
-      assetUrl: studioAppSingleton.assetUrl,
+      assetUrl: this.studioApp_.assetUrl,
       freePlay: options.freePlay
     }
   });
@@ -326,14 +326,14 @@ var getFeedbackButtons = function(options) {
   return buttons;
 };
 
-var getShareFailure = function(options) {
+FeedbackUtils.prototype.getShareFailure_ = function(options) {
   var shareFailure = options.response.share_failure;
   var shareFailureDiv = document.createElement('div');
   shareFailureDiv.innerHTML = require('./templates/shareFailure.html')({shareFailure: shareFailure});
   return shareFailureDiv;
 };
 
-var useSpecialFeedbackDesign = function (options) {
+FeedbackUtils.prototype.useSpecialFeedbackDesign_ = function (options) {
  return options.response &&
         options.response.design &&
         options.response.hint;
@@ -348,7 +348,7 @@ var useSpecialFeedbackDesign = function (options) {
 //    specific result type (e.g., TestResults.EMPTY_BLOCK_FAIL).
 // 5. System-wide message (e.g., msg.emptyBlocksErrorMsg()) for specific
 //    result type (e.g., TestResults.EMPTY_BLOCK_FAIL).
-var getFeedbackMessage = function(options) {
+FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
   var feedback = document.createElement('p');
   feedback.className = 'congrats';
   var message;
@@ -407,7 +407,7 @@ var getFeedbackMessage = function(options) {
         break;
       case TestResults.TOO_MANY_BLOCKS_FAIL:
         message = msg.numBlocksNeeded({
-          numBlocks: studioAppSingleton.IDEAL_BLOCK_NUM,
+          numBlocks: this.studioApp_.IDEAL_BLOCK_NUM,
           puzzleNumber: options.level.puzzle_number || 0
         });
         break;
@@ -459,7 +459,7 @@ var getFeedbackMessage = function(options) {
   dom.setText(feedback, message);
 
   // Update the feedback box design, if the hint message came from server.
-  if (useSpecialFeedbackDesign(options)) {
+  if (this.useSpecialFeedbackDesign_(options)) {
     // Setup a new div
     var feedbackDiv = document.createElement('div');
     feedbackDiv.className = 'feedback-callout';
@@ -468,7 +468,7 @@ var getFeedbackMessage = function(options) {
     // Insert an image
     var imageDiv = document.createElement('img');
     imageDiv.className = "hint-image";
-    imageDiv.src = studioAppSingleton.assetUrl(
+    imageDiv.src = this.studioApp_.assetUrl(
       'media/lightbulb_for_' + options.response.design + '.png');
     feedbackDiv.appendChild(imageDiv);
     // Add new text
@@ -483,14 +483,14 @@ var getFeedbackMessage = function(options) {
   return feedback;
 };
 
-FeedbackUtils.createSharingDiv = function(options) {
+FeedbackUtils.prototype.createSharingDiv = function(options) {
   if (!options.response || !options.response.level_source) {
     // don't even try if our caller didn't give us something that can be shared
     // options.response.level_source is the url that we are sharing
     return null;
   }
 
-  if (studioAppSingleton.disableSocialShare) {
+  if (this.studioApp_.disableSocialShare) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
@@ -530,7 +530,7 @@ FeedbackUtils.createSharingDiv = function(options) {
     options.facebookUrl = facebookUrl;
   }
 
-  options.assetUrl = studioAppSingleton.assetUrl;
+  options.assetUrl = this.studioApp_.assetUrl;
 
   var sharingDiv = document.createElement('div');
   sharingDiv.setAttribute('style', 'display:inline-block');
@@ -599,7 +599,7 @@ FeedbackUtils.createSharingDiv = function(options) {
 };
 
 
-var numTrophiesEarned = function(options) {
+FeedbackUtils.prototype.numTrophiesEarned_ = function(options) {
   if (options.response && options.response.trophy_updates) {
     return options.response.trophy_updates.length;
   } else {
@@ -607,7 +607,7 @@ var numTrophiesEarned = function(options) {
   }
 };
 
-var getTrophiesElement = function(options) {
+FeedbackUtils.prototype.getTrophiesElement_ = function(options) {
   var html = "";
   for (var i = 0; i < options.numTrophies; i++) {
     html += trophy({
@@ -624,7 +624,7 @@ FeedbackUtils.prototype.getShowCodeElement_ = function(options) {
   var showCodeDiv = document.createElement('div');
   showCodeDiv.setAttribute('id', 'show-code');
 
-  var numLinesWritten = FeedbackUtils.getNumBlocksUsed();
+  var numLinesWritten = this.getNumBlocksUsed();
   var shouldShowTotalLines =
     (options.response &&
       options.response.total_lines &&
@@ -944,7 +944,7 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete, options) {
         TestResults.MISSING_BLOCK_FINISHED :
         TestResults.MISSING_BLOCK_UNFINISHED;
   }
-  var numEnabledBlocks = FeedbackUtils.getNumCountableBlocks();
+  var numEnabledBlocks = this.getNumCountableBlocks();
   if (!levelComplete) {
     if (this.studioApp_.IDEAL_BLOCK_NUM &&
         this.studioApp_.IDEAL_BLOCK_NUM !== Infinity &&
