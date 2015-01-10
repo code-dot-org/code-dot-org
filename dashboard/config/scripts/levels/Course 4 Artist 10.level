@@ -74,6 +74,13 @@
             </block>
           </value>
         </block>
+        <block type="draw_width" inline="false">
+          <value name="WIDTH">
+            <block type="math_number">
+              <title name="NUM">???</title>
+            </block>
+          </value>
+        </block>
         <block type="draw_colour" inline="true">
           <value name="COLOUR">
             <block type="colour_picker">
