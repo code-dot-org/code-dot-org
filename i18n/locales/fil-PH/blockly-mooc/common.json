@@ -88,5 +88,6 @@
   "signup":"Mag-sign up para sa intro ng kurso",
   "hintHeader":"Narito ang isang tip:",
   "genericFeedback":"Tingnan kung ano ang nangyari dito, at subukang ayusin ang iyong mga program.",
+  "toggleBlocksErrorMsg":"You need to correct an error in your program before it can be shown as blocks.",
   "defaultTwitterText":"Check out what I made"
 }

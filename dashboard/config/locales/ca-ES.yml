@@ -6,7 +6,7 @@
     attributes:
       user:
         name: Nom a mostrar
-        email: Correu electrònic
+        email: Email
         username: nom d'usuari
         password: contrasenya
         password_confirmation: Confirma la contrasenya
@@ -182,7 +182,7 @@
     teacher_email_required: 'Els premis pels mestres requereixen un e-mail confirmat:'
     confirm:
       title: Confirmeu
-      'no': false
+      'no': 'No'
       'yes': Sí
       msg: Esteu segur que voleu reclamar el Premi %{prize_name}?
       msg_student: 'Nota: Només podeu triar un tipus de premi.'

@@ -210,7 +210,6 @@ module LevelsHelper
       x:initialX
       y:initialY
       maze:map
-      artist_builder:builder
       ani_gif_url:aniGifURL
       shapeways_url
       images

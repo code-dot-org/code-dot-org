@@ -32,7 +32,7 @@
           desc: Edytuj kod (beta)
           MazeEC: Etap 1
         2014 Levels:
-          desc: Łamigłówki 2014 (beta)
+          desc: Bounce (beta)
           Bounce: Etap 1
         Builder Levels:
           desc: Zagadki stworzone przez użytkowników (beta)
@@ -832,7 +832,7 @@
           the puzzle.
         set_length: Use this block to set "length" to the correct value.
         which_equation: Which equation makes each side shorter for shapes with more
-          sides?  Try each equation!
+          sides?
         get_nectar: Use the new "get nectar" block.
         actions_category: The tool box got a new look! The "Actions" blocks are in
           here now.

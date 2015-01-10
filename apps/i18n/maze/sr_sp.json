@@ -64,7 +64,7 @@
   "removePile": "уклони гомилу",
   "removeStack": "уклони гомилу од {shovelfuls} лопата",
   "removeSquare": "уклони квадрат",
-  "repeatCarefullyError": "Како бих сте решили ово, пронађите сличност која се понавља. Користите \"понови\" блок са ова 3 блока унутар: крени, крени, скрени десно.",
+  "repeatCarefullyError": "To solve this, think carefully about the pattern of two moves and one turn to put in the \"repeat\" block.  It's okay to have an extra turn at the end.",
   "repeatUntil": "понављај до испуњења",
   "repeatUntilBlocked": "док је путања напред",
   "repeatUntilFinish": "понављај до завршетка",

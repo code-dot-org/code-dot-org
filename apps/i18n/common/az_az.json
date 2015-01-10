@@ -34,7 +34,7 @@
   "finalStage": "Təbriklər! Siz son mərhələni başa vurdunuz.",
   "finalStageTrophies": "Təbriklər! Siz sonuncu mərhələni tamamladınız və {numTrophies, plural, one {bir kubok} other {# kubok}} qazandınız.",
   "finish": "Finish",
-  "generatedCodeInfo": "Proqramınızın blokları dünyanın ən geniş qəbul olunmuş proqramlaşdırma dili olan \"JavaScript\"də (\"cavaskript\") də yazıla bilər:",
+  "generatedCodeInfo": "Even top universities teach block-based coding (e.g., {berkeleyLink}, {harvardLink}). But under the hood, the blocks you have assembled can also be shown in JavaScript, the world's most widely used coding language:",
   "hashError": "Təəssüf ki, '%1' yaddaşa verilmiş heç bir proqramla uyğunlaşmır.",
   "help": "Kömək",
   "hintTitle": "Məsləhət:",
@@ -88,5 +88,6 @@
   "signup": "Giriş kursu üçün qeydiyyatdan keçin",
   "hintHeader": "Here's a tip:",
   "genericFeedback": "See how you ended up, and try to fix your program.",
+  "toggleBlocksErrorMsg": "You need to correct an error in your program before it can be shown as blocks.",
   "defaultTwitterText": "Check out what I made"
 }

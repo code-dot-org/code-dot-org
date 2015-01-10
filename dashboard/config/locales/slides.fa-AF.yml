@@ -43,9 +43,8 @@
           خود بکشید و "run" را فشار دهید، پرنده یک فاصله در پیچ و خم حرکت می کند.
       11:
         image: notes/hoc1_11.jpg
-        text: برای انجام بیش از یک عمل، شما می توانید هر چند بلوک را به فضای کاری
-          خود بکشید و آنها را به هم وصل کنید. پرنده دستورات را از بالا به پایین انجام
-          خواهد داد.
+        text: To do more than one action, you can drag many blocks to your workspace
+          and attach them together. The bird will do the commands from top to bottom.
       12:
         image: notes/hoc1_12.jpg
         text: اگر شما برنامه را اجرا کردید و می خواهید آن را تعمیر کنید و دوباره اجرا
@@ -230,12 +229,12 @@
           (مانعی در مسیر وجود ندارد) به چپ میچرخد.
       3:
         image: notes/hoc5_3.jpg
-        text: درست مانند بلوک "if" می توانیم بلوک "if else" را داخل بلوکهای "repeat"
-          قرار دادهیم تا زامبی بتواند به حرکت خود ادامه دهد و بلوک "if else" چک کند
-          که ایا جایی برای چرخش وجود دارد.
+        text: Just like the "if" block, we can put "if else" blocks inside a "repeat"
+          blocks so that the zombie keeps moving and the "if else" block will keep
+          checking if there's somewhere to turn.
       4:
         image: notes/hoc5_4.jpg
-        text: حالا، آن آدم خورها را به جایی که آنها تعلق دارند بگذار!
+        text: Now, get those zombies where they belong!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg

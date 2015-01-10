@@ -88,5 +88,6 @@
   "signup": "Registrirajte se na početni tečaj",
   "hintHeader": "Evo savjeta:",
   "genericFeedback": "Pogledaj kako si završio i pokušaj popraviti svoj program.",
+  "toggleBlocksErrorMsg": "You need to correct an error in your program before it can be shown as blocks.",
   "defaultTwitterText": "Pogledaj što sam napravio"
 }

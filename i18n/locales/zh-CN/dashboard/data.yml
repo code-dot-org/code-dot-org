@@ -311,7 +311,7 @@ zh:
         studio_playlab_6: 你可以帮助女巫使用上/下/左/右方向键来走动到达所有的魔法火球吗?
         studio_playlab_7: '"永远重复"块允许您连续运行代码。您可以附加块来帮助巫師反复向右和左移动吗？'
         studio_playlab_8: 当独角兽跑进该向导中时，添加一个模块来得分和一个模块播放声音，然后用箭头移动它们直到你得分，好吗？
-        studio_playlab_9: Set the background for this alien invasion and help the Spacebot get to the alien faster by changing its speed. Then move him with the arrow keys to get to the Spacebot and alert everyone else
+        studio_playlab_9: 为这次外星人入侵事件设置背景画面，并通过改变空间机器人的速度来使其接触外星人。通过方向键来接触外星人，并警示其它人。
         studio_playlab_10: 创建你自己的游戏。当你完成后时，单击Finish（完成），让朋友在他们手机上试试你的游戏。
         studio_full_sandbox: 创建你自己的游戏。当你完成后时，单击Finish（完成），让朋友在他们手机上试试你的游戏。
         studio_k1_1: '你可以让这个狗说"你好世界"吗？'
@@ -329,10 +329,10 @@ zh:
         maze_wordsearch_k_13: 把我向这边 然后向另一边移动来拼寫單詞DEBUG
         maze_wordsearch_k_15: 把我向这边 然后向另一边移动来拼寫單詞ABOVE
         maze_wordsearch_k_16: 把我向这边 然后向另一边移动来拼寫單詞BELOW
-        maze_wordsearch_k_20: This is a test! Move me one way, then another to spell the word STORY
-        webapp_ec_simple: Create your web app by using createHtmlBlock.
-        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColor" block.'
-        turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new "penWidth" block. Have fun!'
+        maze_wordsearch_k_20: 试验以下！先把我往一个方向移动，然后再往另一个方向移动，为了打出 《STORY》这个字
+        webapp_ec_simple: 使用 createHtmlBlock 来创建你的 web app。
+        turtle_ec_1_2: 现在，画个正方形。注意：从新的《penColor》模块中选用你最喜欢的颜色。
+        turtle_ec_1_10: 你成功了！现在任由你随意画你喜欢的东西。你可以尝试画个火柴人、雪花、旋螺型或其他有趣的图画。还有，可别忘了试用新的 penWidth 模块哦！玩乐愉快！
         studio_ec_sandbox: 创建你自己的游戏。当你完成后时，单击Finish（完成），让朋友在他们手机上试试你的游戏。
     levelbuilder:
       frozen line:
@@ -386,19 +386,21 @@ zh:
       scrat 20:
         instructions: 你可以只添加3块就帮我解答一个更复杂的迷宫吗？如果你做对了，我可以走任何长度和任意弯曲的路径。加油！冰正在融化 ！
       Standalone_Artist_1:
-        instructions: "Welcome to Artist! First off, let's try to make a simple square using the turn right block and move forward block. Each side should be 100 pixels long."
+        instructions: 欢迎来到艺术家！首先，一起用“右转“块和”向前移“块来画一个简单的正方形。正方形每边的长度是100像素。
       Standalone_Artist_2:
-        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel long sides.
+        instructions: 用 120 度和 60 度的角度，再加上长达150像素的边来画个钻石型。
       Standalone_Artist_3:
-        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree turns?
+        instructions: 能够用100 像素的边和 60度的转度来绘制一个六边形吗？
       Standalone_Artist_4:
-        instructions: "Now you've got a new block to play with, the loop. This will repeat a set of commands. What happens if you loop these commands 6 times?"
+        instructions: 现在你已获得一个新的块—循环，该块可以重复执行一连串的指令。如果你循环这些指令6次，看看会发生什么？
       Standalone_Artist_5:
-        instructions: How many times do you need to loop this diamond to draw the flower?
+        instructions: 你需要循环多少次钻石才能化成这朵花呢？
       Standalone_Artist_5.5:
-        instructions: "Notice how we simplified the diamond code by turning it into a loop. You can loop that whole sequence 12 times to draw the flower. Hint: You'll need to turn 30 degrees after your diamond loop so you don't keep drawing over the same diamond."
+        instructions: 注意：如何将画钻石的代码转换成“循环”块来精简代码。你可以通过循环整个事件12次来花一朵花。提示：在每个画钻石的循环结束后，你需要向左（或右）转30°，这样你就不会总是在一个地方画钻石了。
       Standalone_Artist_6:
-        instructions: 'Loop this hexagon code 6 times to create the design. How many degrees will you need to turn each time? Hint: divide the number of degrees in a circle by the number of times you are looping.'
+        instructions: |
+          通过循环画六边形6次来创建一个图形。每次你需要转动多少度呢？
+          提示：用一个圆周的度数除以你循环的次数。
       Standalone_Artist_7:
         instructions: 'A function is another programming tool to help you avoid repeating yourself. This function draws a flower, so you can use it any time you want to draw a flower. Use this and the new jump block to draw these flowers. Hint: The flowers are 150 pixels apart'
       Standalone_Artist_8:
@@ -422,7 +424,7 @@ zh:
         loop_for: “计数”循环块
         parameters: 有参数的函数
         hoc_wrapup: 编程一小时总结
-        Unplug1: What is CS?
+        Unplug1: 什么是CS?
         Unplug2: 计算性思维
         Unplug3: 方格纸编程
         Unplug4: 算法
@@ -456,7 +458,7 @@ zh:
         C2_artist_loops: Artist Loops
         C2_artist_debugging: Artist Debugging
         C2_bee_loops: Bee Loops
-        C2_bee_debugging: Bee Debugging
+        C2_bee_debugging: 蜜蜂调试
         C2_bee_conditionals: Bee Conditionals
         C2_playlab_createstory: 'Play Lab - Create a Story'
         C2_graph_paper: 方格纸编程
@@ -474,7 +476,7 @@ zh:
         C3_artist_nested_loops: Nested Loops
         C3_farmer_while: While Loops
         C3_bee_nested_loops: Nested Loops
-        C3_bee_debugging: Bee Debugging
+        C3_bee_debugging: 蜜蜂调试
         C3_bounce: 跳
         C3_playlab_create_game: 'Play Lab - Create a Game'
         C3_computational_thinking: 计算性思维

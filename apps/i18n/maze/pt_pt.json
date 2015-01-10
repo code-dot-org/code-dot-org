@@ -64,7 +64,7 @@
   "removePile": "Remove a pilha",
   "removeStack": "remove o monte de pilhas de {shovelfuls}",
   "removeSquare": "remove o quadrado",
-  "repeatCarefullyError": "Para resolver isso, encontra o padrão que se repete. Use um bloco \"repetir\" com estes 3 blocos dentro: move, move, virar à direita.",
+  "repeatCarefullyError": "To solve this, think carefully about the pattern of two moves and one turn to put in the \"repeat\" block.  It's okay to have an extra turn at the end.",
   "repeatUntil": "repita até",
   "repeatUntilBlocked": "enquanto houver caminho em frente",
   "repeatUntilFinish": "repete até terminar",

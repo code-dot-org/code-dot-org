@@ -3,7 +3,7 @@
   select_language: Prosím, zvolte jazyk
   computer_science: Informatika
   computer_science_edweek: Týden vzdělávání Informatiky
-  csedweek_dates: 9-15. prosince 2013
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Hodina kódu</a> se blíží. Vyzýváme všechny učitele a organizátory,
     <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -16,7 +16,7 @@
   petition_message: Každý student v každé škole by měl mít možnost se naučit informatiku
   petition_sign_message: 'Pokud souhlasíš, napiš své jméno. Přidej se mezi # dalších.'
   name: Jméno
-  email: E-mail
+  email: Email
   zipcode: PSČ nebo země
   submit: Odeslat
   twentyhours_heading: Vyzkoušej si náš kurz Úvod do Informatiky
@@ -85,7 +85,7 @@
   thanks_for_voting: Díky za hlasování!
   share_on_facebook: Sdílet na Facebooku
   share_on_twitter: Sdílet na Twitteru
-  beyond_an_hour: Co dál po Hodině kódu >
+  beyond_an_hour: Beyond an Hour of Code
   get_started: Spustit
   i_agree: Souhlasím
   participant_select: '- Vybrat -'
@@ -145,7 +145,7 @@
   studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
   studiobar_donate_title: Přispějte
   studiobar_donate_body: Jedno dítě se učí za každý dollar, který darujetehttps://crowdin.com/translate/codeorg/56/enus-cs#
-  studiobar_shop_title: Shop
+  studiobar_shop_title: Obchod
   studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   contact_form_topic_student: Jsem student
   contact_form_topic_parent: Jsem rodič
@@ -238,8 +238,8 @@
   dashboard_action_delete_yes: Ano
   dashboard_action_delete_no: Ne
   dashboard_action_confirm: Odstranit?
-  dashboard_action_remove: Remove
-  dashboard_action_remove_confirm: Remove?
+  dashboard_action_remove: Odstranit
+  dashboard_action_remove_confirm: Odstranit?
   dashboard_action_done: Hotovo
   dashboard_action_required: požadováno
   dashboard_navigation_home_page: Učitelská domovská stránka
@@ -383,6 +383,7 @@
   carousel_heading_robots: Naučte se programovat s roboty
   carousel_heading_ide: Platformy, které jsou populární mezi učiteli
   educator_notes: Poznámky pro pedagogy
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Další zdroje pro učitele
   participants: účastníci
   teachers_notes: Poznámky pro učitele
@@ -491,7 +492,7 @@
   lightbotintl_platformtext: iOS, Android (nebo webový prohlížeč)
   codehs_platformtext: Moderní prohlížeče. (Následující kurz vyžaduje $$)
   codecademy_platformtext: Moderní webové prohlížeče. iOS, aplikace pro Android
-  codecombat_platformtext: Moderní webové prohlížeče
+  codecombat_platformtext: Modern web browsers (Follow-on course requires $$)
   codemonkey_platformtext: Moderní webové prohlížeče
   codeavengers_platformtext: Moderní webové prohlížeče
   processing_platformtext: Moderní webové prohlížeče
@@ -573,11 +574,11 @@
     Je to hravá, samostatně vedená výuka, v jejíchž videolekcích v hlavních rolích
     vystupují hvězdy jako Bill Gates, Mark Zuckerberg, Angry Birds a Plants vs. Zombies.
     Nauč se příkazy opakování, rozhodování a základní algoritmy. Dostupné v 34 jazycích.
-  thinkersmithspanish_longdescription: Za použití předdefinovaného "slovníku robotů"
-    studenti zjistí jak se navzájem navádět ke zvládnutí konkrétních úkolů aniž by
-    se předem domluvili. Tato lekce naučí děti chápat souvislost mezi symboly a akcí,
-    stejně jako neocenitelnou schopnost ladit kód. "Mí robotičtí přátelé" funguje
-    nejlépe jako skupinová aktivita a obsahuje cvičebnici pro použití ve třídě.
+  thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
+    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
+    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
+    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
+    como la valiosa habilidad de depuraci&oacute;n.
   khan_longdescription: Naučte se základy programování v jazyce JavaScript při vytváření
     zábavných kreseb s tvým vlastním programem. Spolupracuj ve třídě nebo udělej sám!
   khanes_longdescription: Naučte se základy programování v jazyce JavaScript při vytváření
@@ -665,9 +666,10 @@
   flappy_longdescription: Pomocí drag-and-drop programování si vytvořte vlastní Flappy
     Bird hru, kterou si můžete přizpůsobit aby vypadala jinak (Flappy žralok, Flappy
     Santa, cokoliv). Přidejte si ji do telefonu jediným kliknutím.
-  bitsbox_longdescription: Nastav si svůj vlastní virtuální tablet a naprogramuj,
-    hrej a sdílej sérii aplikací. Jednoduché příklady umožňují i malým dětem programovat
-    v Javascriptu, a čím více jste pokročilý tím dále půjdete.
+  bitsbox_longdescription: Customize your very own virtual tablet, then code a series
+    of apps to play and share. Simple walkthroughs make it possible for even young
+    kids to program real JavaScript, and the more advanced you are the further you'll
+    go.
   makegameswithus_longdescription: Naučte se kódovat při tvorbě hry na iPhone pomocí
     nového a jednoduchého programovacího jazyku Swift! Vytvořte hru inspirovanou Poké&eacute;mony
     a napište kód abyste naučili své stvoření nové věci. Naučíte se jak pracovat s

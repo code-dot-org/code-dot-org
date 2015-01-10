@@ -88,5 +88,6 @@
   "signup": "Registrer deg for introduksjonskurset",
   "hintHeader": "Her er et tips:",
   "genericFeedback": "Se hvordan du endte opp, og prøv å fikse programmet ditt.",
+  "toggleBlocksErrorMsg": "You need to correct an error in your program before it can be shown as blocks.",
   "defaultTwitterText": "Sjekk ut det jeg lagde"
 }

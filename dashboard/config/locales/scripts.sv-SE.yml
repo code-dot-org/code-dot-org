@@ -313,6 +313,7 @@
           description: Ett urval av kurs 4 nivåer för användartester.
           Variables: Variabler
           For Loops: '''För'' loopar'
+          Binary: Binära
         potus:
           title: särskilda
           description_short: särskilda
@@ -323,3 +324,43 @@
           description_short: särskilda
           description: särskilda
           Special: Särskilda
+          Binary: Binära
+        usabilitymsm:
+          Usability testing for MSM: Usability testing for MSM
+          Evaluation Blocks: Evaluation Blocks
+          Blocks to Math: Block till matematik
+          Strings and Images: Strings and Images
+          Defining Variables: Defining Variables
+          Defining Functions: Defining Functions
+          Design Recipe: Design Recipe
+          Booleans: Booleska värden
+          Conditionals: Villkor
+          Free Play: Free Play
+        algebra:
+          title: Computer Science in Algebra
+          description: Learn Functional Programming through Algebra
+          'Unplugged: Video Games and Coordinate Planes': 'Ouppkopplad: videospel
+            och koordinat-plan'
+          'Calc: Evaluation Blocks': 'Calc: Utvärderings- block'
+          'Eval: Strings and Images': 'Eval: Strängar och bilder'
+          'Unplugged: Contracts': 'Ouppkopplad: kontrakt'
+          'Eval: Writing Contracts': 'Eval: Skriva kontrakt'
+          'Calc: Defining Variables': 'Calc: Definiera variabler'
+          'Play Lab: Defining Variables (Big Game)': 'Play labb: Definiera variabler
+            (Big Game)'
+          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Unplugged: The Design Recipe': 'Ouppkopplad: Design recept'
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Eval: Functions': 'Eval: Functions'
+          'Play Lab: Animation (Big Game)': 'Play Lab: Animation (Big Game)'
+          'Unplugged: Booleans': 'Ouppkopplad: booleska värden'
+          'Eval: Boolean Operators': 'Eval: Booleska operatorer'
+          'Play Lab: Booleans': 'Play Lab: booleska värden'
+          'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
+          'Unplugged: Conditionals and Piecewise Functions': 'Ouppkopplad: Villkorssatser
+            och styckevis funktioner'
+          'Eval: Conditionals': 'Eval: villkorssatser'
+          'Unplugged: Collision Detection and the Distance Formula': 'Ouppkopplad:
+            Kollisions-detektion och avstånds- formeln'
+          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Kollisions-detektion
+            (Big Game)'

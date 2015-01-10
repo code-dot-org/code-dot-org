@@ -3,7 +3,7 @@
 // moved to blocks.js, which is loaded later, since they are used in
 // top-level definitions below.  Note that the hex digits a-f are
 // lower-case.  This is assumed in comparisons below.
-exports.Colours = {
+var Colours = {
   BLACK: '#000000',
   GREY: '#808080',
   KHAKI: '#c3b091',
@@ -27,3 +27,5 @@ exports.Colours = {
   FROZEN8: "#fdd0fd",
   FROZEN9: "#aea4ff"
 };
+
+module.exports = Colours;

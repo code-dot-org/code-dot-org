@@ -58,6 +58,7 @@
   "moveDistanceTooltip": "Flytta en figur en specifik sträcka i angiven riktning.",
   "moveSprite": "flytta",
   "moveSpriteN": "flytta spelkaraktären {spriteIndex}",
+  "toXY": "to x,y",
   "moveDown": "flytta neråt",
   "moveDownTooltip": "Flytta en spelkaraktär nedåt.",
   "moveLeft": "flytta vänster",

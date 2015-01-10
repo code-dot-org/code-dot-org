@@ -88,5 +88,6 @@
   "signup":"샘플 코스를 위해 가입하기",
   "hintHeader":"도움말:",
   "genericFeedback":"어떻게 종료되는지 살펴보고 프로그램을 수정해 보세요.",
+  "toggleBlocksErrorMsg":"You need to correct an error in your program before it can be shown as blocks.",
   "defaultTwitterText":"만든 작품 확인하기"
 }

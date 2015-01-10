@@ -88,5 +88,6 @@
   "signup": "Piereģistrējies ievadkursam",
   "hintHeader": "Padoms:",
   "genericFeedback": "Apskati rezultātu un pamēģini salabot savu programmu.",
+  "toggleBlocksErrorMsg": "You need to correct an error in your program before it can be shown as blocks.",
   "defaultTwitterText": "Apskaties, ko esmu izveidojis"
 }

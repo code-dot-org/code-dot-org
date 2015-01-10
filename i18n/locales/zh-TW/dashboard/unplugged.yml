@@ -69,7 +69,7 @@ zh:
           - unplug11
         video: Unplug11
       UnplugHappyMaps:
-        title: Happy Maps
+        title: 快樂地圖
         desc: 學生創建簡單的算法（一連串的指令），透過一個指令便引導人物走出迷宮。
         video: C1_happy_maps_unplugged
       MoveIt:
@@ -118,9 +118,9 @@ zh:
         desc: Students create bracelets as a binary representations of the first letter of their name. Students learn that data can be represented and stored in more than one way.
         video: C2_binary_bracelets
       DigitalFootprint:
-        title: Your Digital Footprint
+        title: 你的數位足跡
         desc: 'Teachers introduce to students the idea that putting information about themselves online creates a digital footprint or "trail" that has consequences.'
-        video: C2_digital_footprint
+        video: C2_數位_足跡
       ComputationalThinking:
         title: 電腦計算式思維
         desc: Students use the steps of computational thinking (decompose, pattern match, abstract, algorithm) to figure out how to play a game that comes with no instructions.
@@ -140,7 +140,7 @@ zh:
       Internet:
         title: 互聯網
         desc: Students send messages representing various Internet transmission methods using pieces of paper.
-        video: C3_internet
+        video: C3_網際網路
       Crowdsourcing:
         title: Crowdsourcing
         desc: Students use crowdsourcing, a problem-solving technique common in computer science, to complete a task together as a classroom more efficiently than if a student attempted it alone.
@@ -169,11 +169,11 @@ zh:
         desc: 'One of the most magnificent structures in the computer science world is the function.  Functions (sometimes called procedures) are mini programs that you can use over and over inside of your bigger program. This lesson will help students intuitively understand why combining chunks of code into functions is such a helpful practice.  '
         video: C4_unplugged_parameters
       BinaryImages:
-        title: 二進位圖像
+        title: 二進位圖形
         desc: 'Though many people think of binary as strictly zeros and ones, our previous courses taught students that information can be represented in a variety of binary options.  This lesson takes that concept one step further as it illustrates how a computer can store even more complex information (such as images and colors) in binary, as well.'
         video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
-        title: Video Games and Coordinate Planes
+        title: 電玩遊戲和座標平面
         desc: Video Games and Coordinate Planes lesson description
       Contracts:
         title: Contracts
@@ -182,7 +182,7 @@ zh:
         title: The Design Recipe
         desc: Design Recipe lesson description
       Booleans:
-        title: Booleans
+        title: 布林值
         desc: 布林值課程說明
       ConditionalsPiecewiseFunctions:
         title: Conditionals and Piecewise Functions

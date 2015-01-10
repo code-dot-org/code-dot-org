@@ -37,7 +37,7 @@
           desc: Puzzles creats pels usuaris (beta)
           Custom: Etapa 1
         Flappy Levels:
-          desc: L'ocell Flappy
+          desc: Flappy Bird
           Flappy: Etapa 1
         Jigsaw Levels:
           desc: Trencaclosques (beta)
@@ -59,7 +59,7 @@
           desc: Puzzles creats pels usuaris (beta)
           Custom: Etapa 1
         flappy:
-          desc: L'ocell Flappy
+          desc: Flappy Bird
           Flappy: Etapa 1
         jigsaw:
           desc: Trencaclosques (beta)
@@ -95,7 +95,7 @@
         Unplug11: Recapitulació
         MazeEC: El Laberint
         Bounce: Rebota
-        Flappy: L'ocell Flappy
+        Flappy: Flappy Bird
         Jigsaw: Puzzle
         MazeStep: 'Laberint: pas a pas'
         Wordsearch: Sopa de lletres
@@ -780,7 +780,7 @@
         C4_intro: Introducció
         C4_bee_conditional: 'Abella: Condicionals'
         C4_variables_artist: Variables - Artista
-        C4_variables_playlab: Variables - Laboratori de Jocs
+        C4_variables_playlab: Variables - Play Lab
         C4_for_loops: Per bucles
         C4_math_artist: Programant l'Artista amb matemàtiques
         C4_function_edit: Editant Funcions

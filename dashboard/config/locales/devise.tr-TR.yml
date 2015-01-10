@@ -52,7 +52,7 @@
         sonlandırın.
       updated: Hesabınızı başarı ile güncelleştirdiniz.
     sessions:
-      signed_in: Başarı ile giriş yapıldı.
+      signed_in: ''
       signed_out: Başarıyla oturum kapatıldı.
     unlocks:
       send_instructions: Birkaç dakika içinde hesabınızın kilidini nasıl açacağınızı
