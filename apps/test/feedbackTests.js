@@ -18,7 +18,7 @@ global.document = {};
  * options.expectedResult
  */
 describe("getMissingRequiredBlocks tests", function () {
-  var feedback;
+  var studioAppSingleton;
 
   /**
    * getMissingRequiredBlocks will return us an array of requiredBlocks.  We
@@ -71,13 +71,13 @@ describe("getMissingRequiredBlocks tests", function () {
     assert.notEqual(options.expectedResult, undefined);
 
     // Should probably have these as inputs to getMissingRequiredBlocks instead
-    // of fields on StudioApp as it's the only place they're used
+    // of fields on studioAppSingleton as it's the only place they're used
     // In fact, may want to get rid of NUM_REQUIRED_BLOCKS_TO_FLAG as it's only
     // ever set to 1, or perhaps make it customizable per level
-    StudioApp.REQUIRED_BLOCKS = options.requiredBlocks;
-    StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = options.numToFlag;
+    studioAppSingleton.REQUIRED_BLOCKS = options.requiredBlocks;
+    studioAppSingleton.NUM_REQUIRED_BLOCKS_TO_FLAG = options.numToFlag;
 
-    StudioApp.loadBlocks(options.userBlockXml);
+    studioAppSingleton.loadBlocks(options.userBlockXml);
 
     // make sure we loaded correctly. text wont match exactly, but make sure if
     // we had xml, we loaded something
@@ -85,15 +85,14 @@ describe("getMissingRequiredBlocks tests", function () {
     assert(!options.userBlockXml || loaded, "either we didnt have  input xml" +
       "or we did, and we loaded something");
 
-    var missing = feedback.__testonly__.getMissingRequiredBlocks();
+    var missing = studioAppSingleton.feedback_.__testonly__.getMissingRequiredBlocks();
     validateMissingRequiredBlocks(missing.blocksToDisplay, options.expectedResult);
   }
-
 
   // create our environment
   beforeEach(function () {
     testUtils.setupTestBlockly();
-    feedback = testUtils.requireWithGlobalsCheckSrcFolder('/feedback');
+    studioAppSingleton = testUtils.getStudioAppSingleton();
   });
 
   // missing multiple blocks
@@ -293,7 +292,7 @@ describe("getMissingRequiredBlocks tests", function () {
       var skinForTests;
       if (collection.skinId) {
         var appSkins = testUtils.requireWithGlobalsCheckSrcFolder(collection.app + '/skins');
-        skinForTests = appSkins.load(StudioApp.assetUrl, collection.skinId);
+        skinForTests = appSkins.load(studioAppSingleton.assetUrl, collection.skinId);
       } else {
         skinForTests = {
           assetUrl: function (str) { return str; }

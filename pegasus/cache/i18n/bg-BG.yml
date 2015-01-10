@@ -3,7 +3,7 @@
   select_language: Моля, изберете вашия език
   computer_science: Компютърни науки
   computer_science_edweek: Седмица на Компютърните Науки
-  csedweek_dates: 9-15 Декември 2013 г.
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold"> Часът на кодирането</a> идва. Призоваваме всички учители и
     организатори, <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -391,6 +391,7 @@
   carousel_heading_robots: Научете се да програмирате с роботи
   carousel_heading_ide: Платформи, популярни сред учителите
   educator_notes: Бележки за учители
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Повече ресурси за учители и възпитатели
   participants: участници
   teachers_notes: Указания за учители
@@ -507,8 +508,7 @@
   groklearning_platformtext: Съвременни уеб браузъри
   quorum_platformtext: Съвременни уеб браузъри. Екранни четци се поддържат
   codespark_platformtext: iOS, Android (или уеб браузър)
-  kodable_platformtext: Kodable is a self-guided iPad game that introduces kids 5+
-    to programming basics. Having a teacher or parent nearby is optimal, but not necessary.
+  kodable_platformtext: iPad
   tynkerapp_platformtext: iPad, Андроид таблети
   robomindnl_platformtext: Съвременни уеб браузъри, мобилен интернет
   flappy_platformtext: Съвременни браузъри, смартфони, таблети
@@ -587,10 +587,11 @@
     and drop програмиране. Това е като игра, самонасочващи уроци с  видео лекции от
     Бил Гейтс, Марк Зукерберг, Angry Birds и Plants vs. Zombies. Научете за повторения-цикли,
     условия и основни алгоритми. Наличен на 34 езика.
-  thinkersmithspanish_longdescription: С помощта на предварително  определен "Речник
-    на робота", учениците ще се ръководят по такъв начин, че да изпълнят конкретни
-    задачи, които не са  обсъдени по-рано. Този сегмент учи учениците за връзката
-    между символи и действия, както и ценното умение на отстраняване на грешки.
+  thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
+    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
+    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
+    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
+    como la valiosa habilidad de depuraci&oacute;n.
   khan_longdescription: Научете основите на програмирането с JavaScript докато създавате
     забавни рисунки с вашия код. Направете го сами или с класа си!
   khanes_longdescription: Научете основите на програмирането с JavaScript докато създавате
@@ -1041,4 +1042,3 @@
   sphero_beyond_longdescription: Независимо дали сте учител или родител, SPRK уроците
     ще дадат на децата ви време за забавления чрез програмиране на роботи те ще подобряват
     уменията си по математика и наука.
-  how_to_teach_hoc: How to Teach an Hour of Code

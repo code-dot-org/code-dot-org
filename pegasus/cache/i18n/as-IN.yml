@@ -3,7 +3,7 @@
   select_language: Please select your language
   computer_science: Computer Science
   computer_science_edweek: Computer Science Education Week
-  csedweek_dates: December 9-15, 2013
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers,
     <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -376,6 +376,7 @@
   carousel_heading_robots: Learn to program with robots
   carousel_heading_ide: Platforms popular among teachers
   educator_notes: Educator Notes
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: More resources for teachers and educators
   participants: participants
   teachers_notes: Teacher's Notes
@@ -1007,4 +1008,3 @@
   sphero_beyond_longdescription: Whether you're an educator or a parent, SPRK lessons
     give kids a fun crash course in programming robots while sharpening their skills
     in math and science.
-  how_to_teach_hoc: How to Teach an Hour of Code
