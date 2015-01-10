@@ -28,6 +28,10 @@ class Game < ActiveRecord::Base
     @@game_custom_studio ||= find_by_name("CustomStudio")
   end
 
+  def self.custom_artist
+    @@game_custom_artist ||= find_by_name("Custom")
+  end
+
   def self.calc
     @@game_calc ||= find_by_name("Calc")
   end

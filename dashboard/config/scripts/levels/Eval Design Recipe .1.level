@@ -180,19 +180,26 @@
     <toolbox_blocks>
       <xml>
         <category name="Number">
-          <block type="functional_plus"/>
-          <block type="functional_minus"/>
-          <block type="functional_times"/>
-          <block type="functional_dividedby"/>
-          <block type="functional_math_number"/>
+          <block type="functional_plus" inline="false"/>
+          <block type="functional_minus" inline="false"/>
+          <block type="functional_times" inline="false"/>
+          <block type="functional_dividedby" inline="false"/>
+          <block type="functional_math_number">
+            <title name="NUM">0</title>
+          </block>
         </category>
         <category name="String">
-          <block type="functional_string"/>
-          <block type="functional_style"/>
+          <block type="functional_string">
+            <title name="VAL"/>
+          </block>
+          <block type="functional_style">
+            <title name="VAL">solid</title>
+          </block>
         </category>
         <category name="Image">
-          <block type="functional_circle"/>
-          <block type="functional_square"/>
+          <block type="functional_circle" inline="false"/>
+          <block type="functional_square" inline="false"/>
+          <block type="overlay" inline="false"/>
         </category>
         <category name="Functions" custom="PROCEDURE"/>
       </xml>

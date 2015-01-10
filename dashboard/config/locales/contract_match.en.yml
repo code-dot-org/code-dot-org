@@ -15,6 +15,11 @@ en:
         Contract star|image|radius:Number|style:string|color:string: Contract star|image|radius:Number|style:string|color:string
         star|image|radius:Number|style:string|color:string: star|image|radius:Number|style:string|color:string
         Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks, 300
+        star|image|color:string|radius:Number|style:string: star|image|color:string|radius:Number|style:string
+        Eval Contracts 1 B.solution_blocks, 300: Eval Contracts 1 B.solution_blocks, 300
+        Eval Contracts 1 BX: Eval Contracts 1 BX
+        Eval Contracts 1 B!: Eval Contracts 1 B!
+        Eval Contracts 1 B!!: Eval Contracts 1 B!!
       Eval Contracts 2 B:
         Eval Contracts 2 B: Eval Contracts 2 B
         Write a contract for the rotate function: Write a contract for the rotate function
@@ -25,6 +30,7 @@ en:
         Write a contract for the text function: Write a contract for the text function
         Eval Contracts 3 A.solution_blocks, 300: Eval Contracts 3 A.solution_blocks, 300
         text|image|string:string|size:Number|color:string: text|image|string:string|size:Number|color:string
+        text|image|color:string|size:Number|string:string: text|image|color:string|size:Number|string:string
       Eval Contracts 4 B:
         Eval Contracts 4 B: Eval Contracts 4 B
         Write a contract for the scale function: Write a contract for the scale function
@@ -35,8 +41,37 @@ en:
         ? Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.
         : Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.
         wide-rect|Image|height:Number|color:string: wide-rect|Image|height:Number|color:string
-      'Eval Design Recipe 1.contract':
+      Eval Design Recipe 1.contract:
         Design Recipe 1 Contract: Design Recipe 1 Contract
         ? Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.
         : Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.
         wide-rect|Image|height:Number|color:string: wide-rect|Image|height:Number|color:string
+      Creating Contracts From Examples 1:
+        Creating Contracts From Examples 1: Creating Contracts From Examples 1
+        Write a contract for a big red triangle that is 100 pixels.: Write a contract for a big red triangle that is 100 pixels.
+        Eval contracts 1 A.solution_blocks, 300: Eval contracts 1 A.solution_blocks, 300
+        big triangle|image|radius:Number|style:string|color:string: big triangle|image|radius:Number|style:string|color:string
+        Creating Contracts From Examples 1 A.solution_blocks, 300: Creating Contracts From Examples 1 A.solution_blocks, 300
+        Write a contract for a red triangle that is 100 pixels.: Write a contract for a red triangle that is 100 pixels.
+        triangle|image|radius:Number|style:string|color:string: triangle|image|radius:Number|style:string|color:string
+      CREATING CONTRACTS FROM EXAMPLES 1:
+        CREATING CONTRACTS FROM EXAMPLES 1: CREATING CONTRACTS FROM EXAMPLES 1
+        Write a contract for a big red triangle: Write a contract for a big red triangle
+        CREATING CONTRACTS FROM EXAMPLES 1 A.solution_block,300: CREATING CONTRACTS FROM EXAMPLES 1 A.solution_block,300
+        big triangle|image|color:string|radius:number|style:string: big triangle|image|color:string|radius:number|style:string
+        Write a contract for a big red triangle that is 100 pixels in size: Write a contract for a big red triangle that is 100 pixels in size
+        CREATING CONTRACTS FROM EXAMPLES 1 A.solution_block, 300: CREATING CONTRACTS FROM EXAMPLES 1 A.solution_block, 300
+        EXAMPLE 1.solution_block, 300: EXAMPLE 1.solution_block, 300
+        EXAMPLE 1.solution_blocks, 300: EXAMPLE 1.solution_blocks, 300
+        big triangle|image|color:string|size:number: big triangle|image|color:string|size:number
+        Big Triangle|image|color:string|size:number: Big Triangle|image|color:string|size:number
+        Write a contract for a big orange triangle that is 100 pixels in size: Write a contract for a big orange triangle that is 100 pixels in size
+        Write a contract for a big orange red that is 100 pixels in size: Write a contract for a big orange red that is 100 pixels in size
+        Write a contract for a big red that is 100 pixels in size: Write a contract for a big red that is 100 pixels in size
+        Big Triangle|image|color:string|size:Number: Big Triangle|image|color:string|size:Number
+      Creating Contracts From Examples 2:
+        Creating Contracts From Examples 2: Creating Contracts From Examples 2
+        Write a contract for a purple square that is 15 pixels in size.: Write a contract for a purple square that is 15 pixels in size.
+        EXAMPLE 2.solution_blocks, 300: EXAMPLE 2.solution_blocks, 300
+        Square|image|color:string|size:Number: Square|image|color:string|size:Number
+        Example 2.solution_blocks, 300: Example 2.solution_blocks, 300
