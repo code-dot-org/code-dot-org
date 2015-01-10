@@ -33,8 +33,10 @@ var FeedbackBlocks = require('./feedbackBlocks');
 // feedback, and requiring base here introduces a circular dependency. Instead,
 // we depend on base apply the singleton to the feedback object i required.
 var studioAppSingleton;
-FeedbackUtils.applySingleton = function (singleton) {
+var feedbackSingleton;
+FeedbackUtils.applySingleton = function (singleton, feedbackInstance) {
   studioAppSingleton = singleton;
+  feedbackSingleton = feedbackInstance;
 };
 
 var TestResults = require('./constants').TestResults;
@@ -1009,7 +1011,7 @@ function hasUnusedParam() {
     // Only search procedure definitions
     return params && params.some(function(paramName) {
       // Unused param if there's no parameters_get descendant with the same name
-      return !hasMatchingDescendant(userBlock, function(block) {
+      return !feedbackSingleton.hasMatchingDescendant_(userBlock, function(block) {
         return (block.type === 'parameters_get' ||
             block.type === 'functional_parameters_get' ||
             block.type === 'variables_get') &&
@@ -1064,7 +1066,7 @@ function hasIncompleteBlockInFunction() {
     if (!userBlock.parameterNames_) {
       return false;
     }
-    return hasMatchingDescendant(userBlock, function(block) {
+    return feedbackSingleton.hasMatchingDescendant_(userBlock, function(block) {
       // Incomplete block if any input connection target is null
       return block.inputList.some(function(input) {
         return input.type === Blockly.INPUT_VALUE &&
@@ -1078,11 +1080,12 @@ function hasIncompleteBlockInFunction() {
  * Returns true if any descendant (inclusive) of the given node matches the
  * given filter.
  */
-function hasMatchingDescendant(node, filter) {
+FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
   if (filter(node)) {
     return true;
   }
+  var self = this;
   return node.childBlocks_.some(function (child) {
-    return hasMatchingDescendant(child, filter);
+    return self.hasMatchingDescendant_(child, filter);
   });
-}
+};
