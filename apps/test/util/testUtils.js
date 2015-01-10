@@ -39,11 +39,6 @@ function requireWithGlobalsCheck(path, allowedChanges) {
  * additions to the global namespace are allowedChanges
  */
 exports.requireWithGlobalsCheckBuildFolder = function (path, allowedChanges) {
-  if (arguments.length > 2) {
-    // TODO - get rid of
-    throw new Error("Too many args");
-  }
-
   return requireWithGlobalsCheck(exports.buildPath(path), allowedChanges, false);
 };
 
@@ -69,7 +64,7 @@ exports.setupTestBlockly = function() {
   var blocklyAppDiv = document.getElementById('app');
   assert(blocklyAppDiv, 'blocklyAppDiv exists');
 
-  // TODO (brent) - address this
+
   studioAppSingleton.assetUrl = function (path) {
     return '../lib/blockly/' + path;
   };
