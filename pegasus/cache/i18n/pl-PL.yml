@@ -3,7 +3,7 @@
   select_language: Wybierz język
   computer_science: Informatyka
   computer_science_edweek: Tydzień Edukacji Informatycznej
-  csedweek_dates: 9-15 Grudnia 2013
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: 'Zbliża się <a href="http://hourofcode.com" style="color: white;
     text-decoration:underline; font-weight:bold"> Godzina Kodowania (Hour of Code)</a>.
     Zapraszamy wszystkich nauczycieli i organizatorów, <a href="http://hourofcode.com"
@@ -91,7 +91,7 @@
   share_on_facebook: Udostępnij na Facebooku
   share_on_twitter: Udostępnij na Twitterze
   beyond_an_hour: Poza Godziną Kodowania
-  get_started: Rozpocznij
+  get_started: Start
   i_agree: Zgadzam się
   participant_select: -Wybierz-
   participant_student: Uczeń
@@ -394,6 +394,7 @@
   carousel_heading_robots: Naucz się programować roboty
   carousel_heading_ide: Platformy popularne wśród nauczycieli
   educator_notes: Notatki nauczyciela
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Więcej zasobów dla nauczycieli i wychowawców
   participants: uczestnicy
   teachers_notes: Notatki nauczyciela
@@ -597,11 +598,11 @@
     Billa Gatesa, Marka Zuckerberga oraz udziałem Angry Birds i Plants vs. Zombies
     w rolach głównych. Nauczysz się stosować pętle, warunki oraz podstawowe algorytmy.
     Materiały są dostępne w 34 językach.
-  thinkersmithspanish_longdescription: Mediante el uso de ONZ "Vocabulario Robot"
-    predefinido, los estudiantes descubriran como guiarse de modo tal llevar de cabo
-    tareas especificas grzech ser estas discutidas previamente. Este segmento ensena
-    los estudiantes la conexion entre simbolos y acciones asi como la valiosa habilidad
-    de depuracion.
+  thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
+    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
+    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
+    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
+    como la valiosa habilidad de depuraci&oacute;n.
   khan_longdescription: Poznaj podstawy programowania w JavaScript tworząc zabawne
     rysunki. Możesz to zrobić na własną rękę lub z klasy!
   khanes_longdescription: Poznaj podstawy programowania w JavaScript tworząc zabawne

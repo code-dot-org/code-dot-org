@@ -3,7 +3,7 @@
   select_language: Seleccioneu l'idioma
   computer_science: Informàtica
   computer_science_edweek: Setmana de l'Educació en Informàtica
-  csedweek_dates: 9-15 de desembre de 2013
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: 'S''acosta l'' <a href="http://hourofcode.com" style="color:
     white; text-decoration:underline; font-weight:bold"> Hora del Codi</a>. Cridant
     a tots els professors i organitzadors, <a href="http://hourofcode.com" style="color:
@@ -355,7 +355,7 @@
   dashboard_grade_other: Altres
   dashboard_login_word: Paraula
   dashboard_login_picture: Imatge
-  dashboard_login_none: none
+  dashboard_login_none: Email
   dashboard_new_password: Nova contrasenya
   stats_hoc_2013_heading: 'Increïbles estadístiques d''Hora de Codi de l''any passat.
     En només una setmana:'
@@ -398,6 +398,7 @@
   carousel_heading_robots: Aprèn a programar amb robots
   carousel_heading_ide: Plataformes populars entre professors
   educator_notes: Notes d'educador
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Més recursos per a mestres i educadors
   participants: Participants
   teachers_notes: Notes del professor
@@ -596,9 +597,10 @@
     protagonitzades per Bill Gates, Mark Zuckerberg, Angry Birds i Plants vs. Zombies.
     Aprèn bucles, condicionals i algorismes bàsics. Disponible en 34 idiomes.
   thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
-    los estudiantes descubriran como guiarse de modo tal de llevar a cabo tareas especificas
-    sin ser estas discutidas previamente. Este segmento ensena a los estudiantes la
-    conexion entre simbolos y acciones asi como la valiosa habilidad de depuracion.
+    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
+    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
+    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
+    como la valiosa habilidad de depuraci&oacute;n.
   khan_longdescription: Aprendre els conceptes bàsics de programació amb JavaScript
     mentre crees divertits dibuixos amb el teu codi. Fer-ho pel teu compte o amb la
     teva classe!

@@ -3,7 +3,7 @@
   select_language: Por favor seleccione su idioma
   computer_science: Ciencias de la computación
   computer_science_edweek: Semana de Educación en Ciencias de la Computación
-  csedweek_dates: Diciembre 9-15, 2013
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: 'Se acerca la <a href="http://hourofcode.com" style="color:
     white; text-decoration:underline; font-weight:bold">Hora del código</a>.  Se convoca
     a todos los maestros y organizadores, <a href="http://hourofcode.com" style="color:
@@ -130,6 +130,12 @@
   start_hoc: Comienza La hora de código ahora
   contact_form_topic_press: Prensa/ Medios de comunicación (entrevista o compromiso
     de hablar)
+  stats_michael: '"Yo <b>nunca antes</b> había visto a mis estudiantes tan entuciasmados
+    por el aprendizaje." - Michael Clark, Profesor'
+  stats_nina: '"Cada día produzco los mismos resultados &mdash; 100% de compromiso."
+    - Nina Nichols Peery, docente'
+  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
+    Alzate, 5th grader'
   studiobar_title: Explora <a href='http://studio.code.org'>Code Studio</a>
   studiobar_elementary_title: Cursos elementales
   studiobar_elementary_body: Nuestros tres nuevos cursos para K&#8209;5
@@ -143,6 +149,8 @@
   studiobar_frozen_body: Crea un paisaje invernal con Anna y Elsa
   studiobar_donate_title: Dona
   studiobar_donate_body: Un niño aprende por cada dólar que done
+  studiobar_shop_title: Shop
+  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   contact_form_topic_student: Soy un estudiante
   contact_form_topic_parent: Soy un padre
   contact_form_topic_teacher: Soy un profesor/educador
@@ -237,9 +245,11 @@
   dashboard_action_save_all: Guardar todo
   dashboard_action_cancel: Cancelar
   dashboard_action_delete: Borrar
-  dashboard_action_confirm: ¿Borrar?
   dashboard_action_delete_yes: Sí
   dashboard_action_delete_no: 'No'
+  dashboard_action_confirm: ¿Borrar?
+  dashboard_action_remove: Remove
+  dashboard_action_remove_confirm: Remove?
   dashboard_action_done: Hecho
   dashboard_action_required: obligatorio
   dashboard_navigation_home_page: Página de inicio del maestro
@@ -390,6 +400,7 @@
   carousel_heading_robots: Aprende a programar con robots
   carousel_heading_ide: Plataformas populares entre los docentes
   educator_notes: Notas del educador
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Más recursos para profesores y educadores
   participants: participantes
   teachers_notes: Notas del profesor
@@ -525,7 +536,7 @@
   playlab_platformtext: Cualquier navegador moderno, smartphone, tableta
   codeorg_shortdescription: ¡Aprende a programar con Mark Zuckerberg y Angry Birds!
   codeintl_shortdescription: ¡Aprende a programar con Mark Zuckerberg y Angry Birds!
-  thinkersmithspanish_shortdescription: Aprendé a programar sin computadora!
+  thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Aprenda a dibujar con JavaScript
   khanes_shortdescription: Aprenda a dibujar con JavaScript
   khanpt_shortdescription: Aprenda a dibujar con JavaScript

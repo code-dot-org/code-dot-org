@@ -126,11 +126,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
                    {controller: "script_levels", action: "show", script_id: Script::HOC_NAME, chapter: "1"})
     assert_equal '/hoc/1', build_script_level_path(hoc_level)
 
-    builder_level = ScriptLevel.find_by(script_id: Script::BUILDER_ID, chapter: 1)
-    assert_routing({method: "get", path: '/builder/1'},
-                   {controller: "script_levels", action: "show", script_id: Script::BUILDER_ID, chapter: "1"})
-    assert_equal '/builder/1', build_script_level_path(builder_level)
-
     # we don't actually use this
     assert_routing({method: "get", path: '/k8intro/5'},
                    {controller: "script_levels", action: "show", script_id: Script::TWENTY_HOUR_ID, chapter: "5"})
