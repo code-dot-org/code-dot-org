@@ -873,8 +873,8 @@ FeedbackUtils.getMissingRequiredBlocks_ = function () {
 /**
  * Do we have any floating blocks not attached to an event block or function block?
  */
-FeedbackUtils.hasExtraTopBlocks = function () {
-  if (studioAppSingleton.editCode) {
+FeedbackUtils.prototype.hasExtraTopBlocks = function () {
+  if (this.studioApp_.editCode) {
     return false;
   }
   var topBlocks = Blockly.mainBlockSpace.getTopBlocks();
@@ -901,15 +901,15 @@ FeedbackUtils.hasExtraTopBlocks = function () {
  * @param  Did the user successfully complete the level
  * @return {number} The appropriate property of TestResults.
  */
-FeedbackUtils.getTestResults = function(levelComplete, options) {
+FeedbackUtils.prototype.getTestResults = function(levelComplete, options) {
   options = options || {};
-  if (studioAppSingleton.editCode) {
+  if (this.studioApp_.editCode) {
     // TODO (cpirich): implement better test results for editCode
     return levelComplete ?
-      studioAppSingleton.TestResults.ALL_PASS :
-      studioAppSingleton.TestResults.TOO_FEW_BLOCKS_FAIL;
+        this.studioApp_.TestResults.ALL_PASS :
+        this.studioApp_.TestResults.TOO_FEW_BLOCKS_FAIL;
   }
-  if (studioAppSingleton.CHECK_FOR_EMPTY_BLOCKS && hasEmptyContainerBlocks()) {
+  if (this.studioApp_.CHECK_FOR_EMPTY_BLOCKS && hasEmptyContainerBlocks()) {
     var type = getEmptyContainerBlock().type;
     if (type === 'procedures_defnoreturn' || type === 'procedures_defreturn') {
       return TestResults.EMPTY_FUNCTION_BLOCK_FAIL;
@@ -919,40 +919,42 @@ FeedbackUtils.getTestResults = function(levelComplete, options) {
     // for "controls_for_counter" blocks, for example.
     return TestResults.EMPTY_BLOCK_FAIL;
   }
-  if (!options.allowTopBlocks && FeedbackUtils.hasExtraTopBlocks()) {
+  if (!options.allowTopBlocks && this.hasExtraTopBlocks()) {
     return TestResults.EXTRA_TOP_BLOCKS_FAIL;
   }
   if (Blockly.useContractEditor || Blockly.useModalFunctionEditor) {
-    if (feedbackSingleton.hasUnusedParam_()) {
+    if (this.hasUnusedParam_()) {
       return TestResults.UNUSED_PARAM;
     }
-    if (feedbackSingleton.hasUnusedFunction_()) {
+    if (this.hasUnusedFunction_()) {
       return TestResults.UNUSED_FUNCTION;
     }
-    if (feedbackSingleton.hasParamInputUnattached_()) {
+    if (this.hasParamInputUnattached_()) {
       return TestResults.PARAM_INPUT_UNATTACHED;
     }
-    if (feedbackSingleton.hasIncompleteBlockInFunction_()) {
+    if (this.hasIncompleteBlockInFunction_()) {
       return TestResults.INCOMPLETE_BLOCK_IN_FUNCTION;
     }
   }
-  if (feedbackSingleton.hasQuestionMarksInNumberField_()) {
+  if (this.hasQuestionMarksInNumberField_()) {
     return TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
   }
   if (!hasAllRequiredBlocks()) {
-    return levelComplete ? TestResults.MISSING_BLOCK_FINISHED :
-      TestResults.MISSING_BLOCK_UNFINISHED;
+    return levelComplete ?
+        TestResults.MISSING_BLOCK_FINISHED :
+        TestResults.MISSING_BLOCK_UNFINISHED;
   }
   var numEnabledBlocks = FeedbackUtils.getNumCountableBlocks();
   if (!levelComplete) {
-    if (studioAppSingleton.IDEAL_BLOCK_NUM && studioAppSingleton.IDEAL_BLOCK_NUM !== Infinity &&
-        numEnabledBlocks < studioAppSingleton.IDEAL_BLOCK_NUM) {
+    if (this.studioApp_.IDEAL_BLOCK_NUM &&
+        this.studioApp_.IDEAL_BLOCK_NUM !== Infinity &&
+        numEnabledBlocks < this.studioApp_.IDEAL_BLOCK_NUM) {
       return TestResults.TOO_FEW_BLOCKS_FAIL;
     }
     return TestResults.LEVEL_INCOMPLETE_FAIL;
   }
-  if (studioAppSingleton.IDEAL_BLOCK_NUM &&
-      numEnabledBlocks > studioAppSingleton.IDEAL_BLOCK_NUM) {
+  if (this.studioApp_.IDEAL_BLOCK_NUM &&
+      numEnabledBlocks > this.studioApp_.IDEAL_BLOCK_NUM) {
     return TestResults.TOO_MANY_BLOCKS_FAIL;
   } else {
     return TestResults.ALL_PASS;
