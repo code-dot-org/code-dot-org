@@ -3,7 +3,7 @@
   select_language: Selecione seu idioma
   computer_science: Ciência da Computação
   computer_science_edweek: Semana de Educação em Ciência da Computação
-  csedweek_dates: 9 a 15 de dezembro de 2013
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: 'A <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Hora do Código</a> está chegando. Professores e organizadores,
     <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -127,6 +127,12 @@
     escreveram %{lines} linhas de programação.'
   start_hoc: Comece a Hora do Código agora
   contact_form_topic_press: Imprensa/mídia (entrevista ou falando de compromisso)
+  stats_michael: '"Eu <b>nunca, nunca</b> vi meus alunos tão animados para aprender."
+    - Michael Clark, professor'
+  stats_nina: '"Todos os dias produziram os mesmos resultados &mdash; 100% de comprometimento."
+    - Nina Nichols Peery, Professora'
+  stats_student: '"Eu sabia que esta era uma chance <b>única</b>." - Mariana Alzate,
+    aluna do 5º ano'
   studiobar_title: Explore o <a href='http://studio.code.org'>Code Studio</a>
   studiobar_elementary_title: Cursos para o Ensino Fundamental
   studiobar_elementary_body: Nossos três novos cursos para Ensino Fundamental
@@ -140,6 +146,8 @@
   studiobar_frozen_body: Crie um país das maravilhas congelante com Anna e Elsa
   studiobar_donate_title: Faça uma doação
   studiobar_donate_body: Para cada dólar doado, uma criança aprende
+  studiobar_shop_title: Loja
+  studiobar_shop_body: Quebre estereótipos. Use nosso logotipo com orgulho.
   contact_form_topic_student: Sou um estudante
   contact_form_topic_parent: Sou um pai
   contact_form_topic_teacher: Sou um professor/educador
@@ -233,9 +241,11 @@
   dashboard_action_save_all: Salvar tudo
   dashboard_action_cancel: Cancelar
   dashboard_action_delete: Excluir
-  dashboard_action_confirm: Excluir?
   dashboard_action_delete_yes: Sim
   dashboard_action_delete_no: Não
+  dashboard_action_confirm: Excluir?
+  dashboard_action_remove: Excluir
+  dashboard_action_remove_confirm: Excluir?
   dashboard_action_done: Feito
   dashboard_action_required: obrigatório
   dashboard_navigation_home_page: Página inicial do professor
@@ -384,6 +394,7 @@
   carousel_heading_robots: Aprenda a programar com robôs
   carousel_heading_ide: Plataformas populares entre professores
   educator_notes: Observações do Educador
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Mais recursos para professores e educadores
   participants: participantes
   teachers_notes: Observações do Professor

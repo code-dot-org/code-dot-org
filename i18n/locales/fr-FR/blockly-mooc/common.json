@@ -88,5 +88,6 @@
   "signup":"Inscrivez-vous au cours d'introduction",
   "hintHeader":"Voici une astuce :",
   "genericFeedback":"Observez le résultat et essayez de corriger les erreurs.",
+  "toggleBlocksErrorMsg":"You need to correct an error in your program before it can be shown as blocks.",
   "defaultTwitterText":"Découvrez ce que j'ai fait"
 }

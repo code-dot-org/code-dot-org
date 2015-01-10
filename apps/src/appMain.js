@@ -15,23 +15,6 @@ window.__TestInterface = {
 var addReadyListener = require('./dom').addReadyListener;
 var blocksCommon = require('./blocksCommon');
 
-function StubDialog(options) {
-  this.options = options;
-  console.log("Creating Dialog");
-  console.log(options);
-}
-StubDialog.prototype.show = function() {
-  console.log("Showing Dialog");
-  if (this.options.body) {
-    console.log(this.options.body.innerHTML);
-  }
-  console.log(this);
-};
-StubDialog.prototype.hide = function() {
-  console.log("Hiding Dialog");
-  console.log(this);
-};
-
 module.exports = function(app, levels, options) {
 
   // If a levelId is not provided, then options.level is specified in full.
@@ -51,8 +34,6 @@ module.exports = function(app, levels, options) {
 
     options.level = level;
   }
-
-  options.Dialog = options.Dialog || StubDialog;
 
   studioAppSingleton.configure(options);
 

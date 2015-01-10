@@ -31,7 +31,7 @@
           desc: Muokkaa koodia (beta)
           MazeEC: Vaihe 1
         2014 Levels:
-          desc: Pompi (beta)
+          desc: Bounce (beta)
           Bounce: Vaihe 1
         Builder Levels:
           desc: Omatekoiset palapelit (beta)
@@ -52,7 +52,7 @@
           ArtistEC: Vaihe 3
           StudioEC: Vaihe 4
         events:
-          desc: Pompi (beta)
+          desc: Bounce (beta)
           Bounce: Vaihe 1
           Studio: Vaihe 2
         builder:

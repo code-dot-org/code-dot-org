@@ -37,7 +37,7 @@
           desc: Brukeropprettede oppgaver (beta)
           Custom: Trinn 1
         Flappy Levels:
-          desc: Fuglen Flakse
+          desc: Flappy Bird
           Flappy: Trinn 1
         Jigsaw Levels:
           desc: Puslespill (beta)
@@ -59,7 +59,7 @@
           desc: Brukeropprettede oppgaver (beta)
           Custom: Trinn 1
         flappy:
-          desc: Fuglen Flakse
+          desc: Flappy Bird
           Flappy: Trinn 1
         jigsaw:
           desc: Puslespill (beta)
@@ -95,11 +95,11 @@
         Unplug11: Oppsummering
         MazeEC: Labyrinten
         Bounce: sprett
-        Flappy: Fuglen Flakse
+        Flappy: Flappy Bird
         Jigsaw: Puslespill
         MazeStep: Labyrint steg for steg
         Wordsearch: Ordsøk
-        Webapp: Nettapp
+        Webapp: Webapp
         ArtistEC: Kunstneren
         TextMatch: Teksttreff
         StudioEC: Spel-lab

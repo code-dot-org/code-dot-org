@@ -22,7 +22,7 @@
   add_teacher_form:
     code:
       label: 'Müəllim əlavə edin:'
-      placeholder: Code (ABCDEF)
+      placeholder: Section Code (ABCDEF)
     submit: Müəllim əlavə edin
   add_hint_form:
     placeholder: Please enter your hint here
@@ -61,18 +61,19 @@
     need_confirmation: Təsdiq göstərişlərini almamisiniz?
     need_unlock: Kilidaçma göstərişlərini almamisiniz?
   signup_form:
-    overview_student: Sign up for an account to track your progress.
+    overview_student: Sign up for an account to track your progress. Your email is
+      primarily used to allow you to log in and for password recovery. For more information,
+      see our <a href="http://code.org/privacy">Privacy Policy</a>.
     overview_teacher: Teach computer science in your classroom by signing up for an
-      account.<p/> You'll be able to track your students' progress and get rewards.
+      account.<p/> You'll be able to add your students and track their progress.
     no_signup_message: Siz <a target="_blank" href="http://learn.code.org">müxtəlif
       mərhələ və tapmacalar</a>ı nəzərdən keçirə bilərsiniz, lakin nəticələrinizi
       yadda saxlamaq üçün qeydiyyatdan keçməyiniz lazım olacaq.
     teacher_educator_guide: Təhsil işçisi üçün göstərişlərə baxın
-    teacher_pitch: Öz sinfinizdə K-8 İnformatikaya Giriş kursunu tədris edin
+    teacher_pitch: Teacher sign up for Code.org
     teacher_title: Müəllim kimi qeydiyyatdan keçin
-    student_pitch: '1 saat bitəndən sonra: K-8 İnformatikaya Giriş kursumuzu sınaqdan
-      keçirin'
-    student_title: Qeydiyyatdan keçin
+    student_pitch: Student sign up for Code.org
+    student_title: Student sign up
     school_name: Məktəbin Adı (vacib deyil)
     school_address: Məktəbin ünvanı (vacib deyil)
     address_placeholder: ünvan, şəhər, vilayət, poçt indeksi
@@ -88,14 +89,17 @@
     valid_password: Düzgün parol!
     invalid_password: Parol ən azı 6 simvol olmalıdır
     mismatch_password: Daxil etdiyiniz iki parol üst-üstə düşmür
-    student_terms: Mən "Code.org"un xidmət şərtlərinə riayət etməyə razıyam. Əgər
-      yaşım 13-dən azdırsa, bu formanı göndərməklə təsdiq edirəm ki, "Code.org" xidmətlərindən
-      istifadə etmək üçün valideynim və ya qanuni qəyyumumun icazəsini almışam.
-    teacher_terms: Mən "Code.org"un xidmət şərtlərinə riayət etməyə razıyam.
+    student_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
+      of service</a>. If I am under 13 years of age, I confirm by submitting this
+      form that I have my parent or legal guardian's permission to use the Code.org
+      services.<br/>For users under 13, email addresses are not stored in a form that
+      allows us to contact them.
+    teacher_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
+      of service</a>.
     additional_information: We need some additional information to continue signing
       you up.
   signin_form:
-    title: Daxil olun
+    title: Have an account already? Sign in
     login: E-poçt və ya istifadəçi adı
     password: Parol
     remember: Məni yadda saxla
@@ -143,7 +147,7 @@
         Zəhmət olmasa, onlardan burada qeydiyyatdan keçməyi xahiş edin və sonra onları
         yenidən əlavə etməyə çalışın'
       section_not_found: Could not find a section with code '%{section_code}'.
-      blank_code: Lütfən, kodu və ya müəlliminizin e-poçt ünvanını daxil edin
+      blank_code: Please enter a section code
       cant_join_own_section: Sorry, you can't join your own section.
     mail:
       invite_student:
@@ -363,8 +367,8 @@
     signin_message: Artıq qeydiyyatdan keçmisiniz? %{link}
     student_reg_link: Şagird qeydiyyatı
     teacher_reg_link: Müəllim qeydiyyatı
-    signin_directions: Use an account to track progress and get rewards.<br/> Teachers,
-      track your entire class.
+    signin_directions: Use an account to track progress.<br/> Teachers, track your
+      entire class.
     teacher_dashboard: Gedişat panelinə baxın
     teacher_student_count_one: Sizin %{count} şagirdiniz var.
     teacher_student_count: Sizin %{count} şagirdiniz var.
@@ -383,8 +387,8 @@
     local_school: yerli məktəb
     online: onlayn
     see_details: Təfərrüatına baxın
-    prize_info: 'Prizes for participation (U.S. only): $10 gift cards for student
-      completion and up to $1,000 in classroom rewards for public school teachers'
+    prize_info: 'Prizes for participation (U.S. public school teachers only): Up to
+      $1,000 in classroom rewards.'
     tryfirst: 'Or, you can try it first, and sign up later:'
     trynow: Elə indi sınaqdan keçirin
     add_hint_help: Please help us to add smart hints to Code.org tutorials
@@ -408,13 +412,11 @@
     student: şagird
     teacher: Teacher
   footer:
-    help_from_html: <a href="http://www.google.com">"Google"</a>, <a href="http://www.microsoft.com">"Microsoft"</a>,
-      <a href="http://www.facebook.com">"Facebook"</a> və <a href="http://www.twitter.com">"Twitter"</a>dən
-      olan mühəndislər bu dərsliyi düzəltməyə kömək etdilər.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 <a href="http://www.rovio.com">Rovio
-      Entertainment Ltd</a>. Bütün hüquqları qorunur.<br/> Plants vs. Zombies&trade;
-      & &copy; 2013 <a href="http://www.ea.com">Electronic Arts Inc.</a>. Bütün hüquqları
-      qorunur.
+    help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped
+      create this tutorial.
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
+      All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
+      Arts Inc. All Rights Reserved.
     powered_by_aws: Powered by Amazon Web Services
     feedback: Rəy verin
     translate: Sizin dilinizə tərcümə etməkdə bizə kömək edin
@@ -429,7 +431,7 @@
     teacher: Həllə baxın
     auth_error: Həlli görməyə səlahiyyətiniz yoxdur.
     submit: Update Artist Location
-    direction: Start Direction
+    direction: Start Direction (in degrees)
   video:
     tab: Video.
     notes: Video yoxdur? Qeydləri göstər.
@@ -463,10 +465,10 @@
   download_coming_soon: Downloadable activity coming soon.
   video_coming_soon: Video Coming Soon!
   share_code:
-    title: Mənim proqramımı fəaliyyətdə görmək üçün 'Proqramı icra et' - ə klikləyiniz
+    title: Click 'Run' to see my program in action
     bounce_og_title: Check out my Bounce Game
     flappy_og_title: Check out my Flappy Game
-    studio_og_title: Check out my story
+    studio_og_title: Check out my Play Lab App
     check_out_what_i_made: Check out what I made
     og_description: I wrote the code myself with Code.org
     phone_number_not_allowed: It looks like there is a phone number in it. Try changing
@@ -479,7 +481,7 @@
   builder:
     created: You created a new script.
     destroyed: You destroyed a script.
-    manage: Manage Scripts
+    manage: Build Levels
     view: View
     back: Back to scripts
     success: You successfully edited the blocks.
@@ -525,7 +527,9 @@
     header_playlab: Oyun labı
     header_artist: Rəssam
   landing:
-    prerelease: This page is still under development.
+    prerelease: This course is in <span class='betatext'>beta</span>.  This means
+      it is not the final version of the course, and is subject to revision as feedback
+      is received and improvements are made.
     prerelease_hoc2014: This tutorial is in <span class='betatext'>beta</span>.  It
       is subject to revision as feedback is received and improvements are made.
     feedback: Give Feedback

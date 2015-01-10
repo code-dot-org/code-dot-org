@@ -122,7 +122,7 @@
   "saySprite": "zeg",
   "saySpriteN": "speler {spriteIndex} zegt",
   "saySpriteTooltip": "Toon een tekstballon met de tekst van de speler.",
-  "scoreText": "Punten: {playerScore}",
+  "scoreText": "Score: {playerScore}",
   "setBackground": "stel de achtergrond in",
   "setBackgroundRandom": "stel een willekeurige achtergrond in",
   "setBackgroundBlack": "stel een zwarte achtergrond in",

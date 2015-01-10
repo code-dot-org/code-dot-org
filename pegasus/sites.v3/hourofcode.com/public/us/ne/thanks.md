@@ -1,10 +1,9 @@
-<% facebook = {:u=>"http://#{request.host}/us"}
-                      twitter = {:url=>"http://hourofcode.com", :related=>"codeorg", :hashtags=>"", :text=>hoc_s(:twitter_default_text)}
-                      twitter[:hashtags] = "HourOfCode" unless hoc_s(:twitter_default_text).include? "#HourOfCode" %>
+<%
+  facebook = {:u=>"http://#{request.host}/us"}
 
-<% फेसबुक = {:u=>"http://#{request.host}/us"}
-
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).लाई समावेश गर्नुहुन्छ? '#HourOfCode' %>
+  twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
+  twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
+%>
 
 # Hour of Code होस्ट गर्नुकोलागी sign up गर्नु भएकोमा धन्यवाद!
 

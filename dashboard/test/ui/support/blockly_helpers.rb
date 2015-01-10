@@ -25,6 +25,20 @@ module BlocklyHelpers
     coordinate_pair = @browser.execute_script(js)
     Point.new(coordinate_pair[0], coordinate_pair[1])
   end
+
+  def add_block_alias(blockAlias, blockId)
+    if @blockAliases.nil? then
+      @blockAliases = Hash.new
+    end
+    @blockAliases[blockAlias] = blockId
+  end
+
+  def get_block_id(alias_or_id)
+    if not @blockAliases.nil? and @blockAliases.has_key?(alias_or_id) then
+      return @blockAliases[alias_or_id]
+    end
+    return alias_or_id
+  end
 end
 
 World(BlocklyHelpers)

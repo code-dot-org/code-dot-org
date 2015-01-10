@@ -62,7 +62,7 @@
   "repeatUntil": "gjenta til",
   "repeatUntilBlocked": "så lenge det er en sti foran",
   "repeatUntilFinish": "gjenta til ferdig",
-  "scoreText": "Resultat: {playerScore}: {opponentScore}",
+  "scoreText": "Score: {playerScore} : {opponentScore}",
   "setBackgroundRandom": "Vis ei tilfeldig scene",
   "setBackgroundHardcourt": "vis grusbane-scene",
   "setBackgroundRetro": "vis retro-scene",

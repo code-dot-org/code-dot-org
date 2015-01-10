@@ -185,7 +185,7 @@
       posta elettronica confermato:'
     confirm:
       title: Si prega di confermare
-      'no': false
+      'no': 'No'
       'yes': Sì
       msg: Sei sicuro di voler richiedere il premio %{prize_name}?
       msg_student: 'Attenzione: Puoi scegliere solo un tipo di premio.'
@@ -310,7 +310,7 @@
     students:
       name: Nome
       username: Nome utente
-      password: password
+      password: Password
       manage: Gestisci i tuoi studenti
       dashboard: Vai al Cruscotto di controllo dell'insegnante
       add: Aggiungi i tuoi studenti

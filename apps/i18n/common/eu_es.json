@@ -30,7 +30,7 @@
   "errorRequiredParamsMissing": "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition.",
   "errorUnusedFunction": "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program.",
   "errorQuestionMarksInNumberField": "Try replacing \"???\" with a value.",
-  "extraTopBlocks": "Ekintza blokeei lotu gabeko blokeak soberan daude.",
+  "extraTopBlocks": "You have unattached blocks. Did you mean to attach these to the \"when run\" block?",
   "finalStage": "Zorionak! Azkeneko eszenatokia osatu duzu.",
   "finalStageTrophies": "Zorionak! Azkeneko eszenatokia osatu duzu eta {numTrophies, plural, one {a trophy} other {# trophies}}.",
   "finish": "Finish",
@@ -72,8 +72,8 @@
   "tryAgain": "Saiatu berriro",
   "hintRequest": "See hint",
   "backToPreviousLevel": "Atzera aurreko mailara",
-  "saveToGallery": "Gorde zure galerian",
-  "savedToGallery": "Zure galerian gordeta!",
+  "saveToGallery": "Save to gallery",
+  "savedToGallery": "Saved in gallery!",
   "shareFailure": "Sorry, we can't share this program.",
   "workspaceHeader": "Mihiztatu zure blokeak hemen: ",
   "workspaceHeaderJavaScript": "Type your JavaScript code here",
@@ -88,5 +88,6 @@
   "signup": "Izena eman sarrera kurtsorako",
   "hintHeader": "Hemen aholkua:",
   "genericFeedback": "See how you ended up, and try to fix your program.",
+  "toggleBlocksErrorMsg": "You need to correct an error in your program before it can be shown as blocks.",
   "defaultTwitterText": "Check out what I made"
 }

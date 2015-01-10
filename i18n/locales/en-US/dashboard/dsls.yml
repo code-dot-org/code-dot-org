@@ -1,125 +1,125 @@
----
 en:
   data:
     text_match:
       Blocks to Bools 1:
-        Convert Blocks to Math: Convert Blocks to Math
-        Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
-        /script_assets/msm/unit6/blockstomath1.png: /script_assets/msm/unit6/blockstomath1.png
-        (4+5) > 9: (4+5) > 9
-        Type the arithmetic expression here: Type the arithmetic expression here
+        Convert Blocks to Math: crwdns24832:0crwdne24832:0
+        Type out the arithmetic expression that matches this code: crwdns24833:0crwdne24833:0
+        /script_assets/msm/unit6/blockstomath1.png: crwdns24834:0crwdne24834:0
+        (4+5) > 9: crwdns24835:0crwdne24835:0
+        Type the arithmetic expression here: crwdns24836:0crwdne24836:0
       Blocks to Bools 2:
-        Convert Blocks to Math: Convert Blocks to Math
-        Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
-        /script_assets/msm/unit6/blockstomath2.png: /script_assets/msm/unit6/blockstomath2.png
-        (10 > 11) or (7 <= 9): (10 > 11) or (7 <= 9)
-        (10 > 11) OR (7 <= 9): (10 > 11) OR (7 <= 9)
-        (10 > 11) || (7 <= 9): (10 > 11) || (7 <= 9)
-        Type the arithmetic expression here: Type the arithmetic expression here
+        Convert Blocks to Math: crwdns24837:0crwdne24837:0
+        Type out the arithmetic expression that matches this code: crwdns24838:0crwdne24838:0
+        /script_assets/msm/unit6/blockstomath2.png: crwdns24839:0crwdne24839:0
+        (10 > 11) or (7 <= 9): crwdns24840:0crwdne24840:0
+        (10 > 11) OR (7 <= 9): crwdns24841:0crwdne24841:0
+        (10 > 11) || (7 <= 9): crwdns24842:0crwdne24842:0
+        Type the arithmetic expression here: crwdns24843:0crwdne24843:0
       Blocks to Bools 3:
-        Convert Blocks to Math: Convert Blocks to Math
-        Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
-        /script_assets/msm/unit6/blockstomath3.png: /script_assets/msm/unit6/blockstomath3.png
-        (5 < 10) and (10 < 15): (5 < 10) and (10 < 15)
-        (5 < 10) AND (10 < 15): (5 < 10) AND (10 < 15)
-        (5 < 10) && (10 < 15): (5 < 10) && (10 < 15)
-        Type the arithmetic expression here: Type the arithmetic expression here
+        Convert Blocks to Math: crwdns24844:0crwdne24844:0
+        Type out the arithmetic expression that matches this code: crwdns24845:0crwdne24845:0
+        /script_assets/msm/unit6/blockstomath3.png: crwdns24846:0crwdne24846:0
+        (5 < 10) and (10 < 15): crwdns24847:0crwdne24847:0
+        (5 < 10) AND (10 < 15): crwdns24848:0crwdne24848:0
+        (5 < 10) && (10 < 15): crwdns24849:0crwdne24849:0
+        Type the arithmetic expression here: crwdns24850:0crwdne24850:0
       Blocks to Bools 4:
-        Convert Blocks to Math: Convert Blocks to Math
-        Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
-        /script_assets/msm/unit6/blockstomath4.png: /script_assets/msm/unit6/blockstomath4.png
-        ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)): ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10))
-        ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): ((1 < x) and (x < 5)) or ((8 < x) and (x < 10))
-        ((1 < x) && (x < 5)) || ((8 < x) && (x < 10)): ((1 < x) && (x < 5)) || ((8 < x) && (x < 10))
-        Type the arithmetic expression here: Type the arithmetic expression here
+        Convert Blocks to Math: crwdns24851:0crwdne24851:0
+        Type out the arithmetic expression that matches this code: crwdns24852:0crwdne24852:0
+        /script_assets/msm/unit6/blockstomath4.png: crwdns24853:0crwdne24853:0
+        ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)): crwdns24854:0crwdne24854:0
+        ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): crwdns24855:0crwdne24855:0
+        ((1 < x) && (x < 5)) || ((8 < x) && (x < 10)): crwdns24856:0crwdne24856:0
+        Type the arithmetic expression here: crwdns24857:0crwdne24857:0
       Blocks to Math 1:
-        Convert Blocks to Math: Convert Blocks to Math
-        Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
-        Blocks to Math 1.blocks.start_blocks, 200: Blocks to Math 1.blocks.start_blocks, 200
-        4 + 5: 4 + 5
-        Type the arithmetic expression here: Type the arithmetic expression here
+        Convert Blocks to Math: crwdns24858:0crwdne24858:0
+        Type out the arithmetic expression that matches this code: crwdns24859:0crwdne24859:0
+        Blocks to Math 1.blocks.start_blocks, 200: crwdns27797:0crwdne27797:0
+        4 + 5: crwdns24861:0crwdne24861:0
+        Type the arithmetic expression here: crwdns24862:0crwdne24862:0
       Blocks to Math 2:
-        Convert Blocks to Math: Convert Blocks to Math
-        Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
-        Blocks to Math 2.blocks.start_blocks, 200: Blocks to Math 2.blocks.start_blocks, 200
-        7 * 6: 7 * 6
-        Type the arithmetic expression here: Type the arithmetic expression here
+        Convert Blocks to Math: crwdns24863:0crwdne24863:0
+        Type out the arithmetic expression that matches this code: crwdns24864:0crwdne24864:0
+        Blocks to Math 2.blocks.start_blocks, 200: crwdns27798:0crwdne27798:0
+        7 * 6: crwdns24866:0crwdne24866:0
+        Type the arithmetic expression here: crwdns24867:0crwdne24867:0
       Blocks to Math 3:
-        Convert Blocks to Math: Convert Blocks to Math
-        Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
-        Blocks to Math 3.blocks.start_blocks: Blocks to Math 3.blocks.start_blocks
-        (2 * 3) - (1 + 0): (2 * 3) - (1 + 0)
-        2 * 3 - (1 + 0): 2 * 3 - (1 + 0)
-        Type the arithmetic expression here: Type the arithmetic expression here
+        Convert Blocks to Math: crwdns24868:0crwdne24868:0
+        Type out the arithmetic expression that matches this code: crwdns24869:0crwdne24869:0
+        Blocks to Math 3.blocks.start_blocks: crwdns27799:0crwdne27799:0
+        (2 * 3) - (1 + 0): crwdns24871:0crwdne24871:0
+        2 * 3 - (1 + 0): crwdns24872:0crwdne24872:0
+        Type the arithmetic expression here: crwdns24873:0crwdne24873:0
       Blocks to Math 4:
-        Convert Blocks to Math: Convert Blocks to Math
-        Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
-        Blocks to Math 4.blocks.start_blocks: Blocks to Math 4.blocks.start_blocks
-        (5 + 8) - 12: (5 + 8) - 12
-        5 + 8 - 12: 5 + 8 - 12
-        Type the arithmetic expression here: Type the arithmetic expression here
+        Convert Blocks to Math: crwdns24874:0crwdne24874:0
+        Type out the arithmetic expression that matches this code: crwdns24875:0crwdne24875:0
+        Blocks to Math 4.blocks.start_blocks: crwdns27800:0crwdne27800:0
+        (5 + 8) - 12: crwdns24877:0crwdne24877:0
+        5 + 8 - 12: crwdns24878:0crwdne24878:0
+        Type the arithmetic expression here: crwdns24879:0crwdne24879:0
       Blocks to Math 5:
-        Convert Blocks to Math: Convert Blocks to Math
-        Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
-        Blocks to Math 5.blocks.start_blocks: Blocks to Math 5.blocks.start_blocks
-        (-2) * (-6): (-2) * (-6)
-        -2 * -6: -2 * -6
-        Type the arithmetic expression here: Type the arithmetic expression here
+        Convert Blocks to Math: crwdns24880:0crwdne24880:0
+        Type out the arithmetic expression that matches this code: crwdns24881:0crwdne24881:0
+        Blocks to Math 5.blocks.start_blocks: crwdns27801:0crwdne27801:0
+        (-2) * (-6):
+          - 
+            2 * -6: crwdns24883:0crwdne24883:0
+        Type the arithmetic expression here: crwdns24884:0crwdne24884:0
       Blocks to Math 6:
-        Convert Blocks to Math: Convert Blocks to Math
-        Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
-        Blocks to Math 6.blocks.start_blocks: Blocks to Math 6.blocks.start_blocks
-        ((4 - 1) * (-2)) + 12: ((4 - 1) * (-2)) + 12
-        ((4 - 1) * -2) + 12: ((4 - 1) * -2) + 12
-        (4 - 1) * (-2) + 12: (4 - 1) * (-2) + 12
-        (4 - 1) * -2 + 12: (4 - 1) * -2 + 12
-        Type the arithmetic expression here: Type the arithmetic expression here
+        Convert Blocks to Math: crwdns24885:0crwdne24885:0
+        Type out the arithmetic expression that matches this code: crwdns24886:0crwdne24886:0
+        Blocks to Math 6.blocks.start_blocks: crwdns27802:0crwdne27802:0
+        ((4 - 1) * (-2)) + 12: crwdns24888:0crwdne24888:0
+        ((4 - 1) * -2) + 12: crwdns24889:0crwdne24889:0
+        (4 - 1) * (-2) + 12: crwdns24890:0crwdne24890:0
+        (4 - 1) * -2 + 12: crwdns24891:0crwdne24891:0
+        Type the arithmetic expression here: crwdns24892:0crwdne24892:0
       Blocks to Math 7:
-        Convert Blocks to Math: Convert Blocks to Math
-        Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
-        Blocks to Math 7.blocks.start_blocks: Blocks to Math 7.blocks.start_blocks
-        10 / (2 * (3 + 1)): 10 / (2 * (3 + 1))
-        Type the arithmetic expression here: Type the arithmetic expression here
+        Convert Blocks to Math: crwdns24893:0crwdne24893:0
+        Type out the arithmetic expression that matches this code: crwdns24894:0crwdne24894:0
+        Blocks to Math 7.blocks.start_blocks: crwdns27803:0crwdne27803:0
+        10 / (2 * (3 + 1)): crwdns24896:0crwdne24896:0
+        Type the arithmetic expression here: crwdns24897:0crwdne24897:0
       text match test:
-        Mathematical Expression Assessment: Mathematical Expression Assessment
-        Type out the arithmetic expression that this circle of evaluation evaluates to: Type out the arithmetic expression that this circle of evaluation evaluates to
-        /script_assets/msm/Unit 1/Exercise_5_question_2.png: /script_assets/msm/Unit 1/Exercise_5_question_2.png
-        (9-3)+(4*7): (9-3)+(4*7)
-        (9-3)+4*7: (9-3)+4*7
-        9-3+4*7: 9-3+4*7
-        Type the arithmetic expression here: Type the arithmetic expression here
+        Mathematical Expression Assessment: crwdns23416:0crwdne23416:0
+        Type out the arithmetic expression that this circle of evaluation evaluates to: crwdns23417:0crwdne23417:0
+        /script_assets/msm/Unit 1/Exercise_5_question_2.png: crwdns23418:0crwdne23418:0
+        (9-3)+(4*7): crwdns23419:0crwdne23419:0
+        (9-3)+4: null
+        9-3+4: null
+        Type the arithmetic expression here: crwdns23420:0crwdne23420:0
     contract_match:
       Design Recipe 1.contract:
-        Design Recipe 1 Contract: Design Recipe 1 Contract
-        ? Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.
-        : Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.
-        wide-rect|Image|height:Number|color:string: wide-rect|Image|height:Number|color:string
+        Design Recipe 1 Contract: crwdns27804:0crwdne27804:0
+        0: crwdns27805:0crwdne27805:0
+        1: crwdns27806:0crwdne27806:0
+        "wide-rect|Image|height:Number|color:string": crwdns27807:0crwdne27807:0
       Enter name here:
-        Enter title here: Enter title here
-        Enter prompt here: Enter prompt here
-        Contract Name|Number|Domain1:Number|Domain2:string: Contract Name|Number|Domain1:Number|Domain2:string
+        Enter title here: crwdns27808:0crwdne27808:0
+        Enter prompt here: crwdns27809:0crwdne27809:0
+        "Contract Name|Number|Domain1:Number|Domain2:string": crwdns27810:0crwdne27810:0
       Eval Contracts 1 B:
-        Eval Contracts 1 B: Eval Contracts 1 B
-        Write a contract for the star function: Write a contract for the star function
-        Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks, 300
-        star|image|radius:Number|style:string|color:string: star|image|radius:Number|style:string|color:string
+        Eval Contracts 1 B: crwdns27811:0crwdne27811:0
+        Write a contract for the star function: crwdns27812:0crwdne27812:0
+        Eval Contracts 1 A.solution_blocks, 300: crwdns27813:0crwdne27813:0
+        "star|image|radius:Number|style:string|color:string": crwdns27814:0crwdne27814:0
       Eval Contracts 2 B:
-        Eval Contracts 2 B: Eval Contracts 2 B
-        Write a contract for the rotate function: Write a contract for the rotate function
-        Eval Contracts 2 A.solution_blocks, 300: Eval Contracts 2 A.solution_blocks, 300
-        rotate|image|degrees:Number|image:image: rotate|image|degrees:Number|image:image
+        Eval Contracts 2 B: crwdns27815:0crwdne27815:0
+        Write a contract for the rotate function: crwdns27816:0crwdne27816:0
+        Eval Contracts 2 A.solution_blocks, 300: crwdns27817:0crwdne27817:0
+        "rotate|image|degrees:Number|image:image": crwdns27818:0crwdne27818:0
       Eval Contracts 3 B:
-        Eval Contracts 3 B: Eval Contracts 3 B
-        Write a contract for the text function: Write a contract for the text function
-        Eval Contracts 3 A.solution_blocks, 300: Eval Contracts 3 A.solution_blocks, 300
-        text|image|string:string|size:Number|color:string: text|image|string:string|size:Number|color:string
+        Eval Contracts 3 B: crwdns27819:0crwdne27819:0
+        Write a contract for the text function: crwdns27820:0crwdne27820:0
+        Eval Contracts 3 A.solution_blocks, 300: crwdns27821:0crwdne27821:0
+        "text|image|string:string|size:Number|color:string": crwdns27822:0crwdne27822:0
       Eval Contracts 4 B:
-        Eval Contracts 4 B: Eval Contracts 4 B
-        Write a contract for the scale function: Write a contract for the scale function
-        Eval Contracts 4 A.solution_blocks, 300: Eval Contracts 4 A.solution_blocks, 300
-        scale|image|factor:Number|image:image: scale|image|factor:Number|image:image
+        Eval Contracts 4 B: crwdns27823:0crwdne27823:0
+        Write a contract for the scale function: crwdns27824:0crwdne27824:0
+        Eval Contracts 4 A.solution_blocks, 300: crwdns27825:0crwdne27825:0
+        "scale|image|factor:Number|image:image": crwdns27826:0crwdne27826:0
       Eval Design Recipe 1.contract:
-        Design Recipe 1 Contract: Design Recipe 1 Contract
-        ? Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.
-        : Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.
-        wide-rect|Image|height:Number|color:string: wide-rect|Image|height:Number|color:string
+        Design Recipe 1 Contract: crwdns27827:0crwdne27827:0
+        0: crwdns27828:0crwdne27828:0
+        1: crwdns27829:0crwdne27829:0
+        "wide-rect|Image|height:Number|color:string": crwdns27830:0crwdne27830:0

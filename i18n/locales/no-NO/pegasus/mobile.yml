@@ -3,7 +3,7 @@ no-NO:
   select_language: Velg ditt språk
   computer_science: Informatikk
   computer_science_edweek: Computer Science Education Week
-  csedweek_dates: 9.–15. desember 2013
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Kodetimen</a> nærmer seg. Alle lærere og arrangører tilkalles! <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Planlegg din kodetime</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Er du en lærer i datateknikk? Se andre CSEdWeek-ressurser</a>'
   n_have_learned_an_hoc: '<h1>#</h1><h3>har prøvd en</h3><h2>Time med Kode</h2>'
@@ -323,6 +323,7 @@ no-NO:
   carousel_heading_robots: Lær å programmere med roboter
   carousel_heading_ide: Plattformer som er populære blant lærere
   educator_notes: Lærernotater
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Flere lærerressurser
   participants: deltakere
   teachers_notes: Lærernotater

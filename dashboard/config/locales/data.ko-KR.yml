@@ -31,7 +31,7 @@
           desc: 코드 수정(beta)
           MazeEC: 1 단계
         2014 Levels:
-          desc: 2014 Puzzles (beta)
+          desc: Bounce (beta)
           Bounce: 1 단계
         Builder Levels:
           desc: 창작 퍼즐 (beta)
@@ -77,7 +77,7 @@
         Multi: 객관식 선택 문제
         Unplug2: 컴퓨터과학적(정보과학적)사고
         Unplug3: 모눈종이 프로그래밍
-        Artist: 예술가 퍼즐
+        Artist: The Artist
         Unplug4: 알고리즘
         Artist2: 예술가 퍼즐 2
         Unplug5: 함수
@@ -94,7 +94,7 @@
         Artist5: 예술가 퍼즐 5
         Unplug11: 마무리
         MazeEC: 미로 퍼즐
-        Bounce: 바운스
+        Bounce: Bounce
         Flappy: 플래피 버드
         Jigsaw: 퍼즐 맞추기
         MazeStep: 미로 단계별 모드

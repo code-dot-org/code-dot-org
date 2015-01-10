@@ -19,9 +19,9 @@
       unconfirmed: You have to confirm your account before continuing.
     mailer:
       confirmation_instructions:
-        subject: Confirmation instructions
+        subject: Code.org confirmation instructions
       reset_password_instructions:
-        subject: Reset password instructions
+        subject: Code.org reset password instructions
       unlock_instructions:
         subject: Unlock Instructions
     omniauth_callbacks:
@@ -52,7 +52,7 @@
         confirm link to finalize confirming your new email address.
       updated: You updated your account successfully.
     sessions:
-      signed_in: Úspešne prihlásení.
+      signed_in: ''
       signed_out: Úspešne odhlásení.
     unlocks:
       send_instructions: You will receive an email with instructions about how to
