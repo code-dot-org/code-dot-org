@@ -1,3 +1,22 @@
+// NOTE: These must be kept in sync with activity_hint.rb in dashboard.
+var HINT_REQUEST_PLACEMENT = {
+  NONE: 0,  // This value must not be changed.
+  LEFT: 1,  // Hint request button is on left.
+  RIGHT: 2  // Hint request button is on right.
+};
+
+/**
+ * Bag of utility functions related to building and displaying feedback
+ * to students.
+ * @class
+ * @param {StudioAppClass} studioApp A studioApp instance used to pull
+ *   configuration and perform operations.
+ */
+var FeedbackUtils = function (studioApp) {
+  this.studioApp_ = studioApp;
+};
+module.exports = FeedbackUtils;
+
 var trophy = require('./templates/trophy.html');
 var utils = require('./utils');
 var codegen = require('./codegen');
@@ -14,20 +33,15 @@ var FeedbackBlocks = require('./feedbackBlocks');
 // feedback, and requiring base here introduces a circular dependency. Instead,
 // we depend on base apply the singleton to the feedback object i required.
 var studioAppSingleton;
-exports.applySingleton = function (singleton) {
+FeedbackUtils.applySingleton = function (singleton) {
   studioAppSingleton = singleton;
 };
 
 var TestResults = require('./constants').TestResults;
 
-// NOTE: These must be kept in sync with activity_hint.rb in dashboard.
-var HintRequestPlacement = {
-  NONE: 0,  // This value must not be changed.
-  LEFT: 1,  // Hint request button is on left.
-  RIGHT: 2  // Hint request button is on right.
-};
 
-exports.displayFeedback = function(options) {
+
+FeedbackUtils.displayFeedback = function(options) {
   options.hintRequestExperiment = options.response &&
       options.response.hint_request_placement;
   options.level = options.level || {};
@@ -41,16 +55,16 @@ exports.displayFeedback = function(options) {
   var hadShareFailure = (options.response && options.response.share_failure);
   var showingSharing = options.showingSharing && !hadShareFailure;
 
-  var canContinue = exports.canContinueToNextLevel(options.feedbackType);
+  var canContinue = FeedbackUtils.canContinueToNextLevel(options.feedbackType);
   var displayShowCode = studioAppSingleton.enableShowCode && canContinue && !showingSharing;
   var feedback = document.createElement('div');
-  var sharingDiv = (canContinue && showingSharing) ? exports.createSharingDiv(options) : null;
+  var sharingDiv = (canContinue && showingSharing) ? FeedbackUtils.createSharingDiv(options) : null;
   var showCode = displayShowCode ? getShowCodeElement(options) : null;
   var shareFailureDiv = hadShareFailure ? getShareFailure(options) : null;
   if (hadShareFailure) {
     trackEvent('Share', 'Failure', options.response.share_failure.type);
   }
-  var feedbackBlocks = new FeedbackBlocks(options, exports.getMissingRequiredBlocks_(),
+  var feedbackBlocks = new FeedbackBlocks(options, FeedbackUtils.getMissingRequiredBlocks_(),
     studioAppSingleton);
   // feedbackMessage must be initialized after feedbackBlocks
   // because FeedbackBlocks can mutate options.response.hint.
@@ -121,7 +135,7 @@ exports.displayFeedback = function(options) {
   var icon = canContinue ? studioAppSingleton.winIcon : studioAppSingleton.failureIcon;
   var defaultBtnSelector = onlyContinue ? '#continue-button' : '#again-button';
 
-  var feedbackDialog = exports.createModalDialogWithIcon({
+  var feedbackDialog = FeedbackUtils.createModalDialogWithIcon({
     Dialog: options.Dialog,
     contentDiv: feedback,
     icon: icon,
@@ -243,7 +257,7 @@ exports.displayFeedback = function(options) {
  * not disabled, are deletable.
  * @return {number} Number of blocks used.
  */
-exports.getNumBlocksUsed = function() {
+FeedbackUtils.getNumBlocksUsed = function() {
   var i;
   if (studioAppSingleton.editCode) {
     var codeLines = 0;
@@ -264,7 +278,7 @@ exports.getNumBlocksUsed = function() {
  * not disabled.
  * @return {number} Total number of blocks.
  */
-exports.getNumCountableBlocks = function() {
+FeedbackUtils.getNumCountableBlocks = function() {
   var i;
   if (studioAppSingleton.editCode) {
     var codeLines = 0;
@@ -286,13 +300,13 @@ var getFeedbackButtons = function(options) {
   buttons.innerHTML = require('./templates/buttons.html')({
     data: {
       previousLevel:
-        !exports.canContinueToNextLevel(options.feedbackType) &&
+        !FeedbackUtils.canContinueToNextLevel(options.feedbackType) &&
         options.showPreviousButton,
       tryAgain: options.feedbackType !== TestResults.ALL_PASS,
-      nextLevel: exports.canContinueToNextLevel(options.feedbackType),
+      nextLevel: FeedbackUtils.canContinueToNextLevel(options.feedbackType),
       isK1: options.isK1,
       hintRequestExperiment: options.hintRequestExperiment &&
-          (options.hintRequestExperiment === HintRequestPlacement.LEFT ?
+          (options.hintRequestExperiment === HINT_REQUEST_PLACEMENT.LEFT ?
               'left' : 'right'),
       assetUrl: studioAppSingleton.assetUrl,
       freePlay: options.freePlay
@@ -459,7 +473,7 @@ var getFeedbackMessage = function(options) {
   return feedback;
 };
 
-exports.createSharingDiv = function(options) {
+FeedbackUtils.createSharingDiv = function(options) {
   if (!options.response || !options.response.level_source) {
     // don't even try if our caller didn't give us something that can be shared
     // options.response.level_source is the url that we are sharing
@@ -600,7 +614,7 @@ var getShowCodeElement = function(options) {
   var showCodeDiv = document.createElement('div');
   showCodeDiv.setAttribute('id', 'show-code');
 
-  var numLinesWritten = exports.getNumBlocksUsed();
+  var numLinesWritten = FeedbackUtils.getNumBlocksUsed();
   var shouldShowTotalLines =
     (options.response &&
       options.response.total_lines &&
@@ -626,7 +640,7 @@ var getShowCodeElement = function(options) {
  * @param {number} feedbackType A constant property of TestResults,
  *     typically produced by studioAppSingleton.getTestResults().
  */
-exports.canContinueToNextLevel = function(feedbackType) {
+FeedbackUtils.canContinueToNextLevel = function(feedbackType) {
   return (feedbackType === TestResults.ALL_PASS ||
     feedbackType === TestResults.TOO_MANY_BLOCKS_FAIL ||
     feedbackType ===  TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL ||
@@ -663,7 +677,7 @@ var getGeneratedCodeElement = function() {
   return codeDiv;
 };
 
-exports.showGeneratedCode = function(Dialog) {
+FeedbackUtils.showGeneratedCode = function(Dialog) {
   var codeDiv = getGeneratedCodeElement();
 
   var buttons = document.createElement('div');
@@ -674,7 +688,7 @@ exports.showGeneratedCode = function(Dialog) {
   });
   codeDiv.appendChild(buttons);
 
-  var dialog = exports.createModalDialogWithIcon({
+  var dialog = FeedbackUtils.createModalDialogWithIcon({
       Dialog: Dialog,
       contentDiv: codeDiv,
       icon: studioAppSingleton.icon,
@@ -691,7 +705,7 @@ exports.showGeneratedCode = function(Dialog) {
   dialog.show();
 };
 
-exports.showToggleBlocksError = function(Dialog) {
+FeedbackUtils.showToggleBlocksError = function(Dialog) {
   var contentDiv = document.createElement('div');
   contentDiv.innerHTML = msg.toggleBlocksErrorMsg();
 
@@ -703,7 +717,7 @@ exports.showToggleBlocksError = function(Dialog) {
   });
   contentDiv.appendChild(buttons);
 
-  var dialog = exports.createModalDialogWithIcon({
+  var dialog = FeedbackUtils.createModalDialogWithIcon({
       Dialog: Dialog,
       contentDiv: contentDiv,
       icon: studioAppSingleton.icon,
@@ -753,7 +767,7 @@ var getEmptyContainerBlock = function() {
  * @return {boolean} true if all blocks are present, false otherwise.
  */
 var hasAllRequiredBlocks = function() {
-  return exports.getMissingRequiredBlocks_().blocksToDisplay.length === 0;
+  return FeedbackUtils.getMissingRequiredBlocks_().blocksToDisplay.length === 0;
 };
 
 /**
@@ -793,7 +807,7 @@ var getCountableBlocks = function() {
  * of an id in the corresponding template.soy. 'message' is an optional message
  * to override the default error text.
  */
-exports.getMissingRequiredBlocks_ = function () {
+FeedbackUtils.getMissingRequiredBlocks_ = function () {
   var missingBlocks = [];
   var customMessage = null;
   var code = null;  // JavaScript code, which is initialized lazily.
@@ -849,7 +863,7 @@ exports.getMissingRequiredBlocks_ = function () {
 /**
  * Do we have any floating blocks not attached to an event block or function block?
  */
-exports.hasExtraTopBlocks = function () {
+FeedbackUtils.hasExtraTopBlocks = function () {
   if (studioAppSingleton.editCode) {
     return false;
   }
@@ -877,7 +891,7 @@ exports.hasExtraTopBlocks = function () {
  * @param  Did the user successfully complete the level
  * @return {number} The appropriate property of TestResults.
  */
-exports.getTestResults = function(levelComplete, options) {
+FeedbackUtils.getTestResults = function(levelComplete, options) {
   options = options || {};
   if (studioAppSingleton.editCode) {
     // TODO (cpirich): implement better test results for editCode
@@ -895,7 +909,7 @@ exports.getTestResults = function(levelComplete, options) {
     // for "controls_for_counter" blocks, for example.
     return TestResults.EMPTY_BLOCK_FAIL;
   }
-  if (!options.allowTopBlocks && exports.hasExtraTopBlocks()) {
+  if (!options.allowTopBlocks && FeedbackUtils.hasExtraTopBlocks()) {
     return TestResults.EXTRA_TOP_BLOCKS_FAIL;
   }
   if (Blockly.useContractEditor || Blockly.useModalFunctionEditor) {
@@ -919,7 +933,7 @@ exports.getTestResults = function(levelComplete, options) {
     return levelComplete ? TestResults.MISSING_BLOCK_FINISHED :
       TestResults.MISSING_BLOCK_UNFINISHED;
   }
-  var numEnabledBlocks = exports.getNumCountableBlocks();
+  var numEnabledBlocks = FeedbackUtils.getNumCountableBlocks();
   if (!levelComplete) {
     if (studioAppSingleton.IDEAL_BLOCK_NUM && studioAppSingleton.IDEAL_BLOCK_NUM !== Infinity &&
         numEnabledBlocks < studioAppSingleton.IDEAL_BLOCK_NUM) {
@@ -940,7 +954,7 @@ var Keycodes = {
   SPACE: 32
 };
 
-exports.createModalDialogWithIcon = function(options) {
+FeedbackUtils.createModalDialogWithIcon = function(options) {
   var imageDiv = document.createElement('img');
   imageDiv.className = "modal-image";
   imageDiv.src = options.icon;

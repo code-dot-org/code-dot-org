@@ -28,6 +28,7 @@ var MAX_PHONE_WIDTH = 500;
 
 var StudioAppClass = function () {
   this.feedback_ = null;
+  this.feedbackInstance_ = null;
 
   /**
   * The parent directory of the apps. Contains common.js.
