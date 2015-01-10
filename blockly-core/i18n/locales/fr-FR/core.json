@@ -262,7 +262,7 @@
   "MATH_SINGLE_TOOLTIP_POW10": "Renvoie 10 à la puissance d’un nombre.",
   "MATH_SINGLE_TOOLTIP_ROOT": "Renvoie la racine carrée d’un nombre.",
   "MATH_SUBTRACTION_SYMBOL": "-",
-  "MATH_TRIG_ACOS": "arc-cosinus",
+  "MATH_TRIG_ACOS": "acos",
   "MATH_TRIG_ASIN": "arc-sinus",
   "MATH_TRIG_ATAN": "arc-tangeante",
   "MATH_TRIG_COS": "cosinus",

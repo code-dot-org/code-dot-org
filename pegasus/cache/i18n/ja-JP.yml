@@ -1,9 +1,9 @@
 "ja-JP":
-  hello: ハローワールド
+  hello: Hello world
   select_language: 言語を選択してください
   computer_science: コンピュータサイエンス
   computer_science_edweek: コンピュータサイエンス教育週間
-  csedweek_dates: 2013年12月9日 - 15日
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Hour of Code</a>が始まります。先生方と主催者のみなさん、<a href="http://hourofcode.com"
     style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a>の計画をしましょう'
@@ -125,7 +125,7 @@
   studiobar_flappy_body: 自分だけのFlappyゲームを作って共有する
   studiobar_teacher_title: 先生用
   studiobar_teacher_body: Code Studioをあなたのクラスで紹介する
-  studiobar_frozen_title: コードの時間(Hour of code)
+  studiobar_frozen_title: Hour of Code
   studiobar_frozen_body: アナとエルザと一緒に冬のワンダーランドを作る
   studiobar_donate_title: 寄付する
   studiobar_donate_body: 1ドルの寄付ごとに、一人の子供が学びます
@@ -334,6 +334,7 @@
   carousel_heading_robots: ロボットとプログラミングを学ぶ
   carousel_heading_ide: 先生方に人気のプラットフォーム
   educator_notes: 教育者ノート
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: 先生方と教育者向け資料
   participants: 参加者
   teachers_notes: 教師のノート
@@ -366,7 +367,7 @@
   codehs_name: カレル犬と一緒にコーディングを学ぶ
   codecademy_name: Codecademy
   codecombat_name: CodeCombat
-  codemonkey_name: コードモンキー
+  codemonkey_name: CodeMonkey
   codeavengers_name: Java スクリプトでゲームを構築する
   processing_name: コードを使用して絵画を描く
   robomind_name: バーチャルロボットをプログラムする
@@ -381,7 +382,7 @@
   makegameswithus_name: お使いのブラウザで、iPhone のゲームを構築！
   touchdevelop_name: TouchDevelop
   appinventor_name: Hour of Codeでアップインべンター
-  blockly_name: ブロッキー
+  blockly_name: Blockly
   thinkersmith2_name: 不要なバイナリ
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: グー、パー、チョキ
