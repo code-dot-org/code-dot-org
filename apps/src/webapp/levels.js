@@ -30,7 +30,7 @@ levels.simple = {
 levels.ec_simple = {
   'freePlay': true,
   'editCode': true,
-  'sliderSpeed': 1.0,
+  'sliderSpeed': 0.95,
   'codeFunctions': [
     {'func': 'attachEventHandler', 'title': 'Execute code in response to an event for the specified element', 'category': 'General', 'params': ["'id'", "'click'", "function() {\n  \n}"] },
     {'func': 'startWebRequest', 'title': 'Request data from the internet and execute code when the request is complete', 'category': 'General', 'params': ["'http://api.openweathermap.org/data/2.5/weather?q=London,uk'", "function(status, type, content) {\n  \n}"] },

@@ -188,6 +188,7 @@ Webapp.onTick = function() {
 
   var atInitialBreakpoint = Webapp.paused && Webapp.nextStep === StepType.IN && Webapp.tickCount === 1;
   var maxSpeed = getCurrentTickLength() === 0;
+  Webapp.seenEmptyGetCallbackThisTick = false;
 
   if (Webapp.paused) {
     switch (Webapp.nextStep) {
@@ -219,22 +220,28 @@ Webapp.onTick = function() {
     var inUserCode;
     var userCodeRow;
     var session = StudioApp.editor.aceEditor.getSession();
-    // NOTE: when running at max speed, we call a simple function to just get the
-    // line number, otherwise we call a function that also selects the code:
-    var selectCodeFunc = (maxSpeed && !Webapp.paused) ?
-                            codegen.getUserCodeLine :
-                            codegen.selectCurrentCode;
+    // NOTE: when running with no source visible or at max speed with blocks, we
+    // call a simple function to just get the line number, otherwise we call a
+    // function that also selects the code:
+    var selectCodeFunc =
+      (StudioApp.hideSource ||
+       (maxSpeed && !Webapp.paused && StudioApp.editor.currentlyUsingBlocks)) ?
+            codegen.getUserCodeLine :
+            codegen.selectCurrentCode;
 
     // In each tick, we will step the interpreter multiple times in a tight
     // loop as long as we are interpreting code that the user can't see
     // (function aliases at the beginning, getCallback event loop at the end)
     for (var stepsThisTick = 0;
-         stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK;
+         (stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK) || unwindingAfterStep;
          stepsThisTick++) {
-      if ((reachedBreak && !unwindingAfterStep) || (doneUserLine && !maxSpeed)) {
+      if ((reachedBreak && !unwindingAfterStep) ||
+          (doneUserLine && !maxSpeed) ||
+          Webapp.seenEmptyGetCallbackThisTick) {
         // stop stepping the interpreter and wait until the next tick once we:
         // (1) reached a breakpoint and are done unwinding OR
-        // (2) completed a line of user code (while not running at maxSpeed)
+        // (2) completed a line of user code (while not running at maxSpeed) OR
+        // (3) have seen an empty event queue in nativeGetCallback (no events)
         break;
       }
       userCodeRow = selectCodeFunc(Webapp.interpreter,
@@ -411,6 +418,11 @@ Webapp.init = function(config) {
   level = config.level;
 
   loadLevel();
+
+  if (StudioApp.hideSource) {
+    // always run at maxSpeed if source is hidden
+    config.level.sliderSpeed = 1.0;
+  }
 
   Webapp.canvasScale = (window.devicePixelRatio > 1) ? window.devicePixelRatio : 1;
 
@@ -724,7 +736,11 @@ var defineProcedures = function (blockType) {
  * optionally, callback arguments (stored in "arguments")
  */
 var nativeGetCallback = function () {
-  return Webapp.eventQueue.shift();
+  var retVal = Webapp.eventQueue.shift();
+  if (typeof retVal === "undefined") {
+    Webapp.seenEmptyGetCallbackThisTick = true;
+  }
+  return retVal;
 };
 
 var consoleApi = {};
