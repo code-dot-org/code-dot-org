@@ -140,7 +140,7 @@ FeedbackUtils.displayFeedback = function(options) {
   var icon = canContinue ? studioAppSingleton.winIcon : studioAppSingleton.failureIcon;
   var defaultBtnSelector = onlyContinue ? '#continue-button' : '#again-button';
 
-  var feedbackDialog = FeedbackUtils.createModalDialogWithIcon({
+  var feedbackDialog = feedbackSingleton.createModalDialogWithIcon({
     Dialog: options.Dialog,
     contentDiv: feedback,
     icon: icon,
@@ -693,7 +693,7 @@ FeedbackUtils.showGeneratedCode = function(Dialog) {
   });
   codeDiv.appendChild(buttons);
 
-  var dialog = FeedbackUtils.createModalDialogWithIcon({
+  var dialog = feedbackSingleton.createModalDialogWithIcon({
       Dialog: Dialog,
       contentDiv: codeDiv,
       icon: studioAppSingleton.icon,
@@ -722,7 +722,7 @@ FeedbackUtils.showToggleBlocksError = function(Dialog) {
   });
   contentDiv.appendChild(buttons);
 
-  var dialog = FeedbackUtils.createModalDialogWithIcon({
+  var dialog = feedbackSingleton.createModalDialogWithIcon({
       Dialog: Dialog,
       contentDiv: contentDiv,
       icon: studioAppSingleton.icon,
@@ -918,20 +918,20 @@ FeedbackUtils.getTestResults = function(levelComplete, options) {
     return TestResults.EXTRA_TOP_BLOCKS_FAIL;
   }
   if (Blockly.useContractEditor || Blockly.useModalFunctionEditor) {
-    if (hasUnusedParam()) {
+    if (feedbackSingleton.hasUnusedParam_()) {
       return TestResults.UNUSED_PARAM;
     }
-    if (hasUnusedFunction()) {
+    if (feedbackSingleton.hasUnusedFunction_()) {
       return TestResults.UNUSED_FUNCTION;
     }
-    if (hasParamInputUnattached()) {
+    if (feedbackSingleton.hasParamInputUnattached_()) {
       return TestResults.PARAM_INPUT_UNATTACHED;
     }
     if (feedbackSingleton.hasIncompleteBlockInFunction_()) {
       return TestResults.INCOMPLETE_BLOCK_IN_FUNCTION;
     }
   }
-  if (hasQuestionMarksInNumberField()) {
+  if (feedbackSingleton.hasQuestionMarksInNumberField_()) {
     return TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
   }
   if (!hasAllRequiredBlocks()) {
@@ -959,7 +959,7 @@ var Keycodes = {
   SPACE: 32
 };
 
-FeedbackUtils.createModalDialogWithIcon = function(options) {
+FeedbackUtils.prototype.createModalDialogWithIcon = function(options) {
   var imageDiv = document.createElement('img');
   imageDiv.className = "modal-image";
   imageDiv.src = options.icon;
@@ -996,25 +996,26 @@ FeedbackUtils.createModalDialogWithIcon = function(options) {
 /**
  * Check for '???' instead of a value in block fields.
  */
-function hasQuestionMarksInNumberField() {
+FeedbackUtils.prototype.hasQuestionMarksInNumberField_ = function () {
   return Blockly.mainBlockSpace.getAllBlocks().some(function(block) {
     return block.getTitles().some(function(title) {
       return title.value_ === '???';
     });
   });
-}
+};
 
 /**
  * Ensure that all procedure definitions actually use the parameters they define
  * inside the procedure.
  */
-function hasUnusedParam() {
+FeedbackUtils.prototype.hasUnusedParam_ = function () {
+  var self = this;
   return Blockly.mainBlockSpace.getAllBlocks().some(function(userBlock) {
     var params = userBlock.parameterNames_;
     // Only search procedure definitions
     return params && params.some(function(paramName) {
       // Unused param if there's no parameters_get descendant with the same name
-      return !feedbackSingleton.hasMatchingDescendant_(userBlock, function(block) {
+      return !self.hasMatchingDescendant_(userBlock, function(block) {
         return (block.type === 'parameters_get' ||
             block.type === 'functional_parameters_get' ||
             block.type === 'variables_get') &&
@@ -1022,12 +1023,12 @@ function hasUnusedParam() {
       });
     });
   });
-}
+};
 
 /**
  * Ensure that all procedure calls have each parameter input connected.
  */
-function hasParamInputUnattached() {
+FeedbackUtils.prototype.hasParamInputUnattached_ = function () {
   return Blockly.mainBlockSpace.getAllBlocks().some(function(userBlock) {
     // Only check procedure_call* blocks
     if (!/^procedures_call/.test(userBlock.type)) {
@@ -1040,12 +1041,12 @@ function hasParamInputUnattached() {
       return !argInput.connection.targetConnection;
     });
   });
-}
+};
 
 /**
  * Ensure that all user-declared procedures have associated call blocks.
  */
-function hasUnusedFunction() {
+FeedbackUtils.prototype.hasUnusedFunction_ = function () {
   var userDefs = [];
   var callBlocks = {};
   Blockly.mainBlockSpace.getAllBlocks().forEach(function (block) {
@@ -1058,7 +1059,7 @@ function hasUnusedFunction() {
   });
   // Unused function if some user def doesn't have a matching call
   return userDefs.some(function(name) { return !callBlocks[name]; });
-}
+};
 
 /**
  * Ensure there are no incomplete blocks inside any function definitions.
