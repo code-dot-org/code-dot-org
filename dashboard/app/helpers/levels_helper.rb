@@ -283,16 +283,31 @@ module LevelsHelper
 
     # Set some values that Blockly expects on the root of its options string
     app_options = {
+      baseUrl: "#{ActionController::Base.asset_host}/blockly/",
       app: @game.try(:app),
       levelId: @level.level_num,
+      level: level,
+      callouts: @callouts,
+      cacheBust: blockly_cache_bust,
+      autoplayVideo: @autoplay_video_info,
+      report: {
+          fallback_response: @fallback_response,
+          callback: @callback,
+      },
     }
-    app_options['scriptId'] = @script.id if @script
-    app_options['levelGameName'] = @level.game.name if @level.game
-    app_options['scrollbars'] = blockly_value(@level.scrollbars) if @level.is_a?(Blockly) && @level.scrollbars
+    app_options[:scriptId] = @script.id if @script
+    app_options[:levelGameName] = @level.game.name if @level.game
+    app_options[:scrollbars] = blockly_value(@level.scrollbars) if @level.is_a?(Blockly) && @level.scrollbars
+    app_options[:skinId] = @level.skin if @level.is_a?(Blockly)
+    app_options[:level_source_id] = @level_source_id if @level_source_id
+    app_options[:sendToPhone] = request.location.try(:country_code) == 'US' ||
+        (!Rails.env.production? && request.location.try(:country_code) == 'RD') if request
+    app_options[:send_to_phone_url] = @phone_share_url if @phone_share_url
+    app_options[:disableSocialShare] = true if (@current_user && @current_user.under_13?) || @embed
 
     # Move these values up to the root
     %w(hideSource share noPadding showFinish embed).each do |key|
-      app_options[key] = level[key]
+      app_options[key.to_sym] = level[key]
       level.delete key
     end
 
