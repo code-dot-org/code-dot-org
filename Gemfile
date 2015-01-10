@@ -46,6 +46,9 @@ group :development, :test do
   gem 'chromedriver-helper', '~> 0.0.7'
   gem 'colorize'
   gem 'parallel'
+  gem 'spring'
+  gem 'spring-commands-testunit'
+  gem 'minitest-reporters'
 end
 
 group :doc do
