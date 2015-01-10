@@ -27,35 +27,22 @@ module.exports = FeedbackUtils;
 
 var trophy = require('./templates/trophy.html');
 var utils = require('./utils');
+var _ = utils.getLodash();
 var codegen = require('./codegen');
 var msg = require('../locale/current/common');
 var dom = require('./dom');
 var xml = require('./xml');
-var _ = utils.getLodash();
-
 var FeedbackBlocks = require('./feedbackBlocks');
-
-// TODO (br-pair): This is a hack. We initially set our studioAppSingleton to
-// be the global StudioApp. This will be the case for all apps other than Artist.
-// However, that global is not necessarily set yet at the point where we load
-// feedback, and requiring base here introduces a circular dependency. Instead,
-// we depend on base apply the singleton to the feedback object i required.
-var studioAppSingleton;
-var feedbackSingleton;
-FeedbackUtils.applySingleton = function (singleton, feedbackInstance) {
-  studioAppSingleton = singleton;
-  feedbackSingleton = feedbackInstance;
-};
-
 var TestResults = require('./constants').TestResults;
 
-
-
-FeedbackUtils.displayFeedback = function(options) {
+/**
+ *
+ */
+FeedbackUtils.prototype.displayFeedback = function(options) {
   options.hintRequestExperiment = options.response &&
       options.response.hint_request_placement;
   options.level = options.level || {};
-  options.numTrophies = feedbackSingleton.numTrophiesEarned_(options);
+  options.numTrophies = this.numTrophiesEarned_(options);
 
   // Tracking event for level newly completed
   if (options.response && options.response.new_level_completed) {
@@ -65,20 +52,20 @@ FeedbackUtils.displayFeedback = function(options) {
   var hadShareFailure = (options.response && options.response.share_failure);
   var showingSharing = options.showingSharing && !hadShareFailure;
 
-  var canContinue = feedbackSingleton.canContinueToNextLevel(options.feedbackType);
-  var displayShowCode = studioAppSingleton.enableShowCode && canContinue && !showingSharing;
+  var canContinue = this.canContinueToNextLevel(options.feedbackType);
+  var displayShowCode = this.studioApp_.enableShowCode && canContinue && !showingSharing;
   var feedback = document.createElement('div');
-  var sharingDiv = (canContinue && showingSharing) ? feedbackSingleton.createSharingDiv(options) : null;
-  var showCode = displayShowCode ? feedbackSingleton.getShowCodeElement_(options) : null;
-  var shareFailureDiv = hadShareFailure ? feedbackSingleton.getShareFailure_(options) : null;
+  var sharingDiv = (canContinue && showingSharing) ? this.createSharingDiv(options) : null;
+  var showCode = displayShowCode ? this.getShowCodeElement_(options) : null;
+  var shareFailureDiv = hadShareFailure ? this.getShareFailure_(options) : null;
   if (hadShareFailure) {
     trackEvent('Share', 'Failure', options.response.share_failure.type);
   }
-  var feedbackBlocks = new FeedbackBlocks(options, feedbackSingleton.getMissingRequiredBlocks_(),
-    studioAppSingleton);
+  var feedbackBlocks = new FeedbackBlocks(options, this.getMissingRequiredBlocks_(),
+    this.studioApp_);
   // feedbackMessage must be initialized after feedbackBlocks
   // because FeedbackBlocks can mutate options.response.hint.
-  var feedbackMessage = feedbackSingleton.getFeedbackMessage_(options);
+  var feedbackMessage = this.getFeedbackMessage_(options);
 
   if (feedbackMessage) {
     feedback.appendChild(feedbackMessage);
@@ -92,11 +79,11 @@ FeedbackUtils.displayFeedback = function(options) {
         trackEvent('Trophy', concept_name, trophy_name);
       }
     }
-    var trophies = feedbackSingleton.getTrophiesElement_(options);
+    var trophies = this.getTrophiesElement_(options);
     feedback.appendChild(trophies);
   }
   if (feedbackBlocks.div) {
-    if (feedbackMessage && feedbackSingleton.useSpecialFeedbackDesign_(options)) {
+    if (feedbackMessage && this.useSpecialFeedbackDesign_(options)) {
       // put the blocks iframe inside the feedbackMessage for this special case:
       feedbackMessage.appendChild(feedbackBlocks.div);
     } else {
@@ -125,7 +112,7 @@ FeedbackUtils.displayFeedback = function(options) {
   }
 
   feedback.appendChild(
-    feedbackSingleton.getFeedbackButtons_({
+    this.getFeedbackButtons_({
       feedbackType: options.feedbackType,
       showPreviousButton: options.level.showPreviousLevelButton,
       isK1: options.level.isK1,
@@ -142,10 +129,10 @@ FeedbackUtils.displayFeedback = function(options) {
   var onlyContinue = continueButton && !againButton && !previousLevelButton;
 
   var onHidden = onlyContinue ? options.onContinue : null;
-  var icon = canContinue ? studioAppSingleton.winIcon : studioAppSingleton.failureIcon;
+  var icon = canContinue ? this.studioApp_.winIcon : this.studioApp_.failureIcon;
   var defaultBtnSelector = onlyContinue ? '#continue-button' : '#again-button';
 
-  var feedbackDialog = feedbackSingleton.createModalDialogWithIcon({
+  var feedbackDialog = this.createModalDialogWithIcon({
     Dialog: options.Dialog,
     contentDiv: feedback,
     icon: icon,
@@ -155,7 +142,7 @@ FeedbackUtils.displayFeedback = function(options) {
   });
 
   // Update the background color if it is set to be in special design.
-  if (feedbackSingleton.useSpecialFeedbackDesign_(options)) {
+  if (this.useSpecialFeedbackDesign_(options)) {
     if (options.response.design == "white_background") {
       document.getElementById('feedback-dialog')
           .className += " white-background";
@@ -182,7 +169,7 @@ FeedbackUtils.displayFeedback = function(options) {
   // hint if the button gets pressed.
   if (hintRequestButton) {
     // Swap out the specific feedback message with a generic one.
-    var genericFeedback = feedbackSingleton.getFeedbackMessage_({message: msg.genericFeedback()});
+    var genericFeedback = this.getFeedbackMessage_({message: msg.genericFeedback()});
     var parentNode = feedbackMessage.parentNode;
     parentNode.replaceChild(genericFeedback, feedbackMessage);
 
@@ -304,6 +291,9 @@ FeedbackUtils.prototype.getNumCountableBlocks = function() {
   return this.getCountableBlocks_().length;
 };
 
+/**
+ *
+ */
 FeedbackUtils.prototype.getFeedbackButtons_ = function(options) {
   var buttons = document.createElement('div');
   buttons.id = 'feedbackButtons';
@@ -326,6 +316,9 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function(options) {
   return buttons;
 };
 
+/**
+ *
+ */
 FeedbackUtils.prototype.getShareFailure_ = function(options) {
   var shareFailure = options.response.share_failure;
   var shareFailureDiv = document.createElement('div');
@@ -333,6 +326,9 @@ FeedbackUtils.prototype.getShareFailure_ = function(options) {
   return shareFailureDiv;
 };
 
+/**
+ *
+ */
 FeedbackUtils.prototype.useSpecialFeedbackDesign_ = function (options) {
  return options.response &&
         options.response.design &&
@@ -483,6 +479,9 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
   return feedback;
 };
 
+/**
+ *
+ */
 FeedbackUtils.prototype.createSharingDiv = function(options) {
   if (!options.response || !options.response.level_source) {
     // don't even try if our caller didn't give us something that can be shared
@@ -598,7 +597,9 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
   return sharingDiv;
 };
 
-
+/**
+ *
+ */
 FeedbackUtils.prototype.numTrophiesEarned_ = function(options) {
   if (options.response && options.response.trophy_updates) {
     return options.response.trophy_updates.length;
@@ -607,6 +608,9 @@ FeedbackUtils.prototype.numTrophiesEarned_ = function(options) {
   }
 };
 
+/**
+ *
+ */
 FeedbackUtils.prototype.getTrophiesElement_ = function(options) {
   var html = "";
   for (var i = 0; i < options.numTrophies; i++) {
@@ -620,6 +624,9 @@ FeedbackUtils.prototype.getTrophiesElement_ = function(options) {
   return trophies;
 };
 
+/**
+ *
+ */
 FeedbackUtils.prototype.getShowCodeElement_ = function(options) {
   var showCodeDiv = document.createElement('div');
   showCodeDiv.setAttribute('id', 'show-code');
@@ -648,7 +655,7 @@ FeedbackUtils.prototype.getShowCodeElement_ = function(options) {
 /**
  * Determines whether the user can proceed to the next level, based on the level feedback
  * @param {number} feedbackType A constant property of TestResults,
- *     typically produced by studioAppSingleton.getTestResults().
+ *     typically produced by StudioAppClass.getTestResults().
  */
 FeedbackUtils.prototype.canContinueToNextLevel = function(feedbackType) {
   return (feedbackType === TestResults.ALL_PASS ||
@@ -669,6 +676,9 @@ FeedbackUtils.prototype.getGeneratedCodeString_ = function() {
   }
 };
 
+/**
+ *
+ */
 FeedbackUtils.prototype.getGeneratedCodeElement_ = function() {
   var codeInfoMsgParams = {
     berkeleyLink: "<a href='http://bjc.berkeley.edu/' target='_blank'>Berkeley</a>",
@@ -687,6 +697,9 @@ FeedbackUtils.prototype.getGeneratedCodeElement_ = function() {
   return codeDiv;
 };
 
+/**
+ *
+ */
 FeedbackUtils.prototype.showGeneratedCode = function(Dialog) {
   var codeDiv = this.getGeneratedCodeElement_();
 
@@ -715,6 +728,9 @@ FeedbackUtils.prototype.showGeneratedCode = function(Dialog) {
   dialog.show();
 };
 
+/**
+ *
+ */
 FeedbackUtils.prototype.showToggleBlocksError = function(Dialog) {
   var contentDiv = document.createElement('div');
   contentDiv.innerHTML = msg.toggleBlocksErrorMsg();
@@ -810,7 +826,7 @@ FeedbackUtils.prototype.getCountableBlocks_ = function() {
 
 /**
  * Check to see if the user's code contains the required blocks for a level.
- * This never returns more than studioAppSingleton.NUM_REQUIRED_BLOCKS_TO_FLAG.
+ * This never returns more than StudioAppClass.NUM_REQUIRED_BLOCKS_TO_FLAG.
  * @return {{blocksToDisplay:!Array, message:?string}} 'missingBlocks' is an
  * array of array of strings where each array of strings is a set of blocks that
  * at least one of them should be used. Each block is represented as the prefix
@@ -826,7 +842,7 @@ FeedbackUtils.prototype.getMissingRequiredBlocks_ = function () {
     var userBlocks = this.getUserBlocks_();
     // For each list of required blocks
     // Keep track of the number of the missing block lists. It should not be
-    // bigger than studioAppSingleton.NUM_REQUIRED_BLOCKS_TO_FLAG
+    // bigger than StudioAppClass.NUM_REQUIRED_BLOCKS_TO_FLAG
     var missingBlockNum = 0;
     for (var i = 0;
          i < this.studioApp_.REQUIRED_BLOCKS.length &&
