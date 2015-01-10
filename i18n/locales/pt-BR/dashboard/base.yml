@@ -296,10 +296,10 @@ pt-BR:
     email_resend_confirm: Reenviar instruções de confirmação
     new_password_hint: (deixe em branco se não quiser fazer alteração)
     current_password_hint: (precisamos de sua senha atual para confirmar suas alterações)
-    cancel:
-      title: Cancelar minha conta
-      hint: Não está feliz?
-      button: Cancelar minha conta
+    delete: Excluir sua conta
+    delete_text: Clicando no botão abaixo, você vai excluir sua conta.
+    delete_text_teacher_note: 'Lembre-se: a exclusão da sua conta não vai excluir as contas dos seus alunos.'
+    delete_confirm: Tem certeza de que deseja excluir sua conta?
   user_level:
     completed: Concluído
     tried: Provado

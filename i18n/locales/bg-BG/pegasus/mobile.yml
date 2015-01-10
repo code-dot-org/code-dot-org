@@ -3,7 +3,7 @@ bg-BG:
   select_language: Моля, изберете вашия език
   computer_science: Компютърни науки
   computer_science_edweek: Седмица на Компютърните Науки
-  csedweek_dates: 9-15 Декември 2013 г.
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> Часът на кодирането</a> идва. Призоваваме всички учители и организатори, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> да планират техния Час на кодирането</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Вие учител по ИТ или  информатика  сте? Вhttps://crowdin.com/translate/codeorg/56/enus-bg#вижте други ресурси на CSEdWeek</a>'
   n_have_learned_an_hoc: '<h1>#</h1><h3>са се опитали</h3><h2>Часът на кодирането</h2>'
@@ -323,6 +323,7 @@ bg-BG:
   carousel_heading_robots: Научете се да програмирате с роботи
   carousel_heading_ide: Платформи, популярни сред учителите
   educator_notes: Бележки за учители
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Повече ресурси за учители и възпитатели
   participants: участници
   teachers_notes: Указания за учители

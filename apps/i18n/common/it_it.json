@@ -15,7 +15,7 @@
   "codeTooltip": "Guarda il codice JavaScript generato.",
   "continue": "Prosegui",
   "dialogCancel": "Annulla",
-  "dialogOK": "Ok",
+  "dialogOK": "OK",
   "directionNorthLetter": "N",
   "directionSouthLetter": "S",
   "directionEastLetter": "E",
@@ -88,5 +88,6 @@
   "signup": "Iscriviti al corso introduttivo",
   "hintHeader": "Ecco un suggerimento:",
   "genericFeedback": "Verifica il risultato e prova a correggere il tuo programma.",
+  "toggleBlocksErrorMsg": "You need to correct an error in your program before it can be shown as blocks.",
   "defaultTwitterText": "Guarda cosa ho fatto"
 }

@@ -88,5 +88,6 @@
   "signup":"Підпишіться на вступний курс",
   "hintHeader":"Підказка:",
   "genericFeedback":"Подивіться, на чому ви зупинились і спробуйте виправити свою програму.",
+  "toggleBlocksErrorMsg":"You need to correct an error in your program before it can be shown as blocks.",
   "defaultTwitterText":"Подивіться, що у мене вийшло"
 }

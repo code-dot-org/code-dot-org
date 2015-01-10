@@ -3,7 +3,7 @@
   select_language: Prosimo izberite vaš jezik
   computer_science: Računalništvo
   computer_science_edweek: Computer Science Education Week
-  csedweek_dates: 9-15 December 2013
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Ura za kodo</a> prihaja. Pozivamo vse učitelje in organizatorje,
     <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -383,6 +383,7 @@
   carousel_heading_robots: Nauči se programirati z roboti
   carousel_heading_ide: Platforme, ki so priljubljena med učitelji
   educator_notes: Zapiski učitelja
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Več virov za učitelje in vzgojitelje
   participants: udeleženci
   teachers_notes: Zapiski učitelja
@@ -575,11 +576,11 @@
     To je igri podobna vaja z video predavanji, v katerih nastopajo Bill Gates, Mark
     Zuckerberg, Angry Birds in Rastline vs zombiji. Naučite se zanke repeat, pogojne
     stavke in osnovne algoritme. Na voljo v 34 jezikih.
-  thinkersmithspanish_longdescription: Z uporabo naprej določenega "Robotskega besednjaka"
-    bodo učenci odkrili kako voditi drug drugega, da bodo opravili določene naloge,
-    ne da bi se o njih prej pogovarjali. Ta lekcija uči učence povezavo med simboli
-    in dejanji, kot tudi neprecenljivo veščino razhroščevanja. "Moji robotski prijatelji"
-    najbolje deluje kot skupinska dejavnost in vsebuje tudi pripravo za učitelja.
+  thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
+    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
+    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
+    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
+    como la valiosa habilidad de depuraci&oacute;n.
   khan_longdescription: Nauči se osnov JavaScript programiranja med ustvarjanjem zabavnih
     risb s svojo kodo. To naredite sami ali v svojem razredu!
   khanes_longdescription: Nauči se osnov JavaScript programiranja med ustvarjanjem
@@ -1015,4 +1016,3 @@
   sphero_beyond_longdescription: Ne glede na to ali ste vzgojitelj ali starš, SPRK
     lekcije dajejo otrokom zabaven uvod v programiranje robotov in hkrati ostrijo
     njihove spretnosti v matematiki in znanosti.
-  how_to_teach_hoc: How to Teach an Hour of Code

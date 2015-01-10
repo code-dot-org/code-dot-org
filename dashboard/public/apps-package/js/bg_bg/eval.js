@@ -149,9 +149,9 @@ var utils = require('./utils');
 var _ = utils.getLodash();
 var dom = require('./dom');
 var constants = require('./constants.js');
-var builder = require('./builder');
 var msg = require('../locale/bg_bg/common');
 var blockUtils = require('./block_utils');
+var url = require('url');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -207,6 +207,7 @@ var StudioAppClass = function () {
   /**
   * Whether to alert user to empty blocks, short-circuiting all other tests.
   */
+  // TODO (br-pair) : this isnt actually a constant
   this.CHECK_FOR_EMPTY_BLOCKS = undefined;
 
   /**
@@ -258,15 +259,11 @@ var StudioAppClass = function () {
   /**
   * Enumeration of user program execution outcomes.
   */
-  // TODO (br-pair) : ResultType shouldn't really live on StudioApp. Places
-  // that want this should just require constants themselves.
   this.ResultType = constants.ResultType;
 
   /**
   * Enumeration of test results.
   */
-  // TODO (br-pair) : TestResults shouldn't really live on StudioApp. Places
-  // that want this should just require constants themselves.
   this.TestResults = constants.TestResults;
 
   /**
@@ -308,7 +305,8 @@ StudioAppClass.prototype.configure = function (options) {
   this.cdoSounds = options.cdoSounds;
   this.Dialog = options.Dialog;
 
-  // TODO (br-pair) : should callers instead be the ones binding the context?
+  // Bind assetUrl to the instance so that we don't need to depend on callers
+  // binding correctly as they pass this function around.
   this.assetUrl = _.bind(this.assetUrl_, this);
 };
 
@@ -791,6 +789,9 @@ StudioAppClass.prototype.sortBlocksByVisibility = function(xmlBlocks) {
   return visibleXmlBlocks.concat(hiddenXmlBlocks);
 };
 
+StudioAppClass.prototype.createModalDialogWithIcon = function(options) {
+  return this.feedback_.createModalDialogWithIcon(options);
+};
 
 StudioAppClass.prototype.showInstructions_ = function(level, autoClose) {
   var instructionsDiv = document.createElement('div');
@@ -805,7 +806,7 @@ StudioAppClass.prototype.showInstructions_ = function(level, autoClose) {
 
   instructionsDiv.appendChild(buttons);
 
-  var dialog = this.feedback_.createModalDialogWithIcon({
+  var dialog = this.createModalDialogWithIcon({
     Dialog: this.Dialog,
     contentDiv: instructionsDiv,
     icon: this.icon,
@@ -952,7 +953,7 @@ StudioAppClass.prototype.clearHighlighting = function () {
 * Display feedback based on test results.  The test results must be
 * explicitly provided.
 * @param {{feedbackType: number}} Test results (a constant property of
-*     StudioApp.TestResults).
+*     this.TestResults).
 */
 StudioAppClass.prototype.displayFeedback = function(options) {
   options.Dialog = this.Dialog;
@@ -973,6 +974,31 @@ StudioAppClass.prototype.displayFeedback = function(options) {
  */
 StudioAppClass.prototype.getTestResults = function(levelComplete, options) {
   return this.feedback_.getTestResults(levelComplete, options);
+};
+
+// Builds the dom to get more info from the user. After user enters info
+// and click "create level" onAttemptCallback is called to deliver the info
+// to the server.
+StudioAppClass.prototype.builderForm_ = function(onAttemptCallback) {
+  var builderDetails = document.createElement('div');
+  builderDetails.innerHTML = require('./templates/builder.html')();
+  var dialog = this.createModalDialogWithIcon({
+    Dialog: this.Dialog,
+    contentDiv: builderDetails,
+    icon: this.icon
+  });
+  var createLevelButton = document.getElementById('create-level-button');
+  dom.addClickTouchEvent(createLevelButton, function() {
+    var instructions = builderDetails.querySelector('[name="instructions"]').value;
+    var name = builderDetails.querySelector('[name="level_name"]').value;
+    var query = url.parse(window.location.href, true).query;
+    onAttemptCallback(utils.extend({
+      "instructions": instructions,
+      "name": name
+    }, query));
+  });
+
+  dialog.show({ backdrop: 'static' });
 };
 
 /**
@@ -1012,7 +1038,7 @@ StudioAppClass.prototype.report = function(options) {
     // If this is the level builder, go to builderForm to get more info from
     // the level builder.
     if (options.builder) {
-      builder.builderForm(onAttemptCallback);
+      this.builderForm_(onAttemptCallback);
     } else {
       onAttemptCallback();
     }
@@ -1132,20 +1158,9 @@ StudioAppClass.prototype.setConfigValues_ = function (config) {
   }
 
   // Store configuration.
-  //TODO (br-pair) : test code should pass in these instead of defaulting in app code
-  this.onAttempt = config.onAttempt || function(report) {
-    console.log('Attempt!');
-    console.log(report);
-    if (report.onComplete) {
-      report.onComplete();
-    }
-  };
-  this.onContinue = config.onContinue || function() {
-    console.log('Continue!');
-  };
-  this.onResetPressed = config.onResetPressed || function() {
-    console.log('Reset!');
-  };
+  this.onAttempt = config.onAttempt || function () {};
+  this.onContinue = config.onContinue || function () {};
+  this.onResetPressed = config.onResetPressed || function () {};
   this.backToPreviousLevel = config.backToPreviousLevel || function () {};
 };
 
@@ -1368,7 +1383,14 @@ StudioAppClass.prototype.updateHeadersAfterDropletToggle_ = function (usingBlock
   this.onResize();
 };
 
-},{"../locale/bg_bg/common":50,"./ResizeSensor":1,"./block_utils":5,"./builder":7,"./constants.js":10,"./dom":11,"./templates/buttons.html":37,"./templates/instructions.html":39,"./templates/learn.html":40,"./templates/makeYourOwn.html":41,"./utils":48,"./xml":49}],3:[function(require,module,exports){
+/**
+ * Do we have any floating blocks not attached to an event block or function block?
+ */
+StudioAppClass.prototype.hasExtraTopBlocks = function () {
+  return this.feedback_.hasExtraTopBlocks();
+};
+
+},{"../locale/bg_bg/common":50,"./ResizeSensor":1,"./block_utils":5,"./constants.js":9,"./dom":10,"./templates/builder.html":36,"./templates/buttons.html":37,"./templates/instructions.html":39,"./templates/learn.html":40,"./templates/makeYourOwn.html":41,"./utils":48,"./xml":49,"url":62}],3:[function(require,module,exports){
 var utils = require('./utils');
 var _ = utils.getLodash();
 var requiredBlockUtils = require('./required_block_utils');
@@ -1385,23 +1407,6 @@ window.__TestInterface = {
 
 var addReadyListener = require('./dom').addReadyListener;
 var blocksCommon = require('./blocksCommon');
-
-function StubDialog(options) {
-  this.options = options;
-  console.log("Creating Dialog");
-  console.log(options);
-}
-StubDialog.prototype.show = function() {
-  console.log("Showing Dialog");
-  if (this.options.body) {
-    console.log(this.options.body.innerHTML);
-  }
-  console.log(this);
-};
-StubDialog.prototype.hide = function() {
-  console.log("Hiding Dialog");
-  console.log(this);
-};
 
 module.exports = function(app, levels, options) {
 
@@ -1422,8 +1427,6 @@ module.exports = function(app, levels, options) {
 
     options.level = level;
   }
-
-  options.Dialog = options.Dialog || StubDialog;
 
   studioAppSingleton.configure(options);
 
@@ -1459,7 +1462,7 @@ module.exports = function(app, levels, options) {
   });
 };
 
-},{"./StudioApp":2,"./base":4,"./blocksCommon":6,"./dom":11,"./required_block_utils":33,"./utils":48}],4:[function(require,module,exports){
+},{"./StudioApp":2,"./base":4,"./blocksCommon":6,"./dom":10,"./required_block_utils":33,"./utils":48}],4:[function(require,module,exports){
 /**
  * Blockly Apps: Common code
  *
@@ -1501,7 +1504,7 @@ module.exports = studioAppSingleton;
 feedback.applySingleton(studioAppSingleton);
 studioAppSingleton.feedback_ = feedback;
 
-},{"./StudioApp":2,"./feedback":29}],5:[function(require,module,exports){
+},{"./StudioApp":2,"./feedback":28}],5:[function(require,module,exports){
 var xml = require('./xml');
 
 exports.createToolbox = function(blocks) {
@@ -1868,36 +1871,6 @@ function installWhenRun(blockly, skin, isK1) {
 }
 
 },{"../locale/bg_bg/common":50}],7:[function(require,module,exports){
-var feedback = require('./feedback.js');
-var dom = require('./dom.js');
-var utils = require('./utils.js');
-var url = require('url');
-// Builds the dom to get more info from the user. After user enters info
-// and click "create level" onAttemptCallback is called to deliver the info
-// to the server.
-exports.builderForm = function(onAttemptCallback) {
-  var builderDetails = document.createElement('div');
-  builderDetails.innerHTML = require('./templates/builder.html')();
-  var dialog = feedback.createModalDialogWithIcon({
-    Dialog: StudioApp.Dialog,
-    contentDiv: builderDetails,
-    icon: StudioApp.icon
-  });
-  var createLevelButton = document.getElementById('create-level-button');
-  dom.addClickTouchEvent(createLevelButton, function() {
-    var instructions = builderDetails.querySelector('[name="instructions"]').value;
-    var name = builderDetails.querySelector('[name="level_name"]').value;
-    var query = url.parse(window.location.href, true).query;
-    onAttemptCallback(utils.extend({
-      "instructions": instructions,
-      "name": name
-    }, query));
-  });
-
-  dialog.show({ backdrop: 'static' });
-};
-
-},{"./dom.js":11,"./feedback.js":29,"./templates/builder.html":36,"./utils.js":48,"url":62}],8:[function(require,module,exports){
 /*
  * canvg.js - Javascript SVG parser and renderer on Canvas
  * MIT Licensed 
@@ -4865,7 +4838,7 @@ if (typeof(CanvasRenderingContext2D) != 'undefined') {
 	}
 }
 
-},{}],9:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
 var LOOP_HIGHLIGHT = 'loopHighlight();\n';
@@ -5224,7 +5197,7 @@ exports.functionFromCode = function(code, options) {
   }
 };
 
-},{}],10:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 /**
  * @fileoverview Constants used in production code and tests.
  */
@@ -5291,7 +5264,7 @@ exports.BeeTerminationValue = {
   INSUFFICIENT_HONEY: 8  // Didn't make all honey by finish
 };
 
-},{}],11:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 exports.addReadyListener = function(callback) {
   if (document.readyState === "complete") {
     setTimeout(callback, 1);
@@ -5398,7 +5371,7 @@ exports.isIOS = function() {
   return reg.test(window.navigator.userAgent);
 };
 
-},{}],12:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 var evalUtils = require('./evalUtils');
 var EvalImage = require('./evalImage');
 var EvalText = require('./evalText');
@@ -5519,7 +5492,7 @@ exports.stringLength = function (str) {
   return str.length;
 };
 
-},{"./evalCircle":16,"./evalEllipse":17,"./evalImage":18,"./evalMulti":19,"./evalPolygon":20,"./evalRect":21,"./evalStar":22,"./evalText":23,"./evalTriangle":24,"./evalUtils":25}],13:[function(require,module,exports){
+},{"./evalCircle":15,"./evalEllipse":16,"./evalImage":17,"./evalMulti":18,"./evalPolygon":19,"./evalRect":20,"./evalStar":21,"./evalText":22,"./evalTriangle":23,"./evalUtils":24}],12:[function(require,module,exports){
 /**
  * Blockly Demo: Eval Graphics
  *
@@ -5817,7 +5790,7 @@ function installFunctionalBlock (blockly, generator, gensym, options) {
   };
 }
 
-},{"../../locale/bg_bg/common":50,"../../locale/bg_bg/eval":51,"../functionalBlockUtils":30,"../sharedFunctionalBlocks":34,"./evalUtils":25}],14:[function(require,module,exports){
+},{"../../locale/bg_bg/common":50,"../../locale/bg_bg/eval":51,"../functionalBlockUtils":30,"../sharedFunctionalBlocks":34,"./evalUtils":24}],13:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -5841,7 +5814,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/bg_bg/common":50,"../../locale/bg_bg/eval":51,"ejs":52}],15:[function(require,module,exports){
+},{"../../locale/bg_bg/common":50,"../../locale/bg_bg/eval":51,"ejs":52}],14:[function(require,module,exports){
 (function (global){
 /**
  * Blockly Demo: Eval Graphics
@@ -5875,7 +5848,6 @@ var levels = require('./levels');
 var codegen = require('../codegen');
 var api = require('./api');
 var page = require('../templates/page.html');
-var feedback = require('../feedback.js');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
 
@@ -6151,7 +6123,7 @@ function onReportComplete(response) {
 }
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../../locale/bg_bg/common":50,"../../locale/bg_bg/eval":51,"../base":4,"../block_utils":5,"../canvg/canvg.js":8,"../codegen":9,"../constants":10,"../dom":11,"../feedback.js":29,"../skins":35,"../templates/page.html":42,"./api":12,"./controls.html":14,"./levels":26,"./visualization.html":28}],16:[function(require,module,exports){
+},{"../../locale/bg_bg/common":50,"../../locale/bg_bg/eval":51,"../base":4,"../block_utils":5,"../canvg/canvg.js":7,"../codegen":8,"../constants":9,"../dom":10,"../skins":35,"../templates/page.html":42,"./api":11,"./controls.html":13,"./levels":25,"./visualization.html":27}],15:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -6186,7 +6158,7 @@ EvalCircle.prototype.rotate = function () {
   // a bitmap.
 };
 
-},{"./evalImage":18,"./evalUtils":25}],17:[function(require,module,exports){
+},{"./evalImage":17,"./evalUtils":24}],16:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -6219,7 +6191,7 @@ EvalCircle.prototype.draw = function (parent) {
   EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalImage":18,"./evalUtils":25}],18:[function(require,module,exports){
+},{"./evalImage":17,"./evalUtils":24}],17:[function(require,module,exports){
 var evalUtils = require('./evalUtils');
 
 var EvalImage = function (style, color) {
@@ -6280,7 +6252,7 @@ EvalImage.prototype.scale = function (scaleX, scaleY) {
   this.scaleY_ = scaleY;
 };
 
-},{"./evalUtils":25}],19:[function(require,module,exports){
+},{"./evalUtils":24}],18:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -6323,7 +6295,7 @@ EvalMulti.prototype.draw = function (parent) {
   EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalImage":18,"./evalUtils":25}],20:[function(require,module,exports){
+},{"./evalImage":17,"./evalUtils":24}],19:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -6362,7 +6334,7 @@ EvalPolygon.prototype.draw = function (parent) {
   EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalImage":18,"./evalUtils":25}],21:[function(require,module,exports){
+},{"./evalImage":17,"./evalUtils":24}],20:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -6397,7 +6369,7 @@ EvalRect.prototype.draw = function (parent) {
   EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalImage":18,"./evalUtils":25}],22:[function(require,module,exports){
+},{"./evalImage":17,"./evalUtils":24}],21:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -6444,7 +6416,7 @@ EvalStar.prototype.draw = function (parent) {
   EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalImage":18,"./evalUtils":25}],23:[function(require,module,exports){
+},{"./evalImage":17,"./evalUtils":24}],22:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -6479,7 +6451,7 @@ EvalText.prototype.draw = function (parent) {
   EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalImage":18,"./evalUtils":25}],24:[function(require,module,exports){
+},{"./evalImage":17,"./evalUtils":24}],23:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -6530,7 +6502,7 @@ EvalTriangle.prototype.draw = function (parent) {
   EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalImage":18,"./evalUtils":25}],25:[function(require,module,exports){
+},{"./evalImage":17,"./evalUtils":24}],24:[function(require,module,exports){
 /**
  * Throws an expection if val is not of the expected type. Type is either a
  * string (like "number" or "string") or an object (Like EvalImage).
@@ -6591,7 +6563,7 @@ module.exports.cartesianToPixel = function (cartesianY) {
   return 400 - cartesianY;
 };
 
-},{}],26:[function(require,module,exports){
+},{}],25:[function(require,module,exports){
 var msg = require('../../locale/bg_bg/eval');
 var blockUtils = require('../block_utils');
 
@@ -6659,7 +6631,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/bg_bg/eval":51,"../block_utils":5}],27:[function(require,module,exports){
+},{"../../locale/bg_bg/eval":51,"../block_utils":5}],26:[function(require,module,exports){
 var appMain = require('../appMain');
 window.Eval = require('./eval');
 var blocks = require('./blocks');
@@ -6672,7 +6644,7 @@ window.evalMain = function(options) {
   appMain(window.Eval, levels, options);
 };
 
-},{"../appMain":3,"../skins":35,"./blocks":13,"./eval":15,"./levels":26}],28:[function(require,module,exports){
+},{"../appMain":3,"../skins":35,"./blocks":12,"./eval":14,"./levels":25}],27:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6693,15 +6665,16 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":52}],29:[function(require,module,exports){
+},{"ejs":52}],28:[function(require,module,exports){
 var trophy = require('./templates/trophy.html');
 var utils = require('./utils');
-var readonly = require('./templates/readonly.html');
 var codegen = require('./codegen');
 var msg = require('../locale/bg_bg/common');
 var dom = require('./dom');
 var xml = require('./xml');
 var _ = utils.getLodash();
+
+var FeedbackBlocks = require('./feedbackBlocks');
 
 // TODO (br-pair): This is a hack. We initially set our studioAppSingleton to
 // be the global StudioApp. This will be the case for all apps other than Artist.
@@ -6715,7 +6688,8 @@ exports.applySingleton = function (singleton) {
 
 var TestResults = require('./constants').TestResults;
 
-exports.HintRequestPlacement = {
+// NOTE: These must be kept in sync with activity_hint.rb in dashboard.
+var HintRequestPlacement = {
   NONE: 0,  // This value must not be changed.
   LEFT: 1,  // Hint request button is on left.
   RIGHT: 2  // Hint request button is on right.
@@ -6744,7 +6718,8 @@ exports.displayFeedback = function(options) {
   if (hadShareFailure) {
     trackEvent('Share', 'Failure', options.response.share_failure.type);
   }
-  var feedbackBlocks = new FeedbackBlocks(options);
+  var feedbackBlocks = new FeedbackBlocks(options, getMissingRequiredBlocks(),
+    studioAppSingleton);
   // feedbackMessage must be initialized after feedbackBlocks
   // because FeedbackBlocks can mutate options.response.hint.
   var feedbackMessage = getFeedbackMessage(options);
@@ -6985,7 +6960,7 @@ var getFeedbackButtons = function(options) {
       nextLevel: exports.canContinueToNextLevel(options.feedbackType),
       isK1: options.isK1,
       hintRequestExperiment: options.hintRequestExperiment &&
-          (options.hintRequestExperiment === exports.HintRequestPlacement.LEFT ?
+          (options.hintRequestExperiment === HintRequestPlacement.LEFT ?
               'left' : 'right'),
       assetUrl: studioAppSingleton.assetUrl,
       freePlay: options.freePlay
@@ -7199,7 +7174,7 @@ exports.createSharingDiv = function(options) {
     options.facebookUrl = facebookUrl;
   }
 
-  options.assetUrl = _.bind(studioAppSingleton.assetUrl, studioAppSingleton);
+  options.assetUrl = studioAppSingleton.assetUrl;
 
   var sharingDiv = document.createElement('div');
   sharingDiv.setAttribute('style', 'display:inline-block');
@@ -7335,78 +7310,6 @@ var getGeneratedCodeString = function() {
   }
   else {
     return codegen.workspaceCode(Blockly);
-  }
-};
-
-var FeedbackBlocks = function(options) {
-  // Check whether blocks are embedded in the hint returned from dashboard.
-  // See below comment for format.
-  var embeddedBlocks = options.response && options.response.hint &&
-      options.response.hint.indexOf("[{") !== 0;
-  if (!embeddedBlocks &&
-      options.feedbackType !==
-      TestResults.MISSING_BLOCK_UNFINISHED &&
-      options.feedbackType !==
-      TestResults.MISSING_BLOCK_FINISHED) {
-      return;
-  }
-
-  var blocksToDisplay = [];
-  if (embeddedBlocks) {
-    // Hint should be of the form: SOME TEXT [{..}, {..}, ..] IGNORED.
-    // Example: 'Try the following block: [{"type": "maze_moveForward"}]'
-    // Note that double quotes are required by the JSON parser.
-    var parts = options.response.hint.match(/(.*)(\[.*\])/);
-    if (!parts) {
-      return;
-    }
-    options.response.hint = parts[1].trim();  // Remove blocks from hint.
-    try {
-      blocksToDisplay = JSON.parse(parts[2]);
-    } catch(err) {
-      // The blocks could not be parsed.  Ignore them.
-      return;
-    }
-  } else {
-    var missingRequiredBlocks = getMissingRequiredBlocks();
-    blocksToDisplay = missingRequiredBlocks.blocksToDisplay;
-    if (missingRequiredBlocks.message) {
-      options.message = missingRequiredBlocks.message;
-    }
-  }
-
-  if (blocksToDisplay.length === 0) {
-    return;
-  }
-
-  this.div = document.createElement('div');
-  this.html = readonly({
-    app: options.app,
-    assetUrl: studioAppSingleton.assetUrl,
-    options: {
-      readonly: true,
-      locale: studioAppSingleton.LOCALE,
-      localeDirection: studioAppSingleton.localeDirection(),
-      baseUrl: studioAppSingleton.BASE_URL,
-      cacheBust: studioAppSingleton.CACHE_BUST,
-      skinId: options.skin,
-      level: options.level,
-      blocks: generateXMLForBlocks(blocksToDisplay)
-    }
-  });
-  this.iframe = document.createElement('iframe');
-  this.iframe.setAttribute('id', 'feedbackBlocks');
-  this.iframe.setAttribute('allowtransparency', 'true');
-  this.div.appendChild(this.iframe);
-};
-
-FeedbackBlocks.prototype.show = function() {
-  var iframe = document.getElementById('feedbackBlocks');
-  if (iframe) {
-    var doc = iframe.contentDocument || iframe.contentWindow.document;
-    doc.open();
-    doc.write(this.html);
-    doc.close();
   }
 };
 
@@ -7562,6 +7465,7 @@ var getMissingRequiredBlocks = function () {
   var missingBlocks = [];
   var customMessage = null;
   var code = null;  // JavaScript code, which is initialized lazily.
+  // TODO (br-pair) : we should probably just pass required_blocks
   if (studioAppSingleton.REQUIRED_BLOCKS && studioAppSingleton.REQUIRED_BLOCKS.length) {
     var userBlocks = getUserBlocks();
     // For each list of required blocks
@@ -7739,57 +7643,6 @@ exports.createModalDialogWithIcon = function(options) {
 };
 
 /**
- * Creates the XML for blocks to be displayed in a read-only frame.
- * @param {Array} blocks An array of blocks to display (with optional args).
- * @return {string} The generated string of XML.
- */
-var generateXMLForBlocks = function(blocks) {
-  var blockXMLStrings = [];
-  var blockX = 10;  // Prevent left output plugs from being cut off.
-  var blockY = 0;
-  var blockXPadding = 200;
-  var blockYPadding = 120;
-  var blocksPerLine = 2;
-  var k, name;
-  for (var i = 0; i < blocks.length; i++) {
-    var block = blocks[i];
-    if (block.blockDisplayXML) {
-      blockXMLStrings.push(block.blockDisplayXML);
-      continue;
-    }
-    blockXMLStrings.push('<block', ' type="', block.type, '" x="',
-                        blockX.toString(), '" y="', blockY, '">');
-    if (block.titles) {
-      var titleNames = Object.keys(block.titles);
-      for (k = 0; k < titleNames.length; k++) {
-        name = titleNames[k];
-        blockXMLStrings.push('<title name="', name, '">',
-                            block.titles[name], '</title>');
-      }
-    }
-    if (block.values) {
-      var valueNames = Object.keys(block.values);
-      for (k = 0; k < valueNames.length; k++) {
-        name = valueNames[k];
-        blockXMLStrings.push('<value name="', name, '">',
-                            block.values[name], '</value>');
-      }
-    }
-    if (block.extra) {
-      blockXMLStrings.push(block.extra);
-    }
-    blockXMLStrings.push('</block>');
-    if ((i + 1) % blocksPerLine === 0) {
-      blockY += blockYPadding;
-      blockX = 0;
-    } else {
-      blockX += blockXPadding;
-    }
-  }
-  return blockXMLStrings.join('');
-};
-
-/**
  * Check for '???' instead of a value in block fields.
  */
 function hasQuestionMarksInNumberField() {
@@ -7889,7 +7742,136 @@ function hasMatchingDescendant(node, filter) {
 }
 
 
-},{"../locale/bg_bg/common":50,"./codegen":9,"./constants":10,"./dom":11,"./templates/buttons.html":37,"./templates/code.html":38,"./templates/readonly.html":43,"./templates/shareFailure.html":44,"./templates/sharing.html":45,"./templates/showCode.html":46,"./templates/trophy.html":47,"./utils":48,"./xml":49}],30:[function(require,module,exports){
+},{"../locale/bg_bg/common":50,"./codegen":8,"./constants":9,"./dom":10,"./feedbackBlocks":29,"./templates/buttons.html":37,"./templates/code.html":38,"./templates/shareFailure.html":44,"./templates/sharing.html":45,"./templates/showCode.html":46,"./templates/trophy.html":47,"./utils":48,"./xml":49}],29:[function(require,module,exports){
+var constants = require('./constants');
+var readonly = require('./templates/readonly.html');
+
+TestResults = constants.TestResults;
+
+// TODO (br-pair): can we not pass in the studioAppSingleton
+var FeedbackBlocks = function(options, missingRequiredBlocks, studioAppSingleton) {
+  // Check whether blocks are embedded in the hint returned from dashboard.
+  // See below comment for format.
+  var embeddedBlocks = options.response && options.response.hint &&
+      options.response.hint.indexOf("[{") !== 0;
+  if (!embeddedBlocks &&
+      options.feedbackType !== TestResults.MISSING_BLOCK_UNFINISHED &&
+      options.feedbackType !== TestResults.MISSING_BLOCK_FINISHED) {
+    return;
+  }
+
+  var blocksToDisplay = [];
+  if (embeddedBlocks) {
+    // Hint should be of the form: SOME TEXT [{..}, {..}, ..] IGNORED.
+    // Example: 'Try the following block: [{"type": "maze_moveForward"}]'
+    // Note that double quotes are required by the JSON parser.
+    var parts = options.response.hint.match(/(.*)(\[.*\])/);
+    if (!parts) {
+      return;
+    }
+    options.response.hint = parts[1].trim();  // Remove blocks from hint.
+    try {
+      blocksToDisplay = JSON.parse(parts[2]);
+    } catch(err) {
+      // The blocks could not be parsed.  Ignore them.
+      return;
+    }
+  } else {
+    blocksToDisplay = missingRequiredBlocks.blocksToDisplay;
+    if (missingRequiredBlocks.message) {
+      options.message = missingRequiredBlocks.message;
+    }
+  }
+
+  if (blocksToDisplay.length === 0) {
+    return;
+  }
+
+  this.div = document.createElement('div');
+  this.html = readonly({
+    app: options.app,
+    assetUrl: studioAppSingleton.assetUrl,
+    options: {
+      readonly: true,
+      locale: studioAppSingleton.LOCALE,
+      localeDirection: studioAppSingleton.localeDirection(),
+      baseUrl: studioAppSingleton.BASE_URL,
+      cacheBust: studioAppSingleton.CACHE_BUST,
+      skinId: options.skin,
+      level: options.level,
+      blocks: this.generateXMLForBlocks_(blocksToDisplay)
+    }
+  });
+  this.iframe = document.createElement('iframe');
+  this.iframe.setAttribute('id', 'feedbackBlocks');
+  this.iframe.setAttribute('allowtransparency', 'true');
+  this.div.appendChild(this.iframe);
+};
+
+module.exports = FeedbackBlocks;
+
+FeedbackBlocks.prototype.show = function() {
+  var iframe = document.getElementById('feedbackBlocks');
+  if (iframe) {
+    var doc = iframe.contentDocument || iframe.contentWindow.document;
+    doc.open();
+    doc.write(this.html);
+    doc.close();
+  }
+};
+
+/**
+ * Creates the XML for blocks to be displayed in a read-only frame.
+ * @param {Array} blocks An array of blocks to display (with optional args).
+ * @return {string} The generated string of XML.
+ */
+FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
+  var blockXMLStrings = [];
+  var blockX = 10;  // Prevent left output plugs from being cut off.
+  var blockY = 0;
+  var blockXPadding = 200;
+  var blockYPadding = 120;
+  var blocksPerLine = 2;
+  var k, name;
+  for (var i = 0; i < blocks.length; i++) {
+    var block = blocks[i];
+    if (block.blockDisplayXML) {
+      blockXMLStrings.push(block.blockDisplayXML);
+      continue;
+    }
+    blockXMLStrings.push('<block', ' type="', block.type, '" x="',
+                        blockX.toString(), '" y="', blockY, '">');
+    if (block.titles) {
+      var titleNames = Object.keys(block.titles);
+      for (k = 0; k < titleNames.length; k++) {
+        name = titleNames[k];
+        blockXMLStrings.push('<title name="', name, '">',
+                            block.titles[name], '</title>');
+      }
+    }
+    if (block.values) {
+      var valueNames = Object.keys(block.values);
+      for (k = 0; k < valueNames.length; k++) {
+        name = valueNames[k];
+        blockXMLStrings.push('<value name="', name, '">',
+                            block.values[name], '</value>');
+      }
+    }
+    if (block.extra) {
+      blockXMLStrings.push(block.extra);
+    }
+    blockXMLStrings.push('</block>');
+    if ((i + 1) % blocksPerLine === 0) {
+      blockY += blockYPadding;
+      blockX = 0;
+    } else {
+      blockX += blockXPadding;
+    }
+  }
+  return blockXMLStrings.join('');
+};
+
+},{"./constants":9,"./templates/readonly.html":43}],30:[function(require,module,exports){
 var utils = require('./utils');
 var _ = utils.getLodash();
 
@@ -14528,7 +14510,7 @@ exports.booleanTrue = function(d){return "вярно"};
 
 exports.booleanFalse = function(d){return "грешно"};
 
-exports.blocklyMessage = function(d){return "Блокли"};
+exports.blocklyMessage = function(d){return "Blockly"};
 
 exports.catActions = function(d){return "Действия"};
 
@@ -18619,4 +18601,4 @@ function isNullOrUndefined(arg) {
 
 })( this );
 
-},{}]},{},[27])
+},{}]},{},[26])

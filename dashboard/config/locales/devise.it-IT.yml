@@ -56,7 +56,7 @@
         per completare la modifica del tuo indirizzo di posta elettronica.
       updated: Hai aggiornato il tuo account correttamente.
     sessions:
-      signed_in: Accesso riuscito.
+      signed_in: ''
       signed_out: Sei uscito correttamente.
     unlocks:
       send_instructions: Riceverai entro pochi minuti un messaggio di posta elettronica

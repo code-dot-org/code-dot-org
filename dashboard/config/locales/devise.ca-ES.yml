@@ -56,7 +56,7 @@
         de la teva nova adreça de correu electrònic.
       updated: Has actualitzat el teu compte correctament.
     sessions:
-      signed_in: Has iniciat sessió amb èxit.
+      signed_in: ''
       signed_out: Has tancat la teva sessió amb èxit.
     unlocks:
       send_instructions: D'aquí uns minuts rebràs un email amb instruccions per desbloquejar

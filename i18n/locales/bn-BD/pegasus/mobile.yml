@@ -3,7 +3,7 @@ bn-BD:
   select_language: অনুগ্রহ করে আপনার ভাষা নির্বাচন করুন
   computer_science: কম্পিউটার বিজ্ঞান
   computer_science_edweek: কম্পিউটার বিজ্ঞান শিক্ষা সপ্তাহ
-  csedweek_dates: ডিসেম্বর 9-15, 2013
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> Hour of Code </a> আসছে, তাই সব শিক্ষক ও উদ্যোক্তাদের আহ্বান জানানো হচ্ছে, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> আপনাদের Hour of Code এর পরিকল্পনা করুন</a> '
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400"> আপনি কি (CS) কম্পিউটার সায়েন্সের শিক্ষক ? CSEdWeek এর উপর অন্যান্য বিষয় গুলি জানুন</a>'
   n_have_learned_an_hoc: '<h1>#</h1><h3>চেষ্টা করে দেখুন</h3><h2>Hour of Code</h2>'
@@ -324,6 +324,7 @@ bn-BD:
   carousel_heading_robots: Learn to program with robots
   carousel_heading_ide: Platforms popular among teachers
   educator_notes: Educator Notes
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: More resources for teachers and educators
   participants: অংশগ্রহণকারী
   teachers_notes: "Teacher's Notes"

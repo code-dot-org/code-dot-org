@@ -21,7 +21,7 @@
           'Bee 1: Intro': 'Пчела 1: Въведение'
           'Maze 2: Loops': 'Лабиринт 2: цикли'
           'Bee 2: Loops': 'Пчела 2: цикли'
-          Multi & Match: Мулти & мач
+          Multi & Match: Multi & Match
           K-1 Flappy: К-1 Flappy
           Flappy non blockly: Flappy без blockly
           title: Курс 1
@@ -54,7 +54,7 @@
           Suzi: Сузи
           The Artist: Художникът
           Artist Debugging: 'Художник: отстраняване на грешки'
-          Bounce: Скачане
+          Bounce: Bounce
           'Studio: Create a Story': 'Театрална лаборатория: Създаване на история'
           Artist Loops: Художник - цикли
           Bee Conditionals: Пчела - условия
@@ -105,7 +105,7 @@
           Bee Debugging: Пчела - отстраняване на грешки
           Bee Functions: Пчела - функции
           Artist Functions with Params: Художник- функции с параметри
-          Bounce: Скачане
+          Bounce: Bounce
           Maze Conditionals: Лабиринт - условия
           Artist Functions with Parameters: Художник - функции с параметри
           Computational Thinking: Изчислително мислене
