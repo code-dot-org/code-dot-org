@@ -178,12 +178,12 @@ Dashboard::Application.routes.draw do
   if Rails.env.development?
     class PegasusProxy < Rack::Proxy
       def rewrite_env(env)
-        env["HTTP_HOST"] = "localhost:9393"
+        env["HTTP_HOST"] = CDO.code_org_url[2..-1]
         env
       end
     end
 
-    match '/v2/*any', to: PegasusProxy.new, via: :all
+    match '/v2/*any', to: PegasusProxy.new(streaming: false), via: :all
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
