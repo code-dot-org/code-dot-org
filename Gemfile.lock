@@ -214,6 +214,8 @@ GEM
       rack (>= 0.9.1)
     rack-protection (1.5.3)
       rack
+    rack-proxy (0.5.17)
+      rack
     rack-test (0.6.2)
       rack (>= 1.0)
     rails (4.0.3)
@@ -384,6 +386,7 @@ DEPENDENCIES
   phantomjs (~> 1.9.7.1)
   quiet_assets
   rack-contrib (~> 1.1)
+  rack-proxy
   rails (= 4.0.3)
   redcarpet (~> 3.1.1)
   redis (~> 3.1.0)
