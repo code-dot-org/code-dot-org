@@ -5,6 +5,11 @@ var HINT_REQUEST_PLACEMENT = {
   RIGHT: 2  // Hint request button is on right.
 };
 
+var KEYCODES = {
+  ENTER: 13,
+  SPACE: 32
+};
+
 /**
  * Bag of utility functions related to building and displaying feedback
  * to students.
@@ -954,11 +959,9 @@ FeedbackUtils.getTestResults = function(levelComplete, options) {
   }
 };
 
-var Keycodes = {
-  ENTER: 13,
-  SPACE: 32
-};
-
+/**
+ *
+ */
 FeedbackUtils.prototype.createModalDialogWithIcon = function(options) {
   var imageDiv = document.createElement('img');
   imageDiv.className = "modal-image";
@@ -971,7 +974,7 @@ FeedbackUtils.prototype.createModalDialogWithIcon = function(options) {
 
   var btn = options.contentDiv.querySelector(options.defaultBtnSelector);
   var keydownHandler = function(e) {
-    if (e.keyCode == Keycodes.ENTER || e.keyCode == Keycodes.SPACE) {
+    if (e.keyCode == KEYCODES.ENTER || e.keyCode == KEYCODES.SPACE) {
       // Simulate a 'click':
       var event = new MouseEvent('click', {
           'view': window,
