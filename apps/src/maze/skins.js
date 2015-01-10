@@ -67,6 +67,9 @@ var CONFIGS = {
   },
 
   pvz: {
+    goalIdle: 'goalIdle.gif',
+    obstacleIdle: 'obstacleIdle.gif',
+
     goalAnimation: 'goal.gif',
     maze_forever: 'maze_forever.png',
 
@@ -76,6 +79,8 @@ var CONFIGS = {
   },
 
   birds: {
+    goalIdle: 'goalIdle.gif',
+
     goalAnimation: 'goal.gif',
     maze_forever: 'maze_forever.png',
     largerObstacleAnimationTiles: 'tiles-broken.png',
