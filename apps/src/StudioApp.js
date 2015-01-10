@@ -831,7 +831,7 @@ StudioAppClass.prototype.displayFeedback = function(options) {
  *
  */
 StudioAppClass.prototype.getTestResults = function(levelComplete, options) {
-  return this.feedback_.getTestResults(levelComplete, options);
+  return this.feedbackInstance_.getTestResults(levelComplete, options);
 };
 
 // Builds the dom to get more info from the user. After user enters info
@@ -1245,5 +1245,5 @@ StudioAppClass.prototype.updateHeadersAfterDropletToggle_ = function (usingBlock
  * Do we have any floating blocks not attached to an event block or function block?
  */
 StudioAppClass.prototype.hasExtraTopBlocks = function () {
-  return this.feedback_.hasExtraTopBlocks();
+  return this.feedbackInstance_.hasExtraTopBlocks();
 };
