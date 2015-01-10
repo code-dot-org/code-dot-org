@@ -240,16 +240,18 @@ module LevelsHelper
       hide_source
       share
       no_padding
+      show_finish
+      embed
     ).map{ |x| x.include?(':') ? x.split(':') : [x,x.camelize(:lower)]}]
     .each do |dashboard, blockly|
       # Select first valid value from 1. local_assigns, 2. property of @level object, 3. named instance variable, 4. properties json
       # Don't override existing valid (non-nil/empty) values
-      property = local_assigns[dashboard].presence ||
+      property = local_assigns[dashboard.to_sym].presence ||
         @level[dashboard].presence ||
         instance_variable_get("@#{dashboard}").presence ||
-        level[dashboard.to_s].presence
-      value = blockly_value(level[blockly.to_s] || property)
-      level[blockly.to_s] = value unless value.nil? # make sure we convert false
+        level[dashboard].presence
+      value = blockly_value(level[blockly] || property)
+      level[blockly] = value unless value.nil? # make sure we convert false
     end
 
     level['images'] = JSON.parse(level['images']) if level['images'].present?
@@ -287,6 +289,13 @@ module LevelsHelper
     app_options['scriptId'] = @script.id if @script
     app_options['levelGameName'] = @level.game.name if @level.game
     app_options['scrollbars'] = blockly_value(@level.scrollbars) if @level.is_a?(Blockly) && @level.scrollbars
+
+    # Move these values up to the root
+    %w(hideSource share noPadding showFinish embed).each do |key|
+      app_options[key] = level[key]
+      level.delete key
+    end
+
     [level, app_options]
   end
 
