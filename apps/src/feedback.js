@@ -638,7 +638,7 @@ var getShowCodeElement = function(options) {
 
   var showCodeButton = showCodeDiv.querySelector('#show-code-button');
   showCodeButton.addEventListener('click', function () {
-    showCodeDiv.appendChild(getGeneratedCodeElement());
+    showCodeDiv.appendChild(feedbackSingleton.getGeneratedCodeElement_());
     showCodeButton.style.display = 'none';
   });
 
@@ -669,13 +669,13 @@ var getGeneratedCodeString = function() {
   }
 };
 
-var getGeneratedCodeElement = function() {
+FeedbackUtils.prototype.getGeneratedCodeElement_ = function() {
   var codeInfoMsgParams = {
     berkeleyLink: "<a href='http://bjc.berkeley.edu/' target='_blank'>Berkeley</a>",
     harvardLink: "<a href='https://cs50.harvard.edu/' target='_blank'>Harvard</a>"
   };
 
-  var infoMessage = studioAppSingleton.editCode ?  "" : msg.generatedCodeInfo(codeInfoMsgParams);
+  var infoMessage = this.studioApp_.editCode ?  "" : msg.generatedCodeInfo(codeInfoMsgParams);
   var code = getGeneratedCodeString();
 
   var codeDiv = document.createElement('div');
@@ -688,7 +688,7 @@ var getGeneratedCodeElement = function() {
 };
 
 FeedbackUtils.prototype.showGeneratedCode = function(Dialog) {
-  var codeDiv = getGeneratedCodeElement();
+  var codeDiv = this.getGeneratedCodeElement_();
 
   var buttons = document.createElement('div');
   buttons.innerHTML = require('./templates/buttons.html')({
