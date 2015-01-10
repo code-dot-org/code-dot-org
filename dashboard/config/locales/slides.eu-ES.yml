@@ -44,9 +44,8 @@
           bat mugituko da labirintoan.
       11:
         image: notes/hoc1_11.jpg
-        text: Ekintza bat baino gehiago burutzeko, bloke asko arrastatu ditzakezu
-          zure lan eremura eta elkar itsatsi. Txoriak aginduak goitik behera egingo
-          ditu.
+        text: To do more than one action, you can drag many blocks to your workspace
+          and attach them together. The bird will do the commands from top to bottom.
       12:
         image: notes/hoc1_12.jpg
         text: Programa bat martxan jarri eta konpondu nahi baduzu, "Berrabiarazi"

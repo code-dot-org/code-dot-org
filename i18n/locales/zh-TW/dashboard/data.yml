@@ -431,7 +431,7 @@ zh:
         Unplug9: Relay programming
         Unplug10: 互聯網
         Unplug11: 總結
-        C1_happy_maps_unplugged: Happy Maps
+        C1_happy_maps_unplugged: 快樂地圖
         C1_moveitmoveit_unplugged: 移動它，移動它
         C1_bigevent_unplugged: The Big Event
         C1_getting_loopy: Getting Loopy
@@ -462,7 +462,7 @@ zh:
         C2_binary_bracelets: Binary Bracelets
         C2_relay_programming: 接力式程式設計
         C2_paper_airplanes: Paper Airplanes
-        C2_digital_footprint: Your Digital Footprint
+        C2_digital_footprint: 你的數位足跡
         C3_maze_level_4: Maze Loops
         C3_artist_intro: 藝術家簡介
         C3_artist_functions: Artist Functions
@@ -485,7 +485,7 @@ zh:
         C4_bee_conditional: Bee Conditionals
         C4_variables_artist: 'Variables - Artist'
         C4_variables_playlab: 'Variables - Play Lab'
-        C4_for_loops: For Loops
+        C4_for_loops: For 迴圈
         C4_math_artist: Programming the Artist with Math
         C4_function_edit: Editing Functions
         C4_function_create: Creating Functions
@@ -494,7 +494,7 @@ zh:
         C4_unplugged_algorithms: Algorithms with Tangrams
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variables in Envelopes
-        C4_unplugged_forloops: For Loops
+        C4_unplugged_forloops: For 迴圈
         C4_unplugged_parameters: 用參數作曲
         C4_unplugged_binary: Binary
         frozen_intro: Hour of Code Intro

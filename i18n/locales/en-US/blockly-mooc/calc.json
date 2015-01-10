@@ -1,8 +1,8 @@
 {
-  "compute": "compute",
-  "equivalentExpression": "Try reordering your arguments to get exactly the same expression.",
-  "extraTopBlocks": "You have unattached blocks. Did you mean to attach these to the \"compute\" block?",
-  "goal": "Goal:",
-  "reinfFeedbackMsg": "Here is your story! Continue working on it, or move on to the next puzzle!",
-  "yourExpression"  : "Your expression:"
+  "compute":"crwdns21836:0crwdne21836:0",
+  "equivalentExpression":"crwdns21837:0crwdne21837:0",
+  "extraTopBlocks":"crwdns21838:0crwdne21838:0",
+  "goal":"crwdns21839:0crwdne21839:0",
+  "reinfFeedbackMsg":"crwdns23604:0crwdne23604:0",
+  "yourExpression":"crwdns21841:0crwdne21841:0"
 }

@@ -1,4 +1,5 @@
 #! /usr/bin/env ruby
+require 'fileutils'
 
 locales = {
 	'ar' => 'ar-SA',
@@ -12,6 +13,7 @@ locales = {
 	'da' => 'da-DK',
 	'de' => 'de-DE',
 	'el' => 'el-GR',
+	'en' => 'en-US',
 	'et' => 'et-EE',
 	'eu' => 'eu-ES',
 	'fa' => 'fa-IR',
@@ -51,14 +53,7 @@ locales = {
 	'vi' => 'vi-VN'
 }
 
-#rename folders to two letter code so crowdin sorts the translations according to their codes
 locales.each_pair do |two_letters_code, locale_code|
-	File.rename "../locales/#{locale_code}/", "../locales/#{two_letters_code}/"
-end
-
-`crowdin-cli download`
-
-#rename folders to four letter code to match our locale code system
-locales.each_pair do |two_letters_code, locale_code|
-	File.rename "../locales/#{two_letters_code}/", "../locales/#{locale_code}/"
+	FileUtils.cp_r "../locales/#{two_letters_code}/.", "../locales/#{locale_code}"
+	FileUtils.rm_r "../locales/#{two_letters_code}"
 end

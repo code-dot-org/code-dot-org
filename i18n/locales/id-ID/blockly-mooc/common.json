@@ -88,5 +88,6 @@
   "signup":"Daftarlah untuk mengikuti kursus introduksi",
   "hintHeader":"Berikut adalah tip:",
   "genericFeedback":"Lihatlah hasil anda dan cobalah untuk memperbaiki program Anda.",
+  "toggleBlocksErrorMsg":"You need to correct an error in your program before it can be shown as blocks.",
   "defaultTwitterText":"Lihat apa yang saya buat"
 }

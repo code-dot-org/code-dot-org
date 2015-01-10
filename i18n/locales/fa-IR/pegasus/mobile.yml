@@ -3,7 +3,7 @@ fa-IR:
   select_language: لطفا زبان خود را انتخاب کنید
   computer_science: علوم رایانه
   computer_science_edweek: هفته‌ی آموزش علوم رایانه
-  csedweek_dates: 9 تا 15 دسامبر 2013
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">ساعتِ کدنویسی</a> دارد میآید. همه‌ی دبیران و برنامه گزاران را صدا میزند، <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">ساعتِ کدنویسی خود را برنامه‌ریزی کنید</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">آیا شما دبیر کامپیوتر هستید؟ دیگر منابع هفته‌ی آموزش کامپیوتر را ببینید</a>'
   n_have_learned_an_hoc: '<h1>#</h1><h2>ساعتِ کدنویسی</h2><h3>را امتحان کرده است</h3>'
@@ -323,6 +323,7 @@ fa-IR:
   carousel_heading_robots: یادگیری برنامه با ربات
   carousel_heading_ide: محیط های برنامه ریزی محبوب در میان معلمان
   educator_notes: یادداشت های آموزگار
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: منابع بیشتر برای معلمان و آموزگاران
   participants: شرکت کنندگان
   teachers_notes: یادداشت های معلم
@@ -366,7 +367,7 @@ fa-IR:
   makegameswithus_name: یک بازی آیفون در مرورگر خود بسازید!
   touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor ساعت کد نویسی
-  blockly_name: بلاکلی
+  blockly_name: بلوکی
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: سنگ، کاغذ، قیچی

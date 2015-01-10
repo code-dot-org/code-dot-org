@@ -207,7 +207,7 @@
   "MATH_CONSTRAIN_HELPURL": "http://en.wikipedia.org/wiki/Clamping_%28graphics%29",
   "MATH_CONSTRAIN_TITLE": "ograničenje %1 nisko %2 visoko %3",
   "MATH_CONSTRAIN_TOOLTIP": "Ograniči broj da bude unutar zadanih vrijednosti (uključivo).",
-  "MATH_DIVISION_SYMBOL": "/",
+  "MATH_DIVISION_SYMBOL": "÷",
   "MATH_IS_DIVISIBLE_BY": "je djeljiv s",
   "MATH_IS_EVEN": "je paran broj",
   "MATH_IS_NEGATIVE": "je negativan broj",

@@ -3,7 +3,7 @@ hu-HU:
   select_language: Válassz nyelvet
   computer_science: Számítógép-tudomány
   computer_science_edweek: Számítógép Tudomány Oktatási Hét
-  csedweek_dates: 2013. December 9-15
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: 'Hamarosan itt a <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Kódolás Órája</a>. Kérünk minden tanárt és szervezőt, hogy tervezze meg a <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">saját Kódolás Órája programját</a>!'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Számítástechnika tanár vagy? Nézz meg más CSEdWeek anyagokat is!</a>'
   n_have_learned_an_hoc: '<h1>#</h1><h3> fő már kipróbálta a</h3><h2>Kódolás Óráját.</h2>'
@@ -323,6 +323,7 @@ hu-HU:
   carousel_heading_robots: Tanulj robotprogramozást
   carousel_heading_ide: A tanárok közt népszerű platformok
   educator_notes: Oktatói jegyzetek
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: További segédletek tanárok és oktatók részére
   participants: résztvevők
   teachers_notes: Tanári jegyzetek

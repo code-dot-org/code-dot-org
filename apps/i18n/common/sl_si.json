@@ -16,10 +16,10 @@
   "continue": "Nadaljuj",
   "dialogCancel": "Prekliči",
   "dialogOK": "Vredu",
-  "directionNorthLetter": "S",
-  "directionSouthLetter": "J",
-  "directionEastLetter": "V",
-  "directionWestLetter": "Z",
+  "directionNorthLetter": "N",
+  "directionSouthLetter": "S",
+  "directionEastLetter": "E",
+  "directionWestLetter": "W",
   "end": "konec",
   "emptyBlocksErrorMsg": "Znotraj 'Ponovi' ali 'če' bloka morajo biti drugi bloki, da bo delovalo. Prepričaj se, da se notranji bloki ustrezno prilegajo zunanjemu bloku.",
   "emptyFunctionBlocksErrorMsg": "Da bi blok s funkcijo deloval, mora vsebovati druge bloke oz ukaze.",
@@ -88,5 +88,6 @@
   "signup": "Vpiši se za uvodni tečaj",
   "hintHeader": "Tukaj je namig:",
   "genericFeedback": "Poglej kako si končal in poizkusi popraviti svoj program.",
+  "toggleBlocksErrorMsg": "You need to correct an error in your program before it can be shown as blocks.",
   "defaultTwitterText": "Poglej, kaj sem naredil"
 }

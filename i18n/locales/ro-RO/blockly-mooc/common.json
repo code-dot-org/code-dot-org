@@ -88,5 +88,6 @@
   "signup":"Înscrie-te la cursul introductiv",
   "hintHeader":"Iată un sfat:",
   "genericFeedback":"Vezi cum se termină şi încearcă să-ți corectezi programul.",
+  "toggleBlocksErrorMsg":"You need to correct an error in your program before it can be shown as blocks.",
   "defaultTwitterText":"Verifică ceea ce am creat"
 }

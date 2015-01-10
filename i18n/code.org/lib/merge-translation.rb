@@ -29,6 +29,11 @@ def merge_translation_tree(en_translation, new_translation, prev_translation)
                                  prev_translation[key])
       end
     end
+    en_translation.each_key do |key|
+      if !new_translation.has_key?(key)
+        new_translation[key] = en_translation[key]
+      end
+    end
   end
   new_translation
 end

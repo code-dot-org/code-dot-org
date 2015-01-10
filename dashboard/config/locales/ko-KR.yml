@@ -30,7 +30,7 @@
   appname: Code.org
   stage: stage
   stage_number: 스테이지 %{number}
-  puzzle: 퍼즐
+  puzzle: Puzzle
   trophies: trophies
   courses: courses
   of: 중
@@ -241,9 +241,9 @@
     popup:
       progress: 내 진도
       lines: 총 %{lines} 라인
-      close: 닫기
+      close: CLOSE
       mastery: 개념
-      puzzle_map: 단계
+      puzzle_map: Stages
       prizes: 트로피를 모두(%{total_trophies} 개) 모아 상품을 받으세요!
       prize_earned: 트로피를 모두(총 %{total_trophies} 개) 모았습니다. 상품을 받으세요!
       prize_us_only: (U.S. students only)
@@ -297,7 +297,7 @@
       secret: 비밀번호 입력
       grade: 등급
       course: 코스
-      rename: 이름 바꾸기
+      rename: rename
       edit: 수정하기
       delete: 삭제하기
       confirm_delete: 이 섹션을 삭제하시겠습니까?
@@ -374,10 +374,9 @@
     teacher: 선생님
   footer:
     help_from_html: 구글, 마이크로소프트, 페이스북, 트위터의 컴퓨터과학자들이 이 튜토리얼을 만들었습니다.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 <a href="http://www.rovio.com">Rovio
-      Entertainment Ltd</a>. All Rights Reserved.<br/> Plants vs. Zombies&trade; &
-      &copy; 2013 <a href="http://www.ea.com">Electronic Arts Inc.</a>. All Rights
-      Reserved.
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
+      All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
+      Arts Inc. All Rights Reserved.
     powered_by_aws: Powered by Amazon Web Services
     feedback: 피드백 남기기
     translate: 다른 언어로 번역
@@ -445,7 +444,7 @@
       unused: 비사용 레벨
   upsell:
     hoc:
-      title: The Hour of Code
+      title: Hour of Code
       body: 컴퓨터과학(CS, 정보과학)의 기초를 경험해보세요. 수백만 가지의 것들을 가능하게 합니다.
     flappy:
       title: 플래피 코드

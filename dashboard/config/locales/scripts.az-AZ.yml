@@ -33,13 +33,17 @@
           Getting Loopy: Getting Loopy
           The Big Event: The Big Event
           Going Places Safely: Going Places Safely
-          description: A course for K-1 students who can't yet read.
+          description: Course 1 is designed to allow early readers to create computer
+            programs that will help them learn to collaborate with others, develop
+            problem-solving skills, and persist through difficult tasks. By the end
+            of this course, students create their very own custom game or story that
+            they can share. Recommended for grades K-1.
           'Bee: Sequence': 'Arı: Ardıcıllıq'
           'Artist: Sequence': 'Rəssam: Ardıcıllıq'
           'Artist: Shapes': 'Rəssam: Fiqurlar'
           'Maze: Loops': 'Labirint: Dövrlər'
           'Bee: Loops': 'Arı: Dövrlər'
-          'Studio: Create a Story': 'Studio: Create a Story'
+          'Studio: Create a Story': 'Play Lab: Create a Story'
           'Artist: Loops': 'Rəssam: Dövrlər'
           description_audience: 4+ yaş (oxumağı bacarmayanlar)
           description_short: Kurs 1 oxumağı təzə öyrənənlər üçü hazırlarnıb.
@@ -49,7 +53,7 @@
           The Artist: Rəssam
           Artist Debugging: Rəssam Sazlama
           Bounce: Bounce
-          'Studio: Create a Story': 'Studio: Create a Story'
+          'Studio: Create a Story': 'Play Lab: Create a Story'
           Artist Loops: Rəssam Dövrlər
           Bee Conditionals: Arı Şərti ifadələr
           Flappy: Flappy
@@ -87,7 +91,7 @@
           description_short: Kurs 2 oxumağı bacaran şagirdlər üçün hazırlanıb.
         course3:
           The Maze: Labirint
-          'Studio: Create a Story': 'Studio: Create a Story'
+          'Studio: Create a Story': 'Play Lab: Create a Story'
           The Artist: Rəssam
           title: Kurs 3
           Artist Functions: Rəssam Funksiyalar
@@ -115,7 +119,7 @@
             məsələlərin çevik həlli üçün daha dərindən araşdıracaqlar. Bu kursun sonunda
             şagirdlər hamı ilə bölüşə biləcəkləri interaktiv əhvalat və oyunlar düzəldəcək.
             4-5-ci siniflər üçün tövsiyyə olunur.
-          'Studio: Create a Game': 'Studio: Create a Game'
+          'Studio: Create a Game': 'Play Lab: Create a Game'
           Maze: Labirint
           Artist: Rəssam
           'Artist: Functions': 'Artist: Functions'
@@ -156,7 +160,7 @@
           'Play Lab: Defining Variables': 'Play Lab: Defining Variables'
           The Design Recipe: The Design Recipe
           'Artist: Defining Functions': 'Artist: Defining Functions'
-          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Play Lab: Defining Functions': 'Play Lab: Design Recipe'
           'Artist: Functions': 'Artist: Functions'
           'Play Lab: Animation': 'Play Lab: Animation'
           Booleans: Booleans

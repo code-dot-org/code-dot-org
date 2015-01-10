@@ -50,7 +50,7 @@ Blockly.Msg.CONTROLS_IF_TOOLTIP_1 = "اگر یک مقدار صحیح است، س
 Blockly.Msg.CONTROLS_IF_TOOLTIP_2 = "اگر یک مقدار صحیح است، بلوک اول عبارات را انجام بده. در غیر این صورت، بلوک دوم عبارات را انجام بده.";
 Blockly.Msg.CONTROLS_IF_TOOLTIP_3 = "اگر مقدار اول صحیح است، بلوک اول عبارات را انجام بده. در غیر این صورت، اگر مقدار دوم صحیح است، بلوک دوم عبارات را انجام بده.";
 Blockly.Msg.CONTROLS_IF_TOOLTIP_4 = "اگر مقدار اول درست است، بلوک اول عبارات را انجام بده.  در غیر این صورت، اگر مقدار دوم درست باشد بلوک دوم عبارات را انجام بده.  اگر هیچ یک از مقادیر درست نبود، آخرین بلوک عبارات را انجام بده.";
-Blockly.Msg.CONTROLS_REPEAT_HELPURL = "http://fa.wikipedia.org/wiki/%D8%AD%D9%84%D9%82%D9%87_%D9%81%D9%88%D8%B1";
+Blockly.Msg.CONTROLS_REPEAT_HELPURL = "http://en.wikipedia.org/wiki/For_loop";
 Blockly.Msg.CONTROLS_REPEAT_INPUT_DO = "انجام بده";
 Blockly.Msg.CONTROLS_REPEAT_TITLE = "%1 بار تکرار کن";
 Blockly.Msg.CONTROLS_REPEAT_TITLE_REPEAT = "تکرار کن";
@@ -123,47 +123,47 @@ Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_REMOVE_FROM_START = "مورد در مح�
 Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_REMOVE_LAST = "آخرین مورد مشخص‌شده در فهرست را حذف و بر می‌گرداند.";
 Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_REMOVE_RANDOM = "مورد تصادفی‌ای را در فهرست حذف و بر می‌گرداند.";
 Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_REMOVE_FIRST = "اولین مورد را در یک فهرست حذف می‌کند.";
-Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_REMOVE_FROM_END = "مورد مشخص‌شده در موقعیت مشخص در یک فهرست را حذف و بر می‌گرداند.  #1 آخرین مورد است.";
-Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_REMOVE_FROM_START = "مورد مشخص‌شده در موقعیت مشخص در یک فهرست را حذف و بر می‌گرداند.  #1 اولین مورد است.";
+Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_REMOVE_FROM_END = "مورد مشخص‌شده در موقعیت مشخص در یک فهرست را حذف میکند.  #1 آخرین مورد است.";
+Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_REMOVE_FROM_START = "مورد مشخص‌شده در موقعیت مشخص در یک فهرست را حذف می‌کند.  #1 اولین مورد است.";
 Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_REMOVE_LAST = "آخرین مورد را در یک فهرست حذف می‌کند.";
 Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_REMOVE_RANDOM = "یک مورد تصادفی را از یک فهرست حذف می‌کند.";
 Blockly.Msg.LISTS_GET_SUBLIST_END_FROM_END = "به # از انتها";
 Blockly.Msg.LISTS_GET_SUBLIST_END_FROM_START = "به #";
-Blockly.Msg.LISTS_GET_SUBLIST_END_LAST = "به آخرین";
+Blockly.Msg.LISTS_GET_SUBLIST_END_LAST = "تا آخرین";
 Blockly.Msg.LISTS_GET_SUBLIST_HELPURL = "https://code.google.com/p/blockly/wiki/Lists#Getting_a_sublist";
-Blockly.Msg.LISTS_GET_SUBLIST_START_FIRST = "گرفتن زیر فهرست از ابتدا";
-Blockly.Msg.LISTS_GET_SUBLIST_START_FROM_END = "گرفتن زیرفهرست از # از انتها";
+Blockly.Msg.LISTS_GET_SUBLIST_START_FIRST = "گرفتن زیرمجموعه‌ای از ابتدا";
+Blockly.Msg.LISTS_GET_SUBLIST_START_FROM_END = "گرفتن زیرمجموعه‌ای از # از انتها";
 Blockly.Msg.LISTS_GET_SUBLIST_START_FROM_START = "بگیر زیرمجموعه‌ را از #";
 Blockly.Msg.LISTS_GET_SUBLIST_TAIL = "";
-Blockly.Msg.LISTS_GET_SUBLIST_TOOLTIP = "کپی از قسمت مشخص‌شدهٔ لیست درست می‌کند.";
-Blockly.Msg.LISTS_INDEX_OF_FIRST = "یافتن اولین رخداد یک مورد";
+Blockly.Msg.LISTS_GET_SUBLIST_TOOLTIP = "یک کپی از قسمت مشخص‌شدهٔ لیست درست می‌کند.";
+Blockly.Msg.LISTS_INDEX_OF_FIRST = "یافتن اولین رخداد مورد";
 Blockly.Msg.LISTS_INDEX_OF_HELPURL = "https://code.google.com/p/blockly/wiki/Lists#Getting_Items_from_a_List";
-Blockly.Msg.LISTS_INDEX_OF_LAST = "یافتن آخرین رخداد یک مورد";
-Blockly.Msg.LISTS_INDEX_OF_TOOLTIP = "شاخصی از اولین/آخرین رخ‌داد مورد در فهرست را بر می‌گرداند. ۰ بر می‌گرداند اگر متن موجود نبود.";
+Blockly.Msg.LISTS_INDEX_OF_LAST = "یافتن آخرین رخداد مورد";
+Blockly.Msg.LISTS_INDEX_OF_TOOLTIP = "از اولین/آخرین رخداد مورد در فهرست شاخص را برمی‌گرداند. ۰ برمی‌گرداند اگر متن پیدا نشد.";
 Blockly.Msg.LISTS_INLIST = "در فهرست";
 Blockly.Msg.LISTS_IS_EMPTY_HELPURL = "https://code.google.com/p/blockly/wiki/Lists#is_empty";
 Blockly.Msg.LISTS_IS_EMPTY_TITLE = "%1 خالی است";
 Blockly.Msg.LISTS_LENGTH_HELPURL = "https://code.google.com/p/blockly/wiki/Lists#length_of";
 Blockly.Msg.LISTS_LENGTH_INPUT_LENGTH = "طول";
 Blockly.Msg.LISTS_LENGTH_TITLE = "طول %1";
-Blockly.Msg.LISTS_LENGTH_TOOLTIP = "طول یک فهرست را بدست می دهد.";
+Blockly.Msg.LISTS_LENGTH_TOOLTIP = "طول یک فهرست را برمی‌گرداند.";
 Blockly.Msg.LISTS_REPEAT_HELPURL = "https://code.google.com/p/blockly/wiki/Lists#create_list_with";
-Blockly.Msg.LISTS_REPEAT_TITLE = "فهرستی با %1 تکرارشده به اندازهٔ %2 می‌سازد";
-Blockly.Msg.LISTS_REPEAT_TOOLTIP = "فهرستی شامل مقادیر داده‌شدهٔ تکرار شده عدد مشخص‌شده می‌سازد.";
+Blockly.Msg.LISTS_REPEAT_TITLE = "با %1 که %2 بار تکرارشده فهرست بساز";
+Blockly.Msg.LISTS_REPEAT_TOOLTIP = "فهرستی شامل مقادیر داده‌شده، که به اندازه ی مشخص‌شده تکرار شده اند، می‌سازد.";
 Blockly.Msg.LISTS_SET_INDEX_HELPURL = "https://code.google.com/p/blockly/wiki/Lists#in_list_..._set";
 Blockly.Msg.LISTS_SET_INDEX_INPUT_TO = "به‌عنوان";
 Blockly.Msg.LISTS_SET_INDEX_INSERT = "جا دادن در";
 Blockly.Msg.LISTS_SET_INDEX_SET = "مجموعه";
-Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_INSERT_FIRST = "موردی به ته فهرست اضافه می‌کند.";
-Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_INSERT_FROM_END = "موردی در موقعیت مشخص‌شده در یک فهرست اضافه می‌کند.  #1 آخرین مورد است.";
-Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_INSERT_FROM_START = "موردی در موقعیت مشخص‌شده در یک فهرست اضافه می‌کند.  #1 اولین مورد است.";
-Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_INSERT_LAST = "موردی به ته فهرست الحاق می‌کند.";
-Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_INSERT_RANDOM = "مورد را به صورت تصادفی در یک فهرست می‌افزاید.";
-Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_SET_FIRST = "اولین مورد در یک فهرست را تعیین می‌کند.";
-Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_SET_FROM_END = "مورد مشخص‌شده در یک فهرست را قرار می‌دهد.  #1 آخرین مورد است.";
-Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_SET_FROM_START = "مورد مشخص‌شده در یک فهرست را قرار می‌دهد.  #1 اولین مورد است.";
-Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_SET_LAST = "آخرین مورد در یک فهرست را تعیین می‌کند.";
-Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_SET_RANDOM = "یک مورد تصادفی در یک فهرست را تعیین می‌کند.";
+Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_INSERT_FIRST = "موردی در ابتدای یک فهرست وارد می‌کند.";
+Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_INSERT_FROM_END = "مورد را در موقعیت مشخص‌شده در یک فهرست وارد می‌کند.  #1 آخرین مورد است.";
+Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_INSERT_FROM_START = "مورد را در موقعیت مشخص‌شده در یک فهرست وارد می‌کند.  #1 اولین مورد است.";
+Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_INSERT_LAST = "مورد را به انتهای فهرست اضافه می‌کند.";
+Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_INSERT_RANDOM = "مورد را به صورت تصادفی در یک فهرست وارد میکند.";
+Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_SET_FIRST = "اولین مورد را در یک فهرست قرار میدهد.";
+Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_SET_FROM_END = "مورد را در موقعیت مشخص‌شده در یک فهرست قرار می‌دهد.  #1 آخرین مورد است.";
+Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_SET_FROM_START = "مورد را در موقعیت مشخص‌شده در یک فهرست قرار می‌دهد.  #1 اولین مورد است.";
+Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_SET_LAST = "آخرین مورد را در یک فهرست قرار میدهد.";
+Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_SET_RANDOM = "یک مورد تصادفی را در یک فهرست قرار میدهد.";
 Blockly.Msg.LISTS_TOOLTIP = "اگر فهرست خالی است مقدار صجیج بر می‌گرداند.";
 Blockly.Msg.LOGIC_BOOLEAN_FALSE = "ناصحیح";
 Blockly.Msg.LOGIC_BOOLEAN_HELPURL = "http://code.google.com/p/blockly/wiki/True_False";

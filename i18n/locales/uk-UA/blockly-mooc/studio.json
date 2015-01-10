@@ -58,7 +58,7 @@
   "moveDistanceTooltip":"Переміщення персонажа на вказану відстань у вказаному напрямку.",
   "moveSprite":"переміститись",
   "moveSpriteN":"перемістити персонажа {spriteIndex}",
-  "toXY":"to x,y",
+  "toXY":"до x,y",
   "moveDown":"рухатися вниз",
   "moveDownTooltip":"Перемістити персонаж вниз.",
   "moveLeft":"рухатись ліворуч",

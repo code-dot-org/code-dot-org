@@ -253,7 +253,7 @@
     followers:
       section: 班别：
       stages: '要顯示的階段:'
-      show_past: 'Show student activity (%{bullet_html}) in the past:'
+      show_past: 顯示之前的學生活動 (%{bullet_html})：
       levels_key: Levels key
       perfect: 完美完成
       completed: 完成了，但是用到太多程式積木
@@ -277,12 +277,12 @@
         Your students will need to choose usernames and passwords, but they WILL NOT
         be required to provide an email address. If a student forgets their password,
         you will be able to reset it for them.
-      register: Ask your students to register themselves
+      register: 請學生自行註冊
       vist: 要求你的學生去參觀
       section_code: '並輸入他們的班級代碼:'
       first_please: 首先，請 %{add_section}
       for: 為
-      enter: 'enter:'
+      enter: '輸入:'
     sections:
       add: 增加班級
       manage: 管理班級
@@ -310,10 +310,11 @@
     email_resend_confirm: 重新發送確認指令
     new_password_hint: （如果你不想變更它就保留空白）
     current_password_hint: （我們需要您現在的密碼以確認您的更改）
-    cancel:
-      title: 取消我的帳戶
-      hint: 不開心嗎？
-      button: 取消我的帳戶
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: 'Please note: deleting your account will not delete
+      your students'' accounts.'
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: 已完成
     tried: 已試過
@@ -323,12 +324,12 @@
     classroom_activity: 不用電腦的活動
   home:
     title: 程式工作室
-    all_courses: Overview of Courses 1, 2, and 3
+    all_courses: 課程 1, 2, 及 3 導論
     lesson_plans: 課程計畫
     signin_message: 已經註冊了? %{link}
     student_reg_link: 學生登入
     teacher_reg_link: 教師登入
-    signin_directions: 使用一個帳戶來追蹤進度和獲取獎勵。 <br/>教師們，追蹤您所有課程。
+    signin_directions: 使用帳戶來追蹤進度。 <br/>教師，追蹤您的整個班級。
     teacher_dashboard: 瀏覽進度表
     teacher_student_count_one: 您有 %{count} 位學生.
     teacher_student_count: 您有 %{count} 位學生.
@@ -343,7 +344,8 @@
     local_school: 當地的學校
     online: 在線上
     see_details: 查看詳細資訊
-    prize_info: （僅限於美國） 參與獎：完成的學生給予 10 元禮品卡以及公立學校教師最高 1000 元的課堂獎勵。
+    prize_info: 'Prizes for participation (U.S. public school teachers only): Up to
+      $1,000 in classroom rewards.'
     tryfirst: 或者，你也可以先試試，之後再 註冊：
     trynow: 快來試試
     add_hint_help: Please help us to add smart hints to Code.org tutorials
@@ -351,10 +353,10 @@
     test_videos_help: Test our new video player at your school
     try_beta_courses: 新功能！K 5 學生們請嘗試我們的 Beta 測試版課程。
     use_as_teacher: 使用這網站當一名教師
-    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
-    heading_elementary: <h2>20 hour courses for</h2><h1>Elementary Students</h1>
+    heading_hoc2014: <h2>一小時的程式設計課程</h2><h1>對所有年齡</h1>
+    heading_elementary: <h2>20 小時課程</h2><h1>初學者(所有年齡)</h1>
     heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
-    heading_legacy: <h2>Our previous course for</h2><h1>Existing Students</h1>
+    heading_legacy: <h2>Our general course for</h2><h1>All Ages</h1>
     your_gallery: Gallery
   gender:
     male: 男性
@@ -364,11 +366,11 @@
     student: '學生 '
     teacher: 教師
   footer:
-    help_from_html: 本課程由來自 <a href="http://www.google.com">Google</a>, <a href="http://www.microsoft.com">Microsoft</a>,
-      <a href="http://www.facebook.com">Facebook</a>, 和 <a href="http://www.twitter.com">Twitter</a>的工程師共同建立。.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 <a href="http://www.rovio.com">Rovio
-      Entertainment Ltd</a>. 版權所有.<br/> Plants vs. Zombies&trade; & &copy; 2014 <a
-      href="http://www.ea.com">Electronic Arts Inc.</a>.版權所有.
+    help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped
+      create this tutorial.
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
+      All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
+      Arts Inc. All Rights Reserved.
     powered_by_aws: Powered by Amazon Web Services
     feedback: 提供回饋
     translate: 幫我們翻譯成您國家的語言
@@ -417,10 +419,10 @@
   download_coming_soon: Downloadable activity coming soon.
   video_coming_soon: 視頻快將推出 ！
   share_code:
-    title: 按一下'執行程式'來看看程式執行結果
+    title: Click 'Run' to see my program in action
     bounce_og_title: Check out my Bounce Game
     flappy_og_title: 快來嘗試我設計的Flappy Game
-    studio_og_title: Check out my story
+    studio_og_title: Check out my Play Lab App
     check_out_what_i_made: Check out what I made
     og_description: 我用 Code.org寫了自己的程式碼
     phone_number_not_allowed: It looks like there is a phone number in it. Try changing
@@ -433,7 +435,7 @@
   builder:
     created: 您創建了一個新的腳本。
     destroyed: 你毀了一個腳本。
-    manage: 管理腳本
+    manage: Build Levels
     view: 檢視
     back: 返回腳本
     success: You successfully edited the blocks.
@@ -476,7 +478,9 @@
     header_playlab: 播放實驗室
     header_artist: 畫家
   landing:
-    prerelease: This page is still under development.
+    prerelease: This course is in <span class='betatext'>beta</span>.  This means
+      it is not the final version of the course, and is subject to revision as feedback
+      is received and improvements are made.
     prerelease_hoc2014: This tutorial is in <span class='betatext'>beta</span>.  It
       is subject to revision as feedback is received and improvements are made.
     feedback: 提供意見

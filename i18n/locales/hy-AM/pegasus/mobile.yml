@@ -3,7 +3,7 @@ hy-AM:
   select_language: Please select your language
   computer_science: Համակարգչային գիտություն
   computer_science_edweek: Համակարգչային գիտության ուսումնասիրման շաբաթ
-  csedweek_dates: Դեկտեմբերի 9-15 2013 թ.
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">plan your Hour of Code</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
   n_have_learned_an_hoc: '<h1>#</h1><h3>have tried an</h3><h2>Hour of Code</h2>'
@@ -104,6 +104,9 @@ hy-AM:
   students_and_lines: '%{students} students have done the Hour of Code and written %{lines} lines of code.'
   start_hoc: Start the Hour of Code now
   contact_form_topic_press: Press/media (interview or speaking engagement)
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
+  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
+  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
   studiobar_title: "Explore <a href='http://studio.code.org'>Code Studio</a>"
   studiobar_elementary_title: Elementary courses
   studiobar_elementary_body: 'Our three new courses for K&#8209;5'
@@ -117,6 +120,8 @@ hy-AM:
   studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
   studiobar_donate_title: Donate
   studiobar_donate_body: One child learns for each dollar you donate
+  studiobar_shop_title: Shop
+  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   contact_form_topic_student: Ես աշակերտ եմ
   contact_form_topic_parent: Ես ծնող եմ
   contact_form_topic_teacher: Ես ուսուցիչ/մանկավարժ եմ
@@ -194,9 +199,11 @@ hy-AM:
   dashboard_action_save_all: Save all
   dashboard_action_cancel: Cancel
   dashboard_action_delete: Delete
-  dashboard_action_confirm: Delete?
   dashboard_action_delete_yes: 'Yes'
   dashboard_action_delete_no: 'No'
+  dashboard_action_confirm: Delete?
+  dashboard_action_remove: Remove
+  dashboard_action_remove_confirm: Remove?
   dashboard_action_done: Done
   dashboard_action_required: required
   dashboard_navigation_home_page: Teacher home page
@@ -316,6 +323,7 @@ hy-AM:
   carousel_heading_robots: Learn to program with robots
   carousel_heading_ide: Platforms popular among teachers
   educator_notes: Educator Notes
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: More resources for teachers and educators
   participants: participants
   teachers_notes: "Teacher's Notes"

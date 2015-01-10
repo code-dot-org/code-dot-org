@@ -27,7 +27,7 @@
         /script_assets/2-3_images/artist/2-3_artist_match_1_a4.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a4.png
       2-3 bounce match 1:
         Bounce Matching: Hop matchende
-        Matching: Matchende
+        Matching: Matching
         Match the events with the actions: Match hændelserne med handlingerne
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png
@@ -41,7 +41,7 @@
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png
       2-3 flappy match 1:
         Flappy Matching One: Flappy matchende 1
-        Matching: Matchende
+        Matching: Matching
         Match the events with the actions: Match hændelserne med handlingerne
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png
@@ -71,7 +71,7 @@
         /script_assets/2-3_images/maze/2-3_maze_match_2_a2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a2.png
         /script_assets/2-3_images/maze/2-3_maze_match_2_a3.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a3.png
       2-3 Big Event Match 1:
-        Matching: Matchende
+        Matching: Matching
         /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
@@ -82,7 +82,7 @@
         /script_assets/k_1_images/unplugged_images/big_event_1_a3.png: /script_assets/k_1_images/unplugged_images/big_event_1_a3.png
         /script_assets/k_1_images/unplugged_images/big_event_1_a4.png: /script_assets/k_1_images/unplugged_images/big_event_1_a4.png
       2-3 Binary Match 1:
-        Matching: Matchende
+        Matching: Matching
         /script_assets/2-3_images/unplugged/binary_1_q.png, 250: /script_assets/2-3_images/unplugged/binary_1_q.png,
           250
         Use the key to match each code to its letter: Brug nøglen til at matche hver

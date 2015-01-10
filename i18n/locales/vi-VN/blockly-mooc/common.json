@@ -88,5 +88,6 @@
   "signup":"Đăng ký cho khóa học mở đầu",
   "hintHeader":"Đây là một số mẹo:",
   "genericFeedback":"Nhìn xem bằng cách nào bạn kết thúc và hãy cố gắng sửa chương trình của bạn.",
+  "toggleBlocksErrorMsg":"You need to correct an error in your program before it can be shown as blocks.",
   "defaultTwitterText":"Check out what I made"
 }
