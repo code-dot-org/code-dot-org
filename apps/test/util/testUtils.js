@@ -4,6 +4,13 @@ var assert = chai.assert;
 exports.assert = assert;
 var SRC = '../../src/';
 
+// TODO (brent) - unify around using built files instead of src files
+exports.buildPath = function (path) {
+  return __dirname + '/../../build/js/' + path;
+};
+
+var studioAppSingleton;
+
 var testBlockFactory = require('./testBlockFactory');
 
 require('./requireUncache').wrap(require);
@@ -69,19 +76,19 @@ exports.setupTestBlockly = function() {
   require.uncache(SRC + '/base');
   // c, n, v, p, s get added to global namespace by messageformat module, which
   // is loaded when we require our locale msg files
-  global.StudioApp = this.requireWithGlobalsCheckSrcFolder('/base',
+  studioAppSingleton = this.requireWithGlobalsCheckSrcFolder('/base',
     ['c', 'n', 'v', 'p', 's']);
-  globalDiff.cache(); // recache since we added global StudioApp
 
   var blocklyAppDiv = document.getElementById('app');
   assert(blocklyAppDiv, 'blocklyAppDiv exists');
 
-  global.StudioApp.assetUrl = function (path) {
+  // TODO (brent) - address this
+  studioAppSingleton.assetUrl = function (path) {
     return '../lib/blockly/' + path;
   };
 
   var options = {
-    assetUrl: global.StudioApp.assetUrl
+    assetUrl: studioAppSingleton.assetUrl
   };
   Blockly.inject(blocklyAppDiv, options);
   testBlockFactory.installTestBlocks(Blockly);
@@ -89,9 +96,20 @@ exports.setupTestBlockly = function() {
   assert(Blockly.Blocks.text_print, "text_print block exists");
   assert(Blockly.Blocks.text, "text block exists");
   assert(Blockly.Blocks.math_number, "math_number block exists");
-  assert(StudioApp, "StudioApp exists");
+  assert(studioAppSingleton, "studioAppSingleton exists");
   assert(Blockly.mainBlockSpace, "Blockly workspace exists");
 
   Blockly.mainBlockSpace.clear();
   assert(Blockly.mainBlockSpace.getBlockCount() === 0, "Blockly workspace is empty");
+};
+
+/**
+ * Gets the singleton loaded by setupTestBlockly. Throws if setupTestBlockly
+ * was not used (this will be true in the case of level tests).
+ */
+exports.getStudioAppSingleton = function () {
+  if (!studioAppSingleton) {
+    throw new Error("Expect singleton to exist");
+  }
+  return studioAppSingleton;
 };
