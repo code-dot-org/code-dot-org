@@ -219,14 +219,14 @@ StudioAppClass.prototype.init = function(config) {
         if (result.error) {
           // TODO (cpirich) We could extract error.loc to determine where the
           // error occurred and highlight that error
-          this.feedback_.showToggleBlocksError(this.Dialog);
+          this.feedbackInstance_.showToggleBlocksError(this.Dialog);
         }
         this.updateHeadersAfterDropletToggle_(this.editor.currentlyUsingBlocks);
         if (!this.editor.currentlyUsingBlocks) {
           this.editor.aceEditor.focus();
         }
       } else {
-        this.feedback_.showGeneratedCode(this.Dialog);
+        this.feedbackInstance_.showGeneratedCode(this.Dialog);
       }
     }, this));
   }

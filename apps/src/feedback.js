@@ -280,7 +280,7 @@ FeedbackUtils.getNumBlocksUsed = function() {
     }
     return codeLines;
   }
-  return getUserBlocks().length;
+  return feedbackSingleton.getUserBlocks_().length;
 };
 
 /**
@@ -301,7 +301,7 @@ FeedbackUtils.getNumCountableBlocks = function() {
     }
     return codeLines;
   }
-  return getCountableBlocks().length;
+  return feedbackSingleton.getCountableBlocks_().length;
 };
 
 var getFeedbackButtons = function(options) {
@@ -687,7 +687,7 @@ var getGeneratedCodeElement = function() {
   return codeDiv;
 };
 
-FeedbackUtils.showGeneratedCode = function(Dialog) {
+FeedbackUtils.prototype.showGeneratedCode = function(Dialog) {
   var codeDiv = getGeneratedCodeElement();
 
   var buttons = document.createElement('div');
@@ -698,10 +698,10 @@ FeedbackUtils.showGeneratedCode = function(Dialog) {
   });
   codeDiv.appendChild(buttons);
 
-  var dialog = feedbackSingleton.createModalDialogWithIcon({
+  var dialog = this.createModalDialogWithIcon({
       Dialog: Dialog,
       contentDiv: codeDiv,
-      icon: studioAppSingleton.icon,
+      icon: this.studioApp_.icon,
       defaultBtnSelector: '#ok-button'
       });
 
@@ -715,7 +715,7 @@ FeedbackUtils.showGeneratedCode = function(Dialog) {
   dialog.show();
 };
 
-FeedbackUtils.showToggleBlocksError = function(Dialog) {
+FeedbackUtils.prototype.showToggleBlocksError = function(Dialog) {
   var contentDiv = document.createElement('div');
   contentDiv.innerHTML = msg.toggleBlocksErrorMsg();
 
@@ -727,10 +727,10 @@ FeedbackUtils.showToggleBlocksError = function(Dialog) {
   });
   contentDiv.appendChild(buttons);
 
-  var dialog = feedbackSingleton.createModalDialogWithIcon({
+  var dialog = this.createModalDialogWithIcon({
       Dialog: Dialog,
       contentDiv: contentDiv,
-      icon: studioAppSingleton.icon,
+      icon: this.studioApp_.icon,
       defaultBtnSelector: '#ok-button'
   });
 
@@ -748,7 +748,7 @@ FeedbackUtils.showToggleBlocksError = function(Dialog) {
  * Check user's code for empty container blocks, such as "repeat".
  * @return {boolean} true if a block is empty (no blocks are nested inside).
  */
-var hasEmptyContainerBlocks = function() {
+FeedbackUtils.prototype.hasEmptyContainerBlocks_ = function() {
   var code = codegen.workspaceCode(Blockly);
   return (/\{\s*\}/).test(code);
 };
@@ -757,7 +757,7 @@ var hasEmptyContainerBlocks = function() {
  * Get an empty container block, if any are present.
  * @return {Blockly.Block} an empty container block, or null if none exist.
  */
-var getEmptyContainerBlock = function() {
+FeedbackUtils.prototype.getEmptyContainerBlock_ = function() {
   var blocks = Blockly.mainBlockSpace.getAllBlocks();
   for (var i = 0; i < blocks.length; i++) {
     var block = blocks[i];
@@ -776,8 +776,8 @@ var getEmptyContainerBlock = function() {
  * Check whether the user code has all the blocks required for the level.
  * @return {boolean} true if all blocks are present, false otherwise.
  */
-var hasAllRequiredBlocks = function() {
-  return feedbackSingleton.getMissingRequiredBlocks_().blocksToDisplay.length === 0;
+FeedbackUtils.prototype.hasAllRequiredBlocks_ = function() {
+  return this.getMissingRequiredBlocks_().blocksToDisplay.length === 0;
 };
 
 /**
@@ -786,7 +786,7 @@ var hasAllRequiredBlocks = function() {
  * written.
  * @return {Array<Object>} The blocks.
  */
-var getUserBlocks = function() {
+FeedbackUtils.prototype.getUserBlocks_ = function() {
   var allBlocks = Blockly.mainBlockSpace.getAllBlocks();
   var blocks = allBlocks.filter(function(block) {
     return !block.disabled && block.isEditable() && block.type !== 'when_run';
@@ -800,7 +800,7 @@ var getUserBlocks = function() {
  * block count.
  * @return {Array<Object>} The blocks.
  */
-var getCountableBlocks = function() {
+FeedbackUtils.prototype.getCountableBlocks_ = function() {
   var allBlocks = Blockly.mainBlockSpace.getAllBlocks();
   var blocks = allBlocks.filter(function(block) {
     return !block.disabled;
@@ -823,7 +823,7 @@ FeedbackUtils.prototype.getMissingRequiredBlocks_ = function () {
   var code = null;  // JavaScript code, which is initialized lazily.
   // TODO (br-pair) : we should probably just pass required_blocks
   if (this.studioApp_.REQUIRED_BLOCKS && this.studioApp_.REQUIRED_BLOCKS.length) {
-    var userBlocks = getUserBlocks();
+    var userBlocks = this.getUserBlocks_();
     // For each list of required blocks
     // Keep track of the number of the missing block lists. It should not be
     // bigger than studioAppSingleton.NUM_REQUIRED_BLOCKS_TO_FLAG
@@ -909,8 +909,8 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete, options) {
         this.studioApp_.TestResults.ALL_PASS :
         this.studioApp_.TestResults.TOO_FEW_BLOCKS_FAIL;
   }
-  if (this.studioApp_.CHECK_FOR_EMPTY_BLOCKS && hasEmptyContainerBlocks()) {
-    var type = getEmptyContainerBlock().type;
+  if (this.studioApp_.CHECK_FOR_EMPTY_BLOCKS && this.hasEmptyContainerBlocks_()) {
+    var type = this.getEmptyContainerBlock_().type;
     if (type === 'procedures_defnoreturn' || type === 'procedures_defreturn') {
       return TestResults.EMPTY_FUNCTION_BLOCK_FAIL;
     }
@@ -939,7 +939,7 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete, options) {
   if (this.hasQuestionMarksInNumberField_()) {
     return TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
   }
-  if (!hasAllRequiredBlocks()) {
+  if (!this.hasAllRequiredBlocks_()) {
     return levelComplete ?
         TestResults.MISSING_BLOCK_FINISHED :
         TestResults.MISSING_BLOCK_UNFINISHED;
