@@ -15,7 +15,6 @@ var tiles = require('./tiles');
 var codegen = require('../codegen');
 var api = require('./api');
 var page = require('../templates/page.html');
-var feedback = require('../feedback.js');
 var dom = require('../dom');
 var Hammer = require('../hammer');
 var utils = require('../utils');

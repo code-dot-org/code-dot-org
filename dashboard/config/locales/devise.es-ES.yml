@@ -55,7 +55,7 @@
         la confirmación de tu nueva dirección de correo electrónico.
       updated: Has actualizado tu cuenta correctamente.
     sessions:
-      signed_in: Has iniciado sesión con éxito.
+      signed_in: ''
       signed_out: Has cerrado tu sesión con éxito.
     unlocks:
       send_instructions: Recibirás un correo electrónico con instrucciones para confirmar

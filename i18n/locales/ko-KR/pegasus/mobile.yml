@@ -3,7 +3,7 @@ ko-KR:
   select_language: 언어를 선택하세요.
   computer_science: 컴퓨터과학(Computer Science, 정보과학)
   computer_science_edweek: 컴퓨터과학(Computer Science, 정보과학) 교육 주간
-  csedweek_dates: 2013년 12월 9일 부터 15일 까지
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a> 가 곧 시작됩니다. 모든 선생님들과 운영자들에게 알립니다.  <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> 여러분의 Hour of Code 행사를 준비하세요.'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">컴퓨터과학(정보(과학)) 선생님이시라면? CSEdWeek resources 를 살펴보세요.</a>'
   n_have_learned_an_hoc: '<h1>#</h1><h3>명이</h3><h2>Hour of Code</h2><h3>를 경험하였습니다</h3>'
@@ -323,6 +323,7 @@ ko-KR:
   carousel_heading_robots: 로봇 프로그래밍
   carousel_heading_ide: 선생님들이 자주 사용하는 양식들
   educator_notes: 교육자 참고사항들
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: 선생님들과 교육자를 위한 더 많은 자료들
   participants: 참여자
   teachers_notes: 선생님 참고사항들

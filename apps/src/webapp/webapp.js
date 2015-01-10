@@ -15,7 +15,6 @@ var codegen = require('../codegen');
 var api = require('./api');
 var blocks = require('./blocks');
 var page = require('../templates/page.html');
-var feedback = require('../feedback.js');
 var dom = require('../dom');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
@@ -705,7 +704,8 @@ var consoleApi = {};
 consoleApi.log = function() {
   var nativeArgs = [];
   for (var i = 0; i < arguments.length; i++) {
-    nativeArgs[i] = codegen.marshalInterpreterToNative(arguments[i]);
+    nativeArgs[i] = codegen.marshalInterpreterToNative(Webapp.interpreter,
+                                                       arguments[i]);
   }
   var output = '';
   var firstArg = nativeArgs[0];
@@ -1482,7 +1482,7 @@ Webapp.attachEventHandler = function (opts) {
       /*
       Check for a specific set of Hammer v1 event names (full set below) and if
       we find a match, instantiate Hammer on that element
-      
+
       TODO (cpirich): review the following:
       * whether using Hammer v1 events is the right choice
       * choose the specific list of events

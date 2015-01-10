@@ -21,7 +21,7 @@
       confirmation_instructions:
         subject: Code.org instruções de confirmação
       reset_password_instructions:
-        subject: Code.org redefinir instruções de palavra-passe
+        subject: Instruções de reposição da palavra-passe Code.org
       unlock_instructions:
         subject: Instruções de desbloqueio
     omniauth_callbacks:
@@ -53,7 +53,7 @@
         e clica no link para finalizar a confirmação do teu novo endereço de e-mail.
       updated: Atualizaste a tua conta com sucesso.
     sessions:
-      signed_in: Ligou-se com sucesso.
+      signed_in: ''
       signed_out: Desligou-se com sucesso.
     unlocks:
       send_instructions: Vais receber um e-mail com as instruções sobre como desbloquear

@@ -54,7 +54,7 @@
         el. pašto adresą.
       updated: Jūs sėkmingai atnaujinote savo paskyrą.
     sessions:
-      signed_in: Prisijungta sėkmingai.
+      signed_in: ''
       signed_out: Sėkmingai atsijungta.
     unlocks:
       send_instructions: Netrukus gausite el. laišką į savo pašto dėžutę su instrukcijomis,

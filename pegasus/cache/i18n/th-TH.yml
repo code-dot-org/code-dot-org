@@ -3,7 +3,7 @@
   select_language: โปรดเลือกภาษาของคุณ
   computer_science: วิทยาการคอมพิวเตอร์
   computer_science_edweek: สัปดาห์การศึกษาวิทยาศาสตร์คอมพิวเตอร์
-  csedweek_dates: 9-15 ธันวาคม 2013
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Hour of Code</a> กำลังจะมาถึง. บอกคุณครูของคุณ, <a href="http://hourofcode.com"
     style="color: white; text-decoration:underline; font-weight:bold"> เพื่อช่วยคุณวางแผนการเรียนโครงการ
@@ -361,6 +361,7 @@
   carousel_heading_robots: เรียนเขียนโปรแกรมกับหุ่นยนต์
   carousel_heading_ide: แพลตฟอร์มที่นิยมในหมู่คุณครู
   educator_notes: บันทึกของผู้สอน
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: แหล่งข้อมูลเพิ่มเติมสำหรับครูและนักศึกษา
   participants: ผู้เข้าร่วม
   teachers_notes: บันทึกของครู
@@ -397,7 +398,7 @@
   groklearning_name: คุณหมอ Eliza Chatterbot
   quorum_name: เขียนโปรแกรมที่สามารถเข้าถึงได้ (ด้วย screenreader)
   codespark_name: The Foos (pre-readers welcome)
-  kodable_name: Kodable
+  kodable_name: Kodable (pre-readers welcome)
   tynkerapp_name: Tynker ใน tablets
   robomindnl_name: โปรแกรมหุ่นยนต์จำลอง
   flappy_name: สร้างเกม Flappy bird
@@ -616,15 +617,14 @@
     ซานตาครอส หรืออะไรก็ตาม เมื่อเสร็จแล้วนำเกมของคุณเข้าสู่มือถือในหนึ่งคลิก
   bitsbox_longdescription: Customize your very own virtual tablet, then code a series
     of apps to play and share. Simple walkthroughs make it possible for even young
-    kids to program real Javascript, and the more advanced you are the further you'll
+    kids to program real JavaScript, and the more advanced you are the further you'll
     go.
   makegameswithus_longdescription: Learn to code by making an iPhone game using a
-    brand new and beginner-friendly programming language called Swift! Create a Pokemon-inspired
+    brand new and beginner-friendly programming language called Swift! Create a Pok&eacute;mon-inspired
     action game and write code to teach your monster new moves. You will learn how
     to use variables, methods, and objects to help your monster win!
-  touchdevelop_longdescription: Crazy drawings, flying monsters, swirling flowers...
-    create your apps on your device with TouchDevelop, a friendly mobile app creation
-    environment. Runs on iPhone, iPad, Android, Windows, Windows Phone, Linux, Mac.
+  touchdevelop_longdescription: 'The touch-friendly editor will guide you in creating
+    pixel art, solving the bear puzzle, or making your own jumping bird game. '
   appinventor_longdescription: Entertaining, quick video tutorials walk you through
     building three simple apps for your Android phone or tablet. Designed for novices
     and experts alike, this hour of code will get you ready to start building your

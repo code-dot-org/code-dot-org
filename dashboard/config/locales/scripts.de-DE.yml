@@ -120,7 +120,7 @@
             und komplexere Probleme vertieft. Am Ende des Kurses entwickeln die Schüler
             interaktive Geschichten und Spiele, an denen sie andere teilhaben lassen
             können. Empfohlen für Klasse 4-5.
-          'Studio: Create a Game': 'Studio: Create a Game'
+          'Studio: Create a Game': 'Play Lab: Create a Game'
           Maze: Labyrinth
           Artist: Künstler
           'Artist: Functions': 'Künstler: Funktionen'
@@ -144,8 +144,7 @@
           'Artist: Patterns': 'Artist: Patterns'
           Songwriting: Songschreiben
           description_audience: Ages 8+ (after Course 2)
-          description_short: Students taking Course 3 should have already taken Course
-            2.
+          description_short: Course 3 is a follow-up to Course 2.
         msm:
           title: Mittelschule Mathematik
           description: Selbständige Arbeit für mittelschule Mathematik.
@@ -162,7 +161,7 @@
           'Play Lab: Defining Variables': 'Play Lab: Defining Variables'
           The Design Recipe: The Design Recipe
           'Artist: Defining Functions': 'Artist: Defining Functions'
-          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Play Lab: Defining Functions': 'Play Lab: Design Recipe'
           'Artist: Functions': 'Künstler: Funktionen'
           'Play Lab: Animation': 'Play Lab: Animation'
           Booleans: Booleans
@@ -222,8 +221,7 @@
           title: Programmierstunde
           description: Try the basics of computer science with characters from Angry
             Birds, Plants vs. Zombies, and Scrat from Ice Age!
-          description_short: Try the basics of computer science with characters from
-            Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
+          description_short: Try the basics of computer science with many fun characters!
         frozen:
           title: Programmiere mit Anna und Elsa
           description: Wir wollen programmieren, damit wir Anna und Elsa treffen,

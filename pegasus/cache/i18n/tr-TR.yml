@@ -3,7 +3,7 @@
   select_language: Lütfen dilinizi seçiniz
   computer_science: Bilgisayar Bilimleri
   computer_science_edweek: Bilgisayar Bilimleri Eğitim Haftası
-  csedweek_dates: 9-15 Aralık, 2013
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: 'T<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Kodlama Saati</a> geliyor. Öğretmenleri organizatörleri , <a
     href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Kodlama
@@ -371,7 +371,7 @@
     ilgili oturum açma tiplerini, <b> resim, yazı ya da mail adresi gibi </b>, açıklamaya
     yardımcı olur.
   dashboard_faq: Sık sorulan sorular
-  code_hoc_coming: Hour of Code geliyor, 8-14 Aralık!
+  code_hoc_coming: The Hour of Code is here - December 8-14!
   code_sign_up: CS Education Week' e katılmak için kaydolun.
   learn_more: Daha Fazla Bilgi Edinin
   hoc2014_try_new_tutorials: Yeni Hour of Code eğitimlerimizi deneyin
@@ -381,7 +381,7 @@
   carousel_heading_international: Kendi dilinizde eğitimler
   carousel_heading_domestic: Eğitimlerin ingilizcesi mevcut
   carousel_heading_beginners: Yeni başlayanlar için dersler
-  carousel_heading_javascript: Javascript dersleri
+  carousel_heading_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: İnternet bağlantınız veya cihazınız yok mu? "Enstrümansız"
     bilgisayar bilimlerini deneyin
   carousel_heading_devices: Tabletler ve telefonlar için eğitim uygulamaları
@@ -392,6 +392,7 @@
   carousel_heading_robots: Robotlar ile programlamayı öğrenin
   carousel_heading_ide: Öğretmenler arasında popüler platformlar
   educator_notes: Eğitimci notları
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Öğretmenler ve eğitimciler için daha fazla kaynak
   participants: katılımcılar
   teachers_notes: Öğretmen notları
@@ -493,14 +494,14 @@
   khanfr_platformtext: Modern Web tarayıcıları
   khanpl_platformtext: Modern Web tarayıcıları
   tynker_platformtext: Modern Web tarayıcıları
-  scratch_platformtext: BÜTÜN tarayıcılar
+  scratch_platformtext: Desktop-only web browsers (not tablets)
   lightbot_platformtext: BÜTÜN tarayıcılar ve IOS, Android veya oyun konsolu
   thinkersmith_platformtext: İnternetsiz
   condcards_platformtext: İnternetsiz
   lightbotintl_platformtext: IOS Android (veya web tarayıcı)
   codehs_platformtext: Modern tarayıcılar. (Kursu takip etmek ücretlidir.)
   codecademy_platformtext: Modern web tarayıcıları. IOS Android uygulamaları
-  codecombat_platformtext: Modern Web tarayıcıları
+  codecombat_platformtext: Modern web browsers (Follow-on course requires $$)
   codemonkey_platformtext: Modern Web tarayıcıları
   codeavengers_platformtext: Modern Web tarayıcıları
   processing_platformtext: Modern Web tarayıcıları
@@ -559,8 +560,7 @@
   tynkerapp_shortdescription: Eğlenceli kodlama yapbozları çözerek programlama öğrenin.
   robomindnl_shortdescription: Sanal robotumuz için kod yazın
   flappy_shortdescription: Kendi oyununuzu yapın - Flappy Bird, Shark veya Denizaltı
-  bitsbox_shortdescription: Oynamak ve paylaşmak için Javascript kullanarak kodlama
-    öğren.
+  bitsbox_shortdescription: Code a series of apps to play and share, using real JavaScript.
   makegameswithus_shortdescription: Bir iPhone oyunu yap! Kod yazarak Canavarınıza
     yeni hareketler öğretin!
   touchdevelop_shortdescription: 'Telefonunuz üzerinden yapbozlar çözün, oyunlar yaratın
@@ -584,9 +584,10 @@
     lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn
     repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
   thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
-    los estudiantes descubriran como guiarse de modo tal de llevar a cabo tareas especificas
-    sin ser estas discutidas previamente. Este segmento ensena a los estudiantes la
-    conexion entre simbolos y acciones asi como la valiosa habilidad de depuracion.
+    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
+    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
+    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
+    como la valiosa habilidad de depuraci&oacute;n.
   khan_longdescription: Kodlamayla eğlenceli çizimler oluştururken JavaScript dilinin
     temellerini öğrenin. Kendi kendinize ya da sınıfınızla birlikte yapabilirsiniz!
   khanes_longdescription: Kodlamayla eğlenceli çizimler oluştururken JavaScript dilinin
@@ -599,18 +600,19 @@
     temellerini öğrenin. Kendi kendinize ya da sınıfınızla birlikte yapabilirsiniz!
   khanpl_longdescription: Kodlamayla eğlenceli çizimler oluştururken JavaScript dilinin
     temellerini öğrenin. Kendi kendinize ya da sınıfınızla birlikte yapabilirsiniz!
-  tynker_longdescription: A collection of 8 fun activities for children of all ages
-    to try programming. Solve a series of simple puzzles to help Pixel the puppy reach
-    home, and Biff the spaceman reach his moon base. Build the Space Zombies game
-    or create Math Art using our fun and easy visual approach to programming.  The
-    session can be teacher facilitated or self-paced.
+  tynker_longdescription: Build your own games and share with friends! Solve fun coding
+    puzzles and learn programming concepts in each level. Personalize games with animated
+    characters, multiple levels and rich props. Make your games realistic using physics.
+    See the code as visual blocks or JavaScript. Take your games mobile on iPads and
+    Android tablets. Over a dozen fun activities to choose from!
   scratch_longdescription: Strach ile kendi interaktif oyunlarınızı, hikayelerinizi,
     animasyonlarınızı yaratabilir &mdash;  ve arkadaşlarınızla paylaşabilirsiniz.
     Adınızı animasyonda canlandırarak, tebrik kartı oluşturarak ya da Pong game yazarak
     başlayın.
-  lightbot_longdescription: Learn core programming logic, starting from super-basic
-    programming, for ages 4+, on iOS or Android (or Web browser) . Learn how to sequence
-    commands, identify patterns, use procedures, and utilize loops!
+  lightbot_longdescription: Guide Lightbot to light up all the blue tiles! Lightbot
+    is a puzzle game that uses programming game mechanics to let players gain a practical
+    understanding of basic coding. Learn to sequence instructions, write procedures,
+    and utilize loops to solve levels. Ideal for all ages.
   thinkersmith_longdescription: Using a pre-defined "Robot Vocabulary" students will
     figure out how to guide each other to accomplish specific tasks without discussing
     them first. This lesson teaches children the connection between symbols and actions,
@@ -623,10 +625,12 @@
     ( ya da web tarayıcısında) kullanılabilen süper-temel programlamayla başlayarak
     öğren. Komutları nasıl sıralayacağını, kalıpları tanımayı, işlemler kullanmayı
     ve döngülerden yararlanmayı öğren!
-  codehs_longdescription: Learn the basics of programming with Karel the Dog, a fun,
-    accessible and visual introduction to coding, where giving commands to a computer
-    is just like giving commands to a dog. This tutorial is great if led by a teacher,
-    but can also be done independently.
+  codehs_longdescription: Giving commands to a computer, which is what programming
+    is all about, is just like giving commands to a dog. Learn how to code with Karel
+    the Dog&mdash;a fun, accessible, and visual introduction to programming that teaches
+    fundamental concepts like commands and functions to absolute beginners. Tutorial
+    is student-directed but teachers can sign up to access teacher tools and track
+    student success!
   codecademy_longdescription: CodeAcademy, JavaScript üzerinden CS temellerini öğreten,
     interaktif, öğrenci güdümlü, dünyada milyonlarca öğrenci tarafından kullanılan
     bir sitedir. Problemsiz Hour of Code deneyimini, yapbozlar, sunumlar ve öğrenciler
@@ -648,11 +652,10 @@
     their own virtual robot. The online course is fully self-contained with short
     presentations, movies, quizzes and automatic guidance/hints to help with the programming
     exercises. '
-  groklearning_longdescription: Choose from 3 activities designed to give you your
-    first experience programming. For example, use the programming language Python
-    to build a chatbot called "Eliza". Can she fool your friends into think she's
-    a human not a computer? This can be done in either a student-guided or teacher-facilitated
-    form and comes with all notes and solutions.
+  groklearning_longdescription: Use the programming language Python to build a chatbot
+    called "Eliza" to act as a robot psychotherapist. You'll teach Eliza how to talk
+    and the right thing to say. Can she fool your friends into thinking she's a human
+    not a computer?
   quorum_longdescription: This tutorial is accessible for the visually-impaired, and
     works with screenreaders. Join Mary on a tour as she joins a biology lab as a
     programmer and learns the Quorum programming language. This tutorial is student-guided
@@ -663,10 +666,10 @@
   kodable_longdescription: Kodable, 5 yaş üstü çocukları programlamanın temelleriyle
     tanıştıran bir kendin-yönlendir İpad oyunudur. Yakınlarda bir öğretmenin ya da
     ebeveny olması size bağlıdır ancak gerekli değildir.
-  tynkerapp_longdescription: Build your own games and share with friends! Solve fun
-    coding puzzles and learn programming concepts in each level. Personalize games
-    with animated characters, multiple levels and rich props. Lots of fun activities
-    to choose from!
+  tynkerapp_longdescription: Learn to program by solving fun coding puzzles. Easily
+    build games and stories using with themed graphics, 10+ game-kits and customizable
+    characters. No Internet connectivity required. You can also access your creations
+    on the web.
   robomindnl_longdescription: 'Students learn the basics of programming by controlling
     their own virtual robot. The online course is fully self-contained with short
     presentations, movies, quizzes and automatic guidance/hints to help with the programming
@@ -676,15 +679,14 @@
     Add the game to your phone in one click.
   bitsbox_longdescription: Customize your very own virtual tablet, then code a series
     of apps to play and share. Simple walkthroughs make it possible for even young
-    kids to program real Javascript, and the more advanced you are the further you'll
+    kids to program real JavaScript, and the more advanced you are the further you'll
     go.
   makegameswithus_longdescription: Learn to code by making an iPhone game using a
-    brand new and beginner-friendly programming language called Swift! Create a Pokemon-inspired
+    brand new and beginner-friendly programming language called Swift! Create a Pok&eacute;mon-inspired
     action game and write code to teach your monster new moves. You will learn how
     to use variables, methods, and objects to help your monster win!
-  touchdevelop_longdescription: Crazy drawings, flying monsters, swirling flowers...
-    create your apps on your device with TouchDevelop, a friendly mobile app creation
-    environment. Runs on iPhone, iPad, Android, Windows, Windows Phone, Linux, Mac.
+  touchdevelop_longdescription: 'The touch-friendly editor will guide you in creating
+    pixel art, solving the bear puzzle, or making your own jumping bird game. '
   appinventor_longdescription: Entertaining, quick video tutorials walk you through
     building three simple apps for your Android phone or tablet. Designed for novices
     and experts alike, this hour of code will get you ready to start building your
@@ -744,7 +746,7 @@
   codea_beyond_name: Codea
   lego_beyond_name: Mindstorms
   finch_beyond_name: Finch
-  arduino_beyond_name: Arduino
+  arduino_beyond_name: Arduino with Sparkfun
   processing_beyond_name: Program with Processing
   alice_beyond_name: Alice
   sphero_beyond_name: SPRK
@@ -818,7 +820,7 @@
   codea_beyond_platformtext: iPad
   lego_beyond_platformtext: Robot satın alma
   finch_beyond_platformtext: Robot satın alma
-  arduino_beyond_platformtext: Kit purchase
+  arduino_beyond_platformtext: Web browser, then Kit purchase
   processing_beyond_platformtext: Modern Web tarayıcıları
   alice_beyond_platformtext: Windows veya Mac (yükleme gerekir)
   sphero_beyond_platformtext: Robot satın alma
@@ -997,13 +999,13 @@
   codecombat_beyond_longdescription: Play as a Wizard using code (spells) to control
     your heroes, navigate mazes, defeat ogres, trick enemies, and rescue allies! Learn
     JavaScript in this HTML 5 web game for complete beginners.
-  codea_beyond_longdescription: Codea for iPad lets you create games and simulations&mdash;or
-    just about any visual idea you have. Turn your thoughts into interactive creations
-    that make use of iPad features like Multi-Touch and the accelerometer. We think
-    Codea is the most beautiful code editor you'll use, and it's easy. Codea is designed
-    to let you touch your code. Want to change a number? Just tap and drag it. How
-    about a color, or an image? Tapping will bring up visual editors that let you
-    choose exactly what you want.
+  codea_beyond_longdescription: Codea for iPad lets you create games and simulations
+    &mdash; or just about any visual idea you have. Turn your thoughts into interactive
+    creations that make use of iPad features like Multi-Touch and the accelerometer.
+    We think Codea is the most beautiful code editor you'll use, and it's easy. Codea
+    is designed to let you touch your code. Want to change a number? Just tap and
+    drag it. How about a color, or an image? Tapping will bring up visual editors
+    that let you choose exactly what you want.
   lego_beyond_longdescription: LEGO parçaları kullanarak küçük, özelleştirilebilir
     ve programlanabilir robotlar yaratın.
   finch_beyond_longdescription: The Finch is a new robot for computer science education.
@@ -1012,10 +1014,9 @@
     It has support for over a dozen programming languages and environments, including
     several environments appropriate for students as young as eight years old. The
     Finch was designed to allow students to write richly interactive programs.
-  arduino_beyond_longdescription: Arduino is an open-source electronics prototyping
-    platform based on flexible, easy-to-use hardware and software. It's intended for
-    artists, designers, hobbyists, and anyone interested in creating interactive objects
-    or environments.
+  arduino_beyond_longdescription: Arduino is a popular platform designed to allow
+    artists and designers to work with real sensors, LEDs, buzzers, and more. The
+    Sparkfun Virtual Sandbox will teach you real Arduino code right in your browser.
   processing_beyond_longdescription: Processing is a programming language, development
     environment, and online community. Since 2001, Processing has promoted software
     literacy within the visual arts and visual literacy within technology. Initially
@@ -1027,7 +1028,6 @@
     the creation of 3D animations, the Alice Project provides tools and materials
     for teaching and learning computational thinking, problem solving, and computer
     programming across a spectrum of ages and grade levels.
-  sphero_beyond_longdescription: Schools, Parents, Robots & Kids. We created the SPRK
-    program because we believe play is a powerful teacher. Whether you're an educator
-    or a parent, SPRK lessons give kids a fun crash course in programming robots while
-    sharpening their skills in math and science.
+  sphero_beyond_longdescription: Whether you're an educator or a parent, SPRK lessons
+    give kids a fun crash course in programming robots while sharpening their skills
+    in math and science.

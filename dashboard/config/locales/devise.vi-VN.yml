@@ -1,7 +1,7 @@
 "vi":
   devise:
     confirmations:
-      confirmed: Tài khoản của bạn đã được xác nhận. Đã đăng nhập.
+      confirmed: Your email address was successfully confirmed.
       send_instructions: Bạn sẽ nhận được một email hướng dẫn xác nhận tài khoản của
         bạn trong vài phút nữa.
       send_paranoid_instructions: Nếu địa chỉ email của bạn có trong cơ sở dữ liệu
@@ -19,9 +19,9 @@
       unconfirmed: Bạn phải xác nhận tài khoản của bạn trước khi tiếp tục.
     mailer:
       confirmation_instructions:
-        subject: Hướng dẫn xác nhận
+        subject: Code.org confirmation instructions
       reset_password_instructions:
-        subject: Hướng dẫn đặt lại mật khẩu
+        subject: Code.org reset password instructions
       unlock_instructions:
         subject: Hướng dẫn mở khóa
     omniauth_callbacks:
@@ -54,7 +54,7 @@
         bạn và bấm vào liên kết xác nhận để xác nhận địa chỉ email mới của bạn.
       updated: Bạn đã cập nhật tài khoản thành công.
     sessions:
-      signed_in: Đăng nhập thành công.
+      signed_in: ''
       signed_out: Đăng xuất thành công.
     unlocks:
       send_instructions: Bạn sẽ nhận được một email hướng dẫn mở khóa tài khoản của

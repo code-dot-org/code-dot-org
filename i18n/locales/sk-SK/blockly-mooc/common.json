@@ -88,5 +88,6 @@
   "signup":"Prihlás sa do úvodného kurzu",
   "hintHeader":"Tu je rada:",
   "genericFeedback":"Pozri si ako to dopadlo a pokús sa opraviť svoj program.",
+  "toggleBlocksErrorMsg":"You need to correct an error in your program before it can be shown as blocks.",
   "defaultTwitterText":"Check out what I made"
 }

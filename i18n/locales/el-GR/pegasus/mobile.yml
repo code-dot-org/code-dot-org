@@ -3,7 +3,7 @@ el-GR:
   select_language: Παρακαλώ επιλέξτε τη γλώσσα σας
   computer_science: Επιστήμη Υπολογιστών
   computer_science_edweek: Εβδομάδα Εκπαίδευσης στην Επιστήμη Υπολογιστών
-  csedweek_dates: 9-15 Δεκεμβρίου 2013
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: 'H  <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> Ώρα του Κώδικα</a> πλησιάζει!. Καλούμε όλους τους εκπαιδευτικούς και διοργανωτές να σχεδιάσουν τη δική τους, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">  Ώρα του Κώδικα</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400"> Είστε καθηγητής πληροφορικής; Δείτε άλλους πόρους του CSEdWeek</a>'
   n_have_learned_an_hoc: '<h1>#</h1><h3>έχουν δοκιμάσει την</h3><h2>Ώρα του Κώδικα</h2>'
@@ -323,6 +323,7 @@ el-GR:
   carousel_heading_robots: Μάθετε να προγραμματίζετε με ρομπότ
   carousel_heading_ide: Δημοφιλείς ψηφιακές πλατφόρμες μεταξύ των εκπαιδευτικών
   educator_notes: Σημειώσεις επιμορφωτή
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Περισσότεροι πόροι για τους εκπαιδευτικούς και τους επιμορφωτές
   participants: συμμετέχοντες
   teachers_notes: Σημειώσεις εκπαιδευτικού

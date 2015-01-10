@@ -5,10 +5,18 @@ base_path: '../locales'
 
 files:
   - 
-    source: 'en-US/**/*.yml'
-    translation: '%locale%/**/%original_file_name%'
+    source: '/en-US/**/*.yml'
+    translation: '/%locale%/**/%original_file_name%'
     ignore:
       - /en-US/hourofcode
   - 
-    source: 'en-US/**/*.json'
-    translation: '%locale%/**/%original_file_name%'
+    source: '/en-US/**/*.json'
+    translation: '/%locale%/**/%original_file_name%'
+  - 
+    source: '/en-US/**/*.yml'
+    translation: '/%two_letters_code%/**/%original_file_name%'
+    ignore:
+      - /en-US/hourofcode
+  - 
+    source: '/en-US/**/*.json'
+    translation: '/%two_letters_code%/**/%original_file_name%'

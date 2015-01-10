@@ -3,7 +3,7 @@ require 'cdo/db'
 require 'cdo/rack/request'
 
 class AppsApi < Sinatra::Base
-
+  
   #
   # GET /v2/apps/<app-id>/[user-]properties
   #
@@ -43,7 +43,7 @@ class AppsApi < Sinatra::Base
   # This mapping exists for older browsers that don't support the DELETE verb.
   #
   post %r{/v2/apps/(\d+)/(properties|user-properties)/([^/]+)/delete$} do |app_id, endpoint, name|
-    call(env.merge('REQUEST_METHOD'=>'DELETE', 'PATH_INFO'=>File.dir_name(request.path_info)))
+    call(env.merge('REQUEST_METHOD'=>'DELETE', 'PATH_INFO'=>File.dirname(request.path_info)))
   end
 
   #
@@ -125,23 +125,23 @@ class AppsApi < Sinatra::Base
         return row[:id] 
       end
       
-      storage_id = storage_id_from_cookie
-
       # Take ownership of cookie storage, if it exists.
-      if storage_id
+      if storage_id = storage_id_from_cookie
+        # Delete the cookie that was tracking this storage id
+        response.delete_cookie(storage_id_cookie_name)
+        
         # Only take ownership if the storage id doesn't already have an owner - it shouldn't but
         # there is a race condition (addressed below)
         rows_updated = user_storage_ids_table.where(id:storage_id,user_id:nil).update(user_id:request.user_id)
         return storage_id if rows_updated > 0
-        
+      
         # We couldn't claim the storage. The most likely cause is that another request (by this
         # user) beat us to the punch so we'll re-check to see if we own it. Otherwise the storage
         # id is either invalid or it belongs to another user (both addressed below)
         return storage_id if user_storage_ids_table.where(id:storage_id,user_id:request.user_id).first
       end
 
-      # We don't have any existing storage id we can associate with this user, so give them a new
-      # one.
+      # We don't have any existing storage id we can associate with this user, so create a new one
       user_storage_ids_table.insert(user_id:request.user_id)
     end
     
@@ -167,6 +167,9 @@ class AppsApi < Sinatra::Base
   #
   class PropertyBag
   
+    class NotFound < Sinatra::NotFound
+    end
+
     def initialize(app_id, storage_id)
       @app_id = app_id # TODO(if/when needed): Ensure this is a registered app?
       @storage_id = storage_id

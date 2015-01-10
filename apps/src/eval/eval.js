@@ -30,7 +30,6 @@ var levels = require('./levels');
 var codegen = require('../codegen');
 var api = require('./api');
 var page = require('../templates/page.html');
-var feedback = require('../feedback.js');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
 

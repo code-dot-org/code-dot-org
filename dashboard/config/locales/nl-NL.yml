@@ -6,7 +6,7 @@
     attributes:
       user:
         name: Weergegeven naam
-        email: email
+        email: Email
         username: gebruikersnaam
         password: wachtwoord
         password_confirmation: Wachtwoord bevestiging
