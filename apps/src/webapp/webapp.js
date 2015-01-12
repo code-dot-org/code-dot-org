@@ -503,14 +503,10 @@ Webapp.init = function(config) {
       dom.addClickTouchEvent(stepOverButton, Webapp.onStepOverButton);
       dom.addClickTouchEvent(stepOutButton, Webapp.onStepOutButton);
     }
-  }
-
-  var viewDataButton = document.getElementById('viewDataButton');
-  dom.addClickTouchEvent(viewDataButton, Webapp.onViewData);
-
-  if (!StudioApp.hideSource) {
-    var viewDataCell = document.getElementById('view-data-cell');
-    viewDataCell.className = 'view-data-cell-enabled';
+    var viewDataButton = document.getElementById('viewDataButton');
+    if (viewDataButton) {
+      dom.addClickTouchEvent(viewDataButton, Webapp.onViewData);
+    }
   }
 
   if (StudioApp.share) {
