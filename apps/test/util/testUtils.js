@@ -95,3 +95,21 @@ exports.getStudioAppSingleton = function () {
   }
   return studioAppSingleton;
 };
+
+/**
+ * Generates an artist answer (which is just an ordered list of artist commands)
+ * when given a function simulating the generated code. That function will
+ * look something like the following:
+ * function (api) {
+ *   api.moveForward(100);
+ *   api.turnRight(90);
+ * }
+ */
+exports.generateArtistAnswer = function (generatedCode) {
+  var ArtistAPI = require(this.buildPath('turtle/api'));
+  var api = new ArtistAPI();
+
+  api.log = [];
+  generatedCode(api);
+  return api.log;
+};
