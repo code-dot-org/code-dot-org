@@ -30,11 +30,5 @@
  */
 var StudioAppClass = require('./StudioApp');
 var studioAppSingleton = new StudioAppClass();
-var feedback = require('./feedback');
 
 module.exports = studioAppSingleton;
-
-// TODO (br-pair) : This is how we associate our singleton feedback object with
-// our singleton StudioApp object. We can almost certainly do this more cleanly..
-feedback.applySingleton(studioAppSingleton);
-studioAppSingleton.feedback_ = feedback;
