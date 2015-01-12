@@ -5,7 +5,7 @@ global.navigator = {};
 global.window = {};
 global.document = {};
 
-var WordSearch = testUtils.requireWithGlobalsCheckSrcFolder('maze/wordsearch');
+var WordSearch = testUtils.requireWithGlobalsCheckBuildFolder('maze/wordsearch');
 var assert = testUtils.assert;
 var jsdom = require('jsdom').jsdom;
 
