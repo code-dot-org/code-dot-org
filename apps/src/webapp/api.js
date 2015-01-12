@@ -195,6 +195,21 @@ exports.createDropdown = function (blockId, elementId) {
                            'optionsArray': optionsArray });
 };
 
+exports.getAttribute = function(blockId, elementId, attribute) {
+  return Webapp.executeCmd(blockId,
+                           'getAttribute',
+                           {elementId: elementId,
+                            attribute: attribute});
+};
+
+exports.setAttribute = function(blockId, elementId, attribute, value) {
+  return Webapp.executeCmd(blockId,
+                           'setAttribute',
+                           {elementId: elementId,
+                            attribute: attribute,
+                            value: value});
+};
+
 exports.getText = function (blockId, elementId) {
   return Webapp.executeCmd(blockId,
                           'getText',
@@ -270,3 +285,16 @@ exports.clearTimeout = function (blockId, timeoutId) {
                            {'timeoutId': timeoutId });
 };
 
+exports.createRecord = function (blockId, record, callback) {
+  return Webapp.executeCmd(blockId,
+                          'createRecord',
+                          {'record': record,
+                           'callback': callback });
+};
+
+exports.readRecords = function (blockId, searchParams, callback) {
+  return Webapp.executeCmd(blockId,
+                          'readRecords',
+                          {'searchParams': searchParams,
+                           'callback': callback });
+};
