@@ -10540,7 +10540,8 @@ FormStorage.fetchTableSecret = function(tableName, callback) {
   var req = new XMLHttpRequest();
   req.onreadystatechange =
       handleFetchTableSecret.bind(req, tableName, callback);
-  var url = '//' + getFormDataHost() + '/v2/forms/CspTable';
+  var url = '//' + getFormDataHost() + '/v2/forms/CspApp/' + 
+      FormStorage.getAppSecret() + '/children/CspTable';
   req.open('GET', url, true);
   req.send();
 };
@@ -10578,6 +10579,19 @@ var getFormDataHost = function() {
   // to set dashboard_user cookie and access-control-allow-origin header.
   return window.location.hostname.split('.')[0] === 'localhost' ?
       'localhost.code.org:9393' : window.location.hostname;
+};
+
+// TODO(dave): store secret with the app in the database.
+FormStorage.getAppSecret = function() {
+  var name = window.location.hostname.split('.')[0];
+  switch(name) {
+    case 'localhost':
+      return 'ededb6d4a8ced65f8a011ce0e194094e';
+    case 'staging':
+      return 'b0a06b8bbd7352a3fdb1b6738262defd';
+    default:
+      return null;
+  }
 };
 
 
@@ -11768,7 +11782,9 @@ Webapp.feedbackImage = '';
 Webapp.encodedFeedbackImage = '';
 
 Webapp.onViewData = function() {
-  window.open('//' + getPegasusHost() + '/edit-csp-app/ededb6d4a8ced65f8a011ce0e194094e', '_blank');
+  window.open(
+    '//' + getPegasusHost() + '/edit-csp-app/' + FormStorage.getAppSecret(),
+    '_blank');
 };
 
 Webapp.onPuzzleComplete = function() {
