@@ -16,14 +16,11 @@
     <button id="stepOutButton" class="share">
       <%= webappMsg.stepOut() %>
     </button>
+    <button id="viewDataButton" class="share">
+      <%= webappMsg.viewData() %>
+    </button>
   </div>
 <% } %>
-
-<div id="view-data-cell" class="view-data-cell-none">
-  <button id="viewDataButton" class="share">
-    <%= webappMsg.viewData() %>
-  </button>
-</div>
 
 <% if (debugConsole) { %>
   <div id="debug-console" class="debug-console">
