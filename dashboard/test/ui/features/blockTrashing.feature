@@ -29,6 +29,8 @@ Scenario: Fail to drag-delete a deleteable block that has an undeletable child
   Then block "turn_right" has not been deleted
   And block "gray set_color" has not been deleted
 
+# The following scenarios are disabled on mobile because we don't
+# particularly care about hotkeys in a touchscreen-only context.
 @no_mobile
 Scenario: Hotkey-delete a deletable block
   When I click block "turn_right"
