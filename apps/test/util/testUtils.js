@@ -2,9 +2,7 @@ var chai = require('chai');
 chai.Assertion.includeStack = true;
 var assert = chai.assert;
 exports.assert = assert;
-var SRC = '../../src/';
 
-// TODO (brent) - unify around using built files instead of src files
 exports.buildPath = function (path) {
   return __dirname + '/../../build/js/' + path;
 };
@@ -17,36 +15,16 @@ require('./requireUncache').wrap(require);
 
 var GlobalDiff = require('./globalDiff');
 var globalDiff = new GlobalDiff();
-var Overloader = require('./overloader');
-var mapping = [
-  {
-    search: /\.\.\/locale\/current\//,
-    replace: '../build/locale/en_us/'
-  },
-  {
-    search: /^\.\/templates\//,
-    replace: '../build/js/templates/'
-  },
-  {
-    search: /lodash/,
-    replace: '../build/js/lodash'
-  }
-];
-var overloader = new Overloader(mapping, module);
-// overloader.verbose = true;
 
 /**
  * Wrapper around require, potentially also using our overloader, that also
  * validates that any additions to our global namespace are expected.
  */
-exports.requireWithGlobalsCheck = function(path, allowedChanges, useOverloader) {
+function requireWithGlobalsCheck(path, allowedChanges) {
   allowedChanges = allowedChanges || [];
-  if (useOverloader === undefined) {
-    useOverloader = true;
-  }
 
   globalDiff.cache();
-  var result = useOverloader ? overloader.require(path) : require(path);
+  var result = require(path);
   var diff = globalDiff.diff(true);
   diff.forEach(function (key) {
     assert.notEqual(allowedChanges.indexOf(key), -1, "unexpected global change\n" +
@@ -54,10 +32,14 @@ exports.requireWithGlobalsCheck = function(path, allowedChanges, useOverloader) 
       "require: " + path + "\n");
   });
   return result;
-};
+}
 
-exports.requireWithGlobalsCheckSrcFolder = function(path, allowedChanges, useOverloader) {
-  return this.requireWithGlobalsCheck(SRC + path, allowedChanges, useOverloader);
+/**
+ * Load files from code-dot-org/apps/build, while checking that the only
+ * additions to the global namespace are allowedChanges
+ */
+exports.requireWithGlobalsCheckBuildFolder = function (path, allowedChanges) {
+  return requireWithGlobalsCheck(exports.buildPath(path), allowedChanges, false);
 };
 
 /**
@@ -68,21 +50,21 @@ exports.requireWithGlobalsCheckSrcFolder = function(path, allowedChanges, useOve
  * Subsequent times, it will use the cached version of frame.js.
  */
 exports.setupTestBlockly = function() {
-  this.requireWithGlobalsCheck('./frame',
-    ['document', 'window', 'DOMParser', 'XMLSerializer', 'Blockly'], false);
+  requireWithGlobalsCheck('./frame',
+    ['document', 'window', 'DOMParser', 'XMLSerializer', 'Blockly']);
   assert(global.Blockly, 'Frame loaded Blockly into global namespace');
 
   // uncache file to force reload
-  require.uncache(SRC + '/base');
+  require.uncache(exports.buildPath('/base'));
   // c, n, v, p, s get added to global namespace by messageformat module, which
   // is loaded when we require our locale msg files
-  studioAppSingleton = this.requireWithGlobalsCheckSrcFolder('/base',
+  studioAppSingleton = exports.requireWithGlobalsCheckBuildFolder('/base',
     ['c', 'n', 'v', 'p', 's']);
 
   var blocklyAppDiv = document.getElementById('app');
   assert(blocklyAppDiv, 'blocklyAppDiv exists');
 
-  // TODO (brent) - address this
+
   studioAppSingleton.assetUrl = function (path) {
     return '../lib/blockly/' + path;
   };
@@ -112,4 +94,22 @@ exports.getStudioAppSingleton = function () {
     throw new Error("Expect singleton to exist");
   }
   return studioAppSingleton;
+};
+
+/**
+ * Generates an artist answer (which is just an ordered list of artist commands)
+ * when given a function simulating the generated code. That function will
+ * look something like the following:
+ * function (api) {
+ *   api.moveForward(100);
+ *   api.turnRight(90);
+ * }
+ */
+exports.generateArtistAnswer = function (generatedCode) {
+  var ArtistAPI = require(this.buildPath('turtle/api'));
+  var api = new ArtistAPI();
+
+  api.log = [];
+  generatedCode(api);
+  return api.log;
 };

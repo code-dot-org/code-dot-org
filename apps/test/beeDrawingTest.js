@@ -19,10 +19,10 @@ function setGlobals() {
   assert(document.getElementsByClassName('pegman-location').length, 1);
 }
 
-var Bee = testUtils.requireWithGlobalsCheckSrcFolder('maze/bee');
-var BeeItemDrawer = testUtils.requireWithGlobalsCheckSrcFolder('maze/beeItemDrawer');
-var DirtDrawer = testUtils.requireWithGlobalsCheckSrcFolder('maze/dirtDrawer');
-var cellId = testUtils.requireWithGlobalsCheckSrcFolder('maze/mazeUtils').cellId;
+var Bee = testUtils.requireWithGlobalsCheckBuildFolder('maze/bee');
+var BeeItemDrawer = testUtils.requireWithGlobalsCheckBuildFolder('maze/beeItemDrawer');
+var DirtDrawer = testUtils.requireWithGlobalsCheckBuildFolder('maze/dirtDrawer');
+var cellId = testUtils.requireWithGlobalsCheckBuildFolder('maze/mazeUtils').cellId;
 var assert = testUtils.assert;
 
 function createFakeSkin() {
@@ -99,7 +99,7 @@ function validateImages(setup, defaultFlower) {
         var actualText = counter.firstChild.nodeValue;
         assert.equal(actualText, expectedText);
       }
-      
+
       var actualCloud =
           !!(cloud && (cloud.getAttribute('visibility') == 'visible'));
       assert.equal(actualCloud, expectedCloud);
