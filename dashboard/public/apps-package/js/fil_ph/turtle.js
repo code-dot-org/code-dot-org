@@ -899,7 +899,7 @@ StudioAppClass.prototype.resizeHeaders = function (fullWorkspaceWidth) {
   var toolboxWidth = 0;
   if (this.editCode) {
     // If in the droplet editor, but not using blocks, keep categoryWidth at 0
-    if (!this.editCode || this.editor.currentlyUsingBlocks) {
+    if (this.editor.currentlyUsingBlocks) {
       // Set toolboxWidth based on the block palette width:
       var categories = document.querySelector('.droplet-palette-wrapper');
       toolboxWidth = parseInt(window.getComputedStyle(categories).width, 10);
@@ -2137,8 +2137,11 @@ function createSelection (selection, cumulativeLength, start, end) {
  * Returns the row (line) of code highlighted. If nothing is highlighted
  * because it is outside of the userCode area, the return value is -1
  */
-exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
-                                      userCodeStartOffset, userCodeLength) {
+exports.selectCurrentCode = function (interpreter,
+                                      cumulativeLength,
+                                      userCodeStartOffset,
+                                      userCodeLength,
+                                      editor) {
   var userCodeRow = -1;
   if (interpreter.stateStack[0]) {
     var node = interpreter.stateStack[0].node;
@@ -2171,6 +2174,34 @@ exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
       editor.clearLineMarks();
     } else {
       editor.aceEditor.getSelection().clearSelection();
+    }
+  }
+  return userCodeRow;
+};
+
+/**
+ * Finds the current line of code in droplet/ace editor.
+ *
+ * Returns the line of code where the interpreter is at. If it is outside
+ * of the userCode area, the return value is -1
+ *
+ * NOTE: first 4 params match the selectCurrentCode function by design.
+ */
+exports.getUserCodeLine = function (interpreter, cumulativeLength,
+                                    userCodeStartOffset, userCodeLength) {
+  var userCodeRow = -1;
+  if (interpreter.stateStack[0]) {
+    var node = interpreter.stateStack[0].node;
+    // Adjust start/end by userCodeStartOffset since the code running
+    // has been expanded vs. what the user sees in the editor window:
+    var start = node.start - userCodeStartOffset;
+    var end = node.end - userCodeStartOffset;
+
+    // Only return a valid userCodeRow if the node being executed is inside the
+    // user's code (not inside code we inserted before or after their code that
+    // is not visible in the editor):
+    if (start >= 0 && start < userCodeLength) {
+      userCodeRow = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
     }
   }
   return userCodeRow;
@@ -10026,8 +10057,8 @@ module.exports = ArtistAPI;
 
 ArtistAPI.prototype.drawCircle = function (size, id) {
   for (var i = 0; i < 36; i++) {
-    exports.moveForward(size, id);
-    exports.turnRight(10, id);
+    this.moveForward(size, id);
+    this.turnRight(10, id);
   }
 };
 
@@ -10047,67 +10078,67 @@ ArtistAPI.prototype.drawSnowflake = function (type, id) {
   switch(type) {
     case 'fractal':
       for (i = 0; i < 8; i++) {
-        exports.jumpForward(45, id);
-        exports.turnLeft(45, id);
+        this.jumpForward(45, id);
+        this.turnLeft(45, id);
         for (j = 0; j < 3; j++) {
           for (k = 0; k < 3; k++) {
-            exports.moveForward(15, id);
-            exports.moveBackward(15, id);
-            exports.turnRight(45, id);
+            this.moveForward(15, id);
+            this.moveBackward(15, id);
+            this.turnRight(45, id);
           }
-          exports.turnLeft(90, id);
-          exports.moveBackward(15, id);
-          exports.turnLeft(45, id);
+          this.turnLeft(90, id);
+          this.moveBackward(15, id);
+          this.turnLeft(45, id);
         }
-        exports.turnRight(90, id);
+        this.turnRight(90, id);
       }
       break;
 
     case 'flower':
       for (i = 0; i < 5; i++) {
-        exports.drawCircle(2, id);
-        exports.drawCircle(4, id);
-        exports.turnRight(72, id);
+        this.drawCircle(2, id);
+        this.drawCircle(4, id);
+        this.turnRight(72, id);
       }
       break;
 
     case 'spiral':
       for (i = 0; i < 20; i++) {
-        exports.drawCircle(3, id);
-        exports.moveForward(20, id);
-        exports.turnRight(18, id);
+        this.drawCircle(3, id);
+        this.moveForward(20, id);
+        this.turnRight(18, id);
       }
       break;
 
     case 'line':
       for (i = 0; i < 90; i++) {
-        exports.penColour(random_colour());
-        exports.moveForward(50, id);
-        exports.moveBackward(50, id);
-        exports.turnRight(4, id);
+        this.penColour(random_colour());
+        this.moveForward(50, id);
+        this.moveBackward(50, id);
+        this.turnRight(4, id);
       }
-      exports.penColour("#FFFFFF", id);
+      this.penColour("#FFFFFF", id);
       break;
 
     case 'parallelogram':
       for (i = 0; i < 10; i++) {
         for (j = 0; j < 2; j++) {
-          exports.moveForward(50, id);
-          exports.turnRight(60, id);
-          exports.moveForward(50, id);
-          exports.turnRight(120, id);
+          this.moveForward(50, id);
+          this.turnRight(60, id);
+          this.moveForward(50, id);
+          this.turnRight(120, id);
         }
-        exports.turnRight(36, id);
+        this.turnRight(36, id);
       }
       break;
 
     case 'square':
       for (i = 0; i < 10; i++) {
         for (j = 0; j < 4; j++) {
-          exports.moveForward(50, id);
-          exports.turnRight(90, id);
+          this.moveForward(50, id);
+          this.turnRight(90, id);
         }
-        exports.turnRight(36, id);
+        this.turnRight(36, id);
       }
       break;
   }
@@ -14117,10 +14148,10 @@ Artist.prototype.animate = function() {
     var stepped = true;
     while (stepped) {
       codegen.selectCurrentCode(this.interpreter,
-                                this.studioApp_.editor,
                                 this.cumulativeLength,
                                 this.userCodeStartOffset,
-                                this.userCodeLength);
+                                this.userCodeLength,
+                                this.studioApp_.editor);
       try {
         stepped = this.interpreter.step();
       }
