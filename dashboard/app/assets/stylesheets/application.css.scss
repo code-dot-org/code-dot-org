@@ -552,10 +552,8 @@ html, body {
 
 .headerlink {
   display: inline-block;
-  position: absolute;
-  right: 125px;
   font-size: 18px;
-  margin: 0.9375em 0 0 30px;
+  margin: 0.9375em 15px 0 30px;
   font-family: 'Gotham 4r', sans-serif;
   float: right;
 }
@@ -651,11 +649,10 @@ html, body {
 
 
 .header_user {
-  position: absolute;
-  float: left;
-  right: 25px;
+  float: right;
   text-align: right;
   margin-top: 9px;
+  margin-right: 15px;
   @media screen and (max-width: 1150px) {
     margin-top: 5px;
   }
