@@ -22,7 +22,7 @@ var baseOptions = {
         content: {
           text: callout.localized_text,
           title: {
-            button: $('<div class="tooltip-x-close"/>').append($('<img src="#{asset_path 'x_button.png'}"/>'))
+            button: $('<div class="tooltip-x-close"/>')
           }
         },
         style: {
