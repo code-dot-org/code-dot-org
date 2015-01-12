@@ -173,7 +173,7 @@ FormStorage.getAppSecret = function() {
     case 'localhost':
       return 'ededb6d4a8ced65f8a011ce0e194094e';
     case 'staging':
-      return 'd15d7632764be8763b9c180123016545';
+      return 'b0a06b8bbd7352a3fdb1b6738262defd';
     default:
       return null;
   }
