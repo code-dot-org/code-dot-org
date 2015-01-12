@@ -899,7 +899,7 @@ StudioAppClass.prototype.resizeHeaders = function (fullWorkspaceWidth) {
   var toolboxWidth = 0;
   if (this.editCode) {
     // If in the droplet editor, but not using blocks, keep categoryWidth at 0
-    if (!this.editCode || this.editor.currentlyUsingBlocks) {
+    if (this.editor.currentlyUsingBlocks) {
       // Set toolboxWidth based on the block palette width:
       var categories = document.querySelector('.droplet-palette-wrapper');
       toolboxWidth = parseInt(window.getComputedStyle(categories).width, 10);
@@ -2137,8 +2137,11 @@ function createSelection (selection, cumulativeLength, start, end) {
  * Returns the row (line) of code highlighted. If nothing is highlighted
  * because it is outside of the userCode area, the return value is -1
  */
-exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
-                                      userCodeStartOffset, userCodeLength) {
+exports.selectCurrentCode = function (interpreter,
+                                      cumulativeLength,
+                                      userCodeStartOffset,
+                                      userCodeLength,
+                                      editor) {
   var userCodeRow = -1;
   if (interpreter.stateStack[0]) {
     var node = interpreter.stateStack[0].node;
@@ -2171,6 +2174,34 @@ exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
       editor.clearLineMarks();
     } else {
       editor.aceEditor.getSelection().clearSelection();
+    }
+  }
+  return userCodeRow;
+};
+
+/**
+ * Finds the current line of code in droplet/ace editor.
+ *
+ * Returns the line of code where the interpreter is at. If it is outside
+ * of the userCode area, the return value is -1
+ *
+ * NOTE: first 4 params match the selectCurrentCode function by design.
+ */
+exports.getUserCodeLine = function (interpreter, cumulativeLength,
+                                    userCodeStartOffset, userCodeLength) {
+  var userCodeRow = -1;
+  if (interpreter.stateStack[0]) {
+    var node = interpreter.stateStack[0].node;
+    // Adjust start/end by userCodeStartOffset since the code running
+    // has been expanded vs. what the user sees in the editor window:
+    var start = node.start - userCodeStartOffset;
+    var end = node.end - userCodeStartOffset;
+
+    // Only return a valid userCodeRow if the node being executed is inside the
+    // user's code (not inside code we inserted before or after their code that
+    // is not visible in the editor):
+    if (start >= 0 && start < userCodeLength) {
+      userCodeRow = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
     }
   }
   return userCodeRow;
@@ -10583,7 +10614,7 @@ levels.simple = {
 levels.ec_simple = {
   'freePlay': true,
   'editCode': true,
-  'sliderSpeed': 1.0,
+  'sliderSpeed': 0.95,
   'codeFunctions': [
     {'func': 'attachEventHandler', 'title': 'Execute code in response to an event for the specified element', 'category': 'General', 'params': ["'id'", "'click'", "function() {\n  \n}"] },
     {'func': 'startWebRequest', 'title': 'Request data from the internet and execute code when the request is complete', 'category': 'General', 'params': ["'http://api.openweathermap.org/data/2.5/weather?q=London,uk'", "function(status, type, content) {\n  \n}"] },
@@ -10822,7 +10853,7 @@ StudioApp.CHECK_FOR_EMPTY_BLOCKS = true;
 //The number of blocks to show as feedback.
 StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
-var MAX_INTERPRETER_STEPS_PER_TICK = 200;
+var MAX_INTERPRETER_STEPS_PER_TICK = 10000;
 
 // Default Scalings
 Webapp.scale = {
@@ -10864,12 +10895,16 @@ var drawDiv = function () {
   visualizationColumn.style.width = divWidth + 'px';
 };
 
-function queueOnTick() {
+function getCurrentTickLength() {
   var stepSpeed = Webapp.scale.stepSpeed;
   if (Webapp.speedSlider) {
     stepSpeed = 300 * Math.pow(1 - Webapp.speedSlider.getValue(), 2);
   }
-  window.setTimeout(Webapp.onTick, stepSpeed);
+  return stepSpeed;
+}
+
+function queueOnTick() {
+  window.setTimeout(Webapp.onTick, getCurrentTickLength());
 }
 
 function outputWebappConsole(output) {
@@ -10968,6 +11003,8 @@ Webapp.onTick = function() {
   queueOnTick();
 
   var atInitialBreakpoint = Webapp.paused && Webapp.nextStep === StepType.IN && Webapp.tickCount === 1;
+  var atMaxSpeed = getCurrentTickLength() === 0;
+  Webapp.seenEmptyGetCallbackThisTick = false;
 
   if (Webapp.paused) {
     switch (Webapp.nextStep) {
@@ -10993,24 +11030,41 @@ Webapp.onTick = function() {
   }
 
   if (Webapp.interpreter) {
-    var doneUserCodeStep = false;
+    var doneUserLine = false;
+    var reachedBreak = false;
     var unwindingAfterStep = false;
     var inUserCode;
     var userCodeRow;
     var session = StudioApp.editor.aceEditor.getSession();
+    // NOTE: when running with no source visible or at max speed with blocks, we
+    // call a simple function to just get the line number, otherwise we call a
+    // function that also selects the code:
+    var selectCodeFunc =
+      (StudioApp.hideSource ||
+       (atMaxSpeed && !Webapp.paused && StudioApp.editor.currentlyUsingBlocks)) ?
+            codegen.getUserCodeLine :
+            codegen.selectCurrentCode;
 
     // In each tick, we will step the interpreter multiple times in a tight
     // loop as long as we are interpreting code that the user can't see
     // (function aliases at the beginning, getCallback event loop at the end)
     for (var stepsThisTick = 0;
-         stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK &&
-          (!doneUserCodeStep || unwindingAfterStep);
+         (stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK) || unwindingAfterStep;
          stepsThisTick++) {
-      userCodeRow = codegen.selectCurrentCode(Webapp.interpreter,
-                                              StudioApp.editor,
-                                              Webapp.cumulativeLength,
-                                              Webapp.userCodeStartOffset,
-                                              Webapp.userCodeLength);
+      if ((reachedBreak && !unwindingAfterStep) ||
+          (doneUserLine && !atMaxSpeed) ||
+          Webapp.seenEmptyGetCallbackThisTick) {
+        // stop stepping the interpreter and wait until the next tick once we:
+        // (1) reached a breakpoint and are done unwinding OR
+        // (2) completed a line of user code (while not running atMaxSpeed) OR
+        // (3) have seen an empty event queue in nativeGetCallback (no events)
+        break;
+      }
+      userCodeRow = selectCodeFunc(Webapp.interpreter,
+                                   Webapp.cumulativeLength,
+                                   Webapp.userCodeStartOffset,
+                                   Webapp.userCodeLength,
+                                   StudioApp.editor);
       inUserCode = (-1 !== userCodeRow);
       // Check to see if we've arrived at a new breakpoint:
       //  (1) should be in user code
@@ -11035,8 +11089,8 @@ Webapp.onTick = function() {
         Webapp.stoppedAtBreakpointRow = userCodeRow;
         Webapp.stoppedAtBreakpointStackDepth = Webapp.interpreter.stateStack.length;
 
-        // Mark doneUserCodeStep to stop stepping, and start unwinding if needed:
-        doneUserCodeStep = true;
+        // Mark reachedBreak to stop stepping, and start unwinding if needed:
+        reachedBreak = true;
         unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(Webapp.interpreter);
         continue;
       }
@@ -11056,7 +11110,7 @@ Webapp.onTick = function() {
       }
       try {
         Webapp.interpreter.step();
-        doneUserCodeStep = doneUserCodeStep ||
+        doneUserLine = doneUserLine ||
           (inUserCode && Webapp.interpreter.stateStack[0] && Webapp.interpreter.stateStack[0].done);
 
         // Remember the stack depths of call expressions (so we can implement 'step out')
@@ -11077,31 +11131,55 @@ Webapp.onTick = function() {
             }
           }
           // For the step in case, we want to stop the interpreter as soon as we enter the callee:
-          if (!doneUserCodeStep &&
+          if (!doneUserLine &&
               inUserCode &&
               Webapp.nextStep === StepType.IN &&
               Webapp.interpreter.stateStack.length > Webapp.firstCallStackDepthThisStep) {
-            doneUserCodeStep = true;
+            reachedBreak = true;
           }
           // After the interpreter says a node is "done" (meaning it is time to stop), we will
           // advance a little further to the start of the next statement. We achieve this by
           // continuing to set unwindingAfterStep to true to keep the loop going:
-          if (doneUserCodeStep) {
+          if (doneUserLine || reachedBreak) {
             var wasUnwinding = unwindingAfterStep;
             // step() additional times if we know it to be safe to get us to the next statement:
             unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(Webapp.interpreter);
             if (wasUnwinding && !unwindingAfterStep) {
               // done unwinding.. select code that is next to execute:
-              userCodeRow = codegen.selectCurrentCode(Webapp.interpreter,
-                                                      StudioApp.editor,
-                                                      Webapp.cumulativeLength,
-                                                      Webapp.userCodeStartOffset,
-                                                      Webapp.userCodeLength);
+              userCodeRow = selectCodeFunc(Webapp.interpreter,
+                                           Webapp.cumulativeLength,
+                                           Webapp.userCodeStartOffset,
+                                           Webapp.userCodeLength,
+                                           StudioApp.editor);
               inUserCode = (-1 !== userCodeRow);
               if (!inUserCode) {
                 // not in user code, so keep unwinding after all...
                 unwindingAfterStep = true;
               }
+            }
+          }
+
+          if ((reachedBreak || doneUserLine) && !unwindingAfterStep) {
+            if (Webapp.nextStep === StepType.OUT &&
+                Webapp.interpreter.stateStack.length > Webapp.stepOutToStackDepth) {
+              // trying to step out, but we didn't get out yet... continue on.
+            } else if (Webapp.nextStep === StepType.OVER &&
+                typeof Webapp.firstCallStackDepthThisStep !== 'undefined' &&
+                Webapp.interpreter.stateStack.length > Webapp.firstCallStackDepthThisStep) {
+              // trying to step over, and we're in deeper inside a function call... continue next onTick
+            } else {
+              // Our step operation is complete, reset nextStep to StepType.RUN to
+              // return to a normal 'break' state:
+              Webapp.nextStep = StepType.RUN;
+              if (inUserCode) {
+                // Store some properties about where we stopped:
+                Webapp.stoppedAtBreakpointRow = userCodeRow;
+                Webapp.stoppedAtBreakpointStackDepth = Webapp.interpreter.stateStack.length;
+              }
+              delete Webapp.stepOutToStackDepth;
+              delete Webapp.firstCallStackDepthThisStep;
+              document.getElementById('spinner').style.visibility = 'hidden';
+              break;
             }
           }
         }
@@ -11111,27 +11189,14 @@ Webapp.onTick = function() {
         return;
       }
     }
-    if (Webapp.paused) {
-      if (Webapp.nextStep === StepType.OUT &&
-          Webapp.interpreter.stateStack.length > Webapp.stepOutToStackDepth) {
-        // trying to step out, but we didn't get out yet... continue next onTick
-      } else if (Webapp.nextStep === StepType.OVER &&
-          typeof Webapp.firstCallStackDepthThisStep !== 'undefined' &&
-          Webapp.interpreter.stateStack.length > Webapp.firstCallStackDepthThisStep) {
-        // trying to step over, and we're in deeper inside a function call... continue next onTick
-      } else {
-        // Our step operation is complete, reset nextStep to StepType.RUN to
-        // return to a normal 'break' state:
-        Webapp.nextStep = StepType.RUN;
-        if (inUserCode) {
-          // Store some properties about where we stopped:
-          Webapp.stoppedAtBreakpointRow = userCodeRow;
-          Webapp.stoppedAtBreakpointStackDepth = Webapp.interpreter.stateStack.length;
-        }
-        delete Webapp.stepOutToStackDepth;
-        delete Webapp.firstCallStackDepthThisStep;
-        document.getElementById('spinner').style.visibility = 'hidden';
-      }
+    if (reachedBreak && atMaxSpeed) {
+      // If we were running atMaxSpeed and just reached a breakpoint, the
+      // code may not be selected in the editor, so do it now:
+      codegen.selectCurrentCode(Webapp.interpreter,
+                                Webapp.cumulativeLength,
+                                Webapp.userCodeStartOffset,
+                                Webapp.userCodeLength,
+                                StudioApp.editor);
     }
   } else {
     if (Webapp.tickCount === 1) {
@@ -11169,6 +11234,11 @@ Webapp.init = function(config) {
   level = config.level;
 
   loadLevel();
+
+  if (StudioApp.hideSource) {
+    // always run at max speed if source is hidden
+    config.level.sliderSpeed = 1.0;
+  }
 
   Webapp.canvasScale = (window.devicePixelRatio > 1) ? window.devicePixelRatio : 1;
 
@@ -11486,7 +11556,11 @@ var defineProcedures = function (blockType) {
  * optionally, callback arguments (stored in "arguments")
  */
 var nativeGetCallback = function () {
-  return Webapp.eventQueue.shift();
+  var retVal = Webapp.eventQueue.shift();
+  if (typeof retVal === "undefined") {
+    Webapp.seenEmptyGetCallbackThisTick = true;
+  }
+  return retVal;
 };
 
 var consoleApi = {};
@@ -12021,6 +12095,7 @@ Webapp.canvasDrawImage = function (opts) {
     if (opts.height) {
       yScale = yScale * (opts.height / image.height);
     }
+    ctx.save();
     ctx.setTransform(xScale,
                      0,
                      0,
@@ -12028,6 +12103,7 @@ Webapp.canvasDrawImage = function (opts) {
                      opts.x * Webapp.canvasScale,
                      opts.y * Webapp.canvasScale);
     ctx.drawImage(image, 0, 0);
+    ctx.restore();
     return true;
   }
   return false;
