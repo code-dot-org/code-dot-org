@@ -1356,10 +1356,9 @@ Webapp.setAttribute = function (opts) {
   var divWebapp = document.getElementById('divWebapp');
   var element = document.getElementById(opts.elementId);
   var attribute = String(opts.attribute);
-  var value = String(opts.value);
   if (divWebapp.contains(element) &&
       Webapp.mutableAttributes.indexOf(attribute) !== -1) {
-    element[attribute] = value;
+    element[attribute] = opts.value;
     return true;
   }
   return false;

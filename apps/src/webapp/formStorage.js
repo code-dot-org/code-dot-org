@@ -23,6 +23,7 @@ var FormStorage = module.exports;
 FormStorage.createRecord = function(record, callback) {
   var tableName = record.tableName;
   if (!tableName) {
+    // TODO(dave): remove console.log for IE9 compatability, here and below.
     console.log('readRecords: missing required property "tableName"');
     return;
   }
@@ -38,7 +39,7 @@ var putRecord = function(record, callback, tableSecret) {
       '/children/CspRecord';
   delete record.tableName;
   var postData = {record_data_s: JSON.stringify(record)};
-  req.open('POST', url);
+  req.open('POST', url, true);
   req.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
   req.send(JSON.stringify(postData));
 };
