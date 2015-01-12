@@ -9,6 +9,7 @@ var constants = require('./constants.js');
 var msg = require('../locale/current/common');
 var blockUtils = require('./block_utils');
 var url = require('url');
+var FeedbackUtils = require('./feedback');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -27,7 +28,7 @@ var MAX_PHONE_WIDTH = 500;
 
 
 var StudioAppClass = function () {
-  this.feedback_ = null;
+  this.feedback_ = new FeedbackUtils(this);
 
   /**
   * The parent directory of the apps. Contains common.js.
