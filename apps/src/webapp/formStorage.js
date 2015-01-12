@@ -177,5 +177,5 @@ FormStorage.getAppSecret = function() {
     default:
       return null;
   }
-}
+};
 
