@@ -125,7 +125,8 @@ FormStorage.fetchTableSecret = function(tableName, callback) {
   var req = new XMLHttpRequest();
   req.onreadystatechange =
       handleFetchTableSecret.bind(req, tableName, callback);
-  var url = '//' + getFormDataHost() + '/v2/forms/CspTable';
+  var url = '//' + getFormDataHost() + '/v2/forms/CspApp/' + 
+      FormStorage.getAppSecret() + '/children/CspTable';
   req.open('GET', url, true);
   req.send();
 };
@@ -164,4 +165,17 @@ var getFormDataHost = function() {
   return window.location.hostname.split('.')[0] === 'localhost' ?
       'localhost.code.org:9393' : window.location.hostname;
 };
+
+// TODO(dave): store secret with the app in the database.
+FormStorage.getAppSecret = function() {
+  var name = window.location.hostname.split('.')[0];
+  switch(name) {
+    case 'localhost':
+      return 'ededb6d4a8ced65f8a011ce0e194094e';
+    case 'staging':
+      return 'd15d7632764be8763b9c180123016545';
+    default:
+      return null;
+  }
+}
 

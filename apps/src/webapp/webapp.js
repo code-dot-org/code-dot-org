@@ -909,7 +909,9 @@ Webapp.feedbackImage = '';
 Webapp.encodedFeedbackImage = '';
 
 Webapp.onViewData = function() {
-  window.open('//' + getPegasusHost() + '/edit-csp-app/ededb6d4a8ced65f8a011ce0e194094e', '_blank');
+  window.open(
+    '//' + getPegasusHost() + '/edit-csp-app/' + FormStorage.getAppSecret(),
+    '_blank');
 };
 
 Webapp.onPuzzleComplete = function() {
