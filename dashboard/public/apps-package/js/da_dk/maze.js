@@ -2487,7 +2487,7 @@ exports.displayFeedback = function(options) {
   if (hadShareFailure) {
     trackEvent('Share', 'Failure', options.response.share_failure.type);
   }
-  var feedbackBlocks = new FeedbackBlocks(options, getMissingRequiredBlocks(),
+  var feedbackBlocks = new FeedbackBlocks(options, exports.getMissingRequiredBlocks_(),
     studioAppSingleton);
   // feedbackMessage must be initialized after feedbackBlocks
   // because FeedbackBlocks can mutate options.response.hint.
@@ -3190,7 +3190,7 @@ var getEmptyContainerBlock = function() {
  * @return {boolean} true if all blocks are present, false otherwise.
  */
 var hasAllRequiredBlocks = function() {
-  return getMissingRequiredBlocks().blocksToDisplay.length === 0;
+  return exports.getMissingRequiredBlocks_().blocksToDisplay.length === 0;
 };
 
 /**
@@ -3230,7 +3230,7 @@ var getCountableBlocks = function() {
  * of an id in the corresponding template.soy. 'message' is an optional message
  * to override the default error text.
  */
-var getMissingRequiredBlocks = function () {
+exports.getMissingRequiredBlocks_ = function () {
   var missingBlocks = [];
   var customMessage = null;
   var code = null;  // JavaScript code, which is initialized lazily.
@@ -3509,7 +3509,6 @@ function hasMatchingDescendant(node, filter) {
     return hasMatchingDescendant(child, filter);
   });
 }
-
 
 },{"../locale/da_dk/common":59,"./codegen":7,"./constants":8,"./dom":9,"./feedbackBlocks":11,"./templates/buttons.html":45,"./templates/code.html":46,"./templates/shareFailure.html":52,"./templates/sharing.html":53,"./templates/showCode.html":54,"./templates/trophy.html":55,"./utils":57,"./xml":58}],11:[function(require,module,exports){
 var constants = require('./constants');
