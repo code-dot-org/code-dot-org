@@ -19,6 +19,7 @@ var dom = require('../dom');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
 var Slider = require('../slider');
+var FormStorage = require('./formStorage');
 var _ = utils.getLodash();
 var Hammer = utils.getHammer();
 
@@ -502,6 +503,10 @@ Webapp.init = function(config) {
       dom.addClickTouchEvent(stepOverButton, Webapp.onStepOverButton);
       dom.addClickTouchEvent(stepOutButton, Webapp.onStepOutButton);
     }
+    var viewDataButton = document.getElementById('viewDataButton');
+    if (viewDataButton) {
+      dom.addClickTouchEvent(viewDataButton, Webapp.onViewData);
+    }
   }
 
   if (StudioApp.share) {
@@ -903,6 +908,10 @@ Webapp.onStepOutButton = function() {
 Webapp.feedbackImage = '';
 Webapp.encodedFeedbackImage = '';
 
+Webapp.onViewData = function() {
+  window.open('//' + getPegasusHost() + '/edit-csp-app/ededb6d4a8ced65f8a011ce0e194094e', '_blank');
+};
+
 Webapp.onPuzzleComplete = function() {
   if (Webapp.executionError) {
     Webapp.result = StudioApp.ResultType.ERROR;
@@ -1019,6 +1028,8 @@ Webapp.callCmd = function (cmd) {
     case 'createCheckbox':
     case 'createRadio':
     case 'createDropdown':
+    case 'getAttribute':
+    case 'setAttribute':
     case 'getText':
     case 'setText':
     case 'getChecked':
@@ -1033,6 +1044,8 @@ Webapp.callCmd = function (cmd) {
     case 'startWebRequest':
     case 'setTimeout':
     case 'clearTimeout':
+    case 'createRecord':
+    case 'readRecords':
       StudioApp.highlight(cmd.id);
       retVal = Webapp[cmd.name](cmd.opts);
       break;
@@ -1328,6 +1341,29 @@ Webapp.createDropdown = function (opts) {
   return Boolean(divWebapp.appendChild(newSelect));
 };
 
+Webapp.getAttribute = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var element = document.getElementById(opts.elementId);
+  var attribute = String(opts.attribute);
+  return divWebapp.contains(element) ? element[attribute] : false;
+};
+
+// Whitelist of HTML Element attributes which can be modified, to
+// prevent DOM manipulation which would violate the sandbox.
+Webapp.mutableAttributes = ['innerHTML', 'scrollTop'];
+
+Webapp.setAttribute = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var element = document.getElementById(opts.elementId);
+  var attribute = String(opts.attribute);
+  if (divWebapp.contains(element) &&
+      Webapp.mutableAttributes.indexOf(attribute) !== -1) {
+    element[attribute] = opts.value;
+    return true;
+  }
+  return false;
+};
+
 Webapp.getText = function (opts) {
   var divWebapp = document.getElementById('divWebapp');
   var element = document.getElementById(opts.elementId);
@@ -1556,6 +1592,34 @@ Webapp.clearTimeout = function (opts) {
   window.clearTimeout(opts.timeoutId);
 };
 
+Webapp.createRecord = function (opts) {
+  var record = codegen.marshalInterpreterToNative(Webapp.interpreter,
+      opts.record);
+  FormStorage.createRecord(record,
+      Webapp.handleCreateRecord.bind(this, opts.callback));
+};
+
+Webapp.handleCreateRecord = function(interpreterCallback, record) {
+  Webapp.eventQueue.push({
+    'fn': interpreterCallback,
+    'arguments': [record]
+  });
+};
+
+Webapp.readRecords = function (opts) {
+  var searchParams = codegen.marshalInterpreterToNative(Webapp.interpreter,
+      opts.searchParams);
+  FormStorage.readRecords(
+      searchParams,
+      Webapp.handleReadRecords.bind(this, opts.callback));
+};
+
+Webapp.handleReadRecords = function(interpreterCallback, records) {
+  Webapp.eventQueue.push({
+    'fn': interpreterCallback,
+    'arguments': [records]
+  });
+};
 
 /*
 var onWaitComplete = function (opts) {
@@ -1616,6 +1680,28 @@ var checkFinished = function () {
   }
 
   return false;
+};
+
+// TODO(dave): move this logic to dashboard.
+var getPegasusHost = function() {
+  switch (window.location.hostname) {
+    case 'studio.code.org':
+    case 'learn.code.org':
+      return 'code.org';
+    default:
+      var name = window.location.hostname.split('.')[0];
+      switch(name) {
+        case 'localhost':
+          return 'localhost.code.org:9393';
+        case 'development':
+        case 'staging':
+        case 'test':
+        case 'levelbuilder':
+          return name + '.code.org';
+        default:
+          return null;
+      }
+  }
 };
 
 /*jshint asi:true */

@@ -42,6 +42,8 @@ levels.ec_simple = {
     {'func': 'setParent', 'title': 'Set an element to become a child of a parent element', 'category': 'General', 'params': ["'id'", "'parentId'"] },
     {'func': 'setPosition', 'title': 'Position an element with x, y, width, and height coordinates', 'category': 'General', 'params': ["'id'", "0", "0", "100", "100"] },
     {'func': 'setStyle', 'title': 'Add CSS style text to an element', 'category': 'General', 'params': ["'id'", "'color:red;'"] },
+    {'func': 'getAttribute', 'category': 'General', 'params': ["'id'", "'scrollHeight'"], 'type': 'value' },
+    {'func': 'setAttribute', 'category': 'General', 'params': ["'id'", "'scrollHeight'", "200"]},
     {'func': 'createButton', 'title': 'Create a button and assign it an element id', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
     {'func': 'createTextInput', 'title': 'Create a text input and assign it an element id', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
     {'func': 'createTextLabel', 'title': 'Create a text label, assign it an element id, and bind it to an associated element', 'category': 'UI Controls', 'params': ["'id'", "'text'", "'forId'"] },
@@ -67,6 +69,8 @@ levels.ec_simple = {
     {'func': 'canvasGetImageData', 'title': 'Get the ImageData for a rectangle (x, y, width, height) within a canvas', 'category': 'Canvas', 'params': ["'id'", "0", "0", "400", "600"], 'type': 'value' },
     {'func': 'canvasPutImageData', 'title': 'Set the ImageData for a rectangle within a canvas with x, y as the top left coordinates', 'category': 'Canvas', 'params': ["'id'", "imageData", "0", "0"] },
     {'func': 'canvasClear', 'title': 'Clear all data on a canvas', 'category': 'Canvas', 'params': ["'id'"] },
+    {'func': 'createRecord', 'category': 'General', 'params': ["{tableName: 'abc',name:'Alice',age:7,male:false}", "function(record) {\n  for (var prop in record) {\n    createHtmlBlock('id2', 'record.' + prop + ': ' + record[prop]);\n  }\n}"] },
+    {'func': 'readRecords', 'category': 'General', 'params': ["{tableName: 'abc',key1:'value1'}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    for (var prop in records[i]) {\n      createHtmlBlock('id2', 'records[' + i + '].' + prop + ': ' + records[i][prop]);\n    }\n  }\n}"] },
   ],
   'categoryInfo': {
     'General': {
