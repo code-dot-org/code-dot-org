@@ -29,12 +29,12 @@
               = render partial: 'shared/header_progress'
             - elsif @edit_blocks
               .header_level{style:'font-size: 250%; line-height: 125%;'} Editing #{@edit_blocks.humanize}
-          - if params[:controller] !~ /^sessions/ and not Rails.configuration.minimal_mode
-            .header_user
-              = render partial: 'shared/user_header'
-          - if !@script_level
-            %a.headerlink{href: code_org_root_path}
-              CODE.ORG
+    - if params[:controller] !~ /^sessions/ and not Rails.configuration.minimal_mode
+      .header_user
+        = render partial: 'shared/user_header'
+    - if !@script_level
+      %a.headerlink{href: code_org_root_path}
+        CODE.ORG
 
 .transparent_backdrop{style: 'display: none;'}
 - if @script_level
