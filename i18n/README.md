@@ -1,106 +1,72 @@
 # Code.org Community Internationalization
 
-Code.org's various projects are translated by the community using Crowdin.
+Code.org's various projects are translated by volunteers using Crowdin. For more information about our translation process, please visit [code.org/translate](http://code.org/translate). Join our [Code.org project](https://crowdin.com/project/codeorg/invite) on Crowdin to start translating immediately!
 
-This project provides scripts for centralizing source assets to be localized,
-synchronizing with Crowdin, and then re-integrated the localized assets back
-in to their respective projects.
-
+This project provides scripts for centralizing source assets to be localized, synchronizing with Crowdin, and then re-integrating the localized assets back in to their respective projects.
 
 ## Set Up
 
 ### Install crowdin-cli
 
-```bash
-gem install crowdin-cli
-```
+`gem install crowdin-cli`
 
 ### Initialize config with API Key:
 
-If you've got the Code.org secrets files, simply run:
+TODO: how to use Chef to update crowdin.yaml with API Key
 
+## Syncing Translations
+
+### Steps for Code.org Project
+
+1. `cd i18n/code.org` Make sure you're on staging branch
+2. `./in.sh` Gather files from each subproject and store them in ../locales/en-US
+3. `./up.sh` Upload new and updated strings to Crowdin
+4. `./down.sh` Download latest translations from Crowdin. NOTE: You might not see output for a few minutes while Crowdin builds.
+5. `./out.sh` Move translated files out to each subproject. NOTE: This takes a while too.
+6. Commit and push all translations
 ```bash
-secrets/path/cdo-env ./init.sh
-```
-
-That will generate `crowdin.yaml` and populate it with the API key.
-
-
-## Syncing with Crowdin
-
-Full process includes four verbs: "in", "up", "down", and "out".
-
-```bash
-# Gather files from each subproject and stores them in ./locales/en-US
-./in.sh
-
-# Validate before uploading
-git status locales/en-US
-git diff locales/en-US
-git add .
-git commit
-
-# Upload to Crowdin
-./up.sh
-
-# ... time passses ...
-
-# Download from Crowdin
-# NOTE: You might not see output for a few minutes while Crowdin builds.
-./down.sh
-
-# Validate after downloading
-git status
-# etc
-git commit
-
-# Move translated files out to each subproject.
-./out.sh
-
-# (Optional) update submodules for cdo-curriculum
-git add projects # from cdo-curriculum directory
-git commit
+git commit -m "code.org translations mm/dd" # use today's date
 git push
-
 ```
 
+### Steps for Hour of Code Project
+1. `cd code-dot-org/i18n/hourofcode.com`
+2. `./sync.rb`
 
-## Submodules
+### Steps for Curriculum Project
+1. `cd code-dot-org/i18n/curriculum`
+2. `./sync.rb`
 
-Each project is tracked by a Git submodule in the `./projects` directory. When
-adding new components, be sure to configure the correct branch in the
-`./.gitmodules` file.
+## Modifying/Adding a new string
 
+### Pegasus
 
-## Project-Specific Notes
+#### Modifying
+1. Update the string in the [i18n Gsheet](https://docs.google.com/a/code.org/spreadsheet/ccc?key=0AuZfRa__4CAYdHhObnJqQkViMUx0cGpESHc3VWtDUXc&usp=sharing)
+2. `ssh staging.code.org` and check that your changes were synced to `staging/pegasus/cache/i18n/en-US.yml`
+3. Commit and push `en-US.yml`
 
-Each project and file format has it's own idiosyncrasies that must be addressed
-by the scripts in this project. Notes about these issues are collected below.
+#### Adding
+1. Add a unique key and your string value to the [i18n Gsheet](https://docs.google.com/a/code.org/spreadsheet/ccc?key=0AuZfRa__4CAYdHhObnJqQkViMUx0cGpESHc3VWtDUXc&usp=sharing). NOTE: Make sure your string value only has plain HTML. Organization is by category/page; try to prepend each string of a common category with the same key. For example, all teacher dashboard strings begin with 'dashboard'
+2. `ssh staging.code.org` and check that your changes were synced to `staging/pegasus/cache/i18n/en-US.yml`
+3. Commit and push `en-US.yml` NOTE: If you see that it switched from "en-US" to en-US, it's OK to commit.
+```bash
+@@ -1,4 +1,4 @@
+-"en-US":
++en-US:
+```
+4. On your development environment, pull staging branch and do the following to sync the string for all locales.
+```bash
+cd i18n/code.org
+./sync-pegasus.sh
+```
+5. Commit and push all locale files
+```bash
+git commit -m "new pegasus string XYZ"
+git push
+```
 
-These notes are reified in code in the `./in.sh` and `./out.sh` scripts.  In
-order to add a new sub-project, those scripts must be updated and a note should
-be added here.
-
-### Dashboard
-
-- Rails-style YAML Files
-- Locales in file names use `en-US` format. Note: Upper case with dash.
-- Source strings use `en` language, not full `en-US` locale.
-- The top-level key of the YAML is 'en'; Crowdin seems to patch this up for us.
-
-### Blockly Mooc
-
-- JSON files with a flat object mapping string keys to strings.
-- Locales in file names use `en_us` format. Note: Lower case with underscore.
-
-### Blockly Core
-
-- JSON files with a flat object mapping string keys to strings.
-- Files arranged in directories with full standard locale names.
-- See codeorg-messages.sh in our blockly-core fork for more details.
-
-### Adding a new string
-
+### Blockly-core
 1. Make changes in `blockly-core/i18n/en-US/core.json`                                                                
 2. Run: `i18n/codeorg-messages.sh && cp msg/js/en_us.js ../blockly/lib/blockly/ && cd ../blockly && grunt build && cd -`
 3. Check in the resulting changes in the files:
@@ -110,14 +76,23 @@ be added here.
 
 [Example changelist adding a new string.](https://github.com/code-dot-org/code-dot-org/commit/d7fa8719bef9ec2e46ab2f6c91f722288218d517)
 
-### Pegasus
+### Apps
+1. Make changes in `apps/i18n/<app>/en_us.json`
 
-- Rails-style YAML files
-- Uses full standard locale names.
-- Tracks the staging branch, not master.
+### Dashboard
+1. Make changes in `dashboard/config/locales` NOTE: Choose from the following files depending on where it best fits categorically.
+* contract_match.en.yml
+* data.en.yml
+* devise.en.yml
+* dsls.en.yml
+* en.yml
+* scripts.en.yml
+* slides.en.yml
+* text_match.en.yml
+* unplugged.en.yml
+2. DO NOT directly modify `match.en.yml` or `multi.en.yml` Please make changes to the levels directly in levelbuilder.
 
-
-## Issues
+## Common Issues
 
 If you see an error similar to the following:
 ```

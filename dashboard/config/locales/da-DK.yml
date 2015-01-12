@@ -490,7 +490,7 @@
       unused: Ubrugte niveauer
   upsell:
     hoc:
-      title: En Time af Kode
+      title: Hour of Code
       body: Prøv grundlæggende kodning. Millioner har allerede gjort det.
     flappy:
       title: Flappy kode
@@ -521,7 +521,7 @@
     caption_by_name_age: af %{name}, alder %{age}
     caption_time_ago: '%{time_ago} siden'
     header: Galleri
-    header_playlab: Spille Lab
+    header_playlab: Play Lab
     header_artist: Kunstner
   landing:
     prerelease: Dette kursus er i <span class='betatext'> beta</span>.  Dette betyder,
@@ -560,7 +560,7 @@
             og programmering begreber. Kurset er designet til brug i folkeskolens
             klasseværelser, men det er sjovt at lære i alle aldre.
         Hour of Code:
-          title: En Time af Kode
+          title: Hour of Code
           description: ''
         edit-code:
           title: Rediger kode

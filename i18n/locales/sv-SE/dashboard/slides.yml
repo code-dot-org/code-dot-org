@@ -349,21 +349,19 @@ sv:
     playlab_intro:
       1:
         image: notes/playlab_intro_1.png
-        text: "We're going to create games using Play Lab. Good games have a story, and every story has actors. We'll learn how to make our actors like witches, alinens, and animals speak, move, and interact with each other. By the end of this tutorial, you can build a game from scratch and share it with your friends."
+        text: Vi kommer att skapa spel med Play Lab. Bra spel har en historia, och varje historia har skådespelare. Vi lär oss hur man får skådespelare såsom häxor, utomjordingar, och djur att tala, röra sig och interagera med varandra. I slutet av denna övning kan du bygga ett spel från grunden och dela det med dina vänner.
       2:
         image: notes/playlab_intro_2.png
-        text: Your screen is split into 3 main parts. On the left is the game space where your program will run. The instructions for each level are written below.
+        text: Skärmen är uppdelad i 3 delar. Till vänster är spelutrymmet där ditt program kommer att köras. Instruktionerna för varje nivå står nedanför.
       3:
         image: notes/playlab_intro_3.png
-        text: "The middle area is the toolbox, and each of these blocks is a piece of code. The white space on the right is called the workspace and this is where we'll build our program."
+        text: Utrymmet i mitten är verktygslådan, och varje block är en bit kod. Det vita utrymmet till höger kallas arbetsytan och det är där vi ska bygga vårt program.
       4:
         image: notes/playlab_intro_4.png
-        text: |-
-          To start off, you'll need to link your blocks to the orange "when run" block. You can link multiple blocks together by dragging them out until you see the yellow line, and then they'll snap together.
+        text: 'Till att börja med måste du koppla ihop dina block med det oranga "när startar"-blocket. Du kan koppla ihop flera block genom att dra dem tills du ser den gula linjen, och sedan kommer de att fästas ihop.'
       5:
         image: notes/playlab_intro_5.png
-        text: |-
-          In this first puzzle, our actor is a penguin and we'll be making it say "Hello!" by dragging the say block out, linking it to the when run block, and typing in "Hello." We can also make the penguin move by using the move right and move left blocks. Once you have your blocks in place, hit the run button to see what you've programmed.
+        text: 'I det första pusslet är vår skådespelare en pingvin och vi kommer att få den att säga "Hej!" genom att dra ut "säg"-blocket, koppla ihop det med "när startar"-blocket, och skriva in "Hej." Vi kan också får pingvinen att flytta sig med "flytta höger" och "flytta vänster"-blocken. När du har satt ihop block, tryck knappen Kör för att se vad du har programmerat.'
       6:
         image: notes/playlab_intro_6.png
         text: "Get started and by the end, you'll be able to create your own game with all kinds of players that can interact, turn happy or sad, score points, or throw fireballs, or even vanish each other. It's all up to you and the game you want to make."

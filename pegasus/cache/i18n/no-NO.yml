@@ -3,7 +3,7 @@
   select_language: Velg ditt språk
   computer_science: Informatikk
   computer_science_edweek: Computer Science Education Week
-  csedweek_dates: 9.–15. desember 2013
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Kodetimen</a> nærmer seg. Alle lærere og arrangører tilkalles!
     <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -84,7 +84,7 @@
   share_on_facebook: Del via Facebook
   share_on_twitter: Del via Twitter
   beyond_an_hour: Etter Kodetimen
-  get_started: Set i gang
+  get_started: Start
   i_agree: Jeg samtykker
   participant_select: '- Velg -'
   participant_student: student
@@ -377,6 +377,7 @@
   carousel_heading_robots: Lær å programmere med roboter
   carousel_heading_ide: Plattformer som er populære blant lærere
   educator_notes: Lærernotater
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Flere lærerressurser
   participants: deltakere
   teachers_notes: Lærernotater
@@ -493,8 +494,7 @@
   groklearning_platformtext: Moderne nettlesere
   quorum_platformtext: Moderne nettlesere. Støtte for skjermlesere
   codespark_platformtext: iOS, Android (eller nettleser)
-  kodable_platformtext: Kodable is a self-guided iPad game that introduces kids 5+
-    to programming basics. Having a teacher or parent nearby is optimal, but not necessary.
+  kodable_platformtext: iPad
   tynkerapp_platformtext: iPad, Android-nettbrett
   robomindnl_platformtext: Moderne nettlesere, mobilt nett
   flappy_platformtext: Moderne nettlesarar, smarttelefonar, tablet-pc'ar

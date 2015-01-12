@@ -3,7 +3,7 @@ ru-RU:
   select_language: Выберите язык
   computer_science: Информатика
   computer_science_edweek: Образовательная неделя компьютерных технологий
-  csedweek_dates: 9-15 декабря 2013 года
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Час Кода</a> приближается. Приглашаем всех преподавателей и организаторов, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">запланируйте свой Час Кода</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Вы преподаватель информатики ? См. также другие ресурсы CSEdWeek</a>'
   n_have_learned_an_hoc: '<h1>#</h1><h3>попыток</h3><h2>Час Кода</h2>'
@@ -323,6 +323,7 @@ ru-RU:
   carousel_heading_robots: Научись программировать роботов
   carousel_heading_ide: Популярные среди преподавателей платформы
   educator_notes: Заметки педагога
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Больше ресурсов для учителей и преподавателей
   participants: участники
   teachers_notes: Заметки учителя

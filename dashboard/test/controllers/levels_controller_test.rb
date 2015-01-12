@@ -472,4 +472,18 @@ class LevelsControllerTest < ActionController::TestCase
     assert_equal 'different name', level.name
   end
 
+  test 'can show embed level when not signed in' do
+    level = create(:artist)
+    sign_out(@user)
+
+    get :show, id: level
+    assert_response :redirect
+
+    get :edit, id: level, embed:true
+    assert_response :redirect
+
+    get :show, id: level, embed:true
+    assert_response :success
+  end
+
 end

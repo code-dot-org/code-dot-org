@@ -3,7 +3,7 @@ he-IL:
   select_language: אנא בחר את שפתך
   computer_science: מדעי המחשב
   computer_science_edweek: שבוע החינוך למדעי המחשב
-  csedweek_dates: 9-15 בדצמבר, 2013
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">שעה של קוד</a> מגיעה. כל המורים והמארגנים נקראים, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">לתכנן את שעת הקוד שלכם</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">האם אתה מורה למדעי המחשב? ראה עוד משאבים של CSEdWeek</a>'
   n_have_learned_an_hoc: '<h1>#</h1><h3>ניסיתם</h3><h2>שעה של קוד</h2>'
@@ -323,6 +323,7 @@ he-IL:
   carousel_heading_robots: Learn to program with robots
   carousel_heading_ide: Platforms popular among teachers
   educator_notes: Educator Notes
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: More resources for teachers and educators
   participants: participants
   teachers_notes: "Teacher's Notes"

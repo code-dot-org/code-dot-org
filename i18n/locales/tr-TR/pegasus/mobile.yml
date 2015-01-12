@@ -3,7 +3,7 @@ tr-TR:
   select_language: Lütfen dilinizi seçiniz
   computer_science: Bilgisayar Bilimleri
   computer_science_edweek: Bilgisayar Bilimleri Eğitim Haftası
-  csedweek_dates: 9-15 Aralık, 2013
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: 'T<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Kodlama Saati</a> geliyor. Öğretmenleri organizatörleri , <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Kodlama Saati Planlamaya</a> davet ediyoruz'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400"> Bilgisayar öğretmeni misiniz? Diğer CSEdWeek kaynaklara bakın</a>'
   n_have_learned_an_hoc: '<h1>#</h1><h3>bir denedi</h3><h2>Kod Saati</h2>'
@@ -325,6 +325,7 @@ tr-TR:
   carousel_heading_robots: Robotlar ile programlamayı öğrenin
   carousel_heading_ide: Öğretmenler arasında popüler platformlar
   educator_notes: Eğitimci notları
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Öğretmenler ve eğitimciler için daha fazla kaynak
   participants: katılımcılar
   teachers_notes: Öğretmen notları

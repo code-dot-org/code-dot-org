@@ -3,7 +3,7 @@ lt-LT:
   select_language: Pasirinkite kalbą
   computer_science: Informatika
   computer_science_edweek: Programavimo švietimo savaitė
-  csedweek_dates: Gruodžio 9-15, 2013
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Programavimo valanda</a> artėja. Kviečiame visus mokytojus ir organizatorius, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">suplanuokite savo Programavimo valandą</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
   n_have_learned_an_hoc: '<h1>#</h1><h3>išbandė</h3><h2>„Programavimo valandą“</h2>'
@@ -323,6 +323,7 @@ lt-LT:
   carousel_heading_robots: Išmokite programuoti robotus
   carousel_heading_ide: Populiaru tarp mokytojų
   educator_notes: Pedagogų pastabos
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Daugiau išteklių mokytojams ir švietimo atstovams
   participants: dalyviai
   teachers_notes: Mokytojo pastabos

@@ -141,494 +141,263 @@
     };
 
 },{}],2:[function(require,module,exports){
-(function (global){
-var utils = require('./utils');
-var requiredBlockUtils = require('./required_block_utils');
-window.StudioApp = require('./base');
+// Globals:
+//   Blockly
 
-if (typeof global !== 'undefined') {
-  global.StudioApp = window.StudioApp;
-}
-
-var addReadyListener = require('./dom').addReadyListener;
-var blocksCommon = require('./blocksCommon');
-
-function StubDialog() {
-  for (var argument in arguments) {
-    console.log(argument);
-  }
-}
-StubDialog.prototype.show = function() {
-  console.log("Showing Dialog");
-  console.log(this);
-};
-StubDialog.prototype.hide = function() {
-  console.log("Hiding Dialog");
-  console.log(this);
-};
-
-module.exports = function(app, levels, options) {
-
-  // If a levelId is not provided, then options.level is specified in full.
-  // Otherwise, options.level overrides resolved level on a per-property basis.
-  if (options.levelId) {
-    var level = levels[options.levelId];
-    options.level = options.level || {};
-    options.level.id = options.levelId;
-    for (var prop in options.level) {
-      level[prop] = options.level[prop];
-    }
-
-    if (options.level.levelBuilderRequiredBlocks) {
-      level.requiredBlocks = requiredBlockUtils.makeTestsFromBuilderRequiredBlocks(
-          options.level.levelBuilderRequiredBlocks);
-    }
-
-    options.level = level;
-  }
-
-  options.Dialog = options.Dialog || StubDialog;
-
-  StudioApp.BASE_URL = options.baseUrl;
-  StudioApp.CACHE_BUST = options.cacheBust;
-  StudioApp.LOCALE = options.locale || StudioApp.LOCALE;
-  // NOTE: editCode (which currently implies droplet) and usingBlockly are
-  // currently mutually exclusive.
-  StudioApp.editCode = options.level && options.level.editCode;
-  StudioApp.usingBlockly = !StudioApp.editCode;
-  StudioApp.cdoSounds = options.cdoSounds;
-
-  StudioApp.assetUrl = function(path) {
-    var url = options.baseUrl + path;
-    /*if (StudioApp.CACHE_BUST) {
-      return url + '?v=' + options.cacheBust;
-    } else {*/
-      return url;
-    /*}*/
-  };
-
-  options.skin = options.skinsModule.load(StudioApp.assetUrl, options.skinId);
-
-  if (StudioApp.usingBlockly) {
-    var blockInstallOptions = {
-      skin: options.skin,
-      isK1: options.level && options.level.isK1
-    };
-
-    if (options.level && options.level.edit_blocks) {
-      utils.wrapNumberValidatorsForLevelBuilder();
-    }
-
-    blocksCommon.install(Blockly, blockInstallOptions);
-    options.blocksModule.install(Blockly, blockInstallOptions);
-  }
-
-  addReadyListener(function() {
-    if (options.readonly) {
-      if (app.initReadonly) {
-        app.initReadonly(options);
-      } else {
-        StudioApp.initReadonly(options);
-      }
-    } else {
-      app.init(options);
-      if (options.onInitialize) {
-        options.onInitialize();
-      }
-    }
-  });
-};
-
-}).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./base":3,"./blocksCommon":5,"./dom":9,"./required_block_utils":14,"./utils":42}],3:[function(require,module,exports){
-/**
- * Blockly Apps: Common code
- *
- * Copyright 2013 Google Inc.
- * http://blockly.googlecode.com/
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-/**
- * @fileoverview Common support code for Blockly apps.
- * @author fraser@google.com (Neil Fraser)
- */
-"use strict";
-var StudioApp = module.exports;
-var msg = require('../locale/fr_fr/common');
 var parseXmlElement = require('./xml').parseElement;
-var feedback = require('./feedback.js');
-var dom = require('./dom');
 var utils = require('./utils');
-var blockUtils = require('./block_utils');
-var builder = require('./builder');
-var Slider = require('./slider');
 var _ = utils.getLodash();
+var dom = require('./dom');
 var constants = require('./constants.js');
-
-//TODO: These should be members of a BlocklyApp instance.
-var onAttempt;
-var onContinue;
-var onResetPressed;
-var backToPreviousLevel;
+var msg = require('../locale/fr_fr/common');
+var blockUtils = require('./block_utils');
+var url = require('url');
+var FeedbackUtils = require('./feedback');
 
 /**
- * The parent directory of the apps. Contains common.js.
- */
-StudioApp.BASE_URL = undefined;
-
-/**
- * If truthy, a version number to be appended to asset urls.
- */
-StudioApp.CACHE_BUST = undefined;
-
-/**
- * The current locale code.
- */
-StudioApp.LOCALE = 'en_us';
-
-/**
- * The minimum width of a playable whole blockly game.
- */
-StudioApp.MIN_WIDTH = 900;
-StudioApp.MIN_MOBILE_SHARE_WIDTH = 450;
-StudioApp.MOBILE_NO_PADDING_SHARE_WIDTH = 400;
+* The minimum width of a playable whole blockly game.
+*/
+var MIN_WIDTH = 900;
+var MIN_MOBILE_SHARE_WIDTH = 450;
+var MOBILE_NO_PADDING_SHARE_WIDTH = 400;
 var WORKSPACE_PLAYSPACE_GAP = 15;
+var BLOCK_X_COORDINATE = 70;
+var BLOCK_Y_COORDINATE = 30;
 
 /**
  * Treat mobile devices with screen.width less than the value below as phones.
  */
-StudioApp.MAX_PHONE_WIDTH = 500;
+var MAX_PHONE_WIDTH = 500;
 
-/**
- * If the user presses backspace, stop propagation - this prevents blockly
- * from eating the backspace key
- * @param {!Event} e Keyboard event.
- */
-var codeKeyDown = function(e) {
-  if (e.keyCode == 8) {
-    e.stopPropagation();
-  }
+
+var StudioAppClass = function () {
+  this.feedback_ = new FeedbackUtils(this);
+
+  /**
+  * The parent directory of the apps. Contains common.js.
+  */
+  this.BASE_URL = undefined;
+
+  /**
+  * If truthy, a version number to be appended to asset urls.
+  */
+  this.CACHE_BUST = undefined;
+
+  /**
+  * The current locale code.
+  */
+  this.LOCALE = 'en_us';
+
+  this.enableShowCode = true;
+  this.editCode = false;
+  this.usingBlockly = true;
+  this.cdoSounds = null;
+  this.Dialog = null;
+  this.editor = null;
+
+  this.blockYCoordinateInterval = 200;
+
+  // @type {string} for all of these
+  this.icon = undefined;
+  this.smallIcon = undefined;
+  this.winIcon = undefined;
+  this.failureIcon = undefined;
+
+  // The following properties get their non-default values set by the application.
+
+  /**
+  * Whether to alert user to empty blocks, short-circuiting all other tests.
+  */
+  // TODO (br-pair) : this isnt actually a constant
+  this.CHECK_FOR_EMPTY_BLOCKS = undefined;
+
+  /**
+  * The ideal number of blocks to solve this level.  Users only get 2
+  * stars if they use more than this number.
+  * @type {!number=}
+  */
+  this.IDEAL_BLOCK_NUM = undefined;
+
+  /**
+  * An array of dictionaries representing required blocks.  Keys are:
+  * - test (required): A test whether the block is present, either:
+  *   - A string, in which case the string is searched for in the generated code.
+  *   - A single-argument function is called on each user-added block
+  *     individually.  If any call returns true, the block is deemed present.
+  *     "User-added" blocks are ones that are neither disabled or undeletable.
+  * - type (required): The type of block to be produced for display to the user
+  *   if the test failed.
+  * - titles (optional): A dictionary, where, for each KEY-VALUE pair, this is
+  *   added to the block definition: <title name="KEY">VALUE</title>.
+  * - value (optional): A dictionary, where, for each KEY-VALUE pair, this is
+  *   added to the block definition: <value name="KEY">VALUE</value>
+  * - extra (optional): A string that should be blacked between the "block"
+  *   start and end tags.
+  * @type {!Array=}
+  */
+  this.REQUIRED_BLOCKS = undefined;
+
+  /**
+  * The number of required blocks to give hints about at any one time.
+  * Set this to Infinity to show all.
+  * @type {!number=}
+  */
+  this.NUM_REQUIRED_BLOCKS_TO_FLAG = undefined;
+
+  /**
+  * The number of attempts (how many times the run button has been pressed)
+  * @type {?number}
+  */
+  this.attempts = 0;
+
+  /**
+  * Stores the time at init. The delta to current time is used for logging
+  * and reporting to capture how long it took to arrive at an attempt.
+  * @type {?number}
+  */
+  this.initTime = undefined;
+
+  /**
+  * Enumeration of user program execution outcomes.
+  */
+  this.ResultType = constants.ResultType;
+
+  /**
+  * Enumeration of test results.
+  */
+  this.TestResults = constants.TestResults;
+
+  /**
+   * If true, we don't show blockspace. Used when viewing shared levels
+   */
+  this.hideSource = false;
+
+  /**
+   * If true, we're viewing a shared level.
+   */
+  this.share = false;
+
+  this.onAttempt = undefined;
+  this.onContinue = undefined;
+  this.onResetPressed = undefined;
+  this.backToPreviousLevel = undefined;
+  this.sendToPhone = undefined;
+  this.enableShowBlockCount = true;
+
+  this.disableSocialShare = false;
+  this.noPadding = false;
+
+  this.MIN_WORKSPACE_HEIGHT = undefined;
 };
 
-StudioApp.toggleRunReset = function(button) {
-  var showRun = (button === 'run');
-  if (button !== 'run' && button !== 'reset') {
-    throw "Unexpected input";
-  }
-
-  var run = document.getElementById('runButton');
-  var reset = document.getElementById('resetButton');
-  run.style.display = showRun ? 'inline-block' : 'none';
-  run.disabled = !showRun;
-  reset.style.display = !showRun ? 'inline-block' : 'none';
-  reset.disabled = showRun;
-};
+module.exports = StudioAppClass;
 
 /**
- * Modify the workspace header after a droplet blocks/code toggle
+ * Configure StudioAppClass options
  */
-function updateHeadersAfterDropletToggle(usingBlocks) {
-  // Update header titles:
-  var showCodeHeader = document.getElementById('show-code-header');
-  var newButtonTitle = usingBlocks ? msg.showCodeHeader() :
-                                     msg.showBlocksHeader();
-  showCodeHeader.firstChild.innerText = newButtonTitle;
+StudioAppClass.prototype.configure = function (options) {
+  this.BASE_URL = options.baseUrl;
+  this.CACHE_BUST = options.cacheBust;
+  this.LOCALE = options.locale || this.LOCALE;
+  // NOTE: editCode (which currently implies droplet) and usingBlockly are
+  // currently mutually exclusive.
+  this.editCode = options.level && options.level.editCode;
+  this.usingBlockly = !this.editCode;
+  this.cdoSounds = options.cdoSounds;
+  this.Dialog = options.Dialog;
 
-  var workspaceHeaderSpan = document.getElementById('workspace-header-span');
-  newButtonTitle = usingBlocks ? msg.workspaceHeader() :
-                                 msg.workspaceHeaderJavaScript();
-  workspaceHeaderSpan.innerText = newButtonTitle;
-
-  var blockCount = document.getElementById('blockCounter');
-  if (blockCount) {
-    blockCount.style.display =
-      (usingBlocks && StudioApp.enableShowBlockCount) ? 'inline-block' : 'none';
-  }
-
-  // Resize (including headers), so the category header will appear/disappear:
-  StudioApp.onResize();
-}
+  // Bind assetUrl to the instance so that we don't need to depend on callers
+  // binding correctly as they pass this function around.
+  this.assetUrl = _.bind(this.assetUrl_, this);
+};
 
 /**
  * Common startup tasks for all apps.
  */
-StudioApp.init = function(config) {
+StudioAppClass.prototype.init = function(config) {
   if (!config) {
     config = {};
   }
 
-  StudioApp.share = config.share;
+  this.setConfigValues_(config);
 
-  // if true, dont provide links to share on fb/twitter
-  StudioApp.disableSocialShare = config.disableSocialShare;
-  StudioApp.sendToPhone = config.sendToPhone;
-  StudioApp.noPadding = config.no_padding;
-
-  StudioApp.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
-  StudioApp.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
-  StudioApp.REQUIRED_BLOCKS = config.level.requiredBlocks || [];
-
-  // enableShowCode defaults to true if not defined
-  StudioApp.enableShowCode = (config.enableShowCode === false) ? false : true;
-
-  // If the level has no ideal block count, don't show a block count. If it does
-  // have an ideal, show block count unless explicitly configured not to.
-  if (config.level && (config.level.ideal === undefined || config.level.ideal === Infinity)) {
-    StudioApp.enableShowBlockCount = false;
-  } else {
-    StudioApp.enableShowBlockCount = config.enableShowBlockCount !== false;
-  }
-
-  // Store configuration.
-  onAttempt = config.onAttempt || function(report) {
-    console.log('Attempt!');
-    console.log(report);
-    if (report.onComplete) {
-      report.onComplete();
-    }
-  };
-  onContinue = config.onContinue || function() {
-    console.log('Continue!');
-  };
-  onResetPressed = config.onResetPressed || function() {
-    console.log('Reset!');
-  };
-  backToPreviousLevel = config.backToPreviousLevel || function() {};
-
-  var container = document.getElementById(config.containerId);
-  container.innerHTML = config.html;
-  var runButton = container.querySelector('#runButton');
-  var resetButton = container.querySelector('#resetButton');
-  var throttledRunClick = _.debounce(StudioApp.runButtonClick, 250, true);
-  dom.addClickTouchEvent(runButton, throttledRunClick);
-  dom.addClickTouchEvent(resetButton, StudioApp.resetButtonClick);
-
-  var belowViz = document.getElementById('belowVisualization');
-  var referenceArea = document.getElementById('reference_area');
-  if (referenceArea) {
-    belowViz.appendChild(referenceArea);
-  }
-
-  var visualizationColumn = document.getElementById('visualizationColumn');
-  var visualization = document.getElementById('visualization');
-
-  // center game screen in embed mode
-  if(config.embed) {
-    visualizationColumn.style.margin = "0 auto";
-  }
-
-  if (StudioApp.usingBlockly && config.level.edit_blocks) {
-    // Set a class on the main blockly div so CSS can style blocks differently
-    Blockly.addClass_(container.querySelector('#blockly'), 'edit');
-    // If in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "3000px";
-    // Modify the arrangement of toolbox blocks so categories align left
-    if (config.level.edit_blocks == "toolbox_blocks") {
-      StudioApp.BLOCK_Y_COORDINATE_INTERVAL = 80;
-      config.blockArrangement = { category : { x: 20 } };
-    }
-    // Enable param & var editing in levelbuilder, regardless of level setting
-    config.level.disableParamEditing = false;
-    config.level.disableVariableEditing = false;
-  } else if (!config.hide_source) {
-    visualizationColumn.style.minHeight =
-        StudioApp.MIN_WORKSPACE_HEIGHT + 'px';
-  }
-
-  if (!config.embed && !StudioApp.share) {
-    // Make the visualization responsive to screen size, except on share page.
-    visualization.className += " responsive";
-    visualizationColumn.className += " responsive";
-  }
+  this.configureDom_(config);
 
   if (config.hide_source) {
-    StudioApp.hideSource = true;
-    var workspaceDiv = StudioApp.editCode ?
-                        document.getElementById('codeWorkspace') :
-                        container.querySelector('#blockly');
-    if(!config.embed || config.level.skipInstructionsPopup) {
-      container.className = 'hide-source';
-    }
-    workspaceDiv.style.display = 'none';
-    // For share page on mobile, do not show this part.
-    if ((!config.embed) && (!StudioApp.share || !dom.isMobile())) {
-      var buttonRow = runButton.parentElement;
-      var openWorkspace = document.createElement('button');
-      openWorkspace.setAttribute('id', 'open-workspace');
-      openWorkspace.appendChild(document.createTextNode(msg.openWorkspace()));
-
-      belowViz.appendChild(feedback.createSharingDiv({
-        response: {
-          level_source: window.location,
-          level_source_id: config.level_source_id,
-          phone_share_url: config.send_to_phone_url
-        },
-        sendToPhone: config.sendToPhone,
-        level: config.level,
-        twitter: config.twitter,
-        onMainPage: true
-      }));
-
-      dom.addClickTouchEvent(openWorkspace, function() {
-        // Redirect user to /edit version of this page. It would be better
-        // to just turn on the workspace but there are rendering issues
-        // with that.
-        window.location.href = window.location.href + '/edit';
-      });
-
-      buttonRow.appendChild(openWorkspace);
-    }
+    this.handleHideSource_({
+      containerId: config.containerId,
+      embed: config.embed,
+      level: config.level,
+      level_source_id: config.level_source_id,
+      phone_share_url: config.send_to_phone_url,
+      sendToPhone: config.sendToPhone,
+      twitter: config.twitter
+    });
   }
 
-  // 1. Move the buttons, 2. Hide the slider in the share page for mobile.
-  if (StudioApp.share && dom.isMobile()) {
-    var sliderCell = document.getElementById('slider-cell');
-    if (sliderCell) {
-      sliderCell.style.display = 'none';
-    }
-    var belowVisualization = document.getElementById('belowVisualization');
-    if (belowVisualization) {
-      if (config.noButtonsBelowOnMobileShare) {
-        belowVisualization.style.display = 'none';
-        visualization.style.marginBottom = '0px';
-      } else {
-        belowVisualization.style.display = 'block';
-        belowVisualization.style.marginLeft = '0px';
-        if (StudioApp.noPadding) {
-          // Shift run and reset buttons off the left edge if we have no padding
-          if (runButton) {
-            runButton.style.marginLeft = '10px';
-          }
-          if (resetButton) {
-            resetButton.style.marginLeft = '10px';
-          }
-          var shareCell = document.getElementById('share-cell') ||
-              document.getElementById('right-button-cell');
-          if (shareCell) {
-            shareCell.style.marginLeft = '10px';
-            shareCell.style.marginRight = '10px';
-          }
-          var softButtons = document.getElementById('soft-buttons');
-          if (softButtons) {
-            softButtons.style.marginLeft = '10px';
-            softButtons.style.marginRight = '10px';
-          }
-        }
-      }
-    }
-  }
-
-  // Show flappy upsale on desktop and mobile.  Show learn upsale only on desktop
-  if (StudioApp.share) {
-    var upSale = document.createElement('div');
-    if (config.makeYourOwn) {
-      upSale.innerHTML = require('./templates/makeYourOwn.html')({
-        data: {
-          makeUrl: config.makeUrl,
-          makeString: config.makeString,
-          makeImage: config.makeImage
-        }
-      });
-      if (StudioApp.noPadding) {
-        upSale.style.marginLeft = '10px';
-      }
-      belowViz.appendChild(upSale);
-    } else if (typeof config.makeYourOwn === 'undefined') {
-      upSale.innerHTML = require('./templates/learn.html')();
-      belowViz.appendChild(upSale);
-    }
+  if (config.share) {
+    this.handleSharing_({
+      noButtonsBelowOnMobileShare: config.noButtonsBelowOnMobileShare,
+      makeUrl: config.makeUrl,
+      makeString: config.makeString,
+      makeImage: config.makeImage,
+      makeYourOwn: config.makeYourOwn
+    });
   }
 
   // Record time at initialization.
-  StudioApp.initTime = new Date().getTime();
+  this.initTime = new Date().getTime();
 
   // Fixes viewport for small screens.
   var viewport = document.querySelector('meta[name="viewport"]');
   if (viewport) {
-    var deviceWidth;
-    var desiredWidth;
-    var minWidth;
-    if (StudioApp.share && dom.isMobile()) {
-      // for mobile sharing, don't assume landscape mode, use screen.width
-      deviceWidth = desiredWidth = screen.width;
-      if (StudioApp.noPadding && screen.width < StudioApp.MAX_PHONE_WIDTH) {
-        desiredWidth = Math.min(desiredWidth,
-                                StudioApp.MOBILE_NO_PADDING_SHARE_WIDTH);
-      }
-      minWidth = StudioApp.noPadding ?
-                    StudioApp.MOBILE_NO_PADDING_SHARE_WIDTH :
-                    StudioApp.MIN_MOBILE_SHARE_WIDTH;
-    }
-    else {
-      // assume we are in landscape mode, so width is the longer of the two
-      deviceWidth = desiredWidth = Math.max(screen.width, screen.height);
-      minWidth = StudioApp.MIN_WIDTH;
-    }
-    var width = Math.max(minWidth, desiredWidth);
-    var scale = deviceWidth / width;
-    var content = ['width=' + width,
-                   'minimal-ui',
-                   'initial-scale=' + scale,
-                   'maximum-scale=' + scale,
-                   'minimum-scale=' + scale,
-                   'target-densityDpi=device-dpi',
-                   'user-scalable=no'];
-    viewport.setAttribute('content', content.join(', '));
+    this.fixViewportForSmallScreens_(viewport);
   }
 
-  StudioApp.Dialog = config.Dialog;
-
   var showCode = document.getElementById('show-code-header');
-  if (showCode && StudioApp.enableShowCode) {
-    dom.addClickTouchEvent(showCode, function() {
-      if (StudioApp.editCode) {
-        StudioApp.editor.toggleBlocks();
-        updateHeadersAfterDropletToggle(StudioApp.editor.currentlyUsingBlocks);
-        if (!StudioApp.editor.currentlyUsingBlocks) {
-          StudioApp.editor.aceEditor.focus();
+  if (showCode && this.enableShowCode) {
+    dom.addClickTouchEvent(showCode, _.bind(function() {
+      if (this.editCode) {
+        var result = this.editor.toggleBlocks();
+        if (result.error) {
+          // TODO (cpirich) We could extract error.loc to determine where the
+          // error occurred and highlight that error
+          this.feedback_.showToggleBlocksError(this.Dialog);
+        }
+        this.updateHeadersAfterDropletToggle_(this.editor.currentlyUsingBlocks);
+        if (!this.editor.currentlyUsingBlocks) {
+          this.editor.aceEditor.focus();
         }
       } else {
-        feedback.showGeneratedCode(StudioApp.Dialog);
+        this.feedback_.showGeneratedCode(this.Dialog);
       }
-    });
+    }, this));
   }
 
   var blockCount = document.getElementById('blockCounter');
-  if (blockCount && !StudioApp.enableShowBlockCount) {
+  if (blockCount && !this.enableShowBlockCount) {
     blockCount.style.display = 'none';
   }
 
-  StudioApp.ICON = config.skin.staticAvatar;
-  StudioApp.SMALL_ICON = config.skin.smallStaticAvatar;
-  StudioApp.WIN_ICON = config.skin.winAvatar;
-  StudioApp.FAILURE_ICON = config.skin.failureAvatar;
+  this.icon = config.skin.staticAvatar;
+  this.smallIcon = config.skin.smallStaticAvatar;
+  this.winIcon = config.skin.winAvatar;
+  this.failureIcon = config.skin.failureAvatar;
 
   if (config.level.instructionsIcon) {
-    StudioApp.ICON = config.skin[config.level.instructionsIcon];
-    StudioApp.WIN_ICON = config.skin[config.level.instructionsIcon];
+    this.icon = config.skin[config.level.instructionsIcon];
+    this.winIcon = config.skin[config.level.instructionsIcon];
   }
 
   if (config.showInstructionsWrapper) {
-    config.showInstructionsWrapper(function () {
+    config.showInstructionsWrapper(_.bind(function () {
       var shouldAutoClose = !!config.level.aniGifURL;
-      showInstructions(config.level, shouldAutoClose);
-    });
+      this.showInstructions_(config.level, shouldAutoClose);
+    }, this));
   }
 
   // The share and embed pages do not show the rotateContainer.
-  if (StudioApp.share || config.embed) {
+  if (this.share || config.embed) {
     var rotateContainer = document.getElementById('rotateContainer');
     if (rotateContainer) {
       rotateContainer.style.display = 'none';
@@ -642,7 +411,7 @@ StudioApp.init = function(config) {
       var vizCol = document.getElementById('visualizationColumn');
       var width = vizCol.offsetWidth;
       var height = vizCol.offsetHeight;
-      var displayWidth = StudioApp.MOBILE_NO_PADDING_SHARE_WIDTH;
+      var displayWidth = MOBILE_NO_PADDING_SHARE_WIDTH;
       var scale = Math.min(width / displayWidth, height / displayWidth);
       var viz = document.getElementById('visualization');
       viz.style['transform-origin'] = 'left top';
@@ -682,15 +451,15 @@ StudioApp.init = function(config) {
 
   if (config.level.instructions || config.level.aniGifURL) {
     var promptIcon = document.getElementById('prompt-icon');
-    promptIcon.src = StudioApp.SMALL_ICON;
+    promptIcon.src = this.smallIcon;
   }
 
   var aniGifPreview = document.getElementById('ani-gif-preview');
   if (config.level.aniGifURL) {
     aniGifPreview.style.backgroundImage = "url('" + config.level.aniGifURL + "')";
-    aniGifPreview.onclick = function() {
-      showInstructions(config.level, false);
-    };
+    aniGifPreview.onclick = _.bind(function() {
+      this.showInstructions_(config.level, false);
+    }, this);
     var promptTable = document.getElementById('prompt-table');
     promptTable.className += " with-ani-gif";
   } else {
@@ -698,142 +467,47 @@ StudioApp.init = function(config) {
     wrapper.style.display = 'none';
   }
 
-  if (StudioApp.editCode) {
-    // using window.require forces us to use requirejs version of require
-    window.require(['droplet'], function(droplet) {
-      var displayMessage, examplePrograms, messageElement, onChange, startingText;
-      StudioApp.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
-        mode: 'javascript',
-        modeOptions: utils.generateDropletModeOptions(config.level.codeFunctions),
-        palette: utils.generateDropletPalette(config.level.codeFunctions,
-                                              config.level.categoryInfo)
-      });
-
-      StudioApp.editor.aceEditor.setShowPrintMargin(false);
-
-      // Add an ace completer for the API functions exposed for this level
-      if (config.level.codeFunctions) {
-        var langTools = window.ace.require("ace/ext/language_tools");
-        langTools.addCompleter(
-            utils.generateAceApiCompleter(config.level.codeFunctions));
-      }
-
-      StudioApp.editor.aceEditor.setOptions({
-        enableBasicAutocompletion: true,
-        enableLiveAutocompletion: true
-      });
-
-      if (config.afterInject) {
-        config.afterInject();
-      }
-
-      if (config.level.startBlocks) {
-        StudioApp.editor.setValue(config.level.startBlocks);
-      }
+  if (this.editCode) {
+    this.handleEditCode_({
+      codeFunctions: config.level.codeFunctions,
+      categoryInfo: config.level.categoryInfo,
+      startBlocks: config.level.startBlocks,
+      afterInject: config.afterInject
     });
   }
 
-  if (StudioApp.usingBlockly) {
-    // Allow empty blocks if editing blocks.
-    if (config.level.edit_blocks) {
-      StudioApp.CHECK_FOR_EMPTY_BLOCKS = false;
-      if (config.level.edit_blocks === 'required_blocks' ||
-        config.level.edit_blocks === 'toolbox_blocks') {
-        // Don't show when run block for toolbox/required block editing
-        config.forceInsertTopBlock = null;
-      }
-    }
-
-    // If levelbuilder provides an empty toolbox, some apps (like artist)
-    // replace it with a full toolbox. I think some levels may depend on this
-    // behavior. We want a way to specify no toolbox, which is <xml></xml>
-    if (config.level.toolbox) {
-      var toolboxWithoutWhitespace = config.level.toolbox.replace(/\s/g, '');
-      if (toolboxWithoutWhitespace === '<xml></xml>' ||
-          toolboxWithoutWhitespace === '<xml/>') {
-        config.level.toolbox = undefined;
-      }
-    }
-
-    var div = document.getElementById('blockly');
-    var options = {
-      toolbox: config.level.toolbox,
-      disableParamEditing: config.level.disableParamEditing === undefined ?
-          true : config.level.disableParamEditing,
-      disableVariableEditing: config.level.disableVariableEditing === undefined ?
-          false : config.level.disableVariableEditing,
-      useModalFunctionEditor: config.level.useModalFunctionEditor === undefined ?
-          false : config.level.useModalFunctionEditor,
-      useContractEditor: config.level.useContractEditor === undefined ?
-          false : config.level.useContractEditor,
-      defaultNumExampleBlocks: config.level.defaultNumExampleBlocks === undefined ?
-          0 : config.level.defaultNumExampleBlocks,
-      scrollbars: config.level.scrollbars,
-      editBlocks: config.level.edit_blocks === undefined ?
-          false : config.level.edit_blocks
-    };
-    ['trashcan', 'concreteBlocks', 'varsInGlobals',
-      'grayOutUndeletableBlocks', 'disableParamEditing'].forEach(
-      function (prop) {
-        if (config[prop] !== undefined) {
-          options[prop] = config[prop];
-        }
-      });
-    StudioApp.inject(div, options);
-
-    if (config.afterInject) {
-      config.afterInject();
-    }
-
-    // Add the starting block(s).
-    var startBlocks = config.level.startBlocks || '';
-    if (config.forceInsertTopBlock) {
-      startBlocks = blockUtils.forceInsertTopBlock(startBlocks, config.forceInsertTopBlock);
-    }
-    startBlocks = StudioApp.arrangeBlockPosition(startBlocks, config.blockArrangement);
-    StudioApp.loadBlocks(startBlocks);
-  }
-
-  // Initialize the slider.
-  var slider = document.getElementById('slider');
-  if (slider) {
-    // TODO (noted by cpirich): remove Turtle specific code here:
-    Turtle.speedSlider = new Slider(10, 35, 130, slider);
-
-    // Change default speed (eg Speed up levels that have lots of steps).
-    if (config.level.sliderSpeed) {
-      Turtle.speedSlider.setValue(config.level.sliderSpeed);
-    }
+  if (this.usingBlockly) {
+    this.handleUsingBlockly_(config);
   }
 
   // listen for scroll and resize to ensure onResize() is called
-  window.addEventListener('scroll', function() {
-    StudioApp.onResize();
+  window.addEventListener('scroll', _.bind(function() {
+    this.onResize();
     var event = document.createEvent('UIEvents');
     event.initEvent('resize', true, true);  // event type, bubbling, cancelable
     window.dispatchEvent(event);
-  });
-  window.addEventListener('resize', StudioApp.onResize);
+  }, this));
+  window.addEventListener('resize', _.bind(this.onResize, this));
 
   // Call initial onResize() asynchronously - need 10ms delay to work around
   // relayout which changes height on the left side to the proper value
-  window.setTimeout(function() {
-    StudioApp.onResize();
+  window.setTimeout(_.bind(function() {
+    this.onResize();
     var event = document.createEvent('UIEvents');
     event.initEvent('resize', true, true);  // event type, bubbling, cancelable
     window.dispatchEvent(event);
-  }, 10);
+  }, this), 10);
 
-  StudioApp.reset(true);
+  this.reset(true);
 
   // Add display of blocks used.
-  setIdealBlockNumber();
+  this.setIdealBlockNumber_();
 
   // TODO (cpirich): implement block count for droplet (for now, blockly only)
-  if (StudioApp.usingBlockly) {
-    Blockly.mainBlockSpaceEditor.addChangeListener(function() {
-      StudioApp.updateBlockCount();
-    });
+  if (this.usingBlockly) {
+    Blockly.mainBlockSpaceEditor.addChangeListener(_.bind(function() {
+      this.updateBlockCount();
+    }, this));
 
     if (config.level.openFunctionDefinition) {
       Blockly.functionEditor.openAndEditFunction(config.level.openFunctionDefinition);
@@ -841,10 +515,123 @@ StudioApp.init = function(config) {
   }
 };
 
-exports.loadAudio = function(filenames, name) {
-  if (StudioApp.usingBlockly) {
+/**
+ *
+ */
+StudioAppClass.prototype.handleSharing_ = function (options) {
+  // 1. Move the buttons, 2. Hide the slider in the share page for mobile.
+  var belowVisualization = document.getElementById('belowVisualization');
+  if (dom.isMobile()) {
+    var sliderCell = document.getElementById('slider-cell');
+    if (sliderCell) {
+      sliderCell.style.display = 'none';
+    }
+    if (belowVisualization) {
+      if (options.noButtonsBelowOnMobileShare) {
+        belowVisualization.style.display = 'none';
+        visualization.style.marginBottom = '0px';
+      } else {
+        belowVisualization.style.display = 'block';
+        belowVisualization.style.marginLeft = '0px';
+        if (this.noPadding) {
+          // Shift run and reset buttons off the left edge if we have no padding
+          if (runButton) {
+            runButton.style.marginLeft = '10px';
+          }
+          if (resetButton) {
+            resetButton.style.marginLeft = '10px';
+          }
+          var shareCell = document.getElementById('share-cell') ||
+          document.getElementById('right-button-cell');
+          if (shareCell) {
+            shareCell.style.marginLeft = '10px';
+            shareCell.style.marginRight = '10px';
+          }
+          var softButtons = document.getElementById('soft-buttons');
+          if (softButtons) {
+            softButtons.style.marginLeft = '10px';
+            softButtons.style.marginRight = '10px';
+          }
+        }
+      }
+    }
+  }
+
+  // Show flappy upsale on desktop and mobile.  Show learn upsale only on desktop
+  var upSale = document.createElement('div');
+  if (options.makeYourOwn) {
+    upSale.innerHTML = require('./templates/makeYourOwn.html')({
+      data: {
+        makeUrl: options.makeUrl,
+        makeString: options.makeString,
+        makeImage: options.makeImage
+      }
+    });
+    if (this.noPadding) {
+      upSale.style.marginLeft = '10px';
+    }
+    belowVisualization.appendChild(upSale);
+  } else if (typeof options.makeYourOwn === 'undefined') {
+    upSale.innerHTML = require('./templates/learn.html')({
+      assetUrl: this.assetUrl
+    });
+    belowVisualization.appendChild(upSale);
+  }
+};
+
+/**
+ * Get the url of path appended to BASE_URL
+ */
+StudioAppClass.prototype.assetUrl_ = function (path) {
+  if (this.BASE_URL === undefined) {
+    throw new Error('StudioAppClass BASE_URL has not been set. ' +
+      'Call configure() first');
+  }
+  return this.BASE_URL + path;
+};
+
+/**
+ * Reset the playing field to the start position and kill any pending
+ * animation tasks.  This will typically be replaced by an application.
+ * @param {boolean} shouldPlayOpeningAnimation True if an opening animation is
+ *   to be played.
+ */
+StudioAppClass.prototype.reset = function (shouldPlayOpeningAnimation) {
+  // TODO (bbuchanan): Look for comon reset logic we can pull here
+  // Override in app subclass
+};
+
+
+/**
+ * Override to change run behavior.
+ */
+StudioAppClass.prototype.runButtonClick = function() {};
+
+/**
+ * Toggle whether run button or reset button is shown
+ * @param {string} button Button to show, either "run" or "reset"
+ */
+StudioAppClass.prototype.toggleRunReset = function(button) {
+  var showRun = (button === 'run');
+  if (button !== 'run' && button !== 'reset') {
+    throw "Unexpected input";
+  }
+
+  var run = document.getElementById('runButton');
+  var reset = document.getElementById('resetButton');
+  run.style.display = showRun ? 'inline-block' : 'none';
+  run.disabled = !showRun;
+  reset.style.display = !showRun ? 'inline-block' : 'none';
+  reset.disabled = showRun;
+};
+
+/**
+ *
+ */
+StudioAppClass.prototype.loadAudio = function(filenames, name) {
+  if (this.usingBlockly) {
     Blockly.loadAudio_(filenames, name);
-  } else if (StudioApp.cdoSounds) {
+  } else if (this.cdoSounds) {
     var regOpts = { id: name };
     for (var i = 0; i < filenames.length; i++) {
       var filename = filenames[i];
@@ -854,45 +641,51 @@ exports.loadAudio = function(filenames, name) {
         regOpts[ext[1]] = filename;
       }
     }
-    StudioApp.cdoSounds.register(regOpts);
-  }
-};
-
-exports.playAudio = function(name, options) {
-  options = options || {};
-  var defaultOptions = {volume: 0.5};
-  var newOptions = utils.extend(defaultOptions, options);
-  if (StudioApp.usingBlockly) {
-    Blockly.playAudio(name, newOptions);
-  } else if (StudioApp.cdoSounds) {
-    StudioApp.cdoSounds.play(name, newOptions);
-  }
-};
-
-exports.stopLoopingAudio = function(name) {
-  if (StudioApp.usingBlockly) {
-    Blockly.stopLoopingAudio(name);
-  } else if (StudioApp.cdoSounds) {
-    StudioApp.cdoSounds.stopLoopingAudio(name);
+    this.cdoSounds.register(regOpts);
   }
 };
 
 /**
- * @param {Object} options Configuration parameters for Blockly. Parameters are
- * optional and include:
- *  - {string} path The root path to the /apps directory, defaults to the
- *    the directory in which this script is located.
- *  - {boolean} rtl True if the current language right to left.
- *  - {DomElement} toolbox The element in which to insert the toolbox,
- *    defaults to the element with 'toolbox'.
- *  - {boolean} trashcan True if the trashcan should be displayed, defaults to
- *    true.
- * @param {DomElement} div The parent div in which to insert Blockly.
+ *
  */
-exports.inject = function(div, options) {
+StudioAppClass.prototype.playAudio = function(name, options) {
+  options = options || {};
+  var defaultOptions = {volume: 0.5};
+  var newOptions = utils.extend(defaultOptions, options);
+  if (this.usingBlockly) {
+    Blockly.playAudio(name, newOptions);
+  } else if (this.cdoSounds) {
+    this.cdoSounds.play(name, newOptions);
+  }
+};
+
+/**
+ *
+ */
+StudioAppClass.prototype.stopLoopingAudio = function(name) {
+  if (this.usingBlockly) {
+    Blockly.stopLoopingAudio(name);
+  } else if (this.cdoSounds) {
+    this.cdoSounds.stopLoopingAudio(name);
+  }
+};
+
+/**
+* @param {Object} options Configuration parameters for Blockly. Parameters are
+* optional and include:
+*  - {string} path The root path to the /apps directory, defaults to the
+*    the directory in which this script is located.
+*  - {boolean} rtl True if the current language right to left.
+*  - {DomElement} toolbox The element in which to insert the toolbox,
+*    defaults to the element with 'toolbox'.
+*  - {boolean} trashcan True if the trashcan should be displayed, defaults to
+*    true.
+* @param {DomElement} div The parent div in which to insert Blockly.
+*/
+StudioAppClass.prototype.inject = function(div, options) {
   var defaults = {
-    assetUrl: StudioApp.assetUrl,
-    rtl: StudioApp.isRtl(),
+    assetUrl: this.assetUrl,
+    rtl: this.isRtl(),
     toolbox: document.getElementById('toolbox'),
     trashcan: true
   };
@@ -902,59 +695,58 @@ exports.inject = function(div, options) {
 /**
  * Returns true if the current HTML page is in right-to-left language mode.
  */
-StudioApp.isRtl = function() {
+StudioAppClass.prototype.isRtl = function() {
   var head = document.getElementsByTagName('head')[0];
   if (head && head.parentElement) {
     var dir = head.parentElement.getAttribute('dir');
-    return (dir && dir.toLowerCase() == 'rtl');
+    return (dir && dir.toLowerCase() === 'rtl');
   } else {
     return false;
   }
 };
 
-StudioApp.localeDirection = function() {
-  return (StudioApp.isRtl() ? 'rtl' : 'ltr');
+/**
+ * @return {string} Locale direction string based on app direction.
+ */
+StudioAppClass.prototype.localeDirection = function() {
+  return (this.isRtl() ? 'rtl' : 'ltr');
 };
 
 /**
- * Initialize Blockly for a readonly iframe.  Called on page load.
- * XML argument may be generated from the console with:
- * Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)).slice(5, -6)
- */
-StudioApp.initReadonly = function(options) {
+* Initialize Blockly for a readonly iframe.  Called on page load.
+* XML argument may be generated from the console with:
+* Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)).slice(5, -6)
+*/
+StudioAppClass.prototype.initReadonly = function(options) {
   Blockly.inject(document.getElementById('blockly'), {
-    assetUrl: StudioApp.assetUrl,
+    assetUrl: this.assetUrl,
     readOnly: true,
-    rtl: StudioApp.isRtl(),
+    rtl: this.isRtl(),
     scrollbars: false
   });
-  StudioApp.loadBlocks(options.blocks);
+  this.loadBlocks(options.blocks);
 };
 
 /**
- * Load the editor with blocks.
- * @param {string} blocksXml Text representation of blocks.
- */
-StudioApp.loadBlocks = function(blocksXml) {
+* Load the editor with blocks.
+* @param {string} blocksXml Text representation of blocks.
+*/
+StudioAppClass.prototype.loadBlocks = function(blocksXml) {
   var xml = parseXmlElement(blocksXml);
   Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, xml);
 };
 
-StudioApp.BLOCK_X_COORDINATE = 70;
-StudioApp.BLOCK_Y_COORDINATE = 30;
-StudioApp.BLOCK_Y_COORDINATE_INTERVAL = 200;
-
 /**
- * Spreading out the top blocks in workspace if it is not already set.
- * @param {string} startBlocks String representation of start blocks xml.
- * @param {Object.<Object>} arrangement A map from block type to position.
- * @return {string} String representation of start blocks xml, including
- *    block position.
- */
-StudioApp.arrangeBlockPosition = function(startBlocks, arrangement) {
+* Spreading out the top blocks in workspace if it is not already set.
+* @param {string} startBlocks String representation of start blocks xml.
+* @param {Object.<Object>} arrangement A map from block type to position.
+* @return {string} String representation of start blocks xml, including
+*    block position.
+*/
+StudioAppClass.prototype.arrangeBlockPosition = function(startBlocks, arrangement) {
   var type, arrangeX, arrangeY;
   var xml = parseXmlElement(startBlocks);
-  var xmlChildNodes = StudioApp.sortBlocksByVisibility(xml.childNodes);
+  var xmlChildNodes = this.sortBlocksByVisibility(xml.childNodes);
   var numberOfPlacedBlocks = 0;
   for (var x = 0, xmlChild; xmlChildNodes && x < xmlChildNodes.length; x++) {
     xmlChild = xmlChildNodes[x];
@@ -967,10 +759,10 @@ StudioApp.arrangeBlockPosition = function(startBlocks, arrangement) {
       arrangeY = arrangement && arrangement[type] ? arrangement[type].y : null;
 
       xmlChild.setAttribute('x', xmlChild.getAttribute('x') || arrangeX ||
-                            StudioApp.BLOCK_X_COORDINATE);
+        BLOCK_X_COORDINATE);
       xmlChild.setAttribute('y', xmlChild.getAttribute('y') || arrangeY ||
-                            StudioApp.BLOCK_Y_COORDINATE +
-                            StudioApp.BLOCK_Y_COORDINATE_INTERVAL * numberOfPlacedBlocks);
+        BLOCK_Y_COORDINATE +
+      this.blockYCoordinateInterval * numberOfPlacedBlocks);
       numberOfPlacedBlocks += 1;
     }
   }
@@ -978,12 +770,12 @@ StudioApp.arrangeBlockPosition = function(startBlocks, arrangement) {
 };
 
 /**
- * Sorts the array of xml blocks, moving visible blocks to the front.
- * @param {Array.<Element>} xmlBlocks An array of xml blocks.
- * @return {Array.<Element>} A sorted array of xml blocks, with all
- *     visible blocks preceding all hidden blocks.
- */
-StudioApp.sortBlocksByVisibility = function(xmlBlocks) {
+* Sorts the array of xml blocks, moving visible blocks to the front.
+* @param {Array.<Element>} xmlBlocks An array of xml blocks.
+* @return {Array.<Element>} A sorted array of xml blocks, with all
+*     visible blocks preceding all hidden blocks.
+*/
+StudioAppClass.prototype.sortBlocksByVisibility = function(xmlBlocks) {
   var visibleXmlBlocks = [];
   var hiddenXmlBlocks = [];
   for (var x = 0, xmlBlock; xmlBlocks && x < xmlBlocks.length; x++) {
@@ -998,7 +790,11 @@ StudioApp.sortBlocksByVisibility = function(xmlBlocks) {
   return visibleXmlBlocks.concat(hiddenXmlBlocks);
 };
 
-var showInstructions = function(level, autoClose) {
+StudioAppClass.prototype.createModalDialogWithIcon = function(options) {
+  return this.feedback_.createModalDialogWithIcon(options);
+};
+
+StudioAppClass.prototype.showInstructions_ = function(level, autoClose) {
   var instructionsDiv = document.createElement('div');
   instructionsDiv.innerHTML = require('./templates/instructions.html')(level);
 
@@ -1011,12 +807,12 @@ var showInstructions = function(level, autoClose) {
 
   instructionsDiv.appendChild(buttons);
 
-  var dialog = feedback.createModalDialogWithIcon({
-      Dialog: StudioApp.Dialog,
-      contentDiv: instructionsDiv,
-      icon: StudioApp.ICON,
-      defaultBtnSelector: '#ok-button'
-      });
+  var dialog = this.createModalDialogWithIcon({
+    Dialog: this.Dialog,
+    contentDiv: instructionsDiv,
+    icon: this.icon,
+    defaultBtnSelector: '#ok-button'
+  });
 
   if (autoClose) {
     setTimeout(function() {
@@ -1037,9 +833,9 @@ var showInstructions = function(level, autoClose) {
 };
 
 /**
- *  Resizes the blockly workspace.
- */
-StudioApp.onResize = function() {
+*  Resizes the blockly workspace.
+*/
+StudioAppClass.prototype.onResize = function() {
   var visualizationColumn = document.getElementById('visualizationColumn');
   var gameWidth = visualizationColumn.getBoundingClientRect().width;
 
@@ -1047,7 +843,7 @@ StudioApp.onResize = function() {
   var codeWorkspace = document.getElementById('codeWorkspace');
 
   // resize either blockly or codeWorkspace
-  var div = StudioApp.editCode ? codeWorkspace : blocklyDiv;
+  var div = this.editCode ? codeWorkspace : blocklyDiv;
 
   var divParent = div.parentNode;
   var parentStyle = window.getComputedStyle(divParent);
@@ -1064,19 +860,19 @@ StudioApp.onResize = function() {
   div.style.width = fullWorkspaceWidth + 'px';
 
   // Keep blocks static relative to the right edge in RTL mode
-  if (StudioApp.usingBlockly && Blockly.RTL && (fullWorkspaceWidth - oldWidth !== 0)) {
+  if (this.usingBlockly && Blockly.RTL && (fullWorkspaceWidth - oldWidth !== 0)) {
     Blockly.mainBlockSpace.getTopBlocks().forEach(function(topBlock) {
       topBlock.moveBy(fullWorkspaceWidth - oldWidth, 0);
     });
   }
 
-  if (StudioApp.isRtl()) {
+  if (this.isRtl()) {
     div.style.marginRight = (gameWidth + WORKSPACE_PLAYSPACE_GAP) + 'px';
   }
   else {
     div.style.marginLeft = (gameWidth + WORKSPACE_PLAYSPACE_GAP) + 'px';
   }
-  if (StudioApp.editCode) {
+  if (this.editCode) {
     // Position the inner codeTextbox element below the headers
     var codeTextbox = document.getElementById('codeTextbox');
     codeTextbox.style.height = (parentHeight - headersHeight) + 'px';
@@ -1091,7 +887,7 @@ StudioApp.onResize = function() {
     div.style.height = (parentHeight - headersHeight) + 'px';
   }
 
-  StudioApp.resizeHeaders(fullWorkspaceWidth);
+  this.resizeHeaders(fullWorkspaceWidth);
 };
 
 // |          toolbox-header          | workspace-header  | show-code-header |
@@ -1099,44 +895,43 @@ StudioApp.onResize = function() {
 // |           toolboxWidth           |
 // |                 |         <--------- workspaceWidth ---------->         |
 // |         <---------------- fullWorkspaceWidth ----------------->         |
-StudioApp.resizeHeaders = function (fullWorkspaceWidth) {
-  var minWorkspaceWidthForShowCode = StudioApp.editCode ? 250 : 450;
+StudioAppClass.prototype.resizeHeaders = function (fullWorkspaceWidth) {
+  var minWorkspaceWidthForShowCode = this.editCode ? 250 : 450;
   var toolboxWidth = 0;
-  if (StudioApp.editCode) {
+  if (this.editCode) {
     // If in the droplet editor, but not using blocks, keep categoryWidth at 0
-    if (!StudioApp.editCode || StudioApp.editor.currentlyUsingBlocks) {
+    if (this.editor.currentlyUsingBlocks) {
       // Set toolboxWidth based on the block palette width:
       var categories = document.querySelector('.droplet-palette-wrapper');
       toolboxWidth = parseInt(window.getComputedStyle(categories).width, 10);
     }
-  } else if (StudioApp.usingBlockly) {
+  } else if (this.usingBlockly) {
     toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
   }
 
   var showCodeHeader = document.getElementById('show-code-header');
   var showCodeWidth = 0;
-  if (StudioApp.enableShowCode &&
+  if (this.enableShowCode &&
       (fullWorkspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
     showCodeWidth = parseInt(window.getComputedStyle(showCodeHeader).width, 10);
     showCodeHeader.style.display = "";
-  }
-  else {
+  } else {
     showCodeHeader.style.display = "none";
   }
 
   document.getElementById('headers').style.width = fullWorkspaceWidth + 'px';
   document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
   document.getElementById('workspace-header').style.width =
-      (fullWorkspaceWidth - toolboxWidth - showCodeWidth) + 'px';
+    (fullWorkspaceWidth - toolboxWidth - showCodeWidth) + 'px';
 };
 
 /**
- * Highlight the block (or clear highlighting).
- * @param {?string} id ID of block that triggered this action.
- * @param {boolean} spotlight Optional.  Highlight entire block if true
- */
-StudioApp.highlight = function(id, spotlight) {
-  if (StudioApp.usingBlockly) {
+* Highlight the block (or clear highlighting).
+* @param {?string} id ID of block that triggered this action.
+* @param {boolean} spotlight Optional.  Highlight entire block if true
+*/
+StudioAppClass.prototype.highlight = function(id, spotlight) {
+  if (this.usingBlockly) {
     if (id) {
       var m = id.match(/^block_id_(\d+)$/);
       if (m) {
@@ -1149,148 +944,102 @@ StudioApp.highlight = function(id, spotlight) {
 };
 
 /**
- * Remove highlighting from all blocks
- */
-StudioApp.clearHighlighting = function () {
-  StudioApp.highlight(null);
+* Remove highlighting from all blocks
+*/
+StudioAppClass.prototype.clearHighlighting = function () {
+  this.highlight(null);
 };
 
-// The following properties get their non-default values set by the application.
-
 /**
- * Whether to alert user to empty blocks, short-circuiting all other tests.
- */
-StudioApp.CHECK_FOR_EMPTY_BLOCKS = undefined;
-
-/**
- * The ideal number of blocks to solve this level.  Users only get 2
- * stars if they use more than this number.
- * @type {!number=}
- */
-StudioApp.IDEAL_BLOCK_NUM = undefined;
-
-/**
- * An array of dictionaries representing required blocks.  Keys are:
- * - test (required): A test whether the block is present, either:
- *   - A string, in which case the string is searched for in the generated code.
- *   - A single-argument function is called on each user-added block
- *     individually.  If any call returns true, the block is deemed present.
- *     "User-added" blocks are ones that are neither disabled or undeletable.
- * - type (required): The type of block to be produced for display to the user
- *   if the test failed.
- * - titles (optional): A dictionary, where, for each KEY-VALUE pair, this is
- *   added to the block definition: <title name="KEY">VALUE</title>.
- * - value (optional): A dictionary, where, for each KEY-VALUE pair, this is
- *   added to the block definition: <value name="KEY">VALUE</value>
- * - extra (optional): A string that should be blacked between the "block"
- *   start and end tags.
- * @type {!Array=}
- */
-StudioApp.REQUIRED_BLOCKS = undefined;
-
-/**
- * The number of required blocks to give hints about at any one time.
- * Set this to Infinity to show all.
- * @type {!number=}
- */
-StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = undefined;
-
-/**
- * The number of attempts (how many times the run button has been pressed)
- * @type {?number}
- */
-StudioApp.attempts = 0;
-
-/**
- * Stores the time at init. The delta to current time is used for logging
- * and reporting to capture how long it took to arrive at an attempt.
- * @type {?number}
- */
-StudioApp.initTime = undefined;
-
-/**
- * Reset the playing field to the start position and kill any pending
- * animation tasks.  This will typically be replaced by an application.
- * @param {boolean} first True if an opening animation is to be played.
- */
-StudioApp.reset = function(first) {};
-
-// Override to change run behavior.
-StudioApp.runButtonClick = function() {};
-
-/**
- * Enumeration of user program execution outcomes.
- */
-StudioApp.ResultType = constants.ResultType;
-
-/**
- * Enumeration of test results.
- */
-StudioApp.TestResults = constants.TestResults;
-
-// Methods for determining and displaying feedback.
-
-/**
- * Display feedback based on test results.  The test results must be
- * explicitly provided.
- * @param {{feedbackType: number}} Test results (a constant property of
- *     StudioApp.TestResults).
- */
-StudioApp.displayFeedback = function(options) {
-  options.Dialog = StudioApp.Dialog;
-  options.onContinue = onContinue;
-  options.backToPreviousLevel = backToPreviousLevel;
-  options.sendToPhone = StudioApp.sendToPhone;
+* Display feedback based on test results.  The test results must be
+* explicitly provided.
+* @param {{feedbackType: number}} Test results (a constant property of
+*     this.TestResults).
+*/
+StudioAppClass.prototype.displayFeedback = function(options) {
+  options.Dialog = this.Dialog;
+  options.onContinue = this.onContinue;
+  options.backToPreviousLevel = this.backToPreviousLevel;
+  options.sendToPhone = this.sendToPhone;
 
   // Special test code for edit blocks.
   if (options.level.edit_blocks) {
-    options.feedbackType = StudioApp.TestResults.EDIT_BLOCKS;
+    options.feedbackType = this.TestResults.EDIT_BLOCKS;
   }
 
-  feedback.displayFeedback(options);
-};
-
-StudioApp.getTestResults = function(levelComplete, options) {
-  return feedback.getTestResults(levelComplete, options);
+  this.feedback_.displayFeedback(options);
 };
 
 /**
- * Report back to the server, if available.
- * @param {object} options - parameter block which includes:
- * {string} app The name of the application.
- * {number} id A unique identifier generated when the page was loaded.
- * {string} level The ID of the current level.
- * {number} result An indicator of the success of the code.
- * {number} testResult More specific data on success or failure of code.
- * {string} program The user program, which will get URL-encoded.
- * {function} onComplete Function to be called upon completion.
+ *
  */
-StudioApp.report = function(options) {
+StudioAppClass.prototype.getTestResults = function(levelComplete, options) {
+  return this.feedback_.getTestResults(levelComplete, options);
+};
+
+// Builds the dom to get more info from the user. After user enters info
+// and click "create level" onAttemptCallback is called to deliver the info
+// to the server.
+StudioAppClass.prototype.builderForm_ = function(onAttemptCallback) {
+  var builderDetails = document.createElement('div');
+  builderDetails.innerHTML = require('./templates/builder.html')();
+  var dialog = this.createModalDialogWithIcon({
+    Dialog: this.Dialog,
+    contentDiv: builderDetails,
+    icon: this.icon
+  });
+  var createLevelButton = document.getElementById('create-level-button');
+  dom.addClickTouchEvent(createLevelButton, function() {
+    var instructions = builderDetails.querySelector('[name="instructions"]').value;
+    var name = builderDetails.querySelector('[name="level_name"]').value;
+    var query = url.parse(window.location.href, true).query;
+    onAttemptCallback(utils.extend({
+      "instructions": instructions,
+      "name": name
+    }, query));
+  });
+
+  dialog.show({ backdrop: 'static' });
+};
+
+/**
+* Report back to the server, if available.
+* @param {object} options - parameter block which includes:
+* {string} app The name of the application.
+* {number} id A unique identifier generated when the page was loaded.
+* {string} level The ID of the current level.
+* {number} result An indicator of the success of the code.
+* {number} testResult More specific data on success or failure of code.
+* {string} program The user program, which will get URL-encoded.
+* {function} onComplete Function to be called upon completion.
+*/
+StudioAppClass.prototype.report = function(options) {
   // copy from options: app, level, result, testResult, program, onComplete
   var report = options;
-  report.pass = feedback.canContinueToNextLevel(options.testResult);
-  report.time = ((new Date().getTime()) - StudioApp.initTime);
-  report.attempt = StudioApp.attempts;
-  report.lines = feedback.getNumBlocksUsed();
+  report.pass = this.feedback_.canContinueToNextLevel(options.testResult);
+  report.time = ((new Date().getTime()) - this.initTime);
+  report.attempt = this.attempts;
+  report.lines = this.feedback_.getNumBlocksUsed();
 
   // If hideSource is enabled, the user is looking at a shared level that
   // they cannot have modified. In that case, don't report it to the service
   // or call the onComplete() callback expected. The app will just sit
   // there with the Reset button as the only option.
-  if (!(StudioApp.hideSource && StudioApp.share)) {
+  var self = this;
+  if (!(this.hideSource && this.share)) {
     var onAttemptCallback = (function() {
       return function(builderDetails) {
         for (var option in builderDetails) {
           report[option] = builderDetails[option];
         }
-        onAttempt(report);
+        self.onAttempt(report);
       };
     })();
 
     // If this is the level builder, go to builderForm to get more info from
     // the level builder.
     if (options.builder) {
-      builder.builderForm(onAttemptCallback);
+      this.builderForm_(onAttemptCallback);
     } else {
       onAttemptCallback();
     }
@@ -1298,39 +1047,27 @@ StudioApp.report = function(options) {
 };
 
 /**
- * Click the reset button.  Reset the application.
- */
-StudioApp.resetButtonClick = function() {
-  onResetPressed();
-  StudioApp.toggleRunReset('run');
-  StudioApp.clearHighlighting();
-  if (StudioApp.usingBlockly) {
+* Click the reset button.  Reset the application.
+*/
+StudioAppClass.prototype.resetButtonClick = function() {
+  this.onResetPressed();
+  this.toggleRunReset('run');
+  this.clearHighlighting();
+  if (this.usingBlockly) {
     Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
     Blockly.mainBlockSpace.traceOn(false);
   }
-  StudioApp.reset(false);
+  this.reset(false);
 };
 
 /**
- * Set the ideal Number of blocks.
- */
-var setIdealBlockNumber = function() {
-  var element = document.getElementById('idealBlockNumber');
-  if (element) {
-    element.innerHTML = '';  // Remove existing children or text.
-    element.appendChild(document.createTextNode(
-        getIdealBlockNumberMsg()));
-  }
-};
-
-/**
- * Add count of blocks used.
- */
-exports.updateBlockCount = function() {
+* Add count of blocks used.
+*/
+StudioAppClass.prototype.updateBlockCount = function() {
   // If the number of block used is bigger than the ideal number of blocks,
   // set it to be yellow, otherwise, keep it as black.
   var element = document.getElementById('blockUsed');
-  if (StudioApp.IDEAL_BLOCK_NUM < feedback.getNumCountableBlocks()) {
+  if (this.IDEAL_BLOCK_NUM < this.feedback_.getNumCountableBlocks()) {
     element.className = "block-counter-overflow";
   } else {
     element.className = "block-counter-default";
@@ -1340,16 +1077,429 @@ exports.updateBlockCount = function() {
   if (element) {
     element.innerHTML = '';  // Remove existing children or text.
     element.appendChild(document.createTextNode(
-        feedback.getNumCountableBlocks()));
+      this.feedback_.getNumCountableBlocks()));
   }
 };
 
-var getIdealBlockNumberMsg = function() {
-  return StudioApp.IDEAL_BLOCK_NUM === Infinity ?
-      msg.infinity() : StudioApp.IDEAL_BLOCK_NUM;
+/**
+ * Set the ideal Number of blocks.
+ */
+StudioAppClass.prototype.setIdealBlockNumber_ = function() {
+  var element = document.getElementById('idealBlockNumber');
+  if (!element) {
+    return;
+  }
+
+  var idealBlockNumberMsg = this.IDEAL_BLOCK_NUM === Infinity ?
+    msg.infinity() : this.IDEAL_BLOCK_NUM;
+  element.innerHTML = '';  // Remove existing children or text.
+  element.appendChild(document.createTextNode(
+    idealBlockNumberMsg));
 };
 
-},{"../locale/fr_fr/common":44,"./ResizeSensor":1,"./block_utils":4,"./builder":6,"./constants.js":8,"./dom":9,"./feedback.js":10,"./slider":16,"./templates/buttons.html":18,"./templates/instructions.html":20,"./templates/learn.html":21,"./templates/makeYourOwn.html":22,"./utils":42,"./xml":43}],4:[function(require,module,exports){
+
+/**
+ *
+ */
+StudioAppClass.prototype.fixViewportForSmallScreens_ = function (viewport) {
+  var deviceWidth;
+  var desiredWidth;
+  var minWidth;
+  if (this.share && dom.isMobile()) {
+    // for mobile sharing, don't assume landscape mode, use screen.width
+    deviceWidth = desiredWidth = screen.width;
+    if (this.noPadding && screen.width < MAX_PHONE_WIDTH) {
+      desiredWidth = Math.min(desiredWidth,
+        MOBILE_NO_PADDING_SHARE_WIDTH);
+    }
+    minWidth = this.noPadding ?
+      MOBILE_NO_PADDING_SHARE_WIDTH : MIN_MOBILE_SHARE_WIDTH;
+  }
+  else {
+    // assume we are in landscape mode, so width is the longer of the two
+    deviceWidth = desiredWidth = Math.max(screen.width, screen.height);
+    minWidth = MIN_WIDTH;
+  }
+  var width = Math.max(minWidth, desiredWidth);
+  var scale = deviceWidth / width;
+  var content = ['width=' + width,
+    'minimal-ui',
+    'initial-scale=' + scale,
+    'maximum-scale=' + scale,
+    'minimum-scale=' + scale,
+    'target-densityDpi=device-dpi',
+    'user-scalable=no'];
+  viewport.setAttribute('content', content.join(', '));
+};
+
+/**
+ *
+ */
+StudioAppClass.prototype.setConfigValues_ = function (config) {
+  this.share = config.share;
+
+  // if true, dont provide links to share on fb/twitter
+  this.disableSocialShare = config.disableSocialShare;
+  this.sendToPhone = config.sendToPhone;
+  this.noPadding = config.no_padding;
+
+  this.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
+  this.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
+  this.REQUIRED_BLOCKS = config.level.requiredBlocks || [];
+
+  // enableShowCode defaults to true if not defined
+  this.enableShowCode = (config.enableShowCode !== false);
+
+  // If the level has no ideal block count, don't show a block count. If it does
+  // have an ideal, show block count unless explicitly configured not to.
+  if (config.level && (config.level.ideal === undefined || config.level.ideal === Infinity)) {
+    this.enableShowBlockCount = false;
+  } else {
+    this.enableShowBlockCount = config.enableShowBlockCount !== false;
+  }
+
+  // Store configuration.
+  this.onAttempt = config.onAttempt || function () {};
+  this.onContinue = config.onContinue || function () {};
+  this.onResetPressed = config.onResetPressed || function () {};
+  this.backToPreviousLevel = config.backToPreviousLevel || function () {};
+};
+
+/**
+ * Begin modifying the DOM based on config.
+ * Note: Has side effects on config
+ */
+StudioAppClass.prototype.configureDom_ = function (config) {
+  var container = document.getElementById(config.containerId);
+  container.innerHTML = config.html;
+  var runButton = container.querySelector('#runButton');
+  var resetButton = container.querySelector('#resetButton');
+  var throttledRunClick = _.debounce(this.runButtonClick, 250, true);
+  dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
+  dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
+
+  var belowViz = document.getElementById('belowVisualization');
+  var referenceArea = document.getElementById('reference_area');
+  if (referenceArea) {
+    belowViz.appendChild(referenceArea);
+  }
+
+  var visualizationColumn = document.getElementById('visualizationColumn');
+  var visualization = document.getElementById('visualization');
+
+  // center game screen in embed mode
+  if(config.embed) {
+    visualizationColumn.style.margin = "0 auto";
+  }
+
+  if (this.usingBlockly && config.level.edit_blocks) {
+    // Set a class on the main blockly div so CSS can style blocks differently
+    Blockly.addClass_(container.querySelector('#blockly'), 'edit');
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      this.blockYCoordinateInterval = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
+  } else if (!config.hide_source) {
+    visualizationColumn.style.minHeight = this.MIN_WORKSPACE_HEIGHT + 'px';
+  }
+
+  if (!config.embed && !this.share) {
+    // Make the visualization responsive to screen size, except on share page.
+    visualization.className += " responsive";
+    visualizationColumn.className += " responsive";
+  }
+};
+
+/**
+ *
+ */
+StudioAppClass.prototype.handleHideSource_ = function (options) {
+  var container = document.getElementById(options.containerId);
+  this.hideSource = true;
+  var workspaceDiv = this.editCode ?
+    document.getElementById('codeWorkspace') :
+    container.querySelector('#blockly');
+  if(!options.embed || options.level.skipInstructionsPopup) {
+    container.className = 'hide-source';
+  }
+  workspaceDiv.style.display = 'none';
+  // For share page on mobile, do not show this part.
+  if ((!options.embed) && (!this.share || !dom.isMobile())) {
+    var buttonRow = runButton.parentElement;
+    var openWorkspace = document.createElement('button');
+    openWorkspace.setAttribute('id', 'open-workspace');
+    openWorkspace.appendChild(document.createTextNode(msg.openWorkspace()));
+
+    var belowViz = document.getElementById('belowVisualization');
+    belowViz.appendChild(this.feedback_.createSharingDiv({
+      response: {
+        level_source: window.location,
+        level_source_id: options.level_source_id,
+        phone_share_url: options.phone_share_url
+      },
+      sendToPhone: options.sendToPhone,
+      level: options.level,
+      twitter: options.twitter,
+      onMainPage: true
+    }));
+
+    dom.addClickTouchEvent(openWorkspace, function() {
+      // Redirect user to /edit version of this page. It would be better
+      // to just turn on the workspace but there are rendering issues
+      // with that.
+      window.location.href = window.location.href + '/edit';
+    });
+
+    buttonRow.appendChild(openWorkspace);
+  }
+};
+
+StudioAppClass.prototype.handleEditCode_ = function (options) {
+  // using window.require forces us to use requirejs version of require
+  window.require(['droplet'], _.bind(function(droplet) {
+    var displayMessage, examplePrograms, messageElement, onChange, startingText;
+    this.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
+      mode: 'javascript',
+      modeOptions: utils.generateDropletModeOptions(options.codeFunctions),
+      palette: utils.generateDropletPalette(options.codeFunctions,
+        options.categoryInfo)
+    });
+
+    this.editor.aceEditor.setShowPrintMargin(false);
+
+    // Add an ace completer for the API functions exposed for this level
+    if (options.codeFunctions) {
+      var langTools = window.ace.require("ace/ext/language_tools");
+      langTools.addCompleter(
+        utils.generateAceApiCompleter(options.codeFunctions));
+    }
+
+    this.editor.aceEditor.setOptions({
+      enableBasicAutocompletion: true,
+      enableLiveAutocompletion: true
+    });
+
+    if (options.afterInject) {
+      options.afterInject();
+    }
+
+    if (options.startBlocks) {
+      this.editor.setValue(options.startBlocks);
+    }
+  }, this));
+};
+
+/**
+ *
+ */
+StudioAppClass.prototype.handleUsingBlockly_ = function (config) {
+  // Allow empty blocks if editing blocks.
+  if (config.level.edit_blocks) {
+    this.CHECK_FOR_EMPTY_BLOCKS = false;
+    if (config.level.edit_blocks === 'required_blocks' ||
+      config.level.edit_blocks === 'toolbox_blocks') {
+      // Don't show when run block for toolbox/required block editing
+      config.forceInsertTopBlock = null;
+    }
+  }
+
+  // If levelbuilder provides an empty toolbox, some apps (like artist)
+  // replace it with a full toolbox. I think some levels may depend on this
+  // behavior. We want a way to specify no toolbox, which is <xml></xml>
+  if (config.level.toolbox) {
+    var toolboxWithoutWhitespace = config.level.toolbox.replace(/\s/g, '');
+    if (toolboxWithoutWhitespace === '<xml></xml>' ||
+        toolboxWithoutWhitespace === '<xml/>') {
+      config.level.toolbox = undefined;
+    }
+  }
+
+  var div = document.getElementById('blockly');
+  var options = {
+    toolbox: config.level.toolbox,
+    disableParamEditing: config.level.disableParamEditing === undefined ?
+        true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
+    useModalFunctionEditor: config.level.useModalFunctionEditor === undefined ?
+        false : config.level.useModalFunctionEditor,
+    useContractEditor: config.level.useContractEditor === undefined ?
+        false : config.level.useContractEditor,
+    defaultNumExampleBlocks: config.level.defaultNumExampleBlocks === undefined ?
+        0 : config.level.defaultNumExampleBlocks,
+    scrollbars: config.level.scrollbars,
+    editBlocks: config.level.edit_blocks === undefined ?
+        false : config.level.edit_blocks
+  };
+  ['trashcan', 'varsInGlobals',
+    'grayOutUndeletableBlocks', 'disableParamEditing'].forEach(
+    function (prop) {
+      if (config[prop] !== undefined) {
+        options[prop] = config[prop];
+      }
+    });
+  this.inject(div, options);
+
+  if (config.afterInject) {
+    config.afterInject();
+  }
+
+  // Add the starting block(s).
+  var startBlocks = config.level.startBlocks || '';
+  if (config.forceInsertTopBlock) {
+    startBlocks = blockUtils.forceInsertTopBlock(startBlocks, config.forceInsertTopBlock);
+  }
+  startBlocks = this.arrangeBlockPosition(startBlocks, config.blockArrangement);
+  this.loadBlocks(startBlocks);
+};
+
+/**
+ * Modify the workspace header after a droplet blocks/code toggle
+ */
+StudioAppClass.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
+  // Update header titles:
+  var showCodeHeader = document.getElementById('show-code-header');
+  var newButtonTitle = usingBlocks ? msg.showCodeHeader() :
+    msg.showBlocksHeader();
+  showCodeHeader.firstChild.innerText = newButtonTitle;
+
+  var workspaceHeaderSpan = document.getElementById('workspace-header-span');
+  newButtonTitle = usingBlocks ? msg.workspaceHeader() :
+    msg.workspaceHeaderJavaScript();
+  workspaceHeaderSpan.innerText = newButtonTitle;
+
+  var blockCount = document.getElementById('blockCounter');
+  if (blockCount) {
+    blockCount.style.display =
+      (usingBlocks && this.enableShowBlockCount) ? 'inline-block' : 'none';
+  }
+
+  // Resize (including headers), so the category header will appear/disappear:
+  this.onResize();
+};
+
+/**
+ * Do we have any floating blocks not attached to an event block or function block?
+ */
+StudioAppClass.prototype.hasExtraTopBlocks = function () {
+  return this.feedback_.hasExtraTopBlocks();
+};
+
+},{"../locale/fr_fr/common":45,"./ResizeSensor":1,"./block_utils":5,"./constants.js":8,"./dom":9,"./feedback":10,"./templates/builder.html":18,"./templates/buttons.html":19,"./templates/instructions.html":21,"./templates/learn.html":22,"./templates/makeYourOwn.html":23,"./utils":43,"./xml":44,"url":57}],3:[function(require,module,exports){
+var utils = require('./utils');
+var _ = utils.getLodash();
+var requiredBlockUtils = require('./required_block_utils');
+var StudioAppClass = require('./StudioApp');
+
+var studioAppSingleton = require('./base');
+window.StudioApp = studioAppSingleton;
+
+// TODO (br-pair) : This is to expose methods we need in the global namespace
+// for testing purpose. Would be nice to eliminate this eventually.
+window.__TestInterface = {
+  loadBlocks: _.bind(studioAppSingleton.loadBlocks, studioAppSingleton)
+};
+
+var addReadyListener = require('./dom').addReadyListener;
+var blocksCommon = require('./blocksCommon');
+
+module.exports = function(app, levels, options) {
+
+  // If a levelId is not provided, then options.level is specified in full.
+  // Otherwise, options.level overrides resolved level on a per-property basis.
+  if (options.levelId) {
+    var level = levels[options.levelId];
+    options.level = options.level || {};
+    options.level.id = options.levelId;
+    for (var prop in options.level) {
+      level[prop] = options.level[prop];
+    }
+
+    if (options.level.levelBuilderRequiredBlocks) {
+      level.requiredBlocks = requiredBlockUtils.makeTestsFromBuilderRequiredBlocks(
+          options.level.levelBuilderRequiredBlocks);
+    }
+
+    options.level = level;
+  }
+
+  studioAppSingleton.configure(options);
+
+  options.skin = options.skinsModule.load(studioAppSingleton.assetUrl, options.skinId);
+
+  if (studioAppSingleton.usingBlockly) {
+    var blockInstallOptions = {
+      skin: options.skin,
+      isK1: options.level && options.level.isK1
+    };
+
+    if (options.level && options.level.edit_blocks) {
+      utils.wrapNumberValidatorsForLevelBuilder();
+    }
+
+    blocksCommon.install(Blockly, blockInstallOptions);
+    options.blocksModule.install(Blockly, blockInstallOptions);
+  }
+
+  addReadyListener(function() {
+    if (options.readonly) {
+      if (app.initReadonly) {
+        app.initReadonly(options);
+      } else {
+        studioAppSingleton.initReadonly(options);
+      }
+    } else {
+      app.init(options);
+      if (options.onInitialize) {
+        options.onInitialize();
+      }
+    }
+  });
+};
+
+},{"./StudioApp":2,"./base":4,"./blocksCommon":6,"./dom":9,"./required_block_utils":15,"./utils":43}],4:[function(require,module,exports){
+/**
+ * Blockly Apps: Common code
+ *
+ * Copyright 2013 Google Inc.
+ * http://blockly.googlecode.com/
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * @fileoverview Common support code for Blockly apps.
+ * @author fraser@google.com (Neil Fraser)
+ */
+"use strict";
+
+/**
+ * Load the StudioAppClass and create a singleton instance of it, which we export
+ * as singleton. Most of our apps will load this singleton into a global, the
+ * expception currently being Artist
+ */
+var StudioAppClass = require('./StudioApp');
+var studioAppSingleton = new StudioAppClass();
+
+module.exports = studioAppSingleton;
+
+},{"./StudioApp":2}],5:[function(require,module,exports){
 var xml = require('./xml');
 
 exports.createToolbox = function(blocks) {
@@ -1550,7 +1700,7 @@ exports.mathBlockXml = function (type, inputs, titles) {
   return str;
 };
 
-},{"./xml":43}],5:[function(require,module,exports){
+},{"./xml":44}],6:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -1715,37 +1865,7 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/fr_fr/common":44}],6:[function(require,module,exports){
-var feedback = require('./feedback.js');
-var dom = require('./dom.js');
-var utils = require('./utils.js');
-var url = require('url');
-// Builds the dom to get more info from the user. After user enters info
-// and click "create level" onAttemptCallback is called to deliver the info
-// to the server.
-exports.builderForm = function(onAttemptCallback) {
-  var builderDetails = document.createElement('div');
-  builderDetails.innerHTML = require('./templates/builder.html')();
-  var dialog = feedback.createModalDialogWithIcon({
-    Dialog: StudioApp.Dialog,
-    contentDiv: builderDetails,
-    icon: StudioApp.ICON
-  });
-  var createLevelButton = document.getElementById('create-level-button');
-  dom.addClickTouchEvent(createLevelButton, function() {
-    var instructions = builderDetails.querySelector('[name="instructions"]').value;
-    var name = builderDetails.querySelector('[name="level_name"]').value;
-    var query = url.parse(window.location.href, true).query;
-    onAttemptCallback(utils.extend({
-      "instructions": instructions,
-      "name": name
-    }, query));
-  });
-
-  dialog.show({ backdrop: 'static' });
-};
-
-},{"./dom.js":9,"./feedback.js":10,"./templates/builder.html":17,"./utils.js":42,"url":56}],7:[function(require,module,exports){
+},{"../locale/fr_fr/common":45}],7:[function(require,module,exports){
 var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
 var LOOP_HIGHLIGHT = 'loopHighlight();\n';
@@ -1858,20 +1978,22 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
   return retVal;
 };
 
-exports.marshalInterpreterToNative = function (interpreterVar) {
+exports.marshalInterpreterToNative = function (interpreter, interpreterVar) {
   if (interpreterVar.isPrimitive) {
     return interpreterVar.data;
-  } else if (Webapp.interpreter.isa(interpreterVar, Webapp.interpreter.ARRAY)) {
+  } else if (interpreter.isa(interpreterVar, interpreter.ARRAY)) {
     var nativeArray = [];
     nativeArray.length = interpreterVar.length;
     for (var i = 0; i < nativeArray.length; i++) {
-      nativeArray[i] = exports.marshalInterpreterToNative(interpreterVar.properties[i]);
+      nativeArray[i] = exports.marshalInterpreterToNative(interpreter,
+                                                          interpreterVar.properties[i]);
     }
     return nativeArray;
-  } else if (Webapp.interpreter.isa(interpreterVar, Webapp.interpreter.OBJECT)) {
+  } else if (interpreter.isa(interpreterVar, interpreter.OBJECT)) {
     var nativeObject = {};
     for (var prop in interpreterVar.properties) {
-      nativeObject[prop] = exports.marshalInterpreterToNative(interpreterVar.properties[prop]);
+      nativeObject[prop] = exports.marshalInterpreterToNative(interpreter,
+                                                              interpreterVar.properties[prop]);
     }
     return nativeObject;
   } else {
@@ -1889,7 +2011,7 @@ exports.makeNativeMemberFunction = function (interpreter, nativeFunc, nativePare
     // Call the native function:
     var nativeArgs = [];
     for (var i = 0; i < arguments.length; i++) {
-      nativeArgs[i] = exports.marshalInterpreterToNative(arguments[i]);
+      nativeArgs[i] = exports.marshalInterpreterToNative(interpreter, arguments[i]);
     }
     var nativeRetVal = nativeFunc.apply(nativeParentObj, nativeArgs);
     return exports.marshalNativeToInterpreter(interpreter, nativeRetVal, null, maxDepth);
@@ -2010,12 +2132,15 @@ function createSelection (selection, cumulativeLength, start, end) {
  * Returns the row (line) of code highlighted. If nothing is highlighted
  * because it is outside of the userCode area, the return value is -1
  */
-exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
-                                      userCodeStartOffset, userCodeLength) {
+exports.selectCurrentCode = function (interpreter,
+                                      cumulativeLength,
+                                      userCodeStartOffset,
+                                      userCodeLength,
+                                      editor) {
   var userCodeRow = -1;
   if (interpreter.stateStack[0]) {
     var node = interpreter.stateStack[0].node;
-    // Adjust start/end by Webapp.userCodeStartOffset since the code running
+    // Adjust start/end by userCodeStartOffset since the code running
     // has been expanded vs. what the user sees in the editor window:
     var start = node.start - userCodeStartOffset;
     var end = node.end - userCodeStartOffset;
@@ -2044,6 +2169,34 @@ exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
       editor.clearLineMarks();
     } else {
       editor.aceEditor.getSelection().clearSelection();
+    }
+  }
+  return userCodeRow;
+};
+
+/**
+ * Finds the current line of code in droplet/ace editor.
+ *
+ * Returns the line of code where the interpreter is at. If it is outside
+ * of the userCode area, the return value is -1
+ *
+ * NOTE: first 4 params match the selectCurrentCode function by design.
+ */
+exports.getUserCodeLine = function (interpreter, cumulativeLength,
+                                    userCodeStartOffset, userCodeLength) {
+  var userCodeRow = -1;
+  if (interpreter.stateStack[0]) {
+    var node = interpreter.stateStack[0].node;
+    // Adjust start/end by userCodeStartOffset since the code running
+    // has been expanded vs. what the user sees in the editor window:
+    var start = node.start - userCodeStartOffset;
+    var end = node.end - userCodeStartOffset;
+
+    // Only return a valid userCodeRow if the node being executed is inside the
+    // user's code (not inside code we inserted before or after their code that
+    // is not visible in the editor):
+    if (start >= 0 && start < userCodeLength) {
+      userCodeRow = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
     }
   }
   return userCodeRow;
@@ -2277,28 +2430,51 @@ exports.isIOS = function() {
 };
 
 },{}],10:[function(require,module,exports){
-var trophy = require('./templates/trophy.html');
-var utils = require('./utils');
-var readonly = require('./templates/readonly.html');
-var codegen = require('./codegen');
-var msg = require('../locale/fr_fr/common');
-var dom = require('./dom');
-var xml = require('./xml');
-var _ = utils.getLodash();
-
-var TestResults = require('./constants').TestResults;
-
-exports.HintRequestPlacement = {
+// NOTE: These must be kept in sync with activity_hint.rb in dashboard.
+var HINT_REQUEST_PLACEMENT = {
   NONE: 0,  // This value must not be changed.
   LEFT: 1,  // Hint request button is on left.
   RIGHT: 2  // Hint request button is on right.
 };
 
-exports.displayFeedback = function(options) {
+var KEYCODES = {
+  ENTER: 13,
+  SPACE: 32
+};
+
+/**
+ * Bag of utility functions related to building and displaying feedback
+ * to students.
+ * @class
+ * @param {StudioAppClass} studioApp A studioApp instance used to pull
+ *   configuration and perform operations.
+ */
+var FeedbackUtils = function (studioApp) {
+  this.studioApp_ = studioApp;
+};
+module.exports = FeedbackUtils;
+
+// Globals used in this file:
+//   Blockly
+
+var trophy = require('./templates/trophy.html');
+var utils = require('./utils');
+var _ = utils.getLodash();
+var codegen = require('./codegen');
+var msg = require('../locale/fr_fr/common');
+var dom = require('./dom');
+var xml = require('./xml');
+var FeedbackBlocks = require('./feedbackBlocks');
+var TestResults = require('./constants').TestResults;
+
+/**
+ *
+ */
+FeedbackUtils.prototype.displayFeedback = function(options) {
   options.hintRequestExperiment = options.response &&
       options.response.hint_request_placement;
   options.level = options.level || {};
-  options.numTrophies = numTrophiesEarned(options);
+  options.numTrophies = this.numTrophiesEarned_(options);
 
   // Tracking event for level newly completed
   if (options.response && options.response.new_level_completed) {
@@ -2308,19 +2484,20 @@ exports.displayFeedback = function(options) {
   var hadShareFailure = (options.response && options.response.share_failure);
   var showingSharing = options.showingSharing && !hadShareFailure;
 
-  var canContinue = exports.canContinueToNextLevel(options.feedbackType);
-  var displayShowCode = StudioApp.enableShowCode && canContinue && !showingSharing;
+  var canContinue = this.canContinueToNextLevel(options.feedbackType);
+  var displayShowCode = this.studioApp_.enableShowCode && canContinue && !showingSharing;
   var feedback = document.createElement('div');
-  var sharingDiv = (canContinue && showingSharing) ? exports.createSharingDiv(options) : null;
-  var showCode = displayShowCode ? getShowCodeElement(options) : null;
-  var shareFailureDiv = hadShareFailure ? getShareFailure(options) : null;
+  var sharingDiv = (canContinue && showingSharing) ? this.createSharingDiv(options) : null;
+  var showCode = displayShowCode ? this.getShowCodeElement_(options) : null;
+  var shareFailureDiv = hadShareFailure ? this.getShareFailure_(options) : null;
   if (hadShareFailure) {
     trackEvent('Share', 'Failure', options.response.share_failure.type);
   }
-  var feedbackBlocks = new FeedbackBlocks(options);
+  var feedbackBlocks = new FeedbackBlocks(options, this.getMissingRequiredBlocks_(),
+    this.studioApp_);
   // feedbackMessage must be initialized after feedbackBlocks
   // because FeedbackBlocks can mutate options.response.hint.
-  var feedbackMessage = getFeedbackMessage(options);
+  var feedbackMessage = this.getFeedbackMessage_(options);
 
   if (feedbackMessage) {
     feedback.appendChild(feedbackMessage);
@@ -2334,11 +2511,11 @@ exports.displayFeedback = function(options) {
         trackEvent('Trophy', concept_name, trophy_name);
       }
     }
-    var trophies = getTrophiesElement(options);
+    var trophies = this.getTrophiesElement_(options);
     feedback.appendChild(trophies);
   }
   if (feedbackBlocks.div) {
-    if (feedbackMessage && useSpecialFeedbackDesign(options)) {
+    if (feedbackMessage && this.useSpecialFeedbackDesign_(options)) {
       // put the blocks iframe inside the feedbackMessage for this special case:
       feedbackMessage.appendChild(feedbackBlocks.div);
     } else {
@@ -2367,7 +2544,7 @@ exports.displayFeedback = function(options) {
   }
 
   feedback.appendChild(
-    getFeedbackButtons({
+    this.getFeedbackButtons_({
       feedbackType: options.feedbackType,
       showPreviousButton: options.level.showPreviousLevelButton,
       isK1: options.level.isK1,
@@ -2384,10 +2561,10 @@ exports.displayFeedback = function(options) {
   var onlyContinue = continueButton && !againButton && !previousLevelButton;
 
   var onHidden = onlyContinue ? options.onContinue : null;
-  var icon = canContinue ? StudioApp.WIN_ICON : StudioApp.FAILURE_ICON;
+  var icon = canContinue ? this.studioApp_.winIcon : this.studioApp_.failureIcon;
   var defaultBtnSelector = onlyContinue ? '#continue-button' : '#again-button';
 
-  var feedbackDialog = exports.createModalDialogWithIcon({
+  var feedbackDialog = this.createModalDialogWithIcon({
     Dialog: options.Dialog,
     contentDiv: feedback,
     icon: icon,
@@ -2397,7 +2574,7 @@ exports.displayFeedback = function(options) {
   });
 
   // Update the background color if it is set to be in special design.
-  if (useSpecialFeedbackDesign(options)) {
+  if (this.useSpecialFeedbackDesign_(options)) {
     if (options.response.design == "white_background") {
       document.getElementById('feedback-dialog')
           .className += " white-background";
@@ -2424,7 +2601,7 @@ exports.displayFeedback = function(options) {
   // hint if the button gets pressed.
   if (hintRequestButton) {
     // Swap out the specific feedback message with a generic one.
-    var genericFeedback = getFeedbackMessage({message: msg.genericFeedback()});
+    var genericFeedback = this.getFeedbackMessage_({message: msg.genericFeedback()});
     var parentNode = feedbackMessage.parentNode;
     parentNode.replaceChild(genericFeedback, feedbackMessage);
 
@@ -2509,12 +2686,12 @@ exports.displayFeedback = function(options) {
  * not disabled, are deletable.
  * @return {number} Number of blocks used.
  */
-exports.getNumBlocksUsed = function() {
+FeedbackUtils.prototype.getNumBlocksUsed = function() {
   var i;
-  if (StudioApp.editCode) {
+  if (this.studioApp_.editCode) {
     var codeLines = 0;
     // quick and dirty method to count non-blank lines that don't start with //
-    var lines = getGeneratedCodeString().split("\n");
+    var lines = this.getGeneratedCodeString_().split("\n");
     for (i = 0; i < lines.length; i++) {
       if ((lines[i].length > 1) && (lines[i][0] != '/' || lines[i][1] != '/')) {
         codeLines++;
@@ -2522,7 +2699,7 @@ exports.getNumBlocksUsed = function() {
     }
     return codeLines;
   }
-  return getUserBlocks().length;
+  return this.getUserBlocks_().length;
 };
 
 /**
@@ -2530,12 +2707,12 @@ exports.getNumBlocksUsed = function() {
  * not disabled.
  * @return {number} Total number of blocks.
  */
-exports.getNumCountableBlocks = function() {
+FeedbackUtils.prototype.getNumCountableBlocks = function() {
   var i;
-  if (StudioApp.editCode) {
+  if (this.studioApp_.editCode) {
     var codeLines = 0;
     // quick and dirty method to count non-blank lines that don't start with //
-    var lines = getGeneratedCodeString().split("\n");
+    var lines = this.getGeneratedCodeString_().split("\n");
     for (i = 0; i < lines.length; i++) {
       if ((lines[i].length > 1) && (lines[i][0] != '/' || lines[i][1] != '/')) {
         codeLines++;
@@ -2543,24 +2720,27 @@ exports.getNumCountableBlocks = function() {
     }
     return codeLines;
   }
-  return getCountableBlocks().length;
+  return this.getCountableBlocks_().length;
 };
 
-var getFeedbackButtons = function(options) {
+/**
+ *
+ */
+FeedbackUtils.prototype.getFeedbackButtons_ = function(options) {
   var buttons = document.createElement('div');
   buttons.id = 'feedbackButtons';
   buttons.innerHTML = require('./templates/buttons.html')({
     data: {
       previousLevel:
-        !exports.canContinueToNextLevel(options.feedbackType) &&
+        !this.canContinueToNextLevel(options.feedbackType) &&
         options.showPreviousButton,
       tryAgain: options.feedbackType !== TestResults.ALL_PASS,
-      nextLevel: exports.canContinueToNextLevel(options.feedbackType),
+      nextLevel: this.canContinueToNextLevel(options.feedbackType),
       isK1: options.isK1,
       hintRequestExperiment: options.hintRequestExperiment &&
-          (options.hintRequestExperiment === exports.HintRequestPlacement.LEFT ?
+          (options.hintRequestExperiment === HINT_REQUEST_PLACEMENT.LEFT ?
               'left' : 'right'),
-      assetUrl: StudioApp.assetUrl,
+      assetUrl: this.studioApp_.assetUrl,
       freePlay: options.freePlay
     }
   });
@@ -2568,14 +2748,20 @@ var getFeedbackButtons = function(options) {
   return buttons;
 };
 
-var getShareFailure = function(options) {
+/**
+ *
+ */
+FeedbackUtils.prototype.getShareFailure_ = function(options) {
   var shareFailure = options.response.share_failure;
   var shareFailureDiv = document.createElement('div');
   shareFailureDiv.innerHTML = require('./templates/shareFailure.html')({shareFailure: shareFailure});
   return shareFailureDiv;
 };
 
-var useSpecialFeedbackDesign = function (options) {
+/**
+ *
+ */
+FeedbackUtils.prototype.useSpecialFeedbackDesign_ = function (options) {
  return options.response &&
         options.response.design &&
         options.response.hint;
@@ -2590,7 +2776,7 @@ var useSpecialFeedbackDesign = function (options) {
 //    specific result type (e.g., TestResults.EMPTY_BLOCK_FAIL).
 // 5. System-wide message (e.g., msg.emptyBlocksErrorMsg()) for specific
 //    result type (e.g., TestResults.EMPTY_BLOCK_FAIL).
-var getFeedbackMessage = function(options) {
+FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
   var feedback = document.createElement('p');
   feedback.className = 'congrats';
   var message;
@@ -2649,7 +2835,7 @@ var getFeedbackMessage = function(options) {
         break;
       case TestResults.TOO_MANY_BLOCKS_FAIL:
         message = msg.numBlocksNeeded({
-          numBlocks: StudioApp.IDEAL_BLOCK_NUM,
+          numBlocks: this.studioApp_.IDEAL_BLOCK_NUM,
           puzzleNumber: options.level.puzzle_number || 0
         });
         break;
@@ -2701,7 +2887,7 @@ var getFeedbackMessage = function(options) {
   dom.setText(feedback, message);
 
   // Update the feedback box design, if the hint message came from server.
-  if (useSpecialFeedbackDesign(options)) {
+  if (this.useSpecialFeedbackDesign_(options)) {
     // Setup a new div
     var feedbackDiv = document.createElement('div');
     feedbackDiv.className = 'feedback-callout';
@@ -2710,7 +2896,7 @@ var getFeedbackMessage = function(options) {
     // Insert an image
     var imageDiv = document.createElement('img');
     imageDiv.className = "hint-image";
-    imageDiv.src = StudioApp.assetUrl(
+    imageDiv.src = this.studioApp_.assetUrl(
       'media/lightbulb_for_' + options.response.design + '.png');
     feedbackDiv.appendChild(imageDiv);
     // Add new text
@@ -2725,14 +2911,17 @@ var getFeedbackMessage = function(options) {
   return feedback;
 };
 
-exports.createSharingDiv = function(options) {
+/**
+ *
+ */
+FeedbackUtils.prototype.createSharingDiv = function(options) {
   if (!options.response || !options.response.level_source) {
     // don't even try if our caller didn't give us something that can be shared
     // options.response.level_source is the url that we are sharing
     return null;
   }
 
-  if (StudioApp.disableSocialShare) {
+  if (this.studioApp_.disableSocialShare) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
@@ -2771,6 +2960,8 @@ exports.createSharingDiv = function(options) {
                       options.response.level_source;
     options.facebookUrl = facebookUrl;
   }
+
+  options.assetUrl = this.studioApp_.assetUrl;
 
   var sharingDiv = document.createElement('div');
   sharingDiv.setAttribute('style', 'display:inline-block');
@@ -2838,8 +3029,10 @@ exports.createSharingDiv = function(options) {
   return sharingDiv;
 };
 
-
-var numTrophiesEarned = function(options) {
+/**
+ *
+ */
+FeedbackUtils.prototype.numTrophiesEarned_ = function(options) {
   if (options.response && options.response.trophy_updates) {
     return options.response.trophy_updates.length;
   } else {
@@ -2847,7 +3040,10 @@ var numTrophiesEarned = function(options) {
   }
 };
 
-var getTrophiesElement = function(options) {
+/**
+ *
+ */
+FeedbackUtils.prototype.getTrophiesElement_ = function(options) {
   var html = "";
   for (var i = 0; i < options.numTrophies; i++) {
     html += trophy({
@@ -2860,11 +3056,14 @@ var getTrophiesElement = function(options) {
   return trophies;
 };
 
-var getShowCodeElement = function(options) {
+/**
+ *
+ */
+FeedbackUtils.prototype.getShowCodeElement_ = function(options) {
   var showCodeDiv = document.createElement('div');
   showCodeDiv.setAttribute('id', 'show-code');
 
-  var numLinesWritten = exports.getNumBlocksUsed();
+  var numLinesWritten = this.getNumBlocksUsed();
   var shouldShowTotalLines =
     (options.response &&
       options.response.total_lines &&
@@ -2877,10 +3076,10 @@ var getShowCodeElement = function(options) {
   });
 
   var showCodeButton = showCodeDiv.querySelector('#show-code-button');
-  showCodeButton.addEventListener('click', function () {
-    showCodeDiv.appendChild(getGeneratedCodeElement());
+  showCodeButton.addEventListener('click', _.bind(function () {
+    showCodeDiv.appendChild(this.getGeneratedCodeElement_());
     showCodeButton.style.display = 'none';
-  });
+  }, this));
 
   return showCodeDiv;
 };
@@ -2888,9 +3087,9 @@ var getShowCodeElement = function(options) {
 /**
  * Determines whether the user can proceed to the next level, based on the level feedback
  * @param {number} feedbackType A constant property of TestResults,
- *     typically produced by StudioApp.getTestResults().
+ *     typically produced by StudioAppClass.getTestResults().
  */
-exports.canContinueToNextLevel = function(feedbackType) {
+FeedbackUtils.prototype.canContinueToNextLevel = function(feedbackType) {
   return (feedbackType === TestResults.ALL_PASS ||
     feedbackType === TestResults.TOO_MANY_BLOCKS_FAIL ||
     feedbackType ===  TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL ||
@@ -2900,95 +3099,26 @@ exports.canContinueToNextLevel = function(feedbackType) {
 /**
  * Retrieve a string containing the user's generated Javascript code.
  */
-var getGeneratedCodeString = function() {
-  if (StudioApp.editCode) {
-    return StudioApp.editor ? StudioApp.editor.getValue() : '';
+FeedbackUtils.prototype.getGeneratedCodeString_ = function() {
+  if (this.studioApp_.editCode) {
+    return this.studioApp_.editor ? this.studioApp_.editor.getValue() : '';
   }
   else {
     return codegen.workspaceCode(Blockly);
   }
 };
 
-var FeedbackBlocks = function(options) {
-  // Check whether blocks are embedded in the hint returned from dashboard.
-  // See below comment for format.
-  var embeddedBlocks = options.response && options.response.hint &&
-      options.response.hint.indexOf("[{") !== 0;
-  if (!embeddedBlocks &&
-      options.feedbackType !==
-      TestResults.MISSING_BLOCK_UNFINISHED &&
-      options.feedbackType !==
-      TestResults.MISSING_BLOCK_FINISHED) {
-      return;
-  }
-
-  var blocksToDisplay = [];
-  if (embeddedBlocks) {
-    // Hint should be of the form: SOME TEXT [{..}, {..}, ..] IGNORED.
-    // Example: 'Try the following block: [{"type": "maze_moveForward"}]'
-    // Note that double quotes are required by the JSON parser.
-    var parts = options.response.hint.match(/(.*)(\[.*\])/);
-    if (!parts) {
-      return;
-    }
-    options.response.hint = parts[1].trim();  // Remove blocks from hint.
-    try {
-      blocksToDisplay = JSON.parse(parts[2]);
-    } catch(err) {
-      // The blocks could not be parsed.  Ignore them.
-      return;
-    }
-  } else {
-    var missingRequiredBlocks = getMissingRequiredBlocks();
-    blocksToDisplay = missingRequiredBlocks.blocksToDisplay;
-    if (missingRequiredBlocks.message) {
-      options.message = missingRequiredBlocks.message;
-    }
-  }
-
-  if (blocksToDisplay.length === 0) {
-    return;
-  }
-
-  this.div = document.createElement('div');
-  this.html = readonly({
-    app: options.app,
-    assetUrl: StudioApp.assetUrl,
-    options: {
-      readonly: true,
-      locale: StudioApp.LOCALE,
-      localeDirection: StudioApp.localeDirection(),
-      baseUrl: StudioApp.BASE_URL,
-      cacheBust: StudioApp.CACHE_BUST,
-      skinId: options.skin,
-      level: options.level,
-      blocks: generateXMLForBlocks(blocksToDisplay)
-    }
-  });
-  this.iframe = document.createElement('iframe');
-  this.iframe.setAttribute('id', 'feedbackBlocks');
-  this.iframe.setAttribute('allowtransparency', 'true');
-  this.div.appendChild(this.iframe);
-};
-
-FeedbackBlocks.prototype.show = function() {
-  var iframe = document.getElementById('feedbackBlocks');
-  if (iframe) {
-    var doc = iframe.contentDocument || iframe.contentWindow.document;
-    doc.open();
-    doc.write(this.html);
-    doc.close();
-  }
-};
-
-var getGeneratedCodeElement = function() {
+/**
+ *
+ */
+FeedbackUtils.prototype.getGeneratedCodeElement_ = function() {
   var codeInfoMsgParams = {
     berkeleyLink: "<a href='http://bjc.berkeley.edu/' target='_blank'>Berkeley</a>",
     harvardLink: "<a href='https://cs50.harvard.edu/' target='_blank'>Harvard</a>"
   };
 
-  var infoMessage = StudioApp.editCode ?  "" : msg.generatedCodeInfo(codeInfoMsgParams);
-  var code = getGeneratedCodeString();
+  var infoMessage = this.studioApp_.editCode ?  "" : msg.generatedCodeInfo(codeInfoMsgParams);
+  var code = this.getGeneratedCodeString_();
 
   var codeDiv = document.createElement('div');
   codeDiv.innerHTML = require('./templates/code.html')({
@@ -2999,8 +3129,11 @@ var getGeneratedCodeElement = function() {
   return codeDiv;
 };
 
-exports.showGeneratedCode = function(Dialog) {
-  var codeDiv = getGeneratedCodeElement();
+/**
+ *
+ */
+FeedbackUtils.prototype.showGeneratedCode = function(Dialog) {
+  var codeDiv = this.getGeneratedCodeElement_();
 
   var buttons = document.createElement('div');
   buttons.innerHTML = require('./templates/buttons.html')({
@@ -3010,12 +3143,44 @@ exports.showGeneratedCode = function(Dialog) {
   });
   codeDiv.appendChild(buttons);
 
-  var dialog = exports.createModalDialogWithIcon({
+  var dialog = this.createModalDialogWithIcon({
       Dialog: Dialog,
       contentDiv: codeDiv,
-      icon: StudioApp.ICON,
+      icon: this.studioApp_.icon,
       defaultBtnSelector: '#ok-button'
       });
+
+  var okayButton = buttons.querySelector('#ok-button');
+  if (okayButton) {
+    dom.addClickTouchEvent(okayButton, function() {
+      dialog.hide();
+    });
+  }
+
+  dialog.show();
+};
+
+/**
+ *
+ */
+FeedbackUtils.prototype.showToggleBlocksError = function(Dialog) {
+  var contentDiv = document.createElement('div');
+  contentDiv.innerHTML = msg.toggleBlocksErrorMsg();
+
+  var buttons = document.createElement('div');
+  buttons.innerHTML = require('./templates/buttons.html')({
+    data: {
+      ok: true
+    }
+  });
+  contentDiv.appendChild(buttons);
+
+  var dialog = this.createModalDialogWithIcon({
+      Dialog: Dialog,
+      contentDiv: contentDiv,
+      icon: this.studioApp_.icon,
+      defaultBtnSelector: '#ok-button'
+  });
 
   var okayButton = buttons.querySelector('#ok-button');
   if (okayButton) {
@@ -3031,7 +3196,7 @@ exports.showGeneratedCode = function(Dialog) {
  * Check user's code for empty container blocks, such as "repeat".
  * @return {boolean} true if a block is empty (no blocks are nested inside).
  */
-var hasEmptyContainerBlocks = function() {
+FeedbackUtils.prototype.hasEmptyContainerBlocks_ = function() {
   var code = codegen.workspaceCode(Blockly);
   return (/\{\s*\}/).test(code);
 };
@@ -3040,7 +3205,7 @@ var hasEmptyContainerBlocks = function() {
  * Get an empty container block, if any are present.
  * @return {Blockly.Block} an empty container block, or null if none exist.
  */
-var getEmptyContainerBlock = function() {
+FeedbackUtils.prototype.getEmptyContainerBlock_ = function() {
   var blocks = Blockly.mainBlockSpace.getAllBlocks();
   for (var i = 0; i < blocks.length; i++) {
     var block = blocks[i];
@@ -3059,8 +3224,8 @@ var getEmptyContainerBlock = function() {
  * Check whether the user code has all the blocks required for the level.
  * @return {boolean} true if all blocks are present, false otherwise.
  */
-var hasAllRequiredBlocks = function() {
-  return getMissingRequiredBlocks().blocksToDisplay.length === 0;
+FeedbackUtils.prototype.hasAllRequiredBlocks_ = function() {
+  return this.getMissingRequiredBlocks_().blocksToDisplay.length === 0;
 };
 
 /**
@@ -3069,7 +3234,7 @@ var hasAllRequiredBlocks = function() {
  * written.
  * @return {Array<Object>} The blocks.
  */
-var getUserBlocks = function() {
+FeedbackUtils.prototype.getUserBlocks_ = function() {
   var allBlocks = Blockly.mainBlockSpace.getAllBlocks();
   var blocks = allBlocks.filter(function(block) {
     return !block.disabled && block.isEditable() && block.type !== 'when_run';
@@ -3083,7 +3248,7 @@ var getUserBlocks = function() {
  * block count.
  * @return {Array<Object>} The blocks.
  */
-var getCountableBlocks = function() {
+FeedbackUtils.prototype.getCountableBlocks_ = function() {
   var allBlocks = Blockly.mainBlockSpace.getAllBlocks();
   var blocks = allBlocks.filter(function(block) {
     return !block.disabled;
@@ -3093,28 +3258,29 @@ var getCountableBlocks = function() {
 
 /**
  * Check to see if the user's code contains the required blocks for a level.
- * This never returns more than StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG.
+ * This never returns more than StudioAppClass.NUM_REQUIRED_BLOCKS_TO_FLAG.
  * @return {{blocksToDisplay:!Array, message:?string}} 'missingBlocks' is an
  * array of array of strings where each array of strings is a set of blocks that
  * at least one of them should be used. Each block is represented as the prefix
  * of an id in the corresponding template.soy. 'message' is an optional message
  * to override the default error text.
  */
-var getMissingRequiredBlocks = function () {
+FeedbackUtils.prototype.getMissingRequiredBlocks_ = function () {
   var missingBlocks = [];
   var customMessage = null;
   var code = null;  // JavaScript code, which is initialized lazily.
-  if (StudioApp.REQUIRED_BLOCKS && StudioApp.REQUIRED_BLOCKS.length) {
-    var userBlocks = getUserBlocks();
+  // TODO (br-pair) : we should probably just pass required_blocks
+  if (this.studioApp_.REQUIRED_BLOCKS && this.studioApp_.REQUIRED_BLOCKS.length) {
+    var userBlocks = this.getUserBlocks_();
     // For each list of required blocks
     // Keep track of the number of the missing block lists. It should not be
-    // bigger than StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG
+    // bigger than StudioAppClass.NUM_REQUIRED_BLOCKS_TO_FLAG
     var missingBlockNum = 0;
     for (var i = 0;
-         i < StudioApp.REQUIRED_BLOCKS.length &&
-             missingBlockNum < StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG;
+         i < this.studioApp_.REQUIRED_BLOCKS.length &&
+             missingBlockNum < this.studioApp_.NUM_REQUIRED_BLOCKS_TO_FLAG;
          i++) {
-      var requiredBlock = StudioApp.REQUIRED_BLOCKS[i];
+      var requiredBlock = this.studioApp_.REQUIRED_BLOCKS[i];
       // For each of the test
       // If at least one of the tests succeeded, we consider the required block
       // is used
@@ -3142,7 +3308,7 @@ var getMissingRequiredBlocks = function () {
       }
       if (!usedRequiredBlock) {
         missingBlockNum++;
-        missingBlocks = missingBlocks.concat(StudioApp.REQUIRED_BLOCKS[i][0]);
+        missingBlocks = missingBlocks.concat(this.studioApp_.REQUIRED_BLOCKS[i][0]);
       }
     }
   }
@@ -3155,8 +3321,8 @@ var getMissingRequiredBlocks = function () {
 /**
  * Do we have any floating blocks not attached to an event block or function block?
  */
-exports.hasExtraTopBlocks = function () {
-  if (StudioApp.editCode) {
+FeedbackUtils.prototype.hasExtraTopBlocks = function () {
+  if (this.studioApp_.editCode) {
     return false;
   }
   var topBlocks = Blockly.mainBlockSpace.getTopBlocks();
@@ -3183,16 +3349,16 @@ exports.hasExtraTopBlocks = function () {
  * @param  Did the user successfully complete the level
  * @return {number} The appropriate property of TestResults.
  */
-exports.getTestResults = function(levelComplete, options) {
+FeedbackUtils.prototype.getTestResults = function(levelComplete, options) {
   options = options || {};
-  if (StudioApp.editCode) {
+  if (this.studioApp_.editCode) {
     // TODO (cpirich): implement better test results for editCode
     return levelComplete ?
-      StudioApp.TestResults.ALL_PASS :
-      StudioApp.TestResults.TOO_FEW_BLOCKS_FAIL;
+        this.studioApp_.TestResults.ALL_PASS :
+        this.studioApp_.TestResults.TOO_FEW_BLOCKS_FAIL;
   }
-  if (StudioApp.CHECK_FOR_EMPTY_BLOCKS && hasEmptyContainerBlocks()) {
-    var type = getEmptyContainerBlock().type;
+  if (this.studioApp_.CHECK_FOR_EMPTY_BLOCKS && this.hasEmptyContainerBlocks_()) {
+    var type = this.getEmptyContainerBlock_().type;
     if (type === 'procedures_defnoreturn' || type === 'procedures_defreturn') {
       return TestResults.EMPTY_FUNCTION_BLOCK_FAIL;
     }
@@ -3201,52 +3367,52 @@ exports.getTestResults = function(levelComplete, options) {
     // for "controls_for_counter" blocks, for example.
     return TestResults.EMPTY_BLOCK_FAIL;
   }
-  if (!options.allowTopBlocks && exports.hasExtraTopBlocks()) {
+  if (!options.allowTopBlocks && this.hasExtraTopBlocks()) {
     return TestResults.EXTRA_TOP_BLOCKS_FAIL;
   }
   if (Blockly.useContractEditor || Blockly.useModalFunctionEditor) {
-    if (hasUnusedParam()) {
+    if (this.hasUnusedParam_()) {
       return TestResults.UNUSED_PARAM;
     }
-    if (hasUnusedFunction()) {
+    if (this.hasUnusedFunction_()) {
       return TestResults.UNUSED_FUNCTION;
     }
-    if (hasParamInputUnattached()) {
+    if (this.hasParamInputUnattached_()) {
       return TestResults.PARAM_INPUT_UNATTACHED;
     }
-    if (hasIncompleteBlockInFunction()) {
+    if (this.hasIncompleteBlockInFunction_()) {
       return TestResults.INCOMPLETE_BLOCK_IN_FUNCTION;
     }
   }
-  if (hasQuestionMarksInNumberField()) {
+  if (this.hasQuestionMarksInNumberField_()) {
     return TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
   }
-  if (!hasAllRequiredBlocks()) {
-    return levelComplete ? TestResults.MISSING_BLOCK_FINISHED :
-      TestResults.MISSING_BLOCK_UNFINISHED;
+  if (!this.hasAllRequiredBlocks_()) {
+    return levelComplete ?
+        TestResults.MISSING_BLOCK_FINISHED :
+        TestResults.MISSING_BLOCK_UNFINISHED;
   }
-  var numEnabledBlocks = exports.getNumCountableBlocks();
+  var numEnabledBlocks = this.getNumCountableBlocks();
   if (!levelComplete) {
-    if (StudioApp.IDEAL_BLOCK_NUM && StudioApp.IDEAL_BLOCK_NUM !== Infinity &&
-        numEnabledBlocks < StudioApp.IDEAL_BLOCK_NUM) {
+    if (this.studioApp_.IDEAL_BLOCK_NUM &&
+        this.studioApp_.IDEAL_BLOCK_NUM !== Infinity &&
+        numEnabledBlocks < this.studioApp_.IDEAL_BLOCK_NUM) {
       return TestResults.TOO_FEW_BLOCKS_FAIL;
     }
     return TestResults.LEVEL_INCOMPLETE_FAIL;
   }
-  if (StudioApp.IDEAL_BLOCK_NUM &&
-      numEnabledBlocks > StudioApp.IDEAL_BLOCK_NUM) {
+  if (this.studioApp_.IDEAL_BLOCK_NUM &&
+      numEnabledBlocks > this.studioApp_.IDEAL_BLOCK_NUM) {
     return TestResults.TOO_MANY_BLOCKS_FAIL;
   } else {
     return TestResults.ALL_PASS;
   }
 };
 
-var Keycodes = {
-  ENTER: 13,
-  SPACE: 32
-};
-
-exports.createModalDialogWithIcon = function(options) {
+/**
+ *
+ */
+FeedbackUtils.prototype.createModalDialogWithIcon = function(options) {
   var imageDiv = document.createElement('img');
   imageDiv.className = "modal-image";
   imageDiv.src = options.icon;
@@ -3258,7 +3424,7 @@ exports.createModalDialogWithIcon = function(options) {
 
   var btn = options.contentDiv.querySelector(options.defaultBtnSelector);
   var keydownHandler = function(e) {
-    if (e.keyCode == Keycodes.ENTER || e.keyCode == Keycodes.SPACE) {
+    if (e.keyCode == KEYCODES.ENTER || e.keyCode == KEYCODES.SPACE) {
       // Simulate a 'click':
       var event = new MouseEvent('click', {
           'view': window,
@@ -3281,11 +3447,191 @@ exports.createModalDialogWithIcon = function(options) {
 };
 
 /**
+ * Check for '???' instead of a value in block fields.
+ */
+FeedbackUtils.prototype.hasQuestionMarksInNumberField_ = function () {
+  return Blockly.mainBlockSpace.getAllBlocks().some(function(block) {
+    return block.getTitles().some(function(title) {
+      return title.value_ === '???';
+    });
+  });
+};
+
+/**
+ * Ensure that all procedure definitions actually use the parameters they define
+ * inside the procedure.
+ */
+FeedbackUtils.prototype.hasUnusedParam_ = function () {
+  var self = this;
+  return Blockly.mainBlockSpace.getAllBlocks().some(function(userBlock) {
+    var params = userBlock.parameterNames_;
+    // Only search procedure definitions
+    return params && params.some(function(paramName) {
+      // Unused param if there's no parameters_get descendant with the same name
+      return !self.hasMatchingDescendant_(userBlock, function(block) {
+        return (block.type === 'parameters_get' ||
+            block.type === 'functional_parameters_get' ||
+            block.type === 'variables_get') &&
+            block.getTitleValue('VAR') === paramName;
+      });
+    });
+  });
+};
+
+/**
+ * Ensure that all procedure calls have each parameter input connected.
+ */
+FeedbackUtils.prototype.hasParamInputUnattached_ = function () {
+  return Blockly.mainBlockSpace.getAllBlocks().some(function(userBlock) {
+    // Only check procedure_call* blocks
+    if (!/^procedures_call/.test(userBlock.type)) {
+      return false;
+    }
+    return userBlock.inputList.filter(function(input) {
+      return (/^ARG/.test(input.name));
+    }).some(function(argInput) {
+      // Unattached param input if any ARG* connection target is null
+      return !argInput.connection.targetConnection;
+    });
+  });
+};
+
+/**
+ * Ensure that all user-declared procedures have associated call blocks.
+ */
+FeedbackUtils.prototype.hasUnusedFunction_ = function () {
+  var userDefs = [];
+  var callBlocks = {};
+  Blockly.mainBlockSpace.getAllBlocks().forEach(function (block) {
+    var name = block.getTitleValue('NAME');
+    if (/^procedures_def/.test(block.type) && block.userCreated) {
+      userDefs.push(name);
+    } else if (/^procedures_call/.test(block.type)) {
+      callBlocks[name] = true;
+    }
+  });
+  // Unused function if some user def doesn't have a matching call
+  return userDefs.some(function(name) { return !callBlocks[name]; });
+};
+
+/**
+ * Ensure there are no incomplete blocks inside any function definitions.
+ */
+FeedbackUtils.prototype.hasIncompleteBlockInFunction_ = function () {
+  var self = this;
+  return Blockly.mainBlockSpace.getAllBlocks().some(function(userBlock) {
+    // Only search procedure definitions
+    if (!userBlock.parameterNames_) {
+      return false;
+    }
+    return self.hasMatchingDescendant_(userBlock, function(block) {
+      // Incomplete block if any input connection target is null
+      return block.inputList.some(function(input) {
+        return input.type === Blockly.INPUT_VALUE &&
+            !input.connection.targetConnection;
+      });
+    });
+  });
+};
+
+/**
+ * Returns true if any descendant (inclusive) of the given node matches the
+ * given filter.
+ */
+FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
+  if (filter(node)) {
+    return true;
+  }
+  var self = this;
+  return node.childBlocks_.some(function (child) {
+    return self.hasMatchingDescendant_(child, filter);
+  });
+};
+
+},{"../locale/fr_fr/common":45,"./codegen":7,"./constants":8,"./dom":9,"./feedbackBlocks":11,"./templates/buttons.html":19,"./templates/code.html":20,"./templates/shareFailure.html":26,"./templates/sharing.html":27,"./templates/showCode.html":28,"./templates/trophy.html":29,"./utils":43,"./xml":44}],11:[function(require,module,exports){
+var constants = require('./constants');
+var readonly = require('./templates/readonly.html');
+
+TestResults = constants.TestResults;
+
+// TODO (br-pair): can we not pass in the studioAppSingleton
+var FeedbackBlocks = function(options, missingRequiredBlocks, studioAppSingleton) {
+  // Check whether blocks are embedded in the hint returned from dashboard.
+  // See below comment for format.
+  var embeddedBlocks = options.response && options.response.hint &&
+      options.response.hint.indexOf("[{") !== 0;
+  if (!embeddedBlocks &&
+      options.feedbackType !== TestResults.MISSING_BLOCK_UNFINISHED &&
+      options.feedbackType !== TestResults.MISSING_BLOCK_FINISHED) {
+    return;
+  }
+
+  var blocksToDisplay = [];
+  if (embeddedBlocks) {
+    // Hint should be of the form: SOME TEXT [{..}, {..}, ..] IGNORED.
+    // Example: 'Try the following block: [{"type": "maze_moveForward"}]'
+    // Note that double quotes are required by the JSON parser.
+    var parts = options.response.hint.match(/(.*)(\[.*\])/);
+    if (!parts) {
+      return;
+    }
+    options.response.hint = parts[1].trim();  // Remove blocks from hint.
+    try {
+      blocksToDisplay = JSON.parse(parts[2]);
+    } catch(err) {
+      // The blocks could not be parsed.  Ignore them.
+      return;
+    }
+  } else {
+    blocksToDisplay = missingRequiredBlocks.blocksToDisplay;
+    if (missingRequiredBlocks.message) {
+      options.message = missingRequiredBlocks.message;
+    }
+  }
+
+  if (blocksToDisplay.length === 0) {
+    return;
+  }
+
+  this.div = document.createElement('div');
+  this.html = readonly({
+    app: options.app,
+    assetUrl: studioAppSingleton.assetUrl,
+    options: {
+      readonly: true,
+      locale: studioAppSingleton.LOCALE,
+      localeDirection: studioAppSingleton.localeDirection(),
+      baseUrl: studioAppSingleton.BASE_URL,
+      cacheBust: studioAppSingleton.CACHE_BUST,
+      skinId: options.skin,
+      level: options.level,
+      blocks: this.generateXMLForBlocks_(blocksToDisplay)
+    }
+  });
+  this.iframe = document.createElement('iframe');
+  this.iframe.setAttribute('id', 'feedbackBlocks');
+  this.iframe.setAttribute('allowtransparency', 'true');
+  this.div.appendChild(this.iframe);
+};
+
+module.exports = FeedbackBlocks;
+
+FeedbackBlocks.prototype.show = function() {
+  var iframe = document.getElementById('feedbackBlocks');
+  if (iframe) {
+    var doc = iframe.contentDocument || iframe.contentWindow.document;
+    doc.open();
+    doc.write(this.html);
+    doc.close();
+  }
+};
+
+/**
  * Creates the XML for blocks to be displayed in a read-only frame.
  * @param {Array} blocks An array of blocks to display (with optional args).
  * @return {string} The generated string of XML.
  */
-var generateXMLForBlocks = function(blocks) {
+FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
   var blockXMLStrings = [];
   var blockX = 10;  // Prevent left output plugs from being cut off.
   var blockY = 0;
@@ -3331,107 +3677,7 @@ var generateXMLForBlocks = function(blocks) {
   return blockXMLStrings.join('');
 };
 
-/**
- * Check for '???' instead of a value in block fields.
- */
-function hasQuestionMarksInNumberField() {
-  return Blockly.mainBlockSpace.getAllBlocks().some(function(block) {
-    return block.getTitles().some(function(title) {
-      return title.value_ === '???';
-    });
-  });
-}
-
-/**
- * Ensure that all procedure definitions actually use the parameters they define
- * inside the procedure.
- */
-function hasUnusedParam() {
-  return Blockly.mainBlockSpace.getAllBlocks().some(function(userBlock) {
-    var params = userBlock.parameterNames_;
-    // Only search procedure definitions
-    return params && params.some(function(paramName) {
-      // Unused param if there's no parameters_get descendant with the same name
-      return !hasMatchingDescendant(userBlock, function(block) {
-        return (block.type === 'parameters_get' ||
-            block.type === 'functional_parameters_get' ||
-            block.type === 'variables_get') &&
-            block.getTitleValue('VAR') === paramName;
-      });
-    });
-  });
-}
-
-/**
- * Ensure that all procedure calls have each parameter input connected.
- */
-function hasParamInputUnattached() {
-  return Blockly.mainBlockSpace.getAllBlocks().some(function(userBlock) {
-    // Only check procedure_call* blocks
-    if (!/^procedures_call/.test(userBlock.type)) {
-      return false;
-    }
-    return userBlock.inputList.filter(function(input) {
-      return (/^ARG/.test(input.name));
-    }).some(function(argInput) {
-      // Unattached param input if any ARG* connection target is null
-      return !argInput.connection.targetConnection;
-    });
-  });
-}
-
-/**
- * Ensure that all user-declared procedures have associated call blocks.
- */
-function hasUnusedFunction() {
-  var userDefs = [];
-  var callBlocks = {};
-  Blockly.mainBlockSpace.getAllBlocks().forEach(function (block) {
-    var name = block.getTitleValue('NAME');
-    if (/^procedures_def/.test(block.type) && block.userCreated) {
-      userDefs.push(name);
-    } else if (/^procedures_call/.test(block.type)) {
-      callBlocks[name] = true;
-    }
-  });
-  // Unused function if some user def doesn't have a matching call
-  return userDefs.some(function(name) { return !callBlocks[name]; });
-}
-
-/**
- * Ensure there are no incomplete blocks inside any function definitions.
- */
-function hasIncompleteBlockInFunction() {
-  return Blockly.mainBlockSpace.getAllBlocks().some(function(userBlock) {
-    // Only search procedure definitions
-    if (!userBlock.parameterNames_) {
-      return false;
-    }
-    return hasMatchingDescendant(userBlock, function(block) {
-      // Incomplete block if any input connection target is null
-      return block.inputList.some(function(input) {
-        return input.type === Blockly.INPUT_VALUE &&
-            !input.connection.targetConnection;
-      });
-    });
-  });
-}
-
-/**
- * Returns true if any descendant (inclusive) of the given node matches the
- * given filter.
- */
-function hasMatchingDescendant(node, filter) {
-  if (filter(node)) {
-    return true;
-  }
-  return node.childBlocks_.some(function (child) {
-    return hasMatchingDescendant(child, filter);
-  });
-}
-
-
-},{"../locale/fr_fr/common":44,"./codegen":7,"./constants":8,"./dom":9,"./templates/buttons.html":18,"./templates/code.html":19,"./templates/readonly.html":24,"./templates/shareFailure.html":25,"./templates/sharing.html":26,"./templates/showCode.html":27,"./templates/trophy.html":28,"./utils":42,"./xml":43}],11:[function(require,module,exports){
+},{"./constants":8,"./templates/readonly.html":25}],12:[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-22
  * http://eightmedia.github.io/hammer.js
  *
@@ -5595,7 +5841,7 @@ if(typeof define == 'function' && define.amd) {
 }
 
 })(window);
-},{}],12:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 // Functions for checking required blocks.
 
 /**
@@ -5654,12 +5900,12 @@ exports.define = function(name) {
   };
 };
 
-},{}],13:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 (function (global){
 /**
  * @license
  * Lo-Dash 2.4.1 (Custom Build) <http://lodash.com/>
- * Build: `lodash include="debounce,reject,map,value,range,without,sample,create,flatten,isEmpty,wrap,size" --output src/lodash.js`
+ * Build: `lodash include="debounce,reject,map,value,range,without,sample,create,flatten,isEmpty,wrap,size,bind" --output src/lodash.js`
  * Copyright 2012-2013 The Dojo Foundation <http://dojofoundation.org/>
  * Based on Underscore.js 1.5.2 <http://underscorejs.org/LICENSE>
  * Copyright 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -8607,7 +8853,7 @@ exports.define = function(name) {
 }.call(this));
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],14:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
@@ -8885,7 +9131,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"../locale/fr_fr/common":44,"./block_utils":4,"./utils":42,"./xml":43}],15:[function(require,module,exports){
+},{"../locale/fr_fr/common":45,"./block_utils":5,"./utils":43,"./xml":44}],16:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -8959,7 +9205,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{}],16:[function(require,module,exports){
+},{}],17:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -9224,7 +9470,7 @@ Slider.bindEvent_ = function(element, name, func) {
 
 module.exports = Slider;
 
-},{"./dom":9}],17:[function(require,module,exports){
+},{"./dom":9}],18:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9245,7 +9491,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":46}],18:[function(require,module,exports){
+},{"ejs":47}],19:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9266,7 +9512,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/fr_fr/common":44,"ejs":46}],19:[function(require,module,exports){
+},{"../../locale/fr_fr/common":45,"ejs":47}],20:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9287,7 +9533,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":46}],20:[function(require,module,exports){
+},{"ejs":47}],21:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9308,7 +9554,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/fr_fr/common":44,"ejs":46}],21:[function(require,module,exports){
+},{"../../locale/fr_fr/common":45,"ejs":47}],22:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9322,7 +9568,7 @@ escape = escape || function (html){
 var buf = [];
 with (locals || {}) { (function(){ 
  buf.push('');1; var msg = require('../../locale/fr_fr/common') ; buf.push('\n\n');3; var root = location.protocol + '//' + location.host.replace('learn\.', '').replace('studio\.', ''); 
-; buf.push('\n\n<div id="learn">\n\n  <h1><a href="', escape((7,  root )), '">', escape((7,  msg.wantToLearn() )), '</a></h1>\n  <a href="', escape((8,  root )), '"><img id="learn-to-code" src="', escape((8,  StudioApp.assetUrl('media/promo.png') )), '"></a>\n  <a href="', escape((9,  root )), '">', escape((9,  msg.watchVideo() )), '</a>\n  <a href="', escape((10,  root )), '">', escape((10,  msg.tryHOC() )), '</a>\n  <a href="', escape((11,  location.protocol + '//' + location.host 
+; buf.push('\n\n<div id="learn">\n\n  <h1><a href="', escape((7,  root )), '">', escape((7,  msg.wantToLearn() )), '</a></h1>\n  <a href="', escape((8,  root )), '"><img id="learn-to-code" src="', escape((8,  assetUrl('media/promo.png') )), '"></a>\n  <a href="', escape((9,  root )), '">', escape((9,  msg.watchVideo() )), '</a>\n  <a href="', escape((10,  root )), '">', escape((10,  msg.tryHOC() )), '</a>\n  <a href="', escape((11,  location.protocol + '//' + location.host 
 )), '">', escape((11,  msg.signup() )), '</a>\n\n</div>\n'); })();
 } 
 return buf.join('');
@@ -9331,7 +9577,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/fr_fr/common":44,"ejs":46}],22:[function(require,module,exports){
+},{"../../locale/fr_fr/common":45,"ejs":47}],23:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9352,7 +9598,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/fr_fr/common":44,"ejs":46}],23:[function(require,module,exports){
+},{"../../locale/fr_fr/common":45,"ejs":47}],24:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9377,7 +9623,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/fr_fr/common":44,"ejs":46}],24:[function(require,module,exports){
+},{"../../locale/fr_fr/common":45,"ejs":47}],25:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9399,7 +9645,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":46}],25:[function(require,module,exports){
+},{"ejs":47}],26:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9420,7 +9666,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":46}],26:[function(require,module,exports){
+},{"ejs":47}],27:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9433,7 +9679,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/fr_fr/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n  <div class="social-buttons">\n  ');10; if (!options.onMainPage) { ; buf.push('\n    <button id="print-button">\n      ', escape((12,  msg.print() )), '\n    </button>\n  ');14; } ; buf.push('\n');15; if (options.alreadySaved) { ; buf.push('\n  <button class="saved-to-gallery" disabled>\n    ', escape((17,  msg.savedToGallery() )), '\n  </button>\n');19; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((21,  msg.saveToGallery() )), '\n  </button>\n');23; } ; buf.push('\n  </div>\n\n');26; if (options.response && options.response.level_source) { ; buf.push('\n  ');27; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((28,  options.appStrings.sharingText )), '</div>\n  ');29; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((32,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');36; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((36,  options.facebookUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((37,  StudioApp.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');39; }; buf.push('\n    ');40; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((40,  options.twitterUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((41,  StudioApp.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');43; }; buf.push('    ');43; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((44,  StudioApp.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');46; }; buf.push('    ');46; if (options.level.shapewaysUrl && !options.onMainPage && options.sendToPhone) {; buf.push('      <a id="sharing-shapeways" href="" onClick="return false;">\n        <img src=\'', escape((47,  StudioApp.assetUrl("media/shapeways_purple.png") )), '\' />\n      </a>\n    ');49; }; buf.push('  </div>\n');50; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n');58; if (options.response && options.response.level_source && options.level.shapewaysUrl) {; buf.push('  <div id="shapeways-message" class="sharing" style="display: none">\n    <div id="shapeways-message-body">You\'ll be redirected to Shapeways.com to order and purchase a 3D print.</div>\n    <button id="shapeways-print-go-button" onclick="window.open(\'', escape((60,  options.level.shapewaysUrl )), '\', \'_blank\')">Go to Shapeways</button>\n    <div id="shapeways-message-body-disclaimer">Students under 13 years need a parent or guardian to do 3D printing.</div>\n  </div>\n');63; }; buf.push(''); })();
+ buf.push('');1; var msg = require('../../locale/fr_fr/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n  <div class="social-buttons">\n  ');10; if (!options.onMainPage) { ; buf.push('\n    <button id="print-button">\n      ', escape((12,  msg.print() )), '\n    </button>\n  ');14; } ; buf.push('\n');15; if (options.alreadySaved) { ; buf.push('\n  <button class="saved-to-gallery" disabled>\n    ', escape((17,  msg.savedToGallery() )), '\n  </button>\n');19; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((21,  msg.saveToGallery() )), '\n  </button>\n');23; } ; buf.push('\n  </div>\n\n');26; if (options.response && options.response.level_source) { ; buf.push('\n  ');27; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((28,  options.appStrings.sharingText )), '</div>\n  ');29; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((32,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');36; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((36,  options.facebookUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((37,  options.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');39; }; buf.push('\n    ');40; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((40,  options.twitterUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((41,  options.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');43; }; buf.push('    ');43; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((44,  options.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');46; }; buf.push('    ');46; if (options.level.shapewaysUrl && !options.onMainPage && options.sendToPhone) {; buf.push('      <a id="sharing-shapeways" href="" onClick="return false;">\n        <img src=\'', escape((47,  options.assetUrl("media/shapeways_purple.png") )), '\' />\n      </a>\n    ');49; }; buf.push('  </div>\n');50; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n');58; if (options.response && options.response.level_source && options.level.shapewaysUrl) {; buf.push('  <div id="shapeways-message" class="sharing" style="display: none">\n    <div id="shapeways-message-body">You\'ll be redirected to Shapeways.com to order and purchase a 3D print.</div>\n    <button id="shapeways-print-go-button" onclick="window.open(\'', escape((60,  options.level.shapewaysUrl )), '\', \'_blank\')">Go to Shapeways</button>\n    <div id="shapeways-message-body-disclaimer">Students under 13 years need a parent or guardian to do 3D printing.</div>\n  </div>\n');63; }; buf.push(''); })();
 } 
 return buf.join('');
 };
@@ -9441,7 +9687,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/fr_fr/common":44,"ejs":46}],27:[function(require,module,exports){
+},{"../../locale/fr_fr/common":45,"ejs":47}],28:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9462,7 +9708,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/fr_fr/common":44,"ejs":46}],28:[function(require,module,exports){
+},{"../../locale/fr_fr/common":45,"ejs":47}],29:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9483,7 +9729,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":46}],29:[function(require,module,exports){
+},{"ejs":47}],30:[function(require,module,exports){
 /**
  * Blockly Demo: Turtle Graphics
  *
@@ -9509,8 +9755,8 @@ return buf.join('');
  */
 'use strict';
 
-var api = require('./api');
-var StudioApp = require('../base');
+var ArtistAPI = require('./api');
+var api = new ArtistAPI();
 
 var setRandomVisibleColour = function() {
   var num = Math.floor(Math.random() * Math.pow(2, 24));
@@ -9573,8 +9819,6 @@ var drawHouse = function(length) {
  * To create an answer, just solve the level in Blockly, then paste the
  * resulting JavaScript here, moving any functions to the beginning of
  * this function.
- *
- * Warning: Has side effects to StudioApp.
  */
 exports.answer = function(page, level) {
   api.log = [];
@@ -9829,25 +10073,33 @@ exports.answer = function(page, level) {
       break;
     }
   }
-  StudioApp.reset();
   return api.log;
 };
 
-},{"../base":3,"./api":30}],30:[function(require,module,exports){
-var StudioApp = require('../base');
+},{"./api":31}],31:[function(require,module,exports){
 var utils = require('../utils');
 var _ = utils.getLodash();
 
-exports.log = [];
+/**
+ * An instantiable Artist API logic. The methods on this object are called by
+ * generated user code. As they are called, they insert commands into this.log.
+ * NOTE: this.log is also modified in some cases externally (both accessed and
+ * I think cleared).
+ */
+var ArtistAPI = function () {
+  this.log = [];
+};
 
-exports.drawCircle = function (size, id) {
+module.exports = ArtistAPI;
+
+ArtistAPI.prototype.drawCircle = function (size, id) {
   for (var i = 0; i < 36; i++) {
-    exports.moveForward(size, id);
-    exports.turnRight(10, id);
+    this.moveForward(size, id);
+    this.turnRight(10, id);
   }
 };
 
-exports.drawSnowflake = function (type, id) {
+ArtistAPI.prototype.drawSnowflake = function (type, id) {
   var i, j, k;
 
   // mirors Blockly.JavaScript.colour_random.
@@ -9863,162 +10115,162 @@ exports.drawSnowflake = function (type, id) {
   switch(type) {
     case 'fractal':
       for (i = 0; i < 8; i++) {
-        exports.jumpForward(45, id);
-        exports.turnLeft(45, id);
+        this.jumpForward(45, id);
+        this.turnLeft(45, id);
         for (j = 0; j < 3; j++) {
           for (k = 0; k < 3; k++) {
-            exports.moveForward(15, id);
-            exports.moveBackward(15, id);
-            exports.turnRight(45, id);
+            this.moveForward(15, id);
+            this.moveBackward(15, id);
+            this.turnRight(45, id);
           }
-          exports.turnLeft(90, id);
-          exports.moveBackward(15, id);
-          exports.turnLeft(45, id);
+          this.turnLeft(90, id);
+          this.moveBackward(15, id);
+          this.turnLeft(45, id);
         }
-        exports.turnRight(90, id);
+        this.turnRight(90, id);
       }
       break;
 
     case 'flower':
       for (i = 0; i < 5; i++) {
-        exports.drawCircle(2, id);
-        exports.drawCircle(4, id);
-        exports.turnRight(72, id);
+        this.drawCircle(2, id);
+        this.drawCircle(4, id);
+        this.turnRight(72, id);
       }
       break;
 
     case 'spiral':
       for (i = 0; i < 20; i++) {
-        exports.drawCircle(3, id);
-        exports.moveForward(20, id);
-        exports.turnRight(18, id);
+        this.drawCircle(3, id);
+        this.moveForward(20, id);
+        this.turnRight(18, id);
       }
       break;
 
     case 'line':
       for (i = 0; i < 90; i++) {
-        exports.penColour(random_colour());
-        exports.moveForward(50, id);
-        exports.moveBackward(50, id);
-        exports.turnRight(4, id);
+        this.penColour(random_colour());
+        this.moveForward(50, id);
+        this.moveBackward(50, id);
+        this.turnRight(4, id);
       }
-      exports.penColour("#FFFFFF", id);
+      this.penColour("#FFFFFF", id);
       break;
 
     case 'parallelogram':
       for (i = 0; i < 10; i++) {
         for (j = 0; j < 2; j++) {
-          exports.moveForward(50, id);
-          exports.turnRight(60, id);
-          exports.moveForward(50, id);
-          exports.turnRight(120, id);
+          this.moveForward(50, id);
+          this.turnRight(60, id);
+          this.moveForward(50, id);
+          this.turnRight(120, id);
         }
-        exports.turnRight(36, id);
+        this.turnRight(36, id);
       }
       break;
 
     case 'square':
       for (i = 0; i < 10; i++) {
         for (j = 0; j < 4; j++) {
-          exports.moveForward(50, id);
-          exports.turnRight(90, id);
+          this.moveForward(50, id);
+          this.turnRight(90, id);
         }
-        exports.turnRight(36, id);
+        this.turnRight(36, id);
       }
       break;
   }
 };
 
 
-exports.moveForward = function(distance, id) {
+ArtistAPI.prototype.moveForward = function(distance, id) {
   this.log.push(['FD', distance, id]);
 };
 
-exports.moveBackward = function(distance, id) {
+ArtistAPI.prototype.moveBackward = function(distance, id) {
   this.log.push(['FD', -distance, id]);
 };
 
-exports.moveUp = function(distance, id) {
+ArtistAPI.prototype.moveUp = function(distance, id) {
   this.log.push(['MV', distance, 0, id]);
 };
 
-exports.moveDown = function(distance, id) {
+ArtistAPI.prototype.moveDown = function(distance, id) {
   this.log.push(['MV', distance, 180, id]);
 };
 
-exports.moveLeft = function(distance, id) {
+ArtistAPI.prototype.moveLeft = function(distance, id) {
   this.log.push(['MV', distance, 270, id]);
 };
 
-exports.moveRight = function(distance, id) {
+ArtistAPI.prototype.moveRight = function(distance, id) {
   this.log.push(['MV', distance, 90, id]);
 };
 
-exports.jumpUp = function(distance, id) {
+ArtistAPI.prototype.jumpUp = function(distance, id) {
   this.log.push(['JD', distance, 0, id]);
 };
 
-exports.jumpDown = function(distance, id) {
+ArtistAPI.prototype.jumpDown = function(distance, id) {
   this.log.push(['JD', distance, 180, id]);
 };
 
-exports.jumpLeft = function(distance, id) {
+ArtistAPI.prototype.jumpLeft = function(distance, id) {
   this.log.push(['JD', distance, 270, id]);
 };
 
-exports.jumpRight = function(distance, id) {
+ArtistAPI.prototype.jumpRight = function(distance, id) {
   this.log.push(['JD', distance, 90, id]);
 };
 
-exports.jumpForward = function(distance, id) {
+ArtistAPI.prototype.jumpForward = function(distance, id) {
   this.log.push(['JF', distance, id]);
 };
 
-exports.jumpBackward = function(distance, id) {
+ArtistAPI.prototype.jumpBackward = function(distance, id) {
   this.log.push(['JF', -distance, id]);
 };
 
-exports.turnRight = function(angle, id) {
+ArtistAPI.prototype.turnRight = function(angle, id) {
   this.log.push(['RT', angle, id]);
 };
 
-exports.turnLeft = function(angle, id) {
+ArtistAPI.prototype.turnLeft = function(angle, id) {
   this.log.push(['RT', -angle, id]);
 };
 
-exports.penUp = function(id) {
+ArtistAPI.prototype.penUp = function(id) {
   this.log.push(['PU', id]);
 };
 
-exports.penDown = function(id) {
+ArtistAPI.prototype.penDown = function(id) {
   this.log.push(['PD', id]);
 };
 
-exports.penWidth = function(width, id) {
+ArtistAPI.prototype.penWidth = function(width, id) {
   this.log.push(['PW', Math.max(width, 0), id]);
 };
 
-exports.penColour = function(colour, id) {
+ArtistAPI.prototype.penColour = function(colour, id) {
   this.log.push(['PC', colour, id]);
 };
 
-exports.penPattern = function(pattern, id) {
+ArtistAPI.prototype.penPattern = function(pattern, id) {
   this.log.push(['PS', pattern, id]);
 };
 
-exports.hideTurtle = function(id) {
+ArtistAPI.prototype.hideTurtle = function(id) {
   this.log.push(['HT', id]);
 };
 
-exports.showTurtle = function(id) {
+ArtistAPI.prototype.showTurtle = function(id) {
   this.log.push(['ST', id]);
 };
 
-exports.drawStamp = function(stamp, id) {
+ArtistAPI.prototype.drawStamp = function(stamp, id) {
   this.log.push(['stamp', stamp, id]);
 };
 
-},{"../base":3,"../utils":42}],31:[function(require,module,exports){
+},{"../utils":43}],32:[function(require,module,exports){
 /**
  * Blockly Demo: Turtle Graphics
  *
@@ -10044,7 +10296,7 @@ exports.drawStamp = function(stamp, id) {
  */
 'use strict';
 
-var Colours = require('./core').Colours;
+var Colours = require('./colours');
 var msg = require('../../locale/fr_fr/turtle');
 var commonMsg = require('../../locale/fr_fr/common');
 
@@ -10354,7 +10606,7 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.draw_a_square = function() {
     // Generate JavaScript for drawing a square.
     var value_length = generator.valueToCode(
-        this, 'VALUE', generator.ORDER_ATOMIC);
+        this, 'VALUE', generator.ORDER_ATOMIC) || 0;
     var loopVar = gensym('count');
     return [
         // The generated comment helps detect required blocks.
@@ -10879,7 +11131,7 @@ exports.install = function(blockly, blockInstallOptions) {
       this.appendDummyInput()
            .appendTitle(msg.setPattern())
            .appendTitle( new blockly.FieldImageDropdown(
-              Turtle.lineStylePatternOptions, 150, 20 ), 'VALUE' );
+              skin.lineStylePatternOptions, 150, 20 ), 'VALUE' );
       this.setTooltip(msg.setPattern());
     }
   };
@@ -10954,19 +11206,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
   // block is currently unused. if we want to add it back in the future, add
   // stamp images here
-  blockly.Blocks.turtle_stamp.VALUES = [
-    [skin.avatar, 'DEFAULT']
-  ];
-
-  // Preload stamp images
-  Turtle.stamps = [];
-  for (var i = 0; i < blockly.Blocks.turtle_stamp.VALUES.length; i++) {
-    var url = blockly.Blocks.turtle_stamp.VALUES[i][0];
-    var key = blockly.Blocks.turtle_stamp.VALUES[i][1];
-    var img = new Image();
-    img.src = url;
-    Turtle.stamps[key] = img;
-  }
+  blockly.Blocks.turtle_stamp.VALUES = skin.stampValues;
 
   generator.turtle_stamp = function () {
     return 'Turtle.drawStamp("' + this.getTitleValue('VALUE') +
@@ -10976,34 +11216,13 @@ exports.install = function(blockly, blockInstallOptions) {
   customLevelBlocks.install(blockly, generator, gensym);
 };
 
-},{"../../locale/fr_fr/common":44,"../../locale/fr_fr/turtle":45,"./core":33,"./customLevelBlocks":34,"./turtle":41}],32:[function(require,module,exports){
-module.exports= (function() {
-  var t = function anonymous(locals, filters, escape, rethrow) {
-escape = escape || function (html){
-  return String(html)
-    .replace(/&(?!#?[a-zA-Z0-9]+;)/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/'/g, '&#39;')
-    .replace(/"/g, '&quot;');
-};
-var buf = [];
-with (locals || {}) { (function(){ 
- buf.push('<div id="slider-cell">\n  <svg id="slider"\n       xmlns="http://www.w3.org/2000/svg"\n       xmlns:svg="http://www.w3.org/2000/svg"\n       xmlns:xlink="http://www.w3.org/1999/xlink"\n       version="1.1"\n       width="150"\n       height="50">\n      <!-- Slow icon. -->\n      <clipPath id="slowClipPath">\n        <rect width=26 height=12 x=5 y=14 />\n      </clipPath>\n      <image xlink:href="', escape((13,  assetUrl('media/turtle/icons.png') )), '" height=42 width=84 x=-21 y=-10\n          clip-path="url(#slowClipPath)" />\n      <!-- Fast icon. -->\n      <clipPath id="fastClipPath">\n        <rect width=26 height=16 x=120 y=10 />\n      </clipPath>\n      <image xlink:href="', escape((19,  assetUrl('media/turtle/icons.png') )), '" height=42 width=84 x=120 y=-11\n          clip-path="url(#fastClipPath)" />\n  </svg>\n  <img id="spinner" style="visibility: hidden;" src="', escape((22,  assetUrl('media/turtle/loading.gif') )), '" height=15 width=15>\n</div>\n'); })();
-} 
-return buf.join('');
-};
-  return function(locals) {
-    return t(locals, require("ejs").filters);
-  }
-}());
-},{"ejs":46}],33:[function(require,module,exports){
+},{"../../locale/fr_fr/common":45,"../../locale/fr_fr/turtle":46,"./colours":33,"./customLevelBlocks":35,"./turtle":42}],33:[function(require,module,exports){
 // Create a limited colour palette to avoid overwhelming new users
 // and to make colour checking easier.  These definitions cannot be
 // moved to blocks.js, which is loaded later, since they are used in
 // top-level definitions below.  Note that the hex digits a-f are
 // lower-case.  This is assumed in comparisons below.
-exports.Colours = {
+var Colours = {
   BLACK: '#000000',
   GREY: '#808080',
   KHAKI: '#c3b091',
@@ -11028,7 +11247,30 @@ exports.Colours = {
   FROZEN9: "#aea4ff"
 };
 
+module.exports = Colours;
+
 },{}],34:[function(require,module,exports){
+module.exports= (function() {
+  var t = function anonymous(locals, filters, escape, rethrow) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!#?[a-zA-Z0-9]+;)/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/'/g, '&#39;')
+    .replace(/"/g, '&quot;');
+};
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('<div id="slider-cell">\n  <svg id="slider"\n       xmlns="http://www.w3.org/2000/svg"\n       xmlns:svg="http://www.w3.org/2000/svg"\n       xmlns:xlink="http://www.w3.org/1999/xlink"\n       version="1.1"\n       width="150"\n       height="50">\n      <!-- Slow icon. -->\n      <clipPath id="slowClipPath">\n        <rect width=26 height=12 x=5 y=14 />\n      </clipPath>\n      <image xlink:href="', escape((13,  assetUrl('media/turtle/icons.png') )), '" height=42 width=84 x=-21 y=-10\n          clip-path="url(#slowClipPath)" />\n      <!-- Fast icon. -->\n      <clipPath id="fastClipPath">\n        <rect width=26 height=16 x=120 y=10 />\n      </clipPath>\n      <image xlink:href="', escape((19,  assetUrl('media/turtle/icons.png') )), '" height=42 width=84 x=120 y=-11\n          clip-path="url(#fastClipPath)" />\n  </svg>\n  <img id="spinner" style="visibility: hidden;" src="', escape((22,  assetUrl('media/turtle/loading.gif') )), '" height=15 width=15>\n</div>\n'); })();
+} 
+return buf.join('');
+};
+  return function(locals) {
+    return t(locals, require("ejs").filters);
+  }
+}());
+},{"ejs":47}],35:[function(require,module,exports){
 /**
  * A set of blocks used by some of our custom levels (i.e. built by level builder)
  */
@@ -11717,9 +11959,9 @@ function installCreateASnowflakeDropdown(blockly, generator, gensym) {
   };
 }
 
-},{"../../locale/fr_fr/turtle":45,"../utils":42}],35:[function(require,module,exports){
+},{"../../locale/fr_fr/turtle":46,"../utils":43}],36:[function(require,module,exports){
 var levelBase = require('../level_base');
-var Colours = require('./core').Colours;
+var Colours = require('./colours');
 var answer = require('./answers').answer;
 var msg = require('../../locale/fr_fr/turtle');
 var blockUtils = require('../block_utils');
@@ -12619,9 +12861,14 @@ levels.ec_1_10 = utils.extend(levels['1_10'], {
   'startBlocks': "moveForward(100);\n",
 });
 
-},{"../../locale/fr_fr/turtle":45,"../block_utils":4,"../level_base":12,"../utils":42,"./answers":29,"./core":33,"./requiredBlocks":37,"./startBlocks.xml":39,"./toolbox.xml":40}],36:[function(require,module,exports){
+},{"../../locale/fr_fr/turtle":46,"../block_utils":5,"../level_base":13,"../utils":43,"./answers":30,"./colours":33,"./requiredBlocks":38,"./startBlocks.xml":40,"./toolbox.xml":41}],37:[function(require,module,exports){
 var appMain = require('../appMain');
-window.Turtle = require('./turtle');
+// TODO (br-pair): We're doing this so that other apps can still have StudioApp
+// in the global namespace, while ensuring that we don't. Ultimately nobody
+// should have it, and we can remove this.
+window.StudioApp = undefined;
+var studioAppSingleton = require('../base');
+var Artist = require('./turtle');
 var blocks = require('./blocks');
 var skins = require('./skins');
 var levels = require('./levels');
@@ -12629,10 +12876,16 @@ var levels = require('./levels');
 window.turtleMain = function(options) {
   options.skinsModule = skins;
   options.blocksModule = blocks;
-  appMain(window.Turtle, levels, options);
+  var artist = new Artist();
+
+  window.__TestInterface.setSpeedSliderValue = function (value) {
+    artist.speedSlider.setValue(value);
+  };
+  artist.injectStudioApp(studioAppSingleton);
+  appMain(artist, levels, options);
 };
 
-},{"../appMain":2,"./blocks":31,"./levels":35,"./skins":38,"./turtle":41}],37:[function(require,module,exports){
+},{"../appMain":3,"../base":4,"./blocks":32,"./levels":36,"./skins":39,"./turtle":42}],38:[function(require,module,exports){
 /**
  * Sets BlocklyApp constants that depend on the page and level.
  * This encapsulates many functions used for StudioApp.REQUIRED_BLOCKS.
@@ -12836,7 +13089,7 @@ module.exports = {
   defineWithArg: defineWithArg,
 };
 
-},{"../required_block_utils":14}],38:[function(require,module,exports){
+},{"../required_block_utils":15}],39:[function(require,module,exports){
 var skinBase = require('../skins');
 
 exports.load = function (assetUrl, id) {
@@ -12869,16 +13122,35 @@ exports.load = function (assetUrl, id) {
   // base skin properties here (can be overriden by CONFIG)
   skin.speedModifier = 1;
 
+  // stamps aren't actually used on production anywhere right now. if we were
+  // to want to use them, define the mapping from image to name here.
+  skin.stampValues = [
+    [skin.avatar, 'DEFAULT']
+  ];
+
   // Get properties from config
   var isAsset = /\.\S{3}$/; // ends in dot followed by three non-whitespace chars
   for (var prop in config) {
     skin[prop] = config[prop];
   }
 
+  // TODO (br-pair) : Some of these keys are actually undefined. Clean this up
+  skin.lineStylePatternOptions = [
+    [skin.patternDefault, 'DEFAULT'], //  signals return to default path drawing
+    [skin.rainbowMenu, 'rainbowLine'],  // set to property name for image within skin
+    [skin.ropeMenu, 'ropeLine'],  // referenced as skin[pattern];
+    [skin.squigglyMenu, 'squigglyLine'],
+    [skin.swirlyMenu, 'swirlyLine'],
+    [skin.annaLine, 'annaLine'],
+    [skin.elsaLine, 'elsaLine'],
+    [skin.annaLine_2x, 'annaLine_2x'],
+    [skin.elsaLine_2x, 'elsaLine_2x'],
+  ];
+
   return skin;
 };
 
-},{"../skins":15}],39:[function(require,module,exports){
+},{"../skins":16}],40:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -12945,7 +13217,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/fr_fr/turtle":45,"ejs":46}],40:[function(require,module,exports){
+},{"../../locale/fr_fr/turtle":46,"ejs":47}],41:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -13074,7 +13346,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/fr_fr/turtle":45,"ejs":46}],41:[function(require,module,exports){
+},{"../../locale/fr_fr/turtle":46,"ejs":47}],42:[function(require,module,exports){
 /**
  * Blockly Demo: Turtle Graphics
  *
@@ -13094,34 +13366,25 @@ return buf.join('');
  * limitations under the License.
  */
 
+// Globals used in this file:
+//  Blockly
+
 /**
  * @fileoverview Demonstration of Blockly: Turtle Graphics.
  * @author fraser@google.com (Neil Fraser)
  */
 'use strict';
 
-window.Turtle = module.exports;
-
-/**
- * Create a namespace for the application.
- */
-var StudioApp = require('../base');
-var Turtle = module.exports;
 var commonMsg = require('../../locale/fr_fr/common');
 var turtleMsg = require('../../locale/fr_fr/turtle');
 var levels = require('./levels');
-var Colours = require('./core').Colours;
+var Colours = require('./colours');
 var codegen = require('../codegen');
-var api = require('./api');
+var ArtistAPI = require('./api');
 var page = require('../templates/page.html');
-var feedback = require('../feedback.js');
 var utils = require('../utils');
-
-var level;
-var skin;
-
-StudioApp.CHECK_FOR_EMPTY_BLOCKS = true;
-StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
+var Slider = require('../slider');
+var _ = utils.getLodash();
 
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
@@ -13132,427 +13395,15 @@ var SMOOTH_ANIMATE_STEP_SIZE = 5;
 var FAST_SMOOTH_ANIMATE_STEP_SIZE = 15;
 
 /**
- * Minimum joint segment length
- */
+* Minimum joint segment length
+*/
 var JOINT_SEGMENT_LENGTH = 50;
 
-// image icons and image paths for the 'set pattern block'
-exports.lineStylePatternOptions = [];
-
 /**
- * PID of animation task currently executing.
+ * An x offset against the sprite edge where the decoration should be drawn,
+ * along with whether it should be drawn before or after the turtle sprite itself.
  */
-Turtle.pid = 0;
-
-/**
- * Should the turtle be drawn?
- */
-Turtle.visible = true;
-
-/**
- * Set a turtle heading.
- */
-Turtle.heading = 0;
-
-/**
- * The avatar image
- */
-Turtle.avatarImage = new Image();
-Turtle.numberAvatarHeadings = undefined;
-
-/**
- * The avatar animation decoration image
- */
-Turtle.decorationAnimationImage = new Image();
-
-/**
- * Drawing with a pattern
- */
-
-Turtle.currentPathPattern = new Image();
-Turtle.loadedPathPatterns = [];
-Turtle.isDrawingWithPattern = false;
-
-function backingScale(context) {
-  // disable retina for now
-  // if ('devicePixelRatio' in window) {
-  //   if (window.devicePixelRatio > 1) {
-  //     return window.devicePixelRatio;
-  //   }
-  // }
-  return 1;
-}
-
-var retina = 1;
-
-/**
- * Initialize Blockly and the turtle.  Called on page load.
- */
-Turtle.init = function(config) {
-
-  skin = config.skin;
-  level = config.level;
-
-  exports.lineStylePatternOptions = [
-    [skin.patternDefault, 'DEFAULT'], //  signals return to default path drawing
-    [skin.rainbowMenu, 'rainbowLine'],  // set to property name for image within skin
-    [skin.ropeMenu, 'ropeLine'],  // referenced as skin[pattern];
-    [skin.squigglyMenu, 'squigglyLine'],
-    [skin.swirlyMenu, 'swirlyLine'],
-    [skin.annaLine, 'annaLine'],
-    [skin.elsaLine, 'elsaLine'],
-    [skin.annaLine_2x, 'annaLine_2x'],
-    [skin.elsaLine_2x, 'elsaLine_2x'],
-  ];
-
-  if (skin.id == "anna" || skin.id == "elsa")
-  {
-    retina = backingScale();
-
-    // We don't support ratios other than 2 right now (sorry!) so fall back to 1.
-    if (retina != 2)
-      retina = 1;
-
-    // let's try adding a background image
-    level.images = [{}];
-    if (retina > 1) {
-      level.images[0].filename = 'background_2x.jpg';
-    }
-    else {
-      level.images[0].filename = 'background.jpg';
-    }
-
-    level.images[0].position = [ 0, 0 ];
-    level.images[0].scale = 1;
-  }
-
-  config.grayOutUndeletableBlocks = true;
-  config.forceInsertTopBlock = 'when_run';
-
-  if (skin.id == "anna")
-  {
-    Turtle.AVATAR_WIDTH = 73;
-    Turtle.AVATAR_HEIGHT = 100;
-  }
-  else if (skin.id == "elsa")
-  {
-    Turtle.AVATAR_WIDTH = 73;
-    Turtle.AVATAR_HEIGHT = 100;
-    Turtle.DECORATIONANIMATION_WIDTH = 85;
-    Turtle.DECORATIONANIMATION_HEIGHT = 85;
-  }
-  else
-  {
-    Turtle.AVATAR_WIDTH = 70;
-    Turtle.AVATAR_HEIGHT = 51;
-  }
-
-  config.html = page({
-    assetUrl: StudioApp.assetUrl,
-    data: {
-      localeDirection: StudioApp.localeDirection(),
-      controls: require('./controls.html')({assetUrl: StudioApp.assetUrl}),
-      blockUsed : undefined,
-      idealBlockNumber : undefined,
-      editCode: level.editCode,
-      blockCounterClass : 'block-counter-default'
-    }
-  });
-
-  config.loadAudio = function() {
-    StudioApp.loadAudio(skin.winSound, 'win');
-    StudioApp.loadAudio(skin.startSound, 'start');
-    StudioApp.loadAudio(skin.failureSound, 'failure');
-  };
-
-  config.afterInject = function() {
-    if (StudioApp.usingBlockly) {
-      // Add to reserved word list: API, local variables in execution evironment
-      // (execute) and the infinite loop detection function.
-      //XXX Not sure if this is still right.
-      Blockly.JavaScript.addReservedWords('Turtle,code');
-    }
-
-    // Helper for creating canvas elements.
-    var createCanvas = function(id, width, height) {
-      var el = document.createElement('canvas');
-      el.id = id;
-      el.width = width;
-      el.height = height;
-      return el;
-    };
-
-    // Create hidden canvases.
-    Turtle.ctxAnswer = createCanvas('answer', 400 * retina, 400 * retina).getContext('2d');
-    Turtle.ctxImages = createCanvas('images', 400 * retina, 400 * retina).getContext('2d');
-    Turtle.ctxPredraw = createCanvas('predraw', 400 * retina, 400 * retina).getContext('2d');
-    Turtle.ctxScratch = createCanvas('scratch', 400 * retina, 400 * retina).getContext('2d');
-    Turtle.ctxPattern = createCanvas('pattern', 400 * retina, 400 * retina).getContext('2d');
-    Turtle.ctxFeedback = createCanvas('feedback', 154, 154).getContext('2d');
-
-    // Create display canvas.
-    var display = createCanvas('display', 400 * retina, 400 * retina);
-
-    if (retina > 1)
-    {
-      display.style.width = '400px';
-      display.style.height = '400px';
-    }
-
-    var visualization = document.getElementById('visualization');
-    visualization.appendChild(display);
-    Turtle.ctxDisplay = display.getContext('2d');
-
-
-    if (StudioApp.usingBlockly && (skin.id == "anna" || skin.id == "elsa")) {
-      Blockly.JavaScript.colour_random = function() {
-        // Generate a random colour.
-        if (!Blockly.JavaScript.definitions_.colour_random) {
-          var functionName = Blockly.JavaScript.variableDB_.getDistinctName(
-              'colour_random', Blockly.Generator.NAME_TYPE);
-          Blockly.JavaScript.colour_random.functionName = functionName;
-          var func = [];
-          func.push('function ' + functionName + '() {');
-          func.push('   var colors = ' + JSON.stringify(Blockly.FieldColour.COLOURS) + ';');
-          func.push('  return colors[Math.floor(Math.random()*colors.length)];');
-          func.push('}');
-          Blockly.JavaScript.definitions_.colour_random = func.join('\n');
-        }
-        var code = Blockly.JavaScript.colour_random.functionName + '()';
-        return [code, Blockly.JavaScript.ORDER_FUNCTION_CALL];
-      };
-    }
-
-    Turtle.loadDecorationAnimation();
-
-    // Set their initial contents.
-    Turtle.loadTurtle();
-    Turtle.drawImages();
-    Turtle.isDrawingAnswer_ = true;
-    Turtle.drawAnswer();
-    Turtle.isDrawingAnswer_ = false;
-    if (level.predraw_blocks) {
-      Turtle.isPredrawing_ = true;
-      Turtle.drawBlocksOnCanvas(level.predraw_blocks, Turtle.ctxPredraw);
-      Turtle.isPredrawing_ = false;
-    }
-
-    // pre-load image for line pattern block. Creating the image object and setting source doesn't seem to be
-    // enough in this case, so we're actually creating and reusing the object within the document body.
-
-    if (skin.id == "anna" || skin.id == "elsa")
-    {
-      var imageContainer = document.createElement('div');
-      imageContainer.style.display='none';
-      document.body.appendChild(imageContainer);
-
-      for( var i = 0; i < exports.lineStylePatternOptions.length; i++) {
-        var pattern = exports.lineStylePatternOptions[i][1];
-        if (skin[pattern]) {
-          var img = new Image();
-          img.src = skin[pattern];
-          Turtle.loadedPathPatterns[pattern] = img;
-        }
-      }
-    }
-
-    // Adjust visualizationColumn width.
-    var visualizationColumn = document.getElementById('visualizationColumn');
-    visualizationColumn.style.width = '400px';
-  };
-
-  StudioApp.init(config);
-};
-
-/**
- * On startup draw the expected answer and save it to the answer canvas.
- */
-Turtle.drawAnswer = function() {
-  if (level.solutionBlocks) {
-    Turtle.drawBlocksOnCanvas(level.solutionBlocks, Turtle.ctxAnswer);
-  } else {
-    Turtle.drawLogOnCanvas(level.answer, Turtle.ctxAnswer);
-  }
-};
-
-Turtle.drawLogOnCanvas = function(log, canvas) {
-  StudioApp.reset();
-  while (log.length) {
-    var tuple = log.shift();
-    Turtle.step(tuple[0], tuple.splice(1), {smoothAnimate: false});
-    resetStepInfo();
-  }
-  canvas.globalCompositeOperation = 'copy';
-  canvas.drawImage(Turtle.ctxScratch.canvas, 0, 0);
-  canvas.globalCompositeOperation = 'source-over';
-};
-
-Turtle.drawBlocksOnCanvas = function(blocks, canvas) {
-  var code;
-  if (StudioApp.usingBlockly) {
-    var domBlocks = Blockly.Xml.textToDom(blocks);
-    Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, domBlocks);
-    code = Blockly.Generator.blockSpaceToCode('JavaScript');
-  } else {
-    code = blocks;
-  }
-  Turtle.evalCode(code);
-  if (StudioApp.usingBlockly) {
-    Blockly.mainBlockSpace.clear();
-  }
-  Turtle.drawCurrentBlocksOnCanvas(canvas);
-};
-
-Turtle.drawCurrentBlocksOnCanvas = function(canvas) {
-  Turtle.drawLogOnCanvas(api.log, canvas);
-};
-
-/**
- * Place an image at the specified coordinates.
- * Code from http://stackoverflow.com/questions/5495952. Thanks, Phrogz.
- * @param {string} filename Relative path to image.
- * @param {!Array} position An x-y pair.
- * @param {number} optional scale at which image is drawn
- */
-Turtle.placeImage = function(filename, position, scale) {
-  var img = new Image();
-  img.onload = function() {
-    if (scale) {
-      if (img.width !== 0) {
-        Turtle.ctxImages.drawImage(img, position[0] * retina, position[1] * retina, img.width, img.height, 0, 0, img.width * scale, img.height * scale);
-      }
-    } else {
-      if (img.width !== 0) {
-        Turtle.ctxImages.drawImage(img, position[0] * retina, position[1] * retina);
-      }
-    }
-    Turtle.display();
-  };
-  if (skin.id == "anna" || skin.id == "elsa")
-  {
-    img.src = skin.assetUrl(filename);
-  }
-  else
-  {
-    img.src = StudioApp.assetUrl('media/turtle/' + filename);
-  }
-};
-
-/**
- * Draw the images for this page and level onto Turtle.ctxImages.
- */
-Turtle.drawImages = function() {
-  if (!level.images) {
-    return;
-  }
-  for (var i = 0; i < level.images.length; i++) {
-    var image = level.images[i];
-    Turtle.placeImage(image.filename, image.position, image.scale);
-  }
-  Turtle.ctxImages.globalCompositeOperation = 'copy';
-  Turtle.ctxImages.drawImage(Turtle.ctxScratch.canvas, 0, 0);
-  Turtle.ctxImages.globalCompositeOperation = 'source-over';
-};
-
-/**
- * Initial the turtle image on load.
- */
-Turtle.loadTurtle = function() {
-  Turtle.avatarImage.onload = function() {
-    Turtle.display();
-  };
-  if ((skin.id == "anna" || skin.id == "elsa") && retina > 1)
-    Turtle.avatarImage.src = skin.avatar_2x;
-  else
-    Turtle.avatarImage.src = skin.avatar;
-  if (skin.id == "anna")
-    Turtle.numberAvatarHeadings = 36;
-  else if (skin.id == "elsa")
-    Turtle.numberAvatarHeadings = 18;
-  else
-    Turtle.numberAvatarHeadings = 180;
-  Turtle.avatarImage.spriteHeight = Turtle.AVATAR_HEIGHT;
-  Turtle.avatarImage.spriteWidth = Turtle.AVATAR_WIDTH;
-};
-
-/**
- * Initial the turtle animation deocration on load.
- */
-Turtle.loadDecorationAnimation = function() {
-  if (skin.id == "elsa")
-  {
-    if (retina > 1)
-      Turtle.decorationAnimationImage.src = skin.decorationAnimation_2x;
-    else
-      Turtle.decorationAnimationImage.src = skin.decorationAnimation;
-    Turtle.decorationAnimationImage.height = Turtle.DECORATIONANIMATION_HEIGHT;
-    Turtle.decorationAnimationImage.width = Turtle.DECORATIONANIMATION_WIDTH;
-  }
-};
-
-var turtleFrame = 0;
-
-
-/**
- * Draw the turtle image based on Turtle.x, Turtle.y, and Turtle.heading.
- */
-Turtle.drawTurtle = function() {
-  var sourceY;
-  // Computes the index of the image in the sprite.
-  var index = Math.floor(Turtle.heading * Turtle.numberAvatarHeadings / 360);
-  if (skin.id == "anna" || skin.id == "elsa") {
-    // the rotations in the sprite sheet go in the opposite direction.
-    index = Turtle.numberAvatarHeadings - index;
-
-    // and they are 180 degrees out of phase.
-    index = (index + Turtle.numberAvatarHeadings/2) % Turtle.numberAvatarHeadings;
-  }
-  var sourceX = Turtle.avatarImage.spriteWidth * index;
-  if (skin.id == "anna" || skin.id == "elsa") {
-    sourceY = Turtle.avatarImage.spriteHeight * turtleFrame;
-    turtleFrame = (turtleFrame + 1) % skin.turtleNumFrames;
-  } else {
-    sourceY = 0;
-  }
-  var sourceWidth = Turtle.avatarImage.spriteWidth;
-  var sourceHeight = Turtle.avatarImage.spriteHeight;
-  var destWidth = Turtle.avatarImage.spriteWidth;
-  var destHeight = Turtle.avatarImage.spriteHeight;
-  var destX = Turtle.x - destWidth / 2;
-  var destY = Turtle.y - destHeight + 7;
-
-  if (Turtle.avatarImage.width === 0 || Turtle.avatarImage.height === 0)
-    return;
-
-  if (sourceX * retina < 0 ||
-      sourceY * retina < 0 ||
-      sourceX * retina + sourceWidth  * retina -0 > Turtle.avatarImage.width ||
-      sourceY * retina + sourceHeight * retina > Turtle.avatarImage.height)
-  {
-    if (console && console.log) {
-      console.log("drawImage is out of source bounds!");
-    }
-    return;
-  }
-
-  if (Turtle.avatarImage.width !== 0) {
-    Turtle.ctxDisplay.drawImage(
-      Turtle.avatarImage,
-      Math.round(sourceX * retina), Math.round(sourceY * retina),
-      sourceWidth * retina - 0, sourceHeight * retina,
-      Math.round(destX * retina), Math.round(destY * retina),
-      destWidth * retina - 0, destHeight * retina);
-  }
-
-  /* console.log(Math.round(sourceX * retina), Math.round(sourceY * retina),
-                              sourceWidth * retina, sourceHeight * retina, Math.round(destX * retina), Math.round(destY * retina),
-                              destWidth * retina, destHeight * retina); */
-};
-
-// An x offset against the sprite edge where the decoration should be drawn,
-// along with whether it should be drawn before or after the turtle sprite itself.
-
-var decorationImageDetails = [
+var ELSA_DECORATION_DETAILS = [
   { x: 15, when: "after" },
   { x: 26, when: "after" },
   { x: 37, when: "after" },
@@ -13574,39 +13425,454 @@ var decorationImageDetails = [
 ];
 
 /**
+ * An instantiable Artist class
+ * @param {StudioAppClass} studioApp The studioApp instance to build upon.
+ */
+var Artist = function () {
+  this.skin = null;
+  this.level = null;
+
+  this.api = new ArtistAPI();
+
+  // image icons and image paths for the 'set pattern block'
+  this.lineStylePatternOptions = [];
+  this.stamps = [];
+
+  // PID of animation task currently executing.
+  this.pid = 0;
+
+  // Should the turtle be drawn?
+  this.visible = true;
+
+  // Set a turtle heading.
+  this.heading = 0;
+
+  // The avatar image
+  this.avatarImage = new Image();
+  this.numberAvatarHeadings = undefined;
+
+  // The avatar animation decoration image
+  this.decorationAnimationImage = new Image();
+
+  // Drawing with a pattern
+  this.currentPathPattern = new Image();
+  this.loadedPathPatterns = [];
+  this.isDrawingWithPattern = false;
+
+  // these get set by init based on skin.
+  this.avatarWidth = 0;
+  this.avatarHeight = 0;
+  this.decorationAnimationWidth = 85;
+  this.decorationAnimationHeight = 85;
+  this.speedSlider = null;
+
+  this.ctxAnswer = null;
+  this.ctxImages = null;
+  this.ctxPredraw = null;
+  this.ctxScratch = null;
+  this.ctxPattern = null;
+  this.ctxFeedback = null;
+  this.ctxDisplay = null;
+
+  this.isDrawingAnswer_ = false;
+  this.isPredrawing_ = false;
+};
+
+module.exports = Artist;
+
+
+/**
+ * todo
+ */
+Artist.prototype.injectStudioApp = function (studioApp) {
+  this.studioApp_ = studioApp;
+  this.studioApp_.reset = _.bind(this.reset, this);
+  this.studioApp_.runButtonClick = _.bind(this.runButtonClick, this);
+
+  this.studioApp_.CHECK_FOR_EMPTY_BLOCKS = true;
+  this.studioApp_.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
+};
+
+/**
+ * Initialize Blockly and the turtle.  Called on page load.
+ */
+Artist.prototype.init = function(config) {
+  if (!this.studioApp_) {
+    throw new Error("Artist requires a StudioAppClass");
+  }
+
+  this.skin = config.skin;
+  this.level = config.level;
+
+  // Preload stamp images
+  this.stamps = [];
+  for (var i = 0; i < this.skin.stampValues.length; i++) {
+    var url = this.skin.stampValues[i][0];
+    var key = this.skin.stampValues[i][1];
+    var img = new Image();
+    img.src = url;
+    this.stamps[key] = img;
+  }
+
+  if (this.skin.id == "anna" || this.skin.id == "elsa") {
+    // let's try adding a background image
+    this.level.images = [{}];
+    this.level.images[0].filename = 'background.jpg';
+
+    this.level.images[0].position = [ 0, 0 ];
+    this.level.images[0].scale = 1;
+  }
+
+  config.grayOutUndeletableBlocks = true;
+  config.forceInsertTopBlock = 'when_run';
+
+  if (this.skin.id == "anna") {
+    this.avatarWidth = 73;
+    this.avatarHeight = 100;
+  }
+  else if (this.skin.id == "elsa") {
+    this.avatarWidth = 73;
+    this.avatarHeight = 100;
+    this.decorationAnimationWidth = 85;
+    this.decorationAnimationHeight = 85;
+  } else {
+    this.avatarWidth = 70;
+    this.avatarHeight = 51;
+  }
+
+  config.html = page({
+    assetUrl: this.studioApp_.assetUrl,
+    data: {
+      localeDirection: this.studioApp_.localeDirection(),
+      controls: require('./controls.html')({assetUrl: this.studioApp_.assetUrl}),
+      blockUsed : undefined,
+      idealBlockNumber : undefined,
+      editCode: this.level.editCode,
+      blockCounterClass : 'block-counter-default'
+    }
+  });
+
+  config.loadAudio = _.bind(this.loadAudio_, this);
+  config.afterInject = _.bind(this.afterInject_, this, config);
+
+  this.studioApp_.init(config);
+};
+
+Artist.prototype.loadAudio_ = function () {
+  this.studioApp_.loadAudio(this.skin.winSound, 'win');
+  this.studioApp_.loadAudio(this.skin.startSound, 'start');
+  this.studioApp_.loadAudio(this.skin.failureSound, 'failure');
+};
+
+/**
+ * Code called after the blockly div + blockly core is injected into the document
+ */
+Artist.prototype.afterInject_ = function (config) {
+  // Initialize the slider.
+  var slider = document.getElementById('slider');
+  this.speedSlider = new Slider(10, 35, 130, slider);
+
+  // Change default speed (eg Speed up levels that have lots of steps).
+  if (config.level.sliderSpeed) {
+    this.speedSlider.setValue(config.level.sliderSpeed);
+  }
+
+  if (this.studioApp_.usingBlockly) {
+    // Add to reserved word list: API, local variables in execution evironment
+    // (execute) and the infinite loop detection function.
+    Blockly.JavaScript.addReservedWords('Turtle,code');
+  }
+
+  // Create hidden canvases.
+  this.ctxAnswer = this.createCanvas_('answer', 400, 400).getContext('2d');
+  this.ctxImages = this.createCanvas_('images', 400, 400).getContext('2d');
+  this.ctxPredraw = this.createCanvas_('predraw', 400, 400).getContext('2d');
+  this.ctxScratch = this.createCanvas_('scratch', 400, 400).getContext('2d');
+  this.ctxPattern = this.createCanvas_('pattern', 400, 400).getContext('2d');
+  this.ctxFeedback = this.createCanvas_('feedback', 154, 154).getContext('2d');
+
+  // Create display canvas.
+  var displayCanvas = this.createCanvas_('display', 400, 400);
+
+  var visualization = document.getElementById('visualization');
+  visualization.appendChild(displayCanvas);
+  this.ctxDisplay = displayCanvas.getContext('2d');
+
+  // TODO (br-pair): - pull this out?
+  if (this.studioApp_.usingBlockly && (this.skin.id === "anna" || this.skin.id === "elsa")) {
+    // Override colour_random to only generate random colors from within our frozen
+    // palette
+    Blockly.JavaScript.colour_random = function() {
+      // Generate a random colour.
+      if (!Blockly.JavaScript.definitions_.colour_random) {
+        var functionName = Blockly.JavaScript.variableDB_.getDistinctName(
+          'colour_random', Blockly.Generator.NAME_TYPE);
+        Blockly.JavaScript.colour_random.functionName = functionName;
+        var func = [];
+        func.push('function ' + functionName + '() {');
+        func.push('   var colors = ' + JSON.stringify(Blockly.FieldColour.COLOURS) + ';');
+        func.push('  return colors[Math.floor(Math.random()*colors.length)];');
+        func.push('}');
+        Blockly.JavaScript.definitions_.colour_random = func.join('\n');
+      }
+      var code = Blockly.JavaScript.colour_random.functionName + '()';
+      return [code, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+    };
+  }
+
+  this.loadDecorationAnimation();
+
+  // Set their initial contents.
+  this.loadTurtle();
+  this.drawImages();
+  this.isDrawingAnswer_ = true;
+  this.drawAnswer();
+  this.isDrawingAnswer_ = false;
+  if (this.level.predraw_blocks) {
+    this.isPredrawing_ = true;
+    this.drawBlocksOnCanvas(this.level.predraw_blocks, this.ctxPredraw);
+    this.isPredrawing_ = false;
+  }
+
+  // pre-load image for line pattern block. Creating the image object and setting source doesn't seem to be
+  // enough in this case, so we're actually creating and reusing the object within the document body.
+
+  if (this.skin.id == "anna" || this.skin.id == "elsa") {
+    var imageContainer = document.createElement('div');
+    imageContainer.style.display='none';
+    document.body.appendChild(imageContainer);
+
+    for( var i = 0; i < this.skin.lineStylePatternOptions.length; i++) {
+      var pattern = this.skin.lineStylePatternOptions[i][1];
+      if (this.skin[pattern]) {
+        var img = new Image();
+        img.src = this.skin[pattern];
+        this.loadedPathPatterns[pattern] = img;
+      }
+    }
+  }
+
+  // Adjust visualizationColumn width.
+  var visualizationColumn = document.getElementById('visualizationColumn');
+  visualizationColumn.style.width = '400px';
+};
+
+/**
+ * On startup draw the expected answer and save it to the answer canvas.
+ */
+Artist.prototype.drawAnswer = function() {
+  if (this.level.solutionBlocks) {
+    this.drawBlocksOnCanvas(this.level.solutionBlocks, this.ctxAnswer);
+  } else {
+    this.drawLogOnCanvas(this.level.answer, this.ctxAnswer);
+  }
+};
+
+/**
+ * Given a set of commands and a canvas, draws the commands onto the canvas
+ * composited over the scratch canvas.
+ */
+Artist.prototype.drawLogOnCanvas = function(log, canvas) {
+  this.studioApp_.reset();
+  while (log.length) {
+    var tuple = log.shift();
+    this.step(tuple[0], tuple.splice(1), {smoothAnimate: false});
+    this.resetStepInfo_();
+  }
+  canvas.globalCompositeOperation = 'copy';
+  canvas.drawImage(this.ctxScratch.canvas, 0, 0);
+  canvas.globalCompositeOperation = 'source-over';
+};
+
+/**
+ * Evaluates blocks or code, and draws onto given canvas.
+ */
+Artist.prototype.drawBlocksOnCanvas = function(blocksOrCode, canvas) {
+  var code;
+  if (this.studioApp_.usingBlockly) {
+    var domBlocks = Blockly.Xml.textToDom(blocksOrCode);
+    Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, domBlocks);
+    code = Blockly.Generator.blockSpaceToCode('JavaScript');
+  } else {
+    code = blocksOrCode;
+  }
+  this.evalCode(code);
+  if (this.studioApp_.usingBlockly) {
+    Blockly.mainBlockSpace.clear();
+  }
+  this.drawCurrentBlocksOnCanvas(canvas);
+};
+
+/**
+ * Draws the results of block evaluation (stored on api.log) onto the given
+ * canvas.
+ */
+Artist.prototype.drawCurrentBlocksOnCanvas = function(canvas) {
+  this.drawLogOnCanvas(this.api.log, canvas);
+};
+
+/**
+ * Place an image at the specified coordinates.
+ * Code from http://stackoverflow.com/questions/5495952. Thanks, Phrogz.
+ * @param {string} filename Relative path to image.
+ * @param {!Array} position An x-y pair.
+ * @param {number} optional scale at which image is drawn
+ */
+Artist.prototype.placeImage = function(filename, position, scale) {
+  var img = new Image();
+  img.onload = _.bind(function() {
+    if (img.width !== 0) {
+      if (scale) {
+        this.ctxImages.drawImage(img, position[0], position[1], img.width,
+          img.height, 0, 0, img.width * scale, img.height * scale);
+      } else  {
+        this.ctxImages.drawImage(img, position[0], position[1]);
+      }
+    }
+    this.display();
+  }, this);
+
+  if (this.skin.id == "anna" || this.skin.id == "elsa") {
+    img.src = this.skin.assetUrl(filename);
+  } else {
+    img.src = this.studioApp_.assetUrl('media/turtle/' + filename);
+  }
+};
+
+/**
+ * Draw the images for this page and level onto this.ctxImages.
+ */
+Artist.prototype.drawImages = function() {
+  if (!this.level.images) {
+    return;
+  }
+  for (var i = 0; i < this.level.images.length; i++) {
+    var image = this.level.images[i];
+    this.placeImage(image.filename, image.position, image.scale);
+  }
+  this.ctxImages.globalCompositeOperation = 'copy';
+  this.ctxImages.drawImage(this.ctxScratch.canvas, 0, 0);
+  this.ctxImages.globalCompositeOperation = 'source-over';
+};
+
+/**
+ * Initial the turtle image on load.
+ */
+Artist.prototype.loadTurtle = function() {
+  this.avatarImage.onload = _.bind(this.display, this);
+
+  this.avatarImage.src = this.skin.avatar;
+  if (this.skin.id == "anna") {
+    this.numberAvatarHeadings = 36;
+  } else if (this.skin.id == "elsa") {
+    this.numberAvatarHeadings = 18;
+  } else {
+    this.numberAvatarHeadings = 180;
+  }
+  this.avatarImage.spriteHeight = this.avatarHeight;
+  this.avatarImage.spriteWidth = this.avatarWidth;
+};
+
+/**
+ * Initial the turtle animation deocration on load.
+ */
+Artist.prototype.loadDecorationAnimation = function() {
+  if (this.skin.id == "elsa") {
+    this.decorationAnimationImage.src = this.skin.decorationAnimation;
+    this.decorationAnimationImage.height = this.decorationAnimationHeight;
+    this.decorationAnimationImage.width = this.decorationAnimationWidth;
+  }
+};
+
+var turtleFrame = 0;
+
+
+/**
+ * Draw the turtle image based on this.x, this.y, and this.heading.
+ */
+Artist.prototype.drawTurtle = function() {
+  var sourceY;
+  // Computes the index of the image in the sprite.
+  var index = Math.floor(this.heading * this.numberAvatarHeadings / 360);
+  if (this.skin.id == "anna" || this.skin.id == "elsa") {
+    // the rotations in the sprite sheet go in the opposite direction.
+    index = this.numberAvatarHeadings - index;
+
+    // and they are 180 degrees out of phase.
+    index = (index + this.numberAvatarHeadings/2) % this.numberAvatarHeadings;
+  }
+  var sourceX = this.avatarImage.spriteWidth * index;
+  if (this.skin.id == "anna" || this.skin.id == "elsa") {
+    sourceY = this.avatarImage.spriteHeight * turtleFrame;
+    turtleFrame = (turtleFrame + 1) % this.skin.turtleNumFrames;
+  } else {
+    sourceY = 0;
+  }
+  var sourceWidth = this.avatarImage.spriteWidth;
+  var sourceHeight = this.avatarImage.spriteHeight;
+  var destWidth = this.avatarImage.spriteWidth;
+  var destHeight = this.avatarImage.spriteHeight;
+  var destX = this.x - destWidth / 2;
+  var destY = this.y - destHeight + 7;
+
+  if (this.avatarImage.width === 0 || this.avatarImage.height === 0)
+    return;
+
+  if (sourceX < 0 ||
+      sourceY < 0 ||
+      sourceX + sourceWidth  -0 > this.avatarImage.width ||
+      sourceY + sourceHeight > this.avatarImage.height)
+  {
+    if (console && console.log) {
+      console.log("drawImage is out of source bounds!");
+    }
+    return;
+  }
+
+  if (this.avatarImage.width !== 0) {
+    this.ctxDisplay.drawImage(
+      this.avatarImage,
+      Math.round(sourceX), Math.round(sourceY),
+      sourceWidth - 0, sourceHeight,
+      Math.round(destX), Math.round(destY),
+      destWidth - 0, destHeight);
+  }
+};
+
+/**
   * This is called twice, once with "before" and once with "after", referring to before or after
   * the sprite is drawn.  For some angles it should be drawn before, and for some after.
   */
 
-Turtle.drawDecorationAnimation = function(when) {
-  if (skin.id == "elsa") {
-    var frameIndex = (turtleFrame + 10) % skin.decorationAnimationNumFrames;
+Artist.prototype.drawDecorationAnimation = function(when) {
+  if (this.skin.id == "elsa") {
+    var frameIndex = (turtleFrame + 10) % this.skin.decorationAnimationNumFrames;
 
-    var angleIndex = Math.floor(Turtle.heading * Turtle.numberAvatarHeadings / 360);
+    var angleIndex = Math.floor(this.heading * this.numberAvatarHeadings / 360);
 
     // the rotations in the Anna & Elsa sprite sheets go in the opposite direction.
-    angleIndex = Turtle.numberAvatarHeadings - angleIndex;
+    angleIndex = this.numberAvatarHeadings - angleIndex;
 
     // and they are 180 degrees out of phase.
-    angleIndex = (angleIndex + Turtle.numberAvatarHeadings/2) % Turtle.numberAvatarHeadings;
+    angleIndex = (angleIndex + this.numberAvatarHeadings/2) % this.numberAvatarHeadings;
 
-    if (decorationImageDetails[angleIndex].when == when) {
-      var sourceX = Turtle.decorationAnimationImage.width * frameIndex;
+    if (ELSA_DECORATION_DETAILS[angleIndex].when == when) {
+      var sourceX = this.decorationAnimationImage.width * frameIndex;
       var sourceY = 0;
-      var sourceWidth = Turtle.decorationAnimationImage.width;
-      var sourceHeight = Turtle.decorationAnimationImage.height;
+      var sourceWidth = this.decorationAnimationImage.width;
+      var sourceHeight = this.decorationAnimationImage.height;
       var destWidth = sourceWidth;
       var destHeight = sourceHeight;
-      var destX = Turtle.x - destWidth / 2 - 15 - 15 + decorationImageDetails[angleIndex].x;
-      var destY = Turtle.y - destHeight / 2 - 100;
+      var destX = this.x - destWidth / 2 - 15 - 15 + ELSA_DECORATION_DETAILS[angleIndex].x;
+      var destY = this.y - destHeight / 2 - 100;
 
-      if (Turtle.decorationAnimationImage.width !== 0) {
-        Turtle.ctxDisplay.drawImage(
-          Turtle.decorationAnimationImage,
-          Math.round(sourceX * retina), Math.round(sourceY * retina),
-          sourceWidth * retina, sourceHeight * retina,
-          Math.round(destX * retina), Math.round(destY * retina),
-          destWidth * retina, destHeight * retina);
+      if (this.decorationAnimationImage.width !== 0) {
+        this.ctxDisplay.drawImage(
+          this.decorationAnimationImage,
+          Math.round(sourceX), Math.round(sourceY),
+          sourceWidth, sourceHeight,
+          Math.round(destX), Math.round(destY),
+          destWidth, destHeight);
       }
     }
   }
@@ -13619,155 +13885,136 @@ Turtle.drawDecorationAnimation = function(when) {
  * @param {boolean} ignore Required by the API but ignored by this
  *     implementation.
  */
-StudioApp.reset = function(ignore) {
+Artist.prototype.reset = function (ignore) {
   // Standard starting location and heading of the turtle.
-  Turtle.x = CANVAS_HEIGHT / 2;
-  Turtle.y = CANVAS_WIDTH / 2;
-  Turtle.heading = level.startDirection !== undefined ?
-      level.startDirection : 90;
-  Turtle.penDownValue = true;
-  Turtle.visible = true;
+  this.x = CANVAS_HEIGHT / 2;
+  this.y = CANVAS_WIDTH / 2;
+  this.heading = this.level.startDirection !== undefined ?
+      this.level.startDirection : 90;
+  this.penDownValue = true;
+  this.visible = true;
 
   // For special cases, use a different initial location.
-  if (level.initialX !== undefined) {
-    Turtle.x = level.initialX;
+  if (this.level.initialX !== undefined) {
+    this.x = this.level.initialX;
   }
-  if (level.initialY !== undefined) {
-    Turtle.y = level.initialY;
+  if (this.level.initialY !== undefined) {
+    this.y = this.level.initialY;
   }
   // Clear the display.
-  Turtle.ctxScratch.canvas.width = Turtle.ctxScratch.canvas.width;
-  Turtle.ctxPattern.canvas.width = Turtle.ctxPattern.canvas.width;
-  if (skin.id == "anna") {
-    Turtle.ctxScratch.strokeStyle = 'rgb(255,255,255)';
-    Turtle.ctxScratch.fillStyle = 'rgb(255,255,255)';
-    Turtle.ctxScratch.lineWidth = 2 * retina;
-  } else if (skin.id == "elsa") {
-    Turtle.ctxScratch.strokeStyle = 'rgb(255,255,255)';
-    Turtle.ctxScratch.fillStyle = 'rgb(255,255,255)';
-    Turtle.ctxScratch.lineWidth = 2 * retina;
+  this.ctxScratch.canvas.width = this.ctxScratch.canvas.width;
+  this.ctxPattern.canvas.width = this.ctxPattern.canvas.width;
+  if (this.skin.id == "anna") {
+    this.ctxScratch.strokeStyle = 'rgb(255,255,255)';
+    this.ctxScratch.fillStyle = 'rgb(255,255,255)';
+    this.ctxScratch.lineWidth = 2;
+  } else if (this.skin.id == "elsa") {
+    this.ctxScratch.strokeStyle = 'rgb(255,255,255)';
+    this.ctxScratch.fillStyle = 'rgb(255,255,255)';
+    this.ctxScratch.lineWidth = 2;
   } else {
-    Turtle.ctxScratch.strokeStyle = '#000000';
-    Turtle.ctxScratch.fillStyle = '#000000';
-    Turtle.ctxScratch.lineWidth = 5;
+    this.ctxScratch.strokeStyle = '#000000';
+    this.ctxScratch.fillStyle = '#000000';
+    this.ctxScratch.lineWidth = 5;
   }
 
-  Turtle.ctxScratch.lineCap = 'round';
-  Turtle.ctxScratch.font = 'normal 18pt Arial';
-  Turtle.display();
+  this.ctxScratch.lineCap = 'round';
+  this.ctxScratch.font = 'normal 18pt Arial';
+  this.display();
 
   // Clear the feedback.
-  Turtle.ctxFeedback.clearRect(
-      0, 0, Turtle.ctxFeedback.canvas.width, Turtle.ctxFeedback.canvas.height);
+  this.ctxFeedback.clearRect(
+      0, 0, this.ctxFeedback.canvas.width, this.ctxFeedback.canvas.height);
 
-  if (skin.id == "anna") {
-    if (retina > 1)
-      Turtle.setPattern("annaLine_2x");
-    else
-      Turtle.setPattern("annaLine");
-  } else if (skin.id == "elsa") {
-    if (retina > 1)
-      Turtle.setPattern("elsaLine_2x");
-    else
-      Turtle.setPattern("elsaLine");
+  if (this.skin.id == "anna") {
+    this.setPattern("annaLine");
+  } else if (this.skin.id == "elsa") {
+    this.setPattern("elsaLine");
   } else {
     // Reset to empty pattern
-    Turtle.setPattern(null);
+    this.setPattern(null);
   }
 
   // Kill any task.
-  if (Turtle.pid) {
-    window.clearTimeout(Turtle.pid);
+  if (this.pid) {
+    window.clearTimeout(this.pid);
   }
-  Turtle.pid = 0;
+  this.pid = 0;
 
   // Discard the interpreter.
-  Turtle.interpreter = null;
-  Turtle.executionError = null;
+  this.interpreter = null;
+  this.executionError = null;
 
   // Stop the looping sound.
-  StudioApp.stopLoopingAudio('start');
+  this.studioApp_.stopLoopingAudio('start');
 
-  resetStepInfo();
+  this.resetStepInfo_();
 };
-
-/**
- * When smooth animate is true, steps can be broken up into multiple animations.
- * At the end of each step, we want to reset any incremental information, which
- * is what this does.
- */
-function resetStepInfo() {
-  Turtle.stepStartX = Turtle.x;
-  Turtle.stepStartY = Turtle.y;
-  Turtle.stepDistanceCovered = 0;
-}
 
 
 /**
  * Copy the scratch canvas to the display canvas. Add a turtle marker.
  */
-Turtle.display = function() {
+Artist.prototype.display = function() {
   // FF on linux retains drawing of previous location of artist unless we clear
   // the canvas first.
-  var style = Turtle.ctxDisplay.fillStyle;
-  Turtle.ctxDisplay.fillStyle = 'white';
-  Turtle.ctxDisplay.clearRect(0, 0, Turtle.ctxDisplay.canvas.width,
-    Turtle.ctxDisplay.canvas.width);
-  Turtle.ctxDisplay.fillStyle = style;
+  var style = this.ctxDisplay.fillStyle;
+  this.ctxDisplay.fillStyle = 'white';
+  this.ctxDisplay.clearRect(0, 0, this.ctxDisplay.canvas.width,
+    this.ctxDisplay.canvas.width);
+  this.ctxDisplay.fillStyle = style;
 
-  Turtle.ctxDisplay.globalCompositeOperation = 'copy';
+  this.ctxDisplay.globalCompositeOperation = 'copy';
   // Draw the images layer.
-  Turtle.ctxDisplay.globalCompositeOperation = 'source-over';
-  Turtle.ctxDisplay.drawImage(Turtle.ctxImages.canvas, 0, 0);
+  this.ctxDisplay.globalCompositeOperation = 'source-over';
+  this.ctxDisplay.drawImage(this.ctxImages.canvas, 0, 0);
 
   // Draw the answer layer.
-  if (skin.id == "anna" || skin.id == "elsa") {
-    Turtle.ctxDisplay.globalAlpha = 0.4;
+  if (this.skin.id == "anna" || this.skin.id == "elsa") {
+    this.ctxDisplay.globalAlpha = 0.4;
   } else {
-    Turtle.ctxDisplay.globalAlpha = 0.15;
+    this.ctxDisplay.globalAlpha = 0.15;
   }
-  Turtle.ctxDisplay.drawImage(Turtle.ctxAnswer.canvas, 0, 0);
-  Turtle.ctxDisplay.globalAlpha = 1;
+  this.ctxDisplay.drawImage(this.ctxAnswer.canvas, 0, 0);
+  this.ctxDisplay.globalAlpha = 1;
 
   // Draw the predraw layer.
-  Turtle.ctxDisplay.globalCompositeOperation = 'source-over';
-  Turtle.ctxDisplay.drawImage(Turtle.ctxPredraw.canvas, 0, 0);
+  this.ctxDisplay.globalCompositeOperation = 'source-over';
+  this.ctxDisplay.drawImage(this.ctxPredraw.canvas, 0, 0);
 
   // Draw the pattern layer.
-  Turtle.ctxDisplay.globalCompositeOperation = 'source-over';
-  Turtle.ctxDisplay.drawImage(Turtle.ctxPattern.canvas, 0, 0);
+  this.ctxDisplay.globalCompositeOperation = 'source-over';
+  this.ctxDisplay.drawImage(this.ctxPattern.canvas, 0, 0);
 
   // Draw the user layer.
-  Turtle.ctxDisplay.globalCompositeOperation = 'source-over';
-  Turtle.ctxDisplay.drawImage(Turtle.ctxScratch.canvas, 0, 0);
+  this.ctxDisplay.globalCompositeOperation = 'source-over';
+  this.ctxDisplay.drawImage(this.ctxScratch.canvas, 0, 0);
 
   // Draw the turtle.
-  if (Turtle.visible) {
-    Turtle.drawDecorationAnimation("before");
-    Turtle.drawTurtle();
-    Turtle.drawDecorationAnimation("after");
+  if (this.visible) {
+    this.drawDecorationAnimation("before");
+    this.drawTurtle();
+    this.drawDecorationAnimation("after");
   }
 };
 
 /**
  * Click the run button.  Start the program.
  */
-StudioApp.runButtonClick = function() {
-  StudioApp.toggleRunReset('reset');
+Artist.prototype.runButtonClick = function () {
+  this.studioApp_.toggleRunReset('reset');
   document.getElementById('spinner').style.visibility = 'visible';
-  if (StudioApp.usingBlockly) {
+  if (this.studioApp_.usingBlockly) {
     Blockly.mainBlockSpace.traceOn(true);
   }
-  StudioApp.attempts++;
-  Turtle.execute();
-
+  this.studioApp_.attempts++;
+  this.execute();
 };
 
-Turtle.evalCode = function(code) {
+Artist.prototype.evalCode = function(code) {
   try {
     codegen.evalWith(code, {
-      StudioApp: StudioApp,
-      Turtle: api
+      Turtle: this.api
     });
   } catch (e) {
     // Infinity is thrown if we detect an infinite loop. In that case we'll
@@ -13786,53 +14033,54 @@ Turtle.evalCode = function(code) {
 };
 
 /**
- * Set up Turtle.code, Turtle.interpreter, etc. to run code for editCode levels
+ * Set up this.code, this.interpreter, etc. to run code for editCode levels
  */
-function generateTurtleCodeFromJS () {
-  Turtle.code = utils.generateCodeAliases(level.codeFunctions, 'Turtle');
-  Turtle.userCodeStartOffset = Turtle.code.length;
-  Turtle.code += StudioApp.editor.getValue();
-  Turtle.userCodeLength = Turtle.code.length - Turtle.userCodeStartOffset;
+Artist.prototype.generateTurtleCodeFromJS_ = function () {
+  this.code = utils.generateCodeAliases(this.level.codeFunctions, 'Turtle');
+  this.userCodeStartOffset = this.code.length;
+  this.code += this.studioApp_.editor.getValue();
+  this.userCodeLength = this.code.length - this.userCodeStartOffset;
 
-  var session = StudioApp.editor.aceEditor.getSession();
-  Turtle.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
+  var session = this.studioApp_.editor.aceEditor.getSession();
+  this.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
 
-  var initFunc = function(interpreter, scope) {
+  var initFunc = _.bind(function(interpreter, scope) {
     codegen.initJSInterpreter(interpreter, scope, {
-                                      StudioApp: StudioApp,
-                                      Turtle: api } );
-  };
-  Turtle.interpreter = new window.Interpreter(Turtle.code, initFunc);
-}
+      Turtle: this.api
+    });
+  }, this);
+  this.interpreter = new window.Interpreter(this.code, initFunc);
+};
 
 /**
  * Execute the user's code.  Heaven help us...
  */
-Turtle.execute = function() {
-  api.log = [];
+Artist.prototype.execute = function() {
+  this.api.log = [];
 
   // Reset the graphic.
-  StudioApp.reset();
+  this.studioApp_.reset();
 
-  if (feedback.hasExtraTopBlocks()) {
+  if (this.studioApp_.hasExtraTopBlocks()) {
     // immediately check answer, which will fail and report top level blocks
-    Turtle.checkAnswer();
+    this.checkAnswer();
     return;
   }
 
-  if (level.editCode) {
-    generateTurtleCodeFromJS();
+  if (this.level.editCode) {
+    this.generateTurtleCodeFromJS_();
   } else {
-    Turtle.code = Blockly.Generator.blockSpaceToCode('JavaScript');
-    Turtle.evalCode(Turtle.code);
+    this.code = Blockly.Generator.blockSpaceToCode('JavaScript');
+    this.evalCode(this.code);
   }
 
   // api.log now contains a transcript of all the user's actions.
-  StudioApp.playAudio('start', {loop : true});
+  this.studioApp_.playAudio('start', {loop : true});
   // animate the transcript.
-  Turtle.pid = window.setTimeout(Turtle.animate, 100);
 
-  if (StudioApp.usingBlockly) {
+  this.pid = window.setTimeout(_.bind(this.animate, this), 100);
+
+  if (this.studioApp_.usingBlockly) {
     // Disable toolbox while running
     Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
   }
@@ -13842,10 +14090,10 @@ Turtle.execute = function() {
  * Special case: if we have a turn, followed by a move forward, then we can just
  * do the turn instantly and then begin the move forward in the same frame.
  */
-function checkforTurnAndMove() {
+Artist.prototype.checkforTurnAndMove_ = function () {
   var nextIsForward = false;
 
-  var currentTuple = api.log[0];
+  var currentTuple = this.api.log[0];
   var currentCommand = currentTuple[0];
   var currentValues = currentTuple.slice(1);
 
@@ -13854,8 +14102,8 @@ function checkforTurnAndMove() {
     var currentAngle = currentValues[0];
     if (Math.abs(currentAngle) <= 10) {
       // Check that next command is a move forward.
-      if (api.log.length > 1) {
-        var nextTuple = api.log[1];
+      if (this.api.log.length > 1) {
+        var nextTuple = this.api.log[1];
         var nextCommand = nextTuple[0];
         if (nextCommand === 'FD') {
           nextIsForward = true;
@@ -13865,14 +14113,14 @@ function checkforTurnAndMove() {
   }
 
   return nextIsForward;
-}
+};
 
 
 /**
  * Attempt to execute one command from the log of API commands.
  */
-function executeTuple () {
-  if (api.log.length === 0) {
+Artist.prototype.executeTuple_ = function () {
+  if (this.api.log.length === 0) {
     return false;
   }
 
@@ -13882,102 +14130,102 @@ function executeTuple () {
     // Unless something special happens, we will just execute a single tuple.
     executeSecondTuple = false;
 
-    var tuple = api.log[0];
+    var tuple = this.api.log[0];
     var command = tuple[0];
     var id = tuple[tuple.length-1];
 
-    StudioApp.highlight(String(id));
+    this.studioApp_.highlight(String(id));
 
     // Should we execute another tuple in this frame of animation?
-    if (skin.consolidateTurnAndMove && checkforTurnAndMove()) {
+    if (this.skin.consolidateTurnAndMove && this.checkforTurnAndMove_()) {
       executeSecondTuple = true;
     }
 
     // We only smooth animate for Anna & Elsa, and only if there is not another tuple to be done.
-    var tupleDone = Turtle.step(command, tuple.slice(1), {smoothAnimate: skin.smoothAnimate && !executeSecondTuple});
-    Turtle.display();
+    var tupleDone = this.step(command, tuple.slice(1), {smoothAnimate: this.skin.smoothAnimate && !executeSecondTuple});
+    this.display();
 
     if (tupleDone) {
-      api.log.shift();
-      resetStepInfo();
+      this.api.log.shift();
+      this.resetStepInfo_();
     }
   } while (executeSecondTuple);
 
   return true;
-}
+};
 
 /**
  * Handle the tasks to be done after the user program is finished.
  */
-function finishExecution () {
+Artist.prototype.finishExecution_ = function () {
   document.getElementById('spinner').style.visibility = 'hidden';
-  if (StudioApp.usingBlockly) {
+  if (this.studioApp_.usingBlockly) {
     Blockly.mainBlockSpace.highlightBlock(null);
   }
-  Turtle.checkAnswer();
-}
+  this.checkAnswer();
+};
 
 /**
  * Iterate through the recorded path and animate the turtle's actions.
  */
-Turtle.animate = function() {
+Artist.prototype.animate = function() {
 
   // All tasks should be complete now.  Clean up the PID list.
-  Turtle.pid = 0;
+  this.pid = 0;
 
   // Scale the speed non-linearly, to give better precision at the fast end.
-  var stepSpeed = 1000 * Math.pow(1 - Turtle.speedSlider.getValue(), 2) / skin.speedModifier;
+  var stepSpeed = 1000 * Math.pow(1 - this.speedSlider.getValue(), 2) / this.skin.speedModifier;
 
   // when smoothAnimate is true, we divide long steps into partitions of this
   // size.
-  Turtle.smoothAnimateStepSize = (stepSpeed === 0 ?
+  this.smoothAnimateStepSize = (stepSpeed === 0 ?
     FAST_SMOOTH_ANIMATE_STEP_SIZE : SMOOTH_ANIMATE_STEP_SIZE);
 
-  if (level.editCode) {
+  if (this.level.editCode) {
     var stepped = true;
     while (stepped) {
-      codegen.selectCurrentCode(Turtle.interpreter,
-                                StudioApp.editor,
-                                Turtle.cumulativeLength,
-                                Turtle.userCodeStartOffset,
-                                Turtle.userCodeLength);
+      codegen.selectCurrentCode(this.interpreter,
+                                this.cumulativeLength,
+                                this.userCodeStartOffset,
+                                this.userCodeLength,
+                                this.studioApp_.editor);
       try {
-        stepped = Turtle.interpreter.step();
+        stepped = this.interpreter.step();
       }
       catch(err) {
-        Turtle.executionError = err;
-        finishExecution();
+        this.executionError = err;
+        this.finishExecution_();
         return;
       }
-      stepped = Turtle.interpreter.step();
+      stepped = this.interpreter.step();
 
-      if (executeTuple()) {
+      if (this.executeTuple_()) {
         // We stepped far enough that we executed a commmand, break out:
         break;
       }
     }
-    if (!stepped && !executeTuple()) {
+    if (!stepped && !this.executeTuple_()) {
       // We dropped out of the step loop because we ran out of code, all done:
-      finishExecution();
+      this.finishExecution_();
       return;
     }
   } else {
-    if (!executeTuple()) {
-      finishExecution();
+    if (!this.executeTuple_()) {
+      this.finishExecution_();
       return;
     }
   }
 
-  Turtle.pid = window.setTimeout(Turtle.animate, stepSpeed);
+  this.pid = window.setTimeout(_.bind(this.animate, this), stepSpeed);
 };
 
-Turtle.calculateSmoothAnimate = function(options, distance) {
+Artist.prototype.calculateSmoothAnimate = function(options, distance) {
   var tupleDone = true;
-  var stepDistanceCovered = Turtle.stepDistanceCovered;
+  var stepDistanceCovered = this.stepDistanceCovered;
 
   if (options && options.smoothAnimate) {
     var fullDistance = distance;
-    var smoothAnimateStepSize = Turtle.smoothAnimateStepSize;
+    var smoothAnimateStepSize = this.smoothAnimateStepSize;
 
     if (fullDistance < 0) {
       // Going backward.
@@ -14005,7 +14253,7 @@ Turtle.calculateSmoothAnimate = function(options, distance) {
     }
   }
 
-  Turtle.stepDistanceCovered = stepDistanceCovered;
+  this.stepDistanceCovered = stepDistanceCovered;
 
   return { tupleDone: tupleDone, distance: distance };
 };
@@ -14017,7 +14265,7 @@ Turtle.calculateSmoothAnimate = function(options, distance) {
  * @param {number} fraction How much of this step's distance do we draw?
  * @param {object} single option for now: smoothAnimate (true/false)
  */
-Turtle.step = function(command, values, options) {
+Artist.prototype.step = function(command, values, options) {
   var tupleDone = true;
   var result;
   var distance;
@@ -14026,85 +14274,85 @@ Turtle.step = function(command, values, options) {
   switch (command) {
     case 'FD':  // Forward
       distance = values[0];
-      result = Turtle.calculateSmoothAnimate(options, distance);
+      result = this.calculateSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
-      Turtle.moveForward_(result.distance);
+      this.moveForward_(result.distance);
       break;
     case 'JF':  // Jump forward
       distance = values[0];
-      result = Turtle.calculateSmoothAnimate(options, distance);
+      result = this.calculateSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
-      Turtle.jumpForward_(result.distance);
+      this.jumpForward_(result.distance);
       break;
     case 'MV':  // Move (direction)
       distance = values[0];
       heading = values[1];
-      result = Turtle.calculateSmoothAnimate(options, distance);
+      result = this.calculateSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
-      Turtle.setHeading_(heading);
-      Turtle.moveForward_(result.distance);
+      this.setHeading_(heading);
+      this.moveForward_(result.distance);
       break;
     case 'JD':  // Jump (direction)
       distance = values[0];
       heading = values[1];
-      result = Turtle.calculateSmoothAnimate(options, distance);
+      result = this.calculateSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
-      Turtle.setHeading_(heading);
-      Turtle.jumpForward_(result.distance);
+      this.setHeading_(heading);
+      this.jumpForward_(result.distance);
       break;
     case 'RT':  // Right Turn
       distance = values[0];
-      result = Turtle.calculateSmoothAnimate(options, distance);
+      result = this.calculateSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
-      Turtle.turnByDegrees_(result.distance);
+      this.turnByDegrees_(result.distance);
       break;
     case 'DP':  // Draw Print
-      Turtle.ctxScratch.save();
-      Turtle.ctxScratch.translate(Turtle.x, Turtle.y);
-      Turtle.ctxScratch.rotate(2 * Math.PI * (Turtle.heading - 90) / 360);
-      Turtle.ctxScratch.fillText(values[0], 0, 0);
-      Turtle.ctxScratch.restore();
+      this.ctxScratch.save();
+      this.ctxScratch.translate(this.x, this.y);
+      this.ctxScratch.rotate(2 * Math.PI * (this.heading - 90) / 360);
+      this.ctxScratch.fillText(values[0], 0, 0);
+      this.ctxScratch.restore();
       break;
     case 'DF':  // Draw Font
-      Turtle.ctxScratch.font = values[2] + ' ' + values[1] + 'pt ' + values[0];
+      this.ctxScratch.font = values[2] + ' ' + values[1] + 'pt ' + values[0];
       break;
     case 'PU':  // Pen Up
-      Turtle.penDownValue = false;
+      this.penDownValue = false;
       break;
     case 'PD':  // Pen Down
-      Turtle.penDownValue = true;
+      this.penDownValue = true;
       break;
     case 'PW':  // Pen Width
-      Turtle.ctxScratch.lineWidth = values[0];
+      this.ctxScratch.lineWidth = values[0];
       break;
     case 'PC':  // Pen Colour
-      Turtle.ctxScratch.strokeStyle = values[0];
-      Turtle.ctxScratch.fillStyle = values[0];
-      if (skin.id != "anna" && skin.id != "elsa") {
-        Turtle.isDrawingWithPattern = false;
+      this.ctxScratch.strokeStyle = values[0];
+      this.ctxScratch.fillStyle = values[0];
+      if (this.skin.id != "anna" && this.skin.id != "elsa") {
+        this.isDrawingWithPattern = false;
       }
       break;
     case 'PS':  // Pen style with image
       if (!values[0] || values[0] == 'DEFAULT') {
-          Turtle.setPattern(null);
+          this.setPattern(null);
       } else {
-        Turtle.setPattern(values[0]);
+        this.setPattern(values[0]);
       }
       break;
     case 'HT':  // Hide Turtle
-      Turtle.visible = false;
+      this.visible = false;
       break;
     case 'ST':  // Show Turtle
-      Turtle.visible = true;
+      this.visible = true;
       break;
     case 'stamp':
-      var img = Turtle.stamps[values[0]];
+      var img = this.stamps[values[0]];
       var width = img.width / 2;
       var height = img.height / 2;
-      var x = Turtle.x - width / 2;
-      var y = Turtle.y - height / 2;
+      var x = this.x - width / 2;
+      var y = this.y - height / 2;
       if (img.width !== 0) {
-        Turtle.ctxScratch.drawImage(img, x, y, width, height);
+        this.ctxScratch.drawImage(img, x, y, width, height);
       }
       break;
   }
@@ -14112,55 +14360,55 @@ Turtle.step = function(command, values, options) {
   return tupleDone;
 };
 
-Turtle.setPattern = function (pattern) {
-  if (Turtle.loadedPathPatterns[pattern]) {
-    Turtle.currentPathPattern = Turtle.loadedPathPatterns[pattern];
-    Turtle.isDrawingWithPattern = true;
+Artist.prototype.setPattern = function (pattern) {
+  if (this.loadedPathPatterns[pattern]) {
+    this.currentPathPattern = this.loadedPathPatterns[pattern];
+    this.isDrawingWithPattern = true;
   } else if (pattern === null) {
-    Turtle.currentPathPattern = new Image();
-    Turtle.isDrawingWithPattern = false;
+    this.currentPathPattern = new Image();
+    this.isDrawingWithPattern = false;
   }
 };
 
-Turtle.jumpForward_ = function (distance) {
-  Turtle.x += distance * Math.sin(2 * Math.PI * Turtle.heading / 360);
-  Turtle.y -= distance * Math.cos(2 * Math.PI * Turtle.heading / 360);
+Artist.prototype.jumpForward_ = function (distance) {
+  this.x += distance * Math.sin(2 * Math.PI * this.heading / 360);
+  this.y -= distance * Math.cos(2 * Math.PI * this.heading / 360);
 };
 
-Turtle.moveByRelativePosition_ = function (x, y) {
-  Turtle.x += x;
-  Turtle.y += y;
+Artist.prototype.moveByRelativePosition_ = function (x, y) {
+  this.x += x;
+  this.y += y;
 };
 
-Turtle.dotAt_ = function (x, y) {
+Artist.prototype.dotAt_ = function (x, y) {
   // WebKit (unlike Gecko) draws nothing for a zero-length line, so draw a very short line.
   var dotLineLength = 0.1;
-  Turtle.ctxScratch.lineTo(x + dotLineLength, y);
+  this.ctxScratch.lineTo(x + dotLineLength, y);
 };
 
-Turtle.circleAt_ = function (x, y, radius) {
-  Turtle.ctxScratch.arc(x, y, radius, 0, 2 * Math.PI);
+Artist.prototype.circleAt_ = function (x, y, radius) {
+  this.ctxScratch.arc(x, y, radius, 0, 2 * Math.PI);
 };
 
-Turtle.drawToTurtle_ = function (distance) {
+Artist.prototype.drawToTurtle_ = function (distance) {
   var isDot = (distance === 0);
   if (isDot) {
-    Turtle.dotAt_(Turtle.x, Turtle.y);
+    this.dotAt_(this.x, this.y);
   } else {
-    Turtle.ctxScratch.lineTo(Turtle.x * retina, Turtle.y * retina);
+    this.ctxScratch.lineTo(this.x, this.y);
   }
 };
 
-Turtle.turnByDegrees_ = function (degreesRight) {
-  Turtle.setHeading_(Turtle.heading + degreesRight);
+Artist.prototype.turnByDegrees_ = function (degreesRight) {
+  this.setHeading_(this.heading + degreesRight);
 };
 
-Turtle.setHeading_ = function (heading) {
-  heading = Turtle.constrainDegrees_(heading);
-  Turtle.heading = heading;
+Artist.prototype.setHeading_ = function (heading) {
+  heading = this.constrainDegrees_(heading);
+  this.heading = heading;
 };
 
-Turtle.constrainDegrees_ = function (degrees) {
+Artist.prototype.constrainDegrees_ = function (degrees) {
   degrees %= 360;
   if (degrees < 0) {
     degrees += 360;
@@ -14168,28 +14416,28 @@ Turtle.constrainDegrees_ = function (degrees) {
   return degrees;
 };
 
-Turtle.moveForward_ = function (distance) {
-  if (!Turtle.penDownValue) {
-    Turtle.jumpForward_(distance);
+Artist.prototype.moveForward_ = function (distance) {
+  if (!this.penDownValue) {
+    this.jumpForward_(distance);
     return;
   }
-  if (Turtle.isDrawingWithPattern) {
-    Turtle.drawForwardLineWithPattern_(distance);
+  if (this.isDrawingWithPattern) {
+    this.drawForwardLineWithPattern_(distance);
 
     // Frozen gets both a pattern and a line over the top of it.
-    if (skin.id != "elsa" && skin.id != "anna") {
+    if (this.skin.id != "elsa" && this.skin.id != "anna") {
       return;
     }
   }
 
-  Turtle.drawForward_(distance);
+  this.drawForward_(distance);
 };
 
-Turtle.drawForward_ = function (distance) {
-  if (Turtle.shouldDrawJoints_()) {
-    Turtle.drawForwardWithJoints_(distance);
+Artist.prototype.drawForward_ = function (distance) {
+  if (this.shouldDrawJoints_()) {
+    this.drawForwardWithJoints_(distance);
   } else {
-    Turtle.drawForwardLine_(distance);
+    this.drawForwardLine_(distance);
   }
 };
 
@@ -14197,7 +14445,7 @@ Turtle.drawForward_ = function (distance) {
  * Draws a line of length `distance`, adding joint knobs along the way
  * @param distance
  */
-Turtle.drawForwardWithJoints_ = function (distance) {
+Artist.prototype.drawForwardWithJoints_ = function (distance) {
   var remainingDistance = distance;
 
   while (remainingDistance > 0) {
@@ -14207,93 +14455,93 @@ Turtle.drawForwardWithJoints_ = function (distance) {
     remainingDistance -= currentSegmentLength;
 
     if (enoughForFullSegment) {
-      Turtle.drawJointAtTurtle_();
+      this.drawJointAtTurtle_();
     }
 
-    Turtle.drawForwardLine_(currentSegmentLength);
+    this.drawForwardLine_(currentSegmentLength);
 
     if (enoughForFullSegment) {
-      Turtle.drawJointAtTurtle_();
+      this.drawJointAtTurtle_();
     }
   }
 };
 
-Turtle.drawForwardLine_ = function (distance) {
+Artist.prototype.drawForwardLine_ = function (distance) {
 
-  if (skin.id == "anna" || skin.id == "elsa") {
-    Turtle.ctxScratch.beginPath();
-    Turtle.ctxScratch.moveTo(Turtle.stepStartX * retina, Turtle.stepStartY * retina);
-    Turtle.jumpForward_(distance);
-    Turtle.drawToTurtle_(distance);
-    Turtle.ctxScratch.stroke();
+  if (this.skin.id == "anna" || this.skin.id == "elsa") {
+    this.ctxScratch.beginPath();
+    this.ctxScratch.moveTo(this.stepStartX, this.stepStartY);
+    this.jumpForward_(distance);
+    this.drawToTurtle_(distance);
+    this.ctxScratch.stroke();
   } else {
-    Turtle.ctxScratch.beginPath();
-    Turtle.ctxScratch.moveTo(Turtle.x, Turtle.y);
-    Turtle.jumpForward_(distance);
-    Turtle.drawToTurtle_(distance);
-    Turtle.ctxScratch.stroke();
+    this.ctxScratch.beginPath();
+    this.ctxScratch.moveTo(this.x, this.y);
+    this.jumpForward_(distance);
+    this.drawToTurtle_(distance);
+    this.ctxScratch.stroke();
   }
 
 };
 
-Turtle.drawForwardLineWithPattern_ = function (distance) {
+Artist.prototype.drawForwardLineWithPattern_ = function (distance) {
   var img;
   var startX;
   var startY;
 
-  if (skin.id == "anna" || skin.id == "elsa") {
-    Turtle.ctxPattern.moveTo(Turtle.stepStartX * retina, Turtle.stepStartY * retina);
-    img = Turtle.currentPathPattern;
-    startX = Turtle.stepStartX;
-    startY = Turtle.stepStartY;
+  if (this.skin.id == "anna" || this.skin.id == "elsa") {
+    this.ctxPattern.moveTo(this.stepStartX, this.stepStartY);
+    img = this.currentPathPattern;
+    startX = this.stepStartX;
+    startY = this.stepStartY;
 
-    var lineDistance = Math.abs(Turtle.stepDistanceCovered);
+    var lineDistance = Math.abs(this.stepDistanceCovered);
 
-    Turtle.ctxPattern.save();
-    Turtle.ctxPattern.translate(startX * retina, startY * retina);
+    this.ctxPattern.save();
+    this.ctxPattern.translate(startX, startY);
     // increment the angle and rotate the image.
     // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
-    Turtle.ctxPattern.rotate(Math.PI * (Turtle.heading - 90) / 180);
+    this.ctxPattern.rotate(Math.PI * (this.heading - 90) / 180);
 
     var clipSize;
-    if (lineDistance % Turtle.smoothAnimateStepSize === 0) {
-      clipSize = Turtle.smoothAnimateStepSize;
-    } else if (lineDistance > Turtle.smoothAnimateStepSize) {
+    if (lineDistance % this.smoothAnimateStepSize === 0) {
+      clipSize = this.smoothAnimateStepSize;
+    } else if (lineDistance > this.smoothAnimateStepSize) {
       // this happens when our line was not divisible by smoothAnimateStepSize
       // and we've hit our last chunk
-      clipSize = lineDistance % Turtle.smoothAnimateStepSize;
+      clipSize = lineDistance % this.smoothAnimateStepSize;
     } else {
       clipSize = lineDistance;
     }
     if (img.width !== 0) {
-      Turtle.ctxPattern.drawImage(img,
+      this.ctxPattern.drawImage(img,
         // Start point for clipping image
-        Math.round(lineDistance * retina), 0,
+        Math.round(lineDistance), 0,
         // clip region size
-        clipSize * retina, img.height,
+        clipSize, img.height,
         // some mysterious hand-tweaking done by Brendan
-        Math.round((Turtle.stepDistanceCovered - clipSize - 2) * retina), Math.round((- 18) * retina),
-        clipSize * retina, img.height);
+        Math.round((this.stepDistanceCovered - clipSize - 2)), Math.round((- 18)),
+        clipSize, img.height);
     }
 
-    Turtle.ctxPattern.restore();
+    this.ctxPattern.restore();
 
   } else {
 
-    Turtle.ctxScratch.moveTo(Turtle.x, Turtle.y);
-    img = Turtle.currentPathPattern;
-    startX = Turtle.x;
-    startY = Turtle.y;
+    this.ctxScratch.moveTo(this.x, this.y);
+    img = this.currentPathPattern;
+    startX = this.x;
+    startY = this.y;
 
-    Turtle.jumpForward_(distance);
-    Turtle.ctxScratch.save();
-    Turtle.ctxScratch.translate(startX, startY);
+    this.jumpForward_(distance);
+    this.ctxScratch.save();
+    this.ctxScratch.translate(startX, startY);
     // increment the angle and rotate the image.
     // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
-    Turtle.ctxScratch.rotate(Math.PI * (Turtle.heading - 90) / 180);
+    this.ctxScratch.rotate(Math.PI * (this.heading - 90) / 180);
 
     if (img.width !== 0) {
-      Turtle.ctxScratch.drawImage(img,
+      this.ctxScratch.drawImage(img,
         // Start point for clipping image
         0, 0,
         // clip region size
@@ -14303,19 +14551,19 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
         distance+img.height / 2, img.height);
     }
 
-    Turtle.ctxScratch.restore();
+    this.ctxScratch.restore();
   }
 };
 
-Turtle.shouldDrawJoints_ = function () {
-  return level.isK1 && !Turtle.isPredrawing_;
+Artist.prototype.shouldDrawJoints_ = function () {
+  return this.level.isK1 && !this.isPredrawing_;
 };
 
-Turtle.drawJointAtTurtle_ = function () {
-  Turtle.ctxScratch.beginPath();
-  Turtle.ctxScratch.moveTo(Turtle.x, Turtle.y);
-  Turtle.circleAt_(Turtle.x, Turtle.y, JOINT_RADIUS);
-  Turtle.ctxScratch.stroke();
+Artist.prototype.drawJointAtTurtle_ = function () {
+  this.ctxScratch.beginPath();
+  this.ctxScratch.moveTo(this.x, this.y);
+  this.circleAt_(this.x, this.y, JOINT_RADIUS);
+  this.ctxScratch.stroke();
 };
 
 /**
@@ -14324,29 +14572,31 @@ Turtle.drawJointAtTurtle_ = function () {
  * @param {number} permittedErrors Number of pixels allowed to be wrong.
  * @return {boolean} True if the level is solved, false otherwise.
  */
-var isCorrect = function(pixelErrors, permittedErrors) {
+Artist.prototype.isCorrect_ = function (pixelErrors, permittedErrors) {
   return pixelErrors <= permittedErrors;
 };
 
 /**
  * App specific displayFeedback function that calls into
- * StudioApp.displayFeedback when appropriate
+ * this.studioApp_.displayFeedback when appropriate
  */
-var displayFeedback = function() {
+Artist.prototype.displayFeedback_ = function() {
   var feedbackImageCanvas;
-  if (skin.id == "anna" || skin.id == "elsa") {
+  if (this.skin.id == "anna" || this.skin.id == "elsa") {
     // For frozen skins, show background and characters along with drawing
-    feedbackImageCanvas = Turtle.ctxDisplay;
+    feedbackImageCanvas = this.ctxDisplay;
   } else {
-    feedbackImageCanvas = Turtle.ctxScratch;
+    feedbackImageCanvas = this.ctxScratch;
   }
 
-  StudioApp.displayFeedback({
-    app: 'turtle', //XXX
-    skin: skin.id,
-    feedbackType: Turtle.testResults,
-    message: Turtle.message,
-    response: Turtle.response,
+  var level = this.level;
+
+  this.studioApp_.displayFeedback({
+    app: 'turtle',
+    skin: this.skin.id,
+    feedbackType: this.testResults,
+    message: this.message,
+    response: this.response,
     level: level,
     feedbackImage: feedbackImageCanvas.canvas.toDataURL("image/png"),
     // add 'impressive':true to non-freeplay levels that we deem are relatively impressive (see #66990480)
@@ -14354,7 +14604,7 @@ var displayFeedback = function() {
     // impressive levels are already saved
     alreadySaved: level.impressive,
     // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
-    saveToGalleryUrl: level.freePlay && Turtle.response && Turtle.response.save_to_gallery_url,
+    saveToGalleryUrl: level.freePlay && this.response && this.response.save_to_gallery_url,
     appStrings: {
       reinfFeedbackMsg: turtleMsg.reinfFeedbackMsg(),
       sharingText: turtleMsg.shareDrawing()
@@ -14366,12 +14616,12 @@ var displayFeedback = function() {
  * Function to be called when the service report call is complete
  * @param {object} JSON response (if available)
  */
-Turtle.onReportComplete = function(response) {
-  Turtle.response = response;
+Artist.prototype.onReportComplete = function(response) {
+  this.response = response;
   // Disable the run button until onReportComplete is called.
   var runButton = document.getElementById('runButton');
   runButton.disabled = false;
-  displayFeedback();
+  this.displayFeedback_();
 };
 
 // This removes lengths from the text version of the XML of programs.
@@ -14387,13 +14637,13 @@ removeK1Lengths.regex = /_length"><title name="length">.*?<\/title>/;
  * Verify if the answer is correct.
  * If so, move on to next level.
  */
-Turtle.checkAnswer = function() {
+Artist.prototype.checkAnswer = function() {
   // Compare the Alpha (opacity) byte of each pixel in the user's image and
   // the sample answer image.
   var userImage =
-      Turtle.ctxScratch.getImageData(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+      this.ctxScratch.getImageData(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
   var answerImage =
-      Turtle.ctxAnswer.getImageData(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+      this.ctxAnswer.getImageData(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
   var len = Math.min(userImage.data.length, answerImage.data.length);
   var delta = 0;
   // Pixels are in RGBA format.  Only check the Alpha bytes.
@@ -14405,6 +14655,8 @@ Turtle.checkAnswer = function() {
     }
   }
 
+  var level = this.level;
+
   // Allow some number of pixels to be off, but be stricter
   // for certain levels.
   var permittedErrors = level.permittedErrors;
@@ -14414,46 +14666,45 @@ Turtle.checkAnswer = function() {
 
   // Test whether the current level is a free play level, or the level has
   // been completed
-  var levelComplete = (level.freePlay || isCorrect(delta, permittedErrors)) &&
-                        (!level.editCode || !Turtle.executionError);
-  Turtle.testResults = StudioApp.getTestResults(levelComplete);
+  var levelComplete = (level.freePlay || this.isCorrect_(delta, permittedErrors)) &&
+                        (!level.editCode || !this.executionError);
+  this.testResults = this.studioApp_.getTestResults(levelComplete);
 
   var program;
-  if (StudioApp.usingBlockly) {
+  if (this.studioApp_.usingBlockly) {
     var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
     program = Blockly.Xml.domToText(xml);
   }
 
   // Make sure we don't reuse an old message, since not all paths set one.
-  Turtle.message = undefined;
+  this.message = undefined;
 
   // In level K1, check if only lengths differ.
-  if (level.isK1 && !levelComplete && !StudioApp.editCode &&
+  if (level.isK1 && !levelComplete && !this.studioApp_.editCode &&
       level.solutionBlocks &&
       removeK1Lengths(program) === removeK1Lengths(level.solutionBlocks)) {
-    Turtle.testResults = StudioApp.TestResults.APP_SPECIFIC_ERROR;
-    Turtle.message = turtleMsg.lengthFeedback();
+    this.testResults = this.studioApp_.TestResults.APP_SPECIFIC_ERROR;
+    this.message = turtleMsg.lengthFeedback();
   }
 
   // For levels where using too many blocks would allow students
   // to miss the point, convert that feedback to a failure.
   if (level.failForTooManyBlocks &&
-      Turtle.testResults == StudioApp.TestResults.TOO_MANY_BLOCKS_FAIL) {
-    // TODO: Add more helpful error message.
-    Turtle.testResults = StudioApp.TestResults.TOO_MANY_BLOCKS_FAIL;
+      this.testResults == this.studioApp_.TestResults.TOO_MANY_BLOCKS_FAIL) {
+    this.testResults = this.studioApp_.TestResults.TOO_MANY_BLOCKS_FAIL;
 
-  } else if ((Turtle.testResults ==
-      StudioApp.TestResults.TOO_MANY_BLOCKS_FAIL) ||
-      (Turtle.testResults == StudioApp.TestResults.ALL_PASS)) {
+  } else if ((this.testResults ==
+      this.studioApp_.TestResults.TOO_MANY_BLOCKS_FAIL) ||
+      (this.testResults == this.studioApp_.TestResults.ALL_PASS)) {
     // Check that they didn't use a crazy large repeat value when drawing a
     // circle.  This complains if the limit doesn't start with 3.
     // Note that this level does not use colour, so no need to check for that.
-    if (level.failForCircleRepeatValue && StudioApp.usingBlockly) {
+    if (level.failForCircleRepeatValue && this.studioApp_.usingBlockly) {
       var code = Blockly.Generator.blockSpaceToCode('JavaScript');
       if (code.indexOf('count < 3') == -1) {
-        Turtle.testResults =
-            StudioApp.TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
-        Turtle.message = commonMsg.tooMuchWork();
+        this.testResults =
+            this.studioApp_.TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
+        this.message = commonMsg.tooMuchWork();
       }
     }
   }
@@ -14465,22 +14716,22 @@ Turtle.checkAnswer = function() {
     // do an acorn.parse and then use escodegen to generate back a "clean" version
     // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
 
-    program = StudioApp.editor.getValue();
+    program = this.studioApp_.editor.getValue();
   }
 
   // If the current level is a free play, always return the free play
   // result type
   if (level.freePlay) {
-    Turtle.testResults = StudioApp.TestResults.FREE_PLAY;
+    this.testResults = this.studioApp_.TestResults.FREE_PLAY;
   }
 
   // Play sound
-  StudioApp.stopLoopingAudio('start');
-  if (Turtle.testResults === StudioApp.TestResults.FREE_PLAY ||
-      Turtle.testResults >= StudioApp.TestResults.TOO_MANY_BLOCKS_FAIL) {
-    StudioApp.playAudio('win');
+  this.studioApp_.stopLoopingAudio('start');
+  if (this.testResults === this.studioApp_.TestResults.FREE_PLAY ||
+      this.testResults >= this.studioApp_.TestResults.TOO_MANY_BLOCKS_FAIL) {
+    this.studioApp_.playAudio('win');
   } else {
-    StudioApp.playAudio('failure');
+    this.studioApp_.playAudio('failure');
   }
 
   var reportData = {
@@ -14488,25 +14739,25 @@ Turtle.checkAnswer = function() {
     level: level.id,
     builder: level.builder,
     result: levelComplete,
-    testResult: Turtle.testResults,
+    testResult: this.testResults,
     program: encodeURIComponent(program),
-    onComplete: Turtle.onReportComplete,
+    onComplete: _.bind(this.onReportComplete, this),
     save_to_gallery: level.impressive
   };
 
   // https://www.pivotaltracker.com/story/show/84171560
   // Never send up frozen images for now.
-  var isFrozen = (skin.id === 'anna' || skin.id === 'elsa');
+  var isFrozen = (this.skin.id === 'anna' || this.skin.id === 'elsa');
 
   // Get the canvas data for feedback.
-  if (Turtle.testResults >= StudioApp.TestResults.TOO_MANY_BLOCKS_FAIL &&
+  if (this.testResults >= this.studioApp_.TestResults.TOO_MANY_BLOCKS_FAIL &&
     !isFrozen && (level.freePlay || level.impressive)) {
-    reportData.image = getFeedbackImage();
+    reportData.image = this.getFeedbackImage_();
   }
 
-  StudioApp.report(reportData);
+  this.studioApp_.report(reportData);
 
-  if (StudioApp.usingBlockly) {
+  if (this.studioApp_.usingBlockly) {
     // reenable toolbox
     Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
   }
@@ -14514,23 +14765,43 @@ Turtle.checkAnswer = function() {
   // The call to displayFeedback() will happen later in onReportComplete()
 };
 
-var getFeedbackImage = function() {
+Artist.prototype.getFeedbackImage_ = function() {
   var feedbackImageCanvas;
-  if (skin.id == "anna" || skin.id == "elsa") {
-    feedbackImageCanvas = Turtle.ctxDisplay;
+  if (this.skin.id == "anna" || this.skin.id == "elsa") {
+    feedbackImageCanvas = this.ctxDisplay;
   } else {
-    feedbackImageCanvas = Turtle.ctxScratch;
+    feedbackImageCanvas = this.ctxScratch;
   }
 
   // Copy the user layer
-  Turtle.ctxFeedback.globalCompositeOperation = 'copy';
-  Turtle.ctxFeedback.drawImage(feedbackImageCanvas.canvas, 0, 0, 154, 154);
-  var feedbackCanvas = Turtle.ctxFeedback.canvas;
+  this.ctxFeedback.globalCompositeOperation = 'copy';
+  this.ctxFeedback.drawImage(feedbackImageCanvas.canvas, 0, 0, 154, 154);
+  var feedbackCanvas = this.ctxFeedback.canvas;
   return encodeURIComponent(
       feedbackCanvas.toDataURL("image/png").split(',')[1]);
 };
 
-},{"../../locale/fr_fr/common":44,"../../locale/fr_fr/turtle":45,"../base":3,"../codegen":7,"../feedback.js":10,"../templates/page.html":23,"../utils":42,"./api":30,"./controls.html":32,"./core":33,"./levels":35}],42:[function(require,module,exports){
+// Helper for creating canvas elements.
+Artist.prototype.createCanvas_ = function (id, width, height) {
+  var el = document.createElement('canvas');
+  el.id = id;
+  el.width = width;
+  el.height = height;
+  return el;
+};
+
+/**
+* When smooth animate is true, steps can be broken up into multiple animations.
+* At the end of each step, we want to reset any incremental information, which
+* is what this does.
+*/
+Artist.prototype.resetStepInfo_ = function () {
+  this.stepStartX = this.x;
+  this.stepStartY = this.y;
+  this.stepDistanceCovered = 0;
+};
+
+},{"../../locale/fr_fr/common":45,"../../locale/fr_fr/turtle":46,"../codegen":7,"../slider":17,"../templates/page.html":24,"../utils":43,"./api":31,"./colours":33,"./controls.html":34,"./levels":36}],43:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
 
@@ -14892,7 +15163,7 @@ exports.generateDropletModeOptions = function (codeFunctions) {
   return modeOptions;
 };
 
-},{"./hammer":11,"./lodash":13,"./xml":43}],43:[function(require,module,exports){
+},{"./hammer":12,"./lodash":14,"./xml":44}],44:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -14920,7 +15191,7 @@ exports.parseElement = function(text) {
   return element;
 };
 
-},{}],44:[function(require,module,exports){
+},{}],45:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.fr=function(n){return n===0||n==1?"one":"other"}
 exports.and = function(d){return "et"};
 
@@ -15100,10 +15371,12 @@ exports.hintHeader = function(d){return "Voici une astuce :"};
 
 exports.genericFeedback = function(d){return "Observez le résultat et essayez de corriger les erreurs."};
 
+exports.toggleBlocksErrorMsg = function(d){return "You need to correct an error in your program before it can be shown as blocks."};
+
 exports.defaultTwitterText = function(d){return "Découvrez ce que j'ai fait"};
 
 
-},{"messageformat":57}],45:[function(require,module,exports){
+},{"messageformat":58}],46:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.fr=function(n){return n===0||n==1?"one":"other"}
 exports.blocksUsed = function(d){return "Blocs utilisés : %1"};
 
@@ -15113,7 +15386,7 @@ exports.catColour = function(d){return "Couleur"};
 
 exports.catControl = function(d){return "boucles"};
 
-exports.catMath = function(d){return "Calculs"};
+exports.catMath = function(d){return "Math"};
 
 exports.catProcedures = function(d){return "fonctions"};
 
@@ -15270,7 +15543,7 @@ exports.widthTooltip = function(d){return "Modifie l'épaisseur du tracé."};
 exports.wrongColour = function(d){return "Votre image n'est pas de la bonne couleur. Pour cette énigme, elle doit être %1."};
 
 
-},{"messageformat":57}],46:[function(require,module,exports){
+},{"messageformat":58}],47:[function(require,module,exports){
 
 /*!
  * EJS
@@ -15629,7 +15902,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":47,"./utils":48,"fs":49,"path":50}],47:[function(require,module,exports){
+},{"./filters":48,"./utils":49,"fs":50,"path":51}],48:[function(require,module,exports){
 /*!
  * EJS - Filters
  * Copyright(c) 2010 TJ Holowaychuk <tj@vision-media.ca>
@@ -15832,7 +16105,7 @@ exports.json = function(obj){
   return JSON.stringify(obj);
 };
 
-},{}],48:[function(require,module,exports){
+},{}],49:[function(require,module,exports){
 
 /*!
  * EJS
@@ -15858,9 +16131,9 @@ exports.escape = function(html){
 };
  
 
-},{}],49:[function(require,module,exports){
-
 },{}],50:[function(require,module,exports){
+
+},{}],51:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -16088,7 +16361,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require("JkpR2F"))
-},{"JkpR2F":51}],51:[function(require,module,exports){
+},{"JkpR2F":52}],52:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -16153,7 +16426,7 @@ process.chdir = function (dir) {
     throw new Error('process.chdir is not supported');
 };
 
-},{}],52:[function(require,module,exports){
+},{}],53:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -16664,7 +16937,7 @@ process.chdir = function (dir) {
 }(this));
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],53:[function(require,module,exports){
+},{}],54:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -16750,7 +17023,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],54:[function(require,module,exports){
+},{}],55:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -16837,13 +17110,13 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],55:[function(require,module,exports){
+},{}],56:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":53,"./encode":54}],56:[function(require,module,exports){
+},{"./decode":54,"./encode":55}],57:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -17552,7 +17825,7 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":52,"querystring":55}],57:[function(require,module,exports){
+},{"punycode":53,"querystring":56}],58:[function(require,module,exports){
 /**
  * messageformat.js
  *
@@ -19135,4 +19408,4 @@ function isNullOrUndefined(arg) {
 
 })( this );
 
-},{}]},{},[36])
+},{}]},{},[37])

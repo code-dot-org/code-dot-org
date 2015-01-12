@@ -5,7 +5,7 @@
         blank: is required
     attributes:
       user:
-        name: Name
+        name: Display Name
         email: Email
         username: Kasutajanimi
         password: Salasõna
@@ -22,7 +22,7 @@
   add_teacher_form:
     code:
       label: 'Lisa õpetaja:'
-      placeholder: Code (ABCDEF)
+      placeholder: Section Code (ABCDEF)
     submit: Lisa õpetaja
   add_hint_form:
     placeholder: Palun sisesta siia oma vihje
@@ -61,9 +61,11 @@
     need_confirmation: Didn't receive confirmation instructions?
     need_unlock: Didn't receive unlock instructions?
   signup_form:
-    overview_student: Sign up for an account to track your progress.
+    overview_student: Sign up for an account to track your progress. Your email is
+      primarily used to allow you to log in and for password recovery. For more information,
+      see our <a href="http://code.org/privacy">Privacy Policy</a>.
     overview_teacher: Teach computer science in your classroom by signing up for an
-      account.<p/> You'll be able to track your students' progress and get rewards.
+      account.<p/> You'll be able to add your students and track their progress.
     no_signup_message: You can <a target="_blank" href="http://learn.code.org">browse
       the various stages and puzzles</a>, but you will need to sign up to save your
       progress.
@@ -87,10 +89,13 @@
     valid_password: Sobilik salasõna!
     invalid_password: Salasõna peab olema vähemalt 6 tähemärgi pikkune
     mismatch_password: Sinu poolt sisestatud salasõnad ei ühti
-    student_terms: I agree to be bound by the Code.org terms of service. If I am under
-      13 years of age, I confirm by submitting this form that I have my parent or
-      legal guardian's permission to use the Code.org services.
-    teacher_terms: I agree to be bound by the Code.org terms of service.
+    student_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
+      of service</a>. If I am under 13 years of age, I confirm by submitting this
+      form that I have my parent or legal guardian's permission to use the Code.org
+      services.<br/>For users under 13, email addresses are not stored in a form that
+      allows us to contact them.
+    teacher_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
+      of service</a>.
     additional_information: We need some additional information to continue signing
       you up.
   signin_form:
@@ -388,9 +393,9 @@
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
     heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
-    heading_elementary: <h2>20 hour courses for</h2><h1>Elementary Students</h1>
+    heading_elementary: <h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>
     heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
-    heading_legacy: <h2>Our previous course for</h2><h1>Existing Students</h1>
+    heading_legacy: <h2>Our general course for</h2><h1>All Ages</h1>
     your_gallery: Galerii
   gender:
     male: Male
@@ -400,13 +405,11 @@
     student: Õpilane
     teacher: Õpetaja
   footer:
-    help_from_html: Engineers from <a href="http://www.google.com">Google</a>, <a
-      href="http://www.microsoft.com">Microsoft</a>, <a href="http://www.facebook.com">Facebook</a>,
-      and <a href="http://www.twitter.com">Twitter</a> helped create this tutorial.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 <a href="http://www.rovio.com">Rovio
-      Entertainment Ltd</a>. All Rights Reserved.<br/> Plants vs. Zombies&trade; &
-      &copy; 2013 <a href="http://www.ea.com">Electronic Arts Inc.</a>. All Rights
-      Reserved.
+    help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped
+      create this tutorial.
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
+      All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
+      Arts Inc. All Rights Reserved.
     powered_by_aws: Powered by Amazon Web Services
     feedback: Provide feedback
     translate: Help us translate to your language
@@ -421,7 +424,7 @@
     teacher: Vaata lahendust
     auth_error: Sul ei ole õigusi lahenduse vaatamiseks.
     submit: Update Artist Location
-    direction: Start Direction
+    direction: Start Direction (in degrees)
   video:
     tab: Video.
     notes: Videot pole? Näita märkmeid.
@@ -458,7 +461,7 @@
     title: Click 'Run' to see my program in action
     bounce_og_title: Check out my Bounce Game
     flappy_og_title: Check out my Flappy Game
-    studio_og_title: Check out my story
+    studio_og_title: Check out my Play Lab App
     check_out_what_i_made: Check out what I made
     og_description: I wrote the code myself with Code.org
     phone_number_not_allowed: It looks like there is a phone number in it. Try changing

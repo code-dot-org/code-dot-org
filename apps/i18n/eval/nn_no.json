@@ -13,6 +13,7 @@
   "squareBlockTitle": "kvadrat (størrelse, stil, farge)",
   "starBlockTitle": "stjerne (radius, stil, farge)",
   "radialStarBlockTitle": "radial-stjerne (punkter, indre, ytre, stil, farge)",
+  "polygonBlockTitle": "polygon (sides, length, style, color)",
   "stringAppendBlockTitle": "legg-til-tekst(første,andre)",
   "stringLengthBlockTitle": "tekst-lengde(tekst)",
   "textBlockTitle": "tekst (streng, størrelse, farge)",

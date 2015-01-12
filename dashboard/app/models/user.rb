@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :omniauthable, :confirmable,
          :recoverable, :rememberable, :trackable
 
-  acts_as_paranoid # use deleted_at column instead of deleting rows
+#  acts_as_paranoid # use deleted_at column instead of deleting rows
 
   PROVIDER_MANUAL = 'manual' # "old" user created by a teacher -- logs in w/ username + password
   PROVIDER_SPONSORED = 'sponsored' # "new" user created by a teacher -- logs in w/ name + secret picture/word 

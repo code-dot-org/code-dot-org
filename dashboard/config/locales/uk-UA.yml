@@ -341,11 +341,12 @@
     email_resend_confirm: Надіслати повідомлення з підтвердженням повторно
     new_password_hint: (залишіть порожнім, якщо ви не хочете змінювати)
     current_password_hint: (нам потрібний ваш поточний пароль, щоб підтвердити зміни)
-    delete: Delete your account
-    delete_text: Clicking the button below will delete your account.
-    delete_text_teacher_note: 'Please note: deleting your account will not delete
-      your students'' accounts.'
-    delete_confirm: Are you sure you want to delete your account?
+    delete: Видалення облікового запису
+    delete_text: Клацання розташованої нижче кнопки призведе до видалення облікового
+      запису.
+    delete_text_teacher_note: 'Будь ласка, зверніть увагу: видалення облікового запису
+      не видалить облікових записів ваших учнів.'
+    delete_confirm: Ви впевнені, що бажаєте видалити обліковий запис?
   user_level:
     completed: Завершено
     tried: Спробував

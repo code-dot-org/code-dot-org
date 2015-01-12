@@ -3,7 +3,7 @@
   select_language: Lūdzu izvēlieties savu valodu
   computer_science: Datorzinātne
   computer_science_edweek: Datorzinātnes Izglītības nedēļa
-  csedweek_dates: 2013. gada 9. - 15. decembris
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Programmēšanas stunda</a> tuvojas. Aicinam visus skolotājus
     un organizatorus, <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -389,6 +389,7 @@
   carousel_heading_robots: Iemāčies programēt ar robotiem
   carousel_heading_ide: Skolotāju starpā populāras platformas
   educator_notes: Pasniedzēju pieraksti
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Vairāk resursi priekš skolotājiem un pasniedzējiem
   participants: Paslēpt kontekstu - Pieprasīt kontekstu
   teachers_notes: Skolotāju pieraksti
@@ -583,11 +584,11 @@
     programmēšanu. Tas atgādinās spēlēšanos, skatoties video lekcijas ar Bilu Geitsu,
     Marku Zuckerberg, pikatajiem putniem un augiem pret zombijiem. Mācies cikliskas
     konstrukcijas, nosacījumus un vienkāršus algoritmus. Pieejams 34 valodās.
-  thinkersmithspanish_longdescription: Izmantojot iepriekš sagatavotu "Vārdnīcu -
-    robotu" skolēni izdomās, kā savstarpēji palīdzēt izpildīt darbības tās neapspriežot.
-    Šī nodarbība skolēniem māca saistību starp simboliem un darbībām, kā arī atkļūdošanas
-    prasmi. "Mani draugi - roboti" vislabāk veicama kā grupas aktivitāte un ir pieejams
-    arī skolotāja grāmata darbam ar klasi.
+  thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
+    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
+    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
+    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
+    como la valiosa habilidad de depuraci&oacute;n.
   khan_longdescription: Iemācies JavaScript programmēšanas valodas pamatus, radot
     jautrus zīmējumus ar savu kodu. Dari to patstāvīgi vai kopā ar klasi!
   khanes_longdescription: Iemācies JavaScript programmēšanas valodas pamatus, radot

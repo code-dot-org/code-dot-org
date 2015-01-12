@@ -109,15 +109,13 @@ Conditionals let our programs run differently based on the outcome of a conditio
 
 Let's look at a conditional piece by piece:
 
-(x > 10)  ->  "that's big"
-(x < 10)  ->  "that's small"
-else      ->  "that's ten"
+(x > 10)  ->  "That's pretty big"
+(x < 10)  ->  "That's pretty small"
+else      ->  "That's exactly ten"
 
-If we define x as 11, this conditional will first check if x > 10, which returns TRUE, so we get the String "that's big" - and because we found a true condition
+If we define x = 11, this conditional will first check if x > 10, which returns TRUE, so we get the String "that's big" - and because we found a true condition we don't need to keep looking.
 
-Each conditional has at least one clause. Each clause has a Boolean question and a result.
-
-Else clauses are best used as a catch-all for cases that you can’t otherwise enumerate. If you can state a precise question for a clause, write the precise question instead of else. For example, if you have a function that does different things depending on whether some variable x is larger than 5, it is better for beginners to write the two questions (> x 5) and (<= x 5) rather than have the second question be else. Explicit questions make it easier to read and maintain programs.
+If we define x = 10, then we first check if x > 10 (FALSE), then we check x < 10 (FALSE), so then we hit the _else_ statement, which only returns if none of the other conditions were true. The _else_ statement should be considered the catch-all response - with that in mind, what's wrong with replying "That's exactly ten"? What if x = "yellow"? If you can state a precise question for a clause, write the precise question instead of else. It would have been  for beginners to write the two questions (x > 10) and (x <= 10). Explicit questions make it easier to read and maintain programs.
 
 Functions that use conditions are called piecewise functions, because each condition defines a separate piece of the function. Why are piecewise functions useful? Think about the player in your game: you’d like the player to move one way if you hit the "up" key, and another way if you hit the "down" key. Moving up and moving down need two different expressions! Without cond, you could only write a function that always moves the player up, or always moves it down, but not both.
      

@@ -1,42 +1,41 @@
----
 en:
   data:
     contract_match:
       Enter name here:
-        Enter title here: Enter title here
-        Enter prompt here: Enter prompt here
-        Contract Name|Number|Domain1:Number|Domain2:string: Contract Name|Number|Domain1:Number|Domain2:string
+        Enter title here: crwdns27343:0crwdne27343:0
+        Enter prompt here: crwdns27344:0crwdne27344:0
+        "Contract Name|Number|Domain1:Number|Domain2:string": crwdns27345:0crwdne27345:0
       Eval Contracts 1 B:
-        Eval Contracts 1 B: Eval Contracts 1 B
-        Write a contract for the star function: Write a contract for the star function
-        Eval Contracts 1.solution_blocks, 200: Eval Contracts 1.solution_blocks, 200
-        Contract star|image|Domain1:Number|Domain2:string|Domain3:string: Contract star|image|Domain1:Number|Domain2:string|Domain3:string
-        Eval Contracts 1.solution_blocks: Eval Contracts 1.solution_blocks
-        Contract star|image|radius:Number|style:string|color:string: Contract star|image|radius:Number|style:string|color:string
-        star|image|radius:Number|style:string|color:string: star|image|radius:Number|style:string|color:string
-        Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks, 300
+        Eval Contracts 1 B: crwdns27346:0crwdne27346:0
+        Write a contract for the star function: crwdns27347:0crwdne27347:0
+        Eval Contracts 1.solution_blocks, 200: crwdns27348:0crwdne27348:0
+        "Contract star|image|Domain1:Number|Domain2:string|Domain3:string": crwdns27349:0crwdne27349:0
+        Eval Contracts 1.solution_blocks: crwdns27350:0crwdne27350:0
+        "Contract star|image|radius:Number|style:string|color:string": crwdns27351:0crwdne27351:0
+        "star|image|radius:Number|style:string|color:string": crwdns27352:0crwdne27352:0
+        Eval Contracts 1 A.solution_blocks, 300: crwdns27353:0crwdne27353:0
       Eval Contracts 2 B:
-        Eval Contracts 2 B: Eval Contracts 2 B
-        Write a contract for the rotate function: Write a contract for the rotate function
-        Eval Contracts 2 A.solution_blocks, 300: Eval Contracts 2 A.solution_blocks, 300
-        rotate|image|degrees:Number|image:image: rotate|image|degrees:Number|image:image
+        Eval Contracts 2 B: crwdns27354:0crwdne27354:0
+        Write a contract for the rotate function: crwdns27355:0crwdne27355:0
+        Eval Contracts 2 A.solution_blocks, 300: crwdns27356:0crwdne27356:0
+        "rotate|image|degrees:Number|image:image": crwdns27357:0crwdne27357:0
       Eval Contracts 3 B:
-        Eval Contracts 3 B: Eval Contracts 3 B
-        Write a contract for the text function: Write a contract for the text function
-        Eval Contracts 3 A.solution_blocks, 300: Eval Contracts 3 A.solution_blocks, 300
-        text|image|string:string|size:Number|color:string: text|image|string:string|size:Number|color:string
+        Eval Contracts 3 B: crwdns27358:0crwdne27358:0
+        Write a contract for the text function: crwdns27359:0crwdne27359:0
+        Eval Contracts 3 A.solution_blocks, 300: crwdns27360:0crwdne27360:0
+        "text|image|string:string|size:Number|color:string": crwdns27361:0crwdne27361:0
       Eval Contracts 4 B:
-        Eval Contracts 4 B: Eval Contracts 4 B
-        Write a contract for the scale function: Write a contract for the scale function
-        Eval Contracts 4 A.solution_blocks, 300: Eval Contracts 4 A.solution_blocks, 300
-        scale|image|factor:Number|image:image: scale|image|factor:Number|image:image
+        Eval Contracts 4 B: crwdns27362:0crwdne27362:0
+        Write a contract for the scale function: crwdns27363:0crwdne27363:0
+        Eval Contracts 4 A.solution_blocks, 300: crwdns27364:0crwdne27364:0
+        "scale|image|factor:Number|image:image": crwdns27365:0crwdne27365:0
       Design Recipe 1.contract:
-        Design Recipe 1 Contract: Design Recipe 1 Contract
-        ? Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.
-        : Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.
-        wide-rect|Image|height:Number|color:string: wide-rect|Image|height:Number|color:string
-      'Eval Design Recipe 1.contract':
-        Design Recipe 1 Contract: Design Recipe 1 Contract
-        ? Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.
-        : Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.
-        wide-rect|Image|height:Number|color:string: wide-rect|Image|height:Number|color:string
+        Design Recipe 1 Contract: crwdns27366:0crwdne27366:0
+        0: crwdns27367:0crwdne27367:0
+        1: crwdns27368:0crwdne27368:0
+        "wide-rect|Image|height:Number|color:string": crwdns27369:0crwdne27369:0
+      Eval Design Recipe 1.contract:
+        Design Recipe 1 Contract: crwdns27370:0crwdne27370:0
+        0: crwdns27371:0crwdne27371:0
+        1: crwdns27372:0crwdne27372:0
+        "wide-rect|Image|height:Number|color:string": crwdns27373:0crwdne27373:0

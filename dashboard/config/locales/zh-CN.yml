@@ -21,12 +21,12 @@
   welcome_back: 欢迎回来，%{name}
   add_teacher_form:
     code:
-      label: '加上老师:'
+      label: '加上一个老师:'
       placeholder: 代码节(ABCDEF)
     submit: 添加老师
   add_hint_form:
     placeholder: 请在这里输入您的提示
-    submit: 增加提示
+    submit: 添加提示
   appname: Code.org
   stage: 阶段
   stage_number: 阶段 %{number}
@@ -305,10 +305,11 @@
     email_resend_confirm: 重新发送确认指令
     new_password_hint: （如果你不想改变它，留空白）
     current_password_hint: （我们需要您的当前密码以确认您的更改）
-    cancel:
-      title: 取消我的帐户
-      hint: 不开心吗？
-      button: 取消我的帐户
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: 'Please note: deleting your account will not delete
+      your students'' accounts.'
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: 已完成
     tried: 试过了

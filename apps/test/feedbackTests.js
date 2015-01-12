@@ -17,11 +17,11 @@ global.document = {};
  * getMissingRequiredBlocks and validates that the result matches the
  * options.expectedResult
  */
-describe("getMissingRequiredBlocks tests", function () {
-  var feedback;
+describe("getMissingRequiredBlocks_ tests", function () {
+  var studioAppSingleton;
 
   /**
-   * getMissingRequiredBlocks will return us an array of requiredBlocks.  We
+   * getMissingRequiredBlocks_ will return us an array of requiredBlocks.  We
    * can't validate these using a simple assert.deepEqual because some blocks
    * contain a members generated functions.  These functions are the same in
    * terms of contents, but do not share the same space in memory, and thus
@@ -70,14 +70,14 @@ describe("getMissingRequiredBlocks tests", function () {
     assert.notEqual(options.userBlockXml, undefined);
     assert.notEqual(options.expectedResult, undefined);
 
-    // Should probably have these as inputs to getMissingRequiredBlocks instead
-    // of fields on StudioApp as it's the only place they're used
+    // Should probably have these as inputs to getMissingRequiredBlocks_ instead
+    // of fields on studioAppSingleton as it's the only place they're used
     // In fact, may want to get rid of NUM_REQUIRED_BLOCKS_TO_FLAG as it's only
     // ever set to 1, or perhaps make it customizable per level
-    StudioApp.REQUIRED_BLOCKS = options.requiredBlocks;
-    StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = options.numToFlag;
+    studioAppSingleton.REQUIRED_BLOCKS = options.requiredBlocks;
+    studioAppSingleton.NUM_REQUIRED_BLOCKS_TO_FLAG = options.numToFlag;
 
-    StudioApp.loadBlocks(options.userBlockXml);
+    studioAppSingleton.loadBlocks(options.userBlockXml);
 
     // make sure we loaded correctly. text wont match exactly, but make sure if
     // we had xml, we loaded something
@@ -85,15 +85,14 @@ describe("getMissingRequiredBlocks tests", function () {
     assert(!options.userBlockXml || loaded, "either we didnt have  input xml" +
       "or we did, and we loaded something");
 
-    var missing = feedback.__testonly__.getMissingRequiredBlocks();
+    var missing = studioAppSingleton.feedback_.getMissingRequiredBlocks_();
     validateMissingRequiredBlocks(missing.blocksToDisplay, options.expectedResult);
   }
-
 
   // create our environment
   beforeEach(function () {
     testUtils.setupTestBlockly();
-    feedback = testUtils.requireWithGlobalsCheckSrcFolder('/feedback');
+    studioAppSingleton = testUtils.getStudioAppSingleton();
   });
 
   // missing multiple blocks
@@ -287,13 +286,13 @@ describe("getMissingRequiredBlocks tests", function () {
   function validateMissingBlocksFromLevelTest(collection, levelTest) {
     it (levelTest.description, function () {
       assert(global.Blockly, "Blockly is in global namespace");
-      var levels = testUtils.requireWithGlobalsCheckSrcFolder(collection.app + '/' +
+      var levels = testUtils.requireWithGlobalsCheckBuildFolder(collection.app + '/' +
         collection.levelFile, []);
 
       var skinForTests;
       if (collection.skinId) {
-        var appSkins = testUtils.requireWithGlobalsCheckSrcFolder(collection.app + '/skins');
-        skinForTests = appSkins.load(StudioApp.assetUrl, collection.skinId);
+        var appSkins = testUtils.requireWithGlobalsCheckBuildFolder(collection.app + '/skins');
+        skinForTests = appSkins.load(studioAppSingleton.assetUrl, collection.skinId);
       } else {
         skinForTests = {
           assetUrl: function (str) { return str; }
@@ -301,9 +300,9 @@ describe("getMissingRequiredBlocks tests", function () {
       }
 
       var blockInstallOptions = { skin: skinForTests, isK1: false };
-      var blocksCommon = testUtils.requireWithGlobalsCheckSrcFolder('blocksCommon');
+      var blocksCommon = testUtils.requireWithGlobalsCheckBuildFolder('blocksCommon');
       blocksCommon.install(Blockly, blockInstallOptions);
-      var blocks = testUtils.requireWithGlobalsCheckSrcFolder(collection.app + '/blocks');
+      var blocks = testUtils.requireWithGlobalsCheckBuildFolder(collection.app + '/blocks');
       blocks.install(Blockly, blockInstallOptions);
       validateBlocks({
         requiredBlocks: levels[collection.levelId].requiredBlocks,

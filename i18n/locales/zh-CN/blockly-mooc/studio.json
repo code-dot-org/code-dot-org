@@ -58,6 +58,7 @@
   "moveDistanceTooltip":"在指定的方向上移动一个特定的距离。",
   "moveSprite":"移动",
   "moveSpriteN":"移动演员 {spriteIndex}",
+  "toXY":"to x,y",
   "moveDown":"向下移动",
   "moveDownTooltip":"向下移动一个小人。",
   "moveLeft":"向左移动",

@@ -1,9 +1,13 @@
-var TestResults = require('../../../src/constants.js').TestResults;
+var testUtils = require('../../util/testUtils');
+var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
+
 
 var rblocks = function () {
   // stick this inside a function so that it's only loaded when needed
-  return require('../../util/testUtils').requireWithGlobalsCheckSrcFolder('turtle/requiredBlocks.js');
+  return testUtils.requireWithGlobalsCheckBuildFolder('turtle/requiredBlocks.js');
 };
+
+var studioAppSingleton = require(testUtils.buildPath('base'));
 
 module.exports = {
   app: "turtle",
@@ -17,7 +21,7 @@ module.exports = {
         testResult: TestResults.ALL_PASS
       },
       customValidator: function () {
-        return StudioApp.enableShowCode === true && StudioApp.enableShowBlockCount === true;
+        return studioAppSingleton.enableShowCode === true && studioAppSingleton.enableShowBlockCount === true;
       },
       missingBlocks: [],
       xml: '<xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title><next><block type="draw_turn_by_constant_restricted"><title name="DIR">turnRight</title><title name="VALUE">90</title><next><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title></block></next></block></next></block></xml>'

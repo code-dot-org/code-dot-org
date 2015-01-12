@@ -88,5 +88,6 @@
   "signup":"Κάντε εγγραφή για το εισαγωγικό μάθημα",
   "hintHeader":"Να μια συμβουλή:",
   "genericFeedback":"Δες πως κατέληξες και δοκίμασε να διορθώσεις το πρόγραμμά σου.",
+  "toggleBlocksErrorMsg":"You need to correct an error in your program before it can be shown as blocks.",
   "defaultTwitterText":"Δείτε τι έκανα"
 }

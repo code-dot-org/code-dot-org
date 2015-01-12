@@ -281,6 +281,7 @@ nn:
           description: Eit utval av tema om brukbarheitstesting frå kurs 4.
           Variables: Variabler
           For Loops: For-løkker
+          Binary: Binær
         potus:
           title: spesielle
           description_short: spesielle
@@ -291,3 +292,38 @@ nn:
           description_short: spesielle
           description: spesielle
           Special: Spesielle
+          Binary: Binær
+        usabilitymsm:
+          Usability testing for MSM: Usability testing for MSM
+          Evaluation Blocks: Evaluation Blocks
+          Blocks to Math: Blokker til matematikk
+          Strings and Images: Strings and Images
+          Defining Variables: Defining Variables
+          Defining Functions: Defining Functions
+          Design Recipe: Design Recipe
+          Booleans: Boolske verdiar
+          Conditionals: Betingelser
+          Free Play: Free Play
+        algebra:
+          title: Computer Science in Algebra
+          description: Learn Functional Programming through Algebra
+          "Unplugged: Video Games and Coordinate Planes": 'Straumlaust: Videospel og kooridinat-plan'
+          "Calc: Evaluation Blocks": 'Rekning: Evaluering av blokker'
+          "Eval: Strings and Images": 'Eval: Tekst og bilder'
+          "Unplugged: Contracts": 'Straumlaust: Kontrakter'
+          "Eval: Writing Contracts": 'Eval: Skrive kontrakter'
+          "Calc: Defining Variables": 'Rekning: Definere Variablar'
+          "Play Lab: Defining Variables (Big Game)": 'Spel-lab: Definere variablar (Stort spel)'
+          "Eval: Defining Functions": 'Eval: Defining Functions'
+          "Unplugged: The Design Recipe": 'Straumlaust: Design oppskrifta'
+          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
+          "Eval: Functions": 'Eval: Functions'
+          "Play Lab: Animation (Big Game)": 'Spel-lab: Animasjon (Stort spel)'
+          "Unplugged: Booleans": 'Straumlaust: Boolske variable'
+          "Eval: Boolean Operators": 'Eval: Boolske operatorar'
+          "Play Lab: Booleans": 'Spel-lab: Boolske verdiar'
+          "Play Lab: Boolean (Big Game)": 'Spel-lab: Boolsk (Stort spel)'
+          "Unplugged: Conditionals and Piecewise Functions": 'Straumlaust: Vilkår og stykkevise funksjonar'
+          "Eval: Conditionals": 'Eval: Vilkår'
+          "Unplugged: Collision Detection and the Distance Formula": 'Straumlaust: Deteksjon av kollisjonar og distanseformelen'
+          "Play Lab: Collision Detection (Big Game)": 'Spel-lab: Detekssjon av kollisjong (Stort spel)'

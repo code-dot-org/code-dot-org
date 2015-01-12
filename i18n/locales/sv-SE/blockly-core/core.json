@@ -60,6 +60,7 @@
   "CONTROLS_WHILEUNTIL_OPERATOR_WHILE":"upprepa medan",
   "CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL":"Medan ett värde är falskt, utför några kommandon.",
   "CONTROLS_WHILEUNTIL_TOOLTIP_WHILE":"Medan ett värde är sant, utför några kommandon.",
+  "DEFINE_HEADER_DEFINITION":"Definition",
   "DEFINE_FUNCTION_DEFINE":"Defiera",
   "DELETE_BLOCK":"Radera block",
   "DELETE_PARAMETER":"Ta bort parametern...",

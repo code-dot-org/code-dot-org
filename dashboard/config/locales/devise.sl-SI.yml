@@ -52,7 +52,7 @@
         da dokončate potrditev vašega novega e-poštnega naslova.
       updated: Uspešno ste posodobili vaš račun.
     sessions:
-      signed_in: Uspešen vpis.
+      signed_in: ''
       signed_out: Uspešen izpis.
     unlocks:
       send_instructions: V naslednjih minutah boste prejeli e-pošto z navodilom kako
