@@ -24,7 +24,7 @@ Workshop details:
 
 > <%= workshop['notes_s'] %>
 
-If you are unable to attend the workshop, please [cancel your registration]("#{cancel_link}").
+If you are unable to attend the workshop, please [cancel your registration](<%= cancel_link} %>).
 
 <hr/>
 
