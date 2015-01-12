@@ -1,4 +1,6 @@
-var TestResults = require('../../../src/constants.js').TestResults;
+var testUtils = require('../../util/testUtils');
+var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
+
 
 // Level has two goals, one above and 1 below.
 // Note: this solution depends on the fact that the moveDistance blocks result
