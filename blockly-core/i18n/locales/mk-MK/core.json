@@ -29,7 +29,7 @@
   "CONTROLS_FLOW_STATEMENTS_TOOLTIP_BREAK": "Излегување од постоечкото повторување.",
   "CONTROLS_FLOW_STATEMENTS_TOOLTIP_CONTINUE": "Прескокнете остатокот од овој циклус, и продолжи со следното повторување.",
   "CONTROLS_FLOW_STATEMENTS_WARNING": "Предупредување: Овој блок може да се користи само во рамките на оваа повторување.",
-  "CONTROLS_FOREACH_HELPURL": "https://code.google.com/p/blockly/wiki/Loops#for_each\nСкри содржина | Барај содржина\n-> CONTROLS_FOREACH_HELPURL",
+  "CONTROLS_FOREACH_HELPURL": "https://code.google.com/p/blockly/wiki/Loops#for_each",
   "CONTROLS_FOREACH_INPUT_INLIST": "во листа",
   "CONTROLS_FOREACH_INPUT_INLIST_TAIL": "",
   "CONTROLS_FOREACH_INPUT_ITEM": "за секој предмет",

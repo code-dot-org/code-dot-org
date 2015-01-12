@@ -1,4 +1,5 @@
-var TestResults = require('../../../src/constants.js').TestResults;
+var testUtils = require('../../util/testUtils');
+var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
 
 module.exports = {
   app: "maze",

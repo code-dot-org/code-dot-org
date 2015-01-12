@@ -1,6 +1,6 @@
 goog.provide('Blockly.Msg.tr_tr');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "Güncel";
+Blockly.Msg.ACTUAL = "gerçek";
 Blockly.Msg.ADD = "Ekle";
 Blockly.Msg.ADD_COMMENT = "Yorum Ekle";
 Blockly.Msg.ADD_PARAMETER = "Değer ekle";
@@ -61,6 +61,7 @@ Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_UNTIL = "kadar tekrarla";
 Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_WHILE = "Şu doğru oldukça tekrarla:";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = "Bir değer yanlış ise olayları gerçekleştirir.";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = "Bir değer doğru ise olayları gerçekleştirir.";
+Blockly.Msg.DEFINE_HEADER_DEFINITION = "Definition";
 Blockly.Msg.DEFINE_FUNCTION_DEFINE = "Tanımla";
 Blockly.Msg.DELETE_BLOCK = "Bloğu Sil";
 Blockly.Msg.DELETE_PARAMETER = "Değer sil...";
@@ -164,7 +165,7 @@ Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_SET_FROM_START = "Bir ögeyi belirtilen yere
 Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_SET_LAST = "Bir listedeki son ögeyi yerleştirir .";
 Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_SET_RANDOM = "Listeye rast gele bir öge yerleştirir . ";
 Blockly.Msg.LISTS_TOOLTIP = "Eğer liste boş ise true verir .";
-Blockly.Msg.LOGIC_BOOLEAN_FALSE = "yanlış";
+Blockly.Msg.LOGIC_BOOLEAN_FALSE = "false";
 Blockly.Msg.LOGIC_BOOLEAN_HELPURL = "http://code.google.com/p/blockly/wiki/True_False";
 Blockly.Msg.LOGIC_BOOLEAN_TOOLTIP = "Doğru yada yanlış değerini verir.";
 Blockly.Msg.LOGIC_BOOLEAN_TRUE = "doğru";
@@ -263,8 +264,8 @@ Blockly.Msg.MATH_SINGLE_TOOLTIP_POW10 = "Bir sayının 10. kuvvetini döndür ."
 Blockly.Msg.MATH_SINGLE_TOOLTIP_ROOT = "Bir sayının karekökü nü döndür .";
 Blockly.Msg.MATH_SUBTRACTION_SYMBOL = "tire";
 Blockly.Msg.MATH_TRIG_ACOS = "ACOS";
-Blockly.Msg.MATH_TRIG_ASIN = "asinüs";
-Blockly.Msg.MATH_TRIG_ATAN = "atanjant";
+Blockly.Msg.MATH_TRIG_ASIN = "asin";
+Blockly.Msg.MATH_TRIG_ATAN = "atan";
 Blockly.Msg.MATH_TRIG_COS = "kosünüs";
 Blockly.Msg.MATH_TRIG_HELPURL = "http://en.wikipedia.org/wiki/Trigonometric_functions  Trigonometrik fonksiyonlar ";
 Blockly.Msg.MATH_TRIG_SIN = "Sinüs";

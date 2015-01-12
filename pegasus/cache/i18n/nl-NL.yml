@@ -3,7 +3,7 @@
   select_language: Kies de gewenste taal
   computer_science: Informatica
   computer_science_edweek: Week van het Informaticaonderwijs
-  csedweek_dates: 9-15 december 2013
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: 'Het <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold"> "Hour of Code"</a> komt eraan. Dit is een oproep aan alle leerkrachten
     en organisatoren, <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -90,7 +90,7 @@
   share_on_facebook: Delen op Facebook
   share_on_twitter: Delen op Twitter
   beyond_an_hour: Na het Uur Code
-  get_started: Beginnen
+  get_started: Start
   i_agree: Ik ga akkoord
   participant_select: '- Kiezen -'
   participant_student: Leerling
@@ -391,6 +391,7 @@
   carousel_heading_robots: Leer robots te programmeren
   carousel_heading_ide: Platformen populair onder docenten
   educator_notes: Opvoeder notities
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Meer middelen voor leraren en opvoeders
   participants: Deelnemers
   teachers_notes: Leraar-nota's
@@ -507,8 +508,7 @@
   groklearning_platformtext: Moderne webbrowsers
   quorum_platformtext: Moderne webbrowsers. Schermlezers ondersteund
   codespark_platformtext: iOS, Android (of een webbrowser)
-  kodable_platformtext: Kodable is a self-guided iPad game that introduces kids 5+
-    to programming basics. Having a teacher or parent nearby is optimal, but not necessary.
+  kodable_platformtext: iPad
   tynkerapp_platformtext: iPad, Android tabletten
   robomindnl_platformtext: Moderne webbrowsers, mobiele web
   flappy_platformtext: Moderne browsers, smartphones, tablets
@@ -586,12 +586,11 @@
     drop programmeren. Dit is een spelvormig zelfgestuurde cursus met , Angry Birds,
     Plants vs Zombies en video lezingen door onder andere Bill Gates, Mark Zuckerberg.
     Leer repeat-loops, condities en basis algoritmes. Beschikbaar in 34 talen.
-  thinkersmithspanish_longdescription: Door gebruik te maken van een voorgedefinieerde
-    "Robot woordenschat" leren leerlingen hoe ze mekaar kunnen helpen om specifieke
-    taken uit te voeren zonder deze eerst te bespreken. Deze les leert kinderen het
-    verband tussen symbolen en acties en ook de waardevolle vaardigheid van het fouten
-    oplossen. "My Robotic Friends' is het best bruikbaar als groepsactiviteit en voorziet
-    een leerkracht werkboek voor gebruik in de klas.
+  thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
+    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
+    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
+    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
+    como la valiosa habilidad de depuraci&oacute;n.
   khan_longdescription: Leer de basis van JavaScript programmeren met het maken van
     leuke tekeningen door je code. Doe het alleen of met je hele klas!
   khanes_longdescription: Leer de basis van JavaScript programmeren met het maken

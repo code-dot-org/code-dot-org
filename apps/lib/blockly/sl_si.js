@@ -61,6 +61,7 @@ Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_UNTIL = "ponavljaj dokler";
 Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_WHILE = "ponavljaj dokler";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = "Dokler je vrednost napačna, izvedi nekatere stavke.";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = "Dokler je vrednost pravilna, izvrši nekatere stavke.";
+Blockly.Msg.DEFINE_HEADER_DEFINITION = "Definition";
 Blockly.Msg.DEFINE_FUNCTION_DEFINE = "Definiraj";
 Blockly.Msg.DELETE_BLOCK = "Izbriši blok";
 Blockly.Msg.DELETE_PARAMETER = "Izbriši parameter...";

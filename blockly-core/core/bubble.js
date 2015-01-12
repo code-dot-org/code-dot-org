@@ -260,7 +260,7 @@ Blockly.Bubble.prototype.bubbleMouseDown_ = function(e) {
     return;
   }
   // Left-click (or middle click)
-  this.blockSpace_.blockSpaceEditor.setCursorHand_(true);
+  this.blockSpace_.blockSpaceEditor.setCursor(Blockly.CSS.Cursor.CLOSED);
   // Record the starting offset between the current location and the mouse.
   if (Blockly.RTL) {
     this.dragDeltaX = this.relativeLeft_ + e.clientX;
@@ -308,7 +308,7 @@ Blockly.Bubble.prototype.resizeMouseDown_ = function(e) {
     return;
   }
   // Left-click (or middle click)
-  this.blockSpace_.blockSpaceEditor.setCursorHand_(true);
+  this.blockSpace_.blockSpaceEditor.setCursor(Blockly.Css.Cursor.CLOSED);
   // Record the starting offset between the current location and the mouse.
   if (Blockly.RTL) {
     this.resizeDeltaWidth = this.width_ + e.clientX;

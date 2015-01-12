@@ -3,7 +3,7 @@
   select_language: Vinsamlegast veldu tungumál þitt
   computer_science: Tölvunarfræði
   computer_science_edweek: Vika tölvunarfræði
-  csedweek_dates: 9.-15. desember 2013
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: 'Nú styttist í <a href="http://hourofcode.com" style="color:
     white; text-decoration:underline; font-weight:bold">Klukkustund kóðunar</a>. Kennarar
     og stjórnendur: <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -390,6 +390,7 @@
   carousel_heading_robots: Lærðu að forrita með vélmennum
   carousel_heading_ide: Tækni vinsæl meðal kennara
   educator_notes: Minnispunktar leiðbeinenda
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Fleiri tilföng fyrir kennara og leiðbeinendur
   participants: þátttakendur
   teachers_notes: Minnispunktar kennara
@@ -582,9 +583,10 @@
     koma við sögu Bill Gates, Mark Zuckerberg, Angry Birds og Plants vs. Zombies.
     Lærðu á lykkjur, skilyrði og grunnalgrím. Tiltækt á 34 tungumálum.
   thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
-    los estudiantes descubriran como guiarse de modo tal de llevar a cabo tareas especificas
-    sin ser estas discutidas previamente. Este segmento ensena a los estudiantes la
-    conexion entre simbolos y acciones asi como la valiosa habilidad de depuracion.
+    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
+    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
+    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
+    como la valiosa habilidad de depuraci&oacute;n.
   khan_longdescription: Lærðu grunnatriði JavaScript forritunar með því að teikna
     skemmtilegar myndir með kóða sem þú skrifar. Gerðu það ein/einn eða með bekknum
     þínum!

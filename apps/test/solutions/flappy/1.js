@@ -1,3 +1,6 @@
+var testUtils = require('../../util/testUtils');
+var studioAppSingleton = require(testUtils.buildPath('base'));
+
 module.exports = {
   app: "flappy",
   skinId: "flappy",
@@ -9,15 +12,24 @@ module.exports = {
       description: "Expected solution",
       missingBlocks: [],
       xml: '<xml><block type="flappy_whenClick" deletable="false"><next><block type="flappy_flap"></block></next></block></xml>',
-      customValidator: function () {
-        return StudioApp.enableShowCode === false && StudioApp.enableShowBlockCount === false;
-      }
     },
     {
       description: "missing flap block",
+      expected: {
+        result: false
+      },
       missingBlocks: [
         {'test': 'flap', 'type': 'flappy_flap'}
       ],
+      runBeforeClick: function (assert) {
+        assert(studioAppSingleton.enableShowCode === false);
+        assert(studioAppSingleton.enableShowBlockCount === false);
+        
+        // manually complete rather than wait for timeout
+        setTimeout(function () {
+          Flappy.onPuzzleComplete();
+        }, 1);
+      },
       xml: '<xml><block type="flappy_whenClick" deletable="false"></block></xml>'
     }
   ]

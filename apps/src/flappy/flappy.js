@@ -14,7 +14,6 @@ var skins = require('../skins');
 var codegen = require('../codegen');
 var api = require('./api');
 var page = require('../templates/page.html');
-var feedback = require('../feedback.js');
 var dom = require('../dom');
 var constants = require('./constants');
 var utils = require('../utils');
