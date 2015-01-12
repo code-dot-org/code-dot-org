@@ -149,9 +149,9 @@ var utils = require('./utils');
 var _ = utils.getLodash();
 var dom = require('./dom');
 var constants = require('./constants.js');
-var builder = require('./builder');
 var msg = require('../locale/az_az/common');
 var blockUtils = require('./block_utils');
+var url = require('url');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -207,6 +207,7 @@ var StudioAppClass = function () {
   /**
   * Whether to alert user to empty blocks, short-circuiting all other tests.
   */
+  // TODO (br-pair) : this isnt actually a constant
   this.CHECK_FOR_EMPTY_BLOCKS = undefined;
 
   /**
@@ -258,15 +259,11 @@ var StudioAppClass = function () {
   /**
   * Enumeration of user program execution outcomes.
   */
-  // TODO (br-pair) : ResultType shouldn't really live on StudioApp. Places
-  // that want this should just require constants themselves.
   this.ResultType = constants.ResultType;
 
   /**
   * Enumeration of test results.
   */
-  // TODO (br-pair) : TestResults shouldn't really live on StudioApp. Places
-  // that want this should just require constants themselves.
   this.TestResults = constants.TestResults;
 
   /**
@@ -308,7 +305,8 @@ StudioAppClass.prototype.configure = function (options) {
   this.cdoSounds = options.cdoSounds;
   this.Dialog = options.Dialog;
 
-  // TODO (br-pair) : should callers instead be the ones binding the context?
+  // Bind assetUrl to the instance so that we don't need to depend on callers
+  // binding correctly as they pass this function around.
   this.assetUrl = _.bind(this.assetUrl_, this);
 };
 
@@ -791,6 +789,9 @@ StudioAppClass.prototype.sortBlocksByVisibility = function(xmlBlocks) {
   return visibleXmlBlocks.concat(hiddenXmlBlocks);
 };
 
+StudioAppClass.prototype.createModalDialogWithIcon = function(options) {
+  return this.feedback_.createModalDialogWithIcon(options);
+};
 
 StudioAppClass.prototype.showInstructions_ = function(level, autoClose) {
   var instructionsDiv = document.createElement('div');
@@ -805,7 +806,7 @@ StudioAppClass.prototype.showInstructions_ = function(level, autoClose) {
 
   instructionsDiv.appendChild(buttons);
 
-  var dialog = this.feedback_.createModalDialogWithIcon({
+  var dialog = this.createModalDialogWithIcon({
     Dialog: this.Dialog,
     contentDiv: instructionsDiv,
     icon: this.icon,
@@ -898,7 +899,7 @@ StudioAppClass.prototype.resizeHeaders = function (fullWorkspaceWidth) {
   var toolboxWidth = 0;
   if (this.editCode) {
     // If in the droplet editor, but not using blocks, keep categoryWidth at 0
-    if (!this.editCode || this.editor.currentlyUsingBlocks) {
+    if (this.editor.currentlyUsingBlocks) {
       // Set toolboxWidth based on the block palette width:
       var categories = document.querySelector('.droplet-palette-wrapper');
       toolboxWidth = parseInt(window.getComputedStyle(categories).width, 10);
@@ -952,7 +953,7 @@ StudioAppClass.prototype.clearHighlighting = function () {
 * Display feedback based on test results.  The test results must be
 * explicitly provided.
 * @param {{feedbackType: number}} Test results (a constant property of
-*     StudioApp.TestResults).
+*     this.TestResults).
 */
 StudioAppClass.prototype.displayFeedback = function(options) {
   options.Dialog = this.Dialog;
@@ -973,6 +974,31 @@ StudioAppClass.prototype.displayFeedback = function(options) {
  */
 StudioAppClass.prototype.getTestResults = function(levelComplete, options) {
   return this.feedback_.getTestResults(levelComplete, options);
+};
+
+// Builds the dom to get more info from the user. After user enters info
+// and click "create level" onAttemptCallback is called to deliver the info
+// to the server.
+StudioAppClass.prototype.builderForm_ = function(onAttemptCallback) {
+  var builderDetails = document.createElement('div');
+  builderDetails.innerHTML = require('./templates/builder.html')();
+  var dialog = this.createModalDialogWithIcon({
+    Dialog: this.Dialog,
+    contentDiv: builderDetails,
+    icon: this.icon
+  });
+  var createLevelButton = document.getElementById('create-level-button');
+  dom.addClickTouchEvent(createLevelButton, function() {
+    var instructions = builderDetails.querySelector('[name="instructions"]').value;
+    var name = builderDetails.querySelector('[name="level_name"]').value;
+    var query = url.parse(window.location.href, true).query;
+    onAttemptCallback(utils.extend({
+      "instructions": instructions,
+      "name": name
+    }, query));
+  });
+
+  dialog.show({ backdrop: 'static' });
 };
 
 /**
@@ -1012,7 +1038,7 @@ StudioAppClass.prototype.report = function(options) {
     // If this is the level builder, go to builderForm to get more info from
     // the level builder.
     if (options.builder) {
-      builder.builderForm(onAttemptCallback);
+      this.builderForm_(onAttemptCallback);
     } else {
       onAttemptCallback();
     }
@@ -1132,20 +1158,9 @@ StudioAppClass.prototype.setConfigValues_ = function (config) {
   }
 
   // Store configuration.
-  //TODO (br-pair) : test code should pass in these instead of defaulting in app code
-  this.onAttempt = config.onAttempt || function(report) {
-    console.log('Attempt!');
-    console.log(report);
-    if (report.onComplete) {
-      report.onComplete();
-    }
-  };
-  this.onContinue = config.onContinue || function() {
-    console.log('Continue!');
-  };
-  this.onResetPressed = config.onResetPressed || function() {
-    console.log('Reset!');
-  };
+  this.onAttempt = config.onAttempt || function () {};
+  this.onContinue = config.onContinue || function () {};
+  this.onResetPressed = config.onResetPressed || function () {};
   this.backToPreviousLevel = config.backToPreviousLevel || function () {};
 };
 
@@ -1368,7 +1383,14 @@ StudioAppClass.prototype.updateHeadersAfterDropletToggle_ = function (usingBlock
   this.onResize();
 };
 
-},{"../locale/az_az/common":40,"./ResizeSensor":1,"./block_utils":5,"./builder":7,"./constants.js":9,"./dom":10,"./templates/buttons.html":18,"./templates/instructions.html":20,"./templates/learn.html":21,"./templates/makeYourOwn.html":22,"./utils":29,"./xml":39}],3:[function(require,module,exports){
+/**
+ * Do we have any floating blocks not attached to an event block or function block?
+ */
+StudioAppClass.prototype.hasExtraTopBlocks = function () {
+  return this.feedback_.hasExtraTopBlocks();
+};
+
+},{"../locale/az_az/common":41,"./ResizeSensor":1,"./block_utils":5,"./constants.js":8,"./dom":9,"./templates/builder.html":17,"./templates/buttons.html":18,"./templates/instructions.html":20,"./templates/learn.html":21,"./templates/makeYourOwn.html":22,"./utils":29,"./xml":40,"url":53}],3:[function(require,module,exports){
 var utils = require('./utils');
 var _ = utils.getLodash();
 var requiredBlockUtils = require('./required_block_utils');
@@ -1385,23 +1407,6 @@ window.__TestInterface = {
 
 var addReadyListener = require('./dom').addReadyListener;
 var blocksCommon = require('./blocksCommon');
-
-function StubDialog(options) {
-  this.options = options;
-  console.log("Creating Dialog");
-  console.log(options);
-}
-StubDialog.prototype.show = function() {
-  console.log("Showing Dialog");
-  if (this.options.body) {
-    console.log(this.options.body.innerHTML);
-  }
-  console.log(this);
-};
-StubDialog.prototype.hide = function() {
-  console.log("Hiding Dialog");
-  console.log(this);
-};
 
 module.exports = function(app, levels, options) {
 
@@ -1422,8 +1427,6 @@ module.exports = function(app, levels, options) {
 
     options.level = level;
   }
-
-  options.Dialog = options.Dialog || StubDialog;
 
   studioAppSingleton.configure(options);
 
@@ -1459,7 +1462,7 @@ module.exports = function(app, levels, options) {
   });
 };
 
-},{"./StudioApp":2,"./base":4,"./blocksCommon":6,"./dom":10,"./required_block_utils":14,"./utils":29}],4:[function(require,module,exports){
+},{"./StudioApp":2,"./base":4,"./blocksCommon":6,"./dom":9,"./required_block_utils":14,"./utils":29}],4:[function(require,module,exports){
 /**
  * Blockly Apps: Common code
  *
@@ -1501,7 +1504,7 @@ module.exports = studioAppSingleton;
 feedback.applySingleton(studioAppSingleton);
 studioAppSingleton.feedback_ = feedback;
 
-},{"./StudioApp":2,"./feedback":11}],5:[function(require,module,exports){
+},{"./StudioApp":2,"./feedback":10}],5:[function(require,module,exports){
 var xml = require('./xml');
 
 exports.createToolbox = function(blocks) {
@@ -1702,7 +1705,7 @@ exports.mathBlockXml = function (type, inputs, titles) {
   return str;
 };
 
-},{"./xml":39}],6:[function(require,module,exports){
+},{"./xml":40}],6:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -1867,37 +1870,7 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/az_az/common":40}],7:[function(require,module,exports){
-var feedback = require('./feedback.js');
-var dom = require('./dom.js');
-var utils = require('./utils.js');
-var url = require('url');
-// Builds the dom to get more info from the user. After user enters info
-// and click "create level" onAttemptCallback is called to deliver the info
-// to the server.
-exports.builderForm = function(onAttemptCallback) {
-  var builderDetails = document.createElement('div');
-  builderDetails.innerHTML = require('./templates/builder.html')();
-  var dialog = feedback.createModalDialogWithIcon({
-    Dialog: StudioApp.Dialog,
-    contentDiv: builderDetails,
-    icon: StudioApp.icon
-  });
-  var createLevelButton = document.getElementById('create-level-button');
-  dom.addClickTouchEvent(createLevelButton, function() {
-    var instructions = builderDetails.querySelector('[name="instructions"]').value;
-    var name = builderDetails.querySelector('[name="level_name"]').value;
-    var query = url.parse(window.location.href, true).query;
-    onAttemptCallback(utils.extend({
-      "instructions": instructions,
-      "name": name
-    }, query));
-  });
-
-  dialog.show({ backdrop: 'static' });
-};
-
-},{"./dom.js":10,"./feedback.js":11,"./templates/builder.html":17,"./utils.js":29,"url":52}],8:[function(require,module,exports){
+},{"../locale/az_az/common":41}],7:[function(require,module,exports){
 var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
 var LOOP_HIGHLIGHT = 'loopHighlight();\n';
@@ -2010,20 +1983,22 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
   return retVal;
 };
 
-exports.marshalInterpreterToNative = function (interpreterVar) {
+exports.marshalInterpreterToNative = function (interpreter, interpreterVar) {
   if (interpreterVar.isPrimitive) {
     return interpreterVar.data;
-  } else if (Webapp.interpreter.isa(interpreterVar, Webapp.interpreter.ARRAY)) {
+  } else if (interpreter.isa(interpreterVar, interpreter.ARRAY)) {
     var nativeArray = [];
     nativeArray.length = interpreterVar.length;
     for (var i = 0; i < nativeArray.length; i++) {
-      nativeArray[i] = exports.marshalInterpreterToNative(interpreterVar.properties[i]);
+      nativeArray[i] = exports.marshalInterpreterToNative(interpreter,
+                                                          interpreterVar.properties[i]);
     }
     return nativeArray;
-  } else if (Webapp.interpreter.isa(interpreterVar, Webapp.interpreter.OBJECT)) {
+  } else if (interpreter.isa(interpreterVar, interpreter.OBJECT)) {
     var nativeObject = {};
     for (var prop in interpreterVar.properties) {
-      nativeObject[prop] = exports.marshalInterpreterToNative(interpreterVar.properties[prop]);
+      nativeObject[prop] = exports.marshalInterpreterToNative(interpreter,
+                                                              interpreterVar.properties[prop]);
     }
     return nativeObject;
   } else {
@@ -2041,7 +2016,7 @@ exports.makeNativeMemberFunction = function (interpreter, nativeFunc, nativePare
     // Call the native function:
     var nativeArgs = [];
     for (var i = 0; i < arguments.length; i++) {
-      nativeArgs[i] = exports.marshalInterpreterToNative(arguments[i]);
+      nativeArgs[i] = exports.marshalInterpreterToNative(interpreter, arguments[i]);
     }
     var nativeRetVal = nativeFunc.apply(nativeParentObj, nativeArgs);
     return exports.marshalNativeToInterpreter(interpreter, nativeRetVal, null, maxDepth);
@@ -2162,12 +2137,15 @@ function createSelection (selection, cumulativeLength, start, end) {
  * Returns the row (line) of code highlighted. If nothing is highlighted
  * because it is outside of the userCode area, the return value is -1
  */
-exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
-                                      userCodeStartOffset, userCodeLength) {
+exports.selectCurrentCode = function (interpreter,
+                                      cumulativeLength,
+                                      userCodeStartOffset,
+                                      userCodeLength,
+                                      editor) {
   var userCodeRow = -1;
   if (interpreter.stateStack[0]) {
     var node = interpreter.stateStack[0].node;
-    // Adjust start/end by Webapp.userCodeStartOffset since the code running
+    // Adjust start/end by userCodeStartOffset since the code running
     // has been expanded vs. what the user sees in the editor window:
     var start = node.start - userCodeStartOffset;
     var end = node.end - userCodeStartOffset;
@@ -2196,6 +2174,34 @@ exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
       editor.clearLineMarks();
     } else {
       editor.aceEditor.getSelection().clearSelection();
+    }
+  }
+  return userCodeRow;
+};
+
+/**
+ * Finds the current line of code in droplet/ace editor.
+ *
+ * Returns the line of code where the interpreter is at. If it is outside
+ * of the userCode area, the return value is -1
+ *
+ * NOTE: first 4 params match the selectCurrentCode function by design.
+ */
+exports.getUserCodeLine = function (interpreter, cumulativeLength,
+                                    userCodeStartOffset, userCodeLength) {
+  var userCodeRow = -1;
+  if (interpreter.stateStack[0]) {
+    var node = interpreter.stateStack[0].node;
+    // Adjust start/end by userCodeStartOffset since the code running
+    // has been expanded vs. what the user sees in the editor window:
+    var start = node.start - userCodeStartOffset;
+    var end = node.end - userCodeStartOffset;
+
+    // Only return a valid userCodeRow if the node being executed is inside the
+    // user's code (not inside code we inserted before or after their code that
+    // is not visible in the editor):
+    if (start >= 0 && start < userCodeLength) {
+      userCodeRow = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
     }
   }
   return userCodeRow;
@@ -2254,7 +2260,7 @@ exports.functionFromCode = function(code, options) {
   }
 };
 
-},{}],9:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 /**
  * @fileoverview Constants used in production code and tests.
  */
@@ -2321,7 +2327,7 @@ exports.BeeTerminationValue = {
   INSUFFICIENT_HONEY: 8  // Didn't make all honey by finish
 };
 
-},{}],10:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 exports.addReadyListener = function(callback) {
   if (document.readyState === "complete") {
     setTimeout(callback, 1);
@@ -2428,15 +2434,16 @@ exports.isIOS = function() {
   return reg.test(window.navigator.userAgent);
 };
 
-},{}],11:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 var trophy = require('./templates/trophy.html');
 var utils = require('./utils');
-var readonly = require('./templates/readonly.html');
 var codegen = require('./codegen');
 var msg = require('../locale/az_az/common');
 var dom = require('./dom');
 var xml = require('./xml');
 var _ = utils.getLodash();
+
+var FeedbackBlocks = require('./feedbackBlocks');
 
 // TODO (br-pair): This is a hack. We initially set our studioAppSingleton to
 // be the global StudioApp. This will be the case for all apps other than Artist.
@@ -2450,7 +2457,8 @@ exports.applySingleton = function (singleton) {
 
 var TestResults = require('./constants').TestResults;
 
-exports.HintRequestPlacement = {
+// NOTE: These must be kept in sync with activity_hint.rb in dashboard.
+var HintRequestPlacement = {
   NONE: 0,  // This value must not be changed.
   LEFT: 1,  // Hint request button is on left.
   RIGHT: 2  // Hint request button is on right.
@@ -2479,7 +2487,8 @@ exports.displayFeedback = function(options) {
   if (hadShareFailure) {
     trackEvent('Share', 'Failure', options.response.share_failure.type);
   }
-  var feedbackBlocks = new FeedbackBlocks(options);
+  var feedbackBlocks = new FeedbackBlocks(options, getMissingRequiredBlocks(),
+    studioAppSingleton);
   // feedbackMessage must be initialized after feedbackBlocks
   // because FeedbackBlocks can mutate options.response.hint.
   var feedbackMessage = getFeedbackMessage(options);
@@ -2720,7 +2729,7 @@ var getFeedbackButtons = function(options) {
       nextLevel: exports.canContinueToNextLevel(options.feedbackType),
       isK1: options.isK1,
       hintRequestExperiment: options.hintRequestExperiment &&
-          (options.hintRequestExperiment === exports.HintRequestPlacement.LEFT ?
+          (options.hintRequestExperiment === HintRequestPlacement.LEFT ?
               'left' : 'right'),
       assetUrl: studioAppSingleton.assetUrl,
       freePlay: options.freePlay
@@ -2934,7 +2943,7 @@ exports.createSharingDiv = function(options) {
     options.facebookUrl = facebookUrl;
   }
 
-  options.assetUrl = _.bind(studioAppSingleton.assetUrl, studioAppSingleton);
+  options.assetUrl = studioAppSingleton.assetUrl;
 
   var sharingDiv = document.createElement('div');
   sharingDiv.setAttribute('style', 'display:inline-block');
@@ -3070,78 +3079,6 @@ var getGeneratedCodeString = function() {
   }
   else {
     return codegen.workspaceCode(Blockly);
-  }
-};
-
-var FeedbackBlocks = function(options) {
-  // Check whether blocks are embedded in the hint returned from dashboard.
-  // See below comment for format.
-  var embeddedBlocks = options.response && options.response.hint &&
-      options.response.hint.indexOf("[{") !== 0;
-  if (!embeddedBlocks &&
-      options.feedbackType !==
-      TestResults.MISSING_BLOCK_UNFINISHED &&
-      options.feedbackType !==
-      TestResults.MISSING_BLOCK_FINISHED) {
-      return;
-  }
-
-  var blocksToDisplay = [];
-  if (embeddedBlocks) {
-    // Hint should be of the form: SOME TEXT [{..}, {..}, ..] IGNORED.
-    // Example: 'Try the following block: [{"type": "maze_moveForward"}]'
-    // Note that double quotes are required by the JSON parser.
-    var parts = options.response.hint.match(/(.*)(\[.*\])/);
-    if (!parts) {
-      return;
-    }
-    options.response.hint = parts[1].trim();  // Remove blocks from hint.
-    try {
-      blocksToDisplay = JSON.parse(parts[2]);
-    } catch(err) {
-      // The blocks could not be parsed.  Ignore them.
-      return;
-    }
-  } else {
-    var missingRequiredBlocks = getMissingRequiredBlocks();
-    blocksToDisplay = missingRequiredBlocks.blocksToDisplay;
-    if (missingRequiredBlocks.message) {
-      options.message = missingRequiredBlocks.message;
-    }
-  }
-
-  if (blocksToDisplay.length === 0) {
-    return;
-  }
-
-  this.div = document.createElement('div');
-  this.html = readonly({
-    app: options.app,
-    assetUrl: studioAppSingleton.assetUrl,
-    options: {
-      readonly: true,
-      locale: studioAppSingleton.LOCALE,
-      localeDirection: studioAppSingleton.localeDirection(),
-      baseUrl: studioAppSingleton.BASE_URL,
-      cacheBust: studioAppSingleton.CACHE_BUST,
-      skinId: options.skin,
-      level: options.level,
-      blocks: generateXMLForBlocks(blocksToDisplay)
-    }
-  });
-  this.iframe = document.createElement('iframe');
-  this.iframe.setAttribute('id', 'feedbackBlocks');
-  this.iframe.setAttribute('allowtransparency', 'true');
-  this.div.appendChild(this.iframe);
-};
-
-FeedbackBlocks.prototype.show = function() {
-  var iframe = document.getElementById('feedbackBlocks');
-  if (iframe) {
-    var doc = iframe.contentDocument || iframe.contentWindow.document;
-    doc.open();
-    doc.write(this.html);
-    doc.close();
   }
 };
 
@@ -3297,6 +3234,7 @@ var getMissingRequiredBlocks = function () {
   var missingBlocks = [];
   var customMessage = null;
   var code = null;  // JavaScript code, which is initialized lazily.
+  // TODO (br-pair) : we should probably just pass required_blocks
   if (studioAppSingleton.REQUIRED_BLOCKS && studioAppSingleton.REQUIRED_BLOCKS.length) {
     var userBlocks = getUserBlocks();
     // For each list of required blocks
@@ -3474,57 +3412,6 @@ exports.createModalDialogWithIcon = function(options) {
 };
 
 /**
- * Creates the XML for blocks to be displayed in a read-only frame.
- * @param {Array} blocks An array of blocks to display (with optional args).
- * @return {string} The generated string of XML.
- */
-var generateXMLForBlocks = function(blocks) {
-  var blockXMLStrings = [];
-  var blockX = 10;  // Prevent left output plugs from being cut off.
-  var blockY = 0;
-  var blockXPadding = 200;
-  var blockYPadding = 120;
-  var blocksPerLine = 2;
-  var k, name;
-  for (var i = 0; i < blocks.length; i++) {
-    var block = blocks[i];
-    if (block.blockDisplayXML) {
-      blockXMLStrings.push(block.blockDisplayXML);
-      continue;
-    }
-    blockXMLStrings.push('<block', ' type="', block.type, '" x="',
-                        blockX.toString(), '" y="', blockY, '">');
-    if (block.titles) {
-      var titleNames = Object.keys(block.titles);
-      for (k = 0; k < titleNames.length; k++) {
-        name = titleNames[k];
-        blockXMLStrings.push('<title name="', name, '">',
-                            block.titles[name], '</title>');
-      }
-    }
-    if (block.values) {
-      var valueNames = Object.keys(block.values);
-      for (k = 0; k < valueNames.length; k++) {
-        name = valueNames[k];
-        blockXMLStrings.push('<value name="', name, '">',
-                            block.values[name], '</value>');
-      }
-    }
-    if (block.extra) {
-      blockXMLStrings.push(block.extra);
-    }
-    blockXMLStrings.push('</block>');
-    if ((i + 1) % blocksPerLine === 0) {
-      blockY += blockYPadding;
-      blockX = 0;
-    } else {
-      blockX += blockXPadding;
-    }
-  }
-  return blockXMLStrings.join('');
-};
-
-/**
  * Check for '???' instead of a value in block fields.
  */
 function hasQuestionMarksInNumberField() {
@@ -3624,7 +3511,136 @@ function hasMatchingDescendant(node, filter) {
 }
 
 
-},{"../locale/az_az/common":40,"./codegen":8,"./constants":9,"./dom":10,"./templates/buttons.html":18,"./templates/code.html":19,"./templates/readonly.html":24,"./templates/shareFailure.html":25,"./templates/sharing.html":26,"./templates/showCode.html":27,"./templates/trophy.html":28,"./utils":29,"./xml":39}],12:[function(require,module,exports){
+},{"../locale/az_az/common":41,"./codegen":7,"./constants":8,"./dom":9,"./feedbackBlocks":11,"./templates/buttons.html":18,"./templates/code.html":19,"./templates/shareFailure.html":25,"./templates/sharing.html":26,"./templates/showCode.html":27,"./templates/trophy.html":28,"./utils":29,"./xml":40}],11:[function(require,module,exports){
+var constants = require('./constants');
+var readonly = require('./templates/readonly.html');
+
+TestResults = constants.TestResults;
+
+// TODO (br-pair): can we not pass in the studioAppSingleton
+var FeedbackBlocks = function(options, missingRequiredBlocks, studioAppSingleton) {
+  // Check whether blocks are embedded in the hint returned from dashboard.
+  // See below comment for format.
+  var embeddedBlocks = options.response && options.response.hint &&
+      options.response.hint.indexOf("[{") !== 0;
+  if (!embeddedBlocks &&
+      options.feedbackType !== TestResults.MISSING_BLOCK_UNFINISHED &&
+      options.feedbackType !== TestResults.MISSING_BLOCK_FINISHED) {
+    return;
+  }
+
+  var blocksToDisplay = [];
+  if (embeddedBlocks) {
+    // Hint should be of the form: SOME TEXT [{..}, {..}, ..] IGNORED.
+    // Example: 'Try the following block: [{"type": "maze_moveForward"}]'
+    // Note that double quotes are required by the JSON parser.
+    var parts = options.response.hint.match(/(.*)(\[.*\])/);
+    if (!parts) {
+      return;
+    }
+    options.response.hint = parts[1].trim();  // Remove blocks from hint.
+    try {
+      blocksToDisplay = JSON.parse(parts[2]);
+    } catch(err) {
+      // The blocks could not be parsed.  Ignore them.
+      return;
+    }
+  } else {
+    blocksToDisplay = missingRequiredBlocks.blocksToDisplay;
+    if (missingRequiredBlocks.message) {
+      options.message = missingRequiredBlocks.message;
+    }
+  }
+
+  if (blocksToDisplay.length === 0) {
+    return;
+  }
+
+  this.div = document.createElement('div');
+  this.html = readonly({
+    app: options.app,
+    assetUrl: studioAppSingleton.assetUrl,
+    options: {
+      readonly: true,
+      locale: studioAppSingleton.LOCALE,
+      localeDirection: studioAppSingleton.localeDirection(),
+      baseUrl: studioAppSingleton.BASE_URL,
+      cacheBust: studioAppSingleton.CACHE_BUST,
+      skinId: options.skin,
+      level: options.level,
+      blocks: this.generateXMLForBlocks_(blocksToDisplay)
+    }
+  });
+  this.iframe = document.createElement('iframe');
+  this.iframe.setAttribute('id', 'feedbackBlocks');
+  this.iframe.setAttribute('allowtransparency', 'true');
+  this.div.appendChild(this.iframe);
+};
+
+module.exports = FeedbackBlocks;
+
+FeedbackBlocks.prototype.show = function() {
+  var iframe = document.getElementById('feedbackBlocks');
+  if (iframe) {
+    var doc = iframe.contentDocument || iframe.contentWindow.document;
+    doc.open();
+    doc.write(this.html);
+    doc.close();
+  }
+};
+
+/**
+ * Creates the XML for blocks to be displayed in a read-only frame.
+ * @param {Array} blocks An array of blocks to display (with optional args).
+ * @return {string} The generated string of XML.
+ */
+FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
+  var blockXMLStrings = [];
+  var blockX = 10;  // Prevent left output plugs from being cut off.
+  var blockY = 0;
+  var blockXPadding = 200;
+  var blockYPadding = 120;
+  var blocksPerLine = 2;
+  var k, name;
+  for (var i = 0; i < blocks.length; i++) {
+    var block = blocks[i];
+    if (block.blockDisplayXML) {
+      blockXMLStrings.push(block.blockDisplayXML);
+      continue;
+    }
+    blockXMLStrings.push('<block', ' type="', block.type, '" x="',
+                        blockX.toString(), '" y="', blockY, '">');
+    if (block.titles) {
+      var titleNames = Object.keys(block.titles);
+      for (k = 0; k < titleNames.length; k++) {
+        name = titleNames[k];
+        blockXMLStrings.push('<title name="', name, '">',
+                            block.titles[name], '</title>');
+      }
+    }
+    if (block.values) {
+      var valueNames = Object.keys(block.values);
+      for (k = 0; k < valueNames.length; k++) {
+        name = valueNames[k];
+        blockXMLStrings.push('<value name="', name, '">',
+                            block.values[name], '</value>');
+      }
+    }
+    if (block.extra) {
+      blockXMLStrings.push(block.extra);
+    }
+    blockXMLStrings.push('</block>');
+    if ((i + 1) % blocksPerLine === 0) {
+      blockY += blockYPadding;
+      blockX = 0;
+    } else {
+      blockX += blockXPadding;
+    }
+  }
+  return blockXMLStrings.join('');
+};
+
+},{"./constants":8,"./templates/readonly.html":24}],12:[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-22
  * http://eightmedia.github.io/hammer.js
  *
@@ -9019,7 +9035,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"../locale/az_az/common":40,"./block_utils":5,"./utils":29,"./xml":39}],15:[function(require,module,exports){
+},{"../locale/az_az/common":41,"./block_utils":5,"./utils":29,"./xml":40}],15:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -9358,7 +9374,7 @@ Slider.bindEvent_ = function(element, name, func) {
 
 module.exports = Slider;
 
-},{"./dom":10}],17:[function(require,module,exports){
+},{"./dom":9}],17:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9379,7 +9395,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":42}],18:[function(require,module,exports){
+},{"ejs":43}],18:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9400,7 +9416,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/az_az/common":40,"ejs":42}],19:[function(require,module,exports){
+},{"../../locale/az_az/common":41,"ejs":43}],19:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9421,7 +9437,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":42}],20:[function(require,module,exports){
+},{"ejs":43}],20:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9442,7 +9458,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/az_az/common":40,"ejs":42}],21:[function(require,module,exports){
+},{"../../locale/az_az/common":41,"ejs":43}],21:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9465,7 +9481,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/az_az/common":40,"ejs":42}],22:[function(require,module,exports){
+},{"../../locale/az_az/common":41,"ejs":43}],22:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9486,7 +9502,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/az_az/common":40,"ejs":42}],23:[function(require,module,exports){
+},{"../../locale/az_az/common":41,"ejs":43}],23:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9511,7 +9527,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/az_az/common":40,"ejs":42}],24:[function(require,module,exports){
+},{"../../locale/az_az/common":41,"ejs":43}],24:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9533,7 +9549,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":42}],25:[function(require,module,exports){
+},{"ejs":43}],25:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9554,7 +9570,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":42}],26:[function(require,module,exports){
+},{"ejs":43}],26:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9575,7 +9591,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/az_az/common":40,"ejs":42}],27:[function(require,module,exports){
+},{"../../locale/az_az/common":41,"ejs":43}],27:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9596,7 +9612,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/az_az/common":40,"ejs":42}],28:[function(require,module,exports){
+},{"../../locale/az_az/common":41,"ejs":43}],28:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9617,7 +9633,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":42}],29:[function(require,module,exports){
+},{"ejs":43}],29:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
 
@@ -9979,7 +9995,7 @@ exports.generateDropletModeOptions = function (codeFunctions) {
   return modeOptions;
 };
 
-},{"./hammer":12,"./lodash":13,"./xml":39}],30:[function(require,module,exports){
+},{"./hammer":12,"./lodash":13,"./xml":40}],30:[function(require,module,exports){
 
 exports.randomFromArray = function (values) {
   var key = Math.floor(Math.random() * values.length);
@@ -10177,6 +10193,21 @@ exports.createDropdown = function (blockId, elementId) {
                            'optionsArray': optionsArray });
 };
 
+exports.getAttribute = function(blockId, elementId, attribute) {
+  return Webapp.executeCmd(blockId,
+                           'getAttribute',
+                           {elementId: elementId,
+                            attribute: attribute});
+};
+
+exports.setAttribute = function(blockId, elementId, attribute, value) {
+  return Webapp.executeCmd(blockId,
+                           'setAttribute',
+                           {elementId: elementId,
+                            attribute: attribute,
+                            value: value});
+};
+
 exports.getText = function (blockId, elementId) {
   return Webapp.executeCmd(blockId,
                           'getText',
@@ -10252,6 +10283,19 @@ exports.clearTimeout = function (blockId, timeoutId) {
                            {'timeoutId': timeoutId });
 };
 
+exports.createRecord = function (blockId, record, callback) {
+  return Webapp.executeCmd(blockId,
+                          'createRecord',
+                          {'record': record,
+                           'callback': callback });
+};
+
+exports.readRecords = function (blockId, searchParams, callback) {
+  return Webapp.executeCmd(blockId,
+                          'readRecords',
+                          {'searchParams': searchParams,
+                           'callback': callback });
+};
 
 },{}],31:[function(require,module,exports){
 /**
@@ -10326,7 +10370,7 @@ function installCreateHtmlBlock(blockly, generator, blockInstallOptions) {
   };
 }
 
-},{"../../locale/az_az/common":40,"../../locale/az_az/webapp":41,"../codegen":8,"../utils":29}],32:[function(require,module,exports){
+},{"../../locale/az_az/common":41,"../../locale/az_az/webapp":42,"../codegen":7,"../utils":29}],32:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -10347,7 +10391,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/az_az/common":40,"ejs":42}],33:[function(require,module,exports){
+},{"../../locale/az_az/common":41,"ejs":43}],33:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -10360,7 +10404,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/az_az/common') ; buf.push('\n');2; var webappMsg = require('../../locale/az_az/webapp') ; buf.push('\n\n');4; if (debugButtons) { ; buf.push('\n<div>\n  <div id="debug-buttons" style="display:inline;">\n    <button id="pauseButton" class="share">\n      ', escape((8,  webappMsg.pause() )), '\n    </button>\n    <button id="stepInButton" class="share">\n      ', escape((11,  webappMsg.stepIn() )), '\n    </button>\n    <button id="stepOverButton" class="share">\n      ', escape((14,  webappMsg.stepOver() )), '\n    </button>\n    <button id="stepOutButton" class="share">\n      ', escape((17,  webappMsg.stepOut() )), '\n    </button>\n  </div>\n');20; } ; buf.push('\n\n');22; if (debugConsole) { ; buf.push('\n  <div id="debug-console" class="debug-console">\n    <textarea id="debug-output" readonly disabled tabindex=-1 class="debug-output"></textarea>\n    <span class="debug-input-prompt">\n      &gt;\n    </span>\n    <div contenteditable id="debug-input" class="debug-input"></div>\n  </div>\n');30; } ; buf.push('\n\n');32; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((35,  assetUrl('media/1x1.gif') )), '">', escape((35,  msg.finish() )), '\n    </button>\n  </div>\n');38; } ; buf.push('\n\n');40; if (debugButtons) { ; buf.push('\n</div>\n');42; } ; buf.push('\n'); })();
+ buf.push('');1; var msg = require('../../locale/az_az/common') ; buf.push('\n');2; var webappMsg = require('../../locale/az_az/webapp') ; buf.push('\n\n');4; if (debugButtons) { ; buf.push('\n<div>\n  <div id="debug-buttons" style="display:inline;">\n    <button id="pauseButton" class="share">\n      ', escape((8,  webappMsg.pause() )), '\n    </button>\n    <button id="stepInButton" class="share">\n      ', escape((11,  webappMsg.stepIn() )), '\n    </button>\n    <button id="stepOverButton" class="share">\n      ', escape((14,  webappMsg.stepOver() )), '\n    </button>\n    <button id="stepOutButton" class="share">\n      ', escape((17,  webappMsg.stepOut() )), '\n    </button>\n    <button id="viewDataButton" class="share">\n      ', escape((20,  webappMsg.viewData() )), '\n    </button>\n  </div>\n');23; } ; buf.push('\n\n');25; if (debugConsole) { ; buf.push('\n  <div id="debug-console" class="debug-console">\n    <textarea id="debug-output" readonly disabled tabindex=-1 class="debug-output"></textarea>\n    <span class="debug-input-prompt">\n      &gt;\n    </span>\n    <div contenteditable id="debug-input" class="debug-input"></div>\n  </div>\n');33; } ; buf.push('\n\n');35; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((38,  assetUrl('media/1x1.gif') )), '">', escape((38,  msg.finish() )), '\n    </button>\n  </div>\n');41; } ; buf.push('\n\n');43; if (debugButtons) { ; buf.push('\n</div>\n');45; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -10368,7 +10412,190 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/az_az/common":40,"../../locale/az_az/webapp":41,"ejs":42}],34:[function(require,module,exports){
+},{"../../locale/az_az/common":41,"../../locale/az_az/webapp":42,"ejs":43}],34:[function(require,module,exports){
+/**
+ * CodeOrgApp: Webapp
+ *
+ * Copyright 2014 Code.org
+ *
+ */
+
+'use strict';
+
+/**
+ * Namespace for form storage.
+ */ 
+var FormStorage = module.exports;
+
+
+/**
+ * Creates a new record in the specified table.
+ * @param {string} record.tableName The name of the table to read from.
+ * @param {Object} record Object containing other properties to store
+ *     on the record.
+ * @param {Function} callback Function to call with the resulting record.
+ */
+FormStorage.createRecord = function(record, callback) {
+  var tableName = record.tableName;
+  if (!tableName) {
+    // TODO(dave): remove console.log for IE9 compatability, here and below.
+    console.log('readRecords: missing required property "tableName"');
+    return;
+  }
+  FormStorage.fetchTableSecret(
+      tableName, 
+      putRecord.bind(this, record, callback));
+};
+
+var putRecord = function(record, callback, tableSecret) {
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = handlePutRecord.bind(req, record, callback, tableSecret);
+  var url = '//' + getFormDataHost() + '/v2/forms/CspTable/' + tableSecret +
+      '/children/CspRecord';
+  delete record.tableName;
+  var postData = {record_data_s: JSON.stringify(record)};
+  req.open('POST', url, true);
+  req.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
+  req.send(JSON.stringify(postData));
+};
+
+var handlePutRecord = function(record, callback, tableSecret) {
+  if (this.readyState !== 4) {
+    return;
+  }
+  if (this.status !== 201) {
+    console.log('unexpected http status ' + this.status);
+    return;
+  }
+  
+  // TODO(dave): merge tableSecret into record once XSS issues are resolved.
+  callback(record);
+};
+
+/**
+ * Reads records which match the searchParams specified by the user,
+ * and passes them to the callback.
+ * @param {string} searchParams.tableName The name of the table to read from.
+ * @param {string} searchParams.recordId Optional id of record to read.
+ * @param {Object} searchParams Other search criteria. Only records
+ *     whose contents match all criteria will be returned.
+ * @param {Function} callback Function to call with an array of record objects.
+ */
+FormStorage.readRecords = function(searchParams, callback) {
+  var tableName = searchParams.tableName;
+  if (!tableName) {
+    console.log('readRecords: missing required property "tableName"');
+    return;
+  }
+  // TODO(dave): optimization: call fetchRecords here if table data is cached.
+  FormStorage.fetchTableSecret(
+      tableName, 
+      fetchRecords.bind(this, tableName, searchParams, callback));
+};
+
+var fetchRecords = function(tableName, searchParams, callback, tableSecret) {
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = handleFetchRecords.bind(req, tableName,
+      searchParams, callback);
+  var url = '//' + getFormDataHost() + '/v2/forms/CspTable/' + tableSecret +
+      '/children/CspRecord';
+  req.open('GET', url, true);
+  req.send();
+};
+
+var handleFetchRecords = function(tableName, searchParams, callback) {
+  if (this.readyState !== 4) {
+    return;
+  }
+  if (this.status !== 200) {
+    console.log('readRecords failed with status ' + this.status);
+    return;
+  }
+  var forms = JSON.parse(this.responseText);
+  var records = forms.map(function(form) {
+    var record = JSON.parse(form.record_data_s);
+    record.tableName = tableName;
+    record.recordId = form.secret;
+    return record;
+  });
+  records = records.filter(function(record) {
+    for (var prop in searchParams) {
+      if (record[prop] !== searchParams[prop]) {
+        return false;
+      }
+    }
+    return true;
+  });
+  callback(records);
+};
+
+// Helper methods
+
+/**
+ * Retrieves the table secret for a given table name.
+ * @param {string} tableName Table name.
+ * @param {function(string)} callback Callback to call with the table secret.
+ */
+FormStorage.fetchTableSecret = function(tableName, callback) {
+  var req = new XMLHttpRequest();
+  req.onreadystatechange =
+      handleFetchTableSecret.bind(req, tableName, callback);
+  var url = '//' + getFormDataHost() + '/v2/forms/CspApp/' + 
+      FormStorage.getAppSecret() + '/children/CspTable';
+  req.open('GET', url, true);
+  req.send();
+};
+
+var handleFetchTableSecret = function(tableName, callback) {
+  if (this.readyState !== 4) {
+    return;
+  }
+  if (this.status !== 200) {
+    console.log('unexpected http status ' + this.status);
+    return;
+  }
+  var formData = JSON.parse(this.responseText);
+  if (!(formData instanceof Array)) {
+    console.log('formData is not an array');
+    return;
+  }
+
+  var tableData = formData.filter(function(table) {
+    return table.table_name_s === tableName;
+  });
+  var tableSecret = tableData[0] && tableData[0].secret;
+  if (!tableSecret) {
+    console.log('table not found: ' + tableName);
+    console.log(tableData);
+    return;
+  }
+  callback(tableSecret);
+};
+
+// TODO(dave): move this logic to dashboard.
+var getFormDataHost = function() {
+  // Forms api is already mapped to pegasus on all non-local deployments.
+  // Caveat: local api access only works with temporary hacks in place
+  // to set dashboard_user cookie and access-control-allow-origin header.
+  return window.location.hostname.split('.')[0] === 'localhost' ?
+      'localhost.code.org:9393' : window.location.hostname;
+};
+
+// TODO(dave): store secret with the app in the database.
+FormStorage.getAppSecret = function() {
+  var name = window.location.hostname.split('.')[0];
+  switch(name) {
+    case 'localhost':
+      return 'ededb6d4a8ced65f8a011ce0e194094e';
+    case 'staging':
+      return 'b0a06b8bbd7352a3fdb1b6738262defd';
+    default:
+      return null;
+  }
+};
+
+
+},{}],35:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/az_az/webapp');
@@ -10401,7 +10628,7 @@ levels.simple = {
 levels.ec_simple = {
   'freePlay': true,
   'editCode': true,
-  'sliderSpeed': 1.0,
+  'sliderSpeed': 0.95,
   'codeFunctions': [
     {'func': 'attachEventHandler', 'title': 'Execute code in response to an event for the specified element', 'category': 'General', 'params': ["'id'", "'click'", "function() {\n  \n}"] },
     {'func': 'startWebRequest', 'title': 'Request data from the internet and execute code when the request is complete', 'category': 'General', 'params': ["'http://api.openweathermap.org/data/2.5/weather?q=London,uk'", "function(status, type, content) {\n  \n}"] },
@@ -10413,6 +10640,8 @@ levels.ec_simple = {
     {'func': 'setParent', 'title': 'Set an element to become a child of a parent element', 'category': 'General', 'params': ["'id'", "'parentId'"] },
     {'func': 'setPosition', 'title': 'Position an element with x, y, width, and height coordinates', 'category': 'General', 'params': ["'id'", "0", "0", "100", "100"] },
     {'func': 'setStyle', 'title': 'Add CSS style text to an element', 'category': 'General', 'params': ["'id'", "'color:red;'"] },
+    {'func': 'getAttribute', 'category': 'General', 'params': ["'id'", "'scrollHeight'"], 'type': 'value' },
+    {'func': 'setAttribute', 'category': 'General', 'params': ["'id'", "'scrollHeight'", "200"]},
     {'func': 'createButton', 'title': 'Create a button and assign it an element id', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
     {'func': 'createTextInput', 'title': 'Create a text input and assign it an element id', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
     {'func': 'createTextLabel', 'title': 'Create a text label, assign it an element id, and bind it to an associated element', 'category': 'UI Controls', 'params': ["'id'", "'text'", "'forId'"] },
@@ -10438,6 +10667,8 @@ levels.ec_simple = {
     {'func': 'canvasGetImageData', 'title': 'Get the ImageData for a rectangle (x, y, width, height) within a canvas', 'category': 'Canvas', 'params': ["'id'", "0", "0", "400", "600"], 'type': 'value' },
     {'func': 'canvasPutImageData', 'title': 'Set the ImageData for a rectangle within a canvas with x, y as the top left coordinates', 'category': 'Canvas', 'params': ["'id'", "imageData", "0", "0"] },
     {'func': 'canvasClear', 'title': 'Clear all data on a canvas', 'category': 'Canvas', 'params': ["'id'"] },
+    {'func': 'createRecord', 'category': 'General', 'params': ["{tableName: 'abc',name:'Alice',age:7,male:false}", "function(record) {\n  for (var prop in record) {\n    createHtmlBlock('id2', 'record.' + prop + ': ' + record[prop]);\n  }\n}"] },
+    {'func': 'readRecords', 'category': 'General', 'params': ["{tableName: 'abc',key1:'value1'}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    for (var prop in records[i]) {\n      createHtmlBlock('id2', 'records[' + i + '].' + prop + ': ' + records[i][prop]);\n    }\n  }\n}"] },
   ],
   'categoryInfo': {
     'General': {
@@ -10538,7 +10769,7 @@ levels.full_sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-},{"../../locale/az_az/webapp":41,"../block_utils":5,"../utils":29}],35:[function(require,module,exports){
+},{"../../locale/az_az/webapp":42,"../block_utils":5,"../utils":29}],36:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Webapp = require('./webapp');
@@ -10556,7 +10787,7 @@ window.webappMain = function(options) {
 };
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":3,"./blocks":31,"./levels":34,"./skins":36,"./webapp":38}],36:[function(require,module,exports){
+},{"../appMain":3,"./blocks":31,"./levels":35,"./skins":37,"./webapp":39}],37:[function(require,module,exports){
 /**
  * Load Skin for Webapp.
  */
@@ -10575,7 +10806,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":15}],37:[function(require,module,exports){
+},{"../skins":15}],38:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -10596,7 +10827,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":42}],38:[function(require,module,exports){
+},{"ejs":43}],39:[function(require,module,exports){
 /**
  * CodeOrgApp: Webapp
  *
@@ -10614,11 +10845,11 @@ var codegen = require('../codegen');
 var api = require('./api');
 var blocks = require('./blocks');
 var page = require('../templates/page.html');
-var feedback = require('../feedback.js');
 var dom = require('../dom');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
 var Slider = require('../slider');
+var FormStorage = require('./formStorage');
 var _ = utils.getLodash();
 var Hammer = utils.getHammer();
 
@@ -10636,7 +10867,7 @@ StudioApp.CHECK_FOR_EMPTY_BLOCKS = true;
 //The number of blocks to show as feedback.
 StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
-var MAX_INTERPRETER_STEPS_PER_TICK = 200;
+var MAX_INTERPRETER_STEPS_PER_TICK = 10000;
 
 // Default Scalings
 Webapp.scale = {
@@ -10678,12 +10909,16 @@ var drawDiv = function () {
   visualizationColumn.style.width = divWidth + 'px';
 };
 
-function queueOnTick() {
+function getCurrentTickLength() {
   var stepSpeed = Webapp.scale.stepSpeed;
   if (Webapp.speedSlider) {
     stepSpeed = 300 * Math.pow(1 - Webapp.speedSlider.getValue(), 2);
   }
-  window.setTimeout(Webapp.onTick, stepSpeed);
+  return stepSpeed;
+}
+
+function queueOnTick() {
+  window.setTimeout(Webapp.onTick, getCurrentTickLength());
 }
 
 function outputWebappConsole(output) {
@@ -10782,6 +11017,8 @@ Webapp.onTick = function() {
   queueOnTick();
 
   var atInitialBreakpoint = Webapp.paused && Webapp.nextStep === StepType.IN && Webapp.tickCount === 1;
+  var atMaxSpeed = getCurrentTickLength() === 0;
+  Webapp.seenEmptyGetCallbackThisTick = false;
 
   if (Webapp.paused) {
     switch (Webapp.nextStep) {
@@ -10807,24 +11044,41 @@ Webapp.onTick = function() {
   }
 
   if (Webapp.interpreter) {
-    var doneUserCodeStep = false;
+    var doneUserLine = false;
+    var reachedBreak = false;
     var unwindingAfterStep = false;
     var inUserCode;
     var userCodeRow;
     var session = StudioApp.editor.aceEditor.getSession();
+    // NOTE: when running with no source visible or at max speed with blocks, we
+    // call a simple function to just get the line number, otherwise we call a
+    // function that also selects the code:
+    var selectCodeFunc =
+      (StudioApp.hideSource ||
+       (atMaxSpeed && !Webapp.paused && StudioApp.editor.currentlyUsingBlocks)) ?
+            codegen.getUserCodeLine :
+            codegen.selectCurrentCode;
 
     // In each tick, we will step the interpreter multiple times in a tight
     // loop as long as we are interpreting code that the user can't see
     // (function aliases at the beginning, getCallback event loop at the end)
     for (var stepsThisTick = 0;
-         stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK &&
-          (!doneUserCodeStep || unwindingAfterStep);
+         (stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK) || unwindingAfterStep;
          stepsThisTick++) {
-      userCodeRow = codegen.selectCurrentCode(Webapp.interpreter,
-                                              StudioApp.editor,
-                                              Webapp.cumulativeLength,
-                                              Webapp.userCodeStartOffset,
-                                              Webapp.userCodeLength);
+      if ((reachedBreak && !unwindingAfterStep) ||
+          (doneUserLine && !atMaxSpeed) ||
+          Webapp.seenEmptyGetCallbackThisTick) {
+        // stop stepping the interpreter and wait until the next tick once we:
+        // (1) reached a breakpoint and are done unwinding OR
+        // (2) completed a line of user code (while not running atMaxSpeed) OR
+        // (3) have seen an empty event queue in nativeGetCallback (no events)
+        break;
+      }
+      userCodeRow = selectCodeFunc(Webapp.interpreter,
+                                   Webapp.cumulativeLength,
+                                   Webapp.userCodeStartOffset,
+                                   Webapp.userCodeLength,
+                                   StudioApp.editor);
       inUserCode = (-1 !== userCodeRow);
       // Check to see if we've arrived at a new breakpoint:
       //  (1) should be in user code
@@ -10849,8 +11103,8 @@ Webapp.onTick = function() {
         Webapp.stoppedAtBreakpointRow = userCodeRow;
         Webapp.stoppedAtBreakpointStackDepth = Webapp.interpreter.stateStack.length;
 
-        // Mark doneUserCodeStep to stop stepping, and start unwinding if needed:
-        doneUserCodeStep = true;
+        // Mark reachedBreak to stop stepping, and start unwinding if needed:
+        reachedBreak = true;
         unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(Webapp.interpreter);
         continue;
       }
@@ -10870,7 +11124,7 @@ Webapp.onTick = function() {
       }
       try {
         Webapp.interpreter.step();
-        doneUserCodeStep = doneUserCodeStep ||
+        doneUserLine = doneUserLine ||
           (inUserCode && Webapp.interpreter.stateStack[0] && Webapp.interpreter.stateStack[0].done);
 
         // Remember the stack depths of call expressions (so we can implement 'step out')
@@ -10891,31 +11145,55 @@ Webapp.onTick = function() {
             }
           }
           // For the step in case, we want to stop the interpreter as soon as we enter the callee:
-          if (!doneUserCodeStep &&
+          if (!doneUserLine &&
               inUserCode &&
               Webapp.nextStep === StepType.IN &&
               Webapp.interpreter.stateStack.length > Webapp.firstCallStackDepthThisStep) {
-            doneUserCodeStep = true;
+            reachedBreak = true;
           }
           // After the interpreter says a node is "done" (meaning it is time to stop), we will
           // advance a little further to the start of the next statement. We achieve this by
           // continuing to set unwindingAfterStep to true to keep the loop going:
-          if (doneUserCodeStep) {
+          if (doneUserLine || reachedBreak) {
             var wasUnwinding = unwindingAfterStep;
             // step() additional times if we know it to be safe to get us to the next statement:
             unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(Webapp.interpreter);
             if (wasUnwinding && !unwindingAfterStep) {
               // done unwinding.. select code that is next to execute:
-              userCodeRow = codegen.selectCurrentCode(Webapp.interpreter,
-                                                      StudioApp.editor,
-                                                      Webapp.cumulativeLength,
-                                                      Webapp.userCodeStartOffset,
-                                                      Webapp.userCodeLength);
+              userCodeRow = selectCodeFunc(Webapp.interpreter,
+                                           Webapp.cumulativeLength,
+                                           Webapp.userCodeStartOffset,
+                                           Webapp.userCodeLength,
+                                           StudioApp.editor);
               inUserCode = (-1 !== userCodeRow);
               if (!inUserCode) {
                 // not in user code, so keep unwinding after all...
                 unwindingAfterStep = true;
               }
+            }
+          }
+
+          if ((reachedBreak || doneUserLine) && !unwindingAfterStep) {
+            if (Webapp.nextStep === StepType.OUT &&
+                Webapp.interpreter.stateStack.length > Webapp.stepOutToStackDepth) {
+              // trying to step out, but we didn't get out yet... continue on.
+            } else if (Webapp.nextStep === StepType.OVER &&
+                typeof Webapp.firstCallStackDepthThisStep !== 'undefined' &&
+                Webapp.interpreter.stateStack.length > Webapp.firstCallStackDepthThisStep) {
+              // trying to step over, and we're in deeper inside a function call... continue next onTick
+            } else {
+              // Our step operation is complete, reset nextStep to StepType.RUN to
+              // return to a normal 'break' state:
+              Webapp.nextStep = StepType.RUN;
+              if (inUserCode) {
+                // Store some properties about where we stopped:
+                Webapp.stoppedAtBreakpointRow = userCodeRow;
+                Webapp.stoppedAtBreakpointStackDepth = Webapp.interpreter.stateStack.length;
+              }
+              delete Webapp.stepOutToStackDepth;
+              delete Webapp.firstCallStackDepthThisStep;
+              document.getElementById('spinner').style.visibility = 'hidden';
+              break;
             }
           }
         }
@@ -10925,27 +11203,14 @@ Webapp.onTick = function() {
         return;
       }
     }
-    if (Webapp.paused) {
-      if (Webapp.nextStep === StepType.OUT &&
-          Webapp.interpreter.stateStack.length > Webapp.stepOutToStackDepth) {
-        // trying to step out, but we didn't get out yet... continue next onTick
-      } else if (Webapp.nextStep === StepType.OVER &&
-          typeof Webapp.firstCallStackDepthThisStep !== 'undefined' &&
-          Webapp.interpreter.stateStack.length > Webapp.firstCallStackDepthThisStep) {
-        // trying to step over, and we're in deeper inside a function call... continue next onTick
-      } else {
-        // Our step operation is complete, reset nextStep to StepType.RUN to
-        // return to a normal 'break' state:
-        Webapp.nextStep = StepType.RUN;
-        if (inUserCode) {
-          // Store some properties about where we stopped:
-          Webapp.stoppedAtBreakpointRow = userCodeRow;
-          Webapp.stoppedAtBreakpointStackDepth = Webapp.interpreter.stateStack.length;
-        }
-        delete Webapp.stepOutToStackDepth;
-        delete Webapp.firstCallStackDepthThisStep;
-        document.getElementById('spinner').style.visibility = 'hidden';
-      }
+    if (reachedBreak && atMaxSpeed) {
+      // If we were running atMaxSpeed and just reached a breakpoint, the
+      // code may not be selected in the editor, so do it now:
+      codegen.selectCurrentCode(Webapp.interpreter,
+                                Webapp.cumulativeLength,
+                                Webapp.userCodeStartOffset,
+                                Webapp.userCodeLength,
+                                StudioApp.editor);
     }
   } else {
     if (Webapp.tickCount === 1) {
@@ -10983,6 +11248,11 @@ Webapp.init = function(config) {
   level = config.level;
 
   loadLevel();
+
+  if (StudioApp.hideSource) {
+    // always run at max speed if source is hidden
+    config.level.sliderSpeed = 1.0;
+  }
 
   Webapp.canvasScale = (window.devicePixelRatio > 1) ? window.devicePixelRatio : 1;
 
@@ -11101,6 +11371,10 @@ Webapp.init = function(config) {
       dom.addClickTouchEvent(stepInButton, Webapp.onStepInButton);
       dom.addClickTouchEvent(stepOverButton, Webapp.onStepOverButton);
       dom.addClickTouchEvent(stepOutButton, Webapp.onStepOutButton);
+    }
+    var viewDataButton = document.getElementById('viewDataButton');
+    if (viewDataButton) {
+      dom.addClickTouchEvent(viewDataButton, Webapp.onViewData);
     }
   }
 
@@ -11296,7 +11570,11 @@ var defineProcedures = function (blockType) {
  * optionally, callback arguments (stored in "arguments")
  */
 var nativeGetCallback = function () {
-  return Webapp.eventQueue.shift();
+  var retVal = Webapp.eventQueue.shift();
+  if (typeof retVal === "undefined") {
+    Webapp.seenEmptyGetCallbackThisTick = true;
+  }
+  return retVal;
 };
 
 var consoleApi = {};
@@ -11304,7 +11582,8 @@ var consoleApi = {};
 consoleApi.log = function() {
   var nativeArgs = [];
   for (var i = 0; i < arguments.length; i++) {
-    nativeArgs[i] = codegen.marshalInterpreterToNative(arguments[i]);
+    nativeArgs[i] = codegen.marshalInterpreterToNative(Webapp.interpreter,
+                                                       arguments[i]);
   }
   var output = '';
   var firstArg = nativeArgs[0];
@@ -11502,6 +11781,12 @@ Webapp.onStepOutButton = function() {
 Webapp.feedbackImage = '';
 Webapp.encodedFeedbackImage = '';
 
+Webapp.onViewData = function() {
+  window.open(
+    '//' + getPegasusHost() + '/edit-csp-app/' + FormStorage.getAppSecret(),
+    '_blank');
+};
+
 Webapp.onPuzzleComplete = function() {
   if (Webapp.executionError) {
     Webapp.result = StudioApp.ResultType.ERROR;
@@ -11618,6 +11903,8 @@ Webapp.callCmd = function (cmd) {
     case 'createCheckbox':
     case 'createRadio':
     case 'createDropdown':
+    case 'getAttribute':
+    case 'setAttribute':
     case 'getText':
     case 'setText':
     case 'getChecked':
@@ -11632,6 +11919,8 @@ Webapp.callCmd = function (cmd) {
     case 'startWebRequest':
     case 'setTimeout':
     case 'clearTimeout':
+    case 'createRecord':
+    case 'readRecords':
       StudioApp.highlight(cmd.id);
       retVal = Webapp[cmd.name](cmd.opts);
       break;
@@ -11753,6 +12042,7 @@ Webapp.canvasDrawRect = function (opts) {
   var canvas = document.getElementById(opts.elementId);
   var ctx = canvas.getContext("2d");
   if (ctx && divWebapp.contains(canvas)) {
+    ctx.beginPath();
     ctx.rect(opts.x * Webapp.canvasScale,
              opts.y * Webapp.canvasScale,
              opts.width * Webapp.canvasScale,
@@ -11822,6 +12112,7 @@ Webapp.canvasDrawImage = function (opts) {
     if (opts.height) {
       yScale = yScale * (opts.height / image.height);
     }
+    ctx.save();
     ctx.setTransform(xScale,
                      0,
                      0,
@@ -11829,6 +12120,7 @@ Webapp.canvasDrawImage = function (opts) {
                      opts.x * Webapp.canvasScale,
                      opts.y * Webapp.canvasScale);
     ctx.drawImage(image, 0, 0);
+    ctx.restore();
     return true;
   }
   return false;
@@ -11925,6 +12217,29 @@ Webapp.createDropdown = function (opts) {
   newSelect.id = opts.elementId;
 
   return Boolean(divWebapp.appendChild(newSelect));
+};
+
+Webapp.getAttribute = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var element = document.getElementById(opts.elementId);
+  var attribute = String(opts.attribute);
+  return divWebapp.contains(element) ? element[attribute] : false;
+};
+
+// Whitelist of HTML Element attributes which can be modified, to
+// prevent DOM manipulation which would violate the sandbox.
+Webapp.mutableAttributes = ['innerHTML', 'scrollTop'];
+
+Webapp.setAttribute = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var element = document.getElementById(opts.elementId);
+  var attribute = String(opts.attribute);
+  if (divWebapp.contains(element) &&
+      Webapp.mutableAttributes.indexOf(attribute) !== -1) {
+    element[attribute] = opts.value;
+    return true;
+  }
+  return false;
 };
 
 Webapp.getText = function (opts) {
@@ -12081,7 +12396,7 @@ Webapp.attachEventHandler = function (opts) {
       /*
       Check for a specific set of Hammer v1 event names (full set below) and if
       we find a match, instantiate Hammer on that element
-      
+
       TODO (cpirich): review the following:
       * whether using Hammer v1 events is the right choice
       * choose the specific list of events
@@ -12155,6 +12470,34 @@ Webapp.clearTimeout = function (opts) {
   window.clearTimeout(opts.timeoutId);
 };
 
+Webapp.createRecord = function (opts) {
+  var record = codegen.marshalInterpreterToNative(Webapp.interpreter,
+      opts.record);
+  FormStorage.createRecord(record,
+      Webapp.handleCreateRecord.bind(this, opts.callback));
+};
+
+Webapp.handleCreateRecord = function(interpreterCallback, record) {
+  Webapp.eventQueue.push({
+    'fn': interpreterCallback,
+    'arguments': [record]
+  });
+};
+
+Webapp.readRecords = function (opts) {
+  var searchParams = codegen.marshalInterpreterToNative(Webapp.interpreter,
+      opts.searchParams);
+  FormStorage.readRecords(
+      searchParams,
+      Webapp.handleReadRecords.bind(this, opts.callback));
+};
+
+Webapp.handleReadRecords = function(interpreterCallback, records) {
+  Webapp.eventQueue.push({
+    'fn': interpreterCallback,
+    'arguments': [records]
+  });
+};
 
 /*
 var onWaitComplete = function (opts) {
@@ -12215,6 +12558,28 @@ var checkFinished = function () {
   }
 
   return false;
+};
+
+// TODO(dave): move this logic to dashboard.
+var getPegasusHost = function() {
+  switch (window.location.hostname) {
+    case 'studio.code.org':
+    case 'learn.code.org':
+      return 'code.org';
+    default:
+      var name = window.location.hostname.split('.')[0];
+      switch(name) {
+        case 'localhost':
+          return 'localhost.code.org:9393';
+        case 'development':
+        case 'staging':
+        case 'test':
+        case 'levelbuilder':
+          return name + '.code.org';
+        default:
+          return null;
+      }
+  }
 };
 
 /*jshint asi:true */
@@ -12403,7 +12768,7 @@ var checkFinished = function () {
         return Array(multiplier + 1).join(input)
     }
 
-},{"../../locale/az_az/common":40,"../../locale/az_az/webapp":41,"../base":4,"../codegen":8,"../dom":10,"../feedback.js":11,"../skins":15,"../slider":16,"../templates/page.html":23,"../utils":29,"../xml":39,"./api":30,"./blocks":31,"./controls.html":32,"./extraControlRows.html":33,"./visualization.html":37}],39:[function(require,module,exports){
+},{"../../locale/az_az/common":41,"../../locale/az_az/webapp":42,"../base":4,"../codegen":7,"../dom":9,"../skins":15,"../slider":16,"../templates/page.html":23,"../utils":29,"../xml":40,"./api":30,"./blocks":31,"./controls.html":32,"./extraControlRows.html":33,"./formStorage":34,"./visualization.html":38}],40:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -12431,7 +12796,7 @@ exports.parseElement = function(text) {
   return element;
 };
 
-},{}],40:[function(require,module,exports){
+},{}],41:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.en=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "və"};
 
@@ -12503,7 +12868,7 @@ exports.finalStageTrophies = function(d){return "Təbriklər! Siz sonuncu mərh�
 
 exports.finish = function(d){return "Finish"};
 
-exports.generatedCodeInfo = function(d){return "Proqramınızın blokları dünyanın ən geniş qəbul olunmuş proqramlaşdırma dili olan \"JavaScript\"də (\"cavaskript\") də yazıla bilər:"};
+exports.generatedCodeInfo = function(d){return "Even top universities teach block-based coding (e.g., "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). But under the hood, the blocks you have assembled can also be shown in JavaScript, the world's most widely used coding language:"};
 
 exports.hashError = function(d){return "Təəssüf ki, '%1' yaddaşa verilmiş heç bir proqramla uyğunlaşmır."};
 
@@ -12616,7 +12981,7 @@ exports.toggleBlocksErrorMsg = function(d){return "You need to correct an error 
 exports.defaultTwitterText = function(d){return "Check out what I made"};
 
 
-},{"messageformat":53}],41:[function(require,module,exports){
+},{"messageformat":54}],42:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.en=function(n){return n===1?"one":"other"}
 exports.catActions = function(d){return "Əmrlər"};
 
@@ -12648,7 +13013,7 @@ exports.no = function(d){return "Xeyr"};
 
 exports.numBlocksNeeded = function(d){return "Bu  tapmaca %1 blokla həll oluna bilər."};
 
-exports.pause = function(d){return "Pause"};
+exports.pause = function(d){return "Break"};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
 
@@ -12672,10 +13037,12 @@ exports.turnBlack = function(d){return "qaralt"};
 
 exports.turnBlackTooltip = function(d){return "Ekranı qaraldır."};
 
+exports.viewData = function(d){return "View Data"};
+
 exports.yes = function(d){return "Bəli"};
 
 
-},{"messageformat":53}],42:[function(require,module,exports){
+},{"messageformat":54}],43:[function(require,module,exports){
 
 /*!
  * EJS
@@ -13034,7 +13401,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":43,"./utils":44,"fs":45,"path":46}],43:[function(require,module,exports){
+},{"./filters":44,"./utils":45,"fs":46,"path":47}],44:[function(require,module,exports){
 /*!
  * EJS - Filters
  * Copyright(c) 2010 TJ Holowaychuk <tj@vision-media.ca>
@@ -13237,7 +13604,7 @@ exports.json = function(obj){
   return JSON.stringify(obj);
 };
 
-},{}],44:[function(require,module,exports){
+},{}],45:[function(require,module,exports){
 
 /*!
  * EJS
@@ -13263,9 +13630,9 @@ exports.escape = function(html){
 };
  
 
-},{}],45:[function(require,module,exports){
-
 },{}],46:[function(require,module,exports){
+
+},{}],47:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -13493,7 +13860,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require("JkpR2F"))
-},{"JkpR2F":47}],47:[function(require,module,exports){
+},{"JkpR2F":48}],48:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -13558,7 +13925,7 @@ process.chdir = function (dir) {
     throw new Error('process.chdir is not supported');
 };
 
-},{}],48:[function(require,module,exports){
+},{}],49:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -14069,7 +14436,7 @@ process.chdir = function (dir) {
 }(this));
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],49:[function(require,module,exports){
+},{}],50:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -14155,7 +14522,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],50:[function(require,module,exports){
+},{}],51:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -14242,13 +14609,13 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],51:[function(require,module,exports){
+},{}],52:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":49,"./encode":50}],52:[function(require,module,exports){
+},{"./decode":50,"./encode":51}],53:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -14957,7 +15324,7 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":48,"querystring":51}],53:[function(require,module,exports){
+},{"punycode":49,"querystring":52}],54:[function(require,module,exports){
 /**
  * messageformat.js
  *
@@ -16540,4 +16907,4 @@ function isNullOrUndefined(arg) {
 
 })( this );
 
-},{}]},{},[35])
+},{}]},{},[36])

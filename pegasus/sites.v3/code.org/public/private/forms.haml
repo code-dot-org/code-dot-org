@@ -1,6 +1,6 @@
 -require 'cdo/solr'
 -zip_codes = request.post? ? (CSV.parse_line(params[:zip_codes_s].to_s)||[]).map{|i| i.strip} : []
--kinds_available = ["Petition","HocCertificate2013","CSEdWeekEvent2013","HelpUs2013","BringToSchool2013","ClassSubmission","StudentNomination","TeacherNomination"]
+-kinds_available = ["Petition","CSEdWeekEvent2013","HelpUs2013","BringToSchool2013","ClassSubmission","StudentNomination","TeacherNomination"]
 -kinds = params[:kinds_ss] if request.post?
 -kinds = kinds_available if kinds.nil_or_empty?
 -max_results = 100

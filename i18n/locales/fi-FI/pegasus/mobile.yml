@@ -3,7 +3,7 @@ fi-FI:
   select_language: Valitse kieli
   computer_science: Tietotekniikka
   computer_science_edweek: Tietotekniikan koulutusviikko
-  csedweek_dates: 9.–15. joulukuuta 2013
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Koodaustunti</a> on tulossa. Kaikki opettajat ja järjestäjät, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">suunnittele koodaustuntisi</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Oletko tietotekniikan opettaja? Katso muut CSEdWeek-materiaalit</a>'
   n_have_learned_an_hoc: '<h1>#</h1><h3>on kokeillut</h3><h2>Koodaustuntia</h2>'
@@ -323,6 +323,7 @@ fi-FI:
   carousel_heading_robots: Opi ohjelmoimaan robottien kanssa
   carousel_heading_ide: Opettajien keskuudessa suositut alustat
   educator_notes: Opettajan muistiinpanot
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Lisämateriaalit opettajille
   participants: osallistujat
   teachers_notes: Opettajan muistiinpanot

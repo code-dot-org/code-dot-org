@@ -5,7 +5,7 @@
         blank: is required
     attributes:
       user:
-        name: Izena
+        name: Display Name
         email: E-posta
         username: Erabiltzaile-izena
         password: Pasahitza
@@ -21,8 +21,8 @@
   welcome_back: Ongi etorria berriro, %{name}
   add_teacher_form:
     code:
-      label: 'Add a teacher by section code:'
-      placeholder: Code (ABCDEF)
+      label: 'Add a teacher:'
+      placeholder: Section Code (ABCDEF)
     submit: Gehitu irakaslea
   add_hint_form:
     placeholder: Mesedez sartu hemen zure pista
@@ -61,24 +61,25 @@
     need_confirmation: Ez dituzu konfirmazio argibideak jaso?
     need_unlock: Ez dituzu lokatze argibideak jaso?
   signup_form:
-    overview_student: Izena eman zure aurrerapenak jarraitzeko kontu batean.
-    overview_teacher: Irakatsi konputazio zientziak zure ikasgelan iznea emanez. <p/>
-      Zure ikasleen aurrerapena jarraitzekoo aukera edukiko duzu eta sariak jasoko
-      dituzu.
+    overview_student: Sign up for an account to track your progress. Your email is
+      primarily used to allow you to log in and for password recovery. For more information,
+      see our <a href="http://code.org/privacy">Privacy Policy</a>.
+    overview_teacher: Teach computer science in your classroom by signing up for an
+      account.<p/> You'll be able to add your students and track their progress.
     no_signup_message: <a target="_blank" href="http://learn.code.org">en eszenatoki
       eta puzleak bilatu ditzakezu</a>, baina izen eman beharko duzu zure aurrerapenak
       gordetzeko.
     teacher_educator_guide: Ikusi hezitzailearen gida
-    teacher_pitch: Teach the K-8 Intro to Computer Science in your classroom
+    teacher_pitch: Teacher sign up for Code.org
     teacher_title: Teacher sign up
-    student_pitch: 'Beyond 1 hour: try our K-8 Intro to Computer Science'
-    student_title: Sign up
+    student_pitch: Student sign up for Code.org
+    student_title: Student sign up
     school_name: School Name (optional)
     school_address: School Address (optional)
     address_placeholder: address, city, state, zip
     gender: Gender (optional)
     birthday: Birthday (optional)
-    age: Age (optional)
+    age: Age
     user_type: Are you a student or teacher?
     submit: Sign up
     teacher: Are you a teacher?
@@ -88,14 +89,17 @@
     valid_password: Valid password!
     invalid_password: Password must be at least 6 characters
     mismatch_password: The two passwords you entered do not match
-    student_terms: I agree to be bound by the Code.org terms of service. If I am under
-      13 years of age, I confirm by submitting this form that I have my parent or
-      legal guardian's permission to use the Code.org services.
-    teacher_terms: I agree to be bound by the Code.org terms of service.
+    student_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
+      of service</a>. If I am under 13 years of age, I confirm by submitting this
+      form that I have my parent or legal guardian's permission to use the Code.org
+      services.<br/>For users under 13, email addresses are not stored in a form that
+      allows us to contact them.
+    teacher_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
+      of service</a>.
     additional_information: We need some additional information to continue signing
       you up.
   signin_form:
-    title: Sign in
+    title: Have an account already? Sign in
     login: Email or username
     password: Pasahitza
     remember: Remember me
@@ -141,7 +145,7 @@
       no_teacher: Could not find anyone signed in with '%{teacher_email_or_code}'.
         Please ask them to sign up here and then try adding them again
       section_not_found: Could not find a section with code '%{section_code}'.
-      blank_code: Please enter a code or your teacher's email address
+      blank_code: Please enter a section code
       cant_join_own_section: Sorry, you can't join your own section.
     mail:
       invite_student:
@@ -200,7 +204,7 @@
         Dropbox space, $10 in Skype credits, and free game downloads. NOTE: offer
         only valid to U.S. students, and only as long as supplies last.'
       teacher:
-        earned: 10 or more students collected all %{num_trophies} trophies. You have
+        earned: 15 or more students collected all %{num_trophies} trophies. You have
           won a teacher prize! (U.S. teachers only)
         not_earned_title: Teach the class, earn up to $1,000 in <a target="_blank"
           href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers
@@ -248,7 +252,7 @@
         playlab: Make an App
         artist: Draw Something
     user:
-      classroom: My students
+      classroom: Teacher Home Page
       label: Hi %{username}
       stats: My progress
       settings: My account
@@ -269,7 +273,7 @@
       prizes_link: more info
   teacher:
     title:
-      one: Your teacher is %{name}
+      one: 'Your teacher:'
       other: 'Your teachers:'
     remove: (remove teacher)
     confirm:
@@ -354,11 +358,11 @@
     title: Code Studio
     all_courses: Overview of Courses 1, 2, and 3
     lesson_plans: Lesson plans
-    signin_message: Or if you're already registered, %{link}
-    student_reg_link: Student
-    teacher_reg_link: Teacher
-    signin_directions: Use an account to track progress and get rewards.<br/> Teachers,
-      track your entire class.
+    signin_message: Already registered? %{link}
+    student_reg_link: Student Sign Up
+    teacher_reg_link: Teacher Sign Up
+    signin_directions: Use an account to track progress.<br/> Teachers, track your
+      entire class.
     teacher_dashboard: See progress dashboard
     teacher_student_count_one: You have %{count} student.
     teacher_student_count: You have %{count} students.
@@ -377,8 +381,8 @@
     local_school: local school
     online: online
     see_details: See details
-    prize_info: 'Prizes for participation (U.S. only): $10 gift cards for student
-      completion and up to $1,000 in classroom rewards for public school teachers'
+    prize_info: 'Prizes for participation (U.S. public school teachers only): Up to
+      $1,000 in classroom rewards.'
     tryfirst: 'Or, you can try it first, and sign up later:'
     trynow: Saiatu orain
     add_hint_help: Please help us to add smart hints to Code.org tutorials
@@ -389,9 +393,9 @@
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
     heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
-    heading_elementary: <h2>20 hour courses for</h2><h1>Elementary Students</h1>
+    heading_elementary: <h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>
     heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
-    heading_legacy: <h2>Our previous course for</h2><h1>Existing Students</h1>
+    heading_legacy: <h2>Our general course for</h2><h1>All Ages</h1>
     your_gallery: Gallery
   gender:
     male: Male
@@ -401,19 +405,17 @@
     student: Ikaslea
     teacher: Teacher
   footer:
-    help_from_html: Engineers from <a href="http://www.google.com">Google</a>, <a
-      href="http://www.microsoft.com">Microsoft</a>, <a href="http://www.facebook.com">Facebook</a>,
-      and <a href="http://www.twitter.com">Twitter</a> helped create this tutorial.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 <a href="http://www.rovio.com">Rovio
-      Entertainment Ltd</a>. All Rights Reserved.<br/> Plants vs. Zombies&trade; &
-      &copy; 2013 <a href="http://www.ea.com">Electronic Arts Inc.</a>. All Rights
-      Reserved.
+    help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped
+      create this tutorial.
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
+      All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
+      Arts Inc. All Rights Reserved.
     powered_by_aws: Powered by Amazon Web Services
     feedback: Provide feedback
     translate: Help us translate to your language
     support: Support
     support_url: http://support.code.org
-    tos: Terms of service
+    tos: Terms
     privacy: Privacy Policy
     secure: Secure Version
   reference_area:
@@ -422,7 +424,7 @@
     teacher: See the solution
     auth_error: You are not authorized to see the solution.
     submit: Update Artist Location
-    direction: Start Direction
+    direction: Start Direction (in degrees)
   video:
     tab: Video.
     notes: No video? Show notes.
@@ -456,10 +458,10 @@
   download_coming_soon: Downloadable activity coming soon.
   video_coming_soon: Video Coming Soon!
   share_code:
-    title: Click 'Run program' to see my program in action
+    title: Click 'Run' to see my program in action
     bounce_og_title: Check out my Bounce Game
     flappy_og_title: Check out my Flappy Game
-    studio_og_title: Check out my story
+    studio_og_title: Check out my Play Lab App
     check_out_what_i_made: Check out what I made
     og_description: I wrote the code myself with Code.org
     phone_number_not_allowed: It looks like there is a phone number in it. Try changing
@@ -472,7 +474,7 @@
   builder:
     created: You created a new script.
     destroyed: You destroyed a script.
-    manage: Manage Scripts
+    manage: Build Levels
     view: View
     back: Back to scripts
     success: You successfully edited the blocks.
@@ -516,7 +518,9 @@
     header_playlab: Play Lab
     header_artist: Artist
   landing:
-    prerelease: This page is still under development.
+    prerelease: This course is in <span class='betatext'>beta</span>.  This means
+      it is not the final version of the course, and is subject to revision as feedback
+      is received and improvements are made.
     prerelease_hoc2014: This tutorial is in <span class='betatext'>beta</span>.  It
       is subject to revision as feedback is received and improvements are made.
     feedback: Give Feedback

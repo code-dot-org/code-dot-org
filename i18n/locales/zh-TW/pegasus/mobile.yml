@@ -3,7 +3,7 @@ zh-TW:
   select_language: 請選擇您的語言
   computer_science: 電腦科學
   computer_science_edweek: 電腦科學教育周
-  csedweek_dates: 2013 年 12 月 9-15 日
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">編程一小時</a> 即將到來。招喚教師以及志願者們<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">策劃您的編程一小時</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">您是電腦科學的導師嗎？請查閱其它CWSdWeek的資源</a>'
   n_have_learned_an_hoc: '<h1>#</h1><h3>嘗試過嗎</h3><h2>一小時的編程</h2>'
@@ -104,6 +104,9 @@ zh-TW:
   students_and_lines: '%{students} 個學生已經完成"一小時的程式碼"課程 ，同時撰寫了 %{lines} 行的程式碼。'
   start_hoc: '現在就開始進行"一小時的程式碼"課程吧'
   contact_form_topic_press: 新聞/媒體（採訪或演講活動）
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
+  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
+  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
   studiobar_title: "探討 <a href='HTTP://studio.code.org'> 編程工作室</a>"
   studiobar_elementary_title: 初級課程
   studiobar_elementary_body: '我們三個的新課程，為 K &#8209; 5'
@@ -117,6 +120,8 @@ zh-TW:
   studiobar_frozen_body: 與安娜和埃爾莎創建一個冬季仙境
   studiobar_donate_title: 捐贈
   studiobar_donate_body: 一個孩子學習為你捐的每一分錢
+  studiobar_shop_title: Shop
+  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   contact_form_topic_student: 我是位學生
   contact_form_topic_parent: 我是位家長
   contact_form_topic_teacher: 我是個老師/教育家
@@ -194,9 +199,11 @@ zh-TW:
   dashboard_action_save_all: 全部保存
   dashboard_action_cancel: 取消
   dashboard_action_delete: 删除
-  dashboard_action_confirm: 要刪除嗎？
   dashboard_action_delete_yes: 是
   dashboard_action_delete_no: 否
+  dashboard_action_confirm: 要刪除嗎？
+  dashboard_action_remove: Remove
+  dashboard_action_remove_confirm: Remove?
   dashboard_action_done: 完成
   dashboard_action_required: 必須的
   dashboard_navigation_home_page: 教師主頁
@@ -316,6 +323,7 @@ zh-TW:
   carousel_heading_robots: 使用機器人學習程式設計
   carousel_heading_ide: 教師們的熱門平臺
   educator_notes: 教育者注意事項
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: 給教師和教育工作者的更多資源
   participants: 參與者
   teachers_notes: 老師的重要提示

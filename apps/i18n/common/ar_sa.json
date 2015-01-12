@@ -88,5 +88,6 @@
   "signup": "سجل لمشاهدة مقدمة الدورة",
   "hintHeader": "إليك نصيحة:",
   "genericFeedback": "انظر كيف انتهى الأمر، و حاول إصلاح برنامجك.",
+  "toggleBlocksErrorMsg": "You need to correct an error in your program before it can be shown as blocks.",
   "defaultTwitterText": "انظر ما الذي صنعته"
 }

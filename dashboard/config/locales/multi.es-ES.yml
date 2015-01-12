@@ -323,7 +323,7 @@
           de tu padres</h4>
       4-5 Internet Multi 1:
         Multiple Choice: Opción Múltiple
-        /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5__imagenes/desconectado/tragaluz_1_q.png
+        /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
         When you try to log on to code.org, which IP address is the DNS most likely to take you to?: ¿Al
           intentar iniciar sesión en code.org, a qué dirección IP es más probable
           que te lleve el DNS?
@@ -640,6 +640,19 @@
           "rojo")
         (rectangle (+ 8 2) (- 7 5) solid red): (rectángulo (+ 8 2) (- 7 5) sólido
           rojo)
+      Multi Strings Images 1:
+        Strings and Images Multiple Choice: Strings and Images Multiple Choice
+        Multi Strings Images 1.blocks3.level: Multi Strings Images 1.blocks3.level
+        Which of these Evaluation Blocks will draw the image: Which of these Evaluation
+          Blocks will draw the image
+        Multi Strings Images 1.blocks1.start_blocks, 300, 100: Multi Strings Images
+          1.blocks1.start_blocks, 300, 100
+        Multi Strings Images 1.blocks2.start_blocks, 300, 100: Multi Strings Images
+          1.blocks2.start_blocks, 300, 100
+        Multi Strings Images 1.blocks3.start_blocks, 300, 100: Multi Strings Images
+          1.blocks3.start_blocks, 300, 100
+        Multi Strings Images 1.blocks4.start_blocks, 300, 100: Multi Strings Images
+          1.blocks4.start_blocks, 300, 100
       test multi image:
         Maze Multiple Choice Two: Laberinto de Opción Múltiple Dos
         /script_assets/matches/images/head.jpg,400: /script_assets/matches/images/head.jpg,400
@@ -662,7 +675,7 @@
         Who was the first president of the USA?: ¿Quién fue el primer presidente de
           los Estados Unidos de América?
         Fred Flintstone: Pedro Picapiedra
-        Martha Washington: Marta Washington
+        Martha Washington: Martha Washington
         George Washington: George Washington
         George Jetson: Super Sónico
       unique level name here:

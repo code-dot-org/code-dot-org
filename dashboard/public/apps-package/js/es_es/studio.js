@@ -149,9 +149,9 @@ var utils = require('./utils');
 var _ = utils.getLodash();
 var dom = require('./dom');
 var constants = require('./constants.js');
-var builder = require('./builder');
 var msg = require('../locale/es_es/common');
 var blockUtils = require('./block_utils');
+var url = require('url');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -207,6 +207,7 @@ var StudioAppClass = function () {
   /**
   * Whether to alert user to empty blocks, short-circuiting all other tests.
   */
+  // TODO (br-pair) : this isnt actually a constant
   this.CHECK_FOR_EMPTY_BLOCKS = undefined;
 
   /**
@@ -258,15 +259,11 @@ var StudioAppClass = function () {
   /**
   * Enumeration of user program execution outcomes.
   */
-  // TODO (br-pair) : ResultType shouldn't really live on StudioApp. Places
-  // that want this should just require constants themselves.
   this.ResultType = constants.ResultType;
 
   /**
   * Enumeration of test results.
   */
-  // TODO (br-pair) : TestResults shouldn't really live on StudioApp. Places
-  // that want this should just require constants themselves.
   this.TestResults = constants.TestResults;
 
   /**
@@ -308,7 +305,8 @@ StudioAppClass.prototype.configure = function (options) {
   this.cdoSounds = options.cdoSounds;
   this.Dialog = options.Dialog;
 
-  // TODO (br-pair) : should callers instead be the ones binding the context?
+  // Bind assetUrl to the instance so that we don't need to depend on callers
+  // binding correctly as they pass this function around.
   this.assetUrl = _.bind(this.assetUrl_, this);
 };
 
@@ -791,6 +789,9 @@ StudioAppClass.prototype.sortBlocksByVisibility = function(xmlBlocks) {
   return visibleXmlBlocks.concat(hiddenXmlBlocks);
 };
 
+StudioAppClass.prototype.createModalDialogWithIcon = function(options) {
+  return this.feedback_.createModalDialogWithIcon(options);
+};
 
 StudioAppClass.prototype.showInstructions_ = function(level, autoClose) {
   var instructionsDiv = document.createElement('div');
@@ -805,7 +806,7 @@ StudioAppClass.prototype.showInstructions_ = function(level, autoClose) {
 
   instructionsDiv.appendChild(buttons);
 
-  var dialog = this.feedback_.createModalDialogWithIcon({
+  var dialog = this.createModalDialogWithIcon({
     Dialog: this.Dialog,
     contentDiv: instructionsDiv,
     icon: this.icon,
@@ -898,7 +899,7 @@ StudioAppClass.prototype.resizeHeaders = function (fullWorkspaceWidth) {
   var toolboxWidth = 0;
   if (this.editCode) {
     // If in the droplet editor, but not using blocks, keep categoryWidth at 0
-    if (!this.editCode || this.editor.currentlyUsingBlocks) {
+    if (this.editor.currentlyUsingBlocks) {
       // Set toolboxWidth based on the block palette width:
       var categories = document.querySelector('.droplet-palette-wrapper');
       toolboxWidth = parseInt(window.getComputedStyle(categories).width, 10);
@@ -952,7 +953,7 @@ StudioAppClass.prototype.clearHighlighting = function () {
 * Display feedback based on test results.  The test results must be
 * explicitly provided.
 * @param {{feedbackType: number}} Test results (a constant property of
-*     StudioApp.TestResults).
+*     this.TestResults).
 */
 StudioAppClass.prototype.displayFeedback = function(options) {
   options.Dialog = this.Dialog;
@@ -973,6 +974,31 @@ StudioAppClass.prototype.displayFeedback = function(options) {
  */
 StudioAppClass.prototype.getTestResults = function(levelComplete, options) {
   return this.feedback_.getTestResults(levelComplete, options);
+};
+
+// Builds the dom to get more info from the user. After user enters info
+// and click "create level" onAttemptCallback is called to deliver the info
+// to the server.
+StudioAppClass.prototype.builderForm_ = function(onAttemptCallback) {
+  var builderDetails = document.createElement('div');
+  builderDetails.innerHTML = require('./templates/builder.html')();
+  var dialog = this.createModalDialogWithIcon({
+    Dialog: this.Dialog,
+    contentDiv: builderDetails,
+    icon: this.icon
+  });
+  var createLevelButton = document.getElementById('create-level-button');
+  dom.addClickTouchEvent(createLevelButton, function() {
+    var instructions = builderDetails.querySelector('[name="instructions"]').value;
+    var name = builderDetails.querySelector('[name="level_name"]').value;
+    var query = url.parse(window.location.href, true).query;
+    onAttemptCallback(utils.extend({
+      "instructions": instructions,
+      "name": name
+    }, query));
+  });
+
+  dialog.show({ backdrop: 'static' });
 };
 
 /**
@@ -1012,7 +1038,7 @@ StudioAppClass.prototype.report = function(options) {
     // If this is the level builder, go to builderForm to get more info from
     // the level builder.
     if (options.builder) {
-      builder.builderForm(onAttemptCallback);
+      this.builderForm_(onAttemptCallback);
     } else {
       onAttemptCallback();
     }
@@ -1132,20 +1158,9 @@ StudioAppClass.prototype.setConfigValues_ = function (config) {
   }
 
   // Store configuration.
-  //TODO (br-pair) : test code should pass in these instead of defaulting in app code
-  this.onAttempt = config.onAttempt || function(report) {
-    console.log('Attempt!');
-    console.log(report);
-    if (report.onComplete) {
-      report.onComplete();
-    }
-  };
-  this.onContinue = config.onContinue || function() {
-    console.log('Continue!');
-  };
-  this.onResetPressed = config.onResetPressed || function() {
-    console.log('Reset!');
-  };
+  this.onAttempt = config.onAttempt || function () {};
+  this.onContinue = config.onContinue || function () {};
+  this.onResetPressed = config.onResetPressed || function () {};
   this.backToPreviousLevel = config.backToPreviousLevel || function () {};
 };
 
@@ -1368,7 +1383,14 @@ StudioAppClass.prototype.updateHeadersAfterDropletToggle_ = function (usingBlock
   this.onResize();
 };
 
-},{"../locale/es_es/common":48,"./ResizeSensor":1,"./block_utils":5,"./builder":7,"./constants.js":13,"./dom":14,"./templates/buttons.html":35,"./templates/instructions.html":37,"./templates/learn.html":38,"./templates/makeYourOwn.html":39,"./utils":46,"./xml":47}],3:[function(require,module,exports){
+/**
+ * Do we have any floating blocks not attached to an event block or function block?
+ */
+StudioAppClass.prototype.hasExtraTopBlocks = function () {
+  return this.feedback_.hasExtraTopBlocks();
+};
+
+},{"../locale/es_es/common":48,"./ResizeSensor":1,"./block_utils":5,"./constants.js":12,"./dom":13,"./templates/builder.html":34,"./templates/buttons.html":35,"./templates/instructions.html":37,"./templates/learn.html":38,"./templates/makeYourOwn.html":39,"./utils":46,"./xml":47,"url":60}],3:[function(require,module,exports){
 var utils = require('./utils');
 var _ = utils.getLodash();
 var requiredBlockUtils = require('./required_block_utils');
@@ -1385,23 +1407,6 @@ window.__TestInterface = {
 
 var addReadyListener = require('./dom').addReadyListener;
 var blocksCommon = require('./blocksCommon');
-
-function StubDialog(options) {
-  this.options = options;
-  console.log("Creating Dialog");
-  console.log(options);
-}
-StubDialog.prototype.show = function() {
-  console.log("Showing Dialog");
-  if (this.options.body) {
-    console.log(this.options.body.innerHTML);
-  }
-  console.log(this);
-};
-StubDialog.prototype.hide = function() {
-  console.log("Hiding Dialog");
-  console.log(this);
-};
 
 module.exports = function(app, levels, options) {
 
@@ -1422,8 +1427,6 @@ module.exports = function(app, levels, options) {
 
     options.level = level;
   }
-
-  options.Dialog = options.Dialog || StubDialog;
 
   studioAppSingleton.configure(options);
 
@@ -1459,7 +1462,7 @@ module.exports = function(app, levels, options) {
   });
 };
 
-},{"./StudioApp":2,"./base":4,"./blocksCommon":6,"./dom":14,"./required_block_utils":19,"./utils":46}],4:[function(require,module,exports){
+},{"./StudioApp":2,"./base":4,"./blocksCommon":6,"./dom":13,"./required_block_utils":19,"./utils":46}],4:[function(require,module,exports){
 /**
  * Blockly Apps: Common code
  *
@@ -1501,7 +1504,7 @@ module.exports = studioAppSingleton;
 feedback.applySingleton(studioAppSingleton);
 studioAppSingleton.feedback_ = feedback;
 
-},{"./StudioApp":2,"./feedback":15}],5:[function(require,module,exports){
+},{"./StudioApp":2,"./feedback":14}],5:[function(require,module,exports){
 var xml = require('./xml');
 
 exports.createToolbox = function(blocks) {
@@ -1868,36 +1871,6 @@ function installWhenRun(blockly, skin, isK1) {
 }
 
 },{"../locale/es_es/common":48}],7:[function(require,module,exports){
-var feedback = require('./feedback.js');
-var dom = require('./dom.js');
-var utils = require('./utils.js');
-var url = require('url');
-// Builds the dom to get more info from the user. After user enters info
-// and click "create level" onAttemptCallback is called to deliver the info
-// to the server.
-exports.builderForm = function(onAttemptCallback) {
-  var builderDetails = document.createElement('div');
-  builderDetails.innerHTML = require('./templates/builder.html')();
-  var dialog = feedback.createModalDialogWithIcon({
-    Dialog: StudioApp.Dialog,
-    contentDiv: builderDetails,
-    icon: StudioApp.icon
-  });
-  var createLevelButton = document.getElementById('create-level-button');
-  dom.addClickTouchEvent(createLevelButton, function() {
-    var instructions = builderDetails.querySelector('[name="instructions"]').value;
-    var name = builderDetails.querySelector('[name="level_name"]').value;
-    var query = url.parse(window.location.href, true).query;
-    onAttemptCallback(utils.extend({
-      "instructions": instructions,
-      "name": name
-    }, query));
-  });
-
-  dialog.show({ backdrop: 'static' });
-};
-
-},{"./dom.js":14,"./feedback.js":15,"./templates/builder.html":34,"./utils.js":46,"url":60}],8:[function(require,module,exports){
 /*
 
 StackBlur - a fast almost Gaussian Blur For Canvas
@@ -2509,7 +2482,7 @@ function BlurStack()
 	this.a = 0;
 	this.next = null;
 }
-},{}],9:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 /*
  * canvg.js - Javascript SVG parser and renderer on Canvas
  * MIT Licensed 
@@ -5477,7 +5450,7 @@ if (typeof(CanvasRenderingContext2D) != 'undefined') {
 	}
 }
 
-},{}],10:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 /**
  * A class to parse color values
  * @author Stoyan Stefanov <sstoo@gmail.com>
@@ -5767,7 +5740,7 @@ function RGBColor(color_string)
 }
 
 
-},{}],11:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 /**
 	The missing SVG.toDataURL library for your SVG elements.
 	
@@ -5988,7 +5961,7 @@ SVGElement.prototype.toDataURL = function(type, options) {
 	}
 }
 
-},{}],12:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
 var LOOP_HIGHLIGHT = 'loopHighlight();\n';
@@ -6101,20 +6074,22 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
   return retVal;
 };
 
-exports.marshalInterpreterToNative = function (interpreterVar) {
+exports.marshalInterpreterToNative = function (interpreter, interpreterVar) {
   if (interpreterVar.isPrimitive) {
     return interpreterVar.data;
-  } else if (Webapp.interpreter.isa(interpreterVar, Webapp.interpreter.ARRAY)) {
+  } else if (interpreter.isa(interpreterVar, interpreter.ARRAY)) {
     var nativeArray = [];
     nativeArray.length = interpreterVar.length;
     for (var i = 0; i < nativeArray.length; i++) {
-      nativeArray[i] = exports.marshalInterpreterToNative(interpreterVar.properties[i]);
+      nativeArray[i] = exports.marshalInterpreterToNative(interpreter,
+                                                          interpreterVar.properties[i]);
     }
     return nativeArray;
-  } else if (Webapp.interpreter.isa(interpreterVar, Webapp.interpreter.OBJECT)) {
+  } else if (interpreter.isa(interpreterVar, interpreter.OBJECT)) {
     var nativeObject = {};
     for (var prop in interpreterVar.properties) {
-      nativeObject[prop] = exports.marshalInterpreterToNative(interpreterVar.properties[prop]);
+      nativeObject[prop] = exports.marshalInterpreterToNative(interpreter,
+                                                              interpreterVar.properties[prop]);
     }
     return nativeObject;
   } else {
@@ -6132,7 +6107,7 @@ exports.makeNativeMemberFunction = function (interpreter, nativeFunc, nativePare
     // Call the native function:
     var nativeArgs = [];
     for (var i = 0; i < arguments.length; i++) {
-      nativeArgs[i] = exports.marshalInterpreterToNative(arguments[i]);
+      nativeArgs[i] = exports.marshalInterpreterToNative(interpreter, arguments[i]);
     }
     var nativeRetVal = nativeFunc.apply(nativeParentObj, nativeArgs);
     return exports.marshalNativeToInterpreter(interpreter, nativeRetVal, null, maxDepth);
@@ -6253,12 +6228,15 @@ function createSelection (selection, cumulativeLength, start, end) {
  * Returns the row (line) of code highlighted. If nothing is highlighted
  * because it is outside of the userCode area, the return value is -1
  */
-exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
-                                      userCodeStartOffset, userCodeLength) {
+exports.selectCurrentCode = function (interpreter,
+                                      cumulativeLength,
+                                      userCodeStartOffset,
+                                      userCodeLength,
+                                      editor) {
   var userCodeRow = -1;
   if (interpreter.stateStack[0]) {
     var node = interpreter.stateStack[0].node;
-    // Adjust start/end by Webapp.userCodeStartOffset since the code running
+    // Adjust start/end by userCodeStartOffset since the code running
     // has been expanded vs. what the user sees in the editor window:
     var start = node.start - userCodeStartOffset;
     var end = node.end - userCodeStartOffset;
@@ -6287,6 +6265,34 @@ exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
       editor.clearLineMarks();
     } else {
       editor.aceEditor.getSelection().clearSelection();
+    }
+  }
+  return userCodeRow;
+};
+
+/**
+ * Finds the current line of code in droplet/ace editor.
+ *
+ * Returns the line of code where the interpreter is at. If it is outside
+ * of the userCode area, the return value is -1
+ *
+ * NOTE: first 4 params match the selectCurrentCode function by design.
+ */
+exports.getUserCodeLine = function (interpreter, cumulativeLength,
+                                    userCodeStartOffset, userCodeLength) {
+  var userCodeRow = -1;
+  if (interpreter.stateStack[0]) {
+    var node = interpreter.stateStack[0].node;
+    // Adjust start/end by userCodeStartOffset since the code running
+    // has been expanded vs. what the user sees in the editor window:
+    var start = node.start - userCodeStartOffset;
+    var end = node.end - userCodeStartOffset;
+
+    // Only return a valid userCodeRow if the node being executed is inside the
+    // user's code (not inside code we inserted before or after their code that
+    // is not visible in the editor):
+    if (start >= 0 && start < userCodeLength) {
+      userCodeRow = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
     }
   }
   return userCodeRow;
@@ -6345,7 +6351,7 @@ exports.functionFromCode = function(code, options) {
   }
 };
 
-},{}],13:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 /**
  * @fileoverview Constants used in production code and tests.
  */
@@ -6412,7 +6418,7 @@ exports.BeeTerminationValue = {
   INSUFFICIENT_HONEY: 8  // Didn't make all honey by finish
 };
 
-},{}],14:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 exports.addReadyListener = function(callback) {
   if (document.readyState === "complete") {
     setTimeout(callback, 1);
@@ -6519,15 +6525,16 @@ exports.isIOS = function() {
   return reg.test(window.navigator.userAgent);
 };
 
-},{}],15:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 var trophy = require('./templates/trophy.html');
 var utils = require('./utils');
-var readonly = require('./templates/readonly.html');
 var codegen = require('./codegen');
 var msg = require('../locale/es_es/common');
 var dom = require('./dom');
 var xml = require('./xml');
 var _ = utils.getLodash();
+
+var FeedbackBlocks = require('./feedbackBlocks');
 
 // TODO (br-pair): This is a hack. We initially set our studioAppSingleton to
 // be the global StudioApp. This will be the case for all apps other than Artist.
@@ -6541,7 +6548,8 @@ exports.applySingleton = function (singleton) {
 
 var TestResults = require('./constants').TestResults;
 
-exports.HintRequestPlacement = {
+// NOTE: These must be kept in sync with activity_hint.rb in dashboard.
+var HintRequestPlacement = {
   NONE: 0,  // This value must not be changed.
   LEFT: 1,  // Hint request button is on left.
   RIGHT: 2  // Hint request button is on right.
@@ -6570,7 +6578,8 @@ exports.displayFeedback = function(options) {
   if (hadShareFailure) {
     trackEvent('Share', 'Failure', options.response.share_failure.type);
   }
-  var feedbackBlocks = new FeedbackBlocks(options);
+  var feedbackBlocks = new FeedbackBlocks(options, getMissingRequiredBlocks(),
+    studioAppSingleton);
   // feedbackMessage must be initialized after feedbackBlocks
   // because FeedbackBlocks can mutate options.response.hint.
   var feedbackMessage = getFeedbackMessage(options);
@@ -6811,7 +6820,7 @@ var getFeedbackButtons = function(options) {
       nextLevel: exports.canContinueToNextLevel(options.feedbackType),
       isK1: options.isK1,
       hintRequestExperiment: options.hintRequestExperiment &&
-          (options.hintRequestExperiment === exports.HintRequestPlacement.LEFT ?
+          (options.hintRequestExperiment === HintRequestPlacement.LEFT ?
               'left' : 'right'),
       assetUrl: studioAppSingleton.assetUrl,
       freePlay: options.freePlay
@@ -7025,7 +7034,7 @@ exports.createSharingDiv = function(options) {
     options.facebookUrl = facebookUrl;
   }
 
-  options.assetUrl = _.bind(studioAppSingleton.assetUrl, studioAppSingleton);
+  options.assetUrl = studioAppSingleton.assetUrl;
 
   var sharingDiv = document.createElement('div');
   sharingDiv.setAttribute('style', 'display:inline-block');
@@ -7161,78 +7170,6 @@ var getGeneratedCodeString = function() {
   }
   else {
     return codegen.workspaceCode(Blockly);
-  }
-};
-
-var FeedbackBlocks = function(options) {
-  // Check whether blocks are embedded in the hint returned from dashboard.
-  // See below comment for format.
-  var embeddedBlocks = options.response && options.response.hint &&
-      options.response.hint.indexOf("[{") !== 0;
-  if (!embeddedBlocks &&
-      options.feedbackType !==
-      TestResults.MISSING_BLOCK_UNFINISHED &&
-      options.feedbackType !==
-      TestResults.MISSING_BLOCK_FINISHED) {
-      return;
-  }
-
-  var blocksToDisplay = [];
-  if (embeddedBlocks) {
-    // Hint should be of the form: SOME TEXT [{..}, {..}, ..] IGNORED.
-    // Example: 'Try the following block: [{"type": "maze_moveForward"}]'
-    // Note that double quotes are required by the JSON parser.
-    var parts = options.response.hint.match(/(.*)(\[.*\])/);
-    if (!parts) {
-      return;
-    }
-    options.response.hint = parts[1].trim();  // Remove blocks from hint.
-    try {
-      blocksToDisplay = JSON.parse(parts[2]);
-    } catch(err) {
-      // The blocks could not be parsed.  Ignore them.
-      return;
-    }
-  } else {
-    var missingRequiredBlocks = getMissingRequiredBlocks();
-    blocksToDisplay = missingRequiredBlocks.blocksToDisplay;
-    if (missingRequiredBlocks.message) {
-      options.message = missingRequiredBlocks.message;
-    }
-  }
-
-  if (blocksToDisplay.length === 0) {
-    return;
-  }
-
-  this.div = document.createElement('div');
-  this.html = readonly({
-    app: options.app,
-    assetUrl: studioAppSingleton.assetUrl,
-    options: {
-      readonly: true,
-      locale: studioAppSingleton.LOCALE,
-      localeDirection: studioAppSingleton.localeDirection(),
-      baseUrl: studioAppSingleton.BASE_URL,
-      cacheBust: studioAppSingleton.CACHE_BUST,
-      skinId: options.skin,
-      level: options.level,
-      blocks: generateXMLForBlocks(blocksToDisplay)
-    }
-  });
-  this.iframe = document.createElement('iframe');
-  this.iframe.setAttribute('id', 'feedbackBlocks');
-  this.iframe.setAttribute('allowtransparency', 'true');
-  this.div.appendChild(this.iframe);
-};
-
-FeedbackBlocks.prototype.show = function() {
-  var iframe = document.getElementById('feedbackBlocks');
-  if (iframe) {
-    var doc = iframe.contentDocument || iframe.contentWindow.document;
-    doc.open();
-    doc.write(this.html);
-    doc.close();
   }
 };
 
@@ -7388,6 +7325,7 @@ var getMissingRequiredBlocks = function () {
   var missingBlocks = [];
   var customMessage = null;
   var code = null;  // JavaScript code, which is initialized lazily.
+  // TODO (br-pair) : we should probably just pass required_blocks
   if (studioAppSingleton.REQUIRED_BLOCKS && studioAppSingleton.REQUIRED_BLOCKS.length) {
     var userBlocks = getUserBlocks();
     // For each list of required blocks
@@ -7565,57 +7503,6 @@ exports.createModalDialogWithIcon = function(options) {
 };
 
 /**
- * Creates the XML for blocks to be displayed in a read-only frame.
- * @param {Array} blocks An array of blocks to display (with optional args).
- * @return {string} The generated string of XML.
- */
-var generateXMLForBlocks = function(blocks) {
-  var blockXMLStrings = [];
-  var blockX = 10;  // Prevent left output plugs from being cut off.
-  var blockY = 0;
-  var blockXPadding = 200;
-  var blockYPadding = 120;
-  var blocksPerLine = 2;
-  var k, name;
-  for (var i = 0; i < blocks.length; i++) {
-    var block = blocks[i];
-    if (block.blockDisplayXML) {
-      blockXMLStrings.push(block.blockDisplayXML);
-      continue;
-    }
-    blockXMLStrings.push('<block', ' type="', block.type, '" x="',
-                        blockX.toString(), '" y="', blockY, '">');
-    if (block.titles) {
-      var titleNames = Object.keys(block.titles);
-      for (k = 0; k < titleNames.length; k++) {
-        name = titleNames[k];
-        blockXMLStrings.push('<title name="', name, '">',
-                            block.titles[name], '</title>');
-      }
-    }
-    if (block.values) {
-      var valueNames = Object.keys(block.values);
-      for (k = 0; k < valueNames.length; k++) {
-        name = valueNames[k];
-        blockXMLStrings.push('<value name="', name, '">',
-                            block.values[name], '</value>');
-      }
-    }
-    if (block.extra) {
-      blockXMLStrings.push(block.extra);
-    }
-    blockXMLStrings.push('</block>');
-    if ((i + 1) % blocksPerLine === 0) {
-      blockY += blockYPadding;
-      blockX = 0;
-    } else {
-      blockX += blockXPadding;
-    }
-  }
-  return blockXMLStrings.join('');
-};
-
-/**
  * Check for '???' instead of a value in block fields.
  */
 function hasQuestionMarksInNumberField() {
@@ -7715,7 +7602,136 @@ function hasMatchingDescendant(node, filter) {
 }
 
 
-},{"../locale/es_es/common":48,"./codegen":12,"./constants":13,"./dom":14,"./templates/buttons.html":35,"./templates/code.html":36,"./templates/readonly.html":41,"./templates/shareFailure.html":42,"./templates/sharing.html":43,"./templates/showCode.html":44,"./templates/trophy.html":45,"./utils":46,"./xml":47}],16:[function(require,module,exports){
+},{"../locale/es_es/common":48,"./codegen":11,"./constants":12,"./dom":13,"./feedbackBlocks":15,"./templates/buttons.html":35,"./templates/code.html":36,"./templates/shareFailure.html":42,"./templates/sharing.html":43,"./templates/showCode.html":44,"./templates/trophy.html":45,"./utils":46,"./xml":47}],15:[function(require,module,exports){
+var constants = require('./constants');
+var readonly = require('./templates/readonly.html');
+
+TestResults = constants.TestResults;
+
+// TODO (br-pair): can we not pass in the studioAppSingleton
+var FeedbackBlocks = function(options, missingRequiredBlocks, studioAppSingleton) {
+  // Check whether blocks are embedded in the hint returned from dashboard.
+  // See below comment for format.
+  var embeddedBlocks = options.response && options.response.hint &&
+      options.response.hint.indexOf("[{") !== 0;
+  if (!embeddedBlocks &&
+      options.feedbackType !== TestResults.MISSING_BLOCK_UNFINISHED &&
+      options.feedbackType !== TestResults.MISSING_BLOCK_FINISHED) {
+    return;
+  }
+
+  var blocksToDisplay = [];
+  if (embeddedBlocks) {
+    // Hint should be of the form: SOME TEXT [{..}, {..}, ..] IGNORED.
+    // Example: 'Try the following block: [{"type": "maze_moveForward"}]'
+    // Note that double quotes are required by the JSON parser.
+    var parts = options.response.hint.match(/(.*)(\[.*\])/);
+    if (!parts) {
+      return;
+    }
+    options.response.hint = parts[1].trim();  // Remove blocks from hint.
+    try {
+      blocksToDisplay = JSON.parse(parts[2]);
+    } catch(err) {
+      // The blocks could not be parsed.  Ignore them.
+      return;
+    }
+  } else {
+    blocksToDisplay = missingRequiredBlocks.blocksToDisplay;
+    if (missingRequiredBlocks.message) {
+      options.message = missingRequiredBlocks.message;
+    }
+  }
+
+  if (blocksToDisplay.length === 0) {
+    return;
+  }
+
+  this.div = document.createElement('div');
+  this.html = readonly({
+    app: options.app,
+    assetUrl: studioAppSingleton.assetUrl,
+    options: {
+      readonly: true,
+      locale: studioAppSingleton.LOCALE,
+      localeDirection: studioAppSingleton.localeDirection(),
+      baseUrl: studioAppSingleton.BASE_URL,
+      cacheBust: studioAppSingleton.CACHE_BUST,
+      skinId: options.skin,
+      level: options.level,
+      blocks: this.generateXMLForBlocks_(blocksToDisplay)
+    }
+  });
+  this.iframe = document.createElement('iframe');
+  this.iframe.setAttribute('id', 'feedbackBlocks');
+  this.iframe.setAttribute('allowtransparency', 'true');
+  this.div.appendChild(this.iframe);
+};
+
+module.exports = FeedbackBlocks;
+
+FeedbackBlocks.prototype.show = function() {
+  var iframe = document.getElementById('feedbackBlocks');
+  if (iframe) {
+    var doc = iframe.contentDocument || iframe.contentWindow.document;
+    doc.open();
+    doc.write(this.html);
+    doc.close();
+  }
+};
+
+/**
+ * Creates the XML for blocks to be displayed in a read-only frame.
+ * @param {Array} blocks An array of blocks to display (with optional args).
+ * @return {string} The generated string of XML.
+ */
+FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
+  var blockXMLStrings = [];
+  var blockX = 10;  // Prevent left output plugs from being cut off.
+  var blockY = 0;
+  var blockXPadding = 200;
+  var blockYPadding = 120;
+  var blocksPerLine = 2;
+  var k, name;
+  for (var i = 0; i < blocks.length; i++) {
+    var block = blocks[i];
+    if (block.blockDisplayXML) {
+      blockXMLStrings.push(block.blockDisplayXML);
+      continue;
+    }
+    blockXMLStrings.push('<block', ' type="', block.type, '" x="',
+                        blockX.toString(), '" y="', blockY, '">');
+    if (block.titles) {
+      var titleNames = Object.keys(block.titles);
+      for (k = 0; k < titleNames.length; k++) {
+        name = titleNames[k];
+        blockXMLStrings.push('<title name="', name, '">',
+                            block.titles[name], '</title>');
+      }
+    }
+    if (block.values) {
+      var valueNames = Object.keys(block.values);
+      for (k = 0; k < valueNames.length; k++) {
+        name = valueNames[k];
+        blockXMLStrings.push('<value name="', name, '">',
+                            block.values[name], '</value>');
+      }
+    }
+    if (block.extra) {
+      blockXMLStrings.push(block.extra);
+    }
+    blockXMLStrings.push('</block>');
+    if ((i + 1) % blocksPerLine === 0) {
+      blockY += blockYPadding;
+      blockX = 0;
+    } else {
+      blockX += blockXPadding;
+    }
+  }
+  return blockXMLStrings.join('');
+};
+
+},{"./constants":12,"./templates/readonly.html":41}],16:[function(require,module,exports){
 var utils = require('./utils');
 var _ = utils.getLodash();
 
@@ -15623,7 +15639,7 @@ function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpr
   };
 }
 
-},{"../../locale/es_es/common":48,"../../locale/es_es/studio":49,"../codegen":12,"../functionalBlockUtils":16,"../sharedFunctionalBlocks":20,"../utils":46,"./constants":25}],24:[function(require,module,exports){
+},{"../../locale/es_es/common":48,"../../locale/es_es/studio":49,"../codegen":11,"../functionalBlockUtils":16,"../sharedFunctionalBlocks":20,"../utils":46,"./constants":25}],24:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -17928,7 +17944,6 @@ var codegen = require('../codegen');
 var api = require('./api');
 var blocks = require('./blocks');
 var page = require('../templates/page.html');
-var feedback = require('../feedback.js');
 var dom = require('../dom');
 var Collidable = require('./collidable');
 var Projectile = require('./projectile');
@@ -18466,10 +18481,10 @@ Studio.onTick = function() {
          stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK && !doneUserCodeStep;
          stepsThisTick++) {
       var userCodeRow = codegen.selectCurrentCode(Studio.interpreter,
-                                                  StudioApp.editor,
                                                   Studio.cumulativeLength,
                                                   Studio.userCodeStartOffset,
-                                                  Studio.userCodeLength);
+                                                  Studio.userCodeLength,
+                                                  StudioApp.editor);
       try {
         Studio.interpreter.step();
         doneUserCodeStep = (-1 !== userCodeRow) &&
@@ -19220,7 +19235,7 @@ var displayFeedback = function() {
       feedbackImage: Studio.feedbackImage,
       twitter: twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
-      saveToGalleryUrl: level.freePlay && Studio.response.save_to_gallery_url,
+      saveToGalleryUrl: level.freePlay && Studio.response && Studio.response.save_to_gallery_url,
       appStrings: {
         reinfFeedbackMsg: studioMsg.reinfFeedbackMsg(),
         sharingText: studioMsg.shareGame()
@@ -20418,7 +20433,7 @@ Studio.setSpriteXY = function (opts) {
   var x = opts.x - sprite.width / 2;
   var y = opts.y - sprite.height / 2;
   var samePosition = (sprite.x === x && sprite.y === y);
-  
+
   // Don't reset collisions inside stop() if we're in the same position
   Studio.stop({
     'spriteIndex': opts.spriteIndex,
@@ -20611,7 +20626,7 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/es_es/common":48,"../../locale/es_es/studio":49,"../base":4,"../canvg/StackBlur.js":8,"../canvg/canvg.js":9,"../canvg/rgbcolor.js":10,"../canvg/svg_todataurl":11,"../codegen":12,"../dom":14,"../feedback.js":15,"../skins":21,"../templates/page.html":40,"../utils":46,"../xml":47,"./api":22,"./blocks":23,"./collidable":24,"./constants":25,"./controls.html":26,"./extraControlRows.html":27,"./projectile":30,"./visualization.html":33}],33:[function(require,module,exports){
+},{"../../locale/es_es/common":48,"../../locale/es_es/studio":49,"../base":4,"../canvg/StackBlur.js":7,"../canvg/canvg.js":8,"../canvg/rgbcolor.js":9,"../canvg/svg_todataurl":10,"../codegen":11,"../dom":13,"../skins":21,"../templates/page.html":40,"../utils":46,"../xml":47,"./api":22,"./blocks":23,"./collidable":24,"./constants":25,"./controls.html":26,"./extraControlRows.html":27,"./projectile":30,"./visualization.html":33}],33:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){

@@ -3,7 +3,7 @@ id-ID:
   select_language: Silahkan pilih bahasa Anda
   computer_science: Ilmu komputer
   computer_science_edweek: Minggu pendidikan ilmu komputer
-  csedweek_dates: 9-15 Desember 2013
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> Hour of Code</a> akan datang. Memanggil semua guru dan penyelenggara, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> rencanakan Hour of Code Anda</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400"> Apakah Anda seorang guru komputer? Lihat sumber CSEdWeek lain</a>'
   n_have_learned_an_hoc: '<h1>#</h1><h3>telah mencoba</h3><h2>Jam Kode</h2>'
@@ -323,6 +323,7 @@ id-ID:
   carousel_heading_robots: Belajar pemrogaman bersama robot-robot
   carousel_heading_ide: Sarana yang populer di kalangan guru
   educator_notes: Catatan pendidik
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Lebih banyak sumber daya bagi guru dan pendidik
   participants: peserta
   teachers_notes: Catatan Guru

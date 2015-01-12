@@ -12,18 +12,24 @@ module.exports = {
       description: "Expected solution",
       missingBlocks: [],
       xml: '<xml><block type="flappy_whenClick" deletable="false"><next><block type="flappy_flap"></block></next></block></xml>',
-      // TODO (brent) - customValidator only gets used by levelTests. levelTests
-      // only called if we have an expected defined. that means right now this
-      // function never gets called
-      customValidator: function () {
-        return studioAppSingleton.enableShowCode === false && studioAppSingleton.enableShowBlockCount === false;
-      }
     },
     {
       description: "missing flap block",
+      expected: {
+        result: false
+      },
       missingBlocks: [
         {'test': 'flap', 'type': 'flappy_flap'}
       ],
+      runBeforeClick: function (assert) {
+        assert(studioAppSingleton.enableShowCode === false);
+        assert(studioAppSingleton.enableShowBlockCount === false);
+        
+        // manually complete rather than wait for timeout
+        setTimeout(function () {
+          Flappy.onPuzzleComplete();
+        }, 1);
+      },
       xml: '<xml><block type="flappy_whenClick" deletable="false"></block></xml>'
     }
   ]

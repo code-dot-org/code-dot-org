@@ -3,7 +3,7 @@
   select_language: Veuillez sélectionner votre langue
   computer_science: Informatique
   computer_science_edweek: Semaine de l'éducation des sciences informatiques
-  csedweek_dates: 9-15 décembre 2013
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: 'L'' <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Heure de Code</a> approche. Appel à tous les enseignants et
     les organisateurs à <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -401,6 +401,7 @@
   carousel_heading_robots: Apprenez à programmer avec des robots
   carousel_heading_ide: Plates-formes populaires parmi les enseignants
   educator_notes: Notes de l'éducateur
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Plus de ressources pour enseignants et éducateurs
   participants: participants
   teachers_notes: Notes de l'enseignant

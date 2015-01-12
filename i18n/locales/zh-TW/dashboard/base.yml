@@ -247,7 +247,7 @@ zh:
     followers:
       section: 班别：
       stages: '要顯示的階段:'
-      show_past: 'Show student activity (%{bullet_html}) in the past:'
+      show_past: '顯示之前的學生活動 (%{bullet_html})：'
       levels_key: Levels key
       perfect: 完美完成
       completed: 完成了，但是用到太多程式積木
@@ -267,12 +267,12 @@ zh:
       confirm_remove: 你確定要刪除這個學生嗎？
       help_reassign: 要將你的學生分成不同班級，請選取要指派到新班級的學生
       help_register: Instead of making you spend a lot of time individually importing student data, you can set up your class quickly by asking them to signup. Your students will need to choose usernames and passwords, but they WILL NOT be required to provide an email address. If a student forgets their password, you will be able to reset it for them.
-      register: Ask your students to register themselves
+      register: 請學生自行註冊
       vist: 要求你的學生去參觀
       section_code: '並輸入他們的班級代碼:'
       first_please: '首先，請 %{add_section}'
       for: 為
-      enter: 'enter:'
+      enter: '輸入:'
     sections:
       add: 增加班級
       manage: 管理班級
@@ -299,10 +299,10 @@ zh:
     email_resend_confirm: 重新發送確認指令
     new_password_hint: （如果你不想變更它就保留空白）
     current_password_hint: （我們需要您現在的密碼以確認您的更改）
-    cancel:
-      title: 取消我的帳戶
-      hint: 不開心嗎？
-      button: 取消我的帳戶
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: 已完成
     tried: 已試過
@@ -312,12 +312,12 @@ zh:
     classroom_activity: 不用電腦的活動
   home:
     title: 程式工作室
-    all_courses: Overview of Courses 1, 2, and 3
+    all_courses: 課程 1, 2, 及 3 導論
     lesson_plans: 課程計畫
     signin_message: '已經註冊了? %{link}'
     student_reg_link: 學生登入
     teacher_reg_link: 教師登入
-    signin_directions: 'Use an account to track progress.<br/> Teachers, track your entire class.'
+    signin_directions: '使用帳戶來追蹤進度。 <br/>教師，追蹤您的整個班級。'
     teacher_dashboard: 瀏覽進度表
     teacher_student_count_one: '您有 %{count} 位學生.'
     teacher_student_count: '您有 %{count} 位學生.'
@@ -340,8 +340,8 @@ zh:
     test_videos_help: Test our new video player at your school
     try_beta_courses: 新功能！K 5 學生們請嘗試我們的 Beta 測試版課程。
     use_as_teacher: 使用這網站當一名教師
-    heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
-    heading_elementary: '<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>'
+    heading_hoc2014: '<h2>一小時的程式設計課程</h2><h1>對所有年齡</h1>'
+    heading_elementary: '<h2>20 小時課程</h2><h1>初學者(所有年齡)</h1>'
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
     heading_legacy: '<h2>Our general course for</h2><h1>All Ages</h1>'
     your_gallery: Gallery

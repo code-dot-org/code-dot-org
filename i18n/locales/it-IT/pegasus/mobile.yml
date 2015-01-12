@@ -3,7 +3,7 @@ it-IT:
   select_language: Seleziona per favore la tua lingua
   computer_science: Informatica
   computer_science_edweek: "Settimana di Educazione all'Informatica"
-  csedweek_dates: 9-15 dicembre 2013
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: |-
     L'<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Ora del Codice</a> è in arrivo. Insegnanti ed educatori, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">programmate la vostra Ora del Codice</a>
   csedweek_banner_teachers: |-
@@ -107,9 +107,9 @@ it-IT:
   students_and_lines: "%{students} studenti hanno svolto l'Ora del Codice e scritto %{lines} linee di codice."
   start_hoc: "Inizia l'Ora del Codice adesso"
   contact_form_topic_press: "Stampa/media (appuntamento per un'intervista o per un intervento)"
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
-  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
-  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
+  stats_michael: '"Non ho <b>mai e poi mai</b> visto i miei studenti così entusiasti di imparare." - Michael Clark, Insegnante'
+  stats_nina: '"Ogni giorno sempre lo stesso risultato &mdash; il 100% di attenzione."-Nina Nichols Peery, Insegnante'
+  stats_student: '"Sapevo che questa era una occasione <b>irripetibile</b>."-Mariana Alzate, 5a Elementare'
   studiobar_title: "Esplora l'<a href='http://studio.code.org'>Officina del Codice</a>"
   studiobar_elementary_title: Scuola Primaria
   studiobar_elementary_body: I nostri tre nuovi corsi, specifici per la Scuola Primaria
@@ -123,8 +123,8 @@ it-IT:
   studiobar_frozen_body: Crea un meraviglioso paesaggio invernale con Anna ed Elsa
   studiobar_donate_title: Sostienici
   studiobar_donate_body: Per ogni dollaro che dai un bambino ha la possibilità di imparare
-  studiobar_shop_title: Shop
-  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
+  studiobar_shop_title: Acquista
+  studiobar_shop_body: Rompete gli stereotipi. Indossate con orgoglio il nostro logo.
   contact_form_topic_student: Io sono uno studente
   contact_form_topic_parent: Io sono un genitore
   contact_form_topic_teacher: Io sono un insegnante
@@ -205,8 +205,8 @@ it-IT:
   dashboard_action_delete_yes: Sì
   dashboard_action_delete_no: 'No'
   dashboard_action_confirm: Elimina?
-  dashboard_action_remove: Remove
-  dashboard_action_remove_confirm: Remove?
+  dashboard_action_remove: Elimina
+  dashboard_action_remove_confirm: Eliminare?
   dashboard_action_done: Fatto
   dashboard_action_required: obbligatorio
   dashboard_navigation_home_page: "Cruscotto di Controllo dell'insegnante"
@@ -328,6 +328,7 @@ it-IT:
   carousel_heading_robots: Impara a programmare giocando con un robot
   carousel_heading_ide: Piattaforme didattiche popolari tra gli insegnanti
   educator_notes: Note per gli insegnanti
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Ulteriori risorse per insegnanti ed educatori in generale
   participants: partecipanti
   teachers_notes: Note per gli insegnanti

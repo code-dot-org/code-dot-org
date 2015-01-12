@@ -51,7 +51,7 @@
         om je nieuwe adres te bevestigen.
       updated: Je account is bijgewerkt.
     sessions:
-      signed_in: Je bent ingelogd.
+      signed_in: ''
       signed_out: Je bent uitgelogd.
     unlocks:
       send_instructions: Binnen een paar minuten krijg je een email met uitleg over

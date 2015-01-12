@@ -48,7 +48,7 @@
         course2:
           The Maze: 미로 퍼즐
           Suzi: 수지
-          The Artist: 예술가 퍼즐
+          The Artist: The Artist
           Artist Debugging: 예술가 디버깅
           Bounce: 바운스
           'Studio: Create a Story': 'Play Lab: 스토리 만들기'
@@ -89,7 +89,7 @@
         course3:
           The Maze: 미로 퍼즐
           'Studio: Create a Story': 'Play Lab: 스토리 만들기'
-          The Artist: 예술가 퍼즐
+          The Artist: The Artist
           title: 코스3
           Artist Functions: 예술가 함수
           Artist For Loops: 예술가 반복
@@ -115,7 +115,7 @@
             보다 복잡한 문제들에 대해서 다양한 방법들로 사용하게 됩니다. 학생들이 이 코스를 완료하고나면 인터랙티브 스토리와 게임을 만들고
             공유할 수 있게 됩니다. K4-5(초등4-5학년) 학생들에게 권장합니다.
           'Studio: Create a Game': 'Play Lab: 게임 만들기'
-          Maze: 미로 퍼즐
+          Maze: Maze
           Artist: 예술가
           'Artist: Functions': '예술가: 함수'
           'Bee: Functions': '꿀벌: 함수'

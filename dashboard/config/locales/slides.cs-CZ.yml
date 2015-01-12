@@ -43,8 +43,8 @@
           políčko směrem, kam je právě natočen.
       11:
         image: notes/hoc1_11.jpg
-        text: Pro provedení více než jedné akce můžeš dát na pracovní plochu několik
-          bloků a spojit je dohromady. Ptáček se jimi bude řídit od shora dolů.
+        text: To do more than one action, you can drag many blocks to your workspace
+          and attach them together. The bird will do the commands from top to bottom.
       12:
         image: notes/hoc1_12.jpg
         text: Pokud spustíš program a chceš ho opravit a zkusit znovu, klikni na tlačítko
@@ -213,23 +213,23 @@
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: Ahoj, moje jméno je Saloni. Programování mi pomáhá řešit problémy v
-          lékařství. Naučím vás používat blok "pokud-jinak". Vypadá podobně jako blok
-          "pokud", ale má navíc ještě část na konci, která říká, co se stane "jinak".
+        text: Hi, my name is Saloni. I use computer science to help solve problems
+          in health and medicine. Let's learn about the "if else" block. It looks
+          like the "if" block, but it has an extra part at the end that says "else".
       2:
         image: notes/hoc5_2.jpg
-        text: 'Když vložím blok "posunout vpřed" do místa , které říká "dělej"a blok
-          "otočit vlevo" do místa, které říká "jinak", znamená to, že si zombie bude
-          vybírat ze dvou možností: POKUD je cesta vpřed, zombie půjde dopředu, JINAK
-          (cesta vpřed není), zombie se otočí doleva.'
+        text: If I put a "move forward" block in the spot where it says "do" and a
+          "turn left" block where it says "else" that means that the zombie will choose
+          between 2 options. IF there is a path ahead, the zombie will move forward,
+          and OTHERWISE (there isn't a path ahead), the zombie will turn left.
       3:
         image: notes/hoc5_3.jpg
-        text: Stejně jako blok "pokud", můžeme i bloky "pokud-jinak" vkládat do bloků
-          "opakovat", takže zombie se bude stále pohybovat a blok "pokud-jinak" ji
-          pomůže zkoušet, jestli není někde cesta, na kterou by mohla zabočit.
+        text: Just like the "if" block, we can put "if else" blocks inside a "repeat"
+          blocks so that the zombie keeps moving and the "if else" block will keep
+          checking if there's somewhere to turn.
       4:
         image: notes/hoc5_4.jpg
-        text: Teď dostaňte tyhle zombie tam, kam patří!
+        text: Now, get those zombies where they belong!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg

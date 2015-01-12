@@ -44,9 +44,8 @@
           satu ruang pada maze.
       11:
         image: notes/hoc1_11.jpg
-        text: Untuk melakukan lebih daripada satu gerakan, anda boleh seret (drag)
-          banyak blok kr ruang kerja anda dan sambungkan mereka bersama. Burung itu
-          akan melakukan arahan dari atas ke bawah.
+        text: To do more than one action, you can drag many blocks to your workspace
+          and attach them together. The bird will do the commands from top to bottom.
       12:
         image: notes/hoc1_12.jpg
         text: Jika anda menjalankan aturcara dan ingin betulkan dan cuba lagi, tekan
@@ -223,25 +222,23 @@
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: Hai, nama saya Saloni. Saya menggunakan sains komputer untuk membantu
-          menyelesaikan masalah dalam perubatan dan kesihatan. Mari belajar mengenai
-          blok "jika lain". ianya kelihat seperti blok "jika", tetapi ianya mempunyai
-          bahagian ekstra di penghujung yang menyatakan "lain".
+        text: Hi, my name is Saloni. I use computer science to help solve problems
+          in health and medicine. Let's learn about the "if else" block. It looks
+          like the "if" block, but it has an extra part at the end that says "else".
       2:
         image: notes/hoc5_2.jpg
-        text: Jika saya letakkan blok "maju kehadapan" di dalam tempat yang menyatakan
-          "buat" dan blok "pusing kiri" di tempat yang menyatakan "lain" maksudnya
-          zombie akan memlih antara 2 pilihan. JIKA ada lauan kehadapan, zombie akan
-          bergerak kehadapan, dan SEBALIKNYA (tiada laluan kehadapan), zombie akan
-          pusing ke kiri.
+        text: If I put a "move forward" block in the spot where it says "do" and a
+          "turn left" block where it says "else" that means that the zombie will choose
+          between 2 options. IF there is a path ahead, the zombie will move forward,
+          and OTHERWISE (there isn't a path ahead), the zombie will turn left.
       3:
         image: notes/hoc5_3.jpg
-        text: Seperti blok "jika", kita boleh masukkan blok "jika lain" ke dalam blok
-          "ulang" supaya zombie terus bergerak dan blok "jika lain" akan sentiasa
-          menyemak jika ada tempat untuk berpusing.
+        text: Just like the "if" block, we can put "if else" blocks inside a "repeat"
+          blocks so that the zombie keeps moving and the "if else" block will keep
+          checking if there's somewhere to turn.
       4:
         image: notes/hoc5_4.jpg
-        text: Sekarang, hantarkan zombie tersebut ke mana sepatutnya mereka pergi!
+        text: Now, get those zombies where they belong!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg

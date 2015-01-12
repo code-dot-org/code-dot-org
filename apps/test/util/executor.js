@@ -5,7 +5,7 @@ var jsdom = require('jsdom').jsdom;
 var xmldom = require('xmldom');
 var canvas = require('canvas');
 var testUtils = require('./testUtils');
-var msg = testUtils.requireWithGlobalsCheckSrcFolder('../locale/current/common', ['c', 'n', 'v', 'p', 's']);
+var msg = testUtils.requireWithGlobalsCheckBuildFolder('../locale/current/common', ['c', 'n', 'v', 'p', 's']);
 
 var buildDir = '../../build';
 

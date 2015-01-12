@@ -88,5 +88,6 @@
   "signup":"Зарегистрируйтесь на вводный курс",
   "hintHeader":"Подсказка:",
   "genericFeedback":"Посмотрите, что у вас получилось, и попытайтесь исправить вашу программу.",
+  "toggleBlocksErrorMsg":"You need to correct an error in your program before it can be shown as blocks.",
   "defaultTwitterText":"Проверить, что я сделал"
 }
