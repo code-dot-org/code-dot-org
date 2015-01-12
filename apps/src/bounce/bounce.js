@@ -459,11 +459,27 @@ var delegate = function(scope, func, data)
   };
 };
 
+/**
+ * We want to swallow exceptions when executing user generated code. This provides
+ * a single place to do so.
+ */
+Bounce.callUserGeneratedCode = function (fn) {
+  try {
+    fn.call(Bounce, studioAppSingleton, api);
+  } catch (e) {
+    // swallow error. should we also log this somewhere?
+    if (console) {
+      console.log(e);
+    }
+  }
+};
+
+
 Bounce.onTick = function() {
   Bounce.tickCount++;
 
   if (Bounce.tickCount === 1) {
-    try { Bounce.whenGameStarts(studioAppSingleton, api); } catch (e) { }
+    Bounce.callUserGeneratedCode(Bounce.whenGameStarts);
   }
 
   // Run key event handlers for any keys that are down:
@@ -472,16 +488,16 @@ Bounce.onTick = function() {
         Bounce.keyState[Keycodes[key]] == "keydown") {
       switch (Keycodes[key]) {
         case Keycodes.LEFT:
-          try { Bounce.whenLeft(studioAppSingleton, api); } catch (e) { }
+          Bounce.callUserGeneratedCode(Bounce.whenLeft);
           break;
         case Keycodes.UP:
-          try { Bounce.whenUp(studioAppSingleton, api); } catch (e) { }
+          Bounce.callUserGeneratedCode(Bounce.whenUp);
           break;
         case Keycodes.RIGHT:
-          try { Bounce.whenRight(studioAppSingleton, api); } catch (e) { }
+          Bounce.callUserGeneratedCode(Bounce.whenRight);
           break;
         case Keycodes.DOWN:
-          try { Bounce.whenDown(studioAppSingleton, api); } catch (e) { }
+          Bounce.callUserGeneratedCode(Bounce.whenDown);
           break;
       }
     }
@@ -492,16 +508,16 @@ Bounce.onTick = function() {
         Bounce.btnState[ArrowIds[btn]] == ButtonState.DOWN) {
       switch (ArrowIds[btn]) {
         case ArrowIds.LEFT:
-          try { Bounce.whenLeft(studioAppSingleton, api); } catch (e) { }
+          Bounce.callUserGeneratedCode(Bounce.whenLeft);
           break;
         case ArrowIds.UP:
-          try { Bounce.whenUp(studioAppSingleton, api); } catch (e) { }
+          Bounce.callUserGeneratedCode(Bounce.whenUp);
           break;
         case ArrowIds.RIGHT:
-          try { Bounce.whenRight(studioAppSingleton, api); } catch (e) { }
+          Bounce.callUserGeneratedCode(Bounce.whenRight);
           break;
         case ArrowIds.DOWN:
-          try { Bounce.whenDown(studioAppSingleton, api); } catch (e) { }
+          Bounce.callUserGeneratedCode(Bounce.whenDown);
           break;
       }
     }
@@ -510,16 +526,16 @@ Bounce.onTick = function() {
   for (var gesture in Bounce.gesturesObserved) {
     switch (gesture) {
       case 'left':
-        try { Bounce.whenLeft(studioAppSingleton, api); } catch (e) { }
+        Bounce.callUserGeneratedCode(Bounce.whenLeft);
         break;
       case 'up':
-        try { Bounce.whenUp(studioAppSingleton, api); } catch (e) { }
+        Bounce.callUserGeneratedCode(Bounce.whenUp);
         break;
       case 'right':
-        try { Bounce.whenRight(studioAppSingleton, api); } catch (e) { }
+        Bounce.callUserGeneratedCode(Bounce.whenRight);
         break;
       case 'down':
-        try { Bounce.whenDown(studioAppSingleton, api); } catch (e) { }
+        Bounce.callUserGeneratedCode(Bounce.whenDown);
         break;
     }
     if (0 === Bounce.gesturesObserved[gesture]--) {
@@ -547,14 +563,14 @@ Bounce.onTick = function() {
       if (wasYOK && wasXOK && !nowXOK) {
         //console.log("calling whenWallCollided for ball " + i +
         //" x=" + Bounce.ballX[i] + " y=" + Bounce.ballY[i]);
-        try { Bounce.whenWallCollided(studioAppSingleton, api); } catch (e) { }
+        Bounce.callUserGeneratedCode(Bounce.whenWallCollided);
       }
 
       if (wasXOK && wasYOK && !nowYOK) {
         if (Bounce.map[0][Math.round(Bounce.ballX[i])] & SquareType.GOAL) {
           //console.log("calling whenBallInGoal for ball " + i +
           //" x=" + Bounce.ballX[i] + " y=" + Bounce.ballY[i]);
-          try { Bounce.whenBallInGoal(studioAppSingleton, api); } catch (e) { }
+          Bounce.callUserGeneratedCode(Bounce.whenBallInGoal);
           Bounce.ballFlags[i] |= Bounce.BallFlags.IN_GOAL;
           timeoutList.setTimeout(
               delegate(this, Bounce.moveBallOffscreen, i),
@@ -565,7 +581,7 @@ Bounce.onTick = function() {
         } else {
           //console.log("calling whenWallCollided for ball " + i +
           //" x=" + Bounce.ballX[i] + " y=" + Bounce.ballY[i]);
-          try { Bounce.whenWallCollided(studioAppSingleton, api); } catch (e) { }
+          Bounce.callUserGeneratedCode(Bounce.whenWallCollided);
         }
       }
 
@@ -577,12 +593,12 @@ Bounce.onTick = function() {
         // paddle ball collision
         //console.log("calling whenPaddleCollided for ball " + i +
         //" x=" + Bounce.ballX[i] + " y=" + Bounce.ballY[i]);
-        try { Bounce.whenPaddleCollided(studioAppSingleton, api); } catch (e) { }
+        Bounce.callUserGeneratedCode(Bounce.whenPaddleCollided);
       } else if (wasYAboveBottom && !nowYAboveBottom) {
         // ball missed paddle
         //console.log("calling whenBallMissesPaddle for ball " + i +
         //" x=" + Bounce.ballX[i] + " y=" + Bounce.ballY[i]);
-        try { Bounce.whenBallMissesPaddle(studioAppSingleton, api); } catch (e) { }
+        Bounce.callUserGeneratedCode(Bounce.whenBallMissesPaddle);
         Bounce.ballFlags[i] |= Bounce.BallFlags.MISSED_PADDLE;
         timeoutList.setTimeout(
             delegate(this, Bounce.moveBallOffscreen, i),
