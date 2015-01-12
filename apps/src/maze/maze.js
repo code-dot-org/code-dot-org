@@ -228,12 +228,12 @@ function drawMap () {
   pegmanFadeoutAnimation.setAttribute('begin', 'indefinite');
   pegmanIcon.appendChild(pegmanFadeoutAnimation);
 
-  if (Maze.finish_ && (skin.goalIdle || skin.goal)) {
+  if (Maze.finish_ && skin.goalIdle) {
     // Add finish marker.
     var finishMarker = document.createElementNS(SVG_NS, 'image');
     finishMarker.setAttribute('id', 'finish');
     finishMarker.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-                                skin.goalIdle || skin.goal);
+                                skin.goalIdle);
     finishMarker.setAttribute('height', Maze.MARKER_HEIGHT);
     finishMarker.setAttribute('width', Maze.MARKER_WIDTH);
     svg.appendChild(finishMarker);
@@ -259,7 +259,7 @@ function drawMap () {
         obsIcon.setAttribute('height', Maze.MARKER_HEIGHT * skin.obstacleScale);
         obsIcon.setAttribute('width', Maze.MARKER_WIDTH * skin.obstacleScale);
         obsIcon.setAttributeNS(
-          'http://www.w3.org/1999/xlink', 'xlink:href', skin.obstacleIdle || skin.obstacle);
+          'http://www.w3.org/1999/xlink', 'xlink:href', skin.obstacleIdle);
         obsIcon.setAttribute('x',
                              Maze.SQUARE_SIZE * (x + 0.5) -
                              obsIcon.getAttribute('width') / 2);
@@ -783,7 +783,7 @@ StudioApp.reset = function(first) {
     finishIcon.setAttribute('y', Maze.SQUARE_SIZE * (Maze.finish_.y + 0.9) -
       finishIcon.getAttribute('height'));
     finishIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-      skin.goalIdle || skin.goal);
+      skin.goalIdle);
     finishIcon.setAttribute('visibility', 'visible');
   }
 
@@ -836,7 +836,7 @@ StudioApp.reset = function(first) {
       var obsIcon = document.getElementById('obstacle' + obsId);
       if (obsIcon) {
         obsIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-                               skin.obstacleIdle || skin.obstacle);
+                               skin.obstacleIdle);
       }
       ++obsId;
     }
@@ -1374,7 +1374,7 @@ function scheduleSheetedMovement(start, delta, numFrames, timePerFrame,
         skin.approachingGoalAnimation);
     } else {
       finishIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-        skin.goalIdle || skin.goal);
+        skin.goalIdle);
     }
   }
 }
