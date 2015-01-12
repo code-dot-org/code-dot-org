@@ -5738,7 +5738,7 @@ function RGBColor(color_string)
 },{}],10:[function(require,module,exports){
 /**
 	The missing SVG.toDataURL library for your SVG elements.
-	
+
 	Usage: SVGElement.toDataURL( type, { options } )
 
 	Returns: the data URL, except when using native PNG renderer (needs callback).
@@ -5753,7 +5753,7 @@ function RGBColor(color_string)
 			Callback function which is called when the data URL is ready.
 			This is only necessary when using native PNG renderer.
 			Default: undefined.
-		
+
 		[the rest of the options only apply when type="image/png" or type="image/jpeg"]
 
 		renderer: "native"|"canvg"
@@ -5779,9 +5779,11 @@ function RGBColor(color_string)
 
 SVGElement.prototype.toDataURL = function(type, options) {
 	var _svg = this;
-	
+
 	function debug(s) {
-		console.log("SVG.toDataURL:", s);
+		// We could find to a way to make this display depending on environment, but
+		// for now I think it's okay to just disable.
+		// console.log("SVG.toDataURL:", s);
 	}
 
 	function exportSVG() {
@@ -5800,12 +5802,12 @@ SVGElement.prototype.toDataURL = function(type, options) {
 		// s: SVG dom, which is the <svg> elemennt
 		function XMLSerializerForIE(s) {
 			var out = "";
-			
+
 			out += "<" + s.nodeName;
 			for (var n = 0; n < s.attributes.length; n++) {
 				out += " " + s.attributes[n].name + "=" + "'" + s.attributes[n].value + "'";
 			}
-			
+
 			if (s.hasChildNodes()) {
 				out += ">\n";
 
@@ -5820,7 +5822,7 @@ SVGElement.prototype.toDataURL = function(type, options) {
 			return out;
 		}
 
-		
+
 		if (window.XMLSerializer) {
 			debug("using standard XMLSerializer.serializeToString")
 			return (new XMLSerializer()).serializeToString(svg);
@@ -5828,7 +5830,7 @@ SVGElement.prototype.toDataURL = function(type, options) {
 			debug("using custom XMLSerializerForIE")
 			return XMLSerializerForIE(svg);
 		}
-	
+
 	}
 
 	function base64dataURLencode(s) {
@@ -5842,7 +5844,7 @@ SVGElement.prototype.toDataURL = function(type, options) {
 			debug("using custom base64 encoder");
 			b64 += Base64.encode(s);
 		}
-		
+
 		return b64;
 	}
 
@@ -5869,7 +5871,7 @@ SVGElement.prototype.toDataURL = function(type, options) {
 			if (options.callback) options.callback( png_dataurl );
 			else debug("WARNING: no callback set, so nothing happens.");
 		}
-		
+
 		svg_img.onerror = function() {
 			console.log(
 				"Can't export! Maybe your browser doesn't support " +
@@ -5894,9 +5896,9 @@ SVGElement.prototype.toDataURL = function(type, options) {
 		if (keepBB) var bb = _svg.getBBox();
 
 		// NOTE: this canvg call is synchronous and blocks (no it does not)
-		canvg(canvas, svg_xml, { 
+		canvg(canvas, svg_xml, {
 			ignoreMouse: true, ignoreAnimation: true,
-			offsetX: keepBB ? -bb.x : undefined, 
+			offsetX: keepBB ? -bb.x : undefined,
 			offsetY: keepBB ? -bb.y : undefined,
 			scaleWidth: keepBB ? bb.width+bb.x : undefined,
 			scaleHeight: keepBB ? bb.height+bb.y : undefined,
@@ -5904,7 +5906,7 @@ SVGElement.prototype.toDataURL = function(type, options) {
 				debug("exported image dimensions " + [canvas.width, canvas.height]);
 				var png_dataurl = canvas.toDataURL(type);
 				debug(type + " length: " + png_dataurl.length);
-	
+
 				if (options.callback) options.callback( png_dataurl );
 			}
 		});
@@ -5920,7 +5922,7 @@ SVGElement.prototype.toDataURL = function(type, options) {
 
 	if (options.keepNonSafe) debug("NOTE: keepNonSafe is NOT supported and will be ignored!");
 	if (options.keepOutsideViewport) debug("NOTE: keepOutsideViewport is only supported with canvg exporter.");
-	
+
 	switch (type) {
 		case "image/svg+xml":
 			return exportSVG();
