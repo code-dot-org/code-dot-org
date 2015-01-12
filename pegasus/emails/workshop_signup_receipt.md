@@ -7,6 +7,7 @@ litmus_tracking_id: "iujowffk"
 <%
   workshop_row = DB[:forms].first(id:form.parent_id)
   workshop = JSON.parse(workshop_row[:data]).merge(JSON.parse(workshop_row[:processed_data]))
+  cancel_link = "http://#{CDO.canonical_hostname('code.org')}/v2/forms/ProfessionalDevelopmentWorkshopSignup/#{form.secret}/status/cancelled"
 %>
 
 Thank you for signing up to attend a Code.org K-5 workshop.
@@ -22,6 +23,8 @@ Workshop details:
 - Workshop facilitator: <%= workshop['name_s'] %> - <%= workshop['email_s'] %>
 
 > <%= workshop['notes_s'] %>
+
+If you are unable to attend the workshop, please [cancel your registration]("{cancel_link}").
 
 <hr/>
 
