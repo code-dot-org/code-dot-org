@@ -1598,7 +1598,8 @@ Webapp.clearTimeout = function (opts) {
 };
 
 Webapp.createRecord = function (opts) {
-  var record = codegen.marshalInterpreterToNative(opts.record);
+  var record = codegen.marshalInterpreterToNative(Webapp.interpreter,
+      opts.record);
   FormStorage.createRecord(record,
       Webapp.handleCreateRecord.bind(this, opts.callback));
 };
@@ -1611,7 +1612,8 @@ Webapp.handleCreateRecord = function(interpreterCallback, record) {
 };
 
 Webapp.readRecords = function (opts) {
-  var searchParams = codegen.marshalInterpreterToNative(opts.searchParams);
+  var searchParams = codegen.marshalInterpreterToNative(Webapp.interpreter,
+      opts.searchParams);
   FormStorage.readRecords(
       searchParams,
       Webapp.handleReadRecords.bind(this, opts.callback));
