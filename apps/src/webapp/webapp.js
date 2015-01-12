@@ -426,9 +426,9 @@ Webapp.init = function(config) {
 
   Webapp.canvasScale = (window.devicePixelRatio > 1) ? window.devicePixelRatio : 1;
 
-  var showSlider = !config.hide_source && config.level.editCode;
-  var showDebugButtons = !config.hide_source && config.level.editCode;
-  var showDebugConsole = !config.hide_source && config.level.editCode;
+  var showSlider = !config.hideSource && config.level.editCode;
+  var showDebugButtons = !config.hideSource && config.level.editCode;
+  var showDebugConsole = !config.hideSource && config.level.editCode;
   var finishButtonFirstLine = _.isEmpty(level.softButtons) && !showSlider;
   var firstControlsRow = require('./controls.html')({
     assetUrl: StudioApp.assetUrl,
