@@ -187,7 +187,7 @@ Webapp.onTick = function() {
   queueOnTick();
 
   var atInitialBreakpoint = Webapp.paused && Webapp.nextStep === StepType.IN && Webapp.tickCount === 1;
-  var maxSpeed = getCurrentTickLength() === 0;
+  var atMaxSpeed = getCurrentTickLength() === 0;
   Webapp.seenEmptyGetCallbackThisTick = false;
 
   if (Webapp.paused) {
@@ -225,7 +225,7 @@ Webapp.onTick = function() {
     // function that also selects the code:
     var selectCodeFunc =
       (StudioApp.hideSource ||
-       (maxSpeed && !Webapp.paused && StudioApp.editor.currentlyUsingBlocks)) ?
+       (atMaxSpeed && !Webapp.paused && StudioApp.editor.currentlyUsingBlocks)) ?
             codegen.getUserCodeLine :
             codegen.selectCurrentCode;
 
@@ -236,11 +236,11 @@ Webapp.onTick = function() {
          (stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK) || unwindingAfterStep;
          stepsThisTick++) {
       if ((reachedBreak && !unwindingAfterStep) ||
-          (doneUserLine && !maxSpeed) ||
+          (doneUserLine && !atMaxSpeed) ||
           Webapp.seenEmptyGetCallbackThisTick) {
         // stop stepping the interpreter and wait until the next tick once we:
         // (1) reached a breakpoint and are done unwinding OR
-        // (2) completed a line of user code (while not running at maxSpeed) OR
+        // (2) completed a line of user code (while not running atMaxSpeed) OR
         // (3) have seen an empty event queue in nativeGetCallback (no events)
         break;
       }
@@ -373,8 +373,8 @@ Webapp.onTick = function() {
         return;
       }
     }
-    if (reachedBreak && maxSpeed) {
-      // If we were running at maxSpeed and just reached a breakpoint, the
+    if (reachedBreak && atMaxSpeed) {
+      // If we were running atMaxSpeed and just reached a breakpoint, the
       // code may not be selected in the editor, so do it now:
       codegen.selectCurrentCode(Webapp.interpreter,
                                 Webapp.cumulativeLength,
@@ -420,7 +420,7 @@ Webapp.init = function(config) {
   loadLevel();
 
   if (StudioApp.hideSource) {
-    // always run at maxSpeed if source is hidden
+    // always run at max speed if source is hidden
     config.level.sliderSpeed = 1.0;
   }
 
