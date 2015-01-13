@@ -1,9 +1,5 @@
 - @script ||= Script.twenty_hour_script
 
--# Temporarily comment out banner about locale not being supported.
--# if !support_primary_locale?
-  #warning-banner
-    = link_to "Non-English translations coming soon. Help us translate!", 'http://eepurl.com/Im_In'
 - if browser.cdo_unsupported?
   = render partial: 'layouts/unsupported_browser'
 - elsif browser.cdo_partially_supported?
@@ -29,12 +25,12 @@
               = render partial: 'shared/header_progress'
             - elsif @edit_blocks
               .header_level{style:'font-size: 250%; line-height: 125%;'} Editing #{@edit_blocks.humanize}
-          - if params[:controller] !~ /^sessions/ and not Rails.configuration.minimal_mode
-            .header_user
-              = render partial: 'shared/user_header'
-          - if !@script_level
-            %a.headerlink{href: code_org_root_path}
-              CODE.ORG
+    - if params[:controller] !~ /^sessions/ and not Rails.configuration.minimal_mode
+      .header_user
+        = render partial: 'shared/user_header'
+    - if !@script_level
+      %a.headerlink{href: code_org_root_path}
+        CODE.ORG
 
 .transparent_backdrop{style: 'display: none;'}
 - if @script_level
