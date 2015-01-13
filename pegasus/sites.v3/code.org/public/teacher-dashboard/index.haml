@@ -177,8 +177,9 @@ angular: teacherDashboard
                                 $routeParams.sectionid + '/' + $routeParams.studentid;
   }]);
 
-  app.controller('SectionDetailController', ['$scope', '$routeParams', '$window', '$q', 'sectionsService', 'studentsService',
-                                             function($scope, $routeParams, $window, $q, sectionsService, studentsService) {
+  app.controller('SectionDetailController', ['$scope', '$routeParams', '$window', '$q', '$timeout', 'sectionsService', 'studentsService',
+                                             function($scope, $routeParams, $window, $q, $timeout, sectionsService, studentsService) {
+
 
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
@@ -262,9 +263,15 @@ angular: teacherDashboard
 
           // find the last level attempted
           for (var l = student.levels.length - 1; l >= 0; l--) {
+            var delayedSetHighestLevel = function(student, l) {
+              return function() {
+                student.highest_level = l;
+                student.highest_level_in_stage = getLevelNumberInStage(l);
+              };
+            };
+
             if (student.levels[l]) {
-              student.highest_level = l;
-              student.highest_level_in_stage = getLevelNumberInStage(l);
+              $timeout(delayedSetHighestLevel(student, l), 500); // add a delay so we get animation
               break;
             }
           }
