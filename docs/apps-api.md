@@ -8,7 +8,9 @@ This document describes the API we provide to "apps." This API is used as the ba
 
 ## Storage Subsystem
 
-Storage for these APIs are linked to a storage identifier, rather than a user-identifier. For anonymous users, the storage-id is stored in a cookie. For logged-in users, the user-id is mapped to the storage-id. When an account is created, the ownership of the cooke storage-id is transferred to the new user account.
+Each application has a unique identifier (`app_id`). This is an opaque value established and returned by when an application is created. Apps are "owned" by a user so there is a mapping from `user_id` to `app_id`.
+
+User storage for these APIs are linked to a storage identifier, rather than a user-identifier. For anonymous users, the storage-id is stored in a cookie. For logged-in users, the user-id is mapped to the storage-id. When an account is created, the ownership of the cooke storage-id is transferred to the new user account.
 
 ## `SharedProperties` and `UserProperties`
 
