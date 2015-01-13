@@ -1403,7 +1403,8 @@ window.StudioApp = studioAppSingleton;
 // TODO (br-pair) : This is to expose methods we need in the global namespace
 // for testing purpose. Would be nice to eliminate this eventually.
 window.__TestInterface = {
-  loadBlocks: _.bind(studioAppSingleton.loadBlocks, studioAppSingleton)
+  loadBlocks: _.bind(studioAppSingleton.loadBlocks, studioAppSingleton),
+  arrangeBlockPosition: _.bind(studioAppSingleton.arrangeBlockPosition, studioAppSingleton)
 };
 
 var addReadyListener = require('./dom').addReadyListener;
@@ -3682,6 +3683,8 @@ FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
 };
 
 },{"./constants":8,"./templates/readonly.html":32}],12:[function(require,module,exports){
+var studioAppSingleton = require('../base');
+
 exports.FlapHeight = {
   VERY_SMALL: -6,
   SMALL: -8,
@@ -3720,68 +3723,68 @@ exports.random = function (values) {
 };
 
 exports.setScore = function (id, value) {
-  StudioApp.highlight(id);
+  studioAppSingleton.highlight(id);
   Flappy.playerScore = value;
   Flappy.displayScore();
 };
 
 exports.setGravity = function (id, value) {
-  StudioApp.highlight(id);
+  studioAppSingleton.highlight(id);
   Flappy.gravity = value;
 };
 
 exports.setGround = function (id, value) {
-  StudioApp.highlight(id);
+  studioAppSingleton.highlight(id);
   Flappy.setGround(value);
 };
 
 exports.setObstacle = function (id, value) {
-  StudioApp.highlight(id);
+  studioAppSingleton.highlight(id);
   Flappy.setObstacle(value);
 };
 
 exports.setPlayer = function (id, value) {
-  StudioApp.highlight(id);
+  studioAppSingleton.highlight(id);
   Flappy.setPlayer(value);
 };
 
 exports.setGapHeight = function (id, value) {
-  StudioApp.highlight(id);
+  studioAppSingleton.highlight(id);
   Flappy.setGapHeight(value);
 };
 
 exports.setBackground = function (id, value) {
-  StudioApp.highlight(id);
+  studioAppSingleton.highlight(id);
   Flappy.setBackground(value);
 };
 
 exports.setSpeed = function (id, value) {
-  StudioApp.highlight(id);
+  studioAppSingleton.highlight(id);
   Flappy.SPEED = value;
 };
 
 exports.playSound = function(id, soundName) {
-  StudioApp.highlight(id);
-  StudioApp.playAudio(soundName);
+  studioAppSingleton.highlight(id);
+  studioAppSingleton.playAudio(soundName);
 };
 
 exports.flap = function (id, amount) {
-  StudioApp.highlight(id);
+  studioAppSingleton.highlight(id);
   Flappy.flap(amount);
 };
 
 exports.endGame = function (id) {
-  StudioApp.highlight(id);
+  studioAppSingleton.highlight(id);
   Flappy.gameState = Flappy.GameStates.ENDING;
 };
 
 exports.incrementPlayerScore = function(id) {
-  StudioApp.highlight(id);
+  studioAppSingleton.highlight(id);
   Flappy.playerScore++;
   Flappy.displayScore();
 };
 
-},{}],13:[function(require,module,exports){
+},{"../base":4}],13:[function(require,module,exports){
 /**
  * Blockly App: Flappy
  *
@@ -3795,6 +3798,7 @@ var commonMsg = require('../../locale/bg_bg/common');
 var blockUtils = require('../block_utils');
 var utils = require('../utils');
 var _ = utils.getLodash();
+var studioAppSingleton = require('../base');
 
 var FLAPPY_VALUE = '"flappy"';
 var RANDOM_VALUE = 'random';
@@ -3973,7 +3977,7 @@ exports.install = function(blockly, blockInstallOptions) {
     if (soundValue === RANDOM_VALUE) {
       return;
     }
-    StudioApp.playAudio(utils.stripQuotes(soundValue));
+    studioAppSingleton.playAudio(utils.stripQuotes(soundValue));
   }
 
   blockly.Blocks.flappy_playSound = {
@@ -4426,7 +4430,7 @@ exports.install = function(blockly, blockInstallOptions) {
   delete blockly.Blocks.procedures_ifreturn;
 };
 
-},{"../../locale/bg_bg/common":39,"../../locale/bg_bg/flappy":40,"../block_utils":5,"../utils":37}],14:[function(require,module,exports){
+},{"../../locale/bg_bg/common":39,"../../locale/bg_bg/flappy":40,"../base":4,"../block_utils":5,"../utils":37}],14:[function(require,module,exports){
 module.exports = {
   WORKSPACE_BUFFER: 20,
   WORKSPACE_COL_WIDTH: 210,
@@ -4467,7 +4471,7 @@ return buf.join('');
 
 'use strict';
 
-var StudioApp = require('../base');
+var studioAppSingleton = require('../base');
 var commonMsg = require('../../locale/bg_bg/common');
 var flappyMsg = require('../../locale/bg_bg/flappy');
 var skins = require('../skins');
@@ -4477,6 +4481,9 @@ var page = require('../templates/page.html');
 var dom = require('../dom');
 var constants = require('./constants');
 var utils = require('../utils');
+
+var ResultType = studioAppSingleton.ResultType;
+var TestResults = studioAppSingleton.TestResults;
 
 /**
  * Create a namespace for the application.
@@ -4510,7 +4517,7 @@ var stepSpeed;
 var infoText;
 
 //TODO: Make configurable.
-StudioApp.CHECK_FOR_EMPTY_BLOCKS = true;
+studioAppSingleton.CHECK_FOR_EMPTY_BLOCKS = true;
 
 var randomObstacleHeight = function () {
   var min = Flappy.MIN_OBSTACLE_HEIGHT;
@@ -4519,7 +4526,7 @@ var randomObstacleHeight = function () {
 };
 
 //The number of blocks to show as feedback.
-StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
+studioAppSingleton.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
 // Default Scalings
 Flappy.scale = {
@@ -4789,6 +4796,22 @@ Flappy.activeTicks = function () {
   return (Flappy.tickCount - Flappy.firstActiveTick);
 };
 
+/**
+ * We want to swallow exceptions when executing user generated code. This provides
+ * a single place to do so.
+ */
+Flappy.callUserGeneratedCode = function (fn) {
+  try {
+    fn.call(Flappy, studioAppSingleton, api);
+  } catch (e) {
+    // swallow error. should we also log this somewhere?
+    if (console) {
+      console.log(e);
+    }
+  }
+};
+
+
 Flappy.onTick = function() {
   var avatarWasAboveGround, avatarIsAboveGround;
 
@@ -4799,12 +4822,12 @@ Flappy.onTick = function() {
   Flappy.tickCount++;
 
   if (Flappy.tickCount === 1) {
-    try { Flappy.whenRunButton(StudioApp, api); } catch (e) { }
+    Flappy.callUserGeneratedCode(Flappy.whenRunButton);
   }
 
   // Check for click
   if (Flappy.clickPending && Flappy.gameState <= Flappy.GameStates.ACTIVE) {
-    try { Flappy.whenClick(StudioApp, api); } catch (e) { }
+    Flappy.callUserGeneratedCode(Flappy.whenClick);
     Flappy.clickPending = false;
   }
 
@@ -4835,13 +4858,13 @@ Flappy.onTick = function() {
       if (wasRightOfAvatar && !isRightOfAvatar) {
         if (Flappy.avatarY > obstacle.gapStart &&
           (Flappy.avatarY + AVATAR_HEIGHT < obstacle.gapStart + Flappy.GAP_SIZE)) {
-          try { Flappy.whenEnterObstacle(StudioApp, api); } catch (e) { }
+          Flappy.callUserGeneratedCode(Flappy.whenEnterObstacle);
         }
       }
 
       if (!obstacle.hitAvatar && checkForObstacleCollision(obstacle)) {
         obstacle.hitAvatar = true;
-        try {Flappy.whenCollideObstacle(StudioApp, api); } catch (e) { }
+        try {Flappy.whenCollideObstacle(studioAppSingleton, api); } catch (e) { }
       }
 
       // If obstacle moves off left side, repurpose as a new obstacle to our right
@@ -4856,7 +4879,7 @@ Flappy.onTick = function() {
     avatarIsAboveGround = (Flappy.avatarY + AVATAR_HEIGHT) <
       (Flappy.MAZE_HEIGHT - Flappy.GROUND_HEIGHT);
     if (avatarWasAboveGround && !avatarIsAboveGround) {
-      try { Flappy.whenCollideGround(StudioApp, api); } catch (e) { }
+      Flappy.callUserGeneratedCode(Flappy.whenCollideGround);
     }
 
     // update goal
@@ -4917,7 +4940,7 @@ Flappy.onMouseDown = function (e) {
     document.getElementById('instructions').setAttribute('visibility', 'hidden');
     document.getElementById('getready').setAttribute('visibility', 'hidden');
   } else if (Flappy.gameState === Flappy.GameStates.WAITING) {
-    StudioApp.runButtonClick();
+    studioAppSingleton.runButtonClick();
   }
 };
 /**
@@ -4933,11 +4956,11 @@ Flappy.init = function(config) {
   loadLevel();
 
   config.html = page({
-    assetUrl: StudioApp.assetUrl,
+    assetUrl: studioAppSingleton.assetUrl,
     data: {
-      localeDirection: StudioApp.localeDirection(),
+      localeDirection: studioAppSingleton.localeDirection(),
       visualization: require('./visualization.html')(),
-      controls: require('./controls.html')({assetUrl: StudioApp.assetUrl, shareable: level.shareable}),
+      controls: require('./controls.html')({assetUrl: studioAppSingleton.assetUrl, shareable: level.shareable}),
       blockUsed: undefined,
       idealBlockNumber: undefined,
       editCode: level.editCode,
@@ -4946,24 +4969,24 @@ Flappy.init = function(config) {
   });
 
   config.loadAudio = function() {
-    StudioApp.loadAudio(skin.winSound, 'win');
-    StudioApp.loadAudio(skin.startSound, 'start');
-    StudioApp.loadAudio(skin.failureSound, 'failure');
-    StudioApp.loadAudio(skin.obstacleSound, 'obstacle');
+    studioAppSingleton.loadAudio(skin.winSound, 'win');
+    studioAppSingleton.loadAudio(skin.startSound, 'start');
+    studioAppSingleton.loadAudio(skin.failureSound, 'failure');
+    studioAppSingleton.loadAudio(skin.obstacleSound, 'obstacle');
 
-    StudioApp.loadAudio(skin.dieSound, 'sfx_die');
-    StudioApp.loadAudio(skin.hitSound, 'sfx_hit');
-    StudioApp.loadAudio(skin.pointSound, 'sfx_point');
-    StudioApp.loadAudio(skin.swooshingSound, 'sfx_swooshing');
-    StudioApp.loadAudio(skin.wingSound, 'sfx_wing');
-    StudioApp.loadAudio(skin.winGoalSound, 'winGoal');
-    StudioApp.loadAudio(skin.jetSound, 'jet');
-    StudioApp.loadAudio(skin.jingleSound, 'jingle');
-    StudioApp.loadAudio(skin.crashSound, 'crash');
-    StudioApp.loadAudio(skin.laserSound, 'laser');
-    StudioApp.loadAudio(skin.splashSound, 'splash');
-    StudioApp.loadAudio(skin.wallSound, 'wall');
-    StudioApp.loadAudio(skin.wall0Sound, 'wall0');
+    studioAppSingleton.loadAudio(skin.dieSound, 'sfx_die');
+    studioAppSingleton.loadAudio(skin.hitSound, 'sfx_hit');
+    studioAppSingleton.loadAudio(skin.pointSound, 'sfx_point');
+    studioAppSingleton.loadAudio(skin.swooshingSound, 'sfx_swooshing');
+    studioAppSingleton.loadAudio(skin.wingSound, 'sfx_wing');
+    studioAppSingleton.loadAudio(skin.winGoalSound, 'winGoal');
+    studioAppSingleton.loadAudio(skin.jetSound, 'jet');
+    studioAppSingleton.loadAudio(skin.jingleSound, 'jingle');
+    studioAppSingleton.loadAudio(skin.crashSound, 'crash');
+    studioAppSingleton.loadAudio(skin.laserSound, 'laser');
+    studioAppSingleton.loadAudio(skin.splashSound, 'splash');
+    studioAppSingleton.loadAudio(skin.wallSound, 'wall');
+    studioAppSingleton.loadAudio(skin.wall0Sound, 'wall0');
   };
 
   config.afterInject = function() {
@@ -4989,7 +5012,7 @@ Flappy.init = function(config) {
 
   config.makeString = commonMsg.makeYourOwnFlappy();
   config.makeUrl = "http://code.org/flappy";
-  config.makeImage = StudioApp.assetUrl('media/flappy_promo.png');
+  config.makeImage = studioAppSingleton.assetUrl('media/flappy_promo.png');
 
   config.enableShowCode = false;
   config.enableShowBlockCount = false;
@@ -5024,7 +5047,7 @@ Flappy.init = function(config) {
     config.blockArrangement.flappy_whenClick.y = row2;
   }
 
-  StudioApp.init(config);
+  studioAppSingleton.init(config);
 
   var rightButton = document.getElementById('rightButton');
   dom.addClickTouchEvent(rightButton, Flappy.onPuzzleComplete);
@@ -5049,7 +5072,7 @@ Flappy.clearEventHandlersKillTickLoop = function() {
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
  */
-StudioApp.reset = function(first) {
+studioAppSingleton.reset = function(first) {
   var i;
   Flappy.clearEventHandlersKillTickLoop();
 
@@ -5103,7 +5126,7 @@ StudioApp.reset = function(first) {
  * Click the run button.  Start the program.
  */
 // XXX This is the only method used by the templates!
-StudioApp.runButtonClick = function() {
+studioAppSingleton.runButtonClick = function() {
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
   // Ensure that Reset button is at least as wide as Run button.
@@ -5114,10 +5137,10 @@ StudioApp.runButtonClick = function() {
   document.getElementById('instructions').setAttribute('visibility', 'visible');
   document.getElementById('getready').setAttribute('visibility', 'visible');
 
-  StudioApp.toggleRunReset('reset');
+  studioAppSingleton.toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
-  // StudioApp.reset(false);
-  StudioApp.attempts++;
+  // studioAppSingleton.reset(false);
+  studioAppSingleton.attempts++;
   Flappy.execute();
 
   if (level.freePlay) {
@@ -5132,11 +5155,11 @@ StudioApp.runButtonClick = function() {
 
 /**
  * App specific displayFeedback function that calls into
- * StudioApp.displayFeedback when appropriate
+ * studioAppSingleton.displayFeedback when appropriate
  */
 var displayFeedback = function() {
   if (!Flappy.waitingForReport) {
-    StudioApp.displayFeedback({
+    studioAppSingleton.displayFeedback({
       app: 'flappy', //XXX
       skin: skin.id,
       feedbackType: Flappy.testResults,
@@ -5167,14 +5190,14 @@ Flappy.onReportComplete = function(response) {
  */
 Flappy.execute = function() {
   var code;
-  Flappy.result = StudioApp.ResultType.UNSET;
-  Flappy.testResults = StudioApp.TestResults.NO_TESTS_RUN;
+  Flappy.result = ResultType.UNSET;
+  Flappy.testResults = TestResults.NO_TESTS_RUN;
   Flappy.waitingForReport = false;
   Flappy.response = null;
 
   if (level.editCode) {
     code = utils.generateCodeAliases(level.codeFunctions, 'Flappy');
-    code += StudioApp.editor.getValue();
+    code += studioAppSingleton.editor.getValue();
   }
 
   var codeClick = Blockly.Generator.blockSpaceToCode(
@@ -5182,7 +5205,7 @@ Flappy.execute = function() {
                                     'flappy_whenClick');
   var whenClickFunc = codegen.functionFromCode(
                                       codeClick, {
-                                      StudioApp: StudioApp,
+                                      StudioApp: studioAppSingleton,
                                       Flappy: api } );
 
   var codeCollideGround = Blockly.Generator.blockSpaceToCode(
@@ -5190,7 +5213,7 @@ Flappy.execute = function() {
                                     'flappy_whenCollideGround');
   var whenCollideGroundFunc = codegen.functionFromCode(
                                       codeCollideGround, {
-                                      StudioApp: StudioApp,
+                                      StudioApp: studioAppSingleton,
                                       Flappy: api } );
 
   var codeEnterObstacle = Blockly.Generator.blockSpaceToCode(
@@ -5198,7 +5221,7 @@ Flappy.execute = function() {
                                     'flappy_whenEnterObstacle');
   var whenEnterObstacleFunc = codegen.functionFromCode(
                                       codeEnterObstacle, {
-                                      StudioApp: StudioApp,
+                                      StudioApp: studioAppSingleton,
                                       Flappy: api } );
 
   var codeCollideObstacle = Blockly.Generator.blockSpaceToCode(
@@ -5206,7 +5229,7 @@ Flappy.execute = function() {
                                     'flappy_whenCollideObstacle');
   var whenCollideObstacleFunc = codegen.functionFromCode(
                                       codeCollideObstacle, {
-                                      StudioApp: StudioApp,
+                                      StudioApp: studioAppSingleton,
                                       Flappy: api } );
 
   var codeWhenRunButton = Blockly.Generator.blockSpaceToCode(
@@ -5214,13 +5237,13 @@ Flappy.execute = function() {
                                     'when_run');
   var whenRunButtonFunc = codegen.functionFromCode(
                                       codeWhenRunButton, {
-                                      StudioApp: StudioApp,
+                                      StudioApp: studioAppSingleton,
                                       Flappy: api } );
 
 
-  StudioApp.playAudio('start');
+  studioAppSingleton.playAudio('start');
 
-  // StudioApp.reset(false);
+  // studioAppSingleton.reset(false);
 
   // Set event handlers and start the onTick timer
   Flappy.whenClick = whenClickFunc;
@@ -5240,7 +5263,7 @@ Flappy.execute = function() {
 
 Flappy.onPuzzleComplete = function() {
   if (level.freePlay) {
-    Flappy.result = StudioApp.ResultType.SUCCESS;
+    Flappy.result = ResultType.SUCCESS;
   }
 
   // Stop everything on screen
@@ -5248,36 +5271,36 @@ Flappy.onPuzzleComplete = function() {
 
   // If we know they succeeded, mark levelComplete true
   // Note that we have not yet animated the succesful run
-  var levelComplete = (Flappy.result == StudioApp.ResultType.SUCCESS);
+  var levelComplete = (Flappy.result == ResultType.SUCCESS);
 
   // If the current level is a free play, always return the free play
   // result type
   if (level.freePlay) {
-    Flappy.testResults = StudioApp.TestResults.FREE_PLAY;
+    Flappy.testResults = TestResults.FREE_PLAY;
   } else {
-    Flappy.testResults = StudioApp.getTestResults(levelComplete);
+    Flappy.testResults = studioAppSingleton.getTestResults(levelComplete);
   }
 
   // Special case for Flappy level 1 where you have the right blocks, but you
   // don't flap to the goal.  Note: See pivotal item 66362504 for why we
   // check for both TOO_FEW_BLOCKS_FAIL and LEVEL_INCOMPLETE_FAIL here.
   if (level.id === "1" &&
-    (Flappy.testResults === StudioApp.TestResults.TOO_FEW_BLOCKS_FAIL ||
-     Flappy.testResults === StudioApp.TestResults.LEVEL_INCOMPLETE_FAIL)) {
+    (Flappy.testResults === TestResults.TOO_FEW_BLOCKS_FAIL ||
+     Flappy.testResults === TestResults.LEVEL_INCOMPLETE_FAIL)) {
     // Feedback message is found in level.other1StarError.
-    Flappy.testResults = StudioApp.TestResults.APP_SPECIFIC_FAIL;
+    Flappy.testResults = TestResults.APP_SPECIFIC_FAIL;
   }
 
-  if (Flappy.testResults >= StudioApp.TestResults.FREE_PLAY) {
-    StudioApp.playAudio('win');
+  if (Flappy.testResults >= TestResults.FREE_PLAY) {
+    studioAppSingleton.playAudio('win');
   } else {
-    StudioApp.playAudio('failure');
+    studioAppSingleton.playAudio('failure');
   }
 
   if (level.editCode) {
     Flappy.testResults = levelComplete ?
-      StudioApp.TestResults.ALL_PASS :
-      StudioApp.TestResults.TOO_FEW_BLOCKS_FAIL;
+      TestResults.ALL_PASS :
+      TestResults.TOO_FEW_BLOCKS_FAIL;
   }
 
   var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
@@ -5286,10 +5309,10 @@ Flappy.onPuzzleComplete = function() {
   Flappy.waitingForReport = true;
 
   // Report result to server.
-  StudioApp.report({
+  studioAppSingleton.report({
                      app: 'flappy',
                      level: level.id,
-                     result: Flappy.result === StudioApp.ResultType.SUCCESS,
+                     result: Flappy.result === ResultType.SUCCESS,
                      testResult: Flappy.testResults,
                      program: encodeURIComponent(textBlocks),
                      onComplete: Flappy.onReportComplete
@@ -5434,13 +5457,13 @@ var checkTickLimit = function() {
 var checkFinished = function () {
   // if we have a succcess condition and have accomplished it, we're done and successful
   if (level.goal && level.goal.successCondition && level.goal.successCondition()) {
-    Flappy.result = StudioApp.ResultType.SUCCESS;
+    Flappy.result = ResultType.SUCCESS;
     return true;
   }
 
   // if we have a failure condition, and it's been reached, we're done and failed
   if (level.goal && level.goal.failureCondition && level.goal.failureCondition()) {
-    Flappy.result = StudioApp.ResultType.FAILURE;
+    Flappy.result = ResultType.FAILURE;
     return true;
   }
 
@@ -6025,6 +6048,10 @@ module.exports.k1_9 = {
 },{"../../locale/bg_bg/flappy":40,"../block_utils":5,"../utils":37,"./constants":14}],18:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
+// TODO (br-pair): We're doing this so that other apps can still have
+// in the global namespace, while ensuring that we don't. Ultimately nobody
+// should have it, and we can remove this.
+window.StudioApp = undefined;
 window.Flappy = require('./flappy');
 if (typeof global !== 'undefined') {
   global.Flappy = window.Flappy;
