@@ -1,5 +1,5 @@
 var testUtils = require('../../util/testUtils');
-var studioAppSingleton = require(testUtils.buildPath('base'));
+var studioAppSingleton = require(testUtils.buildPath('StudioApp')).singleton;
 
 module.exports = {
   app: "flappy",
@@ -24,7 +24,7 @@ module.exports = {
       runBeforeClick: function (assert) {
         assert(studioAppSingleton.enableShowCode === false);
         assert(studioAppSingleton.enableShowBlockCount === false);
-        
+
         // manually complete rather than wait for timeout
         setTimeout(function () {
           Flappy.onPuzzleComplete();

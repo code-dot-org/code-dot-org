@@ -5,16 +5,11 @@ var HINT_REQUEST_PLACEMENT = {
   RIGHT: 2  // Hint request button is on right.
 };
 
-var KEYCODES = {
-  ENTER: 13,
-  SPACE: 32
-};
-
 /**
  * Bag of utility functions related to building and displaying feedback
  * to students.
  * @class
- * @param {StudioAppClass} studioApp A studioApp instance used to pull
+ * @param {StudioApp} studioApp A studioApp instance used to pull
  *   configuration and perform operations.
  */
 var FeedbackUtils = function (studioApp) {
@@ -33,7 +28,9 @@ var msg = require('../locale/current/common');
 var dom = require('./dom');
 var xml = require('./xml');
 var FeedbackBlocks = require('./feedbackBlocks');
-var TestResults = require('./constants').TestResults;
+var constants = require('./constants');
+var TestResults = constants.TestResults;
+var KeyCodes = constants.KeyCodes;
 
 /**
  *
@@ -659,7 +656,7 @@ FeedbackUtils.prototype.getShowCodeElement_ = function(options) {
 /**
  * Determines whether the user can proceed to the next level, based on the level feedback
  * @param {number} feedbackType A constant property of TestResults,
- *     typically produced by StudioAppClass.getTestResults().
+ *     typically produced by StudioApp.getTestResults().
  */
 FeedbackUtils.prototype.canContinueToNextLevel = function(feedbackType) {
   return (feedbackType === TestResults.ALL_PASS ||
@@ -830,7 +827,7 @@ FeedbackUtils.prototype.getCountableBlocks_ = function() {
 
 /**
  * Check to see if the user's code contains the required blocks for a level.
- * This never returns more than StudioAppClass.NUM_REQUIRED_BLOCKS_TO_FLAG.
+ * This never returns more than StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG.
  * @return {{blocksToDisplay:!Array, message:?string}} 'missingBlocks' is an
  * array of array of strings where each array of strings is a set of blocks that
  * at least one of them should be used. Each block is represented as the prefix
@@ -846,7 +843,7 @@ FeedbackUtils.prototype.getMissingRequiredBlocks_ = function () {
     var userBlocks = this.getUserBlocks_();
     // For each list of required blocks
     // Keep track of the number of the missing block lists. It should not be
-    // bigger than StudioAppClass.NUM_REQUIRED_BLOCKS_TO_FLAG
+    // bigger than StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG
     var missingBlockNum = 0;
     for (var i = 0;
          i < this.studioApp_.REQUIRED_BLOCKS.length &&
@@ -996,7 +993,7 @@ FeedbackUtils.prototype.createModalDialogWithIcon = function(options) {
 
   var btn = options.contentDiv.querySelector(options.defaultBtnSelector);
   var keydownHandler = function(e) {
-    if (e.keyCode == KEYCODES.ENTER || e.keyCode == KEYCODES.SPACE) {
+    if (e.keyCode == KeyCodes.ENTER || e.keyCode == KeyCodes.SPACE) {
       // Simulate a 'click':
       var event = new MouseEvent('click', {
           'view': window,

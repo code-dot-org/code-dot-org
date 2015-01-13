@@ -1,7 +1,7 @@
 var tiles = require('./tiles');
 var Direction = tiles.Direction;
 var SquareType = tiles.SquareType;
-var studioAppSingleton = require('../base');
+var studioAppSingleton = require('../StudioApp').singleton;
 
 exports.PaddleSpeed = {
   VERY_SLOW: 0.04,

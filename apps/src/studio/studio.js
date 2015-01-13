@@ -7,7 +7,7 @@
 
 'use strict';
 
-var studioAppSingleton = require('../base');
+var studioAppSingleton = require('../StudioApp').singleton;
 var commonMsg = require('../../locale/current/common');
 var studioMsg = require('../../locale/current/studio');
 var skins = require('../skins');
@@ -35,6 +35,7 @@ var Direction = constants.Direction;
 var NextTurn = constants.NextTurn;
 var SquareType = constants.SquareType;
 var Emotions = constants.Emotions;
+var KeyCodes = constants.KeyCodes;
 
 var ResultType = studioAppSingleton.ResultType;
 var TestResults = studioAppSingleton.TestResults;
@@ -60,13 +61,6 @@ var ArrowIds = {
   UP: 'upButton',
   RIGHT: 'rightButton',
   DOWN: 'downButton'
-};
-
-var Keycodes = {
-  LEFT: 37,
-  UP: 38,
-  RIGHT: 39,
-  DOWN: 40
 };
 
 var DRAG_DISTANCE_TO_MOVE_RATIO = 25;
@@ -591,20 +585,20 @@ Studio.onTick = function() {
   }
 
   // Run key event handlers for any keys that are down:
-  for (var key in Keycodes) {
-    if (Studio.keyState[Keycodes[key]] &&
-        Studio.keyState[Keycodes[key]] == "keydown") {
-      switch (Keycodes[key]) {
-        case Keycodes.LEFT:
+  for (var key in KeyCodes) {
+    if (Studio.keyState[KeyCodes[key]] &&
+        Studio.keyState[KeyCodes[key]] == "keydown") {
+      switch (KeyCodes[key]) {
+        case KeyCodes.LEFT:
           callHandler('when-left');
           break;
-        case Keycodes.UP:
+        case KeyCodes.UP:
           callHandler('when-up');
           break;
-        case Keycodes.RIGHT:
+        case KeyCodes.RIGHT:
           callHandler('when-right');
           break;
-        case Keycodes.DOWN:
+        case KeyCodes.DOWN:
           callHandler('when-down');
           break;
       }
@@ -831,7 +825,7 @@ Studio.onKey = function(e) {
 
   // If we are actively running our tick loop, suppress default event handling
   if (Studio.intervalId &&
-      e.keyCode >= Keycodes.LEFT && e.keyCode <= Keycodes.DOWN) {
+      e.keyCode >= KeyCodes.LEFT && e.keyCode <= KeyCodes.DOWN) {
     e.preventDefault();
   }
 };
