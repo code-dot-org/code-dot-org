@@ -2493,8 +2493,12 @@ FeedbackUtils.prototype.displayFeedback = function(options) {
   if (hadShareFailure) {
     trackEvent('Share', 'Failure', options.response.share_failure.type);
   }
-  var feedbackBlocks = new FeedbackBlocks(options, this.getMissingRequiredBlocks_(),
-    this.studioApp_);
+  var feedbackBlocks;
+  if (this.studioApp_.usingBlockly) {
+    feedbackBlocks = new FeedbackBlocks(options,
+                                        this.getMissingRequiredBlocks_(),
+                                        this.studioApp_);
+  }
   // feedbackMessage must be initialized after feedbackBlocks
   // because FeedbackBlocks can mutate options.response.hint.
   var feedbackMessage = this.getFeedbackMessage_(options);
@@ -2514,7 +2518,7 @@ FeedbackUtils.prototype.displayFeedback = function(options) {
     var trophies = this.getTrophiesElement_(options);
     feedback.appendChild(trophies);
   }
-  if (feedbackBlocks.div) {
+  if (feedbackBlocks && feedbackBlocks.div) {
     if (feedbackMessage && this.useSpecialFeedbackDesign_(options)) {
       // put the blocks iframe inside the feedbackMessage for this special case:
       feedbackMessage.appendChild(feedbackBlocks.div);
@@ -2610,7 +2614,7 @@ FeedbackUtils.prototype.displayFeedback = function(options) {
     // the feedback blocks into the correct location if needed.
     var feedbackBlocksParent = null;
     var feedbackBlocksNextSib = null;
-    if (feedbackBlocks.div) {
+    if (feedbackBlocks && feedbackBlocks.div) {
       feedbackBlocksParent = feedbackBlocks.div.parentNode;
       feedbackBlocksNextSib = feedbackBlocks.div.nextSibling;
       feedbackBlocksParent.removeChild(feedbackBlocks.div);
@@ -2626,7 +2630,7 @@ FeedbackUtils.prototype.displayFeedback = function(options) {
       hintRequestButton.parentNode.removeChild(hintRequestButton);
 
       // Restore feedback blocks, if present.
-      if (feedbackBlocks.div && feedbackBlocksParent) {
+      if (feedbackBlocks && feedbackBlocks.div && feedbackBlocksParent) {
         feedbackBlocksParent.insertBefore(feedbackBlocks.div, feedbackBlocksNextSib);
         feedbackBlocks.show();
       }
@@ -2676,7 +2680,7 @@ FeedbackUtils.prototype.displayFeedback = function(options) {
     backdrop: (options.app === 'flappy' ? 'static' : true)
   });
 
-  if (feedbackBlocks.div) {
+  if (feedbackBlocks && feedbackBlocks.div) {
     feedbackBlocks.show();
   }
 };
@@ -12959,12 +12963,12 @@ function drawMap () {
   pegmanFadeoutAnimation.setAttribute('begin', 'indefinite');
   pegmanIcon.appendChild(pegmanFadeoutAnimation);
 
-  if (Maze.finish_ && skin.goal) {
+  if (Maze.finish_ && skin.goalIdle) {
     // Add finish marker.
     var finishMarker = document.createElementNS(SVG_NS, 'image');
     finishMarker.setAttribute('id', 'finish');
     finishMarker.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-                                skin.goal);
+                                skin.goalIdle);
     finishMarker.setAttribute('height', Maze.MARKER_HEIGHT);
     finishMarker.setAttribute('width', Maze.MARKER_WIDTH);
     svg.appendChild(finishMarker);
@@ -12990,7 +12994,7 @@ function drawMap () {
         obsIcon.setAttribute('height', Maze.MARKER_HEIGHT * skin.obstacleScale);
         obsIcon.setAttribute('width', Maze.MARKER_WIDTH * skin.obstacleScale);
         obsIcon.setAttributeNS(
-          'http://www.w3.org/1999/xlink', 'xlink:href', skin.obstacle);
+          'http://www.w3.org/1999/xlink', 'xlink:href', skin.obstacleIdle);
         obsIcon.setAttribute('x',
                              Maze.SQUARE_SIZE * (x + 0.5) -
                              obsIcon.getAttribute('width') / 2);
@@ -13514,7 +13518,7 @@ StudioApp.reset = function(first) {
     finishIcon.setAttribute('y', Maze.SQUARE_SIZE * (Maze.finish_.y + 0.9) -
       finishIcon.getAttribute('height'));
     finishIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-      skin.goal);
+      skin.goalIdle);
     finishIcon.setAttribute('visibility', 'visible');
   }
 
@@ -13567,7 +13571,7 @@ StudioApp.reset = function(first) {
       var obsIcon = document.getElementById('obstacle' + obsId);
       if (obsIcon) {
         obsIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-                               skin.obstacle);
+                               skin.obstacleIdle);
       }
       ++obsId;
     }
@@ -14105,7 +14109,7 @@ function scheduleSheetedMovement(start, delta, numFrames, timePerFrame,
         skin.approachingGoalAnimation);
     } else {
       finishIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-        skin.goal);
+        skin.goalIdle);
     }
   }
 }
@@ -14730,6 +14734,7 @@ var CONFIGS = {
 
   bee: {
     obstacleAnimation: '',
+    obstacleIdle: 'obstacle.png',
     redFlower: 'redFlower.png',
     purpleFlower: 'purpleFlower.png',
     honey: 'honey.png',
@@ -14755,6 +14760,8 @@ var CONFIGS = {
   },
 
   farmer: {
+    obstacleIdle: 'obstacle.png',
+
     dirt: 'dirt.png',
     fillSound: 'fill.mp3',
     digSound: 'dig.mp3',
@@ -14769,6 +14776,9 @@ var CONFIGS = {
   },
 
   pvz: {
+    goalIdle: 'goalIdle.gif',
+    obstacleIdle: 'obstacleIdle.gif',
+
     goalAnimation: 'goal.gif',
     maze_forever: 'maze_forever.png',
 
@@ -14778,6 +14788,9 @@ var CONFIGS = {
   },
 
   birds: {
+    goalIdle: 'goalIdle.gif',
+    obstacleIdle: 'obstacle.png',
+
     goalAnimation: 'goal.gif',
     maze_forever: 'maze_forever.png',
     largerObstacleAnimationTiles: 'tiles-broken.png',
@@ -14799,6 +14812,9 @@ var CONFIGS = {
   },
 
  scrat: {
+    goalIdle: 'goal.png',
+    obstacleIdle: 'obstacle.png',
+
     goalAnimation: 'goal.png',
     maze_forever: 'maze_forever.png',
     largerObstacleAnimationTiles: 'tiles-broken.png',

@@ -322,7 +322,7 @@ em strong {
 
 .header.hide_on_mobile,
 .header-wrapper.hide_on_mobile {
-  @media screen and (max-device-width: 900px) {
+  @media screen and (max-device-height: 900px) and (max-device-width: 500px) {
     display: none;
   }
 }
