@@ -12963,12 +12963,12 @@ function drawMap () {
   pegmanFadeoutAnimation.setAttribute('begin', 'indefinite');
   pegmanIcon.appendChild(pegmanFadeoutAnimation);
 
-  if (Maze.finish_ && skin.goal) {
+  if (Maze.finish_ && skin.goalIdle) {
     // Add finish marker.
     var finishMarker = document.createElementNS(SVG_NS, 'image');
     finishMarker.setAttribute('id', 'finish');
     finishMarker.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-                                skin.goal);
+                                skin.goalIdle);
     finishMarker.setAttribute('height', Maze.MARKER_HEIGHT);
     finishMarker.setAttribute('width', Maze.MARKER_WIDTH);
     svg.appendChild(finishMarker);
@@ -12994,7 +12994,7 @@ function drawMap () {
         obsIcon.setAttribute('height', Maze.MARKER_HEIGHT * skin.obstacleScale);
         obsIcon.setAttribute('width', Maze.MARKER_WIDTH * skin.obstacleScale);
         obsIcon.setAttributeNS(
-          'http://www.w3.org/1999/xlink', 'xlink:href', skin.obstacle);
+          'http://www.w3.org/1999/xlink', 'xlink:href', skin.obstacleIdle);
         obsIcon.setAttribute('x',
                              Maze.SQUARE_SIZE * (x + 0.5) -
                              obsIcon.getAttribute('width') / 2);
@@ -13518,7 +13518,7 @@ StudioApp.reset = function(first) {
     finishIcon.setAttribute('y', Maze.SQUARE_SIZE * (Maze.finish_.y + 0.9) -
       finishIcon.getAttribute('height'));
     finishIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-      skin.goal);
+      skin.goalIdle);
     finishIcon.setAttribute('visibility', 'visible');
   }
 
@@ -13571,7 +13571,7 @@ StudioApp.reset = function(first) {
       var obsIcon = document.getElementById('obstacle' + obsId);
       if (obsIcon) {
         obsIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-                               skin.obstacle);
+                               skin.obstacleIdle);
       }
       ++obsId;
     }
@@ -14109,7 +14109,7 @@ function scheduleSheetedMovement(start, delta, numFrames, timePerFrame,
         skin.approachingGoalAnimation);
     } else {
       finishIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-        skin.goal);
+        skin.goalIdle);
     }
   }
 }
@@ -14734,6 +14734,7 @@ var CONFIGS = {
 
   bee: {
     obstacleAnimation: '',
+    obstacleIdle: 'obstacle.png',
     redFlower: 'redFlower.png',
     purpleFlower: 'purpleFlower.png',
     honey: 'honey.png',
@@ -14759,6 +14760,8 @@ var CONFIGS = {
   },
 
   farmer: {
+    obstacleIdle: 'obstacle.png',
+
     dirt: 'dirt.png',
     fillSound: 'fill.mp3',
     digSound: 'dig.mp3',
@@ -14773,6 +14776,9 @@ var CONFIGS = {
   },
 
   pvz: {
+    goalIdle: 'goalIdle.gif',
+    obstacleIdle: 'obstacleIdle.gif',
+
     goalAnimation: 'goal.gif',
     maze_forever: 'maze_forever.png',
 
@@ -14782,6 +14788,9 @@ var CONFIGS = {
   },
 
   birds: {
+    goalIdle: 'goalIdle.gif',
+    obstacleIdle: 'obstacle.png',
+
     goalAnimation: 'goal.gif',
     maze_forever: 'maze_forever.png',
     largerObstacleAnimationTiles: 'tiles-broken.png',
@@ -14803,6 +14812,9 @@ var CONFIGS = {
   },
 
  scrat: {
+    goalIdle: 'goal.png',
+    obstacleIdle: 'obstacle.png',
+
     goalAnimation: 'goal.png',
     maze_forever: 'maze_forever.png',
     largerObstacleAnimationTiles: 'tiles-broken.png',
