@@ -323,7 +323,7 @@ StudioAppClass.prototype.init = function(config) {
 
   this.configureDom_(config);
 
-  if (config.hide_source) {
+  if (config.hideSource) {
     this.handleHideSource_({
       containerId: config.containerId,
       embed: config.embed,
@@ -1141,7 +1141,7 @@ StudioAppClass.prototype.setConfigValues_ = function (config) {
   // if true, dont provide links to share on fb/twitter
   this.disableSocialShare = config.disableSocialShare;
   this.sendToPhone = config.sendToPhone;
-  this.noPadding = config.no_padding;
+  this.noPadding = config.noPadding;
 
   this.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
   this.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
@@ -1205,7 +1205,7 @@ StudioAppClass.prototype.configureDom_ = function (config) {
     // Enable param & var editing in levelbuilder, regardless of level setting
     config.level.disableParamEditing = false;
     config.level.disableVariableEditing = false;
-  } else if (!config.hide_source) {
+  } else if (!config.hideSource) {
     visualizationColumn.style.minHeight = this.MIN_WORKSPACE_HEIGHT + 'px';
   }
 
@@ -11305,9 +11305,9 @@ Webapp.init = function(config) {
 
   Webapp.canvasScale = (window.devicePixelRatio > 1) ? window.devicePixelRatio : 1;
 
-  var showSlider = !config.hide_source && config.level.editCode;
-  var showDebugButtons = !config.hide_source && config.level.editCode;
-  var showDebugConsole = !config.hide_source && config.level.editCode;
+  var showSlider = !config.hideSource && config.level.editCode;
+  var showDebugButtons = !config.hideSource && config.level.editCode;
+  var showDebugConsole = !config.hideSource && config.level.editCode;
   var finishButtonFirstLine = _.isEmpty(level.softButtons) && !showSlider;
   var firstControlsRow = require('./controls.html')({
     assetUrl: studioAppSingleton.assetUrl,
