@@ -120,6 +120,7 @@ namespace :seed do
       dsl_strings = {}
       # Parse each .[dsl] file and setup its model.
       DSLS_GLOB.each do |filename|
+        dsl_class = DSL_TYPES.detect{|type|filename.include?(".#{type.underscore}") }.try(:constantize)
         begin
           data, i18n = dsl_class.parse_file(filename)
           dsl_class.setup data
