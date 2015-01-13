@@ -344,7 +344,7 @@ Calc.execute = function() {
     var user = appState.userExpressions[COMPUTE_NAME];
     var target = appState.targetExpressions[COMPUTE_NAME];
 
-    if (!appState.result && !hasVariablesOrFunctions &&
+    if (!appState.result && !hasVariablesOrFunctions && user &&
         user.isEquivalentTo(target)) {
       appState.testResults = TestResults.APP_SPECIFIC_FAIL;
       appState.message = calcMsg.equivalentExpression();
@@ -378,7 +378,7 @@ Calc.execute = function() {
     _(appState.userExpressions).keys().sort().forEach(function (name, index) {
       var expression = appState.userExpressions[name];
       var expected = appState.targetExpressions[name] || expression;
-      var tokenList = expression.getTokenListDiff(expected);
+      var tokenList = expression ? expression.getTokenListDiff(expected) : [];
       if (name === COMPUTE_NAME) {
         name = null;
       }
