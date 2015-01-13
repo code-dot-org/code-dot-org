@@ -1,5 +1,4 @@
 var testUtils = require('../../util/testUtils');
-var testUtils = require('../../util/testUtils');
 var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
 
 

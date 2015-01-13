@@ -6,6 +6,7 @@
  */
 'use strict';
 
+var studioAppSingleton = require('../base');
 var msg = require('../../locale/current/studio');
 var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
 var commonMsg = require('../../locale/current/common');
@@ -579,7 +580,7 @@ exports.install = function(blockly, blockInstallOptions) {
       extraParams: (this.getTitleValue('SPRITE') || '0'),
       name: 'setSpritePosition'});
   };
- 
+
   blockly.Blocks.studio_setSpriteXY = {
     // Block for jumping a sprite to specific XY location.
     helpUrl: '',
@@ -617,7 +618,7 @@ exports.install = function(blockly, blockInstallOptions) {
       xParam + ', ' +
       yParam + ');\n';
   };
-    
+
 
   var SimpleMove = {
     DIRECTION_CONFIGS: {
@@ -925,7 +926,7 @@ exports.install = function(blockly, blockInstallOptions) {
     if (soundValue === RANDOM_VALUE) {
       return;
     }
-    StudioApp.playAudio(utils.stripQuotes(soundValue), {volume: 1.0});
+    studioAppSingleton.playAudio(utils.stripQuotes(soundValue), {volume: 1.0});
   }
 
   blockly.Blocks.studio_playSound = {
