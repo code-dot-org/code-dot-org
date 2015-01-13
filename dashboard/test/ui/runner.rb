@@ -205,41 +205,41 @@ Parallel.map($browsers, :in_processes => $options.parallel_limit) do |browser|
   arguments += " -t ~@pegasus_db_access" unless $options.pegasus_db_access
   arguments += " -t ~@dashboard_db_access" unless $options.dashboard_db_access
   arguments += " -S" # strict mode, so that we fail on undefined steps
-  arguments += " -f html -o #{browser['name']}_output.html" if $options.html
+  arguments += " -f html -o #{browser['name']}_output.html -f pretty" if $options.html # include the default (-f pretty) formatter so it does both
 
   # return all text after "Failing Scenarios"
   def output_synopsis(output_text)
     # example output:
-    # When I rotate to landscape
-    # # step_definitions/steps.rb:52
-    # Then I see "#video"
-    # # step_definitions/steps.rb:24 
-    # Then I see the first Flappy YouTube video with the correct parameters
-    # # step_definitions/flappy_steps.rb:29
-    # Failing Scenarios:
-    # cucumber features/sharepage.feature:8
-    # Scenario: Share a flappy game, visit the share page, and visit the workspace
-    # 87 scenarios (1 failed, 86 passed)
-    # 944 steps (1 failed, 2 skipped, 941 passed)
-    # 18m44.415s
+    # ["    And I press \"resetButton\"                                                                                                                                    # step_definitions/steps.rb:63\n",
+    #  "    Then element \"#runButton\" is visible                                                                                                                         # step_definitions/steps.rb:124\n",
+    #  "    And element \"#resetButton\" is hidden                                                                                                                         # step_definitions/steps.rb:130\n",
+    #  "\n",
+    #  "Failing Scenarios:\n",
+    #  "cucumber features/artist.feature:11 # Scenario: Loading the first level\n",
+    #  "\n",
+    #  "3 scenarios (1 failed, 2 skipped)\n",
+    #  "41 steps (1 failed, 38 skipped, 2 passed)\n",
+    #  "0m1.548s\n"]
 
     lines = output_text.lines
-    failing_scenarios = lines.rindex("Failing Scenarios:")
+
+    failing_scenarios = lines.rindex("Failing Scenarios:\n")
     if failing_scenarios
-      lines[failing_scenarios..-1].join("\n")
+      lines[failing_scenarios..-1].join
     else 
-      lines.last(3)
+      lines.last(3).join
     end
   end
 
   succeeded, output_text, test_duration = run_tests(arguments)
 
   if !succeeded && $options.auto_retry
+    # TODO:
+    # Use --format rerun --out features.txt to write out failing
+    # features. You can rerun them with cucumber @rerun.txt.
     HipChat.log "<pre>#{output_synopsis(output_text)}</pre>"
     HipChat.log "<b>dashboard</b> UI tests failed with <b>#{browser_name}</b> (#{format_duration(test_duration)}), retrying..."
 
-    p "<pre>#{output_synopsis(output_text)}</pre>"
-    p "<b>dashboard</b> UI tests failed with <b>#{browser_name}</b> (#{format_duration(test_duration)}), retrying..."
     succeeded, output_text, test_duration = run_tests(arguments)
   end
 
@@ -247,18 +247,17 @@ Parallel.map($browsers, :in_processes => $options.parallel_limit) do |browser|
     if succeeded
       log_success Time.now
       log_success browser.to_yaml
-      log_success return_value
+      log_success output_text
     else
       log_error Time.now
       log_error browser.to_yaml
-      log_error return_value
+      log_error output_text
       log_browser_error browser.to_yaml
     end
   end
 
   if succeeded
     HipChat.log "<b>dashboard</b> UI tests passed with <b>#{browser_name}</b> (#{format_duration(test_duration)})"
-    p "<b>dashboard</b> UI tests passed with <b>#{browser_name}</b> (#{format_duration(test_duration)})"
   else
     HipChat.log "<pre>#{output_synopsis(output_text)}</pre>"
     message = "<b>dashboard</b> UI tests failed with <b>#{browser_name}</b> (#{format_duration(test_duration)})"
@@ -267,7 +266,6 @@ Parallel.map($browsers, :in_processes => $options.parallel_limit) do |browser|
       link = "http://test.studio.code.org/ui_test/#{browser['name']}_output.html"
       message += " <a href='#{link}'>&#x2601; html output</a>"
     end
-    p message
     HipChat.log message, color:'red'
     HipChat.developers message, color:'red' if CDO.hip_chat_logging
   end
