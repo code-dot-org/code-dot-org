@@ -117,10 +117,10 @@ namespace :seed do
   # explicit execution of "seed:dsls"
   task dsls: :environment do
     DSLDefined.transaction do
-      dsl_strings = {}
       # Parse each .[dsl] file and setup its model.
       DSLS_GLOB.each do |filename|
         begin
+          dsl_strings = {}
           data, i18n = dsl_class.parse_file(filename)
           dsl_class.setup data
           dsl_strings.deep_merge! i18n
@@ -128,10 +128,6 @@ namespace :seed do
           puts "Error parsing #{filename}"
           raise
         end
-        dsl_class = DSL_TYPES.detect{|type|filename.include?(".#{type.underscore}") }.try(:constantize)
-        data, i18n = dsl_class.parse_file(filename)
-        dsl_class.setup data
-        dsl_strings.deep_merge! i18n
       end
       File.write('config/locales/dsls.en.yml', dsl_strings.to_yaml(options = {:line_width => -1}))
     end
