@@ -1,3 +1,3 @@
 version https://git-lfs.github.com/spec/v1
-oid sha256:46538ac683a7740efe7c8556c6e054ee7727710336ebdcdb4742a31d587164b4
-size 674984
+oid sha256:9cd2891cc030eab6190945b0b754a4a16ef9b1ab919295256e01f2cbc1b539ea
+size 675848

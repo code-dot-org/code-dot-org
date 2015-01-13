@@ -154,7 +154,7 @@ class AppsApi < Sinatra::Base
     dont_cache
     content_type :json
 
-    redirect "/v2/apps/#{app_id}/#{endpoint}/#{table_name}/#{value[:id]}", 201
+    redirect "/v2/apps/#{app_id}/#{endpoint}/#{table_name}/#{value[:id]}", 301
   end
 
   #
