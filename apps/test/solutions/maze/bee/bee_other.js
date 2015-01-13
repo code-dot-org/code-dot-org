@@ -1,7 +1,8 @@
-var TestResults = require('../../../../src/constants.js').TestResults;
-var blockUtils = require('../../../../src/block_utils');
-var TerminationValue = require('../../../../src/constants.js').BeeTerminationValue;
-
+var testUtils = require('../../../util/testUtils');
+var constants = require(testUtils.buildPath('constants.js'));
+var TerminationValue = constants.BeeTerminationValue;
+var blockUtils = require(testUtils.buildPath('block_utils'));
+var TestResults = constants.TestResults;
 
 // Honey goal of 1.  No specific hive goals
 var levelDef = {
