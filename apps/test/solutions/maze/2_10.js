@@ -6,7 +6,7 @@ var reqBlocks = function () {
   return testUtils.requireWithGlobalsCheckBuildFolder('maze/requiredBlocks.js');
 };
 
-var studioAppSingleton = require(testUtils.buildPath('StudioApp')).singleton;
+var studioApp = require(testUtils.buildPath('StudioApp')).singleton;
 
 module.exports = {
   app: "maze",
@@ -22,7 +22,7 @@ module.exports = {
       missingBlocks: [],
       xml: '<xml><block type="maze_forever"><statement name="DO"><block type="maze_moveForward"><next><block type="maze_moveForward"><next><block type="maze_turn"><title name="DIR">turnLeft</title></block></next></block></next></block></statement></block></xml>',
       customValidator: function () {
-        return studioAppSingleton.enableShowCode === true && studioAppSingleton.enableShowBlockCount === true;
+        return studioApp.enableShowCode === true && studioApp.enableShowBlockCount === true;
       }
     },
     {
