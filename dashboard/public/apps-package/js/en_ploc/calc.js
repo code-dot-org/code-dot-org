@@ -1407,13 +1407,13 @@ StudioApp.prototype.hasExtraTopBlocks = function () {
 var utils = require('./utils');
 var _ = utils.getLodash();
 var requiredBlockUtils = require('./required_block_utils');
-var studioAppSingleton = require('./StudioApp').singleton;
+var studioApp = require('./StudioApp').singleton;
 
 // TODO (br-pair) : This is to expose methods we need in the global namespace
 // for testing purpose. Would be nice to eliminate this eventually.
 window.__TestInterface = {
-  loadBlocks: _.bind(studioAppSingleton.loadBlocks, studioAppSingleton),
-  arrangeBlockPosition: _.bind(studioAppSingleton.arrangeBlockPosition, studioAppSingleton)
+  loadBlocks: _.bind(studioApp.loadBlocks, studioApp),
+  arrangeBlockPosition: _.bind(studioApp.arrangeBlockPosition, studioApp)
 };
 
 var addReadyListener = require('./dom').addReadyListener;
@@ -1439,11 +1439,11 @@ module.exports = function(app, levels, options) {
     options.level = level;
   }
 
-  studioAppSingleton.configure(options);
+  studioApp.configure(options);
 
-  options.skin = options.skinsModule.load(studioAppSingleton.assetUrl, options.skinId);
+  options.skin = options.skinsModule.load(studioApp.assetUrl, options.skinId);
 
-  if (studioAppSingleton.usingBlockly) {
+  if (studioApp.usingBlockly) {
     var blockInstallOptions = {
       skin: options.skin,
       isK1: options.level && options.level.isK1
@@ -1462,7 +1462,7 @@ module.exports = function(app, levels, options) {
       if (app.initReadonly) {
         app.initReadonly(options);
       } else {
-        studioAppSingleton.initReadonly(options);
+        studioApp.initReadonly(options);
       }
     } else {
       app.init(options);
@@ -1967,7 +1967,7 @@ var Calc = module.exports;
 /**
  * Create a namespace for the application.
  */
-var studioAppSingleton = require('../StudioApp').singleton;
+var studioApp = require('../StudioApp').singleton;
 var Calc = module.exports;
 var commonMsg = require('../../locale/en_ploc/common');
 var calcMsg = require('../../locale/en_ploc/calc');
@@ -1983,7 +1983,7 @@ var timeoutList = require('../timeoutList');
 
 var ExpressionNode = require('./expressionNode');
 
-var TestResults = studioAppSingleton.TestResults;
+var TestResults = studioApp.TestResults;
 
 var level;
 var skin;
@@ -1992,8 +1992,8 @@ var skin;
 // use zzz for sorting purposes (which is also hacky)
 var COMPUTE_NAME = 'zzz_compute';
 
-studioAppSingleton.setCheckForEmptyBlocks(false);
-studioAppSingleton.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
+studioApp.setCheckForEmptyBlocks(false);
+studioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
@@ -2046,12 +2046,12 @@ Calc.init = function(config) {
   config.enableShowCode = false;
 
   config.html = page({
-    assetUrl: studioAppSingleton.assetUrl,
+    assetUrl: studioApp.assetUrl,
     data: {
-      localeDirection: studioAppSingleton.localeDirection(),
+      localeDirection: studioApp.localeDirection(),
       visualization: require('./visualization.html')(),
       controls: require('./controls.html')({
-        assetUrl: studioAppSingleton.assetUrl
+        assetUrl: studioApp.assetUrl
       }),
       blockUsed : undefined,
       idealBlockNumber : undefined,
@@ -2061,9 +2061,9 @@ Calc.init = function(config) {
   });
 
   config.loadAudio = function() {
-    studioAppSingleton.loadAudio(skin.winSound, 'win');
-    studioAppSingleton.loadAudio(skin.startSound, 'start');
-    studioAppSingleton.loadAudio(skin.failureSound, 'failure');
+    studioApp.loadAudio(skin.winSound, 'win');
+    studioApp.loadAudio(skin.startSound, 'start');
+    studioApp.loadAudio(skin.failureSound, 'failure');
   };
 
   config.afterInject = function() {
@@ -2105,26 +2105,26 @@ Calc.init = function(config) {
     var visualizationColumn = document.getElementById('visualizationColumn');
     visualizationColumn.style.width = '400px';
 
-    // base's studioAppSingleton.resetButtonClick will be called first
+    // base's studioApp.resetButtonClick will be called first
     var resetButton = document.getElementById('resetButton');
     dom.addClickTouchEvent(resetButton, Calc.resetButtonClick);
   };
 
-  studioAppSingleton.init(config);
+  studioApp.init(config);
 };
 
 /**
  * Click the run button.  Start the program.
  */
-studioAppSingleton.runButtonClick = function() {
-  studioAppSingleton.toggleRunReset('reset');
+studioApp.runButtonClick = function() {
+  studioApp.toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
-  studioAppSingleton.attempts++;
+  studioApp.attempts++;
   Calc.execute();
 };
 
 /**
- * App specific reset button click logic.  studioAppSingleton.resetButtonClick will be
+ * App specific reset button click logic.  studioApp.resetButtonClick will be
  * called first.
  */
 Calc.resetButtonClick = function () {
@@ -2142,7 +2142,7 @@ Calc.resetButtonClick = function () {
 function evalCode (code) {
   try {
     codegen.evalWith(code, {
-      StudioApp: studioAppSingleton,
+      StudioApp: studioApp,
       Calc: api
     });
   } catch (e) {
@@ -2191,7 +2191,7 @@ function generateExpressionsFromBlockXml(blockXml) {
         "if we already have blocks in the workspace");
     }
     // Temporarily put the blocks into the workspace so that we can generate code
-    studioAppSingleton.loadBlocks(blockXml);
+    studioApp.loadBlocks(blockXml);
   }
 
   var obj = generateExpressionsFromTopBlocks();
@@ -2298,7 +2298,7 @@ Calc.execute = function() {
       appState.testResults = TestResults.APP_SPECIFIC_FAIL;
       appState.message = calcMsg.equivalentExpression();
     } else {
-      appState.testResults = studioAppSingleton.getTestResults(appState.result);
+      appState.testResults = studioApp.getTestResults(appState.result);
     }
   }
 
@@ -2316,7 +2316,7 @@ Calc.execute = function() {
     onComplete: onReportComplete
   };
 
-  studioAppSingleton.report(reportData);
+  studioApp.report(reportData);
 
 
   appState.animating = true;
@@ -2399,7 +2399,7 @@ function animateUserExpression (maxNumSteps) {
     } else if (currentDepth + 1 === maxNumSteps) {
       var deepest = current.getDeepestOperation();
       if (deepest) {
-        studioAppSingleton.highlight('block_id_' + deepest.blockId);
+        studioApp.highlight('block_id_' + deepest.blockId);
       }
       tokenList = current.getTokenList(true);
     } else {
@@ -2493,7 +2493,7 @@ function cloneNodeWithoutIds(elementId) {
 
 /**
  * App specific displayFeedback function that calls into
- * studioAppSingleton.displayFeedback when appropriate
+ * studioApp.displayFeedback when appropriate
  */
 var displayFeedback = function() {
   if (!appState.response || appState.animating) {
@@ -2520,7 +2520,7 @@ var displayFeedback = function() {
     options.message = appState.message;
   }
 
-  studioAppSingleton.displayFeedback(options);
+  studioApp.displayFeedback(options);
 };
 
 /**
@@ -4629,8 +4629,8 @@ var readonly = require('./templates/readonly.html');
 
 TestResults = constants.TestResults;
 
-// TODO (br-pair): can we not pass in the studioAppSingleton
-var FeedbackBlocks = function(options, missingRequiredBlocks, studioAppSingleton) {
+// TODO (br-pair): can we not pass in the studioApp
+var FeedbackBlocks = function(options, missingRequiredBlocks, studioApp) {
   // Check whether blocks are embedded in the hint returned from dashboard.
   // See below comment for format.
   var embeddedBlocks = options.response && options.response.hint &&
@@ -4671,13 +4671,13 @@ var FeedbackBlocks = function(options, missingRequiredBlocks, studioAppSingleton
   this.div = document.createElement('div');
   this.html = readonly({
     app: options.app,
-    assetUrl: studioAppSingleton.assetUrl,
+    assetUrl: studioApp.assetUrl,
     options: {
       readonly: true,
-      locale: studioAppSingleton.LOCALE,
-      localeDirection: studioAppSingleton.localeDirection(),
-      baseUrl: studioAppSingleton.BASE_URL,
-      cacheBust: studioAppSingleton.CACHE_BUST,
+      locale: studioApp.LOCALE,
+      localeDirection: studioApp.localeDirection(),
+      baseUrl: studioApp.BASE_URL,
+      cacheBust: studioApp.CACHE_BUST,
       skinId: options.skin,
       level: options.level,
       blocks: this.generateXMLForBlocks_(blocksToDisplay)

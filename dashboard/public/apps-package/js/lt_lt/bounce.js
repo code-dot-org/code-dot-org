@@ -1407,13 +1407,13 @@ StudioApp.prototype.hasExtraTopBlocks = function () {
 var utils = require('./utils');
 var _ = utils.getLodash();
 var requiredBlockUtils = require('./required_block_utils');
-var studioAppSingleton = require('./StudioApp').singleton;
+var studioApp = require('./StudioApp').singleton;
 
 // TODO (br-pair) : This is to expose methods we need in the global namespace
 // for testing purpose. Would be nice to eliminate this eventually.
 window.__TestInterface = {
-  loadBlocks: _.bind(studioAppSingleton.loadBlocks, studioAppSingleton),
-  arrangeBlockPosition: _.bind(studioAppSingleton.arrangeBlockPosition, studioAppSingleton)
+  loadBlocks: _.bind(studioApp.loadBlocks, studioApp),
+  arrangeBlockPosition: _.bind(studioApp.arrangeBlockPosition, studioApp)
 };
 
 var addReadyListener = require('./dom').addReadyListener;
@@ -1439,11 +1439,11 @@ module.exports = function(app, levels, options) {
     options.level = level;
   }
 
-  studioAppSingleton.configure(options);
+  studioApp.configure(options);
 
-  options.skin = options.skinsModule.load(studioAppSingleton.assetUrl, options.skinId);
+  options.skin = options.skinsModule.load(studioApp.assetUrl, options.skinId);
 
-  if (studioAppSingleton.usingBlockly) {
+  if (studioApp.usingBlockly) {
     var blockInstallOptions = {
       skin: options.skin,
       isK1: options.level && options.level.isK1
@@ -1462,7 +1462,7 @@ module.exports = function(app, levels, options) {
       if (app.initReadonly) {
         app.initReadonly(options);
       } else {
-        studioAppSingleton.initReadonly(options);
+        studioApp.initReadonly(options);
       }
     } else {
       app.init(options);
@@ -1843,7 +1843,7 @@ function installWhenRun(blockly, skin, isK1) {
 var tiles = require('./tiles');
 var Direction = tiles.Direction;
 var SquareType = tiles.SquareType;
-var studioAppSingleton = require('../StudioApp').singleton;
+var studioApp = require('../StudioApp').singleton;
 
 exports.PaddleSpeed = {
   VERY_SLOW: 0.04,
@@ -1867,7 +1867,7 @@ exports.random = function (values) {
 };
 
 exports.setBallSpeed = function (id, value) {
-  studioAppSingleton.highlight(id);
+  studioApp.highlight(id);
   Bounce.currentBallSpeed = value;
   for (var i = 0; i < Bounce.ballCount; i++) {
     Bounce.ballSpeed[i] = value;
@@ -1875,37 +1875,37 @@ exports.setBallSpeed = function (id, value) {
 };
 
 exports.setBackground = function (id, value) {
-  studioAppSingleton.highlight(id);
+  studioApp.highlight(id);
   Bounce.setBackground(value);
 };
 
 exports.setBall = function (id, value) {
-  studioAppSingleton.highlight(id);
+  studioApp.highlight(id);
   Bounce.setBall(value);
 };
 
 exports.setPaddle = function (id, value) {
-  studioAppSingleton.highlight(id);
+  studioApp.highlight(id);
   Bounce.setPaddle(value);
 };
 
 exports.setBackground = function (id, value) {
-  studioAppSingleton.highlight(id);
+  studioApp.highlight(id);
   Bounce.setBackground(value);
 };
 
 exports.setPaddleSpeed = function (id, value) {
-  studioAppSingleton.highlight(id);
+  studioApp.highlight(id);
   Bounce.paddleSpeed = value;
 };
 
 exports.playSound = function(id, soundName) {
-  studioAppSingleton.highlight(id);
-  studioAppSingleton.playAudio(soundName);
+  studioApp.highlight(id);
+  studioApp.playAudio(soundName);
 };
 
 exports.moveLeft = function(id) {
-  studioAppSingleton.highlight(id);
+  studioApp.highlight(id);
   Bounce.paddleX -= Bounce.paddleSpeed;
   if (Bounce.paddleX < 0) {
     Bounce.paddleX = 0;
@@ -1913,7 +1913,7 @@ exports.moveLeft = function(id) {
 };
 
 exports.moveRight = function(id) {
-  studioAppSingleton.highlight(id);
+  studioApp.highlight(id);
   Bounce.paddleX += Bounce.paddleSpeed;
   if (Bounce.paddleX > (Bounce.COLS - 1)) {
     Bounce.paddleX = Bounce.COLS - 1;
@@ -1921,7 +1921,7 @@ exports.moveRight = function(id) {
 };
 
 exports.moveUp = function(id) {
-  studioAppSingleton.highlight(id);
+  studioApp.highlight(id);
   Bounce.paddleY -= Bounce.paddleSpeed;
   if (Bounce.paddleY < 0) {
     Bounce.paddleY = 0;
@@ -1929,7 +1929,7 @@ exports.moveUp = function(id) {
 };
 
 exports.moveDown = function(id) {
-  studioAppSingleton.highlight(id);
+  studioApp.highlight(id);
   Bounce.paddleY += Bounce.paddleSpeed;
   if (Bounce.paddleY > (Bounce.ROWS - 1)) {
     Bounce.paddleY = Bounce.ROWS - 1;
@@ -1937,19 +1937,19 @@ exports.moveDown = function(id) {
 };
 
 exports.incrementOpponentScore = function(id) {
-  studioAppSingleton.highlight(id);
+  studioApp.highlight(id);
   Bounce.opponentScore++;
   Bounce.displayScore();
 };
 
 exports.incrementPlayerScore = function(id) {
-  studioAppSingleton.highlight(id);
+  studioApp.highlight(id);
   Bounce.playerScore++;
   Bounce.displayScore();
 };
 
 exports.launchBall = function(id) {
-  studioAppSingleton.highlight(id);
+  studioApp.highlight(id);
 
   // look for an "out of play" ball to re-launch:
   for (var i = 0; i < Bounce.ballCount; i++) {
@@ -1971,7 +1971,7 @@ exports.launchBall = function(id) {
 };
 
 exports.bounceBall = function(id) {
-  studioAppSingleton.highlight(id);
+  studioApp.highlight(id);
 
   var i;
   for (i = 0; i < Bounce.ballCount; i++) {
@@ -2526,7 +2526,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
 'use strict';
 
-var studioAppSingleton = require('../StudioApp').singleton;
+var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('../../locale/lt_lt/common');
 var bounceMsg = require('../../locale/lt_lt/bounce');
 var skins = require('../skins');
@@ -2543,8 +2543,8 @@ var KeyCodes = constants.KeyCodes;
 var Direction = tiles.Direction;
 var SquareType = tiles.SquareType;
 
-var ResultType = studioAppSingleton.ResultType;
-var TestResults = studioAppSingleton.TestResults;
+var ResultType = studioApp.ResultType;
+var TestResults = studioApp.TestResults;
 
 /**
  * Create a namespace for the application.
@@ -2584,7 +2584,7 @@ var skin;
 var stepSpeed;
 
 //TODO: Make configurable.
-studioAppSingleton.setCheckForEmptyBlocks(true);
+studioApp.setCheckForEmptyBlocks(true);
 
 var getTile = function(map, x, y) {
   if (map && map[y]) {
@@ -2593,7 +2593,7 @@ var getTile = function(map, x, y) {
 };
 
 //The number of blocks to show as feedback.
-studioAppSingleton.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
+studioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
 // Default Scalings
 Bounce.scale = {
@@ -2979,7 +2979,7 @@ var delegate = function(scope, func, data)
  */
 Bounce.callUserGeneratedCode = function (fn) {
   try {
-    fn.call(Bounce, studioAppSingleton, api);
+    fn.call(Bounce, studioApp, api);
   } catch (e) {
     // swallow error. should we also log this somewhere?
     if (console) {
@@ -3184,11 +3184,11 @@ Bounce.init = function(config) {
   window.addEventListener("keyup", Bounce.onKey, false);
 
   config.html = page({
-    assetUrl: studioAppSingleton.assetUrl,
+    assetUrl: studioApp.assetUrl,
     data: {
-      localeDirection: studioAppSingleton.localeDirection(),
+      localeDirection: studioApp.localeDirection(),
       visualization: require('./visualization.html')(),
-      controls: require('./controls.html')({assetUrl: studioAppSingleton.assetUrl}),
+      controls: require('./controls.html')({assetUrl: studioApp.assetUrl}),
       blockUsed: undefined,
       idealBlockNumber: undefined,
       editCode: level.editCode,
@@ -3197,23 +3197,23 @@ Bounce.init = function(config) {
   });
 
   config.loadAudio = function() {
-    studioAppSingleton.loadAudio(skin.winSound, 'win');
-    studioAppSingleton.loadAudio(skin.startSound, 'start');
-    studioAppSingleton.loadAudio(skin.ballStartSound, 'ballstart');
-    studioAppSingleton.loadAudio(skin.failureSound, 'failure');
-    studioAppSingleton.loadAudio(skin.rubberSound, 'rubber');
-    studioAppSingleton.loadAudio(skin.crunchSound, 'crunch');
-    studioAppSingleton.loadAudio(skin.flagSound, 'flag');
-    studioAppSingleton.loadAudio(skin.winPointSound, 'winpoint');
-    studioAppSingleton.loadAudio(skin.winPoint2Sound, 'winpoint2');
-    studioAppSingleton.loadAudio(skin.losePointSound, 'losepoint');
-    studioAppSingleton.loadAudio(skin.losePoint2Sound, 'losepoint2');
-    studioAppSingleton.loadAudio(skin.goal1Sound, 'goal1');
-    studioAppSingleton.loadAudio(skin.goal2Sound, 'goal2');
-    studioAppSingleton.loadAudio(skin.woodSound, 'wood');
-    studioAppSingleton.loadAudio(skin.retroSound, 'retro');
-    studioAppSingleton.loadAudio(skin.slapSound, 'slap');
-    studioAppSingleton.loadAudio(skin.hitSound, 'hit');
+    studioApp.loadAudio(skin.winSound, 'win');
+    studioApp.loadAudio(skin.startSound, 'start');
+    studioApp.loadAudio(skin.ballStartSound, 'ballstart');
+    studioApp.loadAudio(skin.failureSound, 'failure');
+    studioApp.loadAudio(skin.rubberSound, 'rubber');
+    studioApp.loadAudio(skin.crunchSound, 'crunch');
+    studioApp.loadAudio(skin.flagSound, 'flag');
+    studioApp.loadAudio(skin.winPointSound, 'winpoint');
+    studioApp.loadAudio(skin.winPoint2Sound, 'winpoint2');
+    studioApp.loadAudio(skin.losePointSound, 'losepoint');
+    studioApp.loadAudio(skin.losePoint2Sound, 'losepoint2');
+    studioApp.loadAudio(skin.goal1Sound, 'goal1');
+    studioApp.loadAudio(skin.goal2Sound, 'goal2');
+    studioApp.loadAudio(skin.woodSound, 'wood');
+    studioApp.loadAudio(skin.retroSound, 'retro');
+    studioApp.loadAudio(skin.slapSound, 'slap');
+    studioApp.loadAudio(skin.hitSound, 'hit');
   };
 
   config.afterInject = function() {
@@ -3297,12 +3297,12 @@ Bounce.init = function(config) {
 
   config.makeString = bounceMsg.makeYourOwn();
   config.makeUrl = "http://code.org/bounce";
-  config.makeImage = studioAppSingleton.assetUrl('media/promo.png');
+  config.makeImage = studioApp.assetUrl('media/promo.png');
 
   config.enableShowCode = false;
   config.enableShowBlockCount = false;
 
-  studioAppSingleton.init(config);
+  studioApp.init(config);
 
   var finishButton = document.getElementById('finishButton');
   dom.addClickTouchEvent(finishButton, Bounce.onPuzzleComplete);
@@ -3348,7 +3348,7 @@ Bounce.moveBallOffscreen = function(i) {
 Bounce.playSoundAndResetBall = function(i) {
   //console.log("playSoundAndResetBall called for ball " + i);
   Bounce.resetBall(i, { randomPosition: true } );
-  studioAppSingleton.playAudio('ballstart');
+  studioApp.playAudio('ballstart');
 };
 
 /**
@@ -3386,7 +3386,7 @@ Bounce.resetBall = function(i, options) {
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
  */
-studioAppSingleton.reset = function(first) {
+studioApp.reset = function(first) {
   var i;
   Bounce.clearEventHandlersKillTickLoop();
 
@@ -3510,20 +3510,20 @@ studioAppSingleton.reset = function(first) {
  * Click the run button.  Start the program.
  */
 // XXX This is the only method used by the templates!
-studioAppSingleton.runButtonClick = function() {
+studioApp.runButtonClick = function() {
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
   // Ensure that Reset button is at least as wide as Run button.
   if (!resetButton.style.minWidth) {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
-  studioAppSingleton.toggleRunReset('reset');
+  studioApp.toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
-  studioAppSingleton.reset(false);
-  studioAppSingleton.attempts++;
+  studioApp.reset(false);
+  studioApp.attempts++;
   Bounce.execute();
 
-  if (level.freePlay && !studioAppSingleton.hideSource) {
+  if (level.freePlay && !studioApp.hideSource) {
     var shareCell = document.getElementById('share-cell');
     shareCell.className = 'share-cell-enabled';
   }
@@ -3535,11 +3535,11 @@ studioAppSingleton.runButtonClick = function() {
 
 /**
  * App specific displayFeedback function that calls into
- * studioAppSingleton.displayFeedback when appropriate
+ * studioApp.displayFeedback when appropriate
  */
 var displayFeedback = function() {
   if (!Bounce.waitingForReport) {
-    studioAppSingleton.displayFeedback({
+    studioApp.displayFeedback({
       app: 'bounce', //XXX
       skin: skin.id,
       feedbackType: Bounce.testResults,
@@ -3577,7 +3577,7 @@ Bounce.execute = function() {
 
   if (level.editCode) {
     code = utils.generateCodeAliases(level.codeFunctions, 'Bounce');
-    code += studioAppSingleton.editor.getValue();
+    code += studioApp.editor.getValue();
   }
 
   var codeWallCollided = Blockly.Generator.blockSpaceToCode(
@@ -3585,7 +3585,7 @@ Bounce.execute = function() {
                                     'bounce_whenWallCollided');
   var whenWallCollidedFunc = codegen.functionFromCode(
                                      codeWallCollided, {
-                                      StudioApp: studioAppSingleton,
+                                      StudioApp: studioApp,
                                       Bounce: api } );
 
   var codeBallInGoal = Blockly.Generator.blockSpaceToCode(
@@ -3593,7 +3593,7 @@ Bounce.execute = function() {
                                     'bounce_whenBallInGoal');
   var whenBallInGoalFunc = codegen.functionFromCode(
                                      codeBallInGoal, {
-                                      StudioApp: studioAppSingleton,
+                                      StudioApp: studioApp,
                                       Bounce: api } );
 
   var codeBallMissesPaddle = Blockly.Generator.blockSpaceToCode(
@@ -3601,7 +3601,7 @@ Bounce.execute = function() {
                                     'bounce_whenBallMissesPaddle');
   var whenBallMissesPaddleFunc = codegen.functionFromCode(
                                      codeBallMissesPaddle, {
-                                      StudioApp: studioAppSingleton,
+                                      StudioApp: studioApp,
                                       Bounce: api } );
 
   var codePaddleCollided = Blockly.Generator.blockSpaceToCode(
@@ -3609,7 +3609,7 @@ Bounce.execute = function() {
                                     'bounce_whenPaddleCollided');
   var whenPaddleCollidedFunc = codegen.functionFromCode(
                                      codePaddleCollided, {
-                                      StudioApp: studioAppSingleton,
+                                      StudioApp: studioApp,
                                       Bounce: api } );
 
   var codeLeft = Blockly.Generator.blockSpaceToCode(
@@ -3617,7 +3617,7 @@ Bounce.execute = function() {
                                     'bounce_whenLeft');
   var whenLeftFunc = codegen.functionFromCode(
                                      codeLeft, {
-                                      StudioApp: studioAppSingleton,
+                                      StudioApp: studioApp,
                                       Bounce: api } );
 
   var codeRight = Blockly.Generator.blockSpaceToCode(
@@ -3625,7 +3625,7 @@ Bounce.execute = function() {
                                     'bounce_whenRight');
   var whenRightFunc = codegen.functionFromCode(
                                      codeRight, {
-                                      StudioApp: studioAppSingleton,
+                                      StudioApp: studioApp,
                                       Bounce: api } );
 
   var codeUp = Blockly.Generator.blockSpaceToCode(
@@ -3633,7 +3633,7 @@ Bounce.execute = function() {
                                     'bounce_whenUp');
   var whenUpFunc = codegen.functionFromCode(
                                      codeUp, {
-                                      StudioApp: studioAppSingleton,
+                                      StudioApp: studioApp,
                                       Bounce: api } );
 
   var codeDown = Blockly.Generator.blockSpaceToCode(
@@ -3641,7 +3641,7 @@ Bounce.execute = function() {
                                     'bounce_whenDown');
   var whenDownFunc = codegen.functionFromCode(
                                      codeDown, {
-                                      StudioApp: studioAppSingleton,
+                                      StudioApp: studioApp,
                                       Bounce: api } );
 
   var codeGameStarts = Blockly.Generator.blockSpaceToCode(
@@ -3649,12 +3649,12 @@ Bounce.execute = function() {
                                     'when_run');
   var whenGameStartsFunc = codegen.functionFromCode(
                                      codeGameStarts, {
-                                      StudioApp: studioAppSingleton,
+                                      StudioApp: studioApp,
                                       Bounce: api } );
 
-  studioAppSingleton.playAudio(Bounce.ballCount > 0 ? 'ballstart' : 'start');
+  studioApp.playAudio(Bounce.ballCount > 0 ? 'ballstart' : 'start');
 
-  studioAppSingleton.reset(false);
+  studioApp.reset(false);
 
   // Set event handlers and start the onTick timer
   Bounce.whenWallCollided = whenWallCollidedFunc;
@@ -3687,13 +3687,13 @@ Bounce.onPuzzleComplete = function() {
   if (level.freePlay) {
     Bounce.testResults = TestResults.FREE_PLAY;
   } else {
-    Bounce.testResults = studioAppSingleton.getTestResults(levelComplete);
+    Bounce.testResults = studioApp.getTestResults(levelComplete);
   }
 
   if (Bounce.testResults >= TestResults.FREE_PLAY) {
-    studioAppSingleton.playAudio('win');
+    studioApp.playAudio('win');
   } else {
-    studioAppSingleton.playAudio('failure');
+    studioApp.playAudio('failure');
   }
 
   if (level.editCode) {
@@ -3708,7 +3708,7 @@ Bounce.onPuzzleComplete = function() {
   Bounce.waitingForReport = true;
 
   // Report result to server.
-  studioAppSingleton.report({
+  studioApp.report({
                      app: 'bounce',
                      level: level.id,
                      result: Bounce.result === ResultType.SUCCESS,
@@ -3883,7 +3883,7 @@ Bounce.allFinishesComplete = function() {
     }
     if (playSound && finished != Bounce.paddleFinishCount) {
       // Play a sound unless we've hit the last flag
-      studioAppSingleton.playAudio('flag');
+      studioApp.playAudio('flag');
     }
     return (finished == Bounce.paddleFinishCount);
   }
@@ -6263,8 +6263,8 @@ var readonly = require('./templates/readonly.html');
 
 TestResults = constants.TestResults;
 
-// TODO (br-pair): can we not pass in the studioAppSingleton
-var FeedbackBlocks = function(options, missingRequiredBlocks, studioAppSingleton) {
+// TODO (br-pair): can we not pass in the studioApp
+var FeedbackBlocks = function(options, missingRequiredBlocks, studioApp) {
   // Check whether blocks are embedded in the hint returned from dashboard.
   // See below comment for format.
   var embeddedBlocks = options.response && options.response.hint &&
@@ -6305,13 +6305,13 @@ var FeedbackBlocks = function(options, missingRequiredBlocks, studioAppSingleton
   this.div = document.createElement('div');
   this.html = readonly({
     app: options.app,
-    assetUrl: studioAppSingleton.assetUrl,
+    assetUrl: studioApp.assetUrl,
     options: {
       readonly: true,
-      locale: studioAppSingleton.LOCALE,
-      localeDirection: studioAppSingleton.localeDirection(),
-      baseUrl: studioAppSingleton.BASE_URL,
-      cacheBust: studioAppSingleton.CACHE_BUST,
+      locale: studioApp.LOCALE,
+      localeDirection: studioApp.localeDirection(),
+      baseUrl: studioApp.BASE_URL,
+      cacheBust: studioApp.CACHE_BUST,
       skinId: options.skin,
       level: options.level,
       blocks: this.generateXMLForBlocks_(blocksToDisplay)
