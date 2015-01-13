@@ -1,7 +1,7 @@
 function sharedTable(app_id, table_name)
 {
   var object = {
-    api_base_url: "/v2/apps/" + app_id + "/tables/" + table_name,
+    api_base_url: "/v2/apps/" + app_id + "/shared-tables/" + table_name,
 
     all: function(callback) {
       $.ajax({

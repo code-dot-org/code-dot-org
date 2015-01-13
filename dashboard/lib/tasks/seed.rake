@@ -67,7 +67,7 @@ namespace :seed do
   # cronjob that detects changes to .multi files
   MULTIS_GLOB = Dir.glob('config/scripts/**/*.multi').sort.flatten
   file 'config/scripts/.multis_seeded' => MULTIS_GLOB do |t|
-    Rake::Task['seed:multis'].invoke
+    Rake::Task['seed:multdis'].invoke
     touch t.name
   end
 

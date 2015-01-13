@@ -2,9 +2,8 @@
 def create_storage_id_cookie
   storage_id = user_storage_ids_table.insert(user_id:nil)
 
-  # TODO: Encrypt the storage id in the cookie to protect it from being sequential/predicable
   response.set_cookie(storage_id_cookie_name, {
-    value:CGI.escape(storage_id.to_s),
+    value:CGI.escape(storage_encrypt_id(storage_id)),
     domain:".#{request.site}",
     path:'/v2/apps',
     expires:Time.now + (365 * 24 * 3600)
@@ -13,9 +12,38 @@ def create_storage_id_cookie
   storage_id
 end
 
+def storage_decrypt(encrypted)
+  decrypter = OpenSSL::Cipher::Cipher.new 'AES-128-CBC'
+  decrypter.decrypt
+  decrypter.pkcs5_keyivgen(CDO.apps_api_secret, '8 octets')
+  plain = decrypter.update(encrypted)
+  plain << decrypter.final
+end
+
+def storage_decrypt_id(encrypted)
+  ignore, id, ignore = storage_decrypt(encrypted).split(':')
+  id = id.to_i
+  raise ArgumentError, "`id` must be an integer > 0" unless id > 0
+  return id
+end
+
+def storage_encrypt(plain)
+  encrypter = OpenSSL::Cipher::Cipher.new('AES-128-CBC')
+  encrypter.encrypt
+  encrypter.pkcs5_keyivgen(CDO.apps_api_secret, '8 octets')
+  encrypted = encrypter.update(plain.to_s)
+  encrypted << encrypter.final
+end
+
+def storage_encrypt_id(id)
+  id = id.to_i
+  raise ArgumentError, "`id` must be an integer > 0" unless id > 0
+  storage_encrypt("#{SecureRandom.random_number(65536)}:#{id}:#{SecureRandom.random_number(65536)}")
+end
+
 def storage_id(endpoint)
-  return nil if ['properties', 'tables'].include?(endpoint)
-  raise ArgumentError, "Unknown endpoint: `#{endpoint}`" unless ['user-properties', 'user-tables'].include?(endpoint)
+  return nil if endpoint == 'shared'
+  raise ArgumentError, "Unknown endpoint: `#{endpoint}`" unless endpoint == 'user'
   @user_storage_id ||= storage_id_for_user || storage_id_from_cookie || create_storage_id_cookie
 end
 
@@ -54,8 +82,9 @@ def storage_id_for_user()
 end
 
 def storage_id_from_cookie()
-  # TODO: Decrypt an encrypted cookie to get the storage id (it's currently plaintext)
-  storage_id = CGI.unescape(request.cookies[storage_id_cookie_name].to_s).to_i
+  encrypted = CGI.unescape(request.cookies[storage_id_cookie_name].to_s)
+  return nil if encrypted.empty?
+  storage_id = storage_decrypt_id(encrypted)
   return nil if storage_id == 0
   storage_id
 end

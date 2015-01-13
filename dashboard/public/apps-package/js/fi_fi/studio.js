@@ -1407,13 +1407,13 @@ StudioApp.prototype.hasExtraTopBlocks = function () {
 var utils = require('./utils');
 var _ = utils.getLodash();
 var requiredBlockUtils = require('./required_block_utils');
-var studioAppSingleton = require('./StudioApp').singleton;
+var studioApp = require('./StudioApp').singleton;
 
 // TODO (br-pair) : This is to expose methods we need in the global namespace
 // for testing purpose. Would be nice to eliminate this eventually.
 window.__TestInterface = {
-  loadBlocks: _.bind(studioAppSingleton.loadBlocks, studioAppSingleton),
-  arrangeBlockPosition: _.bind(studioAppSingleton.arrangeBlockPosition, studioAppSingleton)
+  loadBlocks: _.bind(studioApp.loadBlocks, studioApp),
+  arrangeBlockPosition: _.bind(studioApp.arrangeBlockPosition, studioApp)
 };
 
 var addReadyListener = require('./dom').addReadyListener;
@@ -1439,11 +1439,11 @@ module.exports = function(app, levels, options) {
     options.level = level;
   }
 
-  studioAppSingleton.configure(options);
+  studioApp.configure(options);
 
-  options.skin = options.skinsModule.load(studioAppSingleton.assetUrl, options.skinId);
+  options.skin = options.skinsModule.load(studioApp.assetUrl, options.skinId);
 
-  if (studioAppSingleton.usingBlockly) {
+  if (studioApp.usingBlockly) {
     var blockInstallOptions = {
       skin: options.skin,
       isK1: options.level && options.level.isK1
@@ -1462,7 +1462,7 @@ module.exports = function(app, levels, options) {
       if (app.initReadonly) {
         app.initReadonly(options);
       } else {
-        studioAppSingleton.initReadonly(options);
+        studioApp.initReadonly(options);
       }
     } else {
       app.init(options);
@@ -7635,8 +7635,8 @@ var readonly = require('./templates/readonly.html');
 
 TestResults = constants.TestResults;
 
-// TODO (br-pair): can we not pass in the studioAppSingleton
-var FeedbackBlocks = function(options, missingRequiredBlocks, studioAppSingleton) {
+// TODO (br-pair): can we not pass in the studioApp
+var FeedbackBlocks = function(options, missingRequiredBlocks, studioApp) {
   // Check whether blocks are embedded in the hint returned from dashboard.
   // See below comment for format.
   var embeddedBlocks = options.response && options.response.hint &&
@@ -7677,13 +7677,13 @@ var FeedbackBlocks = function(options, missingRequiredBlocks, studioAppSingleton
   this.div = document.createElement('div');
   this.html = readonly({
     app: options.app,
-    assetUrl: studioAppSingleton.assetUrl,
+    assetUrl: studioApp.assetUrl,
     options: {
       readonly: true,
-      locale: studioAppSingleton.LOCALE,
-      localeDirection: studioAppSingleton.localeDirection(),
-      baseUrl: studioAppSingleton.BASE_URL,
-      cacheBust: studioAppSingleton.CACHE_BUST,
+      locale: studioApp.LOCALE,
+      localeDirection: studioApp.localeDirection(),
+      baseUrl: studioApp.BASE_URL,
+      cacheBust: studioApp.CACHE_BUST,
       skinId: options.skin,
       level: options.level,
       blocks: this.generateXMLForBlocks_(blocksToDisplay)
@@ -13905,7 +13905,7 @@ exports.attachEventHandler = function (id, eventName, func) {
  */
 'use strict';
 
-var studioAppSingleton = require('../StudioApp').singleton;
+var studioApp = require('../StudioApp').singleton;
 var msg = require('../../locale/fi_fi/studio');
 var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
 var commonMsg = require('../../locale/fi_fi/common');
@@ -14825,7 +14825,7 @@ exports.install = function(blockly, blockInstallOptions) {
     if (soundValue === RANDOM_VALUE) {
       return;
     }
-    studioAppSingleton.playAudio(utils.stripQuotes(soundValue), {volume: 1.0});
+    studioApp.playAudio(utils.stripQuotes(soundValue), {volume: 1.0});
   }
 
   blockly.Blocks.studio_playSound = {
@@ -17963,7 +17963,7 @@ exports.load = function(assetUrl, id) {
 
 'use strict';
 
-var studioAppSingleton = require('../StudioApp').singleton;
+var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('../../locale/fi_fi/common');
 var studioMsg = require('../../locale/fi_fi/studio');
 var skins = require('../skins');
@@ -17993,8 +17993,8 @@ var SquareType = constants.SquareType;
 var Emotions = constants.Emotions;
 var KeyCodes = constants.KeyCodes;
 
-var ResultType = studioAppSingleton.ResultType;
-var TestResults = studioAppSingleton.TestResults;
+var ResultType = studioApp.ResultType;
+var TestResults = studioApp.TestResults;
 
 var SVG_NS = "http://www.w3.org/2000/svg";
 
@@ -18049,10 +18049,10 @@ var skin;
 var stepSpeed;
 
 //TODO: Make configurable.
-studioAppSingleton.setCheckForEmptyBlocks(true);
+studioApp.setCheckForEmptyBlocks(true);
 
 //The number of blocks to show as feedback.
-studioAppSingleton.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
+studioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
 Studio.BLOCK_X_COORDINATE = 20;
 Studio.BLOCK_Y_COORDINATE = 20;
@@ -18476,14 +18476,14 @@ var setSvgText = function(opts) {
  */
 function callHandler (name, allowQueueExtension) {
   Studio.eventHandlers.forEach(function (handler) {
-    if (studioAppSingleton.usingBlockly) {
+    if (studioApp.usingBlockly) {
       // Note: we skip executing the code if we have not completed executing
       // the cmdQueue on this handler (checking for non-zero length)
       if (handler.name === name &&
           (allowQueueExtension || (0 === handler.cmdQueue.length))) {
         Studio.currentCmdQueue = handler.cmdQueue;
         try {
-          handler.func(studioAppSingleton, api, Studio.Globals);
+          handler.func(studioApp, api, Studio.Globals);
         } catch (e) {
           // Do nothing
         }
@@ -18513,7 +18513,7 @@ Studio.onTick = function() {
                                                   Studio.cumulativeLength,
                                                   Studio.userCodeStartOffset,
                                                   Studio.userCodeLength,
-                                                  studioAppSingleton.editor);
+                                                  studioApp.editor);
       try {
         Studio.interpreter.step();
         doneUserCodeStep = (-1 !== userCodeRow) &&
@@ -18855,7 +18855,7 @@ Studio.initSprites = function () {
     }
   }
 
-  if (studioAppSingleton.usingBlockly) {
+  if (studioApp.usingBlockly) {
     // Update the sprite count in the blocks:
     blocks.setSpriteCount(Blockly, Studio.spriteCount);
     blocks.setStartAvatars(Studio.startAvatars);
@@ -18887,7 +18887,7 @@ Studio.initReadonly = function(config) {
 
   Studio.initSprites();
 
-  studioAppSingleton.initReadonly(config);
+  studioApp.initReadonly(config);
 };
 
 /**
@@ -18899,7 +18899,7 @@ var arrangeStartBlocks = function (config) {
   var xml = parseXmlElement(config.level.startBlocks);
   var numUnplacedElementNodes = 0;
   // sort the blocks by visibility
-  var xmlChildNodes = studioAppSingleton.sortBlocksByVisibility(xml.childNodes);
+  var xmlChildNodes = studioApp.sortBlocksByVisibility(xml.childNodes);
   // do a first pass to count the nodes
   for (var x = 0, xmlChild; xmlChildNodes && x < xmlChildNodes.length; x++) {
     xmlChild = xmlChildNodes[x];
@@ -18949,18 +18949,18 @@ Studio.init = function(config) {
 
   var finishButtonFirstLine = _.isEmpty(level.softButtons);
   var firstControlsRow = require('./controls.html')({
-    assetUrl: studioAppSingleton.assetUrl,
+    assetUrl: studioApp.assetUrl,
     finishButton: finishButtonFirstLine
   });
   var extraControlsRow = require('./extraControlRows.html')({
-    assetUrl: studioAppSingleton.assetUrl,
+    assetUrl: studioApp.assetUrl,
     finishButton: !finishButtonFirstLine
   });
 
   config.html = page({
-    assetUrl: studioAppSingleton.assetUrl,
+    assetUrl: studioApp.assetUrl,
     data: {
-      localeDirection: studioAppSingleton.localeDirection(),
+      localeDirection: studioApp.localeDirection(),
       visualization: require('./visualization.html')(),
       controls: firstControlsRow,
       extraControlRows: extraControlsRow,
@@ -18972,22 +18972,22 @@ Studio.init = function(config) {
   });
 
   config.loadAudio = function() {
-    studioAppSingleton.loadAudio(skin.winSound, 'win');
-    studioAppSingleton.loadAudio(skin.startSound, 'start');
-    studioAppSingleton.loadAudio(skin.failureSound, 'failure');
-    studioAppSingleton.loadAudio(skin.rubberSound, 'rubber');
-    studioAppSingleton.loadAudio(skin.crunchSound, 'crunch');
-    studioAppSingleton.loadAudio(skin.flagSound, 'flag');
-    studioAppSingleton.loadAudio(skin.winPointSound, 'winpoint');
-    studioAppSingleton.loadAudio(skin.winPoint2Sound, 'winpoint2');
-    studioAppSingleton.loadAudio(skin.losePointSound, 'losepoint');
-    studioAppSingleton.loadAudio(skin.losePoint2Sound, 'losepoint2');
-    studioAppSingleton.loadAudio(skin.goal1Sound, 'goal1');
-    studioAppSingleton.loadAudio(skin.goal2Sound, 'goal2');
-    studioAppSingleton.loadAudio(skin.woodSound, 'wood');
-    studioAppSingleton.loadAudio(skin.retroSound, 'retro');
-    studioAppSingleton.loadAudio(skin.slapSound, 'slap');
-    studioAppSingleton.loadAudio(skin.hitSound, 'hit');
+    studioApp.loadAudio(skin.winSound, 'win');
+    studioApp.loadAudio(skin.startSound, 'start');
+    studioApp.loadAudio(skin.failureSound, 'failure');
+    studioApp.loadAudio(skin.rubberSound, 'rubber');
+    studioApp.loadAudio(skin.crunchSound, 'crunch');
+    studioApp.loadAudio(skin.flagSound, 'flag');
+    studioApp.loadAudio(skin.winPointSound, 'winpoint');
+    studioApp.loadAudio(skin.winPoint2Sound, 'winpoint2');
+    studioApp.loadAudio(skin.losePointSound, 'losepoint');
+    studioApp.loadAudio(skin.losePoint2Sound, 'losepoint2');
+    studioApp.loadAudio(skin.goal1Sound, 'goal1');
+    studioApp.loadAudio(skin.goal2Sound, 'goal2');
+    studioApp.loadAudio(skin.woodSound, 'wood');
+    studioApp.loadAudio(skin.retroSound, 'retro');
+    studioApp.loadAudio(skin.slapSound, 'slap');
+    studioApp.loadAudio(skin.hitSound, 'hit');
   };
 
   config.afterInject = function() {
@@ -19004,7 +19004,7 @@ Studio.init = function(config) {
     }
     document.addEventListener('mouseup', Studio.onMouseUp, false);
 
-    if (studioAppSingleton.usingBlockly) {
+    if (studioApp.usingBlockly) {
       /**
        * The richness of block colours, regardless of the hue.
        * MOOC blocks should be brighter (target audience is younger).
@@ -19019,7 +19019,7 @@ Studio.init = function(config) {
     drawMap();
   };
 
-  if (studioAppSingleton.usingBlockly && config.level.edit_blocks != 'toolbox_blocks') {
+  if (studioApp.usingBlockly && config.level.edit_blocks != 'toolbox_blocks') {
     arrangeStartBlocks(config);
   }
 
@@ -19030,15 +19030,15 @@ Studio.init = function(config) {
 
   config.makeString = studioMsg.makeYourOwn();
   config.makeUrl = "http://code.org/studio";
-  config.makeImage = studioAppSingleton.assetUrl('media/promo.png');
+  config.makeImage = studioApp.assetUrl('media/promo.png');
 
   // Disable "show code" button in feedback dialog when workspace is hidden
-  config.enableShowCode = !config.level.embed && studioAppSingleton.editCode;
+  config.enableShowCode = !config.level.embed && studioApp.editCode;
   config.varsInGlobals = true;
 
   Studio.initSprites();
 
-  studioAppSingleton.init(config);
+  studioApp.init(config);
 
   var finishButton = document.getElementById('finishButton');
   dom.addClickTouchEvent(finishButton, Studio.onPuzzleComplete);
@@ -19058,7 +19058,7 @@ var preloadImage = function(url) {
 
 var preloadBackgroundImages = function() {
   // TODO (cpirich): preload for non-blockly
-  if (studioAppSingleton.usingBlockly) {
+  if (studioApp.usingBlockly) {
     var imageChoices = skin.backgroundChoicesK1;
     for (var i = 0; i < imageChoices.length; i++) {
       preloadImage(imageChoices[i][0]);
@@ -19117,7 +19117,7 @@ Studio.clearEventHandlersKillTickLoop = function() {
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
  */
-studioAppSingleton.reset = function(first) {
+studioApp.reset = function(first) {
   var i;
   Studio.clearEventHandlersKillTickLoop();
 
@@ -19169,7 +19169,7 @@ studioAppSingleton.reset = function(first) {
 
   // Reset the Globals object used to contain program variables:
   Studio.Globals = {};
-  if (studioAppSingleton.editCode) {
+  if (studioApp.editCode) {
     Studio.eventQueue = [];
     Studio.executionError = null;
     Studio.interpreter = null;
@@ -19228,23 +19228,23 @@ studioAppSingleton.reset = function(first) {
  * Click the run button.  Start the program.
  */
 // XXX This is the only method used by the templates!
-studioAppSingleton.runButtonClick = function() {
+studioApp.runButtonClick = function() {
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
   // Ensure that Reset button is at least as wide as Run button.
   if (!resetButton.style.minWidth) {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
-  studioAppSingleton.toggleRunReset('reset');
-  if (studioAppSingleton.usingBlockly) {
+  studioApp.toggleRunReset('reset');
+  if (studioApp.usingBlockly) {
     Blockly.mainBlockSpace.traceOn(true);
   }
-  studioAppSingleton.reset(false);
-  studioAppSingleton.attempts++;
+  studioApp.reset(false);
+  studioApp.attempts++;
   Studio.startTime = new Date();
   Studio.execute();
 
-  if (level.freePlay && (!studioAppSingleton.hideSource || level.showFinish)) {
+  if (level.freePlay && (!studioApp.hideSource || level.showFinish)) {
     var shareCell = document.getElementById('share-cell');
     shareCell.className = 'share-cell-enabled';
   }
@@ -19256,11 +19256,11 @@ studioAppSingleton.runButtonClick = function() {
 
 /**
  * App specific displayFeedback function that calls into
- * studioAppSingleton.displayFeedback when appropriate
+ * studioApp.displayFeedback when appropriate
  */
 var displayFeedback = function() {
   if (!Studio.waitingForReport) {
-    studioAppSingleton.displayFeedback({
+    studioApp.displayFeedback({
       app: 'studio', //XXX
       skin: skin.id,
       feedbackType: Studio.testResults,
@@ -19315,7 +19315,7 @@ var registerHandlers =
       var code = Blockly.Generator.blocksToCode('JavaScript', [ block ]);
       if (code) {
         var func = codegen.functionFromCode(code, {
-                                            StudioApp: studioAppSingleton,
+                                            StudioApp: studioApp,
                                             Studio: api,
                                             Globals: Studio.Globals } );
         var eventName = eventNameBase;
@@ -19392,7 +19392,7 @@ var registerHandlersWithMultipleSpriteParams =
 var defineProcedures = function (blockType) {
   var code = Blockly.Generator.blockSpaceToCode('JavaScript', blockType);
   try { codegen.evalWith(code, {
-                         StudioApp: studioAppSingleton,
+                         StudioApp: studioApp,
                          Studio: api,
                          Globals: Studio.Globals } ); } catch (e) { }
 };
@@ -19413,7 +19413,7 @@ var nativeGetCallback = function () {
  */
 Studio.execute = function() {
   var code;
-  Studio.result = studioAppSingleton.UNSET;
+  Studio.result = studioApp.UNSET;
   Studio.testResults = TestResults.NO_TESTS_RUN;
   Studio.waitingForReport = false;
   Studio.response = null;
@@ -19421,11 +19421,11 @@ Studio.execute = function() {
 
   if (level.editCode) {
     code = utils.generateCodeAliases(level.codeFunctions, 'Studio');
-    code += studioAppSingleton.editor.getValue();
+    code += studioApp.editor.getValue();
   }
 
   var handlers = [];
-  if (studioAppSingleton.usingBlockly) {
+  if (studioApp.usingBlockly) {
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setValue', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackground', 'whenGameStarts');
@@ -19455,26 +19455,26 @@ Studio.execute = function() {
                                      'SPRITE2');
   }
 
-  studioAppSingleton.playAudio('start');
+  studioApp.playAudio('start');
 
-  studioAppSingleton.reset(false);
+  studioApp.reset(false);
 
   if (level.editCode) {
     var codeWhenRun = utils.generateCodeAliases(level.codeFunctions, 'Studio');
     Studio.userCodeStartOffset = codeWhenRun.length;
-    codeWhenRun += studioAppSingleton.editor.getValue();
+    codeWhenRun += studioApp.editor.getValue();
     Studio.userCodeLength = codeWhenRun.length - Studio.userCodeStartOffset;
     // Append our mini-runtime after the user's code. This will spin and process
     // callback functions:
     codeWhenRun += '\nwhile (true) { var obj = getCallback(); ' +
       'if (obj) { obj.fn.apply(null, obj.arguments ? obj.arguments : null); }}';
-    var session = studioAppSingleton.editor.aceEditor.getSession();
+    var session = studioApp.editor.aceEditor.getSession();
     Studio.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
 
     // Use JS interpreter on editCode levels
     var initFunc = function(interpreter, scope) {
       codegen.initJSInterpreter(interpreter, scope, {
-                                        StudioApp: studioAppSingleton,
+                                        StudioApp: studioApp,
                                         Studio: api,
                                         Globals: Studio.Globals } );
 
@@ -19523,13 +19523,13 @@ Studio.onPuzzleComplete = function() {
   if (level.freePlay) {
     Studio.testResults = TestResults.FREE_PLAY;
   } else {
-    Studio.testResults = studioAppSingleton.getTestResults(levelComplete);
+    Studio.testResults = studioApp.getTestResults(levelComplete);
   }
 
   if (Studio.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL) {
-    studioAppSingleton.playAudio('win');
+    studioApp.playAudio('win');
   } else {
-    studioAppSingleton.playAudio('failure');
+    studioApp.playAudio('failure');
   }
 
   var program;
@@ -19540,7 +19540,7 @@ Studio.onPuzzleComplete = function() {
     // do an acorn.parse and then use escodegen to generate back a "clean" version
     // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
 
-    program = studioAppSingleton.editor.getValue();
+    program = studioApp.editor.getValue();
   } else {
     var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
     program = Blockly.Xml.domToText(xml);
@@ -19549,7 +19549,7 @@ Studio.onPuzzleComplete = function() {
   Studio.waitingForReport = true;
 
   var sendReport = function() {
-    studioAppSingleton.report({
+    studioApp.report({
       app: 'studio',
       level: level.id,
       result: Studio.result === ResultType.SUCCESS,
@@ -19752,7 +19752,7 @@ Studio.queueCmd = function (id, name, opts) {
     'name': name,
     'opts': opts
   };
-  if (studioAppSingleton.usingBlockly) {
+  if (studioApp.usingBlockly) {
     if (Studio.currentEventParams) {
       for (var prop in Studio.currentEventParams) {
         cmd.opts[prop] = Studio.currentEventParams[prop];
@@ -19792,93 +19792,93 @@ Studio.executeQueue = function (name) {
 Studio.callCmd = function (cmd) {
   switch (cmd.name) {
     case 'setBackground':
-      studioAppSingleton.highlight(cmd.id);
+      studioApp.highlight(cmd.id);
       Studio.setBackground(cmd.opts);
       break;
     case 'setSprite':
-      studioAppSingleton.highlight(cmd.id);
+      studioApp.highlight(cmd.id);
       Studio.setSprite(cmd.opts);
       break;
     case 'saySprite':
       if (!cmd.opts.started) {
-        studioAppSingleton.highlight(cmd.id);
+        studioApp.highlight(cmd.id);
       }
       return Studio.saySprite(cmd.opts);
     case 'setSpriteEmotion':
-      studioAppSingleton.highlight(cmd.id);
+      studioApp.highlight(cmd.id);
       Studio.setSpriteEmotion(cmd.opts);
       break;
     case 'setSpriteSpeed':
-      studioAppSingleton.highlight(cmd.id);
+      studioApp.highlight(cmd.id);
       Studio.setSpriteSpeed(cmd.opts);
       break;
     case 'setSpriteSize':
-      studioAppSingleton.highlight(cmd.id);
+      studioApp.highlight(cmd.id);
       Studio.setSpriteSize(cmd.opts);
       break;
     case 'setSpritePosition':
-      studioAppSingleton.highlight(cmd.id);
+      studioApp.highlight(cmd.id);
       Studio.setSpritePosition(cmd.opts);
       break;
     case 'setSpriteXY':
-      studioAppSingleton.highlight(cmd.id);
+      studioApp.highlight(cmd.id);
       Studio.setSpriteXY(cmd.opts);
       break;
     case 'playSound':
-      studioAppSingleton.highlight(cmd.id);
-      studioAppSingleton.playAudio(cmd.opts.soundName, { volume: 1.0 });
+      studioApp.highlight(cmd.id);
+      studioApp.playAudio(cmd.opts.soundName, { volume: 1.0 });
       Studio.playSoundCount++;
       break;
     case 'showTitleScreen':
       if (!cmd.opts.started) {
-        studioAppSingleton.highlight(cmd.id);
+        studioApp.highlight(cmd.id);
       }
       return Studio.showTitleScreen(cmd.opts);
     case 'move':
-      studioAppSingleton.highlight(cmd.id);
+      studioApp.highlight(cmd.id);
       Studio.moveSingle(cmd.opts);
       break;
     case 'moveDistance':
       if (!cmd.opts.started) {
-        studioAppSingleton.highlight(cmd.id);
+        studioApp.highlight(cmd.id);
       }
       return Studio.moveDistance(cmd.opts);
     case 'stop':
-      studioAppSingleton.highlight(cmd.id);
+      studioApp.highlight(cmd.id);
       Studio.stop(cmd.opts);
       break;
     case 'throwProjectile':
       if (!cmd.opts.started) {
-        studioAppSingleton.highlight(cmd.id);
+        studioApp.highlight(cmd.id);
       }
       return Studio.throwProjectile(cmd.opts);
     case 'makeProjectile':
-      studioAppSingleton.highlight(cmd.id);
+      studioApp.highlight(cmd.id);
       Studio.makeProjectile(cmd.opts);
       break;
     case 'changeScore':
-      studioAppSingleton.highlight(cmd.id);
+      studioApp.highlight(cmd.id);
       Studio.changeScore(cmd.opts);
       break;
     case 'setScoreText':
-      studioAppSingleton.highlight(cmd.id);
+      studioApp.highlight(cmd.id);
       Studio.setScoreText(cmd.opts);
       break;
     case 'showCoordinates':
-      studioAppSingleton.highlight(cmd.id);
+      studioApp.highlight(cmd.id);
       Studio.showCoordinates();
       break;
     case 'wait':
       if (!cmd.opts.started) {
-        studioAppSingleton.highlight(cmd.id);
+        studioApp.highlight(cmd.id);
       }
       return Studio.wait(cmd.opts);
     case 'vanish':
-      studioAppSingleton.highlight(cmd.id);
+      studioApp.highlight(cmd.id);
       Studio.vanishActor(cmd.opts);
       break;
     case 'attachEventHandler':
-      studioAppSingleton.highlight(cmd.id);
+      studioApp.highlight(cmd.id);
       Studio.attachEventHandler(cmd.opts);
       break;
   }
@@ -20618,7 +20618,7 @@ Studio.allGoalsVisited = function() {
 
       // Play a sound unless we've hit the last flag
       if (playSound && finishedGoals !== Studio.spriteGoals_.length) {
-        studioAppSingleton.playAudio('flag');
+        studioApp.playAudio('flag');
       }
 
       // Change the finish icon to goalSuccess.
