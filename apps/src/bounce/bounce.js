@@ -18,6 +18,8 @@ var page = require('../templates/page.html');
 var dom = require('../dom');
 var Hammer = require('../hammer');
 var utils = require('../utils');
+var constants = require('../constants');
+var KeyCodes = constants.KeyCodes;
 
 var Direction = tiles.Direction;
 var SquareType = tiles.SquareType;
@@ -47,13 +49,6 @@ var ArrowIds = {
   UP: 'upButton',
   RIGHT: 'rightButton',
   DOWN: 'downButton'
-};
-
-var Keycodes = {
-  LEFT: 37,
-  UP: 38,
-  RIGHT: 39,
-  DOWN: 40
 };
 
 var DRAG_DISTANCE_TO_MOVE_RATIO = 25;
@@ -464,20 +459,20 @@ Bounce.onTick = function() {
   }
 
   // Run key event handlers for any keys that are down:
-  for (var key in Keycodes) {
-    if (Bounce.keyState[Keycodes[key]] &&
-        Bounce.keyState[Keycodes[key]] == "keydown") {
-      switch (Keycodes[key]) {
-        case Keycodes.LEFT:
+  for (var key in KeyCodes) {
+    if (Bounce.keyState[KeyCodes[key]] &&
+        Bounce.keyState[KeyCodes[key]] == "keydown") {
+      switch (KeyCodes[key]) {
+        case KeyCodes.LEFT:
           try { Bounce.whenLeft(StudioApp, api); } catch (e) { }
           break;
-        case Keycodes.UP:
+        case KeyCodes.UP:
           try { Bounce.whenUp(StudioApp, api); } catch (e) { }
           break;
-        case Keycodes.RIGHT:
+        case KeyCodes.RIGHT:
           try { Bounce.whenRight(StudioApp, api); } catch (e) { }
           break;
-        case Keycodes.DOWN:
+        case KeyCodes.DOWN:
           try { Bounce.whenDown(StudioApp, api); } catch (e) { }
           break;
       }
@@ -617,7 +612,7 @@ Bounce.onKey = function(e) {
 
   // If we are actively running our tick loop, suppress default event handling
   if (Bounce.intervalId &&
-      e.keyCode >= Keycodes.LEFT && e.keyCode <= Keycodes.DOWN) {
+      e.keyCode >= KeyCodes.LEFT && e.keyCode <= KeyCodes.DOWN) {
     e.preventDefault();
   }
 };

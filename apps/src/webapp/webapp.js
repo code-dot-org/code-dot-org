@@ -20,6 +20,8 @@ var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
 var Slider = require('../slider');
 var FormStorage = require('./formStorage');
+var constants = require('../constants');
+var KeyCodes = constants.KeyCodes;
 var _ = utils.getLodash();
 var Hammer = utils.getHammer();
 
@@ -106,12 +108,8 @@ function outputWebappConsole(output) {
   debugOutput.scrollTop = debugOutput.scrollHeight;
 }
 
-var Keycodes = {
-  ENTER: 13,
-};
-
 function onDebugInputKeyDown(e) {
-  if (e.keyCode == Keycodes.ENTER) {
+  if (e.keyCode == KeyCodes.ENTER) {
     var input = e.target.textContent;
     e.target.textContent = '';
     outputWebappConsole('> ' + input);

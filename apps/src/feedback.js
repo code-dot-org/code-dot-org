@@ -5,11 +5,6 @@ var HINT_REQUEST_PLACEMENT = {
   RIGHT: 2  // Hint request button is on right.
 };
 
-var KEYCODES = {
-  ENTER: 13,
-  SPACE: 32
-};
-
 /**
  * Bag of utility functions related to building and displaying feedback
  * to students.
@@ -33,7 +28,9 @@ var msg = require('../locale/current/common');
 var dom = require('./dom');
 var xml = require('./xml');
 var FeedbackBlocks = require('./feedbackBlocks');
-var TestResults = require('./constants').TestResults;
+var constants = require('./constants');
+var TestResults = constants.TestResults;
+var KeyCodes = constants.KeyCodes;
 
 /**
  *
@@ -992,7 +989,7 @@ FeedbackUtils.prototype.createModalDialogWithIcon = function(options) {
 
   var btn = options.contentDiv.querySelector(options.defaultBtnSelector);
   var keydownHandler = function(e) {
-    if (e.keyCode == KEYCODES.ENTER || e.keyCode == KEYCODES.SPACE) {
+    if (e.keyCode == KeyCodes.ENTER || e.keyCode == KeyCodes.SPACE) {
       // Simulate a 'click':
       var event = new MouseEvent('click', {
           'view': window,
