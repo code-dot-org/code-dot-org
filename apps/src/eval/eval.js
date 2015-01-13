@@ -21,7 +21,7 @@ var Eval = module.exports;
 /**
  * Create a namespace for the application.
  */
-var StudioApp = require('../base');
+var studioAppSingleton = require('../base');
 var Eval = module.exports;
 var commonMsg = require('../../locale/current/common');
 var evalMsg = require('../../locale/current/eval');
@@ -33,17 +33,18 @@ var page = require('../templates/page.html');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
 
+var ResultType = studioAppSingleton.ResultType;
+var TestResults = studioAppSingleton.TestResults;
+
 // requiring this loads canvg into the global namespace
 require('../canvg/canvg.js');
 var canvg = window.canvg || global.canvg;
 
-var TestResults = require('../constants').TestResults;
-
 var level;
 var skin;
 
-StudioApp.CHECK_FOR_EMPTY_BLOCKS = false;
-StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
+studioAppSingleton.CHECK_FOR_EMPTY_BLOCKS = false;
+studioAppSingleton.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
@@ -65,12 +66,12 @@ Eval.init = function(config) {
   config.enableShowCode = false;
 
   config.html = page({
-    assetUrl: StudioApp.assetUrl,
+    assetUrl: studioAppSingleton.assetUrl,
     data: {
-      localeDirection: StudioApp.localeDirection(),
+      localeDirection: studioAppSingleton.localeDirection(),
       visualization: require('./visualization.html')(),
       controls: require('./controls.html')({
-        assetUrl: StudioApp.assetUrl
+        assetUrl: studioAppSingleton.assetUrl
       }),
       blockUsed : undefined,
       idealBlockNumber : undefined,
@@ -80,9 +81,9 @@ Eval.init = function(config) {
   });
 
   config.loadAudio = function() {
-    StudioApp.loadAudio(skin.winSound, 'win');
-    StudioApp.loadAudio(skin.startSound, 'start');
-    StudioApp.loadAudio(skin.failureSound, 'failure');
+    studioAppSingleton.loadAudio(skin.winSound, 'win');
+    studioAppSingleton.loadAudio(skin.startSound, 'start');
+    studioAppSingleton.loadAudio(skin.failureSound, 'failure');
   };
 
   config.afterInject = function() {
@@ -116,26 +117,26 @@ Eval.init = function(config) {
     var visualizationColumn = document.getElementById('visualizationColumn');
     visualizationColumn.style.width = '400px';
 
-    // base's StudioApp.resetButtonClick will be called first
+    // base's studioAppSingleton.resetButtonClick will be called first
     var resetButton = document.getElementById('resetButton');
     dom.addClickTouchEvent(resetButton, Eval.resetButtonClick);
   };
 
-  StudioApp.init(config);
+  studioAppSingleton.init(config);
 };
 
 /**
  * Click the run button.  Start the program.
  */
-StudioApp.runButtonClick = function() {
-  StudioApp.toggleRunReset('reset');
+studioAppSingleton.runButtonClick = function() {
+  studioAppSingleton.toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
-  StudioApp.attempts++;
+  studioAppSingleton.attempts++;
   Eval.execute();
 };
 
 /**
- * App specific reset button click logic.  StudioApp.resetButtonClick will be
+ * App specific reset button click logic.  studioAppSingleton.resetButtonClick will be
  * called first.
  */
 Eval.resetButtonClick = function () {
@@ -150,7 +151,7 @@ Eval.resetButtonClick = function () {
 function evalCode (code) {
   try {
     codegen.evalWith(code, {
-      StudioApp: StudioApp,
+      StudioApp: studioAppSingleton,
       Eval: api
     });
   } catch (e) {
@@ -183,7 +184,7 @@ function getDrawableFromBlocks(blockXml) {
         "we already have blocks in the workspace");
     }
     // Temporarily put the blocks into the workspace so that we can generate code
-    StudioApp.loadBlocks(blockXml);
+    studioAppSingleton.loadBlocks(blockXml);
   }
 
   var code = Blockly.Generator.blockSpaceToCode('JavaScript', ['functional_display', 'functional_definition']);
@@ -203,8 +204,8 @@ function getDrawableFromBlocks(blockXml) {
  * Execute the user's code.  Heaven help us...
  */
 Eval.execute = function() {
-  Eval.result = StudioApp.ResultType.UNSET;
-  Eval.testResults = StudioApp.TestResults.NO_TESTS_RUN;
+  Eval.result = ResultType.UNSET;
+  Eval.testResults = TestResults.NO_TESTS_RUN;
   Eval.message = undefined;
 
   var userObject = getDrawableFromBlocks(null);
@@ -213,10 +214,10 @@ Eval.execute = function() {
   }
 
   Eval.result = evaluateAnswer();
-  Eval.testResults = StudioApp.getTestResults(Eval.result);
+  Eval.testResults = studioAppSingleton.getTestResults(Eval.result);
 
   if (level.freePlay) {
-    Eval.testResults = StudioApp.TestResults.FREE_PLAY;
+    Eval.testResults = TestResults.FREE_PLAY;
   }
 
   var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
@@ -232,7 +233,7 @@ Eval.execute = function() {
     onComplete: onReportComplete
   };
 
-  StudioApp.report(reportData);
+  studioAppSingleton.report(reportData);
 };
 
 /**
@@ -275,13 +276,13 @@ function evaluateAnswer() {
 
 /**
  * App specific displayFeedback function that calls into
- * StudioApp.displayFeedback when appropriate
+ * studioAppSingleton.displayFeedback when appropriate
  */
 var displayFeedback = function(response) {
   // override extra top blocks message
   level.extraTopBlocks = evalMsg.extraTopBlocks();
 
-  StudioApp.displayFeedback({
+  studioAppSingleton.displayFeedback({
     app: 'Eval',
     skin: skin.id,
     feedbackType: Eval.testResults,
