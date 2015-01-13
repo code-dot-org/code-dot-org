@@ -352,7 +352,7 @@ Calc.execute = function() {
       appState.testResults = TestResults.APP_SPECIFIC_FAIL;
       appState.message = calcMsg.equivalentExpression();
     } else {
-      appState.testResults = StudioApp.getTestResults(appState.result);
+      appState.testResults = studioAppSingleton.getTestResults(appState.result);
     }
   }
 

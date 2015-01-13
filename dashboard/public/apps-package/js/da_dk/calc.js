@@ -323,7 +323,7 @@ StudioAppClass.prototype.init = function(config) {
 
   this.configureDom_(config);
 
-  if (config.hide_source) {
+  if (config.hideSource) {
     this.handleHideSource_({
       containerId: config.containerId,
       embed: config.embed,
@@ -1141,7 +1141,7 @@ StudioAppClass.prototype.setConfigValues_ = function (config) {
   // if true, dont provide links to share on fb/twitter
   this.disableSocialShare = config.disableSocialShare;
   this.sendToPhone = config.sendToPhone;
-  this.noPadding = config.no_padding;
+  this.noPadding = config.noPadding;
 
   this.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
   this.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
@@ -1205,7 +1205,7 @@ StudioAppClass.prototype.configureDom_ = function (config) {
     // Enable param & var editing in levelbuilder, regardless of level setting
     config.level.disableParamEditing = false;
     config.level.disableVariableEditing = false;
-  } else if (!config.hide_source) {
+  } else if (!config.hideSource) {
     visualizationColumn.style.minHeight = this.MIN_WORKSPACE_HEIGHT + 'px';
   }
 
@@ -1403,7 +1403,8 @@ window.StudioApp = studioAppSingleton;
 // TODO (br-pair) : This is to expose methods we need in the global namespace
 // for testing purpose. Would be nice to eliminate this eventually.
 window.__TestInterface = {
-  loadBlocks: _.bind(studioAppSingleton.loadBlocks, studioAppSingleton)
+  loadBlocks: _.bind(studioAppSingleton.loadBlocks, studioAppSingleton),
+  arrangeBlockPosition: _.bind(studioAppSingleton.arrangeBlockPosition, studioAppSingleton)
 };
 
 var addReadyListener = require('./dom').addReadyListener;
@@ -1993,7 +1994,7 @@ var Calc = module.exports;
 /**
  * Create a namespace for the application.
  */
-var StudioApp = require('../base');
+var studioAppSingleton = require('../base');
 var Calc = module.exports;
 var commonMsg = require('../../locale/da_dk/common');
 var calcMsg = require('../../locale/da_dk/calc');
@@ -2008,7 +2009,8 @@ var _ = require('../utils').getLodash();
 var timeoutList = require('../timeoutList');
 
 var ExpressionNode = require('./expressionNode');
-var TestResults = require('../constants').TestResults;
+
+var TestResults = studioAppSingleton.TestResults;
 
 var level;
 var skin;
@@ -2017,8 +2019,8 @@ var skin;
 // use zzz for sorting purposes (which is also hacky)
 var COMPUTE_NAME = 'zzz_compute';
 
-StudioApp.CHECK_FOR_EMPTY_BLOCKS = false;
-StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
+studioAppSingleton.CHECK_FOR_EMPTY_BLOCKS = false;
+studioAppSingleton.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
@@ -2071,12 +2073,12 @@ Calc.init = function(config) {
   config.enableShowCode = false;
 
   config.html = page({
-    assetUrl: StudioApp.assetUrl,
+    assetUrl: studioAppSingleton.assetUrl,
     data: {
-      localeDirection: StudioApp.localeDirection(),
+      localeDirection: studioAppSingleton.localeDirection(),
       visualization: require('./visualization.html')(),
       controls: require('./controls.html')({
-        assetUrl: StudioApp.assetUrl
+        assetUrl: studioAppSingleton.assetUrl
       }),
       blockUsed : undefined,
       idealBlockNumber : undefined,
@@ -2086,9 +2088,9 @@ Calc.init = function(config) {
   });
 
   config.loadAudio = function() {
-    StudioApp.loadAudio(skin.winSound, 'win');
-    StudioApp.loadAudio(skin.startSound, 'start');
-    StudioApp.loadAudio(skin.failureSound, 'failure');
+    studioAppSingleton.loadAudio(skin.winSound, 'win');
+    studioAppSingleton.loadAudio(skin.startSound, 'start');
+    studioAppSingleton.loadAudio(skin.failureSound, 'failure');
   };
 
   config.afterInject = function() {
@@ -2130,26 +2132,26 @@ Calc.init = function(config) {
     var visualizationColumn = document.getElementById('visualizationColumn');
     visualizationColumn.style.width = '400px';
 
-    // base's StudioApp.resetButtonClick will be called first
+    // base's studioAppSingleton.resetButtonClick will be called first
     var resetButton = document.getElementById('resetButton');
     dom.addClickTouchEvent(resetButton, Calc.resetButtonClick);
   };
 
-  StudioApp.init(config);
+  studioAppSingleton.init(config);
 };
 
 /**
  * Click the run button.  Start the program.
  */
-StudioApp.runButtonClick = function() {
-  StudioApp.toggleRunReset('reset');
+studioAppSingleton.runButtonClick = function() {
+  studioAppSingleton.toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
-  StudioApp.attempts++;
+  studioAppSingleton.attempts++;
   Calc.execute();
 };
 
 /**
- * App specific reset button click logic.  StudioApp.resetButtonClick will be
+ * App specific reset button click logic.  studioAppSingleton.resetButtonClick will be
  * called first.
  */
 Calc.resetButtonClick = function () {
@@ -2167,7 +2169,7 @@ Calc.resetButtonClick = function () {
 function evalCode (code) {
   try {
     codegen.evalWith(code, {
-      StudioApp: StudioApp,
+      StudioApp: studioAppSingleton,
       Calc: api
     });
   } catch (e) {
@@ -2216,7 +2218,7 @@ function generateExpressionsFromBlockXml(blockXml) {
         "if we already have blocks in the workspace");
     }
     // Temporarily put the blocks into the workspace so that we can generate code
-    StudioApp.loadBlocks(blockXml);
+    studioAppSingleton.loadBlocks(blockXml);
   }
 
   var obj = generateExpressionsFromTopBlocks();
@@ -2293,11 +2295,13 @@ function getEquationFromBlock(block) {
  * Execute the user's code.
  */
 Calc.execute = function() {
-  appState.testResults = StudioApp.TestResults.NO_TESTS_RUN;
+  appState.testResults = TestResults.NO_TESTS_RUN;
   appState.message = undefined;
 
   appState.userExpressions = generateExpressionsFromTopBlocks();
 
+  // TODO (brent) - should this be using TestResult instead for consistency
+  // across apps?
   appState.result = true;
   _.keys(appState.targetExpressions).forEach(function (targetName) {
     var target = appState.targetExpressions[targetName];
@@ -2310,7 +2314,7 @@ Calc.execute = function() {
   var hasVariablesOrFunctions = _(appState.userExpressions).size() > 1;
   if (level.freePlay) {
     appState.result = true;
-    appState.testResults = StudioApp.TestResults.FREE_PLAY;
+    appState.testResults = TestResults.FREE_PLAY;
   } else {
     // todo -  should we have single place where we get single target/user?
     var user = appState.userExpressions[COMPUTE_NAME];
@@ -2339,7 +2343,7 @@ Calc.execute = function() {
     onComplete: onReportComplete
   };
 
-  StudioApp.report(reportData);
+  studioAppSingleton.report(reportData);
 
 
   appState.animating = true;
@@ -2422,7 +2426,7 @@ function animateUserExpression (maxNumSteps) {
     } else if (currentDepth + 1 === maxNumSteps) {
       var deepest = current.getDeepestOperation();
       if (deepest) {
-        StudioApp.highlight('block_id_' + deepest.blockId);
+        studioAppSingleton.highlight('block_id_' + deepest.blockId);
       }
       tokenList = current.getTokenList(true);
     } else {
@@ -2516,7 +2520,7 @@ function cloneNodeWithoutIds(elementId) {
 
 /**
  * App specific displayFeedback function that calls into
- * StudioApp.displayFeedback when appropriate
+ * studioAppSingleton.displayFeedback when appropriate
  */
 var displayFeedback = function() {
   if (!appState.response || appState.animating) {
@@ -2543,7 +2547,7 @@ var displayFeedback = function() {
     options.message = appState.message;
   }
 
-  StudioApp.displayFeedback(options);
+  studioAppSingleton.displayFeedback(options);
 };
 
 /**
@@ -2558,7 +2562,7 @@ function onReportComplete(response) {
   displayFeedback();
 }
 
-},{"../../locale/da_dk/calc":41,"../../locale/da_dk/common":42,"../base":4,"../block_utils":5,"../codegen":15,"../constants":16,"../dom":17,"../skins":25,"../templates/page.html":32,"../timeoutList":38,"../utils":39,"./api":7,"./controls.html":10,"./expressionNode":11,"./levels":12,"./visualization.html":14}],10:[function(require,module,exports){
+},{"../../locale/da_dk/calc":41,"../../locale/da_dk/common":42,"../base":4,"../block_utils":5,"../codegen":15,"../dom":17,"../skins":25,"../templates/page.html":32,"../timeoutList":38,"../utils":39,"./api":7,"./controls.html":10,"./expressionNode":11,"./levels":12,"./visualization.html":14}],10:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -2917,6 +2921,10 @@ module.exports = {
 
 },{"../../locale/da_dk/calc":41,"../block_utils":5}],13:[function(require,module,exports){
 var appMain = require('../appMain');
+// TODO (br-pair): We're doing this so that other apps can still have
+// in the global namespace, while ensuring that we don't. Ultimately nobody
+// should have it, and we can remove this.
+window.StudioApp = undefined;
 window.Calc = require('./calc');
 var blocks = require('./blocks');
 var skins = require('../skins');

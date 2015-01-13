@@ -323,7 +323,7 @@ StudioAppClass.prototype.init = function(config) {
 
   this.configureDom_(config);
 
-  if (config.hide_source) {
+  if (config.hideSource) {
     this.handleHideSource_({
       containerId: config.containerId,
       embed: config.embed,
@@ -1141,7 +1141,7 @@ StudioAppClass.prototype.setConfigValues_ = function (config) {
   // if true, dont provide links to share on fb/twitter
   this.disableSocialShare = config.disableSocialShare;
   this.sendToPhone = config.sendToPhone;
-  this.noPadding = config.no_padding;
+  this.noPadding = config.noPadding;
 
   this.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
   this.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
@@ -1205,7 +1205,7 @@ StudioAppClass.prototype.configureDom_ = function (config) {
     // Enable param & var editing in levelbuilder, regardless of level setting
     config.level.disableParamEditing = false;
     config.level.disableVariableEditing = false;
-  } else if (!config.hide_source) {
+  } else if (!config.hideSource) {
     visualizationColumn.style.minHeight = this.MIN_WORKSPACE_HEIGHT + 'px';
   }
 
@@ -1403,7 +1403,8 @@ window.StudioApp = studioAppSingleton;
 // TODO (br-pair) : This is to expose methods we need in the global namespace
 // for testing purpose. Would be nice to eliminate this eventually.
 window.__TestInterface = {
-  loadBlocks: _.bind(studioAppSingleton.loadBlocks, studioAppSingleton)
+  loadBlocks: _.bind(studioAppSingleton.loadBlocks, studioAppSingleton),
+  arrangeBlockPosition: _.bind(studioAppSingleton.arrangeBlockPosition, studioAppSingleton)
 };
 
 var addReadyListener = require('./dom').addReadyListener;
@@ -5865,7 +5866,7 @@ var Eval = module.exports;
 /**
  * Create a namespace for the application.
  */
-var StudioApp = require('../base');
+var studioAppSingleton = require('../base');
 var Eval = module.exports;
 var commonMsg = require('../../locale/no_no/common');
 var evalMsg = require('../../locale/no_no/eval');
@@ -5877,17 +5878,18 @@ var page = require('../templates/page.html');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
 
+var ResultType = studioAppSingleton.ResultType;
+var TestResults = studioAppSingleton.TestResults;
+
 // requiring this loads canvg into the global namespace
 require('../canvg/canvg.js');
 var canvg = window.canvg || global.canvg;
 
-var TestResults = require('../constants').TestResults;
-
 var level;
 var skin;
 
-StudioApp.CHECK_FOR_EMPTY_BLOCKS = false;
-StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
+studioAppSingleton.CHECK_FOR_EMPTY_BLOCKS = false;
+studioAppSingleton.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
@@ -5909,12 +5911,12 @@ Eval.init = function(config) {
   config.enableShowCode = false;
 
   config.html = page({
-    assetUrl: StudioApp.assetUrl,
+    assetUrl: studioAppSingleton.assetUrl,
     data: {
-      localeDirection: StudioApp.localeDirection(),
+      localeDirection: studioAppSingleton.localeDirection(),
       visualization: require('./visualization.html')(),
       controls: require('./controls.html')({
-        assetUrl: StudioApp.assetUrl
+        assetUrl: studioAppSingleton.assetUrl
       }),
       blockUsed : undefined,
       idealBlockNumber : undefined,
@@ -5924,9 +5926,9 @@ Eval.init = function(config) {
   });
 
   config.loadAudio = function() {
-    StudioApp.loadAudio(skin.winSound, 'win');
-    StudioApp.loadAudio(skin.startSound, 'start');
-    StudioApp.loadAudio(skin.failureSound, 'failure');
+    studioAppSingleton.loadAudio(skin.winSound, 'win');
+    studioAppSingleton.loadAudio(skin.startSound, 'start');
+    studioAppSingleton.loadAudio(skin.failureSound, 'failure');
   };
 
   config.afterInject = function() {
@@ -5960,26 +5962,26 @@ Eval.init = function(config) {
     var visualizationColumn = document.getElementById('visualizationColumn');
     visualizationColumn.style.width = '400px';
 
-    // base's StudioApp.resetButtonClick will be called first
+    // base's studioAppSingleton.resetButtonClick will be called first
     var resetButton = document.getElementById('resetButton');
     dom.addClickTouchEvent(resetButton, Eval.resetButtonClick);
   };
 
-  StudioApp.init(config);
+  studioAppSingleton.init(config);
 };
 
 /**
  * Click the run button.  Start the program.
  */
-StudioApp.runButtonClick = function() {
-  StudioApp.toggleRunReset('reset');
+studioAppSingleton.runButtonClick = function() {
+  studioAppSingleton.toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
-  StudioApp.attempts++;
+  studioAppSingleton.attempts++;
   Eval.execute();
 };
 
 /**
- * App specific reset button click logic.  StudioApp.resetButtonClick will be
+ * App specific reset button click logic.  studioAppSingleton.resetButtonClick will be
  * called first.
  */
 Eval.resetButtonClick = function () {
@@ -5994,7 +5996,7 @@ Eval.resetButtonClick = function () {
 function evalCode (code) {
   try {
     codegen.evalWith(code, {
-      StudioApp: StudioApp,
+      StudioApp: studioAppSingleton,
       Eval: api
     });
   } catch (e) {
@@ -6027,7 +6029,7 @@ function getDrawableFromBlocks(blockXml) {
         "we already have blocks in the workspace");
     }
     // Temporarily put the blocks into the workspace so that we can generate code
-    StudioApp.loadBlocks(blockXml);
+    studioAppSingleton.loadBlocks(blockXml);
   }
 
   var code = Blockly.Generator.blockSpaceToCode('JavaScript', ['functional_display', 'functional_definition']);
@@ -6047,8 +6049,8 @@ function getDrawableFromBlocks(blockXml) {
  * Execute the user's code.  Heaven help us...
  */
 Eval.execute = function() {
-  Eval.result = StudioApp.ResultType.UNSET;
-  Eval.testResults = StudioApp.TestResults.NO_TESTS_RUN;
+  Eval.result = ResultType.UNSET;
+  Eval.testResults = TestResults.NO_TESTS_RUN;
   Eval.message = undefined;
 
   var userObject = getDrawableFromBlocks(null);
@@ -6057,10 +6059,10 @@ Eval.execute = function() {
   }
 
   Eval.result = evaluateAnswer();
-  Eval.testResults = StudioApp.getTestResults(Eval.result);
+  Eval.testResults = studioAppSingleton.getTestResults(Eval.result);
 
   if (level.freePlay) {
-    Eval.testResults = StudioApp.TestResults.FREE_PLAY;
+    Eval.testResults = TestResults.FREE_PLAY;
   }
 
   var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
@@ -6076,7 +6078,7 @@ Eval.execute = function() {
     onComplete: onReportComplete
   };
 
-  StudioApp.report(reportData);
+  studioAppSingleton.report(reportData);
 };
 
 /**
@@ -6119,13 +6121,13 @@ function evaluateAnswer() {
 
 /**
  * App specific displayFeedback function that calls into
- * StudioApp.displayFeedback when appropriate
+ * studioAppSingleton.displayFeedback when appropriate
  */
 var displayFeedback = function(response) {
   // override extra top blocks message
   level.extraTopBlocks = evalMsg.extraTopBlocks();
 
-  StudioApp.displayFeedback({
+  studioAppSingleton.displayFeedback({
     app: 'Eval',
     skin: skin.id,
     feedbackType: Eval.testResults,
@@ -6149,7 +6151,7 @@ function onReportComplete(response) {
 }
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../../locale/no_no/common":50,"../../locale/no_no/eval":51,"../base":4,"../block_utils":5,"../canvg/canvg.js":7,"../codegen":8,"../constants":9,"../dom":10,"../skins":35,"../templates/page.html":42,"./api":11,"./controls.html":13,"./levels":25,"./visualization.html":27}],15:[function(require,module,exports){
+},{"../../locale/no_no/common":50,"../../locale/no_no/eval":51,"../base":4,"../block_utils":5,"../canvg/canvg.js":7,"../codegen":8,"../dom":10,"../skins":35,"../templates/page.html":42,"./api":11,"./controls.html":13,"./levels":25,"./visualization.html":27}],15:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -6659,6 +6661,10 @@ module.exports = {
 
 },{"../../locale/no_no/eval":51,"../block_utils":5}],26:[function(require,module,exports){
 var appMain = require('../appMain');
+// TODO (br-pair): We're doing this so that other apps can still have
+// in the global namespace, while ensuring that we don't. Ultimately nobody
+// should have it, and we can remove this.
+window.StudioApp = undefined;
 window.Eval = require('./eval');
 var blocks = require('./blocks');
 var skins = require('../skins');
