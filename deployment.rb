@@ -163,6 +163,9 @@ class CDOImpl < OpenStruct
     @slog.write params
   end
 
+  def shared_image_url(path)
+    "/shared/images/#{path}"
+  end
 end
 
 CDO ||= CDOImpl.new
