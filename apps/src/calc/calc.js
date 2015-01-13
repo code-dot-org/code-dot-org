@@ -37,7 +37,6 @@ var timeoutList = require('../timeoutList');
 
 var ExpressionNode = require('./expressionNode');
 
-var ResultType = studioAppSingleton.ResultType;
 var TestResults = studioAppSingleton.TestResults;
 
 var level;
@@ -328,6 +327,8 @@ Calc.execute = function() {
 
   appState.userExpressions = generateExpressionsFromTopBlocks();
 
+  // TODO (brent) - should this be using TestResult instead for consistency
+  // across apps?
   appState.result = true;
   _.keys(appState.targetExpressions).forEach(function (targetName) {
     var target = appState.targetExpressions[targetName];
