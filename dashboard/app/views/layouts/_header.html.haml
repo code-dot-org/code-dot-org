@@ -1,9 +1,5 @@
 - @script ||= Script.twenty_hour_script
 
--# Temporarily comment out banner about locale not being supported.
--# if !support_primary_locale?
-  #warning-banner
-    = link_to "Non-English translations coming soon. Help us translate!", 'http://eepurl.com/Im_In'
 - if browser.cdo_unsupported?
   = render partial: 'layouts/unsupported_browser'
 - elsif browser.cdo_partially_supported?
