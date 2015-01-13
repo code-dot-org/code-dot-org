@@ -1,4 +1,4 @@
-var studioAppSingleton = require('../StudioApp').singleton;
+var studioApp = require('../StudioApp').singleton;
 
 exports.FlapHeight = {
   VERY_SMALL: -6,
@@ -38,63 +38,63 @@ exports.random = function (values) {
 };
 
 exports.setScore = function (id, value) {
-  studioAppSingleton.highlight(id);
+  studioApp.highlight(id);
   Flappy.playerScore = value;
   Flappy.displayScore();
 };
 
 exports.setGravity = function (id, value) {
-  studioAppSingleton.highlight(id);
+  studioApp.highlight(id);
   Flappy.gravity = value;
 };
 
 exports.setGround = function (id, value) {
-  studioAppSingleton.highlight(id);
+  studioApp.highlight(id);
   Flappy.setGround(value);
 };
 
 exports.setObstacle = function (id, value) {
-  studioAppSingleton.highlight(id);
+  studioApp.highlight(id);
   Flappy.setObstacle(value);
 };
 
 exports.setPlayer = function (id, value) {
-  studioAppSingleton.highlight(id);
+  studioApp.highlight(id);
   Flappy.setPlayer(value);
 };
 
 exports.setGapHeight = function (id, value) {
-  studioAppSingleton.highlight(id);
+  studioApp.highlight(id);
   Flappy.setGapHeight(value);
 };
 
 exports.setBackground = function (id, value) {
-  studioAppSingleton.highlight(id);
+  studioApp.highlight(id);
   Flappy.setBackground(value);
 };
 
 exports.setSpeed = function (id, value) {
-  studioAppSingleton.highlight(id);
+  studioApp.highlight(id);
   Flappy.SPEED = value;
 };
 
 exports.playSound = function(id, soundName) {
-  studioAppSingleton.highlight(id);
-  studioAppSingleton.playAudio(soundName);
+  studioApp.highlight(id);
+  studioApp.playAudio(soundName);
 };
 
 exports.flap = function (id, amount) {
-  studioAppSingleton.highlight(id);
+  studioApp.highlight(id);
   Flappy.flap(amount);
 };
 
 exports.endGame = function (id) {
-  studioAppSingleton.highlight(id);
+  studioApp.highlight(id);
   Flappy.gameState = Flappy.GameStates.ENDING;
 };
 
 exports.incrementPlayerScore = function(id) {
-  studioAppSingleton.highlight(id);
+  studioApp.highlight(id);
   Flappy.playerScore++;
   Flappy.displayScore();
 };

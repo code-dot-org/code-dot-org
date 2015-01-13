@@ -21,7 +21,7 @@ var Calc = module.exports;
 /**
  * Create a namespace for the application.
  */
-var studioAppSingleton = require('../StudioApp').singleton;
+var studioApp = require('../StudioApp').singleton;
 var Calc = module.exports;
 var commonMsg = require('../../locale/current/common');
 var calcMsg = require('../../locale/current/calc');
@@ -37,7 +37,7 @@ var timeoutList = require('../timeoutList');
 
 var ExpressionNode = require('./expressionNode');
 
-var TestResults = studioAppSingleton.TestResults;
+var TestResults = studioApp.TestResults;
 
 var level;
 var skin;
@@ -46,8 +46,8 @@ var skin;
 // use zzz for sorting purposes (which is also hacky)
 var COMPUTE_NAME = 'zzz_compute';
 
-studioAppSingleton.setCheckForEmptyBlocks(false);
-studioAppSingleton.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
+studioApp.setCheckForEmptyBlocks(false);
+studioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
@@ -100,12 +100,12 @@ Calc.init = function(config) {
   config.enableShowCode = false;
 
   config.html = page({
-    assetUrl: studioAppSingleton.assetUrl,
+    assetUrl: studioApp.assetUrl,
     data: {
-      localeDirection: studioAppSingleton.localeDirection(),
+      localeDirection: studioApp.localeDirection(),
       visualization: require('./visualization.html')(),
       controls: require('./controls.html')({
-        assetUrl: studioAppSingleton.assetUrl
+        assetUrl: studioApp.assetUrl
       }),
       blockUsed : undefined,
       idealBlockNumber : undefined,
@@ -115,9 +115,9 @@ Calc.init = function(config) {
   });
 
   config.loadAudio = function() {
-    studioAppSingleton.loadAudio(skin.winSound, 'win');
-    studioAppSingleton.loadAudio(skin.startSound, 'start');
-    studioAppSingleton.loadAudio(skin.failureSound, 'failure');
+    studioApp.loadAudio(skin.winSound, 'win');
+    studioApp.loadAudio(skin.startSound, 'start');
+    studioApp.loadAudio(skin.failureSound, 'failure');
   };
 
   config.afterInject = function() {
@@ -159,26 +159,26 @@ Calc.init = function(config) {
     var visualizationColumn = document.getElementById('visualizationColumn');
     visualizationColumn.style.width = '400px';
 
-    // base's studioAppSingleton.resetButtonClick will be called first
+    // base's studioApp.resetButtonClick will be called first
     var resetButton = document.getElementById('resetButton');
     dom.addClickTouchEvent(resetButton, Calc.resetButtonClick);
   };
 
-  studioAppSingleton.init(config);
+  studioApp.init(config);
 };
 
 /**
  * Click the run button.  Start the program.
  */
-studioAppSingleton.runButtonClick = function() {
-  studioAppSingleton.toggleRunReset('reset');
+studioApp.runButtonClick = function() {
+  studioApp.toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
-  studioAppSingleton.attempts++;
+  studioApp.attempts++;
   Calc.execute();
 };
 
 /**
- * App specific reset button click logic.  studioAppSingleton.resetButtonClick will be
+ * App specific reset button click logic.  studioApp.resetButtonClick will be
  * called first.
  */
 Calc.resetButtonClick = function () {
@@ -196,7 +196,7 @@ Calc.resetButtonClick = function () {
 function evalCode (code) {
   try {
     codegen.evalWith(code, {
-      StudioApp: studioAppSingleton,
+      StudioApp: studioApp,
       Calc: api
     });
   } catch (e) {
@@ -245,7 +245,7 @@ function generateExpressionsFromBlockXml(blockXml) {
         "if we already have blocks in the workspace");
     }
     // Temporarily put the blocks into the workspace so that we can generate code
-    studioAppSingleton.loadBlocks(blockXml);
+    studioApp.loadBlocks(blockXml);
   }
 
   var obj = generateExpressionsFromTopBlocks();
@@ -352,7 +352,7 @@ Calc.execute = function() {
       appState.testResults = TestResults.APP_SPECIFIC_FAIL;
       appState.message = calcMsg.equivalentExpression();
     } else {
-      appState.testResults = studioAppSingleton.getTestResults(appState.result);
+      appState.testResults = studioApp.getTestResults(appState.result);
     }
   }
 
@@ -370,7 +370,7 @@ Calc.execute = function() {
     onComplete: onReportComplete
   };
 
-  studioAppSingleton.report(reportData);
+  studioApp.report(reportData);
 
 
   appState.animating = true;
@@ -453,7 +453,7 @@ function animateUserExpression (maxNumSteps) {
     } else if (currentDepth + 1 === maxNumSteps) {
       var deepest = current.getDeepestOperation();
       if (deepest) {
-        studioAppSingleton.highlight('block_id_' + deepest.blockId);
+        studioApp.highlight('block_id_' + deepest.blockId);
       }
       tokenList = current.getTokenList(true);
     } else {
@@ -547,7 +547,7 @@ function cloneNodeWithoutIds(elementId) {
 
 /**
  * App specific displayFeedback function that calls into
- * studioAppSingleton.displayFeedback when appropriate
+ * studioApp.displayFeedback when appropriate
  */
 var displayFeedback = function() {
   if (!appState.response || appState.animating) {
@@ -574,7 +574,7 @@ var displayFeedback = function() {
     options.message = appState.message;
   }
 
-  studioAppSingleton.displayFeedback(options);
+  studioApp.displayFeedback(options);
 };
 
 /**
