@@ -146,8 +146,8 @@ var StudioAppClass = function () {
 
   this.MIN_WORKSPACE_HEIGHT = undefined;
 };
-
-module.exports = StudioAppClass;
+var studioAppSingleton = new StudioAppClass();
+module.exports = studioAppSingleton;
 
 /**
  * Configure StudioAppClass options

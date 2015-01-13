@@ -6,7 +6,7 @@ var reqBlocks = function () {
   return testUtils.requireWithGlobalsCheckBuildFolder('maze/requiredBlocks.js');
 };
 
-var studioAppSingleton = require(testUtils.buildPath('base'));
+var studioAppSingleton = require(testUtils.buildPath('StudioApp'));
 
 module.exports = {
   app: "maze",

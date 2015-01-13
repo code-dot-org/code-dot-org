@@ -1,5 +1,5 @@
 var testUtils = require('../../util/testUtils');
-var studioAppSingleton = require(testUtils.buildPath('base'));
+var studioAppSingleton = require(testUtils.buildPath('StudioApp'));
 
 module.exports = {
   app: "bounce",
