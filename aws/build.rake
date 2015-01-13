@@ -49,15 +49,7 @@ end
 
 if rack_env?(:staging) || rack_env?(:development)
   BLOCKLY_CORE_DEPENDENCIES = []#[aws_dir('build.rake')]
-  BLOCKLY_CORE_PRODUCTS = [
-    'blockly_compressed.js',
-    'blockly_uncompressed.js',
-    'javascript_compressed.js',
-    'javascript_uncompressed.js',
-    'blocks_compressed.js',
-    'blocks_uncompressed.js'
-  ]
-  BLOCKLY_CORE_PRODUCT_FILES = BLOCKLY_CORE_PRODUCTS.map{|i| blockly_core_dir(i)}
+  BLOCKLY_CORE_PRODUCT_FILES = Dir.glob(blockly_core_dir('build-output', '**/*'))
   BLOCKLY_CORE_SOURCE_FILES = Dir.glob(blockly_core_dir('**/*')) - BLOCKLY_CORE_PRODUCT_FILES
 
   BLOCKLY_CORE_TASK = build_task('blockly-core', BLOCKLY_CORE_DEPENDENCIES + BLOCKLY_CORE_SOURCE_FILES) do
@@ -77,12 +69,9 @@ if rack_env?(:staging) || rack_env?(:development)
   end
 
   APPS_COMMIT_TASK = build_task('apps-commit', [deploy_dir('rebuild'), APPS_TASK]) do
-    blockly_core_changed = false
-    Dir.chdir(blockly_core_dir) do
-      blockly_core_changed = !`git status --porcelain #{BLOCKLY_CORE_PRODUCTS.join(' ')}`.strip.empty?
-    end
+    blockly_core_changed = !`git status --porcelain #{BLOCKLY_CORE_PRODUCT_FILES.join(' ')}`.strip.empty?
 
-    apps_changed = false;
+    apps_changed = false
     Dir.chdir(dashboard_dir('public/apps-package')) do
       apps_changed = !`git status --porcelain .`.strip.empty?
     end
