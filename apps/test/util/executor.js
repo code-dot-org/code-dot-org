@@ -129,8 +129,6 @@ function runTestFromCollection (collection, index) {
 function runLevel (app, skinId, level, onAttempt, beforeClick) {
   require(buildDir + '/js/' + app + '/main');
   var studioAppSingleton = require(buildDir + '/js/StudioApp');
-  global.StudioApp = studioAppSingleton;
-
   setAppSpecificGlobals(app);
 
   var main = window[app + 'Main'];
