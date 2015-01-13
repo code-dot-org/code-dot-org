@@ -55,11 +55,11 @@ exports.setupTestBlockly = function() {
   assert(global.Blockly, 'Frame loaded Blockly into global namespace');
 
   // uncache file to force reload
-  require.uncache(exports.buildPath('/base'));
+  require.uncache(exports.buildPath('/StudioApp'));
   // c, n, v, p, s get added to global namespace by messageformat module, which
   // is loaded when we require our locale msg files
-  studioAppSingleton = exports.requireWithGlobalsCheckBuildFolder('/base',
-    ['c', 'n', 'v', 'p', 's']);
+  studioAppSingleton = exports.requireWithGlobalsCheckBuildFolder('/StudioApp',
+    ['c', 'n', 'v', 'p', 's']).singleton;
 
   var blocklyAppDiv = document.getElementById('app');
   assert(blocklyAppDiv, 'blocklyAppDiv exists');

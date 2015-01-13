@@ -7,7 +7,7 @@
 
 'use strict';
 
-var studioAppSingleton = require('../base');
+var studioAppSingleton = require('../StudioApp').singleton;
 var commonMsg = require('../../locale/current/common');
 var flappyMsg = require('../../locale/current/flappy');
 var skins = require('../skins');
