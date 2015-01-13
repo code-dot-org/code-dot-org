@@ -1,6 +1,8 @@
-var TestResults = require('../../../../src/constants.js').TestResults;
-var blockUtils = require('../../../../src/block_utils');
-var TerminationValue = require('../../../../src/constants.js').BeeTerminationValue;
+var testUtils = require('../../../util/testUtils');
+var constants = require(testUtils.buildPath('constants.js'));
+var blockUtils = require(testUtils.buildPath('block_utils'));
+var TestResults = constants.TestResults;
+var TerminationValue = constants.BeeTerminationValue;
 
 // Nectar goal of 2.  Two directly in front of us, one more a square later
 var levelDef = {
