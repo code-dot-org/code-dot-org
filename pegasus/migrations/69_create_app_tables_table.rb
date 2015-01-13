@@ -1,6 +1,8 @@
 Sequel.migration do
   up do
-    create_table?(:tables, charset:'utf8') do
+    drop_table?(:tables)
+
+    create_table?(:app_tables, charset:'utf8') do
       primary_key :id, unsigned:true, null:false
       foreign_key :app_id, index:true, null:false
       foreign_key :storage_id, index:true
@@ -16,6 +18,6 @@ Sequel.migration do
   end
 
   down do
-    #drop_table? :property_bags
+    drop_table?(:app_tables) unless rack_env?(:production)
   end
 end
