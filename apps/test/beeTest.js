@@ -9,8 +9,8 @@ global.navigator = {};
 global.window = {};
 global.document = {};
 
-var Bee = testUtils.requireWithGlobalsCheckSrcFolder('maze/bee');
-var utils = testUtils.requireWithGlobalsCheckSrcFolder('utils');
+var Bee = testUtils.requireWithGlobalsCheckBuildFolder('maze/bee');
+var utils = testUtils.requireWithGlobalsCheckBuildFolder('utils');
 
 var baseLevel = {
   honeyGoal: 1,

@@ -1,7 +1,5 @@
 Sequel.migration do
   up do
-    drop_table? :property_bags
-
     create_table?(:property_bags, charset:'utf8') do
       primary_key :id, unsigned:true, null:false
       foreign_key :app_id, index:true, null:false

@@ -19,6 +19,7 @@ var dom = require('../dom');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
 var Slider = require('../slider');
+var FormStorage = require('./formStorage');
 var _ = utils.getLodash();
 var Hammer = utils.getHammer();
 
@@ -36,7 +37,7 @@ StudioApp.CHECK_FOR_EMPTY_BLOCKS = true;
 //The number of blocks to show as feedback.
 StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
-var MAX_INTERPRETER_STEPS_PER_TICK = 200;
+var MAX_INTERPRETER_STEPS_PER_TICK = 10000;
 
 // Default Scalings
 Webapp.scale = {
@@ -78,12 +79,16 @@ var drawDiv = function () {
   visualizationColumn.style.width = divWidth + 'px';
 };
 
-function queueOnTick() {
+function getCurrentTickLength() {
   var stepSpeed = Webapp.scale.stepSpeed;
   if (Webapp.speedSlider) {
     stepSpeed = 300 * Math.pow(1 - Webapp.speedSlider.getValue(), 2);
   }
-  window.setTimeout(Webapp.onTick, stepSpeed);
+  return stepSpeed;
+}
+
+function queueOnTick() {
+  window.setTimeout(Webapp.onTick, getCurrentTickLength());
 }
 
 function outputWebappConsole(output) {
@@ -182,6 +187,8 @@ Webapp.onTick = function() {
   queueOnTick();
 
   var atInitialBreakpoint = Webapp.paused && Webapp.nextStep === StepType.IN && Webapp.tickCount === 1;
+  var atMaxSpeed = getCurrentTickLength() === 0;
+  Webapp.seenEmptyGetCallbackThisTick = false;
 
   if (Webapp.paused) {
     switch (Webapp.nextStep) {
@@ -207,24 +214,41 @@ Webapp.onTick = function() {
   }
 
   if (Webapp.interpreter) {
-    var doneUserCodeStep = false;
+    var doneUserLine = false;
+    var reachedBreak = false;
     var unwindingAfterStep = false;
     var inUserCode;
     var userCodeRow;
     var session = StudioApp.editor.aceEditor.getSession();
+    // NOTE: when running with no source visible or at max speed with blocks, we
+    // call a simple function to just get the line number, otherwise we call a
+    // function that also selects the code:
+    var selectCodeFunc =
+      (StudioApp.hideSource ||
+       (atMaxSpeed && !Webapp.paused && StudioApp.editor.currentlyUsingBlocks)) ?
+            codegen.getUserCodeLine :
+            codegen.selectCurrentCode;
 
     // In each tick, we will step the interpreter multiple times in a tight
     // loop as long as we are interpreting code that the user can't see
     // (function aliases at the beginning, getCallback event loop at the end)
     for (var stepsThisTick = 0;
-         stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK &&
-          (!doneUserCodeStep || unwindingAfterStep);
+         (stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK) || unwindingAfterStep;
          stepsThisTick++) {
-      userCodeRow = codegen.selectCurrentCode(Webapp.interpreter,
-                                              StudioApp.editor,
-                                              Webapp.cumulativeLength,
-                                              Webapp.userCodeStartOffset,
-                                              Webapp.userCodeLength);
+      if ((reachedBreak && !unwindingAfterStep) ||
+          (doneUserLine && !atMaxSpeed) ||
+          Webapp.seenEmptyGetCallbackThisTick) {
+        // stop stepping the interpreter and wait until the next tick once we:
+        // (1) reached a breakpoint and are done unwinding OR
+        // (2) completed a line of user code (while not running atMaxSpeed) OR
+        // (3) have seen an empty event queue in nativeGetCallback (no events)
+        break;
+      }
+      userCodeRow = selectCodeFunc(Webapp.interpreter,
+                                   Webapp.cumulativeLength,
+                                   Webapp.userCodeStartOffset,
+                                   Webapp.userCodeLength,
+                                   StudioApp.editor);
       inUserCode = (-1 !== userCodeRow);
       // Check to see if we've arrived at a new breakpoint:
       //  (1) should be in user code
@@ -249,8 +273,8 @@ Webapp.onTick = function() {
         Webapp.stoppedAtBreakpointRow = userCodeRow;
         Webapp.stoppedAtBreakpointStackDepth = Webapp.interpreter.stateStack.length;
 
-        // Mark doneUserCodeStep to stop stepping, and start unwinding if needed:
-        doneUserCodeStep = true;
+        // Mark reachedBreak to stop stepping, and start unwinding if needed:
+        reachedBreak = true;
         unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(Webapp.interpreter);
         continue;
       }
@@ -270,7 +294,7 @@ Webapp.onTick = function() {
       }
       try {
         Webapp.interpreter.step();
-        doneUserCodeStep = doneUserCodeStep ||
+        doneUserLine = doneUserLine ||
           (inUserCode && Webapp.interpreter.stateStack[0] && Webapp.interpreter.stateStack[0].done);
 
         // Remember the stack depths of call expressions (so we can implement 'step out')
@@ -291,31 +315,55 @@ Webapp.onTick = function() {
             }
           }
           // For the step in case, we want to stop the interpreter as soon as we enter the callee:
-          if (!doneUserCodeStep &&
+          if (!doneUserLine &&
               inUserCode &&
               Webapp.nextStep === StepType.IN &&
               Webapp.interpreter.stateStack.length > Webapp.firstCallStackDepthThisStep) {
-            doneUserCodeStep = true;
+            reachedBreak = true;
           }
           // After the interpreter says a node is "done" (meaning it is time to stop), we will
           // advance a little further to the start of the next statement. We achieve this by
           // continuing to set unwindingAfterStep to true to keep the loop going:
-          if (doneUserCodeStep) {
+          if (doneUserLine || reachedBreak) {
             var wasUnwinding = unwindingAfterStep;
             // step() additional times if we know it to be safe to get us to the next statement:
             unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(Webapp.interpreter);
             if (wasUnwinding && !unwindingAfterStep) {
               // done unwinding.. select code that is next to execute:
-              userCodeRow = codegen.selectCurrentCode(Webapp.interpreter,
-                                                      StudioApp.editor,
-                                                      Webapp.cumulativeLength,
-                                                      Webapp.userCodeStartOffset,
-                                                      Webapp.userCodeLength);
+              userCodeRow = selectCodeFunc(Webapp.interpreter,
+                                           Webapp.cumulativeLength,
+                                           Webapp.userCodeStartOffset,
+                                           Webapp.userCodeLength,
+                                           StudioApp.editor);
               inUserCode = (-1 !== userCodeRow);
               if (!inUserCode) {
                 // not in user code, so keep unwinding after all...
                 unwindingAfterStep = true;
               }
+            }
+          }
+
+          if ((reachedBreak || doneUserLine) && !unwindingAfterStep) {
+            if (Webapp.nextStep === StepType.OUT &&
+                Webapp.interpreter.stateStack.length > Webapp.stepOutToStackDepth) {
+              // trying to step out, but we didn't get out yet... continue on.
+            } else if (Webapp.nextStep === StepType.OVER &&
+                typeof Webapp.firstCallStackDepthThisStep !== 'undefined' &&
+                Webapp.interpreter.stateStack.length > Webapp.firstCallStackDepthThisStep) {
+              // trying to step over, and we're in deeper inside a function call... continue next onTick
+            } else {
+              // Our step operation is complete, reset nextStep to StepType.RUN to
+              // return to a normal 'break' state:
+              Webapp.nextStep = StepType.RUN;
+              if (inUserCode) {
+                // Store some properties about where we stopped:
+                Webapp.stoppedAtBreakpointRow = userCodeRow;
+                Webapp.stoppedAtBreakpointStackDepth = Webapp.interpreter.stateStack.length;
+              }
+              delete Webapp.stepOutToStackDepth;
+              delete Webapp.firstCallStackDepthThisStep;
+              document.getElementById('spinner').style.visibility = 'hidden';
+              break;
             }
           }
         }
@@ -325,27 +373,14 @@ Webapp.onTick = function() {
         return;
       }
     }
-    if (Webapp.paused) {
-      if (Webapp.nextStep === StepType.OUT &&
-          Webapp.interpreter.stateStack.length > Webapp.stepOutToStackDepth) {
-        // trying to step out, but we didn't get out yet... continue next onTick
-      } else if (Webapp.nextStep === StepType.OVER &&
-          typeof Webapp.firstCallStackDepthThisStep !== 'undefined' &&
-          Webapp.interpreter.stateStack.length > Webapp.firstCallStackDepthThisStep) {
-        // trying to step over, and we're in deeper inside a function call... continue next onTick
-      } else {
-        // Our step operation is complete, reset nextStep to StepType.RUN to
-        // return to a normal 'break' state:
-        Webapp.nextStep = StepType.RUN;
-        if (inUserCode) {
-          // Store some properties about where we stopped:
-          Webapp.stoppedAtBreakpointRow = userCodeRow;
-          Webapp.stoppedAtBreakpointStackDepth = Webapp.interpreter.stateStack.length;
-        }
-        delete Webapp.stepOutToStackDepth;
-        delete Webapp.firstCallStackDepthThisStep;
-        document.getElementById('spinner').style.visibility = 'hidden';
-      }
+    if (reachedBreak && atMaxSpeed) {
+      // If we were running atMaxSpeed and just reached a breakpoint, the
+      // code may not be selected in the editor, so do it now:
+      codegen.selectCurrentCode(Webapp.interpreter,
+                                Webapp.cumulativeLength,
+                                Webapp.userCodeStartOffset,
+                                Webapp.userCodeLength,
+                                StudioApp.editor);
     }
   } else {
     if (Webapp.tickCount === 1) {
@@ -383,6 +418,11 @@ Webapp.init = function(config) {
   level = config.level;
 
   loadLevel();
+
+  if (StudioApp.hideSource) {
+    // always run at max speed if source is hidden
+    config.level.sliderSpeed = 1.0;
+  }
 
   Webapp.canvasScale = (window.devicePixelRatio > 1) ? window.devicePixelRatio : 1;
 
@@ -501,6 +541,10 @@ Webapp.init = function(config) {
       dom.addClickTouchEvent(stepInButton, Webapp.onStepInButton);
       dom.addClickTouchEvent(stepOverButton, Webapp.onStepOverButton);
       dom.addClickTouchEvent(stepOutButton, Webapp.onStepOutButton);
+    }
+    var viewDataButton = document.getElementById('viewDataButton');
+    if (viewDataButton) {
+      dom.addClickTouchEvent(viewDataButton, Webapp.onViewData);
     }
   }
 
@@ -696,7 +740,11 @@ var defineProcedures = function (blockType) {
  * optionally, callback arguments (stored in "arguments")
  */
 var nativeGetCallback = function () {
-  return Webapp.eventQueue.shift();
+  var retVal = Webapp.eventQueue.shift();
+  if (typeof retVal === "undefined") {
+    Webapp.seenEmptyGetCallbackThisTick = true;
+  }
+  return retVal;
 };
 
 var consoleApi = {};
@@ -903,6 +951,12 @@ Webapp.onStepOutButton = function() {
 Webapp.feedbackImage = '';
 Webapp.encodedFeedbackImage = '';
 
+Webapp.onViewData = function() {
+  window.open(
+    '//' + getPegasusHost() + '/edit-csp-app/' + FormStorage.getAppSecret(),
+    '_blank');
+};
+
 Webapp.onPuzzleComplete = function() {
   if (Webapp.executionError) {
     Webapp.result = StudioApp.ResultType.ERROR;
@@ -1019,6 +1073,8 @@ Webapp.callCmd = function (cmd) {
     case 'createCheckbox':
     case 'createRadio':
     case 'createDropdown':
+    case 'getAttribute':
+    case 'setAttribute':
     case 'getText':
     case 'setText':
     case 'getChecked':
@@ -1033,6 +1089,8 @@ Webapp.callCmd = function (cmd) {
     case 'startWebRequest':
     case 'setTimeout':
     case 'clearTimeout':
+    case 'createRecord':
+    case 'readRecords':
       StudioApp.highlight(cmd.id);
       retVal = Webapp[cmd.name](cmd.opts);
       break;
@@ -1154,6 +1212,7 @@ Webapp.canvasDrawRect = function (opts) {
   var canvas = document.getElementById(opts.elementId);
   var ctx = canvas.getContext("2d");
   if (ctx && divWebapp.contains(canvas)) {
+    ctx.beginPath();
     ctx.rect(opts.x * Webapp.canvasScale,
              opts.y * Webapp.canvasScale,
              opts.width * Webapp.canvasScale,
@@ -1223,6 +1282,7 @@ Webapp.canvasDrawImage = function (opts) {
     if (opts.height) {
       yScale = yScale * (opts.height / image.height);
     }
+    ctx.save();
     ctx.setTransform(xScale,
                      0,
                      0,
@@ -1230,6 +1290,7 @@ Webapp.canvasDrawImage = function (opts) {
                      opts.x * Webapp.canvasScale,
                      opts.y * Webapp.canvasScale);
     ctx.drawImage(image, 0, 0);
+    ctx.restore();
     return true;
   }
   return false;
@@ -1326,6 +1387,29 @@ Webapp.createDropdown = function (opts) {
   newSelect.id = opts.elementId;
 
   return Boolean(divWebapp.appendChild(newSelect));
+};
+
+Webapp.getAttribute = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var element = document.getElementById(opts.elementId);
+  var attribute = String(opts.attribute);
+  return divWebapp.contains(element) ? element[attribute] : false;
+};
+
+// Whitelist of HTML Element attributes which can be modified, to
+// prevent DOM manipulation which would violate the sandbox.
+Webapp.mutableAttributes = ['innerHTML', 'scrollTop'];
+
+Webapp.setAttribute = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var element = document.getElementById(opts.elementId);
+  var attribute = String(opts.attribute);
+  if (divWebapp.contains(element) &&
+      Webapp.mutableAttributes.indexOf(attribute) !== -1) {
+    element[attribute] = opts.value;
+    return true;
+  }
+  return false;
 };
 
 Webapp.getText = function (opts) {
@@ -1556,6 +1640,34 @@ Webapp.clearTimeout = function (opts) {
   window.clearTimeout(opts.timeoutId);
 };
 
+Webapp.createRecord = function (opts) {
+  var record = codegen.marshalInterpreterToNative(Webapp.interpreter,
+      opts.record);
+  FormStorage.createRecord(record,
+      Webapp.handleCreateRecord.bind(this, opts.callback));
+};
+
+Webapp.handleCreateRecord = function(interpreterCallback, record) {
+  Webapp.eventQueue.push({
+    'fn': interpreterCallback,
+    'arguments': [record]
+  });
+};
+
+Webapp.readRecords = function (opts) {
+  var searchParams = codegen.marshalInterpreterToNative(Webapp.interpreter,
+      opts.searchParams);
+  FormStorage.readRecords(
+      searchParams,
+      Webapp.handleReadRecords.bind(this, opts.callback));
+};
+
+Webapp.handleReadRecords = function(interpreterCallback, records) {
+  Webapp.eventQueue.push({
+    'fn': interpreterCallback,
+    'arguments': [records]
+  });
+};
 
 /*
 var onWaitComplete = function (opts) {
@@ -1616,6 +1728,28 @@ var checkFinished = function () {
   }
 
   return false;
+};
+
+// TODO(dave): move this logic to dashboard.
+var getPegasusHost = function() {
+  switch (window.location.hostname) {
+    case 'studio.code.org':
+    case 'learn.code.org':
+      return 'code.org';
+    default:
+      var name = window.location.hostname.split('.')[0];
+      switch(name) {
+        case 'localhost':
+          return 'localhost.code.org:9393';
+        case 'development':
+        case 'staging':
+        case 'test':
+        case 'levelbuilder':
+          return name + '.code.org';
+        default:
+          return null;
+      }
+  }
 };
 
 /*jshint asi:true */

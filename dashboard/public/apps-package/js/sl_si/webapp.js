@@ -899,7 +899,7 @@ StudioAppClass.prototype.resizeHeaders = function (fullWorkspaceWidth) {
   var toolboxWidth = 0;
   if (this.editCode) {
     // If in the droplet editor, but not using blocks, keep categoryWidth at 0
-    if (!this.editCode || this.editor.currentlyUsingBlocks) {
+    if (this.editor.currentlyUsingBlocks) {
       // Set toolboxWidth based on the block palette width:
       var categories = document.querySelector('.droplet-palette-wrapper');
       toolboxWidth = parseInt(window.getComputedStyle(categories).width, 10);
@@ -1390,7 +1390,7 @@ StudioAppClass.prototype.hasExtraTopBlocks = function () {
   return this.feedback_.hasExtraTopBlocks();
 };
 
-},{"../locale/sl_si/common":40,"./ResizeSensor":1,"./block_utils":5,"./constants.js":8,"./dom":9,"./templates/builder.html":17,"./templates/buttons.html":18,"./templates/instructions.html":20,"./templates/learn.html":21,"./templates/makeYourOwn.html":22,"./utils":29,"./xml":39,"url":52}],3:[function(require,module,exports){
+},{"../locale/sl_si/common":41,"./ResizeSensor":1,"./block_utils":5,"./constants.js":8,"./dom":9,"./templates/builder.html":17,"./templates/buttons.html":18,"./templates/instructions.html":20,"./templates/learn.html":21,"./templates/makeYourOwn.html":22,"./utils":29,"./xml":40,"url":53}],3:[function(require,module,exports){
 var utils = require('./utils');
 var _ = utils.getLodash();
 var requiredBlockUtils = require('./required_block_utils');
@@ -1705,7 +1705,7 @@ exports.mathBlockXml = function (type, inputs, titles) {
   return str;
 };
 
-},{"./xml":39}],6:[function(require,module,exports){
+},{"./xml":40}],6:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -1870,7 +1870,7 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/sl_si/common":40}],7:[function(require,module,exports){
+},{"../locale/sl_si/common":41}],7:[function(require,module,exports){
 var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
 var LOOP_HIGHLIGHT = 'loopHighlight();\n';
@@ -2137,8 +2137,11 @@ function createSelection (selection, cumulativeLength, start, end) {
  * Returns the row (line) of code highlighted. If nothing is highlighted
  * because it is outside of the userCode area, the return value is -1
  */
-exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
-                                      userCodeStartOffset, userCodeLength) {
+exports.selectCurrentCode = function (interpreter,
+                                      cumulativeLength,
+                                      userCodeStartOffset,
+                                      userCodeLength,
+                                      editor) {
   var userCodeRow = -1;
   if (interpreter.stateStack[0]) {
     var node = interpreter.stateStack[0].node;
@@ -2171,6 +2174,34 @@ exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
       editor.clearLineMarks();
     } else {
       editor.aceEditor.getSelection().clearSelection();
+    }
+  }
+  return userCodeRow;
+};
+
+/**
+ * Finds the current line of code in droplet/ace editor.
+ *
+ * Returns the line of code where the interpreter is at. If it is outside
+ * of the userCode area, the return value is -1
+ *
+ * NOTE: first 4 params match the selectCurrentCode function by design.
+ */
+exports.getUserCodeLine = function (interpreter, cumulativeLength,
+                                    userCodeStartOffset, userCodeLength) {
+  var userCodeRow = -1;
+  if (interpreter.stateStack[0]) {
+    var node = interpreter.stateStack[0].node;
+    // Adjust start/end by userCodeStartOffset since the code running
+    // has been expanded vs. what the user sees in the editor window:
+    var start = node.start - userCodeStartOffset;
+    var end = node.end - userCodeStartOffset;
+
+    // Only return a valid userCodeRow if the node being executed is inside the
+    // user's code (not inside code we inserted before or after their code that
+    // is not visible in the editor):
+    if (start >= 0 && start < userCodeLength) {
+      userCodeRow = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
     }
   }
   return userCodeRow;
@@ -3480,7 +3511,7 @@ function hasMatchingDescendant(node, filter) {
 }
 
 
-},{"../locale/sl_si/common":40,"./codegen":7,"./constants":8,"./dom":9,"./feedbackBlocks":11,"./templates/buttons.html":18,"./templates/code.html":19,"./templates/shareFailure.html":25,"./templates/sharing.html":26,"./templates/showCode.html":27,"./templates/trophy.html":28,"./utils":29,"./xml":39}],11:[function(require,module,exports){
+},{"../locale/sl_si/common":41,"./codegen":7,"./constants":8,"./dom":9,"./feedbackBlocks":11,"./templates/buttons.html":18,"./templates/code.html":19,"./templates/shareFailure.html":25,"./templates/sharing.html":26,"./templates/showCode.html":27,"./templates/trophy.html":28,"./utils":29,"./xml":40}],11:[function(require,module,exports){
 var constants = require('./constants');
 var readonly = require('./templates/readonly.html');
 
@@ -9004,7 +9035,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"../locale/sl_si/common":40,"./block_utils":5,"./utils":29,"./xml":39}],15:[function(require,module,exports){
+},{"../locale/sl_si/common":41,"./block_utils":5,"./utils":29,"./xml":40}],15:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -9364,7 +9395,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":42}],18:[function(require,module,exports){
+},{"ejs":43}],18:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9385,7 +9416,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/sl_si/common":40,"ejs":42}],19:[function(require,module,exports){
+},{"../../locale/sl_si/common":41,"ejs":43}],19:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9406,7 +9437,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":42}],20:[function(require,module,exports){
+},{"ejs":43}],20:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9427,7 +9458,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/sl_si/common":40,"ejs":42}],21:[function(require,module,exports){
+},{"../../locale/sl_si/common":41,"ejs":43}],21:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9450,7 +9481,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/sl_si/common":40,"ejs":42}],22:[function(require,module,exports){
+},{"../../locale/sl_si/common":41,"ejs":43}],22:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9471,7 +9502,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/sl_si/common":40,"ejs":42}],23:[function(require,module,exports){
+},{"../../locale/sl_si/common":41,"ejs":43}],23:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9496,7 +9527,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/sl_si/common":40,"ejs":42}],24:[function(require,module,exports){
+},{"../../locale/sl_si/common":41,"ejs":43}],24:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9518,7 +9549,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":42}],25:[function(require,module,exports){
+},{"ejs":43}],25:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9539,7 +9570,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":42}],26:[function(require,module,exports){
+},{"ejs":43}],26:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9560,7 +9591,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/sl_si/common":40,"ejs":42}],27:[function(require,module,exports){
+},{"../../locale/sl_si/common":41,"ejs":43}],27:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9581,7 +9612,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/sl_si/common":40,"ejs":42}],28:[function(require,module,exports){
+},{"../../locale/sl_si/common":41,"ejs":43}],28:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9602,7 +9633,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":42}],29:[function(require,module,exports){
+},{"ejs":43}],29:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
 
@@ -9964,7 +9995,7 @@ exports.generateDropletModeOptions = function (codeFunctions) {
   return modeOptions;
 };
 
-},{"./hammer":12,"./lodash":13,"./xml":39}],30:[function(require,module,exports){
+},{"./hammer":12,"./lodash":13,"./xml":40}],30:[function(require,module,exports){
 
 exports.randomFromArray = function (values) {
   var key = Math.floor(Math.random() * values.length);
@@ -10162,6 +10193,21 @@ exports.createDropdown = function (blockId, elementId) {
                            'optionsArray': optionsArray });
 };
 
+exports.getAttribute = function(blockId, elementId, attribute) {
+  return Webapp.executeCmd(blockId,
+                           'getAttribute',
+                           {elementId: elementId,
+                            attribute: attribute});
+};
+
+exports.setAttribute = function(blockId, elementId, attribute, value) {
+  return Webapp.executeCmd(blockId,
+                           'setAttribute',
+                           {elementId: elementId,
+                            attribute: attribute,
+                            value: value});
+};
+
 exports.getText = function (blockId, elementId) {
   return Webapp.executeCmd(blockId,
                           'getText',
@@ -10237,6 +10283,19 @@ exports.clearTimeout = function (blockId, timeoutId) {
                            {'timeoutId': timeoutId });
 };
 
+exports.createRecord = function (blockId, record, callback) {
+  return Webapp.executeCmd(blockId,
+                          'createRecord',
+                          {'record': record,
+                           'callback': callback });
+};
+
+exports.readRecords = function (blockId, searchParams, callback) {
+  return Webapp.executeCmd(blockId,
+                          'readRecords',
+                          {'searchParams': searchParams,
+                           'callback': callback });
+};
 
 },{}],31:[function(require,module,exports){
 /**
@@ -10311,7 +10370,7 @@ function installCreateHtmlBlock(blockly, generator, blockInstallOptions) {
   };
 }
 
-},{"../../locale/sl_si/common":40,"../../locale/sl_si/webapp":41,"../codegen":7,"../utils":29}],32:[function(require,module,exports){
+},{"../../locale/sl_si/common":41,"../../locale/sl_si/webapp":42,"../codegen":7,"../utils":29}],32:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -10332,7 +10391,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/sl_si/common":40,"ejs":42}],33:[function(require,module,exports){
+},{"../../locale/sl_si/common":41,"ejs":43}],33:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -10345,7 +10404,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/sl_si/common') ; buf.push('\n');2; var webappMsg = require('../../locale/sl_si/webapp') ; buf.push('\n\n');4; if (debugButtons) { ; buf.push('\n<div>\n  <div id="debug-buttons" style="display:inline;">\n    <button id="pauseButton" class="share">\n      ', escape((8,  webappMsg.pause() )), '\n    </button>\n    <button id="stepInButton" class="share">\n      ', escape((11,  webappMsg.stepIn() )), '\n    </button>\n    <button id="stepOverButton" class="share">\n      ', escape((14,  webappMsg.stepOver() )), '\n    </button>\n    <button id="stepOutButton" class="share">\n      ', escape((17,  webappMsg.stepOut() )), '\n    </button>\n  </div>\n');20; } ; buf.push('\n\n');22; if (debugConsole) { ; buf.push('\n  <div id="debug-console" class="debug-console">\n    <textarea id="debug-output" readonly disabled tabindex=-1 class="debug-output"></textarea>\n    <span class="debug-input-prompt">\n      &gt;\n    </span>\n    <div contenteditable id="debug-input" class="debug-input"></div>\n  </div>\n');30; } ; buf.push('\n\n');32; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((35,  assetUrl('media/1x1.gif') )), '">', escape((35,  msg.finish() )), '\n    </button>\n  </div>\n');38; } ; buf.push('\n\n');40; if (debugButtons) { ; buf.push('\n</div>\n');42; } ; buf.push('\n'); })();
+ buf.push('');1; var msg = require('../../locale/sl_si/common') ; buf.push('\n');2; var webappMsg = require('../../locale/sl_si/webapp') ; buf.push('\n\n');4; if (debugButtons) { ; buf.push('\n<div>\n  <div id="debug-buttons" style="display:inline;">\n    <button id="pauseButton" class="share">\n      ', escape((8,  webappMsg.pause() )), '\n    </button>\n    <button id="stepInButton" class="share">\n      ', escape((11,  webappMsg.stepIn() )), '\n    </button>\n    <button id="stepOverButton" class="share">\n      ', escape((14,  webappMsg.stepOver() )), '\n    </button>\n    <button id="stepOutButton" class="share">\n      ', escape((17,  webappMsg.stepOut() )), '\n    </button>\n    <button id="viewDataButton" class="share">\n      ', escape((20,  webappMsg.viewData() )), '\n    </button>\n  </div>\n');23; } ; buf.push('\n\n');25; if (debugConsole) { ; buf.push('\n  <div id="debug-console" class="debug-console">\n    <textarea id="debug-output" readonly disabled tabindex=-1 class="debug-output"></textarea>\n    <span class="debug-input-prompt">\n      &gt;\n    </span>\n    <div contenteditable id="debug-input" class="debug-input"></div>\n  </div>\n');33; } ; buf.push('\n\n');35; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((38,  assetUrl('media/1x1.gif') )), '">', escape((38,  msg.finish() )), '\n    </button>\n  </div>\n');41; } ; buf.push('\n\n');43; if (debugButtons) { ; buf.push('\n</div>\n');45; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -10353,7 +10412,190 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/sl_si/common":40,"../../locale/sl_si/webapp":41,"ejs":42}],34:[function(require,module,exports){
+},{"../../locale/sl_si/common":41,"../../locale/sl_si/webapp":42,"ejs":43}],34:[function(require,module,exports){
+/**
+ * CodeOrgApp: Webapp
+ *
+ * Copyright 2014 Code.org
+ *
+ */
+
+'use strict';
+
+/**
+ * Namespace for form storage.
+ */ 
+var FormStorage = module.exports;
+
+
+/**
+ * Creates a new record in the specified table.
+ * @param {string} record.tableName The name of the table to read from.
+ * @param {Object} record Object containing other properties to store
+ *     on the record.
+ * @param {Function} callback Function to call with the resulting record.
+ */
+FormStorage.createRecord = function(record, callback) {
+  var tableName = record.tableName;
+  if (!tableName) {
+    // TODO(dave): remove console.log for IE9 compatability, here and below.
+    console.log('readRecords: missing required property "tableName"');
+    return;
+  }
+  FormStorage.fetchTableSecret(
+      tableName, 
+      putRecord.bind(this, record, callback));
+};
+
+var putRecord = function(record, callback, tableSecret) {
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = handlePutRecord.bind(req, record, callback, tableSecret);
+  var url = '//' + getFormDataHost() + '/v2/forms/CspTable/' + tableSecret +
+      '/children/CspRecord';
+  delete record.tableName;
+  var postData = {record_data_s: JSON.stringify(record)};
+  req.open('POST', url, true);
+  req.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
+  req.send(JSON.stringify(postData));
+};
+
+var handlePutRecord = function(record, callback, tableSecret) {
+  if (this.readyState !== 4) {
+    return;
+  }
+  if (this.status !== 201) {
+    console.log('unexpected http status ' + this.status);
+    return;
+  }
+  
+  // TODO(dave): merge tableSecret into record once XSS issues are resolved.
+  callback(record);
+};
+
+/**
+ * Reads records which match the searchParams specified by the user,
+ * and passes them to the callback.
+ * @param {string} searchParams.tableName The name of the table to read from.
+ * @param {string} searchParams.recordId Optional id of record to read.
+ * @param {Object} searchParams Other search criteria. Only records
+ *     whose contents match all criteria will be returned.
+ * @param {Function} callback Function to call with an array of record objects.
+ */
+FormStorage.readRecords = function(searchParams, callback) {
+  var tableName = searchParams.tableName;
+  if (!tableName) {
+    console.log('readRecords: missing required property "tableName"');
+    return;
+  }
+  // TODO(dave): optimization: call fetchRecords here if table data is cached.
+  FormStorage.fetchTableSecret(
+      tableName, 
+      fetchRecords.bind(this, tableName, searchParams, callback));
+};
+
+var fetchRecords = function(tableName, searchParams, callback, tableSecret) {
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = handleFetchRecords.bind(req, tableName,
+      searchParams, callback);
+  var url = '//' + getFormDataHost() + '/v2/forms/CspTable/' + tableSecret +
+      '/children/CspRecord';
+  req.open('GET', url, true);
+  req.send();
+};
+
+var handleFetchRecords = function(tableName, searchParams, callback) {
+  if (this.readyState !== 4) {
+    return;
+  }
+  if (this.status !== 200) {
+    console.log('readRecords failed with status ' + this.status);
+    return;
+  }
+  var forms = JSON.parse(this.responseText);
+  var records = forms.map(function(form) {
+    var record = JSON.parse(form.record_data_s);
+    record.tableName = tableName;
+    record.recordId = form.secret;
+    return record;
+  });
+  records = records.filter(function(record) {
+    for (var prop in searchParams) {
+      if (record[prop] !== searchParams[prop]) {
+        return false;
+      }
+    }
+    return true;
+  });
+  callback(records);
+};
+
+// Helper methods
+
+/**
+ * Retrieves the table secret for a given table name.
+ * @param {string} tableName Table name.
+ * @param {function(string)} callback Callback to call with the table secret.
+ */
+FormStorage.fetchTableSecret = function(tableName, callback) {
+  var req = new XMLHttpRequest();
+  req.onreadystatechange =
+      handleFetchTableSecret.bind(req, tableName, callback);
+  var url = '//' + getFormDataHost() + '/v2/forms/CspApp/' + 
+      FormStorage.getAppSecret() + '/children/CspTable';
+  req.open('GET', url, true);
+  req.send();
+};
+
+var handleFetchTableSecret = function(tableName, callback) {
+  if (this.readyState !== 4) {
+    return;
+  }
+  if (this.status !== 200) {
+    console.log('unexpected http status ' + this.status);
+    return;
+  }
+  var formData = JSON.parse(this.responseText);
+  if (!(formData instanceof Array)) {
+    console.log('formData is not an array');
+    return;
+  }
+
+  var tableData = formData.filter(function(table) {
+    return table.table_name_s === tableName;
+  });
+  var tableSecret = tableData[0] && tableData[0].secret;
+  if (!tableSecret) {
+    console.log('table not found: ' + tableName);
+    console.log(tableData);
+    return;
+  }
+  callback(tableSecret);
+};
+
+// TODO(dave): move this logic to dashboard.
+var getFormDataHost = function() {
+  // Forms api is already mapped to pegasus on all non-local deployments.
+  // Caveat: local api access only works with temporary hacks in place
+  // to set dashboard_user cookie and access-control-allow-origin header.
+  return window.location.hostname.split('.')[0] === 'localhost' ?
+      'localhost.code.org:9393' : window.location.hostname;
+};
+
+// TODO(dave): store secret with the app in the database.
+FormStorage.getAppSecret = function() {
+  var name = window.location.hostname.split('.')[0];
+  switch(name) {
+    case 'localhost':
+      return 'ededb6d4a8ced65f8a011ce0e194094e';
+    case 'staging':
+      return 'b0a06b8bbd7352a3fdb1b6738262defd';
+    default:
+      return null;
+  }
+};
+
+
+},{}],35:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/sl_si/webapp');
@@ -10386,7 +10628,7 @@ levels.simple = {
 levels.ec_simple = {
   'freePlay': true,
   'editCode': true,
-  'sliderSpeed': 1.0,
+  'sliderSpeed': 0.95,
   'codeFunctions': [
     {'func': 'attachEventHandler', 'title': 'Execute code in response to an event for the specified element', 'category': 'General', 'params': ["'id'", "'click'", "function() {\n  \n}"] },
     {'func': 'startWebRequest', 'title': 'Request data from the internet and execute code when the request is complete', 'category': 'General', 'params': ["'http://api.openweathermap.org/data/2.5/weather?q=London,uk'", "function(status, type, content) {\n  \n}"] },
@@ -10398,6 +10640,8 @@ levels.ec_simple = {
     {'func': 'setParent', 'title': 'Set an element to become a child of a parent element', 'category': 'General', 'params': ["'id'", "'parentId'"] },
     {'func': 'setPosition', 'title': 'Position an element with x, y, width, and height coordinates', 'category': 'General', 'params': ["'id'", "0", "0", "100", "100"] },
     {'func': 'setStyle', 'title': 'Add CSS style text to an element', 'category': 'General', 'params': ["'id'", "'color:red;'"] },
+    {'func': 'getAttribute', 'category': 'General', 'params': ["'id'", "'scrollHeight'"], 'type': 'value' },
+    {'func': 'setAttribute', 'category': 'General', 'params': ["'id'", "'scrollHeight'", "200"]},
     {'func': 'createButton', 'title': 'Create a button and assign it an element id', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
     {'func': 'createTextInput', 'title': 'Create a text input and assign it an element id', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
     {'func': 'createTextLabel', 'title': 'Create a text label, assign it an element id, and bind it to an associated element', 'category': 'UI Controls', 'params': ["'id'", "'text'", "'forId'"] },
@@ -10423,6 +10667,8 @@ levels.ec_simple = {
     {'func': 'canvasGetImageData', 'title': 'Get the ImageData for a rectangle (x, y, width, height) within a canvas', 'category': 'Canvas', 'params': ["'id'", "0", "0", "400", "600"], 'type': 'value' },
     {'func': 'canvasPutImageData', 'title': 'Set the ImageData for a rectangle within a canvas with x, y as the top left coordinates', 'category': 'Canvas', 'params': ["'id'", "imageData", "0", "0"] },
     {'func': 'canvasClear', 'title': 'Clear all data on a canvas', 'category': 'Canvas', 'params': ["'id'"] },
+    {'func': 'createRecord', 'category': 'General', 'params': ["{tableName: 'abc',name:'Alice',age:7,male:false}", "function(record) {\n  for (var prop in record) {\n    createHtmlBlock('id2', 'record.' + prop + ': ' + record[prop]);\n  }\n}"] },
+    {'func': 'readRecords', 'category': 'General', 'params': ["{tableName: 'abc',key1:'value1'}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    for (var prop in records[i]) {\n      createHtmlBlock('id2', 'records[' + i + '].' + prop + ': ' + records[i][prop]);\n    }\n  }\n}"] },
   ],
   'categoryInfo': {
     'General': {
@@ -10523,7 +10769,7 @@ levels.full_sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-},{"../../locale/sl_si/webapp":41,"../block_utils":5,"../utils":29}],35:[function(require,module,exports){
+},{"../../locale/sl_si/webapp":42,"../block_utils":5,"../utils":29}],36:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Webapp = require('./webapp');
@@ -10541,7 +10787,7 @@ window.webappMain = function(options) {
 };
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":3,"./blocks":31,"./levels":34,"./skins":36,"./webapp":38}],36:[function(require,module,exports){
+},{"../appMain":3,"./blocks":31,"./levels":35,"./skins":37,"./webapp":39}],37:[function(require,module,exports){
 /**
  * Load Skin for Webapp.
  */
@@ -10560,7 +10806,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":15}],37:[function(require,module,exports){
+},{"../skins":15}],38:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -10581,7 +10827,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":42}],38:[function(require,module,exports){
+},{"ejs":43}],39:[function(require,module,exports){
 /**
  * CodeOrgApp: Webapp
  *
@@ -10603,6 +10849,7 @@ var dom = require('../dom');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
 var Slider = require('../slider');
+var FormStorage = require('./formStorage');
 var _ = utils.getLodash();
 var Hammer = utils.getHammer();
 
@@ -10620,7 +10867,7 @@ StudioApp.CHECK_FOR_EMPTY_BLOCKS = true;
 //The number of blocks to show as feedback.
 StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
-var MAX_INTERPRETER_STEPS_PER_TICK = 200;
+var MAX_INTERPRETER_STEPS_PER_TICK = 10000;
 
 // Default Scalings
 Webapp.scale = {
@@ -10662,12 +10909,16 @@ var drawDiv = function () {
   visualizationColumn.style.width = divWidth + 'px';
 };
 
-function queueOnTick() {
+function getCurrentTickLength() {
   var stepSpeed = Webapp.scale.stepSpeed;
   if (Webapp.speedSlider) {
     stepSpeed = 300 * Math.pow(1 - Webapp.speedSlider.getValue(), 2);
   }
-  window.setTimeout(Webapp.onTick, stepSpeed);
+  return stepSpeed;
+}
+
+function queueOnTick() {
+  window.setTimeout(Webapp.onTick, getCurrentTickLength());
 }
 
 function outputWebappConsole(output) {
@@ -10766,6 +11017,8 @@ Webapp.onTick = function() {
   queueOnTick();
 
   var atInitialBreakpoint = Webapp.paused && Webapp.nextStep === StepType.IN && Webapp.tickCount === 1;
+  var atMaxSpeed = getCurrentTickLength() === 0;
+  Webapp.seenEmptyGetCallbackThisTick = false;
 
   if (Webapp.paused) {
     switch (Webapp.nextStep) {
@@ -10791,24 +11044,41 @@ Webapp.onTick = function() {
   }
 
   if (Webapp.interpreter) {
-    var doneUserCodeStep = false;
+    var doneUserLine = false;
+    var reachedBreak = false;
     var unwindingAfterStep = false;
     var inUserCode;
     var userCodeRow;
     var session = StudioApp.editor.aceEditor.getSession();
+    // NOTE: when running with no source visible or at max speed with blocks, we
+    // call a simple function to just get the line number, otherwise we call a
+    // function that also selects the code:
+    var selectCodeFunc =
+      (StudioApp.hideSource ||
+       (atMaxSpeed && !Webapp.paused && StudioApp.editor.currentlyUsingBlocks)) ?
+            codegen.getUserCodeLine :
+            codegen.selectCurrentCode;
 
     // In each tick, we will step the interpreter multiple times in a tight
     // loop as long as we are interpreting code that the user can't see
     // (function aliases at the beginning, getCallback event loop at the end)
     for (var stepsThisTick = 0;
-         stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK &&
-          (!doneUserCodeStep || unwindingAfterStep);
+         (stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK) || unwindingAfterStep;
          stepsThisTick++) {
-      userCodeRow = codegen.selectCurrentCode(Webapp.interpreter,
-                                              StudioApp.editor,
-                                              Webapp.cumulativeLength,
-                                              Webapp.userCodeStartOffset,
-                                              Webapp.userCodeLength);
+      if ((reachedBreak && !unwindingAfterStep) ||
+          (doneUserLine && !atMaxSpeed) ||
+          Webapp.seenEmptyGetCallbackThisTick) {
+        // stop stepping the interpreter and wait until the next tick once we:
+        // (1) reached a breakpoint and are done unwinding OR
+        // (2) completed a line of user code (while not running atMaxSpeed) OR
+        // (3) have seen an empty event queue in nativeGetCallback (no events)
+        break;
+      }
+      userCodeRow = selectCodeFunc(Webapp.interpreter,
+                                   Webapp.cumulativeLength,
+                                   Webapp.userCodeStartOffset,
+                                   Webapp.userCodeLength,
+                                   StudioApp.editor);
       inUserCode = (-1 !== userCodeRow);
       // Check to see if we've arrived at a new breakpoint:
       //  (1) should be in user code
@@ -10833,8 +11103,8 @@ Webapp.onTick = function() {
         Webapp.stoppedAtBreakpointRow = userCodeRow;
         Webapp.stoppedAtBreakpointStackDepth = Webapp.interpreter.stateStack.length;
 
-        // Mark doneUserCodeStep to stop stepping, and start unwinding if needed:
-        doneUserCodeStep = true;
+        // Mark reachedBreak to stop stepping, and start unwinding if needed:
+        reachedBreak = true;
         unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(Webapp.interpreter);
         continue;
       }
@@ -10854,7 +11124,7 @@ Webapp.onTick = function() {
       }
       try {
         Webapp.interpreter.step();
-        doneUserCodeStep = doneUserCodeStep ||
+        doneUserLine = doneUserLine ||
           (inUserCode && Webapp.interpreter.stateStack[0] && Webapp.interpreter.stateStack[0].done);
 
         // Remember the stack depths of call expressions (so we can implement 'step out')
@@ -10875,31 +11145,55 @@ Webapp.onTick = function() {
             }
           }
           // For the step in case, we want to stop the interpreter as soon as we enter the callee:
-          if (!doneUserCodeStep &&
+          if (!doneUserLine &&
               inUserCode &&
               Webapp.nextStep === StepType.IN &&
               Webapp.interpreter.stateStack.length > Webapp.firstCallStackDepthThisStep) {
-            doneUserCodeStep = true;
+            reachedBreak = true;
           }
           // After the interpreter says a node is "done" (meaning it is time to stop), we will
           // advance a little further to the start of the next statement. We achieve this by
           // continuing to set unwindingAfterStep to true to keep the loop going:
-          if (doneUserCodeStep) {
+          if (doneUserLine || reachedBreak) {
             var wasUnwinding = unwindingAfterStep;
             // step() additional times if we know it to be safe to get us to the next statement:
             unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(Webapp.interpreter);
             if (wasUnwinding && !unwindingAfterStep) {
               // done unwinding.. select code that is next to execute:
-              userCodeRow = codegen.selectCurrentCode(Webapp.interpreter,
-                                                      StudioApp.editor,
-                                                      Webapp.cumulativeLength,
-                                                      Webapp.userCodeStartOffset,
-                                                      Webapp.userCodeLength);
+              userCodeRow = selectCodeFunc(Webapp.interpreter,
+                                           Webapp.cumulativeLength,
+                                           Webapp.userCodeStartOffset,
+                                           Webapp.userCodeLength,
+                                           StudioApp.editor);
               inUserCode = (-1 !== userCodeRow);
               if (!inUserCode) {
                 // not in user code, so keep unwinding after all...
                 unwindingAfterStep = true;
               }
+            }
+          }
+
+          if ((reachedBreak || doneUserLine) && !unwindingAfterStep) {
+            if (Webapp.nextStep === StepType.OUT &&
+                Webapp.interpreter.stateStack.length > Webapp.stepOutToStackDepth) {
+              // trying to step out, but we didn't get out yet... continue on.
+            } else if (Webapp.nextStep === StepType.OVER &&
+                typeof Webapp.firstCallStackDepthThisStep !== 'undefined' &&
+                Webapp.interpreter.stateStack.length > Webapp.firstCallStackDepthThisStep) {
+              // trying to step over, and we're in deeper inside a function call... continue next onTick
+            } else {
+              // Our step operation is complete, reset nextStep to StepType.RUN to
+              // return to a normal 'break' state:
+              Webapp.nextStep = StepType.RUN;
+              if (inUserCode) {
+                // Store some properties about where we stopped:
+                Webapp.stoppedAtBreakpointRow = userCodeRow;
+                Webapp.stoppedAtBreakpointStackDepth = Webapp.interpreter.stateStack.length;
+              }
+              delete Webapp.stepOutToStackDepth;
+              delete Webapp.firstCallStackDepthThisStep;
+              document.getElementById('spinner').style.visibility = 'hidden';
+              break;
             }
           }
         }
@@ -10909,27 +11203,14 @@ Webapp.onTick = function() {
         return;
       }
     }
-    if (Webapp.paused) {
-      if (Webapp.nextStep === StepType.OUT &&
-          Webapp.interpreter.stateStack.length > Webapp.stepOutToStackDepth) {
-        // trying to step out, but we didn't get out yet... continue next onTick
-      } else if (Webapp.nextStep === StepType.OVER &&
-          typeof Webapp.firstCallStackDepthThisStep !== 'undefined' &&
-          Webapp.interpreter.stateStack.length > Webapp.firstCallStackDepthThisStep) {
-        // trying to step over, and we're in deeper inside a function call... continue next onTick
-      } else {
-        // Our step operation is complete, reset nextStep to StepType.RUN to
-        // return to a normal 'break' state:
-        Webapp.nextStep = StepType.RUN;
-        if (inUserCode) {
-          // Store some properties about where we stopped:
-          Webapp.stoppedAtBreakpointRow = userCodeRow;
-          Webapp.stoppedAtBreakpointStackDepth = Webapp.interpreter.stateStack.length;
-        }
-        delete Webapp.stepOutToStackDepth;
-        delete Webapp.firstCallStackDepthThisStep;
-        document.getElementById('spinner').style.visibility = 'hidden';
-      }
+    if (reachedBreak && atMaxSpeed) {
+      // If we were running atMaxSpeed and just reached a breakpoint, the
+      // code may not be selected in the editor, so do it now:
+      codegen.selectCurrentCode(Webapp.interpreter,
+                                Webapp.cumulativeLength,
+                                Webapp.userCodeStartOffset,
+                                Webapp.userCodeLength,
+                                StudioApp.editor);
     }
   } else {
     if (Webapp.tickCount === 1) {
@@ -10967,6 +11248,11 @@ Webapp.init = function(config) {
   level = config.level;
 
   loadLevel();
+
+  if (StudioApp.hideSource) {
+    // always run at max speed if source is hidden
+    config.level.sliderSpeed = 1.0;
+  }
 
   Webapp.canvasScale = (window.devicePixelRatio > 1) ? window.devicePixelRatio : 1;
 
@@ -11085,6 +11371,10 @@ Webapp.init = function(config) {
       dom.addClickTouchEvent(stepInButton, Webapp.onStepInButton);
       dom.addClickTouchEvent(stepOverButton, Webapp.onStepOverButton);
       dom.addClickTouchEvent(stepOutButton, Webapp.onStepOutButton);
+    }
+    var viewDataButton = document.getElementById('viewDataButton');
+    if (viewDataButton) {
+      dom.addClickTouchEvent(viewDataButton, Webapp.onViewData);
     }
   }
 
@@ -11280,7 +11570,11 @@ var defineProcedures = function (blockType) {
  * optionally, callback arguments (stored in "arguments")
  */
 var nativeGetCallback = function () {
-  return Webapp.eventQueue.shift();
+  var retVal = Webapp.eventQueue.shift();
+  if (typeof retVal === "undefined") {
+    Webapp.seenEmptyGetCallbackThisTick = true;
+  }
+  return retVal;
 };
 
 var consoleApi = {};
@@ -11487,6 +11781,12 @@ Webapp.onStepOutButton = function() {
 Webapp.feedbackImage = '';
 Webapp.encodedFeedbackImage = '';
 
+Webapp.onViewData = function() {
+  window.open(
+    '//' + getPegasusHost() + '/edit-csp-app/' + FormStorage.getAppSecret(),
+    '_blank');
+};
+
 Webapp.onPuzzleComplete = function() {
   if (Webapp.executionError) {
     Webapp.result = StudioApp.ResultType.ERROR;
@@ -11603,6 +11903,8 @@ Webapp.callCmd = function (cmd) {
     case 'createCheckbox':
     case 'createRadio':
     case 'createDropdown':
+    case 'getAttribute':
+    case 'setAttribute':
     case 'getText':
     case 'setText':
     case 'getChecked':
@@ -11617,6 +11919,8 @@ Webapp.callCmd = function (cmd) {
     case 'startWebRequest':
     case 'setTimeout':
     case 'clearTimeout':
+    case 'createRecord':
+    case 'readRecords':
       StudioApp.highlight(cmd.id);
       retVal = Webapp[cmd.name](cmd.opts);
       break;
@@ -11738,6 +12042,7 @@ Webapp.canvasDrawRect = function (opts) {
   var canvas = document.getElementById(opts.elementId);
   var ctx = canvas.getContext("2d");
   if (ctx && divWebapp.contains(canvas)) {
+    ctx.beginPath();
     ctx.rect(opts.x * Webapp.canvasScale,
              opts.y * Webapp.canvasScale,
              opts.width * Webapp.canvasScale,
@@ -11807,6 +12112,7 @@ Webapp.canvasDrawImage = function (opts) {
     if (opts.height) {
       yScale = yScale * (opts.height / image.height);
     }
+    ctx.save();
     ctx.setTransform(xScale,
                      0,
                      0,
@@ -11814,6 +12120,7 @@ Webapp.canvasDrawImage = function (opts) {
                      opts.x * Webapp.canvasScale,
                      opts.y * Webapp.canvasScale);
     ctx.drawImage(image, 0, 0);
+    ctx.restore();
     return true;
   }
   return false;
@@ -11910,6 +12217,29 @@ Webapp.createDropdown = function (opts) {
   newSelect.id = opts.elementId;
 
   return Boolean(divWebapp.appendChild(newSelect));
+};
+
+Webapp.getAttribute = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var element = document.getElementById(opts.elementId);
+  var attribute = String(opts.attribute);
+  return divWebapp.contains(element) ? element[attribute] : false;
+};
+
+// Whitelist of HTML Element attributes which can be modified, to
+// prevent DOM manipulation which would violate the sandbox.
+Webapp.mutableAttributes = ['innerHTML', 'scrollTop'];
+
+Webapp.setAttribute = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var element = document.getElementById(opts.elementId);
+  var attribute = String(opts.attribute);
+  if (divWebapp.contains(element) &&
+      Webapp.mutableAttributes.indexOf(attribute) !== -1) {
+    element[attribute] = opts.value;
+    return true;
+  }
+  return false;
 };
 
 Webapp.getText = function (opts) {
@@ -12140,6 +12470,34 @@ Webapp.clearTimeout = function (opts) {
   window.clearTimeout(opts.timeoutId);
 };
 
+Webapp.createRecord = function (opts) {
+  var record = codegen.marshalInterpreterToNative(Webapp.interpreter,
+      opts.record);
+  FormStorage.createRecord(record,
+      Webapp.handleCreateRecord.bind(this, opts.callback));
+};
+
+Webapp.handleCreateRecord = function(interpreterCallback, record) {
+  Webapp.eventQueue.push({
+    'fn': interpreterCallback,
+    'arguments': [record]
+  });
+};
+
+Webapp.readRecords = function (opts) {
+  var searchParams = codegen.marshalInterpreterToNative(Webapp.interpreter,
+      opts.searchParams);
+  FormStorage.readRecords(
+      searchParams,
+      Webapp.handleReadRecords.bind(this, opts.callback));
+};
+
+Webapp.handleReadRecords = function(interpreterCallback, records) {
+  Webapp.eventQueue.push({
+    'fn': interpreterCallback,
+    'arguments': [records]
+  });
+};
 
 /*
 var onWaitComplete = function (opts) {
@@ -12200,6 +12558,28 @@ var checkFinished = function () {
   }
 
   return false;
+};
+
+// TODO(dave): move this logic to dashboard.
+var getPegasusHost = function() {
+  switch (window.location.hostname) {
+    case 'studio.code.org':
+    case 'learn.code.org':
+      return 'code.org';
+    default:
+      var name = window.location.hostname.split('.')[0];
+      switch(name) {
+        case 'localhost':
+          return 'localhost.code.org:9393';
+        case 'development':
+        case 'staging':
+        case 'test':
+        case 'levelbuilder':
+          return name + '.code.org';
+        default:
+          return null;
+      }
+  }
 };
 
 /*jshint asi:true */
@@ -12388,7 +12768,7 @@ var checkFinished = function () {
         return Array(multiplier + 1).join(input)
     }
 
-},{"../../locale/sl_si/common":40,"../../locale/sl_si/webapp":41,"../base":4,"../codegen":7,"../dom":9,"../skins":15,"../slider":16,"../templates/page.html":23,"../utils":29,"../xml":39,"./api":30,"./blocks":31,"./controls.html":32,"./extraControlRows.html":33,"./visualization.html":37}],39:[function(require,module,exports){
+},{"../../locale/sl_si/common":41,"../../locale/sl_si/webapp":42,"../base":4,"../codegen":7,"../dom":9,"../skins":15,"../slider":16,"../templates/page.html":23,"../utils":29,"../xml":40,"./api":30,"./blocks":31,"./controls.html":32,"./extraControlRows.html":33,"./formStorage":34,"./visualization.html":38}],40:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -12416,7 +12796,7 @@ exports.parseElement = function(text) {
   return element;
 };
 
-},{}],40:[function(require,module,exports){
+},{}],41:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.sl = function (n) {
   if ((n % 100) == 1) {
     return 'one';
@@ -12612,7 +12992,7 @@ exports.toggleBlocksErrorMsg = function(d){return "You need to correct an error 
 exports.defaultTwitterText = function(d){return "Poglej, kaj sem naredil"};
 
 
-},{"messageformat":53}],41:[function(require,module,exports){
+},{"messageformat":54}],42:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.sl = function (n) {
   if ((n % 100) == 1) {
     return 'one';
@@ -12679,10 +13059,12 @@ exports.turnBlack = function(d){return "postani črn"};
 
 exports.turnBlackTooltip = function(d){return "Zatemni zaslon."};
 
+exports.viewData = function(d){return "View Data"};
+
 exports.yes = function(d){return "Da"};
 
 
-},{"messageformat":53}],42:[function(require,module,exports){
+},{"messageformat":54}],43:[function(require,module,exports){
 
 /*!
  * EJS
@@ -13041,7 +13423,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":43,"./utils":44,"fs":45,"path":46}],43:[function(require,module,exports){
+},{"./filters":44,"./utils":45,"fs":46,"path":47}],44:[function(require,module,exports){
 /*!
  * EJS - Filters
  * Copyright(c) 2010 TJ Holowaychuk <tj@vision-media.ca>
@@ -13244,7 +13626,7 @@ exports.json = function(obj){
   return JSON.stringify(obj);
 };
 
-},{}],44:[function(require,module,exports){
+},{}],45:[function(require,module,exports){
 
 /*!
  * EJS
@@ -13270,9 +13652,9 @@ exports.escape = function(html){
 };
  
 
-},{}],45:[function(require,module,exports){
-
 },{}],46:[function(require,module,exports){
+
+},{}],47:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -13500,7 +13882,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require("JkpR2F"))
-},{"JkpR2F":47}],47:[function(require,module,exports){
+},{"JkpR2F":48}],48:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -13565,7 +13947,7 @@ process.chdir = function (dir) {
     throw new Error('process.chdir is not supported');
 };
 
-},{}],48:[function(require,module,exports){
+},{}],49:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -14076,7 +14458,7 @@ process.chdir = function (dir) {
 }(this));
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],49:[function(require,module,exports){
+},{}],50:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -14162,7 +14544,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],50:[function(require,module,exports){
+},{}],51:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -14249,13 +14631,13 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],51:[function(require,module,exports){
+},{}],52:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":49,"./encode":50}],52:[function(require,module,exports){
+},{"./decode":50,"./encode":51}],53:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -14964,7 +15346,7 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":48,"querystring":51}],53:[function(require,module,exports){
+},{"punycode":49,"querystring":52}],54:[function(require,module,exports){
 /**
  * messageformat.js
  *
@@ -16547,4 +16929,4 @@ function isNullOrUndefined(arg) {
 
 })( this );
 
-},{}]},{},[35])
+},{}]},{},[36])
