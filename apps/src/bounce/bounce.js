@@ -478,20 +478,20 @@ Bounce.onTick = function() {
   }
 
   // Run key event handlers for any keys that are down:
-  for (var key in Keycodes) {
-    if (Bounce.keyState[Keycodes[key]] &&
-        Bounce.keyState[Keycodes[key]] == "keydown") {
-      switch (Keycodes[key]) {
-        case Keycodes.LEFT:
+  for (var key in KeyCodes) {
+    if (Bounce.keyState[KeyCodes[key]] &&
+        Bounce.keyState[KeyCodes[key]] == "keydown") {
+      switch (KeyCodes[key]) {
+        case KeyCodes.LEFT:
           Bounce.callUserGeneratedCode(Bounce.whenLeft);
           break;
-        case Keycodes.UP:
+        case KeyCodes.UP:
           Bounce.callUserGeneratedCode(Bounce.whenUp);
           break;
-        case Keycodes.RIGHT:
+        case KeyCodes.RIGHT:
           Bounce.callUserGeneratedCode(Bounce.whenRight);
           break;
-        case Keycodes.DOWN:
+        case KeyCodes.DOWN:
           Bounce.callUserGeneratedCode(Bounce.whenDown);
           break;
       }
