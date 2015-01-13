@@ -264,83 +264,9 @@ angular: teacherDashboard
       student.editing = true;
     };
 
-    $scope.progressLoaded = false;
-
-    // wait until we have both the students and the student progress
-    $q.all([$scope.progress.$promise, $scope.section.$promise]).then(function(data){
-      $scope.mergeProgress();
-      $scope.progressLoaded = true;
-    });
-
-    $scope.displayAllStages = function() {
-      for (var i = 0; i < $scope.progress.script.stages.length; i++) {
-        $scope.progress.script.stages[i].shouldShow = true;
-      }
-    }
-
-    $scope.displayOnlyStage = function(stage) {
-      for (var i = 0; i < $scope.progress.script.stages.length; i++) {
-        if (stage == $scope.progress.script.stages[i]) {
-          $scope.progress.script.stages[i].shouldShow = true;
-        } else {
-          $scope.progress.script.stages[i].shouldShow = false;
-        }
-      }
-    }
-
-
-    // merge the data returned by progress api into the data returned by the section students api
-    $scope.mergeProgress = function() {
-      // display all stages
-      $scope.displayAllStages();
-
-      // calculate width of each level in the progress bar assuming the overall width is 780 px
-      $scope.progress.bar_width = Math.floor(780 / $scope.progress.script.levels_count);
-
-      // Takes the level's position in the script, and returns its level number in its stage
-      var getLevelNumberInStage = function(overallLevel) {
-        for (var i = 0; i < $scope.progress.script.stages.length; i++) {
-          var stage = $scope.progress.script.stages[i];
-          if (overallLevel < stage.length)
-            return overallLevel + 1;
-          else
-            overallLevel -= stage.length;
-        }
-
-        return 0;
-      }
-
-      // Put levels on the student object
-      for (var i = 0; i < $scope.section.students.length; i++) {
-        var student = $scope.section.students[i];
-
-        // default is no progress
-        student.levels = [];
-        student.highest_level = -1; // not started yet
-        student.highest_level_in_stage = 0;
-
-        // if we have progress
-        var progress_student = $.grep($scope.progress.students, function(e){ return e.id == student.id; })[0];
-        if (progress_student) {
-          student.levels = progress_student.levels;
-
-          // find the last level attempted
-          for (var l = student.levels.length - 1; l >= 0; l--) {
-            var delayedSetHighestLevel = function(student, l) {
-              return function() {
-                student.highest_level = l;
-                student.highest_level_in_stage = getLevelNumberInStage(l);
-              };
-            };
-
-            if (student.levels[l]) {
-              $timeout(delayedSetHighestLevel(student, l), 500); // add a delay so we get animation
-              break;
-            }
-          }
-        }   
-      }
-    }
+    $scope.init_progress = function() {
+      progressLoaded();
+    };
 
     $scope.resetSecrets = function(student) {
       var newStudent = studentsService.update({id: student.id}, {secrets: 'reset'});
