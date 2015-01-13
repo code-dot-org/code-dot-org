@@ -18,8 +18,8 @@ var page = require('../templates/page.html');
 var dom = require('../dom');
 var Hammer = require('../hammer');
 var utils = require('../utils');
-var Constants = require('../constants');
-var KeyCodes = Constants.KeyCodes;
+var constants = require('../constants');
+var KeyCodes = constants.KeyCodes;
 
 var Direction = tiles.Direction;
 var SquareType = tiles.SquareType;

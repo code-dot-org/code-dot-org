@@ -28,9 +28,9 @@ var msg = require('../locale/current/common');
 var dom = require('./dom');
 var xml = require('./xml');
 var FeedbackBlocks = require('./feedbackBlocks');
-var Constants = require('./constants');
-var TestResults = Constants.TestResults;
-var KeyCodes = Constants.KeyCodes;
+var constants = require('./constants');
+var TestResults = constants.TestResults;
+var KeyCodes = constants.KeyCodes;
 
 /**
  *
