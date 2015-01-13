@@ -7,7 +7,7 @@
 
 'use strict';
 
-var StudioApp = require('../StudioApp');
+var studioAppSingleton = require('../StudioApp');
 var commonMsg = require('../../locale/current/common');
 var webappMsg = require('../../locale/current/webapp');
 var skins = require('../skins');
@@ -25,6 +25,9 @@ var KeyCodes = constants.KeyCodes;
 var _ = utils.getLodash();
 var Hammer = utils.getHammer();
 
+var ResultType = studioAppSingleton.ResultType;
+var TestResults = studioAppSingleton.TestResults;
+
 /**
  * Create a namespace for the application.
  */
@@ -34,10 +37,10 @@ var level;
 var skin;
 
 //TODO: Make configurable.
-StudioApp.CHECK_FOR_EMPTY_BLOCKS = true;
+studioAppSingleton.CHECK_FOR_EMPTY_BLOCKS = true;
 
 //The number of blocks to show as feedback.
-StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
+studioAppSingleton.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 10000;
 
@@ -141,12 +144,12 @@ function onDebugInputKeyDown(e) {
 }
 
 function selectEditorRowCol(row, col) {
-  if (StudioApp.editor.currentlyUsingBlocks) {
+  if (studioAppSingleton.editor.currentlyUsingBlocks) {
     var style = {color: '#FFFF22'};
-    StudioApp.editor.clearLineMarks();
-    StudioApp.editor.markLine(row, style);
+    studioAppSingleton.editor.clearLineMarks();
+    studioAppSingleton.editor.markLine(row, style);
   } else {
-    var selection = StudioApp.editor.aceEditor.getSelection();
+    var selection = studioAppSingleton.editor.aceEditor.getSelection();
     var range = selection.getRange();
 
     range.start.row = row;
@@ -217,13 +220,13 @@ Webapp.onTick = function() {
     var unwindingAfterStep = false;
     var inUserCode;
     var userCodeRow;
-    var session = StudioApp.editor.aceEditor.getSession();
+    var session = studioAppSingleton.editor.aceEditor.getSession();
     // NOTE: when running with no source visible or at max speed with blocks, we
     // call a simple function to just get the line number, otherwise we call a
     // function that also selects the code:
     var selectCodeFunc =
-      (StudioApp.hideSource ||
-       (atMaxSpeed && !Webapp.paused && StudioApp.editor.currentlyUsingBlocks)) ?
+      (studioAppSingleton.hideSource ||
+       (atMaxSpeed && !Webapp.paused && studioAppSingleton.editor.currentlyUsingBlocks)) ?
             codegen.getUserCodeLine :
             codegen.selectCurrentCode;
 
@@ -246,7 +249,7 @@ Webapp.onTick = function() {
                                    Webapp.cumulativeLength,
                                    Webapp.userCodeStartOffset,
                                    Webapp.userCodeLength,
-                                   StudioApp.editor);
+                                   studioAppSingleton.editor);
       inUserCode = (-1 !== userCodeRow);
       // Check to see if we've arrived at a new breakpoint:
       //  (1) should be in user code
@@ -332,7 +335,7 @@ Webapp.onTick = function() {
                                            Webapp.cumulativeLength,
                                            Webapp.userCodeStartOffset,
                                            Webapp.userCodeLength,
-                                           StudioApp.editor);
+                                           studioAppSingleton.editor);
               inUserCode = (-1 !== userCodeRow);
               if (!inUserCode) {
                 // not in user code, so keep unwinding after all...
@@ -378,11 +381,11 @@ Webapp.onTick = function() {
                                 Webapp.cumulativeLength,
                                 Webapp.userCodeStartOffset,
                                 Webapp.userCodeLength,
-                                StudioApp.editor);
+                                studioAppSingleton.editor);
     }
   } else {
     if (Webapp.tickCount === 1) {
-      try { Webapp.whenRunFunc(StudioApp, api, Webapp.Globals); } catch (e) { }
+      try { Webapp.whenRunFunc(studioAppSingleton, api, Webapp.Globals); } catch (e) { }
     }
   }
 
@@ -404,7 +407,7 @@ Webapp.initReadonly = function(config) {
 
   // Webapp.initMinimal();
 
-  StudioApp.initReadonly(config);
+  studioAppSingleton.initReadonly(config);
 };
 
 /**
@@ -417,7 +420,7 @@ Webapp.init = function(config) {
 
   loadLevel();
 
-  if (StudioApp.hideSource) {
+  if (studioAppSingleton.hideSource) {
     // always run at max speed if source is hidden
     config.level.sliderSpeed = 1.0;
   }
@@ -429,21 +432,21 @@ Webapp.init = function(config) {
   var showDebugConsole = !config.hide_source && config.level.editCode;
   var finishButtonFirstLine = _.isEmpty(level.softButtons) && !showSlider;
   var firstControlsRow = require('./controls.html')({
-    assetUrl: StudioApp.assetUrl,
+    assetUrl: studioAppSingleton.assetUrl,
     showSlider: showSlider,
     finishButton: finishButtonFirstLine
   });
   var extraControlsRow = require('./extraControlRows.html')({
-    assetUrl: StudioApp.assetUrl,
+    assetUrl: studioAppSingleton.assetUrl,
     finishButton: !finishButtonFirstLine,
     debugButtons: showDebugButtons,
     debugConsole: showDebugConsole
   });
 
   config.html = page({
-    assetUrl: StudioApp.assetUrl,
+    assetUrl: studioAppSingleton.assetUrl,
     data: {
-      localeDirection: StudioApp.localeDirection(),
+      localeDirection: studioAppSingleton.localeDirection(),
       visualization: require('./visualization.html')(),
       controls: firstControlsRow,
       extraControlRows: extraControlsRow,
@@ -455,13 +458,13 @@ Webapp.init = function(config) {
   });
 
   config.loadAudio = function() {
-    StudioApp.loadAudio(skin.winSound, 'win');
-    StudioApp.loadAudio(skin.startSound, 'start');
-    StudioApp.loadAudio(skin.failureSound, 'failure');
+    studioAppSingleton.loadAudio(skin.winSound, 'win');
+    studioAppSingleton.loadAudio(skin.startSound, 'start');
+    studioAppSingleton.loadAudio(skin.failureSound, 'failure');
   };
 
   config.afterInject = function() {
-    if (StudioApp.usingBlockly) {
+    if (studioAppSingleton.usingBlockly) {
       /**
        * The richness of block colours, regardless of the hue.
        * MOOC blocks should be brighter (target audience is younger).
@@ -474,7 +477,7 @@ Webapp.init = function(config) {
     } else {
       // Set up an event handler to create breakpoints when clicking in the
       // ace gutter:
-      var aceEditor = StudioApp.editor.aceEditor;
+      var aceEditor = studioAppSingleton.editor.aceEditor;
       if (aceEditor) {
         aceEditor.on("guttermousedown", function(e) {
           var target = e.domEvent.target;
@@ -507,7 +510,7 @@ Webapp.init = function(config) {
 
   // Webapp.initMinimal();
 
-  StudioApp.init(config);
+  studioAppSingleton.init(config);
 
   if (level.editCode) {
     // Initialize the slider.
@@ -546,9 +549,9 @@ Webapp.init = function(config) {
     }
   }
 
-  if (StudioApp.share) {
+  if (studioAppSingleton.share) {
     // automatically run in share mode:
-    window.setTimeout(StudioApp.runButtonClick, 0);
+    window.setTimeout(studioAppSingleton.runButtonClick, 0);
   }
 };
 
@@ -582,7 +585,7 @@ Webapp.clearEventHandlersKillTickLoop = function() {
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
  */
-StudioApp.reset = function(first) {
+studioAppSingleton.reset = function(first) {
   var i;
   Webapp.clearEventHandlersKillTickLoop();
 
@@ -658,22 +661,22 @@ StudioApp.reset = function(first) {
  * Click the run button.  Start the program.
  */
 // XXX This is the only method used by the templates!
-StudioApp.runButtonClick = function() {
+studioAppSingleton.runButtonClick = function() {
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
   // Ensure that Reset button is at least as wide as Run button.
   if (!resetButton.style.minWidth) {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
-  StudioApp.toggleRunReset('reset');
-  if (StudioApp.usingBlockly) {
+  studioAppSingleton.toggleRunReset('reset');
+  if (studioAppSingleton.usingBlockly) {
     Blockly.mainBlockSpace.traceOn(true);
   }
-  StudioApp.reset(false);
-  StudioApp.attempts++;
+  studioAppSingleton.reset(false);
+  studioAppSingleton.attempts++;
   Webapp.execute();
 
-  if (level.freePlay && !StudioApp.hideSource) {
+  if (level.freePlay && !studioAppSingleton.hideSource) {
     var shareCell = document.getElementById('share-cell');
     shareCell.className = 'share-cell-enabled';
   }
@@ -681,11 +684,11 @@ StudioApp.runButtonClick = function() {
 
 /**
  * App specific displayFeedback function that calls into
- * StudioApp.displayFeedback when appropriate
+ * studioAppSingleton.displayFeedback when appropriate
  */
 var displayFeedback = function() {
   if (!Webapp.waitingForReport) {
-    StudioApp.displayFeedback({
+    studioAppSingleton.displayFeedback({
       app: 'webapp', //XXX
       skin: skin.id,
       feedbackType: Webapp.testResults,
@@ -725,7 +728,7 @@ var defineProcedures = function (blockType) {
   // TODO: handle editCode JS interpreter
   try { codegen.evalWith(code, {
                          codeFunctions: level.codeFunctions,
-                         StudioApp: StudioApp,
+                         studioAppSingleton: studioAppSingleton,
                          Studio: api,
                          Globals: Webapp.Globals } ); } catch (e) { }
 };
@@ -797,15 +800,15 @@ var mathFunctions = [
  * Execute the app
  */
 Webapp.execute = function() {
-  Webapp.result = StudioApp.ResultType.UNSET;
-  Webapp.testResults = StudioApp.TestResults.NO_TESTS_RUN;
+  Webapp.result = ResultType.UNSET;
+  Webapp.testResults = TestResults.NO_TESTS_RUN;
   Webapp.waitingForReport = false;
   Webapp.response = null;
   var i;
 
-  StudioApp.playAudio('start');
+  studioAppSingleton.playAudio('start');
 
-  StudioApp.reset(false);
+  studioAppSingleton.reset(false);
 
   // Set event handlers and start the onTick timer
 
@@ -815,13 +818,13 @@ Webapp.execute = function() {
     codeWhenRun += utils.generateCodeAliases(mathFunctions, 'Math');
     Webapp.userCodeStartOffset = codeWhenRun.length;
     Webapp.userCodeLineOffset = codeWhenRun.split("\n").length - 1;
-    codeWhenRun += StudioApp.editor.getValue();
+    codeWhenRun += studioAppSingleton.editor.getValue();
     Webapp.userCodeLength = codeWhenRun.length - Webapp.userCodeStartOffset;
     // Append our mini-runtime after the user's code. This will spin and process
     // callback functions:
     codeWhenRun += '\nwhile (true) { var obj = getCallback(); ' +
       'if (obj) { obj.fn.apply(null, obj.arguments ? obj.arguments : null); }}';
-    var session = StudioApp.editor.aceEditor.getSession();
+    var session = studioAppSingleton.editor.aceEditor.getSession();
     Webapp.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
   } else {
     // Define any top-level procedures the user may have created
@@ -843,7 +846,7 @@ Webapp.execute = function() {
       // Use JS interpreter on editCode levels
       var initFunc = function(interpreter, scope) {
         codegen.initJSInterpreter(interpreter, scope, {
-                                          StudioApp: StudioApp,
+                                          StudioApp: studioAppSingleton,
                                           Webapp: api,
                                           console: consoleApi,
                                           JSON: JSONApi,
@@ -869,7 +872,7 @@ Webapp.execute = function() {
       }
     } else {
       Webapp.whenRunFunc = codegen.functionFromCode(codeWhenRun, {
-                                          StudioApp: StudioApp,
+                                          StudioApp: studioAppSingleton,
                                           Webapp: api,
                                           Globals: Webapp.Globals } );
     }
@@ -930,7 +933,7 @@ Webapp.onStepOverButton = function() {
 
 Webapp.onStepInButton = function() {
   if (!Webapp.running) {
-    StudioApp.runButtonClick();
+    studioAppSingleton.runButtonClick();
     Webapp.onPauseButton();
   }
   Webapp.paused = true;
@@ -957,9 +960,9 @@ Webapp.onViewData = function() {
 
 Webapp.onPuzzleComplete = function() {
   if (Webapp.executionError) {
-    Webapp.result = StudioApp.ResultType.ERROR;
+    Webapp.result = ResultType.ERROR;
   } else if (level.freePlay) {
-    Webapp.result = StudioApp.ResultType.SUCCESS;
+    Webapp.result = ResultType.SUCCESS;
   }
 
   // Stop everything on screen
@@ -967,16 +970,16 @@ Webapp.onPuzzleComplete = function() {
 
   // If the current level is a free play, always return the free play result
   if (level.freePlay) {
-    Webapp.testResults = StudioApp.TestResults.FREE_PLAY;
+    Webapp.testResults = TestResults.FREE_PLAY;
   } else {
-    var levelComplete = (Webapp.result === StudioApp.ResultType.SUCCESS);
-    Webapp.testResults = StudioApp.getTestResults(levelComplete);
+    var levelComplete = (Webapp.result === ResultType.SUCCESS);
+    Webapp.testResults = studioAppSingleton.getTestResults(levelComplete);
   }
 
-  if (Webapp.testResults >= StudioApp.TestResults.FREE_PLAY) {
-    StudioApp.playAudio('win');
+  if (Webapp.testResults >= TestResults.FREE_PLAY) {
+    studioAppSingleton.playAudio('win');
   } else {
-    StudioApp.playAudio('failure');
+    studioAppSingleton.playAudio('failure');
   }
 
   var program;
@@ -988,7 +991,7 @@ Webapp.onPuzzleComplete = function() {
     // do an acorn.parse and then use escodegen to generate back a "clean" version
     // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
 
-    program = StudioApp.editor.getValue();
+    program = studioAppSingleton.editor.getValue();
   } else {
     var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
     program = Blockly.Xml.domToText(xml);
@@ -997,10 +1000,10 @@ Webapp.onPuzzleComplete = function() {
   Webapp.waitingForReport = true;
 
   var sendReport = function() {
-    StudioApp.report({
+    studioAppSingleton.report({
       app: 'webapp',
       level: level.id,
-      result: Webapp.result === StudioApp.ResultType.SUCCESS,
+      result: Webapp.result === ResultType.SUCCESS,
       testResult: Webapp.testResults,
       program: encodeURIComponent(program),
       image: Webapp.encodedFeedbackImage,
@@ -1046,7 +1049,7 @@ Webapp.callCmd = function (cmd) {
     /*
     case 'wait':
       if (!cmd.opts.started) {
-        StudioApp.highlight(cmd.id);
+        studioAppSingleton.highlight(cmd.id);
       }
       return Studio.wait(cmd.opts);
     */
@@ -1089,7 +1092,7 @@ Webapp.callCmd = function (cmd) {
     case 'clearTimeout':
     case 'createRecord':
     case 'readRecords':
-      StudioApp.highlight(cmd.id);
+      studioAppSingleton.highlight(cmd.id);
       retVal = Webapp[cmd.name](cmd.opts);
       break;
   }
@@ -1703,25 +1706,25 @@ Webapp.timedOut = function() {
 var checkFinished = function () {
   // if we have a succcess condition and have accomplished it, we're done and successful
   if (level.goal && level.goal.successCondition && level.goal.successCondition()) {
-    Webapp.result = StudioApp.ResultType.SUCCESS;
+    Webapp.result = ResultType.SUCCESS;
     return true;
   }
 
   // if we have a failure condition, and it's been reached, we're done and failed
   if (level.goal && level.goal.failureCondition && level.goal.failureCondition()) {
-    Webapp.result = StudioApp.ResultType.FAILURE;
+    Webapp.result = ResultType.FAILURE;
     return true;
   }
 
   /*
   if (Webapp.allGoalsVisited()) {
-    Webapp.result = StudioApp.ResultType.SUCCESS;
+    Webapp.result = ResultType.SUCCESS;
     return true;
   }
   */
 
   if (Webapp.timedOut()) {
-    Webapp.result = StudioApp.ResultType.FAILURE;
+    Webapp.result = ResultType.FAILURE;
     return true;
   }
 
