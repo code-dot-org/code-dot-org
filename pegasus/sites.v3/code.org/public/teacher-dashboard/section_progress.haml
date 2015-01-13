@@ -168,16 +168,16 @@ theme: none
   %tr.progressheader  
     %td.studentname
     %td
-      .stage{"ng-repeat" => "stage in progress.script.stages", style: "width: {{progress.bar_width * stage.length}}px"}
+      .stage{"ng-repeat" => "stage in progress.script.stages", style: "width: {{progress.bar_width * stage.length}}px", "ng-show" => "stage.shouldShow", "ng-click" => "displayOnlyStage(stage)"}
         {{stage.title}}
   %tr.studentrow{"ng-repeat" => "student in section.students | orderBy:order"}
     %td.studentname
       %a{"ng-href" => "#/sections/{{section.id}}/student/{{student.id}}"} {{student.name}}
     %td.studentzone
-      .stage{"ng-repeat" => "stage in progress.script.stages", style: "width: {{progress.bar_width * stage.length}}px"}
+      .stage{"ng-repeat" => "stage in progress.script.stages", style: "width: {{progress.bar_width * stage.length}}px", "ng-show" => "stage.shouldShow", "ng-click" => "displayOnlyStage(stage)"}
         &nbsp;    
       .studentbar{id: "studentbar_{{student.id}}"}
-        .bar{'ng-repeat' => 'level in student.levels track by $index', title: '{{level.title}}', class: '{{level.class}}', style: 'width: {{progress.bar_width}}px'}
+        .bar{'ng-repeat' => 'level in student.levels track by $index', title: '{{level.title}}', class: '{{level.class}}', style: 'width: {{progress.bar_width}}px', "ng-show" => "stage.shouldShow", "ng-click" => "displayOnlyStage(stage)"}
           &nbsp;
       .studentdot{style: "left: {{progress.bar_width * (student.highest_level + 0.5)}}px; padding-top:4px; padding-bottom:4px", id: "studentdot_{{student.id}}"}
         .dot{class: '{{student.levels[student.highest_level].class}}'}

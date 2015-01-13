@@ -83,7 +83,6 @@ angular: teacherDashboard
          update: {method:'POST', url: 'v2/sections/:id/update'},
          addStudents: {method:'POST', url:'/v2/sections/:id/students', isArray: true},
          removeStudent: {method:'DELETE', url:'/v2/sections/:id/students/:studentId'},
-         progress: {method:'GET', url:'/dashboardapi/section_progress/:id'}
       });
     }]);
 
@@ -177,21 +176,60 @@ angular: teacherDashboard
                                 $routeParams.sectionid + '/' + $routeParams.studentid;
   }]);
 
-  app.controller('SectionDetailController', ['$scope', '$routeParams', '$window', '$q', '$timeout', 'sectionsService', 'studentsService',
-                                             function($scope, $routeParams, $window, $q, $timeout, sectionsService, studentsService) {
+  app.controller('LandingController', ['$scope', '$routeParams', 'studentsService', 'sectionsService',
+                                       function($scope, $routeParams, studentsService, sectionsService) {
 
+    $scope.init_progress = function() {
+      progressLoaded();
+    };
 
+    $scope.biggestSection = null;
+
+    sectionsService.query().$promise.then(
+      function( sections ) {
+        var section = null;
+        var highestNumStudents = -1;
+        for (var s = 0; s < sections.length; s++) {
+          var numStudents = sections[s].students.length;
+          if (numStudents > highestNumStudents) {
+            section = sections[s];
+            highestNumStudents = numStudents;
+          }
+        }
+
+        if (section !== null) {
+          $scope.biggestSection = section;
+          $scope.sectionProgressUrl = '/dashboardapi/section_progress/' + section.id + "?nocache=" + $.now();
+        }
+      }
+    );
+
+    studentsService.query().$promise.then(
+      function( allStudents ) {
+        for (var s = 0; s < allStudents.length; s++)
+        {
+          var student = allStudents[s];
+          if (student.prize_earned)
+          {
+            var name = student.name;
+            name = encodeURI(name);
+            name = name.replace(/'/g, "%27"); //encode '
+            name = name.replace(/"/g, "%22"); //encode "
+            $('#printcertificatesform').append("<input type='hidden' name='names[]', value='" + name + "'/>");
+          }
+        }
+      }
+    );
+  }]);
+
+  app.controller('SectionDetailController', ['$scope', '$routeParams', '$window', 'sectionsService', 'studentsService',
+                                             function($scope, $routeParams, $window, sectionsService, studentsService) {
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
-    $scope.progress = sectionsService.progress({id: $routeParams.id});
 
-    // error handling
     $scope.genericError = function(result) {
       $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
     };
-    $scope.section.$promise.catch($scope.genericError);
-    $scope.sections.$promise.catch($scope.genericError);
-    $scope.progress.$promise.catch($scope.genericError);
 
     $scope.section.$promise.then(
       function( section ){
@@ -203,6 +241,8 @@ angular: teacherDashboard
 
     $scope.tab = $routeParams.tab;
 
+    $scope.sectionProgressUrl = '/dashboardapi/section_progress/' + $routeParams.id + "?nocache=" + $.now();
+
     // the ng-select in the nav compares by reference not by value, so we can't just set
     // selectedSection to section, we have to find it in sections.
     $scope.sections.$promise.then(
@@ -210,6 +250,9 @@ angular: teacherDashboard
         $scope.selectedSection = $.grep(sections, function(section) { return (section.id == $routeParams.id);})[0];
       }
     );
+
+    $scope.section.$promise.catch($scope.genericError);
+    $scope.sections.$promise.catch($scope.genericError);
 
     $scope.age_list = #{((4..20).to_a << '21+').inspect};
 
@@ -229,8 +272,28 @@ angular: teacherDashboard
       $scope.progressLoaded = true;
     });
 
+    $scope.displayAllStages = function() {
+      for (var i = 0; i < $scope.progress.script.stages.length; i++) {
+        $scope.progress.script.stages[i].shouldShow = true;
+      }
+    }
+
+    $scope.displayOnlyStage = function(stage) {
+      for (var i = 0; i < $scope.progress.script.stages.length; i++) {
+        if (stage == $scope.progress.script.stages[i]) {
+          $scope.progress.script.stages[i].shouldShow = true;
+        } else {
+          $scope.progress.script.stages[i].shouldShow = false;
+        }
+      }
+    }
+
+
     // merge the data returned by progress api into the data returned by the section students api
     $scope.mergeProgress = function() {
+      // display all stages
+      $scope.displayAllStages();
+
       // calculate width of each level in the progress bar assuming the overall width is 780 px
       $scope.progress.bar_width = Math.floor(780 / $scope.progress.script.levels_count);
 
@@ -403,5 +466,11 @@ angular: teacherDashboard
     $scope.print = function() {
       $window.print();
     };
+
+    $scope.progressLoaded = false;
+
+    $scope.progress_loaded = function() {
+      $scope.progressLoaded = true;
+    }
 
   }]);
