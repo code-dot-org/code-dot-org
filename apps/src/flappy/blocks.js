@@ -11,7 +11,7 @@ var commonMsg = require('../../locale/current/common');
 var blockUtils = require('../block_utils');
 var utils = require('../utils');
 var _ = utils.getLodash();
-var studioAppSingleton = require('../base');
+var studioAppSingleton = require('../StudioApp').singleton;
 
 var FLAPPY_VALUE = '"flappy"';
 var RANDOM_VALUE = 'random';
