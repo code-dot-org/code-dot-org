@@ -17,7 +17,7 @@ exports.ResultType = {
 /**
  * Enumeration of test results.
  * EMPTY_BLOCK_FAIL and EMPTY_FUNCTION_BLOCK_FAIL can only occur if
- * StudioApp.CHECK_FOR_EMPTY_BLOCKS is true.
+ * StudioApp.checkForEmptyBlocks_ is true.
  */
 exports.TestResults = {
   // Default value before any tests are run.

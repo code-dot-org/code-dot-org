@@ -93,7 +93,7 @@ var skin;
 var stepSpeed;
 
 //TODO: Make configurable.
-studioAppSingleton.CHECK_FOR_EMPTY_BLOCKS = true;
+studioAppSingleton.setCheckForEmptyBlocks(true);
 
 //The number of blocks to show as feedback.
 studioAppSingleton.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
