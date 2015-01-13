@@ -1398,7 +1398,6 @@ var requiredBlockUtils = require('./required_block_utils');
 var StudioAppClass = require('./StudioApp');
 
 var studioAppSingleton = require('./base');
-window.StudioApp = studioAppSingleton;
 
 // TODO (br-pair) : This is to expose methods we need in the global namespace
 // for testing purpose. Would be nice to eliminate this eventually.
@@ -17481,10 +17480,6 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
 },{"../../locale/lt_lt/studio":49,"../block_utils":5,"../utils":46,"./constants":25}],29:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
-// TODO (br-pair): We're doing this so that other apps can still have
-// in the global namespace, while ensuring that we don't. Ultimately nobody
-// should have it, and we can remove this.
-window.StudioApp = undefined;
 window.Studio = require('./studio');
 if (typeof global !== 'undefined') {
   global.Studio = window.Studio;

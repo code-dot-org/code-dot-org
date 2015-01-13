@@ -1398,7 +1398,6 @@ var requiredBlockUtils = require('./required_block_utils');
 var StudioAppClass = require('./StudioApp');
 
 var studioAppSingleton = require('./base');
-window.StudioApp = studioAppSingleton;
 
 // TODO (br-pair) : This is to expose methods we need in the global namespace
 // for testing purpose. Would be nice to eliminate this eventually.
@@ -6839,10 +6838,6 @@ module.exports = {
 },{"../block_utils":5}],17:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
-// TODO (br-pair): We're doing this so that other apps can still have StudioApp
-// in the global namespace, while ensuring that we don't. Ultimately nobody
-// should have it, and we can remove this.
-window.StudioApp = undefined;
 window.Jigsaw = require('./jigsaw');
 if (typeof global !== 'undefined') {
   global.Jigsaw = window.Jigsaw;
