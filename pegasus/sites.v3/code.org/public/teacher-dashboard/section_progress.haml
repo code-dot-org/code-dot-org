@@ -24,6 +24,7 @@ theme: none
       padding: 0px;
     }
   }
+
   .progressheader .stage {
     box-sizing: border-box;
     background-color: #aaa;
@@ -32,6 +33,22 @@ theme: none
     height:50px;
     padding: 5px 0 0 5px;
     border-left: 1px solid #888;
+  }
+
+  .studentzone {
+    position: relative;
+
+    .studentbar {
+      position: absolute;
+    }
+
+    .studentdot {
+      position: absolute;
+      left: 0px;
+
+      -webkit-transition: left 2s; /* For Safari 3.1 to 6.0 */
+      transition: left 2s;
+    }
   }
 
   .studentzone .stage {
@@ -150,16 +167,16 @@ theme: none
     %td
       .stage{"ng-repeat" => "stage in progress.script.stages", style: "width: {{progress.bar_width * stage.length}}px"}
         {{stage.title}}
-  %tr.studentrow{"ng-repeat" => "student in section.students | orderBy:order" style: 'position: relative'}
+  %tr.studentrow{"ng-repeat" => "student in section.students | orderBy:order"}
     %td.studentname
       %a{"ng-href" => "#/sections/{{section.id}}/student/{{student.id}}"} {{student.name}}
     %td.studentzone
       .stage{"ng-repeat" => "stage in progress.script.stages", style: "width: {{progress.bar_width * stage.length}}px"}
         &nbsp;    
-      .studentbar{style: "position: absolute;", id: "studentbar_{{student.id}}"}
+      .studentbar{id: "studentbar_{{student.id}}"}
         .bar{'ng-repeat' => 'level in student.levels track by $index', title: '{{level.title}}', class: '{{level.class}}', style: 'width: {{progress.bar_width}}px'}
           &nbsp;
-      .studentdot{style: "position: absolute; left: {{progress.bar_width * (student.highest_level + 0.5)}}px; padding-top:4px; padding-bottom:4px", id: "studentdot_{{student.id}}"}
+      .studentdot{style: "left: {{progress.bar_width * (student.highest_level + 0.5)}}px; padding-top:4px; padding-bottom:4px", id: "studentdot_{{student.id}}"}
         .dot{class: '{{student.levels[student.highest_level].class}}'}
           {{student.highest_level_in_stage}}
  
