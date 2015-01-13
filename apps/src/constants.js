@@ -63,3 +63,12 @@ exports.BeeTerminationValue = {
   INSUFFICIENT_NECTAR: 7,// Didn't collect all nectar by finish
   INSUFFICIENT_HONEY: 8  // Didn't make all honey by finish
 };
+
+exports.KeyCodes = {
+  ENTER: 13,
+  SPACE: 32,
+  LEFT: 37,
+  UP: 38,
+  RIGHT: 39,
+  DOWN: 40
+};

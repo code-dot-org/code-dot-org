@@ -21,7 +21,7 @@ var Calc = module.exports;
 /**
  * Create a namespace for the application.
  */
-var studioAppSingleton = require('../base');
+var studioAppSingleton = require('../StudioApp').singleton;
 var Calc = module.exports;
 var commonMsg = require('../../locale/current/common');
 var calcMsg = require('../../locale/current/calc');
@@ -352,7 +352,7 @@ Calc.execute = function() {
       appState.testResults = TestResults.APP_SPECIFIC_FAIL;
       appState.message = calcMsg.equivalentExpression();
     } else {
-      appState.testResults = StudioApp.getTestResults(appState.result);
+      appState.testResults = studioAppSingleton.getTestResults(appState.result);
     }
   }
 

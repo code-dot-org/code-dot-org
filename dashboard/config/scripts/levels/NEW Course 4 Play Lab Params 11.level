@@ -23,51 +23,14 @@
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
-    "coordinate_grid_background": "false"
+    "coordinate_grid_background": "false",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
         <block type="when_run"/>
-        <block type="procedures_defnoreturn" uservisible="false">
-          <mutation>
-            <arg name="actor"/>
-            <arg name="speed"/>
-            <description>a patrol function that has a actor and speed parameter</description>
-          </mutation>
-          <title name="NAME">patrol</title>
-          <statement name="STACK">
-            <block type="studio_moveDistanceParamsSprite" inline="true" uservisible="false">
-              <title name="DIR">1</title>
-              <value name="SPRITE">
-                <block type="math_number" uservisible="false">
-                  <title name="NUM">1</title>
-                </block>
-              </value>
-              <value name="DISTANCE">
-                <block type="parameters_get" uservisible="false">
-                  <title name="VAR">speed</title>
-                </block>
-              </value>
-              <next>
-                <block type="studio_moveDistanceParamsSprite" inline="true" uservisible="false">
-                  <title name="DIR">4</title>
-                  <value name="SPRITE">
-                    <block type="math_number" uservisible="false">
-                      <title name="NUM">1</title>
-                    </block>
-                  </value>
-                  <value name="DISTANCE">
-                    <block type="parameters_get" uservisible="false">
-                      <title name="VAR">speed</title>
-                    </block>
-                  </value>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
         <block type="procedures_defnoreturn" uservisible="false">
           <mutation>
             <arg name="height"/>
@@ -79,8 +42,8 @@
             <block type="studio_moveDistanceParamsSprite" inline="true" uservisible="false">
               <title name="DIR">1</title>
               <value name="SPRITE">
-                <block type="math_number" uservisible="false">
-                  <title name="NUM">1</title>
+                <block type="parameters_get" uservisible="false">
+                  <title name="VAR">actor</title>
                 </block>
               </value>
               <value name="DISTANCE">
@@ -92,13 +55,51 @@
                 <block type="studio_moveDistanceParamsSprite" inline="true" uservisible="false">
                   <title name="DIR">4</title>
                   <value name="SPRITE">
-                    <block type="math_number" uservisible="false">
-                      <title name="NUM">1</title>
+                    <block type="parameters_get" uservisible="false">
+                      <title name="VAR">actor</title>
                     </block>
                   </value>
                   <value name="DISTANCE">
                     <block type="parameters_get" uservisible="false">
                       <title name="VAR">height</title>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" uservisible="false">
+          <mutation>
+            <arg name="actor"/>
+            <arg name="speed"/>
+            <description>a patrol function that has a actor and speed parameter</description>
+          </mutation>
+          <title name="NAME">patrol</title>
+          <statement name="STACK">
+            <block type="studio_moveDistanceParamsSprite" inline="true" uservisible="false">
+              <title name="DIR">1</title>
+              <value name="SPRITE">
+                <block type="parameters_get" uservisible="false">
+                  <title name="VAR">actor</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="parameters_get" uservisible="false">
+                  <title name="VAR">speed</title>
+                </block>
+              </value>
+              <next>
+                <block type="studio_moveDistanceParamsSprite" inline="true" uservisible="false">
+                  <title name="DIR">4</title>
+                  <value name="SPRITE">
+                    <block type="parameters_get" uservisible="false">
+                      <title name="VAR">actor</title>
+                    </block>
+                  </value>
+                  <value name="DISTANCE">
+                    <block type="parameters_get" uservisible="false">
+                      <title name="VAR">speed</title>
                     </block>
                   </value>
                 </block>
@@ -269,18 +270,6 @@
           </block>
         </category>
         <category name="Functions" custom="PROCEDURE">
-          <block type="procedures_callnoreturn" inline="false">
-            <mutation name="jump">
-              <arg name="height"/>
-              <arg name="actor"/>
-            </mutation>
-          </block>
-          <block type="procedures_callnoreturn" inline="false">
-            <mutation name="patrol">
-              <arg name="actor"/>
-              <arg name="speed"/>
-            </mutation>
-          </block>
           <block type="procedures_defnoreturn" uservisible="false">
             <mutation>
               <arg name="height"/>
@@ -292,8 +281,8 @@
               <block type="studio_moveDistanceParamsSprite" inline="true" uservisible="false">
                 <title name="DIR">1</title>
                 <value name="SPRITE">
-                  <block type="math_number" uservisible="false">
-                    <title name="NUM">1</title>
+                  <block type="parameters_get" uservisible="false">
+                    <title name="VAR">actor</title>
                   </block>
                 </value>
                 <value name="DISTANCE">
@@ -305,8 +294,8 @@
                   <block type="studio_moveDistanceParamsSprite" inline="true" uservisible="false">
                     <title name="DIR">4</title>
                     <value name="SPRITE">
-                      <block type="math_number" uservisible="false">
-                        <title name="NUM">1</title>
+                      <block type="parameters_get" uservisible="false">
+                        <title name="VAR">actor</title>
                       </block>
                     </value>
                     <value name="DISTANCE">
@@ -319,6 +308,12 @@
               </block>
             </statement>
           </block>
+          <block type="procedures_callnoreturn" inline="false">
+            <mutation name="jump">
+              <arg name="height"/>
+              <arg name="actor"/>
+            </mutation>
+          </block>
           <block type="procedures_defnoreturn" uservisible="false">
             <mutation>
               <arg name="actor"/>
@@ -330,8 +325,8 @@
               <block type="studio_moveDistanceParamsSprite" inline="true" uservisible="false">
                 <title name="DIR">1</title>
                 <value name="SPRITE">
-                  <block type="math_number" uservisible="false">
-                    <title name="NUM">1</title>
+                  <block type="parameters_get" uservisible="false">
+                    <title name="VAR">actor</title>
                   </block>
                 </value>
                 <value name="DISTANCE">
@@ -343,8 +338,8 @@
                   <block type="studio_moveDistanceParamsSprite" inline="true" uservisible="false">
                     <title name="DIR">4</title>
                     <value name="SPRITE">
-                      <block type="math_number" uservisible="false">
-                        <title name="NUM">1</title>
+                      <block type="parameters_get" uservisible="false">
+                        <title name="VAR">actor</title>
                       </block>
                     </value>
                     <value name="DISTANCE">
@@ -356,6 +351,12 @@
                 </next>
               </block>
             </statement>
+          </block>
+          <block type="procedures_callnoreturn" inline="false">
+            <mutation name="patrol">
+              <arg name="actor"/>
+              <arg name="speed"/>
+            </mutation>
           </block>
         </category>
         <category name="Variables" custom="VARIABLE">

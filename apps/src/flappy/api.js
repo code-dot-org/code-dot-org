@@ -1,4 +1,4 @@
-var studioAppSingleton = require('../base');
+var studioAppSingleton = require('../StudioApp').singleton;
 
 exports.FlapHeight = {
   VERY_SMALL: -6,
