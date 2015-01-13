@@ -59,7 +59,7 @@ exports.setupTestBlockly = function() {
   // c, n, v, p, s get added to global namespace by messageformat module, which
   // is loaded when we require our locale msg files
   studioAppSingleton = exports.requireWithGlobalsCheckBuildFolder('/StudioApp',
-    ['c', 'n', 'v', 'p', 's']);
+    ['c', 'n', 'v', 'p', 's']).singleton;
 
   var blocklyAppDiv = document.getElementById('app');
   assert(blocklyAppDiv, 'blocklyAppDiv exists');

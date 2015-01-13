@@ -6,7 +6,7 @@
  */
 'use strict';
 
-var studioAppSingleton = require('../StudioApp');
+var studioAppSingleton = require('../StudioApp').singleton;
 var msg = require('../../locale/current/studio');
 var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
 var commonMsg = require('../../locale/current/common');

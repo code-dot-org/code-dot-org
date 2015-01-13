@@ -77,7 +77,7 @@ var ELSA_DECORATION_DETAILS = [
 
 /**
  * An instantiable Artist class
- * @param {StudioAppClass} studioApp The studioApp instance to build upon.
+ * @param {StudioApp} studioApp The studioApp instance to build upon.
  */
 var Artist = function () {
   this.skin = null;
@@ -149,7 +149,7 @@ Artist.prototype.injectStudioApp = function (studioApp) {
  */
 Artist.prototype.init = function(config) {
   if (!this.studioApp_) {
-    throw new Error("Artist requires a StudioAppClass");
+    throw new Error("Artist requires a StudioApp");
   }
 
   this.skin = config.skin;

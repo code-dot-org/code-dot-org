@@ -21,7 +21,7 @@ var Eval = module.exports;
 /**
  * Create a namespace for the application.
  */
-var studioAppSingleton = require('../StudioApp');
+var studioAppSingleton = require('../StudioApp').singleton;
 var Eval = module.exports;
 var commonMsg = require('../../locale/current/common');
 var evalMsg = require('../../locale/current/eval');
