@@ -12,16 +12,16 @@ Each application has a unique identifier (`app_id`). This is an opaque value est
 
 User storage for these APIs are linked to a storage identifier, rather than a user-identifier. For anonymous users, the storage-id is stored in a cookie. For logged-in users, the user-id is mapped to the storage-id. When an account is created, the ownership of the cooke storage-id is transferred to the new user account.
 
-## `SharedProperties` and `UserProperties`
+## `sharedProperties` and `userProperties`
 
-This API provides server-backed property bags (hashes). The SharedProperties bag contains values shared by all users of the application. The UserProperties bag contains values specific to each user. Except for the constructor, the interface for the two objects are identical.
-
-```
-var properties = SharedProperties(app_id);
-```
+This API provides server-backed property bags (hashes). The `sharedProperties` bag contains values shared by all users of the application. The `userProperties` bag contains values specific to a particular user. Except for the constructor, the interface for the two objects are identical.
 
 ```
-var properties = UserProperties(app_id);
+var properties = sharedProperties(app_id);
+```
+
+```
+var properties = userProperties(app_id);
 ```
 
 ### `.all`
@@ -29,7 +29,7 @@ var properties = UserProperties(app_id);
 Retrieves the entire property bag and returns it as a hash.
 
 ```
-UserProperties().all(function(items) {
+userProperties(app_id).all(function(items) {
   alert(JSON.stringify(items));
 });
 ```
@@ -39,7 +39,7 @@ UserProperties().all(function(items) {
 Retrieves a property value by name.
 
 ```
-UserProperties().get("name", function(value) {
+userProperties(app_id).get("name", function(value) {
   alert(value);
 });
 ```
@@ -49,8 +49,7 @@ UserProperties().get("name", function(value) {
 Set a property value by name.
 
 ```
-var properties = UserProperties();
-properties.set("name", "value", function(success) {
+userProperties(app_id).set("name", "value", function(success) {
   alert(success);
 });
 ```
@@ -60,22 +59,21 @@ properties.set("name", "value", function(success) {
 Delete a property by name.
 
 ```
-var properties = UserProperties();
-properties.delete("name", function(success) {
+userProperties(app_id).delete("name", function(success) {
   alert(success);
 });
 ```
 
-## `SharedTable` and `UserTable`
+## `sharedTable` and `userTable`
 
 This API provides server-backed "tables" - named arrays of hashes with an autoincrementing `id` property. No schema is enforced, rows do not need to be identical. Server-side searching/filtering is *not supported* because that is complex to build and this API is designed for small datasets (e.g. 1000 items or less) where filtering can be done on the client. Except for the constructor, the interface for the two objects are identical.
 
 ```
-var table = SharedTable(app_id, "table-name");
+var table = sharedTable(app_id, "table-name");
 ```
 
 ```
-var table = UserTable(app_id, "table-name");
+var table = userTable(app_id, "table-name");
 ```
 
 ### `.all`
@@ -83,7 +81,7 @@ var table = UserTable(app_id, "table-name");
 Retrieves all the rows in the table and returns them as an array of hashes.
 
 ```
-var table = UserTable(app_id, "table-name");
+var table = userTable(app_id, "table-name");
 table.all(function(rows) {
   for (var i = 0; i < rows.length; i++) {
     alert(JSON.stringify(rows[i]));
@@ -96,7 +94,7 @@ table.all(function(rows) {
 Deletes a row by id.
 
 ```
-var table = UserTable(app_id, "table-name");
+var table = userTable(app_id, "table-name");
 table.delete(row_id, function(success) {
   alert(success);
 });
@@ -107,7 +105,7 @@ table.delete(row_id, function(success) {
 Inserts a new row and returns it with an `id`.
 
 ```
-var table = UserTable(app_id, "table-name");
+var table = userTable(app_id, "table-name");
 table.insert(({"Hello": "World"}), function(row) {
   //success = row != undefined
   //row_id = row["id"]
@@ -120,7 +118,7 @@ table.insert(({"Hello": "World"}), function(row) {
 Retrieve a row by id.
 
 ```
-var table = UserTable(app_id, "table-name");
+var table = userTable(app_id, "table-name");
 table.fetch(id, function(row) {
   //success = row != undefined
   alert(JSON.stringify(row));
@@ -132,7 +130,7 @@ table.fetch(id, function(row) {
 Modify an existing row value by id.
 
 ```
-var table = UserTable(app_id, "table-name");
+var table = userTable(app_id, "table-name");
 table.update(row_id, ({"Hello": "Goodbye"}), function(success) {
   alert(success);
 });
