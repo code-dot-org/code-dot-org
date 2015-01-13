@@ -1,5 +1,5 @@
 var appMain = require('../appMain');
-var studioAppSingleton = require('../StudioApp').singleton;
+var studioApp = require('../StudioApp').singleton;
 var Artist = require('./turtle');
 var blocks = require('./blocks');
 var skins = require('./skins');
@@ -13,6 +13,6 @@ window.turtleMain = function(options) {
   window.__TestInterface.setSpeedSliderValue = function (value) {
     artist.speedSlider.setValue(value);
   };
-  artist.injectStudioApp(studioAppSingleton);
+  artist.injectStudioApp(studioApp);
   appMain(artist, levels, options);
 };
