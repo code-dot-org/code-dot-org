@@ -2,7 +2,7 @@
   - if @concept.errors.any?
     #error_explanation
       %h2
-        = pluralize(@concept.errors.count, "error")
+        = pluralize(@concept.errors.count, 'error')
         prohibited this concept from being saved:
       %ul
         - @concept.errors.full_messages.each do |msg|
