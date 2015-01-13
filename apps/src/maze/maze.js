@@ -65,7 +65,7 @@ var skin;
 var stepSpeed;
 
 //TODO: Make configurable.
-studioAppSingleton.CHECK_FOR_EMPTY_BLOCKS = true;
+studioAppSingleton.setCheckForEmptyBlocks(true);
 
 var getTile = function(map, x, y) {
   if (map && map[y]) {
