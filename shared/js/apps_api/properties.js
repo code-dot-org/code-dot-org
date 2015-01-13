@@ -1,7 +1,7 @@
 function sharedProperties(app_id)
 {
   var object = {
-    api_base_url: "/v2/apps/" + app_id + "/properties",
+    api_base_url: "/v2/apps/" + app_id + "/shared-properties",
 
     all: function(callback) {
       $.ajax({
