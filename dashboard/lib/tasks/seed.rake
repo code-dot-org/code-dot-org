@@ -67,7 +67,7 @@ namespace :seed do
   # cronjob that detects changes to .multi files
   MULTIS_GLOB = Dir.glob('config/scripts/**/*.multi').sort.flatten
   file 'config/scripts/.multis_seeded' => MULTIS_GLOB do |t|
-    Rake::Task['seed:multis'].invoke
+    Rake::Task['seed:multdis'].invoke
     touch t.name
   end
 
@@ -117,10 +117,11 @@ namespace :seed do
   # explicit execution of "seed:dsls"
   task dsls: :environment do
     DSLDefined.transaction do
+      dsl_strings = {}
       # Parse each .[dsl] file and setup its model.
       DSLS_GLOB.each do |filename|
+        dsl_class = DSL_TYPES.detect{|type|filename.include?(".#{type.underscore}") }.try(:constantize)
         begin
-          dsl_strings = {}
           data, i18n = dsl_class.parse_file(filename)
           dsl_class.setup data
           dsl_strings.deep_merge! i18n

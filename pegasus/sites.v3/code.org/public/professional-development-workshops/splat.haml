@@ -7,7 +7,12 @@ rightbar: blank
 - workshop_id = request.splat_path_info[1..-1]
 - pass unless form = Form2.from_row(DB[:forms].where(kind:'ProfessionalDevelopmentWorkshop', id:workshop_id).first)
 - data = form.data
-- signup_count = DB[:forms].where(kind:'ProfessionalDevelopmentWorkshopSignup').and(parent_id:workshop_id).count
+
+-signup_count = 0
+-signup_rows = DB[:forms].where(kind:'ProfessionalDevelopmentWorkshopSignup').and(parent_id:workshop_id)
+-signup_rows.each do |signup_row|
+  -signup = JSON.parse(signup_row[:data])
+  -signup_count += 1 unless signup['status_s'] == 'cancelled'
 
 -if first_date = data['dates'].first
   -first_date = Chronic.parse(first_date['date_s'] + ' ' + first_date['start_time_s'])
