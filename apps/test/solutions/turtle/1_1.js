@@ -8,7 +8,7 @@ var rblocks = function () {
   return testUtils.requireWithGlobalsCheckBuildFolder('turtle/requiredBlocks.js');
 };
 
-var studioAppSingleton = require(testUtils.buildPath('base'));
+var studioAppSingleton = require(testUtils.buildPath('StudioApp'));
 
 module.exports = {
   app: "turtle",

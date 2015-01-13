@@ -7,7 +7,7 @@
 
 'use strict';
 
-var studioAppSingleton = require('../base');
+var studioAppSingleton = require('../StudioApp');
 var skins = require('../skins');
 var page = require('../templates/page.html');
 var dom = require('../dom');
