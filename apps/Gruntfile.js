@@ -326,7 +326,6 @@ config.jshint = {
     globals: {
       Blockly: true,
       //TODO: Eliminate the globals below here.
-      StudioApp: true,
       Maze: true,
       Turtle: true,
       Bounce: true

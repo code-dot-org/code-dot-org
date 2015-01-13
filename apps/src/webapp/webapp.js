@@ -7,7 +7,7 @@
 
 'use strict';
 
-var StudioApp = require('../base');
+var studioAppSingleton = require('../base');
 var commonMsg = require('../../locale/current/common');
 var webappMsg = require('../../locale/current/webapp');
 var skins = require('../skins');
@@ -19,8 +19,12 @@ var dom = require('../dom');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
 var Slider = require('../slider');
+var FormStorage = require('./formStorage');
 var _ = utils.getLodash();
 var Hammer = utils.getHammer();
+
+var ResultType = studioAppSingleton.ResultType;
+var TestResults = studioAppSingleton.TestResults;
 
 /**
  * Create a namespace for the application.
@@ -31,12 +35,12 @@ var level;
 var skin;
 
 //TODO: Make configurable.
-StudioApp.CHECK_FOR_EMPTY_BLOCKS = true;
+studioAppSingleton.CHECK_FOR_EMPTY_BLOCKS = true;
 
 //The number of blocks to show as feedback.
-StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
+studioAppSingleton.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
-var MAX_INTERPRETER_STEPS_PER_TICK = 200;
+var MAX_INTERPRETER_STEPS_PER_TICK = 10000;
 
 // Default Scalings
 Webapp.scale = {
@@ -78,12 +82,16 @@ var drawDiv = function () {
   visualizationColumn.style.width = divWidth + 'px';
 };
 
-function queueOnTick() {
+function getCurrentTickLength() {
   var stepSpeed = Webapp.scale.stepSpeed;
   if (Webapp.speedSlider) {
     stepSpeed = 300 * Math.pow(1 - Webapp.speedSlider.getValue(), 2);
   }
-  window.setTimeout(Webapp.onTick, stepSpeed);
+  return stepSpeed;
+}
+
+function queueOnTick() {
+  window.setTimeout(Webapp.onTick, getCurrentTickLength());
 }
 
 function outputWebappConsole(output) {
@@ -138,12 +146,12 @@ function onDebugInputKeyDown(e) {
 }
 
 function selectEditorRowCol(row, col) {
-  if (StudioApp.editor.currentlyUsingBlocks) {
+  if (studioAppSingleton.editor.currentlyUsingBlocks) {
     var style = {color: '#FFFF22'};
-    StudioApp.editor.clearLineMarks();
-    StudioApp.editor.markLine(row, style);
+    studioAppSingleton.editor.clearLineMarks();
+    studioAppSingleton.editor.markLine(row, style);
   } else {
-    var selection = StudioApp.editor.aceEditor.getSelection();
+    var selection = studioAppSingleton.editor.aceEditor.getSelection();
     var range = selection.getRange();
 
     range.start.row = row;
@@ -182,6 +190,8 @@ Webapp.onTick = function() {
   queueOnTick();
 
   var atInitialBreakpoint = Webapp.paused && Webapp.nextStep === StepType.IN && Webapp.tickCount === 1;
+  var atMaxSpeed = getCurrentTickLength() === 0;
+  Webapp.seenEmptyGetCallbackThisTick = false;
 
   if (Webapp.paused) {
     switch (Webapp.nextStep) {
@@ -207,24 +217,41 @@ Webapp.onTick = function() {
   }
 
   if (Webapp.interpreter) {
-    var doneUserCodeStep = false;
+    var doneUserLine = false;
+    var reachedBreak = false;
     var unwindingAfterStep = false;
     var inUserCode;
     var userCodeRow;
-    var session = StudioApp.editor.aceEditor.getSession();
+    var session = studioAppSingleton.editor.aceEditor.getSession();
+    // NOTE: when running with no source visible or at max speed with blocks, we
+    // call a simple function to just get the line number, otherwise we call a
+    // function that also selects the code:
+    var selectCodeFunc =
+      (studioAppSingleton.hideSource ||
+       (atMaxSpeed && !Webapp.paused && studioAppSingleton.editor.currentlyUsingBlocks)) ?
+            codegen.getUserCodeLine :
+            codegen.selectCurrentCode;
 
     // In each tick, we will step the interpreter multiple times in a tight
     // loop as long as we are interpreting code that the user can't see
     // (function aliases at the beginning, getCallback event loop at the end)
     for (var stepsThisTick = 0;
-         stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK &&
-          (!doneUserCodeStep || unwindingAfterStep);
+         (stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK) || unwindingAfterStep;
          stepsThisTick++) {
-      userCodeRow = codegen.selectCurrentCode(Webapp.interpreter,
-                                              StudioApp.editor,
-                                              Webapp.cumulativeLength,
-                                              Webapp.userCodeStartOffset,
-                                              Webapp.userCodeLength);
+      if ((reachedBreak && !unwindingAfterStep) ||
+          (doneUserLine && !atMaxSpeed) ||
+          Webapp.seenEmptyGetCallbackThisTick) {
+        // stop stepping the interpreter and wait until the next tick once we:
+        // (1) reached a breakpoint and are done unwinding OR
+        // (2) completed a line of user code (while not running atMaxSpeed) OR
+        // (3) have seen an empty event queue in nativeGetCallback (no events)
+        break;
+      }
+      userCodeRow = selectCodeFunc(Webapp.interpreter,
+                                   Webapp.cumulativeLength,
+                                   Webapp.userCodeStartOffset,
+                                   Webapp.userCodeLength,
+                                   studioAppSingleton.editor);
       inUserCode = (-1 !== userCodeRow);
       // Check to see if we've arrived at a new breakpoint:
       //  (1) should be in user code
@@ -249,8 +276,8 @@ Webapp.onTick = function() {
         Webapp.stoppedAtBreakpointRow = userCodeRow;
         Webapp.stoppedAtBreakpointStackDepth = Webapp.interpreter.stateStack.length;
 
-        // Mark doneUserCodeStep to stop stepping, and start unwinding if needed:
-        doneUserCodeStep = true;
+        // Mark reachedBreak to stop stepping, and start unwinding if needed:
+        reachedBreak = true;
         unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(Webapp.interpreter);
         continue;
       }
@@ -270,7 +297,7 @@ Webapp.onTick = function() {
       }
       try {
         Webapp.interpreter.step();
-        doneUserCodeStep = doneUserCodeStep ||
+        doneUserLine = doneUserLine ||
           (inUserCode && Webapp.interpreter.stateStack[0] && Webapp.interpreter.stateStack[0].done);
 
         // Remember the stack depths of call expressions (so we can implement 'step out')
@@ -291,31 +318,55 @@ Webapp.onTick = function() {
             }
           }
           // For the step in case, we want to stop the interpreter as soon as we enter the callee:
-          if (!doneUserCodeStep &&
+          if (!doneUserLine &&
               inUserCode &&
               Webapp.nextStep === StepType.IN &&
               Webapp.interpreter.stateStack.length > Webapp.firstCallStackDepthThisStep) {
-            doneUserCodeStep = true;
+            reachedBreak = true;
           }
           // After the interpreter says a node is "done" (meaning it is time to stop), we will
           // advance a little further to the start of the next statement. We achieve this by
           // continuing to set unwindingAfterStep to true to keep the loop going:
-          if (doneUserCodeStep) {
+          if (doneUserLine || reachedBreak) {
             var wasUnwinding = unwindingAfterStep;
             // step() additional times if we know it to be safe to get us to the next statement:
             unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(Webapp.interpreter);
             if (wasUnwinding && !unwindingAfterStep) {
               // done unwinding.. select code that is next to execute:
-              userCodeRow = codegen.selectCurrentCode(Webapp.interpreter,
-                                                      StudioApp.editor,
-                                                      Webapp.cumulativeLength,
-                                                      Webapp.userCodeStartOffset,
-                                                      Webapp.userCodeLength);
+              userCodeRow = selectCodeFunc(Webapp.interpreter,
+                                           Webapp.cumulativeLength,
+                                           Webapp.userCodeStartOffset,
+                                           Webapp.userCodeLength,
+                                           studioAppSingleton.editor);
               inUserCode = (-1 !== userCodeRow);
               if (!inUserCode) {
                 // not in user code, so keep unwinding after all...
                 unwindingAfterStep = true;
               }
+            }
+          }
+
+          if ((reachedBreak || doneUserLine) && !unwindingAfterStep) {
+            if (Webapp.nextStep === StepType.OUT &&
+                Webapp.interpreter.stateStack.length > Webapp.stepOutToStackDepth) {
+              // trying to step out, but we didn't get out yet... continue on.
+            } else if (Webapp.nextStep === StepType.OVER &&
+                typeof Webapp.firstCallStackDepthThisStep !== 'undefined' &&
+                Webapp.interpreter.stateStack.length > Webapp.firstCallStackDepthThisStep) {
+              // trying to step over, and we're in deeper inside a function call... continue next onTick
+            } else {
+              // Our step operation is complete, reset nextStep to StepType.RUN to
+              // return to a normal 'break' state:
+              Webapp.nextStep = StepType.RUN;
+              if (inUserCode) {
+                // Store some properties about where we stopped:
+                Webapp.stoppedAtBreakpointRow = userCodeRow;
+                Webapp.stoppedAtBreakpointStackDepth = Webapp.interpreter.stateStack.length;
+              }
+              delete Webapp.stepOutToStackDepth;
+              delete Webapp.firstCallStackDepthThisStep;
+              document.getElementById('spinner').style.visibility = 'hidden';
+              break;
             }
           }
         }
@@ -325,31 +376,18 @@ Webapp.onTick = function() {
         return;
       }
     }
-    if (Webapp.paused) {
-      if (Webapp.nextStep === StepType.OUT &&
-          Webapp.interpreter.stateStack.length > Webapp.stepOutToStackDepth) {
-        // trying to step out, but we didn't get out yet... continue next onTick
-      } else if (Webapp.nextStep === StepType.OVER &&
-          typeof Webapp.firstCallStackDepthThisStep !== 'undefined' &&
-          Webapp.interpreter.stateStack.length > Webapp.firstCallStackDepthThisStep) {
-        // trying to step over, and we're in deeper inside a function call... continue next onTick
-      } else {
-        // Our step operation is complete, reset nextStep to StepType.RUN to
-        // return to a normal 'break' state:
-        Webapp.nextStep = StepType.RUN;
-        if (inUserCode) {
-          // Store some properties about where we stopped:
-          Webapp.stoppedAtBreakpointRow = userCodeRow;
-          Webapp.stoppedAtBreakpointStackDepth = Webapp.interpreter.stateStack.length;
-        }
-        delete Webapp.stepOutToStackDepth;
-        delete Webapp.firstCallStackDepthThisStep;
-        document.getElementById('spinner').style.visibility = 'hidden';
-      }
+    if (reachedBreak && atMaxSpeed) {
+      // If we were running atMaxSpeed and just reached a breakpoint, the
+      // code may not be selected in the editor, so do it now:
+      codegen.selectCurrentCode(Webapp.interpreter,
+                                Webapp.cumulativeLength,
+                                Webapp.userCodeStartOffset,
+                                Webapp.userCodeLength,
+                                studioAppSingleton.editor);
     }
   } else {
     if (Webapp.tickCount === 1) {
-      try { Webapp.whenRunFunc(StudioApp, api, Webapp.Globals); } catch (e) { }
+      try { Webapp.whenRunFunc(studioAppSingleton, api, Webapp.Globals); } catch (e) { }
     }
   }
 
@@ -371,7 +409,7 @@ Webapp.initReadonly = function(config) {
 
   // Webapp.initMinimal();
 
-  StudioApp.initReadonly(config);
+  studioAppSingleton.initReadonly(config);
 };
 
 /**
@@ -384,28 +422,33 @@ Webapp.init = function(config) {
 
   loadLevel();
 
+  if (studioAppSingleton.hideSource) {
+    // always run at max speed if source is hidden
+    config.level.sliderSpeed = 1.0;
+  }
+
   Webapp.canvasScale = (window.devicePixelRatio > 1) ? window.devicePixelRatio : 1;
 
-  var showSlider = !config.hide_source && config.level.editCode;
-  var showDebugButtons = !config.hide_source && config.level.editCode;
-  var showDebugConsole = !config.hide_source && config.level.editCode;
+  var showSlider = !config.hideSource && config.level.editCode;
+  var showDebugButtons = !config.hideSource && config.level.editCode;
+  var showDebugConsole = !config.hideSource && config.level.editCode;
   var finishButtonFirstLine = _.isEmpty(level.softButtons) && !showSlider;
   var firstControlsRow = require('./controls.html')({
-    assetUrl: StudioApp.assetUrl,
+    assetUrl: studioAppSingleton.assetUrl,
     showSlider: showSlider,
     finishButton: finishButtonFirstLine
   });
   var extraControlsRow = require('./extraControlRows.html')({
-    assetUrl: StudioApp.assetUrl,
+    assetUrl: studioAppSingleton.assetUrl,
     finishButton: !finishButtonFirstLine,
     debugButtons: showDebugButtons,
     debugConsole: showDebugConsole
   });
 
   config.html = page({
-    assetUrl: StudioApp.assetUrl,
+    assetUrl: studioAppSingleton.assetUrl,
     data: {
-      localeDirection: StudioApp.localeDirection(),
+      localeDirection: studioAppSingleton.localeDirection(),
       visualization: require('./visualization.html')(),
       controls: firstControlsRow,
       extraControlRows: extraControlsRow,
@@ -417,13 +460,13 @@ Webapp.init = function(config) {
   });
 
   config.loadAudio = function() {
-    StudioApp.loadAudio(skin.winSound, 'win');
-    StudioApp.loadAudio(skin.startSound, 'start');
-    StudioApp.loadAudio(skin.failureSound, 'failure');
+    studioAppSingleton.loadAudio(skin.winSound, 'win');
+    studioAppSingleton.loadAudio(skin.startSound, 'start');
+    studioAppSingleton.loadAudio(skin.failureSound, 'failure');
   };
 
   config.afterInject = function() {
-    if (StudioApp.usingBlockly) {
+    if (studioAppSingleton.usingBlockly) {
       /**
        * The richness of block colours, regardless of the hue.
        * MOOC blocks should be brighter (target audience is younger).
@@ -436,7 +479,7 @@ Webapp.init = function(config) {
     } else {
       // Set up an event handler to create breakpoints when clicking in the
       // ace gutter:
-      var aceEditor = StudioApp.editor.aceEditor;
+      var aceEditor = studioAppSingleton.editor.aceEditor;
       if (aceEditor) {
         aceEditor.on("guttermousedown", function(e) {
           var target = e.domEvent.target;
@@ -469,7 +512,7 @@ Webapp.init = function(config) {
 
   // Webapp.initMinimal();
 
-  StudioApp.init(config);
+  studioAppSingleton.init(config);
 
   if (level.editCode) {
     // Initialize the slider.
@@ -502,11 +545,15 @@ Webapp.init = function(config) {
       dom.addClickTouchEvent(stepOverButton, Webapp.onStepOverButton);
       dom.addClickTouchEvent(stepOutButton, Webapp.onStepOutButton);
     }
+    var viewDataButton = document.getElementById('viewDataButton');
+    if (viewDataButton) {
+      dom.addClickTouchEvent(viewDataButton, Webapp.onViewData);
+    }
   }
 
-  if (StudioApp.share) {
+  if (studioAppSingleton.share) {
     // automatically run in share mode:
-    window.setTimeout(StudioApp.runButtonClick, 0);
+    window.setTimeout(studioAppSingleton.runButtonClick, 0);
   }
 };
 
@@ -540,7 +587,7 @@ Webapp.clearEventHandlersKillTickLoop = function() {
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
  */
-StudioApp.reset = function(first) {
+studioAppSingleton.reset = function(first) {
   var i;
   Webapp.clearEventHandlersKillTickLoop();
 
@@ -616,22 +663,22 @@ StudioApp.reset = function(first) {
  * Click the run button.  Start the program.
  */
 // XXX This is the only method used by the templates!
-StudioApp.runButtonClick = function() {
+studioAppSingleton.runButtonClick = function() {
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
   // Ensure that Reset button is at least as wide as Run button.
   if (!resetButton.style.minWidth) {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
-  StudioApp.toggleRunReset('reset');
-  if (StudioApp.usingBlockly) {
+  studioAppSingleton.toggleRunReset('reset');
+  if (studioAppSingleton.usingBlockly) {
     Blockly.mainBlockSpace.traceOn(true);
   }
-  StudioApp.reset(false);
-  StudioApp.attempts++;
+  studioAppSingleton.reset(false);
+  studioAppSingleton.attempts++;
   Webapp.execute();
 
-  if (level.freePlay && !StudioApp.hideSource) {
+  if (level.freePlay && !studioAppSingleton.hideSource) {
     var shareCell = document.getElementById('share-cell');
     shareCell.className = 'share-cell-enabled';
   }
@@ -639,11 +686,11 @@ StudioApp.runButtonClick = function() {
 
 /**
  * App specific displayFeedback function that calls into
- * StudioApp.displayFeedback when appropriate
+ * studioAppSingleton.displayFeedback when appropriate
  */
 var displayFeedback = function() {
   if (!Webapp.waitingForReport) {
-    StudioApp.displayFeedback({
+    studioAppSingleton.displayFeedback({
       app: 'webapp', //XXX
       skin: skin.id,
       feedbackType: Webapp.testResults,
@@ -683,7 +730,7 @@ var defineProcedures = function (blockType) {
   // TODO: handle editCode JS interpreter
   try { codegen.evalWith(code, {
                          codeFunctions: level.codeFunctions,
-                         StudioApp: StudioApp,
+                         studioAppSingleton: studioAppSingleton,
                          Studio: api,
                          Globals: Webapp.Globals } ); } catch (e) { }
 };
@@ -696,7 +743,11 @@ var defineProcedures = function (blockType) {
  * optionally, callback arguments (stored in "arguments")
  */
 var nativeGetCallback = function () {
-  return Webapp.eventQueue.shift();
+  var retVal = Webapp.eventQueue.shift();
+  if (typeof retVal === "undefined") {
+    Webapp.seenEmptyGetCallbackThisTick = true;
+  }
+  return retVal;
 };
 
 var consoleApi = {};
@@ -751,15 +802,15 @@ var mathFunctions = [
  * Execute the app
  */
 Webapp.execute = function() {
-  Webapp.result = StudioApp.ResultType.UNSET;
-  Webapp.testResults = StudioApp.TestResults.NO_TESTS_RUN;
+  Webapp.result = ResultType.UNSET;
+  Webapp.testResults = TestResults.NO_TESTS_RUN;
   Webapp.waitingForReport = false;
   Webapp.response = null;
   var i;
 
-  StudioApp.playAudio('start');
+  studioAppSingleton.playAudio('start');
 
-  StudioApp.reset(false);
+  studioAppSingleton.reset(false);
 
   // Set event handlers and start the onTick timer
 
@@ -769,13 +820,13 @@ Webapp.execute = function() {
     codeWhenRun += utils.generateCodeAliases(mathFunctions, 'Math');
     Webapp.userCodeStartOffset = codeWhenRun.length;
     Webapp.userCodeLineOffset = codeWhenRun.split("\n").length - 1;
-    codeWhenRun += StudioApp.editor.getValue();
+    codeWhenRun += studioAppSingleton.editor.getValue();
     Webapp.userCodeLength = codeWhenRun.length - Webapp.userCodeStartOffset;
     // Append our mini-runtime after the user's code. This will spin and process
     // callback functions:
     codeWhenRun += '\nwhile (true) { var obj = getCallback(); ' +
       'if (obj) { obj.fn.apply(null, obj.arguments ? obj.arguments : null); }}';
-    var session = StudioApp.editor.aceEditor.getSession();
+    var session = studioAppSingleton.editor.aceEditor.getSession();
     Webapp.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
   } else {
     // Define any top-level procedures the user may have created
@@ -797,7 +848,7 @@ Webapp.execute = function() {
       // Use JS interpreter on editCode levels
       var initFunc = function(interpreter, scope) {
         codegen.initJSInterpreter(interpreter, scope, {
-                                          StudioApp: StudioApp,
+                                          StudioApp: studioAppSingleton,
                                           Webapp: api,
                                           console: consoleApi,
                                           JSON: JSONApi,
@@ -823,7 +874,7 @@ Webapp.execute = function() {
       }
     } else {
       Webapp.whenRunFunc = codegen.functionFromCode(codeWhenRun, {
-                                          StudioApp: StudioApp,
+                                          StudioApp: studioAppSingleton,
                                           Webapp: api,
                                           Globals: Webapp.Globals } );
     }
@@ -884,7 +935,7 @@ Webapp.onStepOverButton = function() {
 
 Webapp.onStepInButton = function() {
   if (!Webapp.running) {
-    StudioApp.runButtonClick();
+    studioAppSingleton.runButtonClick();
     Webapp.onPauseButton();
   }
   Webapp.paused = true;
@@ -903,11 +954,17 @@ Webapp.onStepOutButton = function() {
 Webapp.feedbackImage = '';
 Webapp.encodedFeedbackImage = '';
 
+Webapp.onViewData = function() {
+  window.open(
+    '//' + getPegasusHost() + '/edit-csp-app/' + FormStorage.getAppSecret(),
+    '_blank');
+};
+
 Webapp.onPuzzleComplete = function() {
   if (Webapp.executionError) {
-    Webapp.result = StudioApp.ResultType.ERROR;
+    Webapp.result = ResultType.ERROR;
   } else if (level.freePlay) {
-    Webapp.result = StudioApp.ResultType.SUCCESS;
+    Webapp.result = ResultType.SUCCESS;
   }
 
   // Stop everything on screen
@@ -915,16 +972,16 @@ Webapp.onPuzzleComplete = function() {
 
   // If the current level is a free play, always return the free play result
   if (level.freePlay) {
-    Webapp.testResults = StudioApp.TestResults.FREE_PLAY;
+    Webapp.testResults = TestResults.FREE_PLAY;
   } else {
-    var levelComplete = (Webapp.result === StudioApp.ResultType.SUCCESS);
-    Webapp.testResults = StudioApp.getTestResults(levelComplete);
+    var levelComplete = (Webapp.result === ResultType.SUCCESS);
+    Webapp.testResults = studioAppSingleton.getTestResults(levelComplete);
   }
 
-  if (Webapp.testResults >= StudioApp.TestResults.FREE_PLAY) {
-    StudioApp.playAudio('win');
+  if (Webapp.testResults >= TestResults.FREE_PLAY) {
+    studioAppSingleton.playAudio('win');
   } else {
-    StudioApp.playAudio('failure');
+    studioAppSingleton.playAudio('failure');
   }
 
   var program;
@@ -936,7 +993,7 @@ Webapp.onPuzzleComplete = function() {
     // do an acorn.parse and then use escodegen to generate back a "clean" version
     // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
 
-    program = StudioApp.editor.getValue();
+    program = studioAppSingleton.editor.getValue();
   } else {
     var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
     program = Blockly.Xml.domToText(xml);
@@ -945,10 +1002,10 @@ Webapp.onPuzzleComplete = function() {
   Webapp.waitingForReport = true;
 
   var sendReport = function() {
-    StudioApp.report({
+    studioAppSingleton.report({
       app: 'webapp',
       level: level.id,
-      result: Webapp.result === StudioApp.ResultType.SUCCESS,
+      result: Webapp.result === ResultType.SUCCESS,
       testResult: Webapp.testResults,
       program: encodeURIComponent(program),
       image: Webapp.encodedFeedbackImage,
@@ -994,7 +1051,7 @@ Webapp.callCmd = function (cmd) {
     /*
     case 'wait':
       if (!cmd.opts.started) {
-        StudioApp.highlight(cmd.id);
+        studioAppSingleton.highlight(cmd.id);
       }
       return Studio.wait(cmd.opts);
     */
@@ -1019,6 +1076,8 @@ Webapp.callCmd = function (cmd) {
     case 'createCheckbox':
     case 'createRadio':
     case 'createDropdown':
+    case 'getAttribute':
+    case 'setAttribute':
     case 'getText':
     case 'setText':
     case 'getChecked':
@@ -1033,7 +1092,9 @@ Webapp.callCmd = function (cmd) {
     case 'startWebRequest':
     case 'setTimeout':
     case 'clearTimeout':
-      StudioApp.highlight(cmd.id);
+    case 'createRecord':
+    case 'readRecords':
+      studioAppSingleton.highlight(cmd.id);
       retVal = Webapp[cmd.name](cmd.opts);
       break;
   }
@@ -1154,6 +1215,7 @@ Webapp.canvasDrawRect = function (opts) {
   var canvas = document.getElementById(opts.elementId);
   var ctx = canvas.getContext("2d");
   if (ctx && divWebapp.contains(canvas)) {
+    ctx.beginPath();
     ctx.rect(opts.x * Webapp.canvasScale,
              opts.y * Webapp.canvasScale,
              opts.width * Webapp.canvasScale,
@@ -1223,6 +1285,7 @@ Webapp.canvasDrawImage = function (opts) {
     if (opts.height) {
       yScale = yScale * (opts.height / image.height);
     }
+    ctx.save();
     ctx.setTransform(xScale,
                      0,
                      0,
@@ -1230,6 +1293,7 @@ Webapp.canvasDrawImage = function (opts) {
                      opts.x * Webapp.canvasScale,
                      opts.y * Webapp.canvasScale);
     ctx.drawImage(image, 0, 0);
+    ctx.restore();
     return true;
   }
   return false;
@@ -1326,6 +1390,29 @@ Webapp.createDropdown = function (opts) {
   newSelect.id = opts.elementId;
 
   return Boolean(divWebapp.appendChild(newSelect));
+};
+
+Webapp.getAttribute = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var element = document.getElementById(opts.elementId);
+  var attribute = String(opts.attribute);
+  return divWebapp.contains(element) ? element[attribute] : false;
+};
+
+// Whitelist of HTML Element attributes which can be modified, to
+// prevent DOM manipulation which would violate the sandbox.
+Webapp.mutableAttributes = ['innerHTML', 'scrollTop'];
+
+Webapp.setAttribute = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var element = document.getElementById(opts.elementId);
+  var attribute = String(opts.attribute);
+  if (divWebapp.contains(element) &&
+      Webapp.mutableAttributes.indexOf(attribute) !== -1) {
+    element[attribute] = opts.value;
+    return true;
+  }
+  return false;
 };
 
 Webapp.getText = function (opts) {
@@ -1556,6 +1643,34 @@ Webapp.clearTimeout = function (opts) {
   window.clearTimeout(opts.timeoutId);
 };
 
+Webapp.createRecord = function (opts) {
+  var record = codegen.marshalInterpreterToNative(Webapp.interpreter,
+      opts.record);
+  FormStorage.createRecord(record,
+      Webapp.handleCreateRecord.bind(this, opts.callback));
+};
+
+Webapp.handleCreateRecord = function(interpreterCallback, record) {
+  Webapp.eventQueue.push({
+    'fn': interpreterCallback,
+    'arguments': [record]
+  });
+};
+
+Webapp.readRecords = function (opts) {
+  var searchParams = codegen.marshalInterpreterToNative(Webapp.interpreter,
+      opts.searchParams);
+  FormStorage.readRecords(
+      searchParams,
+      Webapp.handleReadRecords.bind(this, opts.callback));
+};
+
+Webapp.handleReadRecords = function(interpreterCallback, records) {
+  Webapp.eventQueue.push({
+    'fn': interpreterCallback,
+    'arguments': [records]
+  });
+};
 
 /*
 var onWaitComplete = function (opts) {
@@ -1593,29 +1708,51 @@ Webapp.timedOut = function() {
 var checkFinished = function () {
   // if we have a succcess condition and have accomplished it, we're done and successful
   if (level.goal && level.goal.successCondition && level.goal.successCondition()) {
-    Webapp.result = StudioApp.ResultType.SUCCESS;
+    Webapp.result = ResultType.SUCCESS;
     return true;
   }
 
   // if we have a failure condition, and it's been reached, we're done and failed
   if (level.goal && level.goal.failureCondition && level.goal.failureCondition()) {
-    Webapp.result = StudioApp.ResultType.FAILURE;
+    Webapp.result = ResultType.FAILURE;
     return true;
   }
 
   /*
   if (Webapp.allGoalsVisited()) {
-    Webapp.result = StudioApp.ResultType.SUCCESS;
+    Webapp.result = ResultType.SUCCESS;
     return true;
   }
   */
 
   if (Webapp.timedOut()) {
-    Webapp.result = StudioApp.ResultType.FAILURE;
+    Webapp.result = ResultType.FAILURE;
     return true;
   }
 
   return false;
+};
+
+// TODO(dave): move this logic to dashboard.
+var getPegasusHost = function() {
+  switch (window.location.hostname) {
+    case 'studio.code.org':
+    case 'learn.code.org':
+      return 'code.org';
+    default:
+      var name = window.location.hostname.split('.')[0];
+      switch(name) {
+        case 'localhost':
+          return 'localhost.code.org:9393';
+        case 'development':
+        case 'staging':
+        case 'test':
+        case 'levelbuilder':
+          return name + '.code.org';
+        default:
+          return null;
+      }
+  }
 };
 
 /*jshint asi:true */

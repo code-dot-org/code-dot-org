@@ -7,7 +7,7 @@
       .span3{style: 'text-align: right'}
         - if current_user.teacher?
           %br/
-          = button_to t('nav.user.classroom'), teacher_dashboard_url, class: "btn btn-info", style: 'background: #428bca; border-color: #357ebd;'
+          = button_to t('nav.user.classroom'), teacher_dashboard_url, class: 'btn btn-info', style: 'background: #428bca; border-color: #357ebd;'
 
     - if current_user.primary_script
       .row#continue

@@ -1,7 +1,8 @@
-var TestResults = require('../../../src/constants.js').TestResults;
-var _ = require('../../../build/js/lodash');
-var Direction = require('../../../src/studio/constants.js').Direction;
-var blockUtils = require('../../../src/block_utils');
+var testUtils = require('../../util/testUtils');
+var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
+var _ = require(testUtils.buildPath('lodash'));
+var Direction = require(testUtils.buildPath('studio/constants.js')).Direction;
+var blockUtils = require(testUtils.buildPath('block_utils'));
 
 /**
  * Runs the given function at the provided tick count
