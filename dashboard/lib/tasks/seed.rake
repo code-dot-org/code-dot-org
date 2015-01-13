@@ -120,6 +120,14 @@ namespace :seed do
       dsl_strings = {}
       # Parse each .[dsl] file and setup its model.
       DSLS_GLOB.each do |filename|
+        begin
+          data, i18n = dsl_class.parse_file(filename)
+          dsl_class.setup data
+          dsl_strings.deep_merge! i18n
+        rescue Exception => e
+          puts "Error parsing #{filename}"
+          raise
+        end
         dsl_class = DSL_TYPES.detect{|type|filename.include?(".#{type.underscore}") }.try(:constantize)
         data, i18n = dsl_class.parse_file(filename)
         dsl_class.setup data
