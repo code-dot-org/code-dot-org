@@ -129,12 +129,19 @@ def log_browser_error(msg)
 end
 
 def run_tests(arguments)
+  start_time = Time.now
   Open3.popen2("cucumber #{arguments}") do |stdin, stdout, wait_thr|
     stdin.close
     return_value = stdout.read
     succeeded = wait_thr.value.exitstatus == 0
-    return succeeded, return_value
+    return succeeded, return_value, Time.now - start_time
   end
+end
+
+def format_duration(duration)
+  minutes = (duration / 60).to_i
+  seconds = duration - (minutes * 60)
+  "%.1d:%.2d minutes" % [minutes, seconds]
 end
 
 # Kind of hacky way to determine if we have access to the database
@@ -152,7 +159,6 @@ end
 
 Parallel.map($browsers, :in_processes => $options.parallel_limit) do |browser|
   browser_name = browser['name'] || 'UnknownBrowser'
-  test_start_time = Time.now
 
   if $options.pegasus_domain =~ /test/ && !Rails.env.development? && RakeUtils.git_updates_available?
     message = "Skipped <b>dashboard</b> UI tests for <b>#{browser_name}</b> (changes detected)"
@@ -201,20 +207,40 @@ Parallel.map($browsers, :in_processes => $options.parallel_limit) do |browser|
   arguments += " -S" # strict mode, so that we fail on undefined steps
   arguments += " -f html -o #{browser['name']}_output.html" if $options.html
 
-  succeeded, return_value = run_tests(arguments)
+  # return all text after "Failing Scenarios"
+  def output_synopsis(output_text)
+    # example output:
+    # When I rotate to landscape
+    # # step_definitions/steps.rb:52
+    # Then I see "#video"
+    # # step_definitions/steps.rb:24 
+    # Then I see the first Flappy YouTube video with the correct parameters
+    # # step_definitions/flappy_steps.rb:29
+    # Failing Scenarios:
+    # cucumber features/sharepage.feature:8
+    # Scenario: Share a flappy game, visit the share page, and visit the workspace
+    # 87 scenarios (1 failed, 86 passed)
+    # 944 steps (1 failed, 2 skipped, 941 passed)
+    # 18m44.415s
 
-  result_string = succeeded ? "succeeded".green : "failed".red
-  HipChat.log "UI tests for #{browser_name} #{result_string}\n"
+    lines = output_text.lines
+    failing_scenarios = lines.rindex("Failing Scenarios:")
+    if failing_scenarios
+      lines[failing_scenarios..-1].join("\n")
+    else 
+      lines.last(3)
+    end
+  end
+
+  succeeded, output_text, test_duration = run_tests(arguments)
 
   if !succeeded && $options.auto_retry
-    HipChat.log return_value.lines.last(10).join("\n") if !succeeded
-    HipChat.log "Retrying <b>dashboard</b> UI with <b>#{browser_name}</b>..."
-    succeeded, return_value = run_tests(arguments)
+    HipChat.log "<pre>#{output_synopsis(output_text)}</pre>"
+    HipChat.log "<b>dashboard</b> UI tests failed with <b>#{browser_name}</b> (#{format_duration(test_duration)}), retrying..."
 
-    result_string = succeeded ? "succeeded".green : "failed".red
-    HipChat.log "UI tests for #{browser_name} #{result_string}\n"
-
-    HipChat.log return_value.lines.last(10).join("\n") if !succeeded
+    p "<pre>#{output_synopsis(output_text)}</pre>"
+    p "<b>dashboard</b> UI tests failed with <b>#{browser_name}</b> (#{format_duration(test_duration)}), retrying..."
+    succeeded, output_text, test_duration = run_tests(arguments)
   end
 
   $lock.synchronize do
@@ -230,19 +256,23 @@ Parallel.map($browsers, :in_processes => $options.parallel_limit) do |browser|
     end
   end
 
-  test_duration = Time.now - test_start_time
-  minutes = (test_duration / 60).to_i
-  seconds = test_duration - (minutes * 60)
-  elapsed = "%.1d:%.2d minutes" % [minutes, seconds]
   if succeeded
-    HipChat.log "<b>dashboard</b> UI tests passed with <b>#{browser_name}</b> (#{elapsed})"
+    HipChat.log "<b>dashboard</b> UI tests passed with <b>#{browser_name}</b> (#{format_duration(test_duration)})"
+    p "<b>dashboard</b> UI tests passed with <b>#{browser_name}</b> (#{format_duration(test_duration)})"
   else
-    message = "<b>dashboard</b> UI tests failed with <b>#{browser_name}</b> (#{elapsed})"
+    HipChat.log "<pre>#{output_synopsis(output_text)}</pre>"
+    message = "<b>dashboard</b> UI tests failed with <b>#{browser_name}</b> (#{format_duration(test_duration)})"
+
+    if $options.html
+      link = "http://test.studio.code.org/ui_test/#{browser['name']}_output.html"
+      message += " <a href='#{link}'>&#x2601; html output</a>"
+    end
+    p message
     HipChat.log message, color:'red'
     HipChat.developers message, color:'red' if CDO.hip_chat_logging
   end
   result_string = succeeded ? "succeeded".green : "failed".red
-  print "UI tests for #{browser_name} #{result_string} (#{elapsed})\n"
+  print "UI tests for #{browser_name} #{result_string} (#{format_duration(test_duration)})\n"
 
   succeeded
 end.each { |result| result ? $suite_success_count += 1 : $suite_fail_count += 1 }
