@@ -539,25 +539,6 @@ html, body {
   }
 }
 
-.headerlink:link, .headerlink:visited {
-  color: white;
-  text-decoration: none;
-}
-
-.headerlink:hover, .headerlink:active {
-  color: white;
-  border-bottom: solid 4px rgb(255, 138, 0);
-  background-color: initial;
-}
-
-.headerlink {
-  display: inline-block;
-  font-size: 18px;
-  margin: 0.9375em 15px 0 30px;
-  font-family: 'Gotham 4r', sans-serif;
-  float: right;
-}
-
 .header_middle {
   position: absolute;
   left: 0;
@@ -649,10 +630,11 @@ html, body {
 
 
 .header_user {
-  float: right;
+  position: absolute;
+  float: left;
+  right: 25px;
   text-align: right;
   margin-top: 9px;
-  margin-right: 15px;
   @media screen and (max-width: 1150px) {
     margin-top: 5px;
   }
