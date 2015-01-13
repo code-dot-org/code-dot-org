@@ -1407,13 +1407,13 @@ StudioApp.prototype.hasExtraTopBlocks = function () {
 var utils = require('./utils');
 var _ = utils.getLodash();
 var requiredBlockUtils = require('./required_block_utils');
-var studioAppSingleton = require('./StudioApp').singleton;
+var studioApp = require('./StudioApp').singleton;
 
 // TODO (br-pair) : This is to expose methods we need in the global namespace
 // for testing purpose. Would be nice to eliminate this eventually.
 window.__TestInterface = {
-  loadBlocks: _.bind(studioAppSingleton.loadBlocks, studioAppSingleton),
-  arrangeBlockPosition: _.bind(studioAppSingleton.arrangeBlockPosition, studioAppSingleton)
+  loadBlocks: _.bind(studioApp.loadBlocks, studioApp),
+  arrangeBlockPosition: _.bind(studioApp.arrangeBlockPosition, studioApp)
 };
 
 var addReadyListener = require('./dom').addReadyListener;
@@ -1439,11 +1439,11 @@ module.exports = function(app, levels, options) {
     options.level = level;
   }
 
-  studioAppSingleton.configure(options);
+  studioApp.configure(options);
 
-  options.skin = options.skinsModule.load(studioAppSingleton.assetUrl, options.skinId);
+  options.skin = options.skinsModule.load(studioApp.assetUrl, options.skinId);
 
-  if (studioAppSingleton.usingBlockly) {
+  if (studioApp.usingBlockly) {
     var blockInstallOptions = {
       skin: options.skin,
       isK1: options.level && options.level.isK1
@@ -1462,7 +1462,7 @@ module.exports = function(app, levels, options) {
       if (app.initReadonly) {
         app.initReadonly(options);
       } else {
-        studioAppSingleton.initReadonly(options);
+        studioApp.initReadonly(options);
       }
     } else {
       app.init(options);
@@ -3542,8 +3542,8 @@ var readonly = require('./templates/readonly.html');
 
 TestResults = constants.TestResults;
 
-// TODO (br-pair): can we not pass in the studioAppSingleton
-var FeedbackBlocks = function(options, missingRequiredBlocks, studioAppSingleton) {
+// TODO (br-pair): can we not pass in the studioApp
+var FeedbackBlocks = function(options, missingRequiredBlocks, studioApp) {
   // Check whether blocks are embedded in the hint returned from dashboard.
   // See below comment for format.
   var embeddedBlocks = options.response && options.response.hint &&
@@ -3584,13 +3584,13 @@ var FeedbackBlocks = function(options, missingRequiredBlocks, studioAppSingleton
   this.div = document.createElement('div');
   this.html = readonly({
     app: options.app,
-    assetUrl: studioAppSingleton.assetUrl,
+    assetUrl: studioApp.assetUrl,
     options: {
       readonly: true,
-      locale: studioAppSingleton.LOCALE,
-      localeDirection: studioAppSingleton.localeDirection(),
-      baseUrl: studioAppSingleton.BASE_URL,
-      cacheBust: studioAppSingleton.CACHE_BUST,
+      locale: studioApp.LOCALE,
+      localeDirection: studioApp.localeDirection(),
+      baseUrl: studioApp.BASE_URL,
+      cacheBust: studioApp.CACHE_BUST,
       skinId: options.skin,
       level: options.level,
       blocks: this.generateXMLForBlocks_(blocksToDisplay)
@@ -6119,7 +6119,7 @@ return buf.join('');
 
 'use strict';
 
-var studioAppSingleton = require('../StudioApp').singleton;
+var studioApp = require('../StudioApp').singleton;
 var skins = require('../skins');
 var page = require('../templates/page.html');
 var dom = require('../dom');
@@ -6132,12 +6132,12 @@ var Jigsaw = module.exports;
 var level;
 var skin;
 
-var ResultType = studioAppSingleton.ResultType;
-var TestResults = studioAppSingleton.TestResults;
+var ResultType = studioApp.ResultType;
+var TestResults = studioApp.TestResults;
 
-studioAppSingleton.setCheckForEmptyBlocks(true);
+studioApp.setCheckForEmptyBlocks(true);
 //The number of blocks to show as feedback.
-studioAppSingleton.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
+studioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
 // Never bump neighbors for Jigsaw
 Blockly.BUMP_UNCONNECTED = false;
@@ -6233,10 +6233,10 @@ Jigsaw.init = function(config) {
   Blockly.SNAP_RADIUS = level.snapRadius || 90;
 
   config.html = page({
-    assetUrl: studioAppSingleton.assetUrl,
+    assetUrl: studioApp.assetUrl,
     data: {
-      localeDirection: studioAppSingleton.localeDirection(),
-      controls: require('./controls.html')({assetUrl: studioAppSingleton.assetUrl}),
+      localeDirection: studioApp.localeDirection(),
+      controls: require('./controls.html')({assetUrl: studioApp.assetUrl}),
       editCode: level.editCode,
       blockCounterClass: 'block-counter-default'
     }
@@ -6244,9 +6244,9 @@ Jigsaw.init = function(config) {
 
   // TODO (br-pair) : I think this is something that's happening in all apps?
   config.loadAudio = function() {
-    studioAppSingleton.loadAudio(skin.winSound, 'win');
-    studioAppSingleton.loadAudio(skin.startSound, 'start');
-    studioAppSingleton.loadAudio(skin.failureSound, 'failure');
+    studioApp.loadAudio(skin.winSound, 'win');
+    studioApp.loadAudio(skin.startSound, 'start');
+    studioApp.loadAudio(skin.failureSound, 'failure');
   };
 
   config.afterInject = function() {
@@ -6268,7 +6268,7 @@ Jigsaw.init = function(config) {
   config.enableShowCode = false;
   config.enableShowBlockCount = false;
 
-  studioAppSingleton.init(config);
+  studioApp.init(config);
 
   document.getElementById('runButton').style.display = 'none';
   Jigsaw.successListener = Blockly.mainBlockSpaceEditor.addChangeListener(function(evt) {
@@ -6296,11 +6296,11 @@ function checkForSuccess() {
 
 /**
  * App specific displayFeedback function that calls into
- * studioAppSingleton.displayFeedback when appropriate
+ * studioApp.displayFeedback when appropriate
  */
 var displayFeedback = function() {
   if (!Jigsaw.waitingForReport) {
-    studioAppSingleton.displayFeedback({
+    studioApp.displayFeedback({
       app: 'Jigsaw',
       skin: skin.id,
       feedbackType: Jigsaw.testResults,
@@ -6333,14 +6333,14 @@ Jigsaw.onPuzzleComplete = function() {
   // Note that we have not yet animated the succesful run
   var levelComplete = (Jigsaw.result == ResultType.SUCCESS);
 
-  Jigsaw.testResults = studioAppSingleton.getTestResults(levelComplete, {
+  Jigsaw.testResults = studioApp.getTestResults(levelComplete, {
     allowTopBlocks: true
   });
 
   if (Jigsaw.testResults >= TestResults.FREE_PLAY) {
-    studioAppSingleton.playAudio('win');
+    studioApp.playAudio('win');
   } else {
-    studioAppSingleton.playAudio('failure');
+    studioApp.playAudio('failure');
   }
 
   var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
@@ -6349,7 +6349,7 @@ Jigsaw.onPuzzleComplete = function() {
   Jigsaw.waitingForReport = true;
 
   // Report result to server.
-  studioAppSingleton.report({
+  studioApp.report({
      app: 'Jigsaw',
      level: level.id,
      result: Jigsaw.result === ResultType.SUCCESS,
