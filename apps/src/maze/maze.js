@@ -23,7 +23,7 @@
  */
 'use strict';
 
-var studioAppSingleton = require('../StudioApp').singleton;
+var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('../../locale/current/common');
 var tiles = require('./tiles');
 var codegen = require('../codegen');
@@ -46,8 +46,8 @@ var ExecutionInfo = require('./executionInfo');
 var Direction = tiles.Direction;
 var SquareType = tiles.SquareType;
 var TurnDirection = tiles.TurnDirection;
-var ResultType = studioAppSingleton.ResultType;
-var TestResults = studioAppSingleton.TestResults;
+var ResultType = studioApp.ResultType;
+var TestResults = studioApp.TestResults;
 
 var SVG_NS = "http://www.w3.org/2000/svg";
 
@@ -65,7 +65,7 @@ var skin;
 var stepSpeed;
 
 //TODO: Make configurable.
-studioAppSingleton.setCheckForEmptyBlocks(true);
+studioApp.setCheckForEmptyBlocks(true);
 
 var getTile = function(map, x, y) {
   if (map && map[y]) {
@@ -74,7 +74,7 @@ var getTile = function(map, x, y) {
 };
 
 //The number of blocks to show as feedback.
-studioAppSingleton.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
+studioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
 // Default Scalings
 Maze.scale = {
@@ -517,13 +517,13 @@ Maze.init = function(config) {
   config.forceInsertTopBlock = 'when_run';
 
   if (mazeUtils.isBeeSkin(config.skinId)) {
-    Maze.bee = new Bee(Maze, studioAppSingleton, config);
+    Maze.bee = new Bee(Maze, studioApp, config);
     // Override default stepSpeed
     Maze.scale.stepSpeed = 2;
   } else if (config.skinId === 'letters') {
     Maze.wordSearch = new WordSearch(level.searchWord, level.map, Maze.drawTile);
     extraControlRows = require('./extraControlRows.html')({
-      assetUrl: studioAppSingleton.assetUrl,
+      assetUrl: studioApp.assetUrl,
       searchWord: level.searchWord
     });
   }
@@ -533,12 +533,12 @@ Maze.init = function(config) {
   Maze.cachedBlockStates = [];
 
   config.html = page({
-    assetUrl: studioAppSingleton.assetUrl,
+    assetUrl: studioApp.assetUrl,
     data: {
-      localeDirection: studioAppSingleton.localeDirection(),
+      localeDirection: studioApp.localeDirection(),
       visualization: require('./visualization.html')(),
       controls: require('./controls.html')({
-        assetUrl: studioAppSingleton.assetUrl,
+        assetUrl: studioApp.assetUrl,
         showStepButton: level.step && !level.edit_blocks
       }),
       extraControlRows: extraControlRows,
@@ -551,35 +551,35 @@ Maze.init = function(config) {
   });
 
   config.loadAudio = function() {
-    studioAppSingleton.loadAudio(skin.winSound, 'win');
-    studioAppSingleton.loadAudio(skin.startSound, 'start');
-    studioAppSingleton.loadAudio(skin.failureSound, 'failure');
-    studioAppSingleton.loadAudio(skin.obstacleSound, 'obstacle');
+    studioApp.loadAudio(skin.winSound, 'win');
+    studioApp.loadAudio(skin.startSound, 'start');
+    studioApp.loadAudio(skin.failureSound, 'failure');
+    studioApp.loadAudio(skin.obstacleSound, 'obstacle');
     // Load wall sounds.
-    studioAppSingleton.loadAudio(skin.wallSound, 'wall');
+    studioApp.loadAudio(skin.wallSound, 'wall');
 
     // todo - longterm, instead of having sound related flags we should just
     // have the skin tell us the set of sounds it needs
     if (skin.additionalSound) {
-      studioAppSingleton.loadAudio(skin.wall0Sound, 'wall0');
-      studioAppSingleton.loadAudio(skin.wall1Sound, 'wall1');
-      studioAppSingleton.loadAudio(skin.wall2Sound, 'wall2');
-      studioAppSingleton.loadAudio(skin.wall3Sound, 'wall3');
-      studioAppSingleton.loadAudio(skin.wall4Sound, 'wall4');
-      studioAppSingleton.loadAudio(skin.winGoalSound, 'winGoal');
+      studioApp.loadAudio(skin.wall0Sound, 'wall0');
+      studioApp.loadAudio(skin.wall1Sound, 'wall1');
+      studioApp.loadAudio(skin.wall2Sound, 'wall2');
+      studioApp.loadAudio(skin.wall3Sound, 'wall3');
+      studioApp.loadAudio(skin.wall4Sound, 'wall4');
+      studioApp.loadAudio(skin.winGoalSound, 'winGoal');
     }
     if (skin.dirtSound) {
-      studioAppSingleton.loadAudio(skin.fillSound, 'fill');
-      studioAppSingleton.loadAudio(skin.digSound, 'dig');
+      studioApp.loadAudio(skin.fillSound, 'fill');
+      studioApp.loadAudio(skin.digSound, 'dig');
     }
     if (skin.beeSound) {
-      studioAppSingleton.loadAudio(skin.nectarSound, 'nectar');
-      studioAppSingleton.loadAudio(skin.honeySound, 'honey');
+      studioApp.loadAudio(skin.nectarSound, 'nectar');
+      studioApp.loadAudio(skin.honeySound, 'honey');
     }
   };
 
   config.afterInject = function() {
-    if (studioAppSingleton.usingBlockly) {
+    if (studioApp.usingBlockly) {
       /**
        * The richness of block colours, regardless of the hue.
        * MOOC blocks should be brighter (target audience is younger).
@@ -623,7 +623,7 @@ Maze.init = function(config) {
     var stepButton = document.getElementById('stepButton');
     dom.addClickTouchEvent(stepButton, stepButtonClick);
 
-    // base's studioAppSingleton.resetButtonClick will be called first
+    // base's studioApp.resetButtonClick will be called first
     var resetButton = document.getElementById('resetButton');
     dom.addClickTouchEvent(resetButton, Maze.resetButtonClick);
 
@@ -632,7 +632,7 @@ Maze.init = function(config) {
     }
   };
 
-  studioAppSingleton.init(config);
+  studioApp.init(config);
 };
 
 /**
@@ -744,9 +744,9 @@ var updatePegmanAnimation = function(options) {
  * Reset the maze to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
  */
-studioAppSingleton.reset = function(first) {
+studioApp.reset = function(first) {
   if (Maze.bee) {
-    // Bee needs to reset itself and still run studioAppSingleton.reset logic
+    // Bee needs to reset itself and still run studioApp.reset logic
     Maze.bee.reset();
   }
 
@@ -873,7 +873,7 @@ function resetTiles() {
  * Click the run button.  Start the program.
  */
 // XXX This is the only method used by the templates!
-studioAppSingleton.runButtonClick = function() {
+studioApp.runButtonClick = function() {
   var stepButton = document.getElementById('stepButton');
   if (stepButton) {
     stepButton.setAttribute('disabled', '');
@@ -888,16 +888,16 @@ function beginAttempt () {
   if (!resetButton.style.minWidth) {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
-  studioAppSingleton.toggleRunReset('reset');
-  if (studioAppSingleton.usingBlockly) {
+  studioApp.toggleRunReset('reset');
+  if (studioApp.usingBlockly) {
     Blockly.mainBlockSpace.traceOn(true);
   }
-  studioAppSingleton.reset(false);
-  studioAppSingleton.attempts++;
+  studioApp.reset(false);
+  studioApp.attempts++;
 }
 
 /**
- * App specific reset button click logic.  studioAppSingleton.resetButtonClick will be
+ * App specific reset button click logic.  studioApp.resetButtonClick will be
  * called first.
  */
 Maze.resetButtonClick = function () {
@@ -921,7 +921,7 @@ function reenableCachedBlockStates () {
 
 /**
  * App specific displayFeedback function that calls into
- * studioAppSingleton.displayFeedback when appropriate
+ * studioApp.displayFeedback when appropriate
  */
 var displayFeedback = function() {
   if (Maze.waitingForReport || Maze.animating_) {
@@ -935,7 +935,7 @@ var displayFeedback = function() {
     level: level
   };
   // If there was an app-specific error (currently only possible for Bee),
-  // add it to the options passed to studioAppSingleton.displayFeedback().
+  // add it to the options passed to studioApp.displayFeedback().
   if (Maze.testResults === TestResults.APP_SPECIFIC_FAIL &&
       Maze.bee) {
     var message = Maze.bee.getMessage(Maze.executionInfo.terminationValue());
@@ -943,7 +943,7 @@ var displayFeedback = function() {
       options.message = message;
     }
   }
-  studioAppSingleton.displayFeedback(options);
+  studioApp.displayFeedback(options);
 };
 
 /**
@@ -970,11 +970,11 @@ Maze.execute = function(stepMode) {
   Maze.response = null;
 
   var code;
-  if (studioAppSingleton.usingBlockly) {
+  if (studioApp.usingBlockly) {
     code = Blockly.Generator.blockSpaceToCode('JavaScript');
   } else {
     code = utils.generateCodeAliases(level.codeFunctions, 'Maze');
-    code += studioAppSingleton.editor.getValue();
+    code += studioApp.editor.getValue();
   }
 
   // Try running the user's code.  There are a few possible outcomes:
@@ -990,7 +990,7 @@ Maze.execute = function(stepMode) {
   //    during execution, in which case we set ResultType to ERROR.
   // The animation should be fast if execution was successful, slow otherwise
   // to help the user see the mistake.
-  studioAppSingleton.playAudio('start');
+  studioApp.playAudio('start');
   try {
     // don't bother running code if we're just editting required blocks. all
     // we care about is the contents of report.
@@ -998,7 +998,7 @@ Maze.execute = function(stepMode) {
 
     if (runCode) {
       codegen.evalWith(code, {
-        StudioApp: studioAppSingleton,
+        StudioApp: studioApp,
         Maze: api,
         executionInfo: Maze.executionInfo
       });
@@ -1055,7 +1055,7 @@ Maze.execute = function(stepMode) {
   // Set testResults unless app-specific results were set in the default
   // branch of the above switch statement.
   if (Maze.testResults === TestResults.NO_TESTS_RUN) {
-    Maze.testResults = studioAppSingleton.getTestResults(levelComplete);
+    Maze.testResults = studioApp.getTestResults(levelComplete);
   }
 
   var program;
@@ -1066,7 +1066,7 @@ Maze.execute = function(stepMode) {
     // do an acorn.parse and then use escodegen to generate back a "clean" version
     // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
 
-    program = studioAppSingleton.editor.getValue();
+    program = studioApp.editor.getValue();
   } else {
     var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
     program = Blockly.Xml.domToText(xml);
@@ -1075,7 +1075,7 @@ Maze.execute = function(stepMode) {
   Maze.waitingForReport = true;
 
   // Report result to server.
-  studioAppSingleton.report({
+  studioApp.report({
     app: 'maze',
     level: level.id,
     result: Maze.result === ResultType.SUCCESS,
@@ -1086,7 +1086,7 @@ Maze.execute = function(stepMode) {
 
   // Maze. now contains a transcript of all the user's actions.
   // Reset the maze and animate the transcript.
-  studioAppSingleton.reset(false);
+  studioApp.reset(false);
   resetDirtImages(true);
 
   // if we have extra top blocks, don't even bother animating
@@ -1098,7 +1098,7 @@ Maze.execute = function(stepMode) {
 
   Maze.animating_ = true;
 
-  if (studioAppSingleton.usingBlockly) {
+  if (studioApp.usingBlockly) {
     // Disable toolbox while running
     Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
 
@@ -1184,7 +1184,7 @@ Maze.scheduleAnimations = function (singleStep) {
         stepButton.removeAttribute('disabled');
       } else {
         Maze.animating_ = false;
-        if (studioAppSingleton.usingBlockly) {
+        if (studioApp.usingBlockly) {
           // reenable toolbox
           Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
         }
@@ -1193,7 +1193,7 @@ Maze.scheduleAnimations = function (singleStep) {
         // blocks now
         if (!singleStep || Maze.result === ResultType.SUCCESS) {
           reenableCachedBlockStates();
-          studioAppSingleton.clearHighlighting();
+          studioApp.clearHighlighting();
         }
         displayFeedback();
       }
@@ -1209,7 +1209,7 @@ Maze.scheduleAnimations = function (singleStep) {
  */
 function animateAction (action, spotlightBlocks, timePerStep) {
   if (action.blockId) {
-    studioAppSingleton.highlight(String(action.blockId), spotlightBlocks);
+    studioApp.highlight(String(action.blockId), spotlightBlocks);
   }
 
   switch (action.command) {
@@ -1263,7 +1263,7 @@ function animateAction (action, spotlightBlocks, timePerStep) {
           break;
         default:
           timeoutList.setTimeout(function() {
-            studioAppSingleton.playAudio('failure');
+            studioApp.playAudio('failure');
           }, stepSpeed);
           break;
       }
@@ -1281,7 +1281,7 @@ function animateAction (action, spotlightBlocks, timePerStep) {
       Maze.bee.animateMakeHoney();
       break;
     default:
-      // action[0] is null if generated by studioAppSingleton.checkTimeout().
+      // action[0] is null if generated by studioApp.checkTimeout().
       break;
   }
 }
@@ -1449,10 +1449,10 @@ Maze.scheduleFail = function(forward) {
   var squareType = Maze.map[targetY] && Maze.map[targetY][targetX];
   if (squareType === SquareType.WALL || squareType === undefined) {
     // Play the sound
-    studioAppSingleton.playAudio('wall');
+    studioApp.playAudio('wall');
     if (squareType !== undefined) {
       // Check which type of wall pegman is hitting
-      studioAppSingleton.playAudio('wall' + Maze.wallMap[targetY][targetX]);
+      studioApp.playAudio('wall' + Maze.wallMap[targetY][targetX]);
     }
 
     // Play the animation of hitting the wall
@@ -1499,7 +1499,7 @@ Maze.scheduleFail = function(forward) {
     timeoutList.setTimeout(function() {
       Maze.displayPegman(Maze.pegmanX + deltaX / 4, Maze.pegmanY + deltaY / 4,
        frame);
-      studioAppSingleton.playAudio('failure');
+      studioApp.playAudio('failure');
     }, stepSpeed * 2);
     timeoutList.setTimeout(function() {
       Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, frame);
@@ -1519,7 +1519,7 @@ Maze.scheduleFail = function(forward) {
     }
   } else if (squareType == SquareType.OBSTACLE) {
     // Play the sound
-    studioAppSingleton.playAudio('obstacle');
+    studioApp.playAudio('obstacle');
 
     // Play the animation
     var obsId = targetX + Maze.COLS * targetY;
@@ -1551,7 +1551,7 @@ Maze.scheduleFail = function(forward) {
       }, stepSpeed * 2);
     }
     timeoutList.setTimeout(function() {
-      studioAppSingleton.playAudio('failure');
+      studioApp.playAudio('failure');
     }, stepSpeed);
   }
 };
@@ -1612,13 +1612,13 @@ function scheduleDance(victoryDance, timeAlloted) {
   // If victoryDance == true, play the goal animation, else reset it
   var finishIcon = document.getElementById('finish');
   if (victoryDance && finishIcon) {
-    studioAppSingleton.playAudio('winGoal');
+    studioApp.playAudio('winGoal');
     finishIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
       skin.goalAnimation);
   }
 
   if (victoryDance) {
-    studioAppSingleton.playAudio('win');
+    studioApp.playAudio('win');
   }
 
   var danceSpeed = timeAlloted / 5;
@@ -1672,7 +1672,7 @@ var scheduleDirtChange = function(options) {
   var row = Maze.pegmanY;
   Maze.dirt_[row][col] += options.amount;
   Maze.gridItemDrawer.updateItemImage(row, col, true);
-  studioAppSingleton.playAudio(options.sound);
+  studioApp.playAudio(options.sound);
 };
 
 /**

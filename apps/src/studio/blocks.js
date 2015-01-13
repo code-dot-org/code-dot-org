@@ -6,7 +6,7 @@
  */
 'use strict';
 
-var studioAppSingleton = require('../StudioApp').singleton;
+var studioApp = require('../StudioApp').singleton;
 var msg = require('../../locale/current/studio');
 var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
 var commonMsg = require('../../locale/current/common');
@@ -926,7 +926,7 @@ exports.install = function(blockly, blockInstallOptions) {
     if (soundValue === RANDOM_VALUE) {
       return;
     }
-    studioAppSingleton.playAudio(utils.stripQuotes(soundValue), {volume: 1.0});
+    studioApp.playAudio(utils.stripQuotes(soundValue), {volume: 1.0});
   }
 
   blockly.Blocks.studio_playSound = {
