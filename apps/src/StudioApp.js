@@ -9,6 +9,7 @@ var constants = require('./constants.js');
 var msg = require('../locale/current/common');
 var blockUtils = require('./block_utils');
 var url = require('url');
+var FeedbackUtils = require('./feedback');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -27,7 +28,7 @@ var MAX_PHONE_WIDTH = 500;
 
 
 var StudioAppClass = function () {
-  this.feedback_ = null;
+  this.feedback_ = new FeedbackUtils(this);
 
   /**
   * The parent directory of the apps. Contains common.js.
@@ -756,7 +757,7 @@ StudioAppClass.prototype.resizeHeaders = function (fullWorkspaceWidth) {
   var toolboxWidth = 0;
   if (this.editCode) {
     // If in the droplet editor, but not using blocks, keep categoryWidth at 0
-    if (!this.editCode || this.editor.currentlyUsingBlocks) {
+    if (this.editor.currentlyUsingBlocks) {
       // Set toolboxWidth based on the block palette width:
       var categories = document.querySelector('.droplet-palette-wrapper');
       toolboxWidth = parseInt(window.getComputedStyle(categories).width, 10);

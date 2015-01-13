@@ -5,7 +5,7 @@ var jsdom = require('jsdom').jsdom;
 var xmldom = require('xmldom');
 var canvas = require('canvas');
 var testUtils = require('./testUtils');
-var msg = testUtils.requireWithGlobalsCheckSrcFolder('../locale/current/common', ['c', 'n', 'v', 'p', 's']);
+var msg = testUtils.requireWithGlobalsCheckBuildFolder('../locale/current/common', ['c', 'n', 'v', 'p', 's']);
 
 var buildDir = '../../build';
 
@@ -74,14 +74,19 @@ function runTestFromCollection (collection, index) {
   // Each testCollection file must either specify a file from which to get the
   // level, or provide it's own custom level
   if (testCollection.levelFile) {
-    var levels = require(buildDir + '/js/' + app + '/' + testCollection.levelFile);
+    var levels = require(testUtils.buildPath(app + '/' + testCollection.levelFile));
     level = levels[testCollection.levelId];
   } else {
-    if (!testCollection.levelDefinition) {
+    // custom levels can either be across all tests in the collection (in which
+    // case it's testCollection.levelDefinition), or for a single test (in which
+    // case it's returned by testData.delayLoadLevelDefinition())
+    // NOTE: we could simplify things by converting everyone to use the per test
+    // usage instead of the per collection usage
+    if (!testCollection.levelDefinition && !testData.delayLoadLevelDefinition) {
       logError('testCollection requires levelFile or levelDefinition');
       return;
     }
-    level = testCollection.levelDefinition;
+    level = testCollection.levelDefinition || testData.delayLoadLevelDefinition();
   }
 
   // Override speed
@@ -132,7 +137,7 @@ function runLevel (app, skinId, level, onAttempt, beforeClick) {
   main({
     skinId: skinId,
     level: level,
-    baseUrl: '/', // XXX Doesn't matter
+    baseUrl: '/', // Doesn't matter
     containerId: 'app',
     onInitialize: function() {
       // Click the run button!

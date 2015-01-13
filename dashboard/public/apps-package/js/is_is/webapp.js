@@ -152,6 +152,7 @@ var constants = require('./constants.js');
 var msg = require('../locale/is_is/common');
 var blockUtils = require('./block_utils');
 var url = require('url');
+var FeedbackUtils = require('./feedback');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -170,7 +171,7 @@ var MAX_PHONE_WIDTH = 500;
 
 
 var StudioAppClass = function () {
-  this.feedback_ = null;
+  this.feedback_ = new FeedbackUtils(this);
 
   /**
   * The parent directory of the apps. Contains common.js.
@@ -899,7 +900,7 @@ StudioAppClass.prototype.resizeHeaders = function (fullWorkspaceWidth) {
   var toolboxWidth = 0;
   if (this.editCode) {
     // If in the droplet editor, but not using blocks, keep categoryWidth at 0
-    if (!this.editCode || this.editor.currentlyUsingBlocks) {
+    if (this.editor.currentlyUsingBlocks) {
       // Set toolboxWidth based on the block palette width:
       var categories = document.querySelector('.droplet-palette-wrapper');
       toolboxWidth = parseInt(window.getComputedStyle(categories).width, 10);
@@ -1390,7 +1391,7 @@ StudioAppClass.prototype.hasExtraTopBlocks = function () {
   return this.feedback_.hasExtraTopBlocks();
 };
 
-},{"../locale/is_is/common":40,"./ResizeSensor":1,"./block_utils":5,"./constants.js":8,"./dom":9,"./templates/builder.html":17,"./templates/buttons.html":18,"./templates/instructions.html":20,"./templates/learn.html":21,"./templates/makeYourOwn.html":22,"./utils":29,"./xml":39,"url":52}],3:[function(require,module,exports){
+},{"../locale/is_is/common":41,"./ResizeSensor":1,"./block_utils":5,"./constants.js":8,"./dom":9,"./feedback":10,"./templates/builder.html":17,"./templates/buttons.html":18,"./templates/instructions.html":20,"./templates/learn.html":21,"./templates/makeYourOwn.html":22,"./utils":29,"./xml":40,"url":53}],3:[function(require,module,exports){
 var utils = require('./utils');
 var _ = utils.getLodash();
 var requiredBlockUtils = require('./required_block_utils');
@@ -1495,16 +1496,10 @@ module.exports = function(app, levels, options) {
  */
 var StudioAppClass = require('./StudioApp');
 var studioAppSingleton = new StudioAppClass();
-var feedback = require('./feedback');
 
 module.exports = studioAppSingleton;
 
-// TODO (br-pair) : This is how we associate our singleton feedback object with
-// our singleton StudioApp object. We can almost certainly do this more cleanly..
-feedback.applySingleton(studioAppSingleton);
-studioAppSingleton.feedback_ = feedback;
-
-},{"./StudioApp":2,"./feedback":10}],5:[function(require,module,exports){
+},{"./StudioApp":2}],5:[function(require,module,exports){
 var xml = require('./xml');
 
 exports.createToolbox = function(blocks) {
@@ -1705,7 +1700,7 @@ exports.mathBlockXml = function (type, inputs, titles) {
   return str;
 };
 
-},{"./xml":39}],6:[function(require,module,exports){
+},{"./xml":40}],6:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -1870,7 +1865,7 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/is_is/common":40}],7:[function(require,module,exports){
+},{"../locale/is_is/common":41}],7:[function(require,module,exports){
 var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
 var LOOP_HIGHLIGHT = 'loopHighlight();\n';
@@ -2137,8 +2132,11 @@ function createSelection (selection, cumulativeLength, start, end) {
  * Returns the row (line) of code highlighted. If nothing is highlighted
  * because it is outside of the userCode area, the return value is -1
  */
-exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
-                                      userCodeStartOffset, userCodeLength) {
+exports.selectCurrentCode = function (interpreter,
+                                      cumulativeLength,
+                                      userCodeStartOffset,
+                                      userCodeLength,
+                                      editor) {
   var userCodeRow = -1;
   if (interpreter.stateStack[0]) {
     var node = interpreter.stateStack[0].node;
@@ -2171,6 +2169,34 @@ exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
       editor.clearLineMarks();
     } else {
       editor.aceEditor.getSelection().clearSelection();
+    }
+  }
+  return userCodeRow;
+};
+
+/**
+ * Finds the current line of code in droplet/ace editor.
+ *
+ * Returns the line of code where the interpreter is at. If it is outside
+ * of the userCode area, the return value is -1
+ *
+ * NOTE: first 4 params match the selectCurrentCode function by design.
+ */
+exports.getUserCodeLine = function (interpreter, cumulativeLength,
+                                    userCodeStartOffset, userCodeLength) {
+  var userCodeRow = -1;
+  if (interpreter.stateStack[0]) {
+    var node = interpreter.stateStack[0].node;
+    // Adjust start/end by userCodeStartOffset since the code running
+    // has been expanded vs. what the user sees in the editor window:
+    var start = node.start - userCodeStartOffset;
+    var end = node.end - userCodeStartOffset;
+
+    // Only return a valid userCodeRow if the node being executed is inside the
+    // user's code (not inside code we inserted before or after their code that
+    // is not visible in the editor):
+    if (start >= 0 && start < userCodeLength) {
+      userCodeRow = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
     }
   }
   return userCodeRow;
@@ -2404,40 +2430,51 @@ exports.isIOS = function() {
 };
 
 },{}],10:[function(require,module,exports){
-var trophy = require('./templates/trophy.html');
-var utils = require('./utils');
-var codegen = require('./codegen');
-var msg = require('../locale/is_is/common');
-var dom = require('./dom');
-var xml = require('./xml');
-var _ = utils.getLodash();
-
-var FeedbackBlocks = require('./feedbackBlocks');
-
-// TODO (br-pair): This is a hack. We initially set our studioAppSingleton to
-// be the global StudioApp. This will be the case for all apps other than Artist.
-// However, that global is not necessarily set yet at the point where we load
-// feedback, and requiring base here introduces a circular dependency. Instead,
-// we depend on base apply the singleton to the feedback object i required.
-var studioAppSingleton;
-exports.applySingleton = function (singleton) {
-  studioAppSingleton = singleton;
-};
-
-var TestResults = require('./constants').TestResults;
-
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
-var HintRequestPlacement = {
+var HINT_REQUEST_PLACEMENT = {
   NONE: 0,  // This value must not be changed.
   LEFT: 1,  // Hint request button is on left.
   RIGHT: 2  // Hint request button is on right.
 };
 
-exports.displayFeedback = function(options) {
+var KEYCODES = {
+  ENTER: 13,
+  SPACE: 32
+};
+
+/**
+ * Bag of utility functions related to building and displaying feedback
+ * to students.
+ * @class
+ * @param {StudioAppClass} studioApp A studioApp instance used to pull
+ *   configuration and perform operations.
+ */
+var FeedbackUtils = function (studioApp) {
+  this.studioApp_ = studioApp;
+};
+module.exports = FeedbackUtils;
+
+// Globals used in this file:
+//   Blockly
+
+var trophy = require('./templates/trophy.html');
+var utils = require('./utils');
+var _ = utils.getLodash();
+var codegen = require('./codegen');
+var msg = require('../locale/is_is/common');
+var dom = require('./dom');
+var xml = require('./xml');
+var FeedbackBlocks = require('./feedbackBlocks');
+var TestResults = require('./constants').TestResults;
+
+/**
+ *
+ */
+FeedbackUtils.prototype.displayFeedback = function(options) {
   options.hintRequestExperiment = options.response &&
       options.response.hint_request_placement;
   options.level = options.level || {};
-  options.numTrophies = numTrophiesEarned(options);
+  options.numTrophies = this.numTrophiesEarned_(options);
 
   // Tracking event for level newly completed
   if (options.response && options.response.new_level_completed) {
@@ -2447,20 +2484,24 @@ exports.displayFeedback = function(options) {
   var hadShareFailure = (options.response && options.response.share_failure);
   var showingSharing = options.showingSharing && !hadShareFailure;
 
-  var canContinue = exports.canContinueToNextLevel(options.feedbackType);
-  var displayShowCode = studioAppSingleton.enableShowCode && canContinue && !showingSharing;
+  var canContinue = this.canContinueToNextLevel(options.feedbackType);
+  var displayShowCode = this.studioApp_.enableShowCode && canContinue && !showingSharing;
   var feedback = document.createElement('div');
-  var sharingDiv = (canContinue && showingSharing) ? exports.createSharingDiv(options) : null;
-  var showCode = displayShowCode ? getShowCodeElement(options) : null;
-  var shareFailureDiv = hadShareFailure ? getShareFailure(options) : null;
+  var sharingDiv = (canContinue && showingSharing) ? this.createSharingDiv(options) : null;
+  var showCode = displayShowCode ? this.getShowCodeElement_(options) : null;
+  var shareFailureDiv = hadShareFailure ? this.getShareFailure_(options) : null;
   if (hadShareFailure) {
     trackEvent('Share', 'Failure', options.response.share_failure.type);
   }
-  var feedbackBlocks = new FeedbackBlocks(options, getMissingRequiredBlocks(),
-    studioAppSingleton);
+  var feedbackBlocks;
+  if (this.studioApp_.usingBlockly) {
+    feedbackBlocks = new FeedbackBlocks(options,
+                                        this.getMissingRequiredBlocks_(),
+                                        this.studioApp_);
+  }
   // feedbackMessage must be initialized after feedbackBlocks
   // because FeedbackBlocks can mutate options.response.hint.
-  var feedbackMessage = getFeedbackMessage(options);
+  var feedbackMessage = this.getFeedbackMessage_(options);
 
   if (feedbackMessage) {
     feedback.appendChild(feedbackMessage);
@@ -2474,11 +2515,11 @@ exports.displayFeedback = function(options) {
         trackEvent('Trophy', concept_name, trophy_name);
       }
     }
-    var trophies = getTrophiesElement(options);
+    var trophies = this.getTrophiesElement_(options);
     feedback.appendChild(trophies);
   }
-  if (feedbackBlocks.div) {
-    if (feedbackMessage && useSpecialFeedbackDesign(options)) {
+  if (feedbackBlocks && feedbackBlocks.div) {
+    if (feedbackMessage && this.useSpecialFeedbackDesign_(options)) {
       // put the blocks iframe inside the feedbackMessage for this special case:
       feedbackMessage.appendChild(feedbackBlocks.div);
     } else {
@@ -2507,7 +2548,7 @@ exports.displayFeedback = function(options) {
   }
 
   feedback.appendChild(
-    getFeedbackButtons({
+    this.getFeedbackButtons_({
       feedbackType: options.feedbackType,
       showPreviousButton: options.level.showPreviousLevelButton,
       isK1: options.level.isK1,
@@ -2524,10 +2565,10 @@ exports.displayFeedback = function(options) {
   var onlyContinue = continueButton && !againButton && !previousLevelButton;
 
   var onHidden = onlyContinue ? options.onContinue : null;
-  var icon = canContinue ? studioAppSingleton.winIcon : studioAppSingleton.failureIcon;
+  var icon = canContinue ? this.studioApp_.winIcon : this.studioApp_.failureIcon;
   var defaultBtnSelector = onlyContinue ? '#continue-button' : '#again-button';
 
-  var feedbackDialog = exports.createModalDialogWithIcon({
+  var feedbackDialog = this.createModalDialogWithIcon({
     Dialog: options.Dialog,
     contentDiv: feedback,
     icon: icon,
@@ -2537,7 +2578,7 @@ exports.displayFeedback = function(options) {
   });
 
   // Update the background color if it is set to be in special design.
-  if (useSpecialFeedbackDesign(options)) {
+  if (this.useSpecialFeedbackDesign_(options)) {
     if (options.response.design == "white_background") {
       document.getElementById('feedback-dialog')
           .className += " white-background";
@@ -2564,7 +2605,7 @@ exports.displayFeedback = function(options) {
   // hint if the button gets pressed.
   if (hintRequestButton) {
     // Swap out the specific feedback message with a generic one.
-    var genericFeedback = getFeedbackMessage({message: msg.genericFeedback()});
+    var genericFeedback = this.getFeedbackMessage_({message: msg.genericFeedback()});
     var parentNode = feedbackMessage.parentNode;
     parentNode.replaceChild(genericFeedback, feedbackMessage);
 
@@ -2573,7 +2614,7 @@ exports.displayFeedback = function(options) {
     // the feedback blocks into the correct location if needed.
     var feedbackBlocksParent = null;
     var feedbackBlocksNextSib = null;
-    if (feedbackBlocks.div) {
+    if (feedbackBlocks && feedbackBlocks.div) {
       feedbackBlocksParent = feedbackBlocks.div.parentNode;
       feedbackBlocksNextSib = feedbackBlocks.div.nextSibling;
       feedbackBlocksParent.removeChild(feedbackBlocks.div);
@@ -2589,7 +2630,7 @@ exports.displayFeedback = function(options) {
       hintRequestButton.parentNode.removeChild(hintRequestButton);
 
       // Restore feedback blocks, if present.
-      if (feedbackBlocks.div && feedbackBlocksParent) {
+      if (feedbackBlocks && feedbackBlocks.div && feedbackBlocksParent) {
         feedbackBlocksParent.insertBefore(feedbackBlocks.div, feedbackBlocksNextSib);
         feedbackBlocks.show();
       }
@@ -2639,7 +2680,7 @@ exports.displayFeedback = function(options) {
     backdrop: (options.app === 'flappy' ? 'static' : true)
   });
 
-  if (feedbackBlocks.div) {
+  if (feedbackBlocks && feedbackBlocks.div) {
     feedbackBlocks.show();
   }
 };
@@ -2649,12 +2690,12 @@ exports.displayFeedback = function(options) {
  * not disabled, are deletable.
  * @return {number} Number of blocks used.
  */
-exports.getNumBlocksUsed = function() {
+FeedbackUtils.prototype.getNumBlocksUsed = function() {
   var i;
-  if (studioAppSingleton.editCode) {
+  if (this.studioApp_.editCode) {
     var codeLines = 0;
     // quick and dirty method to count non-blank lines that don't start with //
-    var lines = getGeneratedCodeString().split("\n");
+    var lines = this.getGeneratedCodeString_().split("\n");
     for (i = 0; i < lines.length; i++) {
       if ((lines[i].length > 1) && (lines[i][0] != '/' || lines[i][1] != '/')) {
         codeLines++;
@@ -2662,7 +2703,7 @@ exports.getNumBlocksUsed = function() {
     }
     return codeLines;
   }
-  return getUserBlocks().length;
+  return this.getUserBlocks_().length;
 };
 
 /**
@@ -2670,12 +2711,12 @@ exports.getNumBlocksUsed = function() {
  * not disabled.
  * @return {number} Total number of blocks.
  */
-exports.getNumCountableBlocks = function() {
+FeedbackUtils.prototype.getNumCountableBlocks = function() {
   var i;
-  if (studioAppSingleton.editCode) {
+  if (this.studioApp_.editCode) {
     var codeLines = 0;
     // quick and dirty method to count non-blank lines that don't start with //
-    var lines = getGeneratedCodeString().split("\n");
+    var lines = this.getGeneratedCodeString_().split("\n");
     for (i = 0; i < lines.length; i++) {
       if ((lines[i].length > 1) && (lines[i][0] != '/' || lines[i][1] != '/')) {
         codeLines++;
@@ -2683,24 +2724,27 @@ exports.getNumCountableBlocks = function() {
     }
     return codeLines;
   }
-  return getCountableBlocks().length;
+  return this.getCountableBlocks_().length;
 };
 
-var getFeedbackButtons = function(options) {
+/**
+ *
+ */
+FeedbackUtils.prototype.getFeedbackButtons_ = function(options) {
   var buttons = document.createElement('div');
   buttons.id = 'feedbackButtons';
   buttons.innerHTML = require('./templates/buttons.html')({
     data: {
       previousLevel:
-        !exports.canContinueToNextLevel(options.feedbackType) &&
+        !this.canContinueToNextLevel(options.feedbackType) &&
         options.showPreviousButton,
       tryAgain: options.feedbackType !== TestResults.ALL_PASS,
-      nextLevel: exports.canContinueToNextLevel(options.feedbackType),
+      nextLevel: this.canContinueToNextLevel(options.feedbackType),
       isK1: options.isK1,
       hintRequestExperiment: options.hintRequestExperiment &&
-          (options.hintRequestExperiment === HintRequestPlacement.LEFT ?
+          (options.hintRequestExperiment === HINT_REQUEST_PLACEMENT.LEFT ?
               'left' : 'right'),
-      assetUrl: studioAppSingleton.assetUrl,
+      assetUrl: this.studioApp_.assetUrl,
       freePlay: options.freePlay
     }
   });
@@ -2708,14 +2752,20 @@ var getFeedbackButtons = function(options) {
   return buttons;
 };
 
-var getShareFailure = function(options) {
+/**
+ *
+ */
+FeedbackUtils.prototype.getShareFailure_ = function(options) {
   var shareFailure = options.response.share_failure;
   var shareFailureDiv = document.createElement('div');
   shareFailureDiv.innerHTML = require('./templates/shareFailure.html')({shareFailure: shareFailure});
   return shareFailureDiv;
 };
 
-var useSpecialFeedbackDesign = function (options) {
+/**
+ *
+ */
+FeedbackUtils.prototype.useSpecialFeedbackDesign_ = function (options) {
  return options.response &&
         options.response.design &&
         options.response.hint;
@@ -2730,7 +2780,7 @@ var useSpecialFeedbackDesign = function (options) {
 //    specific result type (e.g., TestResults.EMPTY_BLOCK_FAIL).
 // 5. System-wide message (e.g., msg.emptyBlocksErrorMsg()) for specific
 //    result type (e.g., TestResults.EMPTY_BLOCK_FAIL).
-var getFeedbackMessage = function(options) {
+FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
   var feedback = document.createElement('p');
   feedback.className = 'congrats';
   var message;
@@ -2789,7 +2839,7 @@ var getFeedbackMessage = function(options) {
         break;
       case TestResults.TOO_MANY_BLOCKS_FAIL:
         message = msg.numBlocksNeeded({
-          numBlocks: studioAppSingleton.IDEAL_BLOCK_NUM,
+          numBlocks: this.studioApp_.IDEAL_BLOCK_NUM,
           puzzleNumber: options.level.puzzle_number || 0
         });
         break;
@@ -2841,7 +2891,7 @@ var getFeedbackMessage = function(options) {
   dom.setText(feedback, message);
 
   // Update the feedback box design, if the hint message came from server.
-  if (useSpecialFeedbackDesign(options)) {
+  if (this.useSpecialFeedbackDesign_(options)) {
     // Setup a new div
     var feedbackDiv = document.createElement('div');
     feedbackDiv.className = 'feedback-callout';
@@ -2850,7 +2900,7 @@ var getFeedbackMessage = function(options) {
     // Insert an image
     var imageDiv = document.createElement('img');
     imageDiv.className = "hint-image";
-    imageDiv.src = studioAppSingleton.assetUrl(
+    imageDiv.src = this.studioApp_.assetUrl(
       'media/lightbulb_for_' + options.response.design + '.png');
     feedbackDiv.appendChild(imageDiv);
     // Add new text
@@ -2865,14 +2915,17 @@ var getFeedbackMessage = function(options) {
   return feedback;
 };
 
-exports.createSharingDiv = function(options) {
+/**
+ *
+ */
+FeedbackUtils.prototype.createSharingDiv = function(options) {
   if (!options.response || !options.response.level_source) {
     // don't even try if our caller didn't give us something that can be shared
     // options.response.level_source is the url that we are sharing
     return null;
   }
 
-  if (studioAppSingleton.disableSocialShare) {
+  if (this.studioApp_.disableSocialShare) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
@@ -2912,7 +2965,7 @@ exports.createSharingDiv = function(options) {
     options.facebookUrl = facebookUrl;
   }
 
-  options.assetUrl = studioAppSingleton.assetUrl;
+  options.assetUrl = this.studioApp_.assetUrl;
 
   var sharingDiv = document.createElement('div');
   sharingDiv.setAttribute('style', 'display:inline-block');
@@ -2980,8 +3033,10 @@ exports.createSharingDiv = function(options) {
   return sharingDiv;
 };
 
-
-var numTrophiesEarned = function(options) {
+/**
+ *
+ */
+FeedbackUtils.prototype.numTrophiesEarned_ = function(options) {
   if (options.response && options.response.trophy_updates) {
     return options.response.trophy_updates.length;
   } else {
@@ -2989,7 +3044,10 @@ var numTrophiesEarned = function(options) {
   }
 };
 
-var getTrophiesElement = function(options) {
+/**
+ *
+ */
+FeedbackUtils.prototype.getTrophiesElement_ = function(options) {
   var html = "";
   for (var i = 0; i < options.numTrophies; i++) {
     html += trophy({
@@ -3002,11 +3060,14 @@ var getTrophiesElement = function(options) {
   return trophies;
 };
 
-var getShowCodeElement = function(options) {
+/**
+ *
+ */
+FeedbackUtils.prototype.getShowCodeElement_ = function(options) {
   var showCodeDiv = document.createElement('div');
   showCodeDiv.setAttribute('id', 'show-code');
 
-  var numLinesWritten = exports.getNumBlocksUsed();
+  var numLinesWritten = this.getNumBlocksUsed();
   var shouldShowTotalLines =
     (options.response &&
       options.response.total_lines &&
@@ -3019,10 +3080,10 @@ var getShowCodeElement = function(options) {
   });
 
   var showCodeButton = showCodeDiv.querySelector('#show-code-button');
-  showCodeButton.addEventListener('click', function () {
-    showCodeDiv.appendChild(getGeneratedCodeElement());
+  showCodeButton.addEventListener('click', _.bind(function () {
+    showCodeDiv.appendChild(this.getGeneratedCodeElement_());
     showCodeButton.style.display = 'none';
-  });
+  }, this));
 
   return showCodeDiv;
 };
@@ -3030,9 +3091,9 @@ var getShowCodeElement = function(options) {
 /**
  * Determines whether the user can proceed to the next level, based on the level feedback
  * @param {number} feedbackType A constant property of TestResults,
- *     typically produced by studioAppSingleton.getTestResults().
+ *     typically produced by StudioAppClass.getTestResults().
  */
-exports.canContinueToNextLevel = function(feedbackType) {
+FeedbackUtils.prototype.canContinueToNextLevel = function(feedbackType) {
   return (feedbackType === TestResults.ALL_PASS ||
     feedbackType === TestResults.TOO_MANY_BLOCKS_FAIL ||
     feedbackType ===  TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL ||
@@ -3042,23 +3103,26 @@ exports.canContinueToNextLevel = function(feedbackType) {
 /**
  * Retrieve a string containing the user's generated Javascript code.
  */
-var getGeneratedCodeString = function() {
-  if (studioAppSingleton.editCode) {
-    return studioAppSingleton.editor ? studioAppSingleton.editor.getValue() : '';
+FeedbackUtils.prototype.getGeneratedCodeString_ = function() {
+  if (this.studioApp_.editCode) {
+    return this.studioApp_.editor ? this.studioApp_.editor.getValue() : '';
   }
   else {
     return codegen.workspaceCode(Blockly);
   }
 };
 
-var getGeneratedCodeElement = function() {
+/**
+ *
+ */
+FeedbackUtils.prototype.getGeneratedCodeElement_ = function() {
   var codeInfoMsgParams = {
     berkeleyLink: "<a href='http://bjc.berkeley.edu/' target='_blank'>Berkeley</a>",
     harvardLink: "<a href='https://cs50.harvard.edu/' target='_blank'>Harvard</a>"
   };
 
-  var infoMessage = studioAppSingleton.editCode ?  "" : msg.generatedCodeInfo(codeInfoMsgParams);
-  var code = getGeneratedCodeString();
+  var infoMessage = this.studioApp_.editCode ?  "" : msg.generatedCodeInfo(codeInfoMsgParams);
+  var code = this.getGeneratedCodeString_();
 
   var codeDiv = document.createElement('div');
   codeDiv.innerHTML = require('./templates/code.html')({
@@ -3069,8 +3133,11 @@ var getGeneratedCodeElement = function() {
   return codeDiv;
 };
 
-exports.showGeneratedCode = function(Dialog) {
-  var codeDiv = getGeneratedCodeElement();
+/**
+ *
+ */
+FeedbackUtils.prototype.showGeneratedCode = function(Dialog) {
+  var codeDiv = this.getGeneratedCodeElement_();
 
   var buttons = document.createElement('div');
   buttons.innerHTML = require('./templates/buttons.html')({
@@ -3080,10 +3147,10 @@ exports.showGeneratedCode = function(Dialog) {
   });
   codeDiv.appendChild(buttons);
 
-  var dialog = exports.createModalDialogWithIcon({
+  var dialog = this.createModalDialogWithIcon({
       Dialog: Dialog,
       contentDiv: codeDiv,
-      icon: studioAppSingleton.icon,
+      icon: this.studioApp_.icon,
       defaultBtnSelector: '#ok-button'
       });
 
@@ -3097,7 +3164,10 @@ exports.showGeneratedCode = function(Dialog) {
   dialog.show();
 };
 
-exports.showToggleBlocksError = function(Dialog) {
+/**
+ *
+ */
+FeedbackUtils.prototype.showToggleBlocksError = function(Dialog) {
   var contentDiv = document.createElement('div');
   contentDiv.innerHTML = msg.toggleBlocksErrorMsg();
 
@@ -3109,10 +3179,10 @@ exports.showToggleBlocksError = function(Dialog) {
   });
   contentDiv.appendChild(buttons);
 
-  var dialog = exports.createModalDialogWithIcon({
+  var dialog = this.createModalDialogWithIcon({
       Dialog: Dialog,
       contentDiv: contentDiv,
-      icon: studioAppSingleton.icon,
+      icon: this.studioApp_.icon,
       defaultBtnSelector: '#ok-button'
   });
 
@@ -3130,7 +3200,7 @@ exports.showToggleBlocksError = function(Dialog) {
  * Check user's code for empty container blocks, such as "repeat".
  * @return {boolean} true if a block is empty (no blocks are nested inside).
  */
-var hasEmptyContainerBlocks = function() {
+FeedbackUtils.prototype.hasEmptyContainerBlocks_ = function() {
   var code = codegen.workspaceCode(Blockly);
   return (/\{\s*\}/).test(code);
 };
@@ -3139,7 +3209,7 @@ var hasEmptyContainerBlocks = function() {
  * Get an empty container block, if any are present.
  * @return {Blockly.Block} an empty container block, or null if none exist.
  */
-var getEmptyContainerBlock = function() {
+FeedbackUtils.prototype.getEmptyContainerBlock_ = function() {
   var blocks = Blockly.mainBlockSpace.getAllBlocks();
   for (var i = 0; i < blocks.length; i++) {
     var block = blocks[i];
@@ -3158,8 +3228,8 @@ var getEmptyContainerBlock = function() {
  * Check whether the user code has all the blocks required for the level.
  * @return {boolean} true if all blocks are present, false otherwise.
  */
-var hasAllRequiredBlocks = function() {
-  return getMissingRequiredBlocks().blocksToDisplay.length === 0;
+FeedbackUtils.prototype.hasAllRequiredBlocks_ = function() {
+  return this.getMissingRequiredBlocks_().blocksToDisplay.length === 0;
 };
 
 /**
@@ -3168,7 +3238,7 @@ var hasAllRequiredBlocks = function() {
  * written.
  * @return {Array<Object>} The blocks.
  */
-var getUserBlocks = function() {
+FeedbackUtils.prototype.getUserBlocks_ = function() {
   var allBlocks = Blockly.mainBlockSpace.getAllBlocks();
   var blocks = allBlocks.filter(function(block) {
     return !block.disabled && block.isEditable() && block.type !== 'when_run';
@@ -3182,7 +3252,7 @@ var getUserBlocks = function() {
  * block count.
  * @return {Array<Object>} The blocks.
  */
-var getCountableBlocks = function() {
+FeedbackUtils.prototype.getCountableBlocks_ = function() {
   var allBlocks = Blockly.mainBlockSpace.getAllBlocks();
   var blocks = allBlocks.filter(function(block) {
     return !block.disabled;
@@ -3192,29 +3262,29 @@ var getCountableBlocks = function() {
 
 /**
  * Check to see if the user's code contains the required blocks for a level.
- * This never returns more than studioAppSingleton.NUM_REQUIRED_BLOCKS_TO_FLAG.
+ * This never returns more than StudioAppClass.NUM_REQUIRED_BLOCKS_TO_FLAG.
  * @return {{blocksToDisplay:!Array, message:?string}} 'missingBlocks' is an
  * array of array of strings where each array of strings is a set of blocks that
  * at least one of them should be used. Each block is represented as the prefix
  * of an id in the corresponding template.soy. 'message' is an optional message
  * to override the default error text.
  */
-var getMissingRequiredBlocks = function () {
+FeedbackUtils.prototype.getMissingRequiredBlocks_ = function () {
   var missingBlocks = [];
   var customMessage = null;
   var code = null;  // JavaScript code, which is initialized lazily.
   // TODO (br-pair) : we should probably just pass required_blocks
-  if (studioAppSingleton.REQUIRED_BLOCKS && studioAppSingleton.REQUIRED_BLOCKS.length) {
-    var userBlocks = getUserBlocks();
+  if (this.studioApp_.REQUIRED_BLOCKS && this.studioApp_.REQUIRED_BLOCKS.length) {
+    var userBlocks = this.getUserBlocks_();
     // For each list of required blocks
     // Keep track of the number of the missing block lists. It should not be
-    // bigger than studioAppSingleton.NUM_REQUIRED_BLOCKS_TO_FLAG
+    // bigger than StudioAppClass.NUM_REQUIRED_BLOCKS_TO_FLAG
     var missingBlockNum = 0;
     for (var i = 0;
-         i < studioAppSingleton.REQUIRED_BLOCKS.length &&
-             missingBlockNum < studioAppSingleton.NUM_REQUIRED_BLOCKS_TO_FLAG;
+         i < this.studioApp_.REQUIRED_BLOCKS.length &&
+             missingBlockNum < this.studioApp_.NUM_REQUIRED_BLOCKS_TO_FLAG;
          i++) {
-      var requiredBlock = studioAppSingleton.REQUIRED_BLOCKS[i];
+      var requiredBlock = this.studioApp_.REQUIRED_BLOCKS[i];
       // For each of the test
       // If at least one of the tests succeeded, we consider the required block
       // is used
@@ -3242,7 +3312,7 @@ var getMissingRequiredBlocks = function () {
       }
       if (!usedRequiredBlock) {
         missingBlockNum++;
-        missingBlocks = missingBlocks.concat(studioAppSingleton.REQUIRED_BLOCKS[i][0]);
+        missingBlocks = missingBlocks.concat(this.studioApp_.REQUIRED_BLOCKS[i][0]);
       }
     }
   }
@@ -3255,8 +3325,8 @@ var getMissingRequiredBlocks = function () {
 /**
  * Do we have any floating blocks not attached to an event block or function block?
  */
-exports.hasExtraTopBlocks = function () {
-  if (studioAppSingleton.editCode) {
+FeedbackUtils.prototype.hasExtraTopBlocks = function () {
+  if (this.studioApp_.editCode) {
     return false;
   }
   var topBlocks = Blockly.mainBlockSpace.getTopBlocks();
@@ -3283,16 +3353,16 @@ exports.hasExtraTopBlocks = function () {
  * @param  Did the user successfully complete the level
  * @return {number} The appropriate property of TestResults.
  */
-exports.getTestResults = function(levelComplete, options) {
+FeedbackUtils.prototype.getTestResults = function(levelComplete, options) {
   options = options || {};
-  if (studioAppSingleton.editCode) {
+  if (this.studioApp_.editCode) {
     // TODO (cpirich): implement better test results for editCode
     return levelComplete ?
-      studioAppSingleton.TestResults.ALL_PASS :
-      studioAppSingleton.TestResults.TOO_FEW_BLOCKS_FAIL;
+        this.studioApp_.TestResults.ALL_PASS :
+        this.studioApp_.TestResults.TOO_FEW_BLOCKS_FAIL;
   }
-  if (studioAppSingleton.CHECK_FOR_EMPTY_BLOCKS && hasEmptyContainerBlocks()) {
-    var type = getEmptyContainerBlock().type;
+  if (this.studioApp_.CHECK_FOR_EMPTY_BLOCKS && this.hasEmptyContainerBlocks_()) {
+    var type = this.getEmptyContainerBlock_().type;
     if (type === 'procedures_defnoreturn' || type === 'procedures_defreturn') {
       return TestResults.EMPTY_FUNCTION_BLOCK_FAIL;
     }
@@ -3301,52 +3371,52 @@ exports.getTestResults = function(levelComplete, options) {
     // for "controls_for_counter" blocks, for example.
     return TestResults.EMPTY_BLOCK_FAIL;
   }
-  if (!options.allowTopBlocks && exports.hasExtraTopBlocks()) {
+  if (!options.allowTopBlocks && this.hasExtraTopBlocks()) {
     return TestResults.EXTRA_TOP_BLOCKS_FAIL;
   }
   if (Blockly.useContractEditor || Blockly.useModalFunctionEditor) {
-    if (hasUnusedParam()) {
+    if (this.hasUnusedParam_()) {
       return TestResults.UNUSED_PARAM;
     }
-    if (hasUnusedFunction()) {
+    if (this.hasUnusedFunction_()) {
       return TestResults.UNUSED_FUNCTION;
     }
-    if (hasParamInputUnattached()) {
+    if (this.hasParamInputUnattached_()) {
       return TestResults.PARAM_INPUT_UNATTACHED;
     }
-    if (hasIncompleteBlockInFunction()) {
+    if (this.hasIncompleteBlockInFunction_()) {
       return TestResults.INCOMPLETE_BLOCK_IN_FUNCTION;
     }
   }
-  if (hasQuestionMarksInNumberField()) {
+  if (this.hasQuestionMarksInNumberField_()) {
     return TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
   }
-  if (!hasAllRequiredBlocks()) {
-    return levelComplete ? TestResults.MISSING_BLOCK_FINISHED :
-      TestResults.MISSING_BLOCK_UNFINISHED;
+  if (!this.hasAllRequiredBlocks_()) {
+    return levelComplete ?
+        TestResults.MISSING_BLOCK_FINISHED :
+        TestResults.MISSING_BLOCK_UNFINISHED;
   }
-  var numEnabledBlocks = exports.getNumCountableBlocks();
+  var numEnabledBlocks = this.getNumCountableBlocks();
   if (!levelComplete) {
-    if (studioAppSingleton.IDEAL_BLOCK_NUM && studioAppSingleton.IDEAL_BLOCK_NUM !== Infinity &&
-        numEnabledBlocks < studioAppSingleton.IDEAL_BLOCK_NUM) {
+    if (this.studioApp_.IDEAL_BLOCK_NUM &&
+        this.studioApp_.IDEAL_BLOCK_NUM !== Infinity &&
+        numEnabledBlocks < this.studioApp_.IDEAL_BLOCK_NUM) {
       return TestResults.TOO_FEW_BLOCKS_FAIL;
     }
     return TestResults.LEVEL_INCOMPLETE_FAIL;
   }
-  if (studioAppSingleton.IDEAL_BLOCK_NUM &&
-      numEnabledBlocks > studioAppSingleton.IDEAL_BLOCK_NUM) {
+  if (this.studioApp_.IDEAL_BLOCK_NUM &&
+      numEnabledBlocks > this.studioApp_.IDEAL_BLOCK_NUM) {
     return TestResults.TOO_MANY_BLOCKS_FAIL;
   } else {
     return TestResults.ALL_PASS;
   }
 };
 
-var Keycodes = {
-  ENTER: 13,
-  SPACE: 32
-};
-
-exports.createModalDialogWithIcon = function(options) {
+/**
+ *
+ */
+FeedbackUtils.prototype.createModalDialogWithIcon = function(options) {
   var imageDiv = document.createElement('img');
   imageDiv.className = "modal-image";
   imageDiv.src = options.icon;
@@ -3358,7 +3428,7 @@ exports.createModalDialogWithIcon = function(options) {
 
   var btn = options.contentDiv.querySelector(options.defaultBtnSelector);
   var keydownHandler = function(e) {
-    if (e.keyCode == Keycodes.ENTER || e.keyCode == Keycodes.SPACE) {
+    if (e.keyCode == KEYCODES.ENTER || e.keyCode == KEYCODES.SPACE) {
       // Simulate a 'click':
       var event = new MouseEvent('click', {
           'view': window,
@@ -3383,25 +3453,26 @@ exports.createModalDialogWithIcon = function(options) {
 /**
  * Check for '???' instead of a value in block fields.
  */
-function hasQuestionMarksInNumberField() {
+FeedbackUtils.prototype.hasQuestionMarksInNumberField_ = function () {
   return Blockly.mainBlockSpace.getAllBlocks().some(function(block) {
     return block.getTitles().some(function(title) {
       return title.value_ === '???';
     });
   });
-}
+};
 
 /**
  * Ensure that all procedure definitions actually use the parameters they define
  * inside the procedure.
  */
-function hasUnusedParam() {
+FeedbackUtils.prototype.hasUnusedParam_ = function () {
+  var self = this;
   return Blockly.mainBlockSpace.getAllBlocks().some(function(userBlock) {
     var params = userBlock.parameterNames_;
     // Only search procedure definitions
     return params && params.some(function(paramName) {
       // Unused param if there's no parameters_get descendant with the same name
-      return !hasMatchingDescendant(userBlock, function(block) {
+      return !self.hasMatchingDescendant_(userBlock, function(block) {
         return (block.type === 'parameters_get' ||
             block.type === 'functional_parameters_get' ||
             block.type === 'variables_get') &&
@@ -3409,12 +3480,12 @@ function hasUnusedParam() {
       });
     });
   });
-}
+};
 
 /**
  * Ensure that all procedure calls have each parameter input connected.
  */
-function hasParamInputUnattached() {
+FeedbackUtils.prototype.hasParamInputUnattached_ = function () {
   return Blockly.mainBlockSpace.getAllBlocks().some(function(userBlock) {
     // Only check procedure_call* blocks
     if (!/^procedures_call/.test(userBlock.type)) {
@@ -3427,12 +3498,12 @@ function hasParamInputUnattached() {
       return !argInput.connection.targetConnection;
     });
   });
-}
+};
 
 /**
  * Ensure that all user-declared procedures have associated call blocks.
  */
-function hasUnusedFunction() {
+FeedbackUtils.prototype.hasUnusedFunction_ = function () {
   var userDefs = [];
   var callBlocks = {};
   Blockly.mainBlockSpace.getAllBlocks().forEach(function (block) {
@@ -3445,18 +3516,19 @@ function hasUnusedFunction() {
   });
   // Unused function if some user def doesn't have a matching call
   return userDefs.some(function(name) { return !callBlocks[name]; });
-}
+};
 
 /**
  * Ensure there are no incomplete blocks inside any function definitions.
  */
-function hasIncompleteBlockInFunction() {
+FeedbackUtils.prototype.hasIncompleteBlockInFunction_ = function () {
+  var self = this;
   return Blockly.mainBlockSpace.getAllBlocks().some(function(userBlock) {
     // Only search procedure definitions
     if (!userBlock.parameterNames_) {
       return false;
     }
-    return hasMatchingDescendant(userBlock, function(block) {
+    return self.hasMatchingDescendant_(userBlock, function(block) {
       // Incomplete block if any input connection target is null
       return block.inputList.some(function(input) {
         return input.type === Blockly.INPUT_VALUE &&
@@ -3464,23 +3536,23 @@ function hasIncompleteBlockInFunction() {
       });
     });
   });
-}
+};
 
 /**
  * Returns true if any descendant (inclusive) of the given node matches the
  * given filter.
  */
-function hasMatchingDescendant(node, filter) {
+FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
   if (filter(node)) {
     return true;
   }
+  var self = this;
   return node.childBlocks_.some(function (child) {
-    return hasMatchingDescendant(child, filter);
+    return self.hasMatchingDescendant_(child, filter);
   });
-}
+};
 
-
-},{"../locale/is_is/common":40,"./codegen":7,"./constants":8,"./dom":9,"./feedbackBlocks":11,"./templates/buttons.html":18,"./templates/code.html":19,"./templates/shareFailure.html":25,"./templates/sharing.html":26,"./templates/showCode.html":27,"./templates/trophy.html":28,"./utils":29,"./xml":39}],11:[function(require,module,exports){
+},{"../locale/is_is/common":41,"./codegen":7,"./constants":8,"./dom":9,"./feedbackBlocks":11,"./templates/buttons.html":18,"./templates/code.html":19,"./templates/shareFailure.html":25,"./templates/sharing.html":26,"./templates/showCode.html":27,"./templates/trophy.html":28,"./utils":29,"./xml":40}],11:[function(require,module,exports){
 var constants = require('./constants');
 var readonly = require('./templates/readonly.html');
 
@@ -9004,7 +9076,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"../locale/is_is/common":40,"./block_utils":5,"./utils":29,"./xml":39}],15:[function(require,module,exports){
+},{"../locale/is_is/common":41,"./block_utils":5,"./utils":29,"./xml":40}],15:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -9364,7 +9436,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":42}],18:[function(require,module,exports){
+},{"ejs":43}],18:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9385,7 +9457,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/is_is/common":40,"ejs":42}],19:[function(require,module,exports){
+},{"../../locale/is_is/common":41,"ejs":43}],19:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9406,7 +9478,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":42}],20:[function(require,module,exports){
+},{"ejs":43}],20:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9427,7 +9499,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/is_is/common":40,"ejs":42}],21:[function(require,module,exports){
+},{"../../locale/is_is/common":41,"ejs":43}],21:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9450,7 +9522,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/is_is/common":40,"ejs":42}],22:[function(require,module,exports){
+},{"../../locale/is_is/common":41,"ejs":43}],22:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9471,7 +9543,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/is_is/common":40,"ejs":42}],23:[function(require,module,exports){
+},{"../../locale/is_is/common":41,"ejs":43}],23:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9496,7 +9568,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/is_is/common":40,"ejs":42}],24:[function(require,module,exports){
+},{"../../locale/is_is/common":41,"ejs":43}],24:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9518,7 +9590,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":42}],25:[function(require,module,exports){
+},{"ejs":43}],25:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9539,7 +9611,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":42}],26:[function(require,module,exports){
+},{"ejs":43}],26:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9560,7 +9632,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/is_is/common":40,"ejs":42}],27:[function(require,module,exports){
+},{"../../locale/is_is/common":41,"ejs":43}],27:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9581,7 +9653,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/is_is/common":40,"ejs":42}],28:[function(require,module,exports){
+},{"../../locale/is_is/common":41,"ejs":43}],28:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9602,7 +9674,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":42}],29:[function(require,module,exports){
+},{"ejs":43}],29:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
 
@@ -9964,7 +10036,7 @@ exports.generateDropletModeOptions = function (codeFunctions) {
   return modeOptions;
 };
 
-},{"./hammer":12,"./lodash":13,"./xml":39}],30:[function(require,module,exports){
+},{"./hammer":12,"./lodash":13,"./xml":40}],30:[function(require,module,exports){
 
 exports.randomFromArray = function (values) {
   var key = Math.floor(Math.random() * values.length);
@@ -10162,6 +10234,21 @@ exports.createDropdown = function (blockId, elementId) {
                            'optionsArray': optionsArray });
 };
 
+exports.getAttribute = function(blockId, elementId, attribute) {
+  return Webapp.executeCmd(blockId,
+                           'getAttribute',
+                           {elementId: elementId,
+                            attribute: attribute});
+};
+
+exports.setAttribute = function(blockId, elementId, attribute, value) {
+  return Webapp.executeCmd(blockId,
+                           'setAttribute',
+                           {elementId: elementId,
+                            attribute: attribute,
+                            value: value});
+};
+
 exports.getText = function (blockId, elementId) {
   return Webapp.executeCmd(blockId,
                           'getText',
@@ -10237,6 +10324,19 @@ exports.clearTimeout = function (blockId, timeoutId) {
                            {'timeoutId': timeoutId });
 };
 
+exports.createRecord = function (blockId, record, callback) {
+  return Webapp.executeCmd(blockId,
+                          'createRecord',
+                          {'record': record,
+                           'callback': callback });
+};
+
+exports.readRecords = function (blockId, searchParams, callback) {
+  return Webapp.executeCmd(blockId,
+                          'readRecords',
+                          {'searchParams': searchParams,
+                           'callback': callback });
+};
 
 },{}],31:[function(require,module,exports){
 /**
@@ -10311,7 +10411,7 @@ function installCreateHtmlBlock(blockly, generator, blockInstallOptions) {
   };
 }
 
-},{"../../locale/is_is/common":40,"../../locale/is_is/webapp":41,"../codegen":7,"../utils":29}],32:[function(require,module,exports){
+},{"../../locale/is_is/common":41,"../../locale/is_is/webapp":42,"../codegen":7,"../utils":29}],32:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -10332,7 +10432,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/is_is/common":40,"ejs":42}],33:[function(require,module,exports){
+},{"../../locale/is_is/common":41,"ejs":43}],33:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -10345,7 +10445,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/is_is/common') ; buf.push('\n');2; var webappMsg = require('../../locale/is_is/webapp') ; buf.push('\n\n');4; if (debugButtons) { ; buf.push('\n<div>\n  <div id="debug-buttons" style="display:inline;">\n    <button id="pauseButton" class="share">\n      ', escape((8,  webappMsg.pause() )), '\n    </button>\n    <button id="stepInButton" class="share">\n      ', escape((11,  webappMsg.stepIn() )), '\n    </button>\n    <button id="stepOverButton" class="share">\n      ', escape((14,  webappMsg.stepOver() )), '\n    </button>\n    <button id="stepOutButton" class="share">\n      ', escape((17,  webappMsg.stepOut() )), '\n    </button>\n  </div>\n');20; } ; buf.push('\n\n');22; if (debugConsole) { ; buf.push('\n  <div id="debug-console" class="debug-console">\n    <textarea id="debug-output" readonly disabled tabindex=-1 class="debug-output"></textarea>\n    <span class="debug-input-prompt">\n      &gt;\n    </span>\n    <div contenteditable id="debug-input" class="debug-input"></div>\n  </div>\n');30; } ; buf.push('\n\n');32; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((35,  assetUrl('media/1x1.gif') )), '">', escape((35,  msg.finish() )), '\n    </button>\n  </div>\n');38; } ; buf.push('\n\n');40; if (debugButtons) { ; buf.push('\n</div>\n');42; } ; buf.push('\n'); })();
+ buf.push('');1; var msg = require('../../locale/is_is/common') ; buf.push('\n');2; var webappMsg = require('../../locale/is_is/webapp') ; buf.push('\n\n');4; if (debugButtons) { ; buf.push('\n<div>\n  <div id="debug-buttons" style="display:inline;">\n    <button id="pauseButton" class="share">\n      ', escape((8,  webappMsg.pause() )), '\n    </button>\n    <button id="stepInButton" class="share">\n      ', escape((11,  webappMsg.stepIn() )), '\n    </button>\n    <button id="stepOverButton" class="share">\n      ', escape((14,  webappMsg.stepOver() )), '\n    </button>\n    <button id="stepOutButton" class="share">\n      ', escape((17,  webappMsg.stepOut() )), '\n    </button>\n    <button id="viewDataButton" class="share">\n      ', escape((20,  webappMsg.viewData() )), '\n    </button>\n  </div>\n');23; } ; buf.push('\n\n');25; if (debugConsole) { ; buf.push('\n  <div id="debug-console" class="debug-console">\n    <textarea id="debug-output" readonly disabled tabindex=-1 class="debug-output"></textarea>\n    <span class="debug-input-prompt">\n      &gt;\n    </span>\n    <div contenteditable id="debug-input" class="debug-input"></div>\n  </div>\n');33; } ; buf.push('\n\n');35; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((38,  assetUrl('media/1x1.gif') )), '">', escape((38,  msg.finish() )), '\n    </button>\n  </div>\n');41; } ; buf.push('\n\n');43; if (debugButtons) { ; buf.push('\n</div>\n');45; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -10353,7 +10453,190 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/is_is/common":40,"../../locale/is_is/webapp":41,"ejs":42}],34:[function(require,module,exports){
+},{"../../locale/is_is/common":41,"../../locale/is_is/webapp":42,"ejs":43}],34:[function(require,module,exports){
+/**
+ * CodeOrgApp: Webapp
+ *
+ * Copyright 2014 Code.org
+ *
+ */
+
+'use strict';
+
+/**
+ * Namespace for form storage.
+ */ 
+var FormStorage = module.exports;
+
+
+/**
+ * Creates a new record in the specified table.
+ * @param {string} record.tableName The name of the table to read from.
+ * @param {Object} record Object containing other properties to store
+ *     on the record.
+ * @param {Function} callback Function to call with the resulting record.
+ */
+FormStorage.createRecord = function(record, callback) {
+  var tableName = record.tableName;
+  if (!tableName) {
+    // TODO(dave): remove console.log for IE9 compatability, here and below.
+    console.log('readRecords: missing required property "tableName"');
+    return;
+  }
+  FormStorage.fetchTableSecret(
+      tableName, 
+      putRecord.bind(this, record, callback));
+};
+
+var putRecord = function(record, callback, tableSecret) {
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = handlePutRecord.bind(req, record, callback, tableSecret);
+  var url = '//' + getFormDataHost() + '/v2/forms/CspTable/' + tableSecret +
+      '/children/CspRecord';
+  delete record.tableName;
+  var postData = {record_data_s: JSON.stringify(record)};
+  req.open('POST', url, true);
+  req.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
+  req.send(JSON.stringify(postData));
+};
+
+var handlePutRecord = function(record, callback, tableSecret) {
+  if (this.readyState !== 4) {
+    return;
+  }
+  if (this.status !== 201) {
+    console.log('unexpected http status ' + this.status);
+    return;
+  }
+  
+  // TODO(dave): merge tableSecret into record once XSS issues are resolved.
+  callback(record);
+};
+
+/**
+ * Reads records which match the searchParams specified by the user,
+ * and passes them to the callback.
+ * @param {string} searchParams.tableName The name of the table to read from.
+ * @param {string} searchParams.recordId Optional id of record to read.
+ * @param {Object} searchParams Other search criteria. Only records
+ *     whose contents match all criteria will be returned.
+ * @param {Function} callback Function to call with an array of record objects.
+ */
+FormStorage.readRecords = function(searchParams, callback) {
+  var tableName = searchParams.tableName;
+  if (!tableName) {
+    console.log('readRecords: missing required property "tableName"');
+    return;
+  }
+  // TODO(dave): optimization: call fetchRecords here if table data is cached.
+  FormStorage.fetchTableSecret(
+      tableName, 
+      fetchRecords.bind(this, tableName, searchParams, callback));
+};
+
+var fetchRecords = function(tableName, searchParams, callback, tableSecret) {
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = handleFetchRecords.bind(req, tableName,
+      searchParams, callback);
+  var url = '//' + getFormDataHost() + '/v2/forms/CspTable/' + tableSecret +
+      '/children/CspRecord';
+  req.open('GET', url, true);
+  req.send();
+};
+
+var handleFetchRecords = function(tableName, searchParams, callback) {
+  if (this.readyState !== 4) {
+    return;
+  }
+  if (this.status !== 200) {
+    console.log('readRecords failed with status ' + this.status);
+    return;
+  }
+  var forms = JSON.parse(this.responseText);
+  var records = forms.map(function(form) {
+    var record = JSON.parse(form.record_data_s);
+    record.tableName = tableName;
+    record.recordId = form.secret;
+    return record;
+  });
+  records = records.filter(function(record) {
+    for (var prop in searchParams) {
+      if (record[prop] !== searchParams[prop]) {
+        return false;
+      }
+    }
+    return true;
+  });
+  callback(records);
+};
+
+// Helper methods
+
+/**
+ * Retrieves the table secret for a given table name.
+ * @param {string} tableName Table name.
+ * @param {function(string)} callback Callback to call with the table secret.
+ */
+FormStorage.fetchTableSecret = function(tableName, callback) {
+  var req = new XMLHttpRequest();
+  req.onreadystatechange =
+      handleFetchTableSecret.bind(req, tableName, callback);
+  var url = '//' + getFormDataHost() + '/v2/forms/CspApp/' + 
+      FormStorage.getAppSecret() + '/children/CspTable';
+  req.open('GET', url, true);
+  req.send();
+};
+
+var handleFetchTableSecret = function(tableName, callback) {
+  if (this.readyState !== 4) {
+    return;
+  }
+  if (this.status !== 200) {
+    console.log('unexpected http status ' + this.status);
+    return;
+  }
+  var formData = JSON.parse(this.responseText);
+  if (!(formData instanceof Array)) {
+    console.log('formData is not an array');
+    return;
+  }
+
+  var tableData = formData.filter(function(table) {
+    return table.table_name_s === tableName;
+  });
+  var tableSecret = tableData[0] && tableData[0].secret;
+  if (!tableSecret) {
+    console.log('table not found: ' + tableName);
+    console.log(tableData);
+    return;
+  }
+  callback(tableSecret);
+};
+
+// TODO(dave): move this logic to dashboard.
+var getFormDataHost = function() {
+  // Forms api is already mapped to pegasus on all non-local deployments.
+  // Caveat: local api access only works with temporary hacks in place
+  // to set dashboard_user cookie and access-control-allow-origin header.
+  return window.location.hostname.split('.')[0] === 'localhost' ?
+      'localhost.code.org:9393' : window.location.hostname;
+};
+
+// TODO(dave): store secret with the app in the database.
+FormStorage.getAppSecret = function() {
+  var name = window.location.hostname.split('.')[0];
+  switch(name) {
+    case 'localhost':
+      return 'ededb6d4a8ced65f8a011ce0e194094e';
+    case 'staging':
+      return 'b0a06b8bbd7352a3fdb1b6738262defd';
+    default:
+      return null;
+  }
+};
+
+
+},{}],35:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/is_is/webapp');
@@ -10386,7 +10669,7 @@ levels.simple = {
 levels.ec_simple = {
   'freePlay': true,
   'editCode': true,
-  'sliderSpeed': 1.0,
+  'sliderSpeed': 0.95,
   'codeFunctions': [
     {'func': 'attachEventHandler', 'title': 'Execute code in response to an event for the specified element', 'category': 'General', 'params': ["'id'", "'click'", "function() {\n  \n}"] },
     {'func': 'startWebRequest', 'title': 'Request data from the internet and execute code when the request is complete', 'category': 'General', 'params': ["'http://api.openweathermap.org/data/2.5/weather?q=London,uk'", "function(status, type, content) {\n  \n}"] },
@@ -10398,6 +10681,8 @@ levels.ec_simple = {
     {'func': 'setParent', 'title': 'Set an element to become a child of a parent element', 'category': 'General', 'params': ["'id'", "'parentId'"] },
     {'func': 'setPosition', 'title': 'Position an element with x, y, width, and height coordinates', 'category': 'General', 'params': ["'id'", "0", "0", "100", "100"] },
     {'func': 'setStyle', 'title': 'Add CSS style text to an element', 'category': 'General', 'params': ["'id'", "'color:red;'"] },
+    {'func': 'getAttribute', 'category': 'General', 'params': ["'id'", "'scrollHeight'"], 'type': 'value' },
+    {'func': 'setAttribute', 'category': 'General', 'params': ["'id'", "'scrollHeight'", "200"]},
     {'func': 'createButton', 'title': 'Create a button and assign it an element id', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
     {'func': 'createTextInput', 'title': 'Create a text input and assign it an element id', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
     {'func': 'createTextLabel', 'title': 'Create a text label, assign it an element id, and bind it to an associated element', 'category': 'UI Controls', 'params': ["'id'", "'text'", "'forId'"] },
@@ -10423,6 +10708,8 @@ levels.ec_simple = {
     {'func': 'canvasGetImageData', 'title': 'Get the ImageData for a rectangle (x, y, width, height) within a canvas', 'category': 'Canvas', 'params': ["'id'", "0", "0", "400", "600"], 'type': 'value' },
     {'func': 'canvasPutImageData', 'title': 'Set the ImageData for a rectangle within a canvas with x, y as the top left coordinates', 'category': 'Canvas', 'params': ["'id'", "imageData", "0", "0"] },
     {'func': 'canvasClear', 'title': 'Clear all data on a canvas', 'category': 'Canvas', 'params': ["'id'"] },
+    {'func': 'createRecord', 'category': 'General', 'params': ["{tableName: 'abc',name:'Alice',age:7,male:false}", "function(record) {\n  for (var prop in record) {\n    createHtmlBlock('id2', 'record.' + prop + ': ' + record[prop]);\n  }\n}"] },
+    {'func': 'readRecords', 'category': 'General', 'params': ["{tableName: 'abc',key1:'value1'}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    for (var prop in records[i]) {\n      createHtmlBlock('id2', 'records[' + i + '].' + prop + ': ' + records[i][prop]);\n    }\n  }\n}"] },
   ],
   'categoryInfo': {
     'General': {
@@ -10523,7 +10810,7 @@ levels.full_sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-},{"../../locale/is_is/webapp":41,"../block_utils":5,"../utils":29}],35:[function(require,module,exports){
+},{"../../locale/is_is/webapp":42,"../block_utils":5,"../utils":29}],36:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Webapp = require('./webapp');
@@ -10541,7 +10828,7 @@ window.webappMain = function(options) {
 };
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":3,"./blocks":31,"./levels":34,"./skins":36,"./webapp":38}],36:[function(require,module,exports){
+},{"../appMain":3,"./blocks":31,"./levels":35,"./skins":37,"./webapp":39}],37:[function(require,module,exports){
 /**
  * Load Skin for Webapp.
  */
@@ -10560,7 +10847,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":15}],37:[function(require,module,exports){
+},{"../skins":15}],38:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -10581,7 +10868,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":42}],38:[function(require,module,exports){
+},{"ejs":43}],39:[function(require,module,exports){
 /**
  * CodeOrgApp: Webapp
  *
@@ -10603,6 +10890,7 @@ var dom = require('../dom');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
 var Slider = require('../slider');
+var FormStorage = require('./formStorage');
 var _ = utils.getLodash();
 var Hammer = utils.getHammer();
 
@@ -10620,7 +10908,7 @@ StudioApp.CHECK_FOR_EMPTY_BLOCKS = true;
 //The number of blocks to show as feedback.
 StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
-var MAX_INTERPRETER_STEPS_PER_TICK = 200;
+var MAX_INTERPRETER_STEPS_PER_TICK = 10000;
 
 // Default Scalings
 Webapp.scale = {
@@ -10662,12 +10950,16 @@ var drawDiv = function () {
   visualizationColumn.style.width = divWidth + 'px';
 };
 
-function queueOnTick() {
+function getCurrentTickLength() {
   var stepSpeed = Webapp.scale.stepSpeed;
   if (Webapp.speedSlider) {
     stepSpeed = 300 * Math.pow(1 - Webapp.speedSlider.getValue(), 2);
   }
-  window.setTimeout(Webapp.onTick, stepSpeed);
+  return stepSpeed;
+}
+
+function queueOnTick() {
+  window.setTimeout(Webapp.onTick, getCurrentTickLength());
 }
 
 function outputWebappConsole(output) {
@@ -10766,6 +11058,8 @@ Webapp.onTick = function() {
   queueOnTick();
 
   var atInitialBreakpoint = Webapp.paused && Webapp.nextStep === StepType.IN && Webapp.tickCount === 1;
+  var atMaxSpeed = getCurrentTickLength() === 0;
+  Webapp.seenEmptyGetCallbackThisTick = false;
 
   if (Webapp.paused) {
     switch (Webapp.nextStep) {
@@ -10791,24 +11085,41 @@ Webapp.onTick = function() {
   }
 
   if (Webapp.interpreter) {
-    var doneUserCodeStep = false;
+    var doneUserLine = false;
+    var reachedBreak = false;
     var unwindingAfterStep = false;
     var inUserCode;
     var userCodeRow;
     var session = StudioApp.editor.aceEditor.getSession();
+    // NOTE: when running with no source visible or at max speed with blocks, we
+    // call a simple function to just get the line number, otherwise we call a
+    // function that also selects the code:
+    var selectCodeFunc =
+      (StudioApp.hideSource ||
+       (atMaxSpeed && !Webapp.paused && StudioApp.editor.currentlyUsingBlocks)) ?
+            codegen.getUserCodeLine :
+            codegen.selectCurrentCode;
 
     // In each tick, we will step the interpreter multiple times in a tight
     // loop as long as we are interpreting code that the user can't see
     // (function aliases at the beginning, getCallback event loop at the end)
     for (var stepsThisTick = 0;
-         stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK &&
-          (!doneUserCodeStep || unwindingAfterStep);
+         (stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK) || unwindingAfterStep;
          stepsThisTick++) {
-      userCodeRow = codegen.selectCurrentCode(Webapp.interpreter,
-                                              StudioApp.editor,
-                                              Webapp.cumulativeLength,
-                                              Webapp.userCodeStartOffset,
-                                              Webapp.userCodeLength);
+      if ((reachedBreak && !unwindingAfterStep) ||
+          (doneUserLine && !atMaxSpeed) ||
+          Webapp.seenEmptyGetCallbackThisTick) {
+        // stop stepping the interpreter and wait until the next tick once we:
+        // (1) reached a breakpoint and are done unwinding OR
+        // (2) completed a line of user code (while not running atMaxSpeed) OR
+        // (3) have seen an empty event queue in nativeGetCallback (no events)
+        break;
+      }
+      userCodeRow = selectCodeFunc(Webapp.interpreter,
+                                   Webapp.cumulativeLength,
+                                   Webapp.userCodeStartOffset,
+                                   Webapp.userCodeLength,
+                                   StudioApp.editor);
       inUserCode = (-1 !== userCodeRow);
       // Check to see if we've arrived at a new breakpoint:
       //  (1) should be in user code
@@ -10833,8 +11144,8 @@ Webapp.onTick = function() {
         Webapp.stoppedAtBreakpointRow = userCodeRow;
         Webapp.stoppedAtBreakpointStackDepth = Webapp.interpreter.stateStack.length;
 
-        // Mark doneUserCodeStep to stop stepping, and start unwinding if needed:
-        doneUserCodeStep = true;
+        // Mark reachedBreak to stop stepping, and start unwinding if needed:
+        reachedBreak = true;
         unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(Webapp.interpreter);
         continue;
       }
@@ -10854,7 +11165,7 @@ Webapp.onTick = function() {
       }
       try {
         Webapp.interpreter.step();
-        doneUserCodeStep = doneUserCodeStep ||
+        doneUserLine = doneUserLine ||
           (inUserCode && Webapp.interpreter.stateStack[0] && Webapp.interpreter.stateStack[0].done);
 
         // Remember the stack depths of call expressions (so we can implement 'step out')
@@ -10875,31 +11186,55 @@ Webapp.onTick = function() {
             }
           }
           // For the step in case, we want to stop the interpreter as soon as we enter the callee:
-          if (!doneUserCodeStep &&
+          if (!doneUserLine &&
               inUserCode &&
               Webapp.nextStep === StepType.IN &&
               Webapp.interpreter.stateStack.length > Webapp.firstCallStackDepthThisStep) {
-            doneUserCodeStep = true;
+            reachedBreak = true;
           }
           // After the interpreter says a node is "done" (meaning it is time to stop), we will
           // advance a little further to the start of the next statement. We achieve this by
           // continuing to set unwindingAfterStep to true to keep the loop going:
-          if (doneUserCodeStep) {
+          if (doneUserLine || reachedBreak) {
             var wasUnwinding = unwindingAfterStep;
             // step() additional times if we know it to be safe to get us to the next statement:
             unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(Webapp.interpreter);
             if (wasUnwinding && !unwindingAfterStep) {
               // done unwinding.. select code that is next to execute:
-              userCodeRow = codegen.selectCurrentCode(Webapp.interpreter,
-                                                      StudioApp.editor,
-                                                      Webapp.cumulativeLength,
-                                                      Webapp.userCodeStartOffset,
-                                                      Webapp.userCodeLength);
+              userCodeRow = selectCodeFunc(Webapp.interpreter,
+                                           Webapp.cumulativeLength,
+                                           Webapp.userCodeStartOffset,
+                                           Webapp.userCodeLength,
+                                           StudioApp.editor);
               inUserCode = (-1 !== userCodeRow);
               if (!inUserCode) {
                 // not in user code, so keep unwinding after all...
                 unwindingAfterStep = true;
               }
+            }
+          }
+
+          if ((reachedBreak || doneUserLine) && !unwindingAfterStep) {
+            if (Webapp.nextStep === StepType.OUT &&
+                Webapp.interpreter.stateStack.length > Webapp.stepOutToStackDepth) {
+              // trying to step out, but we didn't get out yet... continue on.
+            } else if (Webapp.nextStep === StepType.OVER &&
+                typeof Webapp.firstCallStackDepthThisStep !== 'undefined' &&
+                Webapp.interpreter.stateStack.length > Webapp.firstCallStackDepthThisStep) {
+              // trying to step over, and we're in deeper inside a function call... continue next onTick
+            } else {
+              // Our step operation is complete, reset nextStep to StepType.RUN to
+              // return to a normal 'break' state:
+              Webapp.nextStep = StepType.RUN;
+              if (inUserCode) {
+                // Store some properties about where we stopped:
+                Webapp.stoppedAtBreakpointRow = userCodeRow;
+                Webapp.stoppedAtBreakpointStackDepth = Webapp.interpreter.stateStack.length;
+              }
+              delete Webapp.stepOutToStackDepth;
+              delete Webapp.firstCallStackDepthThisStep;
+              document.getElementById('spinner').style.visibility = 'hidden';
+              break;
             }
           }
         }
@@ -10909,27 +11244,14 @@ Webapp.onTick = function() {
         return;
       }
     }
-    if (Webapp.paused) {
-      if (Webapp.nextStep === StepType.OUT &&
-          Webapp.interpreter.stateStack.length > Webapp.stepOutToStackDepth) {
-        // trying to step out, but we didn't get out yet... continue next onTick
-      } else if (Webapp.nextStep === StepType.OVER &&
-          typeof Webapp.firstCallStackDepthThisStep !== 'undefined' &&
-          Webapp.interpreter.stateStack.length > Webapp.firstCallStackDepthThisStep) {
-        // trying to step over, and we're in deeper inside a function call... continue next onTick
-      } else {
-        // Our step operation is complete, reset nextStep to StepType.RUN to
-        // return to a normal 'break' state:
-        Webapp.nextStep = StepType.RUN;
-        if (inUserCode) {
-          // Store some properties about where we stopped:
-          Webapp.stoppedAtBreakpointRow = userCodeRow;
-          Webapp.stoppedAtBreakpointStackDepth = Webapp.interpreter.stateStack.length;
-        }
-        delete Webapp.stepOutToStackDepth;
-        delete Webapp.firstCallStackDepthThisStep;
-        document.getElementById('spinner').style.visibility = 'hidden';
-      }
+    if (reachedBreak && atMaxSpeed) {
+      // If we were running atMaxSpeed and just reached a breakpoint, the
+      // code may not be selected in the editor, so do it now:
+      codegen.selectCurrentCode(Webapp.interpreter,
+                                Webapp.cumulativeLength,
+                                Webapp.userCodeStartOffset,
+                                Webapp.userCodeLength,
+                                StudioApp.editor);
     }
   } else {
     if (Webapp.tickCount === 1) {
@@ -10967,6 +11289,11 @@ Webapp.init = function(config) {
   level = config.level;
 
   loadLevel();
+
+  if (StudioApp.hideSource) {
+    // always run at max speed if source is hidden
+    config.level.sliderSpeed = 1.0;
+  }
 
   Webapp.canvasScale = (window.devicePixelRatio > 1) ? window.devicePixelRatio : 1;
 
@@ -11085,6 +11412,10 @@ Webapp.init = function(config) {
       dom.addClickTouchEvent(stepInButton, Webapp.onStepInButton);
       dom.addClickTouchEvent(stepOverButton, Webapp.onStepOverButton);
       dom.addClickTouchEvent(stepOutButton, Webapp.onStepOutButton);
+    }
+    var viewDataButton = document.getElementById('viewDataButton');
+    if (viewDataButton) {
+      dom.addClickTouchEvent(viewDataButton, Webapp.onViewData);
     }
   }
 
@@ -11280,7 +11611,11 @@ var defineProcedures = function (blockType) {
  * optionally, callback arguments (stored in "arguments")
  */
 var nativeGetCallback = function () {
-  return Webapp.eventQueue.shift();
+  var retVal = Webapp.eventQueue.shift();
+  if (typeof retVal === "undefined") {
+    Webapp.seenEmptyGetCallbackThisTick = true;
+  }
+  return retVal;
 };
 
 var consoleApi = {};
@@ -11487,6 +11822,12 @@ Webapp.onStepOutButton = function() {
 Webapp.feedbackImage = '';
 Webapp.encodedFeedbackImage = '';
 
+Webapp.onViewData = function() {
+  window.open(
+    '//' + getPegasusHost() + '/edit-csp-app/' + FormStorage.getAppSecret(),
+    '_blank');
+};
+
 Webapp.onPuzzleComplete = function() {
   if (Webapp.executionError) {
     Webapp.result = StudioApp.ResultType.ERROR;
@@ -11603,6 +11944,8 @@ Webapp.callCmd = function (cmd) {
     case 'createCheckbox':
     case 'createRadio':
     case 'createDropdown':
+    case 'getAttribute':
+    case 'setAttribute':
     case 'getText':
     case 'setText':
     case 'getChecked':
@@ -11617,6 +11960,8 @@ Webapp.callCmd = function (cmd) {
     case 'startWebRequest':
     case 'setTimeout':
     case 'clearTimeout':
+    case 'createRecord':
+    case 'readRecords':
       StudioApp.highlight(cmd.id);
       retVal = Webapp[cmd.name](cmd.opts);
       break;
@@ -11738,6 +12083,7 @@ Webapp.canvasDrawRect = function (opts) {
   var canvas = document.getElementById(opts.elementId);
   var ctx = canvas.getContext("2d");
   if (ctx && divWebapp.contains(canvas)) {
+    ctx.beginPath();
     ctx.rect(opts.x * Webapp.canvasScale,
              opts.y * Webapp.canvasScale,
              opts.width * Webapp.canvasScale,
@@ -11807,6 +12153,7 @@ Webapp.canvasDrawImage = function (opts) {
     if (opts.height) {
       yScale = yScale * (opts.height / image.height);
     }
+    ctx.save();
     ctx.setTransform(xScale,
                      0,
                      0,
@@ -11814,6 +12161,7 @@ Webapp.canvasDrawImage = function (opts) {
                      opts.x * Webapp.canvasScale,
                      opts.y * Webapp.canvasScale);
     ctx.drawImage(image, 0, 0);
+    ctx.restore();
     return true;
   }
   return false;
@@ -11910,6 +12258,29 @@ Webapp.createDropdown = function (opts) {
   newSelect.id = opts.elementId;
 
   return Boolean(divWebapp.appendChild(newSelect));
+};
+
+Webapp.getAttribute = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var element = document.getElementById(opts.elementId);
+  var attribute = String(opts.attribute);
+  return divWebapp.contains(element) ? element[attribute] : false;
+};
+
+// Whitelist of HTML Element attributes which can be modified, to
+// prevent DOM manipulation which would violate the sandbox.
+Webapp.mutableAttributes = ['innerHTML', 'scrollTop'];
+
+Webapp.setAttribute = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var element = document.getElementById(opts.elementId);
+  var attribute = String(opts.attribute);
+  if (divWebapp.contains(element) &&
+      Webapp.mutableAttributes.indexOf(attribute) !== -1) {
+    element[attribute] = opts.value;
+    return true;
+  }
+  return false;
 };
 
 Webapp.getText = function (opts) {
@@ -12140,6 +12511,34 @@ Webapp.clearTimeout = function (opts) {
   window.clearTimeout(opts.timeoutId);
 };
 
+Webapp.createRecord = function (opts) {
+  var record = codegen.marshalInterpreterToNative(Webapp.interpreter,
+      opts.record);
+  FormStorage.createRecord(record,
+      Webapp.handleCreateRecord.bind(this, opts.callback));
+};
+
+Webapp.handleCreateRecord = function(interpreterCallback, record) {
+  Webapp.eventQueue.push({
+    'fn': interpreterCallback,
+    'arguments': [record]
+  });
+};
+
+Webapp.readRecords = function (opts) {
+  var searchParams = codegen.marshalInterpreterToNative(Webapp.interpreter,
+      opts.searchParams);
+  FormStorage.readRecords(
+      searchParams,
+      Webapp.handleReadRecords.bind(this, opts.callback));
+};
+
+Webapp.handleReadRecords = function(interpreterCallback, records) {
+  Webapp.eventQueue.push({
+    'fn': interpreterCallback,
+    'arguments': [records]
+  });
+};
 
 /*
 var onWaitComplete = function (opts) {
@@ -12200,6 +12599,28 @@ var checkFinished = function () {
   }
 
   return false;
+};
+
+// TODO(dave): move this logic to dashboard.
+var getPegasusHost = function() {
+  switch (window.location.hostname) {
+    case 'studio.code.org':
+    case 'learn.code.org':
+      return 'code.org';
+    default:
+      var name = window.location.hostname.split('.')[0];
+      switch(name) {
+        case 'localhost':
+          return 'localhost.code.org:9393';
+        case 'development':
+        case 'staging':
+        case 'test':
+        case 'levelbuilder':
+          return name + '.code.org';
+        default:
+          return null;
+      }
+  }
 };
 
 /*jshint asi:true */
@@ -12388,7 +12809,7 @@ var checkFinished = function () {
         return Array(multiplier + 1).join(input)
     }
 
-},{"../../locale/is_is/common":40,"../../locale/is_is/webapp":41,"../base":4,"../codegen":7,"../dom":9,"../skins":15,"../slider":16,"../templates/page.html":23,"../utils":29,"../xml":39,"./api":30,"./blocks":31,"./controls.html":32,"./extraControlRows.html":33,"./visualization.html":37}],39:[function(require,module,exports){
+},{"../../locale/is_is/common":41,"../../locale/is_is/webapp":42,"../base":4,"../codegen":7,"../dom":9,"../skins":15,"../slider":16,"../templates/page.html":23,"../utils":29,"../xml":40,"./api":30,"./blocks":31,"./controls.html":32,"./extraControlRows.html":33,"./formStorage":34,"./visualization.html":38}],40:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -12416,7 +12837,7 @@ exports.parseElement = function(text) {
   return element;
 };
 
-},{}],40:[function(require,module,exports){
+},{}],41:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.is=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "og"};
 
@@ -12601,7 +13022,7 @@ exports.toggleBlocksErrorMsg = function(d){return "You need to correct an error 
 exports.defaultTwitterText = function(d){return "Skoðaðu það sem ég bjó til"};
 
 
-},{"messageformat":53}],41:[function(require,module,exports){
+},{"messageformat":54}],42:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.is=function(n){return n===1?"one":"other"}
 exports.catActions = function(d){return "Aðgerðir"};
 
@@ -12657,10 +13078,12 @@ exports.turnBlack = function(d){return "lita svart"};
 
 exports.turnBlackTooltip = function(d){return "Gerir skjáinn svartan."};
 
+exports.viewData = function(d){return "View Data"};
+
 exports.yes = function(d){return "Já"};
 
 
-},{"messageformat":53}],42:[function(require,module,exports){
+},{"messageformat":54}],43:[function(require,module,exports){
 
 /*!
  * EJS
@@ -13019,7 +13442,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":43,"./utils":44,"fs":45,"path":46}],43:[function(require,module,exports){
+},{"./filters":44,"./utils":45,"fs":46,"path":47}],44:[function(require,module,exports){
 /*!
  * EJS - Filters
  * Copyright(c) 2010 TJ Holowaychuk <tj@vision-media.ca>
@@ -13222,7 +13645,7 @@ exports.json = function(obj){
   return JSON.stringify(obj);
 };
 
-},{}],44:[function(require,module,exports){
+},{}],45:[function(require,module,exports){
 
 /*!
  * EJS
@@ -13248,9 +13671,9 @@ exports.escape = function(html){
 };
  
 
-},{}],45:[function(require,module,exports){
-
 },{}],46:[function(require,module,exports){
+
+},{}],47:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -13478,7 +13901,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require("JkpR2F"))
-},{"JkpR2F":47}],47:[function(require,module,exports){
+},{"JkpR2F":48}],48:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -13543,7 +13966,7 @@ process.chdir = function (dir) {
     throw new Error('process.chdir is not supported');
 };
 
-},{}],48:[function(require,module,exports){
+},{}],49:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -14054,7 +14477,7 @@ process.chdir = function (dir) {
 }(this));
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],49:[function(require,module,exports){
+},{}],50:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -14140,7 +14563,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],50:[function(require,module,exports){
+},{}],51:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -14227,13 +14650,13 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],51:[function(require,module,exports){
+},{}],52:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":49,"./encode":50}],52:[function(require,module,exports){
+},{"./decode":50,"./encode":51}],53:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -14942,7 +15365,7 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":48,"querystring":51}],53:[function(require,module,exports){
+},{"punycode":49,"querystring":52}],54:[function(require,module,exports){
 /**
  * messageformat.js
  *
@@ -16525,4 +16948,4 @@ function isNullOrUndefined(arg) {
 
 })( this );
 
-},{}]},{},[35])
+},{}]},{},[36])
