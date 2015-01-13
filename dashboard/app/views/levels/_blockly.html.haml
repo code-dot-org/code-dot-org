@@ -30,7 +30,7 @@
     %script{src: "#{apps_path}js/#{js_locale}/vendor.js"}
   %script{src: "#{apps_path}js/#{js_locale}/#{@game.app}#{pretty ? '' : '.min'}.js"}
 
-  %div{style: "display:none"}= render partial: 'levels/reference_area'
+  %div{style: 'display: none;'}= render partial: 'levels/reference_area'
 
   :javascript
     //<![CDATA[
@@ -38,4 +38,4 @@
     var appOptions = #{app_options.to_json};
     appOptions.locale = '#{js_locale}';
     //]]>
-  %script{src: '/shared/js/baseOptions.js'}
+  %script{src: '/shared/js/initApp.js'}
