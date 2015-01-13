@@ -7,7 +7,7 @@ var rblocks = function () {
   return testUtils.requireWithGlobalsCheckBuildFolder('turtle/requiredBlocks.js');
 };
 
-var studioAppSingleton = require(testUtils.buildPath('StudioApp')).singleton;
+var studioApp = require(testUtils.buildPath('StudioApp')).singleton;
 
 module.exports = {
   app: "turtle",
@@ -21,7 +21,7 @@ module.exports = {
         testResult: TestResults.ALL_PASS
       },
       customValidator: function () {
-        return studioAppSingleton.enableShowCode === true && studioAppSingleton.enableShowBlockCount === true;
+        return studioApp.enableShowCode === true && studioApp.enableShowBlockCount === true;
       },
       missingBlocks: [],
       xml: '<xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title><next><block type="draw_turn_by_constant_restricted"><title name="DIR">turnRight</title><title name="VALUE">90</title><next><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title></block></next></block></next></block></xml>'

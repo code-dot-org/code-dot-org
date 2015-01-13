@@ -915,10 +915,14 @@ FeedbackUtils.prototype.hasExtraTopBlocks = function () {
 
 /**
  * Runs the tests and returns results.
- * @param  Did the user successfully complete the level
+ * @param {boolean} levelComplete Did the user successfully complete the level?
+ * @param {boolean} shouldCheckForEmptyBlocks Whether empty blocks should cause
+ *   a test fail result.
+ * @param {Object} options
  * @return {number} The appropriate property of TestResults.
  */
-FeedbackUtils.prototype.getTestResults = function(levelComplete, options) {
+FeedbackUtils.prototype.getTestResults = function(levelComplete,
+    shouldCheckForEmptyBlocks, options) {
   options = options || {};
   if (this.studioApp_.editCode) {
     // TODO (cpirich): implement better test results for editCode
@@ -926,7 +930,7 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete, options) {
         this.studioApp_.TestResults.ALL_PASS :
         this.studioApp_.TestResults.TOO_FEW_BLOCKS_FAIL;
   }
-  if (this.studioApp_.CHECK_FOR_EMPTY_BLOCKS && this.hasEmptyContainerBlocks_()) {
+  if (shouldCheckForEmptyBlocks && this.hasEmptyContainerBlocks_()) {
     var type = this.getEmptyContainerBlock_().type;
     if (type === 'procedures_defnoreturn' || type === 'procedures_defreturn') {
       return TestResults.EMPTY_FUNCTION_BLOCK_FAIL;
