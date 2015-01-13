@@ -23,7 +23,7 @@
  */
 'use strict';
 
-var studioAppSingleton = require('../base');
+var studioAppSingleton = require('../StudioApp').singleton;
 var commonMsg = require('../../locale/current/common');
 var tiles = require('./tiles');
 var codegen = require('../codegen');
@@ -65,7 +65,7 @@ var skin;
 var stepSpeed;
 
 //TODO: Make configurable.
-studioAppSingleton.CHECK_FOR_EMPTY_BLOCKS = true;
+studioAppSingleton.setCheckForEmptyBlocks(true);
 
 var getTile = function(map, x, y) {
   if (map && map[y]) {

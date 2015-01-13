@@ -1,5 +1,5 @@
 var appMain = require('../appMain');
-var studioAppSingleton = require('../base');
+var studioAppSingleton = require('../StudioApp').singleton;
 var Artist = require('./turtle');
 var blocks = require('./blocks');
 var skins = require('./skins');

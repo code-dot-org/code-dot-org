@@ -2,7 +2,7 @@ var testUtils = require('../../util/testUtils');
 var testUtils = require('../../util/testUtils');
 var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
 
-var studioAppSingleton = require(testUtils.buildPath('base'));
+var studioAppSingleton = require(testUtils.buildPath('StudioApp')).singleton;
 
 module.exports = {
   app: "turtle",

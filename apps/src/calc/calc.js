@@ -21,7 +21,7 @@ var Calc = module.exports;
 /**
  * Create a namespace for the application.
  */
-var studioAppSingleton = require('../base');
+var studioAppSingleton = require('../StudioApp').singleton;
 var Calc = module.exports;
 var commonMsg = require('../../locale/current/common');
 var calcMsg = require('../../locale/current/calc');
@@ -46,7 +46,7 @@ var skin;
 // use zzz for sorting purposes (which is also hacky)
 var COMPUTE_NAME = 'zzz_compute';
 
-studioAppSingleton.CHECK_FOR_EMPTY_BLOCKS = false;
+studioAppSingleton.setCheckForEmptyBlocks(false);
 studioAppSingleton.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
 var CANVAS_HEIGHT = 400;

@@ -21,7 +21,7 @@ var Eval = module.exports;
 /**
  * Create a namespace for the application.
  */
-var studioAppSingleton = require('../base');
+var studioAppSingleton = require('../StudioApp').singleton;
 var Eval = module.exports;
 var commonMsg = require('../../locale/current/common');
 var evalMsg = require('../../locale/current/eval');
@@ -43,7 +43,7 @@ var canvg = window.canvg || global.canvg;
 var level;
 var skin;
 
-studioAppSingleton.CHECK_FOR_EMPTY_BLOCKS = false;
+studioAppSingleton.setCheckForEmptyBlocks(false);
 studioAppSingleton.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
 var CANVAS_HEIGHT = 400;

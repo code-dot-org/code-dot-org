@@ -7,7 +7,7 @@
 
 'use strict';
 
-var studioAppSingleton = require('../base');
+var studioAppSingleton = require('../StudioApp').singleton;
 var skins = require('../skins');
 var page = require('../templates/page.html');
 var dom = require('../dom');
@@ -23,7 +23,7 @@ var skin;
 var ResultType = studioAppSingleton.ResultType;
 var TestResults = studioAppSingleton.TestResults;
 
-studioAppSingleton.CHECK_FOR_EMPTY_BLOCKS = true;
+studioAppSingleton.setCheckForEmptyBlocks(true);
 //The number of blocks to show as feedback.
 studioAppSingleton.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 

@@ -7,7 +7,7 @@
 
 'use strict';
 
-var studioAppSingleton = require('../base');
+var studioAppSingleton = require('../StudioApp').singleton;
 var commonMsg = require('../../locale/current/common');
 var flappyMsg = require('../../locale/current/flappy');
 var skins = require('../skins');
@@ -53,7 +53,7 @@ var stepSpeed;
 var infoText;
 
 //TODO: Make configurable.
-studioAppSingleton.CHECK_FOR_EMPTY_BLOCKS = true;
+studioAppSingleton.setCheckForEmptyBlocks(true);
 
 var randomObstacleHeight = function () {
   var min = Flappy.MIN_OBSTACLE_HEIGHT;
