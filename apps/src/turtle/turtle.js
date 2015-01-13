@@ -836,10 +836,10 @@ Artist.prototype.animate = function() {
     var stepped = true;
     while (stepped) {
       codegen.selectCurrentCode(this.interpreter,
-                                this.studioApp_.editor,
                                 this.cumulativeLength,
                                 this.userCodeStartOffset,
-                                this.userCodeLength);
+                                this.userCodeLength,
+                                this.studioApp_.editor);
       try {
         stepped = this.interpreter.step();
       }
