@@ -53,7 +53,7 @@ var stepSpeed;
 var infoText;
 
 //TODO: Make configurable.
-studioAppSingleton.CHECK_FOR_EMPTY_BLOCKS = true;
+studioAppSingleton.setCheckForEmptyBlocks(true);
 
 var randomObstacleHeight = function () {
   var min = Flappy.MIN_OBSTACLE_HEIGHT;
