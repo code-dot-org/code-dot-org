@@ -63,10 +63,10 @@ var StudioApp = function () {
   // The following properties get their non-default values set by the application.
 
   /**
-  * Whether to alert user to empty blocks, short-circuiting all other tests.
-  */
-  // TODO (br-pair) : this isnt actually a constant
-  this.CHECK_FOR_EMPTY_BLOCKS = undefined;
+   * Whether to alert user to empty blocks, short-circuiting all other tests.
+   * @member {boolean}
+   */
+  this.checkForEmptyBlocks_ = false;
 
   /**
   * The ideal number of blocks to solve this level.  Users only get 2
@@ -828,10 +828,14 @@ StudioApp.prototype.displayFeedback = function(options) {
 };
 
 /**
- *
+ * Runs the tests and returns results.
+ * @param {boolean} levelComplete Was the level completed successfully?
+ * @param {Object} options
+ * @return {number} The appropriate property of TestResults.
  */
 StudioApp.prototype.getTestResults = function(levelComplete, options) {
-  return this.feedback_.getTestResults(levelComplete, options);
+  return this.feedback_.getTestResults(levelComplete,
+      this.checkForEmptyBlocks_, options);
 };
 
 // Builds the dom to get more info from the user. After user enters info
@@ -1153,12 +1157,20 @@ StudioApp.prototype.handleEditCode_ = function (options) {
 };
 
 /**
+ * Set whether to alert user to empty blocks, short-circuiting all other tests.
+ * @param {boolean} checkBlocks Whether to check for empty blocks.
+ */
+StudioApp.prototype.setCheckForEmptyBlocks = function (checkBlocks) {
+  this.checkForEmptyBlocks_ = checkBlocks;
+};
+
+/**
  *
  */
 StudioApp.prototype.handleUsingBlockly_ = function (config) {
   // Allow empty blocks if editing blocks.
   if (config.level.edit_blocks) {
-    this.CHECK_FOR_EMPTY_BLOCKS = false;
+    this.checkForEmptyBlocks_ = false;
     if (config.level.edit_blocks === 'required_blocks' ||
       config.level.edit_blocks === 'toolbox_blocks') {
       // Don't show when run block for toolbox/required block editing

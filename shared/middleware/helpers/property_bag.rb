@@ -10,7 +10,7 @@ class PropertyBag
     @app_id = app_id # TODO(if/when needed): Ensure this is a registered app?
     @storage_id = storage_id
   
-    @table = PEGASUS_DB[:property_bags]
+    @table = PEGASUS_DB[:app_properties]
   end
 
   def delete(name)

@@ -128,7 +128,7 @@ function runTestFromCollection (collection, index) {
 
 function runLevel (app, skinId, level, onAttempt, beforeClick) {
   require(buildDir + '/js/' + app + '/main');
-  var studioAppSingleton = require(buildDir + '/js/StudioApp').singleton;
+  var studioApp = require(buildDir + '/js/StudioApp').singleton;
   setAppSpecificGlobals(app);
 
   var main = window[app + 'Main'];
@@ -142,7 +142,7 @@ function runLevel (app, skinId, level, onAttempt, beforeClick) {
       if (beforeClick) {
         beforeClick(assert);
       }
-      studioAppSingleton.runButtonClick();
+      studioApp.runButtonClick();
     },
     onAttempt: onAttempt
   });

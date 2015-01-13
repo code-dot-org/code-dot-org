@@ -21,7 +21,7 @@ var Eval = module.exports;
 /**
  * Create a namespace for the application.
  */
-var studioAppSingleton = require('../StudioApp').singleton;
+var studioApp = require('../StudioApp').singleton;
 var Eval = module.exports;
 var commonMsg = require('../../locale/current/common');
 var evalMsg = require('../../locale/current/eval');
@@ -33,8 +33,8 @@ var page = require('../templates/page.html');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
 
-var ResultType = studioAppSingleton.ResultType;
-var TestResults = studioAppSingleton.TestResults;
+var ResultType = studioApp.ResultType;
+var TestResults = studioApp.TestResults;
 
 // requiring this loads canvg into the global namespace
 require('../canvg/canvg.js');
@@ -43,8 +43,8 @@ var canvg = window.canvg || global.canvg;
 var level;
 var skin;
 
-studioAppSingleton.CHECK_FOR_EMPTY_BLOCKS = false;
-studioAppSingleton.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
+studioApp.setCheckForEmptyBlocks(false);
+studioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
@@ -66,12 +66,12 @@ Eval.init = function(config) {
   config.enableShowCode = false;
 
   config.html = page({
-    assetUrl: studioAppSingleton.assetUrl,
+    assetUrl: studioApp.assetUrl,
     data: {
-      localeDirection: studioAppSingleton.localeDirection(),
+      localeDirection: studioApp.localeDirection(),
       visualization: require('./visualization.html')(),
       controls: require('./controls.html')({
-        assetUrl: studioAppSingleton.assetUrl
+        assetUrl: studioApp.assetUrl
       }),
       blockUsed : undefined,
       idealBlockNumber : undefined,
@@ -81,9 +81,9 @@ Eval.init = function(config) {
   });
 
   config.loadAudio = function() {
-    studioAppSingleton.loadAudio(skin.winSound, 'win');
-    studioAppSingleton.loadAudio(skin.startSound, 'start');
-    studioAppSingleton.loadAudio(skin.failureSound, 'failure');
+    studioApp.loadAudio(skin.winSound, 'win');
+    studioApp.loadAudio(skin.startSound, 'start');
+    studioApp.loadAudio(skin.failureSound, 'failure');
   };
 
   config.afterInject = function() {
@@ -117,26 +117,26 @@ Eval.init = function(config) {
     var visualizationColumn = document.getElementById('visualizationColumn');
     visualizationColumn.style.width = '400px';
 
-    // base's studioAppSingleton.resetButtonClick will be called first
+    // base's studioApp.resetButtonClick will be called first
     var resetButton = document.getElementById('resetButton');
     dom.addClickTouchEvent(resetButton, Eval.resetButtonClick);
   };
 
-  studioAppSingleton.init(config);
+  studioApp.init(config);
 };
 
 /**
  * Click the run button.  Start the program.
  */
-studioAppSingleton.runButtonClick = function() {
-  studioAppSingleton.toggleRunReset('reset');
+studioApp.runButtonClick = function() {
+  studioApp.toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
-  studioAppSingleton.attempts++;
+  studioApp.attempts++;
   Eval.execute();
 };
 
 /**
- * App specific reset button click logic.  studioAppSingleton.resetButtonClick will be
+ * App specific reset button click logic.  studioApp.resetButtonClick will be
  * called first.
  */
 Eval.resetButtonClick = function () {
@@ -151,7 +151,7 @@ Eval.resetButtonClick = function () {
 function evalCode (code) {
   try {
     codegen.evalWith(code, {
-      StudioApp: studioAppSingleton,
+      StudioApp: studioApp,
       Eval: api
     });
   } catch (e) {
@@ -184,7 +184,7 @@ function getDrawableFromBlocks(blockXml) {
         "we already have blocks in the workspace");
     }
     // Temporarily put the blocks into the workspace so that we can generate code
-    studioAppSingleton.loadBlocks(blockXml);
+    studioApp.loadBlocks(blockXml);
   }
 
   var code = Blockly.Generator.blockSpaceToCode('JavaScript', ['functional_display', 'functional_definition']);
@@ -214,7 +214,7 @@ Eval.execute = function() {
   }
 
   Eval.result = evaluateAnswer();
-  Eval.testResults = studioAppSingleton.getTestResults(Eval.result);
+  Eval.testResults = studioApp.getTestResults(Eval.result);
 
   if (level.freePlay) {
     Eval.testResults = TestResults.FREE_PLAY;
@@ -233,7 +233,7 @@ Eval.execute = function() {
     onComplete: onReportComplete
   };
 
-  studioAppSingleton.report(reportData);
+  studioApp.report(reportData);
 };
 
 /**
@@ -276,13 +276,13 @@ function evaluateAnswer() {
 
 /**
  * App specific displayFeedback function that calls into
- * studioAppSingleton.displayFeedback when appropriate
+ * studioApp.displayFeedback when appropriate
  */
 var displayFeedback = function(response) {
   // override extra top blocks message
   level.extraTopBlocks = evalMsg.extraTopBlocks();
 
-  studioAppSingleton.displayFeedback({
+  studioApp.displayFeedback({
     app: 'Eval',
     skin: skin.id,
     feedbackType: Eval.testResults,
