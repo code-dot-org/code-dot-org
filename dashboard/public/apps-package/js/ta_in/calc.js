@@ -1398,7 +1398,6 @@ var requiredBlockUtils = require('./required_block_utils');
 var StudioAppClass = require('./StudioApp');
 
 var studioAppSingleton = require('./base');
-window.StudioApp = studioAppSingleton;
 
 // TODO (br-pair) : This is to expose methods we need in the global namespace
 // for testing purpose. Would be nice to eliminate this eventually.
@@ -2325,7 +2324,7 @@ Calc.execute = function() {
       appState.testResults = TestResults.APP_SPECIFIC_FAIL;
       appState.message = calcMsg.equivalentExpression();
     } else {
-      appState.testResults = StudioApp.getTestResults(appState.result);
+      appState.testResults = studioAppSingleton.getTestResults(appState.result);
     }
   }
 
@@ -2921,10 +2920,6 @@ module.exports = {
 
 },{"../../locale/ta_in/calc":41,"../block_utils":5}],13:[function(require,module,exports){
 var appMain = require('../appMain');
-// TODO (br-pair): We're doing this so that other apps can still have
-// in the global namespace, while ensuring that we don't. Ultimately nobody
-// should have it, and we can remove this.
-window.StudioApp = undefined;
 window.Calc = require('./calc');
 var blocks = require('./blocks');
 var skins = require('../skins');

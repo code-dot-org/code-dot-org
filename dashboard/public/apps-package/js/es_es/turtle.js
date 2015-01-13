@@ -1398,7 +1398,6 @@ var requiredBlockUtils = require('./required_block_utils');
 var StudioAppClass = require('./StudioApp');
 
 var studioAppSingleton = require('./base');
-window.StudioApp = studioAppSingleton;
 
 // TODO (br-pair) : This is to expose methods we need in the global namespace
 // for testing purpose. Would be nice to eliminate this eventually.
@@ -12868,10 +12867,6 @@ levels.ec_1_10 = utils.extend(levels['1_10'], {
 
 },{"../../locale/es_es/turtle":46,"../block_utils":5,"../level_base":13,"../utils":43,"./answers":30,"./colours":33,"./requiredBlocks":38,"./startBlocks.xml":40,"./toolbox.xml":41}],37:[function(require,module,exports){
 var appMain = require('../appMain');
-// TODO (br-pair): We're doing this so that other apps can still have StudioApp
-// in the global namespace, while ensuring that we don't. Ultimately nobody
-// should have it, and we can remove this.
-window.StudioApp = undefined;
 var studioAppSingleton = require('../base');
 var Artist = require('./turtle');
 var blocks = require('./blocks');
