@@ -221,6 +221,8 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'updating ContractMatch level updates it' do
+    File.expects(:write).times(4) # mock file so we don't actually write a file... twice each for the .contract_match file and the i18n strings file (once for create and once for save)
+     
     name = 'contract match test'
     dsl_text = <<EOS
 name 'Eval Contracts 1 B'
