@@ -1,6 +1,6 @@
 /*jshint multistr: true */
 
-var msg = require('../../locale/current/webapp');
+var msg = require('../../locale/current/applab');
 var utils = require('../utils');
 var blockUtils = require('../block_utils');
 var tb = blockUtils.createToolbox;
@@ -20,7 +20,7 @@ levels.simple = {
   },
   'freePlay': true,
   'toolbox':
-      tb('<block type="webapp_createHtmlBlock" inline="true"> \
+      tb('<block type="applab_createHtmlBlock" inline="true"> \
         <value name="ID"><block type="text"><title name="TEXT">id</title></block></value> \
         <value name="HTML"><block type="text"><title name="TEXT">html</title></block></value></block>'),
   'startBlocks':
@@ -106,7 +106,7 @@ levels.full_sandbox =  {
   'toolbox':
     tb(createCategory(
         msg.catActions(),
-        '<block type="webapp_createHtmlBlock" inline="true"> \
+        '<block type="applab_createHtmlBlock" inline="true"> \
           <value name="ID"><block type="text"><title name="TEXT">id</title></block></value> \
           <value name="HTML"><block type="text"><title name="TEXT">html</title></block></value></block>') +
        createCategory(msg.catControl(),
