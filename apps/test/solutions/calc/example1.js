@@ -46,6 +46,14 @@ module.exports = {
           blockUtils.calcBlockXml('functional_plus', [3, 3])
         ]) +
       '</xml>'
+    },
+    {
+      description: "empty answer",
+      expected: {
+        result: false,
+        testResult: TestResults.LEVEL_INCOMPLETE_FAIL
+      },
+      xml: '<xml></xml>'
     }
   ]
 };

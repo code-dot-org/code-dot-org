@@ -12,16 +12,42 @@ class ApiController < ApplicationController
     authorize! :read, @section
 
     @script = @section.script || Script.twenty_hour_script
-    @section_map = {@section => @section.students}
 
-    @all_script_levels = @script.script_levels.includes({ level: :game })
+    # stage data
+    stages = @script.script_levels.group_by(&:stage_or_game).map do |stage_or_game, levels|
+      {length: levels.length,
+       title: ActionController::Base.helpers.strip_tags(stage_title(@script, stage_or_game))}
+    end
 
-    @all_concepts = Concept.cached
+    # student level completion data
+    students = @section.students.map do |student|
+      level_map = student.user_levels.index_by {|ul| ul.level_id }
+      student_levels = []
+      @script.script_levels.each do |script_level|
+        if user_level = level_map[script_level.level_id]
+          student_levels << {class: activity_css_class(user_level.try(:best_result)),
+                             title: script_level.stage_or_game_position}
+        else
+          student_levels << nil
+        end
+      end   
+      {id: student.id, levels: student_levels}
+    end
 
-    @all_games = Game.where(['id in (select game_id from levels l inner join script_levels sl on sl.level_id = l.id where sl.script_id = ?)', @script.id])
 
-    student_ids = @section.students.pluck(:id)
-    @recent_activities = Activity.recent(30).where("user_id in (?)", student_ids)
+    data = {
+            students: students,
+            script: {
+                     name: data_t_suffix('script.name', @script.name, 'title'),
+                     levels_count: @script.script_levels.length,
+                     stages: stages
+                    }
+           }
+
+    render text: data.to_json
+    # This really should be:
+    # render json: data
+    # but it doesn't work because we have some CSRF "protection" thing
   end
 
   def student_progress

@@ -64,16 +64,16 @@ module ScriptLevelsHelper
   end
 
   def tracking_pixel_url(script)
-    if script.id == Script::HOC_ID || script.name == Script::SPECIAL_NAME
-      CDO.code_org_url "/api/hour/begin_codeorg.png"
+    if script.id == Script::HOC_ID
+      CDO.code_org_url '/api/hour/begin_codeorg.png'
     else
       CDO.code_org_url "/api/hour/begin_#{script.name}.png"
     end
   end
 
   def hoc_finish_url(script)
-    if script.id == Script::HOC_ID || script.name == Script::SPECIAL_NAME
-      CDO.code_org_url "/api/hour/finish"
+    if script.id == Script::HOC_ID
+      CDO.code_org_url '/api/hour/finish'
     else
       CDO.code_org_url "/api/hour/finish/#{script.name}"
     end

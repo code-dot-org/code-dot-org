@@ -65,7 +65,7 @@ function validateImages(setup, defaultFlower) {
   };
 
   // create a bee with a shim maze
-  var bee = new Bee(fakeMaze, config);
+  var bee = new Bee(fakeMaze, null, config);
 
   var drawer = new BeeItemDrawer(dirtMap, skin, initialDirtMap, bee);
 
