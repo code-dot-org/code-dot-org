@@ -27,10 +27,10 @@ class LevelSource < ActiveRecord::Base
   def self.find_identical_or_create(level, data)
     md5 = Digest::MD5.hexdigest(data)
 
-    redis_key = "v5-#{level.id}-#{md5}"
+    redis_key = "v6-#{level.id}-#{md5}"
 
-    cached_json = LevelSource.level_source_cache[redis_key] if LevelSource.cache_enabled?
-    level_source_object = OpenStruct.new(JSON.parse(cached_json)) if cached_json
+    marshalled = LevelSource.level_source_cache[redis_key] if LevelSource.cache_enabled?
+    level_source_object = Marshal.load(marshalled) if marshalled
 
     unless level_source_object
       level_source_object = self.where(level: level, md5: md5).first_or_create do |ls|
@@ -38,10 +38,7 @@ class LevelSource < ActiveRecord::Base
       end
       return nil unless level_source_object
 
-      level_source_hash = {id:level_source_object.id, hidden:level_source_object.hidden}
-      LevelSource.level_source_cache[redis_key] = level_source_hash.to_json if LevelSource.cache_enabled?
-
-      level_source_object = OpenStruct.new(level_source_hash)
+      LevelSource.level_source_cache[redis_key] = Marshal.dump(level_source_object) if LevelSource.cache_enabled?
     end
 
     level_source_object
