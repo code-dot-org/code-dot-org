@@ -135,17 +135,7 @@ class ApplicationController < ActionController::Base
   end
 
   def current_user
-    if Rails.configuration.minimal_mode
-      nil
-    else
-      super
-    end
-  end
-
-  def nonminimal
-    if Rails.configuration.minimal_mode
-      render 'shared/overloaded', status: 502, formats: [:html]
-    end
+    super
   end
 
   def set_locale_cookie(locale)

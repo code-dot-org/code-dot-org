@@ -1,7 +1,0 @@
-title 'special'
-description_short "special"
-description "special"
-hidden 'true'
-
-stage 'Special'
-level 'SpecialFrozenLevel'
