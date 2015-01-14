@@ -824,7 +824,7 @@ StudioApp.prototype.displayFeedback = function(options) {
     options.feedbackType = this.TestResults.EDIT_BLOCKS;
   }
 
-  this.feedback_.displayFeedback(options);
+  this.feedback_.displayFeedback(options, this.requiredBlocksToFlagCount_);
 };
 
 /**
