@@ -789,17 +789,19 @@ FeedbackUtils.prototype.getEmptyContainerBlock_ = function() {
  */
 FeedbackUtils.prototype.checkForEmptyContainerBlockFailure_ = function() {
   var emptyBlock = this.getEmptyContainerBlock_();
-  if (emptyBlock) {
-    var type = emptyBlock.type;
-    if (type === 'procedures_defnoreturn' || type === 'procedures_defreturn') {
-      return TestResults.EMPTY_FUNCTION_BLOCK_FAIL;
-    }
-    // Block is assumed to be "if" or "repeat" if we reach here.
-    // This is where to add checks if you want a different TestResult
-    // for "controls_for_counter" blocks, for example.
-    return TestResults.EMPTY_BLOCK_FAIL;
+  if (!emptyBlock) {
+    return TestResults.ALL_PASS;
   }
-  return TestResults.ALL_PASS;
+
+  var type = emptyBlock.type;
+  if (type === 'procedures_defnoreturn' || type === 'procedures_defreturn') {
+    return TestResults.EMPTY_FUNCTION_BLOCK_FAIL;
+  }
+  
+  // Block is assumed to be "if" or "repeat" if we reach here.
+  // This is where to add checks if you want a different TestResult
+  // for "controls_for_counter" blocks, for example.
+  return TestResults.EMPTY_BLOCK_FAIL;
 };
 
 /**
