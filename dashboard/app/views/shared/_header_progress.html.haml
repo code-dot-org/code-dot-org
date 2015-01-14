@@ -2,25 +2,31 @@
   %div{class: 'header_level_container'}
     - @game_script_levels ||= (@stage && @stage.script_levels.includes(:script).joins(:level)) || @script.script_levels_from_game(@game.id)
     - game_levels = current_user ? current_user.levels_from_script(@script, @game.id, @stage) : @game_script_levels
-    - multiple_puzzles = game_levels.count > 1
+    - script_data_json = {levels: game_levels.map do |sl| |
+        completion_status, link = level_info(current_user, sl); |
+        {display_text: sl.level_display_text, status: completion_status, link: link, unplugged: !!sl.level.unplugged?, assessment: !!sl.assessment} |
+      end}.to_json |
 
     .header_text
       = stage_title(@script, @stage || @game)
-    - if multiple_puzzles
+    - if game_levels.count > 1
       .progress_container
-        - game_levels.each do |sl|
-          - css_class, link = level_info(current_user, sl)
-          - if @script_level && @script_level == sl
-            - puzzle_outer_class = 'puzzle_outer_current'
-          - elsif sl.assessment
-            - puzzle_outer_class = 'puzzle_outer_assessment'
-          - else
-            - puzzle_outer_class = 'puzzle_outer_level'
-          - if sl.stage_or_game_position == @game_script_levels.count
-            - puzzle_outer_class += ' last'
-          %div{class: puzzle_outer_class}
-            %a.level_link{ href: link, class: css_class + (sl.level.unplugged? ? ' unplugged_level ' : '')}
-              = sl.level_display_text
+      :javascript
+        var scriptData = #{script_data_json};
+        var currentLevelIndex = #{@script_level.stage_or_game_position - 1};
+        var progressContainer = $('.progress_container');
+        scriptData.levels.forEach(function(level, index, levels) {
+          var defaultClass = level.assessment ? 'puzzle_outer_assessment' : 'puzzle_outer_level';
+          var link = $('<a>').attr('href', level.link).addClass('level_link').addClass(level.status).text(level.display_text);
+          if (level.unplugged) {
+            link.addClass('unplugged_level');
+          }
+          var div = $('<div>').addClass(index === currentLevelIndex ? 'puzzle_outer_current' : defaultClass).append(link);
+          if (index === levels.length - 1) {
+            div.addClass('last');
+          }
+          progressContainer.append(div).append('\n');
+        });
     - if @script.hoc?
       .header_finished_link
         %a{href: hoc_finish_url(@script)}
