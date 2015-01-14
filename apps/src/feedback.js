@@ -34,10 +34,12 @@ var KeyCodes = constants.KeyCodes;
 
 /**
  * @param {Object} options
+ * @param {!Array} requiredBlocks The blocks that are required to be used in
+ *   the solution to this level.
  * @param {number} maxRequiredBlocksToFlag The number of required blocks to
  *   give hints about at any one time.  Set this to Infinity to show all.
  */
-FeedbackUtils.prototype.displayFeedback = function(options,
+FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
     maxRequiredBlocksToFlag) {
   options.hintRequestExperiment = options.response &&
       options.response.hint_request_placement;
@@ -63,9 +65,10 @@ FeedbackUtils.prototype.displayFeedback = function(options,
   }
   var feedbackBlocks;
   if (this.studioApp_.isUsingBlockly()) {
-    feedbackBlocks = new FeedbackBlocks(options,
-                                        this.getMissingRequiredBlocks_(this.studioApp_.requiredBlocks_, maxRequiredBlocksToFlag),
-                                        this.studioApp_);
+    feedbackBlocks = new FeedbackBlocks(
+        options,
+        this.getMissingRequiredBlocks_(requiredBlocks, maxRequiredBlocksToFlag),
+        this.studioApp_);
   }
   // feedbackMessage must be initialized after feedbackBlocks
   // because FeedbackBlocks can mutate options.response.hint.
