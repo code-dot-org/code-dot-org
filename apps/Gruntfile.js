@@ -11,7 +11,7 @@ var APPS = [
   'studio',
   'jigsaw',
   'calc',
-  'webapp',
+  'applab',
   'eval'
 ];
 
