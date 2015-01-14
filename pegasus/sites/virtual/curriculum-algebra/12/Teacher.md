@@ -54,7 +54,7 @@ Let's get back into that Big Game that we started in stage 7.
 ## Activity: Eval Design Recpie
 ### <a name="Activity1"></a> 2) Online Puzzles
 
- Using what you've learned about the Design Recipe and, you'll be writing functions that add animation to your game. Head to [MSM stage 12](http://studio.code.org/s/msm/stage/12/puzzle/1) in Code Studio to get started programming.
+ Using what you've learned about the Design Recipe and, you'll be writing functions that add animation to your game. Head to [MSM stage 12](http://studio.code.org/s/algebra/stage/12/puzzle/1) in Code Studio to get started programming.
 
 [/together]
 

@@ -73,7 +73,7 @@ _Additional standards alignment can be found at the end of this lesson_
 
 ### For the Teacher
 - [Lesson slide deck](https://docs.google.com/a/code.org/presentation/d/1DF3XNkI4yellzRJL8ItqZU546UT9BaXWeKY7AmI0gsc/)
-- [Example Game](http://studio.code.org/s/msm/stage/1/puzzle/2/)
+- [Example Game](http://studio.code.org/s/algebra/stage/1/puzzle/2/)
 - Character Cutouts
 
 [/together]
@@ -186,7 +186,7 @@ The structure of your students' games will very closely resemble the demo they'v
 ## Assessment
 ### <a name="Assessment"></a>6) Video Games and Coordinate Planes Assessment
 
-Visit [MSM Stage 1](http://studio.code.org/s/msm/stage/1/puzzle/1) in Code Studio to complete the assessments.
+Visit [MSM Stage 1](http://studio.code.org/s/algebra/stage/1/puzzle/1) in Code Studio to complete the assessments.
 
 [/together]
 
