@@ -116,7 +116,7 @@ function runTestFromCollection (collection, index) {
     });
 
     // define a customValidator to run/validate arbitrary code at the point when
-    // StudioAppClass.report gets called. Allows us to access some things that
+    // StudioApp.report gets called. Allows us to access some things that
     // aren't on the options object passed into report
     if (testData.customValidator) {
       assert(testData.customValidator(assert), 'Custom validator failed');
@@ -128,9 +128,7 @@ function runTestFromCollection (collection, index) {
 
 function runLevel (app, skinId, level, onAttempt, beforeClick) {
   require(buildDir + '/js/' + app + '/main');
-  var studioAppSingleton = require(buildDir + '/js/base');
-  global.StudioApp = studioAppSingleton;
-
+  var studioApp = require(buildDir + '/js/StudioApp').singleton;
   setAppSpecificGlobals(app);
 
   var main = window[app + 'Main'];
@@ -144,7 +142,7 @@ function runLevel (app, skinId, level, onAttempt, beforeClick) {
       if (beforeClick) {
         beforeClick(assert);
       }
-      studioAppSingleton.runButtonClick();
+      studioApp.runButtonClick();
     },
     onAttempt: onAttempt
   });

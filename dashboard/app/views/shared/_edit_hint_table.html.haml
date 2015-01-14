@@ -10,7 +10,7 @@
 -# If add is true, redirect_url must be defined.
 -ordered_columns = [:user_id, :hint, :puzzle, :status]
 -sorted_columns = columns.sort { |x,y| ordered_columns.index(x) <=> ordered_columns.index(y) }
-%table{:id => 'hint-table'}
+%table{id: 'hint-table'}
   %thead
     %tr
       -sorted_columns.each do |name|
@@ -19,9 +19,9 @@
     -hints.each do |level_source_hint|
       %tr
         -if columns.include? :user_id
-          %td{:align => "center"}= level_source_hint.user_id
+          %td{align: 'center'}= level_source_hint.user_id
         -if columns.include? :hint
-          %td{:class => 'hint-field'}
+          %td{class: 'hint-field'}
             -if user && (user.admin? || user.id == level_source_hint.user_id)
               -# TODO: Change displayed status value to "new" if user is not admin.
               =hidden_field_tag "original_message#{level_source_hint.id}", level_source_hint.hint
@@ -31,9 +31,9 @@
             -else
               =level_source_hint.hint
         -if columns.include? :puzzle
-          %td{:align => "center"}= link_to "Show", show_hints_path(level_source_hint.level_source_id)
+          %td{align: 'center'}= link_to 'Show', show_hints_path(level_source_hint.level_source_id)
         -if columns.include? :status
-          %td{:class => "level_source_hint_radio_button", :style => "vertical-align:top"}
+          %td{class: 'level_source_hint_radio_button', style: 'vertical-align:top'}
             -if user && user.admin?
               =form_for(level_source_hint, :remote => true) do |f|
                 =hidden_field_tag :redirect, level_source_hints_path
@@ -48,11 +48,11 @@
                 =label_tag 'Disapprove'
             -else
               =LevelSourceHint::USER_VISIBLE_NAMES[level_source_hint.status]
-        %td{:id => "result#{level_source_hint.id.to_s}", :style => 'display:none;color:red;font-family: 'Gotham 7r', sans-serif; font-weight: normal;font-size:12pt'}
+        %td{id: "result#{level_source_hint.id.to_s}", :style => 'display: none; color: red; font-family: "Gotham 7r", sans-serif; font-weight: normal; font-size: 12pt;'}
     -if add
       %tr
         %td
-          = render partial: "shared/add_hint", locals: {level_source_id: @level_source_id, redirect_url: redirect_url}
+          = render partial: 'shared/add_hint', locals: {level_source_id: @level_source_id, redirect_url: redirect_url}
 
 :javascript
   // Get the id of the status div associated with the given URL.

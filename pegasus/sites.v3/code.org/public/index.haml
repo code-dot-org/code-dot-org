@@ -146,7 +146,7 @@ social:
         %a{href: item[:url]}
           .col-25.outerblock{style: "float:left; #{other_style}"}
             .innerblock
-              %img{:src=>"/images/logo_tall_#{item[:id]}.jpg", style: "width:100%; height:120px"}
+              %img{:src=>CDO.shared_image_url("courses/logo_tall_#{item[:id]}.jpg"), style: "width:100%; height:120px"}
               .title=I18n.t "studiobar_#{item[:id]}_title"
               .body=I18n.t "studiobar_#{item[:id]}_body"
 
@@ -158,7 +158,7 @@ social:
         %a{href: "/shop"}
           .outerblock{style: "width:223px; margin-bottom:0px"}
             .innerblock
-              %img{:src=>"/images/logo_tall_shop.jpg", style: "width:100%; height:120px"}
+              %img{:src=>CDO.shared_image_url("courses/logo_tall_shop.jpg"), style: "width:100%; height:120px"}
               .title=I18n.t "studiobar_shop_title"
               .body=I18n.t "studiobar_shop_body"
     %br/
