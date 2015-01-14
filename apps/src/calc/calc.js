@@ -257,7 +257,7 @@ function generateExpressionsFromBlockXml(blockXml) {
 }
 
 // todo (brent) : would this logic be better placed inside the blocks?
-// todo (brent) : could use some unit tests
+// todo (brent) : needs some unit tests
 function getEquationFromBlock(block) {
   if (!block) {
     return null;
@@ -297,20 +297,35 @@ function getEquationFromBlock(block) {
     case 'functional_call':
       var name = block.getCallName();
       var def = Blockly.Procedures.getDefinition(name, Blockly.mainBlockSpace);
-      if (!def.isVariable()) {
-        throw new Error('not expected');
+      if (def.isVariable()) {
+        return new Equation(null, new ExpressionNode(name));
+      } else {
+        var values = [];
+        var i = 0;
+        var input, childBlock;
+        while (input = block.getInput('ARG' + i)) {
+          var childBlock = input.connection.targetBlock();
+          // TODO - better default?
+          values.push(childBlock ? getEquationFromBlock(childBlock).expression :
+            new ExpressionNode(0));
+          i++;
+        }
+        return new Equation(null, new ExpressionNode(name, values));
       }
-      return new Equation(null, new ExpressionNode(name));
 
     case 'functional_definition':
-      if (block.isVariable()) {
-        if (!firstChild) {
-          return new Equation(block.getTitleValue('NAME'), new ExpressionNode(0));
-        }
-        return new Equation(block.getTitleValue('NAME'),
-          getEquationFromBlock(firstChild).expression);
-      }
-      throw new Error('not sure if this works yet');
+      var name = block.getTitleValue('NAME');
+      // TODO - access private
+      if (block.parameterNames_.length) {
+        name += '(' + block.parameterNames_.join(',') +')';
+      };
+      var expression = firstChild ? getEquationFromBlock(firstChild).expression :
+        new ExpressionNode(0);
+
+      return new Equation(name, expression);
+
+    case 'functional_parameters_get':
+      return new Equation(null, new ExpressionNode(block.getTitleValue('VAR')));
 
     default:
       throw "Unknown block type: " + block.type;

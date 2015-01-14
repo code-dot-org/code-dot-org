@@ -185,24 +185,40 @@ ExpressionNode.prototype.collapse = function () {
  * @param {ExpressionNode} other The ExpressionNode to compare to.
  */
 ExpressionNode.prototype.getTokenListDiff = function (other) {
+  var tokens;
   if (this.children.length === 0) {
     return [new Token(this.value.toString(), !this.isIdenticalTo(other))];
   }
 
-  if (this.getType() !== ValueType.ARITHMETIC) {
-    // Don't support getTokenListDiff for functions
-    throw new Error("Unsupported");
-  }
-
   var nodesMatch = other && (this.value === other.value) &&
     (this.children.length === other.children.length);
-  return _.flatten([
-    new Token('(', !nodesMatch),
-    this.children[0].getTokenListDiff(nodesMatch && other.children[0]),
-    new Token(" " + this.value + " ", !nodesMatch),
-    this.children[1].getTokenListDiff(nodesMatch && other.children[1]),
-    new Token(')', !nodesMatch)
-  ]);
+
+
+  if (this.getType() === ValueType.ARITHMETIC) {
+    // Deal with arithmetic, which is always in the form (child0 operator child1)
+    tokens = [
+      new Token('(', !nodesMatch),
+      this.children[0].getTokenListDiff(nodesMatch && other.children[0]),
+      new Token(" " + this.value + " ", !nodesMatch),
+      this.children[1].getTokenListDiff(nodesMatch && other.children[1]),
+      new Token(')', !nodesMatch)
+    ];
+  } else if (this.getType() === ValueType.FUNCTION_CALL) {
+    // Deal with a function call which will generate something like: foo(1, 2, 3)
+    tokens = [
+      new Token(this.value, this.value !== other.value),
+      new Token('(', !nodesMatch)
+    ];
+
+    for (var i = 0; i < this.children.length; i++) {
+      tokens.push(this.children[i].getTokenListDiff(nodesMatch && other.children[i]));
+      tokens.push(new Token(',', !nodesMatch));
+    }
+    // pull off last comma
+    tokens.splice(-1);
+    tokens.push(new Token(")", !nodesMatch));
+  }
+  return _.flatten(tokens);
 };
 
 
