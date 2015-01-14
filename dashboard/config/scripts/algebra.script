@@ -58,7 +58,8 @@ level 'Eval Contracts 4'
 level 'Eval Contracts 4 B'
 level 'CREATING CONTRACTS FROM EXAMPLES 1'
 level 'Creating Contracts From Examples 2'
-
+level 'Creating Contracts From Examples 3A'
+level 'Creating Contracts From Examples 4'
 
 stage 'Calc: Defining Variables'
 level 'Calc Vars 1'
@@ -92,11 +93,13 @@ level 'DesignRecipe'
 
 stage 'Play Lab: Defining Functions'
 level 'Play Lab Rocket 1'
+level 'Rocket Contract 1'
 level 'Calc Rocket 1'
 level 'Calc Rocket 2'
 level 'Play Lab Rocket 2'
 level 'Play Lab Rocket 3'
 level 'Play Lab Rocket 4'
+level 'Play Lab Rocket 5'
 
 stage 'Eval: Functions'
 level 'Eval Design Recipe .1'

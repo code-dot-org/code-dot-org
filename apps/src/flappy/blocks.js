@@ -11,6 +11,7 @@ var commonMsg = require('../../locale/current/common');
 var blockUtils = require('../block_utils');
 var utils = require('../utils');
 var _ = utils.getLodash();
+var studioApp = require('../StudioApp').singleton;
 
 var FLAPPY_VALUE = '"flappy"';
 var RANDOM_VALUE = 'random';
@@ -189,7 +190,7 @@ exports.install = function(blockly, blockInstallOptions) {
     if (soundValue === RANDOM_VALUE) {
       return;
     }
-    StudioApp.playAudio(utils.stripQuotes(soundValue));
+    studioApp.playAudio(utils.stripQuotes(soundValue));
   }
 
   blockly.Blocks.flappy_playSound = {
