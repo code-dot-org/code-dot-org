@@ -63,6 +63,7 @@ GEM
     chromedriver-helper (0.0.7)
       nokogiri
     chronic (0.10.2)
+    chunky_png (1.3.3)
     codeclimate-test-reporter (0.3.0)
       simplecov (>= 0.7.1, < 1.0.0)
     codemirror-rails (4.2)
@@ -89,6 +90,10 @@ GEM
     eventmachine (1.0.4)
     execjs (2.0.2)
     extlib (0.9.16)
+    eyes_selenium (2.5.0)
+      httparty
+      oily_png (>= 1.1.0)
+      selenium-webdriver (>= 2.37)
     factory_girl (4.4.0)
       activesupport (>= 3.0.0)
     factory_girl_rails (4.4.1)
@@ -134,6 +139,9 @@ GEM
     hitimes (1.2.2)
     honeybadger (1.11.2)
       json
+    httparty (0.13.3)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
     i18n (0.6.9)
     i18nema (0.0.8)
       i18n (>= 0.5)
@@ -190,6 +198,8 @@ GEM
       multi_json (~> 1.3)
       multi_xml (~> 0.5)
       rack (~> 1.2)
+    oily_png (1.1.2)
+      chunky_png (~> 1.3.1)
     omniauth (1.2.2)
       hashie (>= 1.2, < 4)
       rack (~> 1.0)
@@ -367,6 +377,7 @@ DEPENDENCIES
   cucumber
   devise
   execjs
+  eyes_selenium
   factory_girl_rails
   font-awesome-rails
   geocoder
