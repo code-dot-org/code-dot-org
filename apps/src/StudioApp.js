@@ -99,7 +99,7 @@ var StudioApp = function () {
   * Set this to Infinity to show all.
   * @type {!number=}
   */
-  this.requiredBlocksToFlagCount_ = 1;
+  this.maxRequiredBlocksToFlag_ = 1;
 
   /**
   * The number of attempts (how many times the run button has been pressed)
@@ -824,7 +824,7 @@ StudioApp.prototype.displayFeedback = function(options) {
     options.feedbackType = this.TestResults.EDIT_BLOCKS;
   }
 
-  this.feedback_.displayFeedback(options, this.requiredBlocksToFlagCount_);
+  this.feedback_.displayFeedback(options, this.maxRequiredBlocksToFlag_);
 };
 
 /**
