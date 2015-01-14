@@ -765,15 +765,6 @@ FeedbackUtils.prototype.showToggleBlocksError = function(Dialog) {
 };
 
 /**
- * Check user's code for empty container blocks, such as "repeat".
- * @return {boolean} true if a block is empty (no blocks are nested inside).
- */
-FeedbackUtils.prototype.hasEmptyContainerBlocks_ = function() {
-  var code = codegen.workspaceCode(Blockly);
-  return (/\{\s*\}/).test(code);
-};
-
-/**
  * Get an empty container block, if any are present.
  * @return {Blockly.Block} an empty container block, or null if none exist.
  */
@@ -790,6 +781,30 @@ FeedbackUtils.prototype.getEmptyContainerBlock_ = function() {
     }
   }
   return null;
+};
+
+/**
+ * Check for empty container blocks, and return an appropriate failure
+ * code if any are found.
+ * @return {TestResults} ALL_PASS if no empty blocks are present, or
+ *   EMPTY_BLOCK_FAIL or EMPTY_FUNCTION_BLOCK_FAIL if empty blocks
+ *   are found.
+ */
+FeedbackUtils.prototype.checkForEmptyContainerBlockFailure_ = function() {
+  var emptyBlock = this.getEmptyContainerBlock_();
+  if (!emptyBlock) {
+    return TestResults.ALL_PASS;
+  }
+
+  var type = emptyBlock.type;
+  if (type === 'procedures_defnoreturn' || type === 'procedures_defreturn') {
+    return TestResults.EMPTY_FUNCTION_BLOCK_FAIL;
+  }
+  
+  // Block is assumed to be "if" or "repeat" if we reach here.
+  // This is where to add checks if you want a different TestResult
+  // for "controls_for_counter" blocks, for example.
+  return TestResults.EMPTY_BLOCK_FAIL;
 };
 
 /**
@@ -937,15 +952,11 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete,
         this.studioApp_.TestResults.ALL_PASS :
         this.studioApp_.TestResults.TOO_FEW_BLOCKS_FAIL;
   }
-  if (shouldCheckForEmptyBlocks && this.hasEmptyContainerBlocks_()) {
-    var type = this.getEmptyContainerBlock_().type;
-    if (type === 'procedures_defnoreturn' || type === 'procedures_defreturn') {
-      return TestResults.EMPTY_FUNCTION_BLOCK_FAIL;
+  if (shouldCheckForEmptyBlocks) {
+    var emptyBlockFailure = this.checkForEmptyContainerBlockFailure_();
+    if (emptyBlockFailure !== TestResults.ALL_PASS) {
+      return emptyBlockFailure;
     }
-    // Block is assumed to be "if" or "repeat" if we reach here.
-    // This is where to add checks if you want a different TestResult
-    // for "controls_for_counter" blocks, for example.
-    return TestResults.EMPTY_BLOCK_FAIL;
   }
   if (!options.allowTopBlocks && this.hasExtraTopBlocks()) {
     return TestResults.EXTRA_TOP_BLOCKS_FAIL;
