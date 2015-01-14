@@ -1,11 +1,11 @@
 /**
- * Load Skin for Webapp.
+ * Load Skin for Applab.
  */
 
 var skinsBase = require('../skins');
 
 var CONFIGS = {
-  webapp: {
+  applab: {
   }
 };
 

@@ -1,12 +1,12 @@
 /**
- * CodeOrgApp: Webapp
+ * CodeOrgApp: Applab
  *
- * Copyright 2014 Code.org
+ * Copyright 2014-2015 Code.org
  *
  */
 'use strict';
 
-var msg = require('../../locale/current/webapp');
+var msg = require('../../locale/current/applab');
 var commonMsg = require('../../locale/current/common');
 var codegen = require('../codegen');
 var utils = require('../utils');
@@ -24,10 +24,10 @@ var generateSetterCode = function (opts) {
       _(opts.ctx.VALUES)
         .map(function (item) { return item[1]; })
         .without(RANDOM_VALUE, HIDDEN_VALUE, CLICK_VALUE);
-    value = 'Webapp.randomFromArray([' + possibleValues + '])';
+    value = 'Applab.randomFromArray([' + possibleValues + '])';
   }
 
-  return 'Webapp.' + opts.name + '(\'block_id_' + opts.ctx.id + '\', ' +
+  return 'Applab.' + opts.name + '(\'block_id_' + opts.ctx.id + '\', ' +
     (opts.extraParams ? opts.extraParams + ', ' : '') + value + ');\n';
 };
 
@@ -38,7 +38,7 @@ exports.install = function(blockly, blockInstallOptions) {
   var generator = blockly.Generator.get('JavaScript');
   blockly.JavaScript = generator;
 
-  generator.webapp_eventHandlerPrologue = function() {
+  generator.applab_eventHandlerPrologue = function() {
     return '\n';
   };
 
@@ -46,7 +46,7 @@ exports.install = function(blockly, blockInstallOptions) {
 };
 
 function installCreateHtmlBlock(blockly, generator, blockInstallOptions) {
-  blockly.Blocks.webapp_createHtmlBlock = {
+  blockly.Blocks.applab_createHtmlBlock = {
     helpUrl: '',
     init: function() {
       this.setHSV(184, 1.00, 0.74);
@@ -60,12 +60,12 @@ function installCreateHtmlBlock(blockly, generator, blockInstallOptions) {
     }
   };
 
-  generator.webapp_createHtmlBlock = function() {
+  generator.applab_createHtmlBlock = function() {
     var idParam = Blockly.JavaScript.valueToCode(this, 'ID',
         Blockly.JavaScript.ORDER_NONE) || '';
     var htmlParam = Blockly.JavaScript.valueToCode(this, 'HTML',
         Blockly.JavaScript.ORDER_NONE) || '';
-    return 'Webapp.createHtmlBlock(\'block_id_' + this.id +
+    return 'Applab.createHtmlBlock(\'block_id_' + this.id +
                '\', ' + idParam + ', ' + htmlParam + ');\n';
   };
 }
