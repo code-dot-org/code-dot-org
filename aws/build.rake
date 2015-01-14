@@ -213,11 +213,25 @@ $websites_test = build_task('websites-test', [deploy_dir('rebuild')]) do
       HipChat.log 'Running <b>dashboard</b> UI tests...'
       failed_browser_count = RakeUtils.system_ 'bundle', 'exec', './runner.rb', '-d', 'test.learn.code.org', '-p', '10', '-a', '--html'
       if failed_browser_count == 0
-        HipChat.log 'UI tests for <b>dashboard</b> succeeded.'
-        HipChat.developers 'UI tests for <b>dashboard</b> succeeded.', color:'green'
+        message = 'UI tests for <b>dashboard</b> succeeded.'
+        HipChat.log message
+        HipChat.developers message, color:'green'
       else
-        HipChat.log "UI tests for <b>dashboard</b> failed on #{failed_browser_count} browser(s).", color:'red'
-        HipChat.developers "UI tests for <b>dashboard</b> failed on #{failed_browser_count} browser(s).", color:'red', notify:1
+        message = "UI tests for <b>dashboard</b> failed on #{failed_browser_count} browser(s)."
+        HipChat.log message, color:'red'
+        HipChat.developers message, color:'red', notify:1
+      end
+
+      HipChat.log 'Running <b>dashboard</b> UI visual tests...'
+      failed_browser_count = RakeUtils.system_ 'bundle', 'exec', './runner.rb', '-c', 'Chrome33Win7', '-d', 'test.learn.code.org', '--eyes'
+      if failed_browser_count == 0
+        message = 'Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
+        HipChat.log message
+        HipChat.developers message, color:'green'
+      else
+        message = 'Eyes tests for <b>dashboard</b> failed. See <a href="https://eyes.applitools.com/app/sessions/">the console</a> for results or to modify baselines.'
+        HipChat.log message, color:'red'
+        HipChat.developers message, color:'red', notify:1
       end
     end
   end
