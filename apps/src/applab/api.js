@@ -257,9 +257,9 @@ exports.setStyle = function (blockId, elementId, style) {
                            'style': style });
 };
 
-exports.attachEventHandler = function (blockId, elementId, eventName, func) {
+exports.onEvent = function (blockId, elementId, eventName, func) {
   return Applab.executeCmd(blockId,
-                          'attachEventHandler',
+                          'onEvent',
                           {'elementId': elementId,
                            'eventName': eventName,
                            'func': func });
