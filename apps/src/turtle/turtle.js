@@ -141,7 +141,6 @@ Artist.prototype.injectStudioApp = function (studioApp) {
   this.studioApp_.runButtonClick = _.bind(this.runButtonClick, this);
 
   this.studioApp_.setCheckForEmptyBlocks(true);
-  this.studioApp_.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 };
 
 /**
