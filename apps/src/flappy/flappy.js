@@ -62,7 +62,6 @@ var randomObstacleHeight = function () {
 };
 
 //The number of blocks to show as feedback.
-studioApp.requiredBlocksToFlagCount_ = 1;
 
 // Default Scalings
 Flappy.scale = {

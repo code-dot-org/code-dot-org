@@ -73,9 +73,6 @@ var getTile = function(map, x, y) {
   }
 };
 
-//The number of blocks to show as feedback.
-studioApp.requiredBlocksToFlagCount_ = 1;
-
 // Default Scalings
 Maze.scale = {
   'snapRadius': 1,

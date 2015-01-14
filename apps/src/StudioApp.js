@@ -99,7 +99,7 @@ var StudioApp = function () {
   * Set this to Infinity to show all.
   * @type {!number=}
   */
-  this.requiredBlocksToFlagCount_ = undefined;
+  this.requiredBlocksToFlagCount_ = 1;
 
   /**
   * The number of attempts (how many times the run button has been pressed)
