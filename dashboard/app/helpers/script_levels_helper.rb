@@ -97,6 +97,6 @@ module ScriptLevelsHelper
       script_data[:trophies] = {current: progress['current_trophies'], of: t(:of), max: progress['max_trophies']}
     end
 
-    script_data.to_json
+    script_data
   end
 end
