@@ -1,7 +1,7 @@
 /**
- * CodeOrgApp: Webapp
+ * CodeOrgApp: Applab
  *
- * Copyright 2014 Code.org
+ * Copyright 2014-2015 Code.org
  *
  */
 

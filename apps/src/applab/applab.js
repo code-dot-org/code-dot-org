@@ -1,7 +1,7 @@
 /**
- * CodeOrgApp: Webapp
+ * CodeOrgApp: Applab
  *
- * Copyright 2014 Code.org
+ * Copyright 2014-2015 Code.org
  *
  */
 
@@ -9,7 +9,7 @@
 
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('../../locale/current/common');
-var webappMsg = require('../../locale/current/webapp');
+var applabMsg = require('../../locale/current/applab');
 var skins = require('../skins');
 var codegen = require('../codegen');
 var api = require('./api');
@@ -31,7 +31,7 @@ var TestResults = studioApp.TestResults;
 /**
  * Create a namespace for the application.
  */
-var Webapp = module.exports;
+var Applab = module.exports;
 
 var level;
 var skin;
@@ -45,14 +45,14 @@ studioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 var MAX_INTERPRETER_STEPS_PER_TICK = 10000;
 
 // Default Scalings
-Webapp.scale = {
+Applab.scale = {
   'snapRadius': 1,
   'stepSpeed': 0
 };
 
 var twitterOptions = {
-  text: webappMsg.shareWebappTwitter(),
-  hashtag: "WebappCode"
+  text: applabMsg.shareApplabTwitter(),
+  hashtag: "ApplabCode"
 };
 
 var StepType = {
@@ -63,19 +63,19 @@ var StepType = {
 };
 
 function loadLevel() {
-  Webapp.timeoutFailureTick = level.timeoutFailureTick || Infinity;
-  Webapp.minWorkspaceHeight = level.minWorkspaceHeight;
-  Webapp.softButtons_ = level.softButtons || {};
+  Applab.timeoutFailureTick = level.timeoutFailureTick || Infinity;
+  Applab.minWorkspaceHeight = level.minWorkspaceHeight;
+  Applab.softButtons_ = level.softButtons || {};
 
   // Override scalars.
   for (var key in level.scale) {
-    Webapp.scale[key] = level.scale[key];
+    Applab.scale[key] = level.scale[key];
   }
 }
 
 var drawDiv = function () {
-  var divWebapp = document.getElementById('divWebapp');
-  var divWidth = parseInt(window.getComputedStyle(divWebapp).width, 10);
+  var divApplab = document.getElementById('divApplab');
+  var divWidth = parseInt(window.getComputedStyle(divApplab).width, 10);
 
   // TODO: one-time initial drawing
 
@@ -85,23 +85,23 @@ var drawDiv = function () {
 };
 
 function getCurrentTickLength() {
-  var stepSpeed = Webapp.scale.stepSpeed;
-  if (Webapp.speedSlider) {
-    stepSpeed = 300 * Math.pow(1 - Webapp.speedSlider.getValue(), 2);
+  var stepSpeed = Applab.scale.stepSpeed;
+  if (Applab.speedSlider) {
+    stepSpeed = 300 * Math.pow(1 - Applab.speedSlider.getValue(), 2);
   }
   return stepSpeed;
 }
 
 function queueOnTick() {
-  window.setTimeout(Webapp.onTick, getCurrentTickLength());
+  window.setTimeout(Applab.onTick, getCurrentTickLength());
 }
 
-function outputWebappConsole(output) {
+function outputApplabConsole(output) {
   // first pass through to the real browser console log if available:
   if (console.log) {
     console.log(output);
   }
-  // then put it in the webapp console visible to the user:
+  // then put it in the applab console visible to the user:
   var debugOutput = document.getElementById('debug-output');
   if (debugOutput.value.length > 0) {
     debugOutput.value += '\n' + output;
@@ -115,9 +115,9 @@ function onDebugInputKeyDown(e) {
   if (e.keyCode == KeyCodes.ENTER) {
     var input = e.target.textContent;
     e.target.textContent = '';
-    outputWebappConsole('> ' + input);
-    if (Webapp.interpreter) {
-      var currentScope = Webapp.interpreter.getScope();
+    outputApplabConsole('> ' + input);
+    if (Applab.interpreter) {
+      var currentScope = Applab.interpreter.getScope();
       var evalInterpreter = new window.Interpreter(input);
       // Set console scope to the current scope of the running program
 
@@ -132,13 +132,13 @@ function onDebugInputKeyDown(e) {
       }];
       try {
         evalInterpreter.run();
-        outputWebappConsole('< ' + String(evalInterpreter.value));
+        outputApplabConsole('< ' + String(evalInterpreter.value));
       }
       catch (err) {
-        outputWebappConsole('< ' + String(err));
+        outputApplabConsole('< ' + String(err));
       }
     } else {
-      outputWebappConsole('< (not running)');
+      outputApplabConsole('< (not running)');
     }
   }
 }
@@ -165,34 +165,34 @@ function handleExecutionError(err, lineNumber) {
   if (!lineNumber && err instanceof SyntaxError) {
     // syntax errors came before execution (during parsing), so we need
     // to determine the proper line number by looking at the exception
-    lineNumber = err.loc.line - Webapp.userCodeLineOffset;
+    lineNumber = err.loc.line - Applab.userCodeLineOffset;
     // Now select this location in the editor, since we know we didn't hit
     // this while executing (in which case, it would already have been selected)
     selectEditorRowCol(lineNumber - 1, err.loc.column);
   }
   if (lineNumber) {
-    outputWebappConsole('Line ' + lineNumber + ': ' + String(err));
+    outputApplabConsole('Line ' + lineNumber + ': ' + String(err));
   } else {
-    outputWebappConsole(String(err));
+    outputApplabConsole(String(err));
   }
-  Webapp.executionError = err;
-  Webapp.onPuzzleComplete();
+  Applab.executionError = err;
+  Applab.onPuzzleComplete();
 }
 
-Webapp.onTick = function() {
-  if (!Webapp.running) {
+Applab.onTick = function() {
+  if (!Applab.running) {
     return;
   }
 
-  Webapp.tickCount++;
+  Applab.tickCount++;
   queueOnTick();
 
-  var atInitialBreakpoint = Webapp.paused && Webapp.nextStep === StepType.IN && Webapp.tickCount === 1;
+  var atInitialBreakpoint = Applab.paused && Applab.nextStep === StepType.IN && Applab.tickCount === 1;
   var atMaxSpeed = getCurrentTickLength() === 0;
-  Webapp.seenEmptyGetCallbackThisTick = false;
+  Applab.seenEmptyGetCallbackThisTick = false;
 
-  if (Webapp.paused) {
-    switch (Webapp.nextStep) {
+  if (Applab.paused) {
+    switch (Applab.nextStep) {
       case StepType.RUN:
         // Bail out here if in a break state (paused), but make sure that we still
         // have the next tick queued first, so we can resume after un-pausing):
@@ -201,11 +201,11 @@ Webapp.onTick = function() {
         // If we haven't yet set stepOutToStackDepth, work backwards through the
         // history of callExpressionSeenAtDepth until we find the one we want to
         // step out to - and store that in stepOutToStackDepth:
-        if (Webapp.interpreter && typeof Webapp.stepOutToStackDepth === 'undefined') {
-          Webapp.stepOutToStackDepth = 0;
-          for (var i = Webapp.interpreter.stateStack.length - 1; i > 0; i--) {
-            if (Webapp.callExpressionSeenAtDepth[i]) {
-              Webapp.stepOutToStackDepth = i;
+        if (Applab.interpreter && typeof Applab.stepOutToStackDepth === 'undefined') {
+          Applab.stepOutToStackDepth = 0;
+          for (var i = Applab.interpreter.stateStack.length - 1; i > 0; i--) {
+            if (Applab.callExpressionSeenAtDepth[i]) {
+              Applab.stepOutToStackDepth = i;
               break;
             }
           }
@@ -214,7 +214,7 @@ Webapp.onTick = function() {
     }
   }
 
-  if (Webapp.interpreter) {
+  if (Applab.interpreter) {
     var doneUserLine = false;
     var reachedBreak = false;
     var unwindingAfterStep = false;
@@ -226,7 +226,7 @@ Webapp.onTick = function() {
     // function that also selects the code:
     var selectCodeFunc =
       (studioApp.hideSource ||
-       (atMaxSpeed && !Webapp.paused && studioApp.editor.currentlyUsingBlocks)) ?
+       (atMaxSpeed && !Applab.paused && studioApp.editor.currentlyUsingBlocks)) ?
             codegen.getUserCodeLine :
             codegen.selectCurrentCode;
 
@@ -238,17 +238,17 @@ Webapp.onTick = function() {
          stepsThisTick++) {
       if ((reachedBreak && !unwindingAfterStep) ||
           (doneUserLine && !atMaxSpeed) ||
-          Webapp.seenEmptyGetCallbackThisTick) {
+          Applab.seenEmptyGetCallbackThisTick) {
         // stop stepping the interpreter and wait until the next tick once we:
         // (1) reached a breakpoint and are done unwinding OR
         // (2) completed a line of user code (while not running atMaxSpeed) OR
         // (3) have seen an empty event queue in nativeGetCallback (no events)
         break;
       }
-      userCodeRow = selectCodeFunc(Webapp.interpreter,
-                                   Webapp.cumulativeLength,
-                                   Webapp.userCodeStartOffset,
-                                   Webapp.userCodeLength,
+      userCodeRow = selectCodeFunc(Applab.interpreter,
+                                   Applab.cumulativeLength,
+                                   Applab.userCodeStartOffset,
+                                   Applab.userCodeLength,
                                    studioApp.editor);
       inUserCode = (-1 !== userCodeRow);
       // Check to see if we've arrived at a new breakpoint:
@@ -260,66 +260,66 @@ Webapp.onTick = function() {
       //       we have already stopped from the last step/breakpoint
       if (inUserCode && !unwindingAfterStep &&
           (atInitialBreakpoint ||
-           (userCodeRow !== Webapp.stoppedAtBreakpointRow &&
+           (userCodeRow !== Applab.stoppedAtBreakpointRow &&
             codegen.isAceBreakpointRow(session, userCodeRow)))) {
         // Yes, arrived at a new breakpoint:
-        if (Webapp.paused) {
+        if (Applab.paused) {
           // Overwrite the nextStep value. (If we hit a breakpoint during a step
           // out or step over, this will cancel that step operation early)
-          Webapp.nextStep = StepType.RUN;
+          Applab.nextStep = StepType.RUN;
         } else {
-          Webapp.onPauseButton();
+          Applab.onPauseButton();
         }
         // Store some properties about where we stopped:
-        Webapp.stoppedAtBreakpointRow = userCodeRow;
-        Webapp.stoppedAtBreakpointStackDepth = Webapp.interpreter.stateStack.length;
+        Applab.stoppedAtBreakpointRow = userCodeRow;
+        Applab.stoppedAtBreakpointStackDepth = Applab.interpreter.stateStack.length;
 
         // Mark reachedBreak to stop stepping, and start unwinding if needed:
         reachedBreak = true;
-        unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(Webapp.interpreter);
+        unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(Applab.interpreter);
         continue;
       }
       // If we've moved past the place of the last breakpoint hit without being
       // deeper in the stack, we will discard the stoppedAtBreakpoint properties:
       if (inUserCode &&
-          userCodeRow !== Webapp.stoppedAtBreakpointRow &&
-          Webapp.interpreter.stateStack.length <= Webapp.stoppedAtBreakpointStackDepth) {
-        delete Webapp.stoppedAtBreakpointRow;
-        delete Webapp.stoppedAtBreakpointStackDepth;
+          userCodeRow !== Applab.stoppedAtBreakpointRow &&
+          Applab.interpreter.stateStack.length <= Applab.stoppedAtBreakpointStackDepth) {
+        delete Applab.stoppedAtBreakpointRow;
+        delete Applab.stoppedAtBreakpointStackDepth;
       }
       // If we're unwinding, continue to update the stoppedAtBreakpoint properties
       // to ensure that we have the right properties stored when the unwind completes:
       if (inUserCode && unwindingAfterStep) {
-        Webapp.stoppedAtBreakpointRow = userCodeRow;
-        Webapp.stoppedAtBreakpointStackDepth = Webapp.interpreter.stateStack.length;
+        Applab.stoppedAtBreakpointRow = userCodeRow;
+        Applab.stoppedAtBreakpointStackDepth = Applab.interpreter.stateStack.length;
       }
       try {
-        Webapp.interpreter.step();
+        Applab.interpreter.step();
         doneUserLine = doneUserLine ||
-          (inUserCode && Webapp.interpreter.stateStack[0] && Webapp.interpreter.stateStack[0].done);
+          (inUserCode && Applab.interpreter.stateStack[0] && Applab.interpreter.stateStack[0].done);
 
         // Remember the stack depths of call expressions (so we can implement 'step out')
 
         // Truncate any history of call expressions seen deeper than our current stack position:
-        Webapp.callExpressionSeenAtDepth.length = Webapp.interpreter.stateStack.length + 1;
+        Applab.callExpressionSeenAtDepth.length = Applab.interpreter.stateStack.length + 1;
 
-        if (inUserCode && Webapp.interpreter.stateStack[0].node.type === "CallExpression") {
+        if (inUserCode && Applab.interpreter.stateStack[0].node.type === "CallExpression") {
           // Store that we've seen a call expression at this depth in callExpressionSeenAtDepth:
-          Webapp.callExpressionSeenAtDepth[Webapp.interpreter.stateStack.length] = true;
+          Applab.callExpressionSeenAtDepth[Applab.interpreter.stateStack.length] = true;
         }
 
-        if (Webapp.paused) {
+        if (Applab.paused) {
           // Store the first call expression stack depth seen while in this step operation:
-          if (inUserCode && Webapp.interpreter.stateStack[0].node.type === "CallExpression") {
-            if (typeof Webapp.firstCallStackDepthThisStep === 'undefined') {
-              Webapp.firstCallStackDepthThisStep = Webapp.interpreter.stateStack.length;
+          if (inUserCode && Applab.interpreter.stateStack[0].node.type === "CallExpression") {
+            if (typeof Applab.firstCallStackDepthThisStep === 'undefined') {
+              Applab.firstCallStackDepthThisStep = Applab.interpreter.stateStack.length;
             }
           }
           // For the step in case, we want to stop the interpreter as soon as we enter the callee:
           if (!doneUserLine &&
               inUserCode &&
-              Webapp.nextStep === StepType.IN &&
-              Webapp.interpreter.stateStack.length > Webapp.firstCallStackDepthThisStep) {
+              Applab.nextStep === StepType.IN &&
+              Applab.interpreter.stateStack.length > Applab.firstCallStackDepthThisStep) {
             reachedBreak = true;
           }
           // After the interpreter says a node is "done" (meaning it is time to stop), we will
@@ -328,13 +328,13 @@ Webapp.onTick = function() {
           if (doneUserLine || reachedBreak) {
             var wasUnwinding = unwindingAfterStep;
             // step() additional times if we know it to be safe to get us to the next statement:
-            unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(Webapp.interpreter);
+            unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(Applab.interpreter);
             if (wasUnwinding && !unwindingAfterStep) {
               // done unwinding.. select code that is next to execute:
-              userCodeRow = selectCodeFunc(Webapp.interpreter,
-                                           Webapp.cumulativeLength,
-                                           Webapp.userCodeStartOffset,
-                                           Webapp.userCodeLength,
+              userCodeRow = selectCodeFunc(Applab.interpreter,
+                                           Applab.cumulativeLength,
+                                           Applab.userCodeStartOffset,
+                                           Applab.userCodeLength,
                                            studioApp.editor);
               inUserCode = (-1 !== userCodeRow);
               if (!inUserCode) {
@@ -345,24 +345,24 @@ Webapp.onTick = function() {
           }
 
           if ((reachedBreak || doneUserLine) && !unwindingAfterStep) {
-            if (Webapp.nextStep === StepType.OUT &&
-                Webapp.interpreter.stateStack.length > Webapp.stepOutToStackDepth) {
+            if (Applab.nextStep === StepType.OUT &&
+                Applab.interpreter.stateStack.length > Applab.stepOutToStackDepth) {
               // trying to step out, but we didn't get out yet... continue on.
-            } else if (Webapp.nextStep === StepType.OVER &&
-                typeof Webapp.firstCallStackDepthThisStep !== 'undefined' &&
-                Webapp.interpreter.stateStack.length > Webapp.firstCallStackDepthThisStep) {
+            } else if (Applab.nextStep === StepType.OVER &&
+                typeof Applab.firstCallStackDepthThisStep !== 'undefined' &&
+                Applab.interpreter.stateStack.length > Applab.firstCallStackDepthThisStep) {
               // trying to step over, and we're in deeper inside a function call... continue next onTick
             } else {
               // Our step operation is complete, reset nextStep to StepType.RUN to
               // return to a normal 'break' state:
-              Webapp.nextStep = StepType.RUN;
+              Applab.nextStep = StepType.RUN;
               if (inUserCode) {
                 // Store some properties about where we stopped:
-                Webapp.stoppedAtBreakpointRow = userCodeRow;
-                Webapp.stoppedAtBreakpointStackDepth = Webapp.interpreter.stateStack.length;
+                Applab.stoppedAtBreakpointRow = userCodeRow;
+                Applab.stoppedAtBreakpointStackDepth = Applab.interpreter.stateStack.length;
               }
-              delete Webapp.stepOutToStackDepth;
-              delete Webapp.firstCallStackDepthThisStep;
+              delete Applab.stepOutToStackDepth;
+              delete Applab.firstCallStackDepthThisStep;
               document.getElementById('spinner').style.visibility = 'hidden';
               break;
             }
@@ -377,44 +377,44 @@ Webapp.onTick = function() {
     if (reachedBreak && atMaxSpeed) {
       // If we were running atMaxSpeed and just reached a breakpoint, the
       // code may not be selected in the editor, so do it now:
-      codegen.selectCurrentCode(Webapp.interpreter,
-                                Webapp.cumulativeLength,
-                                Webapp.userCodeStartOffset,
-                                Webapp.userCodeLength,
+      codegen.selectCurrentCode(Applab.interpreter,
+                                Applab.cumulativeLength,
+                                Applab.userCodeStartOffset,
+                                Applab.userCodeLength,
                                 studioApp.editor);
     }
   } else {
-    if (Webapp.tickCount === 1) {
-      try { Webapp.whenRunFunc(studioApp, api, Webapp.Globals); } catch (e) { }
+    if (Applab.tickCount === 1) {
+      try { Applab.whenRunFunc(studioApp, api, Applab.Globals); } catch (e) { }
     }
   }
 
   if (checkFinished()) {
-    Webapp.onPuzzleComplete();
+    Applab.onPuzzleComplete();
   }
 };
 
 /**
- * Initialize Blockly and Webapp for read-only (blocks feedback).
+ * Initialize Blockly and Applab for read-only (blocks feedback).
  * Called on iframe load for read-only.
  */
-Webapp.initReadonly = function(config) {
+Applab.initReadonly = function(config) {
   // Do some minimal level loading so that
   // we can ensure that the blocks are appropriately modified for this level
   skin = config.skin;
   level = config.level;
   loadLevel();
 
-  // Webapp.initMinimal();
+  // Applab.initMinimal();
 
   studioApp.initReadonly(config);
 };
 
 /**
- * Initialize Blockly and the Webapp app.  Called on page load.
+ * Initialize Blockly and the Applab app.  Called on page load.
  */
-Webapp.init = function(config) {
-  Webapp.clearEventHandlersKillTickLoop();
+Applab.init = function(config) {
+  Applab.clearEventHandlersKillTickLoop();
   skin = config.skin;
   level = config.level;
 
@@ -425,7 +425,7 @@ Webapp.init = function(config) {
     config.level.sliderSpeed = 1.0;
   }
 
-  Webapp.canvasScale = (window.devicePixelRatio > 1) ? window.devicePixelRatio : 1;
+  Applab.canvasScale = (window.devicePixelRatio > 1) ? window.devicePixelRatio : 1;
 
   var showSlider = !config.hideSource && config.level.editCode;
   var showDebugButtons = !config.hideSource && config.level.editCode;
@@ -473,7 +473,7 @@ Webapp.init = function(config) {
        */
       Blockly.HSV_SATURATION = 0.6;
 
-      Blockly.SNAP_RADIUS *= Webapp.scale.snapRadius;
+      Blockly.SNAP_RADIUS *= Applab.scale.snapRadius;
     } else {
       // Set up an event handler to create breakpoints when clicking in the
       // ace gutter:
@@ -508,19 +508,19 @@ Webapp.init = function(config) {
   config.varsInGlobals = true;
   config.noButtonsBelowOnMobileShare = true;
 
-  // Webapp.initMinimal();
+  // Applab.initMinimal();
 
   studioApp.init(config);
 
   if (level.editCode) {
     // Initialize the slider.
-    var slider = document.getElementById('webapp-slider');
+    var slider = document.getElementById('applab-slider');
     if (slider) {
-      Webapp.speedSlider = new Slider(10, 35, 130, slider);
+      Applab.speedSlider = new Slider(10, 35, 130, slider);
 
       // Change default speed (eg Speed up levels that have lots of steps).
       if (config.level.sliderSpeed) {
-        Webapp.speedSlider.setValue(config.level.sliderSpeed);
+        Applab.speedSlider.setValue(config.level.sliderSpeed);
       }
     }
     var debugInput = document.getElementById('debug-input');
@@ -530,7 +530,7 @@ Webapp.init = function(config) {
   }
 
   var finishButton = document.getElementById('finishButton');
-  dom.addClickTouchEvent(finishButton, Webapp.onPuzzleComplete);
+  dom.addClickTouchEvent(finishButton, Applab.onPuzzleComplete);
 
   if (level.editCode) {
     var pauseButton = document.getElementById('pauseButton');
@@ -538,14 +538,14 @@ Webapp.init = function(config) {
     var stepOverButton = document.getElementById('stepOverButton');
     var stepOutButton = document.getElementById('stepOutButton');
     if (pauseButton && stepInButton && stepOverButton && stepOutButton) {
-      dom.addClickTouchEvent(pauseButton, Webapp.onPauseButton);
-      dom.addClickTouchEvent(stepInButton, Webapp.onStepInButton);
-      dom.addClickTouchEvent(stepOverButton, Webapp.onStepOverButton);
-      dom.addClickTouchEvent(stepOutButton, Webapp.onStepOutButton);
+      dom.addClickTouchEvent(pauseButton, Applab.onPauseButton);
+      dom.addClickTouchEvent(stepInButton, Applab.onStepInButton);
+      dom.addClickTouchEvent(stepOverButton, Applab.onStepOverButton);
+      dom.addClickTouchEvent(stepOutButton, Applab.onStepOutButton);
     }
     var viewDataButton = document.getElementById('viewDataButton');
     if (viewDataButton) {
-      dom.addClickTouchEvent(viewDataButton, Webapp.onViewData);
+      dom.addClickTouchEvent(viewDataButton, Applab.onViewData);
     }
   }
 
@@ -558,10 +558,10 @@ Webapp.init = function(config) {
 /**
  * Clear the event handlers and stop the onTick timer.
  */
-Webapp.clearEventHandlersKillTickLoop = function() {
-  Webapp.whenRunFunc = null;
-  Webapp.running = false;
-  Webapp.tickCount = 0;
+Applab.clearEventHandlersKillTickLoop = function() {
+  Applab.whenRunFunc = null;
+  Applab.running = false;
+  Applab.tickCount = 0;
 
   var spinner = document.getElementById('spinner');
   if (spinner) {
@@ -573,7 +573,7 @@ Webapp.clearEventHandlersKillTickLoop = function() {
   var stepOverButton = document.getElementById('stepOverButton');
   var stepOutButton = document.getElementById('stepOutButton');
   if (pauseButton && stepInButton && stepOverButton && stepOutButton) {
-    pauseButton.textContent = webappMsg.pause();
+    pauseButton.textContent = applabMsg.pause();
     pauseButton.disabled = true;
     stepInButton.disabled = true;
     stepOverButton.disabled = true;
@@ -587,12 +587,12 @@ Webapp.clearEventHandlersKillTickLoop = function() {
  */
 studioApp.reset = function(first) {
   var i;
-  Webapp.clearEventHandlersKillTickLoop();
+  Applab.clearEventHandlersKillTickLoop();
 
   // Soft buttons
   var softButtonCount = 0;
-  for (i = 0; i < Webapp.softButtons_.length; i++) {
-    document.getElementById(Webapp.softButtons_[i]).style.display = 'inline';
+  for (i = 0; i < Applab.softButtons_.length; i++) {
+    document.getElementById(Applab.softButtons_[i]).style.display = 'inline';
     softButtonCount++;
   }
   if (softButtonCount) {
@@ -601,15 +601,15 @@ studioApp.reset = function(first) {
   }
 
   // Reset configurable variables
-  var divWebapp = document.getElementById('divWebapp');
+  var divApplab = document.getElementById('divApplab');
 
-  while (divWebapp.firstChild) {
-    divWebapp.removeChild(divWebapp.firstChild);
+  while (divApplab.firstChild) {
+    divApplab.removeChild(divApplab.firstChild);
   }
 
-  // Clone and replace divWebapp (this removes all attached event listeners):
-  var newDivWebapp = divWebapp.cloneNode(true);
-  divWebapp.parentNode.replaceChild(newDivWebapp, divWebapp);
+  // Clone and replace divApplab (this removes all attached event listeners):
+  var newDivApplab = divApplab.cloneNode(true);
+  divApplab.parentNode.replaceChild(newDivApplab, divApplab);
 
   // Reset goal successState:
   if (level.goal) {
@@ -617,20 +617,20 @@ studioApp.reset = function(first) {
   }
 
   if (level.editCode) {
-    Webapp.paused = false;
-    Webapp.nextStep = StepType.RUN;
-    delete Webapp.stepOutToStackDepth;
-    delete Webapp.firstCallStackDepthThisStep;
-    delete Webapp.stoppedAtBreakpointRow;
-    delete Webapp.stoppedAtBreakpointStackDepth;
-    Webapp.callExpressionSeenAtDepth = [];
+    Applab.paused = false;
+    Applab.nextStep = StepType.RUN;
+    delete Applab.stepOutToStackDepth;
+    delete Applab.firstCallStackDepthThisStep;
+    delete Applab.stoppedAtBreakpointRow;
+    delete Applab.stoppedAtBreakpointStackDepth;
+    Applab.callExpressionSeenAtDepth = [];
     // Reset the pause button:
     var pauseButton = document.getElementById('pauseButton');
     var stepInButton = document.getElementById('stepInButton');
     var stepOverButton = document.getElementById('stepOverButton');
     var stepOutButton = document.getElementById('stepOutButton');
     if (pauseButton && stepInButton && stepOverButton && stepOutButton) {
-      pauseButton.textContent = webappMsg.pause();
+      pauseButton.textContent = applabMsg.pause();
       pauseButton.disabled = true;
       stepInButton.disabled = false;
       stepOverButton.disabled = true;
@@ -651,10 +651,10 @@ studioApp.reset = function(first) {
   }
 
   // Reset the Globals object used to contain program variables:
-  Webapp.Globals = {};
-  Webapp.eventQueue = [];
-  Webapp.executionError = null;
-  Webapp.interpreter = null;
+  Applab.Globals = {};
+  Applab.eventQueue = [];
+  Applab.executionError = null;
+  Applab.interpreter = null;
 };
 
 /**
@@ -674,7 +674,7 @@ studioApp.runButtonClick = function() {
   }
   studioApp.reset(false);
   studioApp.attempts++;
-  Webapp.execute();
+  Applab.execute();
 
   if (level.freePlay && !studioApp.hideSource) {
     var shareCell = document.getElementById('share-cell');
@@ -687,21 +687,21 @@ studioApp.runButtonClick = function() {
  * studioApp.displayFeedback when appropriate
  */
 var displayFeedback = function() {
-  if (!Webapp.waitingForReport) {
+  if (!Applab.waitingForReport) {
     studioApp.displayFeedback({
-      app: 'webapp', //XXX
+      app: 'applab', //XXX
       skin: skin.id,
-      feedbackType: Webapp.testResults,
-      response: Webapp.response,
+      feedbackType: Applab.testResults,
+      response: Applab.response,
       level: level,
       showingSharing: level.freePlay,
-      feedbackImage: Webapp.feedbackImage,
+      feedbackImage: Applab.feedbackImage,
       twitter: twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
-      saveToGalleryUrl: level.freePlay && Webapp.response && Webapp.response.save_to_gallery_url,
+      saveToGalleryUrl: level.freePlay && Applab.response && Applab.response.save_to_gallery_url,
       appStrings: {
-        reinfFeedbackMsg: webappMsg.reinfFeedbackMsg(),
-        sharingText: webappMsg.shareGame()
+        reinfFeedbackMsg: applabMsg.reinfFeedbackMsg(),
+        sharingText: applabMsg.shareGame()
       }
     });
   }
@@ -711,9 +711,9 @@ var displayFeedback = function() {
  * Function to be called when the service report call is complete
  * @param {object} JSON response (if available)
  */
-Webapp.onReportComplete = function(response) {
-  Webapp.response = response;
-  Webapp.waitingForReport = false;
+Applab.onReportComplete = function(response) {
+  Applab.response = response;
+  Applab.waitingForReport = false;
   displayFeedback();
 };
 
@@ -730,7 +730,7 @@ var defineProcedures = function (blockType) {
                          codeFunctions: level.codeFunctions,
                          studioApp: studioApp,
                          Studio: api,
-                         Globals: Webapp.Globals } ); } catch (e) { }
+                         Globals: Applab.Globals } ); } catch (e) { }
 };
 
 /**
@@ -741,9 +741,9 @@ var defineProcedures = function (blockType) {
  * optionally, callback arguments (stored in "arguments")
  */
 var nativeGetCallback = function () {
-  var retVal = Webapp.eventQueue.shift();
+  var retVal = Applab.eventQueue.shift();
   if (typeof retVal === "undefined") {
-    Webapp.seenEmptyGetCallbackThisTick = true;
+    Applab.seenEmptyGetCallbackThisTick = true;
   }
   return retVal;
 };
@@ -753,7 +753,7 @@ var consoleApi = {};
 consoleApi.log = function() {
   var nativeArgs = [];
   for (var i = 0; i < arguments.length; i++) {
-    nativeArgs[i] = codegen.marshalInterpreterToNative(Webapp.interpreter,
+    nativeArgs[i] = codegen.marshalInterpreterToNative(Applab.interpreter,
                                                        arguments[i]);
   }
   var output = '';
@@ -768,7 +768,7 @@ consoleApi.log = function() {
       }
     }
   }
-  outputWebappConsole(output);
+  outputApplabConsole(output);
 };
 
 var JSONApi = {};
@@ -799,11 +799,11 @@ var mathFunctions = [
 /**
  * Execute the app
  */
-Webapp.execute = function() {
-  Webapp.result = ResultType.UNSET;
-  Webapp.testResults = TestResults.NO_TESTS_RUN;
-  Webapp.waitingForReport = false;
-  Webapp.response = null;
+Applab.execute = function() {
+  Applab.result = ResultType.UNSET;
+  Applab.testResults = TestResults.NO_TESTS_RUN;
+  Applab.waitingForReport = false;
+  Applab.response = null;
   var i;
 
   studioApp.playAudio('start');
@@ -814,21 +814,21 @@ Webapp.execute = function() {
 
   var codeWhenRun;
   if (level.editCode) {
-    codeWhenRun = utils.generateCodeAliases(level.codeFunctions, 'Webapp');
+    codeWhenRun = utils.generateCodeAliases(level.codeFunctions, 'Applab');
     codeWhenRun += utils.generateCodeAliases(mathFunctions, 'Math');
-    Webapp.userCodeStartOffset = codeWhenRun.length;
-    Webapp.userCodeLineOffset = codeWhenRun.split("\n").length - 1;
+    Applab.userCodeStartOffset = codeWhenRun.length;
+    Applab.userCodeLineOffset = codeWhenRun.split("\n").length - 1;
     codeWhenRun += studioApp.editor.getValue();
-    Webapp.userCodeLength = codeWhenRun.length - Webapp.userCodeStartOffset;
+    Applab.userCodeLength = codeWhenRun.length - Applab.userCodeStartOffset;
     // Append our mini-runtime after the user's code. This will spin and process
     // callback functions:
     codeWhenRun += '\nwhile (true) { var obj = getCallback(); ' +
       'if (obj) { obj.fn.apply(null, obj.arguments ? obj.arguments : null); }}';
     var session = studioApp.editor.aceEditor.getSession();
-    Webapp.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
+    Applab.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
   } else {
     // Define any top-level procedures the user may have created
-    // (must be after reset(), which resets the Webapp.Globals namespace)
+    // (must be after reset(), which resets the Applab.Globals namespace)
     defineProcedures('procedures_defreturn');
     defineProcedures('procedures_defnoreturn');
 
@@ -847,10 +847,10 @@ Webapp.execute = function() {
       var initFunc = function(interpreter, scope) {
         codegen.initJSInterpreter(interpreter, scope, {
                                           StudioApp: studioApp,
-                                          Webapp: api,
+                                          Applab: api,
                                           console: consoleApi,
                                           JSON: JSONApi,
-                                          Globals: Webapp.Globals });
+                                          Globals: Applab.Globals });
 
         var getCallbackObj = interpreter.createObject(interpreter.FUNCTION);
         // Only allow five levels of depth when marshalling the return value
@@ -865,16 +865,16 @@ Webapp.execute = function() {
                                 interpreter.createNativeFunction(wrapper));
       };
       try {
-        Webapp.interpreter = new window.Interpreter(codeWhenRun, initFunc);
+        Applab.interpreter = new window.Interpreter(codeWhenRun, initFunc);
       }
       catch(err) {
         handleExecutionError(err);
       }
     } else {
-      Webapp.whenRunFunc = codegen.functionFromCode(codeWhenRun, {
+      Applab.whenRunFunc = codegen.functionFromCode(codeWhenRun, {
                                           StudioApp: studioApp,
-                                          Webapp: api,
-                                          Globals: Webapp.Globals } );
+                                          Applab: api,
+                                          Globals: Applab.Globals } );
     }
   }
 
@@ -895,88 +895,88 @@ Webapp.execute = function() {
     }
   }
 
-  Webapp.running = true;
+  Applab.running = true;
   queueOnTick();
 };
 
-Webapp.onPauseButton = function() {
-  if (Webapp.running) {
+Applab.onPauseButton = function() {
+  if (Applab.running) {
     var pauseButton = document.getElementById('pauseButton');
     var stepInButton = document.getElementById('stepInButton');
     var stepOverButton = document.getElementById('stepOverButton');
     var stepOutButton = document.getElementById('stepOutButton');
     // We have code and are either running or paused
-    if (Webapp.paused) {
-      Webapp.paused = false;
-      Webapp.nextStep = StepType.RUN;
-      pauseButton.textContent = webappMsg.pause();
+    if (Applab.paused) {
+      Applab.paused = false;
+      Applab.nextStep = StepType.RUN;
+      pauseButton.textContent = applabMsg.pause();
     } else {
-      Webapp.paused = true;
-      Webapp.nextStep = StepType.RUN;
-      pauseButton.textContent = webappMsg.continue();
+      Applab.paused = true;
+      Applab.nextStep = StepType.RUN;
+      pauseButton.textContent = applabMsg.continue();
     }
-    stepInButton.disabled = !Webapp.paused;
-    stepOverButton.disabled = !Webapp.paused;
-    stepOutButton.disabled = !Webapp.paused;
+    stepInButton.disabled = !Applab.paused;
+    stepOverButton.disabled = !Applab.paused;
+    stepOutButton.disabled = !Applab.paused;
     document.getElementById('spinner').style.visibility =
-        Webapp.paused ? 'hidden' : 'visible';
+        Applab.paused ? 'hidden' : 'visible';
   }
 };
 
-Webapp.onStepOverButton = function() {
-  if (Webapp.running) {
-    Webapp.paused = true;
-    Webapp.nextStep = StepType.OVER;
+Applab.onStepOverButton = function() {
+  if (Applab.running) {
+    Applab.paused = true;
+    Applab.nextStep = StepType.OVER;
     document.getElementById('spinner').style.visibility = 'visible';
   }
 };
 
-Webapp.onStepInButton = function() {
-  if (!Webapp.running) {
+Applab.onStepInButton = function() {
+  if (!Applab.running) {
     studioApp.runButtonClick();
-    Webapp.onPauseButton();
+    Applab.onPauseButton();
   }
-  Webapp.paused = true;
-  Webapp.nextStep = StepType.IN;
+  Applab.paused = true;
+  Applab.nextStep = StepType.IN;
   document.getElementById('spinner').style.visibility = 'visible';
 };
 
-Webapp.onStepOutButton = function() {
-  if (Webapp.running) {
-    Webapp.paused = true;
-    Webapp.nextStep = StepType.OUT;
+Applab.onStepOutButton = function() {
+  if (Applab.running) {
+    Applab.paused = true;
+    Applab.nextStep = StepType.OUT;
     document.getElementById('spinner').style.visibility = 'visible';
   }
 };
 
-Webapp.feedbackImage = '';
-Webapp.encodedFeedbackImage = '';
+Applab.feedbackImage = '';
+Applab.encodedFeedbackImage = '';
 
-Webapp.onViewData = function() {
+Applab.onViewData = function() {
   window.open(
     '//' + getPegasusHost() + '/edit-csp-app/' + FormStorage.getAppSecret(),
     '_blank');
 };
 
-Webapp.onPuzzleComplete = function() {
-  if (Webapp.executionError) {
-    Webapp.result = ResultType.ERROR;
+Applab.onPuzzleComplete = function() {
+  if (Applab.executionError) {
+    Applab.result = ResultType.ERROR;
   } else if (level.freePlay) {
-    Webapp.result = ResultType.SUCCESS;
+    Applab.result = ResultType.SUCCESS;
   }
 
   // Stop everything on screen
-  Webapp.clearEventHandlersKillTickLoop();
+  Applab.clearEventHandlersKillTickLoop();
 
   // If the current level is a free play, always return the free play result
   if (level.freePlay) {
-    Webapp.testResults = TestResults.FREE_PLAY;
+    Applab.testResults = TestResults.FREE_PLAY;
   } else {
-    var levelComplete = (Webapp.result === ResultType.SUCCESS);
-    Webapp.testResults = studioApp.getTestResults(levelComplete);
+    var levelComplete = (Applab.result === ResultType.SUCCESS);
+    Applab.testResults = studioApp.getTestResults(levelComplete);
   }
 
-  if (Webapp.testResults >= TestResults.FREE_PLAY) {
+  if (Applab.testResults >= TestResults.FREE_PLAY) {
     studioApp.playAudio('win');
   } else {
     studioApp.playAudio('failure');
@@ -997,27 +997,27 @@ Webapp.onPuzzleComplete = function() {
     program = Blockly.Xml.domToText(xml);
   }
 
-  Webapp.waitingForReport = true;
+  Applab.waitingForReport = true;
 
   var sendReport = function() {
     studioApp.report({
-      app: 'webapp',
+      app: 'applab',
       level: level.id,
-      result: Webapp.result === ResultType.SUCCESS,
-      testResult: Webapp.testResults,
+      result: Applab.result === ResultType.SUCCESS,
+      testResult: Applab.testResults,
       program: encodeURIComponent(program),
-      image: Webapp.encodedFeedbackImage,
-      onComplete: Webapp.onReportComplete
+      image: Applab.encodedFeedbackImage,
+      onComplete: Applab.onReportComplete
     });
   };
 
-  if (typeof document.getElementById('divWebapp').toDataURL === 'undefined') { // don't try it if function is not defined
+  if (typeof document.getElementById('divApplab').toDataURL === 'undefined') { // don't try it if function is not defined
     sendReport();
   } else {
-    document.getElementById('divWebapp').toDataURL("image/png", {
+    document.getElementById('divApplab').toDataURL("image/png", {
       callback: function(pngDataUrl) {
-        Webapp.feedbackImage = pngDataUrl;
-        Webapp.encodedFeedbackImage = encodeURIComponent(Webapp.feedbackImage.split(',')[1]);
+        Applab.feedbackImage = pngDataUrl;
+        Applab.encodedFeedbackImage = encodeURIComponent(Applab.feedbackImage.split(',')[1]);
 
         sendReport();
       }
@@ -1025,13 +1025,13 @@ Webapp.onPuzzleComplete = function() {
   }
 };
 
-Webapp.executeCmd = function (id, name, opts) {
+Applab.executeCmd = function (id, name, opts) {
   var cmd = {
     'id': id,
     'name': name,
     'opts': opts
   };
-  return Webapp.callCmd(cmd);
+  return Applab.callCmd(cmd);
 };
 
 //
@@ -1043,7 +1043,7 @@ Webapp.executeCmd = function (id, name, opts) {
 // Return true if the command is complete
 //
 
-Webapp.callCmd = function (cmd) {
+Applab.callCmd = function (cmd) {
   var retVal = true;
   switch (cmd.name) {
     /*
@@ -1093,45 +1093,45 @@ Webapp.callCmd = function (cmd) {
     case 'createRecord':
     case 'readRecords':
       studioApp.highlight(cmd.id);
-      retVal = Webapp[cmd.name](cmd.opts);
+      retVal = Applab[cmd.name](cmd.opts);
       break;
   }
   return retVal;
 };
 
-Webapp.createHtmlBlock = function (opts) {
-  var divWebapp = document.getElementById('divWebapp');
+Applab.createHtmlBlock = function (opts) {
+  var divApplab = document.getElementById('divApplab');
 
   var newDiv = document.createElement("div");
   newDiv.id = opts.elementId;
   newDiv.innerHTML = opts.html;
 
-  return Boolean(divWebapp.appendChild(newDiv));
+  return Boolean(divApplab.appendChild(newDiv));
 };
 
-Webapp.createButton = function (opts) {
-  var divWebapp = document.getElementById('divWebapp');
+Applab.createButton = function (opts) {
+  var divApplab = document.getElementById('divApplab');
 
   var newButton = document.createElement("button");
   var textNode = document.createTextNode(opts.text);
   newButton.id = opts.elementId;
 
   return Boolean(newButton.appendChild(textNode) &&
-                 divWebapp.appendChild(newButton));
+                 divApplab.appendChild(newButton));
 };
 
-Webapp.createImage = function (opts) {
-  var divWebapp = document.getElementById('divWebapp');
+Applab.createImage = function (opts) {
+  var divApplab = document.getElementById('divApplab');
 
   var newImage = document.createElement("img");
   newImage.src = opts.src;
   newImage.id = opts.elementId;
 
-  return Boolean(divWebapp.appendChild(newImage));
+  return Boolean(divApplab.appendChild(newImage));
 };
 
-Webapp.createImageUploadButton = function (opts) {
-  var divWebapp = document.getElementById('divWebapp');
+Applab.createImageUploadButton = function (opts) {
+  var divApplab = document.getElementById('divApplab');
 
   // To avoid showing the ugly fileupload input element, we create a label
   // element with an img-upload class that will ensure it looks like a button
@@ -1151,11 +1151,11 @@ Webapp.createImageUploadButton = function (opts) {
 
   return Boolean(newLabel.appendChild(newInput) &&
                  newLabel.appendChild(textNode) &&
-                 divWebapp.appendChild(newLabel));
+                 divApplab.appendChild(newLabel));
 };
 
-Webapp.createCanvas = function (opts) {
-  var divWebapp = document.getElementById('divWebapp');
+Applab.createCanvas = function (opts) {
+  var divApplab = document.getElementById('divApplab');
 
   var newElement = document.createElement("canvas");
   var ctx = newElement.getContext("2d");
@@ -1164,41 +1164,41 @@ Webapp.createCanvas = function (opts) {
     // default width/height if params are missing
     var width = opts.width || 400;
     var height = opts.height || 600;
-    newElement.width = width * Webapp.canvasScale;
-    newElement.height = height * Webapp.canvasScale;
+    newElement.width = width * Applab.canvasScale;
+    newElement.height = height * Applab.canvasScale;
     newElement.style.width = width + 'px';
     newElement.style.height = height + 'px';
     // set transparent fill by default:
     ctx.fillStyle = "rgba(255, 255, 255, 0)";
 
-    return Boolean(divWebapp.appendChild(newElement));
+    return Boolean(divApplab.appendChild(newElement));
   }
   return false;
 };
 
-Webapp.canvasDrawLine = function (opts) {
-  var divWebapp = document.getElementById('divWebapp');
+Applab.canvasDrawLine = function (opts) {
+  var divApplab = document.getElementById('divApplab');
   var canvas = document.getElementById(opts.elementId);
   var ctx = canvas.getContext("2d");
-  if (ctx && divWebapp.contains(canvas)) {
+  if (ctx && divApplab.contains(canvas)) {
     ctx.beginPath();
-    ctx.moveTo(opts.x1 * Webapp.canvasScale, opts.y1 * Webapp.canvasScale);
-    ctx.lineTo(opts.x2 * Webapp.canvasScale, opts.y2 * Webapp.canvasScale);
+    ctx.moveTo(opts.x1 * Applab.canvasScale, opts.y1 * Applab.canvasScale);
+    ctx.lineTo(opts.x2 * Applab.canvasScale, opts.y2 * Applab.canvasScale);
     ctx.stroke();
     return true;
   }
   return false;
 };
 
-Webapp.canvasDrawCircle = function (opts) {
-  var divWebapp = document.getElementById('divWebapp');
+Applab.canvasDrawCircle = function (opts) {
+  var divApplab = document.getElementById('divApplab');
   var canvas = document.getElementById(opts.elementId);
   var ctx = canvas.getContext("2d");
-  if (ctx && divWebapp.contains(canvas)) {
+  if (ctx && divApplab.contains(canvas)) {
     ctx.beginPath();
-    ctx.arc(opts.x * Webapp.canvasScale,
-            opts.y * Webapp.canvasScale,
-            opts.radius * Webapp.canvasScale,
+    ctx.arc(opts.x * Applab.canvasScale,
+            opts.y * Applab.canvasScale,
+            opts.radius * Applab.canvasScale,
             0,
             2 * Math.PI);
     ctx.fill();
@@ -1208,16 +1208,16 @@ Webapp.canvasDrawCircle = function (opts) {
   return false;
 };
 
-Webapp.canvasDrawRect = function (opts) {
-  var divWebapp = document.getElementById('divWebapp');
+Applab.canvasDrawRect = function (opts) {
+  var divApplab = document.getElementById('divApplab');
   var canvas = document.getElementById(opts.elementId);
   var ctx = canvas.getContext("2d");
-  if (ctx && divWebapp.contains(canvas)) {
+  if (ctx && divApplab.contains(canvas)) {
     ctx.beginPath();
-    ctx.rect(opts.x * Webapp.canvasScale,
-             opts.y * Webapp.canvasScale,
-             opts.width * Webapp.canvasScale,
-             opts.height * Webapp.canvasScale);
+    ctx.rect(opts.x * Applab.canvasScale,
+             opts.y * Applab.canvasScale,
+             opts.width * Applab.canvasScale,
+             opts.height * Applab.canvasScale);
     ctx.fill();
     ctx.stroke();
     return true;
@@ -1225,58 +1225,58 @@ Webapp.canvasDrawRect = function (opts) {
   return false;
 };
 
-Webapp.canvasSetLineWidth = function (opts) {
-  var divWebapp = document.getElementById('divWebapp');
+Applab.canvasSetLineWidth = function (opts) {
+  var divApplab = document.getElementById('divApplab');
   var canvas = document.getElementById(opts.elementId);
   var ctx = canvas.getContext("2d");
-  if (ctx && divWebapp.contains(canvas)) {
-    ctx.lineWidth = opts.width * Webapp.canvasScale;
+  if (ctx && divApplab.contains(canvas)) {
+    ctx.lineWidth = opts.width * Applab.canvasScale;
     return true;
   }
   return false;
 };
 
-Webapp.canvasSetStrokeColor = function (opts) {
-  var divWebapp = document.getElementById('divWebapp');
+Applab.canvasSetStrokeColor = function (opts) {
+  var divApplab = document.getElementById('divApplab');
   var canvas = document.getElementById(opts.elementId);
   var ctx = canvas.getContext("2d");
-  if (ctx && divWebapp.contains(canvas)) {
+  if (ctx && divApplab.contains(canvas)) {
     ctx.strokeStyle = String(opts.color);
     return true;
   }
   return false;
 };
 
-Webapp.canvasSetFillColor = function (opts) {
-  var divWebapp = document.getElementById('divWebapp');
+Applab.canvasSetFillColor = function (opts) {
+  var divApplab = document.getElementById('divApplab');
   var canvas = document.getElementById(opts.elementId);
   var ctx = canvas.getContext("2d");
-  if (ctx && divWebapp.contains(canvas)) {
+  if (ctx && divApplab.contains(canvas)) {
     ctx.fillStyle = String(opts.color);
     return true;
   }
   return false;
 };
 
-Webapp.canvasClear = function (opts) {
-  var divWebapp = document.getElementById('divWebapp');
+Applab.canvasClear = function (opts) {
+  var divApplab = document.getElementById('divApplab');
   var canvas = document.getElementById(opts.elementId);
   var ctx = canvas.getContext("2d");
-  if (ctx && divWebapp.contains(canvas)) {
+  if (ctx && divApplab.contains(canvas)) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     return true;
   }
   return false;
 };
 
-Webapp.canvasDrawImage = function (opts) {
-  var divWebapp = document.getElementById('divWebapp');
+Applab.canvasDrawImage = function (opts) {
+  var divApplab = document.getElementById('divApplab');
   var canvas = document.getElementById(opts.elementId);
   var image = document.getElementById(opts.imageId);
   var ctx = canvas.getContext("2d");
-  if (ctx && divWebapp.contains(canvas) && divWebapp.contains(image)) {
+  if (ctx && divApplab.contains(canvas) && divApplab.contains(image)) {
     var xScale, yScale;
-    xScale = yScale = Webapp.canvasScale;
+    xScale = yScale = Applab.canvasScale;
     if (opts.width) {
       xScale = xScale * (opts.width / image.width);
     }
@@ -1288,8 +1288,8 @@ Webapp.canvasDrawImage = function (opts) {
                      0,
                      0,
                      yScale,
-                     opts.x * Webapp.canvasScale,
-                     opts.y * Webapp.canvasScale);
+                     opts.x * Applab.canvasScale,
+                     opts.y * Applab.canvasScale);
     ctx.drawImage(image, 0, 0);
     ctx.restore();
     return true;
@@ -1297,72 +1297,72 @@ Webapp.canvasDrawImage = function (opts) {
   return false;
 };
 
-Webapp.canvasGetImageData = function (opts) {
-  var divWebapp = document.getElementById('divWebapp');
+Applab.canvasGetImageData = function (opts) {
+  var divApplab = document.getElementById('divApplab');
   var canvas = document.getElementById(opts.elementId);
   var ctx = canvas.getContext("2d");
-  if (ctx && divWebapp.contains(canvas)) {
-    return ctx.getImageData(opts.x * Webapp.canvasScale,
-                            opts.y * Webapp.canvasScale,
-                            opts.width * Webapp.canvasScale,
-                            opts.height * Webapp.canvasScale);
+  if (ctx && divApplab.contains(canvas)) {
+    return ctx.getImageData(opts.x * Applab.canvasScale,
+                            opts.y * Applab.canvasScale,
+                            opts.width * Applab.canvasScale,
+                            opts.height * Applab.canvasScale);
   }
 };
 
-Webapp.canvasPutImageData = function (opts) {
-  var divWebapp = document.getElementById('divWebapp');
+Applab.canvasPutImageData = function (opts) {
+  var divApplab = document.getElementById('divApplab');
   var canvas = document.getElementById(opts.elementId);
   var ctx = canvas.getContext("2d");
-  if (ctx && divWebapp.contains(canvas)) {
+  if (ctx && divApplab.contains(canvas)) {
     // Create tmpImageData and initialize it because opts.imageData is not
     // going to be a real ImageData object if it came from the interpreter
     var tmpImageData = ctx.createImageData(opts.imageData.width,
                                            opts.imageData.height);
     tmpImageData.data.set(opts.imageData.data);
     return ctx.putImageData(tmpImageData,
-                            opts.x * Webapp.canvasScale,
-                            opts.y * Webapp.canvasScale);
+                            opts.x * Applab.canvasScale,
+                            opts.y * Applab.canvasScale);
   }
 };
 
-Webapp.createTextInput = function (opts) {
-  var divWebapp = document.getElementById('divWebapp');
+Applab.createTextInput = function (opts) {
+  var divApplab = document.getElementById('divApplab');
 
   var newInput = document.createElement("input");
   newInput.value = opts.text;
   newInput.id = opts.elementId;
 
-  return Boolean(divWebapp.appendChild(newInput));
+  return Boolean(divApplab.appendChild(newInput));
 };
 
-Webapp.createTextLabel = function (opts) {
-  var divWebapp = document.getElementById('divWebapp');
+Applab.createTextLabel = function (opts) {
+  var divApplab = document.getElementById('divApplab');
 
   var newLabel = document.createElement("label");
   var textNode = document.createTextNode(opts.text);
   newLabel.id = opts.elementId;
   var forElement = document.getElementById(opts.forId);
-  if (forElement && divWebapp.contains(forElement)) {
+  if (forElement && divApplab.contains(forElement)) {
     newLabel.setAttribute('for', opts.forId);
   }
 
   return Boolean(newLabel.appendChild(textNode) &&
-                 divWebapp.appendChild(newLabel));
+                 divApplab.appendChild(newLabel));
 };
 
-Webapp.createCheckbox = function (opts) {
-  var divWebapp = document.getElementById('divWebapp');
+Applab.createCheckbox = function (opts) {
+  var divApplab = document.getElementById('divApplab');
 
   var newCheckbox = document.createElement("input");
   newCheckbox.setAttribute("type", "checkbox");
   newCheckbox.checked = opts.checked;
   newCheckbox.id = opts.elementId;
 
-  return Boolean(divWebapp.appendChild(newCheckbox));
+  return Boolean(divApplab.appendChild(newCheckbox));
 };
 
-Webapp.createRadio = function (opts) {
-  var divWebapp = document.getElementById('divWebapp');
+Applab.createRadio = function (opts) {
+  var divApplab = document.getElementById('divApplab');
 
   var newRadio = document.createElement("input");
   newRadio.setAttribute("type", "radio");
@@ -1370,11 +1370,11 @@ Webapp.createRadio = function (opts) {
   newRadio.checked = opts.checked;
   newRadio.id = opts.elementId;
 
-  return Boolean(divWebapp.appendChild(newRadio));
+  return Boolean(divApplab.appendChild(newRadio));
 };
 
-Webapp.createDropdown = function (opts) {
-  var divWebapp = document.getElementById('divWebapp');
+Applab.createDropdown = function (opts) {
+  var divApplab = document.getElementById('divApplab');
 
   var newSelect = document.createElement("select");
 
@@ -1387,36 +1387,36 @@ Webapp.createDropdown = function (opts) {
   }
   newSelect.id = opts.elementId;
 
-  return Boolean(divWebapp.appendChild(newSelect));
+  return Boolean(divApplab.appendChild(newSelect));
 };
 
-Webapp.getAttribute = function (opts) {
-  var divWebapp = document.getElementById('divWebapp');
+Applab.getAttribute = function (opts) {
+  var divApplab = document.getElementById('divApplab');
   var element = document.getElementById(opts.elementId);
   var attribute = String(opts.attribute);
-  return divWebapp.contains(element) ? element[attribute] : false;
+  return divApplab.contains(element) ? element[attribute] : false;
 };
 
 // Whitelist of HTML Element attributes which can be modified, to
 // prevent DOM manipulation which would violate the sandbox.
-Webapp.mutableAttributes = ['innerHTML', 'scrollTop'];
+Applab.mutableAttributes = ['innerHTML', 'scrollTop'];
 
-Webapp.setAttribute = function (opts) {
-  var divWebapp = document.getElementById('divWebapp');
+Applab.setAttribute = function (opts) {
+  var divApplab = document.getElementById('divApplab');
   var element = document.getElementById(opts.elementId);
   var attribute = String(opts.attribute);
-  if (divWebapp.contains(element) &&
-      Webapp.mutableAttributes.indexOf(attribute) !== -1) {
+  if (divApplab.contains(element) &&
+      Applab.mutableAttributes.indexOf(attribute) !== -1) {
     element[attribute] = opts.value;
     return true;
   }
   return false;
 };
 
-Webapp.getText = function (opts) {
-  var divWebapp = document.getElementById('divWebapp');
+Applab.getText = function (opts) {
+  var divApplab = document.getElementById('divApplab');
   var element = document.getElementById(opts.elementId);
-  if (divWebapp.contains(element)) {
+  if (divApplab.contains(element)) {
     if (element.tagName === 'INPUT' || element.tagName === 'SELECT') {
       return String(element.value);
     } else if (element.tagName === 'IMG') {
@@ -1428,10 +1428,10 @@ Webapp.getText = function (opts) {
   return false;
 };
 
-Webapp.setText = function (opts) {
-  var divWebapp = document.getElementById('divWebapp');
+Applab.setText = function (opts) {
+  var divApplab = document.getElementById('divApplab');
   var element = document.getElementById(opts.elementId);
-  if (divWebapp.contains(element)) {
+  if (divApplab.contains(element)) {
     if (element.tagName === 'INPUT' || element.tagName === 'SELECT') {
       element.value = opts.text;
     } else if (element.tagName === 'IMG') {
@@ -1444,29 +1444,29 @@ Webapp.setText = function (opts) {
   return false;
 };
 
-Webapp.getChecked = function (opts) {
-  var divWebapp = document.getElementById('divWebapp');
+Applab.getChecked = function (opts) {
+  var divApplab = document.getElementById('divApplab');
   var element = document.getElementById(opts.elementId);
-  if (divWebapp.contains(element) && element.tagName === 'INPUT') {
+  if (divApplab.contains(element) && element.tagName === 'INPUT') {
     return element.checked;
   }
   return false;
 };
 
-Webapp.setChecked = function (opts) {
-  var divWebapp = document.getElementById('divWebapp');
+Applab.setChecked = function (opts) {
+  var divApplab = document.getElementById('divApplab');
   var element = document.getElementById(opts.elementId);
-  if (divWebapp.contains(element) && element.tagName === 'INPUT') {
+  if (divApplab.contains(element) && element.tagName === 'INPUT') {
     element.checked = opts.checked;
     return true;
   }
   return false;
 };
 
-Webapp.getImageURL = function (opts) {
-  var divWebapp = document.getElementById('divWebapp');
+Applab.getImageURL = function (opts) {
+  var divApplab = document.getElementById('divApplab');
   var element = document.getElementById(opts.elementId);
-  if (divWebapp.contains(element)) {
+  if (divApplab.contains(element)) {
     // We return a URL if it is an IMG element or our special img-upload label
     if (element.tagName === 'IMG') {
       return element.src;
@@ -1479,20 +1479,20 @@ Webapp.getImageURL = function (opts) {
   }
 };
 
-Webapp.setImageURL = function (opts) {
-  var divWebapp = document.getElementById('divWebapp');
+Applab.setImageURL = function (opts) {
+  var divApplab = document.getElementById('divApplab');
   var element = document.getElementById(opts.elementId);
-  if (divWebapp.contains(element) && element.tagName === 'IMG') {
+  if (divApplab.contains(element) && element.tagName === 'IMG') {
     element.src = opts.src;
     return true;
   }
   return false;
 };
 
-Webapp.replaceHtmlBlock = function (opts) {
-  var divWebapp = document.getElementById('divWebapp');
+Applab.replaceHtmlBlock = function (opts) {
+  var divApplab = document.getElementById('divApplab');
   var oldDiv = document.getElementById(opts.elementId);
-  if (divWebapp.contains(oldDiv)) {
+  if (divApplab.contains(oldDiv)) {
     var newDiv = document.createElement("div");
     newDiv.id = opts.elementId;
     newDiv.innerHTML = opts.html;
@@ -1502,40 +1502,40 @@ Webapp.replaceHtmlBlock = function (opts) {
   return false;
 };
 
-Webapp.deleteHtmlBlock = function (opts) {
-  var divWebapp = document.getElementById('divWebapp');
+Applab.deleteHtmlBlock = function (opts) {
+  var divApplab = document.getElementById('divApplab');
   var div = document.getElementById(opts.elementId);
-  if (divWebapp.contains(div)) {
+  if (divApplab.contains(div)) {
     return Boolean(div.parentElement.removeChild(div));
   }
   return false;
 };
 
-Webapp.setStyle = function (opts) {
-  var divWebapp = document.getElementById('divWebapp');
+Applab.setStyle = function (opts) {
+  var divApplab = document.getElementById('divApplab');
   var div = document.getElementById(opts.elementId);
-  if (divWebapp.contains(div)) {
+  if (divApplab.contains(div)) {
     div.style.cssText += opts.style;
     return true;
   }
   return false;
 };
 
-Webapp.setParent = function (opts) {
-  var divWebapp = document.getElementById('divWebapp');
+Applab.setParent = function (opts) {
+  var divApplab = document.getElementById('divApplab');
   var div = document.getElementById(opts.elementId);
   var divNewParent = document.getElementById(opts.parentId);
-  if (divWebapp.contains(div) && divWebapp.contains(divNewParent)) {
+  if (divApplab.contains(div) && divApplab.contains(divNewParent)) {
     return Boolean(div.parentElement.removeChild(div) &&
                    divNewParent.appendChild(div));
   }
   return false;
 };
 
-Webapp.setPosition = function (opts) {
-  var divWebapp = document.getElementById('divWebapp');
+Applab.setPosition = function (opts) {
+  var divApplab = document.getElementById('divApplab');
   var div = document.getElementById(opts.elementId);
-  if (divWebapp.contains(div)) {
+  if (divApplab.contains(div)) {
     div.style.position = 'absolute';
     div.style.left = String(opts.left) + 'px';
     div.style.top = String(opts.top) + 'px';
@@ -1546,23 +1546,23 @@ Webapp.setPosition = function (opts) {
   return false;
 };
 
-Webapp.onEventFired = function (opts, e) {
+Applab.onEventFired = function (opts, e) {
   if (typeof e != 'undefined') {
     // Push a function call on the queue with an array of arguments consisting
     // of just the 'e' parameter
-    Webapp.eventQueue.push({
+    Applab.eventQueue.push({
       'fn': opts.func,
       'arguments': [e]
     });
   } else {
-    Webapp.eventQueue.push({'fn': opts.func});
+    Applab.eventQueue.push({'fn': opts.func});
   }
 };
 
-Webapp.attachEventHandler = function (opts) {
-  var divWebapp = document.getElementById('divWebapp');
+Applab.attachEventHandler = function (opts) {
+  var divApplab = document.getElementById('divApplab');
   var domElement = document.getElementById(opts.elementId);
-  if (divWebapp.contains(domElement)) {
+  if (divApplab.contains(domElement)) {
     switch (opts.eventName) {
       /*
       Check for a specific set of Hammer v1 event names (full set below) and if
@@ -1571,7 +1571,7 @@ Webapp.attachEventHandler = function (opts) {
       TODO (cpirich): review the following:
       * whether using Hammer v1 events is the right choice
       * choose the specific list of events
-      * consider instantiating Hammer just once per-element or on divWebapp
+      * consider instantiating Hammer just once per-element or on divApplab
       * review use of preventDefault
 
       case 'hold':
@@ -1589,26 +1589,26 @@ Webapp.attachEventHandler = function (opts) {
       case 'pinch':
       case 'pinchin':
       case 'pinchout':
-        var hammerElement = new Hammer(divWebapp, { 'preventDefault': true });
+        var hammerElement = new Hammer(divApplab, { 'preventDefault': true });
         hammerElement.on(opts.eventName,
-                         Webapp.onEventFired.bind(this, opts));
+                         Applab.onEventFired.bind(this, opts));
         break;
       default:
         // For now, we're not tracking how many of these we add and we don't allow
         // the user to detach the handler. We detach all listeners by cloning the
-        // divWebapp DOM node inside of reset()
+        // divApplab DOM node inside of reset()
         domElement.addEventListener(
             opts.eventName,
-            Webapp.onEventFired.bind(this, opts));
+            Applab.onEventFired.bind(this, opts));
     }
     return true;
   }
   return false;
 };
 
-Webapp.onHttpRequestEvent = function (opts) {
+Applab.onHttpRequestEvent = function (opts) {
   if (this.readyState === 4) {
-    Webapp.eventQueue.push({
+    Applab.eventQueue.push({
       'fn': opts.func,
       'arguments': [
         Number(this.status),
@@ -1618,53 +1618,53 @@ Webapp.onHttpRequestEvent = function (opts) {
   }
 };
 
-Webapp.startWebRequest = function (opts) {
+Applab.startWebRequest = function (opts) {
   var req = new XMLHttpRequest();
-  req.onreadystatechange = Webapp.onHttpRequestEvent.bind(req, opts);
+  req.onreadystatechange = Applab.onHttpRequestEvent.bind(req, opts);
   req.open('GET', String(opts.url), true);
   req.send();
 };
 
-Webapp.onTimeoutFired = function (opts) {
-  Webapp.eventQueue.push({
+Applab.onTimeoutFired = function (opts) {
+  Applab.eventQueue.push({
     'fn': opts.func
   });
 };
 
-Webapp.setTimeout = function (opts) {
-  return window.setTimeout(Webapp.onTimeoutFired.bind(this, opts), opts.milliseconds);
+Applab.setTimeout = function (opts) {
+  return window.setTimeout(Applab.onTimeoutFired.bind(this, opts), opts.milliseconds);
 };
 
-Webapp.clearTimeout = function (opts) {
+Applab.clearTimeout = function (opts) {
   // NOTE: we do not currently check to see if this is a timer created by
-  // our Webapp.setTimeout() function
+  // our Applab.setTimeout() function
   window.clearTimeout(opts.timeoutId);
 };
 
-Webapp.createRecord = function (opts) {
-  var record = codegen.marshalInterpreterToNative(Webapp.interpreter,
+Applab.createRecord = function (opts) {
+  var record = codegen.marshalInterpreterToNative(Applab.interpreter,
       opts.record);
   FormStorage.createRecord(record,
-      Webapp.handleCreateRecord.bind(this, opts.callback));
+      Applab.handleCreateRecord.bind(this, opts.callback));
 };
 
-Webapp.handleCreateRecord = function(interpreterCallback, record) {
-  Webapp.eventQueue.push({
+Applab.handleCreateRecord = function(interpreterCallback, record) {
+  Applab.eventQueue.push({
     'fn': interpreterCallback,
     'arguments': [record]
   });
 };
 
-Webapp.readRecords = function (opts) {
-  var searchParams = codegen.marshalInterpreterToNative(Webapp.interpreter,
+Applab.readRecords = function (opts) {
+  var searchParams = codegen.marshalInterpreterToNative(Applab.interpreter,
       opts.searchParams);
   FormStorage.readRecords(
       searchParams,
-      Webapp.handleReadRecords.bind(this, opts.callback));
+      Applab.handleReadRecords.bind(this, opts.callback));
 };
 
-Webapp.handleReadRecords = function(interpreterCallback, records) {
-  Webapp.eventQueue.push({
+Applab.handleReadRecords = function(interpreterCallback, records) {
+  Applab.eventQueue.push({
     'fn': interpreterCallback,
     'arguments': [records]
   });
@@ -1699,32 +1699,32 @@ Studio.wait = function (opts) {
 };
 */
 
-Webapp.timedOut = function() {
-  return Webapp.tickCount > Webapp.timeoutFailureTick;
+Applab.timedOut = function() {
+  return Applab.tickCount > Applab.timeoutFailureTick;
 };
 
 var checkFinished = function () {
   // if we have a succcess condition and have accomplished it, we're done and successful
   if (level.goal && level.goal.successCondition && level.goal.successCondition()) {
-    Webapp.result = ResultType.SUCCESS;
+    Applab.result = ResultType.SUCCESS;
     return true;
   }
 
   // if we have a failure condition, and it's been reached, we're done and failed
   if (level.goal && level.goal.failureCondition && level.goal.failureCondition()) {
-    Webapp.result = ResultType.FAILURE;
+    Applab.result = ResultType.FAILURE;
     return true;
   }
 
   /*
-  if (Webapp.allGoalsVisited()) {
-    Webapp.result = ResultType.SUCCESS;
+  if (Applab.allGoalsVisited()) {
+    Applab.result = ResultType.SUCCESS;
     return true;
   }
   */
 
-  if (Webapp.timedOut()) {
-    Webapp.result = ResultType.FAILURE;
+  if (Applab.timedOut()) {
+    Applab.result = ResultType.FAILURE;
     return true;
   }
 
