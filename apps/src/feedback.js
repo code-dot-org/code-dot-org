@@ -850,7 +850,7 @@ FeedbackUtils.prototype.getCountableBlocks_ = function() {
  * Check to see if the user's code contains the required blocks for a level.
  * @param {!Array} requiredBlocks The blocks that are required to be used in
  *   the solution to this level.
- * @param {number} requiredBlocksToFlag The maximum number of blocks to return.
+ * @param {number} maxBlocksToFlag The maximum number of blocks to return.
  * @return {{blocksToDisplay:!Array, message:?string}} 'missingBlocks' is an
  *   array of array of strings where each array of strings is a set of blocks
  *   that at least one of them should be used. Each block is represented as the
@@ -858,7 +858,7 @@ FeedbackUtils.prototype.getCountableBlocks_ = function() {
  *   optional message to override the default error text.
  */
 FeedbackUtils.prototype.getMissingRequiredBlocks_ = function (requiredBlocks,
-    requiredBlocksToFlag) {
+    maxBlocksToFlag) {
   var missingBlocks = [];
   var customMessage = null;
   var code = null;  // JavaScript code, which is initialized lazily.
@@ -866,11 +866,11 @@ FeedbackUtils.prototype.getMissingRequiredBlocks_ = function (requiredBlocks,
     var userBlocks = this.getUserBlocks_();
     // For each list of required blocks
     // Keep track of the number of the missing block lists. It should not be
-    // bigger than the requiredBlocksToFlag param.
+    // bigger than the maxBlocksToFlag param.
     var missingBlockNum = 0;
     for (var i = 0;
          i < requiredBlocks.length &&
-             missingBlockNum < requiredBlocksToFlag;
+             missingBlockNum < maxBlocksToFlag;
          i++) {
       var requiredBlock = requiredBlocks[i];
       // For each of the test
