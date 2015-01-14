@@ -7,7 +7,7 @@ exports.buildPath = function (path) {
   return __dirname + '/../../build/js/' + path;
 };
 
-var studioAppSingleton;
+var studioApp;
 
 var testBlockFactory = require('./testBlockFactory');
 
@@ -55,22 +55,22 @@ exports.setupTestBlockly = function() {
   assert(global.Blockly, 'Frame loaded Blockly into global namespace');
 
   // uncache file to force reload
-  require.uncache(exports.buildPath('/base'));
+  require.uncache(exports.buildPath('/StudioApp'));
   // c, n, v, p, s get added to global namespace by messageformat module, which
   // is loaded when we require our locale msg files
-  studioAppSingleton = exports.requireWithGlobalsCheckBuildFolder('/base',
-    ['c', 'n', 'v', 'p', 's']);
+  studioApp = exports.requireWithGlobalsCheckBuildFolder('/StudioApp',
+    ['c', 'n', 'v', 'p', 's']).singleton;
 
   var blocklyAppDiv = document.getElementById('app');
   assert(blocklyAppDiv, 'blocklyAppDiv exists');
 
 
-  studioAppSingleton.assetUrl = function (path) {
+  studioApp.assetUrl = function (path) {
     return '../lib/blockly/' + path;
   };
 
   var options = {
-    assetUrl: studioAppSingleton.assetUrl
+    assetUrl: studioApp.assetUrl
   };
   Blockly.inject(blocklyAppDiv, options);
   testBlockFactory.installTestBlocks(Blockly);
@@ -78,7 +78,7 @@ exports.setupTestBlockly = function() {
   assert(Blockly.Blocks.text_print, "text_print block exists");
   assert(Blockly.Blocks.text, "text block exists");
   assert(Blockly.Blocks.math_number, "math_number block exists");
-  assert(studioAppSingleton, "studioAppSingleton exists");
+  assert(studioApp, "studioApp exists");
   assert(Blockly.mainBlockSpace, "Blockly workspace exists");
 
   Blockly.mainBlockSpace.clear();
@@ -90,10 +90,10 @@ exports.setupTestBlockly = function() {
  * was not used (this will be true in the case of level tests).
  */
 exports.getStudioAppSingleton = function () {
-  if (!studioAppSingleton) {
+  if (!studioApp) {
     throw new Error("Expect singleton to exist");
   }
-  return studioAppSingleton;
+  return studioApp;
 };
 
 /**

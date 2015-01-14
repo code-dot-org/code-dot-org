@@ -18,7 +18,7 @@ TODO: how to use Chef to update crowdin.yaml with API Key
 
 ### Steps for Code.org Project
 
-1. `cd i18n/code.org`
+1. `cd i18n/code.org` Make sure you're on staging branch
 2. `./in.sh` Gather files from each subproject and store them in ../locales/en-US
 3. `./up.sh` Upload new and updated strings to Crowdin
 4. `./down.sh` Download latest translations from Crowdin. NOTE: You might not see output for a few minutes while Crowdin builds.

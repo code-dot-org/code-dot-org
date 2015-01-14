@@ -11,7 +11,7 @@ class Table
     @storage_id = storage_id
     @table_name = table_name
   
-    @table = PEGASUS_DB[:tables]
+    @table = PEGASUS_DB[:app_tables]
   end
 
   def delete(id)
