@@ -19,7 +19,7 @@
 
 :javascript
   var scriptData = #{header_progress.to_json};
-  $('.header_text').first().html(scriptData.title);
+  $('.header_text').first().text(scriptData.title);
   if (scriptData.finishLink) {
     $('.header_finished_link').show().append($('<a>').attr('href', scriptData.finishLink.href).text(scriptData.finishLink.text));
   }

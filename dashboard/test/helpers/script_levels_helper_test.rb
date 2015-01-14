@@ -47,7 +47,7 @@ class ScriptLevelsHelperTest < ActionView::TestCase
     @script_level = @script.script_levels.fifth
     @stage = @script_level.stage
     @game = @script_level.level.game
-    assert_equal "Stage 2: <span class='game-title'>The Maze</span>", header_progress[:title]
+    assert_equal 'Stage 2: The Maze', header_progress[:title]
   end
 
 end
