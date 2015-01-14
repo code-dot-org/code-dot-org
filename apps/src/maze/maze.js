@@ -576,7 +576,7 @@ Maze.init = function(config) {
   };
 
   config.afterInject = function() {
-    if (studioApp.usingBlockly) {
+    if (studioApp.isUsingBlockly()) {
       /**
        * The richness of block colours, regardless of the hue.
        * MOOC blocks should be brighter (target audience is younger).
@@ -886,7 +886,7 @@ function beginAttempt () {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
   studioApp.toggleRunReset('reset');
-  if (studioApp.usingBlockly) {
+  if (studioApp.isUsingBlockly()) {
     Blockly.mainBlockSpace.traceOn(true);
   }
   studioApp.reset(false);
@@ -967,7 +967,7 @@ Maze.execute = function(stepMode) {
   Maze.response = null;
 
   var code;
-  if (studioApp.usingBlockly) {
+  if (studioApp.isUsingBlockly()) {
     code = Blockly.Generator.blockSpaceToCode('JavaScript');
   } else {
     code = utils.generateCodeAliases(level.codeFunctions, 'Maze');
@@ -1095,7 +1095,7 @@ Maze.execute = function(stepMode) {
 
   Maze.animating_ = true;
 
-  if (studioApp.usingBlockly) {
+  if (studioApp.isUsingBlockly()) {
     // Disable toolbox while running
     Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
 
@@ -1181,7 +1181,7 @@ Maze.scheduleAnimations = function (singleStep) {
         stepButton.removeAttribute('disabled');
       } else {
         Maze.animating_ = false;
-        if (studioApp.usingBlockly) {
+        if (studioApp.isUsingBlockly()) {
           // reenable toolbox
           Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
         }

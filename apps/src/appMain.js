@@ -37,7 +37,7 @@ module.exports = function(app, levels, options) {
 
   options.skin = options.skinsModule.load(studioApp.assetUrl, options.skinId);
 
-  if (studioApp.usingBlockly) {
+  if (studioApp.isUsingBlockly()) {
     var blockInstallOptions = {
       skin: options.skin,
       isK1: options.level && options.level.isK1
