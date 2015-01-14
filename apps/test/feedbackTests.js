@@ -72,10 +72,7 @@ describe("getMissingRequiredBlocks_ tests", function () {
 
     // Should probably have these as inputs to getMissingRequiredBlocks_ instead
     // of fields on studioApp as it's the only place they're used
-    // In fact, may want to get rid of requiredBlocksToFlagCount_ as it's only
-    // ever set to 1, or perhaps make it customizable per level
     studioApp.REQUIRED_BLOCKS = options.requiredBlocks;
-    studioApp.requiredBlocksToFlagCount_ = options.numToFlag;
 
     studioApp.loadBlocks(options.userBlockXml);
 
@@ -85,7 +82,7 @@ describe("getMissingRequiredBlocks_ tests", function () {
     assert(!options.userBlockXml || loaded, "either we didnt have  input xml" +
       "or we did, and we loaded something");
 
-    var missing = studioApp.feedback_.getMissingRequiredBlocks_();
+    var missing = studioApp.feedback_.getMissingRequiredBlocks_(options.numToFlag);
     validateMissingRequiredBlocks(missing.blocksToDisplay, options.expectedResult);
   }
 

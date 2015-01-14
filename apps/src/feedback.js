@@ -61,7 +61,7 @@ FeedbackUtils.prototype.displayFeedback = function(options) {
   var feedbackBlocks;
   if (this.studioApp_.usingBlockly) {
     feedbackBlocks = new FeedbackBlocks(options,
-                                        this.getMissingRequiredBlocks_(),
+                                        this.getMissingRequiredBlocks_(this.studioApp_.requiredBlocksToFlagCount_),
                                         this.studioApp_);
   }
   // feedbackMessage must be initialized after feedbackBlocks
@@ -794,7 +794,7 @@ FeedbackUtils.prototype.getEmptyContainerBlock_ = function() {
  * @return {boolean} true if all blocks are present, false otherwise.
  */
 FeedbackUtils.prototype.hasAllRequiredBlocks_ = function() {
-  return this.getMissingRequiredBlocks_().blocksToDisplay.length === 0;
+  return this.getMissingRequiredBlocks_(this.studioApp_.requiredBlocksToFlagCount_).blocksToDisplay.length === 0;
 };
 
 /**
@@ -827,14 +827,15 @@ FeedbackUtils.prototype.getCountableBlocks_ = function() {
 
 /**
  * Check to see if the user's code contains the required blocks for a level.
- * This never returns more than StudioApp.requiredBlocksToFlagCount_.
+ * @param {number} requiredBlocksToFlag The maximum number of blocks to return.
  * @return {{blocksToDisplay:!Array, message:?string}} 'missingBlocks' is an
  * array of array of strings where each array of strings is a set of blocks that
  * at least one of them should be used. Each block is represented as the prefix
  * of an id in the corresponding template.soy. 'message' is an optional message
  * to override the default error text.
  */
-FeedbackUtils.prototype.getMissingRequiredBlocks_ = function () {
+FeedbackUtils.prototype.getMissingRequiredBlocks_ = function (
+    requiredBlocksToFlag ) {
   var missingBlocks = [];
   var customMessage = null;
   var code = null;  // JavaScript code, which is initialized lazily.
@@ -843,11 +844,11 @@ FeedbackUtils.prototype.getMissingRequiredBlocks_ = function () {
     var userBlocks = this.getUserBlocks_();
     // For each list of required blocks
     // Keep track of the number of the missing block lists. It should not be
-    // bigger than StudioApp.requiredBlocksToFlagCount_
+    // bigger than the requiredBlocksToFlag param.
     var missingBlockNum = 0;
     for (var i = 0;
          i < this.studioApp_.REQUIRED_BLOCKS.length &&
-             missingBlockNum < this.studioApp_.requiredBlocksToFlagCount_;
+             missingBlockNum < requiredBlocksToFlag;
          i++) {
       var requiredBlock = this.studioApp_.REQUIRED_BLOCKS[i];
       // For each of the test
