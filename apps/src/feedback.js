@@ -812,13 +812,15 @@ FeedbackUtils.prototype.checkForEmptyContainerBlockFailure_ = function() {
 
 /**
  * Check whether the user code has all the blocks required for the level.
+ * @param {!Array} requiredBlocks The blocks that are required to be used in
+ *   the solution to this level.
  * @return {boolean} true if all blocks are present, false otherwise.
  */
-FeedbackUtils.prototype.hasAllRequiredBlocks_ = function() {
+FeedbackUtils.prototype.hasAllRequiredBlocks_ = function(requiredBlocks) {
   // It's okay (maybe faster) to pass 1 for maxBlocksToFlag, since in the end
   // we want to check that there are zero blocks missing.
   var maxBlocksToFlag = 1;
-  return this.getMissingRequiredBlocks_(this.studioApp_.requiredBlocks_, maxBlocksToFlag).blocksToDisplay.length === 0;
+  return this.getMissingRequiredBlocks_(requiredBlocks, maxBlocksToFlag).blocksToDisplay.length === 0;
 };
 
 /**
@@ -982,7 +984,7 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete,
   if (this.hasQuestionMarksInNumberField_()) {
     return TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
   }
-  if (!this.hasAllRequiredBlocks_()) {
+  if (!this.hasAllRequiredBlocks_(this.studioApp_.requiredBlocks_)) {
     return levelComplete ?
         TestResults.MISSING_BLOCK_FINISHED :
         TestResults.MISSING_BLOCK_UNFINISHED;
