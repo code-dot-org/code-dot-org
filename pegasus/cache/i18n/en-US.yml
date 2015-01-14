@@ -242,6 +242,7 @@ en-US:
   dashboard_students_new_section: "You've created a new section! Now add your students using the <b>Add student</b> and <b>Add multiple students</b> buttons above."
   dashboard_students_placeholder_name: "Student Name"
   dashboard_students_name: "Name"
+  dashboard_students_progress: "Progress"
   dashboard_students_age: "Age"
   dashboard_students_gender: "Gender"
   dashboard_students_male: "Male"

@@ -88,6 +88,7 @@ def load_configuration()
     config.merge! host_config
     config.merge! local_config
 
+    config['apps_api_secret']     ||= config['poste_secret']
     config['daemon']              ||= [:development, :levelbuilder, :staging, :test].include?(rack_env) || config['name'] == 'daemon'
     config['dashboard_db_reader'] ||= config['db_reader'] + config['dashboard_db_name']
     config['dashboard_db_writer'] ||= config['db_writer'] + config['dashboard_db_name']
@@ -163,6 +164,9 @@ class CDOImpl < OpenStruct
     @slog.write params
   end
 
+  def shared_image_url(path)
+    "/shared/images/#{path}"
+  end
 end
 
 CDO ||= CDOImpl.new

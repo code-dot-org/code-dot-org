@@ -139,7 +139,7 @@ Now let's play a game.
 ## Assessment 
 ### <a name="Assessment"></a>4) Conditionals Assessment
 
-Visit [MSM Stage 13](http://studio.code.org/s/msm/stage/17/puzzle/1) in Code Studio to complete the assessments.
+Visit [MSM Stage 17](http://studio.code.org/s/algebra/stage/17/puzzle/1) in Code Studio to complete the assessments.
 
 [/together]
 

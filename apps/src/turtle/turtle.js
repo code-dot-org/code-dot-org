@@ -77,7 +77,7 @@ var ELSA_DECORATION_DETAILS = [
 
 /**
  * An instantiable Artist class
- * @param {StudioAppClass} studioApp The studioApp instance to build upon.
+ * @param {StudioApp} studioApp The studioApp instance to build upon.
  */
 var Artist = function () {
   this.skin = null;
@@ -140,7 +140,7 @@ Artist.prototype.injectStudioApp = function (studioApp) {
   this.studioApp_.reset = _.bind(this.reset, this);
   this.studioApp_.runButtonClick = _.bind(this.runButtonClick, this);
 
-  this.studioApp_.CHECK_FOR_EMPTY_BLOCKS = true;
+  this.studioApp_.setCheckForEmptyBlocks(true);
   this.studioApp_.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 };
 
@@ -149,7 +149,7 @@ Artist.prototype.injectStudioApp = function (studioApp) {
  */
 Artist.prototype.init = function(config) {
   if (!this.studioApp_) {
-    throw new Error("Artist requires a StudioAppClass");
+    throw new Error("Artist requires a StudioApp");
   }
 
   this.skin = config.skin;

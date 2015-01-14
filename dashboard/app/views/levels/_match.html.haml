@@ -3,9 +3,9 @@
   - data = @level.properties
 
   %h2!= match_t(data['title'])
-  %p.content1!= match_t(data['content1']) if ! data['content1'].blank?
-  %p.content2!= match_t(data['content2']) if ! data['content2'].blank?
-  %p.content3!= match_t(data['content3']) if ! data['content3'].blank?
+  %p.content1!= match_t(data['content1']) unless data['content1'].blank?
+  %p.content2!= match_t(data['content2']) unless data['content2'].blank?
+  %p.content3!= match_t(data['content3']) unless data['content3'].blank?
 
   .buttons
     %a.btn.btn-large.btn-primary.next-stage.submitButton
@@ -46,7 +46,7 @@
       %ul#correctmarks
         - data['questions'].each_with_index do |question, index|
           %li.correctmark{style: "height: #{height}px"}
-            .xmark{style: "display: none", id: "xmark_#{index}"}
+            .xmark{style: 'display: none;', id: "xmark_#{index}"}
               %strong X
 
     .column
@@ -60,47 +60,47 @@
     %a.btn.btn-large.btn-primary.next-stage.submitButton
       Submit
 
-  %div{:style=>'display:none'}
+  %div{style: 'display: none;'}
     #error-dialogcontent
       .modal-content
         %p.dialog-title
-          =t("match.wrong_title")
+          =t('match.wrong_title')
         %p
-          =t("match.wrong_body")
+          =t('match.wrong_body')
         .farSide
           %button#ok-button.secondary
-            =t("dialog.ok")
+            =t('dialog.ok')
 
     #pre-dialogcontent
       - if data['pre_image']
-        .modal-image{style: "margin-top: 0px"}
+        .modal-image{style: 'margin-top: 0px;'}
           != match_t(data['pre_image'])
       .modal-content
         - if data['pre_image'].blank?
-          - adjustLayoutClass = "unindentContent"
+          - adjust_layout_class = 'unindentContent'
         - else
-          - adjustLayoutClass = ""
-        %p.dialog-title{class: adjustLayoutClass}
+          - adjust_layout_class = ''
+        %p.dialog-title{class: adjust_layout_class}
           != match_t(data['pre_title']) if data['pre_title']
-        %p{class: adjustLayoutClass}
+        %p{class: adjust_layout_class}
           != match_t(data['pre_body']) if data['pre_body']
         - if data['pre_ani']
-          .aniGif.example-image{style: "overflow:hidden"}
+          .aniGif.example-image{style: 'overflow: hidden;'}
             != match_t(data['pre_ani'])
         .farSide
           %button#ok-button.secondary
-            =t("dialog.ok")
+            =t('dialog.ok')
 
 
     #success-dialogcontent
       .modal-content
         %p.dialog-title
-          =t("match.correct_title")
+          =t('match.correct_title')
         %p
-          =t("match.correct_body")
+          =t('match.correct_body')
         .farSide
           %button#ok-button.secondary
-            =t("dialog.ok")
+            =t('dialog.ok')
 
 = render partial: 'levels/common_audio'
 

@@ -7,8 +7,8 @@
   - unless related_videos.empty?
     %p.help_title= t('reference_area.title')
     %p.help_subtitle= t('reference_area.subtitle')
-    = render partial: "levels/video", collection: related_videos
-  %div{ style: "clear: both;"}
+    = render partial: 'levels/video', collection: related_videos
+  %div{style: 'clear: both;'}
 :javascript
   $('.video_link').each(function() {
     addClickTouchEvent($(this), $.proxy(function() {
