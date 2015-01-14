@@ -92,7 +92,7 @@ var StudioApp = function () {
   *   start and end tags.
   * @type {!Array=}
   */
-  this.requiredBlocks_ = undefined;
+  this.requiredBlocks_ = [];
 
   /**
   * The number of required blocks to give hints about at any one time.

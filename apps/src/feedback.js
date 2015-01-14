@@ -64,7 +64,7 @@ FeedbackUtils.prototype.displayFeedback = function(options,
   var feedbackBlocks;
   if (this.studioApp_.isUsingBlockly()) {
     feedbackBlocks = new FeedbackBlocks(options,
-                                        this.getMissingRequiredBlocks_(maxRequiredBlocksToFlag),
+                                        this.getMissingRequiredBlocks_(this.studioApp_.requiredBlocks_, maxRequiredBlocksToFlag),
                                         this.studioApp_);
   }
   // feedbackMessage must be initialized after feedbackBlocks
@@ -815,7 +815,7 @@ FeedbackUtils.prototype.hasAllRequiredBlocks_ = function() {
   // It's okay (maybe faster) to pass 1 for maxBlocksToFlag, since in the end
   // we want to check that there are zero blocks missing.
   var maxBlocksToFlag = 1;
-  return this.getMissingRequiredBlocks_(maxBlocksToFlag).blocksToDisplay.length === 0;
+  return this.getMissingRequiredBlocks_(this.studioApp_.requiredBlocks_, maxBlocksToFlag).blocksToDisplay.length === 0;
 };
 
 /**
@@ -848,30 +848,31 @@ FeedbackUtils.prototype.getCountableBlocks_ = function() {
 
 /**
  * Check to see if the user's code contains the required blocks for a level.
+ * @param {!Array} requiredBlocks The blocks that are required to be used in
+ *   the solution to this level.
  * @param {number} requiredBlocksToFlag The maximum number of blocks to return.
  * @return {{blocksToDisplay:!Array, message:?string}} 'missingBlocks' is an
- * array of array of strings where each array of strings is a set of blocks that
- * at least one of them should be used. Each block is represented as the prefix
- * of an id in the corresponding template.soy. 'message' is an optional message
- * to override the default error text.
+ *   array of array of strings where each array of strings is a set of blocks
+ *   that at least one of them should be used. Each block is represented as the
+ *   prefix of an id in the corresponding template.soy. 'message' is an
+ *   optional message to override the default error text.
  */
-FeedbackUtils.prototype.getMissingRequiredBlocks_ = function (
-    requiredBlocksToFlag ) {
+FeedbackUtils.prototype.getMissingRequiredBlocks_ = function (requiredBlocks,
+    requiredBlocksToFlag) {
   var missingBlocks = [];
   var customMessage = null;
   var code = null;  // JavaScript code, which is initialized lazily.
-  // TODO (br-pair) : we should probably just pass required_blocks
-  if (this.studioApp_.requiredBlocks_ && this.studioApp_.requiredBlocks_.length) {
+  if (requiredBlocks && requiredBlocks.length) {
     var userBlocks = this.getUserBlocks_();
     // For each list of required blocks
     // Keep track of the number of the missing block lists. It should not be
     // bigger than the requiredBlocksToFlag param.
     var missingBlockNum = 0;
     for (var i = 0;
-         i < this.studioApp_.requiredBlocks_.length &&
+         i < requiredBlocks.length &&
              missingBlockNum < requiredBlocksToFlag;
          i++) {
-      var requiredBlock = this.studioApp_.requiredBlocks_[i];
+      var requiredBlock = requiredBlocks[i];
       // For each of the test
       // If at least one of the tests succeeded, we consider the required block
       // is used
@@ -899,7 +900,7 @@ FeedbackUtils.prototype.getMissingRequiredBlocks_ = function (
       }
       if (!usedRequiredBlock) {
         missingBlockNum++;
-        missingBlocks = missingBlocks.concat(this.studioApp_.requiredBlocks_[i][0]);
+        missingBlocks = missingBlocks.concat(requiredBlocks[i][0]);
       }
     }
   }
