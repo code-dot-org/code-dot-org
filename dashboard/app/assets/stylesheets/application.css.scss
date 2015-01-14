@@ -1446,9 +1446,27 @@ a.download-video {
   #answerdest {
     width: 240px;
   }
+  .answerlist {
+    h4 {
+      position: relative;
+      top: 25%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+  }
   #answers {
     list-style-type: none;
     margin-left: 0px;
+  }
+  .answerslot {
+    h4 {
+      position: relative;
+      top: 25%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
   }
   #correctmarkscolumn
   {
