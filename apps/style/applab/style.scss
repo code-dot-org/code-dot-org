@@ -1,4 +1,4 @@
-$root: '/blockly/media/webapp/'; //TODO: Parameterize for asset pipeline
+$root: '/blockly/media/applab/'; //TODO: Parameterize for asset pipeline
 
 div#visualization {
   height: 600px;
@@ -29,7 +29,7 @@ div#visualization {
   }
 }
 
-#divWebapp {
+#divApplab {
   overflow: hidden;
   position: relative;
   z-index: 1;
@@ -44,7 +44,7 @@ div#visualization {
   user-select: none;
 }
 
-#divWebapp canvas {
+#divApplab canvas {
   position: absolute;
   overflow: hidden;
   top: 0px;
@@ -52,11 +52,11 @@ div#visualization {
   z-index: -1;
 }
 
-#divWebapp img {
+#divApplab img {
   opacity: 1.0;
 }
 
-#divWebapp div {
+#divApplab div {
   overflow: hidden;
 }
 
