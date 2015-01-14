@@ -9,24 +9,23 @@
 
     .header_text
       = stage_title(@script, @stage || @game)
-    - if game_levels.count > 1
-      .progress_container
-      :javascript
-        var scriptData = #{script_data_json};
-        var currentLevelIndex = #{@script_level.stage_or_game_position - 1};
-        var progressContainer = $('.progress_container');
-        scriptData.levels.forEach(function(level, index, levels) {
-          var defaultClass = level.assessment ? 'puzzle_outer_assessment' : 'puzzle_outer_level';
-          var link = $('<a>').attr('href', level.link).addClass('level_link').addClass(level.status).text(level.display_text);
-          if (level.unplugged) {
-            link.addClass('unplugged_level');
-          }
-          var div = $('<div>').addClass(index === currentLevelIndex ? 'puzzle_outer_current' : defaultClass).append(link);
-          if (index === levels.length - 1) {
-            div.addClass('last');
-          }
-          progressContainer.append(div).append('\n');
-        });
+    .progress_container
+    :javascript
+      var scriptData = #{script_data_json};
+      var currentLevelIndex = #{@script_level.stage_or_game_position - 1};
+      var progressContainer = $('.progress_container');
+      scriptData.levels.forEach(function(level, index, levels) {
+        var defaultClass = level.assessment ? 'puzzle_outer_assessment' : 'puzzle_outer_level';
+        var link = $('<a>').attr('href', level.link).addClass('level_link').addClass(level.status).text(level.display_text);
+        if (level.unplugged) {
+          link.addClass('unplugged_level');
+        }
+        var div = $('<div>').addClass(index === currentLevelIndex ? 'puzzle_outer_current' : defaultClass).append(link);
+        if (index === levels.length - 1) {
+          div.addClass('last');
+        }
+        progressContainer.append(div).append('\n');
+      });
     - if @script.hoc?
       .header_finished_link
         %a{href: hoc_finish_url(@script)}
