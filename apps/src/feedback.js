@@ -827,7 +827,7 @@ FeedbackUtils.prototype.getCountableBlocks_ = function() {
 
 /**
  * Check to see if the user's code contains the required blocks for a level.
- * This never returns more than StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG.
+ * This never returns more than StudioApp.requiredBlocksToFlagCount_.
  * @return {{blocksToDisplay:!Array, message:?string}} 'missingBlocks' is an
  * array of array of strings where each array of strings is a set of blocks that
  * at least one of them should be used. Each block is represented as the prefix
@@ -843,11 +843,11 @@ FeedbackUtils.prototype.getMissingRequiredBlocks_ = function () {
     var userBlocks = this.getUserBlocks_();
     // For each list of required blocks
     // Keep track of the number of the missing block lists. It should not be
-    // bigger than StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG
+    // bigger than StudioApp.requiredBlocksToFlagCount_
     var missingBlockNum = 0;
     for (var i = 0;
          i < this.studioApp_.REQUIRED_BLOCKS.length &&
-             missingBlockNum < this.studioApp_.NUM_REQUIRED_BLOCKS_TO_FLAG;
+             missingBlockNum < this.studioApp_.requiredBlocksToFlagCount_;
          i++) {
       var requiredBlock = this.studioApp_.REQUIRED_BLOCKS[i];
       // For each of the test

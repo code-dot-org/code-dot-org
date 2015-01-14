@@ -44,7 +44,7 @@ var level;
 var skin;
 
 studioApp.setCheckForEmptyBlocks(false);
-studioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
+studioApp.requiredBlocksToFlagCount_ = 1;
 
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;

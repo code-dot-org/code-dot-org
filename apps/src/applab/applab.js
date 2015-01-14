@@ -40,7 +40,7 @@ var skin;
 studioApp.setCheckForEmptyBlocks(true);
 
 //The number of blocks to show as feedback.
-studioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
+studioApp.requiredBlocksToFlagCount_ = 1;
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 10000;
 
