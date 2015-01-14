@@ -18,7 +18,7 @@
         .header_popup_link_text= t(:more)
 
 :javascript
-  var scriptData = #{header_progress};
+  var scriptData = #{header_progress.to_json};
   $('.header_text').first().html(scriptData.title);
   if (scriptData.finishLink) {
     $('.header_finished_link').show().append($('<a>').attr('href', scriptData.finishLink.href).text(scriptData.finishLink.text));
