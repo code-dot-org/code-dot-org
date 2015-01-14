@@ -833,7 +833,8 @@ StudioApp.prototype.displayFeedback = function(options) {
     options.feedbackType = this.TestResults.EDIT_BLOCKS;
   }
 
-  this.feedback_.displayFeedback(options, this.maxRequiredBlocksToFlag_);
+  this.feedback_.displayFeedback(options, this.requiredBlocks_,
+      this.maxRequiredBlocksToFlag_);
 };
 
 /**
