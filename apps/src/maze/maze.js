@@ -74,7 +74,7 @@ var getTile = function(map, x, y) {
 };
 
 //The number of blocks to show as feedback.
-studioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
+studioApp.requiredBlocksToFlagCount_ = 1;
 
 // Default Scalings
 Maze.scale = {
