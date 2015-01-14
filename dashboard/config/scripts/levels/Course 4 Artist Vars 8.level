@@ -6,13 +6,13 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Play around with the number of sides this shape has. Can you change the algorithm so that the overall size of the shape stays the same, no matter how many sides it has? Hint: You might have to use your math blocks (360 divided by \"sides\" in two places this time) ",
+    "instructions": "Free Play: Experiment with the number of sides this shape has. Can you change the algorithm so that the overall size of the shape stays the same, no matter how many sides it has? Hint: You might have to use your math blocks (360 divided by \"sides\" in two places this time) ",
     "x": "150",
     "y": "350",
     "start_direction": "90",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "slider_speed": ".8",
+    "slider_speed": ".6",
     "disable_param_editing": "true",
     "free_play": "true",
     "disable_variable_editing": "true",
@@ -110,7 +110,7 @@
           <title name="NUM">???</title>
         </block>
         <block type="math_arithmetic" inline="true">
-          <title name="OP">ADD</title>
+          <title name="OP">DIVIDE</title>
         </block>
         <block type="variables_set" inline="false">
           <title name="VAR">sides</title>
@@ -137,57 +137,7 @@
     </required_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
-          <next>
-            <block type="variables_set" inline="false">
-              <title name="VAR">sides</title>
-              <value name="VALUE">
-                <block type="math_number">
-                  <title name="NUM">4</title>
-                </block>
-              </value>
-              <next>
-                <block type="controls_repeat_ext" inline="true">
-                  <value name="TIMES">
-                    <block type="variables_get">
-                      <title name="VAR">sides</title>
-                    </block>
-                  </value>
-                  <statement name="DO">
-                    <block type="draw_move" inline="true">
-                      <title name="DIR">moveForward</title>
-                      <value name="VALUE">
-                        <block type="math_number">
-                          <title name="NUM">100</title>
-                        </block>
-                      </value>
-                      <next>
-                        <block type="draw_turn" inline="true">
-                          <title name="DIR">turnLeft</title>
-                          <value name="VALUE">
-                            <block type="math_arithmetic" inline="true">
-                              <title name="OP">DIVIDE</title>
-                              <value name="A">
-                                <block type="math_number">
-                                  <title name="NUM">360</title>
-                                </block>
-                              </value>
-                              <value name="B">
-                                <block type="variables_get">
-                                  <title name="VAR">sides</title>
-                                </block>
-                              </value>
-                            </block>
-                          </value>
-                        </block>
-                      </next>
-                    </block>
-                  </statement>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
+        <block type="when_run" deletable="false" movable="false"/>
       </xml>
     </solution_blocks>
   </blocks>

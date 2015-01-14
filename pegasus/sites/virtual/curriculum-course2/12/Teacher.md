@@ -55,6 +55,7 @@ We don’t always know ahead of time what things will be like when we run our co
 - [Conditionals with Cards Assessment](/curriculum/course2/12/Assessment12-Conditionals.pdf)
 
 ### For the Teacher
+- [Lesson Video](http://youtu.be/IcEL5ibSvTs?list=PL2DhNKNdmOtobJjiTYvpBDZ0xzhXRj11N)
 - This Teacher Lesson Guide
 - One [Sample Program](/curriculum/course2/12/Activity12-Conditionals.pdf) for the class to look at
 - Print one [Conditionals with Cards Assessment](/curriculum/course2/12/Assessment12-Conditionals.pdf) for each student

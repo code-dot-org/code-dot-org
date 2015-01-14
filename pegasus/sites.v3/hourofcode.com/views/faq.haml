@@ -51,6 +51,10 @@
   %h2= hoc_s(:hoc_faq_how_participate_q)
   %div= hoc_s(:hoc_faq_how_participate_a).gsub(/target-resources-how-to/, hoc_uri('/resources/how-to'))
 
+  -if @country == 'ro'
+    %h2 Ma mai pot preinregistra la Hour of Code?
+    %div= "Formularul de preinregistre la Hour of Code este acum inchis. Puteti participa in continuare oricand va rugam sa consultati sectiunea <a href='#{hoc_uri('/resources')}'>RESURSE</a>."
+
   %h2= hoc_s(:hoc_faq_behind_hoc_q)
   %div= hoc_s(:hoc_faq_behind_hoc_a).gsub(/http:\/\/code.org/, "http://#{codeorg_url()}")
 
@@ -82,3 +86,6 @@
 -if @country == 'br'
   %h2= hoc_s(:hoc_faq_more_questions_br_q)
   %div= hoc_s(:hoc_faq_more_questions_br_a)
+
+-if @country == 'ro'
+  %h2 Daca aveti intrebari sau aveti nevoie de suport contactati echipa Hour of Code la adresa support@adfaber.org

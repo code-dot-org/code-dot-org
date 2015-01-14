@@ -79,6 +79,9 @@
         </block>
       </xml>
     </start_blocks>
+    <toolbox_blocks>
+      <xml/>
+    </toolbox_blocks>
     <required_blocks>
       <xml>
         <block type="controls_repeat_ext" inline="true">

@@ -2,6 +2,6 @@
 title: Edit Your Class
 ---
 - secret = File.basename(request.path_info)
-- pass unless form = Form.first(kind:'VolunteerEngineerSubmission', secret:secret)
+- pass unless form = Form2.from_row(DB[:forms].where(kind:'VolunteerEngineerSubmission', secret:secret).first)
 - locals = {form:form, mode:nil}.merge(form.data)
 = view :volunteer_engineer_form, locals

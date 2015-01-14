@@ -23,7 +23,10 @@
     "coordinate_grid_background": "false",
     "instructions": "Add another parameter called \"speed\" to the \"patrol\" function. Use a \"set speed\" block with the new \"speed\" parameter.",
     "first_sprite_index": "1",
-    "embed": "false"
+    "embed": "false",
+    "callout_json": "[{\r\n  \"localization_key\": \"edit_add_parameter\",\r\n  \"element_id\": \"#edit_add_parameter_qtip > .blocklyIconGroup:eq(-1)\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"top center\", \"at\": \"bottom center\"}\r\n  }\r\n}]",
+    "disable_sharing": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
@@ -83,7 +86,7 @@
         </block>
         <block type="studio_repeatForever">
           <statement name="DO">
-            <block type="procedures_callnoreturn" inline="false">
+            <block type="procedures_callnoreturn" inline="false" id="edit_add_parameter_qtip">
               <mutation name="patrol">
                 <arg name="actor"/>
                 <arg name="speed"/>

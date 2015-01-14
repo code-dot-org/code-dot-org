@@ -5,7 +5,7 @@ title: 5 ways you can help
 
 ## 1) Ask your school to host an Hour of Code
 
-Ask your local school to host an Hour of Code during Computer Science Education Week (Dec. 9-15, 2013). It's a worldwide campaign to help 10 million students try computer science for one hour during the week. Share
+Ask your local school to host an Hour of Code, any time during the year. It's a worldwide campaign to students try computer science for one hour. Share
   [this handout](/files/Hour-of-Code-Handout-for-Schools.pdf) with your teachers and principal, and learn more [here](http://hourofcode.org).
 
 <a href="http://hourofcode.com" class="btn btn-default" style="color: #fff;">Learn about the Hour of Code</a>
@@ -22,7 +22,7 @@ Find local camps, workshops, and schools that teach computer programming.
 
 ## 4) Buy and wear Code.org swag
 
-Wear shirts, hats, and more, from our [online store](http://www.zazzle.com/codeorg) to help support Code.org and spread the word.
+Wear shirts, hats, and more, from our [online store](http://store.code.org/) to help support Code.org and spread the word.
 
 <div><embed wmode="transparent" src="http://www.zazzle.com/utl/getpanel?zp=117342499302595486" flashvars="feedId=117342499302595486" width="700" height="400" type="application/x-shockwave-flash" /></div>
 

@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Now, it's your turn! Instead of \"moving forward 100,\" the \"move\" block is referencing the variable \"length.\" Can you set \"length\" to 150 to draw this new triangle?",
+    "instructions": "Instead of \"moving forward by 100,\" the \"move\" block is now referencing the variable \"length.\" Can you set \"length\" to 150 to draw this new triangle?",
     "x": "125",
     "y": "250",
     "start_direction": "90",
@@ -22,7 +22,8 @@
     "impressive": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "callout_json": "[{\"localization_key\": \"set_length\", \r\n   \"element_id\": \"#variable_set_qtip > .blocklyPath\", \r\n   \"qtip_config\": {\r\n    \"position\": {\"my\": \"left center\", \"at\": \"right center\"}\r\n  }\r\n}]"
+    "callout_json": "[{\"localization_key\": \"set_length\", \r\n   \"element_id\": \"#variable_set_qtip > .blocklyPath\", \r\n   \"qtip_config\": {\r\n    \"position\": {\"my\": \"left center\", \"at\": \"right center\"}\r\n  }\r\n}]",
+    "video_key": "C4_variables_artist"
   }
 }]]></config>
   <blocks>
@@ -30,8 +31,13 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="variables_set" inline="false" deletable="false" movable="false" id="variable_set_qtip">
+            <block type="variables_set" inline="false" movable="false">
               <title name="VAR">length</title>
+              <value name="VALUE">
+                <block type="math_number" id="variable_set_qtip">
+                  <title name="NUM">???</title>
+                </block>
+              </value>
               <next>
                 <block type="controls_repeat" deletable="false" movable="false" editable="false">
                   <title name="TIMES">3</title>
@@ -39,7 +45,7 @@
                     <block type="draw_move" inline="true" deletable="false" movable="false" editable="false">
                       <title name="DIR">moveForward</title>
                       <value name="VALUE">
-                        <block type="variables_get" deletable="false" movable="false">
+                        <block type="variables_get" movable="false">
                           <title name="VAR">length</title>
                         </block>
                       </value>
@@ -60,10 +66,7 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="math_number">
-          <title name="NUM">150</title>
-        </block>
-      </xml>
+</xml>
     </toolbox_blocks>
     <required_blocks>
       <xml>

@@ -57,6 +57,7 @@ Binary is extremely important to the computer world. The majority of computers t
 - Scissors
 
 ### For the Teacher
+- [Lesson Video](http://youtu.be/8HANsec7TiQ?list=PL2DhNKNdmOtobJjiTYvpBDZ0xzhXRj11N)
 - This Teacher Lesson Guide
 - [Binary Bracelet Worksheet](/curriculum/course2/14/Activity14-BinaryBracelets.pdf)
 - [Binary Assessment](/curriculum/course2/14/Assessment14-BinaryBracelets.pdf)

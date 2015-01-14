@@ -1,11 +1,9 @@
-if ENV["CODECLIMATE_REPO_TOKEN"]
-  require "codeclimate-test-reporter"
-  CodeClimate::TestReporter.start
-else
-# there can be only one code coverage tool
-  require 'simplecov'
-  SimpleCov.start :rails
-end
+# uncomment the below if you want to see code coverage
+#  require 'simplecov'
+#  SimpleCov.start :rails
+
+require 'minitest/reporters'
+MiniTest::Reporters.use!
 
 ENV["RAILS_ENV"] ||= "test"
 
@@ -25,6 +23,8 @@ class ActiveSupport::TestCase
 
   setup do
     set_env :test
+
+    AWS::S3.stubs(:upload_to_bucket).raises("Don't actually upload anything to S3 in tests... mock it if you want to test it")
   end
 
   teardown do
@@ -34,6 +34,23 @@ class ActiveSupport::TestCase
   def set_env(env)
     Rails.env = env.to_s
     CDO.rack_env = env
+  end
+
+
+  # some s3 helpers/mocks
+  def expect_s3_upload
+    CDO.disable_s3_image_uploads = false
+    AWS::S3.expects(:upload_to_bucket).returns(true).twice
+  end
+
+  def expect_s3_upload_failure
+    CDO.disable_s3_image_uploads = false
+    AWS::S3.expects(:upload_to_bucket).returns(nil)
+  end
+
+  def expect_no_s3_upload
+    CDO.disable_s3_image_uploads = false
+    AWS::S3.expects(:upload_to_bucket).never
   end
 
 
@@ -140,8 +157,13 @@ class ActionController::TestCase
   end
 
   def assert_signed_in_as(user)
-    assert false, 'no logged in user' unless session['warden.user.user.key'].try(:first).try(:first)
-    assert_equal user.id, session['warden.user.user.key'].first.first
+    signed_in_user_id = session['warden.user.user.key'].try(:first).try(:first)
+    if user
+      assert signed_in_user_id, 'No signed in user'
+      assert_equal user.id, signed_in_user_id
+    else
+      assert_equal nil, signed_in_user_id, "Expected no signed in user"
+    end
   end
 end
 

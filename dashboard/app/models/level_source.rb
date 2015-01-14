@@ -15,11 +15,33 @@ class LevelSource < ActiveRecord::Base
   # A level_source is considered to be standardized if it does not have this.
   XMLNS_STRING = ' xmlns="http://www.w3.org/1999/xhtml"'
 
+  def LevelSource.cache_enabled?
+    @@cache_enabled ||= false
+    rack_env?(:production) || @@cache_enabled
+  end
+
+  def LevelSource.level_source_cache()
+    @@level_sources_redis ||= rack_env?(:production) ? Redis.connect(url:CDO.level_sources_redis_url) : Hash.new
+  end
+
   def self.find_identical_or_create(level, data)
     md5 = Digest::MD5.hexdigest(data)
-    self.where(level: level, md5: md5).first_or_create do |ls|
-      ls.data = data
+
+    redis_key = "v6-#{level.id}-#{md5}"
+
+    marshalled = LevelSource.level_source_cache[redis_key] if LevelSource.cache_enabled?
+    level_source_object = Marshal.load(marshalled) if marshalled
+
+    unless level_source_object
+      level_source_object = self.where(level: level, md5: md5).first_or_create do |ls|
+        ls.data = data
+      end
+      return nil unless level_source_object
+
+      LevelSource.level_source_cache[redis_key] = Marshal.dump(level_source_object) if LevelSource.cache_enabled?
     end
+
+    level_source_object
   end
 
   def standardized?

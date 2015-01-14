@@ -215,23 +215,6 @@ class LevelsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  test "should set coordinates and direction from query string" do
-    get :new, :type => "Artist", :x => 5, :y => 10, :start_direction => 90
-    level = assigns(:level)
-    assert_equal 5, level.x
-    assert_equal 10, level.y
-    assert_equal 90, level.start_direction
-  end
-
-  test "should handle coordinates if non integer" do
-    get :new, :type => "Artist", :x => "", :y => 5.5, :start_direction => "hi"
-    level = assigns(:level)
-    assert level
-    assert_nil level.x
-    assert_nil level.y
-    assert_nil level.start_direction
-  end
-
   test "should not create level if not admin" do
     sign_in @not_admin
     assert_no_difference('Level.count') do
@@ -487,6 +470,20 @@ class LevelsControllerTest < ActionController::TestCase
     level = level.reload
     # same name
     assert_equal 'different name', level.name
+  end
+
+  test 'can show embed level when not signed in' do
+    level = create(:artist)
+    sign_out(@user)
+
+    get :show, id: level
+    assert_response :redirect
+
+    get :edit, id: level, embed:true
+    assert_response :redirect
+
+    get :show, id: level, embed:true
+    assert_response :success
   end
 
 end

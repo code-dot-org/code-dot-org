@@ -1,56 +1,56 @@
 
 
-# Hour of Code event guide
+# Hour of Code 이벤트 가이드
 
-Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
+컴퓨터과학교육주간(Computer Science Education Week)(12월8일-14일) 동안에 Hour of Code 이벤트를 조직/운영해 주시면서 컴퓨터과학(정보과학) 분야에 대해서 알리고 더 많은 학생들이 경험해 볼 수 있도록 도와주세요. 누구나 어디서나 Hour of Code 이벤트를 조직/운영할 수 있습니다.
 
-## 1) Prepare for your event
+## 1) 이벤트 준비하기
 
-  * Determine a venue, date and time
-  * Send [a letter](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) to invite your local mayor, congressman, governor, or influential business person to speak.
-  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= hoc_uri('/resources/press-kit') %>) for help.
+  * 장소, 날짜, 시간을 결정하세요.
+  * 여러분의 지역 시장, 지역 의원, 지역 공무원, 지역 사업가를 초청해서 강연을 부탁하는 [편지](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>)를 보내 주세요.
+  * 지역 신문, 지역 미디어, 지역 교육/공학 블로거들을 초대하세요. [프레스 키트](<%= hoc_uri('/resources/press-kit') %>)를 살펴보시면 됩니다.
 
-## 2) During your event
+## 2) 이벤트 기간 동안에
 
-  * Kick off your event with one of our [inspirational videos](<%= hoc_uri('/resources#videos') %>).
-  * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= hoc_uri('/resources/stats') %>).   
+  * [영감을 주는 동영상](<%= hoc_uri('/resources#videos') %>)들 중 하나를 골라 이벤트를 시작하세요..
+  * 처음에 [통계 및 인포그래픽](<%= hoc_uri('/resources/stats') %>)들 중에서 적당한 것을 골라 컴퓨터과학(정보과학)교육의 중요성을 살펴볼 수 있도록하면서 시작하세요.   
       
     
-  * Other event ideas: 
-      * Invite a local industry leader to discuss his or her work involving computer science
-      * Invite a local politician and have students teach him or her how to code
-      * Watch one of the Q&A sessions with an Hour of Code ambassador. They will all be recorded and on Code.org’s YouTube page. This year’s participants include Bill Gates, Sheryl Sandberg, Ashton Kutcher and more!
-      * Have a group of students demonstrate an unplugged activity
-      * Have a group of students teach the principal or a group of teachers how to code
-      * If your school already teaches computer science, have students demo projects
+  * 다른 이벤트 아이디어들: 
+      * 지역 유명 업체의 대표를 초청해서 컴퓨터과학 분야와 얼마나 연관되어있는지 이야기해 볼 수 있도록 하세요.
+      * 지역 정치인을 초대해서 학생들과 함께 코드를 작성해도록 해보세요.
+      * Hour of Code 홍보대사 중 한 분과 함께하는 Q&A 세션 중 하나를 시청해 보세요. Code.org의 유투브(YouTube) 페이지에서 녹화되어 공유될 것입니다. 올해에는 빌 게이츠(Bill Gates), 셰릴 샌드버그(Sheryl Sandberg), 애쉬튼 거쳐(Ashton Kutcher) 등이 함께 할 예정입니다!
+      * 컴퓨터과학 언플러그드 활동을 학생들과 직접 시연해 보세요.
+      * 한 학생들 그룹이나, 한 교사들 그룹에게 코드를 작성하는 방법을 가르쳐보세요.
+      * 만약, 여러분의 학교에서 이미 컴퓨터과학(정보과학) 교과를 가르치고 있다면, 학생들과 시범 프로젝트를 진행해 보세요.
 
-## 3) Share how it went
+## 3) 진행 결과를 함께 공유해 주세요.
 
-  * Share pictures of your event on Facebook and Twitter. 
-  * Use the hashtag **#HourofCode**
+  * 여러분의 이벤트 진행과 관련한 사진들을 페이스북이나 트위터에 공유해 주세요. 
+  * **#HourofCode** 해쉬 태그를 사용하면 됩니다.
 
-## Example Event Plan
+## 이벤트 계획 예시
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**이벤트:** 학교 전체 행사로서 컴퓨터과학교육주간 킥오프 과정
 
-**Date:** Dec 8th (start of Computer Science Education Week)
+**날짜:** 12월8일(컴퓨터과학교육주간 시작일)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**시간:** 학교 일과 중. 아침-점심 사이 시간. 대략 1시간 정도.
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
+**장소:** 학교 강당 시설(예를 들어 극장, 체육관, 카페테리아 식당)   
   
 
 
-## Run of Show
+## 이벤트 일정
 
 <table>
   <tr>
     <th style="width:200px">
-      Time
+      시간
     </th>
     
     <th style="width:800px">
-      Action
+      내용
     </th>
   </tr>
   
@@ -60,55 +60,55 @@ Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to 
     </td>
     
     <td>
-      Open with one of our <a href="http://hourofcode.com/us/resources#videos">inspirational videos</a>
+      <a href="http://hourofcode.com/us/resources#videos">영감을 주는 동영상들</a>중 하나를 시청한다.
     </td>
   </tr>
   
   <td>
-    10:05-11:15 am
+    10:05-10:15 am
   </td>
   
   <td>
-    Principal gives an intro overviewing the importance of computer science. Use these <a href="/resources/stats">stats and infographics</a>.
+    교장선생님이 컴퓨터과학(정보과학)의 중요성을 간단히 살펴보면서 설명하는 인트로로 시작한다. <a href="/resources/stats">통계 및 인포그래픽자료들</a>을 활용한다..
   </td></tr> 
   
   <td>
-    11:15-11:17 am
+    10:15-10:17 am
   </td>
   
   <td>
-    Open with one of our <a href="http://hourofcode.com/us/resources#videos">inspirational videos</a>
+    <a href="http://hourofcode.com/us/resources#videos">영감을 주는 동영상들</a>중 하나를 시청한다.
   </td></tr> 
   
   <td>
-    11:17-11:30 am
+    10:17-10:30 am
   </td>
   
   <td>
-    Special guest to talk about their background and how technology and computer science plays an important role in their everyday lives.
+    특별 초청 게스트가 자기소개를 하고, 그 사람의 일상생활에서 컴퓨터과학기술과 컴퓨터과학이 얼마나 중요한 역할을 하고 있는지에 대해서 이야기 한다.
   </td></tr> 
   
   <td>
-    11:30-11:40 am
+    10:30-10:40 am
   </td>
   
   <td>
-    Students do an Hour of Code demo for the school. Fun twist- have them teach the principal, politician or other students.
+    학교 전체를 위해 학생들이 Hour of Code 의 데모를 시연한다. 재미있는 이벤트로 학생들이 교장, 정치인, 다른 학생들을 가르쳐 주도록 한다.
   </td></tr> 
   
   <td>
-    11:40-12:00 pm
+    10:40-11:00 pm
   </td>
   
   <td>
-    Students demo an unplugged activity and how computer science can be taught without using computers.
+    학생들이 컴퓨터과학 언플러그드 활동을 시연하면서, 컴퓨터가 전혀 없이도 컴퓨터과학(정보과학)에 대해서 어떻게 배울 수 있게 되는지 보여주도록 한다.
   </td></tr> 
   
   <td>
-    12:00-12:05 pm
+    11:00-11:05 pm
   </td>
   
   <td>
-    Teacher who help bring the school-wide event gives closing remarks.
+    학교 전체 활동을 계획하고 주도한 선생님이 맺음말 한다.
   </td>
 </table>

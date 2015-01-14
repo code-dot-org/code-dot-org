@@ -106,11 +106,9 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test "create turtle level from level builder" do
-    program = '<xml>hey</xml>'
-    level = Artist.create_from_level_builder(@turtle_data.merge!(program: program), {name: 'create_turtle_name'})
+    level = Artist.create_from_level_builder(@turtle_data, {name: 'create_turtle_name'})
 
     assert_equal "Artist", level.type
-    assert_equal program, level.properties['solution_blocks']
     assert_equal 'custom', level.level_num
   end
 
@@ -222,4 +220,26 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal level.solution_blocks, level.ideal_level_source.data
   end
 
+  test 'updating ContractMatch level updates it' do
+    File.expects(:write).times(4) # mock file so we don't actually write a file... twice each for the .contract_match file and the i18n strings file (once for create and once for save)
+     
+    name = 'contract match test'
+    dsl_text = <<EOS
+name 'Eval Contracts 1 B'
+title 'Eval Contracts 1 B'
+content1 'Write a contract for the star function'
+content2 'Eval Contracts 1 A.solution_blocks, 300'
+answer 'star|image|color:string|radius:Number|style:string'
+EOS
+    cm = ContractMatch.create_from_level_builder({}, {name: name, type: 'ContractMatch', dsl_text: dsl_text})
+
+    # update the same level with different dsl text
+    dsl_text = dsl_text.gsub('star', 'bar')
+    cm.update(name: name, type: 'ContractMatch', dsl_text: dsl_text)
+
+    cm = ContractMatch.find(cm.id)
+    # star -> bar
+    assert_equal 'bar|image|color:string|radius:Number|style:string', cm.properties['answers'].first
+    assert_equal 'Write a contract for the bar function', cm.properties['content1']
+  end
 end

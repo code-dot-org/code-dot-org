@@ -3,9 +3,9 @@ title: UK Hour of Code Resources
 nav: about_nav
 tagline: Year of Code
 social:
-  'og:title' : 'The UK Hour of Code is coming'
+  'og:title' : 'The UK Hour of Code is here'
   'og:description' : "For every UK student and classroom: learn how fun coding is in just one hour December 8 - 14."
-  'og:image' : "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg"
+  'og:image' : "http://<%=request.host%>/images/code-video-thumbnail.jpg"
   "og:image:width": 1705
   "og:image:height": 949
   "og:url": "http://uk.code.org"

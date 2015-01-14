@@ -2,35 +2,35 @@
 
 %h3 Users with accounts
 
-%b Total users
+%strong Total users
 #{@user_count}
 %br/
-%b Students
+%strong Students
 #{@student_count}
 %br/
-%b Teachers
+%strong Teachers
 #{@teacher_count}
 %br/
-%b Gender (when specified):
+%strong Gender (when specified):
 - if @girls + @boys > 0
   Girls #{@girls * 100 / (@girls + @boys)}% /
   Boys #{@boys * 100 / (@girls + @boys)}%
 - else 
   0 users with specified gender
 %br/
-%b Users linked to a teacher
+%strong Users linked to a teacher
 - if @user_count > 0
   #{@users_with_teachers} (#{@users_with_teachers * 100 / @user_count}%)
 - else
   0
 %br/
-%b Users with an email address
+%strong Users with an email address
 - if @user_count > 0
   #{@users_with_email} (#{@users_with_email * 100 / @user_count}%)
 - else 
   0
 %br/
-%b Teachers with a confirmed email address
+%strong Teachers with a confirmed email address
 - if @teacher_count > 0
   #{@users_with_confirmed_email} (#{@users_with_confirmed_email * 100 / @teacher_count}%)
 - else 
@@ -44,16 +44,16 @@
 
 %h3 Prizes
 
-%b Total student prizes earned
+%strong Total student prizes earned
 #{@student_prizes_earned}
 %br/
-%b Total student prizes redeemed
+%strong Total student prizes redeemed
 #{@student_prizes_redeemed}
 %br/
 - @prizes_redeemed.each do |key, value|
   #{key.name} #{value}
   %br/
-%b Student prizes available to be redeemed
+%strong Student prizes available to be redeemed
 #{@student_prizes_available}
 %br/
 - @prizes_available.each do |key, value|
@@ -61,24 +61,24 @@
   %br/
 %br/
 
-%b Total teacher prizes earned
+%strong Total teacher prizes earned
 #{@teacher_prizes_earned}
 %br/
-%b Total teacher prizes redeemed
+%strong Total teacher prizes redeemed
 #{@teacher_prizes_redeemed}
 %br/
-%b Teacher prizes available to be redeemed
+%strong Teacher prizes available to be redeemed
 #{@teacher_prizes_available}
 %br/
 %br/
 
-%b Total bonus teacher prizes earned
+%strong Total bonus teacher prizes earned
 #{@teacher_bonus_prizes_earned}
 %br/
-%b Total teacher bonus prizes redeemed
+%strong Total teacher bonus prizes redeemed
 #{@teacher_bonus_prizes_redeemed}
 %br/
-%b Teacher bonus prizes available to be redeemed
+%strong Teacher bonus prizes available to be redeemed
 #{@teacher_bonus_prizes_available}
 %br/
 %br/

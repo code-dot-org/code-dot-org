@@ -1,8 +1,0 @@
-{
-  "compute": "計算",
-  "equivalentExpression": "同じ式になるよう引数を並べ替えてください。",
-  "extraTopBlocks": "使っていないブロックがあります。それらを\"計算\"ブロックにつなげるつもりでしたか？",
-  "goal": "目標",
-  "reinfFeedbackMsg": "あなたのストーリーができあがりました！作業をつづけるか、次のパズルに進みましょう。",
-  "yourExpression": "あなたの式:"
-}

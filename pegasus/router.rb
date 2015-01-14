@@ -155,11 +155,12 @@ class Documents < Sinatra::Base
 
     extname = File.extname(path).downcase
     pass unless settings.image_extnames.include?(extname)
+    image_format = extname[1..-1]
 
     basename = File.basename(path, extname)
     dirname = File.dirname(path)
 
-    # A
+    # Manipulated?
     if dirname =~ /\/(fit-|fill-)?(\d+)x?(\d*)$/ || dirname =~ /\/(fit-|fill-)?(\d*)x(\d+)$/
       manipulation = File.basename(dirname)
       dirname = File.dirname(dirname)
@@ -184,6 +185,8 @@ class Documents < Sinatra::Base
     
     if ((retina_in == retina_out) || retina_out) && !manipulation && File.extname(path) == extname
       # No [useful] modifications to make, return the original.
+      content_type image_format.to_sym
+      cache_control :public, :must_revalidate, max_age:settings.image_max_age
       send_file(path)
     else
       image = Magick::Image.read(path).first
@@ -229,9 +232,9 @@ class Documents < Sinatra::Base
       raise StandardError, 'Unreachable code reached!'
     end
 
-    image.format = extname[1..-1]
+    image.format = image_format
 
-    content_type image.format.to_sym
+    content_type image_format.to_sym
     cache_control :public, :must_revalidate, max_age:settings.image_max_age
     image.to_blob
   end
@@ -241,7 +244,8 @@ class Documents < Sinatra::Base
     get_head_or_post %r{^\/dashboardapi\/?} do
       env = request.env.merge('PATH_INFO'=>request.path_info.sub(/^\/dashboardapi/, '/api'))
 
-      document = Pegasus::Proxy.new(server:canonical_hostname('learn.code.org') + ":#{CDO.dashboard_port}", host:'learn.code.org').call(env)
+      host_and_port = canonical_hostname('studio.code.org') + ':' + CDO.dashboard_port.to_s
+      document = Pegasus::Proxy.new(server: host_and_port, host: host_and_port).call(env)
       pass unless document
 
       status(document.status)
@@ -327,7 +331,7 @@ class Documents < Sinatra::Base
       begin
         render_(content, File.extname(path))
       rescue Haml::Error => e
-        if e.backtrace.first =~ /router\.rb:/
+        if e.backtrace.first =~ /router\.rb:/ && e.line
           actual_line_number = e.line - line_number_offset + 1
           e.set_backtrace e.backtrace.unshift("#{path}:#{actual_line_number}")
         end
@@ -450,9 +454,9 @@ class Documents < Sinatra::Base
     def social_metadata()
       if request.site == 'csedweek.org'
         metadata = {
-          'og:title'          => @header['title'] || "The Hour of Code is coming",
+          'og:title'          => @header['title'] || "The Hour of Code is here",
           'og:description'    => @header['description'] || "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104.",
-          'og:image'          => @header['og:image'] || 'http://csedweek.org/images/hour-of-code-2014-video-thumbnail.jpg',
+          'og:image'          => @header['og:image'] || 'http://csedweek.org/images/code-video-thumbnail.jpg',
           'og:image:width'    => @header['og:image:width'] || '1705',
           'og:image:height'   => @header['og:image:height'] || '949',
           'og:site_name'      => 'CSEd Week',
@@ -462,9 +466,9 @@ class Documents < Sinatra::Base
         }
       else
         metadata = {
-          'og:title'          => @header['title'] || "The Hour of Code is coming",
+          'og:title'          => @header['title'] || "The Hour of Code is here",
           'og:description'    => @header['description'] || "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104.",
-          'og:image'          => @header['og:image'] || 'http://code.org/images/hour-of-code-2014-video-thumbnail.jpg',
+          'og:image'          => @header['og:image'] || 'http://code.org/images/code-video-thumbnail.jpg',
           'og:image:width'    => @header['og:image:width'] || '1705',
           'og:image:height'   => @header['og:image:height'] || '949',
           'og:site_name'      => 'Code.org',

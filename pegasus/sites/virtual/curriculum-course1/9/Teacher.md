@@ -57,6 +57,7 @@ This lesson teaches that failure is not the end of a journey, but a hint for how
 
 
 ### For the Teacher
+- [Lesson Video](http://youtu.be/J7y0o6VxMXQ?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G)
 - Teacher Lesson Guide
 - Print [Building a Foundation Packet](/curriculum/course1/9/Activity9-BuildingFoundation.pdf)
 - Gather enough building elements for each group

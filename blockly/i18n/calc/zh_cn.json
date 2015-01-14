@@ -1,8 +1,0 @@
-{
-  "compute": "compute",
-  "equivalentExpression": "Try reordering your arguments to get exactly the same expression.",
-  "extraTopBlocks": "You have unattached blocks. Did you mean to attach these to the \"compute\" block?",
-  "goal": "Goal:",
-  "reinfFeedbackMsg": "这看起来像你想要的吗？您可以点击\"重试\"按钮查看您的绘图。",
-  "yourExpression": "Your expression:"
-}

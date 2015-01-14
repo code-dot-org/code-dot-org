@@ -67,7 +67,7 @@ namespace :seed do
   # cronjob that detects changes to .multi files
   MULTIS_GLOB = Dir.glob('config/scripts/**/*.multi').sort.flatten
   file 'config/scripts/.multis_seeded' => MULTIS_GLOB do |t|
-    Rake::Task['seed:multis'].invoke
+    Rake::Task['seed:multdis'].invoke
     touch t.name
   end
 
@@ -121,9 +121,14 @@ namespace :seed do
       # Parse each .[dsl] file and setup its model.
       DSLS_GLOB.each do |filename|
         dsl_class = DSL_TYPES.detect{|type|filename.include?(".#{type.underscore}") }.try(:constantize)
-        data, i18n = dsl_class.parse_file(filename)
-        dsl_class.setup data
-        dsl_strings.deep_merge! i18n
+        begin
+          data, i18n = dsl_class.parse_file(filename)
+          dsl_class.setup data
+          dsl_strings.deep_merge! i18n
+        rescue Exception => e
+          puts "Error parsing #{filename}"
+          raise
+        end
       end
       File.write('config/locales/dsls.en.yml', dsl_strings.to_yaml(options = {:line_width => -1}))
     end
@@ -295,4 +300,8 @@ namespace :seed do
 
   task all: [:videos, :concepts, :scripts, :trophies, :prize_providers, :callouts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
   task incremental: [:videos, :concepts, :scripts_incremental, :trophies, :prize_providers, :callouts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
+
+  task script_cache_to_redis: :environment do
+    Script.script_cache_to_redis
+  end
 end

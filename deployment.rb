@@ -1,8 +1,10 @@
 $:.unshift File.expand_path('../lib', __FILE__)
+$:.unshift File.expand_path('../shared/middleware', __FILE__)
 require 'csv'
 require 'yaml'
 require 'cdo/erb'
 require 'cdo/slog'
+require 'os'
 
 def load_yaml_file(path)
   return nil unless File.file?(path)
@@ -39,12 +41,13 @@ def load_configuration()
 
   {
     'app_servers'                 => {},
-    'build_blockly'               => false,
+    'build_apps'               => false,
     'build_blockly_core'          => false,
     'build_dashboard'             => true,
     'build_pegasus'               => true,
     'dashboard_db_name'           => "dashboard_#{rack_env}",
     'dashboard_devise_pepper'     => 'not a pepper!',
+    'dashboard_secret_key_base'   => 'not a secret',
     'dashboard_honeybadger_api_key' =>'00000000',
     'dashboard_port'              => 3000,
     'dashboard_unicorn_name'      => 'dashboard',
@@ -55,8 +58,9 @@ def load_configuration()
     'hip_chat_logging'            => false,
     'home_dir'                    => File.expand_path('~'),
     'languages'                   => load_languages(File.join(root_dir, 'pegasus', 'data', 'cdo-languages.csv')),
-    'localize_blockly'            => false,
+    'localize_apps'            => false,
     'name'                        => hostname,
+    'npm_use_sudo'                => ((rack_env != :development) && OS.linux?),
     'pegasus_db_name'             => rack_env == :production ? 'pegasus' : "pegasus_#{rack_env}",
     'pegasus_honeybadger_api_key' =>'00000000',
     'pegasus_port'                => 9393,
@@ -67,6 +71,7 @@ def load_configuration()
     'rack_env'                    => rack_env,
     'rack_envs'                   => [:development, :production, :staging, :test, :levelbuilder],
     'read_only'                   => false,
+    'ruby_installer'              => rack_env == :development ? 'rbenv' : 'system',
     'root_dir'                    => root_dir,
     'sendy_db_reader'             => 'mysql://root@localhost/',
     'sendy_db_writer'             => 'mysql://root@localhost/',
@@ -76,11 +81,14 @@ def load_configuration()
     ENV['RACK_ENV'] = rack_env.to_s unless ENV['RACK_ENV']
     raise "RACK_ENV ('#{ENV['RACK_ENV']}') does not match configuration ('#{rack_env}')" unless ENV['RACK_ENV'] == rack_env.to_s
 
+    config['bundler_use_sudo'] = config['ruby_installer'] == 'system'
+
     config.merge! default_config
     config.merge! env_config
     config.merge! host_config
     config.merge! local_config
 
+    config['apps_api_secret']     ||= config['poste_secret']
     config['daemon']              ||= [:development, :levelbuilder, :staging, :test].include?(rack_env) || config['name'] == 'daemon'
     config['dashboard_db_reader'] ||= config['db_reader'] + config['dashboard_db_name']
     config['dashboard_db_writer'] ||= config['db_writer'] + config['dashboard_db_name']
@@ -111,6 +119,25 @@ class CDOImpl < OpenStruct
     "#{rack_env}.#{domain}"
   end
 
+  def site_url(domain, path = '')
+    host = canonical_hostname(domain)
+    if rack_env?(:development)
+      port = ['studio.code.org'].include?(domain) ? CDO.dashboard_port : CDO.pegasus_port
+      host += ":#{port}"
+    end
+
+    path = '/' + path unless path.empty? || path[0] == '/'
+    return "//#{host}#{path}"
+  end
+
+  def studio_url(path = '')
+    site_url('studio.code.org', path)
+  end
+
+  def code_org_url(path = '')
+    site_url('code.org', path)
+  end
+
   def dir(*dirs)
     File.join(root_dir, *dirs)
   end
@@ -137,6 +164,9 @@ class CDOImpl < OpenStruct
     @slog.write params
   end
 
+  def shared_image_url(path)
+    "/shared/images/#{path}"
+  end
 end
 
 CDO ||= CDOImpl.new
@@ -164,8 +194,8 @@ def aws_dir(*dirs)
   deploy_dir('aws', *dirs)
 end
 
-def blockly_dir(*dirs)
-  deploy_dir('blockly', *dirs)
+def apps_dir(*dirs)
+  deploy_dir('apps', *dirs)
 end
 
 def blockly_core_dir(*dirs)
@@ -187,4 +217,3 @@ end
 def secrets_dir(*dirs)
   aws_dir('secrets', *dirs)
 end
-

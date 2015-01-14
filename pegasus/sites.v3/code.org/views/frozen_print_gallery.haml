@@ -1,0 +1,50 @@
+%div#icons
+  %img.print_icon{:src=>'/images/fit-50/frozen-impressive-1.jpg'}
+  %img.print_icon{:src=>'/images/fit-50/frozen-impressive-2.jpg'}
+  %img.print_icon{:src=>'/images/fit-50/frozen-impressive-3.jpg'}
+  %img.print_icon{:src=>'/images/fit-50/frozen-impressive-4.jpg'}
+  %img.print_icon{:src=>'/images/fit-50/frozen-impressive-5.jpg'}
+  %img.print_icon{:src=>'/images/fit-50/frozen-impressive-6.jpg'}
+%button#print_button
+  =I18n.t :print_all
+%iframe#print_frame{:src=>'/images/frozen-impressive-all.jpg', :style=>'display:none'}
+:css
+  .print_icon {
+    width: 15.7%;
+  }
+  #icons {
+    width: 82%;
+    display: inline-block;
+  }
+  #print_button {
+    background-color: rgb(126, 92, 162);
+    border-color: rgb(126, 92, 162);
+  }
+  @media (max-width: 500px) {
+    .print_icon {
+      width: 15%;
+    }
+    #icons {
+      width: 100%;
+    }
+    #print_button {
+      margin-top: 10px;
+    }
+  }
+
+
+:javascript
+  $(document).ready(function()
+  {
+    var printButton = $('#print_button');
+    if (printButton) {
+      printButton.click(function() {
+        var item = $("#print_frame")[0];
+        item.contentWindow.document.getElementsByTagName("img")[0].style.width="100%";
+        if (item.contentWindow.document.execCommand('print', false, null)) {
+        } else {
+          item.contentWindow.print();
+        }
+      });
+    }
+  });

@@ -77,18 +77,4 @@ class Router < Pegasus::Base
     pass
   end
 
-  # Forms
-  [
-    DistrictPartnerInfo,
-  ].each do |kind|
-    post "/#{kind.storage_names[:default]}" do
-      submit_form(kind, request, params)
-    end
-    post "/#{kind.storage_names[:default]}/:edit_token" do |edit_token|
-      row = kind.first(:edit_token=>edit_token)
-      pass if row.nil?
-      submit_form(row, request, params)
-    end
-  end
-
 end

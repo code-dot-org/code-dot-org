@@ -57,6 +57,7 @@ In this lesson, students will relate the concept of algorithms back to everyday 
 - Glue
 
 ### For the Teacher
+- [Lesson Video](http://youtu.be/icVRxFr39AU?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G)
 - Teacher Lesson Guide
 - Print one [Real-Life Algorithms: Plant a Seed Worksheet](/curriculum/course1/6/Activity6-RealLifeAlgorithms.pdf) for each student
 - Print Assessment Worksheet: [Daily Algorithms](/curriculum/course1/6/Assessment6-RealLifeAlg.pdf) for each student

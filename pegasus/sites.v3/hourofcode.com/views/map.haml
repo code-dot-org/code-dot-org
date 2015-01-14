@@ -14,6 +14,17 @@
           %button{:class=>"signup-button", :style=>"margin-right: 116px; margin-bottom: 25px"}
             See all events
 .row
+  %form#workshop-search-form{role: "form", onsubmit: "event.preventDefault();"}
+    .form-section
+      .col-xs-4
+        .form-group
+          %div
+            %input#geocomplete.form-control{name: "geocomplete", placeholder: hoc_s(:map_search_placeholder), type: "text"}/
+      .col-xs-8
+        .form-group
+          %button#btn-submit.btn.btn-default{type: "submit"}= hoc_s(:map_search_search)
+          %button#btn-reset.btn.btn-link{type: "reset"}= hoc_s(:map_search_reset)
+.row
   .col-xs-10.col-sm-12
     #gmap{style: 'width: 100%; max-width: 1024px;'}
 
@@ -25,6 +36,7 @@
 
   $(document).ready(function() {
     initializeMap();
+    addGeocomplete();
 
     $(window).resize(function() {
       resizeMap();
@@ -111,4 +123,26 @@
     }
 
     gmap.setOptions(map_options);
+  }
+
+  function addGeocomplete() {
+    var geocomplete_options = {
+    };
+
+    $("#geocomplete").geocomplete(geocomplete_options)
+      .bind("geocode:result", function(event, result){
+        gmap.fitBounds(result.geometry.viewport);
+      });
+
+    $("#btn-submit").click(function(){
+      $("#geocomplete").trigger("geocode");
+    });
+
+    $("#btn-reset").click(function(){
+      $('#geocomplete').val('');
+      gmap.setCenter(new google.maps.LatLng(22.2116,4.5775));
+      gmap.setZoom(2);
+      info_window.close();
+      resizeMap();
+    });
   }

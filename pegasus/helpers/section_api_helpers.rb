@@ -421,18 +421,6 @@ class DashboardUserScript
              DASHBOARD_DB[:followers].
                select(:student_user_id, script_id.to_s).
                where(section_id: section_id))
-
-    DASHBOARD_DB[:user_scripts].
-      select(:id).
-      where(user_id: DASHBOARD_DB[:followers].
-               select(:student_user_id).
-               where(section_id: section_id)).
-      and(script_id: script_id).each do |row|
-      # for some reason, if we do the nicer looking thing, (update.. where...) mysql won't use the indexes
-      DASHBOARD_DB[:user_scripts].
-        where(id: row[:id]).
-        update(assigned_at: DateTime.now)
-    end
   end
 
   def self.assign_script_to_users(script_id, user_ids)
@@ -441,15 +429,5 @@ class DashboardUserScript
     DASHBOARD_DB[:user_scripts].
       insert_ignore.
       import([:user_id, :script_id], user_ids.zip([script_id] * user_ids.count))
-
-    DASHBOARD_DB[:user_scripts].
-      select(:id).
-      where(user_id: user_ids).
-      and(script_id: script_id).each do |row|
-      # for some reason, if we do the nicer looking thing, (update.. where...) mysql won't use the indexes
-      DASHBOARD_DB[:user_scripts].
-        where(id: row[:id]).
-        update(assigned_at: DateTime.now)
-    end
   end
 end

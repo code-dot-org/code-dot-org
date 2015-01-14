@@ -16,7 +16,12 @@
     "disable_variable_editing": "true",
     "free_play": "false",
     "ideal": "11",
-    "slider_speed": ".6"
+    "slider_speed": ".6",
+    "embed": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "impressive": "false",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>
@@ -24,43 +29,43 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_for_counter" inline="true">
+            <block type="controls_for_counter" inline="true" movable="false">
               <mutation counter="counter"/>
-              <value name="FROM">
-                <block type="math_number">
+              <value name="FROM" movable="false">
+                <block type="math_number" movable="false">
                   <title name="NUM">50</title>
                 </block>
               </value>
-              <value name="TO">
-                <block type="math_number">
+              <value name="TO" movable="false">
+                <block type="math_number" movable="false">
                   <title name="NUM">100</title>
                 </block>
               </value>
-              <value name="BY">
-                <block type="math_number">
+              <value name="BY" movable="false">
+                <block type="math_number" movable="false">
                   <title name="NUM">10</title>
                 </block>
               </value>
-              <statement name="DO">
-                <block type="controls_repeat_ext" inline="true">
-                  <value name="TIMES">
-                    <block type="math_number">
+              <statement name="DO" movable="false">
+                <block type="controls_repeat_ext" inline="true" movable="false">
+                  <value name="TIMES" movable="false">
+                    <block type="math_number" movable="false">
                       <title name="NUM">3</title>
                     </block>
                   </value>
-                  <statement name="DO">
-                    <block type="draw_move" inline="true">
+                  <statement name="DO" movable="false">
+                    <block type="draw_move" inline="true" movable="false">
                       <title name="DIR">moveForward</title>
-                      <value name="VALUE">
-                        <block type="variables_get">
+                      <value name="VALUE" movable="false">
+                        <block type="variables_get" movable="false">
                           <title name="VAR">counter</title>
                         </block>
                       </value>
                       <next>
-                        <block type="draw_turn" inline="true">
+                        <block type="draw_turn" inline="true" movable="false">
                           <title name="DIR">turnLeft</title>
-                          <value name="VALUE">
-                            <block type="math_number">
+                          <value name="VALUE" movable="false">
+                            <block type="math_number" movable="false">
                               <title name="NUM">120</title>
                             </block>
                           </value>

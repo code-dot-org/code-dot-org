@@ -8,24 +8,24 @@
 
   %p
     = link_to t('home.teacher_student_count', count: current_user.students.length), manage_followers_path
-    = t('home.teacher_averages', trophy_average: ("%.1f" % current_user.average_student_trophies), trophy_max: Trophy::TROPHY_MAX)
+    = t('home.teacher_averages', trophy_average: ('%.1f' % current_user.average_student_trophies), trophy_max: Trophy::TROPHY_MAX)
     %br/
     %br/
 
   - if current_user.teacher_prize.nil? && current_user.teacher_bonus_prize.nil?
     %h4
-      %b DonorsChoose.org rewards are no longer available as of June 15, 2014. Please refer to this
-      %b= link_to 'FAQ', 'https://support.code.org/hc/en-us/articles/202446516'
-      %b for more information.
+      %strong DonorsChoose.org rewards are no longer available as of June 15, 2014. Please refer to this
+      %strong= link_to 'FAQ', 'https://support.code.org/hc/en-us/articles/202446516'
+      %strong for more information.
 
       %br/
       %br/
   - else
     %h4
-      %b
+      %strong
         While DonorsChoose.org rewards are no longer available as of June 15, 2014, you can still use the codes that you have previously claimed (listed below). Be sure to use your codes right away, as they will expire soon! Please refer to this
-      %b= link_to 'FAQ', 'https://support.code.org/hc/en-us/articles/202446516'
-      %b for more information.
+      %strong= link_to 'FAQ', 'https://support.code.org/hc/en-us/articles/202446516'
+      %strong for more information.
 
       %br/
       %br/

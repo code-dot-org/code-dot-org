@@ -54,6 +54,7 @@ Events are a great way to add variety to a pre-written algorithm. Sometimes you 
 - Pens/Pencils/Markers
 
 ### For the Teacher
+- [Lesson Video](http://youtu.be/aYECW6V8nQA?list=PL2DhNKNdmOtobJjiTYvpBDZ0xzhXRj11N)
 - Teacher Lesson Guide
 - Print one [The Big Event Activity Worksheet](/curriculum/course2/15/Activity15-TheBigEvent.pdf) and Event Controller
 - Print Assessment Worksheet: [The Big Event Assessment](Assessment15-TheBigEvent.pdf) for each student

@@ -44,7 +44,7 @@
                   <next>
                     <block type="draw_turn_by_constant_dropdown">
                       <title name="DIR">turnRight</title>
-                      <title name="VALUE" config="45,60,90,120,180">120</title>
+                      <title name="VALUE" config="45,60,90,120,180">60</title>
                     </block>
                   </next>
                 </block>

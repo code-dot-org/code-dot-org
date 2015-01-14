@@ -1,6 +1,6 @@
 
 
-[<button style="float: right; margin-top: 50px">Sign up your event</button>](/#join)
+
 
 # Presentasjon og nyttig statistikk
 
@@ -14,4 +14,3 @@ Datamaskiner er overalt, men færre skoler underviser i informatikk nå enn for 
 
 ![bilde](http://code.org/images/fit-8000/Code.org_infographic.png)
 
-<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

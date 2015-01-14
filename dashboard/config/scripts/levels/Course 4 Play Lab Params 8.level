@@ -24,8 +24,8 @@
     "instructions": "Use a \"when touching\" block to send the Dog back to the top-left if the Dog touches any of the other actors.",
     "first_sprite_index": "0",
     "embed": "false",
-    "maze_data": null,
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>

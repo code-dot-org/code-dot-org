@@ -12,6 +12,7 @@ class ScriptLevelsController < ApplicationController
       @full_width = true
       @share = true
       @level_source_id = @level.ideal_level_source_id
+      @level_source = LevelSource.find(@level_source_id)
       render 'level_sources/show'
     else
       flash[:alert] = I18n.t('reference_area.auth_error')
@@ -91,13 +92,22 @@ private
   def present_level
     @level = @script_level.level
     @game = @level.game
-    @stage = @script_level.stage
+
+    @stage = @script_level.stage # this should be included
+    cached_script = Script.get_from_cache(@script.id)
+    if @stage
+      @game_script_levels = cached_script.script_levels.to_a.select{|sl| sl.stage_id == @script_level.stage_id}
+    else
+      @game_script_levels = cached_script.script_levels.to_a.select{|sl| sl.level.game_id == @script_level.level.game_id}
+    end
 
     set_videos_and_blocks_and_callouts_and_instructions
 
     @callback = milestone_url(user_id: current_user.try(:id) || 0, script_level_id: @script_level)
     @full_width = true
-    @fallback_response = {
+
+    @@fallback_responses ||= {}
+    @fallback_response = @@fallback_responses[@script_level.id] ||= {
       success: milestone_response(script_level: @script_level, solved?: true),
       failure: milestone_response(script_level: @script_level, solved?: false)
     }

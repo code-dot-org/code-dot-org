@@ -55,6 +55,7 @@ For this activity, no instructions are provided. Instead, students will use exam
 - [Computational Thinking Assessment](Assessment1-CompThinking.pdf) for each student
 
 ### For the Teacher
+- [Lesson Video](http://youtu.be/7sHTZsGMQuQ?list=PL2DhNKNdmOtpGJ79ZYYttiEmc-1Aq8hxm)
 - This Teacher Lesson Guide
 - Print one [Computational Thinking Kit](Activity1-ComputationalThinking.pdf) per group
 - Print one [Computational Thinking Assessment](Assessment1-CompThinking.pdf) for each student

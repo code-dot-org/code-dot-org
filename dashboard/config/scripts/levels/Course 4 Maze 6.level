@@ -11,11 +11,12 @@
     "start_direction": "2",
     "step_mode": "1",
     "is_k1": "false",
-    "skip_instructions_popup": "true",
+    "skip_instructions_popup": "false",
     "ideal": "5",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
     "maze_data": null
   }
 }]]></config>

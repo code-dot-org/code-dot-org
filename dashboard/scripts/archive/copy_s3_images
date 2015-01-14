@@ -1,0 +1,38 @@
+#!/usr/bin/env ruby
+# I changed my mind about what id (level_source_image.id to
+# level_source.id) to store the level source images as, so I need to
+# rename the old ones.
+
+
+require_relative '../../config/environment'
+require 'cdo/aws/s3'
+
+START_ID = 8531000
+#START_ID = 1
+BUCKET = 'cdo-art'
+
+AWS::S3.connect!
+
+puts "looking at #{LevelSourceImage.last.id - START_ID}"
+
+LevelSourceImage.where(['id > ?', START_ID]).find_each do |lsi|
+  if lsi.image.blank? || !lsi.s3?
+    puts ' '
+    next
+  end
+
+  if AWS::S3::S3Object.exists? lsi.old_s3_filename, BUCKET
+    puts "moving #{lsi.old_s3_filename} to #{lsi.s3_filename}"
+#    AWS::S3::S3Object.rename lsi.old_s3_filename, lsi.s3_filename, BUCKET
+  else
+    puts '.'
+  end
+
+  if AWS::S3::S3Object.exists? lsi.old_s3_framed_filename, BUCKET
+    puts "moving #{lsi.old_s3_framed_filename} to #{lsi.s3_framed_filename}"
+#    AWS::S3::S3Object.rename lsi.old_s3_framed_filename, lsi.s3_framed_filename, BUCKET
+  else
+    puts '.'
+  end
+
+end

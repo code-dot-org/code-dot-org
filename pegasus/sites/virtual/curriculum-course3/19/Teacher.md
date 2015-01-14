@@ -49,6 +49,9 @@ In computer science, we face some big, daunting problems. Challenges like findin
 ### For the Student
 - Playing Cards (1 Deck per group)
 
+### For the Teacher
+- [Lesson Video](http://youtu.be/UXCaokAHN1U?list=PL2DhNKNdmOtpGJ79ZYYttiEmc-1Aq8hxm)
+
 [tip]
 
 # Materials Tip  

@@ -51,6 +51,18 @@ module ApplicationHelper
     image_tag(image_url('white-checkmark.png'))
   end
 
+  def activity_css_class(result)
+    if result.nil?
+      'not_tried'
+    elsif result >= Activity::FREE_PLAY_RESULT
+      'perfect'
+    elsif result >= Activity::MINIMUM_PASS_RESULT
+      'passed'
+    else
+      'attempted'
+    end
+  end
+
   def level_info(user, script_level)
     result =
       if user
@@ -58,18 +70,8 @@ module ApplicationHelper
       elsif (session[:progress] && session[:progress][script_level.level_id])
         result = session[:progress][script_level.level_id]
       end
-
-    css_class = if result.nil?
-                  'not_tried'
-                elsif result >= Activity::FREE_PLAY_RESULT
-                  'perfect'
-                elsif result >= Activity::MINIMUM_PASS_RESULT
-                  'passed'
-                else
-                  'attempted'
-                end
     link = build_script_level_url(script_level)
-    [css_class, link]
+    [activity_css_class(result), link]
   end
 
   def show_flashes
@@ -87,16 +89,12 @@ module ApplicationHelper
     ret
   end
 
-  def canonical_hostname(domain)
-    CDO.canonical_hostname(domain)
-  end
-
   def code_org_root_path
-    'http://' + canonical_hostname('code.org')
+    CDO.code_org_url
   end
 
   def teacher_dashboard_url
-    "//#{canonical_hostname('code.org')}/teacher-dashboard"
+    CDO.code_org_url '/teacher-dashboard'
   end
 
   # used by devise to redirect user after signing in
@@ -130,11 +128,27 @@ module ApplicationHelper
     
     # playlab/studio and artist/turtle can have images
     if level_source.try(:level_source_image).try(:image)
-      url_for(controller: "level_sources", action: "generate_image", id: level_source.id, only_path: false)
+      if level_source.level_source_image.s3?
+        if app == Game::ARTIST then
+          level_source.level_source_image.s3_framed_url
+        else
+          level_source.level_source_image.s3_url
+        end
+      else
+        url_for(controller: "level_sources", action: "generate_image", id: level_source.id, only_path: false)
+      end
     elsif app == Game::FLAPPY || app == Game::BOUNCE || app == Game::STUDIO
       asset_url "#{app}_sharing_drawing.png"
     else
       asset_url 'sharing_drawing.png'
+    end
+  end
+
+  def original_image_url(level_source)
+    if level_source.try(:level_source_image).try(:s3?)
+      level_source.level_source_image.s3_url
+    else
+      original_image_level_source_path(level_source.id)
     end
   end
 

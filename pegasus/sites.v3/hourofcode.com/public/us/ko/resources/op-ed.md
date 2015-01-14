@@ -1,40 +1,40 @@
 
 
-### Below is a sample op-ed supportive of Computer Science Education Week and its goals that could be used by state, local legislators, business leaders etc.
+### 아래는 컴퓨터과학교육주간(Computer Science Education Week)과 그 목표들을 지지하는 특집 사설의 예시로서, 주의원, 지역의원, 비즈니스 리더 등에 의해 활용될 수 있습니다.
 
   
 
 
-Go to http://code.org/promote to find state specific information about computer science.
+http://code.org/promote 에서 컴퓨터과학(정보과학)에 관한 주정부의 특이 정보들을 살펴보세요.
 
-**Title: Computing…Where the Jobs Are**
+**제목: 컴퓨팅... 일자리가 있는 모든 곳에**
 
-**By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]**
+**[NAME], [특별한 교육자, 관리자, 비즈니스 리더 등과 공동으로]에 의해**
 
-Computers are everywhere. They’re in our pockets. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
+컴퓨터들은 모든 곳에 있습니다. 우리 주머니 속에도 있습니다. 우리 집의 벽들에도 있습니다. 우리 자동차에도 있습니다. 컴퓨터들은 우리사회의 매우 중요한 기반 인프라로서, 전력망에서 부터 교통신호등, 금융시장의 내부 작업들에까지 모든 곳에 있습니다. 그리고 이러한 컴퓨터들 모두는 하나의 공통점을 가지고 있습니다. 컴퓨터들이 무엇을 해야할지는 소프트웨어에 의해서 결정됩니다.
 
-But who exactly is going to write this software?
+하지만, 이러한 소프트웨어를 누가 만들어야 할까요?
 
-Considering how fast our world is being transformed by technology, you might expect the number of students studying computer science in K-12 education today to be at an all-time high. You’d be wrong. In fact, fewer students are studying computer science, and fewer schools are teaching it, than a decade ago.
+우리 세상이 컴퓨터과학기술에 의해 아주 빠르게 변화하고 있다는 점을 생각해보면, K-12 과정에서 컴퓨터과학을 공부하고 있는 학생들이 항상 매우 많아야 할 것이라고 추측할 수 있을 것입니다. 하지만, 그렇지 않습니다. 사실... 지금은 10여년 이전보다도 더 적은 학생들만이 컴퓨터과학을 공부하고 있으며, 더 적은 학교들에서만 가르치고 있습니다.
 
-At a time when demand for skilled programmers has never been higher, we’re turning out fewer computer scientists. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for a lack of enough individuals with the right skill sets.
+동시에 높은 수준의 숙련된 고급 프로그래머들이 필요한 경우들은 점점더 많아지고 있는데 반해, 점점 더 컴퓨터과학자들은 그 수가 적어지고 있습니다. 지금과 같은 실업률에도 불구하고 **[지역/도시 이름]**에는 수천개의 직업과 그외 아주 많은 일자리가 있습니다만, 필요로하는 적당한 능력/기술들을 가지고 있는 사람들이 부족해서 그 자리들을 제대로 채우지 못하고 있습니다.
 
-Why is this? And how can we address it?
+도대체 왜 이래야 할까요? 이런 것을 어떻게 해결할 수 있을까요?
 
-The problem begins in our middle and high schools. Nine out of ten of our schools do not offer computer programming classes. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
+이 문제는 우리의 중학교와 고등학교들에서 부터 시작된 것입니다. 우리 학교들 10개 중에 9개는 컴퓨터 프로그래밍 수업을 제공하지 않고 있습니다. 작년 **[교육청 지역]**에서는, 단지 **[NUMBER]** 명의 학생들만이 대학 초급 수준의 컴퓨터과학 대학과목선이수제(AP) 과정 시험을 치룰 수 있었으며, 전국적으로는 모든 학생들 중 **[%]** 만이 컴퓨터과학 AP 과정을 이수했습니다. 단순히.. 우리는 고수익이면서 매우 중요한 직업들을 희망하는 우리의 학생들을 그에 맞게 준비시켜주거나 응원하지 않고 있는 것입니다.
 
-Nearly all major computing innovations were invented here in this country, but we’re at risk of losing that leadership if we don’t do something now.
+지금까지 거의 모든 매우 중요한 혁신적 기술들이 이 미국에서 발명되었습니다만, 이렇게 우리가 아무것도 하지 않는다면, 그렇게 전 세계를 이끌어나갔던 리더로서의 위치를 잃게 될 처지에 놓여있습니다.
 
-We need to make some changes.
+우리는 뭔가 바꾸어야 합니다.
 
-**[OPTIONAL FOR STATES WHERE THIS APPLIES]**
+**[선택적 사항들]**
 
-One positive change would be to allow rigorous computer science courses to satisfy a high school math or science graduation requirement. In **[INSERT STATE]**, computer science courses are electives. Given academic demands, students cannot afford to take elective computer science courses. And making this change can have a big impact. In states where computer science courses count toward graduation requirements, courses are fifty percent larger with much higher rates of participation by underserved minorities than states that treat computer science as an elective.
+변화시킬 좋은 방법 중 하나는, 고등학교의 수학 또는 과학 과목의 졸업 조건과 유사한 수준의 철저한 컴퓨터과학 수업들을 할 수 있도록 하는 것입니다. **[지역/도시이름]**에서, 컴퓨터과학(정보과학) 수업들은 선택입니다. 주어진 졸업 요건을 채우기 위해, 학생들은 선택과정인 컴퓨터과학(정보과학) 수업을 선택할 여유가 없습니다. 따라서, 이러한 변화는 매우 큰 영향/효과를 불러일으킬 수 있습니다. 컴퓨터과학(정보과학) 수업을 졸업 필수요건으로 인정하는 주정부들에서는, 선택으로만 인정하는 다른 주들에 비해서 50% 이상, 더 많은 소수자들이 참여하고 있습니다.
 
-We should also work with students at a young age to spark their interest in computer science and coding. Our children should not just know how to use apps and play video games – they should know how to create them. Children can learn the basics of coding as early as the second grade.
+우리는, 학생들이 어린 나이에 컴퓨터과학과 코딩에 재미를 붙일 수 있게 해야 합니다. 우리의 아이들이, 앱들을 사용하는 방법, 비디오 게임하는 방법들만 알게해서는 않됩니다 - 그러한 것들을 만들어내는 방법들도 알아야 합니다. 아이들은 초등학교 2학년 정도에서 부터도, 코딩의 기초/개념/원리들을 배울 수있습니다.
 
-We need to recruit more computer science teachers and encourage professional development within their field. Today there are many online resources that can help teachers access and keep up to date with the latest technology for their students.
+좀더 많은 컴퓨터과학(정보과학) 선생님들을 채용하고, 선생님들이 알고 있는 분야에서 좀더 전문적으로 발전해 나갈 수 있도록 장려해야 합니다. 요즘에는 아주 많은 온라인 자료들이 있어서, 선생님들은 학생들을 위해 그 자료들을 참고하고 배워가면서 최신 컴퓨터과학기술들을 접할 수 있습니다.
 
-According to the Bureau of Labor Statistics, by 2020, there will be 9.2 million jobs in STEM fields. Half of those jobs—4.6 million—will be in computing or information technology. And computer science is increasingly foundational knowledge for the 21st Century. Who will fill these jobs if our children are not given the opportunity to gain the skills needed?
+노동부의 통계에 의하면, 2020년까지 STEM(과학, 기술, 공학, 수학)과 연관된 9천2백만 개의 일자리가 생길 것이라고 합니다. 그 반 만큼의 일자리들—4천6백만—은 컴퓨팅 또는 (정보를 생산하는)정보기술이 될 것이라고 합니다. 그리고 컴퓨터과학은, 21세기를 준비하기 위해 필요한 필수적인 지식으로 점점더 그 가치가 커지고 있습니다. 우리 아이들이, 그렇게 필요한 컴퓨터과학 지식들을 배울 수 있는 기회 조차 없다면, 어떤 사람들로 그러한 일자리들을 채워야 할까요?
 
-This week, December 8–15, is Computer Science Education Week. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. Everyone should learn how to code. Visit <http://hourofcode.com> to learn more and get started. And support our efforts to bring computer science to more schools in **[STATE]**.
+이번 주, 12월8일-15일, 는 컴퓨터과학교육주간(Computer Science Education Week) 입니다. **[STATE]** 지역의 학교들을 통해서, 우리 학생들이 전세계적으로 진행되는 Hour of Code 행사에 참여하게 될 것입니다. Hour of Code 는 컴퓨터과학의 주제들을 이해하기 쉽게 설명하고, 희망적으로 흥미를 북돋우며 관심과 공부를 지속하게 할 수 있습니다. 저는 함께 참여할 것입니다. 저는, 함께 참여해 주실 수 있도록 여러분들도 초청하고 싶습니다. 우리 모두가 코딩을 배워야 합니다. <http://hourofcode.com>를 방문해 더 배워 보시고 시작하세요. 그리고 **[STATE]**의 더 많은 학교들이 컴퓨터과학(정보과학) 과목을 가르칠 수 있도록 하는 우리의 노력에 함께 동참해 주세요..

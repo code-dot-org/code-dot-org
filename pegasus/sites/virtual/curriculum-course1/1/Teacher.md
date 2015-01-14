@@ -60,6 +60,7 @@ At the root of all computer science is something called an algorithm.  The word 
 - Glue
 
 ### For the Teacher
+- [Lesson Video](http://youtu.be/En6Bshuqljg?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G)
 - Teacher Lesson Guide
 - Print one [Happy Maps: Single-Step Adventure](/curriculum/course1/1/Activity1-HappyMaps.pdf) for each group
 - Print one [Move the Flurbs Assessment](/curriculum/course1/1/Assessment1-HappyMaps.pdf) for each student

@@ -11,7 +11,7 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
-    "disable_variable_editing": "false",
+    "disable_variable_editing": "true",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "start_direction": "90",
@@ -127,7 +127,7 @@
     </toolbox_blocks>
     <required_blocks>
       <xml>
-        <block type="variables_set" inline="false">
+        <block type="variables_set" inline="false" id="set_sides_qtip">
           <title name="VAR">sides</title>
           <value name="VALUE">
             <block type="math_number">
@@ -139,14 +139,6 @@
           <value name="TIMES">
             <block type="variables_get">
               <title name="VAR">sides</title>
-            </block>
-          </value>
-        </block>
-        <block type="draw_move" inline="true">
-          <title name="DIR">moveForward</title>
-          <value name="VALUE">
-            <block type="math_number">
-              <title name="NUM">200</title>
             </block>
           </value>
         </block>

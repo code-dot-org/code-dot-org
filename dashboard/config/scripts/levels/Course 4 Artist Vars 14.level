@@ -193,14 +193,6 @@
             </block>
           </value>
         </block>
-        <block type="draw_turn" inline="true">
-          <title name="DIR">turnLeft</title>
-          <value name="VALUE">
-            <block type="math_number">
-              <title name="NUM">???</title>
-            </block>
-          </value>
-        </block>
         <block type="jump" inline="true">
           <title name="DIR">jumpForward</title>
           <value name="VALUE">
@@ -222,9 +214,6 @@
               <title name="NUM">???</title>
             </block>
           </value>
-        </block>
-        <block type="math_number">
-          <title name="NUM">???</title>
         </block>
         <block type="math_arithmetic" inline="true">
           <title name="OP">ADD</title>
