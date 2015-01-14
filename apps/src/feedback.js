@@ -944,12 +944,14 @@ FeedbackUtils.prototype.hasExtraTopBlocks = function () {
 /**
  * Runs the tests and returns results.
  * @param {boolean} levelComplete Did the user successfully complete the level?
+ * @param {!Array} requiredBlocks The blocks that are required to be used in
+ *   the solution to this level.
  * @param {boolean} shouldCheckForEmptyBlocks Whether empty blocks should cause
  *   a test fail result.
  * @param {Object} options
  * @return {number} The appropriate property of TestResults.
  */
-FeedbackUtils.prototype.getTestResults = function(levelComplete,
+FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
     shouldCheckForEmptyBlocks, options) {
   options = options || {};
   if (this.studioApp_.editCode) {
@@ -984,7 +986,7 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete,
   if (this.hasQuestionMarksInNumberField_()) {
     return TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
   }
-  if (!this.hasAllRequiredBlocks_(this.studioApp_.requiredBlocks_)) {
+  if (!this.hasAllRequiredBlocks_(requiredBlocks)) {
     return levelComplete ?
         TestResults.MISSING_BLOCK_FINISHED :
         TestResults.MISSING_BLOCK_UNFINISHED;
