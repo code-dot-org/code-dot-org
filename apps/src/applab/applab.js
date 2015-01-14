@@ -1083,7 +1083,7 @@ Applab.callCmd = function (cmd) {
     case 'setPosition':
     case 'setParent':
     case 'setStyle':
-    case 'attachEventHandler':
+    case 'onEvent':
     case 'startWebRequest':
     case 'setTimeout':
     case 'clearTimeout':
@@ -1556,7 +1556,7 @@ Applab.onEventFired = function (opts, e) {
   }
 };
 
-Applab.attachEventHandler = function (opts) {
+Applab.onEvent = function (opts) {
   var divApplab = document.getElementById('divApplab');
   var domElement = document.getElementById(opts.elementId);
   if (divApplab.contains(domElement)) {

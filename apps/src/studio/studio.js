@@ -1918,9 +1918,9 @@ Studio.callCmd = function (cmd) {
       studioApp.highlight(cmd.id);
       Studio.vanishActor(cmd.opts);
       break;
-    case 'attachEventHandler':
+    case 'onEvent':
       studioApp.highlight(cmd.id);
-      Studio.attachEventHandler(cmd.opts);
+      Studio.onEvent(cmd.opts);
       break;
   }
   return true;
@@ -2563,7 +2563,7 @@ Studio.moveDistance = function (opts) {
   return (0 === opts.queuedDistance);
 };
 
-Studio.attachEventHandler = function (opts) {
+Studio.onEvent = function (opts) {
   registerEventHandler(Studio.eventHandlers, opts.eventName, opts.func);
 };
 
