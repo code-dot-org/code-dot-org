@@ -28,6 +28,7 @@ var CONFIGS = {
 
   bee: {
     obstacleAnimation: '',
+    obstacleIdle: 'obstacle.png',
     redFlower: 'redFlower.png',
     purpleFlower: 'purpleFlower.png',
     honey: 'honey.png',
@@ -53,6 +54,8 @@ var CONFIGS = {
   },
 
   farmer: {
+    obstacleIdle: 'obstacle.png',
+
     dirt: 'dirt.png',
     fillSound: 'fill.mp3',
     digSound: 'dig.mp3',
@@ -67,6 +70,9 @@ var CONFIGS = {
   },
 
   pvz: {
+    goalIdle: 'goalIdle.gif',
+    obstacleIdle: 'obstacleIdle.gif',
+
     goalAnimation: 'goal.gif',
     maze_forever: 'maze_forever.png',
 
@@ -76,6 +82,9 @@ var CONFIGS = {
   },
 
   birds: {
+    goalIdle: 'goalIdle.gif',
+    obstacleIdle: 'obstacle.png',
+
     goalAnimation: 'goal.gif',
     maze_forever: 'maze_forever.png',
     largerObstacleAnimationTiles: 'tiles-broken.png',
@@ -97,6 +106,9 @@ var CONFIGS = {
   },
 
  scrat: {
+    goalIdle: 'goal.png',
+    obstacleIdle: 'obstacle.png',
+
     goalAnimation: 'goal.png',
     maze_forever: 'maze_forever.png',
     largerObstacleAnimationTiles: 'tiles-broken.png',
