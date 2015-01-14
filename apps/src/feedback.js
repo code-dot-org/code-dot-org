@@ -800,7 +800,7 @@ FeedbackUtils.prototype.checkForEmptyContainerBlockFailure_ = function() {
   if (type === 'procedures_defnoreturn' || type === 'procedures_defreturn') {
     return TestResults.EMPTY_FUNCTION_BLOCK_FAIL;
   }
-  
+
   // Block is assumed to be "if" or "repeat" if we reach here.
   // This is where to add checks if you want a different TestResult
   // for "controls_for_counter" blocks, for example.
@@ -861,17 +861,17 @@ FeedbackUtils.prototype.getMissingRequiredBlocks_ = function (
   var customMessage = null;
   var code = null;  // JavaScript code, which is initialized lazily.
   // TODO (br-pair) : we should probably just pass required_blocks
-  if (this.studioApp_.REQUIRED_BLOCKS && this.studioApp_.REQUIRED_BLOCKS.length) {
+  if (this.studioApp_.requiredBlocks_ && this.studioApp_.requiredBlocks_.length) {
     var userBlocks = this.getUserBlocks_();
     // For each list of required blocks
     // Keep track of the number of the missing block lists. It should not be
     // bigger than the requiredBlocksToFlag param.
     var missingBlockNum = 0;
     for (var i = 0;
-         i < this.studioApp_.REQUIRED_BLOCKS.length &&
+         i < this.studioApp_.requiredBlocks_.length &&
              missingBlockNum < requiredBlocksToFlag;
          i++) {
-      var requiredBlock = this.studioApp_.REQUIRED_BLOCKS[i];
+      var requiredBlock = this.studioApp_.requiredBlocks_[i];
       // For each of the test
       // If at least one of the tests succeeded, we consider the required block
       // is used
@@ -899,7 +899,7 @@ FeedbackUtils.prototype.getMissingRequiredBlocks_ = function (
       }
       if (!usedRequiredBlock) {
         missingBlockNum++;
-        missingBlocks = missingBlocks.concat(this.studioApp_.REQUIRED_BLOCKS[i][0]);
+        missingBlocks = missingBlocks.concat(this.studioApp_.requiredBlocks_[i][0]);
       }
     }
   }

@@ -169,7 +169,7 @@ describe("getMissingRequiredBlocks_ tests", function () {
 
     // Should probably have these as inputs to getMissingRequiredBlocks_ instead
     // of fields on studioApp as it's the only place they're used
-    studioApp.REQUIRED_BLOCKS = options.requiredBlocks;
+    studioApp.requiredBlocks_ = options.requiredBlocks;
 
     studioApp.loadBlocks(options.userBlockXml);
 
