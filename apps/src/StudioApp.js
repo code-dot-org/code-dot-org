@@ -92,7 +92,7 @@ var StudioApp = function () {
   *   start and end tags.
   * @type {!Array=}
   */
-  this.REQUIRED_BLOCKS = undefined;
+  this.requiredBlocks_ = undefined;
 
   /**
   * The number of required blocks to give hints about at any one time.
@@ -1015,7 +1015,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
 
   this.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
   this.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
-  this.REQUIRED_BLOCKS = config.level.requiredBlocks || [];
+  this.requiredBlocks_ = config.level.requiredBlocks || [];
 
   // enableShowCode defaults to true if not defined
   this.enableShowCode = (config.enableShowCode !== false);
