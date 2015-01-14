@@ -33,9 +33,12 @@ var TestResults = constants.TestResults;
 var KeyCodes = constants.KeyCodes;
 
 /**
- *
+ * @param {Object} options
+ * @param {number} maxRequiredBlocksToFlag The number of required blocks to
+ *   give hints about at any one time.  Set this to Infinity to show all.
  */
-FeedbackUtils.prototype.displayFeedback = function(options) {
+FeedbackUtils.prototype.displayFeedback = function(options,
+    maxRequiredBlocksToFlag) {
   options.hintRequestExperiment = options.response &&
       options.response.hint_request_placement;
   options.level = options.level || {};
@@ -61,7 +64,7 @@ FeedbackUtils.prototype.displayFeedback = function(options) {
   var feedbackBlocks;
   if (this.studioApp_.usingBlockly) {
     feedbackBlocks = new FeedbackBlocks(options,
-                                        this.getMissingRequiredBlocks_(this.studioApp_.requiredBlocksToFlagCount_),
+                                        this.getMissingRequiredBlocks_(maxRequiredBlocksToFlag),
                                         this.studioApp_);
   }
   // feedbackMessage must be initialized after feedbackBlocks
@@ -794,7 +797,10 @@ FeedbackUtils.prototype.getEmptyContainerBlock_ = function() {
  * @return {boolean} true if all blocks are present, false otherwise.
  */
 FeedbackUtils.prototype.hasAllRequiredBlocks_ = function() {
-  return this.getMissingRequiredBlocks_(this.studioApp_.requiredBlocksToFlagCount_).blocksToDisplay.length === 0;
+  // It's okay (maybe faster) to pass 1 for maxBlocksToFlag, since in the end
+  // we want to check that there are zero blocks missing.
+  var maxBlocksToFlag = 1;
+  return this.getMissingRequiredBlocks_(maxBlocksToFlag).blocksToDisplay.length === 0;
 };
 
 /**
