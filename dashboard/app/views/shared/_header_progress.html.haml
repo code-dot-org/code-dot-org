@@ -2,21 +2,28 @@
   %div{class: 'header_level_container'}
     - @game_script_levels ||= (@stage && @stage.script_levels.includes(:script).joins(:level)) || @script.script_levels_from_game(@game.id)
     - game_levels = current_user ? current_user.levels_from_script(@script, @game.id, @stage) : @game_script_levels
-    - script_data_json = {levels: game_levels.map do |sl| |
+    - script_data = { |
+      title: stage_title(@script, @stage || @game), |
+      levels: game_levels.map do |sl| |
         completion_status, link = level_info(current_user, sl); |
-        {display_text: sl.level_display_text, status: completion_status, link: link, unplugged: !!sl.level.unplugged?, assessment: !!sl.assessment} |
-      end}.to_json |
+        {displayText: sl.level_display_text, status: completion_status, link: link, unplugged: !!sl.level.unplugged?, assessment: !!sl.assessment} |
+      end} |
+    - script_data[:finishLink] = {text: t('nav.header.finished_hoc'), href: hoc_finish_url(@script)} if @script.hoc?
 
     .header_text
-      = stage_title(@script, @stage || @game)
     .progress_container
+    .header_finished_link
     :javascript
-      var scriptData = #{script_data_json};
+      var scriptData = #{script_data.to_json};
       var currentLevelIndex = #{@script_level.stage_or_game_position - 1};
+      $('.header_text').html(scriptData.title);
+      if (scriptData.finishLink) {
+        $('.header_finished_link').append($('<a>').attr('href', scriptData.finishLink.href).text(scriptData.finishLink.text));
+      }
       var progressContainer = $('.progress_container');
       scriptData.levels.forEach(function(level, index, levels) {
         var defaultClass = level.assessment ? 'puzzle_outer_assessment' : 'puzzle_outer_level';
-        var link = $('<a>').attr('href', level.link).addClass('level_link').addClass(level.status).text(level.display_text);
+        var link = $('<a>').attr('href', level.link).addClass('level_link').addClass(level.status).text(level.displayText);
         if (level.unplugged) {
           link.addClass('unplugged_level');
         }
@@ -26,10 +33,6 @@
         }
         progressContainer.append(div).append('\n');
       });
-    - if @script.hoc?
-      .header_finished_link
-        %a{href: hoc_finish_url(@script)}
-          = t('nav.header.finished_hoc')
     - if @script.trophies
       - if current_user
         - progress = current_user.progress(@script)
