@@ -53,6 +53,7 @@ One of the most magnificent structures in the computer science world is the func
 - Pens & Pencils
 
 ### For the Teacher
+- [Lesson Video](http://youtu.be/TaH7myEVHz0?list=PL2DhNKNdmOtpGJ79ZYYttiEmc-1Aq8hxm)
 - This Teacher Lesson Guide
 - Print several [Songwriting Worksheets](Activity9-Songwriting.pdf) for each group
 - Print one [Songwriting Assessment](Assessment9-Songwriting.pdf) for each student. 

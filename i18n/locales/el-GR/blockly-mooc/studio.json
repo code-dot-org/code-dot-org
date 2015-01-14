@@ -1,6 +1,6 @@
 {
   "actor":"ηθοποιός",
-  "alienInvasion":"Alien Invasion!",
+  "alienInvasion":"Εισβολή εξωγήινων!",
   "backgroundBlack":"μαύρο",
   "backgroundCave":"σπηλιά",
   "backgroundCloudy":"συννεφιασμένος",
@@ -58,6 +58,7 @@
   "moveDistanceTooltip":"Προχώρησε έναν ηθοποιό συγκεκριμένη απόσταση προς συγκεκριμένη κατεύθυνση.",
   "moveSprite":"προχώρησε",
   "moveSpriteN":"προχώρησε τον ηθοποιό {spriteIndex}",
+  "toXY":"to x,y",
   "moveDown":"προχώρησε προς τα κάτω",
   "moveDownTooltip":"Προχώρησε τον ηθοποιό προς τα κάτω.",
   "moveLeft":"Προχώρησε αριστερά",

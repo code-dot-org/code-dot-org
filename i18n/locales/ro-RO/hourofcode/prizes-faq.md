@@ -4,7 +4,7 @@ aspect: wide
 
 * * *
 
-# Prizes - FAQs
+# Premii - întrebări frecvente
 
 ## Does your whole school have to enter to win the $10,000 in hardware?
 

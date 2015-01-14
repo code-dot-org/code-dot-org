@@ -3,103 +3,94 @@
     unplugged:
       Unplug1:
         title: Introduktion till Datavetenskap
-        desc: This lesson will introduce the concept of Computer Science and explain
-          what a Computer Scientist does.  It will also give students an opportunity
-          to assume the role of a computer scientist.  By the end of the activity,
-          each student will have a take-home reminder of what he or she learned.  You
-          may be tempted to skip teaching young children the vocabulary words that
-          are associated with the lessons that follow, but presenting them in a fun
-          and playful light now is far more productive than waiting for more advanced
-          opportunities.
+        desc: Den här lektionen är en introduktion till datavetenskap och förklarar
+          vad en datavetenskapare gör. Den ger också eleverna möjlighet att prova
+          den rollen. Efter lektionen får eleverna hem en sammanfattning av vad han
+          eller hon lärt. Du kanske blir frestad att inte lära ut de korrekta termerna
+          till de yngre eleverna men att presentera dem nu på ett roligt och lekfullt
+          sätt är mer produktivt än att vänta tills de mer avancerade lektionerna.
         pdfs:
         - unplug1
         video: Unplug1
       Unplug2:
         title: Uträkningstänkande
-        desc: With nothing but paper and markers, students will learn the four steps
-          of computational thinking. After a brief introduction, students should be
-          split into groups where they will have to create directions for other students
-          to draw a specific monster (from a catalog of pre-selected monsters). The
-          entire task must be decomposed, then teams will analyze all monsters in
-          the catalog for patterns, abstract different details from the monsters,
-          then use that information to create an algorithm (directions) for another
-          team to draw a certain monster. Teams will then switch algorithms with another
-          group and draw the monster based on what that algorithm indicates. Is the
-          drawing what the original team intended?
+        desc: Med bara papper och penna kommer eleverna att lära sig de fyra stegen
+          i logiskt tänkande(computational thinking). Efter en kort introduktion delas
+          eleverna in i fyra grupper. De kommer att få konstruera instruktioner för
+          att andra elever ska kunna rita ett speciellt mönster ( från en katalog
+          av utvalda tecknade monster). Uppgiften innebär att grupperna måste analysera
+          alla monsterteckningarna i katalogen i detalj och upptäcka mönster. Sedan
+          använda den informationen till att skriva instruktioner till en annan grupp
+          som ska rita det speciella monstret. Grupperna byter sedan instruktioner
+          och kontrollerar om det korrekta monstret ritades.
         pdfs:
         - unplug2
         video: Unplug2
       Unplug3:
         title: Kalkyleringsprogrammering
-        desc: By programming one another to draw pictures, students will begin to
-          understand what programming is really about. The class will begin by students
-          instructing each other to color squares in on graph paper in an effort to
-          reproduce an existing picture.  If there's time, the lesson can conclude
-          with images that the students create themselves.
+        desc: Genom att programmera andra elever så att de kan rita bilder börjar
+          eleverna förstå vad programmering är. Lektionen börjar med att eleverna
+          får instruera varandra att färglägga rutor på ett rutat papper för att efterbilda
+          en förlaga. Om det finns tid över kan eleverna få fortsätta övningen med
+          sina egna bilder.
         pdfs:
         - unplug3
         video: Unplug3
       Unplug4:
         title: Algoritmer
-        desc: This lesson covers algorithms.  Using tangram shapes and graph paper,
-          the first exercise will show how important it is to make each instruction
-          as clear and unambiguous as possible.  Afterward, the class will explore
-          how many ways you can fold paper into a rectangle, noting how some methods
-          can take more or fewer folds than others.
+        desc: Den här lektionen handlar om instruktioner. Genom att använda tangram
+          och rutat papper visar den första övningen hur viktigt det är att göra varje
+          instruktion så detaljerad och tydlig som möjligt. Sedan får klassen undersöka
+          på hur många sätt det går att vika ett papper till att få en form av en
+          rektangel, och då notera hur en del metoder ger färre vikningar än andra.
         pdfs:
         - unplug4
         video: Unplug4
       Unplug5:
         title: funktioner
-        desc: In this lesson, students will make a suncatcher out of string, beads,
-          and a special charm. The students will follow a series of repetitive steps,
-          then be asked to identify certain sets of "skills" that are duplicated several
-          times. Once those skills are defined, they will be called from a main program
-          and the whole beautiful process of creation will be recorded on a single
-          sheet of paper. The final program will be geared toward the entire class,
-          whatever their type of string, beads, and charms. To effectively allow for
-          this, students will need to "abstract out" the details of their specific
-          materials and create vague terms for an individual's supplies.  This use
-          of generic placeholders is a wonderful introduction to variables.
+        desc: Under den här lektionen ska eleverna konstruera solfångare av snören,
+          pärlor och paljetter. Eleverna följer en serie av upprepade steg och får
+          sedan identifiera speciella grupper av tekniker som upprepas flera gånger.
+          När dessa tekniker har identifierats anges de som en huvudinstruktion och
+          hela den vackra processen av skapande kan skrivas ner på ett enda papper.
+          Det slutliga 'programmet' kan användas av hela klassen, oavsett vilket material
+          de använt. Detta betyder att eleverna måste abstrahera ut de specifika detaljerna
+          ur specifika material och skapa generella termer för individuella material.
+          Användandet av generella termer är ett underbart sätt att introducera variabler.
         pdfs:
         - unplug5
         video: Unplug5
       Unplug6:
-        title: Conditions
-        desc: This is a class game.  After introducing the idea of conditionals, if-statements,
-          and loops, the class can practice together using a pre-written program,
-          a deck of cards, and luck of the draw.
+        title: Villkor
+        desc: Det här är ett spel för hela klassen. Efter att ha introducerat villkor,
+          om-satser och loops/slingor, kan klassen öva tillsammans med hjälp av ett
+          förskrivet program, en kortlek och ren tur.
         pdfs:
         - unplug6
         video: Unplug6
       Unplug7:
         title: Sångskrivande
-        desc: Reading lyrics is a pretty intuitive venture for most students.  We'll
-          take an activity that's already common knowledge and shift it into a solid
-          education on defining and calling functions. Once students are familiar
-          with the define/call process, we will add the extra capabilities that come
-          along with passing parameters within those function calls.
+        desc: Diktläsning är intuitivt för de flesta elever.  Vi tar alltså en förmåga
+          som är allmän och använder den för att undervisa om att definiera och anropa
+          funktioner. När eleverna är bekväma med definiera/anropa processen, lägger
+          vi till de extra möjligheter som följer av att använda parametrar för funktionsanrop.
         pdfs:
         - unplug7
         video: Unplug7
       Unplug8:
         title: Abstraktion
-        desc: This lesson will introduce the concept of Computer Science and explain
-          what a Computer Scientist does.  It will also give students an opportunity
-          to assume the role of a computer scientist.  By the end of the activity,
-          each student will have a take-home reminder of what he or she learned.  You
-          may be tempted to skip teaching young children the complicated vocabulary
-          words that are associated with the lessons that follow, but presenting them
-          in a fun and playful light now is far more productive than waiting for more
-          advanced opportunities.
+        desc: Denna verksamhet kombinerar elevernas dagliga rutiner och ett Mad-Lib
+          stil tänkande spel för att hjälpa din klass att lära sig mer om effektiviteten
+          av abstraktion.
         pdfs:
         - unplug8
         video: Unplug8
       Unplug9:
         title: Relä programmering
-        desc: This lesson will take an idea from a previous activity (4. Graph Paper
-          Programming) and use those skills to emphasize the importance of completing
-          programs that operate in sequence and frequently checking programs for "bugs".
+        desc: Lektionen kommer att använda en idé från en tidigare verksamhet (4.
+          Rutat papper programmering) och använda dessa kunskaper för att betona vikten
+          av att slutföra program som körs i sekvens och kontrollerar andra program
+          för "buggar".
         pdfs:
         - unplug9
         video: Unplug9
@@ -111,179 +102,186 @@
         - unplug10
         video: Unplug10
       Unplug11:
-        title: Wrap-Up
-        desc: The final wrap-up in the first 20-hour series will help the class relive
-          all of their favorite moments, while giving them next steps that they can
-          take on their own if they are interested in continuing their computer science
-          journey.
+        title: Sammanfattning
+        desc: Den slutliga sammanfattningen av den första 20 timmars serien hjälper
+          klassen att återuppleva sina favorit stunder, medan den också ger dem de
+          nästa steg som de kan ta på egen hand om de är intresserade av att fortsätta
+          lära om datorvetenskap.
         pdfs:
         - unplug11
         video: Unplug11
       UnplugHappyMaps:
-        title: Happy Maps
-        desc: Students create simple algorithms (sets of instructions) to move a character
-          through a maze using a single command.
+        title: Glada kartor
+        desc: Eleverna skapar enkla algoritmer (uppsättningar av instruktioner) för
+          att flytta en figur genom en labyrint med ett enda kommando.
         video: C1_happy_maps_unplugged
       MoveIt:
-        title: Move it, Move it
-        desc: Students create simple algorithms (sets of instructions) to move a character
-          through a maze using a single command.
+        title: Flytta det, flytta den
+        desc: Eleverna skapar enkla algoritmer (uppsättningar av instruktioner) för
+          att flytta en figur genom en labyrint med ett enda kommando.
         video: C1_moveitmoveit_unplugged
       PlantASeed:
         title: 'Verklighetsalgoritmer: Så ett frö'
-        desc: This lesson calls out ways we use algorithms in our daily lives, using
-          the act of planting a seed as an example. It also focuses on the bigger
-          picture of computer science and how algorithms play an essential part.
+        desc: Den här lektionen visar hur vi använder uppsättningar av instruktioner
+          i vårt dagliga liv genom exemplet 'att plantera ett frö'. Den fokuserar
+          också på den övergripande bilden av datorvetenskap och hur uppsättningar
+          av instruktioner är en absolut nödvändig del av den vetenskapen.
         video: C1_planting_seed
       BuildingAFoundation:
-        title: Building a Foundation
-        desc: Students build a structure using only provided supplies. Structures
-          must complete a task (reach a certain height or bear a certain weight),
-          and students discuss the idea of being persistent when things get complicated.
+        title: Bygga en grund
+        desc: Eleverna bygger en struktur av tillhandahållna delar. Strukturen måste
+          kunna uppfylla vissa parametrar som är givna(nå en viss höjd eller ha en
+          viss vikt). Eleverna diskuterar vikten av uthållighet när uppgifter blir
+          komplicerade.
         video: C1_building_foundation
       GettingLoopy:
-        title: Getting Loopy
-        desc: This lesson introduces the programming concept of loops (repeated instructions)
-          through a dance activity. Students will learn simple choreography, then
-          be instructed to repeat it.
+        title: Bli Snurrig
+        desc: Den här lektionen introducerar konceptet av loops/slingor(upprepade
+          instruktioner) genom en aktivitet med dans. Eleverna får lära sig enkel
+          koreografi och sedan bli uppmanade att repetera.
         video: C1_getting_loopy
       RelayProgramming:
-        title: Relay programming
-        desc: Students run a relay race, where they dash across the yard to write
-          an algorithm based on a "Graph Paper Programming" image. They can only write
-          one instruction at a time and if there's an error somewhere, they have to
-          erase everything back to that point.
+        title: Relä programmering
+        desc: Eleverna får köra en stafett där de springer en sträcka för att skriva
+          en uppsättning instruktioner baserade på en bild från 'rutat papper programmering'.
+          Varje elev får bara skriva en instruktion och har det blivit fel i någon
+          instruktion tidigare måste de sudda ut allt och börja om från början.
         video: C2_relay_programming
       Conditionals:
         title: Villkor
-        desc: To learn about conditional statements, students play a card game and
-          create rules like "If I draw a red card, I get a point" and "If I draw a
-          black card, you get a point."
+        desc: För att lära om villkors-satser får eleverna spela ett kortspel och
+          skapa regler som 'om jag darra ett rött kort får jag en poäng' och 'om jag
+          drar ett svart kort får du en poäng'.
         video: C2_conditionals_with_cards
       BigEvent:
-        title: The Big Event
-        desc: Students are introduced to the programming concept of "events," which
-          are actions that a computer constantly monitors for. The teacher will press
-          buttons on a paper remote and students will react depending on which button
-          is pressed.
+        title: Den stora händelsen
+        desc: Eleverna introduceras i programmerings-konceptet 'händelser' som är
+          åtgärder en dator konstant letar efter. Läraren trycker på knappar på ett
+          papper och elevernas reaktion beror på vilken knapp som blivit tryckt.
         video: C1_bigevent_unplugged
       GoingPlacesSafely:
-        title: Going Places Safely
-        desc: The Internet is a powerful, but sometimes dangerous place. Teachers
-          introduce how to stay safe while navigating the Internet.
+        title: Tryggt gå till platser
+        desc: Internet är en kraftfull men ibland farlig plats. Läraren introducerar
+          säkerhet på nätet.
         video: C1_going_places_safely
       GraphPaperProgramming:
         title: Kalkyleringsprogrammering
-        desc: Students write an algorithm (a set of instructions) using a set of predefined
-          commands to direct their classmates to reproduce a drawing.
+        desc: Eleverna skriver en uppsättning instruktioner genom att använda fördefinierade
+          kommandon så att andra elever kan reproducera en teckning.
         video: C2_graph_paper
       PaperPlanes:
-        title: 'Real-life Algorithms: Paper Planes'
-        desc: This lesson calls out ways we use algorithms in our daily lives, specifically
-          making paper airplanes. This lesson also focuses on the bigger picture of
-          computer science and how algorithms play an essential part.
+        title: 'Verkliga algoritmer: Pappersflygplan'
+        desc: Den här lektionen visar hur vi använder uppsättningar i vårt dagliga
+          liv genom att använda exemplet att vika pappersflygplan. Den här lektionen
+          fokuserar också på hur uppsättningar av instruktioner är en viktig del av
+          datorkunskapen.
         video: C2_paper_airplanes
       BinaryBracelets:
-        title: Binary Bracelets
-        desc: Students create bracelets as a binary representations of the first letter
-          of their name. Students learn that data can be represented and stored in
-          more than one way.
+        title: Binära armband
+        desc: Eleverna konstruerar armband som är en binär representation av första
+          bokstaven i deras namn. Eleverna lär att data kan presenteras och lagras
+          på mer än ett sätt.
         video: C2_binary_bracelets
       DigitalFootprint:
-        title: Your Digital Footprint
-        desc: Teachers introduce to students the idea that putting information about
-          themselves online creates a digital footprint or "trail" that has consequences.
+        title: Ditt digitala fotavtryck
+        desc: Läraren visar eleverna hur de genom att lägga ut information om dem
+          själva på nätet skapar digital fotavtryck eller 'spår' som har konsekvenser.
         video: C2_digital_footprint
       ComputationalThinking:
         title: Uträkningstänkande
-        desc: Students use the steps of computational thinking (decompose, pattern
-          match, abstract, algorithm) to figure out how to play a game that comes
-          with no instructions.
+        desc: Eleverna använder logiskt tänkande (abstraktion, mönster matchning,
+          uppdelning) för att lista ut hur man spelar ett spel som inte har några
+          instruktioner.
         video: C3_computational_thinking
       FunctionalSuncatchers:
-        title: Functional Suncatchers
-        desc: Students create an algorithm with variables and functions (pieces of
-          code that you want to use over and over again) to create suncatchers using
-          string and beads.
+        title: Funktionella Solfångare
+        desc: Eleverna skapar en uppsättning instruktioner med variabler och funktioner(delar
+          av en kod som man kan använda om och om igen) för att skapa solfångare av
+          snören och pärlor.
         video: C3_functional_suncatchers
       SongwritingParameters:
-        title: Songwriting with Parameters
-        desc: Students use the concept of the chorus in a song to learn about passing
-          parameters (which customize a function without having to rewrite the entire
-          function).
+        title: Låtskrivande Med parametrar
+        desc: Eleverna använder refrängen i en sång för att lära hur man använder
+          parametrar(vilka gör att en funktion kan användas generellt utan att behöva
+          skrivas om).
         video: C3_songwriting_with_parameters
       DiceRace:
-        title: 'Real life algorithms: Dice Race'
-        desc: This lesson calls out ways we use algorithms in our daily lives. As
-          part of that, students will identify and write down the algorithm for a
-          dice race game.
+        title: 'Instruktioner i verkliga livet: Tärnings- spelet'
+        desc: Den här lektionen visar hur vi använder uppsättningar av instruktioner
+          i det dagliga livet. Eleverna får identifiera och skriva ner instruktionerna
+          för hur man spelar ett tärnings-spel.
         video: C3_dice_race
       Internet:
         title: Internet
-        desc: Students send messages representing various Internet transmission methods
-          using pieces of paper.
+        desc: Eleverna skickar meddelanden som representerar olika överföringsmetoder
+          på nätet genom att använda bitar av papper.
         video: C3_internet
       Crowdsourcing:
         title: Crowdsourcing
-        desc: Student use crowdsourcing, a problem-solving technique common in computer
-          science, to complete a task together as a classroom more efficiently than
-          if a student attempted it alone.
+        desc: Eleverna använder 'crowdsourcing', en problemlösningsteknik som är vanlig
+          i datorvetenskapen, för att lösa ett problem mer effektivt som klass än
+          som individuell elev.
         video: C3_crowdsourcing
       DigitalCitizenship:
-        title: Digital Citizenship
-        desc: Students explore the difference between private information and personal
-          information, distinguishing what is safe and unsafe to share online.
+        title: Digitalt medborgarskap
+        desc: Eleverna utforskar skillnaden mellan privat och personlig information
+          för att skilja ut vad som är säkert att dela online.
       TangramAlgorithms:
-        title: Tangram Algorithms
-        desc: This lesson shows us something important about algorithms. If you keep
-          an algorithm simple there are lots of ways to use it. If you want to make
-          sure everyone ends up with the same thing, then your algorithm needs more
-          detail.
+        title: Tangram algoritmer(uppsättning av instruktioner)
+        desc: Den här lektionen visar något viktigt om uppsättningar av instruktioner.
+          Om du låter instruktionerna vara allmänna finns det många sätt att använda
+          dem. Om du vill att alla som använder instruktionerna ska få exakt samma
+          slutresultat måste du vara mer detaljerad i dina instruktioner.
+        video: C4_unplugged_algorithms
       EnvelopeVariables:
-        title: Envelope Variables
-        desc: Variables allow for a lot of freedom in computer science.  This lesson
-          helps to explain what variables are and how we can use them in many different
-          ways. Use this activity before (or in conjunction with) the lesson on abstraction
-          to really hit the idea home.
+        title: Envelope variabler
+        desc: Variabler ger oss en stor grad av frihet inom datorvetenskapen. den
+          här lektionen förklarar vad en variabel är och hur vi kan använda variabler
+          på många olika sätt. Använd den här lektionen tillsammans med lektionen
+          om abstraktion för att verkligen hjälpa eleverna att förstå.
+        video: C4_unplugged_variables
       MadGlibs:
-        title: Mad Glibs
-        desc: Abstraction is one of the most important skills for a computer scientist
-          to understand.  This activity will have your students analyzing stories
-          for differences so that they can abstract them away. Those abstracted stories
-          become templates for fun and crazy new ones.
+        title: Galna Glibs
+        desc: Abstraktion är ett av de viktigaste begreppen att förstå inom datorvetenskapen.
+          Den här lektionen låter eleverna analysera berättelser för att hitta skillnader
+          som gör att de kan abstraheras. Dessa abstraherade berättelser blir förlagor
+          till nya och tokroliga berättelser.
+        video: C4_unplugged_madlibs
       ForLoopFun:
-        title: For Loop Fun
-        desc: We know that loops allow us to do things over and over again, but now
-          we’re going to learn how to use loops with extra structure built right in.
+        title: '''För'' loop skoj'
+        desc: Vi vet att loopar/slingor tillåter oss göra saker om och om igen, men
+          nu ska vi lära oss att använda loopar som har extra strukturer inbyggda.
+        video: C4_unplugged_forloops
       SongwritingWithParameters:
-        title: Songwriting With Parameters
-        desc: 'One of the most magnificent structures in the computer science world
-          is the function.  Functions (sometimes called procedures) are mini programs
-          that you can use over and over inside of your bigger program. This lesson
-          will help students intuitively understand why combining chunks of code into
-          functions is such a helpful practice.  '
+        title: Låtskrivande Med parametrar
+        desc: 'En av de mest magnifika strukturerna i datorvetenskapen är funktionen.
+          Funktioner (ibland kallad procedur) är miniprogram som du kan använda om
+          och om igen inuti ditt större program. lektionen lär eleverna att förstå
+          hur bitar av kod inuti funktioner är så användbart. '
+        video: C4_unplugged_parameters
       BinaryImages:
-        title: Binary Images
-        desc: Though many people think of binary as strictly zeros and ones, our previous
-          courses taught students that information can be represented in a variety
-          of binary options.  This lesson takes that concept one step further as it
-          illustrates how a computer can store even more complex information (such
-          as images and colors) in binary, as well.
+        title: Binära bilder
+        desc: Fastän många människor tänker på binärt som bara nollor och ettor, har
+          de föregående kurserna visat eleverna att information kan bli presenterad
+          på olika binära sätt. Den här lektionen tar det konceptet vidare genom att
+          visa hur en dator kan lagra även mer komplex information(som bilder och
+          färger) på binärt sätt.
+        video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
-        title: Video Games and Coordinate Planes
-        desc: Video Games and Coordinate Planes lesson description
+        title: Videospel och koordinat-plan
+        desc: Lektionsbeskrivning för Videospel och koordinat-plan
       Contracts:
-        title: Contracts
-        desc: Contracts unplugged lesson description
+        title: Kontrakt
+        desc: Kontrakt för ouppkopplad lektion
       DesignRecipe:
-        title: The Design Recipe
-        desc: Design Recipe lesson description
+        title: Design recept
+        desc: Beskrivning på designrecept- lektion
       Booleans:
-        title: Booleans
-        desc: Booleans lesson description
+        title: Booleska värden
+        desc: 'Beskrivning boolean lektion '
       ConditionalsPiecewiseFunctions:
-        title: Conditionals and Piecewise Functions
-        desc: Conditionals and Piecewise Functions lesson description
+        title: Villkorssatser och styckevis funktioner
+        desc: Beskrivning på lektion om Villkor och styckevisa funktioner
       CollisionDetection:
-        title: Collision Detection
-        desc: Collision Detection lesson description
+        title: Kollisions-detektion
+        desc: Beskrivning på lektion om kollisons-detektion

@@ -1,6 +1,6 @@
 {
   "actor":"leikmaður",
-  "alienInvasion":"Alien Invasion!",
+  "alienInvasion":"Innrás úr geimnum!",
   "backgroundBlack":"svart",
   "backgroundCave":"hellir",
   "backgroundCloudy":"skýjað",
@@ -58,6 +58,7 @@
   "moveDistanceTooltip":"Færa leikmann tiltekna vegalengd í hina tilteknu stefnu.",
   "moveSprite":"færa",
   "moveSpriteN":"færa leikmann {spriteIndex}",
+  "toXY":"to x,y",
   "moveDown":"færa niður",
   "moveDownTooltip":"Færa leikmann niður.",
   "moveLeft":"færa til vinstri",

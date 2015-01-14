@@ -4,7 +4,7 @@ maquetació: àmplia
 
 * * *
 
-# Prizes - FAQs
+# Premis - preguntes freqüents
 
 ## Does your whole school have to enter to win the $10,000 in hardware?
 

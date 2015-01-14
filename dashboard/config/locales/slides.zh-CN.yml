@@ -33,7 +33,7 @@
         text: 每个块对应一条命令。如果你把”向前移动“块拖到工作区，并按”运行程序“，这只小鸟将在迷宫里向前移动一步。
       11:
         image: notes/hoc1_11.jpg
-        text: 你可以将许多块拖到工作区并把它们连接在一起，来让小鸟执行多个动作。小鸟会由上至下执行命令。
+        text: 需执行多个操作时，将多个块拖到您的工作区，并将他们连在一起。小鸟会从头到尾执行所有命令。
       12:
         image: notes/hoc1_12.jpg
         text: 如果你运行了一个程序，但是想要修改它再重试，按”重置“按钮。
@@ -160,21 +160,20 @@
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: 你好，我的名字是 Saloni。我用计算机科学来帮助解决健康和医学上的问题。让我们来学习如何使用"如果其他"块。它看起来很像"如果"块，但它在结尾多出了一部分，"其他"。
+        text: 你好，我是 Saloni。我用计算机科学来帮助解决健康和医学上的问题。让我们来学习如何使用 "如果-否则“ 模块。这个模块和"如果"模块类似，区别仅是在”如果“模块的结尾加上”否则”部分。
       2:
         image: notes/hoc5_2.jpg
-        text: 如果我把”向前移动“块放在写着”做“的地方，并且把”左转“块放在写着”其他“的地方，这表明僵尸将会在这两者之间做一个选择。如果前面有路，僵尸就会往前走，否则（如果前面没有路），僵尸就会向左转。
+        text: 如果我把”向前移动“块放在标注着”做“的地方，并且把”左转“块放在写着”否则“的地方，这表明僵尸将会在这两者之间做一个选择。如果前面有路，僵尸就会往前走，否则（意味着前面没有路），僵尸就会向左转。
       3:
         image: notes/hoc5_3.jpg
-        text: 就想”如果“块一样，我可以把”如果其他“块放在”重复“块里面，这样僵尸就会在重复向前移动，并检查是不是有需要转弯的地方。
+        text: 与“如果”模块类似，我们可以将“如果-否则”模块放在一个“循环”模块内，这样僵尸就不停的移动，“如果-否则”模块则不断的检查是否有其他地方可以拐弯。
       4:
         image: notes/hoc5_4.jpg
-        text: 现在，让这些僵尸去他们应该去的地方吧！
+        text: 现在，让这些僵尸回老家吧！
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
-        text: An if-else statement is a decision between two things. Let's see how
-          we can use an if-else statement with our buddy Scrat the squirrel.
+        text: If-else 语句描述在两个事件间的选择。让我们看看一个例子，与我们的好朋友松鼠Scrat一起使用if-else语句。
       2:
         image: notes/saloni_ifelse_scrat2.jpg
         text: This block looks the same as the "if" block, but there's an extra part
@@ -399,3 +398,75 @@
         image: notes/playlab_3.png
         text: And there are some blocks that do stuff when actors collide or are clicked.
           Check them out and have fun!
+    playlab_intro:
+      1:
+        image: notes/playlab_intro_1.png
+        text: We're going to create games using Play Lab. Good games have a story,
+          and every story has actors. We'll learn how to make our actors like witches,
+          alinens, and animals speak, move, and interact with each other. By the end
+          of this tutorial, you can build a game from scratch and share it with your
+          friends.
+      2:
+        image: notes/playlab_intro_2.png
+        text: Your screen is split into 3 main parts. On the left is the game space
+          where your program will run. The instructions for each level are written
+          below.
+      3:
+        image: notes/playlab_intro_3.png
+        text: The middle area is the toolbox, and each of these blocks is a piece
+          of code. The white space on the right is called the workspace and this is
+          where we'll build our program.
+      4:
+        image: notes/playlab_intro_4.png
+        text: To start off, you'll need to link your blocks to the orange "when run"
+          block. You can link multiple blocks together by dragging them out until
+          you see the yellow line, and then they'll snap together.
+      5:
+        image: notes/playlab_intro_5.png
+        text: In this first puzzle, our actor is a penguin and we'll be making it
+          say "Hello!" by dragging the say block out, linking it to the when run block,
+          and typing in "Hello." We can also make the penguin move by using the move
+          right and move left blocks. Once you have your blocks in place, hit the
+          run button to see what you've programmed.
+      6:
+        image: notes/playlab_intro_6.png
+        text: Get started and by the end, you'll be able to create your own game with
+          all kinds of players that can interact, turn happy or sad, score points,
+          or throw fireballs, or even vanish each other. It's all up to you and the
+          game you want to make.
+    playlab_events:
+      1:
+        image: notes/playlab_events_1.png
+        text: Now, we're going to learn about something that all game programmers
+          use everyday. They're called events. An event tells your program to listen
+          for when something happens. When that thing happens, it performs an action.
+      2:
+        image: notes/playlab_events_2.png
+        text: Some examples of events are listening for a mouse click, an arrow button,
+          or a tap on the screen.
+      3:
+        image: notes/playlab_events_3.png
+        text: Here, we're going to make the space bot greet the earthlings when a
+          player clicks on him. We'll use the "when clicked" block and attach the
+          "say" block to it. When the player clicks on the space bot, everything attached
+          to this "when clicked" event block will be performed. What does your alien
+          say?
+      4:
+        image: notes/playlab_events_4.png
+        text: There are also "when arrow" blocks. If you link the "move" blocks to
+          these, you can start to move your actors up, down, left, or right. Step
+          by step, your game is getting more interactive.
+    playlab_repeat_forever:
+      1:
+        image: notes/playlab_repeat_forever_1.png
+        text: This is the "repeat forever" block. Anything inside this block will
+          happen forever in the game.
+      2:
+        image: notes/playlab_repeat_forever_2.png
+        text: If we want an actor to do something repeatedly, without the player having
+          to do anything, we'll put those blocks inside the "repeat forever" block.
+      3:
+        image: notes/playlab_repeat_forever_3.png
+        text: In this next puzzle, our goal is to help the wizard patrol the boundaries
+          of the kingdom, left and right continuously. Learning how the repeat commands
+          works, will save you a ton of time later when you build your own game.

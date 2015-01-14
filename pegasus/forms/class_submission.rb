@@ -130,6 +130,7 @@ class ClassSubmission
   end
 
   def self.process(data)
+    sleep 0.10
     {
       'location_p' => data['location_p'] || geocode_address(data['school_address_s'])
     }

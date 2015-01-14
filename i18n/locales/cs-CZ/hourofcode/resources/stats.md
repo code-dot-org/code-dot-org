@@ -4,8 +4,6 @@ title: Blurbs and Stats layout: wide nav: resources_nav
 
 * * *
 
-[<button style="float: right; margin-top: 50px">Přihlaste svoji událost</button>](/#join)
-
 # Fakta a užitečné statistiky
 
 ## Use this short blurb in newsletters
@@ -17,5 +15,3 @@ Počítače jsou všude, ale dnes vyučuje informatiku méně škol než tomu by
 ## Infographic version:
 
 ![obrázek](http://code.org/images/fit-8000/Code.org_infographic.png)
-
-<a style="display: block" href="/#join"><button style="float: right;">Přihlaste svoji událost</button></a>

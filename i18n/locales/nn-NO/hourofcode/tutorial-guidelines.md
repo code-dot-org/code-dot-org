@@ -23,15 +23,15 @@ Vi ynskjer å kunne tilby fleire ulike engasjerande leksjonar, men hovedmålet e
   * [Retningsliner for varemerkje](#tm)
   * [Sporingspiksel](#pixel)
   * [Promotering av leksjonane dine i Kodetimen](#promote)
-  * [Litt informasjon om elevar med funksjonshemminger](#disabilities)
+  * [Litt informasjon om elevar med funksjonshemmingar](#disabilities)
 
 <a id="inclusion"></a>
 
 ## Korleis leksjonane vil bli vurderte
 
-Leksjonane vil bli vurderte av ein komité av IT-lærearar. Dei vil rangere aktivitetane ut frå kvalitative og kvantitative kriterie. Eit breiare utval av lærara vil også bli rådspurte.
+Leksjonane vil bli vurderte av ein komité av IT-lærarar. Dei vil rangere aktivitetane ut frå kvalitative og kvantitative kriterium. Eit breiare utval av lærarar vil også bli rådspurte.
 
-**Leksjonane vil bli vurdert betre dersom dei er:**
+**Leksjonane vil bli rangert høgare dersom dei er:**
 
   * av høg kvalitet
   * sjøvforklarande og ikkje treng instruksjonar
@@ -61,11 +61,11 @@ Leksjonane vil bli vurderte av ein komité av IT-lærearar. Dei vil rangere akti
   * berre handlar om webdesign med HTML og CSS
   * blir sende inn for seint eller med ufullstendig informasjon (sjå nedanfor)
 
-Målet med kampaja Kodetimen er å få fleire lærarar og elevar til å jobbe med IT, og å vise at IT er tilgjengeleg for alle og "lettare enn du trur." På mange måtar er dette målet lettere å nå ved å gi elevar og lærarar færre og enklare val, med fokus på alternativ med høg kvalitet for nybyrjarar.
+Målet med Kodetime-kampanjen er å få fleire lærarar og elevar til å jobbe med IT, og å vise at IT er tilgjengeleg for alle og "lettare enn du trur." På mange måtar er dette målet lettare å nå ved å gi elevar og lærarar færre og enklare val, med fokus på alternativ med høg kvalitet for nybyrjarar.
 
-Legg også merke til at 2013 CSEdWeek var en fantastisk suksess målt fra responsens gitt av studenter og lærere - 20 millioner deltakere fra Des 9 - 23, og 97% sa at de likte det og vil gjenta arrangementet!!
+Legg også merke til at kodeveka i 2013 (CSEdWeek) var ein fantastisk suksess målt utifrå responsen som vart gitt av studentar og lærarar. - 20 millionar deltok frå 9. - 23, desember og 97% sa at dei likte det og vil gjenta arrangementet!!
 
-Som et resultat er de eksisterende listene for veiledninger helt klart «gode nok,» og den drivende grunnen til å legge til veiledninger til Kodetimens lister er ikke for å gi et bredere utvalg, men for å høyne kvaliteten (eller ferskheten) for studentene, eller for å utvide valgene til ikke-engelsktalende gitt den globale naturen til 2014 kampanjen.
+Leksjonane som finst allereie (på engelsk) er absolutt "gode nok", og det er ikkje lite utvalg som er årsaka til at vi ønsker fleire leksjonar. Det er derimot å heve kvaliteten (eller aktualitet) for elevar, og å få fleire val for ikkje-engelskspråklege brukarar, sidan 2014-kampanjen har ein global karakter.
 
 [**Tilbake til toppen**](#top)
 

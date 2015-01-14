@@ -62,7 +62,7 @@
         Maze Match: Maze Match
         Match the puzzles to the blocks: Match the puzzles to the blocks
         Instructions: 說明
-        Drag the blocks to match.: Drag the blocks to match.
+        Drag the blocks to match.: 拖曳方塊至符合位置。
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/2-3_images/maze/2-3_maze_match_2_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q1.png
         /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png
@@ -117,7 +117,7 @@
         Maze Match: Maze Match
         Match the puzzles to the blocks: Match the puzzles to the blocks
         Instructions: 說明
-        Drag the blocks to match.: Drag the blocks to match.
+        Drag the blocks to match.: 拖曳方塊至符合位置。
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/4-5_images/maze/4-5_maze_match_1_q1.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q1.png
         /script_assets/4-5_images/maze/4-5_maze_match_1_q2.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q2.png
@@ -134,12 +134,11 @@
         <h4>2)</h4>: <h4>2)</h4>
         <h4>3)</h4>: <h4>2)</h4>
         <h4>4)</h4>: <h4>2)</h4>
-        <h4>Set Player 1 score to 0</h4>: <h4>Set Player 1 score to 0</h4>
-        <h4>Player 1 rolls die</h4>: <h4>Player 1 rolls die</h4>
+        <h4>Set Player 1 score to 0</h4>: <h4>設定玩家 1 的分數為 0</h4>
+        <h4>Player 1 rolls die</h4>: <h4>玩家 1 角色死亡</h4>
         <h4>Add Player 1 roll to total score</h4>: <h4>Add Player 1 roll to total
           score</h4>
-        <h4>Compare player scores to see who wins</h4>: <h4>Compare player scores
-          to see who wins</h4>
+        <h4>Compare player scores to see who wins</h4>: <h4>比較所有玩家的得分，來看看誰贏了</h4>
       4-5 Computational Thinking Match 1:
         Matching: Matching
         Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Each
@@ -234,7 +233,7 @@
         Matching: Matching
         Match the puzzles and blocks: Match the puzzles and blocks
         Instructions: 說明
-        Drag the blocks to match.: Drag the blocks to match.
+        Drag the blocks to match.: 拖曳方塊至符合位置。
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/k_1_images/maze_images/maze_EN.png: /script_assets/k_1_images/maze_images/maze_EN.png
         /script_assets/k_1_images/maze_images/maze_ENE.png: /script_assets/k_1_images/maze_images/maze_ENE.png
@@ -274,14 +273,14 @@
         /script_assets/k_1_images/unplugged_images/rightrightup.png: /script_assets/k_1_images/unplugged_images/rightrightup.png
         /script_assets/k_1_images/unplugged_images/rightdown.png: /script_assets/k_1_images/unplugged_images/rightdown.png
       Coordinate Matching:
-        Coordinates of Ninjacat: Coordinates of Ninjacat
+        Coordinates of Ninjacat: Ninjacat 的座標
         Match each character with its correct coordinate!: Match each character with
           its correct coordinate!
         /script_assets/msm/Unit 1/exercise_3_ninjacat.png: /script_assets/msm/Unit
           1/exercise_3_ninjacat.png
-        Cloud: Cloud
-        Ruby: Ruby
-        Dog: Dog
+        Cloud: 雲
+        Ruby: 紅寶石
+        Dog: 小狗
         Ninjacat: Ninjacat
         (250, 400): (250, 400)
         (500, 240): (500, 240)
@@ -383,6 +382,6 @@
         What's Brent's last name?: 布倫特的姓是什麼？
         Where is Brendan from?: Where is Brendan from?
         blue: 藍
-        salt: salt
+        salt: 鹽
         Van Minnen: Van Minnen
         Sydney: 雪梨

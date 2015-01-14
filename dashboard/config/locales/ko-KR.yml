@@ -30,12 +30,13 @@
   appname: Code.org
   stage: stage
   stage_number: 스테이지 %{number}
-  puzzle: 퍼즐
+  puzzle: Puzzle
   trophies: trophies
   courses: courses
   of: 중
   more: 전체단계
   less: 현재단계
+  beta: 베타
   try_hoc: 'Hour of Code 해보기! >> '
   try_k8intro: 유치원~중2(K-8) 학생들을 위한 컴퓨터과학(CS, 정보과학) 코스(15-25시간) 를 해보세요.
   k8intro: 유치원~중2(K-8) 학생들을 위한 컴퓨터과학(CS, 정보과학) 코스
@@ -240,9 +241,9 @@
     popup:
       progress: 내 진도
       lines: 총 %{lines} 라인
-      close: 닫기
+      close: CLOSE
       mastery: 개념
-      puzzle_map: 단계
+      puzzle_map: Stages
       prizes: 트로피를 모두(%{total_trophies} 개) 모아 상품을 받으세요!
       prize_earned: 트로피를 모두(총 %{total_trophies} 개) 모았습니다. 상품을 받으세요!
       prize_us_only: (U.S. students only)
@@ -296,7 +297,7 @@
       secret: 비밀번호 입력
       grade: 등급
       course: 코스
-      rename: 이름 바꾸기
+      rename: rename
       edit: 수정하기
       delete: 삭제하기
       confirm_delete: 이 섹션을 삭제하시겠습니까?
@@ -314,10 +315,11 @@
     email_resend_confirm: 이메일 확인 재발송
     new_password_hint: (바꾸고 싶지 않으면, 비워 두세요)
     current_password_hint: (수정하기 위해 비밀번호를 한 번 더 입력해 주세요.)
-    cancel:
-      title: 계정 삭제하기
-      hint: 불편한 점이 있나요?
-      button: 계정 삭제
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: 'Please note: deleting your account will not delete
+      your students'' accounts.'
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: 완료
     tried: 시도
@@ -358,8 +360,8 @@
     test_videos_help: 새로 만든 비디오 플레이어를 테스트해 보세요.
     try_beta_courses: K-5(~초등5학년) 학생들을 위한 새로운 시범 코스들을 경험해 보세요.
     use_as_teacher: 선생님으로 사이트 사용하기
-    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
-    heading_elementary: <h1>초등학생들을 위한</h1><h2>20 시간 코스</h2>
+    heading_hoc2014: <h1>어떠한 나이에도 가능한</h1> <h2>Hour of Code</h2>
+    heading_elementary: <h1>처음하는 모든 사람들을 위한</h1> <h2>20시간짜리 과정</h2>
     heading_apps: <h1> 누구나 </h1><h2> 재미있게 </h2>
     heading_legacy: <h1>모든 연령대를 위한 </h1><h2>일반 코스</h2>
     your_gallery: 갤러리
@@ -372,10 +374,9 @@
     teacher: 선생님
   footer:
     help_from_html: 구글, 마이크로소프트, 페이스북, 트위터의 컴퓨터과학자들이 이 튜토리얼을 만들었습니다.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 <a href="http://www.rovio.com">Rovio
-      Entertainment Ltd</a>. All Rights Reserved.<br/> Plants vs. Zombies&trade; &
-      &copy; 2013 <a href="http://www.ea.com">Electronic Arts Inc.</a>. All Rights
-      Reserved.
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
+      All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
+      Arts Inc. All Rights Reserved.
     powered_by_aws: Powered by Amazon Web Services
     feedback: 피드백 남기기
     translate: 다른 언어로 번역
@@ -443,7 +444,7 @@
       unused: 비사용 레벨
   upsell:
     hoc:
-      title: The Hour of Code
+      title: Hour of Code
       body: 컴퓨터과학(CS, 정보과학)의 기초를 경험해보세요. 수백만 가지의 것들을 가능하게 합니다.
     flappy:
       title: 플래피 코드
@@ -458,7 +459,7 @@
       title: 갤러리
       body: 다른 사람이 만든 앱과 이미지 갤러리 보기
     frozen:
-      title: Frozen
+      title: 겨울왕국
   gallery:
     students_drew_these_with_code: 학생들이 코드로 그려낸 것들!
     students_made_these_with_code: 학생들이 만든 작품
@@ -544,3 +545,7 @@
     completed_too_many_blocks: 완료되었지만, 너무 많은 블럭들을 사용함
     completed_perfect: 완료
     furthest_level_attempted: 시도한 가장 높은 레벨
+  studio:
+    courses_working_on: 진행중인 코스
+    completed_courses: 완료한 코스
+    all_courses: 모든 코스

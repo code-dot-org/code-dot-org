@@ -19,7 +19,17 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "use_modal_function_editor": "true",
-    "instructions": "Here's a function called \"jump\" that causes your main character to jump up 100 pixels. Use the jump function to collect all of the flags."
+    "instructions": "Here's a function called \"jump\" that causes your main character to jump up 100 pixels. Use the jump function to collect all of the flags.",
+    "embed": "false",
+    "use_contract_editor": "false",
+    "maze_data": null,
+    "coordinate_grid_background": "false",
+    "disable_sharing": "false",
+    "soft_buttons": [
+      "leftButton",
+      "rightButton",
+      "upButton"
+    ]
   }
 }]]></config>
   <blocks>

@@ -8,26 +8,22 @@ title: Resources layout: wide nav: resources_nav
   <h1 class="col-sm-6">
     Sumber daya
   </h1>
-  
-  <div class="col-sm-6 button-container centered">
-    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Sign up your event</button></a>
-  </div>
 </div>
 
 <% if @country == 'ie' %>
 
-## Hosting an Hour of Code in Ireland? [See the how-to guide](<%= hoc_uri('/resources/how-to-ireland') %>)
+## Selenggarakan Hour of Code di Irlandia? [Lihat panduan](<%= hoc_uri('/resources/how-to-ireland') %>)
 
 <% else %>
 
-## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
+## Ingin menggadakan Hour of Code anda? [Lihat panduan](<%= hoc_uri('/resources/how-to') %>)
 
 <% end %>
 
 <a id="handouts"></p> 
 
 <h2>
-  Use this handout to spread the word
+  Gunakan selebaran ini untuk menyebarkan berita
 </h2>
 
 <p>
@@ -35,7 +31,7 @@ title: Resources layout: wide nav: resources_nav
 </p>
 
 <h2>
-  Give this handout to teachers and schools
+  Berikan selebaran ini pada guru-guru dan sekolah-sekolah
 </h2>
 
 <p>
@@ -46,20 +42,20 @@ title: Resources layout: wide nav: resources_nav
   <a id="videos"></p> 
   
   <h2>
-    Show these videos to inspire students
+    Tampilkan video ini untuk menginspirasi para pelajar
   </h2>
   
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>What Most Schools Don't Teach (5 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>Apa yang kebanyakan sekolah tidak pernah ajarkan (5 menit)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>Hour of Code is Here - Anybody Can Learn</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>Hour of Code telah hadir - Siapa saja dapat belajar</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
@@ -69,14 +65,14 @@ title: Resources layout: wide nav: resources_nav
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>President Obama on computer science</strong></a>
+      <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>President Obama pada Ilmu Komputer</strong></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>Anybody Can Learn (1 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>Siapa Saja Dapat Belajar (1 menit)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
@@ -90,7 +86,7 @@ title: Resources layout: wide nav: resources_nav
     <a id="posters"></p> 
     
     <h2>
-      Hang these posters in your school
+      Tempelkan poster-poster ini di sekolah anda
     </h2>
     
     <p>
@@ -102,7 +98,7 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Feature these banners on your website
+      Tempatkan banner ini di situs web Anda
     </h2>
     
     <p>
@@ -114,7 +110,7 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Post these on social media
+      Posting ini di media sosial
     </h2>
     
     <p>
@@ -122,7 +118,7 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <p>
-      <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="gambar" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="gambar" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="gambar" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="gambar" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="gambar" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/image/barack.jpg"><img src="/images/fit-250/barack.jpg" alt="gambar" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="gambar" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="gambar" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="gambar" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="gambar" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="gambar" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/barack.jpg"><img src="/images/fit-250/barack.jpg" alt="gambar" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
     </p>
     
     <p>
@@ -130,7 +126,7 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Send these emails to help promote the Hour of Code
+      Kirimkan email ini untuk membantu mempromosikan kegiatan Hour of Code
     </h2>
     
     <p>
@@ -138,27 +134,27 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Ask your school, employer or friends to sign up:
+      Tanyakan di sekolah, bos di tempat kerja atau teman anda untuk mendaftar:
     </h2>
     
     <p>
-      Komputer ada dimana-mana, tetapi sedikit sekolah yang mengajar ilmu komputer dari 10 tahun yang lalu. Kabar baiknya, kita berada pada jalur yang tepat untuk merubah itu. If you heard about the Hour of Code last year, you might know it made history. Dalam satu minggu saja, sudah lebih dari 15 juta pelajar mencoba ilmu komputer!
+      Komputer ada dimana-mana, tetapi sedikit sekolah yang mengajar ilmu komputer dari 10 tahun yang lalu. Kabar baiknya, kita berada pada jalur yang tepat untuk merubah itu. Jika Anda mendengar tentang Hour of Code tahun lalu, Anda mungkin tahu itu merupakan saat bersejarah. Dalam satu minggu saja, sudah lebih dari 15 juta pelajar mencoba ilmu komputer!
     </p>
     
     <p>
-      Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+      Komputer science juga terdapat pada hompage dari Google, MSN, Yahoo! dan Disney. Presiden Obama, Shakira dan Ashton Kutcher semua memulaikan Hour of Code dengan video. Lebih dari 100 mitra kerja datang untuk mendukng gerakan ini.
     </p>
     
     <p>
-      This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2014. Please get involved with an Hour of Code event during Computer Science Education Week, December 8-14, 2014.
+      Untuk tahun ini, marilah kita buat lebih besar lagi. Kami meminta anda untuk bergabung dalam Hour of Code 2014. Ayo bergabunglah dalam Hour of Code saat Computer Education Week, 8-14 Desember 2014.
     </p>
     
     <p>
-      Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself -- everyone can benefit from learning the basics.
+      Sebarkan brita. Adakan kegiatan. Tanyakan pada sekolah lokal untuk mendaftar. Atau anda coba Hour of Code sendiri -- setiap orang dapat mempelajari dasarnya.
     </p>
     
     <p>
-      Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com/<%= @country %>
+      Bantu kami untuk mencapai 100 juta pelajar pada akhir tahun! Ayo memulainya pada http://hourofcode.com/<%= @country %>
     </p>
     
     <p>
@@ -166,51 +162,51 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Invite media to attend your event:
+      Undanglah media untuk menghadiri kegiatan anda:
     </h2>
     
     <p>
-      <strong>Subject line:</strong> Local school joins mission to introduce 100m students to computer science
+      <strong>Subjek:</strong> Sekolah lokal bergabung dalam misi untuk memperkenalkan pada 100 juta pelajar mengenai ilmu komputer
     </p>
     
     <p>
-      Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and minorities are severely underrepresented. Good news is, we’re on our way to change this.
+      Komputer ada dimana-mana, tetapi sedikit sekolah yang mengajar ilmu komputer daripada 10 tahun yang lalu. Perempuan dan minoritas sangat kurang terwakili mengenai hal ini. Berita baiknya, kita dalam jalur yang tepat untuk merubahnya.
     </p>
     
     <p>
-      In one week last year, 15 million students tried computer science! Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+      Dalam satu minggu tahun lalu, 15 juta pelajar telah mencoba ilmu komputer! Komputer science juga terdapat pada hompage dari Google, MSN, Yahoo! dan Disney. Presiden Obama, Shakira dan Ashton Kutcher semua memulaikan Hour of Code dengan video. Lebih dari 100 mitra kerja datang untuk mendukng gerakan ini.
     </p>
     
     <p>
-      Now the Hour of Code movement is aiming for 100 million students.
+      Sekaran gerakan Hour of Code ingin mencapai 100 juta pelajar.
     </p>
     
     <p>
-      That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Dec. 8-14.
+      Itulah sebabnya setiap [X number] pelajar pada [SCHOOL NAME] akan bergabung dalam kegiatan belajar terbesar dalam sejarah: Hour of Code pada Desember tanggal 8-14.
     </p>
     
     <p>
-      I'm writing to invite you to attend our kickoff assembly, and to see kids start the activity on [DATE].
+      Saya menulis ini untuk mengundang anda untuk menhadiri acara pembukaan, dan untuk melihat anak-anak memulai aktivitas pada [DATE].
     </p>
     
     <p>
-      The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a statement that today’s generation of students are ready to learn critical skills for 21st century success. Please join us.
+      Hour of Code, diorganisir oraganisasi Code.org nirlaba dan lebih dari 100 mitra lainnya, ini adalah pernyataan bahwa genarasi pelajar hari ini siap untuk belajar kemampuan kritikal untu menuju sukses pada abad 21. Bergabunglah dengan kami.
     </p>
     
     <p>
-      <strong>Contact:</strong> [YOUR NAME], [TITLE], cell: (212) 555-5555
+      <strong>Contact:</strong> [YOUR NAME], [TITLE], HP: (212) 555-5555
     </p>
     
     <p>
-      <strong>When:</strong> [DATE and TIME of your event]
+      <strong>Kapan:</strong> [DATE and TIME of your event]
     </p>
     
     <p>
-      <strong>Where:</strong> [ADDRESS and DIRECTIONS]
+      <strong>Dimana:</strong> [ADDRESS and DIRECTIONS]
     </p>
     
     <p>
-      I look forward to being in touch.
+      Saya berharap untuk menjalin hubungan.
     </p>
     
     <p>
@@ -218,39 +214,39 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Tell parents about your school's event:
+      Beritahu orang tua anda mengenai kegiatan sekolah anda:
     </h2>
     
     <p>
-      Dear Parents,
+      Orang tua yang terhormat,
     </p>
     
     <p>
-      We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly hinge on understanding how technology works. But only a tiny fraction of us are learning computer science, and less students are studying it than a decade ago.
+      Kita hidup di dunia yang dikelilingi dengan teknologi. Dan sekarang kita tahu apa pun bidang yang dipilih pelajar kita untuk menuju kedewasaan, kemampuan mereka untuk sukses akan mulai bergantung pada pemahaman bagaiman teknologi bekerja. Tetapi hanya sebagian kecil dari kita yang mempelajari ilmu komputer, dan lebih sedikit pelajar yang mempelajarinya dari satu dekade yang lalu.
     </p>
     
     <p>
-      That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
+      Itulah mengapa sekolah kami bergabung dalam kegiatan belajar terbesar dalam sejarah: Hour of Code, pada saat Computer Science Education Week (Des. 8-14). Tahun lalu, 15 juta pelajar sudah mencoba ilmu komputer dalam satu minggu. Tahun ini, kami bergabung dengan pelajar dari seluruh dunia untuk mencapai 100 juta pelajar!
     </p>
     
     <p>
-      Our Hour of Code is a statement that [SCHOOL NAME] is ready to teach these foundational 21st century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on your social media channels and consider hosting additional Hour of Code events in the community.
+      Hour of Code kami adalah pernyataan bahwa [nama sekolah] sudah siap untuk mengajar keterampilan dasar abad ke-21 ini. Untuk membawa kegiatan pemrograman untuk pelajar Anda, kami ingin membuat acara Hour of Code kami besar. Saya meendukung anda untuk menjadi sukarelawan, menjangkau media lokal, berbagi berita di saluran media sosial anda dan mempertimbangkan melakukan hosting tambahan pada Hour of Code di komunitas kami.
     </p>
     
     <p>
-      This is a chance to change the future of education in [TOWN/CITY NAME].
+      Ini adalah kesempatan untuk mengubah masa depan pendidikan di [TOWN/CITY NAME].
     </p>
     
     <p>
-      See http://hourofcode.com/<%= @country %> for details, and help spread the word.
+      Lihat http://hourofcode.com/ < % = @country %> untuk rincian, dan bantuan untuk menyebarkan berita.
     </p>
     
     <p>
-      Sincerely,
+      Dengan Hormat,
     </p>
     
     <p>
-      Your principal
+      Kepala sekolah
     </p>
     
     <p>
@@ -258,33 +254,29 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Invite a local politician to your school's event:
+      Undang politisi lokal ke kegiatan sekolah anda:
     </h2>
     
     <p>
-      Dear [Mayor/Governor/Representative/Senator LAST NAME]:
+      Yang terhormat [nama terakhir Mayor/Gubernur/wakil/Senator]:
     </p>
     
     <p>
-      Did you know that in today’s economy, computing jobs outnumber students graduating into the field by 3-to-1? And, computer science is foundational for <em>every</em> industry today. Yet 90% of schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
+      Apakah Anda tahu bahwa dalam perekonomian saat ini, pekerjaan komputasi melebihi jumlah pelajar yang lulus dengan perbandingan 3-ke-1? Dan, ilmu komputer adalah dasar untuk <em>setiap</em> industri hari ini. Namun 90% sekolah tidak mengajarkan hal itu. Di [nama sekolah], kami berusaha untuk mengubah itu.
     </p>
     
     <p>
-      That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
+      Itulah mengapa sekolah kami bergabung dalam kegiatan belajar terbesar dalam sejarah: Hour of Code, pada saat Computer Science Education Week (Des. 8-14). Tahun lalu, 15 juta pelajar sudah mencoba ilmu komputer dalam satu minggu. Tahun ini, kami bergabung dengan pelajar dari seluruh dunia untuk mencapai 100 juta pelajar!
     </p>
     
     <p>
-      I'm writing to invite you to take part in our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st century skills. We want to ensure that our students are on the forefront of creating technology of the future--not just consuming it.
+      Saya menulis untuk mengundang Anda untuk mengambil bagian dalam kegiatan Hour of Code kami dan berbicara di Majelis kickoff kami. Ini akan berlangsung pada [tanggal, waktu, tempat], dan membuat pernyataan yang kuat bahwa [nama negara atau kota] sudah siap untuk mengajarkan siswa kami keterampilan kritis abad ke-21. Kami ingin memastikan bahwa pelajar kami berada di garis depan menciptakan teknologi masa depan--bukan hanya menjadi konsumen.
     </p>
     
     <p>
-      Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
+      Silakan hubungi saya di [Nomer Telpon atau EMAIL alamat]. Saya berharap respon balik Anda.
     </p>
     
     <p>
-      Sincerely, [NAME], [TITLE]
-    </p>
-    
-    <p>
-      <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Sign up your event</button></a>
+      Hormat kami,[NAME], [TITLE]
     </p>

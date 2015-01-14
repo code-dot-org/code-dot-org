@@ -10,7 +10,7 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
-    "disable_variable_editing": "false",
+    "disable_variable_editing": "true",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "free_play": "false",
@@ -52,7 +52,7 @@
                           <statement name="DO">
                             <block type="draw_move" inline="true" deletable="false">
                               <title name="DIR">moveForward</title>
-                              <value name="VALUE" deletable="false">
+                              <value name="VALUE">
                                 <block type="variables_get" deletable="false">
                                   <title name="VAR">length</title>
                                 </block>

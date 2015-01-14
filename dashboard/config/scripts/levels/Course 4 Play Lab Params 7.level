@@ -24,13 +24,15 @@
     "instructions": "Use the arrow keys to control the Dog and collect all of the flags.",
     "first_sprite_index": "0",
     "embed": "false",
-    "maze_data": null,
     "soft_buttons": [
       "leftButton",
       "rightButton",
       "downButton",
       "upButton"
-    ]
+    ],
+    "disable_sharing": "false",
+    "maze_data": null,
+    "protaganist_sprite_index": "0"
   }
 }]]></config>
   <blocks>

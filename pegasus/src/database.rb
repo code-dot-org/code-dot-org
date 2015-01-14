@@ -160,19 +160,21 @@ def geocode_zip_code(code)
 end
 
 
-require 'data_mapper'
-require 'dm-migrations'
-require 'dm-timestamps'
-require 'dm-transactions'
-require 'dm-types'
-require 'dm-validations'
 require 'securerandom'
 require 'json'
 
-DataMapper.setup(:default, CDO.pegasus_db_writer)
-require src_dir 'database/validation_error'
-require src_dir 'database/hour_of_activity'
-require src_dir 'database/district_partner'
-require src_dir 'database/form'
-DataMapper.finalize
-DataMapper.auto_upgrade! unless CDO.read_only
+class Form2 < OpenStruct
+  
+  def initialize(params={})
+    params = params.dup
+    params[:data] = JSON.load(params[:data])
+    params[:processed_data] = JSON.load(params[:processed_data])
+    super params
+  end
+  
+  def self.from_row(row)
+    return nil unless row
+    self.new row
+  end
+  
+end

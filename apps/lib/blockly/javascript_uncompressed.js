@@ -1,0 +1,1 @@
+../../../blockly-core/build-output/javascript_uncompressed.js

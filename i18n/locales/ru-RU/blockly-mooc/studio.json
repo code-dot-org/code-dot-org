@@ -1,6 +1,6 @@
 {
   "actor":"персонаж",
-  "alienInvasion":"Alien Invasion!",
+  "alienInvasion":"Вторжение инопланетян!",
   "backgroundBlack":"черный",
   "backgroundCave":"пещера",
   "backgroundCloudy":"облачно",
@@ -58,6 +58,7 @@
   "moveDistanceTooltip":"Переместить персонажа на определенное расстояние в определенном направлении.",
   "moveSprite":"переместить",
   "moveSpriteN":"переместить персонажа {spriteIndex}",
+  "toXY":"to x,y",
   "moveDown":"Переместить вниз",
   "moveDownTooltip":"переместить персонажа вниз.",
   "moveLeft":"переместить влево",

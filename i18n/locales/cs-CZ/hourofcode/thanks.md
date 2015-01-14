@@ -2,9 +2,9 @@
 
 Název: Děkujeme Vám za registraci uspořádání Hodiny kódu! rozložení: široký
 
-sociální: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= hoc_s(:meta_tag_og_description) %>" "og:image": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "og:image:width": 1705 "og:image:height": 949 "og:url": "http://<%=request.host%>" "og:video": "https://youtube.googleapis.com/v/rH7AjDMz_dc"
+social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= hoc_s(:meta_tag_og_description) %>" "og:image": "http://<%=request.host%>/images/code-video-thumbnail.jpg" "og:image:width": 1705 "og:image:height": 949 "og:url": "http://<%=request.host%>" "og:video": "https://youtube.googleapis.com/v/rH7AjDMz_dc"
 
-"twitter:card": player "twitter:site": "@codeorg" "twitter:url": "http://<%=request.host%>" "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>" "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>" "twitter:image:src": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "twitter:player": 'https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=0' "twitter:player:width": 1920 "twitter:player:height": 1080
+"twitter:card": player "twitter:site": "@codeorg" "twitter:url": "http://<%=request.host%>" "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>" "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>" "twitter:image:src": "http://<%=request.host%>/images/code-video-thumbnail.jpg" "twitter:player": 'https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=0' "twitter:player:width": 1920 "twitter:player:height": 1080
 
 * * *
 
@@ -14,7 +14,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Děkujeme za přihlášení k hostování akce Hodina kódu!
 
-**KAŽDÝ** Každý organizátor akce Hodinu kódu obdrží jako poděkování 10 GB místa na Dropboxu nebo 10 dolarů kreditu na Skypu. [ Podrobnosti](<%= hoc_uri('/prizes') %>)
+**KAŽDÝ** organizátor akce Hodina kódu obdrží jako poděkování 10 GB místa na Dropboxu nebo 10 dolarů kreditu na Skypu. [ Podrobnosti](<%= hoc_uri('/prizes') %>)
 
 ## 1. Povídejte o tom
 
@@ -26,7 +26,7 @@ Povězte svým přátelům o #HourOfCode.
 
 ## 2. Požádejte celou vaší školu, aby nabídla akci Hodina kódu
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](/resources/hoc-one-pager.pdf) to your principal.
+[Pošli tento email](<%= hoc_uri('/resources#email') %>) nebo [tento leták](/resources/hoc-one-pager.pdf) svému řediteli.
 
 <% else %>
 
@@ -44,12 +44,12 @@ Povězte svým přátelům o #HourOfCode.
 
 [Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf).
 
-## 5. Propagujte Hodinu kódu ve Vaší komunitě
+## 5. Propagujte akci Hodina kódu ve Vaší komunitě
 
 Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
 
-## 5. Požádejte místní politiky pro podporu akce Hodina kódu
+## 6. Požádejte místní radní, aby podpořili akci Hodina kódu
 
-[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf) and invite them to visit your school.
+Pošli tento email tvému starostovi, městskému úřadu nebo školní radě. Nebo jim dej tento leták a pozvi je na návštěvu tvé školy.
 
 <%= view 'popup_window.js' %>

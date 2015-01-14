@@ -57,7 +57,7 @@ en:
         'edit-code':
           desc: 'Edit Code (beta)'
           'MazeEC': 'Stage 1'
-          'Webapp': 'Stage 2'
+          'Applab': 'Stage 2'
           'ArtistEC': 'Stage 3'
           'StudioEC': 'Stage 4'
         'events':
@@ -108,10 +108,11 @@ en:
         'Jigsaw': 'Jigsaw'
         'MazeStep': 'Maze Step Mode'
         'Wordsearch': 'Wordsearch'
-        'Webapp': 'Webapp'
+        'Webapp': 'App Lab'
         'ArtistEC': 'The Artist'
         'TextMatch': 'Text Match'
         'StudioEC': 'Play Lab'
+        'Applab': 'App Lab'
     trophy:
       name:
         'Bronze': 'Bronze'
@@ -333,7 +334,7 @@ en:
         'maze_wordsearch_k_15': "Move me one way, then another to spell the word ABOVE"
         'maze_wordsearch_k_16': "Move me one way, then another to spell the word BELOW"
         'maze_wordsearch_k_20': "This is a test! Move me one way, then another to spell the word STORY"
-        'webapp_ec_simple': "Create your web app by using createHtmlBlock."
+        'applab_ec_simple': "Create your app by using the blocks in the toolbox."
         'turtle_ec_1_2': "Now, draw a square. NOTE: use your favorite color by picking it in the new \"penColor\" block."
         'turtle_ec_1_10': "You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new \"penWidth\" block. Have fun!"
         'studio_ec_sandbox': "Create your own game. When you're done, click Finish to let friends try your game on their phones."
@@ -491,14 +492,28 @@ en:
         'C3_crowdsourcing': 'Crowdsourcing'
         'C3_functional_suncatchers': 'Functional Suncatchers'
         'C3_songwriting_with_parameters': 'Songwriting With Parameters'
-        'C4_artist_math': 'Programming the Artist with Math'
-        'C4_create_functions': 'Creating Functions'
-        'C4_edit_functions': 'Editing Functions'
-        'C4_for_loops': 'For Loops'
-        'C4_variables': 'Variables'
+        'C4_intro' : 'Introduction'
+        'C4_bee_conditional' : 'Bee Conditionals'
+        'C4_variables_artist' : 'Variables - Artist'
+        'C4_variables_playlab' : 'Variables - Play Lab'
+        'C4_for_loops' : 'For Loops'
+        'C4_math_artist' : 'Programming the Artist with Math'
+        'C4_function_edit' : 'Editing Functions'
+        'C4_function_create' : 'Creating Functions'
+        'C4_function_parameters' : 'Functions with Parameters'
+        'C4_conditionals': 'Conditionals'
+        'C4_unplugged_algorithms' : 'Algorithms with Tangrams'
+        'C4_unplugged_madlibs' : 'Mad Libs'
+        'C4_unplugged_variables' : 'Variables in Envelopes'
+        'C4_unplugged_forloops' : 'For Loops'
+        'C4_unplugged_parameters' : 'Songwriting with Parameters'
+        'C4_unplugged_binary' : 'Binary'
         'frozen_intro': 'Hour of Code Intro'
         'frozen_loops': 'Introduction to Loops'
         'frozen_functions': 'Introduction to Functions'
+        'playlab_intro' : 'Introduction to Play Lab'
+        'playlab_events' : 'Play Lab Events'
+        'playlab_repeat_forever' : 'Play Lab Repeat Forever'
     callout:
       text:
         # Keyed by #{callout.localization_key}
@@ -554,3 +569,15 @@ en:
         function_editor_draw_square: "This is your function definition. These blocks run everytime you use the \"draw a square\" block"
         change_here: "Make your change here"
         write_draw_square_function: "Drag blocks from the toolbox into here that draw a square"
+        write_draw_triangle_function: "Drag blocks from the toolbox into here that draw a triangle"
+        edit_add_parameter: "Click edit to add a parameter in your function"
+        add_and_drag_parameter: "Write in the name of your parameter here, click add, and then drag it into your function definition"
+        fill_in_actor: "Fill in the ??? with numbers that correspond to each actor (1, 2, and 3)"
+        repeat: "Put blocks inside the loop to repeat commands"
+        if_bee_nectar: "Use the \"if\" block to decide if the bee should get nectar"
+        if_else_bee: "Use the \"if/else\" block so that the Bee gets nectar from a flower, and makes honey if it's not a flower"
+        repeat_full_circle: "Enter in the number of times the zombie has to move to make a full circle"
+        place_length_variable: "Drag the length variable here to replace the question marks"
+        arrows_move_actor: "Use the arrows to move the actor"
+        right_arrow_fireball: "Use the right arrow to shoot fireballs"
+        name_function: "Write the name of your function here"

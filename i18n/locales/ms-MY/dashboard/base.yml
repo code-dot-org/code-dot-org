@@ -36,6 +36,7 @@ ms:
   of: dari
   more: LAGI
   less: KURANG
+  beta: beta
   try_hoc: 'Cuba Kod Sejam, klik di sini >> '
   try_k8intro: Cuba pengenalan K-8 kami untuk kursus Sains Komputer (15-25 jam)
   k8intro: Pengenalan K-8 untuk kursus Sains Komputer (15-25 jam)
@@ -288,10 +289,10 @@ ms:
     email_resend_confirm: Hantar semula arahan pengesahan
     new_password_hint: (biarkan kosong jika anda tidak mahu mengubahnya)
     current_password_hint: (kami memerlukan kata laluan semasa anda untuk mengesahkan perubahan anda)
-    cancel:
-      title: Batalkan akaun saya
-      hint: Tidak berpuas hati?
-      button: Batalkan akaun saya
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Lengkap
     tried: Telah dicuba
@@ -501,3 +502,7 @@ ms:
     completed_too_many_blocks: completed, too many blocks
     completed_perfect: completed, perfect
     furthest_level_attempted: furthest level attempted
+  studio:
+    courses_working_on: "Courses you're working on"
+    completed_courses: Completed courses
+    all_courses: All courses

@@ -28,6 +28,10 @@ body{
     color: #E4E0EC;
 }
 
+#number {
+    line-height: 90px !important;
+}
+
 .content {
 	padding: 0px;	
   	margin: 0px 40px 0px 40px;

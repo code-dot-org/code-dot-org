@@ -19,12 +19,12 @@ sl:
           Spelling Bee: Čebelica črkuje besede
           Spelling Bee not blockly: Spelling Bee not blockly
           "Bee 1: Intro": 'Čebelica 1: Uvod'
-          "Maze 2: Loops": 'Maze 2: Loops'
-          "Bee 2: Loops": 'Bee 2: Loops'
+          "Maze 2: Loops": 'Labirint 2: zanke'
+          "Bee 2: Loops": 'Čebelica 2: zanke'
           Multi & Match: 'Multi & Match'
-          K-1 Flappy: K-1 Flappy
-          Flappy non blockly: Flappy non blockly
-          title: Course 1
+          K-1 Flappy: Plahutaček za prvi razred
+          Flappy non blockly: Plahutaček ne blokaček
+          title: Tečaj 1
           Artist 2: Artist 2
           Happy Maps: Happy Maps
           Move it, Move it: Move it, Move it
@@ -130,7 +130,7 @@ sl:
           "Bee: Nested Loops2": 'Bee: Nested Loops2'
           "Bee: Debugging2": 'Bee: Debugging2'
           "Artist: Patterns": 'Artist: Patterns'
-          Songwriting: Songwriting
+          Songwriting: Napiši pesem
           description_audience: Ages 8+ (after Course 2)
           description_short: Course 3 is a follow-up to Course 2.
         msm:
@@ -281,3 +281,49 @@ sl:
           description: A selection of Course 4 levels for usability testing.
           Variables: Spremenljivke
           For Loops: For Loops
+          Binary: Binary
+        potus:
+          title: special
+          description_short: special
+          description: special
+          Special: Special
+        special:
+          title: special
+          description_short: special
+          description: special
+          Special: Special
+          Binary: Binary
+        usabilitymsm:
+          Usability testing for MSM: Usability testing for MSM
+          Evaluation Blocks: Evaluation Blocks
+          Blocks to Math: Blocks to Math
+          Strings and Images: Strings and Images
+          Defining Variables: Defining Variables
+          Defining Functions: Defining Functions
+          Design Recipe: Design Recipe
+          Booleans: Booleans
+          Conditionals: Pogoji
+          Free Play: Free Play
+        algebra:
+          title: Computer Science in Algebra
+          description: Learn Functional Programming through Algebra
+          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
+          "Calc: Evaluation Blocks": 'Calc: Evaluation Blocks'
+          "Eval: Strings and Images": 'Eval: Strings and Images'
+          "Unplugged: Contracts": 'Unplugged: Contracts'
+          "Eval: Writing Contracts": 'Eval: Writing Contracts'
+          "Calc: Defining Variables": 'Calc: Defining Variables'
+          "Play Lab: Defining Variables (Big Game)": 'Play Lab: Defining Variables (Big Game)'
+          "Eval: Defining Functions": 'Eval: Defining Functions'
+          "Unplugged: The Design Recipe": 'Unplugged: The Design Recipe'
+          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
+          "Eval: Functions": 'Eval: Functions'
+          "Play Lab: Animation (Big Game)": 'Play Lab: Animation (Big Game)'
+          "Unplugged: Booleans": 'Unplugged: Booleans'
+          "Eval: Boolean Operators": 'Eval: Boolean Operators'
+          "Play Lab: Booleans": 'Play Lab: Booleans'
+          "Play Lab: Boolean (Big Game)": 'Play Lab: Boolean (Big Game)'
+          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals and Piecewise Functions'
+          "Eval: Conditionals": 'Eval: Conditionals'
+          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Distance Formula'
+          "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'

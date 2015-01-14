@@ -2,9 +2,9 @@ sv:
   data:
     match:
       2-3 artist loops match 1:
-        Artist Loops Matching One: Artist Loops Matching One
-        Matching loops: Matching loops
-        Match the loop to the shape: Match the loop to the shape
+        Artist Loops Matching One: Artist loopen matchar en
+        Matching loops: Matchande slingor
+        Match the loop to the shape: Matcha slingan till formen
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png
@@ -14,8 +14,8 @@ sv:
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png
       2-3 artist match 1:
-        Artist Matching: Artist Matching
-        Match the shape with the blocks that complete it.: Match the shape with the blocks that complete it.
+        Artist Matching: Artist matchande
+        Match the shape with the blocks that complete it.: Matcha formen med de block som slutför den.
         /script_assets/2-3_images/artist/2-3_artist_match_1_q1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png
@@ -25,8 +25,8 @@ sv:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a3.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a3.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a4.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a4.png
       2-3 bounce match 1:
-        Bounce Matching: Bounce Matching
-        Matching: Matching
+        Bounce Matching: Studs matchande
+        Matching: Matchning
         Match the events with the actions: Matcha händelserna med åtgärderna
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png
@@ -39,8 +39,8 @@ sv:
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_a4.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a4.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png
       2-3 flappy match 1:
-        Flappy Matching One: Flappy Matching One
-        Matching: Matching
+        Flappy Matching One: Flappy matchar en
+        Matching: Matchning
         Match the events with the actions: Matcha händelserna med åtgärderna
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png
@@ -49,8 +49,8 @@ sv:
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png
       2-3 maze match 1:
-        Maze Match One: Maze Match One
-        Match the puzzles to the blocks: Match the puzzles to the blocks
+        Maze Match One: Labyrint matchar en
+        Match the puzzles to the blocks: Matcha pusslet till blocken
         /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png
@@ -58,10 +58,10 @@ sv:
         /script_assets/2-3_images/maze/2-3_maze_match_1_a2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a2.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a3.png
       2-3 Maze Match 2:
-        Maze Match: Maze Match
-        Match the puzzles to the blocks: Match the puzzles to the blocks
-        Instructions: Instructions
-        Drag the blocks to match.: Drag the blocks to match.
+        Maze Match: Labyrint matchning
+        Match the puzzles to the blocks: Matcha pusslet till blocken
+        Instructions: Instruktioner
+        Drag the blocks to match.: Dra block för att matcha.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/2-3_images/maze/2-3_maze_match_2_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q1.png
         /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png
@@ -70,7 +70,7 @@ sv:
         /script_assets/2-3_images/maze/2-3_maze_match_2_a2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a2.png
         /script_assets/2-3_images/maze/2-3_maze_match_2_a3.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a3.png
       2-3 Big Event Match 1:
-        Matching: Matching
+        Matching: Matchning
         /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
@@ -81,11 +81,11 @@ sv:
         /script_assets/k_1_images/unplugged_images/big_event_1_a3.png: /script_assets/k_1_images/unplugged_images/big_event_1_a3.png
         /script_assets/k_1_images/unplugged_images/big_event_1_a4.png: /script_assets/k_1_images/unplugged_images/big_event_1_a4.png
       2-3 Binary Match 1:
-        Matching: Matching
+        Matching: Matchning
         /script_assets/2-3_images/unplugged/binary_1_q.png, 250: /script_assets/2-3_images/unplugged/binary_1_q.png, 250
-        Use the key to match each code to its letter: Use the key to match each code to its letter
+        Use the key to match each code to its letter: Använd nyckeln för att matcha varje kod till sin bokstav
         <strong>N</strong>: '<strong>N</strong>'
-        <strong>O</strong>: '<strong>O</strong>'
+        <strong>O</strong>: '<strong>D</strong>'
         <strong>P</strong>: '<strong>P</strong>'
         <strong>Q</strong>: '<strong>Q</strong>'
         /script_assets/2-3_images/unplugged/binary_1_a3.png: /script_assets/2-3_images/unplugged/binary_1_a3.png
@@ -93,8 +93,8 @@ sv:
         /script_assets/2-3_images/unplugged/binary_1_a2.png: /script_assets/2-3_images/unplugged/binary_1_a2.png
         /script_assets/2-3_images/unplugged/binary_1_a4.png: /script_assets/2-3_images/unplugged/binary_1_a4.png
       2-3 Graph Paper Match 1:
-        Matching: Matching
-        Match the grid to the program: Match the grid to the program
+        Matching: Matchning
+        Match the grid to the program: Matcha nätet till programmet
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
@@ -102,8 +102,8 @@ sv:
         /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
       2-3 Relay Programming Match 1:
-        Matching: Matching
-        Match the grid to the program: Match the grid to the program
+        Matching: Matchning
+        Match the grid to the program: Matcha nätet till programmet
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
@@ -111,10 +111,10 @@ sv:
         /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
       4-5 maze match 1:
-        Maze Match: Maze Match
-        Match the puzzles to the blocks: Match the puzzles to the blocks
-        Instructions: Instructions
-        Drag the blocks to match.: Drag the blocks to match.
+        Maze Match: Labyrint matchning
+        Match the puzzles to the blocks: Matcha pusslet till blocken
+        Instructions: Instruktioner
+        Drag the blocks to match.: Dra block för att matcha.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/4-5_images/maze/4-5_maze_match_1_q1.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q1.png
         /script_assets/4-5_images/maze/4-5_maze_match_1_q2.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q2.png
@@ -123,51 +123,51 @@ sv:
         /script_assets/4-5_images/maze/4-5_maze_match_1_a2.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a2.png
         /script_assets/4-5_images/maze/4-5_maze_match_1_a3.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a3.png
       4-5 Algorithms Match 1:
-        Matching: Matching
-        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Match the steps in the Dice Race game to the order that they should appear in the algorithm.
+        Matching: Matchning
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Matcha stegen i Dice Race spelet till den ordning som de visas i algoritmen.
         <h4>1)</h4>: '<h4>1)</h4>'
-        <h4>2)</h4>: '<h4>2)</h4>'
-        <h4>3)</h4>: '<h4>3)</h4>'
-        <h4>4)</h4>: '<h4>4)</h4>'
-        <h4>Set Player 1 score to 0</h4>: '<h4>Set Player 1 score to 0</h4>'
-        <h4>Player 1 rolls die</h4>: '<h4>Player 1 rolls die</h4>'
-        <h4>Add Player 1 roll to total score</h4>: '<h4>Add Player 1 roll to total score</h4>'
-        <h4>Compare player scores to see who wins</h4>: '<h4>Compare player scores to see who wins</h4>'
+        <h4>2)</h4>: '<h4>1)</h4>'
+        <h4>3)</h4>: '<h4>1)</h4>'
+        <h4>4)</h4>: '<h4>1)</h4>'
+        <h4>Set Player 1 score to 0</h4>: '<h4>Set spelare 1 poäng till 0</h4>'
+        <h4>Player 1 rolls die</h4>: '<h4>Spelare 1 rullar tärningen</h4>'
+        <h4>Add Player 1 roll to total score</h4>: '<h4>Lägg till spelare 1 rulla till totalpoäng</h4>'
+        <h4>Compare player scores to see who wins</h4>: '<h4>Jämför spelar- poäng för att se vem som vinner</h4>'
       4-5 Computational Thinking Match 1:
-        Matching: Matching
-        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.
-        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": '<h3>Wheels/side: 2<br/>Windows/side: 0</h3>'
-        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": '<h3>Wheels/side: 2<br/>Windows/side: 1</h3>'
-        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": '<h3>Wheels/side: 2<br/>Windows/side: 6</h3>'
-        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": '<h3>Wheels/side: 3<br/>Windows/side: 2</h3>'
+        Matching: Matchning
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Vart och ett av dessa fordon har brutits ned i mindre bitar. Matcha varje fordon med dess lista av delar.
+        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": '<h3>Hjul/sida: 2 <br/>Fönster/sida: 0</h3>'
+        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": '<h3>Hjul/sida: 2 <br/>Fönster/sida: 0</h3>'
+        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": '<h3>Hjul/sida: 2 <br/>Fönster/sida: 0</h3>'
+        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": '<h3>Hjul/sida: 2 <br/>Fönster/sida: 0</h3>'
         /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png
         /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png
         /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png
         /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png
       4-5 Suncatchers Match 1:
-        Matching: Matching
-        Match each program to the word it makes, using the provided group of skills.: Match each program to the word it makes, using the provided group of skills.
+        Matching: Matchning
+        Match each program to the word it makes, using the provided group of skills.: Matcha varje program till ordet som det gör, med hjälp av medföljande grupp av kunskaper.
         /script_assets/4-5_images/unplugged/suncatchers_1.png: /script_assets/4-5_images/unplugged/suncatchers_1.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a1.png: /script_assets/4-5_images/unplugged/suncatchers_1_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a2.png: /script_assets/4-5_images/unplugged/suncatchers_1_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a3.png: /script_assets/4-5_images/unplugged/suncatchers_1_a3.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a4.png: /script_assets/4-5_images/unplugged/suncatchers_1_a4.png
         <h4>STACK</h4>: '<h4>STACK</h4>'
-        <h4>STAMP</h4>: '<h4>STAMP</h4>'
+        <h4>STAMP</h4>: '<h4>Stämpel</h4>'
         <h4>STAR</h4>: '<h4>STAR</h4>'
         <h4>RAMP</h4>: '<h4>RAMP</h4>'
       K-1 Artist 2 Match 1:
-        Matching: Matching
-        Is the square next to, above, or below the ball?: Is the square next to, above, or below the ball?
+        Matching: Matchning
+        Is the square next to, above, or below the ball?: Är kvadraten bredvid, över eller under bollen?
         /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
         /script_assets/k_1_images/artist_images/square_below_ball.png: /script_assets/k_1_images/artist_images/square_below_ball.png
         /script_assets/k_1_images/artist_images/square_next_ball.png: /script_assets/k_1_images/artist_images/square_next_ball.png
-        <br/><br/>above: '<br/><br/>above'
-        <br/><br/>below: '<br/><br/>below'
-        <br/><br/>next to: '<br/><br/>next to'
+        <br/><br/>above: '<br/> <br/> ovan'
+        <br/><br/>below: '<br/> <br/> nedan'
+        <br/><br/>next to: '<br/> <br/> bredvid'
       K-1 Artist 2 Match 2:
-        Matching: Matching
-        Match the shapes based on type.: Match the shapes based on type.
+        Matching: Matchning
+        Match the shapes based on type.: Matcha formerna baserat på typ.
         /script_assets/k_1_images/artist_images/small_circle.png: /script_assets/k_1_images/artist_images/small_circle.png
         /script_assets/k_1_images/artist_images/large_square.png: /script_assets/k_1_images/artist_images/large_square.png
         /script_assets/k_1_images/artist_images/medium_rectangle.png: /script_assets/k_1_images/artist_images/medium_rectangle.png
@@ -177,8 +177,8 @@ sv:
         /script_assets/k_1_images/artist_images/large_rectangle.png: /script_assets/k_1_images/artist_images/large_rectangle.png
         /script_assets/k_1_images/artist_images/large_triangle.png: /script_assets/k_1_images/artist_images/large_triangle.png
       K-1 Artist 2 Match 3:
-        Matching: Matching
-        Match the shapes based on type.: Match the shapes based on type.
+        Matching: Matchning
+        Match the shapes based on type.: Matcha formerna baserat på typ.
         /script_assets/k_1_images/artist_images/large_circle.png: /script_assets/k_1_images/artist_images/large_circle.png
         /script_assets/k_1_images/artist_images/small_square.png: /script_assets/k_1_images/artist_images/small_square.png
         /script_assets/k_1_images/artist_images/large_rectangle.png: /script_assets/k_1_images/artist_images/large_rectangle.png
@@ -188,8 +188,8 @@ sv:
         /script_assets/k_1_images/artist_images/small_rectangle2.png: /script_assets/k_1_images/artist_images/small_rectangle2.png
         /script_assets/k_1_images/artist_images/large_triangle2.png: /script_assets/k_1_images/artist_images/large_triangle2.png
       K-1 Artist Loops Match 1:
-        Matching: Matching
-        Match the code to the stairs it draws.: Match the code to the stairs it draws.
+        Matching: Matchning
+        Match the code to the stairs it draws.: Matcha koden till trappan den ritar.
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png
@@ -197,8 +197,8 @@ sv:
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a3.png
       K-1 Bee Loops Match 1:
-        Matching: Matching
-        Match the blocks: Match the blocks
+        Matching: Matchning
+        Match the blocks: Matcha blocken
         /script_assets/k_1_images/bee_images/r4_gnectar.png: /script_assets/k_1_images/bee_images/r4_gnectar.png
         /script_assets/k_1_images/move_blocks/r3_N.png: /script_assets/k_1_images/move_blocks/r3_N.png
         /script_assets/k_1_images/bee_images/r5_ghoney.png: /script_assets/k_1_images/bee_images/r5_ghoney.png
@@ -208,8 +208,8 @@ sv:
         /script_assets/k_1_images/bee_images/5_ghoney.png: /script_assets/k_1_images/bee_images/5_ghoney.png
         /script_assets/k_1_images/move_blocks/EEEEE.png: /script_assets/k_1_images/move_blocks/EEEEE.png
       K-1 Flappy Match 1:
-        Matching: Matching
-        Match the blocks: Match the blocks
+        Matching: Matchning
+        Match the blocks: Matcha blocken
         /script_assets/k_1_images/flappy_images/click.png: /script_assets/k_1_images/flappy_images/click.png
         /script_assets/k_1_images/flappy_images/hit_ground.png: /script_assets/k_1_images/flappy_images/hit_ground.png
         /script_assets/k_1_images/flappy_images/pass_obstacle.png: /script_assets/k_1_images/flappy_images/pass_obstacle.png
@@ -217,10 +217,10 @@ sv:
         /script_assets/k_1_images/flappy_images/end.png: /script_assets/k_1_images/flappy_images/end.png
         /script_assets/k_1_images/flappy_images/score.png: /script_assets/k_1_images/flappy_images/score.png
       K-1 Maze Match 1:
-        Matching: Matching
-        Match the puzzles and blocks: Match the puzzles and blocks
-        Instructions: Instructions
-        Drag the blocks to match.: Drag the blocks to match.
+        Matching: Matchning
+        Match the puzzles and blocks: Matcha pussel och block
+        Instructions: Instruktioner
+        Drag the blocks to match.: Dra block för att matcha.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/k_1_images/maze_images/maze_EN.png: /script_assets/k_1_images/maze_images/maze_EN.png
         /script_assets/k_1_images/maze_images/maze_ENE.png: /script_assets/k_1_images/maze_images/maze_ENE.png
@@ -231,7 +231,7 @@ sv:
         /script_assets/k_1_images/move_blocks/WW.png: /script_assets/k_1_images/move_blocks/WW.png
         /script_assets/k_1_images/move_blocks/WSS.png: /script_assets/k_1_images/move_blocks/WSS.png
       K-1 Big Event Match 1:
-        Matching: Matching
+        Matching: Matchning
         /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
@@ -240,8 +240,8 @@ sv:
         /script_assets/k_1_images/unplugged_images/big_event_1_a2.png: /script_assets/k_1_images/unplugged_images/big_event_1_a2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_a3.png: /script_assets/k_1_images/unplugged_images/big_event_1_a3.png
       K-1 Happy Maps Match 1:
-        Matching: Matching
-        Match the Map to the arrow that gets the Flurb to the treasure: Match the Map to the arrow that gets the Flurb to the treasure
+        Matching: Matchning
+        Match the Map to the arrow that gets the Flurb to the treasure: Matcha kartan till pilen som får Flurb till skatten
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q3.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q3.png
@@ -249,8 +249,8 @@ sv:
         /script_assets/k_1_images/unplugged_images/right.png: /script_assets/k_1_images/unplugged_images/right.png
         /script_assets/k_1_images/unplugged_images/left.png: /script_assets/k_1_images/unplugged_images/left.png
       K-1 Move It Match 1:
-        Matching: Matching
-        Match the Map to the algorithm that gets the Flurb to the flowers.: Match the Map to the algorithm that gets the Flurb to the flowers.
+        Matching: Matchning
+        Match the Map to the algorithm that gets the Flurb to the flowers.: Matcha kartan till den algoritm som får Flurb till blommorna.
         /script_assets/k_1_images/unplugged_images/move_it_2_q1.png: /script_assets/k_1_images/unplugged_images/move_it_2_q1.png
         /script_assets/k_1_images/unplugged_images/move_it_2_q2.png: /script_assets/k_1_images/unplugged_images/move_it_2_q2.png
         /script_assets/k_1_images/unplugged_images/move_it_2_q3.png: /script_assets/k_1_images/unplugged_images/move_it_2_q3.png
@@ -258,20 +258,20 @@ sv:
         /script_assets/k_1_images/unplugged_images/rightrightup.png: /script_assets/k_1_images/unplugged_images/rightrightup.png
         /script_assets/k_1_images/unplugged_images/rightdown.png: /script_assets/k_1_images/unplugged_images/rightdown.png
       Coordinate Matching:
-        Coordinates of Ninjacat: Coordinates of Ninjacat
-        Match each character with its correct coordinate!: Match each character with its correct coordinate!
+        Coordinates of Ninjacat: Koordinaterna för Ninjacat
+        Match each character with its correct coordinate!: Matcha varje tecken med dess rätta koordinat!
         /script_assets/msm/Unit 1/exercise_3_ninjacat.png: /script_assets/msm/Unit 1/exercise_3_ninjacat.png
-        Cloud: Cloud
-        Ruby: Ruby
-        Dog: Dog
+        Cloud: Moln
+        Ruby: Rubin
+        Dog: Hund
         Ninjacat: Ninjacat
         (250, 400): (250, 400)
         (500, 240): (500, 240)
         (480, 100): (480, 100)
         (320, 240): (320, 240)
       Match math to circles:
-        Converting Math to Circles of Evaluation: Converting Math to Circles of Evaluation
-        Match each mathematical expression with the correct circle of evaluation!: Match each mathematical expression with the correct circle of evaluation!
+        Converting Math to Circles of Evaluation: Konvertera matematik till cirklar av utvärdering
+        Match each mathematical expression with the correct circle of evaluation!: Matcha varje matematiska uttryck med rätt cirkel av utvärdering!
         (2 + 3) * 5 / 2: '(2 + 3) * 5 / 2'
         2 + 3 * (5 / 2): '2 + 3 * (5 / 2)'
         (2 + 3 * 5) / 2: '(2 + 3 * 5) / 2'
@@ -280,10 +280,10 @@ sv:
         /script_assets/msm/Unit 1/Exercise_4_question_3.png: /script_assets/msm/Unit 1/Exercise_4_question_3.png
         /script_assets/msm/Unit 1/Exercise_4_question_4.png: /script_assets/msm/Unit 1/Exercise_4_question_4.png
       Match circles to code:
-        Converting Circles to Code: Converting Circles to Code
-        Match each circle of evaluation with the correct code!: Match each circle of evaluation with the correct code!
-        (+ (- (/ 4 7) 9) 3): '(+ (- (/ 4 7) 9) 3)'
-        (+ (- 9 3) (* 4 7)): '(+ (- 9 3) (* 4 7))'
+        Converting Circles to Code: Konvertera cirklar till kod
+        Match each circle of evaluation with the correct code!: Matcha varje cirkel av utvärdering med rätt kod!
+        (+ (- (/ 4 7) 9) 3): (+ (-(/ 4 7) 9) 3)
+        (+ (- 9 3) (* 4 7)): '(+ (-9 3) (* 4 7))'
         (/ (+ 4 7) 3): (/ (+ 4 7) 3)
         (+ 3 (/ 4 7)): (+ 3 (/ 4 7))
         /script_assets/msm/Unit 1/Exercise_5_question_1.png: /script_assets/msm/Unit 1/Exercise_5_question_1.png
@@ -291,47 +291,47 @@ sv:
         /script_assets/msm/Unit 1/Exercise_5_question_3.png: /script_assets/msm/Unit 1/Exercise_5_question_3.png
         /script_assets/msm/Unit 1/Exercise_5_question_4.png: /script_assets/msm/Unit 1/Exercise_5_question_4.png
       Match math to code:
-        Converting Math to Code: Converting Math to Code
-        Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!: Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!
-        (15 + 3) x (72 - 19): '(15 + 3) x (72 - 19)'
+        Converting Math to Code: Konverterar matematik till kod
+        Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!: Matcha varje matematiskt uttryck med rätt kod. Använd en cirkel av utvärdering för att få svaret!
+        (15 + 3) x (72 - 19): (15 + 3) x (72-19)
         3 x 15 + (- 72 19): '3 x 15 + (- 72 19)'
-        72 + 3 - 19 x 15: '72 + 3 - 19 x 15'
-        3 x 15 - 72 + 19: '3 x 15 - 72 + 19'
+        72 + 3 - 19 x 15: 72 + 3-19 x 15
+        3 x 15 - 72 + 19: 3 x 15-72 + 19
         (* (+ 15 3) (- 72 19)): '(* (+ 15 3) (- 72 19))'
         (+ (3 x 15) (- 72 19)): '(+ (3 x 15) (- 72 19))'
-        (- (+ 72 3) (* 19 15)): '(- (+ 72 3) (* 19 15))'
-        (+ (- (* 3 15) 72) 19): '(+ (- (* 3 15) 72) 19)'
+        (- (+ 72 3) (* 19 15)): '(-(+ 72 3) (* 19 15))'
+        (+ (- (* 3 15) 72) 19): '(+ (-(* 3 15) 72) 19)'
       parts of contract:
-        Parts of a Contract: Parts of a Contract
-        Here is a contract for a new function. Match each item with the word that describes it.: Here is a contract for a new function. Match each item with the word that describes it.
-        yearbook-picture: yearbook-picture
-        string numer: string numer
-        image: image
-        (yearbook-picture "Sally" 1992): '(yearbook-picture "Sally" 1992)'
-        function name: function name
-        domain: domain
-        range: range
-        example: example
+        Parts of a Contract: Delar av ett kontrakt
+        Here is a contract for a new function. Match each item with the word that describes it.: Här är ett kontrakt för en ny funktion. Matcha varje objekt med det ord som beskriver det.
+        yearbook-picture: årsboks-bild
+        string numer: sträng -nummer
+        image: bild
+        (yearbook-picture "Sally" 1992): '(årsboks-bild "Sally" 1992)'
+        function name: funktionsnamn
+        domain: Domän
+        range: Utbud
+        example: Exempel
       Match example to contract:
-        Contracts of Functions: Contracts of Functions
-        Match each example with the correct contract!: Match each example with the correct contract!
-        (big-string? "gigantic" 5): '(big-string? "gigantic" 5)'
-        (find-price 4): (find-price 4)
-        (small-star "blue"): '(small-star "blue")'
-        (bigger-string "big" "little"): '(bigger-string "big" "little")'
-        (small-star "solid"): '(small-star "solid")'
-        (find-price "cheese"): '(find-price "cheese")'
-        "big-string: string number -> boolean": 'big-string: string number -> boolean'
-        "find-price: number -> number": 'find-price: number -> number'
-        "small-star: string -> image": 'small-star: string -> image'
-        "bigger-string: string string -> string": 'bigger-string: string string -> string'
-        "find-price: string -> number": 'find-price: string -> number'
+        Contracts of Functions: Funktionskontrakt
+        Match each example with the correct contract!: Matcha varje exempel med rätt kontrakt!
+        (big-string? "gigantic" 5): '(stor-sträng? "gigantic" 5)'
+        (find-price 4): (hitta-pris 4)
+        (small-star "blue"): '(liten stjärna "blå")'
+        (bigger-string "big" "little"): '(större-sträng "stor" "liten")'
+        (small-star "solid"): '(liten-stjärna "solid")'
+        (find-price "cheese"): '(hitta-pris "ost")'
+        "big-string: string number -> boolean": 'stor-sträng: sträng nummer-> boolean'
+        "find-price: number -> number": 'hitta-pris: antal-> nummer'
+        "small-star: string -> image": 'liten-stjärna: sträng-> bild'
+        "bigger-string: string string -> string": 'större-sträng: sträng sträng-> sträng'
+        "find-price: string -> number": 'hitta-pris: sträng-> nummer'
       test matching image:
-        Matching Images Two: Matching Images Two
-        Match up all the flowers by colour!: Match up all the flowers by colour!
+        Matching Images Two: Matchande bilder två
+        Match up all the flowers by colour!: Matcha alla blommor på färgen!
         /script_assets/matches/images/head.jpg,300: /script_assets/matches/images/head.jpg,300
-        Instructions: Instructions
-        Drag the images from right to center.: Drag the images from right to center.
+        Instructions: Instruktioner
+        Drag the images from right to center.: Dra bilderna från höger till mitten.
         /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
         /script_assets/matches/images/q1.jpg: /script_assets/matches/images/q1.jpg
         /script_assets/matches/images/q2.jpg: /script_assets/matches/images/q2.jpg
@@ -341,12 +341,12 @@ sv:
         /script_assets/matches/images/a3.jpg: /script_assets/matches/images/a3.jpg
         /script_assets/matches/images/a4.jpg: /script_assets/matches/images/a4.jpg
       test matching text:
-        Matching: Matching
-        Some really easy stuff to match.  Drag it around until you get it.: 'Some really easy stuff to match.  Drag it around until you get it.'
-        What color is the sky?: What color is the sky?
-        What's in the ocean?: "What's in the ocean?"
-        What's Brent's last name?: "What's Brent's last name?"
-        Where is Brendan from?: Where is Brendan from?
+        Matching: Matchning
+        Some really easy stuff to match.  Drag it around until you get it.: 'Några verkligen lätt saker att matcha.  Dra den runt tills du får den.'
+        What color is the sky?: Vilken färg är himlen?
+        What's in the ocean?: Vad är i havet?
+        What's Brent's last name?: Vad är Brents efternamn?
+        Where is Brendan from?: Vart kommer Brendan från?
         blue: blå
         salt: salt
         Van Minnen: Van Minnen

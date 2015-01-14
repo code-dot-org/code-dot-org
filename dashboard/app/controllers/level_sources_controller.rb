@@ -55,6 +55,14 @@ class LevelSourcesController < ApplicationController
   end
 
   def framed_image(skin)
+    if @level_source.level_source_image.image == 'S3' ||
+        @level_source.level_source_image.save_to_s3(@level_source.level_source_image.image)
+      redirect_to @level_source.level_source_image.s3_framed_url
+      return
+    end
+
+    # image is in the DB
+    # TODO: save this in s3, delete from db, redirect there
     if skin == 'anna' || skin == 'elsa'
       image_filename = "app/assets/images/blank_sharing_drawing_#{skin}.png"
     else
@@ -71,6 +79,16 @@ class LevelSourcesController < ApplicationController
     authorize! :read, @level_source
 
     expires_in 10.hours, :public => true # cache
+
+    if @level_source.level_source_image.image == 'S3' ||
+        @level_source.level_source_image.save_to_s3(@level_source.level_source_image.image)
+      # image is in s3
+      redirect_to @level_source.level_source_image.s3_url
+      return
+    end
+
+    # image is in the DB
+    # TODO: save this in s3, delete from db, redirect there
     send_data @level_source.level_source_image.image, :stream => 'false', :type => 'image/png', :disposition => 'inline'
   end
 

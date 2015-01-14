@@ -102,7 +102,7 @@ az:
         Webapp: Webapp
         ArtistEC: Rəssam
         TextMatch: Text Match
-        StudioEC: Oyun laboratoriyası
+        StudioEC: Oyun labı
     trophy:
       name:
         Bronze: Bürünc
@@ -121,7 +121,7 @@ az:
         parameters: Parametrli funksiyalar
     level:
       instructions:
-        maze_2_2: 'Nadinc donuzu tutmaqda mənə kömək edə bilərsiniz? Məni ona çatdırmaq üçün bir neçə "irəli get" blokunu ard-arda düzün və "Proqramı icra et"i basın. '
+        maze_2_2: 'Nadinc donuzu tutmaqda mənə kömək edə bilərsiniz? Məni ona çatdırmaq üçün bir neçə "irəli get" blokunu ard-arda düzün və "İcra et"i basın. '
         maze_2_1: Bu donuzun əlindən lələklərim biz-biz olur. Mənə kömək edin ki, onu tapım!
         maze_2_2_5: Yolu izləyərək məni səfeh donuza tərəf aparın. Partladıcı TNT qutusundan yayınaq, yoxsa lələklərim göyə sovrular!
         maze_2_3: Məni yaşıl ziyankara aparan yola yönləndirin! (Partladıcı TNT qutusundan ehtiyatlı olun)
@@ -336,15 +336,14 @@ az:
         studio_ec_sandbox: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
     levelbuilder:
       frozen line:
-        instructions: "Hi! I'm Elsa of Arendelle. Help me create a single line."
+        instructions: Salam! Mən Arendelli Elzayam. Mənə sadə bir xətti çəkməkdə kömək edin.
       frozen perpendicular:
         instructions: |-
           Now let's see if we can create two lines that are at a 90 degree angle to each other. You will need to use the "Turn" block as well as the "Move" block.
       frozen square iterative:
         instructions: "It seems like we're halfway to making a square. Let's put 4 lines together to create a square."
       frozen square loop:
-        instructions: |-
-          Hi, I'm Anna of Arendelle! Let's make a square with the "Repeat" block, which uses fewer blocks. How many times (???) should the "Repeat" block loop the blocks inside it to make a square?
+        instructions: 'Salam, mən Arendelli Annayam! Gəlin daha az blokdan istifadə edən "təkrar et" bloku ilə kvadrat düzəldək. "Təkrar et" bloku daxildəki blokları neçə dəfə (???) dövr etdirməlidir ki, kvadrat alınsın?'
       frozen square loop 3x:
         instructions: "Let's create three squares, turning after each square. Be sure to turn by 120 degrees before each new square."
       frozen square snowflake:
@@ -383,9 +382,9 @@ az:
       scrat 16:
         instructions: 'Palıd qozası! Palıd qozası! Palıd qozası! Mənim oraya ən az sayda blokla çatmağım üçün "əgər" blokundan istifadə edin.'
       scrat 17:
-        instructions: "Ok, let's do that again for practice - this isn't very different, but watch out for the wall!"
+        instructions: 'Yaxşı, məşq üçün bunu bir daha edək - əvvəlkindən çox fərqlənmir, amma divardan ehtiyatlı olun!'
       scrat 18:
-        instructions: 'The "If-else" blocks checks a condition, and then does one thing OR another. To get me to the acorn try to use this new block.'
+        instructions: '"Əgər-əks halda" bloku şərti yoxlayır, sonra isə bu VƏ YA digər işi yerinə yetirir. Məni palıd qozasına çatdırmaq üçün bu yeni bloku istifadə etməyə çalışın.'
       scrat 19:
         instructions: '"Əgər-əks halda" blokunu bir daha təcrübədən keçirin, birinci cəhdinizdən bunu düzgün edə bilərsinizmi?'
       scrat 20:
@@ -435,7 +434,7 @@ az:
         Unplug6: Şərti ifadələr
         Unplug7: Songwriting
         Unplug8: Mücərrədlik
-        Unplug9: Relay programming
+        Unplug9: Estafet proqramlaşdırması
         Unplug10: İnternet
         Unplug11: Yekun
         C1_happy_maps_unplugged: Happy Maps
@@ -448,21 +447,21 @@ az:
         C1_bee_level_intro: 'Bee Level - Intro'
         C1_artist_intro: Rəssam oyununa giriş
         C1_spelling_bee_intro: Spelling Bee Intro
-        C1_zuck_repeat_loop: Maze Loops
-        C1_bee_loops: Bee Loops
-        C1_maze_loops: Maze Loops
+        C1_zuck_repeat_loop: Labirint Dövrlər
+        C1_bee_loops: Arı Dövrlər
+        C1_maze_loops: Labirint Dövrlər
         C1_playlab_storytelling: 'Play Lab - Create a Story'
         C1_planting_seed: Planting a Seed
         C1_building_foundation: Building a Foundation
         C1_going_places_safely: Going Places Safely
         C2_maze_intro: Labirint oyununa giriş
         C2_artist_intro: Rəssam oyununa giriş
-        C2_zuck_repeat_loop: Maze Loops
-        C2_artist_loops: Artist Loops
-        C2_artist_debugging: Artist Debugging
-        C2_bee_loops: Bee Loops
-        C2_bee_debugging: Bee Debugging
-        C2_bee_conditionals: Bee Conditionals
+        C2_zuck_repeat_loop: Labirint Dövrlər
+        C2_artist_loops: Rəssam Dövrlər
+        C2_artist_debugging: Rəssam Sazlama
+        C2_bee_loops: Arı Dövrlər
+        C2_bee_debugging: Arı Sazlama
+        C2_bee_conditionals: Arı Şərti ifadələr
         C2_playlab_createstory: 'Play Lab - Create a Story'
         C2_graph_paper: Millimetrlik kağızda proqramlaşdırma
         C2_conditionals_with_cards: Şərti ifadələr
@@ -470,16 +469,16 @@ az:
         C2_relay_programming: Estafet proqramlaşdırması
         C2_paper_airplanes: Paper Airplanes
         C2_digital_footprint: Your Digital Footprint
-        C3_maze_level_4: Maze Loops
+        C3_maze_level_4: Labirint Dövrlər
         C3_artist_intro: Rəssam oyununa giriş
-        C3_artist_functions: Artist Functions
-        C3_bee_functions: Bee Functions
-        C3_bee_conditionals: Bee Conditionals
+        C3_artist_functions: Rəssam Funksiyalar
+        C3_bee_functions: Arı Funksiyalar
+        C3_bee_conditionals: Arı Şərti ifadələr
         C3_maze_conditionals: Maze Conditionals
         C3_artist_nested_loops: Nested Loops
         C3_farmer_while: While Loops
         C3_bee_nested_loops: Nested Loops
-        C3_bee_debugging: Bee Debugging
+        C3_bee_debugging: Arı Sazlama
         C3_bounce: Bounce
         C3_playlab_create_game: 'Play Lab - Create a Game'
         C3_computational_thinking: Hesablama təfəkkürü
@@ -488,14 +487,28 @@ az:
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
-        C4_artist_math: Programming the Artist with Math
-        C4_create_functions: Creating Functions
-        C4_edit_functions: Editing Functions
+        C4_intro: Introduction
+        C4_bee_conditional: Arı Şərti ifadələr
+        C4_variables_artist: 'Variables - Artist'
+        C4_variables_playlab: 'Variables - Play Lab'
         C4_for_loops: For Loops
-        C4_variables: Dəyişənlər
+        C4_math_artist: Programming the Artist with Math
+        C4_function_edit: Editing Functions
+        C4_function_create: Creating Functions
+        C4_function_parameters: Parametrli funksiyalar
+        C4_conditionals: Şərti ifadələr
+        C4_unplugged_algorithms: Algorithms with Tangrams
+        C4_unplugged_madlibs: Mad Libs
+        C4_unplugged_variables: Variables in Envelopes
+        C4_unplugged_forloops: For Loops
+        C4_unplugged_parameters: Songwriting with Parameters
+        C4_unplugged_binary: Binary
         frozen_intro: Hour of Code Intro
         frozen_loops: Introduction to Loops
         frozen_functions: Introduction to Functions
+        playlab_intro: Introduction to Play Lab
+        playlab_events: Play Lab Events
+        playlab_repeat_forever: Play Lab Repeat Forever
     callout:
       text:
         drag_blocks: '"Get" blokunu sürükləyib şıqqıltı ilə digər blokun aşağısına yapışdırın'
@@ -504,7 +517,7 @@ az:
         gray_block_explanation: Boz rəngli bloklar silinə bilməz. Bu tapmacanı belə də həll edə bilərsiniz?
         show_code_explanation: Hazırladığınız proqramın kodunu görmək üçün buraya klikləyin
         instructions_repeat_explanation: Hər tapmaca üçün təlimatlar burada təkrarlanır
-        category_explanation: "You have all the same blocks but they've now been arranged in categories"
+        category_explanation: İxtiyarınızda olan bloklar eynidir, amma indi onlar kateqoriyalara ayrılıb
         set_sprite_image: 'Attach a "set actor to image" block to the "when story starts" block to enable an actor for this story'
         studio_say_text: Type what you want your actor to say within these quotes
         jigsaw_click: Click this block!
@@ -513,15 +526,17 @@ az:
         replace_questions: 'Use the drop-down to replace "???" with a number'
         replace_questions_degree: 'Use the drop-down to replace "???" with the correct degree to turn'
         repeat_blocks: 'Use the "Repeat" block and wrap it around the blocks in the workspace'
+        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the workspace
+        repeat_blocks_2: '(2) Move the "Repeat" block here, and place the gray blocks inside'
         snowflake_dropdown: Use this drop-down to create different snowflakes!
         degrees_per_side: Divide 360 by the number of sides to get the size of each angle in degrees.
         set_sides: 'Use this block to set "sides" to the number needed to complete the puzzle.'
         set_length: 'Use this block to set "length" to the correct value.'
-        which_equation: 'Which equation makes each side shorter for shapes with more sides?  Try each equation!'
+        which_equation: Which equation makes each side shorter for shapes with more sides?
         get_nectar: 'Use the new "get nectar" block.'
         actions_category: 'The tool box got a new look! The "Actions" blocks are in here now.'
         draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
-        edit_function: Use this button to edit the function.
+        edit_function: Click here to edit your function.
         create_function: 'Click here to open the "Functions" flyout, then click the "Create a Function" button.'
         house_hint: "It's ok if the picture doesn't look like a house yet. We will fix it in the next puzzle."
         edit_draw_square: Use this button to edit the function and add the loop.
@@ -541,3 +556,23 @@ az:
         playlab_add_move: 'Add "move" blocks inside this repeat block'
         playlab_add_score: Add score blocks here
         playlab_add_blocks: Add your blocks here
+        set_variable: Drag a number block here to set your variable
+        place_variable: Drag your variable inside this block
+        bee_for_loop: Drag the largest number of nectar you want the bee to collect here
+        place_counter_variable: Drag your counter variable inside this block
+        function_editor_draw_square: 'This is your function definition. These blocks run everytime you use the "draw a square" block'
+        change_here: Make your change here
+        write_draw_square_function: Drag blocks from the toolbox into here that draw a square
+        write_draw_triangle_function: Drag blocks from the toolbox into here that draw a triangle
+        edit_add_parameter: Click edit to add a parameter in your function
+        add_and_drag_parameter: Write in the name of your parameter here, click add, and then drag it into your function definition
+        fill_in_actor: Fill in the ??? with numbers that correspond to each actor (1, 2, and 3)
+        repeat: Put blocks inside the loop to repeat commands
+        if_bee_nectar: 'Use the "if" block to decide if the bee should get nectar'
+        if_else_bee: |-
+          Use the "if/else" block so that the Bee gets nectar from a flower, and makes honey if it's not a flower
+        repeat_full_circle: Enter in the number of times the zombie has to move to make a full circle
+        place_length_variable: Drag the length variable here to replace the question marks
+        arrows_move_actor: Use the arrows to move the actor
+        right_arrow_fireball: Use the right arrow to shoot fireballs
+        name_function: Write the name of your function here

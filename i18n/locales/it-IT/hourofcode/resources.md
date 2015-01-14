@@ -8,10 +8,6 @@ title: Risorse layout: wide nav: resources_nav
   <h1 class="col-sm-6">
     Risorse
   </h1>
-  
-  <div class="col-sm-6 button-container centered">
-    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Iscriviti</button></a>
-  </div>
 </div>
 
 <% if @country == 'ie' %>
@@ -20,14 +16,14 @@ title: Risorse layout: wide nav: resources_nav
 
 <% else %>
 
-## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
+## Hai deciso di ospitare un evento dell'Ora del Codice? [Vedi la guida](<%= hoc_uri('/resources/how-to') %>)
 
 <% end %>
 
 <a id="handouts"></p> 
 
 <h2>
-  Use this handout to spread the word
+  Usa questo volantino per spargere la voce
 </h2>
 
 <p>
@@ -35,7 +31,7 @@ title: Risorse layout: wide nav: resources_nav
 </p>
 
 <h2>
-  Give this handout to teachers and schools
+  Distribuisci questo volantino ad insegnanti e scuole
 </h2>
 
 <p>
@@ -46,20 +42,20 @@ title: Risorse layout: wide nav: resources_nav
   <a id="videos"></p> 
   
   <h2>
-    Show these videos to inspire students
+    Mostra questi video per stimolare gli studenti
   </h2>
   
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>What Most Schools Don't Teach (5 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>Quello che la maggior parte delle scuole non insegna (5 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>Hour of Code is Here - Anybody Can Learn</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>L'Ora del Codice è Arrivata - Tutti possono imparare</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
@@ -69,14 +65,14 @@ title: Risorse layout: wide nav: resources_nav
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>President Obama on computer science</strong></a>
+      <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>Il Presidente Obama a proposito dell'informatica</strong></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>Anybody Can Learn (1 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>Tutti Possono Imparare (1 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
@@ -90,7 +86,7 @@ title: Risorse layout: wide nav: resources_nav
     <a id="posters"></p> 
     
     <h2>
-      Hang these posters in your school
+      Appendi questi poster nella tua scuola
     </h2>
     
     <p>
@@ -102,7 +98,7 @@ title: Risorse layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Feature these banners on your website
+      Inserisci questi banner nel tuo sito web
     </h2>
     
     <p>
@@ -114,7 +110,7 @@ title: Risorse layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Post these on social media
+      Pubblicare questi sui social media
     </h2>
     
     <p>
@@ -122,7 +118,7 @@ title: Risorse layout: wide nav: resources_nav
     </p>
     
     <p>
-      <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/image/barack.jpg"><img src="/images/fit-250/barack.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/barack.jpg"><img src="/images/fit-250/barack.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
     </p>
     
     <p>
@@ -130,7 +126,7 @@ title: Risorse layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Send these emails to help promote the Hour of Code
+      Invia queste email per promuovere l'Ora del Codice
     </h2>
     
     <p>
@@ -138,27 +134,27 @@ title: Risorse layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Ask your school, employer or friends to sign up:
+      Chiedi alla tua scuola, al tuo datore di lavoro o ai tuoi amici di iscriversi:
     </h2>
     
     <p>
-      I computer sono ovunque, ma rispetto a 10 anni fa le scuole che insegnano informatica sono diminuite. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
+      I computer sono ovunque, ma rispetto a 10 anni fa le scuole che insegnano informatica sono diminuite. La buona notizia è che siamo intenzionati a cambiare rotta. Se l'anno scorso hai sentito parlare dell'Ora del Codice, potresti già sapere che ha fatto storia. In una settimana, 15 milioni di studenti hanno sperimentato l'informatica!
     </p>
     
     <p>
-      Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+      L'informatica era sulla homepage di Google, di MSN, di Yahoo! e anche del sito della Disney. Il Presidente Obama, Shakira e Ashton Kutcher hanno tutti dato il via all'Ora del Codice con un video. Oltre 100 partner si sono riuniti per sostenere questo movimento.
     </p>
     
     <p>
-      This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2014. Please get involved with an Hour of Code event during Computer Science Education Week, December 8-14, 2014.
+      Quest'anno, rendiamolo ancora più grande. Ti chiedo di partecipare all'Ora del Codice 2014. Ti prego di farti coinvolgere in uno degli eventi dell'Ora del Codice durante la Settimana dell'Educazione Informatica (Computer Science Education Week) dall'8 al 14 dicembre 2014.
     </p>
     
     <p>
-      Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself -- everyone can benefit from learning the basics.
+      Spargi la voce. Ospita un evento. Chiedi ad una scuola locale di iscriversi. O provare l'Ora del Codice tu stesso..--tutti possono beneficiare dell'apprendimento delle basi dell'informatica.
     </p>
     
     <p>
-      Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com/<%= @country %>
+      Aiutaci a raggiungere i 100 milioni di studenti entro la fine dell'anno! Per iniziare vai a a http://hourofcode.com/<%= @country %>
     </p>
     
     <p>
@@ -166,51 +162,51 @@ title: Risorse layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Invite media to attend your event:
+      Invita i media a prendere parte al tuo evento:
     </h2>
     
     <p>
-      <strong>Subject line:</strong> Local school joins mission to introduce 100m students to computer science
+      <strong>Oggetto:</strong> Scuola locale si unisce alla missione di introdurre 100 milioni di studenti all'informatica
     </p>
     
     <p>
-      Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and minorities are severely underrepresented. Good news is, we’re on our way to change this.
+      I computer sono ovunque, ma l'informatica viene insegnata in un numero di scuole inferiore rispetto a quello di solo 10 anni fa. Le ragazze e le minoranze sono gravemente sottorappresentate. La buona notizia è che siamo sulla strada giusta per cambiare presto tutto questo.
     </p>
     
     <p>
-      In one week last year, 15 million students tried computer science! Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+      Lo scorso anno in una settimana 15 milioni di studenti hanno provato informatica! L'informatica era sulla homepage di Google, di MSN, di Yahoo! e anche del sito della Disney. Il Presidente Obama, Shakira e Ashton Kutcher hanno tutti dato il via all'Ora del Codice con un video. Oltre 100 partner si sono riuniti per sostenere questo movimento.
     </p>
     
     <p>
-      Now the Hour of Code movement is aiming for 100 million students.
+      Quest'anno il movimento dell'Ora del Codice punta a 100 milioni di studenti.
     </p>
     
     <p>
-      That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Dec. 8-14.
+      Ecco perché ognuno dei [NUMERO] studenti della scuola [NOME SCUOLA] sta per prendere parte al più grande evento nella storia dell'apprendimento: l'Ora del Codice, dall'8 al 14 Dicembre.
     </p>
     
     <p>
-      I'm writing to invite you to attend our kickoff assembly, and to see kids start the activity on [DATE].
+      Vi scrivo per invitarvi a frequentare la nostra riunione di lancio e vedere i ragazzi che iniziano l'attività il [DATA].
     </p>
     
     <p>
-      The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a statement that today’s generation of students are ready to learn critical skills for 21st century success. Please join us.
+      L'Ora del Codice, organizzata da Code.org e da oltre 100 altre organizzazioni senza scopo di lucro, è un'affermazione che la generazione degli studenti di oggi è pronta ad imparare le abilità critiche per il successo nel XXI secolo. Unisciti a noi.
     </p>
     
     <p>
-      <strong>Contact:</strong> [YOUR NAME], [TITLE], cell: (212) 555-5555
+      <strong>Contatti:</strong> [IL TUO NOME], [RUOLO], cell: (333) 555-5555
     </p>
     
     <p>
-      <strong>When:</strong> [DATE and TIME of your event]
+      <strong>Quando:</strong> [DATA e ORA del tuo evento]
     </p>
     
     <p>
-      <strong>Where:</strong> [ADDRESS and DIRECTIONS]
+      <strong>Dove:</strong> [INDIRIZZO e INDICAZIONI per raggiungere il luogo dell'evento]
     </p>
     
     <p>
-      I look forward to being in touch.
+      Vi aspettiamo.
     </p>
     
     <p>
@@ -218,39 +214,39 @@ title: Risorse layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Tell parents about your school's event:
+      Comunica ai genitori informazioni sull'evento della tua scuola:
     </h2>
     
     <p>
-      Dear Parents,
+      Cari genitori,
     </p>
     
     <p>
-      We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly hinge on understanding how technology works. But only a tiny fraction of us are learning computer science, and less students are studying it than a decade ago.
+      Viviamo in un mondo in cui siamo circondati dalla tecnologia. E sappiamo che qualunque sarà il campo in cui i nostri studenti sceglieranno di impegnarsi nel loro futuro di adulti, le possibilità di successo dipenderanno sempre di più dalla loro capacità di capire come funziona la tecnologia. Ma solo una piccola frazione di noi sta imparando l'informatica e oggi sono meno gli studenti che la studiano rispetto ad un decennio fa.
     </p>
     
     <p>
-      That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
+      Ecco perché tutta la nostra scuola si è unita al più grande evento di apprendimento della storia: L'Ora del Codice, durante la Settimana dell'Educazione Informatica (dall'8 al 14 Dicembre). L'anno scorso, 15 milioni di studenti hanno sperimentato l'informatica per una settimana. Quest'anno, ci stiamo unendo agli studenti di tutto il mondo per raggiungere 100 milioni di studenti!
     </p>
     
     <p>
-      Our Hour of Code is a statement that [SCHOOL NAME] is ready to teach these foundational 21st century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on your social media channels and consider hosting additional Hour of Code events in the community.
+      L'Ora del codice è una dichiarazione che la scuola [NOME SCUOLA] è pronta ad insegnare queste abilità fondamentali per raggiungere il successo nel XXI secolo. Per poter continuare a mettere a disposizione dei vostri studenti altre attività riguardanti la programmazione, vogliamo fare in modo che il nostro evento Ora del Codice sia enorme. Vi incoraggio ad offrirvi volontari, a contattare i media locali, a diffondere la notizia sui social network e a prendere in considerazione la possibilità di organizzare altri eventi dell'Ora del Codice nella vostra area.
     </p>
     
     <p>
-      This is a chance to change the future of education in [TOWN/CITY NAME].
+      Questa è una possibilità di cambiare il futuro dell'istruzione a [NOME CITTA'].
     </p>
     
     <p>
-      See http://hourofcode.com/<%= @country %> for details, and help spread the word.
+      Andata alla pagina http://hourofcode.com/< % = @country %> per i dettagli e contribuirt a diffondere la notizia.
     </p>
     
     <p>
-      Sincerely,
+      Cordiali saluti,
     </p>
     
     <p>
-      Your principal
+      Il Dirigente Scolastico
     </p>
     
     <p>
@@ -258,33 +254,29 @@ title: Risorse layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Invite a local politician to your school's event:
+      Invita un politico locale all'evento della tua scuola:
     </h2>
     
     <p>
-      Dear [Mayor/Governor/Representative/Senator LAST NAME]:
+      Spettabile [COGNOME DEL Sindaco/Governatore/Rappresentante/Senatore]:
     </p>
     
     <p>
-      Did you know that in today’s economy, computing jobs outnumber students graduating into the field by 3-to-1? And, computer science is foundational for <em>every</em> industry today. Yet 90% of schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
+      Sapeva che nell'economia odierna, i lavori per informatici superano gli studenti laureati in informatica per 3 a 1? E l'informatica è alla base di <em>tutta</em> l'industria moderna. Nonostante ciò, nel 90% delle scuole non viene ancora insegnata. Presso la scuola [NOME SCUOLA] stiamo cercando di cambiare le cose.
     </p>
     
     <p>
-      That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
+      Ecco perché tutta la nostra scuola si è unita al più grande evento di apprendimento della storia: L'Ora del Codice, durante la Settimana dell'Educazione Informatica (dall'8 al 14 Dicembre). L'anno scorso, 15 milioni di studenti hanno sperimentato l'informatica per una settimana. Quest'anno, ci stiamo unendo agli studenti di tutto il mondo per raggiungere 100 milioni di studenti!
     </p>
     
     <p>
-      I'm writing to invite you to take part in our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st century skills. We want to ensure that our students are on the forefront of creating technology of the future--not just consuming it.
+      Le scrivo per invitarla a partecipare al nostro evento Ora del Codice e a parlare al nostro incontro di lancio. L'evento si svolgerà il giorno [DATA, ORA, LUOGO] e costituirà una forte dichiarazione che [REGIONE O CITTA'] è pronta per insegnare ai nostri studenti le competenze fondamentali per avere successo nel XXI secolo. Vogliamo assicurarci che i nostri studenti siano all'avanguardia della creazione delle tecnologie del futuro--non ne siano solo dei consumatori.
     </p>
     
     <p>
-      Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
+      La prego di contattarmi a [NUMERO DI TELEFONO O EMAIL]. Attendo con ansia la Sua risposta.
     </p>
     
     <p>
-      Sincerely, [NAME], [TITLE]
-    </p>
-    
-    <p>
-      <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Iscriviti</button></a>
+      Sinceramente, [NOME], [TITOLO]
     </p>

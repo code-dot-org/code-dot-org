@@ -6,8 +6,8 @@
   "user_id": 19,
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,2,1,1,3,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "skin": "pvz",
-    "instructions": "Dear person. Me zombie. Must... get... to sunflower.",
+    "skin": "birds",
+    "instructions": "Get the angry bird to the pig!",
     "start_direction": "1",
     "step_mode": "1",
     "is_k1": "false",
@@ -17,13 +17,28 @@
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
+    "callout_json": "[\r\n  {\"localization_key\": \"run\", \"element_id\": \"#runButton\"},\r\n  {\"localization_key\": \"drag_blocks\", \"element_id\": \"#move_qtip\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"top center\", \"at\": \"bottom center\"}}\r\n  }\r\n]",
+    "video_key": "C4_intro",
     "maze_data": null
   }
 }]]></config>
   <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_moveForward">
+              <next>
+                <block type="maze_moveForward"/>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="maze_moveForward"/>
+        <block type="maze_moveForward" id="move_qtip"/>
         <block type="maze_turn">
           <title name="DIR">turnLeft</title>
         </block>

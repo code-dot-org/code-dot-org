@@ -2,40 +2,41 @@ vi:
   activerecord:
     errors:
       messages:
-        blank: is required
+        blank: là bắt buộc
     attributes:
       user:
-        name: Display Name
+        name: Tên hiển thị
         email: Địa chỉ email
         username: tài khoản
         password: mật khẩu
         password_confirmation: Xác nhận mật khẩu
         current_password: Mật khẩu hiện tại
         locale: Ngôn ngữ
-        age: Age
+        age: Tuổi
         gender: Giới tính
         edit_header: Chỉnh sửa thông tin tài khoản
         error:
-          future: "can't be in the future"
+          future: không thể trong tương lai
   hello: Xin chào thế giới
   welcome_back: 'Chào mừng bạn %{name}'
   add_teacher_form:
     code:
-      label: 'Add a teacher:'
-      placeholder: Section Code (ABCDEF)
+      label: 'Thêm một giáo viên:'
+      placeholder: Phần mã (ABCDEF)
     submit: Thêm giáo viên
   add_hint_form:
     placeholder: Hãy nhập gợi ý của bạn ở đây
     submit: Thêm gợi ý
   appname: Code.org
   stage: giai đoạn
-  stage_number: 'Stage %{number}'
+  stage_number: 'Giai đoạn %{number}'
   puzzle: Câu đố
   trophies: những danh hiệu
   courses: Các khóa học
   of: của
   more: Thêm nữa
   less: ít hơn
+  beta: Phiên bản beta
   try_hoc: 'Thử Hour of Code, bấm vào đây >> '
   try_k8intro: Hãy thử khóa học K-8 Giới Thiệu Công Nghệ Thông tin (15-25 hours)
   k8intro: Khóa giới thiệu về khoa học máy tính cho học sinh K-8 (15 đến 25 giờ)
@@ -47,33 +48,33 @@ vi:
   auth:
     sign_in_with: 'Đăng nhập bằng %{provider}'
     signed_in: Đăng nhập!
-    signed_out: 'You have signed out of <a href="%{url}">Code.org</a>.'
-    sign_out_of: 'You used %{provider} to sign in. <a href="%{url}">Click here</a> to sign out of %{provider}.'
+    signed_out: 'Bạn đã đăng xuất khỏi <a href="%{url}"> Code.org</a>.'
+    sign_out_of: 'Bạn sử dụng %{provider} để đăng nhập. <a href="%{url}"> Click vào đây</a> để đăng xuất khỏi %{provider}.'
     already_signedup: Đã đăng ký?
     notyet_signedup: Chưa tham gia?
-    google_oauth2: Google Account
+    google_oauth2: Tài khoản Google
     twitter: Twitter
     facebook: Facebook
-    windowslive: Microsoft Account
+    windowslive: Tài khoản Microsoft
     forgot_password: Quên mật khẩu?
     need_confirmation: Không nhận được hướng dẫn xác nhận?
     need_unlock: Chưa nhận hướng dẫn mở khóa?
   signup_form:
-    overview_student: 'Sign up for an account to track your progress. Your email is primarily used to allow you to log in and for password recovery. For more information, see our <a href="http://code.org/privacy">Privacy Policy</a>.'
-    overview_teacher: "Teach computer science in your classroom by signing up for an account.<p/> You'll be able to add your students and track their progress."
+    overview_student: 'Đăng ký cho một tài khoản để theo dõi tiến độ của bạn. Email của bạn chủ yếu được sử dụng để cho phép bạn đăng nhập vào và phục hồi mật khẩu. Để biết thêm chi tiết, xem <a href="http://code.org/privacy">Chính sách bảo mật</a> của chúng tôi .'
+    overview_teacher: 'Dạy môn khoa học máy tính trong lớp học của bạn bằng cách đăng ký một tài khoản. <p/> Bạn sẽ có thể thêm học sinh của bạn và theo dõi sự tiến bộ của họ.'
     no_signup_message: 'Bạn có thể dùng mã <a target="_blank" href="http://learn.code.org"> để duyệt các màn và các câu đố khác nhau</a>,nhưng bạn cần đăng ký để lưu lại tiến trình của bạn.'
     teacher_educator_guide: Hãy xem chỉ dẫn
-    teacher_pitch: Teacher sign up for Code.org
+    teacher_pitch: Giáo viên đăng ký Code.org
     teacher_title: Giáo viên đăng ký
-    student_pitch: Student sign up for Code.org
+    student_pitch: Sinh viên đăng ký Code.org
     student_title: Sinh viên đăng ký
     school_name: Tên trường (tùy chọn)
     school_address: Địa chỉ trường (tùy chọn)
     address_placeholder: địa chỉ, thành phố, tỉnh, mã bưu điện
     gender: Giới tính (tùy chọn)
     birthday: Ngày sinh (tùy chọn)
-    age: Age
-    user_type: Are you a student or teacher?
+    age: Tuổi
+    user_type: Bạn là Sinh viên hay Giáo viên?
     submit: Đăng ký
     teacher: Bạn có phải là giáo viên?
     valid_username: Đã tồn tại!
@@ -82,9 +83,9 @@ vi:
     valid_password: Mật khẩu hợp lệ!
     invalid_password: Mật khẩu phải có từ 6 ký tự trở lên
     mismatch_password: Hai mật khẩu phải giống nhau
-    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/>For users under 13, email addresses are not stored in a form that allows us to contact them."
-    teacher_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>."
-    additional_information: We need some additional information to continue signing you up.
+    student_terms: "Tôi đồng ý bị ràng buộc bởi <a href='http://code.org/tos'> điều khoản Dịch vụ</a> Code.org . Nếu tôi dưới 13 tuổi, tôi xác nhận bằng cách gửi biểu mẫu này rằng cha mẹ tôi hay người giám hộ hợp pháp của tôi cho phép sử dụng các dịch vụ Code.org. <br/>Cho người dùng dưới 13, địa chỉ email không được lưu trữ trong biểu mẫu mà cho phép chúng tôi liên hệ với họ."
+    teacher_terms: "Tôi đồng ý bị ràng buộc bởi <a href='http://code.org/tos'> điều khoản Dịch vụ</a> Code.org."
+    additional_information: Chúng tôi cần một số thông tin bổ sung để tiếp tục đăng ký cho bạn.
   signin_form:
     title: Đã có một tài khoản? Đăng nhập
     login: Email hoặc tên người dùng
@@ -92,14 +93,14 @@ vi:
     remember: Nhớ mật khẩu
     submit: Đăng nhập
   signin:
-    try_heading: Want to try coding without signing up?
+    try_heading: Bạn muốn thử lập trình mà không cần đăng ký?
     try_hoc: Hãy thử lập trình một giờ đầu tiên
     try_20hours: 20 tiếng để xem bài giới thiệu về khoa học máy tính của chúng tôi
   signinsection:
-    welcome: 'Welcome to %{section_name}'
-    name: Choose your name
-    picture: Now find your secret picture
-    words: Now enter your secret words
+    welcome: 'Chào mừng đến với %{section_name}'
+    name: Chọn tên của bạn
+    picture: Bây giờ tìm hình ảnh bí mật của bạn
+    words: Bây giờ nhập từ bí mật của bạn
     login: Đăng nhập
   password:
     reset_form:
@@ -126,9 +127,9 @@ vi:
       username_not_found: 'Tên người sử dụng % {username} không tìm thấy'
       username_in_use: '% {tên người sử dụng} đã được chọn, xin vui lòng chọn một tên khác'
       no_teacher: "Không thể tìm thấy bất cứ ai đã đăng nhập bằng '% {teacher_email_or_code}'. Xin vui lòng yêu cầu họ đăng nhập ở đây và sau đó thử thêm chúng một lần nữa"
-      section_not_found: "Could not find a section with code '%{section_code}'."
-      blank_code: Please enter a section code
-      cant_join_own_section: "Sorry, you can't join your own section."
+      section_not_found: "Không thể tìm thấy một phần với mã '%{section_code}'."
+      blank_code: Vui lòng nhập một phần mã
+      cant_join_own_section: Xin lỗi, bạn không thể tham gia phần riêng của bạn.
     mail:
       invite_student:
         subject: 'Tham gia một lớp học với % {giáo viên_tên} tại Code.org!'
@@ -140,15 +141,15 @@ vi:
     error:
       access_denied: Bạn không có quyền truy cập vào tình trạng pháp nhân của người này
   redeem_prizes:
-    title: 'Redeem Prizes: %{name}'
-    provider: 'Provider:'
-    code: 'Code:'
-    redeem_header: 'To redeem:'
-    donorschoose_register: Register as a teacher on DonorsChoose.org
-    donorschoose_project: Post a project
+    title: 'Mua lại giải thưởng: %{name}'
+    provider: 'Nhà cung cấp:'
+    code: 'Mã:'
+    redeem_header: 'Để mua lại:'
+    donorschoose_register: Đăng ký như là một giáo viên trên DonorsChoose.org
+    donorschoose_project: Đăng một dự án
     donorschoose_how_to: Làm thế nào để sử dụng mã
-    success: Your prize was succesfully redeemed, see code below.
-    error: Your prize could not be redeemed, please try again.
+    success: Giải thưởng của bạn đã mua lại thành công, xem mã dưới đây.
+    error: Giải thưởng của bạn có thể không thu hồi được, xin vui lòng thử lại.
     error_us_only: Giải thưởng chỉ được trao cho người sử dụng ở Mỹ.
     error_not_earned: Bạn chưa có danh hiệu này.
     error_already_redeemed: Phần thưởng của bạn đã được quy đổi.
@@ -156,13 +157,13 @@ vi:
     teacher_info_required: 'Phần thưởng dành cho giáo viên cần có tên trường thông tin địa chỉ:'
     teacher_email_required: 'Giải thưởng giáo viên yêu cầu một địa chỉ thư điện tử đã được xác nhận:'
     confirm:
-      title: Please Confirm
+      title: Xin vui lòng xác nhận
       "no": Không
       "yes": Có
-      msg: 'Are you sure you want to claim the %{prize_name} prize?'
-      msg_student: 'NOTE: You can only choose one type of prize.'
+      msg: 'Bạn có chắc bạn muốn yêu cầu bồi thường giải thưởng %{prize_name}?'
+      msg_student: 'Lưu ý: Bạn chỉ có thể chọn một loại giải thưởng.'
       msg_publicschool: Xin vui lòng xác nhận rằng bạn là một giáo viên trường công lập Hoa Kỳ.
-      msg_visit_website: Visit website
+      msg_visit_website: Truy cập trang web
     providers:
       apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
@@ -178,11 +179,11 @@ vi:
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
       earned: Bạn đã đạt được một giải thưởng! (Chỉ dành cho các Sinh viên ở Hoa Kỳ)
-      not_earned_title: Finish the tutorial, earn rewards (U.S. students only)
+      not_earned_title: Hoàn thành hướng dẫn, kiếm được thưởng (chỉ dành cho sinh viên Hoa Kỳ)
       not_earned: 'Tìm hiểu tất cả những khái niệm của khoa học máy tính, thu thập tất cả %{num_trophies} danh hiệu, và kiếm được những phần thưởng thực. Bạn có thể lựa chọn giữa 10GB dung lượng miễn phí của Dropbox, $10 tín dụng của Skype và tải nhiều trò chơi hoàn toàn miễn phí. Lưu ý: Khoản đề nghị trên chỉ áp dụng với những học viên Hoa Kì, và chỉ tồn tại khi nguồn cung vẫn còn.'
       teacher:
         earned: 'Với số học viên là 15 hoặc nhiều hơn thu thập đủ  %{num_trophies} danh hiệu, Bạn sẽ được nhận 1 phần thưởng cho giáo viên! (Chỉ dành cho giáo viên Hoa Kỳ)'
-        not_earned_title: 'Teach the class, earn up to $1,000 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers only)'
+        not_earned_title: 'Dạy cho các lớp học, kiếm được lên đến $1,000 trong <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> (chỉ dành cho giáo viên Hoa Kỳ)'
         not_earned: 'To reward first-time computer science teachers, you can earn up to $1,000 in <a href="http://DonorsChoose.org">DonorsChoose.org</a> credits for guiding a classroom through the K-8 intro course. To qualify, you need to successfully host a classroom of at least 15 students through the entire K-8 intro course, with all 15 students (or more) completing all tutorials and earning all %{num_trophies} trophies. If 7 or more of the students who earn all of the trophies are girls, your reward is $1,000 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits. Otherwise, your reward is $750 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits.  <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits can only be used by teachers in U.S. public schools.'
         bonus:
           not_earned_title: 'You can still earn an additional $250 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers only)'
@@ -209,7 +210,7 @@ vi:
         playlab: Make an App
         artist: Draw Something
     user:
-      classroom: Teacher Home Page
+      classroom: Trang chủ giáo viên
       label: 'Hi %{username}'
       stats: TIến trình của bạn
       settings: Tài khoản của bạn
@@ -291,10 +292,10 @@ vi:
     email_resend_confirm: Resend confirmation instructions
     new_password_hint: (để trống nếu bạn không muốn thay đổi nó)
     current_password_hint: (chúng tôi cần mật khẩu của bạn để xác nhận thay đổi)
-    cancel:
-      title: Hủy bỏ tài khoản của tôi
-      hint: Bạn không hài lòng?
-      button: Hủy bỏ tài khoản của tôi
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Đã hoàn thành
     tried: Cố gắng
@@ -344,7 +345,7 @@ vi:
     none: Tùy chọn không muốn trả lời
   user_type:
     student: học sinh
-    teacher: Teacher
+    teacher: Giáo viên
   footer:
     help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped create this tutorial.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
@@ -505,3 +506,7 @@ vi:
     completed_too_many_blocks: completed, too many blocks
     completed_perfect: completed, perfect
     furthest_level_attempted: furthest level attempted
+  studio:
+    courses_working_on: "Courses you're working on"
+    completed_courses: Completed courses
+    all_courses: All courses

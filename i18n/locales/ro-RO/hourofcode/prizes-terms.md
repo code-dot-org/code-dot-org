@@ -1,6 +1,6 @@
 * * *
 
-title: How-to Guide for Organisations layout: wide nav: resources_nav
+titlu: Ghid Cum să... pentru Organizații aspect: wide nav: resources_nav
 
 * * *
 

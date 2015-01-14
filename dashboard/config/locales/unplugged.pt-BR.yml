@@ -238,22 +238,26 @@
           mantiver simples, poderá fazer muitas coisas com ele; se quiser garantir
           que todos tenham o mesmo resultado no final, seu algoritmo precisará de
           mais detalhes.'
+        video: C4_unplugged_algorithms
       EnvelopeVariables:
         title: Variáveis do envelope
         desc: As variáveis proporcionam muita liberdade na ciência da computação.
           Esta aula ajuda a explicar o que são variáveis e como podemos usá-las de
           diversas maneiras diferentes. Faça esta atividade antes ou junto com a aula
           sobre abstração, para que a ideia realmente faça sentido.
+        video: C4_unplugged_variables
       MadGlibs:
         title: Mad Glibs
         desc: A abstração é uma das habilidades mais importantes que um cientista
           da computação deve conhecer. Essa atividade fará com que seus alunos analisem
           as diferenças entre histórias para que possam, então, abstraí-las. Essas
           histórias abstraídas se tornam modelos para novas histórias malucas e divertidas.
+        video: C4_unplugged_madlibs
       ForLoopFun:
         title: Diversão com laços for
         desc: Sabemos que os laços nos permitem fazer algo repetidas vezes, mas, agora,
           vamos aprender como usá-los com estruturas adicionais associadas.
+        video: C4_unplugged_forloops
       SongwritingWithParameters:
         title: Escrevendo uma canção com parâmetros
         desc: 'Uma das estruturas mais incríveis no mundo da ciência da computação
@@ -261,6 +265,7 @@
           que podem ser usados repetidas vezes dentro do programa maior. Esta aula
           ajudará os alunos a entender, de maneira intuitiva, por que combinar blocos
           de códigos em funções é uma prática útil.  '
+        video: C4_unplugged_parameters
       BinaryImages:
         title: Imagens binárias
         desc: Embora muitas pessoas vejam o binário estritamente como zeros e uns,
@@ -269,6 +274,7 @@
           esse conceito um passo adiante, uma vez que demonstra como um computador
           também pode armazenar informações ainda mais complexas (como imagens e cores)
           em binário.
+        video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
         title: Vídeo games e planos cartesianos
         desc: Descrição da lição Video games e planos cartesianos

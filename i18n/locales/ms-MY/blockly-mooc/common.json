@@ -75,8 +75,6 @@
   "saveToGallery":"Save to gallery",
   "savedToGallery":"Saved in gallery!",
   "shareFailure":"Sorry, we can't share this program.",
-  "typeFuncs":"fungsi sedia ada:%1",
-  "typeHint":"Ambil perhatian bahawa kurungan dan koma bertindih adalah perlu.",
   "workspaceHeader":"Pasang blok anda di sini: ",
   "workspaceHeaderJavaScript":"Type your JavaScript code here",
   "infinity":"Infinity",
@@ -90,5 +88,6 @@
   "signup":"Daftar untuk kursus pengenalan",
   "hintHeader":"Sedikit Tip:",
   "genericFeedback":"See how you ended up, and try to fix your program.",
+  "toggleBlocksErrorMsg":"You need to correct an error in your program before it can be shown as blocks.",
   "defaultTwitterText":"Check out what I made"
 }

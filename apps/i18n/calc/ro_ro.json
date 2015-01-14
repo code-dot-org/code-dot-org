@@ -1,0 +1,8 @@
+{
+  "compute": "calculare",
+  "equivalentExpression": "Încercaţi să vă reordonați argumentele pentru a obţine exact aceeaşi expresie.",
+  "extraTopBlocks": "Aveţi blocuri neataşate. Aţi vrut să le ataşaţi la blocul \"calculare\"?",
+  "goal": "Obiectiv:",
+  "reinfFeedbackMsg": "Iată povestea ta! Continuă să lucrezi la ea, sau treci la următorul puzzle!",
+  "yourExpression": "Expresia dvs.:"
+}

@@ -1,8 +1,0 @@
-{
-  "compute": "calcola",
-  "equivalentExpression": "Prova a riordinare i tuoi argomenti per ottenere esattamente la stessa espressione.",
-  "extraTopBlocks": "Ci sono dei blocchi scollegati. Volevi forse attaccarli al blocco 'calcola'?",
-  "goal": "Obiettivo:",
-  "reinfFeedbackMsg": "Ecco la tua storia! Continua a lavorarci su, o passa al puzzle successivo!",
-  "yourExpression": "La tua espressione:"
-}

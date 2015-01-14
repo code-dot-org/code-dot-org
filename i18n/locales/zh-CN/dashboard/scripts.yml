@@ -7,9 +7,9 @@ zh:
           The Maze: 迷宫
           Multi: Multi
           Match: Match
-          Math Image: Math Image
-          title: Test Course
-          description: Just an internal test course.
+          Math Image: 数学图片
+          title: 测试课程
+          description: 只是一个内部测试的课程。
         course1:
           "Jigsaw: Learn to drag and drop": 拼图： 学习拖放
           "Maze: Sequence": 'Maze: Sequence'
@@ -38,11 +38,11 @@ zh:
           "Artist: Sequence": 'Artist: Sequence'
           "Artist: Shapes": 'Artist: Shapes'
           "Maze: Loops": 'Maze: Loops'
-          "Bee: Loops": 'Bee: Loops'
+          "Bee: Loops": 蜜蜂： 循环
           "Studio: Create a Story": 'Play Lab: Create a Story'
           "Artist: Loops": 'Artist: Loops'
           description_audience: Ages 4+ (pre-readers)
-          description_short: Course 1 is designed for early readers.
+          description_short: 课程1是为小朋友设计的
         course2:
           The Maze: 迷宫
           Suzi: Suzi
@@ -53,11 +53,11 @@ zh:
           Artist Loops: Artist Loops
           Bee Conditionals: Bee Conditionals
           Flappy: Flappy
-          title: Course 2
+          title: 课程2
           Bee Loops: Bee Loops
           Artist Functions: Artist Functions
           The Artist Debugging: The Artist Debugging
-          Bee Debugging: Bee Debugging
+          Bee Debugging: 蜜蜂调试
           Bee Functions: Bee Functions
           Maze Loops: Maze Loops
           Graph Paper Programming: 方格纸编程
@@ -73,7 +73,7 @@ zh:
           "Artist: Sequence": 'Artist: Sequence'
           "Maze: Loops": 'Maze: Loops'
           "Artist: Loops": 'Artist: Loops'
-          "Bee: Loops": 'Bee: Loops'
+          "Bee: Loops": 蜜蜂： 循环
           "Bee: Debugging": 'Bee: Debugging'
           "Artist: Debugging": 'Artist: Debugging'
           "Bee: Conditionals": 'Bee: Conditionals'
@@ -93,7 +93,7 @@ zh:
           Bee Conditionals: Bee Conditionals
           Bee Nested Loops: Bee Nested Loops
           Bee Debuggin: Bee Debuggin
-          Bee Debugging: Bee Debugging
+          Bee Debugging: 蜜蜂调试
           Bee Functions: Bee Functions
           Artist Functions with Params: Artist Functions with Params
           Bounce: 跳
@@ -183,10 +183,10 @@ zh:
           "Play Lab: Design Recipe": 'Play Lab: Design Recipe'
           "Eval: Design Recipe": 'Eval: Design Recipe'
         playlab:
-          title: Play Lab
-          description: Create a story or make a game with Play Lab!
-          Play Lab: Play Lab
-          description_short: Create a story or make a game with Play Lab!
+          title: 播放实验室
+          description: 创建一个故事或做游戏玩实验室！
+          Play Lab: 播放实验室
+          description_short: 创建一个故事或做游戏玩实验室！
         artist:
           title: Artist
           description: Draw cool pictures and designs with the Artist!
@@ -200,8 +200,8 @@ zh:
         hourofcode:
           Maze: 迷宫
           title: 编程一小时
-          description: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
-          description_short: Try the basics of computer science with many fun characters!
+          description: 尝试计算机科学的基础知识与愤怒的小鸟人物，植物大战僵尸，和Scrat从冰河时代！
+          description_short: 尝试计算机科学的基础知识与许多有趣的人物！
         frozen:
           title: Code with Anna and Elsa
           description: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
@@ -281,3 +281,49 @@ zh:
           description: A selection of Course 4 levels for usability testing.
           Variables: 变量
           For Loops: For Loops
+          Binary: Binary
+        potus:
+          title: special
+          description_short: special
+          description: special
+          Special: Special
+        special:
+          title: special
+          description_short: special
+          description: special
+          Special: Special
+          Binary: Binary
+        usabilitymsm:
+          Usability testing for MSM: Usability testing for MSM
+          Evaluation Blocks: Evaluation Blocks
+          Blocks to Math: Blocks to Math
+          Strings and Images: Strings and Images
+          Defining Variables: Defining Variables
+          Defining Functions: Defining Functions
+          Design Recipe: Design Recipe
+          Booleans: Booleans
+          Conditionals: 条件语句
+          Free Play: Free Play
+        algebra:
+          title: Computer Science in Algebra
+          description: Learn Functional Programming through Algebra
+          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
+          "Calc: Evaluation Blocks": 'Calc: Evaluation Blocks'
+          "Eval: Strings and Images": 'Eval: Strings and Images'
+          "Unplugged: Contracts": 'Unplugged: Contracts'
+          "Eval: Writing Contracts": 'Eval: Writing Contracts'
+          "Calc: Defining Variables": 'Calc: Defining Variables'
+          "Play Lab: Defining Variables (Big Game)": 'Play Lab: Defining Variables (Big Game)'
+          "Eval: Defining Functions": 'Eval: Defining Functions'
+          "Unplugged: The Design Recipe": 'Unplugged: The Design Recipe'
+          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
+          "Eval: Functions": 'Eval: Functions'
+          "Play Lab: Animation (Big Game)": 'Play Lab: Animation (Big Game)'
+          "Unplugged: Booleans": 'Unplugged: Booleans'
+          "Eval: Boolean Operators": 'Eval: Boolean Operators'
+          "Play Lab: Booleans": 'Play Lab: Booleans'
+          "Play Lab: Boolean (Big Game)": 'Play Lab: Boolean (Big Game)'
+          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals and Piecewise Functions'
+          "Eval: Conditionals": 'Eval: Conditionals'
+          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Distance Formula'
+          "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'

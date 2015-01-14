@@ -22,7 +22,7 @@
   add_teacher_form:
     code:
       label: 'הוסף מורה:'
-      placeholder: Code (ABCDEF)
+      placeholder: Section Code (ABCDEF)
     submit: הוסף מורה
   add_hint_form:
     placeholder: הכניסו בבקשה את הרמז שלכם כאן
@@ -36,6 +36,7 @@
   of: של
   more: יותר
   less: פחות
+  beta: beta
   try_hoc: 'נסה את שעת הקוד, לחץ כאן >> '
   try_k8intro: נסה את הקורס מבוא למדעי המחשב לכיתות גן-ח'(15-25 שעות)
   k8intro: ק-8 מבוא לקורס במדעי המחשב (15-25 שעות)
@@ -60,9 +61,11 @@
     need_confirmation: לא קיבלת את  ההוראות האישור?
     need_unlock: לא קיבלת את ההוראות הפתיחה?
   signup_form:
-    overview_student: הירשמ/י לחשבון כדי לעקוב אחרי התקדמותך.
-    overview_teacher: הירשם לחשבו על מנת ללמד בכיתתך את מדעי המחשב.<p/> תוכל לעקוב
-      אחרי התקדמות התלמידים שלך ולזכות בפרסים.
+    overview_student: Sign up for an account to track your progress. Your email is
+      primarily used to allow you to log in and for password recovery. For more information,
+      see our <a href="http://code.org/privacy">Privacy Policy</a>.
+    overview_teacher: Teach computer science in your classroom by signing up for an
+      account.<p/> You'll be able to add your students and track their progress.
     no_signup_message: אתה יכול <a target="_blank" href="http://learn.code.org">לדפדף
       בחידות והשלבים השונים</a>, אבל אתה צריך להירשם על-מנת לשמור את התקדמותך.
     teacher_educator_guide: ראה מדריך למחנך
@@ -85,10 +88,13 @@
     valid_password: סיסמה תקינה!
     invalid_password: הסיסמא חייבת להכיל לפחות 6 תווים
     mismatch_password: שתי הסיסמאות שהזנת אינן תואמות
-    student_terms: אני מסכים להיות מחוייב לתנאי השירות של Code.org. אם אני מתחת לגיל
-      13, אני מאשר, ע״י שליחה של טופס זה, שהורה או אפטרופוס חוקי אישר לי להשתמש בשירותים
-      שמציע האתר Code.org.
-    teacher_terms: אני מסכים להיות מחויב לתנאי השימוש של Code.org.
+    student_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
+      of service</a>. If I am under 13 years of age, I confirm by submitting this
+      form that I have my parent or legal guardian's permission to use the Code.org
+      services.<br/>For users under 13, email addresses are not stored in a form that
+      allows us to contact them.
+    teacher_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
+      of service</a>.
     additional_information: We need some additional information to continue signing
       you up.
   signin_form:
@@ -140,7 +146,7 @@
         לא נמצא משתמש רשום ע״י ״%{teacher_email_or_code}״.
         אנא בקש מהם להירשם כאן ונסה להוסיף אותם שנית
       section_not_found: Could not find a section with code '%{section_code}'.
-      blank_code: בבקשה הכנס קוד או אימייל המורה שלך
+      blank_code: Please enter a section code
       cant_join_own_section: Sorry, you can't join your own section.
     mail:
       invite_student:
@@ -242,7 +248,7 @@
         playlab: Make an App
         artist: Draw Something
     user:
-      classroom: התלמידים שלי
+      classroom: Teacher Home Page
       label: היי %{username}
       stats: ההתקדמות שלי
       settings: החשבון שלי
@@ -332,10 +338,11 @@
     new_password_hint: (השאר ריק אם אין ברצונך לשנות)
     current_password_hint: (אנחנו צריכים את הסיסמה הנוכחית שלך כדי לאשר את השינויים
       שלך)
-    cancel:
-      title: בטל את החשבון שלי
-      hint: לא שמח?
-      button: בטל את החשבון שלי
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: 'Please note: deleting your account will not delete
+      your students'' accounts.'
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: הושלם
     tried: נוסה
@@ -378,9 +385,9 @@
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
     heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
-    heading_elementary: <h2>20 hour courses for</h2><h1>Elementary Students</h1>
+    heading_elementary: <h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>
     heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
-    heading_legacy: <h2>Our previous course for</h2><h1>Existing Students</h1>
+    heading_legacy: <h2>Our general course for</h2><h1>All Ages</h1>
     your_gallery: גלריה
   gender:
     male: גבר
@@ -390,12 +397,11 @@
     student: תלמיד
     teacher: Teacher
   footer:
-    help_from_html: המהנדסים של <a href="http://www.google.com"> גוגל</a>, <a href="http://www.microsoft.com">
-      מיקרוסופט</a>, <a href="http://www.facebook.com"> פייסבוק</a>, <a href="http://www.twitter.com">
-      טוויטר</a> עזרו ליצור ערכת לימוד זו.
-    art_from_html: Angry Birds&trade; ו&copy; 2009-2014 <a href="http://www.rovio.com">Rovio
-      Entertainment Ltd</a>כל הזכויות שמורות.<br/>Plants vs. Zombies&trade; ו&copy;
-      2013<a href="http://www.ea.com">Electronic Arts Inc.</a>. כל הזכויות שמורות.
+    help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped
+      create this tutorial.
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
+      All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
+      Arts Inc. All Rights Reserved.
     powered_by_aws: Powered by Amazon Web Services
     feedback: משוב
     translate: עזרו לנו לתרגם לשפתך
@@ -410,7 +416,7 @@
     teacher: תראה את הפתרון
     auth_error: אינך מורשה לראות את הפתרון.
     submit: עדכן מיקום אומן
-    direction: התחל כיוון
+    direction: Start Direction (in degrees)
   video:
     tab: וידאו.
     notes: אין וידאו? הצג הערות.
@@ -447,7 +453,7 @@
     title: לחץ'ריצה' כדי לראות את התקדמותי בזמן פעולה
     bounce_og_title: תראה את המשחק קפיצה שלי
     flappy_og_title: תראה את משחק ההתנופפות שלי
-    studio_og_title: תראה את הסיפור שלי
+    studio_og_title: Check out my Play Lab App
     check_out_what_i_made: Check out what I made
     og_description: כתבתי קוד בעצמי באמצעות code.org
     phone_number_not_allowed: It looks like there is a phone number in it. Try changing
@@ -502,7 +508,9 @@
     header_playlab: Play Lab
     header_artist: Artist
   landing:
-    prerelease: This page is still under development.
+    prerelease: This course is in <span class='betatext'>beta</span>.  This means
+      it is not the final version of the course, and is subject to revision as feedback
+      is received and improvements are made.
     prerelease_hoc2014: This tutorial is in <span class='betatext'>beta</span>.  It
       is subject to revision as feedback is received and improvements are made.
     feedback: Give Feedback
@@ -576,3 +584,7 @@
     completed_too_many_blocks: completed, too many blocks
     completed_perfect: completed, perfect
     furthest_level_attempted: furthest level attempted
+  studio:
+    courses_working_on: Courses you're working on
+    completed_courses: Completed courses
+    all_courses: All courses

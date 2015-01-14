@@ -19,11 +19,13 @@ Code.org este o organizație non-profit dedicată extinderii educației cu privi
 
 ## Hour of Code România
 
-Cu Hour of Code România, Code.org iși propune să ajute la demistificarea conceptului că programarea sau tehnologia computerelor este dificilă și oferă părinților, profesorilor și elevilor din întreaga țară, posibilitatea să participe la o introducere distractivă în tainele programării. Sperăm că acest demers va ajuta la creșterea conștientizării și încrederii în schimbările pozitive care le poate produce însușirea unor noțiuni de tehnologia computerelor. 
+Cu Hour of Code în România și Moldova, Code.org iși propune să ajute la demistificarea conceptului că programarea sau tehnologia computerelor este dificilă și oferă părinților, profesorilor și elevilor din întreaga țară, posibilitatea să participe la o introducere distractivă în tainele programării. Sperăm că acest demers va ajuta la creșterea conștientizării și încrederii în schimbările pozitive care le poate produce însușirea unor noțiuni de tehnologia computerelor. 
 
-Începând cu acest an, în România echipa Hour of Code este condusă de <a href="http://www.linkedin.com/in/alinchiriac">Alin Chiriac</a>, fondatorul asociației <a href="http://www.adfaber.org">ADFABER - Technlology for Social Change.</a> 
+Începând cu acest an, în România si Moldova echipa Hour of Code este condusă de <a href="http://www.linkedin.com/in/alinchiriac">Alin Chiriac</a>, fondatorul asociației <a href="http://www.adfaber.org">ADFABER - Technlology for Social Change.</a> 
 
+<a href="http://www.adfaber.org">ADFABER</a> urmareste sustinerea în România si Moldova a obiectivelor pe care Code.org le are in lume si anume introducerea în cat mai multe scoli, a cursurilor de programare adecvate, pentru a apropia și mai mult profesorii si copii de programare.
 
+In cadrul evenimentului Hour of Code (http://ro.code.org) ADFABER are rolul de a reuni companii, organizații, instituții, profesori pentru a da șansa câtor mai mulți români să beneficieze de o introducere în programare.
 
 ## Urmăriți-ne 
 Urmăriți Code.org pe rețelele de socializare: 
@@ -37,7 +39,7 @@ Urmăriți Code.org pe rețelele de socializare:
 
 Te rugăm ajută la promovarea tehnologiei computerelor în comunitatea ta. 5% din venituri vor fi utilizate de către Code.org pentru a aduce Tehnologia Computerelor în mai multe școli. 
 
-<a href="http://www.zazzle.com/codeorg*?tc=codewebsite">
+<a href="http://store.code.org/">
 <img src="http://www.code.org/images/swag1.jpg" width=150/>
 <img src="http://www.code.org/images/swag4.jpg" width=150/>
 <img src="http://www.code.org/images/swag2.jpg" width=150/>

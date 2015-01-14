@@ -1,6 +1,6 @@
 {
   "actor":"케릭터",
-  "alienInvasion":"Alien Invasion!",
+  "alienInvasion":"외계인 침공!",
   "backgroundBlack":"검정",
   "backgroundCave":"동굴",
   "backgroundCloudy":"구름",
@@ -58,6 +58,7 @@
   "moveDistanceTooltip":"케릭터를 지정한 방향으로 지정한 거리만큼 움직입니다.",
   "moveSprite":"움직이기",
   "moveSpriteN":"캐릭터 움직이기 {spriteIndex}",
+  "toXY":"to x,y",
   "moveDown":"아래로 이동하기",
   "moveDownTooltip":"케릭터를 아래로 움직입니다.",
   "moveLeft":"왼쪽으로 이동하기",

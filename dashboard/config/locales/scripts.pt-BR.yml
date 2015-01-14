@@ -48,9 +48,9 @@
           'Bee: Loops': 'Abelha: Laços'
           'Studio: Create a Story': 'Laboratório: Crie uma história'
           'Artist: Loops': 'Artista: Laços'
-          description_audience: Ages 4+ (pre-readers)
-          description_short: O curso 1 foi elaborado para os leitores iniciantes.
-            Recomendado para alunos do pré ao 1º ano.
+          description_audience: A partir de 4 anos (para crianças que ainda não leem)
+          description_short: O Curso 1 é destinado às crianças que estão aprendendo
+            a ler.
         course2:
           The Maze: O Labirinto
           Suzi: Suzi
@@ -93,9 +93,8 @@
           'Artist: Sequence2': 'Artista: Sequência 2'
           'Maze: Sequence2': 'Labirinto: Sequência 2'
           'Artist: Nested Loops': 'Artista: Laços Aninhados'
-          description_audience: Ages  6+ (reading required)
-          description_short: O Curso 2 foi elaborado para os alunos que já conseguem
-            ler. Recomendado para alunos do 2º ao 5º ano.
+          description_audience: A partir de 6 anos (as crianças já devem saber ler)
+          description_short: O Curso 2 é destinado aos alunos que já sabem ler.
         course3:
           The Maze: O Labirinto
           'Studio: Create a Story': 'Laboratório: Crie uma história'
@@ -150,9 +149,8 @@
           'Bee: Debugging2': 'Abelha: Depuração2'
           'Artist: Patterns': 'Artista: padrões'
           Songwriting: Composição
-          description_audience: Ages 8+ (after Course 2)
-          description_short: O Curso 3 é uma continuação do Curso 2. Recomendado para
-            alunos do 4º ao 5º ano.
+          description_audience: A partir de 8 anos (após o Curso 2)
+          description_short: O Curso 3 é uma continuação do Curso 2.
         msm:
           title: Matemática para o ensino médio
           description: Trabalho privado em andamento para matemática do ensino médio.
@@ -232,8 +230,7 @@
             personagens do Angry Birds, Plants vs. Zombies e com o Scrat, da Era do
             Gelo!
           description_short: Conheça os conceitos básicos da ciência da computação
-            com os personagens do Angry Birds, Plants vs. Zombies e com o Scrat, da
-            Era do Gelo!
+            com a ajuda de vários personagens divertidos!
         frozen:
           title: Programação com Anna e Elsa
           description: Vamos usar programação para explorar a magia e a beleza do
@@ -278,7 +275,7 @@
           Farmer Binary: 'Fazendeira: binário'
           Maze and Bee: Labirinto e abelha
           Artist Binary: 'Artista: binário'
-          description_audience: Ages 10+ (after Course 3)
+          description_audience: A partir de 10 anos (após o Curso 3)
         Course4pre:
           description_short: Uma breve revisão dos conceitos para os alunos que não
             fizeram os Cursos 2 e 3.
@@ -327,3 +324,54 @@
           description: Uma seleção de níveis do Curso 4 para o teste de usabilidade.
           Variables: Variáveis
           For Loops: Laços for
+          Binary: Binário
+        potus:
+          title: especial
+          description_short: especial
+          description: especial
+          Special: Especial
+        special:
+          title: especial
+          description_short: especial
+          description: especial
+          Special: Especial
+          Binary: Binário
+        usabilitymsm:
+          Usability testing for MSM: Teste de usabilidade para MSM
+          Evaluation Blocks: Blocos de avaliação
+          Blocks to Math: Dos blocos para a matemática
+          Strings and Images: Strings e imagens
+          Defining Variables: Definir variáveis
+          Defining Functions: Definir funções
+          Design Recipe: Receita de design
+          Booleans: Booleanos
+          Conditionals: Condições
+          Free Play: Jogo livre
+        algebra:
+          title: Ciência da computação em álgebra
+          description: Aprenda programação funcional com álgebra
+          'Unplugged: Video Games and Coordinate Planes': 'Offline: video games e
+            planos de coordenadas'
+          'Calc: Evaluation Blocks': 'Calc: Blocos de avaliação'
+          'Eval: Strings and Images': 'Eval: Strings e imagens'
+          'Unplugged: Contracts': 'Offline: contratos'
+          'Eval: Writing Contracts': 'Eval: Escrever contratos'
+          'Calc: Defining Variables': 'Cálculo: definir variáveis'
+          'Play Lab: Defining Variables (Big Game)': 'Laboratório: Definição de variáveis
+            (O Grande Jogo)'
+          'Eval: Defining Functions': 'Eval: Definir funções'
+          'Unplugged: The Design Recipe': 'Offline: a receita de design'
+          'Play Lab: Defining Functions': 'Laboratório: definir funções'
+          'Eval: Functions': 'Eval: Funções'
+          'Play Lab: Animation (Big Game)': 'Laboratório: Animação (O Grande Jogo)'
+          'Unplugged: Booleans': 'Offline: booleanos'
+          'Eval: Boolean Operators': 'Eval: Operadores booleanos'
+          'Play Lab: Booleans': 'Laboratório: booleanos'
+          'Play Lab: Boolean (Big Game)': 'Laboratório: Booleano (O Grande Jogo)'
+          'Unplugged: Conditionals and Piecewise Functions': 'Offline: condicionais
+            e funções definidas por partes'
+          'Eval: Conditionals': 'Eval: Condicionais'
+          'Unplugged: Collision Detection and the Distance Formula': 'Offline: detecção
+            de colisão e fórmula da distância'
+          'Play Lab: Collision Detection (Big Game)': 'Laboratório: Detecção de colisão
+            (O Grande Jogo)'

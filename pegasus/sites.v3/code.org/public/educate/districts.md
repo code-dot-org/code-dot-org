@@ -13,17 +13,20 @@ social:
 ---
 # Partner with Code.org to bring K-12 computer science to your district
 
-## Existing partners
+## Existing partners (including all 7 of the largest US school districts)
 
 
 - New York City Department of Education (NY)
-- Chicago Public Schools (IL)
-- Denver Public Schools (CO)
-- Broward County Public Schools (FL)
-- Charles County Public Schools (MD)
-- San Francisco Unified School District (CA)
 - Los Angeles Unified School District (CA)
-- [See all 30+ partner districts](/educate/partner-districts)
+- Chicago Public Schools (IL)
+- Miami-Dade County Public Schools (FL)
+- Clark County School District (NV)
+- Broward County Public Schools (FL)
+- Houston Independent School District (TX)
+- Montgomery County Public Schools (MD)
+- Denver Public Schools (CO)
+- San Francisco Unified School District (CA)
+- [See all 60+ partner districts](/educate/partner-districts)
 
 
 ## Code.org provides (at no charge): 

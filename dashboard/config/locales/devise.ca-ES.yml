@@ -9,7 +9,7 @@
         el teu compte en uns minuts.
     failure:
       already_authenticated: Ja has iniciat sessió.
-      inactive: El teu compte encara no s'ha activat.
+      inactive: El vostre compte encara no s'ha activat.
       invalid: Correu electrònic o contrasenya invàlids.
       invalid_token: El testimoni d'autenticació no és vàlid.
       locked: El teu compte està bloquejat.
@@ -56,7 +56,7 @@
         de la teva nova adreça de correu electrònic.
       updated: Has actualitzat el teu compte correctament.
     sessions:
-      signed_in: Has iniciat sessió amb èxit.
+      signed_in: ''
       signed_out: Has tancat la teva sessió amb èxit.
     unlocks:
       send_instructions: D'aquí uns minuts rebràs un email amb instruccions per desbloquejar

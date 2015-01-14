@@ -23,7 +23,10 @@
     "coordinate_grid_background": "false",
     "instructions": "Fill in the \"actor\" parameter input so that we can call the \"patrol\" function for each of the actors. Remember, the actors correspond to numbers 1, 2, and 3.",
     "first_sprite_index": "1",
-    "embed": "false"
+    "embed": "false",
+    "disable_sharing": "false",
+    "callout_json": "[\r\n  {\"localization_key\": \"fill_in_actor\", \"element_id\": \"#fill_in_actor_qtip\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"top center\", \"at\": \"bottom center\"}}\r\n  }\r\n]",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
@@ -36,7 +39,7 @@
                 <arg name="actor"/>
               </mutation>
               <value name="ARG0">
-                <block type="math_number">
+                <block type="math_number" id="fill_in_actor_qtip">
                   <title name="NUM">???</title>
                 </block>
               </value>
@@ -112,27 +115,7 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="studio_moveDistanceParamsSprite" inline="true">
-          <title name="DIR">1</title>
-          <value name="SPRITE">
-            <block type="math_number">
-              <title name="NUM">1</title>
-            </block>
-          </value>
-          <value name="DISTANCE">
-            <block type="math_number">
-              <title name="NUM">25</title>
-            </block>
-          </value>
-        </block>
-        <block type="studio_repeatForever"/>
-        <block type="math_number">
-          <title name="NUM">0</title>
-        </block>
-        <block type="math_arithmetic" inline="true">
-          <title name="OP">ADD</title>
-        </block>
-      </xml>
+</xml>
     </toolbox_blocks>
     <required_blocks>
       <xml>

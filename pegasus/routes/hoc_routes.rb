@@ -126,15 +126,9 @@ post '/api/hour/certificate' do
 
   row = DB[:hoc_activity].where(session:params[:session_s]).first
   if row
-    begin
-      form = insert_form('HocCertificate2013', params.merge(email_s:'anonymous@code.org'))
-    rescue FormError=>e
-      halt 400, {'Content-Type'=>'text/json'}, e.errors.to_json
-    end
-
-    DB[:hoc_activity].where(id:row[:id]).update(name:form.name)
-
-    row[:name] = form.name
+    name = params[:name_s].to_s.strip
+    DB[:hoc_activity].where(id:row[:id]).update(name:name)
+    row[:name] = name
   end
 
   content_type :json

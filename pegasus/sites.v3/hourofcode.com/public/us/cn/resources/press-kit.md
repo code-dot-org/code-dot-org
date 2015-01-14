@@ -1,6 +1,6 @@
 
 
-[<button style="float: right; margin-top: 50px">Sign up your event</button>](/#join)
+
 
 ## 怎样为你的编程一小时活动吸引媒体
 
@@ -56,4 +56,3 @@ Code.org®是501c3公立非营利项目，致力于扩展计算机科学，增�
   
 更多资源和示例邮件见这里.
 
-<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

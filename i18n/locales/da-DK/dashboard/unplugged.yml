@@ -151,21 +151,27 @@ da:
       TangramAlgorithms:
         title: Tangram algoritmer
         desc: Denne lektion viser os noget vigtigt om algoritmer. Hvis du sørger for at holde en algoritme simpel, så er der en masser måder at bruge den på. Hvis du ønsker at sikre at alle ender med det samme resultat, så har din algoritme behov for flere detaljer.
+        video: C4_unplugged_algorithms
       EnvelopeVariables:
         title: Omslut variabler
         desc: 'Variabler giver mulighed for en masse frihed i kodning.  Denne lektion hjælper med at forklare hvad variabler er, og hvordan vi kan bruge dem på mange forskellige måder. Brug denne aktivitet før (eller sammen med) lektionen med indvinding til virkelig ideen.'
+        video: C4_unplugged_variables
       MadGlibs:
         title: Gale Glibs
         desc: 'Abstraktion er en af de vigtigste færdigheder for at kunne skrive kode, for at kunne forstå den.  Denne aktivitet vil få dine elever til at analyserer historier for forskelle, således at de kan abstrakte dem væk. Disse historier vil blive skabeloner til nogle sjove og skøre nye.'
+        video: C4_unplugged_madlibs
       ForLoopFun:
         title: For loop sjov
         desc: Vi ved at loops tillader os at gøre ting igen og igen, men nu vil vi lære at bruge loops med ekstra struktur indbygget.
+        video: C4_unplugged_forloops
       SongwritingWithParameters:
         title: Sangskrivning med parametre
         desc: 'En af de mest fantastiske strukturer i programmerings verden er funktionen.  Funktioner (nogle gange kaldet procedurer) er mini programmer, som du kan bruge igen og igen i dine større program. Denne lektion vil hjælpe eleverne til intuitivt at forstå, hvorfor det at kombinere stumper af kode i funktioner er sådan en god praksis.  '
+        video: C4_unplugged_parameters
       BinaryImages:
         title: Binære billeder
         desc: 'Selvom mange mennesker kun tænker på binære tal som nuller og ettaller, underviste vores tidligere kurser eleverne i at, information kan være repræsenteret i en række binære optioner.  Denne lektion tager konceptet et skridt længere, da den illustrerer hvordan en computer også kan gemme endnu mere komplekse oplysninger (f.eks. billeder og farver) i binære tal.'
+        video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
         title: Videospil og koordinere fly
         desc: Videospil og koordinerese flys lektionsbeskrivelse

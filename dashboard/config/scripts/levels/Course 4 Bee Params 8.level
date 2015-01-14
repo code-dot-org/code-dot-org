@@ -15,14 +15,15 @@
     "disable_variable_editing": "true",
     "start_direction": "3",
     "step_mode": "0",
-    "nectar_goal": "10",
+    "nectar_goal": "5",
     "flower_type": "redWithNectar",
-    "ideal": "44",
+    "ideal": "48",
     "instructions": "Oooh, now there's honey to deal with too! How could you update your function to either get nectar or make honey.",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
     "open_function_definition": "get nectar make honey",
-    "maze_data": null
+    "maze_data": null,
+    "honey_goal": "5"
   }
 }]]></config>
   <blocks>
@@ -65,7 +66,7 @@
                 <block type="logic_compare" inline="true" movable="false" uservisible="false">
                   <title name="OP">EQ</title>
                   <value name="A">
-                    <block type="variables_get" movable="false" uservisible="false">
+                    <block type="parameters_get" uservisible="false">
                       <title name="VAR">direction</title>
                     </block>
                   </value>
@@ -115,7 +116,7 @@
                                         <block type="logic_compare" inline="true" movable="false" uservisible="false">
                                           <title name="OP">EQ</title>
                                           <value name="A">
-                                            <block type="variables_get" movable="false" uservisible="false">
+                                            <block type="parameters_get" uservisible="false">
                                               <title name="VAR">direction</title>
                                             </block>
                                           </value>

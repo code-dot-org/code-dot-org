@@ -43,12 +43,12 @@
           'Bee: Loops': '꿀벌: 반복'
           'Studio: Create a Story': 'Play Lab: 스토리 만들기'
           'Artist: Loops': '예술가: 반복'
-          description_audience: Ages 4+ (pre-readers)
-          description_short: 과정1은 읽기에 익숙하지 않은 학생들을 위해 설계되었습니다. 초1 학생에게 권장합니다.
+          description_audience: 4세 이상(한글 배우기 전)
+          description_short: 과정1은 글을 이제 막 읽기 시작한 아이들을 대상으로 만들어졌습니다.
         course2:
           The Maze: 미로 퍼즐
           Suzi: 수지
-          The Artist: 예술가 퍼즐
+          The Artist: The Artist
           Artist Debugging: 예술가 디버깅
           Bounce: 바운스
           'Studio: Create a Story': 'Play Lab: 스토리 만들기'
@@ -84,12 +84,12 @@
           'Artist: Sequence2': '예술가: 순차2'
           'Maze: Sequence2': '미로: 순차2'
           'Artist: Nested Loops': '예술가: 중첩반복'
-          description_audience: Ages  6+ (reading required)
-          description_short: 과정2는 읽기가 가능한 학생들을 위해 설계되었습니다. 초등2~5 학생들에게 권장합니다.
+          description_audience: 6세 이상 (읽기 능력 필요)
+          description_short: 과정2는 글을 읽을 수 있는 학생을 대상으로 만들어졌습니다.
         course3:
           The Maze: 미로 퍼즐
           'Studio: Create a Story': 'Play Lab: 스토리 만들기'
-          The Artist: 예술가 퍼즐
+          The Artist: The Artist
           title: 코스3
           Artist Functions: 예술가 함수
           Artist For Loops: 예술가 반복
@@ -115,7 +115,7 @@
             보다 복잡한 문제들에 대해서 다양한 방법들로 사용하게 됩니다. 학생들이 이 코스를 완료하고나면 인터랙티브 스토리와 게임을 만들고
             공유할 수 있게 됩니다. K4-5(초등4-5학년) 학생들에게 권장합니다.
           'Studio: Create a Game': 'Play Lab: 게임 만들기'
-          Maze: 미로 퍼즐
+          Maze: Maze
           Artist: 예술가
           'Artist: Functions': '예술가: 함수'
           'Bee: Functions': '꿀벌: 함수'
@@ -137,8 +137,8 @@
           'Bee: Debugging2': '꿀벌: 디버깅2'
           'Artist: Patterns': '예술가: 패턴'
           Songwriting: 노래 만들기
-          description_audience: Ages 8+ (after Course 2)
-          description_short: 과정3은 과정2의 다음 과정입니다. 초등4~5 학생들에게 권장합니다.
+          description_audience: 8세 이상(과정2를 마친 후)
+          description_short: 과정3은 과정2의 다음 과정입니다.
         msm:
           title: 중학교 수학
           description: 중학교 수학 과정 개인 진도
@@ -209,8 +209,7 @@
           title: Hour of Code
           description: 컴퓨터과학(정보과학)의 기초를 앵그리버드, Plats vs Zombies, 아이스 에이지의 Scrat과 함께
             배워보세요.
-          description_short: 컴퓨터과학(정보과학)의 기초를 앵그리버드, Plats vs Zombies, 아이스 에이지의 Scrat과
-            함께 배워보세요.
+          description_short: 여러가지 재밌는 캐릭터와 함께 컴퓨터과학의 기초/개념/원리들을 배워보세요!
         frozen:
           title: 안나, 엘사와 함께하는 코드
           description: 얼음의 마술과 아름다움을 탐구하는 안나, 엘사와 함께 코드를 해보세요. 스케이트를 타는 것 처럼 쉽게 눈
@@ -247,7 +246,7 @@
           Farmer Binary: 농부 2진
           Maze and Bee: 미로와 꿀벌
           Artist Binary: 2진 예술가
-          description_audience: Ages 10+ (after Course 3)
+          description_audience: 10세 이상 (과정3을 마친 후)
         Course4pre:
           description_short: 과정2와 과정3을 이미 완료한 학생들을 위한 간단한 개념 확장
           Course 4 Prerequisite: 과정4 준비조건
@@ -293,3 +292,50 @@
           description: 사용성 테스트를 위한 4가지 수준의 코스 선택
           Variables: 변수
           For Loops: 반복을 위한
+          Binary: 2진
+        potus:
+          title: 스페셜
+          description_short: 스페셜
+          description: 스페셜
+          Special: 스페셜
+        special:
+          title: 스페셜
+          description_short: 스페셜
+          description: 스페셜
+          Special: 스페셜
+          Binary: 2진
+        usabilitymsm:
+          Usability testing for MSM: Usability testing for MSM
+          Evaluation Blocks: Evaluation Blocks
+          Blocks to Math: 계산 블럭
+          Strings and Images: Strings and Images
+          Defining Variables: Defining Variables
+          Defining Functions: Defining Functions
+          Design Recipe: Design Recipe
+          Booleans: 불(참 또는 거짓)값들
+          Conditionals: 조건
+          Free Play: Free Play
+        algebra:
+          title: Computer Science in Algebra
+          description: Learn Functional Programming through Algebra
+          'Unplugged: Video Games and Coordinate Planes': '언플러그드: 비디오 게임과 좌표 평면'
+          'Calc: Evaluation Blocks': '계산: 평가(결과 계산) 블럭'
+          'Eval: Strings and Images': '평가: 문자열(문장)과 이미지'
+          'Unplugged: Contracts': '언플러그드 : 제한 조건'
+          'Eval: Writing Contracts': '평가: 제한 조건 쓰기'
+          'Calc: Defining Variables': '계산: 변수 정의하기'
+          'Play Lab: Defining Variables (Big Game)': '플레이 랩: 변수 정의하기 (빅 게임)'
+          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Unplugged: The Design Recipe': '언플러그드: 디자인 레시피'
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Eval: Functions': 'Eval: Functions'
+          'Play Lab: Animation (Big Game)': '플레이 랩: 애니메이션 (빅 게임)'
+          'Unplugged: Booleans': '언플러그드: 참/거짓값'
+          'Eval: Boolean Operators': '평가: 참/거짓(논리) 연산자'
+          'Play Lab: Booleans': '플레이 랩: 불(참 또는 거짓 값)'
+          'Play Lab: Boolean (Big Game)': '플레이 랩: 참/거짓값 (빅 게임)'
+          'Unplugged: Conditionals and Piecewise Functions': '언플러그드: 조건/선택과 함수 조각'
+          'Eval: Conditionals': '평가: 조건/선택'
+          'Unplugged: Collision Detection and the Distance Formula': '언플러그드: 충돌 감지와
+            거리 계산식'
+          'Play Lab: Collision Detection (Big Game)': '플레이 랩: 충돌 감지 (빅 게임)'

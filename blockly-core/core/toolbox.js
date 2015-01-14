@@ -30,6 +30,7 @@ goog.require('goog.events.BrowserFeature');
 goog.require('goog.style');
 goog.require('goog.ui.tree.TreeControl');
 goog.require('goog.ui.tree.TreeNode');
+goog.require('goog.math.Rect');
 
 
 /**
@@ -191,6 +192,25 @@ Blockly.Toolbox.prototype.populate_ = function() {
  */
 Blockly.Toolbox.prototype.clearSelection = function() {
   this.tree_.setSelectedItem(null);
+};
+
+/**
+* Return the deletion rectangle for this toolbar.
+* @return {goog.math.Rect} Rectangle in which to delete.
+*/
+Blockly.Toolbox.prototype.getRect = function() {
+  // BIG_NUM is offscreen padding so that blocks dragged beyond the toolbox
+  // area are still deleted.  Must be smaller than Infinity, but larger than
+  // the largest screen size.
+  var BIG_NUM = 10000000;
+  var left = -BIG_NUM
+  // Assumes that the toolbox is on the SVG edge.  If this changes
+  // (e.g. toolboxes in mutators) then this code will need to be more complex.
+  if (Blockly.RTL) {
+    var svgSize = Blockly.svgSize();
+    left = svgSize.width - this.width;
+  }
+  return new goog.math.Rect(left, -BIG_NUM, BIG_NUM + this.width, 2 * BIG_NUM);
 };
 
 // Extending Closure's Tree UI.

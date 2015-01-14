@@ -1,6 +1,6 @@
 {
   "actor":"figur",
-  "alienInvasion":"Alien Invasion!",
+  "alienInvasion":"Romvesen-invasjon!",
   "backgroundBlack":"svart",
   "backgroundCave":"hule",
   "backgroundCloudy":"skyet",
@@ -58,6 +58,7 @@
   "moveDistanceTooltip":"Flytt en skuespiller en bestemt avstand i den angitte retningen.",
   "moveSprite":"flytt",
   "moveSpriteN":"flytte skuespiller {spriteIndex}",
+  "toXY":"to x,y",
   "moveDown":"flytt ned",
   "moveDownTooltip":"Flytt en skuespiller ned.",
   "moveLeft":"flytt til venstre",

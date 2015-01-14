@@ -26,4 +26,3 @@ Dir.glob("../../pegasus/sites.v3/hourofcode.com/public/us/**/resources.md").each
 end
 
 
-#TODO: rename pt-BR and pt-PT to pt and po

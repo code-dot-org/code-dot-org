@@ -4,11 +4,9 @@ title: Press Kit layout: wide nav: resources_nav
 
 * * *
 
-[<button style="float: right; margin-top: 50px">Piesakies savam pasākumam</button>](/#join)
-
 ## Kā piesaistīt medijus Programmēšanas stundas pasākumam
 
-*Presei un medijiem lūdzam sazināties <press@code.org>*
+*For all press and media inquiries, contact <press@code.org>*
 
 ### Svarīgākie padomi
 
@@ -19,7 +17,7 @@ title: Press Kit layout: wide nav: resources_nav
 
 ### Soli pa solim:
 
-**1. Izplāno savu pasākumu**
+**1. Plan your event**
 
   * Ieplāno savu laiku, lai varētu sagatavoties pirms "Programmēšanas stundas".
   * Nosūti [vēstuli](<%= hoc_uri('/resources/#sample-emails') %>) vecākiem. Pajautā tiem, lai izplatītu informāciju tālāk.
@@ -27,37 +25,35 @@ title: Press Kit layout: wide nav: resources_nav
   * Organizējiet grupu aktivitātes, piemēram, demonstrācijas vai programmēšanas aktīvitātes neizmantojot personālo datoru, vai parādi skolēnu un vadītāju izveidotās aktivitātes.
   * Parādi Code.org [Programmēšanas skolas video](<%= hoc_uri('/') %>) vai vienu no [šiem](<%= hoc_uri('/resources#videos') %>) lai radītu iedvesmu.
 
-**2. Noskaidro specifiskus vietējos mēdijus, kuri publicē informāciju par izglītojošiem pasākumiem.**
+**2. Identify specific local reporters that cover education or local events.**
 
-Padomā arī par vietējiem laikrakstiem, televīziju, radio stacijām vai emuāriem.
+Think a local newspaper, TV station, radio station or blog.
 
-Meklē tiešsaistē, lai atrastu mediju kontaktinformāciju. Ja jūs nevarat atrast informāciju, zvaniet uz biroju, lai pajautātu vai rakstiet e-pastu ar norādi, lai to nogādā pie nepieciešamā medija.
+Look online to find reporter contact information. If you can't find it, call the publication to ask, or email a general tips@PUBLICATIONNAME.com email address and ask for your message to be directed to the correct reporter.
 
-**3. Sazinieties ar vietējiem plašsaziņas līdzekļiem**
+**3. Contact local media**
 
-Lai sasniegtu kādu, e-pasts ir labākā izvēle. Ziņai vēlams būt īsai, taču kodolīgai: kāpēc citiem cilvēkiem būtu nepieciešams aizdomāties par šo pasākumu? Iekļauj kontaktinformāciju (arī tālruņa numuru) tiem, kuri piedalīsies pasākumā. **Apskatīt [prezentāciju medijiem](<%= hoc_uri('/resources#sample-emails') %>):**
+The best way to reach out is by email. It should be short and communicate: why should other people care about this event? Include contact information (including a cellphone number) for who will be on site at the event. **See a [sample pitch to media](<%= hoc_uri('/resources#sample-emails') %>):**
 
-**4. Sagatavojiem jautājumus par jūsu skolas pasākumiem. Lūk pāris paraugi:**
+**4. Prepare to field questions about your school event. Here are some examples:**
 
-*Kāpēc jūsu skola rīko "Programmēšanas stundas"?*
+*Why is your school doing an Hour of Code?*
 
-Visiem zināms, ka ir svarīgi, lai skolēni varētu iemācīties orientēties mūsdienu tehnoloģiju piesātinātajā pasaulē, taču vairākiem skolotājiem trūkst pieredzes datorzinātnēs un viņi nezina, kur sākt. Šis pasākums ir iespēja mums viesiem redzēt par ko ir datorzinātne.
+While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
 
-Mēs ceram, ka tas rosinās skolēnos interesi turpināt mācīties. Pētījumi parāda, ka bērni izprot programmēšanas konceptu vēl pirms tie spēj rakstīt un lasīt. Patiesībā viņu smadzenes vieglāk uztver programmēšanas valodas tieši agrā vecumā, tieši tā pat kā svešvalodas.
+We hope it’ll spark interest in students to keep learning. Research also shows that kids pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages.
 
-*Kāpēc tas ir svarīgi?*
+*Why is this important?*
 
-Ķīnā ikvienam skolēnam ir jāmācas datormācība, lai pabeigtu vidusskolu. ASV 90 procenti skolu to nemaz nemāca. Ir pienācis laiks panākt 21.gadsimtu. Mēs visi zinām, ka neskatoties uz to, ko mūsu skolēni izvēlas darīt, kad izaug, vai tā būtu medicīna, bizness, politika vai māksla, prasme veidot tehnoloģijas sniegs tiem pašapziņu un zināšanas, kā gūt panākumus.
+In China, every students takes computer science to graduate high school. In the U.S., 90 percent of schools don’t even teach it. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them the confidence and know-how to succeed.
 
-**Vairāk detaļas un citātus tu vari izmantot materiālos**
+**More details and a quote you can use in materials**
 
-""Programmēšanas stunda" ir veidota tā, lai izprastu kodu un parādītu, ka datorzinātnes nav raķešu zinātne un ka ikviens var saprast tās pamatus," ir teicis Hadi Partovi, Code.org izveidotājs un izpilddirektors. "Tikai nedēļas laikā pagājušajā gadā 15 miljoni skolēnu izmēģināja "Programmēšanas stundu. Šobrīd mūsu mērķis ir sasniegt 100 miljonus skolēnu visā pasaulē, lai pierādītu, ka pieprasījums pēc atbilstošas 21.gadsimta izglītības datorzinātnē nepazīst nekādas robežas."
+"The Hour of Code is designed to demystify code and show that computer science is not rocket-science, anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "In one week last year, 15 million students tried an Hour of Code. Now we're aiming for 100 million worldwide to prove that the demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
 
 **Par Code.org**
 
-Code.org® ir publiska, bezpeļņas organizācija, kas veltīta, lai paplašinātu iesaisti datorzinātnē un palielinātu sieviešu un maz pārstāvēto citu tautību iesaisti tajā. Tā vīzija ir ikvienam skolēnam katrā skolā sniegt iespēju mācīties programmēšanu. Pēc izveidošanas 2013.gadā, code.org organizēja kampaņu "Programmēšanas stunda", kas ir devusi iespēju miljoniem skolēnu iepazīties ar datorzinātni un sadarbojās ar vairāk kā 30 skolām visā valstī un izveidoja atvērtā koda, tiešsaistes mācību platformu Code Studio visiem vecumiem. Lai iegūtu vairāk informāciju, apmeklē: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
+Code.org® is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign — which has introduced millions of students to computer science — partnered with more than 30 public school districts nationwide, and launched Code Studio, an open-source, online learning platform for all ages. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
-Vairāk resursus un e-pastu paraugus var atrast [šeit](<%= hoc_uri('/resources') %>).
-
-<a style="display: block" href="/#join"><button style="float: right;">Piesakies savam pasākumam</button></a>
+Find more resources and sample emails [here](<%= hoc_uri('/resources') %>).

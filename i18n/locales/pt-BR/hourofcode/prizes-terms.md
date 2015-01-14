@@ -1,6 +1,6 @@
 * * *
 
-title: How-to Guide for Organisations layout: wide nav: resources_nav
+title: Guia para organizações layout: wide nav: resources_nav
 
 * * *
 
@@ -12,7 +12,7 @@ Os 10 GB de espaço no Dropbox ou os US$10 de crédito no Skype limitam-se a pro
 
 Cada organizador deve se cadastrar na Hora do Código para receber o espaço no Dropbox ou crédito do Skype. Caso sua escola inteira participe da Hora do Código, cada educador deve se cadastrar individualmente como organizador para se qualificar.
 
-A Code.org entrará em contato com os organizadores após a Hora de Código (8-14 dezembro), fornecendo instruções para o resgate do espaço no Dropbox ou crédito do Skype.
+A Code.org entrará em contato com os organizadores após a Hora do Código (8-14 dezembro), fornecendo instruções para o resgate do espaço no Dropbox ou crédito do Skype.
 
 <% if @country == 'us' %>
 
@@ -28,6 +28,6 @@ Para esclarecer, essa premiação não será feita por sorteio, nem como concurs
 
 1) Não há nenhum interesse financeiro ou risco envolvido na inscrição - qualquer escola ou sala de aula pode participar, sem qualquer pagamento para a Code.org ou qualquer outra organização
 
-2) Os vencedores serão selecionados somente dentre as escolas em que a sala de aula inteira (ou escola) participar de uma Hora de Código, que envolve um teste de habilidade coletiva dos estudantes e dos professores.
+2) Os vencedores serão selecionados somente dentre as escolas em que a sala de aula inteira (ou escola) participar de uma Hora do Código, que envolve um teste de habilidade coletiva dos estudantes e dos professores.
 
 <% end %>

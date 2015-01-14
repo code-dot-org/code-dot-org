@@ -25,6 +25,29 @@
     text-align: center;
     color: #000;
 }
+
+.front-header-banner h1 {
+  color: white;
+  margin: 0px;
+  font-size: 56px;
+}
+.front-header-banner h2 {
+  color: white;
+  margin: 0px;
+  font-size: 36px;
+}
+.front-header-banner h3 {
+  color: white;
+  margin: 0px;
+  font-size: 32px;
+}
+.front-header-banner h4 {
+  color: white;
+  margin: 0px;
+  margin-bottom: 15px;
+  font-size: 26px;
+}
+
 #flags-banner {
     margin: 60px 0 0 0;
 }
@@ -63,4 +86,18 @@ label.has-error {
         text-align: left;
         margin-top: 0px;
     }
+}
+@media (max-width: 500px) {
+  .front-header-banner h1 {
+      font-size: 36px;
+  }
+  .front-header-banner h2 {
+      font-size: 16px;
+  }
+  .front-header-banner h3 {
+      font-size: 12px;
+  }
+  .front-header-banner h4 {
+      font-size: 16px;
+  }
 }

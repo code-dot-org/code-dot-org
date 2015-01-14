@@ -1,14 +1,20 @@
 * * *
 
-from: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)" subject: "Thanks for signing up to host an Hour of Code!" litmus_tracking_id: "5g5lyi1a"
+from: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)" subject: "Takk for at du regisrerte deg som arrangør av en Kodetime" litmus_tracking_id: "5g5lyi1a"
 
 * * *
 
 <% hostname = CDO.canonical_hostname('hourofcode.com') %>
 
+<% if @country == 'ro' %>
+
+Va multumim pentru inregistrare. Daca aveti nevoie de ajutor sau aveti orice intrebare contactati Echipa Hour of Code Romania la adresa: hoc@adfaber.org.
+
+<% end %>
+
 # Takk for at du meldte deg på som vert for Kodetimen!
 
-**ALLE** Kodetimen-arrangører får 10 GB lagringsplass på Dropbox eller $10 Skype-kredit som en takk. [Detaljer](http://<%= hostname %>/premier)
+**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](http://<%= hostname %>/prizes)
 
 ## 1. Spre budskapet
 
@@ -22,26 +28,18 @@ Fortell vennene dine om #Kodetimen.
 
 <% end %>
 
-## 3. Ask your employer to get involved
+## 3. Spør arbeidsgiveren din om å bidra
 
-[Send this email](http://<%= hostname %>/resources#email) to your manager, or the CEO. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf).
+[Send denne eposten](http://<%= hostname %>/ressurser#epost) til din leder. Eller [gi dem denne brosjyra](http://<%= hostname %>/ressurser/hoc-flyer.pdf).
 
-## 4. Promote Hour of Code within your community
+## 4. Promoter Kodetimen i ditt lokalsamfunn
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+Rekrutter en lokal klubb, ett idrettslag, universitet eller fagforening. Eller arranger en Kodetime "fest" for nabolaget.
 
-## 5. Ask a local elected official to support the Hour of Code
+## 5. Spør en lokalpolitiker om å støtte Kodetimen
 
-[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
-
-<% if @country == 'ro' %>
-
-Multumim ca ne-ai anuntat despre evenimentul tau! Anunta-ne daca doresti informatii suplimentare sau daca ai intrebari. Hai sa facem istorie impreuna!
-
-Echipa Hour of Code Romania hoc@adfaber.org
-
-<% end %>
+[ sende denne e-posten](http://<%= hostname %>/ ressurser #politicians) til ordføreren, bystyret eller skolestyret. Eller [give dem denne brosjyren](http://<%= hostname %>/resources/hoc-one-pager.pdf) og invitere dem til skolen.
 
 * * *
 
-Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](%= unsubscribe_link %).
+Code.org er en frivillig organisasjon. Vår adresse er 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Hvis du ikke ønsker disse epostene? [Stopp abonnementet på nyhetsbrevet](%= unsubscribe_link %).

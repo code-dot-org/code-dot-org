@@ -4,22 +4,14 @@ title: How-to Guide layout: wide nav: resources_nav
 
 * * *
 
-<div class="row">
-  <h1 class="col-sm-6">
-    Как обучать "Часу Программирования"
-  </h1>
-  
-  <div class="col-sm-6 button-container centered">
-    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Зарегистрируйте ваше мероприятие</button></a>
-  </div>
-</div>
+# How to teach one Hour of Code
 
 ## 1) Watch this how-to video <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
 ## 2) Try the tutorials:
 
-Мы будем размещать разные обучающие видео уроки длительностью до одного часа для учеников и студентов всех возрастов, созданные нашими партнерами. Новые видео уроки, для начала "Часа Программирование", поступают до 8-14 декабря.
+We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
 
-**Все учебники Часа Кода:**
+**All Hour of Code tutorials:**
 
   * Требуют от учителя минимальное время на подготовку
   * Являются интуитивными, позволяя ученикам работать в их собственном темпе и уровне квалификации
@@ -48,7 +40,7 @@ The best Hour of Code experience will be with Internet-connected computers. But 
 Show students an inspirational video to kick off the Hour of Code. Examples:
 
   * Оригинальное начальное видео от Code.org, в котором вы сможете увидеть Билла Гейтса, Марка Цукерберга и звезду NBA Криса Боша ([1минутная версия](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5-минутная версия](https://www.youtube.com/watch?v=nKIu9yen5nc) и [9-минутная версия](https://www.youtube.com/watch?v=dU1xS07N-FA))
-  * [Начальное видео Час Программирования 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), или <% if @country == 'uk' %>[ Видео Час Программирования 2014](https://www.youtube.com/watch?v=96B5-JGA9EQ)<% также%> [Видео Час Программирования 2014](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
+  * [Начальное видео Час Программирования 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), или <% if @country == 'uk' %>[ Видео Час Программирования 2014](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [Видео Час Программирования 2014](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
   * [ПРезидент Обама призывает всех учеников изучать компьютерные науки](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
 **Get your students excited - give them a short intro**
@@ -60,7 +52,7 @@ Most kids don’t know what computer science is. Here are some ideas:
   * Или: "Информатика - это искусство соединения идей человека с электроникой для расширения наших возможностей". Программисты работают в различных областях: написание приложений для телефонов, лечение болезней, создание фильмов, работа в социальных медиа, создание роботов, которые исследуют другие планеты, и многое другое."
   * Советы как девочек заинтересовать информатикой, смотрите <a
 
-## 6) Start your Hour of Code
+## 7) Start your Hour of Code
 
 **Direct students to the activity**
 
@@ -84,4 +76,4 @@ Each student gets a chance to get a certificate via email when they finish the [
 
 **What comes after the Hour of Code?**
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %> <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Sign up your event</button></a>
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %>

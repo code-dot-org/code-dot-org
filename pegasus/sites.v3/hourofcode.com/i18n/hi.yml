@@ -89,9 +89,12 @@ hi:
   signup_thank_you_message: हमने आपको पुष्टिकरण के लिए और आरम्भमें मदत करनेकेलिए ईमेल भेजा है|
   map_header: '# एक घंटा कोड का के दुनियाभर में होने वाले कार्यक्रम'
   map_header_company: '# by company organizers'
-  meta_tag_og_title: एक घंटा कोड का आ रहा है
+  map_search_placeholder: Search for Hour of Code events
+  map_search_search: Search
+  map_search_reset: Reset
+  meta_tag_og_title: The Hour of Code is here
   meta_tag_og_description: एक घंटा कोड का ये एक जागतिक आंदोलन है जो १८० से भी ज्यादा देशोंके आयु ४ से १०४ के करोडो लोगोसे बानी हुई है
-  meta_tag_twitter_title: एक घंटा कोड का आ रहा है
+  meta_tag_twitter_title: The Hour of Code is here
   meta_tag_twitter_description: एक घंटा कोड का ये एक जागतिक आंदोलन है जो १८० से भी ज्यादा देशोंके आयु ४ से १०४ के करोडो लोगोसे बानी हुई है
   twitter_default_text: 'मै इस साल #HourOfCode का हिस्सा हु, क्या आप है? @codeorg'
   hardware_prizes_form_name_label: आपका नाम
@@ -114,8 +117,8 @@ hi:
   hardware_prizes_form_submit_label: जमा करें
   hoc_faq_title: सामान्य प्रश्न
   hoc_faq_what_is_hoc_q: क्या है ये एक घंटा कोड का?
-  hoc_faq_what_is_hoc_a: "एक घंटा कोड का ये संगणक विज्ञानं का एक घंटे का अभ्यासक्रम है जो, ये दिखता है के इसके मूलतत्व कोई भी सिख सकता है| <a href='http://code.org/learn'>ये अभ्यासक्रम देखिये</a> और, जल्दही आपको २०१४ के लिए बनायागया अभ्यासक्रमभी मिलेगा|"
-  hoc_faq_last_year: पिछले साल के ट्यूटोरियल ये कोशिश करके देखे
+  hoc_faq_what_is_hoc_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://code.org/learn'>Check out the tutorials</a>."
+  hoc_faq_last_year: Try the tutorials
   hoc_faq_when_is_hoc_q: "'एक घंटा कोड का' कब है?"
   hoc_faq_when_is_hoc_a: "एक घंटा कोड का की मेजबानी कोई भी कर सकता है पर इस अभियानका हेतु है के करोडो छात्र ८-१४ दिसंबर में होने वाले <a href='http://csedweek.org'>संगणक शिक्षण सप्ताह</a> के अंतर्गत 'एक घंटा कोड का' का हिस्सा बने|क्या ये इस दौरान कोई एक <i>सुनिश्चित घंटा</i> है? नहीं। आप एक घंटा कोड का का अभ्यास इस दौरान कभीभी करसकते है| (और अगर इस सप्ताहमें नहीं तो इसके अलावा भी करसकते है)"
   hoc_faq_why_cs_q: क्या है ये संगणक विज्ञान?
@@ -134,6 +137,14 @@ hi:
   hoc_faq_tutorial_a: "If you're interested in becoming a tutorial partner, <a href='target-tutorial-guidelines'>see our guidelines and instructions</a>. We'd like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science."
   hoc_faq_more_questions_q: आपको और सवाल है?
   hoc_faq_more_questions_a: "हमारे <a href='http://support.code.org'>सहकरी मंच</a> पर पूछिये|"
+  hoc_faq_scratch_q: I am doing Scratch for Hour of Code, but what if my students have iPads rather than laptops?
+  hoc_faq_scratch_a: "Scratch doesn't run on tablets. If your students are young, they can use the ScratchJR iPad app (for early-readers). If you look at the tutorials on <a href='http://code.org/learn'>Code.org/learn</a>, you can find other tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark."
+  hoc_faq_account_q: Do students need to log on using an account?
+  hoc_faq_account_a: "No. Absolutely no signup or login is required for students to try the Hour of Code. Most of the <a href='http://code.org/learn/beyond'>follow-on courses</a> require account creation to save student progress."
+  hoc_faq_frozen_q: Where is the tutorial with Anna and Elsa?
+  hoc_faq_frozen_a: "It is now published on <a href='http://code.org/learn'>Code.org/learn</a>. We hope you enjoy it!"
+  hoc_faq_high_school_q: Which activity should I do with high school students?
+  hoc_faq_high_school_a: "Across all ages, we recommend trying one of the beginner tutorials on <a href='http://code.org/learn'>Code.org/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as KhanAcademy or CodeHS."
   hoc_faq_more_questions_br_q: Outras dúvidas?
   hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."

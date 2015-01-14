@@ -4,115 +4,113 @@ title: Hour of Code Event How-To layout: wide nav: resources_nav
 
 * * *
 
-# Hour of Code event guide
+# Οδηγός πραγματοποίησης εκδήλωσης για την Ώρα του Κώδικα
 
-Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
+Φιλοξένησε μια εκδήλωση για την Ώρα του Κώδικα κατά τη διάρκεια της εβδομάδας για την Επιστήμη των Υπολογιστών (8-14 Δεκ) για να εμπνεύσετε και άλλα παιδιά να συμμετάσχουν. Οποιοσδήποτε, οπουδήποτε μπορεί να οργανώσει μια εκδήλωση για την Ώρα του Κώδικα.
 
-## 1) Prepare for your event
+## 1) Ετοιμασία για την εκδήλωση
 
-  * Determine a venue, date and time
-  * Send [a letter](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) to invite your local mayor, congressman, governor, or influential business person to speak.
-  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= hoc_uri('/resources/press-kit') %>) for help.
+  * Προσδιορισμός χώρου, ημέρας και ώρας
+  * Αποστολή<a
+  * Πρόσκληση του τύπου/μέσων μαζικής ενημέρωσης (π.χ. εφημερίδες, κανάλια τηλεόρασης, μπλόγκερς). Δες <a
 
-## 2) During your event
+## 2) Κατά τη διάρκεια της εκδήλωσης
 
-  * Kick off your event with one of our [inspirational videos](<%= hoc_uri('/resources#videos') %>).
-  * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= hoc_uri('/resources/stats') %>).   
-      
-    
-  * Other event ideas: 
-      * Invite a local industry leader to discuss his or her work involving computer science
-      * Invite a local politician and have students teach him or her how to code
-      * Watch one of the Q&A sessions with an Hour of Code ambassador. They will all be recorded and on Code.org’s YouTube page. This year’s participants include Bill Gates, Sheryl Sandberg, Ashton Kutcher and more!
-      * Have a group of students demonstrate an unplugged activity
-      * Have a group of students teach the principal or a group of teachers how to code
-      * If your school already teaches computer science, have students demo projects
+  * Ξεκίνησε την εκδήλωση μ ένα από <a
+  * Κάνε μια εισαγωγή τονίζοντας την σπουδαιότητα της Επιστήμης των Υπολογιστών, με την χρήση <a
+  * Άλλες ιδέες για την εκδήλωση: 
+      * Προσκάλεσε κάποιο πρόσωπο από μια τοπική βιομηχανία για να μιλήσει για την δουλειά της σε σχέση με την Επιστήμη των Υπολογιστών
+      * Προσκάλεσε έναν πολιτικό και βάλε τους μαθητές να του μάθουν να προγραμματίζει
+      * Δείτε μία συνεδρία Ερωτήσεων και Απαντήσεων με τον πρεσβευτή της Ώρας του Κώδικα. Θα καταγραφούν όλα και στη σελίδα της Code.org στο YouTube. Οι συμμετέχοντες αυτής της χρονιάς περιλαμβάνουν τους Bill Gates, Sheryl Sandberg, Ashton Kutcher και άλλους!
+      * Μια ομάδα μαθητών παρουσιάζουν μια δραστηριότητα χωρίς τη χρήση υπολογιστών
+      * Μια ομάδα μαθητών δείχνουν στον διευθυντή πώς να προγραμματίζουν
+      * Αν διδάσκεται ήδη η Επιστήμη των Υπολογιστών στο σχολείο σου, μερικοί μαθητές κάνουν παρουσίαση εργασιών τους
 
-## 3) Share how it went
+## 3) Δημοσίευσε τα αποτελέσματα της εκδήλωσης 
 
-  * Share pictures of your event on Facebook and Twitter. 
-  * Use the hashtag **#HourofCode**
+  * Ανέβασε φωτογραφίες από την εκδήλωση στο Facebook και το Twitter. 
+  * Χρησιμοποίησε την ετικέτα **#HourofCode**
 
-## Example Event Plan
+## Ενδεικτικό πρόγραμμα εκδήλωσης
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**Εκδήλωση:** Συνάντηση Ενημέρωσης για την Επιστήμη των Υπολογιστών για όλο το σχολείο
 
-**Date:** Dec 8th (start of Computer Science Education Week)
+**Ημερομηνία:** 8η Δεκεμβρίου (έναρξη της Εβδομάδας Εκπαίδευσης στην Επιστήμη των Υπολογιστών)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**Χρόνος:** Κατά τη διάρκεια της σχολικής ημέρας. Προτιμούνται πρωινές-μεσημεριανές ώρες. Περίπου 1 ώρα.
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
+**Τοποθεσία:** Αίθουσα τελετών του σχολείου (π.χ. θέατρο, γυμναστήριο, καφετέρια)   
   
 
 
-## Run of Show
+## Πρόγραμμα της εκδήλωσης
 
 <table>
   <tr>
     <th style="width:200px">
-      Time
+      Ώρα
     </th>
     
     <th style="width:800px">
-      Action
+      Ενέργεια
     </th>
   </tr>
   
   <tr>
     <td>
-      10:00-10:05 am
+      10:00-10:05 π.μ.
     </td>
     
     <td>
-      Open with one of our <a href="http://hourofcode.com/us/resources#videos">inspirational videos</a>
+      Έναρξη με ένα από τα <a href="http://hourofcode.com/us/resources#videos">βίντεο μας</a>
     </td>
   </tr>
   
   <td>
-    10:05-11:15 am
+    10:05-10:15 am
   </td>
   
   <td>
-    Principal gives an intro overviewing the importance of computer science. Use these <a href="/resources/stats">stats and infographics</a>.
+    Ο διευθυντής κάνει μια εισαγωγή για την σημασία της Επιστήμης των Υπολογιστών. Χρησιμοποίησε αυτά τα <a href="/resources/stats"> στατιστικά και τις εικόνες</a>.
   </td></tr> 
   
   <td>
-    11:15-11:17 am
+    10:15-10:17 am
   </td>
   
   <td>
-    Open with one of our <a href="http://hourofcode.com/us/resources#videos">inspirational videos</a>
+    Έναρξη με ένα από τα <a href="http://hourofcode.com/us/resources#videos">βίντεο μας</a>
   </td></tr> 
   
   <td>
-    11:17-11:30 am
+    10:17-10:30 am
   </td>
   
   <td>
-    Special guest to talk about their background and how technology and computer science plays an important role in their everyday lives.
+    Ειδικοί προσκεκλημένοι για να μιλήσουν για τους υπόβαθρό τους και πώς η τεχνολογία και η επιστήμη των υπολογιστών διαδραματίζει σημαντικό ρόλο στην καθημερινότητά τους.
   </td></tr> 
   
   <td>
-    11:30-11:40 am
+    10:30-10:40 am
   </td>
   
   <td>
-    Students do an Hour of Code demo for the school. Fun twist- have them teach the principal, politician or other students.
+    Οι μαθητές κάνουν μια επίδειξη της Ώρας του Κώδικα για το σχολείο. Διασκεδαστική παραλλαγή - βάλτε τους να διδάξουν τον Διευθυντή, έναν πολιτικό ή άλλους μαθητές.
   </td></tr> 
   
   <td>
-    11:40-12:00 pm
+    10:40-11:00 pm
   </td>
   
   <td>
-    Students demo an unplugged activity and how computer science can be taught without using computers.
+    Οι μαθητές κάνουν επίδειξη μιας δραστηριότητας χωρίς σύνδεση και δείχνουν πως μπορεί να γίνει εκμάθηση της επιστήμης των υπολογιστών χωρίς να χρησιμοποιηθούν υπολογιστές.
   </td></tr> 
   
   <td>
-    12:00-12:05 pm
+    11:00-11:05 pm
   </td>
   
   <td>
-    Teacher who help bring the school-wide event gives closing remarks.
+    Ο δάσκαλος που βοήθησε να πραγματοποιηθεί αναφέρει μερικά πράγματα γι αυτήν κλείνοντάς την.
   </td>
 </table>

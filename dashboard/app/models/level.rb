@@ -34,7 +34,8 @@ class Level < ActiveRecord::Base
   end
 
   def specified_autoplay_video
-    Video.find_by_key(video_key)
+    @@specified_autoplay_video ||= {}
+    @@specified_autoplay_video[video_key] ||= Video.find_by_key(video_key) unless video_key.nil?
   end
 
   def complete_toolbox(type)

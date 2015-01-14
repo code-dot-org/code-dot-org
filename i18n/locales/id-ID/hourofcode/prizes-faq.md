@@ -4,44 +4,44 @@ layout: wide
 
 * * *
 
-# Prizes - FAQs
+# Hadiah - FAQs
 
-## Does your whole school have to enter to win the $10,000 in hardware?
+## Apakah sekolah anda sudah mendaftar untuk memenangkan perangkat keras senilai $10.000?
 
-Yes. Your whole school has to participate to be eligible for the prize but only one person needs to register and submit the Hardware Prize application form [here](<%= hoc_uri('/prizes') %>).
+Ya. Sekolah anda harus berpartisipasi untuk mendapatkan hak memenagkan hadiah tetapi hanya perlu didaftarkan dengan diwakili satu orang saja dan memasukan formulir aplikasi Hadiah Perangkat Keras [yang ada disini](<%= hoc_uri('/prizes') %>).
 
-## Does your whole school have to enter to win a the tech chat?
+## Apakah sekolah anda perlu mendaftar untuk memenangkan tech chat?
 
-Any classroom (public or private school) is eligible to win this prize. Your whole school need not apply.
+Setiap kelas (sekolah umum atau swasta) memenuhi syarat untuk memenangkan hadiah ini. Satu sekolah hanya perlu satu kali mendaftar.
 
-## Can non-public schools win the video chat prize?
+## Dapatkah sekolah non-publik memenangkan hadiah video chat?
 
-Yes! Private and independent schools are eligible along with public schools to win the video chat prizes.
+Ya! Sekolah pribadi dan independen memenuhi syarat sama seperti sekolah umum untuk memenangkan hadiah obrolan video.
 
-## Can non-US schools win the video chat prize?
+## Dapatkah sekolah non-AS memenangkan hadiah video chat?
 
-No, unfortunately, because of logistics we are unable to offer the video chat prize to schools outside of the U.S. and Canada. All international organizers **are** eligible to receive Dropbox space or Skype credit.
+Tidak, karena logistik kami tidak dapat menawarkan hadiah video chatting ke sekolah-sekolah di luar Amerika Serikat dan Kanada. Semua penyelenggara internasional **berhak** menerima Dropbox ruang atau Skype kredit.
 
-## Why is the $10,000 hardware prize only available to public schools?
+## Mengapa hadiah perangkat keras senilai $10.000 hanya tersedia untuk sekolah umum?
 
-We would love to help teachers in public and private schools alike, but at this time, it comes down to logistics. We have partnered with [DonorsChoose.org](http://donorschoose.org) to administer classroom funding prizes, which only works with public, US K-12 schools. According to DonorsChoose.org, the organization is better able to access consistent and accurate data that's available for public schools.
+Kami sangat menginginkan untuk membantu guru yang berada di sekolah publik dan private sama rata, tetapi pada saat ini, logistik sedang tidak mencukupi. Kami telah bermitra dengan [DonorsChoose.org](http://donorschoose.org) untuk mengelola dana hadiah kelas, yang hanya bekerja dengan sekolah umum, K-12 AS. Menurut DonorsChoose.org, organisasi ini lebih baik dalam mengakses data konsisten dan akurat yang tersedia untuk sekolah umum.
 
-## I’m outside the United States. Can I qualify for prizes?
+## Saya berada di luar Amerika Serikat. Bisakah saya mendapat hadiah?
 
-Due to a small full-time staff, Code.org is unable to handle the logistics of administering international prizes. Because of this people outside the US are unable to qualify for prizes.
+Karena kekurangan staff, Code.org tidak mampu untuk menagani logistik untuk hadiah secara internasional. Karena hal ini orang-orang yang ada diluar AS tidak terkualifikasi untuk memenagkan hadiah.
 
-## When is the deadline to apply for the hardware prize?
+## Kapan batas waktu untuk mengajukan permohonan untuk hadiah perangkat keras?
 
-To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 14, 2014. Satu sekolah di setiap negara bagian di U.S. akan menerima satu set komputer untuk kelas. Code.org akan memilih dan memberitahukan pemenang melalui email paling lambat tanggal 1 Desember 2014.
+Untuk memenuhi syarat, sekolah anda harus terdaftar dalam Hour of Code serta menyelesaikan  sebelum 14 November 2014. Satu sekolah di setiap negara bagian di U.S. akan menerima satu set komputer untuk kelas. Code.org akan memilih dan memberitahukan pemenang melalui email paling lambat tanggal 1 Desember 2014.</p> 
 
-## When is the deadline to be eligible to win a tech chat?
+## Kapan batas waktu untuk memenangkan tech chat?
 
-To qualify, you must register your classroom for the Hour of Code by November 14, 2014. Classrooms will win a video chat with a celebrity. Code.org akan memilih dan memberitahukan pemenang melalui email paling lambat tanggal 1 Desember 2014.
+Untuk memenuhi syarat, Anda harus mendaftarkan kelas anda untuk Hour of Code sebelum 14 November 2014. Kelas akan memenangkan percakapan video dengan seorang selebriti. Code.org akan memilih dan memberitahukan pemenang melalui email paling lambat tanggal 1 Desember 2014.
 
-## When will I be notified if my school or classroom wins a prize?
+## Kapan saya akan diberitahu jika sekolah atau kelas saya memenagkan hadiah?
 
-To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 14, 2014. Code.org akan memilih dan memberitahukan pemenang melalui email paling lambat tanggal 1 Desember 2014.
+Untuk memenuhi syarat, sekolah anda harus terdaftar dalam Hour of Code serta menyelesaikan  sebelum 14 November 2014. Code.org akan memilih dan memberitahukan pemenang melalui email paling lambat tanggal 1 Desember 2014.</p> 
 
-## If my whole school can’t do the Hour of Code during Computer Science Education Week (Dec. 8-14), can I still qualify for prizes?
+## Jika sekolah saya tidak dapat melakukan Hour of Code selama Computer Science Education Week (Desember 8-14), dapatkah saya masih memenuhi syarat untuk hadiah?
 
-Yes, just be sure to submit a logistics plan that outlines how your whole school is participating over a reasonable length of time and register for the Hour of Code by November 14th.
+Ya, hanya pastikan untuk menyerahkan rencana logistik yang menguraikan bagaimana sekolah anda melakukan kegiatan pada waktunya dan mendaftar untuk Hour of Code sebelum 14 November.

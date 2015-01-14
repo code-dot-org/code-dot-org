@@ -21,8 +21,8 @@
     "ideal": "9",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "maze_data": null,
-    "callout_json": "[\r\n  {\"localization_key\": \"bee_for_loop\", \"element_id\": \"#bee_for_loop_qtip\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"top center\", \"at\": \"bottom center\"}}\r\n  }\r\n]"
+    "callout_json": "[\r\n  {\"localization_key\": \"bee_for_loop\", \"element_id\": \"#bee_for_loop_qtip\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"top center\", \"at\": \"bottom center\"}}\r\n  }\r\n]",
+    "maze_data": null
   }
 }]]></config>
   <blocks>

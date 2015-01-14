@@ -1,14 +1,20 @@
 * * *
 
-from: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)" subject: "Thanks for signing up to host an Hour of Code!" litmus_tracking_id: "5g5lyi1a"
+de la: '"Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)" subiect: Vă mulţumim pentru înscrierea ca organizator al unui eveniment Hour of Code litmus_tracking_id: "5g5lyi1a"
 
 * * *
 
 <% hostname = CDO.canonical_hostname('hourofcode.com') %>
 
+<% if @country == 'ro' %>
+
+Va multumim pentru inregistrare. Daca aveti nevoie de ajutor sau aveti orice intrebare contactati Echipa Hour of Code Romania la adresa: hoc@adfaber.org.
+
+<% end %>
+
 # Vă mulţumim ca v-ați înscris pentru organizarea Hour of Code!
 
-**FIECARE** organizator Hour of Code va primi 10 GB de spaţiu de stocare pe Dropbox sau 10 dolari credit Skype în semn de mulțumire. [Detalii](http://<%= hostname %>/prizes)
+**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](http://<%= hostname %>/prizes)
 
 ## 1. Răspândește vestea
 
@@ -22,25 +28,17 @@ Spune prietenilor tai despre #HourOfCode.
 
 <% end %>
 
-## 3. Ask your employer to get involved
+## 3. Solicită angajatorului tău să se implice
 
 [Send this email](http://<%= hostname %>/resources#email) to your manager, or the CEO. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf).
 
-## 4. Promote Hour of Code within your community
+## 4. Promovează Hour of Code în comunitatea ta
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+Recrutați un grup local - club de cercetași băieți/fete, biserică, universitate, grupuri de veterani sau asociație. Sau găzduiți o petrecere la bloc Ora de Programare pentru vecinii dvs.
 
-## 5. Ask a local elected official to support the Hour of Code
+## 5. Solicită unui oficial, ales local, sprijinul pentru organizarea Hour of Code
 
 [Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
-
-<% if @country == 'ro' %>
-
-Multumim ca ne-ai anuntat despre evenimentul tau! Anunta-ne daca doresti informatii suplimentare sau daca ai intrebari. Hai sa facem istorie impreuna!
-
-Echipa Hour of Code Romania hoc@adfaber.org
-
-<% end %>
 
 * * *
 

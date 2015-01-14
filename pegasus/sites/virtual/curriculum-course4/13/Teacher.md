@@ -219,7 +219,7 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
 
 - What about parameters?  
   - Why do we use them?
-  - Can you pass more than one parameter to a chorus funtion?
+  - Can you pass more than one parameter to a chorus function?
   - Can you pass more than two?
 
 [/together]

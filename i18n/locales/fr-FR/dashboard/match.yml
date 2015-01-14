@@ -83,7 +83,7 @@ fr:
       2-3 Binary Match 1:
         Matching: Correspondance
         /script_assets/2-3_images/unplugged/binary_1_q.png, 250: /script_assets/2-3_images/unplugged/binary_1_q.png, 250
-        Use the key to match each code to its letter: Use the key to match each code to its letter
+        Use the key to match each code to its letter: Utilise la touche pour assigner chaque code à sa lettre
         <strong>N</strong>: '<strong>N</strong>'
         <strong>O</strong>: '<strong>O</strong>'
         <strong>P</strong>: '<strong>P</strong>'
@@ -94,7 +94,7 @@ fr:
         /script_assets/2-3_images/unplugged/binary_1_a4.png: /script_assets/2-3_images/unplugged/binary_1_a4.png
       2-3 Graph Paper Match 1:
         Matching: Correspondance
-        Match the grid to the program: Match the grid to the program
+        Match the grid to the program: Attribue la grille au bon programme
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
@@ -103,7 +103,7 @@ fr:
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
       2-3 Relay Programming Match 1:
         Matching: Correspondance
-        Match the grid to the program: Match the grid to the program
+        Match the grid to the program: Attribue la grille au bon programme
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
@@ -146,7 +146,7 @@ fr:
         /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png
       4-5 Suncatchers Match 1:
         Matching: Correspondance
-        Match each program to the word it makes, using the provided group of skills.: Match each program to the word it makes, using the provided group of skills.
+        Match each program to the word it makes, using the provided group of skills.: "Fais correspondre chaque programme à son mot, à l'aide des compétences acquises."
         /script_assets/4-5_images/unplugged/suncatchers_1.png: /script_assets/4-5_images/unplugged/suncatchers_1.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a1.png: /script_assets/4-5_images/unplugged/suncatchers_1_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a2.png: /script_assets/4-5_images/unplugged/suncatchers_1_a2.png
@@ -189,7 +189,7 @@ fr:
         /script_assets/k_1_images/artist_images/large_triangle2.png: /script_assets/k_1_images/artist_images/large_triangle2.png
       K-1 Artist Loops Match 1:
         Matching: Correspondance
-        Match the code to the stairs it draws.: "Associes le code à l'escalier qui le dessine."
+        Match the code to the stairs it draws.: "Associes le code à l'escalier qu'il dessine."
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png
@@ -218,7 +218,7 @@ fr:
         /script_assets/k_1_images/flappy_images/score.png: /script_assets/k_1_images/flappy_images/score.png
       K-1 Maze Match 1:
         Matching: Correspondance
-        Match the puzzles and blocks: Assortir les puzzles et blocs
+        Match the puzzles and blocks: Assorcie les puzzles et les blocs
         Instructions: Consignes
         Drag the blocks to match.: Faites glisser les blocs correspondants.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
@@ -241,7 +241,7 @@ fr:
         /script_assets/k_1_images/unplugged_images/big_event_1_a3.png: /script_assets/k_1_images/unplugged_images/big_event_1_a3.png
       K-1 Happy Maps Match 1:
         Matching: Correspondance
-        Match the Map to the arrow that gets the Flurb to the treasure: Relier la carte à la flèche qui mène le Flurb au trésor
+        Match the Map to the arrow that gets the Flurb to the treasure: Associe la carte à la flèche qui mène le Flurb au trésor
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q3.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q3.png
@@ -250,7 +250,7 @@ fr:
         /script_assets/k_1_images/unplugged_images/left.png: /script_assets/k_1_images/unplugged_images/left.png
       K-1 Move It Match 1:
         Matching: Correspondance
-        Match the Map to the algorithm that gets the Flurb to the flowers.: "Relier la carte à l'algorithme qui mène le Flurb aux fleurs."
+        Match the Map to the algorithm that gets the Flurb to the flowers.: "Associe la carte à l'algorithme qui mène le Flurb aux fleurs."
         /script_assets/k_1_images/unplugged_images/move_it_2_q1.png: /script_assets/k_1_images/unplugged_images/move_it_2_q1.png
         /script_assets/k_1_images/unplugged_images/move_it_2_q2.png: /script_assets/k_1_images/unplugged_images/move_it_2_q2.png
         /script_assets/k_1_images/unplugged_images/move_it_2_q3.png: /script_assets/k_1_images/unplugged_images/move_it_2_q3.png
@@ -259,7 +259,7 @@ fr:
         /script_assets/k_1_images/unplugged_images/rightdown.png: /script_assets/k_1_images/unplugged_images/rightdown.png
       Coordinate Matching:
         Coordinates of Ninjacat: Coordonnées de Ninjacat
-        Match each character with its correct coordinate!: Associes chaque personnage avec ses coordonnées correctes!
+        Match each character with its correct coordinate!: Associe chaque personnage avec ses coordonnées correctes!
         /script_assets/msm/Unit 1/exercise_3_ninjacat.png: /script_assets/msm/Unit 1/exercise_3_ninjacat.png
         Cloud: Nuage
         Ruby: Rubis
@@ -322,12 +322,12 @@ fr:
         (small-star "solid"): '(small-star "solid")'
         (find-price "cheese"): '(find-price "cheese")'
         "big-string: string number -> boolean": 'big-string: string number -> boolean'
-        "find-price: number -> number": 'find-price: number -> number'
+        "find-price: number -> number": Trouver le prix
         "small-star: string -> image": 'small-star: string -> image'
         "bigger-string: string string -> string": 'bigger-string: string string -> string'
         "find-price: string -> number": 'find-price: string -> number'
       test matching image:
-        Matching Images Two: Matching Images Two
+        Matching Images Two: Comparaison de 2 images
         Match up all the flowers by colour!: Regroupe toutes les fleurs par couleur!
         /script_assets/matches/images/head.jpg,300: /script_assets/matches/images/head.jpg,300
         Instructions: Consignes

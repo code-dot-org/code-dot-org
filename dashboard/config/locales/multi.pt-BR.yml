@@ -344,7 +344,7 @@
           de forma que o refrão se repita a cada vez que ela for chamada?'
         1: ': Qual é a maior parte dessa música que você pode definir como o refrão,
           de forma que o refrão se repita a cada vez que ela for chamada?'
-        Lou, Lou, skip to my Lou,: Lou, Lou, pule para o Lou,
+        Lou, Lou, skip to my Lou,: Lou, Lou, skip to my Lou,
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou,
           Lou, pule para o Lou, <br/>Lou, Lou, pule para o Lou, <br/>Lou, Lou, pule
           para o Lou, <br/>Pule para o Lou, minha querida.
@@ -370,14 +370,14 @@
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
       Coordinates Multi 1:
-        Video game Coordinates: Video game Coordinates
+        Video game Coordinates: Coordenadas de video game
         Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
-        Which answer best describes the unicorn's movement?: Which answer best describes
-          the unicorn's movement?
-        The unicorn moves across the screen: The unicorn moves across the screen
-        The unicorn's y value changes: The unicorn's y value changes
-        The unicorn moves to the left: The unicorn moves to the left
-        The unicorn's x value changes: The unicorn's x value changes
+        Which answer best describes the unicorn's movement?: Qual resposta melhor
+          descreve o movimento do unicórnio?
+        The unicorn moves across the screen: O unicórnio se movimenta pela tela
+        The unicorn's y value changes: O valor de y do unicórnio muda
+        The unicorn moves to the left: O unicórnio se move para a esquerda
+        The unicorn's x value changes: O valor de x do unicórnio muda
       K-1 Artist 1 Multi 1:
         Multiple Choice: Múltipla Escolha
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png,
@@ -601,10 +601,10 @@
         /script_assets/msm/Unit%202/exercise_1.png: /script_assets/msm/Unit%202/exercise_1.png
         Pick the Racket code that comes from the circle of evaluation!: Escolha o
           código Racket que vem do círculo de avaliação!
-        (+ 5 (* (- 6 8) 4)): (+ 5 (* (-6-8) 4))
-        (+ 5 (* 4 (- 8 6))): (+ 5 (* 4 (-8 6)))
+        (+ 5 (* (- 6 8) 4)): (+ 5 (* (- 6 8) 4))
+        (+ 5 (* 4 (- 8 6))): (+ 5 (* 4 (- 8 6)))
         (+ (* (- 8 6) 4) 5): '(+ (* (- 8 6) 4) 5) '
-        (+ 5 (* (- 8 6) 4)): (+ 5 (* (-8 6) 4))
+        (+ 5 (* (- 8 6) 4)): (+ 5 (* (- 8 6) 4))
       valid contracts multi:
         Valid Contracts: Contratos válidos
         Pick the best answer to the question.: Escolha a melhor resposta para a pergunta.
@@ -626,6 +626,19 @@
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): (rectangle (+ 8 2) (- 7 5) "solid"
           "red")
         (rectangle (+ 8 2) (- 7 5) solid red): (rectangle (+ 8 2) (- 7 5) solid red)
+      Multi Strings Images 1:
+        Strings and Images Multiple Choice: Múltipla escolha de imagens e strings
+        Multi Strings Images 1.blocks3.level: Imagens multi strings 1.blocks3.level
+        Which of these Evaluation Blocks will draw the image: Qual desses blocos de
+          avaliação vai desenhar a imagem
+        Multi Strings Images 1.blocks1.start_blocks, 300, 100: Imagens multi strings
+          1.blocks1.start_blocks, 300, 100
+        Multi Strings Images 1.blocks2.start_blocks, 300, 100: Imagens multi strings
+          1.blocks2.start_blocks, 300, 100
+        Multi Strings Images 1.blocks3.start_blocks, 300, 100: Imagens multi strings
+          1.blocks3.start_blocks, 300, 100
+        Multi Strings Images 1.blocks4.start_blocks, 300, 100: Imagens multi strings
+          1.blocks4.start_blocks, 300, 100
       test multi image:
         Maze Multiple Choice Two: Labirinto de Múltipla Escolha Dois
         /script_assets/matches/images/head.jpg,400: /script_assets/matches/images/head.jpg,400

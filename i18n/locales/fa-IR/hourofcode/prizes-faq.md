@@ -1,10 +1,10 @@
 * * *
 
-layout: wide
+طرح: گسترده
 
 * * *
 
-# Prizes - FAQs
+# جوایز - سوالات متداول
 
 ## Does your whole school have to enter to win the $10,000 in hardware?
 

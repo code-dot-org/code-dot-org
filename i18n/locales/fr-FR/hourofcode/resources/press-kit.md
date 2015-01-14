@@ -4,11 +4,9 @@ title: Press Kit layout: wide nav: resources_nav
 
 * * *
 
-[<button style="float: right; margin-top: 50px">Sign up your event</button>](/#join)
-
 ## Comment attirer les médias à votre événement une Heure de Code
 
-*Pour toutes les demandes de la part de la presse et des médias, veuillez communiquer avec <press@code.org>*
+*For all press and media inquiries, contact <press@code.org>*
 
 ### Conseils clés
 
@@ -19,7 +17,7 @@ title: Press Kit layout: wide nav: resources_nav
 
 ### Guide étape par étape :
 
-**1. Planifiez votre événement**
+**1. Planifier votre événement**
 
   * Planifier une réunion pour le coup d'envoi de une Heure de Code.
   * Envoyer [une lettre](<%= hoc_uri('/resources/#sample-emails') %>) aux parents en leur demandant de passer le mot.
@@ -27,37 +25,35 @@ title: Press Kit layout: wide nav: resources_nav
   * Organiser des activités de groupe (comme une démonstration d'une activité de programmation « non connectée »), ou montrer les créations d'étudiants lors d'autres activités.
   * Montrer la vidéo de [l'Heure de Code](<%= hoc_uri('/') %>) ou l'une de [ces vidéos](<%= hoc_uri('/resources#videos') %>) pour inspiration.
 
-**2. identifier des journalistes locaux spécialisés qui couvrent l'éducation ou les événements locaux.**
+**2. Identify specific local reporters that cover education or local events.**
 
-Pensez aux journaux régionaux, aux stations de télévision, aux stations de radio ou des blogues.
+Think a local newspaper, TV station, radio station or blog.
 
-Chercher sur Internet pour trouver des informations pour contacter un journaliste. Si vous ne le trouvez pas, appelez la publication pour leur demander, ou par courriel à l'adresse général comme info@NOMDUJOURNAL.com et demandez que votre message soit redirigé vers la bonne personne.
+Look online to find reporter contact information. If you can't find it, call the publication to ask, or email a general tips@PUBLICATIONNAME.com email address and ask for your message to be directed to the correct reporter.
 
-**3. Contactez les médias locaux**
+**3. Contact local media**
 
-Le meilleur moyen d'établir un contact s'avère par courriel. Le message devrait être concis et complet: pourquoi les autres devraient-ils s'intéresser à cet événement? Inclure les coordonnées (y compris un numéro de téléphone cellulaire) du responsable qui sera sur place à l'événement. **Voir [l'exemple de résumé à tenir aux médias](<%= hoc_uri('/resources#sample-emails') %>):**
+The best way to reach out is by email. It should be short and communicate: why should other people care about this event? Include contact information (including a cellphone number) for who will be on site at the event. **See a [sample pitch to media](<%= hoc_uri('/resources#sample-emails') %>):**
 
-**Préparez les réponses aux questions sur l'événement de votre école. Quelques exemples sont disponible ici:**
+**4. Prepare to field questions about your school event. Here are some examples:**
 
-*Pourquoi votre école participe-t-elle à Une Heure de Code?*
+*Why is your school doing an Hour of Code?*
 
-Puisque nous savons tous qu'il est important pour les élèves d'apprendre à naviguer dans le monde saturé de technologies d'aujourd'hui, plusieurs enseignants ne sont pas formés en informatique et ne savent pas par où commencer. Cet événement est une chance pour nous tous de voir ce dont il s'agit lorsqu'on aborde les sciences informatiques.
+While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
 
-Nous espérons que cela va susciter l'intérêt chez les élèves à en poursuivre l'apprentissage. La recherche démontre également que les enfants assimilent des concepts de programmation avant même de savoir lire et écrire. En fait, leurs jeunes cerveaux sont plus réceptifs aux langages informatiques, tout comme pour l'assimilation de langues étrangères.
+We hope it’ll spark interest in students to keep learning. Research also shows that kids pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages.
 
-*Pourquoi est-ce important?*
+*Why is this important?*
 
-En Chine, tous les étudiants apprennent les sciences informatiques afin d'obtenir leur diplôme d'études secondaires. Aux États-Unis, 90 % des écoles ne l'enseignent même pas. Il est temps pour nous de prendre le tournant du XXIe siècle. Nous savons que, indépendamment de ce que deviendront nos élèves une fois grand, qu'ils deviennent médecin, se lancent en affaires, fassent de la politique, ou épousent une carrière d'artistes, savoir programmer leur donnera la confiance et le savoir-faire pour maîtriser les technologies et réussir leur vie.
+In China, every students takes computer science to graduate high school. In the U.S., 90 percent of schools don’t even teach it. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them the confidence and know-how to succeed.
 
-**Plus d'informations et une citation que vous pouvez utiliser dans votre matériel promotionnel**
+**More details and a quote you can use in materials**
 
-« Une Heure de Code vise à démystifier la programmation et montre que l'informatique n'est pas sorcier, n'importe qui peut apprendre les bases, » dit Hadi Partovi, fondateur et CEO de Code.org. "En une semaine l'an dernier, 15 millions d'étudiants ont essayé une heure de Code. Maintenant, nous visons 100 millions de participants à travers le monde afin de prouver que la demande de l'enseignement de l'informatique est pertinente au XXIe siècle et cela sans frontières ni limites."
+"The Hour of Code is designed to demystify code and show that computer science is not rocket-science, anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "In one week last year, 15 million students tried an Hour of Code. Now we're aiming for 100 million worldwide to prove that the demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
 
 **A propos de Code.org**
 
-Code.org® est un organisme public à but non lucratif dédié à accroître la participation à l'informatique et à accroître la participation des groupes sociaux sous-représentés. Sa vision est que chaque élève de chaque école devrait avoir la possibilité d'apprendre la programmation informatique. Après son lancement en 2013, Code.org a organisé la campagne Une Heure de Code — qui a offert un aperçu à des millions d'élèves de l'informatique, en partenariat avec plus de 30 districts scolaires publics dans tout le pays et a lancé le Code Studio, une plate-forme d'apprentissage en ligne, libre pour tous les âges. Pour plus d'informations, veuillez visiter: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
+Code.org® is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign — which has introduced millions of students to computer science — partnered with more than 30 public school districts nationwide, and launched Code Studio, an open-source, online learning platform for all ages. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
-Trouver davantage de ressources et d'exemples de courriels[ ici](<%= hoc_uri('/resources') %>).
-
-<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>
+Find more resources and sample emails [here](<%= hoc_uri('/resources') %>).

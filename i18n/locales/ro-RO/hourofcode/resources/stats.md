@@ -1,21 +1,17 @@
 * * *
 
-title: Blurbs and Stats layout: wide nav: resources_nav
+titlu: Rezumate și Statistici aspect: wide nav: resources_nav
 
 * * *
 
-[<button style="float: right; margin-top: 50px">Înscrieţi-vă evenimentul</button>](/#join)
-
 # Rezumate si statistici utile
 
-## Use this short blurb in newsletters
+## Folosiți acest scurt rezumat în buletinel de știri
 
-### Adu informatica in scoala ta. Incepe cu Hour of Code
+### Aduceți informatica în școala dvs. Începeți cu Ora de Programare/Ora de Cod
 
-Computerele sunt peste tot, dar predau informatica mai puţine şcoli decât acum 10 ani. Vestea bună e că suntem pe cale de a schimba acest lucru. Dacă aţi auzit despre [ Hour of Code ](<%= hoc_uri('/') %>) . anul trecut, sigur stiti ca a facut istorie. Intr-o singură saptamână, 15 milioane de elevi au incercat programarea! [ Hour of Code ](<%= hoc_uri('/') %>) este o introducere de o oră in programare, proiectat să desluseasca limbajul de cod şi arată că oricine poate învăţa elementele de bază. [ Inscrie-te ](<%= hoc_uri('/') %>) pentru a găzdui un eveniment Hour of Code intre 8 si 14 decembrie în timpul Saptamanii de Educatie de Informatica şi ajuta-ne sa ajungem la 100 de milioane de studenţi până la sfârşitul anului. Add your school to the map, go to <http://hourofcode.com>
+Computerele sunt peste tot, dar predau informatica mai puţine şcoli decât acum 10 ani. Vestea bună e că suntem pe cale să schimbăm acest lucru. If you heard about the [Hour of Code](<%= hoc_uri('/') %>) last year, you might know it made history. Intr-o singură saptamână, 15 milioane de elevi au incercat programarea! The [Hour of Code](<%= hoc_uri('/') %>) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](<%= hoc_uri('/') %>) to host an Hour of Code this December 8-14 during Computer Science Education Week and help reach 100 million students by the end of the year. Add your school to the map, go to <http://hourofcode.com>
 
-## Infographic version:
+## Versiune grafică:
 
 ![imagine](http://code.org/images/fit-8000/Code.org_infographic.png)
-
-<a style="display: block" href="/#join"><button style="float: right;">Înscrieţi-vă evenimentul</button></a>

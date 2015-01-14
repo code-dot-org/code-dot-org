@@ -1,47 +1,47 @@
 * * *
 
-title: Hour of Code Event How-To layout: wide nav: resources_nav
+Kodlama saati etkinlik rehperi
 
 * * *
 
-# Hour of Code event guide
+# Kodlama saati etkinlik rehberi
 
-Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
+Bilgisayar bilimleri eğitim haftasını (Aralik 8 -14) kutlamak ve daha fazla öğrenciye ilham vermek icin kodlama saati etkinliği düzenleyin. Herkes, her yerde kodlama saati etkinliği organize edebilir.
 
-## 1) Prepare for your event
+## 1) Etkinliğiniz icin hazırlık yapın
 
-  * Determine a venue, date and time
-  * Send [a letter](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) to invite your local mayor, congressman, governor, or influential business person to speak.
-  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= hoc_uri('/resources/press-kit') %>) for help.
+  * Yeri, zamanı ve saati belirleyin
+  * Bulunduğunuz şehirdeki belediye başkanına, valiye ya da iş adamlarına etkinliğinize katılmaları ve konuşma yapmaları için [davetiye mektubu](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) gönderin.
+  * Basını/ medyayı davet edin. Yerel haber istasyonları, gazeteler, eğitim/teknoloji bloggerları. Yardım için [basın kit](<%= hoc_uri('/resources/press-kit') %>)imizi ziyaret edin.
 
-## 2) During your event
+## 2) Etkinlik sırasında
 
-  * Kick off your event with one of our [inspirational videos](<%= hoc_uri('/resources#videos') %>).
-  * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= hoc_uri('/resources/stats') %>).   
+  * Etkinliğinizi [ilham verici videolarımız](<%= hoc_uri('/resources#videos') %>) dan biri ile başlatın.
+  * [ İstatistikler ve veri grafikleri](<%= hoc_uri('/resources/stats') %>) kısmını kullanarak bilgisayar bilimin önemi hakkında bir konuşmayla giriş yapın.   
       
     
-  * Other event ideas: 
-      * Invite a local industry leader to discuss his or her work involving computer science
-      * Invite a local politician and have students teach him or her how to code
-      * Watch one of the Q&A sessions with an Hour of Code ambassador. They will all be recorded and on Code.org’s YouTube page. This year’s participants include Bill Gates, Sheryl Sandberg, Ashton Kutcher and more!
+  * Dİğer etkinlik fikirleri: 
+      * Yerel bir endüstri liderini bilgisayar bilimi içeren işi hakkında tartışmak için davet edin
+      * Yerel bir politikacıyı davet edin ve öğrencileriniz nasıl kodlanacağını öğretsin
+      * Kodlama Saati büyükelçilerinden biri ile Q&A oturumlarından birini izleyin. Tamamı kaydedilecek ve Code.org'un YouTube sayfasında yer alacaktır. This year’s participants include Bill Gates, Sheryl Sandberg, Ashton Kutcher and more!
       * Have a group of students demonstrate an unplugged activity
       * Have a group of students teach the principal or a group of teachers how to code
       * If your school already teaches computer science, have students demo projects
 
-## 3) Share how it went
+## 3) Nasıl geçtiğini paylaşın
 
   * Share pictures of your event on Facebook and Twitter. 
   * Use the hashtag **#HourofCode**
 
-## Example Event Plan
+## Örnek Etkinlik Planı
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**Etkinlik:** Okul çapında Bilgisayar Bilimleri Eğitim Haftası başlangıç toplantısı
 
-**Date:** Dec 8th (start of Computer Science Education Week)
+**Tarih:** 8 Aralık (Bilgisayar Bilimi Eğitim Haftası başlangıcı)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**Zaman:** Ders saatleri boyunca. Sabahın erken saatleri tercih sebebidir. Yaklaşık 1 saat.
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
+**Yer:** Okul toplantı salonu (tiyatro, spor salonu, kafeterya gibi)   
   
 
 
@@ -50,11 +50,11 @@ Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to 
 <table>
   <tr>
     <th style="width:200px">
-      Time
+      Saat
     </th>
     
     <th style="width:800px">
-      Action
+      Etkinlik
     </th>
   </tr>
   
@@ -69,7 +69,7 @@ Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to 
   </tr>
   
   <td>
-    10:05-11:15 am
+    10:05-10:15 am
   </td>
   
   <td>
@@ -77,7 +77,7 @@ Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to 
   </td></tr> 
   
   <td>
-    11:15-11:17 am
+    10:15-10:17 am
   </td>
   
   <td>
@@ -85,7 +85,7 @@ Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to 
   </td></tr> 
   
   <td>
-    11:17-11:30 am
+    10:17-10:30 am
   </td>
   
   <td>
@@ -93,7 +93,7 @@ Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to 
   </td></tr> 
   
   <td>
-    11:30-11:40 am
+    10:30-10:40 am
   </td>
   
   <td>
@@ -101,7 +101,7 @@ Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to 
   </td></tr> 
   
   <td>
-    11:40-12:00 pm
+    10:40-11:00 pm
   </td>
   
   <td>
@@ -109,7 +109,7 @@ Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to 
   </td></tr> 
   
   <td>
-    12:00-12:05 pm
+    11:00-11:05 pm
   </td>
   
   <td>

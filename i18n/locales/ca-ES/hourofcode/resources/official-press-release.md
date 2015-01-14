@@ -32,12 +32,12 @@ Computers are everywhere, but fewer schools teach computer science than 10 years
 
 During Computer Science Education Week last year, 15 million students tried the Hour of Code. Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
 
-This year the Hour of Code movement is aiming for 100 million students.
+Aquest any el moviment d'Hora del Codi té com a objectiu arribar als 100 milions d'estudiants.
 
 [**INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:**]  
 “We need to encourage and embrace our students’ interest in computer science,” said [**INSERT NAME**]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.”
 
-[**INSERT MORE INFORMATION ABOUT YOUR EVENT AND/OR YOUR ORGANIZATION**]
+[**INSERIR MÉS INFORMACIÓ SOBRE EL SEU ESDEVENIMENT I/O L'ORGANITZACIÓ**]
 
 [**INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT**]
 

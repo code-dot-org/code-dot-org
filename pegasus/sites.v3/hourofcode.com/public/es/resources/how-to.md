@@ -4,29 +4,28 @@
   <h1 class="col-sm-6">
     Cómo enseñar una Hora de Programación
   </h1>
-  
-  <div class="col-sm-6 button-container centered">
-    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Registra tu evento</button></a>
-  </div>
 </div>
 
-## 1) Watch this how-to video <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
-## 2) Try the tutorials:
+</div>
 
-Ofreceremos variados tutoriales divertidos de una hora de duración, para estudiantes de todas las edades y creados por una variedad de asociados. Nuevos tutoriales estarán disponibles antes del 8 de Diciembre para lanzar la Hora de Programación.
+## 1) Mira este video de "Cómo hacer" 
+<iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
+## 2) Prueba los tutoriales:
 
-**Todos los tutoriales de la Hora de Programación:**
+We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
+
+**All Hour of Code tutorials:**
 
   * Requieren un tiempo de preparación mínimo para los profesores
   * Son de auto aprendizaje, lo que permite a los estudiantes trabajar a su propio ritmo y habilidad
 
 [![](http://<%= codeorg_url() %>/images/tutorials.png)](http://<%=codeorg_url() %>/learn)
 
-## 3) Register your Hour on the map
+## 3) Registra tu Hora en el mapa
 
 [Make sure to sign up](<%= hoc_uri('/') %>). We'll send you helpful info as the Hour of Code nears, and you'll see your Hour of Code on our map of worldwide events.
 
-## 4) Plan your hardware needs - computers are optional
+## 4) Proyecta tus necesidades de euipamiento - los ordenadores son opcionales
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every child, and can even do the Hour of Code without a computer at all.
 
@@ -34,29 +33,29 @@ The best Hour of Code experience will be with Internet-connected computers. But 
   * **Previsualice la página de felicitaciones** para ver lo que los estudiantes verán al terminar. 
   * **Proporcione audífonos para su clase**, o pida a los alumnos que lleven los suyos; si el tutorial que selecciones funciona mejor con sonido.
 
-## 5) Plan ahead based on your technology available
+## 5) Proyecta en base a la tecnología disponible
 
   * **¿No tiene dispositivos suficientes?** use [programación en parejas](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Cuando los estudiantes trabajan en pares, se ayudan el uno al otro y dependen menos del profesor. Además se dan cuenta que en las ciencias computacionales se puede ser sociable y trabajar en equipo.
   * **¿Tiene un ancho de banda limitado?** Muestre los videos al frente del salón de clase, para evitar que cada estudiante descargue el video. O pruebe con los tutoriales desconectados/fuera de línea.
 
-## 6) Inspire students - show them a video
+## 6) Motiva a los estudiantes - muéstrales un video
 
 Show students an inspirational video to kick off the Hour of Code. Examples:
 
   * El vídeo original de lanzamiento de Code.org, con Bill Gates, Mark Zuckerberg y la estrella de la NBA Chris Bosh (Hay versiones de [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutos](https://www.youtube.com/watch?v=nKIu9yen5nc) y [9 minutos](https://www.youtube.com/watch?v=dU1xS07N-FA))
-  * El vídeo de lanzamiento de [la Hora de Programación 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), o de <% if @country == 'uk' %> [la Hora de Programación 2014](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [la Hora de Programación 2014](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
+  * El vídeo de lanzamiento de [la Hora de Código 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), o de <% if @country == 'uk' %> [la Hora de Código 2014](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [la Hora de Código 2014](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
   * [El llamado del presidente Obama a que todos los estudiantes aprendan Ciencias de la Computación](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
 **Get your students excited - give them a short intro**
 
 Most kids don’t know what computer science is. Here are some ideas:
 
-  * Explica en una forma sencilla que incluya ejemplos de aplicaciones que les interesen tanto a niños como a niñas (salvar vidas, ayudar a la gente, conectar personas, etc).
-  * Prueba decir: "Piensen acerca de cosas en la vida diaria que usan Ciencias de la Computación: un teléfono celular, un microondas, una computadora, un semáforo... Todas esas cosas necesitan un profesinal en Ciencias de la Computación para ayudar a construirlas."
+  * Explica en una forma sencilla que incluya ejemplos de aplicaciones que les interesen tanto a chicos como a chicas (salvar vidas, ayudar a la gente, conectar personas, etc).
+  * Prueba decir: "Piensa acerca de cosas en la vida diaria que usan Ciencias de la Computación: un teléfono celular, un microondas, una computadora, un semáforo... Todas esas cosas necesitan un profesional en Ciencias de la Computación para ayudar a construirlas."
   * O: "Las Ciencias de la Computación son el arte de combinar ideas humanas y herramientas digitales para incrementar nuestro poder. Los expertos en informática trabajan en muchas áreas diferentes: escriben aplicaciones para teléfonos, curan enfermedades, crean películas animadas, trabajan en redes sociales, construyen robots que exploran otros planetas y muchas cosas más."
-  * [Aquí](http://<%= codeorg_url() %>/girls) puedes ver consejos para interesar a las chicas en Ciencias de la Computación. 
+  * Ver consejos para interesar a las chicas en Ciencias de la Computación [Aquí](http://<%= codeorg_url() %>/chicas). 
 
-## 6) Start your Hour of Code
+## 7) Empieza tu Hora de Código
 
 **Direct students to the activity**
 
@@ -71,7 +70,7 @@ Most kids don’t know what computer science is. Here are some ideas:
 
 **What to do if a student finishes early?**
 
-  * Los estudiantes pueden ver todos los tutoriales e intentar otra actividad de la Hora de Programación en [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
+  * Los estudiantes pueden ver todos los tutoriales e intentar otra actividad de la Hora de Código en [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
   * O pide a los estudiantes que terminen primero que ayuden a los que tegan problemas con la actividad.
 
 **How do I print certificates for my students?**
@@ -80,4 +79,4 @@ Each student gets a chance to get a certificate via email when they finish the [
 
 **What comes after the Hour of Code?**
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %> <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Sign up your event</button></a>
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %> 

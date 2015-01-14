@@ -154,23 +154,19 @@
           6</h3>'
         '<h3>Wheels/side: 3<br/>Windows/side: 2</h3>': '<h3>Llantas/lateral: 3<br/>Ventanas/lateral:
           2</h3>'
-        /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png: / script_assets
-          / 4-5 imágenes / desconectado / comp_thinking_2_a1.png
-        /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png: / script_assets
-          / 4-5 imágenes / desconectado / comp_thinking_2_a2.png
-        /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png: / script_assets
-          / 4-5_ imágenes / desconectado / comp_thinking_2_a3.png
-        /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png: / script_assets
-          / 4-5 imágenes / desconectado / comp_thinking_2_a4.png
+        /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png
+        /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png
+        /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png
+        /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png
       4-5 Suncatchers Match 1:
         Matching: Emparejar
         Match each program to the word it makes, using the provided group of skills.: Une
           cada programa a las palabra que produce, usando el grupo habilidades provistas.
-        /script_assets/4-5_images/unplugged/suncatchers_1.png: /script_assets/4-5_imagenes/desconectado/tragaluz_1.png
-        /script_assets/4-5_images/unplugged/suncatchers_1_a1.png: /script_assets/4-5_imagenes/desconectado/tragaluz_1_a1.png
-        /script_assets/4-5_images/unplugged/suncatchers_1_a2.png: /script_assets/4-5__imagenes/desconectado/tragaluz_1_a2.png
-        /script_assets/4-5_images/unplugged/suncatchers_1_a3.png: /script_assets/4-5__imagenes/desconectado/tragaluz_1_a3.png
-        /script_assets/4-5_images/unplugged/suncatchers_1_a4.png: /script_assets/4-5__imagenes/desconectado/tragaluz_1_a4.png
+        /script_assets/4-5_images/unplugged/suncatchers_1.png: /script_assets/4-5_images/unplugged/suncatchers_1.png
+        /script_assets/4-5_images/unplugged/suncatchers_1_a1.png: /script_assets/4-5_images/unplugged/suncatchers_1_a1.png
+        /script_assets/4-5_images/unplugged/suncatchers_1_a2.png: /script_assets/4-5_images/unplugged/suncatchers_1_a2.png
+        /script_assets/4-5_images/unplugged/suncatchers_1_a3.png: /script_assets/4-5_images/unplugged/suncatchers_1_a3.png
+        /script_assets/4-5_images/unplugged/suncatchers_1_a4.png: /script_assets/4-5_images/unplugged/suncatchers_1_a4.png
         <h4>STACK</h4>: <h4>APILAR</h4>
         <h4>STAMP</h4>: <h4>ESTAMPA</h4>
         <h4>STAR</h4>: <h4>ESTRELLA</h4>
@@ -290,10 +286,10 @@
         Ruby: Rubí
         Dog: Perro
         Ninjacat: Gato ninja
-        (250, 400): (250,400)
-        (500, 240): (500,240)
+        (250, 400): (250, 400)
+        (500, 240): (500, 240)
         (480, 100): (480,100)
-        (320, 240): (320,240)
+        (320, 240): (320, 240)
       Match math to circles:
         Converting Math to Circles of Evaluation: Conversión de matemáticas a los
           círculos de evaluación
@@ -357,16 +353,16 @@
         Match each example with the correct contract!: ¡Haz coincidir cada ejemplo
           con el contrato correcto!
         (big-string? "gigantic" 5): (big-string? "gigantesco" 5)
-        (find-price 4): (encuentra-precio 4)
+        (find-price 4): (find-price 4)
         (small-star "blue"): (small-star "azul")
         (bigger-string "big" "little"): (bigger-string "grande" "pequeño")
         (small-star "solid"): (small-star "sólido")
         (find-price "cheese"): (find-price "queso")
-        'big-string: string number -> boolean': 'gran-hilo: numero hilo -> boolean'
-        'find-price: number -> number': 'encuentra-precio: numero -> numero'
+        'big-string: string number -> boolean': 'big-string: string number -> boolean'
+        'find-price: number -> number': 'find-price: number -> number'
         'small-star: string -> image': 'pequeño-estrella: hilo -> imagen'
         'bigger-string: string string -> string': 'aumentar-hilo: hilo hilo -> hilo'
-        'find-price: string -> number': 'encuentra-precio: hilo -> numero'
+        'find-price: string -> number': 'find-price: string -> number'
       test matching image:
         Matching Images Two: Relaciona las dos imagenes
         Match up all the flowers by colour!: ¡Relaciona todas las flores por color!

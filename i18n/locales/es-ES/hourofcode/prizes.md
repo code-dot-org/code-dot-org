@@ -1,82 +1,117 @@
 * * *
 
-title: Prizes layout: wide <% if @country == 'us' || @country == 'ca' %>nav: prizes_nav<% end %>
+title: Premios layout: wide <% if @country == 'us' || @country == 'ca' %>nav: prizes_nav<% end %>
 
 * * *
 
 <div class="row">
   <h1 class="col-sm-9">
-    Todos los organizadores reciben una recompensa
+    Premios para cada organizador
   </h1>
-  
-  <div class="col-sm-3 button-container centered">
-    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Sign up for a chance to win</button></a>
-  </div>
 </div>
 
 <% if @country == 'us' %>
 
-## One classroom will win a trip to Washington, D.C. for a historic, top-secret Hour of Code! {#dc}
+## ¡Un aula ganará un viaje a Washington D.C. para una Hora de Código, histórica y super secreta! {#dc}
 
-Code.org will select one lucky classroom to attend a very special Hour of Code event in the nation’s capital — so special that all the details are under wraps! Winning students (with chaperones) will enjoy an all-expenses-covered trip to Washington, D.C. Students will participate in a full day of top-secret activities on Monday, December 8.
+Code.org seleccionará un aula afortunada para asistir a un evento muy especial de la Hora de Código en la capital del país — ¡tan especial que todos los detalles están en secreto! Los estudiantes ganadores (con acompañantes) podrán disfrutar de un viaje con todos los gastos cubiertos a Washington, D.C. Los estudiantes participarán en un día lleno de actividades secretas el lunes 8 de diciembre.
 
 <% end %>
 
 <% if @country == 'us' %>
 
 <h2 id="hardware_prize" style="font-size: 18px">
-  51 schools win a class-set of laptops (or $10,000 for other technology)
+  51 escuelas ganarán un conjunto de computadoras portátiles para toda una clase (o $10,000 para otra tecnología)
 </h2>
 
-One lucky school in ***every*** U.S. state (+ Washington D.C.) will win $10,000 worth of technology. Organize the Hour of Code for every student in your school to qualify. **The submission period has ended. Winners will be announced soon.**
+Una escuela afortunada en ***cada*** estado de los EEUU (+ Washington D.C.) ganaron un valor de $10,000 en implementos de tecnología. [**Mira a los 51 ganadores**](http://codeorg.tumblr.com/post/104109522378/prize-winners)
 
 <% end %>
 
-<% if @country == 'us' %>
-
-### What are your odds of winning?
-
-[See a list of all schools](/events) signed up for the Hour of Code in your state. One public K-12 school in every U.S. state will win a class-set of laptops. <% end %>
-
 <% if @country == 'uk' %>
 
-## Lucky classrooms win a video chat with a guest speaker! {#video_chat}
+## ¡Aulas con suerte ganan una videoconferencia con un invitado! {#video_chat}
 
-20 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. Your students will be able to ask questions and chat with technology-industry leaders. **The submission period has ended. Winners will be announced soon.**
+20 aulas afortunadas serán invitadas a participar de un video chat para celebrar la Hora de Código el 8 de diciembre del 2014. Tus estudiantes podrán hacer preguntas y hablar con líderes en la industria de la tecnología. **El periodo de inscripción ha terminado. Los ganadores serán anunciados pronto.**
 
 <% end %>
 
 <% if @country == 'us' || @country == 'ca' %>
 
-## 100 classrooms win a video chat with a guest speaker! {#video_chat}
+## ¡100 aulas ganan un video chat con un invitado! {#video_chat}
 
-100 lucky classrooms will be invited to participate in live video Q&As with tech titans and tech-loving celebrities. Students will be able to ask questions and chat with these exciting role models to kick off your Hour of Code.
+100 aulas afortunadas serán invitadas a participar en la cámara en vivo Q&As con titanes de la tecnología y famosos amantes de la tecnología. Los estudiantes podrán hacer preguntas y conversar con estos interesantes modelos a seguir para poner en marcha su Hora de Código.
 
-Any classroom (public or private) within the U.S. or Canada is eligible to win this prize. Your whole school does not need to apply. **The submission period has ended. Winners will be announced soon.**
+### Sintoniza a los chats en vivo, o ve los videos archivados:
 
-### This year's celebrity video chat participants:
+**Martes**, 9 de diciembre   
+10:00 AM PST - [Lyndsey Scott](http://www.youtube.com/watch?v=6s5oxGmbXy4)   
+12:00 PM PST - [Jack Dorsey](http://www.youtube.com/watch?v=PBGJfpbSWjY)   
+3:00 PM PST - [Ashton Kutcher](http://www.youtube.com/watch?v=d1LuhJPJP9s)   
+
+
+**WEDNESDAY**, December 10   
+7:30 AM PST - [Cory Booker](http://www.youtube.com/watch?v=wD0Heuvv87I)   
+10:00 AM PST - [JR Hildebrand](http://www.youtube.com/watch?v=DfhAdnosy58)   
+11:00 AM PST - [Clara Shih](http://www.youtube.com/watch?v=2p7uhb1qulA)   
+12:00 PM PST - [Jessica Alba](http://youtu.be/m4oEbAQbWCE)   
+
+
+**Jueves**, 11 de diciembre   
+5:30 AM PST - [Karlie Kloss](http://www.youtube.com/watch?v=6SzsRGTmjy0)   
+9 AM PST - [David Karp](http://www.youtube.com/watch?v=1tVei0jOyVQ)   
+10 AM PST - [Jess Lee](http://www.youtube.com/watch?v=wXKPrtfaoi8)   
+11 AM PST - [Usher](http://www.youtube.com/watch?v=xvQSSaCD4yw)   
+
+
+**Viernes**, 12 de diciembre   
+10:00 AM PST - [Hadi Partovi](http://www.youtube.com/watch?v=PDnjt6iIBzo)
+
+&#42;Los videos de las charlas de Bill Gates y Sheryl Sandberg estarán disponibles en [nuestro canal de YouTube](https://www.youtube.com/user/CodeOrg/)
+
+### Las celebridades que este año participarán en el video chat:
 
 <%= view :video_chat_speakers %>
 
 <% end %>
 
-## Every organizer wins a thank you gift-code {#gift_code}
+## Cada organizador gana un código de regalo en agradecimiento {#gift_code}
 
-Every educator who hosts an Hour of Code for students will receive 10 GB of Dropbox space or $10 Skype credit as a thank you gift!
+¡Cada educador que sea anfitrión de una Hora de Código para sus estudiantes recibirá 10 GB en Dropbox o $10 de crédito en Skype como regalo de agradecimiento!
 
 <% if @country == 'ca' %>
 
-## $2000 Brilliant Project {#brilliant_project}
+## Proyecto brillante $2000 {#brilliant_project}
 
-[Brilliant Labs](http://brilliantlabs.com/hourofcode) will provide the resources necessary, up to a value of $2000.00, to implement a technology based, hands on, student centric learning project to one classroom in each province and territory (note: with the exception of Quebec). To qualify, teachers must register at hourofcode.com/ca#signup by December 6, 2014. For more details, terms, and conditions, please visit [brilliantlabs.com/hourofcode](http://brilliantlabs.com/hourofcode).
+[Brilliant Labs](http://brilliantlabs.com/hourofcode) proveerá los recursos necesarios, de hasta un valor de $2,000.00, para implementar un proyecto basado en tecnología, centrado y con la participación de los estudiantes, en un aula en cada provincia y territorio (nota: con la excepción de Québec). Para calificar, los profesores deberán registrarse en hourofcode.com/ca#signup hasta el 6 de diciembre del 2014. Para más detalles, términos y condiciones, por favor visite [brilliantlabs.com/hourofcode](http://brilliantlabs.com/hourofcode).
 
-## Lucky Schools win an Actua Workshop {#actua_workshop}
+## Escuelas con suerte ganarán un taller Actua {#actua_workshop}
 
-15 lucky schools across Canada will be gifted 2 hands-on STEM workshops delivered by one of Actua's [33 Network Members](http://www.actua.ca/about-members/). Actua members deliver science, technology, engineering, and math (STEM) workshops that are connected to provincial and territorial learning curriculum for K-12 students. These in-classroom experiences are delivered by passionate, highly-trained undergraduate student role models in STEM. Teachers can expect exciting demonstrations, interactive experiments and a lot of STEM fun for their students! Please note that in-classroom workshop availability may vary in remote and rural communities.
+15 escuelas afortunadas en Canadá recibirán como regalo 2 talleres involucrados en STEM presentados por uno de los [33 Miembros de la Red](http://www.actua.ca/about-members/) Actua. Miembros Actua, presentan talleres de ciencia, tecnología, ingeniería, y matemáticas (STEM) que están conectados al currículo de estudio provincial y territorial de los estudiantes de K-12. Estos experiencias en-aula, son presentados por estudiantes de licenciatura modelo altamente entrenados en STEM. ¡Los maestros pueden esperar demostraciones emocionantes, experimentos interactivos, y mucha diversión STEM para sus alumnos! Por favor tomen nota de que la disponibilidad de los talleres en-aula puede variar en comunidades rurales.
 
-[Actua](http://actua.ca/) is Canada’s leader in Science, Technology, Engineering, and Math Outreach. Each year Actua reaches over 225,000 youth in over 500 communities through its barrier-breaking programming.
+[Actua](http://actua.ca/) el el líder en trabajo social de Ciencia, Tecnología, Ingeniería, y Matemáticas. Anualmente Actua alcanza más de 225,000 jóvenes en más de 500 comunidades gracias una programación que derriba barreras.
 
-## Kids Code Jeunesse will help support you in the classroom! {#kids_code}
+**Congratulations to the 2014 winners!**
+
+| School                          | City        | Actua Network Member            |
+| ------------------------------- | ----------- | ------------------------------- |
+| Spencer Middle School           | Victoria    | Science Venture                 |
+| Malcolm Tweddle School          | Edmonton    | DiscoverE                       |
+| Britannia Elementary            | Vancouver   | GEERing Up                      |
+| Captain John Palliser           | Calgary     | Minds in Motion                 |
+| St. Josaphat School             | Regina      | EYES                            |
+| Bishop Roborecki School         | Saskatoon   | SCI-FI                          |
+| Dalhousie Elementary School     | Winnipeg    | WISE Kid-Netic Energy           |
+| Hillfield Strathallan College   | Hamilton    | Venture Engineering and Science |
+| Byron Northview Public School   | London      | Discovery Western               |
+| Stanley Public School           | Toronto     | Science Explorations            |
+| Ottawa Catholic School Board    | Ottawa      | Virtual Ventures                |
+| École Arc-en-Ciel               | Montreal    | Folie Technique                 |
+| Saint Vincent Elementary School | Laval       | Musee Armand Frappier           |
+| Garden Creek School             | Fredericton | Worlds UNBound                  |
+| Armbrae Academy                 | Halifax     | SuperNOVA                       |
+
+## ¡Kids Code Jeunesse le ayudará en el aula! {#kids_code}
 
 Are you a teacher who wants to introduce computer programming to your students and would like support in the classroom? Any teacher that would like a trained Computer Programming volunteer to assist in the classroom can contact [Kids Code Jeunesse](http://www.kidscodejeunesse.org) and we’ll work on getting you supported! [Kids Code Jeunesse](http://www.kidscodejeunesse.org) is a Canadian not for profit aimed at providing every child with the opportunity to learn to code. And every teacher the opportunity to learn how to teach computer programming in the classroom.
 
@@ -84,58 +119,56 @@ Are you a teacher who wants to introduce computer programming to your students a
 
 <% if @country == 'us' || @country == 'ca' %>
 
-## 100 classrooms will win a set of programmable robots {#programmable_robots}
+## 100 salones de clase podrán ganar un equipo de robots programables {#programmable_robots}
 
 [Sphero](http://www.gosphero.com/) is the app-controlled robotic ball changing the way students learn. Powered by [SPRK lessons](http://www.gosphero.com/education/), these round robots give kids a fun crash course in programming while sharpening their skills in math and science. Sphero is giving away 100 classroom sets – each including 5 robots. Any classroom (public or private) within the U.S. or Canada is eligible to win this prize.
 
 <% end %>
 
-<
-
-h2 id="more_questions">More questions about prizes?</h1>
+## ¿Más preguntas sobre los premios? {#more_questions}
 
 Check out [Terms and Conditions](<%= hoc_uri('/prizes-terms') %>) or visit our forum to see [FAQs](http://support.code.org) and ask your questions.
 
 <% if @country == 'us' %>
 
-# Frequently Asked Questions {#faq}
+# Preguntas Frecuentes {#faq}
 
-## Does your whole school have to enter to win the $10,000 in hardware?
+## ¿Es necesario que toda la escuela participe para tener la oportunidad de ganar $10,000 en hardware?
 
-Yes. Your whole school has to participate to be eligible for the prize but only one person needs to register and submit the Hardware Prize application form [here](<%= hoc_uri('/prizes') %>).
+Sí. Toda tu escuela tiene que participar para ser elegible al premio, pero sólo es necesario que una persona haga el registro y envíe el formulario de solicitud al Premio Hardware que se encuentra [aquí](<%= hoc_uri('/prizes') %>).
 
-## Does your whole school have to enter to win a the tech chat?
+## ¿Es necesario que toda la escuela participe para tener la oportunidad de ganar un chat de tecnología?
 
-Any classroom (public or private school) is eligible to win this prize. Your whole school need not apply.
+Cualquier clase (en escuelas públicas o privadas) es elegible para ganar este premio. No es necesario que toda la escuela participe.
 
-## Can non-public schools win the video chat prize?
+## ¿Escuelas que no sean públicas pueden ganar el premio de chat por vídeo?
 
-Yes! Private and independent schools are eligible along with public schools to win the video chat prizes.
+¡Sí! Escuelas privadas e independientes son elegibles, así como las públicas, para ganar los premios de chat por vídeo.
 
-## Can non-US schools win the video chat prize?
+## ¿Pueden las escuelas por fuera de los Estados Unidos ganar el premio de chat por vídeo?
 
-No, unfortunately, because of logistics we are unable to offer the video chat prize to schools outside of the U.S. and Canada. All international organizers **are** eligible to receive Dropbox space or Skype credit.
+No, desafortunadamente debido a dificultades logísticas no podemos ofrecer el premio de chat por vídeo a escuelas por fuera de Estados Unidos y Canadá. Todos los organizadores internacionales **son** elegibles para recibir espacio en Dropbox o crédito en Skype.
 
-## Why is the $10,000 hardware prize only available to public schools?
+## ¿Por qué el premio de $10.000 en hardware sólo está disponible para las escuelas públicas?
 
-We would love to help teachers in public and private schools alike, but at this time, it comes down to logistics. We have partnered with [DonorsChoose.org](http://donorschoose.org) to administer classroom funding prizes, which only works with public, US K-12 schools. According to DonorsChoose.org, the organization is better able to access consistent and accurate data that's available for public schools.
+Estaríamos encantados de ayudar a los maestros en escuelas públicas y privadas por igual, pero en este momento se trata de logística. Nos hemos asociado con [DonorsChoose.org](http://donorschoose.org) para la administración de los fondos para los premios a las aulas, esta entidad sólo trabaja con escuelas públicas, nivel K-12, en los Estados Unidos. Según DonorsChoose.org, ellos son capaces de acceder a información más precisa y coherente para las escuelas públicas.
 
-## I’m outside the United States. Can I qualify for prizes?
+## Estoy fuera de los Estados Unidos. ¿Puedo calificar para los premios?
 
-Due to a small full-time staff, Code.org is unable to handle the logistics of administering international prizes. Because of this people outside the US are unable to qualify for prizes.
+Debido al reducido tamaño de nuestro equipo de trabajo a tiempo completo, Code.org no puede manejar la logística de entregar premios internacionales. Debido a esto las personas por fuera de los Estados Unidos no pueden calificar para los premios.
 
-## When is the deadline to apply for the hardware prize?
+## ¿Cuándo es la fecha límite para aplicar al premio de hardware?
 
-To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 14, 2014. Una escuela en cada estado de Estados Unidos recibirá un conjunto de computadoras para una clase. Code.org seleccionará y notificará a los ganadores vía correo electrónico antes del 1ro de diciembre de 2014.
+Para calificar, toda tu escuela debe registrarse para la Hora de Programación y completar el [formulario de Aplicación a Hardware](<%= hoc_uri('/prizes') %>) a más tardar el 14 de Noviembre de 2014. Una escuela en cada estado de Estados Unidos podrá ganar un conjunto de computadoras para toda una generación. Code.org seleccionará y notificará a los ganadores vía correo electrónico antes del 1ro de diciembre de 2014.
 
-## When is the deadline to be eligible to win a tech chat?
+## ¿Cuándo es la fecha límite para ser elegible para ganar un chat de tecnología?
 
-To qualify, you must register your classroom for the Hour of Code by November 14, 2014. Classrooms will win a video chat with a celebrity. Code.org seleccionará y notificará a los ganadores vía correo electrónico antes del 1ro de diciembre de 2014.
+Para calificar, debes registrar tu aula para la Hora de Programación a más tardar el 14 de noviembre de 2014. Las aulas ganarán un chat de vídeo con una celebridad. Code.org seleccionará y notificará a los ganadores vía correo electrónico antes del 1ro de diciembre de 2014.
 
-## When will I be notified if my school or classroom wins a prize?
+## ¿Cuándo se me notificará si mi escuela o aula gana un premio?
 
-To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 14, 2014. Code.org seleccionará y notificará a los ganadores vía correo electrónico antes del 1ro de diciembre de 2014.
+Para calificar, toda tu escuela debe registrarse para la Hora de Programación y completar el [formulario de Aplicación a Hardware](<%= hoc_uri('/prizes') %>) a más tardar el 14 de Noviembre de 2014. Code.org seleccionará y notificará a los ganadores vía correo electrónico antes del 1ro de diciembre de 2014.
 
-## If my whole school can’t do the Hour of Code during Computer Science Education Week (Dec. 8-14), can I still qualify for prizes?
+## Si toda mi escuela no puede participar en la Hora de Programación durante la semana de la educación en ciencias de la computación (8-14 de diciembre), ¿Puedo aún calificar para los premios?
 
-Yes, just be sure to submit a logistics plan that outlines how your whole school is participating over a reasonable length of time and register for the Hour of Code by November 14th. <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Sign up for a chance to win</button></a> <% end %>
+Yes, just be sure to submit a logistics plan that outlines how your whole school is participating over a reasonable length of time and register for the Hour of Code by November 14th. <% end %>

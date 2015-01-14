@@ -1,60 +1,60 @@
 * * *
 
-title: Hour of Code Event How-To layout: wide nav: resources_nav
+Naslov: Čas kodiranja objašnjenje layout: wide nav: resources_nav
 
 * * *
 
-# Hour of Code event guide
+# Čas kodiranja vodič događaja
 
-Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
+Ugostite Čat kodiranja tokom redovne sedmične nastave iz Informatike (Dec 8-14) kako bi slavili računalnu znanost i potaknuli studente da ga probaju. Bilo ko, bilo gdje može organizirati događaj Čas programiranja.
 
-## 1) Prepare for your event
+## 1) Pripremite se za vaš događaj
 
-  * Determine a venue, date and time
-  * Send [a letter](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) to invite your local mayor, congressman, governor, or influential business person to speak.
-  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= hoc_uri('/resources/press-kit') %>) for help.
+  * Odredite mjesto, datum i vrijeme
+  * Pošaljite [ pismo](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) da pozovete vašeg lokalnog gradonačelnika, parlamentarce, ministre ili utjecajne poslovne ljude da održe govore.
+  * Pozovite medije npr. lokalnu televizijsku kuću, novine, obrazovne/tech blogere. Vidjeti naš [ press kit](<%= hoc_uri('/resources/press-kit') %>) za pomoć.
 
-## 2) During your event
+## 2) Tokom događaja
 
-  * Kick off your event with one of our [inspirational videos](<%= hoc_uri('/resources#videos') %>).
-  * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= hoc_uri('/resources/stats') %>).   
+  * Započnite događaj s jednim od naših [ inspirativnih videa](<%= hoc_uri('/resources#videos') %>).
+  * Dajte uvod o važnosti računalne znanosti, koristeći [ statistike i infografiku](<%= hoc_uri('/resources/stats') %>).   
       
     
-  * Other event ideas: 
-      * Invite a local industry leader to discuss his or her work involving computer science
-      * Invite a local politician and have students teach him or her how to code
-      * Watch one of the Q&A sessions with an Hour of Code ambassador. They will all be recorded and on Code.org’s YouTube page. This year’s participants include Bill Gates, Sheryl Sandberg, Ashton Kutcher and more!
-      * Have a group of students demonstrate an unplugged activity
-      * Have a group of students teach the principal or a group of teachers how to code
-      * If your school already teaches computer science, have students demo projects
+  * Druge ideje za događaj: 
+      * Pozovite lokalne industrijske lidere kako bi razgovarali o njegovom ili njezinom radu vezanom za računarsku znanosti
+      * Pozovite lokalne političare te neka im učenici pokažu kako kodirati
+      * Pogledajte jedan od Q&A; Lekcije sa ambasadorom Časa kodiranja. Svi će biti zabilježeno i na Code.org-ovoj YouTube stranici. Ovogodišnji sudionici su Bill Gates, Sheryl Sandberg, Ashton Kutcher i drugi!
+      * Neka grupa studenata pokaže šta treba napraviti prije nego se povežete na mrežu
+      * Neka jedna grupa učenika poduči direktora ili skupinu učitelja kako kodirati
+      * Ako Vaša škola već uči informatiku, zadajte učenicima demo projekate
 
-## 3) Share how it went
+## 3) Podijelite sa svima kako je prošlo
 
-  * Share pictures of your event on Facebook and Twitter. 
-  * Use the hashtag **#HourofCode**
+  * Podijelite slike događaja na Facebook i Twitter. 
+  * Koristite hashtag **#HourofCode**
 
-## Example Event Plan
+## Primjer plana događaja
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**Događaj:** U svim školama neka započnu skupine sedmica obrazovanja iz Informatičke nauke
 
-**Date:** Dec 8th (start of Computer Science Education Week)
+**Datum:** 8. decembar (Počenite tjedan obrazovanja iz informatike)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**Vrijeme:** Tokom školskog dana. Najbolje sredinom jutra. Trajanje 1 sat.
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
+**Lokacija:** Školska sala za priredbe (zbornica, svečana sala, kantina)   
   
 
 
-## Run of Show
+## Program
 
 <table>
   <tr>
     <th style="width:200px">
-      Time
+      Vrijeme
     </th>
     
     <th style="width:800px">
-      Action
+      Radnja
     </th>
   </tr>
   
@@ -64,55 +64,55 @@ Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to 
     </td>
     
     <td>
-      Open with one of our <a href="http://hourofcode.com/us/resources#videos">inspirational videos</a>
+      Započnite sa <a href="http://hourofcode.com/us/resources#videos">jednom inspirativnim videom</a>
     </td>
   </tr>
   
   <td>
-    10:05-11:15 am
+    10:05-10:15 am
   </td>
   
   <td>
-    Principal gives an intro overviewing the importance of computer science. Use these <a href="/resources/stats">stats and infographics</a>.
+    Direktor daje uvod o važnost informatike. Pomoću ove <a href="/resources/stats">statistike i infografike</a>.
   </td></tr> 
   
   <td>
-    11:15-11:17 am
+    10:15-10:17 am
   </td>
   
   <td>
-    Open with one of our <a href="http://hourofcode.com/us/resources#videos">inspirational videos</a>
+    Započnite sa <a href="http://hourofcode.com/us/resources#videos">jednom inspirativnim videom</a>
   </td></tr> 
   
   <td>
-    11:17-11:30 am
+    10:17-10:30 am
   </td>
   
   <td>
-    Special guest to talk about their background and how technology and computer science plays an important role in their everyday lives.
+    Specijalni gost razgovarao o svojoj prošlosti i kako tehnologija i računarstvo igra važnu ulogu u svakodnevnom životu.
   </td></tr> 
   
   <td>
-    11:30-11:40 am
+    10:30-10:40 am
   </td>
   
   <td>
-    Students do an Hour of Code demo for the school. Fun twist- have them teach the principal, politician or other students.
+    Studenti rade demonstraciju Časa kodiranja za školu. Zabavno bi bilo da oni uče direktora, političare ili druge studente.
   </td></tr> 
   
   <td>
-    11:40-12:00 pm
+    10:40-11:00 pm
   </td>
   
   <td>
-    Students demo an unplugged activity and how computer science can be taught without using computers.
+    Studenti pokazuju ogledni primjerak isključeni sa mreže o tome kako se informatika može izvoditi bez korištenja računala.
   </td></tr> 
   
   <td>
-    12:00-12:05 pm
+    11:00-11:05 pm
   </td>
   
   <td>
-    Teacher who help bring the school-wide event gives closing remarks.
+    Učitelj - organizator događaja daje završnu riječ.
   </td>
 </table>

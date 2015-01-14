@@ -21,7 +21,7 @@ Dashboard::Application.configure do
 
   # Serve static resources - these will be cached by Varnish (or a CDN)
   config.serve_static_assets = true
-  config.static_cache_control = "public, max-age=3600"
+  config.static_cache_control = "public, max-age=86400"
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
@@ -79,5 +79,5 @@ Dashboard::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   # Whether or not to display pretty blockly.
-  config.pretty_blockly = false
+  config.pretty_apps = false
 end

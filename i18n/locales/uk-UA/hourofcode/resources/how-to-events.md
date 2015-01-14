@@ -1,118 +1,118 @@
 * * *
 
-title: Hour of Code Event How-To layout: wide nav: resources_nav
+title: Захід Години коду - як провести layout: wide nav: resources_nav
 
 * * *
 
-# Hour of Code event guide
+# Керівництво з проведення заходу Години коду
 
-Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
+Проведіть Годину коду протягом тижня інформатики (8-14 грудня), відзначте цю галузь та заохотьте учнів спробувати себе у ній. Кожен, в будь-якому місці може організувати захід Години коду.
 
-## 1) Prepare for your event
+## 1) Підготуйтесь до заходу
 
-  * Determine a venue, date and time
-  * Send [a letter](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) to invite your local mayor, congressman, governor, or influential business person to speak.
-  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= hoc_uri('/resources/press-kit') %>) for help.
+  * Визначте місце, дату та час проведення
+  * Надішліть [листа](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) із запрошенням місцевих політиків, депутатів, бізнесменів чи інших впливових людей.
+  * Запросіть медіа та пресу, наприклад, місцеві новини, газету, освітніх чи технічних блогерів. Перегляньте [прес-кіт](<%= hoc_uri('/resources/press-kit') %>) для детальнішої інформації.
 
-## 2) During your event
+## 2) Проведіть захід
 
-  * Kick off your event with one of our [inspirational videos](<%= hoc_uri('/resources#videos') %>).
-  * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= hoc_uri('/resources/stats') %>).   
+  * Розпочніть захід одним із наших [натхненних відео-роликів](<%= hoc_uri('/resources#videos') %>).
+  * Проведіть вступ, наголошуючи на важливості інформатики, використовуючи [статистику та інфографіку](<%= hoc_uri('/resources/stats') %>).   
       
     
-  * Other event ideas: 
-      * Invite a local industry leader to discuss his or her work involving computer science
-      * Invite a local politician and have students teach him or her how to code
-      * Watch one of the Q&A sessions with an Hour of Code ambassador. They will all be recorded and on Code.org’s YouTube page. This year’s participants include Bill Gates, Sheryl Sandberg, Ashton Kutcher and more!
-      * Have a group of students demonstrate an unplugged activity
-      * Have a group of students teach the principal or a group of teachers how to code
-      * If your school already teaches computer science, have students demo projects
+  * Інші корисні ідеї: 
+      * Запросіть представника індустрії для того, щоб дізнатися, як у його сфері залучена інформатика
+      * Запросіть місцевого політика, якого навчать програмувати ваші учні
+      * Перегляньте одну із відео-сесій із послом Години коду. Всі вони будуть записані та викладені на сторінці YouTube Code.org. Цьогорічні учасники: Біл Гейтс, Шеріл Сендберг, Ештон Катчер та інші!
+      * Продемонструйте безмашинну вправу групою учнів
+      * Доручіть учням навчити програмуванню директора чи групу вчителів
+      * Якщо у школі вже вивчається інформатика, проведіть демонстрацію виконаних проектів
 
-## 3) Share how it went
+## 3) Поділіться враженнями
 
-  * Share pictures of your event on Facebook and Twitter. 
-  * Use the hashtag **#HourofCode**
+  * Поширюйте фотографії свого заходу на Facebook та Twitter. 
+  * Використовуйте хеш-тег **#HourofCode**
 
-## Example Event Plan
+## Приклад плану заходу
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**Захід:** Шкільні збори, присвячені початку тижня інформатики
 
-**Date:** Dec 8th (start of Computer Science Education Week)
+**Дата:** 8 грудня (початок тижня інформатики)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**Час:** Протягом уроків. Краще у першій половині навчального дня. Тривалість близько 1 години.
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
+**Місце проведення:** Актовий зал школи (хол, спортзал, їдальня)   
   
 
 
-## Run of Show
+## План подій
 
 <table>
   <tr>
     <th style="width:200px">
-      Time
+      Час
     </th>
     
     <th style="width:800px">
-      Action
+      Подія
     </th>
   </tr>
   
   <tr>
     <td>
-      10:00-10:05 am
+      10:00-10:05 ранку
     </td>
     
     <td>
-      Open with one of our <a href="http://hourofcode.com/us/resources#videos">inspirational videos</a>
+      Початок заходу із <a href="http://hourofcode.com/us/resources#videos">натхненним відео-роликом</a>
     </td>
   </tr>
   
   <td>
-    10:05-11:15 am
+    10:06-11:15 ранку
   </td>
   
   <td>
-    Principal gives an intro overviewing the importance of computer science. Use these <a href="/resources/stats">stats and infographics</a>.
+    Директор проголошує вступне слово, підкреслюючи важливість інформатики. Можна використати <a href="/resources/stats">статистику та інфографіку</a>.
   </td></tr> 
   
   <td>
-    11:15-11:17 am
+    10:15-10:17 ранку
   </td>
   
   <td>
-    Open with one of our <a href="http://hourofcode.com/us/resources#videos">inspirational videos</a>
+    Показ <a href="http://hourofcode.com/us/resources#videos">відео-роликів</a>
   </td></tr> 
   
   <td>
-    11:17-11:30 am
+    10:17-10:30 ранку
   </td>
   
   <td>
-    Special guest to talk about their background and how technology and computer science plays an important role in their everyday lives.
+    Запрошені гості розповідають про свою освіту та заняття, та про значення технологій та інформатики у їхньому житті.
   </td></tr> 
   
   <td>
-    11:30-11:40 am
+    10:30-10:40 ранку
   </td>
   
   <td>
-    Students do an Hour of Code demo for the school. Fun twist- have them teach the principal, politician or other students.
+    Учні проводять демонстрацію Години коду. Спробуйте помінятись ролями - учні навчають вчителів, директора, гостей чи інших учнів.
   </td></tr> 
   
   <td>
-    11:40-12:00 pm
+    10:40-11:00 ранку
   </td>
   
   <td>
-    Students demo an unplugged activity and how computer science can be taught without using computers.
+    Учні беруть участь у безмашинній вправі та демонструють вивчення інформатики без комп'ютерів.
   </td></tr> 
   
   <td>
-    12:00-12:05 pm
+    11:00-11:05 ранку
   </td>
   
   <td>
-    Teacher who help bring the school-wide event gives closing remarks.
+    Вчителі, котрі відповідали за проведення зборів, підсумовують захід.
   </td>
 </table>

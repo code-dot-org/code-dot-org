@@ -21,8 +21,8 @@
   welcome_back: Bem-vindo, %{name}
   add_teacher_form:
     code:
-      label: 'Adicionar um professor por seção de código:'
-      placeholder: Código (ABCDEF)
+      label: 'Add a teacher:'
+      placeholder: Section Code (ABCDEF)
     submit: Adicionar professor
   add_hint_form:
     placeholder: Por favor introduza a sua dica aqui
@@ -36,6 +36,7 @@
   of: de
   more: MAIS
   less: MENOS
+  beta: beta
   try_hoc: 'Tenta a "Hora do código", clica aqui >> '
   try_k8intro: Tenta a nossa Introdução ao Curso de Ciência da Computação (15-25 horas)
     para o 3.º ciclo do ensino básico
@@ -72,9 +73,9 @@
       as várias fases e quebra-cabeças</a>, mas precisarás de te inscrever para guardar
       o teu progresso.
     teacher_educator_guide: Consulta o guia do educador
-    teacher_pitch: Ensine o K-8 Introdução à Informática na sua sala de aula
+    teacher_pitch: Teacher sign up for Code.org
     teacher_title: Registo de professor
-    student_pitch: 'Para além de 1 hora: Tente a nossa K-8 Introdução à informática'
+    student_pitch: Student sign up for Code.org
     student_title: Registo para Aluno
     school_name: Nome da escola (opcional)
     school_address: Endereço da escola (opcional)
@@ -91,14 +92,17 @@
     valid_password: Palavra-passe válida!
     invalid_password: A palavra-passe tem de ter no mínimo 6 caracteres
     mismatch_password: As duas palavra-passe que introduziu não correspondem
-    student_terms: Eu concordo em respeitar os termos de serviço da Code.org. Se eu
-      sou menor de 13 anos de idade, eu confirmo, ao submeter este formulário, que
-      tenho a autorização do meu tutor legal para usar os serviços da Code.org.
-    teacher_terms: Eu concordo em respeitar os termos de serviço da Code.org.
+    student_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
+      of service</a>. If I am under 13 years of age, I confirm by submitting this
+      form that I have my parent or legal guardian's permission to use the Code.org
+      services.<br/>For users under 13, email addresses are not stored in a form that
+      allows us to contact them.
+    teacher_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
+      of service</a>.
     additional_information: We need some additional information to continue signing
       you up.
   signin_form:
-    title: Entrar
+    title: Have an account already? Sign in
     login: E-mail ou nome de utilizador
     password: Palavra-passe
     remember: Lembrar-se de mim
@@ -142,7 +146,7 @@
       no_teacher: Não foi possível encontrar ninguém que tenha entrado com '%{teacher_email_or_code}'.
         Por favor, pede-lhes para se registarem aqui e tente adicioná-los novamente
       section_not_found: Could not find a section with code '%{section_code}'.
-      blank_code: Por favor insira o código ou endereço de e-mail do seu professor
+      blank_code: Please enter a section code
       cant_join_own_section: Sorry, you can't join your own section.
     mail:
       invite_student:
@@ -202,9 +206,8 @@
         gratuito na Dropbox, 10$ US em crédito Skype, e baixar jogos grátis. Nota:
         oferta válida apenas para estudantes dos EUA e só enquanto houver stock.'
       teacher:
-        earned: 10 ou mais estudantes recolheram todos os troféus %{num_trophies}
-          troféus. Você ganhou o prémio de professor! (apenas para professores dos
-          EUA)
+        earned: 15 or more students collected all %{num_trophies} trophies. You have
+          won a teacher prize! (U.S. teachers only)
         not_earned_title: Teach the class, earn up to $1,000 in <a target="_blank"
           href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers
           only)
@@ -274,7 +277,7 @@
       prizes_link: Mais informação
   teacher:
     title:
-      one: O teu professor é %{name}
+      one: 'Your teacher:'
       other: 'Os teus professores:'
     remove: (remove teacher)
     confirm:
@@ -344,10 +347,11 @@
     new_password_hint: (deixa em branco se não quiseres alterá-lo)
     current_password_hint: (precisamos da tua palavra-passe para confirmar as tuas
       alterações)
-    cancel:
-      title: Cancelar a minha conta
-      hint: Infeliz?
-      button: Cancelar a minha conta
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: 'Please note: deleting your account will not delete
+      your students'' accounts.'
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Concluído
     tried: Tentado
@@ -359,11 +363,11 @@
     title: Code Studio
     all_courses: Overview of Courses 1, 2, and 3
     lesson_plans: Lesson plans
-    signin_message: Ou, se já está registado, %{link}
+    signin_message: Already registered? %{link}
     student_reg_link: Registo para Aluno
-    teacher_reg_link: Professor
-    signin_directions: Use an account to track progress and get rewards.<br/> Teachers,
-      track your entire class.
+    teacher_reg_link: Teacher Sign Up
+    signin_directions: Use an account to track progress.<br/> Teachers, track your
+      entire class.
     teacher_dashboard: Consulte o painel de controlo do progresso
     teacher_student_count_one: Você tem %{count} aluno.
     teacher_student_count: Tem alunos %{count}.
@@ -382,8 +386,8 @@
     local_school: escola local
     online: online
     see_details: Ver detalhes
-    prize_info: 'Prizes for participation (U.S. only): $10 gift cards for student
-      completion and up to $1,000 in classroom rewards for public school teachers'
+    prize_info: 'Prizes for participation (U.S. public school teachers only): Up to
+      $1,000 in classroom rewards.'
     tryfirst: 'Or, you can try it first, and sign up later:'
     trynow: Experimenta agora
     add_hint_help: Please help us to add smart hints to Code.org tutorials
@@ -394,9 +398,9 @@
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
     heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
-    heading_elementary: <h2>20 hour courses for</h2><h1>Elementary Students</h1>
+    heading_elementary: <h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>
     heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
-    heading_legacy: <h2>Our previous course for</h2><h1>Existing Students</h1>
+    heading_legacy: <h2>Our general course for</h2><h1>All Ages</h1>
     your_gallery: Gallery
   gender:
     male: Masculino
@@ -406,20 +410,17 @@
     student: estudante
     teacher: Teacher
   footer:
-    help_from_html: Engenheiros da <a href="http://www.google.com">Google</a>, <a
-      href="http://www.microsoft.com">Microsoft</a>, <a href="http://www.facebook.com">
-      Facebook</a> e <a href="http://www.twitter.com">Twitter</a> ajudaram a criar
-      este tutorial.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 <a href="http://www.rovio.com">Rovio
-      Entertainment Ltd</a>. Todos os Direitos Reservados.<br/> Plants vs. Zombies&trade;
-      & &copy; 2013 <a href="http://www.ea.com">Electronic Arts Inc.</a>. Todos os
-      Direitos Reservados.
+    help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped
+      create this tutorial.
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
+      All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
+      Arts Inc. All Rights Reserved.
     powered_by_aws: Powered by Amazon Web Services
     feedback: Fornecer feedback
     translate: Ajuda-nos a traduzir para o teu idioma
     support: Support
     support_url: http://support.code.org
-    tos: Termos de serviço
+    tos: Terms
     privacy: Política de privacidade
     secure: Secure Version
   reference_area:
@@ -428,7 +429,7 @@
     teacher: Ver a solução
     auth_error: Você não está autorizado a ver a solução.
     submit: Update Artist Location
-    direction: Start Direction
+    direction: Start Direction (in degrees)
   video:
     tab: Vídeo.
     notes: Nenhum vídeo? Mostrar notas.
@@ -462,10 +463,10 @@
   download_coming_soon: Downloadable activity coming soon.
   video_coming_soon: Video Coming Soon!
   share_code:
-    title: Clique em 'Executar programa' para ver o meu programa em ação
+    title: Click 'Run' to see my program in action
     bounce_og_title: Check out my Bounce Game
     flappy_og_title: Check out my Flappy Game
-    studio_og_title: Check out my story
+    studio_og_title: Check out my Play Lab App
     check_out_what_i_made: Check out what I made
     og_description: I wrote the code myself with Code.org
     phone_number_not_allowed: It looks like there is a phone number in it. Try changing
@@ -478,7 +479,7 @@
   builder:
     created: You created a new script.
     destroyed: You destroyed a script.
-    manage: Manage Scripts
+    manage: Build Levels
     view: View
     back: Back to scripts
     success: You successfully edited the blocks.
@@ -522,7 +523,9 @@
     header_playlab: Play Lab
     header_artist: Artist
   landing:
-    prerelease: This page is still under development.
+    prerelease: This course is in <span class='betatext'>beta</span>.  This means
+      it is not the final version of the course, and is subject to revision as feedback
+      is received and improvements are made.
     prerelease_hoc2014: This tutorial is in <span class='betatext'>beta</span>.  It
       is subject to revision as feedback is received and improvements are made.
     feedback: Give Feedback
@@ -598,3 +601,7 @@
     completed_too_many_blocks: completed, too many blocks
     completed_perfect: completed, perfect
     furthest_level_attempted: furthest level attempted
+  studio:
+    courses_working_on: Courses you're working on
+    completed_courses: Completed courses
+    all_courses: All courses

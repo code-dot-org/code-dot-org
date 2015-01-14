@@ -33,7 +33,7 @@ nl:
         text: 'Ieder blok is een opdracht. Wanneer je een "vooruit"-blok naar je werkruimte sleept en op "Voer Programma Uit" klikt, dan beweegt de vogel een stapje in het doolhof.'
       11:
         image: notes/hoc1_11.jpg
-        text: To do more than one action, you can drag many blocks to your workspace and attach them together. The bird will do the commands from top to bottom.
+        text: "Om meer dan één actie te doen kan je meerdere blokken naar je werkruimte spelen en deze aan mekaar vasthangen. De vogel zal de commando's van boven naar beneden uitvoeren."
       12:
         image: notes/hoc1_12.jpg
         text: 'Wanneer je een programma uit hebt gevoerd en het wil repareren en opnieuw beginnen, klik je op de "Opnieuw"-knop.'
@@ -162,34 +162,31 @@ nl:
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: |-
-          Hi, my name is Saloni. I use computer science to help solve problems in health and medicine. Let's learn about the "if else" block. It looks like the "if" block, but it has an extra part at the end that says "else".
+        text: 'Hallo, ik heet Saloni! Ik gebruik informatie om problemen met gezondheid en medicatie op te lossen. Laat ons over het "als dan"-blok leren. Het ziet eruit als het "als"-blok, maar met een extra "dan"-stukje.'
       2:
         image: notes/hoc5_2.jpg
-        text: |-
-          If I put a "move forward" block in the spot where it says "do" and a "turn left" block where it says "else" that means that the zombie will choose between 2 options. IF there is a path ahead, the zombie will move forward, and OTHERWISE (there isn't a path ahead), the zombie will turn left.
+        text: 'Als ik een "vooruit"-blok zet bij "uitvoeren" en een "linksaf"-blok bij "anders" dan betekent dat dat de zombie kan kiezen uit 2 opties: ALS er een pad vooruit is dan gaat de zombie vooruit, ANDERS (als er geen pad vooruit is) dan draait de zombie naar links.'
       3:
         image: notes/hoc5_3.jpg
         text: |-
-          Just like the "if" block, we can put "if else" blocks inside a "repeat" blocks so that the zombie keeps moving and the "if else" block will keep checking if there's somewhere to turn.
+          Net als bij de 'als' blok, kunnen we de "als anders" blokken binnen een "herhaal" blok plaatsen zodat de zombie blijft bewegen en de "als anders" blok zal blijven controleren of er ergens gedraaid moet worden.
       4:
         image: notes/hoc5_4.jpg
-        text: Now, get those zombies where they belong!
+        text: Stuur die zombies naar waar ze horen!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
-        text: "An if-else statement is a decision between two things. Let's see how we can use an if-else statement with our buddy Scrat the squirrel."
+        text: Een als-anders statement is een beslissing tussen twee dingen. Laatosn eens kijken hoe we een als-anders statement kunnen gebruiken bij ons vriendje Scrat de eekhoorn.
       2:
         image: notes/saloni_ifelse_scrat2.jpg
-        text: |-
-          This block looks the same as the "if" block, but there's an extra part at the bottom that says "else". If I put a "move forward" block where it says "do" and a "turn left" block where it says "else", that means Scrat the squirrel will move forward if there's a path ahead. If there's not a path ahead, Scrat will turn left.
+        text: 'Dit blok ziet er hetzelfde uit als het "als"-blok, maar het heeft een extra stuk "anders" stukje aan de onderkant. Als ik een "beweeg vooruit" blokje plaats waar "voer uit" staat, en een "Draai linksom" blokje plaats bij "anders", dan betekent dat Scrat de eekhoorn vooruit beweegt als er een pad is. Als er geen pad is, dan draait Scrat linksom.'
       3:
         image: notes/saloni_ifelse_scrat3.jpg
         text: |-
-          It's making a decision and doing one of the two actions based on that decision. And just like "if" blocks, you can put "if-else" blocks inside "repeat" blocks.
+          Het maakt  een beslissing en doet een van de twee acties op basis van deze beslissing. En net als met 'als' blokken, kun je "als-anders" blokken binnen 'herhaal' blokken plaatsen.
       4:
         image: notes/saloni_ifelse_scrat4.jpg
-        text: "Now let's help Scrat the squirrel get that acorn!"
+        text: Laten we nu Scrat de eekhoorn helpen om die eikel te pakken!
     function:
       1:
         image: notes/stage13_1.jpg
@@ -279,82 +276,123 @@ nl:
     frozen_intro:
       1:
         image: notes/frozen1_1.jpg
-        text: "Hi, my name is Lyndsey. I model, act, and write my own apps. Let's use code to join Anna and Elsa as they explore the magic and beauty of ice."
+        text: Hallo, is mijn naam Lyndsey. Ik ben een model, ik acteer en schrijf mijn eigen apps. Laten we code gebruiken om Anna en Elsa te helpen bij het ontdekken van de magie en schoonheid van ijs.
       2:
         image: notes/frozen1_2.jpg
-        text: "You'll create snowflakes and patterns as you ice skate and make a winter wonderland that you can then share with your friends."
+        text: Je maakt sneeuwvlokken en patronen terwijl je door een winter wonderlandschap schaatst dat je kan delen met je vrienden.
       3:
         image: notes/frozen1_3.jpg
-        text: "In the next hour, you're going to learn the basics of how to code. Traditional programming is usually in text, but we'll use Blockly, which uses visual blocks that you can drag and drop to write programs. This is how even university students learn the basics. Under the hood, you're still creating code."
+        text: "In het volgende uur zal je de basis van het coderen leren. Traditionele programmering maakt gebruik van tekst, wij zullen Blockly gebruiken wat gebruikt maakt van visuele blokken die je kan slepen en neerplaatsen om programma's te schrijven. Op die manier leren zelfs universiteitstudenten de basis. Achter deze blokken zit immers nog altijd echte code."
       4:
         image: notes/frozen1_4.jpg
-        text: "A program is a set of instructions that tells a computer what to do. Let's build a code, or a program, that will help Elsa create a simple line. We will use this later to create more complex patterns."
+        text: Een programma is een reeks van instructies die vertellen aan een computer wat hij moet doen. Laat ons een code bouwen of een programma dat Elsa helpt om een eenvoudige lijn te maken. Later zullen we dit gebruiken om meer ingewikkelde patronen te maken.
       5:
         image: notes/frozen1_5.jpg
-        text: "Your screen is split into three main parts. On the left, is the ice surface where you'll run your program. The instructions for each level are written right below the surface."
+        text: Je scherm is opgedeeld in drie grote deler. Links is het ijsoppervlak waar je het programma uitvoert. De instructies voor iedere puzzel zijn vlak onder het oppervlak geschreven.
       6:
         image: notes/frozen1_6.jpg
-        text: This middle area is the toolbox, and each of these blocks is an action that Elsa and Anna can do.
+        text: Het middelste oppervlak is de gereedschapskist en elk van deze blokken zijn de acties die Elsa en Anna kunnen doen.
       7:
         image: notes/frozen1_7.jpg
-        text: |-
-          The white space on the right is called the workspace, and this is where we'll build our program. To move around the ice surface, you'll use the "Move Forward" block.
+        text: 'Het witte oppervlak rechts is de werkruimte en hier bouwen we ons programma. Om over het ijsoppervlak te bewegen gebruik je de "Beweeg vooruit" blok.'
       8:
         image: notes/frozen1_8.jpg
-        text: 'Here, the "Move Forward" block says, "move forward by 100 pixels." When we press "Run", what happens? Elsa moves forward a certain amount on the screen, 100 pixels in fact! Pixels are basically very tiny squares on your computer screen.'
+        text: 'Hier zegt het "Beweeg vooruit" blok, "beweeg vooruit met 100 pixels". Wat gebeurt er wanneer we op "Voer uit" drukken? Elsa zal een bepaalde afstand vooruit bewegen op het scherm, 100 pixels om precies te zijn! Piwels zijn in feite zeer kleine vierkantjes op je computerscherm.'
       9:
         image: notes/frozen1_9.jpg
-        text: 'The other block we have in this puzzle says "turn right by 90 degrees." And when we use this "Turn Right" block, that makes Elsa turn a certain amount. You can play around with how far you want Elsa to turn. The angle is measured from the path ahead of Elsa. So, this is a 90 degree turn. And this is a 120 degree turn.'
+        text: 'Het andere blok in deze puzzel zegr "Draai Rechts - 90 graden". Wanneer we deze "Draai Rechts" blok gebruiken zorgt dit ervoor dat Elsa een bepaalde draai maakt. Je kan er mee spelen hoe ver je Elsa wil laten draaien. De hoek is gemeten vanaf het pad voor Elsa. Dit is dus een draai van 90 graden. en dit is een draai van 120 graden.'
       10:
         image: notes/frozen1_10.jpg
-        text: Remember, you can change the number of pixels and degrees by clicking the arrows next to them.
+        text: Je kan het aantal pixels en graden wijzigen door het pijltje ernaast.
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg
-        text: "Hi, I’m Paola! Computers are really good at repeating actions. You can count to 10, 20, or 100. But a computer can count to a billion or a trillion. It won't get bored and it will only take a few seconds. Whether it's counting, or drawing, or anything--computers can repeat things hundreds or even billions of times."
+        text: 'Hallo, ik ben Paola! Computers zijn echt goed in het herhalen van acties. Je kan tellen tot 10,20 of 100. Een computer kan tellen tot een miljard of een biljoen en dit zal slechts enkele seconden duren. Of het nu gaat om tellen, tekenen of iets anders - computers kunnen dit honderden malen herhalen of zelfs miljarden malen.'
       2:
         image: notes/frozen2_2.jpg
-        text: 'In programming, we call this a loop. A loop is how you repeat your code over and over again. For the next puzzle, your goal is to help Anna create a square with the "Repeat" block.'
+        text: 'In programmeren noemen we dit een lus. Een lus gebruik je om code te herhalen. Voor de volgende puzzel is je doel om Anna een vierkant te helpen maken met het "Herhaal" blok.'
       3:
         image: notes/frozen2_3.jpg
-        text: 'Any blocks of code you put inside the "Repeat" block will be repeated in sequence, as many times as you want.'
+        text: |-
+          Gelijk welke blokken je binnen de "Herhaal' blok plaatst, deze zullen in volgorde worden uitgevoerd en dit zo vaak als je zelf wilt.
       4:
         image: notes/frozen2_4.jpg
-        text: 'To draw a square, you can use the "Move Forward" and "Turn Right" block 4 times. But the easier way is to tell the computer to "Move Forward" and "Turn Right by 90 degrees" once, and then tell it to repeat this pair of actions 4 times. To do that, you need to put the "Move Forward" and "Turn Right" block inside a "Repeat" block.'
+        text: 'Als je een vierkant wil tekenen kan je de "Beweeg vooruit" blok en de "Draai Rechts" blok 4 maal gebruiken. Maar de makkelijkere manier is om de "Beweeg vooruit" blok en de Draai Rechts - 90 graden" blok één keer te gebruiken en dan dit paar acties 4 keer te herhalen. Om dit te doen plaats je de "Beweeg vooruit" blok en de "Draai Rechts" blok in een "Herhaal" blok.'
       5:
         image: notes/frozen2_5.jpg
-        text: |-
-          Remember, you can change the number in the "Repeat" block to anything, and it will repeat what's inside the block that many times.
+        text: 'Je kan het nummer in het "Herhaal" blok veranderen in gelijk welke waarde en het zal wat er binnen de blok staat zoveel maal herhalen.'
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
-        text: Hi, I’m Chris Bosh. I’m a professional basketball player, and I coded in college.
+        text: Hallo, ben ik Chris Bosh. Ik ben een professionele basketbalspeler en ik heb gecodeerd op de universiteit.
       2:
         image: notes/frozen3_2.jpg
-        text: One of the most important concepts in computer science is how to define new commands. Most computer languages have only about 100 words or commands. And really, the art and magic is in defining your own new words out of these building blocks.
+        text: "Een van de belangrijkste concepten in de informatica is hoe je nieuwe opdrachten definiëert. De meeste computertalen hebben slechts 100 woorden of commando's. En echt de kunst en de magie bestaat er in je eigen nieuwe woorden te maken met behulp van deze bouwstenen."
       3:
         image: notes/frozen3_3.jpg
-        text: "Once you've taught a computer how to do an action once using this sequence of commands, you can make up your own name for that action so it's easy to repeat it later. When you define your own command and give it a name, that's called a function."
+        text: "Eens je een computer geleerd hebt om een actie te doen met behulp van een reeks commando's, kan je je eigen naam verzinnen voor deze actie, op deze manier is het makkelijk om deze later te herhalen. Wanneer je je eigen commando definieert en deze een naam geeft noemen we dit een functie."
       4:
         image: notes/frozen3_4.jpg
-        text: "Hi, I’m Jess. When programming with blocks, you would use functions if there are a set of actions you would like to use lots of times. For example, you've written code to create a square."
+        text: Hallo, ik ben Jess. Wanneer je programmeer met blokken kan je functies gebruiken wanneer je een reeks acties meerdere malen wil gebruiken. Bijvoorbeeld,je hebt je eigen code geschreven om een vierkant te maken.
       5:
         image: notes/frozen3_5.jpg
-        text: 'You can define this as a function called "create a square." '
+        text: 'Je kan dit definiëren als een functie genoemd "maak een vierkant" '
       6:
         image: notes/frozen3_6.jpg
-        text: Now you have a new block that you can use multiple times to create multiple squares.
+        text: Nu heb je een nieuwe blok die je meerdere keren kan gebruiken om meerdere vierkanten te maken.
       7:
         image: notes/frozen3_7.jpg
-        text: A lot of simple shapes can be used to create more complex patterns. In the next puzzle, the code you recently wrote to make a circle is available to you as a new function that can make circles of different sizes. Can you use it to help Elsa create intricate and beautiful patterns in the snow?
+        text: Veel simpele vormen kunnen gebruikt worden om meer complexe patronen te maken. In de volgende puzzel is de code die je recent schreef om een cirkel te maken beschikbaar als een functie, waarme je cirkels van verschillende grootte kan maken. Kan je deze gebruiken om Elsa te helpen om ingewikkelde en mooie patronen te maken in de sneeuw?
     C3_playlab_create_game:
       1:
         image: notes/playlab_1.png
-        text: "So far you've been making an animation or a story that does the exact same thing every time you run it. Now you can make an interactive game that you can actually play."
+        text: Tot nu toe maakte je een animatie of verhaal dat telkens hetzelfde deed wanneer je het uitvoert. Nu kan je een interactief spel maken dat je daadwerkelijk kan spelen.
       2:
         image: notes/playlab_2.png
         text: |-
-          There's the "when arrow" block and the "move actor" block. You can put these blocks together to move the actors around with the arrow keys.
+          Er is een "Wanneer pijl' blok en de "beweeg acteur" blok. Je kan deze blokken samenhangen om de acteurs te bewegen met behulp van de pijltjsetoetsen.
       3:
         image: notes/playlab_3.png
-        text: And there are some blocks that do stuff when actors collide or are clicked. Check them out and have fun!
+        text: En er zijn een aantal blokken die dingen doen wanneer acteurs botsen of aangeklikt worden. Probeer ze uit en heb plezier!
+    playlab_intro:
+      1:
+        image: notes/playlab_intro_1.png
+        text: We gaan games maken met behulp van Play Lab. Goede games hebben een verhaal, en elk verhaal heeft acteurs. We gaan leren hoe we onze acteurs zoals heksen, aliens en dieren laten praten, bewegen en interactie met elkaar laten hebben. Aan het einde van deze tutorial, kunt u een spel van niks tot iets maken en het delen met je vrienden.
+      2:
+        image: notes/playlab_intro_2.png
+        text: Je scherm is verdeeld in 3 delen. Aan de linker zijde wordt het programma uitgevoerd. De instructies voor elk level worden onderaan weergegeven.
+      3:
+        image: notes/playlab_intro_3.png
+        text: "Het middelste gedeelte is de gereedschapkist, en elk van deze blokken is een stuk code. Het witte gedeelte aan de rechterkant is de werkruimte en daar bouwen we onze progamma's."
+      4:
+        image: notes/playlab_intro_4.png
+        text: 'Om te beginnen, moet je blokken koppelen aan het oranje "when run" blok. Je kan meerdere blokken samenkoppelen door ze te slepen totdat je een gele lijn ziet, en dan zullen ze samengekoppelt worden.'
+      5:
+        image: notes/playlab_intro_5.png
+        text: 'In deze eerste puzzel is onze acteur een pinguïn en we laten hem "Hallo!" zeggen door een zeg-blok en deze vast te hangen aan de wanneer-uitvoeren blok en door "Hallo!" te typen. We laten de pinguïn ook bewegen door de beweeg rechts en beweeg links blokken te gebruiken. Wanneer je blokken op zijn plaats staan klik dan op de uitvoeren knop om te zien wat je geprogrammeerd hebt.'
+      6:
+        image: notes/playlab_intro_6.png
+        text: Ga aan de slag en op het einde zal je in staat zijn om je eigen spel te maken met verschillende soorten spelers die kunnen reageren, blij of verdrietig zijn, punten kunnen scoren of vuurballen gooien of zelfs verdwijnen. Het is helemaal aan jou welk spel je wil maken.
+    playlab_events:
+      1:
+        image: notes/playlab_events_1.png
+        text: Nu gaan we iets leren over iets wat programmeurs van spellen iedere dag gebruiken. Gebeurtenissen. Een gebeurtenis vertelt aan je programma om te luisteren wanneer er iets gebeurt. Wanneer dat iets gebeurt voert het een actie uit.
+      2:
+        image: notes/playlab_events_2.png
+        text: 'Enkele voorbeelden van gebeurtenissen zijn : luisteren voor een muisklik, een pijltjestoets of een tik op het scherm.'
+      3:
+        image: notes/playlab_events_3.png
+        text: 'Hier zorgen we ervoor dat de ruimterobot de aardbewoners groet wanneer een speler hem aanklikt. We gebruiken de "wanneer geklikt" blok en hangen hier de "zeg" blok aan. Wanneer de speler de ruimterobot aanklikt wordt alles wat aan de "wanneer geklikt" eventblok vasthangt uitgevoerd. Wat zegt je buitenaards wezen?'
+      4:
+        image: notes/playlab_events_4.png
+        text: 'Er zijn ook "wanneer pijl" blokken. Als je de "beweeg" blokken vasthangt aan deze kan je je acteurs op en neer en links en rechts laten bewegen. Stap voor stap wordt je spel meer interactief.'
+    playlab_repeat_forever:
+      1:
+        image: notes/playlab_repeat_forever_1.png
+        text: 'Dit is de "Herhaal voor altijd" blok. Alles wat binnen deze blok staat zal voor altijd blijven gebeuren in het spel.'
+      2:
+        image: notes/playlab_repeat_forever_2.png
+        text: 'Als we een acteur iets herhaaldelijk willen laten doen zonder dat de speler er iets voor moet doen, plaatsen we deze blokken in een "herhaal voor altijd" blok.'
+      3:
+        image: notes/playlab_repeat_forever_3.png
+        text: In de volgende puzzel is ons doel om de tovernaar de grenzen van het koninkrijk te laten patrouilleren van links naar rechts en dit steeds opnieuw. Als je nu leert hoe de herhaal opdrachten werken, bespaar je je later veel tijd wanneer je je eigen spel maakt.

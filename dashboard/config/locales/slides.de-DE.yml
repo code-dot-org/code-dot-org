@@ -45,9 +45,9 @@
           dann bewegt sich der Vogel im Labyrinth einen Schritt nach vorne.
       11:
         image: notes/hoc1_11.jpg
-        text: Um mehr als eine Aktion zu auszuführen, kannst du viele Bausteine in
-          den Arbeitsbereich ziehen und sie zusammenstecken. Der Vogel wird die Befehle
-          von oben nach unten abarbeiten.
+        text: Um mehr als eine Handlung ausführen zu lassen, kannst du viele Bausteine
+          auf deinen Arbeitsplatz ziehen und aneinandersetzen. Der Vogel wird die
+          Anweisungen von oben nach unten ausführen.
       12:
         image: notes/hoc1_12.jpg
         text: Wenn Du ein Programm reparieren und es nochmals versuchen möchtest,
@@ -225,45 +225,50 @@
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: Hi, ich heiße Saloni. Ich verwende Informatik um Probleme im Gesundheits-
-          und Medizinbereich zu lösen. Lass uns etwas über den "Wenn-Ansonsten"-Baustein
-          lernen. Er sieht ähnlich wie ein "Wenn"-Baustein aus, aber er hat einen
-          Zusatzteil am Ende der "Ansonsten" heißt.
+        text: Hallo, ich heiße Saloni. Ich benutze Informatik, um Probleme im Gesundheitswesen
+          und in der Medizin zu lösen. Wir wollen etwas über den "wenn ansonsten"-
+          Baustein lernen. Er sieht aus wie der "Wenn"- Baustein, hat aber noch einen
+          Teil am Ende, auf dem "ansonsten" steht.
       2:
         image: notes/hoc5_2.jpg
-        text: Wenn ich einen "gehe vorwärts"-Baustein, an der Stelle, wo es heißt
-          "tun", und einen "drehe links"-Baustein, wo es heißt "sonst", setzte, kann
-          der Zombie zwischen 2 Optionen wählen. Gibt es einen Weg geradeaus, bewegt
-          sich der Zombie vorwärts. Gibt es ist keinen Weg geradeaus, dreht sich der
-          Zombie nach links.
+        text: Wenn ich den "vorwärts bewegen"-Baustein an die Stelle setze, wo "machen"
+          steht, und einen "nach links drehen"-Baustein dorthin, wo "ansonsten" steht,
+          dann bedeutet das, dass der Zombie zwischen zwei Möglichkeiten wählt. Wenn
+          es einen Weg gibt, der geradeaus führt, dann wird der Zombie geradeaus gehen,
+          und andernfalls (wenn es keinen Weg gibt, der geradeaus führt), wird der
+          Zombie sich nach links drehen.
       3:
         image: notes/hoc5_3.jpg
-        text: Genau wie einen "Wenn"-Baustein, können wir einen "Wenn-Ansonsten"-Baustein
-          in einen "Wiederholen"-Baustein setzen, so dass der Zombie sich weiter bewegt
-          und der "Wenn-Ansonsten"-Baustein prüft, ob es einen Weg zum Drehen gibt.
+        text: "Genau wie den \"Wenn\"- Baustein können wir \"wenn ansonsten\"- Bausteine
+          in\n\"wiederholen\"- Bausteine einsetzen, so dass der Zobmbie sich weiter
+          bewegt und der \n\"wenn ansonsten\"- Baustein überprüft, ob eine Drehung
+          erfolgen muss.\n"
       4:
         image: notes/hoc5_4.jpg
-        text: Jetzt bewege die Zombies dahin, wo sie hingehören!
+        text: Jetzt bring die Zombies dahin, wo sie hingehören!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
-        text: An if-else statement is a decision between two things. Let's see how
-          we can use an if-else statement with our buddy Scrat the squirrel.
+        text: Eine "wenn ansonsten"- Anweisung ist eine Entscheidung zwischen zwei
+          Sachen. Wir wollen uns ansehen, wie wir eine "wenn ansonsten"- Anweisung
+          bei unserem Freund Scrat, dem Eichhörnchen, anwenden können.
       2:
         image: notes/saloni_ifelse_scrat2.jpg
-        text: This block looks the same as the "if" block, but there's an extra part
-          at the bottom that says "else". If I put a "move forward" block where it
-          says "do" and a "turn left" block where it says "else", that means Scrat
-          the squirrel will move forward if there's a path ahead. If there's not a
-          path ahead, Scrat will turn left.
+        text: 'Dieser Baustein sieht aus wie der "Wenn"- Baustein, hat aber noch einen
+          Teil am Ende, auf dem "ansonsten" steht. Wenn ich einen "vorwärts bewegen"-
+          Baustein dahin setze, wo "machen" steht und einen "nach links drehen"-Baustein
+          dorthin, wo "ansonsten" steht, bedeutet das: Das Eichhörnchen wird sich
+          vorwärts bewegen, wenn es einen Weg geradeaus gibt. Wenn es keinen Weg geradeaus
+          gibt, wird sich  Scrat nach links drehen.'
       3:
         image: notes/saloni_ifelse_scrat3.jpg
-        text: It's making a decision and doing one of the two actions based on that
-          decision. And just like "if" blocks, you can put "if-else" blocks inside
-          "repeat" blocks.
+        text: Es trifft eine Entscheidung and führt eine der beiden möglichen Handlungen
+          aus. Und genau wie "wenn"- Bausteine, kann man "wenn-ansonsten"-Bausteine
+          in "wiederholen"- Bausteine einsetzen.
       4:
         image: notes/saloni_ifelse_scrat4.jpg
-        text: Now let's help Scrat the squirrel get that acorn!
+        text: Jetzt wollen wir Scrat dem Eichhörnchen dabei helfen, diese Eichel zu
+          kriegen!
     function:
       1:
         image: notes/stage13_1.jpg
@@ -387,8 +392,9 @@
     frozen_intro:
       1:
         image: notes/frozen1_1.jpg
-        text: Hi, my name is Lyndsey. I model, act, and write my own apps. Let's use
-          code to join Anna and Elsa as they explore the magic and beauty of ice.
+        text: Hallo, ich heiße Lyndsey. Ich bin Model, Schauspielerin und schreibe
+          meinen eigenen Apps. Wir wollen ein Programm schreiben, um Anna und Elsa
+          zu treffen, wenn sie den Zauber und die Schönheit des Eises erkunden.
       2:
         image: notes/frozen1_2.jpg
         text: You'll create snowflakes and patterns as you ice skate and make a winter
@@ -466,8 +472,8 @@
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
-        text: Hi, I’m Chris Bosh. I’m a professional basketball player, and I coded
-          in college.
+        text: Hi, ich bin Chris Bosh. Ich bin ein professioneller Basketball Spieler
+          und ich habe in der Schule programmiert.
       2:
         image: notes/frozen3_2.jpg
         text: One of the most important concepts in computer science is how to define
@@ -512,3 +518,75 @@
         image: notes/playlab_3.png
         text: And there are some blocks that do stuff when actors collide or are clicked.
           Check them out and have fun!
+    playlab_intro:
+      1:
+        image: notes/playlab_intro_1.png
+        text: We're going to create games using Play Lab. Good games have a story,
+          and every story has actors. We'll learn how to make our actors like witches,
+          alinens, and animals speak, move, and interact with each other. By the end
+          of this tutorial, you can build a game from scratch and share it with your
+          friends.
+      2:
+        image: notes/playlab_intro_2.png
+        text: Your screen is split into 3 main parts. On the left is the game space
+          where your program will run. The instructions for each level are written
+          below.
+      3:
+        image: notes/playlab_intro_3.png
+        text: The middle area is the toolbox, and each of these blocks is a piece
+          of code. The white space on the right is called the workspace and this is
+          where we'll build our program.
+      4:
+        image: notes/playlab_intro_4.png
+        text: To start off, you'll need to link your blocks to the orange "when run"
+          block. You can link multiple blocks together by dragging them out until
+          you see the yellow line, and then they'll snap together.
+      5:
+        image: notes/playlab_intro_5.png
+        text: In this first puzzle, our actor is a penguin and we'll be making it
+          say "Hello!" by dragging the say block out, linking it to the when run block,
+          and typing in "Hello." We can also make the penguin move by using the move
+          right and move left blocks. Once you have your blocks in place, hit the
+          run button to see what you've programmed.
+      6:
+        image: notes/playlab_intro_6.png
+        text: Get started and by the end, you'll be able to create your own game with
+          all kinds of players that can interact, turn happy or sad, score points,
+          or throw fireballs, or even vanish each other. It's all up to you and the
+          game you want to make.
+    playlab_events:
+      1:
+        image: notes/playlab_events_1.png
+        text: Now, we're going to learn about something that all game programmers
+          use everyday. They're called events. An event tells your program to listen
+          for when something happens. When that thing happens, it performs an action.
+      2:
+        image: notes/playlab_events_2.png
+        text: Some examples of events are listening for a mouse click, an arrow button,
+          or a tap on the screen.
+      3:
+        image: notes/playlab_events_3.png
+        text: Here, we're going to make the space bot greet the earthlings when a
+          player clicks on him. We'll use the "when clicked" block and attach the
+          "say" block to it. When the player clicks on the space bot, everything attached
+          to this "when clicked" event block will be performed. What does your alien
+          say?
+      4:
+        image: notes/playlab_events_4.png
+        text: There are also "when arrow" blocks. If you link the "move" blocks to
+          these, you can start to move your actors up, down, left, or right. Step
+          by step, your game is getting more interactive.
+    playlab_repeat_forever:
+      1:
+        image: notes/playlab_repeat_forever_1.png
+        text: This is the "repeat forever" block. Anything inside this block will
+          happen forever in the game.
+      2:
+        image: notes/playlab_repeat_forever_2.png
+        text: If we want an actor to do something repeatedly, without the player having
+          to do anything, we'll put those blocks inside the "repeat forever" block.
+      3:
+        image: notes/playlab_repeat_forever_3.png
+        text: In this next puzzle, our goal is to help the wizard patrol the boundaries
+          of the kingdom, left and right continuously. Learning how the repeat commands
+          works, will save you a ton of time later when you build your own game.

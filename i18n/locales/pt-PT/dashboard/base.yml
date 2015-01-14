@@ -1,4 +1,4 @@
-pt-PT:
+pt:
   activerecord:
     errors:
       messages:
@@ -36,6 +36,7 @@ pt-PT:
   of: de
   more: MAIS
   less: MENOS
+  beta: beta
   try_hoc: 'Tenta a "Hora do código", clica aqui >> '
   try_k8intro: Tenta a nossa Introdução ao Curso de Ciência da Computação (15-25 horas) para o 3.º ciclo do ensino básico
   k8intro: Introdução ao curso de ciência da computação (15-25 horas) para o 3.º ciclo do ensino básico
@@ -298,10 +299,10 @@ pt-PT:
     email_resend_confirm: Resend confirmation instructions
     new_password_hint: (deixa em branco se não quiseres alterá-lo)
     current_password_hint: (precisamos da tua palavra-passe para confirmar as tuas alterações)
-    cancel:
-      title: Cancelar a minha conta
-      hint: Infeliz?
-      button: Cancelar a minha conta
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Concluído
     tried: Tentado
@@ -511,3 +512,7 @@ pt-PT:
     completed_too_many_blocks: completed, too many blocks
     completed_perfect: completed, perfect
     furthest_level_attempted: furthest level attempted
+  studio:
+    courses_working_on: "Courses you're working on"
+    completed_courses: Completed courses
+    all_courses: All courses

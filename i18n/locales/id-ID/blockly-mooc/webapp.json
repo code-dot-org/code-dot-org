@@ -11,7 +11,6 @@
   "createHtmlBlock":"buat blok html",
   "createHtmlBlockTooltip":"Membuat sebuah blok HTML di aplikasi.",
   "finalLevel":"Selamat! Anda telah menyelesaikan teka-teki terakhir.",
-  "makeYourOwn":"Buatlah Aplikasimu Sendiri",
   "nextLevel":"Selamat! Kamu telah menyelesaikan teka-teki ini.",
   "no":"Tidak",
   "numBlocksNeeded":"Teka-teki ini dapat diselesaikan dengan %1 blok.",
@@ -22,10 +21,10 @@
   "repeatForeverTooltip":"Jalankan tindakan di blok ini secara berulang selagi aplikasi berjalan.",
   "shareWebappTwitter":"Lihatlah aplikasi yang saya buat. Saya membuatnya sendiri dengan @codeorg",
   "shareGame":"Bagikan aplikasi Anda:",
-  "stepIn":"Step in",
-  "stepOver":"Step over",
-  "stepOut":"Step out",
+  "stepIn":"Masuk",
+  "stepOver":"Melewati",
+  "stepOut":"Keluar",
   "turnBlack":"hitamkan",
-  "turnBlackTooltip":"Turns the screen black.",
+  "turnBlackTooltip":"Membuat layar berwarna hitam.",
   "yes":"Ya"
 }

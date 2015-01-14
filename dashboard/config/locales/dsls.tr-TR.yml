@@ -4,14 +4,14 @@
       Blocks to Bools 1:
         Convert Blocks to Math: Blokları Matematiksel ifadeye çevir
         Type out the arithmetic expression that matches this code: Bu kodla eşleşen
-          cebirsel ifadeyi yazın
+          aritmetik ifadeyi yazın
         /script_assets/msm/unit6/blockstomath1.png: /script_assets/msm/unit6/blockstomath1.png
         (4+5) > 9: (4+5) > 9
         Type the arithmetic expression here: Aritmetik ifadeyi buraya yazın
       Blocks to Bools 2:
         Convert Blocks to Math: Blokları Matematiksel ifadeye çevir
         Type out the arithmetic expression that matches this code: Bu kodla eşleşen
-          cebirsel ifadeyi yazın
+          aritmetik ifadeyi yazın
         /script_assets/msm/unit6/blockstomath2.png: /script_assets/msm/unit6/blockstomath2.png
         (10 > 11) or (7 <= 9): (10 > 11) veya (7 <= 9)
         (10 > 11) OR (7 <= 9): (10 > 11) VEYA (7 <= 9)
@@ -20,7 +20,7 @@
       Blocks to Bools 3:
         Convert Blocks to Math: Blokları Matematiksel ifadeye çevir
         Type out the arithmetic expression that matches this code: Bu kodla eşleşen
-          cebirsel ifadeyi yazın
+          aritmetik ifadeyi yazın
         /script_assets/msm/unit6/blockstomath3.png: /script_assets/msm/unit6/blockstomath3.png
         (5 < 10) and (10 < 15): (5 < 10) ve  (10 < 15)
         (5 < 10) AND (10 < 15): (5 < 10) VE (10 < 15)
@@ -29,7 +29,7 @@
       Blocks to Bools 4:
         Convert Blocks to Math: Blokları Matematiksel ifadeye çevir
         Type out the arithmetic expression that matches this code: Bu kodla eşleşen
-          cebirsel ifadeyi yazın
+          aritmetik ifadeyi yazın
         /script_assets/msm/unit6/blockstomath4.png: /script_assets/msm/unit6/blockstomath4.png
         ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)): ((1 < x) VE (x < 5)) VEYA
           ((8 < x) VE (x < 10))
@@ -41,46 +41,48 @@
       Blocks to Math 1:
         Convert Blocks to Math: Blokları Matematiksel ifadeye çevir
         Type out the arithmetic expression that matches this code: Bu kodla eşleşen
-          cebirsel ifadeyi yazın
-        /script_assets/msm/unit1/blockstomath1.png: /script_assets/msm/unit1/blockstomath1.png
+          aritmetik ifadeyi yazın
+        Blocks to Math 1.blocks.start_blocks, 200: Blocks to Math 1.blocks.start_blocks,
+          200
         4 + 5: 4+5
         Type the arithmetic expression here: Aritmetik ifadeyi buraya yazın
       Blocks to Math 2:
         Convert Blocks to Math: Blokları Matematiksel ifadeye çevir
         Type out the arithmetic expression that matches this code: Bu kodla eşleşen
-          cebirsel ifadeyi yazın
-        /script_assets/msm/unit1/blockstomath2.png: /script_assets/msm/unit1/blockstomath2.png
+          aritmetik ifadeyi yazın
+        Blocks to Math 2.blocks.start_blocks, 200: Blocks to Math 2.blocks.start_blocks,
+          200
         7 * 6: 7 * 6
         Type the arithmetic expression here: Aritmetik ifadeyi buraya yazın
       Blocks to Math 3:
         Convert Blocks to Math: Blokları Matematiksel ifadeye çevir
         Type out the arithmetic expression that matches this code: Bu kodla eşleşen
-          cebirsel ifadeyi yazın
-        /script_assets/msm/unit1/blockstomath3.png: /script_assets/msm/unit1/blockstomath3.png
+          aritmetik ifadeyi yazın
+        Blocks to Math 3.blocks.start_blocks: Blocks to Math 3.blocks.start_blocks
         (2 * 3) - (1 + 0): (2 * 3) - (1 + 0)
         2 * 3 - (1 + 0): 2 * 3 - (1 + 0)
         Type the arithmetic expression here: Aritmetik ifadeyi buraya yazın
       Blocks to Math 4:
         Convert Blocks to Math: Blokları Matematiksel ifadeye çevir
         Type out the arithmetic expression that matches this code: Bu kodla eşleşen
-          cebirsel ifadeyi yazın
-        /script_assets/msm/unit1/blockstomath4.png: /script_assets/msm/unit1/blockstomath4.png
+          aritmetik ifadeyi yazın
+        Blocks to Math 4.blocks.start_blocks: Blocks to Math 4.blocks.start_blocks
         (5 + 8) - 12: (5 + 8) - 12
         5 + 8 - 12: 5 + 8 - 12
         Type the arithmetic expression here: Aritmetik ifadeyi buraya yazın
       Blocks to Math 5:
         Convert Blocks to Math: Blokları Matematiksel ifadeye çevir
         Type out the arithmetic expression that matches this code: Bu kodla eşleşen
-          cebirsel ifadeyi yazın
-        /script_assets/msm/unit1/blockstomath5.png: /script_assets/msm/unit1/blockstomath5.png
+          aritmetik ifadeyi yazın
+        Blocks to Math 5.blocks.start_blocks: Blocks to Math 5.blocks.start_blocks
         (-2) * (-6):
         - 2 * -6: -2 * -6
         Type the arithmetic expression here: Aritmetik ifadeyi buraya yazın
       Blocks to Math 6:
         Convert Blocks to Math: Blokları Matematiksel ifadeye çevir
         Type out the arithmetic expression that matches this code: Bu kodla eşleşen
-          cebirsel ifadeyi yazın
-        /script_assets/msm/unit1/blockstomath6.png: /script_assets/msm/unit1/blockstomath6.png
+          aritmetik ifadeyi yazın
+        Blocks to Math 6.blocks.start_blocks: Blocks to Math 6.blocks.start_blocks
         ((4 - 1) * (-2)) + 12: ((4 - 1) * (-2)) + 12
         ((4 - 1) * -2) + 12: ((4 - 1) * -2) + 12
         (4 - 1) * (-2) + 12: (4 - 1) * (-2) + 12
@@ -89,8 +91,8 @@
       Blocks to Math 7:
         Convert Blocks to Math: Blokları Matematiksel ifadeye çevir
         Type out the arithmetic expression that matches this code: Bu kodla eşleşen
-          cebirsel ifadeyi yazın
-        /script_assets/msm/unit1/blockstomath7.png: /script_assets/msm/unit1/blockstomath7.png
+          aritmetik ifadeyi yazın
+        Blocks to Math 7.blocks.start_blocks: Blocks to Math 7.blocks.start_blocks
         10 / (2 * (3 + 1)): 10 / (2 * (3 + 1))
         Type the arithmetic expression here: Aritmetik ifadeyi buraya yazın
       text match test:
@@ -103,3 +105,47 @@
         (9-3)+4: 
         9-3+4: 
         Type the arithmetic expression here: Aritmetik ifadeyi buraya yazın
+    contract_match:
+      Design Recipe 1.contract:
+        Design Recipe 1 Contract: Tasarım tarifi 1 sözleşme
+        0: ?"wide-rect" olarak anılan işlev için bir sözleşme yaz. Bu işlev bir dikdörtgen
+          yaratmak için yükseklik ve iki katı kadar geniş ve uzun olan bir renk verir.
+        1: ': Write the contract for function called "wide-rect" which creates a rectangle
+          of given height and color that is twice as wide as it is tall.'
+        wide-rect|Image|height:Number|color:string: wide-rect|Image|height:Number|color:string
+      Enter name here:
+        Enter title here: Başlığı buraya girin
+        Enter prompt here: Bilgiyi buraya girin
+        Contract Name|Number|Domain1:Number|Domain2:string: Sözleşme adı|Numara|Alan1:Numara|Alan2:Dizi
+      Eval Contracts 1 B:
+        Eval Contracts 1 B: Eval sözleşmeleri 1 B
+        Write a contract for the star function: Yıldız işlevi için bir sözleşme yaz
+        Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks,
+          300
+        star|image|radius:Number|style:string|color:string: Yıldız|görüntü|yarıçap:Numara|stil:dizi|renk:dizi
+      Eval Contracts 2 B:
+        Eval Contracts 2 B: Eval sözleşmeleri 1 B
+        Write a contract for the rotate function: Döndürme işlevi için bir sözleşme
+          yaz
+        Eval Contracts 2 A.solution_blocks, 300: Eval sözleşmeleri 2 A.çözüm_bloklar,
+          300
+        rotate|image|degrees:Number|image:image: Döndür|görüntü|Derece:Numara|görüntü:görüntü
+      Eval Contracts 3 B:
+        Eval Contracts 3 B: Eval sözleşmeleri 1 B
+        Write a contract for the text function: Metin işlevi için bir sözleşme yaz
+        Eval Contracts 3 A.solution_blocks, 300: Eval sözleşmeleri 2 A.çözüm_bloklar,
+          300
+        text|image|string:string|size:Number|color:string: Metin|görüntü|dizi:dizi|boyut:Numara|Renk:dizi
+      Eval Contracts 4 B:
+        Eval Contracts 4 B: Eval sözleşmeleri 4 B
+        Write a contract for the scale function: Ölçek işlevi için bir sözleşme yaz
+        Eval Contracts 4 A.solution_blocks, 300: Eval sözleşmeleri 4 A.çözüm_bloklar,
+          300
+        scale|image|factor:Number|image:image: Ölçek|görüntü|Faktör:Numara|görüntü:görüntü
+      Eval Design Recipe 1.contract:
+        Design Recipe 1 Contract: Tasarım tarifi 1 sözleşme
+        0: ?"wide-rect" olarak anılan işlev için bir sözleşme yaz. Bu işlev bir dikdörtgen
+          yaratmak için yükseklik ve iki katı kadar geniş ve uzun olan bir renk verir.
+        1: ': Write the contract for function called "wide-rect" which creates a rectangle
+          of given height and color that is twice as wide as it is tall.'
+        wide-rect|Image|height:Number|color:string: wide-rect|Image|height:Number|color:string

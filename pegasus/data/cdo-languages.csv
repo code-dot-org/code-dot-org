@@ -1,36 +1,39 @@
-code_s!,name_s
-ar,لعربية
-az,Azərbaycan dili
-bg,български
-ca,Català
-cs,Čeština
-da,Dansk
-de,Deutsch
-el,ελληνικά
-en,English
-es,Español
-fa,فارسی
-fi,Suomi
-fr,Français
-he,עברית
-hu,Magyar
-id,Bahasa Indonesia
-is,Íslenska
-it,Italiano
-ja,日本語
-ko,한국어
-lt,Lietuvių
-lv,Latviešu
-nl,Nederlands
-no,Norsk
-pl,Język polski
-pt-br,Português (Brasil)
-pt-pt,Português (Portugal)
-ro,Română
-ru,Pусский
-sr,Cрпски
-sv,Svenska
-tr,Türkçe
-uk,Українська
-zh-tw,繁體字
-zh-cn,简体字
+code_s!,name_s,english_name_s
+ar,لعربية,Arabic
+az,Azərbaycan dili,Azerbaijani
+bg,български,Bulgarian
+ca,Català,Catalan
+cs,Čeština,Czech
+da,Dansk,Danish
+de,Deutsch,German
+el,ελληνικά,Greek
+en,English,English
+es,Español,Spanish
+fa,فارسی,Persian
+fi,Suomi,Finnish
+fr,Français,French
+he,עברית,Hebrew
+hr,Hrvatski,Croatian
+hu,Magyar,Hungarian
+id,Bahasa Indonesia,Indonesian
+is,Íslenska,Icelandic
+it,Italiano,Italian
+ja,日本語,Japanese
+ko,한국어,Korean
+lt,Lietuvių,Lithuanian
+lv,Latviešu,Latvian
+nl,Nederlands,Dutch
+nn,Nynorsk,Norwegian
+no,Norsk,Norwegian (Nynorsk)
+pl,Język polski,Polish
+pt-br,Português (Brasil),Portuguese (Brazil)
+pt-pt,Português (Portugal),Portuguese (Portugal)
+ro,Română,Romanian
+ru,Pусский,Russian
+sl,Slovenščina,Slovenian
+sr,Cрпски,Serbian
+sv,Svenska,Swedish
+tr,Türkçe,Turkish
+uk,Українська,Ukrainian
+zh-tw,繁體字,Chinese (Traditional)
+zh-cn,简体字,Chinese (Simplified)

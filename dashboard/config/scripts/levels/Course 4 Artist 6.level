@@ -31,17 +31,17 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat">
+            <block type="controls_repeat" movable="false">
               <title name="TIMES">???</title>
-              <statement name="DO">
-                <block type="controls_repeat">
+              <statement name="DO" movable="false">
+                <block type="controls_repeat" movable="false">
                   <title name="TIMES">3</title>
                   <statement name="DO">
-                    <block type="draw_move_by_constant">
+                    <block type="draw_move_by_constant" movable="false">
                       <title name="DIR">moveForward</title>
                       <title name="VALUE">100</title>
                       <next>
-                        <block type="draw_turn_by_constant">
+                        <block type="draw_turn_by_constant" movable="false">
                           <title name="DIR">turnLeft</title>
                           <title name="VALUE">120</title>
                         </block>
@@ -49,7 +49,7 @@
                     </block>
                   </statement>
                   <next>
-                    <block type="draw_turn_by_constant_dropdown">
+                    <block type="draw_turn_by_constant_dropdown" movable="false">
                       <title name="DIR">turnRight</title>
                       <title name="VALUE" config="45,60,90,120,180">???</title>
                     </block>

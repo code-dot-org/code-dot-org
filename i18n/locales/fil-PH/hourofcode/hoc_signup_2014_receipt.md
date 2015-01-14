@@ -6,6 +6,12 @@ from: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;
 
 <% hostname = CDO.canonical_hostname('hourofcode.com') %>
 
+<% if @country == 'ro' %>
+
+Va multumim pentru inregistrare. Daca aveti nevoie de ajutor sau aveti orice intrebare contactati Echipa Hour of Code Romania la adresa: hoc@adfaber.org.
+
+<% end %>
+
 # Maraming salamat sa pagsama bilang host ng Hour of Code!
 
 **EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](http://<%= hostname %>/prizes)
@@ -22,25 +28,17 @@ Sabihin sa iyong mga kaibigan ang tungkol sa #HourOfCode.
 
 <% end %>
 
-## 3. Ask your employer to get involved
+## 3. Tanungin ang iyong employer na makibahagi
 
 [Send this email](http://<%= hostname %>/resources#email) to your manager, or the CEO. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf).
 
-## 4. Promote Hour of Code within your community
+## 4. I-promote ang Hour of Code sa iyong komunidad
 
 Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
 
-## 5. Ask a local elected official to support the Hour of Code
+## 5. Hingin ang tulong ng isang lokal na opisyal para sumuporta sa Hour of Code
 
 [Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
-
-<% if @country == 'ro' %>
-
-Multumim ca ne-ai anuntat despre evenimentul tau! Anunta-ne daca doresti informatii suplimentare sau daca ai intrebari. Hai sa facem istorie impreuna!
-
-Echipa Hour of Code Romania hoc@adfaber.org
-
-<% end %>
 
 * * *
 

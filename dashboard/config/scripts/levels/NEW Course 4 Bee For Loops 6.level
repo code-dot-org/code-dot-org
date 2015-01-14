@@ -20,7 +20,8 @@
     "instructions": "The last number in your for loop is called the \"increment,\"  and each time the loop is run the counter variable changes by the increment. Try collecting these flowers using an increment of 2.",
     "ideal": "9",
     "use_modal_function_editor": "false",
-    "use_contract_editor": "false"
+    "use_contract_editor": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
@@ -29,7 +30,7 @@
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="controls_for" inline="true">
-              <title name="VAR">Counter</title>
+              <title name="VAR">counter</title>
               <value name="FROM">
                 <block type="math_number">
                   <title name="NUM">1</title>
@@ -52,7 +53,7 @@
                     <block type="controls_repeat_ext" inline="true">
                       <value name="TIMES">
                         <block type="variables_get">
-                          <title name="VAR">Counter</title>
+                          <title name="VAR">counter</title>
                         </block>
                       </value>
                       <statement name="DO">
@@ -77,7 +78,7 @@
     <required_blocks>
       <xml>
         <block type="controls_for" inline="true">
-          <title name="VAR">Counter</title>
+          <title name="VAR">counter</title>
           <value name="FROM">
             <block type="math_number">
               <title name="NUM">1</title>
@@ -100,7 +101,7 @@
         <block type="controls_repeat_ext" inline="true">
           <value name="TIMES">
             <block type="variables_get">
-              <title name="VAR">Counter</title>
+              <title name="VAR">counter</title>
             </block>
           </value>
         </block>

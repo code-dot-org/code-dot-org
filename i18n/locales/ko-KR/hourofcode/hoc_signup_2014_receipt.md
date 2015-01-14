@@ -6,6 +6,12 @@ from: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;
 
 <% hostname = CDO.canonical_hostname('hourofcode.com') %>
 
+<% if @country == 'ro' %>
+
+Va multumim pentru inregistrare. Daca aveti nevoie de ajutor sau aveti orice intrebare contactati Echipa Hour of Code Romania la adresa: hoc@adfaber.org.
+
+<% end %>
+
 # Hour of Code! 행사를 개최하는데 가입해 주셔서 감사합니다.
 
 **모든**Hour of Code 개최자는 10GB의 Dropbox 공간이나 $10 상당의 Skype 크레딧을 받게됩니다. [자세히](http://<%= hostname %>/prizes)
@@ -18,13 +24,13 @@ from: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;
 
 ## 2. 여러분의 모든 학교에 Hour of Code 를 요청하세요.
 
-[이 이메일 보내기](http://<%= hostname %>/resources#email) 또는 [교장선생님에게 이 안내자료를 전달해 주세요.](http://<%= hostname %>/files/schools-handout.pdf)
+[이메일 보내기](http://<%= hostname %>/resources#email) 또는 [교장선생님에게 이 안내자료를 전달해 주세요.](http://<%= hostname %>/files/schools-handout.pdf)
 
 <% end %>
 
 ## 3. 여러분의 직장 상사에게 함께 참여하도록 요청해 보세요.
 
-[이 이메일 보내기](http://<%= hostname %>/resources#email) 직장 상사 또는 회사대표에게 [이 안내자료를 전달해 주세요.](http://<%= hostname %>/resources/hoc-one-pager.pdf).
+[이메일 보내기](http://<%= hostname %>/resources#email) 직장 상사 또는 회사대표에게 [이 안내자료를 전달해 주세요.](http://<%= hostname %>/resources/hoc-one-pager.pdf).
 
 ## 4. Hour of Code를 소속 단체나 조직에 안내해 주세요.
 
@@ -32,15 +38,7 @@ from: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;
 
 ## 5. 지역 의원 등에게 Hour of Code 를 지원해달라고 요청하세요.
 
-[이 이메일을](http://<%= hostname %>/resources#politicians), 여러분의 시장, 지역 의회, 학교운영위원회 등에 보내주세요. 또는, [이 안내자료를 전달해 주셔서,](http://<%= hostname %>/resources/hoc-one-pager.pdf) 여러분의 학교에 방문할 수 있도록 초대해 주세요.
-
-<% if @country == 'ro' %>
-
-Multumim ca ne-ai anuntat despre evenimentul tau! Anunta-ne daca doresti informatii suplimentare sau daca ai intrebari. Hai sa facem istorie impreuna!
-
-Echipa Hour of Code Romania hoc@adfaber.org
-
-<% end %>
+[이메일 보내기](http://<%= hostname %>/resources#politicians) 시장, 시의회, 학교운영위원회에게 보내 주세요. 또는 [이 유인물](http://<%= hostname %>/resources/hoc-one-pager.pdf) 을 보내서 여러분의 학교에 초청하세요.
 
 * * *
 

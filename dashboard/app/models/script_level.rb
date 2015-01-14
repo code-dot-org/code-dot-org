@@ -2,9 +2,10 @@
 # A Script has one or more Levels, and a Level can belong to one or more Scripts
 class ScriptLevel < ActiveRecord::Base
   belongs_to :level
-  belongs_to :script
-  belongs_to :stage
+  belongs_to :script, inverse_of: :script_levels
+  belongs_to :stage, inverse_of: :script_levels
   acts_as_list scope: :stage
+  has_many :callouts, inverse_of: :script_level
 
   NEXT = 'next'
 
@@ -13,7 +14,14 @@ class ScriptLevel < ActiveRecord::Base
   attr_accessor :user_level
 
   def next_level
-    script.script_levels.where(["chapter > ?", self.chapter]).order('chapter asc').first
+    cached_script = Script.get_from_cache(self.script_id) if self.script.should_be_cached?
+    if cached_script
+      i = cached_script.script_levels.index(self)
+      return nil if i.nil? || i == cached_script.script_levels.length
+      cached_script.script_levels[i + 1]
+    else
+      script.script_levels.where(["chapter > ?", self.chapter]).order('chapter asc').first
+    end
   end
 
   def next_progression_level
@@ -24,22 +32,44 @@ class ScriptLevel < ActiveRecord::Base
     valid_progression_level? ? self : next_progression_level
   end
 
+  def cached_valid_progression_level?
+    cached_script = Script.get_from_cache(script_id)
+    cached_script_level = cached_script.script_levels.to_a.find{|sl| sl.id == self.id}
+    return false if cached_script_level.level.unplugged?
+    return false if cached_script_level.stage && cached_script_level.stage.unplugged?
+    true
+  end
+
   def valid_progression_level?
+    return cached_valid_progression_level? if Script.should_be_cached?(script_id)
     return false if level.unplugged?
     return false if stage && stage.unplugged?
     true
   end
 
   def previous_level
-    if self.stage
-      self.higher_item
+    cached_script = Script.get_from_cache(self.script_id) if self.script.should_be_cached?
+    if cached_script
+      i = cached_script.script_levels.index(self)
+      return nil if i.nil? || i == 0
+      cached_script.script_levels[i - 1]
     else
-      self.script.try(:get_script_level_by_chapter, self.chapter - 1)
+      script.script_levels.where(["chapter < ?", self.chapter]).order('chapter desc').first
+    end
+  end
+
+  def cached_last?
+    cached_script = Script.get_from_cache(self.script_id) if self.script.should_be_cached?
+    if cached_script
+      i = cached_script.script_levels.index(self)
+      return i == cached_script.script_levels.length
+    else
+      self.last?
     end
   end
 
   def end_of_stage?
-    stage ? (self.last?) :
+    stage ? (cached_last?) :
       next_progression_level && (level.game_id != next_progression_level.level.game_id)
   end
 
@@ -76,12 +106,14 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def stage_or_game_total
-    stage ? stage.script_levels.count :
-    script.script_levels_from_game(level.game_id).count
+    @@stage_or_game_total ||= {}
+    @@stage_or_game_total[self.id] ||=
+      stage ? stage.script_levels.count :
+              script.script_levels_from_game(level.game_id).count
   end
 
   def self.cache_find(id)
-    @@script_level_map ||= ScriptLevel.includes(:level, :script).index_by(&:id)
+    @@script_level_map ||= ScriptLevel.includes([{level: [:game, :concepts]}, :script]).index_by(&:id)
     @@script_level_map[id]
   end
 end

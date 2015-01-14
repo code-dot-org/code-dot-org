@@ -91,6 +91,14 @@ Blockly.FieldTextInput.prototype.showEditor_ = function() {
   var div = Blockly.WidgetDiv.DIV;
   // Create the input.
   var htmlInput = goog.dom.createDom('input', 'blocklyHtmlInput');
+  if (this.changeHandler_ === Blockly.FieldTextInput.numberValidator) {
+    htmlInput.setAttribute('type', 'number');
+    htmlInput.setAttribute('step', 'any');
+  } else if (this.changeHandler_ === Blockly.FieldTextInput.nonnegativeIntegerValidator) {
+    htmlInput.setAttribute('type', 'number');
+    // Trigger the numeric keyboard on iOS.
+    htmlInput.setAttribute('pattern', '\\d*');
+  }
   Blockly.FieldTextInput.htmlInput_ = htmlInput;
   div.appendChild(htmlInput);
 
@@ -106,6 +114,11 @@ Blockly.FieldTextInput.prototype.showEditor_ = function() {
     htmlInput.select();
   }
 
+  // Bind to keydown -- prevent Delete from removing the block in iOS.
+  htmlInput.onKeyUpWrapper_ =
+      Blockly.bindEvent_(htmlInput, 'keydown', this, function(e) {
+        e.stopPropagation();
+      });
   // Bind to keyup -- trap Enter and Esc; resize after every keystroke.
   htmlInput.onKeyUpWrapper_ =
       Blockly.bindEvent_(htmlInput, 'keyup', this, this.onHtmlInputChange_);

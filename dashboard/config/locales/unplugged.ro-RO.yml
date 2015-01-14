@@ -237,11 +237,13 @@
           un algoritm simplu există o mulţime de moduri de a-l folosi. Dacă doriţi
           să vă asiguraţi că toată lumea termină cu acelaşi lucru, atunci algoritmul
           dumneavoastră are nevoie de mai multe detalii.
+        video: C4_unplugged_algorithms
       EnvelopeVariables:
         title: Plic Variabile
         desc: Variabilele permit libertate în informatică.  Această lecţie vă ajută
           să înțelegeți ce sunt variabile şi cum le putem folosi în moduri diferite.
           Utilizați această activitate înainte de (sau în legătură cu) lecţia pe abstractizare.
+        video: C4_unplugged_variables
       MadGlibs:
         title: Mad Glibs
         desc: Abstractizarea este una dintre cele mai importante aptitudini pentru
@@ -249,10 +251,12 @@
           dvs. să analizeze povestiri pentru a găsi diferenţe, astfel încât să poată
           generaliza. Acele povestiri generalizate vor deveni șabloane pentru altele
           noi, distractive și ciudate.
+        video: C4_unplugged_madlibs
       ForLoopFun:
         title: Distracție cu repetiția Pentru
         desc: Ştim că repetițiile ne permit să reluăm lucruri iar și iar, dar acum
           avem de gând să învăţăm cum să folosim repetiții cu structură extra încorporată.
+        video: C4_unplugged_forloops
       SongwritingWithParameters:
         title: Compozitie cu parametri
         desc: 'Una dintre structurile cele mai magnifice din lumea informaticii este
@@ -260,6 +264,7 @@
           le puteţi folosi iar și iar in programul mai mare. Această lecţie va ajuta
           elevii să înţeleagă intuitiv de ce combinarea de bucăţi de cod în funcţii
           este o practică așa de utilă.  '
+        video: C4_unplugged_parameters
       BinaryImages:
         title: Imagini binare
         desc: Deşi mulţi oameni cred că binar înseamnă strict zerouri și unu, cursurile
@@ -267,6 +272,7 @@
           într-o varietate de opţiuni binare.  Această lecţie face un pas mai departe
           pentru dezvoltarea conceptului, ilustrând cum un computer poate stoca informații
           complexe (precum imagini şi culori) în sistem binar.
+        video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
         title: Jocuri Video și Planuri de coordonate
         desc: Descrierea lecției Jocuri Video și Planuri de coordonate

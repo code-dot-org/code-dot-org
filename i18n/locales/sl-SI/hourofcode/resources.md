@@ -8,10 +8,6 @@ title: Viri layout: wide nav: resources_nav
   <h1 class="col-sm-6">
     Viri
   </h1>
-  
-  <div class="col-sm-6 button-container centered">
-    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Prijavi svoj dogodek</button></a>
-  </div>
 </div>
 
 <% if @country == 'ie' %>
@@ -20,14 +16,14 @@ title: Viri layout: wide nav: resources_nav
 
 <% else %>
 
-## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
+## Gostujete Uro za kodo? [ poglejte si vodič kako izpeljati](<%= hoc_uri('/resources/how-to') %>)
 
 <% end %>
 
 <a id="handouts"></p> 
 
 <h2>
-  Use this handout to spread the word
+  Uporabite ta letak in povejte drugim
 </h2>
 
 <p>
@@ -35,7 +31,7 @@ title: Viri layout: wide nav: resources_nav
 </p>
 
 <h2>
-  Give this handout to teachers and schools
+  Izročite ta letak učiteljem in šolam
 </h2>
 
 <p>
@@ -46,7 +42,7 @@ title: Viri layout: wide nav: resources_nav
   <a id="videos"></p> 
   
   <h2>
-    Show these videos to inspire students
+    Pokažite spodnje videe in navdihnite učence
   </h2>
   
   <div style="float:left; padding:10px">
@@ -90,7 +86,7 @@ title: Viri layout: wide nav: resources_nav
     <a id="posters"></p> 
     
     <h2>
-      Hang these posters in your school
+      Obesite te plakate na vaši šoli
     </h2>
     
     <p>
@@ -102,7 +98,7 @@ title: Viri layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Feature these banners on your website
+      Objavite pasice na vaši spletni strani
     </h2>
     
     <p>
@@ -114,7 +110,7 @@ title: Viri layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Post these on social media
+      Objavite na družbenih medijih
     </h2>
     
     <p>
@@ -122,7 +118,7 @@ title: Viri layout: wide nav: resources_nav
     </p>
     
     <p>
-      <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/image/barack.jpg"><img src="/images/fit-250/barack.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/barack.jpg"><img src="/images/fit-250/barack.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
     </p>
     
     <p>
@@ -130,7 +126,7 @@ title: Viri layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Send these emails to help promote the Hour of Code
+      Pošljite spodnja sporočila in pomagajte promovirati Uro za kodo
     </h2>
     
     <p>
@@ -138,27 +134,27 @@ title: Viri layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Ask your school, employer or friends to sign up:
+      Spodbudite vašo šolo, delodajalca ali prijatelje, da se prijavijo:
     </h2>
     
     <p>
-      Čeprav so računalniki povsod, računalništvo uči manj šol kot pred 10 leti. Dobra novica je, da smo na proti, da to spremenimo. If you heard about the Hour of Code last year, you might know it made history. V enem tednu je 15 milijonov učencev preizkusilo računalništvo!
+      Čeprav so računalniki povsod, računalništvo uči manj šol kot pred 10 leti. Dobra novica je, da smo na proti, da to spremenimo. Če ste že lani slišali za Uro za kodo, mogoče veste, da je pisala zgodovino. V enem tednu je 15 milijonov učencev preizkusilo računalništvo!
     </p>
     
     <p>
-      Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+      Računalništvo je bilo objavljeno na domačih straneh Google, MSN, Yahoo! in Disney. Predsednik Obama, Shakira in Ashton Kutcher so začeli Uro za kodo z video posnetki. Več kot 100 partnerjev je podprlo to gibanje.
     </p>
     
     <p>
-      This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2014. Please get involved with an Hour of Code event during Computer Science Education Week, December 8-14, 2014.
+      Letos želimo, da bi postalo še večje. Vabimo vas, da se pridružite Uri za kodo 2014 v tednu poučevanja računalništva med 8. in 14 decembrom 2014.
     </p>
     
     <p>
-      Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself -- everyone can benefit from learning the basics.
+      Razširite vest o tem. Gostite dogodek. Vprašajte na vaši šoli in se prijavite. Ali poskusite Uro za kodo sami--vsakomur lahko koristi učenje osnov.
     </p>
     
     <p>
-      Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com/<%= @country %>
+      Pomagajte nam doseči 100 milijonov učencev do konca leta! Začnite na http://hourofcode.com/<%= @country %>
     </p>
     
     <p>
@@ -166,27 +162,27 @@ title: Viri layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Invite media to attend your event:
+      Povabite medije, da se udeležijo vašega dogodka:
     </h2>
     
     <p>
-      <strong>Subject line:</strong> Local school joins mission to introduce 100m students to computer science
+      <strong>Naslov:</strong> Naše šole sodelujejo v misiji, da računalništvo približamo 100 milijonom učencev
     </p>
     
     <p>
-      Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and minorities are severely underrepresented. Good news is, we’re on our way to change this.
+      Računalniki so vsepovsod, vendar manj šol poučuje računalništvo kot pred 10 leti. Dekleta in manjšine so še vedno premalo zastopane. Dobra novica pa je, da smo na poti v spremembe.
     </p>
     
     <p>
-      In one week last year, 15 million students tried computer science! Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+      Lani je v enem tednu 15 milijonov učencev preizkusilo računalništvo! Računalništvo je bilo objavljeno na domačih straneh Google, MSN, Yahoo! in Disney. Predsednik Obama, Shakira in Ashton Kutcher so začeli Uro za kodo z video posnetki. Več kot 100 partnerjev je podprlo to gibanje.
     </p>
     
     <p>
-      Now the Hour of Code movement is aiming for 100 million students.
+      Novi cilj projekta Ura za kodo je, da se pridruži 100 milijonov učencev.
     </p>
     
     <p>
-      That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Dec. 8-14.
+      Zato se bo [X] učencev na [ime šole] pridružilo največjemu izobraževalnemu dogodku v zgodovini: Ura za kodo, med 8. in 14. decembrom.
     </p>
     
     <p>
@@ -194,23 +190,23 @@ title: Viri layout: wide nav: resources_nav
     </p>
     
     <p>
-      The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a statement that today’s generation of students are ready to learn critical skills for 21st century success. Please join us.
+      Uro za kodo organizira neprofitna organizacija Code.org in več kot 100 drugih partnerjev. Je dokaz, da so učenci danes pripravljeni, da se naučijo znanja za uspeh v 21. stoletju. Pridružite se nam.
     </p>
     
     <p>
-      <strong>Contact:</strong> [YOUR NAME], [TITLE], cell: (212) 555-5555
+      <strong>Kontakt:</strong> [VAŠE IME], [TITLE], telefon: 041 555-555
     </p>
     
     <p>
-      <strong>When:</strong> [DATE and TIME of your event]
+      <strong>Kdaj:</strong> [DATUM in ČAS dogodka]
     </p>
     
     <p>
-      <strong>Where:</strong> [ADDRESS and DIRECTIONS]
+      <strong>Kje:</strong> [NASLOV in POT]
     </p>
     
     <p>
-      I look forward to being in touch.
+      Veseli bomo, če bomo v stiku.
     </p>
     
     <p>
@@ -218,15 +214,15 @@ title: Viri layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Tell parents about your school's event:
+      Povejte staršem o dogodku v vaši šoli:
     </h2>
     
     <p>
-      Dear Parents,
+      Dragi starši,
     </p>
     
     <p>
-      We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly hinge on understanding how technology works. But only a tiny fraction of us are learning computer science, and less students are studying it than a decade ago.
+      Živimo v svetu, ki je obdan s tehnologijo. Vemo, da ne glede na področje, ki ga bodo učenci izbrali za svojo kariero, so njihove možnosti za uspeh večje, če bodo poznali, kako tehnologija deluje. Vendar se nas le majhen delček uči računalništva in manj učencev se ga uči kot pred desetletjem.
     </p>
     
     <p>
@@ -283,8 +279,4 @@ title: Viri layout: wide nav: resources_nav
     
     <p>
       Sincerely, [NAME], [TITLE]
-    </p>
-    
-    <p>
-      <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Prijavi svoj dogodek</button></a>
     </p>

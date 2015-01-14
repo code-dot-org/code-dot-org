@@ -1,6 +1,6 @@
 * * *
 
-tittel: Resurser oppsett:bred nav: resurs_nav
+title: Ressursar layout: brei nav: ressursar_nav
 
 * * *
 
@@ -8,26 +8,22 @@ tittel: Resurser oppsett:bred nav: resurs_nav
   <h1 class="col-sm-6">
     Ressursar
   </h1>
-  
-  <div class="col-sm-6 button-container centered">
-    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Registrer arrangement ditt</button></a>
-  </div>
 </div>
 
 <% if @country == 'ie' %>
 
-## Hosting an Hour of Code in Ireland? [See the how-to guide](<%= hoc_uri('/resources/how-to-ireland') %>)
+## Arrangere ein Kodetime i Irland?<a
 
 <% else %>
 
-## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
+## Arrangere ein Kodetime?[Sjå denne guiden](<%= hoc_uri('/resources/how-to') %>)
 
 <% end %>
 
 <a id="handouts"></p> 
 
 <h2>
-  Use this handout to spread the word
+  Bruk dette flygebladet til å spre ordet
 </h2>
 
 <p>
@@ -35,7 +31,7 @@ tittel: Resurser oppsett:bred nav: resurs_nav
 </p>
 
 <h2>
-  Give this handout to teachers and schools
+  Gje dette flygebladet til lærarar og skoler
 </h2>
 
 <p>
@@ -46,7 +42,7 @@ tittel: Resurser oppsett:bred nav: resurs_nav
   <a id="videos"></p> 
   
   <h2>
-    Show these videos to inspire students
+    Vis desse videoane for å inspirere elevar
   </h2>
   
   <div style="float:left; padding:10px">
@@ -90,7 +86,7 @@ tittel: Resurser oppsett:bred nav: resurs_nav
     <a id="posters"></p> 
     
     <h2>
-      Hang these posters in your school
+      Heng opp desse plakatane på skulen din
     </h2>
     
     <p>
@@ -102,7 +98,7 @@ tittel: Resurser oppsett:bred nav: resurs_nav
     </p>
     
     <h2>
-      Feature these banners on your website
+      Bruk desse bannera på heimesida di
     </h2>
     
     <p>
@@ -114,7 +110,7 @@ tittel: Resurser oppsett:bred nav: resurs_nav
     </p>
     
     <h2>
-      Post these on social media
+      Post desse i sosiale media
     </h2>
     
     <p>
@@ -122,7 +118,7 @@ tittel: Resurser oppsett:bred nav: resurs_nav
     </p>
     
     <p>
-      <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="Bilete" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="Bilete" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="Bilete" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="Bilete" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="Bilete" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/image/barack.jpg"><img src="/images/fit-250/barack.jpg" alt="Bilete" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="Bilete" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="Bilete" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="Bilete" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="Bilete" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="Bilete" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/barack.jpg"><img src="/images/fit-250/barack.jpg" alt="Bilete" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
     </p>
     
     <p>
@@ -130,7 +126,7 @@ tittel: Resurser oppsett:bred nav: resurs_nav
     </p>
     
     <h2>
-      Send these emails to help promote the Hour of Code
+      Send desse e-postane for å promotere Kodetimen
     </h2>
     
     <p>
@@ -138,15 +134,15 @@ tittel: Resurser oppsett:bred nav: resurs_nav
     </p>
     
     <h2>
-      Ask your school, employer or friends to sign up:
+      Be skulen, arbeidsgivaren eller vener om å registrere seg:
     </h2>
     
     <p>
-      Datamaskiner er overalt, men færre skular underviser i programmering no enn for 10 år sidan. Den gode nyheita er at me arbeider for å endre dette. If you heard about the Hour of Code last year, you might know it made history. På ei veke forsøkte 15 millionar elevar seg på programmering!
+      Datamaskiner er overalt, men færre skular underviser i programmering no enn for 10 år sidan. Den gode nyheita er at me arbeider for å endre dette. Om du høyrde om Kodetimen i fjor, veit du kanskje at den var legendarisk. På ei veke forsøkte 15 millionar elevar seg på programmering!
     </p>
     
     <p>
-      Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+      Datavitskap var på nettsidene til Google, MSN, Yahoo! og Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
     </p>
     
     <p>
@@ -178,7 +174,7 @@ tittel: Resurser oppsett:bred nav: resurs_nav
     </p>
     
     <p>
-      In one week last year, 15 million students tried computer science! Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+      In one week last year, 15 million students tried computer science! Datavitskap var på nettsidene til Google, MSN, Yahoo! og Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
     </p>
     
     <p>
@@ -283,8 +279,4 @@ tittel: Resurser oppsett:bred nav: resurs_nav
     
     <p>
       Sincerely, [NAME], [TITLE]
-    </p>
-    
-    <p>
-      <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Registrer arrangement ditt</button></a>
     </p>

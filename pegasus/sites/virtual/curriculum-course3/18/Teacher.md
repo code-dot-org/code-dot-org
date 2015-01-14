@@ -55,6 +55,7 @@ In this lesson, students will pretend to flow through the Internet, all the whil
 - IP Address and Delivery Type Cards [Found Here](Activity18-Internet.pdf)
 
 ### For the Teacher
+- [Lesson Video](http://youtu.be/Z6CEAOFZRRk?list=PL2DhNKNdmOtpGJ79ZYYttiEmc-1Aq8hxm)
 - This Teacher Lesson Guide
 - Print enough [IP Address Cards and Delivery Type Cards](Activity18-Internet.pdf) for each group to draw
 - Print one [Internet Assessment](Assessment18-Internet.pdf) for each student

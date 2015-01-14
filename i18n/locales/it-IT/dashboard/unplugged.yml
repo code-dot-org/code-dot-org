@@ -154,36 +154,42 @@ it:
       TangramAlgorithms:
         title: Algoritmi per il Tangram
         desc: "Questa lezione ti mostra qualcosa di importante sugli algoritmi. Se un algoritmo è semplice ci sono molti modi per usarlo. Se vuoi essere sicuro che ognuno finisca con lo stesso risultato, allora l'algoritmo ha bisogno di essere maggiormente dettagliato."
+        video: C4_unplugged_algorithms
       EnvelopeVariables:
         title: Variabili della Busta
         desc: "Le variabili consentono molta libertà nell'informatica.  Questa lezione aiuta a spiegare quali sono le variabili e come possiamo utilizzarle in diversi modi. Svolgi questa attività prima di (o in concomitanza con) la lezione sull'astrazione per comprendere a fondo come usare le variabili."
+        video: C4_unplugged_variables
       MadGlibs:
         title: Mad G-Libs
         desc: "L'astrazione è una delle abilità più importanti che un informatico deve possedere.  In questa attività i tuoi studenti analizzano storie per capirne le differenze, così che possano astrarre gli elementi comuni. Gli schemi di storia così ottenuti diventano dei modelli per divertirsi ad inventare nuove storie."
+        video: C4_unplugged_madlibs
       ForLoopFun:
         title: Divertiti usando i Cicli con Contatore
         desc: Sappiamo che che i cicli permettono di svolgere azioni più e più volte, ma ora impariamo come usare i cicli con strutture aggiuntive.
+        video: C4_unplugged_forloops
       SongwritingWithParameters:
         title: 'Composizione di Canzoni - Parametri'
         desc: "Una delle strutture più belle nell'informatica è la funzione.  Le funzioni (a volte chiamate procedure) sono dei mini-programmi che è possibile utilizzare più e più volte all'interno di un programma più grande. Questa lezione aiuta gli studenti a comprendere intuitivamente perché raggruppare blocchi di codice all'interno di funzioni è un'utile pratica."
+        video: C4_unplugged_parameters
       BinaryImages:
         title: Immagini binarie
         desc: 'Anche se molti pensano al sistema binario come costituito rigorosamente da zeri e uni, nelle precedenti lezioni gli studenti hanno visto che le informazioni possono essere rappresentate in una varietà di opzioni binarie.  Questa lezione sviluppa ulteriormente questo concetto illustrando come un computer possa memorizzare informazioni ancora più complesse (ad esempio immagini e colori) in formato binario.'
+        video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
         title: Videogiochi e Piani Cartesiani
-        desc: Descrizione della lezione Videogiochi e Piani Coordinati
+        desc: Descrizione della lezione Videogiochi e Piani Cartesiani
       Contracts:
         title: Contratti
-        desc: Descrizione della lezione Contratti offline
+        desc: 'Descrizione della lezione "senza rete": Contratti'
       DesignRecipe:
         title: La Ricetta della Progettazione
-        desc: Descrizione della lezione Progettazione di Ricette
+        desc: 'Descrizione della lezione: La Ricetta della Progettazione'
       Booleans:
-        title: Valori booleani
-        desc: Descrizione della lezione sui Booleani
+        title: Valori Booleani
+        desc: 'Descrizione della lezione: Valori Booleani'
       ConditionalsPiecewiseFunctions:
         title: Istruzioni Condizionali e Funzioni a Tratti
-        desc: Descrizione della lezione sui Condizionali e le Funzioni a Tratti
+        desc: 'Descrizione della lezione: Istruzioni Condizionali e Funzioni a Tratti'
       CollisionDetection:
-        title: Rilevamento delle collisioni
-        desc: Descrizione della lezione sulla Rilevazione delle collisioni
+        title: Rilevamento delle Collisioni
+        desc: 'Descrizione della lezione: Rilevamento delle Collisioni'

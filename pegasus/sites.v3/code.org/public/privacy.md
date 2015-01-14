@@ -3,7 +3,7 @@ title: Privacy Policy
 ---
 
 # Privacy Policy
-Effective Date: Sept 23, 2014 
+Effective Date: December 5, 2014 
 
 ## About Code.org
 Code.org® is a non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color.
@@ -60,6 +60,10 @@ Student section data | Required | <br>You may create accounts for your students 
 <br>
 
 Students and teachers may update, correct, or delete Personal Information in their Code Studio profiles at any time via the account settings page (or the manage students page for teachers). 
+
+Educators can create accounts on behalf of students. When registering an account for a student who is under the age of 13 (a “Child”), the Educator represents and warrants that they or the educational organization they work for has proper permission to register the Child for educational services, such as Code.org, that collect some of the Child’s personal information for the use and benefit of the school and for no other commercial purpose. In addition, they agree to be bound by these Terms on behalf of the educational organization they work for.
+
+Districts that use [Clever](https://clever.com/) as an Authentication Service can permit Code.org to use existing Clever teacher and student account information to log in to Code.org sites. Districts may revoke Code.org’s access to this information in Clever at any time. Please review Clever's [terms of use](https://clever.com/about/terms) and [privacy policies](https://clever.com/about/privacy-policy) for additional information.
 
 Under a student's control, they can dissociate or associate themselves with as many teachers as they want, (and those teachers get access to the student's course progress and display name but not their email address). Teachers who create User accounts on behalf of students can reset their “secret word” or “secret picture” (for young children who can’t read) for as long as the student leaves the teacher in control of the account. 
 

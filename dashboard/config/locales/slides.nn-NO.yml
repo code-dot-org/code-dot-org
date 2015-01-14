@@ -44,7 +44,7 @@
       11:
         image: notes/hoc1_11.jpg
         text: For å gjere meir enn ei handling, kan du dra mange blokker til arbeidsområdet
-          og knytte dei til kvarandre. Fuglen vil gjere kommandoane frå topp til botn.
+          og sette dei saman. Fuglen vil utføre kommandoane frå toppen og nedover.
       12:
         image: notes/hoc1_12.jpg
         text: Hvis du kjører et program og ønsker å fikse det for å prøve på nytt,
@@ -217,37 +217,37 @@
       2:
         image: notes/hoc5_2.jpg
         text: Viss eg set ei "framover"-blokk på plassen der det står "gjere" og ei
-          "snu til venstre"-blokk der det står "elles", tyder det at zombien vil velje
-          mellom to alternativ. VISS det er ein veg framover, vil han gå dit, og ELLES
-          (viss det ikkje er ein veg framover) vil han svinge til venstre.
+          "snu til venstre"-blokk der det står "ellers", tyder det at zombien vil
+          velje mellom to alternativ. VISS det er ein veg framover, vil han gå dit,
+          og ELLERS (viss det ikkje er ein veg framover) vil han svinge til venstre.
       3:
         image: notes/hoc5_3.jpg
-        text: Nett som "viss"-blokka, kan me setje "viss-elles"-blokker innafor ei
-          "gjenta"-blokk slik at zombien held fram med å flytte på seg og "viss-elles"-blokka
-          vil halde fram med å sjå etter om det er mogeleg å snu seg.
+        text: Akkurat som "hvis"-blokka, kan vi sette "hvis ellers"-blokker inni "gjenta"-blokkerer
+          slik at zombien held fra med å flytte og "hvis ellers"-blokka kontrollerer
+          om det er mogeleg å snu.
       4:
         image: notes/hoc5_4.jpg
         text: No får du vise zombiene kvar dei høyrer heime!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
-        text: An if-else statement is a decision between two things. Let's see how
-          we can use an if-else statement with our buddy Scrat the squirrel.
+        text: En "hvis ellers"-setning er ei avgjersle mellom to ting. La oss sjå
+          på korleis vi kan bruke en "hvis ellers"-setninga med vår ven ekornet Scrat.
       2:
         image: notes/saloni_ifelse_scrat2.jpg
-        text: This block looks the same as the "if" block, but there's an extra part
-          at the bottom that says "else". If I put a "move forward" block where it
-          says "do" and a "turn left" block where it says "else", that means Scrat
-          the squirrel will move forward if there's a path ahead. If there's not a
-          path ahead, Scrat will turn left.
+        text: Denne blokka liknar på "hvis"-blokka, men det er ein ekstra del på botnen
+          som seier "ellers". Dersom eg set ei "framover"-blokk der det står "gjere"
+          og ei "snu venstre"-blokk der det står "elles", betyr det at ekornet Scrat
+          vil gå framover hvis det er ein veg framfor. Hvis det ikkje er ein veg framfor,
+          vil Scrat snu til venstre.
       3:
         image: notes/saloni_ifelse_scrat3.jpg
-        text: It's making a decision and doing one of the two actions based on that
-          decision. And just like "if" blocks, you can put "if-else" blocks inside
-          "repeat" blocks.
+        text: Det er å ta ei avgjerd og gjøre ei av to handlingar basert på denne
+          avgjersla. Og akkurat som "hvis"-blokker, kan du sette "hvis-ellers"-blokker
+          inni "gjenta"-blokker.
       4:
         image: notes/saloni_ifelse_scrat4.jpg
-        text: Now let's help Scrat the squirrel get that acorn!
+        text: Nå la oss no hjelp ekornet Scrat til å få ei eikenøtt!
     function:
       1:
         image: notes/stage13_1.jpg
@@ -363,128 +363,202 @@
     frozen_intro:
       1:
         image: notes/frozen1_1.jpg
-        text: Hi, my name is Lyndsey. I model, act, and write my own apps. Let's use
-          code to join Anna and Elsa as they explore the magic and beauty of ice.
+        text: Hei, namnet mitt er Lyndsey. Eg er modell og skodespelar og eg skriv
+          mine egen appar. La oss bruke kode til å utforske isens venleik og magi
+          saman med Anna og Elsa.
       2:
         image: notes/frozen1_2.jpg
-        text: You'll create snowflakes and patterns as you ice skate and make a winter
-          wonderland that you can then share with your friends.
+        text: Du skaper snøfnugg og mønster ved å skøyte på isen og lagar eit magisk
+          vinterlandskap som du kan dele med venane dine.
       3:
         image: notes/frozen1_3.jpg
-        text: In the next hour, you're going to learn the basics of how to code. Traditional
-          programming is usually in text, but we'll use Blockly, which uses visual
-          blocks that you can drag and drop to write programs. This is how even university
-          students learn the basics. Under the hood, you're still creating code.
+        text: I den neste timen vil du lære grunnleggande programmering. Tradisjonell
+          programmering er vanligvis med tekst, men vi skal bruke Blockly, som bruker
+          visuelle blokker som du kan dra og sleppe for å skrive programm. Også studenter
+          på universitetet lærer grunnleggande programmering på denne måten. Bak blokkene
+          lager du likvevel kode.
       4:
         image: notes/frozen1_4.jpg
-        text: A program is a set of instructions that tells a computer what to do.
-          Let's build a code, or a program, that will help Elsa create a simple line.
-          We will use this later to create more complex patterns.
+        text: Eit program er et sett med instruksjonar som fortel ei datamaskin kva
+          den skal gjere. La oss skrive kode eller eit program, som vil hjelpe Elsa
+          til å lage ei enkel line. Vi vil bruke dette seinare for å lage meir kompliserte
+          mønster.
       5:
         image: notes/frozen1_5.jpg
-        text: Your screen is split into three main parts. On the left, is the ice
-          surface where you'll run your program. The instructions for each level are
-          written right below the surface.
+        text: Skjermen din er delt i tre hovudelar. Til venstre er isflata der du
+          vil køyre programmet. Oppgåvene for kvart nivå er skrive rett under.
       6:
         image: notes/frozen1_6.jpg
-        text: This middle area is the toolbox, and each of these blocks is an action
-          that Elsa and Anna can do.
+        text: Det midterste området er verktykassa, og kvar av disse blokkene er ei
+          handling som Elsa og Anna kan gjere.
       7:
         image: notes/frozen1_7.jpg
-        text: The white space on the right is called the workspace, and this is where
-          we'll build our program. To move around the ice surface, you'll use the
-          "Move Forward" block.
+        text: Det kvite flata til høyre kallast arbeidsområdet, og dette er her vi
+          skal sette saman programmet vårt. For å flytte rundt på isflata, kan du
+          bruke "Flytt fremover"-blokka.
       8:
         image: notes/frozen1_8.jpg
-        text: Here, the "Move Forward" block says, "move forward by 100 pixels." When
-          we press "Run", what happens? Elsa moves forward a certain amount on the
-          screen, 100 pixels in fact! Pixels are basically very tiny squares on your
-          computer screen.
+        text: Her, sier "flytt framover"-blokken, "flytt fram 100 piksler." Når vi
+          trykker "Køyr", kva skjer då? Elsa flytter fram en bestemt lengde på skjermen,
+          100 pikslar faktisk! Piksler er dei minste punkta på dataskjermen.
       9:
         image: notes/frozen1_9.jpg
-        text: The other block we have in this puzzle says "turn right by 90 degrees."
-          And when we use this "Turn Right" block, that makes Elsa turn a certain
-          amount. You can play around with how far you want Elsa to turn. The angle
-          is measured from the path ahead of Elsa. So, this is a 90 degree turn. And
-          this is a 120 degree turn.
+        text: Den andre blokka vi har i denne oppgåven sier "snu til høgre med 90
+          grader". Og når vi bruker denne "snu til høyre"-blokka, får det Elsa snu
+          en gitt mengde. Du kan prøve ut hvor mye du vil at Elsa skal snu. Vinkelen
+          måles fra retningen foran Elsa. Så dette er ei 90 graders vending. Og dette
+          er ei 120 graders vending.
       10:
         image: notes/frozen1_10.jpg
-        text: Remember, you can change the number of pixels and degrees by clicking
-          the arrows next to them.
+        text: Husk at du kan endre talet på pikslar og grader ved å klikke på pilene
+          ved sida av.
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg
-        text: Hi, I’m Paola! Computers are really good at repeating actions. You can
-          count to 10, 20, or 100. But a computer can count to a billion or a trillion.
-          It won't get bored and it will only take a few seconds. Whether it's counting,
-          or drawing, or anything--computers can repeat things hundreds or even billions
-          of times.
+        text: Hei, eg er Paola! Datamaskiner er veldig flinke til å gjenta handlingar.
+          Du kan telje til 10, 20 eller 100. Men ei datamaskin kan telje til ein milliard
+          eller billion. Den vil ikkje gå lei og det tek berre nokre sekund. Om det
+          er teljing, eller tegning, eller noko anna - datamaskiner kan gjenta ting
+          hundrevis eller milliarder av gonger.
       2:
         image: notes/frozen2_2.jpg
-        text: In programming, we call this a loop. A loop is how you repeat your code
-          over and over again. For the next puzzle, your goal is to help Anna create
-          a square with the "Repeat" block.
+        text: I programmering kallar vi dette ei løkke. Ei løkke er korleis du gjentek
+          koden igjen og igjen. Målet med den neste oppgåva er å hjelpe Anna med å
+          lage eit kvadrat med "gjenta"-blokka.
       3:
         image: notes/frozen2_3.jpg
-        text: Any blocks of code you put inside the "Repeat" block will be repeated
-          in sequence, as many times as you want.
+        text: Kodeblokkene som du plasserer inne i "gjenta"-blokken, vil bli gjentatt
+          etter kvarandre, så mange gonger du ynskjer.
       4:
         image: notes/frozen2_4.jpg
-        text: To draw a square, you can use the "Move Forward" and "Turn Right" block
-          4 times. But the easier way is to tell the computer to "Move Forward" and
-          "Turn Right by 90 degrees" once, and then tell it to repeat this pair of
-          actions 4 times. To do that, you need to put the "Move Forward" and "Turn
-          Right" block inside a "Repeat" block.
+        text: For å teikne eit kvadrat, kan du bruke "flytt fram" og "snu til høgre"-blokkene
+          4 gonger. Men det er enklare å be datamaskina "flytt frem" og "snu til høgre
+          90 grader" ein gong og deretter be den om å gjenta desse to handlingane
+          4 gonger. For å gjøre det, må du sette "flytt fram" og "snu til høgre" blokkene
+          inne i ei "gjenta"-blokk.
       5:
         image: notes/frozen2_5.jpg
-        text: Remember, you can change the number in the "Repeat" block to anything,
-          and it will repeat what's inside the block that many times.
+        text: Hugs på at du kan endre tallet i "Gjenta"-blokka vilkårleg, og det vil
+          gjenta det som er inne i blokka så  mange gongar.
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
-        text: Hi, I’m Chris Bosh. I’m a professional basketball player, and I coded
-          in college.
+        text: Hei! Eg er Chris Bosh. Eg er profesjonell basketballspilar og eg programmerte
+          på skulen.
       2:
         image: notes/frozen3_2.jpg
-        text: One of the most important concepts in computer science is how to define
-          new commands. Most computer languages have only about 100 words or commands.
-          And really, the art and magic is in defining your own new words out of these
-          building blocks.
+        text: Eit av dei viktigste konsepta i programmering er korleis ein kan definere
+          nye kommandoar. Dei fleste programmeringsspråka har berre omkring 100 ord
+          eller kommandoar. Og kunsten og magien ligg verkeleg i å definere dine eigne,
+          nye ord ut frå desse byggeklossane.
       3:
         image: notes/frozen3_3.jpg
-        text: Once you've taught a computer how to do an action once using this sequence
-          of commands, you can make up your own name for that action so it's easy
-          to repeat it later. When you define your own command and give it a name,
-          that's called a function.
+        text: Når du har lært ei datamaskin korleis ho skal utføre ei handling ein
+          gong ved bruk av ein sekvensen av kommandoar, så kan du lage ditt eige namn
+          for handlinga selv, slik at det er lett å gjere den på nytt seinare. Når
+          du definerer din eigen kommando og gir den namn blir det kalla det ein funksjon.
       4:
         image: notes/frozen3_4.jpg
-        text: Hi, I’m Jess. When programming with blocks, you would use functions
-          if there are a set of actions you would like to use lots of times. For example,
-          you've written code to create a square.
+        text: Hei! Er jeg Jess. Når du programmerer med blokker, ville du bruke funksjonar
+          dersom det er eit sett med handlingar du vil bruke mange gonger. For eksempel
+          har du skrive kode for å laga eit kvadrat.
       5:
         image: notes/frozen3_5.jpg
-        text: 'You can define this as a function called "create a square." '
+        text: 'Du kan definere dette som ein funksjon kalla "lag kvadrat" '
       6:
         image: notes/frozen3_6.jpg
-        text: Now you have a new block that you can use multiple times to create multiple
-          squares.
+        text: Nå har du ei ny blokk som du kan bruke fleire gonger for å opprette
+          flere kvadrat.
       7:
         image: notes/frozen3_7.jpg
-        text: A lot of simple shapes can be used to create more complex patterns.
-          In the next puzzle, the code you recently wrote to make a circle is available
-          to you as a new function that can make circles of different sizes. Can you
-          use it to help Elsa create intricate and beautiful patterns in the snow?
+        text: Mange enkle figurar kan brukast til å lage meir komplekse mønster. I
+          den neste oppgåva vil koden du nyleg skreiv for å lage ein sirkel være tilgjengelig
+          som ein ny funksjon som kan lage sirklar i ulike størrelsar. Kan du bruke
+          den til å hjelpe Elsa med å lage kompliserte og vakre mønster i snøen?
     C3_playlab_create_game:
       1:
         image: notes/playlab_1.png
-        text: So far you've been making an animation or a story that does the exact
-          same thing every time you run it. Now you can make an interactive game that
-          you can actually play.
+        text: Hittil har du laga ein animasjon eller ei historie som gjer akkurat
+          det samme kvar gong du køyrer den. Nå kan du lage eit interaktivt spel som
+          du faktisk kan spele.
       2:
         image: notes/playlab_2.png
-        text: There's the "when arrow" block and the "move actor" block. You can put
-          these blocks together to move the actors around with the arrow keys.
+        text: Her er "når pil"-blokka og "flytt skodespelar"-blokka. Du kan sette
+          desse blokkene saman for å flytte figurane rundt med piltastane.
       3:
         image: notes/playlab_3.png
-        text: And there are some blocks that do stuff when actors collide or are clicked.
-          Check them out and have fun!
+        text: Og det fins nokre blokker som gjer ting når figurane kolliderer eller
+          blir klikka på. Prøv dei og ha det gøy!
+    playlab_intro:
+      1:
+        image: notes/playlab_intro_1.png
+        text: Vi skal lage spel ved å bruke Spel Lab. Gode spel har ei historie og
+          kvar historie har skodespelarar. Vi skal lære korleis vi får våre skodespelarar,
+          som hekser, romvesen og dyr til å snakke, bevege seg og samhandle med kvarandre.
+          Ved slutten av denne oppgåva kan du bygge eit spel frå grunnen av og dele
+          det med venane dine.
+      2:
+        image: notes/playlab_intro_2.png
+        text: Skjermen din er delt i 3 hovuddelar. Den til venstre er speleflata der
+          spelet ditt vil køyres. Instruksjonane for kvart nivå er skrivne under speleflata.
+      3:
+        image: notes/playlab_intro_3.png
+        text: Det midterste området er verktykassen, og kvar av desse blokkene er
+          ein kodedel. Den kvite flata til høyre blir kalla arbeidsområdet og det
+          er der vi skal bygge opp programmet vårt.
+      4:
+        image: notes/playlab_intro_4.png
+        text: For å starte må du koble blokkene dine til den oransje-"når køyrer"-blokka.
+          Du kan knyte fleire blokker saman ved å dra dei til du ser den gule lina
+          og vil dei snappe saman.
+      5:
+        image: notes/playlab_intro_5.png
+        text: I denne første oppgåva er skodespelaren ein pingvin og vi skal få den
+          til å sei "Hallo" ved å dra "sei"-blokka ut, knytte den til å "når køyrer"-blokka
+          og skrive inn "Hallo." Vi kan også få pingvinen til å flytte på seg ved
+          hjelp av bruke blokkene for å flytte til høyre og venstre. Når du har blokkene
+          dine på plass, trykk på Køyr-knappen for å sjå kva du har programmert.
+      6:
+        image: notes/playlab_intro_6.png
+        text: Set i gong no og når du er ferdig vil du kunne lage ditt eige spel med
+          alle slags skodespelarar som kan samhandle, bli glade eller triste, få poeng,
+          kaste eldkuler eller til og med trylle kvarandre bort. Det er heilt opp
+          til deg og spelet du vil lage.
+    playlab_events:
+      1:
+        image: notes/playlab_events_1.png
+        text: No skal vi lære om noko som alle som programmerer spel brukar kvar dag.
+          Dei blir kalla hendingar. Ei hending ber programmet ditt om å lytte etter
+          ting som skjer. Når det skjer, blir ei handlingn utført.
+      2:
+        image: notes/playlab_events_2.png
+        text: Eksempl på hendingar er å vente på eit museklikk, ein piltast eller
+          trykk på skjermen.
+      3:
+        image: notes/playlab_events_3.png
+        text: Her skal vi få romboten til å helse på jordbuarane når ein spelar klikker
+          på han. Vi bruker "når skodespalaren blir klikka"-blokken og festar "sei"-blokka
+          til den. Når spelaren klikkar på romboten vil alt som er fseta til denne
+          "når skodespelaren blir klikka"-hendelsesblokka bli utført. Kva skal ditt
+          romvesen sei?
+      4:
+        image: notes/playlab_events_4.png
+        text: Det fins også "når pil"-blokker. Hvis du kobler "flytt"-blokker til
+          desse, kan du begynne å flytte skodespelarar opp, ned, til venstre eller
+          høyre. Steg for steg blir spelet ditt meir interaktiv.
+    playlab_repeat_forever:
+      1:
+        image: notes/playlab_repeat_forever_1.png
+        text: Dette er "gjenta for alltid"-blokka. Alt i denne blokken vil skje for
+          alltid i spelet.
+      2:
+        image: notes/playlab_repeat_forever_2.png
+        text: Hvis vi ynskjer at ein skodespelar skal gjere noko fleire gonger uten
+          at spelaren trenger å gjere noko, vil vi sette desse blokkene inne i "gjenta
+          for alltid"-blokka.
+      3:
+        image: notes/playlab_repeat_forever_3.png
+        text: I den neste oppgåva er målet vårt å hjelpe trollmannen med å patruljere
+          grensene av kongeriket, venstre og høyre heile tida. Å lære korleis du kan
+          gjenta kommandoar vil spare deg for massevis av tid seinare når du lagar
+          ditt eiget spel.

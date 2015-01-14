@@ -60,6 +60,7 @@ The final program will be geared toward the entire class, whatever their type of
 - [Fun-ctional Skills Assessment](Assessment4-FunctionalSkills.pdf) for each student
 
 ### For the Teacher
+- [Lesson Video](http://youtu.be/VmIcnmPjNgw?list=PL2DhNKNdmOtpGJ79ZYYttiEmc-1Aq8hxm)
 - This Teacher Lesson Guide
 - Print one [Skills Sheet](Activity4-FunctionalSuncatchers.pdf) per group
 - Print one [Fun-ctional Skills Assessment](Assessment4-FunctionalSkills.pdf) for each student

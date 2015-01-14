@@ -240,7 +240,7 @@
       4-5 bee loops multi 1:
         Bee Loops Multiple Choice: Bi Løkker Multiple Choice
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png
-        Which blocks will solve the puzzle?: Hvilke blokke løser puslespillet?
+        Which blocks will solve the puzzle?: Hvilke blokke løser opgaven?
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png
@@ -249,7 +249,7 @@
         Famer Loops Multiple Choice: Landmand Løkker Multiple Choice
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png, 500: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png,
           500
-        Which blocks solve the puzzle?: Hvilke blokke løser puslespillet?
+        Which blocks solve the puzzle?: Hvilke blokke løser opgaven?
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a3.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a3.png
@@ -258,7 +258,7 @@
         Maze Multiple Choice: Labyrint Multiple Choice
         /script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_maze_multi_1_q.png,
           500
-        Which blocks solve the puzzle?: Hvilke blokke løser puslespillet?
+        Which blocks solve the puzzle?: Hvilke blokke løser opgaven?
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png
@@ -267,7 +267,7 @@
         Maze Conditionals Multiple Choice: Bi Betingelser Multiple Choice
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png,
           500
-        Which blocks solve the puzzle?: Hvilke blokke løser puslespillet?
+        Which blocks solve the puzzle?: Hvilke blokke løser opgaven?
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png
@@ -368,14 +368,14 @@
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
       Coordinates Multi 1:
-        Video game Coordinates: Video game Coordinates
+        Video game Coordinates: Videospilskoordinater
         Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
-        Which answer best describes the unicorn's movement?: Which answer best describes
-          the unicorn's movement?
-        The unicorn moves across the screen: The unicorn moves across the screen
-        The unicorn's y value changes: The unicorn's y value changes
-        The unicorn moves to the left: The unicorn moves to the left
-        The unicorn's x value changes: The unicorn's x value changes
+        Which answer best describes the unicorn's movement?: Hvilket svar beskriver
+          bedst enhjørningens bevægelse?
+        The unicorn moves across the screen: Enhjørningen bevæger sig hen over skærmen
+        The unicorn's y value changes: Enhjørningens y-værdi ændres
+        The unicorn moves to the left: Enhjørningen flytter mod venstre
+        The unicorn's x value changes: Enhjørningens x-værdi ændres
       K-1 Artist 1 Multi 1:
         Multiple Choice: Multiple Choice
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png,
@@ -628,6 +628,19 @@
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): (rektangel (+ 8 2) (-7 5) "tæt"
           "rød")
         (rectangle (+ 8 2) (- 7 5) solid red): (rektangel (+ 8 2) (-7 5) tæt rødt)
+      Multi Strings Images 1:
+        Strings and Images Multiple Choice: Strings and Images Multiple Choice
+        Multi Strings Images 1.blocks3.level: Multi Strings Images 1.blocks3.level
+        Which of these Evaluation Blocks will draw the image: Which of these Evaluation
+          Blocks will draw the image
+        Multi Strings Images 1.blocks1.start_blocks, 300, 100: Multi Strings Images
+          1.blocks1.start_blocks, 300, 100
+        Multi Strings Images 1.blocks2.start_blocks, 300, 100: Multi Strings Images
+          1.blocks2.start_blocks, 300, 100
+        Multi Strings Images 1.blocks3.start_blocks, 300, 100: Multi Strings Images
+          1.blocks3.start_blocks, 300, 100
+        Multi Strings Images 1.blocks4.start_blocks, 300, 100: Multi Strings Images
+          1.blocks4.start_blocks, 300, 100
       test multi image:
         Maze Multiple Choice Two: Labyrint Multiple Choice 2
         /script_assets/matches/images/head.jpg,400: /script_assets/matches/images/head.jpg,400

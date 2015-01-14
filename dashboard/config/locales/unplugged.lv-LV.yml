@@ -221,28 +221,33 @@
         desc: Šajā nodarbībā ir pateikts kas svarīgs par algoritmiem. Ja algoritms
           ir vienkāršs, tad ir daudz iespēju to izmantot. Ja vēlies, ka visi izdara
           vienu un to pašu, algoritmam jābūt pēc iespējas precīzākam.
+        video: C4_unplugged_algorithms
       EnvelopeVariables:
         title: Aplokšņu mainīgie
         desc: Mainīgie datorzinātnēs sniedz lielu brīvību. Šī nodarbība palīdz izskaidrot
           mainīgos un to, kā tos izmantot vairākos dažādos veidos. Izmantojiet šo
           aktivitāti pirms vai kopā ar nodarbību par abstrahešanu (vispārināšanu),
           lai veiksmīgāk uztvertu domu.
+        video: C4_unplugged_variables
       MadGlibs:
         title: Mad Glibs spēle
         desc: Abstrakcija ir viena no nozīmīgākajām prasmēm, kurām jāpiemīt programmēšanas
           speciālistam. Šajā nodarbībā skolēni analizēs stāstus, meklējot atšķirības,
           lai varētu tos uztvert abstrakti. Un tad šie abstraktie stāsti kļūs par
           sagatavi jauniem.
+        video: C4_unplugged_madlibs
       ForLoopFun:
         title: Jautrība ar "For" Cikliem
         desc: Mēz zinām, ka cikli ļauj mums atkārtot darbības vairākas reizes, taču
           tagad mēs mācīsimies kā lietot ciklus ar papildus iebūvētu struktūru.
+        video: C4_unplugged_forloops
       SongwritingWithParameters:
         title: Dziesmu rakstīšana ar parametriem
         desc: Viena no lieliskākajām struktūrām programmēšanā ir funkcijas. Funkcijas
           (tās reizēm sauc arī par procedūrām) ir nelielas programmas, kuras var atkal
           un atkal izmantot lielākā programmā. Šī nodarbība palīdzēs skolēniem intuitīvi
           saprast, kādēļ apvienot koda fragmentus funkcijās ir labā prakse.
+        video: C4_unplugged_parameters
       BinaryImages:
         title: Binārie Attēli
         desc: Lai arī daudzi domā par bināro kodu tikai kā par vieniniekiem un nullītēm,
@@ -250,6 +255,7 @@
           bināri atspoguļota dažādos veidos. Šajā nodarbība parādīts, kā dators arī
           sarežģītāku informāciju (kā, piemēram, attēlus un krāsas) var saglabāt binārajā
           kodā.
+        video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
         title: Video spēles un koordinātu plakne
         desc: Video spēļu un koordinātu plaknes nodarbības apraksts

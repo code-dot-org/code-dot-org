@@ -56,6 +56,7 @@ This lesson helps students learn that many websites ask for information that is 
 - [Keep It Private Assessment](Assessment17-KeepItPrivate.pdf)
 
 ### For the Teacher
+- [Lesson Video](http://youtu.be/AG23gWMEB98?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G)
 - Teacher Lesson Guide
 - [Download](http://video.commonsensemedia.org/digitalcitizenship/MyOnlineNeighborhood.mp4) or [prepare](https://www.commonsensemedia.org/video/modal/2102075) the "My Online Neighborhood" video
 - Live access or print-off of [SecretBuilders](http://www.secretbuilders.com/gameplay/gameplay.html) sign-up page

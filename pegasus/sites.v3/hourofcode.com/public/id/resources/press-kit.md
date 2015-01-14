@@ -1,6 +1,6 @@
 
 
-[<button style="float: right; margin-top: 50px">Sign up your event</button>](/#join)
+
 
 ## Cara menarik untuk menarik perhatian media terhadap Kegiatan Hour of Code anda
 
@@ -56,4 +56,4 @@
       
     Find more resources and sample emails [here](<%= hoc_uri('/resources') %>).
     
-    <a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>
+    

@@ -211,7 +211,7 @@ fa:
       4-5 farmer loops multi 1:
         Famer Loops Multiple Choice: Famer Loops Multiple Choice
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png, 500: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png, 500
-        Which blocks solve the puzzle?: Which blocks solve the puzzle?
+        Which blocks solve the puzzle?: کدام بلوک این معما را حل میکند؟?
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a3.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a3.png
@@ -219,7 +219,7 @@ fa:
       4-5 maze multi 1:
         Maze Multiple Choice: Maze Multiple Choice
         /script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500
-        Which blocks solve the puzzle?: Which blocks solve the puzzle?
+        Which blocks solve the puzzle?: کدام بلوک این معما را حل میکند؟?
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png
@@ -227,7 +227,7 @@ fa:
       4-5 maze conditionals multi 1:
         Maze Conditionals Multiple Choice: Maze Conditionals Multiple Choice
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500
-        Which blocks solve the puzzle?: Which blocks solve the puzzle?
+        Which blocks solve the puzzle?: کدام بلوک این معما را حل میکند؟?
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png
@@ -527,6 +527,14 @@ fa:
         (rectangle 10 2 "solid" "red"): '(rectangle 10 2 "solid" "red")'
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): '(rectangle (+ 8 2) (- 7 5) "solid" "red")'
         (rectangle (+ 8 2) (- 7 5) solid red): '(rectangle (+ 8 2) (- 7 5) solid red)'
+      Multi Strings Images 1:
+        Strings and Images Multiple Choice: Strings and Images Multiple Choice
+        Multi Strings Images 1.blocks3.level: Multi Strings Images 1.blocks3.level
+        Which of these Evaluation Blocks will draw the image: Which of these Evaluation Blocks will draw the image
+        Multi Strings Images 1.blocks1.start_blocks, 300, 100: Multi Strings Images 1.blocks1.start_blocks, 300, 100
+        Multi Strings Images 1.blocks2.start_blocks, 300, 100: Multi Strings Images 1.blocks2.start_blocks, 300, 100
+        Multi Strings Images 1.blocks3.start_blocks, 300, 100: Multi Strings Images 1.blocks3.start_blocks, 300, 100
+        Multi Strings Images 1.blocks4.start_blocks, 300, 100: Multi Strings Images 1.blocks4.start_blocks, 300, 100
       test multi image:
         Maze Multiple Choice Two: Maze Multiple Choice Two
         /script_assets/matches/images/head.jpg,400: /script_assets/matches/images/head.jpg,400

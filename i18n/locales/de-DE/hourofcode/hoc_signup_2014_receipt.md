@@ -6,9 +6,15 @@ from: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;
 
 <% hostname = CDO.canonical_hostname('hourofcode.com') %>
 
+<% if @country == 'ro' %>
+
+Va multumim pentru inregistrare. Daca aveti nevoie de ajutor sau aveti orice intrebare contactati Echipa Hour of Code Romania la adresa: hoc@adfaber.org.
+
+<% end %>
+
 # Danke, dass Du Dich als Veranstalter für eine Hour of Code angemeldet hast!
 
-**JEDER** Veranstalter einer Hour of Code erhält 10 GB Dropbox-Speicher oder 10 $ Skype-Guthaben als Dankeschön! [Details](http://<%= hostname %>/Preise)
+**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](http://<%= hostname %>/prizes)
 
 ## 1. Weitersagen
 
@@ -18,7 +24,7 @@ Erzähl deinen Freunden von #HourOfCode.
 
 ## 2. Frage deine Schule eine Hour of Code anzubieten
 
-[Send this email](http://<%= hostname %>/resources#email) or give [this handout](http://<%= hostname %>/files/schools-handout.pdf) to your principal.
+[Sende diese email](http://<%= hostname %>/resources#email) oder gebe [dieses handout](http://<%= hostname %>/files/schools-handout.pdf) an deinen Schulleiter.
 
 <% end %>
 
@@ -33,14 +39,6 @@ Recruit a local group — boy/girl scouts club, church, university, veterans gro
 ## 5. Ask a local elected official to support the Hour of Code
 
 [Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
-
-<% if @country == 'ro' %>
-
-Multumim ca ne-ai anuntat despre evenimentul tau! Anunta-ne daca doresti informatii suplimentare sau daca ai intrebari. Hai sa facem istorie impreuna!
-
-Echipa Hour of Code Romania hoc@adfaber.org
-
-<% end %>
 
 * * *
 

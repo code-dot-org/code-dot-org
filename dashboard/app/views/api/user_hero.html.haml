@@ -1,7 +1,8 @@
 - if current_user
+  %div{style: 'margin-top: 20px; border-top: 1px solid lightgrey'}
   #welcome= t('welcome_back', name: current_user.name)
 
-  #student{ style: "width: 100%; float: left; padding-left:20px; box-sizing: border-box"}
+  #student{style: 'width: 100%; float: left; padding-left:20px; box-sizing: border-box;'}
     - if current_user.primary_script
       #student_progress #{t('home.student_progress')}:
       - if current_user.primary_script.trophies?
@@ -16,7 +17,7 @@
     #teacher{ style: 'width: 100%; float: left; padding-left:20px'}
       = t('home.teacher_student_count', count: current_user.students.length)
       &nbsp;
-      %a{href: teacher_dashboard_url, style: "text-decoration:none"}
+      %a{href: teacher_dashboard_url, style: 'text-decoration:none'}
         %button.btn.btn-primary.button-continue= t('teacher.students.dashboard')
       %br/
 

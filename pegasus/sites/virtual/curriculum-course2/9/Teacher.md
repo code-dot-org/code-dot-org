@@ -60,6 +60,7 @@ Students will:
 
 ### For the Teacher
 
+- [Lesson Video](http://youtu.be/fvpFCI8yoeA?list=PL2DhNKNdmOtobJjiTYvpBDZ0xzhXRj11N)
 - Locate a wide open space for this activity, such as the gym or outdoor field
 - Print out one [Relay Programming Activity Packet](/curriculum/course2/9/Activity9-RelayProgramming.pdf) for each group  
 - Print one [Relay Programming Assessment](Assessment9-RelayProgramming.pdf) for each student  

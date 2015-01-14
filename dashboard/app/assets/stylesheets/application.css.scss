@@ -15,8 +15,8 @@
  *= require_directory .
  */
 
-$baseFontFamily: 'Gotham A', 'Gotham B', sans-serif;
-$headingsFontWeight: 400;
+$baseFontFamily: 'Gotham 4r', sans-serif;
+$headingsFontWeight: normal;
 $btnPrimaryBackground: orange;
 $btnPrimaryBackgroundHighlight: orange;
 
@@ -48,12 +48,14 @@ body {
 }
 
 h1 {
-  font-weight: 700;
+  font-family: 'Gotham 7r', sans-serif;
+  font-weight: normal;
   color: #7665a0;
 }
 
 h2 {
-  font-weight: 500;
+  font-family: 'Gotham 5r', sans-serif;
+  font-weight: normal;
 }
 
 hr {
@@ -67,8 +69,24 @@ th {
   border: 1px solid white;
   text-align: left;
   font-size: 120%;
-  font-weight: 500;
+  font-family: 'Gotham 5r', sans-serif;
+  font-weight: normal;
   padding: 5px;
+}
+
+strong {
+  font-family: 'Gotham 7r', sans-serif;
+  font-weight: normal;
+}
+
+em {
+  font-family: 'Gotham 4i', sans-serif;
+  font-style: normal;
+}
+
+strong em,
+em strong {
+  font-family: 'Gotham 7i', sans-serif;
 }
 
 .clear {
@@ -137,7 +155,8 @@ th {
   cursor: pointer;
   display: inline-block;
   margin: 2px;
-  font-weight: 400;
+  font-family: 'Gotham 4r', sans-serif;
+  font-weight: normal;
   color: white;
 }
 
@@ -221,7 +240,8 @@ th {
 {
   font-size: 10px;
   color: $purple;
-  font-weight: 500;
+  font-family: 'Gotham 5r', sans-serif;
+  font-weight: normal;
 }
 
 .game-group {
@@ -235,9 +255,10 @@ th {
     display: table-cell;
     width: 200px;
     vertical-align: middle;
-    margin-right: 5px;
+    padding-right: 10px;
     .game-title {
-      font-weight: 500
+      font-family: 'Gotham 5r', sans-serif;
+      font-weight: normal;
     }
   }
   .games {
@@ -301,7 +322,7 @@ th {
 
 .header.hide_on_mobile,
 .header-wrapper.hide_on_mobile {
-  @media screen and (max-device-width: 900px) {
+  @media screen and (max-device-height: 900px) and (max-device-width: 500px) {
     display: none;
   }
 }
@@ -334,10 +355,11 @@ a.header_status_bar:hover {
 .main {
   padding-top: 15px;
   padding-bottom: 15px;
-  a:link {font-weight: bold; color:$dark_color;}
-  a:visited {font-weight: bold; color:$dark_color;}
-  a:hover {font-weight: bold; color:$dark_color; background-color: transparent;   text-decoration: underline; }  /* mouse over link */
-  a:active {font-weight: bold; color:$dark_color; background-color: transparent;}  /* selected link */
+  a:link {font-family: 'Gotham 7r', sans-serif; font-weight: normal; color:$dark_color;}
+  a:visited {font-family: 'Gotham 7r', sans-serif; font-weight: normal; color:$dark_color;}
+  a:hover {font-family: 'Gotham 7r', sans-serif; font-weight: normal; color:$dark_color; background-color: transparent;   text-decoration: underline; }  /* mouse over link */
+  a:active {font-family: 'Gotham 7r', sans-serif; font-weight: normal; color:$dark_color; background-color: transparent;}  /* selected link */
+  a.fa:link, a.fa:visited, a.fa:hover, a.fa:active {font-family: FontAwesome;}
 }
 
 /* This styling helps to push the footer to the bottom of a page. */
@@ -363,10 +385,10 @@ html, body {
   font-size: 14px;
   background-color: $dark_color;
   color: $header_text;
-  a:link {font-weight: 400; color: white;}
-  a:visited {font-weight: 400; color: white;}
-  a:hover {font-weight: 400; color:white; background-color: transparent;   text-decoration: underline; }  /* mouse over link */
-  a:active {font-weight: 400; color:white; background-color: transparent;}  /* selected link */
+  a:link {font-family: 'Gotham 4r', sans-serif; font-weight: normal; color: white;}
+  a:visited {font-family: 'Gotham 4r', sans-serif; font-weight: normal; color: white;}
+  a:hover {font-family: 'Gotham 4r', sans-serif; font-weight: normal; color:white; background-color: transparent;   text-decoration: underline; }  /* mouse over link */
+  a:active {font-family: 'Gotham 4r', sans-serif; font-weight: normal; color:white; background-color: transparent;}  /* selected link */
   select {
     width: auto;
     font-size:11px;
@@ -374,10 +396,10 @@ html, body {
     margin-bottom: 4px
     }
   .fineprint {
-    a:link {font-weight:600;}
-    a:visited {font-weight:600;}
-    a:hover {font-weight:600;}
-    a:active {font-weight:600;}
+    a:link {font-family: 'Gotham 5r', sans-serif; font-weight: normal;}
+    a:visited {font-family: 'Gotham 5r', sans-serif; font-weight: normal;}
+    a:hover {font-family: 'Gotham 5r', sans-serif; font-weight: normal;}
+    a:active {font-family: 'Gotham 5r', sans-serif; font-weight: normal;}
   }
   .dim {
     display: inline-block;
@@ -769,7 +791,8 @@ html, body {
 
   .help_title {
     color: #1180be;
-    font-weight: bold;
+    font-family: 'Gotham 7r', sans-serif;
+    font-weight: normal;
     font-size: 17.5px;
     display: inline-block;
   }
@@ -861,21 +884,18 @@ html, body {
   position: absolute;
   cursor: pointer;
   z-index: 1;
+  background: image-url("x_button.png") no-repeat center center;
+  background-size: 100% auto;
 
   top: $cornerOffset;
   right: $cornerOffset;
+  width: $startWidth;
+  height: $startHeight;
   &:hover {
     top: $cornerOffset - $movement;
     right: $cornerOffset - $movement;
-  }
-
-  img {
-    width: $startWidth;
-    height: $startHeight;
-    &:hover {
-      width: $startWidth + $growth;
-      height: $startHeight + $growth;
-    }
+    width: $startWidth + $growth;
+    height: $startHeight + $growth;
   }
 }
 
@@ -887,7 +907,13 @@ html, body {
   font-size: 20px;
   line-height: 28px;
   color: #7E5BA0;
-  font-weight: 500;
+  font-family: 'Gotham 5r', sans-serif;
+  font-weight: normal;
+}
+
+html[dir=rtl] .qtip-content {
+  direction: rtl;
+  text-align: right;
 }
 
 .qtip-default {
@@ -909,8 +935,6 @@ html, body {
 
   .tooltip-x-close {
     @include close-button($cornerOffset: -35px);
-    background: none;
-    color: none;
   }
 }
 
@@ -969,7 +993,7 @@ a.download-video {
 }
 
 .quiet_links {
-  a:link { font-weight: normal; }
+  a:link { font-family: 'Gotham 4r', sans-serif; font-weight: normal; }
 }
 
 .fixed_width_cell {
@@ -986,7 +1010,7 @@ a.download-video {
     font-size: 24.5px;
     padding: 5px 0;
     #puzzle {
-      font-weight: bold;
+      font-family: 'Gotham 7r', sans-serif; font-weight: normal;
     }
     .btn {
       height: 32px;
@@ -1038,7 +1062,7 @@ a.download-video {
   .row.navcontainer {
     margin: 30px 0 10px -20px;
     background-color: #eee;
-  }  
+  }
 
   ul.nav.nav-pills {
     text-transform: uppercase;
@@ -1093,7 +1117,7 @@ a.download-video {
       }
       a {
         color: #ddd;
-        font-weight: 400;
+        font-family: 'Gotham 4r', sans-serif; font-weight: normal;
       }
       .white {
         color:white;
@@ -1114,10 +1138,10 @@ a.download-video {
   }
   .twolineheader {
     h2 {
-      font-weight: 400; color: #7665a0; font-size: 24px; margin-bottom: 0px; line-height: 30px;
+      font-family: 'Gotham 4r', sans-serif; font-weight: normal; color: #7665a0; font-size: 24px; margin-bottom: 0px; line-height: 30px;
     }
     h1 {
-      margin-top: 0px; line-height: 30px; font-size: 30px; font-weight: 600;
+      margin-top: 0px; line-height: 30px; font-size: 30px;   font-family: 'Gotham 5r', sans-serif; font-weight: normal;
     }
   }
 
@@ -1147,6 +1171,7 @@ a.download-video {
   .smalltext {
     font-size:13px;
     padding-right:10px;
+    font-family: 'Gotham 4r', sans-serif;
     font-weight:normal;
     color:rgb(88, 103, 113);
   }
@@ -1164,14 +1189,62 @@ a.download-video {
 
 .miniblock-short {
   height:150px;
+  h3 {
+    margin-bottom:10px;
+  }
 }
 
 .miniblock-tall {
   height:232px;
+
+  .heading {
+    padding-left: 10px;
+    padding-right:10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  h3 {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: 'Gotham 5r', sans-serif;
+    font-weight: normal;
+    display: block;
+    float: left;
+    width: 200px;
+  }
+
+  .beta
+  {
+    .heading {
+      padding-right: 0px;
+    }
+
+    h3 {
+      width: 140px;
+    }
+
+    .betatext {
+      text-align: center;
+      display: block;
+      float: right;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      background-color: rgba(116, 128, 136, 0.37);
+      padding-left: 5px;
+      padding-right: 5px;
+      font-size: 24.5px;
+      height: 35px;
+      line-height: 40px;
+      width: 60px;
+    }
+  }
 }
 
 .miniblock-tall-audiencerow {
-  height:250px;
+  height:258px;
 }
 
 #signin {
@@ -1179,7 +1252,8 @@ a.download-video {
     margin-bottom:10px;
     a {
       font-size:18px;
-      font-weight:400;
+      font-family: 'Gotham 4r', sans-serif;
+      font-weight: normal;
     }
   }
   .itemblock {
@@ -1255,13 +1329,13 @@ a.download-video {
     display:inline-block
   }
   button {
-    font-size:16px; 
+    font-size:16px;
     height:40px;
   }
   .registertext {
-    display:inline-block; 
-    font-size:16px; 
-    color:#586771; 
+    display:inline-block;
+    font-size:16px;
+    color:#586771;
     margin-top:15px;
   }
 }
@@ -1274,8 +1348,15 @@ a.download-video {
     width: 260px;
     float: left;
     img {
-      height: 100%;
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      height: auto;
       width: auto;
+      max-height: 100%;
+      max-width: 100%;
     }
   }
   .draggablecolumn {
@@ -1284,20 +1365,24 @@ a.download-video {
     -ms-touch-action: none;
   }
   li {
-    padding-top: 7px;
-    padding-bottom: 7px;
+    padding-top: 1px;
+    padding-bottom: 1px;
     background-color: lightgrey;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 4px;
+    padding-right: 4px;
     width: 220px;
     margin-top:2px;
     margin-bottom:2px;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 6px;
   }
   #questions {
     list-style-type: none;
     margin-left:0px;
     li {
-      background-color: lightgrey;
+      background-color: white;
+      border-color: #c6cacd;
     }
   }
   li {
@@ -1307,23 +1392,30 @@ a.download-video {
     list-style-type: none;
     margin-left: 0px;
     .emptyslot {
-      background-color: #eee;
+      background-color: #e7e8ea;
+      border-color: #e7e8ea;
       .giantmark {
         .text {
           opacity: 0.8;
-          font-weight: 500;
+          font-family: 'Gotham 5r', sans-serif; font-weight: normal;
         }
       }
     }
     .active {
+      border-style: dotted;
+      border-color: #ffdb74;
+    }
+    .active.emptyslot {
       background-color: lightyellow;
     }
   }
   .answer {
-    background-color: lightblue;
-    .active {
-      background-color: green;
-    }
+    background-color: white;
+    border-color: #a6daed;
+  }
+  .answer:hover {
+    border-color: #d1d567;
+    cursor: move;
   }
   #answerdest {
     width: 240px;
@@ -1346,7 +1438,7 @@ a.download-video {
     width: 30px;
     padding-left: 0px;
     padding-right: 0px;
-    background-color: white;
+    background-color: transparent;
   }
 }
 
@@ -1439,6 +1531,7 @@ div.mini_gallery_activity {
   color: white;
   font-size: 13px;
   padding-right: 10px;
+  font-family: 'Gotham 4r', sans-serif;
   font-weight: normal;
   padding: 10px;
 }
@@ -1524,7 +1617,7 @@ $information-desktop: "only screen and (min-width: 1024px)";
   }
 }
 
-/* moved over from blockly */
+/* moved over from apps */
 
 $modal-image-width: 100px;
 $modal-image-margin-gap: 10px;
@@ -1570,7 +1663,8 @@ $modal-image-margin-gap: 10px;
 }
 
 .dialog-title {
-  font-weight: bold;
+  font-family: 'Gotham 7r', sans-serif;
+  font-weight: normal;
 }
 
 #ok-button {
@@ -1613,13 +1707,13 @@ $modal-image-margin-gap: 10px;
   border: none;
 }
 
-/* also moved over from blockly */
+/* also moved over from apps */
 
 .farSide {
   text-align: right;
 }
 
-/* Buttons from blockly */
+/* Buttons from apps */
 
 button {
   margin: 5px;

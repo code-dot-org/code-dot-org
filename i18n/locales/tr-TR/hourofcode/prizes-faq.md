@@ -32,15 +32,15 @@ Due to a small full-time staff, Code.org is unable to handle the logistics of ad
 
 ## When is the deadline to apply for the hardware prize?
 
-To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
+To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 14, 2014. Amerikada her eyalette bir okul sınıf-seti bilgisayarların sahibi olacaktır. Code.org, kazananları seçecek ve1 Aralık 2014 tarihinde e-posta yolu ile bilgilendirecektir.
 
 ## When is the deadline to be eligible to win a tech chat?
 
-To qualify, you must register your classroom for the Hour of Code by November 14, 2014. Classrooms will win a video chat with a celebrity. Code.org will select and notify winners via email by December 1, 2014.
+To qualify, you must register your classroom for the Hour of Code by November 14, 2014. Classrooms will win a video chat with a celebrity. Code.org, kazananları seçecek ve1 Aralık 2014 tarihinde e-posta yolu ile bilgilendirecektir.
 
 ## When will I be notified if my school or classroom wins a prize?
 
-To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 14, 2014. Code.org will select and notify winners via email by December 1, 2014.
+To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 14, 2014. Code.org, kazananları seçecek ve1 Aralık 2014 tarihinde e-posta yolu ile bilgilendirecektir.
 
 ## If my whole school can’t do the Hour of Code during Computer Science Education Week (Dec. 8-14), can I still qualify for prizes?
 

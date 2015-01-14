@@ -4,41 +4,41 @@ title: Hour of Code Press Release for Elected Officials layout: wide nav: resour
 
 * * *
 
-# Sample press release for elected officials
+# 지역 행정직정치인(선출직)을 위한 샘플 보도 자료
 
-For Immediate Release  
-[**DATE**]  
-Contact: [**CONTACT INFORMATION**]  
+빠른 보도자료 배포를 위해  
+[**날짜**]  
+연락처: [**연락처 정보**]  
   
 
 
 **
 
 <center>
-  GOVERNOR/SENATOR/ASSEMBLYMEMBER/REPRESENTATIVE/MAYOR/ COUNCILMEMBER [INSERT NAME][PARTICIPATED IN THE HOUR OF CODE WITH LOCAL STUDENTS]</strong><br /> Community comes together to raise awareness about importance of computer science education by participating in Computer Science Education Week
+  도지사/국회의원/의회관계자/대표/시장/ 위원 [이름입력][지역 학생들과 Hour of Code에 참여하는 인사]</strong><br /> 컴퓨터과학(정보과학)교육의 중요성에 대해 널리 알리고 인식할 수 있도록, 컴퓨터과학교육주간(Computer Science Education Week) 동안에 저희와 함께해 주시기를 요청합니다.
 </center>
 
   
   
 </p> 
 
-**DATE** - [**INSERT NAME**] joined the principal and faculty members of [**INSERT NAME OF SCHOOL**], business leaders and local families today for [**NAME OF EVENT**] to participate in the Hour of Code as part of Computer Science Education Week . [INSERT NAME] and community members were among tens of millions of people around the world to take part in the largest learning event in history.
+**날짜** - [**학교명 입력**]의 교장선생님 학교임직원들과 함께 참여하는 [**이름 입력**], 지역 사업체 대표, 지역 협의회 등이 이번 컴퓨터과학교육주간 기간동안에 Hour of Code 이벤트에 맞추어 [**이벤트 이름**] 행사에 참여합니다. [이름 입력] 과 커뮤니티 멤버들은 역사상 가장 큰 교육 이벤트로서 전세계적으로 수천만명이 참여했던 이벤트에 함께 참여하고자 합니다.
 
-[**INSERT DETAILS OF EVENT, USE DESCRIPTIVE AND QUANTIFIABLE LANGUAGE. FOR EXAMPLE:**]  
-“Daniels Run Elementary school held a school-wide Hour of Code event to expose its students to computer science. More than 700 students from all grades did at least one Hour of Code. And a dozen parents and volunteers from the community helped with the day and brought the kids together for an assembly showcasing why computer science matters in the lives of these students.”
+[**이벤트 상세사항 입력, 설명 내용과 적절한 언어 사용 예를 들어:**]  
+"다니엘스 런 초등학교는 학생들에게 컴퓨터과학(정보과학)을 배워보게 하는 전 세계적인 Hour of Code 이벤트를 열 예정입니다. 700명이 넘는 전 학년 학생들이 적어도 1시간 가량의 Hour of Code 활동에 참여하게 됩니다. 그리고, 지역 커뮤니티에서 오신 수 십여분의 부모님들과 자원봉사자들과 함께, 왜 컴퓨터과학(정보과학)이 학생들의 생활에 있어서 중요한지 보여주는 과정들에 학생들과 함께 참여하게 됩니다."
 
-[**SAMPLE STOCK TEXT FOR CONTEXT:**]  
-Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and students of color are severely underrepresented. The good news is we’re changing this for the better. The Hour of Code is gateway toward providing all students with access to high-quality computer science education.
+[**이해를 도울 수 있는 몇 가지 예시 자료들:**]  
+컴퓨터들은 모든 곳에 있지만, 10 여년 이전보다도 더 적은 학교들에서만 컴퓨터과학(정보과학)을 가르치고 있습니다. 여학생들과 유색인종들은 거의 제대로 배우지도 못하고 있습니다. 하지만, 좋은 소식은 이러한 상황을 바꿔보기 위해 우리가 함께 변화시키려고 한다는 것입니다. Hour of Code 행사는 모든 학생들에게 양질의 컴퓨터과학(정보과학) 교육을 받을 수 있도록 하기 위한 시발점으로 사용할 수 있습니다.
 
-During Computer Science Education Week last year, 15 million students tried the Hour of Code. Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+작년 컴퓨터과학교육주간(Computer Science Education Week) 동안에만, 1천5백만 명 이상의 학생들이 Hour of Code를 경험해 보았습니다. 컴퓨터과학(정보과학)은 구글, MSN, 야후 등의 홈페이지들에 숨어있었습니다. 그리고 디즈니에도.. 오바마 대통령, 샤키라, 애쉬튼 커쳐... 모두 비디오 동영상을 통해 Hour of Code 행사의 시작을 알려주었습니다. 이러한 전세계적 운동을 지원하기 위해 전세계적으로 100개 이상의 기업과 사람들이 협력하였습니다.
 
-This year the Hour of Code movement is aiming for 100 million students.
+올해의 Hour of Code 운동은 1억명의 학생들을 목표로 하고 있습니다.
 
-[**INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:**]  
-“We need to encourage and embrace our students’ interest in computer science,” said [**INSERT NAME**]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.”
+[**유명인사들의 이야기들, 아래 예시:**]  
+"우리는 우리 학생들이 컴퓨터과학(정보과학)에 대해 관심을 가지고 배울 수 있도록 할 필요가 있습니다"라고 하였습니다. [**이름 입력**] "모든 학생들은 앞으로 미래 21세기에 좋은 직업들을 얻을 수 있도록, 컴퓨터과학(정보과학)을 배울 수 있는 기회들을 가질 수 있도록 할 필요가 있습니다."
 
-[**INSERT MORE INFORMATION ABOUT YOUR EVENT AND/OR YOUR ORGANIZATION**]
+[**이벤트에 대한 추가 정보나 조직이름**]
 
-[**INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT**]
+[**이벤트에 참여하는 사람/조직 등에 대한 내용 입력**]
 
-For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]
+[**이벤트/프로그램/기타**]에 대한 더 자세한 사항은 [**웹사이트 입력**] 에 접속해 보시거나, [**연락처 정보 입력**]에 문의해 주세요.

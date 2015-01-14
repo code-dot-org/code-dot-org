@@ -60,6 +60,7 @@
   "CONTROLS_WHILEUNTIL_OPERATOR_WHILE":"repita enquanto",
   "CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL":"Enquanto um valor for falso, realize algumas instruções.",
   "CONTROLS_WHILEUNTIL_TOOLTIP_WHILE":"Enquanto um valor for verdadeiro, realize algumas instruções.",
+  "DEFINE_HEADER_DEFINITION":"Definição",
   "DEFINE_FUNCTION_DEFINE":"Definir",
   "DELETE_BLOCK":"Remova o Bloco",
   "DELETE_PARAMETER":"Excluir parâmetro...",

@@ -60,6 +60,7 @@
   "CONTROLS_WHILEUNTIL_OPERATOR_WHILE": "gentag mens",
   "CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL": "Mens en værdi er falsk, så udfør nogle udsagn.",
   "CONTROLS_WHILEUNTIL_TOOLTIP_WHILE": "Mens en værdi er sand, så udfør nogle udsagn.",
+  "DEFINE_HEADER_DEFINITION": "Definition",
   "DEFINE_FUNCTION_DEFINE": "Definer",
   "DELETE_BLOCK": "Slet blok",
   "DELETE_PARAMETER": "Slet parameter...",

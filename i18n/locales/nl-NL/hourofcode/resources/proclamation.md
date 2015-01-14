@@ -1,15 +1,15 @@
 * * *
 
-title: Sample Resolution Supportive of Computer Science Education Week and Hour of Code layout: wide nav: resources_nav
+titel: Voorbeeld Resolutie die de Informatica Onderwijs Week en Uur Code ondersteunt indeling: breed nav:resources_nav
 
 * * *
 
-### Below is a sample resolution supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
+### Hieronder vindt u een voorbeeld resolutie die de informatica onderwijs week ondersteunt en de doelstellingen die door de staat en lokale wetgevers kunnen worden gebruikt.
 
   
-[HOUSE,SENATE, STATE, COUNTY OR CITY RESOLUTION OR PROCLAMATION ###] – Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+[Huis, SENAAT, STATE, COUNTY of stad resolutie of PROCLAMATIE ###]- Aangezien de Informatica Onderwijs Week de cruciale rol belicht die informatica speelt in onze veranderende maatschappij en hoe informatica innovatie mogelijk maakt en economische kansen creëert;
 
-[HOUSE OR SENATE RESOLUTION ###]
+[HUIS OF SENAAT RESOLUTIE ###]
 
 [DATE]
 

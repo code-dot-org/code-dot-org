@@ -518,25 +518,28 @@
           je scoort?
         studio_c3_game_7: Maak je eigen spel. Wanneer je klaar bent klik op Finish
           om je vrienden toe te laten je spel te proberen op hun telefoons.
-        studio_playlab_1: Kan je deze hond "hallo wereld" laten zeggen?
-        studio_playlab_2: Kan je de hond iets laten zeggen en dan de kat iets laten
-          zeggen?
-        studio_playlab_3: Kun je een programma schrijven dat de hond naar de kat verplaatst?
-        studio_playlab_4: Kun je een programma maken die de hond naar de kat verplaatst,
-          en de kat "hallo" laat zeggen wanneer de hond bij de kat is?
-        studio_playlab_5: Kun je een programma schrijven die de octopus "hallo" laat
-          zeggen wanneer op hem geklikt wordt?
-        studio_playlab_6: Kun je een programma maken dat de pinguïn laat bewegen met
-          de boven / onder / links / rechts pijltjes zodat je alle doelen kunt raken?
-        studio_playlab_7: Het "blijven herhalen" blok zorgt er voor dat je code blijft
-          herhalen. Kan je blokken aan elkaar plakken die er voor zorgen dat deze
-          dinosaurus op en neer blijft bewegen?
-        studio_playlab_8: Kan je een blok toevoegen die een punt toevoegt wanneer
-          de pinguïn met de octopus botst, en hem dan verplaatsen met de pijltjes
-          totdat je scoort?
-        studio_playlab_9: Kan je blokken toevoegen die de achtergrond en de snelheid
-          van de pinguïn veranderen, en hem dan verplaatsen met de pijltjes totdat
-          je scoort?
+        studio_playlab_1: Pinguïn wil "Hallo" zeggen - kan je hem helpen?
+        studio_playlab_2: Grot Jongen (acteur 1) en Grot Meisje (acteur 2) willen
+          "Hallo"  zeggen tegen elkaar. Kan je hen helpen door het blok "Zeg" twee
+          maal te gebruiken?
+        studio_playlab_3: Kan je Tennis meisje helpen om de vlag te pakken?
+        studio_playlab_4: Kan je Tennis jongen (acteur 1) helpen om tot bij Tennis
+          Girl (acteur 2)  te raken en een geluid af te spelen wanneer hij er is?
+        studio_playlab_5: Kan je Spacebot helpen om "Gegroet aardbewoners" te zeggen
+          wanneer hij wordt aangeklikt? Niet vergeten hem aan te klikken nadat je
+          op uitvoeren klikte
+        studio_playlab_6: Kan je de heks helpen bewegen met de omhoog/omlaag/links/rechts
+          pijltjes-toetsen en zo alle magische vuurballen bemachtigen?
+        studio_playlab_7: Met de "Herhaal voor altijd" blok kan je je code onafgebroken
+          uitvoeren. Kan je er blokken aan vastmaken om de tovenaar herhaaldelijk
+          naar links en naar echts te laten bewegen?
+        studio_playlab_8: kan je een blok toevoegen om een punt te scoren en een geluid
+          af te spelen wanneer de eenhoorn de tovenaar raakt en deze vervolgens besturen
+          met de pijltjestoetsen totdat je scoort?
+        studio_playlab_9: Stel de achtergrond in voor deze alien invasie en help Spacebot
+          om sneller bij de alien invasie te raken door zijn snelheid te veranderen.
+          Beweeg hem met de pijltjes-toetsen om bij de Spacebot te raken en iedereen
+          te waarschuwen
         studio_playlab_10: Maak je eigen spel. Wanneer je klaar bent klik op Finish
           om je vrienden toe te laten je spel te proberen op hun telefoons.
         studio_full_sandbox: Maak je eigen spel. Wanneer je klaar bent klik op Finish
@@ -659,43 +662,45 @@
           blokken toe te voegen? Als je het goed doet kan ik ieder kronkelend pad
           volgen, hoe lang het ook is. Schiet op! Het ijs is aan het smelten!
       Standalone_Artist_1:
-        instructions: Welcome to Artist! First off, let's try to make a simple square
-          using the turn right block and move forward block. Each side should be 100
-          pixels long.
+        instructions: Welkom bij Kunstenaar! Laat ons eerst een eenvoudig vierkant
+          maken met behulp van de draai rechts blok en de beweeg vooruit blok. Iedere
+          zijde moet 100 pixels lang zijn.
       Standalone_Artist_2:
-        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel
-          long sides.
+        instructions: Teken deze diamant met koeken van 120 graden en 60 graden en
+          zijden met een lengte van 150 pixels.
       Standalone_Artist_3:
-        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree
-          turns?
+        instructions: Kan je deze zeshoek tekenen met zijden van 100 pixels en bochten
+          van 60 graden?
       Standalone_Artist_4:
-        instructions: Now you've got a new block to play with, the loop. This will
-          repeat a set of commands. What happens if you loop these commands 6 times?
+        instructions: Nu heb je een nieuwe blok om mee te spelen, de lus. Deze zal
+          een reeks van commando's herhalen. Wat gebeurt er wanneer je deze commando's
+          6 keer herhaalt?
       Standalone_Artist_5:
-        instructions: How many times do you need to loop this diamond to draw the
-          flower?
+        instructions: Hoeveel maal heb je de diamant in een lus stoppen om een bloem
+          te tekenen?
       Standalone_Artist_5.5:
-        instructions: 'Notice how we simplified the diamond code by turning it into
-          a loop. You can loop that whole sequence 12 times to draw the flower. Hint:
-          You''ll need to turn 30 degrees after your diamond loop so you don''t keep
-          drawing over the same diamond.'
+        instructions: 'Kijk hoe we de diamant code vereenvoudigd hebben door de code
+          te veranderen in een lus. Je kan de ganse reeks 12 keer herhalen om een
+          bloem te tekenen. Tip: Je moet 30 graden draaien na je diamant lus zodat
+          je niet over dezelfde diamant blijft tekenen.'
       Standalone_Artist_6:
-        instructions: 'Loop this hexagon code 6 times to create the design. How many
-          degrees will you need to turn each time? Hint: divide the number of degrees
-          in a circle by the number of times you are looping.'
+        instructions: 'Gebruik de zeshoek code 6 maal in een lus om dit ontwerp te
+          tekenen. Hoeveel graden moet je iedere keer draaien. Tip: deel het aantal
+          graden in een cirkel door het aantal maal dat je een lus gebruikt.'
       Standalone_Artist_7:
-        instructions: 'A function is another programming tool to help you avoid repeating
-          yourself. This function draws a flower, so you can use it any time you want
-          to draw a flower. Use this and the new jump block to draw these flowers.
-          Hint: The flowers are 150 pixels apart'
+        instructions: 'Een functie is een ander programmeer-hulpmiddel wat vermijdt
+          dat je jezelf herhaalt. Deze functie tekent een bloem, je kan deze gelijk
+          waneer gebruiken wanneer je een bloem wil tekenen. Gebruik deze en de nieuwe
+          spring blok om bloemen te tekenen. Tip: De bloemen staan 150 pixels van
+          mekaar'
       Standalone_Artist_8:
-        instructions: Here's a function called "Draw a shape" that we've programmed
-          to draw hexagons. Run the code to see what it does and then experiment with
-          the function to see what happens. Can you make it draw a pattern of squares,
-          triangles, or octagons?
+        instructions: Hier is de functie "teken een vorm" die we geprogrammeerd hebben
+          om zeshoeken te tekenen. voer de code uit om te zien wat deze doet en experimenteer
+          vervolgens met de functie om te zien wat er gebeurt. Kan je er patronen
+          met vierkanten, driehoeken of achthoeken mee tekenen?
       Standalone_Artist_9:
-        instructions: Now go ahead and make whatever picture you'd like! You've even
-          got an empty function that you can make do whatever you want!
+        instructions: Nu mag je maken wat je wil! Je hebt zelfs een lege functie die
+          je kan laten doen wat je maar wilt!
     video:
       name:
         maze_intro: Doolhof Intro
@@ -773,14 +778,28 @@
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Functionele Zonnevangers
         C3_songwriting_with_parameters: Songwriting met Parameters
-        C4_artist_math: Programming the Artist with Math
-        C4_create_functions: Creating Functions
-        C4_edit_functions: Editing Functions
+        C4_intro: Introductie
+        C4_bee_conditional: Bij voorwaardelijke instructies
+        C4_variables_artist: Variabelen - Kunstenaar
+        C4_variables_playlab: Variabelen - Play Lab
         C4_for_loops: For-lussen
-        C4_variables: Variabelen
-        frozen_intro: Hour of Code Intro
-        frozen_loops: Introduction to Loops
-        frozen_functions: Introduction to Functions
+        C4_math_artist: Programmeer de Kunstenaar met Math
+        C4_function_edit: Bewerken van Functies
+        C4_function_create: Maken van functies
+        C4_function_parameters: Functies met Parameters
+        C4_conditionals: Voorwaardelijke instructies
+        C4_unplugged_algorithms: Algoritmen met Tangrams
+        C4_unplugged_madlibs: Mad Libs
+        C4_unplugged_variables: Variabelen in Enveloppen
+        C4_unplugged_forloops: For-lussen
+        C4_unplugged_parameters: Liedjes schrijven met Parameters
+        C4_unplugged_binary: Binaire
+        frozen_intro: Uur Code Intro
+        frozen_loops: Inleiding tot Lussen
+        frozen_functions: Inleiding tot Functies
+        playlab_intro: Inleiding tot Play Lab
+        playlab_events: Play Lab evenenementen
+        playlab_repeat_forever: Play Lab Herhaal voor altijd
     callout:
       text:
         drag_blocks: Sleep een "vooruit" blok en plak het onder het andere blok
@@ -807,6 +826,10 @@
           door de correcte graden om te draaien
         repeat_blocks: Gebruik van de blok "Repeat" en plaats deze rond de blokken
           in de werkruimte
+        repeat_blocks_1: (1) gebruik dit blok en zet het rond de grijze blokken in
+          de werkruimte
+        repeat_blocks_2: (2) Verplaats het "Herhaal" blok naar hier en plaats de grijze
+          blokken er in
         snowflake_dropdown: Gebruik deze vervolgkeuzelijst om verschillende sneeuwvlokken
           te maken!
         degrees_per_side: Deel 360 door het aantal zijden om de grootte van de hoeken
@@ -815,13 +838,13 @@
           te voltooien.
         set_length: Gebruik deze blok om de "lengte" juist in te stellen.
         which_equation: Welke vergelijking maakt iedere zijde korter voor vormen met
-          meer zijden? probeer iedere vergelijking!
+          meer zijden?
         get_nectar: Gebruik de nieuwe "Krijg Nectar" blok.
         actions_category: De gereedschapskist kreeg een nieuwe look! Hier zijn de
           "Actie" blokken.
         draw_square_hint: 'Tip: Gebruik de vierkant lus die je in de vorige puzzel
           maakte.'
-        edit_function: Gebruik deze knop om de functie bewerken.
+        edit_function: Klik hier om je functie te bewerken.
         create_function: Klik hier om de Functies flyout te openen en klik vervolgens
           op "Creëer Functie" knop.
         house_hint: Het is geen probleem dat je afbeelding er nog niet uitziet als
@@ -833,19 +856,49 @@
         logic_category: Open de "Logica" flyout en zoek de "als/anders" blok.
         length_parameter: Kan je de functie bijwerken zodat deze de "lengte" parameter
           gebruikt?
-        frozen_diamond_repeat: Use the repeat block to create this shape.
-        frozen_circle_function_in_circle_turn: Don't forget to turn after creating
-          each circle.
-        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
-          and change the size.
-        frozen_snowflake_branch: Use the "create a snowflake branch" block
-        frozen_create_square: Attach more blocks here to create a square
-        playlab_drag_say: Drag the "say" block here and type "hello"
-        playlab_use_twice: Use this block twice and remember to change the actor number
-        playlab_move_girl: Use the "move right" block to move Tennis Girl
-        playlab_play_sound: Add "play sound" block here
-        playlab_arrow_keys: Remember to use these to move the witch after clicking
-          on Run
-        playlab_add_move: Add "move" blocks inside this repeat block
-        playlab_add_score: Add score blocks here
-        playlab_add_blocks: Add your blocks here
+        frozen_diamond_repeat: Gebruik het herhaal blok om deze vorm te maken.
+        frozen_circle_function_in_circle_turn: Vergeet niet te draaien na iedere cirkel.
+        frozen_circle_function_with_parameter_circle: Gebruik de "maak en cirkel"
+          blok en wijzig de grootte.
+        frozen_snowflake_branch: Gebruik de "Maak een sneeuwvlok-tak" blok
+        frozen_create_square: Hang hier meer blokken aan vast om een vierkant te maken
+        playlab_drag_say: Sleep de "zeg" blok naar hier en typ "Hallo"
+        playlab_use_twice: Gebruik deze blok twee keer en denk er aan om het acteurnummer
+          te veranderen
+        playlab_move_girl: Gebruik de "beweeg naar rechts" blok om Tennis meisje te
+          laten bewegen
+        playlab_play_sound: '"Geluid afspelen" blok hier toevoegen'
+        playlab_arrow_keys: Vergeet niet van deze te gebruiken om de heks te besturen
+          nadat je op Uitvoeren klikte
+        playlab_add_move: Voeg "Beweeg" blokken toe binnen dit herhaal blok
+        playlab_add_score: Voeg hier score blokken toe
+        playlab_add_blocks: Voeg hier je eigen blokken toe
+        set_variable: Sleep een getalblok naar hier om je variabele in te stellen
+        place_variable: Sleep je variabele in dit blok
+        bee_for_loop: Sleep het grootste aantal nectar wat je wil dat de bij verzamelt
+          naar hier
+        place_counter_variable: Sleep je teller-variabele in dit blok
+        function_editor_draw_square: Dit is je functie-definitie. Deze blokken worden
+          iedere keer uitgevoerd als je het "teken een vierkant" blok gebruikt
+        change_here: Breng hier je wijziging aan
+        write_draw_square_function: Sleep blokken die een vierkant tekenen vanuit
+          de gereedschapskist naar hier
+        write_draw_triangle_function: Sleep blokken vanuit de gereedschapskist naar
+          hier om een driehoek te tekenen
+        edit_add_parameter: klik op bewerken om een parameter toe te voegen aan je
+          functie
+        add_and_drag_parameter: Schrijf hier de naam van je parameter, klik op voeg
+          toe en sleep het dan in je functie definitie
+        fill_in_actor: Vul de ??? met nummers die overeenstemmen met iedere acteur
+          (1,2 en 3)
+        repeat: Plaats blokken in de lus om opdrachten te herhalen
+        if_bee_nectar: Gebruik de "als" blok om te beslissen of de bij nectar moet
+          krijgen
+        if_else_bee: Gebruik de "als/anders" blok zodat de bij nectar  krijgt van
+          de bloem en honing maakt als het geen bloem is
+        repeat_full_circle: Voer het aantal keer in dat de zombie moet bewegen om
+          een volledige cirkel te maken
+        place_length_variable: Sleep de lengte variabele om de vraagtekens te vervangen
+        arrows_move_actor: Gebruik de pijltjestoetsen om de acteur te bewegen
+        right_arrow_fireball: Gebruik het rechter-pijltje om vuurballen te schieten
+        name_function: Schrijf hier de naam van je functie

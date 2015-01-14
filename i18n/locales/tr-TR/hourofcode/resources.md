@@ -8,10 +8,6 @@ başlık: Kaynaklar düzen: geniş nav: kaynaklar_nav
   <h1 class="col-sm-6">
     Kaynaklar
   </h1>
-  
-  <div class="col-sm-6 button-container centered">
-    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Sign up your event</button></a>
-  </div>
 </div>
 
 <% if @country == 'ie' %>
@@ -27,7 +23,7 @@ başlık: Kaynaklar düzen: geniş nav: kaynaklar_nav
 <a id="handouts"></p> 
 
 <h2>
-  Use this handout to spread the word
+  Etkinliği yaymak için bu el ilanını kullanın
 </h2>
 
 <p>
@@ -35,7 +31,7 @@ başlık: Kaynaklar düzen: geniş nav: kaynaklar_nav
 </p>
 
 <h2>
-  Give this handout to teachers and schools
+  Bu el ilanını öğretmenlere ve okullara dağıtın
 </h2>
 
 <p>
@@ -46,7 +42,7 @@ başlık: Kaynaklar düzen: geniş nav: kaynaklar_nav
   <a id="videos"></p> 
   
   <h2>
-    Show these videos to inspire students
+    Öğrencilere ilham vermek için bu videoları izletin
   </h2>
   
   <div style="float:left; padding:10px">
@@ -69,14 +65,14 @@ başlık: Kaynaklar düzen: geniş nav: kaynaklar_nav
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>President Obama on computer science</strong></a>
+      <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>Başkan Obama'nın bilgisayar bilimi hakkında konuşması</strong></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>Anybody Can Learn (1 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>Herkes Öğrenebilir (1 dk)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
@@ -102,7 +98,7 @@ başlık: Kaynaklar düzen: geniş nav: kaynaklar_nav
     </p>
     
     <h2>
-      Feature these banners on your website
+      Web sitenizde bu afişlere yer verin
     </h2>
     
     <p>
@@ -122,7 +118,7 @@ başlık: Kaynaklar düzen: geniş nav: kaynaklar_nav
     </p>
     
     <p>
-      <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="görüntü" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="görüntü" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="görüntü" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="görüntü" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="görüntü" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/image/barack.jpg"><img src="/images/fit-250/barack.jpg" alt="görüntü" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="görüntü" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="görüntü" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="görüntü" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="görüntü" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="görüntü" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/barack.jpg"><img src="/images/fit-250/barack.jpg" alt="görüntü" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
     </p>
     
     <p>
@@ -198,19 +194,19 @@ başlık: Kaynaklar düzen: geniş nav: kaynaklar_nav
     </p>
     
     <p>
-      <strong>Contact:</strong> [YOUR NAME], [TITLE], cell: (212) 555-5555
+      <strong>İletişim:</strong> [İSMİNİZ], [TITLE], GSM: (212) 555-5555
     </p>
     
     <p>
-      <strong>When:</strong> [DATE and TIME of your event]
+      <strong>Ne zaman:</strong> [Etkinliğinizin TARİH ve SAATİ]
     </p>
     
     <p>
-      <strong>Where:</strong> [ADDRESS and DIRECTIONS]
+      <strong>Nerede:</strong> [ADRES ve YÖNLENDİRMELER]
     </p>
     
     <p>
-      I look forward to being in touch.
+      Geri dönüşünüzü sabırsızlıkla bekliyorum.
     </p>
     
     <p>
@@ -218,23 +214,23 @@ başlık: Kaynaklar düzen: geniş nav: kaynaklar_nav
     </p>
     
     <h2>
-      Tell parents about your school's event:
+      Velilerinize okulunuzun etkinliğinden bahsedin:
     </h2>
     
     <p>
-      Dear Parents,
+      Değerli veliler,
     </p>
     
     <p>
-      We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly hinge on understanding how technology works. But only a tiny fraction of us are learning computer science, and less students are studying it than a decade ago.
+      Teknoloji ile donatılmış bir dünyada yaşıyoruz. Ve biliyoruz ki öğrencilerimiz yetişkin hayatlarında hangi alanda çalışmayı seçerse seçsinler, başarılı olma becerileri teknolojinin nasıl çalıştığını anlamaya gün geçtikçe daha da çok dayanacaktır. But only a tiny fraction of us are learning computer science, and less students are studying it than a decade ago.
     </p>
     
     <p>
-      That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
+      That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Geçtiğimiz yıl, bir haftada 15 milyon öğrenci bilgisayar bilimini denedi. Bu yıl, biz de dünya çapındaki tüm öğrencilere katılarak 100 milyon öğrenciye ulaşacağız!
     </p>
     
     <p>
-      Our Hour of Code is a statement that [SCHOOL NAME] is ready to teach these foundational 21st century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on your social media channels and consider hosting additional Hour of Code events in the community.
+      Bizim Kodlama Saatimiz [OKUL ADI]'nın temel 21. yüzyıl becerilerini öğretmeye hazır olduğunu belirten bir ifadedir. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. Sizi gönüllü olmaya, yerel medyaya ulaşmaya, sosyal medyada haberleri paylaşmaya ve hatta çevreniz için kendi Kodlama Saati etkinliğinizi düzenlemeye davet ediyorum.
     </p>
     
     <p>
@@ -246,7 +242,7 @@ başlık: Kaynaklar düzen: geniş nav: kaynaklar_nav
     </p>
     
     <p>
-      Sincerely,
+      Saygılarımla,
     </p>
     
     <p>
@@ -258,19 +254,19 @@ başlık: Kaynaklar düzen: geniş nav: kaynaklar_nav
     </p>
     
     <h2>
-      Invite a local politician to your school's event:
+      Yerel bir siyasetçiyi okulunuzun etkinliğine davet edin:
     </h2>
     
     <p>
-      Dear [Mayor/Governor/Representative/Senator LAST NAME]:
+      Değerli [Belediye Başkanı/Vali/Milletvekili SOYADI]:
     </p>
     
     <p>
-      Did you know that in today’s economy, computing jobs outnumber students graduating into the field by 3-to-1? And, computer science is foundational for <em>every</em> industry today. Yet 90% of schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
+      Did you know that in today’s economy, computing jobs outnumber students graduating into the field by 3-to-1? Üstelik, bilgisayar bilimi günümüzün <em>tüm</em> sektörleri için artık bir temel halindedir. Ancak okulların %90'ı bunu öğretmemektedir. [OKUL ADI]'nda, biz bunu değiştirmeye çalışıyoruz.
     </p>
     
     <p>
-      That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
+      That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Geçtiğimiz yıl, bir haftada 15 milyon öğrenci bilgisayar bilimini denedi. Bu yıl, biz de dünya çapındaki tüm öğrencilere katılarak 100 milyon öğrenciye ulaşacağız!
     </p>
     
     <p>
@@ -282,9 +278,5 @@ başlık: Kaynaklar düzen: geniş nav: kaynaklar_nav
     </p>
     
     <p>
-      Sincerely, [NAME], [TITLE]
-    </p>
-    
-    <p>
-      <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Sign up your event</button></a>
+      Saygılarımla, [NAME],[TITLE]
     </p>

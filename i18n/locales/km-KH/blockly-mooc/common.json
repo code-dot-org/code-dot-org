@@ -75,8 +75,6 @@
   "saveToGallery":"រក្សាទុក​ទៅ​វិចិត្រសាល",
   "savedToGallery":"បាន​រក្សាទុក​ក្នុង​វិចិត្រសាល!",
   "shareFailure":"សូមទោស, យើង​មិន​អាច​ចែករំលែក​កម្មវិធី​នេះ​បាន​ទេ។",
-  "typeFuncs":"អនុគមន៍៍​ដែល​អាច​ប្រើ​បាន៖ %1",
-  "typeHint":"សូម​ចំណាំ​ថា​ត្រូវ​ការ​ទាំង​រង្វង់​ក្រចក​និង​ចុច​ក្បៀស។",
   "workspaceHeader":"ផ្គុំ​ប្លុក​របស់​អ្នក​នៅ​ទីនេះ៖ ",
   "workspaceHeaderJavaScript":"វាយ​បញ្ចូល​កូដ JavaScript របស់​អ្នក នៅ​ទីនេះ",
   "infinity":"អនន្ត",
@@ -90,5 +88,6 @@
   "signup":"ចុះ​ឈ្មោះ​សម្រាប់​វគ្គ​សិក្សា​ណែនាំ​ដំបូង",
   "hintHeader":"នេះ​គឺ​ជា​គន្លឹះ៖",
   "genericFeedback":"See how you ended up, and try to fix your program.",
+  "toggleBlocksErrorMsg":"You need to correct an error in your program before it can be shown as blocks.",
   "defaultTwitterText":"Check out what I made"
 }

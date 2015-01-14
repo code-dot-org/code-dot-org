@@ -4,7 +4,7 @@ prikaz: širok
 
 * * *
 
-# Prizes - FAQs
+# Nagrade - pitanja i odgovori
 
 ## Does your whole school have to enter to win the $10,000 in hardware?
 

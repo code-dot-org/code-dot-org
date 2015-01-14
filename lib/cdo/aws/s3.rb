@@ -12,7 +12,8 @@ module AWS; module S3
   end
 
   def self.upload_to_bucket(bucket, filename, data, options={})
-    "#{SecureRandom.hex}-#{filename}".tap do |name|
+    filename = "#{SecureRandom.hex}-#{filename}" unless options[:no_random]
+    filename.tap do |name|
       connect!
       AWS::S3::S3Object.store(name, data, bucket, options)
     end

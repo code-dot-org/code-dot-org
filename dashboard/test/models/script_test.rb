@@ -189,13 +189,13 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal '100', script.script_levels[1].level.level_num
   end
 
-  test "scripts are hidden or not" do
-    visible_scripts = %w{20-hour flappy playlab artist course1 course2 course3 frozen hourofcode}
+  test 'scripts are hidden or not' do
+    visible_scripts = %w{20-hour flappy playlab artist course1 course2 course3 course4 frozen hourofcode}
     visible_scripts.each do |s|
       assert !Script.find_by_name(s).hidden?, "#{s} is hidden when it should not be"
     end
 
-    hidden_scripts = %w{edit-code events builder jigsaw step msm test course4 course4pre} + ['Hour of Code']
+    hidden_scripts = %w{edit-code events jigsaw step msm test course4pre} + ['Hour of Code']
     hidden_scripts.each do |s|
       assert Script.find_by_name(s).hidden?, "#{s} is not hidden when it should be"
     end
@@ -207,5 +207,14 @@ class ScriptTest < ActiveSupport::TestCase
       # no stage 11 in artist
       artist.get_script_level_by_stage_and_position(11, 1)
     end
+  end
+
+  test 'gets script cache from redis (or fake redis)' do
+    Script.script_cache_to_redis # in test this is just a hash
+
+    Script.connection.disconnect!     # we don't need no stinkin db
+
+    assert_equal 'Flappy', Script.get_from_cache('flappy').script_levels[3].level.game.name
+    assert_equal 'anna', Script.get_from_cache('frozen').script_levels[5].level.skin
   end
 end

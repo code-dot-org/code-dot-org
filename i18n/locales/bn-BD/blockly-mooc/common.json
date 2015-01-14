@@ -75,8 +75,6 @@
   "saveToGallery":"Save to gallery",
   "savedToGallery":"Saved in gallery!",
   "shareFailure":"Sorry, we can't share this program.",
-  "typeFuncs":"Available functions:%1",
-  "typeHint":"Note that the parentheses and semicolons are required.",
   "workspaceHeader":"Assemble your blocks here: ",
   "workspaceHeaderJavaScript":"Type your JavaScript code here",
   "infinity":"অসীম",
@@ -90,5 +88,6 @@
   "signup":"Sign up for the intro course",
   "hintHeader":"Here's a tip:",
   "genericFeedback":"See how you ended up, and try to fix your program.",
+  "toggleBlocksErrorMsg":"You need to correct an error in your program before it can be shown as blocks.",
   "defaultTwitterText":"Check out what I made"
 }

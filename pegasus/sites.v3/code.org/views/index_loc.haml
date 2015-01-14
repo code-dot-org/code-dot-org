@@ -1,7 +1,7 @@
 .lines_of_code_header
   -loc = fetch_metrics['lines_of_code']
   %a.lines_of_code_link{:href=>"/loc"}
-  	-if locale_chapter_partner?
+    -if locale_chapter_partner?
       %b=format_integer_with_decimals(loc)
     -else  
       %b=format_integer_with_commas(loc)

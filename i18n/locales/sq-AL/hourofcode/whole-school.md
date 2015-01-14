@@ -1,6 +1,6 @@
 * * *
 
-layout: wide
+layout: i/e gjerë
 
 * * *
 

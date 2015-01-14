@@ -549,26 +549,26 @@
           zu bewegen bis du punktest?
         studio_c3_game_7: Entwickele Dein eigenes Spiel. Wenn Du fertig bist, clicke
           auf "Fertig" und lass Deine Freunde das Spiel auf ihren SmartPhones ausprobieren.
-        studio_playlab_1: Kannst du diesen Hund "Hallo Welt" sagen lassen?
-        studio_playlab_2: Kannst du erst den Hund und danach die Katze etwas sagen
-          lassen?
-        studio_playlab_3: Kannst du ein Program schreiben, bei welchem der Hund auf
-          die Katze zugeht?
-        studio_playlab_4: Kannst du ein Programm schreiben, bei welchem der Hund zur
-          Katze geht und die Katze "Hallo" sagt, sobal der Hund sie erreicht?
-        studio_playlab_5: Kannst du ein Programm schreiben, bei welchem der Tintenfisch
-          "Hallo" sagt, wenn er geklickt wird?
-        studio_playlab_6: Kannst du ein Programm schreiben um den Pinguin mit den
-          Pfeilttasten zu steuern und alle Ziele zu treffen?
-        studio_playlab_7: Der "wiederholen für immer" Baustein erlaubt es dir Code
-          ohne Unterbruch auszuführen. Kannst du mehr Bausteine hinzufügen um den
-          Dinosaurier wiederholt auf und ab laufen zu lassen?
-        studio_playlab_8: Kannst du einen Baustein hinzufügen um eine Punkt zu erzeilen,
-          wenn der Pinguin in den Tintenfisch rennt, und ihn dann mit den Pfeiltasten
-          bewegen bis du einen Punkt erzielst?
-        studio_playlab_9: Kannst du Bausteine hinzufügen um den Hintergrund und die
-          Geschwindigkeit des Pinguins zu ändern, und ihn dann mit den Pfeiltasten
-          bewegen bis du punktest?
+        studio_playlab_1: Der Pinguin will "hallo" sagen - kannst du ihm helfen?
+        studio_playlab_2: Höhlenjunge (Schauspieler 1) und Höhlenmädchen (Schauspieler
+          2) wollen "hallo" zueinander sagen. Kannst du ihnen dabei helfen den "reden"
+          Block zweimal zu benutzen?
+        studio_playlab_3: Kannst du dem Tennis Mädchen helfen die Fahne zu bekommen?
+        studio_playlab_4: Kannst du dem Tennisspieler (Schauspieler 1) helfen zur
+          Tennisspielerin (Schauspielerin 2) zu kommen und ein Geräusch abzuspielen
+          wenn er ankommt?
+        studio_playlab_5: Kannst du Spacebot helfen "Willkommen Erdlinge" zu sagen,
+          wenn es geklickt wird? Vergiss nach dem ausführen nicht das Klicken
+        studio_playlab_6: Kannst du der Hexe helfen sich zu bewegen, um alle magischen
+          Feuerbälle einzusammeln? Nutze die Tasten hoch/runter/rechts/links.
+        studio_playlab_7: The "repeat forever" block allows you to run code continuously.
+          Can you attach blocks to it to help the wizard move right and left repeatedly?
+        studio_playlab_8: Can you add a block to score a point and a block to play
+          a sound when the unicorn runs into the wizard, and then move him with the
+          arrows until you score?
+        studio_playlab_9: Set the background for this alien invasion and help the
+          Spacebot get to the alien faster by changing its speed. Then move him with
+          the arrow keys to get to the Spacebot and alert everyone else
         studio_playlab_10: Entwickele Dein eigenes Spiel. Wenn Du fertig bist, clicke
           auf "Fertig" und lass Deine Freunde das Spiel auf ihren SmartPhones ausprobieren.
         studio_full_sandbox: Entwickele Dein eigenes Spiel. Wenn Du fertig bist, clicke
@@ -613,16 +613,16 @@
           zu zeichnen.
       frozen perpendicular:
         instructions: Jetzt schauen wir mal, ob wir zwei Linien zeichnen können, die
-          in einem 90° Winkel zueinander stehen. Du musst sowohl den "Drehen" Block
-          als auch den "Bewegen" Block benutzen.
+          in einem 90° Winkel zueinander stehen. Du musst sowohl den „Drehen“-Block
+          als auch den „Bewegen“-Block benutzen.
       frozen square iterative:
         instructions: Es scheint, als hätten wir die Hälfte eines Quadrates geschafft.
           Lass uns 4 Linien benutzen, um ein Quadrat zu erstellen.
       frozen square loop:
-        instructions: Hallo, bin ich Anna von Arendelle! Lass uns ein Quadrat mit
-          dem "Wiederholen"-Block erstellen, um weniger Blöcke zu verwenden. Wie oft
-          (???) soll der "Wiederholung" Block die enthaltenen Blöcke ausführen, um
-          ein Quadrat zu machen?
+        instructions: Hallo, ich bin Anna von Arendelle! Lass uns ein Quadrat mit
+          dem „Wiederholen“-Block erstellen, um weniger Blöcke zu verwenden. Wie oft
+          (???) soll der „Wiederholen“-Block die in ihm enthaltenen Blöcke ausführen,
+          um ein Quadrat zu erstellen?
       frozen square loop 3x:
         instructions: Lass uns drei Quadrate erstellen und nach jedem Quadrat drehen.
           Stell sicher, dass du vor jedem neuen Quadrat um 120° drehst.
@@ -699,8 +699,8 @@
           using the turn right block and move forward block. Each side should be 100
           pixels long.
       Standalone_Artist_2:
-        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel
-          long sides.
+        instructions: Malen diesen Diamanten mit 120 und 60 Grad Winkeln und 150 Pixel
+          langen Seiten.
       Standalone_Artist_3:
         instructions: Can you draw this hexagon with 100 pixel sides and 60 degree
           turns?
@@ -809,14 +809,28 @@
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Funktionale Sonnenfänger
         C3_songwriting_with_parameters: Komponieren mit Parametern
-        C4_artist_math: Programming the Artist with Math
-        C4_create_functions: Creating Functions
-        C4_edit_functions: Editing Functions
+        C4_intro: Einführung
+        C4_bee_conditional: Biene Bedingungen
+        C4_variables_artist: Variablen - Künstler
+        C4_variables_playlab: Variablen - Spiele Labor
         C4_for_loops: '"For"-Schleifen'
-        C4_variables: Variablen
-        frozen_intro: Hour of Code Intro
-        frozen_loops: Introduction to Loops
-        frozen_functions: Introduction to Functions
+        C4_math_artist: Programmiere den Künstler mit Mathematik
+        C4_function_edit: Funktionen bearbeiten
+        C4_function_create: Funktionen erstellen
+        C4_function_parameters: Funktionen mit Parametern
+        C4_conditionals: Bedingungen
+        C4_unplugged_algorithms: Algorithmen mit Tangrammen
+        C4_unplugged_madlibs: Mad Libs
+        C4_unplugged_variables: Variables in Envelopes
+        C4_unplugged_forloops: '"For"-Schleifen'
+        C4_unplugged_parameters: Komponieren mit Parametern
+        C4_unplugged_binary: Binary
+        frozen_intro: Hour of Code Einführung
+        frozen_loops: Einführung in Wiederholungen (Schleifen)
+        frozen_functions: Einführung in Funktionen
+        playlab_intro: Einführung ins Spiele Labor
+        playlab_events: Spiele Labor Ereignisse
+        playlab_repeat_forever: Spiele Labor für immer wiederholen
     callout:
       text:
         drag_blocks: Ziehen Sie einen "bewegen" Block und lassen Sie es unter den
@@ -846,6 +860,10 @@
           richtigen Grad zum drehen zu ersetzen
         repeat_blocks: Verwenden Sie den "Repeat" Block und wickeln Sie es um die
           Blöcke im Arbeitsbereich
+        repeat_blocks_1: (1) Nutze diesen Block und platziere ihn um die grauen Blöcke
+          im Arbeitsraum
+        repeat_blocks_2: (2) Bewege den "Wiederholen" Block hierher und platziere
+          die grauen Blöcke im Inneren
         snowflake_dropdown: Verwenden Sie dieses Dropdown-Menü, um verschiedene Schneeflocken
           zu erstellen!
         degrees_per_side: Teilen Sie 360 durch die Anzahl der Seiten, um die Größe
@@ -854,14 +872,14 @@
           sie mit der Anzahl der Teile die für das Puzzel noch gebraucht werden übereinstimmen.
         set_length: Verwenden Sie diesen Codeblock "Länge" auf den richtigen Wert
           festzulegen.
-        which_equation: Welche Gleichung macht jede der Seite kürzer bei Formen mit
-          mehr Seiten?  Versuchen Sie jede Gleichung!
+        which_equation: Welche Gleichung macht jede Seite kleiner und Formen mit mehr
+          Seiten?
         get_nectar: Verwenden Sie den neuen "get-Nektar"-Block.
         actions_category: Die Tool-Box hat einen neuen Look! Die "Aktionen"-Blöcke
           sind jetzt drin.
         draw_square_hint: 'Tipp: Verwenden Sie die quadratische Schleife, die Sie
           gerade im letzten Rätsel gemacht haben.'
-        edit_function: Verwenden Sie diese Schaltfläche, um die Funktion zu bearbeiten.
+        edit_function: Klicke hier um die Funktion zu bearbeiten.
         create_function: Klicken Sie hier, um die Flyout "Funktionen" zu öffnen, dann
           klicken Sie auf "Erstellen einer Funktion".
         house_hint: Es ist ok, wenn das Bild noch nicht wie ein Haus aussieht. Wir
@@ -873,11 +891,11 @@
         logic_category: Öffne das "Logik"-Fenster um den "if/else"-Absatz zu finden.
         length_parameter: Kannst Du diese Funktion so anpassen, dass sie den "Länge"
           Parameter benutzt?
-        frozen_diamond_repeat: Use the repeat block to create this shape.
-        frozen_circle_function_in_circle_turn: Don't forget to turn after creating
-          each circle.
-        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
-          and change the size.
+        frozen_diamond_repeat: Nutze den Wiederholen Block um diese Form zu erstellen.
+        frozen_circle_function_in_circle_turn: Vergiss nicht zu drehen, nachdem erstellen
+          eines Kreises.
+        frozen_circle_function_with_parameter_circle: Nutze den "Kreis erstellen"
+          Block und ändere die Größe.
         frozen_snowflake_branch: Use the "create a snowflake branch" block
         frozen_create_square: Attach more blocks here to create a square
         playlab_drag_say: Drag the "say" block here and type "hello"
@@ -887,5 +905,33 @@
         playlab_arrow_keys: Remember to use these to move the witch after clicking
           on Run
         playlab_add_move: Add "move" blocks inside this repeat block
-        playlab_add_score: Add score blocks here
-        playlab_add_blocks: Add your blocks here
+        playlab_add_score: Füge hier den Punkte Block ein
+        playlab_add_blocks: Füge hier deinen Blöcke ein
+        set_variable: Ziehe den Nummernblock hierhin um die Variable festzulegen
+        place_variable: Drag your variable inside this block
+        bee_for_loop: Drag the largest number of nectar you want the bee to collect
+          here
+        place_counter_variable: Drag your counter variable inside this block
+        function_editor_draw_square: This is your function definition. These blocks
+          run everytime you use the "draw a square" block
+        change_here: Mach deine änderung hier
+        write_draw_square_function: Drag blocks from the toolbox into here that draw
+          a square
+        write_draw_triangle_function: Drag blocks from the toolbox into here that
+          draw a triangle
+        edit_add_parameter: Click edit to add a parameter in your function
+        add_and_drag_parameter: Write in the name of your parameter here, click add,
+          and then drag it into your function definition
+        fill_in_actor: Fill in the ??? with numbers that correspond to each actor
+          (1, 2, and 3)
+        repeat: Put blocks inside the loop to repeat commands
+        if_bee_nectar: Use the "if" block to decide if the bee should get nectar
+        if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower,
+          and makes honey if it's not a flower
+        repeat_full_circle: Enter in the number of times the zombie has to move to
+          make a full circle
+        place_length_variable: Drag the length variable here to replace the question
+          marks
+        arrows_move_actor: Use the arrows to move the actor
+        right_arrow_fireball: Use the right arrow to shoot fireballs
+        name_function: Write the name of your function here

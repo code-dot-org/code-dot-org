@@ -1,36 +1,28 @@
 * * *
 
-title: How-to Guide layout: wide nav: resources_nav
+Naslov: kako-da vodič izgled: široki nav: resources_nav
 
 * * *
 
-<div class="row">
-  <h1 class="col-sm-6">
-    Kako poučavati Sat Kodiranja
-  </h1>
-  
-  <div class="col-sm-6 button-container centered">
-    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Prijavite vaš događaj</button></a>
-  </div>
-</div>
+# How to teach one Hour of Code
 
-## 1) Watch this how-to video <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
-## 2) Try the tutorials:
+## 1) Pogledajte ovaj video vodič <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
+## 2) Isprobajte tutorijale:
 
-Imat ćemo raznolike zabavne vodiče u trajanju od jednog sata za učenike svih uzrasta, pripremljene od strane raznih partnera. Novi vodiči bit će ovdje kako bi započeli Sat Kodiranja prije 8-og prosinca.
+We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
 
-**Svi vodiči Sata Kodiranja:**
+**All Hour of Code tutorials:**
 
   * Zahtijevaju minimalno vrijeme pripreme učitelja
   * Prigodni su za samostalno učenje - dozvoljavajući učenicima da rade vlastitim tempom i na svojoj razini
 
 [![](http://<%= codeorg_url() %>/images/tutorials.png)](http://<%=codeorg_url() %>/learn)
 
-## 3) Register your Hour on the map
+## 3) Registriraj svoj Sat na karti
 
 [Make sure to sign up](<%= hoc_uri('/') %>). We'll send you helpful info as the Hour of Code nears, and you'll see your Hour of Code on our map of worldwide events.
 
-## 4) Plan your hardware needs - computers are optional
+## 4) Planirajte svoje hardverske potrebe - računala nisu obvezna
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every child, and can even do the Hour of Code without a computer at all.
 
@@ -38,12 +30,12 @@ The best Hour of Code experience will be with Internet-connected computers. But 
   * **Pregledajte stranicu sa čestitkama (certifikatima)** da biste vidjeli što će učenici vidjeti po završetku. 
   * **Opremite razred slušalicama** ili zamolite učenike da donesu svoje vlastite ukoliko vodič koji ste odabrali najbolje radi sa zvukom.
 
-## 5) Plan ahead based on your technology available
+## 5) Planirajte unaprijed ovisno o vama dostupnoj tehnologiji
 
   * **Nemate dovoljno uređaja?** Koristite [programiranje u parovima](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Kada učenici rade sa suradnikom, oni pomažu jedan drugome i manje se oslanjaju na učitelja. Tako će uvidjeti da je informatika druževna i dobra za suradnju.
   * **Niska propusnost?** Planirajte prikaz video zapisa u prednjem dijelu učionice, tako da svaki učenik ne mora preuzimati vlastitu kopiju video zapisa. Možete isprobati i vodiče koji ne zahtijevaju upotrebu računala i/ili interneta.
 
-## 6) Inspire students - show them a video
+## 6) Potaknite studente - Pokažite im video
 
 Show students an inspirational video to kick off the Hour of Code. Examples:
 
@@ -60,7 +52,7 @@ Most kids don’t know what computer science is. Here are some ideas:
   * Ili ovo: "Informatika je umjetnost stapanja ljudskih ideja i digitalnih alata kako bismo uvećali svoje snage. Informatičari rade u mnogo različitih oblasti: pišu aplikacije za telefone, rade na izliječenju bolesti, stvaraju animirane filmove, rade na društvenim mrežama, grade robote koji istražuju druge planete i još mnogo toga."
   * Pogledajte prijedloge o tome kako zainteresirati djevojke za informatiku[ovdje](http://<%= codeorg_url() %>/girls). 
 
-## 6) Start your Hour of Code
+## 7) Start your Hour of Code
 
 **Direct students to the activity**
 
@@ -84,4 +76,4 @@ Each student gets a chance to get a certificate via email when they finish the [
 
 **What comes after the Hour of Code?**
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %> <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Sign up your event</button></a>
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %>

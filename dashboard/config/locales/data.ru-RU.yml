@@ -25,7 +25,7 @@
           Artist5: Этап 19
           Unplug11: Этап 20
         Hour of Code:
-          desc: Час кода
+          desc: Hour of Code
           Maze: Этап 1
         Edit Code:
           desc: Редактировать код (beta)
@@ -98,10 +98,10 @@
         Flappy: Порхающая птичка
         Jigsaw: Головоломки
         MazeStep: 'Лабиринт: Пошаговый режим'
-        Wordsearch: Wordsearch
-        Webapp: Webapp
+        Wordsearch: Поиск по слову
+        Webapp: Веб приложение
         ArtistEC: Художник
-        TextMatch: Text Match
+        TextMatch: Совпадения
         StudioEC: Лаборатория игр
     trophy:
       name:
@@ -134,10 +134,10 @@
           блока.
         maze_2_7: Помоги мне прогнать вредного поросёнка, используя как можно меньше
           блоков. Попробуй использовать блок "повторить" больше одного раза.
-        maze_2_8: 'Когда блок серого цвета, это означает, что его нельзя удалить или
-          изменить. Попробуйте решить эту головоломку, используя блок «повторить»
-          3 раза. Попробуйте положить эти 3 блока внутрь блока «повторить»: двигаться,
-          двигаться, повернуть.'
+        maze_2_8: 'Серый цвет блока означает, что такой блок нельзя удалить. Реши
+          головоломку, используя блок "повторить", который повторяет всё 3 раза. Попробуй
+          разместить внутри серого блока "повторить" 3 блока: "двигаться вперёд",
+          "двигаться вперёд", "повернуть".'
         maze_2_9: Теперь попробуй новый блок "повторять до" - он будет повторять действия,  пока
           я  не доберусь до надоедливой свиньи.
         maze_2_10: Сейчас последняя попытка - ты можешь это сделать, используя только
@@ -372,9 +372,8 @@
           в ящик со взрывчаткой!
         maze_3_4: А-а-а-а! Напиши мне программу, чтобы я обошёл взрывчатку и добрался
           до свиньи.
-        bounce_1: Прикрепи блок к блоку "когда стрелка влово" и нажми кнопку «Запуск
-          программы». Перемести весло, используя кнопку со стрелкой влево для достижения
-          конечной цели.
+        bounce_1: Прикрите блок к блоку "когда левая стрелка". Двигайте платформу,
+          используя левую стрелку, чтобы достичь цели.
         bounce_2: Добавьте блок, "когда правая стрелка" и, "когда левая стрелка".
           Переместите весло, чтобы достигнуть конца обеих целей.
         bounce_3: Теперь попробуйте что-то типа "когда стрелка вверх". Переместите
@@ -392,22 +391,21 @@
           очко сопернику" к блокам "когда шар у цели" и, "когда шар промазал", чтобы
           сделать игру. Посмотрите, сколько очков Вы можете заработать, прежде чем
           Ваш противник забьет в двое больше.
-        bounce_11: Теперь вы можете прикреплять блок «когда начинается игра». Вы должны
-          прикрепить новый блок «начать новый мяч» в более чем одном месте. Кроме
-          того попробуйте изменить сцену или скорость ракетки и мяча, чтобы увидеть,
-          сколько очков вы можете забить прежде чем ваш противник забьет дважды.
-        bounce_12: Создайте свою собственную игру Bounce. Вы можете изменить всю графику
-          и правила. Когда вы закончите, нажмите кнопку Поделиться, чтобы друзья поиграли
-          в вашу игру на своих телефонах.
-        Custom_builder: Перетащи блоки с панели инструментов на рабочий стол, чтобы
-          нарисовать уровень который хочешь создать. Нажми "Запустить программу" когда
-          закончишь.
-        flappy_1: Добавь блок "когда нажал мышкой", потом "запустить программу". Кликни
-          или нажми на экран, чтобы продвинуться к своей цели.
+        bounce_11: You can now attach blocks to the "when run" block. You have to
+          attach the new "launch new ball" block in more than one place. Also, try
+          changing the scene or the speed of the paddle and the ball and see how many
+          points you can score before your opponent scores twice.
+        bounce_12: Create your own Bounce game. You can change all the visuals and
+          the rules. When you're done, click Finish to let friends try your game on
+          their phones.
+        Custom_builder: Перетаскивайте блоки из панели инструментов в рабочую область,
+          чтобы создать уровень. Нажмите "Запустить", когда вы будете готовы.
+        flappy_1: Прикрепите блок к блоку "когда клик", затем нажмите "Запустить".
+          Нажмите на экран, чтобы передвинуть Флаппи к цели.
         flappy_2: Мы также добавили немного земли. Добавь блок "когда коснется земли".
           Ваш код должен содержать "закончить игру", когда Птичка касается земли.
-        flappy_3: Блок "когда начнется игра" позволяет вам запустить задачи после
-          начала игры. Поробуйте настроить скорость полета и сколько осталось до цели.
+        flappy_3: The "when run" block allows you to run code when your game starts.  Try
+          setting the level speed and flapping to the target.
         flappy_4: Птичка будет лететь через препятствие до тех пор, как вы не вставите
           команду, чтобы она могла разбиться. Подключите блок "когда врежешься в препятствие".
           Вам надо закончить игру, когда Птичка врежется на определенном количестве
@@ -417,20 +415,20 @@
           тогда получи очко за пролет Птички через определенное количество труб. '
         flappy_6: Посмотри можешь ли ты заработать очко в более маленьком или более
           большом разрыве труб.
-        flappy_7: Теперь попробуй изменить сцены, присоединив другой блок на блок,
-          «когда начинется игра».
+        flappy_7: Next, try changing the scene by attaching another block to the "when
+          run" block.
         flappy_8: Визуальные эффекты можно задать в любое время, не только при запуске
           игры. Попробуй установить СЛУЧАЙНАЯ сцена, когда происходят другие события,
           например, когда проходятся препятствия.
         flappy_9: Чтобы разнообразить игру, попробуйте когда птичка врежется об препятствие
           или ударится о землю вместо "конец игры" задать "присвоить значение очков
           0".
-        flappy_11: Создайте свою собственную игру. Вы можете поменять все визуальные
-          эффекты и все правила, даже сложность. Когда вы закончите, нажмите поделиться,
-          чтобы ваши друзья могли попробовать игру на своих телефонах.
+        flappy_11: Create your own Flappy game. You can change all the visuals and
+          all the rules, even the gravity. When you're done, click Finish to let friends
+          try your game on their phones.
         flappy_k1_1: Play Flappy
-        flappy_k1_2: Attach a block to the "when click" block, then press "Run". Click
-          or tap the screen to move Flappy to the target.
+        flappy_k1_2: Прикрепите блок к блоку "когда клик", затем нажмите "Запустить".
+          Нажмите на экран, чтобы передвинуть Флаппи к цели.
         flappy_k1_3: Мы также добавили немного земли. Добавь блок "когда коснется
           земли". Ваш код должен содержать "закончить игру", когда Птичка касается
           земли.
@@ -512,28 +510,29 @@
         studio_c3_game_6: Can you add blocks to change the background and the speed
           of the penguin, and then move him with the arrows until you score?
         studio_c3_game_7: Create your own game. When you're done, click Finish to
-          let friends try your story on their phones.
-        studio_playlab_1: Вы можете заставить собаку сказать «hello world»?
-        studio_playlab_2: Can you make the dog say something and then have the cat
-          say something afterwards?
-        studio_playlab_3: Ты можешь написать программу, чтобы собака двигалась к кошке?
-        studio_playlab_4: Вы можете написать программу, которая заставит собаку подойти
-          к кошке, и сказать «hello», когда собака подойдет к нему?
-        studio_playlab_5: Можешь написать программу, чтобы осьминог сказал «Привет»,
-          при выборе его мышкой?
-        studio_playlab_6: Вы можете написать программу, чтобы заставить пингвина передвигаться
-          с помощью клавиш вверх / вниз / влево / вправо и поразить все цели?
-        studio_playlab_7: Блок «repeat forever» позволяет запускать код непрерывно.
-          Вы сможете прикрепить блоки, чтобы переместить этого динозавра вверх и вниз
-          несколько раз?
-        studio_playlab_8: Can you add a block to score a point when the penguin runs
-          into the octopus, and then move him with the arrows until you score?
-        studio_playlab_9: Can you add blocks to change the background and the speed
-          of the penguin, and then move him with the arrows until you score?
+          let friends try your game on their phones.
+        studio_playlab_1: Penguin wants to say "hello" - can you help him?
+        studio_playlab_2: Cave Boy (actor 1) and Cave Girl (actor 2) would like to
+          say "hello" to each other. Can you help them by using the "say" block twice?
+        studio_playlab_3: Can you help Tennis Girl get to the flag?
+        studio_playlab_4: Can you help Tennis Boy (actor 1) get to Tennis Girl (actor
+          2) and play a sound when he gets there?
+        studio_playlab_5: Can you help the Spacebot say "greetings earthlings" when
+          it is clicked? Don’t forget to click it after you click Run
+        studio_playlab_6: Can you help the Witch move around using the up/down/right/left
+          arrow keys to get to all the magical fireballs?
+        studio_playlab_7: The "repeat forever" block allows you to run code continuously.
+          Can you attach blocks to it to help the wizard move right and left repeatedly?
+        studio_playlab_8: Can you add a block to score a point and a block to play
+          a sound when the unicorn runs into the wizard, and then move him with the
+          arrows until you score?
+        studio_playlab_9: Set the background for this alien invasion and help the
+          Spacebot get to the alien faster by changing its speed. Then move him with
+          the arrow keys to get to the Spacebot and alert everyone else
         studio_playlab_10: Create your own game. When you're done, click Finish to
-          let friends try your story on their phones.
+          let friends try your game on their phones.
         studio_full_sandbox: Create your own game. When you're done, click Finish
-          to let friends try your story on their phones.
+          to let friends try your game on their phones.
         studio_k1_1: Вы можете заставить собаку сказать «hello world»?
         studio_k1_2: Can you make the dog say something and then have the cat say
           something afterwards?
@@ -541,8 +540,8 @@
         studio_k1_4: Make the dog move to the cat and the cat say "hello" when he
           gets there.
         studio_k1_5: Can you add a block to make the octopus happy?
-        studio_k1_6: Can you write a program to make this penguin move around using
-          the up / down / left /right keys to hit all of the targets?
+        studio_k1_6: Create your own story! Move around the cat and dog, and make
+          them say things.
         maze_wordsearch_k_1: Перемести меня по буквам EAST
         maze_wordsearch_k_2: Перемести меня по буквам SOUTH
         maze_wordsearch_k_3: Перемести меня по буквам WEST
@@ -560,7 +559,7 @@
           в другом, по буквам STORY
         webapp_ec_simple: Create your web app by using createHtmlBlock.
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
-          it in the new "penColour" block.'
+          it in the new "penColor" block.'
         turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:
           a stick figure, snowflake, or spiral. Also try the new "penWidth" block.
           Have fun!'
@@ -627,13 +626,13 @@
           форм. Сможете сделать шаблон, повторяя 5 кругов размером 5 и 5 кругов размером
           10?
       frozen snowflake branch:
-        instructions: Попробуй блок "Создать луч снежинки", чтобы создать три луча,
+        instructions: Попробуй блок "Создать снежинку-ветвь", чтобы создать три луча,
           из которых почти получается снежинка.
       frozen snowflake full:
         instructions: Теперь повторите 8 раз, чтобы сделать красивую снежинку!
       frozen freeplay:
-        instructions: Теперь ты - настоящий художником! Создай зимнюю Страну чудес
-          и поделись с друзьями.
+        instructions: Теперь ты - настоящий художник! Создай зимнюю Страну чудес и
+          поделись с друзьями.
       scrat 16:
         instructions: Жёлудь! Жёлудь! Жёлудь! Используй блок "если", чтобы мне добраться
           до него с наименьшим количеством блоков.
@@ -716,7 +715,7 @@
         Unplug9: Эстафетное программирование
         Unplug10: интернет
         Unplug11: Итоги
-        C1_happy_maps_unplugged: Happy Maps
+        C1_happy_maps_unplugged: Весёлые карты
         C1_moveitmoveit_unplugged: Move It, Move It
         C1_bigevent_unplugged: Большое Событие
         C1_getting_loopy: Зацикливание
@@ -766,21 +765,35 @@
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
-        C4_artist_math: Programming the Artist with Math
-        C4_create_functions: Creating Functions
-        C4_edit_functions: Editing Functions
+        C4_intro: Introduction
+        C4_bee_conditional: 'Пчела: Условные команды'
+        C4_variables_artist: Variables - Artist
+        C4_variables_playlab: Variables - Play Lab
         C4_for_loops: For Loops
-        C4_variables: Переменные
-        frozen_intro: Hour of Code Intro
-        frozen_loops: Introduction to Loops
-        frozen_functions: Introduction to Functions
+        C4_math_artist: Programming the Artist with Math
+        C4_function_edit: Editing Functions
+        C4_function_create: Creating Functions
+        C4_function_parameters: Процедуры с параметрами
+        C4_conditionals: Условные команды
+        C4_unplugged_algorithms: Algorithms with Tangrams
+        C4_unplugged_madlibs: Mad Libs
+        C4_unplugged_variables: Variables in Envelopes
+        C4_unplugged_forloops: For Loops
+        C4_unplugged_parameters: Написание песен с параметрами
+        C4_unplugged_binary: Binary
+        frozen_intro: Введение в Час кода
+        frozen_loops: Знакомство с циклами
+        frozen_functions: Знакомство с функциями
+        playlab_intro: Introduction to Play Lab
+        playlab_events: Play Lab Events
+        playlab_repeat_forever: Play Lab Repeat Forever
     callout:
       text:
         drag_blocks: Перетащите блок «переместить» и поставьте его ниже другого блока
         run: Нажмите «Выполнить», чтобы протестировать вашу программу
         watch_again: Нажмите здесь, чтобы посмотреть видео еще раз
-        gray_block_explanation: Серые блоки не могут быть перемещены или удалены.
-          Сможете решить головоломку?
+        gray_block_explanation: Blocks that are grey can't be deleted. Can you solve
+          the puzzle anyway?
         show_code_explanation: Нажмите здесь, чтобы увидеть код программы, которую
           вы делаете
         instructions_repeat_explanation: Инструкции для каждой головоломки здесь повторяются
@@ -790,28 +803,32 @@
           block to enable an actor for this story
         studio_say_text: Type what you want your actor to say within these quotes
         jigsaw_click: Нажмите этот блок!
-        move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
-          Run" block to make Elsa move forward
-        turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down
-          determines how much Elsa turns
-        replace_questions: Use the drop-down to replace "???" with a number
-        replace_questions_degree: Use the drop-down to replace "???" with the correct
-          degree to turn
-        repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
-          workspace
-        snowflake_dropdown: Use this drop-down to create different snowflakes!
-        degrees_per_side: Divide 360 by the number of sides to get the size of each
-          angle in degrees.
+        move_elsa_forward: Возьми блок "двигаться вперёд" и прицепи его к блоку "При
+          запуске", чтобы Эльза пошла вперёд
+        turn_elsa: Используй блок "повернуть", чтобы Эльза повернулась. Число в выпадающем
+          меню определяет, как сильно Эльза повернётся
+        replace_questions: Используй меню, чтобы заменить "???" числом
+        replace_questions_degree: Используй меню, чтобы заменить "???" необходимым
+          градусом поворота
+        repeat_blocks: Используй блок "повторить" и как бы оберни им блоки в рабочем
+          пространстве
+        repeat_blocks_1: (1) Перемести этот блок в рабочее пространство и положи внутрь
+          серые блоки
+        repeat_blocks_2: (2) Передвинь сюда блок "повторить" и помести серые блоки
+          ему внутрь
+        snowflake_dropdown: Используй это меню для создания разных снежинок!
+        degrees_per_side: Раздели 360 на число сторон, чтобы получить значение градуса
+          каждого угла.
         set_sides: Use this block to set "sides" to the number needed to complete
           the puzzle.
         set_length: Use this block to set "length" to the correct value.
         which_equation: Which equation makes each side shorter for shapes with more
-          sides?  Try each equation!
+          sides?
         get_nectar: Use the new "get nectar" block.
         actions_category: The tool box got a new look! The "Actions" blocks are in
           here now.
         draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
-        edit_function: Use this button to edit the function.
+        edit_function: Click here to edit your function.
         create_function: Click here to open the "Functions" flyout, then click the
           "Create a Function" button.
         house_hint: It's ok if the picture doesn't look like a house yet. We will
@@ -821,13 +838,13 @@
           the Bee will turn to get the nectar.
         logic_category: Open the "Logic" flyout to find the "if/else" block.
         length_parameter: Can you update this function so it uses the "length" parameter?
-        frozen_diamond_repeat: Use the repeat block to create this shape.
-        frozen_circle_function_in_circle_turn: Don't forget to turn after creating
-          each circle.
-        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
-          and change the size.
-        frozen_snowflake_branch: Use the "create a snowflake branch" block
-        frozen_create_square: Attach more blocks here to create a square
+        frozen_diamond_repeat: Используй блок "повторить" для создания этой фигуры.
+        frozen_circle_function_in_circle_turn: Не забывай поворачивать после создания
+          каждого круга.
+        frozen_circle_function_with_parameter_circle: Используй блок "создать круг"
+          и меняй размер.
+        frozen_snowflake_branch: Используй блок "создать снежинку-ветвь"
+        frozen_create_square: Присоедини больше блоков, чтобы создать квадрат
         playlab_drag_say: Drag the "say" block here and type "hello"
         playlab_use_twice: Use this block twice and remember to change the actor number
         playlab_move_girl: Use the "move right" block to move Tennis Girl
@@ -837,3 +854,31 @@
         playlab_add_move: Add "move" blocks inside this repeat block
         playlab_add_score: Add score blocks here
         playlab_add_blocks: Add your blocks here
+        set_variable: Drag a number block here to set your variable
+        place_variable: Drag your variable inside this block
+        bee_for_loop: Drag the largest number of nectar you want the bee to collect
+          here
+        place_counter_variable: Drag your counter variable inside this block
+        function_editor_draw_square: This is your function definition. These blocks
+          run everytime you use the "draw a square" block
+        change_here: Make your change here
+        write_draw_square_function: Drag blocks from the toolbox into here that draw
+          a square
+        write_draw_triangle_function: Drag blocks from the toolbox into here that
+          draw a triangle
+        edit_add_parameter: Click edit to add a parameter in your function
+        add_and_drag_parameter: Write in the name of your parameter here, click add,
+          and then drag it into your function definition
+        fill_in_actor: Fill in the ??? with numbers that correspond to each actor
+          (1, 2, and 3)
+        repeat: Put blocks inside the loop to repeat commands
+        if_bee_nectar: Use the "if" block to decide if the bee should get nectar
+        if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower,
+          and makes honey if it's not a flower
+        repeat_full_circle: Enter in the number of times the zombie has to move to
+          make a full circle
+        place_length_variable: Drag the length variable here to replace the question
+          marks
+        arrows_move_actor: Use the arrows to move the actor
+        right_arrow_fireball: Use the right arrow to shoot fireballs
+        name_function: Write the name of your function here

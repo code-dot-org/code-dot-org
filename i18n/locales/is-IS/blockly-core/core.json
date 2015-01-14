@@ -60,6 +60,7 @@
   "CONTROLS_WHILEUNTIL_OPERATOR_WHILE":"endurtaka ef",
   "CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL":"Endurtaka eitthvað á meðan gildi er ósatt.",
   "CONTROLS_WHILEUNTIL_TOOLTIP_WHILE":"Endurtaka eitthvað á meðan gildi er satt.",
+  "DEFINE_HEADER_DEFINITION":"Definition",
   "DEFINE_FUNCTION_DEFINE":"Skilgreina",
   "DELETE_BLOCK":"Eyða kubb",
   "DELETE_PARAMETER":"Eyða stika...",

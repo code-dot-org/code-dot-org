@@ -4,7 +4,7 @@ layout: wide
 
 * * *
 
-# Tutorial guidelines for the Hour of Code and Computer Science Education Week
+# Kod Saatı və İnformatika Təhsili Həftəsi üçün dərsliklər üzrə təlimatlar
 
 **The deadline to submit a tutorial for Hour of Code 2014 has passed. You may still submit an entry and we will try to review it if time allows.**
 
@@ -18,7 +18,7 @@ We’d like to host a variety of engaging options, but the primary goal is to op
 
   * [How tutorials will be evaluated for inclusion](#inclusion)
   * [General guidelines for creating an Hour of Code activity](#guidelines)
-  * [How to submit (Due 10/1/2014)](#submit)
+  * [Necə ərizə verməli (1 oktyabr 2014-ə qədər)](#submit)
   * [Suggestions for designing your activity](#design)
   * [Trademark Guidelines](#tm)
   * [Tracking Pixel](#pixel)
@@ -88,7 +88,7 @@ As a result, the existing listings are certainly “good enough,” and the driv
 
 <a id="submit"></a>
 
-## How to submit (Due 10/1/2014)
+## Necə ərizə verməli (1 oktyabr 2014-ə qədər)
 
 Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) and follow the steps to submit your tutorial.
 

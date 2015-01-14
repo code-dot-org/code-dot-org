@@ -4,22 +4,14 @@ title: How-to Guide layout: wide nav: resources_nav
 
 * * *
 
-<div class="row">
-  <h1 class="col-sm-6">
-    Jak przeprowadzić jedną Godzinę Kodowania
-  </h1>
-  
-  <div class="col-sm-6 button-container centered">
-    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Zarejestruj swoje wydarzenie</button></a>
-  </div>
-</div>
+# How to teach one Hour of Code
 
 ## 1) Watch this how-to video <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
 ## 2) Try the tutorials:
 
-Umieścimy szeroki wybór zabawnych, godzinnych samouczków dla uczniów w każdym wieku, utworzonych przez naszych partnerów. Nowe samouczki pojawią się, by rozpocząć Godzinę Kodowania, przed 8-14 grudnia 2014 roku.
+We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
 
-**Wszystkie samouczki Godziny Kodowania:**
+**All Hour of Code tutorials:**
 
   * Wymagają od nauczycieli minimalnej ilości czasu na przygotowania
   * Nie wymagają nadzoru, co pozwala uczniom pracować we własnym tempie, zgodnie z ich predyspozycjami
@@ -60,7 +52,7 @@ Most kids don’t know what computer science is. Here are some ideas:
   * Lub: "informatyka jest sztuką łączenia ludzkich pomysłów i narzędzi cyfrowych, aby zwiększyć nasze możliwości. Informatycy pracują w przeróżnych dziedzinach: piszą aplikacje na telefon, przyczyniają się do leczenia chorób, tworzą filmy animowane, pracują w mediach, budują roboty, które badają inne planety i wiele innych."
   * Zobacz porady jak zainteresować informatyką dziewczyny [ tutaj](http://<%= codeorg_url() %>/ dziewczyny). 
 
-## 6) Start your Hour of Code
+## 7) Start your Hour of Code
 
 **Direct students to the activity**
 
@@ -84,4 +76,4 @@ Each student gets a chance to get a certificate via email when they finish the [
 
 **What comes after the Hour of Code?**
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %> <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Sign up your event</button></a>
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %>

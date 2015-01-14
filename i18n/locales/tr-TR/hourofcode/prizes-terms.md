@@ -18,16 +18,16 @@ Code.org, Kodlama Saatinden (8-14 Aralık) sonra organizatörlerle iletişim kur
 
 ## Bir konuk konuşmacıyla video sohbeti:
 
-Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign up your classroom by November 14, 2014. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
+Ödül Amerika ve Kanada'daki K-12 derslikleri ile sınırlıdır. Hak kazanmak için 14 Kasım 2014 tarihine kadar sınıfınızı kaydedin. Code.org kazanan okulları rastgele seçecek, web görüşmesi için bir zaman aralığı belirleyecek ve uygun öğretmenle işbirliği içinde teknoloji detaylarını ayarlayacaktır. Ödüle hak kazanmak için bütün okulun katılması zorunlu değildir. Bütün devlet okulları ve özel okullar katılma hakkına sahiptir.
 
 ## Tüm sınıfa dizüstü bilgisayar (veya 10.000$ değerinde başka bir teknoloji):
 
-Ödül sadece Amerikan devlet okulları ile sınırlı. To qualify, your entire school must register for the Hour of Code by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
+Ödül sadece Amerikan devlet okulları ile sınırlıdır. Hak kazanmak için tüm okul 14 Kasım 2014 tarihine kadar Kodlama Saati için kayıt olmalıdır. Amerikada her eyalette bir okul sınıf-seti bilgisayarların sahibi olacaktır. Code.org, kazananları seçecek ve1 Aralık 2014 tarihinde e-posta yolu ile bilgilendirecektir.
 
-To clarify, this is not a sweepstakes or a contest involving pure chance.
+Netleştirmek için; bu bir piyango veya saf şans içeren bir yarışma değildir.
 
-1) There is no financial stake or risk involved in applying - any school or classroom may participate, without any payment to Code.org or any other organization
+1)Herhangi bir finansal risk söz konusu değildir - Code.org'a ya da başka bir organizasyona ödeme yapmadan, bütün okullar veya sınıflar katılabilir
 
-2) Winners will only be selected among schools where the entire classroom (or school) participates in an Hour of Code, which involves a test of the students' and teachers' collective skill.
+2) Kazananlar yalnızca bütün sınıf ( veya okul) olarak, öğrenciler ve öğretmenlerin toplu beceri testleri içeren Kodlama Saati'ne katılanlar arasından seçilecektir.
 
 <% end %>

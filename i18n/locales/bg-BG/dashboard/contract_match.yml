@@ -1,0 +1,41 @@
+bg:
+  data:
+    contract_match:
+      Enter name here:
+        Enter title here: Въведете заглавието тук
+        Enter prompt here: Въведете ред тук
+        "Contract Name|Number|Domain1:Number|Domain2:string": Договор Name|Number|Domain1:number|Domain2:String
+      Eval Contracts 1 B:
+        Eval Contracts 1 B: Оценящи договори 1 B
+        Write a contract for the star function: Напишете рецепта за функцията на звездата
+        Eval Contracts 1.solution_blocks, 200: Оценяване на рецепти 1.solution_blocks, 200
+        "Contract star|image|Domain1:Number|Domain2:string|Domain3:string": Рецепта star|image|Domain1:number|Domain2:String|Domain3:String
+        Eval Contracts 1.solution_blocks: Оценяване на рецепти 1.solution_blocks
+        "Contract star|image|radius:Number|style:string|color:string": Рецепта star|image|radius:Number|style:string|color:string
+        "star|image|radius:Number|style:string|color:string": Star|Image|RADIUS:number|Style:String|Color:String
+        Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks, 300
+      Eval Contracts 2 B:
+        Eval Contracts 2 B: Оценяване на рецепти 2 B
+        Write a contract for the rotate function: Напишете рецепта за функцията на завъртане
+        Eval Contracts 2 A.solution_blocks, 300: Оценяване на рецепти 2 A.solution_blocks, 300
+        "rotate|image|degrees:Number|image:image": rotate|Image|degrees:number|image:image
+      Eval Contracts 3 B:
+        Eval Contracts 3 B: Оценяване на рецепти 3 B
+        Write a contract for the text function: Напишете рецепта за функцията text
+        Eval Contracts 3 A.solution_blocks, 300: Оценяване на рецепти 3 A.solution_blocks, 300
+        "text|image|string:string|size:Number|color:string": text|image|string:string|size:Number|color:string
+      Eval Contracts 4 B:
+        Eval Contracts 4 B: Оценяване на рецепти4 B
+        Write a contract for the scale function: Write a contract for the scale function
+        Eval Contracts 4 A.solution_blocks, 300: Eval Contracts 4 A.solution_blocks, 300
+        "scale|image|factor:Number|image:image": scale|image|factor:Number|image:image
+      Design Recipe 1.contract:
+        Design Recipe 1 Contract: Рецепта 1 в Договора
+        0: '? Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.'
+        1: ': Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.'
+        "wide-rect|Image|height:Number|color:string": wide-rect|Image|height:Number|color:string
+      Eval Design Recipe 1.contract:
+        Design Recipe 1 Contract: Рецепта 1 в Договора
+        0: '? Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.'
+        1: ': Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.'
+        "wide-rect|Image|height:Number|color:string": wide-rect|Image|height:Number|color:string

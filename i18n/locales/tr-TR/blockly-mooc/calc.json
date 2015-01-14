@@ -1,7 +1,7 @@
 {
   "compute":"hesapla",
   "equivalentExpression":"Aynı ifadeyi elde etmek için argümanlarınızı yeniden sıralayınız.",
-  "extraTopBlocks":"Bağlantı yapılmamış blokların var. Bunları \"hesapla\" bloğuna mı ekleyecektiniz?",
+  "extraTopBlocks":"Bağlantı yapılmamış bloklarınız var. Bunları \"hesapla\" bloğuna mı ekleyecektiniz?",
   "goal":"Amaç:",
   "reinfFeedbackMsg":"İşte hikayesi!Bunun üzerinde çalışmaya devam, ya da bir sonraki bulmaca üzerine hareket!",
   "yourExpression":"İfadeniz:"

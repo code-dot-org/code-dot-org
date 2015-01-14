@@ -36,6 +36,7 @@ lt:
   of: iš
   more: DAUGIAU
   less: MAŽIAU
+  beta: beta
   try_hoc: 'Išmėgink „Programavimo valandą“, spausk čia >> '
   try_k8intro: Išmėginkite mūsų programavimo įvado kursą (15-25 valandos)
   k8intro: Programavimo įvado kursas (15-25 valandos)
@@ -297,10 +298,10 @@ lt:
     email_resend_confirm: Persiųsti iš naujo patvirtinimo instrukciją
     new_password_hint: (palikite tuščią, jei nenorite pakeisti)
     current_password_hint: (įveskite dabartinį slaptažodį, kad išsaugoti pakeitimus)
-    cancel:
-      title: Panaikinti mano paskyrą
-      hint: Nepatenkintas?
-      button: Panaikinti mano paskyrą
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Baigta
     tried: Išbandyta
@@ -510,3 +511,7 @@ lt:
     completed_too_many_blocks: baigtas, panaudota per daug blokų
     completed_perfect: puikiai išspręsta
     furthest_level_attempted: išmėgintas aukščiausias lygis
+  studio:
+    courses_working_on: "Courses you're working on"
+    completed_courses: Completed courses
+    all_courses: All courses

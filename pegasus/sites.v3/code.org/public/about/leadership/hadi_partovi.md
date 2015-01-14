@@ -17,11 +17,15 @@ Hadi is a strategic advisor to numerous startups including Facebook, Dropbox, OP
 
 Find Hadi on social media: [Facebook](http://www.facebook.com/hadi), [Twitter](http://www.twitter.com/hadip), [LinkedIn](http://www.linkedin.com/in/hadip), [Google+](https://plus.google.com/103512734226243667908)
 
-<a href="https://twitter.com/hadip" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @hadip</a>
+<a href="https://twitter.com/hadip" class="twitter-follow-button" data-show-count="true" data-size="large">Follow @hadip</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
 
 <iframe src="//www.facebook.com/plugins/follow.php?href=http%3A%2F%2Fwww.facebook.com%2Fhadi&amp;width=600&amp;height=80&amp;colorscheme=light&amp;layout=standard&amp;show_faces=true&amp;appId=516556435052145" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:600px; height:80px;" allowTransparency="true"></iframe>
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/GsagBkLXtRE" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="//www.youtube.com/embed/m-U9wzC9xLk" frameborder="0" allowfullscreen></iframe>
+
+<br/><br/><br/>
+
+<iframe width="640" height="360" src="//www.youtube.com/embed/GsagBkLXtRE" frameborder="0" allowfullscreen></iframe>
 

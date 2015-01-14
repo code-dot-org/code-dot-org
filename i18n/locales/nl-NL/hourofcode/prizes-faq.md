@@ -4,29 +4,29 @@ layout: wide
 
 * * *
 
-# Prizes - FAQs
+# Prijzen - Veelgestelde vragen
 
-## Does your whole school have to enter to win the $10,000 in hardware?
+## Moet uw hele school meedoen om $10.000 aan hardware te verdienen?
 
-Yes. Your whole school has to participate to be eligible for the prize but only one person needs to register and submit the Hardware Prize application form [here](<%= hoc_uri('/prizes') %>).
+Ja. Uw hele school moet deelnemen om in aanmerking te komen voor de prijs, maar slechts één persoon hoeft zich te registreren en het aanvraagformulier in te dienen. [ registreer u hier](<%= hoc_uri('/prizes') %>).
 
-## Does your whole school have to enter to win a the tech chat?
+## Moet je hele school deelnemen om een techchat te winnen?
 
-Any classroom (public or private school) is eligible to win this prize. Your whole school need not apply.
+Elke klas (openbare of particuliere school) komt in aanmerking om deze prijs te winnen. Uw hele school moet hier niet voor inschrijven.
 
-## Can non-public schools win the video chat prize?
+## Kunnen niet openbare scholen het video-gesprek winnen?
 
-Yes! Private and independent schools are eligible along with public schools to win the video chat prizes.
+Ja! Particuliere en onafhankelijke scholen komen in aanmerking samen met openbare scholen om de video chat prijzen te winnen.
 
-## Can non-US schools win the video chat prize?
+## Kunnen niet-Amerikaanse scholen de video chat prijs winnen?
 
-No, unfortunately, because of logistics we are unable to offer the video chat prize to schools outside of the U.S. and Canada. All international organizers **are** eligible to receive Dropbox space or Skype credit.
+Nee, helaas, vanwege logistieke beperkingen zijn wij niet in staat om video-chat prijzen aan te bieden aan scholen buiten de VS en Canada. Alle internationale organisatoren **komen** in aanmerking voor Dropbox ruimte of Skypetegoed.
 
-## Why is the $10,000 hardware prize only available to public schools?
+## Waarom is de prijs van $10.000 hardware alleen beschikbaar voor openbare scholen?
 
-We would love to help teachers in public and private schools alike, but at this time, it comes down to logistics. We have partnered with [DonorsChoose.org](http://donorschoose.org) to administer classroom funding prizes, which only works with public, US K-12 schools. According to DonorsChoose.org, the organization is better able to access consistent and accurate data that's available for public schools.
+We willen graag leerkrachten in openbare en particuliere scholen evenveel helpen, maar op dit moment, het komt neer op logistiek. We have partnered with [DonorsChoose.org](http://donorschoose.org) to administer classroom funding prizes, which only works with public, US K-12 schools. According to DonorsChoose.org, the organization is better able to access consistent and accurate data that's available for public schools.
 
-## I’m outside the United States. Can I qualify for prizes?
+## Ik ben buiten de Verenigde Staten. Kom ik in aanmerking voor prijzen?
 
 Due to a small full-time staff, Code.org is unable to handle the logistics of administering international prizes. Because of this people outside the US are unable to qualify for prizes.
 
@@ -34,11 +34,11 @@ Due to a small full-time staff, Code.org is unable to handle the logistics of ad
 
 To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 14, 2014. Een school in iedere Amerikaanse staat krijgt computers voor een heel klaslokaal. Code.org selecteert winnaars en bericht ze via email voor 1 december 2014.
 
-## When is the deadline to be eligible to win a tech chat?
+## Wat is de deadline om in aanmerking te komen om een tech chat te winnen?
 
-To qualify, you must register your classroom for the Hour of Code by November 14, 2014. Classrooms will win a video chat with a celebrity. Code.org selecteert winnaars en bericht ze via email voor 1 december 2014.
+Om in aanmerking te komen moet je je klas voor 14 november 2014 geregistreerd hebben voor Uur Code. Klassen kunnen een videochat met een beroemdheid winnen. Code.org selecteert winnaars en bericht ze via email voor 1 december 2014.
 
-## When will I be notified if my school or classroom wins a prize?
+## Wanneer zal ik ervan op de hoogte worden gesteld als mijn school of klas een prijs wint?
 
 To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 14, 2014. Code.org selecteert winnaars en bericht ze via email voor 1 december 2014.
 

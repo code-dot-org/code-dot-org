@@ -4,33 +4,25 @@ title: How-to Guide layout: wide nav: resources_nav
 
 * * *
 
-<div class="row">
-  <h1 class="col-sm-6">
-    How to teach one Hour of Code
-  </h1>
-  
-  <div class="col-sm-6 button-container centered">
-    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Sign up your event</button></a>
-  </div>
-</div>
+# How to teach one Hour of Code
 
-## 1) Watch this how-to video <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
-## 2) Try the tutorials:
+## 1) Tonton video panduan berikut <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
+## 1) Cobalah tutorial:
 
-Kami akan menyelengarakan berbagai hal asyik, tutorial-tutorial untuk pelajar dari semua umur yang dibuat oleh mitra-mitra kerja kami. Tutorial-tutorial baru akan hadir pada Hour of Code sebelum 8-14 Desember.
+We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
 
-**Semua tutorial Hour of Code:**
+**All Hour of Code tutorials:**
 
   * Minimal memerlukan waktu persiapan untuk guru
   * Tutorial mandiri - memungkinkan pelajar untuk bekerja sesuai kecepatan dan tingkat keahlian mereka sendiri
 
 [![](http://<%= codeorg_url() %>/images/tutorials.png)](http://<%=codeorg_url() %>/learn)
 
-## 3) Register your Hour on the map
+## 3) Daftarkan Hour of Code anda pada peta
 
 [Make sure to sign up](<%= hoc_uri('/') %>). We'll send you helpful info as the Hour of Code nears, and you'll see your Hour of Code on our map of worldwide events.
 
-## 4) Plan your hardware needs - computers are optional
+## 4) Rencanakan perangkat yang keras yang anda butuhkan - komputer hanyalah opsional
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every child, and can even do the Hour of Code without a computer at all.
 
@@ -38,12 +30,12 @@ The best Hour of Code experience will be with Internet-connected computers. But 
   * **Tinjau ulang halaman keberhasilan menyelesaikan tutorial** untuk melihat apa yang pelajar akan lihat ketika menyelesaikannya. 
   * **Sediakan headphone untuk kelas anda**, atau minta pelajar untuk membawanya sendiri, jika tutorial bekerja dengan baik jika disertai suaranya.
 
-## 5) Plan ahead based on your technology available
+## 5) Rencanakan kedepannya berdasarkan teknologi yang anda punya
 
   * **Tidak memiliki perangkat yang cukup?** Gunakan [pemrograman berpasangan](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Ketika pelajar bekerja sama, mereka dapat saling membantu dan dapat mengurangi beban kerja pada guru. Mereka juga akan melihat ilmu komputer adalah sosial dan kolaboratif.
   * **Mempunyai bandwidth kecil?** Rencanakan untuk menunjukan video di depan kelas, supaya setiap pelajar tidak mengunduh video mereka sendiri. Atau cobalah tutorial offline atau tanpa komputer.
 
-## 6) Inspire students - show them a video
+## 6) Inspirasikan pelajar - tunjukan mereka sebuah video
 
 Show students an inspirational video to kick off the Hour of Code. Examples:
 
@@ -55,28 +47,28 @@ Show students an inspirational video to kick off the Hour of Code. Examples:
 
 Most kids don’t know what computer science is. Here are some ideas:
 
-  * Explain it in a simple way that includes examples of applications that both boys and girls will care about (saving lives, helping people, connecting people, etc.).
-  * Try: "Think about things in your everyday life that use computer science: a cell phone, a microwave, a computer, a traffic light… all of these things needed a computer scientist to help build them.”
-  * Or: “Computer science is the art of blending human ideas and digital tools to increase our power. Computer scientists work in so many different areas: writing apps for phones, curing diseases, creating animated movies, working on social media, building robots that explore other planets and so much more."
-  * See tips for getting girls interested in computer science [here](http://<%= codeorg_url() %>/girls). 
+  * Jelaskan hal ini dengan cara paling sederhana yang mencakup contoh dari penerapan kepada anak laki-laki dan perempuan sehingga mereka perlu peduli akan hal tersebut(menyelematkan orang, menolong orang, menghubungkan orang, dll.).
+  * Coba: "Pikirkan tentang hal-hal yang ada pada kehidupan sehari-hari yang mengunakkan ilmu komputer: ponsel, microwave, komputer, lampu lalu lintas.. semuanya memerlukan peniliti komputer untuk membuatnya."
+  * Atau: "Ilmu komputer adalah seni untuk mencampur ide-ide manusia dan peralatan digital untuk meningkatkan kekuatan kita. Ilmuwan komputer bekerja dalam berbagai bidang: menulis aplikasi untuk ponsel, menyembuhkan penyakit, menciptakan animasi film, bekerja pada media sosial, membangun robot yang menjelajahi planet lain dan masih banyak lagi. "
+  * Lihat tips untuk membuat gadis-gadis tertarik dalam ilmu komputer [di sini](http://<%= codeorg_url() %>/girls). 
 
-## 6) Start your Hour of Code
+## 7) Mulaikan Hour of Code anda
 
 **Direct students to the activity**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](http://<%= codeorg_url() %>/learn) under the number of participants. [hourofcode.com/co](http://hourofcode.com/co)
-  * Tell students to visit the URL and start the tutorial.
+  * Tulis link tutorial pada whiteboard. Temukan link dalam [informasi untuk tutorial yang anda pilih](http://<%= codeorg_url() %>/learn) dibawah jumlah partisipan. [hourofcode.com/co](http://hourofcode.com/co)
+  * Beritahu pelajar untuk mengunjungi URL dan memulai tutorial.
 
 **When your students come across difficulties**
 
-  * Tell students, “Ask 3 then me.” Ask 3 classmates, and if they don’t have the answer, then ask the teacher.
-  * Encourage students and offer positive reinforcement: “You’re doing great, so keep trying.”
-  * It’s okay to respond: “I don’t know. Let’s figure this out together.” If you can’t figure out a problem, use it as a good learning lesson for the class: “Technology doesn’t always work out the way we want. Together, we’re a community of learners.” And: “Learning to program is like learning a new language; you won’t be fluent right away.“
+  * Katakan pada pelajar, "Tanyakan pada 3 orang selain saya." Tanyakan 3 teman kelas, dan jika mereka tidak memiliki jawaban, kemudian tanyakan pada guru.
+  * Berikan dukungan dan bantuan positif pada pelaja: "Kamu telah melakuakn yang terbaik, jadi tetap mencoba."
+  * Tidak apa-apa untuk merespon: "Saya tidak tahu. Ayo kita pikirkan solusinya bersama." Jika kita tidak dapat memikirkan jalan keluar dari suatu masalah, gunakan hal tersebut sebagai pembelajaran untuk kelas: "Teknologi tidaklah selalu bekerja sesuai keinginan kita. Bersama-sama, kita adalah komunitas para pelajar." Dan: "Belajar untuk memprogram sama seperti mempelajari bahasa baru: anda tidak akan langsung bisa melakukannya."
 
 **What to do if a student finishes early?**
 
-  * Students can see all tutorials and try another Hour of Code activity at [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
-  * Or, ask students who finish early to help classmates who are having trouble with the activity.
+  * Pelajar dapat melihat keseluruhan tutorial dan mencoba aktivitas Hour of Code yang lain pada [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
+  * Atau, tanyakan pada pelajar yang selesai lebih awal untuk membantu teman kelas mereka yang memiliki kesulitan dengan aktivitas.
 
 **How do I print certificates for my students?**
 
@@ -84,4 +76,4 @@ Each student gets a chance to get a certificate via email when they finish the [
 
 **What comes after the Hour of Code?**
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %> <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Sign up your event</button></a>
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %>

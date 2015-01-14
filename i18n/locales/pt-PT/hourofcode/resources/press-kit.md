@@ -4,9 +4,7 @@ title: Press Kit layout: wide nav: resources_nav
 
 * * *
 
-[<button style="float: right; margin-top: 50px">Sign up your event</button>](/#join)
-
-## Como atrair os media para o teu evento da Hora de Código
+## Como atrair os media para o teu evento da Hora do Código
 
 *For all press and media inquiries, contact <press@code.org>*
 
@@ -59,5 +57,3 @@ Code.org® is a 501c3 public non-profit dedicated to expanding participation in 
 
   
 Find more resources and sample emails [here](<%= hoc_uri('/resources') %>).
-
-<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

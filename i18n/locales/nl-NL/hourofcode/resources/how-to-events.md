@@ -1,60 +1,60 @@
 * * *
 
-title: Hour of Code Event How-To layout: wide nav: resources_nav
+title: Code Uur Evenement How-To layout: wide nav: resources_nav
 
 * * *
 
-# Hour of Code event guide
+# Uur Code evenement gids
 
-Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
+Organiseer een Code Uur tijdens de Computer Science Education Week (8-14 december) om de informatica te vieren en inspireer meer leerlingen om het te proberen. Iedereen kan overal een Code Uur evenement organiseren.
 
-## 1) Prepare for your event
+## 1) Bereiden u voor op uw evenement
 
-  * Determine a venue, date and time
-  * Send [a letter](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) to invite your local mayor, congressman, governor, or influential business person to speak.
-  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= hoc_uri('/resources/press-kit') %>) for help.
+  * Bepaal een locatie, datum en tijd
+  * Stuur [Een brief](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) om je burgemeester of een andere goede spreker uit te nodigen om te speechen.
+  * Nodig media en pers uit zoals de locale nieuwsstation, de krant of bloggers. Bekijk onze [pers Kit](<%= hoc_uri('/resources/press-kit') %>) voor hulp.
 
-## 2) During your event
+## 2) tijdens uw evenement
 
-  * Kick off your event with one of our [inspirational videos](<%= hoc_uri('/resources#videos') %>).
-  * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= hoc_uri('/resources/stats') %>).   
+  * Trap het evenement af met een van onze [inspirerende videos](<%= hoc_uri('/resources#videos') %>).
+  * Geef een intro waar je het belang van de informatica bekijkt, met behulp van deze [grafieken](<%= hoc_uri('/resources/stats') %>).   
       
     
-  * Other event ideas: 
-      * Invite a local industry leader to discuss his or her work involving computer science
-      * Invite a local politician and have students teach him or her how to code
-      * Watch one of the Q&A sessions with an Hour of Code ambassador. They will all be recorded and on Code.org’s YouTube page. This year’s participants include Bill Gates, Sheryl Sandberg, Ashton Kutcher and more!
-      * Have a group of students demonstrate an unplugged activity
-      * Have a group of students teach the principal or a group of teachers how to code
-      * If your school already teaches computer science, have students demo projects
+  * Andere evenement ideeën: 
+      * Nodig een lokale industrieleider uit om zijn/haar werk te bespreken met inbegrip van de informatica
+      * Nodig een lokale politicus uit en laat leerlingen hem uit leggen hoe hij moet programmeren
+      * Bekijk een van de veelgestelde vragen sessies met een Code Uur ambassadeur. Zij zullen allemaal worden uitgezonden op de Code.org's YouTube pagina. Dit jaar doen onder andere Bill Gates, Sheryl Sandberg, Ashton Kutcher en nog velen anderen mee!
+      * Laat een groep leerlingen een unplugged activiteit demonstreren
+      * Laat een groep leerlingen/leerkrachten de basisfundamenten leren over programmeren
+      * Als je school al informatica geeft, laat studenten projecten demonstreren
 
-## 3) Share how it went
+## 3) Deel hoe het ging
 
-  * Share pictures of your event on Facebook and Twitter. 
-  * Use the hashtag **#HourofCode**
+  * Deel foto's van je evenement op Facebook en Twitter. 
+  * Gebruik de hashtag **#HourofCode**
 
-## Example Event Plan
+## Voorbeeld van een evenementsplan
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**Evenement:** Schoolbrede Computer Science Education Week aftrap
 
-**Date:** Dec 8th (start of Computer Science Education Week)
+**Datum:** 8 december (begin van de Computer Science Education Week)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**Tijd:** Tijdens de schooldag. Halverwege de ochtend heeft de voorkeur. ongeveer een uur.
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
+**Locatie:** verzamelruimte (bijv. theater of gymzaal)   
   
 
 
-## Run of Show
+## Programma
 
 <table>
   <tr>
     <th style="width:200px">
-      Time
+      Tijdstip
     </th>
     
     <th style="width:800px">
-      Action
+      Actie
     </th>
   </tr>
   
@@ -64,7 +64,7 @@ Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to 
     </td>
     
     <td>
-      Open with one of our <a href="http://hourofcode.com/us/resources#videos">inspirational videos</a>
+      Start met een van onze <a href="http://hourofcode.com/us/resources#videos">inspirerende videos</a>
     </td>
   </tr>
   
@@ -73,46 +73,46 @@ Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to 
   </td>
   
   <td>
-    Principal gives an intro overviewing the importance of computer science. Use these <a href="/resources/stats">stats and infographics</a>.
+    De directeur geeft ee, intro waarin het belang van informatica wordt aangetoond. Gebruik deze <a href="/resources/stats">statistieken en info-grafieken</a>.
   </td></tr> 
   
   <td>
-    11:15-11:17 am
+    10:15-10:17 am
   </td>
   
   <td>
-    Open with one of our <a href="http://hourofcode.com/us/resources#videos">inspirational videos</a>
+    Start met een van onze <a href="http://hourofcode.com/us/resources#videos">inspirerende videos</a>
   </td></tr> 
   
   <td>
-    11:17-11:30 am
+    10:17-10:30 am
   </td>
   
   <td>
-    Special guest to talk about their background and how technology and computer science plays an important role in their everyday lives.
+    Speciale gasten praten over hun achtergrond en welke belangrijke rol informatica in hun alledaagse leven speelt.
   </td></tr> 
   
   <td>
-    11:30-11:40 am
+    10:30-10:40 am
   </td>
   
   <td>
-    Students do an Hour of Code demo for the school. Fun twist- have them teach the principal, politician or other students.
+    Studenten doen een demo van Code Uur voor de school (misschien is het leuk om ze de gasten en andere studenten iets te laten onderwijzen).
   </td></tr> 
   
   <td>
-    11:40-12:00 pm
+    10:40-11:00 am
   </td>
   
   <td>
-    Students demo an unplugged activity and how computer science can be taught without using computers.
+    Studenten laten een unplugged activiteit zien om te laten zien hoe informatica kan worden geleerd zonder computers.
   </td></tr> 
   
   <td>
-    12:00-12:05 pm
+    11:00-11:05 am
   </td>
   
   <td>
-    Teacher who help bring the school-wide event gives closing remarks.
+    Leraren geven een eindspeech.
   </td>
 </table>

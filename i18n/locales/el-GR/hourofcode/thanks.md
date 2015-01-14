@@ -2,9 +2,9 @@
 
 title: Σας ευχαριστούμε για την εγγραφή σας! layout: wide
 
-social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= hoc_s(:meta_tag_og_description) %>" "og:image": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "og:image:width": 1705 "og:image:height": 949 "og:url": "http://<%=request.host%>" "og:video": "https://youtube.googleapis.com/v/rH7AjDMz_dc"
+social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= hoc_s(:meta_tag_og_description) %>" "og:image": "http://<%=request.host%>/images/code-video-thumbnail.jpg" "og:image:width": 1705 "og:image:height": 949 "og:url": "http://<%=request.host%>" "og:video": "https://youtube.googleapis.com/v/rH7AjDMz_dc"
 
-"twitter:card": player "twitter:site": "@codeorg" "twitter:url": "http://<%=request.host%>" "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>" "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>" "twitter:image:src": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "twitter:player": 'https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=0' "twitter:player:width": 1920 "twitter:player:height": 1080
+"twitter:card": player "twitter:site": "@codeorg" "twitter:url": "http://<%=request.host%>" "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>" "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>" "twitter:image:src": "http://<%=request.host%>/images/code-video-thumbnail.jpg" "twitter:player": 'https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=0' "twitter:player:width": 1920 "twitter:player:height": 1080
 
 * * *
 
@@ -14,7 +14,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Ευχαριστούμε που γράφτηκες για να πραγματοποιήσεις μια Ώρα του Κώδικα!
 
-**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](<%= hoc_uri('/prizes') %>)
+**ΚΑΘΕ** διοργανωτής Ώρας Κώδικα θα λάβει 10 GB χώρου στο Dropbox ή $10 σε πίστωση Skype ως ευχαριστήριο. [Λεπτομέρειες](<%= hoc_uri('/prizes') %>)
 
 ## 1. Διάδωσέ το
 
@@ -26,30 +26,30 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 ## 2. Ask your whole school to offer an Hour of Code
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](/resources/hoc-one-pager.pdf) to your principal.
+[Στείλε αυτό το email](<%= hoc_uri('/resources#email') %>) ή [αυτό το φυλλάδιο](/resources/hoc-one-pager.pdf) στο διευθυντή σου.
 
 <% else %>
 
 ## 2. Ask your whole school to offer an Hour of Code
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](/resources/hoc-one-pager.pdf) this handout</a> to your principal.
+[ Στείλε αυτό το μήνυμα](<%= hoc_uri('/resources#email') %>) ή δώσε [αυτό το φυλλάδιο](/resources/hoc-one-pager.pdf) αυτό το φυλλάδιο</a> στον διευθυντή σου.
 
 <% end %>
 
 ## 3.Κάντε μια γενναιόδωρη δωρεά 
 
-[Donate to our crowdfunding campaign.](http://<%= codeorg_url() %>/donate) To teach 100 million children, we need your support. We just launched the [largest education crowdfunding campaign](http://<%= codeorg_url() %>/donate) in history. *Every* dollar will be matched [donors](http://<%= codeorg_url() %>/about/donors), doubling your impact.
+[Κάντε μια δωρεά στην καμπάνια μας crowdfunding.](http://<%= codeorg_url() %>/donate) Χρειαζόμαστε τη βοήθειά σας για να φτάσουμε τα 100 εκατομμύρια παιδιά. Μόλις ξεκινήσαμε τη [μεγαλύτερη καμπάνια crowdfunding για την εκπαίδευση](http://<%= codeorg_url() %>/donate) που έγινε ποτέ. *Κάθε* δολάριο θα διπλασιαστεί από [δότες](http://<%= codeorg_url() %>/about/donors), διπλασιάζοντας το καλό που κάνετε.
 
 ## Ζήτα από τον εργοδότη σου να εμπλακεί 
 
-[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf).
+[ Στείλε αυτό το μήνυμα](<%= hoc_uri('/resources#email') %>) στον διαχειριστή σου ή στον προϊστάμενο ή τον Διευθύνοντα Σύμβουλο. Ή [δώσε τους αυτό το φυλλάδιο](http://hourofcode.com/resources/hoc-one-pager.pdf).
 
 ## Προωθήστε την ώρα του κώδικα μέσα στην κοινωνία σας
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+Επιστράτευσε έναν τοπικό σύλλογο — ένα σώμα προσκόπων, μια ενορία, ένα πανεπιστήμιο, μια ένωση εργαζομένων. Ή διοργάνωσε μια Ώρα του Κώδικα για το τη γειτονιάς σου.
 
 ## 5. Ζήτα από ένα τοπικό άρχοντα να υποστηρίξει την Ώρα του Κώδικα
 
-[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[ Στείλε αυτό το μήνυμα](<%= hoc_uri('/resources#politicians') %>) στον δήμαρχο, το Δημοτικό Συμβούλιο, ή το Σχολικό Συμβούλιο. Ή [δώσε τους αυτό το φυλλάδιο](http://hourofcode.com/resources/hoc-one-pager.pdf) και καλέσε τους να επισκεφτούν το σχολείο σου.
 
 <%= view 'popup_window.js' %>

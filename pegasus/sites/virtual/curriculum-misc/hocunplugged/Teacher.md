@@ -101,17 +101,17 @@ The student being "programmed" will often try to help the programmers by doing w
 [together]
 
 ## Activity:
-### <a name="Activity1"></a> 4) [The Drawing Machine](drawing_commands.pdf)
+### <a name="Activity1"></a> 3) [The Drawing Machine](drawing_commands.pdf)
 
 > **Directions for Class:**
 
 > 1. Select one student to be the Drawing Machine.
-> 2. Divide the [drawing commands](drawing_commands.pdf) up amond students.
+> 2. Divide the [drawing commands](drawing_commands.pdf) up among students.
 > 3. The Drawing Machine will start by standing at the whiteboard with a marker that has the [marker template](marker_template.pdf) attached.
 > 4. Give the class one of the [shapes to draw](drawing_shapes.pdf); it should not be shared with the Drawing Machine.
 > 5. Using the [drawing commands](drawing_commands.pdf) students will come up with a sequence of instructions for the Drawing Machine.
 > 6. When the class is ready, they will give the instructions to the Drawing Machine to execute.
-> 7. Repeat with additonal images, allowing other students to be the Drawing Machine.
+> 7. Repeat with additional images, allowing other students to be the Drawing Machine.
 
 
 Experiment with different ways for students to give their instructions:
@@ -128,7 +128,7 @@ If students struggle with figuring out which angles to use, you can give them th
 
 # Lesson Tip
 
-Understanding that the instructions are excecuted from the marker's point of view is essential to programming it. For example, turning left or right is done relative to current direction the marker is pointing (as seen by the purple triangle on the [marker template](marker_template.pdf)). Encourage students to get up and use their bodies as they figure out the programs.
+Understanding that the instructions are executed from the marker's point of view is essential to programming it. For example, turning left or right is done relative to current direction the marker is pointing (as seen by the purple triangle on the [marker template](marker_template.pdf)). Encourage students to get up and use their bodies as they figure out the programs.
 
 
 [/tip]
@@ -140,7 +140,7 @@ Understanding that the instructions are excecuted from the marker's point of vie
 [together]
 
 ## Wrap-up
-### <a name="WrapUp"></a> 5) Flash Chat: Taking it online
+### <a name="WrapUp"></a> 4) Flash Chat: Taking it online
 
 - In the game we just played, who do you suppose was more like a programmer, and who was more like a computer?
 - What was the most challenging part of writing the instructions?
@@ -160,7 +160,7 @@ If you'd like to extend this activity:
 
 - Ask students to come up with new shapes or drawings to write instructions for.
 - Add [more drawing commands](more_drawing_commands.pdf) to your library of instructions, or even make some of your own.
-- Have studens program each other to do other activites, like navigating the hallways, building a block tower, or making a sandwich.
+- Have students program each other to do other activities, like navigating the hallways, building a block tower, or making a sandwich.
 
 
-<link rel="stylesheet" type="text/css" href="../docs/morestyle.css"/>
+<link rel="stylesheet" type="text/css" href="morestyle.css"/>

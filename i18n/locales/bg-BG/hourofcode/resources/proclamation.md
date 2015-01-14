@@ -1,52 +1,52 @@
 * * *
 
-title: Sample Resolution Supportive of Computer Science Education Week and Hour of Code layout: wide nav: resources_nav
+Заглавие: примерен план в подкрепа на CSEW и часът на кодирането оформление: широка nav: resources_nav
 
 * * *
 
-### Below is a sample resolution supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
+### По-долу е примерна резолюция в подкрепа на CSEW и нейните цели, които могат да бъдат използвани от държавните и местните законодатели.
 
   
-[HOUSE,SENATE, STATE, COUNTY OR CITY RESOLUTION OR PROCLAMATION ###] – Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+[Къща, СЕНАТА, държава, област или град резолюция или ОБЯВЯВЛЕНИЕ ###] – като има предвид, че CSEW подчертава решаващата роля, която играят компютърните науки в развитието на нашето общество и как компютърните науки позволяват да се случват иновациите и създават икономически възможности;
 
-[HOUSE OR SENATE RESOLUTION ###]
+[КЪЩА ИЛИ СЕНАТА РЕЗОЛЮЦИЯ ###]
 
 [DATE]
 
-Whereas computing technology is an integral part of culture and is transforming how people interact with each other and the world around them;
+Като има предвид, че компютърните технологии са неразделна част от културата и трансформират начина, по който хората си взаимодействат и въздействат на света около тях;
 
-Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
+Като има предвид, че компютърните науки променят индустрията, създават нови сфери в търговията, насърчават иновациите във всички области на науката, както и стимулират производителността в установените икономически сектори;
 
-Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
+Като има предвид, че областта на компютърните науки укрепва сектора на информационните технологии на нашата икономика, която е значителен принос за Съединените щати и тяхната икономическа производителност;
 
-Whereas the field of computer science is a foundational science for the digital age;
+Като има предвид, че компютърните науки са фундаментални за дигиталната ера;
 
-Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
+Като има предвид, че сектора на информационните технологии е в уникалната позиция да помогне с икономическото възстановяване чрез научни изследвания и развитие на нови иновации;
 
-Whereas the outlook for computer science jobs is bright with one in every two STEM jobs in the country in computing occupations;
+Като има предвид, че перспективите за работни места, свързани с компютърните науки нарастват с едно за всеки две STEM работни места в страната;
 
-Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
+Като има предвид, че предоставянето на учениците възможност да участват в дейности с висококачествени компютърни уроци им създава богати възможности и им създава умения за критично мислене, които ще им служат през целия живот;
 
-Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
+Като има предвид, че всички ученици заслужават задълбочена подготовка в компютърните науки, включително достъп до квалифицирани преподаватели, технология, както и подходящи за възрастта учебна програма, означава, че трябва учениците да учат компютърни науки в началните и средните нива на образование;
 
-Whereas computer science education has challenges to address, including counting computer science classes towards high school graduation requirements, and providing professional development for computer science teachers;
+Като има предвид, че в образованието по компютърни науки има предизвикателства, включително прибавяне компютърните науки към изискването за дипломиране, както и предоставяне на професионално развитие за преподавателите по компютърни науки;
 
-Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
+Като има предвид, че участието в Часът на кодирането по време на CSEW може да служи за демистифициране на областта на компютърните науки и да насърчи повече студенти да продължат обучението си по компютърни науки;
 
-Whereas the field of computer science has significant equity barriers to address, including attracting more participation by females and underrepresented minorities to all levels and branches;
+Като има предвид, че областта на компютърни науки има значителни капиталови бариери, включително и привличане на повече участие на жените и слабо представените малцинства на всички нива и клонове;
 
-Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
+Като има предвид, че Грейс Мъри Хопър, една от първите жени в областта на компютърните науки, инженер, пионер в програмирането и пионер в стандартите за компютърни системи, които стават основа за много подобрения в компютърните науки; и
 
-Whereas the week of December 8, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it
+Като има предвид, че седмицата на 8 декември, е в чест на рождения ден на Грейс Хопър, е определена като "Седмица на компютърните науки иобразованието": сега, следователно, да бъде
 
-Resolved, That the [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
+Реши, че [къща или СЕНАТ, област, град / училищно]--
 
-(1) supports the designation of Computer Science Education Week (December 8-14, 2014);
+(1) подкрепя целите на CSEW (декември 8-14, 2014);
 
-(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
+(2) насърчава училища, педагози, родители и политици да участват в CSEW като дават възможност на своите студенти да участват в Часът на кодирането;
 
-(3) encourages schools, teachers, researchers, universities, business leaders and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
+(3) насърчава училища, учители, изследователи, университети, бизнес лидери и политици да определят механизми, по които учители да получат професионално развитие за да осигурят устойчив обучителен опит по компютърни науки на всички образователни нива и насърчава учениците даизучат компютърните концепции и понятия;
 
-(4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
+(4) насърчава политиците да премахнат бариерите, които пречат на изискването компютърните курсове да носят кредитни точки по математика или наука при завършване;
 
-(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
+(5) насърчава възможности, включително чрез съществуващи програми, за участие на жените и слабо представените малцинства в компютърните науки.

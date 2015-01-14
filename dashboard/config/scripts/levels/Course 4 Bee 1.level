@@ -21,7 +21,9 @@
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "maze_data": null
+    "callout_json": "[\r\n  {\"localization_key\": \"if_bee_nectar\", \"element_id\": \"#if_bee_nectar_qtip\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"right center\", \"at\": \"left center\"}}\r\n  }\r\n]",
+    "maze_data": null,
+    "video_key": "C4_bee_conditional"
   }
 }]]></config>
   <blocks>
@@ -39,7 +41,7 @@
         <block type="controls_repeat">
           <title name="TIMES">???</title>
         </block>
-        <block type="bee_ifFlower">
+        <block type="bee_ifFlower" id="if_bee_nectar_qtip">
           <title name="LOC">atFlower</title>
         </block>
       </xml>

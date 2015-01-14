@@ -23,6 +23,10 @@ body{
   margin-bottom:.25em;  
 }
 
+.headercontent .disclaimer {
+    opacity: 1.0;
+    color: #E4E0EC;
+}
 
 .content {
 	padding: 0px;	
@@ -59,6 +63,7 @@ body{
   margin-bottom: 30px;
   border-radius: 15px;
   background-color: white;
+  clear: both;
   /*page-break-after:always;*/
 }
 
@@ -96,6 +101,7 @@ body{
   color: #00ADBC ;
   font-size: 15px;
   line-height:1.3em;
+  font-style:none;
 }
 
 .tip h1 {
@@ -113,15 +119,72 @@ body{
   -webkit-print-color-adjust: exact;
 }
 
-/*
+table { border-spacing: 0; }
+
+
+th {
+  background-color: rgb(0, 178, 192);
+  color: white;
+  padding: 15px;
+  border-color: rgb(0, 178, 192);
+  border-width: 1px;
+  border-style: solid;
+}
+
+td {
+  border-width: 1px;
+  border-color: rgb(141, 138, 138);
+  border-style: solid;
+  padding: 15px;
+}
+
+th a:link, th a:visited, th a:hover, th a:active {
+  color: white;
+}
+
+
+.lesson-table tr td:nth-child(2){
+    width:1%;
+    white-space:nowrap;
+}
+
+.rollout-table td, .rollout-table th {
+    width: 14%;
+}
+
+.rollout-table th {
+    text-align: center;
+}
+
+.framework-table tr td:first-child {
+    font-weight: bold;
+}
+
+.video { float: right !important; }
+
+.video div {
+    width: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.container_nonresponsive {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
 @page  
 { 
     size: auto;    
-    margin: .4in .25in .25in .25in;  
+    margin: .25in .25in .25in .25in;  
 }
 
 @media print {
-	body{ margin: .4in .25in .25in .25in; }
-	
+	body{
+        margin: 0 0 0 0;
+        width: 100%;
+        zoom: 75%;
+    }
+	img{ max-width: 100%; }
+    .standards, .video { display: none !important; }
 }
-*/

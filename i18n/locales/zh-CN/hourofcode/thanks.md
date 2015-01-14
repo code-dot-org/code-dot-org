@@ -1,10 +1,10 @@
 * * *
 
-谢谢帮助举办编程一小时的活动
+标题：感谢注册并组织编程一小时！ 布局：宽
 
-social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= hoc_s(:meta_tag_og_description) %>" "og:image": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "og:image:width": 1705 "og:image:height": 949 "og:url": "http://<%=request.host%>" "og:video": "https://youtube.googleapis.com/v/rH7AjDMz_dc"
+social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= hoc_s(:meta_tag_og_description) %>" "og:image": "http://<%=request.host%>/images/code-video-thumbnail.jpg" "og:image:width": 1705 "og:image:height": 949 "og:url": "http://<%=request.host%>" "og:video": "https://youtube.googleapis.com/v/rH7AjDMz_dc"
 
-"twitter:card": player "twitter:site": "@codeorg" "twitter:url": "http://<%=request.host%>" "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>" "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>" "twitter:image:src": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "twitter:player": 'https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=0' "twitter:player:width": 1920 "twitter:player:height": 1080
+"twitter:card": player "twitter:site": "@codeorg" "twitter:url": "http://<%=request.host%>" "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>" "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>" "twitter:image:src": "http://<%=request.host%>/images/code-video-thumbnail.jpg" "twitter:player": 'https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=0' "twitter:player:width": 1920 "twitter:player:height": 1080
 
 * * *
 
@@ -12,9 +12,9 @@ social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= ho
 
 twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %> - 编程一小时
 
-# 谢谢帮助举办编程一小时的活动！！
+# 感谢注册并组织编程一小时活动！
 
-**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](<%= hoc_uri('/prizes') %>)
+**每位**编程一小时组织者将获得10GB Dropbox space或$10 Skype credit 作为感谢。[细节](<%= hoc_uri('/prizes') %>)
 
 ## 1. 帮助宣传这个活动
 
@@ -24,32 +24,32 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 <% if @country == 'us' %>
 
-## 2. Ask your whole school to offer an Hour of Code
+## 2. 邀请你的学校加入编程一小时
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](/resources/hoc-one-pager.pdf) to your principal.
+[发送这封邮件](<%= hoc_uri('/resources#email') %>)或[这份材料](/resources/hoc-one-pager.pdf)给你的校长。
 
 <% else %>
 
-## 2. Ask your whole school to offer an Hour of Code
+## 2. 邀请你的学校加入编程一小时
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](/resources/hoc-one-pager.pdf) this handout</a> to your principal.
+[发送这封邮件](<%= hoc_uri('/resources#email') %>)或把[这份资料](/resources/hoc-one-pager.pdf)这份资料</a>给你的校长。
 
 <% end %>
 
-## 3. Make a generous donation
+## 3. 大规模募捐
 
-[Donate to our crowdfunding campaign.](http://<%= codeorg_url() %>/donate) To teach 100 million children, we need your support. We just launched the [largest education crowdfunding campaign](http://<%= codeorg_url() %>/donate) in history. *Every* dollar will be matched [donors](http://<%= codeorg_url() %>/about/donors), doubling your impact.
+[募捐给我们的群众募资活动。](http://<%= codeorg_url() %>/捐赠)为了1教亿儿童学习，我们需要你的支持。 我们刚刚推出了历史上[/约/捐助者">捐赠](http://<%= codeorg_url() %>/捐赠“>最大的教育群众募资活动</a>。 <em>每</em>美元将匹配<a href=)，加倍您的影响力。
 
-## 4. Ask your employer to get involved
+## 3.邀请你的上级参加
 
-[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf).
+[发送电子邮件](<%= hoc_uri('/resources#email') %>)给你的经理，或CEO，或者[给他们这个参考资料](http://hourofcode.com/resources/hoc-one-pager.pdf).
 
-## 5. Promote Hour of Code within your community
+## 5. 向你的社交圈内推广编程一小时
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+招募本地组织—童子军俱乐部，教堂，大学，退伍军人团体或工会，或组织你的邻居参与编程一小时“街区派对”。
 
-## 6. Ask a local elected official to support the Hour of Code
+## 6. 邀请当地官员支持编程一小时活动
 
-[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[发送电子邮件](<%= hoc_uri('/resources#politicians') %>)给市长，市议员，或学校董事会。 或[给他们这个资料](http://hourofcode.com/resources/hoc-one-pager.pdf)，并邀请他们来参观你的学校。
 
 <%= view 'popup_window.js' %>

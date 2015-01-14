@@ -102,7 +102,7 @@
         Webapp: Nettapp
         ArtistEC: Kunstneren
         TextMatch: Teksttreff
-        StudioEC: Play Lab
+        StudioEC: Spill-Lab
     trophy:
       name:
         Bronze: Bronse
@@ -295,15 +295,15 @@
         studio_c3_game_5: Kan du legge til en blokk for å skåre et poeng når pingvinen kommer borti blekkspruten, og deretter flytte ham med pilene til du skårer?
         studio_c3_game_6: Kan du legge til blokker for å forandre bakgrunnen og hastigheten til pingvinen, og deretter bevege den med pil-tastene til du score?
         studio_c3_game_7: Lag ditt eget spill. Når du er ferdig, trykk Fullør for å la vennene dine prøve spillet på sine mobiler.
-        studio_playlab_1: 'Penguin wants to say "hello" - can you help him?'
-        studio_playlab_2: 'Cave Boy (actor 1) and Cave Girl (actor 2) would like to say "hello" to each other. Can you help them by using the "say" block twice?'
-        studio_playlab_3: Can you help Tennis Girl get to the flag?
-        studio_playlab_4: Can you help Tennis Boy (actor 1) get to Tennis Girl (actor 2) and play a sound when he gets there?
-        studio_playlab_5: 'Can you help the Spacebot say "greetings earthlings" when it is clicked? Don’t forget to click it after you click Run'
-        studio_playlab_6: Can you help the Witch move around using the up/down/right/left arrow keys to get to all the magical fireballs?
-        studio_playlab_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help the wizard move right and left repeatedly?'
-        studio_playlab_8: Can you add a block to score a point and a block to play a sound when the unicorn runs into the wizard, and then move him with the arrows until you score?
-        studio_playlab_9: Set the background for this alien invasion and help the Spacebot get to the alien faster by changing its speed. Then move him with the arrow keys to get to the Spacebot and alert everyone else
+        studio_playlab_1: 'Pinvinen ønsker å si "hei" - kan du hjelpe ham?'
+        studio_playlab_2: 'Hulegutt (skuespiller 1) og Hulejente (skuespiller 2) ønsker å si "hei" til hverandre. Kan du hjelpe dem ved å bruke "si"-blokken to ganger?'
+        studio_playlab_3: Kan du hjelpe Tennisjenta med å få tak i flagget?
+        studio_playlab_4: Kan du hjelpe Tennisgutt (skuespiller 1) med å få Tennisjente (skuespiller 2) til å spille av en lyd når han kommer dit?
+        studio_playlab_5: 'Kan du hjelpe Rombot til å si "hilsner jordboere" når den blir klikket på? Ikke glem å klikke på den etter du trykker Kjør'
+        studio_playlab_6: Kan du hjelpe heksa med å flytte seg rundt ved å bruke piltastene opp/ned/høyre/venstre for å få tak i alle de magiske ildkulene?
+        studio_playlab_7: '"Gjenta alltid" blokken kan du bruke til å kjøre kode kontinuerlig. Kan du knytte sammen blokker for å hjelpe veiviseren flytte seg til høyre og venstre gjentatte ganger?'
+        studio_playlab_8: Kan du legge til en blokk for å få et poeng og en blokk for å spille av en lyd når enhjørningen løper på trollmannen, og så flytte han med pilene til du får et poeng?
+        studio_playlab_9: Sett bakgrunnen for denne invasjonen og hjelp Rombot å komme raskere frem til romvesnene ved å endre hastigheten hans. Flytt han dermed med piltastene for å komme til Romboten og advare alle andre
         studio_playlab_10: Lag ditt eget spill. Når du er ferdig, trykk Fullør for å la vennene dine prøve spillet på sine mobiler.
         studio_full_sandbox: Lag ditt eget spill. Når du er ferdig, trykk Fullør for å la vennene dine prøve spillet på sine mobiler.
         studio_k1_1: Kan du få denne hunden til å si «hallo verden»?
@@ -378,26 +378,25 @@
       scrat 20:
         instructions: Kan du legge til kun 3 blokker for å hjelpe meg med å løse en mer kompleks labyrint? Hvis du gjør det riktig kan jeg gå en svingete bane uansett lengde. Skynd deg! Isen smelter!
       Standalone_Artist_1:
-        instructions: "Welcome to Artist! First off, let's try to make a simple square using the turn right block and move forward block. Each side should be 100 pixels long."
+        instructions: Velkomen til Artist! Først og fremst, la oss prøve å lage en enkel firkant ved å bruke blokken som snur til høyre og blokken som flytter framover. Hver side burde være 100 piksler lang.
       Standalone_Artist_2:
-        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel long sides.
+        instructions: Tegn denne diamanten med 120 og 60 graders vinkler og 150 piksler lange sider.
       Standalone_Artist_3:
-        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree turns?
+        instructions: Kan du tegne denne sekskanten med 100 piksel-sider og 60 graders kanter?
       Standalone_Artist_4:
-        instructions: "Now you've got a new block to play with, the loop. This will repeat a set of commands. What happens if you loop these commands 6 times?"
+        instructions: Nå har du fått en ny blokk å spille med, løkken. Denne vil gjenta et sett med kommandoer. Hva skjer hvis du setter disse kommandoene i en løkke som går 6 ganger?
       Standalone_Artist_5:
-        instructions: How many times do you need to loop this diamond to draw the flower?
+        instructions: Hvor mange ganger trenger du å kjøre en løkke på denne diamanten for å tegne blomsten?
       Standalone_Artist_5.5:
-        instructions: "Notice how we simplified the diamond code by turning it into a loop. You can loop that whole sequence 12 times to draw the flower. Hint: You'll need to turn 30 degrees after your diamond loop so you don't keep drawing over the same diamond."
+        instructions: 'Legg merke til hvordan vi har forenklet diamantkoden ved å legge inn en løkke. Du kan kjøre en sekvens i en løkke 12 ganger for å tegne blomsten. Hint: Du vil trenge å snu 30 grader etter at diamanten har kjørt i en løkke for å ikke fortsette å tegne over den samme diamanten.'
       Standalone_Artist_6:
-        instructions: 'Loop this hexagon code 6 times to create the design. How many degrees will you need to turn each time? Hint: divide the number of degrees in a circle by the number of times you are looping.'
+        instructions: 'Kjør denne sekskant-koden 6 ganger i en løkke for å lage designet. Hvor mange grader må du snu hver gang? Hint: del antall grader i en sirkel på antall ganger du skal kjøre løkka.'
       Standalone_Artist_7:
-        instructions: 'A function is another programming tool to help you avoid repeating yourself. This function draws a flower, so you can use it any time you want to draw a flower. Use this and the new jump block to draw these flowers. Hint: The flowers are 150 pixels apart'
+        instructions: 'En funksjon er en annet programmeringsverktøy for å hjelpe deg med å unngå å gjenta deg selv. Denne funksjonen tegner en blomst så du kan bruke den hver gang du vil tegne en blomst. Bruk dette og nye hoppe-blokken til å tegne disse blomstene. Hint: Blomstene er 150 piksler fra hverandre'
       Standalone_Artist_8:
-        instructions: |-
-          Here's a function called "Draw a shape" that we've programmed to draw hexagons. Run the code to see what it does and then experiment with the function to see what happens. Can you make it draw a pattern of squares, triangles, or octagons?
+        instructions: 'Her er en funksjon kalt "Tegn en figur" som vi har programmert for å tegne sekskantene. Kjøre koden for å se hva den gjør og deretter eksperimenterer du med funksjonen for å se hva som skjer. Kan du få den til å tegne et mønster av firkanter, trekanter eller åttekanter?'
       Standalone_Artist_9:
-        instructions: "Now go ahead and make whatever picture you'd like! You've even got an empty function that you can make do whatever you want!"
+        instructions: Gå videre og lag det bildet du ønsker! Du har til og med en tom funksjon som kan du få til å gjøre hva du vil!
     video:
       name:
         maze_intro: Labyrint intro
@@ -428,7 +427,7 @@
         C1_happy_maps_unplugged: Glad Kart
         C1_moveitmoveit_unplugged: Flytt den, flytt den
         C1_bigevent_unplugged: Den store begivenheten
-        C1_getting_loopy: Getting Loopy
+        C1_getting_loopy: Gå i spinn
         C1_pair_programming: Par Programmering
         C1_maze_intro_sequencing: Labyrint sekvensering Intro
         C1_maze_debugging: Labyrint feilsøking
@@ -441,12 +440,12 @@
         C1_playlab_storytelling: 'Spill Lab - lage en historie'
         C1_planting_seed: Plante et frø
         C1_building_foundation: Bygg ett grunnlag
-        C1_going_places_safely: Going Places Safely
+        C1_going_places_safely: Trygg reise
         C2_maze_intro: Labyrint intro
         C2_artist_intro: Kunstner intro
         C2_zuck_repeat_loop: Labyrint løkker
         C2_artist_loops: Kunstner løkker
-        C2_artist_debugging: Artist Debugging
+        C2_artist_debugging: Kunstner Feilsøking
         C2_bee_loops: Bie løkker
         C2_bee_debugging: Bie feilsøking
         C2_bee_conditionals: Bie Betingelser
@@ -475,14 +474,28 @@
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Fungerende solfangere
         C3_songwriting_with_parameters: Låtskriving med parametere
-        C4_artist_math: Programming the Artist with Math
-        C4_create_functions: Creating Functions
-        C4_edit_functions: Editing Functions
-        C4_for_loops: For Loops
-        C4_variables: Variabler
-        frozen_intro: Hour of Code Intro
-        frozen_loops: Introduction to Loops
-        frozen_functions: Introduction to Functions
+        C4_intro: Introduksjon
+        C4_bee_conditional: Bie Betingelser
+        C4_variables_artist: 'Variabler - Kunstner'
+        C4_variables_playlab: 'Variabler - SpillLab'
+        C4_for_loops: For-løkker
+        C4_math_artist: Programmere Kunstneren med Matematikk
+        C4_function_edit: Redigere Funksjoner
+        C4_function_create: Lage Funksjoner
+        C4_function_parameters: Funksjoner med parametre
+        C4_conditionals: Betingelser
+        C4_unplugged_algorithms: Algoritmer med Tangram
+        C4_unplugged_madlibs: Sprø Bibliotek
+        C4_unplugged_variables: Variabler i konvolutter
+        C4_unplugged_forloops: For-løkker
+        C4_unplugged_parameters: Songwriting with Parameters
+        C4_unplugged_binary: Binær
+        frozen_intro: Kodetimen Intro
+        frozen_loops: Introduksjon til løkker
+        frozen_functions: Introduksjon til funksjoner
+        playlab_intro: Introduksjon til SpilleLab
+        playlab_events: SpillLab Arrangement
+        playlab_repeat_forever: Spille Lab Gjenta for alltid
     callout:
       text:
         drag_blocks: 'Dra en "flytt" blokk og fest den under den andre blokken'
@@ -500,31 +513,52 @@
         replace_questions: Bruk rullegardinlisten for å erstatte «???» med et tall
         replace_questions_degree: Bruk rullegardinlisten for å erstatte «???» med det korrekte antall grader å snu
         repeat_blocks: Bruk «Gjenta» blokken og legg den rundt blokkene i arbeidsområdet
+        repeat_blocks_1: (1) Bruk denne blokken og legg den rundt de grå blokkene i arbeidsområdet
+        repeat_blocks_2: '(2) Flytt "Gjenta"-blokken og plasser de grå blokkene inni'
         snowflake_dropdown: Bruk dene rullegardinlisten for å lage forskjellige snøflak!
         degrees_per_side: Del 360 på antall sider for å få størrelsen på hver vinkel i grader.
         set_sides: 'Bruk denne blokken for å angi antall "sider" som er nødvendig for å løse oppgaven .'
         set_length: 'Bruk denne blokken for å sette "lengde" til den riktige verdien.'
-        which_equation: 'Hvilken likning gjør hver side kortere for figurer med flere sider?  Prøv hver formel!'
+        which_equation: Hvilken likning gjør hver side kortere for figurer med flere sider?
         get_nectar: 'Bruk den nye "få nektar" blokken.'
         actions_category: 'Verktøykassa fikk et nytt utseende! "Handlinger" blokkene er her nå.'
         draw_square_hint: 'Tips: Bruk firkant løkken som du lagde i den forrige oppgaven.'
-        edit_function: Bruk denne knappen til å redigere funksjonen.
+        edit_function: Klikk her for å redigere funksjonen.
         create_function: 'Klikk her for å åpne"Funksjoner" menyen og klikk deretter "Opprette en funksjon" knappen.'
         house_hint: Det er ok hvis bildet ikke ser ut som et hus ennå. Vi skal fikse det i den neste oppgaven.
         edit_draw_square: Bruk denne knappen for å redigere funksjonen og legge til løkken.
         edit_get_nectar: Bruk denne knappen til å redigere funksjonen og endre retningen som bien skal snu for å få nektar.
         logic_category: 'Åpne "Logikk" menyen for å finne "hvis/ellers" blokken.'
         length_parameter: 'Kan du oppdatere denne funksjonen slik at den bruker parameteret "lengde"?'
-        frozen_diamond_repeat: Use the repeat block to create this shape.
-        frozen_circle_function_in_circle_turn: "Don't forget to turn after creating each circle."
-        frozen_circle_function_with_parameter_circle: 'Use the "create a circle" block and change the size.'
-        frozen_snowflake_branch: 'Use the "create a snowflake branch" block'
-        frozen_create_square: Attach more blocks here to create a square
-        playlab_drag_say: 'Drag the "say" block here and type "hello"'
-        playlab_use_twice: Use this block twice and remember to change the actor number
-        playlab_move_girl: 'Use the "move right" block to move Tennis Girl'
-        playlab_play_sound: 'Add "play sound" block here'
-        playlab_arrow_keys: Remember to use these to move the witch after clicking on Run
-        playlab_add_move: 'Add "move" blocks inside this repeat block'
-        playlab_add_score: Add score blocks here
-        playlab_add_blocks: Add your blocks here
+        frozen_diamond_repeat: Bruk gjenta-blokken for å opprette denne figuren.
+        frozen_circle_function_in_circle_turn: Ikke glem å snu når du har opprettet hver sirkel.
+        frozen_circle_function_with_parameter_circle: 'Bruk "Lag en sirkel"-blokken og endre størrelsen.'
+        frozen_snowflake_branch: 'Bruk "Lag et snøfnugg-gren"-blokken'
+        frozen_create_square: Legg til flere blokker her for å lage en firkant
+        playlab_drag_say: 'Dra "si"-blokken hit og skriv "Hei"'
+        playlab_use_twice: Bruk denne blokken to ganger og husk å endre figur-nummeret
+        playlab_move_girl: 'Bruk blokken "flytt til høyre" for å flytte Tennisjenta'
+        playlab_play_sound: 'Legg til en "spill lyd"-blokk her'
+        playlab_arrow_keys: Husk å bruke disse for å flytte heksen etter du har klikket på Kjør
+        playlab_add_move: 'Legg til "flytt"-blokker i denne gjenta-blokken'
+        playlab_add_score: Legg til poeng-blokker her
+        playlab_add_blocks: Legg til dine blokker her
+        set_variable: Dra en nummer-blokk hit for å angi variabelen
+        place_variable: Dra variabelen din inn i denne blokken
+        bee_for_loop: Dra det største nummeret av nektar som du ønsker at bien skal samle hit
+        place_counter_variable: Dra teller-variabelen din inn i denne blokken
+        function_editor_draw_square: 'Dette er din funksjonsdefinisjon. Disse blokkene kjører hver gang du bruker "tegn en firkant"-blokken'
+        change_here: Gjør din endring her
+        write_draw_square_function: Dra blokkene fra verktøykassen inn hit for å tegne en firkant
+        write_draw_triangle_function: Dra blokker fra verktøykassen inn her for å tegne en trekant
+        edit_add_parameter: Klikk Rediger for å legge til en parameter i funksjonen din
+        add_and_drag_parameter: Skriv inn navnet på parameteren din her, klikk på Legg til og dra den deretter til funksjonsdefinisjonen din
+        fill_in_actor: Erstatt ??? med tall som passer for hver skuespiller (1, 2 og 3)
+        repeat: Sett blokker inni gjenta-løkken for å gjenta kommandoer
+        if_bee_nectar: 'Bruke "Hvis"-blokken for å avgjøre om bien skal få nektar'
+        if_else_bee: 'Bruk "if/else" blokken slik at bien får nektar fra en blomst og lager honning hvis det ikke er en blomst'
+        repeat_full_circle: Angi hvor mange ganger zombien må flytte for å lage en full sirkel
+        place_length_variable: Dra lengdevariabelen hit for å erstatte spørsmålstegnene
+        arrows_move_actor: Bruk pilene til å flytte skuespilleren
+        right_arrow_fireball: Bruk pil-høyre til å skyte ildkuler
+        name_function: Skriv navnet på funksjonen din her

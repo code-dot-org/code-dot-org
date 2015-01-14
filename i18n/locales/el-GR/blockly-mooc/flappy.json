@@ -6,7 +6,7 @@
   "endGameTooltip":"Τελειώνει το παιχνίδι.",
   "finalLevel":"Συγχαρητήρια! Έλυσες το τελευταίο Παζλ.",
   "flap":"Φτερούγισε",
-  "flapRandom":"Φτερούγισε ένα τυχαίο ποσό",
+  "flapRandom":"Φτερούγισε τυχαία",
   "flapVerySmall":"Φτερούγισε πολύ λίγο",
   "flapSmall":"Φτερούγισε λίγο",
   "flapNormal":"Φτερούγισε φυσιολογικά",
@@ -125,7 +125,7 @@
   "whenCollideObstacle":"όταν χτυπήσει εμπόδιο",
   "whenCollideObstacleTooltip":"Εκτέλεσε τις παρακάτω ενέργειες όταν ο Flappy xτυπήσει ένα εμπόδιο.",
   "whenEnterObstacle":"όταν περάσει εμπόδιο",
-  "whenEnterObstacleTooltip":"Εκτέλεσε τις παρακάτω ενέργειες όταν ο Φλάπι ακουμπήσει ένα εμπόδιο.",
+  "whenEnterObstacleTooltip":"Εκτέλεσε τις παρακάτω ενέργειες όταν ο Flappy ακουμπήσει ένα εμπόδιο.",
   "whenRunButtonClick":"όταν το παιχνίδι αρχίζει",
   "whenRunButtonClickTooltip":"Εκτέλεσε τις παρακάτω ενέργειες όταν το παιχνίδι αρχίζει.",
   "yes":"Ναι"

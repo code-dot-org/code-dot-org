@@ -5,7 +5,9 @@ ja:
   coming_soon: 近日公開
   front_header_banner: 2014 年 12 月 8日ー14 日、歴史上最大の学習のイベントに参加しよう。
   front_intro_default: 'Hour of Codeは、180カ国以上の生徒数千万人が参加する世界的な運動です。誰でもどこでもHour of Codeのイベントを主催する事が出来ます。1時間のチュートリアルは 30 以上の言語で利用可能です。<strong>経験は必要ありません。4歳から104歳が対象です。</strong>。'
-  front_intro_default_uk: "The Hour of Code is a global movement reaching tens of millions of people in 180+ countries. Anyone can organize an Hour of Code event. Over 3M people did the first Hour of Code in the UK. Let's double that in December! <strong>No experience needed. Ages 4 to 104.</strong>"
+  front_intro_default_uk: |
+    Hour of Codeは 180 以上の国で数千万人が参加する規模の世界的な運動です。誰でもHouf of Codeのイベントを主催することができます。イギリスでは３百万人以上の人が初めてのHour of Codeを試しました。12月にはその数を倍にしましょう!<strong>経験は必要ありません。対象年令は４才から104才です。</strong>
+    
   front_watch_video: 新しいビデオを見る
   header_menu_resources: リソース
   header_menu_faq: FAQ
@@ -17,7 +19,7 @@ ja:
   company_bsusa: ボーイスカウトオブアメリカ
   company_cgcs: Council of the Great City Schools
   company_gsusa: ガールスカウトオブアメリカ
-  company_khanacademy: Khan Academy
+  company_khanacademy: カーン アカデミー
   company_mesa: Mathematics Engineering Science Achievement
   company_napcs: National Alliance of Public Charter Schools
   company_ngcp: National Girls Collaborative Project
@@ -32,7 +34,7 @@ ja:
   prizes_brilliant: One school in each province and territory will receive $2000 for a Brilliant Project
   prizes_actua: "15 schools across Canada will receive 2 hands-on STEM workshops by one of Actua's members"
   prizes_details: 詳細
-  whats_next_header: "What's Next?"
+  whats_next_header: 次は何ですか？
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2014 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>How to run an Hour of Code</a>"
   whats_next_promote: "<a href='http://hourofcode.com/resources'>Promote the Hour of Code</a>"
@@ -74,7 +76,7 @@ ja:
   signup_send_posters_flag_label: '<a href= "/resources#posters">ポスター</a>私の学校もしくは組織に送って下さい。 '
   signup_send_posters_address_label: 学校や組織の住所
   signup_whole_school_flag_label: このイベントは、学校全体のためのものです。
-  signup_your_event: イベントへの申し込み
+  signup_your_event: イベントにサインアップする。
   signup_name_placeholder: |
     お名前
     
@@ -93,9 +95,12 @@ ja:
     
   map_header: '# 世界中のHour of Code'
   map_header_company: '# by company organizers'
-  meta_tag_og_title: Hour of Code がやってきます。
+  map_search_placeholder: Search for Hour of Code events
+  map_search_search: Search
+  map_search_reset: Reset
+  meta_tag_og_title: The Hour of Code is here
   meta_tag_og_description: Hour of Codeは、180 以上の国々で 30 以上の言語で 4 歳から 104 歳まで数千万人の学生に届く世界的な運動です。
-  meta_tag_twitter_title: Hour of Code がやってきます。
+  meta_tag_twitter_title: The Hour of Code is here
   meta_tag_twitter_description: Hour of Codeは、180 以上の国々で 30 以上の言語で 4 歳から 104 歳まで数千万人の学生に届く世界的な運動です。
   twitter_default_text: '私は今年#HourOfCodeに参加しています、あなたは? @codeorg'
   hardware_prizes_form_name_label: お名前
@@ -118,8 +123,8 @@ ja:
   hardware_prizes_form_submit_label: 提出
   hoc_faq_title: よくあるご質問
   hoc_faq_what_is_hoc_q: Hour of Codeとは何でしょう？
-  hoc_faq_what_is_hoc_a: "Hour of Codeは、コンピューター科学を1時間で紹介し、コードをわかりやすく説明するようデザインされており、そして誰もが基本的なコードを学ぶことができるよう作られています。。<a href='http://code.org/learn'>チュートリアルを見る</a>,、そして Hour of Code 2014のために出来た新しい項目にも注目してください。"
-  hoc_faq_last_year: 昨年のチュートリアルを試してください。
+  hoc_faq_what_is_hoc_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://code.org/learn'>Check out the tutorials</a>."
+  hoc_faq_last_year: Try the tutorials
   hoc_faq_when_is_hoc_q: Hour of Codeはいつですか？
   hoc_faq_when_is_hoc_a: "誰でも、いつでも、Hour of Codeを主催できますが草の根キャンペーンの目標は <a href='http://csedweek.org'> コンピューター科学の教育週間</a> の祭典 2014 年 12 月 8-14 日の間に、数千万人の生徒に試してもらうことです。それには 特定の <i>時間</i> があるのですか？いいえHour of Codeはこの週にいつでも行うことができます。（もしその週の間に行うことができない場合は、前の週もしく後の週に試してください）。"
   hoc_faq_why_cs_q: なぜコンピューター科学なのですか？
@@ -138,6 +143,14 @@ ja:
   hoc_faq_tutorial_a: "もしチュートリアルのパートナーになる事に興味がありましたら、<a href='/tutorial-guidelines'> 当社のガイドラインと手順を参照してください</a> 。魅力的で様々なオプションを主催したいと思っていますが、主な目的は、コンピューター科学が初めてな生徒達や先生方に出来る限り経験してもらうことです。"
   hoc_faq_more_questions_q: それでもまだ疑問がありますか?
   hoc_faq_more_questions_a: "<a href='http://support.code.org'>サポート フォーラム</a> で回答を探してみてください。"
+  hoc_faq_scratch_q: I am doing Scratch for Hour of Code, but what if my students have iPads rather than laptops?
+  hoc_faq_scratch_a: "Scratch doesn't run on tablets. If your students are young, they can use the ScratchJR iPad app (for early-readers). If you look at the tutorials on <a href='http://code.org/learn'>Code.org/learn</a>, you can find other tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark."
+  hoc_faq_account_q: Do students need to log on using an account?
+  hoc_faq_account_a: "No. Absolutely no signup or login is required for students to try the Hour of Code. Most of the <a href='http://code.org/learn/beyond'>follow-on courses</a> require account creation to save student progress."
+  hoc_faq_frozen_q: Where is the tutorial with Anna and Elsa?
+  hoc_faq_frozen_a: "It is now published on <a href='http://code.org/learn'>Code.org/learn</a>. We hope you enjoy it!"
+  hoc_faq_high_school_q: Which activity should I do with high school students?
+  hoc_faq_high_school_a: "Across all ages, we recommend trying one of the beginner tutorials on <a href='http://code.org/learn'>Code.org/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as KhanAcademy or CodeHS."
   hoc_faq_more_questions_br_q: Outras dúvidas?
   hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "Hour of Codeは、コンピューター科学を1時間で紹介し、コードをわかりやすく説明するようデザインされており、そして誰もが基本的なコードを学ぶことができるよう作られています。<a href='http://uk.code.org/learn'>チュートリアルを見る</a>,、そして Hour of Code 2014のために出来た新しい項目にも注目してください。"

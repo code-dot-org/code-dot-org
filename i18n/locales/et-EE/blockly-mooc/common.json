@@ -75,8 +75,6 @@
   "saveToGallery":"Salvesta galeriisse",
   "savedToGallery":"Galeriisse salvestatud!",
   "shareFailure":"Vabandust, me ei saa seda programmi jagada.",
-  "typeFuncs":"Available functions:%1",
-  "typeHint":"Note that the parentheses and semicolons are required.",
   "workspaceHeader":"Assemble your blocks here: ",
   "workspaceHeaderJavaScript":"Type your JavaScript code here",
   "infinity":"Lõpmatus",
@@ -90,5 +88,6 @@
   "signup":"Pane ennast kirja sissejuhatavale kursusele",
   "hintHeader":"Vihje:",
   "genericFeedback":"Vaata, mis kokkuvõttes välja tuli, ja proovi oma programm korda teha.",
+  "toggleBlocksErrorMsg":"You need to correct an error in your program before it can be shown as blocks.",
   "defaultTwitterText":"Check out what I made"
 }

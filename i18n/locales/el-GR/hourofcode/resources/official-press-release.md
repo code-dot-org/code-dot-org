@@ -1,6 +1,6 @@
 * * *
 
-title: Hour of Code Press Release for Elected Officials layout: wide nav: resources_nav
+Τίτλος: Ώρα του Κώδικα Δελτίο Τύπου για Εκλεγμένους Αξιωματούχους layout: wide nav: resources_nav
 
 * * *
 
@@ -30,7 +30,7 @@ Contact: [**CONTACT INFORMATION**]
 [**SAMPLE STOCK TEXT FOR CONTEXT:**]  
 Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and students of color are severely underrepresented. The good news is we’re changing this for the better. The Hour of Code is gateway toward providing all students with access to high-quality computer science education.
 
-During Computer Science Education Week last year, 15 million students tried the Hour of Code. Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+During Computer Science Education Week last year, 15 million students tried the Hour of Code. Η Επιστήμη των Υπολογιστών ήταν στις πρώτες σελίδες των Google, MSN, Yahoo! και της Disney. Ο Πρόεδρος Obama, η Shakira και ο Ashton Kutcher εγκαινίασαν την Ώρα του Κώδικα με βίντεο. Πάνω από 100 εταίροι ενώθηκαν για να υποστηρίξουν αυτή την κίνηση.
 
 This year the Hour of Code movement is aiming for 100 million students.
 

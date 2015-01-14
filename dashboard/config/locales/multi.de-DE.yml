@@ -372,14 +372,14 @@
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
       Coordinates Multi 1:
-        Video game Coordinates: Video game Coordinates
+        Video game Coordinates: Videospiel-Koordinaten
         Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
-        Which answer best describes the unicorn's movement?: Which answer best describes
-          the unicorn's movement?
-        The unicorn moves across the screen: The unicorn moves across the screen
-        The unicorn's y value changes: The unicorn's y value changes
-        The unicorn moves to the left: The unicorn moves to the left
-        The unicorn's x value changes: The unicorn's x value changes
+        Which answer best describes the unicorn's movement?: Welche Antwort beschreibt
+          die Bewegung des Einhorns am besten?
+        The unicorn moves across the screen: Das Einhorn bewegt sich über den Bildschirm
+        The unicorn's y value changes: Der y-Wert des Einhorns ändert sich
+        The unicorn moves to the left: Das Einhorn bewegt sich nach links
+        The unicorn's x value changes: Der x-Wert des Einhorns ändert sich
       K-1 Artist 1 Multi 1:
         Multiple Choice: Multiple-Choice
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png,
@@ -628,6 +628,19 @@
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): (Rechteck (+ 8 2) (-7-5) "Solid"
           "rot")
         (rectangle (+ 8 2) (- 7 5) solid red): (Rechteck (+ 8 2) (-7 5) "solid" "rot")
+      Multi Strings Images 1:
+        Strings and Images Multiple Choice: Strings and Images Multiple Choice
+        Multi Strings Images 1.blocks3.level: Multi Strings Images 1.blocks3.level
+        Which of these Evaluation Blocks will draw the image: Which of these Evaluation
+          Blocks will draw the image
+        Multi Strings Images 1.blocks1.start_blocks, 300, 100: Multi Strings Images
+          1.blocks1.start_blocks, 300, 100
+        Multi Strings Images 1.blocks2.start_blocks, 300, 100: Multi Strings Images
+          1.blocks2.start_blocks, 300, 100
+        Multi Strings Images 1.blocks3.start_blocks, 300, 100: Multi Strings Images
+          1.blocks3.start_blocks, 300, 100
+        Multi Strings Images 1.blocks4.start_blocks, 300, 100: Multi Strings Images
+          1.blocks4.start_blocks, 300, 100
       test multi image:
         Maze Multiple Choice Two: Multiple-Choice Labyrinth Zwei
         /script_assets/matches/images/head.jpg,400: /script_assets/matches/images/head.jpg,400

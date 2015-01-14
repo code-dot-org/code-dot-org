@@ -1,6 +1,6 @@
 {
   "actor":"igralec",
-  "alienInvasion":"Alien Invasion!",
+  "alienInvasion":"Nezemljani napadajo!",
   "backgroundBlack":"črna",
   "backgroundCave":"votlina",
   "backgroundCloudy":"oblačno",
@@ -58,6 +58,7 @@
   "moveDistanceTooltip":"Premakni igralca za določeno razdaljo v določeni smeri.",
   "moveSprite":"premakni",
   "moveSpriteN":"premakni igralca {spriteIndex}",
+  "toXY":"to x,y",
   "moveDown":"premakni se dol",
   "moveDownTooltip":"Premakni igralca dol.",
   "moveLeft":"premakni se levo",

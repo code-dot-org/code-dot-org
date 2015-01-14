@@ -21,8 +21,8 @@
   welcome_back: Welcome back, %{name}
   add_teacher_form:
     code:
-      label: 'Add a teacher by section code:'
-      placeholder: Code (ABCDEF)
+      label: 'Add a teacher:'
+      placeholder: Section Code (ABCDEF)
     submit: Add teacher
   add_hint_form:
     placeholder: Please enter your hint here
@@ -36,6 +36,7 @@
   of: of
   more: MORE
   less: LESS
+  beta: beta
   try_hoc: 'Try the Hour of Code, click here >> '
   try_k8intro: Try our K-8 Intro to Computer Science Course (15-25 hours)
   k8intro: K-8 Intro to Computer Science Course (15-25 hours)
@@ -341,10 +342,11 @@
     email_resend_confirm: Resend confirmation instructions
     new_password_hint: (leave blank if you don't want to change it)
     current_password_hint: (we need your current password to confirm your changes)
-    cancel:
-      title: Cancel my account
-      hint: Unhappy?
-      button: Cancel my account
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: 'Please note: deleting your account will not delete
+      your students'' accounts.'
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Completed
     tried: Tried
@@ -391,7 +393,7 @@
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
     heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
-    heading_elementary: <h2>20 hour courses for</h2><h1>Elementary Students</h1>
+    heading_elementary: <h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>
     heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
     heading_legacy: <h2>Our general course for</h2><h1>All Ages</h1>
     your_gallery: Gallery
@@ -593,3 +595,7 @@
     completed_too_many_blocks: completed, too many blocks
     completed_perfect: completed, perfect
     furthest_level_attempted: furthest level attempted
+  studio:
+    courses_working_on: Courses you're working on
+    completed_courses: Completed courses
+    all_courses: All courses

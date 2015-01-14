@@ -1,31 +1,31 @@
 * * *
 
-title: How-to guide for public officials layout: wide nav: resources_nav
+Titel: How-to guide til offentligt ansatte layout: bred nav: resources_nav
 
 * * *
 
-## Bring the Hour of Code to your entire community.
+## Fortæl om Hour of Code til hele dit netværk.
 
-### Get every school participating, every student learning!
+### Få alle skoler til at deltage, alle elever skal lære!
 
-  1. **Recruit local schools and districts.** Use [this email](<%= hoc_uri('/resources#sample-emails') %>) or [this blurb](<%= hoc_uri('/resources/stats') %>) as a starting point, and take a look at this [how-to](<%= hoc_uri('/resources/how-to') %>) for schools and districts. Let them know **every** participating educator will receive a [thank you gift](<%= hoc_uri('/resources/how-to') %>); that **100 classrooms** will win tech chats with **special guest speakers** (participants include Bill Gates, Sheryl Sandberg, Ashton Kutcher and more); and, in **each state**, one participating school will win **$10,000 in technology**!
+  1. **Få lokale skoler og kommunen til at deltage.** Brug [ denne e-mail](<%= hoc_uri('/resources#sample-emails') %>) eller [ denne korte tekst](<%= hoc_uri('/resources/stats') %>) som udgangspunkt og tage et kig på denne [guide](<%= hoc_uri('/resources/how-to') %>) til skoler og kommunen. Fortæl dem at **alle** deltagende undervisere vil modtage en [tak for hjælpen gave](<%= hoc_uri('/resources/how-to') %>); that **100 klasse** kan vinde en chat med **særlig gæstetaler** (deltagere omfatter Bill Gates, Sheryl Sandberg, Ashton Kutcher og andre); og i **hver stat**, vil en deltagende skole have chancen for at vinde **$10,000 in tekudstyr**!
 
-  2. **Host an Hour of Code event.** See our [event how-to guide](<%= hoc_uri('/resources/how-to-event') %>) for a sample run of show, media outreach kit and other event-planning resources. Hosting an event is a great way to promote the Hour of Code and increase participation.
+  2. **Vær vært for et Hour of Code event.** Se vores [event guide](<%= hoc_uri('/resources/how-to-event') %>) for at prøve, showet, medierne og andre ressourcer og event planlægnings ressourcer. At være vært for et event er en fantastisk måde at promovere Hour of Code og derved øge deltagelsen.
 
-  3. **Attend an event during Computer Science Education Week (Dec 8-14).** [Find classrooms and schools](<%= hoc_uri('/events') %>) participating in your district, city or state.
+  3. **Deltag i en begivenhed i Computer Science Education ugen (8.-14. dec.)** [Find klasser og skoler](<%= hoc_uri('/events') %>) der deltager i dit område.
 
-  4. **Issue a proclamation or resolution.** See this [sample resolution](<%= hoc_uri('resources/proclamation') %>) supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
+  4. **Udsend en opfordring eller anbefaling.** Se denne [ prøve opfordring](<%= hoc_uri('resources/proclamation') %>) som støtter Computer Science Education Week og dens mål, der kan bruges af statslige og lokale beslutningstagere.
 
-  5. **Draft an op-ed**. Consider publishing an opinion piece in your local paper. See this [sample op-ed](<%= hoc_uri('/resources/op-ed') %>) supporting comupter supportive of Computer Science Education Week and its goals.
+  5. **Udkast til et læserbrev**. Overvej at komme med en udtalelse i din lokale avis. Se dette [ prøve læserbrev](<%= hoc_uri('/resources/op-ed') %>) som støtter Computer Science Education Week og dets mål.
 
-  6. **Spread the word.** [Share the Hour of Code video on Facebook](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) and [talk about your support on Twitter](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Share pictures of events or a video of you and other adults doing the Hour of Code. Use the hashtag **#HourOfCode** so Code.org (@code.org) can see it and promote the support. Or, use these sample tweets:
+  6. **Del på de sociale medier.** Post på [Facebook](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) eller [Twitter](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Dele billeder af begivenheder eller en video af dig og andre voksne som arbejder med Hour of Code. Bruge hashtag **#HourOfCode**, så Code.org (@code.org) kan se det og fremme støtte. Eller bruge disse prøve tweets:
     
-      * Last year 15 million students tried one #HourOfCode. Half were girls. This year, let’s get to 100 million. #HourOfCode <http://hourofcode.com>
-      * Every student, boy or girl, should have the chance to learn computer science. Join us in starting with one #HourOfCode <http://hourofcode.com>
-      * Today, we're proud to join the Hour of Code movement. Are you in? #HourOfCode <http://hourofcode.com>.   
+      * Sidste år prøvede 15 millioner studerende #HourOfCode. Halvdelen var piger. Lad os i år komme op på 100 mio. #HourOfCode <http://hourofcode.com>
+      * Hver studerende, dreng eller pige, bør have mulighed for at lære datalogi. Prøv med én #HourOfCode <http://hourofcode.com>
+      * I dag er vi stolte af at være en del af bevægelsen "Hour of Code". Er du med? #HourOfCode <http://hourofcode.com>.   
           
         
 
-  7. **Issue a press release.** [Use this sample](<%= hoc_uri('/resources/official-press-release') %>) as a guide.
+  7. **Udsende en pressemeddelelse.** [ Bruger dette eksempel](<%= hoc_uri('/resources/official-press-release') %>) som en guide.
 
-  8. **Connect locally.** Visit <http://code.org/promote> to learn more about computer science education in your state. Sign the petition there and you’ll get updates from Code.org on their local, state and federal advocacy efforts.
+  8. **I lokal området** Besøg <http://code.org/promote> for at lære mere om computer videnskab uddannelse i dit område. Tilmeld dig der og du får opdateringer fra Code.org på deres lokale og statslige indsats.

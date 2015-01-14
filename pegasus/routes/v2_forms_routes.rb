@@ -2,12 +2,13 @@ Sinatra::Verbs.custom :review
 
 post '/v2/forms/:kind' do |kind|
   dont_cache
+  pass if kind == 'HocSignup2014'
   forbidden! if settings.read_only
   unsupported_media_type! unless payload = request.json_body
 
   begin
     form = insert_form(kind, payload)
-    redirect "/v2/forms/#{kind}/#{form.secret}", 201
+    redirect "/v2/forms/#{kind}/#{form[:secret]}", 201
   rescue FormError=>e
     form_error! e
   end
@@ -49,7 +50,7 @@ patch '/v2/forms/:kind/:secret' do |kind, secret|
   begin
     content_type :json
     forbidden! unless form = update_form(kind, secret, payload)
-    form.data.merge(secret: secret).to_json
+    JSON.load(form[:data]).merge(secret: secret).to_json
   rescue FormError=>e
     form_error! e
   end
@@ -76,6 +77,19 @@ review '/v2/forms/:kind/:secret' do |kind, secret|
 end
 post '/v2/forms/:kind/:secret/review' do |kind, secret|
   call(env.merge('REQUEST_METHOD'=>'REVIEW', 'PATH_INFO'=>"/v2/forms/#{kind}/#{secret}"))
+end
+
+get '/v2/forms/:kind/:secret/status/:status' do |kind, secret, status|
+  dont_cache
+  form = DB[:forms].where(kind:kind, secret:secret).first
+  forbidden! if form.empty?
+  data = JSON.parse(form[:data])
+  pass unless ['cancelled'].include?(status)
+  data['status_s'] = status
+  DB[:forms].where(kind:kind, secret:secret).update(data:data.to_json, indexed_at:nil)
+
+  content_type :json
+  data.to_json
 end
 
 get '/v2/forms/:parent_kind/:parent_secret/children/:kind' do |parent_kind, parent_secret, kind|
@@ -109,7 +123,7 @@ post '/v2/forms/:parent_kind/:parent_id/children/:kind' do |parent_kind, parent_
 
   begin
     form = insert_form(kind, payload, parent_id:parent_form[:id])
-    redirect "/v2/forms/#{kind}/#{form.secret}", 201
+    redirect "/v2/forms/#{kind}/#{form[:secret]}", 201
   rescue FormError=>e
     form_error! e
   end

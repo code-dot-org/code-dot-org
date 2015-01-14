@@ -4,11 +4,9 @@ title: Press Kit layout: wide nav: resources_nav
 
 * * *
 
-[<button style="float: right; margin-top: 50px">Sign up your event</button>](/#join)
-
 ## Hvordan få oppmerksomhet i media om Kodetimen
 
-*For alle presse og mediehenvendelser, kontakt <press@code.org>*
+*For all press and media inquiries, contact <press@code.org>*
 
 ### Gode råd
 
@@ -19,7 +17,7 @@ title: Press Kit layout: wide nav: resources_nav
 
 ### Steg-for-steg guide:
 
-**Planlegg samlingen**
+**1. Plan your event**
 
   * Planlegg en samling for å sparke i gang Kodetimen.
   * Send [ett brev](<%= hoc_uri('/resources/#sample-emails') %>) til foreldre. Be dem om spre ordet videre.
@@ -27,25 +25,25 @@ title: Press Kit layout: wide nav: resources_nav
   * Organiser gruppeaktiviteter som for eksempel en en kode demo eller vis fram noe en student har gjort. 
   * Vis et [kodetime klipp](<%= hoc_uri('/') %>) fra Code.org eller ett av [disse](<%= hoc_uri('/resources#videos') %>) klippene som inspirasjon.
 
-**Identifiser lokal presse som kan dekke samlingen.**
+**2. Identify specific local reporters that cover education or local events.**
 
-Plukk ut en lokalavis, tvstasjon, radiostasjon eller blogg.
+Think a local newspaper, TV station, radio station or blog.
 
-Søk etter kontaktinformasjon til journalister på nett. If you can't find it, call the publication to ask, or email a general tips@PUBLICATIONNAME.com email address and ask for your message to be directed to the correct reporter.
+Look online to find reporter contact information. If you can't find it, call the publication to ask, or email a general tips@PUBLICATIONNAME.com email address and ask for your message to be directed to the correct reporter.
 
-**3. Ta kontakt med lokale medier**
+**3. Contact local media**
 
-Den beste måten å nå ut på er via epost. Hold deg kortfattet og prøv å formidle hvorfor folk skulle bry seg om akkurat dette arrangementet. Inkluder kontaktinformasjon (bl.a. et mobilnummer) til personen som vil være til stede under arrangementet. **Her er et [eksempel](<%= hoc_uri('/resources#sample-emails') %>):**
+The best way to reach out is by email. It should be short and communicate: why should other people care about this event? Include contact information (including a cellphone number) for who will be on site at the event. **See a [sample pitch to media](<%= hoc_uri('/resources#sample-emails') %>):**
 
-**4. Vær forberedt på å svare på spørsmål om arrangementet på skolen din. Her er noen eksempler:**
+**4. Prepare to field questions about your school event. Here are some examples:**
 
-*Hvorfor er skolen din med på Kodetimen?*
+*Why is your school doing an Hour of Code?*
 
 While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
 
 We hope it’ll spark interest in students to keep learning. Research also shows that kids pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages.
 
-*Hvorfor er dette viktig?*
+*Why is this important?*
 
 In China, every students takes computer science to graduate high school. In the U.S., 90 percent of schools don’t even teach it. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them the confidence and know-how to succeed.
 
@@ -59,5 +57,3 @@ Code.org® is a 501c3 public non-profit dedicated to expanding participation in 
 
   
 Find more resources and sample emails [here](<%= hoc_uri('/resources') %>).
-
-<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

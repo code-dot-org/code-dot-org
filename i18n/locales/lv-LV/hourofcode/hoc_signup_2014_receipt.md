@@ -6,17 +6,23 @@ from: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;
 
 <% hostname = CDO.canonical_hostname('hourofcode.com') %>
 
-# Paldies par to ka uzņēmies vadīt programmēšanas stundu!
+<% if @country == 'ro' %>
 
-**Katrs** "Programmēšanas stundas" organizators saņems 10GB vietu Dropbox vai $10 Skype kredītu, kā pateicību.[Sīkāk](http://<%= hostname %>/prizes)
+Va multumim pentru inregistrare. Daca aveti nevoie de ajutor sau aveti orice intrebare contactati Echipa Hour of Code Romania la adresa: hoc@adfaber.org.
+
+<% end %>
+
+# Paldies, ka uzņēmies vadīt "Programmēšanas stundu"!
+
+**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](http://<%= hostname %>/prizes)
 
 ## 1. Dalies ar informāciju
 
-Pastāsti saviem draugiem par #HourOfCode.
+Pastāsti saviem draugiem par "Programmēšanas stundu".
 
 <% if @country == 'us' %>
 
-## 2. Lūdz visai skolai piedalīties Programmēšanas stundā
+## 2. Lūdz visai skolai piedalīties "Programmēšanas stundā"
 
 [Send this email](http://<%= hostname %>/resources#email) or give [this handout](http://<%= hostname %>/files/schools-handout.pdf) to your principal.
 
@@ -28,19 +34,11 @@ Pastāsti saviem draugiem par #HourOfCode.
 
 ## 4. Promote Hour of Code within your community
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+Iesaisti vietējās organizācijas - baznīcas, universitāšu vai veterānu kopienas/organizācijas. Tāpat vari arī vadīt "Programmēšanas stundu" kaimiņiem.
 
 ## 5. Ask a local elected official to support the Hour of Code
 
 [Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
-
-<% if @country == 'ro' %>
-
-Multumim ca ne-ai anuntat despre evenimentul tau! Anunta-ne daca doresti informatii suplimentare sau daca ai intrebari. Hai sa facem istorie impreuna!
-
-Echipa Hour of Code Romania hoc@adfaber.org
-
-<% end %>
 
 * * *
 

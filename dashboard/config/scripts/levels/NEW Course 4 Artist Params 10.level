@@ -20,7 +20,9 @@
     "disable_sharing": "false",
     "start_direction": "90",
     "x": "150",
-    "y": "275"
+    "y": "275",
+    "callout_json": "[\r\n  {\"localization_key\": \"create_function\", \"element_id\": \".blocklyTreeLabel:contains(Functions)\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"left center\", \"at\": \"right center\"}}\r\n  }\r\n]",
+    "ideal": "12"
   }
 }]]></config>
   <blocks>
@@ -31,12 +33,6 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <category name="Default">
-          <block type="procedures_defnoreturn" uservisible="false">
-            <mutation/>
-            <title name="NAME">do something</title>
-          </block>
-        </category>
         <category name="Actions">
           <block type="draw_move" inline="true">
             <title name="DIR">moveForward</title>
@@ -85,10 +81,25 @@
             <title name="NUM">0</title>
           </block>
           <block type="math_arithmetic" inline="true">
-            <title name="OP">ADD</title>
+            <title name="OP">DIVIDE</title>
+            <value name="A">
+              <block type="math_number">
+                <title name="NUM">360</title>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number">
+                <title name="NUM">6</title>
+              </block>
+            </value>
           </block>
         </category>
-        <category name="Functions" custom="PROCEDURE"/>
+        <category name="Functions" custom="PROCEDURE">
+          <block type="procedures_defnoreturn" uservisible="false">
+            <mutation/>
+            <title name="NAME">do something</title>
+          </block>
+        </category>
       </xml>
     </toolbox_blocks>
     <required_blocks>
@@ -102,48 +113,6 @@
         </block>
         <block type="math_number">
           <title name="NUM">100</title>
-        </block>
-        <block type="pick_one">
-          <statement name="PICK">
-            <block type="draw_turn" inline="true">
-              <title name="DIR">turnLeft</title>
-              <value name="VALUE">
-                <block type="math_arithmetic" inline="true">
-                  <title name="OP">DIVIDE</title>
-                  <value name="A">
-                    <block type="math_number">
-                      <title name="NUM">360</title>
-                    </block>
-                  </value>
-                  <value name="B">
-                    <block type="math_number">
-                      <title name="NUM">6</title>
-                    </block>
-                  </value>
-                </block>
-              </value>
-              <next>
-                <block type="draw_turn" inline="true">
-                  <title name="DIR">turnRight</title>
-                  <value name="VALUE">
-                    <block type="math_arithmetic" inline="true">
-                      <title name="OP">DIVIDE</title>
-                      <value name="A">
-                        <block type="math_number">
-                          <title name="NUM">360</title>
-                        </block>
-                      </value>
-                      <value name="B">
-                        <block type="math_number">
-                          <title name="NUM">6</title>
-                        </block>
-                      </value>
-                    </block>
-                  </value>
-                </block>
-              </next>
-            </block>
-          </statement>
         </block>
       </xml>
     </required_blocks>

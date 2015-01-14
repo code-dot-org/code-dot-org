@@ -6,9 +6,9 @@
 
 # Hour of Code 이벤트를 운영해 주시기 위해 등록해 주시는 것에 감사드립니다.
 
-**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](<%= hoc_uri('/prizes') %>)
+**모든** Hour of Code 행사 조직/운영자들은 감사의 표시로 10GB의 Dropbox 저장공간이나 $10 상당의 Skype 크레딧을 받게 됩니다. [상세사항](<%= hoc_uri('/prizes') %>)
 
-## 1. 전세계로 전파하기
+## 1. 널리 알려주세요.
 
 여러분의 친구들에게 #HourOfCode 를 이야기해 주세요.
 
@@ -18,30 +18,30 @@
 
 ## 2. 여러분의 모든 학교에 Hour of Code 이벤트 행사를 요청하세요.
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](/resources/hoc-one-pager.pdf) to your principal.
+[이 이메일을 보내거나](<%= hoc_uri('/resources#email') %>) [이 유인물을](/resources/hoc-one-pager.pdf) 교장 선생님께 전달해 주세요.
 
 <% else %>
 
 ## 2. 여러분의 모든 학교에 Hour of Code 이벤트 행사를 열어달라고 요청하세요.
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](/resources/hoc-one-pager.pdf) this handout</a> to your principal.
+[이 이메일을 보내거나](<%= hoc_uri('/resources#email') %>) [이 유인물과](/resources/hoc-one-pager.pdf) 이 유인물을</a> 교장 선생님께 전달해 주세요.
 
 <% end %>
 
 ## 3. 기부를 부탁드립니다.
 
-[Donate to our crowdfunding campaign.](http://<%= codeorg_url() %>/donate) To teach 100 million children, we need your support. We just launched the [largest education crowdfunding campaign](http://<%= codeorg_url() %>/donate) in history. *Every* dollar will be matched [donors](http://<%= codeorg_url() %>/about/donors), doubling your impact.
+[우리의 클라우드펀딩 캠페인에 기부해주세요.](http://<%= codeorg_url() %>/donate) 1억명의 아이들에게 교육하기 위해서, 여러분들의 도움이 필요합니다. 우리는 이제 막, 역사상[ 가장 큰 교육적 클라우딩펀딩 캠페인을 시작했습니다](http://<%= codeorg_url() %>/donate). *모든* 기부금들은 [기증자의 의도에 맞게 사용될 것입니다](http://<%= codeorg_url() %>/about/donors), 도움의 효과가 커집니다.
 
-## 3. 여러분의 직장 상사에게 함께 참여하도록 요청해 보세요.
+## 4. 여러분의 직장 상사에게 함께 참여하도록 요청해 보세요.
 
-[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf).
+[이 이메일을 보내거나](<%= hoc_uri('/resources#email') %>) [이 유인물을](http://hourofcode.com/resources/hoc-one-pager.pdf) 여러분의 직장 상사, CEO에게 전달해 주세요..
 
-## 4. Hour of Code를 소속 단체나 조직에 안내해 주세요.
+## 5. Hour of Code를 여러분의 소속 단체나 커뮤니티에 홍보해 주세요.
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+지역 소모임과 함께 하세요 - 보이스카웃, 교회, 대학, 각종 단체 등. 또는 지역 주민을 위해 Hour of Code "블록 파티"를 열어 주세요.
 
 ## 6. 지역 의원 등에게 Hour of Code 를 지원해달라고 요청하세요.
 
-[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[이 이메일을 ](<%= hoc_uri('/resources#politicians') %>) 여러분의 시장, 시의원, 학교 운영위원회에 보내주세요. 또는 [이 유인물을](http://hourofcode.com/resources/hoc-one-pager.pdf) 보내 여러분의 학교에 초청하세요.
 
 <%= view 'popup_window.js' %>

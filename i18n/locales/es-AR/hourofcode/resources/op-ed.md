@@ -4,41 +4,41 @@ title: Sample Op-ed Supportive of Computer Science Education Week and Hour of Co
 
 * * *
 
-### Below is a sample op-ed supportive of Computer Science Education Week and its goals that could be used by state, local legislators, business leaders etc.
+### A continuación encuentras una muestra de artículo de opinión apoyando la semana de la educación en ciencias de la computación y sus objetivos que puede ser usada por legisladores locales y estatales, líderes empresariales, etc.
 
   
 
 
-Go to http://code.org/promote to find state specific information about computer science.
+Ve a http://code.org/promote para encontrar información específica acerca de las ciencias de la computación en un estado.
 
-**Title: Computing…Where the Jobs Are**
+**Título: Computación... Donde están los puestos de trabajo**
 
-**By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]**
+**Por [NOMBRE] y [CONSIDERA ENCONTRAR COMO CO-AUTOR A UN EDUCADOR, SUPERINTENDENTE O LÍDER EMPRESARIAL]**
 
-Computers are everywhere. They’re in our pockets. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
+Las computadoras están en todas partes. Están en nuestros bolsillos. Están en nuestras paredes. Están en nuestros autos. Son una pieza fundamental de nuestra infraestructura, desde las redes eléctricas hasta las luces de tráfico y los mecanismos internos de nuestros mercados financieros. Y todas esas computadoras tienen algo en común. Dependen del software para decirles qué hacer.
 
-But who exactly is going to write this software?
+¿Pero quién va a escribir este software?
 
-Considering how fast our world is being transformed by technology, you might expect the number of students studying computer science in K-12 education today to be at an all-time high. You’d be wrong. In fact, fewer students are studying computer science, and fewer schools are teaching it, than a decade ago.
+Teniendo en cuenta la velocidad a la que la tecnología está cambiando nuestro mundo, uno esperaría que el número de estudiantes de ciencias de la computación en educación básica y media estuviera hoy en el nivel más alto de la historia. Estaríamos equivocados. De hecho, hoy menos estudiantes aprenden ciencias de la computación, y menos escuelas las enseñan, que hace una década.
 
-At a time when demand for skilled programmers has never been higher, we’re turning out fewer computer scientists. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for a lack of enough individuals with the right skill sets.
+En un momento cuando la demanda por programadores calificados nunca ha sido mayor, estamos formando menos expertos en computación. Incluso en estos tiempos de alto desempleo, miles de puestos de trabajo, muchos de ellos aquí mismo en **[INSERTA ESTADO/CIUDAD]**, están sin ser llenados por la falta de suficientes individuos con las habilidades requeridas.
 
-Why is this? And how can we address it?
+¿Por qué sucede esto? ¿Y cómo podemos enfrentarlo?
 
-The problem begins in our middle and high schools. Nine out of ten of our schools do not offer computer programming classes. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
+El problema comienza en nuestras primarias y secundarias. Nueve de cada diez escuelas no ofrecen clases en ciencias de la computación. En **[DISTRICTO ESCOLAR]** el año pasado, sólo **[NUMBER]** estudiantes tomaron el examen Colocación Avanzada (AP) de nivel universitario en ciencias de la computación, sólo el **[%]** de todos los estudiantes que tomaron un AP en nuestro estado. Simplemente no estamos haciendo lo suficiente para preparar o animar a nuestros estudiantes a tomar estas carreras vitales y bien pagadas.
 
-Nearly all major computing innovations were invented here in this country, but we’re at risk of losing that leadership if we don’t do something now.
+Casi todas las principales innovaciones informáticas fueron inventadas aquí en este país, pero estamos en riesgo de perder ese liderazgo si no hacemos algo ahora.
 
-We need to make some changes.
+Tenemos que hacer algunos cambios.
 
-**[OPTIONAL FOR STATES WHERE THIS APPLIES]**
+**[OPCIONAL PARA LOS ESTADOS DONDE ESTO APLICA]**
 
-One positive change would be to allow rigorous computer science courses to satisfy a high school math or science graduation requirement. In **[INSERT STATE]**, computer science courses are electives. Given academic demands, students cannot afford to take elective computer science courses. And making this change can have a big impact. In states where computer science courses count toward graduation requirements, courses are fifty percent larger with much higher rates of participation by underserved minorities than states that treat computer science as an elective.
+Un cambio positivo sería permitir el uso de cursos rigurosos en ciencias de la computación para satisfacer un requisito en matemáticas o ciencias para graduación de la secundaria. En **[INSERTA ESTADO]** cursos en ciencias de la computación son electivos. Dadas las exigencias académicas, los estudiantes no pueden darse el lujo de tomar cursos electivos en ciencias de la computación. Hacer este cambio puede tener un impacto significativo. En estados donde los cursos sobre ciencias de la computación cuentan como requisito de graduación, las clases con un cincuenta por ciento más grandes y con mucha mayor tasa de participación de las minorías marginadas que en estados donde las clases son electivas.
 
-We should also work with students at a young age to spark their interest in computer science and coding. Our children should not just know how to use apps and play video games – they should know how to create them. Children can learn the basics of coding as early as the second grade.
+También debemos trabajar con los estudiantes a una edad temprana para despertar su interés en las ciencias de la computación y la codificación. Nuestros niños deberían saber no sólo usar apps y videojuegos - deberían saber como crearlos. Los niños pueden aprender los conceptos básicos de la codificación tan temprano como el segundo grado.
 
-We need to recruit more computer science teachers and encourage professional development within their field. Today there are many online resources that can help teachers access and keep up to date with the latest technology for their students.
+Necesitamos reclutar más profesores de ciencias de la computación y promover su desarrollo profesional. Hoy hay muchos recursos en línea que pueden ayudar a los profesores a tener acceso y mantenerse actualizados con las últimas tecnologías para sus estudiantes.
 
-According to the Bureau of Labor Statistics, by 2020, there will be 9.2 million jobs in STEM fields. Half of those jobs—4.6 million—will be in computing or information technology. And computer science is increasingly foundational knowledge for the 21st Century. Who will fill these jobs if our children are not given the opportunity to gain the skills needed?
+De acuerdo a la oficina de estadísticas laborales, para el año 2020 habrán 9.2 millones de puestos de trabajo en los campos STEM. La mitad de esos empleos — 4,6 millones — estarán en computación o tecnologías de la información. Y las ciencias de la computación son cada vez más un conocimiento fundamental para el siglo XXI. ¿Quién llenará estos trabajos si a nuestros hijos no se les da la oportunidad de adquirir las habilidades necesarias?
 
-This week, December 8–15, is Computer Science Education Week. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. Everyone should learn how to code. Visit <http://hourofcode.com> to learn more and get started. And support our efforts to bring computer science to more schools in **[STATE]**.
+Esta semana, del 8 al 15 de diciembre, es la semana de la educación en ciencias de la computación. En escuelas en todo **[ESTADO]**, nuestros estudiantes participarán en una Hora de Programación a nivel nacional, desmitificando el tema de las ciencias de la computación y esperamos que despertando su apetito para seguir y aprender más. Yo me uniré a ellos, y los invito a unirse también. Todos deberíamos aprender a programar. Visita <http://hourofcode.com> para empezar y aprender más. Y apoya nuestros esfuerzos para llevar las ciencias de la computación a más escuelas en **[STATE]**.

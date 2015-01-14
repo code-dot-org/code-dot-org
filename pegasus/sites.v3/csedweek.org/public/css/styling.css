@@ -22,14 +22,16 @@ body {
 h1 {
   color: rgb(0,121,184);
   font-size: 32px;
-  font-weight: 500;
+  font-family: 'Gotham 5r', sans-serif;
+  font-weight: normal;
   line-height: 1.2em;
 }
 
 h2 {
   color: rgb(193, 43, 39);
   font-size: 22px;
-  font-weight: 500;
+  font-family: 'Gotham 5r', sans-serif;
+  font-weight: normal;
   line-height: 1.2em;
 }
 
@@ -37,21 +39,37 @@ h3 {
   color: rgb(0, 161, 230);
   font-size: 18px;
   line-height: 22px;
-  font-weight: 500;
+  font-family: 'Gotham 5r', sans-serif;
+  font-weight: normal;
   line-height: 1.2em;
 }
 
 h4 {
   color: dimgray;
   font-size: 14px;
-  font-weight: 500;
+  font-family: 'Gotham 5r', sans-serif;
+  font-weight: normal;
   line-height: 1.2em;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: 'Gotham A','Gotham B',sans-serif;
+  font-family: 'Gotham 7r', sans-serif;
+  font-weight: normal;
+}
+strong {
+  font-family: 'Gotham 7r', sans-serif;
+  font-weight: normal;
 }
 
+em {
+  font-family: 'Gotham 4i', sans-serif;
+  font-style: normal;
+}
+
+strong em,
+em strong {
+  font-family: 'Gotham 7i', sans-serif;
+}
 img {
   border: none;
 }
@@ -59,7 +77,8 @@ img {
 .redheader2 {
   color: rgb(211,0,0);
   font-size: 28px;
-  font-weight: bold;
+  font-family: 'Gotham 7r', sans-serif;
+  font-weight: normal;
 }
 
 .whiteheader {
@@ -73,11 +92,13 @@ img {
   color: white;
   font-size: 16px;
   text-align: center;
+  font-family: 'Gotham 4r', sans-serif;
   font-weight: normal;
 }
 
 a {
-  font-weight: bold;
+  font-family: 'Gotham 7r', sans-serif;
+  font-weight: normal;
 }
 
 a:link, a:visited {
@@ -104,10 +125,10 @@ blockquote p {
 
 
 body {
-  font-family: 'Gotham A','Gotham B',sans-serif;
+  font-family: 'Gotham 4r', sans-serif;
   /* font-family: HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; */
   font-size: 14px;
-  font-weight: 400;
+  font-weight: normal;
   color: dimgray;
 }     
 
@@ -219,7 +240,7 @@ td {
 }
 
 #index .count h1 {
-  color: white; font-size: 56px; line-height: 56px; font-weight: 500; margin: 0px;
+  color: white; font-size: 56px; line-height: 56px; font-family: 'Gotham 5r', sans-serif; font-weight: normal; margin: 0px;
 }
 
 @media screen and (max-width: 320px)
@@ -230,13 +251,13 @@ td {
 }
 
 #index .count h2 {
-  color: white; font-size: 36px; line-height: 36px; font-weight: 600; margin-top:5px; margin-bottom: 0px;
+  color: white; font-size: 36px; line-height: 36px; font-family: 'Gotham 7r', sans-serif; font-weight: normal; margin-top:5px; margin-bottom: 0px;
 }
 #index .count h3 {
-  color: white; font-size: 32px; line-height: 32px; font-weight: 400; margin-top:5px; margin-bottom:0px;
+  color: white; font-size: 32px; line-height: 32px; font-family: 'Gotham 4r', sans-serif; font-weight: normal; margin-top:5px; margin-bottom:0px;
 }
 #index .count h4 {
-  color: white; font-size: 26px; line-height: 26px; font-weight: 400; margin-top:15px;
+  color: white; font-size: 26px; line-height: 26px; font-family: 'Gotham 4r', sans-serif; font-weight: normal; margin-top:15px;
 }
 
 .greybox {
@@ -253,12 +274,14 @@ td {
 
 .about_list_item_selected {
   color: #76bd22;
-  font-weight: bold;
+  font-family: 'Gotham 7r', sans-serif;
+  font-weight: normal;
 }
 
 a.about_list_item {
   color: #999c9f;
-  font-weight: bold;
+  font-family: 'Gotham 7r', sans-serif;
+  font-weight: normal;
 }
 
 .about_list_item:hover {
@@ -452,7 +475,7 @@ button {
   color: rgb(255, 255, 255);
   cursor: pointer;
   display: inline-block;
-  font-family: 'Gotham A', 'Gotham B', sans-serif;
+  font-family: 'Gotham 4r', sans-serif;
   font-size: 14px;
   font-weight: normal;
   height: 34px;
@@ -514,7 +537,8 @@ button {
 a.lines_of_code_link {
   color:rgb(105, 105, 105);;
   text-decoration:none;
-  font-weight:400;
+  font-family: 'Gotham 4r', sans-serif;
+  font-weight: normal;
 }
 
 #pagefooter {
@@ -529,6 +553,7 @@ a.lines_of_code_link {
 #pagefooter .content {
   color: white;
   font-size: 14px;
+  font-family: 'Gotham 4r', sans-serif;
   font-weight: normal;
   width: 970px;
   margin: 0 auto;
@@ -555,7 +580,8 @@ a.lines_of_code_link {
   margin-left: 20px;
 }
 #hoc-survey-form .radio-inline label {
-  font-weight: 400;
+  font-family: 'Gotham 4r', sans-serif;
+  font-weight: normal;
 }
 #hoc-survey-form #hoc-participants {
   width: 200px;

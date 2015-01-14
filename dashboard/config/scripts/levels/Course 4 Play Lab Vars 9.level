@@ -15,7 +15,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "Here are all of the variables we've played with so far, as well as a few more in case you want them. Make a game or story that uses these variables.",
+    "instructions": "Free Play time! Here are all of the variables we've played with so far, as well as a few more in case you want them. Make a game or story that uses these variables. Hint: scroll down to see all the commands in the work space.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -29,7 +29,10 @@
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
     "min_workspace_height": "2000",
-    "scrollbars": "true"
+    "scrollbars": "true",
+    "embed": "false",
+    "disable_sharing": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>

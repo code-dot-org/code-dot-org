@@ -1,4 +1,4 @@
-pt-PT:
+pt:
   devise:
     confirmations:
       confirmed: O teu endereço de e-mail foi confirmado com sucesso.
@@ -18,7 +18,7 @@ pt-PT:
       confirmation_instructions:
         subject: Code.org instruções de confirmação
       reset_password_instructions:
-        subject: Code.org redefinir instruções de palavra-passe
+        subject: Instruções de reposição da palavra-passe Code.org
       unlock_instructions:
         subject: Instruções de desbloqueio
     omniauth_callbacks:

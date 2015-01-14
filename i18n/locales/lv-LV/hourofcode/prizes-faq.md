@@ -4,7 +4,7 @@ layout: wide
 
 * * *
 
-# Prizes - FAQs
+# Balvas - biežāk uzdotie jautājumi
 
 ## Does your whole school have to enter to win the $10,000 in hardware?
 

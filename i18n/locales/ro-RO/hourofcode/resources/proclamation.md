@@ -1,6 +1,6 @@
 * * *
 
-title: Sample Resolution Supportive of Computer Science Education Week and Hour of Code layout: wide nav: resources_nav
+titlu: Model de acordare de sprijin pentru Săptămâna Informaticii și Ora de Cod dispunere: largă nav: resources_nav
 
 * * *
 
