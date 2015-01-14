@@ -385,6 +385,91 @@ describe("ExpressionNode", function () {
         { str: ')',  marked: false}
       ]);
     });
+
+    describe("function calls", function () {
+      var node, tokenList;
+      var expected = new ExpressionNode('f', ['1', '2', '3']);
+
+      it("marks nothing when calls are identical", function () {
+        node = expected.clone();
+        tokenList = node.getTokenListDiff(expected);
+        assert.deepEqual(tokenList, [
+          { str: 'f',  marked: false},
+          { str: '(',  marked: false},
+          { str: '1',  marked: false},
+          { str: ',',  marked: false},
+          { str: '2',  marked: false},
+          { str: ',',  marked: false},
+          { str: '3',  marked: false},
+          { str: ')',  marked: false},
+        ]);
+      });
+
+      it("marks everything when calling function of wrong name", function () {
+        node = new ExpressionNode('g', ['1', '2', '3']);
+        tokenList = node.getTokenListDiff(expected);
+        assert.deepEqual(tokenList, [
+          { str: 'g',  marked: true},
+          { str: '(',  marked: true},
+          { str: '1',  marked: true},
+          { str: ',',  marked: true},
+          { str: '2',  marked: true},
+          { str: ',',  marked: true},
+          { str: '3',  marked: true},
+          { str: ')',  marked: true},
+        ]);
+      });
+
+      it ("marks only one param when one param is wrong", function () {
+        node = new ExpressionNode('f', ['1', '2', '4']);
+        tokenList = node.getTokenListDiff(expected);
+        assert.deepEqual(tokenList, [
+          { str: 'f',  marked: false},
+          { str: '(',  marked: false},
+          { str: '1',  marked: false},
+          { str: ',',  marked: false},
+          { str: '2',  marked: false},
+          { str: ',',  marked: false},
+          { str: '4',  marked: true},
+          { str: ')',  marked: false},
+        ]);
+      });
+
+      it ("marks all params when all are wrong", function () {
+        node = new ExpressionNode('f', ['4', '5', '6']);
+        tokenList = node.getTokenListDiff(expected);
+        assert.deepEqual(tokenList, [
+          { str: 'f',  marked: false},
+          { str: '(',  marked: false},
+          { str: '4',  marked: true},
+          { str: ',',  marked: false},
+          { str: '5',  marked: true},
+          { str: ',',  marked: false},
+          { str: '6',  marked: true},
+          { str: ')',  marked: false},
+        ]);
+      });
+
+      it ("marks everything but the function when wrong number of params", function () {
+        node = new ExpressionNode('f', ['1', '2', '3', '4']);
+        tokenList = node.getTokenListDiff(expected);
+        assert.deepEqual(tokenList, [
+          { str: 'f',  marked: false},
+          { str: '(',  marked: true},
+          { str: '1',  marked: true},
+          { str: ',',  marked: true},
+          { str: '2',  marked: true},
+          { str: ',',  marked: true},
+          { str: '3',  marked: true},
+          { str: ',',  marked: true},
+          { str: '4',  marked: true},
+          { str: ')',  marked: true},
+        ]);
+      });
+
+
+
+    });
   });
 
   describe("getTokenList", function () {
