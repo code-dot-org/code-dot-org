@@ -190,7 +190,7 @@ var StudioApp = function () {
 
   this.enableShowCode = true;
   this.editCode = false;
-  this.usingBlockly = true;
+  this.usingBlockly_ = true;
   this.cdoSounds = null;
   this.Dialog = null;
   this.editor = null;
@@ -299,10 +299,10 @@ StudioApp.prototype.configure = function (options) {
   this.BASE_URL = options.baseUrl;
   this.CACHE_BUST = options.cacheBust;
   this.LOCALE = options.locale || this.LOCALE;
-  // NOTE: editCode (which currently implies droplet) and usingBlockly are
+  // NOTE: editCode (which currently implies droplet) and usingBlockly_ are
   // currently mutually exclusive.
   this.editCode = options.level && options.level.editCode;
-  this.usingBlockly = !this.editCode;
+  this.usingBlockly_ = !this.editCode;
   this.cdoSounds = options.cdoSounds;
   this.Dialog = options.Dialog;
 
@@ -476,7 +476,7 @@ StudioApp.prototype.init = function(config) {
     });
   }
 
-  if (this.usingBlockly) {
+  if (this.isUsingBlockly()) {
     this.handleUsingBlockly_(config);
   }
 
@@ -504,7 +504,7 @@ StudioApp.prototype.init = function(config) {
   this.setIdealBlockNumber_();
 
   // TODO (cpirich): implement block count for droplet (for now, blockly only)
-  if (this.usingBlockly) {
+  if (this.isUsingBlockly()) {
     Blockly.mainBlockSpaceEditor.addChangeListener(_.bind(function() {
       this.updateBlockCount();
     }, this));
@@ -513,6 +513,15 @@ StudioApp.prototype.init = function(config) {
       Blockly.functionEditor.openAndEditFunction(config.level.openFunctionDefinition);
     }
   }
+};
+
+/**
+ * TRUE if the current app uses blockly (as opposed to editCode or another
+ * editor)
+ * @return {boolean}
+ */
+StudioApp.prototype.isUsingBlockly = function () {
+  return this.usingBlockly_;
 };
 
 /**
@@ -629,7 +638,7 @@ StudioApp.prototype.toggleRunReset = function(button) {
  *
  */
 StudioApp.prototype.loadAudio = function(filenames, name) {
-  if (this.usingBlockly) {
+  if (this.isUsingBlockly()) {
     Blockly.loadAudio_(filenames, name);
   } else if (this.cdoSounds) {
     var regOpts = { id: name };
@@ -652,7 +661,7 @@ StudioApp.prototype.playAudio = function(name, options) {
   options = options || {};
   var defaultOptions = {volume: 0.5};
   var newOptions = utils.extend(defaultOptions, options);
-  if (this.usingBlockly) {
+  if (this.isUsingBlockly()) {
     Blockly.playAudio(name, newOptions);
   } else if (this.cdoSounds) {
     this.cdoSounds.play(name, newOptions);
@@ -663,7 +672,7 @@ StudioApp.prototype.playAudio = function(name, options) {
  *
  */
 StudioApp.prototype.stopLoopingAudio = function(name) {
-  if (this.usingBlockly) {
+  if (this.isUsingBlockly()) {
     Blockly.stopLoopingAudio(name);
   } else if (this.cdoSounds) {
     this.cdoSounds.stopLoopingAudio(name);
@@ -860,7 +869,7 @@ StudioApp.prototype.onResize = function() {
   div.style.width = fullWorkspaceWidth + 'px';
 
   // Keep blocks static relative to the right edge in RTL mode
-  if (this.usingBlockly && Blockly.RTL && (fullWorkspaceWidth - oldWidth !== 0)) {
+  if (this.isUsingBlockly() && Blockly.RTL && (fullWorkspaceWidth - oldWidth !== 0)) {
     Blockly.mainBlockSpace.getTopBlocks().forEach(function(topBlock) {
       topBlock.moveBy(fullWorkspaceWidth - oldWidth, 0);
     });
@@ -905,7 +914,7 @@ StudioApp.prototype.resizeHeaders = function (fullWorkspaceWidth) {
       var categories = document.querySelector('.droplet-palette-wrapper');
       toolboxWidth = parseInt(window.getComputedStyle(categories).width, 10);
     }
-  } else if (this.usingBlockly) {
+  } else if (this.isUsingBlockly()) {
     toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
   }
 
@@ -931,7 +940,7 @@ StudioApp.prototype.resizeHeaders = function (fullWorkspaceWidth) {
 * @param {boolean} spotlight Optional.  Highlight entire block if true
 */
 StudioApp.prototype.highlight = function(id, spotlight) {
-  if (this.usingBlockly) {
+  if (this.isUsingBlockly()) {
     if (id) {
       var m = id.match(/^block_id_(\d+)$/);
       if (m) {
@@ -1057,7 +1066,7 @@ StudioApp.prototype.resetButtonClick = function() {
   this.onResetPressed();
   this.toggleRunReset('run');
   this.clearHighlighting();
-  if (this.usingBlockly) {
+  if (this.isUsingBlockly()) {
     Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
     Blockly.mainBlockSpace.traceOn(false);
   }
@@ -1196,7 +1205,7 @@ StudioApp.prototype.configureDom_ = function (config) {
     visualizationColumn.style.margin = "0 auto";
   }
 
-  if (this.usingBlockly && config.level.edit_blocks) {
+  if (this.isUsingBlockly() && config.level.edit_blocks) {
     // Set a class on the main blockly div so CSS can style blocks differently
     Blockly.addClass_(container.querySelector('#blockly'), 'edit');
     // If in level builder editing blocks, make workspace extra tall
@@ -1443,7 +1452,7 @@ module.exports = function(app, levels, options) {
 
   options.skin = options.skinsModule.load(studioApp.assetUrl, options.skinId);
 
-  if (studioApp.usingBlockly) {
+  if (studioApp.isUsingBlockly()) {
     var blockInstallOptions = {
       skin: options.skin,
       isK1: options.level && options.level.isK1
@@ -1733,9 +1742,9 @@ exports.setStyle = function (blockId, elementId, style) {
                            'style': style });
 };
 
-exports.attachEventHandler = function (blockId, elementId, eventName, func) {
+exports.onEvent = function (blockId, elementId, eventName, func) {
   return Applab.executeCmd(blockId,
-                          'attachEventHandler',
+                          'onEvent',
                           {'elementId': elementId,
                            'eventName': eventName,
                            'func': func });
@@ -2239,7 +2248,7 @@ Applab.init = function(config) {
   };
 
   config.afterInject = function() {
-    if (studioApp.usingBlockly) {
+    if (studioApp.isUsingBlockly()) {
       /**
        * The richness of block colours, regardless of the hue.
        * MOOC blocks should be brighter (target audience is younger).
@@ -2444,7 +2453,7 @@ studioApp.runButtonClick = function() {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
   studioApp.toggleRunReset('reset');
-  if (studioApp.usingBlockly) {
+  if (studioApp.isUsingBlockly()) {
     Blockly.mainBlockSpace.traceOn(true);
   }
   studioApp.reset(false);
@@ -2861,7 +2870,7 @@ Applab.callCmd = function (cmd) {
     case 'setPosition':
     case 'setParent':
     case 'setStyle':
-    case 'attachEventHandler':
+    case 'onEvent':
     case 'startWebRequest':
     case 'setTimeout':
     case 'clearTimeout':
@@ -3334,7 +3343,7 @@ Applab.onEventFired = function (opts, e) {
   }
 };
 
-Applab.attachEventHandler = function (opts) {
+Applab.onEvent = function (opts) {
   var divApplab = document.getElementById('divApplab');
   var domElement = document.getElementById(opts.elementId);
   if (divApplab.contains(domElement)) {
@@ -4047,7 +4056,7 @@ levels.ec_simple = {
   'editCode': true,
   'sliderSpeed': 0.95,
   'codeFunctions': [
-    {'func': 'attachEventHandler', 'title': 'Execute code in response to an event for the specified element', 'category': 'General', 'params': ["'id'", "'click'", "function() {\n  \n}"] },
+    {'func': 'onEvent', 'title': 'Execute code in response to an event for the specified element', 'category': 'General', 'params': ["'id'", "'click'", "function() {\n  \n}"] },
     {'func': 'startWebRequest', 'title': 'Request data from the internet and execute code when the request is complete', 'category': 'General', 'params': ["'http://api.openweathermap.org/data/2.5/weather?q=London,uk'", "function(status, type, content) {\n  \n}"] },
     {'func': 'setTimeout', 'title': 'Set a timer and execute code when that number of milliseconds has elapsed', 'category': 'General', 'params': ["function() {\n  \n}", "1000"] },
     {'func': 'clearTimeout', 'title': 'Clear an existing timer by passing in the value returned from setTimeout()', 'category': 'General', 'params': ["0"] },
@@ -5248,7 +5257,7 @@ FeedbackUtils.prototype.displayFeedback = function(options,
     trackEvent('Share', 'Failure', options.response.share_failure.type);
   }
   var feedbackBlocks;
-  if (this.studioApp_.usingBlockly) {
+  if (this.studioApp_.isUsingBlockly()) {
     feedbackBlocks = new FeedbackBlocks(options,
                                         this.getMissingRequiredBlocks_(maxRequiredBlocksToFlag),
                                         this.studioApp_);

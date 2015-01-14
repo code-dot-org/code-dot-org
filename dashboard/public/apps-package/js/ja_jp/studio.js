@@ -190,7 +190,7 @@ var StudioApp = function () {
 
   this.enableShowCode = true;
   this.editCode = false;
-  this.usingBlockly = true;
+  this.usingBlockly_ = true;
   this.cdoSounds = null;
   this.Dialog = null;
   this.editor = null;
@@ -299,10 +299,10 @@ StudioApp.prototype.configure = function (options) {
   this.BASE_URL = options.baseUrl;
   this.CACHE_BUST = options.cacheBust;
   this.LOCALE = options.locale || this.LOCALE;
-  // NOTE: editCode (which currently implies droplet) and usingBlockly are
+  // NOTE: editCode (which currently implies droplet) and usingBlockly_ are
   // currently mutually exclusive.
   this.editCode = options.level && options.level.editCode;
-  this.usingBlockly = !this.editCode;
+  this.usingBlockly_ = !this.editCode;
   this.cdoSounds = options.cdoSounds;
   this.Dialog = options.Dialog;
 
@@ -476,7 +476,7 @@ StudioApp.prototype.init = function(config) {
     });
   }
 
-  if (this.usingBlockly) {
+  if (this.isUsingBlockly()) {
     this.handleUsingBlockly_(config);
   }
 
@@ -504,7 +504,7 @@ StudioApp.prototype.init = function(config) {
   this.setIdealBlockNumber_();
 
   // TODO (cpirich): implement block count for droplet (for now, blockly only)
-  if (this.usingBlockly) {
+  if (this.isUsingBlockly()) {
     Blockly.mainBlockSpaceEditor.addChangeListener(_.bind(function() {
       this.updateBlockCount();
     }, this));
@@ -513,6 +513,15 @@ StudioApp.prototype.init = function(config) {
       Blockly.functionEditor.openAndEditFunction(config.level.openFunctionDefinition);
     }
   }
+};
+
+/**
+ * TRUE if the current app uses blockly (as opposed to editCode or another
+ * editor)
+ * @return {boolean}
+ */
+StudioApp.prototype.isUsingBlockly = function () {
+  return this.usingBlockly_;
 };
 
 /**
@@ -629,7 +638,7 @@ StudioApp.prototype.toggleRunReset = function(button) {
  *
  */
 StudioApp.prototype.loadAudio = function(filenames, name) {
-  if (this.usingBlockly) {
+  if (this.isUsingBlockly()) {
     Blockly.loadAudio_(filenames, name);
   } else if (this.cdoSounds) {
     var regOpts = { id: name };
@@ -652,7 +661,7 @@ StudioApp.prototype.playAudio = function(name, options) {
   options = options || {};
   var defaultOptions = {volume: 0.5};
   var newOptions = utils.extend(defaultOptions, options);
-  if (this.usingBlockly) {
+  if (this.isUsingBlockly()) {
     Blockly.playAudio(name, newOptions);
   } else if (this.cdoSounds) {
     this.cdoSounds.play(name, newOptions);
@@ -663,7 +672,7 @@ StudioApp.prototype.playAudio = function(name, options) {
  *
  */
 StudioApp.prototype.stopLoopingAudio = function(name) {
-  if (this.usingBlockly) {
+  if (this.isUsingBlockly()) {
     Blockly.stopLoopingAudio(name);
   } else if (this.cdoSounds) {
     this.cdoSounds.stopLoopingAudio(name);
@@ -860,7 +869,7 @@ StudioApp.prototype.onResize = function() {
   div.style.width = fullWorkspaceWidth + 'px';
 
   // Keep blocks static relative to the right edge in RTL mode
-  if (this.usingBlockly && Blockly.RTL && (fullWorkspaceWidth - oldWidth !== 0)) {
+  if (this.isUsingBlockly() && Blockly.RTL && (fullWorkspaceWidth - oldWidth !== 0)) {
     Blockly.mainBlockSpace.getTopBlocks().forEach(function(topBlock) {
       topBlock.moveBy(fullWorkspaceWidth - oldWidth, 0);
     });
@@ -905,7 +914,7 @@ StudioApp.prototype.resizeHeaders = function (fullWorkspaceWidth) {
       var categories = document.querySelector('.droplet-palette-wrapper');
       toolboxWidth = parseInt(window.getComputedStyle(categories).width, 10);
     }
-  } else if (this.usingBlockly) {
+  } else if (this.isUsingBlockly()) {
     toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
   }
 
@@ -931,7 +940,7 @@ StudioApp.prototype.resizeHeaders = function (fullWorkspaceWidth) {
 * @param {boolean} spotlight Optional.  Highlight entire block if true
 */
 StudioApp.prototype.highlight = function(id, spotlight) {
-  if (this.usingBlockly) {
+  if (this.isUsingBlockly()) {
     if (id) {
       var m = id.match(/^block_id_(\d+)$/);
       if (m) {
@@ -1057,7 +1066,7 @@ StudioApp.prototype.resetButtonClick = function() {
   this.onResetPressed();
   this.toggleRunReset('run');
   this.clearHighlighting();
-  if (this.usingBlockly) {
+  if (this.isUsingBlockly()) {
     Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
     Blockly.mainBlockSpace.traceOn(false);
   }
@@ -1196,7 +1205,7 @@ StudioApp.prototype.configureDom_ = function (config) {
     visualizationColumn.style.margin = "0 auto";
   }
 
-  if (this.usingBlockly && config.level.edit_blocks) {
+  if (this.isUsingBlockly() && config.level.edit_blocks) {
     // Set a class on the main blockly div so CSS can style blocks differently
     Blockly.addClass_(container.querySelector('#blockly'), 'edit');
     // If in level builder editing blocks, make workspace extra tall
@@ -1443,7 +1452,7 @@ module.exports = function(app, levels, options) {
 
   options.skin = options.skinsModule.load(studioApp.assetUrl, options.skinId);
 
-  if (studioApp.usingBlockly) {
+  if (studioApp.isUsingBlockly()) {
     var blockInstallOptions = {
       skin: options.skin,
       isK1: options.level && options.level.isK1
@@ -6570,7 +6579,7 @@ FeedbackUtils.prototype.displayFeedback = function(options,
     trackEvent('Share', 'Failure', options.response.share_failure.type);
   }
   var feedbackBlocks;
-  if (this.studioApp_.usingBlockly) {
+  if (this.studioApp_.isUsingBlockly()) {
     feedbackBlocks = new FeedbackBlocks(options,
                                         this.getMissingRequiredBlocks_(maxRequiredBlocksToFlag),
                                         this.studioApp_);
@@ -13907,8 +13916,8 @@ exports.vanish = function (id, spriteIndex) {
   Studio.queueCmd(id, 'vanish', {spriteIndex: spriteIndex});
 };
 
-exports.attachEventHandler = function (id, eventName, func) {
-  Studio.queueCmd(id, 'attachEventHandler', {
+exports.onEvent = function (id, eventName, func) {
+  Studio.queueCmd(id, 'onEvent', {
     'eventName': String(eventName),
     'func': func
   });
@@ -17474,7 +17483,7 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
     {'func': 'setSpriteEmotion', 'params': ["0", "1"] },
     {'func': 'throwProjectile', 'params': ["0", "1", "'blue_fireball'"] },
     {'func': 'vanish', 'params': ["0"] },
-    {'func': 'attachEventHandler', 'params': ["'when-left'", "function() {\n  \n}"] },
+    {'func': 'onEvent', 'params': ["'when-left'", "function() {\n  \n}"] },
   ],
   'startBlocks': "",
 });
@@ -18491,7 +18500,7 @@ var setSvgText = function(opts) {
  */
 function callHandler (name, allowQueueExtension) {
   Studio.eventHandlers.forEach(function (handler) {
-    if (studioApp.usingBlockly) {
+    if (studioApp.isUsingBlockly()) {
       // Note: we skip executing the code if we have not completed executing
       // the cmdQueue on this handler (checking for non-zero length)
       if (handler.name === name &&
@@ -18870,7 +18879,7 @@ Studio.initSprites = function () {
     }
   }
 
-  if (studioApp.usingBlockly) {
+  if (studioApp.isUsingBlockly()) {
     // Update the sprite count in the blocks:
     blocks.setSpriteCount(Blockly, Studio.spriteCount);
     blocks.setStartAvatars(Studio.startAvatars);
@@ -19019,7 +19028,7 @@ Studio.init = function(config) {
     }
     document.addEventListener('mouseup', Studio.onMouseUp, false);
 
-    if (studioApp.usingBlockly) {
+    if (studioApp.isUsingBlockly()) {
       /**
        * The richness of block colours, regardless of the hue.
        * MOOC blocks should be brighter (target audience is younger).
@@ -19034,7 +19043,7 @@ Studio.init = function(config) {
     drawMap();
   };
 
-  if (studioApp.usingBlockly && config.level.edit_blocks != 'toolbox_blocks') {
+  if (studioApp.isUsingBlockly() && config.level.edit_blocks != 'toolbox_blocks') {
     arrangeStartBlocks(config);
   }
 
@@ -19073,7 +19082,7 @@ var preloadImage = function(url) {
 
 var preloadBackgroundImages = function() {
   // TODO (cpirich): preload for non-blockly
-  if (studioApp.usingBlockly) {
+  if (studioApp.isUsingBlockly()) {
     var imageChoices = skin.backgroundChoicesK1;
     for (var i = 0; i < imageChoices.length; i++) {
       preloadImage(imageChoices[i][0]);
@@ -19251,7 +19260,7 @@ studioApp.runButtonClick = function() {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
   studioApp.toggleRunReset('reset');
-  if (studioApp.usingBlockly) {
+  if (studioApp.isUsingBlockly()) {
     Blockly.mainBlockSpace.traceOn(true);
   }
   studioApp.reset(false);
@@ -19440,7 +19449,7 @@ Studio.execute = function() {
   }
 
   var handlers = [];
-  if (studioApp.usingBlockly) {
+  if (studioApp.isUsingBlockly()) {
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setValue', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackground', 'whenGameStarts');
@@ -19767,7 +19776,7 @@ Studio.queueCmd = function (id, name, opts) {
     'name': name,
     'opts': opts
   };
-  if (studioApp.usingBlockly) {
+  if (studioApp.isUsingBlockly()) {
     if (Studio.currentEventParams) {
       for (var prop in Studio.currentEventParams) {
         cmd.opts[prop] = Studio.currentEventParams[prop];
@@ -19892,9 +19901,9 @@ Studio.callCmd = function (cmd) {
       studioApp.highlight(cmd.id);
       Studio.vanishActor(cmd.opts);
       break;
-    case 'attachEventHandler':
+    case 'onEvent':
       studioApp.highlight(cmd.id);
-      Studio.attachEventHandler(cmd.opts);
+      Studio.onEvent(cmd.opts);
       break;
   }
   return true;
@@ -20537,7 +20546,7 @@ Studio.moveDistance = function (opts) {
   return (0 === opts.queuedDistance);
 };
 
-Studio.attachEventHandler = function (opts) {
+Studio.onEvent = function (opts) {
   registerEventHandler(Studio.eventHandlers, opts.eventName, opts.func);
 };
 

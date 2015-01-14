@@ -190,7 +190,7 @@ var StudioApp = function () {
 
   this.enableShowCode = true;
   this.editCode = false;
-  this.usingBlockly = true;
+  this.usingBlockly_ = true;
   this.cdoSounds = null;
   this.Dialog = null;
   this.editor = null;
@@ -299,10 +299,10 @@ StudioApp.prototype.configure = function (options) {
   this.BASE_URL = options.baseUrl;
   this.CACHE_BUST = options.cacheBust;
   this.LOCALE = options.locale || this.LOCALE;
-  // NOTE: editCode (which currently implies droplet) and usingBlockly are
+  // NOTE: editCode (which currently implies droplet) and usingBlockly_ are
   // currently mutually exclusive.
   this.editCode = options.level && options.level.editCode;
-  this.usingBlockly = !this.editCode;
+  this.usingBlockly_ = !this.editCode;
   this.cdoSounds = options.cdoSounds;
   this.Dialog = options.Dialog;
 
@@ -476,7 +476,7 @@ StudioApp.prototype.init = function(config) {
     });
   }
 
-  if (this.usingBlockly) {
+  if (this.isUsingBlockly()) {
     this.handleUsingBlockly_(config);
   }
 
@@ -504,7 +504,7 @@ StudioApp.prototype.init = function(config) {
   this.setIdealBlockNumber_();
 
   // TODO (cpirich): implement block count for droplet (for now, blockly only)
-  if (this.usingBlockly) {
+  if (this.isUsingBlockly()) {
     Blockly.mainBlockSpaceEditor.addChangeListener(_.bind(function() {
       this.updateBlockCount();
     }, this));
@@ -513,6 +513,15 @@ StudioApp.prototype.init = function(config) {
       Blockly.functionEditor.openAndEditFunction(config.level.openFunctionDefinition);
     }
   }
+};
+
+/**
+ * TRUE if the current app uses blockly (as opposed to editCode or another
+ * editor)
+ * @return {boolean}
+ */
+StudioApp.prototype.isUsingBlockly = function () {
+  return this.usingBlockly_;
 };
 
 /**
@@ -629,7 +638,7 @@ StudioApp.prototype.toggleRunReset = function(button) {
  *
  */
 StudioApp.prototype.loadAudio = function(filenames, name) {
-  if (this.usingBlockly) {
+  if (this.isUsingBlockly()) {
     Blockly.loadAudio_(filenames, name);
   } else if (this.cdoSounds) {
     var regOpts = { id: name };
@@ -652,7 +661,7 @@ StudioApp.prototype.playAudio = function(name, options) {
   options = options || {};
   var defaultOptions = {volume: 0.5};
   var newOptions = utils.extend(defaultOptions, options);
-  if (this.usingBlockly) {
+  if (this.isUsingBlockly()) {
     Blockly.playAudio(name, newOptions);
   } else if (this.cdoSounds) {
     this.cdoSounds.play(name, newOptions);
@@ -663,7 +672,7 @@ StudioApp.prototype.playAudio = function(name, options) {
  *
  */
 StudioApp.prototype.stopLoopingAudio = function(name) {
-  if (this.usingBlockly) {
+  if (this.isUsingBlockly()) {
     Blockly.stopLoopingAudio(name);
   } else if (this.cdoSounds) {
     this.cdoSounds.stopLoopingAudio(name);
@@ -860,7 +869,7 @@ StudioApp.prototype.onResize = function() {
   div.style.width = fullWorkspaceWidth + 'px';
 
   // Keep blocks static relative to the right edge in RTL mode
-  if (this.usingBlockly && Blockly.RTL && (fullWorkspaceWidth - oldWidth !== 0)) {
+  if (this.isUsingBlockly() && Blockly.RTL && (fullWorkspaceWidth - oldWidth !== 0)) {
     Blockly.mainBlockSpace.getTopBlocks().forEach(function(topBlock) {
       topBlock.moveBy(fullWorkspaceWidth - oldWidth, 0);
     });
@@ -905,7 +914,7 @@ StudioApp.prototype.resizeHeaders = function (fullWorkspaceWidth) {
       var categories = document.querySelector('.droplet-palette-wrapper');
       toolboxWidth = parseInt(window.getComputedStyle(categories).width, 10);
     }
-  } else if (this.usingBlockly) {
+  } else if (this.isUsingBlockly()) {
     toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
   }
 
@@ -931,7 +940,7 @@ StudioApp.prototype.resizeHeaders = function (fullWorkspaceWidth) {
 * @param {boolean} spotlight Optional.  Highlight entire block if true
 */
 StudioApp.prototype.highlight = function(id, spotlight) {
-  if (this.usingBlockly) {
+  if (this.isUsingBlockly()) {
     if (id) {
       var m = id.match(/^block_id_(\d+)$/);
       if (m) {
@@ -1057,7 +1066,7 @@ StudioApp.prototype.resetButtonClick = function() {
   this.onResetPressed();
   this.toggleRunReset('run');
   this.clearHighlighting();
-  if (this.usingBlockly) {
+  if (this.isUsingBlockly()) {
     Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
     Blockly.mainBlockSpace.traceOn(false);
   }
@@ -1196,7 +1205,7 @@ StudioApp.prototype.configureDom_ = function (config) {
     visualizationColumn.style.margin = "0 auto";
   }
 
-  if (this.usingBlockly && config.level.edit_blocks) {
+  if (this.isUsingBlockly() && config.level.edit_blocks) {
     // Set a class on the main blockly div so CSS can style blocks differently
     Blockly.addClass_(container.querySelector('#blockly'), 'edit');
     // If in level builder editing blocks, make workspace extra tall
@@ -1443,7 +1452,7 @@ module.exports = function(app, levels, options) {
 
   options.skin = options.skinsModule.load(studioApp.assetUrl, options.skinId);
 
-  if (studioApp.usingBlockly) {
+  if (studioApp.isUsingBlockly()) {
     var blockInstallOptions = {
       skin: options.skin,
       isK1: options.level && options.level.isK1
@@ -2477,7 +2486,7 @@ FeedbackUtils.prototype.displayFeedback = function(options,
     trackEvent('Share', 'Failure', options.response.share_failure.type);
   }
   var feedbackBlocks;
-  if (this.studioApp_.usingBlockly) {
+  if (this.studioApp_.isUsingBlockly()) {
     feedbackBlocks = new FeedbackBlocks(options,
                                         this.getMissingRequiredBlocks_(maxRequiredBlocksToFlag),
                                         this.studioApp_);
@@ -13578,7 +13587,7 @@ Artist.prototype.afterInject_ = function (config) {
     this.speedSlider.setValue(config.level.sliderSpeed);
   }
 
-  if (this.studioApp_.usingBlockly) {
+  if (this.studioApp_.isUsingBlockly()) {
     // Add to reserved word list: API, local variables in execution evironment
     // (execute) and the infinite loop detection function.
     Blockly.JavaScript.addReservedWords('Turtle,code');
@@ -13600,7 +13609,7 @@ Artist.prototype.afterInject_ = function (config) {
   this.ctxDisplay = displayCanvas.getContext('2d');
 
   // TODO (br-pair): - pull this out?
-  if (this.studioApp_.usingBlockly && (this.skin.id === "anna" || this.skin.id === "elsa")) {
+  if (this.studioApp_.isUsingBlockly() && (this.skin.id === "anna" || this.skin.id === "elsa")) {
     // Override colour_random to only generate random colors from within our frozen
     // palette
     Blockly.JavaScript.colour_random = function() {
@@ -13690,7 +13699,7 @@ Artist.prototype.drawLogOnCanvas = function(log, canvas) {
  */
 Artist.prototype.drawBlocksOnCanvas = function(blocksOrCode, canvas) {
   var code;
-  if (this.studioApp_.usingBlockly) {
+  if (this.studioApp_.isUsingBlockly()) {
     var domBlocks = Blockly.Xml.textToDom(blocksOrCode);
     Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, domBlocks);
     code = Blockly.Generator.blockSpaceToCode('JavaScript');
@@ -13698,7 +13707,7 @@ Artist.prototype.drawBlocksOnCanvas = function(blocksOrCode, canvas) {
     code = blocksOrCode;
   }
   this.evalCode(code);
-  if (this.studioApp_.usingBlockly) {
+  if (this.studioApp_.isUsingBlockly()) {
     Blockly.mainBlockSpace.clear();
   }
   this.drawCurrentBlocksOnCanvas(canvas);
@@ -14005,7 +14014,7 @@ Artist.prototype.display = function() {
 Artist.prototype.runButtonClick = function () {
   this.studioApp_.toggleRunReset('reset');
   document.getElementById('spinner').style.visibility = 'visible';
-  if (this.studioApp_.usingBlockly) {
+  if (this.studioApp_.isUsingBlockly()) {
     Blockly.mainBlockSpace.traceOn(true);
   }
   this.studioApp_.attempts++;
@@ -14081,7 +14090,7 @@ Artist.prototype.execute = function() {
 
   this.pid = window.setTimeout(_.bind(this.animate, this), 100);
 
-  if (this.studioApp_.usingBlockly) {
+  if (this.studioApp_.isUsingBlockly()) {
     // Disable toolbox while running
     Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
   }
@@ -14160,7 +14169,7 @@ Artist.prototype.executeTuple_ = function () {
  */
 Artist.prototype.finishExecution_ = function () {
   document.getElementById('spinner').style.visibility = 'hidden';
-  if (this.studioApp_.usingBlockly) {
+  if (this.studioApp_.isUsingBlockly()) {
     Blockly.mainBlockSpace.highlightBlock(null);
   }
   this.checkAnswer();
@@ -14672,7 +14681,7 @@ Artist.prototype.checkAnswer = function() {
   this.testResults = this.studioApp_.getTestResults(levelComplete);
 
   var program;
-  if (this.studioApp_.usingBlockly) {
+  if (this.studioApp_.isUsingBlockly()) {
     var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
     program = Blockly.Xml.domToText(xml);
   }
@@ -14700,7 +14709,7 @@ Artist.prototype.checkAnswer = function() {
     // Check that they didn't use a crazy large repeat value when drawing a
     // circle.  This complains if the limit doesn't start with 3.
     // Note that this level does not use colour, so no need to check for that.
-    if (level.failForCircleRepeatValue && this.studioApp_.usingBlockly) {
+    if (level.failForCircleRepeatValue && this.studioApp_.isUsingBlockly()) {
       var code = Blockly.Generator.blockSpaceToCode('JavaScript');
       if (code.indexOf('count < 3') == -1) {
         this.testResults =
@@ -14758,7 +14767,7 @@ Artist.prototype.checkAnswer = function() {
 
   this.studioApp_.report(reportData);
 
-  if (this.studioApp_.usingBlockly) {
+  if (this.studioApp_.isUsingBlockly()) {
     // reenable toolbox
     Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
   }
