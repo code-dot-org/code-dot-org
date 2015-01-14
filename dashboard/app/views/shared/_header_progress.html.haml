@@ -1,19 +1,5 @@
 .header_level
   %div{class: 'header_level_container'}
-    - @game_script_levels ||= (@stage && @stage.script_levels.includes(:script).joins(:level)) || @script.script_levels_from_game(@game.id)
-    - game_levels = current_user ? current_user.levels_from_script(@script, @game.id, @stage) : @game_script_levels
-    - script_data = { |
-      title: stage_title(@script, @stage || @game), |
-      showStageLinks: @script.twenty_hour? || @script.stages.to_a.count > 1, |
-      levels: game_levels.map do |sl| |
-        completion_status, link = level_info(current_user, sl); |
-        {displayText: sl.level_display_text, status: completion_status, link: link, unplugged: !!sl.level.unplugged?, assessment: !!sl.assessment} |
-      end} |
-    - script_data[:finishLink] = {text: t('nav.header.finished_hoc'), href: hoc_finish_url(@script)} if @script.hoc?
-    - if @script.trophies && current_user
-      - progress = current_user.progress(@script)
-      - script_data[:trophies] = {current: progress['current_trophies'], of: t(:of), max: progress['max_trophies']}
-
     .header_text
     .progress_container
     .header_finished_link{style: 'display: none;'}
@@ -32,8 +18,7 @@
         .header_popup_link_text= t(:more)
 
 :javascript
-  var scriptData = #{script_data.to_json};
-  var currentLevelIndex = #{@script_level.stage_or_game_position - 1};
+  var scriptData = #{header_progress};
   $('.header_text').first().html(scriptData.title);
   if (scriptData.finishLink) {
     $('.header_finished_link').show().append($('<a>').attr('href', scriptData.finishLink.href).text(scriptData.finishLink.text));
@@ -53,7 +38,7 @@
     if (level.unplugged) {
       link.addClass('unplugged_level');
     }
-    var div = $('<div>').addClass(index === currentLevelIndex ? 'puzzle_outer_current' : defaultClass).append(link);
+    var div = $('<div>').addClass(index === scriptData.currentLevelIndex ? 'puzzle_outer_current' : defaultClass).append(link);
     if (index === levels.length - 1) {
       div.addClass('last');
     }
