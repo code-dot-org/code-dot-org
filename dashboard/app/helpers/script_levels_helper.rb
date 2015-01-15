@@ -79,21 +79,40 @@ module ScriptLevelsHelper
     end
   end
 
-  def header_progress
-    @game_script_levels ||= (@stage && @stage.script_levels.includes(:script).joins(:level)) || @script.script_levels_from_game(@game.id)
-    game_levels = current_user ? current_user.levels_from_script(@script, @game.id, @stage) : @game_script_levels
+  def header_progress(script_level)
+    script = script_level.script
+    stage = script_level.stage
+    game = script_level.level.game
+
+    game_levels =
+      if current_user
+        current_user.levels_from_script(script, game.id, stage)
+      elsif @game_script_levels
+        @game_script_levels
+      elsif stage
+        stage.script_levels.includes(:script).joins(:level)
+      else
+        script_levels_from_game(game.id)
+      end
+
     script_data = {
-        title: stage_title(@script, @stage || @game),
-        currentLevelIndex: @script_level.stage_or_game_position - 1,
-        showStageLinks: @script.twenty_hour? || @script.stages.to_a.count > 1,
-        levels: game_levels.map do |sl|
-          completion_status, link = level_info(current_user, sl)
-          {displayText: sl.level_display_text, status: completion_status, link: link, unplugged: !!sl.level.unplugged?, assessment: !!sl.assessment}
-        end
+      title: stage_title(script, script_level.stage_or_game),
+      currentLevelIndex: script_level.stage_or_game_position - 1,
+      showStageLinks: script.twenty_hour? || script.stages.to_a.count > 1,
+      levels: game_levels.map do |sl|
+        completion_status, link = level_info(current_user, sl)
+        {
+          displayText: sl.level_display_text,
+          status: completion_status,
+          link: link,
+          unplugged: !!sl.level.unplugged?,
+          assessment: !!sl.assessment
+        }
+      end
     }
-    script_data[:finishLink] = {text: t('nav.header.finished_hoc'), href: hoc_finish_url(@script)} if @script.hoc?
-    if @script.trophies && current_user
-      progress = current_user.progress(@script)
+    script_data[:finishLink] = {text: t('nav.header.finished_hoc'), href: hoc_finish_url(script)} if script.hoc?
+    if script.trophies && current_user
+      progress = current_user.progress(script)
       script_data[:trophies] = {current: progress['current_trophies'], of: t(:of), max: progress['max_trophies']}
     end
 
