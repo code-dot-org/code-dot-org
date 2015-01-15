@@ -233,6 +233,7 @@ angular: teacherDashboard
     $scope.mergeProgress = function() {
       // calculate width of each level in the progress bar assuming the overall width is 780 px
       $scope.progress.bar_width = Math.floor(780 / $scope.progress.script.levels_count);
+      $scope.progress.table_width = $scope.progress.bar_width * $scope.progress.script.levels_count;
 
       // Takes the level's position in the script, and returns its level number in its stage
       var getLevelNumberInStage = function(overallLevel) {

@@ -461,7 +461,7 @@ Applab.init = function(config) {
   };
 
   config.afterInject = function() {
-    if (studioApp.usingBlockly) {
+    if (studioApp.isUsingBlockly()) {
       /**
        * The richness of block colours, regardless of the hue.
        * MOOC blocks should be brighter (target audience is younger).
@@ -666,7 +666,7 @@ studioApp.runButtonClick = function() {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
   studioApp.toggleRunReset('reset');
-  if (studioApp.usingBlockly) {
+  if (studioApp.isUsingBlockly()) {
     Blockly.mainBlockSpace.traceOn(true);
   }
   studioApp.reset(false);
@@ -1083,7 +1083,7 @@ Applab.callCmd = function (cmd) {
     case 'setPosition':
     case 'setParent':
     case 'setStyle':
-    case 'attachEventHandler':
+    case 'onEvent':
     case 'startWebRequest':
     case 'setTimeout':
     case 'clearTimeout':
@@ -1556,7 +1556,7 @@ Applab.onEventFired = function (opts, e) {
   }
 };
 
-Applab.attachEventHandler = function (opts) {
+Applab.onEvent = function (opts) {
   var divApplab = document.getElementById('divApplab');
   var domElement = document.getElementById(opts.elementId);
   if (divApplab.contains(domElement)) {

@@ -1,41 +1,13 @@
 .header_level
   %div{class: 'header_level_container'}
-    - @game_script_levels ||= (@stage && @stage.script_levels.includes(:script).joins(:level)) || @script.script_levels_from_game(@game.id)
-    - game_levels = current_user ? current_user.levels_from_script(@script, @game.id, @stage) : @game_script_levels
-    - multiple_puzzles = game_levels.count > 1
-
     .header_text
-      = stage_title(@script, @stage || @game)
-    - if multiple_puzzles
-      .progress_container
-        - game_levels.each do |sl|
-          - css_class, link = level_info(current_user, sl)
-          - if @script_level && @script_level == sl
-            - puzzle_outer_class = 'puzzle_outer_current'
-          - elsif sl.assessment
-            - puzzle_outer_class = 'puzzle_outer_assessment'
-          - else
-            - puzzle_outer_class = 'puzzle_outer_level'
-          - if sl.stage_or_game_position == @game_script_levels.count
-            - puzzle_outer_class += ' last'
-          %div{class: puzzle_outer_class}
-            %a.level_link{ href: link, class: css_class + (sl.level.unplugged? ? ' unplugged_level ' : '')}
-              = sl.level_display_text
-    - if @script.hoc?
-      .header_finished_link
-        %a{href: hoc_finish_url(@script)}
-          = t('nav.header.finished_hoc')
-    - if @script.trophies
-      - if current_user
-        - progress = current_user.progress(@script)
-        %a.header_trophy_link{href: '#', onclick: 'return handlePopupClick(true);'}
-          .header_text= t(:trophies)
-          .header_status_bar= progress['current_trophies']
-          .header_text= "#{t(:of)} #{progress['max_trophies']}"
-      - else
-        %a.header_finished_link{href: root_path}
-          = t('nav.header.sign_in_to_save')
-    - if @script.twenty_hour? || @script.stages.to_a.count > 1
+    .progress_container
+    .header_finished_link{style: 'display: none;'}
+    %a.header_trophy_link{style: 'display: none;', href: '#', onclick: 'return handlePopupClick(true);'}
+      .header_text= t(:trophies)
+      .header_status_bar.current_trophies
+      .header_text.max_trophies
+    %span.stage_links{style: 'display: none;'}
       %a.header_status_bar.level_free_play{title: t('nav.header.free_play.playlab'), href: playlab_freeplay_path}
         %i.fa.fa-rocket
       %a.header_status_bar.level_free_play{title: t('nav.header.free_play.artist'), href: artist_freeplay_path}
@@ -44,3 +16,31 @@
         .header_popup_link_glyph
           &#x25BC;
         .header_popup_link_text= t(:more)
+
+:javascript
+  var scriptData = #{header_progress(@script_level).to_json};
+  $('.header_text').first().text(scriptData.title);
+  if (scriptData.finishLink) {
+    $('.header_finished_link').show().append($('<a>').attr('href', scriptData.finishLink.href).text(scriptData.finishLink.text));
+  }
+  if (scriptData.showStageLinks) {
+    $('.stage_links').show();
+  }
+  if (scriptData.trophies) {
+    $('.header_trophy_link').show();
+    $('.header_trophy_link .current_trophies').text(scriptData.trophies.current);
+    $('.header_trophy_link .max_trophies').text(scriptData.trophies.of + ' ' + scriptData.trophies.max);
+  }
+  var progressContainer = $('.progress_container');
+  scriptData.levels.forEach(function(level, index, levels) {
+    var defaultClass = level.assessment ? 'puzzle_outer_assessment' : 'puzzle_outer_level';
+    var link = $('<a>').attr('href', level.link).addClass('level_link').addClass(level.status).text(level.displayText);
+    if (level.unplugged) {
+      link.addClass('unplugged_level');
+    }
+    var div = $('<div>').addClass(index === scriptData.currentLevelIndex ? 'puzzle_outer_current' : defaultClass).append(link);
+    if (index === levels.length - 1) {
+      div.addClass('last');
+    }
+    progressContainer.append(div).append('\n');
+  });
