@@ -681,8 +681,7 @@ html, body {
   border: 20px solid $bkgnd_color;
   border-top: 5px;
   border-bottom: 5px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
+  border-radius: 6px;
   z-index: 1050;
   background-color: white;
   overflow: hidden;
@@ -1366,6 +1365,12 @@ a.download-video {
   }
 }
 
+@mixin yTranslation($offset) {
+  -webkit-transform: translateY($offset);
+  -ms-transform: translateY($offset);
+  transform: translateY($offset);
+}
+
 .match {
   .mainblock {
     margin-left: 0px;
@@ -1376,9 +1381,7 @@ a.download-video {
     img {
       position: relative;
       top: 50%;
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
+      @include yTranslation(-50%);
       height: auto;
       width: auto;
       max-height: 100%;
@@ -1450,9 +1453,7 @@ a.download-video {
     h4 {
       position: relative;
       top: 25%;
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
+      @include yTranslation(-50%);
     }
   }
   #answers {
@@ -1463,9 +1464,7 @@ a.download-video {
     h4 {
       position: relative;
       top: 25%;
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
+      @include yTranslation(-50%);
     }
   }
   #correctmarkscolumn
