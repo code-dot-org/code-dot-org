@@ -167,10 +167,6 @@ describe("getMissingRequiredBlocks_ tests", function () {
     assert.notEqual(options.userBlockXml, undefined);
     assert.notEqual(options.expectedResult, undefined);
 
-    // Should probably have these as inputs to getMissingRequiredBlocks_ instead
-    // of fields on studioApp as it's the only place they're used
-    studioApp.REQUIRED_BLOCKS = options.requiredBlocks;
-
     studioApp.loadBlocks(options.userBlockXml);
 
     // make sure we loaded correctly. text wont match exactly, but make sure if
@@ -179,7 +175,8 @@ describe("getMissingRequiredBlocks_ tests", function () {
     assert(!options.userBlockXml || loaded, "either we didnt have  input xml" +
       "or we did, and we loaded something");
 
-    var missing = studioApp.feedback_.getMissingRequiredBlocks_(options.numToFlag);
+    var missing = studioApp.feedback_.getMissingRequiredBlocks_(
+        options.requiredBlocks, options.numToFlag);
     validateMissingRequiredBlocks(missing.blocksToDisplay, options.expectedResult);
   }
 
