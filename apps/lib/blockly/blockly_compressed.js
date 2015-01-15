@@ -1,1 +1,1 @@
-../../../blockly-core/blockly_compressed.js
+../../../blockly-core/build-output/blockly_compressed.js

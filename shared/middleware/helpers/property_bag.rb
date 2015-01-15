@@ -12,15 +12,19 @@ class PropertyBag
   
     @table = PEGASUS_DB[:app_properties]
   end
+  
+  def items()
+    @items ||= @table.where(app_id:@app_id, storage_id:@storage_id)
+  end
 
   def delete(name)
-    delete_count = @table.where(app_id:@app_id, storage_id:@storage_id, name:name).delete
+    delete_count = items.where(name:name).delete
     raise NotFound, "property `#{name}` not found" unless delete_count > 0
     true
   end
 
   def get(name)
-    row = @table.where(app_id:@app_id, storage_id:@storage_id, name:name).first
+    row = items.where(name:name).first
     raise NotFound, "property `#{name}` not found" unless row
     JSON.load(row[:value])
   end
@@ -35,7 +39,7 @@ class PropertyBag
       updated_ip:ip_address,
     }
 
-    update_count = @table.where(app_id:@app_id, storage_id:@storage_id, name:name).update(row)
+    update_count = items.where(name:name).update(row)
     if update_count == 0
       row[:id] = @table.insert(row)
     end
@@ -45,7 +49,7 @@ class PropertyBag
 
   def to_hash()
     {}.tap do |results|
-      @table.where(app_id:@app_id, storage_id:@storage_id).each do |row|
+      items.each do |row|
         results[row[:name]] = JSON.load(row[:value])
       end
     end
