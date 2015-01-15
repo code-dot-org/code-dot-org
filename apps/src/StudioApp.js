@@ -2,12 +2,8 @@
   strict: true,
   curly: true,
   funcscope: true,
-  maxlen: 90,
-  maxparams: 4,
-  maxstatements: 200,
   newcap: true,
   nonew: true,
-  quotmark: single,
   shadow: false,
   unused: true
 */
