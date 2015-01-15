@@ -217,3 +217,7 @@ end
 def secrets_dir(*dirs)
   aws_dir('secrets', *dirs)
 end
+
+def shared_dir(*dirs)
+  deploy_dir('shared', *dirs)
+end
