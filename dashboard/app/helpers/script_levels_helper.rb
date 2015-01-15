@@ -87,12 +87,10 @@ module ScriptLevelsHelper
     game_levels =
       if current_user
         current_user.levels_from_script(script, game.id, stage)
-      elsif @game_script_levels
-        @game_script_levels
       elsif stage
-        stage.script_levels.includes(:script).joins(:level)
+        script.script_levels.to_a.select{|sl| sl.stage_id == script_level.stage_id}
       else
-        script_levels_from_game(game.id)
+        script.script_levels.to_a.select{|sl| sl.level.game_id == script_level.level.game_id}
       end
 
     script_data = {
