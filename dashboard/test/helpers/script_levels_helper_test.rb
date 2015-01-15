@@ -31,8 +31,9 @@ class ScriptLevelsHelperTest < ActionView::TestCase
 
   test 'show stage name in header for multi-stage script' do
     self.stubs(:current_user).returns(nil)
-    script_level = Script.find_by_name(Script::COURSE4_NAME).get_script_level_by_stage_and_position 3, 1
-    assert_equal 'Stage 3: ' + I18n.t("data.script.name.#{@script.name}.#{@stage.name}"), header_progress(script_level)[:title]
+    script = Script.find_by_name(Script::COURSE4_NAME)
+    script_level = script.get_script_level_by_stage_and_position 3, 1
+    assert_equal 'Stage 3: ' + I18n.t("data.script.name.#{script.name}.#{script_level.stage.name}"), header_progress(script_level)[:title]
   end
 
   test 'show stage position in header for default script' do
