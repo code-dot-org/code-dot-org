@@ -35,3 +35,11 @@ Scenario:
   And I see no difference for "level load"
   And I close my eyes
 
+Scenario:
+  When I open my eyes to test "text-only match"
+  Given I am on "http://learn.code.org/s/course3/stage/10/puzzle/2?noautoplay=true"
+  And I rotate to landscape
+  Then element ".submitButton" is visible
+  And I see no difference for "level load"
+  And I close my eyes
+
