@@ -302,14 +302,12 @@ function getEquationFromBlock(block) {
         return new Equation(null, new ExpressionNode(name));
       } else {
         var values = [];
-        var i = 0;
         var input, childBlock;
-        while (!!(input = block.getInput('ARG' + i))) {
+        for (var i = 0; !!(input = block.getInput('ARG' + i)); i++) {
           childBlock = input.connection.targetBlock();
           // TODO - better default?
           values.push(childBlock ? getEquationFromBlock(childBlock).expression :
             new ExpressionNode(0));
-          i++;
         }
         return new Equation(null, new ExpressionNode(name, values));
       }
