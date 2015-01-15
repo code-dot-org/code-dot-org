@@ -186,24 +186,28 @@ ExpressionNode.prototype.collapse = function () {
  */
 ExpressionNode.prototype.getTokenListDiff = function (other) {
   var tokens;
-  if (this.children.length === 0) {
-    return [new Token(this.value.toString(), !this.isIdenticalTo(other))];
-  }
-
   var nodesMatch = other && (this.value === other.value) &&
     (this.children.length === other.children.length);
+  var type = this.getType();
 
+  // Empty function calls look slightly different, i.e. foo() instead of foo
+  if (this.children.length === 0) {
+    return [new Token(this.value.toString(), !nodesMatch)];
+  }
 
-  if (this.getType() === ValueType.ARITHMETIC) {
+  if (type === ValueType.ARITHMETIC) {
     // Deal with arithmetic, which is always in the form (child0 operator child1)
-    tokens = [
-      new Token('(', !nodesMatch),
-      this.children[0].getTokenListDiff(nodesMatch && other.children[0]),
-      new Token(" " + this.value + " ", !nodesMatch),
-      this.children[1].getTokenListDiff(nodesMatch && other.children[1]),
-      new Token(')', !nodesMatch)
-    ];
-  } else if (this.getType() === ValueType.FUNCTION_CALL) {
+    tokens = [new Token('(', !nodesMatch)];
+    if (this.children.length > 0) {
+      tokens.push([
+        this.children[0].getTokenListDiff(nodesMatch && other.children[0]),
+        new Token(" " + this.value + " ", !nodesMatch),
+        this.children[1].getTokenListDiff(nodesMatch && other.children[1])
+      ]);
+    }
+    tokens.push(new Token(')', !nodesMatch));
+
+  } else if (type === ValueType.FUNCTION_CALL) {
     // Deal with a function call which will generate something like: foo(1, 2, 3)
     tokens = [
       new Token(this.value, this.value !== other.value),
@@ -211,12 +215,15 @@ ExpressionNode.prototype.getTokenListDiff = function (other) {
     ];
 
     for (var i = 0; i < this.children.length; i++) {
+      if (i > 0) {
+        tokens.push(new Token(',', !nodesMatch));
+      }
       tokens.push(this.children[i].getTokenListDiff(nodesMatch && other.children[i]));
-      tokens.push(new Token(',', !nodesMatch));
     }
-    // pull off last comma
-    tokens.splice(-1);
+
     tokens.push(new Token(")", !nodesMatch));
+  } else if (this.getType() === ValueType.VARIABLE) {
+
   }
   return _.flatten(tokens);
 };
