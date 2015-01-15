@@ -20,6 +20,7 @@ module.exports = FeedbackUtils;
 // Globals used in this file:
 //   Blockly
 
+var BlockLinter = require('./BlockLinter');
 var trophy = require('./templates/trophy.html');
 var utils = require('./utils');
 var _ = utils.getLodash();
@@ -1068,13 +1069,12 @@ FeedbackUtils.prototype.hasQuestionMarksInNumberField_ = function () {
  * inside the procedure.
  */
 FeedbackUtils.prototype.hasUnusedParam_ = function () {
-  var self = this;
   return Blockly.mainBlockSpace.getAllBlocks().some(function(userBlock) {
     var params = userBlock.parameterNames_;
     // Only search procedure definitions
     return params && params.some(function(paramName) {
       // Unused param if there's no parameters_get descendant with the same name
-      return !self.hasMatchingDescendant_(userBlock, function(block) {
+      return !BlockLinter.hasMatchingDescendant(userBlock, function(block) {
         return (block.type === 'parameters_get' ||
             block.type === 'functional_parameters_get' ||
             block.type === 'variables_get') &&
@@ -1124,32 +1124,17 @@ FeedbackUtils.prototype.hasUnusedFunction_ = function () {
  * Ensure there are no incomplete blocks inside any function definitions.
  */
 FeedbackUtils.prototype.hasIncompleteBlockInFunction_ = function () {
-  var self = this;
   return Blockly.mainBlockSpace.getAllBlocks().some(function(userBlock) {
     // Only search procedure definitions
     if (!userBlock.parameterNames_) {
       return false;
     }
-    return self.hasMatchingDescendant_(userBlock, function(block) {
+    return BlockLinter.hasMatchingDescendant(userBlock, function(block) {
       // Incomplete block if any input connection target is null
       return block.inputList.some(function(input) {
         return input.type === Blockly.INPUT_VALUE &&
             !input.connection.targetConnection;
       });
     });
-  });
-};
-
-/**
- * Returns true if any descendant (inclusive) of the given node matches the
- * given filter.
- */
-FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
-  if (filter(node)) {
-    return true;
-  }
-  var self = this;
-  return node.childBlocks_.some(function (child) {
-    return self.hasMatchingDescendant_(child, filter);
   });
 };
