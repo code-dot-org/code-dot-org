@@ -4,7 +4,8 @@ lectures, videos, logos, characters, and screenshots, or likenesses thereof
 ("Proprietary Materials"), which are located in the following locations in
 this repository:
 
-  ./app/assets/images
+  ./dashboard/app/assets/images
+  ./apps/static
 
 The Proprietary Materials may not be used or distributed or accessed in any
 manner other than directly via Code.org's own web site, mobile applications,
