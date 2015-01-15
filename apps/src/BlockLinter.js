@@ -14,10 +14,37 @@ maxstatements: 200
 /* global -Blockly */
 'use strict';
 
-var BlockLinter = function ( ) {
-
+/**
+ * @class BlockLinter
+ *
+ * Answers questions about a user's solution within a particular blockSpace
+ *
+ * @param {Blockly} blockly The blockly instance being examined
+ */
+var BlockLinter = function ( blockly ) {
+  this.blockly_ = blockly;
 };
 module.exports = BlockLinter;
+
+/**
+ * Ensure there are no incomplete blocks inside any function definitions.
+ * @return {boolean}
+ */
+BlockLinter.prototype.hasIncompleteBlockInFunction = function () {
+  return this.blockly_.mainBlockSpace.getAllBlocks().some(function(userBlock) {
+    // Only search procedure definitions
+    if (!userBlock.parameterNames_) {
+      return false;
+    }
+    return BlockLinter.hasMatchingDescendant(userBlock, function(block) {
+      // Incomplete block if any input connection target is null
+      return block.inputList.some(function(input) {
+        return input.type === this.blockly_.INPUT_VALUE &&
+        !input.connection.targetConnection;
+      });
+    });
+  });
+};
 
 /**
  * Returns true if any descendant (inclusive) of the given blockly node matches

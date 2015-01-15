@@ -987,7 +987,8 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
     if (this.hasParamInputUnattached_()) {
       return TestResults.PARAM_INPUT_UNATTACHED;
     }
-    if (this.hasIncompleteBlockInFunction_()) {
+    var blockLinter = new BlockLinter(Blockly.mainBlockSpace);
+    if (blockLinter.hasIncompleteBlockInFunction()) {
       return TestResults.INCOMPLETE_BLOCK_IN_FUNCTION;
     }
   }
@@ -1118,23 +1119,4 @@ FeedbackUtils.prototype.hasUnusedFunction_ = function () {
   });
   // Unused function if some user def doesn't have a matching call
   return userDefs.some(function(name) { return !callBlocks[name]; });
-};
-
-/**
- * Ensure there are no incomplete blocks inside any function definitions.
- */
-FeedbackUtils.prototype.hasIncompleteBlockInFunction_ = function () {
-  return Blockly.mainBlockSpace.getAllBlocks().some(function(userBlock) {
-    // Only search procedure definitions
-    if (!userBlock.parameterNames_) {
-      return false;
-    }
-    return BlockLinter.hasMatchingDescendant(userBlock, function(block) {
-      // Incomplete block if any input connection target is null
-      return block.inputList.some(function(input) {
-        return input.type === Blockly.INPUT_VALUE &&
-            !input.connection.targetConnection;
-      });
-    });
-  });
 };
