@@ -62,7 +62,12 @@ def index_batch_of_forms(batch_size)
     DB[:forms].where(indexed_at:nil).exclude(processed_at:nil).limit(batch_size).each do |form|
       kind = Object.const_get(form[:kind])
 
-      index_data = JSON.load(form[:data]).merge(JSON.load(form[:processed_data]))
+      begin
+        index_data = JSON.load(form[:data]).merge(JSON.load(form[:processed_data]))
+      rescue
+        HipChat.log "Form #{form[:id]} couldn't be indexed.", color:'red', notify:1
+        raise
+      end
       index_data = index_data.merge(id:form[:id], kind_s:form[:kind], review_s:form[:review], user_i:form[:user_id], parent_form_i:form[:parent_id])
       index_data = kind.index(index_data) if kind.respond_to?(:index)
       documents << index_data
@@ -70,7 +75,18 @@ def index_batch_of_forms(batch_size)
       DB[:forms].where(id:form[:id]).update(indexed_at:DateTime.now)
     end
 
-    SOLR.update(documents) unless documents.empty? || !SOLR
+    begin
+      SOLR.update(documents) unless documents.empty? || !SOLR
+    rescue
+      documents.each do |document|
+        begin
+          SOLR.update([document])
+        rescue => e
+          HipChat.log "Unable to index form #{document[:id]}: #{e}"
+          raise
+        end
+      end
+    end
   end
 
   documents.count
