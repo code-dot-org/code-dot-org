@@ -12,6 +12,7 @@ var commonMsg = require('../../locale/current/common');
 var studioMsg = require('../../locale/current/studio');
 var skins = require('../skins');
 var constants = require('./constants');
+var sharedConstants = require('../constants');
 var codegen = require('../codegen');
 var api = require('./api');
 var blocks = require('./blocks');
@@ -35,7 +36,8 @@ var Direction = constants.Direction;
 var NextTurn = constants.NextTurn;
 var SquareType = constants.SquareType;
 var Emotions = constants.Emotions;
-var KeyCodes = constants.KeyCodes;
+
+var KeyCodes = sharedConstants.KeyCodes;
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
