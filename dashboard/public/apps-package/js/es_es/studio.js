@@ -235,7 +235,7 @@ var StudioApp = function () {
   *   start and end tags.
   * @type {!Array=}
   */
-  this.REQUIRED_BLOCKS = undefined;
+  this.requiredBlocks_ = [];
 
   /**
   * The number of required blocks to give hints about at any one time.
@@ -976,7 +976,8 @@ StudioApp.prototype.displayFeedback = function(options) {
     options.feedbackType = this.TestResults.EDIT_BLOCKS;
   }
 
-  this.feedback_.displayFeedback(options, this.maxRequiredBlocksToFlag_);
+  this.feedback_.displayFeedback(options, this.requiredBlocks_,
+      this.maxRequiredBlocksToFlag_);
 };
 
 /**
@@ -987,7 +988,7 @@ StudioApp.prototype.displayFeedback = function(options) {
  */
 StudioApp.prototype.getTestResults = function(levelComplete, options) {
   return this.feedback_.getTestResults(levelComplete,
-      this.checkForEmptyBlocks_, options);
+      this.requiredBlocks_, this.checkForEmptyBlocks_, options);
 };
 
 // Builds the dom to get more info from the user. After user enters info
@@ -1158,7 +1159,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
 
   this.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
   this.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
-  this.REQUIRED_BLOCKS = config.level.requiredBlocks || [];
+  this.requiredBlocks_ = config.level.requiredBlocks || [];
 
   // enableShowCode defaults to true if not defined
   this.enableShowCode = (config.enableShowCode !== false);
@@ -6551,10 +6552,12 @@ var KeyCodes = constants.KeyCodes;
 
 /**
  * @param {Object} options
+ * @param {!Array} requiredBlocks The blocks that are required to be used in
+ *   the solution to this level.
  * @param {number} maxRequiredBlocksToFlag The number of required blocks to
  *   give hints about at any one time.  Set this to Infinity to show all.
  */
-FeedbackUtils.prototype.displayFeedback = function(options,
+FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
     maxRequiredBlocksToFlag) {
   options.hintRequestExperiment = options.response &&
       options.response.hint_request_placement;
@@ -6580,9 +6583,10 @@ FeedbackUtils.prototype.displayFeedback = function(options,
   }
   var feedbackBlocks;
   if (this.studioApp_.isUsingBlockly()) {
-    feedbackBlocks = new FeedbackBlocks(options,
-                                        this.getMissingRequiredBlocks_(maxRequiredBlocksToFlag),
-                                        this.studioApp_);
+    feedbackBlocks = new FeedbackBlocks(
+        options,
+        this.getMissingRequiredBlocks_(requiredBlocks, maxRequiredBlocksToFlag),
+        this.studioApp_);
   }
   // feedbackMessage must be initialized after feedbackBlocks
   // because FeedbackBlocks can mutate options.response.hint.
@@ -7317,7 +7321,7 @@ FeedbackUtils.prototype.checkForEmptyContainerBlockFailure_ = function() {
   if (type === 'procedures_defnoreturn' || type === 'procedures_defreturn') {
     return TestResults.EMPTY_FUNCTION_BLOCK_FAIL;
   }
-  
+
   // Block is assumed to be "if" or "repeat" if we reach here.
   // This is where to add checks if you want a different TestResult
   // for "controls_for_counter" blocks, for example.
@@ -7326,13 +7330,15 @@ FeedbackUtils.prototype.checkForEmptyContainerBlockFailure_ = function() {
 
 /**
  * Check whether the user code has all the blocks required for the level.
+ * @param {!Array} requiredBlocks The blocks that are required to be used in
+ *   the solution to this level.
  * @return {boolean} true if all blocks are present, false otherwise.
  */
-FeedbackUtils.prototype.hasAllRequiredBlocks_ = function() {
+FeedbackUtils.prototype.hasAllRequiredBlocks_ = function(requiredBlocks) {
   // It's okay (maybe faster) to pass 1 for maxBlocksToFlag, since in the end
   // we want to check that there are zero blocks missing.
   var maxBlocksToFlag = 1;
-  return this.getMissingRequiredBlocks_(maxBlocksToFlag).blocksToDisplay.length === 0;
+  return this.getMissingRequiredBlocks_(requiredBlocks, maxBlocksToFlag).blocksToDisplay.length === 0;
 };
 
 /**
@@ -7365,30 +7371,31 @@ FeedbackUtils.prototype.getCountableBlocks_ = function() {
 
 /**
  * Check to see if the user's code contains the required blocks for a level.
- * @param {number} requiredBlocksToFlag The maximum number of blocks to return.
+ * @param {!Array} requiredBlocks The blocks that are required to be used in
+ *   the solution to this level.
+ * @param {number} maxBlocksToFlag The maximum number of blocks to return.
  * @return {{blocksToDisplay:!Array, message:?string}} 'missingBlocks' is an
- * array of array of strings where each array of strings is a set of blocks that
- * at least one of them should be used. Each block is represented as the prefix
- * of an id in the corresponding template.soy. 'message' is an optional message
- * to override the default error text.
+ *   array of array of strings where each array of strings is a set of blocks
+ *   that at least one of them should be used. Each block is represented as the
+ *   prefix of an id in the corresponding template.soy. 'message' is an
+ *   optional message to override the default error text.
  */
-FeedbackUtils.prototype.getMissingRequiredBlocks_ = function (
-    requiredBlocksToFlag ) {
+FeedbackUtils.prototype.getMissingRequiredBlocks_ = function (requiredBlocks,
+    maxBlocksToFlag) {
   var missingBlocks = [];
   var customMessage = null;
   var code = null;  // JavaScript code, which is initialized lazily.
-  // TODO (br-pair) : we should probably just pass required_blocks
-  if (this.studioApp_.REQUIRED_BLOCKS && this.studioApp_.REQUIRED_BLOCKS.length) {
+  if (requiredBlocks && requiredBlocks.length) {
     var userBlocks = this.getUserBlocks_();
     // For each list of required blocks
     // Keep track of the number of the missing block lists. It should not be
-    // bigger than the requiredBlocksToFlag param.
+    // bigger than the maxBlocksToFlag param.
     var missingBlockNum = 0;
     for (var i = 0;
-         i < this.studioApp_.REQUIRED_BLOCKS.length &&
-             missingBlockNum < requiredBlocksToFlag;
+         i < requiredBlocks.length &&
+             missingBlockNum < maxBlocksToFlag;
          i++) {
-      var requiredBlock = this.studioApp_.REQUIRED_BLOCKS[i];
+      var requiredBlock = requiredBlocks[i];
       // For each of the test
       // If at least one of the tests succeeded, we consider the required block
       // is used
@@ -7416,7 +7423,7 @@ FeedbackUtils.prototype.getMissingRequiredBlocks_ = function (
       }
       if (!usedRequiredBlock) {
         missingBlockNum++;
-        missingBlocks = missingBlocks.concat(this.studioApp_.REQUIRED_BLOCKS[i][0]);
+        missingBlocks = missingBlocks.concat(requiredBlocks[i][0]);
       }
     }
   }
@@ -7455,12 +7462,14 @@ FeedbackUtils.prototype.hasExtraTopBlocks = function () {
 /**
  * Runs the tests and returns results.
  * @param {boolean} levelComplete Did the user successfully complete the level?
+ * @param {!Array} requiredBlocks The blocks that are required to be used in
+ *   the solution to this level.
  * @param {boolean} shouldCheckForEmptyBlocks Whether empty blocks should cause
  *   a test fail result.
  * @param {Object} options
  * @return {number} The appropriate property of TestResults.
  */
-FeedbackUtils.prototype.getTestResults = function(levelComplete,
+FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
     shouldCheckForEmptyBlocks, options) {
   options = options || {};
   if (this.studioApp_.editCode) {
@@ -7495,7 +7504,7 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete,
   if (this.hasQuestionMarksInNumberField_()) {
     return TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
   }
-  if (!this.hasAllRequiredBlocks_()) {
+  if (!this.hasAllRequiredBlocks_(requiredBlocks)) {
     return levelComplete ?
         TestResults.MISSING_BLOCK_FINISHED :
         TestResults.MISSING_BLOCK_UNFINISHED;
