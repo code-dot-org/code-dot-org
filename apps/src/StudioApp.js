@@ -9,6 +9,7 @@ var constants = require('./constants.js');
 var msg = require('../locale/current/common');
 var blockUtils = require('./block_utils');
 var url = require('url');
+var FeedbackUtils = require('./feedback');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -26,8 +27,8 @@ var BLOCK_Y_COORDINATE = 30;
 var MAX_PHONE_WIDTH = 500;
 
 
-var StudioAppClass = function () {
-  this.feedback_ = null;
+var StudioApp = function () {
+  this.feedback_ = new FeedbackUtils(this);
 
   /**
   * The parent directory of the apps. Contains common.js.
@@ -46,7 +47,7 @@ var StudioAppClass = function () {
 
   this.enableShowCode = true;
   this.editCode = false;
-  this.usingBlockly = true;
+  this.usingBlockly_ = true;
   this.cdoSounds = null;
   this.Dialog = null;
   this.editor = null;
@@ -62,10 +63,10 @@ var StudioAppClass = function () {
   // The following properties get their non-default values set by the application.
 
   /**
-  * Whether to alert user to empty blocks, short-circuiting all other tests.
-  */
-  // TODO (br-pair) : this isnt actually a constant
-  this.CHECK_FOR_EMPTY_BLOCKS = undefined;
+   * Whether to alert user to empty blocks, short-circuiting all other tests.
+   * @member {boolean}
+   */
+  this.checkForEmptyBlocks_ = false;
 
   /**
   * The ideal number of blocks to solve this level.  Users only get 2
@@ -91,14 +92,14 @@ var StudioAppClass = function () {
   *   start and end tags.
   * @type {!Array=}
   */
-  this.REQUIRED_BLOCKS = undefined;
+  this.requiredBlocks_ = [];
 
   /**
   * The number of required blocks to give hints about at any one time.
   * Set this to Infinity to show all.
   * @type {!number=}
   */
-  this.NUM_REQUIRED_BLOCKS_TO_FLAG = undefined;
+  this.maxRequiredBlocksToFlag_ = 1;
 
   /**
   * The number of attempts (how many times the run button has been pressed)
@@ -145,20 +146,20 @@ var StudioAppClass = function () {
 
   this.MIN_WORKSPACE_HEIGHT = undefined;
 };
-
-module.exports = StudioAppClass;
+module.exports = StudioApp;
+StudioApp.singleton = new StudioApp();
 
 /**
- * Configure StudioAppClass options
+ * Configure StudioApp options
  */
-StudioAppClass.prototype.configure = function (options) {
+StudioApp.prototype.configure = function (options) {
   this.BASE_URL = options.baseUrl;
   this.CACHE_BUST = options.cacheBust;
   this.LOCALE = options.locale || this.LOCALE;
-  // NOTE: editCode (which currently implies droplet) and usingBlockly are
+  // NOTE: editCode (which currently implies droplet) and usingBlockly_ are
   // currently mutually exclusive.
   this.editCode = options.level && options.level.editCode;
-  this.usingBlockly = !this.editCode;
+  this.usingBlockly_ = !this.editCode;
   this.cdoSounds = options.cdoSounds;
   this.Dialog = options.Dialog;
 
@@ -170,7 +171,7 @@ StudioAppClass.prototype.configure = function (options) {
 /**
  * Common startup tasks for all apps.
  */
-StudioAppClass.prototype.init = function(config) {
+StudioApp.prototype.init = function(config) {
   if (!config) {
     config = {};
   }
@@ -179,7 +180,7 @@ StudioAppClass.prototype.init = function(config) {
 
   this.configureDom_(config);
 
-  if (config.hide_source) {
+  if (config.hideSource) {
     this.handleHideSource_({
       containerId: config.containerId,
       embed: config.embed,
@@ -332,7 +333,7 @@ StudioAppClass.prototype.init = function(config) {
     });
   }
 
-  if (this.usingBlockly) {
+  if (this.isUsingBlockly()) {
     this.handleUsingBlockly_(config);
   }
 
@@ -360,7 +361,7 @@ StudioAppClass.prototype.init = function(config) {
   this.setIdealBlockNumber_();
 
   // TODO (cpirich): implement block count for droplet (for now, blockly only)
-  if (this.usingBlockly) {
+  if (this.isUsingBlockly()) {
     Blockly.mainBlockSpaceEditor.addChangeListener(_.bind(function() {
       this.updateBlockCount();
     }, this));
@@ -372,9 +373,18 @@ StudioAppClass.prototype.init = function(config) {
 };
 
 /**
+ * TRUE if the current app uses blockly (as opposed to editCode or another
+ * editor)
+ * @return {boolean}
+ */
+StudioApp.prototype.isUsingBlockly = function () {
+  return this.usingBlockly_;
+};
+
+/**
  *
  */
-StudioAppClass.prototype.handleSharing_ = function (options) {
+StudioApp.prototype.handleSharing_ = function (options) {
   // 1. Move the buttons, 2. Hide the slider in the share page for mobile.
   var belowVisualization = document.getElementById('belowVisualization');
   if (dom.isMobile()) {
@@ -438,9 +448,9 @@ StudioAppClass.prototype.handleSharing_ = function (options) {
 /**
  * Get the url of path appended to BASE_URL
  */
-StudioAppClass.prototype.assetUrl_ = function (path) {
+StudioApp.prototype.assetUrl_ = function (path) {
   if (this.BASE_URL === undefined) {
-    throw new Error('StudioAppClass BASE_URL has not been set. ' +
+    throw new Error('StudioApp BASE_URL has not been set. ' +
       'Call configure() first');
   }
   return this.BASE_URL + path;
@@ -452,7 +462,7 @@ StudioAppClass.prototype.assetUrl_ = function (path) {
  * @param {boolean} shouldPlayOpeningAnimation True if an opening animation is
  *   to be played.
  */
-StudioAppClass.prototype.reset = function (shouldPlayOpeningAnimation) {
+StudioApp.prototype.reset = function (shouldPlayOpeningAnimation) {
   // TODO (bbuchanan): Look for comon reset logic we can pull here
   // Override in app subclass
 };
@@ -461,13 +471,13 @@ StudioAppClass.prototype.reset = function (shouldPlayOpeningAnimation) {
 /**
  * Override to change run behavior.
  */
-StudioAppClass.prototype.runButtonClick = function() {};
+StudioApp.prototype.runButtonClick = function() {};
 
 /**
  * Toggle whether run button or reset button is shown
  * @param {string} button Button to show, either "run" or "reset"
  */
-StudioAppClass.prototype.toggleRunReset = function(button) {
+StudioApp.prototype.toggleRunReset = function(button) {
   var showRun = (button === 'run');
   if (button !== 'run' && button !== 'reset') {
     throw "Unexpected input";
@@ -484,8 +494,8 @@ StudioAppClass.prototype.toggleRunReset = function(button) {
 /**
  *
  */
-StudioAppClass.prototype.loadAudio = function(filenames, name) {
-  if (this.usingBlockly) {
+StudioApp.prototype.loadAudio = function(filenames, name) {
+  if (this.isUsingBlockly()) {
     Blockly.loadAudio_(filenames, name);
   } else if (this.cdoSounds) {
     var regOpts = { id: name };
@@ -504,11 +514,11 @@ StudioAppClass.prototype.loadAudio = function(filenames, name) {
 /**
  *
  */
-StudioAppClass.prototype.playAudio = function(name, options) {
+StudioApp.prototype.playAudio = function(name, options) {
   options = options || {};
   var defaultOptions = {volume: 0.5};
   var newOptions = utils.extend(defaultOptions, options);
-  if (this.usingBlockly) {
+  if (this.isUsingBlockly()) {
     Blockly.playAudio(name, newOptions);
   } else if (this.cdoSounds) {
     this.cdoSounds.play(name, newOptions);
@@ -518,8 +528,8 @@ StudioAppClass.prototype.playAudio = function(name, options) {
 /**
  *
  */
-StudioAppClass.prototype.stopLoopingAudio = function(name) {
-  if (this.usingBlockly) {
+StudioApp.prototype.stopLoopingAudio = function(name) {
+  if (this.isUsingBlockly()) {
     Blockly.stopLoopingAudio(name);
   } else if (this.cdoSounds) {
     this.cdoSounds.stopLoopingAudio(name);
@@ -538,7 +548,7 @@ StudioAppClass.prototype.stopLoopingAudio = function(name) {
 *    true.
 * @param {DomElement} div The parent div in which to insert Blockly.
 */
-StudioAppClass.prototype.inject = function(div, options) {
+StudioApp.prototype.inject = function(div, options) {
   var defaults = {
     assetUrl: this.assetUrl,
     rtl: this.isRtl(),
@@ -551,7 +561,7 @@ StudioAppClass.prototype.inject = function(div, options) {
 /**
  * Returns true if the current HTML page is in right-to-left language mode.
  */
-StudioAppClass.prototype.isRtl = function() {
+StudioApp.prototype.isRtl = function() {
   var head = document.getElementsByTagName('head')[0];
   if (head && head.parentElement) {
     var dir = head.parentElement.getAttribute('dir');
@@ -564,7 +574,7 @@ StudioAppClass.prototype.isRtl = function() {
 /**
  * @return {string} Locale direction string based on app direction.
  */
-StudioAppClass.prototype.localeDirection = function() {
+StudioApp.prototype.localeDirection = function() {
   return (this.isRtl() ? 'rtl' : 'ltr');
 };
 
@@ -573,7 +583,7 @@ StudioAppClass.prototype.localeDirection = function() {
 * XML argument may be generated from the console with:
 * Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)).slice(5, -6)
 */
-StudioAppClass.prototype.initReadonly = function(options) {
+StudioApp.prototype.initReadonly = function(options) {
   Blockly.inject(document.getElementById('blockly'), {
     assetUrl: this.assetUrl,
     readOnly: true,
@@ -587,7 +597,7 @@ StudioAppClass.prototype.initReadonly = function(options) {
 * Load the editor with blocks.
 * @param {string} blocksXml Text representation of blocks.
 */
-StudioAppClass.prototype.loadBlocks = function(blocksXml) {
+StudioApp.prototype.loadBlocks = function(blocksXml) {
   var xml = parseXmlElement(blocksXml);
   Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, xml);
 };
@@ -599,7 +609,7 @@ StudioAppClass.prototype.loadBlocks = function(blocksXml) {
 * @return {string} String representation of start blocks xml, including
 *    block position.
 */
-StudioAppClass.prototype.arrangeBlockPosition = function(startBlocks, arrangement) {
+StudioApp.prototype.arrangeBlockPosition = function(startBlocks, arrangement) {
   var type, arrangeX, arrangeY;
   var xml = parseXmlElement(startBlocks);
   var xmlChildNodes = this.sortBlocksByVisibility(xml.childNodes);
@@ -631,7 +641,7 @@ StudioAppClass.prototype.arrangeBlockPosition = function(startBlocks, arrangemen
 * @return {Array.<Element>} A sorted array of xml blocks, with all
 *     visible blocks preceding all hidden blocks.
 */
-StudioAppClass.prototype.sortBlocksByVisibility = function(xmlBlocks) {
+StudioApp.prototype.sortBlocksByVisibility = function(xmlBlocks) {
   var visibleXmlBlocks = [];
   var hiddenXmlBlocks = [];
   for (var x = 0, xmlBlock; xmlBlocks && x < xmlBlocks.length; x++) {
@@ -646,11 +656,11 @@ StudioAppClass.prototype.sortBlocksByVisibility = function(xmlBlocks) {
   return visibleXmlBlocks.concat(hiddenXmlBlocks);
 };
 
-StudioAppClass.prototype.createModalDialogWithIcon = function(options) {
+StudioApp.prototype.createModalDialogWithIcon = function(options) {
   return this.feedback_.createModalDialogWithIcon(options);
 };
 
-StudioAppClass.prototype.showInstructions_ = function(level, autoClose) {
+StudioApp.prototype.showInstructions_ = function(level, autoClose) {
   var instructionsDiv = document.createElement('div');
   instructionsDiv.innerHTML = require('./templates/instructions.html')(level);
 
@@ -691,7 +701,7 @@ StudioAppClass.prototype.showInstructions_ = function(level, autoClose) {
 /**
 *  Resizes the blockly workspace.
 */
-StudioAppClass.prototype.onResize = function() {
+StudioApp.prototype.onResize = function() {
   var visualizationColumn = document.getElementById('visualizationColumn');
   var gameWidth = visualizationColumn.getBoundingClientRect().width;
 
@@ -716,7 +726,7 @@ StudioAppClass.prototype.onResize = function() {
   div.style.width = fullWorkspaceWidth + 'px';
 
   // Keep blocks static relative to the right edge in RTL mode
-  if (this.usingBlockly && Blockly.RTL && (fullWorkspaceWidth - oldWidth !== 0)) {
+  if (this.isUsingBlockly() && Blockly.RTL && (fullWorkspaceWidth - oldWidth !== 0)) {
     Blockly.mainBlockSpace.getTopBlocks().forEach(function(topBlock) {
       topBlock.moveBy(fullWorkspaceWidth - oldWidth, 0);
     });
@@ -751,17 +761,17 @@ StudioAppClass.prototype.onResize = function() {
 // |           toolboxWidth           |
 // |                 |         <--------- workspaceWidth ---------->         |
 // |         <---------------- fullWorkspaceWidth ----------------->         |
-StudioAppClass.prototype.resizeHeaders = function (fullWorkspaceWidth) {
+StudioApp.prototype.resizeHeaders = function (fullWorkspaceWidth) {
   var minWorkspaceWidthForShowCode = this.editCode ? 250 : 450;
   var toolboxWidth = 0;
   if (this.editCode) {
     // If in the droplet editor, but not using blocks, keep categoryWidth at 0
-    if (!this.editCode || this.editor.currentlyUsingBlocks) {
+    if (this.editor.currentlyUsingBlocks) {
       // Set toolboxWidth based on the block palette width:
       var categories = document.querySelector('.droplet-palette-wrapper');
       toolboxWidth = parseInt(window.getComputedStyle(categories).width, 10);
     }
-  } else if (this.usingBlockly) {
+  } else if (this.isUsingBlockly()) {
     toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
   }
 
@@ -786,8 +796,8 @@ StudioAppClass.prototype.resizeHeaders = function (fullWorkspaceWidth) {
 * @param {?string} id ID of block that triggered this action.
 * @param {boolean} spotlight Optional.  Highlight entire block if true
 */
-StudioAppClass.prototype.highlight = function(id, spotlight) {
-  if (this.usingBlockly) {
+StudioApp.prototype.highlight = function(id, spotlight) {
+  if (this.isUsingBlockly()) {
     if (id) {
       var m = id.match(/^block_id_(\d+)$/);
       if (m) {
@@ -802,7 +812,7 @@ StudioAppClass.prototype.highlight = function(id, spotlight) {
 /**
 * Remove highlighting from all blocks
 */
-StudioAppClass.prototype.clearHighlighting = function () {
+StudioApp.prototype.clearHighlighting = function () {
   this.highlight(null);
 };
 
@@ -812,7 +822,7 @@ StudioAppClass.prototype.clearHighlighting = function () {
 * @param {{feedbackType: number}} Test results (a constant property of
 *     this.TestResults).
 */
-StudioAppClass.prototype.displayFeedback = function(options) {
+StudioApp.prototype.displayFeedback = function(options) {
   options.Dialog = this.Dialog;
   options.onContinue = this.onContinue;
   options.backToPreviousLevel = this.backToPreviousLevel;
@@ -823,20 +833,25 @@ StudioAppClass.prototype.displayFeedback = function(options) {
     options.feedbackType = this.TestResults.EDIT_BLOCKS;
   }
 
-  this.feedback_.displayFeedback(options);
+  this.feedback_.displayFeedback(options, this.requiredBlocks_,
+      this.maxRequiredBlocksToFlag_);
 };
 
 /**
- *
+ * Runs the tests and returns results.
+ * @param {boolean} levelComplete Was the level completed successfully?
+ * @param {Object} options
+ * @return {number} The appropriate property of TestResults.
  */
-StudioAppClass.prototype.getTestResults = function(levelComplete, options) {
-  return this.feedback_.getTestResults(levelComplete, options);
+StudioApp.prototype.getTestResults = function(levelComplete, options) {
+  return this.feedback_.getTestResults(levelComplete,
+      this.requiredBlocks_, this.checkForEmptyBlocks_, options);
 };
 
 // Builds the dom to get more info from the user. After user enters info
 // and click "create level" onAttemptCallback is called to deliver the info
 // to the server.
-StudioAppClass.prototype.builderForm_ = function(onAttemptCallback) {
+StudioApp.prototype.builderForm_ = function(onAttemptCallback) {
   var builderDetails = document.createElement('div');
   builderDetails.innerHTML = require('./templates/builder.html')();
   var dialog = this.createModalDialogWithIcon({
@@ -869,7 +884,7 @@ StudioAppClass.prototype.builderForm_ = function(onAttemptCallback) {
 * {string} program The user program, which will get URL-encoded.
 * {function} onComplete Function to be called upon completion.
 */
-StudioAppClass.prototype.report = function(options) {
+StudioApp.prototype.report = function(options) {
   // copy from options: app, level, result, testResult, program, onComplete
   var report = options;
   report.pass = this.feedback_.canContinueToNextLevel(options.testResult);
@@ -905,11 +920,11 @@ StudioAppClass.prototype.report = function(options) {
 /**
 * Click the reset button.  Reset the application.
 */
-StudioAppClass.prototype.resetButtonClick = function() {
+StudioApp.prototype.resetButtonClick = function() {
   this.onResetPressed();
   this.toggleRunReset('run');
   this.clearHighlighting();
-  if (this.usingBlockly) {
+  if (this.isUsingBlockly()) {
     Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
     Blockly.mainBlockSpace.traceOn(false);
   }
@@ -919,7 +934,7 @@ StudioAppClass.prototype.resetButtonClick = function() {
 /**
 * Add count of blocks used.
 */
-StudioAppClass.prototype.updateBlockCount = function() {
+StudioApp.prototype.updateBlockCount = function() {
   // If the number of block used is bigger than the ideal number of blocks,
   // set it to be yellow, otherwise, keep it as black.
   var element = document.getElementById('blockUsed');
@@ -940,7 +955,7 @@ StudioAppClass.prototype.updateBlockCount = function() {
 /**
  * Set the ideal Number of blocks.
  */
-StudioAppClass.prototype.setIdealBlockNumber_ = function() {
+StudioApp.prototype.setIdealBlockNumber_ = function() {
   var element = document.getElementById('idealBlockNumber');
   if (!element) {
     return;
@@ -957,7 +972,7 @@ StudioAppClass.prototype.setIdealBlockNumber_ = function() {
 /**
  *
  */
-StudioAppClass.prototype.fixViewportForSmallScreens_ = function (viewport) {
+StudioApp.prototype.fixViewportForSmallScreens_ = function (viewport) {
   var deviceWidth;
   var desiredWidth;
   var minWidth;
@@ -991,17 +1006,17 @@ StudioAppClass.prototype.fixViewportForSmallScreens_ = function (viewport) {
 /**
  *
  */
-StudioAppClass.prototype.setConfigValues_ = function (config) {
+StudioApp.prototype.setConfigValues_ = function (config) {
   this.share = config.share;
 
   // if true, dont provide links to share on fb/twitter
   this.disableSocialShare = config.disableSocialShare;
   this.sendToPhone = config.sendToPhone;
-  this.noPadding = config.no_padding;
+  this.noPadding = config.noPadding;
 
   this.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
   this.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
-  this.REQUIRED_BLOCKS = config.level.requiredBlocks || [];
+  this.requiredBlocks_ = config.level.requiredBlocks || [];
 
   // enableShowCode defaults to true if not defined
   this.enableShowCode = (config.enableShowCode !== false);
@@ -1025,7 +1040,7 @@ StudioAppClass.prototype.setConfigValues_ = function (config) {
  * Begin modifying the DOM based on config.
  * Note: Has side effects on config
  */
-StudioAppClass.prototype.configureDom_ = function (config) {
+StudioApp.prototype.configureDom_ = function (config) {
   var container = document.getElementById(config.containerId);
   container.innerHTML = config.html;
   var runButton = container.querySelector('#runButton');
@@ -1048,7 +1063,7 @@ StudioAppClass.prototype.configureDom_ = function (config) {
     visualizationColumn.style.margin = "0 auto";
   }
 
-  if (this.usingBlockly && config.level.edit_blocks) {
+  if (this.isUsingBlockly() && config.level.edit_blocks) {
     // Set a class on the main blockly div so CSS can style blocks differently
     Blockly.addClass_(container.querySelector('#blockly'), 'edit');
     // If in level builder editing blocks, make workspace extra tall
@@ -1061,7 +1076,7 @@ StudioAppClass.prototype.configureDom_ = function (config) {
     // Enable param & var editing in levelbuilder, regardless of level setting
     config.level.disableParamEditing = false;
     config.level.disableVariableEditing = false;
-  } else if (!config.hide_source) {
+  } else if (!config.hideSource) {
     visualizationColumn.style.minHeight = this.MIN_WORKSPACE_HEIGHT + 'px';
   }
 
@@ -1075,7 +1090,7 @@ StudioAppClass.prototype.configureDom_ = function (config) {
 /**
  *
  */
-StudioAppClass.prototype.handleHideSource_ = function (options) {
+StudioApp.prototype.handleHideSource_ = function (options) {
   var container = document.getElementById(options.containerId);
   this.hideSource = true;
   var workspaceDiv = this.editCode ?
@@ -1116,7 +1131,7 @@ StudioAppClass.prototype.handleHideSource_ = function (options) {
   }
 };
 
-StudioAppClass.prototype.handleEditCode_ = function (options) {
+StudioApp.prototype.handleEditCode_ = function (options) {
   // using window.require forces us to use requirejs version of require
   window.require(['droplet'], _.bind(function(droplet) {
     var displayMessage, examplePrograms, messageElement, onChange, startingText;
@@ -1152,12 +1167,20 @@ StudioAppClass.prototype.handleEditCode_ = function (options) {
 };
 
 /**
+ * Set whether to alert user to empty blocks, short-circuiting all other tests.
+ * @param {boolean} checkBlocks Whether to check for empty blocks.
+ */
+StudioApp.prototype.setCheckForEmptyBlocks = function (checkBlocks) {
+  this.checkForEmptyBlocks_ = checkBlocks;
+};
+
+/**
  *
  */
-StudioAppClass.prototype.handleUsingBlockly_ = function (config) {
+StudioApp.prototype.handleUsingBlockly_ = function (config) {
   // Allow empty blocks if editing blocks.
   if (config.level.edit_blocks) {
-    this.CHECK_FOR_EMPTY_BLOCKS = false;
+    this.checkForEmptyBlocks_ = false;
     if (config.level.edit_blocks === 'required_blocks' ||
       config.level.edit_blocks === 'toolbox_blocks') {
       // Don't show when run block for toolbox/required block editing
@@ -1218,7 +1241,7 @@ StudioAppClass.prototype.handleUsingBlockly_ = function (config) {
 /**
  * Modify the workspace header after a droplet blocks/code toggle
  */
-StudioAppClass.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
+StudioApp.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
   // Update header titles:
   var showCodeHeader = document.getElementById('show-code-header');
   var newButtonTitle = usingBlocks ? msg.showCodeHeader() :
@@ -1243,6 +1266,6 @@ StudioAppClass.prototype.updateHeadersAfterDropletToggle_ = function (usingBlock
 /**
  * Do we have any floating blocks not attached to an event block or function block?
  */
-StudioAppClass.prototype.hasExtraTopBlocks = function () {
+StudioApp.prototype.hasExtraTopBlocks = function () {
   return this.feedback_.hasExtraTopBlocks();
 };

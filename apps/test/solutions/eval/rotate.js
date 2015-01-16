@@ -1,5 +1,6 @@
-var TestResults = require('../../../src/constants.js').TestResults;
-var blockUtils = require('../../../src/block_utils');
+var testUtils = require('../../util/testUtils');
+var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
+var blockUtils = require(testUtils.buildPath('block_utils'));
 
 var solutionXml = blockUtils.mathBlockXml('rotate', {
   'IMAGE': blockUtils.mathBlockXml('functional_rectangle', {

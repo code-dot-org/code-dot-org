@@ -1,5 +1,4 @@
 class RegistrationsController < Devise::RegistrationsController
-  before_filter :nonminimal
 
   def update
     @user = User.find(current_user.id)

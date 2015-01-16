@@ -9,7 +9,7 @@
     var date = new Date();
     date.setTime(date.getTime()+(exdays*60*60*24*1000));
     var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
-    var domainName = "#{host}";
-    c_value += "; domain=." + escape(domainName);
+    var domainName = "#{request.site}";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
     document.cookie=c_name + "=" + c_value;
   }

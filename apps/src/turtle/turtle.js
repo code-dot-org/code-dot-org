@@ -77,7 +77,7 @@ var ELSA_DECORATION_DETAILS = [
 
 /**
  * An instantiable Artist class
- * @param {StudioAppClass} studioApp The studioApp instance to build upon.
+ * @param {StudioApp} studioApp The studioApp instance to build upon.
  */
 var Artist = function () {
   this.skin = null;
@@ -140,8 +140,7 @@ Artist.prototype.injectStudioApp = function (studioApp) {
   this.studioApp_.reset = _.bind(this.reset, this);
   this.studioApp_.runButtonClick = _.bind(this.runButtonClick, this);
 
-  this.studioApp_.CHECK_FOR_EMPTY_BLOCKS = true;
-  this.studioApp_.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
+  this.studioApp_.setCheckForEmptyBlocks(true);
 };
 
 /**
@@ -149,7 +148,7 @@ Artist.prototype.injectStudioApp = function (studioApp) {
  */
 Artist.prototype.init = function(config) {
   if (!this.studioApp_) {
-    throw new Error("Artist requires a StudioAppClass");
+    throw new Error("Artist requires a StudioApp");
   }
 
   this.skin = config.skin;
@@ -228,7 +227,7 @@ Artist.prototype.afterInject_ = function (config) {
     this.speedSlider.setValue(config.level.sliderSpeed);
   }
 
-  if (this.studioApp_.usingBlockly) {
+  if (this.studioApp_.isUsingBlockly()) {
     // Add to reserved word list: API, local variables in execution evironment
     // (execute) and the infinite loop detection function.
     Blockly.JavaScript.addReservedWords('Turtle,code');
@@ -250,7 +249,7 @@ Artist.prototype.afterInject_ = function (config) {
   this.ctxDisplay = displayCanvas.getContext('2d');
 
   // TODO (br-pair): - pull this out?
-  if (this.studioApp_.usingBlockly && (this.skin.id === "anna" || this.skin.id === "elsa")) {
+  if (this.studioApp_.isUsingBlockly() && (this.skin.id === "anna" || this.skin.id === "elsa")) {
     // Override colour_random to only generate random colors from within our frozen
     // palette
     Blockly.JavaScript.colour_random = function() {
@@ -340,7 +339,7 @@ Artist.prototype.drawLogOnCanvas = function(log, canvas) {
  */
 Artist.prototype.drawBlocksOnCanvas = function(blocksOrCode, canvas) {
   var code;
-  if (this.studioApp_.usingBlockly) {
+  if (this.studioApp_.isUsingBlockly()) {
     var domBlocks = Blockly.Xml.textToDom(blocksOrCode);
     Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, domBlocks);
     code = Blockly.Generator.blockSpaceToCode('JavaScript');
@@ -348,7 +347,7 @@ Artist.prototype.drawBlocksOnCanvas = function(blocksOrCode, canvas) {
     code = blocksOrCode;
   }
   this.evalCode(code);
-  if (this.studioApp_.usingBlockly) {
+  if (this.studioApp_.isUsingBlockly()) {
     Blockly.mainBlockSpace.clear();
   }
   this.drawCurrentBlocksOnCanvas(canvas);
@@ -655,7 +654,7 @@ Artist.prototype.display = function() {
 Artist.prototype.runButtonClick = function () {
   this.studioApp_.toggleRunReset('reset');
   document.getElementById('spinner').style.visibility = 'visible';
-  if (this.studioApp_.usingBlockly) {
+  if (this.studioApp_.isUsingBlockly()) {
     Blockly.mainBlockSpace.traceOn(true);
   }
   this.studioApp_.attempts++;
@@ -731,7 +730,7 @@ Artist.prototype.execute = function() {
 
   this.pid = window.setTimeout(_.bind(this.animate, this), 100);
 
-  if (this.studioApp_.usingBlockly) {
+  if (this.studioApp_.isUsingBlockly()) {
     // Disable toolbox while running
     Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
   }
@@ -810,7 +809,7 @@ Artist.prototype.executeTuple_ = function () {
  */
 Artist.prototype.finishExecution_ = function () {
   document.getElementById('spinner').style.visibility = 'hidden';
-  if (this.studioApp_.usingBlockly) {
+  if (this.studioApp_.isUsingBlockly()) {
     Blockly.mainBlockSpace.highlightBlock(null);
   }
   this.checkAnswer();
@@ -836,10 +835,10 @@ Artist.prototype.animate = function() {
     var stepped = true;
     while (stepped) {
       codegen.selectCurrentCode(this.interpreter,
-                                this.studioApp_.editor,
                                 this.cumulativeLength,
                                 this.userCodeStartOffset,
-                                this.userCodeLength);
+                                this.userCodeLength,
+                                this.studioApp_.editor);
       try {
         stepped = this.interpreter.step();
       }
@@ -1322,7 +1321,7 @@ Artist.prototype.checkAnswer = function() {
   this.testResults = this.studioApp_.getTestResults(levelComplete);
 
   var program;
-  if (this.studioApp_.usingBlockly) {
+  if (this.studioApp_.isUsingBlockly()) {
     var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
     program = Blockly.Xml.domToText(xml);
   }
@@ -1350,7 +1349,7 @@ Artist.prototype.checkAnswer = function() {
     // Check that they didn't use a crazy large repeat value when drawing a
     // circle.  This complains if the limit doesn't start with 3.
     // Note that this level does not use colour, so no need to check for that.
-    if (level.failForCircleRepeatValue && this.studioApp_.usingBlockly) {
+    if (level.failForCircleRepeatValue && this.studioApp_.isUsingBlockly()) {
       var code = Blockly.Generator.blockSpaceToCode('JavaScript');
       if (code.indexOf('count < 3') == -1) {
         this.testResults =
@@ -1408,7 +1407,7 @@ Artist.prototype.checkAnswer = function() {
 
   this.studioApp_.report(reportData);
 
-  if (this.studioApp_.usingBlockly) {
+  if (this.studioApp_.isUsingBlockly()) {
     // reenable toolbox
     Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
   }

@@ -12,7 +12,7 @@
 = render partial: 'shared/user_stats', locals: { user: @user }
 
 - if current_user && current_user.admin?
-  %div{ style: "border: 1px solid red;clear:both"}
+  %div{style: 'border: 1px solid red; clear: both;'}
     Admin:
     %br
     name: #{@user.name}
@@ -28,4 +28,3 @@
       gender: #{@user.gender}
     %br
     teachers: #{raw @user.teachers.map { |t| link_to(t.name, user_stats_path(t)) }.join(', ')}
-

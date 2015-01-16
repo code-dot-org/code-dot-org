@@ -19,6 +19,7 @@ group :development do
   gem 'rerun', '~> 0.10.0'
   gem 'shotgun'
   gem 'thin', '~> 1.6.2'
+  gem "rack-proxy" # enabling proxying requests to dashboard to pegasus (in production we use varnish to route things)
 end
 
 group :development, :test do
@@ -45,6 +46,10 @@ group :development, :test do
   gem 'chromedriver-helper', '~> 0.0.7'
   gem 'colorize'
   gem 'parallel'
+  gem 'spring'
+  gem 'spring-commands-testunit'
+  gem 'minitest-reporters'
+  gem 'eyes_selenium'
 end
 
 group :doc do
@@ -128,3 +133,4 @@ gem 'user_agent_parser'
 gem 'heroku_rails_deflate', :group => [:staging, :test, :production] # gzip rails content and static assets
 
 gem "paranoia", "~> 2.0" # 'delete' Rails model objects by setting a deleted_at column instead of deleting the row
+

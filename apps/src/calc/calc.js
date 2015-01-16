@@ -21,7 +21,7 @@ var Calc = module.exports;
 /**
  * Create a namespace for the application.
  */
-var StudioApp = require('../base');
+var studioApp = require('../StudioApp').singleton;
 var Calc = module.exports;
 var commonMsg = require('../../locale/current/common');
 var calcMsg = require('../../locale/current/calc');
@@ -36,7 +36,8 @@ var _ = require('../utils').getLodash();
 var timeoutList = require('../timeoutList');
 
 var ExpressionNode = require('./expressionNode');
-var TestResults = require('../constants').TestResults;
+
+var TestResults = studioApp.TestResults;
 
 var level;
 var skin;
@@ -45,8 +46,7 @@ var skin;
 // use zzz for sorting purposes (which is also hacky)
 var COMPUTE_NAME = 'zzz_compute';
 
-StudioApp.CHECK_FOR_EMPTY_BLOCKS = false;
-StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
+studioApp.setCheckForEmptyBlocks(false);
 
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
@@ -99,12 +99,12 @@ Calc.init = function(config) {
   config.enableShowCode = false;
 
   config.html = page({
-    assetUrl: StudioApp.assetUrl,
+    assetUrl: studioApp.assetUrl,
     data: {
-      localeDirection: StudioApp.localeDirection(),
+      localeDirection: studioApp.localeDirection(),
       visualization: require('./visualization.html')(),
       controls: require('./controls.html')({
-        assetUrl: StudioApp.assetUrl
+        assetUrl: studioApp.assetUrl
       }),
       blockUsed : undefined,
       idealBlockNumber : undefined,
@@ -114,9 +114,9 @@ Calc.init = function(config) {
   });
 
   config.loadAudio = function() {
-    StudioApp.loadAudio(skin.winSound, 'win');
-    StudioApp.loadAudio(skin.startSound, 'start');
-    StudioApp.loadAudio(skin.failureSound, 'failure');
+    studioApp.loadAudio(skin.winSound, 'win');
+    studioApp.loadAudio(skin.startSound, 'start');
+    studioApp.loadAudio(skin.failureSound, 'failure');
   };
 
   config.afterInject = function() {
@@ -158,26 +158,26 @@ Calc.init = function(config) {
     var visualizationColumn = document.getElementById('visualizationColumn');
     visualizationColumn.style.width = '400px';
 
-    // base's StudioApp.resetButtonClick will be called first
+    // base's studioApp.resetButtonClick will be called first
     var resetButton = document.getElementById('resetButton');
     dom.addClickTouchEvent(resetButton, Calc.resetButtonClick);
   };
 
-  StudioApp.init(config);
+  studioApp.init(config);
 };
 
 /**
  * Click the run button.  Start the program.
  */
-StudioApp.runButtonClick = function() {
-  StudioApp.toggleRunReset('reset');
+studioApp.runButtonClick = function() {
+  studioApp.toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
-  StudioApp.attempts++;
+  studioApp.attempts++;
   Calc.execute();
 };
 
 /**
- * App specific reset button click logic.  StudioApp.resetButtonClick will be
+ * App specific reset button click logic.  studioApp.resetButtonClick will be
  * called first.
  */
 Calc.resetButtonClick = function () {
@@ -195,7 +195,7 @@ Calc.resetButtonClick = function () {
 function evalCode (code) {
   try {
     codegen.evalWith(code, {
-      StudioApp: StudioApp,
+      StudioApp: studioApp,
       Calc: api
     });
   } catch (e) {
@@ -244,7 +244,7 @@ function generateExpressionsFromBlockXml(blockXml) {
         "if we already have blocks in the workspace");
     }
     // Temporarily put the blocks into the workspace so that we can generate code
-    StudioApp.loadBlocks(blockXml);
+    studioApp.loadBlocks(blockXml);
   }
 
   var obj = generateExpressionsFromTopBlocks();
@@ -321,11 +321,13 @@ function getEquationFromBlock(block) {
  * Execute the user's code.
  */
 Calc.execute = function() {
-  appState.testResults = StudioApp.TestResults.NO_TESTS_RUN;
+  appState.testResults = TestResults.NO_TESTS_RUN;
   appState.message = undefined;
 
   appState.userExpressions = generateExpressionsFromTopBlocks();
 
+  // TODO (brent) - should this be using TestResult instead for consistency
+  // across apps?
   appState.result = true;
   _.keys(appState.targetExpressions).forEach(function (targetName) {
     var target = appState.targetExpressions[targetName];
@@ -338,18 +340,18 @@ Calc.execute = function() {
   var hasVariablesOrFunctions = _(appState.userExpressions).size() > 1;
   if (level.freePlay) {
     appState.result = true;
-    appState.testResults = StudioApp.TestResults.FREE_PLAY;
+    appState.testResults = TestResults.FREE_PLAY;
   } else {
     // todo -  should we have single place where we get single target/user?
     var user = appState.userExpressions[COMPUTE_NAME];
     var target = appState.targetExpressions[COMPUTE_NAME];
 
-    if (!appState.result && !hasVariablesOrFunctions &&
+    if (!appState.result && !hasVariablesOrFunctions && user &&
         user.isEquivalentTo(target)) {
       appState.testResults = TestResults.APP_SPECIFIC_FAIL;
       appState.message = calcMsg.equivalentExpression();
     } else {
-      appState.testResults = StudioApp.getTestResults(appState.result);
+      appState.testResults = studioApp.getTestResults(appState.result);
     }
   }
 
@@ -367,7 +369,7 @@ Calc.execute = function() {
     onComplete: onReportComplete
   };
 
-  StudioApp.report(reportData);
+  studioApp.report(reportData);
 
 
   appState.animating = true;
@@ -378,7 +380,7 @@ Calc.execute = function() {
     _(appState.userExpressions).keys().sort().forEach(function (name, index) {
       var expression = appState.userExpressions[name];
       var expected = appState.targetExpressions[name] || expression;
-      var tokenList = expression.getTokenListDiff(expected);
+      var tokenList = expression ? expression.getTokenListDiff(expected) : [];
       if (name === COMPUTE_NAME) {
         name = null;
       }
@@ -450,7 +452,7 @@ function animateUserExpression (maxNumSteps) {
     } else if (currentDepth + 1 === maxNumSteps) {
       var deepest = current.getDeepestOperation();
       if (deepest) {
-        StudioApp.highlight('block_id_' + deepest.blockId);
+        studioApp.highlight('block_id_' + deepest.blockId);
       }
       tokenList = current.getTokenList(true);
     } else {
@@ -544,7 +546,7 @@ function cloneNodeWithoutIds(elementId) {
 
 /**
  * App specific displayFeedback function that calls into
- * StudioApp.displayFeedback when appropriate
+ * studioApp.displayFeedback when appropriate
  */
 var displayFeedback = function() {
   if (!appState.response || appState.animating) {
@@ -571,7 +573,7 @@ var displayFeedback = function() {
     options.message = appState.message;
   }
 
-  StudioApp.displayFeedback(options);
+  studioApp.displayFeedback(options);
 };
 
 /**

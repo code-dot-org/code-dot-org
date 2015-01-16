@@ -210,7 +210,6 @@ module LevelsHelper
       x:initialX
       y:initialY
       maze:map
-      artist_builder:builder
       ani_gif_url:aniGifURL
       shapeways_url
       images
@@ -238,16 +237,21 @@ module LevelsHelper
       open_function_definition
       callout_json
       disable_sharing
+      hide_source
+      share
+      no_padding
+      show_finish
+      embed
     ).map{ |x| x.include?(':') ? x.split(':') : [x,x.camelize(:lower)]}]
     .each do |dashboard, blockly|
       # Select first valid value from 1. local_assigns, 2. property of @level object, 3. named instance variable, 4. properties json
       # Don't override existing valid (non-nil/empty) values
-      property = local_assigns[dashboard].presence ||
+      property = local_assigns[dashboard.to_sym].presence ||
         @level[dashboard].presence ||
         instance_variable_get("@#{dashboard}").presence ||
-        level[dashboard.to_s].presence
-      value = blockly_value(level[blockly.to_s] || property)
-      level[blockly.to_s] = value unless value.nil? # make sure we convert false
+        level[dashboard].presence
+      value = blockly_value(level[blockly] || property)
+      level[blockly] = value unless value.nil? # make sure we convert false
     end
 
     level['images'] = JSON.parse(level['images']) if level['images'].present?
@@ -278,11 +282,36 @@ module LevelsHelper
     end
 
     # Set some values that Blockly expects on the root of its options string
-    app_options = {'levelId' => @level.level_num}
-    app_options['scriptId'] = @script.id if @script
-    app_options['levelGameName'] = @level.game.name if @level.game
-    app_options['scrollbars'] = blockly_value(@level.scrollbars) if @level.is_a?(Blockly) && @level.scrollbars
-    [level, app_options]
+    app_options = {
+      baseUrl: "#{ActionController::Base.asset_host}/blockly/",
+      app: @game.try(:app),
+      levelId: @level.level_num,
+      level: level,
+      callouts: @callouts,
+      cacheBust: blockly_cache_bust,
+      autoplayVideo: @autoplay_video_info,
+      report: {
+          fallback_response: @fallback_response,
+          callback: @callback,
+      },
+    }
+    app_options[:scriptId] = @script.id if @script
+    app_options[:levelGameName] = @level.game.name if @level.game
+    app_options[:scrollbars] = blockly_value(@level.scrollbars) if @level.is_a?(Blockly) && @level.scrollbars
+    app_options[:skinId] = @level.skin if @level.is_a?(Blockly)
+    app_options[:level_source_id] = @level_source_id if @level_source_id
+    app_options[:sendToPhone] = request.location.try(:country_code) == 'US' ||
+        (!Rails.env.production? && request.location.try(:country_code) == 'RD') if request
+    app_options[:send_to_phone_url] = @phone_share_url if @phone_share_url
+    app_options[:disableSocialShare] = true if (@current_user && @current_user.under_13?) || @embed
+
+    # Move these values up to the root
+    %w(hideSource share noPadding showFinish embed).each do |key|
+      app_options[key.to_sym] = level[key]
+      level.delete key
+    end
+
+    app_options
   end
 
   def string_or_image(prefix, text)
