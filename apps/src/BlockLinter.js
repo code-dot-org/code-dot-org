@@ -27,10 +27,30 @@ var BlockLinter = function ( blockly ) {
 module.exports = BlockLinter;
 
 /**
+ * Ensure that all user-declared procedures have associated call blocks.
+ * @return {boolean}
+ */
+BlockLinter.prototype.hasUnusedFunction = function () {
+  var userDefs = [];
+  var callBlocks = {};
+  this.blockly_.mainBlockSpace.getAllBlocks().forEach(function (block) {
+    var name = block.getTitleValue('NAME');
+    if (/^procedures_def/.test(block.type) && block.userCreated) {
+      userDefs.push(name);
+    } else if (/^procedures_call/.test(block.type)) {
+      callBlocks[name] = true;
+    }
+  });
+  // Unused function if some user def doesn't have a matching call
+  return userDefs.some(function(name) { return !callBlocks[name]; });
+};
+
+/**
  * Ensure there are no incomplete blocks inside any function definitions.
  * @return {boolean}
  */
 BlockLinter.prototype.hasIncompleteBlockInFunction = function () {
+  var self = this;
   return this.blockly_.mainBlockSpace.getAllBlocks().some(function(userBlock) {
     // Only search procedure definitions
     if (!userBlock.parameterNames_) {
@@ -39,7 +59,7 @@ BlockLinter.prototype.hasIncompleteBlockInFunction = function () {
     return BlockLinter.hasMatchingDescendant(userBlock, function(block) {
       // Incomplete block if any input connection target is null
       return block.inputList.some(function(input) {
-        return input.type === this.blockly_.INPUT_VALUE &&
+        return input.type === self.blockly_.INPUT_VALUE &&
         !input.connection.targetConnection;
       });
     });

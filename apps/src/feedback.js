@@ -961,6 +961,8 @@ FeedbackUtils.prototype.hasExtraTopBlocks = function () {
  */
 FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
     shouldCheckForEmptyBlocks, options) {
+  // TODO (bbuchanan) : There should be UI tests around every one of these
+  //   failure types!
   options = options || {};
   if (this.studioApp_.editCode) {
     // TODO (cpirich): implement better test results for editCode
@@ -978,16 +980,16 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
     return TestResults.EXTRA_TOP_BLOCKS_FAIL;
   }
   if (Blockly.useContractEditor || Blockly.useModalFunctionEditor) {
+    var blockLinter = new BlockLinter(Blockly);
     if (this.hasUnusedParam_()) {
       return TestResults.UNUSED_PARAM;
     }
-    if (this.hasUnusedFunction_()) {
+    if (blockLinter.hasUnusedFunction()) {
       return TestResults.UNUSED_FUNCTION;
     }
     if (this.hasParamInputUnattached_()) {
       return TestResults.PARAM_INPUT_UNATTACHED;
     }
-    var blockLinter = new BlockLinter(Blockly.mainBlockSpace);
     if (blockLinter.hasIncompleteBlockInFunction()) {
       return TestResults.INCOMPLETE_BLOCK_IN_FUNCTION;
     }
@@ -1101,22 +1103,4 @@ FeedbackUtils.prototype.hasParamInputUnattached_ = function () {
       return !argInput.connection.targetConnection;
     });
   });
-};
-
-/**
- * Ensure that all user-declared procedures have associated call blocks.
- */
-FeedbackUtils.prototype.hasUnusedFunction_ = function () {
-  var userDefs = [];
-  var callBlocks = {};
-  Blockly.mainBlockSpace.getAllBlocks().forEach(function (block) {
-    var name = block.getTitleValue('NAME');
-    if (/^procedures_def/.test(block.type) && block.userCreated) {
-      userDefs.push(name);
-    } else if (/^procedures_call/.test(block.type)) {
-      callBlocks[name] = true;
-    }
-  });
-  // Unused function if some user def doesn't have a matching call
-  return userDefs.some(function(name) { return !callBlocks[name]; });
 };
