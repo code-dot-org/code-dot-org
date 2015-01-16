@@ -146,8 +146,8 @@ exports.vanish = function (id, spriteIndex) {
   Studio.queueCmd(id, 'vanish', {spriteIndex: spriteIndex});
 };
 
-exports.attachEventHandler = function (id, eventName, func) {
-  Studio.queueCmd(id, 'attachEventHandler', {
+exports.onEvent = function (id, eventName, func) {
+  Studio.queueCmd(id, 'onEvent', {
     'eventName': String(eventName),
     'func': func
   });

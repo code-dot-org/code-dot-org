@@ -12,7 +12,7 @@ rightbar: blank
 
 %h1 Cancel workshop registration
 
-- if workshop_signup_data['status'] == 'cancelled'
+- if workshop_signup_data['status_s'] == 'cancelled'
   %p Your registration for this workshop has already been cancelled.
 - else
   %form#cancel-workshop-registration-form{role: "form", onsubmit: "event.preventDefault(); cancelWorkshopRegistrationFormSubmit();", style: 'margin-top: 30px;'}

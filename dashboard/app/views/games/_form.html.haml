@@ -2,7 +2,7 @@
   - if @game.errors.any?
     #error_explanation
       %h2
-        = pluralize(@game.errors.count, "error")
+        = pluralize(@game.errors.count, 'error')
         prohibited this game from being saved:
       %ul
         - @game.errors.full_messages.each do |msg|

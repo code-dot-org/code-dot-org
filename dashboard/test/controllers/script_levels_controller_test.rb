@@ -126,11 +126,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
                    {controller: "script_levels", action: "show", script_id: Script::HOC_NAME, chapter: "1"})
     assert_equal '/hoc/1', build_script_level_path(hoc_level)
 
-    builder_level = ScriptLevel.find_by(script_id: Script::BUILDER_ID, chapter: 1)
-    assert_routing({method: "get", path: '/builder/1'},
-                   {controller: "script_levels", action: "show", script_id: Script::BUILDER_ID, chapter: "1"})
-    assert_equal '/builder/1', build_script_level_path(builder_level)
-
     # we don't actually use this
     assert_routing({method: "get", path: '/k8intro/5'},
                    {controller: "script_levels", action: "show", script_id: Script::TWENTY_HOUR_ID, chapter: "5"})
@@ -421,28 +416,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     get :show, script_id: @custom_script.name, stage_id: @custom_s2_l1.stage, id: @custom_s2_l1.position
     assert_equal 'Code.org - custom-script-laurel: laurel-stage-2 #1',
       Nokogiri::HTML(@response.body).css('title').text.strip
-  end
-
-  test 'show stage name in header for custom multi-stage script' do
-    get :show, script_id: @custom_script, stage_id: 2, id: 1
-    assert_template partial: '_header'
-    # js-encoded referenceArea causes assert_select to output warnings, so we need to use Nokogiri instead
-    assert_equal "Stage 2: " + I18n.t("data.script.name.#{@custom_script.name}.#{@custom_stage_2.name}"),
-      css('body div.header_level div.header_text').text.strip
-  end
-
-  test 'show stage position in header for default script' do
-    get :show, script_id: @script, id: @script_level.id
-    assert_template partial: '_header'
-    assert_equal "Stage 2: The Maze",
-      css('body div.header_level div.header_text')[0].text.strip
-  end
-
-  test 'script name instead of stage name in header for HOC' do
-    get :show, script_id: Script::HOC_NAME, chapter: 1
-    assert_template partial: '_header'
-    assert_equal 'Hour of Code',
-      css('body div.header_level div.header_text')[0].text.strip
   end
 
   test 'end of HoC for a user is HOC endpoint' do

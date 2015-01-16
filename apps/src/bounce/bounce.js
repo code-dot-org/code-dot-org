@@ -7,7 +7,7 @@
 
 'use strict';
 
-var StudioApp = require('../base');
+var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('../../locale/current/common');
 var bounceMsg = require('../../locale/current/bounce');
 var skins = require('../skins');
@@ -18,9 +18,14 @@ var page = require('../templates/page.html');
 var dom = require('../dom');
 var Hammer = require('../hammer');
 var utils = require('../utils');
+var constants = require('../constants');
+var KeyCodes = constants.KeyCodes;
 
 var Direction = tiles.Direction;
 var SquareType = tiles.SquareType;
+
+var ResultType = studioApp.ResultType;
+var TestResults = studioApp.TestResults;
 
 /**
  * Create a namespace for the application.
@@ -49,13 +54,6 @@ var ArrowIds = {
   DOWN: 'downButton'
 };
 
-var Keycodes = {
-  LEFT: 37,
-  UP: 38,
-  RIGHT: 39,
-  DOWN: 40
-};
-
 var DRAG_DISTANCE_TO_MOVE_RATIO = 25;
 
 var level;
@@ -67,16 +65,13 @@ var skin;
 var stepSpeed;
 
 //TODO: Make configurable.
-StudioApp.CHECK_FOR_EMPTY_BLOCKS = true;
+studioApp.setCheckForEmptyBlocks(true);
 
 var getTile = function(map, x, y) {
   if (map && map[y]) {
     return map[y][x];
   }
 };
-
-//The number of blocks to show as feedback.
-StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
 // Default Scalings
 Bounce.scale = {
@@ -456,29 +451,45 @@ var delegate = function(scope, func, data)
   };
 };
 
+/**
+ * We want to swallow exceptions when executing user generated code. This provides
+ * a single place to do so.
+ */
+Bounce.callUserGeneratedCode = function (fn) {
+  try {
+    fn.call(Bounce, studioApp, api);
+  } catch (e) {
+    // swallow error. should we also log this somewhere?
+    if (console) {
+      console.log(e);
+    }
+  }
+};
+
+
 Bounce.onTick = function() {
   Bounce.tickCount++;
 
   if (Bounce.tickCount === 1) {
-    try { Bounce.whenGameStarts(StudioApp, api); } catch (e) { }
+    Bounce.callUserGeneratedCode(Bounce.whenGameStarts);
   }
 
   // Run key event handlers for any keys that are down:
-  for (var key in Keycodes) {
-    if (Bounce.keyState[Keycodes[key]] &&
-        Bounce.keyState[Keycodes[key]] == "keydown") {
-      switch (Keycodes[key]) {
-        case Keycodes.LEFT:
-          try { Bounce.whenLeft(StudioApp, api); } catch (e) { }
+  for (var key in KeyCodes) {
+    if (Bounce.keyState[KeyCodes[key]] &&
+        Bounce.keyState[KeyCodes[key]] == "keydown") {
+      switch (KeyCodes[key]) {
+        case KeyCodes.LEFT:
+          Bounce.callUserGeneratedCode(Bounce.whenLeft);
           break;
-        case Keycodes.UP:
-          try { Bounce.whenUp(StudioApp, api); } catch (e) { }
+        case KeyCodes.UP:
+          Bounce.callUserGeneratedCode(Bounce.whenUp);
           break;
-        case Keycodes.RIGHT:
-          try { Bounce.whenRight(StudioApp, api); } catch (e) { }
+        case KeyCodes.RIGHT:
+          Bounce.callUserGeneratedCode(Bounce.whenRight);
           break;
-        case Keycodes.DOWN:
-          try { Bounce.whenDown(StudioApp, api); } catch (e) { }
+        case KeyCodes.DOWN:
+          Bounce.callUserGeneratedCode(Bounce.whenDown);
           break;
       }
     }
@@ -489,16 +500,16 @@ Bounce.onTick = function() {
         Bounce.btnState[ArrowIds[btn]] == ButtonState.DOWN) {
       switch (ArrowIds[btn]) {
         case ArrowIds.LEFT:
-          try { Bounce.whenLeft(StudioApp, api); } catch (e) { }
+          Bounce.callUserGeneratedCode(Bounce.whenLeft);
           break;
         case ArrowIds.UP:
-          try { Bounce.whenUp(StudioApp, api); } catch (e) { }
+          Bounce.callUserGeneratedCode(Bounce.whenUp);
           break;
         case ArrowIds.RIGHT:
-          try { Bounce.whenRight(StudioApp, api); } catch (e) { }
+          Bounce.callUserGeneratedCode(Bounce.whenRight);
           break;
         case ArrowIds.DOWN:
-          try { Bounce.whenDown(StudioApp, api); } catch (e) { }
+          Bounce.callUserGeneratedCode(Bounce.whenDown);
           break;
       }
     }
@@ -507,16 +518,16 @@ Bounce.onTick = function() {
   for (var gesture in Bounce.gesturesObserved) {
     switch (gesture) {
       case 'left':
-        try { Bounce.whenLeft(StudioApp, api); } catch (e) { }
+        Bounce.callUserGeneratedCode(Bounce.whenLeft);
         break;
       case 'up':
-        try { Bounce.whenUp(StudioApp, api); } catch (e) { }
+        Bounce.callUserGeneratedCode(Bounce.whenUp);
         break;
       case 'right':
-        try { Bounce.whenRight(StudioApp, api); } catch (e) { }
+        Bounce.callUserGeneratedCode(Bounce.whenRight);
         break;
       case 'down':
-        try { Bounce.whenDown(StudioApp, api); } catch (e) { }
+        Bounce.callUserGeneratedCode(Bounce.whenDown);
         break;
     }
     if (0 === Bounce.gesturesObserved[gesture]--) {
@@ -544,14 +555,14 @@ Bounce.onTick = function() {
       if (wasYOK && wasXOK && !nowXOK) {
         //console.log("calling whenWallCollided for ball " + i +
         //" x=" + Bounce.ballX[i] + " y=" + Bounce.ballY[i]);
-        try { Bounce.whenWallCollided(StudioApp, api); } catch (e) { }
+        Bounce.callUserGeneratedCode(Bounce.whenWallCollided);
       }
 
       if (wasXOK && wasYOK && !nowYOK) {
         if (Bounce.map[0][Math.round(Bounce.ballX[i])] & SquareType.GOAL) {
           //console.log("calling whenBallInGoal for ball " + i +
           //" x=" + Bounce.ballX[i] + " y=" + Bounce.ballY[i]);
-          try { Bounce.whenBallInGoal(StudioApp, api); } catch (e) { }
+          Bounce.callUserGeneratedCode(Bounce.whenBallInGoal);
           Bounce.ballFlags[i] |= Bounce.BallFlags.IN_GOAL;
           timeoutList.setTimeout(
               delegate(this, Bounce.moveBallOffscreen, i),
@@ -562,7 +573,7 @@ Bounce.onTick = function() {
         } else {
           //console.log("calling whenWallCollided for ball " + i +
           //" x=" + Bounce.ballX[i] + " y=" + Bounce.ballY[i]);
-          try { Bounce.whenWallCollided(StudioApp, api); } catch (e) { }
+          Bounce.callUserGeneratedCode(Bounce.whenWallCollided);
         }
       }
 
@@ -574,12 +585,12 @@ Bounce.onTick = function() {
         // paddle ball collision
         //console.log("calling whenPaddleCollided for ball " + i +
         //" x=" + Bounce.ballX[i] + " y=" + Bounce.ballY[i]);
-        try { Bounce.whenPaddleCollided(StudioApp, api); } catch (e) { }
+        Bounce.callUserGeneratedCode(Bounce.whenPaddleCollided);
       } else if (wasYAboveBottom && !nowYAboveBottom) {
         // ball missed paddle
         //console.log("calling whenBallMissesPaddle for ball " + i +
         //" x=" + Bounce.ballX[i] + " y=" + Bounce.ballY[i]);
-        try { Bounce.whenBallMissesPaddle(StudioApp, api); } catch (e) { }
+        Bounce.callUserGeneratedCode(Bounce.whenBallMissesPaddle);
         Bounce.ballFlags[i] |= Bounce.BallFlags.MISSED_PADDLE;
         timeoutList.setTimeout(
             delegate(this, Bounce.moveBallOffscreen, i),
@@ -587,7 +598,7 @@ Bounce.onTick = function() {
         if (Bounce.respawnBalls) {
           Bounce.launchBall(i);
         } else if (Bounce.failOnBallExit) {
-          Bounce.result = StudioApp.ResultType.FAILURE;
+          Bounce.result = ResultType.FAILURE;
           Bounce.onPuzzleComplete();
         }
       }
@@ -617,7 +628,7 @@ Bounce.onKey = function(e) {
 
   // If we are actively running our tick loop, suppress default event handling
   if (Bounce.intervalId &&
-      e.keyCode >= Keycodes.LEFT && e.keyCode <= Keycodes.DOWN) {
+      e.keyCode >= KeyCodes.LEFT && e.keyCode <= KeyCodes.DOWN) {
     e.preventDefault();
   }
 };
@@ -651,11 +662,11 @@ Bounce.init = function(config) {
   window.addEventListener("keyup", Bounce.onKey, false);
 
   config.html = page({
-    assetUrl: StudioApp.assetUrl,
+    assetUrl: studioApp.assetUrl,
     data: {
-      localeDirection: StudioApp.localeDirection(),
+      localeDirection: studioApp.localeDirection(),
       visualization: require('./visualization.html')(),
-      controls: require('./controls.html')({assetUrl: StudioApp.assetUrl}),
+      controls: require('./controls.html')({assetUrl: studioApp.assetUrl}),
       blockUsed: undefined,
       idealBlockNumber: undefined,
       editCode: level.editCode,
@@ -664,23 +675,23 @@ Bounce.init = function(config) {
   });
 
   config.loadAudio = function() {
-    StudioApp.loadAudio(skin.winSound, 'win');
-    StudioApp.loadAudio(skin.startSound, 'start');
-    StudioApp.loadAudio(skin.ballStartSound, 'ballstart');
-    StudioApp.loadAudio(skin.failureSound, 'failure');
-    StudioApp.loadAudio(skin.rubberSound, 'rubber');
-    StudioApp.loadAudio(skin.crunchSound, 'crunch');
-    StudioApp.loadAudio(skin.flagSound, 'flag');
-    StudioApp.loadAudio(skin.winPointSound, 'winpoint');
-    StudioApp.loadAudio(skin.winPoint2Sound, 'winpoint2');
-    StudioApp.loadAudio(skin.losePointSound, 'losepoint');
-    StudioApp.loadAudio(skin.losePoint2Sound, 'losepoint2');
-    StudioApp.loadAudio(skin.goal1Sound, 'goal1');
-    StudioApp.loadAudio(skin.goal2Sound, 'goal2');
-    StudioApp.loadAudio(skin.woodSound, 'wood');
-    StudioApp.loadAudio(skin.retroSound, 'retro');
-    StudioApp.loadAudio(skin.slapSound, 'slap');
-    StudioApp.loadAudio(skin.hitSound, 'hit');
+    studioApp.loadAudio(skin.winSound, 'win');
+    studioApp.loadAudio(skin.startSound, 'start');
+    studioApp.loadAudio(skin.ballStartSound, 'ballstart');
+    studioApp.loadAudio(skin.failureSound, 'failure');
+    studioApp.loadAudio(skin.rubberSound, 'rubber');
+    studioApp.loadAudio(skin.crunchSound, 'crunch');
+    studioApp.loadAudio(skin.flagSound, 'flag');
+    studioApp.loadAudio(skin.winPointSound, 'winpoint');
+    studioApp.loadAudio(skin.winPoint2Sound, 'winpoint2');
+    studioApp.loadAudio(skin.losePointSound, 'losepoint');
+    studioApp.loadAudio(skin.losePoint2Sound, 'losepoint2');
+    studioApp.loadAudio(skin.goal1Sound, 'goal1');
+    studioApp.loadAudio(skin.goal2Sound, 'goal2');
+    studioApp.loadAudio(skin.woodSound, 'wood');
+    studioApp.loadAudio(skin.retroSound, 'retro');
+    studioApp.loadAudio(skin.slapSound, 'slap');
+    studioApp.loadAudio(skin.hitSound, 'hit');
   };
 
   config.afterInject = function() {
@@ -764,12 +775,12 @@ Bounce.init = function(config) {
 
   config.makeString = bounceMsg.makeYourOwn();
   config.makeUrl = "http://code.org/bounce";
-  config.makeImage = StudioApp.assetUrl('media/promo.png');
+  config.makeImage = studioApp.assetUrl('media/promo.png');
 
   config.enableShowCode = false;
   config.enableShowBlockCount = false;
 
-  StudioApp.init(config);
+  studioApp.init(config);
 
   var finishButton = document.getElementById('finishButton');
   dom.addClickTouchEvent(finishButton, Bounce.onPuzzleComplete);
@@ -815,7 +826,7 @@ Bounce.moveBallOffscreen = function(i) {
 Bounce.playSoundAndResetBall = function(i) {
   //console.log("playSoundAndResetBall called for ball " + i);
   Bounce.resetBall(i, { randomPosition: true } );
-  StudioApp.playAudio('ballstart');
+  studioApp.playAudio('ballstart');
 };
 
 /**
@@ -853,7 +864,7 @@ Bounce.resetBall = function(i, options) {
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
  */
-StudioApp.reset = function(first) {
+studioApp.reset = function(first) {
   var i;
   Bounce.clearEventHandlersKillTickLoop();
 
@@ -977,20 +988,20 @@ StudioApp.reset = function(first) {
  * Click the run button.  Start the program.
  */
 // XXX This is the only method used by the templates!
-StudioApp.runButtonClick = function() {
+studioApp.runButtonClick = function() {
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
   // Ensure that Reset button is at least as wide as Run button.
   if (!resetButton.style.minWidth) {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
-  StudioApp.toggleRunReset('reset');
+  studioApp.toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
-  StudioApp.reset(false);
-  StudioApp.attempts++;
+  studioApp.reset(false);
+  studioApp.attempts++;
   Bounce.execute();
 
-  if (level.freePlay && !StudioApp.hideSource) {
+  if (level.freePlay && !studioApp.hideSource) {
     var shareCell = document.getElementById('share-cell');
     shareCell.className = 'share-cell-enabled';
   }
@@ -1002,11 +1013,11 @@ StudioApp.runButtonClick = function() {
 
 /**
  * App specific displayFeedback function that calls into
- * StudioApp.displayFeedback when appropriate
+ * studioApp.displayFeedback when appropriate
  */
 var displayFeedback = function() {
   if (!Bounce.waitingForReport) {
-    StudioApp.displayFeedback({
+    studioApp.displayFeedback({
       app: 'bounce', //XXX
       skin: skin.id,
       feedbackType: Bounce.testResults,
@@ -1037,14 +1048,14 @@ Bounce.onReportComplete = function(response) {
  */
 Bounce.execute = function() {
   var code = Blockly.Generator.blockSpaceToCode('JavaScript', 'bounce_whenRun');
-  Bounce.result = StudioApp.ResultType.UNSET;
-  Bounce.testResults = StudioApp.TestResults.NO_TESTS_RUN;
+  Bounce.result = ResultType.UNSET;
+  Bounce.testResults = TestResults.NO_TESTS_RUN;
   Bounce.waitingForReport = false;
   Bounce.response = null;
 
   if (level.editCode) {
     code = utils.generateCodeAliases(level.codeFunctions, 'Bounce');
-    code += StudioApp.editor.getValue();
+    code += studioApp.editor.getValue();
   }
 
   var codeWallCollided = Blockly.Generator.blockSpaceToCode(
@@ -1052,7 +1063,7 @@ Bounce.execute = function() {
                                     'bounce_whenWallCollided');
   var whenWallCollidedFunc = codegen.functionFromCode(
                                      codeWallCollided, {
-                                      StudioApp: StudioApp,
+                                      StudioApp: studioApp,
                                       Bounce: api } );
 
   var codeBallInGoal = Blockly.Generator.blockSpaceToCode(
@@ -1060,7 +1071,7 @@ Bounce.execute = function() {
                                     'bounce_whenBallInGoal');
   var whenBallInGoalFunc = codegen.functionFromCode(
                                      codeBallInGoal, {
-                                      StudioApp: StudioApp,
+                                      StudioApp: studioApp,
                                       Bounce: api } );
 
   var codeBallMissesPaddle = Blockly.Generator.blockSpaceToCode(
@@ -1068,7 +1079,7 @@ Bounce.execute = function() {
                                     'bounce_whenBallMissesPaddle');
   var whenBallMissesPaddleFunc = codegen.functionFromCode(
                                      codeBallMissesPaddle, {
-                                      StudioApp: StudioApp,
+                                      StudioApp: studioApp,
                                       Bounce: api } );
 
   var codePaddleCollided = Blockly.Generator.blockSpaceToCode(
@@ -1076,7 +1087,7 @@ Bounce.execute = function() {
                                     'bounce_whenPaddleCollided');
   var whenPaddleCollidedFunc = codegen.functionFromCode(
                                      codePaddleCollided, {
-                                      StudioApp: StudioApp,
+                                      StudioApp: studioApp,
                                       Bounce: api } );
 
   var codeLeft = Blockly.Generator.blockSpaceToCode(
@@ -1084,7 +1095,7 @@ Bounce.execute = function() {
                                     'bounce_whenLeft');
   var whenLeftFunc = codegen.functionFromCode(
                                      codeLeft, {
-                                      StudioApp: StudioApp,
+                                      StudioApp: studioApp,
                                       Bounce: api } );
 
   var codeRight = Blockly.Generator.blockSpaceToCode(
@@ -1092,7 +1103,7 @@ Bounce.execute = function() {
                                     'bounce_whenRight');
   var whenRightFunc = codegen.functionFromCode(
                                      codeRight, {
-                                      StudioApp: StudioApp,
+                                      StudioApp: studioApp,
                                       Bounce: api } );
 
   var codeUp = Blockly.Generator.blockSpaceToCode(
@@ -1100,7 +1111,7 @@ Bounce.execute = function() {
                                     'bounce_whenUp');
   var whenUpFunc = codegen.functionFromCode(
                                      codeUp, {
-                                      StudioApp: StudioApp,
+                                      StudioApp: studioApp,
                                       Bounce: api } );
 
   var codeDown = Blockly.Generator.blockSpaceToCode(
@@ -1108,7 +1119,7 @@ Bounce.execute = function() {
                                     'bounce_whenDown');
   var whenDownFunc = codegen.functionFromCode(
                                      codeDown, {
-                                      StudioApp: StudioApp,
+                                      StudioApp: studioApp,
                                       Bounce: api } );
 
   var codeGameStarts = Blockly.Generator.blockSpaceToCode(
@@ -1116,12 +1127,12 @@ Bounce.execute = function() {
                                     'when_run');
   var whenGameStartsFunc = codegen.functionFromCode(
                                      codeGameStarts, {
-                                      StudioApp: StudioApp,
+                                      StudioApp: studioApp,
                                       Bounce: api } );
 
-  StudioApp.playAudio(Bounce.ballCount > 0 ? 'ballstart' : 'start');
+  studioApp.playAudio(Bounce.ballCount > 0 ? 'ballstart' : 'start');
 
-  StudioApp.reset(false);
+  studioApp.reset(false);
 
   // Set event handlers and start the onTick timer
   Bounce.whenWallCollided = whenWallCollidedFunc;
@@ -1139,7 +1150,7 @@ Bounce.execute = function() {
 
 Bounce.onPuzzleComplete = function() {
   if (level.freePlay) {
-    Bounce.result = StudioApp.ResultType.SUCCESS;
+    Bounce.result = ResultType.SUCCESS;
   }
 
   // Stop everything on screen
@@ -1147,26 +1158,26 @@ Bounce.onPuzzleComplete = function() {
 
   // If we know they succeeded, mark levelComplete true
   // Note that we have not yet animated the succesful run
-  var levelComplete = (Bounce.result == StudioApp.ResultType.SUCCESS);
+  var levelComplete = (Bounce.result == ResultType.SUCCESS);
 
   // If the current level is a free play, always return the free play
   // result type
   if (level.freePlay) {
-    Bounce.testResults = StudioApp.TestResults.FREE_PLAY;
+    Bounce.testResults = TestResults.FREE_PLAY;
   } else {
-    Bounce.testResults = StudioApp.getTestResults(levelComplete);
+    Bounce.testResults = studioApp.getTestResults(levelComplete);
   }
 
-  if (Bounce.testResults >= StudioApp.TestResults.FREE_PLAY) {
-    StudioApp.playAudio('win');
+  if (Bounce.testResults >= TestResults.FREE_PLAY) {
+    studioApp.playAudio('win');
   } else {
-    StudioApp.playAudio('failure');
+    studioApp.playAudio('failure');
   }
 
   if (level.editCode) {
     Bounce.testResults = levelComplete ?
-      StudioApp.TestResults.ALL_PASS :
-      StudioApp.TestResults.TOO_FEW_BLOCKS_FAIL;
+      TestResults.ALL_PASS :
+      TestResults.TOO_FEW_BLOCKS_FAIL;
   }
 
   var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
@@ -1175,10 +1186,10 @@ Bounce.onPuzzleComplete = function() {
   Bounce.waitingForReport = true;
 
   // Report result to server.
-  StudioApp.report({
+  studioApp.report({
                      app: 'bounce',
                      level: level.id,
-                     result: Bounce.result === StudioApp.ResultType.SUCCESS,
+                     result: Bounce.result === ResultType.SUCCESS,
                      testResult: Bounce.testResults,
                      program: encodeURIComponent(textBlocks),
                      onComplete: Bounce.onReportComplete
@@ -1350,7 +1361,7 @@ Bounce.allFinishesComplete = function() {
     }
     if (playSound && finished != Bounce.paddleFinishCount) {
       // Play a sound unless we've hit the last flag
-      StudioApp.playAudio('flag');
+      studioApp.playAudio('flag');
     }
     return (finished == Bounce.paddleFinishCount);
   }
@@ -1378,23 +1389,23 @@ Bounce.allFinishesComplete = function() {
 var checkFinished = function () {
   // if we have a succcess condition and have accomplished it, we're done and successful
   if (level.goal && level.goal.successCondition && level.goal.successCondition()) {
-    Bounce.result = StudioApp.ResultType.SUCCESS;
+    Bounce.result = ResultType.SUCCESS;
     return true;
   }
 
   // if we have a failure condition, and it's been reached, we're done and failed
   if (level.goal && level.goal.failureCondition && level.goal.failureCondition()) {
-    Bounce.result = StudioApp.ResultType.FAILURE;
+    Bounce.result = ResultType.FAILURE;
     return true;
   }
 
   if (Bounce.allFinishesComplete()) {
-    Bounce.result = StudioApp.ResultType.SUCCESS;
+    Bounce.result = ResultType.SUCCESS;
     return true;
   }
 
   if (Bounce.timedOut()) {
-    Bounce.result = StudioApp.ResultType.FAILURE;
+    Bounce.result = ResultType.FAILURE;
     return true;
   }
 

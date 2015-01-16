@@ -10,8 +10,8 @@ function setGlobals() {
   };
 }
 
-var DirtDrawer = testUtils.requireWithGlobalsCheckSrcFolder('maze/dirtDrawer');
-var cellId = testUtils.requireWithGlobalsCheckSrcFolder('maze/mazeUtils').cellId;
+var DirtDrawer = testUtils.requireWithGlobalsCheckBuildFolder('maze/dirtDrawer');
+var cellId = testUtils.requireWithGlobalsCheckBuildFolder('maze/mazeUtils').cellId;
 var assert = testUtils.assert;
 
 function createFakeSkin() {

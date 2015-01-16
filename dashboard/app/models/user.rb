@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :omniauthable, :confirmable,
          :recoverable, :rememberable, :trackable
 
-#  acts_as_paranoid # use deleted_at column instead of deleting rows
+  acts_as_paranoid # use deleted_at column instead of deleting rows
 
   PROVIDER_MANUAL = 'manual' # "old" user created by a teacher -- logs in w/ username + password
   PROVIDER_SPONSORED = 'sponsored' # "new" user created by a teacher -- logs in w/ name + secret picture/word 
@@ -233,9 +233,9 @@ class User < ActiveRecord::Base
     q = script.script_levels.includes({ level: :game }, :script, :stage).order((stage ? :position : :chapter))
 
     if stage
-      q = q.where(['stages.id = :stage_id', { :stage_id => stage}]).references(:stage)
+      q = q.where(['stages.id = :stage_id', {stage_id: stage}]).references(:stage)
     elsif game_index
-      q = q.where(['games.id = :game_id', { :game_id => game_index}]).references(:game)
+      q = q.where(['games.id = :game_id', {game_id: game_index}]).references(:game)
     end
 
     q.each do |sl|
