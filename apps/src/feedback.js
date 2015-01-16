@@ -778,31 +778,6 @@ FeedbackUtils.prototype.showToggleBlocksError = function(Dialog) {
 };
 
 /**
- * Check for empty container blocks, and return an appropriate failure
- * code if any are found.
- * @return {TestResults} ALL_PASS if no empty blocks are present, or
- *   EMPTY_BLOCK_FAIL or EMPTY_FUNCTION_BLOCK_FAIL if empty blocks
- *   are found.
- */
-FeedbackUtils.prototype.checkForEmptyContainerBlockFailure_ = function() {
-  var blockLinter = new BlockLinter(Blockly);
-  var emptyBlock = blockLinter.getEmptyContainerBlock();
-  if (!emptyBlock) {
-    return TestResults.ALL_PASS;
-  }
-
-  var type = emptyBlock.type;
-  if (type === 'procedures_defnoreturn' || type === 'procedures_defreturn') {
-    return TestResults.EMPTY_FUNCTION_BLOCK_FAIL;
-  }
-
-  // Block is assumed to be "if" or "repeat" if we reach here.
-  // This is where to add checks if you want a different TestResult
-  // for "controls_for_counter" blocks, for example.
-  return TestResults.EMPTY_BLOCK_FAIL;
-};
-
-/**
  * Check whether the user code has all the blocks required for the level.
  * @param {!Array} requiredBlocks The blocks that are required to be used in
  *   the solution to this level.
@@ -903,7 +878,7 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
   }
   var blockLinter = new BlockLinter(Blockly);
   if (shouldCheckForEmptyBlocks) {
-    var emptyBlockFailure = this.checkForEmptyContainerBlockFailure_();
+    var emptyBlockFailure = blockLinter.checkForEmptyContainerBlockFailure();
     if (emptyBlockFailure !== TestResults.ALL_PASS) {
       return emptyBlockFailure;
     }

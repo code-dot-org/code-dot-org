@@ -2,6 +2,7 @@ var wrench = require('wrench');
 var testUtils = require('./util/testUtils');
 var assert = testUtils.assert;
 var canvas = require('canvas');
+var BlockLinter = testUtils.requireWithGlobalsCheckBuildFolder('BlockLinter');
 
 // Some of our feedback tests need to use Image
 global.Image = canvas.Image;
@@ -11,10 +12,10 @@ testUtils.setupLocales();
 
 /**
  * Loads blocks into the workspace, then calls
- * checkForEmptyContainerBlockFailure_ and validates
+ * checkForEmptyContainerBlockFailure and validates
  * that the result matches the expected result.
  */
-describe("checkForEmptyContainerBlockFailure_", function () {
+describe("checkForEmptyContainerBlockFailure", function () {
   var studioApp;
   var TestResults;
 
@@ -23,6 +24,7 @@ describe("checkForEmptyContainerBlockFailure_", function () {
     testUtils.setupTestBlockly();
     studioApp = testUtils.getStudioAppSingleton();
     TestResults = studioApp.TestResults;
+
   });
 
   var checkResultForBlocks = function (args) {
@@ -35,8 +37,8 @@ describe("checkForEmptyContainerBlockFailure_", function () {
     assert(!args.blockXml || loaded, "either we didnt have  input xml" +
         "or we did, and we loaded something");
 
-    assert.equal(args.result,
-        studioApp.feedback_.checkForEmptyContainerBlockFailure_());
+    var blockLinter = new BlockLinter(Blockly);
+    assert.equal(args.result, blockLinter.checkForEmptyContainerBlockFailure());
   };
 
   it("returns ALL_PASS when no blocks are present", function () {
