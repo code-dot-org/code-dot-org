@@ -246,10 +246,8 @@ class User < ActiveRecord::Base
 
   def next_unpassed_progression_level(script)
     user_levels_by_level = self.user_levels.index_by(&:level_id)
-    cached_script = script
-    cached_script = Script.get_from_cache(script.id) if script.should_be_cached?
-    
-    cached_script.script_levels.detect do |script_level|
+
+    script.script_levels.detect do |script_level|
       user_level = user_levels_by_level[script_level.level_id]
       is_unpassed_progression_level(script_level, user_level)
     end
