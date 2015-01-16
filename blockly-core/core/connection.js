@@ -139,10 +139,10 @@ Blockly.Connection.prototype.connect = function(connectTo) {
   childBlock.setParent(parentBlock);
 
   if (parentBlock.rendered) {
-    parentBlock.svg_.updateDisabled();
+    parentBlock.getSvgRenderer().updateDisabled();
   }
   if (childBlock.rendered) {
-    childBlock.svg_.updateDisabled();
+    childBlock.getSvgRenderer().updateDisabled();
   }
   if (parentBlock.rendered && childBlock.rendered) {
     if (this.type == Blockly.NEXT_STATEMENT ||
@@ -293,7 +293,7 @@ Blockly.Connection.prototype.disconnect = function() {
     parentBlock.render();
   }
   if (childBlock.rendered) {
-    childBlock.svg_.updateDisabled();
+    childBlock.getSvgRenderer().updateDisabled();
     childBlock.render();
   }
 };
@@ -392,10 +392,10 @@ Blockly.Connection.prototype.highlight = function() {
     var moveWidth = 5 + Blockly.BlockSvg.NOTCH_PATH_WIDTH;
     if (Blockly.RTL) {
       steps = 'm ' + moveWidth + ',0 h -5 ' +
-        this.sourceBlock_.svg_.notchPathRight + ' h -5';
+        this.sourceBlock_.getSvgRenderer().notchPathRight + ' h -5';
     } else {
       steps = 'm -' + moveWidth + ',0 h 5 ' +
-          this.sourceBlock_.svg_.notchPathLeft + ' h 5';
+          this.sourceBlock_.getSvgRenderer().notchPathLeft + ' h 5';
     }
   }
   var xy = this.sourceBlock_.getRelativeToSurfaceXY();
