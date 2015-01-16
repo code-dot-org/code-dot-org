@@ -434,6 +434,8 @@ SQL
     user = find_by_email_or_hashed_email(attributes[:email]) || User.new(email: attributes[:email])
     if user && user.persisted?
       user.send_reset_password_instructions(attributes[:email]) # protected in the superclass
+    else
+      user.errors.add :email, :not_found
     end
     user
   end
