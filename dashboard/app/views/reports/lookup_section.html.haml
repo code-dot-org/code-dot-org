@@ -1,0 +1,17 @@
+%h1 Lookup section
+
+- if flash[:error]
+  #error_explanation
+    %h2= flash[:error]
+
+= form_tag(lookup_section_url, method: :post) do
+  Enter the section code:
+  %br/
+  = text_field_tag 'section_code'
+  %br/
+  = submit_tag 'Go!'
+
+- if @section
+  %p= "Section code: #{@section.code}"
+  %p= "Name: #{@section.name}"
+  %p= "Owner: #{@section.user.email}"

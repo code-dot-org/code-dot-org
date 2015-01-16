@@ -191,6 +191,14 @@ SQL
     end
   end
 
+  def lookup_section
+    authorize! :manage, :all
+    @section = Section.find_by_code params[:section_code]
+    if params[:section_code] && @section.nil?
+      flash[:error] = 'Section code not found'
+    end
+  end
+
   private
   def get_base_usage_activity
     Activity.all.order('id desc').includes([:user, :level_source, {level: :game}]).limit(50)
