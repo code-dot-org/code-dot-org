@@ -2284,8 +2284,17 @@ Studio.throwProjectile = function (options) {
 
   var preventLoop = skin.preventProjectileLoop && skin.preventProjectileLoop(options.className);
 
+  var frames;
+
+  if (/.gif$/.test(skin[options.className]))
+    frames = 1;
+  else if (skin.specialProjectileFrames && skin.specialProjectileFrames[options.className])
+    frames = skin.specialProjectileFrames[options.className];
+  else
+    frames = skin.projectileFrames;
+
   var projectileOptions = {
-    frames: /.gif$/.test(skin[options.className]) ? 1 : skin.projectileFrames,
+    frames: frames,
     className: options.className,
     dir: options.dir,
     image: skin[options.className],

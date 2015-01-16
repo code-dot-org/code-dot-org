@@ -19,6 +19,12 @@ function loadInfinity(skin, assetUrl) {
   skin.defaultBackground = 'leafy';
   skin.projectileFrames = 10;
 
+  skin.specialProjectileFrames = {
+    'projectile_cherry': 13,
+    'projectile_ice': 12,
+    'projectile_duck': 12
+  };
+
   skin.avatarList = ['anna', 'elsa', 'hiro', 'baymax', 'rapunzel'];
   skin.avatarList.forEach(function (name) {
     skin[name] = {
@@ -43,6 +49,9 @@ function loadInfinity(skin, assetUrl) {
   skin.projectile_elsa = skin.assetUrl('projectile_elsa.png');
   skin.projectile_baymax = skin.assetUrl('projectile_baymax.png');
   skin.projectile_rapunzel = skin.assetUrl('projectile_rapunzel.png');
+  skin.projectile_cherry = skin.assetUrl('projectile_cherry.png');
+  skin.projectile_ice = skin.assetUrl('projectile_ice.png');
+  skin.projectile_duck = skin.assetUrl('projectile_duck.png');
 
   skin.leafy = {
     background: skin.assetUrl('background1.png')
@@ -50,13 +59,30 @@ function loadInfinity(skin, assetUrl) {
   skin.grassy = {
     background: skin.assetUrl('background2.png')
   };
+  skin.flower = {
+    background: skin.assetUrl('background3.png')
+  };
+  skin.tile = {
+    background: skin.assetUrl('background4.png')
+  };
+  skin.icy = {
+    background: skin.assetUrl('background5.png')
+  };
+  skin.snowy = {
+    background: skin.assetUrl('background6.png')
+  };
 
   // These are used by blocks.js to customize our dropdown blocks across skins
   skin.backgroundChoices = [
     [msg.setBackgroundRandom(), RANDOM_VALUE],
     // todo - come up with better names and i18n
     ["set leafy background", '"leafy"'],
-    ["set grassy background", '"grassy"']];
+    ["set grassy background", '"grassy"'],
+    ["set flower background", '"flower"'],
+    ["set tile background", '"tile"'],
+    ["set icy background", '"icy"'],
+    ["set snowy background", '"snowy"'],
+    ];
 
   skin.backgroundChoicesK1 = [
     [skin.randomPurpleIcon, RANDOM_VALUE],
@@ -79,6 +105,9 @@ function loadInfinity(skin, assetUrl) {
     [msg.projectileElsa(), '"projectile_elsa"'],
     [msg.projectileBaymax(), '"projectile_baymax"'],
     [msg.projectileRapunzel(), '"projectile_rapunzel"'],
+    [msg.projectileCherry(), '"projectile_cherry"'],
+    [msg.projectileIce(), '"projectile_ice"'],
+    [msg.projectileDuck(), '"projectile_duck"'],
     [msg.projectileRandom(), RANDOM_VALUE]];
 }
 
