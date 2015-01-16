@@ -52,7 +52,6 @@ Blockly.BlockSvg = function(block) {
   this.notchPathLeftHighlight = 'l 6.5,4 2,0 6.5,-4';
   /**
    * SVG path for drawing next/previous notch from right to left.
-   * @const
    */
   this.notchPathRight = 'l -6,4 -3,0 -6,-4';
 
