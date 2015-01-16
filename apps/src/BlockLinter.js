@@ -234,32 +234,6 @@ BlockLinter.hasMatchingDescendant_ = function (node, filter) {
   });
 };
 
-
-/**
- * Check for empty container blocks, and return an appropriate failure
- * code if any are found.
- * @return {TestResults} ALL_PASS if no empty blocks are present, or
- *   EMPTY_BLOCK_FAIL or EMPTY_FUNCTION_BLOCK_FAIL if empty blocks
- *   are found.
- */
-BlockLinter.prototype.checkForEmptyContainerBlockFailure = function() {
-  var emptyBlock = this.getEmptyContainerBlock_();
-  if (!emptyBlock) {
-    return TestResults.ALL_PASS;
-  }
-
-  var type = emptyBlock.type;
-  if (type === 'procedures_defnoreturn' || type === 'procedures_defreturn') {
-    return TestResults.EMPTY_FUNCTION_BLOCK_FAIL;
-  }
-
-  // Block is assumed to be "if" or "repeat" if we reach here.
-  // This is where to add checks if you want a different TestResult
-  // for "controls_for_counter" blocks, for example.
-  return TestResults.EMPTY_BLOCK_FAIL;
-};
-
-
 /**
  * Check to see if the user's code contains the required blocks for a level.
  * @param {!Array} requiredBlocks The blocks that are required to be used in
@@ -376,9 +350,17 @@ BlockLinter.prototype.runStaticAnalysis = function (isLevelComplete) {
   // TODO (bbuchanan) : There should be UI tests around every one of these
   //   failure types!
   if (this.isCheckForEmptyBlocksEnabled_) {
-    var emptyBlockFailure = this.checkForEmptyContainerBlockFailure();
-    if (emptyBlockFailure !== TestResults.ALL_PASS) {
-      return emptyBlockFailure;
+    var emptyBlock = this.getEmptyContainerBlock_();
+    if (emptyBlock) {
+      var type = emptyBlock.type;
+      if (type === 'procedures_defnoreturn' || type === 'procedures_defreturn') {
+        return TestResults.EMPTY_FUNCTION_BLOCK_FAIL;
+      }
+
+      // Block is assumed to be "if" or "repeat" if we reach here.
+      // This is where to add checks if you want a different TestResult
+      // for "controls_for_counter" blocks, for example.
+      return TestResults.EMPTY_BLOCK_FAIL;
     }
   }
 
