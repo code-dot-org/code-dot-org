@@ -1461,7 +1461,7 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
     {'func': 'setSpriteEmotion', 'params': ["0", "1"] },
     {'func': 'throwProjectile', 'params': ["0", "1", "'blue_fireball'"] },
     {'func': 'vanish', 'params': ["0"] },
-    {'func': 'attachEventHandler', 'params': ["'when-left'", "function() {\n  \n}"] },
+    {'func': 'onEvent', 'params': ["'when-left'", "function() {\n  \n}"] },
   ],
   'startBlocks': "",
 });

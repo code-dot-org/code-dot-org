@@ -159,7 +159,10 @@ theme: none
 
 %h3 {{progress.script.name}}
 
-%table#progress
+%table#progress{style: "width: 950px; table-layout: fixed"}
+  %colgroup
+    %col{width: "{{950 - progress.table_width}}"}/
+    %col{width: "{{progress.table_width}}"}/
   %tr.progressheader  
     %th
       %a{href: "", "ng-click" => "order = 'name'"}= I18n.t('dashboard_students_name')
@@ -168,11 +171,11 @@ theme: none
   %tr.progressheader  
     %td.studentname
     %td
-      .stage{"ng-repeat" => "stage in progress.script.stages", style: "width: {{progress.bar_width * stage.length}}px"}
+      .stage{"ng-repeat" => "stage in progress.script.stages", style: "width: {{progress.bar_width * stage.length}}px", title: '{{stage.title}}'}
         {{stage.title}}
   %tr.studentrow{"ng-repeat" => "student in section.students | orderBy:order"}
     %td.studentname
-      %a{"ng-href" => "#/sections/{{section.id}}/student/{{student.id}}"} {{student.name}}
+      %a{"ng-href" => "#/sections/{{section.id}}/student/{{student.id}}", title: '{{student.name}}'} {{student.name}}
     %td.studentzone
       .stage{"ng-repeat" => "stage in progress.script.stages", style: "width: {{progress.bar_width * stage.length}}px"}
         &nbsp;    

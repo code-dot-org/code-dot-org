@@ -7,15 +7,21 @@ title: K-5 Office Hours for Teachers
 
 Do you have a question about Code.org's K-5 Courses that you'd like answered by a Code.org staff member or teacher that has used Code.org courses with their students? Visit Code.org's Office Hours, which is a monthly, 1-hour videochat to help you use our curriculum with your students. Hope to see you there!
 
-## Schedule for 2014
+## Schedule
 
 Click the links below at that time and date to join.
 
-Thursday November 6, 2014 • 5 p.m. *ET* / 1 hr [View Recording](http://youtu.be/Jb2xhFeNvG4)
+Thursday, November 6, 2014 • 5 p.m. *PT* / 1 hr [View Recording](http://youtu.be/Jb2xhFeNvG4)
 
-[Thursday December 4, 2014 • 5 p.m. *ET* / 1 hr](https://bluejeans.com/817941462/browser)
+Thursday, December 4, 2014 • 5 p.m. *PT* / 1 hr [View Recording](https://www.youtube.com/watch?v=Lmr5Sfhk8rM&feature=youtu.be)
 
-[Thursday December 4, 2014 • 5 p.m. *PT* / 1 hr](https://bluejeans.com/970378747/browser)
+Wednesday, February 4, 2015 • 5 p.m. *PT* / 1 hr [Click here to join](https://bluejeans.com/130366939/browser)
+
+Wednesday, March 11, 2015 • 5 p.m. *PT* / 1 hr [Click here to join](https://bluejeans.com/831078338/browser)
+
+Wednesday, April 8, 2015 • 5 p.m. *PT* / 1 hr [Click here to join](https://bluejeans.com/211642174/browser)
+
+Wednesday, May 6, 2015 • 5 p.m. *PT* / 1 hr [Click here to join](https://bluejeans.com/588893326/browser)
 
 **More dates coming for 2015!**
 
