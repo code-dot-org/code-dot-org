@@ -27,6 +27,34 @@ var BlockLinter = function ( blockly ) {
 module.exports = BlockLinter;
 
 /**
+* Get blocks that the user intends in the program. These are the blocks that
+* are used when checking for required blocks and when determining lines of code
+* written.
+* @return {Array<Object>} The blocks.
+*/
+BlockLinter.prototype.getUserBlocks = function() {
+  var allBlocks = this.blockly_.mainBlockSpace.getAllBlocks();
+  var blocks = allBlocks.filter(function(block) {
+    return !block.disabled && block.isEditable() && block.type !== 'when_run';
+  });
+  return blocks;
+};
+
+/**
+* Get countable blocks in the program, namely any that are not disabled.
+* These are used when determined the number of blocks relative to the ideal
+* block count.
+* @return {Array<Object>} The blocks.
+*/
+BlockLinter.prototype.getCountableBlocks = function() {
+  var allBlocks = this.blockly_.mainBlockSpace.getAllBlocks();
+  var blocks = allBlocks.filter(function(block) {
+    return !block.disabled;
+  });
+  return blocks;
+};
+
+/**
  * Do we have any floating blocks not attached to an event block or
  * function block?
  * @return {boolean}

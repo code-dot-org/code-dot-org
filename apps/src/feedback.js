@@ -275,7 +275,8 @@ FeedbackUtils.prototype.getNumBlocksUsed = function() {
     }
     return codeLines;
   }
-  return this.getUserBlocks_().length;
+  var blockLinter = new BlockLinter(Blockly);
+  return blockLinter.getUserBlocks().length;
 };
 
 /**
@@ -296,7 +297,8 @@ FeedbackUtils.prototype.getNumCountableBlocks = function() {
     }
     return codeLines;
   }
-  return this.getCountableBlocks_().length;
+  var blockLinter = new BlockLinter(Blockly);
+  return blockLinter.getCountableBlocks().length;
 };
 
 /**
@@ -832,34 +834,6 @@ FeedbackUtils.prototype.hasAllRequiredBlocks_ = function(requiredBlocks) {
 };
 
 /**
- * Get blocks that the user intends in the program. These are the blocks that
- * are used when checking for required blocks and when determining lines of code
- * written.
- * @return {Array<Object>} The blocks.
- */
-FeedbackUtils.prototype.getUserBlocks_ = function() {
-  var allBlocks = Blockly.mainBlockSpace.getAllBlocks();
-  var blocks = allBlocks.filter(function(block) {
-    return !block.disabled && block.isEditable() && block.type !== 'when_run';
-  });
-  return blocks;
-};
-
-/**
- * Get countable blocks in the program, namely any that are not disabled.
- * These are used when determined the number of blocks relative to the ideal
- * block count.
- * @return {Array<Object>} The blocks.
- */
-FeedbackUtils.prototype.getCountableBlocks_ = function() {
-  var allBlocks = Blockly.mainBlockSpace.getAllBlocks();
-  var blocks = allBlocks.filter(function(block) {
-    return !block.disabled;
-  });
-  return blocks;
-};
-
-/**
  * Check to see if the user's code contains the required blocks for a level.
  * @param {!Array} requiredBlocks The blocks that are required to be used in
  *   the solution to this level.
@@ -876,7 +850,8 @@ FeedbackUtils.prototype.getMissingRequiredBlocks_ = function (requiredBlocks,
   var customMessage = null;
   var code = null;  // JavaScript code, which is initialized lazily.
   if (requiredBlocks && requiredBlocks.length) {
-    var userBlocks = this.getUserBlocks_();
+    var blockLinter = new BlockLinter(BLockly);
+    var userBlocks = blockLinter.getUserBlocks();
     // For each list of required blocks
     // Keep track of the number of the missing block lists. It should not be
     // bigger than the maxBlocksToFlag param.
@@ -921,17 +896,6 @@ FeedbackUtils.prototype.getMissingRequiredBlocks_ = function (requiredBlocks,
     blocksToDisplay: missingBlocks,
     message: customMessage
   };
-};
-
-/**
- * Do we have any floating blocks not attached to an event block or function block?
- */
-FeedbackUtils.prototype.hasExtraTopBlocks = function () {
-  if (this.studioApp_.isUsingBlockly()) {
-    var blockLinter = new BlockLinter(Blockly);
-    return blockLinter.hasExtraTopBlocks();
-  }
-  return false;
 };
 
 /**
