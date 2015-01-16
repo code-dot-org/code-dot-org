@@ -10,12 +10,12 @@ module StagesHelper
       else # stage
         stage = stage_or_game
         title = t('stage_number', number: stage.position)
-        title += ": "
+        title += ': '
         title += data_t_suffix('script.name', script.name, stage.name)
         return title
       end
     else # script only has one stage/game, use the script name
-      data_t_suffix('script.name', script.name, "title")
+      data_t_suffix('script.name', script.name, 'title')
     end
   end
 
