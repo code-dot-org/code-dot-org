@@ -66,9 +66,11 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   }
   var feedbackBlocks;
   if (this.studioApp_.isUsingBlockly()) {
+    var blockLinter = new BlockLinter(Blockly);
     feedbackBlocks = new FeedbackBlocks(
         options,
-        this.getMissingRequiredBlocks_(requiredBlocks, maxRequiredBlocksToFlag),
+        blockLinter.getMissingRequiredBlocks(requiredBlocks,
+            maxRequiredBlocksToFlag),
         this.studioApp_);
   }
   // feedbackMessage must be initialized after feedbackBlocks
@@ -787,72 +789,9 @@ FeedbackUtils.prototype.hasAllRequiredBlocks_ = function(requiredBlocks) {
   // It's okay (maybe faster) to pass 1 for maxBlocksToFlag, since in the end
   // we want to check that there are zero blocks missing.
   var maxBlocksToFlag = 1;
-  return this.getMissingRequiredBlocks_(requiredBlocks, maxBlocksToFlag).blocksToDisplay.length === 0;
-};
-
-/**
- * Check to see if the user's code contains the required blocks for a level.
- * @param {!Array} requiredBlocks The blocks that are required to be used in
- *   the solution to this level.
- * @param {number} maxBlocksToFlag The maximum number of blocks to return.
- * @return {{blocksToDisplay:!Array, message:?string}} 'missingBlocks' is an
- *   array of array of strings where each array of strings is a set of blocks
- *   that at least one of them should be used. Each block is represented as the
- *   prefix of an id in the corresponding template.soy. 'message' is an
- *   optional message to override the default error text.
- */
-FeedbackUtils.prototype.getMissingRequiredBlocks_ = function (requiredBlocks,
-    maxBlocksToFlag) {
-  var missingBlocks = [];
-  var customMessage = null;
-  var code = null;  // JavaScript code, which is initialized lazily.
-  if (requiredBlocks && requiredBlocks.length) {
-    var blockLinter = new BlockLinter(BLockly);
-    var userBlocks = blockLinter.getUserBlocks();
-    // For each list of required blocks
-    // Keep track of the number of the missing block lists. It should not be
-    // bigger than the maxBlocksToFlag param.
-    var missingBlockNum = 0;
-    for (var i = 0;
-         i < requiredBlocks.length &&
-             missingBlockNum < maxBlocksToFlag;
-         i++) {
-      var requiredBlock = requiredBlocks[i];
-      // For each of the test
-      // If at least one of the tests succeeded, we consider the required block
-      // is used
-      var usedRequiredBlock = false;
-      for (var testId = 0; testId < requiredBlock.length; testId++) {
-        var test = requiredBlock[testId].test;
-        if (typeof test === 'string') {
-          code = code || Blockly.Generator.blockSpaceToCode('JavaScript');
-          if (code.indexOf(test) !== -1) {
-            // Succeeded, moving to the next list of tests
-            usedRequiredBlock = true;
-            break;
-          }
-        } else if (typeof test === 'function') {
-          if (userBlocks.some(test)) {
-            // Succeeded, moving to the next list of tests
-            usedRequiredBlock = true;
-            break;
-          } else {
-            customMessage = requiredBlock[testId].message || customMessage;
-          }
-        } else {
-          throw new Error('Bad test: ' + test);
-        }
-      }
-      if (!usedRequiredBlock) {
-        missingBlockNum++;
-        missingBlocks = missingBlocks.concat(requiredBlocks[i][0]);
-      }
-    }
-  }
-  return {
-    blocksToDisplay: missingBlocks,
-    message: customMessage
-  };
+  var blockLinter = new BlockLinter(Blockly);
+  return blockLinter.getMissingRequiredBlocks(requiredBlocks,
+      maxBlocksToFlag).blocksToDisplay.length === 0;
 };
 
 /**

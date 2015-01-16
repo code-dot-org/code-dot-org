@@ -113,11 +113,11 @@ describe("checkForEmptyContainerBlockFailure", function () {
  * getMissingRequiredBlocks and validates that the result matches the
  * options.expectedResult
  */
-describe("getMissingRequiredBlocks_ tests", function () {
+describe("getMissingRequiredBlocks tests", function () {
   var studioApp;
 
   /**
-   * getMissingRequiredBlocks_ will return us an array of requiredBlocks.  We
+   * getMissingRequiredBlocks will return us an array of requiredBlocks.  We
    * can't validate these using a simple assert.deepEqual because some blocks
    * contain a members generated functions.  These functions are the same in
    * terms of contents, but do not share the same space in memory, and thus
@@ -174,7 +174,8 @@ describe("getMissingRequiredBlocks_ tests", function () {
     assert(!options.userBlockXml || loaded, "either we didnt have  input xml" +
       "or we did, and we loaded something");
 
-    var missing = studioApp.feedback_.getMissingRequiredBlocks_(
+    var blockLinter = new BlockLinter(Blockly);
+    var missing = blockLinter.getMissingRequiredBlocks(
         options.requiredBlocks, options.numToFlag);
     validateMissingRequiredBlocks(missing.blocksToDisplay, options.expectedResult);
   }

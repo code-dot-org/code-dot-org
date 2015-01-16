@@ -234,3 +234,66 @@ BlockLinter.prototype.checkForEmptyContainerBlockFailure = function() {
   // for "controls_for_counter" blocks, for example.
   return TestResults.EMPTY_BLOCK_FAIL;
 };
+
+
+/**
+* Check to see if the user's code contains the required blocks for a level.
+* @param {!Array} requiredBlocks The blocks that are required to be used in
+*   the solution to this level.
+* @param {number} maxBlocksToFlag The maximum number of blocks to return.
+* @return {{blocksToDisplay:!Array, message:?string}} 'missingBlocks' is an
+*   array of array of strings where each array of strings is a set of blocks
+*   that at least one of them should be used. Each block is represented as the
+*   prefix of an id in the corresponding template.soy. 'message' is an
+*   optional message to override the default error text.
+*/
+BlockLinter.prototype.getMissingRequiredBlocks = function (requiredBlocks,
+    maxBlocksToFlag) {
+  var missingBlocks = [];
+  var customMessage = null;
+  var code = null;  // JavaScript code, which is initialized lazily.
+  if (requiredBlocks && requiredBlocks.length) {
+    var userBlocks = this.getUserBlocks();
+    // For each list of required blocks
+    // Keep track of the number of the missing block lists. It should not be
+    // bigger than the maxBlocksToFlag param.
+    var missingBlockNum = 0;
+    for (var i = 0; i < requiredBlocks.length &&
+        missingBlockNum < maxBlocksToFlag; i++) {
+      var requiredBlock = requiredBlocks[i];
+      // For each of the test
+      // If at least one of the tests succeeded, we consider the required block
+      // is used
+      var usedRequiredBlock = false;
+      for (var testId = 0; testId < requiredBlock.length; testId++) {
+        var test = requiredBlock[testId].test;
+        if (typeof test === 'string') {
+          code = code || this.blockly_.Generator.blockSpaceToCode('JavaScript');
+          if (code.indexOf(test) !== -1) {
+            // Succeeded, moving to the next list of tests
+            usedRequiredBlock = true;
+            break;
+          }
+        } else if (typeof test === 'function') {
+          if (userBlocks.some(test)) {
+            // Succeeded, moving to the next list of tests
+            usedRequiredBlock = true;
+            break;
+          } else {
+            customMessage = requiredBlock[testId].message || customMessage;
+          }
+        } else {
+          throw new Error('Bad test: ' + test);
+        }
+      }
+      if (!usedRequiredBlock) {
+        missingBlockNum++;
+        missingBlocks = missingBlocks.concat(requiredBlocks[i][0]);
+      }
+    }
+  }
+  return {
+    blocksToDisplay: missingBlocks,
+    message: customMessage
+  };
+};
