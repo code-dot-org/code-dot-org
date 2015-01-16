@@ -79,6 +79,15 @@ angular: professionalDevelopmentWorkshop
         }
       };
 
+      Workshop.prototype.lastDate = function() {
+        if (this.dates) {
+          var last_date = this.dates[this.dates.length-1];
+          if (last_date.date_s) {
+            return new Date(last_date.date_s);
+          }
+        }
+      };
+
       Workshop.prototype.state = function() {
         if (this.$resolved === false || !this.secret) {
           // not yet loaded or is a brand new workshop
@@ -164,6 +173,28 @@ angular: professionalDevelopmentWorkshop
 
     $scope.hasWorkshops = false;
     $scope.workshops = workshopsService.query();
+    $scope.today = new Date();
+
+    $scope.futureWorkshops = function() {
+      var future_workshops = [];
+      for (var i = 0; i < $scope.workshops.length; i++) {
+        if ($scope.workshops[i].lastDate() >= $scope.today) {
+          future_workshops.push($scope.workshops[i]);
+        }
+      }
+      return future_workshops;
+    }
+
+    $scope.pastWorkshops = function() {
+      var past_workshops = [];
+      var today = new Date();
+      for (var i = 0; i < $scope.workshops.length; i++) {
+        if ($scope.workshops[i].lastDate() < $scope.today) {
+          past_workshops.push($scope.workshops[i]);
+        }
+      }
+      return past_workshops;
+    }
 
     $scope.workshops.$promise.then(function(workshops){
       for (var i = 0; i < workshops.length; i++) {
@@ -172,7 +203,7 @@ angular: professionalDevelopmentWorkshop
         workshop_signups.$promise.then(function(workshop_signups){
           var active_signups_count = 0;
           for (var j = 0; j < workshop_signups.length; j++) {
-            if (workshop_signups[j].status != 'cancelled') {
+            if (workshop_signups[j].status_s != 'cancelled') {
               active_signups_count ++;
             }
           }
@@ -236,7 +267,7 @@ angular: professionalDevelopmentWorkshop
         var workshop_signups = workshopSignupsService.get({parent_secret: $routeParams.secret});
         workshop_signups.$promise.then(function(workshop_signups){
           for (var i = 0; i < workshop_signups.length; i++) {
-            if (workshop_signups[i].status == 'cancelled') {
+            if (workshop_signups[i].status_s == 'cancelled') {
               cancelled_signups.push(workshop_signups[i]);
             }
             else {

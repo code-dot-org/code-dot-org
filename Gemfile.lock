@@ -36,6 +36,7 @@ GEM
     acts_as_list (0.4.0)
       activerecord (>= 3.0)
     addressable (2.3.6)
+    ansi (1.4.3)
     arel (4.0.2)
     autoparse (0.3.3)
       addressable (>= 2.3.1)
@@ -62,6 +63,7 @@ GEM
     chromedriver-helper (0.0.7)
       nokogiri
     chronic (0.10.2)
+    chunky_png (1.3.3)
     codeclimate-test-reporter (0.3.0)
       simplecov (>= 0.7.1, < 1.0.0)
     codemirror-rails (4.2)
@@ -88,6 +90,10 @@ GEM
     eventmachine (1.0.4)
     execjs (2.0.2)
     extlib (0.9.16)
+    eyes_selenium (2.5.0)
+      httparty
+      oily_png (>= 1.1.0)
+      selenium-webdriver (>= 2.37)
     factory_girl (4.4.0)
       activesupport (>= 3.0.0)
     factory_girl_rails (4.4.1)
@@ -133,6 +139,9 @@ GEM
     hitimes (1.2.2)
     honeybadger (1.11.2)
       json
+    httparty (0.13.3)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
     i18n (0.6.9)
     i18nema (0.0.8)
       i18n (>= 0.5)
@@ -166,6 +175,11 @@ GEM
     mime-types (1.25.1)
     mini_portile (0.5.3)
     minitest (4.7.5)
+    minitest-reporters (0.14.24)
+      ansi
+      builder
+      minitest (>= 2.12, < 5.0)
+      powerbar
     mocha (1.0.0)
       metaclass (~> 0.0.1)
     multi_json (1.10.1)
@@ -184,6 +198,8 @@ GEM
       multi_json (~> 1.3)
       multi_xml (~> 0.5)
       rack (~> 1.2)
+    oily_png (1.1.2)
+      chunky_png (~> 1.3.1)
     omniauth (1.2.2)
       hashie (>= 1.2, < 4)
       rack (~> 1.0)
@@ -207,12 +223,17 @@ GEM
       activerecord (~> 4.0)
     phantomjs (1.9.7.1)
     polyglot (0.3.4)
+    powerbar (1.0.11)
+      ansi (~> 1.4.0)
+      hashie (>= 1.1.0)
     quiet_assets (1.0.2)
       railties (>= 3.1, < 5.0)
     rack (1.5.2)
     rack-contrib (1.2.0)
       rack (>= 0.9.1)
     rack-protection (1.5.3)
+      rack
+    rack-proxy (0.5.17)
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -288,6 +309,9 @@ GEM
       rack (~> 1.4)
       rack-protection (~> 1.4)
       tilt (~> 1.3, >= 1.3.4)
+    spring (1.1.3)
+    spring-commands-testunit (1.0.1)
+      spring (>= 0.9.1)
     sprockets (2.11.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -353,6 +377,7 @@ DEPENDENCIES
   cucumber
   devise
   execjs
+  eyes_selenium
   factory_girl_rails
   font-awesome-rails
   geocoder
@@ -369,6 +394,7 @@ DEPENDENCIES
   jwt
   kaminari
   le (~> 2.2)
+  minitest-reporters
   mocha
   mysql2 (= 0.3.13)
   naturally
@@ -384,6 +410,7 @@ DEPENDENCIES
   phantomjs (~> 1.9.7.1)
   quiet_assets
   rack-contrib (~> 1.1)
+  rack-proxy
   rails (= 4.0.3)
   redcarpet (~> 3.1.1)
   redis (~> 3.1.0)
@@ -400,6 +427,8 @@ DEPENDENCIES
   shotgun
   simplecov
   sinatra (= 1.4.4)
+  spring
+  spring-commands-testunit
   stringex (~> 2.5.2)
   therubyracer
   thin (~> 1.6.2)

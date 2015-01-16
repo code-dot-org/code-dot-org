@@ -51,36 +51,38 @@ module ApplicationHelper
     image_tag(image_url('white-checkmark.png'))
   end
 
+  def activity_css_class(result)
+    if result.nil?
+      'not_tried'
+    elsif result >= Activity::FREE_PLAY_RESULT
+      'perfect'
+    elsif result >= Activity::MINIMUM_PASS_RESULT
+      'passed'
+    else
+      'attempted'
+    end
+  end
+
   def level_info(user, script_level)
     result =
       if user
         script_level.try(:user_level).try(:best_result)
-      elsif (session[:progress] && session[:progress][script_level.level_id])
-        result = session[:progress][script_level.level_id]
+      elsif session[:progress] && session[:progress][script_level.level_id]
+        session[:progress][script_level.level_id]
       end
-
-    css_class = if result.nil?
-                  'not_tried'
-                elsif result >= Activity::FREE_PLAY_RESULT
-                  'perfect'
-                elsif result >= Activity::MINIMUM_PASS_RESULT
-                  'passed'
-                else
-                  'attempted'
-                end
     link = build_script_level_url(script_level)
-    [css_class, link]
+    [activity_css_class(result), link]
   end
 
   def show_flashes
-    ret = ""
+    ret = ''
     if notice.present?
-      ret += content_tag(:div, flash.notice, {class: "alert alert-success"})
+      ret += content_tag(:div, flash.notice, {class: 'alert alert-success'})
       flash.notice = nil
     end
 
     if alert.present?
-      ret += content_tag(:div, flash.alert, {class: "alert alert-danger"})
+      ret += content_tag(:div, flash.alert, {class: 'alert alert-danger'})
       flash.alert = nil
     end
 
@@ -133,7 +135,7 @@ module ApplicationHelper
           level_source.level_source_image.s3_url
         end
       else
-        url_for(controller: "level_sources", action: "generate_image", id: level_source.id, only_path: false)
+        url_for(controller: 'level_sources', action: 'generate_image', id: level_source.id, only_path: false)
       end
     elsif app == Game::FLAPPY || app == Game::BOUNCE || app == Game::STUDIO
       asset_url "#{app}_sharing_drawing.png"

@@ -322,7 +322,7 @@ em strong {
 
 .header.hide_on_mobile,
 .header-wrapper.hide_on_mobile {
-  @media screen and (max-device-width: 900px) {
+  @media screen and (max-device-height: 900px) and (max-device-width: 500px) {
     display: none;
   }
 }
@@ -537,27 +537,6 @@ html, body {
     padding-top: 10px;
     min-width: 0px;
   }
-}
-
-.headerlink:link, .headerlink:visited {
-  color: white;
-  text-decoration: none;
-}
-
-.headerlink:hover, .headerlink:active {
-  color: white;
-  border-bottom: solid 4px rgb(255, 138, 0);
-  background-color: initial;
-}
-
-.headerlink {
-  display: inline-block;
-  position: absolute;
-  right: 125px;
-  font-size: 18px;
-  margin: 0.9375em 0 0 30px;
-  font-family: 'Gotham 4r', sans-serif;
-  float: right;
 }
 
 .header_middle {
@@ -905,21 +884,18 @@ html, body {
   position: absolute;
   cursor: pointer;
   z-index: 1;
+  background: image-url("x_button.png") no-repeat center center;
+  background-size: 100% auto;
 
   top: $cornerOffset;
   right: $cornerOffset;
+  width: $startWidth;
+  height: $startHeight;
   &:hover {
     top: $cornerOffset - $movement;
     right: $cornerOffset - $movement;
-  }
-
-  img {
-    width: $startWidth;
-    height: $startHeight;
-    &:hover {
-      width: $startWidth + $growth;
-      height: $startHeight + $growth;
-    }
+    width: $startWidth + $growth;
+    height: $startHeight + $growth;
   }
 }
 
@@ -959,8 +935,6 @@ html[dir=rtl] .qtip-content {
 
   .tooltip-x-close {
     @include close-button($cornerOffset: -35px);
-    background: none;
-    color: none;
   }
 }
 

@@ -2,7 +2,9 @@ var chai = require('chai');
 chai.Assertion.includeStack = true;
 var assert = chai.assert;
 
-var ExpressionNode = require('../src/calc/expressionNode');
+var testUtils = require('./util/testUtils');
+
+var ExpressionNode = require(testUtils.buildPath('/calc/expressionNode'));
 
 /**
  * Get a string representation of the tree

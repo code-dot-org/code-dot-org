@@ -1,6 +1,0 @@
-name 'Creating Contracts From Examples 3'
-title 'Creating Contracts From Examples 3'
-content1 'Try using the "text" function to write this red text at size 40.'
-content2 'Example 3.solution_block, 300'
-answer 'text|image|color:string|text:string|size:number'
-

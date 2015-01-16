@@ -7,6 +7,6 @@ Sequel.migration do
   end
 
   down do
-    #drop_table? :user_storage_ids
+    drop_table?(:user_storage_ids) unless rack_env?(:production)
   end
 end

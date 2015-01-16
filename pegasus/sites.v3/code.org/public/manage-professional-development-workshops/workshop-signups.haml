@@ -18,8 +18,12 @@ title: Workshop signups
 
   -total_signups = 0
   -workshop_rows.each do |workshop_row|
-    -workshop = JSON.parse(workshop_row[:data]).merge(JSON.parse(workshop_row[:processed_data]))
-    -signup_count = DB[:forms].where(kind:'ProfessionalDevelopmentWorkshopSignup').and(parent_id:workshop_row[:id]).count
+    -workshop = JSON.parse(workshop_row[:data])
+    -signup_count = 0
+    -signup_rows = DB[:forms].where(kind:'ProfessionalDevelopmentWorkshopSignup').and(parent_id:workshop_row[:id])
+    -signup_rows.each do |signup_row|
+      -signup = JSON.parse(signup_row[:data])
+      -signup_count += 1 unless signup['status_s'] == 'cancelled'
     -total_signups = total_signups + signup_count
     %tr
       %td #{workshop_row[:name]} (#{workshop_row[:email]})
