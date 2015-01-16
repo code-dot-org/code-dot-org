@@ -19,6 +19,7 @@ var dom = require('../dom');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
 var Slider = require('../slider');
+var AppStorage = require('./appStorage');
 var FormStorage = require('./formStorage');
 var constants = require('../constants');
 var KeyCodes = constants.KeyCodes;
@@ -951,7 +952,7 @@ Applab.encodedFeedbackImage = '';
 
 Applab.onViewData = function() {
   window.open(
-    '//' + getPegasusHost() + '/edit-csp-app/' + FormStorage.getAppSecret(),
+    '//' + getPegasusHost() + '/edit-csp-app/' + AppStorage.tempAppId,
     '_blank');
 };
 
@@ -1087,8 +1088,8 @@ Applab.callCmd = function (cmd) {
     case 'startWebRequest':
     case 'setTimeout':
     case 'clearTimeout':
-    case 'createRecord':
-    case 'readRecords':
+    case 'createSharedRecord':
+    case 'readSharedRecords':
       studioApp.highlight(cmd.id);
       retVal = Applab[cmd.name](cmd.opts);
       break;
@@ -1638,29 +1639,29 @@ Applab.clearTimeout = function (opts) {
   window.clearTimeout(opts.timeoutId);
 };
 
-Applab.createRecord = function (opts) {
+Applab.createSharedRecord = function (opts) {
   var record = codegen.marshalInterpreterToNative(Applab.interpreter,
       opts.record);
-  FormStorage.createRecord(record,
-      Applab.handleCreateRecord.bind(this, opts.callback));
+  AppStorage.createSharedRecord(record,
+      Applab.handleCreateSharedRecord.bind(this, opts.callback));
 };
 
-Applab.handleCreateRecord = function(interpreterCallback, record) {
+Applab.handleCreateSharedRecord = function(interpreterCallback, record) {
   Applab.eventQueue.push({
     'fn': interpreterCallback,
     'arguments': [record]
   });
 };
 
-Applab.readRecords = function (opts) {
+Applab.readSharedRecords = function (opts) {
   var searchParams = codegen.marshalInterpreterToNative(Applab.interpreter,
       opts.searchParams);
-  FormStorage.readRecords(
+  AppStorage.readSharedRecords(
       searchParams,
-      Applab.handleReadRecords.bind(this, opts.callback));
+      Applab.handleReadSharedRecords.bind(this, opts.callback));
 };
 
-Applab.handleReadRecords = function(interpreterCallback, records) {
+Applab.handleReadSharedRecords = function(interpreterCallback, records) {
   Applab.eventQueue.push({
     'fn': interpreterCallback,
     'arguments': [records]
