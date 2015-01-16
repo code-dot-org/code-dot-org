@@ -5,7 +5,7 @@ def create_storage_id_cookie
   response.set_cookie(storage_id_cookie_name, {
     value:CGI.escape(storage_encrypt_id(storage_id)),
     domain:".#{request.site}",
-    path:'/v2/apps',
+    path:'/v3/apps',
     expires:Time.now + (365 * 24 * 3600)
   })
 
