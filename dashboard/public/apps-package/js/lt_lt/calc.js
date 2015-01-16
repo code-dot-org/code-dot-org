@@ -2213,8 +2213,9 @@ function generateExpressionsFromBlockXml(blockXml) {
 }
 
 // todo (brent) : would this logic be better placed inside the blocks?
-// todo (brent) : could use some unit tests
+// todo (brent) : needs some unit tests
 function getEquationFromBlock(block) {
+  var name;
   if (!block) {
     return null;
   }
@@ -2251,22 +2252,36 @@ function getEquationFromBlock(block) {
         new ExpressionNode(parseInt(val, 10), [], block.id));
 
     case 'functional_call':
-      var name = block.getCallName();
+      name = block.getCallName();
       var def = Blockly.Procedures.getDefinition(name, Blockly.mainBlockSpace);
-      if (!def.isVariable()) {
-        throw new Error('not expected');
+      if (def.isVariable()) {
+        return new Equation(null, new ExpressionNode(name));
+      } else {
+        var values = [];
+        var input, childBlock;
+        for (var i = 0; !!(input = block.getInput('ARG' + i)); i++) {
+          childBlock = input.connection.targetBlock();
+          // TODO - better default?
+          values.push(childBlock ? getEquationFromBlock(childBlock).expression :
+            new ExpressionNode(0));
+        }
+        return new Equation(null, new ExpressionNode(name, values));
       }
-      return new Equation(null, new ExpressionNode(name));
+      break;
 
     case 'functional_definition':
-      if (block.isVariable()) {
-        if (!firstChild) {
-          return new Equation(block.getTitleValue('NAME'), new ExpressionNode(0));
-        }
-        return new Equation(block.getTitleValue('NAME'),
-          getEquationFromBlock(firstChild).expression);
+      name = block.getTitleValue('NAME');
+      // TODO - access private
+      if (block.parameterNames_.length) {
+        name += '(' + block.parameterNames_.join(',') +')';
       }
-      throw new Error('not sure if this works yet');
+      var expression = firstChild ? getEquationFromBlock(firstChild).expression :
+        new ExpressionNode(0);
+
+      return new Equation(name, expression);
+
+    case 'functional_parameters_get':
+      return new Equation(null, new ExpressionNode(block.getTitleValue('VAR')));
 
     default:
       throw "Unknown block type: " + block.type;
@@ -2445,6 +2460,9 @@ function displayEquation(parentId, name, tokenList, line, markClass) {
   parent.appendChild(g);
   var xPos = 0;
   var len;
+  // TODO (brent) in the case of functions, really we'd like the name to also be
+  // a tokenDiff - i.e. if target is foo(x,y) and user expression is foo(y, x)
+  // we'd like to highlight the differences
   if (name) {
     len = addText(g, (name + ' = '), xPos, null);
     xPos += len;
@@ -2756,24 +2774,47 @@ ExpressionNode.prototype.collapse = function () {
  * @param {ExpressionNode} other The ExpressionNode to compare to.
  */
 ExpressionNode.prototype.getTokenListDiff = function (other) {
-  if (this.children.length === 0) {
-    return [new Token(this.value.toString(), !this.isIdenticalTo(other))];
-  }
-
-  if (this.getType() !== ValueType.ARITHMETIC) {
-    // Don't support getTokenListDiff for functions
-    throw new Error("Unsupported");
-  }
-
+  var tokens;
   var nodesMatch = other && (this.value === other.value) &&
     (this.children.length === other.children.length);
-  return _.flatten([
-    new Token('(', !nodesMatch),
-    this.children[0].getTokenListDiff(nodesMatch && other.children[0]),
-    new Token(" " + this.value + " ", !nodesMatch),
-    this.children[1].getTokenListDiff(nodesMatch && other.children[1]),
-    new Token(')', !nodesMatch)
-  ]);
+  var type = this.getType();
+
+  // Empty function calls look slightly different, i.e. foo() instead of foo
+  if (this.children.length === 0) {
+    return [new Token(this.value.toString(), !nodesMatch)];
+  }
+
+  if (type === ValueType.ARITHMETIC) {
+    // Deal with arithmetic, which is always in the form (child0 operator child1)
+    tokens = [new Token('(', !nodesMatch)];
+    if (this.children.length > 0) {
+      tokens.push([
+        this.children[0].getTokenListDiff(nodesMatch && other.children[0]),
+        new Token(" " + this.value + " ", !nodesMatch),
+        this.children[1].getTokenListDiff(nodesMatch && other.children[1])
+      ]);
+    }
+    tokens.push(new Token(')', !nodesMatch));
+
+  } else if (type === ValueType.FUNCTION_CALL) {
+    // Deal with a function call which will generate something like: foo(1, 2, 3)
+    tokens = [
+      new Token(this.value, this.value !== other.value),
+      new Token('(', !nodesMatch)
+    ];
+
+    for (var i = 0; i < this.children.length; i++) {
+      if (i > 0) {
+        tokens.push(new Token(',', !nodesMatch));
+      }
+      tokens.push(this.children[i].getTokenListDiff(nodesMatch && other.children[i]));
+    }
+
+    tokens.push(new Token(")", !nodesMatch));
+  } else if (this.getType() === ValueType.VARIABLE) {
+
+  }
+  return _.flatten(tokens);
 };
 
 
