@@ -20,26 +20,4 @@ module Rack; class Request
     ]
   end
 
-  def self.locales_supported()
-    @@locales_supported ||= Dir.glob(cache_dir('i18n/*.yml')).map{|i| ::File.basename(i, '.yml').downcase}.sort
-  end
-
-  def language()
-    @pegasus_language ||= env['HTTP_X_VARNISH_ACCEPT_LANGUAGE'] if Request.localized_uris.include?(path_info)
-    @pegasus_language ||= 'en'
-  end
-
-  def locale()
-    @pegasus_locale ||= locale_()
-  end
-
-  def locale_()
-    desired = language.downcase
-    locale = Request.locales_supported.find{|i| i==desired || i.split('-').first==desired}
-    locale ||= 'en-us'
-
-    parts = locale.split('-')
-    return "#{parts[0]}-#{parts[1].upcase}"
-  end
-
 end; end
