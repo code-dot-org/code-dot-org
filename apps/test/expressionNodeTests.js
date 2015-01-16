@@ -313,7 +313,7 @@ describe("ExpressionNode", function () {
       var expected = new ExpressionNode('var', []);
 
       it ('is correct', function () {
-        node = expected.clone();
+        var node = expected.clone();
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
           { str: 'var', marked: false}
@@ -321,7 +321,7 @@ describe("ExpressionNode", function () {
       });
 
       it ('has the wrong value', function () {
-        node = new ExpressionNode('different_var', []);
+        var node = new ExpressionNode('different_var', []);
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
           { str: 'different_var', marked: true}
