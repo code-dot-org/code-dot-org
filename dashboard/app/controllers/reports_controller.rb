@@ -186,7 +186,7 @@ SQL
       sign_in user, :bypass => true
       redirect_to '/'
     else
-      flash[:error] = "I can't find that user"
+      flash[:alert] = "I can't find that user"
       render :assume_identity_form
     end
   end
@@ -195,7 +195,7 @@ SQL
     authorize! :manage, :all
     @section = Section.find_by_code params[:section_code]
     if params[:section_code] && @section.nil?
-      flash[:error] = 'Section code not found'
+      flash[:alert] = 'Section code not found'
     end
   end
 
