@@ -1,5 +1,6 @@
 require 'net/http'
 require 'uri'
+require 'cdo/slack'
 
 class HipChat
 
@@ -26,7 +27,12 @@ class HipChat
       room_id: room.to_s,
       message: message.to_s,
     }))
-    sleep(0.10)
+
+    channel = '#general' if room.to_s == 'developers'
+    channel ||= "\##{room}"
+    Slack.message message.to_s, channel:channel, username:@@name
+
+    #sleep(0.10)
   end
 
   def self.notify(room, message, options={})

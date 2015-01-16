@@ -5,10 +5,4 @@ require ::File.expand_path('../config/environment',  __FILE__)
 require 'unicorn/oob_gc'
 use Unicorn::OobGC
 
-require 'apps_api'
-use AppsApi
-
-require 'shared_resources'
-use SharedResources
-
 run Rails.application

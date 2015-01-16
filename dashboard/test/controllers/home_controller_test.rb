@@ -4,8 +4,8 @@ require 'test_helper'
 class HomeControllerTest < ActionController::TestCase
   include Devise::TestHelpers
 
-  test "language is determined from cookies" do
-    @request.cookies[:language_] = "es-ES"
+  test "language is determined from cdo.locale" do
+    @request.env['cdo.locale'] = "es-ES"
 
     get :index
 
