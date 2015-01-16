@@ -970,6 +970,7 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
         this.studioApp_.TestResults.ALL_PASS :
         this.studioApp_.TestResults.TOO_FEW_BLOCKS_FAIL;
   }
+  var blockLinter = new BlockLinter(Blockly);
   if (shouldCheckForEmptyBlocks) {
     var emptyBlockFailure = this.checkForEmptyContainerBlockFailure_();
     if (emptyBlockFailure !== TestResults.ALL_PASS) {
@@ -980,7 +981,6 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
     return TestResults.EXTRA_TOP_BLOCKS_FAIL;
   }
   if (Blockly.useContractEditor || Blockly.useModalFunctionEditor) {
-    var blockLinter = new BlockLinter(Blockly);
     if (blockLinter.hasUnusedParam()) {
       return TestResults.UNUSED_PARAM;
     }
@@ -994,7 +994,7 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
       return TestResults.INCOMPLETE_BLOCK_IN_FUNCTION;
     }
   }
-  if (this.hasQuestionMarksInNumberField_()) {
+  if (blockLinter.hasQuestionMarksInNumberField()) {
     return TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
   }
   if (!this.hasAllRequiredBlocks_(requiredBlocks)) {
@@ -1053,16 +1053,5 @@ FeedbackUtils.prototype.createModalDialogWithIcon = function(options) {
     onHidden: options.onHidden,
     onKeydown: btn ? keydownHandler : undefined,
     id: options.id
-  });
-};
-
-/**
- * Check for '???' instead of a value in block fields.
- */
-FeedbackUtils.prototype.hasQuestionMarksInNumberField_ = function () {
-  return Blockly.mainBlockSpace.getAllBlocks().some(function(block) {
-    return block.getTitles().some(function(title) {
-      return title.value_ === '???';
-    });
   });
 };

@@ -27,9 +27,22 @@ var BlockLinter = function ( blockly ) {
 module.exports = BlockLinter;
 
 /**
-* Ensure that all procedure definitions actually use the parameters they define
-* inside the procedure.
-*/
+ * Check for '???' instead of a value in block fields.
+ * @return {boolean}
+ */
+BlockLinter.prototype.hasQuestionMarksInNumberField = function () {
+  return this.blockly_.mainBlockSpace.getAllBlocks().some(function(block) {
+    return block.getTitles().some(function(title) {
+      return title.text_ === '???';
+    });
+  });
+};
+
+/**
+ * Ensure that all procedure definitions actually use the parameters they define
+ * inside the procedure.
+ * @return {boolean}
+ */
 BlockLinter.prototype.hasUnusedParam = function () {
   return this.blockly_.mainBlockSpace.getAllBlocks().some(function(userBlock) {
     var params = userBlock.parameterNames_;
@@ -47,8 +60,9 @@ BlockLinter.prototype.hasUnusedParam = function () {
 };
 
 /**
-* Ensure that all procedure calls have each parameter input connected.
-*/
+ * Ensure that all procedure calls have each parameter input connected.
+ * @return {boolean}
+ */
 BlockLinter.prototype.hasParamInputUnattached = function () {
   return this.blockly_.mainBlockSpace.getAllBlocks().some(function(userBlock) {
     // Only check procedure_call* blocks
