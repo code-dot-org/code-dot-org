@@ -337,7 +337,7 @@ exports.install = function(blockly, blockInstallOptions) {
     var loopVar = gensym('count');
     return [
         // The generated comment helps detect required blocks.
-        // Don't change it without changing REQUIRED_BLOCKS.
+        // Don't change it without changing requiredBlocks_.
         '// draw_a_square',
         'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 4; ' +
               loopVar + '++) {',
@@ -374,7 +374,7 @@ exports.install = function(blockly, blockInstallOptions) {
     var distanceVar = gensym('distance');
     return [
       // The generated comment helps detect required blocks.
-      // Don't change it without changing REQUIRED_BLOCKS.
+      // Don't change it without changing requiredBlocks_.
       '// draw_a_snowman',
       'Turtle.turnLeft(90);',
       'var ' + distancesVar + ' = [' + value + ' * 0.5, ' + value + ' * 0.3,' +

@@ -12,6 +12,7 @@ var commonMsg = require('../../locale/current/common');
 var studioMsg = require('../../locale/current/studio');
 var skins = require('../skins');
 var constants = require('./constants');
+var sharedConstants = require('../constants');
 var codegen = require('../codegen');
 var api = require('./api');
 var blocks = require('./blocks');
@@ -35,7 +36,8 @@ var Direction = constants.Direction;
 var NextTurn = constants.NextTurn;
 var SquareType = constants.SquareType;
 var Emotions = constants.Emotions;
-var KeyCodes = constants.KeyCodes;
+
+var KeyCodes = sharedConstants.KeyCodes;
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -94,9 +96,6 @@ var stepSpeed;
 
 //TODO: Make configurable.
 studioApp.setCheckForEmptyBlocks(true);
-
-//The number of blocks to show as feedback.
-studioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
 Studio.BLOCK_X_COORDINATE = 20;
 Studio.BLOCK_Y_COORDINATE = 20;
@@ -520,7 +519,7 @@ var setSvgText = function(opts) {
  */
 function callHandler (name, allowQueueExtension) {
   Studio.eventHandlers.forEach(function (handler) {
-    if (studioApp.usingBlockly) {
+    if (studioApp.isUsingBlockly()) {
       // Note: we skip executing the code if we have not completed executing
       // the cmdQueue on this handler (checking for non-zero length)
       if (handler.name === name &&
@@ -899,7 +898,7 @@ Studio.initSprites = function () {
     }
   }
 
-  if (studioApp.usingBlockly) {
+  if (studioApp.isUsingBlockly()) {
     // Update the sprite count in the blocks:
     blocks.setSpriteCount(Blockly, Studio.spriteCount);
     blocks.setStartAvatars(Studio.startAvatars);
@@ -1048,7 +1047,7 @@ Studio.init = function(config) {
     }
     document.addEventListener('mouseup', Studio.onMouseUp, false);
 
-    if (studioApp.usingBlockly) {
+    if (studioApp.isUsingBlockly()) {
       /**
        * The richness of block colours, regardless of the hue.
        * MOOC blocks should be brighter (target audience is younger).
@@ -1063,7 +1062,7 @@ Studio.init = function(config) {
     drawMap();
   };
 
-  if (studioApp.usingBlockly && config.level.edit_blocks != 'toolbox_blocks') {
+  if (studioApp.isUsingBlockly() && config.level.edit_blocks != 'toolbox_blocks') {
     arrangeStartBlocks(config);
   }
 
@@ -1102,7 +1101,7 @@ var preloadImage = function(url) {
 
 var preloadBackgroundImages = function() {
   // TODO (cpirich): preload for non-blockly
-  if (studioApp.usingBlockly) {
+  if (studioApp.isUsingBlockly()) {
     var imageChoices = skin.backgroundChoicesK1;
     for (var i = 0; i < imageChoices.length; i++) {
       preloadImage(imageChoices[i][0]);
@@ -1280,7 +1279,7 @@ studioApp.runButtonClick = function() {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
   studioApp.toggleRunReset('reset');
-  if (studioApp.usingBlockly) {
+  if (studioApp.isUsingBlockly()) {
     Blockly.mainBlockSpace.traceOn(true);
   }
   studioApp.reset(false);
@@ -1469,7 +1468,7 @@ Studio.execute = function() {
   }
 
   var handlers = [];
-  if (studioApp.usingBlockly) {
+  if (studioApp.isUsingBlockly()) {
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setValue', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackground', 'whenGameStarts');
@@ -1796,7 +1795,7 @@ Studio.queueCmd = function (id, name, opts) {
     'name': name,
     'opts': opts
   };
-  if (studioApp.usingBlockly) {
+  if (studioApp.isUsingBlockly()) {
     if (Studio.currentEventParams) {
       for (var prop in Studio.currentEventParams) {
         cmd.opts[prop] = Studio.currentEventParams[prop];
@@ -1921,9 +1920,9 @@ Studio.callCmd = function (cmd) {
       studioApp.highlight(cmd.id);
       Studio.vanishActor(cmd.opts);
       break;
-    case 'attachEventHandler':
+    case 'onEvent':
       studioApp.highlight(cmd.id);
-      Studio.attachEventHandler(cmd.opts);
+      Studio.onEvent(cmd.opts);
       break;
   }
   return true;
@@ -2566,7 +2565,7 @@ Studio.moveDistance = function (opts) {
   return (0 === opts.queuedDistance);
 };
 
-Studio.attachEventHandler = function (opts) {
+Studio.onEvent = function (opts) {
   registerEventHandler(Studio.eventHandlers, opts.eventName, opts.func);
 };
 

@@ -6,8 +6,8 @@ require 'base64'
 require 'nokogiri'
 require src_dir 'forms'
 
-BATCH_SIZE = 10000
-MAX_THREAD_COUNT = 100
+BATCH_SIZE = 6000
+MAX_THREAD_COUNT = 30
 MIN_MESSAGES_PER_THREAD = 50
 
 POSTE_DB = Sequel.connect(CDO.pegasus_db_writer.sub('mysql:', 'mysql2:'), max_connections:MAX_THREAD_COUNT)

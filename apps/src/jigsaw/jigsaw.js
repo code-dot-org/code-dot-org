@@ -24,8 +24,6 @@ var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
 
 studioApp.setCheckForEmptyBlocks(true);
-//The number of blocks to show as feedback.
-studioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
 // Never bump neighbors for Jigsaw
 Blockly.BUMP_UNCONNECTED = false;

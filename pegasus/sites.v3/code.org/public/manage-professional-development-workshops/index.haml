@@ -79,6 +79,15 @@ angular: professionalDevelopmentWorkshop
         }
       };
 
+      Workshop.prototype.lastDate = function() {
+        if (this.dates) {
+          var last_date = this.dates[this.dates.length-1];
+          if (last_date.date_s) {
+            return new Date(last_date.date_s);
+          }
+        }
+      };
+
       Workshop.prototype.state = function() {
         if (this.$resolved === false || !this.secret) {
           // not yet loaded or is a brand new workshop
@@ -164,6 +173,28 @@ angular: professionalDevelopmentWorkshop
 
     $scope.hasWorkshops = false;
     $scope.workshops = workshopsService.query();
+    $scope.today = new Date();
+
+    $scope.futureWorkshops = function() {
+      var future_workshops = [];
+      for (var i = 0; i < $scope.workshops.length; i++) {
+        if ($scope.workshops[i].lastDate() >= $scope.today) {
+          future_workshops.push($scope.workshops[i]);
+        }
+      }
+      return future_workshops;
+    }
+
+    $scope.pastWorkshops = function() {
+      var past_workshops = [];
+      var today = new Date();
+      for (var i = 0; i < $scope.workshops.length; i++) {
+        if ($scope.workshops[i].lastDate() < $scope.today) {
+          past_workshops.push($scope.workshops[i]);
+        }
+      }
+      return past_workshops;
+    }
 
     $scope.workshops.$promise.then(function(workshops){
       for (var i = 0; i < workshops.length; i++) {

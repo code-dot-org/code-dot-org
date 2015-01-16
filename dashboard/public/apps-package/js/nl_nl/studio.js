@@ -190,7 +190,7 @@ var StudioApp = function () {
 
   this.enableShowCode = true;
   this.editCode = false;
-  this.usingBlockly = true;
+  this.usingBlockly_ = true;
   this.cdoSounds = null;
   this.Dialog = null;
   this.editor = null;
@@ -235,14 +235,14 @@ var StudioApp = function () {
   *   start and end tags.
   * @type {!Array=}
   */
-  this.REQUIRED_BLOCKS = undefined;
+  this.requiredBlocks_ = [];
 
   /**
   * The number of required blocks to give hints about at any one time.
   * Set this to Infinity to show all.
   * @type {!number=}
   */
-  this.NUM_REQUIRED_BLOCKS_TO_FLAG = undefined;
+  this.maxRequiredBlocksToFlag_ = 1;
 
   /**
   * The number of attempts (how many times the run button has been pressed)
@@ -299,10 +299,10 @@ StudioApp.prototype.configure = function (options) {
   this.BASE_URL = options.baseUrl;
   this.CACHE_BUST = options.cacheBust;
   this.LOCALE = options.locale || this.LOCALE;
-  // NOTE: editCode (which currently implies droplet) and usingBlockly are
+  // NOTE: editCode (which currently implies droplet) and usingBlockly_ are
   // currently mutually exclusive.
   this.editCode = options.level && options.level.editCode;
-  this.usingBlockly = !this.editCode;
+  this.usingBlockly_ = !this.editCode;
   this.cdoSounds = options.cdoSounds;
   this.Dialog = options.Dialog;
 
@@ -476,7 +476,7 @@ StudioApp.prototype.init = function(config) {
     });
   }
 
-  if (this.usingBlockly) {
+  if (this.isUsingBlockly()) {
     this.handleUsingBlockly_(config);
   }
 
@@ -504,7 +504,7 @@ StudioApp.prototype.init = function(config) {
   this.setIdealBlockNumber_();
 
   // TODO (cpirich): implement block count for droplet (for now, blockly only)
-  if (this.usingBlockly) {
+  if (this.isUsingBlockly()) {
     Blockly.mainBlockSpaceEditor.addChangeListener(_.bind(function() {
       this.updateBlockCount();
     }, this));
@@ -513,6 +513,15 @@ StudioApp.prototype.init = function(config) {
       Blockly.functionEditor.openAndEditFunction(config.level.openFunctionDefinition);
     }
   }
+};
+
+/**
+ * TRUE if the current app uses blockly (as opposed to editCode or another
+ * editor)
+ * @return {boolean}
+ */
+StudioApp.prototype.isUsingBlockly = function () {
+  return this.usingBlockly_;
 };
 
 /**
@@ -629,7 +638,7 @@ StudioApp.prototype.toggleRunReset = function(button) {
  *
  */
 StudioApp.prototype.loadAudio = function(filenames, name) {
-  if (this.usingBlockly) {
+  if (this.isUsingBlockly()) {
     Blockly.loadAudio_(filenames, name);
   } else if (this.cdoSounds) {
     var regOpts = { id: name };
@@ -652,7 +661,7 @@ StudioApp.prototype.playAudio = function(name, options) {
   options = options || {};
   var defaultOptions = {volume: 0.5};
   var newOptions = utils.extend(defaultOptions, options);
-  if (this.usingBlockly) {
+  if (this.isUsingBlockly()) {
     Blockly.playAudio(name, newOptions);
   } else if (this.cdoSounds) {
     this.cdoSounds.play(name, newOptions);
@@ -663,7 +672,7 @@ StudioApp.prototype.playAudio = function(name, options) {
  *
  */
 StudioApp.prototype.stopLoopingAudio = function(name) {
-  if (this.usingBlockly) {
+  if (this.isUsingBlockly()) {
     Blockly.stopLoopingAudio(name);
   } else if (this.cdoSounds) {
     this.cdoSounds.stopLoopingAudio(name);
@@ -860,7 +869,7 @@ StudioApp.prototype.onResize = function() {
   div.style.width = fullWorkspaceWidth + 'px';
 
   // Keep blocks static relative to the right edge in RTL mode
-  if (this.usingBlockly && Blockly.RTL && (fullWorkspaceWidth - oldWidth !== 0)) {
+  if (this.isUsingBlockly() && Blockly.RTL && (fullWorkspaceWidth - oldWidth !== 0)) {
     Blockly.mainBlockSpace.getTopBlocks().forEach(function(topBlock) {
       topBlock.moveBy(fullWorkspaceWidth - oldWidth, 0);
     });
@@ -905,7 +914,7 @@ StudioApp.prototype.resizeHeaders = function (fullWorkspaceWidth) {
       var categories = document.querySelector('.droplet-palette-wrapper');
       toolboxWidth = parseInt(window.getComputedStyle(categories).width, 10);
     }
-  } else if (this.usingBlockly) {
+  } else if (this.isUsingBlockly()) {
     toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
   }
 
@@ -931,7 +940,7 @@ StudioApp.prototype.resizeHeaders = function (fullWorkspaceWidth) {
 * @param {boolean} spotlight Optional.  Highlight entire block if true
 */
 StudioApp.prototype.highlight = function(id, spotlight) {
-  if (this.usingBlockly) {
+  if (this.isUsingBlockly()) {
     if (id) {
       var m = id.match(/^block_id_(\d+)$/);
       if (m) {
@@ -967,7 +976,8 @@ StudioApp.prototype.displayFeedback = function(options) {
     options.feedbackType = this.TestResults.EDIT_BLOCKS;
   }
 
-  this.feedback_.displayFeedback(options);
+  this.feedback_.displayFeedback(options, this.requiredBlocks_,
+      this.maxRequiredBlocksToFlag_);
 };
 
 /**
@@ -978,7 +988,7 @@ StudioApp.prototype.displayFeedback = function(options) {
  */
 StudioApp.prototype.getTestResults = function(levelComplete, options) {
   return this.feedback_.getTestResults(levelComplete,
-      this.checkForEmptyBlocks_, options);
+      this.requiredBlocks_, this.checkForEmptyBlocks_, options);
 };
 
 // Builds the dom to get more info from the user. After user enters info
@@ -1057,7 +1067,7 @@ StudioApp.prototype.resetButtonClick = function() {
   this.onResetPressed();
   this.toggleRunReset('run');
   this.clearHighlighting();
-  if (this.usingBlockly) {
+  if (this.isUsingBlockly()) {
     Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
     Blockly.mainBlockSpace.traceOn(false);
   }
@@ -1149,7 +1159,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
 
   this.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
   this.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
-  this.REQUIRED_BLOCKS = config.level.requiredBlocks || [];
+  this.requiredBlocks_ = config.level.requiredBlocks || [];
 
   // enableShowCode defaults to true if not defined
   this.enableShowCode = (config.enableShowCode !== false);
@@ -1196,7 +1206,7 @@ StudioApp.prototype.configureDom_ = function (config) {
     visualizationColumn.style.margin = "0 auto";
   }
 
-  if (this.usingBlockly && config.level.edit_blocks) {
+  if (this.isUsingBlockly() && config.level.edit_blocks) {
     // Set a class on the main blockly div so CSS can style blocks differently
     Blockly.addClass_(container.querySelector('#blockly'), 'edit');
     // If in level builder editing blocks, make workspace extra tall
@@ -1443,7 +1453,7 @@ module.exports = function(app, levels, options) {
 
   options.skin = options.skinsModule.load(studioApp.assetUrl, options.skinId);
 
-  if (studioApp.usingBlockly) {
+  if (studioApp.isUsingBlockly()) {
     var blockInstallOptions = {
       skin: options.skin,
       isK1: options.level && options.level.isK1
@@ -6541,9 +6551,14 @@ var TestResults = constants.TestResults;
 var KeyCodes = constants.KeyCodes;
 
 /**
- *
+ * @param {Object} options
+ * @param {!Array} requiredBlocks The blocks that are required to be used in
+ *   the solution to this level.
+ * @param {number} maxRequiredBlocksToFlag The number of required blocks to
+ *   give hints about at any one time.  Set this to Infinity to show all.
  */
-FeedbackUtils.prototype.displayFeedback = function(options) {
+FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
+    maxRequiredBlocksToFlag) {
   options.hintRequestExperiment = options.response &&
       options.response.hint_request_placement;
   options.level = options.level || {};
@@ -6567,10 +6582,11 @@ FeedbackUtils.prototype.displayFeedback = function(options) {
     trackEvent('Share', 'Failure', options.response.share_failure.type);
   }
   var feedbackBlocks;
-  if (this.studioApp_.usingBlockly) {
-    feedbackBlocks = new FeedbackBlocks(options,
-                                        this.getMissingRequiredBlocks_(),
-                                        this.studioApp_);
+  if (this.studioApp_.isUsingBlockly()) {
+    feedbackBlocks = new FeedbackBlocks(
+        options,
+        this.getMissingRequiredBlocks_(requiredBlocks, maxRequiredBlocksToFlag),
+        this.studioApp_);
   }
   // feedbackMessage must be initialized after feedbackBlocks
   // because FeedbackBlocks can mutate options.response.hint.
@@ -7270,15 +7286,6 @@ FeedbackUtils.prototype.showToggleBlocksError = function(Dialog) {
 };
 
 /**
- * Check user's code for empty container blocks, such as "repeat".
- * @return {boolean} true if a block is empty (no blocks are nested inside).
- */
-FeedbackUtils.prototype.hasEmptyContainerBlocks_ = function() {
-  var code = codegen.workspaceCode(Blockly);
-  return (/\{\s*\}/).test(code);
-};
-
-/**
  * Get an empty container block, if any are present.
  * @return {Blockly.Block} an empty container block, or null if none exist.
  */
@@ -7298,11 +7305,40 @@ FeedbackUtils.prototype.getEmptyContainerBlock_ = function() {
 };
 
 /**
+ * Check for empty container blocks, and return an appropriate failure
+ * code if any are found.
+ * @return {TestResults} ALL_PASS if no empty blocks are present, or
+ *   EMPTY_BLOCK_FAIL or EMPTY_FUNCTION_BLOCK_FAIL if empty blocks
+ *   are found.
+ */
+FeedbackUtils.prototype.checkForEmptyContainerBlockFailure_ = function() {
+  var emptyBlock = this.getEmptyContainerBlock_();
+  if (!emptyBlock) {
+    return TestResults.ALL_PASS;
+  }
+
+  var type = emptyBlock.type;
+  if (type === 'procedures_defnoreturn' || type === 'procedures_defreturn') {
+    return TestResults.EMPTY_FUNCTION_BLOCK_FAIL;
+  }
+
+  // Block is assumed to be "if" or "repeat" if we reach here.
+  // This is where to add checks if you want a different TestResult
+  // for "controls_for_counter" blocks, for example.
+  return TestResults.EMPTY_BLOCK_FAIL;
+};
+
+/**
  * Check whether the user code has all the blocks required for the level.
+ * @param {!Array} requiredBlocks The blocks that are required to be used in
+ *   the solution to this level.
  * @return {boolean} true if all blocks are present, false otherwise.
  */
-FeedbackUtils.prototype.hasAllRequiredBlocks_ = function() {
-  return this.getMissingRequiredBlocks_().blocksToDisplay.length === 0;
+FeedbackUtils.prototype.hasAllRequiredBlocks_ = function(requiredBlocks) {
+  // It's okay (maybe faster) to pass 1 for maxBlocksToFlag, since in the end
+  // we want to check that there are zero blocks missing.
+  var maxBlocksToFlag = 1;
+  return this.getMissingRequiredBlocks_(requiredBlocks, maxBlocksToFlag).blocksToDisplay.length === 0;
 };
 
 /**
@@ -7335,29 +7371,31 @@ FeedbackUtils.prototype.getCountableBlocks_ = function() {
 
 /**
  * Check to see if the user's code contains the required blocks for a level.
- * This never returns more than StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG.
+ * @param {!Array} requiredBlocks The blocks that are required to be used in
+ *   the solution to this level.
+ * @param {number} maxBlocksToFlag The maximum number of blocks to return.
  * @return {{blocksToDisplay:!Array, message:?string}} 'missingBlocks' is an
- * array of array of strings where each array of strings is a set of blocks that
- * at least one of them should be used. Each block is represented as the prefix
- * of an id in the corresponding template.soy. 'message' is an optional message
- * to override the default error text.
+ *   array of array of strings where each array of strings is a set of blocks
+ *   that at least one of them should be used. Each block is represented as the
+ *   prefix of an id in the corresponding template.soy. 'message' is an
+ *   optional message to override the default error text.
  */
-FeedbackUtils.prototype.getMissingRequiredBlocks_ = function () {
+FeedbackUtils.prototype.getMissingRequiredBlocks_ = function (requiredBlocks,
+    maxBlocksToFlag) {
   var missingBlocks = [];
   var customMessage = null;
   var code = null;  // JavaScript code, which is initialized lazily.
-  // TODO (br-pair) : we should probably just pass required_blocks
-  if (this.studioApp_.REQUIRED_BLOCKS && this.studioApp_.REQUIRED_BLOCKS.length) {
+  if (requiredBlocks && requiredBlocks.length) {
     var userBlocks = this.getUserBlocks_();
     // For each list of required blocks
     // Keep track of the number of the missing block lists. It should not be
-    // bigger than StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG
+    // bigger than the maxBlocksToFlag param.
     var missingBlockNum = 0;
     for (var i = 0;
-         i < this.studioApp_.REQUIRED_BLOCKS.length &&
-             missingBlockNum < this.studioApp_.NUM_REQUIRED_BLOCKS_TO_FLAG;
+         i < requiredBlocks.length &&
+             missingBlockNum < maxBlocksToFlag;
          i++) {
-      var requiredBlock = this.studioApp_.REQUIRED_BLOCKS[i];
+      var requiredBlock = requiredBlocks[i];
       // For each of the test
       // If at least one of the tests succeeded, we consider the required block
       // is used
@@ -7385,7 +7423,7 @@ FeedbackUtils.prototype.getMissingRequiredBlocks_ = function () {
       }
       if (!usedRequiredBlock) {
         missingBlockNum++;
-        missingBlocks = missingBlocks.concat(this.studioApp_.REQUIRED_BLOCKS[i][0]);
+        missingBlocks = missingBlocks.concat(requiredBlocks[i][0]);
       }
     }
   }
@@ -7424,12 +7462,14 @@ FeedbackUtils.prototype.hasExtraTopBlocks = function () {
 /**
  * Runs the tests and returns results.
  * @param {boolean} levelComplete Did the user successfully complete the level?
+ * @param {!Array} requiredBlocks The blocks that are required to be used in
+ *   the solution to this level.
  * @param {boolean} shouldCheckForEmptyBlocks Whether empty blocks should cause
  *   a test fail result.
  * @param {Object} options
  * @return {number} The appropriate property of TestResults.
  */
-FeedbackUtils.prototype.getTestResults = function(levelComplete,
+FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
     shouldCheckForEmptyBlocks, options) {
   options = options || {};
   if (this.studioApp_.editCode) {
@@ -7438,15 +7478,11 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete,
         this.studioApp_.TestResults.ALL_PASS :
         this.studioApp_.TestResults.TOO_FEW_BLOCKS_FAIL;
   }
-  if (shouldCheckForEmptyBlocks && this.hasEmptyContainerBlocks_()) {
-    var type = this.getEmptyContainerBlock_().type;
-    if (type === 'procedures_defnoreturn' || type === 'procedures_defreturn') {
-      return TestResults.EMPTY_FUNCTION_BLOCK_FAIL;
+  if (shouldCheckForEmptyBlocks) {
+    var emptyBlockFailure = this.checkForEmptyContainerBlockFailure_();
+    if (emptyBlockFailure !== TestResults.ALL_PASS) {
+      return emptyBlockFailure;
     }
-    // Block is assumed to be "if" or "repeat" if we reach here.
-    // This is where to add checks if you want a different TestResult
-    // for "controls_for_counter" blocks, for example.
-    return TestResults.EMPTY_BLOCK_FAIL;
   }
   if (!options.allowTopBlocks && this.hasExtraTopBlocks()) {
     return TestResults.EXTRA_TOP_BLOCKS_FAIL;
@@ -7468,7 +7504,7 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete,
   if (this.hasQuestionMarksInNumberField_()) {
     return TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
   }
-  if (!this.hasAllRequiredBlocks_()) {
+  if (!this.hasAllRequiredBlocks_(requiredBlocks)) {
     return levelComplete ?
         TestResults.MISSING_BLOCK_FINISHED :
         TestResults.MISSING_BLOCK_UNFINISHED;
@@ -13889,8 +13925,8 @@ exports.vanish = function (id, spriteIndex) {
   Studio.queueCmd(id, 'vanish', {spriteIndex: spriteIndex});
 };
 
-exports.attachEventHandler = function (id, eventName, func) {
-  Studio.queueCmd(id, 'attachEventHandler', {
+exports.onEvent = function (id, eventName, func) {
+  Studio.queueCmd(id, 'onEvent', {
     'eventName': String(eventName),
     'func': func
   });
@@ -17456,7 +17492,7 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
     {'func': 'setSpriteEmotion', 'params': ["0", "1"] },
     {'func': 'throwProjectile', 'params': ["0", "1", "'blue_fireball'"] },
     {'func': 'vanish', 'params': ["0"] },
-    {'func': 'attachEventHandler', 'params': ["'when-left'", "function() {\n  \n}"] },
+    {'func': 'onEvent', 'params': ["'when-left'", "function() {\n  \n}"] },
   ],
   'startBlocks': "",
 });
@@ -17968,6 +18004,7 @@ var commonMsg = require('../../locale/nl_nl/common');
 var studioMsg = require('../../locale/nl_nl/studio');
 var skins = require('../skins');
 var constants = require('./constants');
+var sharedConstants = require('../constants');
 var codegen = require('../codegen');
 var api = require('./api');
 var blocks = require('./blocks');
@@ -17991,7 +18028,8 @@ var Direction = constants.Direction;
 var NextTurn = constants.NextTurn;
 var SquareType = constants.SquareType;
 var Emotions = constants.Emotions;
-var KeyCodes = constants.KeyCodes;
+
+var KeyCodes = sharedConstants.KeyCodes;
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -18050,9 +18088,6 @@ var stepSpeed;
 
 //TODO: Make configurable.
 studioApp.setCheckForEmptyBlocks(true);
-
-//The number of blocks to show as feedback.
-studioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
 Studio.BLOCK_X_COORDINATE = 20;
 Studio.BLOCK_Y_COORDINATE = 20;
@@ -18476,7 +18511,7 @@ var setSvgText = function(opts) {
  */
 function callHandler (name, allowQueueExtension) {
   Studio.eventHandlers.forEach(function (handler) {
-    if (studioApp.usingBlockly) {
+    if (studioApp.isUsingBlockly()) {
       // Note: we skip executing the code if we have not completed executing
       // the cmdQueue on this handler (checking for non-zero length)
       if (handler.name === name &&
@@ -18855,7 +18890,7 @@ Studio.initSprites = function () {
     }
   }
 
-  if (studioApp.usingBlockly) {
+  if (studioApp.isUsingBlockly()) {
     // Update the sprite count in the blocks:
     blocks.setSpriteCount(Blockly, Studio.spriteCount);
     blocks.setStartAvatars(Studio.startAvatars);
@@ -19004,7 +19039,7 @@ Studio.init = function(config) {
     }
     document.addEventListener('mouseup', Studio.onMouseUp, false);
 
-    if (studioApp.usingBlockly) {
+    if (studioApp.isUsingBlockly()) {
       /**
        * The richness of block colours, regardless of the hue.
        * MOOC blocks should be brighter (target audience is younger).
@@ -19019,7 +19054,7 @@ Studio.init = function(config) {
     drawMap();
   };
 
-  if (studioApp.usingBlockly && config.level.edit_blocks != 'toolbox_blocks') {
+  if (studioApp.isUsingBlockly() && config.level.edit_blocks != 'toolbox_blocks') {
     arrangeStartBlocks(config);
   }
 
@@ -19058,7 +19093,7 @@ var preloadImage = function(url) {
 
 var preloadBackgroundImages = function() {
   // TODO (cpirich): preload for non-blockly
-  if (studioApp.usingBlockly) {
+  if (studioApp.isUsingBlockly()) {
     var imageChoices = skin.backgroundChoicesK1;
     for (var i = 0; i < imageChoices.length; i++) {
       preloadImage(imageChoices[i][0]);
@@ -19236,7 +19271,7 @@ studioApp.runButtonClick = function() {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
   studioApp.toggleRunReset('reset');
-  if (studioApp.usingBlockly) {
+  if (studioApp.isUsingBlockly()) {
     Blockly.mainBlockSpace.traceOn(true);
   }
   studioApp.reset(false);
@@ -19425,7 +19460,7 @@ Studio.execute = function() {
   }
 
   var handlers = [];
-  if (studioApp.usingBlockly) {
+  if (studioApp.isUsingBlockly()) {
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setValue', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackground', 'whenGameStarts');
@@ -19752,7 +19787,7 @@ Studio.queueCmd = function (id, name, opts) {
     'name': name,
     'opts': opts
   };
-  if (studioApp.usingBlockly) {
+  if (studioApp.isUsingBlockly()) {
     if (Studio.currentEventParams) {
       for (var prop in Studio.currentEventParams) {
         cmd.opts[prop] = Studio.currentEventParams[prop];
@@ -19877,9 +19912,9 @@ Studio.callCmd = function (cmd) {
       studioApp.highlight(cmd.id);
       Studio.vanishActor(cmd.opts);
       break;
-    case 'attachEventHandler':
+    case 'onEvent':
       studioApp.highlight(cmd.id);
-      Studio.attachEventHandler(cmd.opts);
+      Studio.onEvent(cmd.opts);
       break;
   }
   return true;
@@ -20522,7 +20557,7 @@ Studio.moveDistance = function (opts) {
   return (0 === opts.queuedDistance);
 };
 
-Studio.attachEventHandler = function (opts) {
+Studio.onEvent = function (opts) {
   registerEventHandler(Studio.eventHandlers, opts.eventName, opts.func);
 };
 
@@ -20661,7 +20696,7 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/nl_nl/common":47,"../../locale/nl_nl/studio":48,"../StudioApp":2,"../canvg/StackBlur.js":6,"../canvg/canvg.js":7,"../canvg/rgbcolor.js":8,"../canvg/svg_todataurl":9,"../codegen":10,"../dom":12,"../skins":20,"../templates/page.html":39,"../utils":45,"../xml":46,"./api":21,"./blocks":22,"./collidable":23,"./constants":24,"./controls.html":25,"./extraControlRows.html":26,"./projectile":29,"./visualization.html":32}],32:[function(require,module,exports){
+},{"../../locale/nl_nl/common":47,"../../locale/nl_nl/studio":48,"../StudioApp":2,"../canvg/StackBlur.js":6,"../canvg/canvg.js":7,"../canvg/rgbcolor.js":8,"../canvg/svg_todataurl":9,"../codegen":10,"../constants":11,"../dom":12,"../skins":20,"../templates/page.html":39,"../utils":45,"../xml":46,"./api":21,"./blocks":22,"./collidable":23,"./constants":24,"./controls.html":25,"./extraControlRows.html":26,"./projectile":29,"./visualization.html":32}],32:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
