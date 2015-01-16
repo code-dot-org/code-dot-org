@@ -2133,3 +2133,10 @@ Blockly.Block.prototype.setVisible = function (visible) {
   }
   this.svg_.setVisible(visible);
 };
+
+/**
+ * Exposes this block's BlockSvg
+ */
+Blockly.Block.prototype.getSvgRenderer = function () {
+  return this.svg_;
+}
