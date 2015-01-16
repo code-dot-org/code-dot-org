@@ -2828,7 +2828,7 @@ Applab.encodedFeedbackImage = '';
 
 Applab.onViewData = function() {
   window.open(
-    '//' + getPegasusHost() + '/edit-csp-app/' + FormStorage.getAppSecret(),
+    '//' + getPegasusHost() + '/edit-csp-app/' + AppStorage.tempAppId,
     '_blank');
 };
 
