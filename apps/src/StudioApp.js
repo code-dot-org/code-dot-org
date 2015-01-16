@@ -1301,10 +1301,3 @@ StudioApp.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
   // Resize (including headers), so the category header will appear/disappear:
   this.onResize();
 };
-
-/**
- * Do we have any floating blocks not attached to an event block or function block?
- */
-StudioApp.prototype.hasExtraTopBlocks = function () {
-  return this.feedback_.hasExtraTopBlocks();
-};

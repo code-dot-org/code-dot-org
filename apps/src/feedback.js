@@ -927,24 +927,9 @@ FeedbackUtils.prototype.getMissingRequiredBlocks_ = function (requiredBlocks,
  * Do we have any floating blocks not attached to an event block or function block?
  */
 FeedbackUtils.prototype.hasExtraTopBlocks = function () {
-  if (this.studioApp_.editCode) {
-    return false;
-  }
-  var topBlocks = Blockly.mainBlockSpace.getTopBlocks();
-  for (var i = 0; i < topBlocks.length; i++) {
-    // ignore disabled top blocks. we have a level turtle:2_7 that depends on
-    // having disabled top level blocks
-    if (topBlocks[i].disabled) {
-      continue;
-    }
-    // Ignore top blocks which are functional definitions.
-    if (topBlocks[i].type === 'functional_definition') {
-      continue;
-    }
-    // None of our top level blocks should have a previous connection.
-    if (topBlocks[i].previousConnection) {
-      return true;
-    }
+  if (this.studioApp_.isUsingBlockly()) {
+    var blockLinter = new BlockLinter(Blockly);
+    return blockLinter.hasExtraTopBlocks();
   }
   return false;
 };
@@ -977,7 +962,7 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
       return emptyBlockFailure;
     }
   }
-  if (!options.allowTopBlocks && this.hasExtraTopBlocks()) {
+  if (!options.allowTopBlocks && blockLinter.hasExtraTopBlocks()) {
     return TestResults.EXTRA_TOP_BLOCKS_FAIL;
   }
   if (Blockly.useContractEditor || Blockly.useModalFunctionEditor) {

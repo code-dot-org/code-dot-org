@@ -27,6 +27,31 @@ var BlockLinter = function ( blockly ) {
 module.exports = BlockLinter;
 
 /**
+ * Do we have any floating blocks not attached to an event block or
+ * function block?
+ * @return {boolean}
+ */
+BlockLinter.prototype.hasExtraTopBlocks = function () {
+  var topBlocks = this.blockly_.mainBlockSpace.getTopBlocks();
+  for (var i = 0; i < topBlocks.length; i++) {
+    // ignore disabled top blocks. we have a level turtle:2_7 that depends on
+    // having disabled top level blocks
+    if (topBlocks[i].disabled) {
+      continue;
+    }
+    // Ignore top blocks which are functional definitions.
+    if (topBlocks[i].type === 'functional_definition') {
+      continue;
+    }
+    // None of our top level blocks should have a previous connection.
+    if (topBlocks[i].previousConnection) {
+      return true;
+    }
+  }
+  return false;
+};
+
+/**
  * Check for '???' instead of a value in block fields.
  * @return {boolean}
  */
