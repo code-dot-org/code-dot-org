@@ -17,8 +17,8 @@ var createCategory = blockUtils.createCategory;
  *          notDefaultText (boolean): require changing the text from the default
  *          requiredText (string): text must change from default. we show
  *            requiredText in feedback blocks
- * @returns test definition suitable for feedback.js::getMissingRequiredBlocks
- *          required block processing
+ * @returns test definition suitable for
+ *          BlockLinter.js::getMissingRequiredBlocks required block processing
  */
 function saySpriteRequiredBlock(options) {
   var titles = {};

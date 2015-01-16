@@ -85,7 +85,7 @@ BlockLinter.prototype.getCountableBlocks = function() {
 * Get an empty container block, if any are present.
 * @return {Blockly.Block} an empty container block, or null if none exist.
 */
-BlockLinter.prototype.getEmptyContainerBlock = function() {
+BlockLinter.prototype.getEmptyContainerBlock_ = function() {
   var blocks = this.blockly_.mainBlockSpace.getAllBlocks();
   for (var i = 0; i < blocks.length; i++) {
     var block = blocks[i];
@@ -129,7 +129,7 @@ BlockLinter.prototype.hasExtraTopBlocks = function () {
  * Check for '???' instead of a value in block fields.
  * @return {boolean}
  */
-BlockLinter.prototype.hasQuestionMarksInNumberField = function () {
+BlockLinter.prototype.hasQuestionMarksInNumberField_ = function () {
   return this.blockly_.mainBlockSpace.getAllBlocks().some(function(block) {
     return block.getTitles().some(function(title) {
       return title.text_ === '???';
@@ -142,13 +142,13 @@ BlockLinter.prototype.hasQuestionMarksInNumberField = function () {
  * inside the procedure.
  * @return {boolean}
  */
-BlockLinter.prototype.hasUnusedParam = function () {
+BlockLinter.prototype.hasUnusedParam_ = function () {
   return this.blockly_.mainBlockSpace.getAllBlocks().some(function(userBlock) {
     var params = userBlock.parameterNames_;
     // Only search procedure definitions
     return params && params.some(function(paramName) {
       // Unused param if there's no parameters_get descendant with the same name
-      return !BlockLinter.hasMatchingDescendant(userBlock, function(block) {
+      return !BlockLinter.hasMatchingDescendant_(userBlock, function(block) {
         return (block.type === 'parameters_get' ||
         block.type === 'functional_parameters_get' ||
         block.type === 'variables_get') &&
@@ -162,7 +162,7 @@ BlockLinter.prototype.hasUnusedParam = function () {
  * Ensure that all procedure calls have each parameter input connected.
  * @return {boolean}
  */
-BlockLinter.prototype.hasParamInputUnattached = function () {
+BlockLinter.prototype.hasParamInputUnattached_ = function () {
   return this.blockly_.mainBlockSpace.getAllBlocks().some(function(userBlock) {
     // Only check procedure_call* blocks
     if (!/^procedures_call/.test(userBlock.type)) {
@@ -181,7 +181,7 @@ BlockLinter.prototype.hasParamInputUnattached = function () {
  * Ensure that all user-declared procedures have associated call blocks.
  * @return {boolean}
  */
-BlockLinter.prototype.hasUnusedFunction = function () {
+BlockLinter.prototype.hasUnusedFunction_ = function () {
   var userDefs = [];
   var callBlocks = {};
   this.blockly_.mainBlockSpace.getAllBlocks().forEach(function (block) {
@@ -200,14 +200,14 @@ BlockLinter.prototype.hasUnusedFunction = function () {
  * Ensure there are no incomplete blocks inside any function definitions.
  * @return {boolean}
  */
-BlockLinter.prototype.hasIncompleteBlockInFunction = function () {
+BlockLinter.prototype.hasIncompleteBlockInFunction_ = function () {
   var self = this;
   return this.blockly_.mainBlockSpace.getAllBlocks().some(function(userBlock) {
     // Only search procedure definitions
     if (!userBlock.parameterNames_) {
       return false;
     }
-    return BlockLinter.hasMatchingDescendant(userBlock, function(block) {
+    return BlockLinter.hasMatchingDescendant_(userBlock, function(block) {
       // Incomplete block if any input connection target is null
       return block.inputList.some(function(input) {
         return input.type === self.blockly_.INPUT_VALUE &&
@@ -225,12 +225,12 @@ BlockLinter.prototype.hasIncompleteBlockInFunction = function () {
  * @return {boolean}
  * @static
  */
-BlockLinter.hasMatchingDescendant = function (node, filter) {
+BlockLinter.hasMatchingDescendant_ = function (node, filter) {
   if (filter(node)) {
     return true;
   }
   return node.childBlocks_.some(function (child) {
-    return BlockLinter.hasMatchingDescendant(child, filter);
+    return BlockLinter.hasMatchingDescendant_(child, filter);
   });
 };
 
@@ -243,7 +243,7 @@ BlockLinter.hasMatchingDescendant = function (node, filter) {
  *   are found.
  */
 BlockLinter.prototype.checkForEmptyContainerBlockFailure = function() {
-  var emptyBlock = this.getEmptyContainerBlock();
+  var emptyBlock = this.getEmptyContainerBlock_();
   if (!emptyBlock) {
     return TestResults.ALL_PASS;
   }
@@ -328,11 +328,11 @@ BlockLinter.prototype.getMissingRequiredBlocks = function (requiredBlocks,
  *   the solution to this level.
  * @return {boolean} true if all blocks are present, false otherwise.
  */
-BlockLinter.prototype.hasAllRequiredBlocks = function(requiredBlocks) {
+BlockLinter.prototype.hasAllRequiredBlocks_ = function() {
   // It's okay (maybe faster) to pass 1 for maxBlocksToFlag, since in the end
   // we want to check that there are zero blocks missing.
   var maxBlocksToFlag = 1;
-  return this.getMissingRequiredBlocks(requiredBlocks,
+  return this.getMissingRequiredBlocks(this.requiredBlocks_,
       maxBlocksToFlag).blocksToDisplay.length === 0;
 };
 
@@ -387,22 +387,22 @@ BlockLinter.prototype.runStaticAnalysis = function (isLevelComplete) {
   }
 
   if (this.blockly_.useContractEditor || this.blockly_.useModalFunctionEditor) {
-    if (this.hasUnusedParam()) {
+    if (this.hasUnusedParam_()) {
       return TestResults.UNUSED_PARAM;
-    } else if (this.hasUnusedFunction()) {
+    } else if (this.hasUnusedFunction_()) {
       return TestResults.UNUSED_FUNCTION;
-    } else if (this.hasParamInputUnattached()) {
+    } else if (this.hasParamInputUnattached_()) {
       return TestResults.PARAM_INPUT_UNATTACHED;
-    } else if (this.hasIncompleteBlockInFunction()) {
+    } else if (this.hasIncompleteBlockInFunction_()) {
       return TestResults.INCOMPLETE_BLOCK_IN_FUNCTION;
     }
   }
 
-  if (this.hasQuestionMarksInNumberField()) {
+  if (this.hasQuestionMarksInNumberField_()) {
     return TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
   }
 
-  if (!this.hasAllRequiredBlocks(this.requiredBlocks_)) {
+  if (!this.hasAllRequiredBlocks_()) {
     return isLevelComplete ?
         TestResults.MISSING_BLOCK_FINISHED :
         TestResults.MISSING_BLOCK_UNFINISHED;

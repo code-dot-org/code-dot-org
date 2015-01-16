@@ -17,17 +17,13 @@ var FeedbackUtils = function (studioApp) {
 };
 module.exports = FeedbackUtils;
 
-// Globals used in this file:
-//   Blockly
-
+/* globals Blockly: true */
 var BlockLinter = require('./BlockLinter');
 var trophy = require('./templates/trophy.html');
-var utils = require('./utils');
-var _ = utils.getLodash();
+var _ = require('./utils').getLodash();
 var codegen = require('./codegen');
 var msg = require('../locale/current/common');
 var dom = require('./dom');
-var xml = require('./xml');
 var FeedbackBlocks = require('./feedbackBlocks');
 var constants = require('./constants');
 var TestResults = constants.TestResults;
@@ -67,10 +63,9 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   var feedbackBlocks;
   if (this.studioApp_.isUsingBlockly()) {
     var blockLinter = new BlockLinter(Blockly);
-    feedbackBlocks = new FeedbackBlocks(
-        options,
-        blockLinter.getMissingRequiredBlocks(requiredBlocks,
-            maxRequiredBlocksToFlag),
+    var missingBlocks = blockLinter.getMissingRequiredBlocks(requiredBlocks,
+        maxRequiredBlocksToFlag);
+    feedbackBlocks = new FeedbackBlocks(options, missingBlocks,
         this.studioApp_);
   }
   // feedbackMessage must be initialized after feedbackBlocks
@@ -689,8 +684,7 @@ FeedbackUtils.prototype.canContinueToNextLevel = function(feedbackType) {
 FeedbackUtils.prototype.getGeneratedCodeString_ = function() {
   if (this.studioApp_.editCode) {
     return this.studioApp_.editor ? this.studioApp_.editor.getValue() : '';
-  }
-  else {
+  } else {
     return codegen.workspaceCode(Blockly);
   }
 };
