@@ -1,6 +1,6 @@
 /**
  * Sets BlocklyApp constants that depend on the page and level.
- * This encapsulates many functions used for StudioApp.REQUIRED_BLOCKS.
+ * This encapsulates many functions used for StudioApp.requiredBlocks_.
  * In the future, some of these may be moved to common.js.
  */
 
