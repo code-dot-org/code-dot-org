@@ -27,6 +27,26 @@ var BlockLinter = function ( blockly ) {
 module.exports = BlockLinter;
 
 /**
+* Ensure that all procedure definitions actually use the parameters they define
+* inside the procedure.
+*/
+BlockLinter.prototype.hasUnusedParam = function () {
+  return this.blockly_.mainBlockSpace.getAllBlocks().some(function(userBlock) {
+    var params = userBlock.parameterNames_;
+    // Only search procedure definitions
+    return params && params.some(function(paramName) {
+      // Unused param if there's no parameters_get descendant with the same name
+      return !BlockLinter.hasMatchingDescendant(userBlock, function(block) {
+        return (block.type === 'parameters_get' ||
+        block.type === 'functional_parameters_get' ||
+        block.type === 'variables_get') &&
+        block.getTitleValue('VAR') === paramName;
+      });
+    });
+  });
+};
+
+/**
 * Ensure that all procedure calls have each parameter input connected.
 */
 BlockLinter.prototype.hasParamInputUnattached = function () {

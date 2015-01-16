@@ -981,7 +981,7 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
   }
   if (Blockly.useContractEditor || Blockly.useModalFunctionEditor) {
     var blockLinter = new BlockLinter(Blockly);
-    if (this.hasUnusedParam_()) {
+    if (blockLinter.hasUnusedParam()) {
       return TestResults.UNUSED_PARAM;
     }
     if (blockLinter.hasUnusedFunction()) {
@@ -1063,26 +1063,6 @@ FeedbackUtils.prototype.hasQuestionMarksInNumberField_ = function () {
   return Blockly.mainBlockSpace.getAllBlocks().some(function(block) {
     return block.getTitles().some(function(title) {
       return title.value_ === '???';
-    });
-  });
-};
-
-/**
- * Ensure that all procedure definitions actually use the parameters they define
- * inside the procedure.
- */
-FeedbackUtils.prototype.hasUnusedParam_ = function () {
-  return Blockly.mainBlockSpace.getAllBlocks().some(function(userBlock) {
-    var params = userBlock.parameterNames_;
-    // Only search procedure definitions
-    return params && params.some(function(paramName) {
-      // Unused param if there's no parameters_get descendant with the same name
-      return !BlockLinter.hasMatchingDescendant(userBlock, function(block) {
-        return (block.type === 'parameters_get' ||
-            block.type === 'functional_parameters_get' ||
-            block.type === 'variables_get') &&
-            block.getTitleValue('VAR') === paramName;
-      });
     });
   });
 };
