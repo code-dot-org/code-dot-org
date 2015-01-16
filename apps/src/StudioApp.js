@@ -1,5 +1,14 @@
-// Globals:
-//   Blockly
+/* jshint
+  strict: true,
+  curly: true,
+  funcscope: true,
+  newcap: true,
+  nonew: true,
+  shadow: false,
+  unused: true
+*/
+/* global Blockly: true */
+'use strict';
 
 var parseXmlElement = require('./xml').parseElement;
 var utils = require('./utils');
@@ -261,7 +270,8 @@ StudioApp.prototype.init = function(config) {
     }
   }
 
-  // In embed mode, the display scales down when the width of the visualizationColumn goes below the min width
+  // In embed mode, the display scales down when the width of the
+  // visualizationColumn goes below the min width
   if(config.embed) {
     var resized = false;
     var resize = function() {
@@ -276,7 +286,7 @@ StudioApp.prototype.init = function(config) {
       viz.style['max-height'] = (displayWidth * scale) + 'px';
       viz.style.display = 'block';
       vizCol.style.width = '';
-      document.getElementById('visualizationColumn').style['max-width'] = displayWidth + 'px';
+      vizCol.style['max-width'] = displayWidth + 'px';
       // Needs to run twice on initialization
       if(!resized) {
         resized = true;
@@ -284,8 +294,8 @@ StudioApp.prototype.init = function(config) {
       }
     };
     // Depends on ResizeSensor.js
-    var ResizeSensor = require('./ResizeSensor');
-    new ResizeSensor(document.getElementById('visualizationColumn'), resize);
+    var attachResizeSensor = require('./ResizeSensor');
+    attachResizeSensor(document.getElementById('visualizationColumn'), resize);
   }
 
   var orientationHandler = function() {
@@ -313,12 +323,12 @@ StudioApp.prototype.init = function(config) {
 
   var aniGifPreview = document.getElementById('ani-gif-preview');
   if (config.level.aniGifURL) {
-    aniGifPreview.style.backgroundImage = "url('" + config.level.aniGifURL + "')";
+    aniGifPreview.style.backgroundImage = 'url("' + config.level.aniGifURL + '")';
     aniGifPreview.onclick = _.bind(function() {
       this.showInstructions_(config.level, false);
     }, this);
     var promptTable = document.getElementById('prompt-table');
-    promptTable.className += " with-ani-gif";
+    promptTable.className += ' with-ani-gif';
   } else {
     var wrapper = document.getElementById('ani-gif-preview-wrapper');
     wrapper.style.display = 'none';
@@ -387,6 +397,7 @@ StudioApp.prototype.isUsingBlockly = function () {
 StudioApp.prototype.handleSharing_ = function (options) {
   // 1. Move the buttons, 2. Hide the slider in the share page for mobile.
   var belowVisualization = document.getElementById('belowVisualization');
+  var visualization = document.getElementById('visualization');
   if (dom.isMobile()) {
     var sliderCell = document.getElementById('slider-cell');
     if (sliderCell) {
@@ -401,9 +412,11 @@ StudioApp.prototype.handleSharing_ = function (options) {
         belowVisualization.style.marginLeft = '0px';
         if (this.noPadding) {
           // Shift run and reset buttons off the left edge if we have no padding
+          var runButton = document.getElementById('runButton');
           if (runButton) {
             runButton.style.marginLeft = '10px';
           }
+          var resetButton = document.getElementById('resetButton');
           if (resetButton) {
             resetButton.style.marginLeft = '10px';
           }
@@ -462,11 +475,10 @@ StudioApp.prototype.assetUrl_ = function (path) {
  * @param {boolean} shouldPlayOpeningAnimation True if an opening animation is
  *   to be played.
  */
-StudioApp.prototype.reset = function (shouldPlayOpeningAnimation) {
+StudioApp.prototype.reset = function (/*shouldPlayOpeningAnimation*/) {
   // TODO (bbuchanan): Look for comon reset logic we can pull here
   // Override in app subclass
 };
-
 
 /**
  * Override to change run behavior.
@@ -480,7 +492,7 @@ StudioApp.prototype.runButtonClick = function() {};
 StudioApp.prototype.toggleRunReset = function(button) {
   var showRun = (button === 'run');
   if (button !== 'run' && button !== 'reset') {
-    throw "Unexpected input";
+    throw 'Unexpected input';
   }
 
   var run = document.getElementById('runButton');
@@ -780,9 +792,9 @@ StudioApp.prototype.resizeHeaders = function (fullWorkspaceWidth) {
   if (this.enableShowCode &&
       (fullWorkspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
     showCodeWidth = parseInt(window.getComputedStyle(showCodeHeader).width, 10);
-    showCodeHeader.style.display = "";
+    showCodeHeader.style.display = '';
   } else {
-    showCodeHeader.style.display = "none";
+    showCodeHeader.style.display = 'none';
   }
 
   document.getElementById('headers').style.width = fullWorkspaceWidth + 'px';
@@ -865,8 +877,8 @@ StudioApp.prototype.builderForm_ = function(onAttemptCallback) {
     var name = builderDetails.querySelector('[name="level_name"]').value;
     var query = url.parse(window.location.href, true).query;
     onAttemptCallback(utils.extend({
-      "instructions": instructions,
-      "name": name
+      'instructions': instructions,
+      'name': name
     }, query));
   });
 
@@ -939,9 +951,9 @@ StudioApp.prototype.updateBlockCount = function() {
   // set it to be yellow, otherwise, keep it as black.
   var element = document.getElementById('blockUsed');
   if (this.IDEAL_BLOCK_NUM < this.feedback_.getNumCountableBlocks()) {
-    element.className = "block-counter-overflow";
+    element.className = 'block-counter-overflow';
   } else {
-    element.className = "block-counter-default";
+    element.className = 'block-counter-default';
   }
 
   // Update number of blocks used.
@@ -1023,7 +1035,8 @@ StudioApp.prototype.setConfigValues_ = function (config) {
 
   // If the level has no ideal block count, don't show a block count. If it does
   // have an ideal, show block count unless explicitly configured not to.
-  if (config.level && (config.level.ideal === undefined || config.level.ideal === Infinity)) {
+  if (config.level &&
+      (config.level.ideal === undefined || config.level.ideal === Infinity)) {
     this.enableShowBlockCount = false;
   } else {
     this.enableShowBlockCount = config.enableShowBlockCount !== false;
@@ -1060,16 +1073,16 @@ StudioApp.prototype.configureDom_ = function (config) {
 
   // center game screen in embed mode
   if(config.embed) {
-    visualizationColumn.style.margin = "0 auto";
+    visualizationColumn.style.margin = '0 auto';
   }
 
   if (this.isUsingBlockly() && config.level.edit_blocks) {
     // Set a class on the main blockly div so CSS can style blocks differently
     Blockly.addClass_(container.querySelector('#blockly'), 'edit');
     // If in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "3000px";
+    visualizationColumn.style.height = '3000px';
     // Modify the arrangement of toolbox blocks so categories align left
-    if (config.level.edit_blocks == "toolbox_blocks") {
+    if (config.level.edit_blocks == 'toolbox_blocks') {
       this.blockYCoordinateInterval = 80;
       config.blockArrangement = { category : { x: 20 } };
     }
@@ -1082,8 +1095,8 @@ StudioApp.prototype.configureDom_ = function (config) {
 
   if (!config.embed && !this.share) {
     // Make the visualization responsive to screen size, except on share page.
-    visualization.className += " responsive";
-    visualizationColumn.className += " responsive";
+    visualization.className += ' responsive';
+    visualizationColumn.className += ' responsive';
   }
 };
 
@@ -1102,6 +1115,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
   workspaceDiv.style.display = 'none';
   // For share page on mobile, do not show this part.
   if ((!options.embed) && (!this.share || !dom.isMobile())) {
+    var runButton = container.querySelector('#runButton');
     var buttonRow = runButton.parentElement;
     var openWorkspace = document.createElement('button');
     openWorkspace.setAttribute('id', 'open-workspace');
@@ -1134,7 +1148,6 @@ StudioApp.prototype.handleHideSource_ = function (options) {
 StudioApp.prototype.handleEditCode_ = function (options) {
   // using window.require forces us to use requirejs version of require
   window.require(['droplet'], _.bind(function(droplet) {
-    var displayMessage, examplePrograms, messageElement, onChange, startingText;
     this.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
       mode: 'javascript',
       modeOptions: utils.generateDropletModeOptions(options.codeFunctions),
@@ -1146,7 +1159,7 @@ StudioApp.prototype.handleEditCode_ = function (options) {
 
     // Add an ace completer for the API functions exposed for this level
     if (options.codeFunctions) {
-      var langTools = window.ace.require("ace/ext/language_tools");
+      var langTools = window.ace.require('ace/ext/language_tools');
       langTools.addCompleter(
         utils.generateAceApiCompleter(options.codeFunctions));
     }
