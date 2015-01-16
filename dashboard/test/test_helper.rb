@@ -127,6 +127,10 @@ end
 class ActionController::TestCase
   include Devise::TestHelpers
 
+  setup do
+    request.env['cdo.locale'] = 'en-US'
+  end
+
   def assert_redirected_to_sign_in
     assert_response :redirect
     assert_redirected_to "http://test.host/users/sign_in"
