@@ -77,10 +77,10 @@ class ActiveSupport::TestCase
 
   def with_default_locale(locale)
     original_locale = I18n.default_locale
-    I18n.default_locale = locale
+    request.env['cdo.locale'] = I18n.default_locale = locale
     yield
   ensure
-    I18n.default_locale = original_locale
+    request.env['cdo.locale'] = I18n.default_locale = original_locale
   end
 
   # Based on assert_difference http://api.rubyonrails.org/classes/ActiveSupport/Testing/Assertions.html#method-i-assert_difference
@@ -170,4 +170,3 @@ class ActionController::TestCase
     end
   end
 end
-
