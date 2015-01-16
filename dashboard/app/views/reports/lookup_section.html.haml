@@ -5,7 +5,7 @@
     %h2= flash[:error]
 
 = form_tag(lookup_section_url, method: :post) do
-  Enter the section code:
+  Enter the 6-letter section code:
   %br/
   = text_field_tag 'section_code'
   %br/
