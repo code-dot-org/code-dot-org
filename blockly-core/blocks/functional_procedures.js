@@ -181,6 +181,9 @@ Blockly.Blocks.functional_definition = {
       name: this.getTitleValue('NAME'),
       type: this.type,
       callType: this.callType_,
+      // TODO (brent) - does this need to be passed around, or will it
+      // always be functional_pass?
+      passType: this.passType_,
       parameterNames: this.parameterNames_,
       parameterTypes: this.parameterTypes_,
       isFunctionalVariable: this.isFunctionalVariable_
@@ -218,7 +221,8 @@ Blockly.Blocks.functional_definition = {
       this.updateParams_();
     }
   },
-  callType_: 'functional_call'
+  callType_: 'functional_call',
+  passType_: 'functional_pass'
 };
 
 /**
@@ -418,6 +422,63 @@ Blockly.Blocks.functional_call = {
         this.getInput('ARG' + x).titleRow[0].setText(newName);
       }
     }
+  }
+};
+
+/**
+ * Block to allow you to pass a functional block
+ */
+Blockly.Blocks.functional_pass = {
+  init: function() {
+    this.setHelpUrl(Blockly.Msg.PROCEDURES_CALLNORETURN_HELPURL);
+    // TODO(bjordan): localize / use user-defined description
+    this.setTooltip("Pass a user-defined function");
+
+    // TODO(brent) - change color?
+    this.setHSV(94, 0.84, 0.60);
+
+    var options = {
+      fixedSize: { height: 35 }
+    };
+
+    var mainTitle = this.appendDummyInput()
+        .appendTitle(new Blockly.FieldLabel('Pass Function', options), 'NAME')
+        .appendTitle('', 'PARAM_TEXT');
+
+    if (Blockly.useContractEditor && this.blockSpace !== Blockly.modalBlockSpace) {
+      var editLabel = new Blockly.FieldIcon(Blockly.Msg.FUNCTION_EDIT);
+      Blockly.bindEvent_(editLabel.fieldGroup_, 'mousedown', this, this.openEditor);
+      mainTitle.appendTitle(editLabel);
+      this.editLabel_ = editLabel;
+    }
+
+    this.setFunctional(true);
+
+    this.changeFunctionalOutput('function');
+  },
+  openEditor: function() {
+    Blockly.functionEditor.openAndEditFunction(this.getTitleValue('NAME'));
+  },
+  // TODO (brent): see where this is called from
+  renameProcedure: function(oldName, newName) {
+    if (Blockly.Names.equals(oldName, this.getTitleValue('NAME'))) {
+      this.setTitleValue(newName, 'NAME');
+    }
+  },
+
+  mutationToDom: function() {
+    // Save the name
+    var container = document.createElement('mutation');
+    container.setAttribute('name', this.getTitleValue('NAME'));
+    return container;
+  },
+  domToMutation: function(xmlElement) {
+    // Restore the name
+    var name = xmlElement.getAttribute('name');
+    this.setTitleValue(name, 'NAME');
+    this.setTooltip(
+      (this.outputConnection ? Blockly.Msg.PROCEDURES_CALLRETURN_TOOLTIP
+        : Blockly.Msg.PROCEDURES_CALLNORETURN_TOOLTIP).replace('%1', name));
   }
 };
 
