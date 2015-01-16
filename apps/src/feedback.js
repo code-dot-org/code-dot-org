@@ -987,7 +987,7 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
     if (blockLinter.hasUnusedFunction()) {
       return TestResults.UNUSED_FUNCTION;
     }
-    if (this.hasParamInputUnattached_()) {
+    if (blockLinter.hasParamInputUnattached()) {
       return TestResults.PARAM_INPUT_UNATTACHED;
     }
     if (blockLinter.hasIncompleteBlockInFunction()) {
@@ -1083,24 +1083,6 @@ FeedbackUtils.prototype.hasUnusedParam_ = function () {
             block.type === 'variables_get') &&
             block.getTitleValue('VAR') === paramName;
       });
-    });
-  });
-};
-
-/**
- * Ensure that all procedure calls have each parameter input connected.
- */
-FeedbackUtils.prototype.hasParamInputUnattached_ = function () {
-  return Blockly.mainBlockSpace.getAllBlocks().some(function(userBlock) {
-    // Only check procedure_call* blocks
-    if (!/^procedures_call/.test(userBlock.type)) {
-      return false;
-    }
-    return userBlock.inputList.filter(function(input) {
-      return (/^ARG/.test(input.name));
-    }).some(function(argInput) {
-      // Unattached param input if any ARG* connection target is null
-      return !argInput.connection.targetConnection;
     });
   });
 };

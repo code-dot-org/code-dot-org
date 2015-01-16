@@ -27,6 +27,24 @@ var BlockLinter = function ( blockly ) {
 module.exports = BlockLinter;
 
 /**
+* Ensure that all procedure calls have each parameter input connected.
+*/
+BlockLinter.prototype.hasParamInputUnattached = function () {
+  return this.blockly_.mainBlockSpace.getAllBlocks().some(function(userBlock) {
+    // Only check procedure_call* blocks
+    if (!/^procedures_call/.test(userBlock.type)) {
+      return false;
+    }
+    return userBlock.inputList.filter(function(input) {
+      return (/^ARG/.test(input.name));
+    }).some(function(argInput) {
+      // Unattached param input if any ARG* connection target is null
+      return !argInput.connection.targetConnection;
+    });
+  });
+};
+
+/**
  * Ensure that all user-declared procedures have associated call blocks.
  * @return {boolean}
  */
