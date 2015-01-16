@@ -23,6 +23,11 @@ Petition your state to allow computer science to count towards math or science h
 
 [<button>Add your support</button>](/promote)
 
+## Translate our Tutorials
+Volunteers have translated our tutorials in over 34 languages. Help us continue to expand our tutorials for students around the world!
+
+[<button>Translate tutorials</button>](/translate)
+
 ---
 <a name="engineer"></a>
 # Are you a software engineer? Help spread computer science

@@ -22,10 +22,14 @@ class Game < ActiveRecord::Base
   FLAPPY = 'flappy'
   BOUNCE = 'bounce'
   PLAYLAB = STUDIO = 'studio'
-  APPLAB = WEBAPP = 'webapp'
+  APPLAB = WEBAPP = 'applab'
 
   def self.custom_studio
     @@game_custom_studio ||= find_by_name("CustomStudio")
+  end
+
+  def self.custom_artist
+    @@game_custom_artist ||= find_by_name("Custom")
   end
 
   def self.calc
@@ -61,7 +65,7 @@ class Game < ActiveRecord::Base
   end
 
   def uses_droplet?
-    name == "MazeEC" || name == "ArtistEC" || name == "Webapp" || name == "StudioEC"
+    name == "MazeEC" || name == "ArtistEC" || name == "Applab" || name == "StudioEC"
   end
 
   def self.setup
@@ -110,6 +114,7 @@ class Game < ActiveRecord::Base
         TextMatch
         StudioEC:studio
         ContractMatch
+        Applab:applab
       ).each_with_index do |game, id|
         name, app, intro_video = game.split ':'
         Game.create!(id: id + 1, name: name, app: app, intro_video: Video.find_by_key(intro_video))

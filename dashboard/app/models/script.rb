@@ -25,7 +25,6 @@ class Script < ActiveRecord::Base
   # other scripts identified by names not ids
   FROZEN_NAME = 'frozen'
   PLAYLAB_NAME = 'playlab'
-  SPECIAL_NAME = 'special'
 
   FLAPPY_NAME = 'flappy'
   TWENTY_HOUR_NAME = '20-hour'
@@ -128,7 +127,7 @@ class Script < ActiveRecord::Base
 
   def hoc?
     # note that now multiple scripts can be an 'hour of code' script
-    self.id == HOC_ID || self.name == HOC_NAME || self.name == FROZEN_NAME || self.flappy? || self.name == PLAYLAB_NAME || self.name == SPECIAL_NAME
+    self.id == HOC_ID || self.name == HOC_NAME || self.name == FROZEN_NAME || self.flappy? || self.name == PLAYLAB_NAME
   end
 
   def flappy?
@@ -178,7 +177,7 @@ class Script < ActiveRecord::Base
   end
 
   def self.beta?(name)
-    name == "course4"
+    name == "course4" || name == "edit-code"
   end
 
   def is_k1?

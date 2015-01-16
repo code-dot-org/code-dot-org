@@ -85,7 +85,7 @@ get '/v2/forms/:kind/:secret/status/:status' do |kind, secret, status|
   forbidden! if form.empty?
   data = JSON.parse(form[:data])
   pass unless ['cancelled'].include?(status)
-  data['status'] = status
+  data['status_s'] = status
   DB[:forms].where(kind:kind, secret:secret).update(data:data.to_json, indexed_at:nil)
 
   content_type :json

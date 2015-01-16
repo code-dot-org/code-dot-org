@@ -9,8 +9,8 @@ global.navigator = {};
 global.window = {};
 global.document = {};
 
-var Bee = testUtils.requireWithGlobalsCheckSrcFolder('maze/bee');
-var utils = testUtils.requireWithGlobalsCheckSrcFolder('utils');
+var Bee = testUtils.requireWithGlobalsCheckBuildFolder('maze/bee');
+var utils = testUtils.requireWithGlobalsCheckBuildFolder('utils');
 
 var baseLevel = {
   honeyGoal: 1,
@@ -32,7 +32,7 @@ describe("Bee", function () {
     };
     delete config.level.flowerType;
     assert.throws(function () {
-      new Bee(maze, config);
+      new Bee(maze, null, config);
     }, Error, /bad flowerType for Bee/);
   });
 
@@ -45,7 +45,7 @@ describe("Bee", function () {
       })
     };
     assert.throws(function () {
-      new Bee(maze, config);
+      new Bee(maze, null, config);
     }, Error, /bad flowerType for Bee/);
   });
 
@@ -67,7 +67,7 @@ describe("Bee", function () {
           initialDirt: [[initialDirtValue]]
         })
       };
-      var bee = new Bee(maze, config);
+      var bee = new Bee(maze, null, config);
       assert.equal(bee.isRedFlower(0, 0), expected, msg);
     }
 

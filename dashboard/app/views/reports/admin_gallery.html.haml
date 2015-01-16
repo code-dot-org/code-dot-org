@@ -12,8 +12,8 @@
       = time_ago_in_words activity.created_at
       ago
     %div.caption
-      = link_to "delete", gallery_activity_path(gallery_activity), method: :delete, remote: true, class: 'delete-gallery-activity', data: {confirm: 'Are you sure?' }
-      
+      = link_to 'delete', gallery_activity_path(gallery_activity), method: :delete, remote: true, class: 'delete-gallery-activity', data: {confirm: 'Are you sure?'}
+
 :javascript
   $('.delete-gallery-activity').on('ajax:complete', function(event, xhr, status) {
     $(this).parent().parent().css('opacity', '0.5')

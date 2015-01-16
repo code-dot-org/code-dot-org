@@ -1,6 +1,8 @@
-var TestResults = require('../../../src/constants.js').TestResults;
-var Emotions = require('../../../src/studio/constants.js').Emotions;
-var _ = require('../../../build/js/lodash');
+var testUtils = require('../../util/testUtils');
+var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
+var Emotions = require(testUtils.buildPath('studio/constants.js')).Emotions;
+
+var _ = require(testUtils.buildPath('lodash'));
 
 /**
  * Runs the given function at the provided tick count
