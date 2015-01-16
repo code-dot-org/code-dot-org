@@ -3,7 +3,7 @@ require_relative '../../../src/env'
 
 def main()
   Dir.chdir(pegasus_dir) do
-    system('rake PEGASUS_RAKE_LOGGER=true seed:sync i18n:sync')
+    `rake PEGASUS_RAKE_LOGGER=true seed:sync i18n:sync 2>&1`
   end
 end
 

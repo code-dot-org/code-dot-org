@@ -6,6 +6,14 @@ module Rack; class Request
     JSON.parse(body.read, symbolize_names:true)
   end
 
+  def language()
+    locale.split('-').first
+  end
+
+  def locale()
+    env['cdo.locale'] || 'en-US'
+  end
+
   def referer_site_with_port()
     begin
       url = URI.parse(self.referer.to_s)
