@@ -68,11 +68,11 @@ git push
 
 ### Blockly-core
 1. Make changes in `blockly-core/i18n/en-US/core.json`                                                                
-2. Run: `i18n/codeorg-messages.sh && cp msg/js/en_us.js ../blockly/lib/blockly/ && cd ../blockly && grunt build && cd -`
+2. Run: `cd blockly-core/i18n && ./codeorg-messages.sh && cp ../msg/js/en_us.js ../../apps/lib/blockly/ && cd ../../apps && grunt build && cd -`
 3. Check in the resulting changes in the files:
   * `blockly-core/i18n/locales/en-US/core.json`
   * `blockly-core/msg/js/en_us.js`
-  * `blockly/lib/blockly/en_us.js`
+  * `apps/lib/blockly/en_us.js`
 
 [Example changelist adding a new string.](https://github.com/code-dot-org/code-dot-org/commit/d7fa8719bef9ec2e46ab2f6c91f722288218d517)
 

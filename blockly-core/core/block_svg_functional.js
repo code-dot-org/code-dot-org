@@ -106,7 +106,7 @@ Blockly.BlockSvgFunctional.prototype.renderDrawRightInlineFunctional_ =
 
   renderInfo.inline.push('M', inputTopLeft.x + ',' + inputTopLeft.y);
   renderInfo.inline.push('h', notchStart);
-  renderInfo.inline.push(BS.NOTCH_PATH_LEFT);
+  renderInfo.inline.push(this.notchPathLeft);
   renderInfo.inline.push('H', inputTopLeft.x + input.renderWidth);
   renderInfo.inline.push('v', input.renderHeight);
   renderInfo.inline.push('H', inputTopLeft.x);
