@@ -1811,7 +1811,7 @@ AppStorage.createSharedRecord = function(record, callback) {
   }
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleCreateSharedRecord.bind(req, record, callback);
-  var url = "/v2/apps/" + AppStorage.tempAppId + "/shared-tables/" + tableName;
+  var url = "/v3/apps/" + AppStorage.tempAppId + "/shared-tables/" + tableName;
   req.open('POST', url, true);
   req.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
   req.send(JSON.stringify(record));
@@ -1846,7 +1846,7 @@ AppStorage.readSharedRecords = function(searchParams, callback) {
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleReadSharedRecords.bind(req, tableName,
       searchParams, callback);
-  var url = '/v2/apps/' + AppStorage.tempAppId + "/shared-tables/" + tableName;
+  var url = '/v3/apps/' + AppStorage.tempAppId + "/shared-tables/" + tableName;
   req.open('GET', url, true);
   req.send();
   

@@ -15,6 +15,16 @@ class AppsApi < Sinatra::Base
     end
   end
 
+  if rack_env?(:staging) || rack_env?(:development)
+    get '/v3/apps/debug' do
+      dont_cache
+      content_type :json
+      JSON.pretty_generate({
+        storage_id:storage_id('user'),
+      })
+    end
+  end
+
   #
   #
   # PROPERTIES
