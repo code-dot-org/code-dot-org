@@ -2,10 +2,8 @@
 -not_authorized! unless dashboard_user
 -forbidden! unless dashboard_user[:admin]
 
--pass unless app = DB[:forms].where(kind:'CspApp', secret:request.splat_path_info[1..-1]).first
--app_data = JSON.parse(app[:data])
--parent_id = app[:id]
--tables = DB[:forms].where(kind:'CspTable', parent_id:parent_id)
+-app_id = request.splat_path_info[1..-1]
+-app_tables = DB[:app_tables].where(app_id:app_id).group(:table_name)
 
 %form#csp_tables
   %table
@@ -14,38 +12,27 @@
         Table name
       %td
         action
-    -tables.each do |table|
-      -table_data = JSON.parse(table[:data])
+    -app_tables.each do |app_table|
+      -table_name = app_table[:table_name]
       %tr
         %td
-          #{table_data['table_name_s']}
+          #{table_name}
         %td
-          %a{href:"/edit-csp-table/#{table[:secret]}", target:"_blank"}
+          %a{href:"/edit-csp-table/#{app_id}/#{table_name}", target:"_blank"}
             view
     %tr
       %td
-        %input#table-name-input{name:'table_name_s'}
+        %input#table-name-input
       %td
         %button
           Add
 
 :javascript
-  function processResponse(data) {
-    window.location.reload()
-  }
-  function processError(data) {
-    window.alert(data.status + '\n' + data.responseJSON);
-  }
   $('#csp_tables').submit(
     function(e) {
-      var table_name = document.getElementById('table-name-input').value;
-      $.ajax({
-        url: "/v2/forms/CspApp/#{parent_id}/children/CspTable",
-        type: "post",
-        data: JSON.stringify( { table_name_s: table_name } ),
-        processData: false,
-        contentType: "application/json; charset=utf-8"
-      }).done(processResponse).fail(processError);
-      return false;
+      var tableName = document.getElementById('table-name-input').value;
+      if (tableName) {
+        window.open("/edit-csp-table/#{app_id}/" + tableName, "_blank");
+      }
     }
   );
