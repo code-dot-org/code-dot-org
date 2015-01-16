@@ -285,16 +285,16 @@ exports.clearTimeout = function (blockId, timeoutId) {
                            {'timeoutId': timeoutId });
 };
 
-exports.createRecord = function (blockId, record, callback) {
+exports.createSharedRecord = function (blockId, record, callback) {
   return Applab.executeCmd(blockId,
-                          'createRecord',
+                          'createSharedRecord',
                           {'record': record,
                            'callback': callback });
 };
 
-exports.readRecords = function (blockId, searchParams, callback) {
+exports.readSharedRecords = function (blockId, searchParams, callback) {
   return Applab.executeCmd(blockId,
-                          'readRecords',
+                          'readSharedRecords',
                           {'searchParams': searchParams,
                            'callback': callback });
 };
