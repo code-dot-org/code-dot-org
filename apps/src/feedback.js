@@ -780,21 +780,6 @@ FeedbackUtils.prototype.showToggleBlocksError = function(Dialog) {
 };
 
 /**
- * Check whether the user code has all the blocks required for the level.
- * @param {!Array} requiredBlocks The blocks that are required to be used in
- *   the solution to this level.
- * @return {boolean} true if all blocks are present, false otherwise.
- */
-FeedbackUtils.prototype.hasAllRequiredBlocks_ = function(requiredBlocks) {
-  // It's okay (maybe faster) to pass 1 for maxBlocksToFlag, since in the end
-  // we want to check that there are zero blocks missing.
-  var maxBlocksToFlag = 1;
-  var blockLinter = new BlockLinter(Blockly);
-  return blockLinter.getMissingRequiredBlocks(requiredBlocks,
-      maxBlocksToFlag).blocksToDisplay.length === 0;
-};
-
-/**
  * Runs the tests and returns results.
  * @param {boolean} levelComplete Did the user successfully complete the level?
  * @param {!Array} requiredBlocks The blocks that are required to be used in
@@ -806,8 +791,6 @@ FeedbackUtils.prototype.hasAllRequiredBlocks_ = function(requiredBlocks) {
  */
 FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
     shouldCheckForEmptyBlocks, options) {
-  // TODO (bbuchanan) : There should be UI tests around every one of these
-  //   failure types!
   options = options || {};
   if (this.studioApp_.editCode) {
     // TODO (cpirich): implement better test results for editCode
@@ -815,53 +798,14 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
         this.studioApp_.TestResults.ALL_PASS :
         this.studioApp_.TestResults.TOO_FEW_BLOCKS_FAIL;
   }
+
+  // If we get this far, we assume that Blockly is being used.
   var blockLinter = new BlockLinter(Blockly);
-  if (shouldCheckForEmptyBlocks) {
-    var emptyBlockFailure = blockLinter.checkForEmptyContainerBlockFailure();
-    if (emptyBlockFailure !== TestResults.ALL_PASS) {
-      return emptyBlockFailure;
-    }
-  }
-  if (!options.allowTopBlocks && blockLinter.hasExtraTopBlocks()) {
-    return TestResults.EXTRA_TOP_BLOCKS_FAIL;
-  }
-  if (Blockly.useContractEditor || Blockly.useModalFunctionEditor) {
-    if (blockLinter.hasUnusedParam()) {
-      return TestResults.UNUSED_PARAM;
-    }
-    if (blockLinter.hasUnusedFunction()) {
-      return TestResults.UNUSED_FUNCTION;
-    }
-    if (blockLinter.hasParamInputUnattached()) {
-      return TestResults.PARAM_INPUT_UNATTACHED;
-    }
-    if (blockLinter.hasIncompleteBlockInFunction()) {
-      return TestResults.INCOMPLETE_BLOCK_IN_FUNCTION;
-    }
-  }
-  if (blockLinter.hasQuestionMarksInNumberField()) {
-    return TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
-  }
-  if (!this.hasAllRequiredBlocks_(requiredBlocks)) {
-    return levelComplete ?
-        TestResults.MISSING_BLOCK_FINISHED :
-        TestResults.MISSING_BLOCK_UNFINISHED;
-  }
-  var numEnabledBlocks = this.getNumCountableBlocks();
-  if (!levelComplete) {
-    if (this.studioApp_.IDEAL_BLOCK_NUM &&
-        this.studioApp_.IDEAL_BLOCK_NUM !== Infinity &&
-        numEnabledBlocks < this.studioApp_.IDEAL_BLOCK_NUM) {
-      return TestResults.TOO_FEW_BLOCKS_FAIL;
-    }
-    return TestResults.LEVEL_INCOMPLETE_FAIL;
-  }
-  if (this.studioApp_.IDEAL_BLOCK_NUM &&
-      numEnabledBlocks > this.studioApp_.IDEAL_BLOCK_NUM) {
-    return TestResults.TOO_MANY_BLOCKS_FAIL;
-  } else {
-    return TestResults.ALL_PASS;
-  }
+  blockLinter.setShouldCheckForEmptyBlocks(shouldCheckForEmptyBlocks);
+  blockLinter.setAllowExtraTopBlocks(options.allowTopBlocks);
+  blockLinter.setIdealBlockCount(this.studioApp_.IDEAL_BLOCK_NUM);
+  blockLinter.setRequiredBlocks(requiredBlocks);
+  return blockLinter.runStaticAnalysis(levelComplete);
 };
 
 /**

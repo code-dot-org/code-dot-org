@@ -4,6 +4,8 @@ var assert = testUtils.assert;
 var canvas = require('canvas');
 var BlockLinter = testUtils.requireWithGlobalsCheckBuildFolder('BlockLinter');
 
+// TODO (bbuchanan) : This no longer houses tests for feedback.js, but for
+// BlockLinter.js instead.  Rename the file!
 // Some of our feedback tests need to use Image
 global.Image = canvas.Image;
 global.Turtle = {};

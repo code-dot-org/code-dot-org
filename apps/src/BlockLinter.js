@@ -26,6 +26,30 @@ var TestResults = constants.TestResults;
  */
 var BlockLinter = function ( blockly ) {
   this.blockly_ = blockly;
+
+  /**
+   * @member {boolean} Whether the analyzer will check for empty container
+   * blocks
+   */
+  this.isCheckForEmptyBlocksEnabled_ = true;
+
+  /**
+   * @member {boolean} Disables extra top-level block failures during static
+   * analysis check.
+   */
+  this.areExtraTopBlocksAllowed_ = false;
+
+  /**
+   * @member {number} The number of 'countable' blocks used in
+   *   an ideal solution to the current level.
+   */
+  this.idealBlockCount_ = 0;
+
+  /**
+   * @member {!Array} The blocks that are required to be used in
+   *   the solution to this level.
+   */
+  this.requiredBlocks_ = [];
 };
 module.exports = BlockLinter;
 
@@ -212,12 +236,12 @@ BlockLinter.hasMatchingDescendant = function (node, filter) {
 
 
 /**
-* Check for empty container blocks, and return an appropriate failure
-* code if any are found.
-* @return {TestResults} ALL_PASS if no empty blocks are present, or
-*   EMPTY_BLOCK_FAIL or EMPTY_FUNCTION_BLOCK_FAIL if empty blocks
-*   are found.
-*/
+ * Check for empty container blocks, and return an appropriate failure
+ * code if any are found.
+ * @return {TestResults} ALL_PASS if no empty blocks are present, or
+ *   EMPTY_BLOCK_FAIL or EMPTY_FUNCTION_BLOCK_FAIL if empty blocks
+ *   are found.
+ */
 BlockLinter.prototype.checkForEmptyContainerBlockFailure = function() {
   var emptyBlock = this.getEmptyContainerBlock();
   if (!emptyBlock) {
@@ -237,16 +261,16 @@ BlockLinter.prototype.checkForEmptyContainerBlockFailure = function() {
 
 
 /**
-* Check to see if the user's code contains the required blocks for a level.
-* @param {!Array} requiredBlocks The blocks that are required to be used in
-*   the solution to this level.
-* @param {number} maxBlocksToFlag The maximum number of blocks to return.
-* @return {{blocksToDisplay:!Array, message:?string}} 'missingBlocks' is an
-*   array of array of strings where each array of strings is a set of blocks
-*   that at least one of them should be used. Each block is represented as the
-*   prefix of an id in the corresponding template.soy. 'message' is an
-*   optional message to override the default error text.
-*/
+ * Check to see if the user's code contains the required blocks for a level.
+ * @param {!Array} requiredBlocks The blocks that are required to be used in
+ *   the solution to this level.
+ * @param {number} maxBlocksToFlag The maximum number of blocks to return.
+ * @return {{blocksToDisplay:!Array, message:?string}} 'missingBlocks' is an
+ *   array of array of strings where each array of strings is a set of blocks
+ *   that at least one of them should be used. Each block is represented as the
+ *   prefix of an id in the corresponding template.soy. 'message' is an
+ *   optional message to override the default error text.
+ */
 BlockLinter.prototype.getMissingRequiredBlocks = function (requiredBlocks,
     maxBlocksToFlag) {
   var missingBlocks = [];
@@ -296,4 +320,107 @@ BlockLinter.prototype.getMissingRequiredBlocks = function (requiredBlocks,
     blocksToDisplay: missingBlocks,
     message: customMessage
   };
+};
+
+/**
+ * Check whether the user code has all the blocks required for the level.
+ * @param {!Array} requiredBlocks The blocks that are required to be used in
+ *   the solution to this level.
+ * @return {boolean} true if all blocks are present, false otherwise.
+ */
+BlockLinter.prototype.hasAllRequiredBlocks = function(requiredBlocks) {
+  // It's okay (maybe faster) to pass 1 for maxBlocksToFlag, since in the end
+  // we want to check that there are zero blocks missing.
+  var maxBlocksToFlag = 1;
+  return this.getMissingRequiredBlocks(requiredBlocks,
+      maxBlocksToFlag).blocksToDisplay.length === 0;
+};
+
+/**
+ * Enables empty block failures during static analysis check.
+ */
+BlockLinter.prototype.setShouldCheckForEmptyBlocks = function (isCheckEnabled) {
+  this.isCheckForEmptyBlocksEnabled_ = isCheckEnabled;
+};
+
+/**
+ * Disables extra top-level block failures during static analysis check.
+ */
+BlockLinter.prototype.setAllowExtraTopBlocks = function (areExtrasAllowed) {
+  this.areExtraTopBlocksAllowed_ = areExtrasAllowed;
+};
+
+/**
+ * @param {number} idealBlockCount - The number of 'countable' blocks used in
+ *   an ideal solution to the current level.
+ */
+BlockLinter.prototype.setIdealBlockCount = function (idealBlockCount) {
+  this.idealBlockCount_ = idealBlockCount;
+};
+
+/**
+ * @param {!Array} requiredBlocks The blocks that are required to be used in
+ *   the solution to this level.
+ */
+BlockLinter.prototype.setRequiredBlocks = function (requiredBlocks) {
+  this.requiredBlocks_ = requiredBlocks;
+};
+
+/**
+ * @param {boolean} isLevelComplete - Whether the level's basic success/fail
+ *   condition has been met, regardless of the exact solution.
+ * @return {number} The appropriate TestResults error code, or ALL_PASS if
+ *   no static analysis errors are found.
+ */
+BlockLinter.prototype.runStaticAnalysis = function (isLevelComplete) {
+  // TODO (bbuchanan) : There should be UI tests around every one of these
+  //   failure types!
+  if (this.isCheckForEmptyBlocksEnabled_) {
+    var emptyBlockFailure = this.checkForEmptyContainerBlockFailure();
+    if (emptyBlockFailure !== TestResults.ALL_PASS) {
+      return emptyBlockFailure;
+    }
+  }
+
+  if (!this.areExtraTopBlocksAllowed_ && this.hasExtraTopBlocks()) {
+    return TestResults.EXTRA_TOP_BLOCKS_FAIL;
+  }
+
+  if (this.blockly_.useContractEditor || this.blockly_.useModalFunctionEditor) {
+    if (this.hasUnusedParam()) {
+      return TestResults.UNUSED_PARAM;
+    } else if (this.hasUnusedFunction()) {
+      return TestResults.UNUSED_FUNCTION;
+    } else if (this.hasParamInputUnattached()) {
+      return TestResults.PARAM_INPUT_UNATTACHED;
+    } else if (this.hasIncompleteBlockInFunction()) {
+      return TestResults.INCOMPLETE_BLOCK_IN_FUNCTION;
+    }
+  }
+
+  if (this.hasQuestionMarksInNumberField()) {
+    return TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
+  }
+
+  if (!this.hasAllRequiredBlocks(this.requiredBlocks_)) {
+    return isLevelComplete ?
+        TestResults.MISSING_BLOCK_FINISHED :
+        TestResults.MISSING_BLOCK_UNFINISHED;
+  }
+
+  var numEnabledBlocks = this.getCountableBlocks().length;
+  if (!isLevelComplete) {
+    if (this.idealBlockCount_ && this.idealBlockCount_ !== Infinity &&
+        numEnabledBlocks < this.idealBlockCount_) {
+      return TestResults.TOO_FEW_BLOCKS_FAIL;
+    }
+    return TestResults.LEVEL_INCOMPLETE_FAIL;
+  }
+
+  if (this.idealBlockCount_ && numEnabledBlocks > this.idealBlockCount_) {
+    return TestResults.TOO_MANY_BLOCKS_FAIL;
+  }
+
+  // Found nothing wrong
+  return TestResults.ALL_PASS;
 };
