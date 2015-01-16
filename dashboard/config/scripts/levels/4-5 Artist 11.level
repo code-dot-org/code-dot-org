@@ -86,9 +86,19 @@
             </block>
           </statement>
         </block>
-        <block type="jump_by_constant">
-          <title name="DIR">jumpForward</title>
-          <title name="VALUE">15</title>
+        <block type="pick_one">
+          <statement name="PICK">
+            <block type="jump_by_constant">
+              <title name="DIR">jumpForward</title>
+              <title name="VALUE">15</title>
+              <next>
+                <block type="jump_by_constant">
+                  <title name="DIR">jumpBackward</title>
+                  <title name="VALUE">15</title>
+                </block>
+              </next>
+            </block>
+          </statement>
         </block>
       </xml>
     </required_blocks>

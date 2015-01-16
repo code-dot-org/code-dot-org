@@ -8,7 +8,7 @@
     "skin": "eval",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "We've placed the two previous examples you did into the Design Recipe for you. Write out the body of this function and then run it with the parameters 115 and \"purple.\"",
+    "instructions": "The design recipe for \"wide-rect\" already has a contract and one example. Can you write a second example and then complete the definition. The \"wide-rect\" function should draw a rectangle of given color that is twice as wide as it is high.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -31,26 +31,17 @@
                 <arg name="color" type="string"/>
               </mutation>
               <functional_input name="ARG0">
-                <block type="functional_math_number" editable="false" movable="false">
+                <block type="functional_math_number" movable="false" editable="false">
                   <title name="NUM">115</title>
                 </block>
               </functional_input>
               <functional_input name="ARG1">
-                <block type="functional_string" editable="false" movable="false">
+                <block type="functional_string" movable="false" editable="false">
                   <title name="VAL">purple</title>
                 </block>
               </functional_input>
             </block>
           </functional_input>
-        </block>
-        <block type="functional_definition" inline="false" uservisible="false">
-          <mutation>
-            <arg name="height" type="Number"/>
-            <arg name="color" type="string"/>
-            <description>Produce a rectangle of given color that is twice as wide as it is high.</description>
-            <outputtype>image</outputtype>
-          </mutation>
-          <title name="NAME">wide-rect</title>
         </block>
         <block type="functional_example" inline="false" uservisible="false">
           <functional_input name="EXPECTED">
@@ -98,28 +89,7 @@
         </block>
         <block type="functional_example" inline="false" uservisible="false">
           <functional_input name="EXPECTED">
-            <block type="functional_rectangle" inline="false" uservisible="false">
-              <functional_input name="WIDTH">
-                <block type="functional_math_number" uservisible="false">
-                  <title name="NUM">150</title>
-                </block>
-              </functional_input>
-              <functional_input name="HEIGHT">
-                <block type="functional_math_number" uservisible="false">
-                  <title name="NUM">75</title>
-                </block>
-              </functional_input>
-              <functional_input name="STYLE">
-                <block type="functional_style" uservisible="false">
-                  <title name="VAL">solid</title>
-                </block>
-              </functional_input>
-              <functional_input name="COLOR">
-                <block type="functional_string" uservisible="false">
-                  <title name="VAL">red</title>
-                </block>
-              </functional_input>
-            </block>
+            <block type="functional_rectangle" inline="false" uservisible="false"/>
           </functional_input>
           <functional_input name="ACTUAL">
             <block type="functional_call" inline="false" uservisible="false">
@@ -139,6 +109,15 @@
               </functional_input>
             </block>
           </functional_input>
+        </block>
+        <block type="functional_definition" inline="false" uservisible="false">
+          <mutation>
+            <arg name="height" type="Number"/>
+            <arg name="color" type="string"/>
+            <description>Produce a rectangle of given color that is twice as wide as it is high.</description>
+            <outputtype>image</outputtype>
+          </mutation>
+          <title name="NAME">wide-rect</title>
         </block>
       </xml>
     </start_blocks>
