@@ -14,12 +14,12 @@
   -# If no param, take default
   - pretty = params.fetch(:pretty, Rails.configuration.pretty_apps)
   %link{href: "#{apps_path}css/common.css", rel: 'stylesheet', type: 'text/css'}
-  %link{href: "#{apps_path}css/#{@game.app}.css", rel: 'stylesheet', type: 'text/css'}
+  %link{href: "#{apps_path}css/#{app_options[:app]}.css", rel: 'stylesheet', type: 'text/css'}
 
   - if browser.chrome? && browser.version.to_s.to_i == 34
     %script{src: '/shared/js/chrome34Fix.js'}
 
-  - if @game.uses_droplet?
+  - if app_options[:droplet]
     %script{src: "#{apps_path}js/jsinterpreter/acorn_interpreter.js"}
     %script{src: "#{apps_path}js/requirejs/require.js"}
     %script{src: "#{apps_path}js/ace/ace.js"}
@@ -28,7 +28,7 @@
     %link{href: "#{apps_path}css/droplet/droplet.min.css", rel: 'stylesheet', type: 'text/css'}
   - else
     %script{src: "#{apps_path}js/#{js_locale}/vendor.js"}
-  %script{src: "#{apps_path}js/#{js_locale}/#{@game.app}#{pretty ? '' : '.min'}.js"}
+  %script{src: "#{apps_path}js/#{js_locale}/#{app_options[:app]}#{app_options[:pretty]}.js"}
 
   %div{style: 'display: none;'}= render partial: 'levels/reference_area'
 
