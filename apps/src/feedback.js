@@ -778,25 +778,6 @@ FeedbackUtils.prototype.showToggleBlocksError = function(Dialog) {
 };
 
 /**
- * Get an empty container block, if any are present.
- * @return {Blockly.Block} an empty container block, or null if none exist.
- */
-FeedbackUtils.prototype.getEmptyContainerBlock_ = function() {
-  var blocks = Blockly.mainBlockSpace.getAllBlocks();
-  for (var i = 0; i < blocks.length; i++) {
-    var block = blocks[i];
-    for (var j = 0; j < block.inputList.length; j++) {
-      var input = block.inputList[j];
-      if (input.type == Blockly.NEXT_STATEMENT &&
-          !input.connection.targetConnection) {
-        return block;
-      }
-    }
-  }
-  return null;
-};
-
-/**
  * Check for empty container blocks, and return an appropriate failure
  * code if any are found.
  * @return {TestResults} ALL_PASS if no empty blocks are present, or
@@ -804,7 +785,8 @@ FeedbackUtils.prototype.getEmptyContainerBlock_ = function() {
  *   are found.
  */
 FeedbackUtils.prototype.checkForEmptyContainerBlockFailure_ = function() {
-  var emptyBlock = this.getEmptyContainerBlock_();
+  var blockLinter = new BlockLinter(Blockly);
+  var emptyBlock = blockLinter.getEmptyContainerBlock();
   if (!emptyBlock) {
     return TestResults.ALL_PASS;
   }

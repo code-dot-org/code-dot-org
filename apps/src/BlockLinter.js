@@ -55,6 +55,25 @@ BlockLinter.prototype.getCountableBlocks = function() {
 };
 
 /**
+* Get an empty container block, if any are present.
+* @return {Blockly.Block} an empty container block, or null if none exist.
+*/
+BlockLinter.prototype.getEmptyContainerBlock = function() {
+  var blocks = this.blockly_.mainBlockSpace.getAllBlocks();
+  for (var i = 0; i < blocks.length; i++) {
+    var block = blocks[i];
+    for (var j = 0; j < block.inputList.length; j++) {
+      var input = block.inputList[j];
+      if (input.type == this.blockly_.NEXT_STATEMENT &&
+          !input.connection.targetConnection) {
+        return block;
+      }
+    }
+  }
+  return null;
+};
+
+/**
  * Do we have any floating blocks not attached to an event block or
  * function block?
  * @return {boolean}
