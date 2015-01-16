@@ -55,6 +55,13 @@ Blockly.BlockSvg = function(block) {
    */
   this.notchPathRight = 'l -6,4 -3,0 -6,-4';
 
+  // TODO - flag instead of type
+  if (block.type === 'functional_pass') {
+    this.notchPathLeft = 'l 0,5 15,0 0,-5';
+    this.notchPathLeftHighlight = 'l 0,5 15,0 0,-5';
+    this.notchPathRight = 'l 0,5 -15,0 0,-5';
+  }
+
   this.block_ = block;
   var options = {
     "block-id": block.id
