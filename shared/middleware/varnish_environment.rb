@@ -33,10 +33,17 @@ class VarnishEnvironment < Sinatra::Base
     end
     
     def language_to_locale(language)
-      language = language.to_s.downcase
-      return nil unless locale = settings.locales_supported.find{|i| i==language || i.split('-').first==language}
-      parts = locale.split('-')
-      return "#{parts[0].downcase}-#{parts[1].upcase}"
+      case language
+      when 'es'
+        return 'es-ES'
+      when 'fa'
+        return 'fa-IR'
+      else
+        language = language.to_s.downcase
+        return nil unless locale = settings.locales_supported.find{|i| i==language || i.split('-').first==language}
+        parts = locale.split('-')
+        return "#{parts[0].downcase}-#{parts[1].upcase}"
+      end
     end
   end
 
