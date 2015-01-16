@@ -5,6 +5,9 @@ require ::File.expand_path('../config/environment',  __FILE__)
 require 'unicorn/oob_gc'
 use Unicorn::OobGC
 
+require 'varnish_environment'
+use VarnishEnvironment
+
 require 'apps_api'
 use AppsApi
 
