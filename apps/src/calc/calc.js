@@ -47,7 +47,6 @@ var skin;
 var COMPUTE_NAME = 'zzz_compute';
 
 studioApp.setCheckForEmptyBlocks(false);
-studioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
