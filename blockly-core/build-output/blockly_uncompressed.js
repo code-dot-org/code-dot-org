@@ -1158,7 +1158,11 @@ goog.userAgent.DOCUMENT_MODE = function() {
 }();
 goog.provide("Blockly.BlockSvg");
 goog.require("goog.userAgent");
+var INLINE_ROW = -1;
 Blockly.BlockSvg = function(block) {
+  this.notchPathLeft = "l 6,4 3,0 6,-4";
+  this.notchPathLeftHighlight = "l 6.5,4 2,0 6.5,-4";
+  this.notchPathRight = "l -6,4 -3,0 -6,-4";
   this.block_ = block;
   var options = {"block-id":block.id};
   if(block.htmlId) {
@@ -1179,7 +1183,6 @@ Blockly.BlockSvg.prototype.initChildren = function() {
   Blockly.Tooltip.bindMouseEvents(this.svgPath_);
   this.updateMovable()
 };
-Blockly.BlockSvg.INLINE = -1;
 Blockly.BlockSvg.DISABLED_COLOUR = "#808080";
 Blockly.BlockSvg.prototype.init = function() {
   var block = this.block_;
@@ -1227,9 +1230,6 @@ BS.TITLE_HEIGHT = 18;
 BS.DISTANCE_45_INSIDE = (1 - Math.SQRT1_2) * (BS.CORNER_RADIUS - 1) + 1;
 BS.DISTANCE_45_OUTSIDE = (1 - Math.SQRT1_2) * (BS.CORNER_RADIUS + 1) - 1;
 BS.NOTCH_PATH_WIDTH = 15;
-BS.NOTCH_PATH_LEFT = "l 6,4 3,0 6,-4";
-BS.NOTCH_PATH_LEFT_HIGHLIGHT = "l 6.5,4 2,0 6.5,-4";
-BS.NOTCH_PATH_RIGHT = "l -6,4 -3,0 -6,-4";
 BS.JAGGED_TEETH = "l 8,0 0,4 8,4 -16,8 8,4";
 BS.JAGGED_TEETH_HEIGHT = 20;
 BS.TAB_PATH_DOWN = "v 5 c 0,10 -" + BS.TAB_WIDTH + ",-8 -" + BS.TAB_WIDTH + ",7.5 s " + BS.TAB_WIDTH + ",-2.5 " + BS.TAB_WIDTH + ",7.5";
@@ -1239,7 +1239,6 @@ BS.TOP_LEFT_CORNER_START_HIGHLIGHT_RTL = "m " + BS.DISTANCE_45_INSIDE + "," + BS
 BS.TOP_LEFT_CORNER_START_HIGHLIGHT_LTR = "m 1," + (BS.CORNER_RADIUS - 1);
 BS.TOP_LEFT_CORNER = "A " + BS.CORNER_RADIUS + "," + BS.CORNER_RADIUS + " 0 0,1 " + BS.CORNER_RADIUS + ",0";
 BS.TOP_LEFT_CORNER_HIGHLIGHT = "A " + (BS.CORNER_RADIUS - 1) + "," + (BS.CORNER_RADIUS - 1) + " 0 0,1 " + BS.CORNER_RADIUS + ",1";
-BS.INNER_TOP_LEFT_CORNER = BS.NOTCH_PATH_RIGHT + " h -" + (BS.NOTCH_WIDTH - BS.NOTCH_PATH_WIDTH - BS.CORNER_RADIUS) + " a " + BS.CORNER_RADIUS + "," + BS.CORNER_RADIUS + " 0 0,0 -" + BS.CORNER_RADIUS + "," + BS.CORNER_RADIUS;
 BS.INNER_BOTTOM_LEFT_CORNER = "a " + BS.CORNER_RADIUS + "," + BS.CORNER_RADIUS + " 0 0,0 " + BS.CORNER_RADIUS + "," + BS.CORNER_RADIUS;
 BS.INNER_TOP_LEFT_CORNER_HIGHLIGHT_RTL = "a " + (BS.CORNER_RADIUS + 1) + "," + (BS.CORNER_RADIUS + 1) + " 0 0,0 " + (-BS.DISTANCE_45_OUTSIDE - 1) + "," + (BS.CORNER_RADIUS - BS.DISTANCE_45_OUTSIDE);
 BS.INNER_BOTTOM_LEFT_CORNER_HIGHLIGHT_RTL = "a " + (BS.CORNER_RADIUS + 1) + "," + (BS.CORNER_RADIUS + 1) + " 0 0,0 " + (BS.CORNER_RADIUS + 1) + "," + (BS.CORNER_RADIUS + 1);
@@ -1441,10 +1440,10 @@ Blockly.BlockSvg.prototype.renderCompute_ = function(iconWidth) {
       inputRows.push(currentRow)
     }
     if(currentRow.length > 0 || input.isInline()) {
-      currentRow.type = BS.INLINE
+      currentRow.type = INLINE_ROW
     }
     if(currentRow.length === 0 && input.type === Blockly.FUNCTIONAL_INPUT) {
-      currentRow.type = BS.INLINE
+      currentRow.type = INLINE_ROW
     }
     currentRow.push(input);
     var renderSize = inputRenderSize(input);
@@ -1454,7 +1453,7 @@ Blockly.BlockSvg.prototype.renderCompute_ = function(iconWidth) {
     var titleSize = inputTitleRenderSize(input, i === 0 ? iconWidth : 0);
     input.titleWidth = titleSize.width;
     currentRow.height = Math.max(currentRow.height, titleSize.height);
-    if(currentRow.type != BS.INLINE) {
+    if(currentRow.type != INLINE_ROW) {
       if(currentRow.type == Blockly.NEXT_STATEMENT) {
         hasStatement = true;
         titleStatementWidth = Math.max(titleStatementWidth, input.titleWidth)
@@ -1487,7 +1486,7 @@ Blockly.BlockSvg.prototype.renderCompute_ = function(iconWidth) {
   inputRows.hasDummy = hasDummy;
   inputRows.rightEdgeWithoutInline = inputRows.rightEdge;
   for(i = 0;currentRow = inputRows[i];i++) {
-    if(currentRow.type === BS.INLINE) {
+    if(currentRow.type === INLINE_ROW) {
       inputRows.rightEdge = Math.max(inputRows.rightEdge, widthInlineRow(currentRow))
     }
   }
@@ -1497,7 +1496,7 @@ function thickenInlineRows(inputRows) {
   var row;
   for(var y = 0;row = inputRows[y];y++) {
     row.thicker = false;
-    if(row.type === BS.INLINE) {
+    if(row.type === INLINE_ROW) {
       for(var z = 0, input;input = row[z];z++) {
         if(input.type === Blockly.INPUT_VALUE || input.type === Blockly.FUNCTIONAL_INPUT) {
           row.height += 2 * BS.INLINE_PADDING_Y;
@@ -1606,8 +1605,8 @@ Blockly.BlockSvg.prototype.renderDrawTop_ = function(renderInfo, rightEdge, conn
   if(this.block_.previousConnection) {
     renderInfo.core.push("H", BS.NOTCH_WIDTH - BS.NOTCH_PATH_WIDTH);
     renderInfo.highlight.push("H", BS.NOTCH_WIDTH - BS.NOTCH_PATH_WIDTH);
-    renderInfo.core.push(BS.NOTCH_PATH_LEFT);
-    renderInfo.highlight.push(BS.NOTCH_PATH_LEFT_HIGHLIGHT);
+    renderInfo.core.push(this.notchPathLeft);
+    renderInfo.highlight.push(this.notchPathLeftHighlight);
     var connectionX = connectionsXY.x + oppositeIfRTL(BS.NOTCH_WIDTH);
     var connectionY = connectionsXY.y;
     this.block_.previousConnection.moveTo(connectionX, connectionY)
@@ -1627,7 +1626,7 @@ Blockly.BlockSvg.prototype.renderDrawRight_ = function(renderInfo, connectionsXY
     if(this.block_.isCollapsed()) {
       this.renderDrawRightCollapsed_(renderInfo, row)
     }else {
-      if(row.type === BS.INLINE) {
+      if(row.type === INLINE_ROW) {
         this.renderDrawRightInline_(renderInfo, inputRows, i, connectionsXY)
       }else {
         if(row.type === Blockly.INPUT_VALUE) {
@@ -1748,7 +1747,7 @@ Blockly.BlockSvg.prototype.renderDrawRightNextStatement_ = function(renderInfo, 
   this.renderTitles_(input.titleRow, titleX, titleY);
   renderInfo.curX = inputRows.statementEdge + BS.NOTCH_WIDTH;
   renderInfo.core.push("H", renderInfo.curX);
-  renderInfo.core.push(BS.INNER_TOP_LEFT_CORNER);
+  renderInfo.core.push(this.innerTopLeftCorner());
   renderInfo.core.push("v", row.height - 2 * BS.CORNER_RADIUS);
   renderInfo.core.push(BS.INNER_BOTTOM_LEFT_CORNER);
   renderInfo.core.push("H", inputRows.rightEdgeWithoutInline);
@@ -1849,7 +1848,7 @@ Blockly.BlockSvg.prototype.renderDrawRightInlineFunctional_ = function(renderInf
 Blockly.BlockSvg.prototype.renderDrawBottom_ = function(renderInfo, connectionsXY) {
   renderInfo.core.push(brokenControlPointWorkaround());
   if(this.block_.nextConnection) {
-    renderInfo.core.push("H", BS.NOTCH_WIDTH + " " + BS.NOTCH_PATH_RIGHT);
+    renderInfo.core.push("H", BS.NOTCH_WIDTH + " " + this.notchPathRight);
     var connectionX = connectionsXY.x + oppositeIfRTL(BS.NOTCH_WIDTH);
     var connectionY = connectionsXY.y + renderInfo.curY + 1;
     this.block_.nextConnection.moveTo(connectionX, connectionY);
@@ -1892,6 +1891,9 @@ Blockly.BlockSvg.prototype.renderDrawLeft_ = function(renderInfo) {
 };
 Blockly.BlockSvg.prototype.setVisible = function(visible) {
   this.svgGroup_.style.display = visible ? "" : "none"
+};
+Blockly.BlockSvg.prototype.innerTopLeftCorner = function() {
+  return this.notchPathRight + " h -" + (BS.NOTCH_WIDTH - BS.NOTCH_PATH_WIDTH - BS.CORNER_RADIUS) + " a " + BS.CORNER_RADIUS + "," + BS.CORNER_RADIUS + " 0 0,0 -" + BS.CORNER_RADIUS + "," + BS.CORNER_RADIUS
 };
 goog.provide("Blockly.Field");
 goog.require("Blockly.BlockSvg");
@@ -13026,10 +13028,10 @@ Blockly.Connection.prototype.connect = function(connectTo) {
   connectTo.targetConnection = this;
   childBlock.setParent(parentBlock);
   if(parentBlock.rendered) {
-    parentBlock.svg_.updateDisabled()
+    parentBlock.getSvgRenderer().updateDisabled()
   }
   if(childBlock.rendered) {
-    childBlock.svg_.updateDisabled()
+    childBlock.getSvgRenderer().updateDisabled()
   }
   if(parentBlock.rendered && childBlock.rendered) {
     if(this.type == Blockly.NEXT_STATEMENT || this.type == Blockly.PREVIOUS_STATEMENT) {
@@ -13136,7 +13138,7 @@ Blockly.Connection.prototype.disconnect = function() {
     parentBlock.render()
   }
   if(childBlock.rendered) {
-    childBlock.svg_.updateDisabled();
+    childBlock.getSvgRenderer().updateDisabled();
     childBlock.render()
   }
 };
@@ -13193,9 +13195,9 @@ Blockly.Connection.prototype.highlight = function() {
   }else {
     var moveWidth = 5 + Blockly.BlockSvg.NOTCH_PATH_WIDTH;
     if(Blockly.RTL) {
-      steps = "m " + moveWidth + ",0 h -5 " + Blockly.BlockSvg.NOTCH_PATH_RIGHT + " h -5"
+      steps = "m " + moveWidth + ",0 h -5 " + this.sourceBlock_.getSvgRenderer().notchPathRight + " h -5"
     }else {
-      steps = "m -" + moveWidth + ",0 h 5 " + Blockly.BlockSvg.NOTCH_PATH_LEFT + " h 5"
+      steps = "m -" + moveWidth + ",0 h 5 " + this.sourceBlock_.getSvgRenderer().notchPathLeft + " h 5"
     }
   }
   var xy = this.sourceBlock_.getRelativeToSurfaceXY();
@@ -13536,7 +13538,7 @@ Blockly.BlockSvgFunctional.prototype.renderDrawRightInlineFunctional_ = function
   var notchStart = BS.NOTCH_WIDTH - BS.NOTCH_PATH_WIDTH;
   renderInfo.inline.push("M", inputTopLeft.x + "," + inputTopLeft.y);
   renderInfo.inline.push("h", notchStart);
-  renderInfo.inline.push(BS.NOTCH_PATH_LEFT);
+  renderInfo.inline.push(this.notchPathLeft);
   renderInfo.inline.push("H", inputTopLeft.x + input.renderWidth);
   renderInfo.inline.push("v", input.renderHeight);
   renderInfo.inline.push("H", inputTopLeft.x);
@@ -15330,6 +15332,9 @@ Blockly.Block.prototype.setVisible = function(visible) {
     throw"Uninitialized block cannot set visibility.  Call block.initSvg()";
   }
   this.svg_.setVisible(visible)
+};
+Blockly.Block.prototype.getSvgRenderer = function() {
+  return this.svg_
 };
 goog.provide("Blockly.Flyout");
 goog.require("Blockly.Block");
@@ -22795,6 +22800,9 @@ Blockly.BlockSpaceEditor.prototype.bumpOrDeleteOutOfBoundsBlocks_ = function() {
     return
   }
   var metrics = this.blockSpace.getMetrics();
+  if(!metrics) {
+    return
+  }
   var oneOrMoreBlocksOutOfBounds = metrics.contentTop < 0 || (metrics.contentTop + metrics.contentHeight > metrics.viewHeight + metrics.viewTop || (metrics.contentLeft < (Blockly.RTL ? metrics.viewLeft : 0) || metrics.contentLeft + metrics.contentWidth > metrics.viewWidth + (Blockly.RTL ? 2 : 1) * metrics.viewLeft));
   if(!oneOrMoreBlocksOutOfBounds) {
     return
