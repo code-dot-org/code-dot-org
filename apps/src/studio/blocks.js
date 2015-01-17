@@ -1625,19 +1625,26 @@ exports.install = function(blockly, blockInstallOptions) {
 
   blockly.Blocks.functional_start_setValue = {
     init: function() {
-      var blockName = 'start (value)';
+      // TODO (brent) - localize
+      var blockName = 'start (rocket-height function)';
       var blockType = 'none';
-      var blockArgs = [{name: 'VALUE', type: 'Number'}];
+      var blockArgs = [{name: 'VALUE', type: 'function'}];
       initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
     }
   };
 
   generator.functional_start_setValue = function() {
+    var childBlock = this.childBlocks_[0];
+    // TODO (brent) - right behavior if no child?
+    // should i assert that this is functional_call?
+
     // Adapted from Blockly.JavaScript.variables_set.
-    var argument0 = Blockly.JavaScript.statementToCode(this, 'VALUE',
-        Blockly.JavaScript.ORDER_ASSIGNMENT) || '0';
+    var funcName = Blockly.JavaScript.variableDB_.getName(
+      childBlock.getTitleValue('NAME'), Blockly.Procedures.NAME_TYPE);
+
+    // TODO (brent) do we need a way to generically call passed functions
     var varName = Blockly.JavaScript.translateVarName('startValue');
-    return varName + ' = ' + argument0 + ';\n';
+    return varName + ' = Globals.' + funcName + "(Globals.time_elapsed())" + ';\n';
   };
 
   installFunctionalApiCallBlock(blockly, generator, {
