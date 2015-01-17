@@ -18,7 +18,7 @@ var FeedbackUtils = function (studioApp) {
 module.exports = FeedbackUtils;
 
 /* globals Blockly: true */
-var BlockLinter = require('./BlockLinter');
+var BlockStaticAnalyzer = require('./BlockStaticAnalyzer');
 var trophy = require('./templates/trophy.html');
 var _ = require('./utils').getLodash();
 var codegen = require('./codegen');
@@ -62,9 +62,9 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   }
   var feedbackBlocks;
   if (this.studioApp_.isUsingBlockly()) {
-    var blockLinter = new BlockLinter(Blockly);
-    blockLinter.setRequiredBlocks(requiredBlocks);
-    var missingBlocks = blockLinter.getMissingRequiredBlocks(
+    var blockStaticAnalyzer = new BlockStaticAnalyzer(Blockly);
+    blockStaticAnalyzer.setRequiredBlocks(requiredBlocks);
+    var missingBlocks = blockStaticAnalyzer.getMissingRequiredBlocks(
         maxRequiredBlocksToFlag);
     feedbackBlocks = new FeedbackBlocks(options, missingBlocks,
         this.studioApp_);
@@ -273,8 +273,8 @@ FeedbackUtils.prototype.getNumBlocksUsed = function() {
     }
     return codeLines;
   }
-  var blockLinter = new BlockLinter(Blockly);
-  return blockLinter.getUserBlocks().length;
+  var blockStaticAnalyzer = new BlockStaticAnalyzer(Blockly);
+  return blockStaticAnalyzer.getUserBlocks().length;
 };
 
 /**
@@ -295,8 +295,8 @@ FeedbackUtils.prototype.getNumCountableBlocks = function() {
     }
     return codeLines;
   }
-  var blockLinter = new BlockLinter(Blockly);
-  return blockLinter.getCountableBlocks().length;
+  var blockStaticAnalyzer = new BlockStaticAnalyzer(Blockly);
+  return blockStaticAnalyzer.getCountableBlocks().length;
 };
 
 /**
@@ -795,12 +795,12 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
   }
 
   // If we get this far, we assume that Blockly is being used.
-  var blockLinter = new BlockLinter(Blockly);
-  blockLinter.setShouldCheckForEmptyBlocks(shouldCheckForEmptyBlocks);
-  blockLinter.setAllowExtraTopBlocks(options.allowTopBlocks);
-  blockLinter.setIdealBlockCount(this.studioApp_.IDEAL_BLOCK_NUM);
-  blockLinter.setRequiredBlocks(requiredBlocks);
-  return blockLinter.runStaticAnalysis(levelComplete);
+  var blockStaticAnalyzer = new BlockStaticAnalyzer(Blockly);
+  blockStaticAnalyzer.setShouldCheckForEmptyBlocks(shouldCheckForEmptyBlocks);
+  blockStaticAnalyzer.setAllowExtraTopBlocks(options.allowTopBlocks);
+  blockStaticAnalyzer.setIdealBlockCount(this.studioApp_.IDEAL_BLOCK_NUM);
+  blockStaticAnalyzer.setRequiredBlocks(requiredBlocks);
+  return blockStaticAnalyzer.runStaticAnalysis(levelComplete);
 };
 
 /**

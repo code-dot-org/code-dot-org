@@ -2,11 +2,9 @@ var wrench = require('wrench');
 var testUtils = require('./util/testUtils');
 var assert = testUtils.assert;
 var canvas = require('canvas');
-var BlockLinter = testUtils.requireWithGlobalsCheckBuildFolder('BlockLinter');
+var BlockStaticAnalyzer = testUtils.requireWithGlobalsCheckBuildFolder('BlockStaticAnalyzer');
 
-// TODO (bbuchanan) : This no longer houses tests for feedback.js, but for
-// BlockLinter.js instead.  Rename the file!
-// Some of our feedback tests need to use Image
+// Some of our tests need to use Image
 global.Image = canvas.Image;
 global.Turtle = {};
 
@@ -20,14 +18,14 @@ testUtils.setupLocales();
 describe("runStaticAnalysis", function () {
   var studioApp;
   var TestResults;
-  var blockLinter;
+  var blockStaticAnalyzer;
 
   // create our environment
   beforeEach(function () {
     testUtils.setupTestBlockly();
     studioApp = testUtils.getStudioAppSingleton();
     TestResults = studioApp.TestResults;
-    blockLinter = new BlockLinter(Blockly);
+    blockStaticAnalyzer = new BlockStaticAnalyzer(Blockly);
   });
 
   var checkResultForBlocks = function (args) {
@@ -40,13 +38,13 @@ describe("runStaticAnalysis", function () {
     assert(!args.blockXml || loaded, "either we didnt have  input xml" +
         "or we did, and we loaded something");
 
-    assert.equal(args.result, blockLinter.runStaticAnalysis(true));
+    assert.equal(args.result, blockStaticAnalyzer.runStaticAnalysis(true));
   };
 
   describe("when detecting empty container blocks", function () {
     beforeEach(function () {
-      blockLinter.setShouldCheckForEmptyBlocks(true);
-      blockLinter.setAllowExtraTopBlocks(true);
+      blockStaticAnalyzer.setShouldCheckForEmptyBlocks(true);
+      blockStaticAnalyzer.setAllowExtraTopBlocks(true);
     });
 
     it("returns ALL_PASS when no blocks are present", function () {
@@ -183,9 +181,9 @@ describe("getMissingRequiredBlocks tests", function () {
     assert(!options.userBlockXml || loaded, "either we didnt have  input xml" +
       "or we did, and we loaded something");
 
-    var blockLinter = new BlockLinter(Blockly);
-    blockLinter.setRequiredBlocks(options.requiredBlocks);
-    var missing = blockLinter.getMissingRequiredBlocks(options.numToFlag);
+    var blockStaticAnalyzer = new BlockStaticAnalyzer(Blockly);
+    blockStaticAnalyzer.setRequiredBlocks(options.requiredBlocks);
+    var missing = blockStaticAnalyzer.getMissingRequiredBlocks(options.numToFlag);
     validateMissingRequiredBlocks(missing.blocksToDisplay, options.expectedResult);
   }
 

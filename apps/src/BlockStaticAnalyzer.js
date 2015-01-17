@@ -7,7 +7,7 @@ nonew: true,
 shadow: false,
 unused: true,
 
-maxlen: 80,
+maxlen: 90,
 maxparams: 3,
 maxstatements: 200
 */
@@ -18,13 +18,13 @@ var constants = require('./constants');
 var TestResults = constants.TestResults;
 
 /**
- * @class BlockLinter
+ * @class BlockStaticAnalyzer
  *
  * Answers questions about a user's solution within a particular blockSpace
  *
  * @param {Blockly} blockly The blockly instance being examined
  */
-var BlockLinter = function ( blockly ) {
+var BlockStaticAnalyzer = function ( blockly ) {
   this.blockly_ = blockly;
 
   /**
@@ -51,7 +51,7 @@ var BlockLinter = function ( blockly ) {
    */
   this.requiredBlocks_ = [];
 };
-module.exports = BlockLinter;
+module.exports = BlockStaticAnalyzer;
 
 /**
 * Get blocks that the user intends in the program. These are the blocks that
@@ -59,7 +59,7 @@ module.exports = BlockLinter;
 * written.
 * @return {Array<Object>} The blocks.
 */
-BlockLinter.prototype.getUserBlocks = function() {
+BlockStaticAnalyzer.prototype.getUserBlocks = function() {
   var allBlocks = this.blockly_.mainBlockSpace.getAllBlocks();
   var blocks = allBlocks.filter(function(block) {
     return !block.disabled && block.isEditable() && block.type !== 'when_run';
@@ -73,7 +73,7 @@ BlockLinter.prototype.getUserBlocks = function() {
 * block count.
 * @return {Array<Object>} The blocks.
 */
-BlockLinter.prototype.getCountableBlocks = function() {
+BlockStaticAnalyzer.prototype.getCountableBlocks = function() {
   var allBlocks = this.blockly_.mainBlockSpace.getAllBlocks();
   var blocks = allBlocks.filter(function(block) {
     return !block.disabled;
@@ -85,7 +85,7 @@ BlockLinter.prototype.getCountableBlocks = function() {
 * Get an empty container block, if any are present.
 * @return {Blockly.Block} an empty container block, or null if none exist.
 */
-BlockLinter.prototype.getEmptyContainerBlock_ = function() {
+BlockStaticAnalyzer.prototype.getEmptyContainerBlock_ = function() {
   var blocks = this.blockly_.mainBlockSpace.getAllBlocks();
   for (var i = 0; i < blocks.length; i++) {
     var block = blocks[i];
@@ -105,7 +105,7 @@ BlockLinter.prototype.getEmptyContainerBlock_ = function() {
  * function block?
  * @return {boolean}
  */
-BlockLinter.prototype.hasExtraTopBlocks = function () {
+BlockStaticAnalyzer.prototype.hasExtraTopBlocks = function () {
   var topBlocks = this.blockly_.mainBlockSpace.getTopBlocks();
   for (var i = 0; i < topBlocks.length; i++) {
     // ignore disabled top blocks. we have a level turtle:2_7 that depends on
@@ -129,7 +129,7 @@ BlockLinter.prototype.hasExtraTopBlocks = function () {
  * Check for '???' instead of a value in block fields.
  * @return {boolean}
  */
-BlockLinter.prototype.hasQuestionMarksInNumberField_ = function () {
+BlockStaticAnalyzer.prototype.hasQuestionMarksInNumberField_ = function () {
   return this.blockly_.mainBlockSpace.getAllBlocks().some(function(block) {
     return block.getTitles().some(function(title) {
       return title.text_ === '???';
@@ -142,13 +142,13 @@ BlockLinter.prototype.hasQuestionMarksInNumberField_ = function () {
  * inside the procedure.
  * @return {boolean}
  */
-BlockLinter.prototype.hasUnusedParam_ = function () {
+BlockStaticAnalyzer.prototype.hasUnusedParam_ = function () {
   return this.blockly_.mainBlockSpace.getAllBlocks().some(function(userBlock) {
     var params = userBlock.parameterNames_;
     // Only search procedure definitions
     return params && params.some(function(paramName) {
       // Unused param if there's no parameters_get descendant with the same name
-      return !BlockLinter.hasMatchingDescendant_(userBlock, function(block) {
+      return !BlockStaticAnalyzer.hasMatchingDescendant_(userBlock, function(block) {
         return (block.type === 'parameters_get' ||
         block.type === 'functional_parameters_get' ||
         block.type === 'variables_get') &&
@@ -162,7 +162,7 @@ BlockLinter.prototype.hasUnusedParam_ = function () {
  * Ensure that all procedure calls have each parameter input connected.
  * @return {boolean}
  */
-BlockLinter.prototype.hasParamInputUnattached_ = function () {
+BlockStaticAnalyzer.prototype.hasParamInputUnattached_ = function () {
   return this.blockly_.mainBlockSpace.getAllBlocks().some(function(userBlock) {
     // Only check procedure_call* blocks
     if (!/^procedures_call/.test(userBlock.type)) {
@@ -181,7 +181,7 @@ BlockLinter.prototype.hasParamInputUnattached_ = function () {
  * Ensure that all user-declared procedures have associated call blocks.
  * @return {boolean}
  */
-BlockLinter.prototype.hasUnusedFunction_ = function () {
+BlockStaticAnalyzer.prototype.hasUnusedFunction_ = function () {
   var userDefs = [];
   var callBlocks = {};
   this.blockly_.mainBlockSpace.getAllBlocks().forEach(function (block) {
@@ -200,14 +200,14 @@ BlockLinter.prototype.hasUnusedFunction_ = function () {
  * Ensure there are no incomplete blocks inside any function definitions.
  * @return {boolean}
  */
-BlockLinter.prototype.hasIncompleteBlockInFunction_ = function () {
+BlockStaticAnalyzer.prototype.hasIncompleteBlockInFunction_ = function () {
   var self = this;
   return this.blockly_.mainBlockSpace.getAllBlocks().some(function(userBlock) {
     // Only search procedure definitions
     if (!userBlock.parameterNames_) {
       return false;
     }
-    return BlockLinter.hasMatchingDescendant_(userBlock, function(block) {
+    return BlockStaticAnalyzer.hasMatchingDescendant_(userBlock, function(block) {
       // Incomplete block if any input connection target is null
       return block.inputList.some(function(input) {
         return input.type === self.blockly_.INPUT_VALUE &&
@@ -225,12 +225,12 @@ BlockLinter.prototype.hasIncompleteBlockInFunction_ = function () {
  * @return {boolean}
  * @static
  */
-BlockLinter.hasMatchingDescendant_ = function (node, filter) {
+BlockStaticAnalyzer.hasMatchingDescendant_ = function (node, filter) {
   if (filter(node)) {
     return true;
   }
   return node.childBlocks_.some(function (child) {
-    return BlockLinter.hasMatchingDescendant_(child, filter);
+    return BlockStaticAnalyzer.hasMatchingDescendant_(child, filter);
   });
 };
 
@@ -243,7 +243,7 @@ BlockLinter.hasMatchingDescendant_ = function (node, filter) {
  *   prefix of an id in the corresponding template.soy. 'message' is an
  *   optional message to override the default error text.
  */
-BlockLinter.prototype.getMissingRequiredBlocks = function (maxBlocksToFlag) {
+BlockStaticAnalyzer.prototype.getMissingRequiredBlocks = function (maxBlocksToFlag) {
   var missingBlocks = [];
   var customMessage = null;
   var code = null;  // JavaScript code, which is initialized lazily.
@@ -297,7 +297,7 @@ BlockLinter.prototype.getMissingRequiredBlocks = function (maxBlocksToFlag) {
  * Check whether the user code has all the blocks required for the level.
  * @return {boolean} true if all blocks are present, false otherwise.
  */
-BlockLinter.prototype.hasAllRequiredBlocks_ = function() {
+BlockStaticAnalyzer.prototype.hasAllRequiredBlocks_ = function() {
   // It's okay (maybe faster) to pass 1 for maxBlocksToFlag, since in the end
   // we want to check that there are zero blocks missing.
   var maxBlocksToFlag = 1;
@@ -308,14 +308,14 @@ BlockLinter.prototype.hasAllRequiredBlocks_ = function() {
 /**
  * Enables empty block failures during static analysis check.
  */
-BlockLinter.prototype.setShouldCheckForEmptyBlocks = function (isCheckEnabled) {
+BlockStaticAnalyzer.prototype.setShouldCheckForEmptyBlocks = function (isCheckEnabled) {
   this.isCheckForEmptyBlocksEnabled_ = isCheckEnabled;
 };
 
 /**
  * Disables extra top-level block failures during static analysis check.
  */
-BlockLinter.prototype.setAllowExtraTopBlocks = function (areExtrasAllowed) {
+BlockStaticAnalyzer.prototype.setAllowExtraTopBlocks = function (areExtrasAllowed) {
   this.areExtraTopBlocksAllowed_ = areExtrasAllowed;
 };
 
@@ -323,7 +323,7 @@ BlockLinter.prototype.setAllowExtraTopBlocks = function (areExtrasAllowed) {
  * @param {number} idealBlockCount - The number of 'countable' blocks used in
  *   an ideal solution to the current level.
  */
-BlockLinter.prototype.setIdealBlockCount = function (idealBlockCount) {
+BlockStaticAnalyzer.prototype.setIdealBlockCount = function (idealBlockCount) {
   this.idealBlockCount_ = idealBlockCount;
 };
 
@@ -331,7 +331,7 @@ BlockLinter.prototype.setIdealBlockCount = function (idealBlockCount) {
  * @param {!Array} requiredBlocks The blocks that are required to be used in
  *   the solution to this level.
  */
-BlockLinter.prototype.setRequiredBlocks = function (requiredBlocks) {
+BlockStaticAnalyzer.prototype.setRequiredBlocks = function (requiredBlocks) {
   if (requiredBlocks && Array === requiredBlocks.constructor) {
     this.requiredBlocks_ = requiredBlocks;
   } else {
@@ -345,8 +345,8 @@ BlockLinter.prototype.setRequiredBlocks = function (requiredBlocks) {
  * @return {number} The appropriate TestResults error code, or ALL_PASS if
  *   no static analysis errors are found.
  */
-BlockLinter.prototype.runStaticAnalysis = function (isLevelComplete) {
-  // TODO (bbuchanan) : There should be UI tests around every one of these
+BlockStaticAnalyzer.prototype.runStaticAnalysis = function (isLevelComplete) {
+  // TODO (bbuchanan) : There should be tests around every one of these
   //   failure types!
   if (this.isCheckForEmptyBlocksEnabled_) {
     var emptyBlock = this.getEmptyContainerBlock_();
