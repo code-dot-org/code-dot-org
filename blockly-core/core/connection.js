@@ -390,12 +390,11 @@ Blockly.Connection.prototype.highlight = function() {
             tabWidth + ',-2.5 ' + tabWidth + ',7.5 v 5';
   } else {
     var moveWidth = 5 + Blockly.BlockSvg.NOTCH_PATH_WIDTH;
+    var notchPaths = this.sourceBlock_.getSvgRenderer().getNotchPaths(this);
     if (Blockly.RTL) {
-      steps = 'm ' + moveWidth + ',0 h -5 ' +
-        this.sourceBlock_.getSvgRenderer().notchPathRight + ' h -5';
+      steps = 'm ' + moveWidth + ',0 h -5 ' + notchPaths.right + ' h -5';
     } else {
-      steps = 'm -' + moveWidth + ',0 h 5 ' +
-          this.sourceBlock_.getSvgRenderer().notchPathLeft + ' h 5';
+      steps = 'm -' + moveWidth + ',0 h 5 ' + notchPaths.left + ' h 5';
     }
   }
   var xy = this.sourceBlock_.getRelativeToSurfaceXY();

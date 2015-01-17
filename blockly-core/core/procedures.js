@@ -247,7 +247,7 @@ Blockly.Procedures.createCallerBlock = function(blockSpace, procedureDefinitionI
 
 Blockly.Procedures.createFunctionPassingBlock = function (blockSpace, procedureDefinitionInfo) {
   var block = new Blockly.Block(blockSpace, procedureDefinitionInfo.passType);
-  block.setTitleValue('(' + procedureDefinitionInfo.name + ')', 'NAME');
+  block.setTitleValue(procedureDefinitionInfo.name, 'NAME');
   block.initSvg();
   return block;
 };
