@@ -63,7 +63,8 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   var feedbackBlocks;
   if (this.studioApp_.isUsingBlockly()) {
     var blockLinter = new BlockLinter(Blockly);
-    var missingBlocks = blockLinter.getMissingRequiredBlocks(requiredBlocks,
+    blockLinter.setRequiredBlocks(requiredBlocks);
+    var missingBlocks = blockLinter.getMissingRequiredBlocks(
         maxRequiredBlocksToFlag);
     feedbackBlocks = new FeedbackBlocks(options, missingBlocks,
         this.studioApp_);

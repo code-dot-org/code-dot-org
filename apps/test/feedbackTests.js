@@ -17,16 +17,17 @@ testUtils.setupLocales();
  * checkForEmptyContainerBlockFailure and validates
  * that the result matches the expected result.
  */
-describe("checkForEmptyContainerBlockFailure", function () {
+describe("runStaticAnalysis", function () {
   var studioApp;
   var TestResults;
+  var blockLinter;
 
   // create our environment
   beforeEach(function () {
     testUtils.setupTestBlockly();
     studioApp = testUtils.getStudioAppSingleton();
     TestResults = studioApp.TestResults;
-
+    blockLinter = new BlockLinter(Blockly);
   });
 
   var checkResultForBlocks = function (args) {
@@ -39,73 +40,79 @@ describe("checkForEmptyContainerBlockFailure", function () {
     assert(!args.blockXml || loaded, "either we didnt have  input xml" +
         "or we did, and we loaded something");
 
-    var blockLinter = new BlockLinter(Blockly);
-    assert.equal(args.result, blockLinter.checkForEmptyContainerBlockFailure());
+    assert.equal(args.result, blockLinter.runStaticAnalysis(true));
   };
 
-  it("returns ALL_PASS when no blocks are present", function () {
-    checkResultForBlocks({
-      result: TestResults.ALL_PASS,
-      blockXml: ''
+  describe("when detecting empty container blocks", function () {
+    beforeEach(function () {
+      blockLinter.setShouldCheckForEmptyBlocks(true);
+      blockLinter.setAllowExtraTopBlocks(true);
     });
-  });
 
-  it ("returns ALL_PASS when no container blocks are present", function () {
-    checkResultForBlocks({
-      result: TestResults.ALL_PASS,
-      blockXml: '<xml><block type="text_print"></block></xml>'
+    it("returns ALL_PASS when no blocks are present", function () {
+      checkResultForBlocks({
+        result: TestResults.ALL_PASS,
+        blockXml: ''
+      });
     });
-  });
 
-  it ("returns EMPTY_BLOCK_FAIL when an empty contianer block is present", function () {
-    checkResultForBlocks({
-      result: TestResults.EMPTY_BLOCK_FAIL,
-      blockXml: '<xml>' +
-                  '<block type="controls_repeat">' +
-                    '<title name="TIMES">4</title>' +
-                  '</block>' +
-                '</xml>'
+    it ("returns ALL_PASS when no container blocks are present", function () {
+      checkResultForBlocks({
+        result: TestResults.ALL_PASS,
+        blockXml: '<xml><block type="text_print"></block></xml>'
+      });
     });
-  });
 
-  it ("returns ALL_PASS when all container blocks are filled", function () {
-    checkResultForBlocks({
-      result: TestResults.ALL_PASS,
-      blockXml: '<xml>' +
-                  '<block type="controls_repeat">' +
-                    '<title name="TIMES">4</title>' +
-                    '<statement name="DO">' +
-                      '<block type="text_print"></block>' +
-                    '</statement>' +
-                  '</block>' +
-                '</xml>'
+    it ("returns EMPTY_BLOCK_FAIL when an empty contianer block is present", function () {
+      checkResultForBlocks({
+        result: TestResults.EMPTY_BLOCK_FAIL,
+        blockXml: '<xml>' +
+                    '<block type="controls_repeat">' +
+                      '<title name="TIMES">4</title>' +
+                    '</block>' +
+                  '</xml>'
+      });
     });
-  });
 
-  it ("returns EMPTY_FUNCTION_BLOCK_FAIL when an empty function block is present", function () {
-    checkResultForBlocks({
-      result: TestResults.EMPTY_FUNCTION_BLOCK_FAIL,
-      blockXml: '<xml>' +
-                  '<block type="procedures_defnoreturn">' +
-                    '<mutation/>' +
-                    '<title name="NAME">do something</title>' +
-                  '</block>' +
-                '</xml>'
+    it ("returns ALL_PASS when all container blocks are filled", function () {
+      checkResultForBlocks({
+        result: TestResults.ALL_PASS,
+        blockXml: '<xml>' +
+                    '<block type="controls_repeat">' +
+                      '<title name="TIMES">4</title>' +
+                      '<statement name="DO">' +
+                        '<block type="text_print"></block>' +
+                      '</statement>' +
+                    '</block>' +
+                  '</xml>'
+      });
     });
-  });
 
-  it ("returns ALL_PASS when all function blocks are filled", function () {
-    checkResultForBlocks({
-      result: TestResults.ALL_PASS,
-      blockXml: '<xml>' +
-                  '<block type="procedures_defnoreturn">' +
-                    '<mutation/>' +
-                    '<title name="NAME">do something</title>' +
-                    '<statement name="STACK">' +
-                      '<block type="text_print"></block>' +
-                    '</statement>' +
-                  '</block>' +
-                '</xml>'
+    it ("returns EMPTY_FUNCTION_BLOCK_FAIL when an empty function block is present", function () {
+      checkResultForBlocks({
+        result: TestResults.EMPTY_FUNCTION_BLOCK_FAIL,
+        blockXml: '<xml>' +
+                    '<block type="procedures_defnoreturn">' +
+                      '<mutation/>' +
+                      '<title name="NAME">do something</title>' +
+                    '</block>' +
+                  '</xml>'
+      });
+    });
+
+    it ("returns ALL_PASS when all function blocks are filled", function () {
+      checkResultForBlocks({
+        result: TestResults.ALL_PASS,
+        blockXml: '<xml>' +
+                    '<block type="procedures_defnoreturn">' +
+                      '<mutation/>' +
+                      '<title name="NAME">do something</title>' +
+                      '<statement name="STACK">' +
+                        '<block type="text_print"></block>' +
+                      '</statement>' +
+                    '</block>' +
+                  '</xml>'
+      });
     });
   });
 });
@@ -177,8 +184,8 @@ describe("getMissingRequiredBlocks tests", function () {
       "or we did, and we loaded something");
 
     var blockLinter = new BlockLinter(Blockly);
-    var missing = blockLinter.getMissingRequiredBlocks(
-        options.requiredBlocks, options.numToFlag);
+    blockLinter.setRequiredBlocks(options.requiredBlocks);
+    var missing = blockLinter.getMissingRequiredBlocks(options.numToFlag);
     validateMissingRequiredBlocks(missing.blocksToDisplay, options.expectedResult);
   }
 

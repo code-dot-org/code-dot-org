@@ -236,8 +236,6 @@ BlockLinter.hasMatchingDescendant_ = function (node, filter) {
 
 /**
  * Check to see if the user's code contains the required blocks for a level.
- * @param {!Array} requiredBlocks The blocks that are required to be used in
- *   the solution to this level.
  * @param {number} maxBlocksToFlag The maximum number of blocks to return.
  * @return {{blocksToDisplay:!Array, message:?string}} 'missingBlocks' is an
  *   array of array of strings where each array of strings is a set of blocks
@@ -245,20 +243,19 @@ BlockLinter.hasMatchingDescendant_ = function (node, filter) {
  *   prefix of an id in the corresponding template.soy. 'message' is an
  *   optional message to override the default error text.
  */
-BlockLinter.prototype.getMissingRequiredBlocks = function (requiredBlocks,
-    maxBlocksToFlag) {
+BlockLinter.prototype.getMissingRequiredBlocks = function (maxBlocksToFlag) {
   var missingBlocks = [];
   var customMessage = null;
   var code = null;  // JavaScript code, which is initialized lazily.
-  if (requiredBlocks && requiredBlocks.length) {
+  if (this.requiredBlocks_.length) {
     var userBlocks = this.getUserBlocks();
     // For each list of required blocks
     // Keep track of the number of the missing block lists. It should not be
     // bigger than the maxBlocksToFlag param.
     var missingBlockNum = 0;
-    for (var i = 0; i < requiredBlocks.length &&
+    for (var i = 0; i < this.requiredBlocks_.length &&
         missingBlockNum < maxBlocksToFlag; i++) {
-      var requiredBlock = requiredBlocks[i];
+      var requiredBlock = this.requiredBlocks_[i];
       // For each of the test
       // If at least one of the tests succeeded, we consider the required block
       // is used
@@ -286,7 +283,7 @@ BlockLinter.prototype.getMissingRequiredBlocks = function (requiredBlocks,
       }
       if (!usedRequiredBlock) {
         missingBlockNum++;
-        missingBlocks = missingBlocks.concat(requiredBlocks[i][0]);
+        missingBlocks = missingBlocks.concat(this.requiredBlocks_[i][0]);
       }
     }
   }
@@ -298,16 +295,14 @@ BlockLinter.prototype.getMissingRequiredBlocks = function (requiredBlocks,
 
 /**
  * Check whether the user code has all the blocks required for the level.
- * @param {!Array} requiredBlocks The blocks that are required to be used in
- *   the solution to this level.
  * @return {boolean} true if all blocks are present, false otherwise.
  */
 BlockLinter.prototype.hasAllRequiredBlocks_ = function() {
   // It's okay (maybe faster) to pass 1 for maxBlocksToFlag, since in the end
   // we want to check that there are zero blocks missing.
   var maxBlocksToFlag = 1;
-  return this.getMissingRequiredBlocks(this.requiredBlocks_,
-      maxBlocksToFlag).blocksToDisplay.length === 0;
+  var missingBlocksInfo = this.getMissingRequiredBlocks(maxBlocksToFlag);
+  return missingBlocksInfo.blocksToDisplay.length === 0;
 };
 
 /**
@@ -337,7 +332,11 @@ BlockLinter.prototype.setIdealBlockCount = function (idealBlockCount) {
  *   the solution to this level.
  */
 BlockLinter.prototype.setRequiredBlocks = function (requiredBlocks) {
-  this.requiredBlocks_ = requiredBlocks;
+  if (requiredBlocks && Array === requiredBlocks.constructor) {
+    this.requiredBlocks_ = requiredBlocks;
+  } else {
+    throw new Error("setRequiredBlocks only accepts Array arguments.");
+  }
 };
 
 /**
@@ -353,7 +352,8 @@ BlockLinter.prototype.runStaticAnalysis = function (isLevelComplete) {
     var emptyBlock = this.getEmptyContainerBlock_();
     if (emptyBlock) {
       var type = emptyBlock.type;
-      if (type === 'procedures_defnoreturn' || type === 'procedures_defreturn') {
+      if (type === 'procedures_defnoreturn' ||
+          type === 'procedures_defreturn') {
         return TestResults.EMPTY_FUNCTION_BLOCK_FAIL;
       }
 
