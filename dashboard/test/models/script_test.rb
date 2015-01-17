@@ -201,12 +201,9 @@ class ScriptTest < ActiveSupport::TestCase
     end
   end
 
-  test 'get_script_level_by_stage_and_position raises RecordNotFound instead of NoMethodError when not found' do
+  test 'get_script_level_by_stage_and_position returns nil when not found' do
     artist = Script.find_by_name('artist')
-#    assert_raises(ActiveRecord::RecordNotFound) do
-      # no stage 11 in artist
-      artist.get_script_level_by_stage_and_position(11, 1)
-#    end
+    assert artist.get_script_level_by_stage_and_position(11, 1).nil?
   end
 
   test 'gets script cache from redis (or fake redis)' do
