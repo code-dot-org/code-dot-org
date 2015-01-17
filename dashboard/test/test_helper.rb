@@ -131,6 +131,14 @@ class ActionController::TestCase
     request.env['cdo.locale'] = 'en-US'
   end
 
+  # override default html document to ask it to raise errors on invalid html
+  def html_document
+    strict = true
+    xml = (@response.content_type =~ /xml$/)
+
+    @html_document ||= HTML::Document.new(@response.body, strict, xml)
+  end
+
   def assert_redirected_to_sign_in
     assert_response :redirect
     assert_redirected_to "http://test.host/users/sign_in"
