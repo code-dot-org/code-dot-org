@@ -1078,6 +1078,7 @@ Studio.init = function(config) {
   // Disable "show code" button in feedback dialog when workspace is hidden
   config.enableShowCode = !config.level.embed && studioApp.editCode;
   config.varsInGlobals = true;
+  config.generateFunctionPassBlocks = !!config.level.generateFunctionPassBlocks;
 
   Studio.initSprites();
 
