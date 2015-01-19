@@ -1216,8 +1216,8 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     editBlocks: config.level.edit_blocks === undefined ?
         false : config.level.edit_blocks
   };
-  ['trashcan', 'varsInGlobals',
-    'grayOutUndeletableBlocks', 'disableParamEditing'].forEach(
+  ['trashcan', 'varsInGlobals', 'grayOutUndeletableBlocks',
+    'disableParamEditing', 'generateFunctionPassBlocks'].forEach(
     function (prop) {
       if (config[prop] !== undefined) {
         options[prop] = config[prop];
