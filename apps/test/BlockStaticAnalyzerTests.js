@@ -11,11 +11,6 @@ global.Turtle = {};
 
 testUtils.setupLocales();
 
-/**
- * Loads blocks into the workspace, then calls
- * checkForEmptyContainerBlockFailure and validates
- * that the result matches the expected result.
- */
 describe("runStaticAnalysis", function () {
   var studioApp;
   var TestResults;
@@ -31,6 +26,11 @@ describe("runStaticAnalysis", function () {
     blockStaticAnalyzer = new BlockStaticAnalyzer(Blockly);
   });
 
+  /**
+   * Loads blocks into the workspace, then calls
+   * runStaticAnalysis and validates
+   * that the result matches the expected result.
+   */
   var checkResultForBlocks = function (args) {
     studioApp.loadBlocks(args.blockXml);
 
