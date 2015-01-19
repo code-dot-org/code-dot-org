@@ -296,7 +296,7 @@ class ReportsControllerTest < ActionController::TestCase
 
     assert_response :success
 
-    assert_equal "I can't find that user", css('.container .alert-danger')[0].text.strip
+    assert_select '.container .alert-danger', 'User not found'
   end
 
   test "should not assume_identity if not admin" do
@@ -315,13 +315,13 @@ class ReportsControllerTest < ActionController::TestCase
 
   test "should lookup_section" do
     post :lookup_section, {:section_code => @teacher_section.code}
-    assert_equal 'Owner: ' + @teacher.email, css('#section_owner')[0].text.strip
+    assert_select '#section_owner', 'Owner: ' + @teacher.email
   end
 
   test "should lookup_section error if not found" do
     post :lookup_section, {:section_code => 'ZZZZ'}
     assert_response :success
-    assert_equal 'Section code not found', css('.container .alert-danger')[0].text.strip
+    assert_select '.container .alert-danger', 'Section code not found'
   end
 
   test "should not lookup_section if not admin" do

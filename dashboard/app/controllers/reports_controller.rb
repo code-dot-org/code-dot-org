@@ -186,7 +186,7 @@ SQL
       sign_in user, :bypass => true
       redirect_to '/'
     else
-      flash[:alert] = "I can't find that user"
+      flash[:alert] = 'User not found'
       render :assume_identity_form
     end
   end
