@@ -7,6 +7,7 @@ class AppsApi < Sinatra::Base
   helpers do
     [
       'core.rb',
+      'storage_apps.rb',
       'storage_id.rb',
       'property_bag.rb',
       'table.rb',
@@ -24,7 +25,87 @@ class AppsApi < Sinatra::Base
       })
     end
   end
+  
+  #
+  #
+  # APPS
+  #
+  #
+  
+  #
+  # GET /v3/apps
+  #
+  # Returns all of the apps registered to the current user
+  #
+  get '/v3/apps' do
+    dont_cache
+    content_type :json
+    StorageApps.new(storage_id('user')).to_a.to_json
+  end
 
+  #
+  # POST /v3/apps
+  #
+  # Create an app.
+  #
+  post '/v3/apps' do
+    unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
+    unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
+
+    id = StorageApps.new(storage_id('user')).create(JSON.load(request.body.read), request.ip)
+
+    redirect "/v3/apps/#{id}", 301
+  end
+  
+  #
+  # GET /v3/apps/<app-id>
+  #
+  # Returns an app by id.
+  #
+  get %r{/v3/apps/([^/]+)$} do |id|
+    dont_cache
+    content_type :json
+    StorageApps.new(storage_id('user')).get(id).to_json
+  end
+
+  #
+  # DELETE /v3/apps/<app-id>
+  #
+  # Deletes an app by id.
+  #
+  delete %r{/v3/apps/([^/]+)$} do |id|
+    dont_cache
+    StorageApps.new(storage_id('user')).delete(id)
+    no_content
+  end
+  post %r{/v3/apps/([^/]+)/delete$} do |name|
+    call(env.merge('REQUEST_METHOD'=>'DELETE', 'PATH_INFO'=>File.dirname(request.path_info)))
+  end
+
+  #
+  # POST /v3/apps/<app-id>
+  #
+  # Update an existing app.
+  #
+  post %r{/v3/apps/([^/]+)$} do |id|
+    unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
+    unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
+
+    value = JSON.load(request.body.read)
+
+    StorageApps.new(storage_id('user')).update(id, value, request.ip)
+
+    dont_cache
+    content_type :json
+    value.to_json
+  end
+  patch %r{/v3/apps/([^/]+)$} do |id|
+    call(env.merge('REQUEST_METHOD'=>'POST'))
+  end
+  put %r{/v3/apps/([^/]+)$} do |id|
+    call(env.merge('REQUEST_METHOD'=>'PATCH'))
+  end
+  
   #
   #
   # PROPERTIES
@@ -36,7 +117,7 @@ class AppsApi < Sinatra::Base
   #
   # Returns all of the properties in the bag
   #
-  get %r{/v3/apps/(\d+)/(shared|user)-properties$} do |app_id, endpoint|
+  get %r{/v3/apps/([^/]+)/(shared|user)-properties$} do |app_id, endpoint|
     dont_cache
     content_type :json
     PropertyBag.new(app_id, storage_id(endpoint)).to_hash.to_json
@@ -47,7 +128,7 @@ class AppsApi < Sinatra::Base
   #
   # Returns a single value by name.
   #
-  get %r{/v3/apps/(\d+)/(shared|user)-properties/([^/]+)$} do |app_id, endpoint, name|
+  get %r{/v3/apps/([^/]+)/(shared|user)-properties/([^/]+)$} do |app_id, endpoint, name|
     dont_cache
     content_type :json
     PropertyBag.new(app_id, storage_id(endpoint)).get(name).to_json
@@ -58,7 +139,7 @@ class AppsApi < Sinatra::Base
   #
   # Deletes a value by name.
   #
-  delete %r{/v3/apps/(\d+)/(shared|user)-properties/([^/]+)$} do |app_id, endpoint, name|
+  delete %r{/v3/apps/([^/]+)/(shared|user)-properties/([^/]+)$} do |app_id, endpoint, name|
     dont_cache
     PropertyBag.new(app_id, storage_id(endpoint)).delete(name)
     no_content
@@ -69,7 +150,7 @@ class AppsApi < Sinatra::Base
   #
   # This mapping exists for older browsers that don't support the DELETE verb.
   #
-  post %r{/v3/apps/(\d+)/(shared|user)-properties/([^/]+)/delete$} do |app_id, endpoint, name|
+  post %r{/v3/apps/([^/]+)/(shared|user)-properties/([^/]+)/delete$} do |app_id, endpoint, name|
     call(env.merge('REQUEST_METHOD'=>'DELETE', 'PATH_INFO'=>File.dirname(request.path_info)))
   end
 
@@ -78,7 +159,7 @@ class AppsApi < Sinatra::Base
   #
   # Set a value by name.
   #
-  post %r{/v3/apps/(\d+)/(shared|user)-properties/([^/]+)$} do |app_id, endpoint, name|
+  post %r{/v3/apps/([^/]+)/(shared|user)-properties/([^/]+)$} do |app_id, endpoint, name|
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
@@ -95,10 +176,10 @@ class AppsApi < Sinatra::Base
   # to differentiate between create and update so we map all three verbs to "create or update"
   # behavior via the POST handler.
   #
-  patch %r{/v3/apps/(\d+)/(shared|user)-properties/([^/]+)$} do |app_id, endpoint, name|
+  patch %r{/v3/apps/([^/]+)/(shared|user)-properties/([^/]+)$} do |app_id, endpoint, name|
     call(env.merge('REQUEST_METHOD'=>'POST'))
   end
-  put %r{/v3/apps/(\d+)/(shared|user)-properties/([^/]+)$} do |app_id, endpoint, name|
+  put %r{/v3/apps/([^/]+)/(shared|user)-properties/([^/]+)$} do |app_id, endpoint, name|
     call(env.merge('REQUEST_METHOD'=>'POST'))
   end
 
@@ -113,7 +194,7 @@ class AppsApi < Sinatra::Base
   #
   # Returns all of the rows in the table.
   #
-  get %r{/v3/apps/(\d+)/(shared|user)-tables/([^/]+)$} do |app_id, endpoint, table_name|
+  get %r{/v3/apps/([^/]+)/(shared|user)-tables/([^/]+)$} do |app_id, endpoint, table_name|
     dont_cache
     content_type :json
     Table.new(app_id, storage_id(endpoint), table_name).to_a.to_json
@@ -124,7 +205,7 @@ class AppsApi < Sinatra::Base
   #
   # Returns a single row by id.
   #
-  get %r{/v3/apps/(\d+)/(shared|user)-tables/([^/]+)/(\d+)$} do |app_id, endpoint, table_name, id|
+  get %r{/v3/apps/([^/]+)/(shared|user)-tables/([^/]+)/(\d+)$} do |app_id, endpoint, table_name, id|
     dont_cache
     content_type :json
     Table.new(app_id, storage_id(endpoint), table_name).fetch(id).to_json
@@ -135,7 +216,7 @@ class AppsApi < Sinatra::Base
   #
   # Deletes a row by id.
   #
-  delete %r{/v3/apps/(\d+)/(shared|user)-tables/([^/]+)/(\d+)$} do |app_id, endpoint, table_name, id|
+  delete %r{/v3/apps/([^/]+)/(shared|user)-tables/([^/]+)/(\d+)$} do |app_id, endpoint, table_name, id|
     dont_cache
     Table.new(app_id, storage_id(endpoint), table_name).delete(id)
     no_content
@@ -146,7 +227,7 @@ class AppsApi < Sinatra::Base
   #
   # This mapping exists for older browsers that don't support the DELETE verb.
   #
-  post %r{/v3/apps/(\d+)/(shared|user)-tables/([^/]+)/(\d+)/delete$} do |app_id, endpoint, table_name, id|
+  post %r{/v3/apps/([^/]+)/(shared|user)-tables/([^/]+)/(\d+)/delete$} do |app_id, endpoint, table_name, id|
     call(env.merge('REQUEST_METHOD'=>'DELETE', 'PATH_INFO'=>File.dirname(request.path_info)))
   end
 
@@ -155,7 +236,7 @@ class AppsApi < Sinatra::Base
   #
   # Insert a new row.
   #
-  post %r{/v3/apps/(\d+)/(shared|user)-tables/([^/]+)$} do |app_id, endpoint, table_name|
+  post %r{/v3/apps/([^/]+)/(shared|user)-tables/([^/]+)$} do |app_id, endpoint, table_name|
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
@@ -172,7 +253,7 @@ class AppsApi < Sinatra::Base
   #
   # Update an existing row.
   #
-  post %r{/v3/apps/(\d+)/(shared|user)-tables/([^/]+)/(\d+)$} do |app_id, endpoint, table_name, id|
+  post %r{/v3/apps/([^/]+)/(shared|user)-tables/([^/]+)/(\d+)$} do |app_id, endpoint, table_name, id|
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
@@ -182,10 +263,10 @@ class AppsApi < Sinatra::Base
     content_type :json
     value.to_json
   end
-  patch %r{/v3/apps/(\d+)/(shared|user)-tables/([^/]+)/(\d+)$} do |app_id, endpoint, table_name, id|
+  patch %r{/v3/apps/([^/]+)/(shared|user)-tables/([^/]+)/(\d+)$} do |app_id, endpoint, table_name, id|
     call(env.merge('REQUEST_METHOD'=>'POST'))
   end
-  put %r{/v3/apps/(\d+)/(shared|user)-tables/([^/]+)/(\d+)$} do |app_id, endpoint, table_name, id|
+  put %r{/v3/apps/([^/]+)/(shared|user)-tables/([^/]+)/(\d+)$} do |app_id, endpoint, table_name, id|
     call(env.merge('REQUEST_METHOD'=>'POST'))
   end
 
