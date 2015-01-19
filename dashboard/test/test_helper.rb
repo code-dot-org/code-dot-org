@@ -77,10 +77,10 @@ class ActiveSupport::TestCase
 
   def with_default_locale(locale)
     original_locale = I18n.default_locale
-    I18n.default_locale = locale
+    request.env['cdo.locale'] = I18n.default_locale = locale
     yield
   ensure
-    I18n.default_locale = original_locale
+    request.env['cdo.locale'] = I18n.default_locale = original_locale
   end
 
   # Based on assert_difference http://api.rubyonrails.org/classes/ActiveSupport/Testing/Assertions.html#method-i-assert_difference
@@ -127,6 +127,18 @@ end
 class ActionController::TestCase
   include Devise::TestHelpers
 
+  setup do
+    request.env['cdo.locale'] = 'en-US'
+  end
+
+  # override default html document to ask it to raise errors on invalid html
+  def html_document
+    strict = true
+    xml = (@response.content_type =~ /xml$/)
+
+    @html_document ||= HTML::Document.new(@response.body, strict, xml)
+  end
+
   def assert_redirected_to_sign_in
     assert_response :redirect
     assert_redirected_to "http://test.host/users/sign_in"
@@ -166,4 +178,3 @@ class ActionController::TestCase
     end
   end
 end
-

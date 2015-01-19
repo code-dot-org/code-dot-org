@@ -109,4 +109,15 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
     assert_equal script_level_after, script_level_unplugged.next_level
   end
+
+  test 'end of stage' do
+    script = Script.find_by_name('course1')
+
+    assert script.stages[0].script_levels.last.end_of_stage?
+    assert script.stages[1].script_levels.last.end_of_stage?
+    assert script.stages[2].script_levels.last.end_of_stage?
+    assert script.stages[3].script_levels.last.end_of_stage?
+    assert !script.stages[3].script_levels.first.end_of_stage?
+    assert !script.stages[3].script_levels[1].end_of_stage?
+  end
 end

@@ -33,6 +33,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal @script_level, assigns(:script_level)
   end
 
+
+
   test 'should show video in twenty hour script level' do
     get :show, script_id: Script::TWENTY_HOUR_ID, id: @script_level.id
     assert_response :success
@@ -509,6 +511,30 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test 'report bug link for course4' do
     get :show, script_id: 'course4', stage_id: 1, id: 1
     assert_select 'a[href*="https://support.code.org/hc/en-us/requests/new"]'
+  end
+
+  test "should 404 for invalid script level for twenty hour" do
+    assert_raises(ActiveRecord::RecordNotFound) do # renders a 404 in prod
+      get :show, script_id: Script::TWENTY_HOUR_ID, id: 40000
+    end
+  end
+
+  test "should 404 for invalid chapter for flappy" do
+    assert_raises(ActiveRecord::RecordNotFound) do # renders a 404 in prod
+      get :show, script_id: 'flappy', chapter: 40000
+    end
+  end
+
+  test "should 404 for invalid stage for course1" do
+    assert_raises(ActiveRecord::RecordNotFound) do # renders a 404 in prod
+      get :show, script_id: 'course1', stage_id: 4000, id: 1
+    end
+  end
+
+  test "should 404 for invalid script id for course1" do
+    assert_raises(ActiveRecord::RecordNotFound) do # renders a 404 in prod
+      get :show, script_id: 'course1', stage_id: 1, id: 4000
+    end
   end
 
 end
