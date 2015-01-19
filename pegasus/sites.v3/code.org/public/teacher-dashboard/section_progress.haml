@@ -45,6 +45,8 @@ theme: none
     .studentdot {
       position: absolute;
       left: 0px;
+      padding-top: 4px;
+      padding-bottom: 4px;
 
       -webkit-transition: left 2s; /* For Safari 3.1 to 6.0 */
       transition: left 2s;
@@ -171,18 +173,18 @@ theme: none
   %tr.progressheader  
     %td.studentname
     %td
-      .stage{"ng-repeat" => "stage in progress.script.stages", style: "width: {{progress.bar_width * stage.length}}px", title: '{{stage.title}}'}
+      .stage{"ng-repeat" => "stage in progress.script.stages", 'ng-style' => "{width: (progress.bar_width * stage.length) + 'px'}", title: '{{stage.title}}'}
         {{stage.title}}
   %tr.studentrow{"ng-repeat" => "student in section.students | orderBy:order"}
     %td.studentname
       %a{"ng-href" => "#/sections/{{section.id}}/student/{{student.id}}", title: '{{student.name}}'} {{student.name}}
     %td.studentzone
-      .stage{"ng-repeat" => "stage in progress.script.stages", style: "width: {{progress.bar_width * stage.length}}px"}
+      .stage{"ng-repeat" => "stage in progress.script.stages", 'ng-style' => "{width: (progress.bar_width * stage.length) + 'px'}"}
         &nbsp;    
-      .studentbar{id: "studentbar_{{student.id}}"}
-        .bar{'ng-repeat' => 'level in student.levels track by $index', title: '{{level.title}}', class: '{{level.class}}', style: 'width: {{progress.bar_width}}px'}
+      .studentbar
+        .bar{'ng-repeat' => 'level in student.levels track by $index', title: '{{level.title}}', class: '{{level.class}}', 'ng-style' => "{width: progress.bar_width + 'px'}"}
           &nbsp;
-      .studentdot{style: "left: {{progress.bar_width * (student.highest_level + 0.5)}}px; padding-top:4px; padding-bottom:4px", id: "studentdot_{{student.id}}"}
+      .studentdot{'ng-style' => "{left: (progress.bar_width * (student.highest_level + 0.5)) + 'px'}"}
         .dot{class: '{{student.levels[student.highest_level].class}}'}
           {{student.highest_level_in_stage}}
  
