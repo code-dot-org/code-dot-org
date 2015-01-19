@@ -18170,7 +18170,7 @@ Blockly.Toolbox.prototype.getRect = function() {
   var BIG_NUM = 1E7;
   var left = -BIG_NUM;
   if(Blockly.RTL) {
-    var svgSize = Blockly.svgSize();
+    var svgSize = Blockly.mainBlockSpaceEditor.svgSize();
     left = svgSize.width - this.width
   }
   return new goog.math.Rect(left, -BIG_NUM, BIG_NUM + this.width, 2 * BIG_NUM)
