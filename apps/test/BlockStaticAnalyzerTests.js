@@ -3,6 +3,7 @@ var testUtils = require('./util/testUtils');
 var assert = testUtils.assert;
 var canvas = require('canvas');
 var BlockStaticAnalyzer = testUtils.requireWithGlobalsCheckBuildFolder('BlockStaticAnalyzer');
+var blocksCommon = testUtils.requireWithGlobalsCheckBuildFolder('blocksCommon');
 
 // Some of our tests need to use Image
 global.Image = canvas.Image;
@@ -23,6 +24,8 @@ describe("runStaticAnalysis", function () {
   // create our environment
   beforeEach(function () {
     testUtils.setupTestBlockly();
+    blocksCommon.install(Blockly, {});
+
     studioApp = testUtils.getStudioAppSingleton();
     TestResults = studioApp.TestResults;
     blockStaticAnalyzer = new BlockStaticAnalyzer(Blockly);
@@ -108,6 +111,90 @@ describe("runStaticAnalysis", function () {
                       '<statement name="STACK">' +
                         '<block type="text_print"></block>' +
                       '</statement>' +
+                    '</block>' +
+                  '</xml>'
+      });
+    });
+  });
+
+  describe("when detecting extra top blocks", function () {
+    beforeEach(function () {
+      blockStaticAnalyzer.setShouldCheckForEmptyBlocks(false);
+      blockStaticAnalyzer.setAllowExtraTopBlocks(false);
+    });
+
+    it("returns ALL_PASS when no blocks are present", function () {
+      checkResultForBlocks({
+        result: TestResults.ALL_PASS,
+        blockXml: ''
+      });
+    });
+
+    it ("returns ALL_PASS when only a when_run block is present", function () {
+      checkResultForBlocks({
+        result: TestResults.ALL_PASS,
+        blockXml: '<xml><block type="when_run"></block></xml>'
+      });
+    });
+
+    it ("returns ALL_PASS when all blocks are connected to when_run", function () {
+      checkResultForBlocks({
+        result: TestResults.ALL_PASS,
+        blockXml: '<xml>' +
+                    '<block type="when_run">' +
+                      '<next>' +
+                        '<block type="variables_set" inline="false">' +
+                          '<title name="VAR">i</title>' +
+                        '</block>' +
+                      '</next>' +
+                    '</block>' +
+                  '</xml>'
+      });
+    });
+
+    it ("returns EXTRA_TOP_BLOCKS_FAIL when extra top blocks are present", function () {
+      checkResultForBlocks({
+        result: TestResults.EXTRA_TOP_BLOCKS_FAIL,
+        blockXml: '<xml>' +
+                    '<block type="when_run"></block>' +
+                    '<block type="variables_set" inline="false">' +
+                      '<title name="VAR">i</title>' +
+                    '</block>' +
+                  '</xml>'
+      });
+    });
+
+    it ("returns ALL_PASS when extra top blocks are all entry point blocks", function () {
+      checkResultForBlocks({
+        result: TestResults.ALL_PASS,
+        blockXml: '<xml>' +
+                    '<block type="when_run"></block>' +
+                    '<block type="when_run"></block>' +
+                    '<block type="when_run"></block>' +
+                  '</xml>'
+      });
+    });
+
+    it ("returns ALL_PASS when extra top blocks are function definitions", function () {
+      checkResultForBlocks({
+        result: TestResults.ALL_PASS,
+        blockXml: '<xml>' +
+                    '<block type="when_run"></block>' +
+                    '<block type="procedures_defnoreturn">' +
+                      '<mutation/>' +
+                      '<title name="NAME">do something</title>' +
+                    '</block>' +
+                  '</xml>'
+      });
+    });
+
+    it ("returns ALL_PASS when extra top blocks are disabled", function () {
+      checkResultForBlocks({
+        result: TestResults.ALL_PASS,
+        blockXml: '<xml>' +
+                    '<block type="when_run"></block>' +
+                    '<block type="variables_set" inline="false" disabled="true">' +
+                      '<title name="VAR">i</title>' +
                     '</block>' +
                   '</xml>'
       });
