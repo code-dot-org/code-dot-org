@@ -41,6 +41,7 @@
     "node-sass": "~0.6.2",
     "grunt-lodash": "~0.3.0",
     "lodash": "~2.4.1",
-    "lodash-cli": "~2.4.2"
+    "lodash-cli": "~2.4.2",
+    "requirejs": "~2.1.15"
   }
 }

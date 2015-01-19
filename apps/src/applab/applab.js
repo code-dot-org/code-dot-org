@@ -472,28 +472,30 @@ Applab.init = function(config) {
       Blockly.HSV_SATURATION = 0.6;
 
       Blockly.SNAP_RADIUS *= Applab.scale.snapRadius;
-    } else {
-      // Set up an event handler to create breakpoints when clicking in the
-      // ace gutter:
-      var aceEditor = studioApp.editor.aceEditor;
-      if (aceEditor) {
-        aceEditor.on("guttermousedown", function(e) {
-          var target = e.domEvent.target;
-          if (target.className.indexOf("ace_gutter-cell") == -1) {
-            return;
-          }
-          var row = e.getDocumentPosition().row;
-          var bps = e.editor.session.getBreakpoints();
-          if (bps[row]) {
-            e.editor.session.clearBreakpoint(row);
-          } else {
-            e.editor.session.setBreakpoint(row);
-          }
-          e.stop();
-        });
-      }
     }
     drawDiv();
+  };
+
+  config.afterEditorReady = function() {
+    // Set up an event handler to create breakpoints when clicking in the
+    // ace gutter:
+    var aceEditor = studioApp.editor.aceEditor;
+    if (aceEditor) {
+      aceEditor.on("guttermousedown", function(e) {
+        var target = e.domEvent.target;
+        if (target.className.indexOf("ace_gutter-cell") == -1) {
+          return;
+        }
+        var row = e.getDocumentPosition().row;
+        var bps = e.editor.session.getBreakpoints();
+        if (bps[row]) {
+          e.editor.session.clearBreakpoint(row);
+        } else {
+          e.editor.session.setBreakpoint(row);
+        }
+        e.stop();
+      });
+    }
   };
 
   // arrangeStartBlocks(config);

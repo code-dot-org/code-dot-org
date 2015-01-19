@@ -54,7 +54,7 @@
       console.log('Attempt!');
       console.log(report);
       if (report.onComplete) {
-        report.onComplete();
+        setTimeout(report.onComplete, 0);
       }
     };
     appOptions.onContinue = function () {

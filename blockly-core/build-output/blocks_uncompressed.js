@@ -1318,7 +1318,7 @@ Blockly.Blocks.functional_definition = {init:function() {
   }
   Blockly.Block.prototype.dispose.apply(this, arguments)
 }, getProcedureInfo:function() {
-  return{name:this.getTitleValue("NAME"), type:this.type, callType:this.callType_, parameterNames:this.parameterNames_, parameterTypes:this.parameterTypes_, isFunctionalVariable:this.isFunctionalVariable_}
+  return{name:this.getTitleValue("NAME"), type:this.type, callType:this.callType_, passType:this.passType_, parameterNames:this.parameterNames_, parameterTypes:this.parameterTypes_, isFunctionalVariable:this.isFunctionalVariable_}
 }, getVars:function() {
   return this.parameterNames_
 }, renameVar:function(a, b) {
@@ -1333,7 +1333,7 @@ Blockly.Blocks.functional_definition = {init:function() {
 }, removeVar:function(a) {
   a = this.parameterNames_.indexOf(a);
   -1 < a && (this.parameterNames_.splice(a, 1), this.updateParams_())
-}, callType_:"functional_call"};
+}, callType_:"functional_call", passType_:"functional_pass"};
 Blockly.Blocks.functional_call = {init:function() {
   this.setHelpUrl(Blockly.Msg.PROCEDURES_CALLNORETURN_HELPURL);
   this.setTooltip("Calls a user-defined function");
@@ -1418,6 +1418,32 @@ Blockly.Blocks.functional_call = {init:function() {
   for(var c = 0;c < this.currentParameterNames_.length;c++) {
     Blockly.Names.equals(a, this.currentParameterNames_[c]) && (this.currentParameterNames_[c] = b, this.getInput("ARG" + c).titleRow[0].setText(b))
   }
+}};
+Blockly.Blocks.functional_pass = {init:function() {
+  this.setHelpUrl(Blockly.Msg.PROCEDURES_CALLNORETURN_HELPURL);
+  this.setTooltip("Pass a user-defined function");
+  this.setHSV(94, 0.84, 0.6);
+  var a = this.appendDummyInput().appendTitle(new Blockly.FieldLabel("Pass Function", {fixedSize:{height:35}}), "NAME").appendTitle("", "PARAM_TEXT");
+  if(Blockly.useContractEditor && this.blockSpace !== Blockly.modalBlockSpace) {
+    var b = new Blockly.FieldIcon(Blockly.Msg.FUNCTION_EDIT);
+    Blockly.bindEvent_(b.fieldGroup_, "mousedown", this, this.openEditor);
+    a.appendTitle(b);
+    this.editLabel_ = b
+  }
+  this.setFunctional(!0);
+  this.changeFunctionalOutput("function")
+}, openEditor:function() {
+  Blockly.functionEditor.openAndEditFunction(this.getTitleValue("NAME"))
+}, renameProcedure:function(a, b) {
+  Blockly.Names.equals(a, this.getTitleValue("NAME")) && this.setTitleValue(b, "NAME")
+}, mutationToDom:function() {
+  var a = document.createElement("mutation");
+  a.setAttribute("name", this.getTitleValue("NAME"));
+  return a
+}, domToMutation:function(a) {
+  a = a.getAttribute("name");
+  this.setTitleValue(a, "NAME");
+  this.setTooltip((this.outputConnection ? Blockly.Msg.PROCEDURES_CALLRETURN_TOOLTIP : Blockly.Msg.PROCEDURES_CALLNORETURN_TOOLTIP).replace("%1", a))
 }};
 Blockly.Blocks.procedural_to_functional_call = Blockly.Blocks.procedures_callreturn;
 Blockly.Blocks.functionalExamples = {};
