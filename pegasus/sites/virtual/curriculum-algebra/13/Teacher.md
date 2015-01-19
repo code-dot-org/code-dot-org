@@ -44,7 +44,7 @@ Booleans are the fourth and final data type that students will learn about in th
 ## Materials, Resources and Prep
 
 ### For the Teacher
-- [Lesson Slide Deck](https://docs.google.com/a/code.org/presentation/d/1pKZEo764Rrr39fVnOJkjSFRRbqA_cq_vTCxP0dpbAy4/)
+- [Lesson Slide Deck](https://docs.google.com/a/code.org/presentation/d/1lUA5nx8ILAPwjAEl70Hw0ADGflzOtX1L2pIXtNU2B0U/)
 
 ### For the Students
 - 3x5 cards, pens or pencils
