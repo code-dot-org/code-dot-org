@@ -38,17 +38,8 @@ Tell your friends about the #HourOfCode.
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-<% if @country == 'us' %>
-
 ## 2. Ask your whole school to offer an Hour of Code
 <a href="<%= hoc_uri('/resources#email') %>">Send this email</a> or <a href="/resources/hoc-one-pager.pdf">this handout</a> to your principal.
-
-<% else %>
-
-## 2. Ask your whole school to offer an Hour of Code
-<a href="<%= hoc_uri('/resources#email') %>">Send this email</a> or give <a href="/resources/hoc-one-pager.pdf">this handout</a> this handout</a> to your principal. 
-
-<% end %>
 
 ## 3. Make a generous donation
 <a href="http://<%= codeorg_url() %>/donate">Donate to our crowdfunding campaign.</a> To teach 100 million children, we need your support. We just launched the <a href="http://<%= codeorg_url() %>/donate">largest education crowdfunding campaign</a> in history. *Every* dollar will be matched <a href="http://<%= codeorg_url() %>/about/donors">donors</a>, doubling your impact. 

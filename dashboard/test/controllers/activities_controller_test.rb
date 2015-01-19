@@ -981,7 +981,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     response = JSON.parse(@response.body)
 
     # find localized test strings for custom stage names in script
-    assert(response.has_key?('stage_changing'))
+    assert response.has_key?('stage_changing'), "No key 'stage_changing' in response #{response.inspect}"
     assert_equal('milestone-stage-1', response['stage_changing']['previous']['name'])
   end
 
