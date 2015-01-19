@@ -1318,7 +1318,7 @@ Blockly.Blocks.functional_definition = {init:function() {
   }
   Blockly.Block.prototype.dispose.apply(this, arguments)
 }, getProcedureInfo:function() {
-  return{name:this.getTitleValue("NAME"), type:this.type, callType:this.callType_, passType:this.passType_, parameterNames:this.parameterNames_, parameterTypes:this.parameterTypes_, isFunctionalVariable:this.isFunctionalVariable_}
+  return{name:this.getTitleValue("NAME"), type:this.type, callType:this.callType_, parameterNames:this.parameterNames_, parameterTypes:this.parameterTypes_, isFunctionalVariable:this.isFunctionalVariable_}
 }, getVars:function() {
   return this.parameterNames_
 }, renameVar:function(a, b) {
@@ -1333,7 +1333,7 @@ Blockly.Blocks.functional_definition = {init:function() {
 }, removeVar:function(a) {
   a = this.parameterNames_.indexOf(a);
   -1 < a && (this.parameterNames_.splice(a, 1), this.updateParams_())
-}, callType_:"functional_call", passType_:"functional_pass"};
+}, callType_:"functional_call"};
 Blockly.Blocks.functional_call = {init:function() {
   this.setHelpUrl(Blockly.Msg.PROCEDURES_CALLNORETURN_HELPURL);
   this.setTooltip("Calls a user-defined function");
