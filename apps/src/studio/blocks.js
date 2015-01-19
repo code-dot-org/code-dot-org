@@ -1625,8 +1625,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
   blockly.Blocks.functional_start_setValue = {
     init: function() {
-      // TODO (brent) - localize
-      var blockName = 'start (rocket-height function)';
+      var blockName = msg.startSetValue();
       var blockType = 'none';
       var blockArgs = [{name: 'VALUE', type: 'function'}];
       initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
@@ -1634,29 +1633,16 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   generator.functional_start_setValue = function() {
-    var childBlock = this.childBlocks_[0];
-    // No child - noop
-    if (!childBlock) {
-      return '';
-    }
-
-    if (childBlock.type !== 'functional_pass') {
-      throw new Error('Should only be able to attach functions to this block');
-    }
-
-    // Adapted from Blockly.JavaScript.variables_set.
-    var funcName = Blockly.JavaScript.variableDB_.getName(
-      childBlock.getTitleValue('NAME'), Blockly.Procedures.NAME_TYPE);
-
-    // The primary purpose of this function is to generate a
-    // return 'Globals.' + funcName + "(Globals.time_elapsed())" + ';\n';
-    return '';
+    // For the current design, this doesn't need to generate any code.
+    // Though we pass in a function, we're not actually using that passed in
+    // function, and instead depend on a function of the required name existing
+    // in the global space. This may change in the future.
   };
 
   installFunctionalApiCallBlock(blockly, generator, {
     blockName: 'functional_start_dummyOnMove',
     blockTitle: 'on-move (on-screen)',
-    args: [{name: 'VAL', type: 'boolean', default: 'false'}]
+    args: [{name: 'VAL', type: 'function'}]
   });
 
   installFunctionalApiCallBlock(blockly, generator, {
