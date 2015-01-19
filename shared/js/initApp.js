@@ -1,6 +1,5 @@
 // Sets up default options and initializes blockly
 startTiming('Puzzle', script_path, '');
-var onInitializeListeners = [];
 var baseOptions = {
   containerId: 'blocklyApp',
   Dialog: Dialog,
@@ -8,9 +7,6 @@ var baseOptions = {
   position: { blockYCoordinateInterval: 25 },
   onInitialize: function() {
     this.createCallouts();
-    onInitializeListeners.forEach(function(listener) {
-      listener();
-    });
   },
   createCallouts: function() {
     $.fn.qtip.zindex = 500;
