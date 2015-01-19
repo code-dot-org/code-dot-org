@@ -218,11 +218,12 @@ Blockly.Procedures.flyoutCategory = function(blocks, gaps, margin, blockSpace, o
     blocks.push(newCallBlock);
     gaps.push(margin * 2);
 
-    // TODO (brent) - should probably be toggled based on something
-    var newPassBlock = Blockly.Procedures.createFunctionPassingBlock(blockSpace,
-      procedureDefinitionInfo);
-    blocks.push(newPassBlock);
-    gaps.push(margin * 2);
+    if (Blockly.generateFunctionPassBlocks) {
+      var newPassBlock = Blockly.Procedures.createFunctionPassingBlock(blockSpace,
+        procedureDefinitionInfo);
+      blocks.push(newPassBlock);
+      gaps.push(margin * 2);
+    }
   });
 };
 
@@ -246,7 +247,7 @@ Blockly.Procedures.createCallerBlock = function(blockSpace, procedureDefinitionI
 };
 
 Blockly.Procedures.createFunctionPassingBlock = function (blockSpace, procedureDefinitionInfo) {
-  var block = new Blockly.Block(blockSpace, procedureDefinitionInfo.passType);
+  var block = new Blockly.Block(blockSpace, 'functional_pass');
   block.setTitleValue(procedureDefinitionInfo.name, 'NAME');
   block.initSvg();
   return block;

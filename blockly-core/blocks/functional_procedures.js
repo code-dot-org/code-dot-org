@@ -181,9 +181,6 @@ Blockly.Blocks.functional_definition = {
       name: this.getTitleValue('NAME'),
       type: this.type,
       callType: this.callType_,
-      // TODO (brent) - does this need to be passed around, or will it
-      // always be functional_pass?
-      passType: this.passType_,
       parameterNames: this.parameterNames_,
       parameterTypes: this.parameterTypes_,
       isFunctionalVariable: this.isFunctionalVariable_
@@ -221,8 +218,7 @@ Blockly.Blocks.functional_definition = {
       this.updateParams_();
     }
   },
-  callType_: 'functional_call',
-  passType_: 'functional_pass'
+  callType_: 'functional_call'
 };
 
 /**
@@ -434,7 +430,6 @@ Blockly.Blocks.functional_pass = {
     // TODO(bjordan): localize / use user-defined description
     this.setTooltip("Pass a user-defined function");
 
-    // TODO(brent) - change color?
     this.setHSV(94, 0.84, 0.60);
 
     var options = {
@@ -459,7 +454,6 @@ Blockly.Blocks.functional_pass = {
   openEditor: function() {
     Blockly.functionEditor.openAndEditFunction(this.getTitleValue('NAME'));
   },
-  // TODO (brent): see where this is called from
   renameProcedure: function(oldName, newName) {
     if (Blockly.Names.equals(oldName, this.getTitleValue('NAME'))) {
       this.setTitleValue(newName, 'NAME');

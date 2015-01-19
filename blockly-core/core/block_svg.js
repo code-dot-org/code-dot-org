@@ -34,7 +34,7 @@ goog.require('goog.userAgent');
  */
 var INLINE_ROW = -1;
 
-// TODO (brent) - does this belong here on in connection?
+// TODO (brent) - does this belong here or in connection?
 
 /**
  * SVG paths for drawing next/previous notch from left to right, left to right
@@ -1319,7 +1319,6 @@ Blockly.BlockSvg.prototype.setVisible = function (visible) {
  * SVG path for drawing the top-left corner of a statement input.
  * Includes the top notch, a horizontal space, and the rounded inside corner.
  */
-// TODO (brent) - better approach
 Blockly.BlockSvg.prototype.innerTopLeftCorner = function (notchPathRight) {
   return notchPathRight + ' h -' +
       (BS.NOTCH_WIDTH - BS.NOTCH_PATH_WIDTH -
