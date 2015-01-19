@@ -34,6 +34,30 @@ goog.require('goog.userAgent');
  */
 var INLINE_ROW = -1;
 
+// TODO (brent) - does this belong here on in connection?
+
+/**
+ * SVG paths for drawing next/previous notch from left to right, left to right
+ * with highlighting, and right to left
+ */
+var ROUNDED_NOTCH = {
+  pathLeft: 'l 6,4 3,0 6,-4',
+  pathLeftHighlight: 'l 6.5,4 2,0 6.5,-4',
+  pathRight: 'l -6,4 -3,0 -6,-4'
+};
+
+var SQUARE_NOTCH = {
+  pathLeft: 'l 0,5 15,0 0,-5';
+  pathLeftHighlight: 'l 0,5 15,0 0,-5';
+  pathRight: 'l 0,5 -15,0 0,-5';
+};
+
+function notchPath(typeConstraint) {
+  if (typeConstraint === 'function') {
+    return SQUARE_NOTCH;
+  }
+  return ROUNDED_NOTCH;
+};
 
 /**
  * Class for a block's SVG representation.
@@ -41,26 +65,8 @@ var INLINE_ROW = -1;
  * @constructor
  */
 Blockly.BlockSvg = function(block) {
-  /**
-   * SVG path for drawing next/previous notch from left to right.
-   */
-  this.notchPathLeft = 'l 6,4 3,0 6,-4';
-  /**
-   * SVG path for drawing next/previous notch from left to right with
-   * highlighting.
-   */
-  this.notchPathLeftHighlight = 'l 6.5,4 2,0 6.5,-4';
-  /**
-   * SVG path for drawing next/previous notch from right to left.
-   */
-  this.notchPathRight = 'l -6,4 -3,0 -6,-4';
 
-  // TODO - flag instead of type
-  if (block.type === 'functional_pass') {
-    this.notchPathLeft = 'l 0,5 15,0 0,-5';
-    this.notchPathLeftHighlight = 'l 0,5 15,0 0,-5';
-    this.notchPathRight = 'l 0,5 -15,0 0,-5';
-  }
+  this.notchPathRight = ;
 
   this.block_ = block;
   var options = {

@@ -1163,6 +1163,11 @@ Blockly.BlockSvg = function(block) {
   this.notchPathLeft = "l 6,4 3,0 6,-4";
   this.notchPathLeftHighlight = "l 6.5,4 2,0 6.5,-4";
   this.notchPathRight = "l -6,4 -3,0 -6,-4";
+  if(block.type === "functional_pass") {
+    this.notchPathLeft = "l 0,5 15,0 0,-5";
+    this.notchPathLeftHighlight = "l 0,5 15,0 0,-5";
+    this.notchPathRight = "l 0,5 -15,0 0,-5"
+  }
   this.block_ = block;
   var options = {"block-id":block.id};
   if(block.htmlId) {
@@ -18170,7 +18175,7 @@ Blockly.Toolbox.prototype.getRect = function() {
   var BIG_NUM = 1E7;
   var left = -BIG_NUM;
   if(Blockly.RTL) {
-    var svgSize = Blockly.mainBlockSpaceEditor.svgSize();
+    var svgSize = Blockly.svgSize();
     left = svgSize.width - this.width
   }
   return new goog.math.Rect(left, -BIG_NUM, BIG_NUM + this.width, 2 * BIG_NUM)
@@ -18582,6 +18587,9 @@ Blockly.Procedures.flyoutCategory = function(blocks, gaps, margin, blockSpace, o
     }
     var newCallBlock = Blockly.Procedures.createCallerBlock(blockSpace, procedureDefinitionInfo);
     blocks.push(newCallBlock);
+    gaps.push(margin * 2);
+    var newPassBlock = Blockly.Procedures.createFunctionPassingBlock(blockSpace, procedureDefinitionInfo);
+    blocks.push(newPassBlock);
     gaps.push(margin * 2)
   })
 };
@@ -18598,6 +18606,12 @@ Blockly.Procedures.createCallerBlock = function(blockSpace, procedureDefinitionI
   newCallBlock.setProcedureParameters(procedureDefinitionInfo.parameterNames, tempIds, procedureDefinitionInfo.parameterTypes);
   newCallBlock.initSvg();
   return newCallBlock
+};
+Blockly.Procedures.createFunctionPassingBlock = function(blockSpace, procedureDefinitionInfo) {
+  var block = new Blockly.Block(blockSpace, procedureDefinitionInfo.passType);
+  block.setTitleValue("(" + procedureDefinitionInfo.name + ")", "NAME");
+  block.initSvg();
+  return block
 };
 Blockly.Procedures.getCallers = function(name, blockSpace) {
   return blockSpace.getAllBlocks().filter(function(block) {
