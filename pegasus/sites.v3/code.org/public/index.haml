@@ -43,7 +43,7 @@ social:
   -twitter = {:url=>"http://#{request.site}/", :related=>'codeorg', :hashtags=>'', :text=>I18n.t(:hoc_is_here)}
   -twitter[:hashtags] = 'HourOfCode' unless I18n.t(:hoc_is_here).include? '#HourOfCode'
 -else
-  -twitter = {:url=>"http://#{request.site}/", :related=>'codeorg', :hashtags=>'', :text=>"Why don't more schools teach computer science? We can fix this. @code.org"}
+  -twitter = {:url=>"http://#{request.site}/", :related=>'codeorg', :hashtags=>'', :text=>"Why don't more schools teach computer science? We can fix this. @codeorg"}
 
 %script{:src=>"/js/jquery.placeholder.js"}
 
