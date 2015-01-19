@@ -14,24 +14,20 @@ module.exports = {
     {
       description: "Verify solution",
       editCode: true,
-      timeout: 15000,
       expected: {
         result: true,
         testResult: TestResults.ALL_PASS
       },
-      // missingBlocks: [],
       xml: 'moveForward();moveForward();moveForward();'
     },
-/*
     {
       description: "Single move forward block",
+      editCode: true,
       expected: {
         result: false,
         testResult: TestResults.TOO_FEW_BLOCKS_FAIL
       },
-      missingBlocks: [],
       xml: 'moveForward();'
     }
-*/
   ]
 };
