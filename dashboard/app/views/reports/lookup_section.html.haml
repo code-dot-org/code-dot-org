@@ -10,5 +10,5 @@
 - if @section
   %p= "Section code: #{@section.code}"
   %p{id: 'section_owner'}= "Owner: #{@section.user.email}"
-  %a{href: CDO.code_org_url("http://code.org/teacher-dashboard#/sections/#{@section.id}")}
+  %a{href: CDO.code_org_url("/teacher-dashboard#/sections/#{@section.id}")}
     %p View this section
