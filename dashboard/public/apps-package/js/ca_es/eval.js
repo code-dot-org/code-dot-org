@@ -1275,9 +1275,13 @@ StudioApp.prototype.handleHideSource_ = function (options) {
 };
 
 StudioApp.prototype.handleEditCode_ = function (options) {
-  // using window.require forces us to use requirejs version of require
-  window.require(['droplet'], _.bind(function(droplet) {
+  requirejs(['droplet'], _.bind(function(droplet) {
     var displayMessage, examplePrograms, messageElement, onChange, startingText;
+
+    // Ensure global ace variable is the same as window.ace
+    // (important because they can be different in our test environment)
+    ace = window.ace;
+    
     this.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
       mode: 'javascript',
       modeOptions: utils.generateDropletModeOptions(options.codeFunctions),
@@ -1299,14 +1303,18 @@ StudioApp.prototype.handleEditCode_ = function (options) {
       enableLiveAutocompletion: true
     });
 
-    if (options.afterInject) {
-      options.afterInject();
-    }
-
     if (options.startBlocks) {
       this.editor.setValue(options.startBlocks);
     }
+
+    if (options.afterEditorReady) {
+      options.afterEditorReady();
+    }
   }, this));
+
+  if (options.afterInject) {
+    options.afterInject();
+  }
 };
 
 /**
@@ -1359,8 +1367,8 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     editBlocks: config.level.edit_blocks === undefined ?
         false : config.level.edit_blocks
   };
-  ['trashcan', 'varsInGlobals',
-    'grayOutUndeletableBlocks', 'disableParamEditing'].forEach(
+  ['trashcan', 'varsInGlobals', 'grayOutUndeletableBlocks',
+    'disableParamEditing', 'generateFunctionPassBlocks'].forEach(
     function (prop) {
       if (config[prop] !== undefined) {
         options[prop] = config[prop];
@@ -1477,7 +1485,14 @@ module.exports = function(app, levels, options) {
     } else {
       app.init(options);
       if (options.onInitialize) {
-        options.onInitialize();
+        if (studioApp.editCode) {
+          // for editCode levels, we have to delay the onInitialize callback
+          // until the droplet editor has loaded.
+          // TODO: build a proper state machine with onEditorReady() callback
+          setTimeout(options.onInitialize, 0);
+        } else {
+          options.onInitialize();
+        }
       }
     }
   });
