@@ -34,24 +34,6 @@ goog.require('goog.userAgent');
  */
 var INLINE_ROW = -1;
 
-// TODO (brent) - does this belong here or in connection?
-
-/**
- * SVG paths for drawing next/previous notch from left to right, left to right
- * with highlighting, and right to left
- */
-var ROUNDED_NOTCH_PATHS = {
-  left: 'l 6,4 3,0 6,-4',
-  leftHighlight: 'l 6.5,4 2,0 6.5,-4',
-  right: 'l -6,4 -3,0 -6,-4'
-};
-
-var SQUARE_NOTCH_PATHS = {
-  left: 'l 0,5 15,0 0,-5',
-  leftHighlight: 'l 0,5 15,0 0,-5',
-  right: 'l 0,5 -15,0 0,-5'
-};
-
 /**
  * Class for a block's SVG representation.
  * @param {!Blockly.Block} block The underlying block object.
@@ -927,7 +909,7 @@ Blockly.BlockSvg.prototype.renderDrawTop_ = function(renderInfo, rightEdge,
 
   // Top edge.
   if (this.block_.previousConnection) {
-    var notchPaths = this.getNotchPaths(this.block_.previousConnection);
+    var notchPaths = this.block_.previousConnection.getNotchPaths();
 
     renderInfo.core.push('H', BS.NOTCH_WIDTH - BS.NOTCH_PATH_WIDTH);
     renderInfo.highlight.push('H', BS.NOTCH_WIDTH - BS.NOTCH_PATH_WIDTH);
@@ -1094,7 +1076,7 @@ Blockly.BlockSvg.prototype.renderDrawRightNextStatement_ = function(renderInfo,
       titleX += (titleRightX + titleX) / 2;
     }
   }
-  var notchPaths = this.getNotchPaths(input.connection);
+  var notchPaths = input.connection.getNotchPaths();
   this.renderTitles_(input.titleRow, titleX, titleY);
   renderInfo.curX = inputRows.statementEdge + BS.NOTCH_WIDTH;
   renderInfo.core.push('H', renderInfo.curX);
@@ -1248,7 +1230,7 @@ Blockly.BlockSvg.prototype.renderDrawBottom_ = function(renderInfo, connectionsX
   renderInfo.core.push(brokenControlPointWorkaround());
 
   if (this.block_.nextConnection) {
-    var notchPaths = this.getNotchPaths(this.block_.nextConnection);
+    var notchPaths = this.block_.nextConnection.getNotchPaths();
     renderInfo.core.push('H', BS.NOTCH_WIDTH + ' ' + notchPaths.right);
     // Create next block connection.
     var connectionX = connectionsXY.x + oppositeIfRTL(BS.NOTCH_WIDTH);
@@ -1327,16 +1309,4 @@ Blockly.BlockSvg.prototype.innerTopLeftCorner = function (notchPathRight) {
       BS.CORNER_RADIUS + ' 0 0,0 -' +
       BS.CORNER_RADIUS + ',' +
       BS.CORNER_RADIUS;
-};
-
-/**
- *
- */
-Blockly.BlockSvg.prototype.getNotchPaths = function (connection) {
-  // TODO (brent) - accessing private
-  var constraints = connection && connection.check_ || [];
-  if (constraints.length === 1 && constraints[0] === 'function') {
-    return SQUARE_NOTCH_PATHS;
-  }
-  return ROUNDED_NOTCH_PATHS;
 };
