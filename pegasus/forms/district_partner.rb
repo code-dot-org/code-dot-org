@@ -93,6 +93,13 @@ require 'cdo/date'
   end
 
   def self.index(data)
+    # Strip everything but leading digits from school count fields.
+    leading_digits_regexp = /^(\d+)/
+    data['district_total_schools_i'] = leading_digits_regexp.match(data['district_total_schools_i'])[0]
+    data['district_high_schools_i'] = leading_digits_regexp.match(data['district_high_schools_i'])[0]
+    data['district_middle_schools_i'] = leading_digits_regexp.match(data['district_middle_schools_i'])[0]
+    data['district_elementary_schools_i'] = leading_digits_regexp.match(data['district_elementary_schools_i'])[0]
+
     data['district_school_year_start_date_dt'] = Chronic.parse(data['district_school_year_start_date_dt']).strftime('%FT%TZ')
     data['district_school_year_end_date_dt'] = Chronic.parse(data['district_school_year_end_date_dt']).strftime('%FT%TZ')
 
