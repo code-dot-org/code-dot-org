@@ -1,5 +1,6 @@
 // Sets up default options and initializes blockly
 startTiming('Puzzle', script_path, '');
+var onInitializeListeners = [];
 var baseOptions = {
   containerId: 'blocklyApp',
   Dialog: Dialog,
