@@ -14816,7 +14816,7 @@ exports.reinfFeedbackMsg = function(d){return "!!-You can press the \"Try again\
 
 exports.rotateImageBlockTitle = function(d){return "!!-rotate (degrees, image)-!!"};
 
-exports.scaleImageBlockTitle = function(d){return "!!-scale (factor)-!!"};
+exports.scaleImageBlockTitle = function(d){return "!!-scale (factor, image)-!!"};
 
 exports.squareBlockTitle = function(d){return "!!-square (size, style, color)-!!"};
 
