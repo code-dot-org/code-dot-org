@@ -1,5 +1,8 @@
--# Create level options object to pass to Blockly
-- app_options = blockly_options(local_assigns)
+-# TODO(JL): conditionally load on client
+- if browser.chrome? && browser.version.to_s.to_i == 34
+  %script{src: '/shared/js/chrome34Fix.js'}
+
+%div{style: 'display: none;'}= render partial: 'levels/reference_area'
 
 #blocklyApp
   .loading
@@ -8,34 +11,9 @@
     %br
     %a{href: 'javascript: location.reload();'}= t(:try_reloading)
 
-- content_for :body_scripts do
-  -# Common scripts and styles
-  - apps_path = app_options[:baseUrl]
-  -# If no param, take default
-  - pretty = params.fetch(:pretty, Rails.configuration.pretty_apps)
-  %link{href: "#{apps_path}css/common.css", rel: 'stylesheet', type: 'text/css'}
-  %link{href: "#{apps_path}css/#{@game.app}.css", rel: 'stylesheet', type: 'text/css'}
-
-  - if browser.chrome? && browser.version.to_s.to_i == 34
-    %script{src: '/shared/js/chrome34Fix.js'}
-
-  - if @game.uses_droplet?
-    %script{src: "#{apps_path}js/jsinterpreter/acorn_interpreter.js"}
-    %script{src: "#{apps_path}js/requirejs/require.js"}
-    %script{src: "#{apps_path}js/ace/ace.js"}
-    %script{src: "#{apps_path}js/ace/ext-language_tools.js"}
-    %script{src: "#{apps_path}js/droplet/droplet-full.min.js"}
-    %link{href: "#{apps_path}css/droplet/droplet.min.css", rel: 'stylesheet', type: 'text/css'}
-  - else
-    %script{src: "#{apps_path}js/#{js_locale}/vendor.js"}
-  %script{src: "#{apps_path}js/#{js_locale}/#{@game.app}#{pretty ? '' : '.min'}.js"}
-
-  %div{style: 'display: none;'}= render partial: 'levels/reference_area'
-
   :javascript
-    //<![CDATA[
     var script_path = "#{@script_level && build_script_level_path(@script_level)}";
-    var appOptions = #{app_options.to_json};
+    var appOptions = #{blockly_options(local_assigns).to_json};
     appOptions.locale = '#{js_locale}';
-    //]]>
+
   %script{src: '/shared/js/initApp.js'}
