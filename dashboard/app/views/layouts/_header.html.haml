@@ -13,12 +13,12 @@
         |
       = link_to t('landing.report_bug'), @script_level.report_bug_url(request), target: '_blank'
 
-  .navbar-static-top.header{class: ('hide_on_mobile' if true)}
+  .navbar-static-top.header{class: 'hide_on_mobile'}
     .container{style: (@full_width ? 'width: 880px;' : '')}
       .navbar-header
         .row.header_row
           .header_logo
-            = link_to(image_tag('codeorg-studio-logo.png'), '/', style: 'background-color: transparent;')
+            = link_to(image_tag('codeorg-studio-logo.png'), CDO.code_org_url('/'))
 
           .header_middle
             - if @script_level
@@ -28,94 +28,3 @@
           - if params[:controller] !~ /^sessions/
             .header_user
               = render partial: 'shared/user_header'
-
-
-.transparent_backdrop{style: 'display: none;'}
-- if @script_level
-  .header_popup{id: 'headerPopup'}
-    .header_popup_header
-      %span= t('nav.popup.progress')
-      - if current_user
-        .header_text{style: 'float: right;'}= t('nav.popup.lines', lines: current_user.total_lines)
-    .header_popup_body{id: 'headerPopupBody'}
-      .loading
-    .header_popup_footer
-      %div{id: 'popupClose', onclick: 'togglePopup();'}
-        = t('nav.popup.close')
-
-
-:javascript
-  handleUserMenuClick = function () {
-    $('.user_options').toggle();
-    if ($(".user_options").css('display') == 'none') {
-      $(".transparent_backdrop").off('click', handleUserMenuClick);
-      $(".transparent_backdrop").off('touchend', handleUserMenuClick);
-      $(".transparent_backdrop").toggle();
-    }
-    else {
-      $(".transparent_backdrop").on('click', handleUserMenuClick);
-      $(".transparent_backdrop").on('touchend', handleUserMenuClick);
-      $(".transparent_backdrop").toggle();
-    }
-    return false;
-  }
-  function isShowingPopup()
-  {
-    return $("#headerPopup").css('display') != 'none';
-  }
-  togglePopup = function () {
-    $("#headerPopup").toggle();
-    if (!isShowingPopup()) {
-      $(".header_popup_link_glyph").html("&#x25BC;");
-      $(".header_popup_link_text").html("#{t(:more)}");
-      $(".transparent_backdrop").off('click', handlePopupClick);
-      $(".transparent_backdrop").off('touchend', handlePopupClick);
-      $(".transparent_backdrop").toggle();
-    }
-    else {
-      $(".header_popup_link_glyph").html("&#x25B2;");
-      $(".header_popup_link_text").html("#{t(:less)}");
-      $(".transparent_backdrop").on('click', handlePopupClick);
-      $(".transparent_backdrop").on('touchend', handlePopupClick);
-      $(".transparent_backdrop").toggle();
-    }
-  }
-  var loadedPopup = false;
-  handlePopupClick = function (trophiesClicked) {
-    if (!loadedPopup) {
-      loadedPopup = true;
-      togglePopup();
-      var script_level_id = #{@script_level.try(:level_id).to_json};
-      $.ajax({url:'#{header_stats_path}', data: { script_id: #{@script.id}, script_level_id: script_level_id }, success:function(result) {
-          $("#headerPopupBody").html(result);
-          if (trophiesClicked === true) {
-            jumpToTrophies();
-          }
-        }
-      });
-    }
-    else {
-      togglePopup();
-      if (isShowingPopup() && trophiesClicked === true) {
-        jumpToTrophies();
-      }
-    }
-    return false;
-  }
-  function jumpToTrophies()
-  {
-    var top = $("#trophies").offset().top;
-    window.scrollTo(0, top);
-  }
-  switchLocale = function() {
-    $('#localeForm').submit();
-  }
-  $('.level_free_play').qtip({
-    content: {
-      attr: 'title'
-    },
-    position: {
-      my: 'top center',
-      at: 'bottom center'
-    }
-  });
