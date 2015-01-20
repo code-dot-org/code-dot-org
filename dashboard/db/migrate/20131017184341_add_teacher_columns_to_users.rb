@@ -12,6 +12,6 @@ class AddTeacherColumnsToUsers < ActiveRecord::Migration
 
     change_column(:activities, :data, :string, limit: 20000)
 
-    User.update_all({ user_type: User::TYPE_TEACHER }, "id in (select user_id from followers)")
+    User.with_deleted.update_all({ user_type: User::TYPE_TEACHER }, "id in (select user_id from followers)")
   end
 end
