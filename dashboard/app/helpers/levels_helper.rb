@@ -295,6 +295,8 @@ module LevelsHelper
           fallback_response: @fallback_response,
           callback: @callback,
       },
+      droplet: @game.try(:uses_droplet?),
+      pretty: Rails.configuration.pretty_apps ? '' : '.min',
     }
     app_options[:scriptId] = @script.id if @script
     app_options[:levelGameName] = @level.game.name if @level.game
