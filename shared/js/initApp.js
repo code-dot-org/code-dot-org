@@ -154,7 +154,7 @@ function initApp() {
 function loadSource(name) {
   return function () {
     var deferred = new $.Deferred();
-    document.head.appendChild($('<script>', {
+    document.body.appendChild($('<script>', {
       src: appOptions.baseUrl + 'js/' + name + '.js'
     }).on('load', function () {
       deferred.resolve();
@@ -165,7 +165,7 @@ function loadSource(name) {
 
 // Loads the given app stylesheet.
 function loadStyle(name) {
-  $('head').append($('<link>', {
+  $('body').append($('<link>', {
     rel: 'stylesheet',
     type: 'text/css',
     href: appOptions.baseUrl + 'css/' + name + '.css'
