@@ -71,9 +71,6 @@
       %a{href:"http://code.org/educate/k5/k5officehours", target: "_blank"}
         = I18n.t('dashboard_landing_office_hours')
     %p
-      %a#printcertificates{:href=>"#"}
-        = I18n.t('dashboard_landing_print_certificates')
-    %p
       %a{href: "http://code.org/hints"}
         = I18n.t('dashboard_landing_smart_hints')
     %p
@@ -83,11 +80,3 @@
   .section.section-light
     %h2= I18n.t('dashboard_faq')
     %iframe{:allowscriptaccess => "always", :allowFullScreen => "true", :frameborder => "0", :height => "500", :src => "http://www.youtube.com/embed/videoseries?list=PLzdnOPI1iJNdSi1R-QTs-iQ-HUURR5FsL", :title => "YouTube video player", :width => "100%"}
-
-  %form#printcertificatesform{:action=>"http://code.org/certificates", :method=>"POST"}
-    %input{:type=>'hidden', :name=>'course', :value=>'20hours'}
-
-  :javascript
-    $("#printcertificates").click(function() {
-      $('#printcertificatesform').submit();
-    });
