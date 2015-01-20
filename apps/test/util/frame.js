@@ -8,7 +8,8 @@
 
 var path = require('path');
 var fs = require('fs');
-var jsdom = require('jsdom').jsdom;
+var jsdomRoot = require('jsdom');
+var jsdom = jsdomRoot.jsdom;
 var xmldom = require('xmldom');
 
 var VENDOR_CODE = fs.readFileSync(path.join(__dirname, '../../build/package/js/en_us/vendor.js'));
@@ -28,7 +29,12 @@ function setGlobals () {
   global.XMLSerializer = xmldom.XMLSerializer;
   global.Blockly = initBlockly(window);
   //global.Image = canvas.Image;
+  jsdomRoot.dom.level3.html.HTMLElement.prototype.getBBox = function () {
+    return {
+      height: 0,
+      width: 0
+    };
+  };
 }
 
 setGlobals();
-
