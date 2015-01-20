@@ -1616,6 +1616,9 @@ $information-desktop: "only screen and (min-width: 1024px)";
     @media #{$information-desktop} {
       width: 55%;
     }
+    .multi-question {
+      font-size: 17px;
+    }
   }
   .mainblock {
     margin-left: 0px;
@@ -1637,6 +1640,7 @@ $information-desktop: "only screen and (min-width: 1024px)";
     text-align: right;
     padding-right: 10px;
     box-sizing: border-box;
+    @include yTranslation(-35%);
   }
   .item-cross {
     display: inline-block;
@@ -1649,6 +1653,9 @@ $information-desktop: "only screen and (min-width: 1024px)";
   .item-label {
     display: inline-block;
     float: left;
+    label {
+      font-size: 15px;
+    }
   }
   .answerbutton {
     margin-top: 15px;
