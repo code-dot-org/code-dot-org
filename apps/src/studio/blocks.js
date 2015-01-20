@@ -1625,24 +1625,25 @@ exports.install = function(blockly, blockInstallOptions) {
 
   blockly.Blocks.functional_start_setValue = {
     init: function() {
-      var blockName = msg.startSetValue();
+      var blockName = 'start (value)';
       var blockType = 'none';
-      var blockArgs = [{name: 'VALUE', type: 'function'}];
+      var blockArgs = [{name: 'VALUE', type: 'Number'}];
       initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
     }
   };
 
   generator.functional_start_setValue = function() {
-    // For the current design, this doesn't need to generate any code.
-    // Though we pass in a function, we're not actually using that passed in
-    // function, and instead depend on a function of the required name existing
-    // in the global space. This may change in the future.
+    // Adapted from Blockly.JavaScript.variables_set.
+    var argument0 = Blockly.JavaScript.statementToCode(this, 'VALUE',
+        Blockly.JavaScript.ORDER_ASSIGNMENT) || '0';
+    var varName = Blockly.JavaScript.translateVarName('startValue');
+    return varName + ' = ' + argument0 + ';\n';
   };
 
   installFunctionalApiCallBlock(blockly, generator, {
     blockName: 'functional_start_dummyOnMove',
     blockTitle: 'on-move (on-screen)',
-    args: [{name: 'VAL', type: 'function'}]
+    args: [{name: 'VAL', type: 'boolean', default: 'false'}]
   });
 
   installFunctionalApiCallBlock(blockly, generator, {

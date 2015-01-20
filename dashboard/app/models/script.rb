@@ -38,6 +38,13 @@ class Script < ActiveRecord::Base
     Script.get_from_cache(Script::TWENTY_HOUR_ID)
   end
 
+  def Script.should_be_cached?(id)
+    Script.script_cache.has_key?(id.to_s)
+  end
+
+  def should_be_cached?
+    Script.should_be_cached?(id.to_s)
+  end
 
   def starting_level
     raise "Script #{name} has no level to start at" if script_levels.empty?
@@ -140,12 +147,17 @@ class Script < ActiveRecord::Base
   end
 
   def get_script_level_by_id(script_level_id)
-    self.script_levels.select { |sl| sl.id == script_level_id.to_i }.first
+    script_level_id = script_level_id.to_i
+    self.script_levels.select { |sl| sl.id == script_level_id }.first
   end
 
   def get_script_level_by_stage_and_position(stage_position, puzzle_position)
-    self.script_levels.to_a.find do |sl|
-      sl.stage.position == stage_position.to_i && sl.position == puzzle_position.to_i
+    if should_be_cached?
+      Script.get_from_cache(id).script_levels.to_a.find do |sl|
+        sl.stage.position == stage_position.to_i && sl.position == puzzle_position.to_i
+      end
+    else
+      self.stages.find_by!(position: stage_position).script_levels.find_by!(position: puzzle_position)
     end
   end
 

@@ -24,10 +24,10 @@ Milestone Complete!
 ### Phase 3: Academic Year Development
 Phase 3 is designed to provide teachers with professional support, guidance, and feedback during the school year and experiences with an online community of practice. 
 
-#### February 7th Location: ####
-IBM
+#### November 22nd Location: ####
+Microsoft Technology Center 
 <br />
-1 Roger Street, Room TBD
+1 Memorial Drive 
 <br />
 Cambridge, MA 02142
 
