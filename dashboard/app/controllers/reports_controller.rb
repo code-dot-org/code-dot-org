@@ -191,6 +191,49 @@ SQL
     end
   end
 
+  def level_completions
+    authorize! :read, :reports
+    require 'date'
+# noinspection RubyResolve
+    require '../dashboard/scripts/archive/ga_client/ga_client'
+
+    @start_date = (params[:start_date] ? DateTime.parse(params[:start_date]) : (DateTime.now - 7)).strftime('%Y-%m-%d')
+    @end_date = (params[:end_date] ? DateTime.parse(params[:end_date]) : DateTime.now.prev_day).strftime('%Y-%m-%d')
+
+    output_data = {}
+    %w(Attempt Success).each do |key|
+      dimension = 'ga:eventLabel'
+      metric = 'ga:totalEvents,ga:uniqueEvents,ga:avgEventValue'
+      filter = "ga:eventAction==#{key};ga:eventCategory==Puzzle"
+      if params[:filter]
+        filter += ";ga:eventLabel=@#{params[:filter].to_s.gsub('_','/')}"
+      end
+      ga_data = GAClient.query_ga(@start_date, @end_date, dimension, metric, filter)
+      if ga_data.data.containsSampledData
+        throw new ArgumentError 'Google Analytics response contains sampled data, aborting.'
+      end
+
+      ga_data.data.rows.each do |r|
+        label = r[0]
+        output_data[label] ||= {}
+        output_data[label]["Total#{key}"] = r[1]
+        output_data[label]["Unique#{key}"] = r[2]
+        output_data[label]["Avg#{key}"] = r[3]
+      end
+    end
+    output_data.each_key do |key|
+      output_data[key]['Avg Success Rate'] = output_data[key].delete('AvgAttempt')
+      output_data[key]['Avg attempts per completion'] = output_data[key].delete('AvgSuccess')
+      output_data[key]['Avg Unique Success Rate'] = output_data[key]['UniqueSuccess'].to_f / output_data[key]['UniqueAttempt'].to_f
+    end
+
+    @data_array = output_data.map do |key, value|
+      {'Puzzle' => key}.merge(value)
+    end
+    require 'naturally'
+    @data_array = @data_array.select{|x| x['TotalAttempt'].to_i > 10}.sort_by{|i| Naturally.normalize(i.send(:fetch, 'Puzzle'))}
+  end
+
   private
   def get_base_usage_activity
     Activity.all.order('id desc').includes([:user, :level_source, {level: :game}]).limit(50)

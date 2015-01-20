@@ -31,8 +31,7 @@
     "min_workspace_height": "2000",
     "scrollbars": "true",
     "embed": "false",
-    "disable_sharing": "false",
-    "maze_data": null
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>
@@ -165,6 +164,10 @@
           </block>
           <block type="studio_setBackground">
             <title name="VALUE">"cave"</title>
+          </block>
+          <block type="studio_move">
+            <title name="SPRITE">0</title>
+            <title name="DIR">1</title>
           </block>
           <block type="studio_showTitleScreenParams" inline="false">
             <value name="TITLE">

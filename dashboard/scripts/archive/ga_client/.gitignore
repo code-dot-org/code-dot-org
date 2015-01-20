@@ -1,0 +1,3 @@
+analytics*.cache
+*.p12
+ga_config.yml
