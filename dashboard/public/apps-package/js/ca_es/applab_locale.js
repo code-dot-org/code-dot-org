@@ -1,0 +1,52 @@
+var appLocale = {lc:{"ar":function(n){
+  if (n === 0) {
+    return 'zero';
+  }
+  if (n == 1) {
+    return 'one';
+  }
+  if (n == 2) {
+    return 'two';
+  }
+  if ((n % 100) >= 3 && (n % 100) <= 10 && n == Math.floor(n)) {
+    return 'few';
+  }
+  if ((n % 100) >= 11 && (n % 100) <= 99 && n == Math.floor(n)) {
+    return 'many';
+  }
+  return 'other';
+},"en":function(n){return n===1?"one":"other"},"bg":function(n){return n===1?"one":"other"},"bn":function(n){return n===1?"one":"other"},"ca":function(n){return n===1?"one":"other"}},
+c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
+n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
+v:function(d,k){appLocale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).appLocale = {
+"catActions":function(d){return "Accions"},
+"catControl":function(d){return "Bucles"},
+"catEvents":function(d){return "Esdeveniments"},
+"catLogic":function(d){return "Lògic"},
+"catMath":function(d){return "Mates"},
+"catProcedures":function(d){return "Funcions"},
+"catText":function(d){return "text"},
+"catVariables":function(d){return "Variables"},
+"continue":function(d){return "Continuar"},
+"createHtmlBlock":function(d){return "crea el bloc html"},
+"createHtmlBlockTooltip":function(d){return "Crea un bloc de HTML a l' app."},
+"finalLevel":function(d){return "Felicitats! Has resolt el puzzle final."},
+"nextLevel":function(d){return "Felicitats! Has complert aquest puzzle."},
+"no":function(d){return "No"},
+"numBlocksNeeded":function(d){return "Aquest puzzle pot res resolt amb %1 blocs."},
+"pause":function(d){return "Trencar"},
+"reinfFeedbackMsg":function(d){return "Podeu prémer el botó \"Torna-ho a provar\" per tornar a executar la teva app."},
+"repeatForever":function(d){return "repetir per sempre"},
+"repeatDo":function(d){return "fes"},
+"repeatForeverTooltip":function(d){return "Executa les accions en aquest bloc repetidament mentre l'app s'està executant."},
+"shareWebappTwitter":function(d){return "Comprovi l'app que he fet. Vaig escriure'l jo amb @codeorg"},
+"shareGame":function(d){return "Comparteix la teva app:"},
+"stepIn":function(d){return "ficar-se"},
+"stepOver":function(d){return "esquivar"},
+"stepOut":function(d){return "Abandonar"},
+"turnBlack":function(d){return "Canvia a negre"},
+"turnBlackTooltip":function(d){return "Canvia la pantalla a negre."},
+"yes":function(d){return "Sí"}};
