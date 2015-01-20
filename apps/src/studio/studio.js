@@ -1078,6 +1078,7 @@ Studio.init = function(config) {
   // Disable "show code" button in feedback dialog when workspace is hidden
   config.enableShowCode = !config.level.embed && studioApp.editCode;
   config.varsInGlobals = true;
+  config.generateFunctionPassBlocks = !!config.level.generateFunctionPassBlocks;
 
   Studio.initSprites();
 
@@ -1470,12 +1471,9 @@ Studio.execute = function() {
   var handlers = [];
   if (studioApp.isUsingBlockly()) {
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
-    registerHandlers(handlers, 'functional_start_setValue', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackground', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setSpeeds', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackgroundAndSpeeds',
-        'whenGameStarts');
-    registerHandlers(handlers, 'functional_start_dummyOnMove',
         'whenGameStarts');
     registerHandlers(handlers, 'studio_whenLeft', 'when-left');
     registerHandlers(handlers, 'studio_whenRight', 'when-right');

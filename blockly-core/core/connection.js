@@ -28,6 +28,23 @@ goog.provide('Blockly.ConnectionDB');
 
 goog.require('Blockly.BlockSpace');
 
+/**
+ * SVG paths for drawing next/previous notch from left to right, left to right
+ * with highlighting, and right to left. In both cases, there's currently
+ * assumption that NOTCH_WIDTH and NOTCH_PATH_WIDTH (which are defined on
+ * BlockSvg) are the same.
+ */
+var ROUNDED_NOTCH_PATHS = {
+  left: 'l 6,4 3,0 6,-4',
+  leftHighlight: 'l 6.5,4 2,0 6.5,-4',
+  right: 'l -6,4 -3,0 -6,-4'
+};
+
+var SQUARE_NOTCH_PATHS = {
+  left: 'l 0,5 15,0 0,-5',
+  leftHighlight: 'l 0,5 15,0 0,-5',
+  right: 'l 0,5 -15,0 0,-5'
+};
 
 /**
  * Class for a connection between blocks.
@@ -390,12 +407,11 @@ Blockly.Connection.prototype.highlight = function() {
             tabWidth + ',-2.5 ' + tabWidth + ',7.5 v 5';
   } else {
     var moveWidth = 5 + Blockly.BlockSvg.NOTCH_PATH_WIDTH;
+    var notchPaths = this.getNotchPaths();
     if (Blockly.RTL) {
-      steps = 'm ' + moveWidth + ',0 h -5 ' +
-        this.sourceBlock_.getSvgRenderer().notchPathRight + ' h -5';
+      steps = 'm ' + moveWidth + ',0 h -5 ' + notchPaths.right + ' h -5';
     } else {
-      steps = 'm -' + moveWidth + ',0 h 5 ' +
-          this.sourceBlock_.getSvgRenderer().notchPathLeft + ' h 5';
+      steps = 'm -' + moveWidth + ',0 h 5 ' + notchPaths.left + ' h 5';
     }
   }
   var xy = this.sourceBlock_.getRelativeToSurfaceXY();
@@ -415,6 +431,18 @@ Blockly.Connection.prototype.unhighlight = function() {
   goog.dom.removeNode(Blockly.Connection.highlightedPath_);
   delete Blockly.Connection.highlightedPath_;
 };
+
+/**
+ *
+ */
+Blockly.Connection.prototype.getNotchPaths = function () {
+  var constraints = this && this.check_ || [];
+  if (constraints.length === 1 && constraints[0] === 'function') {
+    return SQUARE_NOTCH_PATHS;
+  }
+  return ROUNDED_NOTCH_PATHS;
+};
+
 
 /**
  * Move the blocks on either side of this connection right next to each other.

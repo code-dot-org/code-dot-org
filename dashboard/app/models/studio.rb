@@ -13,6 +13,7 @@ class Studio < Grid
     coordinate_grid_background
     free_play
     disable_sharing
+    generate_function_pass_blocks
   )
 
   def self.create_from_level_builder(params, level_params)

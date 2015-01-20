@@ -207,7 +207,7 @@ Blockly.Toolbox.prototype.getRect = function() {
   // Assumes that the toolbox is on the SVG edge.  If this changes
   // (e.g. toolboxes in mutators) then this code will need to be more complex.
   if (Blockly.RTL) {
-    var svgSize = Blockly.svgSize();
+    var svgSize = Blockly.mainBlockSpaceEditor.svgSize();
     left = svgSize.width - this.width;
   }
   return new goog.math.Rect(left, -BIG_NUM, BIG_NUM + this.width, 2 * BIG_NUM);
