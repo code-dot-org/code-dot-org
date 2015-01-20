@@ -118,11 +118,11 @@ body {
 /*
 @page  
 { 
-    size: auto;    
-    margin: .4in .25in .25in .25in;  
+  size: auto;
+  margin: .4in .25in .25in .25in;
 }
 
 @media print {
-  body{ margin: .4in .25in .25in .25in; }
+  body { margin: .4in .25in .25in .25in; }
 }
 */
