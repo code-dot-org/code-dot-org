@@ -30,6 +30,15 @@ def storage_decrypt_id(encrypted)
   return id
 end
 
+def storage_decrypt_app_id(encrypted)
+  storage_id, app_id = storage_decrypt(Base64.urlsafe_decode64(encrypted)).split(':')
+  storage_id = storage_id.to_i
+  raise ArgumentError, "`storage_id` must be an integer > 0" unless storage_id > 0
+  app_id = app_id.to_i
+  raise ArgumentError, "`app_id` must be an integer > 0" unless app_id > 0
+  [storage_id, app_id]
+end
+
 def storage_encrypt(plain)
   encrypter = OpenSSL::Cipher::Cipher.new('AES-128-CBC')
   encrypter.encrypt
@@ -42,6 +51,14 @@ def storage_encrypt_id(id)
   id = id.to_i
   raise ArgumentError, "`id` must be an integer > 0" unless id > 0
   storage_encrypt("#{SecureRandom.random_number(65536)}:#{id}:#{SecureRandom.random_number(65536)}")
+end
+
+def storage_encrypt_app_id(storage_id, app_id)
+  storage_id = storage_id.to_i
+  raise ArgumentError, "`storage_id` must be an integer > 0" unless storage_id > 0
+  app_id = app_id.to_i
+  raise ArgumentError, "`app_id` must be an integer > 0" unless app_id > 0
+  Base64.urlsafe_encode64(storage_encrypt("#{storage_id}:#{app_id}"))
 end
 
 def storage_id(endpoint)

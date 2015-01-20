@@ -7,7 +7,7 @@ class Table
   end
 
   def initialize(app_id, storage_id, table_name)
-    @app_id = app_id # TODO(if/when needed): Ensure this is a registered app?
+    app_owner, @app_id = storage_decrypt_app_id(app_id) # TODO(if/when needed): Ensure this is a registered app?
     @storage_id = storage_id
     @table_name = table_name
   
