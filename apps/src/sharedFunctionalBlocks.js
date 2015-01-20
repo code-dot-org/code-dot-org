@@ -318,7 +318,6 @@ function installString(blockly, generator) {
  * condition-value pairs before the default value.
  */
 function installCond(blockly, generator, numPairs) {
-  // TODO(brent) - copy paste doesnt carry over num rows
   // TODO(brent) - good candidate for some unit tests
   // TODO(brent) - rtl
 
@@ -406,6 +405,42 @@ function installCond(blockly, generator, numPairs) {
       this.removeInput('VALUE' + id);
 
       this.removeInput('MINUS' + id);
+    },
+
+    mutationToDom: function() {
+      if (this.pairs_.length <= 1) {
+        return null;
+      }
+      var container = document.createElement('mutation');
+      container.setAttribute('pairs', this.pairs_.join(','));
+      return container;
+    },
+
+    domToMutation: function (element) {
+      var i;
+      var pairs = element.getAttribute('pairs');
+      if (!pairs) {
+        return;
+      }
+
+      pairs = pairs.split(',').map(function (item) {
+        return parseInt(item, 10);
+      });
+
+      // Our pairs, which are used to name rows, are not necessarily contiguous.
+      // We ensure that we end up with the same set of pairs by adding lots
+      // of rows, and then deleting the unneeded ones (simulating what happened
+      // to originally create this block)
+      var lastRow = pairs.slice(-1);
+      for (i = 1; i <= lastRow; i++) {
+        this.addRow();
+      }
+
+      for (i = 0; i < lastRow; i++) {
+        if (pairs.indexOf(i) === -1) {
+          this.removeRow(i);
+        }
+      }
     }
   };
 
