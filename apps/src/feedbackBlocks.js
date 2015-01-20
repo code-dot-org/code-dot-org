@@ -1,7 +1,7 @@
 var constants = require('./constants');
 var readonly = require('./templates/readonly.html');
 
-TestResults = constants.TestResults;
+var TestResults = constants.TestResults;
 
 // TODO (br-pair): can we not pass in the studioApp
 var FeedbackBlocks = function(options, missingRequiredBlocks, studioApp) {

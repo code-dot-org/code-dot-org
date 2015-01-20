@@ -318,7 +318,6 @@ function installString(blockly, generator) {
  * condition-value pairs before the default value.
  */
 function installCond(blockly, generator, numPairs) {
-  // TODO(brent) - good candidate for some unit tests
   // TODO(brent) - rtl
 
   var blockName = 'functional_cond';
@@ -355,6 +354,9 @@ function installCond(blockly, generator, numPairs) {
       }
     },
 
+    /**
+     * Add another condition/value pair to the end.
+     */
     addRow: function () {
       // id is either the last value plus 1, or if we have no values yet 0
       var id = this.pairs_.length > 0 ? (this.pairs_.slice(-1) * 1 + 1) : 0;
@@ -383,9 +385,13 @@ function installCond(blockly, generator, numPairs) {
       this.moveInputBefore('MINUS' + id, 'DEFAULT');
     },
 
+    /**
+     * Remove the condition/value pair with the given id. No-op if no row with
+     * that id.
+     */
     removeRow: function (id) {
       var index = this.pairs_.indexOf(id);
-      if (index === -1) {
+      if (index === -1 || this.pairs_.length === 1) {
         return;
       }
       this.pairs_.splice(index, 1);
@@ -407,6 +413,9 @@ function installCond(blockly, generator, numPairs) {
       this.removeInput('MINUS' + id);
     },
 
+    /**
+     * Serialize pairs so that we can deserialize with the same ids
+     */
     mutationToDom: function() {
       if (this.pairs_.length <= 1) {
         return null;
@@ -416,6 +425,9 @@ function installCond(blockly, generator, numPairs) {
       return container;
     },
 
+    /**
+     * Deserialize and cause our block to have same ids
+     */
     domToMutation: function (element) {
       var i;
       var pairs = element.getAttribute('pairs');
