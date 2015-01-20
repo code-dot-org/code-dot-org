@@ -354,10 +354,32 @@ function installCond(blockly, generator, numPairs) {
       cond.setCheck('boolean');
       this.moveInputBefore('COND' + id, 'DEFAULT');
 
-      var val = this.appendFunctionalInput('VALUE' + id);
-      val.setInline(true);
-      val.setHSV(0, 0, 0.99);
+      this.appendFunctionalInput('VALUE' + id)
+        .setInline(true)
+        .setHSV(0, 0, 0.99);
       this.moveInputBefore('VALUE' + id, 'DEFAULT');
+
+      var plusField = new Blockly.FieldIcon('+');
+      // TODO (brent) - private bindEvent_ and fieldGroup_
+      Blockly.bindEvent_(plusField.fieldGroup_, 'mousedown', this, this.addRow);
+
+      this.appendDummyInput('PLUS' + id)
+        .appendTitle(' ')
+        .appendTitle(plusField)
+        .setInline(true);
+      this.moveInputBefore('PLUS' + id, 'DEFAULT');
+
+      if (this.pairs_.length > 1) {
+        var minusField = new Blockly.FieldIcon('-');
+        Blockly.bindEvent_(minusField.fieldGroup_, 'mousedown', this, function () {
+          this.removeRow(id);
+        });
+      }
+
+      this.appendDummyInput('MINUS' + id)
+        .appendTitle(minusField)
+        .setInline(true);
+      this.moveInputBefore('MINUS' + id, 'DEFAULT');
     },
 
     removeRow: function (id) {
@@ -380,6 +402,9 @@ function installCond(blockly, generator, numPairs) {
         child.dispose();
       }
       this.removeInput('VALUE' + id);
+
+      this.removeInput('PLUS' + id);
+      this.removeInput('MINUS' + id);
     }
   };
 
