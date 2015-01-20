@@ -44,9 +44,6 @@
       %em= t('user.current_password_hint')
       %br/
       = f.password_field :current_password
-  .field
-    = f.label :locale
-    = f.select :locale, options_for_locale_select, selected: locale
   - if !resource.teacher?
     .field
       = f.label t('signup_form.gender')
