@@ -1,7 +1,8 @@
 /**
  * A set of functional blocks
  */
-
+var utils = require('./utils');
+var _ = utils.getLodash();
 var msg = require('../locale/current/common');
 var functionalBlockUtils = require('./functionalBlockUtils');
 var initTitledFunctionalBlock = functionalBlockUtils.initTitledFunctionalBlock;
@@ -335,8 +336,8 @@ function installCond(blockly, generator, numPairs) {
       };
 
       var plusField = new Blockly.FieldIcon('+');
-      // TODO (brent) - private bindEvent_ and fieldGroup_
-      Blockly.bindEvent_(plusField.fieldGroup_, 'mousedown', this, this.addRow);
+      plusField.getRootElement().addEventListener('mousedown',
+        _.bind(this.addRow, this));
 
       this.appendDummyInput()
         .appendTitle(new Blockly.FieldLabel('cond', options))
@@ -372,9 +373,8 @@ function installCond(blockly, generator, numPairs) {
 
       if (this.pairs_.length > 1) {
         var minusField = new Blockly.FieldIcon('-');
-        Blockly.bindEvent_(minusField.fieldGroup_, 'mousedown', this, function () {
-          this.removeRow(id);
-        });
+        minusField.getRootElement().addEventListener('mousedown',
+          _.bind(this.removeRow, this, id));
       }
 
       this.appendDummyInput('MINUS' + id)
