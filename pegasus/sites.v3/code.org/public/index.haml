@@ -5,15 +5,35 @@ banner: null
   if request.site == 'csedweek.org'
 %>
 social:
-  "twitter:card": player
+  "og:title": "The Hour of Code is here"
+  "og:description": "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104."
+  "og:image": "http://csedweek.org/images/hoc-video-thumbnail.jpg"
+  "og:image:width": "1200"
+  "og:image:height": "627"
+  "og:video": "https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0"
+  "og:video:width": "640"
+  "og:video:height": "360"
+  "twitter:card": "player"
   "twitter:site": "@codeorg"
   "twitter:url": "http://code.org/"
   "twitter:title": "The Hour of Code is here"
   "twitter:description": "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104."
-  "twitter:image:src": "http://csedweek.org/images/code-video-thumbnail.jpg"
+  "twitter:image:src": "http://csedweek.org/images/hoc-video-thumbnail.jpg"
   "twitter:player": "https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0"
-  "twitter:player:width": 1920
-  "twitter:player:height": 1080
+  "twitter:player:width": "640"
+  "twitter:player:height": "360"
+<%
+  else
+%>
+social:
+  "og:title": "Every child deserves opportunity"
+  "og:description": "Every student in every school deserves the opportunity to study computer science."
+  "og:image": "http://code.org/images/code-video-thumbnail.jpg"
+  "og:image:width": "1440"
+  "og:image:height": "810"
+  "og:video": "https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0"
+  "og:video:width": "640"
+  "og:video:height": "360"
 <%
   end
 %>
@@ -32,7 +52,7 @@ social:
   -twitter = {:url=>"http://#{request.site}/", :related=>'codeorg', :hashtags=>'', :text=>I18n.t(:hoc_is_here)}
   -twitter[:hashtags] = 'HourOfCode' unless I18n.t(:hoc_is_here).include? '#HourOfCode'
 -else
-  -twitter = {:url=>"http://#{request.site}/", :related=>'codeorg', :hashtags=>'', :text=>"Why don't more schools teach computer science? We can fix this. @codeorg"}
+  -twitter = {:url=>"http://#{request.site}/", :related=>'codeorg', :hashtags=>'', :text=>"Why don't more schools teach computer science? We can fix this. http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more. @codeorg"}
 
 %script{:src=>"/js/jquery.placeholder.js"}
 

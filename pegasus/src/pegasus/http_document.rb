@@ -24,6 +24,7 @@ def social_metadata(request, header=nil)
   metadata = {}
 
   # Metatags common to all sites.
+  metadata['og:title'] = header['title']
   metadata['fb:app_id'] = '500177453358606'
   metadata['og:type'] = 'article'
   metadata['article:publisher'] = 'https://www.facebook.com/Code.org'
