@@ -22,9 +22,6 @@ exports.install = function(blockly, generator, gensym) {
   installMathNumber(blockly, generator, gensym);
   installString(blockly, generator, gensym);
   installCond(blockly, generator, 1);
-  installCond(blockly, generator, 2);
-  installCond(blockly, generator, 3);
-  installCond(blockly, generator, 4);
 };
 
 function installPlus(blockly, generator, gensym) {
@@ -320,19 +317,69 @@ function installString(blockly, generator) {
  * condition-value pairs before the default value.
  */
 function installCond(blockly, generator, numPairs) {
-  var blockName = 'functional_cond_' + numPairs;
+  // TODO(brent) - copy paste doesnt carry over num rows
+  // TODO(brent) - good candidate for some unit tests
+
+  var blockName = 'functional_cond';
   blockly.Blocks[blockName] = {
     helpUrl: '',
     init: function() {
-      var args = [];
-      for (var i = 0; i < numPairs; i++) {
-        args.push({name: 'COND' + i, type: 'boolean', default: 'false'});
-        args.push({name: 'VALUE' + i, type: 'none', default: ''});
+      this.pairs_ = [];
+      this.setFunctional(true, {
+        headerHeight: 30
+      });
+
+      var options = {
+        fixedSize: { height: 35 }
+      };
+      this.appendDummyInput()
+        .appendTitle(new Blockly.FieldLabel('cond', options))
+        .setAlign(Blockly.ALIGN_CENTRE);
+      this.appendFunctionalInput('DEFAULT');
+
+      this.setFunctionalOutput(true);
+
+      while(this.pairs_.length < numPairs) {
+        this.addRow();
       }
-      args.push({name: 'DEFAULT', type: 'none', default: ''});
-      var blockTitle = 'cond';
-      var wrapWidth = 2;
-      initTitledFunctionalBlock(this, blockTitle, undefined, args, wrapWidth);
+    },
+
+    addRow: function () {
+      // id is either the last value plus 1, or if we have no values yet 0
+      var id = this.pairs_.length > 0 ? (this.pairs_.slice(-1) * 1 + 1) : 0;
+      this.pairs_.push(id);
+
+      var cond = this.appendFunctionalInput('COND' + id);
+      cond.setHSV.apply(cond, functionalBlockUtils.colors['boolean']);
+      cond.setCheck('boolean');
+      this.moveInputBefore('COND' + id, 'DEFAULT');
+
+      var val = this.appendFunctionalInput('VALUE' + id);
+      val.setInline(true);
+      val.setHSV(0, 0, 0.99);
+      this.moveInputBefore('VALUE' + id, 'DEFAULT');
+    },
+
+    removeRow: function (id) {
+      var index = this.pairs_.indexOf(id);
+      if (index === -1) {
+        return;
+      }
+      this.pairs_.splice(index, 1);
+
+      var cond = this.getInput('COND' + id);
+      var child = cond.connection.targetBlock();
+      if (child) {
+        child.dispose();
+      }
+      this.removeInput('COND' + id);
+
+      var val = this.getInput('VALUE' + id);
+      child = val.connection.targetBlock();
+      if (child) {
+        child.dispose();
+      }
+      this.removeInput('VALUE' + id);
     }
   };
 
@@ -348,7 +395,7 @@ function installCond(blockly, generator, numPairs) {
   generator[blockName] = function() {
     var cond, value, defaultValue;
     var code = 'function() {\n  ';
-    for (var i = 0; i < numPairs; i++) {
+    for (var i = 0; i <= this.numPairs_; i++) {
       if (i > 0) {
         code += 'else ';
       }
