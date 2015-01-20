@@ -20,7 +20,7 @@ Contracts provide a way for students to better understand and discuss functions.
 ### **What's in a Contract**
  
 1) [Vocabulary](#Vocab)<br/>
-2) [Figuring it Out](#GetStarted)  
+2) [What's in a Function](#GetStarted)  
 
 ### **Activity: Contracts**  
 

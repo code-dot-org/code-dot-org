@@ -107,7 +107,7 @@ In a right triangle, the side opposite the 90-degree angle is called the hypoten
 ## Activities:
 ### <a name="Activity1"></a> 3) Collision Detection
 
-**This really needs an unpluggedy activity**
+**Todo** adapt activity
 
 
 
