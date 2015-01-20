@@ -151,6 +151,7 @@ Dashboard::Application.routes.draw do
   post '/milestone/:user_id/level/:level_id', :to => 'activities#milestone', :as => 'milestone_level'
   post '/milestone/:user_id/:script_level_id', :to => 'activities#milestone', :as => 'milestone'
 
+  get '/admin/levels/:start_date(/:end_date)(/filter/:filter)', to: 'reports#level_completions', as: 'level_completions'
   get '/admin/usage', to: 'reports#all_usage', as: 'all_usage'
   get '/admin/stats', to: 'reports#admin_stats', as: 'admin_stats'
   get '/admin/progress', to: 'reports#admin_progress', as: 'admin_progress'
