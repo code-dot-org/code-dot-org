@@ -362,7 +362,7 @@ function installCond(blockly, generator, numPairs) {
       this.pairs_.push(id);
 
       var cond = this.appendFunctionalInput('COND' + id);
-      cond.setHSV.apply(cond, functionalBlockUtils.colors['boolean']);
+      cond.setHSV.apply(cond, functionalBlockUtils.colors.boolean);
       cond.setCheck('boolean');
       this.moveInputBefore('COND' + id, 'DEFAULT');
 
@@ -371,15 +371,16 @@ function installCond(blockly, generator, numPairs) {
         .setHSV(0, 0, 0.99);
       this.moveInputBefore('VALUE' + id, 'DEFAULT');
 
+      var minusInput = this.appendDummyInput('MINUS' + id)
+        .setInline(true);
+
       if (this.pairs_.length > 1) {
         var minusField = new Blockly.FieldIcon('-');
         minusField.getRootElement().addEventListener('mousedown',
           _.bind(this.removeRow, this, id));
+        minusInput.appendTitle(minusField);
       }
 
-      this.appendDummyInput('MINUS' + id)
-        .appendTitle(minusField)
-        .setInline(true);
       this.moveInputBefore('MINUS' + id, 'DEFAULT');
     },
 
