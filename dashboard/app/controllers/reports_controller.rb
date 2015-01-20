@@ -197,7 +197,7 @@ SQL
 # noinspection RubyResolve
     require '../dashboard/scripts/archive/ga_client/ga_client'
 
-    @start_date = DateTime.parse(params[:start_date]).strftime('%Y-%m-%d')
+    @start_date = (params[:start_date] ? DateTime.parse(params[:start_date]) : (DateTime.now - 7)).strftime('%Y-%m-%d')
     @end_date = (params[:end_date] ? DateTime.parse(params[:end_date]) : DateTime.now.prev_day).strftime('%Y-%m-%d')
 
     output_data = {}
