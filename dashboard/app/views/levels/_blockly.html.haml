@@ -12,8 +12,10 @@
     %a{href: 'javascript: location.reload();'}= t(:try_reloading)
 
   :javascript
+    //<![CDATA[
     var script_path = "#{@script_level && build_script_level_path(@script_level)}";
     var appOptions = #{blockly_options(local_assigns).to_json};
     appOptions.locale = '#{js_locale}';
+    //]]>
 
   %script{src: '/shared/js/initApp.js'}
