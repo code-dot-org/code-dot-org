@@ -2153,39 +2153,19 @@ var getPegasusHost = function() {
 
 },{"../../locale/current/applab":150,"../../locale/current/common":153,"../StudioApp":2,"../codegen":38,"../constants":39,"../dom":40,"../skins":108,"../slider":109,"../templates/page.html":128,"../utils":148,"../xml":149,"./api":4,"./appStorage":5,"./blocks":7,"./controls.html":8,"./extraControlRows.html":9,"./formStorage":10,"./visualization.html":14}],14:[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, escape, include, rethrow) {
-rethrow = rethrow || function rethrow(err, str, filename, lineno){
-  var lines = str.split('\n')
-    , start = Math.max(lineno - 3, 0)
-    , end = Math.min(lines.length, lineno + 3);
-
-  // Error context
-  var context = lines.slice(start, end).map(function (line, i){
-    var curr = i + start + 1;
-    return (curr == lineno ? ' >> ' : '    ')
-      + curr
-      + '| '
-      + line;
-  }).join('\n');
-
-  // Alter exception message
-  err.path = filename;
-  err.message = (filename || 'ejs') + ':'
-    + lineno + '\n'
-    + context + '\n\n'
-    + err.message;
-
-  throw err;
-};
-escape = escape || function (markup) {
-  return String(markup)
-    .replace(/&/g, '&amp;')
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/'/g, '&#39;')
     .replace(/"/g, '&quot;');
 };
-var __output = ""; with (locals || {}) { ;__output += "<div id=\"divApplab\">\n</div>\n";};return __output.trim();
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('<div id="divApplab">\n</div>\n'); })();
+} 
+return buf.join('');
 };
   return function(locals) {
     return t(locals, require("ejs").filters);
@@ -2376,39 +2356,19 @@ FormStorage.getAppSecret = function() {
 
 },{}],9:[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, escape, include, rethrow) {
-rethrow = rethrow || function rethrow(err, str, filename, lineno){
-  var lines = str.split('\n')
-    , start = Math.max(lineno - 3, 0)
-    , end = Math.min(lines.length, lineno + 3);
-
-  // Error context
-  var context = lines.slice(start, end).map(function (line, i){
-    var curr = i + start + 1;
-    return (curr == lineno ? ' >> ' : '    ')
-      + curr
-      + '| '
-      + line;
-  }).join('\n');
-
-  // Alter exception message
-  err.path = filename;
-  err.message = (filename || 'ejs') + ':'
-    + lineno + '\n'
-    + context + '\n\n'
-    + err.message;
-
-  throw err;
-};
-escape = escape || function (markup) {
-  return String(markup)
-    .replace(/&/g, '&amp;')
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/'/g, '&#39;')
     .replace(/"/g, '&quot;');
 };
-var __output = ""; with (locals || {}) { ; var msg = require('../../locale/current/common') ;__output += "\n";; var applabMsg = require('../../locale/current/applab') ;__output += "\n\n";; if (debugButtons) { ;__output += "\n<div>\n  <div id=\"debug-buttons\" style=\"display:inline;\">\n    <button id=\"pauseButton\" class=\"share\">\n      ";;__output += escape(applabMsg.pause());__output += "\n    </button>\n    <button id=\"stepInButton\" class=\"share\">\n      ";;__output += escape(applabMsg.stepIn());__output += "\n    </button>\n    <button id=\"stepOverButton\" class=\"share\">\n      ";;__output += escape(applabMsg.stepOver());__output += "\n    </button>\n    <button id=\"stepOutButton\" class=\"share\">\n      ";;__output += escape(applabMsg.stepOut());__output += "\n    </button>\n    <button id=\"viewDataButton\" class=\"share\">\n      ";;__output += escape(applabMsg.viewData());__output += "\n    </button>\n  </div>\n";; } ;__output += "\n\n";; if (debugConsole) { ;__output += "\n  <div id=\"debug-console\" class=\"debug-console\">\n    <textarea id=\"debug-output\" readonly disabled tabindex=-1 class=\"debug-output\"></textarea>\n    <span class=\"debug-input-prompt\">\n      &gt;\n    </span>\n    <div contenteditable id=\"debug-input\" class=\"debug-input\"></div>\n  </div>\n";; } ;__output += "\n\n";; if (finishButton) { ;__output += "\n  <div id=\"share-cell\" class=\"share-cell-none\">\n    <button id=\"finishButton\" class=\"share\">\n      <img src=\"";;__output += escape(assetUrl('media/1x1.gif'));__output += "\">";;__output += escape(msg.finish());__output += "\n    </button>\n  </div>\n";; } ;__output += "\n\n";; if (debugButtons) { ;__output += "\n</div>\n";; } ;__output += "\n";};return __output.trim();
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('');1; var msg = require('../../locale/current/common') ; buf.push('\n');2; var applabMsg = require('../../locale/current/applab') ; buf.push('\n\n');4; if (debugButtons) { ; buf.push('\n<div>\n  <div id="debug-buttons" style="display:inline;">\n    <button id="pauseButton" class="share">\n      ', escape((8,  applabMsg.pause() )), '\n    </button>\n    <button id="stepInButton" class="share">\n      ', escape((11,  applabMsg.stepIn() )), '\n    </button>\n    <button id="stepOverButton" class="share">\n      ', escape((14,  applabMsg.stepOver() )), '\n    </button>\n    <button id="stepOutButton" class="share">\n      ', escape((17,  applabMsg.stepOut() )), '\n    </button>\n    <button id="viewDataButton" class="share">\n      ', escape((20,  applabMsg.viewData() )), '\n    </button>\n  </div>\n');23; } ; buf.push('\n\n');25; if (debugConsole) { ; buf.push('\n  <div id="debug-console" class="debug-console">\n    <textarea id="debug-output" readonly disabled tabindex=-1 class="debug-output"></textarea>\n    <span class="debug-input-prompt">\n      &gt;\n    </span>\n    <div contenteditable id="debug-input" class="debug-input"></div>\n  </div>\n');33; } ; buf.push('\n\n');35; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((38,  assetUrl('media/1x1.gif') )), '">', escape((38,  msg.finish() )), '\n    </button>\n  </div>\n');41; } ; buf.push('\n\n');43; if (debugButtons) { ; buf.push('\n</div>\n');45; } ; buf.push('\n'); })();
+} 
+return buf.join('');
 };
   return function(locals) {
     return t(locals, require("ejs").filters);
@@ -2416,39 +2376,19 @@ var __output = ""; with (locals || {}) { ; var msg = require('../../locale/curre
 }());
 },{"../../locale/current/applab":150,"../../locale/current/common":153,"ejs":168}],8:[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, escape, include, rethrow) {
-rethrow = rethrow || function rethrow(err, str, filename, lineno){
-  var lines = str.split('\n')
-    , start = Math.max(lineno - 3, 0)
-    , end = Math.min(lines.length, lineno + 3);
-
-  // Error context
-  var context = lines.slice(start, end).map(function (line, i){
-    var curr = i + start + 1;
-    return (curr == lineno ? ' >> ' : '    ')
-      + curr
-      + '| '
-      + line;
-  }).join('\n');
-
-  // Alter exception message
-  err.path = filename;
-  err.message = (filename || 'ejs') + ':'
-    + lineno + '\n'
-    + context + '\n\n'
-    + err.message;
-
-  throw err;
-};
-escape = escape || function (markup) {
-  return String(markup)
-    .replace(/&/g, '&amp;')
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/'/g, '&#39;')
     .replace(/"/g, '&quot;');
 };
-var __output = ""; with (locals || {}) { ; var msg = require('../../locale/current/common') ;__output += "\n\n";; if (showSlider) { ;__output += "\n  <div id=\"slider-cell\">\n    <svg id=\"applab-slider\"\n         xmlns=\"http://www.w3.org/2000/svg\"\n         xmlns:svg=\"http://www.w3.org/2000/svg\"\n         xmlns:xlink=\"http://www.w3.org/1999/xlink\"\n         version=\"1.1\"\n         width=\"150\"\n         height=\"50\">\n        <!-- Slow icon. -->\n        <clipPath id=\"slowClipPath\">\n          <rect width=26 height=12 x=5 y=14 />\n        </clipPath>\n        <image xlink:href=\"";;__output += escape(assetUrl('media/applab/turtle_icons.png'));__output += "\" height=42 width=84 x=-21 y=-10\n            clip-path=\"url(#slowClipPath)\" />\n        <!-- Fast icon. -->\n        <clipPath id=\"fastClipPath\">\n          <rect width=26 height=16 x=120 y=10 />\n        </clipPath>\n        <image xlink:href=\"";;__output += escape(assetUrl('media/applab/turtle_icons.png'));__output += "\" height=42 width=84 x=120 y=-11\n            clip-path=\"url(#fastClipPath)\" />\n    </svg>\n    <img id=\"spinner\" style=\"visibility: hidden;\" src=\"";;__output += escape(assetUrl('media/applab/loading.gif'));__output += "\" height=15 width=15>\n  </div>\n";; } ;__output += "\n\n<div id=\"soft-buttons\" class=\"soft-buttons-none\">\n  <button id=\"leftButton\" class=\"arrow\">\n    <img src=\"";;__output += escape(assetUrl('media/1x1.gif'));__output += "\" class=\"left-btn icon21\">\n  </button>\n  <button id=\"rightButton\" class=\"arrow\">\n    <img src=\"";;__output += escape(assetUrl('media/1x1.gif'));__output += "\" class=\"right-btn icon21\">\n  </button>\n  <button id=\"upButton\" class=\"arrow\">\n    <img src=\"";;__output += escape(assetUrl('media/1x1.gif'));__output += "\" class=\"up-btn icon21\">\n  </button>\n  <button id=\"downButton\" class=\"arrow\">\n    <img src=\"";;__output += escape(assetUrl('media/1x1.gif'));__output += "\" class=\"down-btn icon21\">\n  </button>\n</div>\n\n";; if (finishButton) { ;__output += "\n  <div id=\"share-cell\" class=\"share-cell-none\">\n    <button id=\"finishButton\" class=\"share\">\n      <img src=\"";;__output += escape(assetUrl('media/1x1.gif'));__output += "\">";;__output += escape(msg.finish());__output += "\n    </button>\n  </div>\n";; } ;__output += "\n";};return __output.trim();
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('');1; var msg = require('../../locale/current/common') ; buf.push('\n\n');3; if (showSlider) { ; buf.push('\n  <div id="slider-cell">\n    <svg id="applab-slider"\n         xmlns="http://www.w3.org/2000/svg"\n         xmlns:svg="http://www.w3.org/2000/svg"\n         xmlns:xlink="http://www.w3.org/1999/xlink"\n         version="1.1"\n         width="150"\n         height="50">\n        <!-- Slow icon. -->\n        <clipPath id="slowClipPath">\n          <rect width=26 height=12 x=5 y=14 />\n        </clipPath>\n        <image xlink:href="', escape((16,  assetUrl('media/applab/turtle_icons.png') )), '" height=42 width=84 x=-21 y=-10\n            clip-path="url(#slowClipPath)" />\n        <!-- Fast icon. -->\n        <clipPath id="fastClipPath">\n          <rect width=26 height=16 x=120 y=10 />\n        </clipPath>\n        <image xlink:href="', escape((22,  assetUrl('media/applab/turtle_icons.png') )), '" height=42 width=84 x=120 y=-11\n            clip-path="url(#fastClipPath)" />\n    </svg>\n    <img id="spinner" style="visibility: hidden;" src="', escape((25,  assetUrl('media/applab/loading.gif') )), '" height=15 width=15>\n  </div>\n');27; } ; buf.push('\n\n<div id="soft-buttons" class="soft-buttons-none">\n  <button id="leftButton" class="arrow">\n    <img src="', escape((31,  assetUrl('media/1x1.gif') )), '" class="left-btn icon21">\n  </button>\n  <button id="rightButton" class="arrow">\n    <img src="', escape((34,  assetUrl('media/1x1.gif') )), '" class="right-btn icon21">\n  </button>\n  <button id="upButton" class="arrow">\n    <img src="', escape((37,  assetUrl('media/1x1.gif') )), '" class="up-btn icon21">\n  </button>\n  <button id="downButton" class="arrow">\n    <img src="', escape((40,  assetUrl('media/1x1.gif') )), '" class="down-btn icon21">\n  </button>\n</div>\n\n');44; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((47,  assetUrl('media/1x1.gif') )), '">', escape((47,  msg.finish() )), '\n    </button>\n  </div>\n');50; } ; buf.push('\n'); })();
+} 
+return buf.join('');
 };
   return function(locals) {
     return t(locals, require("ejs").filters);
