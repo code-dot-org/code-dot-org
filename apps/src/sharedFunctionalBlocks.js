@@ -319,6 +319,7 @@ function installString(blockly, generator) {
 function installCond(blockly, generator, numPairs) {
   // TODO(brent) - copy paste doesnt carry over num rows
   // TODO(brent) - good candidate for some unit tests
+  // TODO(brent) - rtl
 
   var blockName = 'functional_cond';
   blockly.Blocks[blockName] = {
@@ -332,10 +333,20 @@ function installCond(blockly, generator, numPairs) {
       var options = {
         fixedSize: { height: 35 }
       };
+
+      var plusField = new Blockly.FieldIcon('+');
+      // TODO (brent) - private bindEvent_ and fieldGroup_
+      Blockly.bindEvent_(plusField.fieldGroup_, 'mousedown', this, this.addRow);
+
       this.appendDummyInput()
         .appendTitle(new Blockly.FieldLabel('cond', options))
         .setAlign(Blockly.ALIGN_CENTRE);
+
       this.appendFunctionalInput('DEFAULT');
+
+      this.appendDummyInput('PLUS')
+        .appendTitle(plusField)
+        .setInline(true);
 
       this.setFunctionalOutput(true);
 
@@ -358,16 +369,6 @@ function installCond(blockly, generator, numPairs) {
         .setInline(true)
         .setHSV(0, 0, 0.99);
       this.moveInputBefore('VALUE' + id, 'DEFAULT');
-
-      var plusField = new Blockly.FieldIcon('+');
-      // TODO (brent) - private bindEvent_ and fieldGroup_
-      Blockly.bindEvent_(plusField.fieldGroup_, 'mousedown', this, this.addRow);
-
-      this.appendDummyInput('PLUS' + id)
-        .appendTitle(' ')
-        .appendTitle(plusField)
-        .setInline(true);
-      this.moveInputBefore('PLUS' + id, 'DEFAULT');
 
       if (this.pairs_.length > 1) {
         var minusField = new Blockly.FieldIcon('-');
@@ -403,7 +404,6 @@ function installCond(blockly, generator, numPairs) {
       }
       this.removeInput('VALUE' + id);
 
-      this.removeInput('PLUS' + id);
       this.removeInput('MINUS' + id);
     }
   };
