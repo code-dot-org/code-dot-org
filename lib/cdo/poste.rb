@@ -209,24 +209,25 @@ module Poste2
     })
   end
 
-end
 
-class PosteDeliveryMethod
+  class DeliveryMethod
 
-  def initialize(settings)
-  end
+    def initialize(settings)
+    end
 
-  def deliver!(mail)
-    content_type = mail.header['Content-Type'].to_s
-    raise ArgumentError, "Unsupported message type: #{content_type}" unless content_type =~ /^text\/html;/ && content_type =~ /charset=UTF-8/
-    sender = mail.from.first
-    raise ArgumentError, "Unsupported sender: #{sender}" unless sender == 'noreply@code.org'
+    def deliver!(mail)
+      content_type = mail.header['Content-Type'].to_s
+      raise ArgumentError, "Unsupported message type: #{content_type}" unless content_type =~ /^text\/html;/ && content_type =~ /charset=UTF-8/
+      sender = mail.from.first
+      raise ArgumentError, "Unsupported sender: #{sender}" unless sender == 'noreply@code.org'
 
-    subject = mail.subject.to_s
-    body = mail.body.to_s
+      subject = mail.subject.to_s
+      body = mail.body.to_s
 
-    recipient = Poste2::ensure_recipient(mail.to.first, ip_address:'127.0.0.1')
-    Poste2::send_message('dashboard', recipient, body:body, subject:subject)
+      recipient = Poste2::ensure_recipient(mail.to.first, ip_address:'127.0.0.1')
+      Poste2::send_message('dashboard', recipient, body:body, subject:subject)
+    end
+
   end
 
 end
