@@ -45,6 +45,10 @@ module LevelsHelper
       @start_blocks = initial_blocks(current_user, @level) || @start_blocks || @level.start_blocks
     end
 
+    if current_user && params[:load_previous]
+      @start_blocks = current_user.last_attempt(@level).try(:level_source).try(:data)
+    end
+
     select_and_remember_callouts(@script_level.nil?)
     localize_levelbuilder_instructions
   end
@@ -102,21 +106,18 @@ module LevelsHelper
 
   # this defines which levels should be seeded with th last result from a different level
   def initial_blocks(user, level)
-    if params[:initial_code]
-      return params[:initial_code]
-    end
+    return nil unless user
+    
+    # initial blocks from previous level
+    if level.game.app == Game::TURTLE
+      from_level_num = case level.level_num
+                       when '3_8' then '3_7'
+                       when '3_9' then '3_8'
+                       end
 
-    if user
-      if level.game.app == Game::TURTLE
-        from_level_num = case level.level_num
-          when '3_8' then '3_7'
-          when '3_9' then '3_8'
-        end
-
-        if from_level_num
-          from_level = Level.find_by_game_id_and_level_num(level.game_id, from_level_num)
-          return user.last_attempt(from_level).try(:level_source).try(:data)
-        end
+      if from_level_num
+        from_level = Level.find_by_game_id_and_level_num(level.game_id, from_level_num)
+        return user.last_attempt(from_level).try(:level_source).try(:data)
       end
     end
     nil
