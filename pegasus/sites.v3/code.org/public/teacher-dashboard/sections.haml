@@ -78,7 +78,7 @@ theme: none
           %button.btn.btn-primary{"ng-click" => "save(section)", "ng-show" => "section.editing", style:"width:48.5%"}= I18n.t('dashboard_action_save')
           %button.btn.btn-white{"ng-click" => "cancel(section)", "ng-show" => "section.editing", style:"width:48.5%"}= I18n.t('dashboard_action_cancel')
           %button.btn.btn-danger{"ng-show" => "!section.editing && section.students.length < 1", "ng-click" => "confirm_delete(section)", style:"width:48.5%"}= I18n.t('dashboard_action_delete')
-        %form{:action=>"/certificates", :method=>"GET"}
+        %form{:action=>"/certificates", :method=>"POST"}
           %input{"ng-repeat" => "student in section.students", :type=>'hidden', :name=>'names[]', :value=>'{{student.name}}'}
           %input{:type=>'hidden', :name=>'course', :value=>'{{section.course.name}}'}
           %input.btn.btn-white{type:"submit", value:"Print Certificates", style:"margin-top:10px; width:100%"}
