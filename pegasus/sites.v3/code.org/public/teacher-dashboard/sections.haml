@@ -16,7 +16,7 @@ theme: none
   %div.jumbotron{'ng-show' => 'sectionsLoaded && sections.length <= 0'}
     %p= I18n.t('dashboard_sections_jumbotron_instruction')
 
-  %table{style: "width:100%; table-layout:fixed;", 'ng-show' => 'sections.length > 0'}
+  %table{style: "width:100%; table-layout:auto;", 'ng-show' => 'sections.length > 0'}
     %colgroup
       %col{width:"200"}
       %col{width:"130"}
