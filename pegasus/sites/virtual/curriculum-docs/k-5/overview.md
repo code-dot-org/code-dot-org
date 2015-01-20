@@ -43,7 +43,7 @@ Each course experience is a blend of online activities and "unplugged" activitie
 
 Each course consists of about 18 to 20 lessons, each lasting between 25 and 45 minutes. They can be taught at a comfortable pace whether in consecutive days as a sub-unit or one day a week for 18 weeks. The content of each course builds conceptually on the previous course, so that a student can progress through all three experiences learning new concepts along the way. 
 
-Code.org’s K-5 curriculum aligns to [CSTA Computer Science Standards](https://csta.acm.org/Curriculum/sub/K12Standards.html) and [ISTE](http://www.iste.org/STANDARDS) standards, while some lessons also integrate national [Math](http://www.corestandards.org/Math/), [English Language Arts](http://www.corestandards.org/ELA-Literacy/), and [Science](http://www.nextgenscience.org/next-generation-science-standards) standards.
+Code.org’s K-5 curriculum aligns to [CSTA Computer Science Standards](http://csta.acm.org/Curriculum/sub/K12Standards.html) and [ISTE](http://www.iste.org/STANDARDS) standards, while some lessons also integrate national [Math](http://www.corestandards.org/Math/), [English Language Arts](http://www.corestandards.org/ELA-Literacy/), and [Science](http://www.nextgenscience.org/next-generation-science-standards) standards.
 
 
 The use of *Computer Science Themes* scaffolds the development of ideas and recognizes the continual construction of knowledge:
