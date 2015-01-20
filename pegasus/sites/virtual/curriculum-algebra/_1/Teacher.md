@@ -4,21 +4,12 @@ view: page_curriculum
 theme: none
 ---
 
-<% lesson_id = 'alg1' %>
 
 <%= partial('curriculum_header', :unplugged=>true, :title=> 'Video Games and Coordinate Planes',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>'30-60') %>
-
-<%
-lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
-anchor = DB[:cdo_standards].where(id_s:lesson[:anchor_s]).first
-standards = lesson[:standards_s].split(";").collect{|id| DB[:cdo_standards].where(id_s:id).first}.reject(&:blank?)
-%>
 
 [content]
 
 [together]
-
-#### Standards
 
 ## Lesson Overview
 Students discuss the components of their favorite video games, and discover that they can be reduced to a series of coordinates. They then explore coordinates in Cartesian space, and identify the coordinates for the characters in a game at various points in time. Once they are comfortable with coordinates, they brainstorm their own games and create sample coordinate lists for different points in time in their own game.
@@ -30,10 +21,8 @@ Students discuss the components of their favorite video games, and discover that
 
 <details>
 <summary>Anchor Standards</summary>
-
-### <%= anchor[:family_s] %>
-
-- **<%= anchor[:id_s] %>**: <%= anchor[:desc_t] %>
+### Common Core Math Standards
+- 5.G.1-2: Graph points on the coordinate plane to solve real-world and mathematical problems
 
 _Additional standards alignment can be found at the end of this lesson_
 </details>
@@ -47,13 +36,8 @@ _Additional standards alignment can be found at the end of this lesson_
 <details>
 <summary>Prerequisite Knowledge</summary>
 ### This lesson assumes that students can:
-
-<ul>
-<% lesson[:prereqs_s].split(";").each do |prereq| %>
-  <li><%= prereq %></li>
-<% end %>
-</ul>
-
+- Add and subtract whole numbers
+- Multiply and divide whole numbers
 </details>
 
 [summary]
@@ -224,9 +208,10 @@ Visit [MSM Stage 1](http://studio.code.org/s/algebra/stage/1/puzzle/1) in Code S
 
 ### Common Core Math Standards
 
-<% standards.each do |standard| %>
-- <%= standard[:id_s] %>: <%= standard[:desc_t] %>
-<% end %>
+- 5.G.1-2: Graph points on the coordinate plane to solve real-world and mathematical problems.
+- 5.OA.1-2: Write and interpret numerical expressions.
+- 6.NS.5-8: The student performs operations with negative numbers, works with the number line and coordinate plane, order and absolute value of numbers, and solves real-world problems with rational numbers.
+- N-Q: The student reasons quantitatively in using units to solve problems.
 
 ### CSTA K-12 Computer Science Standards
 

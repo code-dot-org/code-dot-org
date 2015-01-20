@@ -86,17 +86,13 @@ Blockly.inject = function(container, opt_options) {
  * @private
  */
 Blockly.parseOptions_ = function(options) {
-  var hasCategories, hasTrashcan, hasCollapse, grayOutUndeletableBlocks, tree,
-    hasScrollbars;
-
   var readOnly = !!options['readOnly'];
-
   if (readOnly) {
-    hasCategories = false;
-    hasTrashcan = false;
-    hasCollapse = false;
-    grayOutUndeletableBlocks = false;
-    tree = null;
+    var hasCategories = false;
+    var hasTrashcan = false;
+    var hasCollapse = false;
+    var grayOutUndeletableBlocks = false;
+    var tree = null;
   } else {
     var tree = options['toolbox'];
     if (tree) {
@@ -110,29 +106,30 @@ Blockly.parseOptions_ = function(options) {
       if (typeof tree == 'string') {
         tree = Blockly.Xml.textToDom(tree);
       }
-      hasCategories = !!tree.getElementsByTagName('category').length;
+      var hasCategories = !!tree.getElementsByTagName('category').length;
     } else {
       tree = null;
-      hasCategories = false;
+      var hasCategories = false;
     }
-    hasTrashcan = options['trashcan'];
+    var hasTrashcan = options['trashcan'];
     if (hasTrashcan === undefined) {
       hasTrashcan = hasCategories;
     }
-    hasCollapse = options['collapse'];
+    var hasCollapse = options['collapse'];
     if (hasCollapse === undefined) {
       hasCollapse = hasCategories;
     }
-    grayOutUndeletableBlocks = options['grayOutUndeletableBlocks'];
+    var grayOutUndeletableBlocks = options['grayOutUndeletableBlocks'];
     if (grayOutUndeletableBlocks === undefined) {
       grayOutUndeletableBlocks = false;
     }
   }
+  var varsInGlobals = !!options['varsInGlobals'];
   if (tree && !hasCategories) {
     // Scrollbars are not compatible with a non-flyout toolbox.
-    hasScrollbars = false;
+    var hasScrollbars = false;
   } else {
-    hasScrollbars = options['scrollbars'];
+    var hasScrollbars = options['scrollbars'];
     if (hasScrollbars === undefined) {
       hasScrollbars = false;
     }
@@ -148,8 +145,7 @@ Blockly.parseOptions_ = function(options) {
     hasCategories: hasCategories,
     hasScrollbars: hasScrollbars,
     hasTrashcan: hasTrashcan,
-    varsInGlobals: options['varsInGlobals'] || false,
-    generateFunctionPassBlocks: options['generateFunctionPassBlocks'] || false,
+    varsInGlobals: varsInGlobals,
     languageTree: tree,
     disableParamEditing: options['disableParamEditing'] || false,
     disableVariableEditing: options['disableVariableEditing'] || false,

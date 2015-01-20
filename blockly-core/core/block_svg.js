@@ -34,12 +34,26 @@ goog.require('goog.userAgent');
  */
 var INLINE_ROW = -1;
 
+
 /**
  * Class for a block's SVG representation.
  * @param {!Blockly.Block} block The underlying block object.
  * @constructor
  */
 Blockly.BlockSvg = function(block) {
+  /**
+   * SVG path for drawing next/previous notch from left to right.
+   */
+  this.notchPathLeft = 'l 6,4 3,0 6,-4';
+  /**
+   * SVG path for drawing next/previous notch from left to right with
+   * highlighting.
+   */
+  this.notchPathLeftHighlight = 'l 6.5,4 2,0 6.5,-4';
+  /**
+   * SVG path for drawing next/previous notch from right to left.
+   */
+  this.notchPathRight = 'l -6,4 -3,0 -6,-4';
 
   this.block_ = block;
   var options = {
@@ -909,12 +923,10 @@ Blockly.BlockSvg.prototype.renderDrawTop_ = function(renderInfo, rightEdge,
 
   // Top edge.
   if (this.block_.previousConnection) {
-    var notchPaths = this.block_.previousConnection.getNotchPaths();
-
     renderInfo.core.push('H', BS.NOTCH_WIDTH - BS.NOTCH_PATH_WIDTH);
     renderInfo.highlight.push('H', BS.NOTCH_WIDTH - BS.NOTCH_PATH_WIDTH);
-    renderInfo.core.push(notchPaths.left);
-    renderInfo.highlight.push(notchPaths.leftHighlight);
+    renderInfo.core.push(this.notchPathLeft);
+    renderInfo.highlight.push(this.notchPathLeftHighlight);
     // Create previous block connection.
     var connectionX = connectionsXY.x + oppositeIfRTL(BS.NOTCH_WIDTH);
     var connectionY = connectionsXY.y;
@@ -1076,11 +1088,10 @@ Blockly.BlockSvg.prototype.renderDrawRightNextStatement_ = function(renderInfo,
       titleX += (titleRightX + titleX) / 2;
     }
   }
-  var notchPaths = input.connection.getNotchPaths();
   this.renderTitles_(input.titleRow, titleX, titleY);
   renderInfo.curX = inputRows.statementEdge + BS.NOTCH_WIDTH;
   renderInfo.core.push('H', renderInfo.curX);
-  renderInfo.core.push(this.innerTopLeftCorner(notchPaths.right));
+  renderInfo.core.push(this.innerTopLeftCorner());
   renderInfo.core.push('v', row.height - 2 * BS.CORNER_RADIUS);
   renderInfo.core.push(BS.INNER_BOTTOM_LEFT_CORNER);
   renderInfo.core.push('H', inputRows.rightEdgeWithoutInline);
@@ -1230,8 +1241,7 @@ Blockly.BlockSvg.prototype.renderDrawBottom_ = function(renderInfo, connectionsX
   renderInfo.core.push(brokenControlPointWorkaround());
 
   if (this.block_.nextConnection) {
-    var notchPaths = this.block_.nextConnection.getNotchPaths();
-    renderInfo.core.push('H', BS.NOTCH_WIDTH + ' ' + notchPaths.right);
+    renderInfo.core.push('H', BS.NOTCH_WIDTH + ' ' + this.notchPathRight);
     // Create next block connection.
     var connectionX = connectionsXY.x + oppositeIfRTL(BS.NOTCH_WIDTH);
     var connectionY = connectionsXY.y + renderInfo.curY + 1;
@@ -1301,8 +1311,8 @@ Blockly.BlockSvg.prototype.setVisible = function (visible) {
  * SVG path for drawing the top-left corner of a statement input.
  * Includes the top notch, a horizontal space, and the rounded inside corner.
  */
-Blockly.BlockSvg.prototype.innerTopLeftCorner = function (notchPathRight) {
-  return notchPathRight + ' h -' +
+Blockly.BlockSvg.prototype.innerTopLeftCorner = function () {
+  return this.notchPathRight + ' h -' +
       (BS.NOTCH_WIDTH - BS.NOTCH_PATH_WIDTH -
       BS.CORNER_RADIUS) +
       ' a ' + BS.CORNER_RADIUS + ',' +

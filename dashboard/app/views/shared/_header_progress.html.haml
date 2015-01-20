@@ -18,7 +18,6 @@
         .header_popup_link_text= t(:more)
 
 :javascript
-  //<![CDATA[
   var scriptData = #{header_progress(@script_level).to_json};
   $('.header_text').first().text(scriptData.title);
   if (scriptData.finishLink) {
@@ -45,4 +44,3 @@
     }
     progressContainer.append(div).append('\n');
   });
-  //]]>
