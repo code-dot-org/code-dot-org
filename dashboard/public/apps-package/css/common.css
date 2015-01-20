@@ -1,7 +1,7 @@
 body {
   font-family: 'Gotham 4r', sans-serif;
   font-weight: normal;
-  background-color: #f2f2f2;
+  background-color: #F2F2F2;
   font-weight: normal;
   margin-top: 0; }
 
@@ -15,9 +15,9 @@ h2 {
   font-weight: normal; }
 
 a {
-  color: #0596ce; }
+  color: #0596CE; }
   a:hover {
-    color: #0596ce;
+    color: #0596CE;
     background: none; }
 
 strong {
@@ -50,11 +50,11 @@ div.droplet-palette-group-header {
   font-weight: normal; }
 
 div.droplet-palette-group-header:active {
-  color: black; }
+  color: #000; }
 
 div.droplet-palette-group-header-selected {
   font-weight: 400;
-  color: black; }
+  color: #000; }
 
 .droplet-palette-group-header.yellow {
   border-left: 10px solid #e0e053; }
@@ -63,10 +63,10 @@ div.droplet-palette-group-header-selected {
   background-color: #e0e053; }
 
 .droplet-palette-group-header.red {
-  border-left: 10px solid #fa8a8c; }
+  border-left: 10px solid #FA8A8C; }
 
 .droplet-palette-group-header-selected.red {
-  background-color: #fa8a8c; }
+  background-color: #FA8A8C; }
 
 .droplet-wrapper-div {
   outline-style: none; }
@@ -93,9 +93,9 @@ div.droplet-palette-group-header-selected {
 #codeWorkspace {
   position: absolute;
   bottom: 10px;
-  box-shadow: 7px 7px 10px #888888;
+  box-shadow: 7px 7px 10px #888;
   margin-left: 415px;
-  border: 4px solid #dddddd;
+  border: 4px solid #ddd;
   overflow: hidden; }
 
 .ace_gutter-cell.ace_breakpoint {
@@ -120,8 +120,6 @@ div.droplet-palette-group-header-selected {
 
 /* Shrink the visualization area on small displays. */
 @media screen and (max-width: 1150px) {
-  /* Make buttons, videos, etc. clickable. Otherwise, the scaled svg/canvas
-   * obscures clicks on its original, unscaled position.  */
   #visualization.responsive > * {
     -webkit-transform-origin: 0 0;
     -ms-transform-origin: 0 0;
@@ -130,76 +128,96 @@ div.droplet-palette-group-header-selected {
       -webkit-transform-origin: 100% 0;
       -ms-transform-origin: 100% 0;
       transform-origin: 100% 0; }
+
+  /* Make buttons, videos, etc. clickable. Otherwise, the scaled svg/canvas
+   * obscures clicks on its original, unscaled position.  */
   #belowVisualization {
     z-index: 1;
-    position: relative; } }
+    position: relative; }
+ }
 
 @media screen and (min-width: 1101px) and (max-width: 1150px) {
   #visualization.responsive {
     max-height: 350px; }
+
   #visualizationColumn.responsive {
     max-width: 350px; }
+
   #visualization.responsive > * {
     -webkit-transform: scale(0.875);
     -ms-transform: scale(0.875);
     transform: scale(0.875); }
+
   .bee-counter-text {
     font-size: 20px;
-    stroke-width: 1.2px; } }
+    stroke-width: 1.2px; }
+ }
 
 @media screen and (min-width: 1051px) and (max-width: 1100px) {
   #visualization.responsive {
     max-height: 300px; }
+
   #visualizationColumn.responsive {
     max-width: 300px; }
+
   #visualization.responsive > * {
     -webkit-transform: scale(0.75);
     -ms-transform: scale(0.75);
     transform: scale(0.75); }
+
   .bee-counter-text {
     font-size: 24px;
-    stroke-width: 1.4px; } }
+    stroke-width: 1.4px; }
+ }
 
 @media screen and (min-width: 1001px) and (max-width: 1050px) {
   #visualization.responsive {
     max-height: 250px; }
+
   #visualizationColumn.responsive {
     max-width: 250px; }
+
   #visualization.responsive > * {
     -webkit-transform: scale(0.625);
     -ms-transform: scale(0.625);
     transform: scale(0.625); }
+
   .bee-counter-text {
     font-size: 28px;
-    stroke-width: 1.6px; } }
+    stroke-width: 1.6px; }
+ }
 
 @media screen and (max-width: 1000px) {
   #visualization.responsive {
     max-height: 200px; }
+
   #visualizationColumn.responsive {
     max-width: 200px; }
+
   #visualization.responsive > * {
     -webkit-transform: scale(0.5);
     -ms-transform: scale(0.5);
     transform: scale(0.5); }
+
   .bee-counter-text {
     font-size: 32px;
-    stroke-width: 2px; } }
+    stroke-width: 2px; }
+ }
 
 /* Buttons */
 button, label.img-upload {
   margin: 5px;
   padding: 10px;
   border-radius: 4px;
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
   font-size: large;
-  background-color: #eeeeee;
-  color: black; }
+  background-color: #eee;
+  color: #000; }
 
 button.launch {
   border: 1px solid #ffa400;
   background-color: #ffa400;
-  color: white;
+  color: #fff;
   font-size: large;
   min-width: 96px;
   margin-left: 0px;
@@ -247,9 +265,9 @@ button.blocklyLaunch {
     background-color: #0094ca; }
 
 button.share {
-  border: 1px solid #ffa000;
-  background-color: #ffa000;
-  color: white;
+  border: 1px solid #FFA000;
+  background-color: #FFA000;
+  color: #fff;
   margin-left: 0px;
   margin-right: 0px; }
 
@@ -260,14 +278,14 @@ button:hover > img {
   opacity: 1; }
 
 button:active {
-  border: 1px solid #888888 !important; }
+  border: 1px solid #888 !important; }
 
 button:hover {
-  box-shadow: 2px 2px 5px #888888; }
+  box-shadow: 2px 2px 5px #888; }
 
 button.disabled, button[disabled=disabled], button:disabled {
-  border: 1px solid #c7c7c7;
-  background-color: #c7c7c7;
+  border: 1px solid #C7C7C7;
+  background-color: #C7C7C7;
   box-shadow: none; }
   button.disabled:hover, button[disabled=disabled]:hover, button:disabled:hover {
     box-shadow: none; }
@@ -291,7 +309,8 @@ input[type="radio"] {
 
 @media screen and (max-width: 1050px) {
   #stepButton {
-    min-width: 0; } }
+    min-width: 0; }
+ }
 
 #learn h1 {
   margin: 20px 0px 0px 0px; }
@@ -342,22 +361,22 @@ input[type="radio"] {
 
 #dialog {
   visibility: hidden;
-  background-color: white;
-  color: black;
-  border: 1px solid black;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
   position: absolute;
   border-radius: 8px;
-  box-shadow: 5px 5px 5px #888888;
+  box-shadow: 5px 5px 5px #888;
   padding: 10px;
   z-index: 20000; }
 
 #dialogBorder {
   visibility: hidden;
   position: absolute;
-  background-color: white;
-  color: black;
+  background-color: #fff;
+  color: #000;
   border-radius: 6px;
-  box-shadow: 5px 5px 5px #888888; }
+  box-shadow: 5px 5px 5px #888; }
 
 #dialogShadow {
   height: 100%;
@@ -366,7 +385,7 @@ input[type="radio"] {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: black;
+  background-color: #000;
   opacity: 0.3;
   z-index: 1; }
 
@@ -401,7 +420,7 @@ input[type="radio"] {
   font-size: 30px;
   margin: 20px 0px 20px 0px;
   line-height: 28px;
-  color: #7e5ba0;
+  color: #7E5BA0;
   font-family: 'Gotham 7r', sans-serif;
   font-weight: normal; }
 
@@ -409,7 +428,7 @@ input[type="radio"] {
   margin-bottom: 5px; }
 
 #hint {
-  color: white;
+  color: #fff;
   padding: 5px 1em;
   font-size: large; }
 
@@ -458,10 +477,12 @@ input[type="radio"] {
   #prompt-table.with-ani-gif {
     margin-right: 80px;
     padding-right: 5px; }
+
   #ani-gif-preview-wrapper {
     position: absolute;
     right: 0px;
-    top: 0px; } }
+    top: 0px; }
+ }
 
 #headers {
   height: 40px;
@@ -531,7 +552,7 @@ input[type="radio"] {
   font-weight: normal; }
 
 .goog-menu {
-  box-shadow: 4px 4px 6px #bbbbbb;
+  box-shadow: 4px 4px 6px #bbb;
   border-width: 2px; }
 
 .goog-menuitem {
@@ -541,10 +562,10 @@ input[type="radio"] {
 
 .goog-menuitem-highlight, .goog-menuitem-hover {
   border-width: 0;
-  background-color: #5577ee; }
+  background-color: #57e; }
 
 .goog-menuitem-highlight .goog-menuitem-content {
-  color: white; }
+  color: #fff; }
 
 .goog-option-selected .goog-menuitem-checkbox:before {
   content: "✓"; }

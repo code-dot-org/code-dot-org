@@ -1,5 +1,5 @@
 #svgMaze {
-  border: solid 1px #dbdbdb; }
+  border: solid 1px #DBDBDB; }
 
 /* 'Look' icon */
 #look > path {
@@ -54,7 +54,7 @@
   margin-right: 0; }
 
 .spellingButton {
-  color: white;
+  color: #fff;
   font-size: large;
   min-width: 96px;
   margin-left: 0;
