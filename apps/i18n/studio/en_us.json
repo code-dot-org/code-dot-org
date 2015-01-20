@@ -141,6 +141,13 @@
   "setBackgroundSpace": "set space background",
   "setBackgroundTennis": "set tennis background",
   "setBackgroundWinter": "set winter background",
+  "setBackgroundLeafy": "set leafy background",
+  "setBackgroundGrassy": "set grassy background",
+  "setBackgroundFlower": "set flower background",
+  "setBackgroundTile": "set tile background",
+  "setBackgroundIcy": "set icy background",
+  "setBackgroundSnowy": "set snowy background",
+
   "setBackgroundTooltip": "Sets the background image",
   "setEnemySpeed": "set enemy speed",
   "setPlayerSpeed": "set player speed",
