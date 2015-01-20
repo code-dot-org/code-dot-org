@@ -22,15 +22,16 @@
   <blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false"/>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="procedures_callnoreturn">
+              <mutation name="do something"/>
+            </block>
+          </next>
+        </block>
         <block type="procedures_defnoreturn">
           <mutation/>
           <title name="NAME">do something</title>
-          <statement name="STACK">
-            <block type="variables_set" inline="false">
-              <title name="VAR">i</title>
-            </block>
-          </statement>
         </block>
       </xml>
     </solution_blocks>
