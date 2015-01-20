@@ -60,40 +60,40 @@ function loadInfinity(skin, assetUrl) {
   skin.projectile_duck = skin.assetUrl('projectile_duck.png');
 
   skin.leafy = {
-    background: skin.assetUrl('background1.png')
+    background: skin.assetUrl('background_leafy.png')
   };
   skin.grassy = {
-    background: skin.assetUrl('background2.png')
+    background: skin.assetUrl('background_grassy.png')
   };
   skin.flower = {
-    background: skin.assetUrl('background3.png')
+    background: skin.assetUrl('background_flower.png')
   };
   skin.tile = {
-    background: skin.assetUrl('background4.png')
+    background: skin.assetUrl('background_tile.png')
   };
   skin.icy = {
-    background: skin.assetUrl('background5.png')
+    background: skin.assetUrl('background_icy.png')
   };
   skin.snowy = {
-    background: skin.assetUrl('background6.png')
+    background: skin.assetUrl('background_snowy.png')
   };
 
   // These are used by blocks.js to customize our dropdown blocks across skins
   skin.backgroundChoices = [
     [msg.setBackgroundRandom(), RANDOM_VALUE],
     // todo - come up with better names and i18n
-    ["set leafy background", '"leafy"'],
-    ["set grassy background", '"grassy"'],
-    ["set flower background", '"flower"'],
-    ["set tile background", '"tile"'],
-    ["set icy background", '"icy"'],
-    ["set snowy background", '"snowy"'],
+    [msg.setBackgroundLeafy(), '"leafy"'],
+    [msg.setBackgroundGrassy(), '"grassy"'],
+    [msg.setBackgroundFlower(), '"flower"'],
+    [msg.setBackgroundTile(), '"tile"'],
+    [msg.setBackgroundIcy(), '"icy"'],
+    [msg.setBackgroundSnowy(), '"snowy"'],
     ];
 
   skin.backgroundChoicesK1 = [
     [skin.randomPurpleIcon, RANDOM_VALUE],
-    ["set leafy background", '"leafy"'],
-    ["set grassy background", '"grassy"']];
+    [msg.setBackgroundLeafy(), '"leafy"'],
+    [msg.setBackgroundGrassy(), '"grassy"']];
 
   skin.spriteChoices = [
     [msg.setSpriteHidden(), HIDDEN_VALUE],

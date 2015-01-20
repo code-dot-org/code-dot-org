@@ -2067,10 +2067,12 @@ Studio.setSprite = function (opts) {
   // Reset height and width:
   sprite.height = sprite.size * skin.spriteHeight;
   sprite.width = sprite.size * skin.spriteWidth;
-  if (skin.projectileSpriteHeight)
+  if (skin.projectileSpriteHeight) {
     sprite.projectileSpriteHeight = sprite.size * skin.projectileSpriteHeight;
-  if (skin.projectileSpriteWidth)
+  }
+  if (skin.projectileSpriteWidth) {
     sprite.projectileSpriteWidth = sprite.size * skin.projectileSpriteWidth;
+  }
   sprite.value = opts.forceHidden ? 'hidden' : opts.value;
 
   var spriteClipRect = document.getElementById('spriteClipRect' + spriteIndex);
@@ -2330,12 +2332,13 @@ Studio.throwProjectile = function (options) {
 
   var frames;
 
-  if (/.gif$/.test(skin[options.className]))
+  if (/.gif$/.test(skin[options.className])) {
     frames = 1;
-  else if (skin.specialProjectileFrames && skin.specialProjectileFrames[options.className])
+  } else if (skin.specialProjectileFrames && skin.specialProjectileFrames[options.className]) {
     frames = skin.specialProjectileFrames[options.className];
-  else
+  } else {
     frames = skin.projectileFrames;
+  }
 
   var projectileOptions = {
     frames: frames,
