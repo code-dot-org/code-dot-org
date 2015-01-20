@@ -103,10 +103,11 @@ Blockly.BlockSvgFunctional.prototype.renderDrawRightInlineFunctional_ =
   };
 
   var notchStart = BS.NOTCH_WIDTH - BS.NOTCH_PATH_WIDTH;
+  var notchPaths = input.connection.getNotchPaths();
 
   renderInfo.inline.push('M', inputTopLeft.x + ',' + inputTopLeft.y);
   renderInfo.inline.push('h', notchStart);
-  renderInfo.inline.push(this.notchPathLeft);
+  renderInfo.inline.push(notchPaths.left);
   renderInfo.inline.push('H', inputTopLeft.x + input.renderWidth);
   renderInfo.inline.push('v', input.renderHeight);
   renderInfo.inline.push('H', inputTopLeft.x);

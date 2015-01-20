@@ -1275,9 +1275,13 @@ StudioApp.prototype.handleHideSource_ = function (options) {
 };
 
 StudioApp.prototype.handleEditCode_ = function (options) {
-  // using window.require forces us to use requirejs version of require
-  window.require(['droplet'], _.bind(function(droplet) {
+  requirejs(['droplet'], _.bind(function(droplet) {
     var displayMessage, examplePrograms, messageElement, onChange, startingText;
+
+    // Ensure global ace variable is the same as window.ace
+    // (important because they can be different in our test environment)
+    ace = window.ace;
+    
     this.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
       mode: 'javascript',
       modeOptions: utils.generateDropletModeOptions(options.codeFunctions),
@@ -1299,14 +1303,18 @@ StudioApp.prototype.handleEditCode_ = function (options) {
       enableLiveAutocompletion: true
     });
 
-    if (options.afterInject) {
-      options.afterInject();
-    }
-
     if (options.startBlocks) {
       this.editor.setValue(options.startBlocks);
     }
+
+    if (options.afterEditorReady) {
+      options.afterEditorReady();
+    }
   }, this));
+
+  if (options.afterInject) {
+    options.afterInject();
+  }
 };
 
 /**
@@ -1359,8 +1367,8 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     editBlocks: config.level.edit_blocks === undefined ?
         false : config.level.edit_blocks
   };
-  ['trashcan', 'varsInGlobals',
-    'grayOutUndeletableBlocks', 'disableParamEditing'].forEach(
+  ['trashcan', 'varsInGlobals', 'grayOutUndeletableBlocks',
+    'disableParamEditing', 'generateFunctionPassBlocks'].forEach(
     function (prop) {
       if (config[prop] !== undefined) {
         options[prop] = config[prop];
@@ -1477,7 +1485,14 @@ module.exports = function(app, levels, options) {
     } else {
       app.init(options);
       if (options.onInitialize) {
-        options.onInitialize();
+        if (studioApp.editCode) {
+          // for editCode levels, we have to delay the onInitialize callback
+          // until the droplet editor has loaded.
+          // TODO: build a proper state machine with onEditorReady() callback
+          setTimeout(options.onInitialize, 0);
+        } else {
+          options.onInitialize();
+        }
       }
     }
   });
@@ -15560,25 +15575,24 @@ exports.install = function(blockly, blockInstallOptions) {
 
   blockly.Blocks.functional_start_setValue = {
     init: function() {
-      var blockName = 'start (value)';
+      var blockName = msg.startSetValue();
       var blockType = 'none';
-      var blockArgs = [{name: 'VALUE', type: 'Number'}];
+      var blockArgs = [{name: 'VALUE', type: 'function'}];
       initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
     }
   };
 
   generator.functional_start_setValue = function() {
-    // Adapted from Blockly.JavaScript.variables_set.
-    var argument0 = Blockly.JavaScript.statementToCode(this, 'VALUE',
-        Blockly.JavaScript.ORDER_ASSIGNMENT) || '0';
-    var varName = Blockly.JavaScript.translateVarName('startValue');
-    return varName + ' = ' + argument0 + ';\n';
+    // For the current design, this doesn't need to generate any code.
+    // Though we pass in a function, we're not actually using that passed in
+    // function, and instead depend on a function of the required name existing
+    // in the global space. This may change in the future.
   };
 
   installFunctionalApiCallBlock(blockly, generator, {
     blockName: 'functional_start_dummyOnMove',
     blockTitle: 'on-move (on-screen)',
-    args: [{name: 'VAL', type: 'boolean', default: 'false'}]
+    args: [{name: 'VAL', type: 'function'}]
   });
 
   installFunctionalApiCallBlock(blockly, generator, {
@@ -19070,6 +19084,7 @@ Studio.init = function(config) {
   // Disable "show code" button in feedback dialog when workspace is hidden
   config.enableShowCode = !config.level.embed && studioApp.editCode;
   config.varsInGlobals = true;
+  config.generateFunctionPassBlocks = !!config.level.generateFunctionPassBlocks;
 
   Studio.initSprites();
 
@@ -19462,12 +19477,9 @@ Studio.execute = function() {
   var handlers = [];
   if (studioApp.isUsingBlockly()) {
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
-    registerHandlers(handlers, 'functional_start_setValue', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackground', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setSpeeds', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackgroundAndSpeeds',
-        'whenGameStarts');
-    registerHandlers(handlers, 'functional_start_dummyOnMove',
         'whenGameStarts');
     registerHandlers(handlers, 'studio_whenLeft', 'when-left');
     registerHandlers(handlers, 'studio_whenRight', 'when-right');
@@ -22012,6 +22024,8 @@ exports.soundWinPoint2 = function(d){return "赢得2分"};
 exports.soundWood = function(d){return "木材"};
 
 exports.speed = function(d){return "速度"};
+
+exports.startSetValue = function(d){return "start (rocket-height function)"};
 
 exports.stopSprite = function(d){return "停止"};
 
