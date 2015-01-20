@@ -1,0 +1,8 @@
+## Include correct information about the app and key details
+## And rename this file to ga_config.yml
+service_account_email: email_id_of_yourapp@developer.gserviceaccount.com
+profileID: 01234567
+key_file: ga_api_key.p12
+key_secret: notasecret
+application_name: cdo-ga-analytics
+application_version: 0.0.1

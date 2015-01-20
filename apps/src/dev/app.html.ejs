@@ -54,7 +54,11 @@
       console.log('Attempt!');
       console.log(report);
       if (report.onComplete) {
-        report.onComplete();
+        // Notify the app that the report operation is complete
+        // (important to do this asynchronously to simulate a service call or else
+        //  we will have problems with the animating_ / waitingForReport_ states
+        //  in the maze state machine)
+        setTimeout(report.onComplete, 0);
       }
     };
     appOptions.onContinue = function () {

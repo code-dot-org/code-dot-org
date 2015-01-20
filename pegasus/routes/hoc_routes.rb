@@ -1,5 +1,7 @@
+partner_sites = ['al.code.org', 'ar.code.org', 'br.code.org', 'eu.code.org', 'italia.code.org', 'ro.code.org', 'uk.code.org']
+
 get '/:short_code' do |short_code|
-  only_for ['code.org', 'csedweek.org', 'hourofcode.com', 'uk.code.org']
+  only_for ['code.org', 'csedweek.org', 'hourofcode.com', partner_sites].flatten
   pass if request.site == 'hourofcode.com' && ['ap', 'ca', 'co', 'gr'].include?(short_code)
   pass unless tutorial = DB[:tutorials].where(short_code:short_code).first 
   launch_tutorial(tutorial)
@@ -19,19 +21,19 @@ get '/api/hour/begin_company/:company' do |company|
 end
 
 get '/api/hour/begin/:code' do |code|
-  only_for ['code.org', 'csedweek.org', 'uk.code.org']
+  only_for ['code.org', 'csedweek.org', partner_sites].flatten
   pass unless tutorial = DB[:tutorials].where(code:code).first
   launch_tutorial(tutorial)
 end
 
 get '/api/hour/begin_:code.png' do |code|
-  only_for ['code.org', 'csedweek.org', 'uk.code.org']
+  only_for ['code.org', 'csedweek.org', partner_sites].flatten
   pass unless tutorial = DB[:tutorials].where(code:code).first
   launch_tutorial_pixel(tutorial)
 end
 
 get '/api/hour/certificate/:filename' do |filename|
-  only_for ['code.org', 'csedweek.org', 'uk.code.org']
+  only_for ['code.org', 'csedweek.org', partner_sites].flatten
 
   extname = File.extname(filename)
   pass unless settings.image_extnames.include?(extname)
@@ -71,7 +73,7 @@ get '/v2/hoc/certificate/:filename' do |filename|
 end
 
 get '/api/hour/certificate64/:course/:filename' do |course, filename|
-  only_for ['code.org', 'csedweek.org', 'uk.code.org']
+  only_for ['code.org', 'csedweek.org', partner_sites].flatten
   extname = File.extname(filename)
   encoded = File.basename(filename, extname)
   label = Base64.urlsafe_decode64(encoded)
@@ -89,24 +91,24 @@ get '/api/hour/certificate64/:course/:filename' do |course, filename|
 end
 
 get '/api/hour/finish' do
-  only_for ['code.org', 'csedweek.org', 'uk.code.org']
+  only_for ['code.org', 'csedweek.org', partner_sites].flatten
   complete_tutorial()
 end
 
 get '/api/hour/finish/:code' do |code|
-  only_for ['code.org', 'csedweek.org', 'uk.code.org']
+  only_for ['code.org', 'csedweek.org', partner_sites].flatten
   pass unless tutorial = DB[:tutorials].where(code:code).first
   complete_tutorial(tutorial)
 end
 
 get '/api/hour/finish_:code.png' do |code|
-  only_for ['code.org', 'csedweek.org', 'uk.code.org']
+  only_for ['code.org', 'csedweek.org', partner_sites].flatten
   pass unless tutorial = DB[:tutorials].where(code:code).first
   complete_tutorial_pixel(tutorial)
 end
 
 get '/api/hour/status' do
-  only_for ['code.org', 'csedweek.org', 'uk.code.org']
+  only_for ['code.org', 'csedweek.org', partner_sites].flatten
   pass unless row = DB[:hoc_activity].where(session:request.cookies['hour_of_code']).first
   dont_cache
   content_type :json
@@ -114,7 +116,7 @@ get '/api/hour/status' do
 end
 
 get '/api/hour/status/:code' do |code|
-  only_for ['code.org', 'csedweek.org', 'uk.code.org']
+  only_for ['code.org', 'csedweek.org', partner_sites].flatten
   pass unless row = DB[:hoc_activity].where(session:code).first
   dont_cache
   content_type :json
@@ -122,7 +124,7 @@ get '/api/hour/status/:code' do |code|
 end
 
 post '/api/hour/certificate' do
-  only_for ['code.org', 'csedweek.org', 'uk.code.org']
+  only_for ['code.org', 'csedweek.org', partner_sites].flatten
 
   row = DB[:hoc_activity].where(session:params[:session_s]).first
   if row

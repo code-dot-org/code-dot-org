@@ -194,12 +194,14 @@ These topics will be important in the online lessons that follow, so taking an e
 [/together]
 
 [together]
+
 [tip]
 
 # Lesson Tip
 Note that the rules are not the most important thing here.  Feel free to clarify if the students have questions, but if the students are playing a bit differently than described, you don't need to hold them to the letter of the game.  The crucial bit is that they are moving from immediate instructions to giving two or three instructions before the Walking Machine moves.
 
 [/tip]
+
 [/together]
 
 

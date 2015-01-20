@@ -7,9 +7,6 @@ var baseOptions = {
   position: { blockYCoordinateInterval: 25 },
   onInitialize: function() {
     this.createCallouts();
-    onInitializeListeners.forEach(function(listener) {
-      listener();
-    });
   },
   createCallouts: function() {
     $.fn.qtip.zindex = 500;
