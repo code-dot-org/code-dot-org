@@ -1,5 +1,6 @@
 require File.expand_path('../boot', __FILE__)
 require File.expand_path('../deployment', __FILE__)
+require 'cdo/poste'
 require 'rails/all'
 
 require 'cdo/geocoder'
@@ -21,6 +22,8 @@ module Dashboard
     config.middleware.use SharedResources
 
     config.encoding = 'utf-8'
+
+    Rails.application.routes.default_url_options[:host] = CDO.canonical_hostname('studio.code.org')
 
     config.generators do |g|
       g.template_engine :haml
