@@ -572,10 +572,17 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
         var submitted = false;
         var submitButton = sharingDiv.querySelector('#phone-submit');
         submitButton.disabled = true;
-        phone.mask('(000) 000-0000',{
-            onComplete:function(){if(!submitted) submitButton.disabled=false;},
-            onChange: function(){submitButton.disabled=true;}
-        });
+        phone.mask('(000) 000-0000', {
+            onComplete:function(){
+              if (!submitted) {
+                submitButton.disabled = false;
+              }
+            },
+            onChange: function () {
+              submitButton.disabled = true;
+            }
+          }
+        );
         phone.focus();
         dom.addClickTouchEvent(submitButton, function() {
           var phone = $(sharingDiv.querySelector("#phone"));

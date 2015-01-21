@@ -334,6 +334,7 @@ config.watch = {
 
 config.jshint = {
   options: {
+    curly: true,
     node: true,
     browser: true,
     globals: {
