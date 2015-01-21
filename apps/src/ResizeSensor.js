@@ -126,7 +126,7 @@
             });
         }
 
-        if ('array' === typeof element ||
+        if (element && element.constructor === Array ||
           ('undefined' !== typeof jQuery && element instanceof jQuery) || //jquery
           ('undefined' !== typeof Elements && element instanceof Elements) //mootools
         ) {
