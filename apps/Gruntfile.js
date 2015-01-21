@@ -107,16 +107,6 @@ config.copy = {
       }
     ]
   },
-  browserified: {
-    files: [
-      {
-        expand: true,
-        cwd: 'build/browserified',
-        src: ['**/*.js'],
-        dest: 'build/package/js'
-      }
-    ]
-  },
   static: {
     files: [
       {
@@ -232,7 +222,6 @@ config.ejs = {
   }
 };
 
-config.browserify = {};
 var allFilesSrc = [];
 var allFilesDest = [];
 var outputDir = 'build/package/js/';
@@ -243,7 +232,8 @@ APPS.forEach(function (app) {
 
 // Use command-line tools to run browserify (faster/more stable this way)
 var browserifyExec = 'mkdir -p build/browserified && `npm bin`/browserify ' + allFilesSrc.join(' ') +
-  ' -p [ factor-bundle -o ' + allFilesDest.join(' -o ') + ' ] -o ' + outputDir + 'common.js';
+  (APPS.length > 1 ? ' -p [ factor-bundle -o ' + allFilesDest.join(' -o ') + ' ] -o ' + outputDir + 'common.js' :
+    ' -o ' + allFilesDest[0]);
 
 config.exec = {
   browserify: browserifyExec,
@@ -407,7 +397,6 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('postbuild', [
-    'newer:copy:browserified',
     'newer:copy:static',
     'newer:copy:lib',
     'newer:concat',
