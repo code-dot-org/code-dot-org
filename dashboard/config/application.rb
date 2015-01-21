@@ -1,11 +1,14 @@
 require File.expand_path('../boot', __FILE__)
 require File.expand_path('../deployment', __FILE__)
+require 'cdo/poste'
 require 'rails/all'
 
 require 'cdo/geocoder'
 require 'varnish_environment'
 require 'apps_api'
 require 'shared_resources'
+
+require 'pegasus_sites' if CDO.dashboard_enable_pegasus
 
 require 'bootstrap-sass'
 
@@ -19,8 +22,11 @@ module Dashboard
     config.middleware.use VarnishEnvironment
     config.middleware.use AppsApi
     config.middleware.use SharedResources
+    config.middleware.use PegasusSites if CDO.dashboard_enable_pegasus
 
     config.encoding = 'utf-8'
+
+    Rails.application.routes.default_url_options[:host] = CDO.canonical_hostname('studio.code.org')
 
     config.generators do |g|
       g.template_engine :haml
