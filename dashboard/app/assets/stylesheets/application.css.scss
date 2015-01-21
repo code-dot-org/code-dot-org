@@ -8,9 +8,16 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ * Gem assets
  *= require jquery.ui.all
- *= require jquery.qtip.min
  *= require video-js
+ *
+ * Vendor assets
+ *= require add2home
+ *= require gotham-font
+ *= require jquery.qtip.min
+ *
+ * Application assets
  *= require_self
  *= require_directory .
  */

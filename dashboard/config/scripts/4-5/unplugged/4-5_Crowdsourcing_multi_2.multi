@@ -3,7 +3,7 @@ title 'Multiple Choice'
 banner ''
 description ''
 question 'Which one of these activities would be best for practicing crowdsourcing?'
-height '50'
+height '20'
 
 right '<h4>Cleaning your room</h4>'
 wrong '<h4>Eating your dessert</h4>'

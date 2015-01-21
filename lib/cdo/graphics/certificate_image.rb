@@ -28,10 +28,10 @@ def create_course_certificate_image(name, course=nil, sponsor=nil)
   name = name.gsub(/@/,'\@')
   name = ' ' if name.empty?
 
-  if course == '20hours' || course == 'hoc'
+  if course == '20hours' || course == 'hoc' || course == '20-hour' || course == 'hourofcode'
     # only need to fill in name
-    image_file = (course == '20hours') ? '20hours_certificate.jpg' : 'hour_of_code_certificate.jpg'    
-    vertical_offset = course == "20hours" ? -115 : -110
+    image_file = (course == '20hours' || course == '20-hour') ? '20hours_certificate.jpg' : 'hour_of_code_certificate.jpg'
+    vertical_offset = course == '20hours' || course == '20-hour' ? -115 : -110
     image = create_certificate_image2(pegasus_dir('sites.v3', 'code.org', 'public', 'images', image_file), name, y: vertical_offset)
   else # all other courses use a certificate image where the course name is also blank
     image_file = 'blank_certificate.png'
@@ -48,9 +48,31 @@ def create_course_certificate_image(name, course=nil, sponsor=nil)
       self.fill = 'rgb(118,101,160)' # purple
     end
 
+    # Take course name and convert it to a nicer full course name for the certificate
+    case course
+      when 'artist'
+        full_course_name = 'Artist'
+      when 'course1'
+        full_course_name = 'Course 1'
+      when 'course2'
+        full_course_name = 'Course 2'
+      when 'course3'
+        full_course_name = 'Course 3'
+      when 'course3'
+        full_course_name = 'Course 4'
+      when 'frozen'
+        full_course_name = 'Frozen'
+      when 'playlab'
+        full_course_name = 'Play Lab'
+      when 'flappy'
+        full_course_name = 'Flappy Bird'
+      else
+        full_course_name = course
+    end
+
     # course name
     course_vertical_offset = 830
-    Magick::Draw.new.annotate(image, 0, 0, 0, course_vertical_offset, course) do
+    Magick::Draw.new.annotate(image, 0, 0, 0, course_vertical_offset, full_course_name) do
       self.gravity = Magick::NorthGravity
       self.pointsize = 60
       self.font_family = 'Helvetica'

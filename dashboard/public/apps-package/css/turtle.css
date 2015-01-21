@@ -1,23 +1,23 @@
 #visualization {
-  background-color: white; }
+  background-color: #fff; }
 
 /* Slider. */
 .sliderContainer {
   float: left; }
 
 .sliderTrack {
-  stroke: #aaaaaa;
+  stroke: #aaa;
   stroke-width: 6px;
   stroke-linecap: round; }
 
 .sliderKnob {
-  fill: #dddddd;
-  stroke: #bbbbcc;
+  fill: #ddd;
+  stroke: #bbc;
   stroke-width: 1px;
   stroke-linejoin: round; }
 
 .sliderKnob:hover {
-  fill: #eeeeee; }
+  fill: #eee; }
 
 /* Sprited icons. */
 .icon21 {

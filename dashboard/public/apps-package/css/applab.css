@@ -4,19 +4,23 @@ div#visualization {
 /* Shrink the visualization area on small displays. */
 @media screen and (min-width: 1101px) and (max-width: 1150px) {
   div#visualization.responsive {
-    max-height: 525px; } }
+    max-height: 525px; }
+ }
 
 @media screen and (min-width: 1051px) and (max-width: 1100px) {
   div#visualization.responsive {
-    max-height: 450px; } }
+    max-height: 450px; }
+ }
 
 @media screen and (min-width: 1001px) and (max-width: 1050px) {
   div#visualization.responsive {
-    max-height: 375px; } }
+    max-height: 375px; }
+ }
 
 @media screen and (max-width: 1000px) {
   div#visualization.responsive {
-    max-height: 300px; } }
+    max-height: 300px; }
+ }
 
 #divApplab {
   overflow: hidden;
@@ -85,18 +89,18 @@ div#visualization {
   float: left; }
 
 .sliderTrack {
-  stroke: #aaaaaa;
+  stroke: #aaa;
   stroke-width: 6px;
   stroke-linecap: round; }
 
 .sliderKnob {
-  fill: #dddddd;
-  stroke: #bbbbcc;
+  fill: #ddd;
+  stroke: #bbc;
   stroke-width: 1px;
   stroke-linejoin: round; }
 
 .sliderKnob:hover {
-  fill: #eeeeee; }
+  fill: #eee; }
 
 #pauseButton {
   min-width: 111px;
@@ -139,9 +143,9 @@ div#visualization {
   margin-right: 3px; }
 
 button.arrow {
-  border: 1px solid #ffa000;
-  background-color: #ffa000;
-  color: white;
+  border: 1px solid #FFA000;
+  background-color: #FFA000;
+  color: #fff;
   margin-left: 5px;
   margin-right: 0px;
   display: none; }

@@ -178,6 +178,8 @@ function loadLevel() {
 
   Studio.MAZE_WIDTH = Studio.SQUARE_SIZE * Studio.COLS;
   Studio.MAZE_HEIGHT = Studio.SQUARE_SIZE * Studio.ROWS;
+  studioApp.MAZE_WIDTH = Studio.MAZE_WIDTH;
+  studioApp.MAZE_HEIGHT = Studio.MAZE_HEIGHT;
 }
 
 /**
