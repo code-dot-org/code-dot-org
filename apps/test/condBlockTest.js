@@ -42,8 +42,8 @@ describe('functional_cond', function () {
       }
     }
 
-    // Ensure that we're deleting our little rects that mark input type as
-    // we remove rows
+    // Ensure that our little rects that mark input type are properly up to
+    // date (i.e. that we've removed any corresponding to removed rows).
     var numRects = block.svg_.getRootElement().querySelectorAll('rect[width="30"]').length;
     var expectedNumRects = block.pairs_.length * 2 + 1;
     assert(numRects === expectedNumRects,
