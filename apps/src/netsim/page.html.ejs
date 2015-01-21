@@ -1,0 +1,62 @@
+<%
+  var msg = require('../../locale/current/common');
+%>
+
+<div id="rotateContainer" style="background-image: url(<%= assetUrl('media/mobile_tutorial_turnphone.png') %>)">
+  <div id="rotateText">
+    <p><%= msg.rotateText() %><br><%= msg.orientationLock() %></p>
+  </div>
+</div>
+
+<% var instructions = function() { -%>
+  <div id="bubble" class="clearfix">
+    <table id="prompt-table">
+      <tr>
+        <td id="prompt-icon-cell">
+          <img id="prompt-icon"/>
+        </td>
+        <td id="prompt-cell">
+          <p id="prompt">
+          </p>
+        </td>
+      </tr>
+    </table>
+    <div id="ani-gif-preview-wrapper">
+      <div id="ani-gif-preview">
+        <img id="play-button" src="<%= assetUrl('media/play-circle.png') %>"/>
+      </div>
+    </div>
+  </div>
+<% }; -%>
+
+<% // A spot for the server to inject some HTML for help content.
+var helpArea = function(html) { -%>
+  <% if (html) { -%>
+    <div id="helpArea">
+      <%- html %>
+    </div>
+  <% } -%>
+<% }; -%>
+
+<div id="visualizationColumn">
+  <div id="visualization">
+    <%- data.visualization %>
+  </div>
+
+  <div id="belowVisualization">
+
+    <% instructions() %>
+    <% helpArea(data.helpHtml) %>
+
+  </div>
+</div>
+
+<div id="blockly">
+  <div id="headers" dir="<%= data.localeDirection %>">
+  </div>
+  <div id="netsim">
+    Internet Simulator says "Hello World!"
+  </div>
+</div>
+
+<div class="clear"></div>

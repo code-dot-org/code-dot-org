@@ -160,6 +160,14 @@ StudioApp.prototype.configure = function (options) {
   // currently mutually exclusive.
   this.editCode = options.level && options.level.editCode;
   this.usingBlockly_ = !this.editCode;
+
+  // TODO (bbuchanan) : Replace this editorless-hack with setting an editor enum
+  // or (even better) inject an appropriate editor-adaptor.
+  if (options.isEditorless) {
+    this.editCode = false;
+    this.usingBlockly_ = false;
+  }
+
   this.cdoSounds = options.cdoSounds;
   this.Dialog = options.Dialog;
 
