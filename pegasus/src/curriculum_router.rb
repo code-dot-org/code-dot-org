@@ -354,7 +354,7 @@ end
 
 require src_dir 'course'
 
-class Router < Pegasus::Base
+class CurriculumRouter < Pegasus::Base
 
   get '/curriculum/:kind' do |kind|
     # Temporarily prevent non K-5/MSM curriculum from appearing on production.
