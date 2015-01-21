@@ -7,10 +7,7 @@ var canvas = require('canvas');
 global.Image = canvas.Image;
 global.Turtle = {};
 
-// needed for Hammerjs
-global.navigator = {};
-global.window = {};
-global.document = {};
+testUtils.setupLocales();
 
 /**
  * Loads blocks into the workspace, then calls
@@ -376,6 +373,7 @@ describe("getMissingRequiredBlocks_ tests", function () {
 
   function validateMissingBlocksFromLevelTest(collection, levelTest) {
     it (levelTest.description, function () {
+      testUtils.setupLocale(collection.app);
       assert(global.Blockly, "Blockly is in global namespace");
       var levels = testUtils.requireWithGlobalsCheckBuildFolder(collection.app + '/' +
         collection.levelFile, []);

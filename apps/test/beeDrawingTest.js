@@ -1,10 +1,7 @@
 var jsdom = require('jsdom').jsdom;
 var testUtils = require('./util/testUtils');
 
-// needed for Hammerjs
-global.navigator = {};
-global.window = {};
-global.document = {};
+testUtils.setupLocales();
 
 function setGlobals() {
   var html = '<html><head></head><body><div id="svgMaze"><div class="pegman-location"></div></div></body></html>';
