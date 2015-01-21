@@ -77,6 +77,11 @@ var Equation = function (name, expression) {
   this.expression = expression;
 };
 
+var ExpressionSet = function () {
+  this.compute_ = null;
+  this.other_ = {};
+};
+
 /**
  * Initialize Blockly and the Calc.  Called on page load.
  */
@@ -85,10 +90,8 @@ Calc.init = function(config) {
   skin = config.skin;
   level = config.level;
 
-  Calc.expressions = {
-    target: null, // the complete target expression
-    user: null, // the current state of the user expression
-  };
+  // Does our level have functions, in which case we operate slightly differently
+  Calc.functionMode_ = false;
 
   if (level.scale && level.scale.stepSpeed !== undefined) {
     stepSpeed = level.scale.stepSpeed;
@@ -145,7 +148,28 @@ Calc.init = function(config) {
 
     appState.targetExpressions = generateExpressionsFromBlockXml(solutionBlocks);
 
-    _.keys(appState.targetExpressions).sort().forEach(function (name, index) {
+    // TODO (brent) - do we hit this if i have an empty compute block?
+    var expressionNames = _.keys(appState.targetExpression);
+
+    if (!level.freePlay) {
+      if (!appState.targetExpressions[COMPUTE_NAME]) {
+        throw new Error('Unexpected: No compute expression');
+      }
+
+      // Check to see if we're in funciton mode
+      if (expressionNames.length > 1) {
+        // TODO - should function mode exist in freeplay?
+        Calc.functionMode_ = true;
+      }
+
+      if (expressionNames.length > 2) {
+        // TODO (brent) - if we have a var and a function, this will throw.
+        // that may not be desirable
+        throw new Error('Level solution cannot have multiple functions');
+      }
+    }
+
+    expressionNames.sort().forEach(function (name, index) {
       var expression = appState.targetExpressions[name];
       var tokenList = expression.getTokenList(false);
       if (name === COMPUTE_NAME) {
@@ -181,7 +205,6 @@ studioApp.runButtonClick = function() {
  * called first.
  */
 Calc.resetButtonClick = function () {
-  Calc.expressions.user = null;
   appState.message = null;
   appState.currentAnimationDepth = 0;
   timeoutList.clearTimeouts();
@@ -385,7 +408,6 @@ Calc.execute = function() {
   };
 
   studioApp.report(reportData);
-
 
   appState.animating = true;
   if (appState.result && !hasVariablesOrFunctions) {
