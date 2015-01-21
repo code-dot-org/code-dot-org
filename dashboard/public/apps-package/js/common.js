@@ -3558,43 +3558,23 @@ exports.clearTimeouts = function () {
 
 },{}],128:[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, escape, include, rethrow) {
-rethrow = rethrow || function rethrow(err, str, filename, lineno){
-  var lines = str.split('\n')
-    , start = Math.max(lineno - 3, 0)
-    , end = Math.min(lines.length, lineno + 3);
-
-  // Error context
-  var context = lines.slice(start, end).map(function (line, i){
-    var curr = i + start + 1;
-    return (curr == lineno ? ' >> ' : '    ')
-      + curr
-      + '| '
-      + line;
-  }).join('\n');
-
-  // Alter exception message
-  err.path = filename;
-  err.message = (filename || 'ejs') + ':'
-    + lineno + '\n'
-    + context + '\n\n'
-    + err.message;
-
-  throw err;
-};
-escape = escape || function (markup) {
-  return String(markup)
-    .replace(/&/g, '&amp;')
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/'/g, '&#39;')
     .replace(/"/g, '&quot;');
 };
-var __output = ""; with (locals || {}) { ;
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('');1;
   var msg = require('../../locale/current/common');
   var hideRunButton = locals.hideRunButton || false;
-;__output += "\n\n<div id=\"rotateContainer\" style=\"background-image: url(";;__output += escape(assetUrl('media/mobile_tutorial_turnphone.png'));__output += ")\">\n  <div id=\"rotateText\">\n    <p>";;__output += escape(msg.rotateText());__output += "<br>";;__output += escape(msg.orientationLock());__output += "</p>\n  </div>\n</div>\n\n";; var instructions = function() { ;__output += "  <div id=\"bubble\" class=\"clearfix\">\n    <table id=\"prompt-table\">\n      <tr>\n        <td id=\"prompt-icon-cell\">\n          <img id=\"prompt-icon\"/>\n        </td>\n        <td id=\"prompt-cell\">\n          <p id=\"prompt\">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id=\"ani-gif-preview-wrapper\">\n      <div id=\"ani-gif-preview\">\n        <img id=\"play-button\" src=\"";;__output += escape(assetUrl('media/play-circle.png'));__output += "\"/>\n      </div>\n    </div>\n  </div>\n";; }; ;__output += "\n";; // A spot for the server to inject some HTML for help content.
-var helpArea = function(html) { ;__output += "  ";; if (html) { ;__output += "    <div id=\"helpArea\">\n      ";;__output += html;__output += "\n    </div>\n  ";; } ;__output += "";; }; ;__output += "\n<div id=\"visualizationColumn\">\n  <div id=\"visualization\">\n    ";;__output += data.visualization;__output += "\n  </div>\n\n  <div id=\"belowVisualization\">\n\n    <div id=\"gameButtons\">\n      <button id=\"runButton\" class=\"launch blocklyLaunch ";;__output += escape(hideRunButton ? 'invisible' : '');__output += "\">\n        <div>";;__output += escape(msg.runProgram());__output += "</div>\n        <img src=\"";;__output += escape(assetUrl('media/1x1.gif'));__output += "\" class=\"run26\"/>\n      </button>\n      <button id=\"resetButton\" class=\"launch blocklyLaunch\" style=\"display: none\">\n        <div>";;__output += escape(msg.resetProgram());__output += "</div>\n        <img src=\"";;__output += escape(assetUrl('media/1x1.gif'));__output += "\" class=\"reset26\"/>\n      </button>\n      ";; if (data.controls) { ;__output += "\n      ";;__output += data.controls;__output += "\n      ";; } ;__output += "\n      ";; if (data.extraControlRows) { ;__output += "\n      ";;__output += data.extraControlRows;__output += "\n      ";; } ;__output += "\n    </div>\n\n    ";; instructions() ;__output += "\n    ";; helpArea(data.helpHtml) ;__output += "\n\n  </div>\n</div>\n\n";; if (data.editCode) { ;__output += "\n  <div id=\"codeWorkspace\">\n";; } else { ;__output += "\n  <div id=\"blockly\">\n";; } ;__output += "\n  <div id=\"headers\" dir=\"";;__output += escape(data.localeDirection);__output += "\">\n    <div id=\"toolbox-header\" class=\"blockly-header\"><span>";;__output += escape(msg.toolboxHeader());__output += "</span></div>\n    <div id=\"workspace-header\" class=\"blockly-header\">\n      <span id=\"workspace-header-span\">";;__output += escape(msg.workspaceHeader());__output += " </span>\n      <div id=\"blockCounter\">\n        <div id=\"blockUsed\" class=";;__output += escape(data.blockCounterClass);__output += ">\n          ";;__output += escape(data.blockUsed);__output += "\n        </div>\n        <span>&nbsp;/</span>\n        <span id=\"idealBlockNumber\">";;__output += escape(data.idealBlockNumber);__output += "</span>\n      </div>\n    </div>\n    <div id=\"show-code-header\" class=\"blockly-header\"><span>";;__output += escape(msg.showCodeHeader());__output += "</span></div>\n  </div>\n  ";; if (data.editCode) { ;__output += "\n    <div id=\"codeTextbox\"></div>\n  ";; } ;__output += "\n</div>\n\n<div class=\"clear\"></div>\n";};return __output.trim();
+; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n        <img id="play-button" src="', escape((26,  assetUrl('media/play-circle.png') )), '"/>\n      </div>\n    </div>\n  </div>\n');30; };; buf.push('\n');31; // A spot for the server to inject some HTML for help content.
+var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (38,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((44,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((45,  msg.runProgram() )), '</div>\n        <img src="', escape((46,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((49,  msg.resetProgram() )), '</div>\n        <img src="', escape((50,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');52; if (data.controls) { ; buf.push('\n      ', (53,  data.controls ), '\n      ');54; } ; buf.push('\n      ');55; if (data.extraControlRows) { ; buf.push('\n      ', (56,  data.extraControlRows ), '\n      ');57; } ; buf.push('\n    </div>\n\n    ');60; instructions() ; buf.push('\n    ');61; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n');66; if (data.editCode) { ; buf.push('\n  <div id="codeWorkspace">\n');68; } else { ; buf.push('\n  <div id="blockly">\n');70; } ; buf.push('\n  <div id="headers" dir="', escape((71,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((72,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span id="workspace-header-span">', escape((74,  msg.workspaceHeader())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((76,  data.blockCounterClass )), '>\n          ', escape((77,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((80,  data.idealBlockNumber )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((83,  msg.showCodeHeader() )), '</span></div>\n  </div>\n  ');85; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox"></div>\n  ');87; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
+} 
+return buf.join('');
 };
   return function(locals) {
     return t(locals, require("ejs").filters);
@@ -7141,39 +7121,19 @@ var isArray = Array.isArray || function (xs) {
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{}],127:[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, escape, include, rethrow) {
-rethrow = rethrow || function rethrow(err, str, filename, lineno){
-  var lines = str.split('\n')
-    , start = Math.max(lineno - 3, 0)
-    , end = Math.min(lines.length, lineno + 3);
-
-  // Error context
-  var context = lines.slice(start, end).map(function (line, i){
-    var curr = i + start + 1;
-    return (curr == lineno ? ' >> ' : '    ')
-      + curr
-      + '| '
-      + line;
-  }).join('\n');
-
-  // Alter exception message
-  err.path = filename;
-  err.message = (filename || 'ejs') + ':'
-    + lineno + '\n'
-    + context + '\n\n'
-    + err.message;
-
-  throw err;
-};
-escape = escape || function (markup) {
-  return String(markup)
-    .replace(/&/g, '&amp;')
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/'/g, '&#39;')
     .replace(/"/g, '&quot;');
 };
-var __output = ""; with (locals || {}) { ; var msg = require('../../locale/current/common') ;__output += "\n\n<div id=\"make-your-own\">\n\n  <h1><a href=";;__output += escape(data.makeUrl);__output += ">";;__output += escape(data.makeString);__output += "</a></h1>\n  <a href=";;__output += escape(data.makeUrl);__output += "><img src=";;__output += escape(data.makeImage);__output += "></a>\n\n</div>\n";};return __output.trim();
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('');1; var msg = require('../../locale/current/common') ; buf.push('\n\n<div id="make-your-own">\n\n  <h1><a href=', escape((5,  data.makeUrl )), '>', escape((5,  data.makeString )), '</a></h1>\n  <a href=', escape((6,  data.makeUrl )), '><img src=', escape((6,  data.makeImage )), '></a>\n\n</div>\n'); })();
+} 
+return buf.join('');
 };
   return function(locals) {
     return t(locals, require("ejs").filters);
@@ -7181,40 +7141,21 @@ var __output = ""; with (locals || {}) { ; var msg = require('../../locale/curre
 }());
 },{"../../locale/current/common":153,"ejs":168}],126:[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, escape, include, rethrow) {
-rethrow = rethrow || function rethrow(err, str, filename, lineno){
-  var lines = str.split('\n')
-    , start = Math.max(lineno - 3, 0)
-    , end = Math.min(lines.length, lineno + 3);
-
-  // Error context
-  var context = lines.slice(start, end).map(function (line, i){
-    var curr = i + start + 1;
-    return (curr == lineno ? ' >> ' : '    ')
-      + curr
-      + '| '
-      + line;
-  }).join('\n');
-
-  // Alter exception message
-  err.path = filename;
-  err.message = (filename || 'ejs') + ':'
-    + lineno + '\n'
-    + context + '\n\n'
-    + err.message;
-
-  throw err;
-};
-escape = escape || function (markup) {
-  return String(markup)
-    .replace(/&/g, '&amp;')
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/'/g, '&#39;')
     .replace(/"/g, '&quot;');
 };
-var __output = ""; with (locals || {}) { ; var msg = require('../../locale/current/common') ;__output += "\n\n";; var root = location.protocol + '//' + location.host.replace('learn\.', '').replace('studio\.', ''); 
-;__output += "\n\n<div id=\"learn\">\n\n  <h1><a href=\"";;__output += escape(root);__output += "\">";;__output += escape(msg.wantToLearn());__output += "</a></h1>\n  <a href=\"";;__output += escape(root);__output += "\"><img id=\"learn-to-code\" src=\"";;__output += escape(assetUrl('media/promo.png'));__output += "\"></a>\n  <a href=\"";;__output += escape(root);__output += "\">";;__output += escape(msg.watchVideo());__output += "</a>\n  <a href=\"";;__output += escape(root);__output += "\">";;__output += escape(msg.tryHOC());__output += "</a>\n  <a href=\"";;__output += escape(location.protocol + '//' + location.host);__output += "\">";;__output += escape(msg.signup());__output += "</a>\n\n</div>\n";};return __output.trim();
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('');1; var msg = require('../../locale/current/common') ; buf.push('\n\n');3; var root = location.protocol + '//' + location.host.replace('learn\.', '').replace('studio\.', ''); 
+; buf.push('\n\n<div id="learn">\n\n  <h1><a href="', escape((7,  root )), '">', escape((7,  msg.wantToLearn() )), '</a></h1>\n  <a href="', escape((8,  root )), '"><img id="learn-to-code" src="', escape((8,  assetUrl('media/promo.png') )), '"></a>\n  <a href="', escape((9,  root )), '">', escape((9,  msg.watchVideo() )), '</a>\n  <a href="', escape((10,  root )), '">', escape((10,  msg.tryHOC() )), '</a>\n  <a href="', escape((11,  location.protocol + '//' + location.host 
+)), '">', escape((11,  msg.signup() )), '</a>\n\n</div>\n'); })();
+} 
+return buf.join('');
 };
   return function(locals) {
     return t(locals, require("ejs").filters);
@@ -7222,39 +7163,19 @@ var __output = ""; with (locals || {}) { ; var msg = require('../../locale/curre
 }());
 },{"../../locale/current/common":153,"ejs":168}],125:[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, escape, include, rethrow) {
-rethrow = rethrow || function rethrow(err, str, filename, lineno){
-  var lines = str.split('\n')
-    , start = Math.max(lineno - 3, 0)
-    , end = Math.min(lines.length, lineno + 3);
-
-  // Error context
-  var context = lines.slice(start, end).map(function (line, i){
-    var curr = i + start + 1;
-    return (curr == lineno ? ' >> ' : '    ')
-      + curr
-      + '| '
-      + line;
-  }).join('\n');
-
-  // Alter exception message
-  err.path = filename;
-  err.message = (filename || 'ejs') + ':'
-    + lineno + '\n'
-    + context + '\n\n'
-    + err.message;
-
-  throw err;
-};
-escape = escape || function (markup) {
-  return String(markup)
-    .replace(/&/g, '&amp;')
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/'/g, '&#39;')
     .replace(/"/g, '&quot;');
 };
-var __output = ""; with (locals || {}) { ; var msg = require('../../locale/current/common'); ;__output += "\n\n<p class='dialog-title'>";;__output += escape(msg.puzzleTitle(locals));__output += "</p>\n";; if (locals.instructions) { ;__output += "  <p>";;__output += escape(locals.instructions);__output += "</p>\n";; }; ;__output += "";; if (locals.aniGifURL) { ;__output += "  <img class=\"aniGif example-image\" src='";;__output += escape(locals.aniGifURL);__output += "'/>\n";; }; ;__output += "";};return __output.trim();
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('');1; var msg = require('../../locale/current/common'); ; buf.push('\n\n<p class=\'dialog-title\'>', escape((3,  msg.puzzleTitle(locals) )), '</p>\n');4; if (locals.instructions) {; buf.push('  <p>', escape((4,  locals.instructions )), '</p>\n');5; };; buf.push('');5; if (locals.aniGifURL) {; buf.push('  <img class="aniGif example-image" src=\'', escape((5,  locals.aniGifURL )), '\'/>\n');6; };; buf.push(''); })();
+} 
+return buf.join('');
 };
   return function(locals) {
     return t(locals, require("ejs").filters);
@@ -7262,39 +7183,19 @@ var __output = ""; with (locals || {}) { ; var msg = require('../../locale/curre
 }());
 },{"../../locale/current/common":153,"ejs":168}],122:[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, escape, include, rethrow) {
-rethrow = rethrow || function rethrow(err, str, filename, lineno){
-  var lines = str.split('\n')
-    , start = Math.max(lineno - 3, 0)
-    , end = Math.min(lines.length, lineno + 3);
-
-  // Error context
-  var context = lines.slice(start, end).map(function (line, i){
-    var curr = i + start + 1;
-    return (curr == lineno ? ' >> ' : '    ')
-      + curr
-      + '| '
-      + line;
-  }).join('\n');
-
-  // Alter exception message
-  err.path = filename;
-  err.message = (filename || 'ejs') + ':'
-    + lineno + '\n'
-    + context + '\n\n'
-    + err.message;
-
-  throw err;
-};
-escape = escape || function (markup) {
-  return String(markup)
-    .replace(/&/g, '&amp;')
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/'/g, '&#39;')
     .replace(/"/g, '&quot;');
 };
-var __output = ""; with (locals || {}) { ;__output += "<div><span>Instructions: </span><textarea type=\"text\" name=\"instructions\"></textarea></div>\n<div><span>Level Name: </span><textarea type=\"text\" name=\"level_name\"></textarea></div>\n<button id=\"create-level-button\" class=\"launch\">\n  Create Level\n</button>\n<div id=\"builder-error\"></div>\n";};return __output.trim();
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('<div><span>Instructions: </span><textarea type="text" name="instructions"></textarea></div>\n<div><span>Level Name: </span><textarea type="text" name="level_name"></textarea></div>\n<button id="create-level-button" class="launch">\n  Create Level\n</button>\n<div id="builder-error"></div>\n'); })();
+} 
+return buf.join('');
 };
   return function(locals) {
     return t(locals, require("ejs").filters);
@@ -13931,39 +13832,19 @@ if(typeof define == 'function' && define.amd) {
 })(window);
 },{}],133:[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, escape, include, rethrow) {
-rethrow = rethrow || function rethrow(err, str, filename, lineno){
-  var lines = str.split('\n')
-    , start = Math.max(lineno - 3, 0)
-    , end = Math.min(lines.length, lineno + 3);
-
-  // Error context
-  var context = lines.slice(start, end).map(function (line, i){
-    var curr = i + start + 1;
-    return (curr == lineno ? ' >> ' : '    ')
-      + curr
-      + '| '
-      + line;
-  }).join('\n');
-
-  // Alter exception message
-  err.path = filename;
-  err.message = (filename || 'ejs') + ':'
-    + lineno + '\n'
-    + context + '\n\n'
-    + err.message;
-
-  throw err;
-};
-escape = escape || function (markup) {
-  return String(markup)
-    .replace(/&/g, '&amp;')
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/'/g, '&#39;')
     .replace(/"/g, '&quot;');
 };
-var __output = ""; with (locals || {}) { ;__output += "<div class='trophy'><img class='trophyimg' src='";;__output += escape(img_url);__output += "'><br>";;__output += escape(concept_name);__output += "</div>\n";};return __output.trim();
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('<div class=\'trophy\'><img class=\'trophyimg\' src=\'', escape((1,  img_url )), '\'><br>', escape((1,  concept_name )), '</div>\n'); })();
+} 
+return buf.join('');
 };
   return function(locals) {
     return t(locals, require("ejs").filters);
@@ -13971,39 +13852,19 @@ var __output = ""; with (locals || {}) { ;__output += "<div class='trophy'><img 
 }());
 },{"ejs":168}],132:[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, escape, include, rethrow) {
-rethrow = rethrow || function rethrow(err, str, filename, lineno){
-  var lines = str.split('\n')
-    , start = Math.max(lineno - 3, 0)
-    , end = Math.min(lines.length, lineno + 3);
-
-  // Error context
-  var context = lines.slice(start, end).map(function (line, i){
-    var curr = i + start + 1;
-    return (curr == lineno ? ' >> ' : '    ')
-      + curr
-      + '| '
-      + line;
-  }).join('\n');
-
-  // Alter exception message
-  err.path = filename;
-  err.message = (filename || 'ejs') + ':'
-    + lineno + '\n'
-    + context + '\n\n'
-    + err.message;
-
-  throw err;
-};
-escape = escape || function (markup) {
-  return String(markup)
-    .replace(/&/g, '&amp;')
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/'/g, '&#39;')
     .replace(/"/g, '&quot;');
 };
-var __output = ""; with (locals || {}) { ; var msg = require('../../locale/current/common'); ;__output += "\n\n<p id=\"num-lines-of-code\" class=\"lines-of-code-message\">\n  ";;__output += escape(msg.numLinesOfCodeWritten({ numLines: numLinesWritten }));__output += "\n  <button id=\"show-code-button\" href=\"#\">\n    ";;__output += escape(msg.showGeneratedCode());__output += "\n  </button>\n</p>\n\n";; if (totalNumLinesWritten !== 0) { ;__output += "\n  <p id=\"total-num-lines-of-code\" class=\"lines-of-code-message\">\n    ";;__output += escape(msg.totalNumLinesOfCodeWritten({ numLines: totalNumLinesWritten }));__output += "\n  </p>\n";; } ;__output += "\n";};return __output.trim();
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('');1; var msg = require('../../locale/current/common'); ; buf.push('\n\n<p id="num-lines-of-code" class="lines-of-code-message">\n  ', escape((4,  msg.numLinesOfCodeWritten({ numLines: numLinesWritten }) )), '\n  <button id="show-code-button" href="#">\n    ', escape((6,  msg.showGeneratedCode() )), '\n  </button>\n</p>\n\n');10; if (totalNumLinesWritten !== 0) { ; buf.push('\n  <p id="total-num-lines-of-code" class="lines-of-code-message">\n    ', escape((12,  msg.totalNumLinesOfCodeWritten({ numLines: totalNumLinesWritten }) )), '\n  </p>\n');14; } ; buf.push('\n'); })();
+} 
+return buf.join('');
 };
   return function(locals) {
     return t(locals, require("ejs").filters);
@@ -14011,39 +13872,19 @@ var __output = ""; with (locals || {}) { ; var msg = require('../../locale/curre
 }());
 },{"../../locale/current/common":153,"ejs":168}],131:[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, escape, include, rethrow) {
-rethrow = rethrow || function rethrow(err, str, filename, lineno){
-  var lines = str.split('\n')
-    , start = Math.max(lineno - 3, 0)
-    , end = Math.min(lines.length, lineno + 3);
-
-  // Error context
-  var context = lines.slice(start, end).map(function (line, i){
-    var curr = i + start + 1;
-    return (curr == lineno ? ' >> ' : '    ')
-      + curr
-      + '| '
-      + line;
-  }).join('\n');
-
-  // Alter exception message
-  err.path = filename;
-  err.message = (filename || 'ejs') + ':'
-    + lineno + '\n'
-    + context + '\n\n'
-    + err.message;
-
-  throw err;
-};
-escape = escape || function (markup) {
-  return String(markup)
-    .replace(/&/g, '&amp;')
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/'/g, '&#39;')
     .replace(/"/g, '&quot;');
 };
-var __output = ""; with (locals || {}) { ; var msg = require('../../locale/current/common'); ;__output += "\n";; if (options.feedbackImage) { ;__output += "\n  <div class=\"sharing\">\n    <img class=\"feedback-image\" src=\"";;__output += escape(options.feedbackImage);__output += "\">\n  </div>\n";; } ;__output += "\n\n<div class=\"sharing\">\n  <div class=\"social-buttons\">\n  ";; if (!options.onMainPage) { ;__output += "\n    <button id=\"print-button\">\n      ";;__output += escape(msg.print());__output += "\n    </button>\n  ";; } ;__output += "\n";; if (options.alreadySaved) { ;__output += "\n  <button class=\"saved-to-gallery\" disabled>\n    ";;__output += escape(msg.savedToGallery());__output += "\n  </button>\n";; } else if (options.saveToGalleryUrl) { ;__output += "\n  <button id=\"save-to-gallery-button\" class=\"launch\">\n    ";;__output += escape(msg.saveToGallery());__output += "\n  </button>\n";; } ;__output += "\n  </div>\n\n";; if (options.response && options.response.level_source) { ;__output += "\n  ";; if (options.appStrings && options.appStrings.sharingText) { ;__output += "\n    <div>";;__output += escape(options.appStrings.sharingText);__output += "</div>\n  ";; } ;__output += "\n\n  <div>\n    <input type=\"text\" id=\"sharing-input\" value=";;__output += escape(options.response.level_source);__output += " readonly>\n  </div>\n\n  <div class='social-buttons'>\n    ";; if (options.facebookUrl) { ;__output += "      <a href='";;__output += escape(options.facebookUrl);__output += "' target=\"_blank\" class=\"popup-window\">\n        <img src='";;__output += escape(options.assetUrl("media/facebook_purple.png"));__output += "' />\n      </a>\n    ";; } ;__output += "\n    ";; if (options.twitterUrl) { ;__output += "      <a href='";;__output += escape(options.twitterUrl);__output += "' target=\"_blank\" class=\"popup-window\">\n        <img src='";;__output += escape(options.assetUrl("media/twitter_purple.png"));__output += "' />\n      </a>\n    ";; } ;__output += "    ";; if (options.sendToPhone) { ;__output += "      <a id=\"sharing-phone\" href=\"\" onClick=\"return false;\">\n        <img src='";;__output += escape(options.assetUrl("media/phone_purple.png"));__output += "' />\n      </a>\n    ";; } ;__output += "    ";; if (options.level.shapewaysUrl && !options.onMainPage && options.sendToPhone) { ;__output += "      <a id=\"sharing-shapeways\" href=\"\" onClick=\"return false;\">\n        <img src='";;__output += escape(options.assetUrl("media/shapeways_purple.png"));__output += "' />\n      </a>\n    ";; } ;__output += "  </div>\n";; } ;__output += "\n</div>\n<div id=\"send-to-phone\" class=\"sharing\" style=\"display: none\">\n  <label for=\"phone\">Enter a US phone number:</label>\n  <input type=\"text\" id=\"phone\" name=\"phone\" />\n  <button id=\"phone-submit\" onClick=\"return false;\">Send</button>\n  <div id=\"phone-charges\">A text message will be sent via <a href=\"http://twilio.com\">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n";; if (options.response && options.response.level_source && options.level.shapewaysUrl) { ;__output += "  <div id=\"shapeways-message\" class=\"sharing\" style=\"display: none\">\n    <div id=\"shapeways-message-body\">You'll be redirected to Shapeways.com to order and purchase a 3D print.</div>\n    <button id=\"shapeways-print-go-button\" onclick=\"window.open('";;__output += escape(options.level.shapewaysUrl);__output += "', '_blank')\">Go to Shapeways</button>\n    <div id=\"shapeways-message-body-disclaimer\">Students under 13 years need a parent or guardian to do 3D printing.</div>\n  </div>\n";; } ;__output += "";};return __output.trim();
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('');1; var msg = require('../../locale/current/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n  <div class="social-buttons">\n  ');10; if (!options.onMainPage) { ; buf.push('\n    <button id="print-button">\n      ', escape((12,  msg.print() )), '\n    </button>\n  ');14; } ; buf.push('\n');15; if (options.alreadySaved) { ; buf.push('\n  <button class="saved-to-gallery" disabled>\n    ', escape((17,  msg.savedToGallery() )), '\n  </button>\n');19; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((21,  msg.saveToGallery() )), '\n  </button>\n');23; } ; buf.push('\n  </div>\n\n');26; if (options.response && options.response.level_source) { ; buf.push('\n  ');27; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((28,  options.appStrings.sharingText )), '</div>\n  ');29; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((32,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');36; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((36,  options.facebookUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((37,  options.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');39; }; buf.push('\n    ');40; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((40,  options.twitterUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((41,  options.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');43; }; buf.push('    ');43; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((44,  options.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');46; }; buf.push('    ');46; if (options.level.shapewaysUrl && !options.onMainPage && options.sendToPhone) {; buf.push('      <a id="sharing-shapeways" href="" onClick="return false;">\n        <img src=\'', escape((47,  options.assetUrl("media/shapeways_purple.png") )), '\' />\n      </a>\n    ');49; }; buf.push('  </div>\n');50; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n');58; if (options.response && options.response.level_source && options.level.shapewaysUrl) {; buf.push('  <div id="shapeways-message" class="sharing" style="display: none">\n    <div id="shapeways-message-body">You\'ll be redirected to Shapeways.com to order and purchase a 3D print.</div>\n    <button id="shapeways-print-go-button" onclick="window.open(\'', escape((60,  options.level.shapewaysUrl )), '\', \'_blank\')">Go to Shapeways</button>\n    <div id="shapeways-message-body-disclaimer">Students under 13 years need a parent or guardian to do 3D printing.</div>\n  </div>\n');63; }; buf.push(''); })();
+} 
+return buf.join('');
 };
   return function(locals) {
     return t(locals, require("ejs").filters);
@@ -14051,39 +13892,19 @@ var __output = ""; with (locals || {}) { ; var msg = require('../../locale/curre
 }());
 },{"../../locale/current/common":153,"ejs":168}],130:[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, escape, include, rethrow) {
-rethrow = rethrow || function rethrow(err, str, filename, lineno){
-  var lines = str.split('\n')
-    , start = Math.max(lineno - 3, 0)
-    , end = Math.min(lines.length, lineno + 3);
-
-  // Error context
-  var context = lines.slice(start, end).map(function (line, i){
-    var curr = i + start + 1;
-    return (curr == lineno ? ' >> ' : '    ')
-      + curr
-      + '| '
-      + line;
-  }).join('\n');
-
-  // Alter exception message
-  err.path = filename;
-  err.message = (filename || 'ejs') + ':'
-    + lineno + '\n'
-    + context + '\n\n'
-    + err.message;
-
-  throw err;
-};
-escape = escape || function (markup) {
-  return String(markup)
-    .replace(/&/g, '&amp;')
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/'/g, '&#39;')
     .replace(/"/g, '&quot;');
 };
-var __output = ""; with (locals || {}) { ;__output += "<p id=\"share-fail-explanation\">";;__output += escape(shareFailure.message);__output += "</p>\n\n";; if (shareFailure.contents) { ;__output += "\n  <div class=\"share-fail-excerpt\">\n    <pre class=\"generatedCode\">";;__output += escape(shareFailure.contents);__output += "</pre>\n  </div>\n";; } ;__output += "\n";};return __output.trim();
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('<p id="share-fail-explanation">', escape((1,  shareFailure.message )), '</p>\n\n');3; if (shareFailure.contents) { ; buf.push('\n  <div class="share-fail-excerpt">\n    <pre class="generatedCode">', escape((5,  shareFailure.contents )), '</pre>\n  </div>\n');7; } ; buf.push('\n'); })();
+} 
+return buf.join('');
 };
   return function(locals) {
     return t(locals, require("ejs").filters);
@@ -14091,39 +13912,19 @@ var __output = ""; with (locals || {}) { ;__output += "<p id=\"share-fail-explan
 }());
 },{"ejs":168}],124:[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, escape, include, rethrow) {
-rethrow = rethrow || function rethrow(err, str, filename, lineno){
-  var lines = str.split('\n')
-    , start = Math.max(lineno - 3, 0)
-    , end = Math.min(lines.length, lineno + 3);
-
-  // Error context
-  var context = lines.slice(start, end).map(function (line, i){
-    var curr = i + start + 1;
-    return (curr == lineno ? ' >> ' : '    ')
-      + curr
-      + '| '
-      + line;
-  }).join('\n');
-
-  // Alter exception message
-  err.path = filename;
-  err.message = (filename || 'ejs') + ':'
-    + lineno + '\n'
-    + context + '\n\n'
-    + err.message;
-
-  throw err;
-};
-escape = escape || function (markup) {
-  return String(markup)
-    .replace(/&/g, '&amp;')
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/'/g, '&#39;')
     .replace(/"/g, '&quot;');
 };
-var __output = ""; with (locals || {}) { ;__output += "<div class=\"generated-code-container\">\n  <p class=\"generatedCodeMessage\">";;__output += message;__output += "</p>\n  <pre class=\"generatedCode\">";;__output += escape(code);__output += "</pre>\n</div>\n\n";};return __output.trim();
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('<div class="generated-code-container">\n  <p class="generatedCodeMessage">', (2,  message ), '</p>\n  <pre class="generatedCode">', escape((3,  code )), '</pre>\n</div>\n\n'); })();
+} 
+return buf.join('');
 };
   return function(locals) {
     return t(locals, require("ejs").filters);
@@ -14131,39 +13932,19 @@ var __output = ""; with (locals || {}) { ;__output += "<div class=\"generated-co
 }());
 },{"ejs":168}],123:[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, escape, include, rethrow) {
-rethrow = rethrow || function rethrow(err, str, filename, lineno){
-  var lines = str.split('\n')
-    , start = Math.max(lineno - 3, 0)
-    , end = Math.min(lines.length, lineno + 3);
-
-  // Error context
-  var context = lines.slice(start, end).map(function (line, i){
-    var curr = i + start + 1;
-    return (curr == lineno ? ' >> ' : '    ')
-      + curr
-      + '| '
-      + line;
-  }).join('\n');
-
-  // Alter exception message
-  err.path = filename;
-  err.message = (filename || 'ejs') + ':'
-    + lineno + '\n'
-    + context + '\n\n'
-    + err.message;
-
-  throw err;
-};
-escape = escape || function (markup) {
-  return String(markup)
-    .replace(/&/g, '&amp;')
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/'/g, '&#39;')
     .replace(/"/g, '&quot;');
 };
-var __output = ""; with (locals || {}) { ; var msg = require('../../locale/current/common'); ;__output += "\n\n";; if (data.ok) { ;__output += "  <div class=\"farSide\" style=\"padding: 1ex 3ex 0\">\n    <button id=\"ok-button\" class=\"secondary\">\n      ";;__output += escape(msg.dialogOK());__output += "\n    </button>\n  </div>\n";; } ;__output += "\n";; if (data.previousLevel) { ;__output += "  <button id=\"back-button\" class=\"launch\">\n    ";;__output += escape(msg.backToPreviousLevel());__output += "\n  </button>\n";; } ;__output += "\n";; if (data.tryAgain) { ;__output += "  ";; if (data.isK1 && !data.freePlay) { ;__output += "    <div id=\"again-button\" class=\"launch arrow-container arrow-left\">\n      <div class=\"arrow-head\"><img src=\"";;__output += escape(data.assetUrl('media/tryagain-arrow-head.png'));__output += "\" alt=\"Arrowhead\" width=\"67\" height=\"130\"/></div>\n      <div class=\"arrow-text\">";;__output += escape(msg.tryAgain());__output += "</div>\n    </div>\n  ";; } else { ;__output += "    ";; if (data.hintRequestExperiment === "left") { ;__output += "      <button id=\"hint-request-button\" class=\"launch\">\n        ";;__output += escape(msg.hintRequest());__output += "\n      </button>\n      <button id=\"again-button\" class=\"launch\">\n        ";;__output += escape(msg.tryAgain());__output += "\n      </button>\n    ";; } else if (data.hintRequestExperiment == "right") { ;__output += "      <button id=\"again-button\" class=\"launch\">\n        ";;__output += escape(msg.tryAgain());__output += "\n      </button>\n      <button id=\"hint-request-button\" class=\"launch\">\n        ";;__output += escape(msg.hintRequest());__output += "\n      </button>\n    ";; } else { ;__output += "      <button id=\"again-button\" class=\"launch\">\n        ";;__output += escape(msg.tryAgain());__output += "\n      </button>\n    ";; } ;__output += "  ";; } ;__output += "";; } ;__output += "\n";; if (data.nextLevel) { ;__output += "  ";; if (data.isK1 && !data.freePlay) { ;__output += "    <div id=\"continue-button\" class=\"launch arrow-container arrow-right\">\n      <div class=\"arrow-head\"><img src=\"";;__output += escape(data.assetUrl('media/next-arrow-head.png'));__output += "\" alt=\"Arrowhead\" width=\"66\" height=\"130\"/></div>\n      <div class=\"arrow-text\">";;__output += escape(msg.continue());__output += "</div>\n    </div>\n  ";; } else { ;__output += "    <button id=\"continue-button\" class=\"launch\" style=\"float: right\">\n      ";;__output += escape(msg.continue());__output += "\n    </button>\n  ";; } ;__output += "";; } ;__output += "";};return __output.trim();
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('');1; var msg = require('../../locale/current/common'); ; buf.push('\n\n');3; if (data.ok) {; buf.push('  <div class="farSide" style="padding: 1ex 3ex 0">\n    <button id="ok-button" class="secondary">\n      ', escape((5,  msg.dialogOK() )), '\n    </button>\n  </div>\n');8; }; buf.push('\n');9; if (data.previousLevel) {; buf.push('  <button id="back-button" class="launch">\n    ', escape((10,  msg.backToPreviousLevel() )), '\n  </button>\n');12; }; buf.push('\n');13; if (data.tryAgain) {; buf.push('  ');13; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="again-button" class="launch arrow-container arrow-left">\n      <div class="arrow-head"><img src="', escape((14,  data.assetUrl('media/tryagain-arrow-head.png') )), '" alt="Arrowhead" width="67" height="130"/></div>\n      <div class="arrow-text">', escape((15,  msg.tryAgain() )), '</div>\n    </div>\n  ');17; } else {; buf.push('    ');17; if (data.hintRequestExperiment === "left") {; buf.push('      <button id="hint-request-button" class="launch">\n        ', escape((18,  msg.hintRequest() )), '\n      </button>\n      <button id="again-button" class="launch">\n        ', escape((21,  msg.tryAgain() )), '\n      </button>\n    ');23; } else if (data.hintRequestExperiment == "right") {; buf.push('      <button id="again-button" class="launch">\n        ', escape((24,  msg.tryAgain() )), '\n      </button>\n      <button id="hint-request-button" class="launch">\n        ', escape((27,  msg.hintRequest() )), '\n      </button>\n    ');29; } else {; buf.push('      <button id="again-button" class="launch">\n        ', escape((30,  msg.tryAgain() )), '\n      </button>\n    ');32; }; buf.push('  ');32; }; buf.push('');32; }; buf.push('\n');33; if (data.nextLevel) {; buf.push('  ');33; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="continue-button" class="launch arrow-container arrow-right">\n      <div class="arrow-head"><img src="', escape((34,  data.assetUrl('media/next-arrow-head.png') )), '" alt="Arrowhead" width="66" height="130"/></div>\n      <div class="arrow-text">', escape((35,  msg.continue() )), '</div>\n    </div>\n  ');37; } else {; buf.push('    <button id="continue-button" class="launch" style="float: right">\n      ', escape((38,  msg.continue() )), '\n    </button>\n  ');40; }; buf.push('');40; }; buf.push(''); })();
+} 
+return buf.join('');
 };
   return function(locals) {
     return t(locals, require("ejs").filters);
@@ -14302,141 +14083,100 @@ FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
 
 },{"./constants":39,"./templates/readonly.html":129}],129:[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, escape, include, rethrow) {
-rethrow = rethrow || function rethrow(err, str, filename, lineno){
-  var lines = str.split('\n')
-    , start = Math.max(lineno - 3, 0)
-    , end = Math.min(lines.length, lineno + 3);
-
-  // Error context
-  var context = lines.slice(start, end).map(function (line, i){
-    var curr = i + start + 1;
-    return (curr == lineno ? ' >> ' : '    ')
-      + curr
-      + '| '
-      + line;
-  }).join('\n');
-
-  // Alter exception message
-  err.path = filename;
-  err.message = (filename || 'ejs') + ':'
-    + lineno + '\n'
-    + context + '\n\n'
-    + err.message;
-
-  throw err;
-};
-escape = escape || function (markup) {
-  return String(markup)
-    .replace(/&/g, '&amp;')
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/'/g, '&#39;')
     .replace(/"/g, '&quot;');
 };
-var __output = ""; with (locals || {}) { ;__output += "<!DOCTYPE html>\n<html dir=\"";;__output += escape(options.localeDirection);__output += "\">\n<head>\n  <meta charset=\"utf-8\">\n  <title>Blockly</title>\n  <script type=\"text/javascript\" src=\"";;__output += escape(assetUrl('js/' + options.locale + '/vendor.js'));__output += "\"></script>\n  <script type=\"text/javascript\" src=\"";;__output += escape(assetUrl('js/common.js'));__output += "\"></script>\n  <script type=\"text/javascript\" src=\"";;__output += escape(assetUrl('js/' + options.locale + '/common_locale.js'));__output += "\"></script>\n  <script type=\"text/javascript\" src=\"";;__output += escape(assetUrl('js/' + options.locale + '/' + app + '_locale.js'));__output += "\"></script>\n  <script type=\"text/javascript\" src=\"";;__output += escape(assetUrl('js/' + app + '.js'));__output += "\"></script>\n  <script type=\"text/javascript\">\n    ";; // delay to onload to fix IE9. 
-;__output += "\n    window.onload = function() {\n      ";;__output += escape(app);__output += "Main(";;__output += JSON.stringify(options);__output += ");\n    };\n  </script>\n</head>\n<body>\n  <div id=\"blockly\" class=\"readonly\"></div>\n  <style>\n    html, body {\n      background-color: transparent;\n      margin: 0;\n      padding:0;\n      overflow: hidden;\n      height: 100%;\n      font-family: 'Gotham A', 'Gotham B', sans-serif;\n    }\n    .blocklyText, .blocklyMenuText, .blocklyTreeLabel, .blocklyHtmlInput,\n        .blocklyIconMark, .blocklyTooltipText, .goog-menuitem-content {\n      font-family: 'Gotham A', 'Gotham B', sans-serif;\n    }\n    #blockly>svg {\n      background-color: transparent;\n      border: none;\n    }\n    #blockly {\n      position: absolute;\n      top: 0;\n      left: 0;\n      overflow: hidden;\n      height: 100%;\n      width: 100%;\n    }\n  </style>\n</body>\n</html>\n";};return __output.trim();
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('<!DOCTYPE html>\n<html dir="', escape((2,  options.localeDirection )), '">\n<head>\n  <meta charset="utf-8">\n  <title>Blockly</title>\n  <script type="text/javascript" src="', escape((6,  assetUrl('js/' + options.locale + '/vendor.js') )), '"></script>\n  <script type="text/javascript" src="', escape((7,  assetUrl('js/common.js') )), '"></script>\n  <script type="text/javascript" src="', escape((8,  assetUrl('js/' + options.locale + '/common_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((9,  assetUrl('js/' + options.locale + '/' + app + '_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((10,  assetUrl('js/' + app + '.js') )), '"></script>\n  <script type="text/javascript">\n    ');12; // delay to onload to fix IE9. 
+; buf.push('\n    window.onload = function() {\n      ', escape((14,  app )), 'Main(', (14,  JSON.stringify(options) ), ');\n    };\n  </script>\n</head>\n<body>\n  <div id="blockly" class="readonly"></div>\n  <style>\n    html, body {\n      background-color: transparent;\n      margin: 0;\n      padding:0;\n      overflow: hidden;\n      height: 100%;\n      font-family: \'Gotham A\', \'Gotham B\', sans-serif;\n    }\n    .blocklyText, .blocklyMenuText, .blocklyTreeLabel, .blocklyHtmlInput,\n        .blocklyIconMark, .blocklyTooltipText, .goog-menuitem-content {\n      font-family: \'Gotham A\', \'Gotham B\', sans-serif;\n    }\n    #blockly>svg {\n      background-color: transparent;\n      border: none;\n    }\n    #blockly {\n      position: absolute;\n      top: 0;\n      left: 0;\n      overflow: hidden;\n      height: 100%;\n      width: 100%;\n    }\n  </style>\n</body>\n</html>\n'); })();
+} 
+return buf.join('');
 };
   return function(locals) {
     return t(locals, require("ejs").filters);
   }
 }());
 },{"ejs":168}],168:[function(require,module,exports){
-/*
- * EJS Embedded JavaScript templates
- * Copyright 2112 Matthew Eernisse (mde@fleegix.org)
+
+/*!
+ * EJS
+ * Copyright(c) 2012 TJ Holowaychuk <tj@vision-media.ca>
+ * MIT Licensed
+ */
+
+/**
+ * Module dependencies.
+ */
+
+var utils = require('./utils')
+  , path = require('path')
+  , basename = path.basename
+  , dirname = path.dirname
+  , extname = path.extname
+  , join = path.join
+  , fs = require('fs')
+  , read = fs.readFileSync;
+
+/**
+ * Filters.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
+ * @type Object
+ */
+
+var filters = exports.filters = require('./filters');
+
+/**
+ * Intermediate js cache.
  *
- *         http://www.apache.org/licenses/LICENSE-2.0
+ * @type Object
+ */
+
+var cache = {};
+
+/**
+ * Clear intermediate js cache.
  *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ * @api public
+ */
+
+exports.clearCache = function(){
+  cache = {};
+};
+
+/**
+ * Translate filtered code into function calls.
  *
-*/
+ * @param {String} js
+ * @return {String}
+ * @api private
+ */
 
-'use strict';
+function filtered(js) {
+  return js.substr(1).split('|').reduce(function(js, filter){
+    var parts = filter.split(':')
+      , name = parts.shift()
+      , args = parts.join(':') || '';
+    if (args) args = ', ' + args;
+    return 'filters.' + name + '(' + js + args + ')';
+  });
+};
 
-var fs = require('fs')
-  , utils = require('./utils')
-  , templateCache = {}
-  , jsCache = {}
-  , optInDataWarned = false
-  , scopeOptionWarned = false
-  , _VERSION_STRING = require('../package.json').version
-  , _DEFAULT_DELIMITER = '%'
-  , _REGEX_STRING = '(<%%)|(<%=)|(<%-)|(<%#)|(<%)|(%>)|(-%>)'
-  , _OPTS = [ 'cache', 'filename', 'delimiter', 'scope', 'context'
-            , 'debug', 'compileDebug', 'client'
-            ];
-
-function resolveInclude(name, filename) {
-  var path = require('path')
-    , dirname = path.dirname
-    , extname = path.extname
-    , resolve = path.resolve
-    , includePath = resolve(dirname(filename), name)
-    , ext = extname(name);
-  if (!ext) {
-    includePath += '.ejs';
-  }
-  return includePath;
-}
-
-function includeFile(path, options) {
-  var fn
-    , opts = utils.shallowCopy({}, options || /* istanbul ignore next */ {})
-    , includePath
-    , template;
-  if (!opts.filename) {
-    throw new Error('`include` requires the \'filename\' option.');
-  }
-  includePath = resolveInclude(path, opts.filename);
-  if (opts.cache) {
-    template = templateCache[includePath];
-    if (!template) {
-      template = fs.readFileSync(includePath).toString().trim();
-      templateCache[includePath] = template;
-    }
-  }
-  else {
-    template = fs.readFileSync(includePath).toString().trim();
-  }
-
-  opts.filename = includePath;
-  fn = exports.compile(template, opts);
-  return fn;
-}
-
-function includeSource(path, options) {
-  var opts = utils.shallowCopy({}, options || {})
-    , includePath
-    , template;
-  if (!opts.filename) {
-    throw new Error('`include` requires the \'filename\' option.');
-  }
-  includePath = resolveInclude(path, opts.filename);
-  if (opts.cache) {
-    template = templateCache[includePath];
-    if (!template) {
-      template = fs.readFileSync(includePath).toString().trim();
-      templateCache[includePath] = template;
-    }
-  }
-  else {
-    template = fs.readFileSync(includePath).toString().trim();
-  }
-
-  opts.filename = includePath;
-  var templ = new Template(template, opts);
-  templ.generateSource();
-  return templ.source;
-}
+/**
+ * Re-throw the given `err` in context to the
+ * `str` of ejs, `filename`, and `lineno`.
+ *
+ * @param {Error} err
+ * @param {String} str
+ * @param {String} filename
+ * @param {String} lineno
+ * @api private
+ */
 
 function rethrow(err, str, filename, lineno){
   var lines = str.split('\n')
@@ -14444,7 +14184,7 @@ function rethrow(err, str, filename, lineno){
     , end = Math.min(lines.length, lineno + 3);
 
   // Error context
-  var context = lines.slice(start, end).map(function (line, i){
+  var context = lines.slice(start, end).map(function(line, i){
     var curr = i + start + 1;
     return (curr == lineno ? ' >> ' : '    ')
       + curr
@@ -14458,540 +14198,488 @@ function rethrow(err, str, filename, lineno){
     + lineno + '\n'
     + context + '\n\n'
     + err.message;
-
+  
   throw err;
 }
 
-function cpOptsInData(data, opts) {
-  _OPTS.forEach(function (p) {
-    if (typeof data[p] != 'undefined') {
-      if (!optInDataWarned) {
-        console.warn('options found in locals object. The option(s) is '
-                   + 'copied to the option object. This behavior is '
-                   + 'deprecated and will be removed in EJS 3');
-        optInDataWarned = true;
+/**
+ * Parse the given `str` of ejs, returning the function body.
+ *
+ * @param {String} str
+ * @return {String}
+ * @api public
+ */
+
+var parse = exports.parse = function(str, options){
+  var options = options || {}
+    , open = options.open || exports.open || '<%'
+    , close = options.close || exports.close || '%>'
+    , filename = options.filename
+    , compileDebug = options.compileDebug !== false
+    , buf = [];
+
+  buf.push('var buf = [];');
+  if (false !== options._with) buf.push('\nwith (locals || {}) { (function(){ ');
+  buf.push('\n buf.push(\'');
+
+  var lineno = 1;
+
+  var consumeEOL = false;
+  for (var i = 0, len = str.length; i < len; ++i) {
+    if (str.slice(i, open.length + i) == open) {
+      i += open.length
+  
+      var prefix, postfix, line = (compileDebug ? '__stack.lineno=' : '') + lineno;
+      switch (str.substr(i, 1)) {
+        case '=':
+          prefix = "', escape((" + line + ', ';
+          postfix = ")), '";
+          ++i;
+          break;
+        case '-':
+          prefix = "', (" + line + ', ';
+          postfix = "), '";
+          ++i;
+          break;
+        default:
+          prefix = "');" + line + ';';
+          postfix = "; buf.push('";
       }
-      opts[p] = data[p];
+
+      var end = str.indexOf(close, i)
+        , js = str.substring(i, end)
+        , start = i
+        , include = null
+        , n = 0;
+
+      if ('-' == js[js.length-1]){
+        js = js.substring(0, js.length - 2);
+        consumeEOL = true;
+      }
+
+      if (0 == js.trim().indexOf('include')) {
+        var name = js.trim().slice(7).trim();
+        if (!filename) throw new Error('filename option is required for includes');
+        var path = resolveInclude(name, filename);
+        include = read(path, 'utf8');
+        include = exports.parse(include, { filename: path, _with: false, open: open, close: close, compileDebug: compileDebug });
+        buf.push("' + (function(){" + include + "})() + '");
+        js = '';
+      }
+
+      while (~(n = js.indexOf("\n", n))) n++, lineno++;
+      if (js.substr(0, 1) == ':') js = filtered(js);
+      if (js) {
+        if (js.lastIndexOf('//') > js.lastIndexOf('\n')) js += '\n';
+        buf.push(prefix, js, postfix);
+      }
+      i += end - start + close.length - 1;
+
+    } else if (str.substr(i, 1) == "\\") {
+      buf.push("\\\\");
+    } else if (str.substr(i, 1) == "'") {
+      buf.push("\\'");
+    } else if (str.substr(i, 1) == "\r") {
+      // ignore
+    } else if (str.substr(i, 1) == "\n") {
+      if (consumeEOL) {
+        consumeEOL = false;
+      } else {
+        buf.push("\\n");
+        lineno++;
+      }
+    } else {
+      buf.push(str.substr(i, 1));
     }
+  }
+
+  if (false !== options._with) buf.push("'); })();\n} \nreturn buf.join('');")
+  else buf.push("');\nreturn buf.join('');");
+
+  return buf.join('');
+};
+
+/**
+ * Compile the given `str` of ejs into a `Function`.
+ *
+ * @param {String} str
+ * @param {Object} options
+ * @return {Function}
+ * @api public
+ */
+
+var compile = exports.compile = function(str, options){
+  options = options || {};
+  var escape = options.escape || utils.escape;
+  
+  var input = JSON.stringify(str)
+    , compileDebug = options.compileDebug !== false
+    , client = options.client
+    , filename = options.filename
+        ? JSON.stringify(options.filename)
+        : 'undefined';
+  
+  if (compileDebug) {
+    // Adds the fancy stack trace meta info
+    str = [
+      'var __stack = { lineno: 1, input: ' + input + ', filename: ' + filename + ' };',
+      rethrow.toString(),
+      'try {',
+      exports.parse(str, options),
+      '} catch (err) {',
+      '  rethrow(err, __stack.input, __stack.filename, __stack.lineno);',
+      '}'
+    ].join("\n");
+  } else {
+    str = exports.parse(str, options);
+  }
+  
+  if (options.debug) console.log(str);
+  if (client) str = 'escape = escape || ' + escape.toString() + ';\n' + str;
+
+  try {
+    var fn = new Function('locals, filters, escape', str);
+  } catch (err) {
+    if ('SyntaxError' == err.name) {
+      err.message += options.filename
+        ? ' in ' + filename
+        : ' while compiling ejs';
+    }
+    throw err;
+  }
+
+  if (client) return fn;
+
+  return function(locals){
+    return fn.call(this, locals, filters, escape);
+  }
+};
+
+/**
+ * Render the given `str` of ejs.
+ *
+ * Options:
+ *
+ *   - `locals`          Local variables object
+ *   - `cache`           Compiled functions are cached, requires `filename`
+ *   - `filename`        Used by `cache` to key caches
+ *   - `scope`           Function execution context
+ *   - `debug`           Output generated function body
+ *   - `open`            Open tag, defaulting to "<%"
+ *   - `close`           Closing tag, defaulting to "%>"
+ *
+ * @param {String} str
+ * @param {Object} options
+ * @return {String}
+ * @api public
+ */
+
+exports.render = function(str, options){
+  var fn
+    , options = options || {};
+
+  if (options.cache) {
+    if (options.filename) {
+      fn = cache[options.filename] || (cache[options.filename] = compile(str, options));
+    } else {
+      throw new Error('"cache" option requires "filename".');
+    }
+  } else {
+    fn = compile(str, options);
+  }
+
+  options.__proto__ = options.locals;
+  return fn.call(options.scope, options);
+};
+
+/**
+ * Render an EJS file at the given `path` and callback `fn(err, str)`.
+ *
+ * @param {String} path
+ * @param {Object|Function} options or callback
+ * @param {Function} fn
+ * @api public
+ */
+
+exports.renderFile = function(path, options, fn){
+  var key = path + ':string';
+
+  if ('function' == typeof options) {
+    fn = options, options = {};
+  }
+
+  options.filename = path;
+
+  var str;
+  try {
+    str = options.cache
+      ? cache[key] || (cache[key] = read(path, 'utf8'))
+      : read(path, 'utf8');
+  } catch (err) {
+    fn(err);
+    return;
+  }
+  fn(null, exports.render(str, options));
+};
+
+/**
+ * Resolve include `name` relative to `filename`.
+ *
+ * @param {String} name
+ * @param {String} filename
+ * @return {String}
+ * @api private
+ */
+
+function resolveInclude(name, filename) {
+  var path = join(dirname(filename), name);
+  var ext = extname(name);
+  if (!ext) path += '.ejs';
+  return path;
+}
+
+// express support
+
+exports.__express = exports.renderFile;
+
+/**
+ * Expose to require().
+ */
+
+if (require.extensions) {
+  require.extensions['.ejs'] = function(module, filename) {
+    source = require('fs').readFileSync(filename, 'utf-8');
+    module._compile(compile(source, {}), filename);
+  };
+} else if (require.registerExtension) {
+  require.registerExtension('.ejs', function(src) {
+    return compile(src, {});
   });
 }
 
-function compile(template, opts) {
-  var templ;
+},{"./filters":169,"./utils":170,"fs":160,"path":161}],170:[function(require,module,exports){
 
-  // v1 compat
-  // 'scope' is 'context'
-  // FIXME: Remove this in a future version
-  if (opts && opts.scope) {
-    if (!scopeOptionWarned){
-      console.warn('`scope` option is deprecated and will be removed in EJS 3');
-      scopeOptionWarned = true;
-    }
-    if (!opts.context) {
-      opts.context = opts.scope;
-    }
-    delete opts.scope;
-  }
-  templ = new Template(template, opts);
-  return templ.compile();
-}
-exports.compile = compile;
+/*!
+ * EJS
+ * Copyright(c) 2010 TJ Holowaychuk <tj@vision-media.ca>
+ * MIT Licensed
+ */
 
-// template, [data], [opts]
-// Have to include an empty data object if you want opts and no data
-exports.render = function (template, data, opts) {
-  data = data || {};
-  opts = opts || {};
-  var fn
-    , filename;
-
-  // No options object -- if there are optiony names
-  // in the data, copy them to options
-  if (arguments.length == 2) {
-    cpOptsInData(data, opts);
-  }
-
-  if (opts.cache) {
-    filename = opts.filename;
-    if (!filename) {
-      throw new Error('cache option requires a filename');
-    }
-    fn = jsCache[filename];
-    if (!fn) {
-      fn = exports.compile(template, opts);
-      jsCache[filename] = fn;
-    }
-  }
-  else {
-    fn = exports.compile(template, opts);
-  }
-  return fn.call(opts.context, data);
-};
-
-// path, [data] [opts], cb
-// Have to include an empty data object if you want opts and no data
-exports.renderFile = function () {
-  var args = Array.prototype.slice.call(arguments)
-    , path = args.shift()
-    , cb = args.pop()
-    , data = args.shift() || {}
-    , opts = args.pop() || {}
-    , template;
-
-  // No options object -- if there are optiony names
-  // in the data, copy them to options
-  if (arguments.length == 3) {
-    cpOptsInData(data, opts);
-  }
-
-  // Set the filename for includes
-  opts.filename = path;
-
-  function handleTemplate(template) {
-    var result
-      , failed = false;
-    try {
-      result = exports.render(template, data, opts);
-    }
-    catch(err) {
-      cb(err);
-      failed = true;
-    }
-    if (!failed) {
-      cb(null, result);
-    }
-  }
-
-  template = templateCache[path];
-  if (opts.cache && template) {
-    handleTemplate(template);
-  }
-  else {
-    fs.readFile(path, function (err, data) {
-      var tmpl;
-      if (err) {
-        return cb(err);
-      }
-      tmpl = data.toString().trim();
-      if (opts.cache) {
-        templateCache[path] = tmpl;
-      }
-      handleTemplate(tmpl);
-    });
-  }
-};
-
-exports.clearCache = function () {
-  templateCache = {};
-  jsCache = {};
-};
-
-function Template(text, opts) {
-  opts = opts || {};
-  var options = {};
-  this.templateText = text;
-  this.mode = null;
-  this.truncate = false;
-  this.currentLine = 1;
-  this.source = '';
-  options.client = opts.client || false;
-  options.escapeFunction = opts.escape || utils.escapeXML;
-  options.compileDebug = opts.compileDebug !== false;
-  options.debug = !!opts.debug;
-  options.filename = opts.filename;
-  options.delimiter = opts.delimiter || exports.delimiter || _DEFAULT_DELIMITER;
-  options._with = typeof opts._with != 'undefined' ? opts._with : true;
-  this.opts = options;
-
-  this.regex = this.createRegex();
-}
-
-Template.prototype = new function () {
-  this.modes = {
-      EVAL: 'eval'
-    , ESCAPED: 'escaped'
-    , RAW: 'raw'
-    , APPEND: 'append'
-    , COMMENT: 'comment'
-    , LITERAL: 'literal'
-  };
-
-  this.createRegex = function () {
-    var str = _REGEX_STRING
-      , delim = utils.escapeRegExpChars(this.opts.delimiter);
-    str = str.replace(/%/g, delim);
-    return new RegExp(str);
-  };
-
-  this.compile = function () {
-    var src
-      , fn
-      , opts = this.opts
-      , escape = opts.escapeFunction;
-
-    if (!this.source) {
-      this.generateSource();
-      var appended = 'var __output = "";';
-      if (opts._with !== false) {
-        appended +=  ' with (locals || {}) { ';
-      }
-      this.source  = appended + this.source;
-      if (opts._with !== false) {
-        this.source += '}';
-      }
-      this.source += ';return __output.trim();';
-    }
-
-    if (opts.compileDebug) {
-      src = 'var __line = 1' +
-          ', __lines = ' + JSON.stringify(this.templateText) +
-          ', __filename = ' + (opts.filename ?
-                JSON.stringify(opts.filename) : 'undefined') +
-          '; try {' +
-          this.source + '} catch (e) { rethrow(e, __lines, __filename, __line); }';
-    }
-    else {
-      src = this.source;
-    }
-
-    if (opts.debug) {
-      console.log(src);
-    }
-
-    if (opts.client) {
-      src = 'escape = escape || ' + escape.toString() + ';\n' + src;
-      src = 'rethrow = rethrow || ' + rethrow.toString() + ';\n' + src;
-    }
-
-    try {
-      fn = new Function('locals, escape, include, rethrow', src);
-    }
-    catch(e) {
-      if (e instanceof SyntaxError) {
-        if (opts.filename) {
-          e.message += ' in ' + opts.filename;
-        }
-        e.message += ' while compiling ejs';
-        throw e;
-      }
-    }
-
-    if (opts.client) {
-      return fn;
-    }
-
-    // Return a callable function which will execute the function
-    // created by the source-code, with the passed data as locals
-    return function (data) {
-      var include = function (path, includeData) {
-        var d = utils.shallowCopy({}, data);
-        if (includeData) {
-          d = utils.shallowCopy(d, includeData);
-        }
-        return includeFile(path, opts)(d);
-      };
-      return fn(data || {}, escape, include, rethrow);
-    };
-
-  };
-
-  this.generateSource = function () {
-    var self = this
-      , matches = this.parseTemplateText()
-      , d = this.opts.delimiter;
-
-    if (matches && matches.length) {
-      matches.forEach(function (line, index) {
-        var closing
-          , include
-          , includeOpts
-          , includeSrc;
-        // If this is an opening tag, check for closing tags
-        // FIXME: May end up with some false positives here
-        // Better to store modes as k/v with '<' + delimiter as key
-        // Then this can simply check against the map
-        if ( line.indexOf('<' + d) === 0        // If it is a tag
-          && line.indexOf('<' + d + d) !== 0) { // and is not escaped
-          closing = matches[index + 2];
-          if (!(closing == d + '>' || closing == '-' + d + '>')) {
-            throw new Error('Could not find matching close tag for "' + line + '".');
-          }
-        }
-        // HACK: backward-compat `include` preprocessor directives
-        if ((include = line.match(/^\s*include\s+(\S+)/))) {
-          includeOpts = utils.shallowCopy({}, self.opts);
-          includeSrc = includeSource(include[1], includeOpts);
-          includeSrc = ';(function(){' + includeSrc + '})();';
-          self.source += includeSrc;
-        }
-        else {
-          self.scanLine(line);
-        }
-      });
-    }
-
-  };
-
-  this.parseTemplateText = function () {
-    var str = this.templateText
-      , pat = this.regex
-      , result = pat.exec(str)
-      , arr = []
-      , firstPos
-      , lastPos;
-
-    while (result) {
-      firstPos = result.index;
-      lastPos = pat.lastIndex;
-
-      if (firstPos !== 0) {
-        arr.push(str.substring(0, firstPos));
-        str = str.slice(firstPos);
-      }
-
-      arr.push(result[0]);
-      str = str.slice(result[0].length);
-      result = pat.exec(str);
-    }
-
-    if (str) {
-      arr.push(str);
-    }
-
-    return arr;
-  };
-
-  this.scanLine = function (line) {
-    var self = this
-      , d = this.opts.delimiter
-      , newLineCount = 0;
-
-    function _addOutput() {
-      if (self.truncate) {
-        line = line.replace('\n', '');
-      }
-
-      // Preserve literal slashes
-      line = line.replace(/\\/g, '\\\\');
-
-      // Convert linebreaks
-      line = line.replace(/\n/g, '\\n');
-      line = line.replace(/\r/g, '\\r');
-
-      // Escape double-quotes
-      // - this will be the delimiter during execution
-      line = line.replace(/"/g, '\\"');
-      self.source += ';__output += "' + line + '";';
-    }
-
-    newLineCount = (line.split('\n').length - 1);
-
-    switch (line) {
-      case '<' + d:
-        this.mode = this.modes.EVAL;
-        break;
-      case '<' + d + '=':
-        this.mode = this.modes.ESCAPED;
-        break;
-      case '<' + d + '-':
-        this.mode = this.modes.RAW;
-        break;
-      case '<' + d + '#':
-        this.mode = this.modes.COMMENT;
-        break;
-      case '<' + d + d:
-        this.mode = this.modes.LITERAL;
-        this.source += ';__output += "' + line.replace('<' + d + d, '<' + d) + '";';
-        break;
-      case d + '>':
-      case '-' + d + '>':
-        if (this.mode == this.modes.LITERAL) {
-          _addOutput();
-        }
-
-        this.mode = null;
-        this.truncate = line.indexOf('-') === 0;
-        break;
-      default:
-        // In script mode, depends on type of tag
-        if (this.mode) {
-          // If '//' is found without a line break, add a line break.
-          switch (this.mode) {
-            case this.modes.EVAL:
-            case this.modes.ESCAPED:
-            case this.modes.RAW:
-              if (line.lastIndexOf('//') > line.lastIndexOf('\n')) {
-                line += '\n';
-              }
-          }
-          switch (this.mode) {
-            // Just executing code
-            case this.modes.EVAL:
-              this.source += ';' + line;
-              break;
-            // Exec, esc, and output
-            case this.modes.ESCAPED:
-              // Add the exec'd, escaped result to the output
-              this.source += ';__output += escape(' +
-                  line.replace(/;\S*/, '').trim() + ')';
-              break;
-            // Exec and output
-            case this.modes.RAW:
-              // Add the exec'd result to the output
-              this.source += ';__output += ' + line.trim();
-              break;
-            case this.modes.COMMENT:
-              // Do nothing
-              break;
-            // Literal <%% mode, append as raw output
-            case this.modes.LITERAL:
-              _addOutput();
-              break;
-          }
-        }
-        // In string mode, just add the output
-        else {
-          _addOutput();
-        }
-    }
-
-    if (self.opts.compileDebug && newLineCount) {
-      this.currentLine += newLineCount;
-      this.source += ';__line = ' + this.currentLine + ';';
-    }
-  };
-};
-
-// Express support
-exports.__express = exports.renderFile;
-
-// Add require support
-/* istanbul ignore else */
-if (require.extensions) {
-  require.extensions['.ejs'] = function (module, filename) {
-    filename = filename || /* istanbul ignore next */ module.filename;
-    var options = {
-          filename: filename
-        , client: true
-        }
-      , template = fs.readFileSync(filename).toString().trim()
-      , fn = compile(template, options);
-    module._compile('module.exports = ' + fn.toString() + ';', filename);
-  };
-}
-
-exports.VERSION = _VERSION_STRING;
-
-/* istanbul ignore if */
-if (typeof window != 'undefined') {
-  window.ejs = exports;
-}
-
-},{"../package.json":170,"./utils":169,"fs":160,"path":161}],170:[function(require,module,exports){
-module.exports={
-  "name": "ejs",
-  "description": "Embedded JavaScript templates",
-  "keywords": [
-    "template",
-    "engine",
-    "ejs"
-  ],
-  "version": "2.2.1",
-  "author": {
-    "name": "Matthew Eernisse",
-    "email": "mde@fleegix.org",
-    "url": "http://fleegix.org"
-  },
-  "contributors": [
-    {
-      "name": "Timothy Gu",
-      "email": "timothygu99@gmail.com",
-      "url": "https://timothygu.github.io"
-    }
-  ],
-  "license": "Apache-2.0",
-  "main": "./lib/ejs.js",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/mde/ejs.git"
-  },
-  "bugs": {
-    "url": "https://github.com/mde/ejs/issues"
-  },
-  "homepage": "https://github.com/mde/ejs",
-  "dependencies": {},
-  "devDependencies": {
-    "browserify": "^8.0.3",
-    "uglify-js": "^2.4.16",
-    "mocha": "^2.1.0",
-    "jake": "^8.0.0",
-    "istanbul": "~0.3.5"
-  },
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "scripts": {
-    "test": "mocha",
-    "coverage": "istanbul cover node_modules/mocha/bin/_mocha"
-  },
-  "readme": "# EJS\n\nEmbedded JavaScript templates\n\n[![Build Status](https://img.shields.io/travis/mde/ejs/master.svg?style=flat)](https://travis-ci.org/mde/ejs)\n[![Developing Dependencies](https://img.shields.io/david/dev/mde/ejs.svg?style=flat)](https://david-dm.org/mde/ejs#info=devDependencies)\n\n## Installation\n\n```bash\n$ npm install ejs\n```\n\n## Features\n\n  * Control flow with `<% %>`\n  * Escaped output with `<%= %>`\n  * Unescaped raw output with `<%- %>`\n  * Trim-mode ('newline slurping') with `-%>` ending tag\n  * Custom delimiters (e.g., use '<? ?>' instead of '<% %>')\n  * Includes\n  * Client-side support\n  * Static caching of intermediate JavaScript\n  * Static caching of templates\n  * Complies with the [Express](http://expressjs.com) view system\n\n## Example\n\n```html\n<% if (user) { %>\n  <h2><%= user.name %></h2>\n<% } %>\n```\n\n## Usage\n\n```javascript\nvar template = ejs.compile(str, options);\ntemplate(data);\n// => Rendered HTML string\n\nejs.render(str, data, options);\n// => Rendered HTML string\n```\n\nYou can also use the shortcut `ejs.render(dataAndOptions);` where you pass\neverything in a single object. In that case, you'll end up with local variables\nfor all the passed options.\n\n## Options\n\n  - `cache`           Compiled functions are cached, requires `filename`\n  - `filename`        Used by `cache` to key caches, and for includes\n  - `context`         Function execution context\n  - `compileDebug`    When `false` no debug instrumentation is compiled\n  - `client`          Returns standalone compiled function\n  - `delimiter`       Character to use with angle brackets for open/close\n  - `debug`           Output generated function body\n  - `_with`           Whether or not to use `with() {}` constructs. If `false`\n                      then the locals will be stored in the `locals` object.\n\n## Tags\n\n  - `<%`              'Scriptlet' tag, for control-flow, no output\n  - `<%=`             Outputs the value into the template (HTML escaped)\n  - `<%-`             Outputs the unescaped value into the template\n  - `<%#`             Comment tag, no execution, no output\n  - `<%%`             Outputs a literal '<%'\n  - `%>`              Plain ending tag\n  - `-%>`             Trim-mode ('newline slurp') tag, trims following newline\n\n## Includes\n\nIncludes are relative to the template with the `include` call. (This\nrequires the 'filename' option.) For example if you have \"./views/users.ejs\" and\n\"./views/user/show.ejs\" you would use `<%- include('user/show'); %>`.\n\nYou'll likely want to use the raw output tag (`<%-`) with your include to avoid\ndouble-escaping the HTML output.\n\n```html\n<ul>\n  <% users.forEach(function(user){ %>\n    <%- include('user/show', {user: user}); %>\n  <% }); %>\n</ul>\n```\n\nIncludes are inserted at runtime, so you can use variables for the path in the\n`include` call (for example `<%- include(somePath); %>`). Variables in your\ntop-level data object are available to all your includes, but local variables\nneed to be passed down.\n\nNOTE: Include preprocessor directives (`<% include user/show  %>`) are\nstill supported.\n\n## Custom delimiters\n\nCustom delimiters can be applied on a per-template basis, or globally:\n\n```javascript\nvar ejs = require('ejs'),\n    users = ['geddy', 'neil', 'alex'];\n\n// Just one template\nejs.render('<?= users.join(\" | \"); ?>', {users: users}, {delimiter: '?'});\n// => 'geddy | neil | alex'\n\n// Or globally\nejs.delimiter = '$';\nejs.render('<$= users.join(\" | \"); $>', {users: users});\n// => 'geddy | neil | alex'\n```\n\n## Layouts\n\nEJS does not specifically support blocks, but layouts can be implemented by\nincluding headers and footers, like so:\n\n\n```html\n<%- include('header'); -%>\n<h1>\n  Title\n</h1>\n<p>\n  My page\n</p>\n<%- include('footer'); -%>\n```\n\n## Client-side support\n\nGo to the [Latest Release](https://github.com/mde/ejs/releases/latest), download\n`./ejs.js` or `./ejs.min.js`.\n\nInclude one of these on your page, and `ejs.render(str)`.\n\n## Related projects\n\nThere are a number of implementations of EJS:\n\n * TJ's implementation, the v1 of this library: https://github.com/tj/ejs\n * Jupiter Consulting's EJS: http://www.embeddedjs.com/\n * EJS Embedded JavaScript Framework on Google Code: https://code.google.com/p/embeddedjavascript/\n * Sam Stephenson's Ruby implementation: https://rubygems.org/gems/ejs\n * Erubis, an ERB implementation which also runs JavaScript: http://www.kuwata-lab.com/erubis/users-guide.04.html#lang-javascript\n\n## License\n\nLicensed under the Apache License, Version 2.0\n(<http://www.apache.org/licenses/LICENSE-2.0>)\n\n- - -\nEJS Embedded JavaScript templates copyright 2112\nmde@fleegix.org.\n\n\n",
-  "readmeFilename": "README.md",
-  "_id": "ejs@2.2.1",
-  "dist": {
-    "shasum": "ac506013292097fe8e6842a4c37296d049322afe"
-  },
-  "_from": "ejs@~2.2.1",
-  "_resolved": "https://registry.npmjs.org/ejs/-/ejs-2.2.1.tgz"
-}
-
-},{}],169:[function(require,module,exports){
-/*
- * EJS Embedded JavaScript templates
- * Copyright 2112 Matthew Eernisse (mde@fleegix.org)
+/**
+ * Escape the given string of `html`.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *         http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- *
-*/
+ * @param {String} html
+ * @return {String}
+ * @api private
+ */
 
-'use strict';
-
-var regExpChars = /[|\\{}()[\]^$+*?.]/g;
-
-exports.escapeRegExpChars = function (string) {
-  // istanbul ignore if
-  if (!string) {
-    return '';
-  }
-  return String(string).replace(regExpChars, '\\$&');
-};
-
-exports.escapeXML = function (markup) {
-  return String(markup)
-    .replace(/&/g, '&amp;')
+exports.escape = function(html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/'/g, '&#39;')
     .replace(/"/g, '&quot;');
 };
+ 
+},{}],169:[function(require,module,exports){
 
-exports.shallowCopy = function (to, from) {
-  for (var p in from) {
-    to[p] = from[p];
-  }
-  return to;
+/*!
+ * EJS - Filters
+ * Copyright(c) 2010 TJ Holowaychuk <tj@vision-media.ca>
+ * MIT Licensed
+ */
+
+/**
+ * First element of the target `obj`.
+ */
+
+exports.first = function(obj) {
+  return obj[0];
 };
 
+/**
+ * Last element of the target `obj`.
+ */
 
+exports.last = function(obj) {
+  return obj[obj.length - 1];
+};
+
+/**
+ * Capitalize the first letter of the target `str`.
+ */
+
+exports.capitalize = function(str){
+  str = String(str);
+  return str[0].toUpperCase() + str.substr(1, str.length);
+};
+
+/**
+ * Downcase the target `str`.
+ */
+
+exports.downcase = function(str){
+  return String(str).toLowerCase();
+};
+
+/**
+ * Uppercase the target `str`.
+ */
+
+exports.upcase = function(str){
+  return String(str).toUpperCase();
+};
+
+/**
+ * Sort the target `obj`.
+ */
+
+exports.sort = function(obj){
+  return Object.create(obj).sort();
+};
+
+/**
+ * Sort the target `obj` by the given `prop` ascending.
+ */
+
+exports.sort_by = function(obj, prop){
+  return Object.create(obj).sort(function(a, b){
+    a = a[prop], b = b[prop];
+    if (a > b) return 1;
+    if (a < b) return -1;
+    return 0;
+  });
+};
+
+/**
+ * Size or length of the target `obj`.
+ */
+
+exports.size = exports.length = function(obj) {
+  return obj.length;
+};
+
+/**
+ * Add `a` and `b`.
+ */
+
+exports.plus = function(a, b){
+  return Number(a) + Number(b);
+};
+
+/**
+ * Subtract `b` from `a`.
+ */
+
+exports.minus = function(a, b){
+  return Number(a) - Number(b);
+};
+
+/**
+ * Multiply `a` by `b`.
+ */
+
+exports.times = function(a, b){
+  return Number(a) * Number(b);
+};
+
+/**
+ * Divide `a` by `b`.
+ */
+
+exports.divided_by = function(a, b){
+  return Number(a) / Number(b);
+};
+
+/**
+ * Join `obj` with the given `str`.
+ */
+
+exports.join = function(obj, str){
+  return obj.join(str || ', ');
+};
+
+/**
+ * Truncate `str` to `len`.
+ */
+
+exports.truncate = function(str, len){
+  str = String(str);
+  return str.substr(0, len);
+};
+
+/**
+ * Truncate `str` to `n` words.
+ */
+
+exports.truncate_words = function(str, n){
+  var str = String(str)
+    , words = str.split(/ +/);
+  return words.slice(0, n).join(' ');
+};
+
+/**
+ * Replace `pattern` with `substitution` in `str`.
+ */
+
+exports.replace = function(str, pattern, substitution){
+  return String(str).replace(pattern, substitution || '');
+};
+
+/**
+ * Prepend `val` to `obj`.
+ */
+
+exports.prepend = function(obj, val){
+  return Array.isArray(obj)
+    ? [val].concat(obj)
+    : val + obj;
+};
+
+/**
+ * Append `val` to `obj`.
+ */
+
+exports.append = function(obj, val){
+  return Array.isArray(obj)
+    ? obj.concat(val)
+    : obj + val;
+};
+
+/**
+ * Map the given `prop`.
+ */
+
+exports.map = function(arr, prop){
+  return arr.map(function(obj){
+    return obj[prop];
+  });
+};
+
+/**
+ * Reverse the given `obj`.
+ */
+
+exports.reverse = function(obj){
+  return Array.isArray(obj)
+    ? obj.reverse()
+    : String(obj).split('').reverse().join('');
+};
+
+/**
+ * Get `prop` of the given `obj`.
+ */
+
+exports.get = function(obj, prop){
+  return obj[prop];
+};
+
+/**
+ * Packs the given `obj` into json string
+ */
+exports.json = function(obj){
+  return JSON.stringify(obj);
+};
 },{}],161:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
