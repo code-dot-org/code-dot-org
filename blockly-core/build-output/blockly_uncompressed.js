@@ -13525,8 +13525,10 @@ Blockly.BlockSvgFunctional.prototype.renderDraw_ = function(iconWidth, inputRows
   this.divider_.setAttribute("width", rect.width - 2)
 };
 Blockly.BlockSvgFunctional.prototype.createFunctionalMarkers_ = function() {
+  var functionalMarkers = [];
   for(var i = 0;i < this.block_.inputList.length;i++) {
     var input = this.block_.inputList[i];
+    functionalMarkers.push(input.name);
     if(this.inputMarkers_[input.name]) {
       continue
     }
@@ -13535,6 +13537,13 @@ Blockly.BlockSvgFunctional.prototype.createFunctionalMarkers_ = function() {
     }
     this.inputMarkers_[input.name] = Blockly.createSvgElement("rect", {fill:"red"}, this.svgGroup_)
   }
+  Object.keys(this.inputMarkers_).forEach(function(markerName) {
+    if(functionalMarkers.indexOf(markerName) === -1) {
+      var element = this.inputMarkers_[markerName];
+      element.parentNode.removeChild(element);
+      delete this.inputMarkers_[markerName]
+    }
+  }, this)
 };
 Blockly.BlockSvgFunctional.prototype.renderDrawRight_ = function(renderInfo, connectionsXY, inputRows, iconWidth) {
   if(this.rowBuffer) {
