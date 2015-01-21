@@ -3029,7 +3029,8 @@ if (typeof(CanvasRenderingContext2D) != 'undefined') {
 /**
  * A set of functional blocks
  */
-
+var utils = require('./utils');
+var _ = utils.getLodash();
 var msg = require('../locale/current/common');
 var functionalBlockUtils = require('./functionalBlockUtils');
 var initTitledFunctionalBlock = functionalBlockUtils.initTitledFunctionalBlock;
@@ -3049,10 +3050,7 @@ exports.install = function(blockly, generator, gensym) {
   installBoolean(blockly, generator, gensym);
   installMathNumber(blockly, generator, gensym);
   installString(blockly, generator, gensym);
-  installCond(blockly, generator, 1);
-  installCond(blockly, generator, 2);
-  installCond(blockly, generator, 3);
-  installCond(blockly, generator, 4);
+  installCond(blockly, generator);
 };
 
 function installPlus(blockly, generator, gensym) {
@@ -3347,20 +3345,141 @@ function installString(blockly, generator) {
  * Implements the cond block. numPairs represents the number of
  * condition-value pairs before the default value.
  */
-function installCond(blockly, generator, numPairs) {
-  var blockName = 'functional_cond_' + numPairs;
+function installCond(blockly, generator) {
+  // TODO(brent) - rtl
+
+  var blockName = 'functional_cond';
   blockly.Blocks[blockName] = {
     helpUrl: '',
     init: function() {
-      var args = [];
-      for (var i = 0; i < numPairs; i++) {
-        args.push({name: 'COND' + i, type: 'boolean', default: 'false'});
-        args.push({name: 'VALUE' + i, type: 'none', default: ''});
+      this.pairs_ = [];
+      this.setFunctional(true, {
+        headerHeight: 30
+      });
+
+      var options = {
+        fixedSize: { height: 35 }
+      };
+
+      var plusField = new Blockly.FieldIcon('+');
+      plusField.getRootElement().addEventListener('mousedown',
+        _.bind(this.addConditionalRow, this));
+
+      this.appendDummyInput()
+        .appendTitle(new Blockly.FieldLabel('cond', options))
+        .setAlign(Blockly.ALIGN_CENTRE);
+
+      this.appendFunctionalInput('DEFAULT');
+
+      this.appendDummyInput('PLUS')
+        .appendTitle(plusField)
+        .setInline(true);
+
+      this.setFunctionalOutput(true);
+
+      this.addConditionalRow();
+    },
+
+    /**
+     * Add another condition/value pair to the end.
+     */
+    addConditionalRow: function () {
+      // id is either the last value plus 1, or if we have no values yet 0
+      // we can't just have pairs_.length, since there could be gaps
+      var id = this.pairs_.length > 0 ? _(this.pairs_).last() * 1 + 1 : 0;
+      this.pairs_.push(id);
+
+      var cond = this.appendFunctionalInput('COND' + id);
+      cond.setHSV.apply(cond, functionalBlockUtils.colors.boolean);
+      cond.setCheck('boolean');
+      this.moveInputBefore('COND' + id, 'DEFAULT');
+
+      this.appendFunctionalInput('VALUE' + id)
+        .setInline(true)
+        .setHSV(0, 0, 0.99);
+      this.moveInputBefore('VALUE' + id, 'DEFAULT');
+
+      var minusInput = this.appendDummyInput('MINUS' + id)
+        .setInline(true);
+
+      if (this.pairs_.length > 1) {
+        var minusField = new Blockly.FieldIcon('-');
+        minusField.getRootElement().addEventListener('mousedown',
+          _.bind(this.removeConditionalRow, this, id));
+        minusInput.appendTitle(minusField);
       }
-      args.push({name: 'DEFAULT', type: 'none', default: ''});
-      var blockTitle = 'cond';
-      var wrapWidth = 2;
-      initTitledFunctionalBlock(this, blockTitle, undefined, args, wrapWidth);
+
+      this.moveInputBefore('MINUS' + id, 'DEFAULT');
+    },
+
+    /**
+     * Remove the condition/value pair with the given id. No-op if no row with
+     * that id.
+     */
+    removeConditionalRow: function (id) {
+      var index = this.pairs_.indexOf(id);
+      if (!_(this.pairs_).contains(id) || this.pairs_.length === 1) {
+        return;
+      }
+      this.pairs_.splice(index, 1);
+
+      var cond = this.getInput('COND' + id);
+      var child = cond.connection.targetBlock();
+      if (child) {
+        child.dispose();
+      }
+      this.removeInput('COND' + id);
+
+      var val = this.getInput('VALUE' + id);
+      child = val.connection.targetBlock();
+      if (child) {
+        child.dispose();
+      }
+      this.removeInput('VALUE' + id);
+
+      this.removeInput('MINUS' + id);
+    },
+
+    /**
+     * Serialize pairs so that we can deserialize with the same ids
+     */
+    mutationToDom: function() {
+      if (this.pairs_.length <= 1) {
+        return null;
+      }
+      var container = document.createElement('mutation');
+      container.setAttribute('pairs', this.pairs_.join(','));
+      return container;
+    },
+
+    /**
+     * Deserialize and cause our block to have same ids
+     */
+    domToMutation: function (element) {
+      var i;
+      var pairs = element.getAttribute('pairs');
+      if (!pairs) {
+        return;
+      }
+
+      pairs = pairs.split(',').map(function (item) {
+        return parseInt(item, 10);
+      });
+
+      // Our pairs, which are used to name rows, are not necessarily contiguous.
+      // We ensure that we end up with the same set of pairs by adding lots
+      // of rows, and then deleting the unneeded ones (simulating what happened
+      // to originally create this block)
+      var lastRow = _(pairs).last();
+      for (i = 1; i <= lastRow; i++) {
+        this.addConditionalRow();
+      }
+
+      for (i = 0; i < lastRow; i++) {
+        if (!_(pairs).contains(i)) {
+          this.removeConditionalRow(i);
+        }
+      }
     }
   };
 
@@ -3375,26 +3494,27 @@ function installCond(blockly, generator, numPairs) {
    */
   generator[blockName] = function() {
     var cond, value, defaultValue;
-    var code = 'function() {\n  ';
-    for (var i = 0; i < numPairs; i++) {
+    var code = '(function () {\n  ';
+    for (var i = 0; i < this.pairs_.length; i++) {
       if (i > 0) {
         code += 'else ';
       }
-      cond = Blockly.JavaScript.statementToCode(this, 'COND' + i, false) ||
+      var id = this.pairs_[i];
+      cond = Blockly.JavaScript.statementToCode(this, 'COND' + id, false) ||
           false;
-      value = Blockly.JavaScript.statementToCode(this, 'VALUE' + i, false) ||
+      value = Blockly.JavaScript.statementToCode(this, 'VALUE' + id, false) ||
           '';
       code += 'if (' + cond + ') { return ' + value + '; }\n  ';
     }
     defaultValue = Blockly.JavaScript.statementToCode(this, 'DEFAULT', false) ||
         '';
     code += 'else { return ' + defaultValue + '; }\n';
-    code += '}()';
+    code += '})()';
     return code;
   };
 }
 
-},{"../locale/current/common":153,"./functionalBlockUtils":69}],69:[function(require,module,exports){
+},{"../locale/current/common":153,"./functionalBlockUtils":69,"./utils":148}],69:[function(require,module,exports){
 var utils = require('./utils');
 var _ = utils.getLodash();
 
@@ -8718,7 +8838,7 @@ exports.generateDropletModeOptions = function (codeFunctions) {
 /**
  * @license
  * Lo-Dash 2.4.1 (Custom Build) <http://lodash.com/>
- * Build: `lodash include="debounce,reject,map,value,range,without,sample,create,flatten,isEmpty,wrap,size,bind" --output src/lodash.js`
+ * Build: `lodash include="debounce,reject,map,value,range,without,sample,create,flatten,isEmpty,wrap,size,bind,contains,last" --output src/lodash.js`
  * Copyright 2012-2013 The Dojo Foundation <http://dojofoundation.org/>
  * Based on Underscore.js 1.5.2 <http://underscorejs.org/LICENSE>
  * Copyright 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -10455,6 +10575,54 @@ exports.generateDropletModeOptions = function (codeFunctions) {
   /*--------------------------------------------------------------------------*/
 
   /**
+   * Checks if a given value is present in a collection using strict equality
+   * for comparisons, i.e. `===`. If `fromIndex` is negative, it is used as the
+   * offset from the end of the collection.
+   *
+   * @static
+   * @memberOf _
+   * @alias include
+   * @category Collections
+   * @param {Array|Object|string} collection The collection to iterate over.
+   * @param {*} target The value to check for.
+   * @param {number} [fromIndex=0] The index to search from.
+   * @returns {boolean} Returns `true` if the `target` element is found, else `false`.
+   * @example
+   *
+   * _.contains([1, 2, 3], 1);
+   * // => true
+   *
+   * _.contains([1, 2, 3], 1, 2);
+   * // => false
+   *
+   * _.contains({ 'name': 'fred', 'age': 40 }, 'fred');
+   * // => true
+   *
+   * _.contains('pebbles', 'eb');
+   * // => true
+   */
+  function contains(collection, target, fromIndex) {
+    var index = -1,
+        indexOf = getIndexOf(),
+        length = collection ? collection.length : 0,
+        result = false;
+
+    fromIndex = (fromIndex < 0 ? nativeMax(0, length + fromIndex) : fromIndex) || 0;
+    if (isArray(collection)) {
+      result = indexOf(collection, target, fromIndex) > -1;
+    } else if (typeof length == 'number') {
+      result = (isString(collection) ? collection.indexOf(target, fromIndex) : indexOf(collection, target, fromIndex)) > -1;
+    } else {
+      baseEach(collection, function(value) {
+        if (++index >= fromIndex) {
+          return !(result = value === target);
+        }
+      });
+    }
+    return result;
+  }
+
+  /**
    * Iterates over elements of a collection, returning an array of all elements
    * the callback returns truey for. The callback is bound to `thisArg` and
    * invoked with three arguments; (value, index|key, collection).
@@ -10836,6 +11004,75 @@ exports.generateDropletModeOptions = function (codeFunctions) {
       return array[index] === value ? index : -1;
     }
     return baseIndexOf(array, value, fromIndex);
+  }
+
+  /**
+   * Gets the last element or last `n` elements of an array. If a callback is
+   * provided elements at the end of the array are returned as long as the
+   * callback returns truey. The callback is bound to `thisArg` and invoked
+   * with three arguments; (value, index, array).
+   *
+   * If a property name is provided for `callback` the created "_.pluck" style
+   * callback will return the property value of the given element.
+   *
+   * If an object is provided for `callback` the created "_.where" style callback
+   * will return `true` for elements that have the properties of the given object,
+   * else `false`.
+   *
+   * @static
+   * @memberOf _
+   * @category Arrays
+   * @param {Array} array The array to query.
+   * @param {Function|Object|number|string} [callback] The function called
+   *  per element or the number of elements to return. If a property name or
+   *  object is provided it will be used to create a "_.pluck" or "_.where"
+   *  style callback, respectively.
+   * @param {*} [thisArg] The `this` binding of `callback`.
+   * @returns {*} Returns the last element(s) of `array`.
+   * @example
+   *
+   * _.last([1, 2, 3]);
+   * // => 3
+   *
+   * _.last([1, 2, 3], 2);
+   * // => [2, 3]
+   *
+   * _.last([1, 2, 3], function(num) {
+   *   return num > 1;
+   * });
+   * // => [2, 3]
+   *
+   * var characters = [
+   *   { 'name': 'barney',  'blocked': false, 'employer': 'slate' },
+   *   { 'name': 'fred',    'blocked': true,  'employer': 'slate' },
+   *   { 'name': 'pebbles', 'blocked': true,  'employer': 'na' }
+   * ];
+   *
+   * // using "_.pluck" callback shorthand
+   * _.pluck(_.last(characters, 'blocked'), 'name');
+   * // => ['fred', 'pebbles']
+   *
+   * // using "_.where" callback shorthand
+   * _.last(characters, { 'employer': 'na' });
+   * // => [{ 'name': 'pebbles', 'blocked': true, 'employer': 'na' }]
+   */
+  function last(array, callback, thisArg) {
+    var n = 0,
+        length = array ? array.length : 0;
+
+    if (typeof callback != 'number' && callback != null) {
+      var index = length;
+      callback = lodash.createCallback(callback, thisArg, 3);
+      while (index-- && callback(array[index], index, array)) {
+        n++;
+      }
+    } else {
+      n = callback;
+      if (n == null || thisArg) {
+        return array ? array[length - 1] : undefined;
+      }
+    }
+    return slice(array, nativeMax(0, length - n));
   }
 
   /**
@@ -11522,6 +11759,7 @@ exports.generateDropletModeOptions = function (codeFunctions) {
 
   /*--------------------------------------------------------------------------*/
 
+  lodash.contains = contains;
   lodash.identity = identity;
   lodash.indexOf = indexOf;
   lodash.isArguments = isArguments;
@@ -11536,6 +11774,8 @@ exports.generateDropletModeOptions = function (codeFunctions) {
   lodash.size = size;
   lodash.sortedIndex = sortedIndex;
 
+  lodash.include = contains;
+
   mixin(function() {
     var source = {}
     forOwn(lodash, function(func, methodName) {
@@ -11548,6 +11788,7 @@ exports.generateDropletModeOptions = function (codeFunctions) {
 
   /*--------------------------------------------------------------------------*/
 
+  lodash.last = last;
   lodash.sample = sample;
 
   forOwn(lodash, function(func, methodName) {
@@ -13956,7 +14197,7 @@ return buf.join('');
 var constants = require('./constants');
 var readonly = require('./templates/readonly.html');
 
-TestResults = constants.TestResults;
+var TestResults = constants.TestResults;
 
 // TODO (br-pair): can we not pass in the studioApp
 var FeedbackBlocks = function(options, missingRequiredBlocks, studioApp) {
