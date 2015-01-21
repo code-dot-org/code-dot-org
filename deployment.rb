@@ -51,6 +51,7 @@ def load_configuration()
     'dashboard_honeybadger_api_key' =>'00000000',
     'dashboard_port'              => 3000,
     'dashboard_unicorn_name'      => 'dashboard',
+    'dashboard_enable_pegasus'    => rack_env == :development,
     'dashboard_workers'           => 8,
     'db_reader'                   => 'mysql://root@localhost/',
     'db_writer'                   => 'mysql://root@localhost/',

@@ -8,8 +8,7 @@ require 'varnish_environment'
 require 'apps_api'
 require 'shared_resources'
 
-ENABLE_PEGASUS_SITES = rack_env?(:development)
-require 'pegasus_sites' if ENABLE_PEGASUS_SITES
+require 'pegasus_sites' if CDO.dashboard_enable_pegasus
 
 require 'bootstrap-sass'
 
@@ -23,7 +22,7 @@ module Dashboard
     config.middleware.use VarnishEnvironment
     config.middleware.use AppsApi
     config.middleware.use SharedResources
-    config.middleware.use PegasusSites if ENABLE_PEGASUS_SITES
+    config.middleware.use PegasusSites if CDO.dashboard_enable_pegasus
 
     config.encoding = 'utf-8'
 
