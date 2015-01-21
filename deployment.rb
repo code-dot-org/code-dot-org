@@ -79,7 +79,7 @@ def load_configuration()
   }.tap do |config|
     raise "'#{rack_env}' is not known environment." unless config['rack_envs'].include?(rack_env)
     ENV['RACK_ENV'] = rack_env.to_s unless ENV['RACK_ENV']
-    raise "RACK_ENV ('#{ENV['RACK_ENV']}') does not match configuration ('#{rack_env}')" unless ENV['RACK_ENV'] == rack_env.to_s
+    #raise "RACK_ENV ('#{ENV['RACK_ENV']}') does not match configuration ('#{rack_env}')" unless ENV['RACK_ENV'] == rack_env.to_s
 
     config['bundler_use_sudo'] = config['ruby_installer'] == 'system'
 
@@ -216,4 +216,8 @@ end
 
 def secrets_dir(*dirs)
   aws_dir('secrets', *dirs)
+end
+
+def shared_dir(*dirs)
+  deploy_dir('shared', *dirs)
 end

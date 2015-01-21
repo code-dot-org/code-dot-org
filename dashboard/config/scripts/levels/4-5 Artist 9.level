@@ -77,25 +77,11 @@
     </required_blocks>
     <solution_blocks>
       <xml>
-        <block type="controls_repeat">
-          <title name="TIMES">3</title>
-          <statement name="DO">
-            <block type="draw_move_by_constant">
-              <title name="DIR">moveForward</title>
-              <title name="VALUE">50</title>
-              <next>
-                <block type="draw_turn_by_constant">
-                  <title name="DIR">turnRight</title>
-                  <title name="VALUE">120</title>
-                </block>
-              </next>
-            </block>
-          </statement>
+        <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="draw_move_by_constant">
-              <title name="DIR">moveForward</title>
-              <title name="VALUE">50</title>
-              <next>
+            <block type="controls_repeat">
+              <title name="TIMES">3</title>
+              <statement name="DO">
                 <block type="controls_repeat">
                   <title name="TIMES">3</title>
                   <statement name="DO">
@@ -114,27 +100,10 @@
                     <block type="draw_move_by_constant">
                       <title name="DIR">moveForward</title>
                       <title name="VALUE">50</title>
-                      <next>
-                        <block type="controls_repeat">
-                          <title name="TIMES">3</title>
-                          <statement name="DO">
-                            <block type="draw_move_by_constant">
-                              <title name="DIR">moveForward</title>
-                              <title name="VALUE">50</title>
-                              <next>
-                                <block type="draw_turn_by_constant">
-                                  <title name="DIR">turnRight</title>
-                                  <title name="VALUE">120</title>
-                                </block>
-                              </next>
-                            </block>
-                          </statement>
-                        </block>
-                      </next>
                     </block>
                   </next>
                 </block>
-              </next>
+              </statement>
             </block>
           </next>
         </block>

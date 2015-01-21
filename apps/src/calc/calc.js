@@ -47,7 +47,6 @@ var skin;
 var COMPUTE_NAME = 'zzz_compute';
 
 studioApp.setCheckForEmptyBlocks(false);
-studioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
@@ -258,8 +257,9 @@ function generateExpressionsFromBlockXml(blockXml) {
 }
 
 // todo (brent) : would this logic be better placed inside the blocks?
-// todo (brent) : could use some unit tests
+// todo (brent) : needs some unit tests
 function getEquationFromBlock(block) {
+  var name;
   if (!block) {
     return null;
   }
@@ -296,22 +296,36 @@ function getEquationFromBlock(block) {
         new ExpressionNode(parseInt(val, 10), [], block.id));
 
     case 'functional_call':
-      var name = block.getCallName();
+      name = block.getCallName();
       var def = Blockly.Procedures.getDefinition(name, Blockly.mainBlockSpace);
-      if (!def.isVariable()) {
-        throw new Error('not expected');
+      if (def.isVariable()) {
+        return new Equation(null, new ExpressionNode(name));
+      } else {
+        var values = [];
+        var input, childBlock;
+        for (var i = 0; !!(input = block.getInput('ARG' + i)); i++) {
+          childBlock = input.connection.targetBlock();
+          // TODO - better default?
+          values.push(childBlock ? getEquationFromBlock(childBlock).expression :
+            new ExpressionNode(0));
+        }
+        return new Equation(null, new ExpressionNode(name, values));
       }
-      return new Equation(null, new ExpressionNode(name));
+      break;
 
     case 'functional_definition':
-      if (block.isVariable()) {
-        if (!firstChild) {
-          return new Equation(block.getTitleValue('NAME'), new ExpressionNode(0));
-        }
-        return new Equation(block.getTitleValue('NAME'),
-          getEquationFromBlock(firstChild).expression);
+      name = block.getTitleValue('NAME');
+      // TODO - access private
+      if (block.parameterNames_.length) {
+        name += '(' + block.parameterNames_.join(',') +')';
       }
-      throw new Error('not sure if this works yet');
+      var expression = firstChild ? getEquationFromBlock(firstChild).expression :
+        new ExpressionNode(0);
+
+      return new Equation(name, expression);
+
+    case 'functional_parameters_get':
+      return new Equation(null, new ExpressionNode(block.getTitleValue('VAR')));
 
     default:
       throw "Unknown block type: " + block.type;
@@ -490,6 +504,9 @@ function displayEquation(parentId, name, tokenList, line, markClass) {
   parent.appendChild(g);
   var xPos = 0;
   var len;
+  // TODO (brent) in the case of functions, really we'd like the name to also be
+  // a tokenDiff - i.e. if target is foo(x,y) and user expression is foo(y, x)
+  // we'd like to highlight the differences
   if (name) {
     len = addText(g, (name + ' = '), xPos, null);
     xPos += len;

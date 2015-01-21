@@ -1,0 +1,443 @@
+var appLocale = {lc:{"ar":function(n){
+  if (n === 0) {
+    return 'zero';
+  }
+  if (n == 1) {
+    return 'one';
+  }
+  if (n == 2) {
+    return 'two';
+  }
+  if ((n % 100) >= 3 && (n % 100) <= 10 && n == Math.floor(n)) {
+    return 'few';
+  }
+  if ((n % 100) >= 11 && (n % 100) <= 99 && n == Math.floor(n)) {
+    return 'many';
+  }
+  return 'other';
+},"en":function(n){return n===1?"one":"other"},"bg":function(n){return n===1?"one":"other"},"bn":function(n){return n===1?"one":"other"},"ca":function(n){return n===1?"one":"other"},"cs":function(n){
+  if (n == 1) {
+    return 'one';
+  }
+  if (n == 2 || n == 3 || n == 4) {
+    return 'few';
+  }
+  return 'other';
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+  if ((n % 10) == 1 && (n % 100) != 11) {
+    return 'one';
+  }
+  if ((n % 10) >= 2 && (n % 10) <= 4 &&
+      ((n % 100) < 12 || (n % 100) > 14) && n == Math.floor(n)) {
+    return 'few';
+  }
+  if ((n % 10) === 0 || ((n % 10) >= 5 && (n % 10) <= 9) ||
+      ((n % 100) >= 11 && (n % 100) <= 14) && n == Math.floor(n)) {
+    return 'many';
+  }
+  return 'other';
+},"hu":function(n){return "other"},"id":function(n){return "other"},"is":function(n){
+    return ((n%10) === 1 && (n%100) !== 11) ? 'one' : 'other';
+  },"it":function(n){return n===1?"one":"other"},"ja":function(n){return "other"},"ko":function(n){return "other"},"lt":function(n){
+  if ((n % 10) == 1 && ((n % 100) < 11 || (n % 100) > 19)) {
+    return 'one';
+  }
+  if ((n % 10) >= 2 && (n % 10) <= 9 &&
+      ((n % 100) < 11 || (n % 100) > 19) && n == Math.floor(n)) {
+    return 'few';
+  }
+  return 'other';
+},"lv":function(n){
+  if (n === 0) {
+    return 'zero';
+  }
+  if ((n % 10) == 1 && (n % 100) != 11) {
+    return 'one';
+  }
+  return 'other';
+},"mk":function(n){return (n%10)==1&&n!=11?"one":"other"},"ms":function(n){return "other"},"mt":function(n){
+  if (n == 1) {
+    return 'one';
+  }
+  if (n === 0 || ((n % 100) >= 2 && (n % 100) <= 4 && n == Math.floor(n))) {
+    return 'few';
+  }
+  if ((n % 100) >= 11 && (n % 100) <= 19 && n == Math.floor(n)) {
+    return 'many';
+  }
+  return 'other';
+},"nl":function(n){return n===1?"one":"other"},"no":function(n){return n===1?"one":"other"},"pl":function(n){
+  if (n == 1) {
+    return 'one';
+  }
+  if ((n % 10) >= 2 && (n % 10) <= 4 &&
+      ((n % 100) < 12 || (n % 100) > 14) && n == Math.floor(n)) {
+    return 'few';
+  }
+  if ((n % 10) === 0 || n != 1 && (n % 10) == 1 ||
+      ((n % 10) >= 5 && (n % 10) <= 9 || (n % 100) >= 12 && (n % 100) <= 14) &&
+      n == Math.floor(n)) {
+    return 'many';
+  }
+  return 'other';
+},"pt":function(n){return n===1?"one":"other"},"ro":function(n){
+  if (n == 1) {
+    return 'one';
+  }
+  if (n === 0 || n != 1 && (n % 100) >= 1 &&
+      (n % 100) <= 19 && n == Math.floor(n)) {
+    return 'few';
+  }
+  return 'other';
+},"ru":function(n){
+  if ((n % 10) == 1 && (n % 100) != 11) {
+    return 'one';
+  }
+  if ((n % 10) >= 2 && (n % 10) <= 4 &&
+      ((n % 100) < 12 || (n % 100) > 14) && n == Math.floor(n)) {
+    return 'few';
+  }
+  if ((n % 10) === 0 || ((n % 10) >= 5 && (n % 10) <= 9) ||
+      ((n % 100) >= 11 && (n % 100) <= 14) && n == Math.floor(n)) {
+    return 'many';
+  }
+  return 'other';
+},"sk":function(n){
+  if (n == 1) {
+    return 'one';
+  }
+  if (n == 2 || n == 3 || n == 4) {
+    return 'few';
+  }
+  return 'other';
+},"sl":function(n){
+  if ((n % 100) == 1) {
+    return 'one';
+  }
+  if ((n % 100) == 2) {
+    return 'two';
+  }
+  if ((n % 100) == 3 || (n % 100) == 4) {
+    return 'few';
+  }
+  return 'other';
+},"sq":function(n){return n===1?"one":"other"},"sr":function(n){
+  if ((n % 10) == 1 && (n % 100) != 11) {
+    return 'one';
+  }
+  if ((n % 10) >= 2 && (n % 10) <= 4 &&
+      ((n % 100) < 12 || (n % 100) > 14) && n == Math.floor(n)) {
+    return 'few';
+  }
+  if ((n % 10) === 0 || ((n % 10) >= 5 && (n % 10) <= 9) ||
+      ((n % 100) >= 11 && (n % 100) <= 14) && n == Math.floor(n)) {
+    return 'many';
+  }
+  return 'other';
+},"sv":function(n){return n===1?"one":"other"},"ta":function(n){return n===1?"one":"other"},"th":function(n){return "other"},"tr":function(n){return n===1?"one":"other"},"uk":function(n){
+  if ((n % 10) == 1 && (n % 100) != 11) {
+    return 'one';
+  }
+  if ((n % 10) >= 2 && (n % 10) <= 4 &&
+      ((n % 100) < 12 || (n % 100) > 14) && n == Math.floor(n)) {
+    return 'few';
+  }
+  if ((n % 10) === 0 || ((n % 10) >= 5 && (n % 10) <= 9) ||
+      ((n % 100) >= 11 && (n % 100) <= 14) && n == Math.floor(n)) {
+    return 'many';
+  }
+  return 'other';
+},"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
+c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
+n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
+v:function(d,k){appLocale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).appLocale = {
+"actor":function(d){return "skuespiller"},
+"alienInvasion":function(d){return "Alien Invasion!"},
+"backgroundBlack":function(d){return "sort"},
+"backgroundCave":function(d){return "hule"},
+"backgroundCloudy":function(d){return "overskyet"},
+"backgroundHardcourt":function(d){return "hardcourt"},
+"backgroundNight":function(d){return "nat"},
+"backgroundUnderwater":function(d){return "undervands"},
+"backgroundCity":function(d){return "City"},
+"backgroundDesert":function(d){return "ørken"},
+"backgroundRainbow":function(d){return "regnbue"},
+"backgroundSoccer":function(d){return "fodbold"},
+"backgroundSpace":function(d){return "plads"},
+"backgroundTennis":function(d){return "tennis"},
+"backgroundWinter":function(d){return "vinter"},
+"catActions":function(d){return "Handlinger"},
+"catControl":function(d){return "Løkker"},
+"catEvents":function(d){return "Hændelser"},
+"catLogic":function(d){return "Logik"},
+"catMath":function(d){return "Matematik"},
+"catProcedures":function(d){return "Funktioner"},
+"catText":function(d){return "Tekst"},
+"catVariables":function(d){return "Variabler"},
+"changeScoreTooltip":function(d){return "Tilføj eller fjern et point til scoren."},
+"changeScoreTooltipK1":function(d){return "Tilføj et point til scoren."},
+"continue":function(d){return "Fortsæt"},
+"decrementPlayerScore":function(d){return "fjern point"},
+"defaultSayText":function(d){return "Skriv her"},
+"emotion":function(d){return "humør"},
+"finalLevel":function(d){return "Tillykke! Du har løst den sidste opgave."},
+"for":function(d){return "for"},
+"hello":function(d){return "hej"},
+"helloWorld":function(d){return "Hej verden!"},
+"incrementPlayerScore":function(d){return "score point"},
+"makeProjectileDisappear":function(d){return "forsvind"},
+"makeProjectileBounce":function(d){return "hop"},
+"makeProjectileBlueFireball":function(d){return "lav blå ildkugle"},
+"makeProjectilePurpleFireball":function(d){return "lav lilla ildkugle"},
+"makeProjectileRedFireball":function(d){return "lav røde ildkugle"},
+"makeProjectileYellowHearts":function(d){return "lav gule hjerter"},
+"makeProjectilePurpleHearts":function(d){return "lav lilla hjerter"},
+"makeProjectileRedHearts":function(d){return "lav røde hjerter"},
+"makeProjectileTooltip":function(d){return "Lad kuglen, der netop ramte, forsvinde eller hoppe."},
+"makeYourOwn":function(d){return "Lav din egen Play Lab App"},
+"moveDirectionDown":function(d){return "ned"},
+"moveDirectionLeft":function(d){return "venstre"},
+"moveDirectionRight":function(d){return "højre"},
+"moveDirectionUp":function(d){return "op"},
+"moveDirectionRandom":function(d){return "tilfældig"},
+"moveDistance25":function(d){return "25 pixels"},
+"moveDistance50":function(d){return "50 pixels"},
+"moveDistance100":function(d){return "100 pixels"},
+"moveDistance200":function(d){return "200 pixels"},
+"moveDistance400":function(d){return "400 pixels"},
+"moveDistancePixels":function(d){return "pixels"},
+"moveDistanceRandom":function(d){return "tilfældige pixels"},
+"moveDistanceTooltip":function(d){return "Flyt en spiller en bestemt afstand i den angivne retning."},
+"moveSprite":function(d){return "flyt"},
+"moveSpriteN":function(d){return "flyt spiller "+appLocale.v(d,"spriteIndex")},
+"toXY":function(d){return "to x,y"},
+"moveDown":function(d){return "Flyt ned"},
+"moveDownTooltip":function(d){return "Flyt en spiller ned."},
+"moveLeft":function(d){return "Flyt til venstre"},
+"moveLeftTooltip":function(d){return "Flyt en spiller til venstre."},
+"moveRight":function(d){return "Flyt til højre"},
+"moveRightTooltip":function(d){return "Flyt spilleren til højre."},
+"moveUp":function(d){return "Flyt op"},
+"moveUpTooltip":function(d){return "Flyt spilleren op."},
+"moveTooltip":function(d){return "Flyt en spiller."},
+"nextLevel":function(d){return "Tillykke! Du har fuldført denne opgave."},
+"no":function(d){return "Nej"},
+"numBlocksNeeded":function(d){return "Denne opgave kan løses med %1 blokke."},
+"ouchExclamation":function(d){return "Av!"},
+"playSoundCrunch":function(d){return "afspil kvaselyd"},
+"playSoundGoal1":function(d){return "afspil mål 1 lyd"},
+"playSoundGoal2":function(d){return "afspil mål 2 lyd"},
+"playSoundHit":function(d){return "afspil rammer lyd"},
+"playSoundLosePoint":function(d){return "afspil tab point lyd"},
+"playSoundLosePoint2":function(d){return "afspil tab point 2 lyd"},
+"playSoundRetro":function(d){return "afspil retro lyd"},
+"playSoundRubber":function(d){return "Afspil gummi lyd"},
+"playSoundSlap":function(d){return "afspil klaske lyd"},
+"playSoundTooltip":function(d){return "Afspil den valgte lyd."},
+"playSoundWinPoint":function(d){return "afspil vind point lyd"},
+"playSoundWinPoint2":function(d){return "afspil vind point 2 lyd"},
+"playSoundWood":function(d){return "afspil træ lyd"},
+"positionOutTopLeft":function(d){return "til øverst til venstre position"},
+"positionOutTopRight":function(d){return "til øverst højre position"},
+"positionTopOutLeft":function(d){return "til toppen uden for venstre position"},
+"positionTopLeft":function(d){return "til øverste venstre position"},
+"positionTopCenter":function(d){return "til top midterpositionen"},
+"positionTopRight":function(d){return "til den øverste højre position"},
+"positionTopOutRight":function(d){return "til toppen uden for højre position"},
+"positionMiddleLeft":function(d){return "i den midterste venstre position"},
+"positionMiddleCenter":function(d){return "den midterste center holdning"},
+"positionMiddleRight":function(d){return "i den midterste højre position"},
+"positionBottomOutLeft":function(d){return "til bunden udenfor venstre position"},
+"positionBottomLeft":function(d){return "til den nederste venstre position"},
+"positionBottomCenter":function(d){return "til bunden center position"},
+"positionBottomRight":function(d){return "til den nederste højre position"},
+"positionBottomOutRight":function(d){return "til bunden udenfor højre position"},
+"positionOutBottomLeft":function(d){return "til nederste venstre position"},
+"positionOutBottomRight":function(d){return "til nederste højre position"},
+"positionRandom":function(d){return "til tilfældig position"},
+"projectileBlueFireball":function(d){return "blå ildkugle"},
+"projectilePurpleFireball":function(d){return "lilla ildkugle"},
+"projectileRedFireball":function(d){return "rød ildkugle"},
+"projectileYellowHearts":function(d){return "gule hjerter"},
+"projectilePurpleHearts":function(d){return "lilla hjerter"},
+"projectileRedHearts":function(d){return "røde hjerter"},
+"projectileRandom":function(d){return "tilfældig"},
+"projectileAnna":function(d){return "Anna"},
+"projectileElsa":function(d){return "Elsa"},
+"projectileHiro":function(d){return "Hiro"},
+"projectileBaymax":function(d){return "Baymax"},
+"projectileRapunzel":function(d){return "Rapunzel"},
+"reinfFeedbackMsg":function(d){return "Du kan trykke på knappen \"Prøv igen\", for at gå tilbage til dit spil."},
+"repeatForever":function(d){return "Gentag for evigt"},
+"repeatDo":function(d){return "udfør"},
+"repeatForeverTooltip":function(d){return "Udføre handlinger i denne blok gentagne gange mens programmet kører."},
+"saySprite":function(d){return "sig"},
+"saySpriteN":function(d){return "spilleren "+appLocale.v(d,"spriteIndex")+" siger"},
+"saySpriteTooltip":function(d){return "En taleboble med den tilhørende tekst fra det angivne karakter."},
+"scoreText":function(d){return "Score: "+appLocale.v(d,"playerScore")},
+"setBackground":function(d){return "sæt baggrund"},
+"setBackgroundRandom":function(d){return "sæt tilfældig baggrund"},
+"setBackgroundBlack":function(d){return "sæt sort baggrund"},
+"setBackgroundCave":function(d){return "sæt hule baggrund"},
+"setBackgroundCloudy":function(d){return "sæt skyet baggrund"},
+"setBackgroundHardcourt":function(d){return "sæt tennis baggrund"},
+"setBackgroundNight":function(d){return "sæt nat baggrund"},
+"setBackgroundUnderwater":function(d){return "indstille undervands baggrund"},
+"setBackgroundCity":function(d){return "sæt by baggrund"},
+"setBackgroundDesert":function(d){return "sæt ørken baggrund"},
+"setBackgroundRainbow":function(d){return "sæt regnbue baggrund"},
+"setBackgroundSoccer":function(d){return "sæt fodbold baggrund"},
+"setBackgroundSpace":function(d){return "sæt rum baggrund"},
+"setBackgroundTennis":function(d){return "sæt tennis baggrund"},
+"setBackgroundWinter":function(d){return "sæt vinter baggrund"},
+"setBackgroundTooltip":function(d){return "Indstiller baggrundsbilledet"},
+"setEnemySpeed":function(d){return "indstil fjendens hastighed"},
+"setPlayerSpeed":function(d){return "indstil spillerens hastighed"},
+"setScoreText":function(d){return "sæt score"},
+"setScoreTextTooltip":function(d){return "Angiver teksten, der skal vises i score området."},
+"setSpriteEmotionAngry":function(d){return "til en vred stemning"},
+"setSpriteEmotionHappy":function(d){return "til en glad stemning"},
+"setSpriteEmotionNormal":function(d){return "til en normal stemning"},
+"setSpriteEmotionRandom":function(d){return "til en tilfældig stemning"},
+"setSpriteEmotionSad":function(d){return "på en trist stemning"},
+"setSpriteEmotionTooltip":function(d){return "Sætter spiller stemning"},
+"setSpriteAlien":function(d){return "til alien billedet"},
+"setSpriteBat":function(d){return "til flagermus billedet"},
+"setSpriteBird":function(d){return "til fugle billedet"},
+"setSpriteCat":function(d){return "til katte billedet"},
+"setSpriteCaveBoy":function(d){return "til hule-drengs billedet"},
+"setSpriteCaveGirl":function(d){return "til grotte-pige billedet"},
+"setSpriteDinosaur":function(d){return "til dinosaur billede"},
+"setSpriteDog":function(d){return "til et hunde billede"},
+"setSpriteDragon":function(d){return "til en dragon billedet"},
+"setSpriteGhost":function(d){return "til et spøgelse billedet"},
+"setSpriteHidden":function(d){return "til et skjult billede"},
+"setSpriteHideK1":function(d){return "Skjul"},
+"setSpriteAnna":function(d){return "til et Anna billede"},
+"setSpriteElsa":function(d){return "til et Elsa billede"},
+"setSpriteHiro":function(d){return "til et Hiro billede"},
+"setSpriteBaymax":function(d){return "til et Baymax billede"},
+"setSpriteRapunzel":function(d){return "til et Rapunzel billede"},
+"setSpriteKnight":function(d){return "at en ridder billedet"},
+"setSpriteMonster":function(d){return "til et monster billedet"},
+"setSpriteNinja":function(d){return "til en maskeret ninja billedet"},
+"setSpriteOctopus":function(d){return "til en blæksprutte billedet"},
+"setSpritePenguin":function(d){return "til pingvin billedet"},
+"setSpritePirate":function(d){return "til pirat billedet"},
+"setSpritePrincess":function(d){return "til prinsesse billedet"},
+"setSpriteRandom":function(d){return "til et tilfældigt billede"},
+"setSpriteRobot":function(d){return "at robot billedet"},
+"setSpriteShowK1":function(d){return "Vis"},
+"setSpriteSpacebot":function(d){return "til spacebot billedet"},
+"setSpriteSoccerGirl":function(d){return "til fodbold pige billedet"},
+"setSpriteSoccerBoy":function(d){return "til fodbold dreng billedet"},
+"setSpriteSquirrel":function(d){return "til egern billedet"},
+"setSpriteTennisGirl":function(d){return "til tennis pige billedet"},
+"setSpriteTennisBoy":function(d){return "til tennis dreng billedet"},
+"setSpriteUnicorn":function(d){return "til enhjørning billedet"},
+"setSpriteWitch":function(d){return "til heks billedet"},
+"setSpriteWizard":function(d){return "til troldmands billedet"},
+"setSpritePositionTooltip":function(d){return "Flytter en spiller til den angivne placering."},
+"setSpriteK1Tooltip":function(d){return "Viser eller skjuler de angivne spiller."},
+"setSpriteTooltip":function(d){return "Indstiller spiller billedet"},
+"setSpriteSizeRandom":function(d){return "til en tilfældig størrelse"},
+"setSpriteSizeVerySmall":function(d){return "til en meget lille størrelse"},
+"setSpriteSizeSmall":function(d){return "til en lille størrelse"},
+"setSpriteSizeNormal":function(d){return "til en normal størrelse"},
+"setSpriteSizeLarge":function(d){return "til en stor størrelse"},
+"setSpriteSizeVeryLarge":function(d){return "til en meget stor størrelse"},
+"setSpriteSizeTooltip":function(d){return "sætter størrelsen på en spiller"},
+"setSpriteSpeedRandom":function(d){return "til en tilfældig hastighed"},
+"setSpriteSpeedVerySlow":function(d){return "til en meget langsom hastighed"},
+"setSpriteSpeedSlow":function(d){return "til en langsom hastighed"},
+"setSpriteSpeedNormal":function(d){return "til en normal hastighed"},
+"setSpriteSpeedFast":function(d){return "til en hurtig hastighed"},
+"setSpriteSpeedVeryFast":function(d){return "til en meget hurtig hastighed"},
+"setSpriteSpeedTooltip":function(d){return "Indstiller hastigheden af spiller"},
+"setSpriteZombie":function(d){return "til zombie billedet"},
+"shareStudioTwitter":function(d){return "Tjek historien jeg lavede. Jeg skrev det selv med @codeorg"},
+"shareGame":function(d){return "Del din historie:"},
+"showCoordinates":function(d){return "Vis koordinater"},
+"showCoordinatesTooltip":function(d){return "Vis hovedpersonens koordinater på skærmen"},
+"showTitleScreen":function(d){return "Vis titelskærm"},
+"showTitleScreenTitle":function(d){return "titel"},
+"showTitleScreenText":function(d){return "tekst"},
+"showTSDefTitle":function(d){return "skriv titel her"},
+"showTSDefText":function(d){return "Skriv tekst her"},
+"showTitleScreenTooltip":function(d){return "Vis en titel skærm med tilhørende titel og tekst."},
+"size":function(d){return "størrelse"},
+"setSprite":function(d){return "sæt"},
+"setSpriteN":function(d){return "sæt spiller "+appLocale.v(d,"spriteIndex")},
+"soundCrunch":function(d){return "kravle"},
+"soundGoal1":function(d){return "mål 1"},
+"soundGoal2":function(d){return "mål 2"},
+"soundHit":function(d){return "hjælp"},
+"soundLosePoint":function(d){return "miste point"},
+"soundLosePoint2":function(d){return "miste point 2"},
+"soundRetro":function(d){return "retro"},
+"soundRubber":function(d){return "gummi"},
+"soundSlap":function(d){return "lussing"},
+"soundWinPoint":function(d){return "vinde point"},
+"soundWinPoint2":function(d){return "vinde punkt 2"},
+"soundWood":function(d){return "træ"},
+"speed":function(d){return "hastighed"},
+"stopSprite":function(d){return "Stop"},
+"stopSpriteN":function(d){return "Stop spiller "+appLocale.v(d,"spriteIndex")},
+"stopTooltip":function(d){return "Stopper en spillers bevægelse."},
+"throwSprite":function(d){return "kaste"},
+"throwSpriteN":function(d){return "spiller "+appLocale.v(d,"spriteIndex")+" kast"},
+"throwTooltip":function(d){return "Kaster et projektil fra den angivne spiller."},
+"vanish":function(d){return "forsvinde"},
+"vanishActorN":function(d){return "spiller forsvinder "+appLocale.v(d,"spriteIndex")},
+"vanishTooltip":function(d){return "Spilleren forsvinder."},
+"waitFor":function(d){return "vente på"},
+"waitSeconds":function(d){return "sekunder"},
+"waitForClick":function(d){return "vente på Klik"},
+"waitForRandom":function(d){return "vente på tilfældige"},
+"waitForHalfSecond":function(d){return "vent et halvt sekund"},
+"waitFor1Second":function(d){return "vente på 1 sekund"},
+"waitFor2Seconds":function(d){return "vent 2 sekunder"},
+"waitFor5Seconds":function(d){return "vent 5 sekunder"},
+"waitFor10Seconds":function(d){return "vent 10 sekunder"},
+"waitParamsTooltip":function(d){return "Vent på et angivet antal sekunder eller brug nul for at vente indtil et klik modtages."},
+"waitTooltip":function(d){return "Venter i en angivet tid, eller indtil et klik modtages."},
+"whenArrowDown":function(d){return "pil ned"},
+"whenArrowLeft":function(d){return "venstre pil"},
+"whenArrowRight":function(d){return "højre pil"},
+"whenArrowUp":function(d){return "pil op"},
+"whenArrowTooltip":function(d){return "Udføre handlingen nedenfor når den angivne pile-tast holdes nede."},
+"whenDown":function(d){return "Når pil ned"},
+"whenDownTooltip":function(d){return "Udfører handlingen herunder når der trykkes pil ned."},
+"whenGameStarts":function(d){return "Når historien starter"},
+"whenGameStartsTooltip":function(d){return "Udfører handlingen nedenfor når historien begynder."},
+"whenLeft":function(d){return "Når venstre pil"},
+"whenLeftTooltip":function(d){return "Udfører handlingen herunder når der trykkes venstre pil."},
+"whenRight":function(d){return "Når højre pil"},
+"whenRightTooltip":function(d){return "Udfører handlingen herunder når der trykkes højre pil."},
+"whenSpriteClicked":function(d){return "Når der klikkes på spilleren"},
+"whenSpriteClickedN":function(d){return "Når der klikkes på spilleren "+appLocale.v(d,"spriteIndex")},
+"whenSpriteClickedTooltip":function(d){return "Udføre handlingen herunder når en der klikkes på spilleren."},
+"whenSpriteCollidedN":function(d){return "når spilleren "+appLocale.v(d,"spriteIndex")},
+"whenSpriteCollidedTooltip":function(d){return "Udføre handlingen nedenfor når spilleren rører en anden spiller."},
+"whenSpriteCollidedWith":function(d){return "rører"},
+"whenSpriteCollidedWithAnyActor":function(d){return "rører enhver spiller"},
+"whenSpriteCollidedWithAnyEdge":function(d){return "rører enhver kant"},
+"whenSpriteCollidedWithAnyProjectile":function(d){return "rører enhver projektil"},
+"whenSpriteCollidedWithAnything":function(d){return "rører ved noget"},
+"whenSpriteCollidedWithN":function(d){return "rører spilleren "+appLocale.v(d,"spriteIndex")},
+"whenSpriteCollidedWithBlueFireball":function(d){return "rører blå ildkugle"},
+"whenSpriteCollidedWithPurpleFireball":function(d){return "rører lilla ildkugle"},
+"whenSpriteCollidedWithRedFireball":function(d){return "rører røde ildkugle"},
+"whenSpriteCollidedWithYellowHearts":function(d){return "rører gule hjerter"},
+"whenSpriteCollidedWithPurpleHearts":function(d){return "rører lilla hjerter"},
+"whenSpriteCollidedWithRedHearts":function(d){return "rører røde hjerter"},
+"whenSpriteCollidedWithBottomEdge":function(d){return "rører nederste kant"},
+"whenSpriteCollidedWithLeftEdge":function(d){return "rører venstre kant"},
+"whenSpriteCollidedWithRightEdge":function(d){return "rører højre kant"},
+"whenSpriteCollidedWithTopEdge":function(d){return "rører øverste kant"},
+"whenUp":function(d){return "Når pil op"},
+"whenUpTooltip":function(d){return "Udfører handlingen herunder når der trykkes pil op."},
+"yes":function(d){return "Ja"}};

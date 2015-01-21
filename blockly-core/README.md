@@ -25,7 +25,7 @@ Additionally, [Dashboard's UI tests](https://github.com/code-dot-org/dashboard/t
 
 To run a handful of utility tests:
 
-1. `./deploy.sh debug` which builds blockly_uncompressed.js
+1. `./deploy.sh debug` which builds `build-output/blockly_uncompressed.js`
 2. Open the test page in your browser: `open tests/blockly_test.html`
 
 ### Standalone usage

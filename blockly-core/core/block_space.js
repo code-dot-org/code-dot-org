@@ -33,7 +33,6 @@ goog.require('Blockly.Xml');
 goog.require('goog.array');
 goog.require('goog.math.Coordinate');
 
-
 /**
  * Class for a BlockSpace.
  * @param {BlockSpaceEditor} blockSpaceEditor parent BlockSpaceEditor for this BlockSpace
@@ -504,7 +503,7 @@ Blockly.BlockSpace.prototype.remainingCapacity = function() {
 */
 Blockly.BlockSpace.prototype.recordDeleteAreas = function() {
   this.deleteAreas_ = [];
-  
+
   if (this.trashcan) {
     goog.array.extend(this.deleteAreas_, this.trashcan.getRect());
     this.deleteAreaTrash_ = this.trashcan.getRect();

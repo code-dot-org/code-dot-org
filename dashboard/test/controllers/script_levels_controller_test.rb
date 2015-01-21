@@ -33,6 +33,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal @script_level, assigns(:script_level)
   end
 
+
+
   test 'should show video in twenty hour script level' do
     get :show, script_id: Script::TWENTY_HOUR_ID, id: @script_level.id
     assert_response :success
@@ -418,28 +420,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       Nokogiri::HTML(@response.body).css('title').text.strip
   end
 
-  test 'show stage name in header for custom multi-stage script' do
-    get :show, script_id: @custom_script, stage_id: 2, id: 1
-    assert_template partial: '_header'
-    # js-encoded referenceArea causes assert_select to output warnings, so we need to use Nokogiri instead
-    assert_equal "Stage 2: " + I18n.t("data.script.name.#{@custom_script.name}.#{@custom_stage_2.name}"),
-      css('body div.header_level div.header_text').text.strip
-  end
-
-  test 'show stage position in header for default script' do
-    get :show, script_id: @script, id: @script_level.id
-    assert_template partial: '_header'
-    assert_equal "Stage 2: The Maze",
-      css('body div.header_level div.header_text')[0].text.strip
-  end
-
-  test 'script name instead of stage name in header for HOC' do
-    get :show, script_id: Script::HOC_NAME, chapter: 1
-    assert_template partial: '_header'
-    assert_equal 'Hour of Code',
-      css('body div.header_level div.header_text')[0].text.strip
-  end
-
   test 'end of HoC for a user is HOC endpoint' do
     self.stubs(:current_user).returns(@admin)
     assert_equal('//test.code.org/api/hour/finish/hourofcode', script_completion_redirect(Script.find_by_name(Script::HOC_NAME)))
@@ -531,6 +511,30 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test 'report bug link for course4' do
     get :show, script_id: 'course4', stage_id: 1, id: 1
     assert_select 'a[href*="https://support.code.org/hc/en-us/requests/new"]'
+  end
+
+  test "should 404 for invalid script level for twenty hour" do
+    assert_raises(ActiveRecord::RecordNotFound) do # renders a 404 in prod
+      get :show, script_id: Script::TWENTY_HOUR_ID, id: 40000
+    end
+  end
+
+  test "should 404 for invalid chapter for flappy" do
+    assert_raises(ActiveRecord::RecordNotFound) do # renders a 404 in prod
+      get :show, script_id: 'flappy', chapter: 40000
+    end
+  end
+
+  test "should 404 for invalid stage for course1" do
+    assert_raises(ActiveRecord::RecordNotFound) do # renders a 404 in prod
+      get :show, script_id: 'course1', stage_id: 4000, id: 1
+    end
+  end
+
+  test "should 404 for invalid script id for course1" do
+    assert_raises(ActiveRecord::RecordNotFound) do # renders a 404 in prod
+      get :show, script_id: 'course1', stage_id: 1, id: 4000
+    end
   end
 
 end

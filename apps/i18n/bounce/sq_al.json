@@ -62,7 +62,7 @@
   "repeatUntil": "perserit derisa",
   "repeatUntilBlocked": "perderisa ka hapesire perpara",
   "repeatUntilFinish": "perserit deri sa te mbaroje",
-  "scoreText": "Rezultati: {Rezultati i Lojtarit} : {Rezultati i Oponentit}",
+  "scoreText": "Rezultati: {playerScore} : {opponentScore}",
   "setBackgroundRandom": "rregullo nje skene te rastesishme",
   "setBackgroundHardcourt": "vendos nje skene te forte",
   "setBackgroundRetro": "rregullo retro skenen",

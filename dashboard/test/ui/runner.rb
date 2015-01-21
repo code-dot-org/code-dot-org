@@ -70,6 +70,9 @@ opt_parser = OptionParser.new do |opts|
   opts.on("--html", "Use html reporter") do
     $options.html = true
   end
+  opts.on("-e", "--eyes", "Run only Applitools eyes tests") do
+    $options.run_eyes_tests = true
+  end
   opts.on("-a", "--auto_retry", "Retry tests that fail once") do
     $options.auto_retry = true
   end
@@ -196,6 +199,7 @@ Parallel.map($browsers, :in_processes => $options.parallel_limit) do |browser|
 
   arguments = ''
   arguments += "#{$options.feature}" if $options.feature
+  arguments += " -t #{$options.run_eyes_tests ? '' : '~'}@eyes"
   arguments += " -t ~@local_only" unless $options.local
   arguments += " -t ~@no_mobile" if browser['mobile']
   arguments += " -t ~@no_ie" if browser['browser'] == 'Internet Explorer'
@@ -226,7 +230,7 @@ Parallel.map($browsers, :in_processes => $options.parallel_limit) do |browser|
     failing_scenarios = lines.rindex("Failing Scenarios:\n")
     if failing_scenarios
       lines[failing_scenarios..-1].join
-    else 
+    else
       lines.last(3).join
     end
   end

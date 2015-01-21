@@ -2,10 +2,10 @@
 -not_authorized! unless dashboard_user
 -forbidden! unless dashboard_user[:admin]
 
--pass unless table = DB[:forms].where(kind:'CspTable', secret:request.splat_path_info[1..-1]).first
--table_data = JSON.parse(table[:data])
--parent_id = table[:id]
--records = DB[:forms].where(kind:'CspRecord', parent_id:parent_id)
+-app_id = request.splat_path_info[1..-1].split('/').first
+-table_name = request.splat_path_info[1..-1].split('/').last
+-api_base_url = "/v3/apps/#{app_id}/shared-tables/#{table_name}"
+-records = DB[:app_tables].where(app_id:app_id, table_name:table_name, storage_id:nil)
 -jsonExample = '{"key1":"value1", "key2":2}'
 
 :css
@@ -21,12 +21,6 @@
 
 %h2 Edit table
 
-%h3 Table name
-%span
-  %input#table-name-input{value:"#{table_data['table_name_s']}"}
-  %button#table-name-save
-    Save
-
 %h3 Records
 %table
   %tr
@@ -34,21 +28,20 @@
     %td record data
     %td action
   -records.each do |record|
-    -record_data = JSON.parse(record[:data])
     %tr
       %td
-        #{record[:secret]}
+        #{record[:row_id]}
       %td
-        %textarea{id: "#{record[:secret]}-textarea", name:"record_data_s", value:"#{record_data['record_data_s']}", cols:"80", rows:"2"}= record_data['record_data_s']
+        %textarea{id: "#{record[:row_id]}-textarea", name:"record", value:"#{record[:value]}", cols:"80", rows:"2"}= record[:value]
       %td.button-column
-        %button{id:"#{record[:secret]}-save"}
+        %button{id:"#{record[:row_id]}-save"}
           Save
-        %button{id:"#{record[:secret]}-delete"}
+        %button{id:"#{record[:row_id]}-delete"}
           Delete
   %tr
     %td (new)
     %td
-      %textarea{id: "new-record-textarea", name:'record_data_s', cols:"80", rows:"2"}= jsonExample
+      %textarea{id: "new-record-textarea", name:'record', cols:"80", rows:"2"}= jsonExample
     %td
       %button#new-record-add Add
 
@@ -59,28 +52,15 @@
   function processError(data) {
     window.alert(data.status + '\n' + data.responseJSON);
   }
-  $('#table-name-save').click(
-    function(e) {
-      var tableName = document.getElementById('table-name-input').value;
-      $.ajax({
-        url: "/v2/forms/CspTable/#{table[:secret]}/update",
-        type: "post",
-        data: JSON.stringify({table_name_s: tableName}),
-        processData: false,
-        contentType: "application/json; charset=utf-8"
-      }).done(processResponse).fail(processError);
-
-    }
-  );
   function saveRecordData(url, recordData) {
     try {
       JSON.parse(recordData); // make sure it parses
       $.ajax({
         url: url,
-        type: "post",
-        data: JSON.stringify({record_data_s: recordData}),
+        type: 'post',
+        data: recordData,
         processData: false,
-        contentType: "application/json; charset=utf-8"
+        contentType: 'application/json; charset=utf-8'
       }).done(processResponse).fail(processError);
     } catch (e) {
       window.alert(
@@ -95,23 +75,21 @@
   $('#new-record-add').click(
     function(e) {
       var recordData = document.getElementById('new-record-textarea').value;
-      var url = "/v2/forms/CspTable/#{parent_id}/children/CspRecord";
-      saveRecordData(url, recordData);
+      saveRecordData('#{api_base_url}', recordData);
     }
   );
 
 -records.each do |record|
-  -secret = record[:secret]
+  -row_id = record[:row_id]
   :javascript
-    $('##{record[:secret]}-save').click(function(e) {
-      var url = "/v2/forms/CspRecord/#{secret}/update";
-      var recordData = document.getElementById('#{secret}-textarea').value;
-      return saveRecordData(url, recordData);
+    $('##{row_id}-save').click(function(e) {
+      var recordData = document.getElementById('#{row_id}-textarea').value;
+      return saveRecordData('#{api_base_url}/#{row_id}', recordData);
     });
 
-    $('##{secret}-delete').click(function(e) {
+    $('##{row_id}-delete').click(function(e) {
       $.ajax({
-        url: "/v2/forms/CspRecord/#{secret}/delete",
-        type: "post"
+        url: '#{api_base_url}/#{row_id}/delete',
+        type: 'post'
       }).done(processResponse).fail(processError);
     });

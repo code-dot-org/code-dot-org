@@ -99,6 +99,9 @@ class Level < ActiveRecord::Base
   def load_level_xml(xml)
     json = Nokogiri::XML(xml, &:noblanks).xpath('//../config').first.text
     level_hash = JSON.parse(json)
+    # Delete entries for all other attributes that may no longer be specified in the xml.
+    # Fixes issue #75863324 (delete removed level properties on import)
+    write_attribute('properties', {})
     update!(level_hash)
     self
   end

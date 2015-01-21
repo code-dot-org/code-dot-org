@@ -2,14 +2,13 @@ module LocaleHelper
 
   # Symbol of best valid locale code to be used for I18n.locale.
   def locale
-    best = candidate_locales.find { |locale|
-      Dashboard::Application::LOCALES.has_key? locale
-    }
-    # Expand language codes to include regions, if applicable.
-    data = Dashboard::Application::LOCALES[best]
-    (data.is_a?(String) ? data : best).to_sym
+    current = request.env['cdo.locale']
+    #if(current_user && current_user.locale != current)
+      # TODO: Set language cookie and reload the page.
+    #end
+    current.downcase.to_sym
   end
-
+    
   def locale_dir
     Dashboard::Application::LOCALES[locale.to_s][:dir] || 'ltr'
   end
@@ -37,17 +36,6 @@ module LocaleHelper
     options
   end
 
-  # returns true if we support their first choice of locale
-  def support_primary_locale?
-    locales = Dashboard::Application::LOCALES.select do |k,v|
-      I18n.available_locales.include?(k.to_sym)
-    end
-    languages = locales.keys.map do |key|
-      key.split('-').first
-    end
-    languages.include? candidate_locales.first.split('-').first
-  end
-
   private
 
   # Parses and ranks locale code strings from the Accept-Language header.
@@ -69,14 +57,6 @@ module LocaleHelper
   # Strips regions off of accepted_locales.
   def accepted_languages
     accepted_locales.map { |locale| locale.split('-')[0] }
-  end
-
-  # Provides a prioritized list of possible locale codes as strings.
-  def candidate_locales
-    ([cookies[:language_], try(:current_user).try(:locale)] +
-     accepted_locales + accepted_languages +
-     [I18n.default_locale]
-    ).reject(&:nil?).map(&:to_s).map(&:downcase)
   end
 
   # Looks up a localized string driven by a database value.

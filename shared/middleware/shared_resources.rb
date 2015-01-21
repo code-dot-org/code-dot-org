@@ -1,11 +1,19 @@
 require 'sinatra/base'
 require 'erb'
+require 'sass/plugin/rack'
 
 class SharedResources < Sinatra::Base
 
+  use Sass::Plugin::Rack
+  
   configure do
     static_max_age = [:development, :staging].include?(rack_env) ? 0 : 3600
 
+    Sass::Plugin.options[:cache_location] = pegasus_dir('cache', '.sass-cache')
+    Sass::Plugin.options[:css_location] = pegasus_dir('cache', 'css')
+    Sass::Plugin.options[:template_location] = shared_dir('css')
+
+    set :css_max_age, static_max_age
     set :image_extnames, ['.png','.jpeg','.jpg','.gif']
     set :image_max_age, static_max_age
     set :javascript_extnames, ['.js']
@@ -21,6 +29,19 @@ class SharedResources < Sinatra::Base
   helpers do
   end
   
+  # CSS
+  get "/shared/css/*" do |uri|
+    path = shared_dir('css', uri)
+    unless File.file?(path)
+      path = pegasus_dir('cache', 'css', uri)
+      pass unless File.file?(path)
+    end
+
+    content_type :css
+    cache_control :public, :must_revalidate, max_age:settings.css_max_age
+    send_file(path)
+  end
+
   # JavaScripts
   get "/shared/js/*" do |path|
     path = deploy_dir(request.path_info)

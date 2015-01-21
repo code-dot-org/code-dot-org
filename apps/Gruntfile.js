@@ -1,5 +1,4 @@
 var path = require('path');
-var localify = require('./src/dev/localify');
 
 var config = {};
 
@@ -11,7 +10,7 @@ var APPS = [
   'studio',
   'jigsaw',
   'calc',
-  'webapp',
+  'applab',
   'eval'
 ];
 
@@ -177,7 +176,8 @@ config.lodash = {
     'options': {
       'include': [
         'debounce', 'reject', 'map', 'value', 'range', 'without', 'sample',
-        'create', 'flatten', 'isEmpty', 'wrap', 'size', 'bind']
+        'create', 'flatten', 'isEmpty', 'wrap', 'size', 'bind', 'contains',
+        'last']
     }
   }
 };
@@ -207,18 +207,21 @@ config.pseudoloc = {
   }
 };
 
+// Takes a key-value .json file and runs it through MessageFormat to create a localized .js file.
 config.messages = {
   all: {
-    locales: LOCALES,
-    srcBases: ['i18n', 'build/i18n'],
-    destBase: 'build/locale'
-  }
-};
-
-config.symlink = {
-  locale: {
-    src: 'build/locale/en_us',
-    dest: 'build/locale/current'
+    files: [
+      {
+        // e.g., build/js/i18n/bounce/ar_sa.json -> build/package/js/ar_sa/bounce_locale.js
+        rename: function(dest, src) {
+          var outputPath = src.replace(/(build\/)?i18n\/(\w*)\/(\w+_\w+).json/g, '$3/$2_locale.js');
+          return path.join(dest, outputPath);
+        },
+        expand: true,
+        src: ['i18n/**/*.json', 'build/i18n/**/*.json'],
+        dest: 'build/package/js/'
+      }
+    ]
   }
 };
 
@@ -230,20 +233,22 @@ config.ejs = {
 };
 
 config.browserify = {};
-APPS.forEach(function(app) {
-  LOCALES.forEach(function(locale) {
-    var src = 'build/js/' + app + '/main.js';
-    var dest = 'build/browserified/' + locale + '/' + app + '.js';
-    var files = {};
-    files[dest] = [src];
-    config.browserify[app + '_' + locale] = {
-      files: files,
-      options: {
-        transform: [localify(locale)]
-      }
-    };
-  });
+var allFilesSrc = [];
+var allFilesDest = [];
+var outputDir = 'build/package/js/';
+APPS.forEach(function (app) {
+  allFilesSrc.push('build/js/' + app + '/main.js');
+  allFilesDest.push(outputDir+app+'.js');
 });
+
+// Use command-line tools to run browserify (faster/more stable this way)
+var browserifyExec = 'mkdir -p build/browserified && `npm bin`/browserify ' + allFilesSrc.join(' ') +
+  ' -p [ factor-bundle -o ' + allFilesDest.join(' -o ') + ' ] -o ' + outputDir + 'common.js';
+
+config.exec = {
+  browserify: browserifyExec,
+  watchify: browserifyExec.replace('browserify', 'watchify') + ' -v'
+};
 
 config.concat = {};
 LOCALES.forEach(function(locale) {
@@ -272,44 +277,52 @@ config.express = {
 };
 
 var uglifiedFiles = {};
-APPS.forEach(function(app) {
-  LOCALES.forEach(function(locale) {
-    var relname = locale + '/' + app;
-    var src = 'build/browserified/' + relname + '.js';
-    var dest = 'build/package/js/' + relname + '.min.js';
-    uglifiedFiles[dest] = [src];
-  });
-});
 config.uglify = {
   browserified: {
     files: uglifiedFiles
   }
 };
 
+['common'].concat(APPS).forEach(function (app) {
+  var src = outputDir + app + '.js';
+  var dest = outputDir + app + '.min.js';
+  uglifiedFiles[dest] = [src];
+  var appUglifiedFiles = {};
+  appUglifiedFiles[dest] = [src];
+  config.uglify[app] = {files: appUglifiedFiles };
+});
+
+// Run uglify task across all apps in parallel
+config.concurrent = {
+  uglify: APPS.concat('common').map( function (x) {
+    return 'uglify:' + x;
+  })
+};
+
 config.watch = {
   js: {
     files: ['src/**/*.js'],
-    tasks: ['copy:src', 'browserify', 'uglify:browserified', 'copy:browserified']
+    tasks: ['newer:copy:src']
   },
   style: {
     files: ['style/**/*.scss', 'style/**/*.sass'],
-    tasks: ['sass']
+    tasks: ['newer:sass']
   },
   content: {
     files: ['static/**/*'],
-    tasks: ['copy']
+    tasks: ['newer:copy']
   },
   vendor_js: {
     files: ['lib/**/*.js'],
-    tasks: ['concat', 'copy:lib']
+    tasks: ['newer:concat', 'newer:copy:lib']
   },
   ejs: {
     files: ['src/**/*.ejs'],
-    tasks: ['ejs', 'browserify', 'uglify:browserified', 'copy:browserified']
+    tasks: ['ejs']
   },
   messages: {
     files: ['i18n/**/*.json'],
-    tasks: ['pseudoloc', 'messages', 'browserify', 'uglify:browserified', 'copy:browserified']
+    tasks: ['pseudoloc', 'messages']
   },
   dist: {
     files: ['build/package/**/*'],
@@ -364,44 +377,67 @@ config.strip_code = {
 };
 
 module.exports = function(grunt) {
-
   grunt.initConfig(config);
 
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-symlink');
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-lodash');
-  grunt.loadNpmTasks('grunt-express');
-  grunt.loadNpmTasks('grunt-browserify');
-  grunt.loadNpmTasks('grunt-sass');
-  grunt.loadNpmTasks('grunt-mocha-test');
-  grunt.loadNpmTasks('grunt-strip-code');
-  grunt.loadNpmTasks('grunt-notify');
+  // Autoload grunt tasks
+  require('load-grunt-tasks')(grunt, {pattern: ['grunt-*', '!grunt-lib-contrib']});
 
   grunt.loadTasks('tasks');
+  grunt.registerTask('noop', function () {});
+
+  // Generate locale stub files in the build/locale/current folder
+  grunt.registerTask('locales', function() {
+    var fs = require('fs');
+    var mkdirp = require('mkdirp');
+    var current = path.resolve('build/locale/current');
+    mkdirp.sync(current);
+    APPS.concat('common').map(function (item) {
+      var localeString = '/*'+item+'*/ module.exports = window.blockly.' + (item == 'common' ? 'locale' : 'appLocale') + ';';
+      fs.writeFileSync(path.join(current, item + '.js'), localeString);
+    });
+  });
+
+  grunt.registerTask('prebuild', [
+    'pseudoloc',
+    'newer:messages',
+    'newer:copy:src',
+    'locales',
+    'newer:strip_code',
+    'ejs'
+  ]);
+
+  grunt.registerTask('postbuild', [
+    'newer:copy:browserified',
+    'newer:copy:static',
+    'newer:copy:lib',
+    'newer:concat',
+    'newer:sass'
+  ]);
 
   grunt.registerTask('build', [
-    'pseudoloc',
-    'messages',
-    'symlink:locale',
-    'copy:src',
-    'strip_code',
-    'ejs',
-    'browserify',
-    'uglify:browserified',
-    'copy:browserified',
-    'copy:static',
-    'copy:lib',
-    'concat',
-    'sass'
+    'prebuild',
+    'exec:browserify',
+    // Skip minification in development environment.
+    DEV ? 'noop' : ('concurrent:uglify'),
+    'postbuild'
   ]);
 
   grunt.registerTask('rebuild', ['clean', 'build']);
-  grunt.registerTask('dev', ['express:server', 'watch']);
+
+  config.concurrent.watch = {
+    tasks: ['exec:watchify', 'watch'],
+    options: {
+      logConcurrentOutput: true
+    }
+  };
+
+  grunt.registerTask('dev', [
+    'prebuild',
+    'postbuild',
+    'express:server',
+    'concurrent:watch'
+  ]);
+
   grunt.registerTask('test', ['jshint', 'mochaTest']);
 
   grunt.registerTask('default', ['rebuild', 'test']);
