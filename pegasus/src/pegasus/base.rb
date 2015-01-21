@@ -1,6 +1,5 @@
 require_relative './request'
 require_relative './http_document'
-require_relative './http_proxy'
 
 module Pegasus
 
