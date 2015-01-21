@@ -364,3 +364,14 @@ en:
             Detection and the Distance Formula'
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
             (Big Game)'
+        infinity:
+          title: Play Lab
+          description_short: Create a story or make a game with Play Lab!
+          description: Create a story or make a game with Play Lab!
+          Play Lab: Play Lab
+        Infinity:
+          Infinity_test: Infinity_test
+          title: Infinity
+          description_short: Create a story or make a game with Infinity Play Lab!!
+          description: Create a story or make a game with Infinity Play Lab!
+          Infinity: Infinity

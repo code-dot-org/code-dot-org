@@ -23,7 +23,7 @@ class Studio < Grid
 
   # List of possible skins, the first is used as a default.
   def self.skins
-    ['studio']
+    ['studio', 'infinity']
   end
 
   def self.default_success_condition

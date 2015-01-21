@@ -1,0 +1,77 @@
+<Studio>
+  <config><![CDATA[{
+  "game_id": 33,
+  "created_at": "2015-01-20T02:25:10.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "infinity",
+    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n\r\n  if (window.studioLevelRestarted) {\r\n\tStudio.setBackground({value: 'icy'});\r\n  }\r\n  \r\n  if (window.studioLevelRestarted || ! window.actorHit) {\r\n    window.actorHit = [false, false, false, false];\r\n  }\r\n  \r\n  window.studioLevelRestarted = false;\r\n  \r\n  var heroSprite = Studio.sprite[2];\r\n  \r\n  var hitCount = 0;\r\n  \r\n  var otherIndexes = [0,1,3,4];\r\n  var heroIndex = 2;\r\n  \r\n  for (var i = 0; i < 4; i++) {\r\n    \r\n    actorIndex = otherIndexes[i];\r\n    \r\n    if (! window.actorHit[actorIndex] && Studio.sprite[actorIndex].isCollidingWith(heroIndex)) {\r\n      //Studio.vanishActor({spriteIndex:0})\r\n      Studio.sprite[actorIndex].dir = 1;\r\n      window.actorHit[actorIndex] = true;\r\n  \t}\r\n    \r\n    if (window.actorHit[actorIndex]) {\r\n      hitCount ++;\r\n    }\r\n  }\r\n  \r\n  return hitCount >= 2;\r\n}",
+    "failure_condition": "function () {\r\n}",
+    "maze": "[[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0]]",
+    "embed": "false",
+    "instructions": "Move Baymax to touch two other characters.",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "free_play": "false",
+    "disable_sharing": "false",
+    "edge_collisions": "false",
+    "projectile_collisions": "false",
+    "allow_sprites_outside_playspace": "false",
+    "sprites_hidden_to_start": "false",
+    "coordinate_grid_background": "false",
+    "soft_buttons": [
+      "leftButton",
+      "rightButton",
+      "downButton",
+      "upButton"
+    ],
+    "first_sprite_index": "1",
+    "protaganist_sprite_index": "0",
+    "predraw_blocks": "<xml></xml>",
+    "maze_data": null
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="studio_whenArrow">
+          <title name="VALUE">up</title>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">down</title>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">left</title>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">right</title>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="studio_move">
+          <title name="SPRITE">2</title>
+          <title name="DIR">1</title>
+        </block>
+        <block type="studio_move">
+          <title name="SPRITE">2</title>
+          <title name="DIR">4</title>
+        </block>
+        <block type="studio_move">
+          <title name="SPRITE">2</title>
+          <title name="DIR">8</title>
+        </block>
+        <block type="studio_move">
+          <title name="SPRITE">2</title>
+          <title name="DIR">2</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Studio>
