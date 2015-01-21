@@ -21,36 +21,12 @@ def http_host_and_port(host,port=80)
 end
 
 def social_metadata(request, header=nil)
-  if request.site == 'csedweek.org'
-    metadata = {
-      'og:title'          => header['title'] || "The Hour of Code is here",
-      'og:description'    => header['description'] || "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104.",
-      'og:image'          => header['og:image'] || 'http://csedweek.org/images/code-video-thumbnail.jpg',
-      'og:image:width'    => header['og:image:width'] || '1440',
-      'og:image:height'   => header['og:image:height'] || '810',
-      'og:site_name'      => 'CSEd Week',
-      # 'og:video'          => 'https://youtube.googleapis.com/v/rH7AjDMz_dc',
-      # 'og:video:width'    => '720',
-      # 'og:video:height'   => '404',
-    }
-  else
-    metadata = {
-      'og:title'          => header['title'] || "The Hour of Code is here",
-      'og:description'    => header['description'] || "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104.",
-      'og:image'          => header['og:image'] || 'http://code.org/images/code-video-thumbnail.jpg',
-      'og:image:width'    => header['og:image:width'] || '1440',
-      'og:image:height'   => header['og:image:height'] || '810',
-      'og:site_name'      => 'Code.org',
-      # 'og:video'          => 'https://youtube.googleapis.com/v/rH7AjDMz_dc',
-      # 'og:video:width'    => '720',
-      # 'og:video:height'   => '404',
-    }
-  end
+  metadata = {}
 
   # Metatags common to all sites.
+  metadata['og:title'] = header['title']
   metadata['fb:app_id'] = '500177453358606'
   metadata['og:type'] = 'article'
-  # metadata['og:video:type'] = 'application/x-shockwave-flash'
   metadata['article:publisher'] = 'https://www.facebook.com/Code.org'
   metadata['og:url'] = request.url
 

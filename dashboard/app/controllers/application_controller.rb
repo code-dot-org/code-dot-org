@@ -139,6 +139,6 @@ class ApplicationController < ActionController::Base
   end
 
   def set_locale_cookie(locale)
-    cookies[:language_] = { value: locale, domain: :all }
+    cookies[:language_] = { value: locale, domain: :all, expires: 10.years.from_now}
   end
 end

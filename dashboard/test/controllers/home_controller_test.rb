@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 require 'test_helper'
+require 'time'
 
 class HomeControllerTest < ActionController::TestCase
   include Devise::TestHelpers
@@ -21,7 +22,7 @@ class HomeControllerTest < ActionController::TestCase
 
     assert_equal "es-ES", cookies[:language_]
 
-    assert_equal "language_=es-ES; domain=.code.org; path=/", @response.headers["Set-Cookie"]
+    assert_match "language_=es-ES; domain=.code.org; path=/; expires=#{10.years.from_now.rfc2822}"[0..-7], @response.headers["Set-Cookie"]
 
     assert_redirected_to 'http://blahblah'
   end

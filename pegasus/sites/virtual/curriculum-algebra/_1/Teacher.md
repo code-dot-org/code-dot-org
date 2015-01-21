@@ -25,8 +25,10 @@ Students discuss the components of their favorite video games, and discover that
 
 ## Lesson Objectives 
 ### Students will:
-- Create a data model that describes a simple videogame
-- Describe the movements of videogame characters by their change in coordinates
+
+<% lesson[:objectives_s].split(";").each do |objective| %>
+- <%= objective %>
+<% end %>
 
 <details>
 <summary>Anchor Standards</summary>
@@ -48,11 +50,9 @@ _Additional standards alignment can be found at the end of this lesson_
 <summary>Prerequisite Knowledge</summary>
 ### This lesson assumes that students can:
 
-<ul>
 <% lesson[:prereqs_s].split(";").each do |prereq| %>
-  <li><%= prereq %></li>
+- <%= prereq %>
 <% end %>
-</ul>
 
 </details>
 
@@ -212,15 +212,10 @@ Visit [MSM Stage 1](http://studio.code.org/s/algebra/stage/1/puzzle/1) in Code S
 <summary>Standards Alignment</summary>
 
 ### Common Core Mathematical Practices
- 
-- 1. Make sense of problems and persevere in solving them.
-- 2. Reason abstractly and quantitatively.
-- 3. Construct viable arguments and critique the reasoning of others.
-- 4. Model with mathematics.
-- 5. Use appropriate tools strategically.
-- 6. Attend to precision.
-- 7. Look for and make use of structure.
-- 8. Look for and express regularity in repeated reasoning.
+
+<% standards.select {|standard| standard[:family_s] == "Common Core Math Practices"}.each do |standard| %>
+- <%= standard[:id_s] %>: <%= standard[:desc_t] %>
+<% end %>
 
 ### Common Core Math Standards
 

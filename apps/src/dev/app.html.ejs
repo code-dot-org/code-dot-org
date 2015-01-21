@@ -47,13 +47,17 @@
       console.log(this);
     };
 
-    var appOptions = <%-: options | json %> ;
+    var appOptions = <%- JSON.stringify(options) %> ;
     // pass in some functions. These can't be define in server.js, since functions
     // get removed when we convert to json on the line above.
     appOptions.onAttempt = function(report) {
       console.log('Attempt!');
       console.log(report);
       if (report.onComplete) {
+        // Notify the app that the report operation is complete
+        // (important to do this asynchronously to simulate a service call or else
+        //  we will have problems with the animating_ / waitingForReport_ states
+        //  in the maze state machine)
         setTimeout(report.onComplete, 0);
       }
     };

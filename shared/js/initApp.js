@@ -144,4 +144,49 @@ $(window).on('function_editor_closed', function() {
     }
   }
 })(appOptions.level);
-window[appOptions.app + 'Main'](appOptions);
+
+function initApp() {
+  window[appOptions.app + 'Main'](appOptions);
+}
+
+// Returns a function which returns a $.Deferred instance. When executed, the
+// function loads the given app script.
+function loadSource(name) {
+  return function () {
+    var deferred = new $.Deferred();
+    document.body.appendChild($('<script>', {
+      src: appOptions.baseUrl + 'js/' + name + '.js'
+    }).on('load', function () {
+      deferred.resolve();
+    })[0]);
+    return deferred;
+  }
+}
+
+// Loads the given app stylesheet.
+function loadStyle(name) {
+  $('body').append($('<link>', {
+    rel: 'stylesheet',
+    type: 'text/css',
+    href: appOptions.baseUrl + 'css/' + name + '.css'
+  }));
+}
+
+loadStyle('common');
+loadStyle(appOptions.app);
+var promise;
+if (appOptions.droplet) {
+  loadStyle('droplet/droplet.min');
+  promise = loadSource('jsinterpreter/acorn_interpreter')()
+      .then(loadSource('requirejs/require'))
+      .then(loadSource('ace/ace'))
+      .then(loadSource('ace/ext-language_tools'))
+      .then(loadSource('droplet/droplet-full.min'));
+} else {
+  promise = loadSource(appOptions.locale + '/vendor')();
+}
+promise.then(loadSource('common' + appOptions.pretty))
+  .then(loadSource(appOptions.locale + '/common_locale'))
+  .then(loadSource(appOptions.locale + '/' + appOptions.app + '_locale'))
+  .then(loadSource(appOptions.app + appOptions.pretty))
+  .then(initApp);

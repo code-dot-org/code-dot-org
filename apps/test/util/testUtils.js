@@ -1,5 +1,5 @@
 var chai = require('chai');
-chai.Assertion.includeStack = true;
+chai.config.includeStack = true;
 var assert = chai.assert;
 exports.assert = assert;
 
@@ -42,24 +42,46 @@ exports.requireWithGlobalsCheckBuildFolder = function (path, allowedChanges) {
   return requireWithGlobalsCheck(exports.buildPath(path), allowedChanges, false);
 };
 
+function setupLocale(app) {
+  setupLocales();
+  require.uncache('../../build/locale/current/' + app);
+  var localePath = '../../build/package/js/en_us/' + app + '_locale';
+  require.uncache(localePath);
+  require(localePath);
+}
+
+exports.setupLocale = setupLocale;
+
+function setupLocales() {
+  global.navigator = global.navigator || {};
+  global.window = global.window || {};
+  global.document = global.document || {};
+  global.window.blockly = {};
+  var localePath = '../../build/package/js/en_us/common_locale';
+  require.uncache(localePath);
+  require(localePath);
+}
+
+exports.setupLocales = setupLocales;
+
 /**
  * Initializes an instance of blockly for testing
- *
- * Warning: this likely doesn't do exactly the same thing each time.
- * For example, the first time requiring ./frame in setupTestBlockly will actually load frame.js.
- * Subsequent times, it will use the cached version of frame.js.
  */
 exports.setupTestBlockly = function() {
+  // uncache file to force reload
+  require.uncache(exports.buildPath('/StudioApp'));
+  require.uncache('./frame');
+
   requireWithGlobalsCheck('./frame',
     ['document', 'window', 'DOMParser', 'XMLSerializer', 'Blockly']);
   assert(global.Blockly, 'Frame loaded Blockly into global namespace');
 
-  // uncache file to force reload
-  require.uncache(exports.buildPath('/StudioApp'));
+  setupLocales();
+
   // c, n, v, p, s get added to global namespace by messageformat module, which
   // is loaded when we require our locale msg files
   studioApp = exports.requireWithGlobalsCheckBuildFolder('/StudioApp',
-    ['c', 'n', 'v', 'p', 's']).singleton;
+    ['c', 'n', 'v', 'p', 's', 'TestResults']).singleton;
 
   var blocklyAppDiv = document.getElementById('app');
   assert(blocklyAppDiv, 'blocklyAppDiv exists');

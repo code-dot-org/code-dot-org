@@ -7,7 +7,7 @@
 
 'use strict';
 
-var Studio = require('./studio');
+var studioApp = require('../StudioApp').singleton;
 var Direction = require('./constants').Direction;
 
 //
@@ -98,7 +98,7 @@ Collidable.prototype.bounce = function () {
  */
 Collidable.prototype.outOfBounds = function () {
   return (this.x < -(this.width / 2)) ||
-         (this.x > Studio.MAZE_WIDTH + (this.width / 2)) ||
+         (this.x > studioApp.MAZE_WIDTH + (this.width / 2)) ||
          (this.y < -(this.height / 2)) ||
-         (this.y > Studio.MAZE_HEIGHT + (this.height / 2));
+         (this.y > studioApp.MAZE_HEIGHT + (this.height / 2));
 };
