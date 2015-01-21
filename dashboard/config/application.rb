@@ -7,6 +7,7 @@ require 'cdo/geocoder'
 require 'varnish_environment'
 require 'apps_api'
 require 'shared_resources'
+require 'pegasus_sites'
 
 require 'bootstrap-sass'
 
@@ -20,6 +21,7 @@ module Dashboard
     config.middleware.use VarnishEnvironment
     config.middleware.use AppsApi
     config.middleware.use SharedResources
+    config.middleware.use PegasusSites if rack_env?(:development)
 
     config.encoding = 'utf-8'
 
