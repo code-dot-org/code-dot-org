@@ -2288,39 +2288,19 @@ WordSearch.__testonly__ = {
 
 },{"../utils":148,"./mazeUtils":93,"./tiles":98}],103:[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, escape, include, rethrow) {
-rethrow = rethrow || function rethrow(err, str, filename, lineno){
-  var lines = str.split('\n')
-    , start = Math.max(lineno - 3, 0)
-    , end = Math.min(lines.length, lineno + 3);
-
-  // Error context
-  var context = lines.slice(start, end).map(function (line, i){
-    var curr = i + start + 1;
-    return (curr == lineno ? ' >> ' : '    ')
-      + curr
-      + '| '
-      + line;
-  }).join('\n');
-
-  // Alter exception message
-  err.path = filename;
-  err.message = (filename || 'ejs') + ':'
-    + lineno + '\n'
-    + context + '\n\n'
-    + err.message;
-
-  throw err;
-};
-escape = escape || function (markup) {
-  return String(markup)
-    .replace(/&/g, '&amp;')
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/'/g, '&#39;')
     .replace(/"/g, '&quot;');
 };
-var __output = ""; with (locals || {}) { ;__output += "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" id=\"svgMaze\">\n  <g id=\"look\">\n    <path d=\"M 0,-15 a 15 15 0 0 1 15 15\" />\n    <path d=\"M 0,-35 a 35 35 0 0 1 35 35\" />\n    <path d=\"M 0,-55 a 55 55 0 0 1 55 55\" />\n  </g>\n</svg>\n<div id=\"capacityBubble\">\n  <div id=\"capacity\"></div>\n</div>\n";};return __output.trim();
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgMaze">\n  <g id="look">\n    <path d="M 0,-15 a 15 15 0 0 1 15 15" />\n    <path d="M 0,-35 a 35 35 0 0 1 35 35" />\n    <path d="M 0,-55 a 55 55 0 0 1 55 55" />\n  </g>\n</svg>\n<div id="capacityBubble">\n  <div id="capacity"></div>\n</div>\n'); })();
+} 
+return buf.join('');
 };
   return function(locals) {
     return t(locals, require("ejs").filters);
@@ -3318,39 +3298,19 @@ module.exports = {
 
 },{"../block_utils":15,"./requiredBlocks":94,"./tiles":98}],102:[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, escape, include, rethrow) {
-rethrow = rethrow || function rethrow(err, str, filename, lineno){
-  var lines = str.split('\n')
-    , start = Math.max(lineno - 3, 0)
-    , end = Math.min(lines.length, lineno + 3);
-
-  // Error context
-  var context = lines.slice(start, end).map(function (line, i){
-    var curr = i + start + 1;
-    return (curr == lineno ? ' >> ' : '    ')
-      + curr
-      + '| '
-      + line;
-  }).join('\n');
-
-  // Alter exception message
-  err.path = filename;
-  err.message = (filename || 'ejs') + ':'
-    + lineno + '\n'
-    + context + '\n\n'
-    + err.message;
-
-  throw err;
-};
-escape = escape || function (markup) {
-  return String(markup)
-    .replace(/&/g, '&amp;')
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/'/g, '&#39;')
     .replace(/"/g, '&quot;');
 };
-var __output = ""; with (locals || {}) { ;__output += "<xml id=\"toolbox\" style=\"display: none;\">\n  <block type=\"maze_moveForward\"></block>\n  <block type=\"maze_turn\"><title name=\"DIR\">turnLeft</title></block>\n  <block type=\"maze_turn\"><title name=\"DIR\">turnRight</title></block>\n  ";; if (page == 1) { ;__output += "    ";; if (level > 2) { ;__output += "      <block type=\"maze_forever\"></block>\n      ";; if (level == 5) { ;__output += "        <block type=\"maze_if\"><title name=\"DIR\">isPathLeft</title></block>\n      ";; } else if (level > 5 && level < 9) { ;__output += "        <block type=\"maze_if\"></block>\n      ";; } ;__output += "      ";; if (level > 8) { ;__output += "       <block type=\"maze_ifElse\"></block>\n      ";; } ;__output += "    ";; } ;__output += "  ";; } else if (page == 2) { ;__output += "    ";; if (level > 4 && level < 9) { ;__output += "      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">5</title>\n      </block>\n    ";; } ;__output += "    ";; if (level > 8) { ;__output += "      <block type=\"maze_forever\"></block>\n      ";; if (level == 13 || level == 15) { ;__output += "        <block type=\"maze_if\"><title name=\"DIR\">isPathLeft</title></block>\n      ";; } else if (level == 14 || level == 16) { ;__output += "        <block type=\"maze_if\"><title name=\"DIR\">isPathRight</title></block>\n      ";; } ;__output += "      ";; if (level > 16) { ;__output += "       <block type=\"maze_ifElse\"></block>\n      ";; } ;__output += "    ";; } ;__output += "  ";; } ;__output += "</xml>\n";};return __output.trim();
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('<xml id="toolbox" style="display: none;">\n  <block type="maze_moveForward"></block>\n  <block type="maze_turn"><title name="DIR">turnLeft</title></block>\n  <block type="maze_turn"><title name="DIR">turnRight</title></block>\n  ');5; if (page == 1) {; buf.push('    ');5; if (level > 2) {; buf.push('      <block type="maze_forever"></block>\n      ');6; if (level == 5) {; buf.push('        <block type="maze_if"><title name="DIR">isPathLeft</title></block>\n      ');7; } else if (level > 5 && level < 9) {; buf.push('        <block type="maze_if"></block>\n      ');8; }; buf.push('      ');8; if (level > 8) {; buf.push('       <block type="maze_ifElse"></block>\n      ');9; }; buf.push('    ');9; }; buf.push('  ');9; } else if (page == 2) {; buf.push('    ');9; if (level > 4 && level < 9) {; buf.push('      <block type="controls_repeat">\n        <title name="TIMES">5</title>\n      </block>\n    ');12; }; buf.push('    ');12; if (level > 8) {; buf.push('      <block type="maze_forever"></block>\n      ');13; if (level == 13 || level == 15) {; buf.push('        <block type="maze_if"><title name="DIR">isPathLeft</title></block>\n      ');14; } else if (level == 14 || level == 16) {; buf.push('        <block type="maze_if"><title name="DIR">isPathRight</title></block>\n      ');15; }; buf.push('      ');15; if (level > 16) {; buf.push('       <block type="maze_ifElse"></block>\n      ');16; }; buf.push('    ');16; }; buf.push('  ');16; }; buf.push('</xml>\n'); })();
+} 
+return buf.join('');
 };
   return function(locals) {
     return t(locals, require("ejs").filters);
@@ -3358,39 +3318,19 @@ var __output = ""; with (locals || {}) { ;__output += "<xml id=\"toolbox\" style
 }());
 },{"ejs":168}],97:[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, escape, include, rethrow) {
-rethrow = rethrow || function rethrow(err, str, filename, lineno){
-  var lines = str.split('\n')
-    , start = Math.max(lineno - 3, 0)
-    , end = Math.min(lines.length, lineno + 3);
-
-  // Error context
-  var context = lines.slice(start, end).map(function (line, i){
-    var curr = i + start + 1;
-    return (curr == lineno ? ' >> ' : '    ')
-      + curr
-      + '| '
-      + line;
-  }).join('\n');
-
-  // Alter exception message
-  err.path = filename;
-  err.message = (filename || 'ejs') + ':'
-    + lineno + '\n'
-    + context + '\n\n'
-    + err.message;
-
-  throw err;
-};
-escape = escape || function (markup) {
-  return String(markup)
-    .replace(/&/g, '&amp;')
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/'/g, '&#39;')
     .replace(/"/g, '&quot;');
 };
-var __output = ""; with (locals || {}) { ; if (page == 2) { ;__output += "  ";; if (level < 4) { ;__output += "    <block type=\"maze_moveForward\" x=\"70\" y=\"70\"></block>\n  ";; } else if (level == 8) { ;__output += "    <block type=\"controls_repeat\" x=\"70\" y=\"70\" editable=\"false\"\n      deletable=\"false\">\n      <title name=\"TIMES\">3</title>\n    </block>\n  ";; } else if (level == 13) { ;__output += "    <block type=\"maze_forever\" x=\"20\" y=\"70\" editable=\"false\" deletable=\"false\">\n      <statement name=\"DO\">\n        <block type=\"maze_moveForward\" editable=\"false\" deletable=\"false\">\n          <next>\n            <block type=\"maze_if\" editable=\"false\" deletable=\"false\">\n              <title name=\"DIR\">isPathLeft</title>\n            </block>\n          </next>\n        </block>\n      </statement>\n    </block>\n  ";; } else if (level == 19) { ;__output += "    <block type=\"maze_forever\" x=\"20\" y=\"70\" editable=\"false\" deletable=\"false\">\n      <statement name=\"DO\">\n        <block type=\"maze_ifElse\" editable=\"false\" deletable=\"false\">\n          <title name=\"DIR\">isPathForward</title>\n          <statement name=\"ELSE\">\n            <block type=\"maze_ifElse\" editable=\"false\" deletable=\"false\">\n              <title name=\"DIR\">isPathRight</title>\n            </block>\n          </statement>\n        </block>\n      </statement>\n    </block>\n  ";; } ;__output += "";; } ;__output += "";};return __output.trim();
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('');1; if (page == 2) {; buf.push('  ');1; if (level < 4) {; buf.push('    <block type="maze_moveForward" x="70" y="70"></block>\n  ');2; } else if (level == 8) {; buf.push('    <block type="controls_repeat" x="70" y="70" editable="false"\n      deletable="false">\n      <title name="TIMES">3</title>\n    </block>\n  ');6; } else if (level == 13) {; buf.push('    <block type="maze_forever" x="20" y="70" editable="false" deletable="false">\n      <statement name="DO">\n        <block type="maze_moveForward" editable="false" deletable="false">\n          <next>\n            <block type="maze_if" editable="false" deletable="false">\n              <title name="DIR">isPathLeft</title>\n            </block>\n          </next>\n        </block>\n      </statement>\n    </block>\n  ');17; } else if (level == 19) {; buf.push('    <block type="maze_forever" x="20" y="70" editable="false" deletable="false">\n      <statement name="DO">\n        <block type="maze_ifElse" editable="false" deletable="false">\n          <title name="DIR">isPathForward</title>\n          <statement name="ELSE">\n            <block type="maze_ifElse" editable="false" deletable="false">\n              <title name="DIR">isPathRight</title>\n            </block>\n          </statement>\n        </block>\n      </statement>\n    </block>\n  ');29; }; buf.push('');29; }; buf.push(''); })();
+} 
+return buf.join('');
 };
   return function(locals) {
     return t(locals, require("ejs").filters);
@@ -4676,52 +4616,32 @@ module.exports = {
 
 },{"../../locale/current/maze":157,"../block_utils":15,"../level_base":77,"./karelStartBlocks.xml":89,"./tiles":98,"./toolboxes/karel1.xml":99,"./toolboxes/karel2.xml":100,"./toolboxes/karel3.xml":101}],101:[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, escape, include, rethrow) {
-rethrow = rethrow || function rethrow(err, str, filename, lineno){
-  var lines = str.split('\n')
-    , start = Math.max(lineno - 3, 0)
-    , end = Math.min(lines.length, lineno + 3);
-
-  // Error context
-  var context = lines.slice(start, end).map(function (line, i){
-    var curr = i + start + 1;
-    return (curr == lineno ? ' >> ' : '    ')
-      + curr
-      + '| '
-      + line;
-  }).join('\n');
-
-  // Alter exception message
-  err.path = filename;
-  err.message = (filename || 'ejs') + ':'
-    + lineno + '\n'
-    + context + '\n\n'
-    + err.message;
-
-  throw err;
-};
-escape = escape || function (markup) {
-  return String(markup)
-    .replace(/&/g, '&amp;')
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/'/g, '&#39;')
     .replace(/"/g, '&quot;');
 };
-var __output = ""; with (locals || {}) { ;
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('');1;
 
 var msg = require('../../../locale/current/common');
 
 /**
  * Add the procedures category to the toolbox.
  */
-var addProcedures = function() { ;__output += "  <category name=\"";;__output += escape(msg.catProcedures());__output += "\" custom=\"PROCEDURE\"></category>\n  <category name=\"";;__output += escape(msg.catLogic());__output += "\">\n    <block type=\"karel_if\"></block>\n    <block type=\"karel_ifElse\"></block>\n  </category>\n";; }; ;__output += "\n";;
+var addProcedures = function() {; buf.push('  <category name="', escape((8,  msg.catProcedures() )), '" custom="PROCEDURE"></category>\n  <category name="', escape((9,  msg.catLogic() )), '">\n    <block type="karel_if"></block>\n    <block type="karel_ifElse"></block>\n  </category>\n');13; };; buf.push('\n');14;
 /**
  * Options:
  * @param doStatement An optional statement for the do statement in the loop.
  * @param upperLimit The upper limit of the for loop.
  */
-var controlsFor = function(doStatement, upperLimit) { ;__output += "  <block type=\"controls_for\">\n    <value name=\"FROM\">\n      <block type=\"math_number\">\n        <title name=\"NUM\">1</title>\n      </block>\n    </value>\n    <value name=\"TO\">\n      <block type=\"math_number\">\n        <title name=\"NUM\">\n          ";;__output += escape(upperLimit || 10);__output += "        </title>\n      </block>\n    </value>\n    <value name=\"BY\">\n      <block type=\"math_number\">\n        <title name=\"NUM\">1</title>\n      </block>\n    </value>\n    ";; if (doStatement) { ;__output += "      <statement name=\"DO\">\n        ";; doStatement() ;__output += "\n      </statement>\n    ";; } ;__output += "  </block>\n";; }; ;__output += "\n<xml id=\"toolbox\" style=\"display: none;\">\n  <category name=\"";;__output += escape(msg.catActions());__output += "\">\n    <block type=\"maze_moveForward\"></block>\n    <block type=\"maze_turn\"><title name=\"DIR\">turnLeft</title></block>\n    <block type=\"maze_turn\"><title name=\"DIR\">turnRight</title></block>\n    <block type=\"maze_dig\"></block>\n    <block type=\"maze_fill\"></block>\n  </category>\n  ";; addProcedures() ;__output += "  <category name=\"";;__output += escape(msg.catLoops());__output += "\">\n    <block type=\"maze_untilBlockedOrNotClear\"></block>\n    ";; if (level < 9) { ;__output += "      <block type=\"controls_repeat\"></block>\n    ";; } else { ;__output += "      <block type=\"controls_repeat_ext\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    ";; } ;__output += "    ";; controlsFor() ;__output += "  </category>\n  <category name=\"";;__output += escape(msg.catMath());__output += "\">\n    <block type=\"math_number\"></block>\n  </category>\n  <category name=\"";;__output += escape(msg.catVariables());__output += "\" custom=\"VARIABLE\">\n  </category>\n</xml>\n";};return __output.trim();
+var controlsFor = function(doStatement, upperLimit) {; buf.push('  <block type="controls_for">\n    <value name="FROM">\n      <block type="math_number">\n        <title name="NUM">1</title>\n      </block>\n    </value>\n    <value name="TO">\n      <block type="math_number">\n        <title name="NUM">\n          ', escape((29,  upperLimit || 10)), '        </title>\n      </block>\n    </value>\n    <value name="BY">\n      <block type="math_number">\n        <title name="NUM">1</title>\n      </block>\n    </value>\n    ');37; if (doStatement) {; buf.push('      <statement name="DO">\n        ');38; doStatement() ; buf.push('\n      </statement>\n    ');40; }; buf.push('  </block>\n');41; };; buf.push('\n<xml id="toolbox" style="display: none;">\n  <category name="', escape((43,  msg.catActions() )), '">\n    <block type="maze_moveForward"></block>\n    <block type="maze_turn"><title name="DIR">turnLeft</title></block>\n    <block type="maze_turn"><title name="DIR">turnRight</title></block>\n    <block type="maze_dig"></block>\n    <block type="maze_fill"></block>\n  </category>\n  ');50; addProcedures(); buf.push('  <category name="', escape((50,  msg.catLoops() )), '">\n    <block type="maze_untilBlockedOrNotClear"></block>\n    ');52; if (level < 9) {; buf.push('      <block type="controls_repeat"></block>\n    ');53; } else {; buf.push('      <block type="controls_repeat_ext">\n        <value name="TIMES">\n          <block type="math_number">\n            <title name="NUM">10</title>\n          </block>\n        </value>\n      </block>\n    ');60; }; buf.push('    ');60; controlsFor(); buf.push('  </category>\n  <category name="', escape((61,  msg.catMath() )), '">\n    <block type="math_number"></block>\n  </category>\n  <category name="', escape((64,  msg.catVariables() )), '" custom="VARIABLE">\n  </category>\n</xml>\n'); })();
+} 
+return buf.join('');
 };
   return function(locals) {
     return t(locals, require("ejs").filters);
@@ -4729,44 +4649,24 @@ var controlsFor = function(doStatement, upperLimit) { ;__output += "  <block typ
 }());
 },{"../../../locale/current/common":153,"ejs":168}],100:[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, escape, include, rethrow) {
-rethrow = rethrow || function rethrow(err, str, filename, lineno){
-  var lines = str.split('\n')
-    , start = Math.max(lineno - 3, 0)
-    , end = Math.min(lines.length, lineno + 3);
-
-  // Error context
-  var context = lines.slice(start, end).map(function (line, i){
-    var curr = i + start + 1;
-    return (curr == lineno ? ' >> ' : '    ')
-      + curr
-      + '| '
-      + line;
-  }).join('\n');
-
-  // Alter exception message
-  err.path = filename;
-  err.message = (filename || 'ejs') + ':'
-    + lineno + '\n'
-    + context + '\n\n'
-    + err.message;
-
-  throw err;
-};
-escape = escape || function (markup) {
-  return String(markup)
-    .replace(/&/g, '&amp;')
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/'/g, '&#39;')
     .replace(/"/g, '&quot;');
 };
-var __output = ""; with (locals || {}) { ;
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('');1;
 
 var commonMsg = require('../../../locale/current/common');
 var mazeMsg = require('../../../locale/current/maze');
 
-var addProcedures = function() { ;__output += "  ";; if (level > 3) { ;__output += "    <category name=\"";;__output += escape(commonMsg.catProcedures());__output += "\" custom=\"PROCEDURE\"></category>\n  ";; } else if (level == 2 || level == 3) { ;__output += "    <category name=\"";;__output += escape(commonMsg.catProcedures());__output += "\">\n      <block type=\"procedures_callnoreturn\">\n        <mutation name=\"";;__output += escape(mazeMsg.fillN({shovelfuls: 5}));__output += "\"></mutation>\n      </block>\n    </category>\n  ";; } ;__output += "  ";; if (level < 9) { ;__output += "    <category name=\"";;__output += escape(commonMsg.catLogic());__output += "\">\n      <block type=\"karel_if\"></block>\n    </category>\n  ";; } else if (level > 8) { ;__output += "    <category name=\"";;__output += escape(commonMsg.catLogic());__output += "\">\n      <block type=\"karel_if\"></block>\n      <block type=\"karel_ifElse\"></block>\n    </category>\n  ";; } ;__output += "";; }; ;__output += "\n<xml id=\"toolbox\" style=\"display: none;\">\n  <category name=\"";;__output += escape(commonMsg.catActions());__output += "\">\n    <block type=\"maze_moveForward\"></block>\n    <block type=\"maze_turn\"><title name=\"DIR\">turnLeft</title></block>\n    <block type=\"maze_turn\"><title name=\"DIR\">turnRight</title></block>\n    <block type=\"maze_dig\"></block>\n    <block type=\"maze_fill\"></block>\n  </category>\n  ";; addProcedures() ;__output += "  <category name=\"";;__output += escape(commonMsg.catLoops());__output += "\">\n    <block type=\"maze_untilBlocked\"></block>\n    <block type=\"controls_repeat\"></block>\n  </category>\n</xml>\n";};return __output.trim();
+var addProcedures = function() {; buf.push('  ');6; if (level > 3) {; buf.push('    <category name="', escape((6,  commonMsg.catProcedures() )), '" custom="PROCEDURE"></category>\n  ');7; } else if (level == 2 || level == 3) {; buf.push('    <category name="', escape((7,  commonMsg.catProcedures() )), '">\n      <block type="procedures_callnoreturn">\n        <mutation name="', escape((9,  mazeMsg.fillN({shovelfuls: 5}) )), '"></mutation>\n      </block>\n    </category>\n  ');12; }; buf.push('  ');12; if (level < 9) {; buf.push('    <category name="', escape((12,  commonMsg.catLogic() )), '">\n      <block type="karel_if"></block>\n    </category>\n  ');15; } else if (level > 8) {; buf.push('    <category name="', escape((15,  commonMsg.catLogic() )), '">\n      <block type="karel_if"></block>\n      <block type="karel_ifElse"></block>\n    </category>\n  ');19; }; buf.push('');19; };; buf.push('\n<xml id="toolbox" style="display: none;">\n  <category name="', escape((21,  commonMsg.catActions() )), '">\n    <block type="maze_moveForward"></block>\n    <block type="maze_turn"><title name="DIR">turnLeft</title></block>\n    <block type="maze_turn"><title name="DIR">turnRight</title></block>\n    <block type="maze_dig"></block>\n    <block type="maze_fill"></block>\n  </category>\n  ');28; addProcedures(); buf.push('  <category name="', escape((28,  commonMsg.catLoops() )), '">\n    <block type="maze_untilBlocked"></block>\n    <block type="controls_repeat"></block>\n  </category>\n</xml>\n'); })();
+} 
+return buf.join('');
 };
   return function(locals) {
     return t(locals, require("ejs").filters);
@@ -4774,39 +4674,19 @@ var addProcedures = function() { ;__output += "  ";; if (level > 3) { ;__output 
 }());
 },{"../../../locale/current/common":153,"../../../locale/current/maze":157,"ejs":168}],99:[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, escape, include, rethrow) {
-rethrow = rethrow || function rethrow(err, str, filename, lineno){
-  var lines = str.split('\n')
-    , start = Math.max(lineno - 3, 0)
-    , end = Math.min(lines.length, lineno + 3);
-
-  // Error context
-  var context = lines.slice(start, end).map(function (line, i){
-    var curr = i + start + 1;
-    return (curr == lineno ? ' >> ' : '    ')
-      + curr
-      + '| '
-      + line;
-  }).join('\n');
-
-  // Alter exception message
-  err.path = filename;
-  err.message = (filename || 'ejs') + ':'
-    + lineno + '\n'
-    + context + '\n\n'
-    + err.message;
-
-  throw err;
-};
-escape = escape || function (markup) {
-  return String(markup)
-    .replace(/&/g, '&amp;')
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/'/g, '&#39;')
     .replace(/"/g, '&quot;');
 };
-var __output = ""; with (locals || {}) { ;__output += "<xml id=\"toolbox\" style=\"display: none;\">\n  <block type=\"maze_moveForward\"></block>\n  <block type=\"maze_turn\"><title name=\"DIR\">turnLeft</title></block>\n  <block type=\"maze_turn\"><title name=\"DIR\">turnRight</title></block>\n  <block type=\"maze_dig\"></block>\n  ";; if (level > 1) { ;__output += "    <block type=\"maze_fill\"></block>\n    ";; if (level > 2) { ;__output += "      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">5</title>\n      </block>\n      ";; if (level > 9) { ;__output += "        <block type=\"karel_if\"></block>\n      ";; } ;__output += "    ";; } ;__output += "    ";; if (level == 5 || level == 10 || level == 11) { ;__output += "      <block type=\"maze_untilBlocked\"></block>\n    ";; } ;__output += "    ";; if (level > 5 && level < 8) { ;__output += "      <block type=\"maze_untilBlockedOrNotClear\"></block>\n    ";; } ;__output += "    ";; if (level == 8 || level == 9) { ;__output += "      <block type=\"maze_untilBlockedOrNotClear\">\n        <title name=\"DIR\">isPathForward</title>\n      </block>\n    ";; } ;__output += "  ";; } ;__output += "</xml>\n";};return __output.trim();
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('<xml id="toolbox" style="display: none;">\n  <block type="maze_moveForward"></block>\n  <block type="maze_turn"><title name="DIR">turnLeft</title></block>\n  <block type="maze_turn"><title name="DIR">turnRight</title></block>\n  <block type="maze_dig"></block>\n  ');6; if (level > 1) {; buf.push('    <block type="maze_fill"></block>\n    ');7; if (level > 2) {; buf.push('      <block type="controls_repeat">\n        <title name="TIMES">5</title>\n      </block>\n      ');10; if (level > 9) {; buf.push('        <block type="karel_if"></block>\n      ');11; }; buf.push('    ');11; }; buf.push('    ');11; if (level == 5 || level == 10 || level == 11) {; buf.push('      <block type="maze_untilBlocked"></block>\n    ');12; }; buf.push('    ');12; if (level > 5 && level < 8) {; buf.push('      <block type="maze_untilBlockedOrNotClear"></block>\n    ');13; }; buf.push('    ');13; if (level == 8 || level == 9) {; buf.push('      <block type="maze_untilBlockedOrNotClear">\n        <title name="DIR">isPathForward</title>\n      </block>\n    ');16; }; buf.push('  ');16; }; buf.push('</xml>\n'); })();
+} 
+return buf.join('');
 };
   return function(locals) {
     return t(locals, require("ejs").filters);
@@ -4814,50 +4694,30 @@ var __output = ""; with (locals || {}) { ;__output += "<xml id=\"toolbox\" style
 }());
 },{"ejs":168}],89:[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, escape, include, rethrow) {
-rethrow = rethrow || function rethrow(err, str, filename, lineno){
-  var lines = str.split('\n')
-    , start = Math.max(lineno - 3, 0)
-    , end = Math.min(lines.length, lineno + 3);
-
-  // Error context
-  var context = lines.slice(start, end).map(function (line, i){
-    var curr = i + start + 1;
-    return (curr == lineno ? ' >> ' : '    ')
-      + curr
-      + '| '
-      + line;
-  }).join('\n');
-
-  // Alter exception message
-  err.path = filename;
-  err.message = (filename || 'ejs') + ':'
-    + lineno + '\n'
-    + context + '\n\n'
-    + err.message;
-
-  throw err;
-};
-escape = escape || function (markup) {
-  return String(markup)
-    .replace(/&/g, '&amp;')
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/'/g, '&#39;')
     .replace(/"/g, '&quot;');
 };
-var __output = ""; with (locals || {}) { ;
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('');1;
 
 var msg = require('../../locale/current/maze');
 
 /**
  * Template to create function for filling in shovels.
  */
-var fillShovelfuls = function(n) { ;__output += "  <block type=\"procedures_defnoreturn\" x=\"20\" y=\"200\" editable=\"false\"\n    deletable=\"false\">\n    <mutation></mutation>\n    <title name=\"NAME\">";;__output += escape(msg.fillN({shovelfuls: n}));__output += "</title>\n    <statement name=\"STACK\">\n      <block type=\"controls_repeat\" editable=\"false\" deletable=\"false\">\n        <title name=\"TIMES\">";;__output += escape(n);__output += "</title>\n        <statement name=\"DO\">\n          <block type=\"maze_fill\" editable=\"false\" deletable=\"false\">\n          </block>\n        </statement>\n       </block>\n    </statement>\n  </block>\n";; }; ;__output += "\n";;
+var fillShovelfuls = function(n) {; buf.push('  <block type="procedures_defnoreturn" x="20" y="200" editable="false"\n    deletable="false">\n    <mutation></mutation>\n    <title name="NAME">', escape((11,  msg.fillN({shovelfuls: n}) )), '</title>\n    <statement name="STACK">\n      <block type="controls_repeat" editable="false" deletable="false">\n        <title name="TIMES">', escape((14,  n )), '</title>\n        <statement name="DO">\n          <block type="maze_fill" editable="false" deletable="false">\n          </block>\n        </statement>\n       </block>\n    </statement>\n  </block>\n');22; };; buf.push('\n');23;
 /**
  * Template to create function for removing in shovels.
  */
-var removeShovelfuls = function(n) { ;__output += "  <block type=\"procedures_defnoreturn\" x=\"300\" y=\"200\" editable=\"false\"\n    deletable=\"false\">\n    <mutation></mutation>\n    <title name=\"NAME\">";;__output += escape(msg.removeN({shovelfuls: n}));__output += "</title>\n    <statement name=\"STACK\">\n      <block type=\"controls_repeat\" editable=\"false\" deletable=\"false\">\n        <title name=\"TIMES\">";;__output += escape(n);__output += "</title>\n        <statement name=\"DO\">\n          <block type=\"maze_dig\" editable=\"false\" deletable=\"false\">\n          </block>\n        </statement>\n       </block>\n    </statement>\n  </block>\n";; }; ;__output += "\n\n";; if (page == 1) { ;__output += "  ";; if (level == 1) { ;__output += "    <block type=\"maze_moveForward\" x=\"70\" y=\"70\"></block>\n  ";; } else if (level == 2) { ;__output += "    <block type=\"maze_moveForward\" x=\"70\" y=\"70\"></block>\n  ";; } else if (level == 3) { ;__output += "    <block type=\"maze_moveForward\" x=\"70\" y=\"70\"></block>\n  ";; } else if (level == 4) { ;__output += "    <block type=\"maze_moveForward\" x=\"70\" y=\"70\"></block>\n  ";; } else if (level == 5) { ;__output += "    <block type=\"maze_untilBlocked\" x=\"70\" y=\"70\"></block>\n  ";; } else if (level == 6) { ;__output += "    <block type=\"maze_dig\" x=\"70\" y=\"70\"></block>\n  ";; } else if (level == 7) { ;__output += "    <block type=\"maze_turn\" x=\"70\" y=\"70\">\n          <title name=\"DIR\">turnRight</title>\n    </block>\n  ";; } else if (level == 8) { ;__output += "    <block type=\"maze_moveForward\" x=\"70\" y=\"70\"></block>\n  ";; } else if (level == 9) { ;__output += "    <block type=\"maze_moveForward\" x=\"70\" y=\"70\"></block>\n  ";; } else if (level == 10) { ;__output += "    <block type=\"maze_untilBlocked\" x=\"70\" y=\"70\"></block>\n  ";; } else if (level == 11) { ;__output += "    <block type=\"maze_untilBlocked\" x=\"70\" y=\"70\"></block>\n  ";; } ;__output += "";; } else if (page == 2) { ;__output += "  ";; if (level == 2) { ;__output += "    <block type=\"maze_moveForward\" x=\"20\" y=\"70\"></block>\n    ";; fillShovelfuls(5) ;__output += "  ";; } else if (level == 3) { ;__output += "    ";; fillShovelfuls(5) ;__output += "  ";; } else if (level == 4) { ;__output += "    ";; fillShovelfuls(5) ;__output += "    <block type=\"procedures_defnoreturn\" x=\"300\" y=\"200\" editable=\"false\"\n      deletable=\"false\">\n      <mutation></mutation>\n      <title name=\"NAME\">";;__output += escape(msg.removeN({shovelfuls: 7}));__output += "</title>\n    </block>\n  ";; } else if (level == 5) { ;__output += "    <block type=\"procedures_defnoreturn\" x=\"20\" y=\"200\" editable=\"false\"\n      deletable=\"false\">\n      <mutation></mutation>\n      <title name=\"NAME\">";;__output += escape(msg.removeN({shovelfuls: 6}));__output += "</title>\n    </block>\n  ";; } else if (level == 6) { ;__output += "    ";; fillShovelfuls(8) ;__output += "    ";; removeShovelfuls(8) ;__output += "  ";; } else if (level == 7) { ;__output += "    <block type=\"procedures_callnoreturn\" x=\"20\" y=\"70\" editable=\"false\"\n      deletable=\"false\">\n      <mutation name=\"";;__output += escape(msg.avoidCowAndRemove());__output += "\"></mutation>\n    </block>\n    <block type=\"procedures_defnoreturn\" x=\"20\" y=\"200\" editable=\"false\"\n      deletable=\"false\">\n      <mutation></mutation>\n      <title name=\"NAME\">";;__output += escape(msg.avoidCowAndRemove());__output += "</title>\n    </block>\n  ";; } else if (level == 8) { ;__output += "    <block type=\"procedures_defnoreturn\" x=\"20\" y=\"200\" editable=\"false\"\n      deletable=\"false\">\n      <mutation></mutation>\n      <title name=\"NAME\">";;__output += escape(msg.avoidCowAndRemove());__output += "</title>\n      <statement name=\"STACK\">\n        <block type=\"maze_turn\" editable=\"false\" deletable=\"false\">\n          <title name=\"DIR\">turnLeft</title>\n          <next>\n            <block type=\"maze_moveForward\" editable=\"false\" deletable=\"false\">\n              <next>\n                <block type=\"maze_turn\" editable=\"false\" deletable=\"false\">\n                  <title name=\"DIR\">turnRight</title>\n                  <next>\n                    <block type=\"maze_moveForward\" editable=\"false\"\n                      deletable=\"false\">\n                      <next>\n                        <block type=\"maze_moveForward\" editable=\"false\"\n                          deletable=\"false\">\n                          <next>\n                            <block type=\"maze_turn\" editable=\"false\"\n                              deletable=\"false\">\n                              <title name=\"DIR\">turnRight</title>\n                              <next>\n                                <block type=\"maze_moveForward\"\n                                  editable=\"false\" deletable=\"false\">\n                                  <next>\n                                    <block type=\"maze_dig\"\n                                      editable=\"false\" deletable=\"false\">\n                                      <next>\n                                        <block type=\"maze_turn\"\n                                          editable=\"false\" deletable=\"false\">\n                                          <title name=\"DIR\">turnLeft</title>\n                                        </block>\n                                      </next>\n                                    </block>\n                                  </next>\n                                </block>\n                              </next>\n                            </block>\n                          </next>\n                        </block>\n                      </next>\n                    </block>\n                  </next>\n                </block>\n              </next>\n            </block>\n          </next>\n        </block>\n      </statement>\n    </block>\n  ";; } else if (level == 9) { ;__output += "    <block type=\"procedures_defnoreturn\" x=\"20\" y=\"200\" editable=\"false\"\n      deletable=\"false\">\n      <mutation></mutation>\n      <title name=\"NAME\">";;__output += escape(msg.removeStack({shovelfuls: 4}));__output += "</title>\n      <statement name=\"STACK\">\n        <block type=\"maze_turn\" editable=\"false\" deletable=\"false\">\n          <title name=\"DIR\">turnLeft</title>\n          <next>\n            <block type=\"controls_repeat\" editable=\"false\" deletable=\"false\">\n              <title name=\"TIMES\">4</title>\n              <statement name=\"DO\">\n                <block type=\"maze_dig\" editable=\"false\"\n                  deletable=\"false\">\n                  <next>\n                    <block type=\"maze_moveForward\" editable=\"false\"\n                      deletable=\"false\"></block>\n                  </next>\n                </block>\n              </statement>\n              <next>\n                <block type=\"maze_turn\" editable=\"false\" deletable=\"false\">\n                  <title name=\"DIR\">turnRight</title>\n                  <next>\n                    <block type=\"maze_turn\" editable=\"false\" deletable=\"false\">\n                      <title name=\"DIR\">turnRight</title>\n                      <next>\n                        <block type=\"controls_repeat\" editable=\"false\"\n                          deletable=\"false\">\n                          <title name=\"TIMES\">4</title>\n                          <statement name=\"DO\">\n                            <block type=\"maze_moveForward\" editable=\"false\"\n                              deletable=\"false\"></block>\n                          </statement>\n                          <next>\n                            <block type=\"maze_turn\" editable=\"false\"\n                              deletable=\"false\">\n                              <title name=\"DIR\">turnLeft</title>\n                            </block>\n                          </next>\n                        </block>\n                      </next>\n                    </block>\n                  </next>\n                </block>\n              </next>\n            </block>\n          </next>\n        </block>\n      </statement>\n    </block>\n  ";; } else if (level == 10) { ;__output += "    <block type=\"procedures_defnoreturn\" x=\"20\" y=\"200\" editable=\"false\"\n      deletable=\"false\">\n      <mutation></mutation>\n      <title name=\"NAME\">";;__output += escape(msg.removeStack({shovelfuls: 4}));__output += "</title>\n      <statement name=\"STACK\">\n        <block type=\"maze_turn\" editable=\"false\" deletable=\"false\">\n          <title name=\"DIR\">turnLeft</title>\n          <next>\n            <block type=\"controls_repeat\" editable=\"false\" deletable=\"false\">\n              <title name=\"TIMES\">4</title>\n              <statement name=\"DO\">\n                <block type=\"maze_dig\" editable=\"false\"\n                  deletable=\"false\">\n                  <next>\n                    <block type=\"maze_moveForward\" editable=\"false\"\n                      deletable=\"false\"></block>\n                  </next>\n                </block>\n              </statement>\n              <next>\n                <block type=\"maze_turn\" editable=\"false\" deletable=\"false\">\n                  <title name=\"DIR\">turnRight</title>\n                  <next>\n                    <block type=\"maze_turn\" editable=\"false\" deletable=\"false\">\n                      <title name=\"DIR\">turnRight</title>\n                      <next>\n                        <block type=\"controls_repeat\" editable=\"false\"\n                          deletable=\"false\">\n                          <title name=\"TIMES\">4</title>\n                          <statement name=\"DO\">\n                            <block type=\"maze_moveForward\" editable=\"false\"\n                              deletable=\"false\"></block>\n                          </statement>\n                          <next>\n                            <block type=\"maze_turn\" editable=\"false\"\n                              deletable=\"false\">\n                              <title name=\"DIR\">turnLeft</title>\n                            </block>\n                          </next>\n                        </block>\n                      </next>\n                    </block>\n                  </next>\n                </block>\n              </next>\n            </block>\n          </next>\n        </block>\n      </statement>\n    </block>\n    <block type=\"procedures_defnoreturn\" x=\"300\" y=\"200\" editable=\"false\"\n      deletable=\"false\">\n      <mutation></mutation>\n      <title name=\"NAME\">";;__output += escape(msg.fillStack({shovelfuls: 2}));__output += "</title>\n      <statement name=\"STACK\">\n        <block type=\"maze_turn\" editable=\"false\" deletable=\"false\">\n          <title name=\"DIR\">turnLeft</title>\n          <next>\n            <block type=\"controls_repeat\" editable=\"false\" deletable=\"false\">\n              <title name=\"TIMES\">2</title>\n              <statement name=\"DO\">\n                <block type=\"maze_fill\" editable=\"false\"\n                  deletable=\"false\">\n                  <next>\n                    <block type=\"maze_moveForward\" editable=\"false\"\n                      deletable=\"false\"></block>\n                  </next>\n                </block>\n              </statement>\n              <next>\n                <block type=\"maze_turn\" editable=\"false\" deletable=\"false\">\n                  <title name=\"DIR\">turnRight</title>\n                  <next>\n                    <block type=\"maze_turn\" editable=\"false\" deletable=\"false\">\n                      <title name=\"DIR\">turnRight</title>\n                      <next>\n                        <block type=\"controls_repeat\" editable=\"false\"\n                          deletable=\"false\">\n                          <title name=\"TIMES\">2</title>\n                          <statement name=\"DO\">\n                            <block type=\"maze_moveForward\" editable=\"false\"\n                              deletable=\"false\"></block>\n                          </statement>\n                          <next>\n                            <block type=\"maze_turn\" editable=\"false\"\n                              deletable=\"false\">\n                              <title name=\"DIR\">turnLeft</title>\n                            </block>\n                          </next>\n                        </block>\n                      </next>\n                    </block>\n                  </next>\n                </block>\n              </next>\n            </block>\n          </next>\n        </block>\n      </statement>\n    </block>\n  ";; } else if (level == 11) { ;__output += "    <block type=\"procedures_defnoreturn\" x=\"20\" y=\"200\" editable=\"false\"\n      deletable=\"false\">\n      <mutation></mutation>\n      <title name=\"NAME\">";;__output += escape(msg.removeAndAvoidTheCow());__output += "</title>\n      <statement name=\"STACK\">\n        <block type=\"maze_dig\" editable=\"false\" deletable=\"false\">\n          <next>\n            <block type=\"maze_turn\" editable=\"false\" deletable=\"false\">\n              <title name=\"DIR\">turnLeft</title>\n              <next>\n                <block type=\"maze_moveForward\" editable=\"false\"\n                  deletable=\"false\">\n                  <next>\n                    <block type=\"maze_turn\" editable=\"false\" deletable=\"false\">\n                      <title name=\"DIR\">turnRight</title>\n                      <next>\n                        <block type=\"maze_moveForward\" editable=\"false\"\n                          deletable=\"false\">\n                          <next>\n                            <block type=\"maze_moveForward\" editable=\"false\"\n                              deletable=\"false\">\n                              <next>\n                                <block type=\"maze_turn\" editable=\"false\"\n                                  deletable=\"false\">\n                                  <title name=\"DIR\">turnRight</title>\n                                  <next>\n                                    <block type=\"maze_moveForward\"\n                                      editable=\"false\" deletable=\"false\">\n                                      <next>\n                                        <block type=\"maze_turn\"\n                                          editable=\"false\" deletable=\"false\">\n                                          <title name=\"DIR\">turnLeft\n                                          </title>\n                                        </block>\n                                      </next>\n                                    </block>\n                                  </next>\n                                </block>\n                              </next>\n                            </block>\n                          </next>\n                        </block>\n                      </next>\n                    </block>\n                  </next>\n                </block>\n              </next>\n            </block>\n          </next>\n        </block>\n      </statement>\n    </block>\n  ";; } ;__output += "";; } else if (page == 3) { ;__output += "  ";; if (level == 1) { ;__output += "    <block type=\"maze_moveForward\" x=\"70\" y=\"70\">\n      <next>\n        <block type=\"maze_turn\">\n          <title name=\"DIR\">turnLeft</title>\n          <next>\n            <block type=\"maze_moveForward\">\n              <next>\n                <block type=\"maze_dig\">\n                  <next>\n                    <block type=\"maze_turn\">\n                      <title name=\"DIR\">turnRight</title>\n                      <next>\n                        <block type=\"maze_moveForward\">\n                          <next>\n                            <block type=\"maze_fill\"></block>\n                          </next>\n                        </block>\n                      </next>\n                    </block>\n                  </next>\n                </block>\n              </next>\n            </block>\n          </next>\n        </block>\n      </next>\n    </block>\n  ";; } else if (level == 2) { ;__output += "    <block type=\"maze_moveForward\" x=\"70\" y=\"70\">\n      <next>\n        <block type=\"maze_moveForward\">\n          <next>\n            <block type=\"maze_moveForward\">\n              <next>\n                <block type=\"maze_moveForward\">\n                  <next>\n                    <block type=\"maze_dig\"></block>\n                  </next>\n                </block>\n              </next>\n            </block>\n          </next>\n        </block>\n      </next>\n    </block>\n  ";; } else if (level == 3) { ;__output += "    <block type=\"maze_moveForward\" x=\"70\" y=\"70\">\n      <next>\n        <block type=\"maze_turn\">\n          <title name=\"DIR\">turnLeft</title>\n          <next>\n            <block type=\"maze_moveForward\">\n              <next>\n                <block type=\"controls_repeat\">\n                  <title name=\"TIMES\">10</title>\n                  <statement name=\"DO\">\n                    <block type=\"maze_dig\"></block>\n                  </statement>\n                  <next>\n                    <block type=\"maze_turn\">\n                      <title name=\"DIR\">turnRight</title>\n                      <next>\n                        <block type=\"maze_moveForward\">\n                          <next>\n                            <block type=\"maze_turn\">\n                              <title name=\"DIR\">turnLeft</title>\n                              <next>\n                                <block type=\"maze_moveForward\">\n                                  <next>\n                                    <block type=\"controls_repeat\">\n                                      <title name=\"TIMES\">10</title>\n                                      <statement name=\"DO\">\n                                        <block type=\"maze_dig\"></block>\n                                      </statement>\n                                    </block>\n                                  </next>\n                                </block>\n                              </next>\n                            </block>\n                          </next>\n                        </block>\n                      </next>\n                    </block>\n                  </next>\n                </block>\n              </next>\n            </block>\n          </next>\n        </block>\n      </next>\n    </block>\n  ";; } else if (level == 4) { ;__output += "    <block type=\"controls_repeat\" x=\"70\" y=\"70\">\n      <title name=\"TIMES\">5</title>\n      <statement name=\"DO\">\n        <block type=\"maze_moveForward\"></block>\n      </statement>\n      <next>\n        <block type=\"maze_untilBlockedOrNotClear\">\n          <title name=\"DIR\">pilePresent</title>\n          <statement name=\"DO\">\n            <block type=\"maze_fill\"></block>\n          </statement>\n        </block>\n      </next>\n    </block>\n  ";; } else if (level == 5) { ;__output += "    <block type=\"controls_repeat\" x=\"70\" y=\"70\">\n      <title name=\"TIMES\">7</title>\n      <statement name=\"DO\">\n        <block type=\"maze_moveForward\">\n          <next>\n            <block type=\"maze_dig\">\n              <next>\n                <block type=\"maze_turn\">\n                  <title name=\"DIR\">turnLeft</title>\n                  <next>\n                    <block type=\"maze_moveForward\">\n                      <next>\n                        <block type=\"maze_turn\">\n                          <title name=\"DIR\">turnRight</title>\n                        </block>\n                      </next>\n                    </block>\n                  </next>\n                </block>\n              </next>\n            </block>\n          </next>\n        </block>\n      </statement>\n    </block>\n  ";; } else if (level == 6) { ;__output += "    <block type=\"controls_repeat\" x=\"70\" y=\"70\">\n      <title name=\"TIMES\">7</title>\n      <statement name=\"DO\">\n        <block type=\"maze_moveForward\">\n          <next>\n            <block type=\"karel_if\">\n              <title name=\"DIR\">pilePresent</title>\n              <statement name=\"DO\">\n                <block type=\"maze_dig\"></block>\n              </statement>\n              <next>\n                <block type=\"maze_turn\">\n                  <title name=\"DIR\">turnLeft</title>\n                  <next>\n                    <block type=\"maze_moveForward\">\n                      <next>\n                        <block type=\"maze_turn\">\n                          <title name=\"DIR\">turnRight</title>\n                        </block>\n                      </next>\n                    </block>\n                  </next>\n                </block>\n              </next>\n            </block>\n          </next>\n        </block>\n      </statement>\n    </block>\n  ";; } else if (level == 7) { ;__output += "    <block type=\"procedures_callnoreturn\" x=\"20\" y=\"70\"\n      editable=\"false\" deletable=\"false\">\n      <mutation name=\"";;__output += escape(msg.removeSquare());__output += "\"></mutation>\n    </block>\n    <block type=\"procedures_defnoreturn\" x=\"20\" y=\"200\" editable=\"false\" deletable=\"false\">\n      <mutation></mutation>\n      <title name=\"NAME\">";;__output += escape(msg.removeSquare());__output += "</title>\n      <statement name=\"STACK\">\n        <block type=\"controls_repeat\">\n          <title name=\"TIMES\">4</title>\n          <statement name=\"DO\">\n            <block type=\"controls_repeat\">\n              <title name=\"TIMES\">2</title>\n              <statement name=\"DO\">\n                <block type=\"maze_moveForward\">\n                  <next>\n                    <block type=\"maze_dig\"></block>\n                  </next>\n                </block>\n              </statement>\n              <next>\n                <block type=\"maze_turn\">\n                  <title name=\"DIR\">turnLeft</title>\n                </block>\n              </next>\n            </block>\n          </statement>\n        </block>\n      </statement>\n    </block>\n  ";; } else if (level == 8) { ;__output += "    <block type=\"procedures_callnoreturn\" x=\"20\" y=\"70\">\n      <mutation name=\"";;__output += escape(msg.fillSquare());__output += "\"></mutation>\n      <next>\n        <block type=\"controls_repeat\">\n          <title name=\"TIMES\">5</title>\n          <statement name=\"DO\">\n            <block type=\"maze_moveForward\"></block>\n          </statement>\n          <next>\n            <block type=\"procedures_callnoreturn\">\n              <mutation name=\"";;__output += escape(msg.removeSquare());__output += "\"></mutation>\n            </block>\n          </next>\n        </block>\n      </next>\n    </block>\n    <block type=\"procedures_defnoreturn\" deletable=\"false\"\n      editable=\"false\" x=\"20\" y=\"250\">\n      <mutation></mutation>\n      <title name=\"NAME\">";;__output += escape(msg.removeSquare());__output += "</title>\n      <statement name=\"STACK\">\n        <block type=\"controls_repeat\">\n          <title name=\"TIMES\">4</title>\n          <statement name=\"DO\">\n            <block type=\"controls_repeat\">\n              <title name=\"TIMES\">2</title>\n              <statement name=\"DO\">\n                <block type=\"maze_moveForward\">\n                  <next>\n                    <block type=\"maze_dig\"></block>\n                  </next>\n                </block>\n              </statement>\n              <next>\n                <block type=\"maze_turn\">\n                  <title name=\"DIR\">turnLeft</title>\n                </block>\n              </next>\n            </block>\n          </statement>\n        </block>\n      </statement>\n    </block>\n    <block type=\"procedures_defnoreturn\" deletable=\"false\"\n      editable=\"false\" x=\"350\" y=\"250\">\n      <mutation></mutation>\n      <title name=\"NAME\">";;__output += escape(msg.fillSquare());__output += "</title>\n      <statement name=\"STACK\">\n        <block type=\"controls_repeat\">\n          <title name=\"TIMES\">4</title>\n          <statement name=\"DO\">\n            <block type=\"controls_repeat\">\n              <title name=\"TIMES\">2</title>\n              <statement name=\"DO\">\n                <block type=\"maze_moveForward\">\n                  <next>\n                    <block type=\"maze_fill\"></block>\n                  </next>\n                </block>\n              </statement>\n              <next>\n                <block type=\"maze_turn\">\n                  <title name=\"DIR\">turnLeft</title>\n                </block>\n              </next>\n            </block>\n          </statement>\n        </block>\n      </statement>\n    </block>\n  ";; } else if (level == 9) { ;__output += "    <block type=\"controls_for\" inline=\"true\" x=\"20\" y=\"70\">\n      <title name=\"VAR\">counter</title>\n      <value name=\"FROM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n      <value name=\"TO\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">6</title>\n        </block>\n      </value>\n      <value name=\"BY\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n      <statement name=\"DO\">\n        <block type=\"procedures_callnoreturn\" inline=\"false\">\n          <mutation name=\"";;__output += escape(msg.removePile());__output += "\">\n            <arg name=\"";;__output += escape(msg.heightParameter());__output += "\"></arg>\n          </mutation>\n          <value name=\"ARG0\">\n            <block type=\"math_number\">\n              <title name=\"NUM\">1</title>\n            </block>\n          </value>\n          <next>\n            <block type=\"maze_moveForward\"></block>\n          </next>\n        </block>\n      </statement>\n    </block>\n    <block type=\"procedures_defnoreturn\" x=\"20\" y=\"250\" editable=\"false\" deletable=\"false\">\n      <mutation>\n        <arg name=\"";;__output += escape(msg.heightParameter());__output += "\"></arg>\n      </mutation>\n      <title name=\"NAME\">";;__output += escape(msg.removePile());__output += "</title>\n      <statement name=\"STACK\">\n        <block type=\"controls_repeat_ext\" inline=\"true\">\n          <value name=\"TIMES\">\n            <block type=\"math_number\">\n              <title name=\"NUM\">1</title>\n            </block>\n          </value>\n          <statement name=\"DO\">\n            <block type=\"maze_dig\"></block>\n          </statement>\n        </block>\n      </statement>\n    </block>\n  ";; } ;__output += "";; } ;__output += "";};return __output.trim();
+var removeShovelfuls = function(n) {; buf.push('  <block type="procedures_defnoreturn" x="300" y="200" editable="false"\n    deletable="false">\n    <mutation></mutation>\n    <title name="NAME">', escape((30,  msg.removeN({shovelfuls: n}) )), '</title>\n    <statement name="STACK">\n      <block type="controls_repeat" editable="false" deletable="false">\n        <title name="TIMES">', escape((33,  n )), '</title>\n        <statement name="DO">\n          <block type="maze_dig" editable="false" deletable="false">\n          </block>\n        </statement>\n       </block>\n    </statement>\n  </block>\n');41; }; ; buf.push('\n\n');43; if (page == 1) {; buf.push('  ');43; if (level == 1) {; buf.push('    <block type="maze_moveForward" x="70" y="70"></block>\n  ');44; } else if (level == 2) {; buf.push('    <block type="maze_moveForward" x="70" y="70"></block>\n  ');45; } else if (level == 3) {; buf.push('    <block type="maze_moveForward" x="70" y="70"></block>\n  ');46; } else if (level == 4) {; buf.push('    <block type="maze_moveForward" x="70" y="70"></block>\n  ');47; } else if (level == 5) {; buf.push('    <block type="maze_untilBlocked" x="70" y="70"></block>\n  ');48; } else if (level == 6) {; buf.push('    <block type="maze_dig" x="70" y="70"></block>\n  ');49; } else if (level == 7) {; buf.push('    <block type="maze_turn" x="70" y="70">\n          <title name="DIR">turnRight</title>\n    </block>\n  ');52; } else if (level == 8) {; buf.push('    <block type="maze_moveForward" x="70" y="70"></block>\n  ');53; } else if (level == 9) {; buf.push('    <block type="maze_moveForward" x="70" y="70"></block>\n  ');54; } else if (level == 10) {; buf.push('    <block type="maze_untilBlocked" x="70" y="70"></block>\n  ');55; } else if (level == 11) {; buf.push('    <block type="maze_untilBlocked" x="70" y="70"></block>\n  ');56; }; buf.push('');56; } else if (page == 2) {; buf.push('  ');56; if (level == 2) {; buf.push('    <block type="maze_moveForward" x="20" y="70"></block>\n    ');57; fillShovelfuls(5); buf.push('  ');57; } else if (level == 3) {; buf.push('    ');57; fillShovelfuls(5); buf.push('  ');57; } else if (level == 4) {; buf.push('    ');57; fillShovelfuls(5); buf.push('    <block type="procedures_defnoreturn" x="300" y="200" editable="false"\n      deletable="false">\n      <mutation></mutation>\n      <title name="NAME">', escape((60,  msg.removeN({shovelfuls: 7}) )), '</title>\n    </block>\n  ');62; } else if (level == 5) {; buf.push('    <block type="procedures_defnoreturn" x="20" y="200" editable="false"\n      deletable="false">\n      <mutation></mutation>\n      <title name="NAME">', escape((65,  msg.removeN({shovelfuls: 6}) )), '</title>\n    </block>\n  ');67; } else if (level == 6) {; buf.push('    ');67; fillShovelfuls(8); buf.push('    ');67; removeShovelfuls(8); buf.push('  ');67; } else if (level == 7) {; buf.push('    <block type="procedures_callnoreturn" x="20" y="70" editable="false"\n      deletable="false">\n      <mutation name="', escape((69,  msg.avoidCowAndRemove() )), '"></mutation>\n    </block>\n    <block type="procedures_defnoreturn" x="20" y="200" editable="false"\n      deletable="false">\n      <mutation></mutation>\n      <title name="NAME">', escape((74,  msg.avoidCowAndRemove() )), '</title>\n    </block>\n  ');76; } else if (level == 8) {; buf.push('    <block type="procedures_defnoreturn" x="20" y="200" editable="false"\n      deletable="false">\n      <mutation></mutation>\n      <title name="NAME">', escape((79,  msg.avoidCowAndRemove() )), '</title>\n      <statement name="STACK">\n        <block type="maze_turn" editable="false" deletable="false">\n          <title name="DIR">turnLeft</title>\n          <next>\n            <block type="maze_moveForward" editable="false" deletable="false">\n              <next>\n                <block type="maze_turn" editable="false" deletable="false">\n                  <title name="DIR">turnRight</title>\n                  <next>\n                    <block type="maze_moveForward" editable="false"\n                      deletable="false">\n                      <next>\n                        <block type="maze_moveForward" editable="false"\n                          deletable="false">\n                          <next>\n                            <block type="maze_turn" editable="false"\n                              deletable="false">\n                              <title name="DIR">turnRight</title>\n                              <next>\n                                <block type="maze_moveForward"\n                                  editable="false" deletable="false">\n                                  <next>\n                                    <block type="maze_dig"\n                                      editable="false" deletable="false">\n                                      <next>\n                                        <block type="maze_turn"\n                                          editable="false" deletable="false">\n                                          <title name="DIR">turnLeft</title>\n                                        </block>\n                                      </next>\n                                    </block>\n                                  </next>\n                                </block>\n                              </next>\n                            </block>\n                          </next>\n                        </block>\n                      </next>\n                    </block>\n                  </next>\n                </block>\n              </next>\n            </block>\n          </next>\n        </block>\n      </statement>\n    </block>\n  ');127; } else if (level == 9) {; buf.push('    <block type="procedures_defnoreturn" x="20" y="200" editable="false"\n      deletable="false">\n      <mutation></mutation>\n      <title name="NAME">', escape((130,  msg.removeStack({shovelfuls: 4}) )), '</title>\n      <statement name="STACK">\n        <block type="maze_turn" editable="false" deletable="false">\n          <title name="DIR">turnLeft</title>\n          <next>\n            <block type="controls_repeat" editable="false" deletable="false">\n              <title name="TIMES">4</title>\n              <statement name="DO">\n                <block type="maze_dig" editable="false"\n                  deletable="false">\n                  <next>\n                    <block type="maze_moveForward" editable="false"\n                      deletable="false"></block>\n                  </next>\n                </block>\n              </statement>\n              <next>\n                <block type="maze_turn" editable="false" deletable="false">\n                  <title name="DIR">turnRight</title>\n                  <next>\n                    <block type="maze_turn" editable="false" deletable="false">\n                      <title name="DIR">turnRight</title>\n                      <next>\n                        <block type="controls_repeat" editable="false"\n                          deletable="false">\n                          <title name="TIMES">4</title>\n                          <statement name="DO">\n                            <block type="maze_moveForward" editable="false"\n                              deletable="false"></block>\n                          </statement>\n                          <next>\n                            <block type="maze_turn" editable="false"\n                              deletable="false">\n                              <title name="DIR">turnLeft</title>\n                            </block>\n                          </next>\n                        </block>\n                      </next>\n                    </block>\n                  </next>\n                </block>\n              </next>\n            </block>\n          </next>\n        </block>\n      </statement>\n    </block>\n  ');177; } else if (level == 10) {; buf.push('    <block type="procedures_defnoreturn" x="20" y="200" editable="false"\n      deletable="false">\n      <mutation></mutation>\n      <title name="NAME">', escape((180,  msg.removeStack({shovelfuls: 4}) )), '</title>\n      <statement name="STACK">\n        <block type="maze_turn" editable="false" deletable="false">\n          <title name="DIR">turnLeft</title>\n          <next>\n            <block type="controls_repeat" editable="false" deletable="false">\n              <title name="TIMES">4</title>\n              <statement name="DO">\n                <block type="maze_dig" editable="false"\n                  deletable="false">\n                  <next>\n                    <block type="maze_moveForward" editable="false"\n                      deletable="false"></block>\n                  </next>\n                </block>\n              </statement>\n              <next>\n                <block type="maze_turn" editable="false" deletable="false">\n                  <title name="DIR">turnRight</title>\n                  <next>\n                    <block type="maze_turn" editable="false" deletable="false">\n                      <title name="DIR">turnRight</title>\n                      <next>\n                        <block type="controls_repeat" editable="false"\n                          deletable="false">\n                          <title name="TIMES">4</title>\n                          <statement name="DO">\n                            <block type="maze_moveForward" editable="false"\n                              deletable="false"></block>\n                          </statement>\n                          <next>\n                            <block type="maze_turn" editable="false"\n                              deletable="false">\n                              <title name="DIR">turnLeft</title>\n                            </block>\n                          </next>\n                        </block>\n                      </next>\n                    </block>\n                  </next>\n                </block>\n              </next>\n            </block>\n          </next>\n        </block>\n      </statement>\n    </block>\n    <block type="procedures_defnoreturn" x="300" y="200" editable="false"\n      deletable="false">\n      <mutation></mutation>\n      <title name="NAME">', escape((230,  msg.fillStack({shovelfuls: 2}) )), '</title>\n      <statement name="STACK">\n        <block type="maze_turn" editable="false" deletable="false">\n          <title name="DIR">turnLeft</title>\n          <next>\n            <block type="controls_repeat" editable="false" deletable="false">\n              <title name="TIMES">2</title>\n              <statement name="DO">\n                <block type="maze_fill" editable="false"\n                  deletable="false">\n                  <next>\n                    <block type="maze_moveForward" editable="false"\n                      deletable="false"></block>\n                  </next>\n                </block>\n              </statement>\n              <next>\n                <block type="maze_turn" editable="false" deletable="false">\n                  <title name="DIR">turnRight</title>\n                  <next>\n                    <block type="maze_turn" editable="false" deletable="false">\n                      <title name="DIR">turnRight</title>\n                      <next>\n                        <block type="controls_repeat" editable="false"\n                          deletable="false">\n                          <title name="TIMES">2</title>\n                          <statement name="DO">\n                            <block type="maze_moveForward" editable="false"\n                              deletable="false"></block>\n                          </statement>\n                          <next>\n                            <block type="maze_turn" editable="false"\n                              deletable="false">\n                              <title name="DIR">turnLeft</title>\n                            </block>\n                          </next>\n                        </block>\n                      </next>\n                    </block>\n                  </next>\n                </block>\n              </next>\n            </block>\n          </next>\n        </block>\n      </statement>\n    </block>\n  ');277; } else if (level == 11) {; buf.push('    <block type="procedures_defnoreturn" x="20" y="200" editable="false"\n      deletable="false">\n      <mutation></mutation>\n      <title name="NAME">', escape((280,  msg.removeAndAvoidTheCow() )), '</title>\n      <statement name="STACK">\n        <block type="maze_dig" editable="false" deletable="false">\n          <next>\n            <block type="maze_turn" editable="false" deletable="false">\n              <title name="DIR">turnLeft</title>\n              <next>\n                <block type="maze_moveForward" editable="false"\n                  deletable="false">\n                  <next>\n                    <block type="maze_turn" editable="false" deletable="false">\n                      <title name="DIR">turnRight</title>\n                      <next>\n                        <block type="maze_moveForward" editable="false"\n                          deletable="false">\n                          <next>\n                            <block type="maze_moveForward" editable="false"\n                              deletable="false">\n                              <next>\n                                <block type="maze_turn" editable="false"\n                                  deletable="false">\n                                  <title name="DIR">turnRight</title>\n                                  <next>\n                                    <block type="maze_moveForward"\n                                      editable="false" deletable="false">\n                                      <next>\n                                        <block type="maze_turn"\n                                          editable="false" deletable="false">\n                                          <title name="DIR">turnLeft\n                                          </title>\n                                        </block>\n                                      </next>\n                                    </block>\n                                  </next>\n                                </block>\n                              </next>\n                            </block>\n                          </next>\n                        </block>\n                      </next>\n                    </block>\n                  </next>\n                </block>\n              </next>\n            </block>\n          </next>\n        </block>\n      </statement>\n    </block>\n  ');329; }; buf.push('');329; } else if (page == 3) {; buf.push('  ');329; if (level == 1) {; buf.push('    <block type="maze_moveForward" x="70" y="70">\n      <next>\n        <block type="maze_turn">\n          <title name="DIR">turnLeft</title>\n          <next>\n            <block type="maze_moveForward">\n              <next>\n                <block type="maze_dig">\n                  <next>\n                    <block type="maze_turn">\n                      <title name="DIR">turnRight</title>\n                      <next>\n                        <block type="maze_moveForward">\n                          <next>\n                            <block type="maze_fill"></block>\n                          </next>\n                        </block>\n                      </next>\n                    </block>\n                  </next>\n                </block>\n              </next>\n            </block>\n          </next>\n        </block>\n      </next>\n    </block>\n  ');356; } else if (level == 2) {; buf.push('    <block type="maze_moveForward" x="70" y="70">\n      <next>\n        <block type="maze_moveForward">\n          <next>\n            <block type="maze_moveForward">\n              <next>\n                <block type="maze_moveForward">\n                  <next>\n                    <block type="maze_dig"></block>\n                  </next>\n                </block>\n              </next>\n            </block>\n          </next>\n        </block>\n      </next>\n    </block>\n  ');373; } else if (level == 3) {; buf.push('    <block type="maze_moveForward" x="70" y="70">\n      <next>\n        <block type="maze_turn">\n          <title name="DIR">turnLeft</title>\n          <next>\n            <block type="maze_moveForward">\n              <next>\n                <block type="controls_repeat">\n                  <title name="TIMES">10</title>\n                  <statement name="DO">\n                    <block type="maze_dig"></block>\n                  </statement>\n                  <next>\n                    <block type="maze_turn">\n                      <title name="DIR">turnRight</title>\n                      <next>\n                        <block type="maze_moveForward">\n                          <next>\n                            <block type="maze_turn">\n                              <title name="DIR">turnLeft</title>\n                              <next>\n                                <block type="maze_moveForward">\n                                  <next>\n                                    <block type="controls_repeat">\n                                      <title name="TIMES">10</title>\n                                      <statement name="DO">\n                                        <block type="maze_dig"></block>\n                                      </statement>\n                                    </block>\n                                  </next>\n                                </block>\n                              </next>\n                            </block>\n                          </next>\n                        </block>\n                      </next>\n                    </block>\n                  </next>\n                </block>\n              </next>\n            </block>\n          </next>\n        </block>\n      </next>\n    </block>\n  ');418; } else if (level == 4) {; buf.push('    <block type="controls_repeat" x="70" y="70">\n      <title name="TIMES">5</title>\n      <statement name="DO">\n        <block type="maze_moveForward"></block>\n      </statement>\n      <next>\n        <block type="maze_untilBlockedOrNotClear">\n          <title name="DIR">pilePresent</title>\n          <statement name="DO">\n            <block type="maze_fill"></block>\n          </statement>\n        </block>\n      </next>\n    </block>\n  ');432; } else if (level == 5) {; buf.push('    <block type="controls_repeat" x="70" y="70">\n      <title name="TIMES">7</title>\n      <statement name="DO">\n        <block type="maze_moveForward">\n          <next>\n            <block type="maze_dig">\n              <next>\n                <block type="maze_turn">\n                  <title name="DIR">turnLeft</title>\n                  <next>\n                    <block type="maze_moveForward">\n                      <next>\n                        <block type="maze_turn">\n                          <title name="DIR">turnRight</title>\n                        </block>\n                      </next>\n                    </block>\n                  </next>\n                </block>\n              </next>\n            </block>\n          </next>\n        </block>\n      </statement>\n    </block>\n  ');457; } else if (level == 6) {; buf.push('    <block type="controls_repeat" x="70" y="70">\n      <title name="TIMES">7</title>\n      <statement name="DO">\n        <block type="maze_moveForward">\n          <next>\n            <block type="karel_if">\n              <title name="DIR">pilePresent</title>\n              <statement name="DO">\n                <block type="maze_dig"></block>\n              </statement>\n              <next>\n                <block type="maze_turn">\n                  <title name="DIR">turnLeft</title>\n                  <next>\n                    <block type="maze_moveForward">\n                      <next>\n                        <block type="maze_turn">\n                          <title name="DIR">turnRight</title>\n                        </block>\n                      </next>\n                    </block>\n                  </next>\n                </block>\n              </next>\n            </block>\n          </next>\n        </block>\n      </statement>\n    </block>\n  ');486; } else if (level == 7) {; buf.push('    <block type="procedures_callnoreturn" x="20" y="70"\n      editable="false" deletable="false">\n      <mutation name="', escape((488,  msg.removeSquare() )), '"></mutation>\n    </block>\n    <block type="procedures_defnoreturn" x="20" y="200" editable="false" deletable="false">\n      <mutation></mutation>\n      <title name="NAME">', escape((492,  msg.removeSquare() )), '</title>\n      <statement name="STACK">\n        <block type="controls_repeat">\n          <title name="TIMES">4</title>\n          <statement name="DO">\n            <block type="controls_repeat">\n              <title name="TIMES">2</title>\n              <statement name="DO">\n                <block type="maze_moveForward">\n                  <next>\n                    <block type="maze_dig"></block>\n                  </next>\n                </block>\n              </statement>\n              <next>\n                <block type="maze_turn">\n                  <title name="DIR">turnLeft</title>\n                </block>\n              </next>\n            </block>\n          </statement>\n        </block>\n      </statement>\n    </block>\n  ');516; } else if (level == 8) {; buf.push('    <block type="procedures_callnoreturn" x="20" y="70">\n      <mutation name="', escape((517,  msg.fillSquare() )), '"></mutation>\n      <next>\n        <block type="controls_repeat">\n          <title name="TIMES">5</title>\n          <statement name="DO">\n            <block type="maze_moveForward"></block>\n          </statement>\n          <next>\n            <block type="procedures_callnoreturn">\n              <mutation name="', escape((526,  msg.removeSquare() )), '"></mutation>\n            </block>\n          </next>\n        </block>\n      </next>\n    </block>\n    <block type="procedures_defnoreturn" deletable="false"\n      editable="false" x="20" y="250">\n      <mutation></mutation>\n      <title name="NAME">', escape((535,  msg.removeSquare() )), '</title>\n      <statement name="STACK">\n        <block type="controls_repeat">\n          <title name="TIMES">4</title>\n          <statement name="DO">\n            <block type="controls_repeat">\n              <title name="TIMES">2</title>\n              <statement name="DO">\n                <block type="maze_moveForward">\n                  <next>\n                    <block type="maze_dig"></block>\n                  </next>\n                </block>\n              </statement>\n              <next>\n                <block type="maze_turn">\n                  <title name="DIR">turnLeft</title>\n                </block>\n              </next>\n            </block>\n          </statement>\n        </block>\n      </statement>\n    </block>\n    <block type="procedures_defnoreturn" deletable="false"\n      editable="false" x="350" y="250">\n      <mutation></mutation>\n      <title name="NAME">', escape((562,  msg.fillSquare() )), '</title>\n      <statement name="STACK">\n        <block type="controls_repeat">\n          <title name="TIMES">4</title>\n          <statement name="DO">\n            <block type="controls_repeat">\n              <title name="TIMES">2</title>\n              <statement name="DO">\n                <block type="maze_moveForward">\n                  <next>\n                    <block type="maze_fill"></block>\n                  </next>\n                </block>\n              </statement>\n              <next>\n                <block type="maze_turn">\n                  <title name="DIR">turnLeft</title>\n                </block>\n              </next>\n            </block>\n          </statement>\n        </block>\n      </statement>\n    </block>\n  ');586; } else if (level == 9) {; buf.push('    <block type="controls_for" inline="true" x="20" y="70">\n      <title name="VAR">counter</title>\n      <value name="FROM">\n        <block type="math_number">\n          <title name="NUM">1</title>\n        </block>\n      </value>\n      <value name="TO">\n        <block type="math_number">\n          <title name="NUM">6</title>\n        </block>\n      </value>\n      <value name="BY">\n        <block type="math_number">\n          <title name="NUM">1</title>\n        </block>\n      </value>\n      <statement name="DO">\n        <block type="procedures_callnoreturn" inline="false">\n          <mutation name="', escape((605,  msg.removePile() )), '">\n            <arg name="', escape((606,  msg.heightParameter() )), '"></arg>\n          </mutation>\n          <value name="ARG0">\n            <block type="math_number">\n              <title name="NUM">1</title>\n            </block>\n          </value>\n          <next>\n            <block type="maze_moveForward"></block>\n          </next>\n        </block>\n      </statement>\n    </block>\n    <block type="procedures_defnoreturn" x="20" y="250" editable="false" deletable="false">\n      <mutation>\n        <arg name="', escape((621,  msg.heightParameter() )), '"></arg>\n      </mutation>\n      <title name="NAME">', escape((623,  msg.removePile() )), '</title>\n      <statement name="STACK">\n        <block type="controls_repeat_ext" inline="true">\n          <value name="TIMES">\n            <block type="math_number">\n              <title name="NUM">1</title>\n            </block>\n          </value>\n          <statement name="DO">\n            <block type="maze_dig"></block>\n          </statement>\n        </block>\n      </statement>\n    </block>\n  ');637; }; buf.push('');637; }; buf.push(''); })();
+} 
+return buf.join('');
 };
   return function(locals) {
     return t(locals, require("ejs").filters);
@@ -4865,41 +4725,21 @@ var removeShovelfuls = function(n) { ;__output += "  <block type=\"procedures_de
 }());
 },{"../../locale/current/maze":157,"ejs":168}],87:[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, escape, include, rethrow) {
-rethrow = rethrow || function rethrow(err, str, filename, lineno){
-  var lines = str.split('\n')
-    , start = Math.max(lineno - 3, 0)
-    , end = Math.min(lines.length, lineno + 3);
-
-  // Error context
-  var context = lines.slice(start, end).map(function (line, i){
-    var curr = i + start + 1;
-    return (curr == lineno ? ' >> ' : '    ')
-      + curr
-      + '| '
-      + line;
-  }).join('\n');
-
-  // Alter exception message
-  err.path = filename;
-  err.message = (filename || 'ejs') + ':'
-    + lineno + '\n'
-    + context + '\n\n'
-    + err.message;
-
-  throw err;
-};
-escape = escape || function (markup) {
-  return String(markup)
-    .replace(/&/g, '&amp;')
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/'/g, '&#39;')
     .replace(/"/g, '&quot;');
 };
-var __output = ""; with (locals || {}) { ; var msg = require('../../locale/current/maze') ;__output += "\n<div id=\"spelling-table-wrapper\">\n  <table id=\"spelling-table\" class=\"float-right\">\n    <tr>\n      <td class=\"spellingTextCell\">";;__output += escape(msg.word());__output += ":</td>\n      <td class=\"spellingButtonCell\">\n        <button id=\"searchWord\" class=\"spellingButton\" disabled>\n          ";; // splitting these lines causes an extra space to show up in front of the word, breaking centering 
-;__output += "\n          <img src=\"";;__output += escape(assetUrl('media/1x1.gif'));__output += "\"/>";;__output += escape(searchWord);__output += "\n        </button>\n      </td>\n    </tr>\n    <tr>\n      <td class=\"spellingTextCell\">";;__output += escape(msg.youSpelled());__output += ":</td>\n      <td class=\"spellingButtonCell\">\n        <button id=\"currentWord\" class=\"spellingButton\" disabled>\n          ";; // splitting these lines causes an extra space to show up in front of the word, breaking centering 
-;__output += "\n          <img src=\"";;__output += escape(assetUrl('media/1x1.gif'));__output += "\"><span id=\"currentWordContents\"></span>\n        </button>\n      </td>\n    </tr>\n  </table>\n</div>\n";};return __output.trim();
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('');1; var msg = require('../../locale/current/maze') ; buf.push('\n<div id="spelling-table-wrapper">\n  <table id="spelling-table" class="float-right">\n    <tr>\n      <td class="spellingTextCell">', escape((5,  msg.word() )), ':</td>\n      <td class="spellingButtonCell">\n        <button id="searchWord" class="spellingButton" disabled>\n          ');8; // splitting these lines causes an extra space to show up in front of the word, breaking centering 
+; buf.push('\n          <img src="', escape((9,  assetUrl('media/1x1.gif') )), '"/>', escape((9,  searchWord )), '\n        </button>\n      </td>\n    </tr>\n    <tr>\n      <td class="spellingTextCell">', escape((14,  msg.youSpelled() )), ':</td>\n      <td class="spellingButtonCell">\n        <button id="currentWord" class="spellingButton" disabled>\n          ');17; // splitting these lines causes an extra space to show up in front of the word, breaking centering 
+; buf.push('\n          <img src="', escape((18,  assetUrl('media/1x1.gif') )), '"><span id="currentWordContents"></span>\n        </button>\n      </td>\n    </tr>\n  </table>\n</div>\n'); })();
+} 
+return buf.join('');
 };
   return function(locals) {
     return t(locals, require("ejs").filters);
@@ -5033,40 +4873,20 @@ ExecutionInfo.prototype.checkTimeout = function() {
 
 },{"../utils":148}],84:[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, escape, include, rethrow) {
-rethrow = rethrow || function rethrow(err, str, filename, lineno){
-  var lines = str.split('\n')
-    , start = Math.max(lineno - 3, 0)
-    , end = Math.min(lines.length, lineno + 3);
-
-  // Error context
-  var context = lines.slice(start, end).map(function (line, i){
-    var curr = i + start + 1;
-    return (curr == lineno ? ' >> ' : '    ')
-      + curr
-      + '| '
-      + line;
-  }).join('\n');
-
-  // Alter exception message
-  err.path = filename;
-  err.message = (filename || 'ejs') + ':'
-    + lineno + '\n'
-    + context + '\n\n'
-    + err.message;
-
-  throw err;
-};
-escape = escape || function (markup) {
-  return String(markup)
-    .replace(/&/g, '&amp;')
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/'/g, '&#39;')
     .replace(/"/g, '&quot;');
 };
-var __output = ""; with (locals || {}) { ; var msg = require('../../locale/current/maze') ;__output += "\n\n<button id=\"stepButton\" class=\"launch ";;__output += escape(showStepButton ? '' : 'hide');__output += " float-right\">\n  ";; // splitting these lines causes an extra space to show up in front of the word, breaking centering 
-;__output += "\n  <img src=\"";;__output += escape(assetUrl('media/1x1.gif'));__output += "\">";;__output += escape(msg.step());__output += "\n</button>\n\n";};return __output.trim();
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('');1; var msg = require('../../locale/current/maze') ; buf.push('\n\n<button id="stepButton" class="launch ', escape((3,  showStepButton ? '' : 'hide' )), ' float-right">\n  ');4; // splitting these lines causes an extra space to show up in front of the word, breaking centering 
+; buf.push('\n  <img src="', escape((5,  assetUrl('media/1x1.gif') )), '">', escape((5,  msg.step() )), '\n</button>\n\n'); })();
+} 
+return buf.join('');
 };
   return function(locals) {
     return t(locals, require("ejs").filters);

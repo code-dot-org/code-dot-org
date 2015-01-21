@@ -1770,39 +1770,19 @@ var checkFinished = function () {
 
 },{"../../locale/current/common":153,"../../locale/current/flappy":155,"../StudioApp":2,"../codegen":38,"../dom":40,"../skins":108,"../templates/page.html":128,"../utils":148,"./api":60,"./constants":62,"./controls.html":63,"./visualization.html":68}],68:[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, escape, include, rethrow) {
-rethrow = rethrow || function rethrow(err, str, filename, lineno){
-  var lines = str.split('\n')
-    , start = Math.max(lineno - 3, 0)
-    , end = Math.min(lines.length, lineno + 3);
-
-  // Error context
-  var context = lines.slice(start, end).map(function (line, i){
-    var curr = i + start + 1;
-    return (curr == lineno ? ' >> ' : '    ')
-      + curr
-      + '| '
-      + line;
-  }).join('\n');
-
-  // Alter exception message
-  err.path = filename;
-  err.message = (filename || 'ejs') + ':'
-    + lineno + '\n'
-    + context + '\n\n'
-    + err.message;
-
-  throw err;
-};
-escape = escape || function (markup) {
-  return String(markup)
-    .replace(/&/g, '&amp;')
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/'/g, '&#39;')
     .replace(/"/g, '&quot;');
 };
-var __output = ""; with (locals || {}) { ;__output += "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" id=\"svgFlappy\">\n</svg>\n<div id=\"capacityBubble\">\n  <div id=\"capacity\"></div>\n</div>\n";};return __output.trim();
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgFlappy">\n</svg>\n<div id="capacityBubble">\n  <div id="capacity"></div>\n</div>\n'); })();
+} 
+return buf.join('');
 };
   return function(locals) {
     return t(locals, require("ejs").filters);
@@ -1810,39 +1790,19 @@ var __output = ""; with (locals || {}) { ;__output += "<svg xmlns=\"http://www.w
 }());
 },{"ejs":168}],63:[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, escape, include, rethrow) {
-rethrow = rethrow || function rethrow(err, str, filename, lineno){
-  var lines = str.split('\n')
-    , start = Math.max(lineno - 3, 0)
-    , end = Math.min(lines.length, lineno + 3);
-
-  // Error context
-  var context = lines.slice(start, end).map(function (line, i){
-    var curr = i + start + 1;
-    return (curr == lineno ? ' >> ' : '    ')
-      + curr
-      + '| '
-      + line;
-  }).join('\n');
-
-  // Alter exception message
-  err.path = filename;
-  err.message = (filename || 'ejs') + ':'
-    + lineno + '\n'
-    + context + '\n\n'
-    + err.message;
-
-  throw err;
-};
-escape = escape || function (markup) {
-  return String(markup)
-    .replace(/&/g, '&amp;')
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/'/g, '&#39;')
     .replace(/"/g, '&quot;');
 };
-var __output = ""; with (locals || {}) { ; var msg = require('../../locale/current/common') ;__output += "\n\n<div id=\"right-button-cell\">\n  <button id=\"rightButton\" class=\"share\">\n    <img src=\"";;__output += escape(assetUrl('media/1x1.gif'));__output += "\">";;__output += escape(msg.finish());__output += "\n  </button>\n</div>\n";};return __output.trim();
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('');1; var msg = require('../../locale/current/common') ; buf.push('\n\n<div id="right-button-cell">\n  <button id="rightButton" class="share">\n    <img src="', escape((5,  assetUrl('media/1x1.gif') )), '">', escape((5,  msg.finish() )), '\n  </button>\n</div>\n'); })();
+} 
+return buf.join('');
 };
   return function(locals) {
     return t(locals, require("ejs").filters);

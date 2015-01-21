@@ -2725,39 +2725,19 @@ var checkFinished = function () {
 
 },{"../../locale/current/common":153,"../../locale/current/studio":158,"../StudioApp":2,"../canvg/StackBlur.js":34,"../canvg/canvg.js":35,"../canvg/rgbcolor.js":36,"../canvg/svg_todataurl":37,"../codegen":38,"../constants":39,"../dom":40,"../skins":108,"../templates/page.html":128,"../utils":148,"../xml":149,"./api":110,"./blocks":111,"./collidable":112,"./constants":113,"./controls.html":114,"./extraControlRows.html":115,"./projectile":118,"./visualization.html":121}],121:[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, escape, include, rethrow) {
-rethrow = rethrow || function rethrow(err, str, filename, lineno){
-  var lines = str.split('\n')
-    , start = Math.max(lineno - 3, 0)
-    , end = Math.min(lines.length, lineno + 3);
-
-  // Error context
-  var context = lines.slice(start, end).map(function (line, i){
-    var curr = i + start + 1;
-    return (curr == lineno ? ' >> ' : '    ')
-      + curr
-      + '| '
-      + line;
-  }).join('\n');
-
-  // Alter exception message
-  err.path = filename;
-  err.message = (filename || 'ejs') + ':'
-    + lineno + '\n'
-    + context + '\n\n'
-    + err.message;
-
-  throw err;
-};
-escape = escape || function (markup) {
-  return String(markup)
-    .replace(/&/g, '&amp;')
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/'/g, '&#39;')
     .replace(/"/g, '&quot;');
 };
-var __output = ""; with (locals || {}) { ;__output += "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" id=\"svgStudio\">\n</svg>\n<div id=\"capacityBubble\">\n  <div id=\"capacity\"></div>\n</div>\n";};return __output.trim();
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgStudio">\n</svg>\n<div id="capacityBubble">\n  <div id="capacity"></div>\n</div>\n'); })();
+} 
+return buf.join('');
 };
   return function(locals) {
     return t(locals, require("ejs").filters);
@@ -4708,39 +4688,19 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
 
 },{"../../locale/current/studio":158,"../block_utils":15,"../utils":148,"./constants":113}],115:[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, escape, include, rethrow) {
-rethrow = rethrow || function rethrow(err, str, filename, lineno){
-  var lines = str.split('\n')
-    , start = Math.max(lineno - 3, 0)
-    , end = Math.min(lines.length, lineno + 3);
-
-  // Error context
-  var context = lines.slice(start, end).map(function (line, i){
-    var curr = i + start + 1;
-    return (curr == lineno ? ' >> ' : '    ')
-      + curr
-      + '| '
-      + line;
-  }).join('\n');
-
-  // Alter exception message
-  err.path = filename;
-  err.message = (filename || 'ejs') + ':'
-    + lineno + '\n'
-    + context + '\n\n'
-    + err.message;
-
-  throw err;
-};
-escape = escape || function (markup) {
-  return String(markup)
-    .replace(/&/g, '&amp;')
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/'/g, '&#39;')
     .replace(/"/g, '&quot;');
 };
-var __output = ""; with (locals || {}) { ; var msg = require('../../locale/current/common') ;__output += "\n\n";; if (finishButton) { ;__output += "\n  <div id=\"share-cell\" class=\"share-cell-none\">\n    <button id=\"finishButton\" class=\"share\">\n      <img src=\"";;__output += escape(assetUrl('media/1x1.gif'));__output += "\">";;__output += escape(msg.finish());__output += "\n    </button>\n  </div>\n";; } ;__output += "\n";};return __output.trim();
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('');1; var msg = require('../../locale/current/common') ; buf.push('\n\n');3; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((6,  assetUrl('media/1x1.gif') )), '">', escape((6,  msg.finish() )), '\n    </button>\n  </div>\n');9; } ; buf.push('\n'); })();
+} 
+return buf.join('');
 };
   return function(locals) {
     return t(locals, require("ejs").filters);
@@ -4748,39 +4708,19 @@ var __output = ""; with (locals || {}) { ; var msg = require('../../locale/curre
 }());
 },{"../../locale/current/common":153,"ejs":168}],114:[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, escape, include, rethrow) {
-rethrow = rethrow || function rethrow(err, str, filename, lineno){
-  var lines = str.split('\n')
-    , start = Math.max(lineno - 3, 0)
-    , end = Math.min(lines.length, lineno + 3);
-
-  // Error context
-  var context = lines.slice(start, end).map(function (line, i){
-    var curr = i + start + 1;
-    return (curr == lineno ? ' >> ' : '    ')
-      + curr
-      + '| '
-      + line;
-  }).join('\n');
-
-  // Alter exception message
-  err.path = filename;
-  err.message = (filename || 'ejs') + ':'
-    + lineno + '\n'
-    + context + '\n\n'
-    + err.message;
-
-  throw err;
-};
-escape = escape || function (markup) {
-  return String(markup)
-    .replace(/&/g, '&amp;')
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/'/g, '&#39;')
     .replace(/"/g, '&quot;');
 };
-var __output = ""; with (locals || {}) { ; var msg = require('../../locale/current/common') ;__output += "\n\n<div id=\"soft-buttons\" class=\"soft-buttons-none\">\n  <button id=\"leftButton\" class=\"arrow\">\n    <img src=\"";;__output += escape(assetUrl('media/1x1.gif'));__output += "\" class=\"left-btn icon21\">\n  </button>\n  <button id=\"rightButton\" class=\"arrow\">\n    <img src=\"";;__output += escape(assetUrl('media/1x1.gif'));__output += "\" class=\"right-btn icon21\">\n  </button>\n  <button id=\"upButton\" class=\"arrow\">\n    <img src=\"";;__output += escape(assetUrl('media/1x1.gif'));__output += "\" class=\"up-btn icon21\">\n  </button>\n  <button id=\"downButton\" class=\"arrow\">\n    <img src=\"";;__output += escape(assetUrl('media/1x1.gif'));__output += "\" class=\"down-btn icon21\">\n  </button>\n</div>\n\n";; if (finishButton) { ;__output += "\n  <div id=\"share-cell\" class=\"share-cell-none\">\n    <button id=\"finishButton\" class=\"share\">\n      <img src=\"";;__output += escape(assetUrl('media/1x1.gif'));__output += "\">";;__output += escape(msg.finish());__output += "\n    </button>\n  </div>\n";; } ;__output += "\n";};return __output.trim();
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('');1; var msg = require('../../locale/current/common') ; buf.push('\n\n<div id="soft-buttons" class="soft-buttons-none">\n  <button id="leftButton" class="arrow">\n    <img src="', escape((5,  assetUrl('media/1x1.gif') )), '" class="left-btn icon21">\n  </button>\n  <button id="rightButton" class="arrow">\n    <img src="', escape((8,  assetUrl('media/1x1.gif') )), '" class="right-btn icon21">\n  </button>\n  <button id="upButton" class="arrow">\n    <img src="', escape((11,  assetUrl('media/1x1.gif') )), '" class="up-btn icon21">\n  </button>\n  <button id="downButton" class="arrow">\n    <img src="', escape((14,  assetUrl('media/1x1.gif') )), '" class="down-btn icon21">\n  </button>\n</div>\n\n');18; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((21,  assetUrl('media/1x1.gif') )), '">', escape((21,  msg.finish() )), '\n    </button>\n  </div>\n');24; } ; buf.push('\n'); })();
+} 
+return buf.join('');
 };
   return function(locals) {
     return t(locals, require("ejs").filters);

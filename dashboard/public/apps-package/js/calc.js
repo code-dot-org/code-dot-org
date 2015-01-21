@@ -622,39 +622,19 @@ function onReportComplete(response) {
 
 },{"../../locale/current/calc":152,"../../locale/current/common":153,"../StudioApp":2,"../block_utils":15,"../codegen":38,"../dom":40,"../skins":108,"../templates/page.html":128,"../timeoutList":134,"../utils":148,"./api":26,"./controls.html":29,"./expressionNode":30,"./levels":31,"./visualization.html":33}],33:[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, escape, include, rethrow) {
-rethrow = rethrow || function rethrow(err, str, filename, lineno){
-  var lines = str.split('\n')
-    , start = Math.max(lineno - 3, 0)
-    , end = Math.min(lines.length, lineno + 3);
-
-  // Error context
-  var context = lines.slice(start, end).map(function (line, i){
-    var curr = i + start + 1;
-    return (curr == lineno ? ' >> ' : '    ')
-      + curr
-      + '| '
-      + line;
-  }).join('\n');
-
-  // Alter exception message
-  err.path = filename;
-  err.message = (filename || 'ejs') + ':'
-    + lineno + '\n'
-    + context + '\n\n'
-    + err.message;
-
-  throw err;
-};
-escape = escape || function (markup) {
-  return String(markup)
-    .replace(/&/g, '&amp;')
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/'/g, '&#39;')
     .replace(/"/g, '&quot;');
 };
-var __output = ""; with (locals || {}) { ; var msg = require('../../locale/current/calc'); ;__output += "\n\n<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" id=\"svgCalc\">\n  <rect x=\"0\" y=\"0\" width=\"400\" height=\"300\" fill=\"#33ccff\"/>\n  <rect x=\"0\" y=\"300\" width=\"400\" height=\"100\" fill=\"#996633\"/>\n  <text x=\"0\" y=\"30\" class=\"calcHeader\">";;__output += escape(msg.yourExpression());__output += "</text>\n  <g id=\"userExpression\" class=\"expr\" transform=\"translate(0, 100)\">\n  </g>\n  <text x=\"0\" y=\"330\" class=\"calcHeader\" id=\"goalHeader\">";;__output += escape(msg.goal());__output += "</text>\n  <g id=\"answerExpression\" class=\"expr\" transform=\"translate(0, 350)\">\n  </g>\n</svg>\n";};return __output.trim();
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('');1; var msg = require('../../locale/current/calc'); ; buf.push('\n\n<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgCalc">\n  <rect x="0" y="0" width="400" height="300" fill="#33ccff"/>\n  <rect x="0" y="300" width="400" height="100" fill="#996633"/>\n  <text x="0" y="30" class="calcHeader">', escape((6,  msg.yourExpression() )), '</text>\n  <g id="userExpression" class="expr" transform="translate(0, 100)">\n  </g>\n  <text x="0" y="330" class="calcHeader" id="goalHeader">', escape((9,  msg.goal() )), '</text>\n  <g id="answerExpression" class="expr" transform="translate(0, 350)">\n  </g>\n</svg>\n'); })();
+} 
+return buf.join('');
 };
   return function(locals) {
     return t(locals, require("ejs").filters);
@@ -701,42 +681,22 @@ module.exports = {
 
 },{"../../locale/current/calc":152,"../block_utils":15}],29:[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, escape, include, rethrow) {
-rethrow = rethrow || function rethrow(err, str, filename, lineno){
-  var lines = str.split('\n')
-    , start = Math.max(lineno - 3, 0)
-    , end = Math.min(lines.length, lineno + 3);
-
-  // Error context
-  var context = lines.slice(start, end).map(function (line, i){
-    var curr = i + start + 1;
-    return (curr == lineno ? ' >> ' : '    ')
-      + curr
-      + '| '
-      + line;
-  }).join('\n');
-
-  // Alter exception message
-  err.path = filename;
-  err.message = (filename || 'ejs') + ':'
-    + lineno + '\n'
-    + context + '\n\n'
-    + err.message;
-
-  throw err;
-};
-escape = escape || function (markup) {
-  return String(markup)
-    .replace(/&/g, '&amp;')
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/'/g, '&#39;')
     .replace(/"/g, '&quot;');
 };
-var __output = ""; with (locals || {}) { ;
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('');1;
   var msg = require('../../locale/current/calc');
   var commonMsg = require('../../locale/current/common');
-;__output += "\n";};return __output.trim();
+; buf.push('\n'); })();
+} 
+return buf.join('');
 };
   return function(locals) {
     return t(locals, require("ejs").filters);

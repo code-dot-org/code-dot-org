@@ -15,7 +15,7 @@
     "browserify": "^8.1.1",
     "chai": "~1.10.0",
     "connect-livereload": "~0.5.2",
-    "ejs": "~2.2.1",
+    "ejs": "0.8.4",
     "express": "~4.11.0",
     "factor-bundle": "^2.3.3",
     "grunt": "~0.4.5",

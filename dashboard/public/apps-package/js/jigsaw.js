@@ -308,39 +308,19 @@ Jigsaw.onPuzzleComplete = function() {
 
 },{"../StudioApp":2,"../dom":40,"../skins":108,"../templates/page.html":128,"./controls.html":72}],72:[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, escape, include, rethrow) {
-rethrow = rethrow || function rethrow(err, str, filename, lineno){
-  var lines = str.split('\n')
-    , start = Math.max(lineno - 3, 0)
-    , end = Math.min(lines.length, lineno + 3);
-
-  // Error context
-  var context = lines.slice(start, end).map(function (line, i){
-    var curr = i + start + 1;
-    return (curr == lineno ? ' >> ' : '    ')
-      + curr
-      + '| '
-      + line;
-  }).join('\n');
-
-  // Alter exception message
-  err.path = filename;
-  err.message = (filename || 'ejs') + ':'
-    + lineno + '\n'
-    + context + '\n\n'
-    + err.message;
-
-  throw err;
-};
-escape = escape || function (markup) {
-  return String(markup)
-    .replace(/&/g, '&amp;')
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/'/g, '&#39;')
     .replace(/"/g, '&quot;');
 };
-var __output = ""; with (locals || {}) { ; var msg = require('../../locale/current/jigsaw') ;__output += "\n";};return __output.trim();
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('');1; var msg = require('../../locale/current/jigsaw') ; buf.push('\n'); })();
+} 
+return buf.join('');
 };
   return function(locals) {
     return t(locals, require("ejs").filters);
