@@ -1275,6 +1275,9 @@ studioApp.reset = function(first) {
     finishClipRect.setAttribute('x', Studio.spriteGoals_[i].x);
     finishClipRect.setAttribute('y', Studio.spriteGoals_[i].y);
   }
+
+  // A little flag for script-based code to consume.
+  window.studioLevelRestarted = true;
 };
 
 /**
