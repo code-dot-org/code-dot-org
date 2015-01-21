@@ -239,21 +239,6 @@ class Documents < Sinatra::Base
     image.to_blob
   end
 
-  # Map /dashboardapi/ to the local dashboard instance.
-  if rack_env?(:development)
-    get_head_or_post %r{^\/dashboardapi\/?} do
-      env = request.env.merge('PATH_INFO'=>request.path_info.sub(/^\/dashboardapi/, '/api'))
-
-      host_and_port = canonical_hostname('studio.code.org') + ':' + CDO.dashboard_port.to_s
-      document = Pegasus::Proxy.new(server: host_and_port, host: host_and_port).call(env)
-      pass unless document
-
-      status(document.status)
-      headers(document.headers)
-      body([document.body])
-    end
-  end
-
   # Static files
   get '*' do |uri|
     pass unless path = resolve_static('public', uri)
