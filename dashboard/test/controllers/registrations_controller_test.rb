@@ -156,6 +156,22 @@ class RegistrationsControllerTest < ActionController::TestCase
     end
   end
 
+  test "update student with age with weird params" do
+    # we are getting input that looks like this:
+    # "user" => {"age" => {"Pr" => ""}}
+    # https://www.honeybadger.io/projects/3240/faults/9963470
+    Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
+      student = create :student, birthday: '1981/03/24'
+
+      sign_in student
+
+      post :update, user: {age: {"Pr" => nil}}
+    
+      # did not change
+      assert_equal '1981-03-24', assigns(:user).birthday.to_s
+    end
+  end
+
   test "update under 13 student with client side hashed email" do
     student = create :student, birthday: '1981/03/24'
     sign_in student

@@ -1,13 +1,10 @@
 var chai = require('chai');
-chai.Assertion.includeStack = true;
+chai.config.includeStack = true;
 var assert = chai.assert;
 
 var testUtils = require('./util/testUtils');
 
-// needed for Hammerjs
-global.navigator = {};
-global.window = {};
-global.document = {};
+testUtils.setupLocales();
 
 var Bee = testUtils.requireWithGlobalsCheckBuildFolder('maze/bee');
 var utils = testUtils.requireWithGlobalsCheckBuildFolder('utils');

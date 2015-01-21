@@ -193,6 +193,7 @@ Artist.prototype.init = function(config) {
   config.html = page({
     assetUrl: this.studioApp_.assetUrl,
     data: {
+      visualization: '',
       localeDirection: this.studioApp_.localeDirection(),
       controls: require('./controls.html')({assetUrl: this.studioApp_.assetUrl}),
       blockUsed : undefined,

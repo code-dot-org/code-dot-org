@@ -43,3 +43,12 @@ Scenario:
   And I see no difference for "level load"
   And I close my eyes
 
+Scenario:
+  When I open my eyes to test "artist level"
+  And I am on "http://learn.code.org/s/course2/stage/7/puzzle/2?noautoplay=true"
+  When I rotate to landscape
+  And I see no difference for "initial load"
+  And I wait to see "#x-close"
+  And I press "x-close"
+  And I see no difference for "closed dialog"
+  And I close my eyes
