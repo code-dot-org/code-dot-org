@@ -11,7 +11,8 @@ var APPS = [
   'jigsaw',
   'calc',
   'applab',
-  'eval'
+  'eval',
+  'netsim'
 ];
 
 if (process.env.MOOC_APP) {
