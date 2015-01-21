@@ -16,8 +16,9 @@ class LevelSource < ActiveRecord::Base
   XMLNS_STRING = ' xmlns="http://www.w3.org/1999/xhtml"'
 
   def LevelSource.cache_enabled?
-    @@cache_enabled ||= false
-    rack_env?(:production) || @@cache_enabled
+    false
+#    @@cache_enabled ||= false
+#    rack_env?(:production) || @@cache_enabled
   end
 
   def LevelSource.level_source_cache()
