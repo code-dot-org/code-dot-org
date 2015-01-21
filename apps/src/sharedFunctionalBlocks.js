@@ -357,7 +357,8 @@ function installCond(blockly, generator) {
      */
     addConditionalRow: function () {
       // id is either the last value plus 1, or if we have no values yet 0
-      var id = this.pairs_.length > 0 ? (this.pairs_.slice(-1) * 1 + 1) : 0;
+      // we can't just have pairs_.length, since there could be gaps
+      var id = this.pairs_.length > 0 ? _(this.pairs_).last() * 1 + 1 : 0;
       this.pairs_.push(id);
 
       var cond = this.appendFunctionalInput('COND' + id);
@@ -441,7 +442,7 @@ function installCond(blockly, generator) {
       // We ensure that we end up with the same set of pairs by adding lots
       // of rows, and then deleting the unneeded ones (simulating what happened
       // to originally create this block)
-      var lastRow = pairs.slice(-1);
+      var lastRow = _(pairs).last();
       for (i = 1; i <= lastRow; i++) {
         this.addConditionalRow();
       }
