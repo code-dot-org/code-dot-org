@@ -251,7 +251,7 @@ class Documents < Sinatra::Base
     Dir.glob(pegasus_dir('sites.v3',request.site,'/styles/*.css')).sort.map{|i| IO.read(i)}.join("\n\n")
   end
 
-  Dir.glob(pegasus_dir('routes/*.rb')).sort.each{|path| puts(path); eval(IO.read(path))}
+  Dir.glob(pegasus_dir('routes/*.rb')).sort.each{|path| eval(IO.read(path))}
 
   # Documents
   get_head_or_post '*' do |uri|
