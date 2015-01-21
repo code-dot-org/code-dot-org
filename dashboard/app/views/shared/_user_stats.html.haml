@@ -1,11 +1,18 @@
-- script = @script || (current_user && current_user.primary_script) || Script.twenty_hour_script
-- script_levels = current_user ? current_user.levels_from_script(script) : script.script_levels
-- concept_progress = current_user ? current_user.concept_progress : nil
+- script = @script || (user && user.primary_script) || Script.twenty_hour_script
+- script_levels = user ? user.levels_from_script(script) : script.script_levels
+- concept_progress = user ? user.concept_progress : nil
+
+:css
+  .callouteditor {
+    display: inline-block;
+  }
+
+.field.callouteditor
 
 .user-stats-block
   - levels = script_levels.group_by(&:stage_or_game)
   - levels.each_pair do |stage_or_game, sl_group|
-    - should_show_lesson_plan = script.has_lesson_plan? && current_user && current_user.teacher?
+    - should_show_lesson_plan = script.has_lesson_plan? && user && user.teacher?
     .game-group
       .stage
         %span
@@ -18,7 +25,7 @@
         - sl_group = sl_group.sort_by {|sl| sl.stage_or_game_position}
         - sl_group.each do |sl|
           .level
-            - css_class, link = level_info(current_user, sl)
+            - css_class, link = level_info(user, sl)
             - if params[:script_level_id] && params[:script_level_id] == sl.level_id.to_s
               - puzzle_outer_class = 'puzzle_outer_current'
             - elsif sl.assessment

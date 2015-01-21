@@ -26,7 +26,7 @@ SQL
   end
 
   def header_stats
-    render file: 'shared/_user_stats', layout: false
+    render file: 'shared/_user_stats', layout: false, locals: {user: current_user}
   end
 
   def prizes
