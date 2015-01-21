@@ -20,12 +20,15 @@ describe('functional_cond', function () {
 
     var sharedFunctionalBlocks = testUtils.requireWithGlobalsCheckBuildFolder('./sharedFunctionalBlocks');
     sharedFunctionalBlocks.install(Blockly, Blockly.JavaScript, null);
+
+    studioApp.loadBlocks('<xml><block type="functional_cond"></block></xml>');
+    assert(Blockly.mainBlockSpace.getAllBlocks().length === 1);
   });
 
   function validatePairs(block, expected) {
     assert.deepEqual(block.pairs_, expected);
 
-    var max = expected.slice(-1);
+    var max = expected.slice(-1)[0];
 
     // Go through all values (and one beyond) and make sure that we have
     // inputs for the expected pairs, and dont for the others
@@ -38,92 +41,81 @@ describe('functional_cond', function () {
         assert(block.getInput('VALUE' + i) !== null);
       }
     }
+
+    // Ensure that we're deleting our little rects that mark input type as
+    // we remove rows
+    var numRects = block.svg_.getRootElement().querySelectorAll('rect[width="30"]').length;
+    var expectedNumRects = block.pairs_.length * 2 + 1;
+    assert(numRects === expectedNumRects,
+        '\nGot: ' + numRects + '\nExpected: ' + expectedNumRects);
   }
 
-  it('it can addRow multiple times', function () {
-    studioApp.loadBlocks('<xml><block type="functional_cond"></block></xml>');
-    assert(Blockly.mainBlockSpace.getAllBlocks().length === 1);
-
+  it('it can addConditionalRow multiple times', function () {
     var block = Blockly.mainBlockSpace.getAllBlocks()[0];
     assert(block.type === 'functional_cond');
     validatePairs(block, [0]);
 
-    block.addRow();
+    block.addConditionalRow();
     validatePairs(block, [0, 1]);
 
-    block.addRow();
+    block.addConditionalRow();
     validatePairs(block, [0, 1, 2]);
   });
 
   it('can remove a row at the end', function () {
-    studioApp.loadBlocks('<xml><block type="functional_cond"></block></xml>');
-    assert(Blockly.mainBlockSpace.getAllBlocks().length === 1);
-
     var block = Blockly.mainBlockSpace.getAllBlocks()[0];
     assert(block.type === 'functional_cond');
-    block.addRow();
-    block.addRow();
+    block.addConditionalRow();
+    block.addConditionalRow();
     validatePairs(block, [0, 1, 2]);
 
-    block.removeRow(2);
+    block.removeConditionalRow(2);
     validatePairs(block, [0, 1]);
   });
 
   it('can remove a row in the middle', function () {
-    studioApp.loadBlocks('<xml><block type="functional_cond"></block></xml>');
-    assert(Blockly.mainBlockSpace.getAllBlocks().length === 1);
-
     var block = Blockly.mainBlockSpace.getAllBlocks()[0];
     assert(block.type === 'functional_cond');
-    block.addRow();
-    block.addRow();
+    block.addConditionalRow();
+    block.addConditionalRow();
     validatePairs(block, [0, 1, 2]);
 
-    block.removeRow(1);
+    block.removeConditionalRow(1);
     validatePairs(block, [0, 2]);
   });
 
   it('can add a row after removing one', function () {
-    studioApp.loadBlocks('<xml><block type="functional_cond"></block></xml>');
-    assert(Blockly.mainBlockSpace.getAllBlocks().length === 1);
-
     var block = Blockly.mainBlockSpace.getAllBlocks()[0];
     assert(block.type === 'functional_cond');
-    block.addRow();
-    block.addRow();
+    block.addConditionalRow();
+    block.addConditionalRow();
     validatePairs(block, [0, 1, 2]);
 
-    block.removeRow(1);
+    block.removeConditionalRow(1);
     validatePairs(block, [0, 2]);
 
-    block.addRow();
+    block.addConditionalRow();
     validatePairs(block, [0, 2, 3]);
   });
 
   it("can't remove the last row", function () {
-    studioApp.loadBlocks('<xml><block type="functional_cond"></block></xml>');
-    assert(Blockly.mainBlockSpace.getAllBlocks().length === 1);
-
     var block = Blockly.mainBlockSpace.getAllBlocks()[0];
     assert(block.type === 'functional_cond');
     validatePairs(block, [0]);
 
-    block.removeRow(0);
+    block.removeConditionalRow(0);
     validatePairs(block, [0]);
   });
 
 
   it('can copy/paste with sparse pairs', function () {
-    studioApp.loadBlocks('<xml><block type="functional_cond"></block></xml>');
-    assert(Blockly.mainBlockSpace.getAllBlocks().length === 1);
-
     var block = Blockly.mainBlockSpace.getAllBlocks()[0];
     assert(block.type === 'functional_cond');
-    block.addRow();
-    block.addRow();
+    block.addConditionalRow();
+    block.addConditionalRow();
     validatePairs(block, [0, 1, 2]);
 
-    block.removeRow(1);
+    block.removeConditionalRow(1);
     validatePairs(block, [0, 2]);
 
     Blockly.BlockSpaceEditor.copy_(block);
@@ -133,4 +125,26 @@ describe('functional_cond', function () {
     var pasted = Blockly.mainBlockSpace.getAllBlocks()[1];
     validatePairs(pasted, [0, 2]);
   });
+
+  it('generates valid code', function () {
+    // Replace block with a more complex one
+    var block = Blockly.mainBlockSpace.getAllBlocks()[0];
+    block.dispose();
+    studioApp.loadBlocks('<xml><block type="functional_cond" inline="false"><mutation pairs="0,3"></mutation><functional_input name="COND0"><block type="functional_less_than" inline="false"><functional_input name="ARG1"><block type="functional_math_number"><title name="NUM">3</title></block></functional_input><functional_input name="ARG2"><block type="functional_math_number"><title name="NUM">0</title></block></functional_input></block></functional_input><functional_input name="VALUE0"><block type="functional_math_number"><title name="NUM">1</title></block></functional_input><functional_input name="COND3"><block type="functional_logical_not" inline="false"><functional_input name="ARG1"><block type="functional_boolean"><title name="VAL">true</title></block></functional_input></block></functional_input><functional_input name="VALUE3"><block type="functional_math_number"><title name="NUM">2</title></block></functional_input><functional_input name="DEFAULT"><block type="functional_math_number"><title name="NUM">3</title></block></functional_input></block></xml>');
+    block = Blockly.mainBlockSpace.getAllBlocks()[0];
+
+    var code = Blockly.JavaScript.blockToCode(block);
+
+    // Generated code should look something like this:
+    // (function () {
+    //   if (  (  3 <   0)) { return   1; }
+    //   else if (  !(  true)) { return   2; }
+    //   else { return   3; }
+    // })()
+
+    var codegen = testUtils.requireWithGlobalsCheckBuildFolder('./codegen');
+    var result = codegen.evalWith('return ' + code, {});
+    assert(result === 3);
+  });
+
 });

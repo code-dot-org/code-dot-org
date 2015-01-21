@@ -22,7 +22,7 @@ exports.install = function(blockly, generator, gensym) {
   installBoolean(blockly, generator, gensym);
   installMathNumber(blockly, generator, gensym);
   installString(blockly, generator, gensym);
-  installCond(blockly, generator, 1);
+  installCond(blockly, generator);
 };
 
 function installPlus(blockly, generator, gensym) {
@@ -317,7 +317,7 @@ function installString(blockly, generator) {
  * Implements the cond block. numPairs represents the number of
  * condition-value pairs before the default value.
  */
-function installCond(blockly, generator, numPairs) {
+function installCond(blockly, generator) {
   // TODO(brent) - rtl
 
   var blockName = 'functional_cond';
@@ -335,7 +335,7 @@ function installCond(blockly, generator, numPairs) {
 
       var plusField = new Blockly.FieldIcon('+');
       plusField.getRootElement().addEventListener('mousedown',
-        _.bind(this.addRow, this));
+        _.bind(this.addConditionalRow, this));
 
       this.appendDummyInput()
         .appendTitle(new Blockly.FieldLabel('cond', options))
@@ -349,15 +349,13 @@ function installCond(blockly, generator, numPairs) {
 
       this.setFunctionalOutput(true);
 
-      while(this.pairs_.length < numPairs) {
-        this.addRow();
-      }
+      this.addConditionalRow();
     },
 
     /**
      * Add another condition/value pair to the end.
      */
-    addRow: function () {
+    addConditionalRow: function () {
       // id is either the last value plus 1, or if we have no values yet 0
       var id = this.pairs_.length > 0 ? (this.pairs_.slice(-1) * 1 + 1) : 0;
       this.pairs_.push(id);
@@ -378,7 +376,7 @@ function installCond(blockly, generator, numPairs) {
       if (this.pairs_.length > 1) {
         var minusField = new Blockly.FieldIcon('-');
         minusField.getRootElement().addEventListener('mousedown',
-          _.bind(this.removeRow, this, id));
+          _.bind(this.removeConditionalRow, this, id));
         minusInput.appendTitle(minusField);
       }
 
@@ -389,9 +387,9 @@ function installCond(blockly, generator, numPairs) {
      * Remove the condition/value pair with the given id. No-op if no row with
      * that id.
      */
-    removeRow: function (id) {
+    removeConditionalRow: function (id) {
       var index = this.pairs_.indexOf(id);
-      if (index === -1 || this.pairs_.length === 1) {
+      if (!_(this.pairs_).contains(id) || this.pairs_.length === 1) {
         return;
       }
       this.pairs_.splice(index, 1);
@@ -445,12 +443,12 @@ function installCond(blockly, generator, numPairs) {
       // to originally create this block)
       var lastRow = pairs.slice(-1);
       for (i = 1; i <= lastRow; i++) {
-        this.addRow();
+        this.addConditionalRow();
       }
 
       for (i = 0; i < lastRow; i++) {
-        if (pairs.indexOf(i) === -1) {
-          this.removeRow(i);
+        if (!_(pairs).contains(i)) {
+          this.removeConditionalRow(i);
         }
       }
     }
@@ -467,21 +465,22 @@ function installCond(blockly, generator, numPairs) {
    */
   generator[blockName] = function() {
     var cond, value, defaultValue;
-    var code = 'function() {\n  ';
-    for (var i = 0; i <= this.numPairs_; i++) {
+    var code = '(function () {\n  ';
+    for (var i = 0; i < this.pairs_.length; i++) {
       if (i > 0) {
         code += 'else ';
       }
-      cond = Blockly.JavaScript.statementToCode(this, 'COND' + i, false) ||
+      var id = this.pairs_[i];
+      cond = Blockly.JavaScript.statementToCode(this, 'COND' + id, false) ||
           false;
-      value = Blockly.JavaScript.statementToCode(this, 'VALUE' + i, false) ||
+      value = Blockly.JavaScript.statementToCode(this, 'VALUE' + id, false) ||
           '';
       code += 'if (' + cond + ') { return ' + value + '; }\n  ';
     }
     defaultValue = Blockly.JavaScript.statementToCode(this, 'DEFAULT', false) ||
         '';
     code += 'else { return ' + defaultValue + '; }\n';
-    code += '}()';
+    code += '})()';
     return code;
   };
 }
