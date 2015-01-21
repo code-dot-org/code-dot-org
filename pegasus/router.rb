@@ -491,6 +491,6 @@ class Documents < Sinatra::Base
     load pegasus_dir('helpers.rb')
   end
 
-  use Router
+  use CurriculumRouter
 
 end
