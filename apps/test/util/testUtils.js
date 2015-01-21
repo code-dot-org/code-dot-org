@@ -66,18 +66,16 @@ exports.setupLocales = setupLocales;
 
 /**
  * Initializes an instance of blockly for testing
- *
- * Warning: this likely doesn't do exactly the same thing each time.
- * For example, the first time requiring ./frame in setupTestBlockly will actually load frame.js.
- * Subsequent times, it will use the cached version of frame.js.
  */
 exports.setupTestBlockly = function() {
+  // uncache file to force reload
+  require.uncache(exports.buildPath('/StudioApp'));
+  require.uncache('./frame');
+
   requireWithGlobalsCheck('./frame',
     ['document', 'window', 'DOMParser', 'XMLSerializer', 'Blockly']);
   assert(global.Blockly, 'Frame loaded Blockly into global namespace');
 
-  // uncache file to force reload
-  require.uncache(exports.buildPath('/StudioApp'));
   setupLocales();
 
   // c, n, v, p, s get added to global namespace by messageformat module, which
