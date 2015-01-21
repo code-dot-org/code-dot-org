@@ -466,8 +466,9 @@ Artist.prototype.drawTurtle = function() {
   var destX = this.x - destWidth / 2;
   var destY = this.y - destHeight + 7;
 
-  if (this.avatarImage.width === 0 || this.avatarImage.height === 0)
+  if (this.avatarImage.width === 0 || this.avatarImage.height === 0) {
     return;
+  }
 
   if (sourceX < 0 ||
       sourceY < 0 ||
