@@ -33,7 +33,7 @@
             <block type="variables_set" inline="false" movable="false">
               <title name="VAR">width</title>
               <value name="VALUE">
-                <block type="math_number" movable="false" editable="false">
+                <block type="math_number" movable="false" editable="false" deletable="false">
                   <title name="NUM">100</title>
                 </block>
               </value>

@@ -48,6 +48,7 @@ We don’t always know ahead of time what things will be like when we run our co
 - Pens & Pencils
 
 ### For the Teacher
+- [Lesson Slide Deck](https://docs.google.com/a/code.org/presentation/d/1OnNkpXDU6GZreGRvquQU1qRKbEeH8WTvRU5DhlgI2Hk/)
 - One [Sample Program](/curriculum/course2/12/Activity12-Conditionals.pdf) for the class to look at
 - Print one [Conditionals with Cards Assessment](/curriculum/course2/12/Assessment12-Conditionals.pdf) for each student
 

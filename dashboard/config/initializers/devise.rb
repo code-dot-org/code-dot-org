@@ -73,7 +73,7 @@ Devise.setup do |config|
   # It will change confirmation, password recovery and other workflows
   # to behave the same regardless if the e-mail provided was right or wrong.
   # Does not affect registerable.
-  # config.paranoid = true
+  config.paranoid = false
 
   # By default Devise will store the user in session. You can skip storage for
   # :http_auth and :token_auth by adding those symbols to the array below.
@@ -236,7 +236,9 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
-  config.omniauth :facebook, CDO.dashboard_facebook_key, CDO.dashboard_facebook_secret, :scope => 'email,public_profile'
+  config.omniauth :facebook, CDO.dashboard_facebook_key, CDO.dashboard_facebook_secret, scope: 'email,public_profile',
+    client_options: {site: 'https://graph.facebook.com/v2.0',
+                     authorize_url: "https://www.facebook.com/v2.0/dialog/oauth"}
   config.omniauth :google_oauth2, CDO.dashboard_google_key, CDO.dashboard_google_secret
   config.omniauth :windowslive, CDO.dashboard_windowslive_key, CDO.dashboard_windowslive_secret, :scope => 'wl.basic wl.emails'
 

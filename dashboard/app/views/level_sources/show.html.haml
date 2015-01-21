@@ -1,13 +1,3 @@
-<div id="fb-root"></div>
-<script>
-(function(d, s, id) {
-var js, fjs = d.getElementsByTagName(s)[0];
-if (d.getElementById(id)) return;
-js = d.createElement(s); js.id = id;
-js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=#{CDO.dashboard_facebook_key}";
-fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-</script>
 - if @game.share_mobile_fullscreen? && browser.safari?
   <script>
   if (!window.navigator.standalone) { window.addEventListener("load", function() { addToHome.show(true); }, false); }

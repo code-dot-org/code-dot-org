@@ -3,6 +3,9 @@ require File.expand_path('../deployment', __FILE__)
 require 'rails/all'
 
 require 'cdo/geocoder'
+require 'varnish_environment'
+require 'apps_api'
+require 'shared_resources'
 
 require 'bootstrap-sass'
 
@@ -12,6 +15,10 @@ Bundler.require(:default, Rails.env)
 
 module Dashboard
   class Application < Rails::Application
+
+    config.middleware.use VarnishEnvironment
+    config.middleware.use AppsApi
+    config.middleware.use SharedResources
 
     config.encoding = 'utf-8'
 

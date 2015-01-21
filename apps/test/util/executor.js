@@ -4,7 +4,9 @@ var jsdomRoot = require('jsdom');
 var jsdom = require('jsdom').jsdom;
 var xmldom = require('xmldom');
 var canvas = require('canvas');
+var requirejs = require('requirejs');
 var testUtils = require('./testUtils');
+testUtils.setupLocales();
 var msg = testUtils.requireWithGlobalsCheckBuildFolder('../locale/current/common', ['c', 'n', 'v', 'p', 's']);
 
 var buildDir = '../../build';
@@ -14,7 +16,12 @@ var VENDOR_CODE =
 
 setGlobals();
 
-runTestFromCollection(process.argv[2], process.argv[3]);
+var testCollection = require('../solutions/' + process.argv[2]);
+var testData = testCollection.tests[process.argv[3]];
+
+setLevelSpecificGlobals();
+
+runTestFromCollection();
 
 // Executor is called in its own process.  Logging statements are swalled.
 // levelTest treats any write to stderr as test failure, and writes that info
@@ -43,10 +50,13 @@ function setGlobals () {
   global.DOMParser = xmldom.DOMParser;
   global.window.DOMParser = global.DOMParser;
   global.XMLSerializer = xmldom.XMLSerializer;
-  global.Blockly = initBlockly(window);
+  // needed for Hammer.js and Ace
+  global.navigator = {
+    'platform': 'other',
+    'appName': 'other',
+    'userAgent': 'other'
+  };
   global.Image = canvas.Image;
-  // used by Hammer.js in studio
-  global.navigator = {};
 
   jsdomRoot.dom.level3.html.HTMLElement.prototype.getBBox = function () {
     return {
@@ -56,16 +66,59 @@ function setGlobals () {
   };
 }
 
+function setLevelSpecificGlobals () {
+  if (testData.editCode) {
+    global.requirejs = requirejs;
+    global.Interpreter = initInterpreter();
+    global.acorn = window.acorn;
+    initAce();
+    // must set global.define after ace and before droplet
+    global.define = requirejs.define;
+    initDroplet();
+  } else {
+    global.Blockly = initBlockly(window);
+  }
+}
+
 function initBlockly () {
   /* jshint -W054 */
   var fn = new Function(VENDOR_CODE + '; return Blockly;');
   return fn.call(window);
 }
 
-function runTestFromCollection (collection, index) {
-  var testCollection = require('../solutions/' + collection);
+function initInterpreter () {
+  /* jshint -W054 */
+  var INTERPRETER_CODE =
+    fs.readFileSync(path.join(__dirname, buildDir + '/package/js/jsinterpreter/acorn_interpreter.js'));
+  var fn = new Function(INTERPRETER_CODE);
+  fn.call(window);
+  return window.Interpreter;
+}
+
+function initAce () {
+  /* jshint -W054 */
+  var ACE_CODE =
+    fs.readFileSync(path.join(__dirname, buildDir + '/package/js/ace/ace.js'));
+  var fn = new Function(ACE_CODE);
+  fn.call(window);
+
+  var ACE_LANG_EXT_CODE =
+    fs.readFileSync(path.join(__dirname, buildDir + '/package/js/ace/ext-language_tools.js'));
+  fn = new Function(ACE_LANG_EXT_CODE);
+  fn.call(window);
+}
+
+function initDroplet () {
+  /* jshint -W054 */
+  var DROPLET_CODE =
+    fs.readFileSync(path.join(__dirname, buildDir + '/package/js/droplet/droplet-full.min.js'));
+  var fn = new Function(DROPLET_CODE);
+  fn.call(window);
+}
+
+function runTestFromCollection () {
   var app = testCollection.app;
-  var testData = testCollection.tests[index];
+  testUtils.setupLocale(app);
 
   // skin shouldnt matter for most cases
   var skinId = testCollection.skinId || 'farmer';
@@ -121,10 +174,35 @@ function runTestFromCollection (collection, index) {
     if (testData.customValidator) {
       assert(testData.customValidator(assert), 'Custom validator failed');
     }
+
+    // Notify the app that the report operation is complete
+    // (important to do this asynchronously to simulate a service call or else
+    //  we will have problems with the animating_ / waitingForReport_ states
+    //  in the maze state machine)
+    if (report.onComplete) {
+      setTimeout(report.onComplete, 0);
+    }
   };
 
   runLevel(app, skinId, level, validateResult, testData.runBeforeClick);
 }
+
+function StubDialog(options) {
+  this.options = options;
+}
+
+StubDialog.prototype.show = function() {
+  if (this.options.body) {
+    // Examine content of the feedback in future tests?
+    // console.log(this.options.body.innerHTML);
+  }
+  // Level is complete and feedback dialog has appeared: exit() succesfully here
+  // (otherwise process may continue indefinitely due to timers)
+  process.exit(0);
+};
+
+StubDialog.prototype.hide = function() {
+};
 
 function runLevel (app, skinId, level, onAttempt, beforeClick) {
   require(buildDir + '/js/' + app + '/main');
@@ -137,6 +215,7 @@ function runLevel (app, skinId, level, onAttempt, beforeClick) {
     level: level,
     baseUrl: '/', // Doesn't matter
     containerId: 'app',
+    Dialog: StubDialog,
     onInitialize: function() {
       // Click the run button!
       if (beforeClick) {

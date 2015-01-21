@@ -30,14 +30,8 @@ class ActivitiesControllerTest < ActionController::TestCase
   # This allows additional keys to be added to the controller response
   # without having to update all existing test contracts.
   def assert_equal_expected_keys(expected, actual)
-    act = actual.clone
-    # milestone provides hints based on the program's level_source_id.
-    # Some of these are coincidentally the same as level_source_ids in
-    # level_source_hints, which uses the level_source_ids in production.
-    # To avoid brittle hint equivalencies, ignore response[:hint] values.
-    act.delete 'hint'
     expected.each do |key, value|
-      assert_equal value, act[key]
+      assert_equal value, actual[key]
     end
   end
 
@@ -52,7 +46,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
     @controller.expects :slog
 
-#    @controller.expects(:trophy_check).with(@user)
+    @controller.expects(:trophy_check).with(@user)
 
     assert_creates(LevelSource, Activity, UserLevel, UserScript) do
       assert_does_not_create(GalleryActivity) do
@@ -91,7 +85,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
     @controller.expects :slog
 
-#    @controller.expects(:trophy_check).with(@user)
+    @controller.expects(:trophy_check).with(@user)
 
     UserScript.create(user: @user, script: @script_level.script)
     UserLevel.create(level: @script_level.level, user: @user)
@@ -113,7 +107,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
     @controller.expects :slog
 
-#    @controller.expects(:trophy_check).with(@user)
+    @controller.expects(:trophy_check).with(@user)
 
     UserScript.create(user: @user, script: @script_level.script)
     UserLevel.create(level: @script_level.level, user: @user, script: @script_level.script)
@@ -136,7 +130,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
     @controller.expects :slog
 
-#    @controller.expects(:trophy_check).with(@user)
+    @controller.expects(:trophy_check).with(@user)
 
     assert_creates(Activity, UserLevel, UserScript) do
       assert_does_not_create(GalleryActivity, LevelSource) do
@@ -177,7 +171,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     @controller.expects :slog
 
-#    @controller.expects(:trophy_check).with(@user)
+    @controller.expects(:trophy_check).with(@user)
 
     assert_creates(LevelSource, Activity, UserLevel, UserScript) do
       assert_does_not_create(GalleryActivity) do
@@ -211,7 +205,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     @controller.expects :slog
 
-#    @controller.expects(:trophy_check).with(@user)
+    @controller.expects(:trophy_check).with(@user)
 
     assert_creates(LevelSource, Activity, UserLevel, UserScript) do
       assert_does_not_create(GalleryActivity) do
@@ -284,7 +278,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
     @controller.expects :slog
 
-#    @controller.expects(:trophy_check).with(@user)
+    @controller.expects(:trophy_check).with(@user)
 
     # existing level
     script_start_date = Time.now - 5.days
@@ -328,7 +322,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
     @controller.expects :slog
 
-#    @controller.expects(:trophy_check).with(@user)
+    @controller.expects(:trophy_check).with(@user)
 
     expect_s3_upload
 
@@ -362,7 +356,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
     @controller.expects :slog
 
-#    @controller.expects(:trophy_check).with(@user)
+    @controller.expects(:trophy_check).with(@user)
 
     assert_creates(LevelSource, Activity, UserLevel) do
       assert_does_not_create(GalleryActivity) do
@@ -393,7 +387,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
     @controller.expects :slog
 
-#    @controller.expects(:trophy_check).with(@user)
+    @controller.expects(:trophy_check).with(@user)
 
     assert_creates(LevelSource, Activity, UserLevel) do
       assert_does_not_create(GalleryActivity) do
@@ -440,6 +434,33 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
+  test "logged in milestone not passing with hint" do
+    # do all the logging
+    @controller.expects :log_milestone
+
+    # set up hint
+    level_source = LevelSource.find_identical_or_create(@script_level.level, @milestone_params[:program])
+    hint = LevelSourceHint.create!(level_source_id: level_source.id, status: 'experiment', source: 'crowdsourced', hint: 'This is the hint')
+
+    assert_creates(Activity, UserLevel) do
+      assert_does_not_create(LevelSource, GalleryActivity) do
+          assert_no_difference('@user.reload.total_lines') do # don't update total lines
+            post :milestone, @milestone_params.merge(result: 'false', testResult: 10)
+          end
+      end
+    end
+
+    assert_response :success
+
+    expected_response = {"previous_level"=>"/s/1/level/#{@script_level_prev.id}",
+                         "message"=>"try again",
+                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
+                         "design"=>"white_background",
+                         "hint" => hint.hint}
+
+    assert_equal_expected_keys expected_response, JSON.parse(@response.body)
+  end
+
 
   test "logged in milestone with image not passing" do
     # do all the logging
@@ -470,7 +491,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
     @controller.expects :slog
 
-#    @controller.expects(:trophy_check)
+    @controller.expects(:trophy_check)
 
     expect_s3_upload
 
@@ -501,7 +522,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
     @controller.expects :slog
 
-#    @controller.expects(:trophy_check)
+    @controller.expects(:trophy_check)
 
     program = "<whatever>"
 
@@ -647,7 +668,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
     @controller.expects :slog
-#    @controller.expects(:trophy_check).with(@user)
+    @controller.expects(:trophy_check).with(@user)
 
     # some Mocha shenanigans to simulate throwing a duplicate entry
     # error and then succeeding by returning the existing userlevel
@@ -707,7 +728,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
     @controller.expects :slog
 
-#    @controller.expects(:trophy_check).never # no trophy if not logged in
+    @controller.expects(:trophy_check).never # no trophy if not logged in
 
     assert_creates(LevelSource) do
       assert_does_not_create(Activity, UserLevel) do
@@ -744,7 +765,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
     @controller.expects :slog
 
-#    @controller.expects(:trophy_check).never # no trophy if not logged in
+    @controller.expects(:trophy_check).never # no trophy if not logged in
 
     assert_creates(LevelSource) do
       assert_does_not_create(Activity, UserLevel) do
@@ -810,7 +831,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
     @controller.expects :slog
 
-#    @controller.expects(:trophy_check).never # no trophy if not logged in
+    @controller.expects(:trophy_check).never # no trophy if not logged in
 
     expect_s3_upload
 
@@ -849,7 +870,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
     @controller.expects :slog
 
-#    @controller.expects(:trophy_check).never # no trophy if not logged in
+    @controller.expects(:trophy_check).never # no trophy if not logged in
 
     expect_s3_upload_failure
 
@@ -960,7 +981,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     response = JSON.parse(@response.body)
 
     # find localized test strings for custom stage names in script
-    assert(response.has_key?('stage_changing'))
+    assert response.has_key?('stage_changing'), "No key 'stage_changing' in response #{response.inspect}"
     assert_equal('milestone-stage-1', response['stage_changing']['previous']['name'])
   end
 

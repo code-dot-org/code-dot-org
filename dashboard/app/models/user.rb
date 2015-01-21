@@ -233,9 +233,9 @@ class User < ActiveRecord::Base
     q = script.script_levels.includes({ level: :game }, :script, :stage).order((stage ? :position : :chapter))
 
     if stage
-      q = q.where(['stages.id = :stage_id', { :stage_id => stage}]).references(:stage)
+      q = q.where(['stages.id = :stage_id', {stage_id: stage}]).references(:stage)
     elsif game_index
-      q = q.where(['games.id = :game_id', { :game_id => game_index}]).references(:game)
+      q = q.where(['games.id = :game_id', {game_id: game_index}]).references(:game)
     end
 
     q.each do |sl|
@@ -246,10 +246,8 @@ class User < ActiveRecord::Base
 
   def next_unpassed_progression_level(script)
     user_levels_by_level = self.user_levels.index_by(&:level_id)
-    cached_script = script
-    cached_script = Script.get_from_cache(script.id) if script.should_be_cached?
-    
-    cached_script.script_levels.detect do |script_level|
+
+    script.script_levels.detect do |script_level|
       user_level = user_levels_by_level[script_level.level_id]
       is_unpassed_progression_level(script_level, user_level)
     end
@@ -359,7 +357,7 @@ SQL
 
   def age=(val)
     @age = val
-    val = val.to_i
+    val = val.to_i rescue 0 # sometimes we get age: {"Pr" => nil}
     return unless val > 0
     return unless val < 200
     return if birthday && val == age # don't change birthday if we want to stay the same age
@@ -434,6 +432,8 @@ SQL
     user = find_by_email_or_hashed_email(attributes[:email]) || User.new(email: attributes[:email])
     if user && user.persisted?
       user.send_reset_password_instructions(attributes[:email]) # protected in the superclass
+    else
+      user.errors.add :email, :not_found
     end
     user
   end

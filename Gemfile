@@ -49,6 +49,7 @@ group :development, :test do
   gem 'spring'
   gem 'spring-commands-testunit'
   gem 'minitest-reporters'
+  gem 'eyes_selenium'
 end
 
 group :doc do

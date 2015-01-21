@@ -49,15 +49,7 @@ end
 
 if rack_env?(:staging) || rack_env?(:development)
   BLOCKLY_CORE_DEPENDENCIES = []#[aws_dir('build.rake')]
-  BLOCKLY_CORE_PRODUCTS = [
-    'blockly_compressed.js',
-    'blockly_uncompressed.js',
-    'javascript_compressed.js',
-    'javascript_uncompressed.js',
-    'blocks_compressed.js',
-    'blocks_uncompressed.js'
-  ]
-  BLOCKLY_CORE_PRODUCT_FILES = BLOCKLY_CORE_PRODUCTS.map{|i| blockly_core_dir(i)}
+  BLOCKLY_CORE_PRODUCT_FILES = Dir.glob(blockly_core_dir('build-output', '**/*'))
   BLOCKLY_CORE_SOURCE_FILES = Dir.glob(blockly_core_dir('**/*')) - BLOCKLY_CORE_PRODUCT_FILES
 
   BLOCKLY_CORE_TASK = build_task('blockly-core', BLOCKLY_CORE_DEPENDENCIES + BLOCKLY_CORE_SOURCE_FILES) do
@@ -77,12 +69,9 @@ if rack_env?(:staging) || rack_env?(:development)
   end
 
   APPS_COMMIT_TASK = build_task('apps-commit', [deploy_dir('rebuild'), APPS_TASK]) do
-    blockly_core_changed = false
-    Dir.chdir(blockly_core_dir) do
-      blockly_core_changed = !`git status --porcelain #{BLOCKLY_CORE_PRODUCTS.join(' ')}`.strip.empty?
-    end
+    blockly_core_changed = !`git status --porcelain #{BLOCKLY_CORE_PRODUCT_FILES.join(' ')}`.strip.empty?
 
-    apps_changed = false;
+    apps_changed = false
     Dir.chdir(dashboard_dir('public/apps-package')) do
       apps_changed = !`git status --porcelain .`.strip.empty?
     end
@@ -213,11 +202,25 @@ $websites_test = build_task('websites-test', [deploy_dir('rebuild')]) do
       HipChat.log 'Running <b>dashboard</b> UI tests...'
       failed_browser_count = RakeUtils.system_ 'bundle', 'exec', './runner.rb', '-d', 'test.learn.code.org', '-p', '10', '-a', '--html'
       if failed_browser_count == 0
-        HipChat.log 'UI tests for <b>dashboard</b> succeeded.'
-        HipChat.developers 'UI tests for <b>dashboard</b> succeeded.', color:'green'
+        message = 'UI tests for <b>dashboard</b> succeeded.'
+        HipChat.log message
+        HipChat.developers message, color:'green'
       else
-        HipChat.log "UI tests for <b>dashboard</b> failed on #{failed_browser_count} browser(s).", color:'red'
-        HipChat.developers "UI tests for <b>dashboard</b> failed on #{failed_browser_count} browser(s).", color:'red', notify:1
+        message = "UI tests for <b>dashboard</b> failed on #{failed_browser_count} browser(s)."
+        HipChat.log message, color:'red'
+        HipChat.developers message, color:'red', notify:1
+      end
+
+      HipChat.log 'Running <b>dashboard</b> UI visual tests...'
+      failed_browser_count = RakeUtils.system_ 'bundle', 'exec', './runner.rb', '-c', 'Chrome33Win7', '-d', 'test.learn.code.org', '--eyes'
+      if failed_browser_count == 0
+        message = 'Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
+        HipChat.log message
+        HipChat.developers message, color:'green'
+      else
+        message = 'Eyes tests for <b>dashboard</b> failed. See <a href="https://eyes.applitools.com/app/sessions/">the console</a> for results or to modify baselines.'
+        HipChat.log message, color:'red'
+        HipChat.developers message, color:'red', notify:1
       end
     end
   end

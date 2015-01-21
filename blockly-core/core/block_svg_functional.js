@@ -59,8 +59,10 @@ Blockly.BlockSvgFunctional.prototype.renderDraw_ = function(iconWidth, inputRows
  * @private
  */
 Blockly.BlockSvgFunctional.prototype.createFunctionalMarkers_ = function () {
+  var functionalMarkers = [];
   for (var i = 0; i < this.block_.inputList.length; i++) {
     var input = this.block_.inputList[i];
+    functionalMarkers.push(input.name);
     if (this.inputMarkers_[input.name]) {
       continue;
     }
@@ -68,9 +70,19 @@ Blockly.BlockSvgFunctional.prototype.createFunctionalMarkers_ = function () {
       continue;
     }
     this.inputMarkers_[input.name] = Blockly.createSvgElement('rect', {
-      fill: 'red' // todo
+      fill: 'red'
     }, this.svgGroup_);
   }
+
+  // Remove input markers that disappeared
+  Object.keys(this.inputMarkers_).forEach(function (markerName) {
+    if (functionalMarkers.indexOf(markerName) === -1) {
+      var element = this.inputMarkers_[markerName];
+      element.parentNode.removeChild(element);
+      delete this.inputMarkers_[markerName];
+    }
+  }, this);
+
 };
 
 Blockly.BlockSvgFunctional.prototype.renderDrawRight_ = function(renderInfo,
@@ -103,10 +115,11 @@ Blockly.BlockSvgFunctional.prototype.renderDrawRightInlineFunctional_ =
   };
 
   var notchStart = BS.NOTCH_WIDTH - BS.NOTCH_PATH_WIDTH;
+  var notchPaths = input.connection.getNotchPaths();
 
   renderInfo.inline.push('M', inputTopLeft.x + ',' + inputTopLeft.y);
   renderInfo.inline.push('h', notchStart);
-  renderInfo.inline.push(BS.NOTCH_PATH_LEFT);
+  renderInfo.inline.push(notchPaths.left);
   renderInfo.inline.push('H', inputTopLeft.x + input.renderWidth);
   renderInfo.inline.push('v', input.renderHeight);
   renderInfo.inline.push('H', inputTopLeft.x);

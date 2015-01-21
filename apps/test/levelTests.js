@@ -15,6 +15,9 @@ var wrench = require('wrench');
 
 var child_process = require('child_process');
 
+var testUtils = require('./util/testUtils');
+testUtils.setupLocales();
+
 getTestCollections('./test/solutions').forEach(function (path) {
   runTestCollection(path);
 });

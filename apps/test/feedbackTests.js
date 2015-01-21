@@ -7,10 +7,104 @@ var canvas = require('canvas');
 global.Image = canvas.Image;
 global.Turtle = {};
 
-// needed for Hammerjs
-global.navigator = {};
-global.window = {};
-global.document = {};
+testUtils.setupLocales();
+
+/**
+ * Loads blocks into the workspace, then calls
+ * checkForEmptyContainerBlockFailure_ and validates
+ * that the result matches the expected result.
+ */
+describe("checkForEmptyContainerBlockFailure_", function () {
+  var studioApp;
+  var TestResults;
+
+  // create our environment
+  beforeEach(function () {
+    testUtils.setupTestBlockly();
+    studioApp = testUtils.getStudioAppSingleton();
+    TestResults = studioApp.TestResults;
+  });
+
+  var checkResultForBlocks = function (args) {
+    studioApp.loadBlocks(args.blockXml);
+
+    // make sure we loaded correctly. text wont match exactly, but make sure if
+    // we had xml, we loaded something
+    var loaded = Blockly.Xml.domToText(
+        Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
+    assert(!args.blockXml || loaded, "either we didnt have  input xml" +
+        "or we did, and we loaded something");
+
+    assert.equal(args.result,
+        studioApp.feedback_.checkForEmptyContainerBlockFailure_());
+  };
+
+  it("returns ALL_PASS when no blocks are present", function () {
+    checkResultForBlocks({
+      result: TestResults.ALL_PASS,
+      blockXml: ''
+    });
+  });
+
+  it ("returns ALL_PASS when no container blocks are present", function () {
+    checkResultForBlocks({
+      result: TestResults.ALL_PASS,
+      blockXml: '<xml><block type="text_print"></block></xml>'
+    });
+  });
+
+  it ("returns EMPTY_BLOCK_FAIL when an empty contianer block is present", function () {
+    checkResultForBlocks({
+      result: TestResults.EMPTY_BLOCK_FAIL,
+      blockXml: '<xml>' +
+                  '<block type="controls_repeat">' +
+                    '<title name="TIMES">4</title>' +
+                  '</block>' +
+                '</xml>'
+    });
+  });
+
+  it ("returns ALL_PASS when all container blocks are filled", function () {
+    checkResultForBlocks({
+      result: TestResults.ALL_PASS,
+      blockXml: '<xml>' +
+                  '<block type="controls_repeat">' +
+                    '<title name="TIMES">4</title>' +
+                    '<statement name="DO">' +
+                      '<block type="text_print"></block>' +
+                    '</statement>' +
+                  '</block>' +
+                '</xml>'
+    });
+  });
+
+  it ("returns EMPTY_FUNCTION_BLOCK_FAIL when an empty function block is present", function () {
+    checkResultForBlocks({
+      result: TestResults.EMPTY_FUNCTION_BLOCK_FAIL,
+      blockXml: '<xml>' +
+                  '<block type="procedures_defnoreturn">' +
+                    '<mutation/>' +
+                    '<title name="NAME">do something</title>' +
+                  '</block>' +
+                '</xml>'
+    });
+  });
+
+  it ("returns ALL_PASS when all function blocks are filled", function () {
+    checkResultForBlocks({
+      result: TestResults.ALL_PASS,
+      blockXml: '<xml>' +
+                  '<block type="procedures_defnoreturn">' +
+                    '<mutation/>' +
+                    '<title name="NAME">do something</title>' +
+                    '<statement name="STACK">' +
+                      '<block type="text_print"></block>' +
+                    '</statement>' +
+                  '</block>' +
+                '</xml>'
+    });
+  });
+});
 
 /**
  * Loads options.startBlocks into the workspace, then calls
@@ -70,13 +164,6 @@ describe("getMissingRequiredBlocks_ tests", function () {
     assert.notEqual(options.userBlockXml, undefined);
     assert.notEqual(options.expectedResult, undefined);
 
-    // Should probably have these as inputs to getMissingRequiredBlocks_ instead
-    // of fields on studioApp as it's the only place they're used
-    // In fact, may want to get rid of NUM_REQUIRED_BLOCKS_TO_FLAG as it's only
-    // ever set to 1, or perhaps make it customizable per level
-    studioApp.REQUIRED_BLOCKS = options.requiredBlocks;
-    studioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = options.numToFlag;
-
     studioApp.loadBlocks(options.userBlockXml);
 
     // make sure we loaded correctly. text wont match exactly, but make sure if
@@ -85,7 +172,8 @@ describe("getMissingRequiredBlocks_ tests", function () {
     assert(!options.userBlockXml || loaded, "either we didnt have  input xml" +
       "or we did, and we loaded something");
 
-    var missing = studioApp.feedback_.getMissingRequiredBlocks_();
+    var missing = studioApp.feedback_.getMissingRequiredBlocks_(
+        options.requiredBlocks, options.numToFlag);
     validateMissingRequiredBlocks(missing.blocksToDisplay, options.expectedResult);
   }
 
@@ -285,6 +373,7 @@ describe("getMissingRequiredBlocks_ tests", function () {
 
   function validateMissingBlocksFromLevelTest(collection, levelTest) {
     it (levelTest.description, function () {
+      testUtils.setupLocale(collection.app);
       assert(global.Blockly, "Blockly is in global namespace");
       var levels = testUtils.requireWithGlobalsCheckBuildFolder(collection.app + '/' +
         collection.levelFile, []);
