@@ -9,6 +9,7 @@ class PegasusSites
     @pegasus_hosts = [
       'code.org',
       'csedweek.org',
+      'hourofcode.com',
     ].map{|i| canonical_hostname(i)}
   end
   
