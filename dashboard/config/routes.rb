@@ -111,7 +111,7 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  get '/beta', to: 'home#beta', as: 'beta'
+  get '/beta', to: redirect('/')
 
   get 'reset_session', to: 'application#reset_session_endpoint'
 
@@ -173,21 +173,13 @@ Dashboard::Application.routes.draw do
   get '/api/section_progress/:id', to: 'api#section_progress', as: 'section_progress'
   get '/api/student_progress/:section_id/:id', to: 'api#student_progress', as: 'student_progress'
   get '/api/:action', controller: 'api'
+  get '/dashboardapi/section_progress/:id', to: 'api#section_progress'
+  get '/dashboardapi/student_progress/:section_id/:id', to: 'api#student_progress'
+  get '/dashboardapi/:action', controller: 'api'
 
   resources :zendesk_session, only: [:index]
 
   post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
-
-  if Rails.env.development?
-    class PegasusProxy < Rack::Proxy
-      def rewrite_env(env)
-        env["HTTP_HOST"] = CDO.code_org_url[2..-1]
-        env
-      end
-    end
-
-    match '/v2/*any', to: PegasusProxy.new(streaming: false), via: :all
-  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

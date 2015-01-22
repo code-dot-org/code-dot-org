@@ -4891,6 +4891,7 @@ StudioApp.prototype.init = function(config) {
       codeFunctions: config.level.codeFunctions,
       categoryInfo: config.level.categoryInfo,
       startBlocks: config.level.startBlocks,
+      afterEditorReady: config.afterEditorReady,
       afterInject: config.afterInject
     });
   }
@@ -7896,10 +7897,17 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
         var submitted = false;
         var submitButton = sharingDiv.querySelector('#phone-submit');
         submitButton.disabled = true;
-        phone.mask('(000) 000-0000',{
-            onComplete:function(){if(!submitted) submitButton.disabled=false;},
-            onChange: function(){submitButton.disabled=true;}
-        });
+        phone.mask('(000) 000-0000', {
+            onComplete:function(){
+              if (!submitted) {
+                submitButton.disabled = false;
+              }
+            },
+            onChange: function () {
+              submitButton.disabled = true;
+            }
+          }
+        );
         phone.focus();
         dom.addClickTouchEvent(submitButton, function() {
           var phone = $(sharingDiv.querySelector("#phone"));
@@ -14334,8 +14342,8 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<!DOCTYPE html>\n<html dir="', escape((2,  options.localeDirection )), '">\n<head>\n  <meta charset="utf-8">\n  <title>Blockly</title>\n  <script type="text/javascript" src="', escape((6,  assetUrl('js/' + options.locale + '/vendor.js') )), '"></script>\n  <script type="text/javascript" src="', escape((7,  assetUrl('js/common.js') )), '"></script>\n  <script type="text/javascript" src="', escape((8,  assetUrl('js/' + options.locale + '/common_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((9,  assetUrl('js/' + options.locale + '/' + app + '_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((10,  assetUrl('js/' + app + '.js') )), '"></script>\n  <script type="text/javascript">\n    ');12; // delay to onload to fix IE9. 
-; buf.push('\n    window.onload = function() {\n      ', escape((14,  app )), 'Main(', (14,  JSON.stringify(options) ), ');\n    };\n  </script>\n</head>\n<body>\n  <div id="blockly" class="readonly"></div>\n  <style>\n    html, body {\n      background-color: transparent;\n      margin: 0;\n      padding:0;\n      overflow: hidden;\n      height: 100%;\n      font-family: \'Gotham A\', \'Gotham B\', sans-serif;\n    }\n    .blocklyText, .blocklyMenuText, .blocklyTreeLabel, .blocklyHtmlInput,\n        .blocklyIconMark, .blocklyTooltipText, .goog-menuitem-content {\n      font-family: \'Gotham A\', \'Gotham B\', sans-serif;\n    }\n    #blockly>svg {\n      background-color: transparent;\n      border: none;\n    }\n    #blockly {\n      position: absolute;\n      top: 0;\n      left: 0;\n      overflow: hidden;\n      height: 100%;\n      width: 100%;\n    }\n  </style>\n</body>\n</html>\n'); })();
+ buf.push('<!DOCTYPE html>\n<html dir="', escape((2,  options.localeDirection )), '">\n<head>\n  <meta charset="utf-8">\n  <title>Blockly</title>\n  <script type="text/javascript" src="', escape((6,  assetUrl('js/blockly.js') )), '"></script>\n  <script type="text/javascript" src="', escape((7,  assetUrl('js/' + options.locale + '/blockly_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((8,  assetUrl('js/common.js') )), '"></script>\n  <script type="text/javascript" src="', escape((9,  assetUrl('js/' + options.locale + '/common_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((10,  assetUrl('js/' + options.locale + '/' + app + '_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((11,  assetUrl('js/' + app + '.js') )), '"></script>\n  <script type="text/javascript">\n    ');13; // delay to onload to fix IE9. 
+; buf.push('\n    window.onload = function() {\n      ', escape((15,  app )), 'Main(', (15,  JSON.stringify(options) ), ');\n    };\n  </script>\n</head>\n<body>\n  <div id="blockly" class="readonly"></div>\n  <style>\n    html, body {\n      background-color: transparent;\n      margin: 0;\n      padding:0;\n      overflow: hidden;\n      height: 100%;\n      font-family: \'Gotham A\', \'Gotham B\', sans-serif;\n    }\n    .blocklyText, .blocklyMenuText, .blocklyTreeLabel, .blocklyHtmlInput,\n        .blocklyIconMark, .blocklyTooltipText, .goog-menuitem-content {\n      font-family: \'Gotham A\', \'Gotham B\', sans-serif;\n    }\n    #blockly>svg {\n      background-color: transparent;\n      border: none;\n    }\n    #blockly {\n      position: absolute;\n      top: 0;\n      left: 0;\n      overflow: hidden;\n      height: 100%;\n      width: 100%;\n    }\n  </style>\n</body>\n</html>\n'); })();
 } 
 return buf.join('');
 };

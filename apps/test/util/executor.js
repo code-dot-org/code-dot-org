@@ -11,8 +11,10 @@ var msg = testUtils.requireWithGlobalsCheckBuildFolder('../locale/current/common
 
 var buildDir = '../../build';
 
-var VENDOR_CODE =
-  fs.readFileSync(path.join(__dirname, buildDir + '/package/js/en_us/vendor.js'));
+var BLOCKLY_CODE =
+  fs.readFileSync(path.join(__dirname, buildDir + '/package/js/blockly.js'));
+var BLOCKLY_LOCALE_CODE =
+  fs.readFileSync(path.join(__dirname, buildDir + '/package/js/en_us/blockly_locale.js'));
 
 setGlobals();
 
@@ -82,7 +84,7 @@ function setLevelSpecificGlobals () {
 
 function initBlockly () {
   /* jshint -W054 */
-  var fn = new Function(VENDOR_CODE + '; return Blockly;');
+  var fn = new Function(BLOCKLY_CODE + ';' + BLOCKLY_LOCALE_CODE + '; return Blockly;');
   return fn.call(window);
 }
 
