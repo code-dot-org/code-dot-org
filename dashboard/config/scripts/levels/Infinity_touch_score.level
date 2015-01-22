@@ -30,7 +30,6 @@
       "downButton",
       "upButton"
     ],
-    "maze_data": null,
     "protaganist_sprite_index": "0",
     "generate_function_pass_blocks": "false"
   }
@@ -80,6 +79,9 @@
       <xml>
         <block type="studio_changeScore">
           <title name="VALUE">1</title>
+        </block>
+        <block type="studio_move">
+          <title name="DIR">1</title>
         </block>
       </xml>
     </toolbox_blocks>

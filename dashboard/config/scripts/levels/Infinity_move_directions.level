@@ -32,8 +32,7 @@
     ],
     "first_sprite_index": "1",
     "protaganist_sprite_index": "0",
-    "predraw_blocks": "<xml></xml>",
-    "maze_data": null
+    "predraw_blocks": "<xml></xml>"
   }
 }]]></config>
   <blocks>

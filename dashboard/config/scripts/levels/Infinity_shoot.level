@@ -8,9 +8,9 @@
     "skin": "infinity",
     "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n  return Studio.projectiles[0].isCollidingWith(1);\r\n}",
     "failure_condition": "function () {\r\n}",
-    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,16,0,0,16,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,16,0,0,0,16,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "Make Baymax fire a projectile at Hiro.",
+    "instructions": "Make Hiro fire a projectile at Baymax.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -25,7 +25,7 @@
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
     "first_sprite_index": "2",
-    "maze_data": null
+    "generate_function_pass_blocks": "false"
   }
 }]]></config>
   <blocks>
