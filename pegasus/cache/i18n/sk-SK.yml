@@ -3,7 +3,7 @@
   select_language: Prosím, zvoľte si jazyk
   computer_science: Počítačová veda
   computer_science_edweek: Počítačová veda Vzdelávací týždeň
-  csedweek_dates: December 8-14, 2014
+  csedweek_dates: 8. až 14. decembera 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Hodina Kódu</a> sa blíži. Vyzývame všetkých učiteľov a organizátorov,
     <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -126,8 +126,8 @@
     riadkov kódu.'
   start_hoc: Spusti Hour of Code teraz
   contact_form_topic_press: Tlač/média (rozhovor alebo stretnutie)
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
-    - Michael Clark, Teacher'
+  stats_michael: '"<b>Nikdy</b> som nevidel svojich študentov tak nadšených učiť sa."-Michael
+    Clark, učiteľ'
   stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
     - Nina Nichols Peery, Teacher'
   stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
@@ -145,7 +145,7 @@
   studiobar_frozen_body: Vytvor zimnú krásu s Annou a Elzou
   studiobar_donate_title: Darovať
   studiobar_donate_body: Za každý darovaný dolár sa naučí jedno dieťa
-  studiobar_shop_title: Shop
+  studiobar_shop_title: Obchod
   studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   contact_form_topic_student: som študent
   contact_form_topic_parent: Som rodič
@@ -218,12 +218,12 @@
   dashboard_landing_useful_links: Ďalšie užitočné odkazy (iba v angličtine)
   dashboard_landing_office_hours: Spýtaj sa osobne! Zúčastni sa našich pravidelných
     mesačných video rozhovorov v úradných hodinách.
-  dashboard_landing_print_certificates: Print certificates for students who finish
-    this course
-  dashboard_landing_educator_blog: Read about news and updates to our materials at
-    our Educator Blog
-  dashboard_landing_smart_hints: Please help us to add smart hints to Code.org tutorials
-  dashboard_landing_video_player: Test our new video player at your school
+  dashboard_landing_print_certificates: Tlač certifikátov pre študentov, ktorí dokončiť
+    tento kurz
+  dashboard_landing_educator_blog: Prečítajte si o novinkách a aktualizáciách materiálov
+    na našom Educator blogu
+  dashboard_landing_smart_hints: Prosím pomôžte nám pridať tipy pre Code.org tutoriály
+  dashboard_landing_video_player: Otestujte naše nové video prehrávače na vašej škole
   dashboard_landing_progress_title: Pokrok vašich študentov
   dashboard_landing_progress_biggest: Pokrok pre vašu najväčšiu sekciu.
   dashboard_landing_view_progress: Zobraziť pokrok pre %{biggest_section}
@@ -239,8 +239,8 @@
   dashboard_action_delete_yes: Áno
   dashboard_action_delete_no: Nie
   dashboard_action_confirm: Odstrániť?
-  dashboard_action_remove: Remove
-  dashboard_action_remove_confirm: Remove?
+  dashboard_action_remove: Odstrániť
+  dashboard_action_remove_confirm: Odstrániť?
   dashboard_action_done: Hotovo
   dashboard_action_required: požadované
   dashboard_navigation_home_page: Domovská stránka učiteľa
@@ -290,10 +290,11 @@
     vyššie.
   dashboard_students_placeholder_name: Meno študenta
   dashboard_students_name: Meno
+  dashboard_students_progress: Progress
   dashboard_students_age: Vek
   dashboard_students_gender: Pohlavie
-  dashboard_students_male: Male
-  dashboard_students_female: Female
+  dashboard_students_male: Muž
+  dashboard_students_female: Žena
   dashboard_students_secret: Tajomstvo
   dashboard_students_password: Heslo
   dashboard_students_username: 'Používateľské meno: %{student_username}'
@@ -346,6 +347,10 @@
   dashboard_login_picture: Obrázok
   dashboard_login_none: E-mail
   dashboard_new_password: nové heslo
+  dashboard_progress_not_completed: nedokončené
+  dashboard_progress_completed_too_many_blocks: dokončené, príliš veľa blokov
+  dashboard_progress_completed_perfect: dokončené, super
+  dashboard_progress_furthest_level_attempted: furthest level attempted
   stats_hoc_2013_heading: 'Neuveriteľná štatistika z minuloročnej Hodiny Kódu. Behom
     jediného týždňa:'
   stats_hoc_2013_image_alt: Štatistika z Hodiny Kódu 2013
@@ -386,7 +391,7 @@
   carousel_heading_robots: Naučte sa programovať s robotmi
   carousel_heading_ide: Platformy, ktoré sú populárne medzi učiteľmi
   educator_notes: Poznámky pedagógov
-  how_to_teach_hoc: How to Teach an Hour of Code
+  how_to_teach_hoc: Ako učiť "Hodinu programovania"
   more_resources_educators: Ďalšie zdroje pre učiteľov
   participants: účastníci
   teachers_notes: Poznámky učiteľov
@@ -1016,9 +1021,10 @@
     It has support for over a dozen programming languages and environments, including
     several environments appropriate for students as young as eight years old. The
     Finch was designed to allow students to write richly interactive programs.
-  arduino_beyond_longdescription: Arduino is a popular platform designed to allow
-    artists and designers to work with real sensors, LEDs, buzzers, and more. The
-    Sparkfun Virtual Sandbox will teach you real Arduino code right in your browser.
+  arduino_beyond_longdescription: Arduino je populárna platforma navrhnutá tak, aby
+    umelci a dizajnéri mohli pracovať so skutočnými senzormi, LED diódami, bzučiakmi
+    atď. Virtual Sandbox Sparkfun vás naučí skutočnému Arduino programovaniu priamo
+    v prehliadači.
   processing_beyond_longdescription: Processing is a programming language, development
     environment, and online community. Since 2001, Processing has promoted software
     literacy within the visual arts and visual literacy within technology. Initially
@@ -1026,15 +1032,10 @@
     within a visual context, Processing evolved into a development tool for professionals.
     Today, there are tens of thousands of students, artists, designers, researchers,
     and hobbyists who use Processing for learning, prototyping, and production.
-  alice_beyond_longdescription: Using an innovative programming environment to support
-    the creation of 3D animations, the Alice Project provides tools and materials
-    for teaching and learning computational thinking, problem solving, and computer
-    programming across a spectrum of ages and grade levels.
-  sphero_beyond_longdescription: Whether you're an educator or a parent, SPRK lessons
-    give kids a fun crash course in programming robots while sharpening their skills
-    in math and science.
-  dashboard_students_progress: Progress
-  dashboard_progress_not_completed: not completed
-  dashboard_progress_completed_too_many_blocks: completed, too many blocks
-  dashboard_progress_completed_perfect: completed, perfect
-  dashboard_progress_furthest_level_attempted: furthest level attempted
+  alice_beyond_longdescription: Projekt Alice, pri použití inovatívneho programovacieho
+    prostredia na podporu 3D animacií,  poskytuje nástroje a prostriedky k výuke logického
+    myslenia, riešenia problémov a programovania pre všetky vekové kategórie a vzdelávacie
+    stupne.
+  sphero_beyond_longdescription: Či ste pedagóg alebo rodič, lekcie SPRK sú pre deti
+    zábavným kurzom programovania robotov, rozvíjajúcim ich zručnosti v matematike
+    a prírodných vedách.

@@ -1,5 +1,5 @@
 {
-  "ACTUAL": "actual",
+  "ACTUAL": "call",
   "ADD": "Add",
   "ADD_COMMENT": "குறிப்பை சேர்க்க",
   "ADD_PARAMETER": "Add Parameter",
@@ -73,7 +73,7 @@
   "EXAMPLE_DESCRIPTION": "Defines an example with expected and actual behavior",
   "EXPAND_ALL": "தொகுதிகளை விரிவுபடுத்தவும்",
   "EXPAND_BLOCK": "தொகுதியை விரிவுபடுத்தவும்",
-  "EXPECTED": "expected",
+  "EXPECTED": "result",
   "EXTERNAL_INPUTS": "வெளிப்புற உள்ளீடு",
   "FUNCTION_CREATE": "Create a Function",
   "FUNCTION_EDIT": "edit",

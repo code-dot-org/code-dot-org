@@ -1,5 +1,5 @@
 {
-  "ACTUAL": "todellinen",
+  "ACTUAL": "call",
   "ADD": "Lisää",
   "ADD_COMMENT": "Lisää kommentti",
   "ADD_PARAMETER": "Lisää parametri",
@@ -73,7 +73,7 @@
   "EXAMPLE_DESCRIPTION": "Määrittelee esimerkin odotetulla ja todellisella käyttäytymisellä",
   "EXPAND_ALL": "Laajenna lohkot",
   "EXPAND_BLOCK": "Laajenna lohko",
-  "EXPECTED": "odotettu",
+  "EXPECTED": "result",
   "EXTERNAL_INPUTS": "Ulkoiset syötteet",
   "FUNCTION_CREATE": "Luo funktio",
   "FUNCTION_EDIT": "muokkaa",

@@ -1,6 +1,6 @@
 goog.provide('Blockly.Msg.fi_fi');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "todellinen";
+Blockly.Msg.ACTUAL = "call";
 Blockly.Msg.ADD = "Lisää";
 Blockly.Msg.ADD_COMMENT = "Lisää kommentti";
 Blockly.Msg.ADD_PARAMETER = "Lisää parametri";
@@ -74,7 +74,7 @@ Blockly.Msg.EXAMPLE = "Esimerkki";
 Blockly.Msg.EXAMPLE_DESCRIPTION = "Määrittelee esimerkin odotetulla ja todellisella käyttäytymisellä";
 Blockly.Msg.EXPAND_ALL = "Laajenna lohkot";
 Blockly.Msg.EXPAND_BLOCK = "Laajenna lohko";
-Blockly.Msg.EXPECTED = "odotettu";
+Blockly.Msg.EXPECTED = "result";
 Blockly.Msg.EXTERNAL_INPUTS = "Ulkoiset syötteet";
 Blockly.Msg.FUNCTION_CREATE = "Luo funktio";
 Blockly.Msg.FUNCTION_EDIT = "muokkaa";

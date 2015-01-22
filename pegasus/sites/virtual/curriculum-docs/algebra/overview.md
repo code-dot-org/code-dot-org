@@ -10,40 +10,18 @@ theme: none
 ## The Algebra Inside Your Videogame: Computer Science in Math
 
 Many students love videogames, but how many really understand what it takes to make one? In Code.org Computer Science in Algebra, we pull back the veil on Computer Science and reveal to students the underlying fundamental math that makes everything tick.
+<img src="coordinate_plane.png" style="float:right; padding: 0 0 10px 10px; max-width: 250px;"/>
+Using an easy to learn block based language, students will learn to create images, animations, and interactive videogames that are driven by algebraic functions. Through the process of developing their videogames, students will discover how computer programmers use the coordinate plane, algebraic functions, and logic to create the games that they love.
 
-Using an easy to learn block based language, students will learn to create images, animations, and interactive videogames that are driven by algebraic functions.
+Code.org partnered with Bootstrap to develop an exciting and engaging curriculum that allows students to discover that is built on proven pedagogy and practices.
 
-That's why we have partnered with Bootstrap to develop an exciting and engaging curriculum that allows students to discover 
+## Functional Programming _is_ Math!
 
-## Who is this for?
+The Functional Programming paradigm used in this course will look very familiar to algebra teachers, becuase the language operates just like algebraic functions do!
 
-#### Kids as young as five years-old!
-Courses 1, 2, and 3 are designed primarily for an elementary school audience, but new courses are being planned for older students as well. 
+## It's more than just Coding
 
-#### Teachers! (in-school, after-school, or home-school)
-This curriculum has been developed for use by all educators of young children. We assume no prior computer science knowledge and have provided clear, detailed lesson plans that can be customized to different situations. Learn with your students!
-
-## Which course is for me?
-
-Code.org’s K-5 computer science experience consists of three courses:
-
-- Course 1: beginners, early-readers (ages 4-6)
-- Course 2: beginners, readers (ages 6+)
-- Course 3: prerequisite is Course 2 (ages 6+)
-
-
-
-The courses are designed to be flexibly implemented. Rather than a rigid pathway based on grade levels, the courses are based on developmental level and prior experience. Teachers and schools can use the course structure to tailor a course sequence to their students’ needs and evolving experience. 
-
-
-## Course Structure
-
-The courses use a spiraling curriculum design, in which concepts and skills are revisited in each course while delving deeper each time. 
-
-Each course experience is a blend of online activities and "unplugged" activities, lessons in which students can learn computing concepts with or without a computer. The online experiences are composed of self-guided and self-paced tutorials, which use scaffolded sets of programming instructions to explore and practice algorithmic thinking. The unplugged lessons take a hands-on, often kinesthetic approach, making use of physical manipulatives to model computational concepts.
-
-Each course consists of about 18 to 20 lessons, each lasting between 25 and 45 minutes. They can be taught at a comfortable pace whether in consecutive days as a sub-unit or one day a week for 18 weeks. The content of each course builds conceptually on the previous course, so that a student can progress through all three experiences learning new concepts along the way. 
-
+Algebra goes beyond just _solving for x_, and Code.org CS in math goes beyond this _writing code_. Through learning to program, students will also practive problem decomposition, clear communication through documentation. testing their own functions against example cases and input/output tables.
 Code.org’s K-5 curriculum aligns to [CSTA Computer Science Standards](http://csta.acm.org/Curriculum/sub/K12Standards.html) and [ISTE](http://www.iste.org/STANDARDS) standards, while some lessons also integrate national [Math](http://www.corestandards.org/Math/), [English Language Arts](http://www.corestandards.org/ELA-Literacy/), and [Science](http://www.nextgenscience.org/next-generation-science-standards) standards.
 
 

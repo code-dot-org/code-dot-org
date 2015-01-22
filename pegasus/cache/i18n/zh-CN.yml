@@ -776,8 +776,8 @@
   alice_beyond_longdescription: 采用创新的编程环境，以支持创建3D动画，爱丽丝项目提供教学和学习计算思维的工具和材料，解决问题，和计算机编程,
     跨越年龄和年级的频谱。
   sphero_beyond_longdescription: 无论你是教育工作者或者是父母，SPRK课程可以让孩子们快乐地学习给机器人编程，同时又有助于他们对数学和科学的学习。
-  dashboard_students_progress: Progress
-  dashboard_progress_not_completed: not completed
-  dashboard_progress_completed_too_many_blocks: completed, too many blocks
-  dashboard_progress_completed_perfect: completed, perfect
-  dashboard_progress_furthest_level_attempted: furthest level attempted
+  dashboard_students_progress: crwdns27938:0crwdne27938:0
+  dashboard_progress_not_completed: crwdns27939:0crwdne27939:0
+  dashboard_progress_completed_too_many_blocks: crwdns27940:0crwdne27940:0
+  dashboard_progress_completed_perfect: crwdns27941:0crwdne27941:0
+  dashboard_progress_furthest_level_attempted: crwdns27942:0crwdne27942:0
