@@ -235,7 +235,7 @@ Blockly.FunctionEditor.prototype.show = function() {
   this.ensureCreated_();
   goog.style.showElement(this.container_, true);
   goog.style.showElement(this.modalBackground_, true);
-  Blockly.focusedBlockSpace = Blockly.modalBlockSpace;
+  Blockly.focusedBlockSpace = this.modalBlockSpace;
   if (Blockly.selected) {
     Blockly.selected.unselect();
   }
@@ -263,7 +263,7 @@ Blockly.FunctionEditor.prototype.hideIfOpen = function() {
     return;
   }
   this.hideAndRestoreBlocks_();
-  Blockly.modalBlockSpace.clear();
+  this.modalBlockSpace.clear();
 };
 
 /**
@@ -312,9 +312,9 @@ Blockly.FunctionEditor.prototype.moveToModalBlockSpace_ = function(blockToMove) 
   blockToMove.setUserVisible(true);
   var dom = Blockly.Xml.blockToDom_(blockToMove);
   blockToMove.dispose(false, false, true);
-  var newCopyOfBlock = Blockly.Xml.domToBlock_(Blockly.modalBlockSpace, dom);
+  var newCopyOfBlock = Blockly.Xml.domToBlock_(this.modalBlockSpace, dom);
   newCopyOfBlock.moveTo(Blockly.RTL
-    ? Blockly.modalBlockSpace.getMetrics().viewWidth - FRAME_MARGIN_SIDE
+    ? this.modalBlockSpace.getMetrics().viewWidth - FRAME_MARGIN_SIDE
     : FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);
   newCopyOfBlock.setMovable(false);
   return newCopyOfBlock;
@@ -328,13 +328,15 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   this.container_ = document.createElement('div');
   this.container_.setAttribute('id', 'modalContainer');
   goog.dom.getElement('blockly').appendChild(this.container_);
-  Blockly.modalBlockSpaceEditor =
+  this.modalBlockSpaceEditor =
       new Blockly.BlockSpaceEditor(this.container_,
         goog.bind(this.calculateMetrics_, this));
-  Blockly.modalBlockSpace = Blockly.modalBlockSpaceEditor.blockSpace;
-  Blockly.modalBlockSpace.customFlyoutMetrics_ = Blockly.mainBlockSpace.getMetrics;
+  this.modalBlockSpace = this.modalBlockSpaceEditor.blockSpace;
+  this.modalBlockSpace.customFlyoutMetrics_ = Blockly.mainBlockSpace.getMetrics;
+  Blockly.modalBlockSpace = this.modalBlockSpace;
+  Blockly.modalBlockSpaceEditor = this.modalBlockSpaceEditor;
 
-  Blockly.modalBlockSpaceEditor.addChangeListener(
+  this.modalBlockSpaceEditor.addChangeListener(
       Blockly.mainBlockSpace.fireChangeEvent);
 
   // Add modal background and close button
@@ -349,11 +351,11 @@ Blockly.FunctionEditor.prototype.create_ = function() {
 
   // The function editor block space passes clicks through via
   // pointer-events:none, so register the unselect handler on lower elements
-  Blockly.bindEvent_(goog.dom.getElement('modalContainer'), 'mousedown', null,
+  Blockly.bindEvent_(goog.dom.getElement('modalContainer'), 'mousedown', this,
       function(e) {
     // Only handle clicks on modalContainer, not a descendant
     if (e.target === e.currentTarget) {
-      Blockly.modalBlockSpaceEditor.hideChaff();
+      this.modalBlockSpaceEditor.hideChaff();
       if (Blockly.selected) {
         Blockly.selected.unselect();
       }
@@ -393,7 +395,7 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   this.onResizeWrapper_ = Blockly.bindEvent_(window,
       goog.events.EventType.RESIZE, this, this.position_);
 
-  Blockly.modalBlockSpaceEditor.svgResize();
+  this.modalBlockSpaceEditor.svgResize();
 };
 
 /**
@@ -424,15 +426,14 @@ Blockly.FunctionEditor.prototype.layOutBlockSpaceItems_ = function () {
     return;
   }
   var currentX = Blockly.RTL ?
-    Blockly.modalBlockSpace.getMetrics().viewWidth - FRAME_MARGIN_SIDE :
+    this.modalBlockSpace.getMetrics().viewWidth - FRAME_MARGIN_SIDE :
     FRAME_MARGIN_SIDE;
   var currentY = 0;
   currentY += this.flyout_.getHeight();
   this.flyout_.customYOffset = currentY;
   this.flyout_.position_();
 
-  Blockly.modalBlockSpace.trashcan.setYOffset(currentY);
-  Blockly.modalBlockSpace.trashcan.position_();
+  this.modalBlockSpace.trashcan.repositionBelowBlockSpaceTop(currentY);
 
   currentY += FRAME_MARGIN_TOP;
   this.functionDefinitionBlock.moveTo(currentX, currentY);
@@ -461,7 +462,7 @@ Blockly.FunctionEditor.prototype.addCloseButton_ = function () {
     'class': 'blocklyText'
   }, this.closeButton_);
   text.textContent = Blockly.Msg.SAVE_AND_CLOSE;
-  Blockly.modalBlockSpaceEditor.appendSVGChild(this.closeButton_);
+  this.modalBlockSpaceEditor.appendSVGChild(this.closeButton_);
   var bounds = text.getBoundingClientRect();
   r.setAttribute('width', bounds.width + 2 * padding);
   r.setAttribute('height', bounds.height + padding);
@@ -469,11 +470,11 @@ Blockly.FunctionEditor.prototype.addCloseButton_ = function () {
 };
 
 Blockly.FunctionEditor.prototype.setupParametersToolbox_ = function () {
-  this.flyout_ = new Blockly.HorizontalFlyout(Blockly.modalBlockSpaceEditor);
+  this.flyout_ = new Blockly.HorizontalFlyout(this.modalBlockSpaceEditor);
   var flyoutDom = this.flyout_.createDom();
-  Blockly.modalBlockSpace.svgGroup_.insertBefore(flyoutDom,
-    Blockly.modalBlockSpace.svgBlockCanvas_);
-  this.flyout_.init(Blockly.modalBlockSpace, false);
+  this.modalBlockSpace.svgGroup_.insertBefore(flyoutDom,
+    this.modalBlockSpace.svgBlockCanvas_);
+  this.flyout_.init(this.modalBlockSpace, false);
   this.bindToolboxHandlers_();
 };
 
@@ -505,7 +506,7 @@ Blockly.FunctionEditor.prototype.addEditorFrame_ = function () {
 };
 
 Blockly.FunctionEditor.prototype.position_ = function() {
-  var metrics = Blockly.modalBlockSpace.getMetrics();
+  var metrics = this.modalBlockSpace.getMetrics();
   var width = metrics.viewWidth;
   var height = metrics.viewHeight;
   this.frameBase_.setAttribute('width',
@@ -531,7 +532,7 @@ Blockly.FunctionEditor.prototype.position_ = function() {
       ',19)');
 
   // Move workspace to account for horizontal flyout height
-  Blockly.modalBlockSpaceEditor.svgResize();
+  this.modalBlockSpaceEditor.svgResize();
 
   this.layOutBlockSpaceItems_();
 };
@@ -554,7 +555,7 @@ Blockly.FunctionEditor.prototype.createContractDom_ = function() {
       + '<button id="paramAddButton" class="btn">' + Blockly.Msg.ADD_PARAMETER
       + '</button>';
   }
-  var metrics = Blockly.modalBlockSpace.getMetrics();
+  var metrics = this.modalBlockSpace.getMetrics();
   var left = metrics.absoluteLeft;
   this.contractDiv_.style.left = left + 'px';
   this.contractDiv_.style.top = metrics.absoluteTop + 'px';

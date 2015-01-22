@@ -155,6 +155,9 @@ Blockly.Blocks.functional_definition = {
       this.parameterTypes_
     );
   },
+  getOutputType: function() {
+    return this.outputType_;
+  },
   updateOutputType: function(outputType) {
     this.outputType_ = outputType;
     this.changeFunctionalOutput(this.outputType_);
