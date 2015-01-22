@@ -511,8 +511,6 @@ Applab.init = function(config) {
 
   adjustAppSizeStyles();
 
-  Applab.canvasScale = (window.devicePixelRatio > 1) ? window.devicePixelRatio : 1;
-
   var showSlider = !config.hideSource && config.level.editCode;
   var showDebugButtons = !config.hideSource && config.level.editCode;
   var showDebugConsole = !config.hideSource && config.level.editCode;
@@ -1252,8 +1250,8 @@ Applab.createCanvas = function (opts) {
     // default width/height if params are missing
     var width = opts.width || Applab.appWidth;
     var height = opts.height || Applab.appHeight;
-    newElement.width = width * Applab.canvasScale;
-    newElement.height = height * Applab.canvasScale;
+    newElement.width = width;
+    newElement.height = height;
     newElement.style.width = width + 'px';
     newElement.style.height = height + 'px';
     // set transparent fill by default:
@@ -1270,8 +1268,8 @@ Applab.canvasDrawLine = function (opts) {
   var ctx = canvas.getContext("2d");
   if (ctx && divApplab.contains(canvas)) {
     ctx.beginPath();
-    ctx.moveTo(opts.x1 * Applab.canvasScale, opts.y1 * Applab.canvasScale);
-    ctx.lineTo(opts.x2 * Applab.canvasScale, opts.y2 * Applab.canvasScale);
+    ctx.moveTo(opts.x1, opts.y1);
+    ctx.lineTo(opts.x2, opts.y2);
     ctx.stroke();
     return true;
   }
@@ -1284,11 +1282,7 @@ Applab.canvasDrawCircle = function (opts) {
   var ctx = canvas.getContext("2d");
   if (ctx && divApplab.contains(canvas)) {
     ctx.beginPath();
-    ctx.arc(opts.x * Applab.canvasScale,
-            opts.y * Applab.canvasScale,
-            opts.radius * Applab.canvasScale,
-            0,
-            2 * Math.PI);
+    ctx.arc(opts.x, opts.y, opts.radius, 0, 2 * Math.PI);
     ctx.fill();
     ctx.stroke();
     return true;
@@ -1302,10 +1296,7 @@ Applab.canvasDrawRect = function (opts) {
   var ctx = canvas.getContext("2d");
   if (ctx && divApplab.contains(canvas)) {
     ctx.beginPath();
-    ctx.rect(opts.x * Applab.canvasScale,
-             opts.y * Applab.canvasScale,
-             opts.width * Applab.canvasScale,
-             opts.height * Applab.canvasScale);
+    ctx.rect(opts.x, opts.y, opts.width, opts.height);
     ctx.fill();
     ctx.stroke();
     return true;
@@ -1318,7 +1309,7 @@ Applab.canvasSetLineWidth = function (opts) {
   var canvas = document.getElementById(opts.elementId);
   var ctx = canvas.getContext("2d");
   if (ctx && divApplab.contains(canvas)) {
-    ctx.lineWidth = opts.width * Applab.canvasScale;
+    ctx.lineWidth = opts.width;
     return true;
   }
   return false;
@@ -1364,7 +1355,7 @@ Applab.canvasDrawImage = function (opts) {
   var ctx = canvas.getContext("2d");
   if (ctx && divApplab.contains(canvas) && divApplab.contains(image)) {
     var xScale, yScale;
-    xScale = yScale = Applab.canvasScale;
+    xScale = yScale = 1;
     if (opts.width) {
       xScale = xScale * (opts.width / image.width);
     }
@@ -1372,12 +1363,7 @@ Applab.canvasDrawImage = function (opts) {
       yScale = yScale * (opts.height / image.height);
     }
     ctx.save();
-    ctx.setTransform(xScale,
-                     0,
-                     0,
-                     yScale,
-                     opts.x * Applab.canvasScale,
-                     opts.y * Applab.canvasScale);
+    ctx.setTransform(xScale, 0, 0, yScale, opts.x, opts.y);
     ctx.drawImage(image, 0, 0);
     ctx.restore();
     return true;
@@ -1390,10 +1376,7 @@ Applab.canvasGetImageData = function (opts) {
   var canvas = document.getElementById(opts.elementId);
   var ctx = canvas.getContext("2d");
   if (ctx && divApplab.contains(canvas)) {
-    return ctx.getImageData(opts.x * Applab.canvasScale,
-                            opts.y * Applab.canvasScale,
-                            opts.width * Applab.canvasScale,
-                            opts.height * Applab.canvasScale);
+    return ctx.getImageData(opts.x, opts.y, opts.width, opts.height);
   }
 };
 
@@ -1407,9 +1390,7 @@ Applab.canvasPutImageData = function (opts) {
     var tmpImageData = ctx.createImageData(opts.imageData.width,
                                            opts.imageData.height);
     tmpImageData.data.set(opts.imageData.data);
-    return ctx.putImageData(tmpImageData,
-                            opts.x * Applab.canvasScale,
-                            opts.y * Applab.canvasScale);
+    return ctx.putImageData(tmpImageData, opts.x, opts.y);
   }
 };
 
