@@ -1,6 +1,6 @@
 Dashboard::Application.routes.draw do
   def redirect_to_teacher_dashboard
-    redirect(CDO.code_org_url('/teacher-dashboard'))
+    redirect CDO.code_org_url('/teacher-dashboard')
   end
 
   resources :gallery_activities, path: '/gallery' do
