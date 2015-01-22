@@ -60,10 +60,15 @@ var StepType = {
   OUT:  3,
 };
 
+var stdAppWidth = 400;
+var defaultAppHeight = 400;
+
 function loadLevel() {
   Applab.timeoutFailureTick = level.timeoutFailureTick || Infinity;
   Applab.minWorkspaceHeight = level.minWorkspaceHeight;
   Applab.softButtons_ = level.softButtons || {};
+  Applab.appWidth = level.appWidth || stdAppWidth;
+  Applab.appHeight = level.appHeight || defaultAppHeight;
 
   // Override scalars.
   for (var key in level.scale) {
@@ -71,15 +76,96 @@ function loadLevel() {
   }
 }
 
+//
+// The visualization area adjusts its size using a series of CSS rules that are
+// tuned to make adjustments assuming a 400x400 visualization. Since applab
+// allows its visualization size to be set on a per-level basis, the function
+// below modifies the CSS rules to account for the per-level coordinates
+//
+// The visualization column will remain at 400 pixels wide in the max-width
+// case and scale downward from there. The visualization height will be set
+// to preserve the proper aspect ratio with respect to the current width.
+//
+// The divApplab coordinate space will be Applab.appWidth by Applab.appHeight.
+// The scale values are then adjusted such that the max-width case may result
+// in a scaled-up version of divApplab and the min-width case will typically
+// result in a scaled-down version of divApplab
+//
+
+function adjustAppSizeStyles() {
+  var vizScale = 1;
+  // We assume these are listed in this order:
+  var scaleFactors = [ 1.0, 0.875, 0.75, 0.675, 0.5 ];
+  if (stdAppWidth !== Applab.appWidth) {
+    vizScale = stdAppWidth / Applab.appWidth;
+    for (var ind = 0; ind < scaleFactors.length; ind++) {
+      scaleFactors[ind] *= vizScale;
+    }
+  }
+  var vizAppHeight = Applab.appHeight * vizScale;
+  var ss = document.styleSheets;
+  for (var i = 0; i < ss.length; i++) {
+    if (ss[i].href && (ss[i].href.indexOf('applab.css') !== -1)) {
+      // We found our applab specific stylesheet:
+      var rules = ss[i].cssRules || ss[i].rules;
+      var changedRules = 0;
+      var curScaleIndex = 0;
+      // Change the width/height plus a set of rules for each scale factor:
+      var totalRules = 1 + scaleFactors.length;
+      for (var j = 0; j < rules.length && changedRules < totalRules; j++) {
+        var childRules = rules[j].cssRules || rules[j].rules;
+        if (rules[j].selectorText === "div#visualization") {
+          // set the 'normal' width/height for the visualization itself
+          rules[j].style.cssText = "height: " + vizAppHeight +
+                                   "px; width: " + stdAppWidth + "px;";
+          changedRules++;
+        } else if (rules[j].media && childRules) {
+          var changedChildRules = 0;
+          var scale = scaleFactors[curScaleIndex];
+          for (var k = 0; k < childRules.length && changedChildRules < 3; k++) {
+            if (childRules[k].selectorText === "div#visualization.responsive") {
+              // For this scale factor...
+              // set the max-height and max-width for the visualization
+              childRules[k].style.cssText = "max-height: " +
+                  Applab.appHeight * scale + "px; max-width: " +
+                  Applab.appWidth * scale + "px;";
+              changedChildRules++;
+            } else if (childRules[k].selectorText === "div#visualizationColumn.responsive") {
+              // set the max-width for the parent visualizationColumn
+              childRules[k].style.cssText = "max-width: " +
+                  Applab.appWidth * scale + "px;";
+              changedChildRules++;
+            } else if (childRules[k].selectorText === "div#visualization.responsive > *") {
+              // and set the scale factor for all children of the visualization
+              // (importantly, the divApplab element)
+              childRules[k].style.cssText = "-webkit-transform: scale(" + scale +
+                  ");-ms-transform: scale(" + scale +
+                  ");transform: scale(" + scale + ");";
+              changedChildRules++;
+            }
+          }
+          if (changedChildRules) {
+            curScaleIndex++;
+            changedRules++;
+          }
+        }
+      }
+      // After processing the applab.css, stop looking for stylesheets:
+      break;
+    }
+  }
+}
+
 var drawDiv = function () {
   var divApplab = document.getElementById('divApplab');
-  var divWidth = parseInt(window.getComputedStyle(divApplab).width, 10);
+  divApplab.style.width = Applab.appWidth + "px";
+  divApplab.style.height = Applab.appHeight + "px";
 
   // TODO: one-time initial drawing
 
   // Adjust visualizationColumn width.
   var visualizationColumn = document.getElementById('visualizationColumn');
-  visualizationColumn.style.width = divWidth + 'px';
+  visualizationColumn.style.width = stdAppWidth + 'px';
 };
 
 function getCurrentTickLength() {
@@ -422,6 +508,8 @@ Applab.init = function(config) {
     // always run at max speed if source is hidden
     config.level.sliderSpeed = 1.0;
   }
+
+  adjustAppSizeStyles();
 
   Applab.canvasScale = (window.devicePixelRatio > 1) ? window.devicePixelRatio : 1;
 
@@ -1162,8 +1250,8 @@ Applab.createCanvas = function (opts) {
   if (newElement && ctx) {
     newElement.id = opts.elementId;
     // default width/height if params are missing
-    var width = opts.width || 400;
-    var height = opts.height || 600;
+    var width = opts.width || Applab.appWidth;
+    var height = opts.height || Applab.appHeight;
     newElement.width = width * Applab.canvasScale;
     newElement.height = height * Applab.canvasScale;
     newElement.style.width = width + 'px';
