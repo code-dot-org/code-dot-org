@@ -86,9 +86,6 @@ Dashboard::Application.routes.draw do
     post 'clone', to: 'levels#clone'
   end
 
-  post 'create_custom', to: 'levels#create_custom'
-  get 'levels/new', to: 'levels#new'
-
   resources :scripts, path: '/s/' do
     # /s/xxx/level/yyy
     resources :script_levels, as: :levels, only: [:show], path: "/level", format: false do
@@ -136,7 +133,6 @@ Dashboard::Application.routes.draw do
   # old teacher dashboard should redirect to new teacher dashboard
   get '/followers', to: redirect_to_teacher_dashboard
   get '/followers/:action', to: redirect_to_teacher_dashboard
-
 
   get '/join(/:section_code)', to: 'followers#student_user_new', as: 'student_user_new'
   post '/join/:section_code', to: 'followers#student_register', as: 'student_register'
