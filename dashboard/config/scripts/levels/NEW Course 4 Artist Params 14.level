@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Can you recreate these shapes? Drag the counter variable from the toolbox into the function definition. ",
+    "instructions": "Can you recreate these shapes? Drag the \"length\" parameter into the function definition. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": "1",
