@@ -70,9 +70,11 @@ NetSim.prototype.init = function(config) {
       visualization: '',
       localeDirection: this.studioApp_.localeDirection(),
       controls: require('./controls.html')({assetUrl: this.studioApp_.assetUrl})
-    }
+    },
+    hideRunButton: true
   });
 
+  config.enableShowCode = false;
   config.loadAudio = _.bind(this.loadAudio_, this);
   config.afterInject = _.bind(this.afterInject_, this, config);
 
