@@ -10,7 +10,7 @@
     "failure_condition": "function () {\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,16,0,0,16,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "Move Baymax right to Hiro, and play a sound when they touch.",
+    "instructions": "Move Hiro right to Baymax, and play a sound when they touch.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -25,7 +25,8 @@
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
     "first_sprite_index": "2",
-    "maze_data": null
+    "maze_data": null,
+    "generate_function_pass_blocks": "false"
   }
 }]]></config>
   <blocks>
