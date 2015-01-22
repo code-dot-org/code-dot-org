@@ -234,11 +234,6 @@ class ReportsControllerTest < ActionController::TestCase
     assert_equal 25, assigns(:gallery_activities).count
   end
 
-  test "students should redirect to new teacher dashboard" do
-    get :students
-    assert_redirected_to '//test.code.org/teacher-dashboard'
-  end
-
   test "should get level_stats" do
     get :level_stats, {:level_id => create(:level).id}
     assert_response :success
