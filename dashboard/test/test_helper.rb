@@ -6,6 +6,7 @@ require 'minitest/reporters'
 MiniTest::Reporters.use!
 
 ENV["RAILS_ENV"] ||= "test"
+ENV["RACK_ENV"] ||= "test"
 
 require File.expand_path('../../config/environment', __FILE__)
 I18n.load_path += Dir[Rails.root.join('test', 'en.yml')]
