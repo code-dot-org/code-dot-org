@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -150,22 +150,21 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catText":function(d){return "text"},
 "catVariables":function(d){return "Variabler"},
 "continue":function(d){return "Fortsätt"},
-"createHtmlBlock":function(d){return "skapa HTML-block"},
-"createHtmlBlockTooltip":function(d){return "Skapar ett HTML-block i appen."},
+"createHtmlBlock":function(d){return "create html block"},
+"createHtmlBlockTooltip":function(d){return "Creates a block of HTML in the app."},
 "finalLevel":function(d){return "Grattis! Du har löst det sista pusslet."},
 "nextLevel":function(d){return "Grattis! Du har slutfört detta pusslet."},
 "no":function(d){return "Nej"},
 "numBlocksNeeded":function(d){return "Detta pusslet kan lösas med %1 block."},
-"pause":function(d){return "Bryt"},
-"reinfFeedbackMsg":function(d){return "Du kan trycka på \"Försök igen\"-knappen för att gå tillbaka och köra din app."},
+"pause":function(d){return "Break"},
+"reinfFeedbackMsg":function(d){return "You can press the \"Try again\" button to go back to running your app."},
 "repeatForever":function(d){return "upprepa för evigt"},
 "repeatDo":function(d){return "utför"},
-"repeatForeverTooltip":function(d){return "Utför åtgärder i detta block upprepade gånger medan programmet körs."},
-"shareWebappTwitter":function(d){return "Kolla in appen jag gjort. Jag skrev den själv med @codeorg"},
-"shareGame":function(d){return "Dela din app:"},
-"stepIn":function(d){return "Stig in"},
-"stepOver":function(d){return "Stig över"},
-"stepOut":function(d){return "Stig ut"},
-"turnBlack":function(d){return "bli svart"},
-"turnBlackTooltip":function(d){return "Gör skärmen svart."},
+"repeatForeverTooltip":function(d){return "Execute the actions in this block repeatedly while the app is running."},
+"shareApplabTwitter":function(d){return "Check out the app I made. I wrote it myself with @codeorg"},
+"shareGame":function(d){return "Share your app:"},
+"stepIn":function(d){return "Step in"},
+"stepOver":function(d){return "Step over"},
+"stepOut":function(d){return "Step out"},
+"viewData":function(d){return "View Data"},
 "yes":function(d){return "Ja"}};

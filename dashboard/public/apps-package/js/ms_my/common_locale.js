@@ -23,7 +23,7 @@ var locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -177,7 +177,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "directionWestLetter":function(d){return "W"},
 "end":function(d){return "tamat"},
 "emptyBlocksErrorMsg":function(d){return "\"Ulangan\" atau \"Jika\" blok perlu mempunyai blok lain di dalamnya untuk berfungsi. Pastikan blok dalaman sesuai di dalam kandungan blok."},
-"emptyFunctionBlocksErrorMsg":function(d){return "The function block needs to have other blocks inside it to work."},
+"emptyFunctionBlocksErrorMsg":function(d){return "Blok fungsi perlu mengandungi blok-blok yang lain di dalamnya untuk berfungsi."},
 "errorEmptyFunctionBlockModal":function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."},
 "errorIncompleteBlockInFunction":function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."},
 "errorParamInputUnattached":function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."},
@@ -188,7 +188,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "extraTopBlocks":function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"},
 "finalStage":function(d){return "Tahniah! Anda telah melengkapkan peringkat akhir."},
 "finalStageTrophies":function(d){return "Tahniah! Anda telah selesai peringkat akhir dan memenangi "+locale.p(d,"numTrophies",0,"ms",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+"."},
-"finish":function(d){return "Finish"},
+"finish":function(d){return "Selesai"},
 "generatedCodeInfo":function(d){return "Universiti terkemuka juga mengajarkan blok-asas koding (cth., "+locale.v(d,"berkeleyLink")+", "+locale.v(d,"harvardLink")+"). Tetapi, blok yang telah disusun juga boleh ditunjukkan dalam JavaScript, bahasa koding yang paling meluas digunakan:"},
 "hashError":function(d){return "Maaf, '%1' tidak sepadan dengan sebarang atur cara yang disimpan."},
 "help":function(d){return "Bantu"},
@@ -205,7 +205,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "numBlocksNeeded":function(d){return "Tahniah! Anda melengkapkan Puzzle "+locale.v(d,"puzzleNumber")+". (Walau bagaimanapun, anda hanya boleh menggunakan "+locale.p(d,"numBlocks",0,"ms",{"one":"1 block","other":locale.n(d,"numBlocks")+" blocks"})+".)"},
 "numLinesOfCodeWritten":function(d){return "Anda baru sahaja menulis "+locale.p(d,"numLines",0,"ms",{"one":"1 line","other":locale.n(d,"numLines")+" lines"})+" kod!"},
 "play":function(d){return "Main"},
-"print":function(d){return "Print"},
+"print":function(d){return "Cetak"},
 "puzzleTitle":function(d){return "Puzzle "+locale.v(d,"puzzle_number")+" dari "+locale.v(d,"stage_total")},
 "repeat":function(d){return "Ulang"},
 "resetProgram":function(d){return "Tetapkan semula"},
@@ -213,7 +213,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "runTooltip":function(d){return "Jalankan program yang ditetapkan dengan blok dalam ruang kerja."},
 "score":function(d){return "skor"},
 "showCodeHeader":function(d){return "Tunjukkan Kod"},
-"showBlocksHeader":function(d){return "Show Blocks"},
+"showBlocksHeader":function(d){return "Tunjuk blok-blok"},
 "showGeneratedCode":function(d){return "Tunjukkan Kod"},
 "stringEquals":function(d){return "string=?"},
 "subtitle":function(d){return "persekitaran pengaturcaraan visual"},
@@ -227,21 +227,21 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "tryAgain":function(d){return "Cuba lagi"},
 "hintRequest":function(d){return "See hint"},
 "backToPreviousLevel":function(d){return "Kembali ke tahap yang sebelumnya"},
-"saveToGallery":function(d){return "Save to gallery"},
-"savedToGallery":function(d){return "Saved in gallery!"},
-"shareFailure":function(d){return "Sorry, we can't share this program."},
+"saveToGallery":function(d){return "Simpan ke galeri"},
+"savedToGallery":function(d){return "Disimpan di dalam galeri!"},
+"shareFailure":function(d){return "Maaf, kami tidak dapat berkongsi program ini."},
 "workspaceHeader":function(d){return "Pasang blok anda di sini: "},
-"workspaceHeaderJavaScript":function(d){return "Type your JavaScript code here"},
+"workspaceHeaderJavaScript":function(d){return "Taip kod Javascript anda di sini"},
 "infinity":function(d){return "Infinity"},
 "rotateText":function(d){return "Pusingkan peranti anda."},
 "orientationLock":function(d){return "Matikan kunci orientasi dalam tetapan peranti."},
 "wantToLearn":function(d){return "Ingin belajar untuk mengekod?"},
 "watchVideo":function(d){return "Tonton Video"},
-"when":function(d){return "when"},
+"when":function(d){return "apabila"},
 "whenRun":function(d){return "when run"},
-"tryHOC":function(d){return "Try the Hour of Code"},
+"tryHOC":function(d){return "Cuba Hour of Code"},
 "signup":function(d){return "Daftar untuk kursus pengenalan"},
 "hintHeader":function(d){return "Sedikit Tip:"},
-"genericFeedback":function(d){return "See how you ended up, and try to fix your program."},
-"toggleBlocksErrorMsg":function(d){return "You need to correct an error in your program before it can be shown as blocks."},
+"genericFeedback":function(d){return "Lihat bagaimana anda akhiri, dan cuba membaiki program anda."},
+"toggleBlocksErrorMsg":function(d){return "Anda perlu membetulkan kesilapan di dalam program sebelum ia boleh dipaparkan sebagai blok-blok."},
 "defaultTwitterText":function(d){return "Check out what I made"}};

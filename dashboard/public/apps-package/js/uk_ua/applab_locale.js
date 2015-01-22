@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -163,22 +163,21 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catText":function(d){return "текст"},
 "catVariables":function(d){return "Змінні"},
 "continue":function(d){return "Далі"},
-"createHtmlBlock":function(d){return "створити блок html"},
-"createHtmlBlockTooltip":function(d){return "Створює у програмі блок HTML."},
+"createHtmlBlock":function(d){return "create html block"},
+"createHtmlBlockTooltip":function(d){return "Creates a block of HTML in the app."},
 "finalLevel":function(d){return "Вітання! Ви розв'язали останнє завдання."},
 "nextLevel":function(d){return "Вітання! Ви розв'язали останнє завдання."},
 "no":function(d){return "Ні"},
 "numBlocksNeeded":function(d){return "Це завдання можна розв'язати за допомогою %1 блоків."},
-"pause":function(d){return "Зупинка"},
-"reinfFeedbackMsg":function(d){return "Можна натиснути кнопку \"Повторити спробу\", щоб повернутися до запуску застосунку."},
+"pause":function(d){return "Break"},
+"reinfFeedbackMsg":function(d){return "You can press the \"Try again\" button to go back to running your app."},
 "repeatForever":function(d){return "повторювати завжди"},
 "repeatDo":function(d){return "робити"},
-"repeatForeverTooltip":function(d){return "Виконати дії з цього блоку кілька разів поки запущена програма."},
-"shareWebappTwitter":function(d){return "Подивіться на програму, створену власноруч! Це моя робота разом з @codeorg"},
-"shareGame":function(d){return "Поділитись програмою:"},
-"stepIn":function(d){return "Крок"},
-"stepOver":function(d){return "Перескочити"},
-"stepOut":function(d){return "Вийти"},
-"turnBlack":function(d){return "затемнити"},
-"turnBlackTooltip":function(d){return "Затемнює екран."},
+"repeatForeverTooltip":function(d){return "Execute the actions in this block repeatedly while the app is running."},
+"shareApplabTwitter":function(d){return "Check out the app I made. I wrote it myself with @codeorg"},
+"shareGame":function(d){return "Share your app:"},
+"stepIn":function(d){return "Step in"},
+"stepOver":function(d){return "Step over"},
+"stepOut":function(d){return "Step out"},
+"viewData":function(d){return "View Data"},
 "yes":function(d){return "Так"}};

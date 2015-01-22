@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -82,22 +82,21 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catText":function(d){return "tekst"},
 "catVariables":function(d){return "Variabelen"},
 "continue":function(d){return "Verder"},
-"createHtmlBlock":function(d){return "maak HTML blok"},
-"createHtmlBlockTooltip":function(d){return "Maak een blok HTML in de app."},
+"createHtmlBlock":function(d){return "create html block"},
+"createHtmlBlockTooltip":function(d){return "Creates a block of HTML in the app."},
 "finalLevel":function(d){return "Gefeliciteerd! je hebt de laatste puzzel opgelost."},
 "nextLevel":function(d){return "Gefeliciteerd! Je hebt de puzzel voltooid."},
 "no":function(d){return "Nee"},
 "numBlocksNeeded":function(d){return "Deze puzzel kan worden opgelost met %1 blokken."},
-"pause":function(d){return "Pauze"},
-"reinfFeedbackMsg":function(d){return "Je kunt op de \"Opnieuw\" knop drukken om terug te gaan naar het uitvoeren van je app."},
+"pause":function(d){return "Break"},
+"reinfFeedbackMsg":function(d){return "You can press the \"Try again\" button to go back to running your app."},
 "repeatForever":function(d){return "blijven herhalen"},
 "repeatDo":function(d){return "voer uit"},
-"repeatForeverTooltip":function(d){return "Herhaal de acties in dit blok wanneer de app wordt uitgevoerd."},
-"shareWebappTwitter":function(d){return "Bekijk de app die ik heb gemaakt. Ik heb het zelf geschreven met @codeorg"},
-"shareGame":function(d){return "Deel je app:"},
-"stepIn":function(d){return "Stap in"},
-"stepOver":function(d){return "Stap over"},
-"stepOut":function(d){return "Stap uit"},
-"turnBlack":function(d){return "verdonker blok"},
-"turnBlackTooltip":function(d){return "Maakt het scherm zwart."},
+"repeatForeverTooltip":function(d){return "Execute the actions in this block repeatedly while the app is running."},
+"shareApplabTwitter":function(d){return "Check out the app I made. I wrote it myself with @codeorg"},
+"shareGame":function(d){return "Share your app:"},
+"stepIn":function(d){return "Step in"},
+"stepOver":function(d){return "Step over"},
+"stepOut":function(d){return "Step out"},
+"viewData":function(d){return "View Data"},
 "yes":function(d){return "Ja"}};
