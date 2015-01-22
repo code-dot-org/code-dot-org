@@ -1,5 +1,5 @@
 {
-  "ACTUAL": "actual",
+  "ACTUAL": "call",
   "ADD": "เพิ่ม",
   "ADD_COMMENT": "เพิ่มความคิดเห็น",
   "ADD_PARAMETER": "Add Parameter",
@@ -73,7 +73,7 @@
   "EXAMPLE_DESCRIPTION": "Defines an example with expected and actual behavior",
   "EXPAND_ALL": "ขยายบล็อค",
   "EXPAND_BLOCK": "ขบายบล็อค",
-  "EXPECTED": "expected",
+  "EXPECTED": "result",
   "EXTERNAL_INPUTS": "ค่านำเข้าจากข้างนอก",
   "FUNCTION_CREATE": "Create a Function",
   "FUNCTION_EDIT": "edit",

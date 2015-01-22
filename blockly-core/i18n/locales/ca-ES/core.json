@@ -1,5 +1,5 @@
 {
-  "ACTUAL": "real",
+  "ACTUAL": "call",
   "ADD": "Afegeix",
   "ADD_COMMENT": "Afegeix un comentari",
   "ADD_PARAMETER": "Afegeix el paràmetre",
@@ -73,7 +73,7 @@
   "EXAMPLE_DESCRIPTION": "Defineix un exemple amb el comportament pevist i el real",
   "EXPAND_ALL": "Expandeix els blocs",
   "EXPAND_BLOCK": "Expandeix el bloc",
-  "EXPECTED": "s'espera",
+  "EXPECTED": "result",
   "EXTERNAL_INPUTS": "Dades d'entrada externes",
   "FUNCTION_CREATE": "Crea una funció",
   "FUNCTION_EDIT": "editar",
