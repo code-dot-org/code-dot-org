@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "infinity",
-    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
+    "success_condition": "function () {\r\n  // Sample conditions:\r\n  return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
     "failure_condition": "function () {\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
@@ -30,7 +30,9 @@
       "downButton",
       "upButton"
     ],
-    "predraw_blocks": "<xml><block type=\"studio_setBackground\"><title name=\"VALUE\">\"tile\"</title></block></xml>"
+    "predraw_blocks": "<xml><block type=\"studio_setBackground\"><title name=\"VALUE\">\"tile\"</title></block></xml>",
+    "maze_data": null,
+    "generate_function_pass_blocks": "false"
   }
 }]]></config>
   <blocks>
