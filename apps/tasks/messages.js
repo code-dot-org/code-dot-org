@@ -10,8 +10,17 @@ module.exports = function(grunt) {
       filePair.src.forEach(function(src) {
         var locale = path.basename(src, '.json');
         var namespace = src.indexOf('common') > -1 ? 'locale' : 'appLocale';
-        var formatted = process(locale, namespace, grunt.file.readJSON(src));
-        grunt.file.write(filePair.dest, formatted);
+        try {
+          var formatted = process(locale, namespace, grunt.file.readJSON(src));
+          grunt.file.write(filePair.dest, formatted);
+        } catch (e) {
+          var errorMsg = "Error processing localization file " + src + ": " + e;
+          if(grunt.option('force')) {
+            grunt.log.warn(errorMsg)
+          } else {
+            throw new Error(errorMsg);
+          }
+        }
       });
     });
   });
