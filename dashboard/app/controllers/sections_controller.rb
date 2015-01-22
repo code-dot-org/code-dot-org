@@ -48,23 +48,4 @@ class SectionsController < ApplicationController
                                 login_type: [Section::LOGIN_TYPE_PICTURE,
                                              Section::LOGIN_TYPE_WORD])
   end
-
-  public
-
-  # redirect old section stuff to new teacher dashboard in case people have bookmarks
-
-  def new
-    redirect_to teacher_dashboard_url
-  end
-  
-  def edit
-    redirect_to teacher_dashboard_url
-  end
-
-  private
-
-  # Never trust parameters from the scary internet, only allow the white list through.
-  def section_params
-    params.require(:section).permit(:name, students_attributes: [:name, :username, :password, :provider])
-  end
 end

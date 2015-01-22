@@ -20,21 +20,6 @@ class FollowersControllerTest < ActionController::TestCase
     sign_in @laurel
   end
 
-  test "index should redirect to new teacher dashboard" do
-    get :index
-    assert_redirected_to '//test.code.org/teacher-dashboard'
-  end
-
-  test "manage should redirect to new teacher dashboard" do
-    get :manage
-    assert_redirected_to '//test.code.org/teacher-dashboard'
-  end
-
-  test "sections should redirect to new teacher dashboard" do
-    get :sections
-    assert_redirected_to '//test.code.org/teacher-dashboard'
-  end
-
   test "student_user_new" do
     sign_out @laurel
 
