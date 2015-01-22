@@ -31,6 +31,11 @@ class RedirectsTest < ActionDispatch::IntegrationTest
     assert_redirected_to '/s/course3'
   end
 
+  test 'redirect beta' do
+    get '/beta'
+    assert_redirected_to '/'
+  end
+
   test 'redirects /sh to /c' do
     get '/sh/1'
     assert_redirected_to '/c/1'
