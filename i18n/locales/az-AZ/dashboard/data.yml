@@ -48,7 +48,7 @@ az:
         edit-code:
           desc: Edit Code (beta)
           MazeEC: Mərhələ 1
-          Webapp: Mərhələ 2
+          Applab: Mərhələ 2
           ArtistEC: Mərhələ 3
           StudioEC: Mərhələ 4
         events:
@@ -99,10 +99,11 @@ az:
         Jigsaw: Jigsaw
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
-        Webapp: Webapp
+        Webapp: App Lab
         ArtistEC: Rəssam
         TextMatch: Text Match
         StudioEC: Oyun labı
+        Applab: App Lab
     trophy:
       name:
         Bronze: Bürünc
@@ -330,7 +331,7 @@ az:
         maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell the word STORY
-        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        applab_ec_simple: Create your app by using the blocks in the toolbox.
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColor" block.'
         turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new "penWidth" block. Have fun!'
         studio_ec_sandbox: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
@@ -426,7 +427,7 @@ az:
         loop_for: Sayğac bloku
         parameters: Parametrli funksiyalar
         hoc_wrapup: Kod Saatının yekunu
-        Unplug1: What is CS?
+        Unplug1: İnformatika nədir?
         Unplug2: Hesablama təfəkkürü
         Unplug3: Millimetrlik kağızda proqramlaşdırma
         Unplug4: Alqoritmlər
@@ -502,11 +503,11 @@ az:
         C4_unplugged_variables: Variables in Envelopes
         C4_unplugged_forloops: For Loops
         C4_unplugged_parameters: Songwriting with Parameters
-        C4_unplugged_binary: Binary
-        frozen_intro: Hour of Code Intro
-        frozen_loops: Introduction to Loops
-        frozen_functions: Introduction to Functions
-        playlab_intro: Introduction to Play Lab
+        C4_unplugged_binary: İkilik
+        frozen_intro: Kod Saatına giriş
+        frozen_loops: Dövrlərə giriş
+        frozen_functions: Funksiyalara giriş
+        playlab_intro: Oyun Labına giriş
         playlab_events: Play Lab Events
         playlab_repeat_forever: Play Lab Repeat Forever
     callout:

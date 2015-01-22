@@ -1,8 +1,8 @@
-es:
+es-AR:
   data:
     unplugged:
       Unplug1:
-        title: Introducción a la informática
+        title: Introducción al Arte de las Ciencias de la Computación
         desc: 'Esta clase dará una introducción al concepto de “Ciencias de la Computación” y explicará qué hace un “informático”. Los estudiantes  tendrán la oportunidad de asumir el rol de un informático. Al finalizar la actividad, cada estudiante tendrá un recordatorio sobre qué aprendió durante la clase. Tal vez Ud. crea que es conveniente evitar enseñar a los niños más pequeños el complejo vocabulario asociado a las clases que siguen, pero presentarlo de manera lúdica y divertida ahora es mucho más productivo que esperar otras oportunidades.'
         pdfs:
           - unplug1-es-ES
@@ -14,7 +14,7 @@ es:
           - unplug2-es-ES
         video: Unplug2
       Unplug3:
-        title: Programación en papel cuadriculado
+        title: Programación de hoja cuadriculada
         desc: Programándose unos a otros para hacer dibujos, los estudiantes empezarán a entender de qué trata la programación. La clase empezará haciendo que los estudiantes intercambien instrucciones para colorear cuadrados en una hoja cuadriculada, con el fin de reproducir una imagen. Si hay tiempo, la clase puede terminar con dibujos que los estudiantes crean.
         pdfs:
           - unplug3-es-ES
@@ -26,7 +26,7 @@ es:
           - unplug4-es-ES
         video: Unplug4
       Unplug5:
-        title: funciones
+        title: Funciones
         desc: En esta clase, los estudiantes harán un collar con cuerdas, piedritas y una medalla especial. Seguirán una serie de tareas repetitivas, y luego se les pedirá que identifiquen ciertos conjuntos de “habilidades” que se duplican varias veces. Una vez que esas habilidades fueron definidas, serán llamadas desde un programa principal y el bello proceso de creación será volcado en una sola pieza de papel. El programa final será escrito por toda la clase, independientemente del tipo de cuerdas, piedritas o medallas. Para efectivamente permitir esto, los estudiantes deberán “abstraer” los detalles específicos entre los materiales y crear términos vagos para los suministros de cada uno. El uso de huecos genéricos es una maravillosa introducción a las variables.
         pdfs:
           - unplug5-es-ES
@@ -38,19 +38,19 @@ es:
           - unplug6-es-ES
         video: Unplug6
       Unplug7:
-        title: Escritura de la canción
+        title: Escribir canciones
         desc: Leer letras de canciones puede ser una aventura intuitiva para los estudiantes. Vamos a tomar una actividad que hace uso de conocimientos previos para dar una buena clase sobre definición y llamada de funciones. Una vez que los estudiantes se familiaricen con el proceso de definición/llamado, podemos añadir complicaciones como pasaje de parámetros en los llamados a funciones.
         pdfs:
           - unplug7-es-ES
         video: Unplug7
       Unplug8:
-        title: Abstracción
+        title: Liberación abstracta
         desc: Vamos a combinar la rutina diaria de los estudiantes y un juego que trata de juegos de palabras, para que la clase aprenda sobre la efectividad que posee la abstracción.
         pdfs:
           - unplug8-es-ES
         video: Unplug8
       Unplug9:
-        title: Programación de relé
+        title: Programación bajo presión
         desc: Esta lección tomará una idea de una actividad anterior (4. Programación en hoja cuadriculada) y el uso de esas habilidades para hacer hincapié en la importancia de completar los programas que funcionan con una determinada secuencia y la importancia de comprobar frecuentemente la existencia de errores (bugs) en los programas.
         pdfs:
           - unplug9-es-ES
@@ -80,7 +80,7 @@ es:
         desc: Esta lección resalta formas en las que usamos algoritmos en nuestra vida cotidiana, usando el acto de plantar una semilla como ejemplo. También se centra en el panorama general de la informática y cómo los algoritmos juegan un papel esencial.
         video: C1_plantando_semillas
       BuildingAFoundation:
-        title: Construyendo una Base
+        title: Construyendo una base
         desc: Los estudiantes construyen una estructura utilizando solamente lo suministrado. Las estructuras deben completar una tarea (alcanzar una cierta altura o soportar un cierto peso), y los estudiantes discuten la idea de ser persistente cuando las cosas se complican.
         video: C1_construyendo_cimientos
       GettingLoopy:
@@ -88,7 +88,7 @@ es:
         desc: Esta lección introduce el concepto de programación de los bucles (instruciones repetidas) atravéz de una actividad de baile. Los estudiantes aprenderan simple coreografía, despues se les dirá que la repitan.
         video: C1_getting_loopy
       RelayProgramming:
-        title: Programación de Relevos
+        title: Programación de relevos
         desc: 'Los estudiantes corren una carrera de relevos, donde aceleran por el camino para escribir un algoritmo basado en una imagen "Grafica en Papel de Programación". Ellos sólo pueden escribir una instrucción a la vez y si hay algun error en algun lugar, deben borrar todo hasta ese punto.'
         video: C2_programación_relevos
       Conditionals:
@@ -104,7 +104,7 @@ es:
         desc: Internet es una herramienta poderosa, pero a veces peligrosa. Los maestros muestran cómo mantenerse a salvo mientras se navega en Internet.
         video: C1_going_places_safely
       GraphPaperProgramming:
-        title: Programación en papel cuadriculado
+        title: Programación de hoja cuadriculada
         desc: 'Los estudiantes escriben un algoritmo (un conjunto de instrucciones) usando un conjunto de  comandos predefinidos para dirigir a sus compañeros en la reproducción de un dibujo.'
         video: C2_papel_cuadriculado
       PaperPlanes:

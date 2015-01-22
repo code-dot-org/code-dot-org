@@ -229,6 +229,7 @@
   "soundWinPoint2":"câştigă punctul 2",
   "soundWood":"lemn",
   "speed":"viteză",
+  "startSetValue":"start (rocket-height function)",
   "stopSprite":"opreşte",
   "stopSpriteN":"opreşte actorul {spriteIndex}",
   "stopTooltip":"Opreşte mişcarea unui actor.",

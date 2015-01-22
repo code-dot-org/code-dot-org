@@ -48,7 +48,7 @@ nn:
         edit-code:
           desc: Rediger kode (beta)
           MazeEC: Trinn 1
-          Webapp: Trinn 2
+          Applab: Trinn 2
           ArtistEC: Trinn 3
           StudioEC: Trinn 4
         events:
@@ -99,10 +99,11 @@ nn:
         Jigsaw: Puslespill
         MazeStep: Labyrint steg for steg
         Wordsearch: Ordsøk
-        Webapp: Webapp
+        Webapp: App Lab
         ArtistEC: Kunstneren
         TextMatch: Teksttreff
         StudioEC: Spel-lab
+        Applab: App Lab
     trophy:
       name:
         Bronze: Bronse
@@ -322,7 +323,7 @@ nn:
         maze_wordsearch_k_15: Flytt meg ein veg, så ein annan for å stave ordet OVER
         maze_wordsearch_k_16: Flytt meg en vei, så ein annan for å stave ordet UNDER
         maze_wordsearch_k_20: Dette er en test! Flytt meg en veg, så en annan for å stave ordet HISTORIE
-        webapp_ec_simple: Lag din eigen nettapp ved å bruke createHtmlBlock.
+        applab_ec_simple: Create your app by using the blocks in the toolbox.
         turtle_ec_1_2: 'Teikn eit kvadrat. MERK: bruk din favorittfarge ved å velje den i den nye «pennFarge» blokka.'
         turtle_ec_1_10: 'Du klarte det! No kan du teikne akkurat det du vil. Noen morosame idear: Ein strekmann, eit snøflak eller ein spiral. Prøv også den nye «pennStørrelse»-blokka. Ha det gøy!'
         studio_ec_sandbox: Lag ditt eige spel. Når du er ferdig, trykk Fullør for å la venane dine prøve ditt spel på sine mobilar.

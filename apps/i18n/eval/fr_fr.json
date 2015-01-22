@@ -9,7 +9,7 @@
   "rectangleBlockTitle": "rectangle (largeur, hauteur, style, couleur)",
   "reinfFeedbackMsg": "Vous pouvez appuyer sur le bouton \"Essayer encore\" pour éditer votre dessin.",
   "rotateImageBlockTitle": "rotation (degrés, image)",
-  "scaleImageBlockTitle": "échelle (facteur)",
+  "scaleImageBlockTitle": "scale (factor, image)",
   "squareBlockTitle": "carré (taille, style, couleur)",
   "starBlockTitle": "Etoile (rayon, style, couleur)",
   "radialStarBlockTitle": "étoile-radiale (points, intérieur, extérieur, style, couleur)",

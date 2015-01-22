@@ -285,5 +285,6 @@
   "whenSpriteCollidedWithTopEdge": "toca el borde superior",
   "whenUp": "Cuando flecha arriba",
   "whenUpTooltip": "Realiza las instrucciones de abajo cuando se presiona la tecla de fecha hacia arriba.",
-  "yes": "Sí"
+  "yes": "Sí",
+  "startSetValue": "crwdns27946:0crwdne27946:0"
 }

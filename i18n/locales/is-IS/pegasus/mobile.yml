@@ -3,7 +3,7 @@ is-IS:
   select_language: Vinsamlegast veldu tungumál þitt
   computer_science: Tölvunarfræði
   computer_science_edweek: Vika tölvunarfræði
-  csedweek_dates: December 8-14, 2014
+  csedweek_dates: 8.-14. desember 2014
   csedweek_banner_hoc: 'Nú styttist í <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Klukkustund kóðunar</a>. Kennarar og stjórnendur: <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">byrjið að undirbúa ykkar Klukkustund kóðunar</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Ertu tölvunarfræðikennari? Kannaðu annað efni sem er í boði í tilefni CSEdWeek</a>'
   n_have_learned_an_hoc: '<h1>#</h1><h3>hafa prófað</h3><h2>Klukkustund kóðunar</h2>'
@@ -106,9 +106,9 @@ is-IS:
   students_and_lines: '%{students} nemendur hafa lokið Klukkustund kóðunar og skrifað %{lines} línur af kóða.'
   start_hoc: Byrjaðu núna Klukkustund kóðunar
   contact_form_topic_press: Fjölmiðlar (viðtal eða erindi)
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
-  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
-  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
+  stats_michael: '"I hef <b>aldrei, aldrei</b> séð nemendur mína svona æsta í að læra." - Michael Clark, kennari'
+  stats_nina: '"Á hverjum einasta degi var niðurstaðan sú sama &mdash; 100% virkni." - Nina Nichols Peery, kennari'
+  stats_student: '"Ég vissi að þetta væri <b>einstakt tækifæri</b> á ævinni." - Mariana Alzate, 5. bekk'
   studiobar_title: "Prófa <a href='http://studio.code.org'>Kóðastúdíóið</a>"
   studiobar_elementary_title: Grunnskólanámskeið
   studiobar_elementary_body: 'Þrjú ný námskeið okkar fyrir 11 - 12 ára (K&#8209;5)'
@@ -122,8 +122,8 @@ is-IS:
   studiobar_frozen_body: Búa til undraland á ís með Önnu og Elsu
   studiobar_donate_title: Styrkja
   studiobar_donate_body: Eitt barn lærir fyrir hvern dollar sem þú gefur
-  studiobar_shop_title: Shop
-  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
+  studiobar_shop_title: Verslun
+  studiobar_shop_body: Brjóttu upp staðalímyndir. Klæðstu merkinu okkar með stolti.
   contact_form_topic_student: Ég er nemandi
   contact_form_topic_parent: Ég er foreldri
   contact_form_topic_teacher: Ég er kennari/fræðari
@@ -204,8 +204,8 @@ is-IS:
   dashboard_action_delete_yes: Já
   dashboard_action_delete_no: Nei
   dashboard_action_confirm: Eyða?
-  dashboard_action_remove: Remove
-  dashboard_action_remove_confirm: Remove?
+  dashboard_action_remove: Fjarlægja
+  dashboard_action_remove_confirm: Fjarlægja?
   dashboard_action_done: Búið
   dashboard_action_required: nauðsynlegt
   dashboard_navigation_home_page: Heimasíða kennara
@@ -246,6 +246,7 @@ is-IS:
   dashboard_students_new_section: 'Þú hefur búið til nýjan hóp! Bættu nemendum í hann með hnöppunum <b>Bæta við nemanda</b> eða <b>Bæta við mörgum nemendum</b> hér fyrir ofan.'
   dashboard_students_placeholder_name: Nafn nemanda
   dashboard_students_name: Nafn
+  dashboard_students_progress: Progress
   dashboard_students_age: Aldur
   dashboard_students_gender: Kyn
   dashboard_students_male: Karlkyns
@@ -292,6 +293,10 @@ is-IS:
   dashboard_login_picture: Mynd
   dashboard_login_none: Netfang
   dashboard_new_password: nýtt leyniorð
+  dashboard_progress_not_completed: ólokið
+  dashboard_progress_completed_too_many_blocks: lokið, of margir kubbar
+  dashboard_progress_completed_perfect: lokið, fullkomið
+  dashboard_progress_furthest_level_attempted: hæsti unninn áfangi
   stats_hoc_2013_heading: 'Ótrúlegar tölur frá síðasta ári um Klukkustund kóðunar. Á aðeins einni viku:'
   stats_hoc_2013_image_alt: Um Klukkustund kóðunar árið 2013
   dashboard_teacher: Kennari
@@ -327,7 +332,7 @@ is-IS:
   carousel_heading_robots: Lærðu að forrita með vélmennum
   carousel_heading_ide: Tækni vinsæl meðal kennara
   educator_notes: Minnispunktar leiðbeinenda
-  how_to_teach_hoc: How to Teach an Hour of Code
+  how_to_teach_hoc: Hvernig á að kenna Klukkustund kóðunar
   more_resources_educators: Fleiri tilföng fyrir kennara og leiðbeinendur
   participants: þátttakendur
   teachers_notes: Minnispunktar kennara
@@ -420,7 +425,7 @@ is-IS:
   codeorg_platformtext: Nýjustu vafrar, snjallsímar, spjaldtölvur
   codeintl_platformtext: Nýjustu vafrar, snjallsímar, spjaldtölvur
   thinkersmithspanish_platformtext: Án tölvu
-  khan_platformtext: Nýjustu vafrar
+  khan_platformtext: Fyrir nýjustu vafra
   khanes_platformtext: Fyrir nýjustu vafra
   khanpt_platformtext: Fyrir nýjustu vafra
   khanhe_platformtext: Fyrir nýjustu vafra

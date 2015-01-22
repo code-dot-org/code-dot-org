@@ -242,6 +242,7 @@ zh-TW:
   dashboard_students_new_section: '您已經建立了一個新的課程區段 ！現在可以使用上面的 <b>增加學生</b> 和 <b>增加多位學生</b> 按鈕將您的學生資料加入。'
   dashboard_students_placeholder_name: '學生姓名 '
   dashboard_students_name: 你的名字
+  dashboard_students_progress: Progress
   dashboard_students_age: 年齡
   dashboard_students_gender: 性別
   dashboard_students_male: 男性
@@ -288,6 +289,10 @@ zh-TW:
   dashboard_login_picture: 圖片
   dashboard_login_none: 電子郵件
   dashboard_new_password: 新密碼
+  dashboard_progress_not_completed: 未完成
+  dashboard_progress_completed_too_many_blocks: 完成，但使用過多積木
+  dashboard_progress_completed_perfect: 完美完成
+  dashboard_progress_furthest_level_attempted: furthest level attempted
   stats_hoc_2013_heading: 去年的一小時程式設計有令人難以置信的統計資料。在一個禮拜內：
   stats_hoc_2013_image_alt: 統計來自2013的Hour of Code
   dashboard_teacher: 教師

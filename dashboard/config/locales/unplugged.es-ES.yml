@@ -1,8 +1,8 @@
-"es":
+"es-AR":
   data:
     unplugged:
       Unplug1:
-        title: Introducción a la informática
+        title: Introducción al Arte de las Ciencias de la Computación
         desc: Esta clase dará una introducción al concepto de “Ciencias de la Computación”
           y explicará qué hace un “informático”. Los estudiantes  tendrán la oportunidad
           de asumir el rol de un informático. Al finalizar la actividad, cada estudiante
@@ -29,7 +29,7 @@
         - unplug2-es-ES
         video: Unplug2
       Unplug3:
-        title: Programación en papel cuadriculado
+        title: Programación de hoja cuadriculada
         desc: Programándose unos a otros para hacer dibujos, los estudiantes empezarán
           a entender de qué trata la programación. La clase empezará haciendo que
           los estudiantes intercambien instrucciones para colorear cuadrados en una
@@ -49,7 +49,7 @@
         - unplug4-es-ES
         video: Unplug4
       Unplug5:
-        title: funciones
+        title: Funciones
         desc: En esta clase, los estudiantes harán un collar con cuerdas, piedritas
           y una medalla especial. Seguirán una serie de tareas repetitivas, y luego
           se les pedirá que identifiquen ciertos conjuntos de “habilidades” que se
@@ -73,7 +73,7 @@
         - unplug6-es-ES
         video: Unplug6
       Unplug7:
-        title: Escritura de la canción
+        title: Escribir canciones
         desc: Leer letras de canciones puede ser una aventura intuitiva para los estudiantes.
           Vamos a tomar una actividad que hace uso de conocimientos previos para dar
           una buena clase sobre definición y llamada de funciones. Una vez que los
@@ -83,7 +83,7 @@
         - unplug7-es-ES
         video: Unplug7
       Unplug8:
-        title: Abstracción
+        title: Liberación abstracta
         desc: Vamos a combinar la rutina diaria de los estudiantes y un juego que
           trata de juegos de palabras, para que la clase aprenda sobre la efectividad
           que posee la abstracción.
@@ -91,7 +91,7 @@
         - unplug8-es-ES
         video: Unplug8
       Unplug9:
-        title: Programación de relé
+        title: Programación bajo presión
         desc: Esta lección tomará una idea de una actividad anterior (4. Programación
           en hoja cuadriculada) y el uso de esas habilidades para hacer hincapié en
           la importancia de completar los programas que funcionan con una determinada
@@ -134,7 +134,7 @@
           juegan un papel esencial.
         video: C1_plantando_semillas
       BuildingAFoundation:
-        title: Construyendo una Base
+        title: Construyendo una base
         desc: Los estudiantes construyen una estructura utilizando solamente lo suministrado.
           Las estructuras deben completar una tarea (alcanzar una cierta altura o
           soportar un cierto peso), y los estudiantes discuten la idea de ser persistente
@@ -147,7 +147,7 @@
           simple coreografía, despues se les dirá que la repitan.
         video: C1_getting_loopy
       RelayProgramming:
-        title: Programación de Relevos
+        title: Programación de relevos
         desc: Los estudiantes corren una carrera de relevos, donde aceleran por el
           camino para escribir un algoritmo basado en una imagen "Grafica en Papel
           de Programación". Ellos sólo pueden escribir una instrucción a la vez y
@@ -172,7 +172,7 @@
           muestran cómo mantenerse a salvo mientras se navega en Internet.
         video: C1_going_places_safely
       GraphPaperProgramming:
-        title: Programación en papel cuadriculado
+        title: Programación de hoja cuadriculada
         desc: Los estudiantes escriben un algoritmo (un conjunto de instrucciones)
           usando un conjunto de  comandos predefinidos para dirigir a sus compañeros
           en la reproducción de un dibujo.

@@ -186,7 +186,7 @@
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png
       4-5 artist functions multi 1:
-        Artist Functions Multiple Choice: Artist Functions Multiple Choice
+        Artist Functions Multiple Choice: Fonctions Artiste à choix Multiple
         /script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png,
           500
         Which function creates a rectangle that can change its size?: Quelle fonction
@@ -205,7 +205,7 @@
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png
       4-5 artist loops multi 2:
-        Artist Functions Multiple Choice: Artist Functions Multiple Choice
+        Artist Functions Multiple Choice: Fonctions Artiste à choix Multiple
         'Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50': 'Choisisser
           la boucle qui représente les étapes suivantes :  5, 10, 15, 20, 25, 30,
           35, 40, 45, 50'
@@ -378,10 +378,10 @@
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
       Coordinates Multi 1:
-        Video game Coordinates: Video game Coordinates
+        Video game Coordinates: Coordonnées de jeu vidéo
         Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
-        Which answer best describes the unicorn's movement?: Quelle réponse décrit
-          le mieux le mouvement de la licorne ?
+        Which answer most accurately describes the unicorn's movement?: Which answer
+          most accurately describes the unicorn's movement?
         The unicorn moves across the screen: La licorne se déplace sur l'écran
         The unicorn's y value changes: La coordonnée y de la licorne change
         The unicorn moves to the left: La licorne bouge vers la gauche
@@ -553,7 +553,7 @@
         /script_assets/k_1_images/search_images/square.png, 700: /script_assets/k_1_images/search_images/square.png,
           700
         Which word is spelled?: Quel mot est épelé?
-        SET: SET
+        SET: ENSEMBLE
         SQUARE: CARRÉ
         SOUTH: SUD
       K-1 multi 4:

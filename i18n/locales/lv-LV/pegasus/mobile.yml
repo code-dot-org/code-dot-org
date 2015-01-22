@@ -244,6 +244,7 @@ lv-LV:
   dashboard_students_new_section: 'Tu izveidoji jaunu sadaļu! Tagad pievieno skolēnus, izmantojot pogas <b>Pievienot skolēnu</b> un <b>Pievienot vairākus skolēnus</b>.'
   dashboard_students_placeholder_name: Skolēna vārds
   dashboard_students_name: Vārds
+  dashboard_students_progress: Progress
   dashboard_students_age: Vecums
   dashboard_students_gender: Dzimums
   dashboard_students_male: Vīrietis
@@ -290,6 +291,10 @@ lv-LV:
   dashboard_login_picture: Attēls
   dashboard_login_none: E-pasts
   dashboard_new_password: Jauna parole
+  dashboard_progress_not_completed: Nav pabeigts
+  dashboard_progress_completed_too_many_blocks: Pabeigts, pārāk daudz bloki
+  dashboard_progress_completed_perfect: pabeigts, ideāli
+  dashboard_progress_furthest_level_attempted: tālākais līmenis mēģināts
   stats_hoc_2013_heading: 'Neticama statistika no pagāšā gada "Programmēšanas Stundas". Nieka nedēļā:'
   stats_hoc_2013_image_alt: 'Statistika no 2013 "Programmēšanas stunda"'
   dashboard_teacher: Skolotāja

@@ -1,5 +1,5 @@
 {
-  "ACTUAL":"ជាក់ស្ដែង",
+  "ACTUAL":"call",
   "ADD":"បន្ថែម",
   "ADD_COMMENT":"បន្ថែម​មតិ",
   "ADD_PARAMETER":"បន្ថែម​ប៉ារ៉ាម៉ែត្រ",
@@ -73,7 +73,7 @@
   "EXAMPLE_DESCRIPTION":"កំណត់​ឧទាហរណ៍ជាមួយ​ដំណើរការ​ដែល​រំពឹងទុក​និង​ជាក់ស្ដែង",
   "EXPAND_ALL":"ពង្រីក​ប្លុក",
   "EXPAND_BLOCK":"ពង្រីក​ប្លុក",
-  "EXPECTED":"ដែល​រំពឹង​ទុក",
+  "EXPECTED":"result",
   "EXTERNAL_INPUTS":"ការ​បញ្ចូល​ពី​ក្រៅ",
   "FUNCTION_CREATE":"បង្កើត​អនុគមន៍",
   "FUNCTION_EDIT":"edit",

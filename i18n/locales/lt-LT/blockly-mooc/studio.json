@@ -229,6 +229,7 @@
   "soundWinPoint2":"taško laimėjimas 2",
   "soundWood":"mediena",
   "speed":"greitis",
+  "startSetValue":"start (rocket-height function)",
   "stopSprite":"sustok",
   "stopSpriteN":"sustabdyk veikėją {spriteIndex}",
   "stopTooltip":"Sustabdo veikėją.",

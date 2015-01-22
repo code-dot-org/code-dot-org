@@ -9,7 +9,7 @@
   "rectangleBlockTitle": "téglalap (szélesség, magasság, stílus, szín)",
   "reinfFeedbackMsg": "Az \"Újrapróbálom\" gombra kattintva a rajzod szerkeszthető.",
   "rotateImageBlockTitle": "forgatás (fok,kép)",
-  "scaleImageBlockTitle": "skála (mérték)",
+  "scaleImageBlockTitle": "scale (factor, image)",
   "squareBlockTitle": "négyzet (méret, stílus, szín)",
   "starBlockTitle": "csillag (sugár, stílus, szín)",
   "radialStarBlockTitle": "radiális-csillag (pontok, belső, külső, stílus, szín)",

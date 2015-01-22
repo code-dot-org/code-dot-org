@@ -31,7 +31,6 @@ locales = {
 	'is' => 'is-IS',
 	'it' => 'it-IT',
 	'ja' => 'ja-JP',
-	'kk' => 'kk-KZ',
 	'km' => 'km-KH',
 	'ko' => 'ko-KR',
 	'lt' => 'lt-LT',

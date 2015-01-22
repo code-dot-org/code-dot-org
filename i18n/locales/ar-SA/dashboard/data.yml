@@ -48,7 +48,7 @@ ar:
         edit-code:
           desc: تحرير التعليمات البرمجية (بيتا)
           MazeEC: المرحلة 1
-          Webapp: المرحلة 2
+          Applab: المرحلة 2
           ArtistEC: المرحلة 3
           StudioEC: المرحلة 4
         events:
@@ -99,10 +99,11 @@ ar:
         Jigsaw: بانوراما
         MazeStep: وضع خطوة المتاهة
         Wordsearch: البحث
-        Webapp: تطبيق الويب
+        Webapp: App Lab
         ArtistEC: الاعب
         TextMatch: تطابق النص
         StudioEC: مختبر اللعب
+        Applab: App Lab
     trophy:
       name:
         Bronze: برونزية
@@ -300,7 +301,7 @@ ar:
         studio_c3_game_6: هل يمكنك إضافة قطع لتغيير الخلفية و سرعة البطريق , ومن ثم القيام بتحريكه بالأسهم حتى تسجل نقاطاً ؟
         studio_c3_game_7: 'إنشاء الخاصة بك اللعبة. عند الانتهاء من ذلك، انقر فوق "إنهاء" للسماح للأصدقاء تجربة اللعبة الخاصة بك على الهواتف الخاصة بهم.'
         studio_playlab_1: 'البطريق يريد أن يقول "مرحبا"- هل يمكنك مساعدته؟'
-        studio_playlab_2: 'طفل الكهوف (الشخصية 1) و بنت الكهوف (الشخصية 2) يودون أن يبادلو التحية "مرحبا" إلى بعضهم البعض. هل يمكنك مساعدتهم باستخدام القطعة "تقول" مرتين؟'
+        studio_playlab_2: 'فتى الكهف (الشخصية 1) و فتاة الكهف (الشخصية 2) يودان أن يقولا "مرحبا" لبعضهم البعض. هل يمكنك مساعدتهم عبر استخدام القطعة "قل" مرتين؟'
         studio_playlab_3: 'هل يمكنك مساعدة "لاعبة التنس" الوصول إلى العلم؟'
         studio_playlab_4: 'هل يمكنك مساعدة "لاعب التنس" (الشخصية 1) الوصول إلى "لاعبة التنس" (الشخصية 2) وإصدار صوت عندما يصلها؟'
         studio_playlab_5: 'هل يمكنك أن تساعد كائن الفضاء أن يقول "تحياتي يا أبناء الأرض" عندما يتم النقر عليه؟ لا تنسى أن تنقر عليه بعد أن تقوم بالنقر على زر التشغيل'
@@ -326,7 +327,7 @@ ar:
         maze_wordsearch_k_15: 'حركني طريقاً واحداً , ثم آخر لتهجئة الكلمة "فوق"'
         maze_wordsearch_k_16: 'حركني طريقاً واحداً , ثم آخر لتهجئة الكلمة "أسفل"'
         maze_wordsearch_k_20: 'هذا اختبار ! حركني طريقاً واحداً , ثم آخر لتهجئة الكلمة "قصة"'
-        webapp_ec_simple: إنشاء تطبيق ويب الخاص بك باستخدام انشاء كتل الاكواد.
+        applab_ec_simple: Create your app by using the blocks in the toolbox.
         turtle_ec_1_2: 'الآن، ارسم مربعا. ملاحظة: استخدم لونك المفضل بانتقاء فإنه في كتلة "penColor" الجديدة.'
         turtle_ec_1_10: 'يمكنك جعلها! الآن، رسم أي شيء تريده. بعض المرح الأفكار: الشكل عصا، ندفة الثلج، أو دوامة. كما حاول كتلة "penWidth" الجديدة. استمتع!'
         studio_ec_sandbox: 'إنشاء الخاصة بك اللعبة. عند الانتهاء من ذلك، انقر فوق "إنهاء" للسماح للأصدقاء تجربة اللعبة الخاصة بك على الهواتف الخاصة بهم.'
@@ -503,7 +504,7 @@ ar:
     callout:
       text:
         drag_blocks: 'اسحب كتلة "التحرك" وثبتها تحت كتلة أخرى'
-        run: 'انقر على "تشغيل" لتجرّب برنامجك'
+        run: 'انقر على "نفذ" لتجربة برنامجك'
         watch_again: انقر هنا لمشاهدة الفيديو مرة أخرى
         gray_block_explanation: القطع باللون الرمادي لا يمكن حذفها . حل يمكنك حل اللغز بأي حال ؟
         show_code_explanation: انقر هنا لمشاهدة التعليمات البرمجية للبرنامج التي قمت بها
@@ -538,9 +539,9 @@ ar:
         frozen_circle_function_in_circle_turn: لا تنسى أن تستدير بعد إنشاء كل دائرة.
         frozen_circle_function_with_parameter_circle: 'إستخدم القطعة "إنشاء دائرة" و غيّر الحجم.'
         frozen_snowflake_branch: 'إستخدم قطعة "إنشاء فرع رقاقة الثلج"'
-        frozen_create_square: ركّب المزيد من القطع لإنشاء دائرة
+        frozen_create_square: ركّب المزيد من القطع هنا لإنشاء مربع
         playlab_drag_say: 'Drag the "say" block here and type "hello"'
-        playlab_use_twice: إستخدم هذه القطعة مرتين، وتذكر تغيير عدد الشخصيات
+        playlab_use_twice: استخدم هذه القطعة مرتين و تذكر أن تغير رقم الشخصية
         playlab_move_girl: 'Use the "move right" block to move Tennis Girl'
         playlab_play_sound: 'Add "play sound" block here'
         playlab_arrow_keys: Remember to use these to move the witch after clicking on Run
@@ -566,4 +567,4 @@ ar:
         place_length_variable: Drag the length variable here to replace the question marks
         arrows_move_actor: Use the arrows to move the actor
         right_arrow_fireball: استخدم السهم الايمن لإطلاق الكرات النارية
-        name_function: اكتب أسم وظيفتك هنا
+        name_function: اكتب اسم دالتك هنا

@@ -4,7 +4,7 @@
       name:
         test:
           'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
-          The Maze: The Maze
+          The Maze: গোলকধাঁধা
           Multi: Multi
           Match: Match
           Math Image: Math Image
@@ -48,11 +48,11 @@
           description_audience: Ages 4+ (pre-readers)
           description_short: Course 1 is designed for early readers.
         course2:
-          The Maze: The Maze
+          The Maze: গোলকধাঁধা
           Suzi: Suzi
           The Artist: শিল্পী
           Artist Debugging: Artist Debugging
-          Bounce: Bounce
+          Bounce: বল লাফানো
           'Studio: Create a Story': 'Play Lab: Create a Story'
           Artist Loops: Artist Loops
           Bee Conditionals: Bee Conditionals
@@ -64,11 +64,11 @@
           Bee Debugging: Bee Debugging
           Bee Functions: Bee Functions
           Maze Loops: Maze Loops
-          Graph Paper Programming: Graph Paper Programming
+          Graph Paper Programming: ছক-কাগজে প্রোগ্রামিং
           'Real-life Algorithms: Paper Planes': 'Real-life Algorithms: Paper Planes'
           Getting Loopy: Getting Loopy
           Relay programming: Relay programming
-          Conditionals: Conditionals
+          Conditionals: শর্তযুক্ত
           Binary Bracelets: Binary Bracelets
           The Big Event: The Big Event
           Your Digital Footprint: Your Digital Footprint
@@ -90,7 +90,7 @@
           description_audience: Ages  6+ (reading required)
           description_short: Course 2 is designed for students who can read.
         course3:
-          The Maze: The Maze
+          The Maze: গোলকধাঁধা
           'Studio: Create a Story': 'Play Lab: Create a Story'
           The Artist: শিল্পী
           title: Course 3
@@ -103,10 +103,10 @@
           Bee Debugging: Bee Debugging
           Bee Functions: Bee Functions
           Artist Functions with Params: Artist Functions with Params
-          Bounce: Bounce
+          Bounce: বল লাফানো
           Maze Conditionals: Maze Conditionals
           Artist Functions with Parameters: Artist Functions with Parameters
-          Computational Thinking: Computational Thinking
+          Computational Thinking: গণিতিক চিন্তা-ভাবনা
           Functional Suncatchers: Functional Suncatchers
           Songwriting Parameters: Songwriting Parameters
           Dice Race: Dice Race
@@ -147,7 +147,7 @@
         msm:
           title: Middle School Math
           description: Private work in progress for Middle School Math.
-          Graph Paper Programming: Graph Paper Programming
+          Graph Paper Programming: ছক-কাগজে প্রোগ্রামিং
           Assessments: Assessments
           Unit 1: Unit 1
           Unit 2: Unit 2
@@ -217,7 +217,7 @@
           'Maze: Sequence': 'Maze: Sequence'
         hourofcode:
           Maze: Maze
-          title: Hour of Code
+          title: এক ঘন্টার কোড
           description: Try the basics of computer science with characters from Angry
             Birds, Plants vs. Zombies, and Scrat from Ice Age!
           description_short: Try the basics of computer science with many fun characters!
@@ -332,7 +332,7 @@
           Defining Functions: Defining Functions
           Design Recipe: Design Recipe
           Booleans: Booleans
-          Conditionals: Conditionals
+          Conditionals: শর্তযুক্ত
           Free Play: Free Play
         algebra:
           title: Computer Science in Algebra
@@ -362,3 +362,14 @@
             Detection and the Distance Formula'
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
             (Big Game)'
+        algebrademo:
+          description: A handful of puzzles to demonstrate the environment and programming
+            language used in Code.org CS in Algebra
+          Algebra Demo: Algebra Demo
+          Evaluation Blocks: Evaluation Blocks
+          Making Pictures: Making Pictures
+          Defining Variables: Defining Variables
+          Defining Simple Functions: Defining Simple Functions
+          The Design Recipe: The Design Recipe
+        K5PD:
+          Introduction to PD: Introduction to PD

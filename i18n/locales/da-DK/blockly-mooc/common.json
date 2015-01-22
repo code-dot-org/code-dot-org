@@ -88,6 +88,6 @@
   "signup":"Tilmeld til Introduktion kursus",
   "hintHeader":"Her er et tip:",
   "genericFeedback":"Se hvordan du endte, og prøve at rette dit program.",
-  "toggleBlocksErrorMsg":"You need to correct an error in your program before it can be shown as blocks.",
+  "toggleBlocksErrorMsg":"Du skal rette en fejl i dit program, før det kan blive vist som blokke.",
   "defaultTwitterText":"Se hvad jeg har lavet"
 }

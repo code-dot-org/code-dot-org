@@ -229,6 +229,7 @@
   "soundWinPoint2": "vinne poeng 2",
   "soundWood": "tre",
   "speed": "fart",
+  "startSetValue": "start (rocket-height function)",
   "stopSprite": "stopp",
   "stopSpriteN": "stopp skuespiller {spriteIndex}",
   "stopTooltip": "Stopper en skuespillers bevegelser.",

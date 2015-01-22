@@ -1,4 +1,7 @@
 it:
+  errors:
+    messages:
+      not_saved: 'Please correct the following errors:'
   activerecord:
     errors:
       messages:
@@ -298,10 +301,10 @@ it:
     email_resend_confirm: Reinvia le istruzioni di conferma
     new_password_hint: (lascialo vuoto se non vuoi cambiarlo)
     current_password_hint: (inserisci la tua password corrente per confermare i cambiamenti)
-    delete: Delete your account
-    delete_text: Clicking the button below will delete your account.
-    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
-    delete_confirm: Are you sure you want to delete your account?
+    delete: Elimina il tuo account
+    delete_text: Cliccando sul pulsante qua sotto elimini il tuo account.
+    delete_text_teacher_note: Nota che eliminando il tuo account non verranno eliminati gli account dei tuoi studenti.
+    delete_confirm: Sei sicuro di voler eliminare il tuo account?
   user_level:
     completed: Completato
     tried: Provato
@@ -395,7 +398,7 @@ it:
   video_coming_soon: Il video è in corso di preparazione!
   share_code:
     title: 'Clicca su "Esegui" per vedere il mio programma in azione'
-    bounce_og_title: Prova la mia versione del gioco Rimbalzo
+    bounce_og_title: Prova la mia versione del Ping-Pong
     flappy_og_title: Prova la mia versione del gioco Flappy
     studio_og_title: Prova la mia versione del Gioco da Laboratorio
     check_out_what_i_made: Guarda cosa ho fatto
@@ -444,7 +447,7 @@ it:
     caption_time_ago: '%{time_ago} fa'
     header: La tua collezione
     header_playlab: Laboratorio
-    header_artist: Artista
+    header_artist: 'Artista: Sequenze e Cicli'
   landing:
     prerelease: "Questo corso è in <span class='betatext'>versione provvisoria</span>.  Significa che non è la versione finale ed è soggetto a revisioni man mano che arrivano osservazioni e vengono fatti miglioramenti."
     prerelease_hoc2014: "Questa lezione è in <span class='betatext'>versione provvisoria</span>. È soggetta a revisione man mano che arrivano osservazioni in modo da migliorarla."

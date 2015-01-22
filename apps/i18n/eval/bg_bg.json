@@ -9,7 +9,7 @@
   "rectangleBlockTitle": "правоъгълник (ширина, височина, стил, цвят)",
   "reinfFeedbackMsg": "Можете да натиснете бутона \"Опитайте отново\", ако искате да редактирате вашата рисунка.",
   "rotateImageBlockTitle": "завъртане (градуси, изображение)",
-  "scaleImageBlockTitle": "мащаб (фактор)",
+  "scaleImageBlockTitle": "scale (factor, image)",
   "squareBlockTitle": "квадрат (размер, стил, цвят)",
   "starBlockTitle": "звезда (радиус, стил, цвят)",
   "radialStarBlockTitle": "радиално-звезда (точки, вътрешна, външна, стил, цвят)",

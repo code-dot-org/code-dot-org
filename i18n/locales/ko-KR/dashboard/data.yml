@@ -48,7 +48,7 @@ ko:
         edit-code:
           desc: 코드 수정(beta)
           MazeEC: 1 단계
-          Webapp: 2 단계
+          Applab: 2 단계
           ArtistEC: 3 단계
           StudioEC: 4 단계
         events:
@@ -99,10 +99,11 @@ ko:
         Jigsaw: 퍼즐 맞추기
         MazeStep: 미로 단계별 모드
         Wordsearch: 단어 탐색
-        Webapp: 웹 앱
+        Webapp: App Lab
         ArtistEC: The Artist
         TextMatch: 글자 맞추기
         StudioEC: Play Lab
+        Applab: App Lab
     trophy:
       name:
         Bronze: 동
@@ -322,7 +323,7 @@ ko:
         maze_wordsearch_k_15: '어떤 방향으로 움직인 후에 "위"로 이동시켜주세요.'
         maze_wordsearch_k_16: '어떤 방향으로 움직인 후에 "아래"로 이동시켜주세요.'
         maze_wordsearch_k_20: '테스트입니다! 어떤 방향으로 움직인 후에 "스토리"로 이동시켜주세요.'
-        webapp_ec_simple: HtmlBlock 을 사용해 웹 앱 만들기
+        applab_ec_simple: Create your app by using the blocks in the toolbox.
         turtle_ec_1_2: '이제, 사각형을 그려보세요. 참고: 새로운 "펜 색" 블럭을 이용해 원하는 색을 고를 수 있습니다.'
         turtle_ec_1_10: '잘했습니다! 이제 그리고 싶은 것을 마음대로 그려보세요. 몇 가지 재미있는 예시: 막대기 모양, 눈꽃모양, 나선모양. 그리고 새로운 "펜 두께" 블럭을 이용해 보세요!'
         studio_ec_sandbox: 자신만의 게임을 만들어보세요. 만들기가 완료되면 마치기를 눌러 친구들의 스마트폰에서 해볼 수 있도록 할 수 있습니다.

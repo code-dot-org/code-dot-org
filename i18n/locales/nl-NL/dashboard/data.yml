@@ -48,7 +48,7 @@ nl:
         edit-code:
           desc: Bewerk Code (bèta)
           MazeEC: Niveau 1
-          Webapp: Niveau 2
+          Applab: Niveau 2
           ArtistEC: Niveau 3
           StudioEC: Niveau 4
         events:
@@ -99,10 +99,11 @@ nl:
         Jigsaw: Legpuzzel
         MazeStep: Doolhof stap voor stap
         Wordsearch: Woordzoeken
-        Webapp: Webapp
+        Webapp: App Lab
         ArtistEC: De Artiest
         TextMatch: Tekst overeenstemming
         StudioEC: Speel Lab
+        Applab: App Lab
     trophy:
       name:
         Bronze: Brons
@@ -328,7 +329,7 @@ nl:
         maze_wordsearch_k_15: Verplaats me in een richting, dan in een andere richting zodat BOVEN gespeld wordt
         maze_wordsearch_k_16: Verplaats me in een richting, dan in een andere richting zodat BENEDEN gespeld wordt
         maze_wordsearch_k_20: Dit is een test! Verplaats me in een richting, dan in een andere richting zodat VERHAAL gespeld wordt
-        webapp_ec_simple: Maak je eigen web app met het maakHtmlBlok.
+        applab_ec_simple: Create your app by using the blocks in the toolbox.
         turtle_ec_1_2: 'Teken een vierkant. OPMERKING: gebruik je favoriete kleur door deze te kiezen in het nieuwe "Penkleur" blok.'
         turtle_ec_1_10: 'Het is je gelukt! Teken nu alles wat je wilt. Wat leuke ideeën: een stok poppetje, sneeuwvlok of spiraal. Probeer ook het nieuwe "penWidth" block. Veel plezier!'
         studio_ec_sandbox: Maak je eigen spel. Wanneer je klaar bent klik op Finish om je vrienden toe te laten je spel te proberen op hun telefoons.

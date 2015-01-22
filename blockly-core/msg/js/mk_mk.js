@@ -1,6 +1,6 @@
 goog.provide('Blockly.Msg.mk_mk');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "Вистински";
+Blockly.Msg.ACTUAL = "call";
 Blockly.Msg.ADD = "Додади";
 Blockly.Msg.ADD_COMMENT = "Додади коментар";
 Blockly.Msg.ADD_PARAMETER = "Додај Параметар";
@@ -74,7 +74,7 @@ Blockly.Msg.EXAMPLE = "пример\nСокриј контекст | Барањ�
 Blockly.Msg.EXAMPLE_DESCRIPTION = "Дефинира пример ,  очекувано на фактичкото однесување\nСокриј контекст | Барање контекст\n-> Опис на пример ";
 Blockly.Msg.EXPAND_ALL = "Прошири ги блоковите";
 Blockly.Msg.EXPAND_BLOCK = "Прошири го блокот";
-Blockly.Msg.EXPECTED = "се очекува\nСокриј контекст | Барање контекст\n-> ОЧЕКУВАНИ";
+Blockly.Msg.EXPECTED = "result";
 Blockly.Msg.EXTERNAL_INPUTS = "Надворешни влезови";
 Blockly.Msg.FUNCTION_CREATE = "Креирај Функција\nСокриј контекст | Барање контекст\n-> ФУНКЦИЈА_КРЕИРАЈ";
 Blockly.Msg.FUNCTION_EDIT = "edit";

@@ -303,6 +303,7 @@
     <b>Προσθήκη πολλών μαθητών</b>.
   dashboard_students_placeholder_name: Όνομα μαθητή
   dashboard_students_name: Όνομα
+  dashboard_students_progress: Progress
   dashboard_students_age: Ηλικία
   dashboard_students_gender: Φύλο
   dashboard_students_male: Αγόρι
@@ -362,6 +363,10 @@
   dashboard_login_picture: Εικόνα
   dashboard_login_none: Ηλεκτρονικό ταχυδρομείο
   dashboard_new_password: νέος κωδικός
+  dashboard_progress_not_completed: δεν έχει ολοκληρωθεί
+  dashboard_progress_completed_too_many_blocks: ολοκληρώθηκε, πάρα πολλά μπλοκ
+  dashboard_progress_completed_perfect: ολοκληρώθηκε, τέλειο
+  dashboard_progress_furthest_level_attempted: τελευταίο επίπεδο επιχειρήθηκε
   stats_hoc_2013_heading: 'Απίστευτα στατιστικά από την περσινή ώρα του κώδικα. Σε
     μία εβδομάδα μόνο:'
   stats_hoc_2013_image_alt: Στατιστικά στοιχεία από την ώρα του κώδικα του 2013
@@ -1123,8 +1128,3 @@
   sphero_beyond_longdescription: Είστε είστε εκπαιδευτικός είτε γονέας, τα μαθήματα
     SPRK προσφέρουν στα παιδιά ένα διασκεδαστικό εντατικό μάθημα στον προγραμματισμό
     των ρομπότ, καθώς ακονίζουν τις δεξιότητές τους στα μαθηματικά και την επιστήμη.
-  dashboard_students_progress: Progress
-  dashboard_progress_not_completed: not completed
-  dashboard_progress_completed_too_many_blocks: completed, too many blocks
-  dashboard_progress_completed_perfect: completed, perfect
-  dashboard_progress_furthest_level_attempted: furthest level attempted
