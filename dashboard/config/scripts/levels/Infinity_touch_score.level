@@ -29,7 +29,10 @@
       "rightButton",
       "downButton",
       "upButton"
-    ]
+    ],
+    "maze_data": null,
+    "protaganist_sprite_index": "0",
+    "generate_function_pass_blocks": "false"
   }
 }]]></config>
   <blocks>
@@ -42,6 +45,10 @@
               <title name="DIR">1</title>
             </block>
           </next>
+        </block>
+        <block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">0</title>
+          <title name="SPRITE2">anything</title>
         </block>
         <block type="studio_whenArrow">
           <title name="VALUE">down</title>

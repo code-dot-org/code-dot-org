@@ -2702,12 +2702,23 @@ Studio.allGoalsVisited = function() {
     var goal = Studio.spriteGoals_[i];
     if (!goal.finished) {
       if (protagonistSprite) {
+        var wasGoalFinished = goal.finished;
+
         goal.finished = spriteAtGoal(protagonistSprite, goal);
+
+        // If goal was just finished, then call the "when actor touches anything handler"
+        if (! wasGoalFinished && goal.finished) {
+          var allowQueueExtension = false;
+          var prefix = 'whenSpriteCollided-' + Studio.protagonistSpriteIndex + '-';
+          callHandler(prefix + 'anything', allowQueueExtension);
+        }
+
       } else {
         goal.finished = false;
         for (var j = 0; j < Studio.sprite.length; j++) {
           if (spriteAtGoal(Studio.sprite[j], goal)) {
             goal.finished = true;
+
             break;
           }
         }
