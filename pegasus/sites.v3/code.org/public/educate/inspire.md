@@ -60,6 +60,7 @@ nav: educate_nav
 <div style='clear:both'></div>
 
 ## 2. Student of the Week and Teacher of the Month
+
 Share these inspiring stories about students and teachers who are changing the face of computer science right now. Nominate one you know.
 
 [<button>Student of the Week</button>](/sotw)&nbsp;&nbsp;[<button>Teacher of the Month</button>](/totm)
