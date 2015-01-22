@@ -375,3 +375,8 @@ en:
           The Design Recipe: The Design Recipe
         K5PD:
           Introduction to PD: Introduction to PD
+        netsim:
+          title: Internet Simulator
+          description_short: ''
+          description: ''
+          Internet Simulator: Internet Simulator

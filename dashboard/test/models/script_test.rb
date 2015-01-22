@@ -195,7 +195,7 @@ class ScriptTest < ActiveSupport::TestCase
       assert !Script.find_by_name(s).hidden?, "#{s} is hidden when it should not be"
     end
 
-    hidden_scripts = %w{edit-code events jigsaw step msm test course4pre} + ['Hour of Code']
+    hidden_scripts = %w{edit-code events jigsaw step msm test course4pre netsim} + ['Hour of Code']
     hidden_scripts.each do |s|
       assert Script.find_by_name(s).hidden?, "#{s} is not hidden when it should be"
     end

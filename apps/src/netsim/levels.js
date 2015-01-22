@@ -7,6 +7,6 @@ var msg = require('../../locale/current/netsim');
  */
 var levels = module.exports = {};
 
-levels.netsim = {
+levels.netsim_demo = {
   'freePlay': true
 };
