@@ -183,6 +183,9 @@ Blockly.ContractEditor.typesToColors = {
   'boolean': [90, 1.00, 0.4] // 336600
 };
 
+Blockly.ContractEditor.DEFAULT_OUTPUT_TYPE = 'none';
+Blockly.ContractEditor.DEFAULT_PARAMETER_TYPE = 'none';
+
 Blockly.ContractEditor.prototype.definitionBlockType = 'functional_definition';
 Blockly.ContractEditor.prototype.parameterBlockType = 'functional_parameters_get';
 
@@ -202,6 +205,7 @@ Blockly.ContractEditor.prototype.hideAndRestoreBlocks_ = function() {
 
 Blockly.ContractEditor.prototype.openAndEditFunction = function(functionName) {
   Blockly.ContractEditor.superClass_.openAndEditFunction.call(this, functionName);
+
   var exampleBlocks = Blockly.mainBlockSpace.findFunctionExamples(functionName);
   exampleBlocks.forEach(function(exampleBlock, index) {
     var exampleBlockView = new Blockly.ExampleBlockView(
@@ -211,6 +215,13 @@ Blockly.ContractEditor.prototype.openAndEditFunction = function(functionName) {
 
   this.createDefinitionHeader_();
   this.position_();
+
+  this.setTypeDropdownDefaults();
+};
+
+Blockly.ContractEditor.prototype.setTypeDropdownDefaults = function() {
+  this.inputTypeSelector.setValue(Blockly.ContractEditor.DEFAULT_PARAMETER_TYPE);
+  this.outputTypeSelector.setValue(this.functionDefinitionBlock.getOutputType() || 'none');
 };
 
 Blockly.ContractEditor.prototype.openWithNewFunction = function(opt_blockCreationCallback) {
@@ -266,9 +277,9 @@ Blockly.ContractEditor.prototype.layOutBlockSpaceItems_ = function () {
     fullWidth - FRAME_MARGIN_SIDE :
     FRAME_MARGIN_SIDE;
 
-  var trashcanOffset = (Blockly.modalBlockSpace.trashcan.HEIGHT_ - headerHeight) / 2;
-  Blockly.modalBlockSpace.trashcan.setYOffset(-trashcanOffset);
-  Blockly.modalBlockSpace.trashcan.position_();
+  var trashcanOffsetBelowBlockSpaceTop =
+    (this.modalBlockSpace.trashcan.getHeight() - headerHeight) / 2;
+  this.modalBlockSpace.trashcan.repositionBelowBlockSpaceTop(-trashcanOffsetBelowBlockSpaceTop);
 
   var currentY = 0;
 
@@ -320,7 +331,7 @@ Blockly.ContractEditor.prototype.createContractDom_ = function() {
           + '</button>'
         + '</div>'
       + '</div>';
-  var metrics = Blockly.modalBlockSpace.getMetrics();
+  var metrics = this.modalBlockSpace.getMetrics();
   this.contractDiv_.style.left = metrics.absoluteLeft + 'px';
   this.contractDiv_.style.top = metrics.absoluteTop + 'px';
   this.contractDiv_.style.width = metrics.viewWidth + 'px';
@@ -376,23 +387,51 @@ Blockly.ContractEditor.prototype.addParamsFromProcedure_ = function() {
     this.addParameter(procedureInfo.parameterNames[i], procedureInfo.parameterTypes[i]);
   }
 };
+
 Blockly.ContractEditor.prototype.initializeOutputTypeDropdown_ = function() {
   this.outputTypeSelector = this.createTypeDropdown_();
+  this.outputTypeSelector.render(this.getOutputTypeDropdownElement_());
 
   goog.events.listen(this.outputTypeSelector, goog.ui.Component.EventType.CHANGE,
-    goog.bind(this.outputTypeDropdownChange, this));
-
-  this.outputTypeSelector.render(goog.dom.getElement('outputTypeDropdown'));
+    goog.bind(this.outputTypeDropdownChange_, this));
 };
 
-Blockly.ContractEditor.prototype.outputTypeDropdownChange = function(comboBoxEvent) {
+Blockly.ContractEditor.prototype.outputTypeDropdownChange_ = function(comboBoxEvent) {
   var newType = comboBoxEvent.target.getContent();
-  this.functionDefinitionBlock.updateOutputType(newType);
+  var menuButtonRenderer = goog.ui.FlatMenuButtonRenderer.getInstance();
+  var menuButtonElement = menuButtonRenderer.getContentElement(this.getOutputTypeDropdownElement_());
+  this.setBackgroundFromHSV(menuButtonElement, Blockly.ContractEditor.typesToColors[newType]);
+
+  if (this.functionDefinitionBlock) {
+    this.functionDefinitionBlock.updateOutputType(newType);
+  }
+};
+
+Blockly.ContractEditor.prototype.getOutputTypeDropdownElement_ = function () {
+  return goog.dom.getElement('outputTypeDropdown');
+};
+
+Blockly.ContractEditor.prototype.getInputTypeDropdownElement_ = function () {
+  return goog.dom.getElement('paramTypeDropdown');
 };
 
 Blockly.ContractEditor.prototype.initializeInputTypeDropdown_ = function() {
   this.inputTypeSelector = this.createTypeDropdown_();
   this.inputTypeSelector.render(goog.dom.getElement('paramTypeDropdown'));
+
+  goog.events.listen(this.inputTypeSelector, goog.ui.Component.EventType.CHANGE,
+    goog.bind(this.inputTypeDropdownChange_, this));
+};
+
+Blockly.ContractEditor.prototype.inputTypeDropdownChange_ = function(comboBoxEvent) {
+  var newType = comboBoxEvent.target.getContent();
+  this.colorInputButtonForType_(newType);
+};
+
+Blockly.ContractEditor.prototype.colorInputButtonForType_ = function(newType) {
+  var menuButtonRenderer = goog.ui.FlatMenuButtonRenderer.getInstance();
+  var menuButtonElement = menuButtonRenderer.getContentElement(this.getInputTypeDropdownElement_());
+  this.setBackgroundFromHSV(menuButtonElement, Blockly.ContractEditor.typesToColors[newType]);
 };
 
 /**
@@ -409,7 +448,6 @@ Blockly.ContractEditor.prototype.createTypeDropdown_ = function() {
     newTypeDropdown.addItem(menuItem);
     this.setMenuItemColor_(menuItem, color);
   }, this);
-  newTypeDropdown.setDefaultCaption(Blockly.Msg.FUNCTIONAL_TYPE_LABEL);
   return newTypeDropdown;
 };
 
@@ -420,6 +458,10 @@ Blockly.ContractEditor.prototype.createTypeDropdown_ = function() {
  */
 Blockly.ContractEditor.prototype.setMenuItemColor_ = function(menuItem, hsvColor) {
   var menuItemElement = menuItem.getElement();
+  this.setBackgroundFromHSV(menuItemElement, hsvColor);
+};
+
+Blockly.ContractEditor.prototype.setBackgroundFromHSV = function (menuItemElement, hsvColor) {
   menuItemElement.style.background =
     goog.color.hsvToHex(hsvColor[0], hsvColor[1], hsvColor[2] * 255);
 };
