@@ -5,12 +5,13 @@ This uses both the existing dashboard tables (to avoid big data migrations and r
 The user-facing design/spec for this feature is here: https://docs.google.com/a/code.org/document/d/19CikyJFeIw5ER2UBKYoE5CPHAjVrWLMhG6MxGtZt8e0/edit#
 
 Store in the user properties of a "Code.org Projects" app:
-
+````
 projects: [{app_id: 'xxxxx'}, {app_id: 'yyyyy'}]
-
+````
 Each of these apps is an app (as in AppsAPI) owned by the user/storageid who owns the project.
 
 For each app, store in the shared properties:
+````
 {
  name: "My Fun Story",
  screenshot: , # I was thinking this is probably an S3 url. how are you storing images that are part of an app in applab?
@@ -25,7 +26,7 @@ For each app, store in the shared properties:
  created_at: DATE
  updated_at: DATE
 } 
-
+````
 When a user creates a project, we:
  * create an app with appropriate shared properties
  * update the user's "projects" property in the "Code.org Projects" app to add this app_id
