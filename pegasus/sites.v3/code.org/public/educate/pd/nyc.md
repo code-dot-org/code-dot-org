@@ -40,7 +40,9 @@ Breakfast and lunch will be served.
 
 #### February 28th Location
 
-Microsoft 
+Microsoft
+<br/>
+Music Box 5411 & Winter Garden 5412
 <br/>
 1 Times Square
 <br/>
@@ -55,7 +57,11 @@ Green Code.org journal
 Laptop
 
 ### Phase 4: Post Year Development
-Coming Summer 2015  	
+
+#### Save the Dates
+Option 1: 7/6/2015 - 7/10/2015 (afternoons only)
+<br/>
+Option 2: 7/8/2015 - 7/10/2015 (full days)
 
 [**Back to the top**](#top)
 

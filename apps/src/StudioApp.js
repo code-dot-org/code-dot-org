@@ -329,6 +329,7 @@ StudioApp.prototype.init = function(config) {
       codeFunctions: config.level.codeFunctions,
       categoryInfo: config.level.categoryInfo,
       startBlocks: config.level.startBlocks,
+      afterEditorReady: config.afterEditorReady,
       afterInject: config.afterInject
     });
   }

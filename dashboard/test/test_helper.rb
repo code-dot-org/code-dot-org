@@ -3,7 +3,7 @@
 #  SimpleCov.start :rails
 
 require 'minitest/reporters'
-MiniTest::Reporters.use!
+MiniTest::Reporters.use! ($stdout.tty? ? Minitest::Reporters::ProgressReporter.new : Minitest::Reporters::DefaultReporter.new)
 
 ENV["RAILS_ENV"] ||= "test"
 

@@ -1075,3 +1075,8 @@
   sphero_beyond_longdescription: Si ets educador o un pare, les lliçons SPRK donen
     als nens un divertit curs accelerat a la programació de robots de mentre  milloren
     les seves habilitats en matemàtiques i ciències.
+  dashboard_students_progress: Progress
+  dashboard_progress_not_completed: not completed
+  dashboard_progress_completed_too_many_blocks: completed, too many blocks
+  dashboard_progress_completed_perfect: completed, perfect
+  dashboard_progress_furthest_level_attempted: furthest level attempted
