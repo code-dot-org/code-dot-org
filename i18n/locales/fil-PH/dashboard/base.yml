@@ -1,4 +1,7 @@
 fil:
+  errors:
+    messages:
+      not_saved: 'Please correct the following errors:'
   activerecord:
     errors:
       messages:
@@ -162,7 +165,7 @@ fil:
     teacher_info_required: 'Teacher prizes require school name and address information:'
     teacher_email_required: 'Ang papremyo para sa mga guro ay nangangailangan ng confirmed e-mail address:'
     confirm:
-      title: Please Confirm
+      title: Paki kunpirma
       "no": Hindi
       "yes": Oo
       msg: 'Are you sure you want to claim the %{prize_name} prize?'
@@ -185,7 +188,8 @@ fil:
       choose_teacher: 'Click on the logo below to claim your prize:'
       earned: You have earned a prize! (U.S. students only)
       not_earned_title: Finish the tutorial, earn rewards (U.S. students only)
-      not_earned: 'Learn all the computer science concepts, collect all %{num_trophies} trophies, and earn real-world prizes. You can choose between 10GB of free Dropbox space, $10 in Skype credits, and free game downloads. NOTE: offer only valid to U.S. students, and only as long as supplies last.'
+      not_earned: |-
+        Pag-aralan ang konsepto ng "computer science", kolektahin ang lahat ng mga %{num_trophies} tropiya, at kunin ang mga makatotohanang premyo. Maaaring pumili sa pagitan ng 10GB ng libreng Dropbox space, $10 (sampung dollares), at libreng "game downloads". PAALALA: Ito ay pwede lamang kunin ng mga estudyanteng amerikano, hangga't hindi pa nauubos ang panustos.
       teacher:
         earned: '15 or more students collected all %{num_trophies} trophies. You have won a teacher prize! (U.S. teachers only)'
         not_earned_title: 'Teach the class, earn up to $1,000 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers only)'

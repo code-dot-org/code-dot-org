@@ -3,7 +3,7 @@
   select_language: कृपया अपनी भाषा चुनें
   computer_science: कंप्यूटर विज्ञान
   computer_science_edweek: कंप्यूटर विज्ञान शिक्षा सप्ताह
-  csedweek_dates: December 8-14, 2014
+  csedweek_dates: दिसंबर 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold"> ऑवर ऑफ़ कोड</a> आ रहा है। सभी शिक्षकों और आयोजकों को बोला रहा
     है, <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -84,25 +84,25 @@
   thanks_for_voting: मतदान के लिए धन्यवाद!
   share_on_facebook: Share on Facebook
   share_on_twitter: Share on Twitter
-  beyond_an_hour: Beyond an Hour of Code
-  get_started: Start
-  i_agree: I agree
-  participant_select: '- Select -'
-  participant_student: Student
-  participant_parent: Parent
-  participant_educator: Educator
-  participant_engineer: Software Engineer
-  participant_other: None of the Above
-  print_all: Print all
-  print_ice_art: Print your ice art
-  create_art_with_zombie: or make advanced art with zombie
-  i_am_a: I am a
-  never_spam: We'll never spam you
-  enter_country: Enter country if outside the United States
-  used_infrequent_updates: Only used for infrequent updates
-  privacy_practices_children: See our privacy practices for children
-  petition_thankyou: Thank you for signing the petition
-  continue_learning_header: Continue learning beyond One Hour
+  beyond_an_hour: कोड की एक घंटे से परे
+  get_started: शुरू करें
+  i_agree: मैं सहमत हूँ
+  participant_select: -चयन करें-
+  participant_student: छात्र
+  participant_parent: अभिभावक
+  participant_educator: शिक्षक
+  participant_engineer: सॉफ्टवेयर इंजीनियर
+  participant_other: इनमें से कोई नहीं
+  print_all: सभी को प्रिंट कर दो
+  print_ice_art: 'अपनी बर्फ कला मुद्रित करें '
+  create_art_with_zombie: 'या फिर ज़ोंबी से उन्नत कला बनाए '
+  i_am_a: मैं एक हूँ
+  never_spam: हम आपको कभीं स्पैम नही करेंगे
+  enter_country: यदि संयुक्त राज्य के बाहर देश हैं तो अपना देश डालें
+  used_infrequent_updates: केवल निराले अपडेट के लिए प्रयुक्त
+  privacy_practices_children: बच्चो के लिए हमारे गोपनीयता प्रथाओं को पढ़ें
+  petition_thankyou: 'याचिका पर हस्ताक्षर करने के लिए धन्यवाद '
+  continue_learning_header: एक घंटे के बाद भी पढ़ते रहे
   continue_learning_body: There are lots of options.  You can learn online, or at
     a local school, or summer camp.
   learn_next_level: Continue to the next level
@@ -284,6 +284,7 @@
     using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
   dashboard_students_placeholder_name: Student Name
   dashboard_students_name: नाम
+  dashboard_students_progress: Progress
   dashboard_students_age: Age
   dashboard_students_gender: Gender
   dashboard_students_male: Male
@@ -339,11 +340,15 @@
   dashboard_login_picture: Picture
   dashboard_login_none: Email
   dashboard_new_password: new password
+  dashboard_progress_not_completed: not completed
+  dashboard_progress_completed_too_many_blocks: completed, too many blocks
+  dashboard_progress_completed_perfect: completed, perfect
+  dashboard_progress_furthest_level_attempted: furthest level attempted
   stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
     week alone:'
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
   dashboard_teacher: Teacher
-  dashboard_student: Student
+  dashboard_student: छात्र
   dashboard_sections_email_question: Do all students have a valid email address?
   dashboard_sections_account_creation_question: Who creates the student's account?
   dashboard_sections_password_question: What do students use as a "password"?
@@ -1008,8 +1013,3 @@
   sphero_beyond_longdescription: Whether you're an educator or a parent, SPRK lessons
     give kids a fun crash course in programming robots while sharpening their skills
     in math and science.
-  dashboard_students_progress: Progress
-  dashboard_progress_not_completed: not completed
-  dashboard_progress_completed_too_many_blocks: completed, too many blocks
-  dashboard_progress_completed_perfect: completed, perfect
-  dashboard_progress_furthest_level_attempted: furthest level attempted

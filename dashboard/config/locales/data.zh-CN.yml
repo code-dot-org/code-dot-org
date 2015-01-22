@@ -53,6 +53,7 @@
           Webapp: 第二阶段
           ArtistEC: 第三阶段
           StudioEC: 第四阶段
+          Applab: crwdns27899:0crwdne27899:0
         events:
           desc: 反弹 (测试版)
           Bounce: 第一阶段
@@ -105,6 +106,7 @@
         ArtistEC: 艺术家
         TextMatch: 文本匹配
         StudioEC: 播放实验室
+        Applab: crwdns27901:0crwdne27901:0
     trophy:
       name:
         Bronze: 铜色
@@ -335,6 +337,7 @@
         turtle_ec_1_10: 你成功了！现在任由你随意画你喜欢的东西。你可以尝试画个火柴人、雪花、旋螺型或其他有趣的图画。还有，可别忘了试用新的
           penWidth 模块哦！玩乐愉快！
         studio_ec_sandbox: 创建你自己的游戏。当你完成后时，单击Finish（完成），让朋友在他们手机上试试你的游戏。
+        applab_ec_simple: crwdns27902:0crwdne27902:0
     levelbuilder:
       frozen line:
         instructions: 你好！我是艾伦代尔的艾莎公主。请你帮我画一条直线。

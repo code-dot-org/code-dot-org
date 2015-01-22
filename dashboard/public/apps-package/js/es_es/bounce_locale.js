@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -194,7 +194,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "noPathLeft":function(d){return "no hay camino a la izquierda"},
 "noPathRight":function(d){return "no hay camino a la derecha"},
 "numBlocksNeeded":function(d){return "Este puzzle puede resolverse con %1 bloques."},
-"pathAhead":function(d){return "camino hacia adelante"},
+"pathAhead":function(d){return "camino adelante"},
 "pathLeft":function(d){return "si hay camino a la izquierda"},
 "pathRight":function(d){return "si hay camino a la derecha"},
 "pilePresent":function(d){return "hay una pila"},
@@ -211,9 +211,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "playSoundWinPoint":function(d){return "Reproducir sonido punto ganado"},
 "playSoundWinPoint2":function(d){return "Reproducir sonido punto ganado 2"},
 "playSoundWood":function(d){return "Reproducir sonido de madera"},
-"putdownTower":function(d){return "poner en el suelo la torre"},
+"putdownTower":function(d){return "Baja la torre"},
 "reinfFeedbackMsg":function(d){return "Puede pulsar el botón \"Inténtalo de nuevo\" para volver a jugar su juego."},
-"removeSquare":function(d){return "elimina cuadrado"},
+"removeSquare":function(d){return "eliminar cuadrado"},
 "repeatUntil":function(d){return "repetir hasta"},
 "repeatUntilBlocked":function(d){return "mientras haya camino delante"},
 "repeatUntilFinish":function(d){return "repetir hasta terminar"},
@@ -248,15 +248,15 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "shareGame":function(d){return "Comparte tu juego:"},
 "turnLeft":function(d){return "girar a la izquierda"},
 "turnRight":function(d){return "girar a la derecha"},
-"turnTooltip":function(d){return "Me gira a la izquierda o a la derecha 90 grados."},
+"turnTooltip":function(d){return "Girarme a la izquierda o a la derecha 90 grados."},
 "whenBallInGoal":function(d){return "Cuando la pelota esté en la portería"},
 "whenBallInGoalTooltip":function(d){return "Ejecuta las instrucciones siguientes cuando la pelota entra en la portería."},
 "whenBallMissesPaddle":function(d){return "cuando la paleta no golpea a la pelota"},
 "whenBallMissesPaddleTooltip":function(d){return "Ejecuta las instrucciones siguientes cuando la paleta no golpea la pelota."},
 "whenDown":function(d){return "cuando la flecha apunte abajo"},
 "whenDownTooltip":function(d){return "Realiza las instrucciones de abajo cuando se presiona la tecla de fecha hacia abajo."},
-"whenGameStarts":function(d){return "cuando el juego comienza"},
-"whenGameStartsTooltip":function(d){return "Ejecutar las acciones siguientes cuando empieza el juego."},
+"whenGameStarts":function(d){return "cuando el juego comience"},
+"whenGameStartsTooltip":function(d){return "Ejecutar las acciones indicadas debajo cuando comience el juego."},
 "whenLeft":function(d){return "Cuando la izquierda flecha"},
 "whenLeftTooltip":function(d){return "Ejecuta las acciones, mostradas abajo, cuando se presiona la tecla de flecha izquierda."},
 "whenPaddleCollided":function(d){return "cuando la paleta golpea la pelota"},

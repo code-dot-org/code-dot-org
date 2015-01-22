@@ -1,4 +1,4 @@
-es:
+es-AR:
   data:
     text_match:
       Blocks to Bools 1:
@@ -34,33 +34,33 @@ es:
       Blocks to Math 1:
         Convert Blocks to Math: Convertir bloques en matemáticas
         Type out the arithmetic expression that matches this code: Escriba la expresión aritmética que coincida con este código
-        Blocks to Math 1.blocks.start_blocks, 200: Blocks to Math 1.blocks.start_blocks, 200
+        Blocks to Math 1.blocks.start_blocks, 200: Bloques a Matemáticas 1.blocks.start_blocks,200
         4 + 5: 4 + 5
         Type the arithmetic expression here: Escribe la expresión aritmética aquí
       Blocks to Math 2:
         Convert Blocks to Math: Convertir bloques en matemáticas
         Type out the arithmetic expression that matches this code: Escriba la expresión aritmética que coincida con este código
-        Blocks to Math 2.blocks.start_blocks, 200: Blocks to Math 2.blocks.start_blocks, 200
+        Blocks to Math 2.blocks.start_blocks, 200: Bloques a Matemáticas 2.blocks.start_blocks,200
         7 * 6: '7 * 6'
         Type the arithmetic expression here: Escribe la expresión aritmética aquí
       Blocks to Math 3:
         Convert Blocks to Math: Convertir bloques en matemáticas
         Type out the arithmetic expression that matches this code: Escriba la expresión aritmética que coincida con este código
-        Blocks to Math 3.blocks.start_blocks: Blocks to Math 3.blocks.start_blocks
+        Blocks to Math 3.blocks.start_blocks: Bloques a Matemáticas 3.blocks.start_blocks
         (2 * 3) - (1 + 0): '(2 * 3) - (1 + 0)'
         2 * 3 - (1 + 0): '2 * 3 - (1 + 0)'
         Type the arithmetic expression here: Escribe la expresión aritmética aquí
       Blocks to Math 4:
         Convert Blocks to Math: Convertir bloques en matemáticas
         Type out the arithmetic expression that matches this code: Escriba la expresión aritmética que coincida con este código
-        Blocks to Math 4.blocks.start_blocks: Blocks to Math 4.blocks.start_blocks
+        Blocks to Math 4.blocks.start_blocks: Bloques a matemáticas 4.blocks.start_blocks
         (5 + 8) - 12: '(5 + 8) - 12'
         5 + 8 - 12: '5 + 8 - 12'
         Type the arithmetic expression here: Escribe la expresión aritmética aquí
       Blocks to Math 5:
         Convert Blocks to Math: Convertir bloques en matemáticas
         Type out the arithmetic expression that matches this code: Escriba la expresión aritmética que coincida con este código
-        Blocks to Math 5.blocks.start_blocks: Blocks to Math 5.blocks.start_blocks
+        Blocks to Math 5.blocks.start_blocks: Bloques a matemáticas 5.blocks.start_blocks
         (-2) * (-6):
           - 
             2 * -6: '-2 * -6'
@@ -68,7 +68,7 @@ es:
       Blocks to Math 6:
         Convert Blocks to Math: Convertir bloques en matemáticas
         Type out the arithmetic expression that matches this code: Escriba la expresión aritmética que coincida con este código
-        Blocks to Math 6.blocks.start_blocks: Blocks to Math 6.blocks.start_blocks
+        Blocks to Math 6.blocks.start_blocks: Bloques a matemáticas 6.blocks.start_blocks
         ((4 - 1) * (-2)) + 12: '((4 - 1) * (-2)) + 12'
         ((4 - 1) * -2) + 12: '((4 - 1) * -2) + 12'
         (4 - 1) * (-2) + 12: '(4 - 1) * (-2) + 12'
@@ -77,7 +77,7 @@ es:
       Blocks to Math 7:
         Convert Blocks to Math: Convertir bloques en matemáticas
         Type out the arithmetic expression that matches this code: Escriba la expresión aritmética que coincida con este código
-        Blocks to Math 7.blocks.start_blocks: Blocks to Math 7.blocks.start_blocks
+        Blocks to Math 7.blocks.start_blocks: Bloques a matemáticas 7.blocks.start_blocks
         10 / (2 * (3 + 1)): '10 / (2 * (3 + 1))'
         Type the arithmetic expression here: Escribe la expresión aritmética aquí
       text match test:
@@ -89,37 +89,63 @@ es:
         9-3+4: null
         Type the arithmetic expression here: Escribe la expresión aritmética aquí
     contract_match:
+      CREATING CONTRACTS FROM EXAMPLES 1:
+        CREATING CONTRACTS FROM EXAMPLES 1: CREATING CONTRACTS FROM EXAMPLES 1
+        Write a contract for a big red triangle that is 100 pixels in size: Write a contract for a big red triangle that is 100 pixels in size
+        EXAMPLE 1.solution_blocks, 300: EXAMPLE 1.solution_blocks, 300
+        "Big Triangle|image|color:string|size:Number": Big Triangle|image|color:string|size:Number
+      Creating Contracts From Examples 2:
+        Creating Contracts From Examples 2: Creating Contracts From Examples 2
+        Write a contract for a purple square that is 15 pixels in size.: Write a contract for a purple square that is 15 pixels in size.
+        Example 2.solution_blocks, 300: Example 2.solution_blocks, 300
+        "Square|image|color:string|size:Number": Square|image|color:string|size:Number
+      Creating Contracts From Examples 3A:
+        Creating Contracts From Examples 3A: Creating Contracts From Examples 3A
+        Banner Function block: Banner Function block
+        Examples 3.solution_blocks, 300: Examples 3.solution_blocks, 300
+        "banner|image|text:string": banner|image|text:string
+      Creating Contracts From Examples 4:
+        Creating Contracts From Examples 4: Creating Contracts From Examples 4
+        Try using the "text" function to write this red text at size 40.: 'Try using the "text" function to write this red text at size 40.'
+        Examples 4.solution_blocks, 300: Examples 4.solution_blocks, 300
+        "shrink|image|image:image": shrink|image|image:image
       Design Recipe 1.contract:
         Design Recipe 1 Contract: Design Recipe 1 Contract
-        0: '? Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.'
+        0: '? Escribir el contrato para la función denominada "wide-rect" que crea un rectángulo dada la altura y el color, y que es dos veces mas ancha que alta.'
         1: ': Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.'
         "wide-rect|Image|height:Number|color:string": wide-rect|Image|height:Number|color:string
       Enter name here:
-        Enter title here: Enter title here
-        Enter prompt here: Enter prompt here
-        "Contract Name|Number|Domain1:Number|Domain2:string": Contract Name|Number|Domain1:Number|Domain2:string
+        Enter title here: Introduzca el título aquí
+        Enter prompt here: Inserte el aviso aquí
+        "Contract Name|Number|Domain1:Number|Domain2:string": Nombre del contrato|Número|Dominio1:Número|Dominio2:string
       Eval Contracts 1 B:
-        Eval Contracts 1 B: Eval Contracts 1 B
-        Write a contract for the star function: Write a contract for the star function
+        Eval Contracts 1 B!!: Eval Contracts 1 B!!
+        Write a contract for the star function: Redactar un contrato para la función de estrella
         Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks, 300
-        "star|image|radius:Number|style:string|color:string": star|image|radius:Number|style:string|color:string
+        "star|image|color:string|radius:Number|style:string": star|image|color:string|radius:Number|style:string
       Eval Contracts 2 B:
         Eval Contracts 2 B: Eval Contracts 2 B
-        Write a contract for the rotate function: Write a contract for the rotate function
+        Write a contract for the rotate function: Escribe un contrato para la función de rotar
         Eval Contracts 2 A.solution_blocks, 300: Eval Contracts 2 A.solution_blocks, 300
-        "rotate|image|degrees:Number|image:image": rotate|image|degrees:Number|image:image
+        "rotate|image|degrees:Number|image:image": rotar|imagen|grados:número|imagen:imagen
       Eval Contracts 3 B:
         Eval Contracts 3 B: Eval Contracts 3 B
-        Write a contract for the text function: Write a contract for the text function
+        Write a contract for the text function: Redactar un contrato para la función de texto
         Eval Contracts 3 A.solution_blocks, 300: Eval Contracts 3 A.solution_blocks, 300
-        "text|image|string:string|size:Number|color:string": text|image|string:string|size:Number|color:string
+        "text|image|color:string|size:Number|string:string": text|image|color:string|size:Number|string:string
       Eval Contracts 4 B:
         Eval Contracts 4 B: Eval Contracts 4 B
-        Write a contract for the scale function: Write a contract for the scale function
+        Write a contract for the scale function: Redactar un contrato para la función de escala
         Eval Contracts 4 A.solution_blocks, 300: Eval Contracts 4 A.solution_blocks, 300
         "scale|image|factor:Number|image:image": scale|image|factor:Number|image:image
       Eval Design Recipe 1.contract:
         Design Recipe 1 Contract: Design Recipe 1 Contract
-        0: '? Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.'
+        0: '? Escribir el contrato para la función denominada "wide-rect" que crea un rectángulo dada la altura y el color, y que es dos veces mas ancha que alta.'
         1: ': Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.'
         "wide-rect|Image|height:Number|color:string": wide-rect|Image|height:Number|color:string
+      Rocket Contract 1:
+        Contract for rocket-height: Contract for rocket-height
+        "Write a contract for the following question:": 'Write a contract for the following question:'
+        0: '? A rocket blasts off, traveling at 15 meters per second. Write a function called rocket-height that takes in the number of seconds that have passed since the rocket took off, and which produces the height of the rocket at that time.'
+        1: ': A rocket blasts off, traveling at 15 meters per second. Write a function called rocket-height that takes in the number of seconds that have passed since the rocket took off, and which produces the height of the rocket at that time.'
+        "rocket-height|Number|seconds:Number": rocket-height|Number|seconds:Number

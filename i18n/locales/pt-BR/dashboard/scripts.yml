@@ -314,10 +314,10 @@ pt-BR:
           "Eval: Writing Contracts": 'Eval: Escrever contratos'
           "Calc: Defining Variables": 'Cálculo: definir variáveis'
           "Play Lab: Defining Variables (Big Game)": 'Laboratório: Definição de variáveis (O Grande Jogo)'
-          "Eval: Defining Functions": 'Eval: Definir funções'
+          "Eval: Defining Functions": 'Avaliação: definir funções'
           "Unplugged: The Design Recipe": 'Offline: a receita de design'
           "Play Lab: Defining Functions": 'Laboratório: definir funções'
-          "Eval: Functions": 'Eval: Funções'
+          "Eval: Functions": 'Avaliação: funções'
           "Play Lab: Animation (Big Game)": 'Laboratório: Animação (O Grande Jogo)'
           "Unplugged: Booleans": 'Offline: booleanos'
           "Eval: Boolean Operators": 'Eval: Operadores booleanos'
@@ -327,3 +327,13 @@ pt-BR:
           "Eval: Conditionals": 'Eval: Condicionais'
           "Unplugged: Collision Detection and the Distance Formula": 'Offline: detecção de colisão e fórmula da distância'
           "Play Lab: Collision Detection (Big Game)": 'Laboratório: Detecção de colisão (O Grande Jogo)'
+        algebrademo:
+          description: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
+          Algebra Demo: Algebra Demo
+          Evaluation Blocks: Blocos de avaliação
+          Making Pictures: Making Pictures
+          Defining Variables: Definir variáveis
+          Defining Simple Functions: Defining Simple Functions
+          The Design Recipe: A receita de design
+        K5PD:
+          Introduction to PD: Introduction to PD

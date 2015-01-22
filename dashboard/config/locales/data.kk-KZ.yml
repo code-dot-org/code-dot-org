@@ -51,6 +51,7 @@
           Webapp: Stage 2
           ArtistEC: Stage 3
           StudioEC: Stage 4
+          Applab: crwdns27899:0crwdne27899:0
         events:
           desc: Bounce (beta)
           Bounce: Stage 1
@@ -103,6 +104,7 @@
         ArtistEC: The Artist
         TextMatch: Text Match
         StudioEC: Play Lab
+        Applab: crwdns27901:0crwdne27901:0
     trophy:
       name:
         Bronze: Bronze
@@ -543,6 +545,7 @@
           Have fun!'
         studio_ec_sandbox: Create your own game. When you're done, click Finish to
           let friends try your game on their phones.
+        applab_ec_simple: crwdns27902:0crwdne27902:0
     levelbuilder:
       frozen line:
         instructions: Hi! I'm Elsa of Arendelle. Help me create a single line.

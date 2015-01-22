@@ -229,6 +229,7 @@
   "soundWinPoint2": "نقطة الفوز 2",
   "soundWood": "الخشب",
   "speed": "السرعة",
+  "startSetValue": "start (rocket-height function)",
   "stopSprite": "وقف",
   "stopSpriteN": "إيقاف الصورة {spriteIndex}",
   "stopTooltip": "توقف حركة عنصر فاعل.",

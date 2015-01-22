@@ -9,7 +9,7 @@
   "rectangleBlockTitle": "obdĺžnik (šírka, výška, štýl, farba)",
   "reinfFeedbackMsg": "Môžeš stlačiť tlačítko \"Skúsiť znovu\" a upraviť svoj obrázok.",
   "rotateImageBlockTitle": "otočenie (stupne, obrázok)",
-  "scaleImageBlockTitle": "zväčšiť (faktor)",
+  "scaleImageBlockTitle": "scale (factor, image)",
   "squareBlockTitle": "štvorec (veľkosť, štýl, farba)",
   "starBlockTitle": "hviezda (polomer, štýl, farba)",
   "radialStarBlockTitle": "radial-star (points, inner, outer, style, color)",

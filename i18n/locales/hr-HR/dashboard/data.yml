@@ -48,7 +48,7 @@ hr:
         edit-code:
           desc: Uređivanje kôda (beta)
           MazeEC: Nivo 1
-          Webapp: Nivo 2
+          Applab: Nivo 2
           ArtistEC: Nivo 3
           StudioEC: Nivo 4
         events:
@@ -99,10 +99,11 @@ hr:
         Jigsaw: Slagalica
         MazeStep: Labirint korak po korak
         Wordsearch: Traženje riječi
-        Webapp: Mrežna aplikacija
+        Webapp: App Lab
         ArtistEC: Umjetnik
         TextMatch: Spajanje riječi
         StudioEC: Laboratorij igara
+        Applab: App Lab
     trophy:
       name:
         Bronze: Bronca
@@ -326,7 +327,7 @@ hr:
         maze_wordsearch_k_15: Pokreni me u jednom smjeru, a zatim u drugom da slovkam riječ ABOVE (IZNAD)
         maze_wordsearch_k_16: Pokreni me u jednom smjeru, a zatim u drugom da slovkam riječ BELOW (ISPOD)
         maze_wordsearch_k_20: Ovo je test! Pokreni me u jednom smjeru, a zatim u drugom da slovkam riječ STORY (PRIČA)
-        webapp_ec_simple: Napravi svoju mrežnu aplikaciju koristeći createHtmlBlock.
+        applab_ec_simple: Create your app by using the blocks in the toolbox.
         turtle_ec_1_2: 'Sada nacrtaj kvadrat. NAPOMENA: koristi svoju najdražu boju tako da je odabereš na novom bloku "boja Olovke".'
         turtle_ec_1_10: 'Uspio si! Sad nacrtaj što god želiš. Zgodne ideje: štapićasti čovječuljak, pahuljica ili spirala. Također isprobaj novi blok "širina olovke". Uživaj!'
         studio_ec_sandbox: Napravi svoju igricu. Kad si gotov, klikni na Kraj da omogućiš prijateljima da isprobaju tvoju igru na svojim mobitelima.

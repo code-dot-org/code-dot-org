@@ -48,7 +48,7 @@ bs:
         edit-code:
           desc: Edit Code (beta)
           MazeEC: Stage 1
-          Webapp: Stage 2
+          Applab: Stage 2
           ArtistEC: Stage 3
           StudioEC: Stage 4
         events:
@@ -99,10 +99,11 @@ bs:
         Jigsaw: Jigsaw
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
-        Webapp: Webapp
+        Webapp: App Lab
         ArtistEC: The Artist
         TextMatch: Text Match
         StudioEC: Play Lab
+        Applab: App Lab
     trophy:
       name:
         Bronze: Bronze
@@ -343,7 +344,7 @@ bs:
         maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell the word STORY
-        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        applab_ec_simple: Create your app by using the blocks in the toolbox.
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColor" block.'
         turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new "penWidth" block. Have fun!'
         studio_ec_sandbox: "Create your own game. When you're done, click Finish to let friends try your game on their phones."

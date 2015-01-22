@@ -229,6 +229,7 @@
   "soundWinPoint2":"2 pont nyerés",
   "soundWood":"fa",
   "speed":"sebesség",
+  "startSetValue":"start (rocket-height function)",
   "stopSprite":"állj",
   "stopSpriteN":"karakter megállítása {spriteIndex}",
   "stopTooltip":"Szereplő mozgásának megállítása.",

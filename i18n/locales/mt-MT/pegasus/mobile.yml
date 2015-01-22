@@ -242,6 +242,7 @@ mt-MT:
   dashboard_students_new_section: "You've created a new section! Now add your students using the <b>Add student</b> and <b>Add multiple students</b> buttons above."
   dashboard_students_placeholder_name: Student Name
   dashboard_students_name: Name
+  dashboard_students_progress: Progress
   dashboard_students_age: Age
   dashboard_students_gender: Gender
   dashboard_students_male: Male
@@ -288,6 +289,10 @@ mt-MT:
   dashboard_login_picture: Picture
   dashboard_login_none: Email
   dashboard_new_password: new password
+  dashboard_progress_not_completed: not completed
+  dashboard_progress_completed_too_many_blocks: completed, too many blocks
+  dashboard_progress_completed_perfect: completed, perfect
+  dashboard_progress_furthest_level_attempted: furthest level attempted
   stats_hoc_2013_heading: "Incredible stats from last year's Hour of Code. In one week alone:"
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
   dashboard_teacher: Teacher

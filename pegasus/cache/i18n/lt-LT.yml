@@ -282,6 +282,7 @@
     mygtukus viršuje.
   dashboard_students_placeholder_name: Mokinio vardas
   dashboard_students_name: Vardas
+  dashboard_students_progress: Progress
   dashboard_students_age: Amžius
   dashboard_students_gender: Lytis
   dashboard_students_male: Vyras
@@ -337,6 +338,10 @@
   dashboard_login_picture: Paveikslėlis
   dashboard_login_none: El. paštas
   dashboard_new_password: naujas slaptažodis
+  dashboard_progress_not_completed: nebaigtas
+  dashboard_progress_completed_too_many_blocks: baigtas, panaudota per daug blokų
+  dashboard_progress_completed_perfect: puikiai išspręsta
+  dashboard_progress_furthest_level_attempted: išmėgintas aukščiausias lygis
   stats_hoc_2013_heading: 'Neįtikėtini praėjusių metų „Programavimo valandos“ rezultatai.
     Per vieną savaitę:'
   stats_hoc_2013_image_alt: Programavimo valandos statistika nuo 2013 metų
@@ -1007,8 +1012,3 @@
   sphero_beyond_longdescription: Whether you're an educator or a parent, SPRK lessons
     give kids a fun crash course in programming robots while sharpening their skills
     in math and science.
-  dashboard_students_progress: Progress
-  dashboard_progress_not_completed: not completed
-  dashboard_progress_completed_too_many_blocks: completed, too many blocks
-  dashboard_progress_completed_perfect: completed, perfect
-  dashboard_progress_furthest_level_attempted: furthest level attempted

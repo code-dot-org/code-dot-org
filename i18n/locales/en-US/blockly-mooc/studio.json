@@ -229,6 +229,7 @@
   "soundWinPoint2":"crwdns5900:0crwdne5900:0",
   "soundWood":"crwdns5901:0crwdne5901:0",
   "speed":"crwdns5902:0crwdne5902:0",
+  "startSetValue":"crwdns27946:0crwdne27946:0",
   "stopSprite":"crwdns5240:0crwdne5240:0",
   "stopSpriteN":"crwdns5903:0{spriteIndex}crwdne5903:0",
   "stopTooltip":"crwdns5247:0crwdne5247:0",

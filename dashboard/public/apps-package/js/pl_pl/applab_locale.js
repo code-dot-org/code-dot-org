@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -96,22 +96,21 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catText":function(d){return "Tekst"},
 "catVariables":function(d){return "Zmienne"},
 "continue":function(d){return "Dalej"},
-"createHtmlBlock":function(d){return "utwórz blok html"},
-"createHtmlBlockTooltip":function(d){return "Tworzy blok kodu HTML w aplikacji."},
+"createHtmlBlock":function(d){return "create html block"},
+"createHtmlBlockTooltip":function(d){return "Creates a block of HTML in the app."},
 "finalLevel":function(d){return "Gratulacje! Rozwiązałeś końcową łamigłówkę."},
 "nextLevel":function(d){return "Gratulacje! Ukończyłeś tę łamigłówkę."},
 "no":function(d){return "Nie"},
 "numBlocksNeeded":function(d){return "Ta łamigłówka może być rozwiązana z użyciem %1 bloków."},
-"pause":function(d){return "Przerwa"},
-"reinfFeedbackMsg":function(d){return "Możesz nacisnąć przycisk Spróbuj ponownie, aby wrócić do swojej aplikacji."},
+"pause":function(d){return "Break"},
+"reinfFeedbackMsg":function(d){return "You can press the \"Try again\" button to go back to running your app."},
 "repeatForever":function(d){return "powtarzaj w nieskończoność"},
 "repeatDo":function(d){return "wykonaj"},
-"repeatForeverTooltip":function(d){return "Wykonuj czynności w tym bloku wielokrotnie, dopóki działa aplikacja."},
-"shareWebappTwitter":function(d){return "Sprawdź aplikację, którą wykonałem. Napisałem ją samodzielnie korzystając z @codeorg"},
-"shareGame":function(d){return "Podziel się swoją aplikacją:"},
-"stepIn":function(d){return "Wejdź"},
-"stepOver":function(d){return "Przejdź"},
-"stepOut":function(d){return "Wyjdź"},
-"turnBlack":function(d){return "wróć do czarnego"},
-"turnBlackTooltip":function(d){return "Przywraca czarny ekran."},
+"repeatForeverTooltip":function(d){return "Execute the actions in this block repeatedly while the app is running."},
+"shareApplabTwitter":function(d){return "Check out the app I made. I wrote it myself with @codeorg"},
+"shareGame":function(d){return "Share your app:"},
+"stepIn":function(d){return "Step in"},
+"stepOver":function(d){return "Step over"},
+"stepOut":function(d){return "Step out"},
+"viewData":function(d){return "View Data"},
 "yes":function(d){return "Tak"}};

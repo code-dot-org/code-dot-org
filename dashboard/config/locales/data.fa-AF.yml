@@ -51,6 +51,7 @@
           Webapp: مرحله 2
           ArtistEC: مرحله 3
           StudioEC: مرحله 4
+          Applab: crwdns27899:0crwdne27899:0
         events:
           desc: جهش (بتا)
           Bounce: مرحله 1
@@ -103,6 +104,7 @@
         ArtistEC: هنرمند
         TextMatch: Text Match
         StudioEC: آزمایشگاه بازی
+        Applab: crwdns27901:0crwdne27901:0
     trophy:
       name:
         Bronze: برنز
@@ -542,6 +544,7 @@
           Have fun!'
         studio_ec_sandbox: Create your own game. When you're done, click Finish to
           let friends try your game on their phones.
+        applab_ec_simple: crwdns27902:0crwdne27902:0
     levelbuilder:
       frozen line:
         instructions: سلام ! من السا هستم از آرندل . به من کمک کنید تا یک خط بکشم

@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -157,7 +157,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "atHoneycomb":function(d){return "at honeycomb"},
 "atFlower":function(d){return "at flower"},
 "avoidCowAndRemove":function(d){return "avoid the cow and remove 1"},
-"continue":function(d){return "Continue"},
+"continue":function(d){return "Nastavi"},
 "dig":function(d){return "remove 1"},
 "digTooltip":function(d){return "remove 1 unit of dirt"},
 "dirE":function(d){return "E"},
@@ -173,14 +173,14 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "place 1 unit of dirt"},
 "finalLevel":function(d){return "Congratulations! You have solved the final puzzle."},
 "flowerEmptyError":function(d){return "The flower you're on has no more nectar."},
-"get":function(d){return "get"},
+"get":function(d){return "nađi"},
 "heightParameter":function(d){return "height"},
 "holePresent":function(d){return "there is a hole"},
 "honey":function(d){return "make honey"},
 "honeyAvailable":function(d){return "honey"},
 "honeyTooltip":function(d){return "Make honey from nectar"},
 "honeycombFullError":function(d){return "This honeycomb does not have room for more honey."},
-"ifCode":function(d){return "if"},
+"ifCode":function(d){return "ako"},
 "ifInRepeatError":function(d){return "You need an \"if\" block inside a \"repeat\" block. If you're having trouble, try the previous level again to see how it worked."},
 "ifPathAhead":function(d){return "if path ahead"},
 "ifTooltip":function(d){return "If there is a path in the specified direction, then do some actions."},
@@ -231,7 +231,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "turnTooltip":function(d){return "Turns me left or right by 90 degrees."},
 "uncheckedCloudError":function(d){return "Make sure to check all clouds to see if they're flowers or honeycombs."},
 "uncheckedPurpleError":function(d){return "Make sure to check all purple flowers to see if they have nectar"},
-"whileMsg":function(d){return "while"},
+"whileMsg":function(d){return "dok"},
 "whileTooltip":function(d){return "Repeat the enclosed actions until finish point is reached."},
 "word":function(d){return "Find the word"},
 "yes":function(d){return "Yes"},

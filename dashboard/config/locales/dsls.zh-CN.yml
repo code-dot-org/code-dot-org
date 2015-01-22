@@ -122,6 +122,8 @@
         Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks,
           300
         star|image|radius:Number|style:string|color:string: star|image|radius:Number|style:string|color:string
+        Eval Contracts 1 B!!: crwdns27919:0crwdne27919:0
+        star|image|color:string|radius:Number|style:string: crwdns27920:0crwdne27920:0
       Eval Contracts 2 B:
         Eval Contracts 2 B: Eval Contracts 2 B
         Write a contract for the rotate function: Write a contract for the rotate
@@ -135,6 +137,7 @@
         Eval Contracts 3 A.solution_blocks, 300: Eval Contracts 3 A.solution_blocks,
           300
         text|image|string:string|size:Number|color:string: text|image|string:string|size:Number|color:string
+        text|image|color:string|size:Number|string:string: crwdns27921:0crwdne27921:0
       Eval Contracts 4 B:
         Eval Contracts 4 B: Eval Contracts 4 B
         Write a contract for the scale function: Write a contract for the scale function
@@ -148,3 +151,29 @@
         1: ': Write the contract for function called "wide-rect" which creates a rectangle
           of given height and color that is twice as wide as it is tall.'
         wide-rect|Image|height:Number|color:string: wide-rect|Image|height:Number|color:string
+      CREATING CONTRACTS FROM EXAMPLES 1:
+        CREATING CONTRACTS FROM EXAMPLES 1: crwdns27903:0crwdne27903:0
+        Write a contract for a big red triangle that is 100 pixels in size: crwdns27904:0crwdne27904:0
+        EXAMPLE 1.solution_blocks, 300: crwdns27905:0crwdne27905:0
+        Big Triangle|image|color:string|size:Number: crwdns27906:0crwdne27906:0
+      Creating Contracts From Examples 2:
+        Creating Contracts From Examples 2: crwdns27907:0crwdne27907:0
+        Write a contract for a purple square that is 15 pixels in size.: crwdns27908:0crwdne27908:0
+        Example 2.solution_blocks, 300: crwdns27909:0crwdne27909:0
+        Square|image|color:string|size:Number: crwdns27910:0crwdne27910:0
+      Creating Contracts From Examples 3A:
+        Creating Contracts From Examples 3A: crwdns27911:0crwdne27911:0
+        Banner Function block: crwdns27912:0crwdne27912:0
+        Examples 3.solution_blocks, 300: crwdns27913:0crwdne27913:0
+        banner|image|text:string: crwdns27914:0crwdne27914:0
+      Creating Contracts From Examples 4:
+        Creating Contracts From Examples 4: crwdns27915:0crwdne27915:0
+        Try using the "text" function to write this red text at size 40.: crwdns27916:0crwdne27916:0
+        Examples 4.solution_blocks, 300: crwdns27917:0crwdne27917:0
+        shrink|image|image:image: crwdns27918:0crwdne27918:0
+      Rocket Contract 1:
+        Contract for rocket-height: crwdns27922:0crwdne27922:0
+        'Write a contract for the following question:': crwdns27923:0crwdne27923:0
+        0: crwdns27924:0crwdne27924:0
+        1: crwdns27925:0crwdne27925:0
+        rocket-height|Number|seconds:Number: crwdns27926:0crwdne27926:0

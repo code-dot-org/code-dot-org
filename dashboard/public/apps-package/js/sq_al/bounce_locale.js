@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -255,8 +255,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenBallMissesPaddleTooltip":function(d){return "Kryej veprimet si më poshtë kur një top nuk a arrin lopatën."},
 "whenDown":function(d){return "me kursorin poshtë"},
 "whenDownTooltip":function(d){return "Kryej veprimet si më poshtë kur celësi i kursorit për poshtë të jetë i shtypur."},
-"whenGameStarts":function(d){return "when game starts"},
-"whenGameStartsTooltip":function(d){return "Execute the actions below when the game starts."},
+"whenGameStarts":function(d){return "kur loja fillon"},
+"whenGameStartsTooltip":function(d){return "Kryej veprimet më poshtë kur të fillojë loja."},
 "whenLeft":function(d){return "me kursorin e majtë"},
 "whenLeftTooltip":function(d){return "Kryej veprimet si më poshtë me  celësin e kursorit të majtë të shtypur."},
 "whenPaddleCollided":function(d){return "kur topi godet lopatën"},

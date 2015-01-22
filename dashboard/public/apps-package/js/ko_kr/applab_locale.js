@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -54,22 +54,21 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catText":function(d){return "문장"},
 "catVariables":function(d){return "변수"},
 "continue":function(d){return "계속하기"},
-"createHtmlBlock":function(d){return "html 블럭 만들기"},
-"createHtmlBlockTooltip":function(d){return "응용 프로그램에서 HTML 블럭을 만듭니다."},
+"createHtmlBlock":function(d){return "create html block"},
+"createHtmlBlockTooltip":function(d){return "Creates a block of HTML in the app."},
 "finalLevel":function(d){return "짝짝짝 축하합니다! 마지막 퍼즐을 해결했습니다."},
 "nextLevel":function(d){return "축하합니다! 퍼즐을 해결했습니다."},
 "no":function(d){return "아니요"},
 "numBlocksNeeded":function(d){return "%1 개의 블럭으로 퍼즐을 해결할 수 있습니다."},
-"pause":function(d){return "일시 정지"},
-"reinfFeedbackMsg":function(d){return "\"다시 시도하기\" 버튼을 눌러 앱으로 돌아갈 수 있습니다."},
+"pause":function(d){return "Break"},
+"reinfFeedbackMsg":function(d){return "You can press the \"Try again\" button to go back to running your app."},
 "repeatForever":function(d){return "무한반복"},
 "repeatDo":function(d){return "실행"},
-"repeatForeverTooltip":function(d){return "앱이 실행되면 이 블럭 안의 동작들을 반복 실행합니다."},
-"shareWebappTwitter":function(d){return "내가 만든 앱을 살펴보세요. @codeorg 에서 만들었습니다."},
-"shareGame":function(d){return "앱 공유하기:"},
-"stepIn":function(d){return "안쪽 단계로 들어가기"},
-"stepOver":function(d){return "단계 지나가기"},
-"stepOut":function(d){return "이 단계 밖으로 나가기"},
-"turnBlack":function(d){return "검정화면으로 변환"},
-"turnBlackTooltip":function(d){return "화면을 검게 바꿉니다."},
+"repeatForeverTooltip":function(d){return "Execute the actions in this block repeatedly while the app is running."},
+"shareApplabTwitter":function(d){return "Check out the app I made. I wrote it myself with @codeorg"},
+"shareGame":function(d){return "Share your app:"},
+"stepIn":function(d){return "Step in"},
+"stepOver":function(d){return "Step over"},
+"stepOut":function(d){return "Step out"},
+"viewData":function(d){return "View Data"},
 "yes":function(d){return "예"}};

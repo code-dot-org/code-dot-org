@@ -9,7 +9,7 @@
   "rectangleBlockTitle": "rektangel (breidd, høgde, stil, farge)",
   "reinfFeedbackMsg": "Du kan trykke knappen \"Prøv igjen\" for å redigere teikninga di.",
   "rotateImageBlockTitle": "roter (grader, bilde)",
-  "scaleImageBlockTitle": "skaler (faktor)",
+  "scaleImageBlockTitle": "scale (factor, image)",
   "squareBlockTitle": "kvadrat (størrelse, stil, farge)",
   "starBlockTitle": "stjerne (radius, stil, farge)",
   "radialStarBlockTitle": "radial-stjerne (punkter, indre, ytre, stil, farge)",

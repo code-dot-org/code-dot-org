@@ -17,13 +17,13 @@ ru:
           "Artist 1: Intro": 'Художник 1: Введение'
           Artists 2: Художник 2
           Spelling Bee: Пишущая пчела
-          Spelling Bee not blockly: Spelling Bee not blockly
+          Spelling Bee not blockly: Напиши Пчелка не используя блоки
           "Bee 1: Intro": 'Пчела 1: Введение'
           "Maze 2: Loops": 'Лабиринт 2: Циклы'
           "Bee 2: Loops": 'Пчела 2: Циклы'
-          Multi & Match: 'Multi & Match'
+          Multi & Match: Множество и соответствие
           K-1 Flappy: K-1 Flappy
-          Flappy non blockly: Flappy non blockly
+          Flappy non blockly: Flappy без использования блоков
           title: Курс 1
           Artist 2: Художник 2
           Happy Maps: Весёлые карты
@@ -100,11 +100,11 @@ ru:
           Maze Conditionals: 'Лабиринт: Условные команды'
           Artist Functions with Parameters: 'Художник: процедуры с параметрами'
           Computational Thinking: Вычислительное мышление
-          Functional Suncatchers: Functional Suncatchers
+          Functional Suncatchers: Функциональные витражи
           Songwriting Parameters: Параметры песен
-          Dice Race: Dice Race
+          Dice Race: Гонки Кубиков
           Internet: интернет
-          Crowdsourcing: Crowdsourcing
+          Crowdsourcing: Краудсорсинг
           Digital Citizenship: Цифровое гражданство
           Farmer - While Loops: 'Фермер - Цикл "Пока"'
           description: Курс 3 разработан для учеников, освоивших Курс 2. Ученики будут глубже вникать в темы, с которыми познакомились в предыдущем курсе, осваивая решение более сложных задач. К концу курса ученики создают интерактивные истории и игры, которыми они могут поделиться с другими. Рекомендовано для 4-5 классов.
@@ -132,7 +132,7 @@ ru:
           "Artist: Patterns": 'Художник: Узоры'
           Songwriting: Написание песен
           description_audience: Возраст 8+ (для закончивших Курс 2)
-          description_short: Course 3 is a follow-up to Course 2.
+          description_short: Курс 3 является продолжением Курса 2.
         msm:
           title: Математика средней школы
           description: Private work in progress for Middle School Math.
@@ -327,3 +327,13 @@ ru:
           "Eval: Conditionals": 'Eval: Conditionals'
           "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Distance Formula'
           "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
+        algebrademo:
+          description: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
+          Algebra Demo: Algebra Demo
+          Evaluation Blocks: Evaluation Blocks
+          Making Pictures: Making Pictures
+          Defining Variables: Defining Variables
+          Defining Simple Functions: Defining Simple Functions
+          The Design Recipe: The Design Recipe
+        K5PD:
+          Introduction to PD: Introduction to PD
