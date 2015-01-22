@@ -16,7 +16,7 @@ module.exports = function(grunt) {
         } catch (e) {
           var errorMsg = "Error processing localization file " + src + ": " + e;
           if(grunt.option('force')) {
-            grunt.log.warn(errorMsg)
+            grunt.log.warn(errorMsg);
           } else {
             throw new Error(errorMsg);
           }
