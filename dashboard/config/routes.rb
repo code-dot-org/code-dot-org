@@ -111,7 +111,7 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  get '/beta', to: 'home#beta', as: 'beta'
+  get '/beta', to: redirect('/')
 
   get 'reset_session', to: 'application#reset_session_endpoint'
 
