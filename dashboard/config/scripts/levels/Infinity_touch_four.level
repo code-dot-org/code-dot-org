@@ -32,8 +32,7 @@
       "downButton",
       "upButton"
     ],
-    "predraw_blocks": "<xml><block type=\"studio_setBackground\"><title name=\"VALUE\">\"snowy\"</title></block></xml>",
-    "maze_data": null
+    "predraw_blocks": "<xml><block type=\"studio_setBackground\"><title name=\"VALUE\">\"snowy\"</title></block></xml>"
   }
 }]]></config>
   <blocks>
@@ -57,6 +56,15 @@
       <xml>
         <block type="studio_move">
           <title name="DIR">1</title>
+        </block>
+        <block type="studio_move">
+          <title name="DIR">4</title>
+        </block>
+        <block type="studio_move">
+          <title name="DIR">8</title>
+        </block>
+        <block type="studio_move">
+          <title name="DIR">2</title>
         </block>
       </xml>
     </toolbox_blocks>

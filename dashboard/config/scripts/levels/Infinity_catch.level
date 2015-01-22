@@ -31,7 +31,6 @@
       "upButton"
     ],
     "predraw_blocks": "<xml><block type=\"studio_setBackground\"><title name=\"VALUE\">\"tile\"</title></block></xml>",
-    "maze_data": null,
     "generate_function_pass_blocks": "false"
   }
 }]]></config>

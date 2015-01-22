@@ -25,7 +25,6 @@
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
     "first_sprite_index": "2",
-    "maze_data": null,
     "generate_function_pass_blocks": "false"
   }
 }]]></config>
