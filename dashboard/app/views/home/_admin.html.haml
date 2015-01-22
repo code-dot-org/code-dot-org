@@ -20,6 +20,7 @@
               %li
                 = link_to("(#{t 'crud.edit'})", edit_script_path(script)) unless script.default_script?
                 = link_to(data_t_suffix('script.name', script.name, 'title'), script_level_path(script, ScriptLevel::NEXT))
-      = link_to t('builder.manage'), levels_new_path
+      = link_to t('builder.manage'), new_level_path
       %h3= link_to 'Admin Stats', admin_stats_path
-      %h3= link_to 'Gallery', admin_gallery_path
+      %h3= link_to 'Gallery', gallery_activities_path
+      %h3= link_to 'Assume Identity', assume_identity_form_path

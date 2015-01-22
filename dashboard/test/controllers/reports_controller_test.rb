@@ -220,20 +220,6 @@ class ReportsControllerTest < ActionController::TestCase
 
   generate_admin_only_tests_for :admin_stats
 
-  generate_admin_only_tests_for :admin_gallery
-
-  test "admin_gallery shows most recent 25 gallery items" do
-    sign_in @admin
-
-    100.times do
-      create(:gallery_activity)
-    end
-
-    get :admin_gallery
-
-    assert_equal 25, assigns(:gallery_activities).count
-  end
-
   test "should get level_stats" do
     get :level_stats, {:level_id => create(:level).id}
     assert_response :success
