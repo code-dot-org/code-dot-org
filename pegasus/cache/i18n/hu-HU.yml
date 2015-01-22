@@ -1061,3 +1061,8 @@
   sphero_beyond_longdescription: Akár oktató vagy akár szülő, az SPRK órák egy szórakoztató
     gyorstalpalót jelentenek a gyerekeknek a robotok programozásával, a matematikai
     és tudományos képzettségük fejlesztése közben.
+  dashboard_students_progress: Progress
+  dashboard_progress_not_completed: not completed
+  dashboard_progress_completed_too_many_blocks: completed, too many blocks
+  dashboard_progress_completed_perfect: completed, perfect
+  dashboard_progress_furthest_level_attempted: furthest level attempted
