@@ -103,7 +103,7 @@ Blockly.ContractEditor.prototype.setTypeDropdownDefaults = function() {
 Blockly.ContractEditor.prototype.openWithNewFunction = function(opt_blockCreationCallback) {
   this.ensureCreated_();
 
-  var tempFunctionDefinitionBlock = Blockly.Xml.domToBlock_(Blockly.mainBlockSpace,
+  var tempFunctionDefinitionBlock = Blockly.Xml.domToBlock(Blockly.mainBlockSpace,
     Blockly.createSvgElement('block', {type: this.definitionBlockType}));
 
   if (opt_blockCreationCallback) {
@@ -129,7 +129,7 @@ Blockly.ContractEditor.prototype.createDefinitionHeader_ = function () {
  * @private
  */
 Blockly.ContractEditor.prototype.createExampleBlock_ = function (functionDefinitionBlock) {
-  var temporaryExampleBlock = Blockly.Xml.domToBlock_(Blockly.mainBlockSpace,
+  var temporaryExampleBlock = Blockly.Xml.domToBlock(Blockly.mainBlockSpace,
     Blockly.createSvgElement('block', {type: Blockly.ContractEditor.EXAMPLE_BLOCK_TYPE}));
   var caller = Blockly.Procedures.createCallerFromDefinition(Blockly.mainBlockSpace,
     functionDefinitionBlock);

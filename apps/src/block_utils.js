@@ -89,7 +89,7 @@ exports.generateSimpleBlock = function (blockly, generator, options) {
  * @returns {*}
  */
 exports.domToBlock = function(blockDOM) {
-  return Blockly.Xml.domToBlock_(Blockly.mainBlockSpace, blockDOM);
+  return Blockly.Xml.domToBlock(Blockly.mainBlockSpace, blockDOM);
 };
 
 /**
