@@ -23,6 +23,7 @@ class Game < ActiveRecord::Base
   BOUNCE = 'bounce'
   PLAYLAB = STUDIO = 'studio'
   APPLAB = WEBAPP = 'applab'
+  NETSIM = 'netsim'
 
   def self.custom_studio
     @@game_custom_studio ||= find_by_name("CustomStudio")
@@ -115,6 +116,7 @@ class Game < ActiveRecord::Base
         StudioEC:studio
         ContractMatch
         Applab:applab
+        NetSim:netsim
       ).each_with_index do |game, id|
         name, app, intro_video = game.split ':'
         Game.create!(id: id + 1, name: name, app: app, intro_video: Video.find_by_key(intro_video))
