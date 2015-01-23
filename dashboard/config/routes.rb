@@ -1,4 +1,8 @@
 Dashboard::Application.routes.draw do
+  def redirect_to_teacher_dashboard
+    redirect CDO.code_org_url('/teacher-dashboard')
+  end
+
   resources :gallery_activities, path: '/gallery' do
     collection do
       get 'art', to: 'gallery_activities#index', app: Game::ARTIST
@@ -13,10 +17,11 @@ Dashboard::Application.routes.draw do
       get 'embed/:key', to: 'videos#embed', as: 'embed'
     end
   end
-  resources :concepts
-  resources :activities
 
-  resources :sections do
+  get 'sections/new', to: redirect_to_teacher_dashboard
+  get 'sections/:id/edit', to: redirect_to_teacher_dashboard
+
+  resources :sections, only: [:show] do
     member do
       post 'log_in'
     end
@@ -61,8 +66,6 @@ Dashboard::Application.routes.draw do
     sessions: 'sessions'
   }
 
-  post '/signup_check/username', to: 'home#check_username'
-
   root :to => "home#index"
   get '/home_insert', to: 'home#home_insert'
   get '/health_check', to: 'home#health_check'
@@ -83,16 +86,7 @@ Dashboard::Application.routes.draw do
     post 'clone', to: 'levels#clone'
   end
 
-  resources :games
-
-  get 'builder', to: 'levels#builder'
-  post 'upload_maze_level', to: 'levels#upload_maze_level'
-  post 'create_custom', to: 'levels#create_custom'
-  get 'levels/new', to: 'levels#new'
-
   resources :scripts, path: '/s/' do
-    post 'sort', to: 'scripts#sort'
-
     # /s/xxx/level/yyy
     resources :script_levels, as: :levels, only: [:show], path: "/level", format: false do
       get 'solution', to: 'script_levels#solution'
@@ -133,18 +127,13 @@ Dashboard::Application.routes.draw do
   get '/jigsaw/:chapter', to: 'script_levels#show', script_id: Script::JIGSAW_ID.to_s, format: false
 
 
-  resources :followers, only: [:create, :index]
-  get '/followers/:teacher_user_id/accept', to: 'followers#accept', as: 'follower_accept'
-  post '/followers/create_student', to: 'followers#create_student', as: 'create_student'
-  get '/followers/manage', to: 'followers#manage', as: 'manage_followers'
-  get '/followers/sections', to: 'followers#sections', as: 'sections_followers'
-
-  # change student password
-  get '/followers/change_password/:user_id', to: 'followers#student_edit_password', as: 'student_edit_password'
-  post '/followers/save_password', to: 'followers#student_update_password', as: 'student_update_password'
-
-  post '/followers/add_to_section', to: 'followers#add_to_section', as: 'add_to_section'
+  resources :followers, only: [:create]
   post '/followers/remove', to: 'followers#remove', as: 'remove_follower'
+
+  # old teacher dashboard should redirect to new teacher dashboard
+  get '/followers', to: redirect_to_teacher_dashboard
+  get '/followers/:action', to: redirect_to_teacher_dashboard
+
   get '/join(/:section_code)', to: 'followers#student_user_new', as: 'student_user_new'
   post '/join/:section_code', to: 'followers#student_register', as: 'student_register'
 
@@ -162,7 +151,7 @@ Dashboard::Application.routes.draw do
   get '/admin/lookup_section', to: 'reports#lookup_section', as: 'lookup_section'
   post '/admin/lookup_section', to: 'reports#lookup_section'
   get '/stats/usage/:user_id', to: 'reports#usage', as: 'usage'
-  get '/stats/students', to: 'reports#students', as: 'student_usage'
+  get '/stats/students', to: redirect_to_teacher_dashboard
   get '/stats/:user_id', to: 'reports#user_stats', as: 'user_stats'
   get '/stats/level/:level_id', to: 'reports#level_stats', as: 'level_stats'
   get '/popup/stats', to: 'reports#header_stats', as: 'header_stats'
