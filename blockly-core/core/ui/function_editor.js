@@ -122,7 +122,7 @@ Blockly.FunctionEditor.prototype.addParamsFromProcedure_ = function() {
 Blockly.FunctionEditor.prototype.openWithNewFunction = function(opt_blockCreationCallback) {
   this.ensureCreated_();
 
-  var tempFunctionDefinitionBlock = Blockly.Xml.domToBlock_(Blockly.mainBlockSpace,
+  var tempFunctionDefinitionBlock = Blockly.Xml.domToBlock(Blockly.mainBlockSpace,
     Blockly.createSvgElement('block', {type: this.definitionBlockType}));
   tempFunctionDefinitionBlock.userCreated = true;
   if (opt_blockCreationCallback) {
@@ -292,14 +292,14 @@ Blockly.FunctionEditor.prototype.hideAndRestoreBlocks_ = function() {
  * Moves a block in the modal BlockSpace to the main BlockSpace.
  * Note: destroys the existing Block object in the process
  * @param blockToMove
- * @private
+ * @protected
  */
 Blockly.FunctionEditor.prototype.moveToMainBlockSpace_ = function(blockToMove) {
   blockToMove.setUserVisible(false);
   blockToMove.setMovable(true);
-  var dom = Blockly.Xml.blockToDom_(blockToMove);
+  var dom = Blockly.Xml.blockToDom(blockToMove);
   blockToMove.dispose(false, false, true);
-  Blockly.Xml.domToBlock_(Blockly.mainBlockSpace, dom);
+  Blockly.Xml.domToBlock(Blockly.mainBlockSpace, dom);
 };
 
 /**
@@ -310,9 +310,9 @@ Blockly.FunctionEditor.prototype.moveToMainBlockSpace_ = function(blockToMove) {
  */
 Blockly.FunctionEditor.prototype.moveToModalBlockSpace_ = function(blockToMove) {
   blockToMove.setUserVisible(true);
-  var dom = Blockly.Xml.blockToDom_(blockToMove);
+  var dom = Blockly.Xml.blockToDom(blockToMove);
   blockToMove.dispose(false, false, true);
-  var newCopyOfBlock = Blockly.Xml.domToBlock_(this.modalBlockSpace, dom);
+  var newCopyOfBlock = Blockly.Xml.domToBlock(this.modalBlockSpace, dom);
   newCopyOfBlock.moveTo(Blockly.RTL
     ? this.modalBlockSpace.getMetrics().viewWidth - FRAME_MARGIN_SIDE
     : FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);
