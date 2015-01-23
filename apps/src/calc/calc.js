@@ -27,7 +27,6 @@ var commonMsg = require('../../locale/current/common');
 var calcMsg = require('../../locale/current/calc');
 var skins = require('../skins');
 var levels = require('./levels');
-var codegen = require('../codegen');
 var api = require('./api');
 var page = require('../templates/page.html');
 var dom = require('../dom');
@@ -196,31 +195,6 @@ Calc.resetButtonClick = function () {
   clearSvgUserExpression();
 };
 
-
-function evalCode (code) {
-  try {
-    codegen.evalWith(code, {
-      StudioApp: studioApp,
-      Calc: api
-    });
-  } catch (e) {
-    // Infinity is thrown if we detect an infinite loop. In that case we'll
-    // stop further execution, animate what occured before the infinite loop,
-    // and analyze success/failure based on what was drawn.
-    // Otherwise, abnormal termination is a user error.
-    if (e !== Infinity) {
-      // call window.onerror so that we get new relic collection.  prepend with
-      // UserCode so that it's clear this is in eval'ed code.
-      if (window.onerror) {
-        window.onerror("UserCode:" + e.message, document.URL, 0);
-      }
-      if (console && console.log) {
-        console.log(e);
-      }
-    }
-  }
-}
-
 /**
  * Generate a set of expressions from the blocks currently in the workspace.
  * @returns  an object in which keys are expression names (or COMPUTE_NAME for
@@ -278,7 +252,7 @@ Calc.execute = function() {
     var user = appState.userSet.computeEquation();
     var target = appState.targetSet.computeEquation();
 
-    if (!appState.result && !hasVariablesOrFunctions && user &&
+    if (!appState.result && !hasVariablesOrFunctions && user.expression &&
         user.expression.isEquivalentTo(target && target.expression)) {
       appState.testResults = TestResults.APP_SPECIFIC_FAIL;
       appState.message = calcMsg.equivalentExpression();
@@ -308,17 +282,27 @@ Calc.execute = function() {
     Calc.step();
   } else {
     clearSvgUserExpression();
-    appState.userSet.sortedEquations().forEach(function (userEquation, index) {
-      var targetEquation = appState.targetSet.getEquation(userEquation.name);
-      // get the expression, diffing against ourself if it doesnt exist
-      var expected = targetEquation ?
-        targetEquation.expression : userEquation.expression;
 
-      var tokenList = userEquation.expression ?
-        userEquation.expression.getTokenListDiff(expected) : [];
-      displayEquation('userExpression', userEquation.name, tokenList, index,
-        'errorToken');
-    });
+    // in single functino mode, we're only going to highlight the differences
+    // in evaluation
+    var hasSingleFunction = appState.targetSet.singleFunction() !== null;
+
+    if (appState.userSet.computeEquation().expression !== null) {
+      appState.userSet.sortedEquations().forEach(function (userEquation, index) {
+        var targetEquation, tokenList;
+
+        if (hasSingleFunction) {
+          targetEquation = userEquation;
+        } else {
+          targetEquation = appState.targetSet.getEquation(userEquation.name) ||
+            userEquation;
+        }
+
+        tokenList = userEquation.expression.getTokenListDiff(targetEquation.expression);
+        displayEquation('userExpression', userEquation.name, tokenList, index,
+          'errorToken');
+      });
+    }
 
     timeoutList.setTimeout(function () {
       stopAnimatingAndDisplayFeedback();
