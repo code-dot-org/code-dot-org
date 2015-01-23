@@ -64,6 +64,7 @@ Blockly.ContractEditor.DEFAULT_PARAMETER_TYPE = 'none';
 
 Blockly.ContractEditor.prototype.definitionBlockType = 'functional_definition';
 Blockly.ContractEditor.prototype.parameterBlockType = 'functional_parameters_get';
+Blockly.FunctionEditor.prototype.headerString = Blockly.Msg.CONTRACT_EDITOR_HEADER;
 
 Blockly.ContractEditor.prototype.create_ = function() {
   Blockly.ContractEditor.superClass_.create_.call(this);
