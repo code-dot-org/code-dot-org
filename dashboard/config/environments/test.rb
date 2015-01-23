@@ -46,5 +46,5 @@ Dashboard::Application.configure do
 
   # see stack traces around sql queries in the log
   # off by default because it slows things down
-#  ActiveRecordQueryTrace.enabled = true
+  ActiveRecordQueryTrace.enabled = false
 end

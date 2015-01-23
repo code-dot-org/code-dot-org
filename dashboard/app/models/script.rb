@@ -46,38 +46,39 @@ class Script < ActiveRecord::Base
     candidate_level
   end
 
-  def self.redis
-    @@redis ||= CDO.level_sources_redis_url ? Redis.connect(url:CDO.level_sources_redis_url) : Hash.new
+  # For all scripts, cache all related information (levels, etc),
+  # indexed by both id and name. This is cached both in a class
+  # variable (ie. in memory in the worker process) and in a
+  # distributed cache (Rails.cache)
+  @@script_cache = nil
+  SCRIPT_CACHE_KEY = 'script-cache'
+  SCRIPT_CACHE_TTL = 12.hours
+  
+  def self.script_cache_to_cache
+    Rails.cache.write(SCRIPT_CACHE_KEY, script_cache_from_db, expires_in: SCRIPT_CACHE_TTL)
   end
 
-  def self.script_cache_from_redis
-    return nil
-    if marshalled = self.redis['script-cache']
-      Script.connection # rails doesn't load the mysql libraries unless you ask it to, this confuses Marshal
-      Marshal.load marshalled
-    end
-  end
-
-  def self.script_cache_to_redis
-    redis['script-cache'] = Marshal.dump(script_cache_from_db)
+  def self.script_cache_from_cache
+    Script.connection
+    [ScriptLevel, Level, Game, Concept, Callout, Video,
+     Artist, Blockly].each {|k| k.new} # make sure all possible loaded objects are completely loaded
+    Rails.cache.read SCRIPT_CACHE_KEY
   end
 
   def self.script_cache_from_db
     {}.tap do |cache|
-        [TWENTY_HOUR_ID,
-         FLAPPY_ID, PLAYLAB_NAME, HOC_NAME, FROZEN_NAME,
-         COURSE1_NAME, COURSE2_NAME, COURSE3_NAME, COURSE3_NAME].each do |id|
-          find_by = (id.to_i.to_s == id.to_s) ? :id : :name
-          script = Script.includes([{script_levels: [{level: [:game, :concepts] }, :stage, :callouts]}, :stages]).
-            find_by(find_by => id)
-          cache[script.name] = script
-          cache[script.id.to_s] = script
-        end
+      Script.all.pluck(:id).each do |script_id|
+        script = Script.includes([{script_levels: [{level: [:game, :concepts] }, :stage, :callouts]}, :stages]).find(script_id)
+        
+        cache[script.name] = script
+        cache[script.id.to_s] = script
+      end
     end
   end
 
   def self.script_cache
-    @@script_cache ||= script_cache_from_redis || script_cache_from_db
+    @@script_cache ||=
+      script_cache_from_cache || script_cache_from_db
   end
 
   def self.get_from_cache(id)
@@ -99,10 +100,6 @@ class Script < ActiveRecord::Base
     else
       name
     end
-  end
-
-  def script_levels_from_game(game_id)
-    self.script_levels.includes(:script).joins(:level).where(levels: {game_id: game_id})
   end
 
   def multiple_games?
