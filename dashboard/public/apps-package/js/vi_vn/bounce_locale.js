@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -203,7 +203,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "playSoundGoal2":function(d){return "phát âm thanh ghi bàn 2"},
 "playSoundHit":function(d){return "phát âm thanh va chạm"},
 "playSoundLosePoint":function(d){return "phát âm thanh mất điểm"},
-"playSoundLosePoint2":function(d){return "phát 2 lần âm thanh mất điểm"},
+"playSoundLosePoint2":function(d){return "phát âm thanh mất điểm 2"},
 "playSoundRetro":function(d){return "phát âm thanh retro"},
 "playSoundRubber":function(d){return "phát âm thanh cao su"},
 "playSoundSlap":function(d){return "phát âm thanh vỗ tay"},
@@ -232,16 +232,16 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setBallSpeedNormal":function(d){return "thiết lập tốc độ bóng bình thường"},
 "setBallSpeedFast":function(d){return "thiết lập tốc độ bóng nhanh"},
 "setBallSpeedVeryFast":function(d){return "thiết lập tốc độ bóng rất nhanh"},
-"setBallSpeedTooltip":function(d){return "Thiết lập tốc độ cho bóng"},
+"setBallSpeedTooltip":function(d){return "Thiết lập tốc độ của bóng"},
 "setPaddleRandom":function(d){return "thiết lập mặt đập bóng ngẫu nhiên"},
 "setPaddleHardcourt":function(d){return "thiết lập độ cứng mặt đập bóng"},
 "setPaddleRetro":function(d){return "thiết lập mặt phía sau"},
 "setPaddleTooltip":function(d){return "Chọn hình cho mái chèo"},
 "setPaddleSpeedRandom":function(d){return "Thiết lập mái chèo tốc độ ngẫu nhiên"},
-"setPaddleSpeedVerySlow":function(d){return "Thiết lập tốc độ rất chậm cho mái chèo"},
+"setPaddleSpeedVerySlow":function(d){return "Thiết lập mái chèo tốc độ rất chậm"},
 "setPaddleSpeedSlow":function(d){return "Thiết lập mái chèo tốc độ chậm"},
-"setPaddleSpeedNormal":function(d){return "Thiết lập tốc độ mái chèo bình thường"},
-"setPaddleSpeedFast":function(d){return "Thiết lập tốc độ cho mái chèo nhanh"},
+"setPaddleSpeedNormal":function(d){return "Thiết lập mái chèo tốc độ bình thường"},
+"setPaddleSpeedFast":function(d){return "Thiết lập  mái chèo tốc độ nhanh"},
 "setPaddleSpeedVeryFast":function(d){return "Thiết lập mái chèo tốc độ rất nhanh"},
 "setPaddleSpeedTooltip":function(d){return "Đặt tốc độ của các mái chèo"},
 "shareBounceTwitter":function(d){return "Kiểm tra lại \"trò chơi tưng bóng\" tôi đã làm. Tôi viết nó cho chính mình @codeorg"},

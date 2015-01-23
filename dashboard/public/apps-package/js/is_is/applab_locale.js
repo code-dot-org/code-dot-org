@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -54,21 +54,22 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catText":function(d){return "texti"},
 "catVariables":function(d){return "Breytur"},
 "continue":function(d){return "Halda áfram"},
-"createHtmlBlock":function(d){return "create html block"},
-"createHtmlBlockTooltip":function(d){return "Creates a block of HTML in the app."},
+"createHtmlBlock":function(d){return "búa til html"},
+"createHtmlBlockTooltip":function(d){return "Býr til bálk af HTML kóða í appinu."},
 "finalLevel":function(d){return "Til hamingju! Þú hefur leyst síðustu þrautina."},
 "nextLevel":function(d){return "Til hamingju! Þú hefur lokið við þessa þraut."},
 "no":function(d){return "Nei"},
 "numBlocksNeeded":function(d){return "Þessa þraut er hægt að leysa með %1 kubbum."},
-"pause":function(d){return "Break"},
-"reinfFeedbackMsg":function(d){return "You can press the \"Try again\" button to go back to running your app."},
+"pause":function(d){return "Rof"},
+"reinfFeedbackMsg":function(d){return "Þú getur smellt á \"Reyna aftur\" hnappinn til að fara aftur í að keyra appið þitt."},
 "repeatForever":function(d){return "endurtaka endalaust"},
 "repeatDo":function(d){return "gera"},
-"repeatForeverTooltip":function(d){return "Execute the actions in this block repeatedly while the app is running."},
-"shareApplabTwitter":function(d){return "Check out the app I made. I wrote it myself with @codeorg"},
-"shareGame":function(d){return "Share your app:"},
-"stepIn":function(d){return "Step in"},
-"stepOver":function(d){return "Step over"},
-"stepOut":function(d){return "Step out"},
-"viewData":function(d){return "View Data"},
+"repeatForeverTooltip":function(d){return "Gera aðgerðirnar í þessari stæðu aftur og aftur á meðan appið keyrir."},
+"shareWebappTwitter":function(d){return "Kíktu á appið sem ég bjó til. Ég skrifaði það sjálf/ur með @codeorg"},
+"shareGame":function(d){return "Deila appinu þínu:"},
+"stepIn":function(d){return "Stíga inn í"},
+"stepOver":function(d){return "Stíga yfir"},
+"stepOut":function(d){return "Stíga út úr"},
+"turnBlack":function(d){return "lita svart"},
+"turnBlackTooltip":function(d){return "Gerir skjáinn svartan."},
 "yes":function(d){return "Já"}};

@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -156,7 +156,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "compute":function(d){return "вычислить"},
 "equivalentExpression":function(d){return "Попробуйте переназначить ваши аргументы, чтобы получить точно такое же выражение."},
-"extraTopBlocks":function(d){return "У вас есть неприсоединенные блоки. Вы хотите подключить их к блоку \"Вычислить\"?"},
+"extraTopBlocks":function(d){return "У вас есть не присоединенные блоки. Вы хотите подключить их к блоку \"Вычислить\"?"},
 "goal":function(d){return "Цель:"},
-"reinfFeedbackMsg":function(d){return "Вот ваш сюжет! Продолжайте работать над ним, или перейдите к следующей головоломке!"},
+"reinfFeedbackMsg":function(d){return "Вот ваш сюжет! Продолжайте работать над ним, или перейдите к следующей задаче!"},
 "yourExpression":function(d){return "Ваше выражение:"}};

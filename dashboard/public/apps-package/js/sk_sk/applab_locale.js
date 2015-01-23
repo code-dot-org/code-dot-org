@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -126,21 +126,22 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catText":function(d){return "Text"},
 "catVariables":function(d){return "Premenné"},
 "continue":function(d){return "Pokračovať"},
-"createHtmlBlock":function(d){return "create html block"},
-"createHtmlBlockTooltip":function(d){return "Creates a block of HTML in the app."},
+"createHtmlBlock":function(d){return "vytvor html blok"},
+"createHtmlBlockTooltip":function(d){return "Vytvorí HTML blok v aplikácii."},
 "finalLevel":function(d){return "Gratulujem! Vyriešil si poslednú úlohu."},
 "nextLevel":function(d){return "Gratulujem! Vyriešil si hádanku."},
 "no":function(d){return "Nie"},
 "numBlocksNeeded":function(d){return "Táto hádanka môže byť vyriešená s %1 blokmi."},
-"pause":function(d){return "Break"},
-"reinfFeedbackMsg":function(d){return "You can press the \"Try again\" button to go back to running your app."},
+"pause":function(d){return "Prerušiť"},
+"reinfFeedbackMsg":function(d){return "Stlačením tlačítka \"Skúsiť znovu\" sa môžeš vrátiť ku spusteniu svojej aplikácie."},
 "repeatForever":function(d){return "opakovať donekonečna"},
 "repeatDo":function(d){return "vykonaj"},
-"repeatForeverTooltip":function(d){return "Execute the actions in this block repeatedly while the app is running."},
-"shareApplabTwitter":function(d){return "Check out the app I made. I wrote it myself with @codeorg"},
-"shareGame":function(d){return "Share your app:"},
-"stepIn":function(d){return "Step in"},
-"stepOver":function(d){return "Step over"},
-"stepOut":function(d){return "Step out"},
-"viewData":function(d){return "View Data"},
+"repeatForeverTooltip":function(d){return "Akcie v tomto bloku sa budú opakovane vykonávať počas behu aplikácie."},
+"shareWebappTwitter":function(d){return "Pozri sa na aplikáciu, ktorú som urobil. Napísal som to sám s @codeorg"},
+"shareGame":function(d){return "Zdieľaj svoju aplikáciu:"},
+"stepIn":function(d){return "Krok do"},
+"stepOver":function(d){return "Krok cez"},
+"stepOut":function(d){return "Krok von"},
+"turnBlack":function(d){return "nastav čiernu"},
+"turnBlackTooltip":function(d){return "Nastaví čiernu farbu obrazovky."},
 "yes":function(d){return "Áno"}};

@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -157,16 +157,16 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "চালিয়ে যান"},
 "doCode":function(d){return "করা"},
 "elseCode":function(d){return "আর"},
-"endGame":function(d){return "খেলা শেষ করুন"},
-"endGameTooltip":function(d){return "খেলা শেষ করে।"},
+"endGame":function(d){return "end game"},
+"endGameTooltip":function(d){return "Ends the game."},
 "finalLevel":function(d){return "Congratulations! You have solved the final puzzle."},
-"flap":function(d){return "পাখা ঝাপ্টান"},
-"flapRandom":function(d){return "এলোমেলো পরিমানে পাখা ঝাপ্টান"},
-"flapVerySmall":function(d){return "খুব সামান্য পরিমানে পাখা ঝাপ্টান"},
-"flapSmall":function(d){return "সামান্য পরিমানে পাখা ঝাপ্টান"},
-"flapNormal":function(d){return "সাধারণ পরিমানে পাখা ঝাপ্টান"},
-"flapLarge":function(d){return "অনেক পাখা ঝাপ্টান"},
-"flapVeryLarge":function(d){return "অনেক বেশি পরিমানে পাখা ঝাপ্টান"},
+"flap":function(d){return "flap"},
+"flapRandom":function(d){return "flap a random amount"},
+"flapVerySmall":function(d){return "flap a very small amount"},
+"flapSmall":function(d){return "flap a small amount"},
+"flapNormal":function(d){return "flap a normal amount"},
+"flapLarge":function(d){return "flap a large amount"},
+"flapVeryLarge":function(d){return "flap a very large amount"},
 "flapTooltip":function(d){return "Fly Flappy upwards."},
 "flappySpecificFail":function(d){return "Your code looks good - it will flap with each click. But you need to click many times to flap to the target."},
 "incrementPlayerScore":function(d){return "score a point"},
