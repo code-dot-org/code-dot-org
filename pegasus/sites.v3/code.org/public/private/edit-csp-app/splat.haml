@@ -18,7 +18,7 @@
         %td
           #{table_name}
         %td
-          %a{href:"/edit-csp-table/#{app_id}/#{table_name}", target:"_blank"}
+          %a{href:"/private/edit-csp-table/#{app_id}/#{table_name}", target:"_blank"}
             view
     %tr
       %td
@@ -32,7 +32,7 @@
     function(e) {
       var tableName = document.getElementById('table-name-input').value;
       if (tableName) {
-        window.open("/edit-csp-table/#{app_id}/" + tableName, "_blank");
+        window.open("/private/edit-csp-table/#{app_id}/" + tableName, "_blank");
       }
     }
   );

@@ -100,14 +100,6 @@ SQL
     end
   end
 
-  ADMIN_GALLERY_PER_PAGE = 25
-  def admin_gallery
-    authorize! :read, :reports
-
-    @gallery_activities = GalleryActivity.order(id: :desc).page(params[:page]).per(ADMIN_GALLERY_PER_PAGE)
-  end
-
-
   def students
     redirect_to teacher_dashboard_url
   end
