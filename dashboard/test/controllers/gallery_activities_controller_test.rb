@@ -4,10 +4,14 @@ require 'test_helper'
 class GalleryActivitiesControllerTest < ActionController::TestCase 
   setup do
     @user = create(:user)
-    @activity = create(:activity, user: @user, level: create(:level, game: Game.find_by_app(Game::ARTIST)))
+    @activity = create(:activity, user: @user,
+                       level: create(:level, game: Game.find_by_app(Game::ARTIST)),
+                       level_source: create(:level_source, level_source_image: create(:level_source_image)))
     @gallery_activity = create(:gallery_activity, user: @user, activity: @activity, autosaved: false)
 
-    @playlab_activity = create(:activity, user: @user, level: create(:level, game: Game.find_by_app(Game::PLAYLAB)))
+    @playlab_activity = create(:activity, user: @user,
+                               level: create(:level, game: Game.find_by_app(Game::PLAYLAB)),
+                               level_source: create(:level_source, level_source_image: create(:level_source_image)))
     @playlab_gallery_activity = create(:gallery_activity, user: @user, activity: @playlab_activity, autosaved: false)
 
     @new_activity = create(:activity, user: @user, level: create(:level, game: Game.find_by_app(Game::PLAYLAB)))
@@ -42,6 +46,7 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
     assert_equal [@gallery_activity], assigns(:gallery_activities)
   end
 
+
   test "should show index with only apps" do
     get :index, app: Game::PLAYLAB, page: 1
 
@@ -49,6 +54,20 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
 
     # does not include the autosaved one
     assert_equal [@playlab_gallery_activity], assigns(:gallery_activities)
+  end
+
+  test "should show index if gallery activity belongs to deleted user" do
+    u = @playlab_gallery_activity.user
+    u.destroy
+    @playlab_gallery_activity.reload
+    
+    get :index, page: 1
+
+    assert_response :success
+
+    assert_equal [@gallery_activity], assigns(:artist_gallery_activities)
+
+    assert_equal [@playlab_gallery_activity], assigns(:playlab_gallery_activities)
   end
 
   test "should show index with thousands of pictures with a delimiter in the count" do

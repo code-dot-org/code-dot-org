@@ -116,6 +116,7 @@ class LevelsController < ApplicationController
     if type_class <= Studio
       params[:level][:maze_data][0][0] = 16 # studio must have at least 1 actor
       params[:level][:soft_buttons] = nil
+      params[:level][:timeout_after_when_run] = true
       params[:level][:success_condition] = Studio.default_success_condition
       params[:level][:failure_condition] = Studio.default_failure_condition
     end

@@ -20,22 +20,27 @@ en:
         Eval Contracts 1 BX: Eval Contracts 1 BX
         Eval Contracts 1 B!: Eval Contracts 1 B!
         Eval Contracts 1 B!!: Eval Contracts 1 B!!
+        Star Contract: Star Contract
       Eval Contracts 2 B:
         Eval Contracts 2 B: Eval Contracts 2 B
         Write a contract for the rotate function: Write a contract for the rotate function
         Eval Contracts 2 A.solution_blocks, 300: Eval Contracts 2 A.solution_blocks, 300
         rotate|image|degrees:Number|image:image: rotate|image|degrees:Number|image:image
+        rotate|image|image:image|degrees:Number: rotate|image|image:image|degrees:Number
+        Rotate Contract: Rotate Contract
       Eval Contracts 3 B:
         Eval Contracts 3 B: Eval Contracts 3 B
         Write a contract for the text function: Write a contract for the text function
         Eval Contracts 3 A.solution_blocks, 300: Eval Contracts 3 A.solution_blocks, 300
         text|image|string:string|size:Number|color:string: text|image|string:string|size:Number|color:string
         text|image|color:string|size:Number|string:string: text|image|color:string|size:Number|string:string
+        Text Contract: Text Contract
       Eval Contracts 4 B:
         Eval Contracts 4 B: Eval Contracts 4 B
         Write a contract for the scale function: Write a contract for the scale function
         Eval Contracts 4 A.solution_blocks, 300: Eval Contracts 4 A.solution_blocks, 300
         scale|image|factor:Number|image:image: scale|image|factor:Number|image:image
+        Scale Contract: Scale Contract
       Design Recipe 1.contract:
         Design Recipe 1 Contract: Design Recipe 1 Contract
         ? Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.
