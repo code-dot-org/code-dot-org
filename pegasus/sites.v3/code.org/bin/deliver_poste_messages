@@ -10,9 +10,6 @@ BATCH_SIZE = 6000
 MAX_THREAD_COUNT = 30
 MIN_MESSAGES_PER_THREAD = 50
 
-POSTE_DB = Sequel.connect(CDO.pegasus_db_writer.sub('mysql:', 'mysql2:'), max_connections:MAX_THREAD_COUNT)
-#POSTE_DB.loggers << $log
-
 SMTP_OPTIONS = {
   address:CDO.poste_smtp_server,
   port:587,
@@ -268,8 +265,9 @@ def main()
         puts "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
       rescue Net::SMTPFatalError => e
         puts "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
-      #rescue => e
-        #puts "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
+      rescue => e
+        puts "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
+        raise
       end
 
       POSTE_DB[:poste_deliveries].where(id:delivery[:id]).update(sent_at:DateTime.now)

@@ -1451,9 +1451,9 @@ Blockly.Blocks.functional_example = {init:function() {
   this.setHSV(94, 0.84, 0.6);
   this.setFunctional(!0, {headerHeight:0, rowBuffer:3});
   this.setFunctionalOutput(!1);
-  this.appendDummyInput().appendTitle(Blockly.Msg.EXAMPLE).appendTitle("(" + [Blockly.Msg.EXPECTED, Blockly.Msg.ACTUAL].join(", ") + ")");
-  this.appendFunctionalInput("EXPECTED").setAlign(Blockly.ALIGN_CENTRE);
-  this.appendFunctionalInput("ACTUAL").setAlign(Blockly.ALIGN_CENTRE).setInline(!0);
+  this.appendDummyInput().appendTitle(Blockly.Msg.EXAMPLE).appendTitle("(" + [Blockly.Msg.ACTUAL, Blockly.Msg.EXPECTED].join(", ") + ")");
+  this.appendFunctionalInput("ACTUAL").setAlign(Blockly.ALIGN_CENTRE);
+  this.appendFunctionalInput("EXPECTED").setAlign(Blockly.ALIGN_CENTRE).setInline(!0);
   this.setTooltip(Blockly.Msg.EXAMPLE_DESCRIPTION)
 }, mutationToDom:function() {
 }, domToMutation:function(a) {

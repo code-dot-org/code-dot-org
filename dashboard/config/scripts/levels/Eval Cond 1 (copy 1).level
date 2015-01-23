@@ -34,7 +34,7 @@
         </block>
         <block type="functional_display" inline="false" deletable="false" movable="false">
           <functional_input name="ARG1">
-            <block type="functional_cond_2" inline="false" editable="false" movable="false">
+            <block type="functional_cond" inline="false" editable="false" movable="false">
               <functional_input name="COND0">
                 <block type="functional_greater_than" inline="false" editable="false" movable="false">
                   <functional_input name="ARG1">
@@ -94,7 +94,7 @@
         <block type="functional_greater_than" inline="false"/>
         <block type="functional_less_than" inline="false"/>
         <block type="functional_number_equals" inline="false"/>
-        <block type="functional_cond_2" inline="false"/>
+        <block type="functional_cond" inline="false"/>
         <block type="functional_call">
           <mutation name="temperature"/>
         </block>
@@ -123,7 +123,7 @@
         </block>
         <block type="functional_display" inline="false" deletable="false" movable="false">
           <functional_input name="ARG1">
-            <block type="functional_cond_2" inline="false">
+            <block type="functional_cond" inline="false">
               <functional_input name="COND0">
                 <block type="functional_greater_than" inline="false">
                   <functional_input name="ARG1">

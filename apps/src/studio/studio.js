@@ -1077,8 +1077,9 @@ Studio.init = function(config) {
   config.makeUrl = "http://code.org/studio";
   config.makeImage = studioApp.assetUrl('media/promo.png');
 
-  // Disable "show code" button in feedback dialog when workspace is hidden
-  config.enableShowCode = !config.level.embed && studioApp.editCode;
+  // Disable "show code" button in feedback dialog and workspace.
+  // Note - if turned back on, be sure it remains hidden when config.level.embed
+  config.enableShowCode = false;
   config.varsInGlobals = true;
   config.generateFunctionPassBlocks = !!config.level.generateFunctionPassBlocks;
 
