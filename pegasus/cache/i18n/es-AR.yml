@@ -1072,8 +1072,8 @@
   sphero_beyond_longdescription: Si eres un educador o un padre, las lecciones SPRK
     proveen a los niños un divertido curso intensivo de programación de robots, y
     permite mejorar habilidades en matemáticas y ciencias.
-  dashboard_students_progress: Progress
-  dashboard_progress_not_completed: not completed
-  dashboard_progress_completed_too_many_blocks: completed, too many blocks
-  dashboard_progress_completed_perfect: completed, perfect
-  dashboard_progress_furthest_level_attempted: furthest level attempted
+  dashboard_students_progress: crwdns27938:0crwdne27938:0
+  dashboard_progress_not_completed: crwdns27939:0crwdne27939:0
+  dashboard_progress_completed_too_many_blocks: crwdns27940:0crwdne27940:0
+  dashboard_progress_completed_perfect: crwdns27941:0crwdne27941:0
+  dashboard_progress_furthest_level_attempted: crwdns27942:0crwdne27942:0

@@ -1,5 +1,5 @@
 {
-  "ACTUAL": "dejanska vrednost",
+  "ACTUAL": "call",
   "ADD": "Dodaj",
   "ADD_COMMENT": "Komentiraj",
   "ADD_PARAMETER": "Dodaj parameter",
@@ -73,7 +73,7 @@
   "EXAMPLE_DESCRIPTION": "Definira primer s pričakovanim in dejanskim vedenjem",
   "EXPAND_ALL": "Razširi bloke",
   "EXPAND_BLOCK": "Razširi blok",
-  "EXPECTED": "pričakovano",
+  "EXPECTED": "result",
   "EXTERNAL_INPUTS": "Zunanji vnosi",
   "FUNCTION_CREATE": "Ustvarite funkcijo",
   "FUNCTION_EDIT": "uredi",

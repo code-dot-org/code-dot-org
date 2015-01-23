@@ -1,6 +1,6 @@
 goog.provide('Blockly.Msg.uk_ua');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "фактичне";
+Blockly.Msg.ACTUAL = "call";
 Blockly.Msg.ADD = "Додати";
 Blockly.Msg.ADD_COMMENT = "Додати коментар";
 Blockly.Msg.ADD_PARAMETER = "Додати параметр";
@@ -74,7 +74,7 @@ Blockly.Msg.EXAMPLE = "Приклад";
 Blockly.Msg.EXAMPLE_DESCRIPTION = "Визначає приклад з очікуваної та фактичної поведінки";
 Blockly.Msg.EXPAND_ALL = "Розгорнути блоки";
 Blockly.Msg.EXPAND_BLOCK = "Розгорнути блок";
-Blockly.Msg.EXPECTED = "очікувалося";
+Blockly.Msg.EXPECTED = "result";
 Blockly.Msg.EXTERNAL_INPUTS = "Зовнішні входи";
 Blockly.Msg.FUNCTION_CREATE = "Створити функцію";
 Blockly.Msg.FUNCTION_EDIT = "редагувати";

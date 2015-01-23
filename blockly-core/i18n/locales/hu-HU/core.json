@@ -1,5 +1,5 @@
 {
-  "ACTUAL": "tényleges",
+  "ACTUAL": "call",
   "ADD": "Hozzáad",
   "ADD_COMMENT": "Megjegyzés hozzáadása",
   "ADD_PARAMETER": "Paraméter hozzáadása",
@@ -73,7 +73,7 @@
   "EXAMPLE_DESCRIPTION": "Egy példa meghatározása várt és tényleges viselkedéssel",
   "EXPAND_ALL": "Blokkok Kibontása",
   "EXPAND_BLOCK": "Blokk kibontása",
-  "EXPECTED": "várható",
+  "EXPECTED": "result",
   "EXTERNAL_INPUTS": "Külső kapcsolatok",
   "FUNCTION_CREATE": "Függvény létrehozása",
   "FUNCTION_EDIT": "szerkeszt",

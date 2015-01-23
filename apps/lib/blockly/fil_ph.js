@@ -1,6 +1,6 @@
 goog.provide('Blockly.Msg.fil_ph');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "Aktwal";
+Blockly.Msg.ACTUAL = "call";
 Blockly.Msg.ADD = "Dagdagan";
 Blockly.Msg.ADD_COMMENT = "Magdagdag ng komento";
 Blockly.Msg.ADD_PARAMETER = "Magdagdag ng parameter";
@@ -74,7 +74,7 @@ Blockly.Msg.EXAMPLE = "Halimbawa";
 Blockly.Msg.EXAMPLE_DESCRIPTION = "Tinutukoy ang isang halimbawa  na may inaasahang at aktwal na pagbabago";
 Blockly.Msg.EXPAND_ALL = "Palawakin ang Blocks";
 Blockly.Msg.EXPAND_BLOCK = "Palawakin ang Block";
-Blockly.Msg.EXPECTED = "inaasahan";
+Blockly.Msg.EXPECTED = "result";
 Blockly.Msg.EXTERNAL_INPUTS = "Panlabas na Inputs";
 Blockly.Msg.FUNCTION_CREATE = "Gumawa ng Function";
 Blockly.Msg.FUNCTION_EDIT = "edit";

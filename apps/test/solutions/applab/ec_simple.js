@@ -36,6 +36,26 @@ module.exports = {
         result: true,
         testResult: TestResults.FREE_PLAY
       },
+    },
+    {
+      description: "getText and setText on text labels.",
+      editCode: true,
+      xml:
+          "createTextLabel('idTxt1', '');" +
+          "createTextLabel('idTxt2', '');" +
+          "setText('idTxt1', 'test-value');" +
+          "setText('idTxt2', getText('idTxt1'));",
+      runBeforeClick: function (assert) {
+        // add a completion on timeout since this is a freeplay level
+        setTimeout(function () {
+          assert(document.getElementById('idTxt2').innerText === 'test-value');
+          Applab.onPuzzleComplete();
+        }, 100);
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
     }
   ]
 };
