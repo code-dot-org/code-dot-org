@@ -161,6 +161,12 @@ StudioApp.prototype.configure = function (options) {
   this.editCode = options.level && options.level.editCode;
   this.usingBlockly_ = !this.editCode;
 
+  /** @member {boolean} Usually true; only false if this app breaks the
+   * conventional visualization+editor layout, and needs to skip much of
+   * StudioApp's layout control code (e.g. netsim)
+   */
+  this.usesStandardLayout_ = !options.usesCustomLayout;
+
   // TODO (bbuchanan) : Replace this editorless-hack with setting an editor enum
   // or (even better) inject an appropriate editor-adaptor.
   if (options.isEditorless) {
@@ -711,14 +717,16 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
 *  Resizes the blockly workspace.
 */
 StudioApp.prototype.onResize = function() {
-  var visualizationColumn = document.getElementById('visualizationColumn');
-  var gameWidth = visualizationColumn.getBoundingClientRect().width;
 
-  var blocklyDiv = document.getElementById('blockly');
-  var codeWorkspace = document.getElementById('codeWorkspace');
-
-  // resize either blockly or codeWorkspace
-  var div = this.editCode ? codeWorkspace : blocklyDiv;
+  // First, grab the main app container
+  // This is inconsistently named across apps right now
+  // TODO (bbuchanan) : Unify parent app container names
+  var div = document.getElementById('appcontainer');
+  if (!div && this.editCode) {
+    div = document.getElementById('codeWorkspace');
+  } else if (!div && this.isUsingBlockly()) {
+    div = document.getElementById('blockly');
+  }
 
   var divParent = div.parentNode;
   var parentStyle = window.getComputedStyle(divParent);
@@ -730,38 +738,43 @@ StudioApp.prototype.onResize = function() {
   var headersHeight = parseInt(window.getComputedStyle(headers).height, 10);
 
   div.style.top = divParent.offsetTop + 'px';
-  var fullWorkspaceWidth = parentWidth - (gameWidth + WORKSPACE_PLAYSPACE_GAP);
-  var oldWidth = parseInt(div.style.width, 10) || div.getBoundingClientRect().width;
+
+  var fullWorkspaceWidth = parentWidth;
+  if (this.usesStandardLayout_) {
+    var visualizationColumn = document.getElementById('visualizationColumn');
+    var gameWidth = visualizationColumn.getBoundingClientRect().width;
+    fullWorkspaceWidth = parentWidth - (gameWidth + WORKSPACE_PLAYSPACE_GAP);
+
+    // Keep blocks static relative to the right edge in RTL mode
+    var oldWidth = parseInt(div.style.width, 10) || div.getBoundingClientRect().width;
+    if (this.isUsingBlockly() && Blockly.RTL && (fullWorkspaceWidth - oldWidth !== 0)) {
+      Blockly.mainBlockSpace.getTopBlocks().forEach(function (topBlock) {
+        topBlock.moveBy(fullWorkspaceWidth - oldWidth, 0);
+      });
+    }
+
+    if (this.isRtl()) {
+      div.style.marginRight = (gameWidth + WORKSPACE_PLAYSPACE_GAP) + 'px';
+    }
+    else {
+      div.style.marginLeft = (gameWidth + WORKSPACE_PLAYSPACE_GAP) + 'px';
+    }
+    if (this.editCode) {
+      // Position the inner codeTextbox element below the headers
+      var codeTextbox = document.getElementById('codeTextbox');
+      codeTextbox.style.height = (parentHeight - headersHeight) + 'px';
+      codeTextbox.style.width = fullWorkspaceWidth + 'px';
+      codeTextbox.style.top = headersHeight + 'px';
+
+      // The outer codeWorkspace element height should match its parent:
+      div.style.height = parentHeight + 'px';
+    } else {
+      // reduce height by headers height because blockly isn't aware of headers
+      // and will size its svg element to be too tall
+      div.style.height = (parentHeight - headersHeight) + 'px';
+    }
+  }
   div.style.width = fullWorkspaceWidth + 'px';
-
-  // Keep blocks static relative to the right edge in RTL mode
-  if (this.isUsingBlockly() && Blockly.RTL && (fullWorkspaceWidth - oldWidth !== 0)) {
-    Blockly.mainBlockSpace.getTopBlocks().forEach(function(topBlock) {
-      topBlock.moveBy(fullWorkspaceWidth - oldWidth, 0);
-    });
-  }
-
-  if (this.isRtl()) {
-    div.style.marginRight = (gameWidth + WORKSPACE_PLAYSPACE_GAP) + 'px';
-  }
-  else {
-    div.style.marginLeft = (gameWidth + WORKSPACE_PLAYSPACE_GAP) + 'px';
-  }
-  if (this.editCode) {
-    // Position the inner codeTextbox element below the headers
-    var codeTextbox = document.getElementById('codeTextbox');
-    codeTextbox.style.height = (parentHeight - headersHeight) + 'px';
-    codeTextbox.style.width = fullWorkspaceWidth + 'px';
-    codeTextbox.style.top = headersHeight + 'px';
-
-    // The outer codeWorkspace element height should match its parent:
-    div.style.height = parentHeight + 'px';
-  } else {
-    // reduce height by headers height because blockly isn't aware of headers
-    // and will size its svg element to be too tall
-    div.style.height = (parentHeight - headersHeight) + 'px';
-  }
-
   this.resizeHeaders(fullWorkspaceWidth);
 };
 
@@ -771,33 +784,46 @@ StudioApp.prototype.onResize = function() {
 // |                 |         <--------- workspaceWidth ---------->         |
 // |         <---------------- fullWorkspaceWidth ----------------->         |
 StudioApp.prototype.resizeHeaders = function (fullWorkspaceWidth) {
-  var minWorkspaceWidthForShowCode = this.editCode ? 250 : 450;
   var toolboxWidth = 0;
-  if (this.editCode) {
-    // If in the droplet editor, but not using blocks, keep categoryWidth at 0
-    if (this.editor.currentlyUsingBlocks) {
-      // Set toolboxWidth based on the block palette width:
-      var categories = document.querySelector('.droplet-palette-wrapper');
-      toolboxWidth = parseInt(window.getComputedStyle(categories).width, 10);
+  var showCodeWidth = 0;
+
+  var headersDiv = document.getElementById('headers');
+  if (headersDiv) {
+    headersDiv.style.width = fullWorkspaceWidth + 'px';
+  }
+
+  var toolboxHeader = document.getElementById('toolbox-header');
+  if (toolboxHeader) {
+    if (this.editCode) {
+      // If in the droplet editor, but not using blocks, keep categoryWidth at 0
+      if (this.editor.currentlyUsingBlocks) {
+        // Set toolboxWidth based on the block palette width:
+        var categories = document.querySelector('.droplet-palette-wrapper');
+        toolboxWidth = parseInt(window.getComputedStyle(categories).width, 10);
+      }
+    } else if (this.isUsingBlockly()) {
+      toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
     }
-  } else if (this.isUsingBlockly()) {
-    toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
+    toolboxHeader.style.width = toolboxWidth + 'px';
   }
 
   var showCodeHeader = document.getElementById('show-code-header');
-  var showCodeWidth = 0;
-  if (this.enableShowCode &&
-      (fullWorkspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
-    showCodeWidth = parseInt(window.getComputedStyle(showCodeHeader).width, 10);
-    showCodeHeader.style.display = "";
-  } else {
-    showCodeHeader.style.display = "none";
+  if (showCodeHeader) {
+    var minWorkspaceWidthForShowCode = this.editCode ? 250 : 450;
+    if (this.enableShowCode &&
+        (fullWorkspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
+      showCodeWidth = parseInt(window.getComputedStyle(showCodeHeader).width, 10);
+      showCodeHeader.style.display = "";
+    } else {
+      showCodeHeader.style.display = "none";
+    }
   }
 
-  document.getElementById('headers').style.width = fullWorkspaceWidth + 'px';
-  document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
-  document.getElementById('workspace-header').style.width =
-    (fullWorkspaceWidth - toolboxWidth - showCodeWidth) + 'px';
+  var workspaceHeader = document.getElementById('workspace-header');
+  if (workspaceHeader) {
+    workspaceHeader.style.width =
+        (fullWorkspaceWidth - toolboxWidth - showCodeWidth) + 'px';
+  }
 };
 
 /**
@@ -1052,47 +1078,49 @@ StudioApp.prototype.setConfigValues_ = function (config) {
 StudioApp.prototype.configureDom_ = function (config) {
   var container = document.getElementById(config.containerId);
   container.innerHTML = config.html;
-  var runButton = container.querySelector('#runButton');
-  var resetButton = container.querySelector('#resetButton');
-  var throttledRunClick = _.debounce(this.runButtonClick, 250, true);
-  dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
-  dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
+  if (this.usesStandardLayout_) {
+    var runButton = container.querySelector('#runButton');
+    var resetButton = container.querySelector('#resetButton');
+    var throttledRunClick = _.debounce(this.runButtonClick, 250, true);
+    dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
+    dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
 
-  var belowViz = document.getElementById('belowVisualization');
-  var referenceArea = document.getElementById('reference_area');
-  if (referenceArea) {
-    belowViz.appendChild(referenceArea);
-  }
-
-  var visualizationColumn = document.getElementById('visualizationColumn');
-  var visualization = document.getElementById('visualization');
-
-  // center game screen in embed mode
-  if(config.embed) {
-    visualizationColumn.style.margin = "0 auto";
-  }
-
-  if (this.isUsingBlockly() && config.level.edit_blocks) {
-    // Set a class on the main blockly div so CSS can style blocks differently
-    Blockly.addClass_(container.querySelector('#blockly'), 'edit');
-    // If in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "3000px";
-    // Modify the arrangement of toolbox blocks so categories align left
-    if (config.level.edit_blocks == "toolbox_blocks") {
-      this.blockYCoordinateInterval = 80;
-      config.blockArrangement = { category : { x: 20 } };
+    var belowViz = document.getElementById('belowVisualization');
+    var referenceArea = document.getElementById('reference_area');
+    if (referenceArea) {
+      belowViz.appendChild(referenceArea);
     }
-    // Enable param & var editing in levelbuilder, regardless of level setting
-    config.level.disableParamEditing = false;
-    config.level.disableVariableEditing = false;
-  } else if (!config.hideSource) {
-    visualizationColumn.style.minHeight = this.MIN_WORKSPACE_HEIGHT + 'px';
-  }
 
-  if (!config.embed && !this.share) {
-    // Make the visualization responsive to screen size, except on share page.
-    visualization.className += " responsive";
-    visualizationColumn.className += " responsive";
+    var visualizationColumn = document.getElementById('visualizationColumn');
+    var visualization = document.getElementById('visualization');
+
+    // center game screen in embed mode
+    if(config.embed) {
+      visualizationColumn.style.margin = "0 auto";
+    }
+
+    if (this.isUsingBlockly() && config.level.edit_blocks) {
+      // Set a class on the main blockly div so CSS can style blocks differently
+      Blockly.addClass_(container.querySelector('#blockly'), 'edit');
+      // If in level builder editing blocks, make workspace extra tall
+      visualizationColumn.style.height = "3000px";
+      // Modify the arrangement of toolbox blocks so categories align left
+      if (config.level.edit_blocks == "toolbox_blocks") {
+        this.blockYCoordinateInterval = 80;
+        config.blockArrangement = { category : { x: 20 } };
+      }
+      // Enable param & var editing in levelbuilder, regardless of level setting
+      config.level.disableParamEditing = false;
+      config.level.disableVariableEditing = false;
+    } else if (!config.hideSource) {
+      visualizationColumn.style.minHeight = this.MIN_WORKSPACE_HEIGHT + 'px';
+    }
+
+    if (!config.embed && !this.share) {
+      // Make the visualization responsive to screen size, except on share page.
+      visualization.className += " responsive";
+      visualizationColumn.className += " responsive";
+    }
   }
 };
 

@@ -1,7 +1,6 @@
 <%
   var msg = require('../../locale/current/common');
   var netsimMsg = require('../../locale/current/netsim');
-  var hideRunButton = locals.hideRunButton || false;
 %>
 
 <div id="rotateContainer" style="background-image: url(<%= assetUrl('media/mobile_tutorial_turnphone.png') %>)">
@@ -40,48 +39,17 @@ var helpArea = function(html) { -%>
   <% } -%>
 <% }; -%>
 
-<div id="visualizationColumn">
-  <div id="visualization">
-    <%- data.visualization %>
-  </div>
-
-  <div id="belowVisualization">
-
-    <div id="gameButtons">
-      <button id="runButton" class="launch blocklyLaunch <%= hideRunButton ? 'invisible' : ''%>">
-        <div><%= msg.runProgram() %></div>
-        <img src="<%= assetUrl('media/1x1.gif') %>" class="run26"/>
-      </button>
-      <button id="resetButton" class="launch blocklyLaunch" style="display: none">
-        <div><%= msg.resetProgram() %></div>
-        <img src="<%= assetUrl('media/1x1.gif') %>" class="reset26"/>
-      </button>
-      <% if (data.controls) { %>
-      <%- data.controls %>
-      <% } %>
-      <% if (data.extraControlRows) { %>
-      <%- data.extraControlRows %>
-      <% } %>
-    </div>
-
-    <% instructions() %>
-    <% helpArea(data.helpHtml) %>
-
-  </div>
-</div>
-
-<div id="blockly">
+<div id="appcontainer">
   <div id="headers" dir="<%= data.localeDirection %>">
     <div id="workspace-header" class="blockly-header">
       <span id="workspace-header-span"><%= netsimMsg.workspaceHeader()%> </span>
     </div>
-    <div style="display: none">
-      <% // TODO (bbuchanan) : Shouldn't have to hide these, StudioApp should play nice when they're not present. %>
-      <div id="toolbox-header"></div>
-      <div id="show-code-header"></div>
-    </div>
   </div>
-  <div id="simulationControls">
+  <div id="footers" dir="<%= data.localeDirection %>">
+    <% instructions() %>
+    <% helpArea(data.helpHtml) %>
+  </div>
+  <div id="netsim">
     Expose simulation controls here.
   </div>
 </div>
