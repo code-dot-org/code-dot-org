@@ -91,8 +91,15 @@ ExpressionNode.prototype.replaceWith = function (newNode) {
 /**
  * Evaluate the expression, returning the result.
  */
-ExpressionNode.prototype.evaluate = function () {
+ExpressionNode.prototype.evaluate = function (mapping) {
+  mapping = mapping || {}
   var type = this.getType();
+
+  if (type === ValueType.VARIABLE && mapping[this.value]) {
+    this.value = mapping[this.value];
+    type = this.getType();
+  }
+
   if (type === ValueType.VARIABLE || type === ValueType.FUNCTION_CALL) {
     throw new Error('Must resolve variables/functions before evaluation');
   }
@@ -104,8 +111,8 @@ ExpressionNode.prototype.evaluate = function () {
     throw new Error('Unexpected error');
   }
 
-  var left = this.children[0].evaluate();
-  var right = this.children[1].evaluate();
+  var left = this.children[0].evaluate(mapping);
+  var right = this.children[1].evaluate(mapping);
 
   switch (this.value) {
     case '+':

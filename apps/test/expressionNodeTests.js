@@ -154,30 +154,50 @@ describe("ExpressionNode", function () {
     assert.notEqual(clone.children[0].children[1].value, node.children[0].children[1].value);
   });
 
-  it("evaluate", function () {
+  describe("evaluate", function () {
     var node;
 
-    node = new ExpressionNode(1);
-    assert.equal(node.evaluate(), 1);
+    it("can evaluate a single number", function () {
+      node = new ExpressionNode(1);
+      assert.equal(node.evaluate(), 1);
+    });
 
-    node = new ExpressionNode('+', [1, 2]);
-    assert.equal(node.evaluate(), 3);
+    it("can evaluate a simple expression", function () {
+      node = new ExpressionNode('+', [1, 2]);
+      assert.equal(node.evaluate(), 3);
+    });
 
-    node = new ExpressionNode('*', [
-      new ExpressionNode('-', [5, 3]),
-      new ExpressionNode('/', [8, 4])
-    ]);
-    assert.equal(node.evaluate(), 4);
+    it("can evaluate a more complex expression", function () {
+      node = new ExpressionNode('*', [
+        new ExpressionNode('-', [5, 3]),
+        new ExpressionNode('/', [8, 4])
+      ]);
+      assert.equal(node.evaluate(), 4);
+    });
 
-    assert.throws(function () {
+    it("can evaluate a variable with a proper mapping", function () {
       node = new ExpressionNode('x');
-      node.evaluate();
-    }, Error);
+      assert.equal(node.evaluate({x: 1}), 1);
+    });
 
-    assert.throws(function () {
-      node = new ExpressionNode('f', [1, 2]);
-      node.evaluate();
-    }, Error);
+    it ("can evaluate an expression with variables", function () {
+      node = new ExpressionNode('+', ['x', 'y']);
+      assert.equal(node.evaluate({x: 1, y: 2}), 3);
+    });
+
+    it("cant evaluate a variable with no mapping", function () {
+      assert.throws(function () {
+        node = new ExpressionNode('x');
+        node.evaluate();
+      }, Error);
+    });
+
+    it("cant evaluate a function with no mapping", function () {
+      assert.throws(function () {
+        node = new ExpressionNode('f', [1, 2]);
+        node.evaluate();
+      }, Error);
+    });
   });
 
   it("depth", function () {

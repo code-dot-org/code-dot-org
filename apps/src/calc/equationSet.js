@@ -30,7 +30,7 @@ var ExpressionNode = require('./expressionNode');
  *   equation: x + 1
  * In many cases, this will just be an expression with no name.
  */
-var Equation = function (name, expression) {
+var Equation = function (name, expression, variables) {
   this.name = name;
   this.expression = expression;
 };
@@ -50,6 +50,7 @@ var EquationSet = function () {
   this.compute_ = null;
   this.equations_ = [];
 };
+EquationSet.Equation = Equation;
 
 module.exports = EquationSet;
 
@@ -103,7 +104,7 @@ EquationSet.prototype.hasVariablesOrFunctions = function () {
 
 /**
  * If the EquationSet has exactly one function and no variables, returns that
- * function. If we have multiple functions or one function and some variables,
+ * equation. If we have multiple functions or one function and some variables,
  * it throws. Otherwise returns null.
  */
 EquationSet.prototype.singleFunction = function () {
@@ -152,10 +153,48 @@ EquationSet.prototype.sortedEquations = function () {
   });
 
   // append compute expression with name null
-  return this.equations_.concat(this.compute_);
+  // return this.equations_.concat(this.compute_);
+  return this.equations_;
 };
 
-// TODO (brent) - remove from calc
+/**
+ * Evaluate the compute expression
+ */
+// TODO - test edge cases
+EquationSet.prototype.evaluate = function () {
+  // (1) no variables/functions. this is easy
+  if (this.equations_.length === 0) {
+    return this.compute_.expression.evaluate();
+  }
+
+  // (2) single function, no variables
+  var singleFunction = this.singleFunction();
+  if (singleFunction !== null) {
+    // TODO - this feels a little brittle, depending on the string name
+    var variables = /\((.*)\)$/.exec(singleFunction.name)[1].split(',');
+    var caller = this.compute_.expression;
+    if (caller.getType() !== ExpressionNode.ValueType.FUNCTION_CALL) {
+      throw new Error('expect function call');
+    }
+
+    if (caller.children.length !== variables.length) {
+      throw new Error('Unexpected: calling funtion with wrong number of inputs');
+    }
+
+    var mapping = {};
+    variables.forEach(function (item, index) {
+      // TODO - are we accessing stuff that should be private?
+      mapping[item] = caller.children[index].value;
+    });
+    return singleFunction.expression.evaluate(mapping);
+  }
+
+  // (3) multiple variables, no functions
+  throw new Error('NYE');
+  return 0; // TODO
+
+};
+
 // todo (brent) : would this logic be better placed inside the blocks?
 // todo (brent) : needs some unit tests
 function getEquationFromBlock(block) {

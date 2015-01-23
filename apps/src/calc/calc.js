@@ -151,24 +151,29 @@ Calc.init = function(config) {
  *     one function and variable(s). Currently not supported.
  */
 function displayGoal() {
-  if (!appState.targetSet.computeEquation()) {
+  var computeEquation = appState.targetSet.computeEquation()
+  if (!computeEquation || !computeEquation.expression) {
     return;
   }
 
   // If we have a function, just show the evaluation (i.e. compute expression)
   var singleFunction = appState.targetSet.singleFunction();
-  var sortedEquations;
-  if (singleFunction !== null) {
-    sortedEquations = [appState.targetSet.computeEquation()];
-  } else {
-    sortedEquations = appState.targetSet.sortedEquations();
+  var tokenList;
+  var nextRow = 0;
+  if (singleFunction === null) {
+    var sortedEquations = appState.targetSet.sortedEquations();
+    sortedEquations.forEach(function (equation) {
+      tokenList = equation.expression.getTokenList(false);
+      displayEquation('answerExpression', equation.name, tokenList, nextRow++);
+    });
   }
 
-  // TODO (brent) - evaluate final expression
-  sortedEquations.forEach(function (equation, index) {
-    var tokenList = equation.expression.getTokenList(false);
-    displayEquation('answerExpression', equation.name, tokenList, index);
-  });
+  tokenList = computeEquation.expression.getTokenList(false);
+  var result = appState.targetSet.evaluate();
+  // TODO - where should this live?
+  tokenList.push({ str: ' = ', maked: false});
+  tokenList.push({ str: result.toString(), maked: false});
+  displayEquation('answerExpression', computeEquation.name, tokenList, nextRow);
 }
 
 /**
@@ -281,34 +286,60 @@ Calc.execute = function() {
   if (appState.result && !hasVariablesOrFunctions) {
     Calc.step();
   } else {
-    clearSvgUserExpression();
-
-    // in single functino mode, we're only going to highlight the differences
-    // in evaluation
-    var hasSingleFunction = appState.targetSet.singleFunction() !== null;
-
-    if (appState.userSet.computeEquation().expression !== null) {
-      appState.userSet.sortedEquations().forEach(function (userEquation, index) {
-        var targetEquation, tokenList;
-
-        if (hasSingleFunction) {
-          targetEquation = userEquation;
-        } else {
-          targetEquation = appState.targetSet.getEquation(userEquation.name) ||
-            userEquation;
-        }
-
-        tokenList = userEquation.expression.getTokenListDiff(targetEquation.expression);
-        displayEquation('userExpression', userEquation.name, tokenList, index,
-          'errorToken');
-      });
-    }
-
+    displayComplexUserExpressions();
     timeoutList.setTimeout(function () {
       stopAnimatingAndDisplayFeedback();
     }, stepSpeed);
   }
 };
+
+/**
+ * If we have any functions or variables in our expression set, we don't support
+ * animating evaluation.
+ */
+function displayComplexUserExpressions () {
+  clearSvgUserExpression();
+
+  var computeEquation = appState.userSet.computeEquation();
+
+  if (computeEquation === null || computeEquation.expression === null) {
+    return;
+  }
+
+  // in single function mode, we're only going to highlight the differences
+  // in evaluation
+  var hasSingleFunction = appState.targetSet.singleFunction() !== null;
+
+  var nextRow = 0;
+  var tokenList;
+  appState.userSet.sortedEquations().forEach(function (userEquation) {
+    var targetEquation;
+
+    if (!hasSingleFunction) {
+      targetEquation = appState.targetSet.getEquation(userEquation.name) ||
+        userEquation;
+
+      tokenList = userEquation.expression.getTokenListDiff(
+        targetEquation.expression);
+    } else {
+      tokenList = userEquation.expression.getTokenList(false);
+    }
+    displayEquation('userExpression', userEquation.name, tokenList, nextRow++,
+      'errorToken');
+  });
+
+
+  tokenList = computeEquation.expression.getTokenListDiff(
+    appState.targetSet.computeEquation().expression);
+
+  var result = appState.userSet.evaluate();
+  var expectedResult = appState.targetSet.evaluate();
+  // TODO - where should this live? use real tokens
+  tokenList.push({ str: ' = ', marked: false});
+  tokenList.push({ str: result.toString(), marked: (result !== expectedResult)});
+  displayEquation('userExpression', computeEquation.name, tokenList, nextRow,
+    'errorToken');
+}
 
 function stopAnimatingAndDisplayFeedback() {
   appState.animating = false;
