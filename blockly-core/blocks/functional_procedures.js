@@ -352,7 +352,7 @@ Blockly.Blocks.functional_call = {
         .setAlign(Blockly.ALIGN_CENTRE)
         .setInline(x > 0);
       var currentParameterType = this.currentParameterTypes_[x];
-      input.setHSV.apply(input, Blockly.ContractEditor.typesToColors[currentParameterType]);
+      input.setHSV.apply(input, Blockly.ContractEditor.typesToColorsHSV[currentParameterType]);
       input.setCheck(currentParameterType);
       if (this.currentParameterIDs_) {
         // Reconnect any child blocks.
