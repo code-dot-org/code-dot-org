@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -52,21 +52,22 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catText":function(d){return "tekst"},
 "catVariables":function(d){return "Varijable"},
 "continue":function(d){return "Nastavi"},
-"createHtmlBlock":function(d){return "create html block"},
-"createHtmlBlockTooltip":function(d){return "Creates a block of HTML in the app."},
+"createHtmlBlock":function(d){return "napravi html blok"},
+"createHtmlBlockTooltip":function(d){return "Stvara blok HTML-a u programu."},
 "finalLevel":function(d){return "Čestitamo ! Riješili ste posljednji zadatak."},
 "nextLevel":function(d){return "Čestitamo! Ovaj zadatak je riješen."},
 "no":function(d){return "Ne"},
 "numBlocksNeeded":function(d){return "Ovaj zadatak se može riješiti s %1 blokova."},
-"pause":function(d){return "Break"},
-"reinfFeedbackMsg":function(d){return "You can press the \"Try again\" button to go back to running your app."},
+"pause":function(d){return "Pauza"},
+"reinfFeedbackMsg":function(d){return "Možeš kliknuti na gumb \"Ponovno\" da bi ponovno pokrenuo svoj program."},
 "repeatForever":function(d){return "ponavljaj zauvijek"},
 "repeatDo":function(d){return "napravi"},
-"repeatForeverTooltip":function(d){return "Execute the actions in this block repeatedly while the app is running."},
-"shareApplabTwitter":function(d){return "Check out the app I made. I wrote it myself with @codeorg"},
-"shareGame":function(d){return "Share your app:"},
-"stepIn":function(d){return "Step in"},
-"stepOver":function(d){return "Step over"},
-"stepOut":function(d){return "Step out"},
-"viewData":function(d){return "View Data"},
+"repeatForeverTooltip":function(d){return "Stalno ponavlja akcije iz ovog bloka dok god program radi."},
+"shareWebappTwitter":function(d){return "Vidi program koji sam napravio. Napisao sam ga sam uz pomoć @codeorg"},
+"shareGame":function(d){return "Dijeli program:"},
+"stepIn":function(d){return "Korak u"},
+"stepOver":function(d){return "Korak preko"},
+"stepOut":function(d){return "Korak van"},
+"turnBlack":function(d){return "postavi crno"},
+"turnBlackTooltip":function(d){return "Postavlja crni ekran."},
 "yes":function(d){return "Da"}};

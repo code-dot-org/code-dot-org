@@ -244,7 +244,6 @@ th-TH:
   dashboard_students_new_section: 'คุณได้สร้างกลุ่มใหม่แล้ว! ตอนนี้ให้คุณ<b>เพิ่มนักเรียน</b>หรือ<b>เพิ่มนักเรียนทีละหลายคน</b> ด้วยปุ่มด้านบน'
   dashboard_students_placeholder_name: ชื่อนักเรียน
   dashboard_students_name: ชื่อ
-  dashboard_students_progress: Progress
   dashboard_students_age: Age
   dashboard_students_gender: เพศ
   dashboard_students_male: Male
@@ -291,10 +290,6 @@ th-TH:
   dashboard_login_picture: รูปภาพ
   dashboard_login_none: อีเมล
   dashboard_new_password: รหัสผ่านใหม่
-  dashboard_progress_not_completed: not completed
-  dashboard_progress_completed_too_many_blocks: completed, too many blocks
-  dashboard_progress_completed_perfect: completed, perfect
-  dashboard_progress_furthest_level_attempted: furthest level attempted
   stats_hoc_2013_heading: 'สถิติที่น่าทึ่งของ Hour of Code.  ในหนึ่งสัปดาห์ '
   stats_hoc_2013_image_alt: 'สถิติจาก Hour of Code ปี 2013 '
   dashboard_teacher: ครู

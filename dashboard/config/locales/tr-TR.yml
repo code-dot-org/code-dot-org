@@ -1,7 +1,4 @@
 "tr":
-  errors:
-    messages:
-      not_saved: 'Please correct the following errors:'
   activerecord:
     errors:
       messages:
@@ -341,11 +338,11 @@
     email_resend_confirm: Onay yönergelerini yeniden gönder
     new_password_hint: (Eğer değiştirmek iştemiyorsanız boş bırakın)
     current_password_hint: (Değişikliklerinizi onaylamak için geçerli parolanız gerekiyor)
-    delete: Hesabını Sil
-    delete_text: Aşağıdaki düğmeye tıklamak hesabınızı siler.
-    delete_text_teacher_note: 'Lütfen dikkat: Kendi hesabınızı silmek, öğrencilerinizin
-      hesaplarını silmez.'
-    delete_confirm: Hesabınızı silmek istediğinize emin misiniz?
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: 'Please note: deleting your account will not delete
+      your students'' accounts.'
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Tamamlandı
     tried: Denenmiş
@@ -516,7 +513,7 @@
     caption_by_name_age: '%{name} tarafından, %{age} yaşında'
     caption_time_ago: '%{time_ago} zaman önce'
     header: Galeri
-    header_playlab: Oyun Laboratuvarı
+    header_playlab: Play Lab
     header_artist: Aktör
   landing:
     prerelease: Bu ders, <span class='betatext'> beta</span> olduğunu.  Bu dersin

@@ -48,7 +48,7 @@
         edit-code:
           desc: تحرير التعليمات البرمجية (بيتا)
           MazeEC: المرحلة 1
-          Applab: المرحلة 2
+          Webapp: المرحلة 2
           ArtistEC: المرحلة 3
           StudioEC: المرحلة 4
         events:
@@ -99,11 +99,10 @@
         Jigsaw: بانوراما
         MazeStep: وضع خطوة المتاهة
         Wordsearch: البحث
-        Webapp: App Lab
+        Webapp: تطبيق الويب
         ArtistEC: الاعب
         TextMatch: تطابق النص
         StudioEC: مختبر اللعب
-        Applab: App Lab
     trophy:
       name:
         Bronze: برونزية
@@ -475,8 +474,9 @@
         studio_c3_game_7: إنشاء الخاصة بك اللعبة. عند الانتهاء من ذلك، انقر فوق "إنهاء"
           للسماح للأصدقاء تجربة اللعبة الخاصة بك على الهواتف الخاصة بهم.
         studio_playlab_1: البطريق يريد أن يقول "مرحبا"- هل يمكنك مساعدته؟
-        studio_playlab_2: فتى الكهف (الشخصية 1) و فتاة الكهف (الشخصية 2) يودان أن
-          يقولا "مرحبا" لبعضهم البعض. هل يمكنك مساعدتهم عبر استخدام القطعة "قل" مرتين؟
+        studio_playlab_2: طفل الكهوف (الشخصية 1) و بنت الكهوف (الشخصية 2) يودون أن
+          يبادلو التحية "مرحبا" إلى بعضهم البعض. هل يمكنك مساعدتهم باستخدام القطعة
+          "تقول" مرتين؟
         studio_playlab_3: هل يمكنك مساعدة "لاعبة التنس" الوصول إلى العلم؟
         studio_playlab_4: هل يمكنك مساعدة "لاعب التنس" (الشخصية 1) الوصول إلى "لاعبة
           التنس" (الشخصية 2) وإصدار صوت عندما يصلها؟
@@ -516,7 +516,7 @@
         maze_wordsearch_k_16: حركني طريقاً واحداً , ثم آخر لتهجئة الكلمة "أسفل"
         maze_wordsearch_k_20: هذا اختبار ! حركني طريقاً واحداً , ثم آخر لتهجئة الكلمة
           "قصة"
-        applab_ec_simple: Create your app by using the blocks in the toolbox.
+        webapp_ec_simple: إنشاء تطبيق ويب الخاص بك باستخدام انشاء كتل الاكواد.
         turtle_ec_1_2: 'الآن، ارسم مربعا. ملاحظة: استخدم لونك المفضل بانتقاء فإنه
           في كتلة "penColor" الجديدة.'
         turtle_ec_1_10: 'يمكنك جعلها! الآن، رسم أي شيء تريده. بعض المرح الأفكار: الشكل
@@ -736,7 +736,7 @@
     callout:
       text:
         drag_blocks: اسحب كتلة "التحرك" وثبتها تحت كتلة أخرى
-        run: انقر على "نفذ" لتجربة برنامجك
+        run: انقر على "تشغيل" لتجرّب برنامجك
         watch_again: انقر هنا لمشاهدة الفيديو مرة أخرى
         gray_block_explanation: القطع باللون الرمادي لا يمكن حذفها . حل يمكنك حل اللغز
           بأي حال ؟
@@ -784,9 +784,9 @@
         frozen_circle_function_with_parameter_circle: إستخدم القطعة "إنشاء دائرة"
           و غيّر الحجم.
         frozen_snowflake_branch: إستخدم قطعة "إنشاء فرع رقاقة الثلج"
-        frozen_create_square: ركّب المزيد من القطع هنا لإنشاء مربع
+        frozen_create_square: ركّب المزيد من القطع لإنشاء دائرة
         playlab_drag_say: Drag the "say" block here and type "hello"
-        playlab_use_twice: استخدم هذه القطعة مرتين و تذكر أن تغير رقم الشخصية
+        playlab_use_twice: إستخدم هذه القطعة مرتين، وتذكر تغيير عدد الشخصيات
         playlab_move_girl: Use the "move right" block to move Tennis Girl
         playlab_play_sound: Add "play sound" block here
         playlab_arrow_keys: Remember to use these to move the witch after clicking
@@ -821,4 +821,4 @@
           marks
         arrows_move_actor: Use the arrows to move the actor
         right_arrow_fireball: استخدم السهم الايمن لإطلاق الكرات النارية
-        name_function: اكتب اسم دالتك هنا
+        name_function: اكتب أسم وظيفتك هنا

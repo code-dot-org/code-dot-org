@@ -229,7 +229,6 @@
   "soundWinPoint2": "wygraj punkt 2",
   "soundWood": "drewno",
   "speed": "prędkość",
-  "startSetValue": "start (rocket-height function)",
   "stopSprite": "zatrzymaj",
   "stopSpriteN": "zatrzymaj postać {spriteIndex}",
   "stopTooltip": "Zatrzymuje ruch postaci.",

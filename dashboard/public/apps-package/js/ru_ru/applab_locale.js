@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -118,21 +118,22 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catText":function(d){return "текст"},
 "catVariables":function(d){return "Переменные"},
 "continue":function(d){return "Продолжить"},
-"createHtmlBlock":function(d){return "create html block"},
-"createHtmlBlockTooltip":function(d){return "Creates a block of HTML in the app."},
+"createHtmlBlock":function(d){return "Создать блок html"},
+"createHtmlBlockTooltip":function(d){return "Создаёт блок HTML в приложении."},
 "finalLevel":function(d){return "Поздравляю! Последняя головоломка решена."},
 "nextLevel":function(d){return "Поздравляю! Головоломка решена."},
 "no":function(d){return "Нет"},
 "numBlocksNeeded":function(d){return "Эта головоломка может быть решена с помощью %1 блоков."},
-"pause":function(d){return "Break"},
-"reinfFeedbackMsg":function(d){return "You can press the \"Try again\" button to go back to running your app."},
-"repeatForever":function(d){return "повторять бесконечно"},
+"pause":function(d){return "Пауза"},
+"reinfFeedbackMsg":function(d){return "Можно нажать кнопку «Повторить», чтобы вернуться к запуску приложения."},
+"repeatForever":function(d){return "повторять снова и снова"},
 "repeatDo":function(d){return "выполнить"},
-"repeatForeverTooltip":function(d){return "Execute the actions in this block repeatedly while the app is running."},
-"shareApplabTwitter":function(d){return "Check out the app I made. I wrote it myself with @codeorg"},
-"shareGame":function(d){return "Share your app:"},
-"stepIn":function(d){return "Step in"},
-"stepOver":function(d){return "Step over"},
-"stepOut":function(d){return "Step out"},
-"viewData":function(d){return "View Data"},
+"repeatForeverTooltip":function(d){return "Выполнить действия в этом блоке многократно, пока приложение испольняется."},
+"shareWebappTwitter":function(d){return "Проверьте приложение,которое я сделал. Я написал его сам с помощью @codeorg"},
+"shareGame":function(d){return "Поделиться своим приложением:"},
+"stepIn":function(d){return "Вмешиваться"},
+"stepOver":function(d){return "перешагнуть"},
+"stepOut":function(d){return "отступить"},
+"turnBlack":function(d){return "повернуть назад"},
+"turnBlackTooltip":function(d){return "Закрашивает экран черным."},
 "yes":function(d){return "Да"}};

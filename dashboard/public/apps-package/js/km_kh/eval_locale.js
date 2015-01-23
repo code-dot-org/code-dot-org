@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -164,7 +164,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "rectangleBlockTitle":function(d){return "ចតុកោណ​កែង (ទទឹង, កម្ពស់, ស្ទីល, ពណ៌)"},
 "reinfFeedbackMsg":function(d){return "អ្នក​អាច​ចុច​ប៊ូតុង \"ព្យាយាម​ម្ដង​ទៀត\" ដើម្បី​កែសម្រួល​គំនូរ​របស់​អ្នក។"},
 "rotateImageBlockTitle":function(d){return "បង្វិល (ដឺក្រេ, រូបភាព)"},
-"scaleImageBlockTitle":function(d){return "scale (factor, image)"},
+"scaleImageBlockTitle":function(d){return "scale (factor)"},
 "squareBlockTitle":function(d){return "ការ៉េ (ទំហំ, ស្ទីល, ពណ៌)"},
 "starBlockTitle":function(d){return "ផ្កាយ (កាំ, ស្ទីល, ពណ៌)"},
 "radialStarBlockTitle":function(d){return "radial-star (points, inner, outer, style, color)"},

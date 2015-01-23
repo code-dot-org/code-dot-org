@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -213,7 +213,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "moveDistanceTooltip":function(d){return "Færa leikmann tiltekna vegalengd í hina tilteknu stefnu."},
 "moveSprite":function(d){return "færa"},
 "moveSpriteN":function(d){return "færa leikmann "+appLocale.v(d,"spriteIndex")},
-"toXY":function(d){return "til x,y"},
+"toXY":function(d){return "to x,y"},
 "moveDown":function(d){return "færa niður"},
 "moveDownTooltip":function(d){return "Færa leikmann niður."},
 "moveLeft":function(d){return "færa til vinstri"},
@@ -384,7 +384,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "soundWinPoint2":function(d){return "stigaskor 2"},
 "soundWood":function(d){return "viður"},
 "speed":function(d){return "hraði"},
-"startSetValue":function(d){return "start (rocket-height function)"},
 "stopSprite":function(d){return "stöðva"},
 "stopSpriteN":function(d){return "stöðva leikmann "+appLocale.v(d,"spriteIndex")},
 "stopTooltip":function(d){return "Stöðvar hreyfingu leikmanns."},

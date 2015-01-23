@@ -1,7 +1,4 @@
 hi:
-  errors:
-    messages:
-      not_saved: 'Please correct the following errors:'
   activerecord:
     errors:
       messages:
@@ -351,7 +348,7 @@ hi:
     female: Female
     none: Prefer not to answer
   user_type:
-    student: छात्र
+    student: Student
     teacher: Teacher
   footer:
     help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped create this tutorial.

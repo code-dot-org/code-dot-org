@@ -1016,8 +1016,8 @@
   sphero_beyond_longdescription: Whether you're an educator or a parent, SPRK lessons
     give kids a fun crash course in programming robots while sharpening their skills
     in math and science.
-  dashboard_students_progress: crwdns27938:0crwdne27938:0
-  dashboard_progress_not_completed: crwdns27939:0crwdne27939:0
-  dashboard_progress_completed_too_many_blocks: crwdns27940:0crwdne27940:0
-  dashboard_progress_completed_perfect: crwdns27941:0crwdne27941:0
-  dashboard_progress_furthest_level_attempted: crwdns27942:0crwdne27942:0
+  dashboard_students_progress: Progress
+  dashboard_progress_not_completed: not completed
+  dashboard_progress_completed_too_many_blocks: completed, too many blocks
+  dashboard_progress_completed_perfect: completed, perfect
+  dashboard_progress_furthest_level_attempted: furthest level attempted

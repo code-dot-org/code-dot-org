@@ -1,7 +1,4 @@
 is:
-  errors:
-    messages:
-      not_saved: 'Please correct the following errors:'
   activerecord:
     errors:
       messages:
@@ -299,10 +296,10 @@ is:
     email_resend_confirm: Endursenda leiðbeiningar um staðfestingu
     new_password_hint: (hafðu autt ef þú vilt ekki breyta því)
     current_password_hint: (við þurfum að fá núverandi lykilorð þitt til að staðfesta breytingarnar)
-    delete: Eyða aðgangi þínum
-    delete_text: Að smella á hnappinn fyrir neðan eyðir aðgangi þínum.
-    delete_text_teacher_note: 'Vinsamlegast athugaðu: þó þú eyðir þínum aðgangi, eyðir það ekki aðgangi nemenda þinna.'
-    delete_confirm: Ertu viss um að þú viljir eyða aðgangi þínum?
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Lokið
     tried: Reynt

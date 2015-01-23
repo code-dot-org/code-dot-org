@@ -52,7 +52,7 @@
         edit-code:
           desc: コードを編集する(ベータ版)
           MazeEC: ステージ 1
-          Applab: ステージ 2
+          Webapp: ステージ 2
           ArtistEC: ステージ 3
           StudioEC: ステージ 4
         events:
@@ -103,11 +103,10 @@
         Jigsaw: ジグソーパズル
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
-        Webapp: App Lab
+        Webapp: Webapp
         ArtistEC: アーティスト
         TextMatch: Text Match
         StudioEC: Play Lab
-        Applab: App Lab
     trophy:
       name:
         Bronze: 銅
@@ -365,7 +364,7 @@
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell
           the word STORY
-        applab_ec_simple: Create your app by using the blocks in the toolbox.
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
           it in the new "penColor" block.'
         turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:

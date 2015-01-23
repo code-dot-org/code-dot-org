@@ -28,13 +28,13 @@ ms:
           desc: Hour of Code
           Maze: Peringkat 1
         Edit Code:
-          desc: Edit Kod (beta)
+          desc: Edit Code (beta)
           MazeEC: Peringkat 1
         2014 Levels:
-          desc: Lantun (beta)
+          desc: Bounce (beta)
           Bounce: Peringkat 1
         Builder Levels:
-          desc: Teka-teki Dihasilkan Pengguna (beta)
+          desc: User-Created Puzzles (beta)
           Custom: Peringkat 1
         Flappy Levels:
           desc: Flappy Bird
@@ -46,17 +46,17 @@ ms:
           desc: Maze (beta)
           MazeStep: Stage Step
         edit-code:
-          desc: Edit Kod (beta)
+          desc: Edit Code (beta)
           MazeEC: Peringkat 1
-          Applab: Peringkat 2
+          Webapp: Peringkat 2
           ArtistEC: Peringkat 3
           StudioEC: Peringkat 4
         events:
-          desc: Lantun (beta)
+          desc: Bounce (beta)
           Bounce: Peringkat 1
           Studio: Peringkat 2
         builder:
-          desc: Teka-teki Dihasilkan Pengguna (beta)
+          desc: User-Created Puzzles (beta)
           Custom: Peringkat 1
         flappy:
           desc: Flappy Bird
@@ -99,11 +99,10 @@ ms:
         Jigsaw: Jigsaw
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
-        Webapp: App Lab
+        Webapp: Webapp
         ArtistEC: Pelukis
-        TextMatch: Padanan Teks
+        TextMatch: Text Match
         StudioEC: Play Lab
-        Applab: App Lab
     trophy:
       name:
         Bronze: Gangsa
@@ -111,12 +110,12 @@ ms:
         Gold: Emas
     concept:
       description:
-        sequence: Urutan
+        sequence: Sequence
         if: Jika blok
         if_else: Blok (if/else)
         loop_times: Mengulangi masa blok
         loop_until: Ulangi sehingga blok
-        loop_while: Sementara blok
+        loop_while: While block
         loop_for: Kaunter blok
         function: Fungsi
         parameters: Fungsi-fungsi dengan parameter
@@ -335,7 +334,7 @@ ms:
         maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell the word STORY
-        applab_ec_simple: Create your app by using the blocks in the toolbox.
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColor" block.'
         turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new "penWidth" block. Have fun!'
         studio_ec_sandbox: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
@@ -443,7 +442,7 @@ ms:
         Unplug9: Relay programming
         Unplug10: Internet
         Unplug11: Wrap-up
-        C1_happy_maps_unplugged: Peta-peta Gembira
+        C1_happy_maps_unplugged: Happy Maps
         C1_moveitmoveit_unplugged: Move It, Move It
         C1_bigevent_unplugged: The Big Event
         C1_getting_loopy: Getting Loopy
@@ -477,7 +476,7 @@ ms:
         C2_digital_footprint: Your Digital Footprint
         C3_maze_level_4: Maze Loops
         C3_artist_intro: Intro artis
-        C3_artist_functions: Fungsi-fungsi Artis
+        C3_artist_functions: Artist Functions
         C3_bee_functions: Bee Functions
         C3_bee_conditionals: Lebah Bersyarat
         C3_maze_conditionals: Maze Conditionals
@@ -488,7 +487,7 @@ ms:
         C3_bounce: Lantunan
         C3_playlab_create_game: 'Play Lab - Create a Game'
         C3_computational_thinking: Pengiraan pemikiran
-        C3_dice_race: Perlumbaan Dadu
+        C3_dice_race: Dice Race
         C3_internet: Internet
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Functional Suncatchers

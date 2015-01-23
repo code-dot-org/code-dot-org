@@ -1,73 +1,77 @@
-"gl":
+"es":
   devise:
     confirmations:
-      confirmed: Your email address was successfully confirmed.
-      send_instructions: You will receive an email with instructions about how to
-        confirm your account in a few minutes.
-      send_paranoid_instructions: If your email address exists in our database, you
-        will receive an email with instructions about how to confirm your account
-        in a few minutes.
+      confirmed: Tu dirección de correo electrónico ha sido confirmada con éxito.
+      send_instructions: Recibirás un correo electrónico con instrucciones para confirmar
+        tu cuenta en pocos minutos.
+      send_paranoid_instructions: Si tu dirección de email existe en nuestra base
+        de datos, recibirás un correo electrónico con instrucciones para confirmar
+        tu cuenta en pocos minutos.
     failure:
-      already_authenticated: You are already signed in.
-      inactive: Your account was not activated yet.
-      invalid: Invalid email or password.
-      invalid_token: Invalid authentication token.
-      locked: Your account is locked.
-      not_found_in_database: Invalid email or password.
-      timeout: Your session expired, please sign in again to continue.
-      unauthenticated: You need to sign in or sign up before continuing.
-      unconfirmed: You have to confirm your account before continuing.
+      already_authenticated: Ya has iniciado sesión.
+      inactive: Tu cuenta todavía no fue activada.
+      invalid: Correo electrónico o contraseña inválidos.
+      invalid_token: Token de autenticación no válido.
+      locked: Tu cuenta está bloqueada.
+      not_found_in_database: Correo electrónico o contraseña inválidos.
+      timeout: Tu sesión ha expirado, por favor inicia sesión nuevamente para continuar.
+      unauthenticated: Debes iniciar sesión o registrarte antes de continuar.
+      unconfirmed: Debes confirmar tu cuenta antes de continuar.
     mailer:
       confirmation_instructions:
-        subject: Code.org confirmation instructions
+        subject: Instrucciones de confirmación de Code.org
       reset_password_instructions:
-        subject: Code.org reset password instructions
+        subject: Reiniciar las instrucciones de la contraseña de Code.org
       unlock_instructions:
-        subject: Unlock Instructions
+        subject: Instrucciones de desbloqueo
     omniauth_callbacks:
-      failure: Could not authenticate you from %{kind} because "%{reason}".
-      success: Successfully authenticated from %{kind} account.
+      failure: No pudimos autenticarte desde %{kind} debido a "%{reason}".
+      success: Autenticado correctamente desde la cuenta %{kind}.
     passwords:
-      no_token: You can't access this page without coming from a password reset email.
-        If you do come from a password reset email, please make sure you used the
-        full URL provided.
-      send_instructions: You will receive an email with instructions about how to
-        reset your password in a few minutes.
-      send_paranoid_instructions: If your email address exists in our database, you
-        will receive a password recovery link at your email address in a few minutes.
-      updated: Your password was changed successfully. You are now signed in.
-      updated_not_active: Your password was changed successfully.
+      no_token: No puedes acceder a esta página si no has sido derivado de un correo
+        electrónico para restablecer contraseña. Si vienes de un correo electrónico
+        para restablecer contraseña, por favor asegúrate de haber usado el URL proporcionado
+        completo.
+      send_instructions: Recibirás un correo electrónico con instrucciones sobre cómo
+        restablecer la contraseña en unos minutos.
+      send_paranoid_instructions: Si tu dirección de email existe en nuestra base
+        de datos, recibirás un enlace de recuperación de contraseña en tu dirección
+        de correo electrónico en unos pocos minutos.
+      updated: Tu contraseña fue cambiada con éxito. Ya has iniciado sesión.
+      updated_not_active: Tu contraseña fue cambiada con éxito.
     registrations:
-      destroyed: Bye! Your account was successfully cancelled. We hope to see you
-        again soon.
-      signed_up: Welcome! You have signed up successfully.
-      signed_up_but_inactive: You have signed up successfully. However, we could not
-        sign you in because your account is not yet activated.
-      signed_up_but_locked: You have signed up successfully. However, we could not
-        sign you in because your account is locked.
-      signed_up_but_unconfirmed: A message with a confirmation link has been sent
-        to your email address. Please open the link to activate your account.
-      update_needs_confirmation: You updated your account successfully, but we need
-        to verify your new email address. Please check your email and click on the
-        confirm link to finalize confirming your new email address.
-      updated: You updated your account successfully.
+      destroyed: ¡Adiós! Tu cuenta fue cancelada con éxito. Esperamos verte pronto.
+      signed_up: ¡Bienvenido! Te has registrado exitosamente.
+      signed_up_but_inactive: Te has registrado con éxito. Sin embargo, no has podido
+        iniciar sesión porque tu cuenta todavía no fue activada.
+      signed_up_but_locked: Te has registrado con éxito. Sin embargo, no has podido
+        iniciar sesión porque tu cuenta está bloqueada.
+      signed_up_but_unconfirmed: Un mensaje con un enlace de confirmación ha sido
+        enviado a tu dirección de correo electrónico. Por favor, abre el enlace para
+        activar tu cuenta.
+      update_needs_confirmation: Has actualizado tu cuenta con éxito, pero tenemos
+        que verificar tu nueva dirección de correo electrónico. Por favor revisa tu
+        correo electrónico y haz clic en el enlace de confirmación para finalizar
+        la confirmación de tu nueva dirección de correo electrónico.
+      updated: Has actualizado tu cuenta correctamente.
     sessions:
       signed_in: ''
-      signed_out: Signed out successfully.
+      signed_out: Has cerrado tu sesión con éxito.
     unlocks:
-      send_instructions: You will receive an email with instructions about how to
-        unlock your account in a few minutes.
-      send_paranoid_instructions: If your account exists, you will receive an email
-        with instructions about how to unlock it in a few minutes.
-      unlocked: Your account has been unlocked successfully. Please sign in to continue.
+      send_instructions: Recibirás un correo electrónico con instrucciones para confirmar
+        tu cuenta en pocos minutos.
+      send_paranoid_instructions: Si existe tu cuenta, recibirás un correo electrónico
+        con instrucciones sobre cómo desbloquearla en pocos minutos.
+      unlocked: Tu cuenta ha sido desbloqueada con éxito. Por favor inicia sesión
+        para continuar.
   errors:
     messages:
-      already_confirmed: was already confirmed, please try signing in
-      confirmation_period_expired: needs to be confirmed within %{period}, please
-        request a new one
-      expired: has expired, please request a new one
-      not_found: not found
-      not_locked: was not locked
+      already_confirmed: ya estaba confirmada, por favor, intenta iniciar sesión
+      confirmation_period_expired: tiene que ser confirmada dentro del período de
+        %{period}, por favor, solicita una nueva
+      expired: ha caducado, por favor, solicita una nueva
+      not_found: no encontrado
+      not_locked: No estaba bloqueada
       not_saved:
-        one: '1 error prohibited this %{resource} from being saved:'
-        other: '%{count} errors prohibited this %{resource} from being saved:'
+        one: '1 error impidió que este %{resource} se guardara:'
+        other: '%{count} errores impiden que este %{resource} sea guardado:'

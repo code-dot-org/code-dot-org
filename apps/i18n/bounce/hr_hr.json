@@ -64,7 +64,7 @@
   "repeatUntilFinish": "ponavljaj dok ne završiš",
   "scoreText": "Bodovi: {playerScore} : {opponentScore}",
   "setBackgroundRandom": "postavi nasumičnu scenu",
-  "setBackgroundHardcourt": "postavi scenu s tvrdom podlogom",
+  "setBackgroundHardcourt": "postavi betonsku pozadinu",
   "setBackgroundRetro": "postavi retro scenu",
   "setBackgroundTooltip": "Postavlja sliku pozadine",
   "setBallRandom": "postavi nasumično odabranu loptu",

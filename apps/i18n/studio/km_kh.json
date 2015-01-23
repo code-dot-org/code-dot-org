@@ -229,7 +229,6 @@
   "soundWinPoint2": "win point 2",
   "soundWood": "wood",
   "speed": "speed",
-  "startSetValue": "start (rocket-height function)",
   "stopSprite": "ឈប់",
   "stopSpriteN": "stop actor {spriteIndex}",
   "stopTooltip": "Stops an actor's movement.",

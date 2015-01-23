@@ -14,7 +14,7 @@
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png
       2-3 artist match 1:
-        Artist Matching: تطبیق هنرمند
+        Artist Matching: Artist Matching
         Match the shape with the blocks that complete it.: اشکال را با بلوک هایی که
           آن را کامل میسازند،مرتبط کن.
         /script_assets/2-3_images/artist/2-3_artist_match_1_q1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q1.png
@@ -26,9 +26,9 @@
         /script_assets/2-3_images/artist/2-3_artist_match_1_a3.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a3.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a4.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a4.png
       2-3 bounce match 1:
-        Bounce Matching: تطبیق جهش
+        Bounce Matching: Bounce Matching
         Matching: تطبیق
-        Match the events with the actions: رویداد ها را با کارها تطبیق کن
+        Match the events with the actions: Match the events with the actions
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png
@@ -40,9 +40,9 @@
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_a4.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a4.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png
       2-3 flappy match 1:
-        Flappy Matching One: تطبیق فلاپی یک
+        Flappy Matching One: Flappy Matching One
         Matching: تطبیق
-        Match the events with the actions: رویداد ها را با کارها تطبیق کن
+        Match the events with the actions: Match the events with the actions
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png
@@ -50,8 +50,8 @@
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png
       2-3 maze match 1:
-        Maze Match One: بازی هزارتوی یک
-        Match the puzzles to the blocks: پازل ها را با بلوکها تطبیق کن
+        Maze Match One: Maze Match One
+        Match the puzzles to the blocks: Match the puzzles to the blocks
         /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png
@@ -59,10 +59,10 @@
         /script_assets/2-3_images/maze/2-3_maze_match_1_a2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a2.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a3.png
       2-3 Maze Match 2:
-        Maze Match: تطبیق هزارتو
-        Match the puzzles to the blocks: پازل ها را با بلوکها تطبیق کن
-        Instructions: دستورالعمل ها
-        Drag the blocks to match.: بلوکها را برای تطبیق دادن بکشید.
+        Maze Match: Maze Match
+        Match the puzzles to the blocks: Match the puzzles to the blocks
+        Instructions: Instructions
+        Drag the blocks to match.: Drag the blocks to match.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/2-3_images/maze/2-3_maze_match_2_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q1.png
         /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png
@@ -73,8 +73,6 @@
       2-3 Big Event Match 1:
         Matching: تطبیق
         /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
-        Match the button combination to the dance moves.: Match the button combination
-          to the dance moves.
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
@@ -87,8 +85,8 @@
         Matching: تطبیق
         /script_assets/2-3_images/unplugged/binary_1_q.png, 250: /script_assets/2-3_images/unplugged/binary_1_q.png,
           250
-        Use the key to match each code to its letter: از کلید برای تطبیق هر کد با
-          حرفش استفاده کن
+        Use the key to match each code to its letter: Use the key to match each code
+          to its letter
         <strong>N</strong>: <strong>N</strong>
         <strong>O</strong>: <strong>O</strong>
         <strong>P</strong>: <strong>P</strong>
@@ -99,7 +97,7 @@
         /script_assets/2-3_images/unplugged/binary_1_a4.png: /script_assets/2-3_images/unplugged/binary_1_a4.png
       2-3 Graph Paper Match 1:
         Matching: تطبیق
-        Match the grid to the program: تصویر مشبک را با برنامه اش تطبیق کن
+        Match the grid to the program: Match the grid to the program
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
@@ -108,7 +106,7 @@
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
       2-3 Relay Programming Match 1:
         Matching: تطبیق
-        Match the grid to the program: تصویر مشبک را با برنامه اش تطبیق کن
+        Match the grid to the program: Match the grid to the program
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
@@ -116,10 +114,10 @@
         /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
       4-5 maze match 1:
-        Maze Match: تطبیق هزارتو
-        Match the puzzles to the blocks: پازل ها را با بلوکها تطبیق کن
-        Instructions: دستورالعمل ها
-        Drag the blocks to match.: بلوکها را برای تطبیق دادن بکشید.
+        Maze Match: Maze Match
+        Match the puzzles to the blocks: Match the puzzles to the blocks
+        Instructions: Instructions
+        Drag the blocks to match.: Drag the blocks to match.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/4-5_images/maze/4-5_maze_match_1_q1.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q1.png
         /script_assets/4-5_images/maze/4-5_maze_match_1_q2.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q2.png
@@ -128,63 +126,63 @@
         /script_assets/4-5_images/maze/4-5_maze_match_1_a2.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a2.png
         /script_assets/4-5_images/maze/4-5_maze_match_1_a3.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a3.png
       4-5 Algorithms Match 1:
-        Matching: تطبیق کردن
-        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: مراحل
-          مسابقه تاس انداختن را به ترتیبی که باید در الگوریتم ظاهر شوند مرتب کن.
+        Matching: تطبیق
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Match
+          the steps in the Dice Race game to the order that they should appear in
+          the algorithm.
         <h4>1)</h4>: <h4>1)</h4>
         <h4>2)</h4>: <h4>2)</h4>
         <h4>3)</h4>: <h4>3)</h4>
         <h4>4)</h4>: <h4>4)</h4>
-        <h4>Set Player 1 score to 0</h4>: <h4>امتیاز بازیکن 1 را 0 کن</h4>
-        <h4>Player 1 rolls die</h4>: <h4>بازیکن 1 تاس میاندازد</h4>
-        <h4>Add Player 1 roll to total score</h4>: <h4>شمارۀ تاس بازیکن 1 را به امتیاز
-          کل اضافه کن</h4>
-        <h4>Compare player scores to see who wins</h4>: <h4>امتیاز بازیکنان را مقایسه
-          کن تا ببینی کی برده</h4>
+        <h4>Set Player 1 score to 0</h4>: <h4>Set Player 1 score to 0</h4>
+        <h4>Player 1 rolls die</h4>: <h4>Player 1 rolls die</h4>
+        <h4>Add Player 1 roll to total score</h4>: <h4>Add Player 1 roll to total
+          score</h4>
+        <h4>Compare player scores to see who wins</h4>: <h4>Compare player scores
+          to see who wins</h4>
       4-5 Computational Thinking Match 1:
         Matching: تطبیق
-        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: هر
-          یک از این وسایل نقلیه به قطعات کوچکتر تجزیه شده است. هر خودرو را با لیست
-          اجزایش تطبیق کن.
-        '<h3>Wheels/side: 2<br/>Windows/side: 0</h3>': '<h3>طرف/چرخها: 2 <br/>طرف/پنجره
-          ها: 0</h3>'
-        '<h3>Wheels/side: 2<br/>Windows/side: 1</h3>': '<h3>طرف/چرخها: 2 <br/>طرف/پنجره
-          ها: 1</h3>'
-        '<h3>Wheels/side: 2<br/>Windows/side: 6</h3>': '<h3>طرف/چرخها: 2 <br/>طرف/پنجره
-          ها: 6</h3>'
-        '<h3>Wheels/side: 3<br/>Windows/side: 2</h3>': '<h3>طرف/چرخها: 3<br/>طرف/پنجره
-          ها: 2</h3>'
-        /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png: /داراییهای_متنی/4-5_تصاویر/بدون_دستگاه/تفکر_حسابی_2_آ1.png
-        /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png: /داراییهای_متنی/4-5_تصاویر/بدون_دستگاه/تفکر_حسابی_2_آ2.png
-        /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png: /داراییهای_متنی/4-5_تصاویر/بدون_دستگاه/تفکر_حسابی_2_آ3.png
-        /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png: /داراییهای_متنی/4-5_تصاویر/بدون_دستگاه/تفکر_حسابی_2_آ4.png
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Each
+          of these vehicles has been decomposed into smaller pieces. Match each vehicle
+          with its decomposed list.
+        '<h3>Wheels/side: 2<br/>Windows/side: 0</h3>': '<h3>Wheels/side: 2<br/>Windows/side:
+          0</h3>'
+        '<h3>Wheels/side: 2<br/>Windows/side: 1</h3>': '<h3>Wheels/side: 2<br/>Windows/side:
+          1</h3>'
+        '<h3>Wheels/side: 2<br/>Windows/side: 6</h3>': '<h3>Wheels/side: 2<br/>Windows/side:
+          6</h3>'
+        '<h3>Wheels/side: 3<br/>Windows/side: 2</h3>': '<h3>Wheels/side: 3<br/>Windows/side:
+          2</h3>'
+        /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png
+        /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png
+        /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png
+        /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png
       4-5 Suncatchers Match 1:
         Matching: تطبیق
-        Match each program to the word it makes, using the provided group of skills.: هر
-          برنامه را با کلمه ای که میسازد تطبیق کن، با استفاده از مجموعه مهارت های
-          ارائه شده.
-        /script_assets/4-5_images/unplugged/suncatchers_1.png: /داراییهای_متنی/4-5_تصاویر/بدون_دستگاه/آفتابگیرها_1.png
-        /script_assets/4-5_images/unplugged/suncatchers_1_a1.png: /داراییهای_متنی/4-5_تصاویر/بدون_دستگاه/آفتابگیرها_1_آ1.png
-        /script_assets/4-5_images/unplugged/suncatchers_1_a2.png: /داراییهای_متنی/4-5_تصاویر/بدون_دستگاه/آفتابگیرها_1_آ2.png
-        /script_assets/4-5_images/unplugged/suncatchers_1_a3.png: /داراییهای_متنی/4-5_تصاویر/بدون_دستگاه/آفتابگیرها_1_آ3.png
-        /script_assets/4-5_images/unplugged/suncatchers_1_a4.png: /داراییهای_متنی/4-5_تصاویر/بدون_دستگاه/آفتابگیرها_1_آ4.png
-        <h4>STACK</h4>: <h4>انباشته</h4>
-        <h4>STAMP</h4>: <h4>تمبر</h4>
+        Match each program to the word it makes, using the provided group of skills.: Match
+          each program to the word it makes, using the provided group of skills.
+        /script_assets/4-5_images/unplugged/suncatchers_1.png: /script_assets/4-5_images/unplugged/suncatchers_1.png
+        /script_assets/4-5_images/unplugged/suncatchers_1_a1.png: /script_assets/4-5_images/unplugged/suncatchers_1_a1.png
+        /script_assets/4-5_images/unplugged/suncatchers_1_a2.png: /script_assets/4-5_images/unplugged/suncatchers_1_a2.png
+        /script_assets/4-5_images/unplugged/suncatchers_1_a3.png: /script_assets/4-5_images/unplugged/suncatchers_1_a3.png
+        /script_assets/4-5_images/unplugged/suncatchers_1_a4.png: /script_assets/4-5_images/unplugged/suncatchers_1_a4.png
+        <h4>STACK</h4>: <h4>STACK</h4>
+        <h4>STAMP</h4>: <h4>STAMP</h4>
         <h4>STAR</h4>: <h4>ستاره</h4>
         <h4>RAMP</h4>: <h4>سطح شیب دار</h4>
       K-1 Artist 2 Match 1:
         Matching: تطبیق
-        Is the square next to, above, or below the ball?: آیا مربع درکنارِ، بالای،
-          و یا پایینِ توپ است؟
+        Is the square next to, above, or below the ball?: Is the square next to, above,
+          or below the ball?
         /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
         /script_assets/k_1_images/artist_images/square_below_ball.png: /script_assets/k_1_images/artist_images/square_below_ball.png
         /script_assets/k_1_images/artist_images/square_next_ball.png: /script_assets/k_1_images/artist_images/square_next_ball.png
-        <br/><br/>above: <br/> <br/> رو
-        <br/><br/>below: <br/> <br/> زیر
-        <br/><br/>next to: <br/> <br/>در کنارِ
+        <br/><br/>above: <br/><br/>above
+        <br/><br/>below: <br/><br/>below
+        <br/><br/>next to: <br/><br/>next to
       K-1 Artist 2 Match 2:
         Matching: تطبیق
-        Match the shapes based on type.: اشکال را بر اساس نوع تطبیق کن.
+        Match the shapes based on type.: Match the shapes based on type.
         /script_assets/k_1_images/artist_images/small_circle.png: /script_assets/k_1_images/artist_images/small_circle.png
         /script_assets/k_1_images/artist_images/large_square.png: /script_assets/k_1_images/artist_images/large_square.png
         /script_assets/k_1_images/artist_images/medium_rectangle.png: /script_assets/k_1_images/artist_images/medium_rectangle.png
@@ -194,8 +192,8 @@
         /script_assets/k_1_images/artist_images/large_rectangle.png: /script_assets/k_1_images/artist_images/large_rectangle.png
         /script_assets/k_1_images/artist_images/large_triangle.png: /script_assets/k_1_images/artist_images/large_triangle.png
       K-1 Artist 2 Match 3:
-        Matching: تطبیق کردن
-        Match the shapes based on type.: اشکال را بر اساس نوع تطبیق کن.
+        Matching: تطبیق
+        Match the shapes based on type.: Match the shapes based on type.
         /script_assets/k_1_images/artist_images/large_circle.png: /script_assets/k_1_images/artist_images/large_circle.png
         /script_assets/k_1_images/artist_images/small_square.png: /script_assets/k_1_images/artist_images/small_square.png
         /script_assets/k_1_images/artist_images/large_rectangle.png: /script_assets/k_1_images/artist_images/large_rectangle.png
@@ -206,7 +204,7 @@
         /script_assets/k_1_images/artist_images/large_triangle2.png: /script_assets/k_1_images/artist_images/large_triangle2.png
       K-1 Artist Loops Match 1:
         Matching: تطبیق
-        Match the code to the stairs it draws.: کد را با پله هایی که میکشد تطبیق کن.
+        Match the code to the stairs it draws.: Match the code to the stairs it draws.
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png
@@ -215,7 +213,7 @@
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a3.png
       K-1 Bee Loops Match 1:
         Matching: تطبیق
-        Match the blocks: بلوکها را تطبیق کن
+        Match the blocks: Match the blocks
         /script_assets/k_1_images/bee_images/r4_gnectar.png: /script_assets/k_1_images/bee_images/r4_gnectar.png
         /script_assets/k_1_images/move_blocks/r3_N.png: /script_assets/k_1_images/move_blocks/r3_N.png
         /script_assets/k_1_images/bee_images/r5_ghoney.png: /script_assets/k_1_images/bee_images/r5_ghoney.png
@@ -226,7 +224,7 @@
         /script_assets/k_1_images/move_blocks/EEEEE.png: /script_assets/k_1_images/move_blocks/EEEEE.png
       K-1 Flappy Match 1:
         Matching: تطبیق
-        Match the blocks: بلوکها را تطبیق کن
+        Match the blocks: Match the blocks
         /script_assets/k_1_images/flappy_images/click.png: /script_assets/k_1_images/flappy_images/click.png
         /script_assets/k_1_images/flappy_images/hit_ground.png: /script_assets/k_1_images/flappy_images/hit_ground.png
         /script_assets/k_1_images/flappy_images/pass_obstacle.png: /script_assets/k_1_images/flappy_images/pass_obstacle.png
@@ -235,9 +233,9 @@
         /script_assets/k_1_images/flappy_images/score.png: /script_assets/k_1_images/flappy_images/score.png
       K-1 Maze Match 1:
         Matching: تطبیق
-        Match the puzzles and blocks: پازل ها و بلوکها را تطبیق کن
-        Instructions: دستورالعمل ها
-        Drag the blocks to match.: بلوکها را برای تطبیق دادن بکشید.
+        Match the puzzles and blocks: Match the puzzles and blocks
+        Instructions: Instructions
+        Drag the blocks to match.: Drag the blocks to match.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/k_1_images/maze_images/maze_EN.png: /script_assets/k_1_images/maze_images/maze_EN.png
         /script_assets/k_1_images/maze_images/maze_ENE.png: /script_assets/k_1_images/maze_images/maze_ENE.png
@@ -250,8 +248,6 @@
       K-1 Big Event Match 1:
         Matching: تطبیق
         /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
-        Match the button combination to the dance moves.: Match the button combination
-          to the dance moves.
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
@@ -260,8 +256,8 @@
         /script_assets/k_1_images/unplugged_images/big_event_1_a3.png: /script_assets/k_1_images/unplugged_images/big_event_1_a3.png
       K-1 Happy Maps Match 1:
         Matching: تطبیق
-        Match the Map to the arrow that gets the Flurb to the treasure: نقشه را با
-          فلشی تطبیق کن که فِلرِب را به گنج میرساند
+        Match the Map to the arrow that gets the Flurb to the treasure: Match the
+          Map to the arrow that gets the Flurb to the treasure
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q3.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q3.png
@@ -270,8 +266,8 @@
         /script_assets/k_1_images/unplugged_images/left.png: /script_assets/k_1_images/unplugged_images/left.png
       K-1 Move It Match 1:
         Matching: تطبیق
-        Match the Map to the algorithm that gets the Flurb to the flowers.: نقشه را
-          با الگوریتمی تطبیق کن که فِلِرب را به گل ها میرساند.
+        Match the Map to the algorithm that gets the Flurb to the flowers.: Match
+          the Map to the algorithm that gets the Flurb to the flowers.
         /script_assets/k_1_images/unplugged_images/move_it_2_q1.png: /script_assets/k_1_images/unplugged_images/move_it_2_q1.png
         /script_assets/k_1_images/unplugged_images/move_it_2_q2.png: /script_assets/k_1_images/unplugged_images/move_it_2_q2.png
         /script_assets/k_1_images/unplugged_images/move_it_2_q3.png: /script_assets/k_1_images/unplugged_images/move_it_2_q3.png
@@ -279,26 +275,26 @@
         /script_assets/k_1_images/unplugged_images/rightrightup.png: /script_assets/k_1_images/unplugged_images/rightrightup.png
         /script_assets/k_1_images/unplugged_images/rightdown.png: /script_assets/k_1_images/unplugged_images/rightdown.png
       Coordinate Matching:
-        Coordinates of Ninjacat: مختصات گربۀ نینجا
-        Match each character with its correct coordinate!: هر یک از حروف را با مختصات
-          صحیح آن تطبیق کن!
+        Coordinates of Ninjacat: Coordinates of Ninjacat
+        Match each character with its correct coordinate!: Match each character with
+          its correct coordinate!
         /script_assets/msm/Unit 1/exercise_3_ninjacat.png: /script_assets/msm/Unit
           1/exercise_3_ninjacat.png
-        Cloud: ابر
-        Ruby: روبی
-        Dog: سگ
-        Ninjacat: گربۀ نینجا
-        (250, 400): (400 ،250)
-        (500, 240): (240 ،500)
-        (480, 100): (100، 480)
-        (320, 240): (240, 320)
+        Cloud: Cloud
+        Ruby: Ruby
+        Dog: Dog
+        Ninjacat: Ninjacat
+        (250, 400): (250, 400)
+        (500, 240): (500, 240)
+        (480, 100): (480, 100)
+        (320, 240): (320, 240)
       Match math to circles:
-        Converting Math to Circles of Evaluation: تبدیل ریاضی به دایره های ارزیابی
-        Match each mathematical expression with the correct circle of evaluation!: هر
-          عبارت ریاضی را با دایره ارزیابی درست تطبیق کن!
-        (2 + 3) * 5 / 2: 2 / 5 * (2 + 3)
-        2 + 3 * (5 / 2): (2 / 5) * 3 + 2
-        (2 + 3 * 5) / 2: 2 / (5 * 3 + 2)
+        Converting Math to Circles of Evaluation: Converting Math to Circles of Evaluation
+        Match each mathematical expression with the correct circle of evaluation!: Match
+          each mathematical expression with the correct circle of evaluation!
+        (2 + 3) * 5 / 2: (2 + 3) * 5 / 2
+        2 + 3 * (5 / 2): 2 + 3 * (5 / 2)
+        (2 + 3 * 5) / 2: (2 + 3 * 5) / 2
         /script_assets/msm/Unit 1/Exercise_4_question_1.png: /script_assets/msm/Unit
           1/Exercise_4_question_1.png
         /script_assets/msm/Unit 1/Exercise_4_question_2.png: /script_assets/msm/Unit
@@ -308,13 +304,13 @@
         /script_assets/msm/Unit 1/Exercise_4_question_4.png: /script_assets/msm/Unit
           1/Exercise_4_question_4.png
       Match circles to code:
-        Converting Circles to Code: تبدیل دایره ها به کد
-        Match each circle of evaluation with the correct code!: هر دایرۀ ارزیابی را
-          با کد صحیح تطبیق کن!
-        (+ (- (/ 4 7) 9) 3): (3 (9 (7 4 /) -) +)
-        (+ (- 9 3) (* 4 7)): ((7 4 *) (3 9 -) +)
-        (/ (+ 4 7) 3): (3 (7 4 +) /)
-        (+ 3 (/ 4 7)): ((7 4 /) 3 +)
+        Converting Circles to Code: Converting Circles to Code
+        Match each circle of evaluation with the correct code!: Match each circle
+          of evaluation with the correct code!
+        (+ (- (/ 4 7) 9) 3): (+ (- (/ 4 7) 9) 3)
+        (+ (- 9 3) (* 4 7)): (+ (- 9 3) (* 4 7))
+        (/ (+ 4 7) 3): (/ (+ 4 7) 3)
+        (+ 3 (/ 4 7)): (+ 3 (/ 4 7))
         /script_assets/msm/Unit 1/Exercise_5_question_1.png: /script_assets/msm/Unit
           1/Exercise_5_question_1.png
         /script_assets/msm/Unit 1/Exercise_5_question_2.png: /script_assets/msm/Unit
@@ -324,52 +320,53 @@
         /script_assets/msm/Unit 1/Exercise_5_question_4.png: /script_assets/msm/Unit
           1/Exercise_5_question_4.png
       Match math to code:
-        Converting Math to Code: تبدیل ریاضی به کد
-        Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!: هر
-          عبارت ریاضی را با کد صحیح تطبیق کن. از یک دایرۀ ارزیابی استفاده کن تا شما
-          را برای رسیدن به پاسخ کمک کند!
-        (15 + 3) x (72 - 19): (19 - 72) * (3 + 15)
-        3 x 15 + (- 72 19): (19 72 -) + 15 * 3
-        72 + 3 - 19 x 15: 15 * 19 - 3 + 72
-        3 x 15 - 72 + 19: 19 + 72 - 15 * 3
-        (* (+ 15 3) (- 72 19)): ((19 72 -) (3 15 +) *)
-        (+ (3 x 15) (- 72 19)): ((19 72 -) (15 * 3) +)
-        (- (+ 72 3) (* 19 15)): ((15 19 *) (3 72 +) -)
-        (+ (- (* 3 15) 72) 19): (19 (72 (15 3 *) -) +)
+        Converting Math to Code: Converting Math to Code
+        Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!: Match
+          each mathematical expression with the correct code. Use a circle of evaluation
+          to help you get to the answer!
+        (15 + 3) x (72 - 19): (15 + 3) x (72 - 19)
+        3 x 15 + (- 72 19): 3 x 15 + (- 72 19)
+        72 + 3 - 19 x 15: 72 + 3 - 19 x 15
+        3 x 15 - 72 + 19: 3 x 15 - 72 + 19
+        (* (+ 15 3) (- 72 19)): (* (+ 15 3) (- 72 19))
+        (+ (3 x 15) (- 72 19)): (+ (3 x 15) (- 72 19))
+        (- (+ 72 3) (* 19 15)): (- (+ 72 3) (* 19 15))
+        (+ (- (* 3 15) 72) 19): (+ (- (* 3 15) 72) 19)
       parts of contract:
-        Parts of a Contract: بخش هایی از یک قرارداد
-        Here is a contract for a new function. Match each item with the word that describes it.: اینجا
-          یک قرارداد برای یک تابع جدید هست. هر مورد را با کلمه ای که آن را توضیح می
-          دهد تطبیق کن.
-        yearbook-picture: تصویر-سالنامه
-        string numer: عدد رشته
-        image: تصویر
-        (yearbook-picture "Sally" 1992): (تصویر-سالنامه "سالی" 1992)
-        function name: نام تابع
-        domain: دامنه
-        range: بازه
-        example: نمونه
+        Parts of a Contract: Parts of a Contract
+        Here is a contract for a new function. Match each item with the word that describes it.: Here
+          is a contract for a new function. Match each item with the word that describes
+          it.
+        yearbook-picture: yearbook-picture
+        string numer: string numer
+        image: image
+        (yearbook-picture "Sally" 1992): (yearbook-picture "Sally" 1992)
+        function name: function name
+        domain: domain
+        range: range
+        example: example
       Match example to contract:
-        Contracts of Functions: قراردادِ توابع
-        Match each example with the correct contract!: هر نمونه را با قرارداد صحیح
-          تطبیق کن!
-        (big-string? "gigantic" 5): (رشته-بزرگ؟ "عظیم" 5)
-        (find-price 4): (یافتن-قیمت 4)
-        (small-star "blue"): (ستارۀ-کوچک "آبی")
-        (bigger-string "big" "little"): (رشته-بزرگتر "بزرگ" "کوچک")
-        (small-star "solid"): (ستاره-کوچک "جامد")
-        (find-price "cheese"): (یافتن-قیمت «پنیر»)
-        'big-string: string number -> boolean': 'رشته-بزرگ: شماره رشته-> بولی'
-        'find-price: number -> number': 'یافتن-قیمت: عدد-> عدد'
-        'small-star: string -> image': 'ستاره-کوچک: رشته-> تصویر'
-        'bigger-string: string string -> string': 'رشته بزرگتر: رشته رشته -> رشته'
-        'find-price: string -> number': 'یافتن-قیمت: رشته-> عدد'
+        Contracts of Functions: Contracts of Functions
+        Match each example with the correct contract!: Match each example with the
+          correct contract!
+        (big-string? "gigantic" 5): (big-string? "gigantic" 5)
+        (find-price 4): (find-price 4)
+        (small-star "blue"): (small-star "blue")
+        (bigger-string "big" "little"): (bigger-string "big" "little")
+        (small-star "solid"): (small-star "solid")
+        (find-price "cheese"): (find-price "cheese")
+        'big-string: string number -> boolean': 'big-string: string number -> boolean'
+        'find-price: number -> number': 'find-price: number -> number'
+        'small-star: string -> image': 'small-star: string -> image'
+        'bigger-string: string string -> string': 'bigger-string: string string ->
+          string'
+        'find-price: string -> number': 'find-price: string -> number'
       test matching image:
-        Matching Images Two: تطبیق کردن تصاویر دو
-        Match up all the flowers by colour!: همه گل ها را با رنگها تطبیق کن!
+        Matching Images Two: Matching Images Two
+        Match up all the flowers by colour!: Match up all the flowers by colour!
         /script_assets/matches/images/head.jpg,300: /script_assets/matches/images/head.jpg,300
-        Instructions: دستورالعمل ها
-        Drag the images from right to center.: تصاویر را از راست به مرکز بکش.
+        Instructions: Instructions
+        Drag the images from right to center.: Drag the images from right to center.
         /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
         /script_assets/matches/images/q1.jpg: /script_assets/matches/images/q1.jpg
         /script_assets/matches/images/q2.jpg: /script_assets/matches/images/q2.jpg

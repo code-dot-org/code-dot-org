@@ -1,7 +1,4 @@
 "ru":
-  errors:
-    messages:
-      not_saved: 'Please correct the following errors:'
   activerecord:
     errors:
       messages:
@@ -56,7 +53,7 @@
       здесь</a>, чтобы выйти из %{provider}.
     already_signedup: Уже зарегистрировались?
     notyet_signedup: Еще не присоединились?
-    google_oauth2: Учетная запись Google
+    google_oauth2: Аккаунт Google
     twitter: Twitter
     facebook: Facebook
     windowslive: Учетная запись Майкрософт
@@ -107,7 +104,7 @@
     remember: Запомнить меня
     submit: Вход
   signin:
-    try_heading: Хотите начать программировать без регистрации?
+    try_heading: Начать кодирование без регистрации
     try_hoc: Попробуйте сначала один Час Кода
     try_20hours: Попробуйте наше двадцатичасовое "Введение в информатику"
   signinsection:
@@ -164,7 +161,7 @@
     code: 'Код:'
     redeem_header: 'Востребовать:'
     donorschoose_register: Зарегистрируйтесь как учитель на DonorsChoose.org
-    donorschoose_project: Опубликовать проект
+    donorschoose_project: опубликовать проект
     donorschoose_how_to: Как использовать Ваш код
     success: Ваш приз был успешно реализован, см. код ниже.
     error: Ваш приз не может быть реализован, пожалуйста, попробуйте еще раз.
@@ -177,7 +174,7 @@
     teacher_email_required: 'Для награда учителю требуется подтверждённый адрес электронной
       почты:'
     confirm:
-      title: Пожалуйста, подтвердите
+      title: Будь любезен, подтверди
       'no': Нет
       'yes': Да
       msg: Вы уверены, что хотите востребовать приз %{prize_name}?
@@ -337,11 +334,11 @@
     email_resend_confirm: Выслать инструкции для подтверждения
     new_password_hint: (оставьте пустым, если не хотите ничего менять)
     current_password_hint: (нам нужен Ваш текущий пароль для подтверждения изменений)
-    delete: Удалить свою учетную запись
-    delete_text: Нажатие на кнопку ниже удалит вашу учетную запись.
-    delete_text_teacher_note: 'Обратите внимание: удаление вашей учетной записи не
-      удалит учетные записи ваших студентов.'
-    delete_confirm: Вы действительно хотите удалить вашу учетную запись?
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: 'Please note: deleting your account will not delete
+      your students'' accounts.'
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Завершено
     tried: Пытался
@@ -404,10 +401,10 @@
   footer:
     help_from_html: Инженеры от Google, Microsoft, Facebook и Twitter помогли создать
       этот учебник.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd.
-      Все права защищены.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic
-      Arts Inc. Все права защищены.
-    powered_by_aws: Создано с помощью Amazon Web Services
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
+      All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
+      Arts Inc. All Rights Reserved.
+    powered_by_aws: Powered by Amazon Web Services
     feedback: Оставить отзыв
     translate: Помогите нам выполнить перевод на Ваш язык
     support: Поддержка
@@ -431,21 +428,20 @@
   compatability:
     working:
       header: Мы работаем над поддержкой для Вашего браузера.
-      message: Code.org использует современные Web-технологии. Это делает сайт быстрее
-        в использовании. Ваш браузер не поддерживает все необходимые функции, поэтому
-        могут возникнуть проблемы при использовании этой части сайта. Пожалуйста,
-        помогите нам, <a href='%{report_issue_url}'> сообщая любые проблемы, которые
-        вы обнаружите</a>. Вы также можете <a href='%{supported_browsers_url}'> обновить
-        ваш браузер до поддерживаемой версии</a>.
+      message: Code.org uses modern web technology. This makes the site faster to
+        use. Your browser doesn't support all the features required, and you may experience
+        issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting
+        any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade
+        your browser to a supported version</a>.
       hide_this_warning: Скрыть это предупреждение
     upgrade:
       header: Пожалуйста, обновите Ваш браузер.
-      message: Code.org использует современные Web-технологии. Это делает сайт быстрее
-        в использовании. К сожалению, ваш браузер не поддерживает все функции, необходимые
-        для работы этой части сайта. <br/> <br/>Установите браузер из нашего списка
-        поддерживаемых браузеров, чтобы продолжить. Вы можете, <a href='#'> попробуйте
-        зайти на страницу</a>, но ожидать некорректной работы функционала.
-      button: Добавьте меня в список поддерживаемых браузеров
+      message: Code.org uses modern web technology. This makes the site faster to
+        use. Unfortunately your browser doesn't support all the features required
+        to run this part of the site.<br/><br/>Install a browser on our supported
+        browsers list to continue. You can <a href='#'>try viewing the page</a>, but
+        expect functionality to be broken.
+      button: Take me to the list of supported browsers
   slow_loading: Это занимает больше времени, чем обычно...
   try_reloading: Попробуйте перезагрузить страницу
   next_stage: Завершено! Перейти к следующему этапу
@@ -453,14 +449,14 @@
   lesson_plan: План урока
   view_lesson_plan: Посмотреть план урока
   pdf_download: Скачать PDF
-  download_coming_soon: Возможность загрузки появится в  ближайшее время.
+  download_coming_soon: Downloadable activity coming soon.
   video_coming_soon: Данное видео скоро появится!
   share_code:
     title: Нажмите кнопку «Run», чтобы увидеть мою программу в действии
-    bounce_og_title: Оцените мою Bounce игру
-    flappy_og_title: Оцените мою Flappy игру
-    studio_og_title: Оцените приложение Play Lab
-    check_out_what_i_made: Оцените, что я сделал
+    bounce_og_title: Check out my Bounce Game
+    flappy_og_title: Проверь мои Flappy игру
+    studio_og_title: Check out my Play Lab App
+    check_out_what_i_made: Проверить, что я сделал
     og_description: Я сам написал код  на Code.org
     phone_number_not_allowed: Похоже, здесь есть номер телефона. Попробуйте изменить
       текст.
@@ -519,8 +515,8 @@
     prerelease: Это <span class='betatext'> бета-версия</span> курса.  Это означает,
       что это не окончательный вариант курса,  и он будет дорабатываться, с учётом
       полученных отзывов.
-    prerelease_hoc2014: Этот учебник находится в <span class='betatext'> бета-версии</span>.  Он
-      подлежит пересмотру для получения обратной связи и улучшений.
+    prerelease_hoc2014: This tutorial is in <span class='betatext'>beta</span>.  It
+      is subject to revision as feedback is received and improvements are made.
     feedback: Оставить отзыв
     report_bug: Сообщить об ошибке
     support: Получить помощь
@@ -575,7 +571,7 @@
           title: Шаг
           description: ''
         sample_level_builder:
-          title: Пример строителя уровня
+          title: Sample Level Builder
           description: ''
   age_interstitial:
     age: Ваш возраст
@@ -594,7 +590,7 @@
     not_completed: Не завершено
     completed_too_many_blocks: Завершено, слишком много блоков
     completed_perfect: Завершено, отлично
-    furthest_level_attempted: запрошен слишком высокий уровень
+    furthest_level_attempted: furthest level attempted
   studio:
     courses_working_on: Курсы, в процессе изучения
     completed_courses: Завершенные курсы

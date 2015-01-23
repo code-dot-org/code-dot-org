@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -177,7 +177,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "isWallTooltip":function(d){return "Restituisci vero se qui c'è un muro"},
 "launchBall":function(d){return "lancia una nuova palla"},
 "launchBallTooltip":function(d){return "Lancia una palla in gioco."},
-"makeYourOwn":function(d){return "Costruisci la tua versione del Ping-Pong"},
+"makeYourOwn":function(d){return "Costruisci la tua versione del gioco Rimbalzo"},
 "moveDown":function(d){return "sposta in basso"},
 "moveDownTooltip":function(d){return "Sposta la racchetta in basso."},
 "moveForward":function(d){return "vai avanti"},
@@ -212,7 +212,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "playSoundWinPoint2":function(d){return "riproduci il suono di un punto vinto (versione alternativa)"},
 "playSoundWood":function(d){return "riproduci il suono del legno"},
 "putdownTower":function(d){return "metti giù la torre"},
-"reinfFeedbackMsg":function(d){return "Premi \"Riprova\" per ricominciare a giocare."},
+"reinfFeedbackMsg":function(d){return "Premi \"Riprova\" per ricominciare a giocare la tua partita."},
 "removeSquare":function(d){return "rimuovi un quadrato"},
 "repeatUntil":function(d){return "ripeti fino a che"},
 "repeatUntilBlocked":function(d){return "mentre c'è strada in avanti"},
@@ -244,7 +244,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setPaddleSpeedFast":function(d){return "imposta per la racchetta una velocità veloce"},
 "setPaddleSpeedVeryFast":function(d){return "imposta per la racchetta una velocità molto veloce"},
 "setPaddleSpeedTooltip":function(d){return "Imposta la velocità della racchetta"},
-"shareBounceTwitter":function(d){return "Guarda la versione di Ping-Pong che ho creato io. L'ho fatto per conto mio @codeorg @programmafuturo"},
+"shareBounceTwitter":function(d){return "Guarda il gioco Rimbalzo che ho creato io. L'ho fatto per conto mio @codeorg @programmafuturo"},
 "shareGame":function(d){return "Condividi il tuo gioco:"},
 "turnLeft":function(d){return "gira a sinistra"},
 "turnRight":function(d){return "gira a destra"},

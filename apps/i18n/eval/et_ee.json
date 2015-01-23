@@ -9,7 +9,7 @@
   "rectangleBlockTitle": "ristkülik (laius, kõrgus, stiil, värv)",
   "reinfFeedbackMsg": "Joonistuse muutmiseks vajuta \"Proovi uuesti\" nuppu.",
   "rotateImageBlockTitle": "rotate (degrees, image)",
-  "scaleImageBlockTitle": "scale (factor, image)",
+  "scaleImageBlockTitle": "scale (factor)",
   "squareBlockTitle": "ruut (suurus, stiil, värv)",
   "starBlockTitle": "täht (raadius, stiil, värv)",
   "radialStarBlockTitle": "radial-star (points, inner, outer, style, color)",

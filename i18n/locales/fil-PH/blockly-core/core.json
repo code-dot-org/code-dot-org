@@ -1,5 +1,5 @@
 {
-  "ACTUAL":"call",
+  "ACTUAL":"Aktwal",
   "ADD":"Dagdagan",
   "ADD_COMMENT":"Magdagdag ng komento",
   "ADD_PARAMETER":"Magdagdag ng parameter",
@@ -73,7 +73,7 @@
   "EXAMPLE_DESCRIPTION":"Tinutukoy ang isang halimbawa  na may inaasahang at aktwal na pagbabago",
   "EXPAND_ALL":"Palawakin ang Blocks",
   "EXPAND_BLOCK":"Palawakin ang Block",
-  "EXPECTED":"result",
+  "EXPECTED":"inaasahan",
   "EXTERNAL_INPUTS":"Panlabas na Inputs",
   "FUNCTION_CREATE":"Gumawa ng Function",
   "FUNCTION_EDIT":"edit",

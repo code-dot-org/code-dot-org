@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -164,11 +164,11 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "rectangleBlockTitle":function(d){return "pravokutnik (širina, visina, stil, boja)"},
 "reinfFeedbackMsg":function(d){return "Možeš pritisnuti gumb \"Pokušaj ponovno\" kako bi uredio svoj crtež."},
 "rotateImageBlockTitle":function(d){return "rotiraj (stupnjevi, slika)"},
-"scaleImageBlockTitle":function(d){return "scale (factor, image)"},
+"scaleImageBlockTitle":function(d){return "razmjera (faktor)"},
 "squareBlockTitle":function(d){return "kvadrat (veličina, stil, boja)"},
 "starBlockTitle":function(d){return "zvijezda (radijus, stil, boja)"},
 "radialStarBlockTitle":function(d){return "radijalna-zvijezda (krakovi, unutar, izvan, stil, boja)"},
-"polygonBlockTitle":function(d){return "mnogokut (strane, duljina, stil, boja)"},
+"polygonBlockTitle":function(d){return "polygon (sides, length, style, color)"},
 "stringAppendBlockTitle":function(d){return "Dodavanje niza (prvi, drugi)"},
 "stringLengthBlockTitle":function(d){return "duljina niza (niz)"},
 "textBlockTitle":function(d){return "tekst (niz, veličina, boja)"},

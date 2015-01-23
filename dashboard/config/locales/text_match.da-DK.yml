@@ -23,8 +23,8 @@
         Enter answer here: Skriv svaret her
         4 + 5: 4 + 5
         Type the arithmetic expression here: Skriv det matematiske udtryk her
-        Blocks to Math 1.blocks.start_blocks: Blokke til matematik 1.blocks.start_blocks
-        Blocks to Math 1.blocks.start_blocks, 200: Blokke til matematik 1.blocks.start_blocks,
+        Blocks to Math 1.blocks.start_blocks: Blocks to Math 1.blocks.start_blocks
+        Blocks to Math 1.blocks.start_blocks, 200: Blocks to Math 1.blocks.start_blocks,
           200
       Blocks to Math 2:
         Convert Blocks to Math: Omformuler blokkene til matematiksprog
@@ -33,7 +33,7 @@
         /script_assets/msm/unit1/blockstomath2.png: /script_assets/msm/unit1/blockstomath2.png
         7 * 6: 7 * 6
         Type the arithmetic expression here: Skriv det matematiske udtryk her
-        Blocks to Math 2.blocks.start_blocks, 200: Blokke til matematik 2.blocks.start_blocks,
+        Blocks to Math 2.blocks.start_blocks, 200: Blocks to Math 2.blocks.start_blocks,
           200
       Blocks to Math 3:
         Convert Blocks to Math: Omformuler blokkene til matematiksprog
@@ -43,7 +43,7 @@
         (2 * 3) - (1 + 0): (2 * 3) - (1 + 0)
         2 * 3 - (1 + 0): 2 * 3 - (1 + 0)
         Type the arithmetic expression here: Skriv det matematiske udtryk her
-        Blocks to Math 3.blocks.start_blocks: Blokke til matematik 3.blocks.start_blocks
+        Blocks to Math 3.blocks.start_blocks: Blocks to Math 3.blocks.start_blocks
       Blocks to Math 4:
         Convert Blocks to Math: Omformuler blokkene til matematiksprog
         Type out the arithmetic expression that matches this code: Skriv det matematiske
@@ -52,8 +52,8 @@
         (5 + 8) - 12: (5 + 8) - 12
         5 + 8 - 12: 5 + 8 - 12
         Type the arithmetic expression here: Skriv det matematiske udtryk her
-        Blocks to Math 4.blocks.start_blocks: Blokke til matematik 4.blocks.start_blocks
-        Blocks to Math 4.blocks.start_blocks, 200: Blokke til matematik 4.blocks.start_blocks,
+        Blocks to Math 4.blocks.start_blocks: Blocks to Math 4.blocks.start_blocks
+        Blocks to Math 4.blocks.start_blocks, 200: Blocks to Math 4.blocks.start_blocks,
           200
       Blocks to Math 5:
         Convert Blocks to Math: Omformuler blokkene til matematiksprog
@@ -63,7 +63,7 @@
         (-2) * (-6):
         - 2 * -6: -2 * -6
         Type the arithmetic expression here: Skriv det matematiske udtryk her
-        Blocks to Math 5.blocks.start_blocks: Blokke til matematik 5.blocks.start_blocks
+        Blocks to Math 5.blocks.start_blocks: Blocks to Math 5.blocks.start_blocks
       Blocks to Math 6:
         Convert Blocks to Math: Omformuler blokkene til matematiksprog
         Type out the arithmetic expression that matches this code: Skriv det matematiske
@@ -74,7 +74,7 @@
         (4 - 1) * (-2) + 12: (4 - 1) * (-2) + 12
         (4 - 1) * -2 + 12: (4 - 1) * -2 + 12
         Type the arithmetic expression here: Skriv det matematiske udtryk her
-        Blocks to Math 6.blocks.start_blocks: Blokke til matematik 6.blocks.start_blocks
+        Blocks to Math 6.blocks.start_blocks: Blocks to Math 6.blocks.start_blocks
       Blocks to Math 7:
         Convert Blocks to Math: Omformuler blokkene til matematiksprog
         Type out the arithmetic expression that matches this code: Skriv det matematiske
@@ -82,7 +82,7 @@
         /script_assets/msm/unit1/blockstomath7.png: /script_assets/msm/unit1/blockstomath7.png
         10 / (2 * (3 + 1)): 10 / (2 * (3 + 1))
         Type the arithmetic expression here: Skriv det matematiske udtryk her
-        Blocks to Math 7.blocks.start_blocks: Blokke til matematik 7.blocks.start_blocks
+        Blocks to Math 7.blocks.start_blocks: Blocks to Math 7.blocks.start_blocks
       Blocks to Bools 1:
         Convert Blocks to Math: Omformuler blokkene til matematiksprog
         Type out the arithmetic expression that matches this code: Skriv det matematiske

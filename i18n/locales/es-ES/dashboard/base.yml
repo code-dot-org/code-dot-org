@@ -1,7 +1,4 @@
-es-AR:
-  errors:
-    messages:
-      not_saved: 'Please correct the following errors:'
+es:
   activerecord:
     errors:
       messages:
@@ -92,7 +89,7 @@ es-AR:
   signin_form:
     title: ¿Ya tienes una cuenta? Inicia sesión
     login: Correo electrónico o nombre de usuario
-    password: contraseña
+    password: Contraseña
     remember: Recordarme
     submit: Iniciar Sesión
   signin:
@@ -300,7 +297,7 @@ es-AR:
     new_password_hint: (déjalo en blanco si no quieres cambiarlo)
     current_password_hint: (necesitamos tu contraseña actual para confirmar los cambios)
     delete: Eliminar tu cuenta
-    delete_text: Hacer click en el botón de abajo eliminará su cuenta.
+    delete_text: Haz click en el botón de abajo para eliminar su cuenta.
     delete_text_teacher_note: 'Nota: Eliminar su cuenta no eliminará la cuenta de sus alumnos.'
     delete_confirm: ¿Estás seguro que desea eliminar su cuenta?
   user_level:
@@ -475,7 +472,7 @@ es-AR:
     script:
       name:
         20-hour:
-          title: Curso de Introducción a las Ciencias de la Computación K-8 (15-25 horas)
+          title: K-8 Introducción al Curso de Ciencias de la Computación (15-25 horas)
           description: 'Este curso de 20 horas introduce el núcleo de la informática y conceptos de programación. El curso está diseñado para su uso en aulas para los grados K-8, pero es divertido aprender en todas las edades.  '
         Hour of Code:
           title: Hora del código
@@ -490,7 +487,7 @@ es-AR:
           title: Constructor
           description: ""
         flappy:
-          title: Código Flappy
+          title: Código de Flappy
           description: ¿Quieres crear tu propio juego en menos de 10 minutos? ¡Prueba nuestro tutorial de Código Flappy!
         jigsaw:
           title: Rompecabezas

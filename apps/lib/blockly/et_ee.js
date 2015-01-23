@@ -1,6 +1,6 @@
 goog.provide('Blockly.Msg.et_ee');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "call";
+Blockly.Msg.ACTUAL = "tegelik";
 Blockly.Msg.ADD = "Lisa";
 Blockly.Msg.ADD_COMMENT = "Lisa kommentaar";
 Blockly.Msg.ADD_PARAMETER = "Lisa parameeter";
@@ -74,7 +74,7 @@ Blockly.Msg.EXAMPLE = "Näide";
 Blockly.Msg.EXAMPLE_DESCRIPTION = "Määrab näite koos eeldatava ja tegeliku käitumisega";
 Blockly.Msg.EXPAND_ALL = "Laienda plokid";
 Blockly.Msg.EXPAND_BLOCK = "Laienda plokk";
-Blockly.Msg.EXPECTED = "result";
+Blockly.Msg.EXPECTED = "oodatud";
 Blockly.Msg.EXTERNAL_INPUTS = "Välised sisendid";
 Blockly.Msg.FUNCTION_CREATE = "Koosta funktsioon";
 Blockly.Msg.FUNCTION_EDIT = "muuda";

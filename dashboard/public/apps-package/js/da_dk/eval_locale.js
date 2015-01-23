@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -159,16 +159,16 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ellipseBlockTitle":function(d){return "ellipse (bredde, højde, stil, farve)"},
 "extraTopBlocks":function(d){return "Du har separate blokke. Mente du fastgøre disse til \"display\" blokken?"},
 "overlayBlockTitle":function(d){return "overlay (top, bund)"},
-"placeImageBlockTitle":function(d){return "put-billede (x, y, billede)"},
+"placeImageBlockTitle":function(d){return "plaser-billede (x, y, billede)"},
 "offsetBlockTitle":function(d){return "offset (x, y, billede)"},
 "rectangleBlockTitle":function(d){return "rektangel (bredde, højde, stil, farve)"},
 "reinfFeedbackMsg":function(d){return "Du kan trykke på knappen \"Prøv igen\" for at redigere din tegning."},
 "rotateImageBlockTitle":function(d){return "roter (grader, billede)"},
-"scaleImageBlockTitle":function(d){return "scale (factor, image)"},
+"scaleImageBlockTitle":function(d){return "skaler (faktor)"},
 "squareBlockTitle":function(d){return "kvadrat (størrelse, stil, farve)"},
 "starBlockTitle":function(d){return "stjerne (radius, stil, farve)"},
 "radialStarBlockTitle":function(d){return "radial-stjerne (punkter, indre, ydre, stil, farve)"},
-"polygonBlockTitle":function(d){return "polygon (sider, længde, stil, farve)"},
+"polygonBlockTitle":function(d){return "polygon (sides, length, style, color)"},
 "stringAppendBlockTitle":function(d){return "string-append (første, anden)"},
 "stringLengthBlockTitle":function(d){return "strenglængden (string)"},
 "textBlockTitle":function(d){return "tekst (string, størrelse, farve)"},

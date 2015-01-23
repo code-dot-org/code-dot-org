@@ -1,859 +1,917 @@
-"gl":
+"es":
   data:
     script:
       name:
         20-hour:
-          desc: K-8 Intro to Computer Science Course
-          Unplug1: Stage 1
-          Maze: Stage 2
-          Unplug2: Stage 3
-          Unplug3: Stage 4
-          Artist: Stage 5
-          Unplug4: Stage 6
-          Artist2: Stage 7
-          Unplug5: Stage 8
-          Farmer: Stage 9
-          Unplug6: Stage 10
-          Artist3: Stage 11
-          Unplug7: Stage 12
-          Farmer2: Stage 13
-          Unplug8: Stage 14
-          Artist4: Stage 15
-          Unplug9: Stage 16
-          Farmer3: Stage 17
-          Unplug10: Stage 18
-          Artist5: Stage 19
-          Unplug11: Stage 20
+          desc: Curso K-8  de introducción a las ciencias de la computación
+          Unplug1: Etapa 1
+          Maze: Etapa 2
+          Unplug2: Etapa 3
+          Unplug3: Etapa 4
+          Artist: Etapa 5
+          Unplug4: Etapa 6
+          Artist2: Etapa 7
+          Unplug5: Etapa 8
+          Farmer: Etapa 9
+          Unplug6: Etapa 10
+          Artist3: Etapa 11
+          Unplug7: Etapa 12
+          Farmer2: Etapa 13
+          Unplug8: Etapa 14
+          Artist4: Etapa 15
+          Unplug9: Etapa 16
+          Farmer3: Etapa 17
+          Unplug10: Etapa 18
+          Artist5: Etapa 19
+          Unplug11: Etapa 20
         Hour of Code:
-          desc: Hour of Code
-          Maze: Stage 1
+          desc: Hora del código
+          Maze: Etapa 1
         Edit Code:
-          desc: Edit Code (beta)
-          MazeEC: Stage 1
+          desc: Editar código (beta)
+          MazeEC: Etapa 1
         2014 Levels:
           desc: Bounce (beta)
-          Bounce: Stage 1
+          Bounce: Etapa 1
         Builder Levels:
-          desc: User-Created Puzzles (beta)
-          Custom: Stage 1
+          desc: Rompecabezas creados por el usuario (beta)
+          Custom: Etapa 1
         Flappy Levels:
           desc: Flappy Bird
-          Flappy: Stage 1
+          Flappy: Etapa 1
         Jigsaw Levels:
-          desc: Jigsaw (beta)
-          Jigsaw: Stage 1
+          desc: Rompecabezas (beta)
+          Jigsaw: Etapa 1
         Step Levels:
-          desc: Maze (beta)
-          MazeStep: Stage Step
+          desc: Laberinto (beta)
+          MazeStep: Paso de etapa
         edit-code:
-          desc: Edit Code (beta)
-          MazeEC: Stage 1
-          Applab: Stage 2
-          ArtistEC: Stage 3
-          StudioEC: Stage 4
+          desc: Editar código (beta)
+          MazeEC: Etapa 1
+          Webapp: Etapa 2
+          ArtistEC: Etapa 3
+          StudioEC: Etapa 4
         events:
           desc: Bounce (beta)
-          Bounce: Stage 1
-          Studio: Stage 2
+          Bounce: Etapa 1
+          Studio: Etapa 2
         builder:
-          desc: User-Created Puzzles (beta)
-          Custom: Stage 1
+          desc: Rompecabezas creados por el usuario (beta)
+          Custom: Etapa 1
         flappy:
           desc: Flappy Bird
-          Flappy: Stage 1
+          Flappy: Etapa 1
         jigsaw:
-          desc: Jigsaw (beta)
-          Jigsaw: Stage 1
+          desc: Rompecabezas (beta)
+          Jigsaw: Etapa 1
         step:
-          desc: Maze (beta)
-          MazeStep: Stage Step
+          desc: Laberinto (beta)
+          MazeStep: Paso de etapa
         wordsearch:
-          desc: Spelling Bee (beta)
-          WordSearch: Stage 1
+          desc: Abeja de Ortografía (beta)
+          WordSearch: Etapa 1
     game:
       name:
-        Unplug1: Introduction to Computer Science
-        Maze: The Maze
-        Multi: Multiple Choice Stuffs
-        Unplug2: Computational Thinking
-        Unplug3: Graph Paper Programming
-        Artist: The Artist
-        Unplug4: Algorithms
-        Artist2: The Artist 2
-        Unplug5: Functions
-        Farmer: The Farmer
-        Unplug6: Conditionals
-        Artist3: The Artist 3
-        Unplug7: Song Writing
-        Farmer2: The Farmer 2
-        Unplug8: Abstraction
-        Artist4: The Artist 4
-        Unplug9: Relay Programming
-        Farmer3: The Farmer 3
-        Unplug10: The Internet
-        Artist5: The Artist 5
-        Unplug11: Wrap-up
-        MazeEC: The Maze
-        Bounce: Bounce
+        Unplug1: Introducción al Arte de las Ciencias de la Computación
+        Maze: El laberinto
+        Multi: Materias de elección múltiple
+        Unplug2: Pensamiento computacional
+        Unplug3: Programación de hoja cuadriculada
+        Artist: El artista
+        Unplug4: Algoritmos
+        Artist2: El artista 2
+        Unplug5: Funciones
+        Farmer: El granjero
+        Unplug6: Condicionales
+        Artist3: El artista 3
+        Unplug7: Escribir canciones
+        Farmer2: El granjero 2
+        Unplug8: Liberación abstracta
+        Artist4: El artista 4
+        Unplug9: Programación bajo presión
+        Farmer3: El granjero 3
+        Unplug10: Internet
+        Artist5: El artista 5
+        Unplug11: Cierre
+        MazeEC: El Laberinto
+        Bounce: Rebotar
         Flappy: Flappy Bird
-        Jigsaw: Jigsaw
-        MazeStep: Maze Step Mode
-        Wordsearch: Wordsearch
-        Webapp: App Lab
-        ArtistEC: The Artist
-        TextMatch: Text Match
-        StudioEC: Play Lab
-        Applab: App Lab
+        Jigsaw: Rompecabezas
+        MazeStep: Modo paso a paso de laberinto
+        Wordsearch: Sopa de Letras
+        Webapp: Aplicación Web
+        ArtistEC: El artista
+        TextMatch: Combinación de texto
+        StudioEC: Laboratorio de Juegos
     trophy:
       name:
-        Bronze: Bronze
-        Silver: Silver
-        Gold: Gold
+        Bronze: Bronce
+        Silver: Plata
+        Gold: Oro
     concept:
       description:
-        sequence: Sequence
-        if: If block
-        if_else: If-else block
-        loop_times: Repeat times block
-        loop_until: Repeat until block
-        loop_while: While block
-        loop_for: Counter block
-        function: Functions
-        parameters: Functions with parameters
+        sequence: Secuencia
+        if: Bloque si
+        if_else: Bloque si-sino
+        loop_times: Bloque repetir veces
+        loop_until: Bloque repetir hasta que
+        loop_while: Bloque mientras
+        loop_for: Bloque contador
+        function: Funciones
+        parameters: Funciones con parámetros
     level:
       instructions:
-        maze_2_2: 'Can you help me to catch the naughty pig? Stack a couple of "move
-          forward" blocks together and press "Run" to help me get there. '
-        maze_2_1: This pig is ruffling my feathers. Help me to find him!
-        maze_2_2_5: Trace the path and lead me to the silly pig. Avoid TNT or the
-          feathers will fly!
-        maze_2_3: Guide me to the green evilness! (Watch out for TNT)
-        maze_2_4: Keep calm and help me to find the bad pig. Otherwise I might get
-          angry!
-        maze_2_5: There's a way I can get to the silly pig using only 2 blocks. Can
-          you figure it out?
-        maze_2_6: Try to get me to the green intruder using only three blocks.
-        maze_2_7: Help me banish this bad piggy using the fewest number of blocks.
-          Try using more than one "repeat times" block.
-        maze_2_8: 'When a block is grey, that means you can''t delete it. Solve this
-          puzzle using the "repeat" block that repeats 3 times. Try putting these
-          3 blocks inside the grey "repeat" block: move, move, turn.'
-        maze_2_9: Ok, try the new "repeat until" block - it will repeat until I reach
-          the annoying pig.
-        maze_2_10: Ok, one last time for practice - can you solve this one using only
-          4 blocks?
-        maze_2_11: Dear person.  Me zombie. Me hungry. Must... get... to sunflower...
-          Can you get me there with only 5 blocks?
-        maze_2_12: Ok, this is similar, but slightly different. Can you do it in only
-          5 blocks?
-        maze_2_13: 'Use the new "if" block to let me decide when to turn. Hint: you
-          only need one more block, but learn how we set it up so you can do it on
-          your own next time.'
-        maze_2_14: Ok, this is just like the last puzzle, but you need to remember
-          how you used the "if" block and the "repeat" block together.
-        maze_2_15: Me want sunflower! Use an "if" block to get me there with the fewest
-          number of blocks.
-        maze_2_16: Ok, let's do that again for practice - this isn't very different,
-          but watch out for the chompers!
-        maze_2_17: The "If-else" blocks checks a condition, and then does one thing
-          OR another. To get me to the sunflower try to use this new block.
-        maze_2_18: One more practice of the "if-else" block, can you get it right
-          on your first try?
-        maze_2_19: Can you add just 3 blocks to help me solve a more complex maze?
-          If you do it right, I can walk any curvy path no matter the length.
-        turtle_1_1: Hi, I'm an artist. You can write code to make me draw almost anything.
-          Use a few blocks to make me draw over the grey lines in the picture.
-        turtle_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
-          it in the new "set color" block.'
-        turtle_1_3: Make a square using only 3 blocks.
-        turtle_1_4: 'Draw a triangle whose sides are all in different colors, using
-          the "random color" option that picks a different color each time. Hint:
-          you''ll have to figure out how far to turn by clicking on the number in
-          the turn block.'
-        turtle_1_5: Now, for practice, draw a triangle and then a square to draw an
-          envelope.
-        turtle_1_6: 'Can you figure out how draw this triangle and square? Hint: Do
-          the triangle first, then figure out how much to turn before drawing the
-          square.'
-        turtle_1_7: Ok, let's make it a bit harder - see if you can draw these green
-          glasses. The squares are 100 pixels on each side, and they're 50 pixels
-          apart. Don't forget to draw in green!
-        turtle_1_8: Ok, try to figure out what happens if you run this code (or press
-          "Run" to try it). Then, repeat it enough times to complete the drawing.
-          The colors will be different every time.
-        turtle_1_9: Can you figure out what number to replace the question marks with
-          to draw a circle?
-        turtle_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a
-          stick figure, snowflake, or spiral. Also try the new "set width" block.
-          Have fun!'
-        turtle_4_1: 'Can you draw a triangle (with edges of 100 pixels) with only
-          3 blocks? Hint: use a "repeat" block.'
-        turtle_4_2: Add a "turn right by 90 degrees" block somewhere in the middle
-          of the program already out on the workspace to draw these triangles.
-        turtle_4_3: Ok, here's the code you wrote to draw a single triangle. Can you
-          add a "repeat" and "turn" block to make a pretty flower?
-        turtle_4_4: 'Here''s the same code from the previous puzzle, but turning only
-          36 degrees after drawing each triangle. How many times does this need to
-          repeat? (Hint: after 360 degrees of turning the drawing will come full circle)'
-        turtle_4_5: 'Here''s the same code from the previous puzzle, but repeating
-          the turns 36 times. How many degrees should the turns be? (Hint: after 360
-          degrees of turning the drawing will come full circle)'
-        turtle_4_6: Using only 3 blocks, can you draw a square with edges of 20 pixels?
-        turtle_4_7: 'Here''s the code for drawing the square from last puzzle. Can
-          you repeat it to draw 10 adjacent squares like a ladder? Hint: you only
-          need 2 more blocks.'
-        turtle_4_8: Here's the solution to the previous puzzle. Can you add just 2
-          more blocks to complete the drawing?
-        turtle_4_9: Here's the solution to the previous puzzle. How many degrees should
-          you turn to complete the drawing? (You probably need to guess a few times)
-        turtle_4_10: Here's the solution to the previous puzzle. How many times should
-          you repeat to complete the drawing?
-        turtle_4_11: Try changing the numbers in the "turn" and "repeat" blocks to
-          make different patterns. Or, experiment changing the rest of the code to
-          draw anything you want.
-        maze_karel_1_1: Hi, I'm a farmer. I need your help to flatten the field on
-          my farm so it's ready for planting. Move me to the pile of dirt and use
-          the "remove" block to remove it.
-        maze_karel_1_2: Next, move me to the hole and fill it with TWO shovelfuls
-          of dirt, using the "fill" block.
-        maze_karel_1_3: Move me to the pile of dirt and tell me how many shovelfuls
-          to remove using as few blocks as possible.
-        maze_karel_1_4: 'Can you help me remove all four piles of dirt? Hint: use
-          a repeat block if you can.'
-        maze_karel_1_5: 'Help me fill in all these holes with 5 shovelfuls of dirt.
-          Hint: you can put a "repeat" block inside the "while" block.'
-        maze_karel_1_6: Remove all the piles of dirt, using as few blocks as possible.
-          The new options in the dropdown menu on the "while" block tell me if I'm
-          standing on a pile or a hole.
-        maze_karel_1_7: Wow, I found a really deep hole! I don't know how many shovelfuls
-          of dirt it needs. Can you write a program that fills it until the ground
-          is even?
-        maze_karel_1_8: Help me fill in the hole at the end of the field, using as
-          few blocks as possible.
-        maze_karel_1_9: 'Make me remove all these piles of dirt. Try to use as few
-          blocks as possible. Hint: try using a "while" block.'
-        maze_karel_1_10: I'm working late, so it's dark out, and I can't tell how
-          large the piles are. Now I don't have all the options I used to have on
-          the while block. Move me along the field, and if there is a pile, remove
-          it.
-        maze_karel_1_11: 'It''s still dark outside. Move me along the field. If there
-          is a pile, remove it, and if there is a hole, fill it in. Hint: use the
-          dropdown menu of options on the "if" block.'
-        turtle_2_1: 'Hello. Me zombie artist. Me love drawing! Help me draw a square
-          in a special color. Important note: you have all the same blocks but they''ve
-          now been arranged in categories.'
-        turtle_2_2: Welcome to using functions, which let you define new blocks! Try
-          the new "draw a square" block, found in the "Functions" category, to draw
-          a small 50x50 green square.
-        turtle_2_3: Use the "repeat" block (in the "Loops" category) to draw 3 squares
-          of size 100, each 120 degrees apart. And do it in 3 different, random colors.
-        turtle_2_4: 'Now we''re going to get fancy. Change the code to draw 36 squares,
-          100 pixels wide, and each 10 degrees apart. Hint: you may want to use the
-          slider to make me go faster.'
-        turtle_2_5: Draw squares with sides of 50, 60, 70, 80, and 90 pixels.  You'll
-          need to use the "draw a square" function five times.
-        turtle_2_6: 'Ok, this program will use a counter, to draw the same squares
-          as last time. You want the square to be the same size as the counter, so
-          use the "counter" block. Hint: It''s in the Variables category.'
-        turtle_2_7: Here's a program to draw a spiral, but the blocks are disabled
-          so they won't run. Make a new program using a "count with" block (in the
-          Loops category) and "counter" block (in the Variables category) to draw
-          the same spiral.
-        turtle_2_7_5: There's a new "draw a snowman" function (in the Functions category).
-          Draw two snowmen, of height 250 and 100.
-        turtle_2_8: This one's a bit tricky. Use the "draw a snowman" function and
-          the new "jump forward" block (in the Actions category). Draw 3 snowmen in
-          different colors, 100 pixels apart.
-        turtle_2_9: Use a "count with" loop to draw a family of snowmen with heights
-          of 110, 100, 90, 80, and 70. The snowmen should all be 60 pixels apart.
-        turtle_2_10: Here's some code to try experimenting with different spirals.  What
-          happens if you change the turn amount? Or set a random color in the loop?  Draw
-          anything you like.
-        maze_karel_2_1: 'Try using the blocks to help me remove all the piles and
-          fill in all the holes on the ground. Try to use loops instead of using too
-          many blocks. Hint: you can put a loop inside another loop.'
-        maze_karel_2_2: We've defined our own block called "fill 5", which is now
-          in the Functions category. Use it to help me fill in this hole.
-        maze_karel_2_3: Use the new "fill 5" function block to make me fill in all
-          the holes. You'll have to drag out the "fill 5" block out from the Functions
-          category.
-        maze_karel_2_4: Define a new function that removes 7 shovelfuls. Then use
-          it to write a program that helps me remove all the piles.
-        maze_karel_2_5: Create a new function that removes 6 shovelfuls from a pile,
-          and use it to help me level out all the piles.
-        maze_karel_2_6: Use two new functions, "fill 8" and "remove 8", to help me
-          level out the pile and fill in the hole.
-        maze_karel_2_7: There's a cow in my field! Write a new function that helps
-          me avoid the cow and remove the pile. Put all your blocks inside the new
-          function.
-        maze_karel_2_8: Use this new function, "avoid the cow and remove 1", to help
-          me remove all the piles.
-        maze_karel_2_9: Ok, here's a function that removes 4 different piles of dirt
-          in a vertical column. Try putting this function inside a loop, so that you
-          remove all the piles of dirt using only a few new blocks.
-        maze_karel_2_10: Move me across the field, and use these two functions to
-          help me remove all the piles and fill all the holes.
-        turtle_3_1: This puzzle shows you how the "draw a square" and "draw a circle"
-          functions are defined.  Defining a function doesn't run its blocks.  You
-          have to pull out the "draw a square" block to actually draw a square.
-        turtle_3_2: Using the "draw a square" function as an example, create a "draw
-          a triangle" function and use it.
-        turtle_3_3: 'Draw triangular fences around the cats and a square fence around
-          the cow.  Tip: test the program as you go along.'
-        turtle_3_4: See if you can figure out how to use "draw a square" and "draw
-          a triangle" (and some other blocks) to draw a house around the lion.
-        turtle_3_5: 'Now create a new "draw a house" function and use it to house
-          two cats. Hint: create a new function using the "do something" block, and
-          type your own text to name the block.'
-        turtle_3_6: 'Using "draw a square" as an example, add an input named "length"
-          to "draw a triangle". Then, draw triangles in different sizes. (Hint: click
-          the star to add an input to a function)'
-        turtle_3_7: Add an input named "length" to "draw a house" and build a big
-          house for the elephant (with edges 150 pixels long)
-        turtle_3_8: Here are all of the blocks from the previous puzzle.  Modify "draw
-          a house" so I end up at the bottom right corner after drawing a new house.
-          Use this modified function to draw three houses.
-        turtle_3_9: Can you re-create the "draw a house" function without help? Try
-          it, and then draw a row of houses.
-        turtle_3_10: You've learned a lot! Now use it to draw whatever you want. Try
-          to draw a star, or a spiral, or a fancy snowflake.
-        maze_karel_debug_seq_1: Welcome to debugging! My code doesn't work right.
-          Can you spot the problem and fix it so that I can get my field flat and
-          ready for planting?
-        maze_karel_debug_seq_2: What's wrong with this program? How should you fix
-          it so I can remove that pile?
-        maze_karel_debug_repeat: De-bug this program for me so my field will be nice
-          and flat.
-        maze_karel_debug_while: How should you change this program to help me fill
-          the hole?
-        maze_karel_debug_if: Help! Fix the program so my field will be completely
-          flat.
-        maze_karel_debug_if_else: De-bug this program so I can fill in the holes and
-          remove all the piles.
-        maze_karel_debug_function_1: What should you change about this program to
-          help me remove all the piles?
-        maze_karel_debug_function_2: Can you de-bug this program for me so I can make
-          my field flat?
-        maze_karel_debug_function_3: 'Edit this program so I''ll remove all the piles
-          on my field. '
-        turtle_5_1: Try running this program, and make changes to see what happens.
-          Can you figure out how it works? (Or delete it and replace it with something
-          totally different)
-        turtle_5_2: Try running this program, and make changes to see what happens.
-          Can you figure out how it works? (Or delete it and replace it with something
-          totally different)
-        turtle_5_3: Try running this program, and make changes to see what happens.
-          Can you figure out how it works? (Or delete it and replace it with something
-          totally different)
-        turtle_5_4: Try running this program, and make changes to see what happens.
-          Can you figure out how it works? (Or delete it and replace it with something
-          totally different)
-        turtle_5_5: Try running this program, and make changes to see what happens.
-          Can you figure out how it works? (Or delete it and replace it with something
-          totally different)
-        turtle_5_6: Try running this program, and make changes to see what happens.
-          Can you figure out how it works? (Or delete it and replace it with something
-          totally different)
-        maze_3_1: I need to get to that pig! Type in a couple of calls to move();
-          so I can get my eggs back.
-        maze_3_2: Write me a program, so I can make it all the way to the pig.
-        maze_3_3: How should I get to the pig? Make sure I don't run into the box
-          of TNT!
-        maze_3_4: Argh! Write me a program that gets me around the TNT and to the
-          pig.
-        bounce_1: Attach a block to the "when left arrow" block and press "Run". Move
-          the paddle using the left arrow to reach the finish target.
-        bounce_2: Attach a block to the "when right arrow" and "when left arrow" blocks.
-          Move the paddle to reach both finish targets.
-        bounce_3: Now try something similar with the "when up arrow" block. Move the
-          paddle to the finish target at the top.
-        bounce_4: This time you need to add four blocks. Move the paddle to all four
-          finish targets to complete this puzzle.
-        bounce_5: We're going to send a ball flying down towards the paddle. Attach
-          a block to the "when ball hits paddle" block to ensure the ball reaches
-          the finish target.
-        bounce_6: Now the finish target is on the top. You need to attach blocks to
-          both of the "when ball hits" blocks to solve this puzzle.
-        bounce_7: Attach blocks to each of the "when" blocks. Bounce the ball until
-          it hits the finish target.
-        bounce_10: There is a now a goal at the top. Attach the "score point" and
-          "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses paddle" blocks to make a game. See how many points you can score
-          before your opponent scores twice.
-        bounce_11: You can now attach blocks to the "when run" block. You have to
-          attach the new "launch new ball" block in more than one place. Also, try
-          changing the scene or the speed of the paddle and the ball and see how many
-          points you can score before your opponent scores twice.
-        bounce_12: Create your own Bounce game. You can change all the visuals and
-          the rules. When you're done, click Finish to let friends try your game on
-          their phones.
-        Custom_builder: Drag blocks from the toolbox to the workspace to draw the
-          level you wish to create. Press "Run" when you are ready.
-        flappy_1: Attach a block to the "when click" block, then press "Run". Click
-          or tap the screen to move Flappy to the target.
-        flappy_2: Now we've added some ground.  Attach a block to the "when hit the
-          ground" block.  Your code needs to 'END GAME' when Flappy crashes.
-        flappy_3: The "when run" block allows you to run code when your game starts.  Try
-          setting the level speed and flapping to the target.
-        flappy_4: Flappy will fly through obstacles unless you write code to make
-          him crash. Attach a block to the "when hit an obstacle" block. Your code
-          needs to 'END GAME' when Flappy crashes into the first set of pipes.
-        flappy_5: Let's add a scoreboard, and count points when Flappy makes it past
-          obstacles. Add to the "when pass an obstacle" block, and then score a point
-          by flying Flappy through the first set of pipes.
-        flappy_6: See if you can still score a point after making Flappy flap either
-          a smaller or larger amount.
-        flappy_7: Next, try changing the scene by attaching another block to the "when
-          run" block.
-        flappy_8: You can set visuals anytime, not just when the game starts. Try
-          setting a RANDOM scene when other events happen, for example, when passing
-          an obstacle.
-        flappy_9: To mix things up, when hitting an obstacle or the ground, instead
-          of ending the game try setting the score back to 0.
-        flappy_11: Create your own Flappy game. You can change all the visuals and
-          all the rules, even the gravity. When you're done, click Finish to let friends
-          try your game on their phones.
-        flappy_k1_1: Play Flappy
-        flappy_k1_2: Attach a block to the "when click" block, then press "Run". Click
-          or tap the screen to move Flappy to the target.
-        flappy_k1_3: Now we've added some ground.  Attach a block to the "when hit
-          the ground" block.  Your code needs to 'END GAME' when Flappy crashes.
-        flappy_k1_4: The "when run" block allows you to run code when your game starts.  Try
-          setting the level speed and flapping to the target.
-        flappy_k1_5: Flappy will fly through obstacles unless you write code to make
-          him crash. Attach a block to the "when hit an obstacle" block. Your code
-          needs to 'END GAME' when Flappy crashes into the first set of pipes.
-        flappy_k1_6: Let's add a scoreboard, and count points when Flappy makes it
-          past obstacles. Add to the "when pass an obstacle" block, and then score
-          a point by flying Flappy through the first set of pipes.
-        flappy_k1_7: See if you can score multiple points for making it past an obstacle
-        flappy_k1_8: Next, try changing the scene by attaching another block to the
-          "when run" block.
-        flappy_k1_9: Try changing the player by attaching a "set player" block to
-          the "when run" block.
-        jigsaw_1: Click the block
-        jigsaw_2: Drag the block to the target
-        jigsaw_3: Arrange the blocks to form the image
-        jigsaw_4: Arrange the blocks to form the image
-        jigsaw_5: Arrange the blocks to form the image
-        jigsaw_6: Arrange the blocks to form the image
-        jigsaw_7: Arrange the blocks to form the image
-        jigsaw_8: Arrange the blocks to form the image
-        jigsaw_9: Arrange the blocks to form the image
-        jigsaw_10: Arrange the blocks to form the image
-        jigsaw_11: Arrange the blocks to form the image
-        jigsaw_12: Arrange the blocks to form the image
-        jigsaw_13: Fix the puzzle!
-        mazestep_1: Maze step description here
-        mazestep_2: Maze step description here
-        mazestep_3: Maze step description here
-        mazestep_4: Maze step description here
-        mazestep_5: Maze step description here
-        studio_c2_1: Can you make this dog say "hello world"?
-        studio_c2_2: Can you make the dog say something and then have the cat say
-          something afterwards?
-        studio_c2_3: Can you write a program to make this dog move to the cat?
-        studio_c2_4: Can you write a program that makes the dog move to the cat, and
-          have the cat say "hello" when the dog reaches him?
-        studio_c2_5: Can you write a program to make the octopus say "hello" when
-          it is clicked?
-        studio_c2_6: Can you write a program to make this penguin move around using
-          the up / down / left /right keys to hit all of the targets?
-        studio_c2_7: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to move this dinosaur up and down repeatedly?
-        studio_c2_8: Can you have the penguin say "Ouch!" and play a "hit" sound if
-          he runs into the dinosaur, and then move him with the arrows to make that
-          happen?
-        studio_c2_9: Can you add a block to score a point when the penguin runs into
-          the octopus, and then move him with the arrows until you score?
-        studio_c2_10: Can you add blocks to change the background and the speed of
-          the penguin, and then move him with the arrows until you score?
-        studio_c2_11: Create your own story. When you're done, click Finish to let
-          friends try your story on their phones.
-        studio_c3_story_1: Can you make this dog say "hello world"?
-        studio_c3_story_2: Can you make the dog say something and then have the cat
-          say something afterwards?
-        studio_c3_story_3: Can you write a program to make this dog move to the cat?
-        studio_c3_story_4: Can you write a program that makes the dog move to the
-          cat, and have the cat say "hello" when the dog reaches him?
-        studio_c3_story_5: Can you add a block to make the octopus happy?
-        studio_c3_story_6: Create your own story. When you're done, click Finish to
-          let friends try your story on their phones.
-        studio_c3_game_1: Can you write a program to make the octopus say "hello"
-          when it is clicked?
-        studio_c3_game_2: Can you write a program to make this penguin move around
-          using the up / down / left /right keys to hit all of the targets?
-        studio_c3_game_3: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to move this dinosaur up and down repeatedly?
-        studio_c3_game_4: Can you have the penguin say "Ouch!" and play a "hit" sound
-          if he runs into the dinosaur, and then move him with the arrows to make
-          that happen?
-        studio_c3_game_5: Can you add a block to score a point when the penguin runs
-          into the octopus, and then move him with the arrows until you score?
-        studio_c3_game_6: Can you add blocks to change the background and the speed
-          of the penguin, and then move him with the arrows until you score?
-        studio_c3_game_7: Create your own game. When you're done, click Finish to
-          let friends try your game on their phones.
-        studio_playlab_1: Penguin wants to say "hello" - can you help him?
-        studio_playlab_2: Cave Boy (actor 1) and Cave Girl (actor 2) would like to
-          say "hello" to each other. Can you help them by using the "say" block twice?
-        studio_playlab_3: Can you help Tennis Girl get to the flag?
-        studio_playlab_4: Can you help Tennis Boy (actor 1) get to Tennis Girl (actor
-          2) and play a sound when he gets there?
-        studio_playlab_5: Can you help the Spacebot say "greetings earthlings" when
-          it is clicked? Don’t forget to click it after you click Run
-        studio_playlab_6: Can you help the Witch move around using the up/down/right/left
-          arrow keys to get to all the magical fireballs?
-        studio_playlab_7: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to it to help the wizard move right and left repeatedly?
-        studio_playlab_8: Can you add a block to score a point and a block to play
-          a sound when the unicorn runs into the wizard, and then move him with the
-          arrows until you score?
-        studio_playlab_9: Set the background for this alien invasion and help the
-          Spacebot get to the alien faster by changing its speed. Then move him with
-          the arrow keys to get to the Spacebot and alert everyone else
-        studio_playlab_10: Create your own game. When you're done, click Finish to
-          let friends try your game on their phones.
-        studio_full_sandbox: Create your own game. When you're done, click Finish
-          to let friends try your game on their phones.
-        studio_k1_1: Can you make this dog say "hello world"?
-        studio_k1_2: Can you make the dog say something and then have the cat say
-          something afterwards?
-        studio_k1_3: Can you write a program to make this dog move to the cat?
-        studio_k1_4: Make the dog move to the cat and the cat say "hello" when he
-          gets there.
-        studio_k1_5: Can you add a block to make the octopus happy?
-        studio_k1_6: Create your own story! Move around the cat and dog, and make
-          them say things.
-        maze_wordsearch_k_1: Move me to spell the word EAST
-        maze_wordsearch_k_2: Move me to spell the word SOUTH
-        maze_wordsearch_k_3: Move me to spell the word WEST
-        maze_wordsearch_k_4: Move me to spell the word NORTH
-        maze_wordsearch_k_6: Move me East and then South to spell the word JUMP
-        maze_wordsearch_k_9: Move me one way, then another to spell the word CODE
-        maze_wordsearch_k_13: Move me one way, then another to spell the word DEBUG
-        maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
-        maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
-        maze_wordsearch_k_20: This is a test! Move me one way, then another to spell
-          the word STORY
-        applab_ec_simple: Create your app by using the blocks in the toolbox.
-        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
-          it in the new "penColor" block.'
-        turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:
-          a stick figure, snowflake, or spiral. Also try the new "penWidth" block.
-          Have fun!'
-        studio_ec_sandbox: Create your own game. When you're done, click Finish to
-          let friends try your game on their phones.
+        maze_2_2: '¿Me ayudas a atrapar el cerdo malo? Apila juntos un par de bloques
+          "avanzar" y presiona "Ejecutar Programa" para ayudarme a llegar allí. '
+        maze_2_1: Este cerdo me está poniendo furioso. ¡Ayudame a encontrarlo!
+        maze_2_2_5: Traza el camino y llévame al cerdo tonto. Evita el TNT o las plumas
+          volarán!
+        maze_2_3: ¡Guíame al demonio verde! (Cuidado con el TNT)
+        maze_2_4: Mantén la calma y ayúdame a encontrar el cerdo malo. O de lo contrario,
+          ¡puedo enfadarme!
+        maze_2_5: Hay una forma de llegar al tonto cerdo utilizando sólo 2 bloques.
+          ¿Puedes encontrarla?
+        maze_2_6: Intenta llevarme al intruso verde utilizando sólo tres bloques.
+        maze_2_7: Ayúdame a desterrar este cerdito malo usando el menor número de
+          bloques posible. Prueba usando más de un bloque "repetir veces".
+        maze_2_8: 'Cuando un bloque es gris, significa que no puedes borrarlo. Resuelve
+          este puzzle utilizando el bloque de "repetir" que se repite 3 veces. Intenta
+          poner estos 3 bloques dentro del bloque gris de "repetir": mover, mover,
+          girar.'
+        maze_2_9: Ok, prueba el nuevo bloque "repetir hasta" - repetirá hasta que
+          llegue al cerdo molesto.
+        maze_2_10: Ok, una última vez para practicar - se puede resolver éste usando
+          solo 4 bloques?
+        maze_2_11: Hola persona.  Yo zombi. Yo hambriento. Debo... llegar... al girasol...
+          ¿Me puedes llevar ahí con sólo 5 bloques?
+        maze_2_12: Ok, esto es similar, pero un poco diferente. ¿Puedes hacerlo en
+          sólo 5 bloques?
+        maze_2_13: 'Usa el nuevo bloque "si" para dejarme decidir cuándo girar. Sugerencia:
+          solo necesitas un bloque más, pero aprende cómo lo hicimos así puedes hacerlo
+          tú solo la próxima vez.'
+        maze_2_14: Ok, esto es como el último puzzle, pero tienes que recordar cómo
+          usaste el bloque "si" y el bloque "repetir" juntos.
+        maze_2_15: ¡Yo querer girasol! Usa un bloque "si" para llevarme allí con la
+          menor cantidad posible de bloques.
+        maze_2_16: Ok, vamos hacer esto nuevamente para practicar - esto no es muy
+          diferente, pero ten cuidado con los masticadores!
+        maze_2_17: Los bloques "si-sino" comprueban una condición, y luego hacen una
+          cosa U otra. Para llevarme al girasol intenta usar este nuevo bloque.
+        maze_2_18: Una práctica más del bloque "si-sino", ¿Puedes hacerlo bien en
+          tu primer intento?
+        maze_2_19: ¿Puedes agregar sólo 3 bloques para ayudarme a resolver un laberinto
+          más complejo? Si lo haces bien, puedo caminar cualquier camino con curvas
+          sin importar su longitud.
+        turtle_1_1: Hola, soy un artista. Puedes escribir código para hacerme dibujar
+          casi cualquier cosa. Utiliza algunos bloques para hacerme dibujar por encima
+          de las líneas grises de la imagen.
+        turtle_1_2: 'Ahora, dibuja un cuadrado. Nota: usa tu color favorito eligiéndolo
+          en el nuevo bloque "definir color".'
+        turtle_1_3: Haz un cuadrado usando sólo 3 bloques.
+        turtle_1_4: 'Dibuja un triángulo cuyos lados tienen todos diferentes colores,
+          usando la opción "color al azar" que elige un color diferente cada vez.
+          Ayuda: tendrás que averiguar cuánto girar haciendo click en el número del
+          bloque girar.'
+        turtle_1_5: Ahora, para practicar, dibuja un triángulo y un cuadrado para
+          dibujar un sobre.
+        turtle_1_6: '¿Puedes darte cuenta cómo dibujar este triángulo y cuadrado?
+          Ayuda: Haz el triángulo primero, y luego averigua cuánto girar antes de
+          dibujar el cuadrado.'
+        turtle_1_7: Ok, vamos hacerlo un poco más difícil - ve si puedes dibujar estos
+          anteojos verdes. Los cuadrados tienen 100 píxeles en cada lado, y están
+          separados por 50 píxeles. ¡No te olvides de dibujar en verde!
+        turtle_1_8: Muy bien, tratemos de averiguar qué pasa si ejecutas este código
+          (o presionas "Ejecutar" para probarlo). Luego, repítelo las veces necesarias
+          para completar el dibujo. Los colores serán diferentes cada vez.
+        turtle_1_9: ¿Puedes adivinar con qué número reemplazarías a los signos de
+          interrogación para dibujar un círculo?
+        turtle_1_10: '¡Lo lograste! Ahora, a dibujar cualquier cosa que quieras. Algunas
+          ideas divertidas: un muñeco de palitos, un copo de nieve o un espiral. Prueba
+          también el nuevo bloque "ajuste de ancho". ¡Que te diviertas!'
+        turtle_4_1: '¿Puedes dibujar un triángulo (con bordes de 100 pixeles) usando
+          sólo tres bloques? Pista: Usa un bloque "repeat".'
+        turtle_4_2: Agrega un bloque "girar a la derecha 90 grados" en algún lugar
+          en medio del programa que ya está en el area de trabajo para dibujar estos
+          triángulos.
+        turtle_4_3: OK, este es el código que escribiste para dibujar un único triángulo.
+          Puedes agregar un bloque "repeat" y un bloque "turn" para crear una hermosa
+          flor?
+        turtle_4_4: 'Aquí está el mismo código del puzzle anterior, pero girado sólo
+          36 grados después de dibujar cada triángulo. ¿Cuántas veces necesitas repetir
+          esto? (Pista: después de girar el dibujo 360 grados, este se convertirá
+          en un círculo completo).'
+        turtle_4_5: 'Aquí está el mismo código del puzzle anterior, pero repitiendo
+          los giros 36 veces. ¿De cuántos grados debería ser el giro? (Pista: después
+          de girar el dibujo 360 grados, este se volverá un círculo completo).'
+        turtle_4_6: Usando sólo 3 bloques, ¿puedes dibujar un cuadrado con bordes
+          de 20 pixeles?
+        turtle_4_7: 'Aquí está el código para dibujar el cuadrado del puzzle anterior.
+          Puedes repetirlo para dibujar 10 cuadrados adyacentes como una escalera?
+          Pista: sólo necesitas 2 bloques más.'
+        turtle_4_8: Aquí está la solución al puzzle anterior. ¿Puedes agregar sólo
+          2 bloques más para completar el dibujo?
+        turtle_4_9: Aquí está la solución al puzzle previo. ¿Cuántos grados deberías
+          girar para completar el dibujo? (Probablemente necesitas intentarlo unas
+          cuantas veces)
+        turtle_4_10: Aquí está la solución al puzzle anterior. ¿Cuántas veces deberías
+          repetirlo para completar el dibujo?
+        turtle_4_11: Intenta cambiar los números en los bloques "turn" y "repeat"
+          para crear patrones diferentes. O experimenta cambiando el resto del código
+          para dibujar cualquier cosa que quieras.
+        maze_karel_1_1: Hola, soy un granjero. Necesito que me ayudes a aplanar el
+          campo en mi granja para que esté listo para sembrar. Muéveme a la pila de
+          tierra y utiliza el bloque "eliminar" para quitarla.
+        maze_karel_1_2: A continuación, muéveme hacia el agujero y llénalo con DOS
+          paladas de tierra, usando el bloque "llenar".
+        maze_karel_1_3: Muéveme a la pila de tierra y dime cuantas paladas de eliminar
+          debo dar usando la menor cantidad de bloques posible.
+        maze_karel_1_4: '¿Puedes ayudarme a quitar las cuatro pilas de tierra? Sugerencia:
+          usa un bloque repetir si puedes.'
+        maze_karel_1_5: 'Ayúdame a llenar todos estos agujeros con 5 paladas de tierra.
+          Sugerencia: puedes poner un bloque "repetir" dentro del bloque "mientras".'
+        maze_karel_1_6: Quita todas las pilas de tierra, utilizando la menor cantidad
+          de bloques que sea posible. Las nuevas opciones en el menú desplegable del
+          bloque "mientras" me dicen si estoy parado en una pila o un agujero.
+        maze_karel_1_7: Vaya, encontré un agujero muy profundo! No sé cuantas paladas
+          de tierra necesita. ¿Puedes escribir un programa que lo llene hasta que
+          la tierra esté plana?
+        maze_karel_1_8: Ayúdame a llenar en el agujero en el otro extremo del campo,
+          con la menor cantidad posible de bloques.
+        maze_karel_1_9: 'Hacerme quitar todas estas pilas de tierra. Trata de usar
+          la menor cantidad de bloques que sea posible. Sugerencia: prueba usando
+          un bloque "mientras".'
+        maze_karel_1_10: Estoy trabajando hasta tarde, así que está oscuro afuera,
+          y no sé qué tan grandes son las pilas. Ahora no tengo todas las opciones
+          que solía tener en el bloque "mientras". Muéveme a lo largo del campo y
+          si hay una pila, quítala.
+        maze_karel_1_11: 'Todavía está oscuro afuera. Muéveme a lo largo del campo.
+          Si hay una pila, quítala y si hay un agujero, rellénalo. Sugerencia: utiliza
+          el menú desplegable de opciones del bloque "si".'
+        turtle_2_1: 'Hola. Yo artista zombi. ¡Me encanta dibujar! Ayúdame a dibujar
+          un cuadrado con un color especial. Nota importante: dispones de los mismos
+          bloques pero ahora han sido organizados en categorías.'
+        turtle_2_2: ¡Bienvenido al uso de funciones, que permiten definir nuevos bloques!
+          Prueba el bloque nuevo "dibujar un cuadrado", en la categoría "Funciones",
+          para dibujar un pequeño cuadrado verde de 50 x 50.
+        turtle_2_3: Usa el bloque "repetir" (en la categoría "Iteraciones") para dibujar
+          tres cuadrados de tamaño 100, cada uno separado 120 grados. Y hazlo en 3
+          colores diferentes, al azar.
+        turtle_2_4: 'Ahora vamos a hacer algo sofisticado. Cambia el código para dibujar
+          36 cuadrados, de 100 píxeles de ancho, cada uno separado por 10 grados.
+          Sugerencia: podrías utilizar el control deslizante para hacerme ir más rápido.'
+        turtle_2_5: Dibuja cuadrados con lados de 50, 60, 70, 80 y 90 píxeles.  Necesitarás
+          utilizar la función "dibujar un cuadrado" cinco veces.
+        turtle_2_6: 'Bien, este programa utilizará un contador, para dibujar los mismos
+          cuadrados que la última vez. Haz que el cuadrado sea del mismo tamaño que
+          el contador, usando el bloque "contador". Sugerencia: Está en la categoría
+          Variables.'
+        turtle_2_7: Este es un programa para dibujar un espiral, pero los bloques
+          están desactivados así que no funcionan. Haz un nuevo programa utilizando
+          un bloque "contar con" (en la categoría Iteraciones) y "contador" (en la
+          categoría Variables) para dibujar el mismo espiral.
+        turtle_2_7_5: Hay una nueva función de "dibujar un muñeco de nieve" (en la
+          categoría de funciones). Dibuja dos muñecos de nieve, de 250 y 100 de altura.
+        turtle_2_8: Éste es un poco complicado. Utiliza la función "dibujar un muñeco
+          de nieve" y el bloque nuevo "saltar adelante" (en la categoría de Acciones).
+          Dibuja 3 muñecos de nieve en diferentes colores, separados por 100 píxeles.
+        turtle_2_9: Utiliza una iteración "contar con" para dibujar una familia de
+          muñecos de nieve, con alturas de 110, 100, 80, 90 y 70. Los muñecos de nieve
+          deberían estar separados por 60 píxeles.
+        turtle_2_10: Aquí hay algo de código para probar experimentando con diferentes
+          espirales.  ¿Qué sucede si cambias la cantidad del giro? O estableces un
+          color al azar en la iteración.  Dibuja cualquier cosa que quieras.
+        maze_karel_2_1: 'Trata de usar los bloques para ayudarme a quitar todas las
+          pilas y llenar todos los agujeros del suelo. Intenta utilizar iteraciones
+          en lugar de usar demasiados bloques. Sugerencia: puedes poner una iteración
+          dentro de otra iteración.'
+        maze_karel_2_2: Hemos definido nuestro propio bloque llamado "llenar 5", que
+          está ahora en la categoría de Funciones. Usalo para ayudarme a llenar este
+          agujero.
+        maze_karel_2_3: Usa el nuevo bloque de función "llenar 5" para hacerme rellenar
+          todos los agujeros. Tendrás que arrastrar el bloque "llenar 5" de la categoría
+          Funciones.
+        maze_karel_2_4: Define una nueva función que saque 7 paladas. Luego úsala
+          para escribir un programa que me ayuda a eliminar todas las pilas.
+        maze_karel_2_5: Crea una nueva función que elimine 6 paladas de una pila y
+          úsala para ayudarme a nivelar todas las pilas.
+        maze_karel_2_6: Usa dos nuevas funciones, "llenar 8" y "quitar 8", que me
+          ayuden a nivelar la pila y rellenar el agujero.
+        maze_karel_2_7: ¡Hay una vaca en mi campo! Escribe una nueva función que me
+          ayude a esquivar la vaca y quite la pila. Pon todos los bloques dentro de
+          la nueva función.
+        maze_karel_2_8: Usa la nueva función, "evitar la vaca y quitar 1", para ayudarme
+          a eliminar todas las pilas.
+        maze_karel_2_9: Ok, aquí hay una función que elimina 4 diferentes pilas de
+          tierra en una columna vertical. Intenta poner esta función dentro de una
+          iteración, para eliminar todas las pilas de tierra usando sólo unos pocos
+          bloques.
+        maze_karel_2_10: Muéveme a través del campo y utiliza estas dos funciones
+          para ayudarme a quitar todas las pilas y tapar todos los agujeros.
+        turtle_3_1: Este puzzle te muestra cómo se definen las funciones "dibujar
+          un cuadrado" y "dibujar un círculo".  Definir una función no ejecuta sus
+          bloques.  Tienes que usar el bloque "dibujar un cuadrado" para realmente
+          dibujar un cuadrado.
+        turtle_3_2: Usando la función "dibujar un cuadrado" como ejemplo, crea una
+          función "dibujar un triángulo" y úsala.
+        turtle_3_3: 'Dibuja cercas triangulares alrededor de los gatos y una cerca
+          cuadrada alrededor de la vaca.  Sugerencia: prueba el programa a medida
+          que avanzas.'
+        turtle_3_4: Ve si puedes descubrir cómo usar "dibujar un cuadrado" y "dibujar
+          un triángulo" (y algunos otros bloques) para dibujar una casa alrededor
+          del León.
+        turtle_3_5: 'Ahora crea una nueva función "dibujar una casa" y úsala para
+          albergar dos gatos. Sugerencia: crea una nueva función usando el bloque
+          "hacer algo" y escribe tu propio texto para nombrar el bloque.'
+        turtle_3_6: 'Usando "dibujar un cuadrado" como ejemplo, agrega una entrada
+          llamada "longitud" a "dibujar un triángulo". Luego, dibuja triángulos de
+          diferentes tamaños. (Sugerencia: haz clic en la estrella para agregar una
+          entrada a una función)'
+        turtle_3_7: Agrega una entrada denominada "longitud" a "dibujar una casa"
+          y construye una casa grande para el elefante (con bordes de 150 píxeles
+          de largo)
+        turtle_3_8: Aquí están todos los bloques del puzzle anterior.  Modifica "dibujar
+          una casa" así termino en la esquina inferior derecha después de dibujar
+          una nueva casa. Utiliza esta función modificada para dibujar tres casas.
+        turtle_3_9: ¿Puedes volver a crear la función "dibujar una casa" sin ayuda?
+          Pruébalo y luego dibuja una hilera de casas.
+        turtle_3_10: ¡Has aprendido mucho! Ahora úsalo para dibujar lo que quieras.
+          Intentar dibujar una estrella, o un espiral o un copo de nieve sofisticado.
+        maze_karel_debug_seq_1: ¡Bienvenido a la depuración! Mi código no funciona
+          bien. ¿Puedes detectar el problema y arreglarlo para que pueda aplanar mi
+          campo y dejarlo listo para la siembra?
+        maze_karel_debug_seq_2: ¿Qué funciona mal en este programa? ¿Cómo deberías
+          arreglarlo para quitar esa pila?
+        maze_karel_debug_repeat: Depura este programa por mí para que mi campo sea
+          agradable y plano.
+        maze_karel_debug_while: ¿Cómo deberías cambiar este programa para ayudarme
+          a llenar el agujero?
+        maze_karel_debug_if: ¡Ayuda! Arregla el programa para que mi campo esté completamente
+          plano.
+        maze_karel_debug_if_else: Depura este programa para que pueda llenar los agujeros
+          y quite todas las pilas.
+        maze_karel_debug_function_1: ¿Qué deberías cambiar en este programa para ayudarme
+          a eliminar todas las pilas?
+        maze_karel_debug_function_2: ¿Puedes depurar este programa para mí así puedo
+          dejar mi campo plano?
+        maze_karel_debug_function_3: 'Edita este programa para que pueda eliminar
+          todas las pilas de mi campo. '
+        turtle_5_1: Intente ejecutar este programa y haga cambios para ver que ocurre.
+          ¿Puede averiguar cómo funciona? (o elimínalo y reemplazalo con algo totalmente
+          diferente)
+        turtle_5_2: Intente ejecutar este programa y haga cambios para ver que ocurre.
+          ¿Puede averiguar cómo funciona? (o elimínalo y reemplazalo con algo totalmente
+          diferente)
+        turtle_5_3: Intente ejecutar este programa y haga cambios para ver que ocurre.
+          ¿Puede averiguar cómo funciona? (o elimínalo y reemplazalo con algo totalmente
+          diferente)
+        turtle_5_4: Intente ejecutar este programa y haga cambios para ver que ocurre.
+          ¿Puede averiguar cómo funciona? (o elimínalo y reemplazalo con algo totalmente
+          diferente)
+        turtle_5_5: Intente ejecutar este programa y haga cambios para ver que ocurre.
+          ¿Puede averiguar cómo funciona? (o elimínalo y reemplazalo con algo totalmente
+          diferente)
+        turtle_5_6: Intente ejecutar este programa y haga cambios para ver que ocurre.
+          ¿Puede averiguar cómo funciona? (o elimínalo y reemplazalo con algo totalmente
+          diferente)
+        maze_3_1: Tengo que llegar a ese cerdo! Escriba move() un par de veces, y
+          de esa forma poder recuperar mis huevos.
+        maze_3_2: Escríbeme un programa para haga todo el camino hasta el cerdo.
+        maze_3_3: ¿Cómo llego al cerdo? Asegúrate de que no pasar por la caja de TNT!
+        maze_3_4: ¡Argh! Escríbeme un programa que me haga esquivar el TNT y llegue
+          hasta el cerdo.
+        bounce_1: Une un bloque al bloque "cuando flecha izquierda" y presiona "Ejecutar
+          Programa". Mueve la paleta usando la flecha izquierda para alcanzar el objetivo
+          final.
+        bounce_2: Une un bloque a los bloques "cuando flecha derecha" y "cuando flecha
+          izquierda". Mueve la paleta para alcanzar ambos objetivos finales.
+        bounce_3: Ahora intenta algo similar con el bloque "cuando flecha arriba".
+          Mueve la paleta hacia el objetivo final en la parte superior.
+        bounce_4: Esta vez tienes que añadir cuatro bloques. Mueve la paleta a los
+          cuatro objetivos finales para completar este puzzle.
+        bounce_5: Vamos a lanzar una pelota hacia la paleta. Une un bloque al bloque
+          "cuando la pelota golpea la paleta" para asegurar que la pelota alcance
+          el objetivo final.
+        bounce_6: Ahora el objetivo final está en la parte superior. Tienes que unir
+          bloques a ambos bloques de "cuando la pelota choca" para resolver este puzzle.
+        bounce_7: Une bloques a cada uno de los bloques "cuando". Rebota la pelota
+          hasta que alcance el objetivo final.
+        bounce_10: Ahora hay una meta en la parte superior. Une los bloques "anotar
+          punto" y "anotar punto del oponente" a los bloques "cuando pelota alcanza
+          la meta" y "cuando pelota pasa de largo" para crear un juego. Prueba cuantos
+          puntos puedes anotar antes de que tu oponente anote dos veces.
+        bounce_11: Ahora puedes unir bloques al bloque "cuando ejecute". Tienes que
+          colocar el nuevo bloque "lanzar pelota nueva" en más de un lugar. También,
+          trata de cambiar la escena o la velocidad de la paleta y la pelota y ver
+          cuantos puntos puedes anotar antes de que tu oponente anote dos veces.
+        bounce_12: Crea tu propio juego "Rebote". Puedes cambiar todos los efectos
+          visuales y las reglas. Cuando estes listo haz clic en Terminar para que
+          tus amigos prueben tu juego en sus teléfonos.
+        Custom_builder: Arrastra los bloques desde la caja de herramientas al espacio
+          de trabajo para dibujar el nivel que deseas crear. Presiona "Ejecutar" cuando
+          estés listo.
+        flappy_1: Adjunta un bloque a "cuando se haga clic en el bloque", entonces
+          presione "Ejecutar". Haz clic o toca la pantalla para mover a Flappy hacia
+          el objetivo.
+        flappy_2: Ahora hemos agregado el suelo.  Adjunta un bloque al bloque "cuando
+          golpe el suelo".  Tú código necesita 'TERMINAR EL JUEGO' cuando Flappy golpe
+          el suelo.
+        flappy_3: El bloque "cuando ejecute" te permite ejecutar el código cuando
+          tu juego inicie. Intenta establecer la velocidad del nivel y el aleteo al
+          objetivo.
+        flappy_4: Flappy volará entre los obstáculos a menos que escribas el código
+          que lo hará estrellarse.  Adjunta un bloque al bloque "cuando golpea un
+          obstáculo".  Tú código necesita 'TERMINAR EL JUEGO' cuando Flappy se estrelle
+          en el primer conjunto de tubos.
+        flappy_5: Ahora agreguemos el marcador, y contaremos los puntos cuando Flappy
+          pase los obstáculos.  Agrega al bloque "cuando pase un obstáculo", y entonces
+          anota un punto cuando Flappy vuele entre el primer conjunto de tubos.
+        flappy_6: Ve si puedes anotar un punto haciendo que Flappy aletee más rápido
+          o más lento.
+        flappy_7: A continuación, trata de cambiar el fondo adjuntando otro bloque
+          al bloque "cuando ejecute".
+        flappy_8: Puedes poner elementos visuales en cualquier momento, no sólo cuando
+          comience el juego. Intenta establecer una escena AL AZAR cuando sucedan
+          otros eventos, por ejemplo, al superar un obstáculo.
+        flappy_9: Para complicarlo un poco, cuando golpees un obstáculo o el suelo,
+          en vez de terminar el juego intenta poner el marcador en 0.
+        flappy_11: Crea tu propio juego Flappy, Puedes cambiar todos los efectos visuales
+          y las reglas, hasta la gravedad. Cuando finalices haz clic en Terminar para
+          que tus amigos prueben tu juego en sus teléfonos.
+        flappy_k1_1: Jugar Flappy
+        flappy_k1_2: Adjunta un bloque a "cuando se haga clic en el bloque", entonces
+          presione "Ejecutar". Haz clic o toca la pantalla para mover a Flappy hacia
+          el objetivo.
+        flappy_k1_3: Ahora hemos agregado el suelo.  Adjunta un bloque al bloque "cuando
+          golpe el suelo".  Tú código necesita 'TERMINAR EL JUEGO' cuando Flappy golpe
+          el suelo.
+        flappy_k1_4: El bloque "cuando inicie" te permite ejecutar el código cuando
+          tu juego inicie. Intenta establecer la velocidad del nivel y el aleteo al
+          objetivo.
+        flappy_k1_5: Flappy volará entre los obstáculos a menos que escribas el código
+          que lo hará estrellarse.  Adjunta un bloque al bloque "cuando golpea un
+          obstáculo".  Tú código necesita 'TERMINAR EL JUEGO' cuando Flappy se estrelle
+          en el primer conjunto de tubos.
+        flappy_k1_6: Ahora agreguemos el marcador, y contaremos los puntos cuando
+          Flappy pase los obstáculos.  Agrega al bloque "cuando pase un obstáculo",
+          y entonces anota un punto cuando Flappy vuele entre el primer conjunto de
+          tubos.
+        flappy_k1_7: Ve si puedes anotar puntos múltiples al pasar un obstáculo
+        flappy_k1_8: A continuación, trata de cambiar el fondo colocando otro bloque
+          al bloque "cuando inicie"
+        flappy_k1_9: Trata de cambiar el jugador colocando un bloque "colocar jugador"
+          al bloque "cuando ejecute".
+        jigsaw_1: Haz clic en el bloque
+        jigsaw_2: Arrastra el bloque al objetivo
+        jigsaw_3: Acomoda los bloques para formar una imagen
+        jigsaw_4: Acomoda los bloques para formar una imagen
+        jigsaw_5: Acomoda los bloques para formar una imagen
+        jigsaw_6: Acomoda los bloques para formar una imagen
+        jigsaw_7: Acomoda los bloques para formar una imagen
+        jigsaw_8: Acomoda los bloques para formar una imagen
+        jigsaw_9: Acomoda los bloques para formar una imagen
+        jigsaw_10: Acomoda los bloques para formar una imagen
+        jigsaw_11: Acomoda los bloques para formar una imagen
+        jigsaw_12: Acomoda los bloques para formar una imagen
+        jigsaw_13: ¡Arregla el puzzle!
+        mazestep_1: Aquí va la descripción del paso del laberinto
+        mazestep_2: Aquí va la descripción del paso del laberinto
+        mazestep_3: Aquí va la descripción del paso del laberinto
+        mazestep_4: Aquí va la descripción del paso del laberinto
+        mazestep_5: Aquí va la descripción del paso del laberinto
+        studio_c2_1: ¿Puedes hacer que este perro diga "Hola mundo"?
+        studio_c2_2: ¿Puedes hacer que el perro diga algo y que el gato le conteste
+          algo?
+        studio_c2_3: ¿Puedes crear un programa que haga que el perro se mueva hacia
+          el gato?
+        studio_c2_4: ¿Puedes escribir un programa que haga que el perro se mueva hacia
+          el gato, y que el gato diga "hola" cuando el perro se acerque a él?
+        studio_c2_5: ¿Puedes escribir un programa para hacer que el pulpo diga "hola"
+          cuando se hace clic sobre él?
+        studio_c2_6: ¿Puedes escribir un programa que haga que este pingüino se mueva
+          al presionar las teclas de flecha arriba /abajo / izquierda / derecha para
+          alcanzar todos los objetivos?
+        studio_c2_7: El bloque de "repetir para siempre" te permite ejecutar el código
+          de manera continua.  ¿Puedes adjuntar los bloques que se necesitan para
+          mover este dinosaurio hacia arriba y hacia abajo continuamente?
+        studio_c2_8: ¿Puedes hacer que el pingüino diga "¡Ouch!" y reproduzca un sonido
+          de "golpe", si él choca con el dinosaurio? hay moverlo con las teclas de
+          flecha para hacer que esto ocurra
+        studio_c2_9: ¿Puedes agregar un bloque para anotar un punto cuando el pingüino
+          choque con el pulpo?,  hay que moverlo con las teclas de flecha para anotar
+          un punto
+        studio_c2_10: ¿Puedes agregar bloques para cambiar el fondo y la velocidad
+          del pingüino y moverlo con las teclas de flecha hasta anotar?
+        studio_c2_11: Crea tu propia historia. Cuando finalices, haz clic en Terminar
+          para que tus amigos prueben tu historia en sus teléfonos.
+        studio_c3_story_1: ¿Puedes hacer que este perro diga "Hola mundo"?
+        studio_c3_story_2: ¿Puedes hacer que el perro diga algo y que el gato le conteste
+          algo?
+        studio_c3_story_3: ¿Puedes crear un programa que haga que el perro se mueva
+          al gato?
+        studio_c3_story_4: ¿Puedes escribir un programa que haga que el perro se mueva
+          hacia el gato, y que el gato diga "hola" cuando el perro se acerque a él?
+        studio_c3_story_5: ¿Puedes agregar un bloque para el pulpo este feliz?
+        studio_c3_story_6: Crea tu propia historia. Cuando estes listo, da click en
+          Terminar para que tus amigos prueben tu historia en sus teléfonos.
+        studio_c3_game_1: ¿Puedes escribir un programa para hacer que el pulpo diga
+          "hola" cuando se hace clic sobre él?
+        studio_c3_game_2: ¿Puedes escribir un programa que haga que este pingüino
+          se mueva al presionar las teclas de flecha arriba /abajo / izquierda / derecha
+          para alcanzar todos los objetivos?
+        studio_c3_game_3: El bloque de "repetir para siempre" te permite ejecutar
+          el código de manera continua.  ¿Puedes adjuntar los bloques que se necesitan
+          para mover este dinosaurio hacia arriba y hacia abajo continuamente?
+        studio_c3_game_4: ¿Puedes hacer que el pingüino diga "¡Ouch!" y reproduzca
+          un sonido de "golpe", si él choca con el dinosaurio? hay moverlo con las
+          teclas de flecha para hacer que esto ocurra
+        studio_c3_game_5: ¿Puedes agregar un bloque para anotar un punto cuando el
+          pingüino choque con el pulpo?,  hay que moverlo con las teclas de flecha
+          para anotar un punto
+        studio_c3_game_6: ¿Puedes agregar bloques para cambiar el fondo y la velocidad
+          del pingüino y moverlo con las teclas de flecha hasta anotar?
+        studio_c3_game_7: Crea tu propio juego. Cuando hayas terminado, haz clic en
+          finalizar para que tus amigos prueben tu juego en sus teléfonos.
+        studio_playlab_1: El pingüino quiere decir "Hola" - ¿puedes ayudarlo?
+        studio_playlab_2: El Chico de la cueva (actor 1) y la Chica de la cueva (actor
+          2) quieren decirse "Hola" el uno al otro. ¿Puedes ayudarles utilizando el
+          bloque de "decir" dos veces?
+        studio_playlab_3: ¿Puedes ayudar a la chica tenista a alcanzar la bandera?
+        studio_playlab_4: ¿Puedes ayudar al chico tenista (actor 1) a alcanzar a la
+          chica tenista (actor 2) y reproducir un sonido cuando llegue?
+        studio_playlab_5: ¿Puedes ayudar al Robot espacial a decir "saludos terrícolas"
+          cuando es cliqueado? No te olvides de hacer clic en él después de hacer
+          clic en Ejecutar
+        studio_playlab_6: ¿Puede ayudar a la bruja a moverse usando las teclas de
+          flecha arriba/abajo/derecha/izquierda para llegar a todas las bolas de fuego
+          mágicas?
+        studio_playlab_7: El bloque "repetir por siempre" permite repetir la ejecución
+          del código continuamente. ¿Puedes conectar bloques para ayudar al mago a
+          moverse de izquierda a derecha repetidamente?
+        studio_playlab_8: ¿Puedes añadir un bloque para anotar un punto y un bloque
+          para reproducir un sonido cuando el unicornio corre hacia el mago y luego
+          moverlo con las flechas hasta que ganes un punto?
+        studio_playlab_9: Establecer el fondo para esta invasión alienígena y ayuda
+          al Robot espacial a alcanzar a los alienígenas más rápido cambiando su velocidad.
+          Luego muévelo con las teclas de flechas para llegar al Robot espacial y
+          alertar a los demás
+        studio_playlab_10: Crea tu propio juego. Cuando hayas terminado, haz clic
+          en finalizar para que tus amigos prueben tu juego en sus teléfonos.
+        studio_full_sandbox: Crea tu propio juego. Cuando hayas terminado, haz clic
+          en finalizar para que tus amigos prueben tu juego en sus teléfonos.
+        studio_k1_1: ¿Puedes hacer que este perro diga "Hola mundo"?
+        studio_k1_2: ¿Puedes hacer que el perro diga algo y que el gato le conteste
+          algo?
+        studio_k1_3: ¿Puedes crear un programa que haga que el perro se mueva al gato?
+        studio_k1_4: Haz que el perro se mueva hacia el gato y el gato diga "hola"
+          cuando llegue a él.
+        studio_k1_5: ¿Puedes agregar un bloque para que el pulpo esté feliz?
+        studio_k1_6: ¡Crea tu propia historia! Mueve al gato y perro alrededor, y
+          hazlos decir cosas.
+        maze_wordsearch_k_1: Muéveme para deletrear la palabra ESTE
+        maze_wordsearch_k_2: Muéveme para deletrear la palabra SUR
+        maze_wordsearch_k_3: Muéveme para deletrear la palabra OESTE
+        maze_wordsearch_k_4: Muéveme para deletrear la palabra NORTE
+        maze_wordsearch_k_6: Mueveme al Este y luego al Sur para deletrear la palabra
+          SALTO
+        maze_wordsearch_k_9: Mueveme en una dirección, y luego en otra para deletrear
+          la palabra CÓDIGO
+        maze_wordsearch_k_13: Mueveme en una dirección, y luego en otra para deletrear
+          la palabra DEPURAR
+        maze_wordsearch_k_15: Mueveme en una dirección, y luego en otra para deletrear
+          la palabra SOBRE
+        maze_wordsearch_k_16: Mueveme en una dirección, y luego en otra para deletrear
+          la palabra DEBAJO
+        maze_wordsearch_k_20: ¡Esta es una prueba! Mueveme en una dirección, y luego
+          en otra para deletrear la palabra HISTORIA
+        webapp_ec_simple: Crea tu aplicación web mediante createHtmlBlock.
+        turtle_ec_1_2: 'Ahora, dibuja un cuadrado. Nota: usa tu color favorito eligiéndolo
+          en el nuevo bloque "Color De Lapiz".'
+        turtle_ec_1_10: '¡Lo lograste! Ahora, dibujar cualquier cosa que quieras.
+          Algunas ideas divertidas: una de palotes, copos de nieve o espirales. Prueba
+          también el nuevo bloque "Ancho del Lápiz". ¡Que te diviertas!'
+        studio_ec_sandbox: Crea tu propio juego. Cuando hayas terminado, haz clic
+          en finalizar para que tus amigos prueben tu juego en sus teléfonos.
     levelbuilder:
       frozen line:
-        instructions: Hi! I'm Elsa of Arendelle. Help me create a single line.
+        instructions: ¡Hola! Soy Elsa de Arendelle. Ayúdame a crear una línea.
       frozen perpendicular:
-        instructions: Now let's see if we can create two lines that are at a 90 degree
-          angle to each other. You will need to use the "Turn" block as well as the
-          "Move" block.
+        instructions: Ahora veamos si podemos crear dos líneas que se encuentran a
+          un ángulo de 90 grados una de la otra. Necesitarás usar tanto el bloque
+          de "Giro" como el bloque de "Mover".
       frozen square iterative:
-        instructions: It seems like we're halfway to making a square. Let's put 4
-          lines together to create a square.
+        instructions: Parece que estamos a la mitad de completar un cuadrado. Ahora
+          pongamos 4 líneas juntas para crear un cuadrado.
       frozen square loop:
-        instructions: Hi, I'm Anna of Arendelle! Let's make a square with the "Repeat"
-          block, which uses fewer blocks. How many times (???) should the "Repeat"
-          block loop the blocks inside it to make a square?
+        instructions: ¡Hola! Soy Anna de Arandelle. Dibujemos un cuadrado con el bloque
+          de "Repetir", lo que nos permitirá utilizar menos bloques. ¿Cuántas veces
+          (???) se deberían repetir los bloques que están dentro del bloque "Repetir"
+          para formar un cuadrado?
       frozen square loop 3x:
-        instructions: Let's create three squares, turning after each square. Be sure
-          to turn by 120 degrees before each new square.
+        instructions: Ahora crearemos tres cuadrados, girando al terminar cada cuadrado.
+          Asegúrate de girar 120 grados antes de iniciar un nuevo cuadrado.
       frozen square snowflake:
-        instructions: Can you create a snowflake using the "Repeat" block to make
-          a square 10 times, and the "Turn" block to turn 36 degrees between each
-          square?
+        instructions: ¿Puedes dibujar un copo de nieve utilizando el bloque "Repetir"
+          para dibujar un cuadrado 10 veces y el bloque "Girar" para girar 36 grados
+          entre cada cuadrado?
       frozen cross:
-        instructions: Use the "Repeat" block to create a plus sign. Did you notice
-          Elsa can move forward and backward?
+        instructions: Utiliza el bloque "Repetir" para crear un signo de más (+).
+          ¿Notaste que Elsa puede moverse hacia adelante y hacia atrás?
       frozen cross rotate:
-        instructions: Now try repeating it 10 times. How many degrees do you need
-          to turn between each line?
+        instructions: Ahora trata de repetirlo 10 veces. ¿Cuántos  grados necesitas
+          girar entre cada línea?
       frozen cross rotate dense:
-        instructions: 'Let''s repeat it 90 times! How many times does 90 go into 360?
-          Hint: It''s a really small number.'
+        instructions: '¡Ahora repitámoslo 90 veces! ¿Cuántas veces cabe 90 en 360?
+          Pista: Es un número muy pequeño.'
       frozen diamond:
-        instructions: 'Let''s create a parallelogram. It''s just like a square but
-          has different angles: 60 and 120 degree angles instead of 90 degree angles.'
+        instructions: 'Ahora crearemos un paralelogramo. Es como un cuadrado pero
+          tiene diferentes ángulos: 60 y 120 grados en lugar de ángulos de 90 grados.'
       frozen diamond mini snowflake:
-        instructions: Did you know every snowflake is a different shape? Let's create
-          a new snowflake by using the "Repeat" block to repeat a parallelogram 4
-          times, turning right by 90 degrees between each parallelogram.
+        instructions: ¿Sabías que cada copo de nieve tiene una forma distinta? Crearemos
+          un nuevo copo de nieve utilizando el bloque "Repetir" para repetir el paralelogramo
+          4 veces, girando hacia la derecha 90 grados entre cada paralelogramo.
       frozen diamond snowflake:
-        instructions: Now, let's create a new snowflake by using the repeat block
-          to repeat a parallelogram 10 times, turning right by 36 degrees between
-          each one.
+        instructions: Ahora crearemos un nuevo copo de nieve, utilizando el bloque
+          "Repetir" para repetir el paralelogramo 10 veces, girando a la derecha 36
+          grados entre cada uno.
       frozen circle:
-        instructions: A circle is a special shape. Can you figure out what number
-          to replace the question marks with to draw a circle?
+        instructions: Un círculo es una figura especial. ¿Puedes adivinar qué número
+          debe reemplazar los signos de interrogación para dibujar un círculo?
       frozen circle function:
-        instructions: Use the new "Create a circle" block to create 10 overlapping
-          circles. Don't forget to jump forward between circles.
+        instructions: Utiliza el nuevo bloque "Crear un círculo" para crear 10 círculos
+          superpuestos. No te olvides de saltar hacia adelante entre cada círculo.
       frozen circle function in circle:
-        instructions: Now let's create 20 overlapping circles, turning 18 degrees
-          between each circle.
+        instructions: Ahora crearemos 20 círculos superpuestos, girando 18 grados
+          entre cada círculo.
       frozen circle function with parameter:
-        instructions: Here's a "Create circle" block that can make circles of different
-          sizes. Can you use this to create a small circle of size 5 and a larger
-          circle of size 10?
+        instructions: Aquí está un bloque "Crear círculo" que puede dibujar círculos
+          de diferentes tamaños. ¿Puedes usarlo para dibujar un circulo pequeño de
+          tamaño 5 y uno más grande de tamaño 10?
       frozen snowflower:
-        instructions: Intricate snow patterns can be created with very simple shapes.
-          Can you make a pattern by repeating 5 circles of size 5 and 5 circles of
-          size 10?
+        instructions: Formas complejas de nieve pueden crearse usando figuras geométricas
+          muy simples. ¿Puedes crear uno repitiendo 5 círculos de tamaño 10 y 5 círculos
+          de tamaño 5?
       frozen snowflake branch:
-        instructions: Try using the "Create a snowflake branch" block to create three
-          branches, which starts to look like a snowflake.
+        instructions: Intenta utilizar el bloque "Crear una rama de copo de nieve"
+          para dibujar 3 ramas, lo que empezará a parecerse a un copo de nieve.
       frozen snowflake full:
-        instructions: Now let's repeat it 8 times to make a beautiful snowflake!
+        instructions: ¡Ahora repitámoslo 8 veces para dibujar un hermoso copo de nieve!
       frozen freeplay:
-        instructions: You've officially become a master artist! Create a winter wonderland.
+        instructions: ¡Te has convertido oficialmente en un artista maestro! Crea
+          un paraíso invernal.
       scrat 16:
-        instructions: Acorn! Acorn! Acorn! Use an "if" block to get me there with
-          the fewest number of blocks.
+        instructions: ¡Bellota! ¡Bellota! ¡Bellota! Usa un bloque "si" para llevarme
+          ahí con el menor número de bloques.
       scrat 17:
-        instructions: Ok, let's do that again for practice - this isn't very different,
-          but watch out for the wall!
+        instructions: Ok, vamos a hacerlo de nuevo para practicar - este no es muy
+          diferente, ¡Pero ten cuidado con la pared!
       scrat 18:
-        instructions: The "If-else" blocks checks a condition, and then does one thing
-          OR another. To get me to the acorn try to use this new block.
+        instructions: El bloque "If-else" verifica una condición y después hace o
+          una cosa u otra. Para llevarme a la bellota intenta usar este nuevo bloque.
       scrat 19:
-        instructions: One more practice of the "if-else" block, can you get it right
-          on your first try?
+        instructions: Una práctica más del bloque "si-sino", ¿Puedes hacerlo bien
+          en tu primer intento?
       scrat 20:
-        instructions: Can you add just 3 blocks to help me solve a more complex maze?
-          If you do it right, I can walk any curvy path no matter the length. Hurry!
-          The ice is melting!
+        instructions: ¿Puedes agregar sólo 3 bloques para ayudarme a resolver un laberinto
+          más complejo? Si lo haces correctamente puedo caminar cualquier camino curvo
+          sin importar su longitud. !Date prisa! ¡El hielo se está derritiendo!
       Standalone_Artist_1:
-        instructions: Welcome to Artist! First off, let's try to make a simple square
-          using the turn right block and move forward block. Each side should be 100
-          pixels long.
+        instructions: ¡Bienvenido a Artista! En primer lugar, vamos a intentar hacer
+          un cuadrado simple usando un bloque para girar hacia la derecha y un bloque
+          de movimiento hacia delante. Cada lado debe medir 100 píxeles de largo.
       Standalone_Artist_2:
-        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel
-          long sides.
+        instructions: Dibuja este diamante con ángulos de 120 y 60 grados y 150 pixeles
+          de largo para los lados.
       Standalone_Artist_3:
-        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree
-          turns?
+        instructions: ¿Puedes dibujar este hexágono de 100 pixeles de cada lado y
+          ángulos de 60 grados?
       Standalone_Artist_4:
-        instructions: Now you've got a new block to play with, the loop. This will
-          repeat a set of commands. What happens if you loop these commands 6 times?
+        instructions: Ahora tienes un nuevo bloque para jugar, el bucle. Este bloque
+          repetirá un conjunto de comandos. ¿Qué pasa si repites estos comandos 6
+          veces?
       Standalone_Artist_5:
-        instructions: How many times do you need to loop this diamond to draw the
-          flower?
+        instructions: ¿Cuántas veces necesitas repetir este diamante para dibujar
+          la flor?
       Standalone_Artist_5.5:
-        instructions: 'Notice how we simplified the diamond code by turning it into
-          a loop. You can loop that whole sequence 12 times to draw the flower. Hint:
-          You''ll need to turn 30 degrees after your diamond loop so you don''t keep
-          drawing over the same diamond.'
+        instructions: 'Nota que simplificamos el código del diamante convirtiéndolo
+          en una repetición. Puedes repetir toda la secuencia 12 veces para dibujar
+          la flor. Pista: Necesitas girar 30 grados después de dibujar el diamante,
+          para que no sigas dibujando sobre el mismo diamante.'
       Standalone_Artist_6:
-        instructions: 'Loop this hexagon code 6 times to create the design. How many
-          degrees will you need to turn each time? Hint: divide the number of degrees
-          in a circle by the number of times you are looping.'
+        instructions: 'Repite este código del hexágono 6 veces para crear este diseño.
+          ¿Cuántos grados necesitas girar cada vez? Pista: Divide el número de grados
+          en un círculo entre el número de veces que se repita el bucle.'
       Standalone_Artist_7:
-        instructions: 'A function is another programming tool to help you avoid repeating
-          yourself. This function draws a flower, so you can use it any time you want
-          to draw a flower. Use this and the new jump block to draw these flowers.
-          Hint: The flowers are 150 pixels apart'
+        instructions: 'Una función es otra herramienta de programación que te ayuda
+          a evitar repetir código. Esta función dibuja una flor, así que la puedes
+          utilizar en cualquier momento para dibujar una flor. Utiliza esto y el nuevo
+          bloque de salto para dibujar estas flores. Pista: Hay 150 pixeles de espacio
+          entre cada flor'
       Standalone_Artist_8:
-        instructions: Here's a function called "Draw a shape" that we've programmed
-          to draw hexagons. Run the code to see what it does and then experiment with
-          the function to see what happens. Can you make it draw a pattern of squares,
-          triangles, or octagons?
+        instructions: Aquí hay una función llamada "Dibuja una figura" que hemos programado
+          para dibujar hexágonos. Ejecuta el código para ver lo que hace y luego experimenta
+          con la función para ver qué pasa. ¿Puedes hacer que dibuje un patrón de
+          cuadrados, triángulos u octágonos?
       Standalone_Artist_9:
-        instructions: Now go ahead and make whatever picture you'd like! You've even
-          got an empty function that you can make do whatever you want!
+        instructions: ¡Ahora haz cualquier imagen que te guste! ¡Incluso tienes una
+          función vacía que puedes hacer que haga lo que quieras!
     video:
       name:
-        maze_intro: Maze Intro
-        artist_intro: Artist Intro
-        farmer_intro: Farmer Intro
-        flappy_intro: Flappy Intro
-        loop_times: Repeat Times Block
-        loop_until: Repeat Until Block
-        if: If Block
-        if_else: If/else Block
-        if_else_scrat: If/else Block
-        function: Functions
-        loop_while: While Block
-        loop_for: Counter Block
-        parameters: Functions with Parameters
-        hoc_wrapup: Hour of Code Wrapup
-        Unplug1: What is CS?
-        Unplug2: Computational Thinking
-        Unplug3: Graph Paper Programming
-        Unplug4: Algorithms
-        Unplug5: Functions
-        Unplug6: Conditionals
-        Unplug7: Songwriting
-        Unplug8: Abstraction
-        Unplug9: Relay programming
+        maze_intro: Introducción al Laberinto
+        artist_intro: Introducción al Artista
+        farmer_intro: Introducción al Granjero
+        flappy_intro: Introducción a Flappy
+        loop_times: Bloque Repetir Veces
+        loop_until: Bloque Repetir Hasta
+        if: Bloque Si
+        if_else: Bloque Si/Sino
+        if_else_scrat: Bloque Si/Sino
+        function: Funciones
+        loop_while: Bloque Mientras
+        loop_for: Bloque Contador
+        parameters: Funciones con parámetros
+        hoc_wrapup: Repaso de la Hora del Código
+        Unplug1: ¿Que son las CC?
+        Unplug2: Pensamiento computacional
+        Unplug3: Programación de hoja cuadriculada
+        Unplug4: Algoritmos
+        Unplug5: Funciones
+        Unplug6: Condicionales
+        Unplug7: Composición Musical
+        Unplug8: Liberación abstracta
+        Unplug9: Programación de relevos
         Unplug10: Internet
-        Unplug11: Wrap-up
-        C1_happy_maps_unplugged: Happy Maps
-        C1_moveitmoveit_unplugged: Move It, Move It
-        C1_bigevent_unplugged: The Big Event
-        C1_getting_loopy: Getting Loopy
-        C1_pair_programming: Pair Programming
-        C1_maze_intro_sequencing: Maze Sequencing Intro
-        C1_maze_debugging: Maze Debugging
-        C1_bee_level_intro: Bee Level - Intro
-        C1_artist_intro: Artist Intro
-        C1_spelling_bee_intro: Spelling Bee Intro
-        C1_zuck_repeat_loop: Maze Loops
-        C1_bee_loops: Bee Loops
-        C1_maze_loops: Maze Loops
-        C1_playlab_storytelling: Play Lab - Create a Story
-        C1_planting_seed: Planting a Seed
-        C1_building_foundation: Building a Foundation
-        C1_going_places_safely: Going Places Safely
-        C2_maze_intro: Maze Intro
-        C2_artist_intro: Artist Intro
-        C2_zuck_repeat_loop: Maze Loops
-        C2_artist_loops: Artist Loops
-        C2_artist_debugging: Artist Debugging
-        C2_bee_loops: Bee Loops
-        C2_bee_debugging: Bee Debugging
-        C2_bee_conditionals: Bee Conditionals
-        C2_playlab_createstory: Play Lab - Create a Story
-        C2_graph_paper: Graph Paper Programming
-        C2_conditionals_with_cards: Conditionals
-        C2_binary_bracelets: Binary Bracelets
-        C2_relay_programming: Relay Programming
-        C2_paper_airplanes: Paper Airplanes
-        C2_digital_footprint: Your Digital Footprint
-        C3_maze_level_4: Maze Loops
-        C3_artist_intro: Artist Intro
-        C3_artist_functions: Artist Functions
-        C3_bee_functions: Bee Functions
-        C3_bee_conditionals: Bee Conditionals
-        C3_maze_conditionals: Maze Conditionals
-        C3_artist_nested_loops: Nested Loops
-        C3_farmer_while: While Loops
-        C3_bee_nested_loops: Nested Loops
-        C3_bee_debugging: Bee Debugging
-        C3_bounce: Bounce
-        C3_playlab_create_game: Play Lab - Create a Game
-        C3_computational_thinking: Computational Thinking
-        C3_dice_race: Dice Race
+        Unplug11: Cierre
+        C1_happy_maps_unplugged: Mapas Felices
+        C1_moveitmoveit_unplugged: Muévelo, Muévelo
+        C1_bigevent_unplugged: El Gran Evento
+        C1_getting_loopy: Bucleandose
+        C1_pair_programming: Programación de pares
+        C1_maze_intro_sequencing: Introducción a Secuenciamiento del Laberinto
+        C1_maze_debugging: Depuración del Laberinto
+        C1_bee_level_intro: Nivel de Abeja - Introducción
+        C1_artist_intro: Introducción al Artista
+        C1_spelling_bee_intro: Abeja de Deletreo - Introducción
+        C1_zuck_repeat_loop: Bucles de Laberinto
+        C1_bee_loops: Bucles de Abeja
+        C1_maze_loops: Bucles de Laberinto
+        C1_playlab_storytelling: Laboratorio de Juego - Crear una Historia
+        C1_planting_seed: Plantando una Semilla
+        C1_building_foundation: Construyendo una base
+        C1_going_places_safely: Ir a Sitios Seguro
+        C2_maze_intro: Introducción al Laberinto
+        C2_artist_intro: Introducción al Artista
+        C2_zuck_repeat_loop: Bucles de Laberinto
+        C2_artist_loops: Ciclos del Artista
+        C2_artist_debugging: Debugging del Artista
+        C2_bee_loops: Bucles de Abeja
+        C2_bee_debugging: Depuración Abeja
+        C2_bee_conditionals: Condiciones de la Abeja
+        C2_playlab_createstory: Laboratorio de Juego - Crear una Historia
+        C2_graph_paper: Programación de hoja cuadriculada
+        C2_conditionals_with_cards: Condicionales
+        C2_binary_bracelets: Pulseras Binarias
+        C2_relay_programming: Programación bajo presión
+        C2_paper_airplanes: Aviones de Papel
+        C2_digital_footprint: Tu huella Digital
+        C3_maze_level_4: Bucles de Laberinto
+        C3_artist_intro: Introducción al Artista
+        C3_artist_functions: Funciones de artista
+        C3_bee_functions: Funciones Abeja
+        C3_bee_conditionals: Condiciones de la Abeja
+        C3_maze_conditionals: Condicionales de Laberinto
+        C3_artist_nested_loops: Bucles anidados
+        C3_farmer_while: Bucles While
+        C3_bee_nested_loops: Bucles anidados
+        C3_bee_debugging: Depuración Abeja
+        C3_bounce: Rebotar
+        C3_playlab_create_game: Laboratorio de Juego - Crear un Juego
+        C3_computational_thinking: Pensamiento computacional
+        C3_dice_race: Carrera de Dados
         C3_internet: Internet
-        C3_crowdsourcing: Crowdsourcing
-        C3_functional_suncatchers: Functional Suncatchers
-        C3_songwriting_with_parameters: Songwriting With Parameters
-        C4_intro: Introduction
-        C4_bee_conditional: Bee Conditionals
-        C4_variables_artist: Variables - Artist
-        C4_variables_playlab: Variables - Play Lab
-        C4_for_loops: For Loops
-        C4_math_artist: Programming the Artist with Math
-        C4_function_edit: Editing Functions
-        C4_function_create: Creating Functions
-        C4_function_parameters: Functions with Parameters
-        C4_conditionals: Conditionals
-        C4_unplugged_algorithms: Algorithms with Tangrams
-        C4_unplugged_madlibs: Mad Libs
-        C4_unplugged_variables: Variables in Envelopes
-        C4_unplugged_forloops: For Loops
-        C4_unplugged_parameters: Songwriting with Parameters
-        C4_unplugged_binary: Binary
-        frozen_intro: Hour of Code Intro
-        frozen_loops: Introduction to Loops
-        frozen_functions: Introduction to Functions
-        playlab_intro: Introduction to Play Lab
-        playlab_events: Play Lab Events
-        playlab_repeat_forever: Play Lab Repeat Forever
+        C3_crowdsourcing: Colaboración Abierta
+        C3_functional_suncatchers: Tragaluces Funcionales
+        C3_songwriting_with_parameters: Composición Musical con Parámetros
+        C4_intro: Introducción
+        C4_bee_conditional: Condiciones de la Abeja
+        C4_variables_artist: Variables - Artista
+        C4_variables_playlab: Variables - Laboratorio de juego
+        C4_for_loops: Bucles Para
+        C4_math_artist: Programando al Artista con matemáticas
+        C4_function_edit: Editando funciones
+        C4_function_create: Creando funciones
+        C4_function_parameters: Funciones con parámetros
+        C4_conditionals: Condicionales
+        C4_unplugged_algorithms: Algoritmos con Tangramas
+        C4_unplugged_madlibs: Bibliotecas locas
+        C4_unplugged_variables: Variables en sobres
+        C4_unplugged_forloops: Bucles Para
+        C4_unplugged_parameters: Composicion musical con Parámetros
+        C4_unplugged_binary: Binario
+        frozen_intro: Introducción a La Hora del Código
+        frozen_loops: Introducción a los bucles
+        frozen_functions: Introducción a las Funciones
+        playlab_intro: Introducción al laboratorio de juegos
+        playlab_events: Eventos del laboratorio de juegos
+        playlab_repeat_forever: 'Laboratorio de juego: repetir para siempre'
     callout:
       text:
-        drag_blocks: Drag a "move" block and snap it below the other block
-        run: Hit "Run" to try your program
-        watch_again: Click here to watch the video again
-        gray_block_explanation: Blocks that are grey can't be deleted. Can you solve
-          the puzzle anyway?
-        show_code_explanation: Click here to see the code for the program you're making
-        instructions_repeat_explanation: The instructions for each puzzle are repeated
-          here
-        category_explanation: You have all the same blocks but they've now been arranged
-          in categories
-        set_sprite_image: Attach a "set actor to image" block to the "when story starts"
-          block to enable an actor for this story
-        studio_say_text: Type what you want your actor to say within these quotes
-        jigsaw_click: Click this block!
-        move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
-          Run" block to make Elsa move forward
-        turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down
-          determines how much Elsa turns
-        replace_questions: Use the drop-down to replace "???" with a number
-        replace_questions_degree: Use the drop-down to replace "???" with the correct
-          degree to turn
-        repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
-          workspace
-        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the
-          workspace
-        repeat_blocks_2: (2) Move the "Repeat" block here, and place the gray blocks
-          inside
-        snowflake_dropdown: Use this drop-down to create different snowflakes!
-        degrees_per_side: Divide 360 by the number of sides to get the size of each
-          angle in degrees.
-        set_sides: Use this block to set "sides" to the number needed to complete
-          the puzzle.
-        set_length: Use this block to set "length" to the correct value.
-        which_equation: Which equation makes each side shorter for shapes with more
-          sides?
-        get_nectar: Use the new "get nectar" block.
-        actions_category: The tool box got a new look! The "Actions" blocks are in
-          here now.
-        draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
-        edit_function: Click here to edit your function.
-        create_function: Click here to open the "Functions" flyout, then click the
-          "Create a Function" button.
-        house_hint: It's ok if the picture doesn't look like a house yet. We will
-          fix it in the next puzzle.
-        edit_draw_square: Use this button to edit the function and add the loop.
-        edit_get_nectar: Use this button to edit the function and change the direction
-          the Bee will turn to get the nectar.
-        logic_category: Open the "Logic" flyout to find the "if/else" block.
-        length_parameter: Can you update this function so it uses the "length" parameter?
-        frozen_diamond_repeat: Use the repeat block to create this shape.
-        frozen_circle_function_in_circle_turn: Don't forget to turn after creating
-          each circle.
-        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
-          and change the size.
-        frozen_snowflake_branch: Use the "create a snowflake branch" block
-        frozen_create_square: Attach more blocks here to create a square
-        playlab_drag_say: Drag the "say" block here and type "hello"
-        playlab_use_twice: Use this block twice and remember to change the actor number
-        playlab_move_girl: Use the "move right" block to move Tennis Girl
-        playlab_play_sound: Add "play sound" block here
-        playlab_arrow_keys: Remember to use these to move the witch after clicking
-          on Run
-        playlab_add_move: Add "move" blocks inside this repeat block
-        playlab_add_score: Add score blocks here
-        playlab_add_blocks: Add your blocks here
-        set_variable: Drag a number block here to set your variable
-        place_variable: Drag your variable inside this block
-        bee_for_loop: Drag the largest number of nectar you want the bee to collect
-          here
-        place_counter_variable: Drag your counter variable inside this block
-        function_editor_draw_square: This is your function definition. These blocks
-          run everytime you use the "draw a square" block
-        change_here: Make your change here
-        write_draw_square_function: Drag blocks from the toolbox into here that draw
-          a square
-        write_draw_triangle_function: Drag blocks from the toolbox into here that
-          draw a triangle
-        edit_add_parameter: Click edit to add a parameter in your function
-        add_and_drag_parameter: Write in the name of your parameter here, click add,
-          and then drag it into your function definition
-        fill_in_actor: Fill in the ??? with numbers that correspond to each actor
-          (1, 2, and 3)
-        repeat: Put blocks inside the loop to repeat commands
-        if_bee_nectar: Use the "if" block to decide if the bee should get nectar
-        if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower,
-          and makes honey if it's not a flower
-        repeat_full_circle: Enter in the number of times the zombie has to move to
-          make a full circle
-        place_length_variable: Drag the length variable here to replace the question
-          marks
-        arrows_move_actor: Use the arrows to move the actor
-        right_arrow_fireball: Use the right arrow to shoot fireballs
-        name_function: Write the name of your function here
+        drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque
+        run: Haz clic en "Ejecutar" para probar tu programa
+        watch_again: Haz clic aquí para ver el video otra vez
+        gray_block_explanation: Los bloques que están de color gris no se pueden eliminar.  ¿Puedes
+          resolver el rompecabezas de todas formas?
+        show_code_explanation: Haz clic aquí para ver el código del programa que estas
+          haciendo
+        instructions_repeat_explanation: Las instrucciones para cada rompecabezas
+          se repiten aquí
+        category_explanation: Tienes todos los mismos bloques, pero ahora se han organizado
+          en categorías
+        set_sprite_image: Adjunta un bloque "fijar actor a imagen" al bloque "cuando
+          empieza la historia" para permitir que haya un actor en esta historia
+        studio_say_text: Escribe lo que quieres que diga tu actor entre comillas
+        jigsaw_click: ¡Haz clic en este bloque!
+        move_elsa_forward: Arrastra un bloque "Mover hacia adelante" y pégalo por
+          debajo del bloque "Cuando se ejecuta" para mover a Elsa hacia adelante
+        turn_elsa: Usa el bloque de "Girar" para que Elsa gire. El número en el menú
+          desplegable determina cuánto gira Elsa
+        replace_questions: Usa el menú desplegable para reemplazar "???" con un número
+        replace_questions_degree: Usa el menú desplegable para reemplazar "???" con
+          la cantidad correcta de grados a girar
+        repeat_blocks: Usa el bloque de "Repetir" y ponlo alrededor de los bloques
+          del espacio de trabajo
+        repeat_blocks_1: (1) Usa este bloque y ponlo alrededor de los bloques grises
+          en el espacio de trabajo.
+        repeat_blocks_2: (2) Mueve el bloque "Repetir" aquí, y coloca los bloques
+          grises dentro
+        snowflake_dropdown: Usa este menú desplegable para crear diferentes copos
+          de nieve!
+        degrees_per_side: Divide 360 entre el número de lados para obtener el tamaño
+          de cada ángulo en grados.
+        set_sides: Usa este bloque para dar a "lados" el valor necesario para completar
+          el rompecabezas.
+        set_length: Usa este bloque para fijar el valor correcto de "longitud".
+        which_equation: ¿Qué ecuación hace los lados más cortos para obtener formas
+          con más lados?
+        get_nectar: Usa el bloque nuevo "obtener néctar".
+        actions_category: ¡La caja de herramientas tiene un nuevo aspecto! Ahora están
+          aquí los bloques de "Acciones".
+        draw_square_hint: 'Sugerencia: Usa el bucle para hacer un cuadrado que creaste
+          en el último puzzle.'
+        edit_function: Haz clic aquí para editar tu función.
+        create_function: Haz clic aquí para abrir el desplegable "Funciones", luego
+          haz clic en el botón "Crear una función".
+        house_hint: Está bien si la imagen no se ve como una casa todavía. Lo solucionaremos
+          en el siguiente puzzle.
+        edit_draw_square: Usa este botón para editar la función y añadir el bucle.
+        edit_get_nectar: Usa este botón para editar la función y cambiar la dirección
+          hacia la que la abeja girará para obtener el néctar.
+        logic_category: Abre el desplegable "Lógica" para encontrar el bloque "si/sino".
+        length_parameter: ¿Puedes actualizar esta función para que utilice el parámetro
+          "longitud"?
+        frozen_diamond_repeat: Utiliza el bloque repetir para crear esta figura.
+        frozen_circle_function_in_circle_turn: No te olvides de girar después de crear
+          cada círculo.
+        frozen_circle_function_with_parameter_circle: Utiliza el bloque de "crear
+          un círculo" y cambia su tamaño.
+        frozen_snowflake_branch: Utiliza el bloque de "crear una rama de copo de nieve"
+        frozen_create_square: Añade más bloques aquí para crear un cuadrado
+        playlab_drag_say: Arrastra el bloque "decir" aquí y escribe "Hola"
+        playlab_use_twice: Usa este bloque dos veces y recuerda cambiar el número
+          de actor
+        playlab_move_girl: Utiliza el bloque "mover a la derecha" para mover a la
+          chica tenista
+        playlab_play_sound: Añade el bloque "reproducir sonido" aquí
+        playlab_arrow_keys: Recuerda que debes utilizar esto para mover a la bruja
+          después de hacer clic en Ejecutar
+        playlab_add_move: Añade bloques "mover" dentro de este bloque  repetir
+        playlab_add_score: Agrega bloques de puntuación aquí
+        playlab_add_blocks: Añade tus bloques aquí
+        set_variable: Arrastra un bloque número aquí para definir tu variable
+        place_variable: Arrastra tu variable dentro de este bloque.
+        bee_for_loop: Arrastra la mayor cantidad de néctar que quieres que la abeja
+          recolecte aquí.
+        place_counter_variable: Arrastre la variable contador dentro de este bloque
+        function_editor_draw_square: Esta es tu definición de función. Estos bloques
+          se ejecutan cada vez que usas el bloque "dibujar un cuadrado"
+        change_here: Haz tu cambio aquí.
+        write_draw_square_function: Arrasta bloques de la caja de herramientas aquí
+          que dibujen un cuadrado.
+        write_draw_triangle_function: Arrastra bloques desde la caja de herramientas
+          aquí para que dibujen un triángulo
+        edit_add_parameter: Haz clic en editar para agregar un parámetro en la función
+        add_and_drag_parameter: Escribe el nombre de su parámetro aquí, haga clic
+          en agregar y luego arrastrarlo en la definición de la función
+        fill_in_actor: Rellene el ??? con números que corresponden a cada actor (1,
+          2 y 3)
+        repeat: Ponga bloques dentro del bucle para repetir comandos
+        if_bee_nectar: Utilice el bloque "si" para decidir si la abeja debe obtener
+          el néctar
+        if_else_bee: Use el bloque "si/sino" para que la abeja obtenga néctar de una
+          flor, y haga miel si no es una flor
+        repeat_full_circle: Introduce el número de veces que el zombie tiene que moverse
+          para hacer un círculo completo
+        place_length_variable: Arrastre aquí la variable longitud para reemplazar
+          los signos de interrogación
+        arrows_move_actor: Usa las flechas para mover el actor
+        right_arrow_fireball: Use la flecha derecha para disparar bolas de fuego
+        name_function: Escriba el nombre de su función aquí

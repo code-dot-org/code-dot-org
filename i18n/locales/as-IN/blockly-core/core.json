@@ -1,5 +1,5 @@
 {
-  "ACTUAL":"call",
+  "ACTUAL":"actual",
   "ADD":"Add",
   "ADD_COMMENT":"টোকা ভৰাওক",
   "ADD_PARAMETER":"Add Parameter",
@@ -73,7 +73,7 @@
   "EXAMPLE_DESCRIPTION":"Defines an example with expected and actual behavior",
   "EXPAND_ALL":"খন্দ কেইটা প্ৰসাৰণ কৰক",
   "EXPAND_BLOCK":"খন্দটো প্ৰসাৰণ কৰক",
-  "EXPECTED":"result",
+  "EXPECTED":"expected",
   "EXTERNAL_INPUTS":"বাহ্যিক ইনপুট (input)",
   "FUNCTION_CREATE":"Create a Function",
   "FUNCTION_EDIT":"edit",

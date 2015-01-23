@@ -117,7 +117,7 @@ bn-BD:
   studiobar_flappy_body: তোমার নিজের Flappy Game তৈরি করে শেয়ার করো।
   studiobar_teacher_title: শিক্ষকদের জন্য তৈরী
   studiobar_teacher_body: কোড স্টুডিওকে তোমার শ্রেণীতে পরিচিত করাও।
-  studiobar_frozen_title: এক ঘন্টার কোড
+  studiobar_frozen_title: Hour of Code
   studiobar_frozen_body: 'Anna(এন্না) এবং Elsa(এলসা) কে নিয়ে শীতের কল্পনারাজ্য তৈরি করো '
   studiobar_donate_title: স্বেচ্ছায় অর্থায়ন করুন
   studiobar_donate_body: আপনার প্রতি ডলার অর্থায়নে একটি শিশু শেখে
@@ -195,7 +195,7 @@ bn-BD:
   dashboard_landing_available_title: বিদ্যমান কোর্সসমূহ
   dashboard_landing_available_courses: 'এখানে  আপনার এবং আপনার ছাত্রদের জন্য বিদ্যমান কোর্সগুলো রয়েছে।'
   dashboard_landing_loading: লোড হচ্ছে...
-  dashboard_action_edit: সম্পাদনা
+  dashboard_action_edit: Edit
   dashboard_action_save: সংরক্ষন করন
   dashboard_action_save_all: সমস্ত সংরক্ষণ করুন
   dashboard_action_cancel: বাতিল করুন
@@ -243,7 +243,6 @@ bn-BD:
   dashboard_students_new_section: "You've created a new section! Now add your students using the <b>Add student</b> and <b>Add multiple students</b> buttons above."
   dashboard_students_placeholder_name: শিক্ষার্থীর নাম
   dashboard_students_name: নাম
-  dashboard_students_progress: Progress
   dashboard_students_age: বয়স
   dashboard_students_gender: লিঙ্গ
   dashboard_students_male: Male
@@ -290,10 +289,6 @@ bn-BD:
   dashboard_login_picture: ছবি
   dashboard_login_none: ই-মেইল
   dashboard_new_password: নতুন পাসওয়ার্ড
-  dashboard_progress_not_completed: not completed
-  dashboard_progress_completed_too_many_blocks: completed, too many blocks
-  dashboard_progress_completed_perfect: completed, perfect
-  dashboard_progress_furthest_level_attempted: furthest level attempted
   stats_hoc_2013_heading: "Incredible stats from last year's Hour of Code. In one week alone:"
   stats_hoc_2013_image_alt: 2013 থেকে ঘন্টা কোড এর stats
   dashboard_teacher: শিক্ষক

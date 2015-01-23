@@ -9,7 +9,7 @@
   "rectangleBlockTitle": "矩形 (寬度, 高度,樣式 , 顏色)",
   "reinfFeedbackMsg": "你可以按\"重試\"按鈕，就可以編輯你的圖畫。",
   "rotateImageBlockTitle": "旋轉(度數,圖片)",
-  "scaleImageBlockTitle": "scale (factor, image)",
+  "scaleImageBlockTitle": "比例(因數)",
   "squareBlockTitle": "正方形(大小,樣式,顏色)",
   "starBlockTitle": "星形(半徑,樣式, 顏色)",
   "radialStarBlockTitle": "放射狀星形 (點, 內, 外,樣式, 顏色)",

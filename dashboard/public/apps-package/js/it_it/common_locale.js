@@ -23,7 +23,7 @@ var locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -202,7 +202,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "nextLevelTrophies":function(d){return "Complimenti! Hai completato l'esercizio "+locale.v(d,"puzzleNumber")+" e vinto "+locale.p(d,"numTrophies",0,"it",{"one":"un trofeo","other":locale.n(d,"numTrophies")+" trofei"})+"."},
 "nextStage":function(d){return "Complimenti! Hai completato la lezione "+locale.v(d,"stageName")+"."},
 "nextStageTrophies":function(d){return "Complimenti! Hai completato la lezione "+locale.v(d,"stageName")+" e vinto "+locale.p(d,"numTrophies",0,"it",{"one":"un trofeo","other":locale.n(d,"numTrophies")+" trofei"})+"."},
-"numBlocksNeeded":function(d){return "Complimenti! Hai completato l'esercizio "+locale.v(d,"puzzleNumber")+". (Puoi risolverlo meglio usando solo "+locale.p(d,"numBlocks",0,"it",{"one":"1 blocco","other":locale.n(d,"numBlocks")+" blocchi"})+".)"},
+"numBlocksNeeded":function(d){return "Complimenti! Hai completato l'esercizio "+locale.v(d,"puzzleNumber")+". (Avresti però potuto usare solo "+locale.p(d,"numBlocks",0,"it",{"one":"1 block","other":locale.n(d,"numBlocks")+" blocks"})+".)"},
 "numLinesOfCodeWritten":function(d){return "Hai appena scritto "+locale.p(d,"numLines",0,"it",{"one":"1 linea","other":locale.n(d,"numLines")+" linee"})+" di codice!"},
 "play":function(d){return "inizia"},
 "print":function(d){return "Stampa"},
@@ -243,5 +243,5 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "signup":function(d){return "Iscriviti al corso introduttivo"},
 "hintHeader":function(d){return "Ecco un suggerimento:"},
 "genericFeedback":function(d){return "Verifica il risultato e prova a correggere il tuo programma."},
-"toggleBlocksErrorMsg":function(d){return "Devi correggere un errore nel programma prima di poterlo visualizzare come blocco."},
+"toggleBlocksErrorMsg":function(d){return "You need to correct an error in your program before it can be shown as blocks."},
 "defaultTwitterText":function(d){return "Guarda cosa ho fatto"}};

@@ -327,13 +327,3 @@ ro:
           "Eval: Conditionals": 'Evaluare: Decizii'
           "Unplugged: Collision Detection and the Distance Formula": 'Fără calculator: Detectarea de coliziuni și formula pentru distanță'
           "Play Lab: Collision Detection (Big Game)": 'Laboratorul de joc: Detectarea de coliziuni (jocul mare)'
-        algebrademo:
-          description: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
-          Algebra Demo: Algebra Demo
-          Evaluation Blocks: Evaluation Blocks
-          Making Pictures: Making Pictures
-          Defining Variables: Defining Variables
-          Defining Simple Functions: Defining Simple Functions
-          The Design Recipe: Rețeta pentru design
-        K5PD:
-          Introduction to PD: Introduction to PD

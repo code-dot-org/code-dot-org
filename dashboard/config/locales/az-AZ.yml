@@ -1,7 +1,4 @@
 "az":
-  errors:
-    messages:
-      not_saved: 'Please correct the following errors:'
   activerecord:
     errors:
       messages:
@@ -498,7 +495,7 @@
       body: İnformatikanın əsaslarını öyrənməyə cəhd edin. Milyonlarla insan artıq
         bu fürsətdən istifadə edib.
     flappy:
-      title: Qanadlı Kod
+      title: Qanadı Kod
       body: 10 dəqiqədən də az müddətə öz oyununuzu yazmaq istəyrisiniz? Qanadlı Kod
         dərsliyimizi sınayın!
     20hour:
@@ -522,7 +519,7 @@
     activity_count: Ötən <b>%{days}</b> gün ərzində, şagirdlər öz kompüter proqramlarını
       yazaraq <b>%{count}</b> mobil əlavə və şəkil düzəldib. Hər proqramın necə işlədiyini
       görmək üçün şəkil və ekran təsvirlərini klikləyin.
-    want_to_make_your_own: Özünüz üçün də birini düzəltmək istərdiniz?
+    want_to_make_your_own: Want to make your own?
     more: Daha çox &rarr;
     caption_by_name_age: by %{name}, age %{age}
     caption_time_ago: '%{time_ago} ago'
@@ -580,7 +577,7 @@
           title: Builder
           description: ''
         flappy:
-          title: Qanadlı Kod
+          title: Qanadı Kod
           description: 10 dəqiqədən də az müddətə öz oyununuzu yazmaq istəyrisiniz?
             Qanadlı Kod dərsliyimizi sınayın!
         jigsaw:

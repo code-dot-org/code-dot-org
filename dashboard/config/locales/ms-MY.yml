@@ -1,21 +1,18 @@
 "ms":
-  errors:
-    messages:
-      not_saved: 'Please correct the following errors:'
   activerecord:
     errors:
       messages:
-        blank: adalah diperlukan
+        blank: is required
     attributes:
       user:
-        name: Nama Paparan
+        name: Display Name
         email: E-mel
         username: nama pengguna
         password: kata laluan
         password_confirmation: Pengesahan kata laluan
         current_password: Kata laluan semasa
         locale: Bahasa
-        age: Umur
+        age: Age
         gender: Jantina
         edit_header: Edit Maklumat Akaun
         error:
@@ -24,15 +21,15 @@
   welcome_back: Selamat datang kembali, % {nama}
   add_teacher_form:
     code:
-      label: 'Tambahkan guru:'
-      placeholder: Kod Seksyen (ABCDEF)
+      label: 'Add a teacher:'
+      placeholder: Section Code (ABCDEF)
     submit: Tambah guru
   add_hint_form:
     placeholder: Sila masukkan petunjuk anda di sini
     submit: Tambah petunjuk
   appname: Code.org
   stage: peringkat
-  stage_number: Peringkat %{number}
+  stage_number: Stage %{number}
   puzzle: Teka-teki
   trophies: Piala
   courses: kursus-kursus
@@ -51,25 +48,24 @@
   auth:
     sign_in_with: Daftar Masuk dengan % {pembekal}
     signed_in: Daftar masuk!
-    signed_out: Anda telah mendaftar keluar daripada <a href="%{url}">Code.org</a>.
-    sign_out_of: Anda telah mengunakkan %{provider} untuk mendaftar masuk. <a href="%{url}">Klik
-      di sini</a> untuk mendaftar keluar daripada %{provider}.
+    signed_out: You have signed out of <a href="%{url}">Code.org</a>.
+    sign_out_of: You used %{provider} to sign in. <a href="%{url}">Click here</a>
+      to sign out of %{provider}.
     already_signedup: Sudah mendaftar?
     notyet_signedup: Belum menyertai lagi?
-    google_oauth2: Akaun Google
+    google_oauth2: Google Account
     twitter: Twitter
     facebook: Facebook
-    windowslive: Akaun Microsoft
+    windowslive: Microsoft Account
     forgot_password: Lupa kata laluan anda?
     need_confirmation: Tidak menerima arahan pengesahan?
     need_unlock: Tidak menerima kunci arahan?
   signup_form:
-    overview_student: Daftarkan akaun untuk menjejaki kemajuan anda. Email anda digunakan
-      terutamanya untuk membenarkan anda untuk mendaftar masuk dan memulihan kata
-      laluan. Untuk maklumat lanjut, lihat  <a href="http://code.org/privacy">Polisi
-      Privasi</a>.
-    overview_teacher: Ajar sains komputer di dalam kelas anda dengan mendaftarkan
-      akaun.<p/> Anda boleh menambah pelajar-pelajar dan menjejaki kemajuan mereka.
+    overview_student: Sign up for an account to track your progress. Your email is
+      primarily used to allow you to log in and for password recovery. For more information,
+      see our <a href="http://code.org/privacy">Privacy Policy</a>.
+    overview_teacher: Teach computer science in your classroom by signing up for an
+      account.<p/> You'll be able to add your students and track their progress.
     no_signup_message: Anda boleh <a target="_blank" href="http://learn.code.org">
       layari pelbagai tahap dan susun-suai</a>, tetapi anda perlu mendaftar untuk
       menyimpan perkembangan anda.
@@ -83,8 +79,8 @@
     address_placeholder: alamat, bandar, Negeri, zip
     gender: Jantina (pilihan)
     birthday: Hari Lahir (pilihan)
-    age: Umur
-    user_type: Adakah anda seorang pelajar atau guru?
+    age: Age
+    user_type: Are you a student or teacher?
     submit: Mendaftar
     teacher: Adakah anda seorang guru?
     valid_username: Boleh digunakan!
@@ -113,9 +109,9 @@
     try_hoc: Cuba satu jam kod dahulu
     try_20hours: Cuba 20 jam pengenalan kepada Sains komputer kami
   signinsection:
-    welcome: Selamat datang ke %{section_name}
-    name: Pilih nama anda
-    picture: Sekarang cari gambar rahsia anda
+    welcome: Welcome to %{section_name}
+    name: Choose your name
+    picture: Now find your secret picture
     words: Now enter your secret words
     login: Log masuk
   password:
@@ -162,8 +158,8 @@
       access_denied: Anda tidak mempunyai akses kepada statistik orang ini
   redeem_prizes:
     title: 'Redeem Prizes: %{name}'
-    provider: 'Penyedia:'
-    code: 'Kod:'
+    provider: 'Provider:'
+    code: 'Code:'
     redeem_header: 'To redeem:'
     donorschoose_register: Daftar sebagai guru pada DonorsChoose.org
     donorschoose_project: Poskan projek
@@ -565,7 +561,7 @@
           title: Edit kod
           description: ''
         events:
-          title: Acara-acara
+          title: Events
           description: ''
         builder:
           title: Builder

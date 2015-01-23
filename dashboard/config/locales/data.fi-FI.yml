@@ -48,7 +48,7 @@
         edit-code:
           desc: Muokkaa koodia (beta)
           MazeEC: Vaihe 1
-          Applab: Vaihe 2
+          Webapp: Vaihe 2
           ArtistEC: Vaihe 3
           StudioEC: Vaihe 4
         events:
@@ -99,11 +99,10 @@
         Jigsaw: Palapeli
         MazeStep: Sokkelo askeltila
         Wordsearch: Sanaetsintä
-        Webapp: App Lab
+        Webapp: Verkkosovellus
         ArtistEC: Taiteilija
         TextMatch: Tekstin yhdistäminen
         StudioEC: Pelilabra
-        Applab: App Lab
     trophy:
       name:
         Bronze: Pronssi
@@ -552,7 +551,7 @@
           ja kirjoita sana BELOW (alla suomeksi)
         maze_wordsearch_k_20: Tämä on kokeilu! Liikuta minua yhteen suuntaan, sitten
           toiseen suuntaan ja kirjoita sana STORY (tarina suomeksi)
-        applab_ec_simple: Create your app by using the blocks in the toolbox.
+        webapp_ec_simple: Luo verkkosovelluksesi käyttäen createHtmlBlock:ia.
         turtle_ec_1_2: 'Piirrä nyt neliö. Huomautus: käytä suosikkiväriäsi valitsemalla
           se "kynän väri" lohkolla.'
         turtle_ec_1_10: 'Teit sen! Nyt voit piirtää mitä haluat. Joitakin hauskoja

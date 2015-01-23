@@ -274,19 +274,19 @@ de:
         text: Hallo, ich heiße Lyndsey. Ich bin Model, Schauspielerin und schreibe meinen eigenen Apps. Wir wollen ein Programm schreiben, um Anna und Elsa zu treffen, wenn sie den Zauber und die Schönheit des Eises erkunden.
       2:
         image: notes/frozen1_2.jpg
-        text: Du wirst Schneeflocken und Muster erschaffen während du Schlittschuh fährst und ein Winterwunderland erstellst, das du mit deinen Freunden teilen kannst.
+        text: "You'll create snowflakes and patterns as you ice skate and make a winter wonderland that you can then share with your friends."
       3:
         image: notes/frozen1_3.jpg
-        text: In der nächsten Stunde wirst du die grundlegenden Fähigkeiten zum Programmieren kennenlernen. Traditionell ist Programmieren text-basiert, aber wir werden heute Blockly benutzen; damit kannst du mithilfe von visuellen Bausteinen, die du mit der Maus anordnen kannst, Programme erstellen, auch wenn es auf den ersten Blick nicht so erscheinen mag. So lernen selbst Universitätsstudenten die Basics.
+        text: "In the next hour, you're going to learn the basics of how to code. Traditional programming is usually in text, but we'll use Blockly, which uses visual blocks that you can drag and drop to write programs. This is how even university students learn the basics. Under the hood, you're still creating code."
       4:
         image: notes/frozen1_4.jpg
-        text: Ein Programm ist eine Zusammenstellung von Instruktionen, die dem Computer vorgeben, was er tun soll. Lass uns ein Programm schreiben, mit dem wir Elsa helfen, einen einfachen Satz zu erstellen. Wir werden das später brauchen, um komplexere Strukturen zu programmieren.
+        text: "A program is a set of instructions that tells a computer what to do. Let's build a code, or a program, that will help Elsa create a simple line. We will use this later to create more complex patterns."
       5:
         image: notes/frozen1_5.jpg
-        text: Dein Bildschirm ist in drei Hauptteile gegliedert. Links, ist eine Eisfläche, auf der du dein Programm laufen lassen wirst. Die Anweisungen für jedes Level findest du unter der Fläche.
+        text: "Your screen is split into three main parts. On the left, is the ice surface where you'll run your program. The instructions for each level are written right below the surface."
       6:
         image: notes/frozen1_6.jpg
-        text: Dieser mittlere Bereich ist die Werkzeugkiste, und jeder dieser Bausteine ist eine Aktion, die Elsa und Anna ausführen können.
+        text: This middle area is the toolbox, and each of these blocks is an action that Elsa and Anna can do.
       7:
         image: notes/frozen1_7.jpg
         text: |-
@@ -303,10 +303,10 @@ de:
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg
-        text: Hallo, ich bin Paola! Computer sind wirklich gut, wenn es um Sachen geht, die sich wiederholen. Du kannst bis 10, 20 oder 100 zählen. Aber ein Computer kann bis zu einer Milliarde oder einer Billion zählen. Einem Computer wird nie langweilig und er braucht nur ein paar Sekunden. Ob es um zählen, malen oder etwas anderes geht--Computer können Dinge hundert oder sogar millarden mal wiederholen.
+        text: "Hi, I’m Paola! Computers are really good at repeating actions. You can count to 10, 20, or 100. But a computer can count to a billion or a trillion. It won't get bored and it will only take a few seconds. Whether it's counting, or drawing, or anything--computers can repeat things hundreds or even billions of times."
       2:
         image: notes/frozen2_2.jpg
-        text: 'In der Programmierung nennen wir sowas eine Schleide. Mit einer Schleife kannst du Code wiederholen, so oft du willst. Für das nächste Puzzle ist es deine Aufgabe, Anna zu helfen mit dem "Wiederholen"-Baustein ein Quadrat zu erstellen.'
+        text: 'In programming, we call this a loop. A loop is how you repeat your code over and over again. For the next puzzle, your goal is to help Anna create a square with the "Repeat" block.'
       3:
         image: notes/frozen2_3.jpg
         text: 'Any blocks of code you put inside the "Repeat" block will be repeated in sequence, as many times as you want.'
@@ -315,7 +315,8 @@ de:
         text: 'To draw a square, you can use the "Move Forward" and "Turn Right" block 4 times. But the easier way is to tell the computer to "Move Forward" and "Turn Right by 90 degrees" once, and then tell it to repeat this pair of actions 4 times. To do that, you need to put the "Move Forward" and "Turn Right" block inside a "Repeat" block.'
       5:
         image: notes/frozen2_5.jpg
-        text: 'Denk dran, du kannst die Zahl in dem "Wiederholen"-Baustein verändern, und er wird das, was sind in dem Baustein befindet, so oft wie angegeben wiederholen.'
+        text: |-
+          Remember, you can change the number in the "Repeat" block to anything, and it will repeat what's inside the block that many times.
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg

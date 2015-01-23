@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -170,7 +170,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "flapTooltip":function(d){return "Fly Flappy upwards."},
 "flappySpecificFail":function(d){return "Your code looks good - it will flap with each click. But you need to click many times to flap to the target."},
 "incrementPlayerScore":function(d){return "score a point"},
-"incrementPlayerScoreTooltip":function(d){return "Tambah satu ke skor semasa pemain."},
+"incrementPlayerScoreTooltip":function(d){return "Add one to the current player score."},
 "nextLevel":function(d){return "Tahniah! Anda telah melengkapkan puzzle ini."},
 "no":function(d){return "Tidak"},
 "numBlocksNeeded":function(d){return "Puzzle ini boleh diselesaikan dengan %1 blok."},
@@ -255,7 +255,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "shareFlappyTwitter":function(d){return "Check out the Flappy game I made. I wrote it myself with @codeorg"},
 "shareGame":function(d){return "Kongsi permainan anda:"},
 "soundRandom":function(d){return "rawak"},
-"soundBounce":function(d){return "lantun"},
+"soundBounce":function(d){return "bounce"},
 "soundCrunch":function(d){return "crunch"},
 "soundDie":function(d){return "sad"},
 "soundHit":function(d){return "smash"},

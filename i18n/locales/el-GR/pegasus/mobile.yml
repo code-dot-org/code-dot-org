@@ -242,7 +242,6 @@ el-GR:
   dashboard_students_new_section: 'Έχετε δημιουργήσει μια νέα ενότητα! Τώρα προσθέστε τους μαθητές σας, χρησιμοποιώντας τα ανωτέρω πλήκτρα <b>Προσθήκη μαθητή</b> και <b>Προσθήκη πολλών μαθητών</b>.'
   dashboard_students_placeholder_name: Όνομα μαθητή
   dashboard_students_name: Όνομα
-  dashboard_students_progress: Progress
   dashboard_students_age: Ηλικία
   dashboard_students_gender: Φύλο
   dashboard_students_male: Αγόρι
@@ -289,10 +288,6 @@ el-GR:
   dashboard_login_picture: Εικόνα
   dashboard_login_none: Ηλεκτρονικό ταχυδρομείο
   dashboard_new_password: νέος κωδικός
-  dashboard_progress_not_completed: δεν έχει ολοκληρωθεί
-  dashboard_progress_completed_too_many_blocks: ολοκληρώθηκε, πάρα πολλά μπλοκ
-  dashboard_progress_completed_perfect: ολοκληρώθηκε, τέλειο
-  dashboard_progress_furthest_level_attempted: τελευταίο επίπεδο επιχειρήθηκε
   stats_hoc_2013_heading: 'Απίστευτα στατιστικά από την περσινή ώρα του κώδικα. Σε μία εβδομάδα μόνο:'
   stats_hoc_2013_image_alt: Στατιστικά στοιχεία από την ώρα του κώδικα του 2013
   dashboard_teacher: Καθηγητής

@@ -242,7 +242,6 @@ nn-NO:
   dashboard_students_new_section: 'Du har laga ei ny seksjon! Legg til elevar ved å bruke knappane <b>Legg til elev</b> og <b>Legg til fleire elevar</b> ovenfor.'
   dashboard_students_placeholder_name: Elevnamn
   dashboard_students_name: Navn
-  dashboard_students_progress: Progress
   dashboard_students_age: Alder
   dashboard_students_gender: Kjønn
   dashboard_students_male: Mann
@@ -289,10 +288,6 @@ nn-NO:
   dashboard_login_picture: Bilde
   dashboard_login_none: E-post
   dashboard_new_password: nytt passord
-  dashboard_progress_not_completed: ikkje fullført
-  dashboard_progress_completed_too_many_blocks: fullført, for mange blokker
-  dashboard_progress_completed_perfect: Perfekt fullført
-  dashboard_progress_furthest_level_attempted: høyeste nivå forsøkt
   stats_hoc_2013_heading: 'Utrolig statistikk fra Kodetimen i fjor. På berre ei veke:'
   stats_hoc_2013_image_alt: Statistikk fra Kodetimen 2013
   dashboard_teacher: Lærar

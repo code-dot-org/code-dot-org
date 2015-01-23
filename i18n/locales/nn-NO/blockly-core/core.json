@@ -1,5 +1,5 @@
 {
-  "ACTUAL":"call",
+  "ACTUAL":"faktisk",
   "ADD":"Legg til",
   "ADD_COMMENT":"Legg til kommentar",
   "ADD_PARAMETER":"Legg til parameter",
@@ -73,7 +73,7 @@
   "EXAMPLE_DESCRIPTION":"Definerer eit døme med forventa og faktisk åtferd",
   "EXPAND_ALL":"Utvid blokker",
   "EXPAND_BLOCK":"Utvid blokk",
-  "EXPECTED":"result",
+  "EXPECTED":"forventa",
   "EXTERNAL_INPUTS":"Eksterne kilder",
   "FUNCTION_CREATE":"Lag ein funksjon",
   "FUNCTION_EDIT":"rediger",

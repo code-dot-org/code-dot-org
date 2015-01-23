@@ -3,7 +3,7 @@ az-AZ:
   select_language: Zəhmət olmazsa, dilinizi seçin
   computer_science: İnformatika
   computer_science_edweek: İnformatika təhsili həftəsi
-  csedweek_dates: 8-14 dekabr 2014
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">plan your Hour of Code</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
   n_have_learned_an_hoc: '<h1>#</h1><h3>nəfər artıq </h3><h2>Kod Saatı</h2>nda özünü sınayıb'
@@ -112,7 +112,7 @@ az-AZ:
   studiobar_elementary_body: K-5 (11-12 yaşlılar) üçün üç yeni kursumuz
   studiobar_hoc_title: Kod Saatı
   studiobar_hoc_body: Learn to code with Angry Birds
-  studiobar_flappy_title: Qanadlı Kod
+  studiobar_flappy_title: Qanadı Kod
   studiobar_flappy_body: Make and share your own Flappy game
   studiobar_teacher_title: Made for teachers
   studiobar_teacher_body: Introduce Code Studio in your classroom
@@ -242,7 +242,6 @@ az-AZ:
   dashboard_students_new_section: "You've created a new section! Now add your students using the <b>Add student</b> and <b>Add multiple students</b> buttons above."
   dashboard_students_placeholder_name: Student Name
   dashboard_students_name: Ad
-  dashboard_students_progress: Progress
   dashboard_students_age: Yaşınız
   dashboard_students_gender: Cins
   dashboard_students_male: Kişi
@@ -289,10 +288,6 @@ az-AZ:
   dashboard_login_picture: Picture
   dashboard_login_none: E-poçt
   dashboard_new_password: new password
-  dashboard_progress_not_completed: tamamlanmayıb
-  dashboard_progress_completed_too_many_blocks: tamamlanıb, artıq bloklar var
-  dashboard_progress_completed_perfect: tamamlanıb, əladır
-  dashboard_progress_furthest_level_attempted: furthest level attempted
   stats_hoc_2013_heading: "Incredible stats from last year's Hour of Code. In one week alone:"
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
   dashboard_teacher: Teacher
@@ -308,7 +303,7 @@ az-AZ:
   dashboard_sections_password_account_creation: Student-created text password
   dashboard_sections_login_type_explanation: "This table helps explain which of these login types, <b>picture, word, or email</b>, you'll want to choose for a section."
   dashboard_faq: Frequently Asked Questions
-  code_hoc_coming: 'Kod Saatı artıq buradadır - 8-14 dekabr!'
+  code_hoc_coming: 'The Hour of Code is here - December 8-14!'
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: Learn More
   hoc2014_try_new_tutorials: Try our new Hour of Code tutorials

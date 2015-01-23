@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -157,12 +157,12 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "blocksUsed":function(d){return "Blocks used: %1"},
 "branches":function(d){return "branches"},
 "catColour":function(d){return "Color"},
-"catControl":function(d){return "Petlje"},
-"catMath":function(d){return "Matematika"},
+"catControl":function(d){return "Loops"},
+"catMath":function(d){return "Math"},
 "catProcedures":function(d){return "Functions"},
-"catTurtle":function(d){return "Akcije"},
-"catVariables":function(d){return "Varijable"},
-"catLogic":function(d){return "Logika"},
+"catTurtle":function(d){return "Actions"},
+"catVariables":function(d){return "Variables"},
+"catLogic":function(d){return "Logic"},
 "colourTooltip":function(d){return "Changes the color of the pencil."},
 "createACircle":function(d){return "create a circle"},
 "createSnowflakeSquare":function(d){return "create a snowflake of type square"},
@@ -195,7 +195,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "drawStamp":function(d){return "draw stamp"},
 "heightParameter":function(d){return "height"},
 "hideTurtle":function(d){return "hide artist"},
-"jump":function(d){return "skoči"},
+"jump":function(d){return "jump"},
 "jumpBackward":function(d){return "jump backward by"},
 "jumpForward":function(d){return "jump forward by"},
 "jumpTooltip":function(d){return "Moves the artist without leaving any marks."},

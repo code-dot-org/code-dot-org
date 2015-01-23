@@ -292,7 +292,6 @@
     using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
   dashboard_students_placeholder_name: Student Name
   dashboard_students_name: Tên
-  dashboard_students_progress: Progress
   dashboard_students_age: Tuổi
   dashboard_students_gender: Giới tính
   dashboard_students_male: Nam
@@ -348,10 +347,6 @@
   dashboard_login_picture: Hình ảnh
   dashboard_login_none: Địa chỉ email
   dashboard_new_password: Mật khẩu mới
-  dashboard_progress_not_completed: not completed
-  dashboard_progress_completed_too_many_blocks: completed, too many blocks
-  dashboard_progress_completed_perfect: completed, perfect
-  dashboard_progress_furthest_level_attempted: furthest level attempted
   stats_hoc_2013_heading: 'Đáng kinh ngạc số liệu thống kê từ cuối năm Giờ Mã. Trong
     một tuần:'
   stats_hoc_2013_image_alt: Số liệu thống kê Giờ Lập Trình từ năm 2013
@@ -1028,3 +1023,8 @@
   sphero_beyond_longdescription: Whether you're an educator or a parent, SPRK lessons
     give kids a fun crash course in programming robots while sharpening their skills
     in math and science.
+  dashboard_students_progress: Progress
+  dashboard_progress_not_completed: not completed
+  dashboard_progress_completed_too_many_blocks: completed, too many blocks
+  dashboard_progress_completed_perfect: completed, perfect
+  dashboard_progress_furthest_level_attempted: furthest level attempted
