@@ -8,6 +8,7 @@ before_install:
 - ./bundle_cache download
 before_script:
 - bin/rake db:create db:schema:load
+- mysql -uroot -e "create database if not exists pegasus_test"
 script:
 - bin/rake
 after_script:
