@@ -52,10 +52,9 @@ class Script < ActiveRecord::Base
   # distributed cache (Rails.cache)
   @@script_cache = nil
   SCRIPT_CACHE_KEY = 'script-cache'
-  SCRIPT_CACHE_TTL = 12.hours
   
   def self.script_cache_to_cache
-    Rails.cache.write(SCRIPT_CACHE_KEY, script_cache_from_db, expires_in: SCRIPT_CACHE_TTL)
+    Rails.cache.write(SCRIPT_CACHE_KEY, script_cache_from_db)
   end
 
   def self.script_cache_from_cache
