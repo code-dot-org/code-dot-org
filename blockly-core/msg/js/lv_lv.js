@@ -1,6 +1,6 @@
 goog.provide('Blockly.Msg.lv_lv');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "call";
+Blockly.Msg.ACTUAL = "faktiskais";
 Blockly.Msg.ADD = "Pievienot";
 Blockly.Msg.ADD_COMMENT = "Pievienot komentāru";
 Blockly.Msg.ADD_PARAMETER = "Pievienot parametru";
@@ -74,7 +74,7 @@ Blockly.Msg.EXAMPLE = "Piemērs";
 Blockly.Msg.EXAMPLE_DESCRIPTION = "Definē piemēru ar sagaidāmo un faktisko rīcību";
 Blockly.Msg.EXPAND_ALL = "Paplašināt blokus";
 Blockly.Msg.EXPAND_BLOCK = "Paplašināt bloku";
-Blockly.Msg.EXPECTED = "result";
+Blockly.Msg.EXPECTED = "paredzamais";
 Blockly.Msg.EXTERNAL_INPUTS = "Ārējās ievades";
 Blockly.Msg.FUNCTION_CREATE = "Izveido funkciju";
 Blockly.Msg.FUNCTION_EDIT = "rediģēt";

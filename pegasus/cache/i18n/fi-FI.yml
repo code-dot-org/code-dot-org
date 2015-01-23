@@ -285,7 +285,6 @@
     <b>Lisää oppilas</b> ja <b>Lisää useita oppilaita</b> -painikkeita yllä.
   dashboard_students_placeholder_name: Opiskelijan nimi
   dashboard_students_name: Nimi
-  dashboard_students_progress: Progress
   dashboard_students_age: Ikä
   dashboard_students_gender: Sukupuoli
   dashboard_students_male: Mies
@@ -342,10 +341,6 @@
   dashboard_login_picture: Kuva
   dashboard_login_none: Sähköposti
   dashboard_new_password: uusi salasana
-  dashboard_progress_not_completed: kesken
-  dashboard_progress_completed_too_many_blocks: valmis, liian monta lohkoa
-  dashboard_progress_completed_perfect: valmis, täydellinen
-  dashboard_progress_furthest_level_attempted: vaikein taso jota yritetty
   stats_hoc_2013_heading: 'Uskomattomia tilastoja viime vuoden Koodaustunnista. Vain
     yhdessä viikossa:'
   stats_hoc_2013_image_alt: Tilastoja vuoden 2013 Koodaustunnista
@@ -1027,3 +1022,8 @@
     ja eri luokka-asteille.
   sphero_beyond_longdescription: Robottikurssilla lapset oppivat leikin lomassa ohjelmoimaan.
     Samalla tulee harjoiteltua myös matematiikan ja luonnontieteiden taitoja.
+  dashboard_students_progress: Progress
+  dashboard_progress_not_completed: not completed
+  dashboard_progress_completed_too_many_blocks: completed, too many blocks
+  dashboard_progress_completed_perfect: completed, perfect
+  dashboard_progress_furthest_level_attempted: furthest level attempted

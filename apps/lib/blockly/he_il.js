@@ -1,6 +1,6 @@
 goog.provide('Blockly.Msg.he_il');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "call";
+Blockly.Msg.ACTUAL = "ממשי";
 Blockly.Msg.ADD = "הוסף";
 Blockly.Msg.ADD_COMMENT = "הוסף תגובה";
 Blockly.Msg.ADD_PARAMETER = "הוספת פרמטר";
@@ -74,7 +74,7 @@ Blockly.Msg.EXAMPLE = "דוגמא";
 Blockly.Msg.EXAMPLE_DESCRIPTION = "הגדר דוגמא עם התנהגות צפויה";
 Blockly.Msg.EXPAND_ALL = "הרחב בלוקים";
 Blockly.Msg.EXPAND_BLOCK = "הרחב בלוק";
-Blockly.Msg.EXPECTED = "result";
+Blockly.Msg.EXPECTED = "צפוי";
 Blockly.Msg.EXTERNAL_INPUTS = "קלטים חיצוניים";
 Blockly.Msg.FUNCTION_CREATE = "צור פונקציה";
 Blockly.Msg.FUNCTION_EDIT = "עריכה";

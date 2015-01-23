@@ -1,6 +1,6 @@
 goog.provide('Blockly.Msg.lt_lt');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "call";
+Blockly.Msg.ACTUAL = "tikrasis";
 Blockly.Msg.ADD = "Pridėti";
 Blockly.Msg.ADD_COMMENT = "Pridėkite komentarą";
 Blockly.Msg.ADD_PARAMETER = "Pridėkite duomenų laukelį";
@@ -74,7 +74,7 @@ Blockly.Msg.EXAMPLE = "Pavyzdys";
 Blockly.Msg.EXAMPLE_DESCRIPTION = "Apibrėžia tikrojo elgesio bei tikėtino elgesio pavyzdį";
 Blockly.Msg.EXPAND_ALL = "Išskleisti blokus";
 Blockly.Msg.EXPAND_BLOCK = "Išskleisti bloką";
-Blockly.Msg.EXPECTED = "result";
+Blockly.Msg.EXPECTED = "tikėtinas";
 Blockly.Msg.EXTERNAL_INPUTS = "Išdėstyti stulpeliu, kai daug parametrų";
 Blockly.Msg.FUNCTION_CREATE = "Sukurti naują komandą";
 Blockly.Msg.FUNCTION_EDIT = "redaguoti";
