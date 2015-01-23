@@ -35,6 +35,17 @@ var Equation = function (name, expression) {
   this.expression = expression;
 };
 
+/**
+ * Equations come in three varieties:
+ *  (1) Compute expression - name is null
+ *  (2) Function - name is "fn(var1, var2, ...)"
+ *  (3) Variable declaration - name is "x"
+ */
+Equation.prototype.isFunction = function () {
+  // does the name end with parens enclosing variables
+  return /\(.*\)$/.test(this.name);
+};
+
 var EquationSet = function () {
   this.compute_ = null;
   this.equations_ = [];
@@ -58,7 +69,7 @@ EquationSet.prototype.addEquation = function (equation) {
     if (this.compute_) {
       throw new Error('compute expression already exists');
     }
-    this.compute_ = equation.expression;
+    this.compute_ = equation;
   } else {
     if (this.getEquation(equation.name)) {
       throw new Error('equation already exists: ' + equation.name);
@@ -69,7 +80,7 @@ EquationSet.prototype.addEquation = function (equation) {
 
 EquationSet.prototype.getEquation = function (name) {
   if (name === null) {
-    return this.computeExpression();
+    return this.computeEquation();
   }
   for (var i = 0; i < this.equations_.length; i++) {
     if (this.equations_[i].name === name) {
@@ -79,22 +90,34 @@ EquationSet.prototype.getEquation = function (name) {
   return null;
 };
 
-EquationSet.prototype.multipleEquations = function () {
-  return this.equations_.length > 1;
-};
-
-EquationSet.prototype.computeExpression = function () {
+EquationSet.prototype.computeEquation = function () {
   return this.compute_;
 };
 
-EquationSet.prototype.nonComputeEquation = function () {
-  if (this.multipleEquations()) {
-    throw new Error('No singular non compute equation');
+/**
+ * Equation set has at least one variable or function.
+ */
+EquationSet.prototype.hasVariablesOrFunctions = function () {
+  return this.equations_.length > 0;
+};
+
+/**
+ * If the EquationSet has exactly one function and no variables, returns that
+ * function. If we have multiple functions or one function and some variables,
+ * it throws. Otherwise returns null.
+ */
+EquationSet.prototype.singleFunction = function () {
+  // TODO - (brent) def unit test me
+  var single = null
+  for (var i = 0; i < this.equations_.length; i++) {
+    if (single) {
+      throw new Error("Multiple functions or function and variable(s)");
+    }
+    if (this.equations_[i].isFunction()) {
+      single = this.equations_[i];
+    }
   }
-  if (this.equations_.length === 0) {
-    return null;
-  }
-  return this.equations_[0];
+  return single;
 };
 
 EquationSet.prototype.isIdenticalTo = function (otherSet) {
@@ -103,13 +126,14 @@ EquationSet.prototype.isIdenticalTo = function (otherSet) {
     return false;
   }
 
-  if (!this.compute_.isIdenticalTo(otherSet.computeExpression())) {
+  var otherCompute = otherSet.computeEquation().expression;
+  if (!this.compute_.expression.isIdenticalTo(otherCompute)) {
     return false;
   }
 
   for (var i = 0; i < this.equations_.length; i++) {
     var otherEquation = otherSet.getEquation(this.equations_[i].name);
-    if (!this.equations_[i].isIdenticalTo(otherEquation)) {
+    if (!this.equations_[i].expression.isIdenticalTo(otherEquation.expression)) {
       return false;
     }
   }
@@ -118,22 +142,17 @@ EquationSet.prototype.isIdenticalTo = function (otherSet) {
 };
 
 /**
- * Returns a list of equations (vars/functions) sorted by name. Does not
- * include the compute expression
+ * Returns a list of equations (vars/functions) sorted by name.
  */
-// TODO (brent) - i think i only call with true
-EquationSet.prototype.sortedEquations = function (includeComputeExpression) {
+EquationSet.prototype.sortedEquations = function () {
+  // TODO - this has side effects, do i carE?
   // sort by name. note - this sorts in place
   this.equations_.sort(function (a, b) {
-    return a.name.localeCompamre(b.name);
+    return a.name.localeCompare(b.name);
   });
 
   // append compute expression with name null
-  if (includeComputeExpression) {
-    return this.equations_.concat(new Equation(null, this.compute_));
-  }
-
-  return this.equations_;
+  return this.equations_.concat(this.compute_);
 };
 
 // TODO (brent) - remove from calc
@@ -148,7 +167,7 @@ function getEquationFromBlock(block) {
   switch (block.type) {
     case 'functional_compute':
       if (!firstChild) {
-        return new ExpressionNode(0);
+        return new Equation(null, new ExpressionNode(0));
       }
       return getEquationFromBlock(firstChild);
 
