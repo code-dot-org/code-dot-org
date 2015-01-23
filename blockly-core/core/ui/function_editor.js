@@ -45,7 +45,7 @@ Blockly.FunctionEditor = function() {
    * editor is toggled.
    * Note: visibility is used as indicator of modal open state.
    * @type {?Element}
-   * @private
+   * @protected
    */
   this.container_ = null;
 
