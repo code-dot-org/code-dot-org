@@ -954,7 +954,7 @@ Applab.encodedFeedbackImage = '';
 
 Applab.onViewData = function() {
   window.open(
-    '//' + getPegasusHost() + '/edit-csp-app/' + AppStorage.tempAppId,
+    '//' + getPegasusHost() + '/private/edit-csp-app/' + AppStorage.tempAppId,
     '_blank');
 };
 

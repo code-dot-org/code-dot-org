@@ -14,6 +14,7 @@ class Studio < Grid
     free_play
     disable_sharing
     generate_function_pass_blocks
+    timeout_after_when_run
   )
 
   def self.create_from_level_builder(params, level_params)
@@ -314,10 +315,7 @@ class Studio < Grid
   <block type="functional_boolean" />
 </category>
 <category name ="Functional Cond">
-  <block type="functional_cond_1" />
-  <block type="functional_cond_2" />
-  <block type="functional_cond_3" />
-  <block type="functional_cond_4" />
+  <block type="functional_cond" />
 </category>
 
 #{k1_blocks(type) if is_k1 == 'true'}
