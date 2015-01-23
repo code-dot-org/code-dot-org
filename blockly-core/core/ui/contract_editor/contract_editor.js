@@ -8,6 +8,9 @@
 goog.provide('Blockly.ContractEditor');
 
 goog.require('Blockly.FunctionEditor');
+goog.require('Blockly.ExampleBlockView');
+goog.require('Blockly.SvgHeader');
+goog.require('Blockly.CustomCssClassMenuRenderer');
 goog.require('goog.ui.Component.EventType');
 goog.require('goog.ui.FlatMenuButtonRenderer');
 goog.require('goog.ui.Option');
@@ -17,132 +20,6 @@ goog.require('goog.ui.decorate');
 goog.require('goog.ui.Component.EventType');
 goog.require('goog.events');
 goog.require('goog.color');
-
-Blockly.ContractEditorDropdownMenuRenderer = function() {
-  Blockly.ContractEditorDropdownMenuRenderer.superClass_.constructor.call(this);
-};
-goog.inherits(Blockly.ContractEditorDropdownMenuRenderer, goog.ui.MenuRenderer);
-goog.addSingletonGetter(Blockly.ContractEditorDropdownMenuRenderer);
-
-Blockly.ContractEditorDropdownMenuRenderer.prototype.getCssClass = function() {
-  return 'goog-menu colored-type-dropdown';
-};
-
-/**
- * A horizontal SVG bar with rectangular background and text
- * @param {!Element} parent {!Element}
- * @param {Object=} opt_options
- * @constructor
- */
-Blockly.SVGHeader = function(parent, opt_options) {
-  opt_options = opt_options || {};
-  this.padding = { left: 10 };
-  var extraStyle = opt_options.onMouseDown ? '' : 'pointer-events: none;';
-  this.svgGroup_ = Blockly.createSvgElement('g',
-    {style: extraStyle}, parent, {belowExisting: true});
-  this.grayRectangleElement_ = Blockly.createSvgElement('rect',
-    { 'fill': '#dddddd', 'style': extraStyle }, this.svgGroup_);
-  this.textElement_ = Blockly.createSvgElement('text',
-    { 'class': 'blackBlocklyText', 'style': extraStyle }, this.svgGroup_);
-  if (opt_options.headerText) {
-    this.textElement_.textContent = opt_options.headerText;
-  }
-  if (opt_options.onMouseDown) {
-    Blockly.bindEvent_(this.svgGroup_, 'mousedown', opt_options.onMouseDownContext, opt_options.onMouseDown);
-  }
-};
-
-/**
- * @param yOffset {Number}
- * @param width {Number}
- * @param height {Number}
- */
-Blockly.SVGHeader.prototype.setPositionSize = function(yOffset, width, height) {
-  this.svgGroup_.setAttribute('transform', 'translate(' + 0 + ',' + yOffset + ')');
-  this.grayRectangleElement_.setAttribute('width', width);
-  this.grayRectangleElement_.setAttribute('height', height);
-  this.textElement_.setAttribute('x', this.padding.left);
-  var rectangleMiddleY = height / 2;
-  // text getBBox() height seems to be off by a bit, 1/3 of getBBox height looks best
-  var thirdTextHeight = this.textElement_.getBBox().height / 3;
-
-  this.textElement_.setAttribute('y', rectangleMiddleY + thirdTextHeight);
-};
-
-Blockly.SVGHeader.prototype.setText = function(text) {
-  this.textElement_.textContent = text;
-};
-
-Blockly.SVGHeader.prototype.removeSelf = function () {
-  goog.dom.removeNode(this.svgGroup_);
-};
-
-/**
- * Header with a block below it
- *
- * @param {!Blockly.Block} block
- * @param {!Number} exampleIndex
- * @param {!Function} onCollapseCallback
- * @constructor
- */
-Blockly.ExampleBlockView = function(block, exampleIndex, onCollapseCallback) {
-  this.block = block;
-  this.exampleNumber = Blockly.ExampleBlockView.START_EXAMPLE_COUNT_AT + exampleIndex;
-  this.header = new Blockly.SVGHeader(block.blockSpace.svgBlockCanvas_, {
-    headerText: this.textForCurrentState_(),
-    onMouseDown: this.toggleCollapse_,
-    onMouseDownContext: this
-  });
-  this.collapsed_ = false;
-  this.onCollapseCallback_ = onCollapseCallback;
-};
-
-Blockly.ExampleBlockView.START_EXAMPLE_COUNT_AT = 1;
-Blockly.ExampleBlockView.DOWN_TRIANGLE_CHARACTER = '\u25BC'; // ▼
-Blockly.ExampleBlockView.RIGHT_TRIANGLE_CHARACTER = '\u25B6'; // ▶
-
-Blockly.ExampleBlockView.prototype.textForCurrentState_ = function() {
-  var arrow = this.collapsed_ ?
-    Blockly.ExampleBlockView.RIGHT_TRIANGLE_CHARACTER :
-    Blockly.ExampleBlockView.DOWN_TRIANGLE_CHARACTER;
-  return arrow + " " + Blockly.Msg.EXAMPLE + " " + this.exampleNumber;
-};
-
-/**
- * Mark this view as collapsed.
- * Will visually collapse during next placement.
- * @private
- */
-Blockly.ExampleBlockView.prototype.toggleCollapse_ = function() {
-  this.collapsed_ = !this.collapsed_;
-  this.block.setUserVisible(!this.collapsed_);
-  this.onCollapseCallback_();
-  this.header.setText(this.textForCurrentState_());
-};
-
-/**
- * Places the example header and block at the specified location,
- * returning an incremented Y coordinate
- * @param currentX
- * @param currentY
- * @param width
- * @param headerHeight
- * @returns {Number} the currentY to continue laying out at
- */
-Blockly.ExampleBlockView.prototype.placeStartingAt = function(currentX, currentY, width, headerHeight) {
-  this.header.setPositionSize(currentY, width, headerHeight);
-  currentY += headerHeight;
-
-  if (this.collapsed_) {
-    return currentY;
-  }
-
-  currentY += FRAME_MARGIN_TOP;
-  this.block.moveTo(currentX, currentY);
-  currentY += this.block.getHeightWidth().height;
-  currentY += FRAME_MARGIN_TOP;
-  return currentY;
-};
 
 /**
  * Class for a functional block-specific contract editor.
@@ -163,7 +40,7 @@ Blockly.ContractEditor = function() {
    */
   this.exampleBlockViews_ = [];
   /**
-   * @type {?Blockly.SVGHeader}
+   * @type {?Blockly.SvgHeader}
    * @private
    */
   this.functionDefinitionHeader_ = null;
@@ -241,7 +118,7 @@ Blockly.ContractEditor.prototype.openWithNewFunction = function(opt_blockCreatio
 };
 
 Blockly.ContractEditor.prototype.createDefinitionHeader_ = function () {
-  this.functionDefinitionHeader_ = new Blockly.SVGHeader(Blockly.modalBlockSpace.svgBlockCanvas_,
+  this.functionDefinitionHeader_ = new Blockly.SvgHeader(Blockly.modalBlockSpace.svgBlockCanvas_,
     { headerText: Blockly.Msg.DEFINE_HEADER_DEFINITION }
   );
 };
@@ -441,7 +318,7 @@ Blockly.ContractEditor.prototype.createTypeDropdown_ = function() {
   var newTypeDropdown = new goog.ui.Select(null, null,
     goog.ui.FlatMenuButtonRenderer.getInstance(),
     null,
-    Blockly.ContractEditorDropdownMenuRenderer.getInstance());
+    new Blockly.CustomCssClassMenuRenderer('colored-type-dropdown'));
   goog.object.forEach(Blockly.ContractEditor.typesToColorsHSV, function(color, key) {
     var menuItem = new goog.ui.MenuItem(key);
     newTypeDropdown.addItem(menuItem);
