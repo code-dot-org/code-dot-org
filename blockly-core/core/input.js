@@ -59,7 +59,7 @@ Blockly.Input = function(type, name, block, connection) {
 /**
  * Add an item to the end of the input's title row.
  * @param {*} title Something to add as a title.
- * @param {string} opt_name Language-neutral identifier which may used to find
+ * @param {?string} opt_name Language-neutral identifier which may used to find
  *     this title again.  Should be unique to the host block.
  * @return {!Blockly.Input} The input being append to (to allow chaining).
  */

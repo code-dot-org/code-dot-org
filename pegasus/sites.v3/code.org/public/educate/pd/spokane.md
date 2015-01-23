@@ -54,7 +54,9 @@ Green Code.org journal
 Laptop
 
 ### Phase 4: Post Year Development
-Coming Summer 2015  	
+
+#### Save the Dates
+6/18/2015 - 6/20-2015
 
 [**Back to the top**](#top)
 
