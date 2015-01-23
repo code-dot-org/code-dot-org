@@ -1,5 +1,5 @@
 {
-  "ACTUAL": "call",
+  "ACTUAL": "동작",
   "ADD": "추가 ",
   "ADD_COMMENT": "설명 입력",
   "ADD_PARAMETER": "매개 변수 추가",
@@ -73,7 +73,7 @@
   "EXAMPLE_DESCRIPTION": "예상되는 예시와 실제 동작을 정의합니다.",
   "EXPAND_ALL": "블럭들 펼치기",
   "EXPAND_BLOCK": "블럭 펼치기",
-  "EXPECTED": "result",
+  "EXPECTED": "예상",
   "EXTERNAL_INPUTS": "내부에서 값 입력",
   "FUNCTION_CREATE": "함수 만들기",
   "FUNCTION_EDIT": "수정하기",

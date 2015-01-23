@@ -3,7 +3,7 @@
   select_language: Seleziona per favore la tua lingua
   computer_science: Informatica
   computer_science_edweek: Settimana di Educazione all'Informatica
-  csedweek_dates: 8-14 dicembre 2014
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: 'L''<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Ora del Codice</a> è in arrivo. Insegnanti ed educatori, <a
     href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">programmate
@@ -298,7 +298,6 @@
     sopra.
   dashboard_students_placeholder_name: Nome dello studente
   dashboard_students_name: Nome
-  dashboard_students_progress: Progress
   dashboard_students_age: Età
   dashboard_students_gender: Sesso
   dashboard_students_male: Maschile
@@ -358,10 +357,6 @@
   dashboard_login_picture: Immagine
   dashboard_login_none: Indirizzo di posta elettronica
   dashboard_new_password: nuova password
-  dashboard_progress_not_completed: non completato
-  dashboard_progress_completed_too_many_blocks: completato, ma usando troppi blocchi
-  dashboard_progress_completed_perfect: completato in modo perfetto
-  dashboard_progress_furthest_level_attempted: livello più avanzato che è stato provato
   stats_hoc_2013_heading: 'incredibili statistiche dell''Ora del Codice dello scorso
     anno. In una settimana soltanto:'
   stats_hoc_2013_image_alt: Statistiche dell'Ora del Codice per il 2013
@@ -1096,3 +1091,8 @@
     permetteranno ai ragazzi di seguire un divertente corso accelerato per imparare
     a programmare dei robot ed affinare allo stesso tempo le loro capacità in scienze
     e matematica.
+  dashboard_students_progress: Progress
+  dashboard_progress_not_completed: not completed
+  dashboard_progress_completed_too_many_blocks: completed, too many blocks
+  dashboard_progress_completed_perfect: completed, perfect
+  dashboard_progress_furthest_level_attempted: furthest level attempted
