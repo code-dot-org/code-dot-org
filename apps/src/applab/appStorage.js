@@ -6,6 +6,9 @@
 var AppStorage = module.exports;
 
 // TODO(dave): remove once we can store ids for each app.
+AppStorage.tempEncryptedAppId =
+    window.location.hostname.split('.')[0] === 'localhost' ?
+        "SmwVmYVl1V5UCCw1Ec6Dtw==" : "DvTw9X3pDcyDyil44S6qbw==";
 AppStorage.tempAppId = 1337;
 
 /**
@@ -23,7 +26,7 @@ AppStorage.createSharedRecord = function(record, callback) {
   }
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleCreateSharedRecord.bind(req, record, callback);
-  var url = "/v3/apps/" + AppStorage.tempAppId + "/shared-tables/" + tableName;
+  var url = "/v3/apps/" + AppStorage.tempEncryptedAppId + "/shared-tables/" + tableName;
   req.open('POST', url, true);
   req.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
   req.send(JSON.stringify(record));
@@ -58,7 +61,7 @@ AppStorage.readSharedRecords = function(searchParams, callback) {
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleReadSharedRecords.bind(req, tableName,
       searchParams, callback);
-  var url = '/v3/apps/' + AppStorage.tempAppId + "/shared-tables/" + tableName;
+  var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + "/shared-tables/" + tableName;
   req.open('GET', url, true);
   req.send();
   
