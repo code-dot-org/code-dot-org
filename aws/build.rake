@@ -147,10 +147,10 @@ $websites = build_task('websites', [deploy_dir('rebuild'), APPS_COMMIT_TASK]) do
     RakeUtils.system 'rake', 'build'
 
     if rack_env?(:production) && CDO.daemon
-#      Dir.chdir(dashboard_dir) do
-#        HipChat.log "Putting <b>dashboard</b> scripts in redis..."
-#        RakeUtils.rake 'seed:script_cache_to_redis'
-#      end
+      Dir.chdir(dashboard_dir) do
+        HipChat.log "Putting <b>dashboard</b> scripts in memcached..."
+        RakeUtils.rake 'seed:script_cache_to_memcached'
+      end
 
       thread_count = 2
       threaded_each CDO.app_servers.keys, thread_count do |name|
