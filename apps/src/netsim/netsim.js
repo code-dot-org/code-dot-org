@@ -20,17 +20,28 @@
 /**
  * @fileoverview Internet Simulator app for Code.org.
  */
+
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+
+ maxlen: 90,
+ maxparams: 3,
+ maxstatements: 200
+*/
+/* global -Blockly */
 'use strict';
 
-var commonMsg = require('../../locale/current/common');
-var netsimMsg = require('../../locale/current/netsim');
 var dom = require('../dom');
 var page = require('./page.html');
 var utils = require('../utils');
 var _ = utils.getLodash();
 
 /**
- * An instantiable NetSim class
+ * The top-level Internet Simulator controller.
  * @param {StudioApp} studioApp The studioApp instance to build upon.
  */
 var NetSim = function () {
@@ -80,7 +91,6 @@ NetSim.prototype.attachHandlers_ = function () {
  * @param {Object} config Requires the following members:
  *   skin: ???
  *   level: ???
- *   html: ???
  */
 NetSim.prototype.init = function(config) {
   if (!this.studioApp_) {
@@ -103,13 +113,20 @@ NetSim.prototype.init = function(config) {
   config.enableShowCode = false;
   config.loadAudio = _.bind(this.loadAudio_, this);
 
+  // Override certain StudioApp methods - netsim does a lot of configuration
+  // itself, because of its nonstandard layout.
+  this.studioApp_.configureDom = _.bind(this.configureDomOverride_,
+      this.studioApp_);
+  this.studioApp_.onResize = _.bind(this.onResizeOverride_, this.studioApp_);
+
   this.studioApp_.init(config);
 
   this.attachHandlers_();
 };
 
 /**
- * Ought to pull this into an audio management module or something
+ * Load audio assets for this app
+ * TODO (bbuchanan): Ought to pull this into an audio management module
  * @private
  */
 NetSim.prototype.loadAudio_ = function () {
@@ -118,3 +135,30 @@ NetSim.prototype.loadAudio_ = function () {
   this.studioApp_.loadAudio(this.skin.failureSound, 'failure');
 };
 
+/**
+ * Replaces StudioApp.configureDom.
+ * Should be bound against StudioApp instance.
+ * @param {Object} config Should at least contain
+ *   containerId: ID of a parent DOM element for app content
+ *   html: Content to put inside #containerId
+ * @private
+ */
+NetSim.prototype.configureDomOverride_ = function (config) {
+  var container = document.getElementById(config.containerId);
+  container.innerHTML = config.html;
+};
+
+/**
+ * Replaces StudioApp.onResize
+ * Should be bound against StudioApp instance.
+ * @private
+ */
+NetSim.prototype.onResizeOverride_ = function() {
+  var div = document.getElementById('appcontainer');
+  var divParent = div.parentNode;
+  var parentStyle = window.getComputedStyle(divParent);
+  var parentWidth = parseInt(parentStyle.width, 10);
+  div.style.top = divParent.offsetTop + 'px';
+  div.style.width = parentWidth + 'px';
+  this.resizeHeaders(parentWidth);
+};
