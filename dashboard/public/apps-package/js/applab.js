@@ -1166,7 +1166,7 @@ Applab.encodedFeedbackImage = '';
 
 Applab.onViewData = function() {
   window.open(
-    '//' + getPegasusHost() + '/private/edit-csp-app/' + AppStorage.tempAppId,
+    '//' + getPegasusHost() + '/private/edit-csp-app/' + AppStorage.tempEncryptedAppId,
     '_blank');
 };
 
@@ -1953,7 +1953,7 @@ var getPegasusHost = function() {
       var name = window.location.hostname.split('.')[0];
       switch(name) {
         case 'localhost':
-          return 'localhost.code.org:9393';
+          return 'localhost.code.org:3000';
         case 'development':
         case 'staging':
         case 'test':
@@ -2481,7 +2481,6 @@ var AppStorage = module.exports;
 AppStorage.tempEncryptedAppId =
     window.location.hostname.split('.')[0] === 'localhost' ?
         "SmwVmYVl1V5UCCw1Ec6Dtw==" : "DvTw9X3pDcyDyil44S6qbw==";
-AppStorage.tempAppId = 1337;
 
 /**
  * Creates a new record in the specified table, accessible to all users.
