@@ -167,7 +167,7 @@ function getEquationFromBlock(block) {
   switch (block.type) {
     case 'functional_compute':
       if (!firstChild) {
-        return new Equation(null, new ExpressionNode(0));
+        return new Equation(null, null);
       }
       return getEquationFromBlock(firstChild);
 
