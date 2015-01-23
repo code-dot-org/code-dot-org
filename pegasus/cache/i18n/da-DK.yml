@@ -1023,3 +1023,8 @@
   sphero_beyond_longdescription: Uanset om du er lærer eller forælder, vil SPRK lektionerne
     giver børnene et sjovt kursus i at programmere robotter, og samtidig skærpe deres
     færdigheder i matematik og naturfag.
+  dashboard_students_progress: Progress
+  dashboard_progress_not_completed: not completed
+  dashboard_progress_completed_too_many_blocks: completed, too many blocks
+  dashboard_progress_completed_perfect: completed, perfect
+  dashboard_progress_furthest_level_attempted: furthest level attempted

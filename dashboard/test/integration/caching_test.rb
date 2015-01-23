@@ -66,18 +66,18 @@ class CachingTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "post milestone to frozen passing" do
-    sl = Script.find_by_name('frozen').script_levels[2]
-    params = {program: 'fake program', testResult: 100, result: 'true'}
+  # test "post milestone to frozen passing" do
+  #   sl = Script.find_by_name('frozen').script_levels[2]
+  #   params = {program: 'fake program', testResult: 100, result: 'true'}
 
-    post "milestone/0/#{sl.id}", params
-    assert_response 200
+  #   post "milestone/0/#{sl.id}", params
+  #   assert_response 200
 
-    no_database
+  #   no_database
 
-    post "milestone/0/#{sl.id}", params
-    assert_response 200
-  end
+  #   post "milestone/0/#{sl.id}", params
+  #   assert_response 200
+  # end
 
   # 
   # We do not yet cache hints so turning hints back on makes this test fail.
@@ -118,17 +118,17 @@ class CachingTest < ActionDispatch::IntegrationTest
    #   assert_response :success
    # end
 
-   test "post milestone to course1 passing" do
-     sl = Script.find_by_name('course1').script_levels[2]
-     params = {program: 'fake program', testResult: 100, result: 'true'}
+   # test "post milestone to course1 passing" do
+   #   sl = Script.find_by_name('course1').script_levels[2]
+   #   params = {program: 'fake program', testResult: 100, result: 'true'}
 
-     post "milestone/0/#{sl.id}", params
-     assert_response 200
+   #   post "milestone/0/#{sl.id}", params
+   #   assert_response 200
 
-     no_database
+   #   no_database
 
-     post "milestone/0/#{sl.id}", params
-     assert_response 200
-   end
+   #   post "milestone/0/#{sl.id}", params
+   #   assert_response 200
+   # end
 
 end

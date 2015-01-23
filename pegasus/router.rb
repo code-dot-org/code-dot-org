@@ -21,7 +21,7 @@ end
 
 require src_dir 'database'
 require src_dir 'forms'
-require src_dir 'router'
+require src_dir 'curriculum_router'
 
 def http_vary_add_type(vary,type)
   types = vary.to_s.split(',').map { |v| v.strip }
@@ -239,21 +239,6 @@ class Documents < Sinatra::Base
     image.to_blob
   end
 
-  # Map /dashboardapi/ to the local dashboard instance.
-  if rack_env?(:development)
-    get_head_or_post %r{^\/dashboardapi\/?} do
-      env = request.env.merge('PATH_INFO'=>request.path_info.sub(/^\/dashboardapi/, '/api'))
-
-      host_and_port = canonical_hostname('studio.code.org') + ':' + CDO.dashboard_port.to_s
-      document = Pegasus::Proxy.new(server: host_and_port, host: host_and_port).call(env)
-      pass unless document
-
-      status(document.status)
-      headers(document.headers)
-      body([document.body])
-    end
-  end
-
   # Static files
   get '*' do |uri|
     pass unless path = resolve_static('public', uri)
@@ -266,7 +251,7 @@ class Documents < Sinatra::Base
     Dir.glob(pegasus_dir('sites.v3',request.site,'/styles/*.css')).sort.map{|i| IO.read(i)}.join("\n\n")
   end
 
-  Dir.glob(pegasus_dir('routes/*.rb')).sort.each{|path| puts(path); eval(IO.read(path))}
+  Dir.glob(pegasus_dir('routes/*.rb')).sort.each{|path| eval(IO.read(path))}
 
   # Documents
   get_head_or_post '*' do |uri|
@@ -506,6 +491,6 @@ class Documents < Sinatra::Base
     load pegasus_dir('helpers.rb')
   end
 
-  use Router
+  use CurriculumRouter
 
 end

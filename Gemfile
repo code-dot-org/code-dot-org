@@ -19,7 +19,6 @@ group :development do
   gem 'rerun', '~> 0.10.0'
   gem 'shotgun'
   gem 'thin', '~> 1.6.2'
-  gem "rack-proxy" # enabling proxying requests to dashboard to pegasus (in production we use varnish to route things)
 end
 
 group :development, :test do
