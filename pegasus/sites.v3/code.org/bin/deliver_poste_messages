@@ -268,8 +268,9 @@ def main()
         puts "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
       rescue Net::SMTPFatalError => e
         puts "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
-      #rescue => e
-        #puts "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
+      rescue => e
+        puts "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
+        raise
       end
 
       POSTE_DB[:poste_deliveries].where(id:delivery[:id]).update(sent_at:DateTime.now)
