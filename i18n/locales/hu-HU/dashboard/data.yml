@@ -48,7 +48,7 @@ hu:
         edit-code:
           desc: Szerkeszd a kódot (béta)
           MazeEC: 1. szakasz
-          Applab: 2. szakasz
+          Webapp: 2. szakasz
           ArtistEC: 3. szakasz
           StudioEC: 4. szakasz
         events:
@@ -99,11 +99,10 @@ hu:
         Jigsaw: Kirakós játék
         MazeStep: Labirintus üzemmód
         Wordsearch: Szókeresés
-        Webapp: App Lab
+        Webapp: Web alkalmazás
         ArtistEC: A művész
         TextMatch: Szöveg Egyezés
         StudioEC: Játéklabor
-        Applab: App Lab
     trophy:
       name:
         Bronze: Bronz
@@ -325,7 +324,7 @@ hu:
         maze_wordsearch_k_15: Mozgass engem egy irányba, majd egy másikba hogy az ABOVE szót betűzzem
         maze_wordsearch_k_16: Mozgass engem egy irányba, majd egy másikba hogy a BELOW szót betűzzem
         maze_wordsearch_k_20: Ez egy próba! Mozgass engem egy irányba, majd egy másikba hogy a STORY szót betűzzem
-        applab_ec_simple: Create your app by using the blocks in the toolbox.
+        webapp_ec_simple: 'Hozz létre egy web alkalmazást a  createHtmlBlock használatával.'
         turtle_ec_1_2: 'Most rajzolj egy négyzetet. Megjegyzés: használd a kedvenc színedet úgy, hogy azt az új "penColor" blokkból veszed ki.'
         turtle_ec_1_10: 'Megcsináltad! Most rajzolj bármit amit csak akarsz. Néhány szórakoztató ötlet: egy pálcikaember, hópehely, vagy spirál. Próbáld ki az új "penWidth" blokkot is. Jó szórakozást!'
         studio_ec_sandbox: Hozz létre saját játékot! Ha elkészültél, kattints a Befejezés gombra, hogy barátaid is kipróbálhassák a játékodat a telefonjaikon!

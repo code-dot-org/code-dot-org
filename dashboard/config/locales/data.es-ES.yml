@@ -1,4 +1,4 @@
-"es-AR":
+"es":
   data:
     script:
       name:
@@ -48,7 +48,7 @@
         edit-code:
           desc: Editar código (beta)
           MazeEC: Etapa 1
-          Applab: Etapa 2
+          Webapp: Etapa 2
           ArtistEC: Etapa 3
           StudioEC: Etapa 4
         events:
@@ -93,17 +93,16 @@
         Unplug10: Internet
         Artist5: El artista 5
         Unplug11: Cierre
-        MazeEC: El laberinto
+        MazeEC: El Laberinto
         Bounce: Rebotar
         Flappy: Flappy Bird
         Jigsaw: Rompecabezas
         MazeStep: Modo paso a paso de laberinto
         Wordsearch: Sopa de Letras
-        Webapp: App Lab
+        Webapp: Aplicación Web
         ArtistEC: El artista
         TextMatch: Combinación de texto
         StudioEC: Laboratorio de Juegos
-        Applab: App Lab
     trophy:
       name:
         Bronze: Bronce
@@ -445,7 +444,7 @@
         flappy_k1_3: Ahora hemos agregado el suelo.  Adjunta un bloque al bloque "cuando
           golpe el suelo".  Tú código necesita 'TERMINAR EL JUEGO' cuando Flappy golpe
           el suelo.
-        flappy_k1_4: El bloque "cuando ejecute" te permite ejecutar el código cuando
+        flappy_k1_4: El bloque "cuando inicie" te permite ejecutar el código cuando
           tu juego inicie. Intenta establecer la velocidad del nivel y el aleteo al
           objetivo.
         flappy_k1_5: Flappy volará entre los obstáculos a menos que escribas el código
@@ -457,8 +456,8 @@
           y entonces anota un punto cuando Flappy vuele entre el primer conjunto de
           tubos.
         flappy_k1_7: Ve si puedes anotar puntos múltiples al pasar un obstáculo
-        flappy_k1_8: A continuación, trata de cambiar el fondo adjuntando otro bloque
-          al bloque "cuando ejecute".
+        flappy_k1_8: A continuación, trata de cambiar el fondo colocando otro bloque
+          al bloque "cuando inicie"
         flappy_k1_9: Trata de cambiar el jugador colocando un bloque "colocar jugador"
           al bloque "cuando ejecute".
         jigsaw_1: Haz clic en el bloque
@@ -508,11 +507,11 @@
         studio_c3_story_2: ¿Puedes hacer que el perro diga algo y que el gato le conteste
           algo?
         studio_c3_story_3: ¿Puedes crear un programa que haga que el perro se mueva
-          hacia el gato?
+          al gato?
         studio_c3_story_4: ¿Puedes escribir un programa que haga que el perro se mueva
           hacia el gato, y que el gato diga "hola" cuando el perro se acerque a él?
-        studio_c3_story_5: ¿Puedes agregar un bloque para que el pulpo esté feliz?
-        studio_c3_story_6: Crea tu propia historia. Cuando finalices, haz clic en
+        studio_c3_story_5: ¿Puedes agregar un bloque para el pulpo este feliz?
+        studio_c3_story_6: Crea tu propia historia. Cuando estes listo, da click en
           Terminar para que tus amigos prueben tu historia en sus teléfonos.
         studio_c3_game_1: ¿Puedes escribir un programa para hacer que el pulpo diga
           "hola" cuando se hace clic sobre él?
@@ -562,8 +561,7 @@
         studio_k1_1: ¿Puedes hacer que este perro diga "Hola mundo"?
         studio_k1_2: ¿Puedes hacer que el perro diga algo y que el gato le conteste
           algo?
-        studio_k1_3: ¿Puedes crear un programa que haga que el perro se mueva hacia
-          el gato?
+        studio_k1_3: ¿Puedes crear un programa que haga que el perro se mueva al gato?
         studio_k1_4: Haz que el perro se mueva hacia el gato y el gato diga "hola"
           cuando llegue a él.
         studio_k1_5: ¿Puedes agregar un bloque para que el pulpo esté feliz?
@@ -585,7 +583,7 @@
           la palabra DEBAJO
         maze_wordsearch_k_20: ¡Esta es una prueba! Mueveme en una dirección, y luego
           en otra para deletrear la palabra HISTORIA
-        applab_ec_simple: Create your app by using the blocks in the toolbox.
+        webapp_ec_simple: Crea tu aplicación web mediante createHtmlBlock.
         turtle_ec_1_2: 'Ahora, dibuja un cuadrado. Nota: usa tu color favorito eligiéndolo
           en el nuevo bloque "Color De Lapiz".'
         turtle_ec_1_10: '¡Lo lograste! Ahora, dibujar cualquier cosa que quieras.

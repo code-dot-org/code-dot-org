@@ -4,127 +4,127 @@ fa:
       name:
         test:
           "Jigsaw: Learn to drag and drop": 'Jigsaw: Learn to drag and drop'
-          The Maze: هزارتو
+          The Maze: مارپیچ
           Multi: چند
           Match: مسابقه
           Math Image: تصویر ریاضی
-          title: دورۀ آزمون
-          description: فقط یک دوره آزمون داخلی.
+          title: آزمون دوره
+          description: Just an internal test course.
         course1:
           "Jigsaw: Learn to drag and drop": 'Jigsaw: Learn to drag and drop'
-          "Maze: Sequence": 'هزارتو: دنباله'
-          "Maze: Debugging": 'هزارتو: اشکال زدایی'
-          "Artist 1: Intro": 'هنرمند 1: مقدمه'
-          Artists 2: هنرمندان 2
-          Spelling Bee: زنبور عسل هجی کن
-          Spelling Bee not blockly: زنبور عسل هجی کن نه بلوکلی
-          "Bee 1: Intro": 'زنبور عسل 1: مقدمه'
-          "Maze 2: Loops": 'هزارتو 2: حلقه ها'
-          "Bee 2: Loops": 'زنبور عسل 2: حلقه ها'
-          Multi & Match: چند گزینه ای و تطبیقی
-          K-1 Flappy: فلاپی ک-1
-          Flappy non blockly: فلاپی غیر بلوکلی
+          "Maze: Sequence": 'Maze: Sequence'
+          "Maze: Debugging": 'Maze: Debugging'
+          "Artist 1: Intro": 'Artist 1: Intro'
+          Artists 2: Artists 2
+          Spelling Bee: زنبور املا
+          Spelling Bee not blockly: Spelling Bee not blockly
+          "Bee 1: Intro": 'Bee 1: Intro'
+          "Maze 2: Loops": 'Maze 2: Loops'
+          "Bee 2: Loops": 'Bee 2: Loops'
+          Multi & Match: 'Multi & Match'
+          K-1 Flappy: K-1 Flappy
+          Flappy non blockly: Flappy non blockly
           title: دوره 1
           Artist 2: هنرمند 2
           Happy Maps: نقشه های شاد
-          Move it, Move it: بدو، بدو
-          "Real-life Algorithms: Plant a Seed": 'الگوریتم های زندگی واقعی: یک بذر بکار'
-          Building a Foundation: ساختن یک بنیان
-          Getting Loopy: سر گیجه گرفتن
+          Move it, Move it: حرکت می کند، حرکت می کند
+          "Real-life Algorithms: Plant a Seed": 'الگوریتم های که در زندگی واقعی هستند: دانه گیاه'
+          Building a Foundation: Building a Foundation
+          Getting Loopy: Getting Loopy
           The Big Event: رویداد بزرگ
-          Going Places Safely: با امنیت رفتن
-          description: دورۀ 1 طوری طراحی شده که به کسانی که خواندن نمیدانند اجازه دهد برنامه های کامپیوتری بسازند؛ برنامههایی که به آنها کمک خواهد کرد یاد بگیرند با دیگران همکاری کنند، مهارت های حل مسئله کسب کنند، و برای تکمیل امور دشوار پافشاری کنند. با پایان این دوره دانش آموزان بازیهای سفارشی مخصوص خودشان یا داستانهایشان را میسازند که میتوانند آنها را به اشتراک بگذارند. توصیه شده برای اول دبستانیها (ک1).
+          Going Places Safely: Going Places Safely
+          description: Course 1 is designed to allow early readers to create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.
           "Bee: Sequence": 'زنبور عسل: دنباله'
           "Artist: Sequence": 'هنرمند: دنباله'
-          "Artist: Shapes": 'هنرمند: شکل ها'
-          "Maze: Loops": 'هزارتو: حلقه ها'
-          "Bee: Loops": 'زنبور عسل: حلقه ها'
-          "Studio: Create a Story": 'آزمایشگاه بازی: یک داستان بنویس'
-          "Artist: Loops": 'هنرمند: حلقه ها'
-          description_audience: سنین 4 به بالا (کسانیکه سواد خواندن ندارند)
-          description_short: دورۀ 1 برای کسانیکه تازه خواندن آموخته اند طراحی شده است.
+          "Artist: Shapes": 'هنرمند: اشکال'
+          "Maze: Loops": 'پیچ و خم: حلقه'
+          "Bee: Loops": 'زنبور عسل: حلقه'
+          "Studio: Create a Story": 'Play Lab: Create a Story'
+          "Artist: Loops": 'Artist: Loops'
+          description_audience: Ages 4+ (pre-readers)
+          description_short: Course 1 is designed for early readers.
         course2:
           The Maze: مارپیچ
-          Suzi: سوزی
+          Suzi: Suzi
           The Artist: هنرمند
-          Artist Debugging: اشکال زدایی هنرمند
-          Bounce: پریدن
-          "Studio: Create a Story": 'آزمایشگاه بازی: یک داستان بنویس'
-          Artist Loops: حلقه های هنرمند
-          Bee Conditionals: شرطی های زنبور عسل
-          Flappy: فلاپی
-          title: دوره 2
+          Artist Debugging: Artist Debugging
+          Bounce: Bounce
+          "Studio: Create a Story": 'Play Lab: Create a Story'
+          Artist Loops: Artist Loops
+          Bee Conditionals: شرطها زنبور عسل
+          Flappy: Flappy
+          title: درس 2
           Bee Loops: حلقه های زنبور عسل
-          Artist Functions: توابع هنرمند
-          The Artist Debugging: اشکال زدایی هنرمند
-          Bee Debugging: اشکال زدایی زنبور عسل
-          Bee Functions: توابع زنبور عسل
-          Maze Loops: حلقه های هزارتو
+          Artist Functions: Artist Functions
+          The Artist Debugging: The Artist Debugging
+          Bee Debugging: Bee Debugging
+          Bee Functions: Bee Functions
+          Maze Loops: پیچ و خم حلقه
           Graph Paper Programming: 'برنامه نویسی روی کاغذ شطرنجی '
-          "Real-life Algorithms: Paper Planes": 'الگوریتم های زندگی واقعی: موشک های کاغذی'
-          Getting Loopy: سر گیجه گرفتن
-          Relay programming: برنامه نویسی رله
+          "Real-life Algorithms: Paper Planes": 'Real-life Algorithms: Paper Planes'
+          Getting Loopy: Getting Loopy
+          Relay programming: Relay programming
           Conditionals: مشروط
           Binary Bracelets: دستبند دودویی
           The Big Event: رویداد بزرگ
-          Your Digital Footprint: ردپای دیجیتالی شما
-          description: دورۀ 2 برای دانش آموزانی که می توانند بخوانند و هیچ تجربه برنامه نویسی قبلی ندارند طراحی شده. در این دوره دانش آموزان برنامه هایی برای حل مسائل و بازی های تعاملی میسازند یا داستانهایی مینویسند که می توانند آنها را به اشتراک بگذارند. توصیه شده برای کلاسهای 2-5 دبستان (ک 2 تا 5).
-          "Maze: Sequence": 'هزارتو: دنباله'
+          Your Digital Footprint: Your Digital Footprint
+          description: Course 2 is designed for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
+          "Maze: Sequence": 'Maze: Sequence'
           "Artist: Sequence": 'هنرمند: دنباله'
-          "Maze: Loops": 'هزارتو: حلقه ها'
-          "Artist: Loops": 'هنرمند: حلقه ها'
-          "Bee: Loops": 'زنبور عسل: حلقه ها'
-          "Bee: Debugging": 'زنبور عسل: اشکال زدایی'
-          "Artist: Debugging": 'هنرمند: اشکال زدایی'
-          "Bee: Conditionals": 'زنبور عسل: شرطی ها'
-          "Artist: Sequence2": 'هنرمند: دنباله2'
-          "Maze: Sequence2": 'هزارتو: دنباله2'
+          "Maze: Loops": 'پیچ و خم: حلقه'
+          "Artist: Loops": 'Artist: Loops'
+          "Bee: Loops": 'زنبور عسل: حلقه'
+          "Bee: Debugging": 'Bee: Debugging'
+          "Artist: Debugging": 'Artist: Debugging'
+          "Bee: Conditionals": 'Bee: Conditionals'
+          "Artist: Sequence2": 'Artist: Sequence2'
+          "Maze: Sequence2": 'Maze: Sequence2'
           "Artist: Nested Loops": 'هنرمند: حلقه های تو در تو'
-          description_audience: سنین 6 به بالا (خواندن لازم است)
-          description_short: دوره 2 برای دانش آموزانی که می توانند بخوانند طراحی شده است.
+          description_audience: 'Ages  6+ (reading required)'
+          description_short: Course 2 is designed for students who can read.
         course3:
           The Maze: مارپیچ
-          "Studio: Create a Story": 'آزمایشگاه بازی: یک داستان بنویس'
+          "Studio: Create a Story": 'Play Lab: Create a Story'
           The Artist: هنرمند
-          title: دورۀ 3
-          Artist Functions: توابع هنرمند
-          Artist For Loops: 'حلقه های "برای" هنرمند'
-          Artist Nested Loops: حلقه های تو در توی هنرمند
-          Bee Conditionals: شرطی های زنبور عسل
-          Bee Nested Loops: حلقه های تو در توی زنبور عسل
-          Bee Debuggin: اشکال زدایی زنبور عسل
-          Bee Debugging: اشکال زدایی زنبور عسل
-          Bee Functions: توابع زنبور عسل
-          Artist Functions with Params: توابع هنرمند با پارامترها
+          title: Course 3
+          Artist Functions: Artist Functions
+          Artist For Loops: Artist For Loops
+          Artist Nested Loops: Artist Nested Loops
+          Bee Conditionals: شرطها زنبور عسل
+          Bee Nested Loops: Bee Nested Loops
+          Bee Debuggin: Bee Debuggin
+          Bee Debugging: Bee Debugging
+          Bee Functions: Bee Functions
+          Artist Functions with Params: Artist Functions with Params
           Bounce: Bounce
-          Maze Conditionals: شرطی های هزارتو
-          Artist Functions with Parameters: توابع هنرمند با پارامترها
+          Maze Conditionals: Maze Conditionals
+          Artist Functions with Parameters: Artist Functions with Parameters
           Computational Thinking: تفکر محاسباتی
-          Functional Suncatchers: نورگیرهای کاربردی
-          Songwriting Parameters: پارامترهای ترانه سرایی
-          Dice Race: مسابقۀ تاس انداختن
-          Internet: اینترنت
-          Crowdsourcing: کمک گیری جمعی
-          Digital Citizenship: شهروندی دیجیتالی
-          Farmer - While Loops: 'کشاورز -حلقه های "هنگامیکه"'
+          Functional Suncatchers: Functional Suncatchers
+          Songwriting Parameters: Songwriting Parameters
+          Dice Race: Dice Race
+          Internet: Internet
+          Crowdsourcing: Crowdsourcing
+          Digital Citizenship: Digital Citizenship
+          Farmer - While Loops: 'Farmer - While Loops'
           description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
-          "Studio: Create a Game": 'آزمایشگاه بازی: یک بازی بساز'
-          Maze: هزارتو
+          "Studio: Create a Game": 'آزمایشگاه بازی: ایجاد یک بازی'
+          Maze: پیچ و خم
           Artist: هنرمند
           "Artist: Functions": 'هنرمند: توابع'
           "Bee: Functions": 'زنبور عسل: توابع'
-          "Bee: Conditionals": 'زنبور عسل: شرطی ها'
-          "Maze: Conditionals": 'هزارتو: شرطی ها'
+          "Bee: Conditionals": 'Bee: Conditionals'
+          "Maze: Conditionals": 'Maze: Conditionals'
           "Artist: Nested Loops": 'هنرمند: حلقه های تو در تو'
           "Farmer: While Loops": 'Farmer: While Loops'
           "Bee: Nested Loops": 'Bee: Nested Loops'
-          "Bee: Debugging": 'زنبور عسل: اشکال زدایی'
-          Maze2: هزارتو 2
+          "Bee: Debugging": 'Bee: Debugging'
+          Maze2: Maze2
           Artist2: هنرمند 2
           "Artist: Functions2": 'Artist: Functions2'
-          "Bee: Functions2": 'زنبور عسل: توابع 2'
+          "Bee: Functions2": 'زنبور عسل: Functions2'
           "Bee: Conditionals2": 'Bee: Conditionals2'
-          "Maze: Conditionals2": 'هزارتو: شرطی های2'
+          "Maze: Conditionals2": 'پیچ و خم: Conditionals2'
           "Artist: Nested Loops2": 'Artist: Nested Loops2'
           "Farmer: While Loops2": 'Farmer: While Loops2'
           "Bee: Nested Loops2": 'Bee: Nested Loops2'
@@ -138,13 +138,13 @@ fa:
           description: Private work in progress for Middle School Math.
           Graph Paper Programming: 'برنامه نویسی روی کاغذ شطرنجی '
           Assessments: ارزیابی
-          Unit 1: واحد 1
-          Unit 2: واحد 2
+          Unit 1: شماره 1
+          Unit 2: شماره 2
           Ninja Cat and the Coordinate Plane: Ninja Cat and the Coordinate Plane
           "Calc: Circles of Evaluation": 'Calc: Circles of Evaluation'
           "Artist: Strings and Images": 'هنرمند: رشته ها و تصاویر'
-          Contracts: قراردادها
-          "Artist: Writing Contracts": 'هنرمند: نوشتن قراردادها'
+          Contracts: قرارداد
+          "Artist: Writing Contracts": 'هنرمند: نوشتن قرارداد'
           "Calc: Defining Variables": 'Calc: Defining Variables'
           "Play Lab: Defining Variables": 'Play Lab: Defining Variables'
           The Design Recipe: The Design Recipe
@@ -152,9 +152,9 @@ fa:
           "Play Lab: Defining Functions": 'Play Lab: Design Recipe'
           "Artist: Functions": 'هنرمند: توابع'
           "Play Lab: Animation": 'آزمایشگاه بازی: انیمیشن'
-          Booleans: بولی ها
-          "Play Lab: Booleans": 'آزمایشگاه بازی: بولی'
-          "Calc: Boolean Operators": 'حساب: عملگرهای بولی'
+          Booleans: Booleans
+          "Play Lab: Booleans": 'آزمایشگاه بازی: بولین'
+          "Calc: Boolean Operators": 'کالک: عملگرهای بولینی'
           "Play Lab: Boolean Operators": 'Play Lab: Boolean Operators'
           Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
           "Artist: Conditionals": 'Artist: Conditionals'
@@ -163,8 +163,8 @@ fa:
           "Unplugged: Ninja Cat and the Coordinate Plane": 'Unplugged: Ninja Cat and the Coordinate Plane'
           "Eval: Strings and Images": 'Eval: Strings and Images'
           "Unplugged: Contracts": 'Unplugged: Contracts'
-          "Eval: Writing Contracts": 'ارزبابی: نوشتن قراردادها'
-          "Unplugged: The Design Recipe": 'بدون دستگاه: دستور العمل طرح'
+          "Eval: Writing Contracts": 'Eval: نوشتن قرارداد'
+          "Unplugged: The Design Recipe": 'آنپلاگد: دستور العمل طراحی'
           "Eval: Defining Functions": 'Eval: Fast Functions'
           "Eval: Functions": 'Eval: Design Recipe'
           "Unplugged: Booleans": 'Unplugged: Booleans'
@@ -174,8 +174,8 @@ fa:
           "Calc: Evaluation Blocks": 'Calc: Evaluation Blocks'
           "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
           "Eval: Boolean Operators": 'Eval: Boolean Operators'
-          Blocks to Math: بلوکها به ریاضی
-          "Play Lab: Defining Variables (Big Game)": 'آزمایشگاه بازی: تعریف متغیرها (بازی بزرگ)'
+          Blocks to Math: بلوک های ریاضی
+          "Play Lab: Defining Variables (Big Game)": 'آزمایشگاه بازی: تعریف متغیر (بازی بزرگ )'
           "Play Lab: Animation (Big Game)": 'Play Lab: Animation (Big Game)'
           "Play Lab: Boolean (Big Game)": 'Play Lab: Boolean (Big Game)'
           "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
@@ -193,94 +193,94 @@ fa:
           Artist: هنرمند
           description_short: Draw cool pictures and designs with the Artist!
         scrat:
-          title: اسکرات
-          description_short: توضیح کوتاه اسکرات.
-          description: توضیح طولانی اسکرات
-          "Maze: Sequence": 'هزارتو: دنباله'
+          title: Scrat
+          description_short: Scrat توضیحات کوتاه.
+          description: Scrat شرح طولانی
+          "Maze: Sequence": 'Maze: Sequence'
         hourofcode:
           Maze: پیچ و خم
           title: ساعتی با کد
           description: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
           description_short: Try the basics of computer science with many fun characters!
         frozen:
-          title: کدنویسی با آنا و السا
+          title: کد با آنا و السا
           description: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
           Artist: هنرمند
           description_short: بیایید از کد نویسی برای پیوستن به آنا و السا وقتی جادو و زیبایی یخ را کشف می کنند استفاده کنیم.
         course4:
           description_short: Students taking Course 4 should have already taken Courses 2 and 3.
           description: Course 4 is designed for students who have taken Course 2 and 3. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8.
-          "Artist: Variables": 'هنرمند: متغیرها'
-          "Bee: For Loops": 'زنبور عسل: برای حلقه ها'
+          "Artist: Variables": 'هنرمند: متغیر'
+          "Bee: For Loops": 'زنبور عسل: برای حلقه'
           title: دوره 4
-          "Algorithms: Tangrams": 'الگوریتم: تنگرام'
+          "Algorithms: Tangrams": 'الگوریتم: Tangrams'
           Variables: متغیرها
-          "Play Lab: Variables": 'آزمایشگاه بازی: متغیرها'
+          "Play Lab: Variables": 'آزمایشگاه بازی: متغیر'
           "Play Lab: Functions with Parameters": 'Play Lab: Functions with Parameters'
           "Bee: Functions with Parameters": 'Bee: Functions with Parameters'
-          "Artist: For Loops": 'هنرمند: برای حلقه ها'
+          "Artist: For Loops": 'هنرمند: برای حلقه'
           "Play Lab: For Loops": 'Play Lab: For Loops'
           "Artist: Functions": 'هنرمند: توابع'
           "Artist: Functions with Paraqmeters": 'Artist: Functions with Paraqmeters'
-          "Unplugged: Tangrams": 'بدون دستگاه: تنگرام'
+          "Unplugged: Tangrams": 'Unplugged: Tangrams'
           Artist: هنرمند
           Bee: زنبور عسل
           "Unplugged: Envelope Variables": 'Unplugged: Envelope Variables'
-          "Unplugged: Madlibs": 'بدون دستگاه: جای خالی را پُرکن'
+          "Unplugged: Madlibs": 'آنپلاگد: Madlibs'
           "Unplugged: For Loop Fun": 'Unplugged: For Loop Fun'
           "Unplugged: Songwriting with Parameters": 'Unplugged: Songwriting with Parameters'
           "Artist: Functions with Parameters": 'Artist: Functions with Parameters'
-          "Unplugged: Binary": 'بدون دستگاه: دودویی'
-          Bee Binary: دودویی زنبور عسل
-          Farmer Binary: دودویی کشاورز
-          Maze and Bee: هزارتو و زنبور عسل
-          Artist Binary: دودویی هنرمند
+          "Unplugged: Binary": 'آنپلاگد: دوتایی'
+          Bee Binary: زنبور عسل دودویی
+          Farmer Binary: کشاورز دودویی
+          Maze and Bee: پیچ و خم و زنبور عسل
+          Artist Binary: هنرمند دودویی
           description_audience: Ages 10+ (after Course 3)
         Course4pre:
           description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
           Course 4 Prerequisite: پیش نیاز دوره 4
-          "Maze: Sequence": 'هزارتو: دنباله'
+          "Maze: Sequence": 'Maze: Sequence'
           "Artist: Sequence": 'هنرمند: دنباله'
-          "Artist: Loops": 'هنرمند: حلقه ها'
-          "Bee: Conditionals": 'زنبور عسل: شرطی ها'
+          "Artist: Loops": 'Artist: Loops'
+          "Bee: Conditionals": 'Bee: Conditionals'
           "Artist: Nested Loops": 'هنرمند: حلقه های تو در تو'
           "Farmer: While Loops": 'Farmer: While Loops'
           "Bee: Nested Loops": 'Bee: Nested Loops'
           "Artist: Functions": 'هنرمند: توابع'
-          "Bee: Debugging": 'زنبور عسل: اشکال زدایی'
+          "Bee: Debugging": 'Bee: Debugging'
         course4pre:
           description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
           Course 4 Prerequisite: پیش نیاز دوره 4
-          "Maze: Sequence": 'هزارتو: دنباله'
+          "Maze: Sequence": 'Maze: Sequence'
           "Artist: Sequence": 'هنرمند: دنباله'
-          "Artist: Loops": 'هنرمند: حلقه ها'
-          "Bee: Conditionals": 'زنبور عسل: شرطی ها'
+          "Artist: Loops": 'Artist: Loops'
+          "Bee: Conditionals": 'Bee: Conditionals'
           "Artist: Nested Loops": 'هنرمند: حلقه های تو در تو'
           "Farmer: While Loops": 'Farmer: While Loops'
           "Bee: Nested Loops": 'Bee: Nested Loops'
           "Artist: Functions": 'هنرمند: توابع'
-          "Bee: Debugging": 'زنبور عسل: اشکال زدایی'
+          "Bee: Debugging": 'Bee: Debugging'
         Course4pre (Case Conflict):
           description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
           Course 4 Prerequisite: پیش نیاز دوره 4
-          "Maze: Sequence": 'هزارتو: دنباله'
+          "Maze: Sequence": 'Maze: Sequence'
           "Artist: Sequence": 'هنرمند: دنباله'
-          "Artist: Loops": 'هنرمند: حلقه ها'
-          "Bee: Conditionals": 'زنبور عسل: شرطی ها'
+          "Artist: Loops": 'Artist: Loops'
+          "Bee: Conditionals": 'Bee: Conditionals'
           "Artist: Nested Loops": 'هنرمند: حلقه های تو در تو'
           "Farmer: While Loops": 'Farmer: While Loops'
           "Bee: Nested Loops": 'Bee: Nested Loops'
           "Artist: Functions": 'هنرمند: توابع'
-          "Bee: Debugging": 'زنبور عسل: اشکال زدایی'
+          "Bee: Debugging": 'Bee: Debugging'
         usability:
-          Intro: مقدمه
-          Variables and For Loops: 'متغیرها و حلقه های "برای"'
+          Intro: معرفی
+          Variables and For Loops: متغیرها و حلقه ها
           Functions and Functions with Parameters: Functions and Functions with Parameters
-          title: امتحان قابل استفاده بودن
+          title: ' قابلیت استفاده از تست'
           description_short: ""
           description: A selection of Course 4 levels for usability testing.
           Variables: متغیرها
-          For Loops: 'حلقه های "برای"'
+          For Loops: برای حلقه
           Binary: Binary
         potus:
           title: special
@@ -296,12 +296,12 @@ fa:
         usabilitymsm:
           Usability testing for MSM: Usability testing for MSM
           Evaluation Blocks: Evaluation Blocks
-          Blocks to Math: بلوکها به ریاضی
+          Blocks to Math: بلوک های ریاضی
           Strings and Images: Strings and Images
           Defining Variables: Defining Variables
           Defining Functions: Defining Functions
           Design Recipe: Design Recipe
-          Booleans: بولی ها
+          Booleans: Booleans
           Conditionals: مشروط
           Free Play: Free Play
         algebra:
@@ -311,29 +311,19 @@ fa:
           "Calc: Evaluation Blocks": 'Calc: Evaluation Blocks'
           "Eval: Strings and Images": 'Eval: Strings and Images'
           "Unplugged: Contracts": 'Unplugged: Contracts'
-          "Eval: Writing Contracts": 'ارزبابی: نوشتن قراردادها'
+          "Eval: Writing Contracts": 'Eval: نوشتن قرارداد'
           "Calc: Defining Variables": 'Calc: Defining Variables'
-          "Play Lab: Defining Variables (Big Game)": 'آزمایشگاه بازی: تعریف متغیرها (بازی بزرگ)'
+          "Play Lab: Defining Variables (Big Game)": 'آزمایشگاه بازی: تعریف متغیر (بازی بزرگ )'
           "Eval: Defining Functions": 'Eval: Defining Functions'
-          "Unplugged: The Design Recipe": 'بدون دستگاه: دستور العمل طرح'
+          "Unplugged: The Design Recipe": 'آنپلاگد: دستور العمل طراحی'
           "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
           "Eval: Functions": 'Eval: Functions'
           "Play Lab: Animation (Big Game)": 'Play Lab: Animation (Big Game)'
           "Unplugged: Booleans": 'Unplugged: Booleans'
           "Eval: Boolean Operators": 'Eval: Boolean Operators'
-          "Play Lab: Booleans": 'آزمایشگاه بازی: بولی'
+          "Play Lab: Booleans": 'آزمایشگاه بازی: بولین'
           "Play Lab: Boolean (Big Game)": 'Play Lab: Boolean (Big Game)'
           "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals and Piecewise Functions'
           "Eval: Conditionals": 'Eval: Conditionals'
           "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Distance Formula'
           "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
-        algebrademo:
-          description: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
-          Algebra Demo: Algebra Demo
-          Evaluation Blocks: Evaluation Blocks
-          Making Pictures: Making Pictures
-          Defining Variables: Defining Variables
-          Defining Simple Functions: Defining Simple Functions
-          The Design Recipe: The Design Recipe
-        K5PD:
-          Introduction to PD: Introduction to PD

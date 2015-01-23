@@ -229,7 +229,6 @@
   "soundWinPoint2": "guanyar el punt 2",
   "soundWood": "fusta",
   "speed": "velocitat",
-  "startSetValue": "start (rocket-height function)",
   "stopSprite": "atura",
   "stopSpriteN": "atura actor{spriteIndex}",
   "stopTooltip": "Atura el moviment d'un actor.",

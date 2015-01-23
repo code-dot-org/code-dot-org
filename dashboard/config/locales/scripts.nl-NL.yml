@@ -332,7 +332,7 @@
           Binary: Binaire
         usabilitymsm:
           Usability testing for MSM: Usability testing for MSM
-          Evaluation Blocks: evaluatie blokken
+          Evaluation Blocks: Evaluation Blocks
           Blocks to Math: Blokken naar Wiskunde
           Strings and Images: Strings and Images
           Defining Variables: Defining Variables
@@ -343,7 +343,7 @@
           Free Play: Free Play
         algebra:
           title: Computer Science in Algebra
-          description: Leer functioneel programmeren door Algebra
+          description: Learn Functional Programming through Algebra
           'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video-Games
             en Coordinaat Vliegtuigen'
           'Calc: Evaluation Blocks': 'Calc: Evaluatie blokken'
@@ -355,7 +355,7 @@
             (Groot Spel)'
           'Eval: Defining Functions': 'Eval: Defining Functions'
           'Unplugged: The Design Recipe': 'Unplugged: Het ontwerp recept'
-          'Play Lab: Defining Functions': 'Speel Lab: Definieer Functies'
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
           'Eval: Functions': 'Eval: Functions'
           'Play Lab: Animation (Big Game)': 'Speel Lab: Animatie (Groot Spel)'
           'Unplugged: Booleans': 'Unplugged: Booleans'
@@ -369,14 +369,3 @@
             en de afstand formule'
           'Play Lab: Collision Detection (Big Game)': 'Speel Lab: Botsingdetectie
             (Groot Spel)'
-        algebrademo:
-          description: A handful of puzzles to demonstrate the environment and programming
-            language used in Code.org CS in Algebra
-          Algebra Demo: Algebra Demo
-          Evaluation Blocks: evaluatie blokken
-          Making Pictures: Making Pictures
-          Defining Variables: Defining Variables
-          Defining Simple Functions: Defining Simple Functions
-          The Design Recipe: Het ontwerp Recept
-        K5PD:
-          Introduction to PD: Introduction to PD

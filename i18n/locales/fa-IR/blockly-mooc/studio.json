@@ -229,7 +229,6 @@
   "soundWinPoint2":"صدای برنده شدن امتیاز ۲",
   "soundWood":"چوب",
   "speed":"سرعت",
-  "startSetValue":"start (rocket-height function)",
   "stopSprite":"بایست",
   "stopSpriteN":"توقف بازیگر {spriteIndex}",
   "stopTooltip":"حرکت یک عملگر را متوقف می کند.",

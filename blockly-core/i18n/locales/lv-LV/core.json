@@ -1,5 +1,5 @@
 {
-  "ACTUAL": "call",
+  "ACTUAL": "faktiskais",
   "ADD": "Pievienot",
   "ADD_COMMENT": "Pievienot komentāru",
   "ADD_PARAMETER": "Pievienot parametru",
@@ -73,7 +73,7 @@
   "EXAMPLE_DESCRIPTION": "Definē piemēru ar sagaidāmo un faktisko rīcību",
   "EXPAND_ALL": "Paplašināt blokus",
   "EXPAND_BLOCK": "Paplašināt bloku",
-  "EXPECTED": "result",
+  "EXPECTED": "paredzamais",
   "EXTERNAL_INPUTS": "Ārējās ievades",
   "FUNCTION_CREATE": "Izveido funkciju",
   "FUNCTION_EDIT": "rediģēt",

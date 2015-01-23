@@ -1,7 +1,4 @@
 en:
-  errors:
-    messages:
-      not_saved: crwdns27834:0crwdne27834:0
   activerecord:
     errors:
       messages:

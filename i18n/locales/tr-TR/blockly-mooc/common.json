@@ -88,6 +88,6 @@
   "signup":"Giriş dersi için üye olun",
   "hintHeader":"İşte bir ipucu:",
   "genericFeedback":"Sonucunu gör ve programını düzeltmeyi dene.",
-  "toggleBlocksErrorMsg":"Bloklar halinde gösterilebilmesi için programındaki bir hatayı düzeltmelisin.",
+  "toggleBlocksErrorMsg":"You need to correct an error in your program before it can be shown as blocks.",
   "defaultTwitterText":"Ne yaptığıma bakın"
 }

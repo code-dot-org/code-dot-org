@@ -256,7 +256,7 @@
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png
       4-5 farmer loops multi 1:
-        Famer Loops Multiple Choice: 'Contadina - Cicli: Risposte Multiple'
+        Famer Loops Multiple Choice: 'Agricoltore - Cicli: Risposte Multiple'
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png, 500: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png,
           500
         Which blocks solve the puzzle?: Quali blocchi risolvono l'esercizio?
@@ -383,8 +383,8 @@
       Coordinates Multi 1:
         Video game Coordinates: Coordinate del Videogioco
         Ninjacat Demo Embed.level: Livello della versione demo del Gatto Ninja
-        Which answer most accurately describes the unicorn's movement?: Which answer
-          most accurately describes the unicorn's movement?
+        Which answer best describes the unicorn's movement?: Qual è la risposta che
+          descrive meglio il movimento dell'unicorno?
         The unicorn moves across the screen: L'unicorno si muove sullo schermo
         The unicorn's y value changes: Il valore y dell'unicorno cambia
         The unicorn moves to the left: L'unicorno si muove verso sinistra
@@ -613,7 +613,7 @@
           un circolo di valutazione in codice, l'ordine corretto è
         top, left, right: alto, sinistra, destra
         left, right, top: sinistra, destra, alto
-        random: scelta a caso
+        random: scelto a caso
         left top right: sinistra, alto, destra
       Circle to code:
         Code from Circle: Codice da Circoli
@@ -648,10 +648,10 @@
         (rectangle (+ 8 2) (- 7 5) solid red): (rettangolo (+ 2 8) (-5 7) "solido",
           "rosso")
       Multi Strings Images 1:
-        Strings and Images Multiple Choice: 'Stringhe e Immagini: Risposte Multiple'
+        Strings and Images Multiple Choice: Stringhe e immagini a scelta multipla
         Multi Strings Images 1.blocks3.level: Multi Strings Images 1.blocks3.level
-        Which of these Evaluation Blocks will draw the image: Quale di questi Blocchi
-          di Valutazione disegnerà l'immagine?
+        Which of these Evaluation Blocks will draw the image: Which of these Evaluation
+          Blocks will draw the image
         Multi Strings Images 1.blocks1.start_blocks, 300, 100: Multi Strings Images
           1.blocks1.start_blocks, 300, 100
         Multi Strings Images 1.blocks2.start_blocks, 300, 100: Multi Strings Images

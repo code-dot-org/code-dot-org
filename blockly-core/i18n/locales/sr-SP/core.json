@@ -1,5 +1,5 @@
 {
-  "ACTUAL": "call",
+  "ACTUAL": "стварно",
   "ADD": "Додај",
   "ADD_COMMENT": "Додај коментар",
   "ADD_PARAMETER": "Додај параметар",
@@ -73,7 +73,7 @@
   "EXAMPLE_DESCRIPTION": "Дефинише пример са претпостављеним и стварним понашањем",
   "EXPAND_ALL": "Рашири Блок",
   "EXPAND_BLOCK": "Рашири Блок",
-  "EXPECTED": "result",
+  "EXPECTED": "претпостављено",
   "EXTERNAL_INPUTS": "Спољашњи Уноси",
   "FUNCTION_CREATE": "Направи функцију",
   "FUNCTION_EDIT": "edit",

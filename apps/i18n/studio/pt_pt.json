@@ -285,6 +285,5 @@
   "whenSpriteCollidedWithTopEdge": "touches top edge",
   "whenUp": "quando seta para cima",
   "whenUpTooltip": "Executar as ações abaixo quando a seta para cima é clicada.",
-  "yes": "Sim",
-  "startSetValue": "crwdns27946:0crwdne27946:0"
+  "yes": "Sim"
 }

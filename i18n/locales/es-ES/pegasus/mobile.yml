@@ -1,9 +1,9 @@
-es-AR:
+es-ES:
   hello: Hola mundo
   select_language: Por favor seleccione su idioma
   computer_science: Ciencias de la computación
   computer_science_edweek: Semana de Educación en Ciencias de la Computación
-  csedweek_dates: Diciembre 8-14, 2014
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: 'Se acerca la <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hora del código</a>.  Se convoca a todos los maestros y organizadores, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> planifica tu Hora del Código</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">¿Eres profesor de informática? Mira otros recursos de CSEdWeek</a>'
   n_have_learned_an_hoc: '<h1>#</h1><h3>han probado la</h3><h2>Hora de Código</h2>'
@@ -55,7 +55,7 @@ es-AR:
   support_url: http://support.code.org/
   country: País
   city: Ciudad
-  gender: Género
+  gender: Sexo
   boys: Niños
   girls: Niñas
   give_my_hour: 'Dar mi hora a:'
@@ -104,15 +104,15 @@ es-AR:
   students_and_lines: '%{students} de estudiantes han hecho La hora de código y escrito %{lines} líneas de código.'
   start_hoc: Comienza La hora de código ahora
   contact_form_topic_press: Prensa/ Medios de comunicación (entrevista o compromiso de hablar)
-  stats_michael: '"Yo <b>nunca antes</b> había visto a mis estudiantes tan entuciasmados por el aprendizaje." - Michael Clark, Profesor'
-  stats_nina: '"Cada día produzco los mismos resultados &mdash; 100% de compromiso." - Nina Nichols Peery, docente'
-  stats_student: '"Sabía que era una oportunidad <b>única en la vida</b>."-Mariana Alzate, 5th grader'
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
+  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
+  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
   studiobar_title: "Explora <a href='http://studio.code.org'>Code Studio</a>"
   studiobar_elementary_title: Cursos elementales
   studiobar_elementary_body: 'Nuestros tres nuevos cursos para K&#8209;5'
   studiobar_hoc_title: La Hora de Programación
   studiobar_hoc_body: Aprende a programar con Angry Birds
-  studiobar_flappy_title: Código Flappy
+  studiobar_flappy_title: Código de Flappy
   studiobar_flappy_body: Crea y comparte tu propio juego Flappy
   studiobar_teacher_title: Hecho para los maestros
   studiobar_teacher_body: Presenta Code Studio en tu aula
@@ -120,8 +120,8 @@ es-AR:
   studiobar_frozen_body: Crea un paisaje invernal con Anna y Elsa
   studiobar_donate_title: Dona
   studiobar_donate_body: Un niño aprende por cada dólar que done
-  studiobar_shop_title: Tienda
-  studiobar_shop_body: Rompe los estereotipos. Usa nuestro logo con orgullo.
+  studiobar_shop_title: Shop
+  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   contact_form_topic_student: Soy un estudiante
   contact_form_topic_parent: Soy un padre
   contact_form_topic_teacher: Soy un profesor/educador
@@ -202,8 +202,8 @@ es-AR:
   dashboard_action_delete_yes: Sí
   dashboard_action_delete_no: 'No'
   dashboard_action_confirm: ¿Borrar?
-  dashboard_action_remove: eliminar
-  dashboard_action_remove_confirm: ¿eliminar?
+  dashboard_action_remove: Remove
+  dashboard_action_remove_confirm: Remove?
   dashboard_action_done: Hecho
   dashboard_action_required: obligatorio
   dashboard_navigation_home_page: Página de inicio del maestro
@@ -225,7 +225,7 @@ es-AR:
   dashboard_sections_jumbotron_instruction: Crea nuevas secciones y añade alumnos a ellas. Las secciones ayudan a organizar los alumnos en grupos más pequeños para que puedas seguir su progreso y administrar sus cuentas.
   dashboard_sections_table_section: Sección
   dashboard_sections_table_secret: Tipo de inicio de sesión
-  dashboard_sections_table_grade: Calificación
+  dashboard_sections_table_grade: Grado
   dashboard_sections_table_course: Curso
   dashboard_sections_table_students: Alumnos
   dashboard_sections_table_code: Código de sección
@@ -242,10 +242,9 @@ es-AR:
   dashboard_students_new_section: '¡Ha creado una nueva sección! Ahora, agregue sus alumnos usando los botones anteriores <b>Añadir alumno</b> y <b>Añadir varios alumnos</b>.'
   dashboard_students_placeholder_name: Nombre del alumno
   dashboard_students_name: Nombre
-  dashboard_students_progress: Progress
   dashboard_students_age: Edad
-  dashboard_students_gender: Género
-  dashboard_students_male: Varón
+  dashboard_students_gender: Sexo
+  dashboard_students_male: Hombre
   dashboard_students_female: Mujer
   dashboard_students_secret: Secreto
   dashboard_students_password: contraseña
@@ -289,10 +288,6 @@ es-AR:
   dashboard_login_picture: Imagen
   dashboard_login_none: Correo electrónico
   dashboard_new_password: nueva contraseña
-  dashboard_progress_not_completed: No completado
-  dashboard_progress_completed_too_many_blocks: completado, pero tiene demasiados bloques
-  dashboard_progress_completed_perfect: completado, perfecto
-  dashboard_progress_furthest_level_attempted: Nivel más alto intentado
   stats_hoc_2013_heading: 'Increíbles estadísticas de la Hora del Código del año pasado. En sólo una semana:'
   stats_hoc_2013_image_alt: Estadísticas de Hora del Código del 2013
   dashboard_teacher: Profesor
@@ -328,7 +323,7 @@ es-AR:
   carousel_heading_robots: Aprende a programar con robots
   carousel_heading_ide: Plataformas populares entre los docentes
   educator_notes: Notas del educador
-  how_to_teach_hoc: Cómo enseñar a una Hora de código
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Más recursos para profesores y educadores
   participants: participantes
   teachers_notes: Notas del profesor
@@ -339,11 +334,11 @@ es-AR:
   older_systems_subheading: 'Estos deberían funcionar sin problemas en navegadores no tan modernos. Para acceder al resto de los tutoriales vas a necesitar <a href="http://browsehappy.com/" target="_blank">actualizar tu navegador</a>.'
   mobile_devices: Tutoriales para dispositivos móviles
   frozen_name: Programa con Ana y Elsa
-  codeorg_name: Codifica tu primer programa de computación
+  codeorg_name: Escribí tu primer programa
   codeintl_name: Codifica tu primer programa de computación
   thinkersmithspanish_name: Mis amigos robóticos
   khan_name: Una introducción a JavaScript
-  khanes_name: Una introducción a JavaScript
+  khanes_name: Introducción a JavaScript
   khanpt_name: Una introducción a JavaScript
   khanhe_name: Una introducción a JavaScript
   khanfr_name: Una introducción a JavaScript
@@ -462,7 +457,7 @@ es-AR:
   codeintl_shortdescription: ¡Aprende a programar con Mark Zuckerberg y Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Aprenda a dibujar con JavaScript
-  khanes_shortdescription: Aprenda a dibujar con JavaScript
+  khanes_shortdescription: Aprendé a dibujar en JavaScript
   khanpt_shortdescription: Aprenda a dibujar con JavaScript
   khanhe_shortdescription: Aprenda a dibujar con JavaScript
   khanfr_shortdescription: Aprenda a dibujar con JavaScript
@@ -556,7 +551,7 @@ es-AR:
   touchdevelop_beyond_name: TouchDevelop
   codehs_beyond_name: Aprende a programar con Karel, el perro
   udemy_beyond_name: Cursos de programación en línea
-  lynda_beyond_name: Cursos de programación en línea
+  lynda_beyond_name: Cursos de programación online
   edx_beyond_name: 'Curso "CS50" de Harvard'
   coursera_beyond_name: Curso Standford CS 101
   udacity_beyond_name: CS 101
@@ -632,12 +627,12 @@ es-AR:
   udemy_beyond_platformtext: Para la web
   lynda_beyond_platformtext: Basado en la web (requiere $$)
   edx_beyond_platformtext: Navegadores modernos
-  coursera_beyond_platformtext: Navegadores modernos
-  udacity_beyond_platformtext: Navegadores modernos
+  coursera_beyond_platformtext: Cualquier navegador moderno
+  udacity_beyond_platformtext: Cualquier navegador moderno
   teachingtree_beyond_platformtext: Para la web
   kodu_beyond_platformtext: Windows, xBox
   cargobot_beyond_platformtext: iPad
-  kidsruby_beyond_platformtext: Instalación en computadora de escritorio
+  kidsruby_beyond_platformtext: Instalación en computadora
   w3schools_beyond_platformtext: Cualquier navegador moderno
   codeavengers_beyond_platformtext: Cualquier navegador moderno
   mozilla_beyond_platformtext: Cualquier navegador moderno
@@ -649,11 +644,11 @@ es-AR:
   processing_beyond_platformtext: Navegadores modernos
   alice_beyond_platformtext: Windows o Mac (necesita instalación)
   sphero_beyond_platformtext: Compra de robot
-  codeorg_beyond_shortdescription: ¡Aprende a programar con Mark Zuckerberg y Angry Birds!
-  khan_beyond_shortdescription: Aprenda a dibujar con JavaScript
+  codeorg_beyond_shortdescription: Aprende a programar con el creador de Facebook y Angry Birds!
+  khan_beyond_shortdescription: Aprende a dibujar en JavaScript
   tynker_beyond_shortdescription: Un curso divertido e interesante para niños de primaria
   scratch_beyond_shortdescription: Crea animaciones, historias y juegos interactivos.
-  lightbot_beyond_shortdescription: Un juego para aprender conceptos de programación
+  lightbot_beyond_shortdescription: Un juego para enseñar conceptos de programación
   codecademy_beyond_shortdescription: Aprende programación en JavaScript en un navegador
   kodable_beyond_shortdescription: Un juego divertido para aprender los conceptos básicos de la programación en un iPad
   scratchjr_beyond_shortdescription: 'Crea historias interactivas y juegos con ScratchJr. '

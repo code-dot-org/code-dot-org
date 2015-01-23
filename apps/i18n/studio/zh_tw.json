@@ -229,7 +229,6 @@
   "soundWinPoint2": "得2分",
   "soundWood": "木",
   "speed": "速度",
-  "startSetValue": "start (rocket-height function)",
   "stopSprite": "停止",
   "stopSpriteN": "讓演員 {spriteIndex} 停止",
   "stopTooltip": "停止移動角色。",

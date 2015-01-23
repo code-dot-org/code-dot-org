@@ -1,7 +1,4 @@
 bs:
-  errors:
-    messages:
-      not_saved: 'Please correct the following errors:'
   activerecord:
     errors:
       messages:
@@ -45,7 +42,7 @@ bs:
   k8intro: K-8 Intro to Computer Science Course (15-25 hours)
   already_started: 'Already started? Resume here >> '
   demos: 'Admin: All Demos'
-  continue: Nastavi
+  continue: Continue
   prize: prize
   more_info: More info
   auth:
@@ -217,7 +214,7 @@ bs:
         playlab: Make an App
         artist: Draw Something
     user:
-      classroom: Početna stranica za nastavnike
+      classroom: Teacher Home Page
       label: 'Hi %{username}'
       stats: My progress
       settings: My account
@@ -351,8 +348,8 @@ bs:
     female: Female
     none: Prefer not to answer
   user_type:
-    student: Učenik
-    teacher: Učitelj
+    student: Student
+    teacher: Teacher
   footer:
     help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped create this tutorial.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
@@ -467,7 +464,7 @@ bs:
   text_match:
     placeholder: Enter your answer here
   dialog:
-    ok: U redu
+    ok: OK
   time:
     hour: 1 hour
     day: day

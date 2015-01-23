@@ -1,5 +1,5 @@
 {
-  "ACTUAL":"call",
+  "ACTUAL":"faktiska",
   "ADD":"Lägg till",
   "ADD_COMMENT":"Lägg till kommentar",
   "ADD_PARAMETER":"Lägg till Parameter",
@@ -73,7 +73,7 @@
   "EXAMPLE_DESCRIPTION":"Definierar ett exempel med förväntat och faktiskt beteende",
   "EXPAND_ALL":"Expandera block",
   "EXPAND_BLOCK":"Expandera block",
-  "EXPECTED":"result",
+  "EXPECTED":"förväntat",
   "EXTERNAL_INPUTS":"Externa inmatningar",
   "FUNCTION_CREATE":"Skapa en Funktion",
   "FUNCTION_EDIT":"Redigera",

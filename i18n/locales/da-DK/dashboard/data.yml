@@ -48,7 +48,7 @@ da:
         edit-code:
           desc: Rediger program (beta)
           MazeEC: Trin 1
-          Applab: Fase 2
+          Webapp: Fase 2
           ArtistEC: Trin 3
           StudioEC: Trin 4
         events:
@@ -99,11 +99,10 @@ da:
         Jigsaw: Puslespil
         MazeStep: Labyrint trin Mode
         Wordsearch: Ordsøgning
-        Webapp: App Lab
+        Webapp: WebApp
         ArtistEC: Kunstneren
         TextMatch: Tekst Match
         StudioEC: Play Lab
-        Applab: App Lab
     trophy:
       name:
         Bronze: Bronze
@@ -327,7 +326,7 @@ da:
         maze_wordsearch_k_15: Flytte mig en vej, så en anden til at stave ordet ABOVE
         maze_wordsearch_k_16: Flytte mig en vej, så en anden til at stave ordet BELOW
         maze_wordsearch_k_20: Dette er en test! Flytte mig en måde, så en anden til at stave ordet STORY
-        applab_ec_simple: Create your app by using the blocks in the toolbox.
+        webapp_ec_simple: Opret din WebApp ved hjælp af createHtmlBlock.
         turtle_ec_1_2: 'Nu skal du tegne en firkant. Bemærk: Brug din favorit farve, vælg den i den nye "penColor" blok.'
         turtle_ec_1_10: 'Du har du klaret det! Tegn nu noget som du ønsker. Her er nogle ideer: en tændstikmand, et snefnug eller en spiral. Prøv også den nye "penWidth" blok. Hav det sjovt!'
         studio_ec_sandbox: Oprette dit eget spil. Når du er færdig, skal du klikke på Udfør for at lade venner prøve dit spil på deres mobiler.

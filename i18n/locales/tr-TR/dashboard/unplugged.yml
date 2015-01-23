@@ -175,16 +175,16 @@ tr:
         title: Video Games and Coordinate Planes
         desc: Video Games and Coordinate Planes lesson description
       Contracts:
-        title: Teknikler
+        title: Contracts
         desc: Contracts unplugged lesson description
       DesignRecipe:
-        title: Tasarım Tarifi
+        title: The Design Recipe
         desc: Design Recipe lesson description
       Booleans:
-        title: Boolean Değerleri
+        title: Booleans
         desc: Booleans lesson description
       ConditionalsPiecewiseFunctions:
-        title: Koşullar ve Parçalı Fonksiyonlar
+        title: Conditionals and Piecewise Functions
         desc: Conditionals and Piecewise Functions lesson description
       CollisionDetection:
         title: Çakışma Bulma

@@ -3,7 +3,7 @@ de-DE:
   select_language: Bitte wähle Deine Sprache
   computer_science: Informatik
   computer_science_edweek: Computer Science Education Week
-  csedweek_dates: 14. Dezember, 2014
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: 'Die <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> Stunde des Code</a> kommt näher. Dies ist ein Aufruf an alle Lehrer und Organisatoren, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> plant Eure Stunde des Codes</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400"> Sind Sie ein CS-Lehrer? Hier finden Sie weiteres CSEdWeek-Material</a>'
   n_have_learned_an_hoc: '<h1>#</h1><h3>absolvierten eine</h3><h2>Hour of Code</h2>'
@@ -104,9 +104,9 @@ de-DE:
   students_and_lines: '%{students} Schüler haben die Hour of Code ggeschafft und %{lines} Zeilen Code geschrieben.'
   start_hoc: Starte die Hour of Code jetzt
   contact_form_topic_press: Presse/Medien (Interview oder Sprecherauftrag)
-  stats_michael: '"Ich habe meine Schüler <b>noch niemals<b/> so begeistert gesehen, etwas zu lernen." - Michael Clark, Lehrer'
-  stats_nina: '"Jeder einzelne Tag ergab die gleichen Resultate&mdash; 100% Engagement." -Nina Nichols Peery, Professorin'
-  stats_student: '"Ich wusste das war eine <b>einmalige</b> Chance." - Mariana Alzate, 5. Klasse'
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
+  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
+  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
   studiobar_title: "Entdecken Sie das<a href='http://studio.code.org'>Code-Studio</a>"
   studiobar_elementary_title: Grundkurse
   studiobar_elementary_body: 'Unsere drei neuen Kurse für K &#8209; 5'
@@ -121,7 +121,7 @@ de-DE:
   studiobar_donate_title: Spenden
   studiobar_donate_body: Ein Kind lernt für jeden Euro, den Sie spenden
   studiobar_shop_title: Shop
-  studiobar_shop_body: Breche Stereotypen. Trage unser Logo mit Stolz.
+  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   contact_form_topic_student: Ich bin ein Schüler
   contact_form_topic_parent: Ich bin ein Elternteil
   contact_form_topic_teacher: Ich bin Lehrer/Erzieher
@@ -202,8 +202,8 @@ de-DE:
   dashboard_action_delete_yes: Ja
   dashboard_action_delete_no: Nein
   dashboard_action_confirm: Löschen?
-  dashboard_action_remove: Entfernen
-  dashboard_action_remove_confirm: Entfernen?
+  dashboard_action_remove: Remove
+  dashboard_action_remove_confirm: Remove?
   dashboard_action_done: Fertig
   dashboard_action_required: benötigt
   dashboard_navigation_home_page: Lehrer-Hauptseite
@@ -242,7 +242,6 @@ de-DE:
   dashboard_students_new_section: 'Du hast einen neuen Bereich erstellt! Füge nun Deine SchülerInnen und Schüler mithilfe der <b>Schüler hinzufügen</b> und <b>Mehrere Schüler hinzufügen</b>-Schaltflächen hinzu.'
   dashboard_students_placeholder_name: Schülername
   dashboard_students_name: Name
-  dashboard_students_progress: Progress
   dashboard_students_age: Alter
   dashboard_students_gender: Geschlecht
   dashboard_students_male: Männlich
@@ -289,10 +288,6 @@ de-DE:
   dashboard_login_picture: Bild
   dashboard_login_none: E-Mail
   dashboard_new_password: neues Passwort
-  dashboard_progress_not_completed: Nicht erfüllt
-  dashboard_progress_completed_too_many_blocks: abgeschlossen, zu viele Blöcke
-  dashboard_progress_completed_perfect: Abgeschlossen, perfekt
-  dashboard_progress_furthest_level_attempted: Höchste Ebene versucht
   stats_hoc_2013_heading: 'Fantastische Ergebnisse der Programmierstunde aus dem Vorjahr. Allein in einer Woche:'
   stats_hoc_2013_image_alt: Ergebnisse der Programmierstunde 2013
   dashboard_teacher: Lehrer
@@ -308,7 +303,7 @@ de-DE:
   dashboard_sections_password_account_creation: Passwort (Text), das von den Schülern gesetzt wird
   dashboard_sections_login_type_explanation: 'Diese Tabelle hilft dir bei der Wahl der Zugangsform zu einem Bereich <b>Bild, Wort oder e-Mail</b>.'
   dashboard_faq: Häufig gestellte Fragen
-  code_hoc_coming: '"The Hour of Code" ist da - 8. Dezember, 2014!'
+  code_hoc_coming: 'The Hour of Code is here - December 8-14!'
   code_sign_up: Anmelden, um an der CS Lernwoche teilzunehmen
   learn_more: Erfahre mehr
   hoc2014_try_new_tutorials: Probiere unsere neuen Einführungen zur Programmierstunde aus
@@ -328,7 +323,7 @@ de-DE:
   carousel_heading_robots: Lerne, mit Robotern zu programmieren
   carousel_heading_ide: Bei Lehrern beliebte Plattformen
   educator_notes: Erläuterungen für Erzieher/-innen
-  how_to_teach_hoc: 'Anleitung zum Unterrichten einer "Hour of Code"'
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Weitere Quellen für Lehrer und Erzieher
   participants: Teilnehmer
   teachers_notes: Anmerkungen des Lehrers
@@ -376,7 +371,7 @@ de-DE:
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Schere, Stein, Papier
-  hourofcode_name: Platzhalter für neue code.org/hoc
+  hourofcode_name: Placeholder for new code.org/hoc
   playlab_name: Play Lab
   codeorg_gradelevel: Im Alter von 4-104
   codeintl_gradelevel: Im Alter von 4-104
@@ -488,7 +483,7 @@ de-DE:
   tynkerapp_shortdescription: Lerne programmieren durch das lösen von spaßigen Codierungsrätseln.
   robomindnl_shortdescription: Schreibe ein Programm für einen virtuellen Roboter
   flappy_shortdescription: Entwickele Dein eigenes Spiel, z.B. Flappy Bird, Shark oder Submarine
-  bitsbox_shortdescription: Programmiere eine Serie von Apps zum spielen und teilen, indem du richtiges JavaScript benutzt.
+  bitsbox_shortdescription: Code a series of apps to play and share, using real JavaScript.
   makegameswithus_shortdescription: Entwickele ein iPad-Spiel. Lerne dies durch die Programmierung von Bewegungen Deines Monsters!
   touchdevelop_shortdescription: Löse Rätsel, entwickle Spiele und lerne zu programmieren und das alles auf deinem Smartphone.
   appinventor_shortdescription: Erstelle deine eigene Anwendung! (nur Android)
@@ -496,7 +491,7 @@ de-DE:
   thinkersmith2_shortdescription: Lerne, wie Computer mit den Zahlen 1 und 0 Informationen darstellen
   kodableunplugged_shortdescription: Eine spaßige Übung ohne Computer
   projguts_shortdescription: Versuche, einen Stein, Papier oder eine Schere zu simulieren
-  hourofcode_shortdescription: Platzhalter für neue code.org/hoc
+  hourofcode_shortdescription: Placeholder for new code.org/hoc
   frozen_shortdescription: Verwende Code, um Anna und Elsa bei ihrer Entdeckung der Magie und Schönheit von Eis zu begleiten.
   playlab_shortdescription: Erstelle eine Geschichte oder ein Spiel mit Play Lab!
   codeorg_longdescription: |
@@ -533,16 +528,16 @@ de-DE:
   robomindnl_longdescription: 'Schüler lernen die Grundlagen der Programmierung durch die Kontrolle ihrer eigenen virtuellen Roboter. Der online-Kurs ist komplett eigenständig mit Kurzpräsentationen, Filmen, Quiz und automatische Anleitung/Tipps bei der Programmierung Übungen helfen. '
   flappy_longdescription: Verwenden Sie Drag-and-Drop Programmierung um eigene Flappy Bird Spiel zu machen, und machen Sie diese verschieden (Flappy Shark, Flappy Santa). Fügen Sie das Spiel mit einem Klick auf ihr Handy.
   bitsbox_longdescription: "Customize your very own virtual tablet, then code a series of apps to play and share. Simple walkthroughs make it possible for even young kids to program real JavaScript, and the more advanced you are the further you'll go."
-  makegameswithus_longdescription: 'Lerne zu programmieren indem du ein iPhone Spiel entwickelst welches eine neue und Anfänger freundliche Programiersprache benutzt, genannt Swift! Kreiere ein Pok&eacute;mon inspiriertes Action Spiel und schreibe Programmierzeilen um deinem Monster neue Bewegungen beizubringen. Du wirst lernen wie man Variablen, Methoden und Objekte benutzt um deinem Monster beim gewinnen zu helfen!'
-  touchdevelop_longdescription: 'Der touch freundliche Editor wird dich beim kreieren von Pixel Art, beim lösen des Bär Puzzles oder beim entwickeln von deinem eigenem springenden Vogel Spiel behilflich sein leiten. '
+  makegameswithus_longdescription: 'Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pok&eacute;mon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!'
+  touchdevelop_longdescription: 'The touch-friendly editor will guide you in creating pixel art, solving the bear puzzle, or making your own jumping bird game. '
   appinventor_longdescription: 'Unterhaltsam und schnelle video-Tutorials führen Sie durch den Bau von drei einfache Apps für Ihr Android-Handy oder Tablet. Für Anfänger und Experten gleichermaßen entwickelt, wird dieser Stunde des Codes Sie breit zum starten machen um Ihre eigenen Anwendungen zu erstellen, bevor du dich versiehst. Stellen Sie  Ihre eigene App-Kreationen her, die Sie mit Ihren Freunden teilen können! Diese Aktivitäten eignen sich für Einzelpersonen und für Lehrer um die mit Klassen durch zu führen.'
   blockly_longdescription: 'Haben Sie PCs mit langsamen (oder nicht Existent)-Internet-Zugang? Downloade die Blockly Tutorials, die der Vorläufer der Code.org Tutorials wurden - eine einzelne 3MB ZIP-Datei kann auf jedem Computer geladen oder von einem Memorystick verwendet werden'
   thinkersmith2_longdescription: 'Schüler lernen etwas über darstellen und Speichern von Buchstaben in Binär, als Funktionen der ein- und ausschalten. Am Ende wird die Klasse ihre eigenen Initalien zum mitnhmen codieren.'
   kodableunplugged_longdescription: 'Zur Verwendung mit Normalpapier, die FuzzFamily Frenzy ist eine Einführung in die Programmierlogik für Kinder im Alter von 5 und höher. Ein Lehrer sollte das Spiel erklären, dann programmieren die Schüler einen Partner um einen einfachen Parcours zu vervollständigen. '
   projguts_longdescription: 'Diese "unplugged" Aktivität hilft Schülern lernen, wie die Modellierung und Simulation arbeitet, indem eine gruppe von Schülern verschiedene Versionen von Schere/Stein/Papier spielt und die Ergebnise als verschiedene Modellierungs Experimente darstellt.'
-  hourofcode_longdescription: Platzhalter für neue code.org/hoc
+  hourofcode_longdescription: Placeholder for new code.org/hoc
   frozen_longdescription: 'Wir wollen programmieren, damit wir Anna und Elsa treffen, wenn sie den Zauber und die Schönheit des Eises erkunden. Du wirst Schneeflocken machen und Muster, wie du eisläufst, und ein Winter- Wunderland, das du mit deinen Freunden teilen kannst!'
-  playlab_longdescription: Erfinde eine Geschichte oder ein Spiel mit dem Spielelabor! Erstelle Tiere, Piraten, Zombies, Ninjas und viele andere Charakter. Erstelle Sounds, erziele Punkte und werfe sogar Feuerbälle!
+  playlab_longdescription: Create a story or make a game with Play Lab! Make animals, pirates, zombies, ninjas, and many more characters move, make sounds, score points, and even throw fireballs!
   codeorg_beyond_name: Einführung in Informatik und Programmieren für Kinder zwischen 5 und 14 Jahre
   khan_beyond_name: Lerne Computer-Programmierung und Programmiersprachen
   tynker_beyond_name: Lerne Computer-Programmierung ganz einfach von zuhause

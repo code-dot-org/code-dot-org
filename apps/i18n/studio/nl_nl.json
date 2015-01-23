@@ -229,7 +229,6 @@
   "soundWinPoint2": "punt gewonnen 2",
   "soundWood": "hout",
   "speed": "snelheid",
-  "startSetValue": "start (rocket-height function)",
   "stopSprite": "stop",
   "stopSpriteN": "stop speler {spriteIndex}",
   "stopTooltip": "Hiermee wordt een beweging van een acteur gestopt.",

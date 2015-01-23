@@ -48,7 +48,7 @@
         edit-code:
           desc: Breyta kóða (beta)
           MazeEC: Stig 1
-          Applab: Áfangi 2
+          Webapp: Áfangi 2
           ArtistEC: Áfangi 3
           StudioEC: Áfangi 4
         events:
@@ -99,11 +99,10 @@
         Jigsaw: Púsl
         MazeStep: Völundarhús, þrep
         Wordsearch: Orðaleit
-        Webapp: App Lab
+        Webapp: Vefapp
         ArtistEC: Listamaðurinn
         TextMatch: Textaleikur
         StudioEC: Leikjasmiðja
-        Applab: App Lab
     trophy:
       name:
         Bronze: Brons
@@ -544,7 +543,7 @@
         maze_wordsearch_k_16: Færðu mig í eina átt svo aðra til að stafa orðið BELOW
         maze_wordsearch_k_20: Þetta er próf! Færðu mig í eina átt svo aðra til að
           stafa orðið STORY
-        applab_ec_simple: Create your app by using the blocks in the toolbox.
+        webapp_ec_simple: Búa til vefapp með því að nota createHtmlBlock.
         turtle_ec_1_2: 'Teiknaðu nú ferning. ATH.: notaðu uppáhaldslitinn þinn með
           því að velja hann í nýja "pennalitur" kubbnum.'
         turtle_ec_1_10: 'Þér tókst þetta! Teiknaðu nú hvað sem þú vilt. Nokkrar hugmyndir:

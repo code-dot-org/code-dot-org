@@ -48,7 +48,7 @@
         edit-code:
           desc: Upravit kód (beta)
           MazeEC: Fáze 1
-          Applab: Fáze 2
+          Webapp: Fáze 2
           ArtistEC: Fáze 3
           StudioEC: Fáze 4
         events:
@@ -99,11 +99,10 @@
         Jigsaw: skládačka
         MazeStep: Bludiště krokový režim
         Wordsearch: Osmisměrka
-        Webapp: App Lab
+        Webapp: Webová aplikace
         ArtistEC: Umělec
         TextMatch: Přiřazování textu
         StudioEC: Play Lab
-        Applab: App Lab
     trophy:
       name:
         Bronze: Bronzová
@@ -530,7 +529,7 @@
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell
           the word STORY
-        applab_ec_simple: Create your app by using the blocks in the toolbox.
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
           it in the new "penColor" block.'
         turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:

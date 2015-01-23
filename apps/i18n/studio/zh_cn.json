@@ -285,6 +285,5 @@
   "whenSpriteCollidedWithTopEdge": "接近上边缘",
   "whenUp": "当箭头向上",
   "whenUpTooltip": "执行下面按向上箭头键时采取的行动。",
-  "yes": "是",
-  "startSetValue": "crwdns27946:0crwdne27946:0"
+  "yes": "是"
 }

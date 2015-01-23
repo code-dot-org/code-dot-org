@@ -1,4 +1,4 @@
-es-AR:
+es:
   data:
     text_match:
       text match test:
@@ -19,15 +19,15 @@ es-AR:
         Enter answer here: Escribe aquí la respuesta
         4 + 5: 4 + 5
         Type the arithmetic expression here: Escribe la expresión aritmética aquí
-        Blocks to Math 1.blocks.start_blocks: Bloques a Matemáticas 1.blocks.start_blocks
-        Blocks to Math 1.blocks.start_blocks, 200: Bloques a Matemáticas 1.blocks.start_blocks,200
+        Blocks to Math 1.blocks.start_blocks: Blocks to Math 1.blocks.start_blocks
+        Blocks to Math 1.blocks.start_blocks, 200: Blocks to Math 1.blocks.start_blocks, 200
       Blocks to Math 2:
         Convert Blocks to Math: Convertir bloques en matemáticas
         Type out the arithmetic expression that matches this code: Escriba la expresión aritmética que coincida con este código
         /script_assets/msm/unit1/blockstomath2.png: /script_assets/msm/unit1/blockstomath2.png
         7 * 6: '7 * 6'
         Type the arithmetic expression here: Escribe la expresión aritmética aquí
-        Blocks to Math 2.blocks.start_blocks, 200: Bloques a Matemáticas 2.blocks.start_blocks,200
+        Blocks to Math 2.blocks.start_blocks, 200: Blocks to Math 2.blocks.start_blocks, 200
       Blocks to Math 3:
         Convert Blocks to Math: Convertir bloques en matemáticas
         Type out the arithmetic expression that matches this code: Escriba la expresión aritmética que coincida con este código
@@ -35,7 +35,7 @@ es-AR:
         (2 * 3) - (1 + 0): '(2 * 3) - (1 + 0)'
         2 * 3 - (1 + 0): '2 * 3 - (1 + 0)'
         Type the arithmetic expression here: Escribe la expresión aritmética aquí
-        Blocks to Math 3.blocks.start_blocks: Bloques a Matemáticas 3.blocks.start_blocks
+        Blocks to Math 3.blocks.start_blocks: Blocks to Math 3.blocks.start_blocks
       Blocks to Math 4:
         Convert Blocks to Math: Convertir bloques en matemáticas
         Type out the arithmetic expression that matches this code: Escriba la expresión aritmética que coincida con este código
@@ -43,8 +43,8 @@ es-AR:
         (5 + 8) - 12: '(5 + 8) - 12'
         5 + 8 - 12: '5 + 8 - 12'
         Type the arithmetic expression here: Escribe la expresión aritmética aquí
-        Blocks to Math 4.blocks.start_blocks: Bloques a matemáticas 4.blocks.start_blocks
-        Blocks to Math 4.blocks.start_blocks, 200: Bloques a matemáticas 4.blocks.start_blocks, 200
+        Blocks to Math 4.blocks.start_blocks: Blocks to Math 4.blocks.start_blocks
+        Blocks to Math 4.blocks.start_blocks, 200: Blocks to Math 4.blocks.start_blocks, 200
       Blocks to Math 5:
         Convert Blocks to Math: Convertir bloques en matemáticas
         Type out the arithmetic expression that matches this code: Escriba la expresión aritmética que coincida con este código
@@ -53,7 +53,7 @@ es-AR:
           - 
             2 * -6: '-2 * -6'
         Type the arithmetic expression here: Escribe la expresión aritmética aquí
-        Blocks to Math 5.blocks.start_blocks: Bloques a matemáticas 5.blocks.start_blocks
+        Blocks to Math 5.blocks.start_blocks: Blocks to Math 5.blocks.start_blocks
       Blocks to Math 6:
         Convert Blocks to Math: Convertir bloques en matemáticas
         Type out the arithmetic expression that matches this code: Escriba la expresión aritmética que coincida con este código
@@ -63,14 +63,14 @@ es-AR:
         (4 - 1) * (-2) + 12: '(4 - 1) * (-2) + 12'
         (4 - 1) * -2 + 12: '(4 - 1) * -2 + 12'
         Type the arithmetic expression here: Escribe la expresión aritmética aquí
-        Blocks to Math 6.blocks.start_blocks: Bloques a matemáticas 6.blocks.start_blocks
+        Blocks to Math 6.blocks.start_blocks: Blocks to Math 6.blocks.start_blocks
       Blocks to Math 7:
         Convert Blocks to Math: Convertir bloques en matemáticas
         Type out the arithmetic expression that matches this code: Escriba la expresión aritmética que coincida con este código
         /script_assets/msm/unit1/blockstomath7.png: /script_assets/msm/unit1/blockstomath7.png
         10 / (2 * (3 + 1)): '10 / (2 * (3 + 1))'
         Type the arithmetic expression here: Escribe la expresión aritmética aquí
-        Blocks to Math 7.blocks.start_blocks: Bloques a matemáticas 7.blocks.start_blocks
+        Blocks to Math 7.blocks.start_blocks: Blocks to Math 7.blocks.start_blocks
       Blocks to Bools 1:
         Convert Blocks to Math: Convertir bloques en matemáticas
         Type out the arithmetic expression that matches this code: Escriba la expresión aritmética que coincida con este código

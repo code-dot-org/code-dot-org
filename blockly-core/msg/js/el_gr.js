@@ -1,6 +1,6 @@
 goog.provide('Blockly.Msg.el_gr');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "call";
+Blockly.Msg.ACTUAL = "πραγματική";
 Blockly.Msg.ADD = "Πρόσθεσε";
 Blockly.Msg.ADD_COMMENT = "Πρόσθεσε σχόλιο";
 Blockly.Msg.ADD_PARAMETER = "Προσθέστε  παράμετρο";
@@ -61,7 +61,7 @@ Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_UNTIL = "επανάλαβε μέχρι�
 Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_WHILE = "επανάλαβε όσο";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = "Όσο η τιμή είναι ψευδής, εκτέλεσε μερικές εντολές.";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = "Όσο η τιμή είναι αληθής, εκτέλεσε μερικές εντολές.";
-Blockly.Msg.DEFINE_HEADER_DEFINITION = "Ορισμός";
+Blockly.Msg.DEFINE_HEADER_DEFINITION = "Definition";
 Blockly.Msg.DEFINE_FUNCTION_DEFINE = "Όρισε";
 Blockly.Msg.DELETE_BLOCK = "Διαγραφή Πλακιδίου";
 Blockly.Msg.DELETE_PARAMETER = "Διαγραφή παραμέτρου...";
@@ -74,7 +74,7 @@ Blockly.Msg.EXAMPLE = "Παράδειγμα";
 Blockly.Msg.EXAMPLE_DESCRIPTION = "Ορίζει ένα παράδειγμα με την αναμενόμενη και πραγματική συμπεριφορά";
 Blockly.Msg.EXPAND_ALL = "Επέκταση Πλακιδίων";
 Blockly.Msg.EXPAND_BLOCK = "Μπλοκ επέκτασης";
-Blockly.Msg.EXPECTED = "result";
+Blockly.Msg.EXPECTED = "αναμενόμενος";
 Blockly.Msg.EXTERNAL_INPUTS = "Εξωτερικές εισόδοι";
 Blockly.Msg.FUNCTION_CREATE = "Δημιουργήστε μια συνάρτηση";
 Blockly.Msg.FUNCTION_EDIT = "επεξεργάσου";

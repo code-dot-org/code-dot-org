@@ -3,7 +3,7 @@ bg-BG:
   select_language: Моля, изберете вашия език
   computer_science: Компютърни науки
   computer_science_edweek: Седмица на Компютърните Науки
-  csedweek_dates: 8-14 декември 2014 г.
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> Часът на кодирането</a> идва. Призоваваме всички учители и организатори, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> да планират техния Час на кодирането</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Вие учител по ИТ или  информатика  сте? Вhttps://crowdin.com/translate/codeorg/56/enus-bg#вижте други ресурси на CSEdWeek</a>'
   n_have_learned_an_hoc: '<h1>#</h1><h3>са се опитали</h3><h2>Часът на кодирането</h2>'
@@ -202,8 +202,8 @@ bg-BG:
   dashboard_action_delete_yes: Да
   dashboard_action_delete_no: Не
   dashboard_action_confirm: Да се изтрие ли?
-  dashboard_action_remove: Изтриване
-  dashboard_action_remove_confirm: Изтриване?
+  dashboard_action_remove: Remove
+  dashboard_action_remove_confirm: Remove?
   dashboard_action_done: Готово
   dashboard_action_required: изисква
   dashboard_navigation_home_page: Начална страница на учителя
@@ -242,7 +242,6 @@ bg-BG:
   dashboard_students_new_section: 'Създали сте нов раздел! Сега добавете вашите ученици, използвайки <b>Добавяне на ученик</b> и <b>добавяне на няколко ученици</b> от бутоните по-горе.'
   dashboard_students_placeholder_name: Име на ученика
   dashboard_students_name: Име
-  dashboard_students_progress: Progress
   dashboard_students_age: Възраст
   dashboard_students_gender: Пол
   dashboard_students_male: Мъж
@@ -289,10 +288,6 @@ bg-BG:
   dashboard_login_picture: Картина
   dashboard_login_none: Имейл
   dashboard_new_password: нова парола
-  dashboard_progress_not_completed: не е завършено
-  dashboard_progress_completed_too_many_blocks: завършено, но с повече блокове
-  dashboard_progress_completed_perfect: завършено, перфектно
-  dashboard_progress_furthest_level_attempted: последното пробвано ниво
   stats_hoc_2013_heading: 'Невероятната статистика от миналата година за Часът на кодирането. Само за една седмица:'
   stats_hoc_2013_image_alt: Статистика Часът на кодирането от 2013
   dashboard_teacher: Учител
@@ -328,7 +323,7 @@ bg-BG:
   carousel_heading_robots: Научете се да програмирате с роботи
   carousel_heading_ide: Платформи, популярни сред учителите
   educator_notes: Бележки за учители
-  how_to_teach_hoc: Как да преподавате един Час Кодиране
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Повече ресурси за учители и възпитатели
   participants: участници
   teachers_notes: Указания за учители

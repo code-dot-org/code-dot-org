@@ -49,7 +49,7 @@
         edit-code:
           desc: Edytuj kod (beta)
           MazeEC: Etap 1
-          Applab: Etap 2
+          Webapp: Etap 2
           ArtistEC: Etap 3
           StudioEC: Etap 4
         events:
@@ -100,11 +100,10 @@
         Jigsaw: Układanka
         MazeStep: Tryb Kroczenia po Labiryncie
         Wordsearch: WordSearch (Poszukiwanie słów)
-        Webapp: App Lab
+        Webapp: Webapp (aplikacje sieciowe)
         ArtistEC: Artysta/Postać
         TextMatch: Dopasowanie tekstu
         StudioEC: Lab Gier
-        Applab: App Lab
     trophy:
       name:
         Bronze: Brąz
@@ -569,7 +568,7 @@
           słowo BELOW
         maze_wordsearch_k_20: To jest test! Przesuwaj mnie w jedną stronę a potem
           w inną, żeby przeliterować słowo STORY
-        applab_ec_simple: Create your app by using the blocks in the toolbox.
+        webapp_ec_simple: Utwórz swoją aplikację sieciową przy użyciu createHtmlBlock.
         turtle_ec_1_2: 'Teraz narysuj kwadrat. Uwaga: użyj ulubionego koloru, wybierając
           go w nowym bloku "kolor pisaka".'
         turtle_ec_1_10: 'Wykonałeś to! Teraz narysuj cokolwiek. Niektóre zabawne pomysły:
@@ -732,7 +731,7 @@
         C1_bigevent_unplugged: Wielkie wydarzenie
         C1_getting_loopy: Dostać Loopy
         C1_pair_programming: Programowanie w parach
-        C1_maze_intro_sequencing: Labirynt Sekwencji - Intro
+        C1_maze_intro_sequencing: Maze Sequencing Intro
         C1_maze_debugging: Labirynt debugowanie
         C1_bee_level_intro: Poziom pszczoły - wprowadzenie
         C1_artist_intro: Artysta - wprowadzenie
@@ -798,10 +797,10 @@
         frozen_functions: Wprowadzenie do Funkcji
         playlab_intro: Wprowadzenie do Play Lab
         playlab_events: Zdarzenia Play Gry Lab
-        playlab_repeat_forever: Play Lab Powtarzaj Zawsze
+        playlab_repeat_forever: Play Lab Repeat Forever
     callout:
       text:
-        drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku
+        drag_blocks: Drag a "move" block and snap it below the other block
         run: Kliknij na "Uruchom", aby uruchomić program
         watch_again: Kliknij tutaj, aby obejrzeć film ponownie
         gray_block_explanation: Nie można usunąć bloków, które są szare. Czy mógłbyś
@@ -810,31 +809,31 @@
         instructions_repeat_explanation: Instrukcje dla każdej łamigłówki są powtarzane
           tutaj
         category_explanation: Masz te same bloki, ale teraz są one ułożone w kategorie
-        set_sprite_image: Dołącz blok "ustaw obrazek aktora" do bloku "kiedy historia
-          się rozpocznie", aby aktor mógł wziąć udział w historii
+        set_sprite_image: Attach a "set actor to image" block to the "when story starts"
+          block to enable an actor for this story
         studio_say_text: W te cudzysłowy wpisz to, co ma powiedzieć Twoja postać
         jigsaw_click: Kliknij ten blok!
-        move_elsa_forward: Złap blok "idź naprzód" i dołącz poniżej bloku "Start",
-          aby Elsa poszła naprzód
-        turn_elsa: Użyj bloku "Skręć", aby Elsa obróciła się. Liczba wybrana z listy
-          rozwijanej, określa o ile stopni Elsa ma się obrócić
+        move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
+          Run" block to make Elsa move forward
+        turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down
+          determines how much Elsa turns
         replace_questions: Użyj rozwijanego menu, aby zastąpić "???" przez liczbę
         replace_questions_degree: Użyj rozwijanego menu, aby zastąpić "???" przez
           prawidłową liczbę stopni obrotu
         repeat_blocks: Użyj bloku "Powtarzaj" i otocz nim inne bloki w obszarze roboczym
-        repeat_blocks_1: (1) Użyj tego bloku i umieść go dookoła szarych bloków w
-          obszarze roboczym
-        repeat_blocks_2: (2) Przesuń blok "Powtórz" tutaj i umieść szare bloki wewnątrz
-          niego
-        snowflake_dropdown: Użyj tej listy rozwijanej, aby utworzyć różne płatki śniegu!
+        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the
+          workspace
+        repeat_blocks_2: (2) Move the "Repeat" block here, and place the gray blocks
+          inside
+        snowflake_dropdown: Use this drop-down to create different snowflakes!
         degrees_per_side: Podziel 360 przez liczbę stron, aby uzyskać miarę każdego
           kąta w stopniach.
         set_sides: Use this block to set "sides" to the number needed to complete
           the puzzle.
-        set_length: Użyj tego bloku, aby ustawić "długość" poprawnej wartości.
+        set_length: Use this block to set "length" to the correct value.
         which_equation: Which equation makes each side shorter for shapes with more
           sides?
-        get_nectar: Użyj nowego bloku "dostać nektar".
+        get_nectar: Use the new "get nectar" block.
         actions_category: The tool box got a new look! The "Actions" blocks are in
           here now.
         draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
@@ -893,4 +892,4 @@
           marks
         arrows_move_actor: Use the arrows to move the actor
         right_arrow_fireball: Use the right arrow to shoot fireballs
-        name_function: Napisz tu nazwę swojej funkcji
+        name_function: Write the name of your function here

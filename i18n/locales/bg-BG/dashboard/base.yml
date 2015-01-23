@@ -1,7 +1,4 @@
 bg:
-  errors:
-    messages:
-      not_saved: 'Please correct the following errors:'
   activerecord:
     errors:
       messages:
@@ -297,10 +294,10 @@ bg:
     email_resend_confirm: Повторно изпращане на инструкции
     new_password_hint: (Оставете празно, ако не искате да го промените)
     current_password_hint: (нуждаем се от вашата текуща парола, за да потвърдим вашите промени)
-    delete: Изтриване на вашия акаунт
-    delete_text: Щракнете върху бутона по-долу за да изтриете вашия акаунт.
-    delete_text_teacher_note: 'Моля, обърнете внимание: изтриването на вашия акаунт няма да изтрие акаунтите на вашите ученици.'
-    delete_confirm: Наистина ли искате да изтриете профила си?
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Завършено
     tried: Опитано

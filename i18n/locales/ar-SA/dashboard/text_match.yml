@@ -7,7 +7,7 @@ ar:
         xyz: xyz
         123: "123"
         /script_assets/msm/Unit 1/Exercise_5_question_2.png: /script_assets/msm/Unit 1/Exercise_5_question_2.png
-        Type out the arithmetic expression that this circle of evaluation evaluates to: اكتب التعبير الحسابي الذي تقيم به دائرة التقييم هذه
+        Type out the arithmetic expression that this circle of evaluation evaluates to: اكتب بالتعبير الحسابي الذي يقيم هذه الدائرة من التقييم إلى
         (9-3)+(4*7): '(9-3)+(4*7)'
         (9-3)+4: null
         9-3+4: null

@@ -88,6 +88,6 @@
   "signup":"Κάντε εγγραφή για το εισαγωγικό μάθημα",
   "hintHeader":"Να μια συμβουλή:",
   "genericFeedback":"Δες πως κατέληξες και δοκίμασε να διορθώσεις το πρόγραμμά σου.",
-  "toggleBlocksErrorMsg":"Πρέπει να διορθώσετε ένα σφάλμα στο πρόγραμμά σας πριν μπορεί να παρουσιασθεί ως μπλοκ.",
+  "toggleBlocksErrorMsg":"You need to correct an error in your program before it can be shown as blocks.",
   "defaultTwitterText":"Δείτε τι έκανα"
 }

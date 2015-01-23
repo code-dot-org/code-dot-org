@@ -126,7 +126,7 @@
           simple.
         video: C1_happy_maps_unplugged
       MoveIt:
-        title: Déplacez le, déplacez le
+        title: Move it, Move it
         desc: Les élèves créent des algorithmes simples (ensemble d'instructions)
           pour déplacer un personnage dans un labyrinthe en utilisant une commande
           simple.
@@ -139,7 +139,7 @@
           et de la manière dont les algorithmes y jouent un rôle essentiel.
         video: C1_planting_seed
       BuildingAFoundation:
-        title: Créer une Fondation
+        title: Building a Foundation
         desc: Les élèves construisent une structure en n'utilisant que les éléments
           fournis. Les structures doivent accomplir une tâche (atteindre une certaine
           hauteur ou soutenir un certain poids), et les élèves discutent de l'idée
@@ -293,7 +293,7 @@
         title: Contrats
         desc: Description de leçon sur les contrats
       DesignRecipe:
-        title: La Recette de la Conception
+        title: The Design Recipe
         desc: Description de la lesson sur l'apparence des recettes
       Booleans:
         title: Booléens
