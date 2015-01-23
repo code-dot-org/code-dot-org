@@ -68,6 +68,12 @@ Blockly.FunctionEditor = function() {
 Blockly.FunctionEditor.prototype.definitionBlockType = 'procedures_defnoreturn';
 
 /**
+ * The i18n string to use for the header
+ * @type {string}
+ */
+Blockly.FunctionEditor.prototype.headerString = Blockly.Msg.FUNCTION_HEADER;
+
+/**
  * The type of block to instantiate for parameter definition
  * @type {string}
  */
@@ -502,7 +508,7 @@ Blockly.FunctionEditor.prototype.addEditorFrame_ = function () {
     'class': 'blocklyText',
     style: 'font-size: 12pt'
   }, this.modalBackground_);
-  this.frameText_.textContent = Blockly.Msg.FUNCTION_HEADER;
+  this.frameText_.textContent = this.headerString;
 };
 
 Blockly.FunctionEditor.prototype.position_ = function() {
