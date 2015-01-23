@@ -64,7 +64,6 @@ Blockly.ContractEditor.DEFAULT_PARAMETER_TYPE = 'none';
 
 Blockly.ContractEditor.prototype.definitionBlockType = 'functional_definition';
 Blockly.ContractEditor.prototype.parameterBlockType = 'functional_parameters_get';
-Blockly.ContractEditor.prototype.headerString = Blockly.Msg.CONTRACT_EDITOR_HEADER;
 
 Blockly.ContractEditor.prototype.create_ = function() {
   Blockly.ContractEditor.superClass_.create_.call(this);
@@ -224,7 +223,10 @@ Blockly.ContractEditor.prototype.createContractDom_ = function() {
  */
 Blockly.ContractEditor.prototype.setupUIForBlock_ = function(targetFunctionDefinitionBlock) {
   var isEditingVariable = targetFunctionDefinitionBlock.isVariable();
-  this.frameText_.textContent = isEditingVariable ? Blockly.Msg.FUNCTIONAL_VARIABLE_HEADER : Blockly.Msg.FUNCTION_HEADER;
+  this.frameText_.textContent =
+    isEditingVariable ?
+      Blockly.Msg.FUNCTIONAL_VARIABLE_HEADER :
+      Blockly.Msg.CONTRACT_EDITOR_HEADER;
   goog.dom.setTextContent(goog.dom.getElement('outputTypeTitle'),
     isEditingVariable ? Blockly.Msg.FUNCTIONAL_VARIABLE_TYPE : Blockly.Msg.FUNCTIONAL_RANGE_LABEL);
   goog.style.showElement(goog.dom.getElement('domain-area'), !isEditingVariable);
