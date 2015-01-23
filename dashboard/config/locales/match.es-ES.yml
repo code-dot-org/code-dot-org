@@ -1,4 +1,4 @@
-"es-AR":
+"es":
   data:
     match:
       2-3 artist loops match 1:
@@ -73,8 +73,6 @@
       2-3 Big Event Match 1:
         Matching: Emparejar
         /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
-        Match the button combination to the dance moves.: Match the button combination
-          to the dance moves.
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
@@ -117,7 +115,7 @@
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
       4-5 maze match 1:
         Maze Match: Partida de Laberinto
-        Match the puzzles to the blocks: Une los rompecabezas a los bloques
+        Match the puzzles to the blocks: Relaciona los rompecabezas a los bloques
         Instructions: Instrucciones
         Drag the blocks to match.: Arrastra los bloques para unirlos.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
@@ -252,8 +250,6 @@
       K-1 Big Event Match 1:
         Matching: Emparejar
         /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
-        Match the button combination to the dance moves.: Match the button combination
-          to the dance moves.
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png

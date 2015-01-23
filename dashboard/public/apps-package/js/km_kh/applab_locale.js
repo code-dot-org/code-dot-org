@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -54,21 +54,22 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catText":function(d){return "អត្ថ​​បទ"},
 "catVariables":function(d){return "អថេរ"},
 "continue":function(d){return "បន្ត"},
-"createHtmlBlock":function(d){return "create html block"},
-"createHtmlBlockTooltip":function(d){return "Creates a block of HTML in the app."},
+"createHtmlBlock":function(d){return "បង្កើត​ប្លុក html"},
+"createHtmlBlockTooltip":function(d){return "បង្កើត​ប្លុក HTML មួយ​នៅ​ក្នុង​កម្មវិធី។"},
 "finalLevel":function(d){return "សូម​អបអរសាទរ! អ្នក​បាន​បញ្ចប់​ល្បែង​ប្រាជ្ញា​ចុង​ក្រោយ​ហើយ។"},
 "nextLevel":function(d){return "សូម​អបអរ​សាទរ! អ្នក​បាន​បញ្ចប់​ល្បែង​ប្រាជ្ញា​នេះ​ហើយ។"},
 "no":function(d){return "ទេ"},
 "numBlocksNeeded":function(d){return "ល្បែង​ប្រាជ្ញា​នេះ​អាច​ត្រូវ​បាន​ដោះស្រាយ​ជាមួយ​ប្លុក​ចំនួន %1 ។"},
-"pause":function(d){return "Break"},
-"reinfFeedbackMsg":function(d){return "You can press the \"Try again\" button to go back to running your app."},
+"pause":function(d){return "បញ្ឈប់"},
+"reinfFeedbackMsg":function(d){return "អ្នក​អាច​ចុច​ប៊ូតុង \"ព្យាយាម​ម្ដង​ទៀត\" ដើម្បី​ត្រឡប់​ទៅ​ដំណើរការ​កម្មវិធី​របស់​អ្នក។"},
 "repeatForever":function(d){return "ធ្វើ​ឡើង​វិញ​ជា​រៀង​រហូត"},
 "repeatDo":function(d){return "ធ្វើ"},
-"repeatForeverTooltip":function(d){return "Execute the actions in this block repeatedly while the app is running."},
-"shareApplabTwitter":function(d){return "Check out the app I made. I wrote it myself with @codeorg"},
-"shareGame":function(d){return "Share your app:"},
+"repeatForeverTooltip":function(d){return "ធ្វើ​សកម្មភាព​នានា​ដែល​មាន​ក្នុង​ប្លុក​នេះ​ម្ដង​ហើយ​ម្ដង​ទៀត នៅ​ពេល​កម្មវិធី​កំពុង​ដំណើរការ។"},
+"shareWebappTwitter":function(d){return "ចូល​មើល​កម្មវិធី​ដែល​ខ្ញុំ​បាន​ធ្វើ។ ខ្ញុំ​បាន​បង្កើត​វា​ដោយ​ខ្លួន​ឯង​ជាមួយ @codeorg"},
+"shareGame":function(d){return "ចែករំលែក​កម្មវិធី​របស់​អ្នក៖"},
 "stepIn":function(d){return "Step in"},
 "stepOver":function(d){return "Step over"},
 "stepOut":function(d){return "Step out"},
-"viewData":function(d){return "View Data"},
+"turnBlack":function(d){return "ធ្វើឲ្យ​ខ្មៅ"},
+"turnBlackTooltip":function(d){return "ធ្វើ​ឲ្យ​អេក្រង់​ខ្មៅ។"},
 "yes":function(d){return "យល់ព្រម"}};

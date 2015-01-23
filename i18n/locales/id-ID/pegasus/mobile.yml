@@ -242,7 +242,6 @@ id-ID:
   dashboard_students_new_section: 'Anda telah membuat bagian yang baru! Sekarang tambahkan siswa Anda menggunakan tombol <b>Tambahkan siswa</b> dan <b>Tambahkan beberapa siswa</b> di atas.'
   dashboard_students_placeholder_name: Nama siswa
   dashboard_students_name: Nama
-  dashboard_students_progress: Progress
   dashboard_students_age: Umur
   dashboard_students_gender: Jenis kelamin
   dashboard_students_male: Laki-laki
@@ -289,10 +288,6 @@ id-ID:
   dashboard_login_picture: Gambar
   dashboard_login_none: email
   dashboard_new_password: Kata sandi baru
-  dashboard_progress_not_completed: belum selesai
-  dashboard_progress_completed_too_many_blocks: selesai, terlalu banyak blok
-  dashboard_progress_completed_perfect: selesai, sempurna
-  dashboard_progress_furthest_level_attempted: tingkat terjauh yang dicoba
   stats_hoc_2013_heading: "Incredible stats from last year's Hour of Code. In one week alone:"
   stats_hoc_2013_image_alt: Statistik Hour of Code tahun 2013
   dashboard_teacher: Guru

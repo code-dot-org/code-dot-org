@@ -327,13 +327,3 @@ nn:
           "Eval: Conditionals": 'Eval: Vilkår'
           "Unplugged: Collision Detection and the Distance Formula": 'Straumlaust: Deteksjon av kollisjonar og distanseformelen'
           "Play Lab: Collision Detection (Big Game)": 'Spel-lab: Detekssjon av kollisjong (Stort spel)'
-        algebrademo:
-          description: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
-          Algebra Demo: Algebra Demo
-          Evaluation Blocks: Evaluation Blocks
-          Making Pictures: Making Pictures
-          Defining Variables: Defining Variables
-          Defining Simple Functions: Defining Simple Functions
-          The Design Recipe: Design oppskrifta
-        K5PD:
-          Introduction to PD: Introduction to PD

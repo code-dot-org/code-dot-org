@@ -45,6 +45,7 @@
   "missingBlocksErrorMsg": "Përdor një ose më shumë nga blloqet e mëposhtme për të zgjidhur këtë puzzle.",
   "nextLevel": "Urime ju e perfunduat Puzzle-n {puzzleNumber}.",
   "nextLevelTrophies": "Urime! Ti përfundove Puzzle {puzzleNumber} dhe fitove {numTrophies, plural, one {a trophy} other {# trophies}}.",
+  "nextStage": "Urime! Ti përfundove {stageName}.",
   "nextStageTrophies": "Urime! Ti përfundove {stageName} dhe fitove {numTrophies, plural, one {a trophy} other {# trophies}}.",
   "numBlocksNeeded": "Urime! Ti përfundove Puzzle {puzzleNumber}. (Megjithatë, ti mund të kishe përdorur vetëm {numBlocks, plural, one {1 block} other {# blocks}}.)",
   "numLinesOfCodeWritten": "Ti sapo shkruajte {numLines, plural, one {1 line} other {# lines}} të kodit!",
@@ -65,7 +66,7 @@
   "tooFewBlocksMsg": "Ti je duke i përdorur të gjithë tipet e nevojshëm të blloqeve, por përpiqu të përdorësh më shumë nga këto tipe blloqesh për të përfunduar këtë puzzle.",
   "tooManyBlocksMsg": "Ky puzzle mund të zgjidhet me blloqet <x id='START_SPAN'/><x id='END_SPAN'/>.",
   "tooMuchWork": "Ti më detyrove të bëj shumë veprime! Mund të përpiqesh ta përsërisësh me më pak hapa?",
-  "toolboxHeader": "Blloqet",
+  "toolboxHeader": "blloqe",
   "openWorkspace": "Si Funksionon",
   "totalNumLinesOfCodeWritten": "Totali i gjithë kohës: {numLines, plural, one {1 line} other {# lines}} i kodit.",
   "tryAgain": "Provo perseri",
@@ -87,6 +88,6 @@
   "signup": "Rregjistrohu për kursin hyrës",
   "hintHeader": "Ja ku është një këshillë:",
   "genericFeedback": "Shiko se si përfundove dhe përpiqu të rregullosh programin tënd.",
-  "toggleBlocksErrorMsg": "Ti duhet të rregullosh një gabim në programin tënd përpara se të shfaqet si blloqet.",
+  "toggleBlocksErrorMsg": "You need to correct an error in your program before it can be shown as blocks.",
   "defaultTwitterText": "Shiko se çfarë bëra"
 }

@@ -242,14 +242,14 @@
           ALgorithmus einfach hälst sind da viele wege ihn zu benutzen. Wenn du aber
           willst das jeder am Ende das Gleiche hat muss dein Algorithmus viele Details
           haben.
-        video: C4_unverfälscht_Algorithmen
+        video: C4_unplugged_algorithms
       EnvelopeVariables:
         title: Umschlag-Variablen
         desc: Variablen lassen viel Freiheit in der Informatik.  Diese Lektion hilft
           zu erklären, was Variablen sind und wie wir sie in vielfältiger Weise nutzen
           können. Verwenden Sie diese Aufgabe vor (oder in Verbindung mit) der Lektion
           über Abstraktion, um die Idee zu hause entwickeln zulassen.
-        video: C4_unverfälscht_Variablen
+        video: C4_unplugged_variables
       MadGlibs:
         title: Sauer Glibs
         desc: Abstraktion ist eine der wichtigsten Fähigkeiten für einen Informatiker
@@ -270,7 +270,7 @@
           die Sie innerhalb Ihrer größeren Programms immer und immer wieder verwenden
           können. Diese Lektion hilft Schülern intuitiv zu verstehen, warum eine solche
           hilfreiche Praxis ist Stücke von Code in Funktionen zu kombinieren.  '
-        video: C4_unverfälscht_Parameter
+        video: C4_unplugged_parameters
       BinaryImages:
         title: Binärbilder
         desc: Obwohl viele Leute über Binary als streng Nullen und Einsen denken,
@@ -279,7 +279,7 @@
           findet dieses Konzept noch einen Schritt weiter, wie es veranschaulicht,
           wie ein Computer noch komplexeren Informationen (z. B. Bilder und Farben)
           gespeichert werden kann in Binär, sowie.
-        video: C4_unverfälscht_Binärdatei
+        video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
         title: Videospiele und Koordination von Flugzeugen
         desc: Beschreibung der Lektion zu Videospielen und der Koordination von Flugzeugen
@@ -287,10 +287,10 @@
         title: Verträge
         desc: Beschreibung der Lektion zu "Contracts unplugged"
       DesignRecipe:
-        title: Das Design-Rezept
+        title: The Design Recipe
         desc: Beschreibung der Lektion für Design-Rezepte
       Booleans:
-        title: Boolesche Variable
+        title: Booleans
         desc: Beschreibung der Lektion zu Boolean Variablen
       ConditionalsPiecewiseFunctions:
         title: Conditionals and Piecewise Functions

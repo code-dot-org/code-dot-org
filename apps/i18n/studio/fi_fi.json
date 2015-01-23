@@ -229,7 +229,6 @@
   "soundWinPoint2": "voittopiste 2",
   "soundWood": "puu",
   "speed": "nopeus",
-  "startSetValue": "start (rocket-height function)",
   "stopSprite": "pysähdy",
   "stopSpriteN": "pysäytä hahmo {spriteIndex}",
   "stopTooltip": "Pysäyttää hahmon liikkeen.",

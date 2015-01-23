@@ -3,7 +3,7 @@
   select_language: Vælg dit sprog
   computer_science: Computer videnskab
   computer_science_edweek: Computer Videnskabs Uddannelses Uge
-  csedweek_dates: 14. december, 2014
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold"> Hour of Code</a> kommer. Opråb til alle lærere og arrangørerne,
     <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -125,12 +125,12 @@
     %{lines} linjer af kode.'
   start_hoc: Start Hour of Code nu
   contact_form_topic_press: Pressen/medierne (interview eller taler-arrangementer)
-  stats_michael: '"Jeg har <b>aldrig, nogensinde</b> set mine elever så begejstrede
-    for at lære." - Michael Clark, lærer'
-  stats_nina: '"Hver eneste dag gav de samme resultater&mdash; 100% engagement." -
-    Nina Nichols Peery, lærer'
-  stats_student: '"Jeg vidste det var en <b>once-in-a-lifetime</b> chance." - Mariana
-    Alzate, 5. klasse'
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
+    - Michael Clark, Teacher'
+  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
+    - Nina Nichols Peery, Teacher'
+  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
+    Alzate, 5th grader'
   studiobar_title: Udforsk <a href='http://studio.code.org'>kodeskolen</a>
   studiobar_elementary_title: Grundlæggende kurser
   studiobar_elementary_body: Vores tre nye kurser for indskoling og melemtrin
@@ -145,8 +145,8 @@
   studiobar_donate_title: Donér
   studiobar_donate_body: Hver gang du donerer hvad der svarer til en dollar, lærer
     et barn mere
-  studiobar_shop_title: Butik
-  studiobar_shop_body: Nedbryd stereotyper. Bær vores logo med stolthed.
+  studiobar_shop_title: Shop
+  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   contact_form_topic_student: Jeg er elev
   contact_form_topic_parent: Jeg er en forælder
   contact_form_topic_teacher: Jeg er en lærer/pædagog
@@ -236,8 +236,8 @@
   dashboard_action_delete_yes: Ja
   dashboard_action_delete_no: Nej
   dashboard_action_confirm: Slet?
-  dashboard_action_remove: Fjern
-  dashboard_action_remove_confirm: Fjern?
+  dashboard_action_remove: Remove
+  dashboard_action_remove_confirm: Remove?
   dashboard_action_done: Udfør
   dashboard_action_required: kræves
   dashboard_navigation_home_page: Lærerens Startside
@@ -287,7 +287,6 @@
     ovenfor.
   dashboard_students_placeholder_name: Elevens navn
   dashboard_students_name: Navn
-  dashboard_students_progress: Progress
   dashboard_students_age: Alder
   dashboard_students_gender: Køn
   dashboard_students_male: Mand
@@ -345,10 +344,6 @@
   dashboard_login_picture: Billede
   dashboard_login_none: E-mail
   dashboard_new_password: Ny adgangskode
-  dashboard_progress_not_completed: ikke afsluttet
-  dashboard_progress_completed_too_many_blocks: afsluttet, for mange blokke
-  dashboard_progress_completed_perfect: Afsluttet, perfekt
-  dashboard_progress_furthest_level_attempted: længst opnåede niveau
   stats_hoc_2013_heading: 'Utrolige statistikker fra sidste års "Hour of Code". I
     en uge alene:'
   stats_hoc_2013_image_alt: Statistik fra 2013 "Hour of Code"
@@ -387,7 +382,7 @@
   carousel_heading_robots: Lære at programmere med robotter
   carousel_heading_ide: Platforme populære blandt lærere
   educator_notes: Lærervejledning
-  how_to_teach_hoc: Sådan undervises i Én Times Kode
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Flere ressourcer til lærere og undervisere
   participants: deltagerne
   teachers_notes: Lærerens noter
@@ -1028,3 +1023,8 @@
   sphero_beyond_longdescription: Uanset om du er lærer eller forælder, vil SPRK lektionerne
     giver børnene et sjovt kursus i at programmere robotter, og samtidig skærpe deres
     færdigheder i matematik og naturfag.
+  dashboard_students_progress: Progress
+  dashboard_progress_not_completed: not completed
+  dashboard_progress_completed_too_many_blocks: completed, too many blocks
+  dashboard_progress_completed_perfect: completed, perfect
+  dashboard_progress_furthest_level_attempted: furthest level attempted

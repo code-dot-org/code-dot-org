@@ -243,7 +243,6 @@ ro-RO:
   dashboard_students_new_section: 'Aţi creat o nouă secţiune! Acum, adăugaţi elevii dumneavoastră utilizând butoanele <b>Adăugare elev</b> şi <b>Adăugare mai mulți elevi</b> de mai sus.'
   dashboard_students_placeholder_name: Numele elevului
   dashboard_students_name: Nume
-  dashboard_students_progress: Progress
   dashboard_students_age: Vârsta
   dashboard_students_gender: Sex
   dashboard_students_male: De sex masculin
@@ -290,10 +289,6 @@ ro-RO:
   dashboard_login_picture: Poză
   dashboard_login_none: E-mail
   dashboard_new_password: Parolă nouă
-  dashboard_progress_not_completed: nefinalizat
-  dashboard_progress_completed_too_many_blocks: finalizat, prea multe blocuri
-  dashboard_progress_completed_perfect: finalizat, perfect
-  dashboard_progress_furthest_level_attempted: cel mai îndepărtat nivel încercat
   stats_hoc_2013_heading: 'Statistici incredibile la evenimentul Hour of Code de anul trecut. Într-o singură săptămână:'
   stats_hoc_2013_image_alt: Statistici Hour of Code (Ora de Programare) din 2013
   dashboard_teacher: Profesor

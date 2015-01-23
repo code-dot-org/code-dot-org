@@ -3,7 +3,7 @@ fr-FR:
   select_language: Veuillez sélectionner votre langue
   computer_science: Informatique
   computer_science_edweek: "Semaine de l'éducation des sciences informatiques"
-  csedweek_dates: 8-14 décembre 2014
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: |-
     L' <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Heure de Code</a> approche. Appel à tous les enseignants et les organisateurs à <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">plannifier votre heure de Code</a>
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Etes vous un enseignant en informatique ? Consultez nos autres ressources CSEdWeek</a>'
@@ -248,7 +248,6 @@ fr-FR:
   dashboard_students_new_section: 'Vous avez créé une nouvelle section ! Maintenant, ajoutez vos élèves en utilisant les boutons <b>Ajouter étudiant</b> et <b>Ajouter plusieurs étudiants</b> ci-dessus.'
   dashboard_students_placeholder_name: "Nom de l'élève"
   dashboard_students_name: Nom
-  dashboard_students_progress: Progress
   dashboard_students_age: Age
   dashboard_students_gender: Sexe
   dashboard_students_male: Masculin
@@ -295,10 +294,6 @@ fr-FR:
   dashboard_login_picture: Photo
   dashboard_login_none: E-mail
   dashboard_new_password: nouveau mot de passe
-  dashboard_progress_not_completed: pas terminé
-  dashboard_progress_completed_too_many_blocks: terminé, trop de blocs
-  dashboard_progress_completed_perfect: terminé, parfait
-  dashboard_progress_furthest_level_attempted: le plus haut niveau tenté
   stats_hoc_2013_heading: "Les statistiques incroyable de l'an dernier pour l'Heure de Code. En une seule semaine:"
   stats_hoc_2013_image_alt: "Statistiques d'une Heure de Code 2013"
   dashboard_teacher: Professeur
@@ -337,7 +332,7 @@ fr-FR:
   carousel_heading_robots: Apprenez à programmer avec des robots
   carousel_heading_ide: Plates-formes populaires parmi les enseignants
   educator_notes: "Notes de l'éducateur"
-  how_to_teach_hoc: Comment enseigner une Heure de Code
+  how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Plus de ressources pour enseignants et éducateurs
   participants: participants
   teachers_notes: "Notes de l'enseignant"

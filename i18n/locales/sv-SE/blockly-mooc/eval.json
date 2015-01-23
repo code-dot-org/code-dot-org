@@ -9,7 +9,7 @@
   "rectangleBlockTitle":"rektangel (bredd, höjd, stil, färg)",
   "reinfFeedbackMsg":"Du kan trycka på \"Försök igen\"-knappen för att redigera din ritning.",
   "rotateImageBlockTitle":"rotera (grader, bild)",
-  "scaleImageBlockTitle":"scale (factor, image)",
+  "scaleImageBlockTitle":"skala (faktor)",
   "squareBlockTitle":"kvadrat (storlek, stil, färg)",
   "starBlockTitle":"stjärna(radius, stil, färg)",
   "radialStarBlockTitle":"Radial-stjärna (poäng, inre, yttre, stil, färg)",

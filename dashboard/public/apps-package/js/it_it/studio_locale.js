@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -187,7 +187,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "for":function(d){return "per"},
 "hello":function(d){return "ciao"},
 "helloWorld":function(d){return "Ciao a tutti!"},
-"incrementPlayerScore":function(d){return "aggiungi un punto"},
+"incrementPlayerScore":function(d){return "hai fatto 1 punto"},
 "makeProjectileDisappear":function(d){return "scompari"},
 "makeProjectileBounce":function(d){return "rimbalzo"},
 "makeProjectileBlueFireball":function(d){return "fai una palla di fuoco blu"},
@@ -197,12 +197,12 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "makeProjectilePurpleHearts":function(d){return "fai dei cuori viola"},
 "makeProjectileRedHearts":function(d){return "fai dei cuori rossi"},
 "makeProjectileTooltip":function(d){return "Fai scomparire o rimbalzare il proiettile appena urta."},
-"makeYourOwn":function(d){return "Costruisci il tuo Gioco col Laboratorio"},
-"moveDirectionDown":function(d){return "in basso"},
-"moveDirectionLeft":function(d){return "a sinistra"},
-"moveDirectionRight":function(d){return "a destra"},
-"moveDirectionUp":function(d){return "in alto"},
-"moveDirectionRandom":function(d){return "a caso"},
+"makeYourOwn":function(d){return "Costruisci il tuo Gioco da Laboratorio"},
+"moveDirectionDown":function(d){return "basso"},
+"moveDirectionLeft":function(d){return "sinistra"},
+"moveDirectionRight":function(d){return "destra"},
+"moveDirectionUp":function(d){return "alto"},
+"moveDirectionRandom":function(d){return "scelta a caso"},
 "moveDistance25":function(d){return "25 pixel"},
 "moveDistance50":function(d){return "50 pixel"},
 "moveDistance100":function(d){return "100 pixel"},
@@ -213,7 +213,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "moveDistanceTooltip":function(d){return "Sposta un personaggio della distanza specificata nella direzione specificata."},
 "moveSprite":function(d){return "sposta"},
 "moveSpriteN":function(d){return "sposta il personaggio "+appLocale.v(d,"spriteIndex")},
-"toXY":function(d){return "a x,y"},
+"toXY":function(d){return "to x,y"},
 "moveDown":function(d){return "sposta in basso"},
 "moveDownTooltip":function(d){return "Sposta un personaggio verso il basso."},
 "moveLeft":function(d){return "sposta a sinistra"},
@@ -270,7 +270,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "projectileHiro":function(d){return "Hiro"},
 "projectileBaymax":function(d){return "Baymax"},
 "projectileRapunzel":function(d){return "Raperonzolo"},
-"reinfFeedbackMsg":function(d){return "Premi \"Riprova\" per ricominciare a giocare."},
+"reinfFeedbackMsg":function(d){return "Premi \"Riprova\" per ricominciare a raccontare la tua storia."},
 "repeatForever":function(d){return "ripeti per sempre"},
 "repeatDo":function(d){return "esegui"},
 "repeatForeverTooltip":function(d){return "Esegui ripetutamente le azioni in questo blocco mentre la storia è in esecuzione."},
@@ -338,7 +338,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setSpriteTennisGirl":function(d){return "all'immagine di una tennista"},
 "setSpriteTennisBoy":function(d){return "all'immagine di un tennista"},
 "setSpriteUnicorn":function(d){return "all'immagine di un unicorno"},
-"setSpriteWitch":function(d){return "all'immagine di una strega"},
+"setSpriteWitch":function(d){return "a un'immagine di strega"},
 "setSpriteWizard":function(d){return "all'immagine di un mago"},
 "setSpritePositionTooltip":function(d){return "Sposta istantaneamente un personaggio nella posizione specificata."},
 "setSpriteK1Tooltip":function(d){return "Mostra o nascondi il personaggio specificato."},
@@ -384,7 +384,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "soundWinPoint2":function(d){return "punto vinto (versione alternativa)"},
 "soundWood":function(d){return "legno"},
 "speed":function(d){return "velocità"},
-"startSetValue":function(d){return "start (rocket-height function)"},
 "stopSprite":function(d){return "ferma"},
 "stopSpriteN":function(d){return "ferma il personaggio "+appLocale.v(d,"spriteIndex")},
 "stopTooltip":function(d){return "Ferma il movimento di un personaggio."},

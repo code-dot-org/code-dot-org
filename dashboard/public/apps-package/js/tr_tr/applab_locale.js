@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -150,21 +150,22 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catText":function(d){return "yazı"},
 "catVariables":function(d){return "Değişkenler"},
 "continue":function(d){return "Devam Et"},
-"createHtmlBlock":function(d){return "create html block"},
-"createHtmlBlockTooltip":function(d){return "Creates a block of HTML in the app."},
+"createHtmlBlock":function(d){return "HTML bloğu oluştur"},
+"createHtmlBlockTooltip":function(d){return "HTML bloğu içinde uygulama oluşturur."},
 "finalLevel":function(d){return "Tebrikler! Son bulmacayı da çözdünüz."},
 "nextLevel":function(d){return "Tebrikler! Bu bulmacayı tamamladınız."},
 "no":function(d){return "Hayır"},
 "numBlocksNeeded":function(d){return "Bu bulmaca %1 blok kullanılarak çözülebilir."},
-"pause":function(d){return "Break"},
-"reinfFeedbackMsg":function(d){return "You can press the \"Try again\" button to go back to running your app."},
+"pause":function(d){return "Ara"},
+"reinfFeedbackMsg":function(d){return "Çalışan uygulamaya dönmek için \"Yeniden dene\" tuşuna basabilirsiniz."},
 "repeatForever":function(d){return "Sonsuza kadar tekrarla"},
 "repeatDo":function(d){return "yap"},
-"repeatForeverTooltip":function(d){return "Execute the actions in this block repeatedly while the app is running."},
-"shareApplabTwitter":function(d){return "Check out the app I made. I wrote it myself with @codeorg"},
-"shareGame":function(d){return "Share your app:"},
-"stepIn":function(d){return "Step in"},
-"stepOver":function(d){return "Step over"},
-"stepOut":function(d){return "Step out"},
-"viewData":function(d){return "View Data"},
+"repeatForeverTooltip":function(d){return "Uygulama çalışırken eylemleri bu blok içinde sürekli yürütür."},
+"shareWebappTwitter":function(d){return "Yaptığım hikayeye göz atın. @codeorg ile kendim yazdım"},
+"shareGame":function(d){return "Uygulamanı paylaş:"},
+"stepIn":function(d){return "İçeri gel"},
+"stepOver":function(d){return "Adım"},
+"stepOut":function(d){return "Dışarı adım"},
+"turnBlack":function(d){return "geri karart"},
+"turnBlackTooltip":function(d){return "Ekranı karartır."},
 "yes":function(d){return "Evet"}};

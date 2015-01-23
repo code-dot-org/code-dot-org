@@ -1,6 +1,6 @@
 goog.provide('Blockly.Msg.ko_kr');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "call";
+Blockly.Msg.ACTUAL = "동작";
 Blockly.Msg.ADD = "추가 ";
 Blockly.Msg.ADD_COMMENT = "설명 입력";
 Blockly.Msg.ADD_PARAMETER = "매개 변수 추가";
@@ -74,7 +74,7 @@ Blockly.Msg.EXAMPLE = "예시";
 Blockly.Msg.EXAMPLE_DESCRIPTION = "예상되는 예시와 실제 동작을 정의합니다.";
 Blockly.Msg.EXPAND_ALL = "블럭들 펼치기";
 Blockly.Msg.EXPAND_BLOCK = "블럭 펼치기";
-Blockly.Msg.EXPECTED = "result";
+Blockly.Msg.EXPECTED = "예상";
 Blockly.Msg.EXTERNAL_INPUTS = "내부에서 값 입력";
 Blockly.Msg.FUNCTION_CREATE = "함수 만들기";
 Blockly.Msg.FUNCTION_EDIT = "수정하기";

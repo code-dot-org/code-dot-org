@@ -48,7 +48,7 @@ sk:
         edit-code:
           desc: Upraviť kód (beta)
           MazeEC: Úroveň 1
-          Applab: Úroveň 2
+          Webapp: Úroveň 2
           ArtistEC: Úroveň 3
           StudioEC: Úroveň 4
         events:
@@ -99,11 +99,10 @@ sk:
         Jigsaw: Jigsaw
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
-        Webapp: App Lab
+        Webapp: Webapp
         ArtistEC: Umelec
         TextMatch: Text Match
         StudioEC: Play Lab
-        Applab: App Lab
     trophy:
       name:
         Bronze: Bronzová
@@ -344,7 +343,7 @@ sk:
         maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell the word STORY
-        applab_ec_simple: Create your app by using the blocks in the toolbox.
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColor" block.'
         turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new "penWidth" block. Have fun!'
         studio_ec_sandbox: "Create your own game. When you're done, click Finish to let friends try your game on their phones."

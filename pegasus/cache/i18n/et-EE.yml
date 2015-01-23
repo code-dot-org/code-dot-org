@@ -284,7 +284,6 @@
     kasutades <b>Lisa õpilane</b> ja <b>Lisa mitu õpilast</b> nuppe.
   dashboard_students_placeholder_name: Õpilase nimi
   dashboard_students_name: Nimi
-  dashboard_students_progress: Progress
   dashboard_students_age: Vanus
   dashboard_students_gender: Sugu
   dashboard_students_male: Male
@@ -340,10 +339,6 @@
   dashboard_login_picture: Pilt
   dashboard_login_none: Email
   dashboard_new_password: Uus salasõna
-  dashboard_progress_not_completed: not completed
-  dashboard_progress_completed_too_many_blocks: completed, too many blocks
-  dashboard_progress_completed_perfect: tehtud, suurepärane
-  dashboard_progress_furthest_level_attempted: furthest level attempted
   stats_hoc_2013_heading: 'Eelmise aasta Koodi Tunni uskumatud näitajad. Ainult ühe
     nädala jooksul:'
   stats_hoc_2013_image_alt: 2013. aasta Tunni Koodi näitajad
@@ -1015,3 +1010,8 @@
   sphero_beyond_longdescription: Whether you're an educator or a parent, SPRK lessons
     give kids a fun crash course in programming robots while sharpening their skills
     in math and science.
+  dashboard_students_progress: Progress
+  dashboard_progress_not_completed: not completed
+  dashboard_progress_completed_too_many_blocks: completed, too many blocks
+  dashboard_progress_completed_perfect: completed, perfect
+  dashboard_progress_furthest_level_attempted: furthest level attempted

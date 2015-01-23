@@ -23,7 +23,7 @@ var locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -178,12 +178,12 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "end":function(d){return "конец"},
 "emptyBlocksErrorMsg":function(d){return "Блокам \"повторять\" или \"если\" необходимо иметь внутри другие блоки для работы. Убедись  в том, что внутренний блок должным образом подходит к блоку, в котором он содержится."},
 "emptyFunctionBlocksErrorMsg":function(d){return "Блок процедуры требует для работы другие блоки внутри себя."},
-"errorEmptyFunctionBlockModal":function(d){return "В определении вашей функции обязательно должны быть блоки. Нажмите \"Редактировать\" и поместите блоки внутри зеленого блока."},
-"errorIncompleteBlockInFunction":function(d){return "Нажмите \"Редактировать\" чтобы убедиться, что вы не пропустили никаких блоков в определении функции."},
-"errorParamInputUnattached":function(d){return "Не забудьте прикрепить блок к каждому входящему параметру блока функции в своем рабочем пространстве."},
-"errorUnusedParam":function(d){return "Вы добавили блок параметров, но не использовали его в определении функции. Чтобы убедиться, что вы используете ваш параметр, нажмите \"Редактировать\" и поместите блок параметра внутри зеленого блока."},
-"errorRequiredParamsMissing":function(d){return "Создайте параметр для своей функции нажав \"Редактировать\" и добавив необходимые параметры. Перетащите новые блоки параметров в определение своей функции."},
-"errorUnusedFunction":function(d){return "Вы создали функцию, но не использовали её в работе! Нажмите на «Функции» на панели инструментов и убедитесь, что вы используете её в своей программе."},
+"errorEmptyFunctionBlockModal":function(d){return "В определении твоей функции обязательно должны быть блоки. Нажми \"Редактировать\" и перетащи блоки внутрь зеленого блока."},
+"errorIncompleteBlockInFunction":function(d){return "Нажми \"Редактировать\" чтобы убедиться, что ты не пропустил никакие блоки в определении функции."},
+"errorParamInputUnattached":function(d){return "Не забудь прикрепить блок к каждому входящему параметру блока функции в своем рабочем пространстве."},
+"errorUnusedParam":function(d){return "Ты добавил блок параметра но не использовал его в определении функции. Чтобы убедиться, что используешь параметр, нажми на \"Редактировать\" и помести блок параметра внутрь зеленого блока."},
+"errorRequiredParamsMissing":function(d){return "Создай параметр для твоей функции нажав \"Редактировать\" и добавив необходимые параметры. Перетащи новые блоки параметров в определение твоей функции."},
+"errorUnusedFunction":function(d){return "Вы создали функцию, но не использовали её в работе! Нажмите на «Функции» на панели инструментов и убедитесь, что вы используете его в своей программе."},
 "errorQuestionMarksInNumberField":function(d){return "Попробуйте изменить значение \"???\"."},
 "extraTopBlocks":function(d){return "У тебя остались неприсоединённые блоки. Ты собирался присоединить их к блоку \"При запуске\"?"},
 "finalStage":function(d){return "Поздравляю! Ты завершил последний этап."},
@@ -243,5 +243,5 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "signup":function(d){return "Зарегистрируйтесь на вводный курс"},
 "hintHeader":function(d){return "Подсказка:"},
 "genericFeedback":function(d){return "Посмотрите, что у вас получилось, и попытайтесь исправить вашу программу."},
-"toggleBlocksErrorMsg":function(d){return "Вам необходимо исправить ошибку в вашей программе, прежде чем она будет отображена в виде блоков."},
-"defaultTwitterText":function(d){return "Оцените, что я сделал"}};
+"toggleBlocksErrorMsg":function(d){return "You need to correct an error in your program before it can be shown as blocks."},
+"defaultTwitterText":function(d){return "Проверить, что я сделал"}};

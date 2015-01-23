@@ -19,11 +19,12 @@
   "repeatForever": "repeat forever",
   "repeatDo": "ทำ",
   "repeatForeverTooltip": "Execute the actions in this block repeatedly while the app is running.",
-  "shareApplabTwitter": "Check out the app I made. I wrote it myself with @codeorg",
+  "shareWebappTwitter": "Check out the app I made. I wrote it myself with @codeorg",
   "shareGame": "Share your app:",
   "stepIn": "Step in",
   "stepOver": "Step over",
   "stepOut": "Step out",
-  "viewData": "View Data",
+  "turnBlack": "turn black",
+  "turnBlackTooltip": "Turns the screen black.",
   "yes": "ใช่"
 }

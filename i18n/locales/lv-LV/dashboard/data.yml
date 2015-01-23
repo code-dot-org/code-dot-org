@@ -48,7 +48,7 @@ lv:
         edit-code:
           desc: Labot kodu (beta)
           MazeEC: Līmenis 1
-          Applab: Līmenis 2
+          Webapp: Līmenis 2
           ArtistEC: Līmenis 3
           StudioEC: Līmenis 4
         events:
@@ -99,11 +99,10 @@ lv:
         Jigsaw: Puzle
         MazeStep: Labirinta soļa režīms
         Wordsearch: Vārdu meklēšana
-        Webapp: App Lab
+        Webapp: Web lietotne
         ArtistEC: Mākslinieks
         TextMatch: Teksta atbilstība
         StudioEC: Spēles laboratorija
-        Applab: App Lab
     trophy:
       name:
         Bronze: Bronzas
@@ -326,7 +325,7 @@ lv:
         maze_wordsearch_k_15: Pārvieto manu uz vienu pusi, tad citu, lai pateiktu ABOVE
         maze_wordsearch_k_16: Pārvieto manu uz vienu pusi, tad citu, lai pateiktu BELOW
         maze_wordsearch_k_20: Šis ir izmēģinājums. Pārvieto manu uz vienu pusi, tad citu, lai pateiktu STORY
-        applab_ec_simple: Create your app by using the blocks in the toolbox.
+        webapp_ec_simple: Izveido savu tīmekļa lietotni ar createHtmlBlock.
         turtle_ec_1_2: 'Tagad uzzīmē kvadrātu. Ievēro: izmanto savu mīļāko krāsu, lietojot jauno "pildspalvas krāsa" bloku.'
         turtle_ec_1_10: 'Tu to paveici! Tagad uzzīmē ko vēlies. Dažas idejas: vienkāršs cilvēciņš, sniegpārsla vai spirāle. Izmēģini arī jauno bloku "pildspalvas platums". Lai jautri!'
         studio_ec_sandbox: 'Izveido savu spēli. Kad gatavs, spied "Pabeigts" aicini draugus to spēlēt.'

@@ -1,5 +1,5 @@
 {
-  "ACTUAL": "call",
+  "ACTUAL": "actual",
   "ADD": "Add",
   "ADD_COMMENT": "Add Comment",
   "ADD_PARAMETER": "Add Parameter",
@@ -73,7 +73,7 @@
   "EXAMPLE_DESCRIPTION": "Defines an example with expected and actual behavior",
   "EXPAND_ALL": "Expand Blocks",
   "EXPAND_BLOCK": "Expand Block",
-  "EXPECTED": "result",
+  "EXPECTED": "expected",
   "EXTERNAL_INPUTS": "External Inputs",
   "FUNCTION_CREATE": "Create a Function",
   "FUNCTION_EDIT": "edit",

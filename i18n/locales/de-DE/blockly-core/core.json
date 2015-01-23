@@ -1,5 +1,5 @@
 {
-  "ACTUAL":"call",
+  "ACTUAL":"Derzeitig",
   "ADD":"Hinzufügen",
   "ADD_COMMENT":"Kommentar hinzufügen",
   "ADD_PARAMETER":"Pararmeter hinzufügen",
@@ -73,7 +73,7 @@
   "EXAMPLE_DESCRIPTION":"Bestimmt ein Beispiel zusammen mit dem erwarteten und tatsächlichen Verhalten.",
   "EXPAND_ALL":"Bausteine anzeigen",
   "EXPAND_BLOCK":"Baustein ausblenden",
-  "EXPECTED":"result",
+  "EXPECTED":"Erwartet",
   "EXTERNAL_INPUTS":"Externe Eingaben",
   "FUNCTION_CREATE":"Erstellen Sie eine Funktion",
   "FUNCTION_EDIT":"Bearbeiten",

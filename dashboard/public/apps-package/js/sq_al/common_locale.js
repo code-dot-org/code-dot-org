@@ -23,7 +23,7 @@ var locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -200,6 +200,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "missingBlocksErrorMsg":function(d){return "Përdor një ose më shumë nga blloqet e mëposhtme për të zgjidhur këtë puzzle."},
 "nextLevel":function(d){return "Urime ju e perfunduat Puzzle-n "+locale.v(d,"puzzleNumber")+"."},
 "nextLevelTrophies":function(d){return "Urime! Ti përfundove Puzzle "+locale.v(d,"puzzleNumber")+" dhe fitove "+locale.p(d,"numTrophies",0,"sq",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+"."},
+"nextStage":function(d){return "Urime! Ti përfundove "+locale.v(d,"stageName")+"."},
 "nextStageTrophies":function(d){return "Urime! Ti përfundove "+locale.v(d,"stageName")+" dhe fitove "+locale.p(d,"numTrophies",0,"sq",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+"."},
 "numBlocksNeeded":function(d){return "Urime! Ti përfundove Puzzle "+locale.v(d,"puzzleNumber")+". (Megjithatë, ti mund të kishe përdorur vetëm "+locale.p(d,"numBlocks",0,"sq",{"one":"1 block","other":locale.n(d,"numBlocks")+" blocks"})+".)"},
 "numLinesOfCodeWritten":function(d){return "Ti sapo shkruajte "+locale.p(d,"numLines",0,"sq",{"one":"1 line","other":locale.n(d,"numLines")+" lines"})+" të kodit!"},
@@ -220,7 +221,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "tooFewBlocksMsg":function(d){return "Ti je duke i përdorur të gjithë tipet e nevojshëm të blloqeve, por përpiqu të përdorësh më shumë nga këto tipe blloqesh për të përfunduar këtë puzzle."},
 "tooManyBlocksMsg":function(d){return "Ky puzzle mund të zgjidhet me blloqet <x id='START_SPAN'/><x id='END_SPAN'/>."},
 "tooMuchWork":function(d){return "Ti më detyrove të bëj shumë veprime! Mund të përpiqesh ta përsërisësh me më pak hapa?"},
-"toolboxHeader":function(d){return "Blloqet"},
+"toolboxHeader":function(d){return "blloqe"},
 "openWorkspace":function(d){return "Si Funksionon"},
 "totalNumLinesOfCodeWritten":function(d){return "Totali i gjithë kohës: "+locale.p(d,"numLines",0,"sq",{"one":"1 line","other":locale.n(d,"numLines")+" lines"})+" i kodit."},
 "tryAgain":function(d){return "Provo perseri"},
@@ -242,5 +243,5 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "signup":function(d){return "Rregjistrohu për kursin hyrës"},
 "hintHeader":function(d){return "Ja ku është një këshillë:"},
 "genericFeedback":function(d){return "Shiko se si përfundove dhe përpiqu të rregullosh programin tënd."},
-"toggleBlocksErrorMsg":function(d){return "Ti duhet të rregullosh një gabim në programin tënd përpara se të shfaqet si blloqet."},
+"toggleBlocksErrorMsg":function(d){return "You need to correct an error in your program before it can be shown as blocks."},
 "defaultTwitterText":function(d){return "Shiko se çfarë bëra"}};

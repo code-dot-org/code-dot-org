@@ -3,7 +3,7 @@ hr-HR:
   select_language: Odaberite svoj jezik
   computer_science: Računalstvo
   computer_science_edweek: Tjedan podučavanja Računalstva
-  csedweek_dates: '8. - 14. prosinca 2014.'
+  csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Sat Kodiranja</a> dolazi. Pozivamo sve učitelje i organizatore, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">planirajte vaš Sat Kodiranja</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Jeste li učitelj Informatike? Pogledajte i druge CSEdWeek resurse</a>'
   n_have_learned_an_hoc: '<h1>#</h1><h3>je isprobao</h3><h2>Sat Kodiranja</h2>'
@@ -106,7 +106,7 @@ hr-HR:
   students_and_lines: '%{students} učenika je napravilo Hour of Code i napisali su %{lines} linija koda.'
   start_hoc: Kreni s Hour of Code sada
   contact_form_topic_press: Tisak/mediji (intervju ili govor)
-  stats_michael: '"Ja <b>nikada prije </b> nisam vidio svoje učenike toliko uzbuđene učenjem." - Michael Clark, učitelj'
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
   stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
   stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
   studiobar_title: "Istraži<a href='http://studio.code.org'>Code Studio</a>"
@@ -122,7 +122,7 @@ hr-HR:
   studiobar_frozen_body: Stvori zimsku čarobnu zemlju s Annom i Elsom
   studiobar_donate_title: Doniraj
   studiobar_donate_body: Svaki dolar koji donirate omogućuje da jedno dijete uči
-  studiobar_shop_title: Trgovina
+  studiobar_shop_title: Shop
   studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   contact_form_topic_student: Ja sam učenik
   contact_form_topic_parent: Ja sam roditelj
@@ -204,7 +204,7 @@ hr-HR:
   dashboard_action_delete_yes: Da
   dashboard_action_delete_no: Ne
   dashboard_action_confirm: Izbrisati?
-  dashboard_action_remove: jaja sam david i smjesan sam
+  dashboard_action_remove: Remove
   dashboard_action_remove_confirm: Remove?
   dashboard_action_done: Gotovo
   dashboard_action_required: potrebno
@@ -244,7 +244,6 @@ hr-HR:
   dashboard_students_new_section: 'Napravili ste novo odjeljenje! Sad dodajte svoje učenike korištenjem gornjih gumba <b>Dodaj učenika</b> i <b>Dodaj više učenika</b>.'
   dashboard_students_placeholder_name: Ime učenika
   dashboard_students_name: Ime
-  dashboard_students_progress: Progress
   dashboard_students_age: Godine starosti
   dashboard_students_gender: Spol
   dashboard_students_male: Muško
@@ -291,10 +290,6 @@ hr-HR:
   dashboard_login_picture: Slika
   dashboard_login_none: E-mail
   dashboard_new_password: nova lozinka
-  dashboard_progress_not_completed: nije dovršeno
-  dashboard_progress_completed_too_many_blocks: dovršeno, previše blokova
-  dashboard_progress_completed_perfect: dovršeno, savršeno
-  dashboard_progress_furthest_level_attempted: pokušaj posljednjeg nivoa
   stats_hoc_2013_heading: 'Nevjerojatna statistika prošlogodišnjeg Sata Kodiranja. U samo jednom tjednu:'
   stats_hoc_2013_image_alt: Statistika Sata Kodiranja 2013
   dashboard_teacher: Učitelj

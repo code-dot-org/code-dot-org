@@ -159,7 +159,7 @@ ro:
         desc: 'Abstractizarea este una dintre cele mai importante aptitudini pentru ca un programator să înţeleagă.  Această activitate îi va pune pe elevii dvs. să analizeze povestiri pentru a găsi diferenţe, astfel încât să poată generaliza. Acele povestiri generalizate vor deveni șabloane pentru altele noi, distractive și ciudate.'
         video: C4_unplugged_madlibs
       ForLoopFun:
-        title: Distracție cu blocul Pentru
+        title: Distracție cu repetiția Pentru
         desc: Ştim că repetițiile ne permit să reluăm lucruri iar și iar, dar acum avem de gând să învăţăm cum să folosim repetiții cu structură extra încorporată.
         video: C4_unplugged_forloops
       SongwritingWithParameters:

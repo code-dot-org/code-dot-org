@@ -344,22 +344,22 @@
           de forma que o refrão se repita a cada vez que ela for chamada?'
         1: ': Qual é a maior parte dessa música que você pode definir como o refrão,
           de forma que o refrão se repita a cada vez que ela for chamada?'
-        Lou, Lou, skip to my Lou,: Lou, Lou, venha pro meu Lou,
+        Lou, Lou, skip to my Lou,: Lou, Lou, skip to my Lou,
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou,
-          Lou, venha para o meu Lou, <br/>Lou, Lou, venha para o meu Lou, <br/>Lou,
-          Lou, venha para o meu Lou, <br/>Venha para o meu Lou, minha querida.
-        2: '? Lou, Lou, venha para o meu Lou, <br/>Lou, Lou, venha para o meu Lou,
-          <br/>Lou, Lou, venha para o meu Lou, <br/>Venha para o meu Lou, minha querida.<br/><br/><p>Moscas
-          na manteiga, <br/>Xô, mosca, xô,'
-        3: ': Lou, Lou, venha para o meu Lou, <br/>Lou, Lou, venha para o meu Lou,
-          <br/>Lou, Lou, venha para o meu Lou, <br/>Venha para o meu Lou, minha querida.<br/><br/><p>Moscas
-          na manteiga, <br/>Xô, mosca, xô,'
-        4: '? Moscas na manteiga, <br/>Xô, mosca, xô, <br/>Moscas na manteiga, <br/>Xô,
-          mosca, xô, <br/>Moscas na manteiga, <br/>Xô, mosca, xô, <br/>Venha para
-          o meu Lou, minha querida.'
-        5: ': Moscas na manteiga, <br/>Xô, mosca, xô, <br/>Moscas na manteiga, <br/>Xô,
-          mosca, xô, <br/>Moscas na manteiga, <br/>Xô, mosca, xô, <br/>Venha para
-          o meu Lou, minha querida.'
+          Lou, pule para o Lou, <br/>Lou, Lou, pule para o Lou, <br/>Lou, Lou, pule
+          para o Lou, <br/>Pule para o Lou, minha querida.
+        2: '? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the
+          buttermilk, <br/>Shoo, fly, shoo,'
+        3: ': Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the
+          buttermilk, <br/>Shoo, fly, shoo,'
+        4: '? Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin.'
+        5: ': Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin.'
       4-5 Suncatchers Multi 1:
         Multiple Choice: Múltipla Escolha
         /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
@@ -372,8 +372,8 @@
       Coordinates Multi 1:
         Video game Coordinates: Coordenadas de video game
         Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
-        Which answer most accurately describes the unicorn's movement?: Which answer
-          most accurately describes the unicorn's movement?
+        Which answer best describes the unicorn's movement?: Qual resposta melhor
+          descreve o movimento do unicórnio?
         The unicorn moves across the screen: O unicórnio se movimenta pela tela
         The unicorn's y value changes: O valor de y do unicórnio muda
         The unicorn moves to the left: O unicórnio se move para a esquerda
@@ -627,7 +627,7 @@
           "red")
         (rectangle (+ 8 2) (- 7 5) solid red): (rectangle (+ 8 2) (- 7 5) solid red)
       Multi Strings Images 1:
-        Strings and Images Multiple Choice: Imagens e strings - Múltipla escolha
+        Strings and Images Multiple Choice: Múltipla escolha de imagens e strings
         Multi Strings Images 1.blocks3.level: Imagens multi strings 1.blocks3.level
         Which of these Evaluation Blocks will draw the image: Qual desses blocos de
           avaliação vai desenhar a imagem

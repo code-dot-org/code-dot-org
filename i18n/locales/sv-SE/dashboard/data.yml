@@ -48,7 +48,7 @@ sv:
         edit-code:
           desc: Redigera Kod (beta)
           MazeEC: Steg 1
-          Applab: Steg 2
+          Webapp: Steg 2
           ArtistEC: Steg 3
           StudioEC: Steg 4
         events:
@@ -99,11 +99,10 @@ sv:
         Jigsaw: Pussel
         MazeStep: Labyrint steg-sort
         Wordsearch: WordSearch
-        Webapp: App Lab
+        Webapp: Webapp
         ArtistEC: Konstnären
         TextMatch: Textmatchning
         StudioEC: Play Lab
-        Applab: App Lab
     trophy:
       name:
         Bronze: Brons
@@ -323,7 +322,7 @@ sv:
         maze_wordsearch_k_15: Flytta mig en väg, sedan en annan för att stava ordet ABOVE(ovanför)
         maze_wordsearch_k_16: Flytta mig en väg, sedan en annan för att stava ordet BELOW(nedanför)
         maze_wordsearch_k_20: Det här är ett test! Flytta mig en väg, sedan en annan för att stava ordet STORY(berättelse)
-        applab_ec_simple: Create your app by using the blocks in the toolbox.
+        webapp_ec_simple: Skapa din webapp med hjälp av createHtmlBlock.
         turtle_ec_1_2: 'Nu ska du rita en fyrkant. Obs: Använd din favoritfärg genom att välja det i nya "pennfärg" blocket.'
         turtle_ec_1_10: 'Du klarade det! Nu ritar du vad du vill. Några roliga idéer: en streckfigur, snöflinga eller spiral. Prova också det nya "pennbredd" blocket. Ha det så kul!'
         studio_ec_sandbox: Skapa ditt eget spel. När du är klar, klicka på Slutför för att låta vänner prova ditt spel på sina telefoner.

@@ -1,7 +1,4 @@
 pl:
-  errors:
-    messages:
-      not_saved: 'Please correct the following errors:'
   activerecord:
     errors:
       messages:
@@ -299,10 +296,10 @@ pl:
     email_resend_confirm: Wyślij ponownie instrukcje potwierdzenia
     new_password_hint: (zostaw puste, jeśli nie chcesz tego zmienić)
     current_password_hint: (potrzebujemy Twojego aktualnego hasła, aby potwierdzić Twoje zmiany)
-    delete: Usuń swoje konto
-    delete_text: Klikając poniższy przycisk spowoduje usunięcie konta.
-    delete_text_teacher_note: 'Uwaga: usunięcie twojego konta nie spowoduje usunięcia kont twoich uczniów.'
-    delete_confirm: Czy na pewno chcesz usunąć swoje konto?
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Ukończono
     tried: Próbowałem

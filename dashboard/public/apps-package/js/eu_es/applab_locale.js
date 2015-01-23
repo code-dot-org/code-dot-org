@@ -50,10 +50,11 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "repeatForever":function(d){return "errepikatu betirako"},
 "repeatDo":function(d){return "egin"},
 "repeatForeverTooltip":function(d){return "Execute the actions in this block repeatedly while the app is running."},
-"shareApplabTwitter":function(d){return "Check out the app I made. I wrote it myself with @codeorg"},
+"shareWebappTwitter":function(d){return "Check out the app I made. I wrote it myself with @codeorg"},
 "shareGame":function(d){return "Share your app:"},
 "stepIn":function(d){return "Step in"},
 "stepOver":function(d){return "Step over"},
 "stepOut":function(d){return "Step out"},
-"viewData":function(d){return "View Data"},
+"turnBlack":function(d){return "turn black"},
+"turnBlackTooltip":function(d){return "Turns the screen black."},
 "yes":function(d){return "Bai"}};

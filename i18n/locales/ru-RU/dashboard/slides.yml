@@ -163,7 +163,8 @@ ru:
         text: 'Привет, меня зовут Салони. С помощью информатики я пытаюсь решить проблемы здоровья и медицины. Давайте изучим блок "if else" ("если иначе"). Он похож на блок "if" ("если"), но в конце у него есть дополнительная часть - "else" ("иначе").'
       2:
         image: notes/hoc5_2.jpg
-        text: Если я поставлю блок «двигаться вперед» в область, где сказано «выполнить», и поставлю блок «повернуть налево» туда, где сказано «иначе», это будет означать, что зомби будет выбирать между двумя вариантами. Если путь впереди свободен, зомби пройдет вперед, а ИНАЧЕ (то есть если вперед никак не пройти) зомби повернется налево.
+        text: |-
+          If I put a "move forward" block in the spot where it says "do" and a "turn left" block where it says "else" that means that the zombie will choose between 2 options. IF there is a path ahead, the zombie will move forward, and OTHERWISE (there isn't a path ahead), the zombie will turn left.
       3:
         image: notes/hoc5_3.jpg
         text: |-

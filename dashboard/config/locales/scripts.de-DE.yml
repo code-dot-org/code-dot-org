@@ -106,21 +106,21 @@
           Artist Functions with Params: Artist Functions with Params
           Bounce: Bounce
           Maze Conditionals: 'Labyrinth: Bedingungen'
-          Artist Functions with Parameters: Interpret-Funktionen mit Parametern
+          Artist Functions with Parameters: Artist Functions with Parameters
           Computational Thinking: Computerorientiertes Denken
           Functional Suncatchers: Funktionale Sonnenfänger
           Songwriting Parameters: Songwriting Parameters
-          Dice Race: Würfelrennen
+          Dice Race: Dice Race
           Internet: Internet
           Crowdsourcing: Crowdsourcing
           Digital Citizenship: Digitalen Staatsbürgerschaft
-          Farmer - While Loops: Bauer - Während Wiederholungen
+          Farmer - While Loops: Farmer - While Loops
           description: Kurs 3 wendet sich an Schüler, die Kurs 2 absolviert haben.
             Der Stoff des vorangegangenen Kurses wird mit Blick auf flexible Lösungen
             und komplexere Probleme vertieft. Am Ende des Kurses entwickeln die Schüler
             interaktive Geschichten und Spiele, an denen sie andere teilhaben lassen
             können. Empfohlen für Klasse 4-5.
-          'Studio: Create a Game': 'Spielelabor: Erstelle ein Spiel'
+          'Studio: Create a Game': 'Play Lab: Create a Game'
           Maze: Labyrinth
           Artist: Künstler
           'Artist: Functions': 'Künstler: Funktionen'
@@ -141,10 +141,10 @@
           'Farmer: While Loops2': 'Bauer: Während Schleifen2'
           'Bee: Nested Loops2': 'Biene: verschachtelte Schleifen2'
           'Bee: Debugging2': 'Biene: Debuggen2'
-          'Artist: Patterns': 'Interpret: Muster'
+          'Artist: Patterns': 'Artist: Patterns'
           Songwriting: Songschreiben
-          description_audience: ab 8 Jahren (nach Kurs 2)
-          description_short: Kurs 3 schließt sich an Kurs 2 an.
+          description_audience: Ages 8+ (after Course 2)
+          description_short: Course 3 is a follow-up to Course 2.
         msm:
           title: Mittelschule Mathematik
           description: Selbständige Arbeit für mittelschule Mathematik.
@@ -154,27 +154,27 @@
           Unit 2: Einheit 2
           Ninja Cat and the Coordinate Plane: Ninja-Katze und das Koordinatensystem
           'Calc: Circles of Evaluation': 'Calc: Circles of Evaluation'
-          'Artist: Strings and Images': 'Interpret: Fäden und Bilder'
+          'Artist: Strings and Images': 'Artist: Strings and Images'
           Contracts: Verträge
-          'Artist: Writing Contracts': 'Interpret: Befehle schreiben'
+          'Artist: Writing Contracts': 'Artist: Writing Contracts'
           'Calc: Defining Variables': 'Calc: Defining Variables'
-          'Play Lab: Defining Variables': 'Spielelabor: Variablen bestimmen'
-          The Design Recipe: Das Design-Rezept
-          'Artist: Defining Functions': 'Interpret: Funktionen bestimmen'
-          'Play Lab: Defining Functions': 'Spielelabor: Erstelle Rezept'
+          'Play Lab: Defining Variables': 'Play Lab: Defining Variables'
+          The Design Recipe: The Design Recipe
+          'Artist: Defining Functions': 'Artist: Defining Functions'
+          'Play Lab: Defining Functions': 'Play Lab: Design Recipe'
           'Artist: Functions': 'Künstler: Funktionen'
-          'Play Lab: Animation': 'Spielelabor: Animation'
-          Booleans: Boolesche Variable
-          'Play Lab: Booleans': 'Spielelabor: Booleans'
-          'Calc: Boolean Operators': 'Berechne: Boolean Betreiber'
-          'Play Lab: Boolean Operators': 'Spielelabor: Boolean-Betreiber'
+          'Play Lab: Animation': 'Play Lab: Animation'
+          Booleans: Booleans
+          'Play Lab: Booleans': 'Play Lab: Booleans'
+          'Calc: Boolean Operators': 'Calc: Boolean Operators'
+          'Play Lab: Boolean Operators': 'Play Lab: Boolean Operators'
           Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
           'Artist: Conditionals': 'Darsteller: Bedingungen'
           Collision Detection and the Distance Formula: Kollisionserkennung und die
             Distanz Formel
           'Play Lab: Collision Detection': 'Play Lab: Collision Detection'
-          'Unplugged: Ninja Cat and the Coordinate Plane': 'Unverfälscht: Ninja-Katze
-            und das Koordinatensystem'
+          'Unplugged: Ninja Cat and the Coordinate Plane': 'Unplugged: Ninja Cat and
+            the Coordinate Plane'
           'Eval: Strings and Images': 'Eval: Strings and Images'
           'Unplugged: Contracts': 'Unplugged: Contracts'
           'Eval: Writing Contracts': 'Eval: Writing Contracts'
@@ -194,12 +194,12 @@
           Blocks to Math: Blocks to Math
           'Play Lab: Defining Variables (Big Game)': 'Play Lab: Defining Variables
             (Big Game)'
-          'Play Lab: Animation (Big Game)': 'Spielelabor: Animation (Großes Spiel)'
-          'Play Lab: Boolean (Big Game)': 'Spielelabor: Boolean (Großes Spiel)'
+          'Play Lab: Animation (Big Game)': 'Play Lab: Animation (Big Game)'
+          'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
             (Big Game)'
           'Eval: Fast Functions': 'Eval: Fast Functions'
-          'Play Lab: Design Recipe': 'Spielelabor: Erstelle Rezept'
+          'Play Lab: Design Recipe': 'Play Lab: Design Recipe'
           'Eval: Design Recipe': 'Eval: Design Recipe'
         playlab:
           title: Play Lab
@@ -219,11 +219,9 @@
         hourofcode:
           Maze: Labyrinth
           title: Programmierstunde
-          description: Teste die Grundlagen der Computertechnologie mit Charakteren
-            von Angry Birds, Plants vs. Zombies und Scrat das Eichhörnchen von Ice
-            Age!
-          description_short: Teste die Grundlagen der Computertechnologie mit vielen
-            witzigen Charakteren!
+          description: Try the basics of computer science with characters from Angry
+            Birds, Plants vs. Zombies, and Scrat from Ice Age!
+          description_short: Try the basics of computer science with many fun characters!
         frozen:
           title: Programmiere mit Anna und Elsa
           description: Wir wollen programmieren, damit wir Anna und Elsa treffen,
@@ -242,14 +240,14 @@
             die Schüler interaktive Geschichten und Spiele, an denen sie andere teilhaben
             lassen können. Empfohlen für Klasse 4-8.
           'Artist: Variables': 'Artist: Variables'
-          'Bee: For Loops': 'Biene: Für Wiederholungen'
+          'Bee: For Loops': 'Bee: For Loops'
           title: Kurs 4
           'Algorithms: Tangrams': 'Algorithms: Tangrams'
           Variables: Variablen
-          'Play Lab: Variables': 'Spielelabor: Variablen'
+          'Play Lab: Variables': 'Play Lab: Variables'
           'Play Lab: Functions with Parameters': 'Play Lab: Functions with Parameters'
           'Bee: Functions with Parameters': 'Bee: Functions with Parameters'
-          'Artist: For Loops': 'Interpret: Für Wiederholungen'
+          'Artist: For Loops': 'Artist: For Loops'
           'Play Lab: For Loops': 'Play Lab: For Loops'
           'Artist: Functions': 'Künstler: Funktionen'
           'Artist: Functions with Paraqmeters': 'Artist: Functions with Paraqmeters'
@@ -264,7 +262,7 @@
           'Unplugged: Binary': 'Unplugged: Binary'
           Bee Binary: Bee Binary
           Farmer Binary: Farmer Binary
-          Maze and Bee: Bienenlabyrinth
+          Maze and Bee: Maze and Bee
           Artist Binary: Artist Binary
           description_audience: Ages 10+ (after Course 3)
         Course4pre:
@@ -317,15 +315,15 @@
           For Loops: '"For"-Schleifen'
           Binary: Binary
         potus:
-          title: speziell
-          description_short: speziell
-          description: speziell
-          Special: Besonderes
+          title: special
+          description_short: special
+          description: special
+          Special: Special
         special:
-          title: speziell
-          description_short: speziell
-          description: speziell
-          Special: Besonderes
+          title: special
+          description_short: special
+          description: special
+          Special: Special
           Binary: Binary
         usabilitymsm:
           Usability testing for MSM: Usability testing for MSM
@@ -335,12 +333,12 @@
           Defining Variables: Defining Variables
           Defining Functions: Defining Functions
           Design Recipe: Design Recipe
-          Booleans: Boolesche Variable
+          Booleans: Booleans
           Conditionals: Bedingungen
           Free Play: Free Play
         algebra:
-          title: Computertechnologie in Algebra
-          description: Lerne funktionales Programmieren mithilfe von Algebra
+          title: Computer Science in Algebra
+          description: Learn Functional Programming through Algebra
           'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games
             and Coordinate Planes'
           'Calc: Evaluation Blocks': 'Calc: Evaluation Blocks'
@@ -352,13 +350,13 @@
             (Big Game)'
           'Eval: Defining Functions': 'Eval: Defining Functions'
           'Unplugged: The Design Recipe': 'Unplugged: The Design Recipe'
-          'Play Lab: Defining Functions': 'Spielelabor: Funktionen bestimmen'
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
           'Eval: Functions': 'Eval: Functions'
-          'Play Lab: Animation (Big Game)': 'Spielelabor: Animation (Großes Spiel)'
+          'Play Lab: Animation (Big Game)': 'Play Lab: Animation (Big Game)'
           'Unplugged: Booleans': 'Unplugged: Booleans'
           'Eval: Boolean Operators': 'Eval: Boolean Operators'
-          'Play Lab: Booleans': 'Spielelabor: Booleans'
-          'Play Lab: Boolean (Big Game)': 'Spielelabor: Boolean (Großes Spiel)'
+          'Play Lab: Booleans': 'Play Lab: Booleans'
+          'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
           'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
             and Piecewise Functions'
           'Eval: Conditionals': 'Eval: Conditionals'
@@ -366,14 +364,3 @@
             Detection and the Distance Formula'
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
             (Big Game)'
-        algebrademo:
-          description: A handful of puzzles to demonstrate the environment and programming
-            language used in Code.org CS in Algebra
-          Algebra Demo: Algebra Demo
-          Evaluation Blocks: Evaluation Blocks
-          Making Pictures: Making Pictures
-          Defining Variables: Defining Variables
-          Defining Simple Functions: Defining Simple Functions
-          The Design Recipe: Das Design-Rezept
-        K5PD:
-          Introduction to PD: Introduction to PD

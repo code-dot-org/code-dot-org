@@ -1,7 +1,4 @@
 "fr":
-  errors:
-    messages:
-      not_saved: 'Please correct the following errors:'
   activerecord:
     errors:
       messages:
@@ -91,7 +88,7 @@
     valid_username: Disponible !
     invalid_username: Le nom d'utilisateur doit contenir au moins 5 caractères
     taken_username: Nom d'utilisateur déjà pris
-    valid_password: Mot de passe valide !
+    valid_password: Mot de passe correct !
     invalid_password: Le mot de passe doit comporter au moins 6 caractères
     mismatch_password: Les deux mots de passe entrés sont différents
     student_terms: J'accepte d'être lié par les Code.org <a href='http://code.org/tos'>
@@ -186,7 +183,7 @@
     teacher_email_required: 'Vous devez confirmer votre adresse de messagerie pour
       obtenir un des prix pour enseignants :'
     confirm:
-      title: Veuillez confirmer
+      title: Merci de confirmer
       'no': Non
       'yes': Oui
       msg: Êtes-vous certain de vouloir attribuer le prix de %{prize_name} ?
@@ -208,7 +205,7 @@
     msg:
       choose: 'Choisis un prix :'
       choose_teacher: 'Click on the logo below to claim your prize:'
-      earned: Vous avez remporté un prix ! (Étudiants états-uniens uniquement)
+      earned: Vous avez remporté un prix ! (Elèves états-uniens uniquement)
       not_earned_title: Terminer le didacticiel, obtenez des récompenses (uniquement
         pour les élèves états-uniens)
       not_earned: 'Apprenez tous les concepts de l''informatique, remportez l''ensemble
@@ -291,7 +288,7 @@
   teacher:
     title:
       one: 'Votre enseignant :'
-      other: 'Vos enseignants :'
+      other: 'Vos professeurs:'
     remove: (supprimer l'enseignant)
     confirm:
       remove: Êtes-vous sûr de vouloir supprimer cet enseignant ?
@@ -361,11 +358,11 @@
     new_password_hint: (laissez vide pour conserver)
     current_password_hint: (nous avons besoin de votre mot de passe actuel pour confirmer
       vos modifications)
-    delete: Supprimer votre compte
-    delete_text: Cliquer sur le bouton ci-dessous supprimera votre compte.
-    delete_text_teacher_note: 'Veuillez noter : supprimer votre compte ne supprimera
-      pas les comptes de vos élèves.'
-    delete_confirm: Êtes-vous sûr de que vouloir supprimer votre compte ?
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: 'Please note: deleting your account will not delete
+      your students'' accounts.'
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Terminé
     tried: Essayé

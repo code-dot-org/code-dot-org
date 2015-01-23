@@ -229,7 +229,6 @@
   "soundWinPoint2": "виграшний бал 2",
   "soundWood": "дерево",
   "speed": "швидкість",
-  "startSetValue": "start (rocket-height function)",
   "stopSprite": "зупинити",
   "stopSpriteN": "зупинити персонажа {spriteIndex}",
   "stopTooltip": "Зупинити рух персонажа.",

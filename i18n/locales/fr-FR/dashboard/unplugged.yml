@@ -76,7 +76,7 @@ fr:
         desc: "Les élèves créent des algorithmes simples (ensemble d'instructions) pour déplacer un personnage dans un labyrinthe en utilisant une commande simple."
         video: C1_happy_maps_unplugged
       MoveIt:
-        title: Déplacez le, déplacez le
+        title: Move it, Move it
         desc: "Les élèves créent des algorithmes simples (ensemble d'instructions) pour déplacer un personnage dans un labyrinthe en utilisant une commande simple."
         video: C1_moveitmoveit_unplugged
       PlantASeed:
@@ -84,7 +84,7 @@ fr:
         desc: "Cette leçon fait appel à la manière dont on utilise les algorithmes dans nos vies quotidiennes, en utilisant l'acte de planter une graine comme exemple. Elle se concentre aussi sur le sujet plus large de l'informatique et de la manière dont les algorithmes y jouent un rôle essentiel."
         video: C1_planting_seed
       BuildingAFoundation:
-        title: Créer une Fondation
+        title: Building a Foundation
         desc: "Les élèves construisent une structure en n'utilisant que les éléments fournis. Les structures doivent accomplir une tâche (atteindre une certaine hauteur ou soutenir un certain poids), et les élèves discutent de l'idée d'être persistant quand les choses se compliquent."
         video: C1_building_foundation
       GettingLoopy:
@@ -184,7 +184,7 @@ fr:
         title: Contrats
         desc: Description de leçon sur les contrats
       DesignRecipe:
-        title: La Recette de la Conception
+        title: The Design Recipe
         desc: "Description de la lesson sur l'apparence des recettes"
       Booleans:
         title: Booléens

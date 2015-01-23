@@ -24,9 +24,9 @@
           Multi & Match: Pelbagai dan Suaikan
           K-1 Flappy: Flappy K-1
           Flappy non blockly: Flappy bebas blockly
-          title: Kursus 1
-          Artist 2: Artis 2
-          Happy Maps: Peta-peta Gembira
+          title: Course 1
+          Artist 2: Artist 2
+          Happy Maps: Happy Maps
           Move it, Move it: Move it, Move it
           'Real-life Algorithms: Plant a Seed': 'Real-life Algorithms: Plant a Seed'
           Building a Foundation: Building a Foundation
@@ -59,7 +59,7 @@
           Flappy: Flappy
           title: Kursus 2
           Bee Loops: Bee Loops
-          Artist Functions: Fungsi-fungsi Artis
+          Artist Functions: Artist Functions
           The Artist Debugging: The Artist Debugging
           Bee Debugging: Bee Debugging
           Bee Functions: Bee Functions
@@ -94,7 +94,7 @@
           'Studio: Create a Story': 'Play Lab: Create a Story'
           The Artist: Pelukis
           title: Kursus 3
-          Artist Functions: Fungsi-fungsi Artis
+          Artist Functions: Artist Functions
           Artist For Loops: Artist For Loops
           Artist Nested Loops: Artist Nested Loops
           Bee Conditionals: Lebah Bersyarat
@@ -109,7 +109,7 @@
           Computational Thinking: Pengiraan pemikiran
           Functional Suncatchers: Functional Suncatchers
           Songwriting Parameters: Songwriting Parameters
-          Dice Race: Perlumbaan Dadu
+          Dice Race: Dice Race
           Internet: Internet
           Crowdsourcing: Crowdsourcing
           Digital Citizenship: Digital Citizenship
@@ -362,14 +362,3 @@
             Detection and the Distance Formula'
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
             (Big Game)'
-        algebrademo:
-          description: A handful of puzzles to demonstrate the environment and programming
-            language used in Code.org CS in Algebra
-          Algebra Demo: Algebra Demo
-          Evaluation Blocks: Evaluation Blocks
-          Making Pictures: Making Pictures
-          Defining Variables: Defining Variables
-          Defining Simple Functions: Defining Simple Functions
-          The Design Recipe: The Design Recipe
-        K5PD:
-          Introduction to PD: Introduction to PD

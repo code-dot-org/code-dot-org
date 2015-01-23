@@ -48,7 +48,7 @@ pt-BR:
         edit-code:
           desc: Editar Código (beta)
           MazeEC: Fase 1
-          Applab: Fase 2
+          Webapp: Fase 2
           ArtistEC: Fase 3
           StudioEC: Fase 4
         events:
@@ -99,11 +99,10 @@ pt-BR:
         Jigsaw: Quebra-cabeça
         MazeStep: Modo Labirinto
         Wordsearch: Caça Palavras
-        Webapp: App Lab
+        Webapp: Webapp
         ArtistEC: O Artista
         TextMatch: Correspondência de texto
         StudioEC: Laboratório
-        Applab: App Lab
     trophy:
       name:
         Bronze: Bronze
@@ -327,7 +326,7 @@ pt-BR:
         maze_wordsearch_k_15: Movimente-me para um lado, e então para o outro, para formar a palavra ABOVE
         maze_wordsearch_k_16: Movimente-me para um lado, e então para o outro, para formar a palavra BELOW
         maze_wordsearch_k_20: Isso é um teste! Movimente-me para um lado, e então para o outro, para formar a palavra STORY
-        applab_ec_simple: Create your app by using the blocks in the toolbox.
+        webapp_ec_simple: Crie seu aplicativo da Web com createHtmlBlock.
         turtle_ec_1_2: 'Agora, desenhe um quadrado. NOTA: use sua cor preferida selecionando-a no novo bloco "Cor da caneta".'
         turtle_ec_1_10: 'Muito bem! Agora, desenhe o que quiser. Veja algumas ideias divertidas para desenhar: um boneco, um floco de neve ou uma espiral. Use também o novo bloco "Largura da caneta". Divirta-se!'
         studio_ec_sandbox: Crie seu próprio jogo. Quando terminar, clique em Concluir para deixar que seus amigos experimentem seu jogo em seus celulares.

@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -71,21 +71,22 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catText":function(d){return "Teksts"},
 "catVariables":function(d){return "Mainīgie"},
 "continue":function(d){return "Turpināt"},
-"createHtmlBlock":function(d){return "create html block"},
-"createHtmlBlockTooltip":function(d){return "Creates a block of HTML in the app."},
+"createHtmlBlock":function(d){return "izveidot html bloku"},
+"createHtmlBlockTooltip":function(d){return "Izveido html bloku lietotnē."},
 "finalLevel":function(d){return "Apsveicu! Jūs esat atrisinājis pēdējo puzli."},
 "nextLevel":function(d){return "Apsveicu! Jūs pabeidzāt šo puzli."},
 "no":function(d){return "Nē"},
 "numBlocksNeeded":function(d){return "Šo puzli var atrisināt ar %1 blokiem."},
-"pause":function(d){return "Break"},
-"reinfFeedbackMsg":function(d){return "You can press the \"Try again\" button to go back to running your app."},
+"pause":function(d){return "pārtraukums"},
+"reinfFeedbackMsg":function(d){return "Nospied pogu \"Mēģini vēlreiz\", lai atgrieztos pie savas lietotnes darbināšanas."},
 "repeatForever":function(d){return "mūžīgi atkārtot"},
 "repeatDo":function(d){return "darīt"},
-"repeatForeverTooltip":function(d){return "Execute the actions in this block repeatedly while the app is running."},
-"shareApplabTwitter":function(d){return "Check out the app I made. I wrote it myself with @codeorg"},
-"shareGame":function(d){return "Share your app:"},
-"stepIn":function(d){return "Step in"},
-"stepOver":function(d){return "Step over"},
-"stepOut":function(d){return "Step out"},
-"viewData":function(d){return "View Data"},
+"repeatForeverTooltip":function(d){return "Atkārtoti izpilda darbības šajā blokā, kamēr darbojas aplikācija."},
+"shareWebappTwitter":function(d){return "Apskaties kādu lietotni es izveidoju. Es uzrakstīju to pats, izmantojot @codeorg"},
+"shareGame":function(d){return "Iesaki savu lietotni:"},
+"stepIn":function(d){return "iesaistīties"},
+"stepOver":function(d){return "pārkāpt"},
+"stepOut":function(d){return "izstāties"},
+"turnBlack":function(d){return "aptumšo"},
+"turnBlackTooltip":function(d){return "Aptumšot ekrānu."},
 "yes":function(d){return "Jā"}};

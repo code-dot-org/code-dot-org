@@ -1,6 +1,6 @@
 goog.provide('Blockly.Msg.as_in');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "call";
+Blockly.Msg.ACTUAL = "actual";
 Blockly.Msg.ADD = "Add";
 Blockly.Msg.ADD_COMMENT = "টোকা ভৰাওক";
 Blockly.Msg.ADD_PARAMETER = "Add Parameter";
@@ -74,7 +74,7 @@ Blockly.Msg.EXAMPLE = "Example";
 Blockly.Msg.EXAMPLE_DESCRIPTION = "Defines an example with expected and actual behavior";
 Blockly.Msg.EXPAND_ALL = "খন্দ কেইটা প্ৰসাৰণ কৰক";
 Blockly.Msg.EXPAND_BLOCK = "খন্দটো প্ৰসাৰণ কৰক";
-Blockly.Msg.EXPECTED = "result";
+Blockly.Msg.EXPECTED = "expected";
 Blockly.Msg.EXTERNAL_INPUTS = "বাহ্যিক ইনপুট (input)";
 Blockly.Msg.FUNCTION_CREATE = "Create a Function";
 Blockly.Msg.FUNCTION_EDIT = "edit";

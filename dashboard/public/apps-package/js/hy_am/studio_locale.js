@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -202,7 +202,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "moveDirectionLeft":function(d){return "left"},
 "moveDirectionRight":function(d){return "right"},
 "moveDirectionUp":function(d){return "up"},
-"moveDirectionRandom":function(d){return "կամայական"},
+"moveDirectionRandom":function(d){return "random"},
 "moveDistance25":function(d){return "25 pixels"},
 "moveDistance50":function(d){return "50 pixels"},
 "moveDistance100":function(d){return "100 pixels"},
@@ -264,7 +264,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "projectileYellowHearts":function(d){return "yellow hearts"},
 "projectilePurpleHearts":function(d){return "purple hearts"},
 "projectileRedHearts":function(d){return "red hearts"},
-"projectileRandom":function(d){return "կամայական"},
+"projectileRandom":function(d){return "random"},
 "projectileAnna":function(d){return "Anna"},
 "projectileElsa":function(d){return "Elsa"},
 "projectileHiro":function(d){return "Hiro"},
@@ -384,7 +384,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "soundWinPoint2":function(d){return "win point 2"},
 "soundWood":function(d){return "wood"},
 "speed":function(d){return "speed"},
-"startSetValue":function(d){return "start (rocket-height function)"},
 "stopSprite":function(d){return "stop"},
 "stopSpriteN":function(d){return "stop actor "+appLocale.v(d,"spriteIndex")},
 "stopTooltip":function(d){return "Stops an actor's movement."},

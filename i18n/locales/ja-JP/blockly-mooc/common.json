@@ -80,14 +80,14 @@
   "infinity":"無限\n",
   "rotateText":"お使いのデバイスを回転させてください。",
   "orientationLock":"デバイスの設定にあるオリエンテーション（方向）ロックをオフにしてください。",
-  "wantToLearn":"プログラムを覚えてみたいですか？",
+  "wantToLearn":"プログラムを習いたい？",
   "watchVideo":"ビデオを見る",
   "when":"とき",
   "whenRun":"実行時",
-  "tryHOC":"「コードの時間」に挑戦する",
+  "tryHOC":"1時間コース(Hour of Code)を試す",
   "signup":"イントロのコースに申し込む",
-  "hintHeader":"コツ：",
+  "hintHeader":"ちょび技があるよ:",
   "genericFeedback":"どうなったかよく見て、プログラムを直してみよう。",
-  "toggleBlocksErrorMsg":"ブロックとして表示させるために、あなたのプログラムのエラーを直す必要があります。",
+  "toggleBlocksErrorMsg":"You need to correct an error in your program before it can be shown as blocks.",
   "defaultTwitterText":"私の作品を試してみてください"
 }

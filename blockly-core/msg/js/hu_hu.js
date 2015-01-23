@@ -1,6 +1,6 @@
 goog.provide('Blockly.Msg.hu_hu');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "call";
+Blockly.Msg.ACTUAL = "tényleges";
 Blockly.Msg.ADD = "Hozzáad";
 Blockly.Msg.ADD_COMMENT = "Megjegyzés hozzáadása";
 Blockly.Msg.ADD_PARAMETER = "Paraméter hozzáadása";
@@ -74,7 +74,7 @@ Blockly.Msg.EXAMPLE = "Példa";
 Blockly.Msg.EXAMPLE_DESCRIPTION = "Egy példa meghatározása várt és tényleges viselkedéssel";
 Blockly.Msg.EXPAND_ALL = "Blokkok Kibontása";
 Blockly.Msg.EXPAND_BLOCK = "Blokk kibontása";
-Blockly.Msg.EXPECTED = "result";
+Blockly.Msg.EXPECTED = "várható";
 Blockly.Msg.EXTERNAL_INPUTS = "Külső kapcsolatok";
 Blockly.Msg.FUNCTION_CREATE = "Függvény létrehozása";
 Blockly.Msg.FUNCTION_EDIT = "szerkeszt";

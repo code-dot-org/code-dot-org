@@ -1,7 +1,4 @@
 "fil":
-  errors:
-    messages:
-      not_saved: 'Please correct the following errors:'
   activerecord:
     errors:
       messages:
@@ -181,7 +178,7 @@
     teacher_email_required: 'Ang papremyo para sa mga guro ay nangangailangan ng confirmed
       e-mail address:'
     confirm:
-      title: Paki kunpirma
+      title: Please Confirm
       'no': Hindi
       'yes': Oo
       msg: Are you sure you want to claim the %{prize_name} prize?
@@ -204,11 +201,10 @@
       choose_teacher: 'Click on the logo below to claim your prize:'
       earned: You have earned a prize! (U.S. students only)
       not_earned_title: Finish the tutorial, earn rewards (U.S. students only)
-      not_earned: 'Pag-aralan ang konsepto ng "computer science", kolektahin ang lahat
-        ng mga %{num_trophies} tropiya, at kunin ang mga makatotohanang premyo. Maaaring
-        pumili sa pagitan ng 10GB ng libreng Dropbox space, $10 (sampung dollares),
-        at libreng "game downloads". PAALALA: Ito ay pwede lamang kunin ng mga estudyanteng
-        amerikano, hangga''t hindi pa nauubos ang panustos.'
+      not_earned: 'Learn all the computer science concepts, collect all %{num_trophies}
+        trophies, and earn real-world prizes. You can choose between 10GB of free
+        Dropbox space, $10 in Skype credits, and free game downloads. NOTE: offer
+        only valid to U.S. students, and only as long as supplies last.'
       teacher:
         earned: 15 or more students collected all %{num_trophies} trophies. You have
           won a teacher prize! (U.S. teachers only)

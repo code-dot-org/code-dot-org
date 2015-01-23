@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -162,7 +162,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "finalLevel":function(d){return "Complimenti! Hai risolto l'esercizio finale."},
 "flap":function(d){return "sbatti le ali"},
 "flapRandom":function(d){return "sbatti le ali per un numero di volte scelto a caso"},
-"flapVerySmall":function(d){return "sbatti le ali per un numero di volte molto piccolo"},
+"flapVerySmall":function(d){return "sbatti le ali sbatti le ali per un numero di volte molto piccolo"},
 "flapSmall":function(d){return "sbatti le ali per un numero di volte piccolo"},
 "flapNormal":function(d){return "sbatti le ali per un numero di volte normale"},
 "flapLarge":function(d){return "sbatti le ali per un numero di volte grande"},
@@ -188,7 +188,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "playSoundSplash":function(d){return "riproduci il suono di un tuffo nell'acqua"},
 "playSoundLaser":function(d){return "riproduci il suono di un raggio laser"},
 "playSoundTooltip":function(d){return "Riproduci il suono scelto."},
-"reinfFeedbackMsg":function(d){return "Premi \"Riprova\" per ricominciare a giocare."},
+"reinfFeedbackMsg":function(d){return "Premi \"Riprova\" per ricominciare a giocare la tua partita."},
 "scoreText":function(d){return "Punteggio: "+appLocale.v(d,"playerScore")},
 "setBackground":function(d){return "imposta la scena"},
 "setBackgroundRandom":function(d){return "imposta una scena scelta a caso"},
@@ -252,7 +252,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setScoreTooltip":function(d){return "Imposta il punteggio del giocatore"},
 "setSpeed":function(d){return "Imposta la velocità"},
 "setSpeedTooltip":function(d){return "Imposta la velocità con cui Flappy sbatte le ali"},
-"shareFlappyTwitter":function(d){return "Guarda la versione di Flappy che ho creato io. L'ho fatto per conto mio @codeorg @programmafuturo"},
+"shareFlappyTwitter":function(d){return "Guarda il gioco Flappy che ho creato io. L'ho fatto per conto mio @codeorg @programmafuturo"},
 "shareGame":function(d){return "Condividi il tuo gioco:"},
 "soundRandom":function(d){return "casuale"},
 "soundBounce":function(d){return "rimbalzo"},

@@ -229,7 +229,6 @@
   "soundWinPoint2": "vyherný bod 2",
   "soundWood": "drevo",
   "speed": "rýchlosť",
-  "startSetValue": "start (rocket-height function)",
   "stopSprite": "zastaviť",
   "stopSpriteN": "zastaviť postavu {spriteIndex}",
   "stopTooltip": "Zastaví pohyb postavy.",

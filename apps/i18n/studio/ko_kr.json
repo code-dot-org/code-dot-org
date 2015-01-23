@@ -229,7 +229,6 @@
   "soundWinPoint2": "득점 소리2",
   "soundWood": "나무 소리",
   "speed": "스피드",
-  "startSetValue": "start (rocket-height function)",
   "stopSprite": "멈춤",
   "stopSpriteN": "캐릭터 {spriteIndex} 멈춤",
   "stopTooltip": "케릭터의 움직임을 멈춤니다.",
