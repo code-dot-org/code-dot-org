@@ -954,7 +954,7 @@ Applab.encodedFeedbackImage = '';
 
 Applab.onViewData = function() {
   window.open(
-    '//' + getPegasusHost() + '/private/edit-csp-app/' + AppStorage.tempAppId,
+    '//' + getPegasusHost() + '/private/edit-csp-app/' + AppStorage.tempEncryptedAppId,
     '_blank');
 };
 
@@ -1741,7 +1741,7 @@ var getPegasusHost = function() {
       var name = window.location.hostname.split('.')[0];
       switch(name) {
         case 'localhost':
-          return 'localhost.code.org:9393';
+          return 'localhost.code.org:3000';
         case 'development':
         case 'staging':
         case 'test':

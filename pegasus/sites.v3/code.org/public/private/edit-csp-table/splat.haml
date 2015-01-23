@@ -2,9 +2,10 @@
 -not_authorized! unless dashboard_user
 -forbidden! unless dashboard_user[:admin]
 
--app_id = request.splat_path_info[1..-1].split('/').first
+-encrypted_app_id = request.splat_path_info[1..-1].split('/').first
+-app_id = storage_decrypt_app_id(encrypted_app_id).last.to_s
 -table_name = request.splat_path_info[1..-1].split('/').last
--api_base_url = "/v3/apps/#{app_id}/shared-tables/#{table_name}"
+-api_base_url = "/v3/apps/#{encrypted_app_id}/shared-tables/#{table_name}"
 -records = DB[:app_tables].where(app_id:app_id, table_name:table_name, storage_id:nil)
 -jsonExample = '{"key1":"value1", "key2":2}'
 
