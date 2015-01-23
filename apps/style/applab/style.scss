@@ -1,5 +1,7 @@
 $root: '/blockly/media/applab/'; //TODO: Parameterize for asset pipeline
 
+// ** START OF RULES THAT ARE MODIFIED AT RUNTIME IN adjustAppSizeStyles() **
+
 div#visualization {
   height: 400px;
   width: 400px;
@@ -81,6 +83,8 @@ div#visualization {
     transform: scale(0.5);
   }
 }
+
+// ** END OF RULES THAT ARE MODIFIED AT RUNTIME IN adjustAppSizeStyles() **
 
 #divApplab {
   overflow: hidden;
