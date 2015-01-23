@@ -127,35 +127,7 @@ Calc.init = function(config) {
 
     appState.targetSet = generateExpressionsFromBlockXml(solutionBlocks);
 
-    // TODO (brent) - do we hit this if i have an empty compute block?
-    // var expressionNames = _.keys(appState.targetExpression);
-
-    if (!level.freePlay) {
-      if (!appState.targetSet.computeExpression()) {
-        throw new Error('Unexpected: No compute expression');
-      }
-
-      // Check to see if we're in function mode
-      if (!!appState.targetSet.nonComputeEquation()) {
-        // TODO - should function mode exist in freeplay?
-        Calc.functionMode_ = true;
-      }
-
-      if (appState.targetSet.multipleEquations()) {
-        // TODO (brent) - if we have a var and a function, this will throw.
-        // that may not be desirable
-        throw new Error('Level solution cannot have multiple functions');
-      }
-
-
-      // TODO (brent) - evaluate final expression
-      var sortedEquations = appState.targetSet.sortedEquations(true);
-
-      sortedEquations.forEach(function (equation, index) {
-        var tokenList = equation.expression.getTokenList(false);
-        displayEquation('answerExpression', equation.name, tokenList, index);
-      });
-    }
+    displayGoal();
 
     // Adjust visualizationColumn width.
     var visualizationColumn = document.getElementById('visualizationColumn');
@@ -168,6 +140,37 @@ Calc.init = function(config) {
 
   studioApp.init(config);
 };
+
+/**
+ * A few possible scenarios
+ * (1) We don't have a target compute expression (i.e. freeplay). Show nothing.
+ * (2) We have a target compute expression, one function, and no variables.
+ *     Show the compute expression + evaluation, and nothing else
+ * (3) We have a target compute expression, and possibly some number of
+ *     variables, but no functions. Display compute expression and variables
+ * (4) We have a target compute expression, and either multiple functions or
+ *     one function and variable(s). Currently not supported.
+ */
+function displayGoal() {
+  if (!appState.targetSet.computeEquation()) {
+    return;
+  }
+
+  // If we have a function, just show the evaluation (i.e. compute expression)
+  var singleFunction = appState.targetSet.singleFunction();
+  var sortedEquations;
+  if (singleFunction !== null) {
+    sortedEquations = [appState.targetSet.computeEquation()];
+  } else {
+    sortedEquations = appState.targetSet.sortedEquations();
+  }
+
+  // TODO (brent) - evaluate final expression
+  sortedEquations.forEach(function (equation, index) {
+    var tokenList = equation.expression.getTokenList(false);
+    displayEquation('answerExpression', equation.name, tokenList, index);
+  });
+}
 
 /**
  * Click the run button.  Start the program.
@@ -267,16 +270,16 @@ Calc.execute = function() {
   appState.result = level.freePlay ||
     appState.targetSet.isIdenticalTo(appState.userSet);
 
-  var hasVariablesOrFunctions = !!appState.userSet.nonComputeEquation();
+  var hasVariablesOrFunctions = appState.userSet.hasVariablesOrFunctions();
   if (level.freePlay) {
     appState.result = true;
     appState.testResults = TestResults.FREE_PLAY;
   } else {
-    var user = appState.userSet.computeExpression();
-    var target = appState.targetSet.computeExpression();
+    var user = appState.userSet.computeEquation();
+    var target = appState.targetSet.computeEquation();
 
     if (!appState.result && !hasVariablesOrFunctions && user &&
-        user.isEquivalentTo(target)) {
+        user.expression.isEquivalentTo(target && target.expression)) {
       appState.testResults = TestResults.APP_SPECIFIC_FAIL;
       appState.message = calcMsg.equivalentExpression();
     } else {
@@ -305,7 +308,7 @@ Calc.execute = function() {
     Calc.step();
   } else {
     clearSvgUserExpression();
-    appState.userSet.sortedEquations(true).forEach(function (userEquation, index) {
+    appState.userSet.sortedEquations().forEach(function (userEquation, index) {
       var targetEquation = appState.targetSet.getEquation(userEquation.name);
       // get the expression, diffing against ourself if it doesnt exist
       var expected = targetEquation ?
@@ -361,15 +364,16 @@ function clearSvgUserExpression() {
 function animateUserExpression (maxNumSteps) {
   var finished = false;
 
-  if (!!appState.userSet.nonComputeEquation() ||
-    !!appState.targetSet.nonComputeEquation()) {
+  if (appState.userSet.hasVariablesOrFunctions() ||
+    appState.targetSet.hasVariablesOrFunctions()) {
     throw new Error("Can't animate if either user/target have functions/vars");
   }
 
-  var userExpression = appState.userSet.computeExpression();
-  if (!userExpression) {
+  var userEquation = appState.userSet.computeEquation();
+  if (!userEquation) {
     throw new Error('require user expression');
   }
+  var userExpression = userEquation.expression;
 
   clearSvgUserExpression();
 
