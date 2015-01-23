@@ -36,15 +36,12 @@ var _ = require('../utils').getLodash();
 var timeoutList = require('../timeoutList');
 
 var ExpressionNode = require('./expressionNode');
+var EquationSet = require('./equationSet');
 
 var TestResults = studioApp.TestResults;
 
 var level;
 var skin;
-
-// todo - better approach for reserved name?
-// use zzz for sorting purposes (which is also hacky)
-var COMPUTE_NAME = 'zzz_compute';
 
 studioApp.setCheckForEmptyBlocks(false);
 
@@ -52,8 +49,8 @@ var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
 
 var appState = {
-  targetExpressions: null,
-  userExpressions: null,
+  targetSet: null,
+  userSet: null,
   animating: false,
   response: null,
   message: null,
@@ -63,24 +60,6 @@ var appState = {
 };
 
 var stepSpeed = 2000;
-
-
-/**
- * An equation is an expression attached to a particular name. For example:
- *   f(x) = x + 1
- *   name: f
- *   equation: x + 1
- * In many cases, this will just be an expression with no name.
- */
-var Equation = function (name, expression) {
-  this.name = name;
-  this.expression = expression;
-};
-
-var ExpressionSet = function () {
-  this.compute_ = null;
-  this.other_ = {};
-};
 
 /**
  * Initialize Blockly and the Calc.  Called on page load.
@@ -146,37 +125,37 @@ Calc.init = function(config) {
         config.forceInsertTopBlock);
     }
 
-    appState.targetExpressions = generateExpressionsFromBlockXml(solutionBlocks);
+    appState.targetSet = generateExpressionsFromBlockXml(solutionBlocks);
 
     // TODO (brent) - do we hit this if i have an empty compute block?
-    var expressionNames = _.keys(appState.targetExpression);
+    // var expressionNames = _.keys(appState.targetExpression);
 
     if (!level.freePlay) {
-      if (!appState.targetExpressions[COMPUTE_NAME]) {
+      if (!appState.targetSet.computeExpression()) {
         throw new Error('Unexpected: No compute expression');
       }
 
-      // Check to see if we're in funciton mode
-      if (expressionNames.length > 1) {
+      // Check to see if we're in function mode
+      if (!!appState.targetSet.nonComputeEquation()) {
         // TODO - should function mode exist in freeplay?
         Calc.functionMode_ = true;
       }
 
-      if (expressionNames.length > 2) {
+      if (appState.targetSet.multipleEquations()) {
         // TODO (brent) - if we have a var and a function, this will throw.
         // that may not be desirable
         throw new Error('Level solution cannot have multiple functions');
       }
-    }
 
-    expressionNames.sort().forEach(function (name, index) {
-      var expression = appState.targetExpressions[name];
-      var tokenList = expression.getTokenList(false);
-      if (name === COMPUTE_NAME) {
-        name = null;
-      }
-      displayEquation('answerExpression', name, tokenList, index);
-    });
+
+      // TODO (brent) - evaluate final expression
+      var sortedEquations = appState.targetSet.sortedEquations(true);
+
+      sortedEquations.forEach(function (equation, index) {
+        var tokenList = equation.expression.getTokenList(false);
+        displayEquation('answerExpression', equation.name, tokenList, index);
+      });
+    }
 
     // Adjust visualizationColumn width.
     var visualizationColumn = document.getElementById('visualizationColumn');
@@ -245,14 +224,8 @@ function evalCode (code) {
  * the base expression), and values are the expressions
  */
 function generateExpressionsFromTopBlocks() {
-  var obj = {};
-
   var topBlocks = Blockly.mainBlockSpace.getTopBlocks();
-  var equationList = topBlocks.forEach(function (block) {
-    var equation = getEquationFromBlock(block);
-    obj[equation.name || COMPUTE_NAME] = equation.expression;
-  });
-  return obj;
+  return EquationSet.fromBlocks(topBlocks);
 }
 
 /**
@@ -270,90 +243,15 @@ function generateExpressionsFromBlockXml(blockXml) {
     studioApp.loadBlocks(blockXml);
   }
 
-  var obj = generateExpressionsFromTopBlocks();
+  var equationSet = generateExpressionsFromTopBlocks();
 
   Blockly.mainBlockSpace.getTopBlocks().forEach(function (block) {
     block.dispose();
   });
 
-  return obj;
+  return equationSet;
 }
 
-// todo (brent) : would this logic be better placed inside the blocks?
-// todo (brent) : needs some unit tests
-function getEquationFromBlock(block) {
-  var name;
-  if (!block) {
-    return null;
-  }
-  var firstChild = block.getChildren()[0];
-  switch (block.type) {
-    case 'functional_compute':
-      if (!firstChild) {
-        return new ExpressionNode(0);
-      }
-      return getEquationFromBlock(firstChild);
-
-    case 'functional_plus':
-    case 'functional_minus':
-    case 'functional_times':
-    case 'functional_dividedby':
-      var operation = block.getTitles()[0].getValue();
-      var args = ['ARG1', 'ARG2'].map(function(inputName) {
-        var argBlock = block.getInputTargetBlock(inputName);
-        if (!argBlock) {
-          return 0;
-        }
-        return getEquationFromBlock(argBlock).expression;
-      });
-
-      return new Equation(null, new ExpressionNode(operation, args, block.id));
-
-    case 'functional_math_number':
-    case 'functional_math_number_dropdown':
-      var val = block.getTitleValue('NUM') || 0;
-      if (val === '???') {
-        val = 0;
-      }
-      return new Equation(null,
-        new ExpressionNode(parseInt(val, 10), [], block.id));
-
-    case 'functional_call':
-      name = block.getCallName();
-      var def = Blockly.Procedures.getDefinition(name, Blockly.mainBlockSpace);
-      if (def.isVariable()) {
-        return new Equation(null, new ExpressionNode(name));
-      } else {
-        var values = [];
-        var input, childBlock;
-        for (var i = 0; !!(input = block.getInput('ARG' + i)); i++) {
-          childBlock = input.connection.targetBlock();
-          // TODO - better default?
-          values.push(childBlock ? getEquationFromBlock(childBlock).expression :
-            new ExpressionNode(0));
-        }
-        return new Equation(null, new ExpressionNode(name, values));
-      }
-      break;
-
-    case 'functional_definition':
-      name = block.getTitleValue('NAME');
-      // TODO - access private
-      if (block.parameterNames_.length) {
-        name += '(' + block.parameterNames_.join(',') +')';
-      }
-      var expression = firstChild ? getEquationFromBlock(firstChild).expression :
-        new ExpressionNode(0);
-
-      return new Equation(name, expression);
-
-    case 'functional_parameters_get':
-      return new Equation(null, new ExpressionNode(block.getTitleValue('VAR')));
-
-    default:
-      throw "Unknown block type: " + block.type;
-  }
-}
 
 /**
  * Execute the user's code.
@@ -362,27 +260,20 @@ Calc.execute = function() {
   appState.testResults = TestResults.NO_TESTS_RUN;
   appState.message = undefined;
 
-  appState.userExpressions = generateExpressionsFromTopBlocks();
+  appState.userSet = generateExpressionsFromTopBlocks();
 
   // TODO (brent) - should this be using TestResult instead for consistency
   // across apps?
-  appState.result = true;
-  _.keys(appState.targetExpressions).forEach(function (targetName) {
-    var target = appState.targetExpressions[targetName];
-    var user = appState.userExpressions[targetName];
-    if (!user || !user.isIdenticalTo(target)) {
-      appState.result = false;
-    }
-  });
+  appState.result = level.freePlay ||
+    appState.targetSet.isIdenticalTo(appState.userSet);
 
-  var hasVariablesOrFunctions = _(appState.userExpressions).size() > 1;
+  var hasVariablesOrFunctions = !!appState.userSet.nonComputeEquation();
   if (level.freePlay) {
     appState.result = true;
     appState.testResults = TestResults.FREE_PLAY;
   } else {
-    // todo -  should we have single place where we get single target/user?
-    var user = appState.userExpressions[COMPUTE_NAME];
-    var target = appState.targetExpressions[COMPUTE_NAME];
+    var user = appState.userSet.computeExpression();
+    var target = appState.targetSet.computeExpression();
 
     if (!appState.result && !hasVariablesOrFunctions && user &&
         user.isEquivalentTo(target)) {
@@ -414,15 +305,18 @@ Calc.execute = function() {
     Calc.step();
   } else {
     clearSvgUserExpression();
-    _(appState.userExpressions).keys().sort().forEach(function (name, index) {
-      var expression = appState.userExpressions[name];
-      var expected = appState.targetExpressions[name] || expression;
-      var tokenList = expression ? expression.getTokenListDiff(expected) : [];
-      if (name === COMPUTE_NAME) {
-        name = null;
-      }
-      displayEquation('userExpression', name, tokenList, index, 'errorToken');
+    appState.userSet.sortedEquations(true).forEach(function (userEquation, index) {
+      var targetEquation = appState.targetSet.getEquation(userEquation.name);
+      // get the expression, diffing against ourself if it doesnt exist
+      var expected = targetEquation ?
+        targetEquation.expression : userEquation.expression;
+
+      var tokenList = userEquation.expression ?
+        userEquation.expression.getTokenListDiff(expected) : [];
+      displayEquation('userExpression', userEquation.name, tokenList, index,
+        'errorToken');
     });
+
     timeoutList.setTimeout(function () {
       stopAnimatingAndDisplayFeedback();
     }, stepSpeed);
@@ -467,12 +361,12 @@ function clearSvgUserExpression() {
 function animateUserExpression (maxNumSteps) {
   var finished = false;
 
-  if (_(appState.userExpressions).size() > 1 ||
-    _(appState.targetExpressions).size() > 1) {
-    throw new Error('Can only animate with single user/target');
+  if (!!appState.userSet.nonComputeEquation() ||
+    !!appState.targetSet.nonComputeEquation()) {
+    throw new Error("Can't animate if either user/target have functions/vars");
   }
 
-  var userExpression = appState.userExpressions[COMPUTE_NAME];
+  var userExpression = appState.userSet.computeExpression();
   if (!userExpression) {
     throw new Error('require user expression');
   }
