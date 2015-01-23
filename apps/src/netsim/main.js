@@ -8,6 +8,7 @@ var skins = require('./skins');
 window.netsimMain = function(options) {
   options.skinsModule = skins;
   options.isEditorless = true;
+  options.usesCustomLayout = true;
 
   var netSim = new NetSim();
   netSim.injectStudioApp(studioApp);
