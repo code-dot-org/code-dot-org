@@ -16,6 +16,5 @@ goog.inherits(Blockly.CustomCssClassMenuRenderer, goog.ui.MenuRenderer);
 goog.addSingletonGetter(Blockly.CustomCssClassMenuRenderer);
 
 Blockly.CustomCssClassMenuRenderer.prototype.getCssClass = function () {
-  return goog.getCssName(goog.ui.MenuRenderer.CSS_CLASS +
-    ' ' + this.customCssClass_);
+  return goog.ui.MenuRenderer.CSS_CLASS + ' ' + this.customCssClass_;
 };
