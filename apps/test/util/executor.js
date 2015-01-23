@@ -66,6 +66,11 @@ function setGlobals () {
       width: 0
     };
   };
+
+  // contains needed in applab
+  jsdomRoot.dom.level3.html.HTMLElement.prototype.contains = function () {
+    return true;
+  };
 }
 
 function setLevelSpecificGlobals () {
