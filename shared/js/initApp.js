@@ -183,7 +183,8 @@ if (appOptions.droplet) {
       .then(loadSource('ace/ext-language_tools'))
       .then(loadSource('droplet/droplet-full.min'));
 } else {
-  promise = loadSource(appOptions.locale + '/vendor')();
+  promise = loadSource('blockly')()
+    .then(loadSource(appOptions.locale + '/blockly_locale'));
 }
 promise.then(loadSource('common' + appOptions.pretty))
   .then(loadSource(appOptions.locale + '/common_locale'))

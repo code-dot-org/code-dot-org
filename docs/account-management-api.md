@@ -12,6 +12,8 @@ FeedBin also includes a .json extension on each document. This rubs me the wrong
 
 FeedBin allows providing the list of properties to return when requesting a resource. This optimization seems unnecessary for our needs, but it's worth noticing the technique if we find ourselves with verbose responses.
 
+Rails uses POST /container/new for document creation. I prefer the newer model used in FeedBin and the HTTP API Design document of POST /container because the Rails way polutes the container namespace and is out of date.
+
 In almost all cases the only error reported is 403 FORBIDDEN. Basically we don't want outsiders to be able to detect the existance of resources they don't have access to so we don't differientiate between forbidden and not-found.
 
 The whole API is prefixed with the "/v2" version indicator so that we can manage future changes to the API in a structured way. I know "/v1" doesn't exist but our current undifferentiated API is our v1.

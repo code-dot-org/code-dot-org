@@ -1091,3 +1091,8 @@
     permetteranno ai ragazzi di seguire un divertente corso accelerato per imparare
     a programmare dei robot ed affinare allo stesso tempo le loro capacità in scienze
     e matematica.
+  dashboard_students_progress: Progress
+  dashboard_progress_not_completed: not completed
+  dashboard_progress_completed_too_many_blocks: completed, too many blocks
+  dashboard_progress_completed_perfect: completed, perfect
+  dashboard_progress_furthest_level_attempted: furthest level attempted

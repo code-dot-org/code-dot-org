@@ -1,7 +1,7 @@
 /**
  * @license
  * Lo-Dash 2.4.1 (Custom Build) <http://lodash.com/>
- * Build: `lodash include="debounce,reject,map,value,range,without,sample,create,flatten,isEmpty,wrap,size,bind" --output src/lodash.js`
+ * Build: `lodash include="debounce,reject,map,value,range,without,sample,create,flatten,isEmpty,wrap,size,bind,contains,last" --output src/lodash.js`
  * Copyright 2012-2013 The Dojo Foundation <http://dojofoundation.org/>
  * Based on Underscore.js 1.5.2 <http://underscorejs.org/LICENSE>
  * Copyright 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -1738,6 +1738,54 @@
   /*--------------------------------------------------------------------------*/
 
   /**
+   * Checks if a given value is present in a collection using strict equality
+   * for comparisons, i.e. `===`. If `fromIndex` is negative, it is used as the
+   * offset from the end of the collection.
+   *
+   * @static
+   * @memberOf _
+   * @alias include
+   * @category Collections
+   * @param {Array|Object|string} collection The collection to iterate over.
+   * @param {*} target The value to check for.
+   * @param {number} [fromIndex=0] The index to search from.
+   * @returns {boolean} Returns `true` if the `target` element is found, else `false`.
+   * @example
+   *
+   * _.contains([1, 2, 3], 1);
+   * // => true
+   *
+   * _.contains([1, 2, 3], 1, 2);
+   * // => false
+   *
+   * _.contains({ 'name': 'fred', 'age': 40 }, 'fred');
+   * // => true
+   *
+   * _.contains('pebbles', 'eb');
+   * // => true
+   */
+  function contains(collection, target, fromIndex) {
+    var index = -1,
+        indexOf = getIndexOf(),
+        length = collection ? collection.length : 0,
+        result = false;
+
+    fromIndex = (fromIndex < 0 ? nativeMax(0, length + fromIndex) : fromIndex) || 0;
+    if (isArray(collection)) {
+      result = indexOf(collection, target, fromIndex) > -1;
+    } else if (typeof length == 'number') {
+      result = (isString(collection) ? collection.indexOf(target, fromIndex) : indexOf(collection, target, fromIndex)) > -1;
+    } else {
+      baseEach(collection, function(value) {
+        if (++index >= fromIndex) {
+          return !(result = value === target);
+        }
+      });
+    }
+    return result;
+  }
+
+  /**
    * Iterates over elements of a collection, returning an array of all elements
    * the callback returns truey for. The callback is bound to `thisArg` and
    * invoked with three arguments; (value, index|key, collection).
@@ -2119,6 +2167,75 @@
       return array[index] === value ? index : -1;
     }
     return baseIndexOf(array, value, fromIndex);
+  }
+
+  /**
+   * Gets the last element or last `n` elements of an array. If a callback is
+   * provided elements at the end of the array are returned as long as the
+   * callback returns truey. The callback is bound to `thisArg` and invoked
+   * with three arguments; (value, index, array).
+   *
+   * If a property name is provided for `callback` the created "_.pluck" style
+   * callback will return the property value of the given element.
+   *
+   * If an object is provided for `callback` the created "_.where" style callback
+   * will return `true` for elements that have the properties of the given object,
+   * else `false`.
+   *
+   * @static
+   * @memberOf _
+   * @category Arrays
+   * @param {Array} array The array to query.
+   * @param {Function|Object|number|string} [callback] The function called
+   *  per element or the number of elements to return. If a property name or
+   *  object is provided it will be used to create a "_.pluck" or "_.where"
+   *  style callback, respectively.
+   * @param {*} [thisArg] The `this` binding of `callback`.
+   * @returns {*} Returns the last element(s) of `array`.
+   * @example
+   *
+   * _.last([1, 2, 3]);
+   * // => 3
+   *
+   * _.last([1, 2, 3], 2);
+   * // => [2, 3]
+   *
+   * _.last([1, 2, 3], function(num) {
+   *   return num > 1;
+   * });
+   * // => [2, 3]
+   *
+   * var characters = [
+   *   { 'name': 'barney',  'blocked': false, 'employer': 'slate' },
+   *   { 'name': 'fred',    'blocked': true,  'employer': 'slate' },
+   *   { 'name': 'pebbles', 'blocked': true,  'employer': 'na' }
+   * ];
+   *
+   * // using "_.pluck" callback shorthand
+   * _.pluck(_.last(characters, 'blocked'), 'name');
+   * // => ['fred', 'pebbles']
+   *
+   * // using "_.where" callback shorthand
+   * _.last(characters, { 'employer': 'na' });
+   * // => [{ 'name': 'pebbles', 'blocked': true, 'employer': 'na' }]
+   */
+  function last(array, callback, thisArg) {
+    var n = 0,
+        length = array ? array.length : 0;
+
+    if (typeof callback != 'number' && callback != null) {
+      var index = length;
+      callback = lodash.createCallback(callback, thisArg, 3);
+      while (index-- && callback(array[index], index, array)) {
+        n++;
+      }
+    } else {
+      n = callback;
+      if (n == null || thisArg) {
+        return array ? array[length - 1] : undefined;
+      }
+    }
+    return slice(array, nativeMax(0, length - n));
   }
 
   /**
@@ -2805,6 +2922,7 @@
 
   /*--------------------------------------------------------------------------*/
 
+  lodash.contains = contains;
   lodash.identity = identity;
   lodash.indexOf = indexOf;
   lodash.isArguments = isArguments;
@@ -2819,6 +2937,8 @@
   lodash.size = size;
   lodash.sortedIndex = sortedIndex;
 
+  lodash.include = contains;
+
   mixin(function() {
     var source = {}
     forOwn(lodash, function(func, methodName) {
@@ -2831,6 +2951,7 @@
 
   /*--------------------------------------------------------------------------*/
 
+  lodash.last = last;
   lodash.sample = sample;
 
   forOwn(lodash, function(func, methodName) {

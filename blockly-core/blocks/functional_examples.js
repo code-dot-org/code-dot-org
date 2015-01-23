@@ -37,9 +37,9 @@ Blockly.Blocks.functional_example = {
     this.setFunctionalOutput(false);
     this.appendDummyInput()
         .appendTitle(Blockly.Msg.EXAMPLE)
-        .appendTitle('(' + [Blockly.Msg.EXPECTED, Blockly.Msg.ACTUAL].join(', ') + ')');
-    this.appendFunctionalInput('EXPECTED').setAlign(Blockly.ALIGN_CENTRE);
-    this.appendFunctionalInput('ACTUAL').setAlign(Blockly.ALIGN_CENTRE).setInline(true);
+        .appendTitle('(' + [Blockly.Msg.ACTUAL, Blockly.Msg.EXPECTED].join(', ') + ')');
+    this.appendFunctionalInput('ACTUAL').setAlign(Blockly.ALIGN_CENTRE);
+    this.appendFunctionalInput('EXPECTED').setAlign(Blockly.ALIGN_CENTRE).setInline(true);
     this.setTooltip(Blockly.Msg.EXAMPLE_DESCRIPTION);
   },
   mutationToDom: function() {

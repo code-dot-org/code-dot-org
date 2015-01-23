@@ -59,8 +59,10 @@ Blockly.BlockSvgFunctional.prototype.renderDraw_ = function(iconWidth, inputRows
  * @private
  */
 Blockly.BlockSvgFunctional.prototype.createFunctionalMarkers_ = function () {
+  var functionalMarkers = [];
   for (var i = 0; i < this.block_.inputList.length; i++) {
     var input = this.block_.inputList[i];
+    functionalMarkers.push(input.name);
     if (this.inputMarkers_[input.name]) {
       continue;
     }
@@ -68,9 +70,19 @@ Blockly.BlockSvgFunctional.prototype.createFunctionalMarkers_ = function () {
       continue;
     }
     this.inputMarkers_[input.name] = Blockly.createSvgElement('rect', {
-      fill: 'red' // todo
+      fill: 'red'
     }, this.svgGroup_);
   }
+
+  // Remove input markers that disappeared
+  Object.keys(this.inputMarkers_).forEach(function (markerName) {
+    if (functionalMarkers.indexOf(markerName) === -1) {
+      var element = this.inputMarkers_[markerName];
+      element.parentNode.removeChild(element);
+      delete this.inputMarkers_[markerName];
+    }
+  }, this);
+
 };
 
 Blockly.BlockSvgFunctional.prototype.renderDrawRight_ = function(renderInfo,

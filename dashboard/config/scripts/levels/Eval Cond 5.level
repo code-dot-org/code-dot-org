@@ -96,7 +96,7 @@
           </mutation>
           <title name="NAME">red shape</title>
           <functional_input name="STACK">
-            <block type="functional_cond_3" inline="false" uservisible="false">
+            <block type="functional_cond" inline="false" uservisible="false">
               <functional_input name="COND0">
                 <block type="functional_string_equals" inline="false" uservisible="false">
                   <functional_input name="ARG1">
@@ -278,7 +278,7 @@
           <block type="functional_string_equals" inline="false"/>
         </category>
         <category name="Cond">
-          <block type="functional_cond_4" inline="false"/>
+          <block type="functional_cond" inline="false"/>
         </category>
         <category name="Functions" custom="PROCEDURE">
           <block type="functional_call" inline="false">
@@ -365,7 +365,7 @@
           </mutation>
           <title name="NAME">red shape</title>
           <functional_input name="STACK">
-            <block type="functional_cond_3" inline="false">
+            <block type="functional_cond" inline="false">
               <functional_input name="COND0">
                 <block type="functional_string_equals" inline="false">
                   <functional_input name="ARG1">

@@ -29,7 +29,8 @@
     "default_num_example_blocks": "2",
     "disable_sharing": "false",
     "min_workspace_height": "1000",
-    "generate_function_pass_blocks": "true"
+    "generate_function_pass_blocks": "true",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
