@@ -60,14 +60,17 @@ var StepType = {
   OUT:  3,
 };
 
-var stdAppWidth = 400;
+// The typical width of the visualization area (indepdendent of appWidth)
+var vizAppWidth = 400;
+// The default values for appWidth and appHeight (if not specified in the level)
+var defaultAppWidth = 400;
 var defaultAppHeight = 400;
 
 function loadLevel() {
   Applab.timeoutFailureTick = level.timeoutFailureTick || Infinity;
   Applab.minWorkspaceHeight = level.minWorkspaceHeight;
   Applab.softButtons_ = level.softButtons || {};
-  Applab.appWidth = level.appWidth || stdAppWidth;
+  Applab.appWidth = level.appWidth || defaultAppWidth;
   Applab.appHeight = level.appHeight || defaultAppHeight;
 
   // Override scalars.
@@ -96,8 +99,8 @@ function adjustAppSizeStyles() {
   var vizScale = 1;
   // We assume these are listed in this order:
   var scaleFactors = [ 1.0, 0.875, 0.75, 0.675, 0.5 ];
-  if (stdAppWidth !== Applab.appWidth) {
-    vizScale = stdAppWidth / Applab.appWidth;
+  if (vizAppWidth !== Applab.appWidth) {
+    vizScale = vizAppWidth / Applab.appWidth;
     for (var ind = 0; ind < scaleFactors.length; ind++) {
       scaleFactors[ind] *= vizScale;
     }
@@ -117,7 +120,7 @@ function adjustAppSizeStyles() {
         if (rules[j].selectorText === "div#visualization") {
           // set the 'normal' width/height for the visualization itself
           rules[j].style.cssText = "height: " + vizAppHeight +
-                                   "px; width: " + stdAppWidth + "px;";
+                                   "px; width: " + vizAppWidth + "px;";
           changedRules++;
         } else if (rules[j].media && childRules) {
           var changedChildRules = 0;
@@ -165,7 +168,7 @@ var drawDiv = function () {
 
   // Adjust visualizationColumn width.
   var visualizationColumn = document.getElementById('visualizationColumn');
-  visualizationColumn.style.width = stdAppWidth + 'px';
+  visualizationColumn.style.width = vizAppWidth + 'px';
 };
 
 function getCurrentTickLength() {
