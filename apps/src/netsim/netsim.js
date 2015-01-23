@@ -24,7 +24,7 @@
 
 var commonMsg = require('../../locale/current/common');
 var netsimMsg = require('../../locale/current/netsim');
-var codegen = require('../codegen');
+var dom = require('../dom');
 var page = require('./page.html');
 var utils = require('../utils');
 var _ = utils.getLodash();
@@ -47,6 +47,32 @@ module.exports = NetSim;
  */
 NetSim.prototype.injectStudioApp = function (studioApp) {
   this.studioApp_ = studioApp;
+};
+
+/**
+ * Handler for clicking on the send button in the middle of the screen.
+ * This is a temporary handler for a temporary UI element - may get
+ * torn out.
+ * @private
+ */
+NetSim.prototype.onSendButtonClick_ = function () {
+  // TODO (bbuchanan) : This is super hacky "hello world" stuff.  remove it.
+  var now = new Date();
+  var fromBox = document.getElementById('netsim_inputbox');
+  var toBox = document.getElementById('netsim_recievelog');
+  toBox.value += '[' + now.toTimeString() + '] ' + fromBox.value + '\n';
+  toBox.scrollTop = toBox.scrollHeight;
+};
+
+/**
+ * Hook up input handlers to controls on the netsim page
+ * @private
+ */
+NetSim.prototype.attachHandlers_ = function () {
+  dom.addClickTouchEvent(
+      document.getElementById('netsim_sendbutton'),
+      _.bind(this.onSendButtonClick_, this)
+  );
 };
 
 /**
@@ -76,9 +102,10 @@ NetSim.prototype.init = function(config) {
 
   config.enableShowCode = false;
   config.loadAudio = _.bind(this.loadAudio_, this);
-  config.afterInject = _.bind(this.afterInject_, this, config);
 
   this.studioApp_.init(config);
+
+  this.attachHandlers_();
 };
 
 /**
@@ -91,11 +118,3 @@ NetSim.prototype.loadAudio_ = function () {
   this.studioApp_.loadAudio(this.skin.failureSound, 'failure');
 };
 
-/**
- * Code called after the blockly div + blockly core is injected into the document
- * @param {Object} config Requires members
- *   level: ???
- */
-NetSim.prototype.afterInject_ = function (config) {
-
-};

@@ -50,7 +50,9 @@ var helpArea = function(html) { -%>
     <% helpArea(data.helpHtml) %>
   </div>
   <div id="netsim">
-    Expose simulation controls here.
+    <textarea id="netsim_inputbox"></textarea>
+    <input id="netsim_sendbutton" type="button" value="Send" />
+    <textarea id="netsim_recievelog"></textarea>
   </div>
 </div>
 
