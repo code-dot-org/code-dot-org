@@ -9,7 +9,7 @@
   "rectangleBlockTitle": "retângulo (largura, altura, estilo, cor)",
   "reinfFeedbackMsg": "Você pode clicar no botão \"Tente novamente\" para editar seu desenho.",
   "rotateImageBlockTitle": "rotacionar (graus, imagem)",
-  "scaleImageBlockTitle": "escala (fator)",
+  "scaleImageBlockTitle": "scale (factor, image)",
   "squareBlockTitle": "quadrado (tamanho, estilo, cor)",
   "starBlockTitle": "pentagrama (raio, estilo, cor)",
   "radialStarBlockTitle": "estrela radial (pontos, interno, externo, estilo, cor)",

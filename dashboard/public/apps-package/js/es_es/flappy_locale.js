@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -155,11 +155,11 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "continue":function(d){return "Continuar"},
-"doCode":function(d){return "hacer"},
+"doCode":function(d){return "haz"},
 "elseCode":function(d){return "sino"},
 "endGame":function(d){return "terminar el juego"},
 "endGameTooltip":function(d){return "Termina el juego."},
-"finalLevel":function(d){return "¡Felicidades! Has resuelto el puzzle final."},
+"finalLevel":function(d){return "¡ Felicidades! Ha resuelto el rompecabezas final."},
 "flap":function(d){return "aletear"},
 "flapRandom":function(d){return "aletear una cantidad aleatoria"},
 "flapVerySmall":function(d){return "aletear muy suave"},
@@ -176,7 +176,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "numBlocksNeeded":function(d){return "Este puzzle puede resolverse con %1 bloques."},
 "playSoundRandom":function(d){return "reproducir sonido aleatorio"},
 "playSoundBounce":function(d){return "Reproducir sonido de rebote"},
-"playSoundCrunch":function(d){return "reproducir sonido crujido"},
+"playSoundCrunch":function(d){return "reproducir sonido de crujido"},
 "playSoundDie":function(d){return "reproducir sonido triste"},
 "playSoundHit":function(d){return "reproducir sonido de aplastar"},
 "playSoundPoint":function(d){return "reproducir sonido de punto"},
@@ -255,7 +255,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "shareFlappyTwitter":function(d){return "Mira el juego Flappy que hice. Lo escribí con @codeorg"},
 "shareGame":function(d){return "Comparte tu juego:"},
 "soundRandom":function(d){return "aleatorio"},
-"soundBounce":function(d){return "rebote"},
+"soundBounce":function(d){return "rebotar"},
 "soundCrunch":function(d){return "aplastar"},
 "soundDie":function(d){return "triste"},
 "soundHit":function(d){return "pegar"},

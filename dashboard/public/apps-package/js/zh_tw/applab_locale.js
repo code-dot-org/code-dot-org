@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -163,22 +163,21 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catText":function(d){return "本文"},
 "catVariables":function(d){return "變數類別"},
 "continue":function(d){return "繼續 "},
-"createHtmlBlock":function(d){return "建立HTML區塊"},
-"createHtmlBlockTooltip":function(d){return "在app中建立一個HTML區塊"},
+"createHtmlBlock":function(d){return "create html block"},
+"createHtmlBlockTooltip":function(d){return "Creates a block of HTML in the app."},
 "finalLevel":function(d){return "恭喜！你已經完成最後的關卡。"},
 "nextLevel":function(d){return "恭喜！你已經完成這個關卡。"},
 "no":function(d){return "否"},
 "numBlocksNeeded":function(d){return "這個關卡可以使用 %1 個程式積木來完成。"},
-"pause":function(d){return "打破"},
-"reinfFeedbackMsg":function(d){return "你可以按\"重試\"按鈕回去重新執行你的app"},
+"pause":function(d){return "Break"},
+"reinfFeedbackMsg":function(d){return "You can press the \"Try again\" button to go back to running your app."},
 "repeatForever":function(d){return "永遠重複"},
 "repeatDo":function(d){return "執行"},
-"repeatForeverTooltip":function(d){return "當app運作時，這個程式積木裡的動作會重複執行"},
-"shareWebappTwitter":function(d){return "快來看看我在 @codeorg 做的 app"},
-"shareGame":function(d){return "分享你的app:"},
-"stepIn":function(d){return "步入"},
-"stepOver":function(d){return "跨過"},
-"stepOut":function(d){return "走出去"},
-"turnBlack":function(d){return "變黑"},
-"turnBlackTooltip":function(d){return "把螢幕變成黑色"},
+"repeatForeverTooltip":function(d){return "Execute the actions in this block repeatedly while the app is running."},
+"shareApplabTwitter":function(d){return "Check out the app I made. I wrote it myself with @codeorg"},
+"shareGame":function(d){return "Share your app:"},
+"stepIn":function(d){return "Step in"},
+"stepOver":function(d){return "Step over"},
+"stepOut":function(d){return "Step out"},
+"viewData":function(d){return "View Data"},
 "yes":function(d){return "是"}};

@@ -1,11 +1,14 @@
 sk:
+  errors:
+    messages:
+      not_saved: 'Please correct the following errors:'
   activerecord:
     errors:
       messages:
         blank: sa vyžaduje
     attributes:
       user:
-        name: Meno na obrazovke
+        name: Meno
         email: E-mail
         username: Používateľské meno
         password: Heslo
@@ -133,17 +136,17 @@ sk:
       no_teacher: 'Nepodarilo sa nájsť žiadne prihlásenie pomocou "%{teacher_email_or_code}". Prosím požiadajte ich, aby sa zaregistrovali tu a následne sa pokúste opakovane pridať'
       section_not_found: 'Nepodarilo sa nájsť sekciu s kódom "%{section_code}".'
       blank_code: Zadaj kód sekcie
-      cant_join_own_section: "Sorry, you can't join your own section."
+      cant_join_own_section: Prepáč, nemožno spojiť svoje vlastné sekcii.
     mail:
       invite_student:
-        subject: 'Join a class with %{teacher_name} at Code.org!'
+        subject: 'Zúčastni sa hodiny s %{teacher_name} na Code.org!'
       student_disassociated:
-        subject: 'Code.org notification: %{student_name} is no longer associated as your student.'
+        subject: 'Code.org upozornenie: %{student_name} už nie je vaším študentom.'
       teacher_disassociated:
-        subject: 'Code.org notification: %{teacher_name} is no longer associated as your teacher.'
+        subject: 'Code.org upozornenie: %{teacher_name} už nie tvoj učiteľ.'
   reports:
     error:
-      access_denied: "You don't have access to this person's stats"
+      access_denied: Nemáte prístup k štatistikám tejto osoby
   redeem_prizes:
     title: 'Redeem Prizes: %{name}'
     provider: 'Poskytovateľ:'
@@ -154,19 +157,19 @@ sk:
     donorschoose_how_to: Ako použiť váš kód
     success: Vaša cena bola úspešne uplatnená, pozrite si nižšie uvedený kód.
     error: Vaša cena nemôže byť uplatnená, prosím skúste to znova.
-    error_us_only: The prize offer is only valid for U.S. users.
+    error_us_only: Ponúkaná cena je len pre USA užívateľov.
     error_not_earned: You have not yet earned this prize.
     error_already_redeemed: Your prize has already been redeemed.
-    no_prizes_available: "We're sorry, but we currently have no prizes available."
-    teacher_info_required: 'Teacher prizes require school name and address information:'
-    teacher_email_required: 'Teacher prizes require a confirmed email address:'
+    no_prizes_available: Ľutujeme, ale momentálne máme k dispozícii žiadne ceny.
+    teacher_info_required: 'Učiteľské ceny vyžadujú informácie o názve a adrese školy:'
+    teacher_email_required: 'Učiteľské ceny vyžadujú mať potvrdenú e-mailovú adresu:'
     confirm:
       title: Potvrďte prosím
       "no": Nie
       "yes": Áno
       msg: 'Are you sure you want to claim the %{prize_name} prize?'
-      msg_student: 'NOTE: You can only choose one type of prize.'
-      msg_publicschool: Please confirm that you are a U.S. public school teacher.
+      msg_student: 'Poznámka: Môžete si vybrať iba jeden druh ceny.'
+      msg_publicschool: Prosím potvrďte, že ste učiteľom americkej (USA) verejnej školy.
       msg_visit_website: Navštíviť webovú stránku
     providers:
       apple_itunes: $10 iTunes Gift Card
@@ -183,14 +186,14 @@ sk:
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
       earned: You have earned a prize! (U.S. students only)
-      not_earned_title: Finish the tutorial, earn rewards (U.S. students only)
-      not_earned: 'Learn all the computer science concepts, collect all %{num_trophies} trophies, and earn real-world prizes. You can choose between 10GB of free Dropbox space, $10 in Skype credits, and free game downloads. NOTE: offer only valid to U.S. students, and only as long as supplies last.'
+      not_earned_title: Dokonči tutorial a získaj odmeny (iba USA študenti)
+      not_earned: 'Nauč sa všetky pojmy počítačovej techniky, zhromažďuj trofeje %{num_trophies} a získaj reálne cien. Môžeš si vybrať medzi 10GB voľného priestoru Dropbox, $10 Skype kredity, a hry na stiahnutie zadarmo. Poznámka: ponúkané ceny sú platné iba pre amerických študentov a do vyčerpania zásob.'
       teacher:
-        earned: '15 or more students collected all %{num_trophies} trophies. You have won a teacher prize! (U.S. teachers only)'
+        earned: '15 a viac študentov zhromaždilo všetkých %{num_trophies} trofejí. Vyhrali ste cenu učiteľ! (Iba USA učitelia)'
         not_earned_title: 'Teach the class, earn up to $1,000 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers only)'
         not_earned: 'To reward first-time computer science teachers, you can earn up to $1,000 in <a href="http://DonorsChoose.org">DonorsChoose.org</a> credits for guiding a classroom through the K-8 intro course. To qualify, you need to successfully host a classroom of at least 15 students through the entire K-8 intro course, with all 15 students (or more) completing all tutorials and earning all %{num_trophies} trophies. If 7 or more of the students who earn all of the trophies are girls, your reward is $1,000 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits. Otherwise, your reward is $750 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits.  <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits can only be used by teachers in U.S. public schools.'
         bonus:
-          not_earned_title: 'You can still earn an additional $250 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers only)'
+          not_earned_title: 'Stále môžete zarobiť ďalších $250 v <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> kreditov (iba USA učitelia)'
           earned: '7 or more of the students who collected all %{num_trophies} trophies are girls. You have won a bonus prize! (U.S. teachers only)'
           not_earned: 'If at least 7 of your students who earn all %{num_trophies} trophies are girls, your reward is an additional $250 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits. <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits can only be used by teachers in U.S. public schools.'
   crud:
@@ -208,7 +211,7 @@ sk:
     access_denied: 'Nemáš prístup k %{model}.'
   nav:
     header:
-      finished_hoc: "I've finished my Hour of Code"
+      finished_hoc: 'Ukončil som svoju "Hodinu kódovania"'
       sign_in_to_save: Sign in to save progress
       free_play:
         playlab: Vytvoriť aplikáciu
@@ -227,39 +230,39 @@ sk:
       progress: Váš pokrok
       lines: 'Počet riadkov kódu: %{lines}'
       close: ZAVRIEŤ
-      mastery: Concepts
-      puzzle_map: Stages
-      prizes: 'Collect all %{total_trophies} trophies and win prizes!'
-      prize_earned: 'All %{total_trophies} trophies collected. Prize won!'
-      prize_us_only: (U.S. students only)
-      prizes_link: more info
+      mastery: Koncept
+      puzzle_map: Etapy
+      prizes: 'Zhromažďi všetky trofeje %{total_trophies} a vyhrajte ceny!'
+      prize_earned: 'Všetky %{total_trophies} trofeje získané. Vyhral si cenu!'
+      prize_us_only: (Iba USA študenti)
+      prizes_link: viac info
   teacher:
     title:
-      one: 'Your teacher:'
-      other: 'Your teachers:'
-    remove: (remove teacher)
+      one: 'Tvoj učiteľ:'
+      other: 'Tvoji učitelia:'
+    remove: (odstránenie učiteľ)
     confirm:
-      remove: Are you sure you want to remove this teacher?
-    tools: Teacher Tools
+      remove: Naozaj chcete odstrániť tohto učiteľa?
+    tools: Nástroje učiteľa
     followers:
-      section: 'Section:'
+      section: 'Sekcia:'
       stages: 'Stage(s) to display:'
-      show_past: 'Show student activity (%{bullet_html}) in the past:'
+      show_past: 'Zobraziť aktivity študenta (%{bullet_html}) v minulosti:'
       levels_key: Levels key
-      perfect: Completed, perfect
-      completed: Completed, but using too many blocks
+      perfect: Dokončené, perfektne
+      completed: Dokončené, ale s pomocou príliš veľa blokov
       tried: Tried, but not completed
       not_tried: Not tried yet
-      activity: 'Indicates student activity in the last %{hours} %{plural}'
-      no_section: No assigned section
+      activity: 'Ukazuje študentské aktivity v posledných %{hours} %{plural}'
+      no_section: Žiadne pridelené časti
       trophies: Trofeje
     students:
       name: Meno
       username: Používateľské meno
       password: Heslo
-      manage: Manage students
+      manage: Správa Študentov
       dashboard: Go to Teacher Dashboard
-      add: Add students
+      add: Pridaj študentov
       remove: odstrániť študenta
       confirm_remove: Naozaj chcete odstrániť tohto študenta?
       help_reassign: To divide your class into multiple sections, select students to assign to a new section.
@@ -313,65 +316,64 @@ sk:
     lesson_plans: Lesson plans
     signin_message: 'Already registered? %{link}'
     student_reg_link: Student Sign Up
-    teacher_reg_link: Teacher Sign Up
+    teacher_reg_link: Registrácia učiteľa
     signin_directions: 'Use an account to track progress.<br/> Teachers, track your entire class.'
     teacher_dashboard: See progress dashboard
-    teacher_student_count_one: 'You have %{count} student.'
-    teacher_student_count: 'You have %{count} students.'
+    teacher_student_count_one: 'Máte %{count} študenta.'
+    teacher_student_count: 'Máte %{count} študentov.'
     teacher_averages: 'On average your students have earned %{trophy_average} out of %{trophy_max} "Concept Mastery" trophies.'
-    teacher_print_certificates: Print certificates for students who finish this course
-    teacher_read_blog: Read about news and updates to our materials at our Educator Blog
-    classroom: Your classroom
-    student_progress: Your learning progress
-    student_stats: |-
-      You've earned %{trophy_count} out of %{trophy_max} "Concept Mastery" trophies.
-    student_left_off: 'Where you left off:'
-    student_finished: "You've completed all tutorials, pick another class %{online_link} or at a %{local_school_link}"
-    local_school: local school
-    online: online
-    see_details: See details
+    teacher_print_certificates: Tlač certifikátov pre študentov, ktorí dokončiť tento kurz
+    teacher_read_blog: Prečítajte si o novinkách a aktualizáciách materiálov na našom Educator blogu
+    classroom: Tvoja trieda
+    student_progress: Váš pokrok učenia
+    student_stats: 'Získal si %{trophy_count} z %{trophy_max} trofejí "Concept Mastery".'
+    student_left_off: 'Kde si prestal:'
+    student_finished: 'Dokončil si všetky cvičenia, vyber si ďaľšiu triedu %{online_link} alebo v %{local_school_link}'
+    local_school: miestna škola
+    online: Online
+    see_details: Pozri detaily
     prize_info: 'Prizes for participation (U.S. public school teachers only): Up to $1,000 in classroom rewards.'
-    tryfirst: 'Or, you can try it first, and sign up later:'
+    tryfirst: 'Alebo môžete najprv vyskúšať a neskôr sa zaregistrovať:'
     trynow: Skús teraz
-    add_hint_help: Please help us to add smart hints to Code.org tutorials
-    20hour_overview: This 20-hour course introduces core computer science and programming concepts. The course is designed for use in classrooms for grades K-8, but it is fun to learn at all ages.
-    test_videos_help: Test our new video player at your school
-    try_beta_courses: New! Try our beta courses for K-5 students
-    use_as_teacher: Use this site as a teacher
-    heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
-    heading_elementary: '<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>'
-    heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
-    heading_legacy: '<h2>Our general course for</h2><h1>All Ages</h1>'
-    your_gallery: Gallery
+    add_hint_help: Prosím pomôžte nám pridať tipy pre Code.org tutoriály
+    20hour_overview: Tento 20-hodinový kurz predstavuje základ informatiky a programovania. Kurz je určený pre deti od 1. po 8. triedu (stupeň K-8), ale určite pobaví študentov všetkých vekových kategórií.
+    test_videos_help: Otestujte naše nové video prehrávače na vašej škole
+    try_beta_courses: Novinka! Vyskúšajte naše beta kurzy pre žiakov 1. stupňa ZŠ
+    use_as_teacher: Použiť túto stránku ako učiteľ
+    heading_hoc2014: '<h2>Hodina kódovania pre</h2><h1>všetky vekové kategórie</h1>'
+    heading_elementary: '<h2>20 hodín kurzov pre</h2><h1>Začiatočníkov (rôzneho veku)</h1>'
+    heading_apps: '<h2>Zábava pre</h2><h1>všetkých</h1>'
+    heading_legacy: '<h2>Náš všeobecný kurz pre</h2><h1>Všetky vekové kategórie</h1>'
+    your_gallery: Galéria
   gender:
-    male: Male
-    female: Female
-    none: Prefer not to answer
+    male: Muž
+    female: Žena
+    none: Preferujem neodpovedať
   user_type:
     student: Študent
     teacher: Učiteľ
   footer:
-    help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped create this tutorial.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
+    help_from_html: Inžinieri z Google, Microsoft, Facebook a Twitter pomoholi vytvoriť tento tutoriál.
+    art_from_html: 'Angry Birds&trade; & &copy; 2009-2014 Rovio zábava S.r.o. Všetky práva vyhradené. <br/> Rastliny vs zombie&trade; & &copy; 2014 Electronic Arts Inc Všetky práva vyhradené.'
     powered_by_aws: Powered by Amazon Web Services
-    feedback: Provide feedback
+    feedback: Poskytnúť spätnú väzbu
     translate: Help us translate to your language
-    support: Support
-    support_url: http://support.code.org
-    tos: Terms
-    privacy: Privacy Policy
-    secure: Secure Version
+    support: Podpora
+    support_url: http://support.code.org/
+    tos: Podmienky
+    privacy: Zásady ochrany súkromia
+    secure: Bezpečná verzia
   reference_area:
-    title: Need help?
-    subtitle: See these videos and hints
-    teacher: See the solution
-    auth_error: You are not authorized to see the solution.
+    title: Potrebujete pomôcť?
+    subtitle: Pozrite si tieto videá a tipy
+    teacher: Pozrite si riešenie
+    auth_error: Nemáte oprávnenie vidieť riešenie.
     submit: Update Artist Location
-    direction: Start Direction (in degrees)
+    direction: Štart smeru (v stupňoch)
   video:
     tab: Video.
-    notes: No video? Show notes.
-    notes_coming_soon: Notes for this video coming soon.
+    notes: Žiadne video? Zobraziť poznámky.
+    notes_coming_soon: Poznámky pre toto video už čoskoro.
     autoplay_option: Autoplay videos
     download: Download Video
   compatability:
@@ -428,58 +430,58 @@ sk:
       try_new_tutorial: Try our new Hour of Code tutorial in beta
       try_frozen: Artist with Anna and Elsa, from Frozen
     gallery:
-      title: Gallery
-      body: View a gallery of app and artist images created by our users
+      title: Galéria
+      body: Zobraziť galériu aplikácií a obrázkov vytvorených našími užívateľmi
     frozen:
       title: Frozen
   gallery:
-    students_drew_these_with_code: Students drew these with code!
-    students_made_these_with_code: Students made these with code!
-    picture_count: 'In the past <b>%{days}</b> days, students have drawn <b>%{count}</b> pictures by writing their own computer programs. Click on the pictures to see each program in action.'
-    activity_count: 'In the past <b>%{days}</b> days, students have made <b>%{count}</b> apps and pictures by writing their own computer programs. Click on the pictures and screenshots to see each program in action.'
-    want_to_make_your_own: Want to make your own?
-    more: 'More &rarr;'
-    caption_by_name_age: 'by %{name}, age %{age}'
+    students_drew_these_with_code: Študenti toto nakreslil s pomocou kódu!
+    students_made_these_with_code: Študenti vytvorili toto s pomocou kódu!
+    picture_count: 'V posledných <b>%{days}</b> dňoch, študenti nakreslil <b>%{count}</b> obrázkov napísaním vlastného počítačového programu. Kliknutím na obrázok uvidíte program v akcii.'
+    activity_count: 'V posledných dňoch <b>%{days}</b>, študenti vytvorili<b>%{count}</b> aplikacií a fotiek napísaním vlastného počítačového programu. Kliknutím na obrázok a screenshot uvidíte program v akcii.'
+    want_to_make_your_own: Chceš vytvoriť svoj vlastný?
+    more: 'Viac &rarr;'
+    caption_by_name_age: 'podľa %{name}, vek %{age}'
     caption_time_ago: '%{time_ago} ago'
-    header: Gallery
+    header: Galéria
     header_playlab: Play Lab
     header_artist: Artist
   landing:
-    prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
-    prerelease_hoc2014: "This tutorial is in <span class='betatext'>beta</span>.  It is subject to revision as feedback is received and improvements are made."
-    feedback: Give Feedback
-    report_bug: Report Bug
-    support: Get Help
-    support_url: //support.code.org
+    prerelease: "Tento kurz je v <span class='betatext'> beta verzii</span>.  To znamená, že to nie je Finálna verzia kurzu a je predmetom revízie na základe pripomienok a vylepšení, ktoré sú vykonané."
+    prerelease_hoc2014: "Tento tutoriál je v <span class='betatext'> beta verzii</span> a je predmetom revízie na základe pripomienok a vylepšení, ktoré sú vykonané."
+    feedback: Poskytnúť spätnú väzbu
+    report_bug: Nahlásiť chybu
+    support: Získať pomoc
+    support_url: support.code.org
   multi:
-    wrong_title: Incorrect answer
-    wrong_body: "The answer you've entered is not correct.  Please try again!"
-    correct_title: Correct
-    correct_body: That is the correct answer.
+    wrong_title: Nesprávna odpoveď
+    wrong_body: 'Zadaná odpoveď je nesprávna.  Prosím skúste to znova!'
+    correct_title: Správne
+    correct_body: To je správna odpoveď.
   match:
-    wrong_title: Incorrect solution
-    wrong_body: "The solution you've entered is not correct.  Please try again!"
-    correct_title: Correct
-    correct_body: That is the correct answer.
+    wrong_title: Nesprávne riešenie
+    wrong_body: 'Zadané riešenie nie je správne.  Prosím skúste to znova!'
+    correct_title: Správne
+    correct_body: To je správna odpoveď.
   text_match:
-    placeholder: Enter your answer here
+    placeholder: Zadajte vašu odpoveď
   dialog:
     ok: ok
   time:
-    hour: 1 hour
-    day: day
-    week: week
+    hour: 1 hodina
+    day: deň
+    week: týždeň
   data:
     script:
       name:
         20-hour:
           title: K-8 Úvod do Kurzu Počítačovej Vedy (15-25 hours)
-          description: This 20-hour course introduces core computer science and programming concepts. The course is designed for use in classrooms for grades K-8, but it is fun to learn at all ages.
+          description: Tento 20-hodinový kurz predstavuje základ informatiky a programovania. Kurz je určený pre deti od 1. po 8. triedu (stupeň K-8), ale určite pobaví študentov všetkých vekových kategórií.
         Hour of Code:
           title: Hodina kódovania
           description: ""
         edit-code:
-          title: Edit Code
+          title: Upraviť kód
           description: ""
         events:
           title: Udalosti
@@ -500,17 +502,17 @@ sk:
           title: Sample Level Builder
           description: ""
   age_interstitial:
-    age: Your age
-    header: Account Information Update
+    age: Váš vek
+    header: Konto aktualizácia údajov
     message: "We're in the process of updating our experience to provide you with even stronger privacy protections. To do this, we need existing users to enter their age here.<br/>As always, code.org will never rent, sell or share this information with any third parties."
-    sign_out: 'If you do not wish to provide your age you may <a href="%{url}">sign out</a>.'
+    sign_out: 'Ak si neželáte poskytnúť váš vek môže sa <a href="%{url}"> odhlásiť</a>.'
   zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'
   progress:
-    not_completed: not completed
-    completed_too_many_blocks: completed, too many blocks
-    completed_perfect: completed, perfect
+    not_completed: nedokončené
+    completed_too_many_blocks: dokončené, príliš veľa blokov
+    completed_perfect: dokončené, super
     furthest_level_attempted: furthest level attempted
   studio:
-    courses_working_on: "Courses you're working on"
-    completed_courses: Completed courses
-    all_courses: All courses
+    courses_working_on: Kurzy na ktorých pracujete
+    completed_courses: Absolvované kurzy
+    all_courses: Všetky kurzy

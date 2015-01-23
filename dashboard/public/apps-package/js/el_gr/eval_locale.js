@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -164,11 +164,11 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "rectangleBlockTitle":function(d){return "ορθογώνιο (πλάτος, ύψος, στυλ, χρώμα)"},
 "reinfFeedbackMsg":function(d){return "Μπορείτε να πατήσετε το κουμπί \"Προσπαθείστε ξανά\" για να επεξεργαστείτε τη ζωγραφιά σας."},
 "rotateImageBlockTitle":function(d){return "περιστροφή (μοίρες, εικόνα)"},
-"scaleImageBlockTitle":function(d){return "κλίμακα (παράγοντας)"},
+"scaleImageBlockTitle":function(d){return "scale (factor, image)"},
 "squareBlockTitle":function(d){return "τετράγωνο (μέγεθος, στυλ, χρώμα)"},
 "starBlockTitle":function(d){return "αστέρι (ακτίνα, στυλ, χρώμα)"},
 "radialStarBlockTitle":function(d){return "Ακτινωτό-αστέρι (σημεία, εσωτερική ακτίνα, εξωτερική ακτίνα, στυλ, χρώμα)"},
-"polygonBlockTitle":function(d){return "polygon (sides, length, style, color)"},
+"polygonBlockTitle":function(d){return "πολύγωνο (πλευρές, μήκος, στυλ, χρώμα)"},
 "stringAppendBlockTitle":function(d){return "συμβολοσειρά-πρoσάρτησε (πρώτη, δεύτερη)"},
 "stringLengthBlockTitle":function(d){return "μήκος συμβολοσειράς (συμβολοσειρά)"},
 "textBlockTitle":function(d){return "κείμενο (συμβολοσειρά, μέγεθος, χρώμα)"},

@@ -599,3 +599,6 @@
     courses_working_on: Courses you're working on
     completed_courses: Completed courses
     all_courses: All courses
+  errors:
+    messages:
+      not_saved: crwdns27834:0crwdne27834:0

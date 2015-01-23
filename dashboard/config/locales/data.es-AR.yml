@@ -51,6 +51,7 @@
           Webapp: Etapa 2
           ArtistEC: Etapa 3
           StudioEC: Etapa 4
+          Applab: crwdns27899:0crwdne27899:0
         events:
           desc: Bounce (beta)
           Bounce: Etapa 1
@@ -103,6 +104,7 @@
         ArtistEC: El artista
         TextMatch: Combinación de texto
         StudioEC: Laboratorio de Juegos
+        Applab: crwdns27901:0crwdne27901:0
     trophy:
       name:
         Bronze: Bronce
@@ -592,6 +594,7 @@
           también el nuevo bloque "Ancho del Lápiz". ¡Que te diviertas!'
         studio_ec_sandbox: Crea tu propio juego. Cuando hayas terminado, haz clic
           en finalizar para que tus amigos prueben tu juego en sus teléfonos.
+        applab_ec_simple: crwdns27902:0crwdne27902:0
     levelbuilder:
       frozen line:
         instructions: ¡Hola! Soy Elsa de Arendelle. Ayúdame a crear una línea.

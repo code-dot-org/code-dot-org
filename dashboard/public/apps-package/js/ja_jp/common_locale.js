@@ -23,7 +23,7 @@ var locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -235,13 +235,13 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "infinity":function(d){return "無限\n"},
 "rotateText":function(d){return "お使いのデバイスを回転させてください。"},
 "orientationLock":function(d){return "デバイスの設定にあるオリエンテーション（方向）ロックをオフにしてください。"},
-"wantToLearn":function(d){return "プログラムを習いたい？"},
+"wantToLearn":function(d){return "プログラムを覚えてみたいですか？"},
 "watchVideo":function(d){return "ビデオを見る"},
 "when":function(d){return "とき"},
 "whenRun":function(d){return "実行時"},
-"tryHOC":function(d){return "1時間コース(Hour of Code)を試す"},
+"tryHOC":function(d){return "「コードの時間」に挑戦する"},
 "signup":function(d){return "イントロのコースに申し込む"},
-"hintHeader":function(d){return "ちょび技があるよ:"},
+"hintHeader":function(d){return "コツ："},
 "genericFeedback":function(d){return "どうなったかよく見て、プログラムを直してみよう。"},
-"toggleBlocksErrorMsg":function(d){return "You need to correct an error in your program before it can be shown as blocks."},
+"toggleBlocksErrorMsg":function(d){return "ブロックとして表示させるために、あなたのプログラムのエラーを直す必要があります。"},
 "defaultTwitterText":function(d){return "私の作品を試してみてください"}};

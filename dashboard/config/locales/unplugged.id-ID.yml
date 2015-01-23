@@ -67,9 +67,10 @@
         video: Unplug5
       Unplug6:
         title: Kondisi
-        desc: This is a class game.  After introducing the idea of conditionals, if-statements,
-          and loops, the class can practice together using a pre-written program,
-          a deck of cards, and luck of the draw.
+        desc: Ini adalah permainan kelas.  Setelah memperkenalkan gagasan conditional,
+          pernyataan if-else (jika-lain dari itu) dan loop (putaran), kelas dapat
+          berlatih bersama-sama menggunakan program yang telah ditulis, setumpuk kartu,
+          dan keberuntungan mengundi.
         pdfs:
         - unplug6
         video: Unplug6
@@ -85,83 +86,88 @@
         video: Unplug7
       Unplug8:
         title: Abstraksi
-        desc: This activity combines your students' everyday routine and a Mad-Lib
-          style thinking game to help your class learn about the effectiveness of
-          abstraction.
+        desc: Kegiatan ini menggabungkan rutinitas sehari-hari siswa Anda dan permainan
+          pikiran seperti Mad-Lib untuk membantu kelas Anda belajar tentang efektivitas
+          abstraksi.
         pdfs:
         - unplug8
         video: Unplug8
       Unplug9:
         title: Pemrograman relay
-        desc: This lesson will take an idea from a previous activity (4. Graph Paper
-          Programming) and use those skills to emphasize the importance of completing
-          programs that operate in sequence and frequently checking programs for "bugs".
+        desc: Pelajaran ini akan mengambil ide dari kegiatan sebelumnya (4. Kertas
+          grafik pemrograman) dan menggunakan keterampilan mereka untuk menekankan
+          pentingnya menyelesaikan program yang beroperasi dalam urutan dan sering
+          memeriksa program untuk "bug".
         pdfs:
         - unplug9
         video: Unplug9
       Unplug10:
         title: Internet
-        desc: In this lesson, students will pretend to flow through the Internet,
-          all the while learning about web addresses, IPs and the DNS.
+        desc: Dalam pelajaran ini, siswa akan berpura-pura untuk mengalir di dalam
+          Internet, sambil belajar tentang alamat web, IP (Protokol Internet) dan
+          DNS (Sistem Penamaan Domain).
         pdfs:
         - unplug10
         video: Unplug10
       Unplug11:
         title: Wrap-Up
-        desc: The final wrap-up in the first 20-hour series will help the class relive
-          all of their favorite moments, while giving them next steps that they can
-          take on their own if they are interested in continuing their computer science
-          journey.
+        desc: Tahap terakhir dalam serial 20 jam pertama ini akan membantu kelas menghidupkan
+          kembali semua momen-momen favorit mereka, sementara memberikan langkah-langkah
+          selanjutnya yang mereka dapat ambil secara mandiri jika tertarik untuk melanjutkan
+          perjalanan ilmu komputer mereka.
         pdfs:
         - unplug11
         video: Unplug11
       UnplugHappyMaps:
         title: Pemetaan bahagia
-        desc: Students create simple algorithms (sets of instructions) to move a character
-          through a maze using a single command.
+        desc: Siswa membuat algoritma sederhana (satu set instruksi) untuk memindahkan
+          sebuah karakter melalui labirin menggunakan satu perintah.
         video: C1_happy_maps_unplugged
       MoveIt:
         title: Pindahkan, pindahkan
-        desc: Students create simple algorithms (sets of instructions) to move a character
-          through a maze using a single command.
+        desc: Siswa membuat algoritma sederhana (satu set instruksi) untuk memindahkan
+          sebuah karakter melalui labirin menggunakan satu perintah.
         video: C1_moveitmoveit_unplugged
       PlantASeed:
         title: 'Algoritma kehidupan nyata: Tanam sebuah Bibit'
-        desc: This lesson calls out ways we use algorithms in our daily lives, using
-          the act of planting a seed as an example. It also focuses on the bigger
-          picture of computer science and how algorithms play an essential part.
+        desc: Pelajaran ini mengenalkan cara kita menggunakan algoritma dalam kehidupan
+          sehari-hari, contohnya menanam benih. Ini juga berfokus pada gambaran yang
+          lebih besar mengenai ilmu komputer dan bagaimana algoritma memainkan peran
+          amat penting.
         video: C1_planting_seed
       BuildingAFoundation:
         title: Membangun dasar
-        desc: Students build a structure using only provided supplies. Structures
-          must complete a task (reach a certain height or bear a certain weight),
-          and students discuss the idea of being persistent when things get complicated.
+        desc: Para siswa membangun sebuah struktur hanya dengan persediaan yang disediakan.
+          Struktur tersebut harus memenuhi syarat (mencapai ketinggian tertentu atau
+          menanggung berat tertentu), dan para siswa membahas gagasan menjadi gigih
+          saat segala sesuatunya menjadi rumit.
         video: C1_building_foundation
       GettingLoopy:
         title: Dapat berulang-ulang
-        desc: This lesson introduces the programming concept of loops (repeated instructions)
-          through a dance activity. Students will learn simple choreography, then
-          be instructed to repeat it.
+        desc: Pelajaran ini memperkenalkan konsep pemrograman loop (instruksi berulang)
+          melalui kegiatan menari. Siswa akan belajar koreografi sederhana, kemudian
+          diminta untuk mengulanginya.
         video: C1_getting_loopy
       RelayProgramming:
         title: Pergantian Programming
-        desc: Students run a relay race, where they dash across the yard to write
-          an algorithm based on a "Graph Paper Programming" image. They can only write
-          one instruction at a time and if there's an error somewhere, they have to
-          erase everything back to that point.
+        desc: Siswa menjalankan perlombaan estafet, dimana mereka lari di halaman
+          untuk menulis sebuah algoritma yang didasarkan pada sebuah gambar "Pemrograman
+          kertas grafik". Mereka hanya dapat menulis satu instruksi pada satu waktu
+          dan jika ada kesalahan di suatu tempat, mereka harus menghapus semua kembali
+          ke instruksi itu.
         video: C2_relay_programming
       Conditionals:
         title: Kondisi
-        desc: To learn about conditional statements, students play a card game and
-          create rules like "If I draw a red card, I get a point" and "If I draw a
-          black card, you get a point."
+        desc: Untuk mempelajari tentang pernyataan bersyarat, siswa memainkan permainan
+          kartu dan membuat aturan seperti "Jika saya menarik kartu merah, saya mendapatkan
+          satu poin" dan "Jika saya menarik kartu hitam, Anda mendapatkan satu poin."
         video: C2_conditionals_with_cards
       BigEvent:
         title: Acara besar
-        desc: Students are introduced to the programming concept of "events," which
-          are actions that a computer constantly monitors for. The teacher will press
-          buttons on a paper remote and students will react depending on which button
-          is pressed.
+        desc: Para siswa diperkenalkan kepada konsep pemrograman "peristiwa", yang
+          merupakan tindakan-tindakan yang selalu dipantau oleh komputer. Guru akan
+          menekan tombol pada suatu remote dari kertas dan siswa akan bereaksi tergantung
+          pada tombol yang ditekan.
         video: C1_bigevent_unplugged
       GoingPlacesSafely:
         title: Pergi ke tempat dengan aman
@@ -170,14 +176,16 @@
         video: C1_going_places_safely
       GraphPaperProgramming:
         title: Pemrograman grafis diatas kertas
-        desc: Students write an algorithm (a set of instructions) using a set of predefined
-          commands to direct their classmates to reproduce a drawing.
+        desc: Siswa menulis algoritma (satu set instruksi) menggunakan satu set perintah
+          untuk mengarahkan teman-teman sekelas mereka untuk menggambar kembali sebuah
+          gambar.
         video: C2_graph_paper
       PaperPlanes:
         title: 'Algoritma kehidupan nyata: Pesawat Kertas'
-        desc: This lesson calls out ways we use algorithms in our daily lives, specifically
-          making paper airplanes. This lesson also focuses on the bigger picture of
-          computer science and how algorithms play an essential part.
+        desc: Pelajaran ini mengajarkan cara kita menggunakan algoritma dalam kehidupan
+          sehari-hari, khususnya membuat pesawat kertas. Pelajaran ini juga berfokus
+          pada gambaran yang lebih luas seputar ilmu komputer dan bagaimana algoritma
+          memainkan peranan yang amat penting.
         video: C2_paper_airplanes
       BinaryBracelets:
         title: Gelang biner
@@ -187,14 +195,15 @@
         video: C2_binary_bracelets
       DigitalFootprint:
         title: Digital Footprint Kamu
-        desc: Teachers introduce to students the idea that putting information about
-          themselves online creates a digital footprint or "trail" that has consequences.
+        desc: Guru-guru memperkenalkan kepada siswa gagasan bahwa meletakkan informasi
+          mengenai dirinya secara daring menciptakan tapak digital atau "jejak" yang
+          memiliki konsekuensi.
         video: C2_digital_footprint
       ComputationalThinking:
         title: Berpikir secara komputasi
-        desc: Students use the steps of computational thinking (decompose, pattern
-          match, abstract, algorithm) to figure out how to play a game that comes
-          with no instructions.
+        desc: Siswa menggunakan langkah-langkah berpikir komputasi (penguraian, pencocokan
+          pola, abstrak, algoritma) untuk menemukan bagaimana memainkan permainan
+          yang tidak dilengkapi instruksi.
         video: C3_computational_thinking
       FunctionalSuncatchers:
         title: Fungsional Penangakap Matahari
@@ -230,11 +239,11 @@
         desc: Students explore the difference between private information and personal
           information, distinguishing what is safe and unsafe to share online.
       TangramAlgorithms:
-        title: Tangram Algorithms
-        desc: This lesson shows us something important about algorithms. If you keep
-          an algorithm simple there are lots of ways to use it. If you want to make
-          sure everyone ends up with the same thing, then your algorithm needs more
-          detail.
+        title: Algoritma tangram
+        desc: Pelajaran ini menunjukkan kepada kita sesuatu yang penting tentang algoritma.
+          Jika Anda menyimpan sebuah algoritma sederhana, ada banyak cara untuk menggunakannya.
+          Jika Anda ingin memastikan semua orang berakhir dengan hal yang sama, maka
+          algoritma Anda membutuhkan perincian lebih mendalam.
         video: C4_unplugged_algorithms
       EnvelopeVariables:
         title: Envelope Variables
@@ -257,19 +266,19 @@
         video: C4_unplugged_forloops
       SongwritingWithParameters:
         title: Parameter penulis lagu
-        desc: 'One of the most magnificent structures in the computer science world
-          is the function.  Functions (sometimes called procedures) are mini programs
-          that you can use over and over inside of your bigger program. This lesson
-          will help students intuitively understand why combining chunks of code into
-          functions is such a helpful practice.  '
+        desc: 'Salah satu struktur yang paling megah di dunia ilmu komputer adalah
+          fungsi. Fungsi (kadang-kadang disebut prosedur) adalah program kecil yang
+          dapat Anda gunakan berulang-ulang dalam program Anda yang lebih besar. Pelajaran
+          ini akan membantu siswa secara intuitif memahami mengapa menggabungkan potongan
+          kode ke dalam fungsi adalah sebuah praktik yang berguna.  '
         video: C4_unplugged_parameters
       BinaryImages:
         title: Binary Images
-        desc: Though many people think of binary as strictly zeros and ones, our previous
-          courses taught students that information can be represented in a variety
-          of binary options.  This lesson takes that concept one step further as it
-          illustrates how a computer can store even more complex information (such
-          as images and colors) in binary, as well.
+        desc: Meskipun banyak orang berpikir bahwa biner hanyalah bilangan nol dan
+          satu, kursus kami sebelumnya mengajarkan siswa bahwa informasi dapat diwakili
+          dalam berbagai pilihan biner.  Pelajaran ini mengambil konsep satu langkah
+          lebih lanjut, menggambarkan bagaimana komputer dapat menyimpan informasi
+          lebih rumit (seperti gambar dan warna) dalam biner, juga.
         video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
         title: Video Games and Coordinate Planes

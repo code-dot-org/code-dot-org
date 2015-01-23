@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -155,11 +155,11 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "actor":function(d){return "キャラクター"},
-"alienInvasion":function(d){return "外来の侵入"},
+"alienInvasion":function(d){return "エイリアンが侵略(しんりゃく) してきた！"},
 "backgroundBlack":function(d){return "まっくろ"},
 "backgroundCave":function(d){return "どうくつ"},
 "backgroundCloudy":function(d){return "くもり"},
-"backgroundHardcourt":function(d){return "木のもよう"},
+"backgroundHardcourt":function(d){return "テニスコート"},
 "backgroundNight":function(d){return "よる"},
 "backgroundUnderwater":function(d){return "みずのなか"},
 "backgroundCity":function(d){return "まち"},
@@ -177,16 +177,16 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "関数"},
 "catText":function(d){return "テキスト"},
 "catVariables":function(d){return "変数"},
-"changeScoreTooltip":function(d){return "スコアへポイントをふやしたりへらしたりします。"},
+"changeScoreTooltip":function(d){return "スコアへポイントを追加または削除します。"},
 "changeScoreTooltipK1":function(d){return "スコアにポイントを追加します。"},
 "continue":function(d){return "次へ"},
 "decrementPlayerScore":function(d){return "ポイントをへらします。"},
-"defaultSayText":function(d){return "ここに入力。"},
+"defaultSayText":function(d){return "ここに入力"},
 "emotion":function(d){return "気分"},
 "finalLevel":function(d){return "おめでとうございます ！最後のパズルを解決しました。"},
 "for":function(d){return "ため"},
 "hello":function(d){return "こんにちは"},
-"helloWorld":function(d){return "世界よこんにちは！"},
+"helloWorld":function(d){return "ハローワールド！"},
 "incrementPlayerScore":function(d){return "ポイントを採点する。"},
 "makeProjectileDisappear":function(d){return "消える"},
 "makeProjectileBounce":function(d){return "はねる"},
@@ -360,7 +360,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setSpriteZombie":function(d){return "ゾンビに"},
 "shareStudioTwitter":function(d){return "私のお話を見てください。 @codeorg を使って自分で作りました。"},
 "shareGame":function(d){return "お話をみんなに見てもらう"},
-"showCoordinates":function(d){return "show coordinates"},
+"showCoordinates":function(d){return "座標を表示します。"},
 "showCoordinatesTooltip":function(d){return "主人公の座標を画面に表示します。"},
 "showTitleScreen":function(d){return "表紙を見せる"},
 "showTitleScreenTitle":function(d){return "だいめい"},
@@ -384,6 +384,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "soundWinPoint2":function(d){return "win point 2"},
 "soundWood":function(d){return "木"},
 "speed":function(d){return "スピード"},
+"startSetValue":function(d){return "start (rocket-height function)"},
 "stopSprite":function(d){return "ストップ"},
 "stopSpriteN":function(d){return "キャラクター "+appLocale.v(d,"spriteIndex")+" を止める"},
 "stopTooltip":function(d){return "キャラクターの動きを止めます。"},

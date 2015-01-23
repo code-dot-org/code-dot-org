@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -150,22 +150,21 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catText":function(d){return "текст"},
 "catVariables":function(d){return "Променљиве"},
 "continue":function(d){return "Настави"},
-"createHtmlBlock":function(d){return "направи хипертекст блок"},
-"createHtmlBlockTooltip":function(d){return "Прави блок хипертекста у апликацији."},
+"createHtmlBlock":function(d){return "create html block"},
+"createHtmlBlockTooltip":function(d){return "Creates a block of HTML in the app."},
 "finalLevel":function(d){return "Честитамо! Решили сте финалну слагалицу."},
 "nextLevel":function(d){return "Честитамо! Завршили сте слагалицу."},
 "no":function(d){return "не"},
 "numBlocksNeeded":function(d){return "Ова слагалица може бити решена са %1 блоком."},
-"pause":function(d){return "Прелом"},
-"reinfFeedbackMsg":function(d){return "Можеш притиснути дугме \"Пробај опет\" да се вратиш на покретање своје апликације."},
+"pause":function(d){return "Break"},
+"reinfFeedbackMsg":function(d){return "You can press the \"Try again\" button to go back to running your app."},
 "repeatForever":function(d){return "repeat forever"},
 "repeatDo":function(d){return "уради"},
-"repeatForeverTooltip":function(d){return "Изврши акције у овом блоку више пута док је апликација покренута."},
-"shareWebappTwitter":function(d){return "Види какву сам апликацију направио. Сам сам је написао са @codeorg"},
-"shareGame":function(d){return "Подели своју апликацију:"},
-"stepIn":function(d){return "Ускочи"},
-"stepOver":function(d){return "Прескочи"},
-"stepOut":function(d){return "Искочи"},
-"turnBlack":function(d){return "зацрни"},
-"turnBlackTooltip":function(d){return "Затамњује екран."},
+"repeatForeverTooltip":function(d){return "Execute the actions in this block repeatedly while the app is running."},
+"shareApplabTwitter":function(d){return "Check out the app I made. I wrote it myself with @codeorg"},
+"shareGame":function(d){return "Share your app:"},
+"stepIn":function(d){return "Step in"},
+"stepOver":function(d){return "Step over"},
+"stepOut":function(d){return "Step out"},
+"viewData":function(d){return "View Data"},
 "yes":function(d){return "Да"}};

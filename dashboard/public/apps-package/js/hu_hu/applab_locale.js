@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -52,22 +52,21 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catText":function(d){return "szöveg"},
 "catVariables":function(d){return "Változók"},
 "continue":function(d){return "Tovább"},
-"createHtmlBlock":function(d){return "html blokk készítése"},
-"createHtmlBlockTooltip":function(d){return "HTML-ből álló blokkot készít az app-ban."},
+"createHtmlBlock":function(d){return "create html block"},
+"createHtmlBlockTooltip":function(d){return "Creates a block of HTML in the app."},
 "finalLevel":function(d){return "Gratulálok, megoldottad az utolsó feladatot."},
 "nextLevel":function(d){return "Gratulálok! Ezt a feladatot megoldottad."},
 "no":function(d){return "Nem"},
 "numBlocksNeeded":function(d){return "Ez a feladat a(z) %1 blokkal megoldható."},
-"pause":function(d){return "Törés"},
-"reinfFeedbackMsg":function(d){return "Megnyomhatod az \"Újrapróbálás\" gombot hogy ismét futtasd az appod."},
+"pause":function(d){return "Break"},
+"reinfFeedbackMsg":function(d){return "You can press the \"Try again\" button to go back to running your app."},
 "repeatForever":function(d){return "végtelen ismétlés"},
 "repeatDo":function(d){return "csináld"},
-"repeatForeverTooltip":function(d){return "A műveletek ismételt végrehajtása ebben a blokkban amíg az app fut."},
-"shareWebappTwitter":function(d){return "Nézd meg az appot amit csináltam. Magam írtam a code.org felületén"},
-"shareGame":function(d){return "App megosztása:"},
-"stepIn":function(d){return "Belépés"},
-"stepOver":function(d){return "Átlépés"},
-"stepOut":function(d){return "Kilépés"},
-"turnBlack":function(d){return "elsötétít"},
-"turnBlackTooltip":function(d){return "Elsötétíti a képernyőt."},
+"repeatForeverTooltip":function(d){return "Execute the actions in this block repeatedly while the app is running."},
+"shareApplabTwitter":function(d){return "Check out the app I made. I wrote it myself with @codeorg"},
+"shareGame":function(d){return "Share your app:"},
+"stepIn":function(d){return "Step in"},
+"stepOver":function(d){return "Step over"},
+"stepOut":function(d){return "Step out"},
+"viewData":function(d){return "View Data"},
 "yes":function(d){return "Igen"}};

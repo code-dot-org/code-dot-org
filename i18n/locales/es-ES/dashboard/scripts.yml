@@ -1,10 +1,10 @@
-es:
+es-AR:
   data:
     script:
       name:
         test:
           "Jigsaw: Learn to drag and drop": 'Rompecabezas: Aprende a arrastrar y soltar'
-          The Maze: El Laberinto
+          The Maze: El laberinto
           Multi: Multi
           Match: Combinar
           Math Image: Imagen Matemática
@@ -44,7 +44,7 @@ es:
           description_audience: Edades 4+ (pre lectores)
           description_short: El Curso 1 está diseñado para lectores tempranos.
         course2:
-          The Maze: El Laberinto
+          The Maze: El laberinto
           Suzi: Suzi
           The Artist: El artista
           Artist Debugging: Debugging del Artista
@@ -60,7 +60,7 @@ es:
           Bee Debugging: Depuración Abeja
           Bee Functions: Funciones Abeja
           Maze Loops: Bucles de Laberinto
-          Graph Paper Programming: Programación en hoja milimétrica
+          Graph Paper Programming: Programación de hoja cuadriculada
           "Real-life Algorithms: Paper Planes": 'Algoritmos de la vida real : Aviones de papel'
           Getting Loopy: Bucleandose
           Relay programming: Programación de relevos
@@ -83,7 +83,7 @@ es:
           description_audience: Edades 6 + (habilidad de lectura requerida)
           description_short: El Curso 2 está diseñado para estudiantes que pueden leer.
         course3:
-          The Maze: El Laberinto
+          The Maze: El laberinto
           "Studio: Create a Story": 'Laboratorio de Juego: Crea un Historia'
           The Artist: El artista
           title: Curso 3
@@ -136,7 +136,7 @@ es:
         msm:
           title: Matemáticas de Secundaria
           description: Trabajo privado en progreso para Matemáticas de Secundaria.
-          Graph Paper Programming: Programación en papel cuadriculado
+          Graph Paper Programming: Programación de hoja cuadriculada
           Assessments: Evaluaciones
           Unit 1: Unidad 1
           Unit 2: Unidad 2
@@ -294,19 +294,19 @@ es:
           Special: Especial
           Binary: Binario
         usabilitymsm:
-          Usability testing for MSM: Usability testing for MSM
-          Evaluation Blocks: Evaluation Blocks
+          Usability testing for MSM: Pruebas de usabilidad para MSM
+          Evaluation Blocks: Bloques de evaluación
           Blocks to Math: Bloques para matemáticas
-          Strings and Images: Strings and Images
-          Defining Variables: Defining Variables
-          Defining Functions: Defining Functions
-          Design Recipe: Design Recipe
+          Strings and Images: Cadenas de texto e imágenes
+          Defining Variables: Definición de Variables
+          Defining Functions: Definición de funciones
+          Design Recipe: Receta de diseño
           Booleans: Valores booleanos
           Conditionals: Condicionales
-          Free Play: Free Play
+          Free Play: Juego libre
         algebra:
-          title: Computer Science in Algebra
-          description: Learn Functional Programming through Algebra
+          title: Ciencias de la computación en álgebra
+          description: Aprender programación funcional a través del álgebra
           "Unplugged: Video Games and Coordinate Planes": 'Desconectado: videojuegos y planos de coordenadas'
           "Calc: Evaluation Blocks": 'Calc: Bloques de evaluación'
           "Eval: Strings and Images": 'Eval: Cadenas e imágenes'
@@ -314,10 +314,10 @@ es:
           "Eval: Writing Contracts": 'Eval: Redacción de contratos'
           "Calc: Defining Variables": 'Calc: Definiendo Variables'
           "Play Lab: Defining Variables (Big Game)": 'Laboratorio de juegos: Definición de Variables (Big Game)'
-          "Eval: Defining Functions": 'Eval: Defining Functions'
+          "Eval: Defining Functions": 'Eval: Definición de funciones'
           "Unplugged: The Design Recipe": 'Desconectado: La receta de diseño'
-          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
-          "Eval: Functions": 'Eval: Functions'
+          "Play Lab: Defining Functions": 'Laboratorio de juegos: Definiendo funciones'
+          "Eval: Functions": 'Evaluación: funciones'
           "Play Lab: Animation (Big Game)": 'Laboratorio de juegos: Animación (Big Game)'
           "Unplugged: Booleans": 'Desconectado: Booleanos'
           "Eval: Boolean Operators": 'Eval: Operadores booleanos'
@@ -327,3 +327,13 @@ es:
           "Eval: Conditionals": 'Eval: condicionales'
           "Unplugged: Collision Detection and the Distance Formula": 'Desconectado: Detección de colisiones y la fórmula de distancia'
           "Play Lab: Collision Detection (Big Game)": 'Laboratorio de juegos: Detección de colisiones (Big Game)'
+        algebrademo:
+          description: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
+          Algebra Demo: Algebra Demo
+          Evaluation Blocks: Bloques de evaluación
+          Making Pictures: Making Pictures
+          Defining Variables: Definición de Variables
+          Defining Simple Functions: Defining Simple Functions
+          The Design Recipe: La receta de diseño
+        K5PD:
+          Introduction to PD: Introduction to PD

@@ -312,7 +312,7 @@
           description: A selection of Course 4 levels for usability testing.
           Variables: Dəyişənlər
           For Loops: For Loops
-          Binary: Binary
+          Binary: İkilik
         potus:
           title: special
           description_short: special
@@ -323,7 +323,7 @@
           description_short: special
           description: special
           Special: Special
-          Binary: Binary
+          Binary: İkilik
         usabilitymsm:
           Usability testing for MSM: Usability testing for MSM
           Evaluation Blocks: Evaluation Blocks
@@ -363,3 +363,14 @@
             Detection and the Distance Formula'
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
             (Big Game)'
+        algebrademo:
+          description: A handful of puzzles to demonstrate the environment and programming
+            language used in Code.org CS in Algebra
+          Algebra Demo: Algebra Demo
+          Evaluation Blocks: Evaluation Blocks
+          Making Pictures: Making Pictures
+          Defining Variables: Defining Variables
+          Defining Simple Functions: Defining Simple Functions
+          The Design Recipe: The Design Recipe
+        K5PD:
+          Introduction to PD: Introduction to PD

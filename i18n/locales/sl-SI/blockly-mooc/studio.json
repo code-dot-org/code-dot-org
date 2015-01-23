@@ -229,6 +229,7 @@
   "soundWinPoint2":"dosegel točko 2",
   "soundWood":"les",
   "speed":"hitrost",
+  "startSetValue":"start (rocket-height function)",
   "stopSprite":"zadrži pri miru",
   "stopSpriteN":"ustavi igralca {spriteIndex}",
   "stopTooltip":"Ustavi igralčevo gibanje.",

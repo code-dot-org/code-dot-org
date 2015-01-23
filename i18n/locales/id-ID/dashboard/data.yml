@@ -48,7 +48,7 @@ id:
         edit-code:
           desc: Edit kode (beta)
           MazeEC: Tahap 1
-          Webapp: Tahap 2
+          Applab: Tahap 2
           ArtistEC: Tahap 3
           StudioEC: Tahap 4
         events:
@@ -99,10 +99,11 @@ id:
         Jigsaw: Teka-teki
         MazeStep: Mode tahapan labirin
         Wordsearch: Carikata
-        Webapp: Aplikasi Web
+        Webapp: App Lab
         ArtistEC: Artis
         TextMatch: Cocok Teks
         StudioEC: Lab Permainan
+        Applab: App Lab
     trophy:
       name:
         Bronze: Perunggu
@@ -339,7 +340,7 @@ id:
         maze_wordsearch_k_15: Gerakkan saya lurus, kemudian saya akan mengeja kata ABOVE
         maze_wordsearch_k_16: Gerakkan saya lurus, kemudian saya akan mengeja kata BELOW
         maze_wordsearch_k_20: Ini adalah tes! Gerakkan saya lurus, kemudian akan mengeja kata STORY
-        webapp_ec_simple: Buatlah aplikasi web anda dengan memakai createHtmlBlock.
+        applab_ec_simple: Create your app by using the blocks in the toolbox.
         turtle_ec_1_2: 'Sekarang, gambarlah sebuah bujur sangkar. CATATAN: gunakan warna favorit Anda dengan memilihnya dalam blok "penColor" yang baru.'
         turtle_ec_1_10: 'Anda berhasil! Sekarang, gambarlah apapun yang Anda mau. Beberapa ide asyik: gambar orang-orangan, butiran salju, atau spiral. Cobalah juga blok "penWidth" yang baru. Selamat menikmati!'
         studio_ec_sandbox: Buat permainan Anda sendiri. Setelah selesai, klik Selesai untuk membiarkan teman-teman mencoba permainan Anda pada ponsel mereka.

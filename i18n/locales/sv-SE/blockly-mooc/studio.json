@@ -229,6 +229,7 @@
   "soundWinPoint2":"vinna punkt 2",
   "soundWood":"trä",
   "speed":"hastighet",
+  "startSetValue":"start (rocket-height function)",
   "stopSprite":"stanna",
   "stopSpriteN":"stoppa figur {spriteIndex}",
   "stopTooltip":"Stoppar en figurs rörelse.",

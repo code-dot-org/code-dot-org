@@ -229,6 +229,7 @@
   "soundWinPoint2": "point ng panalo 2",
   "soundWood": "kahoy",
   "speed": "bilis",
+  "startSetValue": "start (rocket-height function)",
   "stopSprite": "hinto",
   "stopSpriteN": "itigil ang aktor  {spriteIndex}",
   "stopTooltip": "Itigil ang ginagawa ng aktor.",

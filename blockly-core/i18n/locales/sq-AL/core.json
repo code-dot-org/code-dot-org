@@ -1,5 +1,5 @@
 {
-  "ACTUAL": "aktuale",
+  "ACTUAL": "call",
   "ADD": "Shto",
   "ADD_COMMENT": "Vendos nje Koment",
   "ADD_PARAMETER": "Shto parametrin",
@@ -73,7 +73,7 @@
   "EXAMPLE_DESCRIPTION": "Përcakton një shembull me sjellje të pritura dhe aktuale",
   "EXPAND_ALL": "Zmadho blloqet",
   "EXPAND_BLOCK": "Zmadho bllokun",
-  "EXPECTED": "i/e pritur",
+  "EXPECTED": "result",
   "EXTERNAL_INPUTS": "Hyrjet e jashtme",
   "FUNCTION_CREATE": "Krijo një Funksion",
   "FUNCTION_EDIT": "redakto",

@@ -1,6 +1,6 @@
 goog.provide('Blockly.Msg.sv_se');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "faktiska";
+Blockly.Msg.ACTUAL = "call";
 Blockly.Msg.ADD = "Lägg till";
 Blockly.Msg.ADD_COMMENT = "Lägg till kommentar";
 Blockly.Msg.ADD_PARAMETER = "Lägg till Parameter";
@@ -74,7 +74,7 @@ Blockly.Msg.EXAMPLE = "Exempel";
 Blockly.Msg.EXAMPLE_DESCRIPTION = "Definierar ett exempel med förväntat och faktiskt beteende";
 Blockly.Msg.EXPAND_ALL = "Expandera block";
 Blockly.Msg.EXPAND_BLOCK = "Expandera block";
-Blockly.Msg.EXPECTED = "förväntat";
+Blockly.Msg.EXPECTED = "result";
 Blockly.Msg.EXTERNAL_INPUTS = "Externa inmatningar";
 Blockly.Msg.FUNCTION_CREATE = "Skapa en Funktion";
 Blockly.Msg.FUNCTION_EDIT = "Redigera";

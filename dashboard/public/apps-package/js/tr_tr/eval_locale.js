@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -164,11 +164,11 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "rectangleBlockTitle":function(d){return "dikdörtgen (genişlik, yükseklik, Stil, renk)"},
 "reinfFeedbackMsg":function(d){return "Çiziminizi düzenlemek için \"yeniden dene\" butonuna basabilirsiniz"},
 "rotateImageBlockTitle":function(d){return "döndürme (derece, resim)"},
-"scaleImageBlockTitle":function(d){return "ölçek (çarpan)"},
+"scaleImageBlockTitle":function(d){return "scale (factor, image)"},
 "squareBlockTitle":function(d){return "kare (boyut, Stil, renk)"},
 "starBlockTitle":function(d){return "Yıldız (yarıçap, Stil, renk)"},
 "radialStarBlockTitle":function(d){return "dairesel-yıldız ( noktalar, iç ,dış, stil, renk)"},
-"polygonBlockTitle":function(d){return "polygon (sides, length, style, color)"},
+"polygonBlockTitle":function(d){return "Çokgen (kenarlar, uzunluk, stil, renk)"},
 "stringAppendBlockTitle":function(d){return "metin-ekle (birinci, ikinci)"},
 "stringLengthBlockTitle":function(d){return "metin-uzunluğu(metin)"},
 "textBlockTitle":function(d){return "Metin (dize, boyut, renk)"},

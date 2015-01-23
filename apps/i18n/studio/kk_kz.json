@@ -285,5 +285,6 @@
   "whenSpriteCollidedWithTopEdge": "touches top edge",
   "whenUp": "when up arrow",
   "whenUpTooltip": "Execute the actions below when the up arrow key is pressed.",
-  "yes": "Yes"
+  "yes": "Yes",
+  "startSetValue": "crwdns27946:0crwdne27946:0"
 }

@@ -1,5 +1,5 @@
 {
-  "ACTUAL": "ממשי",
+  "ACTUAL": "call",
   "ADD": "הוסף",
   "ADD_COMMENT": "הוסף תגובה",
   "ADD_PARAMETER": "הוספת פרמטר",
@@ -73,7 +73,7 @@
   "EXAMPLE_DESCRIPTION": "הגדר דוגמא עם התנהגות צפויה",
   "EXPAND_ALL": "הרחב בלוקים",
   "EXPAND_BLOCK": "הרחב בלוק",
-  "EXPECTED": "צפוי",
+  "EXPECTED": "result",
   "EXTERNAL_INPUTS": "קלטים חיצוניים",
   "FUNCTION_CREATE": "צור פונקציה",
   "FUNCTION_EDIT": "עריכה",

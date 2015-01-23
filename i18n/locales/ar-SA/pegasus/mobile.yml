@@ -3,7 +3,7 @@ ar-SA:
   select_language: الرجاء تحديد اللغة الخاصة بك
   computer_science: علوم الكمبيوتر
   computer_science_edweek: الاسبوع التعليمي لعلوم الكمبيوتر
-  csedweek_dates: December 8-14, 2014
+  csedweek_dates: 8-14 كانون الأول/ديسمبر، 2014
   csedweek_banner_hoc: 'قادم<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> حدث ساعة البرمجة</a>. دعوة إلى جميع المعلمين والمنظمين، <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> قم بتخطيط "ساعة البرمجة" </a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400"> هل أنت مدرس علوم الحاسوب؟ انظر موارد أخرى CSEdWeek</a>'
   n_have_learned_an_hoc: '<h1>#</h1><h3>هل جربت</h3><h2>ساعة من البرمجة</h2>'
@@ -106,7 +106,7 @@ ar-SA:
   students_and_lines: '%{students} الطلبة الذين اكملو ساعة من البرمجة وكتبو %{lines} اسطر من الكود البرمجي.'
   start_hoc: ابدأ ساعة من البرمجة الان
   contact_form_topic_press: الصحافة/وسائل الإعلام (مقابلة أو تحدث المشاركة)
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
+  stats_michael: '"لم أر طلابي مهتمين بالتعلم هكذا <b>من قبل</b> !." - مايكل كلارك، معلم'
   stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
   stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
   studiobar_title: "إستكشف <a href='http://studio.code.org'>ستوديو البرمجة</a>"
@@ -204,13 +204,13 @@ ar-SA:
   dashboard_action_delete_yes: نعم
   dashboard_action_delete_no: لا
   dashboard_action_confirm: حذف؟
-  dashboard_action_remove: Remove
-  dashboard_action_remove_confirm: Remove?
+  dashboard_action_remove: حذف
+  dashboard_action_remove_confirm: حذف؟
   dashboard_action_done: ‏‏تم
   dashboard_action_required: متطلب
   dashboard_navigation_home_page: الصفحة الرئيسية للمعلم
   dashboard_navigation_section_student_progress: حسابات و سير الطلاب
-  dashboard_navigation_section_teacher_progress: Your Course Progress
+  dashboard_navigation_section_teacher_progress: تقدمك فى الدورة
   dashboard_navigation_section_lesson_plans: خطط الدرس والموارد
   dashboard_navigation_section_community: التعليمات والمجتمع
   dashboard_navigation_section_pd: التنمية المهنية
@@ -244,6 +244,7 @@ ar-SA:
   dashboard_students_new_section: 'قمت بإنشاء قسم جديد! الآن أضف طلابك باستخدام أزرار <b>إضافة الطالب</b> و <b>إضافة العديد من الطلاب</b> أعلاه.'
   dashboard_students_placeholder_name: اسم التلميذ
   dashboard_students_name: الاسم
+  dashboard_students_progress: Progress
   dashboard_students_age: العمر
   dashboard_students_gender: الجنس
   dashboard_students_male: ذكر
@@ -290,6 +291,10 @@ ar-SA:
   dashboard_login_picture: الصورة
   dashboard_login_none: البريد الإلكتروني
   dashboard_new_password: كلمة مرور جديدة
+  dashboard_progress_not_completed: غير مكتمل
+  dashboard_progress_completed_too_many_blocks: أكملت، كتل كثيرة جداً
+  dashboard_progress_completed_perfect: مكتمل, ممتاز
+  dashboard_progress_furthest_level_attempted: حاول المستوى الأبعد
   stats_hoc_2013_heading: 'إحصائيات لا تصدق عن حدث "ساعة من الكود "  للسنة الماضية. في أسبوع واحد فقط:'
   stats_hoc_2013_image_alt: إحصائيات سنة 2013 لساعة من البرمجة
   dashboard_teacher: المدرس
@@ -327,7 +332,7 @@ ar-SA:
   carousel_heading_robots: تعلم البرمجة مع الروبوتات
   carousel_heading_ide: منصات شعبية بين المعلمين
   educator_notes: ملاحظات المربي
-  how_to_teach_hoc: How to Teach an Hour of Code
+  how_to_teach_hoc: كيف تقوم بتدريس ساعة من البرمجة
   more_resources_educators: المزيد من الموارد للمعلمين والمربين
   participants: المشتركون
   teachers_notes: ملاحظات المعلم

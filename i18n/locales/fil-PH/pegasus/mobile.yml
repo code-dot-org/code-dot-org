@@ -204,7 +204,7 @@ fil-PH:
   dashboard_action_delete_yes: Oo
   dashboard_action_delete_no: Hindi
   dashboard_action_confirm: I-delete?
-  dashboard_action_remove: Remove
+  dashboard_action_remove: Alisin
   dashboard_action_remove_confirm: Remove?
   dashboard_action_done: Tapos na
   dashboard_action_required: kinakailangan
@@ -244,6 +244,7 @@ fil-PH:
   dashboard_students_new_section: 'Nalikha mo ang isang bagong seksyon! Ngayon idagdag ang iyong mga mag-aaral gamit ang <b> Magdagdag ng mag-aaral </b> at <b>Magdagdag ng maramihang mga mag-aaral </b> sa mga pindutan sa itaas.'
   dashboard_students_placeholder_name: Pangalan ng Estudyante
   dashboard_students_name: Pangalan
+  dashboard_students_progress: Progress
   dashboard_students_age: Edad
   dashboard_students_gender: Kasarian
   dashboard_students_male: Lalaki
@@ -290,6 +291,10 @@ fil-PH:
   dashboard_login_picture: Picture
   dashboard_login_none: Email
   dashboard_new_password: bagong password
+  dashboard_progress_not_completed: hindi natapos
+  dashboard_progress_completed_too_many_blocks: completed, too many blocks
+  dashboard_progress_completed_perfect: completed, perfect
+  dashboard_progress_furthest_level_attempted: furthest level attempted
   stats_hoc_2013_heading: 'Mga di kapani-paniwalang numero mula sa Hour of Code nung isang taon. Sa isang linggo lang ay:'
   stats_hoc_2013_image_alt: Mga stat mula sa 2013 Hour of Code
   dashboard_teacher: Teacher
@@ -325,7 +330,7 @@ fil-PH:
   carousel_heading_robots: Matuto mag-program gamit ang mga robot
   carousel_heading_ide: Mga platform na sikat sa mga guro
   educator_notes: Educator Notes
-  how_to_teach_hoc: How to Teach an Hour of Code
+  how_to_teach_hoc: Paano magturo ng Hour Code
   more_resources_educators: Marami pang mga resource para sa mga guro at mga educator
   participants: mga kalahok
   teachers_notes: Mga Note ng Guro
@@ -333,7 +338,7 @@ fil-PH:
   previous: Nakaraan
   next: Susunod
   older_systems: Mga tutorial na gumagana sa mga mas lumang mga system
-  older_systems_subheading: 'These should work on older Web browsers. To access all tutorials, upgrade to a <a href="http://browsehappy.com/" target="_blank">modern Web browser.</a>'
+  older_systems_subheading: 'Ito ay maaaring gumana sa lumang Web browsers. Para makapasok sa lahat ng pagtuturo, palitan sa  <a href="http://browsehappy.com/" target="_blank"> modernong Web browser. </a>'
   mobile_devices: Mga tutorial para sa mga mobile device
   frozen_name: Code with Anna and Elsa
   codeorg_name: Isulat ang iyong unang computer program
@@ -467,8 +472,8 @@ fil-PH:
   tynker_shortdescription: Learn to code by solving fun puzzles and build your own mobile games.
   scratch_shortdescription: Create interactive games, stories, and animations.
   lightbot_shortdescription: Program Lightbot to solve puzzles using procedures and loops!
-  thinkersmith_shortdescription: Unplugged tutorial for a group with no devices
-  condcards_shortdescription: Learn algorithms with a deck of cards
+  thinkersmith_shortdescription: Hindi nakakabit na pag-aaral para sa mga lupon na walang mga gamit
+  condcards_shortdescription: 'Matuto ng pamamaraan ng paglutas gamit ang  baraha'
   lightbotintl_shortdescription: Isang laro upang ituro ang konsepto ng pag-code
   codehs_shortdescription: Start coding with Karel the Dog, a fun and visual intro to programming!
   codecademy_shortdescription: Learn JavaScript programming, in a web-browser

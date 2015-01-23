@@ -529,3 +529,6 @@
     courses_working_on: 您正在进行的课程
     completed_courses: 已完成的课程
     all_courses: 所有的课程
+  errors:
+    messages:
+      not_saved: crwdns27834:0crwdne27834:0

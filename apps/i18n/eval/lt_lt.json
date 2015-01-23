@@ -9,7 +9,7 @@
   "rectangleBlockTitle": "kvadratas(plotis, aukštis, stilius, spalva)",
   "reinfFeedbackMsg": "Galite paspausti mygtuką „Bandyti iš naujo“ ir redaguoti savo piešinį.",
   "rotateImageBlockTitle": "pasuk(laipsniai, vaizdas)",
-  "scaleImageBlockTitle": "keis-mastelį(proporcija)",
+  "scaleImageBlockTitle": "scale (factor, image)",
   "squareBlockTitle": "kvadratas(dydis, stilius, spalva)",
   "starBlockTitle": "žvaigždė(spindulys, stilius, spalva)",
   "radialStarBlockTitle": "žvaigždė(taškai, vidus, išorė, stilius, spalva)",

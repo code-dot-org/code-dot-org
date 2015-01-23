@@ -1,5 +1,5 @@
 {
-  "ACTUAL": "фактичне",
+  "ACTUAL": "call",
   "ADD": "Додати",
   "ADD_COMMENT": "Додати коментар",
   "ADD_PARAMETER": "Додати параметр",
@@ -73,7 +73,7 @@
   "EXAMPLE_DESCRIPTION": "Визначає приклад з очікуваної та фактичної поведінки",
   "EXPAND_ALL": "Розгорнути блоки",
   "EXPAND_BLOCK": "Розгорнути блок",
-  "EXPECTED": "очікувалося",
+  "EXPECTED": "result",
   "EXTERNAL_INPUTS": "Зовнішні входи",
   "FUNCTION_CREATE": "Створити функцію",
   "FUNCTION_EDIT": "редагувати",

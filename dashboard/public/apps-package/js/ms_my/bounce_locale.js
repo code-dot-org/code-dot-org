@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -154,7 +154,7 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"bounceBall":function(d){return "bounce ball"},
+"bounceBall":function(d){return "bola lantun"},
 "bounceBallTooltip":function(d){return "Bounce a ball off of an object."},
 "continue":function(d){return "Teruskan"},
 "dirE":function(d){return "E"},
@@ -169,25 +169,25 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ifPathAhead":function(d){return "jika laluan ke hadapan"},
 "ifTooltip":function(d){return "Jika ada laluan ke arah yang ditentukan, lakukan beberapa tindakan."},
 "ifelseTooltip":function(d){return "Jika terdapat lorong dalam arah yang ditentukan, maka lakukan tindakan blok pertama. Sebaliknya, lakukan tindakan untuk blok kedua."},
-"incrementOpponentScore":function(d){return "score opponent point"},
-"incrementOpponentScoreTooltip":function(d){return "Add one to the current opponent score."},
-"incrementPlayerScore":function(d){return "score point"},
-"incrementPlayerScoreTooltip":function(d){return "Add one to the current player score."},
-"isWall":function(d){return "is this a wall"},
+"incrementOpponentScore":function(d){return "skor titik lawan"},
+"incrementOpponentScoreTooltip":function(d){return "Tambah satu ke markah semasa lawan."},
+"incrementPlayerScore":function(d){return "titik skor"},
+"incrementPlayerScoreTooltip":function(d){return "Tambah satu ke skor semasa pemain."},
+"isWall":function(d){return "adakah ini dinding"},
 "isWallTooltip":function(d){return "Returns true if there is a wall here"},
 "launchBall":function(d){return "lancarkan bola baru"},
 "launchBallTooltip":function(d){return "lancarkan bola ke dalam permainan."},
 "makeYourOwn":function(d){return "cipta permainan \"Bounce\" anda sendiri"},
-"moveDown":function(d){return "move down"},
-"moveDownTooltip":function(d){return "Move the paddle down."},
+"moveDown":function(d){return "gerak ke bawah"},
+"moveDownTooltip":function(d){return "Gerak pedal ke bawah."},
 "moveForward":function(d){return "bergerak ke hadapan"},
 "moveForwardTooltip":function(d){return "Bergerak ke hadapan satu ruang."},
-"moveLeft":function(d){return "move left"},
-"moveLeftTooltip":function(d){return "Move the paddle to the left."},
-"moveRight":function(d){return "move right"},
-"moveRightTooltip":function(d){return "Move the paddle to the right."},
-"moveUp":function(d){return "move up"},
-"moveUpTooltip":function(d){return "Move the paddle up."},
+"moveLeft":function(d){return "gerak ke kiri"},
+"moveLeftTooltip":function(d){return "Gerakkan pedal ke kiri."},
+"moveRight":function(d){return "gerak ke kanan"},
+"moveRightTooltip":function(d){return "Gerakkan pedal ke kanan."},
+"moveUp":function(d){return "gerak ke atas"},
+"moveUpTooltip":function(d){return "Gerakkan pedal ke atas."},
 "nextLevel":function(d){return "Tahniah! Anda telah melengkapkan puzzle ini."},
 "no":function(d){return "Tidak"},
 "noPathAhead":function(d){return "laluan disekat"},

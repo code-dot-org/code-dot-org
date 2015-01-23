@@ -1,4 +1,7 @@
 "bs":
+  errors:
+    messages:
+      not_saved: 'Please correct the following errors:'
   activerecord:
     errors:
       messages:
@@ -42,7 +45,7 @@
   k8intro: K-8 Intro to Computer Science Course (15-25 hours)
   already_started: 'Already started? Resume here >> '
   demos: 'Admin: All Demos'
-  continue: Continue
+  continue: Nastavi
   prize: prize
   more_info: More info
   auth:
@@ -252,7 +255,7 @@
         playlab: Make an App
         artist: Draw Something
     user:
-      classroom: Teacher Home Page
+      classroom: Početna stranica za nastavnike
       label: Hi %{username}
       stats: My progress
       settings: My account
@@ -402,8 +405,8 @@
     female: Female
     none: Prefer not to answer
   user_type:
-    student: Student
-    teacher: Teacher
+    student: Učenik
+    teacher: Učitelj
   footer:
     help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped
       create this tutorial.
@@ -540,7 +543,7 @@
   text_match:
     placeholder: Enter your answer here
   dialog:
-    ok: OK
+    ok: U redu
   time:
     hour: 1 hour
     day: day

@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -54,22 +54,21 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catText":function(d){return "Testo"},
 "catVariables":function(d){return "Variabili"},
 "continue":function(d){return "Prosegui"},
-"createHtmlBlock":function(d){return "crea il blocco di codice HTML"},
-"createHtmlBlockTooltip":function(d){return "Crea un blocco di codice HTML nell'app."},
+"createHtmlBlock":function(d){return "create html block"},
+"createHtmlBlockTooltip":function(d){return "Creates a block of HTML in the app."},
 "finalLevel":function(d){return "Complimenti! Hai risolto l'esercizio finale."},
 "nextLevel":function(d){return "Complimenti! Hai completato questo esercizio."},
 "no":function(d){return "No"},
 "numBlocksNeeded":function(d){return "Questo esercizio può essere risolto con %1 blocchi."},
-"pause":function(d){return "Interrompi"},
-"reinfFeedbackMsg":function(d){return "Premi il pulsante \"Riprova\" per eseguire di nuovo l'App dall'inizio."},
+"pause":function(d){return "Break"},
+"reinfFeedbackMsg":function(d){return "You can press the \"Try again\" button to go back to running your app."},
 "repeatForever":function(d){return "ripeti per sempre"},
 "repeatDo":function(d){return "esegui"},
-"repeatForeverTooltip":function(d){return "Esegui ripetutamente le azioni in questo blocco mentre l'applicazione è in esecuzione."},
-"shareWebappTwitter":function(d){return "Guarda l'App che ho fatto io. L'ho fatta per conto mio @codeorg @programmafuturo"},
-"shareGame":function(d){return "Condividi la tua App:"},
-"stepIn":function(d){return "Fai un passo entrando"},
-"stepOver":function(d){return "Fai un passo sopra"},
-"stepOut":function(d){return "Fai un passo uscendo"},
-"turnBlack":function(d){return "Imposta nero"},
-"turnBlackTooltip":function(d){return "Imposta lo schermo nero."},
+"repeatForeverTooltip":function(d){return "Execute the actions in this block repeatedly while the app is running."},
+"shareApplabTwitter":function(d){return "Check out the app I made. I wrote it myself with @codeorg"},
+"shareGame":function(d){return "Share your app:"},
+"stepIn":function(d){return "Step in"},
+"stepOver":function(d){return "Step over"},
+"stepOut":function(d){return "Step out"},
+"viewData":function(d){return "View Data"},
 "yes":function(d){return "Sì"}};

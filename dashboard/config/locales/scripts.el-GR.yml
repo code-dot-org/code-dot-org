@@ -346,12 +346,12 @@
           Evaluation Blocks: Evaluation Blocks
           Blocks to Math: Από τα Μπλοκ στα Μαθηματικά
           Strings and Images: Strings and Images
-          Defining Variables: Defining Variables
-          Defining Functions: Defining Functions
-          Design Recipe: Design Recipe
+          Defining Variables: Ορίζοντας μεταβλητές
+          Defining Functions: Ορίζοντας συναρτήσεις
+          Design Recipe: Συνταγή σχεδιασμού
           Booleans: Δυαδικοί
           Conditionals: Έλεγχοι
-          Free Play: Free Play
+          Free Play: Ελεύθερο παιχνίδι
         algebra:
           title: Computer Science in Algebra
           description: Learn Functional Programming through Algebra
@@ -366,8 +366,8 @@
             Μεταβλητών (Μεγάλο Παιχνίδι)'
           'Eval: Defining Functions': 'Eval: Defining Functions'
           'Unplugged: The Design Recipe': 'Εκτός Σύνδεσης: Συνταγή Σχεδιασμού'
-          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
-          'Eval: Functions': 'Eval: Functions'
+          'Play Lab: Defining Functions': 'Εργαστήριο Παιχνιδιού: Ορισμός συναρτήσεων'
+          'Eval: Functions': 'Eval: συναρτήσεις'
           'Play Lab: Animation (Big Game)': 'Εργαστήριο Παιχνιδιού: Κινούμενα Σχέδια
             (Μεγάλο Παιχνίδι)'
           'Unplugged: Booleans': 'Εκτός Σύνδεσης: Δυαδικοί'
@@ -382,3 +382,14 @@
             Ανίχνευση Σύγκρουσης και Τύπος Απόστασης'
           'Play Lab: Collision Detection (Big Game)': 'Εργαστήριο Παιχνιδιού: Ανίχνευση
             Σύγκρουσης (Μεγάλο Παιχνίδι)'
+        algebrademo:
+          description: A handful of puzzles to demonstrate the environment and programming
+            language used in Code.org CS in Algebra
+          Algebra Demo: Algebra Demo
+          Evaluation Blocks: Evaluation Blocks
+          Making Pictures: Making Pictures
+          Defining Variables: Ορίζοντας μεταβλητές
+          Defining Simple Functions: Defining Simple Functions
+          The Design Recipe: Η Συνταγή του Σχεδιασμού
+        K5PD:
+          Introduction to PD: Introduction to PD

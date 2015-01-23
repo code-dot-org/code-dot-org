@@ -9,7 +9,7 @@
   "rectangleBlockTitle": "правоугаоник (ширина, висина, стил, боја)",
   "reinfFeedbackMsg": "Можеш притиснути дугме \"Пробај поново\" да измениш свој цртеж.",
   "rotateImageBlockTitle": "ротирај (степени, слика)",
-  "scaleImageBlockTitle": "развуци (множилац)",
+  "scaleImageBlockTitle": "scale (factor, image)",
   "squareBlockTitle": "квадрат (величина, стил, боја)",
   "starBlockTitle": "звезда (полупречник, стил, боја)",
   "radialStarBlockTitle": "радијална-звезда (тачке, изнутра, споља, стил, боја)",

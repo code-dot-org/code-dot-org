@@ -1,6 +1,6 @@
 goog.provide('Blockly.Msg.km_kh');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "ជាក់ស្ដែង";
+Blockly.Msg.ACTUAL = "call";
 Blockly.Msg.ADD = "បន្ថែម";
 Blockly.Msg.ADD_COMMENT = "បន្ថែម​មតិ";
 Blockly.Msg.ADD_PARAMETER = "បន្ថែម​ប៉ារ៉ាម៉ែត្រ";
@@ -74,7 +74,7 @@ Blockly.Msg.EXAMPLE = "ឧទាហរណ៍";
 Blockly.Msg.EXAMPLE_DESCRIPTION = "កំណត់​ឧទាហរណ៍ជាមួយ​ដំណើរការ​ដែល​រំពឹងទុក​និង​ជាក់ស្ដែង";
 Blockly.Msg.EXPAND_ALL = "ពង្រីក​ប្លុក";
 Blockly.Msg.EXPAND_BLOCK = "ពង្រីក​ប្លុក";
-Blockly.Msg.EXPECTED = "ដែល​រំពឹង​ទុក";
+Blockly.Msg.EXPECTED = "result";
 Blockly.Msg.EXTERNAL_INPUTS = "ការ​បញ្ចូល​ពី​ក្រៅ";
 Blockly.Msg.FUNCTION_CREATE = "បង្កើត​អនុគមន៍";
 Blockly.Msg.FUNCTION_EDIT = "edit";

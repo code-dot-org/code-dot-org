@@ -244,6 +244,7 @@ ca-ES:
   dashboard_students_new_section: 'Has creat una secció nova! Ara afegeix els teus alumnes utilitzant els botons de <b>Afegeix alumne</b>i<b>Afegeix múltiples alumnes</b>.'
   dashboard_students_placeholder_name: "Nom de l'alumne"
   dashboard_students_name: Nom
+  dashboard_students_progress: Progress
   dashboard_students_age: Edat
   dashboard_students_gender: Sexe
   dashboard_students_male: Home
@@ -290,6 +291,10 @@ ca-ES:
   dashboard_login_picture: Imatge
   dashboard_login_none: Email
   dashboard_new_password: Nova contrasenya
+  dashboard_progress_not_completed: no finalitzat
+  dashboard_progress_completed_too_many_blocks: completat, massa blocs
+  dashboard_progress_completed_perfect: completat, perfecte
+  dashboard_progress_furthest_level_attempted: nivell més alt intentat
   stats_hoc_2013_heading: "Increïbles estadístiques d'Hora de Codi de l'any passat. En només una setmana:"
   stats_hoc_2013_image_alt: "Estadístiques de 2013 d'Hora de Codi"
   dashboard_teacher: Mestre

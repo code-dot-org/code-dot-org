@@ -88,6 +88,6 @@
   "signup":"Регистрирайте се във встъпителния курс",
   "hintHeader":"Ето един съвет:",
   "genericFeedback":"Вижте какво сте въвели и се опитайте да коригирате вашата програма.",
-  "toggleBlocksErrorMsg":"You need to correct an error in your program before it can be shown as blocks.",
+  "toggleBlocksErrorMsg":"Трябва да се коригира грешка във вашата програма, преди тя да бъде показана като блокове.",
   "defaultTwitterText":"Вижте какво направих"
 }

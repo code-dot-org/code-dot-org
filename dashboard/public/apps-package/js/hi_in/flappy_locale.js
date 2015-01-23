@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -176,7 +176,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "numBlocksNeeded":function(d){return "This puzzle can be solved with %1 blocks."},
 "playSoundRandom":function(d){return "play random sound"},
 "playSoundBounce":function(d){return "play bounce sound"},
-"playSoundCrunch":function(d){return "play crunch sound"},
+"playSoundCrunch":function(d){return "चरमराने का ध्वनि बजाए"},
 "playSoundDie":function(d){return "play sad sound"},
 "playSoundHit":function(d){return "play smash sound"},
 "playSoundPoint":function(d){return "play point sound"},
@@ -187,7 +187,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "playSoundJingle":function(d){return "play jingle sound"},
 "playSoundSplash":function(d){return "play splash sound"},
 "playSoundLaser":function(d){return "play laser sound"},
-"playSoundTooltip":function(d){return "Play the chosen sound."},
+"playSoundTooltip":function(d){return "चुनिंदा ध्वनि बजाए"},
 "reinfFeedbackMsg":function(d){return "You can press the \"Try again\" button to go back to playing your game."},
 "scoreText":function(d){return "Score: "+appLocale.v(d,"playerScore")},
 "setBackground":function(d){return "set scene"},
@@ -254,7 +254,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setSpeedTooltip":function(d){return "Sets the level's speed"},
 "shareFlappyTwitter":function(d){return "Check out the Flappy game I made. I wrote it myself with @codeorg"},
 "shareGame":function(d){return "Share your game:"},
-"soundRandom":function(d){return "random"},
+"soundRandom":function(d){return "यादृच्छिक"},
 "soundBounce":function(d){return "bounce"},
 "soundCrunch":function(d){return "crunch"},
 "soundDie":function(d){return "sad"},

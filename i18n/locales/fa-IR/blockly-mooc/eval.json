@@ -9,7 +9,7 @@
   "rectangleBlockTitle":"مستطیل (عرض، ارتفاع، سبک، رنگ)",
   "reinfFeedbackMsg":"تو می توانی دکمه \"دوباره امتحان کن\" را فشار دهی تا نقاشیت را  ویرایش کنید.",
   "rotateImageBlockTitle":"چرخش (درجه، تصویر)",
-  "scaleImageBlockTitle":"مقیاس (فاکتور)",
+  "scaleImageBlockTitle":"scale (factor, image)",
   "squareBlockTitle":"مربع (اندازه، سبک، رنگ)",
   "starBlockTitle":"ستاره (شعاع، سبک، رنگ)",
   "radialStarBlockTitle":"ستاره شعاعی (نقاط، درونی، بیرونی، سبک، رنگ)",

@@ -48,7 +48,7 @@
         edit-code:
           desc: Redakto Kodin (beta)
           MazeEC: Faza 1
-          Webapp: Faza 2
+          Applab: Faza 2
           ArtistEC: Faza 3
           StudioEC: Faza 4
         events:
@@ -73,7 +73,7 @@
     game:
       name:
         Unplug1: Hyrje ne Informatike
-        Maze: Labirinti
+        Maze: The Maze
         Multi: Lojërat me zgjedhje të shumta
         Unplug2: Te menduarit si kompjuter
         Unplug3: Programimi grafik me leter
@@ -99,10 +99,11 @@
         Jigsaw: Jigsaw
         MazeStep: Lloji i Fazës Maze
         Wordsearch: Kërkimi i Fjalëve
-        Webapp: Webapp
+        Webapp: App Lab
         ArtistEC: Artisti
         TextMatch: Përshtatja e Tekstit
         StudioEC: Play Lab
+        Applab: App Lab
     trophy:
       name:
         Bronze: Bronx
@@ -118,7 +119,7 @@
         loop_while: blloku Ndërsa
         loop_for: blloku Numërimit
         function: Funksionet
-        parameters: Funksione me parametra
+        parameters: Funksionet me parametra
     level:
       instructions:
         maze_2_2: 'A mund të më ndihmosh mua që të kap derrkucin e pa bindur? Grumbullo
@@ -140,7 +141,7 @@
           atë. Zgjidh këtë puzzle duke përdorur bllokun "repeat", që përsëritet 3
           herë. Përpiqu të vendosësh këto 3 blloqe brenda bllokut gri "repeat": lëviz,
           lëviz, kthehu.'
-        maze_2_9: Në rregull, provo bllokune ri "repeat until" - do të [ërsëritet
+        maze_2_9: Në rregull, provo bllokun e ri "repeat until" - do të përsëritet
           derisa unë të arrij derrkucin e mërzitshëm.
         maze_2_10: Në rregull, edhe një herë të fundit për tu praktikuar - a mund
           ta zgidhësh këtë duke përdorur vetëm 4 blloqe?
@@ -151,10 +152,10 @@
         maze_2_13: 'Përdor bllokun e ri "if" për të më lënë të vendos se ku të kthehem.
           Ndihmë: ty të duhet një bllok më shumë, por mëso se si e vendosim ne, që
           ti të mund ta bësh më vonë vetë.'
-        maze_2_14: Në rregull, kjo është njësoj si puzlle i fundit, por ti duhet të
+        maze_2_14: Në rregull, kjo është njësoj si puzzle i fundit, por ti duhet të
           kujtohesh se si  përdore bllokun "if" dhe "repeat" bashkë.
         maze_2_15: Une dua lulen e diellit! Përdor një bllok "if", për të më çuar
-          mua atje me numrin më të ulët të blloqeve.
+          mua atje me numrin më të pakët të blloqeve.
         maze_2_16: Në rregull, le ta bëjmë përsëri për tu praktikuar - kjo nuk është
           shumë e ndryshme, por kujdes nga chompers!
         maze_2_17: Blloqet "if-else" kërkojnë një kusht që bën një gjë OSE një gjë
@@ -237,52 +238,59 @@
         maze_karel_1_7: Wow, unë gjeta një gropë vërtet të thellë! Nuk e di se sa
           lopata me dhe nevojiten. A mund të shkruash një program që e mbush atë derisa
           toka të jetë e shtruar?
-        maze_karel_1_8: Help me fill in the hole at the end of the field, using as
-          few blocks as possible.
-        maze_karel_1_9: 'Make me remove all these piles of dirt. Try to use as few
-          blocks as possible. Hint: try using a "while" block.'
-        maze_karel_1_10: I'm working late, so it's dark out, and I can't tell how
-          large the piles are. Now I don't have all the options I used to have on
-          the while block. Move me along the field, and if there is a pile, remove
-          it.
-        maze_karel_1_11: 'It''s still dark outside. Move me along the field. If there
-          is a pile, remove it, and if there is a hole, fill it in. Hint: use the
-          dropdown menu of options on the "if" block.'
-        turtle_2_1: 'Hello. Me zombie artist. Me love drawing! Help me draw a square
-          in a special color. Important note: you have all the same blocks but they''ve
-          now been arranged in categories.'
-        turtle_2_2: Welcome to using functions, which let you define new blocks! Try
-          the new "draw a square" block, found in the "Functions" category, to draw
-          a small 50x50 green square.
-        turtle_2_3: Use the "repeat" block (in the "Loops" category) to draw 3 squares
-          of size 100, each 120 degrees apart. And do it in 3 different, random colors.
-        turtle_2_4: 'Now we''re going to get fancy. Change the code to draw 36 squares,
-          100 pixels wide, and each 10 degrees apart. Hint: you may want to use the
-          slider to make me go faster.'
-        turtle_2_5: Draw squares with sides of 50, 60, 70, 80, and 90 pixels.  You'll
-          need to use the "draw a square" function five times.
-        turtle_2_6: 'Ok, this program will use a counter, to draw the same squares
-          as last time. You want the square to be the same size as the counter, so
-          use the "counter" block. Hint: It''s in the Variables category.'
-        turtle_2_7: Here's a program to draw a spiral, but the blocks are disabled
-          so they won't run. Make a new program using a "count with" block (in the
-          Loops category) and "counter" block (in the Variables category) to draw
-          the same spiral.
-        turtle_2_7_5: There's a new "draw a snowman" function (in the Functions category).
-          Draw two snowmen, of height 250 and 100.
-        turtle_2_8: This one's a bit tricky. Use the "draw a snowman" function and
-          the new "jump forward" block (in the Actions category). Draw 3 snowmen in
-          different colors, 100 pixels apart.
-        turtle_2_9: Use a "count with" loop to draw a family of snowmen with heights
-          of 110, 100, 90, 80, and 70. The snowmen should all be 60 pixels apart.
-        turtle_2_10: Here's some code to try experimenting with different spirals.  What
-          happens if you change the turn amount? Or set a random color in the loop?  Draw
-          anything you like.
-        maze_karel_2_1: 'Try using the blocks to help me remove all the piles and
-          fill in all the holes on the ground. Try to use loops instead of using too
-          many blocks. Hint: you can put a loop inside another loop.'
-        maze_karel_2_2: We've defined our own block called "fill 5", which is now
-          in the Functions category. Use it to help me fill in this hole.
+        maze_karel_1_8: Më ndihmo të mbush gropën në fund të fushës, dukë përdorur
+          sa më pak blloqe të jetë e mundur.
+        maze_karel_1_9: 'Më bëj që të heq të githë grumbullin me dhe. Përpiqu të përdorësh
+          sa më pak blloqe që të jetë e mundur. Ndihmë: përpiqu të përdorësh bllokun
+          "while".'
+        maze_karel_1_10: Unë jam duke punuar deri vonë, kështu që u errësua jashtë
+          dhe s'mund ta dalloj sa të mëdhenj janë grumbujt  me dhe. Tani, unë nuk
+          kam më të gjitha mundësitë që kisha tek blloku while. Më lëviz përgjatë
+          fushës dhe nëse ka ndonjë grumbull, hiqe atë.
+        maze_karel_1_11: 'Është ende errësirë jashtë. Më lëviz përgjatë rrugës, Nëse
+          ka ndonjë grumbull, hiqe atë dhe nëse ka ndonjë gropë, mbushe atë. Ndihmë:
+          përdor menunë e opsioneve në bllokun "if".'
+        turtle_2_1: 'Përshëndetje. Unë jam një zombie. Më pëlqen shumë të vizatoj!
+          Më ndihmo që të vizatoj një katror me ndonjë ngjyrë të veçantë. Shënim i
+          rëndësishëm: ke të njëjtët blloqe, por tani ata janë vendosur nëpër kategori.'
+        turtle_2_2: Mirë se erdhe tek funksionet e përdorueshëm, që  të lejojnë ty
+          të përcaktosh blloqe të reja! Provo bllokun e ri "draw a square", që ndodhet
+          tek kategoria "Funksionet", për të vizatuar një katror të vogël, të gjelbër
+          50x50.
+        turtle_2_3: Përdor bllokun "repeat" (tek kategoria "Loops") për të vizatur
+          3 katrorë me madhësi 100, 120 gradë larg njëri tjetrit. Bëje në 3 mënyra
+          të ndryshme, në ngjyra të çfarëdoshme.
+        turtle_2_4: 'Tani ne do të zbukurohemi. Ndrysho kodin për të vizatuar 36 katrorë,
+          100 piksela të gjerë dhe çdo katror të jetë 10 gradë larg njëri tjetrit.
+          Ndihmë: ti mund të përdorësh kursorin për të më lëvizur mua më shpejt.'
+        turtle_2_5: Vizato katrorë me konture 50, 60, 70, 80 dhe 90 piksela. Ty do
+          të duhet të përdorësh funksionin "draw a square" pesë herë.
+        turtle_2_6: 'Në rregull, ky program do të përdorë një shënjues, për të vizatuar
+          të njëjtët katrorë si herën e fundit. Ti dëshiron që katrorët të jenë në
+          të njëjtën madhësi si shënjuesi, kështu që përdor bllokun "counter". Ndihmë:
+          Është tek kategoria e Ndryshoreve.'
+        turtle_2_7: Këtu kemi një program që vizaton një spirale, por blloqet nuk
+          janë aktive, pra nuk do të ekzekutohen. Bëj një program të ri duke përodrur
+          bllokun "count with" (në kategorinë Loops) dhe bllokun "counter" (në kategorinë
+          e Ndryshoreve) për të vizatuar të njëtën spirale.
+        turtle_2_7_5: Këtu kemi një funksion të ri "draw a snowman" (në kategorinë
+          e Funksioneve). Vizato dy pleq dëbore me gjatësi 250 dhe 100.
+        turtle_2_8: Kjo është pak e ndërlikuar. Përdor funksionin "draw a snowman"
+          dhe bllokun e ri "jump forward" (në kategorinë Veprime). Vizato 3 pleq dëbore
+          në ngjyra të ndryshme, 100 piksela larg.
+        turtle_2_9: Përdor një funksion ciklik "count with" për të vizatuar një familje
+          me pleq dëbore me gjatësi 110, 100, 90, 80 dhe 70. Pleqtë e dëborës duhet
+          të jenë të gjithë 60 piksela larg.
+        turtle_2_10: Këtu jepet një kod, që të provosh të eksperimentosh me spirale
+          të ndryshme. Çfarë ndodh nëse ndryshon numrin e kthimeve? Apo të vendosësh
+          një ngjyrë të çfarëdoshme tek cikli? Vizato çfarë të dëshirosh.
+        maze_karel_2_1: 'Provo të përdorësh blloqet për të më ndihmuar mua që të heq
+          gjithë grumbullin dhe të mbush të gjitha gropat në tokë. Përpiqu të përodrësh
+          cikle në vend që të përdorësh shumë blloqe. Ndihmë: Mund të vendosësh një
+          cikël brenda një cikli tjetër.'
+        maze_karel_2_2: Ne kemi përcaktuar bllokun tonë të quajtur "fill 5", që është
+          tani në kategorinë e Funksioneve. Përdore atë që të më ndihmosh mua të mbush
+          këtë gropën.
         maze_karel_2_3: Përdor bllokun e funksionit të ri "fill 5" për të më bërë
           mua të mbush gjithë gropat. Ti duhet të zvarrisësh bllokun "fill 5" nga
           kategoria e Funksioneve.
@@ -407,159 +415,182 @@
           nivelin që dëshiron të krijosh. Shtyp "Run" kur të jesh gati.
         flappy_1: Bashkangjit një bllok tek blloku "when click" dhemë pas shtyp "Run".
           Kliko ose shtyp ekranin për të lëvizur Flappyn tek objektivi.
-        flappy_2: Now we've added some ground.  Attach a block to the "when hit the
-          ground" block.  Your code needs to 'END GAME' when Flappy crashes.
-        flappy_3: The "when run" block allows you to run code when your game starts.  Try
-          setting the level speed and flapping to the target.
-        flappy_4: Flappy will fly through obstacles unless you write code to make
-          him crash. Attach a block to the "when hit an obstacle" block. Your code
-          needs to 'END GAME' when Flappy crashes into the first set of pipes.
-        flappy_5: Let's add a scoreboard, and count points when Flappy makes it past
-          obstacles. Add to the "when pass an obstacle" block, and then score a point
-          by flying Flappy through the first set of pipes.
-        flappy_6: See if you can still score a point after making Flappy flap either
-          a smaller or larger amount.
-        flappy_7: Next, try changing the scene by attaching another block to the "when
-          run" block.
-        flappy_8: You can set visuals anytime, not just when the game starts. Try
-          setting a RANDOM scene when other events happen, for example, when passing
-          an obstacle.
-        flappy_9: To mix things up, when hitting an obstacle or the ground, instead
-          of ending the game try setting the score back to 0.
-        flappy_11: Create your own Flappy game. You can change all the visuals and
-          all the rules, even the gravity. When you're done, click Finish to let friends
-          try your game on their phones.
-        flappy_k1_1: Play Flappy
+        flappy_2: Tani kemi shtuar pjesë toke. Bashko një bllok me bllokun "when hit
+          the gorund". Kodi jot duhet të 'PËRFUNDOJË LOJA" kur Flappy përplaset.
+        flappy_3: Blloku "when run" të lejon ty ta ekzekutosh kodin kur fillon loja
+          jote. Provo të vendosësh nivelin eshpejtësisë dhe të fluturosh tek objektivi.
+        flappy_4: Flappy do të fluturojë nëpër pengesa, vetëm nëse ti shkruan në kod
+          që ta përplasësh atë. Bashko një bllok me bllokun "when hit an obstacle".
+          Kodi jot duhet të 'PËRFUNDOJE LOJËN' kur Flappy rrëzohet në grupin e parë
+          të tubave.
+        flappy_5: Le të shtojmë një tabelë pikësh dhe të numërojmë pikët kur Flappy
+          i kalon pengesat. Shtoje tek blloku "when pass an obstacle" dhe pastaj shëno
+          një pikë duke bërë Flappyn të fluturojë nëpër grupin e parë të tubave.
+        flappy_6: Shih nëse ti mund të shënosh ende një pikë pasi ke bërë Flappyn
+          të fluturojë edhe në sasi të vogla edhe të mëdha.
+        flappy_7: Më pas, përpiqu të ndryshosh pamjen duke bashkuar një bllok tjetër
+          me bllokun "when run".
+        flappy_8: Ti mund të vendosësh pamje në çdo kohë, jo vetëm kur fillon loja.
+          Provo vendosjen e një pamjeje të RASTËSISHME kur ndodhin evente të tjera,
+          për shembull, kur je duke kaluar një pengesë.
+        flappy_9: Për ti ngatërruar gjërat më shumë, kur je duke prekur një pengesë
+          ose tokën, në vënd të përfundosh lojën, përpiqu të vendosësh pikët mbrapsht
+          0.
+        flappy_11: Krijo lojën tënde Flappy. Ti mund të ndryshosh të githa pamjet
+          dhe rregullat, edhe gravitetin madje. Kur të përfundosh, kliko Përfundo,
+          që të lejosh shokët të provojnë lojën tënde në telefonat e tyre.
+        flappy_k1_1: Luaj Flappy
         flappy_k1_2: Bashkangjit një bllok tek blloku "when click" dhemë pas shtyp
           "Run". Kliko ose shtyp ekranin për të lëvizur Flappyn tek objektivi.
-        flappy_k1_3: Now we've added some ground.  Attach a block to the "when hit
-          the ground" block.  Your code needs to 'END GAME' when Flappy crashes.
-        flappy_k1_4: The "when run" block allows you to run code when your game starts.  Try
-          setting the level speed and flapping to the target.
-        flappy_k1_5: Flappy will fly through obstacles unless you write code to make
-          him crash. Attach a block to the "when hit an obstacle" block. Your code
-          needs to 'END GAME' when Flappy crashes into the first set of pipes.
-        flappy_k1_6: Let's add a scoreboard, and count points when Flappy makes it
-          past obstacles. Add to the "when pass an obstacle" block, and then score
-          a point by flying Flappy through the first set of pipes.
-        flappy_k1_7: See if you can score multiple points for making it past an obstacle
-        flappy_k1_8: Next, try changing the scene by attaching another block to the
-          "when run" block.
-        flappy_k1_9: Try changing the player by attaching a "set player" block to
-          the "when run" block.
-        jigsaw_1: Click the block
-        jigsaw_2: Drag the block to the target
-        jigsaw_3: Arrange the blocks to form the image
-        jigsaw_4: Arrange the blocks to form the image
-        jigsaw_5: Arrange the blocks to form the image
-        jigsaw_6: Arrange the blocks to form the image
-        jigsaw_7: Arrange the blocks to form the image
-        jigsaw_8: Arrange the blocks to form the image
-        jigsaw_9: Arrange the blocks to form the image
-        jigsaw_10: Arrange the blocks to form the image
-        jigsaw_11: Arrange the blocks to form the image
-        jigsaw_12: Arrange the blocks to form the image
-        jigsaw_13: Fix the puzzle!
-        mazestep_1: Maze step description here
-        mazestep_2: Maze step description here
-        mazestep_3: Maze step description here
-        mazestep_4: Maze step description here
-        mazestep_5: Maze step description here
-        studio_c2_1: Can you make this dog say "hello world"?
-        studio_c2_2: Can you make the dog say something and then have the cat say
-          something afterwards?
-        studio_c2_3: Can you write a program to make this dog move to the cat?
-        studio_c2_4: Can you write a program that makes the dog move to the cat, and
-          have the cat say "hello" when the dog reaches him?
-        studio_c2_5: Can you write a program to make the octopus say "hello" when
-          it is clicked?
-        studio_c2_6: Can you write a program to make this penguin move around using
-          the up / down / left /right keys to hit all of the targets?
-        studio_c2_7: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to move this dinosaur up and down repeatedly?
-        studio_c2_8: Can you have the penguin say "Ouch!" and play a "hit" sound if
-          he runs into the dinosaur, and then move him with the arrows to make that
-          happen?
-        studio_c2_9: Can you add a block to score a point when the penguin runs into
-          the octopus, and then move him with the arrows until you score?
-        studio_c2_10: Can you add blocks to change the background and the speed of
-          the penguin, and then move him with the arrows until you score?
-        studio_c2_11: Create your own story. When you're done, click Finish to let
-          friends try your story on their phones.
-        studio_c3_story_1: Can you make this dog say "hello world"?
-        studio_c3_story_2: Can you make the dog say something and then have the cat
-          say something afterwards?
-        studio_c3_story_3: Can you write a program to make this dog move to the cat?
-        studio_c3_story_4: Can you write a program that makes the dog move to the
-          cat, and have the cat say "hello" when the dog reaches him?
-        studio_c3_story_5: Can you add a block to make the octopus happy?
-        studio_c3_story_6: Create your own story. When you're done, click Finish to
-          let friends try your story on their phones.
-        studio_c3_game_1: Can you write a program to make the octopus say "hello"
-          when it is clicked?
-        studio_c3_game_2: Can you write a program to make this penguin move around
-          using the up / down / left /right keys to hit all of the targets?
-        studio_c3_game_3: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to move this dinosaur up and down repeatedly?
-        studio_c3_game_4: Can you have the penguin say "Ouch!" and play a "hit" sound
-          if he runs into the dinosaur, and then move him with the arrows to make
-          that happen?
-        studio_c3_game_5: Can you add a block to score a point when the penguin runs
-          into the octopus, and then move him with the arrows until you score?
-        studio_c3_game_6: Can you add blocks to change the background and the speed
-          of the penguin, and then move him with the arrows until you score?
-        studio_c3_game_7: Create your own game. When you're done, click Finish to
-          let friends try your game on their phones.
-        studio_playlab_1: Penguin wants to say "hello" - can you help him?
-        studio_playlab_2: Cave Boy (actor 1) and Cave Girl (actor 2) would like to
-          say "hello" to each other. Can you help them by using the "say" block twice?
-        studio_playlab_3: Can you help Tennis Girl get to the flag?
-        studio_playlab_4: Can you help Tennis Boy (actor 1) get to Tennis Girl (actor
-          2) and play a sound when he gets there?
-        studio_playlab_5: Can you help the Spacebot say "greetings earthlings" when
-          it is clicked? Don’t forget to click it after you click Run
-        studio_playlab_6: Can you help the Witch move around using the up/down/right/left
-          arrow keys to get to all the magical fireballs?
-        studio_playlab_7: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to it to help the wizard move right and left repeatedly?
-        studio_playlab_8: Can you add a block to score a point and a block to play
-          a sound when the unicorn runs into the wizard, and then move him with the
-          arrows until you score?
-        studio_playlab_9: Set the background for this alien invasion and help the
-          Spacebot get to the alien faster by changing its speed. Then move him with
-          the arrow keys to get to the Spacebot and alert everyone else
-        studio_playlab_10: Create your own game. When you're done, click Finish to
-          let friends try your game on their phones.
-        studio_full_sandbox: Create your own game. When you're done, click Finish
-          to let friends try your game on their phones.
-        studio_k1_1: Can you make this dog say "hello world"?
-        studio_k1_2: Can you make the dog say something and then have the cat say
-          something afterwards?
-        studio_k1_3: Can you write a program to make this dog move to the cat?
-        studio_k1_4: Make the dog move to the cat and the cat say "hello" when he
-          gets there.
-        studio_k1_5: Can you add a block to make the octopus happy?
-        studio_k1_6: Create your own story! Move around the cat and dog, and make
-          them say things.
-        maze_wordsearch_k_1: Move me to spell the word EAST
-        maze_wordsearch_k_2: Move me to spell the word SOUTH
-        maze_wordsearch_k_3: Move me to spell the word WEST
-        maze_wordsearch_k_4: Move me to spell the word NORTH
-        maze_wordsearch_k_6: Move me East and then South to spell the word JUMP
-        maze_wordsearch_k_9: Move me one way, then another to spell the word CODE
-        maze_wordsearch_k_13: Move me one way, then another to spell the word DEBUG
-        maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
-        maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
-        maze_wordsearch_k_20: This is a test! Move me one way, then another to spell
-          the word STORY
-        webapp_ec_simple: Create your web app by using createHtmlBlock.
-        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
-          it in the new "penColor" block.'
-        turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:
-          a stick figure, snowflake, or spiral. Also try the new "penWidth" block.
-          Have fun!'
-        studio_ec_sandbox: Create your own game. When you're done, click Finish to
-          let friends try your game on their phones.
+        flappy_k1_3: Tani kemi shtuar pjesë toke. Bashko një bllok me bllokun "when
+          hit the gorund". Kodi jot duhet të 'PËRFUNDOJË LOJA" kur Flappy përplaset.
+        flappy_k1_4: Blloku "when run" të lejon ty ta ekzekutosh kodin kur fillon
+          loja jote. Provo të vendosësh nivelin e shpejtësisë dhe të fluturosh tek
+          objektivi.
+        flappy_k1_5: Flappy do të fluturojë nëpër pengesa, vetëm nëse ti shkruan në
+          kod që ta përplasësh atë. Bashko një bllok me bllokun "when hit an obstacle".
+          Kodi jot duhet të 'PËRFUNDOJE LOJËN' kur Flappy rrëzohet në grupin e parë
+          të tubave.
+        flappy_k1_6: Le të shtojmë një tabelë pikësh dhe të numërojmë pikët kur Flappy
+          i kalon pengesat. Shtoje tek blloku "when pass an obstacle" dhe pastaj shëno
+          një pikë duke bërë Flappyn të fluturojë nëpër grupin e parë të tubave.
+        flappy_k1_7: Shih nëse mund të shënosh shumë pikë duke bërë atë që të kalojë
+          një pengesë
+        flappy_k1_8: Më pas, përpiqu të ndryshosh pamjen duke bashkuar një bllok tjetër
+          me bllokun "when run".
+        flappy_k1_9: Provo të ndryshosh lojtarin duke bashkangjitur bllokun "set player"
+          tek blloku "when run".
+        jigsaw_1: Kliko bllokun
+        jigsaw_2: Lëviz bllokun tek objektivi
+        jigsaw_3: Vendos blloqet që të formojnë një imazh
+        jigsaw_4: Vendos blloqet që të formojnë një imazh
+        jigsaw_5: Vendos blloqet që të formojnë një imazh
+        jigsaw_6: Vendos blloqet që të formojnë një imazh
+        jigsaw_7: Vendos blloqet që të formojnë një imazh
+        jigsaw_8: Vendos blloqet që të formojnë një imazh
+        jigsaw_9: Vendos blloqet që të formojnë një imazh
+        jigsaw_10: Vendos blloqet që të formojnë një imazh
+        jigsaw_11: Vendos blloqet që të formojnë një imazh
+        jigsaw_12: Vendos blloqet që të formojnë një imazh
+        jigsaw_13: Rregullo puzzle-in!
+        mazestep_1: Përshkrimi i hapave të Maze është këtu
+        mazestep_2: Përshkrimi i hapave të Maze është këtu
+        mazestep_3: Përshkrimi i hapave të Maze është këtu
+        mazestep_4: Përshkrimi i hapave të Maze është këtu
+        mazestep_5: Përshkrimi i hapave të Maze është këtu
+        studio_c2_1: A mund ta bësh këtë qen të thotë "përshëndetje botë"?
+        studio_c2_2: A mund ta bësh qenin të thotë diçka dhe më pas të bësh macen
+          të thotë diçka ?
+        studio_c2_3: A mund të bësh një program që ta bëjë qenin të lëivzë për tek
+          macja?
+        studio_c2_4: A mund të shkruash një program që e lëviz qenin për tek macja
+          dhe më pas ti thotë "përshëndetje" kur qeni ta arrijë atë?
+        studio_c2_5: A mund të bësh një program që ta bëjë oktapodin të thotë "përshëndetje"
+          kur klikohet?
+        studio_c2_6: A mund të shkruash një program që bën pinguinin të lëvizë rreth
+          e rrotull duke përodrur tastat lart/poshtë/majtas/djathtas për të goditur
+          të gjthë objektivët?
+        studio_c2_7: Blloku "repeat forever" të lejon ta ekzekutosh kodin në mënyrë
+          të vazhdueshme. A mund të bashkosh blloqet për të lëvizur dinosaurin lart
+          e poshtë vazhdimisht?
+        studio_c2_8: A mund ta bësh pinguinin të thotë "Ouch!" dhe të vendosësh një
+          tingull "gjuajtje" nëse ai përplaset me dinosaurin dhe më pas lëvize atë
+          me shigjetat që ta bësh të mundur këtë gjë?
+        studio_c2_9: A mund të shtoni një bllok për të shënuar një pikë kur pinguini
+          përplaset me oktapodin dhe më pas lëvize atë me shigjetat derisa të shënojë?
+        studio_c2_10: A mund të shtoni blloqe për të ndryshuar sfondin dhe shpejtësinë
+          e pinguinit dhe më pas lëvize atë me shigjetat derisa të shënosh?
+        studio_c2_11: Krijo ngjarjen tënde. Kur të përfundosh, kliko Mbaro që të lejosh
+          shokët të provojnë lojën në telefonat e tyre.
+        studio_c3_story_1: A mund ta bësh këtë qen të thotë "përshëndetje botë"?
+        studio_c3_story_2: A mund ta bësh qenin të thotë diçka dhe më pas të bësh
+          dhe macen të thotë diçka më pas?
+        studio_c3_story_3: A mund të bësh një program që ta bëjë qenin të lëivzë për
+          tek macja?
+        studio_c3_story_4: A mund të shkruash një program që e lëviz qenin për tek
+          macja dhe më pas ti thotë "përshëndetje" kur qeni ta arrijë atë?
+        studio_c3_story_5: A mund të shtosh një bllok që ta bësh oktapodin e lumtur?
+        studio_c3_story_6: Krijo ngjarjen tënde. Kur të përfundosh, kliko Mbaro që
+          të lejosh shokët të provojnë lojën në telefonat e tyre.
+        studio_c3_game_1: A mund të bësh një program që ta bëjë oktapodin të thotë
+          "përshëndetje" kur klikohet?
+        studio_c3_game_2: A mund të shkruash një program që bën pinguinin të lëvizë
+          rreth e rrotull duke përodrur tastat lart/poshtë/majtas/djathtas për të
+          goditur të gjthë objektivët?
+        studio_c3_game_3: Blloku "repeat forever" të lejon ta ekzekutosh kodin në
+          mënyrë të vazhdueshme. A mund të bashkosh blloqet për të lëvizur dinosaurin
+          lart e poshtë vazhdimisht?
+        studio_c3_game_4: A mund ta bësh pinguinin të thotë "Ouch!" dhe të vendosësh
+          një tingull "gjuajtje" nëse ai përplaset me dinosaurin dhe më pas lëvize
+          atë me shigjetat që ta bësh të mundur këtë gjë?
+        studio_c3_game_5: A mund të shtoni një bllok për të shënuar një pikë kur pinguini
+          përplaset me oktapodin dhe më pas lëvize atë me shigjetat derisa të shënojë?
+        studio_c3_game_6: A mund të shtoni blloqe për të ndryshuar sfondin dhe shpejtësinë
+          e pinguinit dhe më pas lëvize atë me shigjetat derisa të shënosh?
+        studio_c3_game_7: Krijo lojën tënde. Kur të përfundosh, kliko Mbaro që të
+          lejosh shokët e tu ta provojnë atë në telefonat e tyre.
+        studio_playlab_1: Pinguini dëshiron të thotë "përshëndetje" - mund ta ndihmoni
+          atë?
+        studio_playlab_2: Djali i Shpellës (pjesëmarrësi 1) dhe Vajza Shpellës (pjesëmarrësi
+          2) dëshirojnë ti thonë "përshëndetje" njëri tjetrit. A mund ti ndihmoni
+          ata duke përdorur bllokun "say" dy herë?
+        studio_playlab_3: A mund ta ndihmosh Vajzën Teniste të arrijë tek flamuri?
+        studio_playlab_4: A mund ta ndihmosh Djalin Tenist (pjesëmarrësi 1) të shkojë
+          tek Vajaz Teniste (pjesëmarrësja 2) dhe të vendosësh një tingull kur ai
+          arrin atje?
+        studio_playlab_5: A mund ta ndihmosh Alienin të thotë "përshëndetje tokësorë"
+          kur klikohet? Mos harro ta klikosh atë pasi ke klikuar Run
+        studio_playlab_6: A mund ta ndihmosh Magjistaren të lëvizë rreth e rrotull
+          duke përdorur tastat lart/poshtë/djathtas/majtas të marrë të gjithë topat
+          e zjarrtë magjikë?
+        studio_playlab_7: Blloku "repeat forever" të lejon ty të ekzekutosh kodin
+          në mënyrë të vazhdueshme. A mund të bashkoni blloqe tek ai bllok, për të
+          ndihmuar magjistaren të lëvizë djathas dhe majtas në mënyrë të vazhdueshme?
+        studio_playlab_8: A mund të shtosh një bllok për të shënar një pikë dhe një
+          bllok për të luajtur një tingull kur njëbrirëshi has magjistaren, dhe më
+          pas ta lëvizësh atë me shigjeta derisa të shënosh pikë?
+        studio_playlab_9: Vendos sfondin për këtë invasion alienësh dhe ndihmo Anijen
+          kozmike të shkojë tek alieni më shpejt duke ndryshuar shpejtësinë e tij.
+          Më pas lëvize atë me shigjeta të arrijë tek Anija kozmike dhe të lajmërojë
+          gjithë të tjerët
+        studio_playlab_10: Krijo lojën tënde. Kur të përfundosh, kliko Mbaro që të
+          lejosh shokët e tu ta provojnë atë në telefonat e tyre.
+        studio_full_sandbox: Krijo lojën tënde. Kur të përfundosh, kliko Mbaro që
+          të lejosh shokët e tu ta provojnë atë në telefonat e tyre.
+        studio_k1_1: A mund ta bësh këtë qen të thotë "hello world"?
+        studio_k1_2: A mund ta bësh qenin të thotë diçka dhe më pas të bësh macen
+          të thotë diçka?
+        studio_k1_3: A mund të bësh një program që ta bëjë qenin të lëivzë për tek
+          macja?
+        studio_k1_4: Bëje qenin të lëvizë për tek macja dhe macja të thotë "përshëndetje"
+          kur ai arrin atje.
+        studio_k1_5: A mund të shtosh një bllok për ta bërë oktapodin të lumtur?
+        studio_k1_6: Krijo ngjarjen tënde! Lëviz rreth maces dhe qenit dhe beji ata
+          të flasin.
+        maze_wordsearch_k_1: Më lëviz që të gërmëzoj fjalën LINDJE
+        maze_wordsearch_k_2: Më lëviz që të gërmëzoj fjalën JUG
+        maze_wordsearch_k_3: Më lëviz që të gërmëzoj fjalën PERËNDIM
+        maze_wordsearch_k_4: Më lëivz që të gërmëzoj fjalën VERI
+        maze_wordsearch_k_6: Më lëviz nga Lindja dhe më pas nga Jugu për të gërmëzuar
+          fjalën KËRCE
+        maze_wordsearch_k_9: Më lëviz nga një anë, më pas nga ana tjetër që të gërmëzoj
+          fjalën KOD
+        maze_wordsearch_k_13: Më lëviz mua në një mënyrë, më pas në një tjetër, që
+          të gërmëzohet fjala EKZEKUTO
+        maze_wordsearch_k_15: Më lëviz mua në një mënyrë, më pas në një tjetër, që
+          të gërmëzohet fjala LART
+        maze_wordsearch_k_16: Më lëviz mua në një mënyrë, më pas në një tjetër, që
+          të gërmëzohet fjala POSHTË
+        maze_wordsearch_k_20: Ky është një tets! Më lëviz mua në një mënyrë, më pas
+          në mënyrë tjetër që të gërmëzohet fjala NGJARJE
+        applab_ec_simple: Create your app by using the blocks in the toolbox.
+        turtle_ec_1_2: 'Tani, vizato një katror. SHËNIM: përdor ngjyrën tënde të preferuar
+          duke e zgjedhur atë në bllokun "penColor".'
+        turtle_ec_1_10: 'Ti ja dole! Tani vizato çfarë të duah. Disa ide zbavitëse:
+          një figurë ngjitëse, flok dëbore ose spirale. Gjithashtu, provo një bllok
+          të ri "penWidth". Bëfsh qejf!'
+        studio_ec_sandbox: Krijo lojën tënde. Kur të përfundosh, kliko Mbaro që të
+          lejosh shokët e tu ta provojnë atë në telefonat e tyre.
     levelbuilder:
       frozen line:
         instructions: Përshëndetje! Unë jam Elsa e Arendelle. Më ndihmo të krijoj
@@ -569,308 +600,320 @@
           në një kënd 90 gradë nga njëri tjetri. Ti duhet të përdorësh bllokun "Kthehu"
           ashtu si edhe bllokun "Leviz".
       frozen square iterative:
-        instructions: It seems like we're halfway to making a square. Let's put 4
-          lines together to create a square.
+        instructions: Duket sikur jemi në gjysëm të punës për të bërë një katror.
+          Le të vendosim 4 vija bashkë për të krijuar një katror.
       frozen square loop:
-        instructions: Hi, I'm Anna of Arendelle! Let's make a square with the "Repeat"
-          block, which uses fewer blocks. How many times (???) should the "Repeat"
-          block loop the blocks inside it to make a square?
+        instructions: Përshëndetje, unë jam Anna e Arendelle! Le të bëjmë një katror
+          me bllokun "Repeat", që përdor më pak blloqe. Sa herë (???) duhet që blloku
+          "Repeat" të fusë blloqet brenda atij për të bërë një katror?
       frozen square loop 3x:
-        instructions: Let's create three squares, turning after each square. Be sure
-          to turn by 120 degrees before each new square.
+        instructions: Le të krijojmë tre katrorë, që kthehen pas çdo katrori tjetër.
+          Sigurohu të kthehen me nga 120 gradë përpara çdo katrori të ri.
       frozen square snowflake:
-        instructions: Can you create a snowflake using the "Repeat" block to make
-          a square 10 times, and the "Turn" block to turn 36 degrees between each
-          square?
+        instructions: A mund të krijosh një flok dëbore duke përdorur bllokun "Repeat"
+          për të bërë një katror 10 herë dhe të përdorësh bllokun "Turn" për tu kthyer
+          36 gradë ndërmjet çdo katrori?
       frozen cross:
-        instructions: Use the "Repeat" block to create a plus sign. Did you notice
-          Elsa can move forward and backward?
+        instructions: Përdor bllokun "Repeat" për të krijuar një shenjë plusi. A e
+          vure re që Elsa mund të lëvizë para dhe mbrapa?
       frozen cross rotate:
-        instructions: Now try repeating it 10 times. How many degrees do you need
-          to turn between each line?
+        instructions: Tani përpiqu të përsërisësh atë 10 herë. Sa gradë duhet të kthehesh
+          midis çdo vije?
       frozen cross rotate dense:
-        instructions: 'Let''s repeat it 90 times! How many times does 90 go into 360?
-          Hint: It''s a really small number.'
+        instructions: 'Le ta përsërisim atë 90 herë! Sa herë hyn 90 tek 360? Ndihmë:
+          Është një numër vërtet i vogël.'
       frozen diamond:
-        instructions: 'Let''s create a parallelogram. It''s just like a square but
-          has different angles: 60 and 120 degree angles instead of 90 degree angles.'
+        instructions: 'Le të krijojmë një paralelogram. Është njësoj si një katror
+          por ka këndet të ndryshme: Kënde 60 dhe 120 gradë në vend të 90 gradë që
+          i ka katrori.'
       frozen diamond mini snowflake:
-        instructions: Did you know every snowflake is a different shape? Let's create
-          a new snowflake by using the "Repeat" block to repeat a parallelogram 4
-          times, turning right by 90 degrees between each parallelogram.
+        instructions: A e dije që çdo flok dëbore ka formë të ndryshme? Le të krijojmë
+          një flok dëbore duke përdorur bllokun "Repeat" për të përsëritur një paralelogram
+          4 herë, duke u kthyer me 90 gradë midis çdo paralelogrami.
       frozen diamond snowflake:
-        instructions: Now, let's create a new snowflake by using the repeat block
-          to repeat a parallelogram 10 times, turning right by 36 degrees between
-          each one.
+        instructions: Tani, le të krijojmë një flok dëbore duke përdorur bllokun repeat
+          për të përsëritur një paralelogram 10 herë, duke u kthyer djathtas 36 gradë
+          midis secilit.
       frozen circle:
-        instructions: A circle is a special shape. Can you figure out what number
-          to replace the question marks with to draw a circle?
+        instructions: Një rreth është një formë e veçantë. A mund të gjesh se me çfarë
+          numri të zëvendësosh pikëpyetjet për të vizatuar një rreth?
       frozen circle function:
-        instructions: Use the new "Create a circle" block to create 10 overlapping
-          circles. Don't forget to jump forward between circles.
+        instructions: Përdor bllokun e ri "Create a circle" për të krijuar 10 rrathë
+          të mbivendosur. MOs harro të kërcesh përpara ndërmjet rrathëve.
       frozen circle function in circle:
-        instructions: Now let's create 20 overlapping circles, turning 18 degrees
-          between each circle.
+        instructions: Tani le të krijojmë 20 rrathë të mbivendosur, duke kthyer 18
+          gradë ndërmjet çdo rrethi.
       frozen circle function with parameter:
-        instructions: Here's a "Create circle" block that can make circles of different
-          sizes. Can you use this to create a small circle of size 5 and a larger
-          circle of size 10?
+        instructions: Këtu kemi një bllok "Create circle" që bën rrathët me forma
+          të ndryshme. A mund të përdorësh këtë për të krijuar një rreth të vogel
+          me masë 5 dhe një rreth më të madh me masë 10?
       frozen snowflower:
-        instructions: Intricate snow patterns can be created with very simple shapes.
-          Can you make a pattern by repeating 5 circles of size 5 and 5 circles of
-          size 10?
+        instructions: Modelet e flokëve të dëborës që janë të ndërlikuara, mund të
+          krijohen me forma shumë të thjeshta. A mund ta bësh një model duke përsëritur
+          5 rrathë me masë 5 dhe 5 rrathë me masë 10?
       frozen snowflake branch:
-        instructions: Try using the "Create a snowflake branch" block to create three
-          branches, which starts to look like a snowflake.
+        instructions: Provo të përdorësh bllokun "Create a snowflake branch" për të
+          krijuar tre degë, që do fillojnë të duken si një flok dëbore.
       frozen snowflake full:
-        instructions: Now let's repeat it 8 times to make a beautiful snowflake!
+        instructions: Tani le ta përsërisim atë 8 herë për të bërë një flok dëbore
+          të bukur!
       frozen freeplay:
-        instructions: You've officially become a master artist! Create a winter wonderland.
+        instructions: Ti zyrtarisht je bërë një mjeshtër! Krijo një magji dimërore.
       scrat 16:
-        instructions: Acorn! Acorn! Acorn! Use an "if" block to get me there with
-          the fewest number of blocks.
+        instructions: Lajthi! Lajthi! Lajthi! Përdor një bllok "if" për të më çuar
+          atje me numrin më të vogël të blloqeve.
       scrat 17:
-        instructions: Ok, let's do that again for practice - this isn't very different,
-          but watch out for the wall!
+        instructions: Në rregull, le ta bëjmë këtë për tu praktikuar - kjo nuk ndryshon,
+          por kujdes nga muri!
       scrat 18:
-        instructions: The "If-else" blocks checks a condition, and then does one thing
-          OR another. To get me to the acorn try to use this new block.
+        instructions: Blloqet if-else kërkojnë një kusht dhe më pas bëjnë një gjë
+          ose diçka tjetër. Për të më çuar mua tek lajthia, përpiqu të përdorësh këtë
+          bllok të ri.
       scrat 19:
         instructions: Edhe një herë praktikohu me bllokun if-else, mund ta bësh si
           duhet me përpjekjen e parë?
       scrat 20:
-        instructions: Can you add just 3 blocks to help me solve a more complex maze?
-          If you do it right, I can walk any curvy path no matter the length. Hurry!
-          The ice is melting!
+        instructions: A mund të shtosh thjesht 3 blloqe për të më ndihmuar mua të
+          zgjidh një maze më të ndërlikuar? Nëse e bën si duhet, une mund të ec n
+          çdo rrugë të dredhuar, pavarësisht gjatësisë. Nxito! Akulli po shkrin!
       Standalone_Artist_1:
-        instructions: Welcome to Artist! First off, let's try to make a simple square
-          using the turn right block and move forward block. Each side should be 100
-          pixels long.
+        instructions: MIrë se erdhe Artist! Së pari, le të provojmë të bëjmë një katror
+          të thjeshtë duke përdorur bllokun "turn right" dhe bllokun "move forward".
+          Çdo brinjë duhet te jete 100 piksel e gjatë.
       Standalone_Artist_2:
-        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel
-          long sides.
+        instructions: Vizato këtë diamant me kënde 120 dhe 60 gradë dhe me brinje
+          150 piksel të gjatë.
       Standalone_Artist_3:
-        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree
-          turns?
+        instructions: A mund ta vizatosh këtë gjashtëkëndësh me 100 piksela brinjët
+          dhe me kthim 60 gradë?
       Standalone_Artist_4:
-        instructions: Now you've got a new block to play with, the loop. This will
-          repeat a set of commands. What happens if you loop these commands 6 times?
+        instructions: Tani ti ke një bllok të ri për të luajtur, ciklin. Kjo do të
+          përsërisë një grup komandash. Çfarë do ndodhë nëse i ciklon këto komanda
+          6 herë?
       Standalone_Artist_5:
-        instructions: How many times do you need to loop this diamond to draw the
-          flower?
+        instructions: Sa herë duhet të ciklosh këtë diamant për të vizatuar lulen?
       Standalone_Artist_5.5:
-        instructions: 'Notice how we simplified the diamond code by turning it into
-          a loop. You can loop that whole sequence 12 times to draw the flower. Hint:
-          You''ll need to turn 30 degrees after your diamond loop so you don''t keep
-          drawing over the same diamond.'
+        instructions: 'Ver re se si e thjeshtësuam kodin e diamantit duke e kthyer
+          atë në një cikël. Ti mund të ciklosh të gjithë sekuencën 12 herë për të
+          vizatuar një lule. Ndihmë: Ty do të duhet të kthehesh 30 gradë pas ciklit
+          të diamantit tënd, kështu që nuk do vazhdosh të vizatosh të njëjtin diamant.'
       Standalone_Artist_6:
-        instructions: 'Loop this hexagon code 6 times to create the design. How many
-          degrees will you need to turn each time? Hint: divide the number of degrees
-          in a circle by the number of times you are looping.'
+        instructions: 'Cikloje këtë kodin e gjashtëkëndëshit 6 herë për të krijuar
+          dizajnin. Sa gradë do të duhet të kthesh çdo herë? Ndihmë: ndaj numrin e
+          gradëve në një rreth në numrin e herëve që ti je duke cikluar.'
       Standalone_Artist_7:
-        instructions: 'A function is another programming tool to help you avoid repeating
-          yourself. This function draws a flower, so you can use it any time you want
-          to draw a flower. Use this and the new jump block to draw these flowers.
-          Hint: The flowers are 150 pixels apart'
+        instructions: 'Një funksion është një tjetër mjet programimi që të ndihmon
+          ty të mos përsërisësh vetveten. Ky funksion vizaton një lule, kështu që
+          ti mund ta përdorësh në çdo kohë, sa herë që dëshiron të vizatosh një lule.
+          Përdor këtë dhe bllokun e ri "jump" për të vizatuar këto lule. Ndihmë: Lulet
+          janë 150 piksela veç e veç'
       Standalone_Artist_8:
-        instructions: Here's a function called "Draw a shape" that we've programmed
-          to draw hexagons. Run the code to see what it does and then experiment with
-          the function to see what happens. Can you make it draw a pattern of squares,
-          triangles, or octagons?
+        instructions: Këtu kemi një funksion që quhet "Draw a shape" që ne e kemi
+          programuar për të vizatuar gjashtëkëndësha. Ekzekuto kodin për të parë se
+          çfarë bën dhe më pas eksperimento me funksionin për të parë se çfarë ndodh.
+          A mund ta bësh të vizatojë një model katrorësh, trekëndorësh ose tetëkëndorësh?
       Standalone_Artist_9:
-        instructions: Now go ahead and make whatever picture you'd like! You've even
-          got an empty function that you can make do whatever you want!
+        instructions: Tani ec përpara dhe bëj çfarë figure të duash! Ti madje ke një
+          funksion bosh që të jep mundësinë të bësh çfarë të duash!
     video:
       name:
-        maze_intro: Maze Intro
-        artist_intro: Artist Intro
-        farmer_intro: Farmer Intro
-        flappy_intro: Flappy Intro
-        loop_times: Repeat Times Block
-        loop_until: Repeat Until Block
-        if: If Block
-        if_else: If/else Block
-        if_else_scrat: If/else Block
+        maze_intro: Hyrja e Maze
+        artist_intro: Hyrja Artistit
+        farmer_intro: Hyrja e Fermerit
+        flappy_intro: Hyrja e Flappy-t
+        loop_times: Blloku Përsëritja e Herëve
+        loop_until: Blloku Përsërit Derisa
+        if: Blloku Nëse
+        if_else: Blloku Nëse/përndryshe
+        if_else_scrat: Blloku Nëse/përndryshe
         function: Funksionet
-        loop_while: While Block
-        loop_for: Counter Block
-        parameters: Functions with Parameters
-        hoc_wrapup: Hour of Code Wrapup
-        Unplug1: What is CS?
-        Unplug2: Te menduarit si kompjuter
+        loop_while: Blloku Ndërsa
+        loop_for: Blloku Numërimit
+        parameters: Funksionet me parametra
+        hoc_wrapup: Përmbledhja Orës së Kodimit
+        Unplug1: Çfarë është CS?
+        Unplug2: Te menduarit kompjuterikë
         Unplug3: Programimi grafik me leter
         Unplug4: Algoritmet
         Unplug5: Funksionet
-        Unplug6: Kushtoret
-        Unplug7: Songwriting
+        Unplug6: Kushtet
+        Unplug7: Të shkruarit e Këngëve
         Unplug8: Abstraksion
-        Unplug9: Relay programming
+        Unplug9: Programim i Besueshëm
         Unplug10: Internet
         Unplug11: Mbështjell
-        C1_happy_maps_unplugged: Happy Maps
-        C1_moveitmoveit_unplugged: Move It, Move It
-        C1_bigevent_unplugged: The Big Event
-        C1_getting_loopy: Getting Loopy
-        C1_pair_programming: Pair Programming
-        C1_maze_intro_sequencing: Maze Sequencing Intro
-        C1_maze_debugging: Maze Debugging
-        C1_bee_level_intro: Bee Level - Intro
-        C1_artist_intro: Artist Intro
-        C1_spelling_bee_intro: Spelling Bee Intro
-        C1_zuck_repeat_loop: Maze Loops
-        C1_bee_loops: Bee Loops
-        C1_maze_loops: Maze Loops
-        C1_playlab_storytelling: Play Lab - Create a Story
-        C1_planting_seed: Planting a Seed
-        C1_building_foundation: Building a Foundation
-        C1_going_places_safely: Going Places Safely
-        C2_maze_intro: Maze Intro
-        C2_artist_intro: Artist Intro
-        C2_zuck_repeat_loop: Maze Loops
-        C2_artist_loops: Artist Loops
-        C2_artist_debugging: Artist Debugging
-        C2_bee_loops: Bee Loops
-        C2_bee_debugging: Bee Debugging
-        C2_bee_conditionals: Bee Conditionals
-        C2_playlab_createstory: Play Lab - Create a Story
-        C2_graph_paper: Programimi grafik me leter
-        C2_conditionals_with_cards: Kushtoret
-        C2_binary_bracelets: Binary Bracelets
+        C1_happy_maps_unplugged: Hartat e Lumtura
+        C1_moveitmoveit_unplugged: Lëvize atë, lëvize atë
+        C1_bigevent_unplugged: Ngjarja e Madhe
+        C1_getting_loopy: Duke u Çmëndur
+        C1_pair_programming: Programim në çift
+        C1_maze_intro_sequencing: Hyrja e Sekuencuar e Maze
+        C1_maze_debugging: Riparimi i Maze
+        C1_bee_level_intro: Niveli i Bletëve - Hyrje
+        C1_artist_intro: Hyrja Artistit
+        C1_spelling_bee_intro: Hyrja e Bletëve të gërmëzuara
+        C1_zuck_repeat_loop: Përsëritja e Maze
+        C1_bee_loops: Përsëritja e Bletëve
+        C1_maze_loops: Përsëritja e Maze
+        C1_playlab_storytelling: Play Lab - Krijo një Ngjarje
+        C1_planting_seed: Mbjellja e një fare
+        C1_building_foundation: Ndërtimi i një Baze
+        C1_going_places_safely: Të shkuarit nëpër Vende në mënyrë të Sigurtë
+        C2_maze_intro: Hyrja e Maze
+        C2_artist_intro: Hyrja e Artistit
+        C2_zuck_repeat_loop: Përsëritja e Maze
+        C2_artist_loops: Përsëritjet e Artistit
+        C2_artist_debugging: Riparimi i Artistit
+        C2_bee_loops: Përsëritja e Bletëve
+        C2_bee_debugging: Riparimi i Bletëve
+        C2_bee_conditionals: Kushtet e Bletëve
+        C2_playlab_createstory: Play Lab - Krijo një Ngjarje
+        C2_graph_paper: Programimi grafik me letër
+        C2_conditionals_with_cards: Kushtet
+        C2_binary_bracelets: Byzylyku Binar
         C2_relay_programming: Programimi i Besuar
-        C2_paper_airplanes: Paper Airplanes
-        C2_digital_footprint: Your Digital Footprint
-        C3_maze_level_4: Maze Loops
-        C3_artist_intro: Artist Intro
-        C3_artist_functions: Artist Functions
-        C3_bee_functions: Bee Functions
-        C3_bee_conditionals: Bee Conditionals
-        C3_maze_conditionals: Maze Conditionals
-        C3_artist_nested_loops: Nested Loops
-        C3_farmer_while: While Loops
-        C3_bee_nested_loops: Nested Loops
-        C3_bee_debugging: Bee Debugging
+        C2_paper_airplanes: Avionët prej Letre
+        C2_digital_footprint: Hapat e tua Dixhitale
+        C3_maze_level_4: Përsëritja e Maze
+        C3_artist_intro: Hyrja e Artistit
+        C3_artist_functions: Funksionet e Artistit
+        C3_bee_functions: Funksionet e Bletëve
+        C3_bee_conditionals: Kushtet e Bletëve
+        C3_maze_conditionals: Kushtet e Maze
+        C3_artist_nested_loops: Përsëritjet e Mbivendosura
+        C3_farmer_while: Përsëritjet Ndërsa
+        C3_bee_nested_loops: Përsëritjet e Mbivendosura
+        C3_bee_debugging: Riparimi i Bletëve
         C3_bounce: Hidhu
-        C3_playlab_create_game: Play Lab - Create a Game
-        C3_computational_thinking: Te menduarit si kompjuter
-        C3_dice_race: Dice Race
+        C3_playlab_create_game: Play Lab - Krijo një Lojë
+        C3_computational_thinking: Te menduarit kompjuterik
+        C3_dice_race: Gara Dice
         C3_internet: Internet
         C3_crowdsourcing: Crowdsourcing
-        C3_functional_suncatchers: Functional Suncatchers
-        C3_songwriting_with_parameters: Songwriting With Parameters
-        C4_intro: Introduction
-        C4_bee_conditional: Bee Conditionals
-        C4_variables_artist: Variables - Artist
-        C4_variables_playlab: Variables - Play Lab
-        C4_for_loops: For Loops
-        C4_math_artist: Programming the Artist with Math
-        C4_function_edit: Editing Functions
-        C4_function_create: Creating Functions
-        C4_function_parameters: Functions with Parameters
-        C4_conditionals: Kushtoret
-        C4_unplugged_algorithms: Algorithms with Tangrams
-        C4_unplugged_madlibs: Mad Libs
-        C4_unplugged_variables: Variables in Envelopes
-        C4_unplugged_forloops: For Loops
-        C4_unplugged_parameters: Songwriting with Parameters
-        C4_unplugged_binary: Binary
-        frozen_intro: Hour of Code Intro
-        frozen_loops: Introduction to Loops
-        frozen_functions: Introduction to Functions
-        playlab_intro: Introduction to Play Lab
-        playlab_events: Play Lab Events
-        playlab_repeat_forever: Play Lab Repeat Forever
+        C3_functional_suncatchers: Suncatchers Funksionalë
+        C3_songwriting_with_parameters: Të shkruarit këngë me Parametra
+        C4_intro: Hyrja
+        C4_bee_conditional: Kushtet e Bletëve
+        C4_variables_artist: Variablat - Artist
+        C4_variables_playlab: Variablat - Play Lab
+        C4_for_loops: Për Ciklet
+        C4_math_artist: Të programosh Artistin me Matematikën
+        C4_function_edit: Redaktimi i Funksioneve
+        C4_function_create: Krijimi i Funksioneve
+        C4_function_parameters: Funksionet me parametra
+        C4_conditionals: Kushtet
+        C4_unplugged_algorithms: Algoritmet me Tangrams
+        C4_unplugged_madlibs: Libs-i i Çmendur
+        C4_unplugged_variables: Variablat në Zarfe
+        C4_unplugged_forloops: Për Ciklet
+        C4_unplugged_parameters: Të shkruarit këngë me Parametra
+        C4_unplugged_binary: Binare
+        frozen_intro: Hyrja e Orës së Kodimit
+        frozen_loops: Hyrja tek Ciklet
+        frozen_functions: Hyrja në Funksione
+        playlab_intro: Hyrje në Play Lab
+        playlab_events: Ngjarjet Play Lab
+        playlab_repeat_forever: Përsërit Gjithmonë Play Lab
     callout:
       text:
-        drag_blocks: Drag a "move" block and snap it below the other block
-        run: Hit "Run" to try your program
-        watch_again: Click here to watch the video again
-        gray_block_explanation: Blocks that are grey can't be deleted. Can you solve
-          the puzzle anyway?
-        show_code_explanation: Click here to see the code for the program you're making
-        instructions_repeat_explanation: The instructions for each puzzle are repeated
-          here
-        category_explanation: You have all the same blocks but they've now been arranged
-          in categories
-        set_sprite_image: Attach a "set actor to image" block to the "when story starts"
-          block to enable an actor for this story
-        studio_say_text: Type what you want your actor to say within these quotes
-        jigsaw_click: Click this block!
-        move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
-          Run" block to make Elsa move forward
-        turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down
-          determines how much Elsa turns
-        replace_questions: Use the drop-down to replace "???" with a number
-        replace_questions_degree: Use the drop-down to replace "???" with the correct
-          degree to turn
-        repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
-          workspace
-        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the
-          workspace
-        repeat_blocks_2: (2) Move the "Repeat" block here, and place the gray blocks
-          inside
-        snowflake_dropdown: Use this drop-down to create different snowflakes!
-        degrees_per_side: Divide 360 by the number of sides to get the size of each
-          angle in degrees.
-        set_sides: Use this block to set "sides" to the number needed to complete
-          the puzzle.
-        set_length: Use this block to set "length" to the correct value.
-        which_equation: Which equation makes each side shorter for shapes with more
-          sides?
-        get_nectar: Use the new "get nectar" block.
-        actions_category: The tool box got a new look! The "Actions" blocks are in
-          here now.
-        draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
-        edit_function: Click here to edit your function.
-        create_function: Click here to open the "Functions" flyout, then click the
-          "Create a Function" button.
-        house_hint: It's ok if the picture doesn't look like a house yet. We will
-          fix it in the next puzzle.
-        edit_draw_square: Use this button to edit the function and add the loop.
-        edit_get_nectar: Use this button to edit the function and change the direction
-          the Bee will turn to get the nectar.
-        logic_category: Open the "Logic" flyout to find the "if/else" block.
-        length_parameter: Can you update this function so it uses the "length" parameter?
-        frozen_diamond_repeat: Use the repeat block to create this shape.
-        frozen_circle_function_in_circle_turn: Don't forget to turn after creating
-          each circle.
-        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
-          and change the size.
-        frozen_snowflake_branch: Use the "create a snowflake branch" block
-        frozen_create_square: Attach more blocks here to create a square
-        playlab_drag_say: Drag the "say" block here and type "hello"
-        playlab_use_twice: Use this block twice and remember to change the actor number
-        playlab_move_girl: Use the "move right" block to move Tennis Girl
-        playlab_play_sound: Add "play sound" block here
-        playlab_arrow_keys: Remember to use these to move the witch after clicking
-          on Run
-        playlab_add_move: Add "move" blocks inside this repeat block
-        playlab_add_score: Add score blocks here
-        playlab_add_blocks: Add your blocks here
-        set_variable: Drag a number block here to set your variable
-        place_variable: Drag your variable inside this block
-        bee_for_loop: Drag the largest number of nectar you want the bee to collect
-          here
-        place_counter_variable: Drag your counter variable inside this block
-        function_editor_draw_square: This is your function definition. These blocks
-          run everytime you use the "draw a square" block
-        change_here: Make your change here
-        write_draw_square_function: Drag blocks from the toolbox into here that draw
-          a square
-        write_draw_triangle_function: Drag blocks from the toolbox into here that
-          draw a triangle
-        edit_add_parameter: Click edit to add a parameter in your function
-        add_and_drag_parameter: Write in the name of your parameter here, click add,
-          and then drag it into your function definition
-        fill_in_actor: Fill in the ??? with numbers that correspond to each actor
-          (1, 2, and 3)
-        repeat: Put blocks inside the loop to repeat commands
-        if_bee_nectar: Use the "if" block to decide if the bee should get nectar
-        if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower,
-          and makes honey if it's not a flower
-        repeat_full_circle: Enter in the number of times the zombie has to move to
-          make a full circle
-        place_length_variable: Drag the length variable here to replace the question
-          marks
-        arrows_move_actor: Use the arrows to move the actor
-        right_arrow_fireball: Use the right arrow to shoot fireballs
-        name_function: Write the name of your function here
+        drag_blocks: Lëviz një bllok "move" dhe vendose atë poshtë blloku tjetër
+        run: Shtyp "Run" për të provuar programin tënd
+        watch_again: Kliko këtu për të parë videon përsëri
+        gray_block_explanation: Blloqet gri nuk mund të fshihen. A mund ta zgjidhësh
+          puzzle-in gjithsesi?
+        show_code_explanation: Kliko këtu që të shohësh kodin  për programin që po
+          bën
+        instructions_repeat_explanation: Udhëzimet për secilin puzzle përsëriten këtu
+        category_explanation: Ti ke të njëjtët blloqe, por tani ato janë të ndara
+          në kategori
+        set_sprite_image: Bashko një bllok "set actor image" tek blloku "when story
+          starts" për të aktivizuar një aktor për këtë histori
+        studio_say_text: Shtyp çfarë dëshiron që të thotë aktori jot brënda këtyre
+          shprehjeve
+        jigsaw_click: Kliko këtë bllok!
+        move_elsa_forward: Lëviz një bllok "Move Forward" dhe vendose poshtë bllokut
+          "When Run" për ta bërë Elsën të ecë përpara
+        turn_elsa: Përdor bllokun "turn" për ta bërë Elsën të kthehet. Numri në listën
+          drop down përcakton sa herë kthehet Elsa
+        replace_questions: Përdor listën drop-down për të zëvendësuar "???" me një
+          numër
+        replace_questions_degree: Përdor listën drop down për të zëvendëësuar "???"
+          me gradën e duhur për tu kthyer
+        repeat_blocks: Përdor bllokun "Repeat" dhe përmblidhe rreth blloqeve në vendin
+          e punës
+        repeat_blocks_1: (1) Përdor këtë bllok dhe vendose rreth blloqeve gri në vendin
+          tënd të punës
+        repeat_blocks_2: (2) Lëviz bllokun "Repeat" këtu dhe vendosi blloqet gri brenda
+        snowflake_dropdown: Përdor këtë listë për të krijuar flokë të ndryshme dëbore!
+        degrees_per_side: Ndaje 360 nga numri i anëve për të gjetur masën e çdo këndi
+          në gradë.
+        set_sides: Përdor këtë bllok për të vendosur "anët" tek numri i nevojshëm
+          që të përfundosh puzzle-in.
+        set_length: Përdor këtë bllok për të vendosur "gjatësinë" tek vlera e duhur.
+        which_equation: Cili ekuacion bën çdo brinjë më të shkurtër për format me
+          më shumë brinjë?
+        get_nectar: Përdor bllokun e ri "get nectar".
+        actions_category: Shiriti i mjeteve mori një pamje të re! Blloqet "Actions"
+          janë këtu tani.
+        draw_square_hint: 'Ndihmë: Përdor ciklin katror që sapo bëre në puzzle-in
+          e fundit.'
+        edit_function: Kliko këtu për të redaktuar funksionin tënd.
+        create_function: Kliko këtu për të hapur "Funksionet", më pas kliko butonin
+          "Krijo një Funksion".
+        house_hint: Është gjithçka në rregull nëse figura nuk duket si shtëpi akoma.
+          Ne do ta riparojmë atë në puzzle-in tjetër.
+        edit_draw_square: Përdor këtë buton për të redaktuar funksionin dhe shtoje
+          në cikël.
+        edit_get_nectar: Përdor këtë buton për të redaktuar funksionin dhe ndrysho
+          drejtimin që Bleta do kthehet të marrë nektarin.
+        logic_category: Hap "Logjikën" të gjesh bllokun "if/else".
+        length_parameter: A mund ta përditësosh këtë funksion në mënyrë që të përdorë
+          parametrin e "gjatësisë"?
+        frozen_diamond_repeat: Përdor bllokun përsërit për të krijuar këtë formë.
+        frozen_circle_function_in_circle_turn: Mos harro të kthehesh pasi të kesh
+          krijuar çdo rreth.
+        frozen_circle_function_with_parameter_circle: Përdor bllokun "create a circle"
+          dhe ndrysho madhësinë.
+        frozen_snowflake_branch: Përdor bllokun "create a snowflake"
+        frozen_create_square: Bashko më shumë blloqe këtu për të krijuar një katror
+        playlab_drag_say: Zhvendos bllokun "say" këtu dhe shtyp "hello"
+        playlab_use_twice: Përdor këtë bllok dy herë dhe kujtohu të ndryshosh numrin
+          e pjesmarrësit
+        playlab_move_girl: Përdor bllokun "move right" të lëvizësh Vajzën Teniste
+        playlab_play_sound: Shto bllokun "play sound" këtu
+        playlab_arrow_keys: Kujtohu që ti përdorësh këto për të lëvizur magjistaren
+          pasi ke klikuar Run
+        playlab_add_move: Shto blloqet "move" brënda këtij blloku repeat
+        playlab_add_score: Shto blloqe pikësh këtu
+        playlab_add_blocks: Shto blloqet e tua këtu
+        set_variable: Zhvendos një bllok numri këtu që të vendosësh ndryshoret e tua
+        place_variable: Zhvendos ndryshoren tënde brenda këtij blloku
+        bee_for_loop: Zhvendos numrin më të madh të nektarit që dëshiron që të mbledhë
+          bleta këtu
+        place_counter_variable: Zhvendos ndryshoren tënde të numërimit brenda këtij
+          blloku
+        function_editor_draw_square: Ky është përcaktimi i funkisonit tënd. Keto blloqe
+          ekzekutohen sa herë ti përdor bllokun "draw a square"
+        change_here: Bëj ndryshimet e tua këtu
+        write_draw_square_function: Zhvendos blloqet nga toolbox në atë që vizaton
+          një katror
+        write_draw_triangle_function: Zhvendos blloqet nga toolbox në atë që vizaton
+          një trekëndor
+        edit_add_parameter: Kliko redakto për të shtuar një parametër në funksionin
+          tënd
+        add_and_drag_parameter: Shkruaj emrin e parametrit tënd këtu, kliko shto,
+          dhe më pas zhvendos atë në përcaktimin e funksionit tënd
+        fill_in_actor: Plotësoji  ??? me numra që i korrespondojnë çdo pjesëmarrësi
+          (1,2 dhe 3)
+        repeat: Vendos blloqe brenda ciklit për të përsëritur komandat
+        if_bee_nectar: Përdor bllokun "if" për të vendosur nëse bleta duhet të mbledhi
+          nektar
+        if_else_bee: Përdor bllokun "if/else" në mënyrë që Bleta të mbledhë nektar
+          nga një lule dhe të bëjë mjaltë nëse nuk është lule
+        repeat_full_circle: Fut numrin e herëve që zombi duhet të lëvizë për të bërë
+          një rreth të plotë
+        place_length_variable: Zhvendos ndryshorin e gjatësisë këtu për të rivendosur
+          pikëpyetjet
+        arrows_move_actor: Përdor shigjetat për të lëvizur aktorin
+        right_arrow_fireball: Përdor shigjetën djathtas të gjuash topat e zjarrit
+        name_function: Shkruaj emrin e funksionit tënd këtu

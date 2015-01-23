@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -52,22 +52,21 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catText":function(d){return "teks"},
 "catVariables":function(d){return "Variabel"},
 "continue":function(d){return "Lanjutkan"},
-"createHtmlBlock":function(d){return "buat blok html"},
-"createHtmlBlockTooltip":function(d){return "Membuat sebuah blok HTML di aplikasi."},
+"createHtmlBlock":function(d){return "create html block"},
+"createHtmlBlockTooltip":function(d){return "Creates a block of HTML in the app."},
 "finalLevel":function(d){return "Selamat! Anda telah menyelesaikan teka-teki terakhir."},
 "nextLevel":function(d){return "Selamat! Kamu telah menyelesaikan teka-teki ini."},
 "no":function(d){return "Tidak"},
 "numBlocksNeeded":function(d){return "Teka-teki ini dapat diselesaikan dengan %1 blok."},
-"pause":function(d){return "Baris baru"},
-"reinfFeedbackMsg":function(d){return "Anda dapat menekan tombol \"Coba lagi\" untuk kembali menjalankan aplikasi Anda."},
+"pause":function(d){return "Break"},
+"reinfFeedbackMsg":function(d){return "You can press the \"Try again\" button to go back to running your app."},
 "repeatForever":function(d){return "Ulangi selamanya"},
 "repeatDo":function(d){return "kerjakan"},
-"repeatForeverTooltip":function(d){return "Jalankan tindakan di blok ini secara berulang selagi aplikasi berjalan."},
-"shareWebappTwitter":function(d){return "Lihatlah aplikasi yang saya buat. Saya membuatnya sendiri dengan @codeorg"},
-"shareGame":function(d){return "Bagikan aplikasi Anda:"},
-"stepIn":function(d){return "Masuk"},
-"stepOver":function(d){return "Melewati"},
-"stepOut":function(d){return "Keluar"},
-"turnBlack":function(d){return "hitamkan"},
-"turnBlackTooltip":function(d){return "Membuat layar berwarna hitam."},
+"repeatForeverTooltip":function(d){return "Execute the actions in this block repeatedly while the app is running."},
+"shareApplabTwitter":function(d){return "Check out the app I made. I wrote it myself with @codeorg"},
+"shareGame":function(d){return "Share your app:"},
+"stepIn":function(d){return "Step in"},
+"stepOver":function(d){return "Step over"},
+"stepOut":function(d){return "Step out"},
+"viewData":function(d){return "View Data"},
 "yes":function(d){return "Ya"}};

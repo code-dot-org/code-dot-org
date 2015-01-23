@@ -229,6 +229,7 @@
   "soundWinPoint2": "fito pikë 2",
   "soundWood": "druri",
   "speed": "shpejtësia",
+  "startSetValue": "start (rocket-height function)",
   "stopSprite": "ndalo",
   "stopSpriteN": "ndalo pjesmarrësin {spriteIndex}",
   "stopTooltip": "Ndalon lëvizjen e një pjemsarrësi.",

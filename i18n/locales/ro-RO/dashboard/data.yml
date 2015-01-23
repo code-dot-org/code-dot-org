@@ -48,7 +48,7 @@ ro:
         edit-code:
           desc: Editează codul (beta)
           MazeEC: Etapa 1
-          Webapp: Etapa 2
+          Applab: Etapa 2
           ArtistEC: Etapa 3
           StudioEC: Etapa 4
         events:
@@ -99,10 +99,11 @@ ro:
         Jigsaw: Puzzle
         MazeStep: Modul Pas Labirint
         Wordsearch: Cautare de cuvinte
-        Webapp: Webapp
+        Webapp: App Lab
         ArtistEC: Artistul
         TextMatch: Potrivire de text
         StudioEC: Laborator de Joacă
+        Applab: App Lab
     trophy:
       name:
         Bronze: Bronz
@@ -322,7 +323,7 @@ ro:
         maze_wordsearch_k_15: Mișcați-mă într-un sens, apoi în celălalt ca să spun literele cuvântului DEASUPRA
         maze_wordsearch_k_16: Mișcați-mă într-un sens, apoi în celălalt ca să spun literele cuvântului DEDESUBT
         maze_wordsearch_k_20: Acesta este un test! Mișcați-mă într-un sens, apoi în celălalt ca să spun literele cuvântului POVESTE
-        webapp_ec_simple: Creați-vă propria aplicație web folosind createHtmlBlock.
+        applab_ec_simple: Create your app by using the blocks in the toolbox.
         turtle_ec_1_2: 'Acum, desenați un pătrat. Atenție: folosți culoarea favorită alegând-o din noul bloc ”penColor”.'
         turtle_ec_1_10: 'Ați reușit! Acum, desenați orice doriți. Unele idei distractive: o figură băţ, fulg de nea sau spirală. Încercați, de asemenea, noul bloc "penWidth". Distracţie plăcută!'
         studio_ec_sandbox: Creați-vă propriul joc. Când aţi terminat, faceţi clic pe Terminare pentru a permite prietenilor să vă testeze jocul pe telefoanele lor.
