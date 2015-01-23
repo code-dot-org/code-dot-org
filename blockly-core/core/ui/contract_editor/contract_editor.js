@@ -174,8 +174,7 @@ Blockly.ContractEditor.EXAMPLE_BLOCK_TYPE = 'functional_example';
 Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME = 'ACTUAL';
 Blockly.ContractEditor.MARGIN_BELOW_EXAMPLES = 50; // in px
 
-Blockly.ContractEditor.typesToColors = {
-  // in HSV
+Blockly.ContractEditor.typesToColorsHSV = {
   'none': [0, 0, 0.6],
   'Number': [192, 1.00, 0.99], // 00ccff
   'string': [180, 1.00, 0.60], // 0099999
@@ -400,7 +399,7 @@ Blockly.ContractEditor.prototype.outputTypeDropdownChange_ = function(comboBoxEv
   var newType = comboBoxEvent.target.getContent();
   var menuButtonRenderer = goog.ui.FlatMenuButtonRenderer.getInstance();
   var menuButtonElement = menuButtonRenderer.getContentElement(this.getOutputTypeDropdownElement_());
-  this.setBackgroundFromHSV(menuButtonElement, Blockly.ContractEditor.typesToColors[newType]);
+  this.setBackgroundFromHSV(menuButtonElement, Blockly.ContractEditor.typesToColorsHSV[newType]);
 
   if (this.functionDefinitionBlock) {
     this.functionDefinitionBlock.updateOutputType(newType);
@@ -431,7 +430,7 @@ Blockly.ContractEditor.prototype.inputTypeDropdownChange_ = function(comboBoxEve
 Blockly.ContractEditor.prototype.colorInputButtonForType_ = function(newType) {
   var menuButtonRenderer = goog.ui.FlatMenuButtonRenderer.getInstance();
   var menuButtonElement = menuButtonRenderer.getContentElement(this.getInputTypeDropdownElement_());
-  this.setBackgroundFromHSV(menuButtonElement, Blockly.ContractEditor.typesToColors[newType]);
+  this.setBackgroundFromHSV(menuButtonElement, Blockly.ContractEditor.typesToColorsHSV[newType]);
 };
 
 /**
@@ -443,7 +442,7 @@ Blockly.ContractEditor.prototype.createTypeDropdown_ = function() {
     goog.ui.FlatMenuButtonRenderer.getInstance(),
     null,
     Blockly.ContractEditorDropdownMenuRenderer.getInstance());
-  goog.object.forEach(Blockly.ContractEditor.typesToColors, function(color, key) {
+  goog.object.forEach(Blockly.ContractEditor.typesToColorsHSV, function(color, key) {
     var menuItem = new goog.ui.MenuItem(key);
     newTypeDropdown.addItem(menuItem);
     this.setMenuItemColor_(menuItem, color);

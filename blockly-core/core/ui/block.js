@@ -1664,7 +1664,7 @@ Blockly.Block.prototype.setFunctionalOutput = function(hasOutput, opt_check) {
 };
 
 Blockly.Block.prototype.changeFunctionalOutput = function(newType) {
-  this.setHSV.apply(this, Blockly.ContractEditor.typesToColors[newType]);
+  this.setHSV.apply(this, Blockly.ContractEditor.typesToColorsHSV[newType]);
   this.previousConnection = this.previousConnection || new Blockly.Connection(this, Blockly.FUNCTIONAL_OUTPUT);
   this.previousConnection.setCheck(newType);
 
