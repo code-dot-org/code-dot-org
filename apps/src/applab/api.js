@@ -298,3 +298,17 @@ exports.readSharedRecords = function (blockId, searchParams, callback) {
                           {'searchParams': searchParams,
                            'callback': callback });
 };
+
+exports.updateSharedRecord = function (blockId, record, callback) {
+  return Applab.executeCmd(blockId,
+                          'updateSharedRecord',
+                          {'record': record,
+                           'callback': callback });
+};
+
+exports.deleteSharedRecord = function (blockId, record, callback) {
+  return Applab.executeCmd(blockId,
+                          'deleteSharedRecord',
+                          {'record': record,
+                           'callback': callback });
+};
