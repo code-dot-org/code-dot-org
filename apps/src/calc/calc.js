@@ -61,6 +61,36 @@ var appState = {
 var stepSpeed = 2000;
 
 /**
+ * Get a token list for an equation, expression, or string. If input(s) are not
+ * expressions, we convert to expressions.
+ * If two inputs are given, we get the diff.
+ * If one input is given, we return the tokenlist for that input.
+ */
+function getTokenList(one, two) {
+  if (one instanceof EquationSet.Equation) {
+    one = one.expression;
+  }
+  if (two instanceof EquationSet.Equation) {
+    two = two.expression;
+  }
+  // TODO - this is a kind of hacky way to do this
+  if (typeof(one) === 'string') {
+    one = new ExpressionNode(one);
+  }
+  if (typeof(two) === 'string') {
+    two = new ExpressionNode(two);
+  }
+
+  if (!one) {
+    return null;
+  } else if (!two) {
+    return one.getTokenList(false);
+  } else {
+    return one.getTokenListDiff(two);
+  }
+}
+
+/**
  * Initialize Blockly and the Calc.  Called on page load.
  */
 Calc.init = function(config) {
@@ -170,9 +200,8 @@ function displayGoal() {
 
   tokenList = computeEquation.expression.getTokenList(false);
   var result = appState.targetSet.evaluate();
-  // TODO - where should this live?
-  tokenList.push({ str: ' = ', maked: false});
-  tokenList.push({ str: result.toString(), maked: false});
+
+  tokenList = tokenList.concat(getTokenList(' = ' + result.toString()));
   displayEquation('answerExpression', computeEquation.name, tokenList, nextRow);
 }
 
@@ -313,32 +342,34 @@ function displayComplexUserExpressions () {
   var nextRow = 0;
   var tokenList;
   appState.userSet.sortedEquations().forEach(function (userEquation) {
-    var targetEquation;
+    var expectedEquation = hasSingleFunction ? null :
+      appState.targetSet.getEquation(userEquation.name);
 
-    if (!hasSingleFunction) {
-      targetEquation = appState.targetSet.getEquation(userEquation.name) ||
-        userEquation;
+    tokenList = getTokenList(userEquation, expectedEquation);
 
-      tokenList = userEquation.expression.getTokenListDiff(
-        targetEquation.expression);
-    } else {
-      tokenList = userEquation.expression.getTokenList(false);
-    }
     displayEquation('userExpression', userEquation.name, tokenList, nextRow++,
       'errorToken');
   });
 
+  var computeType = computeEquation && computeEquation.expression.getType();
+  if (computeType === ExpressionNode.ValueType.FUNCTION_CALL ||
+      computeType === ExpressionNode.ValueType.VARIABLE) {
+    var targetEquation = appState.targetSet.computeEquation();
 
-  tokenList = computeEquation.expression.getTokenListDiff(
-    appState.targetSet.computeEquation().expression);
+    // We're either a variable or a function call. Generate a tokenList (since
+    // we could actually be different than the goal)
+    tokenList = getTokenList(computeEquation, targetEquation);
 
-  var result = appState.userSet.evaluate();
-  var expectedResult = appState.targetSet.evaluate();
-  // TODO - where should this live? use real tokens
-  tokenList.push({ str: ' = ', marked: false});
-  tokenList.push({ str: result.toString(), marked: (result !== expectedResult)});
-  displayEquation('userExpression', computeEquation.name, tokenList, nextRow,
-    'errorToken');
+    var result = appState.userSet.evaluate().toString();
+    var expectedResult = appState.targetSet.evaluate().toString();
+
+    tokenList = tokenList.concat(getTokenList(' = '),
+      getTokenList(result, expectedResult));
+  } else {
+    tokenList = getTokenList(computeEquation, appState.targetSet.computeEquation);
+  }
+
+  displayEquation('userExpression', null, tokenList, nextRow, 'errorToken');
 }
 
 function stopAnimatingAndDisplayFeedback() {
