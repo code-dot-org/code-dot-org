@@ -68,6 +68,196 @@
   = f.label :step_speed, 'Step speed'
   %p Number is a multiplier for how long each step takes (so higher numbers are slower). Default is 5 for Maze, 2 for Bee.
   = f.number_field :step_speed
+
+:css
+  .callouteditor input {
+    width: auto
+  }
+
+  .callouteditor select {
+    width: auto
+  }
+
+.field.callouteditor
+  %label Edit Callouts
+
+  -#WARNING:
+  -#Repetition level: High
+
+  .callout0
+    %table
+      %tr
+        %td Use this callout?
+        %td Callout name (localization_key)
+        %td Callout text
+        %td Element callout refers to (element_id)
+        %td Location of qtip on callout
+        %td Location on element qtip points to
+        %td Qtip x distance adjust
+        %td Qtip y distance adjust
+        %td Hide qtip
+      %tr
+        %td
+          %input{:class => "use_callout_0", :type => 'checkbox'}
+        %td
+          -#stretch goal: disable this input and autogenerate callout name (e.g. frozen_cross_rotate_callout0...callout1, etc.)
+          %input{:class => "localization_key_0", :type => 'text', :placeholder => 'Name of callout'}
+        %td
+          %input{:class => "callout_text_0", :type => 'text', :placeholder => 'Text of callout'}
+        %td
+          -#stretch goal: change this input to a select and list all of the elements and sub-elements of the particular level (e.g. [block-id='1'], #runButton, #turn_right_qtip > .blocklyEditableText:eq(1), etc.)
+          %input{:class => "element_id_0", :type => 'text', :placeholder => 'ID of element'}
+        %td
+          %select{:class => "qtip_position_my_0"}
+            %option{:value => 'bottom left'} Bottom left
+            %option{:value => 'bottom center'} Bottom center
+            %option{:value => 'bottom right'} Bottom right
+            %option{:value => 'right bottom'} Right bottom
+            %option{:value => 'right center'} Right center
+            %option{:value => 'right top'} Right top
+            %option{:value => 'top right'} Top right
+            %option{:value => 'top center'} Top center
+            %option{:value => 'top left'} Top left
+            %option{:value => 'left top'} Left top
+            %option{:value => 'left center'} Left center
+            %option{:value => 'left bottom'} Left bottom
+        %td
+          %select{:class => "qtip_position_at_0"}
+            %option{:value => 'top right'} Top right
+            %option{:value => 'top center'} Top center
+            %option{:value => 'top left'} Top left
+            %option{:value => 'left top'} Left top
+            %option{:value => 'left center'} Left center
+            %option{:value => 'left bottom'} Left bottom
+            %option{:value => 'bottom left'} Bottom left
+            %option{:value => 'bottom center'} Bottom center
+            %option{:value => 'bottom right'} Bottom right
+            %option{:value => 'right bottom'} Right bottom
+            %option{:value => 'right center'} Right center
+            %option{:value => 'right top'} Right top
+        %td
+          %input{:class => "qtip_position_adjust_x_0", :type => 'number'}
+        %td
+          %input{:class => "qtip_position_adjust_y_0", :type => 'number'}
+        %td
+          %input{:class => "qtip_hide_0", :type => 'checkbox'}
+
+  .callout1
+    %table
+      %tr
+        %td Use this callout?
+        %td Callout name (localization_key)
+        %td Callout text
+        %td Element callout refers to (element_id)
+        %td Location of qtip on callout
+        %td Location on element qtip points to
+        %td Qtip x distance adjust
+        %td Qtip y distance adjust
+        %td Hide qtip
+      %tr
+        %td
+          %input{:class => "use_callout_1", :type => 'checkbox'}
+        %td
+          -#stretch goal: disable this input and autogenerate callout name (e.g. frozen_cross_rotate_callout0...callout1, etc.)
+          %input{:class => "localization_key_1", :type => 'text', :placeholder => 'Name of callout'}
+        %td
+          %input{:class => "callout_text_1", :type => 'text', :placeholder => 'Text of callout'}
+        %td
+          -#stretch goal: change this input to a select and list all of the elements and sub-elements of the particular level (e.g. [block-id='1'], #runButton, #turn_right_qtip > .blocklyEditableText:eq(1), etc.)
+          %input{:class => "element_id_1", :type => 'text', :placeholder => 'ID of element'}
+        %td
+          %select{:class => "qtip_position_my_1"}
+            %option{:value => 'bottom left'} Bottom left
+            %option{:value => 'bottom center'} Bottom center
+            %option{:value => 'bottom right'} Bottom right
+            %option{:value => 'right bottom'} Right bottom
+            %option{:value => 'right center'} Right center
+            %option{:value => 'right top'} Right top
+            %option{:value => 'top right'} Top right
+            %option{:value => 'top center'} Top center
+            %option{:value => 'top left'} Top left
+            %option{:value => 'left top'} Left top
+            %option{:value => 'left center'} Left center
+            %option{:value => 'left bottom'} Left bottom
+        %td
+          %select{:class => "qtip_position_at_1"}
+            %option{:value => 'top right'} Top right
+            %option{:value => 'top center'} Top center
+            %option{:value => 'top left'} Top left
+            %option{:value => 'left top'} Left top
+            %option{:value => 'left center'} Left center
+            %option{:value => 'left bottom'} Left bottom
+            %option{:value => 'bottom left'} Bottom left
+            %option{:value => 'bottom center'} Bottom center
+            %option{:value => 'bottom right'} Bottom right
+            %option{:value => 'right bottom'} Right bottom
+            %option{:value => 'right center'} Right center
+            %option{:value => 'right top'} Right top
+        %td
+          %input{:class => "qtip_position_adjust_x_1", :type => 'number'}
+        %td
+          %input{:class => "qtip_position_adjust_y_1", :type => 'number'}
+        %td
+          %input{:class => "qtip_hide_1", :type => 'checkbox'}
+
+  .callout2
+    %table
+      %tr
+        %td Use this callout?
+        %td Callout name (localization_key)
+        %td Callout text
+        %td Element callout refers to (element_id)
+        %td Location of qtip on callout
+        %td Location on element qtip points to
+        %td Qtip x distance adjust
+        %td Qtip y distance adjust
+        %td Hide qtip
+      %tr
+        %td
+          %input{:class => "use_callout_2", :type => 'checkbox'}
+        %td
+          -#stretch goal: disable this input and autogenerate callout name (e.g. frozen_cross_rotate_callout0...callout1, etc.)
+          %input{:class => "localization_key_2", :type => 'text', :placeholder => 'Name of callout'}
+        %td
+          %input{:class => "callout_text_2", :type => 'text', :placeholder => 'Text of callout'}
+        %td
+          -#stretch goal: change this input to a select and list all of the elements and sub-elements of the particular level (e.g. [block-id='1'], #runButton, #turn_right_qtip > .blocklyEditableText:eq(1), etc.)
+          %input{:class => "element_id_2", :type => 'text', :placeholder => 'ID of element'}
+        %td
+          %select{:class => "qtip_position_my_2"}
+            %option{:value => 'bottom left'} Bottom left
+            %option{:value => 'bottom center'} Bottom center
+            %option{:value => 'bottom right'} Bottom right
+            %option{:value => 'right bottom'} Right bottom
+            %option{:value => 'right center'} Right center
+            %option{:value => 'right top'} Right top
+            %option{:value => 'top right'} Top right
+            %option{:value => 'top center'} Top center
+            %option{:value => 'top left'} Top left
+            %option{:value => 'left top'} Left top
+            %option{:value => 'left center'} Left center
+            %option{:value => 'left bottom'} Left bottom
+        %td
+          %select{:class => "qtip_position_at_2"}
+            %option{:value => 'top right'} Top right
+            %option{:value => 'top center'} Top center
+            %option{:value => 'top left'} Top left
+            %option{:value => 'left top'} Left top
+            %option{:value => 'left center'} Left center
+            %option{:value => 'left bottom'} Left bottom
+            %option{:value => 'bottom left'} Bottom left
+            %option{:value => 'bottom center'} Bottom center
+            %option{:value => 'bottom right'} Bottom right
+            %option{:value => 'right bottom'} Right bottom
+            %option{:value => 'right center'} Right center
+            %option{:value => 'right top'} Right top
+        %td
+          %input{:class => "qtip_position_adjust_x_2", :type => 'number'}
+        %td
+          %input{:class => "qtip_position_adjust_y_2", :type => 'number'}
+        %td
+          %input{:class => "qtip_hide_2", :type => 'checkbox'}
+
 .field
   = f.label :callout_json
   %div{:style => '-webkit-user-select: text'}
@@ -89,9 +279,631 @@
     = f.label :embed, "Embed"
     %p Embedded levels hide the Blockly workspace, only showing the visualization area (and the 'finish' button, if 'freeplay' is also set).
     = boolean_check_box f, :embed
+
 :javascript
-  CodeMirror.fromTextArea($('#level_callout_json').get(0), {
+  var callout_editor = CodeMirror.fromTextArea($('#level_callout_json').get(0), {
     mode: 'javascript',
     viewportMargin: Infinity,
     matchBrackets: true
   });
+  var callouts = callout_editor.getValue()
+
+  //WARNING! WARNING!:
+  //Repetition level: Off the Charts!
+  //much of this repetition can be replaced with functions
+
+  if (callouts.length > 0) {
+    var parsecallouts = JSON.parse(callouts)
+    if (parsecallouts[0]) {
+      $(".use_callout_0").prop("checked", true)
+      $(".localization_key_0").val(parsecallouts[0].localization_key)
+      $(".callouttext_0").val()
+      $(".element_id_0").val(parsecallouts[0].element_id)
+      if ((parsecallouts[0].qtip_config) && (parsecallouts[0].qtip_config.position))
+        $(".qtip_position_my_0").val(parsecallouts[0].qtip_config.position.my)
+      if ((parsecallouts[0].qtip_config) && (parsecallouts[0].qtip_config.position))
+        $(".qtip_position_at_0").val(parsecallouts[0].qtip_config.position.at)
+      if ((parsecallouts[0].qtip_config) && (parsecallouts[0].qtip_config.position) && (parsecallouts[0].qtip_config.position.adjust))
+        $(".qtip_position_adjust_x_0").val(parsecallouts[0].qtip_config.position.adjust.x)
+      if ((parsecallouts[0].qtip_config) && (parsecallouts[0].qtip_config.position) && (parsecallouts[0].qtip_config.position.adjust))
+        $(".qtip_position_adjust_y_0").val(parsecallouts[0].qtip_config.position.adjust.y)
+      if ((parsecallouts[0].qtip_config) && (parsecallouts[0].qtip_config.style) && (parsecallouts[0].qtip_config.style.classes) && (parsecallouts[0].qtip_config.style.classes == "no-tip"))
+        $(".qtip_hide_0").prop("checked", true)
+    }
+
+    if (parsecallouts[1]) {
+      $(".use_callout_1").prop("checked", true)
+      $(".localization_key_1").val(parsecallouts[1].localization_key)
+      $(".callouttext_1").val()
+      $(".element_id_1").val(parsecallouts[1].element_id)
+      if ((parsecallouts[1].qtip_config) && (parsecallouts[1].qtip_config.position))
+        $(".qtip_position_my_1").val(parsecallouts[1].qtip_config.position.my)
+      if ((parsecallouts[1].qtip_config) && (parsecallouts[1].qtip_config.position))
+        $(".qtip_position_at_1").val(parsecallouts[1].qtip_config.position.at)
+      if ((parsecallouts[1].qtip_config) && (parsecallouts[1].qtip_config.position) && (parsecallouts[1].qtip_config.position.adjust))
+        $(".qtip_position_adjust_x_1").val(parsecallouts[1].qtip_config.position.adjust.x)
+      if ((parsecallouts[1].qtip_config) && (parsecallouts[1].qtip_config.position) && (parsecallouts[1].qtip_config.position.adjust))
+        $(".qtip_position_adjust_y_1").val(parsecallouts[1].qtip_config.position.adjust.y)
+      if ((parsecallouts[1].qtip_config) && (parsecallouts[1].qtip_config.style) && (parsecallouts[1].qtip_config.style.classes) && (parsecallouts[1].qtip_config.style.classes == "no-tip"))
+        $(".qtip_hide_1").prop("checked", true)
+    }
+    if (parsecallouts[2]) {
+      $(".use_callout_2").prop("checked", true)
+      $(".localization_key_2").val(parsecallouts[2].localization_key)
+      $(".callouttext_2").val()
+      $(".element_id_2").val(parsecallouts[2].element_id)
+      if ((parsecallouts[2].qtip_config) && (parsecallouts[2].qtip_config.position))
+        $(".qtip_position_my_2").val(parsecallouts[2].qtip_config.position.my)
+      if ((parsecallouts[2].qtip_config) && (parsecallouts[2].qtip_config.position))
+        $(".qtip_position_at_2").val(parsecallouts[2].qtip_config.position.at)
+      if ((parsecallouts[2].qtip_config) && (parsecallouts[2].qtip_config.position) && (parsecallouts[2].qtip_config.position.adjust))
+        $(".qtip_position_adjust_x_2").val(parsecallouts[2].qtip_config.position.adjust.x)
+      if ((parsecallouts[2].qtip_config) && (parsecallouts[2].qtip_config.position) && (parsecallouts[2].qtip_config.position.adjust))
+        $(".qtip_position_adjust_y_2").val(parsecallouts[2].qtip_config.position.adjust.y)
+      if ((parsecallouts[2].qtip_config) && (parsecallouts[2].qtip_config.style) && (parsecallouts[2].qtip_config.style.classes) && (parsecallouts[2].qtip_config.style.classes == "no-tip"))
+        $(".qtip_hide_2").prop("checked", true)
+    }
+  }
+
+  var updated_callouts_0 = {};
+  updated_callouts_0.localization_key = "";
+  updated_callouts_0.element_id = "";
+  updated_callouts_0.qtip_config = {};
+  updated_callouts_0.qtip_config.position = {};
+  updated_callouts_0.qtip_config.position.adjust = {}
+  updated_callouts_0.qtip_config.style = {};
+
+  var updated_callouts_1 = {};
+  updated_callouts_1.localization_key = "";
+  updated_callouts_1.element_id = "";
+  updated_callouts_1.qtip_config = {};
+  updated_callouts_1.qtip_config.position = {};
+  updated_callouts_1.qtip_config.position.adjust = {}
+  updated_callouts_1.qtip_config.style = {};
+
+  var updated_callouts_2 = {};
+  updated_callouts_2.localization_key = "";
+  updated_callouts_2.element_id = "";
+  updated_callouts_2.qtip_config = {};
+  updated_callouts_2.qtip_config.position = {};
+  updated_callouts_2.qtip_config.position.adjust = {}
+  updated_callouts_2.qtip_config.style = {};
+
+  if ($('.localization_key_0').val().length > 0)
+    updated_callouts_0.localization_key = $('.localization_key_0').val();
+  if ($('.element_id_0').val().length > 0)
+    updated_callouts_0.element_id = $('.element_id_0').val();
+  if ($('.qtip_position_my_0').val().length > 0)
+    updated_callouts_0.qtip_config.position.my = $('.qtip_position_my_0').val();
+  if ($('.qtip_position_at_0').val().length > 0)
+    updated_callouts_0.qtip_config.position.at = $('.qtip_position_at_0').val();
+  if ($('.qtip_position_adjust_x_0').val().length > 0)
+    updated_callouts_0.qtip_config.position.adjust.x = $('.qtip_position_adjust_x_0').val();
+  if ($('.qtip_position_adjust_y_0').val().length > 0)
+    updated_callouts_0.qtip_config.position.adjust.y = $('.qtip_position_adjust_y_0').val();
+  if ($(".qtip_hide_0").prop("checked") == true)
+    updated_callouts_0.qtip_config.style.classes = "no-tip"
+
+  if ($('.localization_key_1').val().length > 0)
+    updated_callouts_1.localization_key = $('.localization_key_1').val();
+  if ($('.element_id_1').val().length > 0)
+    updated_callouts_1.element_id = $('.element_id_1').val();
+  if ($('.qtip_position_my_1').val().length > 0)
+    updated_callouts_1.qtip_config.position.my = $('.qtip_position_my_1').val();
+  if ($('.qtip_position_at_1').val().length > 0)
+    updated_callouts_1.qtip_config.position.at = $('.qtip_position_at_1').val();
+  if ($('.qtip_position_adjust_x_1').val().length > 0)
+    updated_callouts_1.qtip_config.position.adjust.x = $('.qtip_position_adjust_x_1').val();
+  if ($('.qtip_position_adjust_y_1').val().length > 0)
+    updated_callouts_1.qtip_config.position.adjust.y = $('.qtip_position_adjust_y_1').val();
+  if ($(".qtip_hide_1").prop("checked") == true)
+    updated_callouts_1.qtip_config.style.classes = "no-tip"
+
+  if ($('.localization_key_2').val().length > 0)
+    updated_callouts_2.localization_key = $('.localization_key_2').val();
+  if ($('.element_id_2').val().length > 0)
+    updated_callouts_2.element_id = $('.element_id_2').val();
+  if ($('.qtip_position_my_2').val().length > 0)
+    updated_callouts_2.qtip_config.position.my = $('.qtip_position_my_2').val();
+  if ($('.qtip_position_at_2').val().length > 0)
+    updated_callouts_2.qtip_config.position.at = $('.qtip_position_at_2').val();
+  if ($('.qtip_position_adjust_x_2').val().length > 0)
+    updated_callouts_2.qtip_config.position.adjust.x = $('.qtip_position_adjust_x_2').val();
+  if ($('.qtip_position_adjust_y_2').val().length > 0)
+    updated_callouts_2.qtip_config.position.adjust.y = $('.qtip_position_adjust_y_2').val();
+  if ($(".qtip_hide_2").prop("checked") == true)
+    updated_callouts_2.qtip_config.style.classes = "no-tip"
+
+  $(".use_callout_0").change(function() {
+    callout_editor.setValue("[\r")
+    if ($(".use_callout_0").prop("checked") == true) {
+      var stringified_callouts_0 = JSON.stringify(updated_callouts_0);
+      callout_editor.replaceRange("  " + stringified_callouts_0 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_1").prop("checked") == true) {
+      var stringified_callouts_1 = JSON.stringify(updated_callouts_1);
+      callout_editor.replaceRange(",  " + stringified_callouts_1 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_2").prop("checked") == true) {
+      var stringified_callouts_2 = JSON.stringify(updated_callouts_2);
+      callout_editor.replaceRange(",  " + stringified_callouts_2 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+    callout_editor.replaceRange("]", CodeMirror.Pos(callout_editor.lastLine()))
+  })
+
+  $(".localization_key_0").change(function() {
+    updated_callouts_0.localization_key = $(".localization_key_0").val();
+    callout_editor.setValue("[\r")
+    if ($(".use_callout_0").prop("checked") == true) {
+      var stringified_callouts_0 = JSON.stringify(updated_callouts_0);
+      callout_editor.replaceRange("  " + stringified_callouts_0 + "\r]", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_1").prop("checked") == true) {
+      var stringified_callouts_1 = JSON.stringify(updated_callouts_1);
+      callout_editor.replaceRange(",  " + stringified_callouts_1 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_2").prop("checked") == true) {
+      var stringified_callouts_2 = JSON.stringify(updated_callouts_2);
+      callout_editor.replaceRange(",  " + stringified_callouts_2 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+    callout_editor.replaceRange("]", CodeMirror.Pos(callout_editor.lastLine()))
+  })
+
+  $(".element_id_0").change(function() {
+    updated_callouts_0.element_id = $(".element_id_0").val();
+    callout_editor.setValue("[\r")
+    if ($(".use_callout_0").prop("checked") == true) {
+      var stringified_callouts_0 = JSON.stringify(updated_callouts_0);
+      callout_editor.replaceRange("  " + stringified_callouts_0 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_1").prop("checked") == true) {
+      var stringified_callouts_1 = JSON.stringify(updated_callouts_1);
+      callout_editor.replaceRange(",  " + stringified_callouts_1 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_2").prop("checked") == true) {
+      var stringified_callouts_2 = JSON.stringify(updated_callouts_2);
+      callout_editor.replaceRange(",  " + stringified_callouts_2 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+    callout_editor.replaceRange("]", CodeMirror.Pos(callout_editor.lastLine()))
+  })
+
+  $(".qtip_position_my_0").change(function() {
+    updated_callouts_0.qtip_config.position.my = $(".qtip_position_my_0").val()
+    callout_editor.setValue("[\r")
+    if ($(".use_callout_0").prop("checked") == true) {
+      var stringified_callouts_0 = JSON.stringify(updated_callouts_0);
+      callout_editor.replaceRange("  " + stringified_callouts_0 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_1").prop("checked") == true) {
+      var stringified_callouts_1 = JSON.stringify(updated_callouts_1);
+      callout_editor.replaceRange(",  " + stringified_callouts_1 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_2").prop("checked") == true) {
+      var stringified_callouts_2 = JSON.stringify(updated_callouts_2);
+      callout_editor.replaceRange(",  " + stringified_callouts_2 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+    callout_editor.replaceRange("]", CodeMirror.Pos(callout_editor.lastLine()))
+  })
+
+  $(".qtip_position_at_0").change(function() {
+    updated_callouts_0.qtip_config.position.at = $(".qtip_position_at_0").val()
+    callout_editor.setValue("[\r")
+    if ($(".use_callout_0").prop("checked") == true) {
+      var stringified_callouts_0 = JSON.stringify(updated_callouts_0);
+      callout_editor.replaceRange("  " + stringified_callouts_0 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_1").prop("checked") == true) {
+      var stringified_callouts_1 = JSON.stringify(updated_callouts_1);
+      callout_editor.replaceRange(",  " + stringified_callouts_1 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_2").prop("checked") == true) {
+      var stringified_callouts_2 = JSON.stringify(updated_callouts_2);
+      callout_editor.replaceRange(",  " + stringified_callouts_2 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+    callout_editor.replaceRange("]", CodeMirror.Pos(callout_editor.lastLine()))
+  })
+
+  $(".qtip_position_adjust_x_0").change(function() {
+    updated_callouts_0.qtip_config.position.adjust.x = parseInt($(".qtip_position_adjust_x_0").val())
+    callout_editor.setValue("[\r")
+    if ($(".use_callout_0").prop("checked") == true) {
+      var stringified_callouts_0 = JSON.stringify(updated_callouts_0);
+      callout_editor.replaceRange("  " + stringified_callouts_0 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_1").prop("checked") == true) {
+      var stringified_callouts_1 = JSON.stringify(updated_callouts_1);
+      callout_editor.replaceRange(",  " + stringified_callouts_1 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_2").prop("checked") == true) {
+      var stringified_callouts_2 = JSON.stringify(updated_callouts_2);
+      callout_editor.replaceRange(",  " + stringified_callouts_2 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+    callout_editor.replaceRange("]", CodeMirror.Pos(callout_editor.lastLine()))
+  })
+
+  $(".qtip_position_adjust_y_0").change(function() {
+    updated_callouts_0.qtip_config.position.adjust.y = parseInt($(".qtip_position_adjust_y_0").val())
+    callout_editor.setValue("[\r")
+    if ($(".use_callout_0").prop("checked") == true) {
+      var stringified_callouts_0 = JSON.stringify(updated_callouts_0);
+      callout_editor.replaceRange("  " + stringified_callouts_0 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_1").prop("checked") == true) {
+      var stringified_callouts_1 = JSON.stringify(updated_callouts_1);
+      callout_editor.replaceRange(",  " + stringified_callouts_1 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_2").prop("checked") == true) {
+      var stringified_callouts_2 = JSON.stringify(updated_callouts_2);
+      callout_editor.replaceRange(",  " + stringified_callouts_2 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+    callout_editor.replaceRange("]", CodeMirror.Pos(callout_editor.lastLine()))
+  })
+
+  $(".qtip_hide_0").change(function() {
+    if ($(".qtip_hide_0").prop("checked") == true)
+      updated_callouts_0.qtip_config.style.classes = "no-tip"
+    else
+      updated_callouts_0.qtip_config.style.classes = "";
+
+    callout_editor.setValue("[\r")
+    if ($(".use_callout_0").prop("checked") == true) {
+      var stringified_callouts_0 = JSON.stringify(updated_callouts_0);
+      callout_editor.replaceRange("  " + stringified_callouts_0 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_1").prop("checked") == true) {
+      var stringified_callouts_1 = JSON.stringify(updated_callouts_1);
+      callout_editor.replaceRange(",  " + stringified_callouts_1 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_2").prop("checked") == true) {
+      var stringified_callouts_2 = JSON.stringify(updated_callouts_2);
+      callout_editor.replaceRange(",  " + stringified_callouts_2 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+    callout_editor.replaceRange("]", CodeMirror.Pos(callout_editor.lastLine()))
+  })
+
+  $(".use_callout_1").change(function() {
+    callout_editor.setValue("[\r")
+    if ($(".use_callout_0").prop("checked") == true) {
+      var stringified_callouts_0 = JSON.stringify(updated_callouts_0);
+      callout_editor.replaceRange("  " + stringified_callouts_0 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_1").prop("checked") == true) {
+      var stringified_callouts_1 = JSON.stringify(updated_callouts_1);
+      callout_editor.replaceRange(",  " + stringified_callouts_1 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_2").prop("checked") == true) {
+      var stringified_callouts_2 = JSON.stringify(updated_callouts_2);
+      callout_editor.replaceRange(",  " + stringified_callouts_2 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+    callout_editor.replaceRange("]", CodeMirror.Pos(callout_editor.lastLine()))
+  })
+
+  $(".localization_key_1").change(function() {
+    updated_callouts_1.localization_key = $(".localization_key_1").val();
+    callout_editor.setValue("[\r")
+    if ($(".use_callout_0").prop("checked") == true) {
+      var stringified_callouts_0 = JSON.stringify(updated_callouts_0);
+      callout_editor.replaceRange("  " + stringified_callouts_0 + "\r]", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_1").prop("checked") == true) {
+      var stringified_callouts_1 = JSON.stringify(updated_callouts_1);
+      callout_editor.replaceRange(",  " + stringified_callouts_1 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_2").prop("checked") == true) {
+      var stringified_callouts_2 = JSON.stringify(updated_callouts_2);
+      callout_editor.replaceRange(",  " + stringified_callouts_2 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+    callout_editor.replaceRange("]", CodeMirror.Pos(callout_editor.lastLine()))
+  })
+
+  $(".element_id_1").change(function() {
+    updated_callouts_1.element_id = $(".element_id_1").val();
+    callout_editor.setValue("[\r")
+    if ($(".use_callout_0").prop("checked") == true) {
+      var stringified_callouts_0 = JSON.stringify(updated_callouts_0);
+      callout_editor.replaceRange("  " + stringified_callouts_0 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_1").prop("checked") == true) {
+      var stringified_callouts_1 = JSON.stringify(updated_callouts_1);
+      callout_editor.replaceRange(",  " + stringified_callouts_1 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_2").prop("checked") == true) {
+      var stringified_callouts_2 = JSON.stringify(updated_callouts_2);
+      callout_editor.replaceRange(",  " + stringified_callouts_2 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+    callout_editor.replaceRange("]", CodeMirror.Pos(callout_editor.lastLine()))
+  })
+
+  $(".qtip_position_my_1").change(function() {
+    updated_callouts_1.qtip_config.position.my = $(".qtip_position_my_1").val()
+    callout_editor.setValue("[\r")
+    if ($(".use_callout_0").prop("checked") == true) {
+      var stringified_callouts_0 = JSON.stringify(updated_callouts_0);
+      callout_editor.replaceRange("  " + stringified_callouts_0 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_1").prop("checked") == true) {
+      var stringified_callouts_1 = JSON.stringify(updated_callouts_1);
+      callout_editor.replaceRange(",  " + stringified_callouts_1 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_2").prop("checked") == true) {
+      var stringified_callouts_2 = JSON.stringify(updated_callouts_2);
+      callout_editor.replaceRange(",  " + stringified_callouts_2 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+    callout_editor.replaceRange("]", CodeMirror.Pos(callout_editor.lastLine()))
+  })
+
+  $(".qtip_position_at_1").change(function() {
+    updated_callouts_1.qtip_config.position.at = $(".qtip_position_at_1").val()
+    callout_editor.setValue("[\r")
+    if ($(".use_callout_0").prop("checked") == true) {
+      var stringified_callouts_0 = JSON.stringify(updated_callouts_0);
+      callout_editor.replaceRange("  " + stringified_callouts_0 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_1").prop("checked") == true) {
+      var stringified_callouts_1 = JSON.stringify(updated_callouts_1);
+      callout_editor.replaceRange(",  " + stringified_callouts_1 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_2").prop("checked") == true) {
+      var stringified_callouts_2 = JSON.stringify(updated_callouts_2);
+      callout_editor.replaceRange(",  " + stringified_callouts_2 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+    callout_editor.replaceRange("]", CodeMirror.Pos(callout_editor.lastLine()))
+  })
+
+  $(".qtip_position_adjust_x_1").change(function() {
+    updated_callouts_1.qtip_config.position.adjust.x = parseInt($(".qtip_position_adjust_x_1").val())
+    callout_editor.setValue("[\r")
+    if ($(".use_callout_0").prop("checked") == true) {
+      var stringified_callouts_0 = JSON.stringify(updated_callouts_0);
+      callout_editor.replaceRange("  " + stringified_callouts_0 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_1").prop("checked") == true) {
+      var stringified_callouts_1 = JSON.stringify(updated_callouts_1);
+      callout_editor.replaceRange(",  " + stringified_callouts_1 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_2").prop("checked") == true) {
+      var stringified_callouts_2 = JSON.stringify(updated_callouts_2);
+      callout_editor.replaceRange(",  " + stringified_callouts_2 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+    callout_editor.replaceRange("]", CodeMirror.Pos(callout_editor.lastLine()))
+  })
+
+  $(".qtip_position_adjust_y_1").change(function() {
+    updated_callouts_1.qtip_config.position.adjust.y = parseInt($(".qtip_position_adjust_y_1").val())
+    callout_editor.setValue("[\r")
+    if ($(".use_callout_0").prop("checked") == true) {
+      var stringified_callouts_0 = JSON.stringify(updated_callouts_0);
+      callout_editor.replaceRange("  " + stringified_callouts_0 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_1").prop("checked") == true) {
+      var stringified_callouts_1 = JSON.stringify(updated_callouts_1);
+      callout_editor.replaceRange(",  " + stringified_callouts_1 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_2").prop("checked") == true) {
+      var stringified_callouts_2 = JSON.stringify(updated_callouts_2);
+      callout_editor.replaceRange(",  " + stringified_callouts_2 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+    callout_editor.replaceRange("]", CodeMirror.Pos(callout_editor.lastLine()))
+  })
+
+  $(".qtip_hide_1").change(function() {
+    if ($(".qtip_hide_1").prop("checked") == true)
+      updated_callouts_1.qtip_config.style.classes = "no-tip"
+    else
+      updated_callouts_1.qtip_config.style.classes = "";
+
+    callout_editor.setValue("[\r")
+    if ($(".use_callout_0").prop("checked") == true) {
+      var stringified_callouts_0 = JSON.stringify(updated_callouts_0);
+      callout_editor.replaceRange("  " + stringified_callouts_0 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_1").prop("checked") == true) {
+      var stringified_callouts_1 = JSON.stringify(updated_callouts_1);
+      callout_editor.replaceRange(",  " + stringified_callouts_1 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_2").prop("checked") == true) {
+      var stringified_callouts_2 = JSON.stringify(updated_callouts_2);
+      callout_editor.replaceRange(",  " + stringified_callouts_2 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+    callout_editor.replaceRange("]", CodeMirror.Pos(callout_editor.lastLine()))
+  })
+
+  $(".use_callout_2").change(function() {
+    callout_editor.setValue("[\r")
+    if ($(".use_callout_0").prop("checked") == true) {
+      var stringified_callouts_0 = JSON.stringify(updated_callouts_0);
+      callout_editor.replaceRange("  " + stringified_callouts_0 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_1").prop("checked") == true) {
+      var stringified_callouts_1 = JSON.stringify(updated_callouts_1);
+      callout_editor.replaceRange(",  " + stringified_callouts_1 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_2").prop("checked") == true) {
+      var stringified_callouts_2 = JSON.stringify(updated_callouts_2);
+      callout_editor.replaceRange(",  " + stringified_callouts_2 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+    callout_editor.replaceRange("]", CodeMirror.Pos(callout_editor.lastLine()))
+  })
+
+  $(".localization_key_2").change(function() {
+    updated_callouts_2.localization_key = $(".localization_key_2").val();
+    callout_editor.setValue("[\r")
+    if ($(".use_callout_0").prop("checked") == true) {
+      var stringified_callouts_0 = JSON.stringify(updated_callouts_0);
+      callout_editor.replaceRange("  " + stringified_callouts_0 + "\r]", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_1").prop("checked") == true) {
+      var stringified_callouts_1 = JSON.stringify(updated_callouts_1);
+      callout_editor.replaceRange(",  " + stringified_callouts_1 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_2").prop("checked") == true) {
+      var stringified_callouts_2 = JSON.stringify(updated_callouts_2);
+      callout_editor.replaceRange(",  " + stringified_callouts_2 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+    callout_editor.replaceRange("]", CodeMirror.Pos(callout_editor.lastLine()))
+  })
+
+  $(".element_id_2").change(function() {
+    updated_callouts_2.element_id = $(".element_id_2").val();
+    callout_editor.setValue("[\r")
+    if ($(".use_callout_0").prop("checked") == true) {
+      var stringified_callouts_0 = JSON.stringify(updated_callouts_0);
+      callout_editor.replaceRange("  " + stringified_callouts_0 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_1").prop("checked") == true) {
+      var stringified_callouts_1 = JSON.stringify(updated_callouts_1);
+      callout_editor.replaceRange(",  " + stringified_callouts_1 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_2").prop("checked") == true) {
+      var stringified_callouts_2 = JSON.stringify(updated_callouts_2);
+      callout_editor.replaceRange(",  " + stringified_callouts_2 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+    callout_editor.replaceRange("]", CodeMirror.Pos(callout_editor.lastLine()))
+  })
+
+  $(".qtip_position_my_2").change(function() {
+    updated_callouts_2.qtip_config.position.my = $(".qtip_position_my_2").val()
+    callout_editor.setValue("[\r")
+    if ($(".use_callout_0").prop("checked") == true) {
+      var stringified_callouts_0 = JSON.stringify(updated_callouts_0);
+      callout_editor.replaceRange("  " + stringified_callouts_0 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_1").prop("checked") == true) {
+      var stringified_callouts_1 = JSON.stringify(updated_callouts_1);
+      callout_editor.replaceRange(",  " + stringified_callouts_1 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_2").prop("checked") == true) {
+      var stringified_callouts_2 = JSON.stringify(updated_callouts_2);
+      callout_editor.replaceRange(",  " + stringified_callouts_2 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+    callout_editor.replaceRange("]", CodeMirror.Pos(callout_editor.lastLine()))
+  })
+
+  $(".qtip_position_at_2").change(function() {
+    updated_callouts_2.qtip_config.position.at = $(".qtip_position_at_2").val()
+    callout_editor.setValue("[\r")
+    if ($(".use_callout_0").prop("checked") == true) {
+      var stringified_callouts_0 = JSON.stringify(updated_callouts_0);
+      callout_editor.replaceRange("  " + stringified_callouts_0 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_1").prop("checked") == true) {
+      var stringified_callouts_1 = JSON.stringify(updated_callouts_1);
+      callout_editor.replaceRange(",  " + stringified_callouts_1 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_2").prop("checked") == true) {
+      var stringified_callouts_2 = JSON.stringify(updated_callouts_2);
+      callout_editor.replaceRange(",  " + stringified_callouts_2 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+    callout_editor.replaceRange("]", CodeMirror.Pos(callout_editor.lastLine()))
+  })
+
+  $(".qtip_position_adjust_x_2").change(function() {
+    updated_callouts_2.qtip_config.position.adjust.x = parseInt($(".qtip_position_adjust_x_2").val())
+    callout_editor.setValue("[\r")
+    if ($(".use_callout_0").prop("checked") == true) {
+      var stringified_callouts_0 = JSON.stringify(updated_callouts_0);
+      callout_editor.replaceRange("  " + stringified_callouts_0 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_1").prop("checked") == true) {
+      var stringified_callouts_1 = JSON.stringify(updated_callouts_1);
+      callout_editor.replaceRange(",  " + stringified_callouts_1 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_2").prop("checked") == true) {
+      var stringified_callouts_2 = JSON.stringify(updated_callouts_2);
+      callout_editor.replaceRange(",  " + stringified_callouts_2 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+    callout_editor.replaceRange("]", CodeMirror.Pos(callout_editor.lastLine()))
+  })
+
+  $(".qtip_position_adjust_y_2").change(function() {
+    updated_callouts_2.qtip_config.position.adjust.y = parseInt($(".qtip_position_adjust_y_2").val())
+    callout_editor.setValue("[\r")
+    if ($(".use_callout_0").prop("checked") == true) {
+      var stringified_callouts_0 = JSON.stringify(updated_callouts_0);
+      callout_editor.replaceRange("  " + stringified_callouts_0 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_1").prop("checked") == true) {
+      var stringified_callouts_1 = JSON.stringify(updated_callouts_1);
+      callout_editor.replaceRange(",  " + stringified_callouts_1 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_2").prop("checked") == true) {
+      var stringified_callouts_2 = JSON.stringify(updated_callouts_2);
+      callout_editor.replaceRange(",  " + stringified_callouts_2 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+    callout_editor.replaceRange("]", CodeMirror.Pos(callout_editor.lastLine()))
+  })
+
+  $(".qtip_hide_2").change(function() {
+    if ($(".qtip_hide_2").prop("checked") == true)
+      updated_callouts_2.qtip_config.style.classes = "no-tip"
+    else
+      updated_callouts_2.qtip_config.style.classes = "";
+
+    callout_editor.setValue("[\r")
+    if ($(".use_callout_0").prop("checked") == true) {
+      var stringified_callouts_0 = JSON.stringify(updated_callouts_0);
+      callout_editor.replaceRange("  " + stringified_callouts_0 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_1").prop("checked") == true) {
+      var stringified_callouts_1 = JSON.stringify(updated_callouts_1);
+      callout_editor.replaceRange(",  " + stringified_callouts_1 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+
+    if ($(".use_callout_2").prop("checked") == true) {
+      var stringified_callouts_2 = JSON.stringify(updated_callouts_2);
+      callout_editor.replaceRange(",  " + stringified_callouts_2 + "\r", CodeMirror.Pos(callout_editor.lastLine()))
+    }
+    callout_editor.replaceRange("]", CodeMirror.Pos(callout_editor.lastLine()))
+  })
+
+  //Started to attempt another, more efficient method:
+  //var addcallout_row = $('<div>', {class: 'callout_row'});
+  //addcallout_row.append($('<input>', {type: 'text', class: 'localization_key', placeholder: 'Name of callout'}), $('<input>', {type: 'text', class: 'callout_text', placeholder: 'Text of callout'}), $('<input>', {type: 'text', class: 'element_id', placeholder: 'ID of element'}), $('<select>', {class: 'qtip_position_my'}), $('<select>', {class: 'qtip_position_at'}), $('<input>', {type: 'number', class: 'qtip_position_adjust_x'}),  $('<input>', {type: 'number', class: 'qtip_position_adjust_y'}), $('<input>', {type: 'checkbox', class: 'qtip_hide'}));
+  //$('.callouteditor').append(addcallout_row);
