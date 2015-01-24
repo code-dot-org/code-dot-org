@@ -3,7 +3,6 @@ var testUtils = require('./util/testUtils');
 var assert = testUtils.assert;
 var canvas = require('canvas');
 var BlockStaticAnalyzer = testUtils.requireWithGlobalsCheckBuildFolder('BlockStaticAnalyzer');
-var blocksCommon = testUtils.requireWithGlobalsCheckBuildFolder('blocksCommon');
 
 // Some of our tests need to use Image
 global.Image = canvas.Image;
@@ -19,6 +18,7 @@ describe("runStaticAnalysis", function () {
   // create our environment
   beforeEach(function () {
     testUtils.setupTestBlockly();
+    var blocksCommon = testUtils.requireWithGlobalsCheckBuildFolder('blocksCommon');
     blocksCommon.install(Blockly, {});
 
     studioApp = testUtils.getStudioAppSingleton();
