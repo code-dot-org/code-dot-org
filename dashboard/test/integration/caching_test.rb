@@ -4,10 +4,11 @@ class CachingTest < ActionDispatch::IntegrationTest
 
   def setup
     Script.clear_cache
-
     # turn on the cache (off by default in test env so tests don't confuse each other)
     Dashboard::Application.config.action_controller.perform_caching = true
     Dashboard::Application.config.cache_store = :memory_store, { size: 64.megabytes }
+
+    Rails.cache.clear
   end
 
   def no_database
