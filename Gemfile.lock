@@ -77,6 +77,7 @@ GEM
       multi_json (>= 1.7.5, < 2.0)
       multi_test (>= 0.1.1)
     daemons (1.1.9)
+    dalli (2.7.2)
     debug_inspector (0.0.2)
     devise (3.2.4)
       bcrypt (~> 3.0)
@@ -373,6 +374,7 @@ DEPENDENCIES
   codemirror-rails
   colorize
   cucumber
+  dalli
   devise
   execjs
   eyes_selenium
