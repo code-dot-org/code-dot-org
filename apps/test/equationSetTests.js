@@ -9,7 +9,7 @@ var EquationSet = require(testUtils.buildPath('/calc/equationSet'));
 var Equation = EquationSet.Equation;
 
 describe('ExpressionSet', function () {
-  it('evaluate', function () {
+  it('can evaluate a semi-complex function', function () {
     // f(1,2)
     var computeExpression = new ExpressionNode('f', [1, 2]);
     // f(x,y) = ((2 * x) + y)
@@ -19,13 +19,32 @@ describe('ExpressionSet', function () {
     ]);
 
     var set = new EquationSet();
-    set.addEquation(new Equation(null, computeExpression));
     set.addEquation(new Equation('f(x,y)', fnExpression));
+    set.addEquation(new Equation(null, computeExpression));
 
-    debugger;
     assert.equal(set.evaluate(), 4);
+  });
 
+  it('can evaluate a set of variables', function () {
+    var set = new EquationSet();
+    // x = 1
+    set.addEquation(new Equation('x', new ExpressionNode(1)));
+    // y = x + 2
+    set.addEquation(new Equation('y', new ExpressionNode('+', ['x', 2])));
+    // compute
+    set.addEquation(new Equation(null, new ExpressionNode('y')));
 
+    assert.equal(set.evaluate(), 3);
+  });
+
+  it('throws if trying to resolve an unresolveable set of variables', function () {
+    var set = new EquationSet();
+    set.addEquation(new Equation('z', new ExpressionNode(0)));
+    set.addEquation(new Equation(null, new ExpressionNode('y')));
+
+    assert.throws(function () {
+      set.evaluate();
+    });
   });
 
 });

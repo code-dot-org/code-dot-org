@@ -76,28 +76,40 @@ ExpressionNode.prototype.clone = function () {
 };
 
 /**
- * Replace an ExpressionNode's contents with those of another node.
+ * Can we evaluate this expression given the mapping
  */
-ExpressionNode.prototype.replaceWith = function (newNode) {
-  if (!(newNode instanceof ExpressionNode)) {
-    throw new Error("Must replaceWith ExpressionNode");
+// TODO - unit test (test case where mapping[this.value] = 0
+ExpressionNode.prototype.canEvaluate = function (mapping) {
+  mapping = mapping || {};
+  var type = this.getType();
+  if (type === ValueType.FUNCTION_CALL) {
+    return false;
   }
-  // clone so that we have our own copies of any objects
-  newNode = newNode.clone();
-  this.value = newNode.value;
-  this.children = newNode.children;
+
+  if (type === ValueType.VARIABLE) {
+    return mapping[this.value] !== undefined;
+  }
+
+  for (var i = 0; i < this.children.length; i++) {
+    if (!this.children[i].canEvaluate(mapping)) {
+      return false;
+    }
+  }
+
+  return true;
 };
 
 /**
  * Evaluate the expression, returning the result.
  */
 ExpressionNode.prototype.evaluate = function (mapping) {
-  mapping = mapping || {}
+  mapping = mapping || {};
   var type = this.getType();
 
-  if (type === ValueType.VARIABLE && mapping[this.value]) {
-    this.value = mapping[this.value];
-    type = this.getType();
+  if (type === ValueType.VARIABLE && mapping[this.value] !== undefined) {
+    var clone = this.clone();
+    clone.value = mapping[this.value];
+    return clone.evaluate();
   }
 
   if (type === ValueType.VARIABLE || type === ValueType.FUNCTION_CALL) {
