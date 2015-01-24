@@ -12,7 +12,7 @@ gemfile: Gemfile
 
 bundler_args: --without development --deployment
 
-before_script: cd dashboard; bundle exec rake db:create db:schema:load; mysql -uroot -e "create database if not exists pegasus_test"
+before_script: cd dashboard; bundle exec rake db:create db:schema:load; mysql -uroot -e "create database if not exists pegasus_test"; cd ../pegasus; rake db:migrate; cd ../dashboard
 
 script: bundle exec rake
 
