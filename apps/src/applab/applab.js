@@ -1181,6 +1181,8 @@ Applab.callCmd = function (cmd) {
     case 'clearTimeout':
     case 'createSharedRecord':
     case 'readSharedRecords':
+    case 'updateSharedRecord':
+    case 'deleteSharedRecord':
       studioApp.highlight(cmd.id);
       retVal = Applab[cmd.name](cmd.opts);
       break;
@@ -1741,6 +1743,35 @@ Applab.handleReadSharedRecords = function(interpreterCallback, records) {
     'arguments': [records]
   });
 };
+
+Applab.updateSharedRecord = function (opts) {
+  var record = codegen.marshalInterpreterToNative(Applab.interpreter,
+      opts.record);
+  AppStorage.updateSharedRecord(record,
+      Applab.handleUpdateSharedRecord.bind(this, opts.callback));
+};
+
+Applab.handleUpdateSharedRecord = function(interpreterCallback, record) {
+  Applab.eventQueue.push({
+    'fn': interpreterCallback,
+    'arguments': [record]
+  });
+};
+
+Applab.deleteSharedRecord = function (opts) {
+  var record = codegen.marshalInterpreterToNative(Applab.interpreter,
+      opts.record);
+  AppStorage.deleteSharedRecord(record,
+      Applab.handleDeleteSharedRecord.bind(this, opts.callback));
+};
+
+Applab.handleDeleteSharedRecord = function(interpreterCallback) {
+  Applab.eventQueue.push({
+    'fn': interpreterCallback,
+    'arguments': []
+  });
+};
+
 
 /*
 var onWaitComplete = function (opts) {

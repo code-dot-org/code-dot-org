@@ -86,3 +86,80 @@ var handleReadSharedRecords = function(tableName, searchParams, callback) {
   });
   callback(records);
 };
+
+/**
+ * Updates a record in a table, accessible to all users.
+ * @param {string} record.tableName The name of the table to update.
+ * @param {string} record.id The id of the row to update.
+ * @param {Object} record Object containing other properites to update
+ *     on the record.
+ * @param {Function} callback Function to call with the resulting record.
+ */
+AppStorage.updateSharedRecord = function(record, callback) {
+  var tableName = record.tableName;
+  if (!tableName) {
+    console.log('updateRecords: missing required property "tableName"');
+    return;
+  }
+  var recordId = record.id;
+  if (!recordId) {
+    console.log('updateRecord: missing required property "id"');
+    return;
+  }
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = handleUpdateSharedRecord.bind(req, record, callback);
+  var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + '/shared-tables/' +
+      tableName + '/' + recordId;
+  req.open('POST', url, true);
+  req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+  req.send(JSON.stringify(record));
+};
+
+var handleUpdateSharedRecord = function(record, callback) {
+  if (this.readyState !== 4) {
+    return;
+  }
+  if (this.status < 200 || this.status > 300) {
+    console.log('unexpected http status ' + this.status);
+    return;
+  }
+  callback(record);
+};
+
+/**
+ * Deletes a record from the specified table.
+ * @param {string} record.tableName The name of the table to delete from.
+ * @param {string} record.id The id of the record to delete.
+ * @param {Object} record Object whose other properties are ignored.
+ * @param {Function} callback Function to call on success.
+ */
+AppStorage.deleteSharedRecord = function(record, callback) {
+  var tableName = record.tableName;
+  if (!tableName) {
+    console.log('deleteRecord: missing required property "tableName"');
+    return;
+  }
+  var recordId = record.id;
+  if (!recordId) {
+    console.log('deleteRecord: missing required property "id"');
+    return;
+  }
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = handleDeleteSharedRecord.bind(req, callback);
+  var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + '/shared-tables/' +
+      tableName + '/' + recordId + '/delete';
+  req.open('POST', url, true);
+  req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+  req.send(JSON.stringify(record));
+};
+
+var handleDeleteSharedRecord = function(callback) {
+  if (this.readyState !== 4) {
+    return;
+  }
+  if (this.status < 200 || this.status > 300) {
+    console.log('unexpected http status ' + this.status);
+    return;
+  }
+  callback();
+};
