@@ -181,7 +181,7 @@ Calc.init = function(config) {
  *     one function and variable(s). Currently not supported.
  */
 function displayGoal() {
-  var computeEquation = appState.targetSet.computeEquation()
+  var computeEquation = appState.targetSet.computeEquation();
   if (!computeEquation || !computeEquation.expression) {
     return;
   }
@@ -485,7 +485,7 @@ function displayEquation(parentId, name, tokenList, line, markClass) {
 
   // todo (brent): handle case where expression is longer than width
   var xPadding = (CANVAS_WIDTH - g.getBoundingClientRect().width) / 2;
-  var yPos = (line * 20);
+  var yPos = (line * 20); // TODO - this shouldnt be hardcoded
   g.setAttribute('transform', 'translate(' + xPadding + ', ' + yPos + ')');
 }
 

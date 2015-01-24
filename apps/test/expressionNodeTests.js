@@ -192,6 +192,12 @@ describe("ExpressionNode", function () {
       }, Error);
     });
 
+    it("doesnt change the node when evaluating", function () {
+      node = new ExpressionNode('x');
+      assert.equal(node.evaluate({x: 1}), 1);
+      assert.equal(node.value, 'x');
+    });
+
     it("cant evaluate a function with no mapping", function () {
       assert.throws(function () {
         node = new ExpressionNode('f', [1, 2]);

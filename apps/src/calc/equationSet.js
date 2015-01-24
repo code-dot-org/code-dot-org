@@ -109,7 +109,7 @@ EquationSet.prototype.hasVariablesOrFunctions = function () {
  */
 EquationSet.prototype.singleFunction = function () {
   // TODO - (brent) def unit test me
-  var single = null
+  var single = null;
   for (var i = 0; i < this.equations_.length; i++) {
     if (single) {
       throw new Error("Multiple functions or function and variable(s)");
@@ -167,6 +167,7 @@ EquationSet.prototype.evaluate = function () {
     return this.compute_.expression.evaluate();
   }
 
+  var mapping = {};
   // (2) single function, no variables
   var singleFunction = this.singleFunction();
   if (singleFunction !== null) {
@@ -181,7 +182,6 @@ EquationSet.prototype.evaluate = function () {
       throw new Error('Unexpected: calling funtion with wrong number of inputs');
     }
 
-    var mapping = {};
     variables.forEach(function (item, index) {
       // TODO - are we accessing stuff that should be private?
       mapping[item] = caller.children[index].value;
@@ -190,9 +190,26 @@ EquationSet.prototype.evaluate = function () {
   }
 
   // (3) multiple variables, no functions
-  throw new Error('NYE');
-  return 0; // TODO
+  var madeProgress = true;
+  while (madeProgress) {
+    madeProgress = false;
+    for (var i = 0; i < this.equations_.length; i++) {
+      var equation = this.equations_[i];
+      if (mapping[equation.name] === undefined &&
+          equation.expression.canEvaluate(mapping)) {
+        madeProgress = true;
+        mapping[equation.name] = equation.expression.evaluate(mapping);
+      }
+    }
+  }
 
+  // TODO - do i need to handle case where compute expression is simply
+  // not resolveable?
+  if (!this.compute_.expression.canEvaluate(mapping)) {
+    throw new Error("Can't resolve ExpressionSet");
+  }
+
+  return this.compute_.expression.evaluate(mapping);
 };
 
 // todo (brent) : would this logic be better placed inside the blocks?
