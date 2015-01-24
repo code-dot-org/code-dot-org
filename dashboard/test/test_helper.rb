@@ -5,8 +5,11 @@
 require 'minitest/reporters'
 MiniTest::Reporters.use! ($stdout.tty? ? Minitest::Reporters::ProgressReporter.new : Minitest::Reporters::DefaultReporter.new)
 
-ENV["RAILS_ENV"] ||= "test"
-ENV["RACK_ENV"] ||= "test"
+ENV["RAILS_ENV"] = "test"
+ENV["RACK_ENV"] = "test"
+CDO.rack_env = "test"
+
+Rails.application.reload_routes!
 
 require File.expand_path('../../config/environment', __FILE__)
 I18n.load_path += Dir[Rails.root.join('test', 'en.yml')]
@@ -24,6 +27,9 @@ class ActiveSupport::TestCase
 
   setup do
     set_env :test
+    # how come this doesn't work:
+    #     Dashboard::Application.config.action_controller.perform_caching = false
+    Rails.cache.clear
 
     AWS::S3.stubs(:upload_to_bucket).raises("Don't actually upload anything to S3 in tests... mock it if you want to test it")
   end
