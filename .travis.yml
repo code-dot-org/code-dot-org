@@ -19,4 +19,4 @@ script: bundle exec rake
 env:
   global:
   - DB=mysql
-  - RAILS_ENV=test
+

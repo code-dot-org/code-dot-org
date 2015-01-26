@@ -431,11 +431,7 @@ html, body {
 }
 
 .user_menu {
-  a:hover { background-color: transparent; text-decoration: none; display: inline-block; }
-}
-
-.user_menu a {
-  vertical-align: bottom;
+  cursor: pointer;
 }
 
 .user_options {
@@ -657,13 +653,13 @@ html, body {
   }
 }
 .header_popup {
-  display:none;
-  top:auto;
-  position:absolute;
-  left:50%;
-  width:635px;
-  margin-left:-337px;
-  margin-top:-20px;
+  display: none;
+  position: absolute;
+  top: auto;
+  right: 0;
+  left: 0;
+  margin: 20px auto;
+  width: 635px;
   border: 20px solid $bkgnd_color;
   border-top: 5px;
   border-bottom: 5px;
@@ -689,6 +685,7 @@ html, body {
   overflow-y: auto;
   display: block;
   min-height: 1100px;
+  color: #333;
 
   .loading {
     height: 400px;
@@ -715,19 +712,8 @@ html, body {
   cursor: pointer;
 }
 
-.transparent_backdrop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1040;
-  background-color: transparent;
-}
-
-.header_trophy_link:hover {
-  background-color: transparent;
-  text-decoration: none;
+.header_trophy_link {
+  cursor: pointer;
 }
 
 .header_finished_link {
