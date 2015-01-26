@@ -12,13 +12,11 @@ gemfile: Gemfile
 
 bundler_args: --without development --deployment
 
-before_script: bundle exec rake install; cd dashboard; bundle exec rake db:create db:schema:load
+before_script: cd dashboard; bundle exec rake db:create db:schema:load
 
 script: bundle exec rake
 
 env:
   global:
   - DB=mysql
-  - RAILS_ENV=test
-  - RACK_ENV=test
 
