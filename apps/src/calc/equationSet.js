@@ -1,27 +1,5 @@
 var _ = require('../utils').getLodash();
 var ExpressionNode = require('./expressionNode');
-/**
- * Creates a public accessor around object[publicName +'_']
- */
- // TODO (brent) - overkill?
-// function exposePublicFinalizable(object, publicName) {
-//   var privateName = publicName + '_';
-//   if (object[privateName] === undefined) {
-//     throw new Error(privateName + ' does not exist');
-//   }
-//   Object.defineProperty(object, publicName, {
-//     get: function () {
-//       return this[privateName];
-//     },
-//     set: function (val) {
-//       if (this.finalized_) {
-//         throw new Error('not allowed');
-//       }
-//       this[privateName] = val;
-//     }
-//   });
-// };
-// exposePublicFinalizable(this, 'compute');
 
 /**
  * An equation is an expression attached to a particular name. For example:
@@ -40,12 +18,17 @@ var Equation = function (name, expression, variables) {
  *  (1) Compute expression - name is null
  *  (2) Function - name is "fn(var1, var2, ...)"
  *  (3) Variable declaration - name is "x"
+ * This method returns true if the name indicates it is a function.
  */
 Equation.prototype.isFunction = function () {
   // does the name end with parens enclosing variables
   return /\(.*\)$/.test(this.name);
 };
 
+/**
+ * An EquationSet consists of a top level (compute) equation, and optionally
+ * some number of support equations
+ */
 var EquationSet = function () {
   this.compute_ = null;
   this.equations_ = [];
@@ -105,14 +88,15 @@ EquationSet.prototype.hasVariablesOrFunctions = function () {
 /**
  * If the EquationSet has exactly one function and no variables, returns that
  * equation. If we have multiple functions or one function and some variables,
- * it throws. Otherwise returns null.
+ * it returns null
  */
 EquationSet.prototype.singleFunction = function () {
   // TODO - (brent) def unit test me
   var single = null;
   for (var i = 0; i < this.equations_.length; i++) {
     if (single) {
-      throw new Error("Multiple functions or function and variable(s)");
+      // multiple functions/equations
+      return null;
     }
     if (this.equations_[i].isFunction()) {
       single = this.equations_[i];
