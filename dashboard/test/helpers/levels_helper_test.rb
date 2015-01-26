@@ -82,12 +82,12 @@ class LevelsHelperTest < ActionView::TestCase
     @level.level_num = 'custom'
     @level.callout_json = '[{"localization_key": "run", "element_id": "#runButton"}]'
 
-    select_and_remember_callouts
-    assert_equal 1, @callouts.count
-    assert_equal '#runButton', @callouts[0]['element_id']
-    assert_equal 'Hit "Run" to try your program', @callouts[0]['localized_text']
+    callouts = select_and_remember_callouts
+    assert_equal 1, callouts.count
+    assert_equal '#runButton', callouts[0]['element_id']
+    assert_equal 'Hit "Run" to try your program', callouts[0]['localized_text']
 
-    select_and_remember_callouts
-    assert_equal 0, @callouts.count
+    callouts = select_and_remember_callouts
+    assert_equal 0, callouts.count
   end
 end
