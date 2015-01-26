@@ -368,17 +368,11 @@ class DashboardSection
   end
 
   def to_owner_hash()
-    {
-      id:@row[:id],
-      location:"/v2/sections/#{@row[:id]}",
-      name:@row[:name],
-      login_type:@row[:login_type],
-      grade:@row[:grade],
-      code:@row[:code],
-      course:course,
-      teachers:teachers,
-      students:students,
-    }
+    to_member_hash.merge(
+        course:course,
+        teachers:teachers,
+        students:students
+    )
   end
 
   def to_member_hash()
