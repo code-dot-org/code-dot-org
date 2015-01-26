@@ -49,7 +49,7 @@ module LevelsHelper
       @start_blocks = current_user.last_attempt(@level).try(:level_source).try(:data)
     end
 
-    select_and_remember_callouts(@script_level.nil?)
+    @callouts = select_and_remember_callouts(@script_level.nil?)
     localize_levelbuilder_instructions
   end
 
@@ -75,7 +75,7 @@ module LevelsHelper
   end
 
   def select_and_remember_callouts(always_show = false)
-    session[:callouts_seen] ||= Set.new()
+    session[:callouts_seen] ||= Set.new
     available_callouts = []
     if @level.custom?
       unless @level.try(:callout_json).blank?
@@ -89,14 +89,12 @@ module LevelsHelper
     else
       available_callouts = @script_level.callouts if @script_level
     end
-    @callouts_to_show = available_callouts
+    # Filter if already seen (unless always_show)
+    callouts_to_show = available_callouts
       .reject { |c| !always_show && session[:callouts_seen].include?(c.localization_key) }
       .each { |c| session[:callouts_seen].add(c.localization_key) }
-    @callouts = make_localized_hash_of_callouts(@callouts_to_show)
-  end
-
-  def make_localized_hash_of_callouts(callouts)
-    callouts.map do |callout|
+    # Localize
+    callouts_to_show.map do |callout|
       callout_hash = callout.attributes
       callout_hash.delete('localization_key')
       callout_hash['localized_text'] = data_t('callout.text', callout.localization_key)
@@ -236,7 +234,6 @@ module LevelsHelper
       default_num_example_blocks
       impressive
       open_function_definition
-      callout_json
       disable_sharing
       hide_source
       share
