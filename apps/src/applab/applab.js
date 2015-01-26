@@ -1723,6 +1723,9 @@ Applab.createSharedRecord = function (opts) {
 };
 
 Applab.handleCreateSharedRecord = function(interpreterCallback, record) {
+  if (!interpreterCallback) {
+    return;
+  }
   Applab.eventQueue.push({
     'fn': interpreterCallback,
     'arguments': [record]
@@ -1738,6 +1741,9 @@ Applab.readSharedRecords = function (opts) {
 };
 
 Applab.handleReadSharedRecords = function(interpreterCallback, records) {
+  if (!interpreterCallback) {
+    return;
+  }
   Applab.eventQueue.push({
     'fn': interpreterCallback,
     'arguments': [records]
@@ -1752,6 +1758,9 @@ Applab.updateSharedRecord = function (opts) {
 };
 
 Applab.handleUpdateSharedRecord = function(interpreterCallback, record) {
+  if (!interpreterCallback) {
+    return;
+  }
   Applab.eventQueue.push({
     'fn': interpreterCallback,
     'arguments': [record]
@@ -1766,6 +1775,9 @@ Applab.deleteSharedRecord = function (opts) {
 };
 
 Applab.handleDeleteSharedRecord = function(interpreterCallback) {
+  if (!interpreterCallback) {
+    return;
+  }
   Applab.eventQueue.push({
     'fn': interpreterCallback,
     'arguments': []
