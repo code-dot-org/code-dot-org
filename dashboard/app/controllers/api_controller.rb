@@ -2,6 +2,7 @@ class ApiController < ApplicationController
   layout false
 
   def user_menu
+    render partial: 'shared/user_header'
   end
 
   def user_hero
