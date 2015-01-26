@@ -12,7 +12,7 @@ gemfile: Gemfile
 
 bundler_args: --without development --deployment
 
-before_script: bundle exec rake install; cd ../dashboard
+before_script: bundle exec rake install; cd dashboard
 
 script: bundle exec rake
 
