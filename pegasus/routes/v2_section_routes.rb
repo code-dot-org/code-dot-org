@@ -1,3 +1,4 @@
+# Get the set of sections owned by the current user
 get '/v2/sections' do
   only_for 'code.org'
   dont_cache
@@ -11,6 +12,14 @@ post '/v2/sections' do
   unsupported_media_type! unless payload = request.json_body
   forbidden! unless section_id = DashboardSection.create(payload.merge(user:dashboard_user))
   redirect "/v2/sections/#{section_id}"#, 201 #BUGBUG: JQuery is barfing on the 201
+end
+
+# Get the set of sections that the current user is enrolled in.
+get '/v2/sections/membership' do JSON.pretty_generate(:duid => dashboard_user_id)
+  only_for 'code.org'
+  dont_cache
+  content_type :json
+  JSON.pretty_generate(DashboardSection.fetch_student_sections(dashboard_user_id))
 end
 
 get '/v2/sections/:id' do |id|
