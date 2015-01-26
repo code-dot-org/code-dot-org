@@ -25,7 +25,7 @@ end
 get '/v2/sections/:id' do |id|
   only_for 'code.org'
   dont_cache
-  forbidden! unless section = DashboardSection.fetch_if_allowed(id, dashboard_user_id)
+  forbidden! unless section = DashboardSection.fetch_if_teacher(id, dashboard_user_id)
   content_type :json
   JSON.pretty_generate(section.to_owner_hash)
 end
