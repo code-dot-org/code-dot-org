@@ -24,14 +24,14 @@ AppStorage.createSharedRecord = function(record, callback) {
     return;
   }
   var req = new XMLHttpRequest();
-  req.onreadystatechange = handleCreateSharedRecord.bind(req, record, callback);
+  req.onreadystatechange = handleCreateSharedRecord.bind(req, callback);
   var url = "/v3/apps/" + AppStorage.tempEncryptedAppId + "/shared-tables/" + tableName;
   req.open('POST', url, true);
   req.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
   req.send(JSON.stringify(record));
 };
 
-var handleCreateSharedRecord = function(record, callback) {
+var handleCreateSharedRecord = function(callback) {
   if (this.readyState !== 4) {
     return;
   }
@@ -39,6 +39,7 @@ var handleCreateSharedRecord = function(record, callback) {
     console.log('unexpected http status ' + this.status);
     return;
   }
+  var record = JSON.parse(this.responseText);
   callback(record);
 };
 
@@ -75,7 +76,6 @@ var handleReadSharedRecords = function(tableName, searchParams, callback) {
     return;
   }
   var records = JSON.parse(this.responseText);
-  console.log(records);
   records = records.filter(function(record) {
     for (var prop in searchParams) {
       if (record[prop] !== searchParams[prop]) {
