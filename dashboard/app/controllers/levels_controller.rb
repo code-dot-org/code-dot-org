@@ -23,11 +23,6 @@ class LevelsController < ApplicationController
   def show
     set_videos_and_blocks_and_callouts_and_instructions
 
-    @fallback_response = {
-      success: {message: 'good job'},
-      failure: {message: 'try again'}
-    }
-
     @full_width = true
     if params[:embed]
       @hide_source = true
@@ -143,36 +138,26 @@ class LevelsController < ApplicationController
 
   def new
     authorize! :create, :level
-    @type_class = params[:type].try(:constantize)
-    # Can't use case/when because a constantized string does not === the class by that name.
-    if @type_class
+    if params[:type].nil_or_empty?
+      @levels = Naturally.sort_by(Level.where(user: current_user), :name)
+    else
+      @type_class = params[:type].constantize
       if @type_class == Artist
         @game = Game.custom_artist
-        @level = @type_class.new
-        render :edit
       elsif @type_class <= Studio
         @game = Game.custom_studio
-        @level = @type_class.new
-        render :edit
       elsif @type_class <= Calc
         @game = Game.calc
-        @level = @type_class.new
-        render :edit
       elsif @type_class <= Eval
         @game = Game.eval
-        @level = @type_class.new
-        render :edit
       elsif @type_class <= Maze
         @game = Game.custom_maze
-        @level = @type_class.new
-        render :edit
       elsif @type_class <= DSLDefined
         @game = Game.find_by(name: @type_class.to_s)
-        @level = @type_class.new
-        render :edit
       end
+      @level = @type_class.new
+      render :edit
     end
-    @levels = Naturally.sort_by(Level.where(user: current_user), :name)
   end
 
   # POST /levels/1/clone
@@ -184,12 +169,6 @@ class LevelsController < ApplicationController
     name = "#{old_level.name} (copy 0)"
     begin result = @level.update(name: name.next!) end until result
     redirect_to(edit_level_url(@level))
-  end
-
-  def can_modify?
-    unless Rails.env.levelbuilder? || Rails.env.development?
-      raise CanCan::AccessDenied.new('Cannot create or modify levels from this environment.')
-    end
   end
 
   def embed_blocks
@@ -207,6 +186,12 @@ class LevelsController < ApplicationController
   end
 
   private
+    def can_modify?
+      unless Rails.env.levelbuilder? || Rails.env.development?
+        raise CanCan::AccessDenied.new('Cannot create or modify levels from this environment.')
+      end
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_level
       @level = Level.find(params[:id])
