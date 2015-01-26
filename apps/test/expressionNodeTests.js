@@ -204,6 +204,80 @@ describe("ExpressionNode", function () {
         node.evaluate();
       }, Error);
     });
+
+    it("can evaluate a function call", function () {
+      node = new ExpressionNode('f', [1, 2]);
+      var mapping = {};
+      // f(x, y) = x + y
+      mapping.f = {
+        variables: ['x', 'y'],
+        expression: new ExpressionNode('+', ['x', 'y'])
+      };
+      assert.equal(node.evaluate(mapping), 3);
+    });
+
+    it("can evaluate a function call when param name collides with global var", function () {
+      node = new ExpressionNode('f', [1]);
+      var mapping = {};
+      // simulate global variable x = 5
+      mapping.x = 5;
+      // f(x) = x
+      mapping.f = {
+        variables: ['x'],
+        expression: new ExpressionNode('x')
+      };
+      assert.equal(node.evaluate(mapping), 1);
+    });
+
+    it("can evaluate nested functions", function () {
+      node = new ExpressionNode('f', [1]);
+
+      var mapping = {};
+      // g(y) = y + 1
+      mapping.g = {
+        variables: ['y'],
+        expression: new ExpressionNode('+', ['y', 1])
+      };
+      // f(x) = g(x)
+      mapping.f = {
+        variables: ['x'],
+        expression: new ExpressionNode('g', ['x'])
+      };
+      assert.equal(node.evaluate(mapping), 2);
+    });
+
+    // TODO - this is broken right now, because it ends up evaluating y + x
+    // with the x value from f's context, instead of the global context
+    // it("can handle transitioning back to global var", function () {
+    //   var mapping = {};
+    //   // x = 1
+    //   mapping['x'] = 1;
+    //   // g(y) = y + x; // should use global x here
+    //   mapping['g'] = {
+    //     variables: ['y'],
+    //     expression: new ExpressionNode('+', ['x', 'y'])
+    //   };
+    //   // f(x) = g(x); // should use local x here
+    //   mapping['f'] = {
+    //     variables: ['x'],
+    //     expression: new ExpressionNode('g', ['x'])
+    //   };
+    //
+    //   node = new ExpressionNode('f', [2]);
+    //   assert.equal(node.evaluate(mapping), 3);
+    // });
+
+    //
+    // f(x) = x + 1
+    // g(x) = x + 2
+    // f(1) + g(2) --> 6
+    //
+    // f(x) = f(x) + 1
+    // need to catch recursion
+    //
+    // make sure function evaluation doesnt modify expression
+
+
   });
 
   it("depth", function () {

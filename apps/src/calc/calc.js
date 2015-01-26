@@ -38,6 +38,7 @@ var ExpressionNode = require('./expressionNode');
 var EquationSet = require('./equationSet');
 
 var TestResults = studioApp.TestResults;
+var ResultType = studioApp.ResultType;
 
 var level;
 var skin;
@@ -263,38 +264,62 @@ function generateExpressionsFromBlockXml(blockXml) {
   return equationSet;
 }
 
+function evaluateResults(targetSet, userSet) {
+  var identical, user, target, levelComplete;
+  var outcome = {
+    result: ResultType.UNSET,
+    testResults: TestResults.NO_TESTS_RUN,
+    message: undefined
+  };
+
+  var singleFunction = targetSet.singleFunction();
+  if (singleFunction) {
+    // evaluate test cases
+    throw new Error('nye');
+  } else if (userSet.hasVariablesOrFunctions()) {
+    // TODO - make sure i test the case where target doesnt and user does have vars/funcs
+    identical = targetSet.isIdenticalTo(userSet);
+    outcome.result = identical ? ResultType.SUCCESS : ResultType.FAILURE;
+  } else {
+    user = userSet.computeEquation();
+    target = targetSet.computeEquation();
+
+    identical = targetSet.isIdenticalTo(userSet);
+    if (identical) {
+      outcome.result = ResultType.SUCCESS;
+      outcome.testResults = TestResults.ALL_PASS;
+    } else {
+      outcome.result = ResultType.FAILURE;
+      if (target && user.expression &&
+          user.expression.isEquivalentTo(target.expression)) {
+        outcome.testResults = TestResults.APP_SPECIFIC_FAIL;
+        outcome.message = calcMsg.equivalentExpression();
+      } else {
+        levelComplete = (outcome.result === ResultType.SUCCESS);
+        outcome.testResults = studioApp.getTestResults(levelComplete);
+      }
+    }
+  }
+
+  return outcome;
+}
 
 /**
  * Execute the user's code.
  */
 Calc.execute = function() {
-  appState.testResults = TestResults.NO_TESTS_RUN;
-  appState.message = undefined;
-
   appState.userSet = generateExpressionsFromTopBlocks();
 
-  // TODO (brent) - should this be using TestResult instead for consistency
-  // across apps?
-  appState.result = level.freePlay ||
-    appState.targetSet.isIdenticalTo(appState.userSet);
-
-  var hasVariablesOrFunctions = appState.userSet.hasVariablesOrFunctions();
   if (level.freePlay) {
-    appState.result = true;
+    appState.result = ResultType.SUCCESS;
     appState.testResults = TestResults.FREE_PLAY;
+    appState.message = undefined;
   } else {
-    var user = appState.userSet.computeEquation();
-    var target = appState.targetSet.computeEquation();
-
-    if (!appState.result && !hasVariablesOrFunctions && user.expression &&
-        user.expression.isEquivalentTo(target && target.expression)) {
-      appState.testResults = TestResults.APP_SPECIFIC_FAIL;
-      appState.message = calcMsg.equivalentExpression();
-    } else {
-      appState.testResults = studioApp.getTestResults(appState.result);
-    }
+    var outcome = evaluateResults(appState.targetSet, appState.userSet);
+    appState.result = outcome.result;
+    appState.testResults = outcome.testResults;
+    appState.message = outcome.message;
   }
-
 
   var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   var textBlocks = Blockly.Xml.domToText(xml);
@@ -312,7 +337,8 @@ Calc.execute = function() {
   studioApp.report(reportData);
 
   appState.animating = true;
-  if (appState.result && !hasVariablesOrFunctions) {
+  if (appState.result == ResultType.SUCCESS &&
+      !appState.userSet.hasVariablesOrFunctions()) {
     Calc.step();
   } else {
     displayComplexUserExpressions();

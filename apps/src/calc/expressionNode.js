@@ -109,7 +109,27 @@ ExpressionNode.prototype.evaluate = function (mapping) {
   if (type === ValueType.VARIABLE && mapping[this.value] !== undefined) {
     var clone = this.clone();
     clone.value = mapping[this.value];
-    return clone.evaluate();
+    return clone.evaluate(mapping);
+  }
+
+  if (type === ValueType.FUNCTION_CALL && mapping[this.value] !== undefined) {
+    var functionDef = mapping[this.value];
+    if (!functionDef.variables || !functionDef.expression) {
+      throw new Error('Bad mapping for: ' + this.value);
+    }
+    if (functionDef.variables.length !== this.children.length) {
+      throw new Error('Bad mapping for: ' + this.value);
+    }
+    // Generate a new mapping so that if we have collisions between global
+    // variables and function variables, the function vars take precedence
+    var newMapping = {};
+    _.keys(mapping).forEach(function (key) {
+      newMapping[key] = mapping[key];
+    });
+    functionDef.variables.forEach(function (variable, index) {
+      newMapping[variable] = this.children[index].value;
+    }, this);
+    return functionDef.expression.evaluate(newMapping);
   }
 
   if (type === ValueType.VARIABLE || type === ValueType.FUNCTION_CALL) {
