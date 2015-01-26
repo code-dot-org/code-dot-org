@@ -284,6 +284,15 @@ class DashboardSection
        map{|i| self.new(i).to_hash}
   end
 
+  def self.fetch_student_sections(student_id)
+    DASHBOARD_DB[:sections].
+        select(*fields).
+        join(:followers, :section_id=>:id).
+        join(:users, :id=>:student_user_id).
+        where(student_user_id: student_id).
+        map{|i| self.new(i).to_shallow_hash}
+  end
+
   def add_student(student)
     return nil unless student_id = student[:id] || DashboardStudent::create(student)
 
@@ -369,6 +378,17 @@ class DashboardSection
       course:course,
       teachers:teachers,
       students:students,
+    }
+  end
+
+  def to_shallow_hash()
+    {
+        id:@row[:id],
+        location:"/v2/sections/#{@row[:id]}",
+        name:@row[:name],
+        login_type:@row[:login_type],
+        grade:@row[:grade],
+        code:@row[:code],
     }
   end
 
