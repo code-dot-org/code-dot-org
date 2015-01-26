@@ -22,16 +22,16 @@
 
       .span3{style: 'text-align: right;' + (@full_width ? 'width: 140px; margin-left: 0px' : '')}
 
-        = form_tag(locale_url, method: :post, id: 'localeForm', style: "margin-bottom: 0px") do
+        = form_tag(locale_url, method: :post, id: 'localeForm', style: 'margin-bottom: 0px;') do
           = hidden_field_tag :return_to, request.url
-          = select_tag :locale, options_for_select(options_for_locale_select, locale), onchange: 'switchLocale();'
+          = select_tag :locale, options_for_select(options_for_locale_select, locale), onchange: 'this.form.submit();'
         %small.dim
-          = link_to t('footer.tos'), 'http://code.org/tos'
+          = link_to t('footer.tos'), CDO.code_org_url('/tos')
           - if @full_width
             |
           - else
             &nbsp; &nbsp; | &nbsp; &nbsp;
-          = link_to t('footer.privacy'), 'http://code.org/privacy'
+          = link_to t('footer.privacy'), CDO.code_org_url('/privacy')
           %br/
           %br/
           %br/

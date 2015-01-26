@@ -1,0 +1,7 @@
+title 'Internet Simulator'
+description_short ""
+description ""
+hidden 'true'
+
+stage 'Internet Simulator'
+level 'blockly:NetSim:netsim_demo'
