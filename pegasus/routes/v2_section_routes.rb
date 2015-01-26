@@ -15,7 +15,7 @@ post '/v2/sections' do
 end
 
 # Get the set of sections that the current user is enrolled in.
-get '/v2/sections/membership' do JSON.pretty_generate(:duid => dashboard_user_id)
+get '/v2/sections/membership' do
   only_for 'code.org'
   dont_cache
   content_type :json
