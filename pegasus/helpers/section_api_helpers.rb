@@ -281,7 +281,7 @@ class DashboardSection
        join(:users, :id=>:user_id).
        select(*fields).
        where(user_id:user_id).
-       map{|i| self.new(i).to_owner_hash}
+       map{|row| self.new(row).to_owner_hash}
   end
 
   def self.fetch_student_sections(student_id)
@@ -290,7 +290,7 @@ class DashboardSection
         join(:followers, :section_id=>:id).
         join(:users, :id=>:student_user_id).
         where(student_user_id: student_id).
-        map{|i| self.new(i).to_member_hash}
+        map{|row| self.new(row).to_member_hash}
   end
 
   def add_student(student)
