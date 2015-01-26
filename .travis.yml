@@ -20,3 +20,5 @@ env:
   global:
   - DB=mysql
   - RAILS_ENV=test
+  - RACK_ENV=test
+
