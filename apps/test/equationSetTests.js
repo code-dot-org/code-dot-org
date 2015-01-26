@@ -47,4 +47,19 @@ describe('ExpressionSet', function () {
     });
   });
 
+  it('can evaluate with a different compute expression', function () {
+    var set = new EquationSet();
+    // f(x) = x + 1
+    // f(1)
+    set.addEquation(new Equation('f(x)', new ExpressionNode('+', ['x', 1])));
+    set.addEquation(new Equation(null, new ExpressionNode('f', [1])));
+
+    assert.equal(set.evaluate(), 2);
+
+    // f(2)
+    var newCompute = new ExpressionNode('f', [2]);
+    assert.equal(set.evaluateWithExpression(newCompute), 3);
+
+  });
+
 });

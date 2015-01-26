@@ -142,13 +142,21 @@ EquationSet.prototype.sortedEquations = function () {
 };
 
 /**
- * Evaluate the compute expression
+ * Evaluate the EquationSet's compute expression in the context of its equations
+ */
+EquationSet.prototype.evaluate = function () {
+  return this.evaluateWithExpression(this.compute_.expression);
+};
+
+/**
+ * Evaluate the given compute expression in the context of the EquationSet's
+ * equations
  */
 // TODO - test edge cases
-EquationSet.prototype.evaluate = function () {
+EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
   // (1) no variables/functions. this is easy
   if (this.equations_.length === 0) {
-    return this.compute_.expression.evaluate();
+    return computeExpression.evaluate();
   }
 
   var mapping = {};
@@ -157,7 +165,7 @@ EquationSet.prototype.evaluate = function () {
   if (singleFunction !== null) {
     // TODO - this feels a little brittle, depending on the string name
     var variables = /\((.*)\)$/.exec(singleFunction.name)[1].split(',');
-    var caller = this.compute_.expression;
+    var caller = computeExpression;
     if (caller.getType() !== ExpressionNode.ValueType.FUNCTION_CALL) {
       throw new Error('expect function call');
     }
@@ -189,11 +197,11 @@ EquationSet.prototype.evaluate = function () {
 
   // TODO - do i need to handle case where compute expression is simply
   // not resolveable?
-  if (!this.compute_.expression.canEvaluate(mapping)) {
+  if (!computeExpression.canEvaluate(mapping)) {
     throw new Error("Can't resolve ExpressionSet");
   }
 
-  return this.compute_.expression.evaluate(mapping);
+  return computeExpression.evaluate(mapping);
 };
 
 // todo (brent) : would this logic be better placed inside the blocks?

@@ -264,22 +264,64 @@ function generateExpressionsFromBlockXml(blockXml) {
   return equationSet;
 }
 
-function evaluateResults(targetSet, userSet) {
+Calc.evaluateResults_ = function (targetSet, userSet) {
   var identical, user, target, levelComplete;
   var outcome = {
     result: ResultType.UNSET,
     testResults: TestResults.NO_TESTS_RUN,
-    message: undefined
+    message: undefined,
+    failedInput: null
   };
 
+  // TODO - make sure we do the "right thing" when singleFunction and/or
+  // hasVariablesOrFunctions differs between targetSet/userSet
   var singleFunction = targetSet.singleFunction();
   if (singleFunction) {
-    // evaluate test cases
-    throw new Error('nye');
+    // if our target is a single function, we evaluate success by evaluating the
+    // function with different inputs
+    var targetCompute = targetSet.computeEquation();
+    if (targetCompute.expression.children.length !== 1) {
+      throw new Error('NYE');
+    }
+
+    // TODO - test case. user set has different inputs than target set
+    if (targetSet.evaluateWithExpression(targetCompute.expression) !==
+        userSet.evaluateWithExpression(targetCompute.expression)) {
+      outcome.result = ResultType.FAILURE;
+      outcome.testResults = TestResults.LEVEL_INCOMPLETE_FAIL;
+      return outcome;
+    }
+
+    var inputs = [targetCompute.expression.children[0].value];
+    inputs.push(0);
+    inputs = inputs.concat(_.range(1, 101), _.range(-1, -101, -1));
+
+    var d = new Date();
+    var expression = targetCompute.expression.clone();
+    for (var i = 0; i < inputs.length && !outcome.failedInput; i++) {
+      // TODO - feels a little hacky directly modifying children
+      expression.children[0].value = inputs[i];
+      if (targetSet.evaluateWithExpression(expression) !==
+          userSet.evaluateWithExpression(expression)) {
+        outcome.failedInput = inputs[i];
+      }
+    }
+    var d2 = new Date();
+    console.log('evaluation took: ' + (d2 - d));
+
+    outcome.result = outcome.failedInput !== null ?
+      ResultType.FAILURE : ResultType.SUCCESS;
+    outcome.testResults = outcome.failedInput !== null ?
+      TestResults.APP_SPECIFIC_FAIL : TestResults.ALL_PASS;
+    outcome.message = calcMsg.failedInput();
+
+    return outcome;
+
   } else if (userSet.hasVariablesOrFunctions()) {
-    // TODO - make sure i test the case where target doesnt and user does have vars/funcs
+
     identical = targetSet.isIdenticalTo(userSet);
     outcome.result = identical ? ResultType.SUCCESS : ResultType.FAILURE;
+    return outcome;
   } else {
     user = userSet.computeEquation();
     target = targetSet.computeEquation();
@@ -299,9 +341,9 @@ function evaluateResults(targetSet, userSet) {
         outcome.testResults = studioApp.getTestResults(levelComplete);
       }
     }
+    return outcome;
   }
 
-  return outcome;
 }
 
 /**
@@ -310,12 +352,12 @@ function evaluateResults(targetSet, userSet) {
 Calc.execute = function() {
   appState.userSet = generateExpressionsFromTopBlocks();
 
-  if (level.freePlay) {
+  if (level.freePlay || level.edit_blocks) {
     appState.result = ResultType.SUCCESS;
     appState.testResults = TestResults.FREE_PLAY;
     appState.message = undefined;
   } else {
-    var outcome = evaluateResults(appState.targetSet, appState.userSet);
+    var outcome = Calc.evaluateResults_(appState.targetSet, appState.userSet);
     appState.result = outcome.result;
     appState.testResults = outcome.testResults;
     appState.message = outcome.message;
@@ -575,6 +617,7 @@ var displayFeedback = function() {
     level: level,
     feedbackType: appState.testResults,
     appStrings: {
+      // TODO - get this string right
       reinfFeedbackMsg: calcMsg.reinfFeedbackMsg()
     },
     appDiv: appDiv
