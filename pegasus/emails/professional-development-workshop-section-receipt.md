@@ -15,7 +15,7 @@ litmus_tracking_id: "4o1xaamz"
 attachments:
   certificate.jpg: '<%= Base64::encode64(image.to_blob) %>'
 ---
-<% unless recipient.name.empty? %>
+<% unless recipient.name.nil_or_empty? %>
 Dear <%= recipient.name %>,
 <% end %>
 
