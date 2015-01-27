@@ -76,5 +76,9 @@ app.get('/applab', function(req, res) {
   renderApp('applab', req, res);
 });
 
+app.get('/netsim', function(req, res) {
+  renderApp('netsim', req, res);
+});
+
 
 module.exports = app;

@@ -148,8 +148,8 @@ $websites = build_task('websites', [deploy_dir('rebuild'), APPS_COMMIT_TASK]) do
 
     if rack_env?(:production) && CDO.daemon
       Dir.chdir(dashboard_dir) do
-        HipChat.log "Putting <b>dashboard</b> scripts in redis..."
-        RakeUtils.rake 'seed:script_cache_to_redis'
+        HipChat.log "Putting <b>dashboard</b> scripts in memcached..."
+        RakeUtils.rake 'seed:script_cache_to_memcached'
       end
 
       thread_count = 2

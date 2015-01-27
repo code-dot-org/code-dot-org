@@ -1,6 +1,6 @@
 require 'cdo/user_helpers'
 # TODO -- remove this and change the APIs below to check logged in user instead of passing in a user id
-class Dashboard
+module Dashboard
   def self.admin?(user_id)
     !!DASHBOARD_DB[:users].where(id: user_id, admin: true).first
   end

@@ -1501,3 +1501,194 @@ MP.5,Common Core Math Practices,,Math Practices,Use appropriate tools strategica
 MP.6,Common Core Math Practices,,Math Practices,Attend to precision.
 MP.7,Common Core Math Practices,,Math Practices,Look for and make use of structure.
 MP.8,Common Core Math Practices,,Math Practices,Look for and express regularity in repeated reasoning.
+CL.L1:3-01,CSTA K-12 Computer Science Standards,K-3,Collaboration,"Gather information and communicate electronically with others with support from teachers, family members or student partners."
+CL.L1:3-02,CSTA K-12 Computer Science Standards,K-3,Collaboration,"Work cooperatively and collaboratively with peers, teachers and others using technology."
+CL.L1:6-01,CSTA K-12 Computer Science Standards,3-6,Collaboration,"Use productivity technology tools (e.g., word processing, spreadsheet, presentation software) for individual and collaborative writing, communication and publishing activities."
+CL.L1:6-02,CSTA K-12 Computer Science Standards,3-6,Collaboration,"Use online resources (e.g., email, online discussions, collaborative web environments) to participate in collaborative problem-solving activities for the purpose of developing solutions or products."
+CL.L1:6-03,CSTA K-12 Computer Science Standards,3-6,Collaboration,Identify ways that teamwork and collaboration can support problem solving and innovation.
+CD.L1:3-01,CSTA K-12 Computer Science Standards,K-3,Computers and Communication Devices,Use standard input and output devices to successfully operate computers and related technologies.
+CD.L1:6-01,CSTA K-12 Computer Science Standards,3-6,Computers and Communication Devices,Demonstrate an appropriate level of proficiency with keyboards and other input and output devices.
+CD.L1:6-02,CSTA K-12 Computer Science Standards,3-6,Computers and Communication Devices,"Understand the pervasiveness of computers and computing in daily life (e.g., voicemail, downloading videos and audio files, microwave ovens, thermostats, wireless Internet, mobile computing devices, GPS systems)."
+CD.L1:6-03,CSTA K-12 Computer Science Standards,3-6,Computers and Communication Devices,Apply strategies for identifying simple hardware and software problems that may occur during use.
+CD.L1:6-04,CSTA K-12 Computer Science Standards,3-6,Computers and Communication Devices,Identify that information is coming to the computer from many sources over a network.
+CD.L1:6-05,CSTA K-12 Computer Science Standards,3-6,Computers and Communication Devices,Identify factors that distinguish humans from machines.
+CD.L1:6-06,CSTA K-12 Computer Science Standards,3-6,Computers and Communication Devices,"Recognize that computers model intelligent behavior (as found in robotics, speech and language recognition and computer animation)."
+CI.L1:3-01,CSTA K-12 Computer Science Standards,K-3,"Community, Global, and Ethical Impacts",Practice responsible digital citizenship (legal and ethical behaviors) in the use of technology systems and software.
+CI.L1:3-02,CSTA K-12 Computer Science Standards,K-3,"Community, Global, and Ethical Impacts",Identify positive and negative social and ethical behaviors for using technology.
+CI.L1:6-01,CSTA K-12 Computer Science Standards,3-6,"Community, Global, and Ethical Impacts",Discuss basic issues related to responsible use of technology and information and the consequences of inappropriate use.
+CI.L1:6-02,CSTA K-12 Computer Science Standards,3-6,"Community, Global, and Ethical Impacts","Identify the impact of technology (e.g., social networking, cyber bullying, mobile computing and communication, web technologies, cyber security and virtualization) on personal life and society."
+CI.L1:6-03,CSTA K-12 Computer Science Standards,3-6,"Community, Global, and Ethical Impacts","Evaluate the accuracy, relevance, appropriateness, comprehensiveness and biases that occur in electronic information sources."
+CI.L1:6-04,CSTA K-12 Computer Science Standards,3-6,"Community, Global, and Ethical Impacts","Understand ethical issues that relate to computers and networks (e.g., equity of access, security, privacy, copyright and intellectual property)."
+CPP.L1:3-01,CSTA K-12 Computer Science Standards,K-3,Computing Practice and Programming,Use technology resources to conduct age-appropriate research.
+CPP.L1:3-02,CSTA K-12 Computer Science Standards,K-3,Computing Practice and Programming,"Use developmentally appropriate multimedia resources (e.g., interactive books and educational software) to support learning across the curriculum."
+CPP.L1:3-03,CSTA K-12 Computer Science Standards,K-3,Computing Practice and Programming,"Create developmentally appropriate multimedia products with support from teachers, family members or student partners."
+CPP.L1:3-04,CSTA K-12 Computer Science Standards,K-3,Computing Practice and Programming,"Construct a set of statements to be acted out to accomplish a simple task (e.g., turtle instructions)."
+CPP.L1:3-05,CSTA K-12 Computer Science Standards,K-3,Computing Practice and Programming,Identify jobs that use computing and technology.
+CPP.L1:3-06,CSTA K-12 Computer Science Standards,K-3,Computing Practice and Programming,Gather and organize information using concept-mapping tools.
+CPP.L1:6-01,CSTA K-12 Computer Science Standards,3-6,Computing Practice and Programming,"Use technology resources (e.g., calculators, data collection probes, mobile devices, videos, educational software and web tools) for problem-solving and self-directed learning."
+CPP.L1:6-02,CSTA K-12 Computer Science Standards,3-6,Computing Practice and Programming,"Use general-purpose productivity tools and peripherals to support personal productivity, remediate skill deficits and facilitate learning."
+CPP.L1:6-03,CSTA K-12 Computer Science Standards,3-6,Computing Practice and Programming,"Use technology tools (e.g., multimedia and text authoring, presentation, web tools, digital cameras and scanners) for individual and collaborative writing, communication and publishing activities."
+CPP.L1:6-04,CSTA K-12 Computer Science Standards,3-6,Computing Practice and Programming,Gather and manipulate data using a variety of digital tools.
+CPP.L1:6-05,CSTA K-12 Computer Science Standards,3-6,Computing Practice and Programming,"Construct a program as a set of step-by-step instructions to be acted out (e.g., make peanut butter and jelly sandwich activity)."
+CPP.L1:6-06,CSTA K-12 Computer Science Standards,3-6,Computing Practice and Programming,Implement problem solutions using a block based visual programming language.
+CPP.L1:6-07,CSTA K-12 Computer Science Standards,3-6,Computing Practice and Programming,"Use computing devices to access remote information, communicate with others in support of direct and independent learning and pursue personal interests."
+CPP.L1:6-08,CSTA K-12 Computer Science Standards,3-6,Computing Practice and Programming,Navigate between webpages using hyperlinks and conduct simple searches using search engines.
+CPP.L1:6-09,CSTA K-12 Computer Science Standards,3-6,Computing Practice and Programming,Identify a wide range of jobs that require knowledge or use of computing.
+CPP.L1:6-10,CSTA K-12 Computer Science Standards,3-6,Computing Practice and Programming,Gather and manipulate data using a variety of digital tools.
+CT.L1:3-01,CSTA K-12 Computer Science Standards,K-3,Computational Thinking,Recognize that software is created to control computer operations.
+CT.L1:3-02,CSTA K-12 Computer Science Standards,K-3,Computational Thinking,Demonstrate how 0s and 1s can be used to represent information.
+CT.L1:6-01,CSTA K-12 Computer Science Standards,3-6,Computational Thinking,"Understand and use the basic steps in algorithmic problem-solving (e.g., problem statement and exploration, examination of sample instances, design, implementation and testing)."
+CT.L1:6-02,CSTA K-12 Computer Science Standards,3-6,Computational Thinking,"Develop a simple understanding of an algorithm (e.g., search, sequence of events or sorting) using computer-free exercises."
+CT.L1:6-03,CSTA K-12 Computer Science Standards,3-6,Computational Thinking,Demonstrate how a string of bits can be used to represent alphanumeric information.
+CT.L1:6-04,CSTA K-12 Computer Science Standards,3-6,Computational Thinking,Describe how a simulation can be used to solve a problem.
+CT.L1:6-05,CSTA K-12 Computer Science Standards,3-6,Computational Thinking,Make a list of sub-problems to consider while addressing a larger problem.
+CT.L1:6-06,CSTA K-12 Computer Science Standards,3-6,Computational Thinking,Understand the connections between computer science and other fields.
+CL.L2:01,CSTA K-12 Computer Science Standards,6-9,Collaboration,Apply productivity/ multimedia tools and peripherals to group collaboration and support learning throughout the curriculum.
+CL.L2:02,CSTA K-12 Computer Science Standards,6-9,Collaboration,"Collaboratively design, develop, publish and present products (e.g., videos, podcasts, websites) using technology resources that demonstrate and communicate curriculum. concepts."
+CL.L2:03,CSTA K-12 Computer Science Standards,6-9,Collaboration,"Collaborate with peers, experts and others using collaborative practices such as pair programming, working in project teams and participating in-group active learning activities."
+CL.L2:04,CSTA K-12 Computer Science Standards,6-9,Collaboration,"Exhibit dispositions necessary for collaboration: providing useful feedback, integrating feedback, understanding and accepting multiple perspectives, socialization."
+CD.L2:01,CSTA K-12 Computer Science Standards,6-9,Computers and Communication Devices,Recognize that computers are devices that execute programs.
+CD.L2:02,CSTA K-12 Computer Science Standards,6-9,Computers and Communication Devices,Identify a variety of electronic devices that contain computational processors.
+CD.L2:03,CSTA K-12 Computer Science Standards,6-9,Computers and Communication Devices,Demonstrate an understanding of the relationship between hardware and software.
+CD.L2:04,CSTA K-12 Computer Science Standards,6-9,Computers and Communication Devices,"Use developmentally appropriate, accurate terminology when communicating about technology."
+CD.L2:05,CSTA K-12 Computer Science Standards,6-9,Computers and Communication Devices,Apply strategies for identifying and solving routine hardware problems that occur during everyday computer use.
+CD.L2:06,CSTA K-12 Computer Science Standards,6-9,Computers and Communication Devices,Describe the major components and functions of computer systems and networks.
+CD.L2:07,CSTA K-12 Computer Science Standards,6-9,Computers and Communication Devices,"Describe what distinguishes humans from machines, focusing on human intelligence versus machine intelligence and ways we can communicate."
+CD.L2:08,CSTA K-12 Computer Science Standards,6-9,Computers and Communication Devices,"Describe ways in which computers use models of intelligent behavior (e.g., robot motion, speech and language understanding, and computer vision)."
+CI.L2:01,CSTA K-12 Computer Science Standards,6-9,"Community, Global, and Ethical Impacts",Exhibit legal and ethical behaviors when using information and technology and discuss the consequences of misuse.
+CI.L2:02,CSTA K-12 Computer Science Standards,6-9,"Community, Global, and Ethical Impacts","Demonstrate knowledge of changes in information technologies over time and the effects those changes have on education, the workplace and society."
+CI.L2:03,CSTA K-12 Computer Science Standards,6-9,"Community, Global, and Ethical Impacts",Analyze the positive and negative impacts of computing on human culture.
+CI.L2:04,CSTA K-12 Computer Science Standards,6-9,"Community, Global, and Ethical Impacts","Evaluate the accuracy, relevance, appropriateness, comprehensiveness and bias of electronic information sources concerning real-world problems."
+CI.L2:05,CSTA K-12 Computer Science Standards,6-9,"Community, Global, and Ethical Impacts","Describe ethical issues that relate to computers and networks (e.g., security, privacy, ownership and information sharing)."
+CI.L2:06,CSTA K-12 Computer Science Standards,6-9,"Community, Global, and Ethical Impacts","Discuss how the unequal distribution of computing resources in a global economy raises issues of equity, access and power."
+CPP.L2:01,CSTA K-12 Computer Science Standards,6-9,Computing Practice and Programming,Select appropriate tools and technology resources to accomplish a variety of tasks and solve problems.
+CPP.L2:02,CSTA K-12 Computer Science Standards,6-9,Computing Practice and Programming,Use a variety of multimedia tools and peripherals to support personal productivity and learning throughout the curriculum.
+CPP.L2:03,CSTA K-12 Computer Science Standards,6-9,Computing Practice and Programming,"Design, develop, publish and present products (e.g., web pages, mobile applications, animations) using technology resources that demonstrate and communicate curriculum concepts."
+CPP.L2:04,CSTA K-12 Computer Science Standards,6-9,Computing Practice and Programming,Demonstrate an understanding of algorithms and their practical application.
+CPP.L2:05,CSTA K-12 Computer Science Standards,6-9,Computing Practice and Programming,"Implement problem solutions using a programming language, including: looping behavior, conditional statements, logic, expressions, variables and functions."
+CPP.L2:06,CSTA K-12 Computer Science Standards,6-9,Computing Practice and Programming,"Demonstrate good practices in personal information security, using passwords, encryption and secure transactions."
+CPP.L2:07,CSTA K-12 Computer Science Standards,6-9,Computing Practice and Programming,Identify interdisciplinary careers that are enhanced by computer science.
+CPP.L2:08,CSTA K-12 Computer Science Standards,6-9,Computing Practice and Programming,"Demonstrate dispositions amenable to open-ended problem solving and programming (e.g., comfort with complexity, persistence, brainstorming, adaptability, patience, propensity to tinker, creativity, accepting challenge)."
+CPP.L2:09,CSTA K-12 Computer Science Standards,6-9,Computing Practice and Programming,Collect and analyze data that is output from multiple runs of a computer program.
+CT.L2:01,CSTA K-12 Computer Science Standards,6-9,Computational Thinking,"Use the basic steps in algorithmic problem-solving to design solutions (e.g., problem statement and exploration, examination of sample instances, design, implementing a solution, testing and evaluation)."
+CT.L2:02,CSTA K-12 Computer Science Standards,6-9,Computational Thinking,Describe the process of parallelization as it relates to problem solving.
+CT.L2:03,CSTA K-12 Computer Science Standards,6-9,Computational Thinking,Define an algorithm as a sequence of instructions that can be processed by a computer.
+CT.L2:04,CSTA K-12 Computer Science Standards,6-9,Computational Thinking,Evaluate ways that different algorithms may be used to solve the same problem.
+CT.L2:05,CSTA K-12 Computer Science Standards,6-9,Computational Thinking,Act out searching and sorting algorithms.
+CT.L2:06,CSTA K-12 Computer Science Standards,6-9,Computational Thinking,"Describe and analyze a sequence of instructions being followed (e.g., describe a character’s behavior in a video game as driven by rules and algorithms)."
+CT.L2:07,CSTA K-12 Computer Science Standards,6-9,Computational Thinking,"Represent data in a variety of ways including text, sounds, pictures and numbers."
+CT.L2:08,CSTA K-12 Computer Science Standards,6-9,Computational Thinking,"Use visual representations of problem states, structures and data (e.g., graphs, charts, network diagrams, flowcharts)."
+CT.L2:09,CSTA K-12 Computer Science Standards,6-9,Computational Thinking,"Interact with content-specific models and simulations (e.g., ecosystems, epidemics, molecular dynamics) to support learning and research."
+CT.L2:10,CSTA K-12 Computer Science Standards,6-9,Computational Thinking,Evaluate what kinds of problems can be solved using modeling and simulation.
+CT.L2:11,CSTA K-12 Computer Science Standards,6-9,Computational Thinking,Analyze the degree to which a computer model accurately represents the real world.
+CT.L2:12,CSTA K-12 Computer Science Standards,6-9,Computational Thinking,Use abstraction to decompose a problem into sub problems.
+CT.L2:13,CSTA K-12 Computer Science Standards,6-9,Computational Thinking,"Understand the notion of hierarchy and abstraction in computing including high level languages, translation, instruction set and logic circuits."
+CT.L2:14,CSTA K-12 Computer Science Standards,6-9,Computational Thinking,"Examine connections between elements of mathematics and computer science including binary numbers, logic, sets and functions."
+CT.L2:15,CSTA K-12 Computer Science Standards,6-9,Computational Thinking,Provide examples of interdisciplinary applications of computational thinking.
+CL.L3A:01,CSTA K-12 Computer Science Standards,9-12,Collaboration,Work in a team to design and develop a software artifact.
+CL.L3A:02,CSTA K-12 Computer Science Standards,9-12,Collaboration,"Use collaborative tools to communicate with project team members (e.g., discussion threads, wikis, blogs, version control, etc.)."
+CL.L3A:03,CSTA K-12 Computer Science Standards,9-12,Collaboration,"Describe how computing enhances traditional forms and enables new forms of experience, expression, communication, and collaboration."
+CL.L3A:04,CSTA K-12 Computer Science Standards,9-12,Collaboration,Identify how collaboration influences the design and development of software products.
+CD.L3A:01,CSTA K-12 Computer Science Standards,9-12,Computers and Communication Devices,"Describe the unique features of computers embedded in mobile devices and vehicles (e.g., cell phones, automobiles, airplanes)."
+CD.L3A:02,CSTA K-12 Computer Science Standards,9-12,Computers and Communication Devices,Develop criteria for purchasing or upgrading computer system hardware.
+CD.L3A:03,CSTA K-12 Computer Science Standards,9-12,Computers and Communication Devices,"Describe the principal components of computer organization (e.g., input, output, processing, and storage)."
+CD.L3A:04,CSTA K-12 Computer Science Standards,9-12,Computers and Communication Devices,Compare various forms of input and output.
+CD.L3A:05,CSTA K-12 Computer Science Standards,9-12,Computers and Communication Devices,"Explain the multiple levels of hardware and software that support program execution (e.g., compilers, interpreters, operating systems, networks)."
+CD.L3A:06,CSTA K-12 Computer Science Standards,9-12,Computers and Communication Devices,Apply strategies for identifying and solving routine hardware and software problems that occur in everyday life.
+CD.L3A:07,CSTA K-12 Computer Science Standards,9-12,Computers and Communication Devices,Compare and contrast client-server and peer-to-peer network strategies.
+CD.L3A:08,CSTA K-12 Computer Science Standards,9-12,Computers and Communication Devices,"Explain the basic components of computer networks (e.g., servers, file protection, routing, spoolers and queues, shared resources, and fault-tolerance)."
+CD.L3A:09,CSTA K-12 Computer Science Standards,9-12,Computers and Communication Devices,Describe how the Internet facilitates global communication.
+CD.L3A:10,CSTA K-12 Computer Science Standards,9-12,Computers and Communication Devices,Describe the major applications of artificial intelligence and robotics.
+CI.L3A:01,CSTA K-12 Computer Science Standards,9-12,"Community, Global, and Ethical Impacts",Compare appropriate and inappropriate social networking behaviors.
+CI.L3A:02,CSTA K-12 Computer Science Standards,9-12,"Community, Global, and Ethical Impacts","Discuss the impact of computing technology on business and commerce (e.g., automated tracking of goods, automated financial transactions, e-commerce, cloud computing)."
+CI.L3A:03,CSTA K-12 Computer Science Standards,9-12,"Community, Global, and Ethical Impacts",Describe the role that adaptive technology can play in the lives of people with special needs.
+CI.L3A:04,CSTA K-12 Computer Science Standards,9-12,"Community, Global, and Ethical Impacts","Compare the positive and negative impacts of technology on culture (e.g., social networking, delivery of news and other public media, and intercultural communication)."
+CI.L3A:05,CSTA K-12 Computer Science Standards,9-12,"Community, Global, and Ethical Impacts",Describe strategies for determining the reliability of information found on the Internet.
+CI.L3A:06,CSTA K-12 Computer Science Standards,9-12,"Community, Global, and Ethical Impacts",Differentiate between information access and information distribution rights.
+CI.L3A:07,CSTA K-12 Computer Science Standards,9-12,"Community, Global, and Ethical Impacts",Describe how different kinds of software licenses can be used to share and protect intellectual property.
+CI.L3A:08,CSTA K-12 Computer Science Standards,9-12,"Community, Global, and Ethical Impacts",Discuss the social and economic implications associated with hacking and software piracy.
+CI.L3A:09,CSTA K-12 Computer Science Standards,9-12,"Community, Global, and Ethical Impacts","Describe different ways in which software is created and shared and their benefits and drawbacks (commercial software, public domain software, open source development)."
+CI.L3A:10,CSTA K-12 Computer Science Standards,9-12,"Community, Global, and Ethical Impacts",Describe security and privacy issues that relate to computer networks.
+CI.L3A:11,CSTA K-12 Computer Science Standards,9-12,"Community, Global, and Ethical Impacts",Explain the impact of the digital divide on access to critical information.
+CPP.L3A:01,CSTA K-12 Computer Science Standards,9-12,Computing Practice and Programming,Create and organize web pages through the use of a variety of web programming design tools.
+CPP.L3A:02,CSTA K-12 Computer Science Standards,9-12,Computing Practice and Programming,"Use mobile devices/ emulators to design, develop, and implement mobile computing applications."
+CPP.L3A:03,CSTA K-12 Computer Science Standards,9-12,Computing Practice and Programming,"Use various debugging and testing methods to ensure program correctness (e.g., test cases, unit testing, white box, black box, integration testing)"
+CPP.L3A:04,CSTA K-12 Computer Science Standards,9-12,Computing Practice and Programming,"Apply analysis, design, and implementation techniques to solve problems (e.g., use one or more software lifecycle models)."
+CPP.L3A:05,CSTA K-12 Computer Science Standards,9-12,Computing Practice and Programming,Use Application Program Interfaces (APIs) and libraries to facilitate programming solutions.
+CPP.L3A:06,CSTA K-12 Computer Science Standards,9-12,Computing Practice and Programming,Select appropriate file formats for various types and uses of data.
+CPP.L3A:07,CSTA K-12 Computer Science Standards,9-12,Computing Practice and Programming,Describe a variety of programming languages available to solve problems and develop systems.
+CPP.L3A:08,CSTA K-12 Computer Science Standards,9-12,Computing Practice and Programming,Explain the program execution process.
+CPP.L3A:09,CSTA K-12 Computer Science Standards,9-12,Computing Practice and Programming,"Explain the principles of security by examining encryption, cryptography, and authentication techniques."
+CPP.L3A:10,CSTA K-12 Computer Science Standards,9-12,Computing Practice and Programming,Explore a variety of careers to which computing is central.
+CPP.L3A:11,CSTA K-12 Computer Science Standards,9-12,Computing Practice and Programming,Describe techniques for locating and collecting small and large-scale data sets.
+CPP.L3A:12,CSTA K-12 Computer Science Standards,9-12,Computing Practice and Programming,"Describe how mathematical and statistical functions, sets, and logic are used in computation."
+CT.L3A:01,CSTA K-12 Computer Science Standards,9-12,Computational Thinking,"Use predefined functions and parameters, classes and methods to divide a complex problem into simpler parts."
+CT.L3A:02,CSTA K-12 Computer Science Standards,9-12,Computational Thinking,"Describe a software development process used to solve software problems (e.g., design, coding, testing, verification)."
+CT.L3A:03,CSTA K-12 Computer Science Standards,9-12,Computational Thinking,"Explain how sequence, selection, iteration, and recursion are building blocks of algorithms."
+CT.L3A:04,CSTA K-12 Computer Science Standards,9-12,Computational Thinking,Compare techniques for analyzing massive data collections.
+CT.L3A:05,CSTA K-12 Computer Science Standards,9-12,Computational Thinking,Describe the relationship between binary and hexadecimal representations.
+CT.L3A:06,CSTA K-12 Computer Science Standards,9-12,Computational Thinking,Analyze the representation and trade-offs among various forms of digital information.
+CT.L3A:07,CSTA K-12 Computer Science Standards,9-12,Computational Thinking,Describe how various types of data are stored in a computer system.
+CT.L3A:08,CSTA K-12 Computer Science Standards,9-12,Computational Thinking,Use modeling and simulation to represent and understand natural phenomena.
+CT.L3A:09,CSTA K-12 Computer Science Standards,9-12,Computational Thinking,Discuss the value of abstraction to manage problem complexity.
+CT.L3A:10,CSTA K-12 Computer Science Standards,9-12,Computational Thinking,Describe the concept of parallel processing as a strategy to solve large problems.
+CT.L3A:11,CSTA K-12 Computer Science Standards,9-12,Computational Thinking,Describe how computation shares features with art and music by translating human intention into an artifact.
+CL.L3B:01,CSTA K-12 Computer Science Standards,9-12,Collaboration,"Use project collaboration tools, version control systems, and Integrated Development Environments (IDEs) while working on a collaborative software project."
+CL.L3B:02,CSTA K-12 Computer Science Standards,9-12,Collaboration,Demonstrate the software life cycle process by participating on a software project team.
+CL.L3B:03,CSTA K-12 Computer Science Standards,9-12,Collaboration,Evaluate programs written by others for readability and usability.
+CD.L3B:01,CSTA K-12 Computer Science Standards,9-12,Computers and Communication Devices,Discuss the impact of modifications on the functionality of application programs.
+CD.L3B:02,CSTA K-12 Computer Science Standards,9-12,Computers and Communication Devices,"Identify and describe hardware (e.g., physical layers, logic gates, chips, components)."
+CD.L3B:03,CSTA K-12 Computer Science Standards,9-12,Computers and Communication Devices,"Identify and select the most appropriate file format based on trade-offs (e.g., accuracy, speed, ease of manipulation)."
+CD.L3B:04,CSTA K-12 Computer Science Standards,9-12,Computers and Communication Devices,"Describe the issues that impact network functionality (e.g., latency, bandwidth, firewalls, server capability)."
+CD.L3B:05,CSTA K-12 Computer Science Standards,9-12,Computers and Communication Devices,Explain the notion of intelligent behavior through computer modeling and robotics.
+CI.L3B:01,CSTA K-12 Computer Science Standards,9-12,"Community, Global, and Ethical Impacts",Demonstrate ethical use of modern communication media and devices.
+CI.L3B:02,CSTA K-12 Computer Science Standards,9-12,"Community, Global, and Ethical Impacts",Analyze the beneficial and harmful effects of computing innovations.
+CI.L3B:03,CSTA K-12 Computer Science Standards,9-12,"Community, Global, and Ethical Impacts","Summarize how financial markets, transactions, and predictions have been transformed by automation."
+CI.L3B:04,CSTA K-12 Computer Science Standards,9-12,"Community, Global, and Ethical Impacts",Summarize how computation has revolutionized the way people build real and virtual organizations and infrastructures.
+CI.L3B:05,CSTA K-12 Computer Science Standards,9-12,"Community, Global, and Ethical Impacts",Identify laws and regulations that impact the development and use of software.
+CI.L3B:06,CSTA K-12 Computer Science Standards,9-12,"Community, Global, and Ethical Impacts",Analyze the impact of government regulation on privacy and security.
+CI.L3B:07,CSTA K-12 Computer Science Standards,9-12,"Community, Global, and Ethical Impacts","Differentiate among open source, freeware, and proprietary software licenses and their applicability to different types of software."
+CI.L3B:08,CSTA K-12 Computer Science Standards,9-12,"Community, Global, and Ethical Impacts","Relate issues of equity, access, and power to the distribution of computing resources in a global society."
+CPP.L3B:01,CSTA K-12 Computer Science Standards,9-12,Computing Practice and Programming,"Use advanced tools to create digital artifacts (e.g., web design, animation, video, multimedia)."
+CPP.L3B:02,CSTA K-12 Computer Science Standards,9-12,Computing Practice and Programming,"Use tools of abstraction to decompose a large-scale computational problem (e.g., procedural abstraction, object-oriented design, functional design)."
+CPP.L3B:03,CSTA K-12 Computer Science Standards,9-12,Computing Practice and Programming,Classify programming languages based on their level and application domain.
+CPP.L3B:04,CSTA K-12 Computer Science Standards,9-12,Computing Practice and Programming,"Explore principles of system design in scaling, efficiency, and security."
+CPP.L3B:05,CSTA K-12 Computer Science Standards,9-12,Computing Practice and Programming,Deploy principles of security by implementing encryption and authentication strategies.
+CPP.L3B:06,CSTA K-12 Computer Science Standards,9-12,Computing Practice and Programming,Anticipate future careers and the technologies that will exist.
+CPP.L3B:07,CSTA K-12 Computer Science Standards,9-12,Computing Practice and Programming,Use data analysis to enhance understanding of complex natural and human systems.
+CPP.L3B:08,CSTA K-12 Computer Science Standards,9-12,Computing Practice and Programming,Deploy various data collection techniques for different types of problems.
+CT.L3B:01,CSTA K-12 Computer Science Standards,9-12,Computational Thinking,"Classify problems as tractable, intractable, or computationally unsolvable."
+CT.L3B:02,CSTA K-12 Computer Science Standards,9-12,Computational Thinking,Explain the value of heuristic algorithms to approximate solutions for intractable problems.
+CT.L3B:03,CSTA K-12 Computer Science Standards,9-12,Computational Thinking,Critically examine classical algorithms and implement an original algorithm.
+CT.L3B:04,CSTA K-12 Computer Science Standards,9-12,Computational Thinking,"Evaluate algorithms by their efficiency, correctness, and clarity."
+CT.L3B:05,CSTA K-12 Computer Science Standards,9-12,Computational Thinking,Use data analysis to enhance understanding of complex natural and human systems.
+CT.L3B:06,CSTA K-12 Computer Science Standards,9-12,Computational Thinking,"Compare and contrast simple data structures and their uses (e.g., arrays and lists)."
+CT.L3B:07,CSTA K-12 Computer Science Standards,9-12,Computational Thinking,"Discuss the interpretation of binary sequences in a variety of forms (e.g., instructions, numbers, text, sound, image)."
+CT.L3B:08,CSTA K-12 Computer Science Standards,9-12,Computational Thinking,"Use models and simulations to help formulate, refine, and test scientific hypotheses."
+CT.L3B:09,CSTA K-12 Computer Science Standards,9-12,Computational Thinking,Analyze data and identify patterns through modeling and simulation.
+CT.L3B:10,CSTA K-12 Computer Science Standards,9-12,Computational Thinking,Decompose a problem by defining new functions and classes.
+CT.L3B:11,CSTA K-12 Computer Science Standards,9-12,Computational Thinking,Demonstrate concurrency by separating processes into threads and dividing data into parallel streams.
+ISTE1.a,ISTE Standards,K-12,Creativity and Innovation,
+ISTE1.b,ISTE Standards,K-12,Creativity and Innovation,
+ISTE1.c,ISTE Standards,K-12,Creativity and Innovation,
+ISTE1.d,ISTE Standards,K-12,Creativity and Innovation,
+ISTE2.a,ISTE Standards,K-12,Communication and Collaboration,
+ISTE2.b,ISTE Standards,K-12,Communication and Collaboration,
+ISTE2.c,ISTE Standards,K-12,Communication and Collaboration,
+ISTE2.d,ISTE Standards,K-12,Communication and Collaboration,
+ISTE3.a,ISTE Standards,K-12,Research and Information Fluency,
+ISTE3.b,ISTE Standards,K-12,Research and Information Fluency,
+ISTE3.c,ISTE Standards,K-12,Research and Information Fluency,
+ISTE3.d,ISTE Standards,K-12,Research and Information Fluency,
+ISTE4.a,ISTE Standards,K-12,"Critical Thinking, Problem Solving, and Decision Making",
+ISTE4.b,ISTE Standards,K-12,"Critical Thinking, Problem Solving, and Decision Making",
+ISTE4.c,ISTE Standards,K-12,"Critical Thinking, Problem Solving, and Decision Making",
+ISTE4.d,ISTE Standards,K-12,"Critical Thinking, Problem Solving, and Decision Making",
+ISTE5.a,ISTE Standards,K-12,Digital Citizenship,
+ISTE5.b,ISTE Standards,K-12,Digital Citizenship,
+ISTE5.c,ISTE Standards,K-12,Digital Citizenship,
+ISTE5.d,ISTE Standards,K-12,Digital Citizenship,
+ISTE6.a,ISTE Standards,K-12,Technology Operations and Concepts,
+ISTE6.b,ISTE Standards,K-12,Technology Operations and Concepts,
+ISTE6.c,ISTE Standards,K-12,Technology Operations and Concepts,
+ISTE6.d,ISTE Standards,K-12,Technology Operations and Concepts,
