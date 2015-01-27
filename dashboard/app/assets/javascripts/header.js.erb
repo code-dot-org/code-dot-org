@@ -1,0 +1,106 @@
+/**
+ * Dynamic header generation and event bindings for header actions.
+ */
+
+if (!window.dashboard) {
+  window.dashboard = {};
+}
+
+/**
+ * @param scriptData{{
+ *   finishLink: string,
+ *   statsPath: string,
+ *   showStageLinks: boolean,
+ *   trophies: Object,
+ *   currentLevelIndex: number,
+ *   scriptId: number,
+ *   scriptLevelId: number,
+ *   levels: Array.<{
+ *     displayText: string,
+ *     status: string,
+ *     unplugged: boolean,
+ *     assessment: boolean
+ *   }>
+ * }}
+ */
+dashboard.buildHeader = function (scriptData) {
+  $('.header_text').first().text(scriptData.title);
+  if (scriptData.finishLink) {
+    $('.header_finished_link').show().append($('<a>').attr('href', scriptData.finishLink.href).text(scriptData.finishLink.text));
+  }
+  if (scriptData.showStageLinks) {
+    $('.stage_links').show();
+  }
+  if (scriptData.trophies) {
+    $('.header_trophy_link').show();
+    $('.header_trophy_link .current_trophies').text(scriptData.trophies.current);
+    $('.header_trophy_link .max_trophies').text(scriptData.trophies.of + ' ' + scriptData.trophies.max);
+  }
+  var progressContainer = $('.progress_container');
+  scriptData.levels.forEach(function(level, index, levels) {
+    var defaultClass = level.assessment ? 'puzzle_outer_assessment' : 'puzzle_outer_level';
+    var link = $('<a>').attr('href', level.link).addClass('level_link').addClass(level.status).text(level.displayText);
+    if (level.unplugged) {
+      link.addClass('unplugged_level');
+    }
+    var div = $('<div>').addClass(index === scriptData.currentLevelIndex ? 'puzzle_outer_current' : defaultClass).append(link);
+    if (index === levels.length - 1) {
+      div.addClass('last');
+    }
+    progressContainer.append(div).append('\n');
+  });
+  $('.level_free_play').qtip({
+    content: {
+      attr: 'title'
+    },
+    position: {
+      my: 'top center',
+      at: 'bottom center'
+    }
+  });
+
+  function showHeaderPopup(target) {
+    $('.header_popup').show();
+    $('.header_popup_link_glyph').html('&#x25B2;');
+    $('.header_popup_link_text').text('<%= I18n.t(:less) %>');
+    $(document).on('click', hideHeaderPopup);
+    lazyLoadPopup($(target).closest('.header_trophy_link').length > 0);
+  }
+  function hideHeaderPopup() {
+    $('.header_popup').hide();
+    $('.header_popup_link_glyph').html('&#x25BC;');
+    $('.header_popup_link_text').text('<%= I18n.t(:more) %>');
+    $(document).off('click', hideHeaderPopup);
+  }
+  $('.header_popup_link, .header_trophy_link').click(function (e) {
+    e.stopPropagation();
+    $('.header_popup').is(':visible') ? hideHeaderPopup() : showHeaderPopup(e.target);
+  });
+  $('.header_popup').click(function (e) {
+    e.stopPropagation(); // Clicks inside the popup shouldn't close it
+  });
+
+  var popupLoaded = false;
+  function lazyLoadPopup(trophiesClicked) {
+    if (!popupLoaded) {
+      popupLoaded = true;
+      $.ajax({
+        url: scriptData.statsPath,
+        data: {
+          script_id: scriptData.scriptId,
+          script_level_id: scriptData.scriptLevelId
+        }, success: function (result) {
+          $('.header_popup_body').html(result);
+          if (trophiesClicked) {
+            jumpToTrophies();
+          }
+        }
+      });
+    } else if (trophiesClicked) {
+      jumpToTrophies();
+    }
+  }
+  function jumpToTrophies() {
+    window.scrollTo(0, +$('#trophies').offset().top);
+  }
+};

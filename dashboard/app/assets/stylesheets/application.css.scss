@@ -630,19 +630,28 @@ html, body {
 
 }
 
-
-.header_user {
+.header_right {
   position: absolute;
   float: left;
   right: 25px;
-  text-align: right;
   margin-top: 9px;
   @media screen and (max-width: 1150px) {
     margin-top: 5px;
   }
+}
+
+.stage_links {
+  display: inline-block;
+  text-align: center;
+}
+
+.header_user {
+  display: inline-block;
+  text-align: right;
   background-color: rgb(255, 164, 0);
   border-radius: 5px;
   padding: 7px 14px;
+  margin-left: 5px;
   font-size: 14px;
   line-height: 20px;
   box-sizing: border-box;
