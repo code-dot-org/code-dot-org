@@ -233,6 +233,7 @@ Blockly.FunctionEditor.prototype.paramsAsParallelArrays_ = function() {
 
 Blockly.FunctionEditor.prototype.show = function() {
   this.ensureCreated_();
+  this.position_();
   goog.style.showElement(this.container_, true);
   goog.style.showElement(this.modalBackground_, true);
   Blockly.focusedBlockSpace = this.modalBlockSpace;
@@ -390,7 +391,6 @@ Blockly.FunctionEditor.prototype.create_ = function() {
 
   this.setupParametersToolbox_();
   this.addEditorFrame_();
-  this.position_();
 
   this.onResizeWrapper_ = Blockly.bindEvent_(window,
       goog.events.EventType.RESIZE, this, this.position_);
@@ -406,19 +406,40 @@ Blockly.FunctionEditor.prototype.create_ = function() {
 Blockly.FunctionEditor.prototype.calculateMetrics_ = function() {
   // Define a special getMetrics function for our block space editor
   var metrics = Blockly.mainBlockSpace.getMetrics();
-  var contractDivHeight = this.contractDiv_
-    ? this.contractDiv_.getBoundingClientRect().height
-    : 0;
-  var topOffset = FRAME_MARGIN_TOP + Blockly.Bubble.BORDER_WIDTH +
-    FRAME_HEADER_HEIGHT;
   metrics.absoluteLeft +=
     FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH + 1;
-  metrics.absoluteTop += topOffset + contractDivHeight;
+  metrics.absoluteTop += this.getBlockSpaceEditorTopOffset();
   metrics.viewWidth -=
     (FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH) * 2;
   metrics.viewHeight -=
-    FRAME_MARGIN_TOP + Blockly.Bubble.BORDER_WIDTH + topOffset;
+    FRAME_MARGIN_TOP + Blockly.Bubble.BORDER_WIDTH + this.getWindowBorderChromeHeight();
   return metrics;
+};
+
+/**
+ * @returns {Number} in pixels
+ * @protected
+ */
+Blockly.FunctionEditor.prototype.getBlockSpaceEditorTopOffset = function () {
+  return this.getWindowBorderChromeHeight() + this.getContractDivHeight();
+};
+
+/**
+ * @returns {Number} in pixels
+ */
+Blockly.FunctionEditor.prototype.getWindowBorderChromeHeight = function () {
+  return FRAME_MARGIN_TOP +
+    Blockly.Bubble.BORDER_WIDTH + FRAME_HEADER_HEIGHT;
+};
+
+/**
+ * @returns {Number}
+ * @protected
+ */
+Blockly.FunctionEditor.prototype.getContractDivHeight = function () {
+  return this.contractDiv_
+    ? this.contractDiv_.getBoundingClientRect().height
+    : 0;
 };
 
 Blockly.FunctionEditor.prototype.layOutBlockSpaceItems_ = function () {
@@ -433,7 +454,7 @@ Blockly.FunctionEditor.prototype.layOutBlockSpaceItems_ = function () {
   this.flyout_.customYOffset = currentY;
   this.flyout_.position_();
 
-  this.modalBlockSpace.trashcan.repositionBelowBlockSpaceTop(currentY);
+  this.modalBlockSpace.trashcan.setYOffset(currentY);
 
   currentY += FRAME_MARGIN_TOP;
   this.functionDefinitionBlock.moveTo(currentX, currentY);
