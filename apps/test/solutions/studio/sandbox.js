@@ -4,18 +4,6 @@ var _ = require(testUtils.buildPath('lodash'));
 var Direction = require(testUtils.buildPath('studio/constants.js')).Direction;
 var blockUtils = require(testUtils.buildPath('block_utils'));
 
-/**
- * Runs the given function at the provided tick count
- */
-function runOnTick(tick, fn) {
-  Studio.onTick = _.wrap(Studio.onTick, function (studioOnTick) {
-    if (Studio.tickCount === tick) {
-      fn();
-    }
-    studioOnTick();
-  });
-}
-
 module.exports = {
   app: "studio",
   skinId: "studio",
@@ -152,7 +140,7 @@ module.exports = {
         '  </block>' +
         '</xml>',
       runBeforeClick: function (assert) {
-        runOnTick(5, function () {
+        testUtils.runOnStudioTick(5, function () {
           assert(Studio.projectiles.length === 1);
           assert(Studio.projectiles[0].dir === Direction.EAST);
           var proj = document.getElementById('projectile_clippath_0').nextSibling;
@@ -162,11 +150,11 @@ module.exports = {
             "The image isn't hidden");
         });
         // our fireball should collide at tick 24, so by 25 we should be finished
-        runOnTick(25, function () {
+        testUtils.runOnStudioTick(25, function () {
           assert(Studio.projectiles[0].dir === Direction.WEST);
         });
         // we should have hit actor 1 and disappeared
-        runOnTick(50, function () {
+        testUtils.runOnStudioTick(50, function () {
           assert(Studio.projectiles.length === 0);
           Studio.onPuzzleComplete();
         });
@@ -225,16 +213,16 @@ module.exports = {
         '  </block>' +
         '</xml>',
       runBeforeClick: function (assert) {
-        runOnTick(5, function () {
+        testUtils.runOnStudioTick(5, function () {
           assert(Studio.projectiles.length === 1);
           assert(Studio.projectiles[0].dir === Direction.EAST);
         });
         // our fireball should collide at tick 24, so by 25 we should be finished
-        runOnTick(25, function () {
+        testUtils.runOnStudioTick(25, function () {
           assert(Studio.projectiles[0].dir === Direction.WEST);
         });
         // we should have hit actor 1 and started east again...
-        runOnTick(50, function () {
+        testUtils.runOnStudioTick(50, function () {
           assert(Studio.projectiles[0].dir === Direction.EAST);
           Studio.onPuzzleComplete();
         });
@@ -345,7 +333,7 @@ module.exports = {
       '</xml>',
       runBeforeClick: function (assert) {
         // our fireball should collide at tick 24, so by 25 we should be finished
-        runOnTick(25, function () {
+        testUtils.runOnStudioTick(25, function () {
           assert(Studio.playerScore === 1, "Scored a point after colliding");
           Studio.onPuzzleComplete();
         });
@@ -383,7 +371,7 @@ module.exports = {
         '  </block>' +
         '</xml>',
       runBeforeClick: function (assert) {
-        runOnTick(5, function () {
+        testUtils.runOnStudioTick(5, function () {
           assert(Studio.projectiles.length === 0, "No projectile for hidden sprite");
           Studio.onPuzzleComplete();
         });
@@ -431,7 +419,7 @@ module.exports = {
         assert(Studio.sprite[0].visible === false, "Actor 1 starts out hidden");
         var visibility = document.getElementById('sprite0').getAttribute('visibility');
         assert(visibility === 'hidden', 'Actor 1 html element is not visible');
-        runOnTick(50, function () {
+        testUtils.runOnStudioTick(50, function () {
           assert(Studio.sprite[0].x === 250, "Actor 1 finished moving");
           assert(Studio.sprite[1].x === 250, "Actor 2 is in the same place");
           assert(Studio.playerScore === 0, "Didn't score any points for colliding");
@@ -509,11 +497,11 @@ module.exports = {
         '  </block>' +
         '</xml>',
       runBeforeClick: function (assert) {
-        runOnTick (22, function () {
+        testUtils.runOnStudioTick (22, function () {
           assert(Studio.playerScore === 1, 'score incremented');
           assert(Studio.sayComplete === 0, 'nothing was said yet');
         });
-        runOnTick (180, function () {
+        testUtils.runOnStudioTick (180, function () {
           assert(Studio.playerScore === 2, 'score incremented again');
           assert(Studio.sayComplete === 1, 'something was said');
           Studio.onPuzzleComplete();
@@ -577,7 +565,7 @@ module.exports = {
         '  </block>' +
         '</xml>',
       runBeforeClick: function (assert) {
-        runOnTick (22, function () {
+        testUtils.runOnStudioTick (22, function () {
           assert(Studio.playerScore === 2, 'score incremented');
           Studio.onPuzzleComplete();
         });
@@ -634,11 +622,11 @@ module.exports = {
         '  </block>' +
         '</xml>',
       runBeforeClick: function (assert) {
-        runOnTick (22, function () {
+        testUtils.runOnStudioTick (22, function () {
           assert(Studio.playerScore === 1, 'score incremented');
           assert(Studio.sayComplete === 0, 'nothing was said yet');
         });
-        runOnTick (180, function () {
+        testUtils.runOnStudioTick (180, function () {
           assert(Studio.playerScore === 2, 'score incremented again');
           assert(Studio.sayComplete === 1, 'something was said');
           Studio.onPuzzleComplete();
@@ -702,11 +690,11 @@ module.exports = {
         '  </block>' +
         '</xml>',
       runBeforeClick: function (assert) {
-        runOnTick (24, function () {
+        testUtils.runOnStudioTick (24, function () {
           assert(Studio.playerScore === 1, 'score incremented');
           assert(Studio.sayComplete === 0, 'nothing was said yet');
         });
-        runOnTick (125, function () {
+        testUtils.runOnStudioTick (125, function () {
           assert(Studio.playerScore === 2, 'score incremented again');
           assert(Studio.sayComplete === 1, 'something was said');
           Studio.onPuzzleComplete();
@@ -759,13 +747,13 @@ module.exports = {
         '  </block>' +
         '</xml>',
       runBeforeClick: function (assert) {
-        runOnTick (18, function () {
+        testUtils.runOnStudioTick (18, function () {
           assert(Studio.playerScore === 1, 'one point for fireball collision');
         });
-        runOnTick (37, function () {
+        testUtils.runOnStudioTick (37, function () {
           assert(Studio.playerScore === 2, 'second point for actor collision');
         });
-        runOnTick (65, function () {
+        testUtils.runOnStudioTick (65, function () {
           assert(Studio.playerScore === 3, 'third point for edge collision');
           Studio.onPuzzleComplete();
         });
@@ -789,7 +777,7 @@ module.exports = {
           )
         ) + '</xml>',
       runBeforeClick: function (assert) {
-        runOnTick (5, function () {
+        testUtils.runOnStudioTick (5, function () {
           var sprite = document.getElementById('sprite0');
           var vis = sprite.getAttribute('visibility');
           assert(sprite.getAttribute('visibility') === 'visible', 'vis: ' + vis);
@@ -799,7 +787,7 @@ module.exports = {
           assert(background.getAttribute('xlink:href') !== undefined);
 
         });
-        runOnTick (6, function () {
+        testUtils.runOnStudioTick (6, function () {
           Studio.onPuzzleComplete();
         });
       },
