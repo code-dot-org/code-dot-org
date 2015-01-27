@@ -2,7 +2,7 @@ var chai = require('chai');
 chai.config.includeStack = true;
 var assert = chai.assert;
 
-var testUtils = require('./util/testUtils');
+var testUtils = require('../util/testUtils');
 
 var ExpressionNode = require(testUtils.buildPath('/calc/expressionNode'));
 var EquationSet = require(testUtils.buildPath('/calc/equationSet'));
