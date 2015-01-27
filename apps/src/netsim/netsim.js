@@ -32,6 +32,7 @@
  maxparams: 3,
  maxstatements: 200
 */
+/* global $ */
 /* global -Blockly */
 'use strict';
 
@@ -159,7 +160,7 @@ NetSim.prototype.init = function(config) {
     }
 
     // Add all of our sections
-    $.each(data, function (index, section) {
+    data.forEach(function (section) {
       var option = document.createElement('option');
       option.value = section.id;
       option.textContent = section.name;
