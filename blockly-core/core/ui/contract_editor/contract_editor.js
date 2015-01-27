@@ -87,7 +87,7 @@ Blockly.ContractEditor.prototype.create_ = function() {
 
   this.contractSectionView_ = new Blockly.ContractEditorSectionView(canvasToDrawOn,
     {
-      headerText: "1. Contract" // TODO(bjordan): i18n
+      headerText: "1. Contract and Purpose Statement" // TODO(bjordan): i18n
     }
   );
   this.examplesSectionView_ = new Blockly.ContractEditorSectionView(
