@@ -16,6 +16,8 @@ var VISIBLE_VALUE = constants.VISIBLE_VALUE;
 
 
 function loadInfinity(skin, assetUrl) {
+  skin.preloadAssets = false;
+
   skin.defaultBackground = 'leafy';
   skin.projectileFrames = 10;
 
@@ -320,6 +322,7 @@ exports.load = function(assetUrl, id) {
   skin.spriteWidth = 100;
   skin.dropdownThumbnailWidth = 50;
   skin.dropdownThumbnailHeight = 50;
+  skin.preloadAssets = true;
 
   // take care of items specific to skins
   switch (skin.id) {
