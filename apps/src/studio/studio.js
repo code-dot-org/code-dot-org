@@ -1094,7 +1094,9 @@ Studio.init = function(config) {
   //  are changed at runtime)
   preloadActorImages();
   preloadProjectileImages();
-  preloadBackgroundImages();
+  if (config.level.isK1) {
+    preloadBackgroundImages();
+  }
 };
 
 var preloadImage = function(url) {

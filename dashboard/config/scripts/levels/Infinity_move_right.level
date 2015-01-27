@@ -6,7 +6,8 @@
   "user_id": 1,
   "properties": {
     "skin": "infinity",
-    "success_condition": "function () {\r\n  // Sample conditions:\r\n  return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
+    "background": "icy",
+    "success_condition": "function () {\r\n  var currentTime = new Date().getTime();\r\n\r\n  // Let's wait 2 seconds before indicating the success.\r\n  if (window.successTime && successTime + 2000 < currentTime)\r\n  {\r\n    console.log(\"success!\");\r\n    return true;\r\n  }\r\n  else if (! window.successTime && Studio.sprite[0].isCollidingWith(1))\r\n  {\r\n    console.log(\"setting success\");\r\n    window.successTime = currentTime;\r\n  }\r\n  \r\n  // Sample conditions:\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
     "failure_condition": "function () {\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,16,0,0,0,16,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
@@ -36,18 +37,10 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="studio_moveDistanceParamsSprite" inline="true">
+        <block type="studio_moveDistance">
+          <title name="SPRITE">0</title>
           <title name="DIR">2</title>
-          <value name="SPRITE">
-            <block type="math_number">
-              <title name="NUM">1</title>
-            </block>
-          </value>
-          <value name="DISTANCE">
-            <block type="math_number">
-              <title name="NUM">150</title>
-            </block>
-          </value>
+          <title name="DISTANCE">200</title>
         </block>
       </xml>
     </toolbox_blocks>

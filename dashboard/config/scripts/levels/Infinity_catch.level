@@ -6,6 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "infinity",
+    "background": "leafy",
     "success_condition": "function () {\r\n  // Sample conditions:\r\n  return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
     "failure_condition": "function () {\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0]]",
@@ -61,10 +62,25 @@
           <title name="VALUE">up</title>
         </block>
         <block type="studio_move">
-          <title name="SPRITE">0</title>
+          <title name="SPRITE">1</title>
           <title name="DIR">1</title>
         </block>
       </xml>
     </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="studio_repeatForever"/>
+        <block type="studio_moveDistance">
+          <title name="SPRITE">0</title>
+          <title name="DIR">1</title>
+          <title name="DISTANCE">400</title>
+        </block>
+        <block type="studio_moveDistance">
+          <title name="SPRITE">0</title>
+          <title name="DIR">4</title>
+          <title name="DISTANCE">400</title>
+        </block>
+      </xml>
+    </required_blocks>
   </blocks>
 </Studio>
