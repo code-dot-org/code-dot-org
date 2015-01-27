@@ -56,7 +56,8 @@ var appState = {
   message: null,
   result: null,
   testResults: null,
-  currentAnimationDepth: 0
+  currentAnimationDepth: 0,
+  failedInput: null
 };
 
 var stepSpeed = 2000;
@@ -280,9 +281,6 @@ Calc.evaluateResults_ = function (targetSet, userSet) {
     // if our target is a single function, we evaluate success by evaluating the
     // function with different inputs
     var targetCompute = targetSet.computeEquation();
-    if (targetCompute.expression.children.length !== 1) {
-      throw new Error('NYE');
-    }
 
     // TODO - test case. user set has different inputs than target set
     if (targetSet.evaluateWithExpression(targetCompute.expression) !==
@@ -292,29 +290,43 @@ Calc.evaluateResults_ = function (targetSet, userSet) {
       return outcome;
     }
 
-    var inputs = [targetCompute.expression.children[0].value];
-    inputs.push(0);
-    inputs = inputs.concat(_.range(1, 101), _.range(-1, -101, -1));
-
-    var d = new Date();
     var expression = targetCompute.expression.clone();
-    for (var i = 0; i < inputs.length && !outcome.failedInput; i++) {
-      // TODO - feels a little hacky directly modifying children
-      expression.children[0].value = inputs[i];
+
+    var values = _.range(1, 101).concat(_.range(-0, -101, -1));
+    // Generate all possible combinations of inputs. Is there a better way
+    // to do this?
+    var inputSets = values.map(function (item) {
+      return [item];
+    });
+    var numTimes = expression.children.length - 1;
+    for (var i = 0; i < numTimes; i++) {
+      inputSets = values.reduce(function (rg, val) {
+        return rg.concat(inputSets.map(function(set) {
+          return [val].concat(set);
+        }));
+      }, []);
+    }
+
+    for (var i = 0; i < inputSets.length && !outcome.failedInput; i++) {
+      for (var c = 0; c < expression.children.length; c++) {
+        // TODO - feels a little hacky directly modifying children
+        expression.children[c].value = inputSets[i][c];
+      }
+
       if (targetSet.evaluateWithExpression(expression) !==
           userSet.evaluateWithExpression(expression)) {
-        outcome.failedInput = inputs[i];
+        outcome.failedInput = inputSets[i];
       }
     }
-    var d2 = new Date();
-    console.log('evaluation took: ' + (d2 - d));
 
-    outcome.result = outcome.failedInput !== null ?
-      ResultType.FAILURE : ResultType.SUCCESS;
-    outcome.testResults = outcome.failedInput !== null ?
-      TestResults.APP_SPECIFIC_FAIL : TestResults.ALL_PASS;
-    outcome.message = calcMsg.failedInput();
-
+    if (outcome.failedInput) {
+      outcome.result = ResultType.FAILURE;
+      outcome.testResults = TestResults.APP_SPECIFIC_FAIL;
+      outcome.message = calcMsg.failedInput();
+    } else {
+      outcome.result = ResultType.SUCCESS;
+      outcome.testResults = TestResults.ALL_PASS;
+    }
     return outcome;
 
   } else if (userSet.hasVariablesOrFunctions()) {
@@ -351,6 +363,7 @@ Calc.evaluateResults_ = function (targetSet, userSet) {
  */
 Calc.execute = function() {
   appState.userSet = generateExpressionsFromTopBlocks();
+  appState.failedInput = null;
 
   if (level.freePlay || level.edit_blocks) {
     appState.result = ResultType.SUCCESS;
@@ -361,6 +374,7 @@ Calc.execute = function() {
     appState.result = outcome.result;
     appState.testResults = outcome.testResults;
     appState.message = outcome.message;
+    appState.failedInput = outcome.failedInput;
   }
 
   var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
@@ -398,7 +412,6 @@ function displayComplexUserExpressions () {
   clearSvgUserExpression();
 
   var computeEquation = appState.userSet.computeEquation();
-
   if (computeEquation === null || computeEquation.expression === null) {
     return;
   }
@@ -419,6 +432,7 @@ function displayComplexUserExpressions () {
       'errorToken');
   });
 
+  // Now display our compute equation and the result of evaluating it
   var computeType = computeEquation && computeEquation.expression.getType();
   if (computeType === ExpressionNode.ValueType.FUNCTION_CALL ||
       computeType === ExpressionNode.ValueType.VARIABLE) {
@@ -437,7 +451,21 @@ function displayComplexUserExpressions () {
     tokenList = getTokenList(computeEquation, appState.targetSet.computeEquation);
   }
 
-  displayEquation('userExpression', null, tokenList, nextRow, 'errorToken');
+  displayEquation('userExpression', null, tokenList, nextRow++, 'errorToken');
+
+  if (appState.failedInput) {
+    var expression = computeEquation.expression.clone();
+    for (var c = 0; c < expression.children.length; c++) {
+      // TODO - feels a little hacky directly modifying children
+      expression.children[c].value = appState.failedInput[c];
+    }
+    var result = appState.userSet.evaluateWithExpression(expression).toString();
+
+    tokenList = getTokenList(expression)
+      .concat(getTokenList('  = '))
+      .concat(getTokenList(result, ' ')); // this should always be marked
+    displayEquation('userExpression', null, tokenList, nextRow++, 'errorToken');
+  }
 }
 
 function stopAnimatingAndDisplayFeedback() {
