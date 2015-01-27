@@ -3,7 +3,7 @@ get '/v2/user' do
   dont_cache
   forbidden! unless dashboard_user
   content_type :json
-  JSON.pretty_generate(DashboardUser.to_self_view(dashboard_user))
+  JSON.pretty_generate(dashboard_user.slice(:id, :name))
 end
 
 get '/v2/students' do

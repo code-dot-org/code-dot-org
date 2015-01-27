@@ -6,15 +6,6 @@ module Dashboard
   end
 end
 
-class DashboardUser
-  def self.to_self_view(user_row)
-    {
-        id:user_row[:id],
-        name:user_row[:name],
-    }
-  end
-end
-
 class DashboardStudent
   def self.fetch_user_students(user_id)
     DASHBOARD_DB[:users].
