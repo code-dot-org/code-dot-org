@@ -87,6 +87,22 @@ NetSim.prototype.attachHandlers_ = function () {
 };
 
 /**
+ * Send a request to dashboard and retrieve a JSON array listing the
+ * sections this user belongs to.
+ * @param callback
+ * @private
+ */
+NetSim.prototype.getUserSections_ = function (callback) {
+  var userSectionEndpoint = '//' + document.location.host +
+      '/v2/sections/membership';
+  $.ajax({
+    dataType: "json",
+    url: userSectionEndpoint,
+    success: callback
+  });
+};
+
+/**
  * Called on page load.
  * @param {Object} config Requires the following members:
  *   skin: ???
@@ -122,6 +138,17 @@ NetSim.prototype.init = function(config) {
   this.studioApp_.init(config);
 
   this.attachHandlers_();
+
+  this.getUserSections_(function (data) {
+    var items = [];
+    $.each( data[0], function( key, val ) {
+      items.push( "<li id='" + key + "'>" + val + "</li>" );
+    });
+    $( "<ul/>", {
+      "class": "my-new-list",
+      html: items.join( "" )
+    }).appendTo( "body" );
+  });
 };
 
 /**
