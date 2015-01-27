@@ -321,11 +321,18 @@ Blockly.ContractEditor.prototype.outputTypeDropdownChange_ = function(comboBoxEv
   var newType = comboBoxEvent.target.getContent();
   var menuButtonRenderer = goog.ui.FlatMenuButtonRenderer.getInstance();
   var menuButtonElement = menuButtonRenderer.getContentElement(this.getOutputTypeDropdownElement_());
-  this.setBackgroundFromHSV(menuButtonElement, Blockly.ContractEditor.typesToColorsHSV[newType]);
+  var newColorHSV = Blockly.ContractEditor.typesToColorsHSV[newType];
+  this.setBackgroundFromHSV(menuButtonElement, newColorHSV);
+  this.setFrameColor_(newColorHSV);
 
   if (this.functionDefinitionBlock) {
     this.functionDefinitionBlock.updateOutputType(newType);
   }
+};
+
+Blockly.ContractEditor.prototype.setFrameColor_ = function (hsvColor) {
+  this.frameBase_.style.fill =
+    goog.color.hsvToHex(hsvColor[0], hsvColor[1], hsvColor[2] * 255);
 };
 
 Blockly.ContractEditor.prototype.getOutputTypeDropdownElement_ = function () {
@@ -382,7 +389,11 @@ Blockly.ContractEditor.prototype.setMenuItemColor_ = function(menuItem, hsvColor
   this.setBackgroundFromHSV(menuItemElement, hsvColor);
 };
 
-Blockly.ContractEditor.prototype.setBackgroundFromHSV = function (menuItemElement, hsvColor) {
-  menuItemElement.style.background =
+/**
+ * @param {!Element} element
+ * @param {!Array.<Number>} hsvColor
+ */
+Blockly.ContractEditor.prototype.setBackgroundFromHSV = function (element, hsvColor) {
+  element.style.background =
     goog.color.hsvToHex(hsvColor[0], hsvColor[1], hsvColor[2] * 255);
 };
