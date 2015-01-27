@@ -1093,7 +1093,7 @@ Studio.init = function(config) {
   // pre-load images asynchronously
   // (to reduce the likelihood that there is a delay when images
   //  are changed at runtime)
-  if (config.skin.id == "studio") {
+  if (config.skin.preloadAssets) {
     preloadActorImages();
     preloadProjectileImages();
     preloadBackgroundImages();
