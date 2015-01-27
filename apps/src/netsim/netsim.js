@@ -292,5 +292,4 @@ NetSim.prototype.onResizeOverride_ = function() {
   var parentWidth = parseInt(parentStyle.width, 10);
   div.style.top = divParent.offsetTop + 'px';
   div.style.width = parentWidth + 'px';
-  this.resizeHeaders(parentWidth);
 };
