@@ -86,8 +86,18 @@ NetSim.prototype.attachHandlers_ = function () {
       document.getElementById('netsim_sendbutton'),
       _.bind(this.onSendButtonClick_, this)
   );
+
+  dom.addClickTouchEvent(
+      document.getElementById('netsim_refresh_button'),
+      _.bind(this.onRefreshButtonClick_, this)
+  );
+
   // _Try_ to clean up after ourselves.
   window.addEventListener('beforeunload', _.bind(this.disconnect_, this));
+};
+
+NetSim.prototype.onRefreshButtonClick_ = function () {
+  this.refreshLobby_();
 };
 
 /**
@@ -139,6 +149,7 @@ NetSim.prototype.joinLobby_ = function (sectionID) {
     if (data) {
       this.connectionRowId_ = data.id;
       console.log("Connected, assigned ID: " + this.connectionRowId_);
+      document.getElementById('netsim_refresh_button').disabled = false;
       this.refreshLobby_();
     }
   }, this));
@@ -156,7 +167,8 @@ NetSim.prototype.refreshLobby_ = function () {
     // Add all of our sections
     data.forEach(function (connection) {
       var item = document.createElement('li');
-      item.innerHTML = '[' + connection.id + '] ' + connection.name + '(' + connection.last_update + ')';
+      item.innerHTML = '[' + connection.id + '] ' + connection.name + '(' +
+          connection.last_update + ')';
       list.appendChild(item);
     });
   }, this));
