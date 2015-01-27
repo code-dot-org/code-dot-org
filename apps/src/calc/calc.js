@@ -154,7 +154,7 @@ Calc.init = function(config) {
         config.forceInsertTopBlock);
     }
 
-    appState.targetSet = generateExpressionsFromBlockXml(solutionBlocks);
+    appState.targetSet = generateEquationSetFromBlockXml(solutionBlocks);
 
     displayGoal();
 
@@ -230,21 +230,11 @@ Calc.resetButtonClick = function () {
 };
 
 /**
- * Generate a set of expressions from the blocks currently in the workspace.
- * @returns  an object in which keys are expression names (or COMPUTE_NAME for
- * the base expression), and values are the expressions
- */
-function generateExpressionsFromTopBlocks() {
-  var topBlocks = Blockly.mainBlockSpace.getTopBlocks();
-  return EquationSet.fromBlocks(topBlocks);
-}
-
-/**
  * Given some xml, generates a set of expressions by loading the xml into the
- * workspace and calling generateExpressionsFromTopBlocks. Fails if there are
+ * workspace and calling FromTopBlocks. Fails if there are
  * already blocks in the workspace.
  */
-function generateExpressionsFromBlockXml(blockXml) {
+function generateEquationSetFromBlockXml(blockXml) {
   if (blockXml) {
     if (Blockly.mainBlockSpace.getTopBlocks().length !== 0) {
       throw new Error("generateTargetExpression shouldn't be called with blocks" +
@@ -254,7 +244,7 @@ function generateExpressionsFromBlockXml(blockXml) {
     studioApp.loadBlocks(blockXml);
   }
 
-  var equationSet = generateExpressionsFromTopBlocks();
+  var equationSet = new EquationSet(Blockly.mainBlockSpace.getTopBlocks());
 
   Blockly.mainBlockSpace.getTopBlocks().forEach(function (block) {
     block.dispose();
@@ -369,7 +359,7 @@ Calc.evaluateResults_ = function (targetSet, userSet) {
  * Execute the user's code.
  */
 Calc.execute = function() {
-  appState.userSet = generateExpressionsFromTopBlocks();
+  appState.userSet = new EquationSet(Blockly.mainBlockSpace.getTopBlocks());
   appState.failedInput = null;
 
   if (level.freePlay || level.edit_blocks) {
