@@ -6,7 +6,8 @@
   "user_id": 1,
   "properties": {
     "skin": "infinity",
-    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n\r\n  console.log(\"success\", window.studioLevelRestarted);\r\n  \r\n  if (window.studioLevelRestarted || ! window.actorHit) {\r\n    window.actorHit = [false, false, false, false];\r\n    console.log(\"clearing actor hits\");\r\n  }\r\n  \r\n  window.studioLevelRestarted = false;\r\n  \r\n  var heroSprite = Studio.sprite[2];\r\n  \r\n  var hitCount = 0;\r\n  \r\n  var otherIndexes = [0,1,3,4];\r\n  var heroIndex = 2;\r\n  \r\n  for (var i = 0; i < 4; i++) {\r\n    \r\n    actorIndex = otherIndexes[i];\r\n    \r\n    if (! window.actorHit[actorIndex]) {\r\n      for (var p = 0; p < Studio.projectiles.length; p++) {\r\n        if (Studio.projectiles[p].isCollidingWith(actorIndex)) {\r\n          Studio.sprite[actorIndex].dir = 1;\r\n          window.actorHit[actorIndex] = true;\r\n          console.log(\"hitting actor\", actorIndex, \"with projectile\", p);\r\n        }\r\n      }\r\n  \t}\r\n    \r\n    if (window.actorHit[actorIndex]) {\r\n      hitCount ++;\r\n    }\r\n  }\r\n  \r\n  return hitCount >= 4;\r\n}\r\n",
+    "background": "flower",
+    "success_condition": "function () {\r\n\r\n  //console.log(\"success\", window.studioLevelRestarted);\r\n  \r\n  var currentTime = new Date().getTime();\r\n\r\n  // Let's wait 2 seconds before indicating the success.\r\n  if (window.successTime)\r\n  {\r\n    return successTime + 2000 < currentTime;\r\n  }\r\n\r\n  if (window.studioLevelRestarted || ! window.actorHit) {\r\n    window.actorHit = [false, false, false, false];\r\n    //console.log(\"clearing actor hits\");\r\n  }\r\n  \r\n  window.studioLevelRestarted = false;\r\n  \r\n  var heroSprite = Studio.sprite[2];\r\n  \r\n  var hitCount = 0;\r\n  \r\n  var otherIndexes = [0,1,3,4];\r\n  var heroIndex = 2;\r\n  \r\n  for (var i = 0; i < 4; i++) {\r\n    \r\n    actorIndex = otherIndexes[i];\r\n    \r\n    if (! window.actorHit[actorIndex]) {\r\n      for (var p = 0; p < Studio.projectiles.length; p++) {\r\n        if (Studio.projectiles[p].isCollidingWith(actorIndex)) {\r\n          Studio.sprite[actorIndex].dir = 1;\r\n          window.actorHit[actorIndex] = true;\r\n          console.log(\"hitting actor\", actorIndex, \"with projectile\", p);\r\n        }\r\n      }\r\n  \t}\r\n    \r\n    if (window.actorHit[actorIndex]) {\r\n      hitCount ++;\r\n    }\r\n  }\r\n  \r\n  if (! window.successTime && hitCount >= 4)\r\n  {\r\n    window.successTime = currentTime;\r\n  }\r\n}\r\n",
     "failure_condition": "function () {\r\n}",
     "maze": "[[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[16,0,0,16,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
@@ -35,11 +36,25 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="when_run"/>
         <block type="studio_throw">
           <title name="SPRITE">2</title>
           <title name="VALUE">"projectile_hiro"</title>
           <title name="DIR">1</title>
+        </block>
+        <block type="studio_throw">
+          <title name="SPRITE">2</title>
+          <title name="VALUE">"projectile_anna"</title>
+          <title name="DIR">4</title>
+        </block>
+        <block type="studio_throw">
+          <title name="SPRITE">2</title>
+          <title name="VALUE">"projectile_elsa"</title>
+          <title name="DIR">8</title>
+        </block>
+        <block type="studio_throw">
+          <title name="SPRITE">2</title>
+          <title name="VALUE">"projectile_rapunzel"</title>
+          <title name="DIR">2</title>
         </block>
       </xml>
     </toolbox_blocks>

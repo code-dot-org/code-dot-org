@@ -6,6 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "infinity",
+    "background": "icy",
     "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
     "failure_condition": "function () {\r\n}",
     "maze": "[[0,0,0,1,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[1,0,0,16,0,0,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,0,0,0,0,0]]",
@@ -32,22 +33,23 @@
       "downButton",
       "upButton"
     ],
-    "predraw_blocks": "<xml><block type=\"studio_setBackground\"><title name=\"VALUE\">\"snowy\"</title></block></xml>"
+    "predraw_blocks": "<xml><block type=\"studio_setBackground\"><title name=\"VALUE\">\"snowy\"</title></block></xml>",
+    "generate_function_pass_blocks": "false"
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="studio_whenArrow">
+        <block type="studio_whenArrow" y="0">
           <title name="VALUE">up</title>
         </block>
-        <block type="studio_whenArrow">
+        <block type="studio_whenArrow" y="100">
           <title name="VALUE">down</title>
         </block>
-        <block type="studio_whenArrow">
+        <block type="studio_whenArrow" y="200">
           <title name="VALUE">left</title>
         </block>
-        <block type="studio_whenArrow">
+        <block type="studio_whenArrow" y="300">
           <title name="VALUE">right</title>
         </block>
       </xml>

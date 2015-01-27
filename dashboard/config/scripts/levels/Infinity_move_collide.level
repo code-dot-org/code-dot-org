@@ -6,7 +6,8 @@
   "user_id": 1,
   "properties": {
     "skin": "infinity",
-    "success_condition": "function () {\r\n  // Sample conditions:\r\n  return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
+    "background": "grassy",
+    "success_condition": "function () {\r\n  var currentTime = new Date().getTime();\r\n\r\n  // Let's wait 2 seconds before indicating the success.\r\n  if (window.successTime && successTime + 2000 < currentTime)\r\n  {\r\n    //console.log(\"success!\");\r\n    return true;\r\n  }\r\n  else if (! window.successTime && Studio.sprite[0].isCollidingWith(1))\r\n  {\r\n    //console.log(\"setting success\");\r\n    window.successTime = currentTime;\r\n  }\r\n}",
     "failure_condition": "function () {\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,16,0,0,16,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
@@ -31,8 +32,8 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run"/>
-        <block type="studio_whenSpriteCollided">
+        <block type="when_run" x="80" y="20"/>
+        <block type="studio_whenSpriteCollided" x="80" y="200">
           <title name="SPRITE1">0</title>
           <title name="SPRITE2">1</title>
         </block>

@@ -6,7 +6,8 @@
   "user_id": 1,
   "properties": {
     "skin": "infinity",
-    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n  return Studio.projectiles[0].isCollidingWith(1);\r\n}",
+    "background": "leafy",
+    "success_condition": "function () {\r\n\r\n  var currentTime = new Date().getTime();\r\n\r\n  // Let's wait 2 seconds before indicating the success.\r\n  if (window.successTime && successTime + 2000 < currentTime)\r\n  {\r\n    //console.log(\"success!\");\r\n    return true;\r\n  }\r\n  else if (! window.successTime)\r\n  {\r\n    var success = Studio.projectiles[0].isCollidingWith(1);\r\n    \r\n    if (success) {\r\n      //console.log(\"setting success\");\r\n      window.successTime = currentTime;\r\n    }\r\n  }\r\n}\r\n",
     "failure_condition": "function () {\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,16,0,0,0,16,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",

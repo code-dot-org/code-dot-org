@@ -6,6 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "infinity",
+    "background": "flower",
     "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
     "failure_condition": "function () {\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0]]",
@@ -23,7 +24,9 @@
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
-    "coordinate_grid_background": "false"
+    "coordinate_grid_background": "false",
+    "timeout_failure_tick": "200",
+    "generate_function_pass_blocks": "false"
   }
 }]]></config>
   <blocks>
@@ -44,5 +47,18 @@
         </block>
       </xml>
     </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="studio_repeatForever"/>
+        <block type="studio_moveDistance">
+          <title name="DIR">1</title>
+          <title name="DISTANCE">400</title>
+        </block>
+        <block type="studio_moveDistance">
+          <title name="DIR">4</title>
+          <title name="DISTANCE">400</title>
+        </block>
+      </xml>
+    </required_blocks>
   </blocks>
 </Studio>
