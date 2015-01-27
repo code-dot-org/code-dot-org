@@ -313,6 +313,32 @@ ExpressionNode.prototype.isIdenticalTo = function (other) {
 };
 
 /**
+ * Returns true if both this and other are calls of the same function, with
+ * the same number of arguments
+ */
+// TODO - unit test
+ExpressionNode.prototype.hasSameSignature = function (other) {
+  if (!other) {
+    return false;
+  }
+
+  if (this.getType() !== ValueType.FUNCTION_CALL ||
+      other.getType() !== ValueType.FUNCTION_CALL) {
+    return false;
+  }
+
+  if (this.value !== other.value) {
+    return false;
+  }
+
+  if (this.children.length !== other.children.length) {
+    return false;
+  }
+
+  return true;
+};
+
+/**
  * Do the two nodes differ only in argument order.
  * todo: unit test
  */
@@ -352,3 +378,4 @@ var Token = function (str, marked) {
   this.str = str;
   this.marked = marked;
 };
+ExpressionNode.Token = Token;
