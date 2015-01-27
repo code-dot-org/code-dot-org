@@ -37,6 +37,7 @@ var timeoutList = require('../timeoutList');
 var ExpressionNode = require('./expressionNode');
 var EquationSet = require('./equationSet');
 var Token = ExpressionNode.Token;
+var InputIterator = require('./inputIterator');
 
 var TestResults = studioApp.TestResults;
 var ResultType = studioApp.ResultType;
@@ -76,7 +77,6 @@ function getTokenList(one, two) {
   if (two instanceof EquationSet.Equation) {
     two = two.expression;
   }
-  // TODO - this is a kind of hacky way to do this
   if (typeof(one) === 'string') {
     return new Token(one, one !== two);
   }
@@ -186,11 +186,11 @@ function displayGoal() {
     return;
   }
 
-  // If we have a function, just show the evaluation (i.e. compute expression)
-  var singleFunction = appState.targetSet.singleFunction();
+  // If we have a single function, just show the evaluation
+  // (i.e. compute expression). Otherwise should all equations.
   var tokenList;
   var nextRow = 0;
-  if (singleFunction === null) {
+  if (!appState.targetSet.hasSingleFunction()) {
     var sortedEquations = appState.targetSet.sortedEquations();
     sortedEquations.forEach(function (equation) {
       tokenList = equation.expression.getTokenList(false);
@@ -253,8 +253,73 @@ function generateEquationSetFromBlockXml(blockXml) {
   return equationSet;
 }
 
+/**
+ * Evaluates a target set against a user set when there is only one function.
+ * It does this be feeding the function a set of values, and making sure
+ * the target and user set evaluate to the same result for each.
+ */
+Calc.evaluateFunction_ = function (targetSet, userSet) {
+  var outcome = {
+    result: ResultType.UNSET,
+    testResults: TestResults.NO_TESTS_RUN,
+    message: undefined,
+    failedInput: null
+  };
+
+  // if our target is a single function, we evaluate success by evaluating the
+  // function with different inputs
+  var expression = targetSet.computeEquation().expression.clone();
+
+  // make sure our target/user calls look the same
+  var userEquation = userSet.computeEquation();
+  var userExpression = userEquation && userEquation.expression;
+  if (!expression.hasSameSignature(userExpression)) {
+    outcome.result = ResultType.FAILURE;
+    outcome.testResults = TestResults.LEVEL_INCOMPLETE_FAIL;
+    return outcome;
+  }
+
+  // First evaluate both with the target set of inputs
+  if (targetSet.evaluateWithExpression(expression) !==
+      userSet.evaluateWithExpression(expression)) {
+    outcome.result = ResultType.FAILURE;
+    outcome.testResults = TestResults.LEVEL_INCOMPLETE_FAIL;
+    return outcome;
+  }
+
+  // At this point we passed using the target compute expression's inputs.
+  // Now we want to use all combinations of inputs in the range [-100...100],
+  // noting which set of inputs failed (if any)
+  var possibleValues = _.range(1, 101).concat(_.range(-0, -101, -1));
+  var numParams = expression.children.length;
+  var iterator = new InputIterator(possibleValues, numParams);
+
+  while (iterator.remaining() > 0 && !outcome.failedInput) {
+    var values = iterator.next();
+    values.forEach(function (val, index) {
+      // TODO - feels a little hacky directly modifying children
+      expression.children[index].value = val;
+    });
+
+    if (targetSet.evaluateWithExpression(expression) !==
+        userSet.evaluateWithExpression(expression)) {
+      outcome.failedInput = values.slice();
+    }
+  }
+
+  if (outcome.failedInput) {
+    outcome.result = ResultType.FAILURE;
+    outcome.testResults = TestResults.APP_SPECIFIC_FAIL;
+    outcome.message = calcMsg.failedInput();
+  } else {
+    outcome.result = ResultType.SUCCESS;
+    outcome.testResults = TestResults.ALL_PASS;
+  }
+  return outcome;
+};
+
 Calc.evaluateResults_ = function (targetSet, userSet) {
-  var identical, user, target, levelComplete;
+  var identical, user, target;
   var outcome = {
     result: ResultType.UNSET,
     testResults: TestResults.NO_TESTS_RUN,
@@ -264,74 +329,19 @@ Calc.evaluateResults_ = function (targetSet, userSet) {
 
   // TODO - make sure we do the "right thing" when singleFunction and/or
   // hasVariablesOrFunctions differs between targetSet/userSet
-  var singleFunction = targetSet.singleFunction();
-  if (singleFunction) {
-    // if our target is a single function, we evaluate success by evaluating the
-    // function with different inputs
-    var expression = targetSet.computeEquation().expression.clone();
-
-    // make sure our target/user calls look the same
-    var userEquation = userSet.computeEquation();
-    var userExpression = userEquation && userEquation.expression;
-    if (!expression.hasSameSignature(userExpression)) {
-      outcome.result = ResultType.FAILURE;
-      outcome.testResults = TestResults.LEVEL_INCOMPLETE_FAIL;
-      return outcome;
-    }
-
-    if (targetSet.evaluateWithExpression(expression) !==
-        userSet.evaluateWithExpression(expression)) {
-      outcome.result = ResultType.FAILURE;
-      outcome.testResults = TestResults.LEVEL_INCOMPLETE_FAIL;
-      return outcome;
-    }
-
-    var values = _.range(1, 101).concat(_.range(-0, -101, -1));
-    var numParams = expression.children.length;
-    var numCombos = Math.pow(values.length, numParams);
-
-    var paramValue = [];
-    var incrementFrequency = [];
-    var paramNum;
-    for (paramNum = 0; paramNum < numParams; paramNum++) {
-      paramValue[paramNum] = 0;
-      incrementFrequency[paramNum] = Math.pow(values.length,
-        numParams - paramNum - 1);
-    }
-
-    for (var i = 0; i < numCombos && !outcome.failedInput; i++) {
-      for (paramNum = 0; paramNum < numParams; paramNum++) {
-        // See if we need to increment our value
-        if (i % incrementFrequency[paramNum] === 0 && i !== 0) {
-          paramValue[paramNum] = (paramValue[paramNum] + 1) % numParams;
-        }
-
-        // TODO - feels a little hacky directly modifying children
-        expression.children[paramNum].value = paramValue[paramNum];
-      }
-
-      if (targetSet.evaluateWithExpression(expression) !==
-          userSet.evaluateWithExpression(expression)) {
-        outcome.failedInput = paramValue.slice();
-      }
-    }
-
-    if (outcome.failedInput) {
-      outcome.result = ResultType.FAILURE;
-      outcome.testResults = TestResults.APP_SPECIFIC_FAIL;
-      outcome.message = calcMsg.failedInput();
-    } else {
-      outcome.result = ResultType.SUCCESS;
-      outcome.testResults = TestResults.ALL_PASS;
-    }
-    return outcome;
-
+  if (targetSet.hasSingleFunction()) {
+    // Evaluate function by testing it with a series of inputs
+    return Calc.evaluateFunction_(targetSet, userSet);
   } else if (userSet.hasVariablesOrFunctions()) {
-
+    // We have multiple expressions. Either our set of expressions are equal,
+    // or they're not.
     identical = targetSet.isIdenticalTo(userSet);
     outcome.result = identical ? ResultType.SUCCESS : ResultType.FAILURE;
     return outcome;
   } else {
+    // We have only a compute equation for each set. If they're not equal,
+    // check to see whether they are equivalent (i.e. the same, but with
+    // inputs ordered differently)
     user = userSet.computeEquation();
     target = targetSet.computeEquation();
 
@@ -341,18 +351,16 @@ Calc.evaluateResults_ = function (targetSet, userSet) {
       outcome.testResults = TestResults.ALL_PASS;
     } else {
       outcome.result = ResultType.FAILURE;
+      var levelComplete = (outcome.result === ResultType.SUCCESS);
+      outcome.testResults = studioApp.getTestResults(levelComplete);
       if (target && user.expression &&
           user.expression.isEquivalentTo(target.expression)) {
         outcome.testResults = TestResults.APP_SPECIFIC_FAIL;
         outcome.message = calcMsg.equivalentExpression();
-      } else {
-        levelComplete = (outcome.result === ResultType.SUCCESS);
-        outcome.testResults = studioApp.getTestResults(levelComplete);
       }
     }
     return outcome;
   }
-
 }
 
 /**
@@ -415,7 +423,7 @@ function displayComplexUserExpressions () {
 
   // in single function mode, we're only going to highlight the differences
   // in evaluation
-  var hasSingleFunction = appState.targetSet.singleFunction() !== null;
+  var hasSingleFunction = appState.targetSet.hasSingleFunction();
 
   var nextRow = 0;
   var tokenList;
@@ -576,7 +584,7 @@ function displayEquation(parentId, name, tokenList, line, markClass) {
     xPos += len;
   }
 
-  // todo (brent): handle case where expression is longer than width
+  // TODO (brent): handle case where expression is longer than width
   var xPadding = (CANVAS_WIDTH - g.getBoundingClientRect().width) / 2;
   var yPos = (line * 20); // TODO - this shouldnt be hardcoded
   g.setAttribute('transform', 'translate(' + xPadding + ', ' + yPos + ')');

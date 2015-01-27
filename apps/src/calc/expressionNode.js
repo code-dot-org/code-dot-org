@@ -340,7 +340,7 @@ ExpressionNode.prototype.hasSameSignature = function (other) {
 
 /**
  * Do the two nodes differ only in argument order.
- * todo: unit test
+ * TODO: unit test
  */
 ExpressionNode.prototype.isEquivalentTo = function (target) {
   // only ignore argument order for ARITHMETIC
