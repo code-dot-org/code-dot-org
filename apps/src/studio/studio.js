@@ -1282,7 +1282,7 @@ studioApp.reset = function(first) {
   }
 
   // A little flag for script-based code to consume.
-  window.studioLevelRestarted = true;
+  Studio.levelRestarted = true;
 };
 
 /**
