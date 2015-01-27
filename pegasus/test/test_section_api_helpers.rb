@@ -74,35 +74,6 @@ class SectionApiHelperTest < Minitest::Unit::TestCase
     end
   end
 
-  describe DashboardUser do
-    describe 'to_self_hash' do
-
-      it 'creates a hash containing limited fields' do
-        full_user = {
-            id: 6,
-            name: 'Quentin',
-            password: '123456'
-        }
-        self_view = DashboardUser.to_self_view(full_user)
-        assert self_view.key?(:id)
-        assert_equal 6, self_view[:id]
-        assert self_view.key?(:name)
-        assert_equal 'Quentin', self_view[:name]
-      end
-
-      it 'omits other fields on the input hash' do
-        full_user = {
-            id: 6,
-            name: 'Quentin',
-            password: '123456'
-        }
-        self_view = DashboardUser.to_self_view(full_user)
-        assert !self_view.key?(:password)
-      end
-
-    end
-  end
-
   describe DashboardStudent do
 
   end
