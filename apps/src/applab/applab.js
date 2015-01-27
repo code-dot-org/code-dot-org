@@ -1640,7 +1640,7 @@ Applab.onEventFired = function (opts, e) {
     // of just the 'e' parameter
     Applab.eventQueue.push({
       'fn': opts.func,
-      'arguments': [e]
+      'arguments': [e].concat(opts.extraArgs)
     });
   } else {
     Applab.eventQueue.push({'fn': opts.func});
