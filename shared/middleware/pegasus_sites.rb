@@ -15,15 +15,22 @@ class PegasusSites
   
   def call(env)
     request = Rack::Request.new(env)
-    
-    if request.path_info =~ /^\/dashboardapi\//
+
+    # /dashboardapi at either host goes to dashboard
+    if request.path =~ /^\/dashboardapi\//
       env['HTTP_HOST'] = canonical_hostname('studio.code.org') + ":#{CDO.dashboard_port}"
     end
 
-    return @pegasus_app.call(env) if @pegasus_hosts.include?(request.host) && !(request.path_info =~ /^\/dashboardapi\//)
-    return @pegasus_app.call(env) if request.path_info =~ /^\/v2\//
+    # /v2 at either host goes to pegasus
+    if request.path =~ /^\/v2\//
+      env['HTTP_HOST'] = canonical_hostname('code.org') + ":#{CDO.pegasus_port}"
+    end
 
-    @app.call(env)
+    if @pegasus_hosts.include?(request.host)
+      @pegasus_app.call(env)
+    else
+      @app.call(env)
+    end
   end
 
 end
