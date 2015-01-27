@@ -40,15 +40,6 @@ var helpArea = function(html) { -%>
 <% }; -%>
 
 <div id="appcontainer">
-  <div id="headers" dir="<%= data.localeDirection %>">
-    <div id="workspace-header" class="blockly-header">
-      <span id="workspace-header-span"><%= netsimMsg.workspaceHeader()%> </span>
-    </div>
-  </div>
-  <div id="footers" dir="<%= data.localeDirection %>">
-    <% instructions() %>
-    <% helpArea(data.helpHtml) %>
-  </div>
   <div id="netsim">
     <label for="netsim_section_select">My Section:</label>
     <select id="netsim_section_select">
@@ -60,6 +51,10 @@ var helpArea = function(html) { -%>
     <textarea id="netsim_inputbox"></textarea>
     <input id="netsim_sendbutton" type="button" value="Send" />
     <textarea id="netsim_recievelog"></textarea>
+  </div>
+  <div id="footers" dir="<%= data.localeDirection %>">
+    <% instructions() %>
+    <% helpArea(data.helpHtml) %>
   </div>
 </div>
 
