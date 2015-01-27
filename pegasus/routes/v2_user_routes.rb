@@ -1,3 +1,11 @@
+get '/v2/user' do
+  only_for 'code.org'
+  dont_cache
+  forbidden! unless dashboard_user
+  content_type :json
+  JSON.pretty_generate(DashboardUser.to_self_view(dashboard_user))
+end
+
 get '/v2/students' do
   only_for 'code.org'
   dont_cache
