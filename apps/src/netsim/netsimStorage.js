@@ -33,7 +33,6 @@
  maxstatements: 200
  */
 /* global $ */
-/* global -Blockly */
 'use strict';
 
 /**
