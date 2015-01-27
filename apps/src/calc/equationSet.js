@@ -28,27 +28,26 @@ Equation.prototype.isFunction = function () {
 /**
  * An EquationSet consists of a top level (compute) equation, and optionally
  * some number of support equations
+ * @param {!Array} blocks List of blockly blocks
  */
-var EquationSet = function () {
-  this.compute_ = null;
-  this.equations_ = [];
+var EquationSet = function (blocks) {
+  this.compute_ = null; // an Equation
+  this.equations_ = []; // a list of Equations
+
+  blocks && blocks.forEach(function (block) {
+    var equation = getEquationFromBlock(block);
+    this.addEquation_(equation);
+  }, this);
 };
 EquationSet.Equation = Equation;
-
 module.exports = EquationSet;
 
-EquationSet.fromBlocks = function (blocks) {
-  var set = new EquationSet();
-
-  blocks.forEach(function (block) {
-    var equation = getEquationFromBlock(block);
-    set.addEquation(equation);
-  });
-
-  return set;
-};
-
-EquationSet.prototype.addEquation = function (equation) {
+/**
+ * Adds an equation to our set. If equation's name is null, sets it as the
+ * compute equation. Throws if equation of this name already exists.
+ * @param {Equation} equation The equation to add.
+ */
+EquationSet.prototype.addEquation_ = function (equation) {
   if (!equation.name) {
     if (this.compute_) {
       throw new Error('compute expression already exists');
@@ -62,6 +61,10 @@ EquationSet.prototype.addEquation = function (equation) {
   }
 };
 
+/**
+ * Get an equation by name, or compute equation if name is null
+ * @returns {Equation} Equation of that name if it exists, null otherwise.
+ */
 EquationSet.prototype.getEquation = function (name) {
   if (name === null) {
     return this.computeEquation();
@@ -74,12 +77,15 @@ EquationSet.prototype.getEquation = function (name) {
   return null;
 };
 
+/**
+ * @returns the compute equation if there is one
+ */
 EquationSet.prototype.computeEquation = function () {
   return this.compute_;
 };
 
 /**
- * Equation set has at least one variable or function.
+ * @returns true if EquationSet has at least one variable or function.
  */
 EquationSet.prototype.hasVariablesOrFunctions = function () {
   return this.equations_.length > 0;
@@ -91,20 +97,18 @@ EquationSet.prototype.hasVariablesOrFunctions = function () {
  * it returns null
  */
 EquationSet.prototype.singleFunction = function () {
-  // TODO - (brent) def unit test me
-  var single = null;
-  for (var i = 0; i < this.equations_.length; i++) {
-    if (single) {
-      // multiple functions/equations
-      return null;
-    }
-    if (this.equations_[i].isFunction()) {
-      single = this.equations_[i];
-    }
+  if (this.equations_.length === 1 && this.equations_[0].isFunction()) {
+    return this.equations_[0];
   }
-  return single;
+
+  return null;
 };
 
+/**
+ * Are two EquationSets identical? This is considered to be true if their
+ * compute expressions are identical and all of their equations have the same
+ * names and identical expressions.
+ */
 EquationSet.prototype.isIdenticalTo = function (otherSet) {
   // TODO (brent) private accessor
   if (this.equations_.length !== otherSet.equations_.length) {
