@@ -2710,7 +2710,7 @@ Studio.allGoalsVisited = function() {
         goal.finished = spriteAtGoal(protagonistSprite, goal);
 
         // If goal was just finished, then call the "when actor touches anything handler"
-        if (! wasGoalFinished && goal.finished) {
+        if (!wasGoalFinished && goal.finished) {
           var allowQueueExtension = false;
           var prefix = 'whenSpriteCollided-' + Studio.protagonistSpriteIndex + '-';
           callHandler(prefix + 'anything', allowQueueExtension);
