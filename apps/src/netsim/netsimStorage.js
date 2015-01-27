@@ -74,9 +74,9 @@ SharedStorageTable.prototype.all = function (callback) {
     url: this.apiBaseUrl_,
     type: "get",
     dataType: "json"
-  }).done(function(data, text) {
+  }).done(function(data /*, text*/) {
     callback(data);
-  }).fail(function(request, status, error) {
+  }).fail(function(/*request, status, error*/) {
     callback(null);
   });
 };
@@ -91,9 +91,9 @@ SharedStorageTable.prototype.fetch = function (id, callback) {
     url: this.apiBaseUrl_ + "/" + id,
     type: "get",
     dataType: "json"
-  }).done(function(data, text) {
+  }).done(function(data /*, text*/) {
     callback(data);
-  }).fail(function(request, status, error) {
+  }).fail(function(/*request, status, error*/) {
     callback(undefined);
   });
 };
@@ -111,9 +111,9 @@ SharedStorageTable.prototype.insert = function (value, callback) {
     type: "post",
     contentType: "application/json; charset=utf-8",
     data: JSON.stringify(value)
-  }).done(function(data, text) {
+  }).done(function(data /*, text*/) {
     callback(data);
-  }).fail(function(request, status, error) {
+  }).fail(function(/*request, status, error*/) {
     callback(undefined);
   });
 };
@@ -130,10 +130,10 @@ SharedStorageTable.prototype.update = function (id, value, callback) {
     type: "post",
     contentType: "application/json; charset=utf-8",
     data: JSON.stringify(value)
-  }).done(function(data, text) {
-    callback(true)
-  }).fail(function(request, status, error) {
-    callback(false)
+  }).done(function(/*data, text*/) {
+    callback(true);
+  }).fail(function(/*request, status, error*/) {
+    callback(false);
   });
 };
 
@@ -147,10 +147,10 @@ SharedStorageTable.prototype.delete = function (id, callback) {
     url: this.apiBaseUrl_ + "/" + id + "/delete",
     type: "post",
     dataType: "json"
-  }).done(function(data, text) {
-    callback(true)
-  }).fail(function(request, status, error) {
-    callback(false)
+  }).done(function(/*data, text*/) {
+    callback(true);
+  }).fail(function(/*request, status, error*/) {
+    callback(false);
   });
 };
 
