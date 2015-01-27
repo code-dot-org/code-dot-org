@@ -212,9 +212,13 @@ Blockly.Trashcan.prototype.position_ = function() {
  * Repositions trashcan a given number of pixels below the top of its containing BlockSpace
  * @param pixelOffset
  */
-Blockly.Trashcan.prototype.repositionBelowBlockSpaceTop = function(pixelOffset) {
+Blockly.Trashcan.prototype.setYOffset = function(pixelOffset) {
   this.extraYOffset_ = pixelOffset;
   this.position_();
+};
+
+Blockly.Trashcan.prototype.repositionBelowBlockSpaceTop = function(pixelOffset) {
+  this.setYOffset(pixelOffset - Blockly.Trashcan.MARGIN_TOP_);
 };
 
 /**
