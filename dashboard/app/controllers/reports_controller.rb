@@ -26,7 +26,7 @@ SQL
   end
 
   def header_stats
-    render file: "shared/_user_stats", layout: false, locals: { user: current_user }
+    render file: 'shared/_user_stats', layout: false, locals: {user: current_user}
   end
 
   def prizes
@@ -99,14 +99,6 @@ SQL
       render 'admin_concepts', formats: [:html]
     end
   end
-
-  ADMIN_GALLERY_PER_PAGE = 25
-  def admin_gallery
-    authorize! :read, :reports
-
-    @gallery_activities = GalleryActivity.order(id: :desc).page(params[:page]).per(ADMIN_GALLERY_PER_PAGE)
-  end
-
 
   def students
     redirect_to teacher_dashboard_url

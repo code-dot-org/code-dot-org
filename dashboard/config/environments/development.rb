@@ -9,15 +9,22 @@ Dashboard::Application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
-  # Show full error reports and disable caching.
+  # Show full error reports
   config.consider_all_requests_local       = true
-  config.action_controller.perform_caching = false
 
-  # Don't try to send mail in development. Messages will be logged in
+  config.action_controller.perform_caching = true
+  if CDO.memcached_hosts.present?
+    config.cache_store = :mem_cache_store, CDO.memcached_hosts
+  else
+    config.cache_store = :memory_store, { size: 64.megabytes }
+  end
+
+  config.action_mailer.delivery_method = Poste2::DeliveryMethod
+  # if you don't want to send mail in development. Messages will be logged in
   # development.log if you want to look at them
-  config.action_mailer.perform_deliveries = false
-  config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  #config.action_mailer.perform_deliveries = false
+  #config.action_mailer.raise_delivery_errors = false
+  #config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
   # if you want to use mailcatcher, use these options instead:
   # config.action_mailer.perform_deliveries = true

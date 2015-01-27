@@ -117,6 +117,12 @@
   english: "French"
   native: "français"
 
+"gl": "gl-ES"
+"gl-ES":
+  english: "Galician"
+  native: "Galiza"
+  debug: true
+
 "he": "he-IL"
 "he-IL":
   english: "Hebrew"

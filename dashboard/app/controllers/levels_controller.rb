@@ -4,7 +4,7 @@ require "naturally"
 class LevelsController < ApplicationController
   include LevelsHelper
   include ActiveSupport::Inflector
-  before_filter :authenticate_user!, :unless => Proc.new {params[:embed] && action_name == 'show'}
+  before_filter :authenticate_user!, :except => [:embed_blocks], :unless => Proc.new {params[:embed] && action_name == 'show'}
   before_filter :can_modify?, except: [:show, :index]
   skip_before_filter :verify_params_before_cancan_loads_model, :only => [:create, :update_blocks]
   load_and_authorize_resource :except => [:create, :update_blocks, :edit_blocks, :embed_blocks]
@@ -116,6 +116,7 @@ class LevelsController < ApplicationController
     if type_class <= Studio
       params[:level][:maze_data][0][0] = 16 # studio must have at least 1 actor
       params[:level][:soft_buttons] = nil
+      params[:level][:timeout_after_when_run] = true
       params[:level][:success_condition] = Studio.default_success_condition
       params[:level][:failure_condition] = Studio.default_failure_condition
     end

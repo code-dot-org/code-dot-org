@@ -1,6 +1,6 @@
 /**
  * Provides the basic frame for running Blockly.  In particular, this will
- * create a basic dom, load vendor.js  and put the contents into the global
+ * create a basic dom, load blockly.js  and put the contents into the global
  * space as global.Blockly.
  */
 
@@ -12,11 +12,12 @@ var jsdomRoot = require('jsdom');
 var jsdom = jsdomRoot.jsdom;
 var xmldom = require('xmldom');
 
-var VENDOR_CODE = fs.readFileSync(path.join(__dirname, '../../build/package/js/en_us/vendor.js'));
+var BLOCKLY_CODE = fs.readFileSync(path.join(__dirname, '../../build/package/js/blockly.js'));
+var BLOCKLY_LOCALE_CODE = fs.readFileSync(path.join(__dirname, '../../build/package/js/en_us/blockly_locale.js'));
 
 function initBlockly () {
   /* jshint -W054 */
-  var fn = new Function(VENDOR_CODE + '; return Blockly;');
+  var fn = new Function(BLOCKLY_CODE + ';' + BLOCKLY_LOCALE_CODE + '; return Blockly;');
   return fn.call(window);
 }
 
