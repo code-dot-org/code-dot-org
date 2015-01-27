@@ -1093,9 +1093,9 @@ Studio.init = function(config) {
   // pre-load images asynchronously
   // (to reduce the likelihood that there is a delay when images
   //  are changed at runtime)
-  preloadActorImages();
-  preloadProjectileImages();
-  if (config.level.isK1) {
+  if (config.skin.id == "studio") {
+    preloadActorImages();
+    preloadProjectileImages();
     preloadBackgroundImages();
   }
 };
