@@ -258,11 +258,13 @@ exports.setStyle = function (blockId, elementId, style) {
 };
 
 exports.onEvent = function (blockId, elementId, eventName, func) {
+  var extraArgs = Array.prototype.slice.call(arguments).slice(4);
   return Applab.executeCmd(blockId,
                           'onEvent',
                           {'elementId': elementId,
                            'eventName': eventName,
-                           'func': func });
+                           'func': func,
+                           'extraArgs': extraArgs});
 };
 
 exports.startWebRequest = function (blockId, url, func) {
