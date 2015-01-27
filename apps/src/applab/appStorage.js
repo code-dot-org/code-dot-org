@@ -22,7 +22,11 @@ AppStorage.tempEncryptedAppId =
 AppStorage.createSharedRecord = function(record, onSuccess, onError) {
   var tableName = record.tableName;
   if (!tableName) {
-    onError('error reading records: missing required property "tableName"');
+    onError('error creating record: missing required property "tableName"');
+    return;
+  }
+  if (record.id) {
+    onError('error creating record: record must not have an "id" property');
     return;
   }
   var req = new XMLHttpRequest();
@@ -37,7 +41,7 @@ var handleCreateSharedRecord = function(onSuccess, onError) {
   if (this.readyState !== 4) {
     return;
   }
-  if (this.status < 200 || this.status > 300) {
+  if (this.status < 200 || this.status >= 300) {
     onError('error creating record: unexpected http status ' + this.status);
     return;
   }
@@ -76,7 +80,7 @@ var handleReadSharedRecords = function(tableName, searchParams, onSuccess, onErr
   if (this.readyState !== 4) {
     return;
   }
-  if (this.status !== 200) {
+  if (this.status < 200 || this.status >= 300) {
     onError('error reading records: unexpected http status ' + this.status);
     return;
   }
@@ -129,8 +133,9 @@ var handleUpdateSharedRecord = function(record, onSuccess, onError) {
   if (this.status === 404) {
     onError('error updating record: could not find record id ' + record.id +
             ' in table ' + record.tableName);
+    return;
   }
-  if (this.status < 200 || this.status > 300) {
+  if (this.status < 200 || this.status >= 300) {
     onError('error updating record: unexpected http status ' + this.status);
     return;
   }
@@ -175,7 +180,7 @@ var handleDeleteSharedRecord = function(record, onSuccess, onError) {
         ' in table ' + record.tableName);
     return;
   }
-  if (this.status < 200 || this.status > 300) {
+  if (this.status < 200 || this.status >= 300) {
     onError('error deleting record: unexpected http status ' + this.status);
     return;
   }
