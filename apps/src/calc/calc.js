@@ -293,29 +293,32 @@ Calc.evaluateResults_ = function (targetSet, userSet) {
     var expression = targetCompute.expression.clone();
 
     var values = _.range(1, 101).concat(_.range(-0, -101, -1));
-    // Generate all possible combinations of inputs. Is there a better way
-    // to do this?
-    var inputSets = values.map(function (item) {
-      return [item];
-    });
-    var numTimes = expression.children.length - 1;
-    for (var i = 0; i < numTimes; i++) {
-      inputSets = values.reduce(function (rg, val) {
-        return rg.concat(inputSets.map(function(set) {
-          return [val].concat(set);
-        }));
-      }, []);
+    var numParams = expression.children.length;
+    var numCombos = Math.pow(values.length, numParams);
+
+    var paramValue = [];
+    var incrementFrequency = [];
+    var paramNum;
+    for (paramNum = 0; paramNum < numParams; paramNum++) {
+      paramValue[paramNum] = 0;
+      incrementFrequency[paramNum] = Math.pow(values.length,
+        numParams - paramNum - 1);
     }
 
-    for (var i = 0; i < inputSets.length && !outcome.failedInput; i++) {
-      for (var c = 0; c < expression.children.length; c++) {
+    for (var i = 0; i < numCombos && !outcome.failedInput; i++) {
+      for (paramNum = 0; paramNum < numParams; paramNum++) {
+        // See if we need to increment our value
+        if (i % incrementFrequency[paramNum] === 0 && i !== 0) {
+          paramValue[paramNum] = (paramValue[paramNum] + 1) % numParams;
+        }
+
         // TODO - feels a little hacky directly modifying children
-        expression.children[c].value = inputSets[i][c];
+        expression.children[paramNum].value = paramValue[paramNum];
       }
 
       if (targetSet.evaluateWithExpression(expression) !==
           userSet.evaluateWithExpression(expression)) {
-        outcome.failedInput = inputSets[i];
+        outcome.failedInput = paramValue.slice();
       }
     }
 
