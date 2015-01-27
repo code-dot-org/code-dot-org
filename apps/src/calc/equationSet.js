@@ -171,7 +171,7 @@ EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
     }
 
     if (caller.children.length !== variables.length) {
-      throw new Error('Unexpected: calling funtion with wrong number of inputs');
+      throw new Error('Unexpected: calling function with wrong number of inputs');
     }
 
     variables.forEach(function (item, index) {

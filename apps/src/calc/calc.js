@@ -36,6 +36,7 @@ var timeoutList = require('../timeoutList');
 
 var ExpressionNode = require('./expressionNode');
 var EquationSet = require('./equationSet');
+var Token = ExpressionNode.Token;
 
 var TestResults = studioApp.TestResults;
 var ResultType = studioApp.ResultType;
@@ -77,10 +78,7 @@ function getTokenList(one, two) {
   }
   // TODO - this is a kind of hacky way to do this
   if (typeof(one) === 'string') {
-    one = new ExpressionNode(one);
-  }
-  if (typeof(two) === 'string') {
-    two = new ExpressionNode(two);
+    return new Token(one, one !== two);
   }
 
   if (!one) {
@@ -280,17 +278,23 @@ Calc.evaluateResults_ = function (targetSet, userSet) {
   if (singleFunction) {
     // if our target is a single function, we evaluate success by evaluating the
     // function with different inputs
-    var targetCompute = targetSet.computeEquation();
+    var expression = targetSet.computeEquation().expression.clone();
 
-    // TODO - test case. user set has different inputs than target set
-    if (targetSet.evaluateWithExpression(targetCompute.expression) !==
-        userSet.evaluateWithExpression(targetCompute.expression)) {
+    // make sure our target/user calls look the same
+    var userEquation = userSet.computeEquation();
+    var userExpression = userEquation && userEquation.expression;
+    if (!expression.hasSameSignature(userExpression)) {
       outcome.result = ResultType.FAILURE;
       outcome.testResults = TestResults.LEVEL_INCOMPLETE_FAIL;
       return outcome;
     }
 
-    var expression = targetCompute.expression.clone();
+    if (targetSet.evaluateWithExpression(expression) !==
+        userSet.evaluateWithExpression(expression)) {
+      outcome.result = ResultType.FAILURE;
+      outcome.testResults = TestResults.LEVEL_INCOMPLETE_FAIL;
+      return outcome;
+    }
 
     var values = _.range(1, 101).concat(_.range(-0, -101, -1));
     var numParams = expression.children.length;
