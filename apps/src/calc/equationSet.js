@@ -96,7 +96,7 @@ EquationSet.prototype.hasVariablesOrFunctions = function () {
  * equation. If we have multiple functions or one function and some variables,
  * it returns null
  */
-EquationSet.prototype.singleFunction = function () {
+EquationSet.prototype.singleFunction_ = function () {
   if (this.equations_.length === 1 && this.equations_[0].isFunction()) {
     return this.equations_[0];
   }
@@ -105,12 +105,18 @@ EquationSet.prototype.singleFunction = function () {
 };
 
 /**
+ * External callers only care about whether or not we have a single function
+ */
+ EquationSet.prototype.hasSingleFunction = function () {
+   return this.singleFunction_() !== null;
+ };
+
+/**
  * Are two EquationSets identical? This is considered to be true if their
  * compute expressions are identical and all of their equations have the same
  * names and identical expressions.
  */
 EquationSet.prototype.isIdenticalTo = function (otherSet) {
-  // TODO (brent) private accessor
   if (this.equations_.length !== otherSet.equations_.length) {
     return false;
   }
@@ -121,8 +127,10 @@ EquationSet.prototype.isIdenticalTo = function (otherSet) {
   }
 
   for (var i = 0; i < this.equations_.length; i++) {
-    var otherEquation = otherSet.getEquation(this.equations_[i].name);
-    if (!this.equations_[i].expression.isIdenticalTo(otherEquation.expression)) {
+    var thisEquation = this.equations_[i];
+    var otherEquation = otherSet.getEquation(thisEquation.name);
+    if (!otherEquation ||
+        !thisEquation.expression.isIdenticalTo(otherEquation.expression)) {
       return false;
     }
   }
@@ -165,7 +173,7 @@ EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
 
   var mapping = {};
   // (2) single function, no variables
-  var singleFunction = this.singleFunction();
+  var singleFunction = this.singleFunction_();
   if (singleFunction !== null) {
     // TODO - this feels a little brittle, depending on the string name
     var variables = /\((.*)\)$/.exec(singleFunction.name)[1].split(',');
@@ -208,8 +216,7 @@ EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
   return computeExpression.evaluate(mapping);
 };
 
-// todo (brent) : would this logic be better placed inside the blocks?
-// todo (brent) : needs some unit tests
+// TODO (brent) : needs some unit tests
 function getEquationFromBlock(block) {
   var name;
   if (!block) {

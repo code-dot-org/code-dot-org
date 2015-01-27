@@ -122,57 +122,148 @@ describe('ExpressionSet', function () {
     });
   });
 
-  it('can evaluate a semi-complex function', function () {
-    // f(1,2)
-    var computeExpression = new ExpressionNode('f', [1, 2]);
-    // f(x,y) = ((2 * x) + y)
-    var fnExpression = new ExpressionNode('+', [
-      new ExpressionNode('*', [2, 'x']),
-      new ExpressionNode('y')
-    ]);
+  describe('isIdenticalTo', function () {
+    var computeExpression = new ExpressionNode(0);
+    var expression1 = new ExpressionNode(1);
+    var expression2 = new ExpressionNode(2);
+    var expression3 = new ExpressionNode(3);
 
-    var set = new EquationSet();
-    set.addEquation_(new Equation('f(x,y)', fnExpression));
-    set.addEquation_(new Equation(null, computeExpression));
+    it('returns false when differing numbers of equations', function () {
+      var set1 = new EquationSet();
+      var set2 = new EquationSet();
 
-    assert.equal(set.evaluate(), 4);
-  });
+      set1.addEquation_(new Equation(null, computeExpression));
+      set1.addEquation_(new Equation('one', expression1));
+      set1.addEquation_(new Equation('two', expression2));
 
-  it('can evaluate a set of variables', function () {
-    var set = new EquationSet();
-    // x = 1
-    set.addEquation_(new Equation('x', new ExpressionNode(1)));
-    // y = x + 2
-    set.addEquation_(new Equation('y', new ExpressionNode('+', ['x', 2])));
-    // compute
-    set.addEquation_(new Equation(null, new ExpressionNode('y')));
+      set2.addEquation_(new Equation(null, computeExpression));
+      set2.addEquation_(new Equation('one', expression1));
+      set2.addEquation_(new Equation('two', expression2));
+      set2.addEquation_(new Equation('three', expression3));
 
-    assert.equal(set.evaluate(), 3);
-  });
+      assert.equal(set1.isIdenticalTo(set2), false);
+    });
 
-  it('throws if trying to resolve an unresolveable set of variables', function () {
-    var set = new EquationSet();
-    set.addEquation_(new Equation('z', new ExpressionNode(0)));
-    set.addEquation_(new Equation(null, new ExpressionNode('y')));
+    it('returns false when same expressions but different names', function () {
+      var set1 = new EquationSet();
+      var set2 = new EquationSet();
 
-    assert.throws(function () {
-      set.evaluate();
+      set1.addEquation_(new Equation(null, computeExpression));
+      set1.addEquation_(new Equation('one', expression1));
+      set1.addEquation_(new Equation('two', expression2));
+
+      set2.addEquation_(new Equation(null, computeExpression));
+      set2.addEquation_(new Equation('one', expression1));
+      set2.addEquation_(new Equation('NOTtwo', expression2));
+
+      assert.equal(set1.isIdenticalTo(set2), false);
+    });
+
+    it('returns false when compute expressions differ but others are the same', function () {
+      var set1 = new EquationSet();
+      var set2 = new EquationSet();
+
+      set1.addEquation_(new Equation(null, new ExpressionNode(0)));
+      set1.addEquation_(new Equation('one', expression1));
+      set1.addEquation_(new Equation('two', expression2));
+      set1.addEquation_(new Equation('three', expression3));
+
+      set2.addEquation_(new Equation(null, new ExpressionNode(1)));
+      set2.addEquation_(new Equation('one', expression1));
+      set2.addEquation_(new Equation('two', expression2));
+      set2.addEquation_(new Equation('three', expression3));
+
+      assert.equal(set1.isIdenticalTo(set2), false);
+    });
+
+    it('returns false when same names, but different expressions', function () {
+      var set1 = new EquationSet();
+      var set2 = new EquationSet();
+
+      set1.addEquation_(new Equation(null, new ExpressionNode(0)));
+      set1.addEquation_(new Equation('one', expression1));
+      set1.addEquation_(new Equation('two', expression2));
+      set1.addEquation_(new Equation('three', expression3));
+
+      set2.addEquation_(new Equation(null, new ExpressionNode(1)));
+      set2.addEquation_(new Equation('one', expression1));
+      set2.addEquation_(new Equation('two', expression3));
+      set2.addEquation_(new Equation('three', expression2));
+
+      assert.equal(set1.isIdenticalTo(set2), false);
+    });
+
+    it('returns true when identical', function () {
+      var set1 = new EquationSet();
+      var set2 = new EquationSet();
+
+      set1.addEquation_(new Equation(null, computeExpression));
+      set1.addEquation_(new Equation('one', expression1));
+      set1.addEquation_(new Equation('two', expression2));
+      set1.addEquation_(new Equation('three', expression3));
+
+      set2.addEquation_(new Equation(null, computeExpression));
+      set2.addEquation_(new Equation('one', expression1));
+      set2.addEquation_(new Equation('two', expression2));
+      set2.addEquation_(new Equation('three', expression3));
+
+      assert.equal(set1.isIdenticalTo(set2), true);
     });
   });
 
-  it('can evaluate with a different compute expression', function () {
-    var set = new EquationSet();
-    // f(x) = x + 1
-    // f(1)
-    set.addEquation_(new Equation('f(x)', new ExpressionNode('+', ['x', 1])));
-    set.addEquation_(new Equation(null, new ExpressionNode('f', [1])));
+  describe('evaluate', function () {
+    it('can evaluate a semi-complex function', function () {
+      // f(1,2)
+      var computeExpression = new ExpressionNode('f', [1, 2]);
+      // f(x,y) = ((2 * x) + y)
+      var fnExpression = new ExpressionNode('+', [
+        new ExpressionNode('*', [2, 'x']),
+        new ExpressionNode('y')
+      ]);
 
-    assert.equal(set.evaluate(), 2);
+      var set = new EquationSet();
+      set.addEquation_(new Equation('f(x,y)', fnExpression));
+      set.addEquation_(new Equation(null, computeExpression));
 
-    // f(2)
-    var newCompute = new ExpressionNode('f', [2]);
-    assert.equal(set.evaluateWithExpression(newCompute), 3);
+      assert.equal(set.evaluate(), 4);
+    });
 
+    it('can evaluate a set of variables', function () {
+      var set = new EquationSet();
+      // x = 1
+      set.addEquation_(new Equation('x', new ExpressionNode(1)));
+      // y = x + 2
+      set.addEquation_(new Equation('y', new ExpressionNode('+', ['x', 2])));
+      // compute
+      set.addEquation_(new Equation(null, new ExpressionNode('y')));
+
+      assert.equal(set.evaluate(), 3);
+    });
+
+    it('throws if trying to resolve an unresolveable set of variables', function () {
+      var set = new EquationSet();
+      set.addEquation_(new Equation('z', new ExpressionNode(0)));
+      set.addEquation_(new Equation(null, new ExpressionNode('y')));
+
+      assert.throws(function () {
+        set.evaluate();
+      });
+    });
+
+    it('can evaluate with a different compute expression', function () {
+      var set = new EquationSet();
+      // f(x) = x + 1
+      // f(1)
+      set.addEquation_(new Equation('f(x)', new ExpressionNode('+', ['x', 1])));
+      set.addEquation_(new Equation(null, new ExpressionNode('f', [1])));
+
+      assert.equal(set.evaluate(), 2);
+
+      // f(2)
+      var newCompute = new ExpressionNode('f', [2]);
+      assert.equal(set.evaluateWithExpression(newCompute), 3);
+
+    });
   });
 
 });
