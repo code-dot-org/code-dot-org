@@ -134,6 +134,8 @@ class Studio < Grid
   <block type="studio_saySprite">
     <title name="TEXT">type here</title>
   </block>
+  <block type="studio_saySpriteChoices" inline="true">
+  </block>
   <block type="studio_saySpriteParams" inline="true">
     <value name="TEXT">
       <block type="text" />
