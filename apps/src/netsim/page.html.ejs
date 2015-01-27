@@ -50,6 +50,11 @@ var helpArea = function(html) { -%>
     <% helpArea(data.helpHtml) %>
   </div>
   <div id="netsim">
+    <label for="netsim_section_select">My Section:</label>
+    <select id="netsim_section_select">
+      <option selected value="-1">Loading...</option>
+    </select>
+    <hr/>
     <textarea id="netsim_inputbox"></textarea>
     <input id="netsim_sendbutton" type="button" value="Send" />
     <textarea id="netsim_recievelog"></textarea>

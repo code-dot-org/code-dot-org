@@ -140,14 +140,30 @@ NetSim.prototype.init = function(config) {
   this.attachHandlers_();
 
   this.getUserSections_(function (data) {
-    var items = [];
-    $.each( data[0], function( key, val ) {
-      items.push( "<li id='" + key + "'>" + val + "</li>" );
+    var sectionSelector = document.getElementById('netsim_section_select');
+
+    // Clear it
+    while (sectionSelector.firstChild) {
+      sectionSelector.removeChild(sectionSelector.firstChild);
+    }
+
+    // If we didn't get any sections, we must deny access
+    if (0 === data.length) {
+      // TODO: Deny access to netsim if no section found
+      var option = document.createElement('option');
+      option.value = -1;
+      option.textContent = '-- NOT FOUND --';
+      sectionSelector.appendChild(option);
+      return;
+    }
+
+    // Add all of our sections
+    $.each(data, function (index, section) {
+      var option = document.createElement('option');
+      option.value = section.id;
+      option.textContent = section.name;
+      sectionSelector.appendChild(option);
     });
-    $( "<ul/>", {
-      "class": "my-new-list",
-      html: items.join( "" )
-    }).appendTo( "body" );
   });
 };
 
