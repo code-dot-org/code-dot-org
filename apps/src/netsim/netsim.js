@@ -40,6 +40,7 @@ var dom = require('../dom');
 var page = require('./page.html');
 var utils = require('../utils');
 var _ = utils.getLodash();
+var netsimStorage = require('./netsimStorage');
 
 /**
  * The top-level Internet Simulator controller.
@@ -85,6 +86,8 @@ NetSim.prototype.attachHandlers_ = function () {
       document.getElementById('netsim_sendbutton'),
       _.bind(this.onSendButtonClick_, this)
   );
+  // _Try_ to clean up after ourselves.
+  window.addEventListener('beforeunload', _.bind(this.disconnect_, this));
 };
 
 /**
@@ -101,6 +104,76 @@ NetSim.prototype.getUserSections_ = function (callback) {
     url: userSectionEndpoint,
     success: callback
   });
+};
+
+/**
+ * Handler for what to do when a new section is selected
+ * @private
+ */
+NetSim.prototype.onSectionSelected_ = function() {
+  var sectionSelector = document.getElementById('netsim_section_select');
+  var sectionID = sectionSelector.value;
+  if (sectionID >= 0) {
+    // TODO (bbuchanan) : Also pass through unique level key
+    this.joinLobby_(sectionSelector.value);
+  }
+};
+
+/**
+ * Broadcast own presence in a "lobby" unique to this level+section.
+ * @param sectionID
+ * TODO (bbuchanan) : Also accept unique level key for lobby
+ * @private
+ */
+NetSim.prototype.joinLobby_ = function (sectionID) {
+  // TODO (bbuchanan) : Disconnect from lobby if already connected
+  this.lobby_ = new netsimStorage.SharedStorageTable(
+      netsimStorage.APP_PUBLIC_KEY,
+      'demo_' + sectionID + '_lobby'
+  );
+  this.lobby_.insert({
+    name: 'fake_name',
+    connected_to: undefined,
+    last_update: Date.now()
+  }, _.bind(function (data) {
+    if (data) {
+      this.connectionRowId_ = data.id;
+      console.log("Connected, assigned ID: " + this.connectionRowId_);
+      this.refreshLobby_();
+    }
+  }, this));
+};
+
+NetSim.prototype.refreshLobby_ = function () {
+  this.lobby_.all(_.bind(function(data) {
+    var list = document.getElementById("netsim_lobby_list");
+
+    // Clear it
+    while (list.firstChild) {
+      list.removeChild(list.firstChild);
+    }
+
+    // Add all of our sections
+    data.forEach(function (connection) {
+      var item = document.createElement('li');
+      item.innerHTML = '[' + connection.id + '] ' + connection.name + '(' + connection.last_update + ')';
+      list.appendChild(item);
+    });
+  }, this));
+};
+
+NetSim.prototype.disconnect_ = function () {
+  if (this.lobby_ && this.connectionRowId_) {
+    this.lobby_.delete(this.connectionRowId_, _.bind(function (wasSuccess) {
+      if (wasSuccess) {
+        this.connectionRowId_ = undefined;
+        this.lobby_ = undefined;
+        console.log("Disconnected");
+      } else {
+        console.log("Disconnect failed!");
+      }
+    }, this));
+  }
 };
 
 /**
@@ -141,7 +214,7 @@ NetSim.prototype.init = function(config) {
   this.attachHandlers_();
 
   // TODO (bbuchanan): Extract this into its own isolated control
-  this.getUserSections_(function (data) {
+  this.getUserSections_(_.bind(function (data) {
     var sectionSelector = document.getElementById('netsim_section_select');
 
     // Clear it
@@ -166,7 +239,9 @@ NetSim.prototype.init = function(config) {
       option.textContent = section.name;
       sectionSelector.appendChild(option);
     });
-  });
+
+    this.onSectionSelected_();
+  }, this));
 };
 
 /**
