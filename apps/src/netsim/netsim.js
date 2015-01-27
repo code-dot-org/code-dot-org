@@ -139,6 +139,7 @@ NetSim.prototype.init = function(config) {
 
   this.attachHandlers_();
 
+  // TODO (bbuchanan): Extract this into its own isolated control
   this.getUserSections_(function (data) {
     var sectionSelector = document.getElementById('netsim_section_select');
 
