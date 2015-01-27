@@ -1,6 +1,6 @@
 namespace :db do
   namespace :test do
-    task :prepare do
+    task :setup_pegasus_db do
       require 'os'
       require 'cdo/rake_utils'
 
@@ -21,7 +21,10 @@ namespace :db do
         create_pegasus_db
         system "rake db:migrate RACK_ENV=test"
       end
+    end
 
+    task :prepare do
+      Rake::Task["db:test:setup_pegasus_db"].invoke
       Rake::Task["seed:all"].invoke
     end
   end
