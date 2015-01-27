@@ -19,7 +19,6 @@ namespace :db do
       # tests depend on the pegasus database existing
       Dir.chdir(pegasus_dir) do
         create_pegasus_db
-        p DB
         p 'start pegasus db:migrate'
         system "rake -t db:migrate RACK_ENV=test"
         p 'end pegasus db:migrate'
