@@ -4,57 +4,18 @@ view: page_curriculum
 theme: none
 ---
 
-<% lesson_id = 'alg1' %>
-
-<%= partial('curriculum_header', :unplugged=>true, :title=> 'Video Games and Coordinate Planes',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>'30-60') %>
-
 <%
+lesson_id = 'alg1'
 lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
-anchor = DB[:cdo_standards].where(id_s:lesson[:anchor_s]).first
-standards = lesson[:standards_s].split(";").collect{|id| DB[:cdo_standards].where(id_s:id).first}.reject(&:blank?)
 %>
+
+<%= partial('curriculum_header', :unplugged=>true, :title=> lesson[:name_s],:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>'30-60') %>
 
 [content]
 
 [together]
 
-#### Standards
-
-## Lesson Overview
-Students discuss the components of their favorite video games, and discover that they can be reduced to a series of coordinates. They then explore coordinates in Cartesian space, and identify the coordinates for the characters in a game at various points in time. Once they are comfortable with coordinates, they brainstorm their own games and create sample coordinate lists for different points in time in their own game.
-
-## Lesson Objectives 
-### Students will:
-
-<% lesson[:objectives_s].split(";").each do |objective| %>
-- <%= objective %>
-<% end %>
-
-<details>
-<summary>Anchor Standards</summary>
-
-### <%= anchor[:family_s] %>
-
-- **<%= anchor[:id_s] %>**: <%= anchor[:desc_t] %>
-
-_Additional standards alignment can be found at the end of this lesson_
-</details>
-
-<details>
-<summary>Curriculum Connections</summary>
-### Connections to external or internal curricular content
-- Graphing and number lines
-</details>
-
-<details>
-<summary>Prerequisite Knowledge</summary>
-### This lesson assumes that students can:
-
-<% lesson[:prereqs_s].split(";").each do |prereq| %>
-- <%= prereq %>
-<% end %>
-
-</details>
+<%= partial('../docs/_details', :lesson => lesson) %>
 
 [summary]
 
@@ -97,7 +58,6 @@ _Additional standards alignment can be found at the end of this lesson_
 [together]
 
 ## Getting Started
-
 
 ### <a name="Vocab"></a> 1) Vocabulary
 This lesson has three new and important words:<br/>
@@ -206,33 +166,10 @@ Visit [MSM Stage 1](http://studio.code.org/s/algebra/stage/1/puzzle/1) in Code S
 
 [/together]
 
-[standards]
-
-<details>
-<summary>Standards Alignment</summary>
-
-### Common Core Mathematical Practices
-
-<% standards.select {|standard| standard[:family_s] == "Common Core Math Practices"}.each do |standard| %>
-- <%= standard[:id_s] %>: <%= standard[:desc_t] %>
-<% end %>
-
-### Common Core Math Standards
-
-<% standards.each do |standard| %>
-- <%= standard[:id_s] %>: <%= standard[:desc_t] %>
-<% end %>
-
-### CSTA K-12 Computer Science Standards
-
-- L2:CT:6: Describe and analyze a sequence of instructions being followed 
-
-</details>
-
-[/standards]
+<%= partial('../docs/_standards', :lesson => lesson) %>
 
 <a href="http://creativecommons.org/"><img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0"></a>  
 
 [/content]
 
-<link rel="stylesheet" type="text/css" href="morestyle.css"/>
+<link rel="stylesheet" type="text/css" href="../docs/morestyle.css"/>

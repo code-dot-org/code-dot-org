@@ -385,3 +385,8 @@ en:
           description_short: ''
           description: ''
           Internet Simulator: Internet Simulator
+        Infinity:
+          title: Infinity Playlab
+          description_short: Create a story or make a game with Infinity Play Lab!!
+          description: Create a story or make a game with Infinity Play Lab!
+          Infinity: Infinity
