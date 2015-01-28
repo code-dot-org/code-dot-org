@@ -715,6 +715,12 @@ Applab.init = function(config) {
     config.level.sliderSpeed = 1.0;
   }
 
+  // If we are in mobile sharing mode, allow the viewport to handle scaling
+  // and override our default width target in vizAppWidth with the actual width
+  if (dom.isMobile() && config.hideSource) {
+    vizAppWidth = Applab.appWidth;
+  }
+
   adjustAppSizeStyles();
 
   var showSlider = !config.hideSource && config.level.editCode;
@@ -788,6 +794,11 @@ Applab.init = function(config) {
         e.stop();
       });
     }
+    
+    if (studioApp.share) {
+      // automatically run in share mode:
+      window.setTimeout(studioApp.runButtonClick.bind(studioApp), 0);
+    }
   };
 
   // arrangeStartBlocks(config);
@@ -801,6 +812,10 @@ Applab.init = function(config) {
   config.noButtonsBelowOnMobileShare = true;
 
   config.dropletConfig = dropletConfig;
+
+  // Since the app width may not be 400, set this value in the config to
+  // ensure that the viewport is set up properly for scaling it up/down
+  config.mobileNoPaddingShareWidth = config.level.appWidth;
 
   // Applab.initMinimal();
 
@@ -841,11 +856,6 @@ Applab.init = function(config) {
     if (viewDataButton) {
       dom.addClickTouchEvent(viewDataButton, Applab.onViewData);
     }
-  }
-
-  if (studioApp.share) {
-    // automatically run in share mode:
-    window.setTimeout(studioApp.runButtonClick, 0);
   }
 };
 
