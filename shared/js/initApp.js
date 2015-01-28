@@ -6,7 +6,7 @@ var baseOptions = {
   cdoSounds: CDOSounds,
   position: { blockYCoordinateInterval: 25 },
   onInitialize: function() {
-    this.createCallouts && this.createCallouts();
+    this.createCallouts();
   },
   createCallouts: function() {
     $.fn.qtip.zindex = 500;
