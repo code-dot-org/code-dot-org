@@ -1181,6 +1181,8 @@ Applab.callCmd = function (cmd) {
     case 'clearTimeout':
     case 'createSharedRecord':
     case 'readSharedRecords':
+    case 'updateSharedRecord':
+    case 'deleteSharedRecord':
       studioApp.highlight(cmd.id);
       retVal = Applab[cmd.name](cmd.opts);
       break;
@@ -1714,33 +1716,76 @@ Applab.clearTimeout = function (opts) {
 };
 
 Applab.createSharedRecord = function (opts) {
-  var record = codegen.marshalInterpreterToNative(Applab.interpreter,
-      opts.record);
-  AppStorage.createSharedRecord(record,
-      Applab.handleCreateSharedRecord.bind(this, opts.callback));
+  var onSuccess = Applab.handleCreateSharedRecord.bind(this, opts.onSuccess);
+  var onError = Applab.handleError.bind(this, opts.onError);
+  AppStorage.createSharedRecord(opts.record, onSuccess, onError);
 };
 
-Applab.handleCreateSharedRecord = function(interpreterCallback, record) {
-  Applab.eventQueue.push({
-    'fn': interpreterCallback,
-    'arguments': [record]
-  });
+Applab.handleCreateSharedRecord = function(successCallback, record) {
+  if (successCallback) {
+    Applab.eventQueue.push({
+      'fn': successCallback,
+      'arguments': [record]
+    });
+  }
+};
+
+Applab.handleError = function(errorCallback, message) {
+  if (errorCallback) {
+    Applab.eventQueue.push({
+      'fn': errorCallback,
+      'arguments': [message]
+    });
+  } else {
+    outputApplabConsole(message);
+  }
 };
 
 Applab.readSharedRecords = function (opts) {
-  var searchParams = codegen.marshalInterpreterToNative(Applab.interpreter,
-      opts.searchParams);
-  AppStorage.readSharedRecords(
-      searchParams,
-      Applab.handleReadSharedRecords.bind(this, opts.callback));
+  var onSuccess = Applab.handleReadSharedRecords.bind(this, opts.onSuccess);
+  var onError = Applab.handleError.bind(this, opts.onError);
+  AppStorage.readSharedRecords(opts.searchParams, onSuccess, onError);
 };
 
-Applab.handleReadSharedRecords = function(interpreterCallback, records) {
-  Applab.eventQueue.push({
-    'fn': interpreterCallback,
-    'arguments': [records]
-  });
+Applab.handleReadSharedRecords = function(successCallback, records) {
+  if (successCallback) {
+    Applab.eventQueue.push({
+      'fn': successCallback,
+      'arguments': [records]
+    });
+  }
 };
+
+Applab.updateSharedRecord = function (opts) {
+  var onSuccess = Applab.handleUpdateSharedRecord.bind(this, opts.onSuccess);
+  var onError = Applab.handleError.bind(this, opts.onError);
+  AppStorage.updateSharedRecord(opts.record, onSuccess, onError);
+};
+
+Applab.handleUpdateSharedRecord = function(successCallback) {
+  if (successCallback) {
+    Applab.eventQueue.push({
+      'fn': successCallback,
+      'arguments': []
+    });
+  }
+};
+
+Applab.deleteSharedRecord = function (opts) {
+  var onSuccess = Applab.handleDeleteSharedRecord.bind(this, opts.onSuccess);
+  var onError = Applab.handleError.bind(this, opts.onError);
+  AppStorage.deleteSharedRecord(opts.record, onSuccess, onError);
+};
+
+Applab.handleDeleteSharedRecord = function(successCallback) {
+  if (successCallback) {
+    Applab.eventQueue.push({
+      'fn': successCallback,
+      'arguments': []
+    });
+  }
+};
+
 
 /*
 var onWaitComplete = function (opts) {
