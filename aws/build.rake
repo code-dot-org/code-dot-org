@@ -147,10 +147,10 @@ $websites = build_task('websites', [deploy_dir('rebuild'), APPS_COMMIT_TASK]) do
     RakeUtils.system 'rake', 'build'
 
     if rack_env?(:production) && CDO.daemon
-#      Dir.chdir(dashboard_dir) do
-#        HipChat.log "Putting <b>dashboard</b> scripts in redis..."
-#        RakeUtils.rake 'seed:script_cache_to_redis'
-#      end
+      Dir.chdir(dashboard_dir) do
+        HipChat.log "Putting <b>dashboard</b> scripts in memcached..."
+        RakeUtils.rake 'seed:script_cache_to_memcached'
+      end
 
       thread_count = 2
       threaded_each CDO.app_servers.keys, thread_count do |name|
@@ -178,6 +178,17 @@ task 'websites' => [$websites] {}
 $websites_test = build_task('websites-test', [deploy_dir('rebuild')]) do
   Dir.chdir(deploy_dir) do
     RakeUtils.system 'rake', 'build'
+  end
+
+  Dir.chdir(pegasus_dir) do
+    HipChat.log 'Running <b>pegasus</b> unit tests...'
+    begin
+      RakeUtils.rake 'test'
+    rescue
+      HipChat.log 'Unit tests for <b>pegasus</b> failed.', color:'red'
+      HipChat.developers 'Unit tests for <b>pegasus</b> failed.', color:'red', notify:1
+      raise
+    end
   end
 
   Dir.chdir(dashboard_dir) do

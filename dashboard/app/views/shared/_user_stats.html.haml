@@ -5,7 +5,7 @@
 .user-stats-block
   - levels = script_levels.group_by(&:stage_or_game)
   - levels.each_pair do |stage_or_game, sl_group|
-    - should_show_lesson_plan = script.has_lesson_plan? && current_user && current_user.teacher?
+    - should_show_lesson_plan = script.has_lesson_plan? && user && user.teacher?
     .game-group
       .stage
         %span
@@ -43,4 +43,4 @@
 - if script.trophies?
   %div{style: 'clear: both;'}
   #trophies
-    = render partial: 'shared/concept_trophy_block', locals: { concept_progress: concept_progress, user: user, added_style: 'padding:10px;' }
+    = render partial: 'shared/concept_trophy_block', locals: {concept_progress: concept_progress, added_style: 'padding: 10px;'}
