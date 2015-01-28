@@ -703,6 +703,11 @@ studioApp.reset = function(first) {
   }
 
   // Reset configurable variables
+  Applab.turtle = {};
+  Applab.turtle.heading = 0;
+  Applab.turtle.x = Applab.appWidth / 2;
+  Applab.turtle.y = Applab.appHeight / 2;
+
   var divApplab = document.getElementById('divApplab');
 
   while (divApplab.firstChild) {
@@ -1195,6 +1200,14 @@ Applab.callCmd = function (cmd) {
     case 'readSharedRecords':
     case 'updateSharedRecord':
     case 'deleteSharedRecord':
+    case 'turtleMoveForward':
+    case 'turtleMoveBackward':
+    case 'turtleTurnLeft':
+    case 'turtleTurnRight':
+    case 'turtlePenUp':
+    case 'turtlePenDown':
+    case 'turtlePenWidth':
+    case 'turtlePenColor':
       studioApp.highlight(cmd.id);
       retVal = Applab[cmd.name](cmd.opts);
       break;
@@ -1255,6 +1268,82 @@ Applab.createImageUploadButton = function (opts) {
   return Boolean(newLabel.appendChild(newInput) &&
                  newLabel.appendChild(textNode) &&
                  divApplab.appendChild(newLabel));
+};
+
+function getTurtleContext() {
+  var canvas = document.getElementById('turtleCanvas');
+
+  if (!canvas) {
+    var opts = { 'elementId': 'turtleCanvas' };
+    Applab.createCanvas(opts);
+    canvas = document.getElementById('turtleCanvas');
+  }
+
+  return canvas.getContext("2d");
+}
+
+Applab.turtleMoveForward = function (opts) {
+  var ctx = getTurtleContext();
+  if (ctx) {
+    ctx.beginPath();
+    ctx.moveTo(Applab.turtle.x, Applab.turtle.y);
+    Applab.turtle.x +=
+      opts.distance * Math.sin(2 * Math.PI * Applab.turtle.heading / 360);
+    Applab.turtle.y -=
+      opts.distance * Math.cos(2 * Math.PI * Applab.turtle.heading / 360);
+    ctx.lineTo(Applab.turtle.x, Applab.turtle.y);
+    ctx.stroke();
+  }
+};
+
+Applab.turtleMoveBackward = function (opts) {
+  opts.distance = -opts.distance;
+  Applab.turtleMoveForward(opts);
+};
+
+Applab.turtleTurnRight = function (opts) {
+  Applab.turtle.heading += opts.degrees;
+  Applab.turtle.heading = (Applab.turtle.heading + 360) % 360;
+};
+
+Applab.turtleTurnLeft = function (opts) {
+  opts.degrees = -opts.degrees;
+  Applab.turtleTurnRight(opts);
+};
+
+Applab.turtlePenUp = function (opts) {
+  var ctx = getTurtleContext();
+  if (ctx) {
+    Applab.turtle.penUpColor = ctx.strokeStyle;
+    ctx.strokeStyle = "rgba(255, 255, 255, 0)";
+  }
+};
+
+Applab.turtlePenDown = function (opts) {
+  var ctx = getTurtleContext();
+  if (ctx && Applab.turtle.penUpColor) {
+    ctx.strokeStyle = Applab.turtle.penUpColor;
+    delete Applab.turtle.penUpColor;
+  }
+};
+
+Applab.turtlePenWidth = function (opts) {
+  var ctx = getTurtleContext();
+  if (ctx) {
+    ctx.lineWidth = opts.width;
+  }
+};
+
+Applab.turtlePenColor = function (opts) {
+  var ctx = getTurtleContext();
+  if (ctx) {
+    if (Applab.turtle.penUpColor) {
+      // pen is currently up, store this color for pen down
+      Applab.turtle.penUpColor = opts.color;
+    } else {
+      ctx.strokeStyle = opts.color;
+    }
+  }
 };
 
 Applab.createCanvas = function (opts) {
