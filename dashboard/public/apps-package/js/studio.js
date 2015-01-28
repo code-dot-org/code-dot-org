@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({123:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({124:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Studio = require('./studio');
@@ -16,7 +16,7 @@ window.studioMain = function(options) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":3,"./blocks":117,"./levels":122,"./skins":125,"./studio":126}],126:[function(require,module,exports){
+},{"../appMain":3,"./blocks":118,"./levels":123,"./skins":126,"./studio":127}],127:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -1500,7 +1500,7 @@ Studio.execute = function() {
   var i;
 
   if (level.editCode) {
-    code = utils.generateCodeAliases(level.codeFunctions, 'Studio');
+    code = utils.generateCodeAliases(level.codeFunctions, null, 'Studio');
     code += studioApp.editor.getValue();
   }
 
@@ -1537,7 +1537,7 @@ Studio.execute = function() {
   studioApp.reset(false);
 
   if (level.editCode) {
-    var codeWhenRun = utils.generateCodeAliases(level.codeFunctions, 'Studio');
+    var codeWhenRun = utils.generateCodeAliases(level.codeFunctions, null, 'Studio');
     Studio.userCodeStartOffset = codeWhenRun.length;
     codeWhenRun += studioApp.editor.getValue();
     Studio.userCodeLength = codeWhenRun.length - Studio.userCodeStartOffset;
@@ -2795,7 +2795,7 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/current/common":159,"../../locale/current/studio":165,"../StudioApp":2,"../canvg/StackBlur.js":34,"../canvg/canvg.js":35,"../canvg/rgbcolor.js":36,"../canvg/svg_todataurl":37,"../codegen":38,"../constants":39,"../dom":40,"../skins":114,"../templates/page.html":134,"../utils":154,"../xml":155,"./api":116,"./blocks":117,"./collidable":118,"./constants":119,"./controls.html":120,"./extraControlRows.html":121,"./projectile":124,"./visualization.html":127}],127:[function(require,module,exports){
+},{"../../locale/current/common":160,"../../locale/current/studio":166,"../StudioApp":2,"../canvg/StackBlur.js":35,"../canvg/canvg.js":36,"../canvg/rgbcolor.js":37,"../canvg/svg_todataurl":38,"../codegen":39,"../constants":40,"../dom":41,"../skins":115,"../templates/page.html":135,"../utils":155,"../xml":156,"./api":117,"./blocks":118,"./collidable":119,"./constants":120,"./controls.html":121,"./extraControlRows.html":122,"./projectile":125,"./visualization.html":128}],128:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2815,7 +2815,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":175}],124:[function(require,module,exports){
+},{"ejs":176}],125:[function(require,module,exports){
 var Collidable = require('./collidable');
 var Direction = require('./constants').Direction;
 var constants = require('./constants');
@@ -2989,7 +2989,7 @@ Projectile.prototype.moveToNextPosition = function () {
   this.y = next.y;
 };
 
-},{"./collidable":118,"./constants":119}],125:[function(require,module,exports){
+},{"./collidable":119,"./constants":120}],126:[function(require,module,exports){
 /**
  * Load Skin for Studio.
  */
@@ -3329,7 +3329,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../../locale/current/studio":165,"../skins":114,"./constants":119}],122:[function(require,module,exports){
+},{"../../locale/current/studio":166,"../skins":115,"./constants":120}],123:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/studio');
@@ -4798,7 +4798,7 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
   'startBlocks': "",
 });
 
-},{"../../locale/current/studio":165,"../block_utils":15,"../utils":154,"./constants":119}],121:[function(require,module,exports){
+},{"../../locale/current/studio":166,"../block_utils":16,"../utils":155,"./constants":120}],122:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4818,7 +4818,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":159,"ejs":175}],120:[function(require,module,exports){
+},{"../../locale/current/common":160,"ejs":176}],121:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4838,7 +4838,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":159,"ejs":175}],118:[function(require,module,exports){
+},{"../../locale/current/common":160,"ejs":176}],119:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -4944,7 +4944,7 @@ Collidable.prototype.outOfBounds = function () {
          (this.y > studioApp.MAZE_HEIGHT + (this.height / 2));
 };
 
-},{"../StudioApp":2,"./constants":119}],117:[function(require,module,exports){
+},{"../StudioApp":2,"./constants":120}],118:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -6730,9 +6730,9 @@ function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpr
   };
 }
 
-},{"../../locale/current/common":159,"../../locale/current/studio":165,"../StudioApp":2,"../codegen":38,"../functionalBlockUtils":69,"../sharedFunctionalBlocks":113,"../utils":154,"./constants":119}],165:[function(require,module,exports){
+},{"../../locale/current/common":160,"../../locale/current/studio":166,"../StudioApp":2,"../codegen":39,"../functionalBlockUtils":70,"../sharedFunctionalBlocks":114,"../utils":155,"./constants":120}],166:[function(require,module,exports){
 /*studio*/ module.exports = window.blockly.appLocale;
-},{}],116:[function(require,module,exports){
+},{}],117:[function(require,module,exports){
 var constants = require('./constants');
 
 exports.SpriteSpeed = {
@@ -6888,7 +6888,7 @@ exports.onEvent = function (id, eventName, func) {
   });
 };
 
-},{"./constants":119}],119:[function(require,module,exports){
+},{"./constants":120}],120:[function(require,module,exports){
 'use strict';
 
 exports.Direction = {
@@ -7065,7 +7065,7 @@ exports.HIDDEN_VALUE = '"hidden"';
 exports.CLICK_VALUE = '"click"';
 exports.VISIBLE_VALUE = '"visible"';
 
-},{}],37:[function(require,module,exports){
+},{}],38:[function(require,module,exports){
 /**
 	The missing SVG.toDataURL library for your SVG elements.
 
@@ -7288,7 +7288,7 @@ SVGElement.prototype.toDataURL = function(type, options) {
 	}
 }
 
-},{}],36:[function(require,module,exports){
+},{}],37:[function(require,module,exports){
 /**
  * A class to parse color values
  * @author Stoyan Stefanov <sstoo@gmail.com>
@@ -7578,7 +7578,7 @@ function RGBColor(color_string)
 }
 
 
-},{}],34:[function(require,module,exports){
+},{}],35:[function(require,module,exports){
 /*
 
 StackBlur - a fast almost Gaussian Blur For Canvas
@@ -8190,4 +8190,4 @@ function BlurStack()
 	this.a = 0;
 	this.next = null;
 }
-},{}]},{},[123]);
+},{}]},{},[124]);
