@@ -2,13 +2,6 @@
 - script_levels = user ? user.levels_from_script(script) : script.script_levels
 - concept_progress = user ? user.concept_progress : nil
 
-:css
-  .callouteditor {
-    display: inline-block;
-  }
-
-.field.callouteditor
-
 .user-stats-block
   - levels = script_levels.group_by(&:stage_or_game)
   - levels.each_pair do |stage_or_game, sl_group|
