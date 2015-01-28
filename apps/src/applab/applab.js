@@ -595,7 +595,7 @@ Applab.init = function(config) {
     
     if (studioApp.share) {
       // automatically run in share mode:
-      window.setTimeout(studioApp.runButtonClick, 0);
+      window.setTimeout(studioApp.runButtonClick.bind(studioApp), 0);
     }
   };
 
