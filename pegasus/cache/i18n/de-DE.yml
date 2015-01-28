@@ -1065,3 +1065,8 @@
   sphero_beyond_longdescription: 'Für Lehrkräfte und Eltern: "SPRK"-Lektionen erlauben
     es den Kindern, einen Schnellkurs im Programmieren von Robotern zu absolvieren
     und dabei ihre Mathematik- und Naturwissenschafts-Kenntnisse zu erweitern.'
+  dashboard_students_progress: Progress
+  dashboard_progress_not_completed: not completed
+  dashboard_progress_completed_too_many_blocks: completed, too many blocks
+  dashboard_progress_completed_perfect: completed, perfect
+  dashboard_progress_furthest_level_attempted: furthest level attempted

@@ -28,7 +28,13 @@ Milestone Complete!
 
 Phase 3 is designed to provide teachers with professional support, guidance, and feedback during the school year and experiences with an online community of practice.
 
-#### November 22nd Location
+#### Save The Dates
+
+1/24/2015
+<br />
+3/28/2015
+
+#### January 24th Location
 
 DePaul University 
 <br />
@@ -49,14 +55,10 @@ Green Code.org journal
 <br />
 Laptop
 
-#### Save The Dates
-
-1/24/2015
-<br />
-3/28/2015
-
 ### Phase 4: Post Year Development
-Coming Summer 2015 
+
+#### Save the Dates
+6/24/2015 - 6/26/2015 
 
 <br />
 [**Back to the top**](#top)
@@ -87,7 +89,11 @@ Breakfast and lunch will be served.
 
 #### Location ####
 
-Details coming soon!
+TechNexus
+<br />
+20N. Wacker, Suite 1200
+<br />
+Chicago IL 60606
 
 #### What do I bring to Phase 3 PD? ####
 Project GUTS binder with curriculum
@@ -123,7 +129,11 @@ Breakfast and lunch will be served.
 
 #### Location ####
 
-Details coming soon!
+TechNexus
+<br />
+20N. Wacker, Suite 1200
+<br />
+Chicago IL 60606
 
 #### What do I bring to Phase 3 PD? ####
 Bootstrap Workbook

@@ -36,7 +36,11 @@ Breakfast and lunch will be served.
 
 #### Location
 
-Details Coming Soon!
+Holiday Inn Express & Suites: Denver Tech Center-Englewood
+<br />
+7380 South Clinton Street
+<br />
+Englewood, Colorado 80112
 
 #### What do I bring to Phase 3 PD? ####
 Exploring Computer Science binder with curriculum
@@ -46,7 +50,10 @@ Green Code.org journal
 Laptop
 
 ### Phase 4: Post Year Development
-Coming Summer 2015  	
+
+#### Save the Dates
+
+6/15/2015 - 6/17/2015
 
 [**Back to the top**](#top)
 

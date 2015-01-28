@@ -6,18 +6,6 @@ class HomeController < ApplicationController
     redirect_to params[:return_to].to_s
   end
 
-  def check_username
-    if !params[:username] || params[:username].length < 5
-      render json: { message: I18n.t('signup_form.invalid_username'), available: false }
-    else
-      if User.exists?(username: params[:username])
-        render json: { message: I18n.t('signup_form.taken_username'), available: false }
-      else
-        render json: { message: I18n.t('signup_form.valid_username'), available: true }
-      end
-    end
-  end
-
   def home_insert
     if current_user
       render 'index', layout: false, formats: [:html]

@@ -11,7 +11,8 @@ var APPS = [
   'jigsaw',
   'calc',
   'applab',
-  'eval'
+  'eval',
+  'netsim'
 ];
 
 if (process.env.MOOC_APP) {
@@ -107,16 +108,6 @@ config.copy = {
       }
     ]
   },
-  browserified: {
-    files: [
-      {
-        expand: true,
-        cwd: 'build/browserified',
-        src: ['**/*.js'],
-        dest: 'build/package/js'
-      }
-    ]
-  },
   static: {
     files: [
       {
@@ -136,6 +127,17 @@ config.copy = {
   },
   lib: {
     files: [
+      {
+        expand: true,
+        cwd: 'lib/blockly',
+        src: ['??_??.js'],
+        dest: 'build/package/js',
+        // e.g., ar_sa.js -> ar_sa/blockly_locale.js
+        rename: function(dest, src) {
+          var outputPath = src.replace(/(.{2}_.{2})\.js/g, '$1/blockly_locale.js');
+          return path.join(dest, outputPath);
+        }
+      },
       {
         expand: true,
         cwd: 'lib/ace/src' + ace_suffix + '-noconflict/',
@@ -232,7 +234,6 @@ config.ejs = {
   }
 };
 
-config.browserify = {};
 var allFilesSrc = [];
 var allFilesDest = [];
 var outputDir = 'build/package/js/';
@@ -243,27 +244,26 @@ APPS.forEach(function (app) {
 
 // Use command-line tools to run browserify (faster/more stable this way)
 var browserifyExec = 'mkdir -p build/browserified && `npm bin`/browserify ' + allFilesSrc.join(' ') +
-  ' -p [ factor-bundle -o ' + allFilesDest.join(' -o ') + ' ] -o ' + outputDir + 'common.js';
+  (APPS.length > 1 ? ' -p [ factor-bundle -o ' + allFilesDest.join(' -o ') + ' ] -o ' + outputDir + 'common.js' :
+    ' -o ' + allFilesDest[0]);
 
 config.exec = {
   browserify: browserifyExec,
   watchify: browserifyExec.replace('browserify', 'watchify') + ' -v'
 };
 
-config.concat = {};
-LOCALES.forEach(function(locale) {
-  var ext = DEV ? 'uncompressed' : 'compressed';
-  config.concat['vendor_' + locale] = {
+var ext = DEV ? 'uncompressed' : 'compressed';
+config.concat = {
+  vendor: {
     nonull: true,
     src: [
       'lib/blockly/blockly_' + ext + '.js',
       'lib/blockly/blocks_' + ext + '.js',
-      'lib/blockly/javascript_' + ext + '.js',
-      'lib/blockly/' + locale + '.js'
+      'lib/blockly/javascript_' + ext + '.js'
     ],
-    dest: 'build/package/js/' + locale + '/vendor.js'
-  };
-});
+    dest: 'build/package/js/blockly.js'
+  }
+};
 
 config.express = {
   server: {
@@ -334,6 +334,7 @@ config.watch = {
 
 config.jshint = {
   options: {
+    curly: true,
     node: true,
     browser: true,
     globals: {
@@ -407,7 +408,6 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('postbuild', [
-    'newer:copy:browserified',
     'newer:copy:static',
     'newer:copy:lib',
     'newer:concat',

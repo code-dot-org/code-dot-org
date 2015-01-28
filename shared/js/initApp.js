@@ -10,7 +10,7 @@ var baseOptions = {
   },
   createCallouts: function() {
     $.fn.qtip.zindex = 500;
-    this.callouts.every(function(callout) {
+    this.callouts && this.callouts.every(function(callout) {
       var selector = callout.element_id; // jquery selector.
       if ($(selector).length === 0 && !callout.on) {
         return true;
@@ -183,7 +183,8 @@ if (appOptions.droplet) {
       .then(loadSource('ace/ext-language_tools'))
       .then(loadSource('droplet/droplet-full.min'));
 } else {
-  promise = loadSource(appOptions.locale + '/vendor')();
+  promise = loadSource('blockly')()
+    .then(loadSource(appOptions.locale + '/blockly_locale'));
 }
 promise.then(loadSource('common' + appOptions.pretty))
   .then(loadSource(appOptions.locale + '/common_locale'))

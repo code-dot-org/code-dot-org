@@ -52,14 +52,15 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal 1, sl.stage_or_game_position
     assert_equal 20, sl.stage_or_game_total
 
-    # custom script
-    sl = @script_level
-    sl.update(stage: @stage)
-    sl.move_to_bottom
-    @script_level2.update(stage: @stage)
-    @script_level2.move_to_bottom
+    # new script
+    sl = create(:script_level, :with_stage)
+    sl2 = create(:script_level, stage: sl.stage, script: sl.script)
+
     assert_equal 1, sl.stage_or_game_position
     assert_equal 2, sl.stage_or_game_total
+
+    assert_equal 2, sl2.stage_or_game_position
+    assert_equal 2, sl2.stage_or_game_total
   end
 
 
