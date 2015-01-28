@@ -35,7 +35,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":108}],11:[function(require,module,exports){
+},{"../skins":114}],11:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/applab');
@@ -109,8 +109,10 @@ levels.ec_simple = {
     {'func': 'canvasGetImageData', 'title': 'Get the ImageData for a rectangle (x, y, width, height) within a canvas', 'category': 'Canvas', 'params': ["'id'", "0", "0", "320", "480"], 'type': 'value' },
     {'func': 'canvasPutImageData', 'title': 'Set the ImageData for a rectangle within a canvas with x, y as the top left coordinates', 'category': 'Canvas', 'params': ["'id'", "imageData", "0", "0"] },
     {'func': 'canvasClear', 'title': 'Clear all data on a canvas', 'category': 'Canvas', 'params': ["'id'"] },
-    {'func': 'createSharedRecord', 'category': 'General', 'params': ["{tableName: 'abc',name:'Alice',age:7,male:false}", "function() {\n  \n}"] },
-    {'func': 'readSharedRecords', 'category': 'General', 'params': ["{tableName: 'abc'}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    for (var prop in records[i]) {\n      createHtmlBlock('id2', 'records[' + i + '].' + prop + ': ' + records[i][prop]);\n    }\n  }\n}"] },
+    {'func': 'createSharedRecord', 'category': 'Storage', 'params': ["{tableName:'abc', name:'Alice', age:7, male:false}", "function() {\n  \n}"] },
+    {'func': 'readSharedRecords', 'category': 'Storage', 'params': ["{tableName: 'abc'}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    createHtmlBlock('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
+    {'func': 'updateSharedRecord', 'category': 'Storage', 'params': ["{tableName:'abc', id: 1, name:'Bob', age:8, male:true}", "function() {\n  \n}"] },
+    {'func': 'deleteSharedRecord', 'category': 'Storage', 'params': ["{tableName:'abc', id: 1}", "function() {\n  \n}"] },
   ],
   'categoryInfo': {
     'General': {
@@ -123,6 +125,10 @@ levels.ec_simple = {
     },
     'Canvas': {
       'color': 'yellow',
+      'blocks': []
+    },
+    'Storage': {
+      'color': 'orange',
       'blocks': []
     },
   },
@@ -211,7 +217,7 @@ levels.full_sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-},{"../../locale/current/applab":150,"../block_utils":15,"../utils":148}],6:[function(require,module,exports){
+},{"../../locale/current/applab":156,"../block_utils":15,"../utils":154}],6:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -1395,6 +1401,8 @@ Applab.callCmd = function (cmd) {
     case 'clearTimeout':
     case 'createSharedRecord':
     case 'readSharedRecords':
+    case 'updateSharedRecord':
+    case 'deleteSharedRecord':
       studioApp.highlight(cmd.id);
       retVal = Applab[cmd.name](cmd.opts);
       break;
@@ -1928,33 +1936,76 @@ Applab.clearTimeout = function (opts) {
 };
 
 Applab.createSharedRecord = function (opts) {
-  var record = codegen.marshalInterpreterToNative(Applab.interpreter,
-      opts.record);
-  AppStorage.createSharedRecord(record,
-      Applab.handleCreateSharedRecord.bind(this, opts.callback));
+  var onSuccess = Applab.handleCreateSharedRecord.bind(this, opts.onSuccess);
+  var onError = Applab.handleError.bind(this, opts.onError);
+  AppStorage.createSharedRecord(opts.record, onSuccess, onError);
 };
 
-Applab.handleCreateSharedRecord = function(interpreterCallback, record) {
-  Applab.eventQueue.push({
-    'fn': interpreterCallback,
-    'arguments': [record]
-  });
+Applab.handleCreateSharedRecord = function(successCallback, record) {
+  if (successCallback) {
+    Applab.eventQueue.push({
+      'fn': successCallback,
+      'arguments': [record]
+    });
+  }
+};
+
+Applab.handleError = function(errorCallback, message) {
+  if (errorCallback) {
+    Applab.eventQueue.push({
+      'fn': errorCallback,
+      'arguments': [message]
+    });
+  } else {
+    outputApplabConsole(message);
+  }
 };
 
 Applab.readSharedRecords = function (opts) {
-  var searchParams = codegen.marshalInterpreterToNative(Applab.interpreter,
-      opts.searchParams);
-  AppStorage.readSharedRecords(
-      searchParams,
-      Applab.handleReadSharedRecords.bind(this, opts.callback));
+  var onSuccess = Applab.handleReadSharedRecords.bind(this, opts.onSuccess);
+  var onError = Applab.handleError.bind(this, opts.onError);
+  AppStorage.readSharedRecords(opts.searchParams, onSuccess, onError);
 };
 
-Applab.handleReadSharedRecords = function(interpreterCallback, records) {
-  Applab.eventQueue.push({
-    'fn': interpreterCallback,
-    'arguments': [records]
-  });
+Applab.handleReadSharedRecords = function(successCallback, records) {
+  if (successCallback) {
+    Applab.eventQueue.push({
+      'fn': successCallback,
+      'arguments': [records]
+    });
+  }
 };
+
+Applab.updateSharedRecord = function (opts) {
+  var onSuccess = Applab.handleUpdateSharedRecord.bind(this, opts.onSuccess);
+  var onError = Applab.handleError.bind(this, opts.onError);
+  AppStorage.updateSharedRecord(opts.record, onSuccess, onError);
+};
+
+Applab.handleUpdateSharedRecord = function(successCallback) {
+  if (successCallback) {
+    Applab.eventQueue.push({
+      'fn': successCallback,
+      'arguments': []
+    });
+  }
+};
+
+Applab.deleteSharedRecord = function (opts) {
+  var onSuccess = Applab.handleDeleteSharedRecord.bind(this, opts.onSuccess);
+  var onError = Applab.handleError.bind(this, opts.onError);
+  AppStorage.deleteSharedRecord(opts.record, onSuccess, onError);
+};
+
+Applab.handleDeleteSharedRecord = function(successCallback) {
+  if (successCallback) {
+    Applab.eventQueue.push({
+      'fn': successCallback,
+      'arguments': []
+    });
+  }
+};
+
 
 /*
 var onWaitComplete = function (opts) {
@@ -2225,7 +2276,7 @@ var getPegasusHost = function() {
         return Array(multiplier + 1).join(input)
     }
 
-},{"../../locale/current/applab":150,"../../locale/current/common":153,"../StudioApp":2,"../codegen":38,"../constants":39,"../dom":40,"../skins":108,"../slider":109,"../templates/page.html":128,"../utils":148,"../xml":149,"./api":4,"./appStorage":5,"./blocks":7,"./controls.html":8,"./extraControlRows.html":9,"./formStorage":10,"./visualization.html":14}],14:[function(require,module,exports){
+},{"../../locale/current/applab":156,"../../locale/current/common":159,"../StudioApp":2,"../codegen":38,"../constants":39,"../dom":40,"../skins":114,"../slider":115,"../templates/page.html":134,"../utils":154,"../xml":155,"./api":4,"./appStorage":5,"./blocks":7,"./controls.html":8,"./extraControlRows.html":9,"./formStorage":10,"./visualization.html":14}],14:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2245,7 +2296,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":168}],10:[function(require,module,exports){
+},{"ejs":175}],10:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -2448,7 +2499,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/applab":150,"../../locale/current/common":153,"ejs":168}],8:[function(require,module,exports){
+},{"../../locale/current/applab":156,"../../locale/current/common":159,"ejs":175}],8:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2468,7 +2519,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":153,"ejs":168}],7:[function(require,module,exports){
+},{"../../locale/current/common":159,"ejs":175}],7:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -2541,7 +2592,7 @@ function installCreateHtmlBlock(blockly, generator, blockInstallOptions) {
   };
 }
 
-},{"../../locale/current/applab":150,"../../locale/current/common":153,"../codegen":38,"../utils":148}],150:[function(require,module,exports){
+},{"../../locale/current/applab":156,"../../locale/current/common":159,"../codegen":38,"../utils":154}],156:[function(require,module,exports){
 /*applab*/ module.exports = window.blockly.appLocale;
 },{}],5:[function(require,module,exports){
 'use strict';
@@ -2561,67 +2612,76 @@ AppStorage.tempEncryptedAppId =
  * @param {string} record.tableName The name of the table to read from.
  * @param {Object} record Object containing other properties to store
  *     on the record.
- * @param {Function} callback Function to call with the resulting record.
+ * @param {function(Object)} onSuccess Function to call with the new record.
+ * @param {function(string)} onError Function to call with an error message
+ *    in case of failure.
  */
-AppStorage.createSharedRecord = function(record, callback) {
+AppStorage.createSharedRecord = function(record, onSuccess, onError) {
   var tableName = record.tableName;
   if (!tableName) {
-    console.log('readRecords: missing required property "tableName"');
+    onError('error creating record: missing required property "tableName"');
+    return;
+  }
+  if (record.id) {
+    onError('error creating record: record must not have an "id" property');
     return;
   }
   var req = new XMLHttpRequest();
-  req.onreadystatechange = handleCreateSharedRecord.bind(req, record, callback);
+  req.onreadystatechange = handleCreateSharedRecord.bind(req, onSuccess, onError);
   var url = "/v3/apps/" + AppStorage.tempEncryptedAppId + "/shared-tables/" + tableName;
   req.open('POST', url, true);
   req.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
   req.send(JSON.stringify(record));
 };
 
-var handleCreateSharedRecord = function(record, callback) {
+var handleCreateSharedRecord = function(onSuccess, onError) {
   if (this.readyState !== 4) {
     return;
   }
-  if (this.status < 200 || this.status > 300) {
-    console.log('unexpected http status ' + this.status);
+  if (this.status < 200 || this.status >= 300) {
+    onError('error creating record: unexpected http status ' + this.status);
     return;
   }
-  callback(record);
+  var record = JSON.parse(this.responseText);
+  onSuccess(record);
 };
 
 /**
  * Reads records which match the searchParams specified by the user,
- * and passes them to the callback.
+ * and passes them to onSuccess.
  * @param {string} searchParams.tableName The name of the table to read from.
  * @param {string} searchParams.recordId Optional id of record to read.
  * @param {Object} searchParams Other search criteria. Only records
  *     whose contents match all criteria will be returned.
- * @param {Function} callback Function to call with an array of record objects.
+ * @param {function(Array)} onSuccess Function to call with an array of record
+       objects.
+ * @param {function(string)} onError Function to call with an error message
+ *     in case of failure.
  */
-AppStorage.readSharedRecords = function(searchParams, callback) {
+AppStorage.readSharedRecords = function(searchParams, onSuccess, onError) {
   var tableName = searchParams.tableName;
   if (!tableName) {
-    console.log('readRecords: missing required property "tableName"');
+    onError('error reading records: missing required property "tableName"');
     return;
   }
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleReadSharedRecords.bind(req, tableName,
-      searchParams, callback);
+      searchParams, onSuccess, onError);
   var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + "/shared-tables/" + tableName;
   req.open('GET', url, true);
   req.send();
   
 };
 
-var handleReadSharedRecords = function(tableName, searchParams, callback) {
+var handleReadSharedRecords = function(tableName, searchParams, onSuccess, onError) {
   if (this.readyState !== 4) {
     return;
   }
-  if (this.status !== 200) {
-    console.log('readRecords failed with status ' + this.status);
+  if (this.status < 200 || this.status >= 300) {
+    onError('error reading records: unexpected http status ' + this.status);
     return;
   }
   var records = JSON.parse(this.responseText);
-  console.log(records);
   records = records.filter(function(record) {
     for (var prop in searchParams) {
       if (record[prop] !== searchParams[prop]) {
@@ -2630,7 +2690,98 @@ var handleReadSharedRecords = function(tableName, searchParams, callback) {
     }
     return true;
   });
-  callback(records);
+  onSuccess(records);
+};
+
+/**
+ * Updates a record in a table, accessible to all users.
+ * @param {string} record.tableName The name of the table to update.
+ * @param {string} record.id The id of the row to update.
+ * @param {Object} record Object containing other properites to update
+ *     on the record.
+ * @param {function()} onSuccess Function to call on success.
+ * @param {function(string)} onError Function to call with an error message
+ *    in case of failure.
+ */
+AppStorage.updateSharedRecord = function(record, onSuccess, onError) {
+  var tableName = record.tableName;
+  if (!tableName) {
+    onError('error updating record: missing required property "tableName"');
+    return;
+  }
+  var recordId = record.id;
+  if (!recordId) {
+    onError('error updating record: missing required property "id"');
+    return;
+  }
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = handleUpdateSharedRecord.bind(req, record, onSuccess, onError);
+  var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + '/shared-tables/' +
+      tableName + '/' + recordId;
+  req.open('POST', url, true);
+  req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+  req.send(JSON.stringify(record));
+};
+
+var handleUpdateSharedRecord = function(record, onSuccess, onError) {
+  if (this.readyState !== 4) {
+    return;
+  }
+  if (this.status === 404) {
+    onError('error updating record: could not find record id ' + record.id +
+            ' in table ' + record.tableName);
+    return;
+  }
+  if (this.status < 200 || this.status >= 300) {
+    onError('error updating record: unexpected http status ' + this.status);
+    return;
+  }
+  onSuccess();
+};
+
+/**
+ * Deletes a record from the specified table.
+ * @param {string} record.tableName The name of the table to delete from.
+ * @param {string} record.id The id of the record to delete.
+ * @param {Object} record Object whose other properties are ignored.
+ * @param {function()} onSuccess Function to call on success.
+ * @param {function(string)} onError Function to call with an error message
+ *    in case of failure.
+ */
+AppStorage.deleteSharedRecord = function(record, onSuccess, onError) {
+  var tableName = record.tableName;
+  if (!tableName) {
+    onError('error deleting record: missing required property "tableName"');
+    return;
+  }
+  var recordId = record.id;
+  if (!recordId) {
+    onError('error deleting record: missing required property "id"');
+    return;
+  }
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = handleDeleteSharedRecord.bind(req, record, onSuccess, onError);
+  var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + '/shared-tables/' +
+      tableName + '/' + recordId + '/delete';
+  req.open('POST', url, true);
+  req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+  req.send(JSON.stringify(record));
+};
+
+var handleDeleteSharedRecord = function(record, onSuccess, onError) {
+  if (this.readyState !== 4) {
+    return;
+  }
+  if (this.status === 404) {
+    onError('error deleting record: could not find record id ' + record.id +
+        ' in table ' + record.tableName);
+    return;
+  }
+  if (this.status < 200 || this.status >= 300) {
+    onError('error deleting record: unexpected http status ' + this.status);
+    return;
+  }
+  onSuccess();
 };
 
 },{}],4:[function(require,module,exports){
@@ -2921,18 +3072,36 @@ exports.clearTimeout = function (blockId, timeoutId) {
                            {'timeoutId': timeoutId });
 };
 
-exports.createSharedRecord = function (blockId, record, callback) {
+exports.createSharedRecord = function (blockId, record, onSuccess, onError) {
   return Applab.executeCmd(blockId,
                           'createSharedRecord',
                           {'record': record,
-                           'callback': callback });
+                           'onSuccess': onSuccess,
+                           'onError': onError});
 };
 
-exports.readSharedRecords = function (blockId, searchParams, callback) {
+exports.readSharedRecords = function (blockId, searchParams, onSuccess, onError) {
   return Applab.executeCmd(blockId,
                           'readSharedRecords',
                           {'searchParams': searchParams,
-                           'callback': callback });
+                           'onSuccess': onSuccess,
+                           'onError': onError});
+};
+
+exports.updateSharedRecord = function (blockId, record, onSuccess, onError) {
+  return Applab.executeCmd(blockId,
+                          'updateSharedRecord',
+                          {'record': record,
+                           'onSuccess': onSuccess,
+                           'onError': onError});
+};
+
+exports.deleteSharedRecord = function (blockId, record, onSuccess, onError) {
+  return Applab.executeCmd(blockId,
+                          'deleteSharedRecord',
+                          {'record': record,
+                           'onSuccess': onSuccess,
+                           'onError': onError});
 };
 
 },{}]},{},[12]);
