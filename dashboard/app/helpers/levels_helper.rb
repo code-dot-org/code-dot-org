@@ -228,6 +228,7 @@ module LevelsHelper
       projectile_collisions
       allow_sprites_outside_playspace
       sprites_hidden_to_start
+      background
       coordinate_grid_background
       use_modal_function_editor
       use_contract_editor

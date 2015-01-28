@@ -281,7 +281,16 @@ class DashboardSection
        join(:users, :id=>:user_id).
        select(*fields).
        where(user_id:user_id).
-       map{|i| self.new(i).to_hash}
+       map{|row| self.new(row).to_owner_hash}
+  end
+
+  def self.fetch_student_sections(student_id)
+    DASHBOARD_DB[:sections].
+        select(*fields).
+        join(:followers, :section_id=>:id).
+        join(:users, :id=>:student_user_id).
+        where(student_user_id: student_id).
+        map{|row| self.new(row).to_member_hash}
   end
 
   def add_student(student)
@@ -358,17 +367,22 @@ class DashboardSection
       first
   end
 
-  def to_hash()
+  def to_owner_hash()
+    to_member_hash.merge(
+        course:course,
+        teachers:teachers,
+        students:students
+    )
+  end
+
+  def to_member_hash()
     {
-      id:@row[:id],
-      location:"/v2/sections/#{@row[:id]}",
-      name:@row[:name],
-      login_type:@row[:login_type],
-      grade:@row[:grade],
-      code:@row[:code],
-      course:course,
-      teachers:teachers,
-      students:students,
+        id:@row[:id],
+        location:"/v2/sections/#{@row[:id]}",
+        name:@row[:name],
+        login_type:@row[:login_type],
+        grade:@row[:grade],
+        code:@row[:code],
     }
   end
 
