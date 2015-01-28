@@ -13,7 +13,6 @@ gemfile: Gemfile
 bundler_args: --without development --deployment
 
 before_script:
-  - 'echo "pegasus_db_name: dashboard_test" > locals.yml'
   - cd dashboard
   - bundle exec rake -t db:create db:schema:load
 
