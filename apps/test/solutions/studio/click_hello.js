@@ -1,4 +1,6 @@
 var testUtils = require('../../util/testUtils');
+var _ = require(testUtils.buildPath('lodash'));
+
 var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
 
 module.exports = {
@@ -16,12 +18,12 @@ module.exports = {
         assert(Studio.startAvatars[0] === 'octopus');
 
         // simulate a click so that level gets completed
-        setTimeout(function () {
+        testUtils.runOnStudioTick(1, function () {
           var e = {
             preventDefault: function () { }
           };
           Studio.onSpriteClicked(e, 0);
-        }, 1);
+        });
       },
       expected: {
         result: true,

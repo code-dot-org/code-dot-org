@@ -2,18 +2,6 @@ var testUtils = require('../../util/testUtils');
 var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
 var _ = require(testUtils.buildPath('lodash'));
 
-/**
- * Runs the given function at the provided tick count
- */
-function runOnTick(tick, fn) {
-  Applab.onTick = _.wrap(Applab.onTick, function (applabOnTick) {
-    if (Applab.tickCount === tick) {
-      fn();
-    }
-    applabOnTick();
-  });
-}
-
 module.exports = {
   app: "applab",
   skinId: "applab",

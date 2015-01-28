@@ -7,6 +7,8 @@ exports.buildPath = function (path) {
   return __dirname + '/../../build/js/' + path;
 };
 
+var _ = require(exports.buildPath('lodash'));
+
 var studioApp;
 
 var testBlockFactory = require('./testBlockFactory');
@@ -134,4 +136,19 @@ exports.generateArtistAnswer = function (generatedCode) {
   api.log = [];
   generatedCode(api);
   return api.log;
+};
+
+/**
+ * Runs the given function at the provided tick count. For Studio only.
+ */
+exports.runOnStudioTick = function (tick, fn) {
+  if (!Studio) {
+    throw new Error('not supported outside of studio');
+  }
+  Studio.onTick = _.wrap(Studio.onTick, function (studioOnTick) {
+    if (Studio.tickCount === tick) {
+      fn();
+    }
+    studioOnTick();
+  });
 };

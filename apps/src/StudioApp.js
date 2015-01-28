@@ -160,6 +160,14 @@ StudioApp.prototype.configure = function (options) {
   // currently mutually exclusive.
   this.editCode = options.level && options.level.editCode;
   this.usingBlockly_ = !this.editCode;
+
+  // TODO (bbuchanan) : Replace this editorless-hack with setting an editor enum
+  // or (even better) inject an appropriate editor-adaptor.
+  if (options.isEditorless) {
+    this.editCode = false;
+    this.usingBlockly_ = false;
+  }
+
   this.cdoSounds = options.cdoSounds;
   this.Dialog = options.Dialog;
 
@@ -178,7 +186,7 @@ StudioApp.prototype.init = function(config) {
 
   this.setConfigValues_(config);
 
-  this.configureDom_(config);
+  this.configureDom(config);
 
   if (config.hideSource) {
     this.handleHideSource_({
@@ -703,14 +711,16 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
 *  Resizes the blockly workspace.
 */
 StudioApp.prototype.onResize = function() {
-  var visualizationColumn = document.getElementById('visualizationColumn');
-  var gameWidth = visualizationColumn.getBoundingClientRect().width;
 
-  var blocklyDiv = document.getElementById('blockly');
-  var codeWorkspace = document.getElementById('codeWorkspace');
-
-  // resize either blockly or codeWorkspace
-  var div = this.editCode ? codeWorkspace : blocklyDiv;
+  // First, grab the main app container
+  // This is inconsistently named across apps right now
+  // TODO (bbuchanan) : Unify parent app container names
+  var div;
+  if (this.editCode) {
+    div = document.getElementById('codeWorkspace');
+  } else if (this.isUsingBlockly()) {
+    div = document.getElementById('blockly');
+  }
 
   var divParent = div.parentNode;
   var parentStyle = window.getComputedStyle(divParent);
@@ -722,13 +732,15 @@ StudioApp.prototype.onResize = function() {
   var headersHeight = parseInt(window.getComputedStyle(headers).height, 10);
 
   div.style.top = divParent.offsetTop + 'px';
+
+  var visualizationColumn = document.getElementById('visualizationColumn');
+  var gameWidth = visualizationColumn.getBoundingClientRect().width;
   var fullWorkspaceWidth = parentWidth - (gameWidth + WORKSPACE_PLAYSPACE_GAP);
-  var oldWidth = parseInt(div.style.width, 10) || div.getBoundingClientRect().width;
-  div.style.width = fullWorkspaceWidth + 'px';
 
   // Keep blocks static relative to the right edge in RTL mode
+  var oldWidth = parseInt(div.style.width, 10) || div.getBoundingClientRect().width;
   if (this.isUsingBlockly() && Blockly.RTL && (fullWorkspaceWidth - oldWidth !== 0)) {
-    Blockly.mainBlockSpace.getTopBlocks().forEach(function(topBlock) {
+    Blockly.mainBlockSpace.getTopBlocks().forEach(function (topBlock) {
       topBlock.moveBy(fullWorkspaceWidth - oldWidth, 0);
     });
   }
@@ -754,6 +766,7 @@ StudioApp.prototype.onResize = function() {
     div.style.height = (parentHeight - headersHeight) + 'px';
   }
 
+  div.style.width = fullWorkspaceWidth + 'px';
   this.resizeHeaders(fullWorkspaceWidth);
 };
 
@@ -763,33 +776,46 @@ StudioApp.prototype.onResize = function() {
 // |                 |         <--------- workspaceWidth ---------->         |
 // |         <---------------- fullWorkspaceWidth ----------------->         |
 StudioApp.prototype.resizeHeaders = function (fullWorkspaceWidth) {
-  var minWorkspaceWidthForShowCode = this.editCode ? 250 : 450;
   var toolboxWidth = 0;
-  if (this.editCode) {
-    // If in the droplet editor, but not using blocks, keep categoryWidth at 0
-    if (this.editor.currentlyUsingBlocks) {
-      // Set toolboxWidth based on the block palette width:
-      var categories = document.querySelector('.droplet-palette-wrapper');
-      toolboxWidth = parseInt(window.getComputedStyle(categories).width, 10);
+  var showCodeWidth = 0;
+
+  var headersDiv = document.getElementById('headers');
+  if (headersDiv) {
+    headersDiv.style.width = fullWorkspaceWidth + 'px';
+  }
+
+  var toolboxHeader = document.getElementById('toolbox-header');
+  if (toolboxHeader) {
+    if (this.editCode) {
+      // If in the droplet editor, but not using blocks, keep categoryWidth at 0
+      if (this.editor.currentlyUsingBlocks) {
+        // Set toolboxWidth based on the block palette width:
+        var categories = document.querySelector('.droplet-palette-wrapper');
+        toolboxWidth = parseInt(window.getComputedStyle(categories).width, 10);
+      }
+    } else if (this.isUsingBlockly()) {
+      toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
     }
-  } else if (this.isUsingBlockly()) {
-    toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
+    toolboxHeader.style.width = toolboxWidth + 'px';
   }
 
   var showCodeHeader = document.getElementById('show-code-header');
-  var showCodeWidth = 0;
-  if (this.enableShowCode &&
-      (fullWorkspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
-    showCodeWidth = parseInt(window.getComputedStyle(showCodeHeader).width, 10);
-    showCodeHeader.style.display = "";
-  } else {
-    showCodeHeader.style.display = "none";
+  if (showCodeHeader) {
+    var minWorkspaceWidthForShowCode = this.editCode ? 250 : 450;
+    if (this.enableShowCode &&
+        (fullWorkspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
+      showCodeWidth = parseInt(window.getComputedStyle(showCodeHeader).width, 10);
+      showCodeHeader.style.display = "";
+    } else {
+      showCodeHeader.style.display = "none";
+    }
   }
 
-  document.getElementById('headers').style.width = fullWorkspaceWidth + 'px';
-  document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
-  document.getElementById('workspace-header').style.width =
-    (fullWorkspaceWidth - toolboxWidth - showCodeWidth) + 'px';
+  var workspaceHeader = document.getElementById('workspace-header');
+  if (workspaceHeader) {
+    workspaceHeader.style.width =
+        (fullWorkspaceWidth - toolboxWidth - showCodeWidth) + 'px';
+  }
 };
 
 /**
@@ -1041,9 +1067,10 @@ StudioApp.prototype.setConfigValues_ = function (config) {
  * Begin modifying the DOM based on config.
  * Note: Has side effects on config
  */
-StudioApp.prototype.configureDom_ = function (config) {
+StudioApp.prototype.configureDom = function (config) {
   var container = document.getElementById(config.containerId);
   container.innerHTML = config.html;
+
   var runButton = container.querySelector('#runButton');
   var resetButton = container.querySelector('#resetButton');
   var throttledRunClick = _.debounce(this.runButtonClick, 250, true);
