@@ -593,3 +593,25 @@
   margin-left:5%;
   margin-right:27%;
 }
+
+.user_menu {
+  display: inline;
+  float: right;
+  color: white;
+  padding: 6px 5px 5px 10px;
+  background-color: rgb(255, 164, 0);
+  height: 35px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.user_options {
+  background-color: white;
+  border: 1px solid black;
+  z-index: 100001;
+  text-align: left;
+  white-space: nowrap;
+  position: absolute;
+  right: 0;
+  padding: 10px;
+}

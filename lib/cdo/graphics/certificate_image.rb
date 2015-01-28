@@ -38,7 +38,7 @@ def create_course_certificate_image(name, course=nil, sponsor=nil)
     image = Magick::Image.read(pegasus_dir('sites.v3', 'code.org', 'public', 'images', image_file)).first
 
     # student name
-    name_vertical_offset = 612
+    name_vertical_offset = 445
     Magick::Draw.new.annotate(image, 0, 0, 0, name_vertical_offset, name) do
       self.gravity = Magick::NorthGravity
       self.pointsize = 96
@@ -71,7 +71,7 @@ def create_course_certificate_image(name, course=nil, sponsor=nil)
     end
 
     # course name
-    course_vertical_offset = 830
+    course_vertical_offset = 610
     Magick::Draw.new.annotate(image, 0, 0, 0, course_vertical_offset, full_course_name) do
       self.gravity = Magick::NorthGravity
       self.pointsize = 60

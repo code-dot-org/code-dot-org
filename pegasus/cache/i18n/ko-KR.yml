@@ -880,3 +880,8 @@
     solving), 컴퓨터 프로그래밍을 교육하고 배울 수 있습니다.
   sphero_beyond_longdescription: SPRK 교육과정을 통해 아이들이 로봇이 충돌을 피하도록 하는 재미있는 프로그래밍 과정을
     통해 수학 과학 능력을 향상시킬 수 있습니다.
+  dashboard_students_progress: Progress
+  dashboard_progress_not_completed: not completed
+  dashboard_progress_completed_too_many_blocks: completed, too many blocks
+  dashboard_progress_completed_perfect: completed, perfect
+  dashboard_progress_furthest_level_attempted: furthest level attempted

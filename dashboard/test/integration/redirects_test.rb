@@ -31,6 +31,11 @@ class RedirectsTest < ActionDispatch::IntegrationTest
     assert_redirected_to '/s/course3'
   end
 
+  test 'redirect beta' do
+    get '/beta'
+    assert_redirected_to '/'
+  end
+
   test 'redirects /sh to /c' do
     get '/sh/1'
     assert_redirected_to '/c/1'
@@ -57,6 +62,16 @@ class RedirectsTest < ActionDispatch::IntegrationTest
 
     get '/u/1/generate_image'
     assert_redirected_to '/c/1/generate_image'
+  end
+
+  test "old teacher dashboard redirects to new teacher dashboard" do
+    urls = %w{/followers /followers/manage /followers/sections /stats/students /sections/new /sections/1/edit}
+
+    urls.each do |url|
+      get url
+      assert_response :redirect#, "for url #{url}"
+      assert_redirected_to 'http://test.code.org/teacher-dashboard', "for url #{url}"
+    end
   end
 
 end
