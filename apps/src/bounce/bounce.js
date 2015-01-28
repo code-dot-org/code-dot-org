@@ -1054,7 +1054,7 @@ Bounce.execute = function() {
   Bounce.response = null;
 
   if (level.editCode) {
-    code = utils.generateCodeAliases(level.codeFunctions, 'Bounce');
+    code = utils.generateCodeAliases(level.codeFunctions, null, 'Bounce');
     code += studioApp.editor.getValue();
   }
 

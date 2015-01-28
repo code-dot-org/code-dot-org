@@ -970,7 +970,7 @@ Maze.execute = function(stepMode) {
   if (studioApp.isUsingBlockly()) {
     code = Blockly.Generator.blockSpaceToCode('JavaScript');
   } else {
-    code = utils.generateCodeAliases(level.codeFunctions, 'Maze');
+    code = utils.generateCodeAliases(level.codeFunctions, null, 'Maze');
     code += studioApp.editor.getValue();
   }
 
