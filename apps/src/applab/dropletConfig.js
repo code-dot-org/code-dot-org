@@ -40,6 +40,14 @@ module.exports.blocks = [
   {'func': 'readSharedRecords', 'category': 'Storage', 'params': ["{tableName: 'abc'}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    createHtmlBlock('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
   {'func': 'updateSharedRecord', 'category': 'Storage', 'params': ["{tableName:'abc', id: 1, name:'Bob', age:8, male:true}", "function() {\n  \n}"] },
   {'func': 'deleteSharedRecord', 'category': 'Storage', 'params': ["{tableName:'abc', id: 1}", "function() {\n  \n}"] },
+  {'func': 'turtleMoveForward', 'title': 'Move the turtle forward the specified distance', 'category': 'Turtle', 'params': ["100"] },
+  {'func': 'turtleMoveBackward', 'title': 'Move the turtle backward the specified distance', 'category': 'Turtle', 'params': ["100"] },
+  {'func': 'turtleTurnRight', 'title': 'Turn the turtle clockwise by the specified number of degrees', 'category': 'Turtle', 'params': ["90"] },
+  {'func': 'turtleTurnLeft', 'title': 'Turn the turtle counterclockwise by the specified number of degrees', 'category': 'Turtle', 'params': ["90"] },
+  {'func': 'turtlePenUp', 'title': "Pick up the turtle's pen", 'category': 'Turtle' },
+  {'func': 'turtlePenDown', 'title': "Set down the turtle's pen", 'category': 'Turtle' },
+  {'func': 'turtlePenWidth', 'title': 'Set the turtle to the specified pen width', 'category': 'Turtle', 'params': ["3"] },
+  {'func': 'turtlePenColor', 'title': 'Set the turtle to the specified pen color', 'category': 'Turtle', 'params': ["'red'"] },
 ];
 
 module.exports.categories = {
@@ -57,6 +65,10 @@ module.exports.categories = {
   },
   'Storage': {
     'color': 'orange',
+    'blocks': []
+  },
+  'Turtle': {
+    'color': 'yellow',
     'blocks': []
   },
 };
