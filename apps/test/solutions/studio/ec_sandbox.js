@@ -4,18 +4,6 @@ var _ = require(testUtils.buildPath('lodash'));
 var Direction = require(testUtils.buildPath('studio/constants.js')).Direction;
 var blockUtils = require(testUtils.buildPath('block_utils'));
 
-/**
- * Runs the given function at the provided tick count
- */
-function runOnTick(tick, fn) {
-  Studio.onTick = _.wrap(Studio.onTick, function (studioOnTick) {
-    if (Studio.tickCount === tick) {
-      fn();
-    }
-    studioOnTick();
-  });
-}
-
 module.exports = {
   app: "studio",
   skinId: "studio",
@@ -69,7 +57,7 @@ module.exports = {
         "throwProjectile(0, 2, 'blue_fireball');" +
         "onEvent('whenSpriteCollided-1-any_projectile', function() { vanish(1); });",
       runBeforeClick: function (assert) {
-        runOnTick(5, function () {
+        testUtils.runOnStudioTick(5, function () {
           assert(Studio.projectiles.length === 1);
           assert(Studio.projectiles[0].dir === Direction.EAST);
           var proj = document.getElementById('projectile_clippath_0').nextSibling;
@@ -82,7 +70,7 @@ module.exports = {
         });
         // our fireball should collide at tick 24, and vanish at tick 25, so by
         // tick 26 we should be finished
-        runOnTick(26, function () {
+        testUtils.runOnStudioTick(26, function () {
           assert(Studio.sprite[1].visible === false, "Second sprite has vanished");
           Studio.onPuzzleComplete();
         });

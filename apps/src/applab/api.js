@@ -285,16 +285,34 @@ exports.clearTimeout = function (blockId, timeoutId) {
                            {'timeoutId': timeoutId });
 };
 
-exports.createSharedRecord = function (blockId, record, callback) {
+exports.createSharedRecord = function (blockId, record, onSuccess, onError) {
   return Applab.executeCmd(blockId,
                           'createSharedRecord',
                           {'record': record,
-                           'callback': callback });
+                           'onSuccess': onSuccess,
+                           'onError': onError});
 };
 
-exports.readSharedRecords = function (blockId, searchParams, callback) {
+exports.readSharedRecords = function (blockId, searchParams, onSuccess, onError) {
   return Applab.executeCmd(blockId,
                           'readSharedRecords',
                           {'searchParams': searchParams,
-                           'callback': callback });
+                           'onSuccess': onSuccess,
+                           'onError': onError});
+};
+
+exports.updateSharedRecord = function (blockId, record, onSuccess, onError) {
+  return Applab.executeCmd(blockId,
+                          'updateSharedRecord',
+                          {'record': record,
+                           'onSuccess': onSuccess,
+                           'onError': onError});
+};
+
+exports.deleteSharedRecord = function (blockId, record, onSuccess, onError) {
+  return Applab.executeCmd(blockId,
+                          'deleteSharedRecord',
+                          {'record': record,
+                           'onSuccess': onSuccess,
+                           'onError': onError});
 };
