@@ -65,7 +65,7 @@ module.exports = function(app, levels, options) {
           // for editCode levels, we have to delay the onInitialize callback
           // until the droplet editor has loaded.
           // TODO: build a proper state machine with onEditorReady() callback
-          setTimeout(options.onInitialize, 0);
+          setTimeout(options.onInitialize.bind(options), 0);
         } else {
           options.onInitialize();
         }
