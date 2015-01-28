@@ -99,7 +99,7 @@ module ScriptLevelsHelper
       scriptId: script.id,
       scriptLevelId: script_level.try(:level_id),
       statsPath: header_stats_path,
-      showStageLinks: script.twenty_hour? || script.stages.to_a.count > 1,
+      showFreeplayLinks: script.twenty_hour? || script.stages.to_a.count > 1,
       levels: game_levels.map do |sl|
         completion_status, link = level_info(current_user, sl)
         {
