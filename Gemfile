@@ -14,12 +14,12 @@ gem 'le', '~> 2.2'
 gem 'os'
 gem 'redis', '~> 3.1.0'
 gem 'google_drive', '~> 0.3.10'
+gem 'dalli' # memcached
 
 group :development do
   gem 'rerun', '~> 0.10.0'
   gem 'shotgun'
   gem 'thin', '~> 1.6.2'
-  gem "rack-proxy" # enabling proxying requests to dashboard to pegasus (in production we use varnish to route things)
 end
 
 group :development, :test do

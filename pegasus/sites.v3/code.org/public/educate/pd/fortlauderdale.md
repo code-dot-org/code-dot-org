@@ -44,7 +44,7 @@ Nova Southeastern University (NSU)
 <br />
 Carl DeSantis Building
 <br />
-Room 2072
+Room 1048
 <br />
 3301 College Avenue
 <br />
@@ -61,7 +61,9 @@ Green Code.org journal
 Laptop
 
 ### Phase 4: Post Year Development
-Coming Summer 2015  
+
+#### Save the Dates
+6/8/2015 - 6/10/2015
 
 [**Back to the top**](#top)
 <a id="mss"></a>

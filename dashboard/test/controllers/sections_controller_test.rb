@@ -92,18 +92,4 @@ class SectionsControllerTest < ActionController::TestCase
 
     assert_redirected_to '/s/flappy'
   end
-
-##### OLD SECTION STUFF
-
-  test "new should redirect to new teacher dashboard" do
-    get :new
-
-    assert_redirected_to '//test.code.org/teacher-dashboard'
-  end
-
-  test "edit should redirect to new teacher dashboard" do
-    get :edit, id: 1
-
-    assert_redirected_to '//test.code.org/teacher-dashboard'
-  end
 end

@@ -192,9 +192,9 @@ module Poste2
     raise ArgumentError, 'No recipient' unless recipient && recipient[:id] && recipient[:email] && recipient[:ip_address]
 
     message_name = message_name.to_s.strip
-    message_id = @@message_id_cache[message_name]
-    unless message_id
-      message = POSTE_DB[:poste_messages].where(name:message_name.to_s.strip).first
+    unless message_id = @@message_id_cache[message_name]
+      message = POSTE_DB[:poste_messages].where(name:message_name).first
+      message ||= POSTE_DB[:poste_messages].where(name:message_name).first if Poste.resolve_template(message_name)
       raise ArgumentError, "No #{message_name} message found." unless message
       message_id = @@message_id_cache[message_name] = message[:id]
     end

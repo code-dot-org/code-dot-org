@@ -35,7 +35,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":108}],11:[function(require,module,exports){
+},{"../skins":114}],11:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/applab');
@@ -69,6 +69,8 @@ levels.ec_simple = {
   'freePlay': true,
   'editCode': true,
   'sliderSpeed': 0.95,
+  'appWidth': 320,
+  'appHeight': 480,
   'codeFunctions': [
     {'func': 'onEvent', 'title': 'Execute code in response to an event for the specified element', 'category': 'General', 'params': ["'id'", "'click'", "function() {\n  \n}"] },
     {'func': 'startWebRequest', 'title': 'Request data from the internet and execute code when the request is complete', 'category': 'General', 'params': ["'http://api.openweathermap.org/data/2.5/weather?q=London,uk'", "function(status, type, content) {\n  \n}"] },
@@ -96,19 +98,21 @@ levels.ec_simple = {
     {'func': 'getImageURL', 'title': 'Get the URL associated with an image or image upload button', 'category': 'UI Controls', 'params': ["'id'"], 'type': 'value' },
     {'func': 'setImageURL', 'title': 'Set the URL for the specified image element id', 'category': 'UI Controls', 'params': ["'id'", "'http://code.org/images/logo.png'"] },
     {'func': 'createImageUploadButton', 'title': 'Create an image upload button and assign it an element id', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
-    {'func': 'createCanvas', 'title': 'Create a canvas with width, height dimensions', 'category': 'Canvas', 'params': ["'id'", "400", "600"] },
-    {'func': 'canvasDrawLine', 'title': 'Draw a line on a canvas from x1, y1 to x2, y2', 'category': 'Canvas', 'params': ["'id'", "0", "0", "400", "600"] },
-    {'func': 'canvasDrawCircle', 'title': 'Draw a circle on a canvas with the specified coordinates for center (x, y) and radius', 'category': 'Canvas', 'params': ["'id'", "200", "300", "100"] },
-    {'func': 'canvasDrawRect', 'title': 'Draw a rectangle on a canvas with x, y, width, and height coordinates', 'category': 'Canvas', 'params': ["'id'", "100", "200", "200", "200"] },
+    {'func': 'createCanvas', 'title': 'Create a canvas with width, height dimensions', 'category': 'Canvas', 'params': ["'id'", "320", "480"] },
+    {'func': 'canvasDrawLine', 'title': 'Draw a line on a canvas from x1, y1 to x2, y2', 'category': 'Canvas', 'params': ["'id'", "0", "0", "160", "240"] },
+    {'func': 'canvasDrawCircle', 'title': 'Draw a circle on a canvas with the specified coordinates for center (x, y) and radius', 'category': 'Canvas', 'params': ["'id'", "160", "240", "100"] },
+    {'func': 'canvasDrawRect', 'title': 'Draw a rectangle on a canvas with x, y, width, and height coordinates', 'category': 'Canvas', 'params': ["'id'", "80", "120", "160", "240"] },
     {'func': 'canvasSetLineWidth', 'title': 'Set the line width for a canvas', 'category': 'Canvas', 'params': ["'id'", "3"] },
     {'func': 'canvasSetStrokeColor', 'title': 'Set the stroke color for a canvas', 'category': 'Canvas', 'params': ["'id'", "'red'"] },
     {'func': 'canvasSetFillColor', 'title': 'Set the fill color for a canvas', 'category': 'Canvas', 'params': ["'id'", "'yellow'"] },
     {'func': 'canvasDrawImage', 'title': 'Draw an image on a canvas with the specified image element and x, y as the top left coordinates', 'category': 'Canvas', 'params': ["'id'", "'imageId'", "0", "0"] },
-    {'func': 'canvasGetImageData', 'title': 'Get the ImageData for a rectangle (x, y, width, height) within a canvas', 'category': 'Canvas', 'params': ["'id'", "0", "0", "400", "600"], 'type': 'value' },
+    {'func': 'canvasGetImageData', 'title': 'Get the ImageData for a rectangle (x, y, width, height) within a canvas', 'category': 'Canvas', 'params': ["'id'", "0", "0", "320", "480"], 'type': 'value' },
     {'func': 'canvasPutImageData', 'title': 'Set the ImageData for a rectangle within a canvas with x, y as the top left coordinates', 'category': 'Canvas', 'params': ["'id'", "imageData", "0", "0"] },
     {'func': 'canvasClear', 'title': 'Clear all data on a canvas', 'category': 'Canvas', 'params': ["'id'"] },
-    {'func': 'createSharedRecord', 'category': 'General', 'params': ["{tableName: 'abc',name:'Alice',age:7,male:false}", "function() {\n  \n}"] },
-    {'func': 'readSharedRecords', 'category': 'General', 'params': ["{tableName: 'abc'}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    for (var prop in records[i]) {\n      createHtmlBlock('id2', 'records[' + i + '].' + prop + ': ' + records[i][prop]);\n    }\n  }\n}"] },
+    {'func': 'createSharedRecord', 'category': 'Storage', 'params': ["{tableName:'abc', name:'Alice', age:7, male:false}", "function() {\n  \n}"] },
+    {'func': 'readSharedRecords', 'category': 'Storage', 'params': ["{tableName: 'abc'}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    createHtmlBlock('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
+    {'func': 'updateSharedRecord', 'category': 'Storage', 'params': ["{tableName:'abc', id: 1, name:'Bob', age:8, male:true}", "function() {\n  \n}"] },
+    {'func': 'deleteSharedRecord', 'category': 'Storage', 'params': ["{tableName:'abc', id: 1}", "function() {\n  \n}"] },
   ],
   'categoryInfo': {
     'General': {
@@ -121,6 +125,10 @@ levels.ec_simple = {
     },
     'Canvas': {
       'color': 'yellow',
+      'blocks': []
+    },
+    'Storage': {
+      'color': 'orange',
       'blocks': []
     },
   },
@@ -209,7 +217,7 @@ levels.full_sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-},{"../../locale/current/applab":150,"../block_utils":15,"../utils":148}],6:[function(require,module,exports){
+},{"../../locale/current/applab":156,"../block_utils":15,"../utils":154}],6:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -272,10 +280,18 @@ var StepType = {
   OUT:  3,
 };
 
+// The typical width of the visualization area (indepdendent of appWidth)
+var vizAppWidth = 400;
+// The default values for appWidth and appHeight (if not specified in the level)
+var defaultAppWidth = 400;
+var defaultAppHeight = 400;
+
 function loadLevel() {
   Applab.timeoutFailureTick = level.timeoutFailureTick || Infinity;
   Applab.minWorkspaceHeight = level.minWorkspaceHeight;
   Applab.softButtons_ = level.softButtons || {};
+  Applab.appWidth = level.appWidth || defaultAppWidth;
+  Applab.appHeight = level.appHeight || defaultAppHeight;
 
   // Override scalars.
   for (var key in level.scale) {
@@ -283,15 +299,96 @@ function loadLevel() {
   }
 }
 
+//
+// The visualization area adjusts its size using a series of CSS rules that are
+// tuned to make adjustments assuming a 400x400 visualization. Since applab
+// allows its visualization size to be set on a per-level basis, the function
+// below modifies the CSS rules to account for the per-level coordinates
+//
+// The visualization column will remain at 400 pixels wide in the max-width
+// case and scale downward from there. The visualization height will be set
+// to preserve the proper aspect ratio with respect to the current width.
+//
+// The divApplab coordinate space will be Applab.appWidth by Applab.appHeight.
+// The scale values are then adjusted such that the max-width case may result
+// in a scaled-up version of divApplab and the min-width case will typically
+// result in a scaled-down version of divApplab
+//
+
+function adjustAppSizeStyles() {
+  var vizScale = 1;
+  // We assume these are listed in this order:
+  var scaleFactors = [ 1.0, 0.875, 0.75, 0.675, 0.5 ];
+  if (vizAppWidth !== Applab.appWidth) {
+    vizScale = vizAppWidth / Applab.appWidth;
+    for (var ind = 0; ind < scaleFactors.length; ind++) {
+      scaleFactors[ind] *= vizScale;
+    }
+  }
+  var vizAppHeight = Applab.appHeight * vizScale;
+  var ss = document.styleSheets;
+  for (var i = 0; i < ss.length; i++) {
+    if (ss[i].href && (ss[i].href.indexOf('applab.css') !== -1)) {
+      // We found our applab specific stylesheet:
+      var rules = ss[i].cssRules || ss[i].rules;
+      var changedRules = 0;
+      var curScaleIndex = 0;
+      // Change the width/height plus a set of rules for each scale factor:
+      var totalRules = 1 + scaleFactors.length;
+      for (var j = 0; j < rules.length && changedRules < totalRules; j++) {
+        var childRules = rules[j].cssRules || rules[j].rules;
+        if (rules[j].selectorText === "div#visualization") {
+          // set the 'normal' width/height for the visualization itself
+          rules[j].style.cssText = "height: " + vizAppHeight +
+                                   "px; width: " + vizAppWidth + "px;";
+          changedRules++;
+        } else if (rules[j].media && childRules) {
+          var changedChildRules = 0;
+          var scale = scaleFactors[curScaleIndex];
+          for (var k = 0; k < childRules.length && changedChildRules < 3; k++) {
+            if (childRules[k].selectorText === "div#visualization.responsive") {
+              // For this scale factor...
+              // set the max-height and max-width for the visualization
+              childRules[k].style.cssText = "max-height: " +
+                  Applab.appHeight * scale + "px; max-width: " +
+                  Applab.appWidth * scale + "px;";
+              changedChildRules++;
+            } else if (childRules[k].selectorText === "div#visualizationColumn.responsive") {
+              // set the max-width for the parent visualizationColumn
+              childRules[k].style.cssText = "max-width: " +
+                  Applab.appWidth * scale + "px;";
+              changedChildRules++;
+            } else if (childRules[k].selectorText === "div#visualization.responsive > *") {
+              // and set the scale factor for all children of the visualization
+              // (importantly, the divApplab element)
+              childRules[k].style.cssText = "-webkit-transform: scale(" + scale +
+                  ");-ms-transform: scale(" + scale +
+                  ");transform: scale(" + scale + ");";
+              changedChildRules++;
+            }
+          }
+          if (changedChildRules) {
+            curScaleIndex++;
+            changedRules++;
+          }
+        }
+      }
+      // After processing the applab.css, stop looking for stylesheets:
+      break;
+    }
+  }
+}
+
 var drawDiv = function () {
   var divApplab = document.getElementById('divApplab');
-  var divWidth = parseInt(window.getComputedStyle(divApplab).width, 10);
+  divApplab.style.width = Applab.appWidth + "px";
+  divApplab.style.height = Applab.appHeight + "px";
 
   // TODO: one-time initial drawing
 
   // Adjust visualizationColumn width.
   var visualizationColumn = document.getElementById('visualizationColumn');
-  visualizationColumn.style.width = divWidth + 'px';
+  visualizationColumn.style.width = vizAppWidth + 'px';
 };
 
 function getCurrentTickLength() {
@@ -635,7 +732,7 @@ Applab.init = function(config) {
     config.level.sliderSpeed = 1.0;
   }
 
-  Applab.canvasScale = (window.devicePixelRatio > 1) ? window.devicePixelRatio : 1;
+  adjustAppSizeStyles();
 
   var showSlider = !config.hideSource && config.level.editCode;
   var showDebugButtons = !config.hideSource && config.level.editCode;
@@ -1166,7 +1263,7 @@ Applab.encodedFeedbackImage = '';
 
 Applab.onViewData = function() {
   window.open(
-    '//' + getPegasusHost() + '/edit-csp-app/' + AppStorage.tempAppId,
+    '//' + getPegasusHost() + '/private/edit-csp-app/' + AppStorage.tempEncryptedAppId,
     '_blank');
 };
 
@@ -1304,6 +1401,8 @@ Applab.callCmd = function (cmd) {
     case 'clearTimeout':
     case 'createSharedRecord':
     case 'readSharedRecords':
+    case 'updateSharedRecord':
+    case 'deleteSharedRecord':
       studioApp.highlight(cmd.id);
       retVal = Applab[cmd.name](cmd.opts);
       break;
@@ -1374,10 +1473,10 @@ Applab.createCanvas = function (opts) {
   if (newElement && ctx) {
     newElement.id = opts.elementId;
     // default width/height if params are missing
-    var width = opts.width || 400;
-    var height = opts.height || 600;
-    newElement.width = width * Applab.canvasScale;
-    newElement.height = height * Applab.canvasScale;
+    var width = opts.width || Applab.appWidth;
+    var height = opts.height || Applab.appHeight;
+    newElement.width = width;
+    newElement.height = height;
     newElement.style.width = width + 'px';
     newElement.style.height = height + 'px';
     // set transparent fill by default:
@@ -1394,8 +1493,8 @@ Applab.canvasDrawLine = function (opts) {
   var ctx = canvas.getContext("2d");
   if (ctx && divApplab.contains(canvas)) {
     ctx.beginPath();
-    ctx.moveTo(opts.x1 * Applab.canvasScale, opts.y1 * Applab.canvasScale);
-    ctx.lineTo(opts.x2 * Applab.canvasScale, opts.y2 * Applab.canvasScale);
+    ctx.moveTo(opts.x1, opts.y1);
+    ctx.lineTo(opts.x2, opts.y2);
     ctx.stroke();
     return true;
   }
@@ -1408,11 +1507,7 @@ Applab.canvasDrawCircle = function (opts) {
   var ctx = canvas.getContext("2d");
   if (ctx && divApplab.contains(canvas)) {
     ctx.beginPath();
-    ctx.arc(opts.x * Applab.canvasScale,
-            opts.y * Applab.canvasScale,
-            opts.radius * Applab.canvasScale,
-            0,
-            2 * Math.PI);
+    ctx.arc(opts.x, opts.y, opts.radius, 0, 2 * Math.PI);
     ctx.fill();
     ctx.stroke();
     return true;
@@ -1426,10 +1521,7 @@ Applab.canvasDrawRect = function (opts) {
   var ctx = canvas.getContext("2d");
   if (ctx && divApplab.contains(canvas)) {
     ctx.beginPath();
-    ctx.rect(opts.x * Applab.canvasScale,
-             opts.y * Applab.canvasScale,
-             opts.width * Applab.canvasScale,
-             opts.height * Applab.canvasScale);
+    ctx.rect(opts.x, opts.y, opts.width, opts.height);
     ctx.fill();
     ctx.stroke();
     return true;
@@ -1442,7 +1534,7 @@ Applab.canvasSetLineWidth = function (opts) {
   var canvas = document.getElementById(opts.elementId);
   var ctx = canvas.getContext("2d");
   if (ctx && divApplab.contains(canvas)) {
-    ctx.lineWidth = opts.width * Applab.canvasScale;
+    ctx.lineWidth = opts.width;
     return true;
   }
   return false;
@@ -1488,7 +1580,7 @@ Applab.canvasDrawImage = function (opts) {
   var ctx = canvas.getContext("2d");
   if (ctx && divApplab.contains(canvas) && divApplab.contains(image)) {
     var xScale, yScale;
-    xScale = yScale = Applab.canvasScale;
+    xScale = yScale = 1;
     if (opts.width) {
       xScale = xScale * (opts.width / image.width);
     }
@@ -1496,12 +1588,7 @@ Applab.canvasDrawImage = function (opts) {
       yScale = yScale * (opts.height / image.height);
     }
     ctx.save();
-    ctx.setTransform(xScale,
-                     0,
-                     0,
-                     yScale,
-                     opts.x * Applab.canvasScale,
-                     opts.y * Applab.canvasScale);
+    ctx.setTransform(xScale, 0, 0, yScale, opts.x, opts.y);
     ctx.drawImage(image, 0, 0);
     ctx.restore();
     return true;
@@ -1514,10 +1601,7 @@ Applab.canvasGetImageData = function (opts) {
   var canvas = document.getElementById(opts.elementId);
   var ctx = canvas.getContext("2d");
   if (ctx && divApplab.contains(canvas)) {
-    return ctx.getImageData(opts.x * Applab.canvasScale,
-                            opts.y * Applab.canvasScale,
-                            opts.width * Applab.canvasScale,
-                            opts.height * Applab.canvasScale);
+    return ctx.getImageData(opts.x, opts.y, opts.width, opts.height);
   }
 };
 
@@ -1531,9 +1615,7 @@ Applab.canvasPutImageData = function (opts) {
     var tmpImageData = ctx.createImageData(opts.imageData.width,
                                            opts.imageData.height);
     tmpImageData.data.set(opts.imageData.data);
-    return ctx.putImageData(tmpImageData,
-                            opts.x * Applab.canvasScale,
-                            opts.y * Applab.canvasScale);
+    return ctx.putImageData(tmpImageData, opts.x, opts.y);
   }
 };
 
@@ -1854,33 +1936,76 @@ Applab.clearTimeout = function (opts) {
 };
 
 Applab.createSharedRecord = function (opts) {
-  var record = codegen.marshalInterpreterToNative(Applab.interpreter,
-      opts.record);
-  AppStorage.createSharedRecord(record,
-      Applab.handleCreateSharedRecord.bind(this, opts.callback));
+  var onSuccess = Applab.handleCreateSharedRecord.bind(this, opts.onSuccess);
+  var onError = Applab.handleError.bind(this, opts.onError);
+  AppStorage.createSharedRecord(opts.record, onSuccess, onError);
 };
 
-Applab.handleCreateSharedRecord = function(interpreterCallback, record) {
-  Applab.eventQueue.push({
-    'fn': interpreterCallback,
-    'arguments': [record]
-  });
+Applab.handleCreateSharedRecord = function(successCallback, record) {
+  if (successCallback) {
+    Applab.eventQueue.push({
+      'fn': successCallback,
+      'arguments': [record]
+    });
+  }
+};
+
+Applab.handleError = function(errorCallback, message) {
+  if (errorCallback) {
+    Applab.eventQueue.push({
+      'fn': errorCallback,
+      'arguments': [message]
+    });
+  } else {
+    outputApplabConsole(message);
+  }
 };
 
 Applab.readSharedRecords = function (opts) {
-  var searchParams = codegen.marshalInterpreterToNative(Applab.interpreter,
-      opts.searchParams);
-  AppStorage.readSharedRecords(
-      searchParams,
-      Applab.handleReadSharedRecords.bind(this, opts.callback));
+  var onSuccess = Applab.handleReadSharedRecords.bind(this, opts.onSuccess);
+  var onError = Applab.handleError.bind(this, opts.onError);
+  AppStorage.readSharedRecords(opts.searchParams, onSuccess, onError);
 };
 
-Applab.handleReadSharedRecords = function(interpreterCallback, records) {
-  Applab.eventQueue.push({
-    'fn': interpreterCallback,
-    'arguments': [records]
-  });
+Applab.handleReadSharedRecords = function(successCallback, records) {
+  if (successCallback) {
+    Applab.eventQueue.push({
+      'fn': successCallback,
+      'arguments': [records]
+    });
+  }
 };
+
+Applab.updateSharedRecord = function (opts) {
+  var onSuccess = Applab.handleUpdateSharedRecord.bind(this, opts.onSuccess);
+  var onError = Applab.handleError.bind(this, opts.onError);
+  AppStorage.updateSharedRecord(opts.record, onSuccess, onError);
+};
+
+Applab.handleUpdateSharedRecord = function(successCallback) {
+  if (successCallback) {
+    Applab.eventQueue.push({
+      'fn': successCallback,
+      'arguments': []
+    });
+  }
+};
+
+Applab.deleteSharedRecord = function (opts) {
+  var onSuccess = Applab.handleDeleteSharedRecord.bind(this, opts.onSuccess);
+  var onError = Applab.handleError.bind(this, opts.onError);
+  AppStorage.deleteSharedRecord(opts.record, onSuccess, onError);
+};
+
+Applab.handleDeleteSharedRecord = function(successCallback) {
+  if (successCallback) {
+    Applab.eventQueue.push({
+      'fn': successCallback,
+      'arguments': []
+    });
+  }
+};
+
 
 /*
 var onWaitComplete = function (opts) {
@@ -1953,7 +2078,7 @@ var getPegasusHost = function() {
       var name = window.location.hostname.split('.')[0];
       switch(name) {
         case 'localhost':
-          return 'localhost.code.org:9393';
+          return 'localhost.code.org:3000';
         case 'development':
         case 'staging':
         case 'test':
@@ -2151,7 +2276,7 @@ var getPegasusHost = function() {
         return Array(multiplier + 1).join(input)
     }
 
-},{"../../locale/current/applab":150,"../../locale/current/common":153,"../StudioApp":2,"../codegen":38,"../constants":39,"../dom":40,"../skins":108,"../slider":109,"../templates/page.html":128,"../utils":148,"../xml":149,"./api":4,"./appStorage":5,"./blocks":7,"./controls.html":8,"./extraControlRows.html":9,"./formStorage":10,"./visualization.html":14}],14:[function(require,module,exports){
+},{"../../locale/current/applab":156,"../../locale/current/common":159,"../StudioApp":2,"../codegen":38,"../constants":39,"../dom":40,"../skins":114,"../slider":115,"../templates/page.html":134,"../utils":154,"../xml":155,"./api":4,"./appStorage":5,"./blocks":7,"./controls.html":8,"./extraControlRows.html":9,"./formStorage":10,"./visualization.html":14}],14:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2171,7 +2296,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":168}],10:[function(require,module,exports){
+},{"ejs":175}],10:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -2374,7 +2499,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/applab":150,"../../locale/current/common":153,"ejs":168}],8:[function(require,module,exports){
+},{"../../locale/current/applab":156,"../../locale/current/common":159,"ejs":175}],8:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2394,7 +2519,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":153,"ejs":168}],7:[function(require,module,exports){
+},{"../../locale/current/common":159,"ejs":175}],7:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -2467,7 +2592,7 @@ function installCreateHtmlBlock(blockly, generator, blockInstallOptions) {
   };
 }
 
-},{"../../locale/current/applab":150,"../../locale/current/common":153,"../codegen":38,"../utils":148}],150:[function(require,module,exports){
+},{"../../locale/current/applab":156,"../../locale/current/common":159,"../codegen":38,"../utils":154}],156:[function(require,module,exports){
 /*applab*/ module.exports = window.blockly.appLocale;
 },{}],5:[function(require,module,exports){
 'use strict';
@@ -2478,74 +2603,85 @@ function installCreateHtmlBlock(blockly, generator, blockInstallOptions) {
 var AppStorage = module.exports;
 
 // TODO(dave): remove once we can store ids for each app.
-AppStorage.tempAppId = 1337;
+AppStorage.tempEncryptedAppId =
+    window.location.hostname.split('.')[0] === 'localhost' ?
+        "SmwVmYVl1V5UCCw1Ec6Dtw==" : "DvTw9X3pDcyDyil44S6qbw==";
 
 /**
  * Creates a new record in the specified table, accessible to all users.
  * @param {string} record.tableName The name of the table to read from.
  * @param {Object} record Object containing other properties to store
  *     on the record.
- * @param {Function} callback Function to call with the resulting record.
+ * @param {function(Object)} onSuccess Function to call with the new record.
+ * @param {function(string)} onError Function to call with an error message
+ *    in case of failure.
  */
-AppStorage.createSharedRecord = function(record, callback) {
+AppStorage.createSharedRecord = function(record, onSuccess, onError) {
   var tableName = record.tableName;
   if (!tableName) {
-    console.log('readRecords: missing required property "tableName"');
+    onError('error creating record: missing required property "tableName"');
+    return;
+  }
+  if (record.id) {
+    onError('error creating record: record must not have an "id" property');
     return;
   }
   var req = new XMLHttpRequest();
-  req.onreadystatechange = handleCreateSharedRecord.bind(req, record, callback);
-  var url = "/v3/apps/" + AppStorage.tempAppId + "/shared-tables/" + tableName;
+  req.onreadystatechange = handleCreateSharedRecord.bind(req, onSuccess, onError);
+  var url = "/v3/apps/" + AppStorage.tempEncryptedAppId + "/shared-tables/" + tableName;
   req.open('POST', url, true);
   req.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
   req.send(JSON.stringify(record));
 };
 
-var handleCreateSharedRecord = function(record, callback) {
+var handleCreateSharedRecord = function(onSuccess, onError) {
   if (this.readyState !== 4) {
     return;
   }
-  if (this.status < 200 || this.status > 300) {
-    console.log('unexpected http status ' + this.status);
+  if (this.status < 200 || this.status >= 300) {
+    onError('error creating record: unexpected http status ' + this.status);
     return;
   }
-  callback(record);
+  var record = JSON.parse(this.responseText);
+  onSuccess(record);
 };
 
 /**
  * Reads records which match the searchParams specified by the user,
- * and passes them to the callback.
+ * and passes them to onSuccess.
  * @param {string} searchParams.tableName The name of the table to read from.
  * @param {string} searchParams.recordId Optional id of record to read.
  * @param {Object} searchParams Other search criteria. Only records
  *     whose contents match all criteria will be returned.
- * @param {Function} callback Function to call with an array of record objects.
+ * @param {function(Array)} onSuccess Function to call with an array of record
+       objects.
+ * @param {function(string)} onError Function to call with an error message
+ *     in case of failure.
  */
-AppStorage.readSharedRecords = function(searchParams, callback) {
+AppStorage.readSharedRecords = function(searchParams, onSuccess, onError) {
   var tableName = searchParams.tableName;
   if (!tableName) {
-    console.log('readRecords: missing required property "tableName"');
+    onError('error reading records: missing required property "tableName"');
     return;
   }
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleReadSharedRecords.bind(req, tableName,
-      searchParams, callback);
-  var url = '/v3/apps/' + AppStorage.tempAppId + "/shared-tables/" + tableName;
+      searchParams, onSuccess, onError);
+  var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + "/shared-tables/" + tableName;
   req.open('GET', url, true);
   req.send();
   
 };
 
-var handleReadSharedRecords = function(tableName, searchParams, callback) {
+var handleReadSharedRecords = function(tableName, searchParams, onSuccess, onError) {
   if (this.readyState !== 4) {
     return;
   }
-  if (this.status !== 200) {
-    console.log('readRecords failed with status ' + this.status);
+  if (this.status < 200 || this.status >= 300) {
+    onError('error reading records: unexpected http status ' + this.status);
     return;
   }
   var records = JSON.parse(this.responseText);
-  console.log(records);
   records = records.filter(function(record) {
     for (var prop in searchParams) {
       if (record[prop] !== searchParams[prop]) {
@@ -2554,7 +2690,98 @@ var handleReadSharedRecords = function(tableName, searchParams, callback) {
     }
     return true;
   });
-  callback(records);
+  onSuccess(records);
+};
+
+/**
+ * Updates a record in a table, accessible to all users.
+ * @param {string} record.tableName The name of the table to update.
+ * @param {string} record.id The id of the row to update.
+ * @param {Object} record Object containing other properites to update
+ *     on the record.
+ * @param {function()} onSuccess Function to call on success.
+ * @param {function(string)} onError Function to call with an error message
+ *    in case of failure.
+ */
+AppStorage.updateSharedRecord = function(record, onSuccess, onError) {
+  var tableName = record.tableName;
+  if (!tableName) {
+    onError('error updating record: missing required property "tableName"');
+    return;
+  }
+  var recordId = record.id;
+  if (!recordId) {
+    onError('error updating record: missing required property "id"');
+    return;
+  }
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = handleUpdateSharedRecord.bind(req, record, onSuccess, onError);
+  var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + '/shared-tables/' +
+      tableName + '/' + recordId;
+  req.open('POST', url, true);
+  req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+  req.send(JSON.stringify(record));
+};
+
+var handleUpdateSharedRecord = function(record, onSuccess, onError) {
+  if (this.readyState !== 4) {
+    return;
+  }
+  if (this.status === 404) {
+    onError('error updating record: could not find record id ' + record.id +
+            ' in table ' + record.tableName);
+    return;
+  }
+  if (this.status < 200 || this.status >= 300) {
+    onError('error updating record: unexpected http status ' + this.status);
+    return;
+  }
+  onSuccess();
+};
+
+/**
+ * Deletes a record from the specified table.
+ * @param {string} record.tableName The name of the table to delete from.
+ * @param {string} record.id The id of the record to delete.
+ * @param {Object} record Object whose other properties are ignored.
+ * @param {function()} onSuccess Function to call on success.
+ * @param {function(string)} onError Function to call with an error message
+ *    in case of failure.
+ */
+AppStorage.deleteSharedRecord = function(record, onSuccess, onError) {
+  var tableName = record.tableName;
+  if (!tableName) {
+    onError('error deleting record: missing required property "tableName"');
+    return;
+  }
+  var recordId = record.id;
+  if (!recordId) {
+    onError('error deleting record: missing required property "id"');
+    return;
+  }
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = handleDeleteSharedRecord.bind(req, record, onSuccess, onError);
+  var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + '/shared-tables/' +
+      tableName + '/' + recordId + '/delete';
+  req.open('POST', url, true);
+  req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+  req.send(JSON.stringify(record));
+};
+
+var handleDeleteSharedRecord = function(record, onSuccess, onError) {
+  if (this.readyState !== 4) {
+    return;
+  }
+  if (this.status === 404) {
+    onError('error deleting record: could not find record id ' + record.id +
+        ' in table ' + record.tableName);
+    return;
+  }
+  if (this.status < 200 || this.status >= 300) {
+    onError('error deleting record: unexpected http status ' + this.status);
+    return;
+  }
+  onSuccess();
 };
 
 },{}],4:[function(require,module,exports){
@@ -2845,18 +3072,36 @@ exports.clearTimeout = function (blockId, timeoutId) {
                            {'timeoutId': timeoutId });
 };
 
-exports.createSharedRecord = function (blockId, record, callback) {
+exports.createSharedRecord = function (blockId, record, onSuccess, onError) {
   return Applab.executeCmd(blockId,
                           'createSharedRecord',
                           {'record': record,
-                           'callback': callback });
+                           'onSuccess': onSuccess,
+                           'onError': onError});
 };
 
-exports.readSharedRecords = function (blockId, searchParams, callback) {
+exports.readSharedRecords = function (blockId, searchParams, onSuccess, onError) {
   return Applab.executeCmd(blockId,
                           'readSharedRecords',
                           {'searchParams': searchParams,
-                           'callback': callback });
+                           'onSuccess': onSuccess,
+                           'onError': onError});
+};
+
+exports.updateSharedRecord = function (blockId, record, onSuccess, onError) {
+  return Applab.executeCmd(blockId,
+                          'updateSharedRecord',
+                          {'record': record,
+                           'onSuccess': onSuccess,
+                           'onError': onError});
+};
+
+exports.deleteSharedRecord = function (blockId, record, onSuccess, onError) {
+  return Applab.executeCmd(blockId,
+                          'deleteSharedRecord',
+                          {'record': record,
+                           'onSuccess': onSuccess,
+                           'onError': onError});
 };
 
 },{}]},{},[12]);

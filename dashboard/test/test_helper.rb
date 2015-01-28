@@ -3,9 +3,14 @@
 #  SimpleCov.start :rails
 
 require 'minitest/reporters'
-MiniTest::Reporters.use!
+MiniTest::Reporters.use! ($stdout.tty? ? Minitest::Reporters::ProgressReporter.new : Minitest::Reporters::DefaultReporter.new)
 
-ENV["RAILS_ENV"] ||= "test"
+ENV["RAILS_ENV"] = "test"
+ENV["RACK_ENV"] = "test"
+
+# deal with some ordering issues -- sometimes environment is loaded before test_helper and sometimes after
+CDO.rack_env = "test" if defined? CDO
+Rails.application.reload_routes! if defined? Rails
 
 require File.expand_path('../../config/environment', __FILE__)
 I18n.load_path += Dir[Rails.root.join('test', 'en.yml')]
@@ -24,10 +29,16 @@ class ActiveSupport::TestCase
   setup do
     set_env :test
 
+    # how come this doesn't work:
+    Dashboard::Application.config.action_controller.perform_caching = false
+    # as in, I still need to clear the cache even though we are not 'performing' caching
+    Rails.cache.clear
+
     AWS::S3.stubs(:upload_to_bucket).raises("Don't actually upload anything to S3 in tests... mock it if you want to test it")
   end
 
   teardown do
+    Dashboard::Application.config.action_controller.perform_caching = false
     set_env :test
   end
 
