@@ -10,6 +10,7 @@ class Studio < Grid
     projectile_collisions
     allow_sprites_outside_playspace
     sprites_hidden_to_start
+    background
     coordinate_grid_background
     free_play
     disable_sharing
@@ -25,7 +26,7 @@ class Studio < Grid
 
   # List of possible skins, the first is used as a default.
   def self.skins
-    ['studio']
+    ['studio', 'infinity']
   end
 
   def self.default_success_condition
@@ -132,6 +133,8 @@ class Studio < Grid
   </block>
   <block type="studio_saySprite">
     <title name="TEXT">type here</title>
+  </block>
+  <block type="studio_saySpriteChoices" inline="true">
   </block>
   <block type="studio_saySpriteParams" inline="true">
     <value name="TEXT">

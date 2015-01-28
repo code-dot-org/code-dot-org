@@ -50,7 +50,7 @@ p,pre,span {
 body {
   @include unselectable;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
-  padding: 10px;
+  padding: 0px;
   font-style: normal;
 }
 
@@ -360,8 +360,7 @@ a.header_status_bar:hover {
 }
 
 .main {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding: 10px;
   a:link {font-family: 'Gotham 7r', sans-serif; font-weight: normal; color:$dark_color;}
   a:visited {font-family: 'Gotham 7r', sans-serif; font-weight: normal; color:$dark_color;}
   a:hover {font-family: 'Gotham 7r', sans-serif; font-weight: normal; color:$dark_color; background-color: transparent;   text-decoration: underline; }  /* mouse over link */
@@ -539,6 +538,9 @@ html, body {
     min-width: 55px;
     padding-top: 10px;
     min-width: 0px;
+  }
+  a:hover {
+    background-color: transparent;
   }
 }
 
