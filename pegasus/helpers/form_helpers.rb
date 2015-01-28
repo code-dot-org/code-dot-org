@@ -71,6 +71,12 @@ def validate_form(kind, data)
     value
   end
 
+  def confirm_match(value, value2)
+    return value if value.class == FieldError
+    return FieldError.new(value, :mismatch) if value != value2
+    value
+  end
+
   data = Object.const_get(kind).normalize(data)
 
   errors = {}
