@@ -37,7 +37,7 @@ class LevelSourcesController < ApplicationController
         end
       end
 
-      redirect_to @level_source, notice: I18n.t('crud.updated', LevelSource.model_name.human)
+      redirect_to @level_source, notice: I18n.t('crud.updated', model: LevelSource.model_name.human)
     else
       redirect_to @level_source, notice: "Error: #{level_source.errors.messages}"
     end
@@ -47,7 +47,7 @@ class LevelSourcesController < ApplicationController
     authorize! :read, @level_source
 
     expires_in 10.hours, :public => true # cache
-    if @game.app == Game::ARTIST then
+    if @game.app == Game::ARTIST
       framed_image(@level.skin)
     else
       original_image

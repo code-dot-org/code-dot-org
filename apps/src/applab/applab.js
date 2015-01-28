@@ -1716,7 +1716,7 @@ Applab.clearTimeout = function (opts) {
 };
 
 Applab.createSharedRecord = function (opts) {
-  var onSuccess = Applab.handleReadSharedRecords.bind(this, opts.onSuccess);
+  var onSuccess = Applab.handleCreateSharedRecord.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
   AppStorage.createSharedRecord(opts.record, onSuccess, onError);
 };
@@ -1757,7 +1757,7 @@ Applab.handleReadSharedRecords = function(successCallback, records) {
 };
 
 Applab.updateSharedRecord = function (opts) {
-  var onSuccess = Applab.handleReadSharedRecords.bind(this, opts.onSuccess);
+  var onSuccess = Applab.handleUpdateSharedRecord.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
   AppStorage.updateSharedRecord(opts.record, onSuccess, onError);
 };
@@ -1772,7 +1772,7 @@ Applab.handleUpdateSharedRecord = function(successCallback) {
 };
 
 Applab.deleteSharedRecord = function (opts) {
-  var onSuccess = Applab.handleReadSharedRecords.bind(this, opts.onSuccess);
+  var onSuccess = Applab.handleDeleteSharedRecord.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
   AppStorage.deleteSharedRecord(opts.record, onSuccess, onError);
 };
