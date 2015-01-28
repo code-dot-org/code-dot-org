@@ -420,7 +420,9 @@ var addPattern = function (id, imagePath, width, height, offsetX, offsetY) {
     offsetY: offsetY
   };
 
-  if (document.readyState !== "complete") {
+  // If we don't yet have an svgDefs, queue the pattern and wait until we do
+  var svgDefs = document.getElementById('blocklySvgDefs');
+  if (!svgDefs) {
     patternCache.addToQueue(patternInfo);
   } else if (!patternCache.wasCreated(patternInfo)) {
     // add the pattern
@@ -433,7 +435,7 @@ var addPattern = function (id, imagePath, width, height, offsetX, offsetY) {
       height: height,
       x: x,
       y: y
-    }, document.getElementById('blocklySvgDefs'));
+    }, svgDefs);
     patternImage = Blockly.createSvgElement('image', {
       width: width,
       height: height
