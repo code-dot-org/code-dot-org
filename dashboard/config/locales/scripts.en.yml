@@ -364,6 +364,11 @@ en:
             Detection and the Distance Formula'
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
             (Big Game)'
+        infinity:
+          title: Play Lab
+          description_short: Create a story or make a game with Play Lab!
+          description: Create a story or make a game with Play Lab!
+          Play Lab: Play Lab
         algebrademo:
           description: A handful of puzzles to demonstrate the environment and programming
             language used in Code.org CS in Algebra
