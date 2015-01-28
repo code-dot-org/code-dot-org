@@ -688,7 +688,7 @@ Artist.prototype.evalCode = function(code) {
  * Set up this.code, this.interpreter, etc. to run code for editCode levels
  */
 Artist.prototype.generateTurtleCodeFromJS_ = function () {
-  this.code = utils.generateCodeAliases(this.level.codeFunctions, 'Turtle');
+  this.code = utils.generateCodeAliases(this.level.codeFunctions, null, 'Turtle');
   this.userCodeStartOffset = this.code.length;
   this.code += this.studioApp_.editor.getValue();
   this.userCodeLength = this.code.length - this.userCodeStartOffset;

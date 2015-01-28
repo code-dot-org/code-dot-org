@@ -335,6 +335,7 @@ StudioApp.prototype.init = function(config) {
   if (this.editCode) {
     this.handleEditCode_({
       codeFunctions: config.level.codeFunctions,
+      dropletConfig: config.dropletConfig,
       categoryInfo: config.level.categoryInfo,
       startBlocks: config.level.startBlocks,
       afterEditorReady: config.afterEditorReady,
@@ -1169,18 +1170,19 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     
     this.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
       mode: 'javascript',
-      modeOptions: utils.generateDropletModeOptions(options.codeFunctions),
+      modeOptions: utils.generateDropletModeOptions(options.codeFunctions,
+        options.dropletConfig),
       palette: utils.generateDropletPalette(options.codeFunctions,
-        options.categoryInfo)
+        options.dropletConfig)
     });
 
     this.editor.aceEditor.setShowPrintMargin(false);
 
     // Add an ace completer for the API functions exposed for this level
-    if (options.codeFunctions) {
+    if (options.codeFunctions || options.dropletConfig) {
       var langTools = window.ace.require("ace/ext/language_tools");
       langTools.addCompleter(
-        utils.generateAceApiCompleter(options.codeFunctions));
+        utils.generateAceApiCompleter(options.codeFunctions, options.dropletConfig));
     }
 
     this.editor.aceEditor.setOptions({
