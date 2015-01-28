@@ -77,6 +77,3 @@ function wrapExistingClipPaths() {
     }
   });
 }
-
-wrapExistingClipPaths();
-handleClipPathChanges();

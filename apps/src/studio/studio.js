@@ -1481,7 +1481,7 @@ Studio.execute = function() {
   var i;
 
   if (level.editCode) {
-    code = utils.generateCodeAliases(level.codeFunctions, 'Studio');
+    code = utils.generateCodeAliases(level.codeFunctions, null, 'Studio');
     code += studioApp.editor.getValue();
   }
 
@@ -1518,7 +1518,7 @@ Studio.execute = function() {
   studioApp.reset(false);
 
   if (level.editCode) {
-    var codeWhenRun = utils.generateCodeAliases(level.codeFunctions, 'Studio');
+    var codeWhenRun = utils.generateCodeAliases(level.codeFunctions, null, 'Studio');
     Studio.userCodeStartOffset = codeWhenRun.length;
     codeWhenRun += studioApp.editor.getValue();
     Studio.userCodeLength = codeWhenRun.length - Studio.userCodeStartOffset;
