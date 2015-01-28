@@ -41,6 +41,7 @@ var page = require('./page.html');
 var utils = require('../utils');
 var _ = utils.getLodash();
 var netsimStorage = require('./netsimStorage');
+var DashboardUser = require('./DashboardUser');
 
 /**
  * The top-level Internet Simulator controller.
@@ -141,17 +142,19 @@ NetSim.prototype.joinLobby_ = function (sectionID) {
       netsimStorage.APP_PUBLIC_KEY,
       'demo_' + sectionID + '_lobby'
   );
-  this.lobby_.insert({
-    name: 'fake_name',
-    connected_to: undefined,
-    last_update: Date.now()
-  }, _.bind(function (data) {
-    if (data) {
-      this.connectionRowId_ = data.id;
-      console.log("Connected, assigned ID: " + this.connectionRowId_);
-      document.getElementById('netsim_refresh_button').disabled = false;
-      this.refreshLobby_();
-    }
+  this.currentUser_.whenReady(_.bind(function () {
+    this.lobby_.insert({
+      name: this.currentUser_.name,
+      connected_to: undefined,
+      last_update: Date.now()
+    }, _.bind(function (data) {
+      if (data) {
+        this.connectionRowId_ = data.id;
+        console.log("Connected, assigned ID: " + this.connectionRowId_);
+        document.getElementById('netsim_refresh_button').disabled = false;
+        this.refreshLobby_();
+      }
+    }, this));
   }, this));
 };
 
@@ -198,6 +201,8 @@ NetSim.prototype.init = function(config) {
   if (!this.studioApp_) {
     throw new Error("NetSim requires a StudioApp");
   }
+
+  this.currentUser_ = DashboardUser.getCurrentUser();
 
   this.skin = config.skin;
   this.level = config.level;
