@@ -136,25 +136,49 @@ exports.wrapNumberValidatorsForLevelBuilder = function () {
   };
 };
 
+function mergeFunctionsWithConfig(codeFunctions, dropletConfig) {
+  var merged = [];
+
+  if (codeFunctions instanceof Array) {
+    // codeFunctions is in an array, use those exactly:
+    merged = codeFunctions;
+  } else if (codeFunctions instanceof Object &&
+             dropletConfig &&
+             dropletConfig.blocks) {
+    var dropletBlocks = dropletConfig.blocks;
+    // codeFunctions is an object with named key/value pairs
+    //  key is a block name from dropletBlocks
+    //  value is an object that can be used to override block defaults
+    for (var i = 0; i < dropletBlocks.length; i++) {
+      var block = dropletBlocks[i];
+      if (dropletBlocks[i].func in codeFunctions) {
+        // We found this particular block, now override the defaults with extend
+        merged.push(exports.extend(dropletBlocks[i],
+                    codeFunctions[dropletBlocks[i].func]));
+      }
+    }
+  }
+  return merged;
+}
+
 /**
  * Generate code aliases in Javascript based on some level data.
  */
-exports.generateCodeAliases = function (codeFunctions, parentObjName) {
+exports.generateCodeAliases = function (codeFunctions, dropletConfig, parentObjName) {
   var code = '';
+  var mergedFunctions = mergeFunctionsWithConfig(codeFunctions, dropletConfig);
   // Insert aliases from level codeBlocks into code
-  if (codeFunctions) {
-    for (var i = 0; i < codeFunctions.length; i++) {
-      var cf = codeFunctions[i];
-      code += "var " + cf.func + " = function() { ";
-      if (cf.idArgNone) {
-        code += "return " + parentObjName + "." + cf.func + ".apply(" +
-                parentObjName + ", arguments); };\n";
-      } else {
-        code += "var newArgs = " +
-          (cf.idArgLast ? "arguments.concat(['']);" : "[''].concat(arguments);") +
-          " return " + parentObjName + "." + cf.func +
-          ".apply(" + parentObjName + ", newArgs); };\n";
-      }
+  for (var i = 0; i < mergedFunctions.length; i++) {
+    var cf = mergedFunctions[i];
+    code += "var " + cf.func + " = function() { ";
+    if (cf.idArgNone) {
+      code += "return " + parentObjName + "." + cf.func + ".apply(" +
+              parentObjName + ", arguments); };\n";
+    } else {
+      code += "var newArgs = " +
+        (cf.idArgLast ? "arguments.concat(['']);" : "[''].concat(arguments);") +
+        " return " + parentObjName + "." + cf.func +
+        ".apply(" + parentObjName + ", newArgs); };\n";
     }
   }
   return code;
@@ -163,7 +187,7 @@ exports.generateCodeAliases = function (codeFunctions, parentObjName) {
 /**
  * Generate a palette for the droplet editor based on some level data.
  */
-exports.generateDropletPalette = function (codeFunctions, categoryInfo) {
+exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
   // TODO: figure out localization for droplet scenario
   var stdPalette = [
     {
@@ -259,36 +283,38 @@ exports.generateDropletPalette = function (codeFunctions, categoryInfo) {
       'blocks': []
     }
   };
-  categoryInfo = categoryInfo || defCategoryInfo;
+  categoryInfo = (dropletConfig && dropletConfig.categories) || defCategoryInfo;
 
-  if (codeFunctions) {
-    for (var i = 0; i < codeFunctions.length; i++) {
-      var cf = codeFunctions[i];
-      if (cf.category === 'hidden') {
-        continue;
-      }
-      var block = cf.func + "(";
-      if (cf.params) {
-        for (var j = 0; j < cf.params.length; j++) {
-          if (j !== 0) {
-            block += ", ";
-          }
-          block += cf.params[j];
-        }
-      }
-      block += ")";
-      var blockPair = {
-        block: block,
-        title: cf.title || cf.func
-      };
-      categoryInfo[cf.category || 'Actions'].blocks.push(blockPair);
+  var mergedFunctions = mergeFunctionsWithConfig(codeFunctions, dropletConfig);
+
+  for (var i = 0; i < mergedFunctions.length; i++) {
+    var cf = mergedFunctions[i];
+    if (cf.category === 'hidden') {
+      continue;
     }
+    var block = cf.func + "(";
+    if (cf.params) {
+      for (var j = 0; j < cf.params.length; j++) {
+        if (j !== 0) {
+          block += ", ";
+        }
+        block += cf.params[j];
+      }
+    }
+    block += ")";
+    var blockPair = {
+      block: block,
+      title: cf.title || cf.func
+    };
+    categoryInfo[cf.category || 'Actions'].blocks.push(blockPair);
   }
 
   var addedPalette = [];
   for (var category in categoryInfo) {
     categoryInfo[category].name = category;
-    addedPalette.push(categoryInfo[category]);
+    if (categoryInfo[category].blocks.length > 0) {
+      addedPalette.push(categoryInfo[category]);
+    }
   }
 
   return addedPalette.concat(stdPalette);
@@ -297,11 +323,12 @@ exports.generateDropletPalette = function (codeFunctions, categoryInfo) {
 /**
  * Generate an Ace editor completer for a set of APIs based on some level data.
  */
-exports.generateAceApiCompleter = function (codeFunctions) {
+exports.generateAceApiCompleter = function (codeFunctions, dropletConfig) {
   var apis = [];
 
-  for (var i = 0; i < codeFunctions.length; i++) {
-    var cf = codeFunctions[i];
+  var mergedFunctions = mergeFunctionsWithConfig(codeFunctions, dropletConfig);
+  for (var i = 0; i < mergedFunctions.length; i++) {
+    var cf = mergedFunctions[i];
     if (cf.category === 'hidden') {
       continue;
     }
@@ -326,7 +353,7 @@ exports.generateAceApiCompleter = function (codeFunctions) {
 /**
  * Generate modeOptions for the droplet editor based on some level data.
  */
-exports.generateDropletModeOptions = function (codeFunctions) {
+exports.generateDropletModeOptions = function (codeFunctions, dropletConfig) {
   var modeOptions = {
     blockFunctions: [],
     valueFunctions: ['random', 'round', 'abs', 'max', 'min'],
@@ -342,17 +369,16 @@ exports.generateDropletModeOptions = function (codeFunctions) {
   EITHER_FUNCTIONS = ['button', 'read', 'readstr', 'readnum', 'table', 'append', 'finish', 'loadscript'];
 */
 
-  if (codeFunctions) {
-    for (var i = 0; i < codeFunctions.length; i++) {
-      if (codeFunctions[i].type === 'value') {
-        modeOptions.valueFunctions.push(codeFunctions[i].func);
-      }
-      else if (codeFunctions[i].type === 'either') {
-        modeOptions.eitherFunctions.push(codeFunctions[i].func);
-      }
-      else if (codeFunctions[i].type !== 'hidden') {
-        modeOptions.blockFunctions.push(codeFunctions[i].func);
-      }
+  var mergedFunctions = mergeFunctionsWithConfig(codeFunctions, dropletConfig);
+  for (var i = 0; i < mergedFunctions.length; i++) {
+    if (mergedFunctions[i].type === 'value') {
+      modeOptions.valueFunctions.push(mergedFunctions[i].func);
+    }
+    else if (mergedFunctions[i].type === 'either') {
+      modeOptions.eitherFunctions.push(mergedFunctions[i].func);
+    }
+    else if (mergedFunctions[i].type !== 'hidden') {
+      modeOptions.blockFunctions.push(mergedFunctions[i].func);
     }
   }
 
