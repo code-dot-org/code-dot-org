@@ -42,7 +42,7 @@ var LogLevel = NetSimLogger.LogLevel;
  * @type {number}
  * @const
  */
-var KEEP_ALIVE_INTERVAL_MS = 2500;
+var KEEP_ALIVE_INTERVAL_MS = 2000;
 
 /**
  * A connection to a NetSim instance
@@ -254,11 +254,12 @@ NetSimConnection.prototype.tick = function (clock) {
   if (clock.time >= this.nextKeepAliveTime_) {
     this.keepAlive();
     if (this.nextKeepAliveTime_ === 0) {
-      this.nextKeepAliveTime = clock.time + KEEP_ALIVE_INTERVAL_MS;
-    }
-
-    while (this.nextKeepAliveTime_ < clock.time) {
-      this.nextKeepAliveTime_ += KEEP_ALIVE_INTERVAL_MS;
+      this.nextKeepAliveTime_ = clock.time + KEEP_ALIVE_INTERVAL_MS;
+    } else {
+      // Stable increment
+      while (this.nextKeepAliveTime_ < clock.time) {
+        this.nextKeepAliveTime_ += KEEP_ALIVE_INTERVAL_MS;
+      }
     }
   }
 };

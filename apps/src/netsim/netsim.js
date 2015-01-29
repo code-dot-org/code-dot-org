@@ -172,6 +172,7 @@ NetSim.prototype.init = function(config) {
  */
 NetSim.prototype.tick = function (clock) {
   this.connection_.tick(clock);
+  this.lobbyUi_.tick(clock);
 };
 
 /**

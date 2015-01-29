@@ -38,12 +38,33 @@ var dom = require('../dom');
 var markup = require('./NetSimLobby.html');
 
 /**
- * @param {NetSimConnection} connection
+ * How often the lobby should be auto-refreshed.
+ * @type {number}
+ * @const
+ */
+var AUTO_REFRESH_INTERVAL_MS = 5000;
+
+/**
+ * @param {NetSimConnection} connection - The instance connection that this
+ *                           lobby control will manipulate.
  * @constructor
  */
 var NetSimLobby = function (connection) {
+
+  /**
+   * Instance connection that this lobby control will manipulate.
+   * @type {NetSimConnection}
+   * @private
+   */
   this.connection_ = connection;
   this.connection_.registerChangeCallback(_.bind(this.refreshLobby_, this));
+
+  /**
+   * When the lobby should be refreshed next
+   * @type {Number}
+   * @private
+   */
+  this.nextAutoRefreshTime_ = Infinity;
 };
 module.exports = NetSimLobby;
 
@@ -96,10 +117,10 @@ NetSimLobby.prototype.bindElements_ = function () {
 NetSimLobby.prototype.onInstanceSelectorChange_ = function () {
   if (this.connection_.isConnectedToInstance()) {
     this.connection_.disconnectFromInstance();
+    this.nextAutoRefreshTime_ = Infinity;
   }
 
   if (this.instanceSelector_.value !== '__none') {
-    // TODO: Use real level name instead of 'demo'
     this.connection_.connectToInstance(this.instanceSelector_.value);
   }
 };
@@ -146,6 +167,7 @@ NetSimLobby.prototype.refreshInstanceList_ = function () {
 };
 
 NetSimLobby.prototype.refreshLobby_ = function () {
+  var self = this;
   var lobbyList = this.lobbyList_;
 
   if (!this.connection_.isConnectedToInstance()) {
@@ -163,6 +185,10 @@ NetSimLobby.prototype.refreshLobby_ = function () {
           ' (' + connection.lastPing + ') ' + connection.status;
       lobbyList.appendChild(item);
     });
+
+    if (self.nextAutoRefreshTime_ === Infinity) {
+      self.nextAutoRefreshTime_ = 0;
+    }
   }); 
 };
 
@@ -181,4 +207,22 @@ NetSimLobby.prototype.getUserSections_ = function (callback) {
     url: '/v2/sections/membership',
     success: callback
   });
+};
+
+/**
+ *
+ * @param {RunLoop.Clock} clock
+ */
+NetSimLobby.prototype.tick = function (clock) {
+  if (clock.time >= this.nextAutoRefreshTime_) {
+    this.refreshLobby_();
+    if (this.nextAutoRefreshTime_ === 0) {
+      this.nextAutoRefreshTime_ = clock.time + AUTO_REFRESH_INTERVAL_MS;
+    } else {
+      // Stable increment
+      while (this.nextAutoRefreshTime_ < clock.time) {
+        this.nextAutoRefreshTime_ += AUTO_REFRESH_INTERVAL_MS;
+      }
+    }
+  }
 };
