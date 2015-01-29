@@ -43,6 +43,7 @@ var NetSimConnection = require('./NetSimConnection');
 var NetSimLogger = require('./NetSimLogger');
 var DashboardUser = require('./DashboardUser');
 var NetSimLobby = require('./NetSimLobby');
+var RunLoop = require('./RunLoop');
 
 /**
  * The top-level Internet Simulator controller.
@@ -156,7 +157,30 @@ NetSim.prototype.init = function(config) {
     this.logger_.log("Connection manager created.");
     var lobbyContainer = document.getElementById('netsim_lobby_container');
     this.lobbyUi_ = NetSimLobby.createWithin(lobbyContainer, this.connection_);
+
+    // Begin run loop (will end when page unloads)
+    var runLoop = new RunLoop();
+    runLoop.tick.register(this, this.tick);
+    runLoop.render.register(this, this.render);
+    runLoop.begin();
   }, this));
+};
+
+/**
+ * Recurring event for updating simulation logic
+ * @param {RunLoop.Clock} clock - Elapsed time information
+ */
+NetSim.prototype.tick = function (clock) {
+  this.connection_.tick(clock);
+};
+
+/**
+ * Recurring event for rendering.  On modern browsers this will attempt to
+ * sync to the browser repaint loop (hopefully 60fps), but on older
+ * browsers it will fall back to a FALLBACK_FPS value
+ * @param {RunLoop.Clock} clock - Elapsed time information
+ */
+NetSim.prototype.render = function (clock) {
 };
 
 /**

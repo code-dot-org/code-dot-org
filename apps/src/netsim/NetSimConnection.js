@@ -38,6 +38,13 @@ var NetSimLogger = require('./NetSimLogger');
 var LogLevel = NetSimLogger.LogLevel;
 
 /**
+ * How often a keep-alive message should be sent to the instance lobby
+ * @type {number}
+ * @const
+ */
+var KEEP_ALIVE_INTERVAL_MS = 2500;
+
+/**
  * A connection to a NetSim instance
  * @param {string} displayName - Name for person on local end
  * @param {NetSimLogger} logger - A log control interface, default nullimpl
@@ -81,6 +88,13 @@ var NetSimConnection = function (displayName, logger /*=new NetSimLogger(NONE)*/
    * @type {Array[Function]}
    */
   this.onChangeCallbacks_ = [];
+
+  /**
+   * When the next keepAlive update should be sent to the lobby
+   * @type {Number}
+   * @private
+   */
+  this.nextKeepAliveTime_ = Infinity;
 
   // Bind to onBeforeUnload event to attempt graceful disconnect
   window.addEventListener('beforeunload', _.bind(this.onBeforeUnload_, this));
@@ -149,6 +163,9 @@ NetSimConnection.prototype.connectToInstance = function (instanceID) {
       self.myLobbyRowID_ = returnedData.id;
       self.logger_.log("Connected to instance, assigned ID " + self.myLobbyRowID_,
           LogLevel.INFO);
+      // TODO (bbuchanan) : How do we get a reasonable nextKeepAliveTime
+      //                    here?  Do we need access to the global clock?
+      self.nextKeepAliveTime_ = 0;
     } else {
       // TODO (bbuchanan) : Connection retry?
       self.lobbyTable_ = null;
@@ -188,6 +205,7 @@ NetSimConnection.prototype.disconnectFromInstance = function () {
     }
   });
 
+  this.nextKeepAliveTime_ = Infinity;
   this.myLobbyRowID_ = undefined;
   this.lobbyTable_ = null;
   this.callChangeCallbacks();
@@ -226,4 +244,21 @@ NetSimConnection.prototype.getLobbyListing = function (callback) {
       callback(data);
     }
   });
+};
+
+/**
+ *
+ * @param {RunLoop.Clock} clock
+ */
+NetSimConnection.prototype.tick = function (clock) {
+  if (clock.time >= this.nextKeepAliveTime_) {
+    this.keepAlive();
+    if (this.nextKeepAliveTime_ === 0) {
+      this.nextKeepAliveTime = clock.time + KEEP_ALIVE_INTERVAL_MS;
+    }
+
+    while (this.nextKeepAliveTime_ < clock.time) {
+      this.nextKeepAliveTime_ += KEEP_ALIVE_INTERVAL_MS;
+    }
+  }
 };
