@@ -329,6 +329,20 @@ exports.turtleMoveBackward = function (blockId, distance) {
                           {'distance': distance });
 };
 
+exports.turtleMove = function (blockId, x, y) {
+  return Applab.executeCmd(blockId,
+                          'turtleMove',
+                          {'x': x,
+                           'y': y });
+};
+
+exports.turtleMoveTo = function (blockId, x, y) {
+  return Applab.executeCmd(blockId,
+                          'turtleMoveTo',
+                          {'x': x,
+                           'y': y });
+};
+
 exports.turtleTurnRight = function (blockId, degrees) {
   return Applab.executeCmd(blockId,
                           'turtleTurnRight',

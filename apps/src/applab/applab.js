@@ -1202,6 +1202,8 @@ Applab.callCmd = function (cmd) {
     case 'deleteSharedRecord':
     case 'turtleMoveForward':
     case 'turtleMoveBackward':
+    case 'turtleMove':
+    case 'turtleMoveTo':
     case 'turtleTurnLeft':
     case 'turtleTurnRight':
     case 'turtlePenUp':
@@ -1282,18 +1284,32 @@ function getTurtleContext() {
   return canvas.getContext("2d");
 }
 
-Applab.turtleMoveForward = function (opts) {
+Applab.turtleMoveTo = function (opts) {
   var ctx = getTurtleContext();
   if (ctx) {
     ctx.beginPath();
     ctx.moveTo(Applab.turtle.x, Applab.turtle.y);
-    Applab.turtle.x +=
-      opts.distance * Math.sin(2 * Math.PI * Applab.turtle.heading / 360);
-    Applab.turtle.y -=
-      opts.distance * Math.cos(2 * Math.PI * Applab.turtle.heading / 360);
+    Applab.turtle.x = opts.x;
+    Applab.turtle.y = opts.y;
     ctx.lineTo(Applab.turtle.x, Applab.turtle.y);
     ctx.stroke();
   }
+};
+
+Applab.turtleMove = function (opts) {
+  var newOpts = {};
+  newOpts.x = Applab.turtle.x + opts.x;
+  newOpts.y = Applab.turtle.y + opts.y;
+  Applab.turtleMoveTo(newOpts);
+};
+
+Applab.turtleMoveForward = function (opts) {
+  var newOpts = {};
+  newOpts.x = Applab.turtle.x +
+    opts.distance * Math.sin(2 * Math.PI * Applab.turtle.heading / 360);
+  newOpts.y = Applab.turtle.y -
+      opts.distance * Math.cos(2 * Math.PI * Applab.turtle.heading / 360);
+  Applab.turtleMoveTo(newOpts);
 };
 
 Applab.turtleMoveBackward = function (opts) {

@@ -42,6 +42,8 @@ module.exports.blocks = [
   {'func': 'deleteSharedRecord', 'category': 'Storage', 'params': ["{tableName:'abc', id: 1}", "function() {\n  \n}"] },
   {'func': 'turtleMoveForward', 'title': 'Move the turtle forward the specified distance', 'category': 'Turtle', 'params': ["100"] },
   {'func': 'turtleMoveBackward', 'title': 'Move the turtle backward the specified distance', 'category': 'Turtle', 'params': ["100"] },
+  {'func': 'turtleMove', 'title': 'Move the turtle by the specified x and y coordinates', 'category': 'Turtle', 'params': ["50", "50"] },
+  {'func': 'turtleMoveTo', 'title': 'Move the turtle to the specified x and y coordinates', 'category': 'Turtle', 'params': ["0", "0"] },
   {'func': 'turtleTurnRight', 'title': 'Turn the turtle clockwise by the specified number of degrees', 'category': 'Turtle', 'params': ["90"] },
   {'func': 'turtleTurnLeft', 'title': 'Turn the turtle counterclockwise by the specified number of degrees', 'category': 'Turtle', 'params': ["90"] },
   {'func': 'turtlePenUp', 'title': "Pick up the turtle's pen", 'category': 'Turtle' },
