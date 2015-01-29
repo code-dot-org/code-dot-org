@@ -152,9 +152,3 @@ SharedStorageTable.prototype.delete = function (id, callback) {
     callback(false);
   });
 };
-
-
-
-
-
-

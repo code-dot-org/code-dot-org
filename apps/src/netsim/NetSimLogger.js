@@ -32,8 +32,6 @@
  */
 'use strict';
 
-var _ = require('../utils').getLodash();
-
 /**
  * A logger instance
  * @constructor

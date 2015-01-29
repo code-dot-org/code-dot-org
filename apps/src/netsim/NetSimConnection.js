@@ -30,7 +30,6 @@
  maxparams: 3,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 var _ = require('../utils').getLodash();
@@ -38,7 +37,6 @@ var netsimStorage = require('./netsimStorage');
 var NetSimLogger = require('./NetSimLogger');
 var LogLevel = NetSimLogger.LogLevel;
 
-// TODO (bbuchanan): Set up auto-disconnect
 /**
  * A connection to a NetSim instance
  * @param {string} displayName - Name for person on local end
@@ -150,7 +148,7 @@ NetSimConnection.prototype.connectToInstance = function (levelId, sectionId) {
   var self = this;
   this.lobbyTable_.insert(this.buildLobbyRow_(), function (returnedData) {
     if (returnedData) {
-      self.lobbyId_ = returnedData['id'];
+      self.lobbyId_ = returnedData.id;
       self.logger_.log("Connected to instance, assigned ID " + self.lobbyId_,
           LogLevel.INFO);
     } else {
@@ -168,7 +166,7 @@ NetSimConnection.prototype.connectToInstance = function (levelId, sectionId) {
  */
 NetSimConnection.prototype.isConnectedToInstance = function () {
   return undefined !== this.lobbyId_;
-}
+};
 
 /**
  * Ends the connection to the netsim instance.
@@ -230,4 +228,3 @@ NetSimConnection.prototype.getLobbyData = function (callback) {
     }
   });
 };
-

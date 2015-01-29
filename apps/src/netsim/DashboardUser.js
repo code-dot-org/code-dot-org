@@ -88,10 +88,10 @@ DashboardUser.getCurrentUser = function () {
       url: '/v2/user',
       type: 'get',
       dataType: 'json',
-      success: function (data, textStatus, jqXHR) {
+      success: function (data /*, textStatus, jqXHR*/) {
         DashboardUser.currentUser_.initialize_(data);
       },
-      error: function (jqXHR, textStatus, errorThrown) {
+      error: function (/*jqXHR, textStatus, errorThrown*/) {
         throw new Error("Unable to retrieve current user info.");
       }
     });
@@ -105,8 +105,8 @@ DashboardUser.getCurrentUser = function () {
  * @private
  */
 DashboardUser.prototype.initialize_ = function (data) {
-  this.id = data['id'];
-  this.name = data['name'];
+  this.id = data.id;
+  this.name = data.name;
   this.isReady = true;
 
   // Call any queued callbacks
