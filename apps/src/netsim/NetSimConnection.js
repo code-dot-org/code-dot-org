@@ -46,6 +46,14 @@ var Observable = require('./Observable');
 var KEEP_ALIVE_INTERVAL_MS = 2000;
 
 /**
+ * Milliseconds before a client is considered 'disconnected' and
+ * can be cleaned up by another client.
+ * @type {number}
+ * @const
+ */
+var CONNECTION_TIMEOUT_MS = 30000;
+
+/**
  * A connection to a NetSim instance
  * @param {string} displayName - Name for person on local end
  * @param {NetSimLogger} logger - A log control interface, default nullimpl
@@ -187,22 +195,36 @@ NetSimConnection.prototype.disconnectFromInstance = function () {
   }
 
   // TODO (bbuchanan) : Check for other resources we need to clean up
-  // before we disconnect from the instance.
+  //                    before we disconnect from the instance.
 
-  var self = this;
-  this.lobbyTable_.delete(this.myLobbyRowID_, function (succeeded) {
-    if (succeeded) {
-      self.logger_.log("Disconnected from instance.", LogLevel.INFO);
-    } else {
-      // TODO (bbuchanan) : Disconnect retry?
-      self.logger_.log("Failed to notify instance of disconnect.", LogLevel.WARN);
-    }
-  });
+  this.disconnectByRowID_(this.myLobbyRowID_);
 
   this.nextKeepAliveTime_ = Infinity;
   this.myLobbyRowID_ = undefined;
   this.lobbyTable_ = null;
   this.statusChanges.notify();
+};
+
+/**
+ * Helper method that can disconnect any row from the lobby.
+ * @param lobbyRowID
+ * @private
+ */
+NetSimConnection.prototype.disconnectByRowID_ = function (lobbyRowID) {
+  if (!this.isConnectedToInstance()) {
+    this.logger_.log("Can't disconnect when not connected to an instance.", LogLevel.ERROR);
+    return;
+  }
+
+  var self = this;
+  this.lobbyTable_.delete(lobbyRowID, function (succeeded) {
+    if (succeeded) {
+      self.logger_.log("Disconnected client " + lobbyRowID + " from instance.", LogLevel.INFO);
+    } else {
+      // TODO (bbuchanan) : Disconnect retry?
+      self.logger_.log("Failed to disconnect client " + lobbyRowID + ".", LogLevel.WARN);
+    }
+  });
 };
 
 NetSimConnection.prototype.keepAlive = function () {
@@ -247,6 +269,10 @@ NetSimConnection.prototype.getLobbyListing = function (callback) {
 NetSimConnection.prototype.tick = function (clock) {
   if (clock.time >= this.nextKeepAliveTime_) {
     this.keepAlive();
+
+    // TODO (bbuchanan): Need a better policy for when to do this
+    this.cleanLobby_();
+
     if (this.nextKeepAliveTime_ === 0) {
       this.nextKeepAliveTime_ = clock.time + KEEP_ALIVE_INTERVAL_MS;
     } else {
@@ -256,4 +282,20 @@ NetSimConnection.prototype.tick = function (clock) {
       }
     }
   }
+};
+
+/**
+ * Triggers a sweep of the lobby table that removes timed-out client rows.
+ * @private
+ */
+NetSimConnection.prototype.cleanLobby_ = function () {
+  var self = this;
+  var now = Date.now();
+  this.getLobbyListing(function (lobbyData) {
+    lobbyData.forEach(function (lobbyRow) {
+      if (now - lobbyRow.lastPing >= CONNECTION_TIMEOUT_MS) {
+        self.disconnectByRowID_(lobbyRow.id);
+      }
+    });
+  });
 };
