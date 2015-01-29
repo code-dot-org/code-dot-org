@@ -36,6 +36,7 @@ var _ = require('../utils').getLodash();
 var netsimStorage = require('./netsimStorage');
 var NetSimLogger = require('./NetSimLogger');
 var LogLevel = NetSimLogger.LogLevel;
+var Observable = require('./Observable');
 
 /**
  * How often a keep-alive message should be sent to the instance lobby
@@ -83,11 +84,14 @@ var NetSimConnection = function (displayName, logger /*=new NetSimLogger(NONE)*/
   this.myLobbyRowID_ = undefined;
 
   /**
-   * Methods registered to be notified when instance connection
-   * status changes.
-   * @type {Array[Function]}
+   * Allows others to subscribe to connection status changes.
+   * args: none
+   * Notifies on:
+   * - Connect to instance
+   * - Disconnect from instance
+   * @type {Observable}
    */
-  this.onChangeCallbacks_ = [];
+  this.statusChanges = new Observable();
 
   /**
    * When the next keepAlive update should be sent to the lobby
@@ -100,16 +104,6 @@ var NetSimConnection = function (displayName, logger /*=new NetSimLogger(NONE)*/
   window.addEventListener('beforeunload', _.bind(this.onBeforeUnload_, this));
 };
 module.exports = NetSimConnection;
-
-NetSimConnection.prototype.registerChangeCallback = function (callback) {
-  this.onChangeCallbacks_.push(callback);
-};
-
-NetSimConnection.prototype.callChangeCallbacks = function () {
-  this.onChangeCallbacks_.forEach(function (callback) {
-    callback();
-  });
-};
 
 /**
  * Before-unload handler, used to try and disconnect gracefully when
@@ -171,7 +165,7 @@ NetSimConnection.prototype.connectToInstance = function (instanceID) {
       self.lobbyTable_ = null;
       self.logger_.log("Failed to connect to instance", LogLevel.ERROR);
     }
-    self.callChangeCallbacks();
+    self.statusChanges.notify();
   });
 };
 
@@ -208,7 +202,7 @@ NetSimConnection.prototype.disconnectFromInstance = function () {
   this.nextKeepAliveTime_ = Infinity;
   this.myLobbyRowID_ = undefined;
   this.lobbyTable_ = null;
-  this.callChangeCallbacks();
+  this.statusChanges.notify();
 };
 
 NetSimConnection.prototype.keepAlive = function () {
