@@ -99,9 +99,6 @@ Calc.init = function(config) {
   skin = config.skin;
   level = config.level;
 
-  // Does our level have functions, in which case we operate slightly differently
-  Calc.functionMode_ = false;
-
   if (level.scale && level.scale.stepSpeed !== undefined) {
     stepSpeed = level.scale.stepSpeed;
   }
@@ -180,6 +177,7 @@ Calc.init = function(config) {
  *     variables, but no functions. Display compute expression and variables
  * (4) We have a target compute expression, and either multiple functions or
  *     one function and variable(s). Currently not supported.
+ *     // TODO - make sure we throw for this
  */
 function displayGoal() {
   var computeEquation = appState.targetSet.computeEquation();
