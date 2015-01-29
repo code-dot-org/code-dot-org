@@ -4577,8 +4577,8 @@ var FeedbackUtils = require('./feedback');
 * The minimum width of a playable whole blockly game.
 */
 var MIN_WIDTH = 900;
-var MIN_MOBILE_SHARE_WIDTH = 450;
-var MOBILE_NO_PADDING_SHARE_WIDTH = 400;
+var MOBILE_SHARE_WIDTH_PADDING = 50;
+var DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
 var WORKSPACE_PLAYSPACE_GAP = 15;
 var BLOCK_X_COORDINATE = 70;
 var BLOCK_Y_COORDINATE = 30;
@@ -4778,7 +4778,7 @@ StudioApp.prototype.init = function(config) {
   // Fixes viewport for small screens.
   var viewport = document.querySelector('meta[name="viewport"]');
   if (viewport) {
-    this.fixViewportForSmallScreens_(viewport);
+    this.fixViewportForSmallScreens_(viewport, config);
   }
 
   var showCode = document.getElementById('show-code-header');
@@ -5562,19 +5562,20 @@ StudioApp.prototype.setIdealBlockNumber_ = function() {
 /**
  *
  */
-StudioApp.prototype.fixViewportForSmallScreens_ = function (viewport) {
+StudioApp.prototype.fixViewportForSmallScreens_ = function (viewport, config) {
   var deviceWidth;
   var desiredWidth;
   var minWidth;
   if (this.share && dom.isMobile()) {
+    var mobileNoPaddingShareWidth =
+      config.mobileNoPaddingShareWidth || DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH;
     // for mobile sharing, don't assume landscape mode, use screen.width
     deviceWidth = desiredWidth = screen.width;
     if (this.noPadding && screen.width < MAX_PHONE_WIDTH) {
-      desiredWidth = Math.min(desiredWidth,
-        MOBILE_NO_PADDING_SHARE_WIDTH);
+      desiredWidth = Math.min(desiredWidth, mobileNoPaddingShareWidth);
     }
-    minWidth = this.noPadding ?
-      MOBILE_NO_PADDING_SHARE_WIDTH : MIN_MOBILE_SHARE_WIDTH;
+    minWidth = mobileNoPaddingShareWidth +
+      (this.noPadding ? 0 : MOBILE_SHARE_WIDTH_PADDING);
   }
   else {
     // assume we are in landscape mode, so width is the longer of the two
@@ -5671,7 +5672,7 @@ StudioApp.prototype.configureDom = function (config) {
     visualizationColumn.style.minHeight = this.MIN_WORKSPACE_HEIGHT + 'px';
   }
 
-  if (!config.embed && !this.share) {
+  if (!config.embed && !config.hideSource) {
     // Make the visualization responsive to screen size, except on share page.
     visualization.className += " responsive";
     visualizationColumn.className += " responsive";
