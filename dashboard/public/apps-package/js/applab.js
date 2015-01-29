@@ -115,6 +115,16 @@ levels.ec_simple = {
     'readSharedRecords': null,
     'updateSharedRecord': null,
     'deleteSharedRecord': null,
+    'turtleMoveForward': null,
+    'turtleMoveBackward': null,
+    'turtleMove': null,
+    'turtleMoveTo': null,
+    'turtleTurnRight': null,
+    'turtleTurnLeft': null,
+    'turtlePenUp': null,
+    'turtlePenDown': null,
+    'turtlePenWidth': null,
+    'turtlePenColor': null,
   },
 };
 
@@ -907,6 +917,11 @@ studioApp.reset = function(first) {
   }
 
   // Reset configurable variables
+  Applab.turtle = {};
+  Applab.turtle.heading = 0;
+  Applab.turtle.x = Applab.appWidth / 2;
+  Applab.turtle.y = Applab.appHeight / 2;
+
   var divApplab = document.getElementById('divApplab');
 
   while (divApplab.firstChild) {
@@ -1401,6 +1416,16 @@ Applab.callCmd = function (cmd) {
     case 'readSharedRecords':
     case 'updateSharedRecord':
     case 'deleteSharedRecord':
+    case 'turtleMoveForward':
+    case 'turtleMoveBackward':
+    case 'turtleMove':
+    case 'turtleMoveTo':
+    case 'turtleTurnLeft':
+    case 'turtleTurnRight':
+    case 'turtlePenUp':
+    case 'turtlePenDown':
+    case 'turtlePenWidth':
+    case 'turtlePenColor':
       studioApp.highlight(cmd.id);
       retVal = Applab[cmd.name](cmd.opts);
       break;
@@ -1461,6 +1486,96 @@ Applab.createImageUploadButton = function (opts) {
   return Boolean(newLabel.appendChild(newInput) &&
                  newLabel.appendChild(textNode) &&
                  divApplab.appendChild(newLabel));
+};
+
+function getTurtleContext() {
+  var canvas = document.getElementById('turtleCanvas');
+
+  if (!canvas) {
+    var opts = { 'elementId': 'turtleCanvas' };
+    Applab.createCanvas(opts);
+    canvas = document.getElementById('turtleCanvas');
+  }
+
+  return canvas.getContext("2d");
+}
+
+Applab.turtleMoveTo = function (opts) {
+  var ctx = getTurtleContext();
+  if (ctx) {
+    ctx.beginPath();
+    ctx.moveTo(Applab.turtle.x, Applab.turtle.y);
+    Applab.turtle.x = opts.x;
+    Applab.turtle.y = opts.y;
+    ctx.lineTo(Applab.turtle.x, Applab.turtle.y);
+    ctx.stroke();
+  }
+};
+
+Applab.turtleMove = function (opts) {
+  var newOpts = {};
+  newOpts.x = Applab.turtle.x + opts.x;
+  newOpts.y = Applab.turtle.y + opts.y;
+  Applab.turtleMoveTo(newOpts);
+};
+
+Applab.turtleMoveForward = function (opts) {
+  var newOpts = {};
+  newOpts.x = Applab.turtle.x +
+    opts.distance * Math.sin(2 * Math.PI * Applab.turtle.heading / 360);
+  newOpts.y = Applab.turtle.y -
+      opts.distance * Math.cos(2 * Math.PI * Applab.turtle.heading / 360);
+  Applab.turtleMoveTo(newOpts);
+};
+
+Applab.turtleMoveBackward = function (opts) {
+  opts.distance = -opts.distance;
+  Applab.turtleMoveForward(opts);
+};
+
+Applab.turtleTurnRight = function (opts) {
+  Applab.turtle.heading += opts.degrees;
+  Applab.turtle.heading = (Applab.turtle.heading + 360) % 360;
+};
+
+Applab.turtleTurnLeft = function (opts) {
+  opts.degrees = -opts.degrees;
+  Applab.turtleTurnRight(opts);
+};
+
+Applab.turtlePenUp = function (opts) {
+  var ctx = getTurtleContext();
+  if (ctx) {
+    Applab.turtle.penUpColor = ctx.strokeStyle;
+    ctx.strokeStyle = "rgba(255, 255, 255, 0)";
+  }
+};
+
+Applab.turtlePenDown = function (opts) {
+  var ctx = getTurtleContext();
+  if (ctx && Applab.turtle.penUpColor) {
+    ctx.strokeStyle = Applab.turtle.penUpColor;
+    delete Applab.turtle.penUpColor;
+  }
+};
+
+Applab.turtlePenWidth = function (opts) {
+  var ctx = getTurtleContext();
+  if (ctx) {
+    ctx.lineWidth = opts.width;
+  }
+};
+
+Applab.turtlePenColor = function (opts) {
+  var ctx = getTurtleContext();
+  if (ctx) {
+    if (Applab.turtle.penUpColor) {
+      // pen is currently up, store this color for pen down
+      Applab.turtle.penUpColor = opts.color;
+    } else {
+      ctx.strokeStyle = opts.color;
+    }
+  }
 };
 
 Applab.createCanvas = function (opts) {
@@ -2566,12 +2681,22 @@ module.exports.blocks = [
   {'func': 'canvasGetImageData', 'title': 'Get the ImageData for a rectangle (x, y, width, height) within a canvas', 'category': 'Canvas', 'params': ["'id'", "0", "0", "320", "480"], 'type': 'value' },
   {'func': 'canvasPutImageData', 'title': 'Set the ImageData for a rectangle within a canvas with x, y as the top left coordinates', 'category': 'Canvas', 'params': ["'id'", "imageData", "0", "0"] },
   {'func': 'canvasClear', 'title': 'Clear all data on a canvas', 'category': 'Canvas', 'params': ["'id'"] },
-    {'func': 'writeSharedValue', 'title': 'Saves a value associated with the key, shared with everyone who uses the app.', 'category': 'Storage', 'params': ["'key'", "'value'", "function () {\n  \n}"] },
-    {'func': 'readSharedValue', 'title': 'Reads the value associated with the key, shared with everyone who uses the app.', 'category': 'Storage', 'params': ["'key'", "function (value) {\n  \n}"] },
-    {'func': 'createSharedRecord', 'title': 'createSharedRecord(record, onSuccess, onError); Creates a new shared record in table record.tableName.', 'category': 'Storage', 'params': ["{tableName:'abc', name:'Alice', age:7, male:false}", "function() {\n  \n}"] },
-    {'func': 'readSharedRecords', 'title': 'readSharedRecords(searchParams, onSuccess, onError); Reads all shared records whose properties match those on the searchParams object.', 'category': 'Storage', 'params': ["{tableName: 'abc'}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    createHtmlBlock('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
-    {'func': 'updateSharedRecord', 'title': 'updateSharedRecord(record, onSuccess, onFailure); Updates a shared record, identified by record.tableName and record.id.', 'category': 'Storage', 'params': ["{tableName:'abc', id: 1, name:'Bob', age:8, male:true}", "function() {\n  \n}"] },
-    {'func': 'deleteSharedRecord', 'title': 'deleteSharedRecord(record, onSuccess, onFailure)\nDeletes a shared record, identified by record.tableName and record.id.', 'category': 'Storage', 'params': ["{tableName:'abc', id: 1}", "function() {\n  \n}"] },
+  {'func': 'writeSharedValue', 'title': 'Saves a value associated with the key, shared with everyone who uses the app.', 'category': 'Storage', 'params': ["'key'", "'value'", "function () {\n  \n}"] },
+  {'func': 'readSharedValue', 'title': 'Reads the value associated with the key, shared with everyone who uses the app.', 'category': 'Storage', 'params': ["'key'", "function (value) {\n  \n}"] },
+  {'func': 'createSharedRecord', 'title': 'createSharedRecord(record, onSuccess, onError); Creates a new shared record in table record.tableName.', 'category': 'Storage', 'params': ["{tableName:'abc', name:'Alice', age:7, male:false}", "function() {\n  \n}"] },
+  {'func': 'readSharedRecords', 'title': 'readSharedRecords(searchParams, onSuccess, onError); Reads all shared records whose properties match those on the searchParams object.', 'category': 'Storage', 'params': ["{tableName: 'abc'}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    createHtmlBlock('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
+  {'func': 'updateSharedRecord', 'title': 'updateSharedRecord(record, onSuccess, onFailure); Updates a shared record, identified by record.tableName and record.id.', 'category': 'Storage', 'params': ["{tableName:'abc', id: 1, name:'Bob', age:8, male:true}", "function() {\n  \n}"] },
+  {'func': 'deleteSharedRecord', 'title': 'deleteSharedRecord(record, onSuccess, onFailure)\nDeletes a shared record, identified by record.tableName and record.id.', 'category': 'Storage', 'params': ["{tableName:'abc', id: 1}", "function() {\n  \n}"] },
+  {'func': 'turtleMoveForward', 'title': 'Move the turtle forward the specified distance', 'category': 'Turtle', 'params': ["100"] },
+  {'func': 'turtleMoveBackward', 'title': 'Move the turtle backward the specified distance', 'category': 'Turtle', 'params': ["100"] },
+  {'func': 'turtleMove', 'title': 'Move the turtle by the specified x and y coordinates', 'category': 'Turtle', 'params': ["50", "50"] },
+  {'func': 'turtleMoveTo', 'title': 'Move the turtle to the specified x and y coordinates', 'category': 'Turtle', 'params': ["0", "0"] },
+  {'func': 'turtleTurnRight', 'title': 'Turn the turtle clockwise by the specified number of degrees', 'category': 'Turtle', 'params': ["90"] },
+  {'func': 'turtleTurnLeft', 'title': 'Turn the turtle counterclockwise by the specified number of degrees', 'category': 'Turtle', 'params': ["90"] },
+  {'func': 'turtlePenUp', 'title': "Pick up the turtle's pen", 'category': 'Turtle' },
+  {'func': 'turtlePenDown', 'title': "Set down the turtle's pen", 'category': 'Turtle' },
+  {'func': 'turtlePenWidth', 'title': 'Set the turtle to the specified pen width', 'category': 'Turtle', 'params': ["3"] },
+  {'func': 'turtlePenColor', 'title': 'Set the turtle to the specified pen color', 'category': 'Turtle', 'params': ["'red'"] },
 ];
 
 module.exports.categories = {
@@ -2589,6 +2714,10 @@ module.exports.categories = {
   },
   'Storage': {
     'color': 'orange',
+    'blocks': []
+  },
+  'Turtle': {
+    'color': 'yellow',
     'blocks': []
   },
 };
@@ -3271,5 +3400,64 @@ exports.deleteSharedRecord = function (blockId, record, onSuccess, onError) {
                            'onSuccess': onSuccess,
                            'onError': onError});
 };
+
+exports.turtleMoveForward = function (blockId, distance) {
+  return Applab.executeCmd(blockId,
+                          'turtleMoveForward',
+                          {'distance': distance });
+};
+
+exports.turtleMoveBackward = function (blockId, distance) {
+  return Applab.executeCmd(blockId,
+                          'turtleMoveBackward',
+                          {'distance': distance });
+};
+
+exports.turtleMove = function (blockId, x, y) {
+  return Applab.executeCmd(blockId,
+                          'turtleMove',
+                          {'x': x,
+                           'y': y });
+};
+
+exports.turtleMoveTo = function (blockId, x, y) {
+  return Applab.executeCmd(blockId,
+                          'turtleMoveTo',
+                          {'x': x,
+                           'y': y });
+};
+
+exports.turtleTurnRight = function (blockId, degrees) {
+  return Applab.executeCmd(blockId,
+                          'turtleTurnRight',
+                          {'degrees': degrees });
+};
+
+exports.turtleTurnLeft = function (blockId, degrees) {
+  return Applab.executeCmd(blockId,
+                          'turtleTurnLeft',
+                          {'degrees': degrees });
+};
+
+exports.turtlePenUp = function (blockId) {
+  return Applab.executeCmd(blockId, 'turtlePenUp');
+};
+
+exports.turtlePenDown = function (blockId) {
+  return Applab.executeCmd(blockId, 'turtlePenDown');
+};
+
+exports.turtlePenWidth = function (blockId, width) {
+  return Applab.executeCmd(blockId,
+                          'turtlePenWidth',
+                          {'width': width });
+};
+
+exports.turtlePenColor = function (blockId, color) {
+  return Applab.executeCmd(blockId,
+                          'turtlePenColor',
+                          {'color': color });
+};
+
 
 },{}]},{},[13]);
