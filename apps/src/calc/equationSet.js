@@ -1,27 +1,5 @@
 var _ = require('../utils').getLodash();
 var ExpressionNode = require('./expressionNode');
-/**
- * Creates a public accessor around object[publicName +'_']
- */
- // TODO (brent) - overkill?
-// function exposePublicFinalizable(object, publicName) {
-//   var privateName = publicName + '_';
-//   if (object[privateName] === undefined) {
-//     throw new Error(privateName + ' does not exist');
-//   }
-//   Object.defineProperty(object, publicName, {
-//     get: function () {
-//       return this[privateName];
-//     },
-//     set: function (val) {
-//       if (this.finalized_) {
-//         throw new Error('not allowed');
-//       }
-//       this[privateName] = val;
-//     }
-//   });
-// };
-// exposePublicFinalizable(this, 'compute');
 
 /**
  * An equation is an expression attached to a particular name. For example:
@@ -121,8 +99,7 @@ EquationSet.prototype.isIdenticalTo = function (otherSet) {
  * Returns a list of equations (vars/functions) sorted by name. Does not
  * include the compute expression
  */
-// TODO (brent) - i think i only call with true
-EquationSet.prototype.sortedEquations = function (includeComputeExpression) {
+EquationSet.prototype.sortedEquations = function () {
   // sort by name. note - this sorts in place
   this.equations_.sort(function (a, b) {
     return a.name.localeCompamre(b.name);
