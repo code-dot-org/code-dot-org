@@ -336,3 +336,62 @@ exports.deleteSharedRecord = function (blockId, record, onSuccess, onError) {
                            'onSuccess': onSuccess,
                            'onError': onError});
 };
+
+exports.turtleMoveForward = function (blockId, distance) {
+  return Applab.executeCmd(blockId,
+                          'turtleMoveForward',
+                          {'distance': distance });
+};
+
+exports.turtleMoveBackward = function (blockId, distance) {
+  return Applab.executeCmd(blockId,
+                          'turtleMoveBackward',
+                          {'distance': distance });
+};
+
+exports.turtleMove = function (blockId, x, y) {
+  return Applab.executeCmd(blockId,
+                          'turtleMove',
+                          {'x': x,
+                           'y': y });
+};
+
+exports.turtleMoveTo = function (blockId, x, y) {
+  return Applab.executeCmd(blockId,
+                          'turtleMoveTo',
+                          {'x': x,
+                           'y': y });
+};
+
+exports.turtleTurnRight = function (blockId, degrees) {
+  return Applab.executeCmd(blockId,
+                          'turtleTurnRight',
+                          {'degrees': degrees });
+};
+
+exports.turtleTurnLeft = function (blockId, degrees) {
+  return Applab.executeCmd(blockId,
+                          'turtleTurnLeft',
+                          {'degrees': degrees });
+};
+
+exports.turtlePenUp = function (blockId) {
+  return Applab.executeCmd(blockId, 'turtlePenUp');
+};
+
+exports.turtlePenDown = function (blockId) {
+  return Applab.executeCmd(blockId, 'turtlePenDown');
+};
+
+exports.turtlePenWidth = function (blockId, width) {
+  return Applab.executeCmd(blockId,
+                          'turtlePenWidth',
+                          {'width': width });
+};
+
+exports.turtlePenColor = function (blockId, color) {
+  return Applab.executeCmd(blockId,
+                          'turtlePenColor',
+                          {'color': color });
+};
+
