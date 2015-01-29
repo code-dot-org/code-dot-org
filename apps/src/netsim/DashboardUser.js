@@ -33,6 +33,8 @@
 /* global $ */
 'use strict';
 
+// TODO (bbuchanan): Convert this whole file to use standard Promise/Deferred code
+
 var _ = require('../utils').getLodash();
 
 /**
