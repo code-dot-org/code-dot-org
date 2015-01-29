@@ -1844,7 +1844,7 @@ Applab.onEventFired = function (opts, e) {
     // of just the 'e' parameter
     Applab.eventQueue.push({
       'fn': opts.func,
-      'arguments': [e]
+      'arguments': [e].concat(opts.extraArgs)
     });
   } else {
     Applab.eventQueue.push({'fn': opts.func});
@@ -2529,7 +2529,7 @@ return buf.join('');
 }());
 },{"../../locale/current/applab":157,"../../locale/current/common":160,"ejs":176}],9:[function(require,module,exports){
 module.exports.blocks = [
-  {'func': 'onEvent', 'title': 'Execute code in response to an event for the specified element', 'category': 'General', 'params': ["'id'", "'click'", "function() {\n  \n}"] },
+  {'func': 'onEvent', 'title': 'Execute code in response to an event for the specified element. Additional parameters are passed to the callback function.', 'category': 'General', 'params': ["'id'", "'click'", "function(event) {\n  \n}"] },
   {'func': 'startWebRequest', 'title': 'Request data from the internet and execute code when the request is complete', 'category': 'General', 'params': ["'http://api.openweathermap.org/data/2.5/weather?q=London,uk'", "function(status, type, content) {\n  \n}"] },
   {'func': 'setTimeout', 'title': 'Set a timer and execute code when that number of milliseconds has elapsed', 'category': 'General', 'params': ["function() {\n  \n}", "1000"] },
   {'func': 'clearTimeout', 'title': 'Clear an existing timer by passing in the value returned from setTimeout()', 'category': 'General', 'params': ["0"] },
@@ -3193,11 +3193,13 @@ exports.setStyle = function (blockId, elementId, style) {
 };
 
 exports.onEvent = function (blockId, elementId, eventName, func) {
+  var extraArgs = Array.prototype.slice.call(arguments).slice(4);
   return Applab.executeCmd(blockId,
                           'onEvent',
                           {'elementId': elementId,
                            'eventName': eventName,
-                           'func': func });
+                           'func': func,
+                           'extraArgs': extraArgs});
 };
 
 exports.startWebRequest = function (blockId, url, func) {
