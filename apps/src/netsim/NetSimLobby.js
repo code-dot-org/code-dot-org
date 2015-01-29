@@ -57,7 +57,7 @@ var NetSimLobby = function (connection) {
    * @private
    */
   this.connection_ = connection;
-  this.connection_.registerChangeCallback(_.bind(this.refreshLobby_, this));
+  this.connection_.statusChanges.register(this, this.refreshLobby_);
 
   /**
    * When the lobby should be refreshed next
