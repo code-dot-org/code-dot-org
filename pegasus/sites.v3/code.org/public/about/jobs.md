@@ -5,7 +5,7 @@ nav: about_nav
 
 # Job Openings at Code.org
 
-##HR Generalist (Seattle, WA preferred)##
+## HR Generalist (Seattle, WA preferred)
 **Job Summary:**
 
 The HR Generalist plays a critical role in supporting Code.org staff in areas such as recruiting and hiring, benefits, performance reviews, and workforce compliance. The candidate selected for this should have experience supporting a multi-state employer and hiring technical employees in a fast-paced start-up environment. Full-time, salaried. Responsibilities of the position include:

@@ -1,5 +1,5 @@
 module.exports.blocks = [
-  {'func': 'onEvent', 'title': 'Execute code in response to an event for the specified element', 'category': 'General', 'params': ["'id'", "'click'", "function() {\n  \n}"] },
+  {'func': 'onEvent', 'title': 'Execute code in response to an event for the specified element. Additional parameters are passed to the callback function.', 'category': 'General', 'params': ["'id'", "'click'", "function(event) {\n  \n}"] },
   {'func': 'startWebRequest', 'title': 'Request data from the internet and execute code when the request is complete', 'category': 'General', 'params': ["'http://api.openweathermap.org/data/2.5/weather?q=London,uk'", "function(status, type, content) {\n  \n}"] },
   {'func': 'setTimeout', 'title': 'Set a timer and execute code when that number of milliseconds has elapsed', 'category': 'General', 'params': ["function() {\n  \n}", "1000"] },
   {'func': 'clearTimeout', 'title': 'Clear an existing timer by passing in the value returned from setTimeout()', 'category': 'General', 'params': ["0"] },
@@ -36,10 +36,22 @@ module.exports.blocks = [
   {'func': 'canvasGetImageData', 'title': 'Get the ImageData for a rectangle (x, y, width, height) within a canvas', 'category': 'Canvas', 'params': ["'id'", "0", "0", "320", "480"], 'type': 'value' },
   {'func': 'canvasPutImageData', 'title': 'Set the ImageData for a rectangle within a canvas with x, y as the top left coordinates', 'category': 'Canvas', 'params': ["'id'", "imageData", "0", "0"] },
   {'func': 'canvasClear', 'title': 'Clear all data on a canvas', 'category': 'Canvas', 'params': ["'id'"] },
-  {'func': 'createSharedRecord', 'category': 'Storage', 'params': ["{tableName:'abc', name:'Alice', age:7, male:false}", "function() {\n  \n}"] },
-  {'func': 'readSharedRecords', 'category': 'Storage', 'params': ["{tableName: 'abc'}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    createHtmlBlock('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
-  {'func': 'updateSharedRecord', 'category': 'Storage', 'params': ["{tableName:'abc', id: 1, name:'Bob', age:8, male:true}", "function() {\n  \n}"] },
-  {'func': 'deleteSharedRecord', 'category': 'Storage', 'params': ["{tableName:'abc', id: 1}", "function() {\n  \n}"] },
+  {'func': 'writeSharedValue', 'title': 'Saves a value associated with the key, shared with everyone who uses the app.', 'category': 'Storage', 'params': ["'key'", "'value'", "function () {\n  \n}"] },
+  {'func': 'readSharedValue', 'title': 'Reads the value associated with the key, shared with everyone who uses the app.', 'category': 'Storage', 'params': ["'key'", "function (value) {\n  \n}"] },
+  {'func': 'createSharedRecord', 'title': 'createSharedRecord(record, onSuccess, onError); Creates a new shared record in table record.tableName.', 'category': 'Storage', 'params': ["{tableName:'abc', name:'Alice', age:7, male:false}", "function() {\n  \n}"] },
+  {'func': 'readSharedRecords', 'title': 'readSharedRecords(searchParams, onSuccess, onError); Reads all shared records whose properties match those on the searchParams object.', 'category': 'Storage', 'params': ["{tableName: 'abc'}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    createHtmlBlock('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
+  {'func': 'updateSharedRecord', 'title': 'updateSharedRecord(record, onSuccess, onFailure); Updates a shared record, identified by record.tableName and record.id.', 'category': 'Storage', 'params': ["{tableName:'abc', id: 1, name:'Bob', age:8, male:true}", "function() {\n  \n}"] },
+  {'func': 'deleteSharedRecord', 'title': 'deleteSharedRecord(record, onSuccess, onFailure)\nDeletes a shared record, identified by record.tableName and record.id.', 'category': 'Storage', 'params': ["{tableName:'abc', id: 1}", "function() {\n  \n}"] },
+  {'func': 'turtleMoveForward', 'title': 'Move the turtle forward the specified distance', 'category': 'Turtle', 'params': ["100"] },
+  {'func': 'turtleMoveBackward', 'title': 'Move the turtle backward the specified distance', 'category': 'Turtle', 'params': ["100"] },
+  {'func': 'turtleMove', 'title': 'Move the turtle by the specified x and y coordinates', 'category': 'Turtle', 'params': ["50", "50"] },
+  {'func': 'turtleMoveTo', 'title': 'Move the turtle to the specified x and y coordinates', 'category': 'Turtle', 'params': ["0", "0"] },
+  {'func': 'turtleTurnRight', 'title': 'Turn the turtle clockwise by the specified number of degrees', 'category': 'Turtle', 'params': ["90"] },
+  {'func': 'turtleTurnLeft', 'title': 'Turn the turtle counterclockwise by the specified number of degrees', 'category': 'Turtle', 'params': ["90"] },
+  {'func': 'turtlePenUp', 'title': "Pick up the turtle's pen", 'category': 'Turtle' },
+  {'func': 'turtlePenDown', 'title': "Set down the turtle's pen", 'category': 'Turtle' },
+  {'func': 'turtlePenWidth', 'title': 'Set the turtle to the specified pen width', 'category': 'Turtle', 'params': ["3"] },
+  {'func': 'turtlePenColor', 'title': 'Set the turtle to the specified pen color', 'category': 'Turtle', 'params': ["'red'"] },
 ];
 
 module.exports.categories = {
@@ -57,6 +69,10 @@ module.exports.categories = {
   },
   'Storage': {
     'color': 'orange',
+    'blocks': []
+  },
+  'Turtle': {
+    'color': 'yellow',
     'blocks': []
   },
 };
