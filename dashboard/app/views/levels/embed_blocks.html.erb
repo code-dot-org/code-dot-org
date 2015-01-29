@@ -11,8 +11,8 @@
   <script type="text/javascript" src="<%= "#{blockly_path}js/#{options[:locale]}/blockly_locale.js" %>"></script>
   <script type="text/javascript" src="<%= "#{blockly_path}js/common.js" %>"></script>
   <script type="text/javascript" src="<%= "#{blockly_path}js/#{options[:locale]}/common_locale.js" %>"></script>
-  <script type="text/javascript" src="<%= "#{blockly_path}js/#{app}.js" %>"></script>
   <script type="text/javascript" src="<%= "#{blockly_path}js/#{options[:locale]}/#{app}_locale.js" %>"></script>
+  <script type="text/javascript" src="<%= "#{blockly_path}js/#{app}.js" %>"></script>
   <script type="text/javascript">
     <% # delay to onload to fix IE9. %>
     window.onload = function() {
