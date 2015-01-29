@@ -38,7 +38,8 @@ module LevelsHelper
   end
 
   def set_videos_and_blocks_and_callouts_and_instructions
-    select_and_track_autoplay_video
+    @autoplay_video_info = select_and_track_autoplay_video
+    @callouts = select_and_remember_callouts(@script_level.nil?)
 
     if @level.is_a? Blockly
       @toolbox_blocks = @toolbox_blocks || @level.toolbox_blocks
@@ -49,7 +50,6 @@ module LevelsHelper
       @start_blocks = current_user.last_attempt(@level).try(:level_source).try(:data)
     end
 
-    @callouts = select_and_remember_callouts(@script_level.nil?)
     localize_levelbuilder_instructions
   end
 
@@ -71,7 +71,7 @@ module LevelsHelper
 
     seen_videos.add(autoplay_video.key)
     session[:videos_seen] = seen_videos
-    @autoplay_video_info = video_info(autoplay_video) unless params[:noautoplay]
+    video_info(autoplay_video) unless params[:noautoplay]
   end
 
   def select_and_remember_callouts(always_show = false)
@@ -328,7 +328,7 @@ module LevelsHelper
       base_level = File.basename(path, ext)
       level = Level.find_by(name: base_level)
       content_tag(:iframe, '', {
-          src: url_for(controller: :levels, action: :embed_blocks, level_id: level.id, block_type: ext.slice(1..-1)).strip,
+          src: url_for(controller: :script_levels, action: :embed_blocks, level_id: level.id, block_type: ext.slice(1..-1)).strip,
           width: width ? width.strip : '100%',
           scrolling: 'no',
           seamless: 'seamless',
@@ -339,7 +339,7 @@ module LevelsHelper
       level = Level.find_by(name: base_level)
       content_tag(:div,
         content_tag(:iframe, '', {
-          src: url_for(id: level.id, controller: :levels, action: :show, embed: true).strip,
+          src: url_for(level_id: level.id, controller: :script_levels, action: :embed_level).strip,
           width: (width ? width.strip : '100%'),
           scrolling: 'no',
           seamless: 'seamless',
