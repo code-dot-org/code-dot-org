@@ -56,7 +56,7 @@ social:
   -twitter = {:related=>'codeorg', :hashtags=>'', :text=>I18n.t(:hoc_is_here)}
   -twitter[:hashtags] = 'HourOfCode' unless I18n.t(:hoc_is_here).include? '#HourOfCode'
 -else
-  -twitter = {:related=>'codeorg', :hashtags=>'', :text=>"Why don't more schools teach computer science? We can fix this. http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more. @codeorg"}
+  -twitter = {:related=>'codeorg', :hashtags=>'', :text=>"Why don't more schools teach computer science? We can fix this. http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more."}
 
 -twitter[:url] = "http://#{request.site}/" unless twitter[:text].include? "http://#{request.site}/" || "#{twitter[:text]} http://#{request.site}/".length > 140
 
