@@ -166,10 +166,19 @@ function mergeFunctionsWithConfig(codeFunctions, dropletConfig) {
  */
 exports.generateCodeAliases = function (codeFunctions, dropletConfig, parentObjName) {
   var code = '';
-  var mergedFunctions = mergeFunctionsWithConfig(codeFunctions, dropletConfig);
-  // Insert aliases from level codeBlocks into code
-  for (var i = 0; i < mergedFunctions.length; i++) {
-    var cf = mergedFunctions[i];
+  var aliasFunctions;
+  if (codeFunctions instanceof Array) {
+    // codeFunctions is in an array, use those exactly:
+    aliasFunctions = codeFunctions;
+  } else if (dropletConfig && dropletConfig.blocks) {
+    // use dropletConfig.blocks in its entirety (creating aliases for all
+    // functions available in this app, even those not in this level's palette)
+    aliasFunctions = dropletConfig.blocks;
+  }
+
+  // Insert aliases from aliasFunctions into code
+  for (var i = 0; i < aliasFunctions.length; i++) {
+    var cf = aliasFunctions[i];
     code += "var " + cf.func + " = function() { ";
     if (cf.idArgNone) {
       code += "return " + parentObjName + "." + cf.func + ".apply(" +
