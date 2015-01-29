@@ -32,7 +32,6 @@
  maxparams: 3,
  maxstatements: 200
 */
-/* global $ */
 /* global -Blockly */
 'use strict';
 
@@ -40,7 +39,6 @@ var dom = require('../dom');
 var page = require('./page.html');
 var utils = require('../utils');
 var _ = utils.getLodash();
-var netsimStorage = require('./netsimStorage');
 var NetSimConnection = require('./NetSimConnection');
 var NetSimLogger = require('./NetSimLogger');
 var DashboardUser = require('./DashboardUser');
