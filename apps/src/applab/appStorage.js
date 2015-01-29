@@ -11,6 +11,60 @@ AppStorage.tempEncryptedAppId =
         "SmwVmYVl1V5UCCw1Ec6Dtw==" : "DvTw9X3pDcyDyil44S6qbw==";
 
 /**
+ * Reads the value associated with the key, accessible to all users of the app.
+ * @param {string} key The name of the key.
+ * @param {function(Object)} onSuccess Function to call on success with the
+       value retrieved from storage.
+ * @param {function(string)} onError Function to call on error with error msg.
+ */
+AppStorage.readSharedValue = function(key, onSuccess, onError) {
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = handleReadSharedValue.bind(req, onSuccess, onError);
+  var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + '/shared-properties/' + key;
+  req.open('GET', url, true);
+  req.send();
+};
+
+var handleReadSharedValue = function(onSuccess, onError) {
+  if (this.readyState !== 4) {
+    return;
+  }
+  if (this.status < 200 || this.status >= 300) {
+    onError('error reading value: unexpected http status ' + this.status);
+    return;
+  }
+  var value = JSON.parse(this.responseText);
+  onSuccess(value);
+};
+
+/**
+ * Saves the value associated with the key, accessible to all users of the app.
+ * @param {string} key The name of the key.
+ * @param {Object} value The value to associate with the key.
+ * @param {function()} onSuccess Function to call on success.
+ * @param {function(string)} onError Function to call on error with error msg.
+ */
+AppStorage.writeSharedValue = function(key, value, onSuccess, onError) {
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = handleWriteSharedValue.bind(req, onSuccess, onError);
+  var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + '/shared-properties/' + key;
+  req.open('POST', url, true);
+  req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+  req.send(JSON.stringify(value));
+};
+
+var handleWriteSharedValue = function(onSuccess, onError) {
+  if (this.readyState !== 4) {
+    return;
+  }
+  if (this.status < 200 || this.status >= 300) {
+    onError('error writing value: unexpected http status ' + this.status);
+    return;
+  }
+  onSuccess();
+};
+
+/**
  * Creates a new record in the specified table, accessible to all users.
  * @param {string} record.tableName The name of the table to read from.
  * @param {Object} record Object containing other properties to store
