@@ -77,6 +77,8 @@ levels.ec_simple = {
     'deleteSharedRecord': null,
     'turtleMoveForward': null,
     'turtleMoveBackward': null,
+    'turtleMove': null,
+    'turtleMoveTo': null,
     'turtleTurnRight': null,
     'turtleTurnLeft': null,
     'turtlePenUp': null,
