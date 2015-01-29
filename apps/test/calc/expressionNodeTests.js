@@ -246,7 +246,7 @@ describe("ExpressionNode", function () {
       assert.equal(node.evaluate(mapping), 2);
     });
 
-    // TODO - this is broken right now, because it ends up evaluating y + x
+    // TODO (brent) - this is broken right now, because it ends up evaluating y + x
     // with the x value from f's context, instead of the global context
     // it("can handle transitioning back to global var", function () {
     //   var mapping = {};
@@ -276,8 +276,6 @@ describe("ExpressionNode", function () {
     // need to catch recursion
     //
     // make sure function evaluation doesnt modify expression
-
-
   });
 
   it("depth", function () {
@@ -713,6 +711,47 @@ describe("ExpressionNode", function () {
 
     // todo - more of these
 
+  });
+
+  describe('hasSameSignature', function () {
+    it('fails if other is null', function () {
+      var node = new ExpressionNode('f', [1]);
+      assert.equal(node.hasSameSignature(null), false);
+      assert.equal(node.hasSameSignature(), false);
+    });
+
+    it('fails if same, but not function calls', function () {
+      var node = new ExpressionNode(1);
+      var other = node.clone();
+      assert.equal(node.hasSameSignature(other), false);
+    });
+
+    it('fails if calling different functions', function () {
+      var node = new ExpressionNode('f', [1]);
+      var other = new ExpressionNode('g', [1]);
+      assert.equal(node.hasSameSignature(other), false);
+    });
+
+    it('fails if number of children differ', function () {
+      var node = new ExpressionNode('f', [1, 2]);
+      var other = new ExpressionNode('f', [1, 2, 3]);
+      assert.equal(node.hasSameSignature(other), false);
+
+      other = new ExpressionNode('f', [1]);
+      assert.equal(node.hasSameSignature(other), false);
+    });
+
+    it('succeeds if identical', function () {
+      var node = new ExpressionNode('f', [1, 2]);
+      var other = node.clone();
+      assert.equal(node.hasSameSignature(other), true);
+    });
+
+    it('succeeds if has same signature but different params', function () {
+      var node = new ExpressionNode('f', [1, 2]);
+      var other = new ExpressionNode('f', [3, 4]);
+      assert.equal(node.hasSameSignature(other), true);
+    });
   });
 
 });

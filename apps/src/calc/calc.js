@@ -273,7 +273,8 @@ Calc.evaluateFunction_ = function (targetSet, userSet) {
   // make sure our target/user calls look the same
   var userEquation = userSet.computeEquation();
   var userExpression = userEquation && userEquation.expression;
-  if (!expression.hasSameSignature(userExpression)) {
+  if (!expression.hasSameSignature(userExpression) ||
+    !userSet.hasSingleFunction()) {
     outcome.result = ResultType.FAILURE;
     outcome.testResults = TestResults.LEVEL_INCOMPLETE_FAIL;
     return outcome;
@@ -294,12 +295,14 @@ Calc.evaluateFunction_ = function (targetSet, userSet) {
   var numParams = expression.children.length;
   var iterator = new InputIterator(possibleValues, numParams);
 
+  var setChildToValue = function (val, index) {
+    // TODO - feels a little hacky directly modifying children
+    expression.children[index].value = val;
+  };
+
   while (iterator.remaining() > 0 && !outcome.failedInput) {
     var values = iterator.next();
-    values.forEach(function (val, index) {
-      // TODO - feels a little hacky directly modifying children
-      expression.children[index].value = val;
-    });
+    values.forEach(setChildToValue);
 
     if (targetSet.evaluateWithExpression(expression) !==
         userSet.evaluateWithExpression(expression)) {
@@ -327,16 +330,16 @@ Calc.evaluateResults_ = function (targetSet, userSet) {
     failedInput: null
   };
 
-  // TODO - make sure we do the "right thing" when singleFunction and/or
-  // hasVariablesOrFunctions differs between targetSet/userSet
   if (targetSet.hasSingleFunction()) {
     // Evaluate function by testing it with a series of inputs
     return Calc.evaluateFunction_(targetSet, userSet);
-  } else if (userSet.hasVariablesOrFunctions()) {
+  } else if (userSet.hasVariablesOrFunctions() ||
+      targetSet.hasVariablesOrFunctions()) {
     // We have multiple expressions. Either our set of expressions are equal,
     // or they're not.
     identical = targetSet.isIdenticalTo(userSet);
     outcome.result = identical ? ResultType.SUCCESS : ResultType.FAILURE;
+    outcome.testResults = TestResults.LEVEL_INCOMPLETE_FAIL;
     return outcome;
   } else {
     // We have only a compute equation for each set. If they're not equal,
@@ -361,7 +364,7 @@ Calc.evaluateResults_ = function (targetSet, userSet) {
     }
     return outcome;
   }
-}
+};
 
 /**
  * Execute the user's code.
@@ -414,6 +417,7 @@ Calc.execute = function() {
  * animating evaluation.
  */
 function displayComplexUserExpressions () {
+  var result;
   clearSvgUserExpression();
 
   var computeEquation = appState.userSet.computeEquation();
@@ -447,7 +451,7 @@ function displayComplexUserExpressions () {
     // we could actually be different than the goal)
     tokenList = getTokenList(computeEquation, targetEquation);
 
-    var result = appState.userSet.evaluate().toString();
+    result = appState.userSet.evaluate().toString();
     var expectedResult = appState.targetSet.evaluate().toString();
 
     tokenList = tokenList.concat(getTokenList(' = '),
@@ -464,7 +468,7 @@ function displayComplexUserExpressions () {
       // TODO - feels a little hacky directly modifying children
       expression.children[c].value = appState.failedInput[c];
     }
-    var result = appState.userSet.evaluateWithExpression(expression).toString();
+    result = appState.userSet.evaluateWithExpression(expression).toString();
 
     tokenList = getTokenList(expression)
       .concat(getTokenList('  = '))
@@ -650,7 +654,6 @@ var displayFeedback = function() {
     level: level,
     feedbackType: appState.testResults,
     appStrings: {
-      // TODO - get this string right
       reinfFeedbackMsg: calcMsg.reinfFeedbackMsg()
     },
     appDiv: appDiv

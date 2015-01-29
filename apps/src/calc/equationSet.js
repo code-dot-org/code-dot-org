@@ -34,10 +34,12 @@ var EquationSet = function (blocks) {
   this.compute_ = null; // an Equation
   this.equations_ = []; // a list of Equations
 
-  blocks && blocks.forEach(function (block) {
-    var equation = getEquationFromBlock(block);
-    this.addEquation_(equation);
-  }, this);
+  if (blocks) {
+    blocks.forEach(function (block) {
+      var equation = getEquationFromBlock(block);
+      this.addEquation_(equation);
+    }, this);
+  }
 };
 EquationSet.Equation = Equation;
 module.exports = EquationSet;
@@ -142,7 +144,7 @@ EquationSet.prototype.isIdenticalTo = function (otherSet) {
  * Returns a list of equations (vars/functions) sorted by name.
  */
 EquationSet.prototype.sortedEquations = function () {
-  // TODO - this has side effects, do i carE?
+  // TODO - this has side effects, do i care?
   // sort by name. note - this sorts in place
   this.equations_.sort(function (a, b) {
     return a.name.localeCompare(b.name);
@@ -164,7 +166,6 @@ EquationSet.prototype.evaluate = function () {
  * Evaluate the given compute expression in the context of the EquationSet's
  * equations
  */
-// TODO - test edge cases
 EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
   // (1) no variables/functions. this is easy
   if (this.equations_.length === 0) {
@@ -173,9 +174,11 @@ EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
 
   var mapping = {};
   // (2) single function, no variables
+  // Map our parameter names to their input values.
   var singleFunction = this.singleFunction_();
   if (singleFunction !== null) {
-    // TODO - this feels a little brittle, depending on the string name
+    // TODO (brent) - might be better if we didn't depend on the equation
+    // name being in a particular format
     var variables = /\((.*)\)$/.exec(singleFunction.name)[1].split(',');
     var caller = computeExpression;
     if (caller.getType() !== ExpressionNode.ValueType.FUNCTION_CALL) {
@@ -187,13 +190,13 @@ EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
     }
 
     variables.forEach(function (item, index) {
-      // TODO - are we accessing stuff that should be private?
+      // TODO (brent)- value feels like it should be a private maybe?
       mapping[item] = caller.children[index].value;
     });
     return singleFunction.expression.evaluate(mapping);
   }
 
-  // (3) multiple variables, no functions
+  // (3) no functions and one or more variables
   var madeProgress = true;
   while (madeProgress) {
     madeProgress = false;
@@ -207,16 +210,17 @@ EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
     }
   }
 
-  // TODO - do i need to handle case where compute expression is simply
-  // not resolveable?
   if (!computeExpression.canEvaluate(mapping)) {
-    throw new Error("Can't resolve ExpressionSet");
+    throw new Error("Can't resolve EquationSet");
   }
 
   return computeExpression.evaluate(mapping);
 };
 
-// TODO (brent) : needs some unit tests
+/**
+ * Given a Blockly block, generates an Equation.
+ */
+// TODO (brent) - needs unit tests
 function getEquationFromBlock(block) {
   var name;
   if (!block) {
@@ -264,7 +268,7 @@ function getEquationFromBlock(block) {
         var input, childBlock;
         for (var i = 0; !!(input = block.getInput('ARG' + i)); i++) {
           childBlock = input.connection.targetBlock();
-          // TODO - better default?
+          // TODO (brent) - better default?
           values.push(childBlock ? getEquationFromBlock(childBlock).expression :
             new ExpressionNode(0));
         }
@@ -274,7 +278,7 @@ function getEquationFromBlock(block) {
 
     case 'functional_definition':
       name = block.getTitleValue('NAME');
-      // TODO - access private
+      // TODO(brent) - avoid accessing private
       if (block.parameterNames_.length) {
         name += '(' + block.parameterNames_.join(',') +')';
       }

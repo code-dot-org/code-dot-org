@@ -17,7 +17,6 @@ module.exports = InputIterator;
  * Get the next value, throwing if none remaing
  */
 InputIterator.prototype.next = function () {
-  debugger;
   if (this.remaining_ === 0) {
     throw new Error('empty');
   }
