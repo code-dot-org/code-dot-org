@@ -1622,7 +1622,11 @@ Applab.setImageURL = function (opts) {
 
 Applab.playSound = function (opts) {
   if (studioApp.cdoSounds) {
-    studioApp.cdoSounds.playURL(opts.url, {volume: 1.0});
+    studioApp.cdoSounds.playURL(opts.url,
+                               {volume: 1.0,
+                                forceHTML5: true,
+                                allowHTML5Mobile: true
+    });
   }
 };
 
