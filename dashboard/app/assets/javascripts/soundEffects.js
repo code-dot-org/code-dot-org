@@ -217,8 +217,8 @@ Sound.prototype.preload = function () {
       audioElement.pause();
     }
     this.audioElement = audioElement;
-    if (config.playAfterRegister) {
-      play(config.firstPlayOptions);
+    if (this.config.playAfterRegister) {
+      this.play(this.config.firstPlayOptions);
     }
   }
 };
