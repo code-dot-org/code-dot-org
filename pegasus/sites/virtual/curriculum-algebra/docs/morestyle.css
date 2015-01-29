@@ -203,6 +203,10 @@ summary {
   /*margin-left: -1em;*/
 }
 
+li p {
+  margin: 0;
+}
+
 @page  
 { 
     size: auto;    

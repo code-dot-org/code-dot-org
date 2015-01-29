@@ -290,6 +290,11 @@ function getEquationFromBlock(block) {
     case 'functional_parameters_get':
       return new Equation(null, new ExpressionNode(block.getTitleValue('VAR')));
 
+    case 'functional_example':
+      // TODO (brent) - we dont do anything with functional_example yet, but
+      // this way we will at least persist it/not throw unknown type
+      return new Equation(null, null);
+
     default:
       throw "Unknown block type: " + block.type;
   }

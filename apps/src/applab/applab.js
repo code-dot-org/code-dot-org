@@ -18,6 +18,7 @@ var page = require('../templates/page.html');
 var dom = require('../dom');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
+var dropletConfig = require('./dropletConfig');
 var Slider = require('../slider');
 var AppStorage = require('./appStorage');
 var FormStorage = require('./formStorage');
@@ -512,6 +513,12 @@ Applab.init = function(config) {
     config.level.sliderSpeed = 1.0;
   }
 
+  // If we are in mobile sharing mode, allow the viewport to handle scaling
+  // and override our default width target in vizAppWidth with the actual width
+  if (dom.isMobile() && config.hideSource) {
+    vizAppWidth = Applab.appWidth;
+  }
+
   adjustAppSizeStyles();
 
   var showSlider = !config.hideSource && config.level.editCode;
@@ -585,6 +592,11 @@ Applab.init = function(config) {
         e.stop();
       });
     }
+    
+    if (studioApp.share) {
+      // automatically run in share mode:
+      window.setTimeout(studioApp.runButtonClick.bind(studioApp), 0);
+    }
   };
 
   // arrangeStartBlocks(config);
@@ -596,6 +608,12 @@ Applab.init = function(config) {
 
   config.varsInGlobals = true;
   config.noButtonsBelowOnMobileShare = true;
+
+  config.dropletConfig = dropletConfig;
+
+  // Since the app width may not be 400, set this value in the config to
+  // ensure that the viewport is set up properly for scaling it up/down
+  config.mobileNoPaddingShareWidth = config.level.appWidth;
 
   // Applab.initMinimal();
 
@@ -636,11 +654,6 @@ Applab.init = function(config) {
     if (viewDataButton) {
       dom.addClickTouchEvent(viewDataButton, Applab.onViewData);
     }
-  }
-
-  if (studioApp.share) {
-    // automatically run in share mode:
-    window.setTimeout(studioApp.runButtonClick, 0);
   }
 };
 
@@ -816,9 +829,8 @@ var defineProcedures = function (blockType) {
   var code = Blockly.Generator.blockSpaceToCode('JavaScript', blockType);
   // TODO: handle editCode JS interpreter
   try { codegen.evalWith(code, {
-                         codeFunctions: level.codeFunctions,
                          studioApp: studioApp,
-                         Studio: api,
+                         Applab: api,
                          Globals: Applab.Globals } ); } catch (e) { }
 };
 
@@ -903,8 +915,8 @@ Applab.execute = function() {
 
   var codeWhenRun;
   if (level.editCode) {
-    codeWhenRun = utils.generateCodeAliases(level.codeFunctions, 'Applab');
-    codeWhenRun += utils.generateCodeAliases(mathFunctions, 'Math');
+    codeWhenRun = utils.generateCodeAliases(level.codeFunctions, dropletConfig, 'Applab');
+    codeWhenRun += utils.generateCodeAliases(mathFunctions, null, 'Math');
     Applab.userCodeStartOffset = codeWhenRun.length;
     Applab.userCodeLineOffset = codeWhenRun.split("\n").length - 1;
     codeWhenRun += studioApp.editor.getValue();
@@ -1179,6 +1191,8 @@ Applab.callCmd = function (cmd) {
     case 'startWebRequest':
     case 'setTimeout':
     case 'clearTimeout':
+    case 'readSharedValue':
+    case 'writeSharedValue':
     case 'createSharedRecord':
     case 'readSharedRecords':
     case 'updateSharedRecord':
@@ -1716,7 +1730,7 @@ Applab.clearTimeout = function (opts) {
 };
 
 Applab.createSharedRecord = function (opts) {
-  var onSuccess = Applab.handleReadSharedRecords.bind(this, opts.onSuccess);
+  var onSuccess = Applab.handleCreateSharedRecord.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
   AppStorage.createSharedRecord(opts.record, onSuccess, onError);
 };
@@ -1741,6 +1755,36 @@ Applab.handleError = function(errorCallback, message) {
   }
 };
 
+Applab.readSharedValue = function(opts) {
+  var onSuccess = Applab.handleReadSharedValue.bind(this, opts.onSuccess);
+  var onError = Applab.handleError.bind(this, opts.onError);
+  AppStorage.readSharedValue(opts.key, onSuccess, onError);
+};
+
+Applab.handleReadSharedValue = function(successCallback, value) {
+  if (successCallback) {
+    Applab.eventQueue.push({
+      'fn': successCallback,
+      'arguments': [value]
+    });
+  }
+};
+
+Applab.writeSharedValue = function(opts) {
+  var onSuccess = Applab.handleWriteSharedValue.bind(this, opts.onSuccess);
+  var onError = Applab.handleError.bind(this, opts.onError);
+  AppStorage.writeSharedValue(opts.key, opts.value, onSuccess, onError);
+};
+
+Applab.handleWriteSharedValue = function(successCallback) {
+  if (successCallback) {
+    Applab.eventQueue.push({
+      'fn': successCallback,
+      'arguments': []
+    });
+  }
+};
+
 Applab.readSharedRecords = function (opts) {
   var onSuccess = Applab.handleReadSharedRecords.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
@@ -1757,7 +1801,7 @@ Applab.handleReadSharedRecords = function(successCallback, records) {
 };
 
 Applab.updateSharedRecord = function (opts) {
-  var onSuccess = Applab.handleReadSharedRecords.bind(this, opts.onSuccess);
+  var onSuccess = Applab.handleUpdateSharedRecord.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
   AppStorage.updateSharedRecord(opts.record, onSuccess, onError);
 };
@@ -1772,7 +1816,7 @@ Applab.handleUpdateSharedRecord = function(successCallback) {
 };
 
 Applab.deleteSharedRecord = function (opts) {
-  var onSuccess = Applab.handleReadSharedRecords.bind(this, opts.onSuccess);
+  var onSuccess = Applab.handleDeleteSharedRecord.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
   AppStorage.deleteSharedRecord(opts.record, onSuccess, onError);
 };

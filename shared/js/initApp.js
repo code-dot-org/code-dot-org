@@ -7,6 +7,10 @@ var baseOptions = {
   position: { blockYCoordinateInterval: 25 },
   onInitialize: function() {
     this.createCallouts();
+    if (window.wrapExistingClipPaths && window.handleClipPathChanges) {
+      wrapExistingClipPaths();
+      handleClipPathChanges();
+    }
   },
   createCallouts: function() {
     $.fn.qtip.zindex = 500;
