@@ -41,7 +41,10 @@ var page = require('./page.html');
 var utils = require('../utils');
 var _ = utils.getLodash();
 var netsimStorage = require('./netsimStorage');
+var NetSimConnection = require('./NetSimConnection');
+var NetSimLogger = require('./NetSimLogger');
 var DashboardUser = require('./DashboardUser');
+var NetSimLobby = require('./NetSimLobby');
 
 /**
  * The top-level Internet Simulator controller.
@@ -51,6 +54,28 @@ var NetSim = function () {
   this.skin = null;
   this.level = null;
   this.heading = 0;
+
+  /**
+   * Current user object which asynchronously grabs the current user's
+   * info from the dashboard API.
+   * @type {DashboardUser}
+   * @private
+   */
+  this.currentUser_ = DashboardUser.getCurrentUser();
+
+  /**
+   * Instance of logging API, gives us choke-point control over log output
+   * @type {NetSimLogger}
+   * @private
+   */
+  this.logger_ = new NetSimLogger(NetSimLogger.LogLevel.VERBOSE);
+
+  /**
+   * Manager for connection to shared instance of netsim app.
+   * @type {NetSimConnection}
+   * @private
+   */
+  this.connection_ = null;
 };
 
 module.exports = NetSim;
@@ -87,108 +112,6 @@ NetSim.prototype.attachHandlers_ = function () {
       document.getElementById('netsim_sendbutton'),
       _.bind(this.onSendButtonClick_, this)
   );
-
-  dom.addClickTouchEvent(
-      document.getElementById('netsim_refresh_button'),
-      _.bind(this.onRefreshButtonClick_, this)
-  );
-
-  // _Try_ to clean up after ourselves.
-  window.addEventListener('beforeunload', _.bind(this.disconnect_, this));
-};
-
-NetSim.prototype.onRefreshButtonClick_ = function () {
-  this.refreshLobby_();
-};
-
-/**
- * Send a request to dashboard and retrieve a JSON array listing the
- * sections this user belongs to.
- * @param callback
- * @private
- */
-NetSim.prototype.getUserSections_ = function (callback) {
-  var userSectionEndpoint = '//' + document.location.host +
-      '/v2/sections/membership';
-  $.ajax({
-    dataType: "json",
-    url: userSectionEndpoint,
-    success: callback
-  });
-};
-
-/**
- * Handler for what to do when a new section is selected
- * @private
- */
-NetSim.prototype.onSectionSelected_ = function() {
-  var sectionSelector = document.getElementById('netsim_section_select');
-  var sectionID = sectionSelector.value;
-  if (sectionID >= 0) {
-    // TODO (bbuchanan) : Also pass through unique level key
-    this.joinLobby_(sectionSelector.value);
-  }
-};
-
-/**
- * Broadcast own presence in a "lobby" unique to this level+section.
- * @param sectionID
- * TODO (bbuchanan) : Also accept unique level key for lobby
- * @private
- */
-NetSim.prototype.joinLobby_ = function (sectionID) {
-  // TODO (bbuchanan) : Disconnect from lobby if already connected
-  this.lobby_ = new netsimStorage.SharedStorageTable(
-      netsimStorage.APP_PUBLIC_KEY,
-      'demo_' + sectionID + '_lobby'
-  );
-  this.currentUser_.whenReady(_.bind(function () {
-    this.lobby_.insert({
-      name: this.currentUser_.name,
-      connected_to: undefined,
-      last_update: Date.now()
-    }, _.bind(function (data) {
-      if (data) {
-        this.connectionRowId_ = data.id;
-        console.log("Connected, assigned ID: " + this.connectionRowId_);
-        document.getElementById('netsim_refresh_button').disabled = false;
-        this.refreshLobby_();
-      }
-    }, this));
-  }, this));
-};
-
-NetSim.prototype.refreshLobby_ = function () {
-  this.lobby_.all(_.bind(function(data) {
-    var list = document.getElementById("netsim_lobby_list");
-
-    // Clear it
-    while (list.firstChild) {
-      list.removeChild(list.firstChild);
-    }
-
-    // Add all of our sections
-    data.forEach(function (connection) {
-      var item = document.createElement('li');
-      item.innerHTML = '[' + connection.id + '] ' + connection.name + '(' +
-          connection.last_update + ')';
-      list.appendChild(item);
-    });
-  }, this));
-};
-
-NetSim.prototype.disconnect_ = function () {
-  if (this.lobby_ && this.connectionRowId_) {
-    this.lobby_.delete(this.connectionRowId_, _.bind(function (wasSuccess) {
-      if (wasSuccess) {
-        this.connectionRowId_ = undefined;
-        this.lobby_ = undefined;
-        console.log("Disconnected");
-      } else {
-        console.log("Disconnect failed!");
-      }
-    }, this));
-  }
 };
 
 /**
@@ -201,8 +124,6 @@ NetSim.prototype.init = function(config) {
   if (!this.studioApp_) {
     throw new Error("NetSim requires a StudioApp");
   }
-
-  this.currentUser_ = DashboardUser.getCurrentUser();
 
   this.skin = config.skin;
   this.level = config.level;
@@ -222,42 +143,21 @@ NetSim.prototype.init = function(config) {
 
   // Override certain StudioApp methods - netsim does a lot of configuration
   // itself, because of its nonstandard layout.
-  this.studioApp_.configureDom = _.bind(this.configureDomOverride_,
-      this.studioApp_);
+  this.studioApp_.configureDom = _.bind(this.configureDomOverride_, this.studioApp_);
   this.studioApp_.onResize = _.bind(this.onResizeOverride_, this.studioApp_);
 
   this.studioApp_.init(config);
 
   this.attachHandlers_();
 
-  // TODO (bbuchanan): Extract this into its own isolated control
-  this.getUserSections_(_.bind(function (data) {
-    var sectionSelector = document.getElementById('netsim_section_select');
-
-    // Clear it
-    while (sectionSelector.firstChild) {
-      sectionSelector.removeChild(sectionSelector.firstChild);
-    }
-
-    // If we didn't get any sections, we must deny access
-    if (0 === data.length) {
-      // TODO: Deny access to netsim if no section found
-      var option = document.createElement('option');
-      option.value = -1;
-      option.textContent = '-- NOT FOUND --';
-      sectionSelector.appendChild(option);
-      return;
-    }
-
-    // Add all of our sections
-    data.forEach(function (section) {
-      var option = document.createElement('option');
-      option.value = section.id;
-      option.textContent = section.name;
-      sectionSelector.appendChild(option);
-    });
-
-    this.onSectionSelected_();
+  // Create netsim lobby widget in page
+  this.currentUser_.whenReady(_.bind(function () {
+    // Do a deferred initialization of the connection object.
+    // TODO: Use promises for this!
+    this.connection_ = new NetSimConnection(this.currentUser_.name, this.logger_);
+    this.logger_.log("Connection manager created.");
+    var lobbyContainer = document.getElementById('netsim_lobby_container');
+    this.lobbyUi_ = NetSimLobby.createWithin(lobbyContainer, this.connection_);
   }, this));
 };
 
