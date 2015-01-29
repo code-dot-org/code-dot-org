@@ -23,6 +23,15 @@ class User < ActiveRecord::Base
 
   has_many :permissions, class_name: 'UserPermission', dependent: :destroy
 
+  has_one :districts_users
+  has_one :district, through: :districts_users
+
+  # Teachers can be in multiple cohorts
+  has_and_belongs_to_many :cohorts
+  # all Teachers in a Cohort (are supposed to) attend all Workshops associated with a Cohort
+  has_many :workshops, through: :cohorts
+  has_many :segments, through: :workshops
+
   def delete_permission(permission)
     permission = permissions.find_by(permission: permission)
     permissions.delete permission if permission
@@ -34,6 +43,17 @@ class User < ActiveRecord::Base
 
   def permission?(permission)
     permissions.exists?(permission: permission)
+  end
+
+  def district_contact?
+    permission?('district_contact') || district.try(:contact) == self
+  end
+
+  # a district contact can see the teachers from their district that are part of a cohort
+  def district_teachers(cohort = nil)
+    return nil unless district_contact?
+    teachers = district.users
+    (cohort ? teachers.joins(:cohorts).where(cohorts: {id: cohort}) : teachers).to_a
   end
 
   GENDER_OPTIONS = [[nil, ''], ['gender.male', 'm'], ['gender.female', 'f'], ['gender.none', '-']]
