@@ -29,7 +29,7 @@ class ActiveSupport::TestCase
   setup do
 
     # sponsor message calls PEGASUS_DB, stub it so we don't have to deal with this in test
-    UserHelpers.stubs(:sponsor_message).returns('')
+    UserHelpers.stubs(:random_donor).returns(name_s: 'Someone')
 
     set_env :test
 
