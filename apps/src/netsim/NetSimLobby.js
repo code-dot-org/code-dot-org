@@ -37,9 +37,6 @@ var _ = require('../utils').getLodash();
 var dom = require('../dom');
 var markup = require('./NetSimLobby.html');
 
-// TODO (bbuchanan) : Rename the section selector to the instance
-//                    selector, update metaphor everywhere.
-
 /**
  * @param {NetSimConnection} connection
  * @constructor
@@ -73,7 +70,7 @@ NetSimLobby.createWithin = function (element, connection) {
  */
 NetSimLobby.prototype.initialize = function () {
   this.bindElements_();
-  this.refreshSectionList_();
+  this.refreshInstanceList_();
 };
 
 /**
@@ -82,9 +79,9 @@ NetSimLobby.prototype.initialize = function () {
  * Also attach method handlers.
  */
 NetSimLobby.prototype.bindElements_ = function () {
-  this.sectionSelector_ = document.getElementById('netsim_section_select');
-  this.sectionSelector_.addEventListener('change', 
-      _.bind(this.onSectionSelectorChange_, this));
+  this.instanceSelector_ = document.getElementById('netsim_instance_select');
+  this.instanceSelector_.addEventListener('change',
+      _.bind(this.onInstanceSelectorChange_, this));
 
   this.lobbyList_ = document.getElementById('netsim_lobby_list');
 
@@ -96,14 +93,14 @@ NetSimLobby.prototype.bindElements_ = function () {
 /**
  *
  */
-NetSimLobby.prototype.onSectionSelectorChange_ = function () {
+NetSimLobby.prototype.onInstanceSelectorChange_ = function () {
   if (this.connection_.isConnectedToInstance()) {
     this.connection_.disconnectFromInstance();
   }
 
-  if (this.sectionSelector_.value >= 0) {
+  if (this.instanceSelector_.value !== '__none') {
     // TODO: Use real level name instead of 'demo'
-    this.connection_.connectToInstance('demo', this.sectionSelector_.value);
+    this.connection_.connectToInstance(this.instanceSelector_.value);
   }
 };
 
@@ -111,39 +108,40 @@ NetSimLobby.prototype.onSectionSelectorChange_ = function () {
  * Make an async request against the dashboard API to
  * reload and populate the user sections list.
  */
-NetSimLobby.prototype.refreshSectionList_ = function () {
+NetSimLobby.prototype.refreshInstanceList_ = function () {
   var option;
   var self = this;
-  var sectionSelector = this.sectionSelector_;
+  var instanceSelector = this.instanceSelector_;
   this.getUserSections_(function (data) {
-    $(sectionSelector).empty();
+    $(instanceSelector).empty();
 
     if (0 === data.length){
       // If we didn't get any sections, we must deny access
       option = document.createElement('option');
-      option.value = -1;
-      option.textContent = '-- NOT FOUND --';
-      sectionSelector.appendChild(option);
+      option.value = '__none';
+      option.textContent = '-- NONE FOUND --';
+      instanceSelector.appendChild(option);
       return;
     } else {// if (data.length > 1) {
       // If we have more than one section, require the user
       // to pick one.
       option = document.createElement('option');
-      option.value = -1;
+      option.value = '__none';
       option.textContent = '-- PICK ONE --';
-      sectionSelector.appendChild(option);
+      instanceSelector.appendChild(option);
     }
 
-    // Add all sections to the dropdown
-    // TODO (bbuchanan) : Put teacher names in sections
+    // Add all instances to the dropdown
     data.forEach(function (section) {
       option = document.createElement('option');
-      option.value = section.id;
+      // TODO (bbuchanan) : Use unique level ID when generating instance ID
+      option.value = 'demo_' + section.id;
+      // TODO (bbuchanan) : Put teacher names in sections
       option.textContent = section.name;
-      sectionSelector.appendChild(option);
+      instanceSelector.appendChild(option);
     });
 
-    self.onSectionSelectorChange_();
+    self.onInstanceSelectorChange_();
   });
 };
 
@@ -155,9 +153,10 @@ NetSimLobby.prototype.refreshLobby_ = function () {
     return;
   }
 
-  this.connection_.getLobbyData(function (lobbyData) {
+  this.connection_.getLobbyListing(function (lobbyData) {
     $(lobbyList).empty();
 
+    // TODO (bbuchanan): This should eventually generate an interactive list
     lobbyData.forEach(function (connection) {
       var item = document.createElement('li');
       item.innerHTML = '[' + connection.id + '] ' + connection.name +

@@ -73,7 +73,7 @@ var NetSimConnection = function (displayName, logger /*=new NetSimLogger(NONE)*/
    * If undefined, we aren't connected to an instance.
    * @type {number}
    */
-  this.lobbyId_ = undefined;
+  this.myLobbyRowID_ = undefined;
 
   /**
    * Methods registered to be notified when instance connection
@@ -125,12 +125,10 @@ NetSimConnection.prototype.buildLobbyRow_ = function () {
 
 /**
  * Establishes a new connection to a netsim instance, closing the old one
- * if present.  Together, the arguments (levelId, sectionId) form a unique
- * instance key.
- * @param {string} levelId
- * @param {number} sectionId
+ * if present.
+ * @param {string} instanceID
  */
-NetSimConnection.prototype.connectToInstance = function (levelId, sectionId) {
+NetSimConnection.prototype.connectToInstance = function (instanceID) {
   if (this.isConnectedToInstance()) {
     this.logger_.log("Auto-closing previous connection...", LogLevel.WARN);
     this.disconnectFromInstance();
@@ -138,7 +136,7 @@ NetSimConnection.prototype.connectToInstance = function (levelId, sectionId) {
 
   // Being connected to an instance means having an entry in that instance's
   // lobby table.
-  var tableName = levelId + '_' + sectionId + '_lobby';
+  var tableName = instanceID + '_lobby';
   this.lobbyTable_ = new netsimStorage.SharedStorageTable(
      netsimStorage.APP_PUBLIC_KEY,
      tableName);
@@ -148,8 +146,8 @@ NetSimConnection.prototype.connectToInstance = function (levelId, sectionId) {
   var self = this;
   this.lobbyTable_.insert(this.buildLobbyRow_(), function (returnedData) {
     if (returnedData) {
-      self.lobbyId_ = returnedData.id;
-      self.logger_.log("Connected to instance, assigned ID " + self.lobbyId_,
+      self.myLobbyRowID_ = returnedData.id;
+      self.logger_.log("Connected to instance, assigned ID " + self.myLobbyRowID_,
           LogLevel.INFO);
     } else {
       // TODO (bbuchanan) : Connection retry?
@@ -165,7 +163,7 @@ NetSimConnection.prototype.connectToInstance = function (levelId, sectionId) {
  * @returns {boolean}
  */
 NetSimConnection.prototype.isConnectedToInstance = function () {
-  return undefined !== this.lobbyId_;
+  return (undefined !== this.myLobbyRowID_);
 };
 
 /**
@@ -181,7 +179,7 @@ NetSimConnection.prototype.disconnectFromInstance = function () {
   // before we disconnect from the instance.
 
   var self = this;
-  this.lobbyTable_.delete(this.lobbyId_, function (succeeded) {
+  this.lobbyTable_.delete(this.myLobbyRowID_, function (succeeded) {
     if (succeeded) {
       self.logger_.log("Disconnected from instance.", LogLevel.INFO);
     } else {
@@ -190,7 +188,7 @@ NetSimConnection.prototype.disconnectFromInstance = function () {
     }
   });
 
-  this.lobbyId_ = undefined;
+  this.myLobbyRowID_ = undefined;
   this.lobbyTable_ = null;
   this.callChangeCallbacks();
 };
@@ -202,16 +200,17 @@ NetSimConnection.prototype.keepAlive = function () {
   }
 
   var self = this;
-  this.lobbyTable_.update(this.lobbyId_, this.buildLobbyRow_(), function (succeeded) {
-    if (succeeded) {
-      self.logger_.log("keepAlive succeeded.", LogLevel.INFO);
-    } else {
-      self.logger_.log("keepAlive failed.", LogLevel.WARN);
-    }
+  this.lobbyTable_.update(this.myLobbyRowID_, this.buildLobbyRow_(),
+      function (succeeded) {
+        if (succeeded) {
+          self.logger_.log("keepAlive succeeded.", LogLevel.INFO);
+        } else {
+          self.logger_.log("keepAlive failed.", LogLevel.WARN);
+        }
   });
 };
 
-NetSimConnection.prototype.getLobbyData = function (callback) {
+NetSimConnection.prototype.getLobbyListing = function (callback) {
   if (!this.isConnectedToInstance()) {
     this.logger.log("Can't get lobby rows, not connected to instance.", LogLevel.WARN);
     callback([]);
