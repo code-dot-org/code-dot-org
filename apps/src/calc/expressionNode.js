@@ -316,7 +316,6 @@ ExpressionNode.prototype.isIdenticalTo = function (other) {
  * Returns true if both this and other are calls of the same function, with
  * the same number of arguments
  */
-// TODO - unit test
 ExpressionNode.prototype.hasSameSignature = function (other) {
   if (!other) {
     return false;
