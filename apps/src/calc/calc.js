@@ -78,7 +78,8 @@ function getTokenList(one, two) {
     two = two.expression;
   }
   if (typeof(one) === 'string') {
-    return new Token(one, one !== two);
+    var marked = (one !== two && two !== undefined);
+    return [new Token(one, marked)];
   }
 
   if (!one) {
@@ -471,7 +472,7 @@ function displayComplexUserExpressions () {
     result = appState.userSet.evaluateWithExpression(expression).toString();
 
     tokenList = getTokenList(expression)
-      .concat(getTokenList('  = '))
+      .concat(getTokenList(' = '))
       .concat(getTokenList(result, ' ')); // this should always be marked
     displayEquation('userExpression', null, tokenList, nextRow++, 'errorToken');
   }
