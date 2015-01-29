@@ -3,8 +3,9 @@ title: Video Games and Coordinate Planes
 view: page_curriculum
 theme: none
 ---
+
 <%
-lesson_id = 'alg9'
+lesson_id = 'alg1'
 lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 %>
 
@@ -42,13 +43,14 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 ### For the Teacher
 - [Lesson slide deck](https://docs.google.com/a/code.org/presentation/d/1DF3XNkI4yellzRJL8ItqZU546UT9BaXWeKY7AmI0gsc/)
 - [Example Game](http://studio.code.org/s/algebra/stage/1/puzzle/2/)
-- Character Cutouts
+- Printed cutouts of the [Ninja](ninja.png), [Dragon](dragon.png), and [Unicorn](unicorn.png)
 
 [/together]
 
 [together]
 
 ## Getting Started
+
 
 ### <a name="Vocab"></a> 1) Vocabulary
 This lesson has three new and important words:<br/>
