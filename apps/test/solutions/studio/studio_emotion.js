@@ -4,19 +4,6 @@ var Emotions = require(testUtils.buildPath('studio/constants.js')).Emotions;
 
 var _ = require(testUtils.buildPath('lodash'));
 
-/**
- * Runs the given function at the provided tick count
- */
-function runOnTick(tick, fn) {
-  Studio.onTick = _.wrap(Studio.onTick, function (studioOnTick) {
-    if (Studio.tickCount === tick) {
-      fn();
-    }
-    studioOnTick();
-  });
-}
-
-
 var levelDef = {
   map: [
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -58,20 +45,20 @@ module.exports = {
           assert(actualFrame === frame, 'Expected: ' + frame + '  Actual: ' + actualFrame);
         };
 
-        runOnTick(6, function () {
+        testUtils.runOnStudioTick(6, function () {
           assert(Studio.sprite[0].emotion === Emotions.HAPPY);
           // eye blink
           assertSpriteFrame(1);
         });
 
-        runOnTick(25, function () {
+        testUtils.runOnStudioTick(25, function () {
           assert(Studio.sprite[0].emotion === Emotions.HAPPY);
           // happy frame
           assertSpriteFrame(9);
         });
 
         // add a completion on timeout since this is a freeplay level
-        runOnTick(50, function () {
+        testUtils.runOnStudioTick(50, function () {
           Studio.onPuzzleComplete();
         });
 
@@ -102,20 +89,20 @@ module.exports = {
           assert(actualFrame === frame, 'Expected: ' + frame + '  Actual: ' + actualFrame);
         };
 
-        runOnTick(6, function () {
+        testUtils.runOnStudioTick(6, function () {
           assert(Studio.sprite[0].emotion === Emotions.ANGRY);
           // eye blink
           assertSpriteFrame(1);
         });
 
-        runOnTick(25, function () {
+        testUtils.runOnStudioTick(25, function () {
           assert(Studio.sprite[0].emotion === Emotions.ANGRY);
           // happy frame
           assertSpriteFrame(10);
         });
 
         // add a completion on timeout since this is a freeplay level
-        runOnTick(50, function () {
+        testUtils.runOnStudioTick(50, function () {
           Studio.onPuzzleComplete();
         });
 
@@ -146,20 +133,20 @@ module.exports = {
           assert(actualFrame === frame, 'Expected: ' + frame + '  Actual: ' + actualFrame);
         };
 
-        runOnTick(6, function () {
+        testUtils.runOnStudioTick(6, function () {
           assert(Studio.sprite[0].emotion === Emotions.SAD);
           // eye blink
           assertSpriteFrame(1);
         });
 
-        runOnTick(25, function () {
+        testUtils.runOnStudioTick(25, function () {
           assert(Studio.sprite[0].emotion === Emotions.SAD);
           // happy frame
           assertSpriteFrame(11);
         });
 
         // add a completion on timeout since this is a freeplay level
-        runOnTick(50, function () {
+        testUtils.runOnStudioTick(50, function () {
           Studio.onPuzzleComplete();
         });
 

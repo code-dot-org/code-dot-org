@@ -31,4 +31,19 @@ module UserHelpers
     suffix = similar_usernames.map{|n| n[prefix.length..-1]}.map(&:to_i).max + 1
     return "#{prefix}#{suffix}"
   end
+
+  def self.random_donor
+    weight = SecureRandom.random_number
+    PEGASUS_DB[:cdo_donors].where('((weight_f - ?) >= 0)', weight).first
+  end
+  
+  def self.sponsor_message(user)
+    sponsor = random_donor[:name_s]
+
+    if user.teacher?
+      "#{sponsor} made the generous gift to sponsor your classroom's learning. Pay it forward, <a href=\"http://code.org/donate\">donate $25 to Code.org</a> to pay for another classroom's education."
+    else
+      "#{sponsor} made the generous gift to sponsor your learning."
+    end
+  end
 end

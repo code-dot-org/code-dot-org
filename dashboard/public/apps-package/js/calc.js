@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({32:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({33:[function(require,module,exports){
 var appMain = require('../appMain');
 window.Calc = require('./calc');
 var blocks = require('./blocks');
@@ -11,7 +11,7 @@ window.calcMain = function(options) {
   appMain(window.Calc, levels, options);
 };
 
-},{"../appMain":3,"../skins":114,"./blocks":27,"./calc":28,"./levels":31}],28:[function(require,module,exports){
+},{"../appMain":3,"../skins":115,"./blocks":28,"./calc":29,"./levels":32}],29:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -341,6 +341,11 @@ function getEquationFromBlock(block) {
     case 'functional_parameters_get':
       return new Equation(null, new ExpressionNode(block.getTitleValue('VAR')));
 
+    case 'functional_example':
+      // TODO (brent) - we dont do anything with functional_example yet, but
+      // this way we will at least persist it/not throw unknown type
+      return new Equation(null, null);
+
     default:
       throw "Unknown block type: " + block.type;
   }
@@ -620,7 +625,7 @@ function onReportComplete(response) {
   displayFeedback();
 }
 
-},{"../../locale/current/calc":158,"../../locale/current/common":159,"../StudioApp":2,"../block_utils":15,"../codegen":38,"../dom":40,"../skins":114,"../templates/page.html":134,"../timeoutList":140,"../utils":154,"./api":26,"./controls.html":29,"./expressionNode":30,"./levels":31,"./visualization.html":33}],33:[function(require,module,exports){
+},{"../../locale/current/calc":159,"../../locale/current/common":160,"../StudioApp":2,"../block_utils":16,"../codegen":39,"../dom":41,"../skins":115,"../templates/page.html":135,"../timeoutList":141,"../utils":155,"./api":27,"./controls.html":30,"./expressionNode":31,"./levels":32,"./visualization.html":34}],34:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -640,7 +645,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/calc":158,"ejs":175}],31:[function(require,module,exports){
+},{"../../locale/current/calc":159,"ejs":176}],32:[function(require,module,exports){
 var msg = require('../../locale/current/calc');
 var blockUtils = require('../block_utils');
 
@@ -679,7 +684,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/current/calc":158,"../block_utils":15}],29:[function(require,module,exports){
+},{"../../locale/current/calc":159,"../block_utils":16}],30:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -702,7 +707,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/calc":158,"../../locale/current/common":159,"ejs":175}],27:[function(require,module,exports){
+},{"../../locale/current/calc":159,"../../locale/current/common":160,"ejs":176}],28:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -794,9 +799,9 @@ function installCompute(blockly, generator, gensym) {
   };
 }
 
-},{"../../locale/current/calc":158,"../../locale/current/common":159,"../functionalBlockUtils":69,"../sharedFunctionalBlocks":113}],158:[function(require,module,exports){
+},{"../../locale/current/calc":159,"../../locale/current/common":160,"../functionalBlockUtils":70,"../sharedFunctionalBlocks":114}],159:[function(require,module,exports){
 /*calc*/ module.exports = window.blockly.appLocale;
-},{}],26:[function(require,module,exports){
+},{}],27:[function(require,module,exports){
 var ExpressionNode = require('./expressionNode');
 
 exports.compute = function (expr, blockId) {
@@ -808,7 +813,7 @@ exports.expression = function (operator, arg1, arg2, blockId) {
   return new ExpressionNode(operator, [arg1, arg2], blockId);
 };
 
-},{"./expressionNode":30}],30:[function(require,module,exports){
+},{"./expressionNode":31}],31:[function(require,module,exports){
 var utils = require('../utils');
 var _ = utils.getLodash();
 
@@ -1125,4 +1130,4 @@ var Token = function (str, marked) {
   this.marked = marked;
 };
 
-},{"../utils":154}]},{},[32]);
+},{"../utils":155}]},{},[33]);
