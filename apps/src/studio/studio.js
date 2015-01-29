@@ -2063,6 +2063,7 @@ Studio.setSprite = function (opts) {
   }
   sprite.visible = (spriteValue !== 'hidden' && !opts.forceHidden);
   spriteIcon.setAttribute('visibility', sprite.visible ? 'visible' : 'hidden');
+  sprite.value = opts.forceHidden ? 'hidden' : opts.value;
   if (spriteValue === 'hidden' || spriteValue === 'visible') {
     return;
   }
@@ -2078,7 +2079,6 @@ Studio.setSprite = function (opts) {
   if (skin.projectileSpriteWidth) {
     sprite.projectileSpriteWidth = sprite.size * skin.projectileSpriteWidth;
   }
-  sprite.value = opts.forceHidden ? 'hidden' : opts.value;
 
   var spriteClipRect = document.getElementById('spriteClipRect' + spriteIndex);
   spriteClipRect.setAttribute('width', sprite.width);
