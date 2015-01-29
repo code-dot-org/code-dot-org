@@ -71,6 +71,8 @@ levels.ec_simple = {
     'canvasGetImageData': null,
     'canvasPutImageData': null,
     'canvasClear': null,
+    'readSharedValue': null,
+    'writeSharedValue': null,
     'createSharedRecord': null,
     'readSharedRecords': null,
     'updateSharedRecord': null,
