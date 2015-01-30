@@ -1,0 +1,103 @@
+- if @level.properties['free_play'] == 'true'
+  %a#create-project{href: '#'} Create project
+  %span#project-name
+  %span#save-project
+  %form#project-form{style: 'display: none'}
+    Rename:
+    %input#name{type: 'text'}
+    %input{type: 'submit'}
+- else
+  Not freeplay, cannot create project
+
+%script{src: '/shared/js/apps_api.js'}
+
+:javascript
+  var apps = storageApps();
+  var allApps = {};
+  var currentApp = {};
+
+  var displayCurrentApp = function() {
+    console.log(currentApp);
+    $('#create-project').hide();
+    $('#project-name').text(currentApp.name);
+    $('#project-form input#name').val(currentApp.name);
+    $('#project-form').show();
+    $('#save-project').show();
+  }
+
+  $(document).ready( function() {
+    if (window.location.hash && window.location.hash.length > 1) {
+      // try to load a project from the hash param
+      apps.fetch(window.location.hash.slice(1),
+        function(data) {
+          if (data) {
+            currentApp = data;
+            console.log("fetched");
+            displayCurrentApp();
+          } else {
+            console.log('failed to fetch project ' + window.location.hash);
+          }
+        });
+    }
+  });
+
+  $(document).bind('ajaxSuccess', function(event, response) {
+    if (response.status == 200 && response.responseJSON.level_source_id && currentApp) {
+      // TODO more robust checking that this is a milestone response and not a different kind of request
+
+      $('#save-project').text("Saving...");
+
+      currentApp.levelSourceId = response.responseJSON.level_source_id;
+      currentApp.levelId = appOptions.levelId; // TODO this is not actually a unique identifier for the level
+      currentApp.levelUrl = window.location.origin + window.location.pathname; // TODO this is hacky.. we should just have a /project url
+      currentApp.updatedAt = new Date;
+
+      apps.update(
+        currentApp.id,
+        currentApp,
+        function(success) {
+          if (success) {
+            $('#save-project').text("Saved " + new Date());
+          } else {
+            $('#save-project').text("Saved " + new Date());
+          }
+        }
+      );
+    }
+  });
+
+   $('body').on('click', '#create-project', function() {
+    apps.create({
+      name: "Untitled",
+      createdAt: new Date,
+      updatedAt: new Date,
+    }, function(app) {
+      currentApp = app;
+      console.log("created");
+      displayCurrentApp();
+    });
+
+    return false;
+  });
+
+  $('body').on('submit', '#project-form', function() {
+      $('#save-project').text("Saving...");
+
+      currentApp.name = $('#project-form input#name').val();
+      currentApp.updatedAt = new Date;
+
+      apps.update(
+        currentApp.id,
+        currentApp,
+        function(success) {
+          if (success) {
+            $('#save-project').text("Saved " + new Date());
+            $('#project-name').text(currentApp.name);
+            $('#project-form input#name').val(currentApp.name);
+          } else {
+            $('#save-project').text("Saved " + new Date());
+          }
+        }
+      );
+      return false;
+  });

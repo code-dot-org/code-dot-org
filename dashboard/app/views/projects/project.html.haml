@@ -1,0 +1,43 @@
+:scss
+  th {
+    padding: 10px;
+    background-color: #ccc;
+    text-align: center;
+  }
+
+  td {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+%div{'ng-controller' => 'ProjectsController'}
+  
+  %table{style: "width:600px; table-layout:auto;", 'ng-show' => 'projects.length > 0'}
+    %colgroup
+      %col{width:"200"}
+      %col{width:"200"}
+      %col{width:"200"}
+    %tr
+      %th
+        %a{href: "", "ng-click" => "order = 'name'"} Name
+      %th
+        %a{href: "", "ng-click" => "order = 'id'"} Id
+      %th
+        %a{href: "", "ng-click" => "order = 'levelSourceId'"} LevelSource
+    %tr{"ng-repeat" => "project in projects | orderBy:order", style: "vertical-align:top"}
+      %td
+        {{ project.name }}
+      %td
+        {{ project.id }}
+      %td
+        {{ project.levelSourceId }}
+  %h3 Debug
+  %h4 projects
+  %pre
+    {{ projects | json }}
+  %h4 route
+  %pre
+    {{ route | json }}
+  %h4 routeParams
+  %pre
+    {{ routeParams | json }}
+

@@ -47,6 +47,11 @@ module LevelsHelper
 
     if current_user && params[:load_previous]
       @start_blocks = current_user.last_attempt(@level).try(:level_source).try(:data)
+    elsif current_user && params[:level_source_id]
+      @level_source = LevelSource.find(params[:level_source_id])
+      if @level_source.try(:level_id) == @level.id # sanity check
+        @start_blocks = @level_source.data
+      end
     end
 
     select_and_remember_callouts(@script_level.nil?)

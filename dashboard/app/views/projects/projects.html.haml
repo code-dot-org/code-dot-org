@@ -1,0 +1,44 @@
+- @page_title = 'Projects'
+
+:scss
+  th {
+    padding: 10px;
+    background-color: #ccc;
+    text-align: center;
+  }
+
+  td {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+%div{'ng-controller' => 'ProjectsController'}
+  
+  %table{style: "width:600px; table-layout:auto;", 'ng-show' => 'projects.length > 0'}
+    %colgroup
+      %col{width:"200"}
+      %col{width:"200"}
+      %col{width:"200"}
+    %tr
+      %th
+        %a{href: "", "ng-click" => "order = 'name'"} Name
+      %th
+        %a{href: "", "ng-click" => "order = 'updatedAt'"} UpdatedAt
+      %th
+        %a{href: "", "ng-click" => "order = 'createdAt'"} CreatedAt
+    %tr{"ng-repeat" => "project in projects | orderBy:order", style: "vertical-align:top"}
+      %td
+        %span{'ng-if' => 'project.url()'}
+          %a{"ng-href" => '{{ project.url() }}'}
+            {{ project.name }}
+        %span{'ng-if' => '!project.url()'}
+          {{ project.name }}
+
+      %td
+        {{ project.updatedAt | date: 'medium' }}
+      %td
+        {{ project.createdAt | date: 'medium' }}
+  %h3 Debug
+  %h4 projects
+  %pre
+    {{ projects | json }}
+
