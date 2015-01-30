@@ -174,11 +174,28 @@ NetSimLobby.prototype.refreshLobby_ = function () {
   this.connection_.getLobbyListing(function (lobbyData) {
     $(lobbyList).empty();
 
+    lobbyData.sort(function (a, b) {
+      if (a.name === b.name) {
+        return 0;
+      } else if (a.name > b.name) {
+        return 1;
+      }
+      return -1;
+    });
+
     // TODO (bbuchanan): This should eventually generate an interactive list
     lobbyData.forEach(function (connection) {
       var item = document.createElement('li');
-      item.innerHTML = '[' + connection.id + '] ' + connection.name +
-          ' (' + connection.lastPing + ') ' + connection.status;
+      if (connection.id === self.connection_.myLobbyRowID_) {
+        item.classList.add('netsim_lobby_own_row');
+        item.innerHTML = connection.name + ' : ' + connection.status + ' : Me';
+      } else {
+        item.classList.add('netsim_lobby_user_row');
+        var anchor = document.createElement('a');
+        anchor.href = '#';
+        anchor.innerHTML = '<a href="#">' + connection.name + ' : ' + connection.status + '</a>';
+        item.appendChild(anchor);
+      }
       lobbyList.appendChild(item);
     });
 
