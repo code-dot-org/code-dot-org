@@ -75,6 +75,13 @@ var NetSim = function () {
    * @private
    */
   this.connection_ = null;
+
+  /**
+   * Tick and Render loop manager for the simulator
+   * @type {RunLoop}
+   * @private
+   */
+  this.runLoop_ = new RunLoop();
 };
 
 module.exports = NetSim;
@@ -154,34 +161,17 @@ NetSim.prototype.init = function(config) {
     // Do a deferred initialization of the connection object.
     // TODO: Use promises for this!
     this.connection_ = new NetSimConnection(this.currentUser_.name, this.logger_);
+    this.runLoop_.tick.register(this.connection_, this.connection_.tick);
     this.logger_.log("Connection manager created.");
+
     var lobbyContainer = document.getElementById('netsim_lobby_container');
-    this.lobbyUi_ = NetSimLobby.createWithin(lobbyContainer, this.connection_);
-
-    // Begin run loop (will end when page unloads)
-    var runLoop = new RunLoop();
-    runLoop.tick.register(this, this.tick);
-    runLoop.render.register(this, this.render);
-    runLoop.begin();
+    this.lobbyControl_ = NetSimLobby.createWithin(lobbyContainer, this.connection_);
+    this.runLoop_.tick.register(this.lobbyControl_, this.lobbyControl_.tick);
+    this.logger_.log("Lobby control created.");
   }, this));
-};
 
-/**
- * Recurring event for updating simulation logic
- * @param {RunLoop.Clock} clock - Elapsed time information
- */
-NetSim.prototype.tick = function (clock) {
-  this.connection_.tick(clock);
-  this.lobbyUi_.tick(clock);
-};
-
-/**
- * Recurring event for rendering.  On modern browsers this will attempt to
- * sync to the browser repaint loop (hopefully 60fps), but on older
- * browsers it will fall back to a FALLBACK_FPS value
- * @param {RunLoop.Clock} clock - Elapsed time information
- */
-NetSim.prototype.render = function (clock) {
+  // Begin the main simulation loop
+  this.runLoop_.begin();
 };
 
 /**
