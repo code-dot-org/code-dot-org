@@ -34,7 +34,6 @@
 'use strict';
 
 var _ = require('../utils').getLodash();
-var dom = require('../dom');
 var markup = require('./NetSimLobby.html');
 
 /**
@@ -193,7 +192,7 @@ NetSimLobby.prototype.refreshLobby_ = function () {
         item.classList.add('netsim_lobby_user_row');
         var anchor = document.createElement('a');
         anchor.href = '#';
-        anchor.innerHTML = '<a href="#">' + connection.name + ' : ' + connection.status + '</a>';
+        anchor.innerHTML = connection.name + ' : ' + connection.status;
         item.appendChild(anchor);
       }
       lobbyList.appendChild(item);

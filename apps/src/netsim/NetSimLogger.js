@@ -85,7 +85,7 @@ NetSimLogger.prototype.log = function (message, logLevel /*=INFO*/) {
             if (console.warn) {
               console.warn(message);
             } else {
-              console.log(message)
+              console.log(message);
             }
           break;
         case LogLevel.INFO:

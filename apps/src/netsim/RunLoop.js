@@ -34,8 +34,6 @@
 'use strict';
 
 var _ = require('../utils').getLodash();
-var NetSimLogger = require('./NetSimLogger');
-var LogLevel = NetSimLogger.LogLevel;
 var Observable = require('./Observable');
 
 // It is more accurate to use performance.now(), but we use Date.now()

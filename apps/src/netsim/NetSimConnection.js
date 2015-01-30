@@ -210,17 +210,20 @@ NetSimConnection.prototype.connect_ = function () {
  */
 NetSimConnection.prototype.disconnect_ = function (lobbyRowID) {
   if (!this.isConnectedToInstance()) {
-    this.logger_.log("Can't disconnect when not connected to an instance.", LogLevel.ERROR);
+    this.logger_.log("Can't disconnect when not connected to an instance.",
+        LogLevel.ERROR);
     return;
   }
 
   var self = this;
   this.lobbyTable_.delete(lobbyRowID, function (succeeded) {
     if (succeeded) {
-      self.logger_.log("Disconnected client " + lobbyRowID + " from instance.", LogLevel.INFO);
+      self.logger_.log("Disconnected client " + lobbyRowID + " from instance.",
+          LogLevel.INFO);
     } else {
       // TODO (bbuchanan) : Disconnect retry?
-      self.logger_.log("Failed to disconnect client " + lobbyRowID + ".", LogLevel.WARN);
+      self.logger_.log("Failed to disconnect client " + lobbyRowID + ".",
+          LogLevel.WARN);
     }
   });
 };
