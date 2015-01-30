@@ -10,7 +10,7 @@ if (!window.dashboard) {
  * @param scriptData{{
  *   finishLink: string,
  *   statsPath: string,
- *   showFreeplayLinks: boolean,
+ *   showStageLinks: boolean,
  *   trophies: Object,
  *   currentLevelIndex: number,
  *   scriptId: number,
@@ -28,7 +28,8 @@ dashboard.buildHeader = function (scriptData) {
   if (scriptData.finishLink) {
     $('.header_finished_link').show().append($('<a>').attr('href', scriptData.finishLink.href).text(scriptData.finishLink.text));
   }
-  if (scriptData.showFreeplayLinks) {
+  if (scriptData.showStageLinks) {
+    $('.header_popup_link').show();
     $('.freeplay_links').show();
   }
   if (scriptData.trophies) {
