@@ -37,7 +37,7 @@ var ModernConsole = function () {
   return that;
 };
 
-var logMsg =   "Humpty Dumpty sat on a wall"
+var logMsg =   "Humpty Dumpty sat on a wall";
 var infoMsg =  "Humpty Dumpty had a great fall";
 var warnMsg =  "Then he picked himself up";
 var errorMsg = "And went to lunch.";
