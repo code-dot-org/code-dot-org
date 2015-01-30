@@ -105,10 +105,6 @@ NetSimLobby.prototype.bindElements_ = function () {
       _.bind(this.onInstanceSelectorChange_, this));
 
   this.lobbyList_ = document.getElementById('netsim_lobby_list');
-
-  this.refreshButton_ = document.getElementById('netsim_refresh_button');
-  dom.addClickTouchEvent(this.refreshButton_,
-      _.bind(this.refreshLobby_, this));
 };
 
 /**
