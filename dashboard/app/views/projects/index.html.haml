@@ -22,9 +22,6 @@
     $routeProvider.when('/',
                         {templateUrl: '/projects/projects',
                          controller: 'ProjectsController'});
-    $routeProvider.when('/:id',
-                        {templateUrl: '/projects/project',
-                         controller: 'ProjectController'});
     $routeProvider.otherwise({redirectTo: '/'});
   }]);
 
@@ -69,27 +66,9 @@
 
     $scope.projects.$promise.then(function(projects){
       $scope.projectsLoaded = true;
-    });
-
-    $scope.edit = function(project) {
-      project.editing = true;
-    };
+    }).catch($scope.genericError);
 
     $scope.genericError = function(result) {
       $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
     };
   }]);
-
-  controllers.controller('ProjectController', ['$scope', '$route', '$routeParams', '$location', '$window', 'projectsService',
-                                       function($scope, $route, $routeParams, $location, $window, projectsService) {
-    $scope.project = projectService.query({id: $routeParams.id});
-
-    $scope.edit = function(project) {
-      project.editing = true;
-    };
-
-    $scope.genericError = function(result) {
-      $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
-    };
-  }]);
-
