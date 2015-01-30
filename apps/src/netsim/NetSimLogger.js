@@ -73,7 +73,32 @@ NetSimLogger.prototype.log = function (message, logLevel /*=INFO*/) {
   // For now, just assume we're writing to the web console.
   if (this.verbosity >= logLevel) {
     if (console && console.log) {
-      console.log(message);
+      switch (logLevel) {
+        case LogLevel.ERROR:
+            if (console.error) {
+              console.error(message);
+            } else {
+              console.log(message);
+            }
+          break;
+        case LogLevel.WARN:
+            if (console.warn) {
+              console.warn(message);
+            } else {
+              console.log(message)
+            }
+          break;
+        case LogLevel.INFO:
+            if (console.info) {
+              console.info(message);
+            } else {
+              console.log(message);
+            }
+          break;
+        default:
+            console.log(message);
+          break;
+      }
     }
   }
 };
