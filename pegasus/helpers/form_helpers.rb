@@ -29,6 +29,17 @@ def validate_form(kind, data)
     value
   end
 
+  def integer(value)
+    return value if value.class == FieldError
+    return nil if value.nil_or_empty?
+
+    s_value = value.to_s.strip
+    i_value = s_value.to_i
+    return FieldError.new(value, :invalid) unless i_value.to_s == s_value
+
+    i_value
+  end
+
   def nil_if_empty(value)
     return value if value.class == FieldError
     return nil if value.nil_or_empty?
@@ -68,6 +79,12 @@ def validate_form(kind, data)
     value = stripped value
     return nil if value.nil_or_empty?
     return FieldError.new(value, :invalid) unless zip_code?(value)
+    value
+  end
+
+  def confirm_match(value, value2)
+    return value if value.class == FieldError
+    return FieldError.new(value, :mismatch) if value != value2
     value
   end
 

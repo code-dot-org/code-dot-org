@@ -16,8 +16,22 @@ var VISIBLE_VALUE = constants.VISIBLE_VALUE;
 
 
 function loadInfinity(skin, assetUrl) {
+  skin.preloadAssets = false;
+
   skin.defaultBackground = 'leafy';
   skin.projectileFrames = 10;
+
+  skin.specialProjectileFrames = {
+    'projectile_cherry': 13,
+    'projectile_ice': 12,
+    'projectile_duck': 12
+  };
+
+  skin.explosion = skin.assetUrl('vanish.png');
+  skin.explosionFrames = 17;
+
+  skin.projectileSpriteWidth = 70;
+  skin.projectileSpriteHeight = 70;
 
   skin.avatarList = ['anna', 'elsa', 'hiro', 'baymax', 'rapunzel'];
   skin.avatarList.forEach(function (name) {
@@ -43,25 +57,45 @@ function loadInfinity(skin, assetUrl) {
   skin.projectile_elsa = skin.assetUrl('projectile_elsa.png');
   skin.projectile_baymax = skin.assetUrl('projectile_baymax.png');
   skin.projectile_rapunzel = skin.assetUrl('projectile_rapunzel.png');
+  skin.projectile_cherry = skin.assetUrl('projectile_cherry.png');
+  skin.projectile_ice = skin.assetUrl('projectile_ice.png');
+  skin.projectile_duck = skin.assetUrl('projectile_duck.png');
 
   skin.leafy = {
-    background: skin.assetUrl('background1.png')
+    background: skin.assetUrl('background_leafy.png')
   };
   skin.grassy = {
-    background: skin.assetUrl('background2.png')
+    background: skin.assetUrl('background_grassy.png')
+  };
+  skin.flower = {
+    background: skin.assetUrl('background_flower.png')
+  };
+  skin.tile = {
+    background: skin.assetUrl('background_tile.png')
+  };
+  skin.icy = {
+    background: skin.assetUrl('background_icy.png')
+  };
+  skin.snowy = {
+    background: skin.assetUrl('background_snowy.png')
   };
 
   // These are used by blocks.js to customize our dropdown blocks across skins
   skin.backgroundChoices = [
     [msg.setBackgroundRandom(), RANDOM_VALUE],
     // todo - come up with better names and i18n
-    ["set leafy background", '"leafy"'],
-    ["set grassy background", '"grassy"']];
+    [msg.setBackgroundLeafy(), '"leafy"'],
+    [msg.setBackgroundGrassy(), '"grassy"'],
+    [msg.setBackgroundFlower(), '"flower"'],
+    [msg.setBackgroundTile(), '"tile"'],
+    [msg.setBackgroundIcy(), '"icy"'],
+    [msg.setBackgroundSnowy(), '"snowy"'],
+    ];
 
   skin.backgroundChoicesK1 = [
     [skin.randomPurpleIcon, RANDOM_VALUE],
-    ["set leafy background", '"leafy"'],
-    ["set grassy background", '"grassy"']];
+    [msg.setBackgroundLeafy(), '"leafy"'],
+    [msg.setBackgroundGrassy(), '"grassy"']];
 
   skin.spriteChoices = [
     [msg.setSpriteHidden(), HIDDEN_VALUE],
@@ -79,12 +113,18 @@ function loadInfinity(skin, assetUrl) {
     [msg.projectileElsa(), '"projectile_elsa"'],
     [msg.projectileBaymax(), '"projectile_baymax"'],
     [msg.projectileRapunzel(), '"projectile_rapunzel"'],
+    [msg.projectileCherry(), '"projectile_cherry"'],
+    [msg.projectileIce(), '"projectile_ice"'],
+    [msg.projectileDuck(), '"projectile_duck"'],
     [msg.projectileRandom(), RANDOM_VALUE]];
 }
 
 function loadStudio(skin, assetUrl) {
   skin.defaultBackground = 'cave';
   skin.projectileFrames = 8;
+
+  skin.explosion = skin.assetUrl('explosion.gif');
+  skin.explosionThumbnail = skin.assetUrl('explosion_thumb.png');
 
   skin.hardcourt = {
     background: skin.assetUrl('background.png'),
@@ -239,8 +279,7 @@ exports.load = function(assetUrl, id) {
   skin.blue_fireball = skin.assetUrl('blue_fireball.png');
   skin.purple_fireball = skin.assetUrl('purple_fireball.png');
   skin.red_fireball = skin.assetUrl('red_fireball.png');
-  skin.explosion = skin.assetUrl('explosion.gif');
-  skin.explosionThumbnail = skin.assetUrl('explosion_thumb.png');
+
   skin.whenUp = skin.assetUrl('when-up.png');
   skin.whenDown = skin.assetUrl('when-down.png');
   skin.whenLeft = skin.assetUrl('when-left.png');
@@ -283,6 +322,7 @@ exports.load = function(assetUrl, id) {
   skin.spriteWidth = 100;
   skin.dropdownThumbnailWidth = 50;
   skin.dropdownThumbnailHeight = 50;
+  skin.preloadAssets = true;
 
   // take care of items specific to skins
   switch (skin.id) {
