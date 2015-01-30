@@ -1,0 +1,48 @@
+<Studio>
+  <config><![CDATA[{
+  "game_id": 33,
+  "created_at": "2015-01-20T02:25:10.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "infinity",
+    "background": "leafy",
+    "success_condition": "function () {\r\n\r\n  var currentTime = new Date().getTime();\r\n\r\n  // Let's wait 2 seconds before indicating the success.\r\n  if (window.successTime && successTime + 2000 < currentTime)\r\n  {\r\n    //console.log(\"success!\");\r\n    return true;\r\n  }\r\n  else if (! window.successTime)\r\n  {\r\n    var success = Studio.projectiles[0].isCollidingWith(1);\r\n    \r\n    if (success) {\r\n      //console.log(\"setting success\");\r\n      window.successTime = currentTime;\r\n    }\r\n  }\r\n}\r\n",
+    "failure_condition": "function () {\r\n}",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,16,0,0,0,16,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "embed": "false",
+    "instructions": "Make Hiro fire a projectile at Baymax.",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "free_play": "false",
+    "disable_sharing": "false",
+    "edge_collisions": "false",
+    "projectile_collisions": "false",
+    "allow_sprites_outside_playspace": "false",
+    "sprites_hidden_to_start": "false",
+    "coordinate_grid_background": "false",
+    "first_sprite_index": "2",
+    "generate_function_pass_blocks": "false"
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="studio_throw">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">"projectile_baymax"</title>
+          <title name="DIR">2</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Studio>
