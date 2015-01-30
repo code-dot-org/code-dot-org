@@ -16,6 +16,8 @@
 
 'use strict';
 
+// TODO (brent) - check somewhere that we have only 1 top block
+
 var Calc = module.exports;
 
 /**
@@ -400,7 +402,7 @@ Calc.execute = function() {
   studioApp.report(reportData);
 
   appState.animating = true;
-  if (appState.result == ResultType.SUCCESS &&
+  if (appState.result === ResultType.SUCCESS &&
       !appState.userSet.hasVariablesOrFunctions()) {
     Calc.step();
   } else {
@@ -451,7 +453,8 @@ function displayComplexUserExpressions () {
     tokenList = getTokenList(computeEquation, targetEquation);
 
     result = appState.userSet.evaluate().toString();
-    var expectedResult = appState.targetSet.evaluate().toString();
+    var expectedResult = appState.targetSet.computeEquation() == null ?
+      result : appState.targetSet.evaluate().toString();
 
     tokenList = tokenList.concat(getTokenList(' = '),
       getTokenList(result, expectedResult));
@@ -509,21 +512,24 @@ function clearSvgUserExpression() {
 
 /**
  * Draws a user expression and each step collapsing it, up to given depth.
- * Returns true if it couldn't collapse any further at this depth.
+ * @returns True if it couldn't collapse any further at this depth.
  */
 function animateUserExpression (maxNumSteps) {
+  var userEquation = appState.userSet.computeEquation();
+  if (!userEquation) {
+    throw new Error('require user expression');
+  }
+  var userExpression = userEquation.expression;
+  if (!userExpression) {
+    return true;
+  }
+
   var finished = false;
 
   if (appState.userSet.hasVariablesOrFunctions() ||
     appState.targetSet.hasVariablesOrFunctions()) {
     throw new Error("Can't animate if either user/target have functions/vars");
   }
-
-  var userEquation = appState.userSet.computeEquation();
-  if (!userEquation) {
-    throw new Error('require user expression');
-  }
-  var userExpression = userEquation.expression;
 
   clearSvgUserExpression();
 
@@ -553,8 +559,6 @@ function animateUserExpression (maxNumSteps) {
       finished = true;
     }
   }
-
-
 
   return finished;
 }
