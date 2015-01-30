@@ -266,10 +266,7 @@ NetSimConnection.prototype.keepAlive = function () {
   var self = this;
   this.lobbyTable_.update(this.myLobbyRowID_, this.buildLobbyRow_(),
       function (succeeded) {
-        if (succeeded) {
-          self.logger_.log("keepAlive succeeded.", LogLevel.INFO);
-        } else {
-          self.logger_.log("keepAlive failed.", LogLevel.WARN);
+        if (!succeeded) {
           self.setConnectionStatus_(ConnectionStatus.DISCONNECTED);
           self.logger_.log("Reconnecting...", LogLevel.INFO);
           self.connect_();
