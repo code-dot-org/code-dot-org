@@ -6,8 +6,13 @@ class ProjectsController < ApplicationController
     authorize! :read, :reports
   end
 
+  TEMPLATES = %w(projects)
   def template
     authorize! :read, :reports
-    render template: "projects/" + params[:template], layout: nil
+
+    # sanitize user input by whitelisting templates we are willing to render
+    head :not_found and return unless TEMPLATES.include? params[:template]
+
+    render template: "projects/#{params[:template]}", layout: nil
   end
 end
