@@ -67,7 +67,7 @@ var NetSim = function () {
    * @type {NetSimLogger}
    * @private
    */
-  this.logger_ = new NetSimLogger(NetSimLogger.LogLevel.VERBOSE);
+  this.logger_ = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
 
   /**
    * Manager for connection to shared instance of netsim app.

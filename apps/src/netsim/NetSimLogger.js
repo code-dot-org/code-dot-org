@@ -32,17 +32,51 @@
  */
 'use strict';
 
+var _ = require('../utils').getLodash();
+
 /**
  * A logger instance
  * @constructor
+ * @param {Console} window console API
  * @param {LogLevel} verbosity
  */
-var NetSimLogger = function (verbosity /*=VERBOSE*/) {
+var NetSimLogger = function (outputConsole, verbosity /*=VERBOSE*/) {
   /**
-   * How much logging to pass through to output.
-   * @type {LogLevel}
+   * @type {Console}
+   * @private
    */
-  this.verbosity = (undefined === verbosity) ? LogLevel.VERBOSE : verbosity;
+  this.outputConsole_ = outputConsole;
+
+  /**
+   * Always mapped to console.log, or no-op if not available.
+   * @type {Function}
+   * @private
+   */
+  this.log_ = function () {};
+
+  /**
+   * If configured for info logging, gets mapped to console.info,
+   * falls back to console.log, or no-op.
+   * @type {Function}
+   */
+  this.info = function () {};
+
+  /**
+   * If configured for warning logging, gets mapped to console.warn,
+   * falls back to console.log, or no-op.
+   * @type {Function}
+   */
+  this.warn = function () {};
+
+  /**
+   * If configured for error logging, gets mapped to console.error,
+   * falls back to console.log, or no-op.
+   * @type {Function}
+   */
+  this.error = function () {};
+
+  this.initializeWithVerbosity_((undefined === verbosity) ?
+      LogLevel.VERBOSE : verbosity);
 };
 module.exports = NetSimLogger;
 
@@ -61,6 +95,37 @@ var LogLevel = {
 NetSimLogger.LogLevel = LogLevel;
 
 /**
+ * Binds internal function calls according to given verbosity level.
+ * @param verbosity
+ * @private
+ */
+NetSimLogger.prototype.initializeWithVerbosity_ = function (verbosity) {
+  this.log_ = (this.outputConsole_ && this.outputConsole_.log) ?
+      _.bind(this.outputConsole_.log, this.outputConsole_) : function () {};
+
+  if (verbosity >= LogLevel.INFO) {
+    this.info = (this.outputConsole_ && this.outputConsole_.info) ?
+        _.bind(this.outputConsole_.info, this.outputConsole_) : this.log_;
+  } else {
+    this.info = function () {};
+  }
+
+  if (verbosity >= LogLevel.WARN) {
+    this.warn = (this.outputConsole_ && this.outputConsole_.warn) ?
+        _.bind(this.outputConsole_.warn, this.outputConsole_) : this.log_;
+  } else {
+    this.warn = function () {};
+  }
+
+  if (verbosity >= LogLevel.ERROR) {
+    this.error = (this.outputConsole_ && this.outputConsole_.error) ?
+        _.bind(this.outputConsole_.error, this.outputConsole_) : this.log_;
+  } else {
+    this.error = function () {};
+  }
+};
+
+/**
  * Writes to output, depending on log level
  * @param {*} message
  * @param {LogLevel} logLevel
@@ -70,37 +135,17 @@ NetSimLogger.prototype.log = function (message, logLevel /*=INFO*/) {
     logLevel = LogLevel.INFO;
   }
 
-  // TODO (bbuchanan): Rewrite, bind functions for different log levels
-  // in advance and call those.
-  // For now, just assume we're writing to the web console.
-  if (this.verbosity >= logLevel) {
-    if (console && console.log) {
-      switch (logLevel) {
-        case LogLevel.ERROR:
-            if (console.error) {
-              console.error(message);
-            } else {
-              console.log(message);
-            }
-          break;
-        case LogLevel.WARN:
-            if (console.warn) {
-              console.warn(message);
-            } else {
-              console.log(message);
-            }
-          break;
-        case LogLevel.INFO:
-            if (console.info) {
-              console.info(message);
-            } else {
-              console.log(message);
-            }
-          break;
-        default:
-            console.log(message);
-          break;
-      }
-    }
+  switch (logLevel) {
+    case LogLevel.ERROR:
+      this.error(message);
+      break;
+    case LogLevel.WARN:
+      this.warn(message);
+      break;
+    case LogLevel.INFO:
+      this.info(message);
+      break;
+    default:
+      this.log_(message);
   }
 };
