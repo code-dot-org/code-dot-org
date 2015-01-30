@@ -114,6 +114,17 @@ var NetSimConnection = function (displayName, logger /*=new NetSimLogger(NONE)*/
 module.exports = NetSimConnection;
 
 /**
+ * Instance Connection Status enum
+ * @readonly
+ * @enum {number}
+ */
+var ConnectionStatus = {
+  DISCONNECTED: 0,
+  CONNECTED: 1
+};
+NetSimConnection.ConnectionStatus = ConnectionStatus;
+
+/**
  * Before-unload handler, used to try and disconnect gracefully when
  * navigating away instead of just letting our record time out.
  * @private
@@ -150,39 +161,13 @@ NetSimConnection.prototype.connectToInstance = function (instanceID) {
     this.disconnectFromInstance();
   }
 
-  // Being connected to an instance means having an entry in that instance's
-  // lobby table.
+  // Create and cache a lobby table connection
   var tableName = instanceID + '_lobby';
   this.lobbyTable_ = new netsimStorage.SharedStorageTable(
-     netsimStorage.APP_PUBLIC_KEY,
-     tableName);
+     netsimStorage.APP_PUBLIC_KEY, tableName);
 
-  // Insert a row for self into instance lobby table
-  // TODO (bbuchanan) : Use enums for these values?
-  var self = this;
-  this.lobbyTable_.insert(this.buildLobbyRow_(), function (returnedData) {
-    if (returnedData) {
-      self.myLobbyRowID_ = returnedData.id;
-      self.logger_.log("Connected to instance, assigned ID " + self.myLobbyRowID_,
-          LogLevel.INFO);
-      // TODO (bbuchanan) : How do we get a reasonable nextKeepAliveTime
-      //                    here?  Do we need access to the global clock?
-      self.nextKeepAliveTime_ = 0;
-    } else {
-      // TODO (bbuchanan) : Connection retry?
-      self.lobbyTable_ = null;
-      self.logger_.log("Failed to connect to instance", LogLevel.ERROR);
-    }
-    self.statusChanges.notify();
-  });
-};
-
-/**
- * Whether we are currently connected to a netsim instance
- * @returns {boolean}
- */
-NetSimConnection.prototype.isConnectedToInstance = function () {
-  return (undefined !== this.myLobbyRowID_);
+  // Connect to the lobby table we just set
+  this.connect_();
 };
 
 /**
@@ -197,20 +182,33 @@ NetSimConnection.prototype.disconnectFromInstance = function () {
   // TODO (bbuchanan) : Check for other resources we need to clean up
   //                    before we disconnect from the instance.
 
-  this.disconnectByRowID_(this.myLobbyRowID_);
-
-  this.nextKeepAliveTime_ = Infinity;
-  this.myLobbyRowID_ = undefined;
-  this.lobbyTable_ = null;
-  this.statusChanges.notify();
+  this.disconnect_(this.myLobbyRowID_);
+  this.setConnectionStatus_(ConnectionStatus.DISCONNECTED);
 };
 
 /**
- * Helper method that can disconnect any row from the lobby.
+ * Given a lobby table has already been configured, connects to that table
+ * by inserting a row for ourselves into that table and saving the row ID.
+ * @private
+ */
+NetSimConnection.prototype.connect_ = function () {
+  var self = this;
+  this.lobbyTable_.insert(this.buildLobbyRow_(), function (returnedData) {
+    if (returnedData) {
+      self.setConnectionStatus_(ConnectionStatus.CONNECTED, returnedData.id);
+    } else {
+      // TODO (bbuchanan) : Connect retry?
+      self.logger_.log("Failed to connect to instance", LogLevel.ERROR);
+    }
+  });
+};
+
+/**
+ * Helper method that can remove/disconnect any row from the lobby.
  * @param lobbyRowID
  * @private
  */
-NetSimConnection.prototype.disconnectByRowID_ = function (lobbyRowID) {
+NetSimConnection.prototype.disconnect_ = function (lobbyRowID) {
   if (!this.isConnectedToInstance()) {
     this.logger_.log("Can't disconnect when not connected to an instance.", LogLevel.ERROR);
     return;
@@ -227,6 +225,38 @@ NetSimConnection.prototype.disconnectByRowID_ = function (lobbyRowID) {
   });
 };
 
+/**
+ * Whether we are currently connected to a netsim instance
+ * @returns {boolean}
+ */
+NetSimConnection.prototype.isConnectedToInstance = function () {
+  return (undefined !== this.myLobbyRowID_);
+};
+
+/**
+ *
+ * @param {ConnectionStatus} newStatus
+ * @param {number} lobbyRowID - Can be omitted for status DISCONNECTED
+ * @private
+ */
+NetSimConnection.prototype.setConnectionStatus_ = function (newStatus, lobbyRowID) {
+  switch (newStatus) {
+    case ConnectionStatus.CONNECTED:
+        this.myLobbyRowID_ = lobbyRowID;
+        // TODO (bbuchanan) : How do we get a reasonable nextKeepAliveTime?
+        this.nextKeepAliveTime_ = 0;
+        this.logger_.log("Connected to instance, assigned ID " +
+            this.myLobbyRowID_, LogLevel.INFO);
+        break;
+    case ConnectionStatus.DISCONNECTED:
+        this.myLobbyRowID_ = undefined;
+        this.nextKeepAliveTime_ = Infinity;
+        this.logger_.log("Disconnected from instance", LogLevel.INFO);
+      break;
+  }
+  this.statusChanges.notify();
+};
+
 NetSimConnection.prototype.keepAlive = function () {
   if (!this.isConnectedToInstance()) {
     this.logger.log("Can't send keepAlive, not connected to instance.", LogLevel.WARN);
@@ -240,6 +270,9 @@ NetSimConnection.prototype.keepAlive = function () {
           self.logger_.log("keepAlive succeeded.", LogLevel.INFO);
         } else {
           self.logger_.log("keepAlive failed.", LogLevel.WARN);
+          self.setConnectionStatus_(ConnectionStatus.DISCONNECTED);
+          self.logger_.log("Reconnecting...", LogLevel.INFO);
+          self.connect_();
         }
   });
 };
@@ -294,7 +327,7 @@ NetSimConnection.prototype.cleanLobby_ = function () {
   this.getLobbyListing(function (lobbyData) {
     lobbyData.forEach(function (lobbyRow) {
       if (now - lobbyRow.lastPing >= CONNECTION_TIMEOUT_MS) {
-        self.disconnectByRowID_(lobbyRow.id);
+        self.disconnect_(lobbyRow.id);
       }
     });
   });
