@@ -32,7 +32,11 @@
  */
 'use strict';
 
-var _ = require('../utils').getLodash();
+var bind = function (f, t) {
+  return function () {
+    f.apply(t, arguments);
+  };
+};
 
 /**
  * A logger instance
@@ -101,25 +105,25 @@ NetSimLogger.LogLevel = LogLevel;
  */
 NetSimLogger.prototype.initializeWithVerbosity_ = function (verbosity) {
   this.log_ = (this.outputConsole_ && this.outputConsole_.log) ?
-      _.bind(this.outputConsole_.log, this.outputConsole_) : function () {};
+      bind(this.outputConsole_.log, this.outputConsole_) : function () {};
 
   if (verbosity >= LogLevel.INFO) {
     this.info = (this.outputConsole_ && this.outputConsole_.info) ?
-        _.bind(this.outputConsole_.info, this.outputConsole_) : this.log_;
+        bind(this.outputConsole_.info, this.outputConsole_) : this.log_;
   } else {
     this.info = function () {};
   }
 
   if (verbosity >= LogLevel.WARN) {
     this.warn = (this.outputConsole_ && this.outputConsole_.warn) ?
-        _.bind(this.outputConsole_.warn, this.outputConsole_) : this.log_;
+        bind(this.outputConsole_.warn, this.outputConsole_) : this.log_;
   } else {
     this.warn = function () {};
   }
 
   if (verbosity >= LogLevel.ERROR) {
     this.error = (this.outputConsole_ && this.outputConsole_.error) ?
-        _.bind(this.outputConsole_.error, this.outputConsole_) : this.log_;
+        bind(this.outputConsole_.error, this.outputConsole_) : this.log_;
   } else {
     this.error = function () {};
   }
