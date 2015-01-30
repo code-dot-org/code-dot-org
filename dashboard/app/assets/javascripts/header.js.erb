@@ -37,6 +37,9 @@ dashboard.buildHeader = function (scriptData) {
     $('.header_trophy_link .current_trophies').text(scriptData.trophies.current);
     $('.header_trophy_link .max_trophies').text(scriptData.trophies.of + ' ' + scriptData.trophies.max);
   }
+  if (scriptData.linesOfCodeText) {
+    $('.header_popup .header_text').text(scriptData.linesOfCodeText);
+  }
   var progressContainer = $('.progress_container');
   scriptData.levels.forEach(function(level, index, levels) {
     var defaultClass = level.assessment ? 'puzzle_outer_assessment' : 'puzzle_outer_level';
