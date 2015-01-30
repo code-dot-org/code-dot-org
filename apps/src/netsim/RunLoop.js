@@ -34,7 +34,7 @@
 'use strict';
 
 var _ = require('../utils').getLodash();
-var Observable = require('./Observable');
+var ObservableEvent = require('./ObservableEvent');
 
 // It is more accurate to use performance.now(), but we use Date.now()
 // for compatibility with Safari and older browsers. This should only cause
@@ -89,15 +89,15 @@ var RunLoop = function () {
 
   /**
    *
-   * @type {Observable}
+   * @type {ObservableEvent}
    */
-  this.tick = new Observable();
+  this.tick = new ObservableEvent();
 
   /**
    *
-   * @type {Observable}
+   * @type {ObservableEvent}
    */
-  this.render = new Observable();
+  this.render = new ObservableEvent();
 };
 module.exports = RunLoop;
 

@@ -99,6 +99,7 @@ NetSimLobby.prototype.initialize = function () {
  * Also attach method handlers.
  */
 NetSimLobby.prototype.bindElements_ = function () {
+  // TODO (bbuchanan) :Just use jquery for this :/
   this.instanceSelector_ = document.getElementById('netsim_instance_select');
   this.instanceSelector_.addEventListener('change',
       _.bind(this.onInstanceSelectorChange_, this));
@@ -131,6 +132,7 @@ NetSimLobby.prototype.refreshInstanceList_ = function () {
   this.getUserSections_(function (data) {
     $(instanceSelector).empty();
 
+    // TODO (bbuchanan) : Just use jquery.
     if (0 === data.length){
       // If we didn't get any sections, we must deny access
       option = document.createElement('option');
@@ -151,7 +153,7 @@ NetSimLobby.prototype.refreshInstanceList_ = function () {
     data.forEach(function (section) {
       option = document.createElement('option');
       // TODO (bbuchanan) : Use unique level ID when generating instance ID
-      option.value = 'demo_' + section.id;
+      option.value = 'netsim_demo_' + section.id;
       // TODO (bbuchanan) : Put teacher names in sections
       option.textContent = section.name;
       instanceSelector.appendChild(option);
@@ -183,6 +185,7 @@ NetSimLobby.prototype.refreshLobby_ = function () {
     });
 
     // TODO (bbuchanan): This should eventually generate an interactive list
+    // TODO (bbuchanan) : Just use Jquery?
     lobbyData.forEach(function (connection) {
       var item = document.createElement('li');
       if (connection.id === self.connection_.myLobbyRowID_) {
@@ -214,6 +217,7 @@ NetSimLobby.prototype.getUserSections_ = function (callback) {
   // TODO (bbuchanan) : Get owned sections as well, to support teachers.
   // TODO (bbuchanan) : Handle failure case nicely.  Maybe wrap callback
   //                    and nicely pass list to it.
+  // TODO (bbuchanan): Wrap this away into a shared library for the v2/sections api
   $.ajax({
     dataType: 'json',
     url: '/v2/sections/membership',
@@ -226,6 +230,7 @@ NetSimLobby.prototype.getUserSections_ = function (callback) {
  * @param {RunLoop.Clock} clock
  */
 NetSimLobby.prototype.tick = function (clock) {
+  // TODO (bbuchanan) : Extract "interval" method generator for this and connection.
   if (clock.time >= this.nextAutoRefreshTime_) {
     this.refreshLobby_();
     if (this.nextAutoRefreshTime_ === 0) {
