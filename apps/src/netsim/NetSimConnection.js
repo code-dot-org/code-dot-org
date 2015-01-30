@@ -146,7 +146,7 @@ NetSimConnection.prototype.buildLobbyRow_ = function () {
     lastPing: Date.now(),
     name: this.displayName_,
     type: 'user',
-    status: 'not_connected'
+    status: 'In Lobby'
   };
 };
 

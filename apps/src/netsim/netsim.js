@@ -160,7 +160,9 @@ NetSim.prototype.init = function(config) {
   this.currentUser_.whenReady(_.bind(function () {
     // Do a deferred initialization of the connection object.
     // TODO: Use promises for this!
-    this.connection_ = new NetSimConnection(this.currentUser_.name, this.logger_);
+    // TODO (bbuchanan) : Appending random number to user name only for debugging.
+    var userName = this.currentUser_.name + '_' + (Math.floor(Math.random() * 99) + 1);
+    this.connection_ = new NetSimConnection(userName, this.logger_);
     this.runLoop_.tick.register(this.connection_, this.connection_.tick);
     this.logger_.log("Connection manager created.");
 
