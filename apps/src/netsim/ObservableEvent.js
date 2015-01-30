@@ -16,7 +16,7 @@
  */
 
 /**
- * @fileoverview Observer/Observable pattern utilities
+ * @fileoverview Observer/ObservableEvent pattern utilities
  */
 
 /* jshint
@@ -37,7 +37,7 @@
  * without attaching anything to the DOM or other global scope.
  * @constructor
  */
-var Observable = function () {
+var ObservableEvent = function () {
   /**
    * Objects observing this.
    * @type {Array}
@@ -45,18 +45,18 @@ var Observable = function () {
    */
   this.observerList_ = [];
 };
-module.exports = Observable;
+module.exports = ObservableEvent;
 
 /**
- * Subscribe a method to be called when Observable.notify is called.
+ * Subscribe a method to be called when ObservableEvent.notify is called.
  * @param {Object} observingObj - Object/context that wants to be notified,
  *                 which will be bound to "this" when onNotify is called.
- * @param {Function} onNotify - method called when Observable.notify
+ * @param {Function} onNotify - method called when ObservableEvent.notify
  *                   gets called.  Will receive any arguments passed to
- *                   Observable.notify.
+ *                   ObservableEvent.notify.
  * @returns {Object} key - used to unregister from observable
  */
-Observable.prototype.register = function (observingObj, onNotify) {
+ObservableEvent.prototype.register = function (observingObj, onNotify) {
   var key = {thisArg: observingObj, toCall:onNotify};
   Object.freeze(key);
   this.observerList_.push(key);
@@ -68,7 +68,7 @@ Observable.prototype.register = function (observingObj, onNotify) {
  * @param {Object} keyObj - Key generated when registering
  * @returns {boolean} - Whether an unregistration actually occurred
  */
-Observable.prototype.unregister = function (keyObj) {
+ObservableEvent.prototype.unregister = function (keyObj) {
   for (var i = 0; i < this.observerList_.length; i++) {
     if (keyObj === this.observerList_[i]) {
       this.observerList_.splice(i, 1);
@@ -79,12 +79,13 @@ Observable.prototype.unregister = function (keyObj) {
 };
 
 /**
- * Call all methods subscribed to this Observable, passing through
+ * Call all methods subscribed to this ObservableEvent, passing through
  * any arguments.
  * @param {...} Any arguments, which are passed through to the observing
  *              functions.
  */
-Observable.prototype.notify = function () {
+// TODO (bbuchanan) : rename
+ObservableEvent.prototype.notify = function () {
   var args = Array.prototype.slice.call( arguments, 0 );
   this.observerList_.forEach(function (observer) {
     observer.toCall.apply(observer.thisArg, args);

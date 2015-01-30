@@ -70,6 +70,8 @@ NetSimLogger.prototype.log = function (message, logLevel /*=INFO*/) {
     logLevel = LogLevel.INFO;
   }
 
+  // TODO (bbuchanan): Rewrite, bind functions for different log levels
+  // in advance and call those.
   // For now, just assume we're writing to the web console.
   if (this.verbosity >= logLevel) {
     if (console && console.log) {

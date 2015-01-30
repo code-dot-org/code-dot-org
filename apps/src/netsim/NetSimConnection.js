@@ -36,7 +36,7 @@ var _ = require('../utils').getLodash();
 var netsimStorage = require('./netsimStorage');
 var NetSimLogger = require('./NetSimLogger');
 var LogLevel = NetSimLogger.LogLevel;
-var Observable = require('./Observable');
+var ObservableEvent = require('./ObservableEvent');
 
 /**
  * How often a keep-alive message should be sent to the instance lobby
@@ -97,9 +97,9 @@ var NetSimConnection = function (displayName, logger /*=new NetSimLogger(NONE)*/
    * Notifies on:
    * - Connect to instance
    * - Disconnect from instance
-   * @type {Observable}
+   * @type {ObservableEvent}
    */
-  this.statusChanges = new Observable();
+  this.statusChanges = new ObservableEvent();
 
   /**
    * When the next keepAlive update should be sent to the lobby
@@ -130,7 +130,6 @@ NetSimConnection.ConnectionStatus = ConnectionStatus;
  * @private
  */
 NetSimConnection.prototype.onBeforeUnload_ = function () {
-  this.onChangeCallbacks_ = [];
   if (this.isConnectedToInstance()) {
     this.disconnectFromInstance();
   }
@@ -182,7 +181,7 @@ NetSimConnection.prototype.disconnectFromInstance = function () {
   // TODO (bbuchanan) : Check for other resources we need to clean up
   //                    before we disconnect from the instance.
 
-  this.disconnect_(this.myLobbyRowID_);
+  this.disconnectByRowID_(this.myLobbyRowID_);
   this.setConnectionStatus_(ConnectionStatus.DISCONNECTED);
 };
 
@@ -208,7 +207,7 @@ NetSimConnection.prototype.connect_ = function () {
  * @param lobbyRowID
  * @private
  */
-NetSimConnection.prototype.disconnect_ = function (lobbyRowID) {
+NetSimConnection.prototype.disconnectByRowID_ = function (lobbyRowID) {
   if (!this.isConnectedToInstance()) {
     this.logger_.log("Can't disconnect when not connected to an instance.",
         LogLevel.ERROR);
@@ -251,6 +250,7 @@ NetSimConnection.prototype.setConnectionStatus_ = function (newStatus, lobbyRowI
         this.logger_.log("Connected to instance, assigned ID " +
             this.myLobbyRowID_, LogLevel.INFO);
         break;
+
     case ConnectionStatus.DISCONNECTED:
         this.myLobbyRowID_ = undefined;
         this.nextKeepAliveTime_ = Infinity;
@@ -286,11 +286,11 @@ NetSimConnection.prototype.getLobbyListing = function (callback) {
 
   var logger = this.logger_;
   this.lobbyTable_.all(function (data) {
-    if (null === data) {
+    if (null !== data) {
+      callback(data);
+    } else {
       logger.log("Lobby data request failed, using empty list.", LogLevel.WARN);
       callback([]);
-    } else {
-      callback(data);
     }
   });
 };
@@ -327,7 +327,7 @@ NetSimConnection.prototype.cleanLobby_ = function () {
   this.getLobbyListing(function (lobbyData) {
     lobbyData.forEach(function (lobbyRow) {
       if (now - lobbyRow.lastPing >= CONNECTION_TIMEOUT_MS) {
-        self.disconnect_(lobbyRow.id);
+        self.disconnectByRowID_(lobbyRow.id);
       }
     });
   });
