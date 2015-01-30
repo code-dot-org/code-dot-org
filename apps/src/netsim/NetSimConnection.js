@@ -74,7 +74,7 @@ var NetSimConnection = function (displayName, logger /*=new NetSimLogger(NONE)*/
    */
   this.logger_ = logger;
   if (undefined === this.logger_) {
-    this.logger_ = new NetSimLogger(LogLevel.NONE);
+    this.logger_ = new NetSimLogger(console, LogLevel.NONE);
   }
 
   /**
