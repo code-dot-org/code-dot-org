@@ -37,7 +37,9 @@ var EquationSet = function (blocks) {
   if (blocks) {
     blocks.forEach(function (block) {
       var equation = getEquationFromBlock(block);
-      this.addEquation_(equation);
+      if (equation) {
+        this.addEquation_(equation);
+      }
     }, this);
   }
 };
@@ -293,9 +295,18 @@ function getEquationFromBlock(block) {
     case 'functional_example':
       // TODO (brent) - we dont do anything with functional_example yet, but
       // this way we will at least persist it/not throw unknown type
-      return new Equation(null, null);
+      // return new Equation('block' + block.id, null);
+      return null;
+
 
     default:
       throw "Unknown block type: " + block.type;
   }
 }
+
+/* start-test-block */
+// export private function(s) to expose to unit testing
+EquationSet.__testonly__ = {
+  getEquationFromBlock: getEquationFromBlock
+};
+/* end-test-block */
