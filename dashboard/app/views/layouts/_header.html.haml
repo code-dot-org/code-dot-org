@@ -25,6 +25,18 @@
               = render partial: 'shared/header_progress'
             - elsif @edit_blocks
               .header_level{style:'font-size: 250%; line-height: 125%;'} Editing #{@edit_blocks.humanize}
-          - if params[:controller] !~ /^sessions/
-            .header_user
-              = render partial: 'shared/user_header'
+          .header_right
+            %span.freeplay_links{style: 'display: none;'}
+              %a.header_status_bar.level_free_play{title: t('nav.header.free_play.playlab'), href: playlab_freeplay_path}
+                %i.fa.fa-rocket
+              %a.header_status_bar.level_free_play{title: t('nav.header.free_play.artist'), href: artist_freeplay_path}
+                %i.fa.fa-pencil
+            - if params[:controller] !~ /^sessions/
+              .header_user
+                = render partial: 'shared/user_header'
+
+- if @script_level
+  :javascript
+    //<![CDATA[
+    dashboard.buildHeader(#{header_progress(@script_level).to_json});
+    //]]>
