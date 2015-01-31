@@ -32,7 +32,6 @@
  */
 'use strict';
 
-var _ = require('../utils').getLodash();
 var netsimStorage = require('./netsimStorage');
 var NetSimLogger = require('./NetSimLogger');
 var LogLevel = NetSimLogger.LogLevel;
@@ -109,7 +108,7 @@ var NetSimConnection = function (displayName, logger /*=new NetSimLogger(NONE)*/
   this.nextKeepAliveTime_ = Infinity;
 
   // Bind to onBeforeUnload event to attempt graceful disconnect
-  window.addEventListener('beforeunload', _.bind(this.onBeforeUnload_, this));
+  window.addEventListener('beforeunload', this.onBeforeUnload_.bind(this));
 };
 module.exports = NetSimConnection;
 

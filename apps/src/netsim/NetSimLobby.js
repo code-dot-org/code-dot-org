@@ -33,7 +33,6 @@
 /* global $ */
 'use strict';
 
-var _ = require('../utils').getLodash();
 var markup = require('./NetSimLobby.html');
 
 /**
@@ -102,7 +101,7 @@ NetSimLobby.prototype.bindElements_ = function () {
   // TODO (bbuchanan) :Just use jquery for this :/
   this.instanceSelector_ = document.getElementById('netsim_instance_select');
   this.instanceSelector_.addEventListener('change',
-      _.bind(this.onInstanceSelectorChange_, this));
+      this.onInstanceSelectorChange_.bind(this));
 
   this.lobbyList_ = document.getElementById('netsim_lobby_list');
 };

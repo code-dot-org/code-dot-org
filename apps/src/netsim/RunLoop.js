@@ -33,7 +33,6 @@
 /* global window */
 'use strict';
 
-var _ = require('../utils').getLodash();
 var ObservableEvent = require('./ObservableEvent');
 
 // It is more accurate to use performance.now(), but we use Date.now()
@@ -43,7 +42,7 @@ var ObservableEvent = require('./ObservableEvent');
 // * https://developer.mozilla.org/en-US/docs/Web/API/window.requestAnimationFrame
 // * https://developer.mozilla.org/en-US/docs/Web/API/Performance.now
 var windowNow = (window.performance && window.performance.now) ?
-    _.bind(window.performance.now, window.performance) : Date.now;
+    window.performance.now.bind(window.performance) : Date.now;
 
 /**
  * Ticks per second on older browsers where we can't lock to the repaint event.
