@@ -35,8 +35,6 @@
 
 // TODO (bbuchanan): Convert this whole file to use standard Promise/Deferred code
 
-var _ = require('../utils').getLodash();
-
 /**
  * Represents a Dashboard user account - could be a teacher, a student, etc.
  * @constructor
@@ -110,9 +108,9 @@ DashboardUser.prototype.initialize_ = function (data) {
   this.isReady = true;
 
   // Call any queued callbacks
-  this.whenReadyCallbacks_.forEach(_.bind(function (callback) {
+  this.whenReadyCallbacks_.forEach(function (callback) {
     callback(this);
-  }, this));
+  }.bind(this));
   this.whenReadyCallbacks_ = [];
 };
 

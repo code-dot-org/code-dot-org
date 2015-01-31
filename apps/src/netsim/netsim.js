@@ -37,8 +37,6 @@
 
 var dom = require('../dom');
 var page = require('./page.html');
-var utils = require('../utils');
-var _ = utils.getLodash();
 var NetSimConnection = require('./NetSimConnection');
 var NetSimLogger = require('./NetSimLogger');
 var DashboardUser = require('./DashboardUser');
@@ -116,7 +114,7 @@ NetSim.prototype.onSendButtonClick_ = function () {
 NetSim.prototype.attachHandlers_ = function () {
   dom.addClickTouchEvent(
       document.getElementById('netsim_sendbutton'),
-      _.bind(this.onSendButtonClick_, this)
+      this.onSendButtonClick_.bind(this)
   );
 };
 
@@ -145,19 +143,19 @@ NetSim.prototype.init = function(config) {
   });
 
   config.enableShowCode = false;
-  config.loadAudio = _.bind(this.loadAudio_, this);
+  config.loadAudio = this.loadAudio_.bind(this);
 
   // Override certain StudioApp methods - netsim does a lot of configuration
   // itself, because of its nonstandard layout.
-  this.studioApp_.configureDom = _.bind(this.configureDomOverride_, this.studioApp_);
-  this.studioApp_.onResize = _.bind(this.onResizeOverride_, this.studioApp_);
+  this.studioApp_.configureDom = this.configureDomOverride_.bind(this.studioApp_);
+  this.studioApp_.onResize = this.onResizeOverride_.bind(this.studioApp_);
 
   this.studioApp_.init(config);
 
   this.attachHandlers_();
 
   // Create netsim lobby widget in page
-  this.currentUser_.whenReady(_.bind(function () {
+  this.currentUser_.whenReady(function () {
     // Do a deferred initialization of the connection object.
     // TODO: Use promises for this!
     // TODO (bbuchanan) : Appending random number to user name only for debugging.
@@ -170,7 +168,7 @@ NetSim.prototype.init = function(config) {
     this.lobbyControl_ = NetSimLobby.createWithin(lobbyContainer, this.connection_);
     this.runLoop_.tick.register(this.lobbyControl_, this.lobbyControl_.tick);
     this.logger_.log("Lobby control created.");
-  }, this));
+  }.bind(this));
 
   // Begin the main simulation loop
   this.runLoop_.begin();
