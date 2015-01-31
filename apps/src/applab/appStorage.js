@@ -5,27 +5,41 @@
  */
 var AppStorage = module.exports;
 
-// TODO(dave): remove once we can store ids for each app.
+// TODO(dave): remove once we can store ids for each app. (userid:1, appid:1337).
 AppStorage.tempEncryptedAppId =
     window.location.hostname.split('.')[0] === 'localhost' ?
         "SmwVmYVl1V5UCCw1Ec6Dtw==" : "DvTw9X3pDcyDyil44S6qbw==";
 
 /**
+ * The visibility types supported by the app storage system.
+ * @enum {string}
+ */
+var Visibility = {
+  USER: "user",   // accessible only to the user who wrote the data.
+  SHARED: "shared"  // accessible to all users of the app.
+};
+AppStorage.Visibility = Visibility;
+
+/**
  * Reads the value associated with the key, accessible to all users of the app.
  * @param {string} key The name of the key.
+ * @param {Visibility} visibility The visibility of the data.
  * @param {function(Object)} onSuccess Function to call on success with the
        value retrieved from storage.
  * @param {function(string)} onError Function to call on error with error msg.
  */
-AppStorage.readSharedValue = function(key, onSuccess, onError) {
+AppStorage.readRemoteValue = function(key, visibility, onSuccess, onError) {
+  checkVisibility(visibility);
   var req = new XMLHttpRequest();
-  req.onreadystatechange = handleReadSharedValue.bind(req, onSuccess, onError);
-  var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + '/shared-properties/' + key;
+  checkVisibility(visibility);
+  req.onreadystatechange = handleReadRemoteValue.bind(req, onSuccess, onError);
+  var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + '/' + visibility +
+      '-properties/' + key;
   req.open('GET', url, true);
   req.send();
 };
 
-var handleReadSharedValue = function(onSuccess, onError) {
+var handleReadRemoteValue = function(onSuccess, onError) {
   if (this.readyState !== 4) {
     return;
   }
@@ -44,16 +58,18 @@ var handleReadSharedValue = function(onSuccess, onError) {
  * @param {function()} onSuccess Function to call on success.
  * @param {function(string)} onError Function to call on error with error msg.
  */
-AppStorage.writeSharedValue = function(key, value, onSuccess, onError) {
+AppStorage.writeRemoteValue = function(key, value, visibility, onSuccess, onError) {
+  checkVisibility(visibility);
   var req = new XMLHttpRequest();
-  req.onreadystatechange = handleWriteSharedValue.bind(req, onSuccess, onError);
-  var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + '/shared-properties/' + key;
+  req.onreadystatechange = handleWriteRemoteValue.bind(req, onSuccess, onError);
+  var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + '/' + visibility +
+      '-properties/' + key;
   req.open('POST', url, true);
   req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
   req.send(JSON.stringify(value));
 };
 
-var handleWriteSharedValue = function(onSuccess, onError) {
+var handleWriteRemoteValue = function(onSuccess, onError) {
   if (this.readyState !== 4) {
     return;
   }
@@ -73,7 +89,7 @@ var handleWriteSharedValue = function(onSuccess, onError) {
  * @param {function(string)} onError Function to call with an error message
  *    in case of failure.
  */
-AppStorage.createSharedRecord = function(record, onSuccess, onError) {
+AppStorage.createRecord = function(record, visibility, onSuccess, onError) {
   var tableName = record.tableName;
   if (!tableName) {
     onError('error creating record: missing required property "tableName"');
@@ -83,15 +99,17 @@ AppStorage.createSharedRecord = function(record, onSuccess, onError) {
     onError('error creating record: record must not have an "id" property');
     return;
   }
+  checkVisibility(visibility);
   var req = new XMLHttpRequest();
-  req.onreadystatechange = handleCreateSharedRecord.bind(req, onSuccess, onError);
-  var url = "/v3/apps/" + AppStorage.tempEncryptedAppId + "/shared-tables/" + tableName;
+  req.onreadystatechange = handleCreateRecord.bind(req, onSuccess, onError);
+  var url = "/v3/apps/" + AppStorage.tempEncryptedAppId + '/' + visibility +
+      '-tables/' + tableName;
   req.open('POST', url, true);
   req.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
   req.send(JSON.stringify(record));
 };
 
-var handleCreateSharedRecord = function(onSuccess, onError) {
+var handleCreateRecord = function(onSuccess, onError) {
   if (this.readyState !== 4) {
     return;
   }
@@ -115,22 +133,24 @@ var handleCreateSharedRecord = function(onSuccess, onError) {
  * @param {function(string)} onError Function to call with an error message
  *     in case of failure.
  */
-AppStorage.readSharedRecords = function(searchParams, onSuccess, onError) {
+AppStorage.readRecords = function(searchParams, visibility, onSuccess, onError) {
   var tableName = searchParams.tableName;
   if (!tableName) {
     onError('error reading records: missing required property "tableName"');
     return;
   }
+  checkVisibility(visibility);
   var req = new XMLHttpRequest();
-  req.onreadystatechange = handleReadSharedRecords.bind(req, tableName,
+  req.onreadystatechange = handleReadRecords.bind(req, tableName,
       searchParams, onSuccess, onError);
-  var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + "/shared-tables/" + tableName;
+  var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + '/' + visibility +
+      '-tables/' + tableName;
   req.open('GET', url, true);
   req.send();
   
 };
 
-var handleReadSharedRecords = function(tableName, searchParams, onSuccess, onError) {
+var handleReadRecords = function(tableName, searchParams, onSuccess, onError) {
   if (this.readyState !== 4) {
     return;
   }
@@ -160,7 +180,7 @@ var handleReadSharedRecords = function(tableName, searchParams, onSuccess, onErr
  * @param {function(string)} onError Function to call with an error message
  *    in case of failure.
  */
-AppStorage.updateSharedRecord = function(record, onSuccess, onError) {
+AppStorage.updateRecord = function(record, visibility, onSuccess, onError) {
   var tableName = record.tableName;
   if (!tableName) {
     onError('error updating record: missing required property "tableName"');
@@ -171,16 +191,17 @@ AppStorage.updateSharedRecord = function(record, onSuccess, onError) {
     onError('error updating record: missing required property "id"');
     return;
   }
+  checkVisibility(visibility);
   var req = new XMLHttpRequest();
-  req.onreadystatechange = handleUpdateSharedRecord.bind(req, record, onSuccess, onError);
-  var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + '/shared-tables/' +
-      tableName + '/' + recordId;
+  req.onreadystatechange = handleUpdateRecord.bind(req, record, onSuccess, onError);
+  var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + '/' + visibility +
+      '-tables/' + tableName + '/' + recordId;
   req.open('POST', url, true);
   req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
   req.send(JSON.stringify(record));
 };
 
-var handleUpdateSharedRecord = function(record, onSuccess, onError) {
+var handleUpdateRecord = function(record, onSuccess, onError) {
   if (this.readyState !== 4) {
     return;
   }
@@ -205,7 +226,7 @@ var handleUpdateSharedRecord = function(record, onSuccess, onError) {
  * @param {function(string)} onError Function to call with an error message
  *    in case of failure.
  */
-AppStorage.deleteSharedRecord = function(record, onSuccess, onError) {
+AppStorage.deleteRecord = function(record, visibility, onSuccess, onError) {
   var tableName = record.tableName;
   if (!tableName) {
     onError('error deleting record: missing required property "tableName"');
@@ -216,16 +237,17 @@ AppStorage.deleteSharedRecord = function(record, onSuccess, onError) {
     onError('error deleting record: missing required property "id"');
     return;
   }
+  checkVisibility(visibility);
   var req = new XMLHttpRequest();
-  req.onreadystatechange = handleDeleteSharedRecord.bind(req, record, onSuccess, onError);
-  var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + '/shared-tables/' +
-      tableName + '/' + recordId + '/delete';
+  req.onreadystatechange = handleDeleteRecord.bind(req, record, onSuccess, onError);
+  var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + '/' + visibility +
+      '-tables/' + tableName + '/' + recordId + '/delete';
   req.open('POST', url, true);
   req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
   req.send(JSON.stringify(record));
 };
 
-var handleDeleteSharedRecord = function(record, onSuccess, onError) {
+var handleDeleteRecord = function(record, onSuccess, onError) {
   if (this.readyState !== 4) {
     return;
   }
@@ -239,4 +261,10 @@ var handleDeleteSharedRecord = function(record, onSuccess, onError) {
     return;
   }
   onSuccess();
+};
+
+var checkVisibility = function (visibility) {
+  if (visibility !== Visibility.USER && visibility !== Visibility.SHARED) {
+    throw new Error("visibility must be 'user' or 'shared'.");
+  }
 };
