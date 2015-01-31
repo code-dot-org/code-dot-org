@@ -1,16 +1,4 @@
 ---
-<%
-def format_email_address(email, name='')
-  name = "\"#{name.gsub('"', '\"').gsub("'","\\'")}\"" if name =~ /[;,\"\'\(\)]/
-  "#{name} <#{email}>".strip
-end
-
-  workshop_row = DB[:forms].first(id:form.parent_id)
-  workshop = JSON.parse(workshop_row[:data]).merge(JSON.parse(workshop_row[:processed_data]))
-
-  teacher = DASHBOARD_DB[:users].where(id: workshop_row[:user_id]).first
-%>
-to: '<%= format_email_address(teacher['email'], teacher['name']) %>'
 from: "Code.org <info@code.org>"
 subject: "[Code.org] Workshop reminder"
 litmus_tracking_id: "e5cj1of6"
