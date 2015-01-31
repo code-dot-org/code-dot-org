@@ -42,8 +42,11 @@
   });
 
   $(document).bind('ajaxSuccess', function(event, response) {
-    if (response.status == 200 && response.responseJSON.level_source_id && currentApp) {
-      // TODO more robust checking that this is a milestone response and not a different kind of request
+    if (response &&
+        response.status == 200 &&
+        response.responseJSON &&
+        response.responseJSON.level_source_id &&
+        currentApp) {
 
       $('#save-project').text("Saving...");
 
