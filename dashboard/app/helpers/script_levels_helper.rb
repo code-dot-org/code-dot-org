@@ -111,6 +111,7 @@ module ScriptLevelsHelper
         }
       end
     }
+    script_data[:linesOfCodeText] = t('nav.popup.lines', lines: current_user.total_lines) unless current_user.nil?
     script_data[:finishLink] = {text: t('nav.header.finished_hoc'), href: hoc_finish_url(script)} if script.hoc?
     if script.trophies && current_user
       progress = current_user.progress(script)
