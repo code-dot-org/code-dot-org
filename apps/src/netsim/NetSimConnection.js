@@ -261,7 +261,7 @@ NetSimConnection.prototype.setConnectionStatus_ = function (newStatus, lobbyRowI
 
 NetSimConnection.prototype.keepAlive = function () {
   if (!this.isConnectedToInstance()) {
-    this.logger.log("Can't send keepAlive, not connected to instance.", LogLevel.WARN);
+    this.logger_.log("Can't send keepAlive, not connected to instance.", LogLevel.WARN);
     return;
   }
 
@@ -278,7 +278,7 @@ NetSimConnection.prototype.keepAlive = function () {
 
 NetSimConnection.prototype.getLobbyListing = function (callback) {
   if (!this.isConnectedToInstance()) {
-    this.logger.log("Can't get lobby rows, not connected to instance.", LogLevel.WARN);
+    this.logger_.log("Can't get lobby rows, not connected to instance.", LogLevel.WARN);
     callback([]);
     return;
   }
