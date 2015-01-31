@@ -27,7 +27,7 @@
 
   // SERVICES
   var services = angular.module('projectsApp.services', []).
-    value('version', '0.1');
+      value('version', '0.1');
 
   // Section service. see sites.v3/code.org/routes/v2_section_routes.rb
   services.factory('projectsService', ['$resource',
@@ -56,15 +56,15 @@
   // CONTROLLERS
 
   var controllers = angular.module('projectsApp.controllers', []).
-    value('version', '0.1');
+      value('version', '0.1');
 
   controllers.controller('ProjectsController', ['$scope', '$route', '$routeParams', '$location', '$window', 'projectsService',
-                                       function($scope, $route, $routeParams, $location, $window, projectsService) {
+      function($scope, $route, $routeParams, $location, $window, projectsService) {
     $scope.projectsLoaded = false;
 
     $scope.projects = projectsService.query();
 
-    $scope.projects.$promise.then(function(projects){
+    $scope.projects.$promise.then(function(projects) {
       $scope.projectsLoaded = true;
     }).catch($scope.genericError);
 
