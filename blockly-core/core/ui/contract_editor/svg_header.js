@@ -10,7 +10,7 @@ goog.provide('Blockly.SvgHeader');
  */
 Blockly.SvgHeader = function (parent, opt_options) {
   var options = opt_options || {
-    backgroundColor: '#898989',
+    backgroundColor: '#000',
     headerText: 'Default Header'
   };
 
