@@ -40,11 +40,19 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
   font-size: 20px;
 }
 
-.netsim_lobby_user_row {
+.netsim_lobby_row {
   background-color: white;
 }
 
-.netsim_lobby_own_row {
+.netsim_lobby_row.own_row {
   font-weight: bold;
   background-color: paleturquoise;
+}
+
+.netsim_lobby_row.user_row {
+
+}
+
+.netsim_lobby_row.router_row {
+  background-color: papayawhip;
 }
