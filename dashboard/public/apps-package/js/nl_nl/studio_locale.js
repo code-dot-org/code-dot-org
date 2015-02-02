@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -213,7 +213,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "moveDistanceTooltip":function(d){return "Beweeg een figuur de aangegeven afstand in de aangegeven richting."},
 "moveSprite":function(d){return "verplaats"},
 "moveSpriteN":function(d){return "verplaats speler "+appLocale.v(d,"spriteIndex")},
-"toXY":function(d){return "to x,y"},
+"toXY":function(d){return "naar x,y"},
 "moveDown":function(d){return "omlaag"},
 "moveDownTooltip":function(d){return "verplaats een figuur omlaag."},
 "moveLeft":function(d){return "naar links"},
@@ -265,11 +265,14 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "projectilePurpleHearts":function(d){return "paars hart"},
 "projectileRedHearts":function(d){return "rood hart"},
 "projectileRandom":function(d){return "willekeurig"},
-"projectileAnna":function(d){return "Anna"},
-"projectileElsa":function(d){return "Elsa"},
+"projectileAnna":function(d){return "haak"},
+"projectileElsa":function(d){return "glinstering"},
 "projectileHiro":function(d){return "Hiro"},
-"projectileBaymax":function(d){return "Baymax"},
+"projectileBaymax":function(d){return "raket"},
 "projectileRapunzel":function(d){return "Rapunzel"},
+"projectileCherry":function(d){return "cherry"},
+"projectileIce":function(d){return "ijs"},
+"projectileDuck":function(d){return "eend"},
 "reinfFeedbackMsg":function(d){return "Klik 'Probeer opnieuw' om terug te gaan naar je spel."},
 "repeatForever":function(d){return "blijven herhalen"},
 "repeatDo":function(d){return "voer uit"},
@@ -277,6 +280,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "saySprite":function(d){return "zeg"},
 "saySpriteN":function(d){return "speler "+appLocale.v(d,"spriteIndex")+" zegt"},
 "saySpriteTooltip":function(d){return "Toon een tekstballon met de tekst van de speler."},
+"saySpriteChoices_1":function(d){return "Hallo daar!"},
+"saySpriteChoices_2":function(d){return "Hoe gaat het?"},
+"saySpriteChoices_3":function(d){return "Dit is leuk..."},
 "scoreText":function(d){return "Score: "+appLocale.v(d,"playerScore")},
 "setBackground":function(d){return "stel de achtergrond in"},
 "setBackgroundRandom":function(d){return "stel een willekeurige achtergrond in"},
@@ -293,6 +299,12 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setBackgroundSpace":function(d){return "gebruik ruimteachtergrond"},
 "setBackgroundTennis":function(d){return "gebruik tennisachtergrond"},
 "setBackgroundWinter":function(d){return "gebruik winterachtergrond"},
+"setBackgroundLeafy":function(d){return "set leafy background"},
+"setBackgroundGrassy":function(d){return "set een grasland in als achtergrond"},
+"setBackgroundFlower":function(d){return "set flower background"},
+"setBackgroundTile":function(d){return "set tile background"},
+"setBackgroundIcy":function(d){return "set icy background"},
+"setBackgroundSnowy":function(d){return "set snowy background"},
 "setBackgroundTooltip":function(d){return "Hiermee stelt u de achtergrondafbeelding in"},
 "setEnemySpeed":function(d){return "snelheid vijand instellen"},
 "setPlayerSpeed":function(d){return "snelheid speler instellen"},
@@ -384,6 +396,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "soundWinPoint2":function(d){return "punt gewonnen 2"},
 "soundWood":function(d){return "hout"},
 "speed":function(d){return "snelheid"},
+"startSetValue":function(d){return "start (rocket-height function)"},
 "stopSprite":function(d){return "stop"},
 "stopSpriteN":function(d){return "stop speler "+appLocale.v(d,"spriteIndex")},
 "stopTooltip":function(d){return "Hiermee wordt een beweging van een acteur gestopt."},

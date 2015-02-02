@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -213,7 +213,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "moveDistanceTooltip":function(d){return "Pomiče lik za zadanu udaljenost i u zadanom smjeru."},
 "moveSprite":function(d){return "pomakni"},
 "moveSpriteN":function(d){return "pomakni lik "+appLocale.v(d,"spriteIndex")},
-"toXY":function(d){return "to x,y"},
+"toXY":function(d){return "na x,y"},
 "moveDown":function(d){return "pomakni dolje"},
 "moveDownTooltip":function(d){return "Pomiče lik dolje."},
 "moveLeft":function(d){return "pomakni lijevo"},
@@ -268,8 +268,11 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "projectileAnna":function(d){return "Anna"},
 "projectileElsa":function(d){return "Elsa"},
 "projectileHiro":function(d){return "Hiro"},
-"projectileBaymax":function(d){return "Baymax"},
+"projectileBaymax":function(d){return "raketa"},
 "projectileRapunzel":function(d){return "Rapunzel"},
+"projectileCherry":function(d){return "trešnja"},
+"projectileIce":function(d){return "led"},
+"projectileDuck":function(d){return "patka"},
 "reinfFeedbackMsg":function(d){return "Pritisni tipku \"Pokušaj ponovno\" da se vratiš na igru."},
 "repeatForever":function(d){return "ponavljaj zauvijek"},
 "repeatDo":function(d){return "napravi"},
@@ -277,6 +280,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "saySprite":function(d){return "reći"},
 "saySpriteN":function(d){return "lik "+appLocale.v(d,"spriteIndex")+" kaže"},
 "saySpriteTooltip":function(d){return "Zadanom liku stvara strip-oblačić s pripadnim tekstom."},
+"saySpriteChoices_1":function(d){return "Bok!"},
+"saySpriteChoices_2":function(d){return "Kako si?"},
+"saySpriteChoices_3":function(d){return "Ovo je zabavno..."},
 "scoreText":function(d){return "Rezultat: "+appLocale.v(d,"playerScore")},
 "setBackground":function(d){return "postavi pozadinu"},
 "setBackgroundRandom":function(d){return "postavi nasumično odabranu pozadinu"},
@@ -293,6 +299,12 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setBackgroundSpace":function(d){return "postavi svemirsku pozadinu"},
 "setBackgroundTennis":function(d){return "postavi tenisku pozadinu"},
 "setBackgroundWinter":function(d){return "postavi zimsku pozadinu"},
+"setBackgroundLeafy":function(d){return "set leafy background"},
+"setBackgroundGrassy":function(d){return "set grassy background"},
+"setBackgroundFlower":function(d){return "set flower background"},
+"setBackgroundTile":function(d){return "set tile background"},
+"setBackgroundIcy":function(d){return "set icy background"},
+"setBackgroundSnowy":function(d){return "set snowy background"},
 "setBackgroundTooltip":function(d){return "Postavlja sliku pozadine"},
 "setEnemySpeed":function(d){return "postavi brzinu neprijatelja"},
 "setPlayerSpeed":function(d){return "postavi brzinu igrača"},
@@ -384,6 +396,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "soundWinPoint2":function(d){return "osvojen bod 2"},
 "soundWood":function(d){return "drvo"},
 "speed":function(d){return "brzina"},
+"startSetValue":function(d){return "start (rocket-height function)"},
 "stopSprite":function(d){return "zaustaviti"},
 "stopSpriteN":function(d){return "zaustavi lik "+appLocale.v(d,"spriteIndex")},
 "stopTooltip":function(d){return "Zaustavlja kretanje lika."},

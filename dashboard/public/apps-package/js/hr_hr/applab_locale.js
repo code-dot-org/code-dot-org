@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -63,11 +63,10 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "repeatForever":function(d){return "ponavljaj zauvijek"},
 "repeatDo":function(d){return "napravi"},
 "repeatForeverTooltip":function(d){return "Stalno ponavlja akcije iz ovog bloka dok god program radi."},
-"shareWebappTwitter":function(d){return "Vidi program koji sam napravio. Napisao sam ga sam uz pomoć @codeorg"},
+"shareApplabTwitter":function(d){return "Vidi program koji sam napravio. Napisao sam ga sam uz pomoć @codeorg"},
 "shareGame":function(d){return "Dijeli program:"},
 "stepIn":function(d){return "Korak u"},
 "stepOver":function(d){return "Korak preko"},
 "stepOut":function(d){return "Korak van"},
-"turnBlack":function(d){return "postavi crno"},
-"turnBlackTooltip":function(d){return "Postavlja crni ekran."},
+"viewData":function(d){return "Prikaz podataka"},
 "yes":function(d){return "Da"}};
