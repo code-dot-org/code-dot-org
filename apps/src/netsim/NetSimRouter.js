@@ -16,7 +16,11 @@
  */
 
 /**
- * @fileoverview Client representation of simulated router
+ * @fileoverview Client model of simulated router
+ *
+ * Represents the client's view of a given router, provides methods for
+ *   letting the client interact with the router, and wraps the client's
+ *   work doing part of the router simulation.
  *
  * A router -exists- when it has a row in the lobby table of type 'router'
  * A router is connected to a user when a 'user' row exists in the lobby

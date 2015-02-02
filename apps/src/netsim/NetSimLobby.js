@@ -195,20 +195,20 @@ NetSimLobby.prototype.refreshLobby_ = function () {
 
     // TODO (bbuchanan): This should eventually generate an interactive list
     lobbyData.forEach(function (connection) {
-      var item = $('<li>');
+      var item = $('<li>').addClass('netsim_lobby_row');
+      $('<a>')
+          .attr('href', '#')
+          .html(connection.name + ' : ' + connection.status)
+          .appendTo(item);
+
       if (connection.id === self.connection_.myLobbyRowID_) {
-        item.addClass('netsim_lobby_own_row');
-        item.html(connection.name + ' : ' + connection.status + ' : Me');
+        item.addClass('own_row');
+      } else if (connection.type === NetSimConnection.LobbyRowType.ROUTER) {
+        item.addClass('router_row');
+        dom.addClickTouchEvent(item[0], self.onRouterRowClick_.bind(self, connection));
       } else {
-        if (connection.type === NetSimConnection.LobbyRowType.ROUTER) {
-          item.addClass('netsim_lobby_router_row');
-        } else {
-          item.addClass('netsim_lobby_user_row');
-        }
-        $('<a>')
-            .attr('href', '#')
-            .html(connection.name + ' : ' + connection.status)
-            .appendTo(item);
+        item.addClass('user_row');
+        dom.addClickTouchEvent(item[0], self.onUserRowClick_.bind(self, connection));
       }
       item.appendTo(lobbyList);
     });
@@ -217,6 +217,24 @@ NetSimLobby.prototype.refreshLobby_ = function () {
       self.nextAutoRefreshTime_ = 0;
     }
   }); 
+};
+
+/**
+ *
+ * @param {*} targetRouter - Lobby row for clicked router
+ * @private
+ */
+NetSimLobby.prototype.onRouterRowClick_ = function (targetRouter) {
+  console.info("Clicked " + targetRouter.name);
+};
+
+/**
+ *
+ * @param {*} targetUser - Lobby row for clicked user
+ * @private
+ */
+NetSimLobby.prototype.onUserRowClick_ = function (targetUser) {
+  console.info("Clicked user ID " + targetUser.id + ": " + targetUser.name);
 };
 
 /**
