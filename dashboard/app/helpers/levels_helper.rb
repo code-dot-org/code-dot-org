@@ -45,10 +45,6 @@ module LevelsHelper
       @start_blocks = initial_blocks(current_user, @level) || @start_blocks || @level.start_blocks
     end
 
-    if current_user && params[:load_previous]
-      @start_blocks = current_user.last_attempt(@level).try(:level_source).try(:data)
-    end
-
     select_and_remember_callouts(@script_level.nil?)
     localize_levelbuilder_instructions
   end
