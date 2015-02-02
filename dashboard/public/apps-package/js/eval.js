@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({57:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({59:[function(require,module,exports){
 var appMain = require('../appMain');
 window.Eval = require('./eval');
 var blocks = require('./blocks');
@@ -11,7 +11,7 @@ window.evalMain = function(options) {
   appMain(window.Eval, levels, options);
 };
 
-},{"../appMain":3,"../skins":115,"./blocks":43,"./eval":45,"./levels":56}],45:[function(require,module,exports){
+},{"../appMain":3,"../skins":117,"./blocks":45,"./eval":47,"./levels":58}],47:[function(require,module,exports){
 (function (global){
 /**
  * Blockly Demo: Eval Graphics
@@ -320,7 +320,7 @@ function onReportComplete(response) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../../locale/current/common":160,"../../locale/current/eval":161,"../StudioApp":2,"../block_utils":16,"../canvg/canvg.js":36,"../codegen":39,"../dom":41,"../skins":115,"../templates/page.html":135,"./api":42,"./controls.html":44,"./levels":56,"./visualization.html":58}],58:[function(require,module,exports){
+},{"../../locale/current/common":162,"../../locale/current/eval":163,"../StudioApp":2,"../block_utils":16,"../canvg/canvg.js":38,"../codegen":41,"../dom":43,"../skins":117,"../templates/page.html":137,"./api":44,"./controls.html":46,"./levels":58,"./visualization.html":60}],60:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -340,7 +340,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":176}],56:[function(require,module,exports){
+},{"ejs":178}],58:[function(require,module,exports){
 var msg = require('../../locale/current/eval');
 var blockUtils = require('../block_utils');
 
@@ -408,7 +408,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/current/eval":161,"../block_utils":16}],44:[function(require,module,exports){
+},{"../../locale/current/eval":163,"../block_utils":16}],46:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -431,7 +431,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":160,"../../locale/current/eval":161,"ejs":176}],43:[function(require,module,exports){
+},{"../../locale/current/common":162,"../../locale/current/eval":163,"ejs":178}],45:[function(require,module,exports){
 /**
  * Blockly Demo: Eval Graphics
  *
@@ -729,9 +729,9 @@ function installFunctionalBlock (blockly, generator, gensym, options) {
   };
 }
 
-},{"../../locale/current/common":160,"../../locale/current/eval":161,"../functionalBlockUtils":70,"../sharedFunctionalBlocks":114,"./evalUtils":55}],161:[function(require,module,exports){
+},{"../../locale/current/common":162,"../../locale/current/eval":163,"../functionalBlockUtils":72,"../sharedFunctionalBlocks":116,"./evalUtils":57}],163:[function(require,module,exports){
 /*eval*/ module.exports = window.blockly.appLocale;
-},{}],42:[function(require,module,exports){
+},{}],44:[function(require,module,exports){
 var evalUtils = require('./evalUtils');
 var EvalImage = require('./evalImage');
 var EvalText = require('./evalText');
@@ -852,7 +852,7 @@ exports.stringLength = function (str) {
   return str.length;
 };
 
-},{"./evalCircle":46,"./evalEllipse":47,"./evalImage":48,"./evalMulti":49,"./evalPolygon":50,"./evalRect":51,"./evalStar":52,"./evalText":53,"./evalTriangle":54,"./evalUtils":55}],54:[function(require,module,exports){
+},{"./evalCircle":48,"./evalEllipse":49,"./evalImage":50,"./evalMulti":51,"./evalPolygon":52,"./evalRect":53,"./evalStar":54,"./evalText":55,"./evalTriangle":56,"./evalUtils":57}],56:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -903,7 +903,7 @@ EvalTriangle.prototype.draw = function (parent) {
   EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalImage":48,"./evalUtils":55}],53:[function(require,module,exports){
+},{"./evalImage":50,"./evalUtils":57}],55:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -938,7 +938,7 @@ EvalText.prototype.draw = function (parent) {
   EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalImage":48,"./evalUtils":55}],52:[function(require,module,exports){
+},{"./evalImage":50,"./evalUtils":57}],54:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -985,7 +985,7 @@ EvalStar.prototype.draw = function (parent) {
   EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalImage":48,"./evalUtils":55}],51:[function(require,module,exports){
+},{"./evalImage":50,"./evalUtils":57}],53:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -1020,7 +1020,7 @@ EvalRect.prototype.draw = function (parent) {
   EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalImage":48,"./evalUtils":55}],50:[function(require,module,exports){
+},{"./evalImage":50,"./evalUtils":57}],52:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -1059,7 +1059,7 @@ EvalPolygon.prototype.draw = function (parent) {
   EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalImage":48,"./evalUtils":55}],49:[function(require,module,exports){
+},{"./evalImage":50,"./evalUtils":57}],51:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -1102,7 +1102,7 @@ EvalMulti.prototype.draw = function (parent) {
   EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalImage":48,"./evalUtils":55}],47:[function(require,module,exports){
+},{"./evalImage":50,"./evalUtils":57}],49:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -1135,7 +1135,7 @@ EvalCircle.prototype.draw = function (parent) {
   EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalImage":48,"./evalUtils":55}],46:[function(require,module,exports){
+},{"./evalImage":50,"./evalUtils":57}],48:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -1170,7 +1170,7 @@ EvalCircle.prototype.rotate = function () {
   // a bitmap.
 };
 
-},{"./evalImage":48,"./evalUtils":55}],48:[function(require,module,exports){
+},{"./evalImage":50,"./evalUtils":57}],50:[function(require,module,exports){
 var evalUtils = require('./evalUtils');
 
 var EvalImage = function (style, color) {
@@ -1231,7 +1231,7 @@ EvalImage.prototype.scale = function (scaleX, scaleY) {
   this.scaleY_ = scaleY;
 };
 
-},{"./evalUtils":55}],55:[function(require,module,exports){
+},{"./evalUtils":57}],57:[function(require,module,exports){
 /**
  * Throws an expection if val is not of the expected type. Type is either a
  * string (like "number" or "string") or an object (Like EvalImage).
@@ -1292,4 +1292,4 @@ module.exports.cartesianToPixel = function (cartesianY) {
   return 400 - cartesianY;
 };
 
-},{}]},{},[57]);
+},{}]},{},[59]);
