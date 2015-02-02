@@ -224,7 +224,6 @@ EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
 /**
  * Given a Blockly block, generates an Equation.
  */
-// TODO (brent) - needs unit tests
 function getEquationFromBlock(block) {
   var name;
   if (!block) {

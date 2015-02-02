@@ -1,3 +1,5 @@
+// TODO (brent) - many of these could be in test only code
+
 var xml = require('./xml');
 
 exports.createToolbox = function(blocks) {
@@ -174,6 +176,8 @@ exports.calcBlockXml = function (type, args) {
     if (typeof(arg) === "number") {
       arg = '<block type="functional_math_number"><title name="NUM">' + arg +
         '</title></block>';
+    } else {
+      arg = exports.calcBlockGetVar(arg);
     }
     str += arg;
     str += '</functional_input>';
@@ -181,6 +185,20 @@ exports.calcBlockXml = function (type, args) {
   str += '</block>';
 
   return str;
+};
+
+/**
+ * @returns the xml for a functional_parameters_get block with the given
+ *   variableName
+ */
+exports.calcBlockGetVar = function (variableName) {
+  return '' +
+    '<block type="functional_parameters_get" uservisible="false">' +
+    '  <mutation>' +
+    '    <outputtype>Number</outputtype>' +
+    '  </mutation>' +
+    '  <title name="VAR">' + variableName + '</title>' +
+    '</block>';
 };
 
 exports.mathBlockXml = function (type, inputs, titles) {
