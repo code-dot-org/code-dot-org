@@ -1166,11 +1166,16 @@ a.download-video {
   background-color:#ddd;
   height:100px;
   .heading {
-    -moz-box-sizing:border-box; box-sizing:border-box; padding: 10px 0px 10px 0px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px 0px 10px 0px;
   }
   h3 {
     margin: 0;
-    color:rgb(88, 103, 113);
+    color: rgb(88, 103, 113);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .smalltext {
     font-size:13px;
