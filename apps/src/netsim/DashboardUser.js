@@ -33,7 +33,8 @@
 /* global $ */
 'use strict';
 
-// TODO (bbuchanan): Convert this whole file to use standard Promise/Deferred code
+// TODO (bbuchanan): This whole file should go away when we have a shared
+//                   Javascript User object that can be available on page load.
 
 /**
  * Represents a Dashboard user account - could be a teacher, a student, etc.

@@ -244,7 +244,6 @@ NetSimConnection.prototype.setConnectionStatus_ = function (newStatus, lobbyRowI
   switch (newStatus) {
     case ConnectionStatus.CONNECTED:
         this.myLobbyRowID_ = lobbyRowID;
-        // TODO (bbuchanan) : How do we get a reasonable nextKeepAliveTime?
         this.nextKeepAliveTime_ = 0;
         this.logger_.log("Connected to instance, assigned ID " +
             this.myLobbyRowID_, LogLevel.INFO);
@@ -302,7 +301,8 @@ NetSimConnection.prototype.tick = function (clock) {
   if (clock.time >= this.nextKeepAliveTime_) {
     this.keepAlive();
 
-    // TODO (bbuchanan): Need a better policy for when to do this
+    // TODO (bbuchanan): Need a better policy for when to do this.  Or, we
+    //                   might not need to once we have auto-expiring rows.
     this.cleanLobby_();
 
     if (this.nextKeepAliveTime_ === 0) {

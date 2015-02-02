@@ -157,7 +157,6 @@ NetSim.prototype.init = function(config) {
   // Create netsim lobby widget in page
   this.currentUser_.whenReady(function () {
     // Do a deferred initialization of the connection object.
-    // TODO: Use promises for this!
     // TODO (bbuchanan) : Appending random number to user name only for debugging.
     var userName = this.currentUser_.name + '_' + (Math.floor(Math.random() * 99) + 1);
     this.connection_ = new NetSimConnection(userName, this.logger_);
