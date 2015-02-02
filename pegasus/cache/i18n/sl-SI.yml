@@ -288,6 +288,7 @@
     z gumbi <b>Dodaj učenca</b> in <b>Dodaj več učencev</b> zgoraj.
   dashboard_students_placeholder_name: Ime učenca
   dashboard_students_name: Ime
+  dashboard_students_progress: Progress
   dashboard_students_age: Starost
   dashboard_students_gender: Spol
   dashboard_students_male: Moški
@@ -344,6 +345,10 @@
   dashboard_login_picture: Slika
   dashboard_login_none: Elektronska pošta
   dashboard_new_password: Novo geslo
+  dashboard_progress_not_completed: ni dokončano
+  dashboard_progress_completed_too_many_blocks: dokončano, imate preveč blokov
+  dashboard_progress_completed_perfect: dokončano, odlično
+  dashboard_progress_furthest_level_attempted: poskusili ste najvišji nivo
   stats_hoc_2013_heading: 'Neverjetne statistike iz lanskoletne Ure za kodo. Samo
     v enem tednu:'
   stats_hoc_2013_image_alt: Statistika Ure za kodo 2013
@@ -1016,8 +1021,3 @@
   sphero_beyond_longdescription: Ne glede na to ali ste vzgojitelj ali starš, SPRK
     lekcije dajejo otrokom zabaven uvod v programiranje robotov in hkrati ostrijo
     njihove spretnosti v matematiki in znanosti.
-  dashboard_students_progress: Progress
-  dashboard_progress_not_completed: not completed
-  dashboard_progress_completed_too_many_blocks: completed, too many blocks
-  dashboard_progress_completed_perfect: completed, perfect
-  dashboard_progress_furthest_level_attempted: furthest level attempted

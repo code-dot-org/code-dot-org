@@ -198,6 +198,9 @@ a.level_link:link, a.level_link:visited, a.level_link:hover, a.level_link:active
 }
 .miniblock h3 {
   margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .miniblock .smallwhitetext {
   color: white;

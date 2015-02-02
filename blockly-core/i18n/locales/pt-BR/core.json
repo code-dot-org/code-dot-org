@@ -1,5 +1,5 @@
 {
-  "ACTUAL": "real",
+  "ACTUAL": "chamar",
   "ADD": "Adicionar",
   "ADD_COMMENT": "Adicionar comentário",
   "ADD_PARAMETER": "Adicionar parâmetro",
@@ -73,7 +73,7 @@
   "EXAMPLE_DESCRIPTION": "Define um exemplo com o comportamento esperado e real",
   "EXPAND_ALL": "Expanda os Blocos",
   "EXPAND_BLOCK": "Expanda o Bloco",
-  "EXPECTED": "esperado",
+  "EXPECTED": "resultado",
   "EXTERNAL_INPUTS": "Entradas Externas",
   "FUNCTION_CREATE": "Criar uma função",
   "FUNCTION_EDIT": "editar",
