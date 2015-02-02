@@ -131,8 +131,8 @@ RunLoop.prototype.buildTickMethod_ = function () {
       if (self.enabled) {
         self.clock.deltaTime = hiResTimeStamp - self.clock.time;
         self.clock.time = hiResTimeStamp;
-        self.tick.notify(self.clock);
-        self.render.notify(self.clock);
+        self.tick.notifyObservers(self.clock);
+        self.render.notifyObservers(self.clock);
         requestAnimationFrame(tickMethod);
       }
     };
@@ -142,8 +142,8 @@ RunLoop.prototype.buildTickMethod_ = function () {
         var curTime = windowNow();
         self.clock.deltaTime = curTime - self.clock.time;
         self.clock.time = curTime;
-        self.tick.notify(self.clock);
-        self.render.notify(self.clock);
+        self.tick.notifyObservers(self.clock);
+        self.render.notifyObservers(self.clock);
         setTimeout(tickMethod, FALLBACK_MS_PER_TICK - self.clock.deltaTime);
       }
     };
