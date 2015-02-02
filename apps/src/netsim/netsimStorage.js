@@ -102,7 +102,6 @@ SharedStorageTable.prototype.fetch = function (id, callback) {
  * @param {Object} value - Row content
  * @param callback - Takes data as argument, undefined if request fails
  *   Data will be inserted row with row ID
- *   TODO (bbuchanan) verify above statement
  */
 SharedStorageTable.prototype.insert = function (value, callback) {
   $.ajax({

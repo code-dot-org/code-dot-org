@@ -78,7 +78,6 @@ module.exports = NetSimLobby;
 NetSimLobby.createWithin = function (element, connection) {
   // Create a new NetSimLobby
   var controller = new NetSimLobby(connection);
-  // TODO: Figure out what parameters to pass here
   element.innerHTML = markup({});
   controller.initialize();
   return controller;
@@ -98,10 +97,8 @@ NetSimLobby.prototype.initialize = function () {
  * Also attach method handlers.
  */
 NetSimLobby.prototype.bindElements_ = function () {
-  // TODO (bbuchanan) :Just use jquery for this :/
   this.instanceSelector_ = document.getElementById('netsim_instance_select');
-  this.instanceSelector_.addEventListener('change',
-      this.onInstanceSelectorChange_.bind(this));
+  $(this.instanceSelector_).change(this.onInstanceSelectorChange_.bind(this));
 
   this.lobbyList_ = document.getElementById('netsim_lobby_list');
 };
@@ -125,37 +122,36 @@ NetSimLobby.prototype.onInstanceSelectorChange_ = function () {
  * reload and populate the user sections list.
  */
 NetSimLobby.prototype.refreshInstanceList_ = function () {
-  var option;
   var self = this;
+  // TODO (bbuchanan) : Use unique level ID when generating instance ID
+  var levelID = 'demo';
   var instanceSelector = this.instanceSelector_;
   this.getUserSections_(function (data) {
     $(instanceSelector).empty();
 
-    // TODO (bbuchanan) : Just use jquery.
     if (0 === data.length){
       // If we didn't get any sections, we must deny access
-      option = document.createElement('option');
-      option.value = '__none';
-      option.textContent = '-- NONE FOUND --';
-      instanceSelector.appendChild(option);
+      $('<option>')
+          .val('__none')
+          .html('-- NONE FOUND --')
+          .appendTo(instanceSelector);
       return;
-    } else {// if (data.length > 1) {
+    } else {
       // If we have more than one section, require the user
       // to pick one.
-      option = document.createElement('option');
-      option.value = '__none';
-      option.textContent = '-- PICK ONE --';
-      instanceSelector.appendChild(option);
+      $('<option>')
+          .val('__none')
+          .html('-- PICK ONE --')
+          .appendTo(instanceSelector);
     }
 
     // Add all instances to the dropdown
     data.forEach(function (section) {
-      option = document.createElement('option');
-      // TODO (bbuchanan) : Use unique level ID when generating instance ID
-      option.value = 'netsim_demo_' + section.id;
       // TODO (bbuchanan) : Put teacher names in sections
-      option.textContent = section.name;
-      instanceSelector.appendChild(option);
+      $('<option>')
+          .val('netsim_' + levelID + '_' + section.id)
+          .html(section.name)
+          .appendTo(instanceSelector);
     });
 
     self.onInstanceSelectorChange_();
@@ -184,20 +180,19 @@ NetSimLobby.prototype.refreshLobby_ = function () {
     });
 
     // TODO (bbuchanan): This should eventually generate an interactive list
-    // TODO (bbuchanan) : Just use Jquery?
     lobbyData.forEach(function (connection) {
-      var item = document.createElement('li');
+      var item = $('<li>');
       if (connection.id === self.connection_.myLobbyRowID_) {
-        item.classList.add('netsim_lobby_own_row');
-        item.innerHTML = connection.name + ' : ' + connection.status + ' : Me';
+        item.addClass('netsim_lobby_own_row');
+        item.html(connection.name + ' : ' + connection.status + ' : Me');
       } else {
-        item.classList.add('netsim_lobby_user_row');
-        var anchor = document.createElement('a');
-        anchor.href = '#';
-        anchor.innerHTML = connection.name + ' : ' + connection.status;
-        item.appendChild(anchor);
+        item.addClass('netsim_lobby_user_row');
+        $('<a>')
+            .attr('href', '#')
+            .html(connection.name + ' : ' + connection.status)
+            .appendTo(item);
       }
-      lobbyList.appendChild(item);
+      item.appendTo(lobbyList);
     });
 
     if (self.nextAutoRefreshTime_ === Infinity) {
