@@ -188,10 +188,11 @@ function displayGoal() {
   }
 
   // If we have a single function, just show the evaluation
-  // (i.e. compute expression). Otherwise should all equations.
+  // (i.e. compute expression). Otherwise show all equations.
   var tokenList;
   var nextRow = 0;
-  if (!appState.targetSet.hasSingleFunction()) {
+  var hasSingleFunction = appState.targetSet.hasSingleFunction();
+  if (!hasSingleFunction) {
     var sortedEquations = appState.targetSet.sortedEquations();
     sortedEquations.forEach(function (equation) {
       tokenList = equation.expression.getTokenList(false);
@@ -202,7 +203,9 @@ function displayGoal() {
   tokenList = computeEquation.expression.getTokenList(false);
   var result = appState.targetSet.evaluate();
 
-  tokenList = tokenList.concat(getTokenList(' = ' + result.toString()));
+  if (hasSingleFunction) {
+    tokenList = tokenList.concat(getTokenList(' = ' + result.toString()));
+  }
   displayEquation('answerExpression', computeEquation.name, tokenList, nextRow);
 }
 
@@ -306,7 +309,7 @@ Calc.evaluateFunction_ = function (targetSet, userSet) {
 
     if (targetSet.evaluateWithExpression(expression) !==
         userSet.evaluateWithExpression(expression)) {
-      outcome.failedInput = values.slice();
+      outcome.failedInput = _.clone(values);
     }
   }
 
