@@ -113,8 +113,8 @@ Blockly.ContractEditor.prototype.create_ = function() {
 
 Blockly.ContractEditor.prototype.hideAndRestoreBlocks_ = function() {
   Blockly.ContractEditor.superClass_.hideAndRestoreBlocks_.call(this);
-  this.exampleBlocks.forEach(function(exampleBlockView) {
-    this.moveToMainBlockSpace_(exampleBlockView.block);
+  this.exampleBlocks.forEach(function(exampleBlock) {
+    this.moveToMainBlockSpace_(exampleBlock);
   }, this);
   goog.array.clear(this.exampleBlocks);
 };
