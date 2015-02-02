@@ -76,8 +76,8 @@
       name: "Untitled",
       createdAt: new Date,
       updatedAt: new Date,
-      levelId = appOptions.levelId; // TODO this is not actually a unique identifier for the level
-      levelUrl = window.location.origin + window.location.pathname; // TODO this is hacky.. we should just have a /project url
+      levelId: appOptions.levelId, // TODO this is not actually a unique identifier for the level
+      levelUrl: window.location.origin + window.location.pathname, // TODO this is hacky.. we should just have a /project url
     }, function(app) {
       if (app) {
         currentApp = app;
