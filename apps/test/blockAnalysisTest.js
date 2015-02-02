@@ -2,7 +2,7 @@ var wrench = require('wrench');
 var testUtils = require('./util/testUtils');
 var assert = testUtils.assert;
 var canvas = require('canvas');
-var BlockStaticAnalyzer = testUtils.requireWithGlobalsCheckBuildFolder('BlockStaticAnalyzer');
+var blockAnalysis = testUtils.requireWithGlobalsCheckBuildFolder('blockAnalysis');
 
 // Some of our tests need to use Image
 global.Image = canvas.Image;
@@ -13,7 +13,6 @@ testUtils.setupLocales();
 describe("runStaticAnalysis", function () {
   var studioApp;
   var TestResults;
-  var blockStaticAnalyzer;
 
   // create our environment
   beforeEach(function () {
@@ -23,7 +22,6 @@ describe("runStaticAnalysis", function () {
 
     studioApp = testUtils.getStudioAppSingleton();
     TestResults = studioApp.TestResults;
-    blockStaticAnalyzer = new BlockStaticAnalyzer(Blockly);
   });
 
   /**
@@ -41,17 +39,16 @@ describe("runStaticAnalysis", function () {
     assert(!args.blockXml || loaded, "either we didnt have  input xml" +
         "or we did, and we loaded something");
 
-    assert.equal(args.result, blockStaticAnalyzer.runStaticAnalysis(true));
+    assert.equal(args.result, blockAnalysis.runStaticAnalysis(Blockly,
+        args, true));
   };
 
   describe("when detecting empty container blocks", function () {
-    beforeEach(function () {
-      blockStaticAnalyzer.setShouldCheckForEmptyBlocks(true);
-      blockStaticAnalyzer.setAllowExtraTopBlocks(true);
-    });
 
     it("returns ALL_PASS when no blocks are present", function () {
       checkResultForBlocks({
+        shouldCheckForEmptyBlocks: true,
+        allowExtraTopBlocks: true,
         result: TestResults.ALL_PASS,
         blockXml: ''
       });
@@ -59,6 +56,8 @@ describe("runStaticAnalysis", function () {
 
     it ("returns ALL_PASS when no container blocks are present", function () {
       checkResultForBlocks({
+        shouldCheckForEmptyBlocks: true,
+        allowExtraTopBlocks: true,
         result: TestResults.ALL_PASS,
         blockXml: '<xml><block type="text_print"></block></xml>'
       });
@@ -66,6 +65,8 @@ describe("runStaticAnalysis", function () {
 
     it ("returns EMPTY_BLOCK_FAIL when an empty contianer block is present", function () {
       checkResultForBlocks({
+        shouldCheckForEmptyBlocks: true,
+        allowExtraTopBlocks: true,
         result: TestResults.EMPTY_BLOCK_FAIL,
         blockXml: '<xml>' +
                     '<block type="controls_repeat">' +
@@ -77,6 +78,8 @@ describe("runStaticAnalysis", function () {
 
     it ("returns ALL_PASS when all container blocks are filled", function () {
       checkResultForBlocks({
+        shouldCheckForEmptyBlocks: true,
+        allowExtraTopBlocks: true,
         result: TestResults.ALL_PASS,
         blockXml: '<xml>' +
                     '<block type="controls_repeat">' +
@@ -91,6 +94,8 @@ describe("runStaticAnalysis", function () {
 
     it ("returns EMPTY_FUNCTION_BLOCK_FAIL when an empty function block is present", function () {
       checkResultForBlocks({
+        shouldCheckForEmptyBlocks: true,
+        allowExtraTopBlocks: true,
         result: TestResults.EMPTY_FUNCTION_BLOCK_FAIL,
         blockXml: '<xml>' +
                     '<block type="procedures_defnoreturn">' +
@@ -103,6 +108,8 @@ describe("runStaticAnalysis", function () {
 
     it ("returns ALL_PASS when all function blocks are filled", function () {
       checkResultForBlocks({
+        shouldCheckForEmptyBlocks: true,
+        allowExtraTopBlocks: true,
         result: TestResults.ALL_PASS,
         blockXml: '<xml>' +
                     '<block type="procedures_defnoreturn">' +
@@ -118,13 +125,11 @@ describe("runStaticAnalysis", function () {
   });
 
   describe("when detecting extra top blocks", function () {
-    beforeEach(function () {
-      blockStaticAnalyzer.setShouldCheckForEmptyBlocks(false);
-      blockStaticAnalyzer.setAllowExtraTopBlocks(false);
-    });
 
     it("returns ALL_PASS when no blocks are present", function () {
       checkResultForBlocks({
+        shouldCheckForEmptyBlocks: false,
+        allowExtraTopBlocks: false,
         result: TestResults.ALL_PASS,
         blockXml: ''
       });
@@ -132,6 +137,8 @@ describe("runStaticAnalysis", function () {
 
     it ("returns ALL_PASS when only a when_run block is present", function () {
       checkResultForBlocks({
+        shouldCheckForEmptyBlocks: false,
+        allowExtraTopBlocks: false,
         result: TestResults.ALL_PASS,
         blockXml: '<xml><block type="when_run"></block></xml>'
       });
@@ -139,6 +146,8 @@ describe("runStaticAnalysis", function () {
 
     it ("returns ALL_PASS when all blocks are connected to when_run", function () {
       checkResultForBlocks({
+        shouldCheckForEmptyBlocks: false,
+        allowExtraTopBlocks: false,
         result: TestResults.ALL_PASS,
         blockXml: '<xml>' +
                     '<block type="when_run">' +
@@ -154,6 +163,8 @@ describe("runStaticAnalysis", function () {
 
     it ("returns EXTRA_TOP_BLOCKS_FAIL when extra top blocks are present", function () {
       checkResultForBlocks({
+        shouldCheckForEmptyBlocks: false,
+        allowExtraTopBlocks: false,
         result: TestResults.EXTRA_TOP_BLOCKS_FAIL,
         blockXml: '<xml>' +
                     '<block type="when_run"></block>' +
@@ -166,6 +177,8 @@ describe("runStaticAnalysis", function () {
 
     it ("returns ALL_PASS when extra top blocks are all entry point blocks", function () {
       checkResultForBlocks({
+        shouldCheckForEmptyBlocks: false,
+        allowExtraTopBlocks: false,
         result: TestResults.ALL_PASS,
         blockXml: '<xml>' +
                     '<block type="when_run"></block>' +
@@ -177,6 +190,8 @@ describe("runStaticAnalysis", function () {
 
     it ("returns ALL_PASS when extra top blocks are function definitions", function () {
       checkResultForBlocks({
+        shouldCheckForEmptyBlocks: false,
+        allowExtraTopBlocks: false,
         result: TestResults.ALL_PASS,
         blockXml: '<xml>' +
                     '<block type="when_run"></block>' +
@@ -190,6 +205,8 @@ describe("runStaticAnalysis", function () {
 
     it ("returns ALL_PASS when extra top blocks are disabled", function () {
       checkResultForBlocks({
+        shouldCheckForEmptyBlocks: false,
+        allowExtraTopBlocks: false,
         result: TestResults.ALL_PASS,
         blockXml: '<xml>' +
                     '<block type="when_run"></block>' +
@@ -268,9 +285,8 @@ describe("getMissingRequiredBlocks tests", function () {
     assert(!options.userBlockXml || loaded, "either we didnt have  input xml" +
       "or we did, and we loaded something");
 
-    var blockStaticAnalyzer = new BlockStaticAnalyzer(Blockly);
-    blockStaticAnalyzer.setRequiredBlocks(options.requiredBlocks);
-    var missing = blockStaticAnalyzer.getMissingRequiredBlocks(options.numToFlag);
+    var missing = blockAnalysis.getMissingRequiredBlocks(Blockly,
+        options.requiredBlocks, options.numToFlag);
     validateMissingRequiredBlocks(missing.blocksToDisplay, options.expectedResult);
   }
 

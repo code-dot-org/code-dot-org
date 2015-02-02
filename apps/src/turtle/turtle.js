@@ -35,7 +35,7 @@ var ArtistAPI = require('./api');
 var page = require('../templates/page.html');
 var utils = require('../utils');
 var Slider = require('../slider');
-var BlockStaticAnalyzer = require('../BlockStaticAnalyzer');
+var blockAnalysis = require('../blockAnalysis');
 var _ = utils.getLodash();
 
 var CANVAS_HEIGHT = 400;
@@ -715,8 +715,7 @@ Artist.prototype.execute = function() {
   this.studioApp_.reset();
 
   if (this.studioApp_.isUsingBlockly()) {
-    var blockStaticAnalyzer = new BlockStaticAnalyzer(Blockly);
-    if (blockStaticAnalyzer.hasExtraTopBlocks()) {
+    if (blockAnalysis.hasExtraTopBlocks(Blockly)) {
       // immediately check answer, which will fail and report top level blocks
       this.checkAnswer();
       return;

@@ -18,49 +18,21 @@ var constants = require('./constants');
 var TestResults = constants.TestResults;
 
 /**
- * @class BlockStaticAnalyzer
- *
- * Answers questions about a user's solution within a particular blockSpace
- *
- * @param {Blockly} blockly The blockly instance being examined
+ * blockAnalysis namespace
+ * Tools that answer questions about the state of a blockly instance, most
+ * frequently about a particular solution.
  */
-var BlockStaticAnalyzer = function (blockly) {
-  this.blockly_ = blockly;
-
-  /**
-   * @member {boolean} Whether the analyzer will check for empty container
-   * blocks
-   */
-  this.isCheckForEmptyBlocksEnabled_ = true;
-
-  /**
-   * @member {boolean} Disables extra top-level block failures during static
-   * analysis check.
-   */
-  this.areExtraTopBlocksAllowed_ = false;
-
-  /**
-   * @member {number} The number of 'countable' blocks used in
-   *   an ideal solution to the current level.
-   */
-  this.idealBlockCount_ = 0;
-
-  /**
-   * @member {!Array} The blocks that are required to be used in
-   *   the solution to this level.
-   */
-  this.requiredBlocks_ = [];
-};
-module.exports = BlockStaticAnalyzer;
+var blockAnalysis = module.exports;
 
 /**
-* Get blocks that the user intends in the program. These are the blocks that
-* are used when checking for required blocks and when determining lines of code
-* written.
-* @return {Array<Object>} The blocks.
-*/
-BlockStaticAnalyzer.prototype.getUserBlocks = function() {
-  var allBlocks = this.blockly_.mainBlockSpace.getAllBlocks();
+ * Get blocks that the user intends in the program. These are the blocks that
+ * are used when checking for required blocks and when determining lines of code
+ * written.
+ * @param {!Blockly} blockly - a Blockly instance
+ * @return {Array<Object>} The blocks.
+ */
+blockAnalysis.getUserBlocks = function(blockly) {
+  var allBlocks = blockly.mainBlockSpace.getAllBlocks();
   var blocks = allBlocks.filter(function(block) {
     return !block.disabled && block.isEditable() && block.type !== 'when_run';
   });
@@ -68,13 +40,14 @@ BlockStaticAnalyzer.prototype.getUserBlocks = function() {
 };
 
 /**
-* Get countable blocks in the program, namely any that are not disabled.
-* These are used when determined the number of blocks relative to the ideal
-* block count.
-* @return {Array<Object>} The blocks.
-*/
-BlockStaticAnalyzer.prototype.getCountableBlocks = function() {
-  var allBlocks = this.blockly_.mainBlockSpace.getAllBlocks();
+ * Get countable blocks in the program, namely any that are not disabled.
+ * These are used when determined the number of blocks relative to the ideal
+ * block count.
+ * @param {!Blockly} blockly - a Blockly instance
+ * @return {Array<Object>} The blocks.
+ */
+blockAnalysis.getCountableBlocks = function(blockly) {
+  var allBlocks = blockly.mainBlockSpace.getAllBlocks();
   var blocks = allBlocks.filter(function(block) {
     return !block.disabled;
   });
@@ -82,16 +55,17 @@ BlockStaticAnalyzer.prototype.getCountableBlocks = function() {
 };
 
 /**
-* Get an empty container block, if any are present.
-* @return {Blockly.Block} an empty container block, or null if none exist.
-*/
-BlockStaticAnalyzer.prototype.getEmptyContainerBlock_ = function() {
-  var blocks = this.blockly_.mainBlockSpace.getAllBlocks();
+ * Get an empty container block, if any are present.
+ * @param {!Blockly} blockly - a Blockly instance
+ * @return {Blockly.Block} an empty container block, or null if none exist.
+ */
+blockAnalysis.getEmptyContainerBlock_ = function(blockly) {
+  var blocks = blockly.mainBlockSpace.getAllBlocks();
   for (var i = 0; i < blocks.length; i++) {
     var block = blocks[i];
     for (var j = 0; j < block.inputList.length; j++) {
       var input = block.inputList[j];
-      if (input.type == this.blockly_.NEXT_STATEMENT &&
+      if (input.type == blockly.NEXT_STATEMENT &&
           !input.connection.targetConnection) {
         return block;
       }
@@ -103,10 +77,11 @@ BlockStaticAnalyzer.prototype.getEmptyContainerBlock_ = function() {
 /**
  * Do we have any floating blocks not attached to an event block or
  * function block?
+ * @param {!Blockly} blockly - a Blockly instance
  * @return {boolean}
  */
-BlockStaticAnalyzer.prototype.hasExtraTopBlocks = function () {
-  var topBlocks = this.blockly_.mainBlockSpace.getTopBlocks();
+blockAnalysis.hasExtraTopBlocks = function (blockly) {
+  var topBlocks = blockly.mainBlockSpace.getTopBlocks();
   for (var i = 0; i < topBlocks.length; i++) {
     // ignore disabled top blocks. we have a level turtle:2_7 that depends on
     // having disabled top level blocks
@@ -127,10 +102,11 @@ BlockStaticAnalyzer.prototype.hasExtraTopBlocks = function () {
 
 /**
  * Check for '???' instead of a value in block fields.
+ * @param {!Blockly} blockly - a Blockly instance
  * @return {boolean}
  */
-BlockStaticAnalyzer.prototype.hasQuestionMarksInNumberField_ = function () {
-  return this.blockly_.mainBlockSpace.getAllBlocks().some(function(block) {
+blockAnalysis.hasQuestionMarksInNumberField_ = function (blockly) {
+  return blockly.mainBlockSpace.getAllBlocks().some(function(block) {
     return block.getTitles().some(function(title) {
       return title.text_ === '???';
     });
@@ -140,15 +116,16 @@ BlockStaticAnalyzer.prototype.hasQuestionMarksInNumberField_ = function () {
 /**
  * Ensure that all procedure definitions actually use the parameters they define
  * inside the procedure.
+ * @param {!Blockly} blockly - a Blockly instance
  * @return {boolean}
  */
-BlockStaticAnalyzer.prototype.hasUnusedParam_ = function () {
-  return this.blockly_.mainBlockSpace.getAllBlocks().some(function(userBlock) {
+blockAnalysis.hasUnusedParam_ = function (blockly) {
+  return blockly.mainBlockSpace.getAllBlocks().some(function(userBlock) {
     var params = userBlock.parameterNames_;
     // Only search procedure definitions
     return params && params.some(function(paramName) {
       // Unused param if there's no parameters_get descendant with the same name
-      return !BlockStaticAnalyzer.hasMatchingDescendant_(userBlock, function(block) {
+      return !blockAnalysis.hasMatchingDescendant_(userBlock, function(block) {
         return (block.type === 'parameters_get' ||
         block.type === 'functional_parameters_get' ||
         block.type === 'variables_get') &&
@@ -160,10 +137,11 @@ BlockStaticAnalyzer.prototype.hasUnusedParam_ = function () {
 
 /**
  * Ensure that all procedure calls have each parameter input connected.
+ * @param {!Blockly} blockly - a Blockly instance
  * @return {boolean}
  */
-BlockStaticAnalyzer.prototype.hasParamInputUnattached_ = function () {
-  return this.blockly_.mainBlockSpace.getAllBlocks().some(function(userBlock) {
+blockAnalysis.hasParamInputUnattached_ = function (blockly) {
+  return blockly.mainBlockSpace.getAllBlocks().some(function(userBlock) {
     // Only check procedure_call* blocks
     if (!/^procedures_call/.test(userBlock.type)) {
       return false;
@@ -179,12 +157,13 @@ BlockStaticAnalyzer.prototype.hasParamInputUnattached_ = function () {
 
 /**
  * Ensure that all user-declared procedures have associated call blocks.
+ * @param {!Blockly} blockly - a Blockly instance
  * @return {boolean}
  */
-BlockStaticAnalyzer.prototype.hasUnusedFunction_ = function () {
+blockAnalysis.hasUnusedFunction_ = function (blockly) {
   var userDefs = [];
   var callBlocks = {};
-  this.blockly_.mainBlockSpace.getAllBlocks().forEach(function (block) {
+  blockly.mainBlockSpace.getAllBlocks().forEach(function (block) {
     var name = block.getTitleValue('NAME');
     if (/^procedures_def/.test(block.type) && block.userCreated) {
       userDefs.push(name);
@@ -198,19 +177,19 @@ BlockStaticAnalyzer.prototype.hasUnusedFunction_ = function () {
 
 /**
  * Ensure there are no incomplete blocks inside any function definitions.
+ * @param {!Blockly} blockly - a Blockly instance
  * @return {boolean}
  */
-BlockStaticAnalyzer.prototype.hasIncompleteBlockInFunction_ = function () {
-  var self = this;
-  return this.blockly_.mainBlockSpace.getAllBlocks().some(function(userBlock) {
+blockAnalysis.hasIncompleteBlockInFunction_ = function (blockly) {
+  return blockly.mainBlockSpace.getAllBlocks().some(function(userBlock) {
     // Only search procedure definitions
     if (!userBlock.parameterNames_) {
       return false;
     }
-    return BlockStaticAnalyzer.hasMatchingDescendant_(userBlock, function(block) {
+    return blockAnalysis.hasMatchingDescendant_(userBlock, function(block) {
       // Incomplete block if any input connection target is null
       return block.inputList.some(function(input) {
-        return input.type === self.blockly_.INPUT_VALUE &&
+        return input.type === blockly.INPUT_VALUE &&
         !input.connection.targetConnection;
       });
     });
@@ -228,19 +207,21 @@ BlockStaticAnalyzer.prototype.hasIncompleteBlockInFunction_ = function () {
  * @param {!Blockly.Block} node
  * @param {blockPredicate} filter
  * @return {boolean}
- * @static
  */
-BlockStaticAnalyzer.hasMatchingDescendant_ = function (node, filter) {
+blockAnalysis.hasMatchingDescendant_ = function (node, filter) {
   if (filter(node)) {
     return true;
   }
   return node.childBlocks_.some(function (child) {
-    return BlockStaticAnalyzer.hasMatchingDescendant_(child, filter);
+    return blockAnalysis.hasMatchingDescendant_(child, filter);
   });
 };
 
 /**
  * Check to see if the user's code contains the required blocks for a level.
+ * @param {!Blockly.Block} node
+ * @param {Array} requiredBlocks - The blocks that are required to
+ *   be used in the solution to this level.
  * @param {number} maxBlocksToFlag The maximum number of blocks to return.
  * @return {{blocksToDisplay:!Array, message:?string}} 'missingBlocks' is an
  *   array of array of strings where each array of strings is a set of blocks
@@ -248,19 +229,20 @@ BlockStaticAnalyzer.hasMatchingDescendant_ = function (node, filter) {
  *   prefix of an id in the corresponding template.soy. 'message' is an
  *   optional message to override the default error text.
  */
-BlockStaticAnalyzer.prototype.getMissingRequiredBlocks = function (maxBlocksToFlag) {
+blockAnalysis.getMissingRequiredBlocks = function (blockly,
+    requiredBlocks, maxBlocksToFlag) {
   var missingBlocks = [];
   var customMessage = null;
   var code = null;  // JavaScript code, which is initialized lazily.
-  if (this.requiredBlocks_.length) {
-    var userBlocks = this.getUserBlocks();
+  if (requiredBlocks.length) {
+    var userBlocks = blockAnalysis.getUserBlocks(blockly);
     // For each list of required blocks
     // Keep track of the number of the missing block lists. It should not be
     // bigger than the maxBlocksToFlag param.
     var missingBlockNum = 0;
-    for (var i = 0; i < this.requiredBlocks_.length &&
+    for (var i = 0; i < requiredBlocks.length &&
         missingBlockNum < maxBlocksToFlag; i++) {
-      var requiredBlock = this.requiredBlocks_[i];
+      var requiredBlock = requiredBlocks[i];
       // For each of the test
       // If at least one of the tests succeeded, we consider the required block
       // is used
@@ -268,7 +250,7 @@ BlockStaticAnalyzer.prototype.getMissingRequiredBlocks = function (maxBlocksToFl
       for (var testId = 0; testId < requiredBlock.length; testId++) {
         var test = requiredBlock[testId].test;
         if (typeof test === 'string') {
-          code = code || this.blockly_.Generator.blockSpaceToCode('JavaScript');
+          code = code || blockly.Generator.blockSpaceToCode('JavaScript');
           if (code.indexOf(test) !== -1) {
             // Succeeded, moving to the next list of tests
             usedRequiredBlock = true;
@@ -288,7 +270,7 @@ BlockStaticAnalyzer.prototype.getMissingRequiredBlocks = function (maxBlocksToFl
       }
       if (!usedRequiredBlock) {
         missingBlockNum++;
-        missingBlocks = missingBlocks.concat(this.requiredBlocks_[i][0]);
+        missingBlocks = missingBlocks.concat(requiredBlocks[i][0]);
       }
     }
   }
@@ -300,61 +282,95 @@ BlockStaticAnalyzer.prototype.getMissingRequiredBlocks = function (maxBlocksToFl
 
 /**
  * Check whether the user code has all the blocks required for the level.
+ * @param {!Blockly.Block} node
+ * @param {Array} requiredBlocks - The blocks that are required to
+ *   be used in the solution to this level.
  * @return {boolean} true if all blocks are present, false otherwise.
  */
-BlockStaticAnalyzer.prototype.hasAllRequiredBlocks_ = function() {
+blockAnalysis.hasAllRequiredBlocks_ = function(blockly, requiredBlocks) {
   // It's okay (maybe faster) to pass 1 for maxBlocksToFlag, since in the end
   // we want to check that there are zero blocks missing.
   var maxBlocksToFlag = 1;
-  var missingBlocksInfo = this.getMissingRequiredBlocks(maxBlocksToFlag);
+  var missingBlocksInfo = blockAnalysis.getMissingRequiredBlocks(
+      blockly, requiredBlocks, maxBlocksToFlag);
   return missingBlocksInfo.blocksToDisplay.length === 0;
 };
 
 /**
- * Enables empty block failures during static analysis check.
+ * @param {Object} options - Set the following parameters:
+ *        shouldCheckForEmptyBlocks (boolean, default true) - Enables empty
+ *          block failures during static analysis check.
+ *        allowExtraTopBlocks (boolean, default false) - Disables extra
+ *          top-level block failures during static analysis check.
+ *        idealBlockCount (number, default 0) - The number of 'countable'
+ *          blocks used in an ideal solution to the current level.
+ *        requiredBlocks (Array, default []) - The blocks that are required to
+ *          be used in the solution to this level.
+ * @returns {Object} options object with defaults populated
  */
-BlockStaticAnalyzer.prototype.setShouldCheckForEmptyBlocks = function (isCheckEnabled) {
-  this.isCheckForEmptyBlocksEnabled_ = isCheckEnabled;
-};
-
-/**
- * Disables extra top-level block failures during static analysis check.
- */
-BlockStaticAnalyzer.prototype.setAllowExtraTopBlocks = function (areExtrasAllowed) {
-  this.areExtraTopBlocksAllowed_ = areExtrasAllowed;
-};
-
-/**
- * @param {number} idealBlockCount - The number of 'countable' blocks used in
- *   an ideal solution to the current level.
- */
-BlockStaticAnalyzer.prototype.setIdealBlockCount = function (idealBlockCount) {
-  this.idealBlockCount_ = idealBlockCount;
-};
-
-/**
- * @param {!Array} requiredBlocks The blocks that are required to be used in
- *   the solution to this level.
- */
-BlockStaticAnalyzer.prototype.setRequiredBlocks = function (requiredBlocks) {
-  if (requiredBlocks && Array === requiredBlocks.constructor) {
-    this.requiredBlocks_ = requiredBlocks;
-  } else {
-    throw new Error("setRequiredBlocks only accepts Array arguments.");
+blockAnalysis.applyDefaultOptions_ = function (options) {
+  if (options === undefined) {
+    options = {};
   }
+
+  /**
+   * {boolean} Whether the analyzer will check for empty container blocks
+   */
+  options.shouldCheckForEmptyBlocks =
+      (options.shouldCheckForEmptyBlocks !== undefined) ?
+          options.shouldCheckForEmptyBlocks : true;
+
+  /**
+   * {boolean} Disables extra top-level block failures during static
+   *   analysis check.
+   */
+  options.allowExtraTopBlocks =
+      (options.allowExtraTopBlocks !== undefined) ?
+          options.allowExtraTopBlocks : false;
+
+  /**
+   * {number} The number of 'countable' blocks used in
+   *   an ideal solution to the current level.
+   */
+  options.idealBlockCount =
+      (options.idealBlockCount !== undefined) ?
+          options.idealBlockCount : 0;
+
+  /**
+   * {!Array} The blocks that are required to be used in
+   *   the solution to this level.
+   */
+  options.requiredBlocks =
+      (options.requiredBlocks !== undefined) ?
+          options.requiredBlocks : [];
+
+  return options;
 };
 
 /**
+ * @param {Blockly} blockly The blockly instance being examined
+ * @param {Object} options - Set the following parameters:
+ *        shouldCheckForEmptyBlocks (boolean, default true) - Enables empty
+ *          block failures during static analysis check.
+ *        allowExtraTopBlocks (boolean, default false) - Disables extra
+ *          top-level block failures during static analysis check.
+ *        idealBlockCount (number, default 0) - The number of 'countable'
+ *          blocks used in an ideal solution to the current level.
+ *        requiredBlocks (Array, default []) - The blocks that are required to
+ *          be used in the solution to this level.
  * @param {boolean} isLevelComplete - Whether the level's basic success/fail
  *   condition has been met, regardless of the exact solution.
  * @return {number} The appropriate TestResults error code, or ALL_PASS if
  *   no static analysis errors are found.
  */
-BlockStaticAnalyzer.prototype.runStaticAnalysis = function (isLevelComplete) {
+blockAnalysis.runStaticAnalysis = function (blockly, options,
+    isLevelComplete) {
+  options = blockAnalysis.applyDefaultOptions_(options);
+
   // TODO (bbuchanan) : There should be tests around every one of these
   //   failure types!
-  if (this.isCheckForEmptyBlocksEnabled_) {
-    var emptyBlock = this.getEmptyContainerBlock_();
+  if (options.shouldCheckForEmptyBlocks) {
+    var emptyBlock = blockAnalysis.getEmptyContainerBlock_(blockly);
     if (emptyBlock) {
       var type = emptyBlock.type;
       if (type === 'procedures_defnoreturn' ||
@@ -369,42 +385,44 @@ BlockStaticAnalyzer.prototype.runStaticAnalysis = function (isLevelComplete) {
     }
   }
 
-  if (!this.areExtraTopBlocksAllowed_ && this.hasExtraTopBlocks()) {
+  if (!options.allowExtraTopBlocks &&
+      blockAnalysis.hasExtraTopBlocks(blockly)) {
     return TestResults.EXTRA_TOP_BLOCKS_FAIL;
   }
 
-  if (this.blockly_.useContractEditor || this.blockly_.useModalFunctionEditor) {
-    if (this.hasUnusedParam_()) {
+  if (blockly.useContractEditor || blockly.useModalFunctionEditor) {
+    if (blockAnalysis.hasUnusedParam_(blockly)) {
       return TestResults.UNUSED_PARAM;
-    } else if (this.hasUnusedFunction_()) {
+    } else if (blockAnalysis.hasUnusedFunction_(blockly)) {
       return TestResults.UNUSED_FUNCTION;
-    } else if (this.hasParamInputUnattached_()) {
+    } else if (blockAnalysis.hasParamInputUnattached_(blockly)) {
       return TestResults.PARAM_INPUT_UNATTACHED;
-    } else if (this.hasIncompleteBlockInFunction_()) {
+    } else if (blockAnalysis.hasIncompleteBlockInFunction_(blockly)) {
       return TestResults.INCOMPLETE_BLOCK_IN_FUNCTION;
     }
   }
 
-  if (this.hasQuestionMarksInNumberField_()) {
+  if (blockAnalysis.hasQuestionMarksInNumberField_(blockly)) {
     return TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
   }
 
-  if (!this.hasAllRequiredBlocks_()) {
+  if (!blockAnalysis.hasAllRequiredBlocks_(blockly,
+          options.requiredBlocks)) {
     return isLevelComplete ?
         TestResults.MISSING_BLOCK_FINISHED :
         TestResults.MISSING_BLOCK_UNFINISHED;
   }
 
-  var numEnabledBlocks = this.getCountableBlocks().length;
+  var numEnabledBlocks = blockAnalysis.getCountableBlocks(blockly).length;
   if (!isLevelComplete) {
-    if (this.idealBlockCount_ && this.idealBlockCount_ !== Infinity &&
-        numEnabledBlocks < this.idealBlockCount_) {
+    if (options.idealBlockCount && options.idealBlockCount !== Infinity &&
+        numEnabledBlocks < options.idealBlockCount) {
       return TestResults.TOO_FEW_BLOCKS_FAIL;
     }
     return TestResults.LEVEL_INCOMPLETE_FAIL;
   }
 
-  if (this.idealBlockCount_ && numEnabledBlocks > this.idealBlockCount_) {
+  if (options.idealBlockCount && numEnabledBlocks > options.idealBlockCount) {
     return TestResults.TOO_MANY_BLOCKS_FAIL;
   }
 
