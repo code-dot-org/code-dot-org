@@ -8,7 +8,7 @@ var ExpressionNode = require('./expressionNode');
  *   equation: x + 1
  * In many cases, this will just be an expression with no name.
  */
-var Equation = function (name, expression, variables) {
+var Equation = function (name, expression) {
   this.name = name;
   this.expression = expression;
 };
@@ -166,7 +166,9 @@ EquationSet.prototype.evaluate = function () {
 
 /**
  * Evaluate the given compute expression in the context of the EquationSet's
- * equations
+ * equations. For example, our equation set might define f(x) = x + 1, and this
+ * allows us to evaluate the expression f(1) or f(2)...
+ * @param {ExpressionNode} computeExpression The expression to evaluate
  */
 EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
   // (1) no variables/functions. this is easy
