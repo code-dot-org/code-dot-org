@@ -1,4 +1,4 @@
-var assert = require('chai').assert
+var assert = require('chai').assert;
 var path = require('path');
 var fs = require('fs');
 var jsdomRoot = require('jsdom');

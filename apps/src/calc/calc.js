@@ -338,9 +338,13 @@ Calc.evaluateResults_ = function (targetSet, userSet) {
       targetSet.hasVariablesOrFunctions()) {
     // We have multiple expressions. Either our set of expressions are equal,
     // or they're not.
-    identical = targetSet.isIdenticalTo(userSet);
-    outcome.result = identical ? ResultType.SUCCESS : ResultType.FAILURE;
-    outcome.testResults = TestResults.LEVEL_INCOMPLETE_FAIL;
+    if (targetSet.isIdenticalTo(userSet)) {
+      outcome.result = ResultType.SUCCESS;
+      outcome.testResults = TestResults.ALL_PASS;
+    } else {
+      outcome.result = ResultType.FAILURE;
+      outcome.testResults = TestResults.LEVEL_INCOMPLETE_FAIL;
+    }
     return outcome;
   } else {
     // We have only a compute equation for each set. If they're not equal,
@@ -403,7 +407,8 @@ Calc.execute = function() {
 
   appState.animating = true;
   if (appState.result === ResultType.SUCCESS &&
-      !appState.userSet.hasVariablesOrFunctions()) {
+      !appState.userSet.hasVariablesOrFunctions() &&
+      !level.edit_blocks) {
     Calc.step();
   } else {
     displayComplexUserExpressions();
@@ -453,7 +458,7 @@ function displayComplexUserExpressions () {
     tokenList = getTokenList(computeEquation, targetEquation);
 
     result = appState.userSet.evaluate().toString();
-    var expectedResult = appState.targetSet.computeEquation() == null ?
+    var expectedResult = appState.targetSet.computeEquation() === null ?
       result : appState.targetSet.evaluate().toString();
 
     tokenList = tokenList.concat(getTokenList(' = '),
