@@ -255,7 +255,7 @@ NetSimConnection.prototype.setConnectionStatus_ = function (newStatus, lobbyRowI
         this.logger_.log("Disconnected from instance", LogLevel.INFO);
       break;
   }
-  this.statusChanges.notify();
+  this.statusChanges.notifyObservers();
 };
 
 NetSimConnection.prototype.keepAlive = function () {

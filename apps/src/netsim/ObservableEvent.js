@@ -48,12 +48,12 @@ var ObservableEvent = function () {
 module.exports = ObservableEvent;
 
 /**
- * Subscribe a method to be called when ObservableEvent.notify is called.
+ * Subscribe a method to be called when ObservableEvent.notifyObservers is called.
  * @param {Object} observingObj - Object/context that wants to be notified,
  *                 which will be bound to "this" when onNotify is called.
- * @param {Function} onNotify - method called when ObservableEvent.notify
+ * @param {Function} onNotify - method called when ObservableEvent.notifyObservers
  *                   gets called.  Will receive any arguments passed to
- *                   ObservableEvent.notify.
+ *                   ObservableEvent.notifyObservers.
  * @returns {Object} key - used to unregister from observable
  */
 ObservableEvent.prototype.register = function (observingObj, onNotify) {
@@ -84,8 +84,7 @@ ObservableEvent.prototype.unregister = function (keyObj) {
  * @param {...} Any arguments, which are passed through to the observing
  *              functions.
  */
-// TODO (bbuchanan) : rename
-ObservableEvent.prototype.notify = function () {
+ObservableEvent.prototype.notifyObservers = function () {
   var args = Array.prototype.slice.call( arguments, 0 );
   this.observerList_.forEach(function (observer) {
     observer.toCall.apply(observer.thisArg, args);
