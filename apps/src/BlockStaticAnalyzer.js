@@ -24,7 +24,7 @@ var TestResults = constants.TestResults;
  *
  * @param {Blockly} blockly The blockly instance being examined
  */
-var BlockStaticAnalyzer = function ( blockly ) {
+var BlockStaticAnalyzer = function (blockly) {
   this.blockly_ = blockly;
 
   /**
@@ -218,10 +218,15 @@ BlockStaticAnalyzer.prototype.hasIncompleteBlockInFunction_ = function () {
 };
 
 /**
+ * @callback blockPredicate
+ * @param {!Blockly.Block} block to check against condition
+ * @return {boolean} whether the block fulfills the condition
+ */
+/**
  * Returns true if any descendant (inclusive) of the given blockly node matches
  * the given filter.
- * @param {??? - Blockly node} node
- * @param {??? - predicate} filter
+ * @param {!Blockly.Block} node
+ * @param {blockPredicate} filter
  * @return {boolean}
  * @static
  */
