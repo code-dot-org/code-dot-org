@@ -50,7 +50,13 @@ var KEEP_ALIVE_INTERVAL_MS = 2000;
  * @type {number}
  * @const
  */
-var CONNECTION_TIMEOUT_MS = 30000;
+var CONNECTION_TIMEOUT_MS = 30000; // 30 seconds
+var CONNECTION_TIMEOUT_ROUTER_MS = 300000; // 5 minutes
+
+/**
+ * @type {string}
+ */
+var LOBBY_TYPE_USER = 'user';
 
 /**
  * A connection to a NetSim instance
@@ -143,7 +149,7 @@ NetSimConnection.prototype.buildLobbyRow_ = function () {
   return {
     lastPing: Date.now(),
     name: this.displayName_,
-    type: 'user',
+    type: LOBBY_TYPE_USER,
     status: 'In Lobby'
   };
 };
@@ -166,6 +172,14 @@ NetSimConnection.prototype.connectToInstance = function (instanceID) {
 
   // Connect to the lobby table we just set
   this.connect_();
+};
+
+/**
+ * Get the current lobby table object, for manipulating the lobby.
+ * @returns {netsimStorage.SharedStorageTable}
+ */
+NetSimConnection.prototype.getLobbyTable = function () {
+  return this.lobbyTable_;
 };
 
 /**
@@ -325,7 +339,9 @@ NetSimConnection.prototype.cleanLobby_ = function () {
   var now = Date.now();
   this.getLobbyListing(function (lobbyData) {
     lobbyData.forEach(function (lobbyRow) {
-      if (now - lobbyRow.lastPing >= CONNECTION_TIMEOUT_MS) {
+      if (lobbyRow.type === LOBBY_TYPE_USER && now - lobbyRow.lastPing >= CONNECTION_TIMEOUT_MS) {
+        self.disconnectByRowID_(lobbyRow.id);
+      } else if (lobbyRow.type === 'router' && now - lobbyRow.lastPing >= CONNECTION_TIMEOUT_ROUTER_MS) {
         self.disconnectByRowID_(lobbyRow.id);
       }
     });

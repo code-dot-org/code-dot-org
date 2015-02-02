@@ -33,6 +33,8 @@
 /* global $ */
 'use strict';
 
+var dom = require('../dom');
+var NetSimRouter = require('./NetSimRouter');
 var markup = require('./NetSimLobby.html');
 
 /**
@@ -101,6 +103,12 @@ NetSimLobby.prototype.bindElements_ = function () {
   $(this.instanceSelector_).change(this.onInstanceSelectorChange_.bind(this));
 
   this.lobbyList_ = document.getElementById('netsim_lobby_list');
+
+  this.addRouterButton_ = document.getElementById('netsim_lobby_add_router');
+  dom.addClickTouchEvent(this.addRouterButton_,
+      this.addRouterButtonClick_.bind(this));
+
+  this.connectButton_ = document.getElementById('netsim_lobby_connect');
 };
 
 /**
@@ -115,6 +123,11 @@ NetSimLobby.prototype.onInstanceSelectorChange_ = function () {
   if (this.instanceSelector_.value !== '__none') {
     this.connection_.connectToInstance(this.instanceSelector_.value);
   }
+};
+
+NetSimLobby.prototype.addRouterButtonClick_ = function () {
+  var router = new NetSimRouter(this.connection_, this.connection_.logger_);
+  router.connectToLobby();
 };
 
 /**
@@ -186,7 +199,11 @@ NetSimLobby.prototype.refreshLobby_ = function () {
         item.addClass('netsim_lobby_own_row');
         item.html(connection.name + ' : ' + connection.status + ' : Me');
       } else {
-        item.addClass('netsim_lobby_user_row');
+        if (connection.type === NetSimRouter.LOBBY_TYPE_ROUTER) {
+          item.addClass('netsim_lobby_router_row');
+        } else {
+          item.addClass('netsim_lobby_user_row');
+        }
         $('<a>')
             .attr('href', '#')
             .html(connection.name + ' : ' + connection.status)
