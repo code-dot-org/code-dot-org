@@ -149,4 +149,52 @@ describe('evaluateResults_/evaluateFunction_', function () {
     assert.equal(outcome.message, undefined);
     assert.equal(outcome.failedInput, null);
   });
+
+  it('succeeds when user/target both have multiple variables and are identical', function () {
+    // x = 1
+    // y = x + 1
+    // compute: y
+    var targetSet = new EquationSet();
+    targetSet.addEquation_(new Equation('x', new ExpressionNode(1)));
+    targetSet.addEquation_(new Equation('y', new ExpressionNode('+', ['x', 1])));
+    targetSet.addEquation_(new Equation(null, new ExpressionNode('y')));
+
+    // x = 1
+    // y = x + 1
+    // compute: y
+    var userSet = new EquationSet();
+    userSet.addEquation_(new Equation('x', new ExpressionNode(1)));
+    userSet.addEquation_(new Equation('y', new ExpressionNode('+', ['x', 1])));
+    userSet.addEquation_(new Equation(null, new ExpressionNode('y')));
+
+    var outcome = Calc.evaluateResults_(targetSet, userSet);
+    assert.equal(outcome.result, ResultType.SUCCESS);
+    assert.equal(outcome.testResults, TestResults.ALL_PASS);
+    assert.equal(outcome.message, undefined);
+    assert.equal(outcome.failedInput, null);
+  });
+
+  it('succeeds when user/target both have multiple variables and are different', function () {
+    // x = 1
+    // y = x + 1
+    // compute: y
+    var targetSet = new EquationSet();
+    targetSet.addEquation_(new Equation('x', new ExpressionNode(1)));
+    targetSet.addEquation_(new Equation('y', new ExpressionNode('+', ['x', 1])));
+    targetSet.addEquation_(new Equation(null, new ExpressionNode('y')));
+
+    // x = 1
+    // y = x + 2
+    // compute: y
+    var userSet = new EquationSet();
+    userSet.addEquation_(new Equation('x', new ExpressionNode(1)));
+    userSet.addEquation_(new Equation('y', new ExpressionNode('+', ['x', 2])));
+    userSet.addEquation_(new Equation(null, new ExpressionNode('y')));
+
+    var outcome = Calc.evaluateResults_(targetSet, userSet);
+    assert.equal(outcome.result, ResultType.FAILURE);
+    assert.equal(outcome.testResults, TestResults.LEVEL_INCOMPLETE_FAIL);
+    assert.equal(outcome.message, undefined);
+    assert.equal(outcome.failedInput, null);
+  });
 });
