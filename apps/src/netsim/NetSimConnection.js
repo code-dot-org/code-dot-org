@@ -54,11 +54,6 @@ var CONNECTION_TIMEOUT_MS = 30000; // 30 seconds
 var CONNECTION_TIMEOUT_ROUTER_MS = 300000; // 5 minutes
 
 /**
- * @type {string}
- */
-var LOBBY_TYPE_USER = 'user';
-
-/**
  * A connection to a NetSim instance
  * @param {string} displayName - Name for person on local end
  * @param {NetSimLogger} logger - A log control interface, default nullimpl
@@ -130,6 +125,17 @@ var ConnectionStatus = {
 NetSimConnection.ConnectionStatus = ConnectionStatus;
 
 /**
+ * Lobby row-type enum
+ * @readonly
+ * @enum {string}
+ */
+var LobbyRowType = {
+  USER: 'user',
+  ROUTER: 'router'
+};
+NetSimConnection.LobbyRowType = LobbyRowType;
+
+/**
  * Before-unload handler, used to try and disconnect gracefully when
  * navigating away instead of just letting our record time out.
  * @private
@@ -149,7 +155,7 @@ NetSimConnection.prototype.buildLobbyRow_ = function () {
   return {
     lastPing: Date.now(),
     name: this.displayName_,
-    type: LOBBY_TYPE_USER,
+    type: LobbyRowType.USER,
     status: 'In Lobby'
   };
 };
@@ -339,9 +345,9 @@ NetSimConnection.prototype.cleanLobby_ = function () {
   var now = Date.now();
   this.getLobbyListing(function (lobbyData) {
     lobbyData.forEach(function (lobbyRow) {
-      if (lobbyRow.type === LOBBY_TYPE_USER && now - lobbyRow.lastPing >= CONNECTION_TIMEOUT_MS) {
+      if (lobbyRow.type === LobbyRowType.USER && now - lobbyRow.lastPing >= CONNECTION_TIMEOUT_MS) {
         self.disconnectByRowID_(lobbyRow.id);
-      } else if (lobbyRow.type === 'router' && now - lobbyRow.lastPing >= CONNECTION_TIMEOUT_ROUTER_MS) {
+      } else if (lobbyRow.type === LobbyRowType.ROUTER && now - lobbyRow.lastPing >= CONNECTION_TIMEOUT_ROUTER_MS) {
         self.disconnectByRowID_(lobbyRow.id);
       }
     });
