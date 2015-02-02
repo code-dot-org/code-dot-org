@@ -44,27 +44,27 @@ Sounds.prototype.play = function (soundId, options) {
   sound.play(options);
 };
 
-Sounds.prototype.playURL = function (url, options) {
+Sounds.prototype.playURL = function (url, playbackOptions) {
   // Play a sound given a URL, register it using the URL as id and infer
   // the file type from the extension at the end of the URL
   // (NOTE: not ideal because preload happens inside first play)
   var sound = this.soundsById[url];
   if (sound) {
-    sound.play(options);
+    sound.play(playbackOptions);
   } else {
-    var config = {id: url};
-    var ext = url.substr(url.lastIndexOf('.') + 1);
-    config[ext] = url;
+    var soundConfig = {id: url};
+    var ext = Sounds.getExtensionFromUrl(url);
+    soundConfig[ext] = url;
     // Force HTML5 audio if the caller requests it (cross-domain origin issues)
-    config.forceHTML5 = options && options.forceHTML5;
+    soundConfig.forceHTML5 = playbackOptions && playbackOptions.forceHTML5;
     // Force HTML5 audio on mobile if the caller requests it
-    config.allowHTML5Mobile = options && options.allowHTML5Mobile;
-    // since preload may be async, we set playAfterRegister in the config so we
+    soundConfig.allowHTML5Mobile = playbackOptions && playbackOptions.allowHTML5Mobile;
+    // since preload may be async, we set playAfterLoad in the config so we
     // play the sound once it is loaded
-    // Also stick our play() options inside the config as firstPlayOptions
-    config.playAfterRegister = true;
-    config.firstPlayOptions = options;
-    this.register(config);
+    // Also stick the playbackOptions inside the config as playAfterLoadOptions
+    soundConfig.playAfterLoad = true;
+    soundConfig.playAfterLoadOptions = playbackOptions;
+    this.register(soundConfig);
   }
 };
 
@@ -75,6 +75,10 @@ Sounds.prototype.stopLoopingAudio = function (soundId) {
 
 Sounds.prototype.get = function (soundId) {
   return this.soundsById[soundId];
+};
+
+Sounds.getExtensionFromUrl = function (url) {
+  return url.substr(url.lastIndexOf('.') + 1);
 };
 
 /**
@@ -217,9 +221,13 @@ Sound.prototype.preload = function () {
       audioElement.pause();
     }
     this.audioElement = audioElement;
-    if (this.config.playAfterRegister) {
-      this.play(this.config.firstPlayOptions);
-    }
+    this.onSoundLoaded();
+  }
+};
+
+Sound.prototype.onSoundLoaded = function () {
+  if (this.config.playAfterLoad) {
+    this.play(this.config.playAfterLoadOptions);
   }
 };
 
@@ -231,9 +239,7 @@ Sound.prototype.preloadViaWebAudio = function (filename, onPreloadedCallback) {
   request.onload = function () {
     self.audioContext.decodeAudioData(request.response, function (buffer) {
       onPreloadedCallback(buffer);
-      if (self.config.playAfterRegister) {
-        self.play(self.config.firstPlayOptions);
-      }
+      self.onSoundLoaded();
     });
   };
   request.send();
