@@ -38,16 +38,12 @@
  */
 'use strict';
 
+var NetSimConnection = require('./NetSimConnection');
 var NetSimLogger = require('./NetSimLogger');
 var LogLevel = NetSimLogger.LogLevel;
 
 /**
- * @const
- * @type {string}
- */
-var LOBBY_TYPE_ROUTER = 'router';
-
-/**
+ * @readonly
  * @enum {string}
  */
 var RouterStatus = {
@@ -94,7 +90,6 @@ var NetSimRouter = function (connection, logger /*=new NetSimLogger(NONE)*/) {
   this.displayName_ = "Router";
 };
 module.exports = NetSimRouter;
-NetSimRouter.LOBBY_TYPE_ROUTER = LOBBY_TYPE_ROUTER;
 
 /**
  *
@@ -114,11 +109,14 @@ NetSimRouter.prototype.buildLobbyRow_ = function () {
   return {
     lastPing: Date.now(),
     name: this.displayName_,
-    type: LOBBY_TYPE_ROUTER,
+    type: NetSimConnection.LobbyRowType.ROUTER,
     status: this.buildLobbyStatus_()
   };
 };
 
+/**
+ *
+ */
 NetSimRouter.prototype.connectToLobby = function () {
   if (!this.connection_.isConnectedToInstance()) {
     this.logger_.error("Can't create a router without a connection");
@@ -135,17 +133,22 @@ NetSimRouter.prototype.connectToLobby = function () {
       self.status_ = RouterStatus.READY;
       self.lobbyID_ = data.id;
       self.displayName_ = 'Router ' + self.lobbyID_;
-      self.updateStatus();
+      self.logger_.info(self.displayName_ + ' created.');
+      self.updateRemoteStatus();
     } else {
       self.logger_.error("Failed to create router");
     }
   });
 };
 
-NetSimRouter.prototype.updateStatus = function () {
+/**
+ * A keepalive for routers, which puts their current state
+ * into the remote table.
+ */
+NetSimRouter.prototype.updateRemoteStatus = function () {
   var self = this;
   var lobbyTable = this.connection_.getLobbyTable();
-  lobbyTable.update(self.lobbyID_, self.buildLobbyRow(), function (success) {
+  lobbyTable.update(self.lobbyID_, self.buildLobbyRow_(), function (success) {
     if (success) {
       self.logger_.info(self.displayName_ + ' status updated.');
     } else {

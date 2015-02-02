@@ -34,6 +34,7 @@
 'use strict';
 
 var dom = require('../dom');
+var NetSimConnection = require('./NetSimConnection');
 var NetSimRouter = require('./NetSimRouter');
 var markup = require('./NetSimLobby.html');
 
@@ -199,7 +200,7 @@ NetSimLobby.prototype.refreshLobby_ = function () {
         item.addClass('netsim_lobby_own_row');
         item.html(connection.name + ' : ' + connection.status + ' : Me');
       } else {
-        if (connection.type === NetSimRouter.LOBBY_TYPE_ROUTER) {
+        if (connection.type === NetSimConnection.LobbyRowType.ROUTER) {
           item.addClass('netsim_lobby_router_row');
         } else {
           item.addClass('netsim_lobby_user_row');
