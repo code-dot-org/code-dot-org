@@ -1,4 +1,7 @@
 "id":
+  errors:
+    messages:
+      not_saved: 'Perbaikilah kesalahan berikut:'
   activerecord:
     errors:
       messages:
@@ -352,11 +355,11 @@
     new_password_hint: (Kosongkan jika Anda tidak ingin mengubahnya)
     current_password_hint: (kita perlu password Anda saat ini untuk mengkonfirmasi
       perubahan Anda)
-    delete: Delete your account
-    delete_text: Clicking the button below will delete your account.
+    delete: Hapuslah akun anda
+    delete_text: Klik tombol di bawah ini akan menghapus akun Anda.
     delete_text_teacher_note: 'Please note: deleting your account will not delete
       your students'' accounts.'
-    delete_confirm: Are you sure you want to delete your account?
+    delete_confirm: Apakah Anda yakin ingin menghapus akun Anda?
   user_level:
     completed: Selesai
     tried: Telah mencoba

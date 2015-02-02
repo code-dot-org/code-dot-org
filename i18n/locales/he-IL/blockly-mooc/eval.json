@@ -9,7 +9,7 @@
   "rectangleBlockTitle":"מלבן (רוחב, גובה, סגנון, צבע)",
   "reinfFeedbackMsg":"אתה יכול ללחוץ על כפתור ה\"נסה שוב\" כדי לערוך את האיור שלך.",
   "rotateImageBlockTitle":"סובב (מעלות, תמונה)",
-  "scaleImageBlockTitle":"קנה-מידה (מקדם)",
+  "scaleImageBlockTitle":"scale (factor, image)",
   "squareBlockTitle":"ריבוע (גודל, סגנון, צבע)",
   "starBlockTitle":"כוכב (רדיוס, סגנון, צבע)",
   "radialStarBlockTitle":"כוכב-רדיאלי (נקודות, פנימי, חיצוני, סגנון, צבע)",

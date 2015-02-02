@@ -112,6 +112,10 @@
         Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Start
           med et kvadrat <br/> sæt en trekant under kvadratet <br/> sæt et parallelogram
           ved siden af trekanten
+        ? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
+          below square<br/>Put triangle right of parallelogram
+        : Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
+          below square<br/>Put triangle right of parallelogram
       2-3 Algorithms Multi 2:
         Multiple Choice: Multiple Choice
         Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Start
@@ -227,6 +231,12 @@
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png
+        ? A purple flower may have either 3, 2 or 1 nectars, but you don't know how
+          many. Which blocks correctly check and collect all of the nectar from a
+          purple flower?
+        : A purple flower may have either 3, 2 or 1 nectars, but you don't know how
+          many. Which blocks correctly check and collect all of the nectar from a
+          purple flower?
       4-5 bee debug multi 1:
         Bee Debug Multiple Choice: Bi Fejlfinding Multiple Choice
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png
@@ -264,7 +274,7 @@
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png
       4-5 maze conditionals multi 1:
-        Maze Conditionals Multiple Choice: Bi Betingelser Multiple Choice
+        Maze Conditionals Multiple Choice: Labyrint betingelser multiple choice
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png,
           500
         Which blocks solve the puzzle?: Hvilke blokke løser opgaven?
@@ -293,9 +303,13 @@
         <h4>_____ is a _____ city.</h4>: <h4>_____ er en _____ by.</h4>
         <h4>_____ is _____ a _____.</h4>: <h4>_____ er _____ en _____.</h4>
         <h4>Eugene is a _____ city.</h4>: <h4>Roskilde er en _____ by.</h4>
+        ? Here are three sentences. Which of the templates below correctly abstracts
+          so that all three match the same pattern as the template?
+        : Here are three sentences. Which of the templates below correctly abstracts
+          so that all three match the same pattern as the template?
       4-5 Crowdsourcing Multi 1:
         Multiple Choice: Multiple Choice
-        Which of these pictures best represents crowdsourcing?: Hvilke af disse billeder
+        Which of these pictures best represents crowdsourcing?: Hvilket af disse billeder
           repræsenterer bedst crowdsourcing?
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png
@@ -358,6 +372,22 @@
         5: ': Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk,
           <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,
           <br/>Skip to my Lou, my darlin.'
+        ? What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?
+        : What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?
+        ? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,
+        : Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,
+        ? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin.
+        : Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin.
       4-5 Suncatchers Multi 1:
         Multiple Choice: Multiple Choice
         /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
@@ -370,8 +400,8 @@
       Coordinates Multi 1:
         Video game Coordinates: Videospilskoordinater
         Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
-        Which answer best describes the unicorn's movement?: Hvilket svar beskriver
-          bedst enhjørningens bevægelse?
+        Which answer most accurately describes the unicorn's movement?: Which answer
+          most accurately describes the unicorn's movement?
         The unicorn moves across the screen: Enhjørningen bevæger sig hen over skærmen
         The unicorn's y value changes: Enhjørningens y-værdi ændres
         The unicorn moves to the left: Enhjørningen flytter mod venstre
@@ -575,6 +605,10 @@
         (* (+ 5 6) (/ 8 2)): (* (+ 5 6) (/ 8 2))
         (/ (* (+ 5 6) 8) 2): (/ (* (+ 5 6) 8) 2)
         (/ (+ 5 6) (* 8 2)): (/ (+ 5 6) (* 8 2))
+        ? Pick the Racket code that matches the mathematical expression given. Draw
+          a circle of evaluation to help you find the right answer!
+        : Pick the Racket code that matches the mathematical expression given. Draw
+          a circle of evaluation to help you find the right answer!
       Math to Code 2:
         Racket Code for Math Expressions: Ketcher kode for matematiske udtryk
         0: '? Vælg koden ketcher, der matcher den matematiske udtryk i betragtning.
@@ -591,6 +625,10 @@
         (+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3) 2): (+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3)
           2)
         (+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2)))))): (+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2))))))
+        ? Pick the Racket code that matches the mathematical expression given. Draw
+          a circle of evaluation to help you find the right answer!
+        : Pick the Racket code that matches the mathematical expression given. Draw
+          a circle of evaluation to help you find the right answer!
       Warmup questions:
         Coding in Racket: Kodning i ketcher
         Select the best answer to the question.: Vælg det bedste svar på spørgsmålet.
@@ -609,6 +647,7 @@
         (+ 5 (* 4 (- 8 6))): (+ 5 (* 4 (- 8 6)))
         (+ (* (- 8 6) 4) 5): '(+ (* (- 8 6) 4) 5) '
         (+ 5 (* (- 8 6) 4)): (+ 5 (* (- 8 6) 4))
+        '(+ (* (- 8 6) 4) 5) ': '(+ (* (- 8 6) 4) 5) '
       valid contracts multi:
         Valid Contracts: Gyldig kontrakter
         Pick the best answer to the question.: Vælg det bedste svar på spørgsmålet.
@@ -629,17 +668,17 @@
           "rød")
         (rectangle (+ 8 2) (- 7 5) solid red): (rektangel (+ 8 2) (-7 5) tæt rødt)
       Multi Strings Images 1:
-        Strings and Images Multiple Choice: Strings and Images Multiple Choice
-        Multi Strings Images 1.blocks3.level: Multi Strings Images 1.blocks3.level
-        Which of these Evaluation Blocks will draw the image: Which of these Evaluation
-          Blocks will draw the image
-        Multi Strings Images 1.blocks1.start_blocks, 300, 100: Multi Strings Images
+        Strings and Images Multiple Choice: Strenge og billeder flervalgsmulighed
+        Multi Strings Images 1.blocks3.level: Multistregebilleder 1.blocks3.level
+        Which of these Evaluation Blocks will draw the image: Hvilken af disse evalueringsblokke
+          vil tegne billedet
+        Multi Strings Images 1.blocks1.start_blocks, 300, 100: Multistrengsbilleder
           1.blocks1.start_blocks, 300, 100
-        Multi Strings Images 1.blocks2.start_blocks, 300, 100: Multi Strings Images
+        Multi Strings Images 1.blocks2.start_blocks, 300, 100: Multistrengsbilleder
           1.blocks2.start_blocks, 300, 100
-        Multi Strings Images 1.blocks3.start_blocks, 300, 100: Multi Strings Images
+        Multi Strings Images 1.blocks3.start_blocks, 300, 100: Multistrengsbilleder
           1.blocks3.start_blocks, 300, 100
-        Multi Strings Images 1.blocks4.start_blocks, 300, 100: Multi Strings Images
+        Multi Strings Images 1.blocks4.start_blocks, 300, 100: Multistrengsbilleder
           1.blocks4.start_blocks, 300, 100
       test multi image:
         Maze Multiple Choice Two: Labyrint Multiple Choice 2

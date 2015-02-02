@@ -2,7 +2,8 @@
   "compute":"calcola",
   "equivalentExpression":"Prova a riordinare i tuoi argomenti per ottenere esattamente la stessa espressione.",
   "extraTopBlocks":"Ci sono dei blocchi scollegati. Volevi forse attaccarli al blocco 'calcola'?",
+  "failedInput":"Your function does not return the right result for all values.",
   "goal":"Obiettivo:",
-  "reinfFeedbackMsg":"Ecco la tua storia! Continua a lavorarci sopra, oppure passa al prossimo esercizio!",
+  "reinfFeedbackMsg":"Here is your calculation! Continue working on it, or move on to the next puzzle!",
   "yourExpression":"La tua espressione:"
 }

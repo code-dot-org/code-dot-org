@@ -1,4 +1,7 @@
 "fr":
+  errors:
+    messages:
+      not_saved: 'Corriger les erreurs :'
   activerecord:
     errors:
       messages:
@@ -183,7 +186,7 @@
     teacher_email_required: 'Vous devez confirmer votre adresse de messagerie pour
       obtenir un des prix pour enseignants :'
     confirm:
-      title: Merci de confirmer
+      title: Veuillez confirmer
       'no': Non
       'yes': Oui
       msg: Êtes-vous certain de vouloir attribuer le prix de %{prize_name} ?
@@ -205,7 +208,7 @@
     msg:
       choose: 'Choisis un prix :'
       choose_teacher: 'Click on the logo below to claim your prize:'
-      earned: Vous avez remporté un prix ! (Elèves états-uniens uniquement)
+      earned: Vous avez remporté un prix ! (Étudiants états-uniens uniquement)
       not_earned_title: Terminer le didacticiel, obtenez des récompenses (uniquement
         pour les élèves états-uniens)
       not_earned: 'Apprenez tous les concepts de l''informatique, remportez l''ensemble
@@ -259,7 +262,7 @@
     access_denied: Vous n'avez pas accès à ce %{model}.
   nav:
     header:
-      finished_hoc: J'ai fini mon Heure de Code
+      finished_hoc: J'ai fini mon heure de Code
       sign_in_to_save: Connectez-vous pour enregistrer les progrès
       free_play:
         playlab: Créer une application
@@ -288,7 +291,7 @@
   teacher:
     title:
       one: 'Votre enseignant :'
-      other: 'Vos professeurs:'
+      other: 'Vos enseignants :'
     remove: (supprimer l'enseignant)
     confirm:
       remove: Êtes-vous sûr de vouloir supprimer cet enseignant ?
@@ -355,14 +358,14 @@
   user:
     email_confirm_needed: 'L''adresse de messagerie n''a pas été confirmée :'
     email_resend_confirm: Envoyer à nouveau les instructions de confirmation
-    new_password_hint: (laissez vide pour conserver)
+    new_password_hint: (laissez vide si vous ne voulez rien changer)
     current_password_hint: (nous avons besoin de votre mot de passe actuel pour confirmer
       vos modifications)
-    delete: Delete your account
-    delete_text: Clicking the button below will delete your account.
-    delete_text_teacher_note: 'Please note: deleting your account will not delete
-      your students'' accounts.'
-    delete_confirm: Are you sure you want to delete your account?
+    delete: Supprimer votre compte
+    delete_text: Cliquer sur le bouton ci-dessous supprimera votre compte.
+    delete_text_teacher_note: 'Veuillez noter : supprimer votre compte ne supprimera
+      pas les comptes de vos élèves.'
+    delete_confirm: Êtes-vous sûr de que vouloir supprimer votre compte ?
   user_level:
     completed: Terminé
     tried: Essayé
@@ -438,7 +441,7 @@
     secure: Version sécurisée
   reference_area:
     title: Besoin d'aide ?
-    subtitle: Regarder ces vidéos et indices
+    subtitle: Voir ces vidéos et conseils
     teacher: Afficher la solution
     auth_error: Vous n'êtes pas autorisé à voir la solution.
     submit: Mettre à jour la Position de l'Artiste

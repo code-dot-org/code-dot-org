@@ -48,7 +48,7 @@ hr:
         edit-code:
           desc: Uređivanje kôda (beta)
           MazeEC: Nivo 1
-          Webapp: Nivo 2
+          Applab: Nivo 2
           ArtistEC: Nivo 3
           StudioEC: Nivo 4
         events:
@@ -99,10 +99,12 @@ hr:
         Jigsaw: Slagalica
         MazeStep: Labirint korak po korak
         Wordsearch: Traženje riječi
-        Webapp: Mrežna aplikacija
+        Webapp: App Lab
         ArtistEC: Umjetnik
         TextMatch: Spajanje riječi
         StudioEC: Laboratorij igara
+        Applab: App Lab
+        NetSim: Internet Simulator
     trophy:
       name:
         Bronze: Bronca
@@ -244,7 +246,7 @@ hr:
         flappy_6: Vidi možeš li još uvijek zaraditi bod nakon što napraviš da Flappy jače ili slabije maše krilima.
         flappy_7: 'A sad pokušaj promijeniti scenu tako da prikačiš odgovarajući blok na blok "pri pokretanju".'
         flappy_8: Promjenu grafičkih elemenata možeš napraviti bilo kad, ne samo kad igra počne. Probaj staviti NASUMIČNI ODABIR scene kad se dogodi neki drugi događaj, na primjer, kad prođe prepreku.
-        flappy_9: Da zakompliciramo, kad Flappy udari u prepreku ili padne na tlo, umjesto kraja igre neka mu se bodovi vrate na 0.
+        flappy_9: To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0.
         flappy_11: Napravi vlastitu Flappy igru. Možeš izmijeniti sve grafičke elemente i sva pravila, čak i gravitaciju. Kad budeš gotov, klikni na Kraj da omogućiš prijateljima da isprobaju tvoju igru na svojim mobitelima.
         flappy_k1_1: Igraj Flappy
         flappy_k1_2: 'Bloku "na klik" prikači odgovarajući blok pa klikni na "Pokreni". Klikni ili dodirni ekran da pomakneš Flappyja prema meti.'
@@ -326,7 +328,7 @@ hr:
         maze_wordsearch_k_15: Pokreni me u jednom smjeru, a zatim u drugom da slovkam riječ ABOVE (IZNAD)
         maze_wordsearch_k_16: Pokreni me u jednom smjeru, a zatim u drugom da slovkam riječ BELOW (ISPOD)
         maze_wordsearch_k_20: Ovo je test! Pokreni me u jednom smjeru, a zatim u drugom da slovkam riječ STORY (PRIČA)
-        webapp_ec_simple: Napravi svoju mrežnu aplikaciju koristeći createHtmlBlock.
+        applab_ec_simple: Create your app by using the blocks in the toolbox.
         turtle_ec_1_2: 'Sada nacrtaj kvadrat. NAPOMENA: koristi svoju najdražu boju tako da je odabereš na novom bloku "boja Olovke".'
         turtle_ec_1_10: 'Uspio si! Sad nacrtaj što god želiš. Zgodne ideje: štapićasti čovječuljak, pahuljica ili spirala. Također isprobaj novi blok "širina olovke". Uživaj!'
         studio_ec_sandbox: Napravi svoju igricu. Kad si gotov, klikni na Kraj da omogućiš prijateljima da isprobaju tvoju igru na svojim mobitelima.
@@ -380,7 +382,7 @@ hr:
       scrat 19:
         instructions: 'Još jedna vježba s "ako-inače" blokom, možeš li je riješiti iz prvog pokušaja?'
       scrat 20:
-        instructions: Možeš li dodati samo 3 bloka da mi pomogneš riješiti složeniji labirint? Učiniš li to kako treba, moći ću hodati svakom krivudavom stazom bez obzira na njenu duljinu! Požuri! Led se topi!
+        instructions: Možeš li dodati samo 3 bloka da mi pomogneš riješiti složeniji labirint? Ako možeš, ja mogu hodati kroz bilo koji vijugavi put bez obzira na njegovu duljinu! Požuri! Led se topi!
       Standalone_Artist_1:
         instructions: Dobrodošao kod Umjetnika! Kao prvo, pokušajmo napraviti obični kvadrat koristeći blokove za okret udesno i za ići naprijed. Svaka stranica treba biti dugačka 100 piksela.
       Standalone_Artist_2:

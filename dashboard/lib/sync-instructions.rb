@@ -22,7 +22,7 @@ end
 
 def copy_instructions_to_yml(instructions)		
   File.open("../config/locales/instructions.en.yml", "w+") do |f|     
-		f.write(({ "en-US" => instructions }).to_yaml)
+		f.write(({ "en" => instructions }).to_yaml)
 		File.write(f, File.read(f).gsub(/---\n/, ""))
 	end
 end

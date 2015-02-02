@@ -1,4 +1,7 @@
 "fi":
+  errors:
+    messages:
+      not_saved: 'Ole hyvä ja korjaa seuraavat virheet:'
   activerecord:
     errors:
       messages:

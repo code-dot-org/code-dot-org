@@ -48,7 +48,7 @@ da:
         edit-code:
           desc: Rediger program (beta)
           MazeEC: Trin 1
-          Webapp: Fase 2
+          Applab: Fase 2
           ArtistEC: Trin 3
           StudioEC: Trin 4
         events:
@@ -99,10 +99,12 @@ da:
         Jigsaw: Puslespil
         MazeStep: Labyrint trin Mode
         Wordsearch: Ordsøgning
-        Webapp: WebApp
+        Webapp: App Lab
         ArtistEC: Kunstneren
         TextMatch: Tekst Match
         StudioEC: Play Lab
+        Applab: App Lab
+        NetSim: Internet Simulator
     trophy:
       name:
         Bronze: Bronze
@@ -244,7 +246,7 @@ da:
         flappy_6: Se om du stadig kan score et point efter at have fået Flappy til flappe mere eller mindre.
         flappy_7: 'Næste, forsøge at ændre scenen ved at vedhæfte en anden blok til den "når kør program" blok.'
         flappy_8: Du kan indstille visuelle ting når som helst, ikke bare når spillet starter. Prøv at sætte en tilfældig scene, når andre begivenheder sker, for eksempel, når de passerer en hindring.
-        flappy_9: For at blande tingene, når man rammer en hindring eller jorden, i stedet for at afslutte spillet, forsøg at sætte scoren tilbage til 0.
+        flappy_9: To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0.
         flappy_11: Opret dit egen Flappy spil. Du kan ændre alle visuelle ting og alle regler, selv tyngdekraften. Når du er færdig, klik på del for at lade dine venner prøve dit spil på deres mobil-telefoner.
         flappy_k1_1: Spil Flappy
         flappy_k1_2: 'Vedhæft en blok til "når der klikkes" blokken, derefter tryk på "Kør Program". Klik på eller tryk på skærmen for at flytte Flappy til målet.'
@@ -326,7 +328,7 @@ da:
         maze_wordsearch_k_15: Flytte mig en vej, så en anden til at stave ordet ABOVE
         maze_wordsearch_k_16: Flytte mig en vej, så en anden til at stave ordet BELOW
         maze_wordsearch_k_20: Dette er en test! Flytte mig en måde, så en anden til at stave ordet STORY
-        webapp_ec_simple: Opret din WebApp ved hjælp af createHtmlBlock.
+        applab_ec_simple: Create your app by using the blocks in the toolbox.
         turtle_ec_1_2: 'Nu skal du tegne en firkant. Bemærk: Brug din favorit farve, vælg den i den nye "penColor" blok.'
         turtle_ec_1_10: 'Du har du klaret det! Tegn nu noget som du ønsker. Her er nogle ideer: en tændstikmand, et snefnug eller en spiral. Prøv også den nye "penWidth" blok. Hav det sjovt!'
         studio_ec_sandbox: Oprette dit eget spil. Når du er færdig, skal du klikke på Udfør for at lade venner prøve dit spil på deres mobiler.

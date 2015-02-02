@@ -1,4 +1,7 @@
 "pt":
+  errors:
+    messages:
+      not_saved: 'Corrija os seguintes erros:'
   activerecord:
     errors:
       messages:

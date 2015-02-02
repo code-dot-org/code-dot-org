@@ -60,7 +60,7 @@
   "CONTROLS_WHILEUNTIL_OPERATOR_WHILE": "opakuj dokud",
   "CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL": "Dokud je hodnota nepravda, proveď určité příkazy.",
   "CONTROLS_WHILEUNTIL_TOOLTIP_WHILE": "Dokud je hodnota pravda, prováděj příkazy.",
-  "DEFINE_HEADER_DEFINITION": "Definition",
+  "DEFINE_HEADER_DEFINITION": "Definice",
   "DEFINE_FUNCTION_DEFINE": "Definovat",
   "DELETE_BLOCK": "Odstraň blok",
   "DELETE_PARAMETER": "Vymazat parametr...",

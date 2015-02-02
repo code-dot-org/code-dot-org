@@ -1,6 +1,6 @@
 goog.provide('Blockly.Msg.de_de');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "Derzeitig";
+Blockly.Msg.ACTUAL = "Aufruf";
 Blockly.Msg.ADD = "Hinzufügen";
 Blockly.Msg.ADD_COMMENT = "Kommentar hinzufügen";
 Blockly.Msg.ADD_PARAMETER = "Pararmeter hinzufügen";
@@ -74,7 +74,7 @@ Blockly.Msg.EXAMPLE = "Beispiel";
 Blockly.Msg.EXAMPLE_DESCRIPTION = "Bestimmt ein Beispiel zusammen mit dem erwarteten und tatsächlichen Verhalten.";
 Blockly.Msg.EXPAND_ALL = "Bausteine anzeigen";
 Blockly.Msg.EXPAND_BLOCK = "Baustein ausblenden";
-Blockly.Msg.EXPECTED = "Erwartet";
+Blockly.Msg.EXPECTED = "Ergebnis";
 Blockly.Msg.EXTERNAL_INPUTS = "Externe Eingaben";
 Blockly.Msg.FUNCTION_CREATE = "Erstellen Sie eine Funktion";
 Blockly.Msg.FUNCTION_EDIT = "Bearbeiten";

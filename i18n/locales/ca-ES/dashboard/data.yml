@@ -48,7 +48,7 @@ ca:
         edit-code:
           desc: Edita codi (beta)
           MazeEC: Etapa 1
-          Webapp: Etapa 2
+          Applab: Etapa 2
           ArtistEC: Etapa 3
           StudioEC: Etapa 4
         events:
@@ -99,10 +99,12 @@ ca:
         Jigsaw: Puzzle
         MazeStep: 'Laberint: pas a pas'
         Wordsearch: Sopa de lletres
-        Webapp: Aplicació web
+        Webapp: App Lab
         ArtistEC: "L'artista"
         TextMatch: Relacionar text
         StudioEC: Play Lab
+        Applab: App Lab
+        NetSim: Internet Simulator
     trophy:
       name:
         Bronze: Bronze
@@ -272,7 +274,7 @@ ca:
         flappy_7: |-
           A continuació, prova de canviar l'escena afegint un altre bloc al bloc "quan s'executa".
         flappy_8: "Pots configurar les imatges en qualsevol moment, i no només quan comença el joc. Intenta establir una escena a l'atzar, RANDOM, quan tinguin lloc altres esdeveniments, per exemple, quan superi un obstacle."
-        flappy_9: "Per complicar les coses, en colpejar un obstacle o terra, en comptes d'acabar el joc prova d'establir la puntuació de nou a 0."
+        flappy_9: To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0.
         flappy_11: Crea el teu propi joc Flappy. Pots canviar tots els aspectes visuals i les normes, fins i tot la gravetat. Quan hagis acabat, fes clic a Finalitza per fer que els teus amics hi juguin amb els seus mòbils.
         flappy_k1_1: Juga a Flappy
         flappy_k1_2: 'Uneix un bloc al bloc "quan faci clic", i prem "Executa". Fes clic a o toca la pantalla per moure en Flappy fins la meta.'
@@ -360,7 +362,7 @@ ca:
         maze_wordsearch_k_15: 'Mou-me en una direcció i després en una altra per  lletrejar la paraula AMUNT'
         maze_wordsearch_k_16: 'Mou-me en una direcció i després en una altra per  lletrejar la paraula SOTA'
         maze_wordsearch_k_20: Això es una prova! Mou-me en una direcció i després en una altre per lletrejar la paraula HISTÒRIA
-        webapp_ec_simple: Crea la teva aplicació web mitjançant creatHtmlBlock.
+        applab_ec_simple: Create your app by using the blocks in the toolbox.
         turtle_ec_1_2: 'Ara, dibuixa un quadrat. Nota: utilitza el teu color preferit agafant-lo en el nou bloc "llapisdecolor".'
         turtle_ec_1_10: 'Ho has aconseguit! Ara dibuixa el que vulguis. Algunes idees divertides: una figura de pal, un floc de neu o un espira. Prova el nou bloc "ampladadellapis". Diverteix-te!'
         studio_ec_sandbox: Crea el teu propi joc. Quan hagis acabat, fes clic a Finalitza per fer que els teus amics provin el teu joc als seus mòbils.

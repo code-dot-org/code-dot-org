@@ -73,6 +73,8 @@
       2-3 Big Event Match 1:
         Matching: Matching
         /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
+        Match the button combination to the dance moves.: Match the button combination
+          to the dance moves.
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
@@ -248,6 +250,8 @@
       K-1 Big Event Match 1:
         Matching: Matching
         /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
+        Match the button combination to the dance moves.: Match the button combination
+          to the dance moves.
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
@@ -383,7 +387,7 @@
         What's in the ocean?: What's in the ocean?
         What's Brent's last name?: What's Brent's last name?
         Where is Brendan from?: Where is Brendan from?
-        blue: blue
+        blue: Ikħal
         salt: salt
         Van Minnen: Van Minnen
         Sydney: Sydney

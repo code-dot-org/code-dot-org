@@ -9,7 +9,7 @@
   "rectangleBlockTitle":"rectangle (amplada, alçada, estil, color)",
   "reinfFeedbackMsg":"Pots prémer el botó \"Torna-ho a intentar\" per editar el teu dibuix.",
   "rotateImageBlockTitle":"rotar (graus, imatge)",
-  "scaleImageBlockTitle":"escala (factor)",
+  "scaleImageBlockTitle":"scale (factor, image)",
   "squareBlockTitle":"quadrat (mida, estil, color)",
   "starBlockTitle":"estrella (radi, estil, color)",
   "radialStarBlockTitle":"estrella-radial (punts, interior, exterior, estil, color)",
