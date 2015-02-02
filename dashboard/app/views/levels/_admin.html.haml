@@ -15,7 +15,8 @@
             = link_to 'Load Previous Solution', {load_previous: 1}, {class: 'btn btn-default'}
           - else
             (No previous solution)
-
+      %div
+        = render partial: 'levels/project_ui'
       #{@level.name}:
       = link_to 'play', @level
       - if can? :edit, @level
