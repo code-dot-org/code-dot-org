@@ -48,7 +48,7 @@ he:
         edit-code:
           desc: ערוך קוד (בטא)
           MazeEC: שלב 1
-          Webapp: שלב 2
+          Applab: שלב 2
           ArtistEC: שלב 3
           StudioEC: שלב 4
         events:
@@ -99,10 +99,12 @@ he:
         Jigsaw: פאזל
         MazeStep: מצב שלב מבוך
         Wordsearch: תפזורת
-        Webapp: Webapp
+        Webapp: App Lab
         ArtistEC: האמן
         TextMatch: Text Match
         StudioEC: Play Lab
+        Applab: App Lab
+        NetSim: Internet Simulator
     trophy:
       name:
         Bronze: ארד
@@ -247,7 +249,7 @@ he:
         flappy_6: See if you can still score a point after making Flappy flap either a smaller or larger amount.
         flappy_7: 'Next, try changing the scene by attaching another block to the "when run" block.'
         flappy_8: You can set visuals anytime, not just when the game starts. Try setting a RANDOM scene when other events happen, for example, when passing an obstacle.
-        flappy_9: To mix things up, when hitting an obstacle or the ground, instead of ending the game try setting the score back to 0.
+        flappy_9: To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0.
         flappy_11: "Create your own Flappy game. You can change all the visuals and all the rules, even the gravity. When you're done, click Finish to let friends try your game on their phones."
         flappy_k1_1: Play Flappy
         flappy_k1_2: 'Attach a block to the "when click" block, then press "Run". Click or tap the screen to move Flappy to the target.'
@@ -330,7 +332,7 @@ he:
         maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell the word STORY
-        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        applab_ec_simple: Create your app by using the blocks in the toolbox.
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColor" block.'
         turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new "penWidth" block. Have fun!'
         studio_ec_sandbox: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
@@ -511,7 +513,7 @@ he:
     callout:
       text:
         drag_blocks: 'Drag a "move" block and snap it below the other block'
-        run: 'Hit "Run" to try your program'
+        run: 'לחץ על "התחל" כדי לנסות את התוכנה שלך'
         watch_again: Click here to watch the video again
         gray_block_explanation: "Blocks that are grey can't be deleted. Can you solve the puzzle anyway?"
         show_code_explanation: "Click here to see the code for the program you're making"
@@ -520,7 +522,7 @@ he:
         set_sprite_image: 'Attach a "set actor to image" block to the "when story starts" block to enable an actor for this story'
         studio_say_text: Type what you want your actor to say within these quotes
         jigsaw_click: Click this block!
-        move_elsa_forward: 'Drag a "Move Forward" block and snap it below the "When Run" block to make Elsa move forward'
+        move_elsa_forward: 'גרור בלוק "הזז קדימה" והצמד מתחת לבלוק "מתי לרוץ", בשביל שאלזה תזוז קדימה'
         turn_elsa: 'Use the "Turn" block to make Elsa turn. The number in the drop-down determines how much Elsa turns'
         replace_questions: 'Use the drop-down to replace "???" with a number'
         replace_questions_degree: 'Use the drop-down to replace "???" with the correct degree to turn'

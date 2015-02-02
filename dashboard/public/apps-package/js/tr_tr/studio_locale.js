@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -213,7 +213,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "moveDistanceTooltip":function(d){return "Bir oyuncuyu belirli bir yönde belirli bir mesafe hareket ettirin."},
 "moveSprite":function(d){return "hareket et"},
 "moveSpriteN":function(d){return "taşı aktör "+appLocale.v(d,"spriteIndex")},
-"toXY":function(d){return "to x,y"},
+"toXY":function(d){return "x, y konumuna"},
 "moveDown":function(d){return "aşağı yönde ilerle"},
 "moveDownTooltip":function(d){return "Bir oyuncuyu aşağı yönde hareket ettirin."},
 "moveLeft":function(d){return "sola ilerle"},
@@ -265,11 +265,14 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "projectilePurpleHearts":function(d){return "mor kalpler"},
 "projectileRedHearts":function(d){return "kırmızı kalpler"},
 "projectileRandom":function(d){return "gelişigüzel"},
-"projectileAnna":function(d){return "Anna"},
-"projectileElsa":function(d){return "Elsa"},
-"projectileHiro":function(d){return "Hiro"},
-"projectileBaymax":function(d){return "Baymax"},
-"projectileRapunzel":function(d){return "Rapunzel"},
+"projectileAnna":function(d){return "kanca"},
+"projectileElsa":function(d){return "ışıltı"},
+"projectileHiro":function(d){return "mikrobotlar"},
+"projectileBaymax":function(d){return "roket"},
+"projectileRapunzel":function(d){return "tencere"},
+"projectileCherry":function(d){return "kiraz"},
+"projectileIce":function(d){return "buz"},
+"projectileDuck":function(d){return "ördek"},
 "reinfFeedbackMsg":function(d){return "Oyununuzu tekrar oynamak için \"yeniden dene\" butonuna basabilirsiniz."},
 "repeatForever":function(d){return "Sonsuza kadar tekrarla"},
 "repeatDo":function(d){return "yap"},
@@ -277,6 +280,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "saySprite":function(d){return "de"},
 "saySpriteN":function(d){return "aktör "+appLocale.v(d,"spriteIndex")+" de"},
 "saySpriteTooltip":function(d){return "Bir konuşma balonu ile ilişkili metni belirtilen aktörden aç."},
+"saySpriteChoices_1":function(d){return "Selam!"},
+"saySpriteChoices_2":function(d){return "Nasılsın?"},
+"saySpriteChoices_3":function(d){return "Bu eğlenceli..."},
 "scoreText":function(d){return "Skor: "+appLocale.v(d,"playerScore")},
 "setBackground":function(d){return "ayarla arkaplan"},
 "setBackgroundRandom":function(d){return "ayarla rastgele arkaplan"},
@@ -293,6 +299,12 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setBackgroundSpace":function(d){return "Uzay arka planını ayarla"},
 "setBackgroundTennis":function(d){return "Tenis arka planını ayarla"},
 "setBackgroundWinter":function(d){return "Kış arka planını ayarla"},
+"setBackgroundLeafy":function(d){return "Arka planı yapraklı yap"},
+"setBackgroundGrassy":function(d){return "Arka planı çimenli yap"},
+"setBackgroundFlower":function(d){return "Arka planı çiçekli yap"},
+"setBackgroundTile":function(d){return "Arka planı döşemeli yap"},
+"setBackgroundIcy":function(d){return "Arka planı buzlu yap"},
+"setBackgroundSnowy":function(d){return "Arka planı karlı yap"},
 "setBackgroundTooltip":function(d){return "arkaplanda resmini ayarla"},
 "setEnemySpeed":function(d){return "düşman hızını ayarla"},
 "setPlayerSpeed":function(d){return "oyuncu hızını ayarla"},
@@ -384,6 +396,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "soundWinPoint2":function(d){return "puan kazanma 2"},
 "soundWood":function(d){return "ahşap"},
 "speed":function(d){return "hız"},
+"startSetValue":function(d){return "başla (roket yüksekliği fonksiyonu)"},
 "stopSprite":function(d){return "dur"},
 "stopSpriteN":function(d){return "durdur aktör "+appLocale.v(d,"spriteIndex")},
 "stopTooltip":function(d){return "Aktörün hareketini durdurur."},

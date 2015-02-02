@@ -3,7 +3,7 @@ es-ES:
   select_language: Por favor seleccione su idioma
   computer_science: Ciencias de la computación
   computer_science_edweek: Semana de Educación en Ciencias de la Computación
-  csedweek_dates: December 8-14, 2014
+  csedweek_dates: 8-14 de Diciembre, 2014
   csedweek_banner_hoc: 'Se acerca la <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hora del código</a>.  Se convoca a todos los maestros y organizadores, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> planifica tu Hora del Código</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">¿Eres profesor de informática? Mira otros recursos de CSEdWeek</a>'
   n_have_learned_an_hoc: '<h1>#</h1><h3>han probado la</h3><h2>Hora de Código</h2>'
@@ -104,9 +104,9 @@ es-ES:
   students_and_lines: '%{students} de estudiantes han hecho La hora de código y escrito %{lines} líneas de código.'
   start_hoc: Comienza La hora de código ahora
   contact_form_topic_press: Prensa/ Medios de comunicación (entrevista o compromiso de hablar)
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
-  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
-  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
+  stats_michael: '" <b>Nunca antes</b> había visto a mis estudiantes tan entusiasmados por aprender." - Michael Clark, Profesor'
+  stats_nina: '"Cada día produjo los mismos resultados &mdash; 100% de compromiso."-Nina Nichols Peery, profesora'
+  stats_student: '"Sabía que era una oportunidad <b>única en la vida</b>."-Mariana Alzate, estudiante de 5o grado'
   studiobar_title: "Explora <a href='http://studio.code.org'>Code Studio</a>"
   studiobar_elementary_title: Cursos elementales
   studiobar_elementary_body: 'Nuestros tres nuevos cursos para K&#8209;5'
@@ -120,8 +120,8 @@ es-ES:
   studiobar_frozen_body: Crea un paisaje invernal con Anna y Elsa
   studiobar_donate_title: Dona
   studiobar_donate_body: Un niño aprende por cada dólar que done
-  studiobar_shop_title: Shop
-  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
+  studiobar_shop_title: Tienda
+  studiobar_shop_body: Rompe los estereotipos. Usa nuestro logotipo con orgullo.
   contact_form_topic_student: Soy un estudiante
   contact_form_topic_parent: Soy un padre
   contact_form_topic_teacher: Soy un profesor/educador
@@ -202,8 +202,8 @@ es-ES:
   dashboard_action_delete_yes: Sí
   dashboard_action_delete_no: 'No'
   dashboard_action_confirm: ¿Borrar?
-  dashboard_action_remove: Remove
-  dashboard_action_remove_confirm: Remove?
+  dashboard_action_remove: eliminar
+  dashboard_action_remove_confirm: ¿eliminar?
   dashboard_action_done: Hecho
   dashboard_action_required: obligatorio
   dashboard_navigation_home_page: Página de inicio del maestro
@@ -242,6 +242,7 @@ es-ES:
   dashboard_students_new_section: '¡Ha creado una nueva sección! Ahora, agregue sus alumnos usando los botones anteriores <b>Añadir alumno</b> y <b>Añadir varios alumnos</b>.'
   dashboard_students_placeholder_name: Nombre del alumno
   dashboard_students_name: Nombre
+  dashboard_students_progress: Progreso
   dashboard_students_age: Edad
   dashboard_students_gender: Sexo
   dashboard_students_male: Hombre
@@ -288,6 +289,10 @@ es-ES:
   dashboard_login_picture: Imagen
   dashboard_login_none: Correo electrónico
   dashboard_new_password: nueva contraseña
+  dashboard_progress_not_completed: No completado
+  dashboard_progress_completed_too_many_blocks: completado, pero tiene demasiados bloques
+  dashboard_progress_completed_perfect: completado, perfecto
+  dashboard_progress_furthest_level_attempted: Nivel más alto intentado
   stats_hoc_2013_heading: 'Increíbles estadísticas de la Hora del Código del año pasado. En sólo una semana:'
   stats_hoc_2013_image_alt: Estadísticas de Hora del Código del 2013
   dashboard_teacher: Profesor
@@ -323,7 +328,7 @@ es-ES:
   carousel_heading_robots: Aprende a programar con robots
   carousel_heading_ide: Plataformas populares entre los docentes
   educator_notes: Notas del educador
-  how_to_teach_hoc: How to Teach an Hour of Code
+  how_to_teach_hoc: 'Cómo enseñar  una "Hora de código"'
   more_resources_educators: Más recursos para profesores y educadores
   participants: participantes
   teachers_notes: Notas del profesor

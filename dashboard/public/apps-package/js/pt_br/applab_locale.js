@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -88,30 +88,29 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "catActions":function(d){return "Ações"},
-"catControl":function(d){return "Laços"},
+"catControl":function(d){return "laços"},
 "catEvents":function(d){return "Eventos"},
 "catLogic":function(d){return "Lógica"},
 "catMath":function(d){return "Matemática"},
-"catProcedures":function(d){return "Funções"},
-"catText":function(d){return "texto"},
-"catVariables":function(d){return "Variáveis"},
-"continue":function(d){return "Continue"},
+"catProcedures":function(d){return "funções"},
+"catText":function(d){return "Texto"},
+"catVariables":function(d){return "variáveis"},
+"continue":function(d){return "Continuar"},
 "createHtmlBlock":function(d){return "criar bloco html"},
 "createHtmlBlockTooltip":function(d){return "Cria um bloco HTML no aplicativo."},
-"finalLevel":function(d){return "Parabéns! Você resolveu o último desafio."},
-"nextLevel":function(d){return "Parabéns! Você completou o desafio."},
+"finalLevel":function(d){return "Parabéns! Você resolveu o desafio final."},
+"nextLevel":function(d){return "Parabéns! Você completou esse desafio."},
 "no":function(d){return "Não"},
-"numBlocksNeeded":function(d){return "Este desafio pode ser resolvido com %1 blocos."},
-"pause":function(d){return "Break"},
+"numBlocksNeeded":function(d){return "Esse desafio pode ser resolvido com %1 blocos."},
+"pause":function(d){return "Quebrar"},
 "reinfFeedbackMsg":function(d){return "Você pode pressionar o botão \"Tentar novamente\" para voltar a executar seu aplicativo."},
 "repeatForever":function(d){return "repita infinitamente"},
 "repeatDo":function(d){return "faça"},
 "repeatForeverTooltip":function(d){return "Executar as ações deste bloco repetidamente enquanto o aplicativo estiver sendo executado."},
-"shareWebappTwitter":function(d){return "Veja o aplicativo que eu fiz. Eu o escrevi sozinho com a @codeorg"},
+"shareApplabTwitter":function(d){return "Veja o aplicativo que eu fiz. Eu o escrevi sozinho com a @codeorg"},
 "shareGame":function(d){return "Compartilhe seu aplicativo:"},
 "stepIn":function(d){return "Step in"},
 "stepOver":function(d){return "Step over"},
 "stepOut":function(d){return "Step out"},
-"turnBlack":function(d){return "ficar preto"},
-"turnBlackTooltip":function(d){return "Deixa a tela preta."},
+"viewData":function(d){return "Exibir dados"},
 "yes":function(d){return "Sim"}};

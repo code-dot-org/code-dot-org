@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -213,7 +213,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "moveDistanceTooltip":function(d){return "Премества актьорът на определена дистанция в определената посока."},
 "moveSprite":function(d){return "премести"},
 "moveSpriteN":function(d){return "премести актьор "+appLocale.v(d,"spriteIndex")},
-"toXY":function(d){return "to x,y"},
+"toXY":function(d){return "спрямо x, y"},
 "moveDown":function(d){return "премести надолу"},
 "moveDownTooltip":function(d){return "Премести актьора надолу."},
 "moveLeft":function(d){return "предвижване наляво"},
@@ -265,11 +265,14 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "projectilePurpleHearts":function(d){return "лилави сърца"},
 "projectileRedHearts":function(d){return "червени сърца"},
 "projectileRandom":function(d){return "случаен"},
-"projectileAnna":function(d){return "Анна"},
-"projectileElsa":function(d){return "Елза"},
-"projectileHiro":function(d){return "Хиро"},
-"projectileBaymax":function(d){return "Баумакс"},
-"projectileRapunzel":function(d){return "Рапунцел"},
+"projectileAnna":function(d){return "кука"},
+"projectileElsa":function(d){return "блясък"},
+"projectileHiro":function(d){return "микроботи"},
+"projectileBaymax":function(d){return "ракета"},
+"projectileRapunzel":function(d){return "тенджера"},
+"projectileCherry":function(d){return "череша"},
+"projectileIce":function(d){return "лед"},
+"projectileDuck":function(d){return "патица"},
 "reinfFeedbackMsg":function(d){return "Може да натиснете бутона \"Опитай отново\", за да се върнете към играта си."},
 "repeatForever":function(d){return "Повтаря завинаги"},
 "repeatDo":function(d){return "правя"},
@@ -277,6 +280,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "saySprite":function(d){return "казва"},
 "saySpriteN":function(d){return "актьор "+appLocale.v(d,"spriteIndex")+" казва"},
 "saySpriteTooltip":function(d){return "Запълни балончето за реч със съответния текст на определен актьор."},
+"saySpriteChoices_1":function(d){return "Здрасти!"},
+"saySpriteChoices_2":function(d){return "Как си?"},
+"saySpriteChoices_3":function(d){return "Това е забавно..."},
 "scoreText":function(d){return "Резултат: "+appLocale.v(d,"playerScore")},
 "setBackground":function(d){return "задава фон"},
 "setBackgroundRandom":function(d){return "задайте произволен фон"},
@@ -293,6 +299,12 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setBackgroundSpace":function(d){return "задаване на фон космос"},
 "setBackgroundTennis":function(d){return "задава фон тенискорт"},
 "setBackgroundWinter":function(d){return "задава фон зима"},
+"setBackgroundLeafy":function(d){return "Задайте зеления фон"},
+"setBackgroundGrassy":function(d){return "Задавайте тревист фон"},
+"setBackgroundFlower":function(d){return "Задавайте фон цвете"},
+"setBackgroundTile":function(d){return "задайте фасетен фон"},
+"setBackgroundIcy":function(d){return "Задаване леден фон"},
+"setBackgroundSnowy":function(d){return "Задайте снежен фон"},
 "setBackgroundTooltip":function(d){return "Задава фоновото изображение"},
 "setEnemySpeed":function(d){return "задайте скоростта на врага"},
 "setPlayerSpeed":function(d){return "задайте скоростта на героя"},
@@ -384,6 +396,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "soundWinPoint2":function(d){return "спечели точка 2"},
 "soundWood":function(d){return "дърво"},
 "speed":function(d){return "скорост"},
+"startSetValue":function(d){return "старт (ракета-най-висока функция)"},
 "stopSprite":function(d){return "Стоп"},
 "stopSpriteN":function(d){return "спира актьор "+appLocale.v(d,"spriteIndex")},
 "stopTooltip":function(d){return "Спира движението на актьора."},

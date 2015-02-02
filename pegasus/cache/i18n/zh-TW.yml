@@ -256,6 +256,7 @@
     按鈕將您的學生資料加入。
   dashboard_students_placeholder_name: '學生姓名 '
   dashboard_students_name: 你的名字
+  dashboard_students_progress: Progress
   dashboard_students_age: 年齡
   dashboard_students_gender: 性別
   dashboard_students_male: 男性
@@ -304,6 +305,10 @@
   dashboard_login_picture: 圖片
   dashboard_login_none: 電子郵件
   dashboard_new_password: 新密碼
+  dashboard_progress_not_completed: 未完成
+  dashboard_progress_completed_too_many_blocks: 完成，但使用過多積木
+  dashboard_progress_completed_perfect: 完美完成
+  dashboard_progress_furthest_level_attempted: furthest level attempted
   stats_hoc_2013_heading: 去年的一小時程式設計有令人難以置信的統計資料。在一個禮拜內：
   stats_hoc_2013_image_alt: 統計來自2013的Hour of Code
   dashboard_teacher: 教師
@@ -788,8 +793,3 @@
   alice_beyond_longdescription: 愛麗絲計劃利用一種創新的程式設計環境支援3D 動畫創作 ，及提供跨年齡和年級的教學工具和教材來訓練學生的計算思維、
     解決問題技巧和電腦程式設計。
   sphero_beyond_longdescription: 無論你是一位教育家或父母， SPRK 給孩子一個有趣速成的機器人程式設計課程，並同時磨練孩子的數學和科學的技能。
-  dashboard_students_progress: Progress
-  dashboard_progress_not_completed: not completed
-  dashboard_progress_completed_too_many_blocks: completed, too many blocks
-  dashboard_progress_completed_perfect: completed, perfect
-  dashboard_progress_furthest_level_attempted: furthest level attempted

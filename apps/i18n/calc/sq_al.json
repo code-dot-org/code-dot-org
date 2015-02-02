@@ -2,6 +2,7 @@
   "compute": "llogarit",
   "equivalentExpression": "Përpiqu të riformulosh argumentat e tu për të pasur egzaktësisht të njëjtën shprehje.",
   "extraTopBlocks": "Ke shkëputur blloqet. Doje t'i bashkangjisje te blloku \" i llogaritur\"?",
+  "failedInput": "Your function does not return the right result for all values.",
   "goal": "Qëllimi:",
   "reinfFeedbackMsg": "Ky është krimi yt/jote! Vazhdo të punosh me të, ose kalo në pjesën tjetër!",
   "yourExpression": "Thënia jote:"

@@ -88,6 +88,6 @@
   "signup": "Regisztrálj a bevezető képzésre",
   "hintHeader": "Itt egy ötlet:",
   "genericFeedback": "Nézd meg hogy milyen lett, és próbáld meg kijavítani a programod.",
-  "toggleBlocksErrorMsg": "You need to correct an error in your program before it can be shown as blocks.",
+  "toggleBlocksErrorMsg": "Ki kell javítanod egy hibát a programodban, mielőtt blokként megjelenhetne.",
   "defaultTwitterText": "Nézd meg, mit csináltam"
 }

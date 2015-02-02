@@ -48,7 +48,7 @@
         edit-code:
           desc: Editar código (beta)
           MazeEC: Etapa 1
-          Webapp: Etapa 2
+          Applab: Etapa 2
           ArtistEC: Etapa 3
           StudioEC: Etapa 4
         events:
@@ -103,6 +103,8 @@
         ArtistEC: El artista
         TextMatch: Combinación de texto
         StudioEC: Laboratorio de Juegos
+        Applab: App Lab
+        NetSim: Internet Simulator
     trophy:
       name:
         Bronze: Bronce
@@ -583,7 +585,7 @@
           la palabra DEBAJO
         maze_wordsearch_k_20: ¡Esta es una prueba! Mueveme en una dirección, y luego
           en otra para deletrear la palabra HISTORIA
-        webapp_ec_simple: Crea tu aplicación web mediante createHtmlBlock.
+        applab_ec_simple: Create your app by using the blocks in the toolbox.
         turtle_ec_1_2: 'Ahora, dibuja un cuadrado. Nota: usa tu color favorito eligiéndolo
           en el nuevo bloque "Color De Lapiz".'
         turtle_ec_1_10: '¡Lo lograste! Ahora, dibujar cualquier cosa que quieras.

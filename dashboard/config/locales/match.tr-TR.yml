@@ -73,6 +73,8 @@
       2-3 Big Event Match 1:
         Matching: Eşleştirme
         /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
+        Match the button combination to the dance moves.: Dans hareketleri için düğme
+          kombinasyonlarını eşleştir.
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
@@ -85,8 +87,8 @@
         Matching: Eşleştirme
         /script_assets/2-3_images/unplugged/binary_1_q.png, 250: /script_assets/2-3_images/unplugged/binary_1_q.png,
           250
-        Use the key to match each code to its letter: Use the key to match each code
-          to its letter
+        Use the key to match each code to its letter: Her kodu ilgili harf ile eşleştirmek
+          için anahtarı kullan
         <strong>N</strong>: <strong>N</strong>
         <strong>O</strong>: <strong>O</strong>
         <strong>P</strong>: <strong>P</strong>
@@ -97,7 +99,7 @@
         /script_assets/2-3_images/unplugged/binary_1_a4.png: /script_assets/2-3_images/unplugged/binary_1_a4.png
       2-3 Graph Paper Match 1:
         Matching: Eşleştirme
-        Match the grid to the program: Match the grid to the program
+        Match the grid to the program: Tabloyu program ile eşleştirin
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
@@ -106,7 +108,7 @@
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
       2-3 Relay Programming Match 1:
         Matching: Eşleştirme
-        Match the grid to the program: Match the grid to the program
+        Match the grid to the program: Tabloyu program ile eşleştirin
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
@@ -127,31 +129,29 @@
         /script_assets/4-5_images/maze/4-5_maze_match_1_a3.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a3.png
       4-5 Algorithms Match 1:
         Matching: Eşleştirme
-        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Match
-          the steps in the Dice Race game to the order that they should appear in
-          the algorithm.
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Zar
+          Yarışı oyununun algoritmasının çalışması için adımları doğru şekilde yerleştirin.
         <h4>1)</h4>: <h4>1)</h4>
         <h4>2)</h4>: <h4>2)</h4>
         <h4>3)</h4>: <h4>3)</h4>
         <h4>4)</h4>: <h4>4)</h4>
         <h4>Set Player 1 score to 0</h4>: <h4>1. Oyuncu puanını 0 yap</h4>
         <h4>Player 1 rolls die</h4>: <h4>Oynama sırası 1. Oyuncuda</h4>
-        <h4>Add Player 1 roll to total score</h4>: <h4>Add Player 1 roll to total
-          score</h4>
-        <h4>Compare player scores to see who wins</h4>: <h4>Compare player scores
-          to see who wins</h4>
+        <h4>Add Player 1 roll to total score</h4>: <h4> Player 1 oyuncusunu toplam
+          skora ekle</h4>
+        <h4>Compare player scores to see who wins</h4>: <h4>Kazananı görmek için oyuncuların
+          puanlarını karşılaştır.</h4>
       4-5 Computational Thinking Match 1:
         Matching: Eşleştirme
-        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Each
-          of these vehicles has been decomposed into smaller pieces. Match each vehicle
-          with its decomposed list.
-        '<h3>Wheels/side: 2<br/>Windows/side: 0</h3>': '<h3>Wheels/side: 2<br/>Windows/side:
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Her
+          araçta daha küçük parçalar var. Listedeki parçaları doğru şekilde eşleştir.
+        '<h3>Wheels/side: 2<br/>Windows/side: 0</h3>': '<h3>Teker/Kenar: 2<br/>Pencere/Kenar:
           0</h3>'
-        '<h3>Wheels/side: 2<br/>Windows/side: 1</h3>': '<h3>Wheels/side: 2<br/>Windows/side:
-          1</h3>'
-        '<h3>Wheels/side: 2<br/>Windows/side: 6</h3>': '<h3>Wheels/side: 2<br/>Windows/side:
+        '<h3>Wheels/side: 2<br/>Windows/side: 1</h3>': '<h3>Teker/Kenar: 2<br/>Pencere/Kenar:
+          1 </h3>'
+        '<h3>Wheels/side: 2<br/>Windows/side: 6</h3>': '<h3>Teker/Kenar: 2<br/>Pencere/Kenar:
           6</h3>'
-        '<h3>Wheels/side: 3<br/>Windows/side: 2</h3>': '<h3>Wheels/side: 3<br/>Windows/side:
+        '<h3>Wheels/side: 3<br/>Windows/side: 2</h3>': '<h3>Teker/Kenar: 3<br/>Pencere/Kenar:
           2</h3>'
         /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png
         /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png
@@ -159,8 +159,8 @@
         /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png
       4-5 Suncatchers Match 1:
         Matching: Eşleştirme
-        Match each program to the word it makes, using the provided group of skills.: Match
-          each program to the word it makes, using the provided group of skills.
+        Match each program to the word it makes, using the provided group of skills.: Beceriler
+          tablosuna bakarak kelimeler ile oluşturan programları eşleştirin.
         /script_assets/4-5_images/unplugged/suncatchers_1.png: /script_assets/4-5_images/unplugged/suncatchers_1.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a1.png: /script_assets/4-5_images/unplugged/suncatchers_1_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a2.png: /script_assets/4-5_images/unplugged/suncatchers_1_a2.png
@@ -204,7 +204,7 @@
         /script_assets/k_1_images/artist_images/large_triangle2.png: /script_assets/k_1_images/artist_images/large_triangle2.png
       K-1 Artist Loops Match 1:
         Matching: Eşleştirme
-        Match the code to the stairs it draws.: Match the code to the stairs it draws.
+        Match the code to the stairs it draws.: Kodu çizdiği merdiven ile eşleştir.
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png
@@ -248,6 +248,8 @@
       K-1 Big Event Match 1:
         Matching: Eşleştirme
         /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
+        Match the button combination to the dance moves.: Dans hareketleri için düğme
+          kombinasyonlarını eşleştir.
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
@@ -256,8 +258,8 @@
         /script_assets/k_1_images/unplugged_images/big_event_1_a3.png: /script_assets/k_1_images/unplugged_images/big_event_1_a3.png
       K-1 Happy Maps Match 1:
         Matching: Eşleştirme
-        Match the Map to the arrow that gets the Flurb to the treasure: Match the
-          Map to the arrow that gets the Flurb to the treasure
+        Match the Map to the arrow that gets the Flurb to the treasure: Flurb, hangi
+          ok sayesinde hazineye ulaşabilir
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q3.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q3.png
@@ -266,8 +268,8 @@
         /script_assets/k_1_images/unplugged_images/left.png: /script_assets/k_1_images/unplugged_images/left.png
       K-1 Move It Match 1:
         Matching: Eşleştirme
-        Match the Map to the algorithm that gets the Flurb to the flowers.: Match
-          the Map to the algorithm that gets the Flurb to the flowers.
+        Match the Map to the algorithm that gets the Flurb to the flowers.: Doğru
+          algoritmayı bularak Flurb'ü çiçeklere ulaştır.
         /script_assets/k_1_images/unplugged_images/move_it_2_q1.png: /script_assets/k_1_images/unplugged_images/move_it_2_q1.png
         /script_assets/k_1_images/unplugged_images/move_it_2_q2.png: /script_assets/k_1_images/unplugged_images/move_it_2_q2.png
         /script_assets/k_1_images/unplugged_images/move_it_2_q3.png: /script_assets/k_1_images/unplugged_images/move_it_2_q3.png
@@ -321,10 +323,10 @@
         /script_assets/msm/Unit 1/Exercise_5_question_4.png: /script_assets/msm/Unit
           1/Exercise_5_question_4.png
       Match math to code:
-        Converting Math to Code: Converting Math to Code
-        Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!: Match
-          each mathematical expression with the correct code. Use a circle of evaluation
-          to help you get to the answer!
+        Converting Math to Code: Matematiği Koda Çevirme
+        Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!: Matematiksel
+          ifadelerin hepsini doğru kodlarla eşleştir. Cevabı bulmanda kolaylık sağlaması
+          için değerlendirme döngüsünü kullan!
         (15 + 3) x (72 - 19): (15 + 3) x (72 - 19)
         3 x 15 + (- 72 19): 3 x 15 + (- 72 19)
         72 + 3 - 19 x 15: 72 + 3 - 19 x 15
@@ -334,22 +336,22 @@
         (- (+ 72 3) (* 19 15)): (- (+ 72 3) (* 19 15))
         (+ (- (* 3 15) 72) 19): (+ (- (* 3 15) 72) 19)
       parts of contract:
-        Parts of a Contract: Parts of a Contract
-        Here is a contract for a new function. Match each item with the word that describes it.: Here
-          is a contract for a new function. Match each item with the word that describes
-          it.
-        yearbook-picture: yearbook-picture
-        string numer: string numer
+        Parts of a Contract: Sözleşmenin kısımları
+        Here is a contract for a new function. Match each item with the word that describes it.: Burada
+          yeni bir fonksiyon için sözleşme var. Her öğeyi tanımladığı kelimelerle
+          eşleştir.
+        yearbook-picture: Yıllık resmi
+        string numer: Dizi numarası
         image: görüntü
         (yearbook-picture "Sally" 1992): (Yıllık-resmi "Selin" 1992)
         function name: Fonksiyon adı
         domain: alan adı
-        range: range
+        range: Aralık
         example: örnek
       Match example to contract:
-        Contracts of Functions: Contracts of Functions
-        Match each example with the correct contract!: Match each example with the
-          correct contract!
+        Contracts of Functions: Fonksiyonların kontratları
+        Match each example with the correct contract!: Her örneği doğru teknik ile
+          birleştir!
         (big-string? "gigantic" 5): (big-string? "gigantic" 5)
         (find-price 4): (find-price 4)
         (small-star "blue"): (small-star "blue")

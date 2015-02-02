@@ -3,7 +3,7 @@
   select_language: Lütfen dilinizi seçiniz
   computer_science: Bilgisayar Bilimleri
   computer_science_edweek: Bilgisayar Bilimleri Eğitim Haftası
-  csedweek_dates: December 8-14, 2014
+  csedweek_dates: 8-14 Aralık 2014
   csedweek_banner_hoc: 'T<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Kodlama Saati</a> geliyor. Öğretmenleri organizatörleri , <a
     href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Kodlama
@@ -129,12 +129,12 @@
     satırlarının % {hatları} yazılır.'
   start_hoc: Kod saatine başla
   contact_form_topic_press: Basın / medya ( röportaj veya konuşma randevusu)
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
-    - Michael Clark, Teacher'
-  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
-    - Nina Nichols Peery, Teacher'
-  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
-    Alzate, 5th grader'
+  stats_michael: Öğrencilerimi <b>hiçbir zaman</b> öğrenme konusunda bu kadar heyecanlı
+    görmemiştim." - Michael Clark, Öğretmen
+  stats_nina: '"Her bir gün aynı sonucu verdi&mdash; %100 katılım." - Nina Nichols
+    Peery, Öğretmen'
+  stats_student: '"Bunun <b>hayatta ancak bir kere</b> karşıma çıkacak bir şans olduğunu
+    biliyordum." - Mariana Alzate, 5. sınıf öğrencisi'
   studiobar_title: <a href='http://studio.code.org'>Code Studio</a>'yu Keşfedin
   studiobar_elementary_title: Temel dersler
   studiobar_elementary_body: K&#8209;5 hazırlanan üç yeni dersimiz
@@ -145,11 +145,11 @@
   studiobar_teacher_title: Öğretmenler için
   studiobar_teacher_body: Sınıfınıza Code Studio 'yu tanıtın
   studiobar_frozen_title: Saat Kodu
-  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
-  studiobar_donate_title: Donate
-  studiobar_donate_body: One child learns for each dollar you donate
-  studiobar_shop_title: Shop
-  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
+  studiobar_frozen_body: Anna ve Elsa ile kış diyarı oluştur
+  studiobar_donate_title: Bağışla
+  studiobar_donate_body: Bağış yapacağın her dolar ile bir çocuk daha öğrenecek
+  studiobar_shop_title: Mağaza
+  studiobar_shop_body: Kalıplarını kır. Logomuzu gururla taşı.
   contact_form_topic_student: Bir öğrenciyim
   contact_form_topic_parent: Bir ebeveynim
   contact_form_topic_teacher: Bir öğretmen/eğitimciyim
@@ -241,17 +241,17 @@
   dashboard_action_delete_yes: Evet
   dashboard_action_delete_no: Hayır
   dashboard_action_confirm: Silinsin mi?
-  dashboard_action_remove: Remove
-  dashboard_action_remove_confirm: Remove?
+  dashboard_action_remove: Kaldır
+  dashboard_action_remove_confirm: Kaldırılsın mı?
   dashboard_action_done: Bitti
   dashboard_action_required: gerekli
   dashboard_navigation_home_page: Öğretmen Ana Sayfa
   dashboard_navigation_section_student_progress: Öğrenci hesapları ve ilerleme
-  dashboard_navigation_section_teacher_progress: Your Course Progress
+  dashboard_navigation_section_teacher_progress: Ders Gelişiminiz
   dashboard_navigation_section_lesson_plans: Ders planları ve kaynaklar
-  dashboard_navigation_section_community: Help and Community
-  dashboard_navigation_section_pd: Professional Development
-  dashboard_navigation_section_speakers: Computer Science <br/> Guest Speakers
+  dashboard_navigation_section_community: Yardım ve Topluluk
+  dashboard_navigation_section_pd: Mesleki Gelişim
+  dashboard_navigation_section_speakers: Bilgisayar Bilimi<br/>Davetli Konuşmacılar
   dashboard_navigation_all_sections: Öğrenci hesapları ve ilerleme
   dashboard_navigation_view_progress: İlerlemeyi Görüntüle
   dashboard_navigation_add_students: Öğrenci EKle
@@ -293,6 +293,7 @@
     ekleyin.
   dashboard_students_placeholder_name: Öğrenci İsmi
   dashboard_students_name: İsim
+  dashboard_students_progress: İlerleme Durumu
   dashboard_students_age: Yaş
   dashboard_students_gender: Cinsiyet
   dashboard_students_male: Erkek
@@ -350,6 +351,10 @@
   dashboard_login_picture: Resim
   dashboard_login_none: E-posta
   dashboard_new_password: yeni şifre
+  dashboard_progress_not_completed: tamamlanmadı
+  dashboard_progress_completed_too_many_blocks: tamamlanmadı, fazla blok var
+  dashboard_progress_completed_perfect: tamamlandı, harika
+  dashboard_progress_furthest_level_attempted: denenen en yüksek seviye
   stats_hoc_2013_heading: 'Hour of Code''dan geçen yılın inanılmaz istatistikleri.
     Sadece bir haftada:'
   stats_hoc_2013_image_alt: Hour of Code 2013'den istatistikler
@@ -371,7 +376,7 @@
     ilgili oturum açma tiplerini, <b> resim, yazı ya da mail adresi gibi </b>, açıklamaya
     yardımcı olur.
   dashboard_faq: Sık sorulan sorular
-  code_hoc_coming: The Hour of Code is here - December 8-14!
+  code_hoc_coming: Kod Saati burada - Aralık 8-14!
   code_sign_up: CS Education Week' e katılmak için kaydolun.
   learn_more: Daha Fazla Bilgi Edinin
   hoc2014_try_new_tutorials: Yeni Hour of Code eğitimlerimizi deneyin
@@ -381,7 +386,7 @@
   carousel_heading_international: Kendi dilinizde eğitimler
   carousel_heading_domestic: Eğitimlerin ingilizcesi mevcut
   carousel_heading_beginners: Yeni başlayanlar için dersler
-  carousel_heading_javascript: Tutorials that teach JavaScript
+  carousel_heading_javascript: Javascript dersleri
   carousel_heading_unplugged: İnternet bağlantınız veya cihazınız yok mu? "Enstrümansız"
     bilgisayar bilimlerini deneyin
   carousel_heading_devices: Tabletler ve telefonlar için eğitim uygulamaları
@@ -392,7 +397,7 @@
   carousel_heading_robots: Robotlar ile programlamayı öğrenin
   carousel_heading_ide: Öğretmenler arasında popüler platformlar
   educator_notes: Eğitimci notları
-  how_to_teach_hoc: How to Teach an Hour of Code
+  how_to_teach_hoc: Bir Kod Saati Nasıl Öğretilir
   more_resources_educators: Öğretmenler ve eğitimciler için daha fazla kaynak
   participants: katılımcılar
   teachers_notes: Öğretmen notları
@@ -404,7 +409,7 @@
     eğitimlere erişmek için, modern web tarayıcısına yükseltin <a href="http://browsehappy.com/"
     target="_blank"></a>
   mobile_devices: Mobil cihazlar için eğitimler
-  frozen_name: Code with Anna and Elsa
+  frozen_name: Anna ve Elsa ile kodlama yap
   codeorg_name: İlk bilgisayar programınızı yazın
   codeintl_name: İlk bilgisayar programınızı yazın
   thinkersmithspanish_name: Mis Amigos Roboticos
@@ -442,8 +447,8 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Taş,Kağıt, Makas
-  hourofcode_name: Placeholder for new code.org/hoc
-  playlab_name: Play Lab
+  hourofcode_name: Yeni code.org/hoc için placeholder
+  playlab_name: Oyun Laboratuvarı
   codeorg_gradelevel: 4-104 Yaş
   codeintl_gradelevel: 4-104 Yaş
   thinkersmithspanish_gradelevel: Por todos
@@ -494,14 +499,14 @@
   khanfr_platformtext: Modern Web tarayıcıları
   khanpl_platformtext: Modern Web tarayıcıları
   tynker_platformtext: Modern Web tarayıcıları
-  scratch_platformtext: Desktop-only web browsers (not tablets)
+  scratch_platformtext: Masaüstü için web tarayıcıları (tabletler dahil değil)
   lightbot_platformtext: BÜTÜN tarayıcılar ve IOS, Android veya oyun konsolu
   thinkersmith_platformtext: İnternetsiz
   condcards_platformtext: İnternetsiz
   lightbotintl_platformtext: IOS Android (veya web tarayıcı)
   codehs_platformtext: Modern tarayıcılar. (Kursu takip etmek ücretlidir.)
   codecademy_platformtext: Modern web tarayıcıları. IOS Android uygulamaları
-  codecombat_platformtext: Modern web browsers (Follow-on course requires $$)
+  codecombat_platformtext: Modern tarayıcılar.(Kursu takip etmek ücretlidir.)
   codemonkey_platformtext: Modern Web tarayıcıları
   codeavengers_platformtext: Modern Web tarayıcıları
   processing_platformtext: Modern Web tarayıcıları
@@ -560,7 +565,8 @@
   tynkerapp_shortdescription: Eğlenceli kodlama yapbozları çözerek programlama öğrenin.
   robomindnl_shortdescription: Sanal robotumuz için kod yazın
   flappy_shortdescription: Kendi oyununuzu yapın - Flappy Bird, Shark veya Denizaltı
-  bitsbox_shortdescription: Code a series of apps to play and share, using real JavaScript.
+  bitsbox_shortdescription: Gerek JavaScript kullanaraki oynanacak ve paylaşılacak
+    oyunlar için bir dizi kodlama yap.
   makegameswithus_shortdescription: Bir iPhone oyunu yap! Kod yazarak Canavarınıza
     yeni hareketler öğretin!
   touchdevelop_shortdescription: 'Telefonunuz üzerinden yapbozlar çözün, oyunlar yaratın
@@ -571,18 +577,18 @@
     nasıl gösterdiğini öğrenin
   kodableunplugged_shortdescription: Bilgisayarsız eğlenceli bir egzersiz
   projguts_shortdescription: Taş/Kağıt/Makas kullanarak modelleme ve simulasyon deneyin
-  hourofcode_shortdescription: Placeholder for new code.org/hoc
+  hourofcode_shortdescription: Yeni code.org/hoc için placeholder
   frozen_shortdescription: Buzun büyüsü ve güzelliğini keşfetmek için Anna ve Elsa'ya
     katılıp kodlama yapalım.
-  playlab_shortdescription: Create a story or make a game with Play Lab!
-  codeorg_longdescription: Learn the basic concepts of Computer Science with drag
-    and drop programming. This is a game-like, self-directed tutorial starring video
-    lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn
-    repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
-  codeintl_longdescription: Learn the basic concepts of Computer Science with drag
-    and drop programming. This is a game-like, self-directed tutorial starring video
-    lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn
-    repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
+  playlab_shortdescription: Oyun Laboratuvarı ile hikaye yarat veya oyun yap!
+  codeorg_longdescription: Sürükle ve bırak sistemi ile Bilgisayar Biliminin basit
+    kavramlarını öğrenin. Bu, video derslerinde Bill Gates, Mark Zuckerberg gibi ünlüler
+    Angry Birds ve Plants vs. Zombies gibi oyunların da bulunduğu kendi kendini yöneten
+    eğitimli oyun denebilir.
+  codeintl_longdescription: Sürükle ve bırak sistemi ile Bilgisayar Biliminin basit
+    kavramlarını öğrenin. Bu, video derslerinde Bill Gates, Mark Zuckerberg gibi ünlüler
+    Angry Birds ve Plants vs. Zombies gibi oyunların da bulunduğu kendi kendini yöneten
+    eğitimli oyun denebilir.
   thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
     los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
     espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
@@ -600,24 +606,26 @@
     temellerini öğrenin. Kendi kendinize ya da sınıfınızla birlikte yapabilirsiniz!
   khanpl_longdescription: Kodlamayla eğlenceli çizimler oluştururken JavaScript dilinin
     temellerini öğrenin. Kendi kendinize ya da sınıfınızla birlikte yapabilirsiniz!
-  tynker_longdescription: Build your own games and share with friends! Solve fun coding
-    puzzles and learn programming concepts in each level. Personalize games with animated
-    characters, multiple levels and rich props. Make your games realistic using physics.
-    See the code as visual blocks or JavaScript. Take your games mobile on iPads and
-    Android tablets. Over a dozen fun activities to choose from!
+  tynker_longdescription: Kendi oyunlarınızı yapın ve arkadaşlarınızla paylaşın. Her
+    seviyede programlama terimlerini öğrenin ve eğlenceli kodlama bulmacalarını çözün.
+    Canlandırılmış karakterler, çoklu seviyeler ve zengin sahnelerle oyunlarınızı
+    kişiselleştirin. Fiziksel yapıları kullanarak kendi gerçekçi oyunlarınızı yapın.
+    Görsel bloklar ve JavaScript gibi kodları görün. İPadler ve Android tabletlerdeki
+    oyunları alın. Bir düzine eğlenceli aktiviteler arasından seçim yapın!
   scratch_longdescription: Strach ile kendi interaktif oyunlarınızı, hikayelerinizi,
     animasyonlarınızı yaratabilir &mdash;  ve arkadaşlarınızla paylaşabilirsiniz.
     Adınızı animasyonda canlandırarak, tebrik kartı oluşturarak ya da Pong game yazarak
     başlayın.
-  lightbot_longdescription: Guide Lightbot to light up all the blue tiles! Lightbot
-    is a puzzle game that uses programming game mechanics to let players gain a practical
-    understanding of basic coding. Learn to sequence instructions, write procedures,
-    and utilize loops to solve levels. Ideal for all ages.
-  thinkersmith_longdescription: Using a pre-defined "Robot Vocabulary" students will
-    figure out how to guide each other to accomplish specific tasks without discussing
-    them first. This lesson teaches children the connection between symbols and actions,
-    as well as the invaluable skill of debugging. "My Robotic Friends" works best
-    as a group activity and includes a teacher workbook for classroom use.
+  lightbot_longdescription: Tüm mavi çinileri yakması için Işık Botuna rehberlik et.
+    Işık Botu, oyuncuların basit kodlamayı pratik olarak öğrenmeleri için oyun programlama
+    mekaniğini kullanan bir bulmaca oyunudur. İçeriklerin sırasını öğrenin, işlemleri
+    yazın ve bölümleri çözmek için döngüleri kulanın. Tüm yaşlar için uygundur.
+  thinkersmith_longdescription: Önceden belirlenmiş "Robot Sözlük" kullanarak öğrenciler
+    belirli görevlerde ilk anlatım olmadan tamamlamalarında nasıl bir yol izleneceğini
+    öğrenecekler. Bu ders, öğrencilere, semboller ve hareketler arasındaki ilişkiyi
+    ayrıca önemli olan hata ayıklama becerilerini öğrenecekler. "Robotik Arkadaşlarım"
+    grup aktivitesi olarak en iyi şekilde çalışır ve sınıfta kullanmak için bir öğretmen
+    çalışma kitabı içerir.
   condcards_longdescription: Bir deste kart kullanarak, algoritmaları ve koşullu ifadeleri
     bu "bilgisayarsız"  aktivitede öğren. Öğrenciler bu aktiviteyi gruplar halinde
     yapabilir, her grubun bir deste karta ihtiyacı vardır.
@@ -706,10 +714,10 @@
   projguts_longdescription: This "unplugged" activity helps students learn how modeling
     and simulation works by having a group of students play different versions of
     the Rock / Paper / Scissors game, and see the results as different modeling experiments.
-  hourofcode_longdescription: Placeholder for new code.org/hoc
-  frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
-    magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
-    and make a winter wonderland that you can then share with your friends!
+  hourofcode_longdescription: Yeni code.org/hoc için placeholder
+  frozen_longdescription: Hadi kod kullanarak sihri ve buzun güzelliğini keşfedecek
+    olan Anna ve Elsa'ya katıl. Buz kayağı ve kış harikalar diyarı gibi kar taneleri
+    ve desenler oluşturacaksın sonra bunları arkadaşlarınla paylaşabileceksin!
   playlab_longdescription: Create a story or make a game with Play Lab! Make animals,
     pirates, zombies, ninjas, and many more characters move, make sounds, score points,
     and even throw fireballs!
@@ -1031,8 +1039,3 @@
   sphero_beyond_longdescription: Whether you're an educator or a parent, SPRK lessons
     give kids a fun crash course in programming robots while sharpening their skills
     in math and science.
-  dashboard_students_progress: Progress
-  dashboard_progress_not_completed: not completed
-  dashboard_progress_completed_too_many_blocks: completed, too many blocks
-  dashboard_progress_completed_perfect: completed, perfect
-  dashboard_progress_furthest_level_attempted: furthest level attempted

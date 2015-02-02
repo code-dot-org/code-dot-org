@@ -49,7 +49,7 @@
         edit-code:
           desc: Edit kode (beta)
           MazeEC: Tahap 1
-          Webapp: Tahap 2
+          Applab: Tahap 2
           ArtistEC: Tahap 3
           StudioEC: Tahap 4
         events:
@@ -100,10 +100,12 @@
         Jigsaw: Teka-teki
         MazeStep: Mode tahapan labirin
         Wordsearch: Carikata
-        Webapp: Aplikasi Web
+        Webapp: Laboratorium Aplikasi
         ArtistEC: Artis
         TextMatch: Cocok Teks
         StudioEC: Lab Permainan
+        Applab: Laboratorium Aplikasi
+        NetSim: Simulator Internet
     trophy:
       name:
         Bronze: Perunggu
@@ -435,9 +437,8 @@
         flappy_8: Kamu dapat mengatur visual kapan saja, tidak perlu hanya ketika
           permainan dimulai. Cobalah membuat latar belakang berubah secara acak ketika
           event berganti, misalnya ketika melewati penghalang.
-        flappy_9: Untuk membuat permainan lebih bervariasi, jika mengenai hambatan
-          atau suatu permukaan, Anda dapat membuat permainan kembali ke skor 0, daripada
-          mengakhiri permainan.
+        flappy_9: Untuk mencampurkan hal-hal, ketika memukul sebuah benda, daripada
+          mengakhiri permainan cobalah mengatur nilai kembali ke 0.
         flappy_11: Butalah game Flappy anda. Anda dapat merubah semua visualisasi
           dan aturan. Setelah usai klik Selesai untuk memberikannya pada teman anda
           agar ia mencoba pada ponselnya.
@@ -585,7 +586,7 @@
           BELOW
         maze_wordsearch_k_20: Ini adalah tes! Gerakkan saya lurus, kemudian akan mengeja
           kata STORY
-        webapp_ec_simple: Buatlah aplikasi web anda dengan memakai createHtmlBlock.
+        applab_ec_simple: Buat aplikasimu menggunakan blok dalam toolbox.
         turtle_ec_1_2: 'Sekarang, gambarlah sebuah bujur sangkar. CATATAN: gunakan
           warna favorit Anda dengan memilihnya dalam blok "penColor" yang baru.'
         turtle_ec_1_10: 'Anda berhasil! Sekarang, gambarlah apapun yang Anda mau.

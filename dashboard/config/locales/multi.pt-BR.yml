@@ -115,6 +115,10 @@
         Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Comece
           com um quadrado<br/>Coloque um triângulo abaixo do quadrado<br/>Coloque
           um paralelogramo à direita do triângulo
+        ? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
+          below square<br/>Put triangle right of parallelogram
+        : Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
+          below square<br/>Put triangle right of parallelogram
       2-3 Algorithms Multi 2:
         Multiple Choice: Múltipla Escolha
         Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Comece
@@ -229,6 +233,12 @@
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png
+        ? A purple flower may have either 3, 2 or 1 nectars, but you don't know how
+          many. Which blocks correctly check and collect all of the nectar from a
+          purple flower?
+        : A purple flower may have either 3, 2 or 1 nectars, but you don't know how
+          many. Which blocks correctly check and collect all of the nectar from a
+          purple flower?
       4-5 bee debug multi 1:
         Bee Debug Multiple Choice: Depuração da abelha - Múltipla escolha
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png
@@ -294,6 +304,10 @@
         <h4>_____ is a _____ city.</h4>: <h4>_____ é uma cidade _____.</h4>
         <h4>_____ is _____ a _____.</h4>: <h4>_____ é _____ uma _____.</h4>
         <h4>Eugene is a _____ city.</h4>: <h4>Eugene é uma cidade _____.</h4>
+        ? Here are three sentences. Which of the templates below correctly abstracts
+          so that all three match the same pattern as the template?
+        : Here are three sentences. Which of the templates below correctly abstracts
+          so that all three match the same pattern as the template?
       4-5 Crowdsourcing Multi 1:
         Multiple Choice: Múltipla Escolha
         Which of these pictures best represents crowdsourcing?: Qual dessas figuras
@@ -344,22 +358,38 @@
           de forma que o refrão se repita a cada vez que ela for chamada?'
         1: ': Qual é a maior parte dessa música que você pode definir como o refrão,
           de forma que o refrão se repita a cada vez que ela for chamada?'
-        Lou, Lou, skip to my Lou,: Lou, Lou, skip to my Lou,
+        Lou, Lou, skip to my Lou,: Lou, Lou, venha pro meu Lou,
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou,
-          Lou, pule para o Lou, <br/>Lou, Lou, pule para o Lou, <br/>Lou, Lou, pule
-          para o Lou, <br/>Pule para o Lou, minha querida.
-        2: '? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
-          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the
-          buttermilk, <br/>Shoo, fly, shoo,'
-        3: ': Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
-          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the
-          buttermilk, <br/>Shoo, fly, shoo,'
-        4: '? Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk,
-          <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,
-          <br/>Skip to my Lou, my darlin.'
-        5: ': Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk,
-          <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,
-          <br/>Skip to my Lou, my darlin.'
+          Lou, venha para o meu Lou, <br/>Lou, Lou, venha para o meu Lou, <br/>Lou,
+          Lou, venha para o meu Lou, <br/>Venha para o meu Lou, minha querida.
+        2: '? Lou, Lou, venha para o meu Lou, <br/>Lou, Lou, venha para o meu Lou,
+          <br/>Lou, Lou, venha para o meu Lou, <br/>Venha para o meu Lou, minha querida.<br/><br/><p>Moscas
+          na manteiga, <br/>Xô, mosca, xô,'
+        3: ': Lou, Lou, venha para o meu Lou, <br/>Lou, Lou, venha para o meu Lou,
+          <br/>Lou, Lou, venha para o meu Lou, <br/>Venha para o meu Lou, minha querida.<br/><br/><p>Moscas
+          na manteiga, <br/>Xô, mosca, xô,'
+        4: '? Moscas na manteiga, <br/>Xô, mosca, xô, <br/>Moscas na manteiga, <br/>Xô,
+          mosca, xô, <br/>Moscas na manteiga, <br/>Xô, mosca, xô, <br/>Venha para
+          o meu Lou, minha querida.'
+        5: ': Moscas na manteiga, <br/>Xô, mosca, xô, <br/>Moscas na manteiga, <br/>Xô,
+          mosca, xô, <br/>Moscas na manteiga, <br/>Xô, mosca, xô, <br/>Venha para
+          o meu Lou, minha querida.'
+        ? What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?
+        : What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?
+        ? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,
+        : Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,
+        ? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin.
+        : Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin.
       4-5 Suncatchers Multi 1:
         Multiple Choice: Múltipla Escolha
         /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
@@ -372,8 +402,8 @@
       Coordinates Multi 1:
         Video game Coordinates: Coordenadas de video game
         Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
-        Which answer best describes the unicorn's movement?: Qual resposta melhor
-          descreve o movimento do unicórnio?
+        Which answer most accurately describes the unicorn's movement?: Qual resposta
+          descreve mais precisamente o movimento do unicórnio?
         The unicorn moves across the screen: O unicórnio se movimenta pela tela
         The unicorn's y value changes: O valor de y do unicórnio muda
         The unicorn moves to the left: O unicórnio se move para a esquerda
@@ -572,6 +602,10 @@
         (* (+ 5 6) (/ 8 2)): (* (+ 5 6) (/ 8 2))
         (/ (* (+ 5 6) 8) 2): (/ (* (+ 5 6) 8) 2)
         (/ (+ 5 6) (* 8 2)): (/ (+ 5 6) (* 8 2))
+        ? Pick the Racket code that matches the mathematical expression given. Draw
+          a circle of evaluation to help you find the right answer!
+        : Pick the Racket code that matches the mathematical expression given. Draw
+          a circle of evaluation to help you find the right answer!
       Math to Code 2:
         Racket Code for Math Expressions: Código Racket para expressões matemáticas
         0: '? Escolha o código Racket que corresponde à expressão matemática dada.
@@ -586,6 +620,10 @@
         (+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3) 2): (+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3)
           2)
         (+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2)))))): (+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2))))))
+        ? Pick the Racket code that matches the mathematical expression given. Draw
+          a circle of evaluation to help you find the right answer!
+        : Pick the Racket code that matches the mathematical expression given. Draw
+          a circle of evaluation to help you find the right answer!
       Warmup questions:
         Coding in Racket: Programação usando Racket
         Select the best answer to the question.: Selecione a melhor resposta para
@@ -605,6 +643,7 @@
         (+ 5 (* 4 (- 8 6))): (+ 5 (* 4 (- 8 6)))
         (+ (* (- 8 6) 4) 5): '(+ (* (- 8 6) 4) 5) '
         (+ 5 (* (- 8 6) 4)): (+ 5 (* (- 8 6) 4))
+        '(+ (* (- 8 6) 4) 5) ': '(+ (* (- 8 6) 4) 5) '
       valid contracts multi:
         Valid Contracts: Contratos válidos
         Pick the best answer to the question.: Escolha a melhor resposta para a pergunta.
@@ -627,10 +666,10 @@
           "red")
         (rectangle (+ 8 2) (- 7 5) solid red): (rectangle (+ 8 2) (- 7 5) solid red)
       Multi Strings Images 1:
-        Strings and Images Multiple Choice: Múltipla escolha de imagens e strings
+        Strings and Images Multiple Choice: Imagens e strings - Múltipla escolha
         Multi Strings Images 1.blocks3.level: Imagens multi strings 1.blocks3.level
         Which of these Evaluation Blocks will draw the image: Qual desses blocos de
-          avaliação vai desenhar a imagem
+          cálculo vai desenhar a imagem
         Multi Strings Images 1.blocks1.start_blocks, 300, 100: Imagens multi strings
           1.blocks1.start_blocks, 300, 100
         Multi Strings Images 1.blocks2.start_blocks, 300, 100: Imagens multi strings

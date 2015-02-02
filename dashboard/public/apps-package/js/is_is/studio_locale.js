@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -213,7 +213,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "moveDistanceTooltip":function(d){return "Færa leikmann tiltekna vegalengd í hina tilteknu stefnu."},
 "moveSprite":function(d){return "færa"},
 "moveSpriteN":function(d){return "færa leikmann "+appLocale.v(d,"spriteIndex")},
-"toXY":function(d){return "to x,y"},
+"toXY":function(d){return "til x,y"},
 "moveDown":function(d){return "færa niður"},
 "moveDownTooltip":function(d){return "Færa leikmann niður."},
 "moveLeft":function(d){return "færa til vinstri"},
@@ -270,6 +270,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "projectileHiro":function(d){return "Hiro"},
 "projectileBaymax":function(d){return "Baymax"},
 "projectileRapunzel":function(d){return "Garðabrúða"},
+"projectileCherry":function(d){return "cherry"},
+"projectileIce":function(d){return "ice"},
+"projectileDuck":function(d){return "duck"},
 "reinfFeedbackMsg":function(d){return "Þú getur ýtt á \"Reyna aftur\" hnappinn til að fara aftur í að spila söguna þína."},
 "repeatForever":function(d){return "endurtaka endalaust"},
 "repeatDo":function(d){return "gera"},
@@ -277,6 +280,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "saySprite":function(d){return "segja"},
 "saySpriteN":function(d){return "leikmaður "+appLocale.v(d,"spriteIndex")+" segir"},
 "saySpriteTooltip":function(d){return "Birta talblöðru með textanum sem tengist hinum tiltekna leikmanni."},
+"saySpriteChoices_1":function(d){return "Hi there!"},
+"saySpriteChoices_2":function(d){return "How are you?"},
+"saySpriteChoices_3":function(d){return "This is fun..."},
 "scoreText":function(d){return "Stig alls: "+appLocale.v(d,"playerScore")},
 "setBackground":function(d){return "hafa bakgrunn"},
 "setBackgroundRandom":function(d){return "hafa bakgrunn af handahófi"},
@@ -293,6 +299,12 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setBackgroundSpace":function(d){return "hafa geimbakgrunn"},
 "setBackgroundTennis":function(d){return "hafa tennisbakgrunn"},
 "setBackgroundWinter":function(d){return "hafa vetrarbakgrunn"},
+"setBackgroundLeafy":function(d){return "set leafy background"},
+"setBackgroundGrassy":function(d){return "set grassy background"},
+"setBackgroundFlower":function(d){return "set flower background"},
+"setBackgroundTile":function(d){return "set tile background"},
+"setBackgroundIcy":function(d){return "set icy background"},
+"setBackgroundSnowy":function(d){return "set snowy background"},
 "setBackgroundTooltip":function(d){return "Stillir bakgrunnsmynd"},
 "setEnemySpeed":function(d){return "stilla hraða óvinar"},
 "setPlayerSpeed":function(d){return "stilla hraða leikmanns"},
@@ -384,6 +396,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "soundWinPoint2":function(d){return "stigaskor 2"},
 "soundWood":function(d){return "viður"},
 "speed":function(d){return "hraði"},
+"startSetValue":function(d){return "start (rocket-height function)"},
 "stopSprite":function(d){return "stöðva"},
 "stopSpriteN":function(d){return "stöðva leikmann "+appLocale.v(d,"spriteIndex")},
 "stopTooltip":function(d){return "Stöðvar hreyfingu leikmanns."},

@@ -48,7 +48,7 @@ pt:
         edit-code:
           desc: Editar Código (beta)
           MazeEC: Etapa 1
-          Webapp: Etapa 2
+          Applab: Etapa 2
           ArtistEC: Etapa 3
           StudioEC: Etapa 4
         events:
@@ -99,10 +99,12 @@ pt:
         Jigsaw: Jigsaw
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
-        Webapp: Webapp
+        Webapp: App Lab
         ArtistEC: O Artista
         TextMatch: Text Match
         StudioEC: Play Lab
+        Applab: App Lab
+        NetSim: Internet Simulator
     trophy:
       name:
         Bronze: Bronze
@@ -247,7 +249,7 @@ pt:
         flappy_6: See if you can still score a point after making Flappy flap either a smaller or larger amount.
         flappy_7: 'Next, try changing the scene by attaching another block to the "when run" block.'
         flappy_8: You can set visuals anytime, not just when the game starts. Try setting a RANDOM scene when other events happen, for example, when passing an obstacle.
-        flappy_9: To mix things up, when hitting an obstacle or the ground, instead of ending the game try setting the score back to 0.
+        flappy_9: To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0.
         flappy_11: "Create your own Flappy game. You can change all the visuals and all the rules, even the gravity. When you're done, click Finish to let friends try your game on their phones."
         flappy_k1_1: Play Flappy
         flappy_k1_2: 'Attach a block to the "when click" block, then press "Run". Click or tap the screen to move Flappy to the target.'
@@ -330,21 +332,19 @@ pt:
         maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell the word STORY
-        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        applab_ec_simple: Create your app by using the blocks in the toolbox.
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColor" block.'
         turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new "penWidth" block. Have fun!'
         studio_ec_sandbox: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
     levelbuilder:
       frozen line:
-        instructions: "Hi! I'm Elsa of Arendelle. Help me create a single line."
+        instructions: Olá! Sou a Elsa de Arendelle. Ajuda-me a criar uma linha única.
       frozen perpendicular:
-        instructions: |-
-          Now let's see if we can create two lines that are at a 90 degree angle to each other. You will need to use the "Turn" block as well as the "Move" block.
+        instructions: 'Agora vamos ver se podemos criar duas linhas que estão num ângulo de 90 grausuma com a outra. Precisará de usar um bloco de "Virar", bem como o bloco de "Movimento".'
       frozen square iterative:
-        instructions: "It seems like we're halfway to making a square. Let's put 4 lines together to create a square."
+        instructions: Parece que estamos na metade do caminho para fazer um quadrado. Vamos colocar 4 linhas juntas para criar um quadrado.
       frozen square loop:
-        instructions: |-
-          Hi, I'm Anna of Arendelle! Let's make a square with the "Repeat" block, which uses fewer blocks. How many times (???) should the "Repeat" block loop the blocks inside it to make a square?
+        instructions: 'Olá, eu sou a Anna de Arendelle! Vamos fazer um quadrado com o bloco "Repetir", que usa menos blocos. Quantas vezes (?) deve o bloco "repetir" fazer um ciclo para fazer um quadrado?'
       frozen square loop 3x:
         instructions: "Let's create three squares, turning after each square. Be sure to turn by 120 degrees before each new square."
       frozen square snowflake:

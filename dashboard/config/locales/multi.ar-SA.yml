@@ -106,6 +106,10 @@
           حق
         Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: ابدأ
           بساحة <br/> وضع مثلث أدناه الساحة <br/> وضع متوازي أضلاع اليمين من المثلث
+        ? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
+          below square<br/>Put triangle right of parallelogram
+        : Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
+          below square<br/>Put triangle right of parallelogram
       2-3 Algorithms Multi 2:
         Multiple Choice: إختيارات متعددة
         Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: إبدأ
@@ -219,6 +223,12 @@
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png
+        ? A purple flower may have either 3, 2 or 1 nectars, but you don't know how
+          many. Which blocks correctly check and collect all of the nectar from a
+          purple flower?
+        : A purple flower may have either 3, 2 or 1 nectars, but you don't know how
+          many. Which blocks correctly check and collect all of the nectar from a
+          purple flower?
       4-5 bee debug multi 1:
         Bee Debug Multiple Choice: تصحيح النحلة اختيار من متعدد
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png
@@ -283,6 +293,10 @@
         <h4>_____ is a _____ city.</h4>: <h4>_____ ومدينة _____-</h4>
         <h4>_____ is _____ a _____.</h4>: <h4>هو_____ _____ _____.</h4>
         <h4>Eugene is a _____ city.</h4>: <h4>Eugene ومدينة _____-</h4>
+        ? Here are three sentences. Which of the templates below correctly abstracts
+          so that all three match the same pattern as the template?
+        : Here are three sentences. Which of the templates below correctly abstracts
+          so that all three match the same pattern as the template?
       4-5 Crowdsourcing Multi 1:
         Multiple Choice: إختيارات متعددة
         Which of these pictures best represents crowdsourcing?: أي من هذه الصور أفضل
@@ -348,6 +362,22 @@
         5: ': ذبابة في اللبن، <br/> شو، يطير، شو، <br/> تطير في اللبن، <br/> شو، يطير،
           شو، <br/> تطير في اللبن، <br/> شو، يطير، شو، <br/> تخطي إلى بلدي لو، بلدي
           حبيبتي.'
+        ? What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?
+        : What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?
+        ? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,
+        : Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,
+        ? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin.
+        : Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin.
       4-5 Suncatchers Multi 1:
         Multiple Choice: إختيارات متعددة
         /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
@@ -359,8 +389,8 @@
       Coordinates Multi 1:
         Video game Coordinates: Video game Coordinates
         Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
-        Which answer best describes the unicorn's movement?: Which answer best describes
-          the unicorn's movement?
+        Which answer most accurately describes the unicorn's movement?: Which answer
+          most accurately describes the unicorn's movement?
         The unicorn moves across the screen: The unicorn moves across the screen
         The unicorn's y value changes: The unicorn's y value changes
         The unicorn moves to the left: The unicorn moves to the left
@@ -559,6 +589,10 @@
         (* (+ 5 6) (/ 8 2)): (* (+ 5 6) (/8 2))
         (/ (* (+ 5 6) 8) 2): (/(* (+ 5 6) 8) 2)
         (/ (+ 5 6) (* 8 2)): (/(+ 5 6) (* 8 2))
+        ? Pick the Racket code that matches the mathematical expression given. Draw
+          a circle of evaluation to help you find the right answer!
+        : Pick the Racket code that matches the mathematical expression given. Draw
+          a circle of evaluation to help you find the right answer!
       Math to Code 2:
         Racket Code for Math Expressions: رمز مضرب للتعبيرات الرياضية
         0: '? اختر رمز مضرب يطابق التعبير الرياضي نظراً. رسم دائرة للتقييم لمساعدتك
@@ -572,6 +606,10 @@
           6))
         (+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3) 2): (+ (+ (+ 4 6) (* (* (/2 20) 7) 3) 2)
         (+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2)))))): (+ 4 (+ 6 (/20 (* 2 (* 3 (+ 7 2)))
+        ? Pick the Racket code that matches the mathematical expression given. Draw
+          a circle of evaluation to help you find the right answer!
+        : Pick the Racket code that matches the mathematical expression given. Draw
+          a circle of evaluation to help you find the right answer!
       Warmup questions:
         Coding in Racket: الترميز في مضرب
         Select the best answer to the question.: حدد أفضل إجابة على السؤال.
@@ -590,6 +628,7 @@
         (+ 5 (* 4 (- 8 6))): (+ 5 (* 4 (-8 6)))
         (+ (* (- 8 6) 4) 5): '(+ (* (-8 6) 4) 5) '
         (+ 5 (* (- 8 6) 4)): (+ 5 (* (-8 6) 4))
+        '(+ (* (- 8 6) 4) 5) ': '(+ (* (- 8 6) 4) 5) '
       valid contracts multi:
         Valid Contracts: عقود سارية المفعول
         Pick the best answer to the question.: اختيار أفضل إجابة على السؤال.

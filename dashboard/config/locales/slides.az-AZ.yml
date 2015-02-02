@@ -533,10 +533,10 @@
           run button to see what you've programmed.
       6:
         image: notes/playlab_intro_6.png
-        text: Get started and by the end, you'll be able to create your own game with
-          all kinds of players that can interact, turn happy or sad, score points,
-          or throw fireballs, or even vanish each other. It's all up to you and the
-          game you want to make.
+        text: İlk addımı atın və axırda siz öz oyununuzu düzəldə biləcəksiniz. Cürbəcür
+          oyunçular qarşılıqlı ünsiyyət qura, xoşbəxt və ya qəmli ola, xallar qazana
+          və ya alov topları ata, hətta bir birini məhv edə biləcəklər. Hamısı sizdən
+          və düzəltmək istədiyiniz oyundan asılıdır.
     playlab_events:
       1:
         image: notes/playlab_events_1.png

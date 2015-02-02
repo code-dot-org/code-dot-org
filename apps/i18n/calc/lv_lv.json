@@ -2,6 +2,7 @@
   "compute": "skaitļot",
   "equivalentExpression": "Mēģiniet pārkārtot ievadītos argumentus, lai panāktu to pašu izteiksmi.",
   "extraTopBlocks": "Jums ir nepiesaistīti bloki. Vai jūs domājāt pievienot šos pie \"skaitļošanas\" bloka?",
+  "failedInput": "Your function does not return the right result for all values.",
   "goal": "Mērķis:",
   "reinfFeedbackMsg": "Šeit ir tavs stāsts! Turpini pie tā strādāt vai pārej pie nākamā uzdevuma!",
   "yourExpression": "Jūsu izteiksme:"

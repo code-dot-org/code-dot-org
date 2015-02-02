@@ -2,6 +2,7 @@
   "compute": "calcular",
   "equivalentExpression": "Tente reorganizar seus argumentos para obter exatamente a mesma expressão.",
   "extraTopBlocks": "Você tem blocos não conectados. Você pretendia conectá-los ao bloco \"calcular\"?",
+  "failedInput": "Your function does not return the right result for all values.",
   "goal": "Objetivo:",
   "reinfFeedbackMsg": "Aqui está a sua história! Continue trabalhando nela, ou siga para o próximo desafio!",
   "yourExpression": "Sua expressão:"

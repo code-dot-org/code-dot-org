@@ -2,7 +2,7 @@ var chai = require('chai');
 chai.config.includeStack = true;
 var assert = chai.assert;
 
-var testUtils = require('./util/testUtils');
+var testUtils = require('../util/testUtils');
 
 var ExpressionNode = require(testUtils.buildPath('/calc/expressionNode'));
 
@@ -154,30 +154,128 @@ describe("ExpressionNode", function () {
     assert.notEqual(clone.children[0].children[1].value, node.children[0].children[1].value);
   });
 
-  it("evaluate", function () {
+  describe("evaluate", function () {
     var node;
 
-    node = new ExpressionNode(1);
-    assert.equal(node.evaluate(), 1);
+    it("can evaluate a single number", function () {
+      node = new ExpressionNode(1);
+      assert.equal(node.evaluate(), 1);
+    });
 
-    node = new ExpressionNode('+', [1, 2]);
-    assert.equal(node.evaluate(), 3);
+    it("can evaluate a simple expression", function () {
+      node = new ExpressionNode('+', [1, 2]);
+      assert.equal(node.evaluate(), 3);
+    });
 
-    node = new ExpressionNode('*', [
-      new ExpressionNode('-', [5, 3]),
-      new ExpressionNode('/', [8, 4])
-    ]);
-    assert.equal(node.evaluate(), 4);
+    it("can evaluate a more complex expression", function () {
+      node = new ExpressionNode('*', [
+        new ExpressionNode('-', [5, 3]),
+        new ExpressionNode('/', [8, 4])
+      ]);
+      assert.equal(node.evaluate(), 4);
+    });
 
-    assert.throws(function () {
+    it("can evaluate a variable with a proper mapping", function () {
       node = new ExpressionNode('x');
-      node.evaluate();
-    }, Error);
+      assert.equal(node.evaluate({x: 1}), 1);
+    });
 
-    assert.throws(function () {
+    it ("can evaluate an expression with variables", function () {
+      node = new ExpressionNode('+', ['x', 'y']);
+      assert.equal(node.evaluate({x: 1, y: 2}), 3);
+    });
+
+    it("cant evaluate a variable with no mapping", function () {
+      assert.throws(function () {
+        node = new ExpressionNode('x');
+        node.evaluate();
+      }, Error);
+    });
+
+    it("doesnt change the node when evaluating", function () {
+      node = new ExpressionNode('x');
+      assert.equal(node.evaluate({x: 1}), 1);
+      assert.equal(node.value, 'x');
+    });
+
+    it("cant evaluate a function with no mapping", function () {
+      assert.throws(function () {
+        node = new ExpressionNode('f', [1, 2]);
+        node.evaluate();
+      }, Error);
+    });
+
+    it("can evaluate a function call", function () {
       node = new ExpressionNode('f', [1, 2]);
-      node.evaluate();
-    }, Error);
+      var mapping = {};
+      // f(x, y) = x + y
+      mapping.f = {
+        variables: ['x', 'y'],
+        expression: new ExpressionNode('+', ['x', 'y'])
+      };
+      assert.equal(node.evaluate(mapping), 3);
+    });
+
+    it("can evaluate a function call when param name collides with global var", function () {
+      node = new ExpressionNode('f', [1]);
+      var mapping = {};
+      // simulate global variable x = 5
+      mapping.x = 5;
+      // f(x) = x
+      mapping.f = {
+        variables: ['x'],
+        expression: new ExpressionNode('x')
+      };
+      assert.equal(node.evaluate(mapping), 1);
+    });
+
+    it("can evaluate nested functions", function () {
+      node = new ExpressionNode('f', [1]);
+
+      var mapping = {};
+      // g(y) = y + 1
+      mapping.g = {
+        variables: ['y'],
+        expression: new ExpressionNode('+', ['y', 1])
+      };
+      // f(x) = g(x)
+      mapping.f = {
+        variables: ['x'],
+        expression: new ExpressionNode('g', ['x'])
+      };
+      assert.equal(node.evaluate(mapping), 2);
+    });
+
+    // TODO (brent) - this is broken right now, because it ends up evaluating y + x
+    // with the x value from f's context, instead of the global context
+    // it("can handle transitioning back to global var", function () {
+    //   var mapping = {};
+    //   // x = 1
+    //   mapping['x'] = 1;
+    //   // g(y) = y + x; // should use global x here
+    //   mapping['g'] = {
+    //     variables: ['y'],
+    //     expression: new ExpressionNode('+', ['x', 'y'])
+    //   };
+    //   // f(x) = g(x); // should use local x here
+    //   mapping['f'] = {
+    //     variables: ['x'],
+    //     expression: new ExpressionNode('g', ['x'])
+    //   };
+    //
+    //   node = new ExpressionNode('f', [2]);
+    //   assert.equal(node.evaluate(mapping), 3);
+    // });
+
+    //
+    // f(x) = x + 1
+    // g(x) = x + 2
+    // f(1) + g(2) --> 6
+    //
+    // f(x) = f(x) + 1
+    // need to catch recursion
+    //
+    // make sure function evaluation doesnt modify expression
   });
 
   it("depth", function () {
@@ -613,6 +711,47 @@ describe("ExpressionNode", function () {
 
     // todo - more of these
 
+  });
+
+  describe('hasSameSignature', function () {
+    it('fails if other is null', function () {
+      var node = new ExpressionNode('f', [1]);
+      assert.equal(node.hasSameSignature(null), false);
+      assert.equal(node.hasSameSignature(), false);
+    });
+
+    it('fails if same, but not function calls', function () {
+      var node = new ExpressionNode(1);
+      var other = node.clone();
+      assert.equal(node.hasSameSignature(other), false);
+    });
+
+    it('fails if calling different functions', function () {
+      var node = new ExpressionNode('f', [1]);
+      var other = new ExpressionNode('g', [1]);
+      assert.equal(node.hasSameSignature(other), false);
+    });
+
+    it('fails if number of children differ', function () {
+      var node = new ExpressionNode('f', [1, 2]);
+      var other = new ExpressionNode('f', [1, 2, 3]);
+      assert.equal(node.hasSameSignature(other), false);
+
+      other = new ExpressionNode('f', [1]);
+      assert.equal(node.hasSameSignature(other), false);
+    });
+
+    it('succeeds if identical', function () {
+      var node = new ExpressionNode('f', [1, 2]);
+      var other = node.clone();
+      assert.equal(node.hasSameSignature(other), true);
+    });
+
+    it('succeeds if has same signature but different params', function () {
+      var node = new ExpressionNode('f', [1, 2]);
+      var other = new ExpressionNode('f', [3, 4]);
+      assert.equal(node.hasSameSignature(other), true);
+    });
   });
 
 });

@@ -885,6 +885,10 @@ JSONApi.parse = function(text) {
   return JSON.parse(text);
 };
 
+JSONApi.stringify = function(object) {
+  return JSON.stringify(object);
+};
+
 // Commented out, but available in case we want to expose the droplet/pencilcode
 // style random (with a min, max value)
 /*
@@ -1141,80 +1145,14 @@ Applab.executeCmd = function (id, name, opts) {
 };
 
 //
-// Execute a command from a command queue
-//
-// Return false if the command is not complete (it will remain in the queue)
-// and this function will be called again with the same command later
-//
-// Return true if the command is complete
+// Execute an API command
 //
 
 Applab.callCmd = function (cmd) {
-  var retVal = true;
-  switch (cmd.name) {
-    /*
-    case 'wait':
-      if (!cmd.opts.started) {
-        studioApp.highlight(cmd.id);
-      }
-      return Studio.wait(cmd.opts);
-    */
-    case 'createHtmlBlock':
-    case 'replaceHtmlBlock':
-    case 'deleteHtmlBlock':
-    case 'createButton':
-    case 'createImage':
-    case 'createCanvas':
-    case 'canvasDrawLine':
-    case 'canvasDrawCircle':
-    case 'canvasDrawRect':
-    case 'canvasSetLineWidth':
-    case 'canvasSetStrokeColor':
-    case 'canvasSetFillColor':
-    case 'canvasDrawImage':
-    case 'canvasGetImageData':
-    case 'canvasPutImageData':
-    case 'canvasClear':
-    case 'createTextInput':
-    case 'createTextLabel':
-    case 'createCheckbox':
-    case 'createRadio':
-    case 'createDropdown':
-    case 'getAttribute':
-    case 'setAttribute':
-    case 'getText':
-    case 'setText':
-    case 'getChecked':
-    case 'setChecked':
-    case 'getImageURL':
-    case 'setImageURL':
-    case 'createImageUploadButton':
-    case 'setPosition':
-    case 'setParent':
-    case 'setStyle':
-    case 'onEvent':
-    case 'startWebRequest':
-    case 'setTimeout':
-    case 'clearTimeout':
-    case 'readSharedValue':
-    case 'writeSharedValue':
-    case 'createSharedRecord':
-    case 'readSharedRecords':
-    case 'updateSharedRecord':
-    case 'deleteSharedRecord':
-    case 'turtleMoveForward':
-    case 'turtleMoveBackward':
-    case 'turtleMove':
-    case 'turtleMoveTo':
-    case 'turtleTurnLeft':
-    case 'turtleTurnRight':
-    case 'turtlePenUp':
-    case 'turtlePenDown':
-    case 'turtlePenWidth':
-    case 'turtlePenColor':
-      studioApp.highlight(cmd.id);
-      retVal = Applab[cmd.name](cmd.opts);
-      break;
+  var retVal = false;
+  if (Applab[cmd.name] instanceof Function) {
+    studioApp.highlight(cmd.id);
+    retVal = Applab[cmd.name](cmd.opts);
   }
   return retVal;
 };
@@ -1680,6 +1618,16 @@ Applab.setImageURL = function (opts) {
     return true;
   }
   return false;
+};
+
+Applab.playSound = function (opts) {
+  if (studioApp.cdoSounds) {
+    studioApp.cdoSounds.playURL(opts.url,
+                               {volume: 1.0,
+                                forceHTML5: true,
+                                allowHTML5Mobile: true
+    });
+  }
 };
 
 Applab.replaceHtmlBlock = function (opts) {

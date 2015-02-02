@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -128,7 +128,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Pokračovať"},
 "createHtmlBlock":function(d){return "vytvor html blok"},
 "createHtmlBlockTooltip":function(d){return "Vytvorí HTML blok v aplikácii."},
-"finalLevel":function(d){return "Gratulujem! Vyriešil si poslednú úlohu."},
+"finalLevel":function(d){return "Gratulujem! Vyriešili ste posledné puzzle."},
 "nextLevel":function(d){return "Gratulujem! Vyriešil si hádanku."},
 "no":function(d){return "Nie"},
 "numBlocksNeeded":function(d){return "Táto hádanka môže byť vyriešená s %1 blokmi."},
@@ -137,11 +137,10 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "repeatForever":function(d){return "opakovať donekonečna"},
 "repeatDo":function(d){return "vykonaj"},
 "repeatForeverTooltip":function(d){return "Akcie v tomto bloku sa budú opakovane vykonávať počas behu aplikácie."},
-"shareWebappTwitter":function(d){return "Pozri sa na aplikáciu, ktorú som urobil. Napísal som to sám s @codeorg"},
+"shareApplabTwitter":function(d){return "Pozri sa na aplikáciu, ktorú som urobil. Napísal som to sám s @codeorg"},
 "shareGame":function(d){return "Zdieľaj svoju aplikáciu:"},
 "stepIn":function(d){return "Krok do"},
 "stepOver":function(d){return "Krok cez"},
 "stepOut":function(d){return "Krok von"},
-"turnBlack":function(d){return "nastav čiernu"},
-"turnBlackTooltip":function(d){return "Nastaví čiernu farbu obrazovky."},
+"viewData":function(d){return "View Data"},
 "yes":function(d){return "Áno"}};

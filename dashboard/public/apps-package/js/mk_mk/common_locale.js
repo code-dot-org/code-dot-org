@@ -23,7 +23,7 @@ var locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -206,7 +206,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "numLinesOfCodeWritten":function(d){return "Само што напиша "+locale.p(d,"numLines",0,"mk",{"one":"1 Линија","other":locale.n(d,"numLines")+" Линии"})+" на Кодови!"},
 "play":function(d){return "Пушти"},
 "print":function(d){return "Печати"},
-"puzzleTitle":function(d){return "Загатка  "+locale.v(d,"puzzle_number")+" на "+locale.v(d,"stage_total")},
+"puzzleTitle":function(d){return "Загатка "+locale.v(d,"puzzle_number")+" на "+locale.v(d,"stage_total")},
 "repeat":function(d){return "повтори"},
 "resetProgram":function(d){return "Од почеток ,Ресетирање"},
 "runProgram":function(d){return "Трчај"},
