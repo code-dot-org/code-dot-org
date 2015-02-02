@@ -231,9 +231,8 @@ Calc.resetButtonClick = function () {
 };
 
 /**
- * Given some xml, generates a set of expressions by loading the xml into the
- * workspace and calling FromTopBlocks. Fails if there are
- * already blocks in the workspace.
+ * Given some xml, geneates an expression set by loading blocks into the
+ * blockspace.. Fails if there are already blocks in the workspace.
  */
 function generateEquationSetFromBlockXml(blockXml) {
   if (blockXml) {
