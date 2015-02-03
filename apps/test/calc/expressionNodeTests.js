@@ -10,11 +10,11 @@ var ExpressionNode = require(testUtils.buildPath('/calc/expressionNode'));
  * Get a string representation of the tree
  */
 ExpressionNode.prototype.debug = function () {
-  if (this.children.length === 0) {
-    return this.value;
+  if (this.children_.length === 0) {
+    return this.value_;
   }
-  return "(" + this.value + " " +
-    this.children.map(function (c) {
+  return "(" + this.value_ + " " +
+    this.children_.map(function (c) {
       return c.debug();
     }).join(' ') + ")";
 };
@@ -39,23 +39,23 @@ describe("ExpressionNode", function () {
 
     it('works with numbers', function () {
       node = new ExpressionNode(0);
-      assert.equal(node.value, 0);
-      assert(Array.isArray(node.children));
-      assert.equal(node.children.length, 0);
+      assert.equal(node.value_, 0);
+      assert(Array.isArray(node.children_));
+      assert.equal(node.children_.length, 0);
       assert.equal(node.getType(), ExpressionNode.ValueType.NUMBER);
 
       node = new ExpressionNode(1);
-      assert.equal(node.value, 1);
-      assert(Array.isArray(node.children));
-      assert.equal(node.children.length, 0);
+      assert.equal(node.value_, 1);
+      assert(Array.isArray(node.children_));
+      assert.equal(node.children_.length, 0);
       assert.equal(node.getType(), ExpressionNode.ValueType.NUMBER);
 
       // provide a blockId
       node = new ExpressionNode(1, [], 2);
-      assert.equal(node.value, 1);
-      assert(Array.isArray(node.children));
-      assert.equal(node.children.length, 0);
-      assert.equal(node.blockId, 2);
+      assert.equal(node.value_, 1);
+      assert(Array.isArray(node.children_));
+      assert.equal(node.children_.length, 0);
+      assert.equal(node.blockId_, 2);
       assert.equal(node.getType(), ExpressionNode.ValueType.NUMBER);
 
       // make sure we throw correctly
@@ -67,31 +67,31 @@ describe("ExpressionNode", function () {
 
     it('works with variables', function () {
       node = new ExpressionNode('x');
-      assert.equal(node.value, 'x');
-      assert(Array.isArray(node.children));
-      assert.equal(node.children.length, 0);
+      assert.equal(node.value_, 'x');
+      assert(Array.isArray(node.children_));
+      assert.equal(node.children_.length, 0);
       assert.equal(node.getType(), ExpressionNode.ValueType.VARIABLE);
 
       // provide a blockId
       node = new ExpressionNode('y', [], 4);
-      assert.equal(node.value, 'y');
-      assert(Array.isArray(node.children));
-      assert.equal(node.children.length, 0);
+      assert.equal(node.value_, 'y');
+      assert(Array.isArray(node.children_));
+      assert.equal(node.children_.length, 0);
       assert.equal(node.getType(), ExpressionNode.ValueType.VARIABLE);
-      assert.equal(node.blockId, 4);
+      assert.equal(node.blockId_, 4);
     });
 
     it('works with operators', function () {
       node = new ExpressionNode('+', [1, 2], 5);
-      assert.equal(node.value, '+');
-      assert(Array.isArray(node.children));
-      assert.equal(node.children.length, 2);
-      assert(node.children[0] instanceof ExpressionNode);
-      assert.equal(node.children[0].value, 1);
-      assert(node.children[1] instanceof ExpressionNode);
-      assert.equal(node.children[1].value, 2);
+      assert.equal(node.value_, '+');
+      assert(Array.isArray(node.children_));
+      assert.equal(node.children_.length, 2);
+      assert(node.children_[0] instanceof ExpressionNode);
+      assert.equal(node.children_[0].value_, 1);
+      assert(node.children_[1] instanceof ExpressionNode);
+      assert.equal(node.children_[1].value_, 2);
       assert.equal(node.getType(), ExpressionNode.ValueType.ARITHMETIC);
-      assert.equal(node.blockId, 5);
+      assert.equal(node.blockId_, 5);
 
       // throw if we have the wrong number of operands
       assert.throws(function () {
@@ -108,17 +108,17 @@ describe("ExpressionNode", function () {
 
     it('works with function calls', function () {
       node = new ExpressionNode('f', [1, 2, 3], 4);
-      assert.equal(node.value, 'f');
-      assert(Array.isArray(node.children));
-      assert.equal(node.children.length, 3);
-      assert(node.children[0] instanceof ExpressionNode);
-      assert.equal(node.children[0].value, 1);
-      assert(node.children[1] instanceof ExpressionNode);
-      assert.equal(node.children[1].value, 2);
-      assert(node.children[2] instanceof ExpressionNode);
-      assert.equal(node.children[2].value, 3);
+      assert.equal(node.value_, 'f');
+      assert(Array.isArray(node.children_));
+      assert.equal(node.children_.length, 3);
+      assert(node.children_[0] instanceof ExpressionNode);
+      assert.equal(node.children_[0].value_, 1);
+      assert(node.children_[1] instanceof ExpressionNode);
+      assert.equal(node.children_[1].value_, 2);
+      assert(node.children_[2] instanceof ExpressionNode);
+      assert.equal(node.children_[2].value_, 3);
       assert.equal(node.getType(), ExpressionNode.ValueType.FUNCTION_CALL);
-      assert.equal(node.blockId, 4);
+      assert.equal(node.blockId_, 4);
     });
 
     it('works with nested nodes', function () {
@@ -126,7 +126,7 @@ describe("ExpressionNode", function () {
         new ExpressionNode('/', [1, 2]),
         new ExpressionNode('/', [3, 4])
       ]);
-      assert.equal(node.value, '*');
+      assert.equal(node.value_, '*');
       assert.equal(node.getType(), ExpressionNode.ValueType.ARITHMETIC);
     });
   });
@@ -134,24 +134,24 @@ describe("ExpressionNode", function () {
   it("cloning", function () {
     var node = new ExpressionNode('+', [new ExpressionNode("+", [1, 2]), 3]);
     var clone = node.clone();
-    assert.equal(clone.value, node.value);
-    assert.equal(clone.children[1].value, node.children[1].value);
-    assert.equal(clone.children[0].value, node.children[0].value);
-    assert.equal(clone.children[0].children[0].value, node.children[0].children[0].value);
-    assert.equal(clone.children[0].children[1].value, node.children[0].children[1].value);
+    assert.equal(clone.value_, node.value_);
+    assert.equal(clone.children_[1].value_, node.children_[1].value_);
+    assert.equal(clone.children_[0].value_, node.children_[0].value_);
+    assert.equal(clone.children_[0].children_[0].value_, node.children_[0].children_[0].value_);
+    assert.equal(clone.children_[0].children_[1].value_, node.children_[0].children_[1].value_);
 
     // change things. make sure they dont change on clone
-    node.value= '-';
-    node.children[0].value= '*';
-    node.children[0].children[0].value= 4;
-    node.children[0].children[1].value= 5;
-    node.children[1].value= 6;
+    node.value_= '-';
+    node.children_[0].value_= '*';
+    node.children_[0].children_[0].value_= 4;
+    node.children_[0].children_[1].value_= 5;
+    node.children_[1].value_= 6;
 
-    assert.notEqual(clone.value, node.value);
-    assert.notEqual(clone.children[1].value, node.children[1].value);
-    assert.notEqual(clone.children[0].value, node.children[0].value);
-    assert.notEqual(clone.children[0].children[0].value, node.children[0].children[0].value);
-    assert.notEqual(clone.children[0].children[1].value, node.children[0].children[1].value);
+    assert.notEqual(clone.value_, node.value_);
+    assert.notEqual(clone.children_[1].value_, node.children_[1].value_);
+    assert.notEqual(clone.children_[0].value_, node.children_[0].value_);
+    assert.notEqual(clone.children_[0].children_[0].value_, node.children_[0].children_[0].value_);
+    assert.notEqual(clone.children_[0].children_[1].value_, node.children_[0].children_[1].value_);
   });
 
   describe("evaluate", function () {
@@ -195,7 +195,7 @@ describe("ExpressionNode", function () {
     it("doesnt change the node when evaluating", function () {
       node = new ExpressionNode('x');
       assert.equal(node.evaluate({x: 1}), 1);
-      assert.equal(node.value, 'x');
+      assert.equal(node.value_, 'x');
     });
 
     it("cant evaluate a function with no mapping", function () {
@@ -446,7 +446,7 @@ describe("ExpressionNode", function () {
 
       it('differs in value', function () {
         node = expected.clone();
-        node.value = '-';
+        node.value_ = '-';
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
           { str: '(',  marked: true},
@@ -459,7 +459,7 @@ describe("ExpressionNode", function () {
 
       it('differs in child 1', function () {
         node = expected.clone();
-        node.children[0].value = 2;
+        node.children_[0].value_ = 2;
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
           { str: '(',  marked: false},
@@ -472,7 +472,7 @@ describe("ExpressionNode", function () {
 
       it('differs in child 2', function () {
         node = expected.clone();
-        node.children[1].value = 3;
+        node.children_[1].value_ = 3;
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
           { str: '(',  marked: false},
