@@ -141,7 +141,7 @@ Blockly.Css.CONTENT = [
   '  border: 1px solid #ddd;',
   '}',
   '#blockly .userHidden {',
-  '  display: none;',
+  '  display: none !important;',
   '}',
   '#blockly.readonly .userHidden {',
   '  display: inline;',
