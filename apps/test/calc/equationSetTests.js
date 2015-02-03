@@ -8,7 +8,7 @@ var ExpressionNode = require(testUtils.buildPath('/calc/expressionNode'));
 var EquationSet = require(testUtils.buildPath('/calc/equationSet'));
 var Equation = EquationSet.Equation;
 
-describe('ExpressionSet', function () {
+describe('EquationSet', function () {
   describe('addEquation_', function () {
     it('can add a compute equation', function () {
       var set = new EquationSet();
@@ -82,42 +82,42 @@ describe('ExpressionSet', function () {
     });
   });
 
-  describe('singleFunction_', function () {
-    it('returns null if we have no functions or variables', function () {
+  describe('hasSingleFunction', function () {
+    it('returns false if we have no functions or variables', function () {
       var set = new EquationSet();
       set.addEquation_(new Equation(null, new ExpressionNode(0)));
-      assert.equal(set.singleFunction_(), null);
+      assert.equal(set.hasSingleFunction(), false);
     });
 
-    it('returns null if we have no functions, but do have variables', function () {
+    it('returns false if we have no functions, but do have variables', function () {
       var set = new EquationSet();
       set.addEquation_(new Equation(null, new ExpressionNode(0)));
       set.addEquation_(new Equation('x', new ExpressionNode(1)));
-      assert.equal(set.singleFunction_(), null);
+      assert.equal(set.hasSingleFunction(), false);
     });
 
-    it('returns null if we have multiple functions', function () {
+    it('returns false if we have multiple functions', function () {
       var set = new EquationSet();
       set.addEquation_(new Equation(null, new ExpressionNode(0)));
       set.addEquation_(new Equation('f(x)', new ExpressionNode('+', ['x', 1])));
       set.addEquation_(new Equation('g(x)', new ExpressionNode('+', ['x', 1])));
-      assert.equal(set.singleFunction_(), null);
+      assert.equal(set.hasSingleFunction(), false);
     });
 
-    it('returns null if we have one function and one or more variables', function () {
+    it('returns false if we have one function and one or more variables', function () {
       var set = new EquationSet();
       set.addEquation_(new Equation(null, new ExpressionNode(0)));
       set.addEquation_(new Equation('f(x)', new ExpressionNode('+', ['x', 1])));
       set.addEquation_(new Equation('y', new ExpressionNode(1)));
-      assert.equal(set.singleFunction_(), null);
+      assert.equal(set.hasSingleFunction(), false);
     });
 
-    it('returns the function Equation if we have exactly one function and no variables', function () {
+    it('returns true if we have exactly one function and no variables', function () {
       var set = new EquationSet();
       set.addEquation_(new Equation(null, new ExpressionNode(0)));
       var functionEquation = new Equation('f(x)', new ExpressionNode('+', ['x', 1]));
       set.addEquation_(functionEquation);
-      assert.equal(set.singleFunction_(), functionEquation);
+      assert.equal(set.hasSingleFunction(), true);
     });
   });
 
@@ -211,6 +211,15 @@ describe('ExpressionSet', function () {
   });
 
   describe('evaluate/evaluateWithExpression', function () {
+    it('can evaluate a single expression that is just a number', function () {
+      var computeExpression = new ExpressionNode(5);
+      var set = new EquationSet();
+      set.addEquation_(new Equation(null, computeExpression));
+
+      assert.equal(set.evaluate(), 5);
+      assert.equal(set.evaluateWithExpression(computeExpression), 5);
+    });
+
     it('can evaluate a simple expression with no vars/function', function () {
       var computeExpression = new ExpressionNode('+', [1, 2]);
       var set = new EquationSet();
@@ -260,34 +269,45 @@ describe('ExpressionSet', function () {
       assert.equal(set.evaluateWithExpression(otherExpression), 2);
     });
 
-    // TODO (brent) doesnt yet work
-    // it('can evaluate with multiple functions', function () {
-    //   var set = new EquationSet();
-    //   // f(x) = x
-    //   set.addEquation_(new Equation('f(x)', new ExpressionNode('x')));
-    //   // g(y) = 2 * y
-    //   set.addEquation_(new Equation('g(y)', new ExpressionNode('*', [2, 'y'])));
-    //   //compute: f(1) + g(2)
-    //   var computeExpression = new ExpressionNode('+', [
-    //     new ExpressionNode('f', [1]),
-    //     new ExpressionNode('g', [2])
-    //   ]);
-    //   set.addEquation_(new Equation(null, computeExpression));
-    //
-    //   assert.equal(set.evaluate(), 5);
-    //   assert.equal(set.evaluateWithExpression(computeExpression), 5);
-    //
-    //   var otherExpression = new ExpressionNode('*', [
-    //     new ExpressionNode('f', [2]),
-    //     new ExpressionNode('g', [2])
-    //   ]);
-    //   assert.equal(set.evaluateWithExpression(otherExpression), 6);
-    //
-    // });
+    it('can evaluate with multiple functions', function () {
+      var set = new EquationSet();
+      // f(x) = x
+      // g(y) = 2 * y
+      //compute: f(1) + g(2)
+      set.addEquation_(new Equation('f(x)', new ExpressionNode('x')));
+      set.addEquation_(new Equation('g(y)', new ExpressionNode('*', [2, 'y'])));
+      var computeExpression = new ExpressionNode('+', [
+        new ExpressionNode('f', [1]),
+        new ExpressionNode('g', [2])
+      ]);
+      set.addEquation_(new Equation(null, computeExpression));
 
-    // it('can evaluate with a mix of vars and functions', function () {
-    //
-    // });
+      assert.equal(set.evaluate(), 5);
+      assert.equal(set.evaluateWithExpression(computeExpression), 5);
+
+      var otherExpression = new ExpressionNode('+', [
+        new ExpressionNode('f', [2]),
+        new ExpressionNode('g', [2])
+      ]);
+      assert.equal(set.evaluateWithExpression(otherExpression), 6);
+
+    });
+
+    it('can evaluate with a mix of vars and functions', function () {
+      // f(x) = x
+      // myvar = 1
+      // compute: f(1) + myvar
+      var set = new EquationSet();
+      set.addEquation_(new Equation('f(x)', new ExpressionNode('x')));
+      set.addEquation_(new Equation('myvar', new ExpressionNode(1)));
+      var computeEquation = new ExpressionNode('+', [
+        new ExpressionNode('f', [1]),
+        new ExpressionNode('myvar'),
+      ]);
+      set.addEquation_(new Equation(null, computeEquation));
+
+      assert.equal(set.evaluate(), 2);
+    });
 
     it('throws if trying to resolve an unresolveable set of variables', function () {
       var set = new EquationSet();
