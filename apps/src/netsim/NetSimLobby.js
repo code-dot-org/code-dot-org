@@ -127,7 +127,7 @@ NetSimLobby.prototype.onInstanceSelectorChange_ = function () {
 };
 
 NetSimLobby.prototype.addRouterButtonClick_ = function () {
-  var router = new NetSimRouter(this.connection_, this.connection_.logger_);
+  var router = new NetSimRouter(this.connection_);
   router.connectToLobby();
 };
 
@@ -181,7 +181,7 @@ NetSimLobby.prototype.refreshLobby_ = function () {
     return;
   }
 
-  this.connection_.getLobbyListing(function (lobbyData) {
+  this.connection_.fetchLobbyListing(function (lobbyData) {
     $(lobbyList).empty();
 
     lobbyData.sort(function (a, b) {
@@ -225,7 +225,8 @@ NetSimLobby.prototype.refreshLobby_ = function () {
  * @private
  */
 NetSimLobby.prototype.onRouterRowClick_ = function (targetRouter) {
-  console.info("Clicked " + targetRouter.name);
+  var router = new NetSimRouter(this.connection_, targetRouter.id);
+  this.connection_.connectToRouter(router);
 };
 
 /**
