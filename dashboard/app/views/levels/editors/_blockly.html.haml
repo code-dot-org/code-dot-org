@@ -1,3 +1,14 @@
+:css
+  textarea { width: 100% }
+  
+  .callouteditor input {
+    width: auto
+  }
+
+  .callouteditor select {
+    width: auto
+  }
+
 - content_for(:head) do
   = stylesheet_link_tag    'editor/blockly_editor', media: 'all'
   = javascript_include_tag 'editor/blockly_editor'
@@ -41,8 +52,6 @@
     = f.radio_button :scrollbars, true
     False:
     = f.radio_button :scrollbars, false
-:css
-  textarea { width: 100% }
 .field
   = link_to 'Edit Toolbox Blocks', level_edit_blocks_path( @level, :toolbox_blocks) unless @level.new_record?
   = f.text_area :toolbox_blocks, placeholder: 'Toolbox Blocks', rows: 4, value: @level.pretty_block('toolbox')
@@ -69,14 +78,7 @@
   %p Number is a multiplier for how long each step takes (so higher numbers are slower). Default is 5 for Maze, 2 for Bee.
   = f.number_field :step_speed
 
-:css
-  .callouteditor input {
-    width: auto
-  }
 
-  .callouteditor select {
-    width: auto
-  }
 
 .field.callouteditor
   %label Edit Callouts
@@ -908,8 +910,3 @@
     }
     callout_editor.replaceRange("]", CodeMirror.Pos(callout_editor.lastLine()))
   })
-
-  //Started to attempt another, more efficient method:
-  //var addcallout_row = $('<div>', {class: 'callout_row'});
-  //addcallout_row.append($('<input>', {type: 'text', class: 'localization_key', placeholder: 'Name of callout'}), $('<input>', {type: 'text', class: 'callout_text', placeholder: 'Text of callout'}), $('<input>', {type: 'text', class: 'element_id', placeholder: 'ID of element'}), $('<select>', {class: 'qtip_position_my'}), $('<select>', {class: 'qtip_position_at'}), $('<input>', {type: 'number', class: 'qtip_position_adjust_x'}),  $('<input>', {type: 'number', class: 'qtip_position_adjust_y'}), $('<input>', {type: 'checkbox', class: 'qtip_hide'}));
-  //$('.callouteditor').append(addcallout_row);

@@ -1,5 +1,4 @@
 var testUtils = require('../../util/testUtils');
-var ResultType = require(testUtils.buildPath('constants.js')).ResultType;
 var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
 var blockUtils = require(testUtils.buildPath('block_utils'));
 
@@ -70,7 +69,7 @@ module.exports = {
       // f(1,2)
       description: "Correct answer",
       expected: {
-        result: ResultType.SUCCESS,
+        result: true,
         testResult: TestResults.ALL_PASS
       },
       xml: '<xml>' +
@@ -129,7 +128,7 @@ module.exports = {
       // f(1,2)
       description: "Incorrect result",
       expected: {
-        result: ResultType.FAILURE,
+        result: false,
         testResult: TestResults.LEVEL_INCOMPLETE_FAIL
       },
       xml: '<xml>' +
@@ -185,7 +184,7 @@ module.exports = {
       // f(1,2)
       description: "Correct result for compute expression, incorrect result elsewhere",
       expected: {
-        result: ResultType.FAILURE,
+        result: false,
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
       xml: '<xml>' +
@@ -242,7 +241,7 @@ module.exports = {
     //   // g(1,2)
     //   description: "User function has a different name",
     //   expected: {
-    //     result: ResultType.FAILURE,
+    //     result: false,
     //     testResult: TestResults.LEVEL_INCOMPLETE_FAIL
     //   },
     //   xml: '<xml>' +
@@ -301,7 +300,7 @@ module.exports = {
       // f(1,2,0)
       description: "User function has an extra input",
       expected: {
-        result: ResultType.FAILURE,
+        result: false,
         testResult: TestResults.LEVEL_INCOMPLETE_FAIL
       },
       xml: '<xml>' +
@@ -378,7 +377,7 @@ module.exports = {
       // f(1)
       description: "User function has one less input",
       expected: {
-        result: ResultType.FAILURE,
+        result: false,
         testResult: TestResults.LEVEL_INCOMPLETE_FAIL
       },
       xml: '<xml>' +

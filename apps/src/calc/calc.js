@@ -398,7 +398,7 @@ Calc.execute = function() {
     app: 'calc',
     level: level.id,
     builder: level.builder,
-    result: appState.result,
+    result: appState.result === ResultType.SUCCESS,
     testResult: appState.testResults,
     program: encodeURIComponent(textBlocks),
     onComplete: onReportComplete

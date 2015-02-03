@@ -247,7 +247,7 @@ director dashboard round-robin {
 }
 
 backend jupiter {
-  .host = "<%= ip %>";
+  .host = "127.0.0.1";
   .port = "<%= node['cdo-apps']['jupiter']['port'] %>";
   .connect_timeout = 600s;
   .first_byte_timeout = 600s;
@@ -424,7 +424,7 @@ end
       set req.backend = dashboard;
     }
   }
-  else if (req.host == "<%= canonical_hostname('jupiter.code.org') %>")
+  else if (req.http.host == "<%= canonical_hostname('jupiter.code.org') %>")
   {
     set req.backend = jupiter;
   }
