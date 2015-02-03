@@ -11,7 +11,8 @@ var APPS = [
   'jigsaw',
   'calc',
   'applab',
-  'eval'
+  'eval',
+  'netsim'
 ];
 
 if (process.env.MOOC_APP) {
@@ -178,7 +179,7 @@ config.lodash = {
       'include': [
         'debounce', 'reject', 'map', 'value', 'range', 'without', 'sample',
         'create', 'flatten', 'isEmpty', 'wrap', 'size', 'bind', 'contains',
-        'last']
+        'last', 'clone']
     }
   }
 };
@@ -362,7 +363,10 @@ config.mochaTest = {
       reporter: 'spec',
       timeout: 10000
     },
-    src: ['test/*.js']
+    src: [
+      'test/*.js',
+      'test/calc/*.js'
+    ]
   }
 };
 

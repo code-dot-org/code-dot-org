@@ -1,6 +1,6 @@
 goog.provide('Blockly.Msg.fa_ir');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "واقعی";
+Blockly.Msg.ACTUAL = "تماس بگیر";
 Blockly.Msg.ADD = "اضافه کردن";
 Blockly.Msg.ADD_COMMENT = "اضافه کردن نظر";
 Blockly.Msg.ADD_PARAMETER = "اضافه کردن پارامتر";
@@ -74,7 +74,7 @@ Blockly.Msg.EXAMPLE = "مثال";
 Blockly.Msg.EXAMPLE_DESCRIPTION = "یک مثال با رفتار مورد انتظار و واقعی را تعریف می کند";
 Blockly.Msg.EXPAND_ALL = "باز کردن بلوک‌ها";
 Blockly.Msg.EXPAND_BLOCK = "باز کردن بلوک‌";
-Blockly.Msg.EXPECTED = "انتظار می رود";
+Blockly.Msg.EXPECTED = "نتیجه";
 Blockly.Msg.EXTERNAL_INPUTS = "ورودی‌های خارجی";
 Blockly.Msg.FUNCTION_CREATE = "یک تابع ایجاد کن";
 Blockly.Msg.FUNCTION_EDIT = "ویرایش";
@@ -164,21 +164,21 @@ Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_SET_FROM_END = "مورد را در موقع�
 Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_SET_FROM_START = "مورد را در موقعیت مشخص‌شده در یک فهرست قرار می‌دهد.  #1 اولین مورد است.";
 Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_SET_LAST = "آخرین مورد را در یک فهرست قرار میدهد.";
 Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_SET_RANDOM = "یک مورد تصادفی را در یک فهرست قرار میدهد.";
-Blockly.Msg.LISTS_TOOLTIP = "اگر فهرست خالی است مقدار صجیج بر می‌گرداند.";
+Blockly.Msg.LISTS_TOOLTIP = "اگر فهرست خالی باشد، مقدار بولین true را بر می‌گرداند.";
 Blockly.Msg.LOGIC_BOOLEAN_FALSE = "ناصحیح";
 Blockly.Msg.LOGIC_BOOLEAN_HELPURL = "http://code.google.com/p/blockly/wiki/True_False";
-Blockly.Msg.LOGIC_BOOLEAN_TOOLTIP = "بازگرداندن یکی از صحیح یا ناصحیح.";
+Blockly.Msg.LOGIC_BOOLEAN_TOOLTIP = "بازگرداندن یکی از مقادیر بولین true یا false.";
 Blockly.Msg.LOGIC_BOOLEAN_TRUE = "صحیح";
 Blockly.Msg.LOGIC_COMPARE_HELPURL = "http://fa.wikipedia.org/wiki/%D9%86%D8%A7%D8%A8%D8%B1%D8%A7%D8%A8%D8%B1%DB%8C";
 Blockly.Msg.LOGIC_COMPARE_TOOLTIP_EQ = "بازگشت صحیح اگر هر دو ورودی با یکدیگر برابر باشد.";
 Blockly.Msg.LOGIC_COMPARE_TOOLTIP_GT = "بازگرداندن صحیح اگر ورودی اول بزرگتر از ورودی دوم باشد.";
-Blockly.Msg.LOGIC_COMPARE_TOOLTIP_GTE = "بازگرداندن صحیح اگر ورودی اول بزرگتر یا مساوی یا ورودی دوم باشد.";
-Blockly.Msg.LOGIC_COMPARE_TOOLTIP_LT = "بازگرداندن صحیح اگر ورودی اول کوچکتر از ورودی دوم باشد.";
-Blockly.Msg.LOGIC_COMPARE_TOOLTIP_LTE = "بازگرداندن صحیح اگر ورودی اول کوچکتر یا مساوی با ورودی دوم باشد.";
-Blockly.Msg.LOGIC_COMPARE_TOOLTIP_NEQ = "برگرداندن صحیح اگر هر دو ورودی با یکدیگر برابر نباشند.";
+Blockly.Msg.LOGIC_COMPARE_TOOLTIP_GTE = "اگر ورودی اول بزرگتر یا مساوی ورودی دوم باشد، مقدار بولین true را برمی گرداند.";
+Blockly.Msg.LOGIC_COMPARE_TOOLTIP_LT = "بازگرداندن مقدار بولین true، اگر ورودی اول کوچکتر از ورودی دوم باشد.";
+Blockly.Msg.LOGIC_COMPARE_TOOLTIP_LTE = "اگر ورودی اول کوچکتر یا مساوی ورودی دوم باشد، مقدار بولین true را برگردان.";
+Blockly.Msg.LOGIC_COMPARE_TOOLTIP_NEQ = "اگر هر دو ورودی با یکدیگر برابر نبودند، مقدار بولین true را برگردان.";
 Blockly.Msg.LOGIC_NEGATE_HELPURL = "http://code.google.com/p/blockly/wiki/Not";
 Blockly.Msg.LOGIC_NEGATE_TITLE = "نه %1";
-Blockly.Msg.LOGIC_NEGATE_TOOLTIP = "صجیج باز می‌گرداند اگر ورودی نا صحیح باشند. ناصحیح بازمی‌گرداند اگر ورودی صحیح باشد.";
+Blockly.Msg.LOGIC_NEGATE_TOOLTIP = "اگر ورودی برابر مقدار بولین not بود، مقدار بولین true را برگردان. اگر ورودی برابر مقدار بولین false بود مقدار بولین true را برگردان.";
 Blockly.Msg.LOGIC_NULL = "تهی";
 Blockly.Msg.LOGIC_NULL_HELPURL = "http://en.wikipedia.org/wiki/Nullable_type";
 Blockly.Msg.LOGIC_NULL_TOOLTIP = "تهی بازمی‌گرداند.";

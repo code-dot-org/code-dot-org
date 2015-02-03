@@ -3,9 +3,14 @@
 #  SimpleCov.start :rails
 
 require 'minitest/reporters'
-MiniTest::Reporters.use!
+MiniTest::Reporters.use! ($stdout.tty? ? Minitest::Reporters::ProgressReporter.new : Minitest::Reporters::DefaultReporter.new)
 
-ENV["RAILS_ENV"] ||= "test"
+ENV["RAILS_ENV"] = "test"
+ENV["RACK_ENV"] = "test"
+
+# deal with some ordering issues -- sometimes environment is loaded before test_helper and sometimes after
+CDO.rack_env = "test" if defined? CDO
+Rails.application.reload_routes! if defined? Rails
 
 require File.expand_path('../../config/environment', __FILE__)
 I18n.load_path += Dir[Rails.root.join('test', 'en.yml')]
@@ -22,12 +27,22 @@ class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
 
   setup do
+
+    # sponsor message calls PEGASUS_DB, stub it so we don't have to deal with this in test
+    UserHelpers.stubs(:random_donor).returns(name_s: 'Someone')
+
     set_env :test
+
+    # how come this doesn't work:
+    Dashboard::Application.config.action_controller.perform_caching = false
+    # as in, I still need to clear the cache even though we are not 'performing' caching
+    Rails.cache.clear
 
     AWS::S3.stubs(:upload_to_bucket).raises("Don't actually upload anything to S3 in tests... mock it if you want to test it")
   end
 
   teardown do
+    Dashboard::Application.config.action_controller.perform_caching = false
     set_env :test
   end
 
@@ -147,18 +162,19 @@ class ActionController::TestCase
 
   def self.generate_admin_only_tests_for(action, params = {})
     test "should get #{action}" do
+      sign_in create(:admin)
       get action, params
       assert_response :success
     end
 
     test "should not get #{action} if not signed in" do
-      sign_out @admin
+      sign_out :user
       get action, params
       assert_redirected_to_sign_in
     end
 
     test "should not get #{action} if not admin" do
-      sign_in @not_admin
+      sign_in create(:user)
       get action, params
       assert_response :forbidden
     end

@@ -7,10 +7,14 @@ var baseOptions = {
   position: { blockYCoordinateInterval: 25 },
   onInitialize: function() {
     this.createCallouts();
+    if (window.wrapExistingClipPaths && window.handleClipPathChanges) {
+      wrapExistingClipPaths();
+      handleClipPathChanges();
+    }
   },
   createCallouts: function() {
     $.fn.qtip.zindex = 500;
-    this.callouts.every(function(callout) {
+    this.callouts && this.callouts.every(function(callout) {
       var selector = callout.element_id; // jquery selector.
       if ($(selector).length === 0 && !callout.on) {
         return true;

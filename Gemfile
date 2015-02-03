@@ -14,6 +14,7 @@ gem 'le', '~> 2.2'
 gem 'os'
 gem 'redis', '~> 3.1.0'
 gem 'google_drive', '~> 0.3.10'
+gem 'dalli' # memcached
 
 group :development do
   gem 'rerun', '~> 0.10.0'

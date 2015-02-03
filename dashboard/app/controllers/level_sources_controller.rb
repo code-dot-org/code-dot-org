@@ -29,15 +29,12 @@ class LevelSourcesController < ApplicationController
     if @level_source.update(level_source_params)
       if level_source_params[:hidden]
         # delete all gallery activities
-        @level_source.level_id
-        GalleryActivity.
-          joins('inner join activities on activities.id = gallery_activities.activity_id').
-          where('activities.level_id' => @level_source.level_id).each do |gallery_activity|
+        @level_source.gallery_activities.each do |gallery_activity|
           GalleryActivity.destroy(gallery_activity.id) # the query with joins gives me read only records...
         end
       end
 
-      redirect_to @level_source, notice: I18n.t('crud.updated', LevelSource.model_name.human)
+      redirect_to @level_source, notice: I18n.t('crud.updated', model: LevelSource.model_name.human)
     else
       redirect_to @level_source, notice: "Error: #{level_source.errors.messages}"
     end
@@ -47,7 +44,7 @@ class LevelSourcesController < ApplicationController
     authorize! :read, @level_source
 
     expires_in 10.hours, :public => true # cache
-    if @game.app == Game::ARTIST then
+    if @game.app == Game::ARTIST
       framed_image(@level.skin)
     else
       original_image

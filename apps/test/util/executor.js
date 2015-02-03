@@ -1,3 +1,4 @@
+var assert = require('chai').assert;
 var path = require('path');
 var fs = require('fs');
 var jsdomRoot = require('jsdom');
@@ -32,18 +33,6 @@ function logError(msg) {
   process.stderr.write(msg + '\n');
 }
 
-// Using chaiAssert results in most of the contents being swallowed because
-// we're in our own process. Instead use a custom assert function that will at
-// least give us a callstack on the child process.
-function assert(test, msg) {
-  if (!test) {
-    if (msg) {
-      logError(msg + '\n');
-    }
-    logError(new Error().stack);
-  }
-}
-
 function setGlobals () {
   // Initialize virtual browser environment.
   var html = '<html><head></head><body><div id="app"></div></body></html>';
@@ -65,6 +54,11 @@ function setGlobals () {
       height: 0,
       width: 0
     };
+  };
+
+  // contains needed in applab
+  jsdomRoot.dom.level3.html.HTMLElement.prototype.contains = function () {
+    return true;
   };
 }
 

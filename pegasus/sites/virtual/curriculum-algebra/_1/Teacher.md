@@ -231,6 +231,8 @@ Visit [MSM Stage 1](http://studio.code.org/s/algebra/stage/1/puzzle/1) in Code S
 
 [/standards]
 
+<a href="http://creativecommons.org/"><img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0"></a>  
+
 [/content]
 
 <link rel="stylesheet" type="text/css" href="morestyle.css"/>

@@ -4,7 +4,9 @@ class ProfessionalDevelopmentWorkshopSignup
     result = {}
 
     result[:name_s] = required stripped data[:name_s]
+
     result[:email_s] = required stripped email_address data[:email_s]
+    result[:email_confirm_s] = required stripped email_address data[:email_confirm_s]
     # This field is no longer used.
     # result[:teacher_title_s] = required stripped data[:teacher_title_s]
     result[:teacher_role_ss] = required stripped data[:teacher_role_ss]
@@ -24,6 +26,9 @@ class ProfessionalDevelopmentWorkshopSignup
       result[:school_levels_other_ss] = required stripped csv_multivalue data[:school_levels_other_ss]
     end
     result[:number_students_s] = required stripped data[:number_students_s]
+
+    result[:email_s] = confirm_match(result[:email_s], result[:email_confirm_s])
+    result.delete(:email_confirm_s)
 
     result
   end

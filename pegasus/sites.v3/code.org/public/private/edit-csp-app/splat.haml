@@ -1,0 +1,41 @@
+-dont_cache
+-not_authorized! unless dashboard_user
+-forbidden! unless dashboard_user[:admin]
+
+-encrypted_app_id = request.splat_path_info[1..-1].split('/').first
+-app_id = storage_decrypt_app_id(encrypted_app_id).last.to_s
+-app_tables = DB[:app_tables].where(app_id:app_id).group(:table_name)
+
+%form#csp_tables
+  %table
+    %tr
+      %td
+        Table name
+      %td
+        action
+    -app_tables.each do |app_table|
+      -table_name = app_table[:table_name]
+      %tr
+        %td
+          #{table_name}
+        %td
+          %a{href:"/private/edit-csp-table/#{encrypted_app_id}/#{table_name}", target:"_blank"}
+            view
+    %tr
+      %td
+        %input#table-name-input
+      %td
+        %button
+          Add
+  %a{href:"/v3/apps/#{encrypted_app_id}/shared-properties", target:"_blank"}
+    view key/value pairs
+
+:javascript
+  $('#csp_tables').submit(
+    function(e) {
+      var tableName = document.getElementById('table-name-input').value;
+      if (tableName) {
+        window.open("/private/edit-csp-table/#{encrypted_app_id}/" + tableName, "_blank");
+      }
+    }
+  );

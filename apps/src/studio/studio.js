@@ -813,7 +813,7 @@ function checkForCollisions() {
 }
 
 Studio.onSvgDrag = function(e) {
-  if (Studio.intervalId) {
+  if (Studio.tickCount > 0) {
     Studio.gesturesObserved[e.gesture.direction] =
       Math.round(e.gesture.distance / DRAG_DISTANCE_TO_MOVE_RATIO);
     e.gesture.preventDefault();
@@ -825,7 +825,7 @@ Studio.onKey = function(e) {
   Studio.keyState[e.keyCode] = e.type;
 
   // If we are actively running our tick loop, suppress default event handling
-  if (Studio.intervalId &&
+  if (Studio.tickCount > 0 &&
       e.keyCode >= KeyCodes.LEFT && e.keyCode <= KeyCodes.DOWN) {
     e.preventDefault();
   }
@@ -839,7 +839,7 @@ Studio.onArrowButtonDown = function(e, idBtn) {
 
 Studio.onSpriteClicked = function(e, spriteIndex) {
   // If we are "running", call the event handler if registered.
-  if (Studio.intervalId) {
+  if (Studio.tickCount > 0) {
     callHandler('whenSpriteClicked-' + spriteIndex);
   }
   e.preventDefault();  // Stop normal events.
@@ -847,7 +847,7 @@ Studio.onSpriteClicked = function(e, spriteIndex) {
 
 Studio.onSvgClicked = function(e) {
   // If we are "running", check the cmdQueues.
-  if (Studio.intervalId) {
+  if (Studio.tickCount > 0){
     // Check the first command in all of the cmdQueues to see if there is a
     // pending "wait for click" command
     Studio.eventHandlers.forEach(function (handler) {
@@ -1093,9 +1093,11 @@ Studio.init = function(config) {
   // pre-load images asynchronously
   // (to reduce the likelihood that there is a delay when images
   //  are changed at runtime)
-  preloadActorImages();
-  preloadProjectileImages();
-  preloadBackgroundImages();
+  if (config.skin.preloadAssets) {
+    preloadActorImages();
+    preloadProjectileImages();
+    preloadBackgroundImages();
+  }
 };
 
 var preloadImage = function(url) {
@@ -1142,11 +1144,13 @@ Studio.clearEventHandlersKillTickLoop = function() {
     });
   }
   Studio.eventHandlers = [];
-  if (Studio.intervalId) {
-    window.clearInterval(Studio.intervalId);
-  }
+  if (Studio.perExecutionTimeouts) {
+    Studio.perExecutionTimeouts.forEach(function (timeout) {
+      clearInterval(timeout);
+    });
+   }
+  Studio.perExecutionTimeouts = [];
   Studio.tickCount = 0;
-  Studio.intervalId = 0;
   for (var i = 0; i < Studio.spriteCount; i++) {
     if (Studio.sprite[i] && Studio.sprite[i].bubbleTimeout) {
       window.clearTimeout(Studio.sprite[i].bubbleTimeout);
@@ -1247,6 +1251,13 @@ studioApp.reset = function(first) {
     Studio.displaySprite(i);
     document.getElementById('speechBubble' + i)
       .setAttribute('visibility', 'hidden');
+
+    document.getElementById('sprite' + i).removeAttribute('opacity');
+
+    var explosion = document.getElementById('explosion' + i);
+    if (explosion) {
+      explosion.setAttribute('visibility', 'hidden');
+    }
   }
 
   var svg = document.getElementById('svgStudio');
@@ -1269,6 +1280,9 @@ studioApp.reset = function(first) {
     finishClipRect.setAttribute('x', Studio.spriteGoals_[i].x);
     finishClipRect.setAttribute('y', Studio.spriteGoals_[i].y);
   }
+
+  // A little flag for script-based code to consume.
+  Studio.levelRestarted = true;
 };
 
 /**
@@ -1467,7 +1481,7 @@ Studio.execute = function() {
   var i;
 
   if (level.editCode) {
-    code = utils.generateCodeAliases(level.codeFunctions, 'Studio');
+    code = utils.generateCodeAliases(level.codeFunctions, null, 'Studio');
     code += studioApp.editor.getValue();
   }
 
@@ -1504,7 +1518,7 @@ Studio.execute = function() {
   studioApp.reset(false);
 
   if (level.editCode) {
-    var codeWhenRun = utils.generateCodeAliases(level.codeFunctions, 'Studio');
+    var codeWhenRun = utils.generateCodeAliases(level.codeFunctions, null, 'Studio');
     Studio.userCodeStartOffset = codeWhenRun.length;
     codeWhenRun += studioApp.editor.getValue();
     Studio.userCodeLength = codeWhenRun.length - Studio.userCodeStartOffset;
@@ -1543,7 +1557,8 @@ Studio.execute = function() {
     Studio.eventHandlers = handlers;
   }
 
-  Studio.intervalId = window.setInterval(Studio.onTick, Studio.scale.stepSpeed);
+  Studio.perExecutionTimeouts = [];
+  Studio.perExecutionTimeouts.push(window.setInterval(Studio.onTick, Studio.scale.stepSpeed));
 };
 
 Studio.feedbackImage = '';
@@ -1695,6 +1710,12 @@ var updateSpeechBubblePath = function (element) {
 
 Studio.displaySprite = function(i) {
   var sprite = Studio.sprite[i];
+
+  // avoid lots of unnecessary changes to hidden sprites
+  if (sprite.value === 'hidden') {
+    return;
+  }
+
   var xOffset = sprite.width * spriteFrameNumber(i);
 
   var spriteIcon = document.getElementById('sprite' + i);
@@ -1952,13 +1973,37 @@ Studio.vanishActor = function (opts) {
   explosion.setAttribute('y', spriteClipRect.getAttribute('y'));
   explosion.setAttribute('visibility', 'visible');
 
-  // hide the sprite
-  Studio.setSprite({
-    spriteIndex: opts.spriteIndex,
-    value: 'hidden'
-  });
+  var baseX = parseInt(spriteClipRect.getAttribute('x'), 10);
+  var numFrames = skin.explosionFrames;
+  if (numFrames && numFrames > 1) {
+    explosion.setAttribute('clip-path', 'url(#spriteClipPath' + opts.spriteIndex + ')');
+    explosion.setAttribute('width', numFrames * 100);
+    _.range(0, numFrames).forEach(function (i) {
+      Studio.perExecutionTimeouts.push(setTimeout(function () {
+        explosion.setAttribute('x', baseX - i * 100);
+        sprite.setAttribute('opacity', (numFrames - i) / numFrames);
+      }, i * 100));
+    });
+    Studio.perExecutionTimeouts.push(setTimeout(function () {
+      explosion.setAttribute('visibility', 'hidden');
+      // hide the sprite
+      Studio.setSprite({
+        spriteIndex: opts.spriteIndex,
+        value: 'hidden'
+      });
+      sprite.removeAttribute('opacity');
+
+    }, 100 * (numFrames + 1)));
+  } else {
+    // hide the sprite
+    Studio.setSprite({
+      spriteIndex: opts.spriteIndex,
+      value: 'hidden'
+    });
+  }
+
   // we append the url with the spriteIndex so that each sprites explosion gets
-  // treated as being differently, otherwise chrome will animate all existing
+  // treated as being different, otherwise chrome will animate all existing
   // explosions anytime we try to animate one of them
   explosion.setAttributeNS('http://www.w3.org/1999/xlink',
     'xlink:href', skin.explosion + "?spriteIndex=" + opts.spriteIndex);
@@ -2018,6 +2063,7 @@ Studio.setSprite = function (opts) {
   }
   sprite.visible = (spriteValue !== 'hidden' && !opts.forceHidden);
   spriteIcon.setAttribute('visibility', sprite.visible ? 'visible' : 'hidden');
+  sprite.value = opts.forceHidden ? 'hidden' : opts.value;
   if (spriteValue === 'hidden' || spriteValue === 'visible') {
     return;
   }
@@ -2027,7 +2073,12 @@ Studio.setSprite = function (opts) {
   // Reset height and width:
   sprite.height = sprite.size * skin.spriteHeight;
   sprite.width = sprite.size * skin.spriteWidth;
-  sprite.value = opts.forceHidden ? 'hidden' : opts.value;
+  if (skin.projectileSpriteHeight) {
+    sprite.projectileSpriteHeight = sprite.size * skin.projectileSpriteHeight;
+  }
+  if (skin.projectileSpriteWidth) {
+    sprite.projectileSpriteWidth = sprite.size * skin.projectileSpriteWidth;
+  }
 
   var spriteClipRect = document.getElementById('spriteClipRect' + spriteIndex);
   spriteClipRect.setAttribute('width', sprite.width);
@@ -2284,16 +2335,26 @@ Studio.throwProjectile = function (options) {
 
   var preventLoop = skin.preventProjectileLoop && skin.preventProjectileLoop(options.className);
 
+  var frames;
+
+  if (/.gif$/.test(skin[options.className])) {
+    frames = 1;
+  } else if (skin.specialProjectileFrames && skin.specialProjectileFrames[options.className]) {
+    frames = skin.specialProjectileFrames[options.className];
+  } else {
+    frames = skin.projectileFrames;
+  }
+
   var projectileOptions = {
-    frames: /.gif$/.test(skin[options.className]) ? 1 : skin.projectileFrames,
+    frames: frames,
     className: options.className,
     dir: options.dir,
     image: skin[options.className],
     loop: !preventLoop,
     spriteX: sourceSprite.x,
     spriteY: sourceSprite.y,
-    spriteHeight: sourceSprite.height,
-    spriteWidth: sourceSprite.width
+    spriteHeight: sourceSprite.projectileSpriteHeight || sourceSprite.height,
+    spriteWidth: sourceSprite.projectileSpriteWidth || sourceSprite.width,
   };
 
   var projectile = new Projectile(projectileOptions);
@@ -2644,7 +2705,17 @@ Studio.allGoalsVisited = function() {
     var goal = Studio.spriteGoals_[i];
     if (!goal.finished) {
       if (protagonistSprite) {
+        var wasGoalFinished = goal.finished;
+
         goal.finished = spriteAtGoal(protagonistSprite, goal);
+
+        // If goal was just finished, then call the "when actor touches anything handler"
+        if (!wasGoalFinished && goal.finished) {
+          var allowQueueExtension = false;
+          var prefix = 'whenSpriteCollided-' + Studio.protagonistSpriteIndex + '-';
+          callHandler(prefix + 'anything', allowQueueExtension);
+        }
+
       } else {
         goal.finished = false;
         for (var j = 0; j < Studio.sprite.length; j++) {

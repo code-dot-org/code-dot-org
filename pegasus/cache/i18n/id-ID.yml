@@ -3,7 +3,7 @@
   select_language: Silahkan pilih bahasa Anda
   computer_science: Ilmu komputer
   computer_science_edweek: Minggu pendidikan ilmu komputer
-  csedweek_dates: December 8-14, 2014
+  csedweek_dates: 8-14 Desember 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold"> Hour of Code</a> akan datang. Memanggil semua guru dan penyelenggara,
     <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -131,12 +131,12 @@
     menulis %{lines} baris kode.
   start_hoc: Mulai Jam Kode sekarang
   contact_form_topic_press: Press/media (wawancara atau konfrensi)
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
-    - Michael Clark, Teacher'
-  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
-    - Nina Nichols Peery, Teacher'
-  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
-    Alzate, 5th grader'
+  stats_michael: Saya <b>tidak pernah</b> melihat murid-murid saya begitu gembira
+    belajar. "-Michael Clark, guru
+  stats_nina: '"Setiap hari menghasilkan hasil yang sama &mdash; 100% menggugah."-Nina
+    Nichols Peery, guru'
+  stats_student: '"Aku tahu ini adalah kesempatan <b>sekali dalam seumur hidup</b>."-Mariana
+    Alzate, anak kelas 5'
   studiobar_title: Kunjungi <a href='http://studio.code.org'>Code Studio</a>
   studiobar_elementary_title: Latihan-latihan dasar
   studiobar_elementary_body: Tiga latihan terbaru kami untuk for K&#8209;5
@@ -150,8 +150,8 @@
   studiobar_frozen_body: Buat wonderland musim dingin dengan Anna dan Elsa
   studiobar_donate_title: Donasi
   studiobar_donate_body: Satu anak belajar untuk setiap US dollar yang Anda sumbangkan
-  studiobar_shop_title: Shop
-  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
+  studiobar_shop_title: Belanja
+  studiobar_shop_body: Pecahkan stereotip. Pakailah logo kami dengan bangga.
   contact_form_topic_student: Saya seorang siswa
   contact_form_topic_parent: Saya orang tua
   contact_form_topic_teacher: Saya seorang guru
@@ -248,8 +248,8 @@
   dashboard_action_delete_yes: Ya
   dashboard_action_delete_no: Tidak
   dashboard_action_confirm: Hapus?
-  dashboard_action_remove: Remove
-  dashboard_action_remove_confirm: Remove?
+  dashboard_action_remove: Hapus
+  dashboard_action_remove_confirm: Hapus?
   dashboard_action_done: Selesai
   dashboard_action_required: diperlukan
   dashboard_navigation_home_page: Beranda guru
@@ -300,6 +300,7 @@
     siswa</b> di atas.
   dashboard_students_placeholder_name: Nama siswa
   dashboard_students_name: Nama
+  dashboard_students_progress: Perkembangan
   dashboard_students_age: Umur
   dashboard_students_gender: Jenis kelamin
   dashboard_students_male: Laki-laki
@@ -315,25 +316,28 @@
   dashboard_students_reset_secret: Reset rahasia
   dashboard_students_reset_password: Reset kata sandi
   dashboard_students_share_section: 'Berbagi halaman masuk ini dengan siswa Anda:'
-  dashboard_students_print_info: Print out cards with your students' login information.
+  dashboard_students_print_info: Ctak kartu dengan informasi login siswa Anda.
   dashboard_students_secret_picture: Gambar rahasia
-  dashboard_students_reset_picture: You may reset a student's secret picture at any
-    time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new secret
-    picture will be generated for that student to use when they sign in.
+  dashboard_students_reset_picture: Anda dapat menyetel ulang gambar rahasia siswa
+    kapan saja dengan memilih <b>Tampilkan rahasia</b> dan kemudian <b>menyetel ulang
+    rahasia</b>. Gambar rahasia baru akan dibuat bagi pelajar tersebut untuk digunakan
+    ketika mereka masuk.
   dashboard_students_secret_word: Kata sandi
-  dashboard_students_reset_word: 'You may reset a student''s secret words at any time
-    by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new pair of secret
-    words will be generated for that student to use when they sign in. '
-  dashboard_students_join_link: Tell your students to create their own accounts and
-    join your section at
-  dashboard_students_no_email: If your students do not have email addresses, or you
-    would like to create accounts for them, change this section's secret type to <b>word</b>
-    or <b>picture</b>.
+  dashboard_students_reset_word: 'Anda dapat menyetel ulang kata rahasia siswa kapan
+    saja dengan memilih <b>Tampilkan rahasia</b> dan kemudian <b>menyetel ulang rahasia</b>.
+    Sepasang kata-kata rahasia baru akan dibuat bagi pelajar tersebut untuk digunakan
+    ketika mereka masuk. '
+  dashboard_students_join_link: Beritahu siswa Anda untuk membuat akun mereka sendiri
+    dan bergabung dengan Anda di bagian
+  dashboard_students_no_email: Jika siswa Anda tidak memiliki alamat surel, atau Anda
+    ingin membuat akun untuk mereka, ubah bagian jenis kerahasiaan menjadi <b>kata</b>
+    atau <b>gambar</b>.
   dashboard_students_print_page: Print halaman ini
   dashboard_students_url: URL
-  dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Click
-    here</a> for our privacy document that can be shared or printed for your students.
-  dashboard_curriculum_overview: K-5 Curriculum Overview
+  dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">
+    Klik di sini</a> untuk dokumen privasikami yang dapat dibagikan atau dicetak untuk
+    siswa.
+  dashboard_curriculum_overview: Tinjauan Kurikulum K-5
   dashboard_view_all_lesson_plans: Lihat semua rencana pelajaran
   dashboard_course1: 'Kursus 1:'
   dashboard_course2: 'Kursus 2:'
@@ -354,8 +358,12 @@
   dashboard_login_picture: Gambar
   dashboard_login_none: email
   dashboard_new_password: Kata sandi baru
-  stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
-    week alone:'
+  dashboard_progress_not_completed: belum selesai
+  dashboard_progress_completed_too_many_blocks: selesai, terlalu banyak blok
+  dashboard_progress_completed_perfect: selesai, sempurna
+  dashboard_progress_furthest_level_attempted: tingkat terjauh yang dicoba
+  stats_hoc_2013_heading: 'Terdapat statistik yang luar biasa dari Hour of Code tahun
+    lalu. Dalam satu minggu saja:'
   stats_hoc_2013_image_alt: Statistik Hour of Code tahun 2013
   dashboard_teacher: Guru
   dashboard_student: siswa
@@ -375,7 +383,7 @@
     login manakah, <b>gambar, kata, atau surat elektronik</b>, yang akan Anda pilih
     untuk satu bagian.
   dashboard_faq: Pertanyaan yang Sering Diajukan
-  code_hoc_coming: The Hour of Code is here - December 8-14!
+  code_hoc_coming: Hour of Code hadir disini - 8-14 Desember!
   code_sign_up: Daftarlah untuk ikut serta dalam Pekan Edukasi Ilmu Komputer
   learn_more: Pelajari lebih banyak
   hoc2014_try_new_tutorials: Cobalah pedoman Hour of Code terbaru kami
@@ -385,7 +393,7 @@
   carousel_heading_international: Tutorial dalam bahasa Anda
   carousel_heading_domestic: Pedoman tersedia dalam Bahasa Inggris
   carousel_heading_beginners: Pedoman untuk pemula
-  carousel_heading_javascript: Tutorials that teach JavaScript
+  carousel_heading_javascript: Pedoman yang mengajarkan Javascript
   carousel_heading_unplugged: Tidak ada perangkat atau internet? Coba ilmu komputer
     luring (offline)
   carousel_heading_devices: Aplikasi pedoman untuk ponsel dan tablet
@@ -396,11 +404,11 @@
   carousel_heading_robots: Belajar pemrogaman bersama robot-robot
   carousel_heading_ide: Sarana yang populer di kalangan guru
   educator_notes: Catatan pendidik
-  how_to_teach_hoc: How to Teach an Hour of Code
+  how_to_teach_hoc: Cara Mengajarkan Hour of Code
   more_resources_educators: Lebih banyak sumber daya bagi guru dan pendidik
   participants: peserta
   teachers_notes: Catatan Guru
-  teachers_notes_hoc: 'Teachers: Read important educator notes here'
+  teachers_notes_hoc: 'Guru: Baca catatan penting pendidik di sini'
   previous: Sebelumnya
   next: Selanjutnya
   older_systems: Pedoman yang bekerja pada sistem lama
@@ -528,8 +536,8 @@
   hourofcode_platformtext: Browser modern, smartphone, tablet
   frozen_platformtext: Browser modern + tablet
   playlab_platformtext: Browser modern, smartphone, tablet
-  codeorg_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
-  codeintl_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
+  codeorg_shortdescription: Belajar kode dengan Mark Zuckerberg dan Angry Birds!
+  codeintl_shortdescription: Belajar kode dengan Mark Zuckerberg dan Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Belajar menggambar menggunakan JavaScript
   khanes_shortdescription: Belajar menggambar menggunakan JavaScript
@@ -537,9 +545,9 @@
   khanhe_shortdescription: Belajar menggambar menggunakan JavaScript
   khanfr_shortdescription: Belajar menggambar menggunakan JavaScript
   khanpl_shortdescription: Belajar menggambar menggunakan JavaScript
-  tynker_shortdescription: Learn to code by solving fun puzzles and build your own
-    mobile games.
-  scratch_shortdescription: Create interactive games, stories, and animations.
+  tynker_shortdescription: Belajar kode dengan memecahkan teka-teki menyenangkan dan
+    membangun permainan mobile Anda sendiri.
+  scratch_shortdescription: Buatlah permainan interaktif, cerita dan animasi.
   lightbot_shortdescription: Program Lightbot to solve puzzles using procedures and
     loops!
   thinkersmith_shortdescription: Unplugged tutorial for a group with no devices
@@ -560,15 +568,19 @@
     pemrograman Quorum.
   codespark_shortdescription: Foos adalah permainan yang menyenangkan untuk anak-anak
     belajar tentang pemrograman.
-  kodable_shortdescription: A fun iPad game to teach computer programming concepts
-  tynkerapp_shortdescription: 'Learn to program by solving fun coding puzzles. '
+  kodable_shortdescription: Sebuah permainan iPad yang menyenangkan untuk mengajarkan
+    konsep-konsep pemrograman komputer
+  tynkerapp_shortdescription: 'Belajar program dengan memecahkan pengkodean teka-teki
+    menyenangkan. '
   robomindnl_shortdescription: Menulis kode untuk virtual robot
-  flappy_shortdescription: Make your own game - Flappy Bird, Shark, or Submarine
-  bitsbox_shortdescription: Code a series of apps to play and share, using real JavaScript.
-  makegameswithus_shortdescription: Make an iPhone game! Learn by writing code to
-    teach your monster new moves!
-  touchdevelop_shortdescription: 'Solve puzzles, create games, and learn coding all
-    on your phone. '
+  flappy_shortdescription: Buat permainan Anda sendiri - Flappy Bird, hiu atau kapal
+    selam
+  bitsbox_shortdescription: Kodekan serangkaian aplikasi untuk dimainkan dan dibagikan,
+    menggunakan JavaScript nyata.
+  makegameswithus_shortdescription: Buat permainan iPhone! Belajar dengan menulis
+    kode untuk mengajarkan monster Anda gerakan baru!
+  touchdevelop_shortdescription: 'Pecahkan teka-teki, menciptakan permainan dan belajar
+    pengkodean semua di telepon Anda. '
   appinventor_shortdescription: Membuat aplikasi Anda sendiri! (hanya untuk Android)
   blockly_shortdescription: Unduh file ZIP untuk belajar secara luring
   thinkersmith2_shortdescription: Pelajari cara komputer menggunakan angka-angka 1
@@ -576,17 +588,17 @@
   kodableunplugged_shortdescription: Latihan luring yang menyenangkan
   projguts_shortdescription: Coba pemodelan dan simulasi menggunakan batu/kertas/gunting
   hourofcode_shortdescription: Pengganti untuk code.org/hoc yang baru
-  frozen_shortdescription: Let's use code to join Anna and Elsa as they explore the
-    magic and beauty of ice.
+  frozen_shortdescription: Mari kita gunakan kode untuk bergabung bersama Anna dan
+    Elsa saat mereka menjelajahi keajaiban dan keindahan es.
   playlab_shortdescription: Create a story or make a game with Play Lab!
-  codeorg_longdescription: Learn the basic concepts of Computer Science with drag
-    and drop programming. This is a game-like, self-directed tutorial starring video
-    lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn
-    repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
-  codeintl_longdescription: Learn the basic concepts of Computer Science with drag
-    and drop programming. This is a game-like, self-directed tutorial starring video
-    lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn
-    repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
+  codeorg_longdescription: Pelajari konsep-konsep dasar ilmu komputer dengan pemrograman
+    tarik dan jatuhkan. Ini adalah tutorial permainan mandiri yang dibintangi kuliah
+    video oleh Bill Gates, Mark Zuckerberg, Angry Birds dan Plants vs Zombies. Pelajari
+    putaran berulang, persyaratan, dan dasar algoritma. Tersedia dalam 34 bahasa.
+  codeintl_longdescription: Pelajari konsep-konsep dasar ilmu komputer dengan pemrograman
+    tarik dan jatuhkan. Ini adalah tutorial permainan mandiri yang dibintangi kuliah
+    video oleh Bill Gates, Mark Zuckerberg, Angry Birds dan Plants vs Zombies. Pelajari
+    putaran berulang, persyaratan, dan dasar algoritma. Tersedia dalam 34 bahasa.
   thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
     los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
     espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
@@ -828,14 +840,15 @@
   processing_beyond_platformtext: Web browser modern
   alice_beyond_platformtext: Windows atau Mac (Instal diperlukan)
   sphero_beyond_platformtext: Pembelian robot
-  codeorg_beyond_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
+  codeorg_beyond_shortdescription: Belajar kode dengan Mark Zuckerberg dan Angry Birds!
   khan_beyond_shortdescription: Belajar menggambar menggunakan JavaScript
   tynker_beyond_shortdescription: Kursus yang menyenangkan dan menarik untuk anak-anak
     kelas 4-8
-  scratch_beyond_shortdescription: Create interactive games, stories, and animations.
+  scratch_beyond_shortdescription: Buatlah permainan interaktif, cerita dan animasi.
   lightbot_beyond_shortdescription: Sebuah permainan untuk mengajar konsep mengkode
   codecademy_beyond_shortdescription: Belajar pemrograman JavaScript, di web browser
-  kodable_beyond_shortdescription: A fun iPad game to teach computer programming concepts
+  kodable_beyond_shortdescription: Sebuah permainan iPad yang menyenangkan untuk mengajarkan
+    konsep-konsep pemrograman komputer
   scratchjr_beyond_shortdescription: 'Membuat cerita interaktif dan game menggunakan
     ScratchJr. '
   hopscotch_beyond_shortdescription: Belajar pemrograman visual pada iPad
@@ -847,25 +860,26 @@
   makegameswithus_beyond_shortdescription: Learn to make an iPhone game in an hour
   appinventor_beyond_shortdescription: Membuat aplikasi Anda sendiri! (hanya untuk
     Android)
-  touchdevelop_beyond_shortdescription: Code mobile apps directly on your phone, tablet
-    or laptop
-  codehs_beyond_shortdescription: Learn JavaScript programming with a fun visual environment
-  udemy_beyond_shortdescription: Dozens of online programming courses
-  lynda_beyond_shortdescription: Dozens of online programming courses
-  edx_beyond_shortdescription: The most popular class at Harvard
-  coursera_beyond_shortdescription: Start with CS101
-  udacity_beyond_shortdescription: Start with CS101
-  teachingtree_beyond_shortdescription: 'Online Knowledge: Rapid and Unconstrained'
-  kodu_beyond_shortdescription: Design a 3D game world
-  cargobot_beyond_shortdescription: Program a robot arm on your iPad
-  kidsruby_beyond_shortdescription: Learn to program using Ruby
-  w3schools_beyond_shortdescription: Learn to make web sites
-  codeavengers_beyond_shortdescription: Learn to code games and websites
-  mozilla_beyond_shortdescription: Create and share web pages
-  codecombat_beyond_shortdescription: Play a game and learn JavaScript to win
-  codea_beyond_shortdescription: Make apps on your iPad
-  lego_beyond_shortdescription: Build and program a robot
-  finch_beyond_shortdescription: A robot for computer science education
+  touchdevelop_beyond_shortdescription: Kodekan aplikasi mobile langsung pada telepon
+    Anda, tablet atau laptop
+  codehs_beyond_shortdescription: Belajar pemrograman JavaScript dengan lingkungan
+    visual menyenangkan
+  udemy_beyond_shortdescription: Puluhan kursus pemrograman online
+  lynda_beyond_shortdescription: Puluhan kursus pemrograman online
+  edx_beyond_shortdescription: Kelas yang paling populer di Harvard
+  coursera_beyond_shortdescription: Mulailah dengan CS101
+  udacity_beyond_shortdescription: Mulailah dengan CS101
+  teachingtree_beyond_shortdescription: 'Pengetahuan daring: Cepat dan tak terbatas'
+  kodu_beyond_shortdescription: Rancang sebuah dunia permainan 3D
+  cargobot_beyond_shortdescription: Program lengan robot di iPad Anda
+  kidsruby_beyond_shortdescription: Belajar memprogram menggunakan Ruby
+  w3schools_beyond_shortdescription: Belajar membuat situs web
+  codeavengers_beyond_shortdescription: Belajar mengkodekan permainan dan situs web
+  mozilla_beyond_shortdescription: Buat dan bagikan halaman web
+  codecombat_beyond_shortdescription: Bermain dan belajar JavaScript untuk menang
+  codea_beyond_shortdescription: Membuat aplikasi di iPad Anda
+  lego_beyond_shortdescription: Membangun dan memprogramkan robot
+  finch_beyond_shortdescription: Robot untuk pendidikan sains komputer
   arduino_beyond_shortdescription: Learn Arduino with Sparkfun's Digital Sandbox.
   processing_beyond_shortdescription: Learn the Processing languages
   alice_beyond_shortdescription: Teach programming in a 3D environment

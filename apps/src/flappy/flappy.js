@@ -731,7 +731,7 @@ Flappy.execute = function() {
   Flappy.response = null;
 
   if (level.editCode) {
-    code = utils.generateCodeAliases(level.codeFunctions, 'Flappy');
+    code = utils.generateCodeAliases(level.codeFunctions, null, 'Flappy');
     code += studioApp.editor.getValue();
   }
 
