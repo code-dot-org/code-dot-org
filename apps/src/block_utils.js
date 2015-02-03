@@ -167,6 +167,8 @@ exports.forceInsertTopBlock = function (input, blockType) {
 
 /**
  * Generate the xml for a block for the calc app.
+ * @param {string} type Type for this block
+ * @param args List of args
  */
 exports.calcBlockXml = function (type, args) {
   var str = '<block type="' + type + '" inline="false">';
@@ -176,7 +178,11 @@ exports.calcBlockXml = function (type, args) {
     if (typeof(arg) === "number") {
       arg = '<block type="functional_math_number"><title name="NUM">' + arg +
         '</title></block>';
+    } else if (/^<block/.test(arg)) {
+      // we have xml, dont make any changes
+      arg = arg;
     } else {
+      // we think we have a variable
       arg = exports.calcBlockGetVar(arg);
     }
     str += arg;
