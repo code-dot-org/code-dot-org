@@ -93,29 +93,10 @@ NetSim.prototype.injectStudioApp = function (studioApp) {
 };
 
 /**
- * Handler for clicking on the send button in the middle of the screen.
- * This is a temporary handler for a temporary UI element - may get
- * torn out.
- * @private
- */
-NetSim.prototype.onSendButtonClick_ = function () {
-  // TODO (bbuchanan) : This is super hacky "hello world" stuff.  remove it.
-  var now = new Date();
-  var fromBox = document.getElementById('netsim_inputbox');
-  var toBox = document.getElementById('netsim_recievelog');
-  toBox.value += '[' + now.toTimeString() + '] ' + fromBox.value + '\n';
-  toBox.scrollTop = toBox.scrollHeight;
-};
-
-/**
  * Hook up input handlers to controls on the netsim page
  * @private
  */
 NetSim.prototype.attachHandlers_ = function () {
-  dom.addClickTouchEvent(
-      document.getElementById('netsim_sendbutton'),
-      this.onSendButtonClick_.bind(this)
-  );
 };
 
 /**
