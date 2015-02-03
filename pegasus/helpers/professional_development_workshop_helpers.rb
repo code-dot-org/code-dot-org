@@ -72,3 +72,27 @@ def generate_professional_development_workshop_teachers_report
     end.compact
   end.compact.flatten
 end
+
+def generate_professional_development_workshop_signup_report(secret)
+  workshop = PEGASUS_DB[:forms].where(kind: 'ProfessionalDevelopmentWorkshop', secret: secret).first
+
+  PEGASUS_DB[:forms].where(kind: 'ProfessionalDevelopmentWorkshopSignup', parent_id: workshop[:id]).map do |row|
+    data = JSON.parse(row[:data]) rescue {}
+    if data['status_s'] == 'cancelled'
+      nil
+    else
+      {
+        name: data['name_s'],
+        email: data['email_s'],
+        role: (data['teacher_role_ss'] - ['Other']).concat(data['teacher_role_other_ss'] || []).uniq.to_csv,
+        experience: data['teacher_tech_experience_level_s'].gsub(/ \(.*$/, ''),
+        school_name: data['school_name_s'],
+        school_location: data['school_location_s'],
+        school_type: (data['school_type_ss'] - ['Other']).concat(data['school_type_other_ss'] || []).uniq.to_csv,
+        school_district: data['school_district_s'],
+        school_levels: (data['school_levels_ss'] - ['Other']).concat(data['school_levels_other_ss'] || []).uniq.to_csv,
+        students: data['number_students_s'],
+      }
+    end
+  end.compact
+end
