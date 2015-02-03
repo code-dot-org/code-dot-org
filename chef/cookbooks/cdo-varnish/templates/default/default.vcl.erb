@@ -246,6 +246,14 @@ director dashboard round-robin {
 <% end %>
 }
 
+backend jupiter {
+  .host = "127.0.0.1";
+  .port = "<%= node['cdo-apps']['jupiter']['port'] %>";
+  .connect_timeout = 600s;
+  .first_byte_timeout = 600s;
+  .between_bytes_timeout = 600s;
+}
+
 # api.change.org
 backend api_change_org_4 {
   .host = "104.16.4.13";
@@ -415,6 +423,10 @@ end
     {
       set req.backend = dashboard;
     }
+  }
+  else if (req.http.host == "<%= canonical_hostname('jupiter.code.org') %>")
+  {
+    set req.backend = jupiter;
   }
   else if (req.url ~ "^/dashboardapi/")
   {

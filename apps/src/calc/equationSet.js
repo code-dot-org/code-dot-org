@@ -8,7 +8,7 @@ var ExpressionNode = require('./expressionNode');
  *   equation: x + 1
  * In many cases, this will just be an expression with no name.
  */
-var Equation = function (name, expression, variables) {
+var Equation = function (name, expression) {
   this.name = name;
   this.expression = expression;
 };
@@ -143,17 +143,15 @@ EquationSet.prototype.isIdenticalTo = function (otherSet) {
 };
 
 /**
- * Returns a list of equations (vars/functions) sorted by name.
+ * Returns a list of the non-compute equations (vars/functions) sorted by name.
  */
 EquationSet.prototype.sortedEquations = function () {
-  // TODO - this has side effects, do i care?
-  // sort by name. note - this sorts in place
+  // note: this has side effects, as it reorders equations. we could also
+  // ensure this was done only once if we had performance concerns
   this.equations_.sort(function (a, b) {
     return a.name.localeCompare(b.name);
   });
 
-  // append compute expression with name null
-  // return this.equations_.concat(this.compute_);
   return this.equations_;
 };
 
@@ -166,7 +164,9 @@ EquationSet.prototype.evaluate = function () {
 
 /**
  * Evaluate the given compute expression in the context of the EquationSet's
- * equations
+ * equations. For example, our equation set might define f(x) = x + 1, and this
+ * allows us to evaluate the expression f(1) or f(2)...
+ * @param {ExpressionNode} computeExpression The expression to evaluate
  */
 EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
   // (1) no variables/functions. this is easy
@@ -187,13 +187,12 @@ EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
       throw new Error('expect function call');
     }
 
-    if (caller.children.length !== variables.length) {
+    if (caller.numChildren() !== variables.length) {
       throw new Error('Unexpected: calling function with wrong number of inputs');
     }
 
     variables.forEach(function (item, index) {
-      // TODO (brent)- value feels like it should be a private maybe?
-      mapping[item] = caller.children[index].value;
+      mapping[item] = caller.getChildValue(index);
     });
     return singleFunction.expression.evaluate(mapping);
   }
@@ -222,7 +221,6 @@ EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
 /**
  * Given a Blockly block, generates an Equation.
  */
-// TODO (brent) - needs unit tests
 function getEquationFromBlock(block) {
   var name;
   if (!block) {

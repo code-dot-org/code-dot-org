@@ -19,16 +19,35 @@ var ExpressionNode = require(testUtils.buildPath('calc/expressionNode'));
 
 var getEquationFromBlock = EquationSet.__testonly__.getEquationFromBlock;
 
-function validateGeneratedEquation(assert, blockXml, expectedEquation) {
+/**
+ * Load the blocks into the blockSpace, assert that there's only one top block,
+ * then generate an equation from that block. Validate that the equation matches
+ * what we expect
+ * @param assert Our assertion object
+ * @param {string} blockXml Xml to generate blocks for
+ * @param {Equation} expectedEquation
+ * @param {number} blockIndex Index into getTopBlocks() of block we're interested in
+ */
+function validateGeneratedEquation(assert, blockXml, expectedEquation, blockIndex) {
+  blockIndex = blockIndex || 0;
   // Clear existing blocks
   Blockly.mainBlockSpace.getTopBlocks().forEach(function (b) {
-    b.dispose();
+    // use b.blockSpace as an indicator for whether block has already
+    // been disposed
+    if (b.blockSpace) {
+      b.dispose();
+    }
   });
 
   studioApp.loadBlocks(blockXml);
 
-  assert.equal(Blockly.mainBlockSpace.getTopBlocks().length, 1);
-  var block = Blockly.mainBlockSpace.getTopBlocks()[0];
+  if (blockIndex === 0) {
+    assert.equal(Blockly.mainBlockSpace.getTopBlocks().length, 1);
+  } else {
+    assert(Blockly.mainBlockSpace.getTopBlocks().length > blockIndex,
+      'actual: ' + Blockly.mainBlockSpace.getTopBlocks().length);
+  }
+  var block = Blockly.mainBlockSpace.getTopBlocks()[blockIndex];
   var equation = getEquationFromBlock(block);
 
   if (expectedEquation === null) {
@@ -38,7 +57,6 @@ function validateGeneratedEquation(assert, blockXml, expectedEquation) {
     assert(equation.expression.isIdenticalTo(expectedEquation.expression));
   }
 }
-
 
 module.exports = {
   app: "calc",
@@ -57,7 +75,7 @@ module.exports = {
       },
       // Run all validation in a single test to avoid the overhead of new node
       // processes
-      customValidation: function (assert) {
+      customValidator: function (assert) {
         validateGeneratedEquation(assert,
           blockUtils.calcBlockXml('functional_plus', [1, 2]),
           new Equation(null, new ExpressionNode('+', [1, 2]))
@@ -94,6 +112,38 @@ module.exports = {
           new Equation(null, new ExpressionNode(0))
         );
 
+        // Equation generation depends on the function call and definition both
+        // being in the workspace
+        var blockIndex = 1;
+        var functional_call = '' +
+          // f(x) = x
+          '<block type="functional_definition" inline="false" uservisible="false">' +
+          '  <mutation>' +
+          '    <arg name="x" type="Number"/>' +
+          '    <outputtype>Number</outputtype>' +
+          '  </mutation>' +
+          '  <title name="NAME">f</title>' +
+          '  <functional_input name="STACK">' +
+               blockUtils.calcBlockGetVar('x') +
+          '  </functional_input>' +
+          '</block>' +
+          // f(0)
+          '<block type="functional_call" inline="false" uservisible="false">' +
+          '  <mutation name="f">' +
+          '    <arg name="x" type="Number"/>' +
+          '  </mutation>' +
+          '  <functional_input name="ARG0">' +
+          '    <block type="functional_math_number_dropdown" uservisible="false">' +
+          '      <title name="NUM" config="0,1,2,3,4,5,6,7,8,9,10">0</title>' +
+          '    </block>' +
+          '  </functional_input>' +
+          '</block>';
+        validateGeneratedEquation(assert,
+          functional_call,
+          new Equation(null, new ExpressionNode('f', [0])),
+          blockIndex
+        );
+
         var functional_definition = '' +
           '<block type="functional_definition" inline="false" uservisible="false">' +
           '  <mutation>' +
@@ -102,33 +152,38 @@ module.exports = {
           '  </mutation>' +
           '  <title name="NAME">f</title>' +
           '  <functional_input name="STACK">' +
-          '    <block type="functional_parameters_get" uservisible="false">' +
-          '      <mutation>' +
-          '        <outputtype>Number</outputtype>' +
-          '      </mutation>' +
-          '      <title name="VAR">x</title>' +
-          '    </block>' +
+               blockUtils.calcBlockGetVar('x') +
           '  </functional_input>' +
           '</block>';
         validateGeneratedEquation(assert,
           functional_definition,
-          // TODO - one with two args?
           new Equation('f(x)', new ExpressionNode('x'))
         );
 
-        var parameters_get = '' +
-          '<block type="functional_parameters_get" uservisible="false">' +
+        var functional_definition_two_args = '' +
+          '<block type="functional_definition" inline="false" uservisible="false">' +
           '  <mutation>' +
+          '    <arg name="x" type="Number"/>' +
+          '    <arg name="y" type="Number"/>' +
           '    <outputtype>Number</outputtype>' +
           '  </mutation>' +
-          '  <title name="VAR">x</title>' +
+          '  <title name="NAME">f</title>' +
+          '  <functional_input name="STACK">' +
+               blockUtils.calcBlockXml('functional_plus', ['x', 'y']) +
+          '  </functional_input>' +
           '</block>';
         validateGeneratedEquation(assert,
-          parameters_get,
+          functional_definition_two_args,
+          new Equation('f(x,y)', new ExpressionNode('+', ['x', 'y']))
+        );
+
+        // functional_parameters_get
+        validateGeneratedEquation(assert,
+          blockUtils.calcBlockGetVar('x'),
           new Equation(null, new ExpressionNode('x'))
         );
 
-        var exampleXml = '' +
+        var functional_example = '' +
           '<block type="functional_example" inline="false" uservisible="false">' +
           '  <functional_input name="ACTUAL">' +
           '    <block type="functional_call" inline="false" uservisible="false">' +
@@ -150,9 +205,11 @@ module.exports = {
           '</block>';
         // I expect this equation name to change eventually, but this gets us unblocked
         validateGeneratedEquation(assert,
-          exampleXml,
+          functional_example,
           null
         );
+
+        return true;
       },
       xml: ''
     }
