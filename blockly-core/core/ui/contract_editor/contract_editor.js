@@ -22,6 +22,13 @@ goog.require('goog.events');
 goog.require('goog.color');
 goog.require('goog.array');
 
+/** @const */ var EXAMPLE_BLOCK_MARGIN_BELOW = 20; // px
+/** @const */ var EXAMPLE_BLOCK_MARGIN_LEFT = 15; // px
+/** @const */ var EXAMPLE_BLOCK_SECTION_MAGIN_BELOW = 10; // px
+/** @const */ var EXAMPLE_BLOCK_SECTION_MAGIN_ABOVE = 15; // px
+/** @const */ var FUNCTION_BLOCK_MARGIN_ABOVE = 15; // px
+/** @const */ var HEADER_HEIGHT = 50; //px
+
 /**
  * Class for a functional block-specific contract editor.
  * @constructor
@@ -58,14 +65,6 @@ goog.inherits(Blockly.ContractEditor, Blockly.FunctionEditor);
 
 Blockly.ContractEditor.EXAMPLE_BLOCK_TYPE = 'functional_example';
 Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME = 'ACTUAL';
-Blockly.ContractEditor.MARGIN_BELOW_EXAMPLES = 50; // px
-Blockly.ContractEditor.EXAMPLE_BLOCK_X_OFFSET = 0; // px
-Blockly.ContractEditor.EXAMPLE_BLOCK_MARGIN_BELOW = 20; // px
-Blockly.ContractEditor.EXAMPLE_BLOCK_MARGIN_LEFT = 15; // px
-Blockly.ContractEditor.EXAMPLE_BLOCK_SECTION_MAGIN_BELOW = 10; // px
-Blockly.ContractEditor.EXAMPLE_BLOCK_SECTION_MAGIN_ABOVE = 15; // px
-Blockly.ContractEditor.FUNCTION_BLOCK_MARGIN_ABOVE = 15; // px
-Blockly.ContractEditor.HEADER_HEIGHT = 50; //px
 
 Blockly.ContractEditor.typesToColorsHSV = {
   'none': [0, 0, 0.6],
@@ -104,15 +103,15 @@ Blockly.ContractEditor.prototype.create_ = function() {
       headerText: "2. Examples", // TODO(bjordan): i18n
       placeContentCallback: goog.bind(function (newY) {
         var currentY = newY;
-        currentY += Blockly.ContractEditor.EXAMPLE_BLOCK_SECTION_MAGIN_ABOVE;
+        currentY += EXAMPLE_BLOCK_SECTION_MAGIN_ABOVE;
         this.exampleBlocks.forEach(function(block, i) {
           if (i !== 0) {
-            currentY += Blockly.ContractEditor.EXAMPLE_BLOCK_MARGIN_BELOW;
+            currentY += EXAMPLE_BLOCK_MARGIN_BELOW;
           }
-          block.moveTo(Blockly.ContractEditor.EXAMPLE_BLOCK_MARGIN_LEFT, currentY);
+          block.moveTo(EXAMPLE_BLOCK_MARGIN_LEFT, currentY);
           currentY += block.getHeightWidth().height;
         }, this);
-        currentY += Blockly.ContractEditor.EXAMPLE_BLOCK_SECTION_MAGIN_BELOW;
+        currentY += EXAMPLE_BLOCK_SECTION_MAGIN_BELOW;
         return currentY;
       }, this),
       onCollapseCallback: goog.bind(function (isNowCollapsed) {
@@ -252,8 +251,7 @@ Blockly.ContractEditor.prototype.layOutBlockSpaceItems_ = function () {
   var currentX = Blockly.RTL ? fullWidth - FRAME_MARGIN_SIDE : FRAME_MARGIN_SIDE;
 
   this.contractSectionView_.placeAndGetNewY(
-    -this.getContractDivHeight() - Blockly.ContractEditor.HEADER_HEIGHT,
-    fullWidth);
+    -this.getContractDivHeight() - HEADER_HEIGHT, fullWidth);
 
   this.positionTrashcanVerticalMiddleOfTopHeader_();
 
@@ -267,7 +265,7 @@ Blockly.ContractEditor.prototype.layOutBlockSpaceItems_ = function () {
     this.flyout_.position_();
   }
 
-  currentY += Blockly.ContractEditor.FUNCTION_BLOCK_MARGIN_ABOVE;
+  currentY += FUNCTION_BLOCK_MARGIN_ABOVE;
 
   if (this.functionDefinitionBlock) {
     this.functionDefinitionBlock.moveTo(currentX, currentY);
@@ -275,9 +273,9 @@ Blockly.ContractEditor.prototype.layOutBlockSpaceItems_ = function () {
 };
 
 Blockly.ContractEditor.prototype.positionTrashcanVerticalMiddleOfTopHeader_ = function () {
-  var trashcanHeaderDifference = this.modalBlockSpace.trashcan.getHeight() -
-    Blockly.ContractEditor.HEADER_HEIGHT;
-  this.modalBlockSpace.trashcan.repositionBelowBlockSpaceTop(-trashcanHeaderDifference / 2);
+  var trashcan = this.modalBlockSpace.trashcan;
+  var trashcanHeaderDifference = trashcan.getHeight() - HEADER_HEIGHT;
+  trashcan.repositionBelowBlockSpaceTop(-trashcanHeaderDifference / 2);
 };
 
 /**
@@ -319,8 +317,8 @@ Blockly.ContractEditor.prototype.createContractDom_ = function() {
 };
 
 Blockly.ContractEditor.prototype.getBlockSpaceEditorTopOffset = function () {
-  return this.getWindowBorderChromeHeight() + this.getContractDivHeight() +
-    Blockly.ContractEditor.HEADER_HEIGHT;
+  return this.getWindowBorderChromeHeight() +
+    this.getContractDivHeight() + HEADER_HEIGHT;
 };
 
 /**
