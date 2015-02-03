@@ -1,5 +1,4 @@
 var testUtils = require('../../util/testUtils');
-var ResultType = require(testUtils.buildPath('constants.js')).ResultType;
 var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
 var blockUtils = require(testUtils.buildPath('block_utils'));
 var studioApp = require(testUtils.buildPath('StudioApp')).singleton;
@@ -70,7 +69,7 @@ module.exports = {
     {
       description: "getEquationFromBlock",
       expected: {
-        result: ResultType.SUCCESS,
+        result: true,
         testResult: TestResults.FREE_PLAY
       },
       // Run all validation in a single test to avoid the overhead of new node

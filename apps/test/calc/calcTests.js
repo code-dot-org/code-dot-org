@@ -10,7 +10,6 @@ var EquationSet = require(testUtils.buildPath('/calc/equationSet.js'));
 var Equation = EquationSet.Equation;
 var ExpressionNode = require(testUtils.buildPath('/calc/expressionNode.js'));
 var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
-var ResultType = require(testUtils.buildPath('constants.js')).ResultType;
 
 describe('evaluateResults_/evaluateFunction_', function () {
   it('fails when callers have different compute signatures', function () {
@@ -28,7 +27,7 @@ describe('evaluateResults_/evaluateFunction_', function () {
     userSet.addEquation_(new Equation(null, new ExpressionNode('f', [2])));
 
     var outcome = Calc.evaluateFunction_(targetSet, userSet);
-    assert.equal(outcome.result, ResultType.FAILURE);
+    assert.equal(outcome.result, false);
     assert.equal(outcome.testResults, TestResults.LEVEL_INCOMPLETE_FAIL);
     assert.equal(outcome.message, undefined);
     assert.equal(outcome.failedInput, null);
@@ -52,7 +51,7 @@ describe('evaluateResults_/evaluateFunction_', function () {
     userSet.addEquation_(new Equation(null, new ExpressionNode('f', [2])));
 
     var outcome = Calc.evaluateFunction_(targetSet, userSet);
-    assert.equal(outcome.result, ResultType.FAILURE);
+    assert.equal(outcome.result, false);
     assert.equal(outcome.testResults, TestResults.LEVEL_INCOMPLETE_FAIL);
     assert.equal(outcome.message, undefined);
     assert.equal(outcome.failedInput, null);
@@ -78,7 +77,7 @@ describe('evaluateResults_/evaluateFunction_', function () {
   //
   //   debugger;
   //   var outcome = Calc.evaluateFunction_(targetSet, userSet);
-  //   assert.equal(outcome.result, ResultType.FAILURE);
+  //   assert.equal(outcome.result, false);
   //   assert.equal(outcome.testResults, TestResults.APP_SPECIFIC_FAIL);
   //   assert.notEqual(outcome.message, undefined);
   //   assert.deepEqual(outcome.failedInput, [0,0,0]);
@@ -100,7 +99,7 @@ describe('evaluateResults_/evaluateFunction_', function () {
     userSet.addEquation_(new Equation(null, new ExpressionNode('f', [2])));
 
     var outcome = Calc.evaluateFunction_(targetSet, userSet);
-    assert.equal(outcome.result, ResultType.FAILURE);
+    assert.equal(outcome.result, false);
     assert.equal(outcome.testResults, TestResults.LEVEL_INCOMPLETE_FAIL);
     assert.equal(outcome.message, undefined);
     assert.equal(outcome.failedInput, null);
@@ -123,7 +122,7 @@ describe('evaluateResults_/evaluateFunction_', function () {
     userSet.addEquation_(new Equation(null, new ExpressionNode('f', [3])));
 
     var outcome = Calc.evaluateResults_(targetSet, userSet);
-    assert.equal(outcome.result, ResultType.FAILURE);
+    assert.equal(outcome.result, false);
     assert.equal(outcome.testResults, TestResults.LEVEL_INCOMPLETE_FAIL);
     assert.equal(outcome.message, undefined);
     assert.equal(outcome.failedInput, null);
@@ -144,7 +143,7 @@ describe('evaluateResults_/evaluateFunction_', function () {
     userSet.addEquation_(new EquationSet(null, new ExpressionNode('+', [1, 2])));
 
     var outcome = Calc.evaluateResults_(targetSet, userSet);
-    assert.equal(outcome.result, ResultType.FAILURE);
+    assert.equal(outcome.result, false);
     assert.equal(outcome.testResults, TestResults.LEVEL_INCOMPLETE_FAIL);
     assert.equal(outcome.message, undefined);
     assert.equal(outcome.failedInput, null);
@@ -168,7 +167,7 @@ describe('evaluateResults_/evaluateFunction_', function () {
     userSet.addEquation_(new Equation(null, new ExpressionNode('y')));
 
     var outcome = Calc.evaluateResults_(targetSet, userSet);
-    assert.equal(outcome.result, ResultType.SUCCESS);
+    assert.equal(outcome.result, true);
     assert.equal(outcome.testResults, TestResults.ALL_PASS);
     assert.equal(outcome.message, undefined);
     assert.equal(outcome.failedInput, null);
@@ -192,7 +191,7 @@ describe('evaluateResults_/evaluateFunction_', function () {
     userSet.addEquation_(new Equation(null, new ExpressionNode('y')));
 
     var outcome = Calc.evaluateResults_(targetSet, userSet);
-    assert.equal(outcome.result, ResultType.FAILURE);
+    assert.equal(outcome.result, false);
     assert.equal(outcome.testResults, TestResults.LEVEL_INCOMPLETE_FAIL);
     assert.equal(outcome.message, undefined);
     assert.equal(outcome.failedInput, null);

@@ -1,5 +1,4 @@
 var testUtils = require('../../util/testUtils');
-var ResultType = require(testUtils.buildPath('constants.js')).ResultType;
 var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
 var blockUtils = require(testUtils.buildPath('block_utils'));
 
@@ -15,7 +14,7 @@ module.exports = {
     {
       description: "Simple answer",
       expected: {
-        result: ResultType.SUCCESS,
+        result: true,
         testResult: TestResults.FREE_PLAY
       },
       xml: '<xml>' +
@@ -28,7 +27,7 @@ module.exports = {
     {
       description: "Answer with a function",
       expected: {
-        result: ResultType.SUCCESS,
+        result: true,
         testResult: TestResults.FREE_PLAY
       },
       xml: '<xml>' +
@@ -66,7 +65,7 @@ module.exports = {
     {
       description: 'empty answer',
       expected: {
-        result: ResultType.SUCCESS,
+        result: true,
         testResult: TestResults.FREE_PLAY
       },
       xml: '<xml></xml>'
