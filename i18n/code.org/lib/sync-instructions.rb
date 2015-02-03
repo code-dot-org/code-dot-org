@@ -2,16 +2,11 @@
 require 'yaml'
 
 def find_instruction(f)
-  pattern = '"instructions": "'
+  pattern = /^\s*"instructions": "(.*?)",?\n$/
   f.each_line do |line|
-    unless line.match(pattern).nil? # does this level have an instruction?
-      line.strip # then trim to only get the instruction string
-      if line[-2,1] == ","
-        line = line[21...-3]
-      else
-        line = line[21...-2]
-      end
-      return line
+    matches = line.match pattern
+    if matches
+      return matches.captures.first
     end
   end
   nil
