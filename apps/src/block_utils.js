@@ -1,11 +1,18 @@
-// TODO (brent) - many of these could be in test only code
-
 var xml = require('./xml');
 
+/**
+ * Create the xml for a level's toolbox
+ * @param {string} blocks The xml of the blocks to go in the toolbox
+ */
 exports.createToolbox = function(blocks) {
   return '<xml id="toolbox" style="display: none;">' + blocks + '</xml>';
 };
 
+/**
+ * Create the xml for a block of the given type
+ * @param {string} type The type of the block
+ * @param {Object.<string,string>} [titles] Dictionary of titles mapping name to value
+ */
 exports.blockOfType = function(type, titles) {
   var titleText = '';
   if (titles) {
@@ -16,6 +23,13 @@ exports.blockOfType = function(type, titles) {
   return '<block type="' + type + '">' + titleText +'</block>';
 };
 
+/**
+ * Create the xml for a block of the given type, with the provided child nested
+ * in a next block
+ * @param {string} type The type of the block
+ * @param {Object.<string,string>} [titles] Dictionary of titles mapping name to value
+ * @param {string} child Xml for the child block
+ */
 exports.blockWithNext = function (type, titles, child) {
   var titleText = '';
   if (titles) {
@@ -38,6 +52,9 @@ exports.blocksFromList = function (types) {
   return this.blockWithNext(types[0], {}, this.blocksFromList(types.slice(1)));
 };
 
+/**
+ * Create the xml for a category in a toolbox
+ */
 exports.createCategory = function(name, blocks, custom) {
   return '<category name="' + name + '"' +
           (custom ? ' custom="' + custom + '"' : '') +
@@ -168,7 +185,8 @@ exports.forceInsertTopBlock = function (input, blockType) {
 /**
  * Generate the xml for a block for the calc app.
  * @param {string} type Type for this block
- * @param args List of args
+ * @param {number[]|string[]} args List of args, where each arg is either the
+ *   xml for a child block, a number, or the name of a variable.
  */
 exports.calcBlockXml = function (type, args) {
   var str = '<block type="' + type + '" inline="false">';
@@ -207,6 +225,13 @@ exports.calcBlockGetVar = function (variableName) {
     '</block>';
 };
 
+/**
+ * Generate the xml for a math block (either calc or eval apps).
+ * @param {string} type Type for this block
+ * @param {Object.<string,string} inputs Dictionary mapping input name to the
+     xml for that input
+ * @param {Object.<string.string>} [titles] Dictionary of titles mapping name to value
+ */
 exports.mathBlockXml = function (type, inputs, titles) {
   var str = '<block type="' + type + '" inline="false">';
   for (var title in titles) {
