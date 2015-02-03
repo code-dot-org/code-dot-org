@@ -2,6 +2,8 @@
 
 goog.provide('Blockly.SvgHeader');
 
+/** @const */ var TEXT_PADDING_LEFT = '10'; // px
+
 /**
  * A horizontal SVG bar with rectangular background and text
  * @param {!Element} parent {!Element}
@@ -33,8 +35,6 @@ Blockly.SvgHeader = function (parent, opt_options) {
   }
 };
 
-Blockly.SvgHeader.TEXT_PADDING_LEFT = '10';
-
 /**
  * @param yOffset {Number}
  * @param width {Number}
@@ -44,7 +44,7 @@ Blockly.SvgHeader.prototype.setPositionSize = function (yOffset, width, height) 
   this.svgGroup_.setAttribute('transform', 'translate(' + 0 + ',' + yOffset + ')');
   this.grayRectangleElement_.setAttribute('width', width);
   this.grayRectangleElement_.setAttribute('height', height);
-  this.textElement_.setAttribute('x', Blockly.SvgHeader.TEXT_PADDING_LEFT);
+  this.textElement_.setAttribute('x', TEXT_PADDING_LEFT);
   var rectangleMiddleY = height / 2;
   // text getBBox() height seems to be off by a bit, 1/3 of getBBox height looks best
   var thirdTextHeight = this.textElement_.getBBox().height / 3;
