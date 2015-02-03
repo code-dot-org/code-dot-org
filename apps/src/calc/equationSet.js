@@ -26,6 +26,31 @@ Equation.prototype.isFunction = function () {
 };
 
 /**
+ * If this is a function, extract the parameters from the name
+ * @returns {string[]} Parameter names
+ */
+Equation.prototype.getParameters = function () {
+  if (!this.isFunction()) {
+    return [];
+  }
+  var params = /\((.*)\)$/.exec(this.name)[1].split(',');
+  return params;
+};
+
+/**
+ * If this is a function, extract the function name from the name.
+ * @returns {string} Function name
+ */
+// TODO - should we instead have name, params, expression on the class?
+Equation.prototype.getFunctionName = function () {
+  if (!this.isFunction()) {
+    return null;
+  }
+  // return everything before the first paren
+  return /(.*)\(/.exec(this.name)[1];
+};
+
+/**
  * An EquationSet consists of a top level (compute) equation, and optionally
  * some number of support equations
  * @param {!Array} blocks List of blockly blocks
@@ -96,23 +121,16 @@ EquationSet.prototype.hasVariablesOrFunctions = function () {
 };
 
 /**
- * If the EquationSet has exactly one function and no variables, returns that
- * equation. If we have multiple functions or one function and some variables,
- * it returns null
- */
-EquationSet.prototype.singleFunction_ = function () {
-  if (this.equations_.length === 1 && this.equations_[0].isFunction()) {
-    return this.equations_[0];
-  }
-
-  return null;
-};
-
-/**
- * External callers only care about whether or not we have a single function
+ * @returns {boolean} True if the EquationSet has exactly one function and no
+ * variables. If we have multiple functions or one function and some variables,
+ * returns false.
  */
  EquationSet.prototype.hasSingleFunction = function () {
-   return this.singleFunction_() !== null;
+   if (this.equations_.length === 1 && this.equations_[0].isFunction()) {
+     return true;
+   }
+
+   return false;
  };
 
 /**
@@ -169,47 +187,53 @@ EquationSet.prototype.evaluate = function () {
  * @param {ExpressionNode} computeExpression The expression to evaluate
  */
 EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
-  // (1) no variables/functions. this is easy
+  // no variables/functions. this is easy
   if (this.equations_.length === 0) {
     return computeExpression.evaluate();
   }
 
+  // Iterate through our equations to generate our mapping. We may need to do
+  // this a few times. Stop trying as soon as we do a full iteration without
+  // adding anything new to our mapping.
   var mapping = {};
-  // (2) single function, no variables
-  // Map our parameter names to their input values.
-  var singleFunction = this.singleFunction_();
-  if (singleFunction !== null) {
-    // TODO (brent) - might be better if we didn't depend on the equation
-    // name being in a particular format
-    var variables = /\((.*)\)$/.exec(singleFunction.name)[1].split(',');
-    var caller = computeExpression;
-    if (caller.getType() !== ExpressionNode.ValueType.FUNCTION_CALL) {
-      throw new Error('expect function call');
-    }
-
-    if (caller.numChildren() !== variables.length) {
-      throw new Error('Unexpected: calling function with wrong number of inputs');
-    }
-
-    variables.forEach(function (item, index) {
-      mapping[item] = caller.getChildValue(index);
-    });
-    return singleFunction.expression.evaluate(mapping);
-  }
-
-  // (3) no functions and one or more variables
-  var madeProgress = true;
-  while (madeProgress) {
+  var madeProgress;
+  var testMapping;
+  var setTestMappingToOne = function (item) {
+    testMapping[item] = 1;
+  };
+  do {
     madeProgress = false;
     for (var i = 0; i < this.equations_.length; i++) {
       var equation = this.equations_[i];
-      if (mapping[equation.name] === undefined &&
+      if (equation.isFunction()) {
+        var functionName = equation.getFunctionName();
+        if (mapping[functionName]) {
+          continue;
+        }
+        var params = equation.getParameters();
+        // see if we can map if we replace our params
+        // note that params override existing vars in our testMapping
+        testMapping = _.clone(mapping);
+        params.forEach(setTestMappingToOne);
+        if (!equation.expression.canEvaluate(testMapping)) {
+          continue;
+        }
+
+        // we have a valid mapping
+        madeProgress = true;
+        mapping[functionName] = {
+          variables: params,
+          expression: equation.expression
+        };
+      } else if (mapping[equation.name] === undefined &&
           equation.expression.canEvaluate(mapping)) {
+        // we have a variable that hasn't yet been mapped and can be
         madeProgress = true;
         mapping[equation.name] = equation.expression.evaluate(mapping);
       }
     }
-  }
+
+  } while (madeProgress);
 
   if (!computeExpression.canEvaluate(mapping)) {
     throw new Error("Can't resolve EquationSet");

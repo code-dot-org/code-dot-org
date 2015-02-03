@@ -156,7 +156,7 @@ Calc.init = function(config) {
 
     appState.targetSet = generateEquationSetFromBlockXml(solutionBlocks);
 
-    displayGoal();
+    displayGoal(appState.targetSet);
 
     // Adjust visualizationColumn width.
     var visualizationColumn = document.getElementById('visualizationColumn');
@@ -180,9 +180,10 @@ Calc.init = function(config) {
  * (4) We have a target compute expression, and either multiple functions or
  *     one function and variable(s). Currently not supported.
  *     // TODO - make sure we throw for this
+ * @param {EquationSet} targetSet The target equation set.
  */
-function displayGoal() {
-  var computeEquation = appState.targetSet.computeEquation();
+function displayGoal(targetSet) {
+  var computeEquation = targetSet.computeEquation();
   if (!computeEquation || !computeEquation.expression) {
     return;
   }
@@ -191,9 +192,9 @@ function displayGoal() {
   // (i.e. compute expression). Otherwise show all equations.
   var tokenList;
   var nextRow = 0;
-  var hasSingleFunction = appState.targetSet.hasSingleFunction();
+  var hasSingleFunction = targetSet.hasSingleFunction();
   if (!hasSingleFunction) {
-    var sortedEquations = appState.targetSet.sortedEquations();
+    var sortedEquations = targetSet.sortedEquations();
     sortedEquations.forEach(function (equation) {
       tokenList = equation.expression.getTokenList(false);
       displayEquation('answerExpression', equation.name, tokenList, nextRow++);
@@ -201,7 +202,7 @@ function displayGoal() {
   }
 
   tokenList = computeEquation.expression.getTokenList(false);
-  var result = appState.targetSet.evaluate();
+  var result = targetSet.evaluate();
 
   if (hasSingleFunction) {
     tokenList = tokenList.concat(getTokenList(' = ' + result.toString()));
@@ -645,7 +646,7 @@ function cloneNodeWithoutIds(elementId) {
  * App specific displayFeedback function that calls into
  * studioApp.displayFeedback when appropriate
  */
-var displayFeedback = function() {
+function displayFeedback() {
   if (!appState.response || appState.animating) {
     return;
   }
@@ -671,7 +672,7 @@ var displayFeedback = function() {
   }
 
   studioApp.displayFeedback(options);
-};
+}
 
 /**
  * Function to be called when the service report call is complete
@@ -684,3 +685,10 @@ function onReportComplete(response) {
   appState.response = response;
   displayFeedback();
 }
+
+/* start-test-block */
+// export private function(s) to expose to unit testing
+Calc.__testonly__ = {
+  displayGoal: displayGoal
+};
+/* end-test-block */

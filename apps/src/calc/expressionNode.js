@@ -79,7 +79,7 @@ ExpressionNode.prototype.clone = function () {
  * Can we evaluate this expression given the mapping
  */
 // TODO - unit test (test case where mapping[this.value_] = 0
-ExpressionNode.prototype.canEvaluate = function (mapping) {
+ExpressionNode.prototype.canEvaluate_orig = function (mapping) {
   mapping = mapping || {};
   var type = this.getType();
   if (type === ValueType.FUNCTION_CALL) {
@@ -96,6 +96,17 @@ ExpressionNode.prototype.canEvaluate = function (mapping) {
     }
   }
 
+  return true;
+};
+
+// TODO (brent) - is this try/catch a reasonable approach? seems a little gross
+// might be cleaner to have evaluate return error code/result pair
+ExpressionNode.prototype.canEvaluate = function (mapping) {
+  try {
+    this.evaluate(mapping);
+  } catch (err) {
+    return false;
+  }
   return true;
 };
 
@@ -396,6 +407,20 @@ ExpressionNode.prototype.getChildValue = function (index) {
  */
 ExpressionNode.prototype.setChildValue = function (index, value) {
   return this.children_[index].setValue(value);
+};
+
+/**
+ * Get a string representation of the tree
+ * Note: This is only used by test code, but is also generally useful to debug
+ */
+ExpressionNode.prototype.debug = function () {
+  if (this.children_.length === 0) {
+    return this.value_;
+  }
+  return "(" + this.value_ + " " +
+    this.children_.map(function (c) {
+      return c.debug();
+    }).join(' ') + ")";
 };
 
 /**
