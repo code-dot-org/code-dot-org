@@ -77,7 +77,9 @@ class JupiterApp < Sinatra::Base
   configure do
     logger = create_logger
     database = create_database(logger)
-    
+   
+    OmniAuth.config.full_host = "https://#{CDO.canonical_hostname('jupiter.code.org')}"
+ 
     set :database, database
     set :logger, logger
     set :root, jupiter_dir
@@ -111,6 +113,10 @@ class JupiterApp < Sinatra::Base
   end
   
   after do
+  end
+  
+  get '/health_check' do
+    halt 200, "Healthy\n"
   end
 
   get '/' do
