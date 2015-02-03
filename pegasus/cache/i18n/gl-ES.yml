@@ -1,4 +1,4 @@
-"es-ES":
+"gl-ES":
   hello: Hola mundo
   select_language: Por favor seleccione su idioma
   computer_science: Ciencias de la computación
@@ -298,6 +298,7 @@
     alumnos</b>.
   dashboard_students_placeholder_name: Nombre del alumno
   dashboard_students_name: Nombre
+  dashboard_students_progress: Progress
   dashboard_students_age: Edad
   dashboard_students_gender: Sexo
   dashboard_students_male: Hombre
@@ -357,6 +358,10 @@
   dashboard_login_picture: Imagen
   dashboard_login_none: Correo electrónico
   dashboard_new_password: nueva contraseña
+  dashboard_progress_not_completed: not completed
+  dashboard_progress_completed_too_many_blocks: completed, too many blocks
+  dashboard_progress_completed_perfect: completed, perfect
+  dashboard_progress_furthest_level_attempted: furthest level attempted
   stats_hoc_2013_heading: 'Increíbles estadísticas de la Hora del Código del año pasado.
     En sólo una semana:'
   stats_hoc_2013_image_alt: Estadísticas de Hora del Código del 2013

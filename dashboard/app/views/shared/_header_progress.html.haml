@@ -1,5 +1,5 @@
 .header_level
-  %div{class: 'header_level_container'}
+  %div.header_level_container
     .header_text
     .progress_container
     .header_finished_link{style: 'display: none;'}
@@ -16,8 +16,7 @@
   .header_popup
     .header_popup_header
       %span= t('nav.popup.progress')
-      - if current_user
-        .header_text{style: 'float: right;'}= t('nav.popup.lines', lines: current_user.total_lines)
+      .header_text{style: 'float: right;'}
     .header_popup_body
       .loading
     .header_popup_footer
