@@ -169,7 +169,7 @@ function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
       '</video></div>';
 
   // Swap current #video with new code
-  replaceWithElement('video', playerCode);
+  $('#video').replaceWith(playerCode);
 
   videojs.options.flash.swf = "<%= asset_path("video-js.swf") %>";
   videojs.options.techOrder = ["flash", "html5"];
