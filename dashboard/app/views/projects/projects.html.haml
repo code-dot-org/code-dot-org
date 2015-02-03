@@ -15,8 +15,31 @@
       font-size: 1.5em;
     }
   }
-%div{'ng-controller' => 'ProjectsController'}
-  
+
+  .level-buttons {
+    margin: 20px 5px;
+  }
+
+%div
+  .alert
+    Hi! This is a skeleton page to see your projects. Visible to admins only ;)
+
+  %div
+    %span New project:
+    .btn-group.level-buttons{role: "group"}
+      %a.btn{href: ''}
+        (TODO) Standalone
+        %i.fa.fa-pencil
+      %a.btn{href: ''}
+        (TODO) Standalone
+        %i.fa.fa-rocket
+      %a.btn{href: '/s/course3/stage/21/puzzle/15'}
+        Freeplay
+        %i.fa.fa-pencil
+      %a.btn{href: '/s/course3/stage/16/puzzle/6'}
+        Freeplay
+        %i.fa.fa-rocket
+
   %table.projects{style: "width:850px; table-layout:auto;", 'ng-show' => 'projects.length > 0'}
     %colgroup
       %col{width: "200"}
