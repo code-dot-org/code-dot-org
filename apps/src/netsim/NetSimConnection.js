@@ -201,7 +201,7 @@ NetSimConnection.prototype.connectToInstance = function (instanceID) {
   this.instanceID_ = instanceID;
 
   // Connect to the lobby table we just set
-  self.status_ = ConnectionStatus.IN_LOBBY;
+  this.status_ = ConnectionStatus.IN_LOBBY;
   this.connect_();
 };
 
@@ -318,7 +318,8 @@ NetSimConnection.prototype.setConnectionStatus_ = function (newStatus) {
 };
 
 NetSimConnection.prototype.getReadableStatus = function () {
-  return this.status_ + ' to router ' + this.router_.routerID + ' on wire ' + this.wire_.wireID;
+  return this.status_ + ' to router ' + this.router_.routerID +
+      ' on wire ' + this.wire_.wireID;
 };
 
 /**
@@ -330,7 +331,7 @@ NetSimConnection.prototype.keepAlive = function (callback) {
   }
 
   if (!this.isConnectedToInstance()) {
-    this.logger_.log("Can't send keepAlive, not connected to instance.", LogLevel.WARN);
+    this.logger_.warn("Can't send keepAlive, not connected to instance.");
     return;
   }
 
@@ -405,9 +406,11 @@ NetSimConnection.prototype.cleanLobby_ = function () {
   var now = Date.now();
   this.fetchLobbyListing(function (lobbyData) {
     lobbyData.forEach(function (lobbyRow) {
-      if (lobbyRow.type === LobbyRowType.USER && now - lobbyRow.lastPing >= CONNECTION_TIMEOUT_MS) {
+      if (lobbyRow.type === LobbyRowType.USER &&
+          now - lobbyRow.lastPing >= CONNECTION_TIMEOUT_MS) {
         self.disconnectByRowID_(lobbyRow.id);
-      } else if (lobbyRow.type === LobbyRowType.ROUTER && now - lobbyRow.lastPing >= CONNECTION_TIMEOUT_ROUTER_MS) {
+      } else if (lobbyRow.type === LobbyRowType.ROUTER &&
+          now - lobbyRow.lastPing >= CONNECTION_TIMEOUT_ROUTER_MS) {
         self.disconnectByRowID_(lobbyRow.id);
       }
     });
@@ -488,7 +491,7 @@ NetSimConnection.prototype.disconnectFromRouter = function () {
 
 NetSimConnection.prototype.createWire = function (remoteID, onComplete) {
   if (!onComplete) {
-    onComplete = function () {}
+    onComplete = function () {};
   }
 
   var self = this;
