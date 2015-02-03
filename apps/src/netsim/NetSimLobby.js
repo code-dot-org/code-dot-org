@@ -35,7 +35,6 @@
 
 var dom = require('../dom');
 var NetSimConnection = require('./NetSimConnection');
-var NetSimRouter = require('./NetSimRouter');
 var markup = require('./NetSimLobby.html');
 
 /**
@@ -44,6 +43,7 @@ var markup = require('./NetSimLobby.html');
  * @const
  */
 var AUTO_REFRESH_INTERVAL_MS = 5000;
+var CLOSED_REFRESH_INTERVAL_MS = 30000;
 
 /**
  * @param {NetSimConnection} connection - The instance connection that this
@@ -340,15 +340,18 @@ NetSimLobby.prototype.getUserSections_ = function (callback) {
  * @param {RunLoop.Clock} clock
  */
 NetSimLobby.prototype.tick = function (clock) {
-  // TODO (bbuchanan) : Extract "interval" method generator for this and connection.
   if (clock.time >= this.nextAutoRefreshTime_) {
     this.refreshLobby_();
+    var refreshInterval = this.connection_.isConnectedToRouter() ?
+        CLOSED_REFRESH_INTERVAL_MS : AUTO_REFRESH_INTERVAL_MS;
+
+    // TODO (bbuchanan) : Extract "interval" method generator for this and connection.
     if (this.nextAutoRefreshTime_ === 0) {
-      this.nextAutoRefreshTime_ = clock.time + AUTO_REFRESH_INTERVAL_MS;
+      this.nextAutoRefreshTime_ = clock.time + refreshInterval;
     } else {
       // Stable increment
       while (this.nextAutoRefreshTime_ < clock.time) {
-        this.nextAutoRefreshTime_ += AUTO_REFRESH_INTERVAL_MS;
+        this.nextAutoRefreshTime_ += refreshInterval;
       }
     }
   }
