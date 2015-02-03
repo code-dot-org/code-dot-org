@@ -14,6 +14,7 @@ FactoryGirl.define do
 
     factory :teacher do
       user_type User::TYPE_TEACHER
+      birthday Date.new(1980, 03, 14)
     end
 
     factory :student do
