@@ -295,12 +295,11 @@ Calc.evaluateFunction_ = function (targetSet, userSet) {
   // Now we want to use all combinations of inputs in the range [-100...100],
   // noting which set of inputs failed (if any)
   var possibleValues = _.range(1, 101).concat(_.range(-0, -101, -1));
-  var numParams = expression.children.length;
+  var numParams = expression.numChildren();
   var iterator = new InputIterator(possibleValues, numParams);
 
   var setChildToValue = function (val, index) {
-    // TODO - feels a little hacky directly modifying children
-    expression.children[index].value = val;
+    expression.setChildValue(index, val);
   };
 
   while (iterator.remaining() > 0 && !outcome.failedInput) {
@@ -473,9 +472,8 @@ function displayComplexUserExpressions () {
 
   if (appState.failedInput) {
     var expression = computeEquation.expression.clone();
-    for (var c = 0; c < expression.children.length; c++) {
-      // TODO - feels a little hacky directly modifying children
-      expression.children[c].value = appState.failedInput[c];
+    for (var c = 0; c < expression.numChildren(); c++) {
+      expression.setChildValue(c, appState.failedInput[c]);
     }
     result = appState.userSet.evaluateWithExpression(expression).toString();
 

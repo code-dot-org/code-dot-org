@@ -143,17 +143,15 @@ EquationSet.prototype.isIdenticalTo = function (otherSet) {
 };
 
 /**
- * Returns a list of equations (vars/functions) sorted by name.
+ * Returns a list of the non-compute equations (vars/functions) sorted by name.
  */
 EquationSet.prototype.sortedEquations = function () {
-  // TODO - this has side effects, do i care?
-  // sort by name. note - this sorts in place
+  // note: this has side effects, as it reorders equations. we could also
+  // ensure this was done only once if we had performance concerns
   this.equations_.sort(function (a, b) {
     return a.name.localeCompare(b.name);
   });
 
-  // append compute expression with name null
-  // return this.equations_.concat(this.compute_);
   return this.equations_;
 };
 
@@ -189,13 +187,12 @@ EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
       throw new Error('expect function call');
     }
 
-    if (caller.children.length !== variables.length) {
+    if (caller.numChildren() !== variables.length) {
       throw new Error('Unexpected: calling function with wrong number of inputs');
     }
 
     variables.forEach(function (item, index) {
-      // TODO (brent)- value feels like it should be a private maybe?
-      mapping[item] = caller.children[index].value;
+      mapping[item] = caller.getChildValue(index);
     });
     return singleFunction.expression.evaluate(mapping);
   }
