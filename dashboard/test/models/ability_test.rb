@@ -1,10 +1,6 @@
 require 'test_helper'
 
-class ActivityTest < ActiveSupport::TestCase
-  test "the truth" do
-    assert true
-  end
-
+class AbilityTest < ActiveSupport::TestCase
   test "as guest" do
     ability = Ability.new(User.new)
 

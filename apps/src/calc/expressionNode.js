@@ -76,23 +76,62 @@ ExpressionNode.prototype.clone = function () {
 };
 
 /**
- * Replace an ExpressionNode's contents with those of another node.
+ * Can we evaluate this expression given the mapping
  */
-ExpressionNode.prototype.replaceWith = function (newNode) {
-  if (!(newNode instanceof ExpressionNode)) {
-    throw new Error("Must replaceWith ExpressionNode");
+// TODO - unit test (test case where mapping[this.value] = 0
+ExpressionNode.prototype.canEvaluate = function (mapping) {
+  mapping = mapping || {};
+  var type = this.getType();
+  if (type === ValueType.FUNCTION_CALL) {
+    return false;
   }
-  // clone so that we have our own copies of any objects
-  newNode = newNode.clone();
-  this.value = newNode.value;
-  this.children = newNode.children;
+
+  if (type === ValueType.VARIABLE) {
+    return mapping[this.value] !== undefined;
+  }
+
+  for (var i = 0; i < this.children.length; i++) {
+    if (!this.children[i].canEvaluate(mapping)) {
+      return false;
+    }
+  }
+
+  return true;
 };
 
 /**
  * Evaluate the expression, returning the result.
  */
-ExpressionNode.prototype.evaluate = function () {
+ExpressionNode.prototype.evaluate = function (mapping) {
+  mapping = mapping || {};
   var type = this.getType();
+
+  if (type === ValueType.VARIABLE && mapping[this.value] !== undefined) {
+    var clone = this.clone();
+    clone.value = mapping[this.value];
+    return clone.evaluate(mapping);
+  }
+
+  if (type === ValueType.FUNCTION_CALL && mapping[this.value] !== undefined) {
+    var functionDef = mapping[this.value];
+    if (!functionDef.variables || !functionDef.expression) {
+      throw new Error('Bad mapping for: ' + this.value);
+    }
+    if (functionDef.variables.length !== this.children.length) {
+      throw new Error('Bad mapping for: ' + this.value);
+    }
+    // Generate a new mapping so that if we have collisions between global
+    // variables and function variables, the function vars take precedence
+    var newMapping = {};
+    _.keys(mapping).forEach(function (key) {
+      newMapping[key] = mapping[key];
+    });
+    functionDef.variables.forEach(function (variable, index) {
+      newMapping[variable] = this.children[index].value;
+    }, this);
+    return functionDef.expression.evaluate(newMapping);
+  }
+
   if (type === ValueType.VARIABLE || type === ValueType.FUNCTION_CALL) {
     throw new Error('Must resolve variables/functions before evaluation');
   }
@@ -104,8 +143,8 @@ ExpressionNode.prototype.evaluate = function () {
     throw new Error('Unexpected error');
   }
 
-  var left = this.children[0].evaluate();
-  var right = this.children[1].evaluate();
+  var left = this.children[0].evaluate(mapping);
+  var right = this.children[1].evaluate(mapping);
 
   switch (this.value) {
     case '+':
@@ -274,8 +313,33 @@ ExpressionNode.prototype.isIdenticalTo = function (other) {
 };
 
 /**
+ * Returns true if both this and other are calls of the same function, with
+ * the same number of arguments
+ */
+ExpressionNode.prototype.hasSameSignature = function (other) {
+  if (!other) {
+    return false;
+  }
+
+  if (this.getType() !== ValueType.FUNCTION_CALL ||
+      other.getType() !== ValueType.FUNCTION_CALL) {
+    return false;
+  }
+
+  if (this.value !== other.value) {
+    return false;
+  }
+
+  if (this.children.length !== other.children.length) {
+    return false;
+  }
+
+  return true;
+};
+
+/**
  * Do the two nodes differ only in argument order.
- * todo: unit test
+ * TODO: unit test
  */
 ExpressionNode.prototype.isEquivalentTo = function (target) {
   // only ignore argument order for ARITHMETIC
@@ -313,3 +377,4 @@ var Token = function (str, marked) {
   this.str = str;
   this.marked = marked;
 };
+ExpressionNode.Token = Token;
