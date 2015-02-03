@@ -45,6 +45,7 @@ var ObservableEvent = require('./ObservableEvent');
  * @const
  */
 var KEEP_ALIVE_INTERVAL_MS = 2000;
+var CLEAN_UP_INTERVAL_MS = 10000;
 
 /**
  * Milliseconds before a client is considered 'disconnected' and
@@ -54,6 +55,7 @@ var KEEP_ALIVE_INTERVAL_MS = 2000;
  */
 var CONNECTION_TIMEOUT_MS = 30000; // 30 seconds
 var CONNECTION_TIMEOUT_ROUTER_MS = 300000; // 5 minutes
+var CONNECTION_TIMEOUT_WIRE_MS = 300000; // 5 minutes
 
 /**
  * A connection to a NetSim instance
@@ -121,6 +123,7 @@ var NetSimConnection = function (displayName, logger /*=new NetSimLogger(NONE)*/
    * @private
    */
   this.nextKeepAliveTime_ = Infinity;
+  this.nextCleanUpTime_ = Infinity;
 
   this.wire_ = null;
   this.router_ = null;
@@ -295,6 +298,7 @@ NetSimConnection.prototype.setConnectionStatus_ = function (newStatus) {
   switch (newStatus) {
     case ConnectionStatus.CONNECTED:
       this.nextKeepAliveTime_ = 0;
+      this.nextCleanUpTime_ = 0;
       this.logger_.info("Connected to node.");
       this.statusDetail_ = " to router " + this.router_.routerID +
           " on wire " + this.wire_.wireID;
@@ -302,6 +306,7 @@ NetSimConnection.prototype.setConnectionStatus_ = function (newStatus) {
 
     case ConnectionStatus.IN_LOBBY:
       this.nextKeepAliveTime_ = 0;
+      this.nextCleanUpTime_ = 0;
       this.logger_.info("Connected to instance, assigned ID " +
           this.myLobbyRowID_, LogLevel.INFO);
       this.statusDetail_ = "";
@@ -310,6 +315,7 @@ NetSimConnection.prototype.setConnectionStatus_ = function (newStatus) {
     case ConnectionStatus.OFFLINE:
       this.myLobbyRowID_ = undefined;
       this.nextKeepAliveTime_ = Infinity;
+      this.nextCleanUpTime_ = Infinity;
       this.logger_.info("Disconnected from instance", LogLevel.INFO);
       this.statusDetail_ = "";
       break;
@@ -382,16 +388,28 @@ NetSimConnection.prototype.tick = function (clock) {
       this.router_.update();
     }
 
-    // TODO (bbuchanan): Need a better policy for when to do this.  Or, we
-    //                   might not need to once we have auto-expiring rows.
-    this.cleanLobby_();
-
     if (this.nextKeepAliveTime_ === 0) {
       this.nextKeepAliveTime_ = clock.time + KEEP_ALIVE_INTERVAL_MS;
     } else {
       // Stable increment
       while (this.nextKeepAliveTime_ < clock.time) {
         this.nextKeepAliveTime_ += KEEP_ALIVE_INTERVAL_MS;
+      }
+    }
+  }
+
+  // Client-driven cleanup of instance tables
+  // TODO (bbuchanan): Would be nice if this could go away entirely.
+  //                   Investigate auto-expiring rows.
+  if (clock.time >= this.nextCleanUpTime_) {
+    this.cleanLobby_();
+
+    if (this.nextCleanUpTime_ === 0) {
+      this.nextCleanUpTime_ = clock.time + CLEAN_UP_INTERVAL_MS;
+    } else {
+      // Stable increment
+      while (this.nextCleanUpTime_ < clock.time) {
+        this.nextCleanUpTime_ += CLEAN_UP_INTERVAL_MS;
       }
     }
   }
@@ -404,6 +422,10 @@ NetSimConnection.prototype.tick = function (clock) {
 NetSimConnection.prototype.cleanLobby_ = function () {
   var self = this;
   var now = Date.now();
+
+  // Cleaning the lobby of old users and routers
+  // For now, just clean on timeout
+  // Could eventually do some validation too.
   this.fetchLobbyListing(function (lobbyData) {
     lobbyData.forEach(function (lobbyRow) {
       if (lobbyRow.type === LobbyRowType.USER &&
@@ -415,6 +437,26 @@ NetSimConnection.prototype.cleanLobby_ = function () {
       }
     });
   });
+
+  // Cleaning wires
+  // For now, just clean on timeout.
+  // Eventually, would be better to validate whether wire endpoints exist
+  // Although, that will conflict with the mutual-connect stuff later.
+  if (this.wire_) {
+    var wireTable = this.wire_.getTable();
+    wireTable.all(function (rows) {
+      if (rows !== null) {
+        rows.forEach(function (row) {
+          if ((row.lastPing === undefined) ||
+              (now - row.lastPing >= CONNECTION_TIMEOUT_WIRE_MS)) {
+            wireTable.delete(row.id, function (success) {
+              self.logger_.info("Cleaned up wire " + row.id);
+            });
+          }
+        });
+      }
+    });
+  }
 };
 
 NetSimConnection.prototype.addRouterToLobby = function () {
