@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -154,9 +154,10 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"compute":function(d){return "calcular"},
-"equivalentExpression":function(d){return "Tente reordenar os seus argumentos para obter exatamente a mesma expressão."},
-"extraTopBlocks":function(d){return "You have unattached blocks. Did you mean to attach these to the \"compute\" block?"},
-"goal":function(d){return "Objetivo:"},
+"compute":function(d){return "computar"},
+"equivalentExpression":function(d){return "Tente reordenar os seus argumentos para obter exactamente a mesma expressão."},
+"extraTopBlocks":function(d){return "Tem blocos não ligados. Tencionava ligar-los ao bloco \"computar\"?"},
+"failedInput":function(d){return "Your function does not return the right result for all values."},
+"goal":function(d){return "Objectivo:"},
 "reinfFeedbackMsg":function(d){return "Here is your story! Continue working on it, or move on to the next puzzle!"},
-"yourExpression":function(d){return "Your expression:"}};
+"yourExpression":function(d){return "A sua expressão:"}};

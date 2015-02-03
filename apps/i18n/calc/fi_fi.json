@@ -2,6 +2,7 @@
   "compute": "laskea",
   "equivalentExpression": "Kokeile vaihtaa komentojesi järjestystä saadaksesi aikaan täsmälleen saman lausekkeen.",
   "extraTopBlocks": "Sinulla on liittämättömiä lohkoja. Tarkoititko liittää nämä \"laske\"-lohkoon?",
+  "failedInput": "Your function does not return the right result for all values.",
   "goal": "Tavoite:",
   "reinfFeedbackMsg": "Tässä on tarinasi! Jatka sen työstämistä, tai siirry seuraavaan tehtävään!",
   "yourExpression": "Lausekkeesi:"

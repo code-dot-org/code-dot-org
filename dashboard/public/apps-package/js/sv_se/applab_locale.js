@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -141,14 +141,14 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"catActions":function(d){return "Handlingar"},
-"catControl":function(d){return "Loopar"},
+"catActions":function(d){return "Åtgärder"},
+"catControl":function(d){return "loopar"},
 "catEvents":function(d){return "Händelser"},
 "catLogic":function(d){return "Logik"},
 "catMath":function(d){return "Matte"},
-"catProcedures":function(d){return "Funktioner"},
+"catProcedures":function(d){return "funktioner"},
 "catText":function(d){return "text"},
-"catVariables":function(d){return "Variabler"},
+"catVariables":function(d){return "variabler"},
 "continue":function(d){return "Fortsätt"},
 "createHtmlBlock":function(d){return "skapa HTML-block"},
 "createHtmlBlockTooltip":function(d){return "Skapar ett HTML-block i appen."},
@@ -159,13 +159,12 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "pause":function(d){return "Bryt"},
 "reinfFeedbackMsg":function(d){return "Du kan trycka på \"Försök igen\"-knappen för att gå tillbaka och köra din app."},
 "repeatForever":function(d){return "upprepa för evigt"},
-"repeatDo":function(d){return "utför"},
+"repeatDo":function(d){return "gör"},
 "repeatForeverTooltip":function(d){return "Utför åtgärder i detta block upprepade gånger medan programmet körs."},
-"shareWebappTwitter":function(d){return "Kolla in appen jag gjort. Jag skrev den själv med @codeorg"},
+"shareApplabTwitter":function(d){return "Kolla in appen jag gjort. Jag skrev den själv med @codeorg"},
 "shareGame":function(d){return "Dela din app:"},
 "stepIn":function(d){return "Stig in"},
 "stepOver":function(d){return "Stig över"},
 "stepOut":function(d){return "Stig ut"},
-"turnBlack":function(d){return "bli svart"},
-"turnBlackTooltip":function(d){return "Gör skärmen svart."},
+"viewData":function(d){return "View Data"},
 "yes":function(d){return "Ja"}};

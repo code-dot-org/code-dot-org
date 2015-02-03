@@ -48,7 +48,7 @@ cs:
         edit-code:
           desc: Upravit kód (beta)
           MazeEC: Fáze 1
-          Webapp: Fáze 2
+          Applab: Fáze 2
           ArtistEC: Fáze 3
           StudioEC: Fáze 4
         events:
@@ -99,10 +99,12 @@ cs:
         Jigsaw: skládačka
         MazeStep: Bludiště krokový režim
         Wordsearch: Osmisměrka
-        Webapp: Webová aplikace
+        Webapp: App Lab
         ArtistEC: Umělec
         TextMatch: Přiřazování textu
         StudioEC: Play Lab
+        Applab: App Lab
+        NetSim: Internet Simulator
     trophy:
       name:
         Bronze: Bronzová
@@ -244,7 +246,7 @@ cs:
         flappy_6: Podívejme se, jestli můžeš pořád získat body i potom, co Flappy uletí menší či větší vzdálenost.
         flappy_7: 'Teď zkus změnit scénu připojením jiného bloku k bloku "po spuštění".'
         flappy_8: Obraz můžeš nastavit kdykoliv, ne jen na začátku hry. Vyzkoušej nastavení NÁHODNÉ scény, když dojde k jiným událostem, například, když mine překážku.
-        flappy_9: Aby se to ještě zkomplikovalo, když Flappy vrazí do překážky nebo do země, zkus místo ukončení hry nastavit skóre na 0.
+        flappy_9: To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0.
         flappy_11: "Vytvoř si vlastní Flappy hru. Můžeš měnit všechen vzhled a všechna pravidla, včetně gravitace. Až budeš hotov, klikni na tlačítko 'Sdílet' a nech své přátele vyzkoušet tvojí hru na jejich mobilech."
         flappy_k1_1: Play Flappy
         flappy_k1_2: 'Připoj blok k bloku "když klikneš" a potom stiskni "Spustit". Klikej nebo ťukej na obrazovku, abys dostal Flappyho do cíle.'
@@ -326,7 +328,7 @@ cs:
         maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell the word STORY
-        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        applab_ec_simple: Create your app by using the blocks in the toolbox.
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColor" block.'
         turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new "penWidth" block. Have fun!'
         studio_ec_sandbox: "Create your own game. When you're done, click Finish to let friends try your game on their phones."

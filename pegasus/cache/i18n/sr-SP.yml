@@ -290,6 +290,7 @@
     користећи дугмад <b>Додајте ученика</b> и <b> Додајте више ученика</b> изнад.
   dashboard_students_placeholder_name: Име ученика
   dashboard_students_name: Име
+  dashboard_students_progress: Progress
   dashboard_students_age: Узраст
   dashboard_students_gender: Пол
   dashboard_students_male: Мушко
@@ -345,6 +346,10 @@
   dashboard_login_picture: Слика
   dashboard_login_none: Електронска пошта
   dashboard_new_password: нова лозинка
+  dashboard_progress_not_completed: not completed
+  dashboard_progress_completed_too_many_blocks: completed, too many blocks
+  dashboard_progress_completed_perfect: completed, perfect
+  dashboard_progress_furthest_level_attempted: furthest level attempted
   stats_hoc_2013_heading: 'Невероватна статистика прошлогодишњег Сата програмирања.
     За само недељу дана:'
   stats_hoc_2013_image_alt: Статистика за Сат програмирања 2013
@@ -1017,8 +1022,3 @@
   sphero_beyond_longdescription: Whether you're an educator or a parent, SPRK lessons
     give kids a fun crash course in programming robots while sharpening their skills
     in math and science.
-  dashboard_students_progress: Progress
-  dashboard_progress_not_completed: not completed
-  dashboard_progress_completed_too_many_blocks: completed, too many blocks
-  dashboard_progress_completed_perfect: completed, perfect
-  dashboard_progress_furthest_level_attempted: furthest level attempted

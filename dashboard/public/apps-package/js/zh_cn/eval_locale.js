@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -168,7 +168,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "squareBlockTitle":function(d){return "方形 (大小，样式，颜色)"},
 "starBlockTitle":function(d){return "星（半径，样式，颜色）"},
 "radialStarBlockTitle":function(d){return "径向-星 (点、 内部、 外部，款式、 颜色）"},
-"polygonBlockTitle":function(d){return "polygon (sides, length, style, color)"},
+"polygonBlockTitle":function(d){return "多边形 （边、 长度、 样式、 颜色）"},
 "stringAppendBlockTitle":function(d){return "字符串追加 (第一、第 二)"},
 "stringLengthBlockTitle":function(d){return "字符串长度 （字符串）"},
 "textBlockTitle":function(d){return "文本 （字符串、 大小、 颜色）"},

@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -160,7 +160,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catLogic":function(d){return "邏輯類別"},
 "catMath":function(d){return "運算類別"},
 "catProcedures":function(d){return "函數類別"},
-"catText":function(d){return "本文"},
+"catText":function(d){return "文本"},
 "catVariables":function(d){return "變數類別"},
 "continue":function(d){return "繼續 "},
 "createHtmlBlock":function(d){return "建立HTML區塊"},
@@ -174,11 +174,10 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "repeatForever":function(d){return "永遠重複"},
 "repeatDo":function(d){return "執行"},
 "repeatForeverTooltip":function(d){return "當app運作時，這個程式積木裡的動作會重複執行"},
-"shareWebappTwitter":function(d){return "快來看看我在 @codeorg 做的 app"},
+"shareApplabTwitter":function(d){return "快來看看我在 @codeorg 做的 app"},
 "shareGame":function(d){return "分享你的app:"},
 "stepIn":function(d){return "步入"},
 "stepOver":function(d){return "跨過"},
 "stepOut":function(d){return "走出去"},
-"turnBlack":function(d){return "變黑"},
-"turnBlackTooltip":function(d){return "把螢幕變成黑色"},
+"viewData":function(d){return "View Data"},
 "yes":function(d){return "是"}};

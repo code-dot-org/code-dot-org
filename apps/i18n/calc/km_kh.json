@@ -2,6 +2,7 @@
   "compute": "គិត​លេខ",
   "equivalentExpression": "សូមព្យាយាម ធ្វើការរៀបចំ អំណះអំណាងរបស់អ្នកដើម្បីទទួលបានកន្សោមពិតដូចគ្នា។",
   "extraTopBlocks": "អ្នកមានប្លុក មិនជាប់គ្នា មួយ។ តើអ្នកចង់មានន័យថាការភ្ជាប់ទាំងនេះទៅប្លុក \"គណនា\"មែនទេ?",
+  "failedInput": "Your function does not return the right result for all values.",
   "goal": "គោលដៅ៖",
   "reinfFeedbackMsg": "រឿងរបស់អ្នកនៅទីនេះគឺ! បន្តធ្វើការលើវាឬប្តូទៅផ្ដុំរូបបន្ទាប់!",
   "yourExpression": "កន្សោម​របស់​អ្នក៖"

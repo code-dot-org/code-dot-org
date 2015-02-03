@@ -13500,7 +13500,7 @@ goog.provide("Blockly.Blocks");
 goog.provide("Blockly.BlockSvgFunctional");
 Blockly.BlockSvgFunctional = function(block, options) {
   options = options || {};
-  this.headerHeight = options.headerHeight;
+  this.headerHeight = options.headerHeight || 0;
   this.rowBuffer = options.rowBuffer || 0;
   this.patternId_ = null;
   this.inputMarkers_ = {};

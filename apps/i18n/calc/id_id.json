@@ -2,6 +2,7 @@
   "compute": "hitung",
   "equivalentExpression": "Cobalah tata ulang argumen Anda untuk mendapatkan ekspresi yang sama persis.",
   "extraTopBlocks": "Terdapat blok yang tidak terpasang. Apa maksud Anda ialah memasangnya pada blok \"hitung\"?",
+  "failedInput": "Your function does not return the right result for all values.",
   "goal": "Tujuan:",
   "reinfFeedbackMsg": "Inilah ceritamu! Lanjutkanlah, atau beralih ke teka-teki berikutnya!",
   "yourExpression": "Ekspresimu:"

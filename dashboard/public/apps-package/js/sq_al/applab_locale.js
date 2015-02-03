@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -129,30 +129,29 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "catActions":function(d){return "Veprimet"},
-"catControl":function(d){return "perseritje"},
+"catControl":function(d){return "Ciklet"},
 "catEvents":function(d){return "Ngjarjet"},
 "catLogic":function(d){return "Logjika"},
 "catMath":function(d){return "Matematikë"},
 "catProcedures":function(d){return "Funksionet"},
 "catText":function(d){return "Tekst"},
-"catVariables":function(d){return "variabla"},
+"catVariables":function(d){return "Variabla"},
 "continue":function(d){return "Vazhdo"},
 "createHtmlBlock":function(d){return "krijo një bllok html"},
 "createHtmlBlockTooltip":function(d){return "Krijon një bllok HTML në aplikacion."},
-"finalLevel":function(d){return "Urime! Ju keni përfunduar puzzle përfundimatar."},
+"finalLevel":function(d){return "Urime! Ju keni përfunduar puzzle përfundimtar."},
 "nextLevel":function(d){return "Urime! Ti ke përfunduar këtë puzzle."},
 "no":function(d){return "Jo"},
 "numBlocksNeeded":function(d){return "Kjo enigme mund te zgjidhet me %1 rreshta."},
 "pause":function(d){return "Pushim"},
 "reinfFeedbackMsg":function(d){return "Ti mund të shtypësh butonin \"Përpiqu përsëri\" për tu kthyer që të vazhdosh me aplikacionin tënd."},
 "repeatForever":function(d){return "përsërit përgjithmonë"},
-"repeatDo":function(d){return "ekzekuto"},
+"repeatDo":function(d){return "bej"},
 "repeatForeverTooltip":function(d){return "Kryej veprimet në këtë bllok vazhdimisht, ndërkohë që aplikacioni yt po punon."},
-"shareWebappTwitter":function(d){return "Shiko aplikacionin që unë bëra. E shkruajta vetë me @codeorg"},
+"shareApplabTwitter":function(d){return "Shiko aplikacionin që unë bëra. E shkruajta vetë me @codeorg"},
 "shareGame":function(d){return "Shpërndaj aplikacionin tënd:"},
 "stepIn":function(d){return "Hyr"},
 "stepOver":function(d){return "Shtyhu"},
 "stepOut":function(d){return "Dil"},
-"turnBlack":function(d){return "ktheje të zezë"},
-"turnBlackTooltip":function(d){return "Kthen ekranin të zi."},
+"viewData":function(d){return "Shiko të Dhënat"},
 "yes":function(d){return "Po"}};

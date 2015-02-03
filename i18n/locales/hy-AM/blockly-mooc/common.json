@@ -52,7 +52,7 @@
   "play":"play",
   "print":"Print",
   "puzzleTitle":"Puzzle {puzzle_number} of {stage_total}",
-  "repeat":"repeat",
+  "repeat":"կրկնել",
   "resetProgram":"Reset",
   "runProgram":"Run",
   "runTooltip":"Run the program defined by the blocks in the workspace.",

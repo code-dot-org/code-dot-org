@@ -1,4 +1,7 @@
 pt:
+  errors:
+    messages:
+      not_saved: 'Please correct the following errors:'
   activerecord:
     errors:
       messages:
@@ -21,8 +24,8 @@ pt:
   welcome_back: 'Bem-vindo, %{name}'
   add_teacher_form:
     code:
-      label: 'Add a teacher:'
-      placeholder: Section Code (ABCDEF)
+      label: 'Adicionar um professor:'
+      placeholder: Código de Secção (ABCDEF)
     submit: Adicionar professor
   add_hint_form:
     placeholder: Por favor introduza a sua dica aqui
@@ -64,9 +67,9 @@ pt:
     overview_teacher: 'Ensine ciência da computação na sua sala de aula por criar uma conta.<p/> Poderá adicionar os seus alunos e acompanhar os seus progressos.'
     no_signup_message: 'Tu podes <a target="_blank" href="http://learn.code.org"> consultar as várias fases e quebra-cabeças</a>, mas precisarás de te inscrever para guardar o teu progresso.'
     teacher_educator_guide: Consulta o guia do educador
-    teacher_pitch: Teacher sign up for Code.org
+    teacher_pitch: Inscrição para Professores no Code.org
     teacher_title: Registo de professor
-    student_pitch: Student sign up for Code.org
+    student_pitch: Inscrição para Estudantes no Code.org
     student_title: Registo para Aluno
     school_name: Nome da escola (opcional)
     school_address: Endereço da escola (opcional)
@@ -74,7 +77,7 @@ pt:
     gender: Género (opcional)
     birthday: Aniversário (opcional)
     age: Idade
-    user_type: Are you a student or teacher?
+    user_type: É um estudante ou um professor?
     submit: Registar
     teacher: És um professor?
     valid_username: Disponível!
@@ -83,21 +86,21 @@ pt:
     valid_password: Palavra-passe válida!
     invalid_password: A palavra-passe tem de ter no mínimo 6 caracteres
     mismatch_password: As duas palavra-passe que introduziu não correspondem
-    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/>For users under 13, email addresses are not stored in a form that allows us to contact them."
-    teacher_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>."
-    additional_information: We need some additional information to continue signing you up.
+    student_terms: "Concordo ficar vinculado pelos <a href='http://code.org/tos'> termos de serviço</a> de Code.org. Se tenho menos de 13 anos de idade, confirmo ao enviar este formulário que tenho permissão dos meus pais ou tutor legal para usar os serviços de Code.org. <br/>Para utilizadores com menos de 13 anos, os endereços de e-mail não serão armazenados num formulário que nos permita contactá-los."
+    teacher_terms: "Concordo ficar vinculado pelos <a href='http://code.org/tos'> termos de serviço</a> de Code.org."
+    additional_information: Necessitamos de alguma informação adicional para continuar a inscrevê-lo(a).
   signin_form:
-    title: Have an account already? Sign in
+    title: Já tem uma conta? Entre
     login: E-mail ou nome de utilizador
     password: Palavra-passe
     remember: Lembrar-se de mim
     submit: Entrar
   signin:
-    try_heading: Want to try coding without signing up?
+    try_heading: Quer experimentar trabalhar com código sem se inscrever?
     try_hoc: Tente Uma Hora de Código primeiro
-    try_20hours: Try our 20 hour Intro to Computer Science
+    try_20hours: Experimente a nossa Introdução à Ciência de Computadores de 20 horas
   signinsection:
-    welcome: 'Welcome to %{section_name}'
+    welcome: 'Bem-vindo a %{section_name}'
     name: Escolha seu nome
     picture: Agora, encontre a sua imagem secreta
     words: Agora digite as suas palavras secretas
@@ -134,16 +137,16 @@ pt:
       username_not_found: 'Nome de utilizador %{username} não encontrado'
       username_in_use: '%{username} já existe, por favor escolhe outro'
       no_teacher: "Não foi possível encontrar ninguém que tenha entrado com '%{teacher_email_or_code}'. Por favor, pede-lhes para se registarem aqui e tente adicioná-los novamente"
-      section_not_found: "Could not find a section with code '%{section_code}'."
-      blank_code: Please enter a section code
-      cant_join_own_section: "Sorry, you can't join your own section."
+      section_not_found: "Não foi possível encontrar uma secção com o código '%{section_code}'."
+      blank_code: Por favor, introduza um código de secção
+      cant_join_own_section: Pedimos desculpa, mas não pode juntar a sua própria secção.
     mail:
       invite_student:
         subject: 'Junta-te a uma aula com %{teacher_name} em Code.org!'
       student_disassociated:
-        subject: 'Code.org notification: %{student_name} is no longer associated as your student.'
+        subject: 'Notificação de Code.org: %{student_name} já não está associado como seu estudante.'
       teacher_disassociated:
-        subject: 'Code.org notification: %{teacher_name} is no longer associated as your teacher.'
+        subject: 'Notificação de Code.org: %{teacher_name} já não está associado como seu professor.'
   reports:
     error:
       access_denied: Não tem acesso às estatísticas desta pessoa
@@ -151,8 +154,8 @@ pt:
     title: 'Recolher prémios: %{name}'
     provider: 'Fornecedor:'
     code: 'Código:'
-    redeem_header: 'To redeem:'
-    donorschoose_register: Register as a teacher on DonorsChoose.org
+    redeem_header: 'Para reclamar prémio:'
+    donorschoose_register: Registe-se como professor em DonorsChoose.org
     donorschoose_project: Adicione um projeto
     donorschoose_how_to: Como usar seu código
     success: O teu prémio foi recolhido com êxito, vê o código abaixo.
@@ -161,8 +164,8 @@ pt:
     error_not_earned: Você ainda não ganhou este prémio.
     error_already_redeemed: O seu prémio já fora resgatado.
     no_prizes_available: Pedimos desculpa, mas atualmente não há prémios disponíveis.
-    teacher_info_required: 'Teacher prizes require school name and address information:'
-    teacher_email_required: 'Teacher prizes require a confirmed email address:'
+    teacher_info_required: 'Prémios de professor requerem nome da escola e informações da morada:'
+    teacher_email_required: 'Prémios de professor requerem um endereço de email confirmado:'
     confirm:
       title: Confirma por favor
       "no": Não
@@ -186,11 +189,11 @@ pt:
       choose: 'Escolhe um prémio:'
       choose_teacher: 'Click on the logo below to claim your prize:'
       earned: Você ganhou um prémio! (Somente para estudantes dos EUA)
-      not_earned_title: Finish the tutorial, earn rewards (U.S. students only)
+      not_earned_title: Acabe o tutorial, receba prémios (somente estudantes dos Estados Unidos da América)
       not_earned: 'Aprende todos os conceitos de informática, colecione todos os %{num_trophies} troféus e ganha prémios reais. Podes escolher entre 10GB de armazenamento gratuito na Dropbox, 10$ US em crédito Skype, e baixar jogos grátis. Nota: oferta válida apenas para estudantes dos EUA e só enquanto houver stock.'
       teacher:
-        earned: '15 or more students collected all %{num_trophies} trophies. You have won a teacher prize! (U.S. teachers only)'
-        not_earned_title: 'Teach the class, earn up to $1,000 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers only)'
+        earned: '15 ou mais estudantes coleccionaram todos os %{num_trophies} troféus. Ganhou um prémio de professor! (somente professores dos Estados Unidos da América)'
+        not_earned_title: 'Dê uma aula, receba até $1,000 em créditos de <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> (somente professores dos Estados Unidos da América)'
         not_earned: 'Para recompensar professores principiantes de informática, pode ganhar até 1,000$ US em <a href="http://DonorsChoose.org">DonorsChoose.org</a> crédito para lecionar o curso de introdução K-8 na sala de aula. Para se qualificar, terá de ter uma sala de aula de pelo menos 15 estudantes durante todo o curso de introdução K-8, com os 15 estudantes (ou mais) a completaram todos os tutoriais e atingirem todos os %{num_trophies} troféus. Se 7 ou mais dos estudantes que consigam todos os troféus forem do sexo feminino, a sua recompensa é de $1,000 US em <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> créditos. Caso contrário, a sua recompensa é de $750 US em <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> créditos. <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> créditos só podem ser usados por professores de escolas públicas dos EUA.'
         bonus:
           not_earned_title: 'You can still earn an additional $250 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers only)'
@@ -268,7 +271,7 @@ pt:
       help_reassign: To divide your class into multiple sections, select students to assign to a new section.
       help_register: Instead of making you spend a lot of time individually importing student data, you can set up your class quickly by asking them to signup. Your students will need to choose usernames and passwords, but they WILL NOT be required to provide an email address. If a student forgets their password, you will be able to reset it for them.
       register: Ask your students to register themselves
-      vist: Ask your students to visit
+      vist: Peça aos seus alunos para visitar
       section_code: 'and enter their section-code:'
       first_please: 'First, please %{add_section}'
       for: For

@@ -2,6 +2,7 @@
   "compute": "محاسبه",
   "equivalentExpression": "سعی کنید ایده ها و فکرهایتان را منظم و مرتب کنید تا دقیقا همان عبارت را به دست بیاورید.",
   "extraTopBlocks": "شما بلوک های متصل نشده دارید. آیا منظورتان متصل کردن اینها به بلوک \"محاسبه\" بود؟",
+  "failedInput": "Your function does not return the right result for all values.",
   "goal": "هدف:",
   "reinfFeedbackMsg": "این داستان شماست! کار کردن روی آن را ادامه دهید, یا به پازل بعدی بروید!",
   "yourExpression": "عبارت شما:"

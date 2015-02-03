@@ -118,5 +118,5 @@ Computing in the Core (CinC) is a non-partisan advocacy coalition of association
 
 <a href="http://www.guidestar.org/organizations/46-0858543/code-org.aspx" target="_blank">
     <img src="http://widgets.guidestar.org/gximage2?o=9218725&l=v3" />
-</a>
+</a> [![image](/images/fit-100/privacy.jpg)](http://studentprivacypledge.org/)
 

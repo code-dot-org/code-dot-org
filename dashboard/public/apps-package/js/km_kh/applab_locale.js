@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -48,11 +48,11 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catActions":function(d){return "សកម្មភាព"},
 "catControl":function(d){return "រង្វិល​ជុំ"},
 "catEvents":function(d){return "ព្រឹត្តិការណ៍"},
-"catLogic":function(d){return "តក្កវិជ្ជា"},
-"catMath":function(d){return "គណិតវិទ្យា"},
-"catProcedures":function(d){return "អនុគមន៍"},
+"catLogic":function(d){return "តក្ក"},
+"catMath":function(d){return "គណិត​វិទ្យា"},
+"catProcedures":function(d){return "អនុ​គមន៍"},
 "catText":function(d){return "អត្ថ​​បទ"},
-"catVariables":function(d){return "អថេរ"},
+"catVariables":function(d){return "អ​ថេរ"},
 "continue":function(d){return "បន្ត"},
 "createHtmlBlock":function(d){return "បង្កើត​ប្លុក html"},
 "createHtmlBlockTooltip":function(d){return "បង្កើត​ប្លុក HTML មួយ​នៅ​ក្នុង​កម្មវិធី។"},
@@ -65,11 +65,10 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "repeatForever":function(d){return "ធ្វើ​ឡើង​វិញ​ជា​រៀង​រហូត"},
 "repeatDo":function(d){return "ធ្វើ"},
 "repeatForeverTooltip":function(d){return "ធ្វើ​សកម្មភាព​នានា​ដែល​មាន​ក្នុង​ប្លុក​នេះ​ម្ដង​ហើយ​ម្ដង​ទៀត នៅ​ពេល​កម្មវិធី​កំពុង​ដំណើរការ។"},
-"shareWebappTwitter":function(d){return "ចូល​មើល​កម្មវិធី​ដែល​ខ្ញុំ​បាន​ធ្វើ។ ខ្ញុំ​បាន​បង្កើត​វា​ដោយ​ខ្លួន​ឯង​ជាមួយ @codeorg"},
+"shareApplabTwitter":function(d){return "ចូល​មើល​កម្មវិធី​ដែល​ខ្ញុំ​បាន​ធ្វើ។ ខ្ញុំ​បាន​បង្កើត​វា​ដោយ​ខ្លួន​ឯង​ជាមួយ @codeorg"},
 "shareGame":function(d){return "ចែករំលែក​កម្មវិធី​របស់​អ្នក៖"},
 "stepIn":function(d){return "Step in"},
 "stepOver":function(d){return "Step over"},
 "stepOut":function(d){return "Step out"},
-"turnBlack":function(d){return "ធ្វើឲ្យ​ខ្មៅ"},
-"turnBlackTooltip":function(d){return "ធ្វើ​ឲ្យ​អេក្រង់​ខ្មៅ។"},
+"viewData":function(d){return "View Data"},
 "yes":function(d){return "យល់ព្រម"}};

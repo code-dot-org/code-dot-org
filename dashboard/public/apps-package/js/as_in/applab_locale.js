@@ -42,11 +42,10 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "repeatForever":function(d){return "repeat forever"},
 "repeatDo":function(d){return "কৰক"},
 "repeatForeverTooltip":function(d){return "Execute the actions in this block repeatedly while the app is running."},
-"shareWebappTwitter":function(d){return "Check out the app I made. I wrote it myself with @codeorg"},
+"shareApplabTwitter":function(d){return "Check out the app I made. I wrote it myself with @codeorg"},
 "shareGame":function(d){return "Share your app:"},
 "stepIn":function(d){return "Step in"},
 "stepOver":function(d){return "Step over"},
 "stepOut":function(d){return "Step out"},
-"turnBlack":function(d){return "turn black"},
-"turnBlackTooltip":function(d){return "Turns the screen black."},
+"viewData":function(d){return "View Data"},
 "yes":function(d){return "Yes"}};

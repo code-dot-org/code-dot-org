@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -50,26 +50,25 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catEvents":function(d){return "イベント"},
 "catLogic":function(d){return "ロジック（論理）"},
 "catMath":function(d){return "数値"},
-"catProcedures":function(d){return "機能"},
+"catProcedures":function(d){return "関数"},
 "catText":function(d){return "テキスト"},
 "catVariables":function(d){return "変数"},
-"continue":function(d){return "続行"},
+"continue":function(d){return "次へ"},
 "createHtmlBlock":function(d){return "html のブロックを作成します。"},
-"createHtmlBlockTooltip":function(d){return "アプリの html のブロックを作成します。"},
+"createHtmlBlockTooltip":function(d){return "アプリで html のブロックを作成します。"},
 "finalLevel":function(d){return "おめでとうございます ！最後のパズルを解決しました。"},
 "nextLevel":function(d){return "おめでとうございます ！このパズルを完了しました。"},
 "no":function(d){return "いいえ"},
 "numBlocksNeeded":function(d){return "このパズルは%1個のブロックで解けます。"},
-"pause":function(d){return "実行を一時停止する"},
-"reinfFeedbackMsg":function(d){return "「やり直す」ボタンを押すとアプリに戻ります。"},
-"repeatForever":function(d){return "ずっと"},
-"repeatDo":function(d){return "実行"},
+"pause":function(d){return "一時停止"},
+"reinfFeedbackMsg":function(d){return "「リトライ」ボタンを押すとアプリ実行に戻ります。"},
+"repeatForever":function(d){return "永遠に繰りかえす"},
+"repeatDo":function(d){return "してください"},
 "repeatForeverTooltip":function(d){return "このブロックの中に入れたアクションを、アプリが動いている間ずっとくりかえします。"},
-"shareWebappTwitter":function(d){return "私のアプリを見てください。 @codeorg を使って自分で書きました。"},
+"shareApplabTwitter":function(d){return "私のアプリを見てください。 @codeorg を使って自分で書きました。"},
 "shareGame":function(d){return "アプリをみんなに見せる"},
 "stepIn":function(d){return "ステップイン"},
 "stepOver":function(d){return "ステップオーバー"},
 "stepOut":function(d){return "ステップアウト"},
-"turnBlack":function(d){return "もどる"},
-"turnBlackTooltip":function(d){return "画面を黒くする"},
+"viewData":function(d){return "View Data"},
 "yes":function(d){return "はい"}};

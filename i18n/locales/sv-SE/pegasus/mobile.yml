@@ -243,6 +243,7 @@ sv-SE:
   dashboard_students_new_section: 'Du har skapt en ny sektion! Lägg nu till dina elever genom att använda <b>Lägg till elev</b> och <b>Lägg till flera elever</b> knapparna ovan.'
   dashboard_students_placeholder_name: Studentnamn
   dashboard_students_name: Namn
+  dashboard_students_progress: Progress
   dashboard_students_age: Ålder
   dashboard_students_gender: Kön
   dashboard_students_male: Man
@@ -289,6 +290,10 @@ sv-SE:
   dashboard_login_picture: Bild
   dashboard_login_none: E-post
   dashboard_new_password: nytt lösenord
+  dashboard_progress_not_completed: Ej avklarad
+  dashboard_progress_completed_too_many_blocks: Avklarad med för många block
+  dashboard_progress_completed_perfect: Avklarad perfekt
+  dashboard_progress_furthest_level_attempted: försökt nå bortersta nivån
   stats_hoc_2013_heading: 'Fantastiska fakta om förra årets Hour of Code. På bara en vecka:'
   stats_hoc_2013_image_alt: Statistik från Hour of Code 2013
   dashboard_teacher: Lärare

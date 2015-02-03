@@ -10,7 +10,7 @@
   "continue": "계속하기",
   "createHtmlBlock": "html 블럭 만들기",
   "createHtmlBlockTooltip": "응용 프로그램에서 HTML 블럭을 만듭니다.",
-  "finalLevel": "짝짝짝 축하합니다! 마지막 퍼즐을 해결했습니다.",
+  "finalLevel": "축하합니다! 마지막 퍼즐을 해결했습니다.",
   "nextLevel": "축하합니다! 퍼즐을 해결했습니다.",
   "no": "아니요",
   "numBlocksNeeded": "%1 개의 블럭으로 퍼즐을 해결할 수 있습니다.",
@@ -19,12 +19,11 @@
   "repeatForever": "무한반복",
   "repeatDo": "실행",
   "repeatForeverTooltip": "앱이 실행되면 이 블럭 안의 동작들을 반복 실행합니다.",
-  "shareWebappTwitter": "내가 만든 앱을 살펴보세요. @codeorg 에서 만들었습니다.",
+  "shareApplabTwitter": "내가 만든 앱을 살펴보세요. @codeorg 에서 만들었습니다.",
   "shareGame": "앱 공유하기:",
   "stepIn": "안쪽 단계로 들어가기",
   "stepOver": "단계 지나가기",
   "stepOut": "이 단계 밖으로 나가기",
-  "turnBlack": "검정화면으로 변환",
-  "turnBlackTooltip": "화면을 검게 바꿉니다.",
+  "viewData": "View Data",
   "yes": "예"
 }

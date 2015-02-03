@@ -13,7 +13,7 @@
   "squareBlockTitle": "方形 (大小，样式，颜色)",
   "starBlockTitle": "星（半径，样式，颜色）",
   "radialStarBlockTitle": "径向-星 (点、 内部、 外部，款式、 颜色）",
-  "polygonBlockTitle": "polygon (sides, length, style, color)",
+  "polygonBlockTitle": "多边形 （边、 长度、 样式、 颜色）",
   "stringAppendBlockTitle": "字符串追加 (第一、第 二)",
   "stringLengthBlockTitle": "字符串长度 （字符串）",
   "textBlockTitle": "文本 （字符串、 大小、 颜色）",

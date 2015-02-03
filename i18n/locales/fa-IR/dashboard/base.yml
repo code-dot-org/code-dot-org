@@ -1,4 +1,7 @@
 fa:
+  errors:
+    messages:
+      not_saved: 'لطفا خطاهای زیر را درست کنید:'
   activerecord:
     errors:
       messages:
