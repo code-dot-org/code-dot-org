@@ -25,7 +25,7 @@ end
 def require_authentication()
   email = session['user.email']
 
-  unless ['/signin', '/signout'].include?(request.path_info) || request.path_info =~ /^\/auth\//
+  unless ['/health_check', '/signin', '/signout'].include?(request.path_info) || request.path_info =~ /^\/auth\//
     redirect('/signin', :found) unless email
     redirect('/auth/denied', :found) unless email =~ /\@code.org$/
   end
