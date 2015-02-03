@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -82,11 +82,10 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "repeatForever":function(d){return "mūžīgi atkārtot"},
 "repeatDo":function(d){return "darīt"},
 "repeatForeverTooltip":function(d){return "Atkārtoti izpilda darbības šajā blokā, kamēr darbojas aplikācija."},
-"shareWebappTwitter":function(d){return "Apskaties kādu lietotni es izveidoju. Es uzrakstīju to pats, izmantojot @codeorg"},
+"shareApplabTwitter":function(d){return "Apskaties kādu lietotni es izveidoju. Es uzrakstīju to pats, izmantojot @codeorg"},
 "shareGame":function(d){return "Iesaki savu lietotni:"},
 "stepIn":function(d){return "iesaistīties"},
 "stepOver":function(d){return "pārkāpt"},
 "stepOut":function(d){return "izstāties"},
-"turnBlack":function(d){return "aptumšo"},
-"turnBlackTooltip":function(d){return "Aptumšot ekrānu."},
+"viewData":function(d){return "View Data"},
 "yes":function(d){return "Jā"}};

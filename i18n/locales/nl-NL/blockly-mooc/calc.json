@@ -2,7 +2,8 @@
   "compute":"verwerk",
   "equivalentExpression":"Probeer jouw argumenten in een andere volgorde te plaatsen om precies dezelfde expressie te krijgen.",
   "extraTopBlocks":"Je hebt blokken die niet gekoppeld zijn. Was het jouw bedoeling om deze aan het \"verwerk\"-blok te koppelen?",
+  "failedInput":"Your function does not return the right result for all values.",
   "goal":"Doel:",
-  "reinfFeedbackMsg":"Hier is jouw verhaal! Werk er verder aan of ga verder met de volgende puzzel!",
+  "reinfFeedbackMsg":"Here is your calculation! Continue working on it, or move on to the next puzzle!",
   "yourExpression":"Jouw expressie:"
 }

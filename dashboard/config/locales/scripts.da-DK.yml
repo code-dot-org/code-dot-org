@@ -327,19 +327,19 @@
           Special: Speciel
           Binary: Binære
         usabilitymsm:
-          Usability testing for MSM: Usability testing for MSM
-          Evaluation Blocks: Evaluation Blocks
+          Usability testing for MSM: Test af MSM-brugervenlighed
+          Evaluation Blocks: Evalueringsblokke
           Blocks to Math: Blokke til matematik
-          Strings and Images: Strings and Images
-          Defining Variables: Defining Variables
-          Defining Functions: Defining Functions
-          Design Recipe: Design Recipe
+          Strings and Images: Strenge og billeder
+          Defining Variables: Definere variabler
+          Defining Functions: Definere funktioner
+          Design Recipe: Designopskrift
           Booleans: Booleans
           Conditionals: Betingelser
-          Free Play: Free Play
+          Free Play: Fri leg
         algebra:
-          title: Computer Science in Algebra
-          description: Learn Functional Programming through Algebra
+          title: Datalogi i Algebra
+          description: Lære funktionel programmering gennem Algebra
           'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games
             og Coordinate Planes'
           'Calc: Evaluation Blocks': 'Calc: Evaluering blokke'
@@ -349,10 +349,10 @@
           'Calc: Defining Variables': 'Calc: Definere variabler'
           'Play Lab: Defining Variables (Big Game)': 'Play Lab: Definere variabler
             (Big Game)'
-          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Eval: Defining Functions': 'Eval: Definere funktioner'
           'Unplugged: The Design Recipe': 'Unplugged: Design opskrift'
-          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
-          'Eval: Functions': 'Eval: Functions'
+          'Play Lab: Defining Functions': 'Play Lab: Definere funktioner'
+          'Eval: Functions': 'Eval: funktioner'
           'Play Lab: Animation (Big Game)': 'Play Lab: Animation (Big Game)'
           'Unplugged: Booleans': 'Unplugged: Booleans'
           'Eval: Boolean Operators': 'Eval: Boolean Operators'
@@ -365,3 +365,29 @@
             detection og the Distance Formula'
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
             (Big Game)'
+        infinity:
+          title: Play Lab
+          description_short: Opret en historie eller lav et spil med Play Lab!
+          description: Opret en historie eller lav et spil med Play Lab!
+          Play Lab: Play Lab
+        algebrademo:
+          description: A handful of puzzles to demonstrate the environment and programming
+            language used in Code.org CS in Algebra
+          Algebra Demo: Algebra Demo
+          Evaluation Blocks: Evalueringsblokke
+          Making Pictures: Making Pictures
+          Defining Variables: Definere variabler
+          Defining Simple Functions: Defining Simple Functions
+          The Design Recipe: Design opskrift
+        K5PD:
+          Introduction to PD: Introduction to PD
+        netsim:
+          title: Internet Simulator
+          description_short: ''
+          description: ''
+          Internet Simulator: Internet Simulator
+        Infinity:
+          title: Infinity Playlab
+          description_short: Create a story or make a game with Infinity Play Lab!!
+          description: Create a story or make a game with Infinity Play Lab!
+          Infinity: Uendelig

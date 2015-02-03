@@ -50,11 +50,10 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "repeatForever":function(d){return "korda igavesti"},
 "repeatDo":function(d){return "täida"},
 "repeatForeverTooltip":function(d){return "Execute the actions in this block repeatedly while the app is running."},
-"shareWebappTwitter":function(d){return "Vaata seda rakendust, mis ma tegin. Kirjutasin selle ise @codeorg-is"},
+"shareApplabTwitter":function(d){return "Vaata seda rakendust, mis ma tegin. Kirjutasin selle ise @codeorg-is"},
 "shareGame":function(d){return "Jaga oma rakendust:"},
 "stepIn":function(d){return "Step in"},
 "stepOver":function(d){return "Step over"},
 "stepOut":function(d){return "Step out"},
-"turnBlack":function(d){return "tee mustaks"},
-"turnBlackTooltip":function(d){return "Teeb ekraani mustaks."},
+"viewData":function(d){return "View Data"},
 "yes":function(d){return "Jah"}};

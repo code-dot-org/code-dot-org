@@ -68,7 +68,7 @@
   "tooMuchWork": "M-ai făcut să lucrez foarte mult! Ai putea să încerci să repeți de mai puține ori?",
   "toolboxHeader": "blocuri",
   "openWorkspace": "Cum funcţionează",
-  "totalNumLinesOfCodeWritten": "Totalul all-time: {numLines, plural, one {1 line} other {# lines}} de cod.",
+  "totalNumLinesOfCodeWritten": "Totalul all-time: {numLines, plural, one {1 linie} other {# linii}} de cod.",
   "tryAgain": "Încearcă din nou",
   "hintRequest": "Dă un indiciu",
   "backToPreviousLevel": "Înapoi la nivelul anterior",

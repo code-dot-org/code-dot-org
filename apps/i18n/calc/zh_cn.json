@@ -2,6 +2,7 @@
   "compute": "计算",
   "equivalentExpression": "试着重新排列你的参数来得到完全相同的表达式。",
   "extraTopBlocks": "您有未连接的语句块。您要将其连接到“compute”语句块吗？",
+  "failedInput": "Your function does not return the right result for all values.",
   "goal": "目标：",
   "reinfFeedbackMsg": "这是你的故事！继续为其努力，或转向下一个谜题。",
   "yourExpression": "你的表达式："

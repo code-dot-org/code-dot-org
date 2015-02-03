@@ -48,7 +48,7 @@ sv:
         edit-code:
           desc: Redigera Kod (beta)
           MazeEC: Steg 1
-          Webapp: Steg 2
+          Applab: Steg 2
           ArtistEC: Steg 3
           StudioEC: Steg 4
         events:
@@ -99,10 +99,12 @@ sv:
         Jigsaw: Pussel
         MazeStep: Labyrint steg-sort
         Wordsearch: WordSearch
-        Webapp: Webapp
+        Webapp: App Lab
         ArtistEC: Konstnären
         TextMatch: Textmatchning
         StudioEC: Play Lab
+        Applab: App Lab
+        NetSim: Internet Simulator
     trophy:
       name:
         Bronze: Brons
@@ -242,7 +244,7 @@ sv:
         flappy_6: Se om du fortfarande kan få poäng om du låter Flappy flaxa mer eller mindre.
         flappy_7: 'Prova nu att ändra scenen genom att fästa ett annat block till "när kör"blocket.'
         flappy_8: "Du kan ange grafik när som helst, inte bara när spelet startar. Prova att ange en 'slumpmässig scen' när andra händelser inträffar, exempelvis när Flappy passerar ett hinder."
-        flappy_9: För att röra till det så prova att inte avsluta spelet när Flappy slår i ett hinder eller i marken, utan sätt tillbaka poängsumman till 0.
+        flappy_9: To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0.
         flappy_11: Skapa ditt eget Flappy spel. Du kan ändra all grafik och alla regler, även gravitationen. När du är klar, klicka på Slutför för att låta vänner prova ditt spel på sina telefoner.
         flappy_k1_1: Spela Flappy
         flappy_k1_2: 'Lägg till ett block på "när klicka" blocket och tryck på "Kör". Klicka eller tappa på skärmen för att flytta Flappy till målet.'
@@ -322,7 +324,7 @@ sv:
         maze_wordsearch_k_15: Flytta mig en väg, sedan en annan för att stava ordet ABOVE(ovanför)
         maze_wordsearch_k_16: Flytta mig en väg, sedan en annan för att stava ordet BELOW(nedanför)
         maze_wordsearch_k_20: Det här är ett test! Flytta mig en väg, sedan en annan för att stava ordet STORY(berättelse)
-        webapp_ec_simple: Skapa din webapp med hjälp av createHtmlBlock.
+        applab_ec_simple: Create your app by using the blocks in the toolbox.
         turtle_ec_1_2: 'Nu ska du rita en fyrkant. Obs: Använd din favoritfärg genom att välja det i nya "pennfärg" blocket.'
         turtle_ec_1_10: 'Du klarade det! Nu ritar du vad du vill. Några roliga idéer: en streckfigur, snöflinga eller spiral. Prova också det nya "pennbredd" blocket. Ha det så kul!'
         studio_ec_sandbox: Skapa ditt eget spel. När du är klar, klicka på Slutför för att låta vänner prova ditt spel på sina telefoner.

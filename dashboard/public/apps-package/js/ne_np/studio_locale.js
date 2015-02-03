@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -270,6 +270,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "projectileHiro":function(d){return "Hiro"},
 "projectileBaymax":function(d){return "Baymax"},
 "projectileRapunzel":function(d){return "Rapunzel"},
+"projectileCherry":function(d){return "cherry"},
+"projectileIce":function(d){return "ice"},
+"projectileDuck":function(d){return "duck"},
 "reinfFeedbackMsg":function(d){return "You can press the \"Try again\" button to go back to playing your story."},
 "repeatForever":function(d){return "repeat forever"},
 "repeatDo":function(d){return "do"},
@@ -277,6 +280,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "saySprite":function(d){return "say"},
 "saySpriteN":function(d){return "actor "+appLocale.v(d,"spriteIndex")+" say"},
 "saySpriteTooltip":function(d){return "Pop up a speech bubble with the associated text from the specified actor."},
+"saySpriteChoices_1":function(d){return "Hi there!"},
+"saySpriteChoices_2":function(d){return "How are you?"},
+"saySpriteChoices_3":function(d){return "This is fun..."},
 "scoreText":function(d){return "Score: "+appLocale.v(d,"playerScore")},
 "setBackground":function(d){return "set background"},
 "setBackgroundRandom":function(d){return "set random background"},
@@ -293,6 +299,12 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setBackgroundSpace":function(d){return "set space background"},
 "setBackgroundTennis":function(d){return "set tennis background"},
 "setBackgroundWinter":function(d){return "set winter background"},
+"setBackgroundLeafy":function(d){return "set leafy background"},
+"setBackgroundGrassy":function(d){return "set grassy background"},
+"setBackgroundFlower":function(d){return "set flower background"},
+"setBackgroundTile":function(d){return "set tile background"},
+"setBackgroundIcy":function(d){return "set icy background"},
+"setBackgroundSnowy":function(d){return "set snowy background"},
 "setBackgroundTooltip":function(d){return "Sets the background image"},
 "setEnemySpeed":function(d){return "set enemy speed"},
 "setPlayerSpeed":function(d){return "set player speed"},
@@ -384,6 +396,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "soundWinPoint2":function(d){return "win point 2"},
 "soundWood":function(d){return "wood"},
 "speed":function(d){return "speed"},
+"startSetValue":function(d){return "start (rocket-height function)"},
 "stopSprite":function(d){return "stop"},
 "stopSpriteN":function(d){return "stop actor "+appLocale.v(d,"spriteIndex")},
 "stopTooltip":function(d){return "Stops an actor's movement."},

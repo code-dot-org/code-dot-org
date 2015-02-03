@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -213,7 +213,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "moveDistanceTooltip":function(d){return "Mover un actor una distancia específica en la dirección especificada."},
 "moveSprite":function(d){return "mover"},
 "moveSpriteN":function(d){return "mover actor "+appLocale.v(d,"spriteIndex")},
-"toXY":function(d){return "to x,y"},
+"toXY":function(d){return "Para x,y"},
 "moveDown":function(d){return "mover hacia abajo"},
 "moveDownTooltip":function(d){return "Mover un actor hacia abajo."},
 "moveLeft":function(d){return "mover hacia la izquierda"},
@@ -270,6 +270,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "projectileHiro":function(d){return "Hiro"},
 "projectileBaymax":function(d){return "Baymax"},
 "projectileRapunzel":function(d){return "Rapunzel"},
+"projectileCherry":function(d){return "cherry"},
+"projectileIce":function(d){return "ice"},
+"projectileDuck":function(d){return "duck"},
 "reinfFeedbackMsg":function(d){return "Puedes pulsar el botón \"Intentar de nuevo\" para volver a jugar tu historia."},
 "repeatForever":function(d){return "Repetir para siempre"},
 "repeatDo":function(d){return "hacer"},
@@ -277,6 +280,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "saySprite":function(d){return "decir"},
 "saySpriteN":function(d){return "actor "+appLocale.v(d,"spriteIndex")+" dice"},
 "saySpriteTooltip":function(d){return "Haz salir una burbuja de diálogo con el texto asociado desde el actor especificado."},
+"saySpriteChoices_1":function(d){return "Hi there!"},
+"saySpriteChoices_2":function(d){return "How are you?"},
+"saySpriteChoices_3":function(d){return "This is fun..."},
 "scoreText":function(d){return "Puntuación: "+appLocale.v(d,"playerScore")},
 "setBackground":function(d){return "fijar fondo"},
 "setBackgroundRandom":function(d){return "Establecer fondo al azar"},
@@ -293,6 +299,12 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setBackgroundSpace":function(d){return "establecer fondo en el espacio"},
 "setBackgroundTennis":function(d){return "establecer fondo de tenis"},
 "setBackgroundWinter":function(d){return "establecer fondo de invierno"},
+"setBackgroundLeafy":function(d){return "set leafy background"},
+"setBackgroundGrassy":function(d){return "set grassy background"},
+"setBackgroundFlower":function(d){return "set flower background"},
+"setBackgroundTile":function(d){return "set tile background"},
+"setBackgroundIcy":function(d){return "set icy background"},
+"setBackgroundSnowy":function(d){return "set snowy background"},
 "setBackgroundTooltip":function(d){return "Establece la imagen de fondo"},
 "setEnemySpeed":function(d){return "establecer velocidad del enemigo"},
 "setPlayerSpeed":function(d){return "establecer la velocidad del jugador"},
@@ -384,6 +396,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "soundWinPoint2":function(d){return "ganar punto 2"},
 "soundWood":function(d){return "madera"},
 "speed":function(d){return "velocidad"},
+"startSetValue":function(d){return "start (rocket-height function)"},
 "stopSprite":function(d){return "Parar"},
 "stopSpriteN":function(d){return "detener actor "+appLocale.v(d,"spriteIndex")},
 "stopTooltip":function(d){return "Detener el movimiento del actor."},

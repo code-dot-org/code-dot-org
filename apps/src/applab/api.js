@@ -287,6 +287,11 @@ exports.clearTimeout = function (blockId, timeoutId) {
                            {'timeoutId': timeoutId });
 };
 
+exports.playSound = function (blockId, url) {
+  return Applab.executeCmd(blockId,
+                          'playSound',
+                          {'url': url});
+};
 
 exports.readSharedValue = function(blockId, key, onSuccess, onError) {
   return Applab.executeCmd(blockId,

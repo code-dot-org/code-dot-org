@@ -58,7 +58,7 @@ ja:
         edit-code:
           desc: コードを編集する(ベータ版)
           MazeEC: ステージ 1
-          Webapp: ステージ 2
+          Applab: ステージ 2
           ArtistEC: ステージ 3
           StudioEC: ステージ 4
         events:
@@ -109,10 +109,12 @@ ja:
         Jigsaw: ジグソーパズル
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
-        Webapp: Webapp
+        Webapp: App Lab
         ArtistEC: アーティスト
         TextMatch: Text Match
         StudioEC: Play Lab
+        Applab: App Lab
+        NetSim: Internet Simulator
     trophy:
       name:
         Bronze: 銅
@@ -261,7 +263,7 @@ ja:
         flappy_8: |
           ゲームが開始した以外にもいつでもビジュアルを設定できます。例えば、障害物を過ぎたとき、などの状況が起こるランダムな状況を設定するようにしてください
           
-        flappy_9: 物事をミックスするため、障害物や地面にヒットした時に、ゲーム終了の代わりに得点を０に戻してください。
+        flappy_9: To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0.
         flappy_11: じぶんのFlappyゲームを作ってみましょう。みためやルール、じゅうりょくもすきなようにかえられます。作りおわったら、「完了」ボタンをクリックしてともだちにおしえましょう。ともだちはけいたいでんわをつかって、あなたのゲームであそぶことができます。
         flappy_k1_1: Flappyであそぶ
         flappy_k1_2: 「クリックされたとき」のブロックにほかのブロックを1つくっつけて、「実行」ボタンをおしてください。クリック（またはがめんをタップ）すると、Flappyはもくひょうにむかってうごきます
@@ -341,7 +343,7 @@ ja:
         maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell the word STORY
-        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        applab_ec_simple: Create your app by using the blocks in the toolbox.
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColor" block.'
         turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new "penWidth" block. Have fun!'
         studio_ec_sandbox: "Create your own game. When you're done, click Finish to let friends try your game on their phones."

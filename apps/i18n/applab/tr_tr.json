@@ -1,5 +1,5 @@
 {
-  "catActions": "Eylemler",
+  "catActions": "İşlemler",
   "catControl": "Döngüler",
   "catEvents": "Olaylar",
   "catLogic": "Mantık",
@@ -7,9 +7,9 @@
   "catProcedures": "Fonksiyonlar",
   "catText": "yazı",
   "catVariables": "Değişkenler",
-  "continue": "Devam Et",
+  "continue": "Devam",
   "createHtmlBlock": "HTML bloğu oluştur",
-  "createHtmlBlockTooltip": "HTML bloğu içinde uygulama oluşturur.",
+  "createHtmlBlockTooltip": "Uygulamada HTML blogu oluşturur.",
   "finalLevel": "Tebrikler! Son bulmacayı da çözdünüz.",
   "nextLevel": "Tebrikler! Bu bulmacayı tamamladınız.",
   "no": "Hayır",
@@ -19,12 +19,11 @@
   "repeatForever": "Sonsuza kadar tekrarla",
   "repeatDo": "yap",
   "repeatForeverTooltip": "Uygulama çalışırken eylemleri bu blok içinde sürekli yürütür.",
-  "shareWebappTwitter": "Yaptığım hikayeye göz atın. @codeorg ile kendim yazdım",
+  "shareApplabTwitter": "Yaptığım uygulamaya göz atın. @codeorg ile kendim yazdım",
   "shareGame": "Uygulamanı paylaş:",
   "stepIn": "İçeri gel",
   "stepOver": "Adım",
   "stepOut": "Dışarı adım",
-  "turnBlack": "geri karart",
-  "turnBlackTooltip": "Ekranı karartır.",
+  "viewData": "Verileri görüntüle",
   "yes": "Evet"
 }

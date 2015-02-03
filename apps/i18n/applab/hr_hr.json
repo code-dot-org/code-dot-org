@@ -19,12 +19,11 @@
   "repeatForever": "ponavljaj zauvijek",
   "repeatDo": "napravi",
   "repeatForeverTooltip": "Stalno ponavlja akcije iz ovog bloka dok god program radi.",
-  "shareWebappTwitter": "Vidi program koji sam napravio. Napisao sam ga sam uz pomoć @codeorg",
+  "shareApplabTwitter": "Vidi program koji sam napravio. Napisao sam ga sam uz pomoć @codeorg",
   "shareGame": "Dijeli program:",
   "stepIn": "Korak u",
   "stepOver": "Korak preko",
   "stepOut": "Korak van",
-  "turnBlack": "postavi crno",
-  "turnBlackTooltip": "Postavlja crni ekran.",
+  "viewData": "Prikaz podataka",
   "yes": "Da"
 }

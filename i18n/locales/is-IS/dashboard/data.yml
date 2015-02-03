@@ -48,7 +48,7 @@ is:
         edit-code:
           desc: Breyta kóða (beta)
           MazeEC: Stig 1
-          Webapp: Áfangi 2
+          Applab: Áfangi 2
           ArtistEC: Áfangi 3
           StudioEC: Áfangi 4
         events:
@@ -99,10 +99,12 @@ is:
         Jigsaw: Púsl
         MazeStep: Völundarhús, þrep
         Wordsearch: Orðaleit
-        Webapp: Vefapp
+        Webapp: Appsmiðja
         ArtistEC: Listamaðurinn
         TextMatch: Textaleikur
         StudioEC: Leikjasmiðja
+        Applab: Appsmiðja
+        NetSim: Internet Simulator
     trophy:
       name:
         Bronze: Brons
@@ -242,7 +244,7 @@ is:
         flappy_6: Prófaðu hvort þú getir enn skorað stig eftir að þú lætur Flappy blaka vængjunum meira eða minna.
         flappy_7: 'Prófaðu svo að breyta leiknum með því að tengja annan kubb við "þegar keyrt" kubbinn.'
         flappy_8: Þú getur stillt umhverfið hvenær sem er, ekki bara í byrjun. Prófaðu að still umhverfið á HANDAHÓF þegar aðrir atburðir gerast, t.d. þegar farið er framhjá hindrun.
-        flappy_9: Prófaðu nú aðra útfærslu með því að ljúka ekki leiknum heldur núllstilla skorið þegar rekist er á hindrun eða jörð.
+        flappy_9: To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0.
         flappy_11: Búðu til þinn eiginn Flappy leik. Þú getur breytt öllu umhverfi og öllum reglum, jafnvel þyngdaraflinu. Smelltu svo á Ljúka til að vinir þínir geti prófað leikinn í símunum sínum.
         flappy_k1_1: Spila Flappy
         flappy_k1_2: 'Tengdu kubb við "þegar smellt" kubbinn og ýttu svo á "Keyra forrit". Smelltu eða sláðu á skjáinn til að færa Flappy að markinu.'
@@ -322,7 +324,7 @@ is:
         maze_wordsearch_k_15: Færðu mig í eina átt svo aðra til að stafa orðið ABOVE
         maze_wordsearch_k_16: Færðu mig í eina átt svo aðra til að stafa orðið BELOW
         maze_wordsearch_k_20: Þetta er próf! Færðu mig í eina átt svo aðra til að stafa orðið STORY
-        webapp_ec_simple: Búa til vefapp með því að nota createHtmlBlock.
+        applab_ec_simple: Búðu til appið þitt með því að nota kubbana í verkfærakassanum.
         turtle_ec_1_2: 'Teiknaðu nú ferning. ATH.: notaðu uppáhaldslitinn þinn með því að velja hann í nýja "pennalitur" kubbnum.'
         turtle_ec_1_10: 'Þér tókst þetta! Teiknaðu nú hvað sem þú vilt. Nokkrar hugmyndir: Óli prik, snjókorn eða spírall. Prófaðu líka nýja "pennaBreidd" kubbinn. Góða skemmtun!'
         studio_ec_sandbox: Búðu til þinn eigin leik. Smelltu á Ljúka þegar hann er tilbúinn svo vinir þínir geti prófað hann á sínum símum.

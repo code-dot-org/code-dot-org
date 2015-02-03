@@ -60,7 +60,7 @@
   "CONTROLS_WHILEUNTIL_OPERATOR_WHILE": "επανάλαβε όσο",
   "CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL": "Όσο η τιμή είναι ψευδής, εκτέλεσε μερικές εντολές.",
   "CONTROLS_WHILEUNTIL_TOOLTIP_WHILE": "Όσο η τιμή είναι αληθής, εκτέλεσε μερικές εντολές.",
-  "DEFINE_HEADER_DEFINITION": "Definition",
+  "DEFINE_HEADER_DEFINITION": "Ορισμός",
   "DEFINE_FUNCTION_DEFINE": "Όρισε",
   "DELETE_BLOCK": "Διαγραφή Πλακιδίου",
   "DELETE_PARAMETER": "Διαγραφή παραμέτρου...",

@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -164,7 +164,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catVariables":function(d){return "Pembolehubah"},
 "catLogic":function(d){return "Logik"},
 "colourTooltip":function(d){return "Perubahan warna pensil."},
-"createACircle":function(d){return "create a circle"},
+"createACircle":function(d){return "hasilkan satu bulatan"},
 "createSnowflakeSquare":function(d){return "create a snowflake of type square"},
 "createSnowflakeParallelogram":function(d){return "create a snowflake of type parallelogram"},
 "createSnowflakeLine":function(d){return "create a snowflake of type line"},
@@ -182,10 +182,10 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "drawAFlower":function(d){return "draw a flower"},
 "drawAHexagon":function(d){return "draw a hexagon"},
 "drawAHouse":function(d){return "draw a house"},
-"drawAPlanet":function(d){return "draw a planet"},
+"drawAPlanet":function(d){return "lukis satu planet"},
 "drawARhombus":function(d){return "draw a rhombus"},
 "drawARobot":function(d){return "draw a robot"},
-"drawARocket":function(d){return "draw a rocket"},
+"drawARocket":function(d){return "lukis satu roket"},
 "drawASnowflake":function(d){return "draw a snowflake"},
 "drawASnowman":function(d){return "lukis snowman"},
 "drawAStar":function(d){return "draw a star"},
@@ -223,10 +223,10 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setColour":function(d){return "set warna"},
 "setPattern":function(d){return "set pattern"},
 "setWidth":function(d){return "set lebar"},
-"shareDrawing":function(d){return "Share your drawing:"},
+"shareDrawing":function(d){return "Kongsi lukisan anda:"},
 "showMe":function(d){return "Tunjukkan saya"},
 "showTurtle":function(d){return "tunjukkan artis"},
-"sizeParameter":function(d){return "size"},
+"sizeParameter":function(d){return "saiz"},
 "step":function(d){return "step"},
 "tooFewColours":function(d){return "Anda perlukan sekurang-kurangnya %1 warna berlainan untuk puzzle ini. Anda hanya gunakan %2."},
 "turnLeft":function(d){return "belok kiri dengan"},

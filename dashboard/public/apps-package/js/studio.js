@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({124:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({134:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Studio = require('./studio');
@@ -16,7 +16,7 @@ window.studioMain = function(options) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":3,"./blocks":118,"./levels":123,"./skins":126,"./studio":127}],127:[function(require,module,exports){
+},{"../appMain":3,"./blocks":128,"./levels":133,"./skins":136,"./studio":137}],137:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -2795,7 +2795,7 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/current/common":160,"../../locale/current/studio":166,"../StudioApp":2,"../canvg/StackBlur.js":35,"../canvg/canvg.js":36,"../canvg/rgbcolor.js":37,"../canvg/svg_todataurl":38,"../codegen":39,"../constants":40,"../dom":41,"../skins":115,"../templates/page.html":135,"../utils":155,"../xml":156,"./api":117,"./blocks":118,"./collidable":119,"./constants":120,"./controls.html":121,"./extraControlRows.html":122,"./projectile":125,"./visualization.html":128}],128:[function(require,module,exports){
+},{"../../locale/current/common":170,"../../locale/current/studio":176,"../StudioApp":2,"../canvg/StackBlur.js":37,"../canvg/canvg.js":38,"../canvg/rgbcolor.js":39,"../canvg/svg_todataurl":40,"../codegen":41,"../constants":42,"../dom":43,"../skins":125,"../templates/page.html":145,"../utils":165,"../xml":166,"./api":127,"./blocks":128,"./collidable":129,"./constants":130,"./controls.html":131,"./extraControlRows.html":132,"./projectile":135,"./visualization.html":138}],138:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2815,7 +2815,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":176}],125:[function(require,module,exports){
+},{"ejs":186}],135:[function(require,module,exports){
 var Collidable = require('./collidable');
 var Direction = require('./constants').Direction;
 var constants = require('./constants');
@@ -2989,7 +2989,7 @@ Projectile.prototype.moveToNextPosition = function () {
   this.y = next.y;
 };
 
-},{"./collidable":119,"./constants":120}],126:[function(require,module,exports){
+},{"./collidable":129,"./constants":130}],136:[function(require,module,exports){
 /**
  * Load Skin for Studio.
  */
@@ -3329,7 +3329,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../../locale/current/studio":166,"../skins":115,"./constants":120}],123:[function(require,module,exports){
+},{"../../locale/current/studio":176,"../skins":125,"./constants":130}],133:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/studio');
@@ -4798,7 +4798,7 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
   'startBlocks': "",
 });
 
-},{"../../locale/current/studio":166,"../block_utils":16,"../utils":155,"./constants":120}],122:[function(require,module,exports){
+},{"../../locale/current/studio":176,"../block_utils":16,"../utils":165,"./constants":130}],132:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4818,7 +4818,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":160,"ejs":176}],121:[function(require,module,exports){
+},{"../../locale/current/common":170,"ejs":186}],131:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4838,7 +4838,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":160,"ejs":176}],119:[function(require,module,exports){
+},{"../../locale/current/common":170,"ejs":186}],129:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -4944,7 +4944,7 @@ Collidable.prototype.outOfBounds = function () {
          (this.y > studioApp.MAZE_HEIGHT + (this.height / 2));
 };
 
-},{"../StudioApp":2,"./constants":120}],118:[function(require,module,exports){
+},{"../StudioApp":2,"./constants":130}],128:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -6730,9 +6730,9 @@ function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpr
   };
 }
 
-},{"../../locale/current/common":160,"../../locale/current/studio":166,"../StudioApp":2,"../codegen":39,"../functionalBlockUtils":70,"../sharedFunctionalBlocks":114,"../utils":155,"./constants":120}],166:[function(require,module,exports){
+},{"../../locale/current/common":170,"../../locale/current/studio":176,"../StudioApp":2,"../codegen":41,"../functionalBlockUtils":72,"../sharedFunctionalBlocks":124,"../utils":165,"./constants":130}],176:[function(require,module,exports){
 /*studio*/ module.exports = window.blockly.appLocale;
-},{}],117:[function(require,module,exports){
+},{}],127:[function(require,module,exports){
 var constants = require('./constants');
 
 exports.SpriteSpeed = {
@@ -6888,7 +6888,7 @@ exports.onEvent = function (id, eventName, func) {
   });
 };
 
-},{"./constants":120}],120:[function(require,module,exports){
+},{"./constants":130}],130:[function(require,module,exports){
 'use strict';
 
 exports.Direction = {
@@ -7065,7 +7065,7 @@ exports.HIDDEN_VALUE = '"hidden"';
 exports.CLICK_VALUE = '"click"';
 exports.VISIBLE_VALUE = '"visible"';
 
-},{}],38:[function(require,module,exports){
+},{}],40:[function(require,module,exports){
 /**
 	The missing SVG.toDataURL library for your SVG elements.
 
@@ -7288,7 +7288,7 @@ SVGElement.prototype.toDataURL = function(type, options) {
 	}
 }
 
-},{}],37:[function(require,module,exports){
+},{}],39:[function(require,module,exports){
 /**
  * A class to parse color values
  * @author Stoyan Stefanov <sstoo@gmail.com>
@@ -7578,7 +7578,7 @@ function RGBColor(color_string)
 }
 
 
-},{}],35:[function(require,module,exports){
+},{}],37:[function(require,module,exports){
 /*
 
 StackBlur - a fast almost Gaussian Blur For Canvas
@@ -8190,4 +8190,4 @@ function BlurStack()
 	this.a = 0;
 	this.next = null;
 }
-},{}]},{},[124]);
+},{}]},{},[134]);

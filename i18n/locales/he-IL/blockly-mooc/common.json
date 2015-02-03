@@ -46,7 +46,7 @@
   "nextLevel":"מזל טוב! השלמת את פאזל {puzzleNumber}.",
   "nextLevelTrophies":"מזל טוב! השלמת את פאזל {puzzleNumber} וזכית ב{numTrophies, plural, one {פרס} other {# פרסים}}.",
   "nextStage":"מזל טוב! השלמת {stageName}.",
-  "nextStageTrophies":"כל הכבוד! השלמת את שלב {stageName} וזכית ב-{מספר פרסים, רבים, {a trophy} אחד וב-{# trophies} אחרים}.",
+  "nextStageTrophies":" הכבוד! השלמת את שלב {stageName} וזכית ב-{numTrophies, plural, one {פרס}  other {# פרסים}}.",
   "numBlocksNeeded":"כל הכבוד! השלמת את חידה {puzzleNumber}. (עם זאת, יכולת להשתמש רק ב {numBlocks, plural, one {1 בלוק} other {# בלוקים}}.)",
   "numLinesOfCodeWritten":"כתבת {numLines, plural, one {שורת} other {# שורות}} קוד!",
   "play":"הפעל",

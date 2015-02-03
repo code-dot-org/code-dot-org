@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -265,11 +265,14 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "projectilePurpleHearts":function(d){return "corações roxos"},
 "projectileRedHearts":function(d){return "corações vermelhos"},
 "projectileRandom":function(d){return "aleatório"},
-"projectileAnna":function(d){return "Anna"},
-"projectileElsa":function(d){return "Elsa"},
-"projectileHiro":function(d){return "Hiro"},
-"projectileBaymax":function(d){return "Baymax"},
-"projectileRapunzel":function(d){return "Rapunzel"},
+"projectileAnna":function(d){return "gancho"},
+"projectileElsa":function(d){return "centelha"},
+"projectileHiro":function(d){return "microrrobôs"},
+"projectileBaymax":function(d){return "foguete"},
+"projectileRapunzel":function(d){return "panela"},
+"projectileCherry":function(d){return "cereja"},
+"projectileIce":function(d){return "gelo"},
+"projectileDuck":function(d){return "pato"},
 "reinfFeedbackMsg":function(d){return "Você pode clicar em \"Tente novamente\" para voltar a jogar o jogo."},
 "repeatForever":function(d){return "repita infinitamente"},
 "repeatDo":function(d){return "faça"},
@@ -277,6 +280,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "saySprite":function(d){return "diga"},
 "saySpriteN":function(d){return "personagem "+appLocale.v(d,"spriteIndex")+" diz"},
 "saySpriteTooltip":function(d){return "Faz surgir um balão de fala com o texto relacionado ao personagem especificada."},
+"saySpriteChoices_1":function(d){return "Oi!"},
+"saySpriteChoices_2":function(d){return "Como vai você?"},
+"saySpriteChoices_3":function(d){return "Isso é divertido..."},
 "scoreText":function(d){return "Pontuação: "+appLocale.v(d,"playerScore")},
 "setBackground":function(d){return "defina o plano de fundo"},
 "setBackgroundRandom":function(d){return "defina o plano de fundo aleatoriamente"},
@@ -293,6 +299,12 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setBackgroundSpace":function(d){return "defina o plano de fundo de espaço sideral"},
 "setBackgroundTennis":function(d){return "defina o plano de fundo de tênis"},
 "setBackgroundWinter":function(d){return "defina o plano de fundo de inverno"},
+"setBackgroundLeafy":function(d){return "defina o plano de fundo de folhas"},
+"setBackgroundGrassy":function(d){return "defina o plano de fundo de grama"},
+"setBackgroundFlower":function(d){return "defina o plano de fundo de flores"},
+"setBackgroundTile":function(d){return "defina o plano de fundo de ladrilhos"},
+"setBackgroundIcy":function(d){return "defina o plano de fundo de gelo"},
+"setBackgroundSnowy":function(d){return "defina o plano de fundo de neve"},
 "setBackgroundTooltip":function(d){return "Define a imagem do plano de fundo"},
 "setEnemySpeed":function(d){return "definir velocidade do inimigo"},
 "setPlayerSpeed":function(d){return "definir velocidade do jogador"},
@@ -384,6 +396,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "soundWinPoint2":function(d){return "ganhar ponto 2"},
 "soundWood":function(d){return "madeira"},
 "speed":function(d){return "velocidade"},
+"startSetValue":function(d){return "iniciar (função altura do foguete)"},
 "stopSprite":function(d){return "pare"},
 "stopSpriteN":function(d){return "pare o personagem "+appLocale.v(d,"spriteIndex")},
 "stopTooltip":function(d){return "Para o movimento de um personagem."},
@@ -423,7 +436,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenSpriteCollidedN":function(d){return "quando o personagem "+appLocale.v(d,"spriteIndex")},
 "whenSpriteCollidedTooltip":function(d){return "Execute as ações abaixo quando um personagem tocar em outro personagem."},
 "whenSpriteCollidedWith":function(d){return "toca"},
-"whenSpriteCollidedWithAnyActor":function(d){return "toca qualquer ator"},
+"whenSpriteCollidedWithAnyActor":function(d){return "toca qualquer personagem"},
 "whenSpriteCollidedWithAnyEdge":function(d){return "toca qualquer borda"},
 "whenSpriteCollidedWithAnyProjectile":function(d){return "toca qualquer projétil"},
 "whenSpriteCollidedWithAnything":function(d){return "toca em alguma coisa"},
