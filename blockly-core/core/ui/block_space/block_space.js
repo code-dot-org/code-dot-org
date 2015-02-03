@@ -454,7 +454,7 @@ Blockly.BlockSpace.prototype.paste = function(clipboard) {
       this.remainingCapacity()) {
     return;
   }
-  var block = Blockly.Xml.domToBlock_(this, xmlBlock);
+  var block = Blockly.Xml.domToBlock(this, xmlBlock);
   // Move the duplicate to original position.
   var blockX = parseInt(xmlBlock.getAttribute('x'), 10);
   var blockY = parseInt(xmlBlock.getAttribute('y'), 10);
