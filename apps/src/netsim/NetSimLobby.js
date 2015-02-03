@@ -66,6 +66,20 @@ var NetSimLobby = function (connection) {
    * @private
    */
   this.nextAutoRefreshTime_ = Infinity;
+
+  /**
+   * Which item in the lobby is currently selected
+   * @type {number}
+   * @private
+   */
+  this.selectedID_ = undefined;
+
+  /**
+   * Which listItem DOM element is currently selected
+   * @type {*}
+   * @private
+   */
+  this.selectedListItem_ = undefined;
 };
 module.exports = NetSimLobby;
 
@@ -100,6 +114,9 @@ NetSimLobby.prototype.initialize = function () {
  * Also attach method handlers.
  */
 NetSimLobby.prototype.bindElements_ = function () {
+  this.lobbyOpenDiv_ = document.getElementById('netsim_lobby_open');
+  this.lobbyClosedDiv_ = document.getElementById('netsim_lobby_closed');
+
   this.instanceSelector_ = document.getElementById('netsim_instance_select');
   $(this.instanceSelector_).change(this.onInstanceSelectorChange_.bind(this));
 
@@ -110,6 +127,16 @@ NetSimLobby.prototype.bindElements_ = function () {
       this.addRouterButtonClick_.bind(this));
 
   this.connectButton_ = document.getElementById('netsim_lobby_connect');
+  dom.addClickTouchEvent(this.connectButton_,
+      this.connectButtonClick_.bind(this));
+
+  this.disconnectButton_ = document.getElementById('netsim_lobby_disconnect');
+  dom.addClickTouchEvent(this.disconnectButton_,
+      this.disconnectButtonClick_.bind(this));
+
+  this.connectionStatusSpan_ = document.getElementById('netsim_lobby_statusbar');
+
+  this.refreshLobby_();
 };
 
 /**
@@ -127,8 +154,19 @@ NetSimLobby.prototype.onInstanceSelectorChange_ = function () {
 };
 
 NetSimLobby.prototype.addRouterButtonClick_ = function () {
-  var router = new NetSimRouter(this.connection_);
-  router.connectToLobby();
+  this.connection_.addRouterToLobby();
+};
+
+NetSimLobby.prototype.connectButtonClick_ = function () {
+  if (!this.selectedID_) {
+    return;
+  }
+
+  this.connection_.connectToRouter(this.selectedID_);
+};
+
+NetSimLobby.prototype.disconnectButtonClick_ = function () {
+  this.connection_.disconnectFromRouter();
 };
 
 /**
@@ -176,66 +214,107 @@ NetSimLobby.prototype.refreshLobby_ = function () {
   var self = this;
   var lobbyList = this.lobbyList_;
 
-  if (!this.connection_.isConnectedToInstance()) {
-    $(lobbyList).empty();
+  if (this.connection_.isConnectedToRouter()) {
+    // Just show the status line and the disconnect button
+    $(this.lobbyClosedDiv_).show();
+    $(this.lobbyOpenDiv_).hide();
+    $(this.connectionStatusSpan_).html(this.connection_.getReadableStatus());
+
+  } else {
+    // Show the lobby and connection selector
+    $(this.lobbyOpenDiv_).show();
+    $(this.lobbyClosedDiv_).hide();
+
+    if (!this.connection_.isConnectedToInstance()) {
+      $(lobbyList).empty();
+      $(this.connectButton_).hide();
+      return;
+    }
+
+    this.connection_.fetchLobbyListing(function (lobbyData) {
+      $(lobbyList).empty();
+      $(self.connectButton_).show();
+
+      lobbyData.sort(function (a, b) {
+        if (a.name === b.name) {
+          return 0;
+        } else if (a.name > b.name) {
+          return 1;
+        }
+        return -1;
+      });
+
+      self.selectedListItem_ = undefined;
+      lobbyData.forEach(function (connection) {
+        var item = $('<li>');
+        $('<a>')
+            .attr('href', '#')
+            .html(connection.name + ' : ' +
+                connection.status + ' ' +
+                connection.statusDetail)
+            .appendTo(item);
+
+        // Style rows by row type.
+        if (connection.id === self.connection_.myLobbyRowID_) {
+          item.addClass('own_row');
+        } else if (connection.type === NetSimConnection.LobbyRowType.ROUTER) {
+          item.addClass('router_row');
+        } else {
+          item.addClass('user_row');
+        }
+
+        // Preserve selected item across refresh.
+        if (connection.id === self.selectedID_) {
+          item.addClass('selected_row');
+          self.selectedListItem_ = item;
+        }
+
+        dom.addClickTouchEvent(item[0], self.onRowClick_.bind(self, item, connection));
+        item.appendTo(lobbyList);
+      });
+
+      self.onSelectionChange();
+
+      if (self.nextAutoRefreshTime_ === Infinity) {
+        self.nextAutoRefreshTime_ = 0;
+      }
+    });
+  }
+};
+
+/**
+ *
+ * @param {*} connectionTarget - Lobby row for clicked item
+ * @private
+ */
+NetSimLobby.prototype.onRowClick_ = function (listItem, connectionTarget) {
+  // Can't select own row
+  if (this.connection_.myLobbyRowID_ === connectionTarget.id) {
     return;
   }
 
-  this.connection_.fetchLobbyListing(function (lobbyData) {
-    $(lobbyList).empty();
+  var oldSelectedID = this.selectedID_;
+  var oldSelectedListItem = this.selectedListItem_;
 
-    lobbyData.sort(function (a, b) {
-      if (a.name === b.name) {
-        return 0;
-      } else if (a.name > b.name) {
-        return 1;
-      }
-      return -1;
-    });
+  // Deselect old row
+  if (oldSelectedListItem) {
+    oldSelectedListItem.removeClass('selected_row');
+  }
+  this.selectedID_ = undefined;
+  this.selectedListItem_ = undefined;
 
-    // TODO (bbuchanan): This should eventually generate an interactive list
-    lobbyData.forEach(function (connection) {
-      var item = $('<li>').addClass('netsim_lobby_row');
-      $('<a>')
-          .attr('href', '#')
-          .html(connection.name + ' : ' + connection.status)
-          .appendTo(item);
+  // If we clicked on a different row, select the new row
+  if (connectionTarget.id !== oldSelectedID) {
+    this.selectedID_ = connectionTarget.id;
+    this.selectedListItem_ = listItem;
+    this.selectedListItem_.addClass('selected_row');
+  }
 
-      if (connection.id === self.connection_.myLobbyRowID_) {
-        item.addClass('own_row');
-      } else if (connection.type === NetSimConnection.LobbyRowType.ROUTER) {
-        item.addClass('router_row');
-        dom.addClickTouchEvent(item[0], self.onRouterRowClick_.bind(self, connection));
-      } else {
-        item.addClass('user_row');
-        dom.addClickTouchEvent(item[0], self.onUserRowClick_.bind(self, connection));
-      }
-      item.appendTo(lobbyList);
-    });
-
-    if (self.nextAutoRefreshTime_ === Infinity) {
-      self.nextAutoRefreshTime_ = 0;
-    }
-  }); 
+  this.onSelectionChange();
 };
 
-/**
- *
- * @param {*} targetRouter - Lobby row for clicked router
- * @private
- */
-NetSimLobby.prototype.onRouterRowClick_ = function (targetRouter) {
-  var router = new NetSimRouter(this.connection_, targetRouter.id);
-  this.connection_.connectToRouter(router);
-};
-
-/**
- *
- * @param {*} targetUser - Lobby row for clicked user
- * @private
- */
-NetSimLobby.prototype.onUserRowClick_ = function (targetUser) {
-  console.info("Clicked user ID " + targetUser.id + ": " + targetUser.name);
+NetSimLobby.prototype.onSelectionChange = function () {
+  this.connectButton_.disabled = (this.selectedListItem_ === undefined);
 };
 
 /**
