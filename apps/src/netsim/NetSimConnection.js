@@ -92,6 +92,12 @@ var NetSimConnection = function (displayName, logger /*=new NetSimLogger(NONE)*/
   this.myLobbyRowID_ = undefined;
 
   /**
+   * @type {string}
+   * @private
+   */
+  this.status_ = NetSimConnection.ClientStatus.OFFLINE;
+
+  /**
    * Allows others to subscribe to connection status changes.
    * args: none
    * Notifies on:
@@ -125,6 +131,18 @@ var ConnectionStatus = {
 NetSimConnection.ConnectionStatus = ConnectionStatus;
 
 /**
+ * Client Connection Status enum
+ * @readonly
+ * @enum
+ */
+var ClientStatus = {
+  OFFLINE: 'Offline',
+  IN_LOBBY: 'In Lobby',
+  CONNECTED: 'Connected'
+};
+NetSimConnection.ClientStatus = ClientStatus;
+
+/**
  * Lobby row-type enum
  * @readonly
  * @enum {string}
@@ -134,6 +152,13 @@ var LobbyRowType = {
   ROUTER: 'router'
 };
 NetSimConnection.LobbyRowType = LobbyRowType;
+
+/**
+ * @returns {NetSimLogger}
+ */
+NetSimConnection.prototype.getLogger = function () {
+  return this.logger_;
+};
 
 /**
  * Before-unload handler, used to try and disconnect gracefully when
@@ -156,7 +181,7 @@ NetSimConnection.prototype.buildLobbyRow_ = function () {
     lastPing: Date.now(),
     name: this.displayName_,
     type: LobbyRowType.USER,
-    status: 'In Lobby'
+    status: this.status_
   };
 };
 
@@ -177,6 +202,7 @@ NetSimConnection.prototype.connectToInstance = function (instanceID) {
      netsimStorage.APP_PUBLIC_KEY, tableName);
 
   // Connect to the lobby table we just set
+  self.status_ = ClientStatus.IN_LOBBY;
   this.connect_();
 };
 
@@ -278,7 +304,14 @@ NetSimConnection.prototype.setConnectionStatus_ = function (newStatus, lobbyRowI
   this.statusChanges.notifyObservers();
 };
 
-NetSimConnection.prototype.keepAlive = function () {
+/**
+ * @param {function} [callback]
+ */
+NetSimConnection.prototype.keepAlive = function (callback) {
+  if (callback === undefined) {
+    callback = function () {};
+  }
+
   if (!this.isConnectedToInstance()) {
     this.logger_.log("Can't send keepAlive, not connected to instance.", LogLevel.WARN);
     return;
@@ -287,6 +320,7 @@ NetSimConnection.prototype.keepAlive = function () {
   var self = this;
   this.lobbyTable_.update(this.myLobbyRowID_, this.buildLobbyRow_(),
       function (succeeded) {
+        callback(succeeded);
         if (!succeeded) {
           self.setConnectionStatus_(ConnectionStatus.DISCONNECTED);
           self.logger_.log("Reconnecting...", LogLevel.INFO);
@@ -295,7 +329,7 @@ NetSimConnection.prototype.keepAlive = function () {
   });
 };
 
-NetSimConnection.prototype.getLobbyListing = function (callback) {
+NetSimConnection.prototype.fetchLobbyListing = function (callback) {
   if (!this.isConnectedToInstance()) {
     this.logger_.log("Can't get lobby rows, not connected to instance.", LogLevel.WARN);
     callback([]);
@@ -343,7 +377,7 @@ NetSimConnection.prototype.tick = function (clock) {
 NetSimConnection.prototype.cleanLobby_ = function () {
   var self = this;
   var now = Date.now();
-  this.getLobbyListing(function (lobbyData) {
+  this.fetchLobbyListing(function (lobbyData) {
     lobbyData.forEach(function (lobbyRow) {
       if (lobbyRow.type === LobbyRowType.USER && now - lobbyRow.lastPing >= CONNECTION_TIMEOUT_MS) {
         self.disconnectByRowID_(lobbyRow.id);
@@ -351,5 +385,30 @@ NetSimConnection.prototype.cleanLobby_ = function () {
         self.disconnectByRowID_(lobbyRow.id);
       }
     });
+  });
+};
+
+/**
+ * Establish a connection between the local client and the given
+ * simulated router.
+ * @param {NetSimRouter} router
+ */
+NetSimConnection.prototype.connectToRouter = function (router) {
+  var self = this;
+  router.ifBelowCapacity(function () {
+    self.status_ = ClientStatus.CONNECTED + ':' + router.routerID;
+    self.keepAlive(function (succeeded) {
+      if (succeeded) {
+        router.ifBeyondCapacity(function () {
+          self.logger_.warn("Router beyond capacity, disconnecting.");
+          self.status_ = ClientStatus.IN_LOBBY;
+          self.keepAlive();
+        }, function () {
+          router.pushStatusToRemote();
+        });
+      }
+    });
+  }, function () {
+    self.logger.warn("Router is full, cannot connect.");
   });
 };
