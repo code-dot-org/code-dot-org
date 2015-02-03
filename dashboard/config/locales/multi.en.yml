@@ -526,6 +526,14 @@ en:
         Multi Strings Images 1.blocks2.start_blocks, 300, 100: Multi Strings Images 1.blocks2.start_blocks, 300, 100
         Multi Strings Images 1.blocks3.start_blocks, 300, 100: Multi Strings Images 1.blocks3.start_blocks, 300, 100
         Multi Strings Images 1.blocks4.start_blocks, 300, 100: Multi Strings Images 1.blocks4.start_blocks, 300, 100
+      PDK5 Basic CS:
+        Video Follow-up Question: Video Follow-up Question
+        Answer this question based on the video you just watched.: Answer this question based on the video you just watched.
+        'A computer program, or code, is:': 'A computer program, or code, is:'
+        a part inside of a computer: a part inside of a computer
+        a week-long course to learn about computers: a week-long course to learn about computers
+        a set of instructions you give a computer to execute: a set of instructions you give a computer to execute
+        a secret password: a secret password
       test multi image:
         Maze Multiple Choice Two: Maze Multiple Choice Two
         /script_assets/matches/images/head.jpg,400: /script_assets/matches/images/head.jpg,400
@@ -546,6 +554,12 @@ en:
         Martha Washington: Martha Washington
         George Washington: George Washington
         George Jetson: George Jetson
+      Test 1:
+        This is a test: This is a test
+        whatever: whatever
+        this is a question?: this is a question?
+        wrong answer: wrong answer
+        right answer: right answer
       unique level name here:
         title: title
         description here: description here
