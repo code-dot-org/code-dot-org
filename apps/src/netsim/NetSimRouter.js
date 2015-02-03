@@ -202,5 +202,5 @@ NetSimRouter.prototype.countConnections = function (completeCallback) {
     });
 
     completeCallback(myWires.length);
-  })
+  });
 };
