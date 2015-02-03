@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -213,7 +213,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "moveDistanceTooltip":function(d){return "在指定的方向上移动一个特定的距离。"},
 "moveSprite":function(d){return "移动"},
 "moveSpriteN":function(d){return "移动演员 "+appLocale.v(d,"spriteIndex")},
-"toXY":function(d){return "to x,y"},
+"toXY":function(d){return "到 X，Y"},
 "moveDown":function(d){return "向下移动"},
 "moveDownTooltip":function(d){return "向下移动一个小人。"},
 "moveLeft":function(d){return "向左移动"},
@@ -270,6 +270,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "projectileHiro":function(d){return "希罗"},
 "projectileBaymax":function(d){return "Baymax"},
 "projectileRapunzel":function(d){return "长发公主"},
+"projectileCherry":function(d){return "cherry"},
+"projectileIce":function(d){return "ice"},
+"projectileDuck":function(d){return "duck"},
 "reinfFeedbackMsg":function(d){return "你可以按“重试”按钮来返回你的游戏"},
 "repeatForever":function(d){return "一直重复下去"},
 "repeatDo":function(d){return "做"},
@@ -277,6 +280,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "saySprite":function(d){return "说"},
 "saySpriteN":function(d){return "演员"+appLocale.v(d,"spriteIndex")+" 说"},
 "saySpriteTooltip":function(d){return "从特定的小人上弹出文字气泡，表达它说的话。"},
+"saySpriteChoices_1":function(d){return "Hi there!"},
+"saySpriteChoices_2":function(d){return "How are you?"},
+"saySpriteChoices_3":function(d){return "This is fun..."},
 "scoreText":function(d){return "得分： "+appLocale.v(d,"playerScore")},
 "setBackground":function(d){return "设置背景"},
 "setBackgroundRandom":function(d){return "设置随机背景"},
@@ -293,6 +299,12 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setBackgroundSpace":function(d){return "设置空地背景"},
 "setBackgroundTennis":function(d){return "设置网球背景"},
 "setBackgroundWinter":function(d){return "设置冬天背景"},
+"setBackgroundLeafy":function(d){return "set leafy background"},
+"setBackgroundGrassy":function(d){return "set grassy background"},
+"setBackgroundFlower":function(d){return "set flower background"},
+"setBackgroundTile":function(d){return "set tile background"},
+"setBackgroundIcy":function(d){return "set icy background"},
+"setBackgroundSnowy":function(d){return "set snowy background"},
 "setBackgroundTooltip":function(d){return "设置背景图案"},
 "setEnemySpeed":function(d){return "设置敌人的速度"},
 "setPlayerSpeed":function(d){return "设置竞赛者速度"},
@@ -384,6 +396,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "soundWinPoint2":function(d){return "赢得2分"},
 "soundWood":function(d){return "木材"},
 "speed":function(d){return "速度"},
+"startSetValue":function(d){return "start (rocket-height function)"},
 "stopSprite":function(d){return "停止"},
 "stopSpriteN":function(d){return "停止演员 "+appLocale.v(d,"spriteIndex")},
 "stopTooltip":function(d){return "停止一个小人的运动。"},

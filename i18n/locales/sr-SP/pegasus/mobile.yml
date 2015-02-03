@@ -242,6 +242,7 @@ sr-SP:
   dashboard_students_new_section: 'Направили сте нову групу! Сада додајте ваше ученике користећи дугмад <b>Додајте ученика</b> и <b> Додајте више ученика</b> изнад.'
   dashboard_students_placeholder_name: Име ученика
   dashboard_students_name: Име
+  dashboard_students_progress: Progress
   dashboard_students_age: Узраст
   dashboard_students_gender: Пол
   dashboard_students_male: Мушко
@@ -288,6 +289,10 @@ sr-SP:
   dashboard_login_picture: Слика
   dashboard_login_none: Електронска пошта
   dashboard_new_password: нова лозинка
+  dashboard_progress_not_completed: not completed
+  dashboard_progress_completed_too_many_blocks: completed, too many blocks
+  dashboard_progress_completed_perfect: completed, perfect
+  dashboard_progress_furthest_level_attempted: furthest level attempted
   stats_hoc_2013_heading: 'Невероватна статистика прошлогодишњег Сата програмирања. За само недељу дана:'
   stats_hoc_2013_image_alt: Статистика за Сат програмирања 2013
   dashboard_teacher: Учитељ

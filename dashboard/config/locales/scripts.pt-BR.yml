@@ -194,7 +194,7 @@
           'Eval: Conditionals': 'Eval: Condicionais'
           'Unplugged: Collision Detection and the Distance Formula': 'Offline: detecção
             de colisão e fórmula da distância'
-          'Calc: Evaluation Blocks': 'Calc: Blocos de avaliação'
+          'Calc: Evaluation Blocks': 'Calc: Blocos de cálculo'
           'Unplugged: Video Games and Coordinate Planes': 'Offline: video games e
             planos de coordenadas'
           'Eval: Boolean Operators': 'Eval: Operadores booleanos'
@@ -338,7 +338,7 @@
           Binary: Binário
         usabilitymsm:
           Usability testing for MSM: Teste de usabilidade para MSM
-          Evaluation Blocks: Blocos de avaliação
+          Evaluation Blocks: Blocos de cálculo
           Blocks to Math: Dos blocos para a matemática
           Strings and Images: Strings e imagens
           Defining Variables: Definir variáveis
@@ -352,17 +352,17 @@
           description: Aprenda programação funcional com álgebra
           'Unplugged: Video Games and Coordinate Planes': 'Offline: video games e
             planos de coordenadas'
-          'Calc: Evaluation Blocks': 'Calc: Blocos de avaliação'
+          'Calc: Evaluation Blocks': 'Calc: Blocos de cálculo'
           'Eval: Strings and Images': 'Eval: Strings e imagens'
           'Unplugged: Contracts': 'Offline: contratos'
           'Eval: Writing Contracts': 'Eval: Escrever contratos'
           'Calc: Defining Variables': 'Cálculo: definir variáveis'
           'Play Lab: Defining Variables (Big Game)': 'Laboratório: Definição de variáveis
             (O Grande Jogo)'
-          'Eval: Defining Functions': 'Eval: Definir funções'
+          'Eval: Defining Functions': 'Avaliação: definir funções'
           'Unplugged: The Design Recipe': 'Offline: a receita de design'
           'Play Lab: Defining Functions': 'Laboratório: definir funções'
-          'Eval: Functions': 'Eval: Funções'
+          'Eval: Functions': 'Avaliação: funções'
           'Play Lab: Animation (Big Game)': 'Laboratório: Animação (O Grande Jogo)'
           'Unplugged: Booleans': 'Offline: booleanos'
           'Eval: Boolean Operators': 'Eval: Operadores booleanos'
@@ -375,3 +375,29 @@
             de colisão e fórmula da distância'
           'Play Lab: Collision Detection (Big Game)': 'Laboratório: Detecção de colisão
             (O Grande Jogo)'
+        infinity:
+          title: Laboratório
+          description_short: Crie uma história ou um jogo no Laboratório!
+          description: Crie uma história ou um jogo no Laboratório!
+          Play Lab: Laboratório
+        algebrademo:
+          description: Vários desafios para demonstrar o ambiente e a linguagem de
+            programação usados no Code.org CS em álgebra
+          Algebra Demo: Demonstração de algébra
+          Evaluation Blocks: Blocos de cálculo
+          Making Pictures: Fazendo Fotos
+          Defining Variables: Definir variáveis
+          Defining Simple Functions: Definindo Funções Simples
+          The Design Recipe: A receita de design
+        K5PD:
+          Introduction to PD: Introdução a PD
+        netsim:
+          title: Simulador de internet
+          description_short: ''
+          description: ''
+          Internet Simulator: Simulador de internet
+        Infinity:
+          title: Laboratório infinito
+          description_short: Crie uma história ou um jogo com o Laboratório Infinito!!
+          description: Crie uma história ou um jogo com o Laboratório Infinito!
+          Infinity: Infinito

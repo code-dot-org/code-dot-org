@@ -72,6 +72,7 @@ fi:
       2-3 Big Event Match 1:
         Matching: Yhdistely
         /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
+        Match the button combination to the dance moves.: Yhdistä painikeyhdistelmä tanssin liikkeisiin.
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
@@ -233,6 +234,7 @@ fi:
       K-1 Big Event Match 1:
         Matching: Yhdistely
         /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
+        Match the button combination to the dance moves.: Yhdistä painikeyhdistelmä tanssin liikkeisiin.
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
@@ -292,7 +294,7 @@ fi:
         /script_assets/msm/Unit 1/Exercise_5_question_4.png: /script_assets/msm/Unit 1/Exercise_5_question_4.png
       Match math to code:
         Converting Math to Code: Matematiikan muuntaminen koodiksi
-        Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!: Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!
+        Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!: 'Yhdistä jokainen matemaattinen ilmaisu oikeaan koodiin. Käytä  Ratkaisumallia auttamaan sinua saamaan vastauksen!'
         (15 + 3) x (72 - 19): (15 + 3) x (72-19)
         3 x 15 + (- 72 19): '3 x 15 + (- 72 19)'
         72 + 3 - 19 x 15: 72 + 3-19 x 15
@@ -314,17 +316,17 @@ fi:
         example: esimerkki
       Match example to contract:
         Contracts of Functions: Funktioiden sopimukset
-        Match each example with the correct contract!: Match each example with the correct contract!
-        (big-string? "gigantic" 5): '(big-string? "gigantic" 5)'
+        Match each example with the correct contract!: Yhdistä jokainen esimerkki oikeaan sopimukseen!
+        (big-string? "gigantic" 5): '(iso-merkkijono? "jättimäinen" 5)'
         (find-price 4): (etsi-hinta 4)
         (small-star "blue"): '(pieni-tähti "sininen")'
         (bigger-string "big" "little"): '(isompi-merkkijono "iso" "pieni")'
         (small-star "solid"): '(pieni-tähti "kiinteä")'
         (find-price "cheese"): '(etsi-hinta "juusto" )'
-        "big-string: string number -> boolean": 'big-string: string number -> boolean'
+        "big-string: string number -> boolean": 'Iso-merkkijono: merkkijonon numero -> boolean'
         "find-price: number -> number": 'etsi-hinta: numero-> numero'
         "small-star: string -> image": 'pieni-tähti: merkkijono-> kuva'
-        "bigger-string: string string -> string": 'bigger-string: string string -> string'
+        "bigger-string: string string -> string": 'Isompi-merkkijono: merkkijono merkkijono  > merkkijono'
         "find-price: string -> number": 'etsi-hinta: merkkijono-> numero'
       test matching image:
         Matching Images Two: 'Yhdistely: kuvat 2'

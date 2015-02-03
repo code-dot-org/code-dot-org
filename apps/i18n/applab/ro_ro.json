@@ -19,12 +19,11 @@
   "repeatForever": "repetă pentru totdeauna",
   "repeatDo": "fă",
   "repeatForeverTooltip": "Execută acțiunile din acest bloc în mod repetat în timpul rulării aplicaţiei.",
-  "shareWebappTwitter": "Testează aplicația pe care am făcut-o. Chiar eu am scris-o cu @codeorg",
+  "shareApplabTwitter": "Testează aplicația pe care am făcut-o. Chiar eu am scris-o cu @codeorg",
   "shareGame": "Partajați-vă aplicația:",
   "stepIn": "Pas înăuntru",
   "stepOver": "Pas peste",
   "stepOut": "Pas afară",
-  "turnBlack": "comută negru",
-  "turnBlackTooltip": "Comută ecranul negru.",
+  "viewData": "View Data",
   "yes": "Da"
 }

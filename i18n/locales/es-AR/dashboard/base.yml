@@ -1,4 +1,7 @@
 es-AR:
+  errors:
+    messages:
+      not_saved: 'Por favor corrija los siguientes errores:'
   activerecord:
     errors:
       messages:
@@ -297,7 +300,7 @@ es-AR:
     new_password_hint: (déjalo en blanco si no quieres cambiarlo)
     current_password_hint: (necesitamos tu contraseña actual para confirmar los cambios)
     delete: Eliminar tu cuenta
-    delete_text: Haz click en el botón de abajo para eliminar su cuenta.
+    delete_text: Hacer click en el botón de abajo eliminará su cuenta.
     delete_text_teacher_note: 'Nota: Eliminar su cuenta no eliminará la cuenta de sus alumnos.'
     delete_confirm: ¿Estás seguro que desea eliminar su cuenta?
   user_level:

@@ -15,6 +15,9 @@
         (9-3)+4: 
         9-3+4: 
         Type the arithmetic expression here: 在這裡輸入算術運算式
+        '123': '123'
+        (9-3)+4*7: (9-3)+4*7
+        9-3+4*7: 9-3+4*7
       Blocks to Math 1:
         Convert Blocks to Math: 將方塊轉換為數學
         Type out the arithmetic expression that matches this code: 輸入與此程式碼相符的算術運算式
@@ -59,6 +62,7 @@
         - 2 * -6: -2 * -6
         Type the arithmetic expression here: 在這裡輸入算術運算式
         Blocks to Math 5.blocks.start_blocks: Blocks to Math 5.blocks.start_blocks
+        -2 * -6: -2 * -6
       Blocks to Math 6:
         Convert Blocks to Math: 將方塊轉換為數學
         Type out the arithmetic expression that matches this code: 輸入與此程式碼相符的算術運算式

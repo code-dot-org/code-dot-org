@@ -3,7 +3,7 @@ fa-IR:
   select_language: لطفا زبان خود را انتخاب کنید
   computer_science: علوم رایانه
   computer_science_edweek: هفته‌ی آموزش علوم رایانه
-  csedweek_dates: December 8-14, 2014
+  csedweek_dates: 8-14 دسامبر، 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">ساعتِ کدنویسی</a> دارد میآید. همه‌ی دبیران و برنامه گزاران را صدا میزند، <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">ساعتِ کدنویسی خود را برنامه‌ریزی کنید</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">آیا شما دبیر کامپیوتر هستید؟ دیگر منابع هفته‌ی آموزش کامپیوتر را ببینید</a>'
   n_have_learned_an_hoc: '<h1>#</h1><h2>ساعتِ کدنویسی</h2><h3>را امتحان کرده است</h3>'
@@ -202,8 +202,8 @@ fa-IR:
   dashboard_action_delete_yes: بله
   dashboard_action_delete_no: نه
   dashboard_action_confirm: پاک گردد؟
-  dashboard_action_remove: Remove
-  dashboard_action_remove_confirm: Remove?
+  dashboard_action_remove: حذف کن
+  dashboard_action_remove_confirm: حذف شود؟
   dashboard_action_done: انجام شد
   dashboard_action_required: اجباری
   dashboard_navigation_home_page: صفحه اصلی معلم
@@ -242,6 +242,7 @@ fa-IR:
   dashboard_students_new_section: 'شما یک بخش جدید ایجاد کرده اید! اکنون با استفاده از دکمه های <b>افزودن دانش آموز</b> و <b>اضافه کردن چند دانش آموز</b> بالا دانش آموزان خود را اضافه کنید.'
   dashboard_students_placeholder_name: نام دانش آموز
   dashboard_students_name: نام
+  dashboard_students_progress: پیشرفت
   dashboard_students_age: سن
   dashboard_students_gender: جنسیت
   dashboard_students_male: مرد
@@ -288,6 +289,10 @@ fa-IR:
   dashboard_login_picture: عکس
   dashboard_login_none: ایمیل
   dashboard_new_password: گذرواژه‌ی تازه
+  dashboard_progress_not_completed: تکمیل نشده است
+  dashboard_progress_completed_too_many_blocks: تکمیل شده ، با بلوک های زیادی
+  dashboard_progress_completed_perfect: تکمیل, کامل
+  dashboard_progress_furthest_level_attempted: 'تلاش برای دسترسی به سطح دسترسی خارج از محدوده '
   stats_hoc_2013_heading: 'آمار باور نکردنی از سال گذشته ساعت کدنويسي. تنها در یک هفته:'
   stats_hoc_2013_image_alt: وضعیت کد نویسی در سال 2013
   dashboard_teacher: دبیر
@@ -323,7 +328,7 @@ fa-IR:
   carousel_heading_robots: یادگیری برنامه با ربات
   carousel_heading_ide: محیط های برنامه ریزی محبوب در میان معلمان
   educator_notes: یادداشت های آموزگار
-  how_to_teach_hoc: How to Teach an Hour of Code
+  how_to_teach_hoc: نحوه تدریس یک ساعت کد نویسی
   more_resources_educators: منابع بیشتر برای معلمان و آموزگاران
   participants: شرکت کنندگان
   teachers_notes: یادداشت های معلم
@@ -333,7 +338,7 @@ fa-IR:
   older_systems: آموزش هایی که روی سیستم های قدیمی تر کار می کنند
   older_systems_subheading: 'این ها باید روی مرورگرهای وب قدیمی تر کار کنند. برای دسترسی به تمام آموزش ها، به یک مرورگر وب به روز <a href="http://browsehappy.com/" target="_blank">  ارتقا دهید.</a>'
   mobile_devices: آموزش هایی برای دستگاه های همراه
-  frozen_name: کد با آنا و السا
+  frozen_name: کدنویسی با آنا و السا
   codeorg_name: اولین برنامه کامپیوتر خودت را بنویس
   codeintl_name: اولین برنامه کامپیوتر خودت را بنویس
   thinkersmithspanish_name: Mis Amigos Roboticos
@@ -492,7 +497,7 @@ fa-IR:
   projguts_shortdescription: 'مدل سازی و شبیه سازی  رابا استفاده از سنگ/کاغذ/قیچی امتحان کنید'
   hourofcode_shortdescription: جا نگهدار برای code.org/hoc جدید
   frozen_shortdescription: بیایید از کد نویسی برای پیوستن به آنا و السا وقتی جادو و زیبایی یخ را کشف می کنند استفاده کنیم.
-  playlab_shortdescription: Create a story or make a game with Play Lab!
+  playlab_shortdescription: یک داستان بنویس یا یک بازی با آزمایشگاه بازی بساز!
   codeorg_longdescription: با برنامه نویسی کشیدن و رها کردن مفاهیم اولیه علم کامپیوتر را یاد بگیرید. این یک آموزشی شبیه بازی است با حضور ویدیو سخنرانی بیل گیتس، مارک زوکربرگ، پرندگان عصبانی و گیاهان مقابل زامبی ها. در این آموزش حلقه های تکراری، شرطها و الگریتمهای ابتدایی را یاد بگیرید. این آموزش در 34 زبان مختلف در دسترس است.
   codeintl_longdescription: با برنامه نویسی کشیدن و رها کردن مفاهیم اولیه علم کامپیوتر را یاد بگیرید. این یک آموزشی شبیه بازی است با حضور ویدیو سخنرانی بیل گیتس، مارک زوکربرگ، پرندگان عصبانی و گیاهان مقابل زامبی ها. در این آموزش حلقه های تکراری، شرطها و الگریتمهای ابتدایی را یاد بگیرید. این آموزش در 34 زبان مختلف در دسترس است.
   thinkersmithspanish_longdescription: 'با استفاده از "واژگان رباتی" از پیش تعیین شده دانش آموزان خواهند آموخت چگونه برای انجام کارهای مشخص یکدیگر را هدایت کنند بدون این که ابتدا راجع به آن ها بحث کنند. این درس به بچه ها ارتباط بین نماد ها و کار ها را می آموزد، همان طور که مهارت خیلی با ارزش رفع عیب را می آموزد.'
@@ -531,7 +536,7 @@ fa-IR:
   kodableunplugged_longdescription: 'طراحی شده برای استفاده با کاغذ ساده، دیوانگی fuzzfamily مقدمه ای بر منطق برنامه نویسی برای کودکان 5 سال به بالا است. معلم باید بازی را توضیح دهد، سپس دانش آموزان برنامه یک شریک را می نویسند تا درس یک مانع ساده را کامل کنند. '
   projguts_longdescription: 'این فعالیت " بدون اتصال" به دانش آموزان کمک می کند با بازی کردن گونه های مختلف سنگ، کاغذ، قیچی، و مشاهده ی نتایج به عنوان تجربه های مدل سازی متفاوت، بیاموزند مدل سازی و شبیه سازی چگونه کار می کند.'
   hourofcode_longdescription: جا نگهدار برای code.org/hoc جدید
-  frozen_longdescription: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
+  frozen_longdescription: بیا از کدنویسی برای پیوستن آنا و السا استفاده کنیم در حالیکه آنها جادو و زیبایی یخ را مشاهده میکنند. تو با اسکی روی یخ دانه های برف و الگوهایی را رسم خواهی کرد و سرزمین عجایب زمستانی ای خواهی ساخت که می توانی با دوستان خود به اشتراک بگذاری!
   playlab_longdescription: با Play Lab یک داستان خلق کنید یا یک بازی بسازید! حیوانات، دزدان دریایی، زامبی ها، نینجا ها، و شخصیت های بسیار بیشتری را مجبور به حرکت کنید، صدا بسازید، امتیاز بگیرید، و حتی گلوله های آتشی پرتاب کنید!
   codeorg_beyond_name: 'معرفی علوم کامپیوتر  (کلاس K-8)'
   khan_beyond_name: یادگیری برنامه نویسی کامپیوتر

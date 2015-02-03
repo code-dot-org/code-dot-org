@@ -1,4 +1,7 @@
 sq:
+  errors:
+    messages:
+      not_saved: 'Të lutem korrigjo gabimet që vijojnë:'
   activerecord:
     errors:
       messages:

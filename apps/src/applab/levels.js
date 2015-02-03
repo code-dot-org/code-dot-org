@@ -38,6 +38,7 @@ levels.ec_simple = {
     'startWebRequest': null,
     'setTimeout': null,
     'clearTimeout': null,
+    'playSound': null,
     'createHtmlBlock': null,
     'replaceHtmlBlock': null,
     'deleteHtmlBlock': null,

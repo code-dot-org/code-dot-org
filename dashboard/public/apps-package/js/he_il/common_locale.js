@@ -23,7 +23,7 @@ var locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -201,7 +201,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "nextLevel":function(d){return "מזל טוב! השלמת את פאזל "+locale.v(d,"puzzleNumber")+"."},
 "nextLevelTrophies":function(d){return "מזל טוב! השלמת את פאזל "+locale.v(d,"puzzleNumber")+" וזכית ב"+locale.p(d,"numTrophies",0,"he",{"one":"פרס","other":locale.n(d,"numTrophies")+" פרסים"})+"."},
 "nextStage":function(d){return "מזל טוב! השלמת "+locale.v(d,"stageName")+"."},
-"nextStageTrophies":function(d){return "כל הכבוד! השלמת את שלב "+locale.v(d,"stageName")+" וזכית ב-"+locale.p(d,"numTrophies",0,"he",{"one":"פרס","other":locale.n(d,"numTrophies")+" פרסים"})+"."},
+"nextStageTrophies":function(d){return " הכבוד! השלמת את שלב "+locale.v(d,"stageName")+" וזכית ב-"+locale.p(d,"numTrophies",0,"he",{"one":"פרס","other":locale.n(d,"numTrophies")+" פרסים"})+"."},
 "numBlocksNeeded":function(d){return "כל הכבוד! השלמת את חידה "+locale.v(d,"puzzleNumber")+". (עם זאת, יכולת להשתמש רק ב "+locale.p(d,"numBlocks",0,"he",{"one":"1 בלוק","other":locale.n(d,"numBlocks")+" בלוקים"})+".)"},
 "numLinesOfCodeWritten":function(d){return "כתבת "+locale.p(d,"numLines",0,"he",{"one":"שורת","other":locale.n(d,"numLines")+" שורות"})+" קוד!"},
 "play":function(d){return "הפעל"},

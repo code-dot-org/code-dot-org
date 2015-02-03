@@ -66,7 +66,7 @@
   "tooFewBlocksMsg": "Ti je duke i përdorur të gjithë tipet e nevojshëm të blloqeve, por përpiqu të përdorësh më shumë nga këto tipe blloqesh për të përfunduar këtë puzzle.",
   "tooManyBlocksMsg": "Ky puzzle mund të zgjidhet me blloqet <x id='START_SPAN'/><x id='END_SPAN'/>.",
   "tooMuchWork": "Ti më detyrove të bëj shumë veprime! Mund të përpiqesh ta përsërisësh me më pak hapa?",
-  "toolboxHeader": "blloqe",
+  "toolboxHeader": "Blloqet",
   "openWorkspace": "Si Funksionon",
   "totalNumLinesOfCodeWritten": "Totali i gjithë kohës: {numLines, plural, one {1 line} other {# lines}} i kodit.",
   "tryAgain": "Provo perseri",
@@ -88,6 +88,6 @@
   "signup": "Rregjistrohu për kursin hyrës",
   "hintHeader": "Ja ku është një këshillë:",
   "genericFeedback": "Shiko se si përfundove dhe përpiqu të rregullosh programin tënd.",
-  "toggleBlocksErrorMsg": "You need to correct an error in your program before it can be shown as blocks.",
+  "toggleBlocksErrorMsg": "Ti duhet të rregullosh një gabim në programin tënd përpara se të shfaqet si blloqet.",
   "defaultTwitterText": "Shiko se çfarë bëra"
 }

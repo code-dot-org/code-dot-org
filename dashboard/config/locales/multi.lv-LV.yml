@@ -109,6 +109,10 @@
         Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Sāc
           ar kvadrātu<br/>Noliec trīsstūri zem kvadrāta<br/>Noliec paralelogramu pa
           labi no trīsstūra
+        ? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
+          below square<br/>Put triangle right of parallelogram
+        : Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
+          below square<br/>Put triangle right of parallelogram
       2-3 Algorithms Multi 2:
         Multiple Choice: Atbilžu varianti
         Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Sāc
@@ -222,6 +226,12 @@
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png
+        ? A purple flower may have either 3, 2 or 1 nectars, but you don't know how
+          many. Which blocks correctly check and collect all of the nectar from a
+          purple flower?
+        : A purple flower may have either 3, 2 or 1 nectars, but you don't know how
+          many. Which blocks correctly check and collect all of the nectar from a
+          purple flower?
       4-5 bee debug multi 1:
         Bee Debug Multiple Choice: Bite Atkļūdot Vairākas izvēles
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png
@@ -287,6 +297,10 @@
         <h4>_____ is a _____ city.</h4>: <h4>_____ ir _____ pilsēta.</h4>
         <h4>_____ is _____ a _____.</h4>: <h4>_____ ir _____  _____.</h4>
         <h4>Eugene is a _____ city.</h4>: <h4>Eugene ir _____ pilsētā.</h4>
+        ? Here are three sentences. Which of the templates below correctly abstracts
+          so that all three match the same pattern as the template?
+        : Here are three sentences. Which of the templates below correctly abstracts
+          so that all three match the same pattern as the template?
       4-5 Crowdsourcing Multi 1:
         Multiple Choice: Atbilžu varianti
         Which of these pictures best represents crowdsourcing?: Kura no šīm fotogrāfijām,
@@ -350,6 +364,22 @@
         5: ': Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk,
           <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,
           <br/>Skip to my Lou, my darlin.'
+        ? What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?
+        : What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?
+        ? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,
+        : Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,
+        ? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin.
+        : Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin.
       4-5 Suncatchers Multi 1:
         Multiple Choice: Atbilžu varianti
         /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
@@ -362,8 +392,8 @@
       Coordinates Multi 1:
         Video game Coordinates: 'Video: spēles koordinātes'
         Ninjacat Demo Embed.level: Nizjas kaķa demo Embed.level
-        Which answer best describes the unicorn's movement?: Kura atbilde vislabāk
-          raksturo vienradža kustību?
+        Which answer most accurately describes the unicorn's movement?: Which answer
+          most accurately describes the unicorn's movement?
         The unicorn moves across the screen: Vienradzis pārvietojas pāri ekrānam
         The unicorn's y value changes: Mainās vienradža y vērtība
         The unicorn moves to the left: Vienradzis kustās pa kreisi
@@ -562,6 +592,10 @@
         (* (+ 5 6) (/ 8 2)): (* (+ 5 6) (/ 8 2))
         (/ (* (+ 5 6) 8) 2): (/ (* (+ 5 6) 8) 2)
         (/ (+ 5 6) (* 8 2)): (/ (+ 5 6) (* 8 2))
+        ? Pick the Racket code that matches the mathematical expression given. Draw
+          a circle of evaluation to help you find the right answer!
+        : Pick the Racket code that matches the mathematical expression given. Draw
+          a circle of evaluation to help you find the right answer!
       Math to Code 2:
         Racket Code for Math Expressions: Raķetes kods matemātikas izteiksmēm
         0: '? Izvēlies raķetes kodu, kas sakrīt ar doto matemātisko izteiksmi. Uzzīmē
@@ -576,6 +610,10 @@
         (+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3) 2): (+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3)
           2)
         (+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2)))))): (+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2))))))
+        ? Pick the Racket code that matches the mathematical expression given. Draw
+          a circle of evaluation to help you find the right answer!
+        : Pick the Racket code that matches the mathematical expression given. Draw
+          a circle of evaluation to help you find the right answer!
       Warmup questions:
         Coding in Racket: Kodēšana raķetē
         Select the best answer to the question.: Izvēlieties vislabāko atbildi uz
@@ -595,6 +633,7 @@
         (+ 5 (* 4 (- 8 6))): (+ 5 (* 4 (- 8 6)))
         (+ (* (- 8 6) 4) 5): '(+ (* (- 8 6) 4) 5) '
         (+ 5 (* (- 8 6) 4)): (+ 5 (* (- 8 6) 4))
+        '(+ (* (- 8 6) 4) 5) ': '(+ (* (- 8 6) 4) 5) '
       valid contracts multi:
         Valid Contracts: Derīgs līgums
         Pick the best answer to the question.: Izvēlies vislabāko atbildi uz jautājumu.
@@ -615,7 +654,8 @@
           "red")
         (rectangle (+ 8 2) (- 7 5) solid red): (rectangle (+ 8 2) (- 7 5) solid red)
       Multi Strings Images 1:
-        Strings and Images Multiple Choice: Strings and Images Multiple Choice
+        Strings and Images Multiple Choice: Vairāku variantu testa tekstu un attēlu
+          izvēle
         Multi Strings Images 1.blocks3.level: Multi Strings Images 1.blocks3.level
         Which of these Evaluation Blocks will draw the image: Which of these Evaluation
           Blocks will draw the image

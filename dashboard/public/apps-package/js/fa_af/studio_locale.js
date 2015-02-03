@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -265,11 +265,14 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "projectilePurpleHearts":function(d){return "قلب های بنفش"},
 "projectileRedHearts":function(d){return "قلب های قرمز"},
 "projectileRandom":function(d){return "تصادفی"},
-"projectileAnna":function(d){return "آنا"},
-"projectileElsa":function(d){return "السا"},
-"projectileHiro":function(d){return "قهرمان"},
-"projectileBaymax":function(d){return "Baymax"},
-"projectileRapunzel":function(d){return "راپونزل"},
+"projectileAnna":function(d){return "قلاب"},
+"projectileElsa":function(d){return "درخشش"},
+"projectileHiro":function(d){return "آدم آهنی کوچولو"},
+"projectileBaymax":function(d){return "موشک"},
+"projectileRapunzel":function(d){return "ماهی تابه"},
+"projectileCherry":function(d){return "گیلاس"},
+"projectileIce":function(d){return "یخ"},
+"projectileDuck":function(d){return "اردک"},
 "reinfFeedbackMsg":function(d){return "شما می توانید دکمه \"دوباره امتحان کنید\" را بفشارید تا به بازیتان برگردید."},
 "repeatForever":function(d){return "تکرار بی‌پایان"},
 "repeatDo":function(d){return "انجام بده"},
@@ -277,6 +280,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "saySprite":function(d){return "گفتن"},
 "saySpriteN":function(d){return "بازیگر می گوید"+appLocale.v(d,"spriteIndex")},
 "saySpriteTooltip":function(d){return "نمایش یک بیان صحبت با متن مربوطه از طرف بازیگر مشخص شده."},
+"saySpriteChoices_1":function(d){return "سلام!"},
+"saySpriteChoices_2":function(d){return "حالت چطوره؟"},
+"saySpriteChoices_3":function(d){return "این باحاله..."},
 "scoreText":function(d){return "امتیاز: "+appLocale.v(d,"playerScore")},
 "setBackground":function(d){return "مجموعه پس زمینه"},
 "setBackgroundRandom":function(d){return "قراردادن زمینه تصادفی"},
@@ -293,6 +299,12 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setBackgroundSpace":function(d){return "رنگ پیش زمینه ی فضا رو تعیین کن"},
 "setBackgroundTennis":function(d){return "رنگ پیش زمینه ی تنیس رو تعیین کن"},
 "setBackgroundWinter":function(d){return "رنگ پیش زمینه ی زمستان رو تعیین کن"},
+"setBackgroundLeafy":function(d){return "پس زمينه برگی تنظیم کن"},
+"setBackgroundGrassy":function(d){return "پس زمینه چمنی تنظیم کن"},
+"setBackgroundFlower":function(d){return "پس زمینه گل تنظیم کن"},
+"setBackgroundTile":function(d){return "پس زمینه کاشی تنظیم کن"},
+"setBackgroundIcy":function(d){return "پس زمینه یخی تنظیم کن"},
+"setBackgroundSnowy":function(d){return "پس زمینه برفی تنظیم کن"},
 "setBackgroundTooltip":function(d){return "تعیین تصویر پس‌زمینه"},
 "setEnemySpeed":function(d){return "سرعت دشمن را تعیین کن"},
 "setPlayerSpeed":function(d){return "تنظیم سرعت پخش"},
@@ -384,6 +396,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "soundWinPoint2":function(d){return "صدای برنده شدن امتیاز ۲"},
 "soundWood":function(d){return "چوب"},
 "speed":function(d){return "سرعت"},
+"startSetValue":function(d){return "شروع (تابع ارتفاع موشک)"},
 "stopSprite":function(d){return "بایست"},
 "stopSpriteN":function(d){return "توقف بازیگر "+appLocale.v(d,"spriteIndex")},
 "stopTooltip":function(d){return "حرکت یک عملگر را متوقف می کند."},

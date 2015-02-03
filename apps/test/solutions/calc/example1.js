@@ -1,4 +1,5 @@
 var testUtils = require('../../util/testUtils');
+var ResultType = require(testUtils.buildPath('constants.js')).ResultType;
 var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
 var blockUtils = require(testUtils.buildPath('block_utils'));
 
@@ -11,7 +12,7 @@ module.exports = {
     {
       description: "Correct answer",
       expected: {
-        result: true,
+        result: ResultType.SUCCESS,
         testResult: TestResults.ALL_PASS
       },
       xml: '<xml>' +
@@ -24,7 +25,7 @@ module.exports = {
     {
       description: "mirrored answer",
       expected: {
-        result: false,
+        result: ResultType.FAILURE,
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
       xml: '<xml>' +
@@ -37,7 +38,7 @@ module.exports = {
     {
       description: "wrong answer",
       expected: {
-        result: false,
+        result: ResultType.FAILURE,
         testResult: TestResults.LEVEL_INCOMPLETE_FAIL
       },
       xml: '<xml>' +
@@ -50,7 +51,7 @@ module.exports = {
     {
       description: "empty answer",
       expected: {
-        result: false,
+        result: ResultType.FAILURE,
         testResult: TestResults.LEVEL_INCOMPLETE_FAIL
       },
       xml: '<xml></xml>'

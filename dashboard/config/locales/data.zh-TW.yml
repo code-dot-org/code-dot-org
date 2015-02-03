@@ -48,7 +48,7 @@
         edit-code:
           desc: Edit Code (beta)
           MazeEC: 階段 1
-          Webapp: 階段 2
+          Applab: 階段 2
           ArtistEC: 階段 3
           StudioEC: 階段 4
         events:
@@ -103,6 +103,8 @@
         ArtistEC: 藝術家
         TextMatch: Text Match
         StudioEC: 播放實驗室
+        Applab: App Lab
+        NetSim: Internet Simulator
     trophy:
       name:
         Bronze: 銅牌
@@ -367,7 +369,7 @@
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell
           the word STORY
-        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        applab_ec_simple: Create your app by using the blocks in the toolbox.
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
           it in the new "penColor" block.'
         turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:

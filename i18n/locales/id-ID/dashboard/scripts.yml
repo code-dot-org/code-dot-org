@@ -206,7 +206,7 @@ id:
           title: Koding dengan Anna dan Elsa
           description: Mari gunakan kode untuk bergabung dengan Anna dan Elsa seperti mereka menjelajahi keajaiban dan keindahan es. Kamu akan membuat kepingan salju dan pola seperti kamu berselancar ski dan membuat musim dingin dunia impian yang yang kemudian dapat kamu bagi dengan teman-teman mu!
           Artist: Artis
-          description_short: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice."
+          description_short: Mari kita gunakan kode untuk bergabung bersama Anna dan Elsa saat mereka menjelajahi keajaiban dan keindahan es.
         course4:
           description_short: Siswa mengabil Kursus 4 yang harus sudahmengambil Kursus 2 dan 3.
           description: Kursus 4 dirancang bagi siswa yang telah mengambil Kursus 2 dan 3. Siswa akan menggali lebih dalam topik pemrograman yang diperkenalkan dikursus sebelumnya terhadap solusi yang lebih fleksibel untuk masalah yang lebih kompleks. Pada akhir kursus ini, siswa membuat cerita interaktif dan permainan yang mereka dapat bagi dengan siapapun. Direkomendasikan untuk kelas 4-5.
@@ -327,3 +327,28 @@ id:
           "Eval: Conditionals": 'Eval: Conditionals'
           "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Distance Formula'
           "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
+        infinity:
+          title: Play Lab
+          description_short: Create a story or make a game with Play Lab!
+          description: Create a story or make a game with Play Lab!
+          Play Lab: Play Lab
+        algebrademo:
+          description: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
+          Algebra Demo: Algebra Demo
+          Evaluation Blocks: Evaluation Blocks
+          Making Pictures: Making Pictures
+          Defining Variables: Defining Variables
+          Defining Simple Functions: Defining Simple Functions
+          The Design Recipe: The Design Recipe
+        K5PD:
+          Introduction to PD: Introduction to PD
+        netsim:
+          title: Simulator Internet
+          description_short: ""
+          description: ""
+          Internet Simulator: Simulator Internet
+        Infinity:
+          title: Infinity Playlab
+          description_short: Create a story or make a game with Infinity Play Lab!!
+          description: Create a story or make a game with Infinity Play Lab!
+          Infinity: ∞

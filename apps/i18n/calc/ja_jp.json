@@ -2,6 +2,7 @@
   "compute": "計算",
   "equivalentExpression": "引数を正しく並べてください",
   "extraTopBlocks": "接続されていないブロックがあります。",
+  "failedInput": "Your function does not return the right result for all values.",
   "goal": "ゴール: ",
   "reinfFeedbackMsg": "あなたのストーリーができあがりました！作業をつづけるか、次のパズルに進みましょう。",
   "yourExpression": "あなたの式:"

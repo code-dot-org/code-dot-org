@@ -3,13 +3,13 @@ fa-AF:
     text_match:
       Blocks to Bools 1:
         Convert Blocks to Math: بلوکها را به ریاضی تبدیل کن
-        Type out the arithmetic expression that matches this code: عبارتی به زبان ریاضی تایپ کن که با این کد مطابقت دارد
+        Type out the arithmetic expression that matches this code: عبارتی را به زبان ریاضی تایپ کن که با این کد مطابقت دارند
         /script_assets/msm/unit6/blockstomath1.png: /script_assets/msm/unit1/blockstomath1.png
         (4+5) > 9: '9 < (4+5)'
         Type the arithmetic expression here: عبارت ریاضی را اینجا تایپ کن
       Blocks to Bools 2:
         Convert Blocks to Math: بلوکها را به ریاضی تبدیل کن
-        Type out the arithmetic expression that matches this code: عبارتی به زبان ریاضی تایپ کن که با این کد مطابقت دارد
+        Type out the arithmetic expression that matches this code: عبارتی را به زبان ریاضی تایپ کن که با این کد مطابقت دارند
         /script_assets/msm/unit6/blockstomath2.png: /script_assets/msm/unit1/blockstomath2.png
         (10 > 11) or (7 <= 9): '(11 < 10) یا (9 => 7)'
         (10 > 11) OR (7 <= 9): '(11 < 10) یا (9 => 7)'
@@ -17,7 +17,7 @@ fa-AF:
         Type the arithmetic expression here: عبارت ریاضی را اینجا تایپ کن
       Blocks to Bools 3:
         Convert Blocks to Math: بلوکها را به ریاضی تبدیل کن
-        Type out the arithmetic expression that matches this code: عبارتی به زبان ریاضی تایپ کن که با این کد مطابقت دارد
+        Type out the arithmetic expression that matches this code: عبارتی را به زبان ریاضی تایپ کن که با این کد مطابقت دارند
         /script_assets/msm/unit6/blockstomath3.png: /script_assets/msm/unit1/blockstomath3.png
         (5 < 10) and (10 < 15): '(15 > 10) و (10 > 5)'
         (5 < 10) AND (10 < 15): '(15 > 10) و (10 > 5)'
@@ -25,41 +25,41 @@ fa-AF:
         Type the arithmetic expression here: عبارت ریاضی را اینجا تایپ کن
       Blocks to Bools 4:
         Convert Blocks to Math: بلوکها را به ریاضی تبدیل کن
-        Type out the arithmetic expression that matches this code: عبارتی به زبان ریاضی تایپ کن که با این کد مطابقت دارد
+        Type out the arithmetic expression that matches this code: عبارتی را به زبان ریاضی تایپ کن که با این کد مطابقت دارند
         /script_assets/msm/unit6/blockstomath4.png: /script_assets/msm/unit1/blockstomath3.png
         ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)): '((1 < x) و ((x < 5) یا ((8 > x) و ((x < 10)'
         ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): '((1 < x) و ((x < 5) یا ((8 < x) و ((x < 10)'
-        ((1 < x) && (x < 5)) || ((8 < x) && (x < 10)): '((1 < x) && (x < 5)) || ((8 < x) && (x < 10))'
+        ((1 < x) && (x < 5)) || ((8 < x) && (x < 10)): '((x > 1)) && (x < 5)) || ((8 < x) && (x < 10)'
         Type the arithmetic expression here: عبارت ریاضی را اینجا تایپ کن
       Blocks to Math 1:
         Convert Blocks to Math: بلوکها را به ریاضی تبدیل کن
-        Type out the arithmetic expression that matches this code: عبارتی به زبان ریاضی تایپ کن که با این کد مطابقت دارد
+        Type out the arithmetic expression that matches this code: عبارتی را به زبان ریاضی تایپ کن که با این کد مطابقت دارند
         Blocks to Math 1.blocks.start_blocks, 200: بلوکها به ریاضی 1.بلوکها.شروع_بلوکها، 200
         4 + 5: 4+5
         Type the arithmetic expression here: عبارت ریاضی را اینجا تایپ کن
       Blocks to Math 2:
         Convert Blocks to Math: بلوکها را به ریاضی تبدیل کن
-        Type out the arithmetic expression that matches this code: عبارتی به زبان ریاضی تایپ کن که با این کد مطابقت دارد
+        Type out the arithmetic expression that matches this code: عبارتی را به زبان ریاضی تایپ کن که با این کد مطابقت دارند
         Blocks to Math 2.blocks.start_blocks, 200: بلوکها به ریاضی 2.بلوکها.شروع_بلوکها، 200
         7 * 6: '7 * 6'
         Type the arithmetic expression here: عبارت ریاضی را اینجا تایپ کن
       Blocks to Math 3:
         Convert Blocks to Math: بلوکها را به ریاضی تبدیل کن
-        Type out the arithmetic expression that matches this code: عبارتی به زبان ریاضی تایپ کن که با این کد مطابقت دارد
+        Type out the arithmetic expression that matches this code: عبارتی را به زبان ریاضی تایپ کن که با این کد مطابقت دارند
         Blocks to Math 3.blocks.start_blocks: بلوکها به ریاضی 3.بلوکها.شروع_بلوکها
         (2 * 3) - (1 + 0): '(0 + 1) - (3 * 2)'
         2 * 3 - (1 + 0): '(0 + 1) - 3 * 2'
         Type the arithmetic expression here: عبارت ریاضی را اینجا تایپ کن
       Blocks to Math 4:
         Convert Blocks to Math: بلوکها را به ریاضی تبدیل کن
-        Type out the arithmetic expression that matches this code: عبارتی به زبان ریاضی تایپ کن که با این کد مطابقت دارد
+        Type out the arithmetic expression that matches this code: عبارتی را به زبان ریاضی تایپ کن که با این کد مطابقت دارند
         Blocks to Math 4.blocks.start_blocks: بلوکها به ریاضی 4.بلوکها.شروع_بلوکها
         (5 + 8) - 12: '12 - (8 + 5)'
         5 + 8 - 12: '12 - 8 + 5'
         Type the arithmetic expression here: عبارت ریاضی را اینجا تایپ کن
       Blocks to Math 5:
         Convert Blocks to Math: بلوکها را به ریاضی تبدیل کن
-        Type out the arithmetic expression that matches this code: عبارتی به زبان ریاضی تایپ کن که با این کد مطابقت دارد
+        Type out the arithmetic expression that matches this code: عبارتی را به زبان ریاضی تایپ کن که با این کد مطابقت دارند
         Blocks to Math 5.blocks.start_blocks: بلوکها به ریاضی 5.بلوکها.شروع_بلوکها
         (-2) * (-6):
           - 
@@ -67,7 +67,7 @@ fa-AF:
         Type the arithmetic expression here: عبارت ریاضی را اینجا تایپ کن
       Blocks to Math 6:
         Convert Blocks to Math: بلوکها را به ریاضی تبدیل کن
-        Type out the arithmetic expression that matches this code: عبارتی به زبان ریاضی تایپ کن که با این کد مطابقت دارد
+        Type out the arithmetic expression that matches this code: عبارتی را به زبان ریاضی تایپ کن که با این کد مطابقت دارند
         Blocks to Math 6.blocks.start_blocks: بلوکها به ریاضی 6.بلوکها.شروع_بلوکها
         ((4 - 1) * (-2)) + 12: '12 + ((2-) * (1 - 4))'
         ((4 - 1) * -2) + 12: '12 + (2- * (1 - 4))'
@@ -76,7 +76,7 @@ fa-AF:
         Type the arithmetic expression here: عبارت ریاضی را اینجا تایپ کن
       Blocks to Math 7:
         Convert Blocks to Math: بلوکها را به ریاضی تبدیل کن
-        Type out the arithmetic expression that matches this code: عبارتی به زبان ریاضی تایپ کن که با این کد مطابقت دارد
+        Type out the arithmetic expression that matches this code: عبارتی را به زبان ریاضی تایپ کن که با این کد مطابقت دارند
         Blocks to Math 7.blocks.start_blocks: بلوکها به ریاضی 7.بلوکها.شروع_بلوکها
         10 / (2 * (3 + 1)): '((1 + 3) * 2) / 10'
         Type the arithmetic expression here: عبارت ریاضی را اینجا تایپ کن
@@ -89,6 +89,26 @@ fa-AF:
         9-3+4: null
         Type the arithmetic expression here: عبارت ریاضی را اینجا تایپ کن
     contract_match:
+      CREATING CONTRACTS FROM EXAMPLES 1:
+        CREATING CONTRACTS FROM EXAMPLES 1: ایجاد قراردادها از مثالهای 1
+        Write a contract for a big red triangle that is 100 pixels in size: یک قرارداد برای یک مثلث قرمز بزرگ که اندازه اش 100 پیکسل است بنویس
+        EXAMPLE 1.solution_blocks, 300: مثال 1.بلوکهای_راه حل، 300
+        "Big Triangle|image|color:string|size:Number": مثلث بزرگ|تصویر|رنگ:رشته|اندازه:عدد
+      Creating Contracts From Examples 2:
+        Creating Contracts From Examples 2: ایجاد قراردادها از مثالهای 2
+        Write a contract for a purple square that is 15 pixels in size.: یک قرارداد برای یک مربع بنفش که اندازه اش 15 پیکسل است بنویس.
+        Example 2.solution_blocks, 300: مثال 2.بلوکهای_راه حل، 300
+        "Square|image|color:string|size:Number": مربع|تصویر|رنگ:رشته|اندازه:عدد
+      Creating Contracts From Examples 3A:
+        Creating Contracts From Examples 3A: ایجاد قراردادها از مثالهای 3آ
+        Banner Function block: بلوک تابع پرچم
+        Examples 3.solution_blocks, 300: مثالهای 3.بلوکهای_راه حل، 300
+        "banner|image|text:string": پرچم|تصویر|متن:رشته
+      Creating Contracts From Examples 4:
+        Creating Contracts From Examples 4: ایجاد قراردادها از مثالهای 4
+        Try using the "text" function to write this red text at size 40.: 'سعی کنید از تابع "متن" برای نوشتن این متن قرمز رنگ در اندازه 40 استفاده کنید.'
+        Examples 4.solution_blocks, 300: مثالهای 4.بلوکهای_راه حل، 300
+        "shrink|image|image:image": کوچک شدن|تصویر|تصویر:تصویر
       Design Recipe 1.contract:
         Design Recipe 1 Contract: قرارداد دستور 1 را طراحی کن
         0: '؟ قرارداد تابع ای به اسم "مستطیل-عریض" را بنویس که  با ارتفاع و رنگ داده شده یک مستطیل میسازد که دوبرابر ارتفاعش عرض دارد.'
@@ -99,22 +119,22 @@ fa-AF:
         Enter prompt here: پیغام را اینجا وارد کنید
         "Contract Name|Number|Domain1:Number|Domain2:string": 'نام قرارداد|شماره|دامنه1: شماره|دامنه2: رشته'
       Eval Contracts 1 B:
-        Eval Contracts 1 B: قراردادهای ایوال 1 ب
+        Star Contract: قرارداد ستاره
         Write a contract for the star function: یک قرارداد برای تابع ستاره بنویس
         Eval Contracts 1 A.solution_blocks, 300: قراردادهای ایوال 1 آ. بلوکهای راه حل، 300
-        "star|image|radius:Number|style:string|color:string": ستاره|تصویر|شعاع:شماره|سبک:رشته|رنگ:رشته
+        "star|image|color:string|radius:Number|style:string": ستاره|تصویر|رنگ:رشته|شعاع:عدد|سبک:رشته
       Eval Contracts 2 B:
-        Eval Contracts 2 B: قراردادهای ایوال 2 ب
+        Rotate Contract: قرارداد چرخش
         Write a contract for the rotate function: یک قرارداد برای تابع چرخش بنویس
         Eval Contracts 2 A.solution_blocks, 300: قراردادهای ایوال 2 آ. بلوکهای راه حل، 300
         "rotate|image|degrees:Number|image:image": چرخش|تصویر|درجه:شماره|تصویر:تصویر
       Eval Contracts 3 B:
-        Eval Contracts 3 B: قراردادهای ایوال 3 ب
+        Text Contract: قرارداد متن
         Write a contract for the text function: یک قرارداد برای تابع متن بنویس
         Eval Contracts 3 A.solution_blocks, 300: قراردادهای ایوال 3 آ. بلوکهای راه حل، 300
-        "text|image|string:string|size:Number|color:string": متن|تصویر|رشته:رشته|اندازه:شماره|رنگ:رشته
+        "text|image|color:string|size:Number|string:string": متن|تصویر|رنگ:رشته|اندازه:عدد|رشته:رشته
       Eval Contracts 4 B:
-        Eval Contracts 4 B: قراردادهای ایوال 4 ب
+        Scale Contract: قرارداد مقیاس
         Write a contract for the scale function: یک قرارداد برای تابع مقیاس بنویس
         Eval Contracts 4 A.solution_blocks, 300: قراردادهای ایوال 4 آ. بلوکهای راه حل، 300
         "scale|image|factor:Number|image:image": مقیاس|تصویر|فاکتور:شماره|تصویر:تصویر
@@ -123,3 +143,9 @@ fa-AF:
         0: '؟ قرارداد تابع ای به اسم "مستطیل-عریض" را بنویس که  با ارتفاع و رنگ داده شده یک مستطیل میسازد که دوبرابر ارتفاعش عرض دارد.'
         1: ': قرارداد تابع ای به نام "مستطیل-عریض" را بنویس که باعث ایجاد یک مستطیل با ارتفاع و رنگ داده شده میشود که دوبرابر ارتفاعش عریض است.'
         "wide-rect|Image|height:Number|color:string": مستطیل-عریض|تصویر|ارتفاع:شماره|رنگ:رشته
+      Rocket Contract 1:
+        Contract for rocket-height: قرارداد برای ارتفاع موشک
+        "Write a contract for the following question:": 'یک قرارداد برای سوال زیر بنویس:'
+        0: ؟ یک موشک پرواز میکند, با سرعت 15 متر بر ثانیه. یک تابع به نام ارتفاع-موشک بنویس که تعداد ثانیه هایی را که از شروع پرواز موشک گذشته بردارد، و ارتفاع موشک در آن زمان را محاسبه کند.
+        1: ': یک موشک پرواز میکند, با سرعت 15 متر بر ثانیه. یک تابع به نام ارتفاع-موشک بنویس که تعداد ثانیه هایی را که از شروع پرواز موشک گذشته بردارد، و ارتفاع موشک در آن زمان را محاسبه کند.'
+        "rocket-height|Number|seconds:Number": ارتفاع موشک|عدد|ثانیه ها:عدد

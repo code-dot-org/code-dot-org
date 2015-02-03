@@ -1,6 +1,6 @@
 goog.provide('Blockly.Msg.sq_al');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "aktuale";
+Blockly.Msg.ACTUAL = "telefono";
 Blockly.Msg.ADD = "Shto";
 Blockly.Msg.ADD_COMMENT = "Vendos nje Koment";
 Blockly.Msg.ADD_PARAMETER = "Shto parametrin";
@@ -74,7 +74,7 @@ Blockly.Msg.EXAMPLE = "Shembull";
 Blockly.Msg.EXAMPLE_DESCRIPTION = "Përcakton një shembull me sjellje të pritura dhe aktuale";
 Blockly.Msg.EXPAND_ALL = "Zmadho blloqet";
 Blockly.Msg.EXPAND_BLOCK = "Zmadho bllokun";
-Blockly.Msg.EXPECTED = "i/e pritur";
+Blockly.Msg.EXPECTED = "rezultati";
 Blockly.Msg.EXTERNAL_INPUTS = "Hyrjet e jashtme";
 Blockly.Msg.FUNCTION_CREATE = "Krijo një Funksion";
 Blockly.Msg.FUNCTION_EDIT = "redakto";

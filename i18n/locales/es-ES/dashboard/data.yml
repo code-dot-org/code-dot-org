@@ -48,7 +48,7 @@ es:
         edit-code:
           desc: Editar código (beta)
           MazeEC: Etapa 1
-          Webapp: Etapa 2
+          Applab: Etapa 2
           ArtistEC: Etapa 3
           StudioEC: Etapa 4
         events:
@@ -99,10 +99,12 @@ es:
         Jigsaw: Rompecabezas
         MazeStep: Modo paso a paso de laberinto
         Wordsearch: Sopa de Letras
-        Webapp: Aplicación Web
+        Webapp: App Lab
         ArtistEC: El artista
         TextMatch: Combinación de texto
         StudioEC: Laboratorio de Juegos
+        Applab: App Lab
+        NetSim: Internet Simulator
     trophy:
       name:
         Bronze: Bronce
@@ -244,7 +246,7 @@ es:
         flappy_6: Ve si puedes anotar un punto haciendo que Flappy aletee más rápido o más lento.
         flappy_7: 'A continuación, trata de cambiar el fondo adjuntando otro bloque al bloque "cuando ejecute".'
         flappy_8: Puedes poner elementos visuales en cualquier momento, no sólo cuando comience el juego. Intenta establecer una escena AL AZAR cuando sucedan otros eventos, por ejemplo, al superar un obstáculo.
-        flappy_9: Para complicarlo un poco, cuando golpees un obstáculo o el suelo, en vez de terminar el juego intenta poner el marcador en 0.
+        flappy_9: To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0.
         flappy_11: Crea tu propio juego Flappy, Puedes cambiar todos los efectos visuales y las reglas, hasta la gravedad. Cuando finalices haz clic en Terminar para que tus amigos prueben tu juego en sus teléfonos.
         flappy_k1_1: Jugar Flappy
         flappy_k1_2: 'Adjunta un bloque a "cuando se haga clic en el bloque", entonces presione "Ejecutar". Haz clic o toca la pantalla para mover a Flappy hacia el objetivo.'
@@ -326,7 +328,7 @@ es:
         maze_wordsearch_k_15: Mueveme en una dirección, y luego en otra para deletrear la palabra SOBRE
         maze_wordsearch_k_16: Mueveme en una dirección, y luego en otra para deletrear la palabra DEBAJO
         maze_wordsearch_k_20: ¡Esta es una prueba! Mueveme en una dirección, y luego en otra para deletrear la palabra HISTORIA
-        webapp_ec_simple: Crea tu aplicación web mediante createHtmlBlock.
+        applab_ec_simple: Create your app by using the blocks in the toolbox.
         turtle_ec_1_2: 'Ahora, dibuja un cuadrado. Nota: usa tu color favorito eligiéndolo en el nuevo bloque "Color De Lapiz".'
         turtle_ec_1_10: '¡Lo lograste! Ahora, dibujar cualquier cosa que quieras. Algunas ideas divertidas: una de palotes, copos de nieve o espirales. Prueba también el nuevo bloque "Ancho del Lápiz". ¡Que te diviertas!'
         studio_ec_sandbox: Crea tu propio juego. Cuando hayas terminado, haz clic en finalizar para que tus amigos prueben tu juego en sus teléfonos.

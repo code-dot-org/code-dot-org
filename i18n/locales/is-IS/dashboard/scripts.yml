@@ -327,3 +327,28 @@ is:
           "Eval: Conditionals": 'Greining: Skilyrði'
           "Unplugged: Collision Detection and the Distance Formula": 'Verkefni án tölvu: Skynjun árekstra og fjarlægðarformúlan'
           "Play Lab: Collision Detection (Big Game)": 'Leikjasmiðjan: Skynjun árekstra (Stórleikur)'
+        infinity:
+          title: Leikjasmiðja
+          description_short: Búðu til sögu eða leik með Leikjasmiðju!
+          description: Búðu til sögu eða leik með Leikjasmiðju!
+          Play Lab: Leikjasmiðja
+        algebrademo:
+          description: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
+          Algebra Demo: Algebra Demo
+          Evaluation Blocks: Evaluation Blocks
+          Making Pictures: Making Pictures
+          Defining Variables: Defining Variables
+          Defining Simple Functions: Defining Simple Functions
+          The Design Recipe: Hönnunaruppskriftin
+        K5PD:
+          Introduction to PD: Introduction to PD
+        netsim:
+          title: Internet Simulator
+          description_short: ""
+          description: ""
+          Internet Simulator: Internet Simulator
+        Infinity:
+          title: Infinity Playlab
+          description_short: Create a story or make a game with Infinity Play Lab!!
+          description: Create a story or make a game with Infinity Play Lab!
+          Infinity: Óendanleiki

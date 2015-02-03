@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -88,30 +88,29 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "catActions":function(d){return "Ações"},
-"catControl":function(d){return "Ciclos"},
+"catControl":function(d){return "ciclos"},
 "catEvents":function(d){return "Eventos"},
 "catLogic":function(d){return "Lógica"},
 "catMath":function(d){return "Matemática"},
 "catProcedures":function(d){return "Funções"},
 "catText":function(d){return "texto"},
-"catVariables":function(d){return "Variáveis"},
+"catVariables":function(d){return "variáveis"},
 "continue":function(d){return "Continuar"},
 "createHtmlBlock":function(d){return "create html block"},
 "createHtmlBlockTooltip":function(d){return "Creates a block of HTML in the app."},
-"finalLevel":function(d){return "Parabéns! Resolveste o puzzle final."},
+"finalLevel":function(d){return "Parabéns! Resolveste o enigma final."},
 "nextLevel":function(d){return "Parabéns! Completaste este puzzle."},
 "no":function(d){return "Não"},
-"numBlocksNeeded":function(d){return "Este puzzle pode ser resolvido com blocos de  %1 ."},
+"numBlocksNeeded":function(d){return "Este puzzle pode ser resolvido com blocos de %1."},
 "pause":function(d){return "Break"},
 "reinfFeedbackMsg":function(d){return "You can press the \"Try again\" button to go back to running your app."},
 "repeatForever":function(d){return "repeat forever"},
-"repeatDo":function(d){return "faça"},
+"repeatDo":function(d){return "Executar"},
 "repeatForeverTooltip":function(d){return "Execute the actions in this block repeatedly while the app is running."},
-"shareWebappTwitter":function(d){return "Check out the app I made. I wrote it myself with @codeorg"},
+"shareApplabTwitter":function(d){return "Check out the app I made. I wrote it myself with @codeorg"},
 "shareGame":function(d){return "Share your app:"},
 "stepIn":function(d){return "Step in"},
 "stepOver":function(d){return "Step over"},
 "stepOut":function(d){return "Step out"},
-"turnBlack":function(d){return "turn black"},
-"turnBlackTooltip":function(d){return "Turns the screen black."},
+"viewData":function(d){return "View Data"},
 "yes":function(d){return "Sim"}};

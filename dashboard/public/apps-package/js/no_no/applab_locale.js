@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -73,31 +73,30 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"catActions":function(d){return "Handlinger"},
+"catActions":function(d){return "Handlingar"},
 "catControl":function(d){return "Løkker"},
 "catEvents":function(d){return "Hendelser"},
 "catLogic":function(d){return "Logikk"},
 "catMath":function(d){return "Matematikk"},
-"catProcedures":function(d){return "Funksjoner"},
-"catText":function(d){return "tekst"},
-"catVariables":function(d){return "Variabler"},
-"continue":function(d){return "Fortsett"},
-"createHtmlBlock":function(d){return "opprett en html-blokk"},
-"createHtmlBlockTooltip":function(d){return "Opprett en blokk med HTML i appen."},
-"finalLevel":function(d){return "Gratulerer! Du har løst den siste oppgaven."},
-"nextLevel":function(d){return "Gratulerer! Du har fullført denne utfordringen."},
+"catProcedures":function(d){return "Funksjonar"},
+"catText":function(d){return "Tekst"},
+"catVariables":function(d){return "Variablar"},
+"continue":function(d){return "Hald fram"},
+"createHtmlBlock":function(d){return "lag html-blokk"},
+"createHtmlBlockTooltip":function(d){return "Lagar ei blokk med HTML i appen."},
+"finalLevel":function(d){return "Gratulerer! Du har løyst den siste oppgåva."},
+"nextLevel":function(d){return "Gratulerer! Du har fullført denne oppgåva."},
 "no":function(d){return "Nei"},
-"numBlocksNeeded":function(d){return "Denne utfordringen kan bli løst med %1 blokker."},
+"numBlocksNeeded":function(d){return "Denne oppgåva kan løysast med %1 blokker."},
 "pause":function(d){return "Avbryt"},
-"reinfFeedbackMsg":function(d){return "Du kan trykke på «Prøv igjen» knappen for å gå tilbake for å kjøre appen din."},
+"reinfFeedbackMsg":function(d){return "Du kan trykke på \"Prøv igjen\"-knappen for å kjøre appen din på nytt."},
 "repeatForever":function(d){return "gjenta for alltid"},
-"repeatDo":function(d){return "gjør"},
-"repeatForeverTooltip":function(d){return "Kjør handlingene i denne blokken flere ganger mens appen er i gang."},
-"shareWebappTwitter":function(d){return "Sjekk ut appen jeg lagde. Jeg skrev den selv med @codeorg"},
+"repeatDo":function(d){return "gjer"},
+"repeatForeverTooltip":function(d){return "Utfør handlingane i denne blokka gjentatte gonger medan programmet køyrer."},
+"shareApplabTwitter":function(d){return "Sjekk ut appen eg har laga. Eg skreiv den sjølv med @codeorg"},
 "shareGame":function(d){return "Del din app:"},
 "stepIn":function(d){return "Gå inn i"},
 "stepOver":function(d){return "Gå over"},
 "stepOut":function(d){return "Gå ut av"},
-"turnBlack":function(d){return "Gå tilbake"},
-"turnBlackTooltip":function(d){return "Gjør skjermen svart."},
+"viewData":function(d){return "View Data"},
 "yes":function(d){return "Ja"}};
