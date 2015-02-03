@@ -1308,6 +1308,8 @@ Blockly.Blocks.functional_definition = {init:function() {
   this.setTitleValue(a, "PARAMS")
 }, updateCallerParams_:function() {
   Blockly.Procedures.mutateCallers(this.getTitleValue("NAME"), this.blockSpace, this.parameterNames_, this.paramIds_, this.parameterTypes_)
+}, getOutputType:function() {
+  return this.outputType_
 }, updateOutputType:function(a) {
   this.outputType_ = a;
   this.changeFunctionalOutput(this.outputType_)
@@ -1384,7 +1386,7 @@ Blockly.Blocks.functional_call = {init:function() {
     this.currentParameterIDs_ = goog.array.clone(b);
     this.currentParameterTypes_ = goog.array.clone(c);
     for(e = 0;e < this.currentParameterNames_.length;e++) {
-      f = this.appendFunctionalInput("ARG" + e).setAlign(Blockly.ALIGN_CENTRE).setInline(0 < e), g = this.currentParameterTypes_[e], f.setHSV.apply(f, Blockly.ContractEditor.typesToColors[g]), f.setCheck(g), this.currentParameterIDs_ && (a = this.currentParameterIDs_[e], a in this.parameterIDsToArgumentConnections_ && (g = this.parameterIDsToArgumentConnections_[a], !g || g.targetConnection || g.sourceBlock_.blockSpace != this.blockSpace ? delete this.parameterIDsToArgumentConnections_[a] : f.connection.connect(g)))
+      f = this.appendFunctionalInput("ARG" + e).setAlign(Blockly.ALIGN_CENTRE).setInline(0 < e), g = this.currentParameterTypes_[e], f.setHSV.apply(f, Blockly.ContractEditor.typesToColorsHSV[g]), f.setCheck(g), this.currentParameterIDs_ && (a = this.currentParameterIDs_[e], a in this.parameterIDsToArgumentConnections_ && (g = this.parameterIDsToArgumentConnections_[a], !g || g.targetConnection || g.sourceBlock_.blockSpace != this.blockSpace ? delete this.parameterIDsToArgumentConnections_[a] : f.connection.connect(g)))
     }
     e = 0 < this.currentParameterNames_.length ? " (" + this.currentParameterNames_.join(", ") + ")" : "";
     this.setTitleValue(e, "PARAM_TEXT");
