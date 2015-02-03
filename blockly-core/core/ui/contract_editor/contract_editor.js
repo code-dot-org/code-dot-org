@@ -48,18 +48,20 @@ Blockly.ContractEditor = function() {
    */
   this.exampleBlocks = [];
   /**
-   * @type {?Blockly.SvgHeader}
+   * @type {?Blockly.ContractEditorSectionView}
    * @private
    */
   this.contractSectionView_ = null;
-  this.examplesSectionView_ = null;
-  this.definitionSectionView_ = null;
-
   /**
-   *
-   * @type {goog.structs.LinkedMap.<string,Blockly.ContractEditorSectionView>}
+   * @type {?Blockly.ContractEditorSectionView}
+   * @private
    */
-  this.sections = new goog.structs.LinkedMap();
+  this.examplesSectionView_ = null;
+  /**
+   * @type {?Blockly.ContractEditorSectionView}
+   * @private
+   */
+  this.definitionSectionView_ = null;
 };
 goog.inherits(Blockly.ContractEditor, Blockly.FunctionEditor);
 
