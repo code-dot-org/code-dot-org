@@ -363,7 +363,10 @@ config.mochaTest = {
       reporter: 'spec',
       timeout: 10000
     },
-    src: ['test/*.js']
+    src: [
+      'test/*.js',
+      'test/calc/*.js'
+    ]
   }
 };
 

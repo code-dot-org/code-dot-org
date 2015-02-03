@@ -18,6 +18,7 @@ var page = require('../templates/page.html');
 var dom = require('../dom');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
+var dropletConfig = require('./dropletConfig');
 var Slider = require('../slider');
 var AppStorage = require('./appStorage');
 var FormStorage = require('./formStorage');
@@ -512,6 +513,12 @@ Applab.init = function(config) {
     config.level.sliderSpeed = 1.0;
   }
 
+  // If we are in mobile sharing mode, allow the viewport to handle scaling
+  // and override our default width target in vizAppWidth with the actual width
+  if (dom.isMobile() && config.hideSource) {
+    vizAppWidth = Applab.appWidth;
+  }
+
   adjustAppSizeStyles();
 
   var showSlider = !config.hideSource && config.level.editCode;
@@ -585,6 +592,11 @@ Applab.init = function(config) {
         e.stop();
       });
     }
+    
+    if (studioApp.share) {
+      // automatically run in share mode:
+      window.setTimeout(studioApp.runButtonClick.bind(studioApp), 0);
+    }
   };
 
   // arrangeStartBlocks(config);
@@ -596,6 +608,12 @@ Applab.init = function(config) {
 
   config.varsInGlobals = true;
   config.noButtonsBelowOnMobileShare = true;
+
+  config.dropletConfig = dropletConfig;
+
+  // Since the app width may not be 400, set this value in the config to
+  // ensure that the viewport is set up properly for scaling it up/down
+  config.mobileNoPaddingShareWidth = config.level.appWidth;
 
   // Applab.initMinimal();
 
@@ -636,11 +654,6 @@ Applab.init = function(config) {
     if (viewDataButton) {
       dom.addClickTouchEvent(viewDataButton, Applab.onViewData);
     }
-  }
-
-  if (studioApp.share) {
-    // automatically run in share mode:
-    window.setTimeout(studioApp.runButtonClick, 0);
   }
 };
 
@@ -690,6 +703,11 @@ studioApp.reset = function(first) {
   }
 
   // Reset configurable variables
+  Applab.turtle = {};
+  Applab.turtle.heading = 0;
+  Applab.turtle.x = Applab.appWidth / 2;
+  Applab.turtle.y = Applab.appHeight / 2;
+
   var divApplab = document.getElementById('divApplab');
 
   while (divApplab.firstChild) {
@@ -816,9 +834,8 @@ var defineProcedures = function (blockType) {
   var code = Blockly.Generator.blockSpaceToCode('JavaScript', blockType);
   // TODO: handle editCode JS interpreter
   try { codegen.evalWith(code, {
-                         codeFunctions: level.codeFunctions,
                          studioApp: studioApp,
-                         Studio: api,
+                         Applab: api,
                          Globals: Applab.Globals } ); } catch (e) { }
 };
 
@@ -868,6 +885,10 @@ JSONApi.parse = function(text) {
   return JSON.parse(text);
 };
 
+JSONApi.stringify = function(object) {
+  return JSON.stringify(object);
+};
+
 // Commented out, but available in case we want to expose the droplet/pencilcode
 // style random (with a min, max value)
 /*
@@ -903,8 +924,8 @@ Applab.execute = function() {
 
   var codeWhenRun;
   if (level.editCode) {
-    codeWhenRun = utils.generateCodeAliases(level.codeFunctions, 'Applab');
-    codeWhenRun += utils.generateCodeAliases(mathFunctions, 'Math');
+    codeWhenRun = utils.generateCodeAliases(level.codeFunctions, dropletConfig, 'Applab');
+    codeWhenRun += utils.generateCodeAliases(mathFunctions, null, 'Math');
     Applab.userCodeStartOffset = codeWhenRun.length;
     Applab.userCodeLineOffset = codeWhenRun.split("\n").length - 1;
     codeWhenRun += studioApp.editor.getValue();
@@ -1124,68 +1145,14 @@ Applab.executeCmd = function (id, name, opts) {
 };
 
 //
-// Execute a command from a command queue
-//
-// Return false if the command is not complete (it will remain in the queue)
-// and this function will be called again with the same command later
-//
-// Return true if the command is complete
+// Execute an API command
 //
 
 Applab.callCmd = function (cmd) {
-  var retVal = true;
-  switch (cmd.name) {
-    /*
-    case 'wait':
-      if (!cmd.opts.started) {
-        studioApp.highlight(cmd.id);
-      }
-      return Studio.wait(cmd.opts);
-    */
-    case 'createHtmlBlock':
-    case 'replaceHtmlBlock':
-    case 'deleteHtmlBlock':
-    case 'createButton':
-    case 'createImage':
-    case 'createCanvas':
-    case 'canvasDrawLine':
-    case 'canvasDrawCircle':
-    case 'canvasDrawRect':
-    case 'canvasSetLineWidth':
-    case 'canvasSetStrokeColor':
-    case 'canvasSetFillColor':
-    case 'canvasDrawImage':
-    case 'canvasGetImageData':
-    case 'canvasPutImageData':
-    case 'canvasClear':
-    case 'createTextInput':
-    case 'createTextLabel':
-    case 'createCheckbox':
-    case 'createRadio':
-    case 'createDropdown':
-    case 'getAttribute':
-    case 'setAttribute':
-    case 'getText':
-    case 'setText':
-    case 'getChecked':
-    case 'setChecked':
-    case 'getImageURL':
-    case 'setImageURL':
-    case 'createImageUploadButton':
-    case 'setPosition':
-    case 'setParent':
-    case 'setStyle':
-    case 'onEvent':
-    case 'startWebRequest':
-    case 'setTimeout':
-    case 'clearTimeout':
-    case 'createSharedRecord':
-    case 'readSharedRecords':
-    case 'updateSharedRecord':
-    case 'deleteSharedRecord':
-      studioApp.highlight(cmd.id);
-      retVal = Applab[cmd.name](cmd.opts);
-      break;
+  var retVal = false;
+  if (Applab[cmd.name] instanceof Function) {
+    studioApp.highlight(cmd.id);
+    retVal = Applab[cmd.name](cmd.opts);
   }
   return retVal;
 };
@@ -1243,6 +1210,96 @@ Applab.createImageUploadButton = function (opts) {
   return Boolean(newLabel.appendChild(newInput) &&
                  newLabel.appendChild(textNode) &&
                  divApplab.appendChild(newLabel));
+};
+
+function getTurtleContext() {
+  var canvas = document.getElementById('turtleCanvas');
+
+  if (!canvas) {
+    var opts = { 'elementId': 'turtleCanvas' };
+    Applab.createCanvas(opts);
+    canvas = document.getElementById('turtleCanvas');
+  }
+
+  return canvas.getContext("2d");
+}
+
+Applab.turtleMoveTo = function (opts) {
+  var ctx = getTurtleContext();
+  if (ctx) {
+    ctx.beginPath();
+    ctx.moveTo(Applab.turtle.x, Applab.turtle.y);
+    Applab.turtle.x = opts.x;
+    Applab.turtle.y = opts.y;
+    ctx.lineTo(Applab.turtle.x, Applab.turtle.y);
+    ctx.stroke();
+  }
+};
+
+Applab.turtleMove = function (opts) {
+  var newOpts = {};
+  newOpts.x = Applab.turtle.x + opts.x;
+  newOpts.y = Applab.turtle.y + opts.y;
+  Applab.turtleMoveTo(newOpts);
+};
+
+Applab.turtleMoveForward = function (opts) {
+  var newOpts = {};
+  newOpts.x = Applab.turtle.x +
+    opts.distance * Math.sin(2 * Math.PI * Applab.turtle.heading / 360);
+  newOpts.y = Applab.turtle.y -
+      opts.distance * Math.cos(2 * Math.PI * Applab.turtle.heading / 360);
+  Applab.turtleMoveTo(newOpts);
+};
+
+Applab.turtleMoveBackward = function (opts) {
+  opts.distance = -opts.distance;
+  Applab.turtleMoveForward(opts);
+};
+
+Applab.turtleTurnRight = function (opts) {
+  Applab.turtle.heading += opts.degrees;
+  Applab.turtle.heading = (Applab.turtle.heading + 360) % 360;
+};
+
+Applab.turtleTurnLeft = function (opts) {
+  opts.degrees = -opts.degrees;
+  Applab.turtleTurnRight(opts);
+};
+
+Applab.turtlePenUp = function (opts) {
+  var ctx = getTurtleContext();
+  if (ctx) {
+    Applab.turtle.penUpColor = ctx.strokeStyle;
+    ctx.strokeStyle = "rgba(255, 255, 255, 0)";
+  }
+};
+
+Applab.turtlePenDown = function (opts) {
+  var ctx = getTurtleContext();
+  if (ctx && Applab.turtle.penUpColor) {
+    ctx.strokeStyle = Applab.turtle.penUpColor;
+    delete Applab.turtle.penUpColor;
+  }
+};
+
+Applab.turtlePenWidth = function (opts) {
+  var ctx = getTurtleContext();
+  if (ctx) {
+    ctx.lineWidth = opts.width;
+  }
+};
+
+Applab.turtlePenColor = function (opts) {
+  var ctx = getTurtleContext();
+  if (ctx) {
+    if (Applab.turtle.penUpColor) {
+      // pen is currently up, store this color for pen down
+      Applab.turtle.penUpColor = opts.color;
+    } else {
+      ctx.strokeStyle = opts.color;
+    }
+  }
 };
 
 Applab.createCanvas = function (opts) {
@@ -1563,6 +1620,16 @@ Applab.setImageURL = function (opts) {
   return false;
 };
 
+Applab.playSound = function (opts) {
+  if (studioApp.cdoSounds) {
+    studioApp.cdoSounds.playURL(opts.url,
+                               {volume: 1.0,
+                                forceHTML5: true,
+                                allowHTML5Mobile: true
+    });
+  }
+};
+
 Applab.replaceHtmlBlock = function (opts) {
   var divApplab = document.getElementById('divApplab');
   var oldDiv = document.getElementById(opts.elementId);
@@ -1626,7 +1693,7 @@ Applab.onEventFired = function (opts, e) {
     // of just the 'e' parameter
     Applab.eventQueue.push({
       'fn': opts.func,
-      'arguments': [e]
+      'arguments': [e].concat(opts.extraArgs)
     });
   } else {
     Applab.eventQueue.push({'fn': opts.func});
@@ -1738,6 +1805,36 @@ Applab.handleError = function(errorCallback, message) {
     });
   } else {
     outputApplabConsole(message);
+  }
+};
+
+Applab.readSharedValue = function(opts) {
+  var onSuccess = Applab.handleReadSharedValue.bind(this, opts.onSuccess);
+  var onError = Applab.handleError.bind(this, opts.onError);
+  AppStorage.readSharedValue(opts.key, onSuccess, onError);
+};
+
+Applab.handleReadSharedValue = function(successCallback, value) {
+  if (successCallback) {
+    Applab.eventQueue.push({
+      'fn': successCallback,
+      'arguments': [value]
+    });
+  }
+};
+
+Applab.writeSharedValue = function(opts) {
+  var onSuccess = Applab.handleWriteSharedValue.bind(this, opts.onSuccess);
+  var onError = Applab.handleError.bind(this, opts.onError);
+  AppStorage.writeSharedValue(opts.key, opts.value, onSuccess, onError);
+};
+
+Applab.handleWriteSharedValue = function(successCallback) {
+  if (successCallback) {
+    Applab.eventQueue.push({
+      'fn': successCallback,
+      'arguments': []
+    });
   }
 };
 
