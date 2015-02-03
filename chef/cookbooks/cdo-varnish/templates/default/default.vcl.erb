@@ -226,14 +226,6 @@ backend dashboard_<%= id %> {
   .first_byte_timeout = 600s;
   .between_bytes_timeout = 600s;
 }
-
-backend jupiter_<%= id %> {
-  .host = "<%= ip %>";
-  .port = "<%= node['cdo-apps']['jupiter']['port'] %>";
-  .connect_timeout = 600s;
-  .first_byte_timeout = 600s;
-  .between_bytes_timeout = 600s;
-}
 <%
   end
 %>
@@ -251,13 +243,15 @@ director dashboard round-robin {
 {
   .backend = dashboard_<%= id %>;
 }
-
-director jupiter round-robin {
-<% BACKENDS.keys.each do |id| %>
-{
-  .backend = jupiter_<%= id %>;
-}
 <% end %>
+}
+
+backend jupiter {
+  .host = "<%= ip %>";
+  .port = "<%= node['cdo-apps']['jupiter']['port'] %>";
+  .connect_timeout = 600s;
+  .first_byte_timeout = 600s;
+  .between_bytes_timeout = 600s;
 }
 
 # api.change.org
@@ -432,7 +426,7 @@ end
   }
   else if (req.host == "<%= canonical_hostname('jupiter.code.org') %>")
   {
-    set req.backend = jupiter
+    set req.backend = jupiter;
   }
   else if (req.url ~ "^/dashboardapi/")
   {
