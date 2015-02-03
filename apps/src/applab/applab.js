@@ -290,6 +290,9 @@ Applab.onTick = function() {
 
 Applab.executeInterpreter = function (runUntilCallbackReturn) {
   Applab.runUntilCallbackReturn = runUntilCallbackReturn;
+  if (runUntilCallbackReturn) {
+    delete Applab.lastCallbackRetVal;
+  }
   Applab.seenEmptyGetCallbackDuringExecution = false;
   Applab.seenReturnFromCallbackDuringExecution = false;
 
@@ -874,6 +877,10 @@ var nativeSetCallbackRetVal = function (retVal) {
   }
   // Provide warnings to the user if this function has been called with a
   // meaningful return value while we are no longer in the native event handler
+
+  // TODO (cpirich): Check to see if the DOM event object was modified
+  // (preventDefault(), stopPropagation(), returnValue) and provide a similar
+  // warning since these won't work as expected unless running atMaxSpeed
   if (!Applab.runUntilCallbackReturn &&
       typeof Applab.lastCallbackRetVal !== 'undefined') {
     outputApplabConsole("Function passed to onEvent() has taken too long - the return value was ignored.");
@@ -1734,7 +1741,6 @@ Applab.onEventFired = function (opts, e) {
     Applab.eventQueue.push({'fn': opts.func});
   }
   if (Applab.interpreter) {
-    delete Applab.lastCallbackRetVal;
     // Execute the interpreter and if a return value is sent back from the
     // interpreter's event handler, pass that back in the native world
 
@@ -1818,6 +1824,12 @@ Applab.onTimeoutFired = function (opts) {
   Applab.eventQueue.push({
     'fn': opts.func
   });
+  if (Applab.interpreter) {
+    // NOTE: the interpreter will not execute forever, if the event handler
+    // takes too long, executeInterpreter() will return and the rest of the
+    // user's code will execute in the next onTick()
+    Applab.executeInterpreter(true);
+  }
 };
 
 Applab.setTimeout = function (opts) {
