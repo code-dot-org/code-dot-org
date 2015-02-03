@@ -112,6 +112,10 @@ class JupiterApp < Sinatra::Base
   
   after do
   end
+  
+  get '/health_check' do
+    halt 200, "Healthy\n"
+  end
 
   get '/' do
     haml :home
