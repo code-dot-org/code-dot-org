@@ -48,7 +48,7 @@ nl:
         edit-code:
           desc: Bewerk Code (bèta)
           MazeEC: Niveau 1
-          Webapp: Niveau 2
+          Applab: Niveau 2
           ArtistEC: Niveau 3
           StudioEC: Niveau 4
         events:
@@ -99,10 +99,12 @@ nl:
         Jigsaw: Legpuzzel
         MazeStep: Doolhof stap voor stap
         Wordsearch: Woordzoeken
-        Webapp: Webapp
+        Webapp: App Lab
         ArtistEC: De Artiest
         TextMatch: Tekst overeenstemming
         StudioEC: Speel Lab
+        Applab: App Lab
+        NetSim: Internet Simulator
     trophy:
       name:
         Bronze: Brons
@@ -246,7 +248,7 @@ nl:
         flappy_6: Kijk of je nog steeds punten geeft als Flappy meer of minder flappert.
         flappy_7: 'Probeer vervolgens de scène te wijzigen door een ander blok toe te voegen aan het "bij uitvoeren" blok.'
         flappy_8: Je kan de vormgeving altijd veranderen, niet alleen als het spel start. Probeer een WILLEKEURIGE achtergrond in te stellen als er iet gebeurd, als Flappy bijvoorbeeld een obstakel passeert.
-        flappy_9: Probeer om het nog moeilijker te maken de punten terug te zetten naar 0 als Flappy een obstakel of de grond raakt. Dus zonder het spel te eindigen.
+        flappy_9: To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0.
         flappy_11: Maak je eigen Flappy spel. Je kunt de vormgeving en de regels helemaal veranderen, zelfs de zwaartekracht. Druk als je klaar bent op afronden om je vrienden je spel te laten spelen op hun telefoons.
         flappy_k1_1: Speel Flappy
         flappy_k1_2: 'Plak een blok aan het "bij een klik" blok, klik dan op "Uitvoeren". Klik of raak het scherm aan om Flappy naar zijn doel te bewegen.'
@@ -328,7 +330,7 @@ nl:
         maze_wordsearch_k_15: Verplaats me in een richting, dan in een andere richting zodat BOVEN gespeld wordt
         maze_wordsearch_k_16: Verplaats me in een richting, dan in een andere richting zodat BENEDEN gespeld wordt
         maze_wordsearch_k_20: Dit is een test! Verplaats me in een richting, dan in een andere richting zodat VERHAAL gespeld wordt
-        webapp_ec_simple: Maak je eigen web app met het maakHtmlBlok.
+        applab_ec_simple: Create your app by using the blocks in the toolbox.
         turtle_ec_1_2: 'Teken een vierkant. OPMERKING: gebruik je favoriete kleur door deze te kiezen in het nieuwe "Penkleur" blok.'
         turtle_ec_1_10: 'Het is je gelukt! Teken nu alles wat je wilt. Wat leuke ideeën: een stok poppetje, sneeuwvlok of spiraal. Probeer ook het nieuwe "penWidth" block. Veel plezier!'
         studio_ec_sandbox: Maak je eigen spel. Wanneer je klaar bent klik op Finish om je vrienden toe te laten je spel te proberen op hun telefoons.

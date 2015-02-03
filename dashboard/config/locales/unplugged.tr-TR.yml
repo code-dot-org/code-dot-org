@@ -67,9 +67,9 @@
         video: Unplug5
       Unplug6:
         title: Koşullar
-        desc: This is a class game.  After introducing the idea of conditionals, if-statements,
-          and loops, the class can practice together using a pre-written program,
-          a deck of cards, and luck of the draw.
+        desc: Bu bir sınıf oyunudur. Koşullamalar, if durumları ve döngüler hakkında
+          fikir sahibi olduktan sonra, sınıf önceden yazılmış programla, bir deste
+          kartla veya çekiliş şansıyla deneme yapabilir.
         pdfs:
         - unplug6
         video: Unplug6
@@ -275,16 +275,16 @@
         title: Video Games and Coordinate Planes
         desc: Video Games and Coordinate Planes lesson description
       Contracts:
-        title: Contracts
+        title: Teknikler
         desc: Contracts unplugged lesson description
       DesignRecipe:
-        title: The Design Recipe
+        title: Tasarım Tarifi
         desc: Design Recipe lesson description
       Booleans:
-        title: Booleans
+        title: Boolean Değerleri
         desc: Booleans lesson description
       ConditionalsPiecewiseFunctions:
-        title: Conditionals and Piecewise Functions
+        title: Koşullar ve Parçalı Fonksiyonlar
         desc: Conditionals and Piecewise Functions lesson description
       CollisionDetection:
         title: Çakışma Bulma

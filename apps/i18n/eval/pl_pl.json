@@ -13,7 +13,7 @@
   "squareBlockTitle": "kwadrat (rozmiar, styl, kolor)",
   "starBlockTitle": "gwiazda (promień, styl, kolor)",
   "radialStarBlockTitle": "promienista-gwiazda (punkty, wewnętrzne, zewnętrzne, styl, kolor)",
-  "polygonBlockTitle": "polygon (sides, length, style, color)",
+  "polygonBlockTitle": "wielokąt (boki, długości, styl, kolor)",
   "stringAppendBlockTitle": "łańcuch-dołącz (pierwszy, drugi)",
   "stringLengthBlockTitle": "łańcuch-długość (łańcuch)",
   "textBlockTitle": "tekst (łańcuch, rozmiar, kolor)",

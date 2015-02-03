@@ -60,8 +60,6 @@ class Documents < Sinatra::Base
   use Rack::CdoDeflater
 
   configure do
-    $log.info "Hello World, I'm in #{rack_env} mode."
-
     dir = pegasus_dir('sites.v3')
     set :launched_at, Time.now
     set :configs, load_configs_in(dir)

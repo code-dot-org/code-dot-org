@@ -300,7 +300,7 @@ es-AR:
       Coordinates Multi 1:
         Video game Coordinates: Coordenadas de videojuego
         Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
-        Which answer best describes the unicorn's movement?: ¿Cuál es la mejor respuesta que describe el movimiento del unicornio?
+        Which answer most accurately describes the unicorn's movement?: ¿Qué respuesta describe de forma más precisa el movimiento del unicornio?
         The unicorn moves across the screen: El unicornio se mueve a lo largo de la pantalla
         The unicorn's y value changes: 'El  valor "y" del unicornio cambia'
         The unicorn moves to the left: El unicornio se mueve hacia la izquierda
@@ -527,9 +527,9 @@ es-AR:
           (rectángulo (+ 8 2) (- 7 5) 'sólido' "rojo")
         (rectangle (+ 8 2) (- 7 5) solid red): '(rectángulo (+ 8 2) (- 7 5) sólido rojo)'
       Multi Strings Images 1:
-        Strings and Images Multiple Choice: Strings and Images Multiple Choice
+        Strings and Images Multiple Choice: Texto e imágenes de opción múltiple
         Multi Strings Images 1.blocks3.level: Multi Strings Images 1.blocks3.level
-        Which of these Evaluation Blocks will draw the image: Which of these Evaluation Blocks will draw the image
+        Which of these Evaluation Blocks will draw the image: Cuál de estos bloques de evaluación dibujará la imagen
         Multi Strings Images 1.blocks1.start_blocks, 300, 100: Multi Strings Images 1.blocks1.start_blocks, 300, 100
         Multi Strings Images 1.blocks2.start_blocks, 300, 100: Multi Strings Images 1.blocks2.start_blocks, 300, 100
         Multi Strings Images 1.blocks3.start_blocks, 300, 100: Multi Strings Images 1.blocks3.start_blocks, 300, 100

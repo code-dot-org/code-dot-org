@@ -115,6 +115,10 @@
         Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Beginne
           mit einem Quadrat. Setze ein Dreieck unter das Quadrat. Setze nun noch ein
           Parallelogramm rechts neben das Dreieck.
+        ? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
+          below square<br/>Put triangle right of parallelogram
+        : Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
+          below square<br/>Put triangle right of parallelogram
       2-3 Algorithms Multi 2:
         Multiple Choice: Multiple-Choice
         Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Starte
@@ -230,6 +234,12 @@
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png
+        ? A purple flower may have either 3, 2 or 1 nectars, but you don't know how
+          many. Which blocks correctly check and collect all of the nectar from a
+          purple flower?
+        : A purple flower may have either 3, 2 or 1 nectars, but you don't know how
+          many. Which blocks correctly check and collect all of the nectar from a
+          purple flower?
       4-5 bee debug multi 1:
         Bee Debug Multiple Choice: Biene-Debug Multiple-Choice
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png
@@ -297,6 +307,10 @@
           <h4>_____ ist eine _____ stadt.</h4>
         <h4>_____ is _____ a _____.</h4>: <h4>_____ ist _____ eine _____.</h4>
         <h4>Eugene is a _____ city.</h4>: <h4>Eugene ist eine ___ Stadt.</h4>
+        ? Here are three sentences. Which of the templates below correctly abstracts
+          so that all three match the same pattern as the template?
+        : Here are three sentences. Which of the templates below correctly abstracts
+          so that all three match the same pattern as the template?
       4-5 Crowdsourcing Multi 1:
         Multiple Choice: Multiple-Choice
         Which of these pictures best represents crowdsourcing?: Welches dieser Bilder
@@ -362,6 +376,22 @@
         5: ': Fly in der Buttermilch, <br/> Husch, fliegen, Husch, <br/> Fly in der
           Buttermilch, <br/> Husch, fliegen, Husch, <br/> Fly in der Buttermilch,
           <br/> Husch, fliegen, Husch, <br/> Skip to my Lou, mein Liebling.'
+        ? What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?
+        : What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?
+        ? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,
+        : Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,
+        ? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin.
+        : Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin.
       4-5 Suncatchers Multi 1:
         Multiple Choice: Multiple-Choice
         /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
@@ -374,8 +404,8 @@
       Coordinates Multi 1:
         Video game Coordinates: Videospiel-Koordinaten
         Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
-        Which answer best describes the unicorn's movement?: Welche Antwort beschreibt
-          die Bewegung des Einhorns am besten?
+        Which answer most accurately describes the unicorn's movement?: Welche Antwort
+          beschreibt die Bewegung des Einhorns am genauesten?
         The unicorn moves across the screen: Das Einhorn bewegt sich über den Bildschirm
         The unicorn's y value changes: Der y-Wert des Einhorns ändert sich
         The unicorn moves to the left: Das Einhorn bewegt sich nach links
@@ -575,6 +605,10 @@
         (* (+ 5 6) (/ 8 2)): (* (+ 5 6) (/ 8 2))
         (/ (* (+ 5 6) 8) 2): (/ (* (+ 5 6) 8) 2)
         (/ (+ 5 6) (* 8 2)): (/ (+ 5 6) (* 8 2))
+        ? Pick the Racket code that matches the mathematical expression given. Draw
+          a circle of evaluation to help you find the right answer!
+        : Pick the Racket code that matches the mathematical expression given. Draw
+          a circle of evaluation to help you find the right answer!
       Math to Code 2:
         Racket Code for Math Expressions: Racket-Code für mathematische Ausdrücke
         0: '? Wählen den Racket-Code, der dem angegebenen mathematischen Ausdruck
@@ -589,6 +623,10 @@
         (+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3) 2): (+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3)
           2)
         (+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2)))))): (+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2))))))https://crowdin.com/translate/codeorg/67/enus-de#
+        ? Pick the Racket code that matches the mathematical expression given. Draw
+          a circle of evaluation to help you find the right answer!
+        : Pick the Racket code that matches the mathematical expression given. Draw
+          a circle of evaluation to help you find the right answer!
       Warmup questions:
         Coding in Racket: Programmieren in Racket
         Select the best answer to the question.: Wähle die beste Antwort auf die Frage.
@@ -607,6 +645,7 @@
         (+ 5 (* 4 (- 8 6))): (+ 5 (* 4 (- 8 6)))
         (+ (* (- 8 6) 4) 5): '(+ (* (- 8 6) 4) 5) '
         (+ 5 (* (- 8 6) 4)): (+ 5 (* (- 8 6) 4))
+        '(+ (* (- 8 6) 4) 5) ': '(+ (* (- 8 6) 4) 5) '
       valid contracts multi:
         Valid Contracts: Gültige Verträge
         Pick the best answer to the question.: Wähle die beste Antwort auf die Frage.

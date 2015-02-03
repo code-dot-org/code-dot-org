@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({12:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({13:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Applab = require('./applab');
@@ -16,7 +16,7 @@ window.applabMain = function(options) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":3,"./applab":6,"./blocks":7,"./levels":11,"./skins":13}],13:[function(require,module,exports){
+},{"../appMain":3,"./applab":6,"./blocks":7,"./levels":12,"./skins":14}],14:[function(require,module,exports){
 /**
  * Load Skin for Applab.
  */
@@ -35,7 +35,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":114}],11:[function(require,module,exports){
+},{"../skins":125}],12:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/applab');
@@ -71,66 +71,61 @@ levels.ec_simple = {
   'sliderSpeed': 0.95,
   'appWidth': 320,
   'appHeight': 480,
-  'codeFunctions': [
-    {'func': 'onEvent', 'title': 'Execute code in response to an event for the specified element', 'category': 'General', 'params': ["'id'", "'click'", "function() {\n  \n}"] },
-    {'func': 'startWebRequest', 'title': 'Request data from the internet and execute code when the request is complete', 'category': 'General', 'params': ["'http://api.openweathermap.org/data/2.5/weather?q=London,uk'", "function(status, type, content) {\n  \n}"] },
-    {'func': 'setTimeout', 'title': 'Set a timer and execute code when that number of milliseconds has elapsed', 'category': 'General', 'params': ["function() {\n  \n}", "1000"] },
-    {'func': 'clearTimeout', 'title': 'Clear an existing timer by passing in the value returned from setTimeout()', 'category': 'General', 'params': ["0"] },
-    {'func': 'createHtmlBlock', 'title': 'Create a block of HTML and assign it an element id', 'category': 'General', 'params': ["'id'", "'html'"] },
-    {'func': 'replaceHtmlBlock', 'title': 'Replace a block of HTML associated with the specified id', 'category': 'General', 'params': ["'id'", "'html'"] },
-    {'func': 'deleteHtmlBlock', 'title': 'Delete the element with the specified id', 'category': 'General', 'params': ["'id'"] },
-    {'func': 'setParent', 'title': 'Set an element to become a child of a parent element', 'category': 'General', 'params': ["'id'", "'parentId'"] },
-    {'func': 'setPosition', 'title': 'Position an element with x, y, width, and height coordinates', 'category': 'General', 'params': ["'id'", "0", "0", "100", "100"] },
-    {'func': 'setStyle', 'title': 'Add CSS style text to an element', 'category': 'General', 'params': ["'id'", "'color:red;'"] },
-    {'func': 'getAttribute', 'category': 'General', 'params': ["'id'", "'scrollHeight'"], 'type': 'value' },
-    {'func': 'setAttribute', 'category': 'General', 'params': ["'id'", "'scrollHeight'", "200"]},
-    {'func': 'createButton', 'title': 'Create a button and assign it an element id', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
-    {'func': 'createTextInput', 'title': 'Create a text input and assign it an element id', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
-    {'func': 'createTextLabel', 'title': 'Create a text label, assign it an element id, and bind it to an associated element', 'category': 'UI Controls', 'params': ["'id'", "'text'", "'forId'"] },
-    {'func': 'createDropdown', 'title': 'Create a dropdown, assign it an element id, and populate it with a list of items', 'category': 'UI Controls', 'params': ["'id'", "'option1'", "'etc'"] },
-    {'func': 'getText', 'title': 'Get the text from the specified element', 'category': 'UI Controls', 'params': ["'id'"], 'type': 'value' },
-    {'func': 'setText', 'title': 'Set the text for the specified element', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
-    {'func': 'createCheckbox', 'title': 'Create a checkbox and assign it an element id', 'category': 'UI Controls', 'params': ["'id'", "false"] },
-    {'func': 'createRadio', 'title': 'Create a radio button and assign it an element id', 'category': 'UI Controls', 'params': ["'id'", "false", "'group'"] },
-    {'func': 'getChecked', 'title': 'Get the state of a checkbox or radio button', 'category': 'UI Controls', 'params': ["'id'"], 'type': 'value' },
-    {'func': 'setChecked', 'title': 'Set the state of a checkbox or radio button', 'category': 'UI Controls', 'params': ["'id'", "true"] },
-    {'func': 'createImage', 'title': 'Create an image and assign it an element id', 'category': 'UI Controls', 'params': ["'id'", "'http://code.org/images/logo.png'"] },
-    {'func': 'getImageURL', 'title': 'Get the URL associated with an image or image upload button', 'category': 'UI Controls', 'params': ["'id'"], 'type': 'value' },
-    {'func': 'setImageURL', 'title': 'Set the URL for the specified image element id', 'category': 'UI Controls', 'params': ["'id'", "'http://code.org/images/logo.png'"] },
-    {'func': 'createImageUploadButton', 'title': 'Create an image upload button and assign it an element id', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
-    {'func': 'createCanvas', 'title': 'Create a canvas with width, height dimensions', 'category': 'Canvas', 'params': ["'id'", "320", "480"] },
-    {'func': 'canvasDrawLine', 'title': 'Draw a line on a canvas from x1, y1 to x2, y2', 'category': 'Canvas', 'params': ["'id'", "0", "0", "160", "240"] },
-    {'func': 'canvasDrawCircle', 'title': 'Draw a circle on a canvas with the specified coordinates for center (x, y) and radius', 'category': 'Canvas', 'params': ["'id'", "160", "240", "100"] },
-    {'func': 'canvasDrawRect', 'title': 'Draw a rectangle on a canvas with x, y, width, and height coordinates', 'category': 'Canvas', 'params': ["'id'", "80", "120", "160", "240"] },
-    {'func': 'canvasSetLineWidth', 'title': 'Set the line width for a canvas', 'category': 'Canvas', 'params': ["'id'", "3"] },
-    {'func': 'canvasSetStrokeColor', 'title': 'Set the stroke color for a canvas', 'category': 'Canvas', 'params': ["'id'", "'red'"] },
-    {'func': 'canvasSetFillColor', 'title': 'Set the fill color for a canvas', 'category': 'Canvas', 'params': ["'id'", "'yellow'"] },
-    {'func': 'canvasDrawImage', 'title': 'Draw an image on a canvas with the specified image element and x, y as the top left coordinates', 'category': 'Canvas', 'params': ["'id'", "'imageId'", "0", "0"] },
-    {'func': 'canvasGetImageData', 'title': 'Get the ImageData for a rectangle (x, y, width, height) within a canvas', 'category': 'Canvas', 'params': ["'id'", "0", "0", "320", "480"], 'type': 'value' },
-    {'func': 'canvasPutImageData', 'title': 'Set the ImageData for a rectangle within a canvas with x, y as the top left coordinates', 'category': 'Canvas', 'params': ["'id'", "imageData", "0", "0"] },
-    {'func': 'canvasClear', 'title': 'Clear all data on a canvas', 'category': 'Canvas', 'params': ["'id'"] },
-    {'func': 'createSharedRecord', 'category': 'Storage', 'params': ["{tableName:'abc', name:'Alice', age:7, male:false}", "function() {\n  \n}"] },
-    {'func': 'readSharedRecords', 'category': 'Storage', 'params': ["{tableName: 'abc'}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    createHtmlBlock('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
-    {'func': 'updateSharedRecord', 'category': 'Storage', 'params': ["{tableName:'abc', id: 1, name:'Bob', age:8, male:true}", "function() {\n  \n}"] },
-    {'func': 'deleteSharedRecord', 'category': 'Storage', 'params': ["{tableName:'abc', id: 1}", "function() {\n  \n}"] },
-  ],
-  'categoryInfo': {
-    'General': {
-      'color': 'blue',
-      'blocks': []
-    },
-    'UI Controls': {
-      'color': 'red',
-      'blocks': []
-    },
-    'Canvas': {
-      'color': 'yellow',
-      'blocks': []
-    },
-    'Storage': {
-      'color': 'orange',
-      'blocks': []
-    },
+  'codeFunctions': {
+    'onEvent': null,
+    'startWebRequest': null,
+    'setTimeout': null,
+    'clearTimeout': null,
+    'playSound': null,
+    'createHtmlBlock': null,
+    'replaceHtmlBlock': null,
+    'deleteHtmlBlock': null,
+    'setParent': null,
+    'setPosition': null,
+    'setStyle': null,
+    'getAttribute': null,
+    'setAttribute': null,
+    'createButton': null,
+    'createTextInput': null,
+    'createTextLabel': null,
+    'createDropdown': null,
+    'getText': null,
+    'setText': null,
+    'createCheckbox': null,
+    'createRadio': null,
+    'getChecked': null,
+    'setChecked': null,
+    'createImage': null,
+    'getImageURL': null,
+    'setImageURL': null,
+    'createImageUploadButton': null,
+    'createCanvas': null,
+    'canvasDrawLine': null,
+    'canvasDrawCircle': null,
+    'canvasDrawRect': null,
+    'canvasSetLineWidth': null,
+    'canvasSetStrokeColor': null,
+    'canvasSetFillColor': null,
+    'canvasDrawImage': null,
+    'canvasGetImageData': null,
+    'canvasPutImageData': null,
+    'canvasClear': null,
+    'readSharedValue': null,
+    'writeSharedValue': null,
+    'createSharedRecord': null,
+    'readSharedRecords': null,
+    'updateSharedRecord': null,
+    'deleteSharedRecord': null,
+    'turtleMoveForward': null,
+    'turtleMoveBackward': null,
+    'turtleMove': null,
+    'turtleMoveTo': null,
+    'turtleTurnRight': null,
+    'turtleTurnLeft': null,
+    'turtlePenUp': null,
+    'turtlePenDown': null,
+    'turtlePenWidth': null,
+    'turtlePenColor': null,
   },
 };
 
@@ -217,7 +212,7 @@ levels.full_sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-},{"../../locale/current/applab":156,"../block_utils":15,"../utils":154}],6:[function(require,module,exports){
+},{"../../locale/current/applab":167,"../block_utils":16,"../utils":165}],6:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -238,6 +233,7 @@ var page = require('../templates/page.html');
 var dom = require('../dom');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
+var dropletConfig = require('./dropletConfig');
 var Slider = require('../slider');
 var AppStorage = require('./appStorage');
 var FormStorage = require('./formStorage');
@@ -732,6 +728,12 @@ Applab.init = function(config) {
     config.level.sliderSpeed = 1.0;
   }
 
+  // If we are in mobile sharing mode, allow the viewport to handle scaling
+  // and override our default width target in vizAppWidth with the actual width
+  if (dom.isMobile() && config.hideSource) {
+    vizAppWidth = Applab.appWidth;
+  }
+
   adjustAppSizeStyles();
 
   var showSlider = !config.hideSource && config.level.editCode;
@@ -805,6 +807,11 @@ Applab.init = function(config) {
         e.stop();
       });
     }
+    
+    if (studioApp.share) {
+      // automatically run in share mode:
+      window.setTimeout(studioApp.runButtonClick.bind(studioApp), 0);
+    }
   };
 
   // arrangeStartBlocks(config);
@@ -816,6 +823,12 @@ Applab.init = function(config) {
 
   config.varsInGlobals = true;
   config.noButtonsBelowOnMobileShare = true;
+
+  config.dropletConfig = dropletConfig;
+
+  // Since the app width may not be 400, set this value in the config to
+  // ensure that the viewport is set up properly for scaling it up/down
+  config.mobileNoPaddingShareWidth = config.level.appWidth;
 
   // Applab.initMinimal();
 
@@ -856,11 +869,6 @@ Applab.init = function(config) {
     if (viewDataButton) {
       dom.addClickTouchEvent(viewDataButton, Applab.onViewData);
     }
-  }
-
-  if (studioApp.share) {
-    // automatically run in share mode:
-    window.setTimeout(studioApp.runButtonClick, 0);
   }
 };
 
@@ -910,6 +918,11 @@ studioApp.reset = function(first) {
   }
 
   // Reset configurable variables
+  Applab.turtle = {};
+  Applab.turtle.heading = 0;
+  Applab.turtle.x = Applab.appWidth / 2;
+  Applab.turtle.y = Applab.appHeight / 2;
+
   var divApplab = document.getElementById('divApplab');
 
   while (divApplab.firstChild) {
@@ -1036,9 +1049,8 @@ var defineProcedures = function (blockType) {
   var code = Blockly.Generator.blockSpaceToCode('JavaScript', blockType);
   // TODO: handle editCode JS interpreter
   try { codegen.evalWith(code, {
-                         codeFunctions: level.codeFunctions,
                          studioApp: studioApp,
-                         Studio: api,
+                         Applab: api,
                          Globals: Applab.Globals } ); } catch (e) { }
 };
 
@@ -1088,6 +1100,10 @@ JSONApi.parse = function(text) {
   return JSON.parse(text);
 };
 
+JSONApi.stringify = function(object) {
+  return JSON.stringify(object);
+};
+
 // Commented out, but available in case we want to expose the droplet/pencilcode
 // style random (with a min, max value)
 /*
@@ -1123,8 +1139,8 @@ Applab.execute = function() {
 
   var codeWhenRun;
   if (level.editCode) {
-    codeWhenRun = utils.generateCodeAliases(level.codeFunctions, 'Applab');
-    codeWhenRun += utils.generateCodeAliases(mathFunctions, 'Math');
+    codeWhenRun = utils.generateCodeAliases(level.codeFunctions, dropletConfig, 'Applab');
+    codeWhenRun += utils.generateCodeAliases(mathFunctions, null, 'Math');
     Applab.userCodeStartOffset = codeWhenRun.length;
     Applab.userCodeLineOffset = codeWhenRun.split("\n").length - 1;
     codeWhenRun += studioApp.editor.getValue();
@@ -1344,68 +1360,14 @@ Applab.executeCmd = function (id, name, opts) {
 };
 
 //
-// Execute a command from a command queue
-//
-// Return false if the command is not complete (it will remain in the queue)
-// and this function will be called again with the same command later
-//
-// Return true if the command is complete
+// Execute an API command
 //
 
 Applab.callCmd = function (cmd) {
-  var retVal = true;
-  switch (cmd.name) {
-    /*
-    case 'wait':
-      if (!cmd.opts.started) {
-        studioApp.highlight(cmd.id);
-      }
-      return Studio.wait(cmd.opts);
-    */
-    case 'createHtmlBlock':
-    case 'replaceHtmlBlock':
-    case 'deleteHtmlBlock':
-    case 'createButton':
-    case 'createImage':
-    case 'createCanvas':
-    case 'canvasDrawLine':
-    case 'canvasDrawCircle':
-    case 'canvasDrawRect':
-    case 'canvasSetLineWidth':
-    case 'canvasSetStrokeColor':
-    case 'canvasSetFillColor':
-    case 'canvasDrawImage':
-    case 'canvasGetImageData':
-    case 'canvasPutImageData':
-    case 'canvasClear':
-    case 'createTextInput':
-    case 'createTextLabel':
-    case 'createCheckbox':
-    case 'createRadio':
-    case 'createDropdown':
-    case 'getAttribute':
-    case 'setAttribute':
-    case 'getText':
-    case 'setText':
-    case 'getChecked':
-    case 'setChecked':
-    case 'getImageURL':
-    case 'setImageURL':
-    case 'createImageUploadButton':
-    case 'setPosition':
-    case 'setParent':
-    case 'setStyle':
-    case 'onEvent':
-    case 'startWebRequest':
-    case 'setTimeout':
-    case 'clearTimeout':
-    case 'createSharedRecord':
-    case 'readSharedRecords':
-    case 'updateSharedRecord':
-    case 'deleteSharedRecord':
-      studioApp.highlight(cmd.id);
-      retVal = Applab[cmd.name](cmd.opts);
-      break;
+  var retVal = false;
+  if (Applab[cmd.name] instanceof Function) {
+    studioApp.highlight(cmd.id);
+    retVal = Applab[cmd.name](cmd.opts);
   }
   return retVal;
 };
@@ -1463,6 +1425,96 @@ Applab.createImageUploadButton = function (opts) {
   return Boolean(newLabel.appendChild(newInput) &&
                  newLabel.appendChild(textNode) &&
                  divApplab.appendChild(newLabel));
+};
+
+function getTurtleContext() {
+  var canvas = document.getElementById('turtleCanvas');
+
+  if (!canvas) {
+    var opts = { 'elementId': 'turtleCanvas' };
+    Applab.createCanvas(opts);
+    canvas = document.getElementById('turtleCanvas');
+  }
+
+  return canvas.getContext("2d");
+}
+
+Applab.turtleMoveTo = function (opts) {
+  var ctx = getTurtleContext();
+  if (ctx) {
+    ctx.beginPath();
+    ctx.moveTo(Applab.turtle.x, Applab.turtle.y);
+    Applab.turtle.x = opts.x;
+    Applab.turtle.y = opts.y;
+    ctx.lineTo(Applab.turtle.x, Applab.turtle.y);
+    ctx.stroke();
+  }
+};
+
+Applab.turtleMove = function (opts) {
+  var newOpts = {};
+  newOpts.x = Applab.turtle.x + opts.x;
+  newOpts.y = Applab.turtle.y + opts.y;
+  Applab.turtleMoveTo(newOpts);
+};
+
+Applab.turtleMoveForward = function (opts) {
+  var newOpts = {};
+  newOpts.x = Applab.turtle.x +
+    opts.distance * Math.sin(2 * Math.PI * Applab.turtle.heading / 360);
+  newOpts.y = Applab.turtle.y -
+      opts.distance * Math.cos(2 * Math.PI * Applab.turtle.heading / 360);
+  Applab.turtleMoveTo(newOpts);
+};
+
+Applab.turtleMoveBackward = function (opts) {
+  opts.distance = -opts.distance;
+  Applab.turtleMoveForward(opts);
+};
+
+Applab.turtleTurnRight = function (opts) {
+  Applab.turtle.heading += opts.degrees;
+  Applab.turtle.heading = (Applab.turtle.heading + 360) % 360;
+};
+
+Applab.turtleTurnLeft = function (opts) {
+  opts.degrees = -opts.degrees;
+  Applab.turtleTurnRight(opts);
+};
+
+Applab.turtlePenUp = function (opts) {
+  var ctx = getTurtleContext();
+  if (ctx) {
+    Applab.turtle.penUpColor = ctx.strokeStyle;
+    ctx.strokeStyle = "rgba(255, 255, 255, 0)";
+  }
+};
+
+Applab.turtlePenDown = function (opts) {
+  var ctx = getTurtleContext();
+  if (ctx && Applab.turtle.penUpColor) {
+    ctx.strokeStyle = Applab.turtle.penUpColor;
+    delete Applab.turtle.penUpColor;
+  }
+};
+
+Applab.turtlePenWidth = function (opts) {
+  var ctx = getTurtleContext();
+  if (ctx) {
+    ctx.lineWidth = opts.width;
+  }
+};
+
+Applab.turtlePenColor = function (opts) {
+  var ctx = getTurtleContext();
+  if (ctx) {
+    if (Applab.turtle.penUpColor) {
+      // pen is currently up, store this color for pen down
+      Applab.turtle.penUpColor = opts.color;
+    } else {
+      ctx.strokeStyle = opts.color;
+    }
+  }
 };
 
 Applab.createCanvas = function (opts) {
@@ -1783,6 +1835,16 @@ Applab.setImageURL = function (opts) {
   return false;
 };
 
+Applab.playSound = function (opts) {
+  if (studioApp.cdoSounds) {
+    studioApp.cdoSounds.playURL(opts.url,
+                               {volume: 1.0,
+                                forceHTML5: true,
+                                allowHTML5Mobile: true
+    });
+  }
+};
+
 Applab.replaceHtmlBlock = function (opts) {
   var divApplab = document.getElementById('divApplab');
   var oldDiv = document.getElementById(opts.elementId);
@@ -1846,7 +1908,7 @@ Applab.onEventFired = function (opts, e) {
     // of just the 'e' parameter
     Applab.eventQueue.push({
       'fn': opts.func,
-      'arguments': [e]
+      'arguments': [e].concat(opts.extraArgs)
     });
   } else {
     Applab.eventQueue.push({'fn': opts.func});
@@ -1958,6 +2020,36 @@ Applab.handleError = function(errorCallback, message) {
     });
   } else {
     outputApplabConsole(message);
+  }
+};
+
+Applab.readSharedValue = function(opts) {
+  var onSuccess = Applab.handleReadSharedValue.bind(this, opts.onSuccess);
+  var onError = Applab.handleError.bind(this, opts.onError);
+  AppStorage.readSharedValue(opts.key, onSuccess, onError);
+};
+
+Applab.handleReadSharedValue = function(successCallback, value) {
+  if (successCallback) {
+    Applab.eventQueue.push({
+      'fn': successCallback,
+      'arguments': [value]
+    });
+  }
+};
+
+Applab.writeSharedValue = function(opts) {
+  var onSuccess = Applab.handleWriteSharedValue.bind(this, opts.onSuccess);
+  var onError = Applab.handleError.bind(this, opts.onError);
+  AppStorage.writeSharedValue(opts.key, opts.value, onSuccess, onError);
+};
+
+Applab.handleWriteSharedValue = function(successCallback) {
+  if (successCallback) {
+    Applab.eventQueue.push({
+      'fn': successCallback,
+      'arguments': []
+    });
   }
 };
 
@@ -2276,7 +2368,7 @@ var getPegasusHost = function() {
         return Array(multiplier + 1).join(input)
     }
 
-},{"../../locale/current/applab":156,"../../locale/current/common":159,"../StudioApp":2,"../codegen":38,"../constants":39,"../dom":40,"../skins":114,"../slider":115,"../templates/page.html":134,"../utils":154,"../xml":155,"./api":4,"./appStorage":5,"./blocks":7,"./controls.html":8,"./extraControlRows.html":9,"./formStorage":10,"./visualization.html":14}],14:[function(require,module,exports){
+},{"../../locale/current/applab":167,"../../locale/current/common":170,"../StudioApp":2,"../codegen":41,"../constants":42,"../dom":43,"../skins":125,"../slider":126,"../templates/page.html":145,"../utils":165,"../xml":166,"./api":4,"./appStorage":5,"./blocks":7,"./controls.html":8,"./dropletConfig":9,"./extraControlRows.html":10,"./formStorage":11,"./visualization.html":15}],15:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2296,7 +2388,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":175}],10:[function(require,module,exports){
+},{"ejs":186}],11:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -2479,7 +2571,7 @@ FormStorage.getAppSecret = function() {
 };
 
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2499,7 +2591,88 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/applab":156,"../../locale/current/common":159,"ejs":175}],8:[function(require,module,exports){
+},{"../../locale/current/applab":167,"../../locale/current/common":170,"ejs":186}],9:[function(require,module,exports){
+module.exports.blocks = [
+  {'func': 'onEvent', 'title': 'Execute code in response to an event for the specified element. Additional parameters are passed to the callback function.', 'category': 'General', 'params': ["'id'", "'click'", "function(event) {\n  \n}"] },
+  {'func': 'startWebRequest', 'title': 'Request data from the internet and execute code when the request is complete', 'category': 'General', 'params': ["'http://api.openweathermap.org/data/2.5/weather?q=London,uk'", "function(status, type, content) {\n  \n}"] },
+  {'func': 'setTimeout', 'title': 'Set a timer and execute code when that number of milliseconds has elapsed', 'category': 'General', 'params': ["function() {\n  \n}", "1000"] },
+  {'func': 'clearTimeout', 'title': 'Clear an existing timer by passing in the value returned from setTimeout()', 'category': 'General', 'params': ["0"] },
+  {'func': 'playSound', 'title': 'Play the MP3, OGG, or WAV sound file from the specified URL', 'category': 'General', 'params': ["'http://soundbible.com/mp3/neck_snap-Vladimir-719669812.mp3'"] },
+  {'func': 'createHtmlBlock', 'title': 'Create a block of HTML and assign it an element id', 'category': 'General', 'params': ["'id'", "'html'"] },
+  {'func': 'replaceHtmlBlock', 'title': 'Replace a block of HTML associated with the specified id', 'category': 'General', 'params': ["'id'", "'html'"] },
+  {'func': 'deleteHtmlBlock', 'title': 'Delete the element with the specified id', 'category': 'General', 'params': ["'id'"] },
+  {'func': 'setParent', 'title': 'Set an element to become a child of a parent element', 'category': 'General', 'params': ["'id'", "'parentId'"] },
+  {'func': 'setPosition', 'title': 'Position an element with x, y, width, and height coordinates', 'category': 'General', 'params': ["'id'", "0", "0", "100", "100"] },
+  {'func': 'setStyle', 'title': 'Add CSS style text to an element', 'category': 'General', 'params': ["'id'", "'color:red;'"] },
+  {'func': 'getAttribute', 'category': 'General', 'params': ["'id'", "'scrollHeight'"], 'type': 'value' },
+  {'func': 'setAttribute', 'category': 'General', 'params': ["'id'", "'scrollHeight'", "200"]},
+  {'func': 'createButton', 'title': 'Create a button and assign it an element id', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
+  {'func': 'createTextInput', 'title': 'Create a text input and assign it an element id', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
+  {'func': 'createTextLabel', 'title': 'Create a text label, assign it an element id, and bind it to an associated element', 'category': 'UI Controls', 'params': ["'id'", "'text'", "'forId'"] },
+  {'func': 'createDropdown', 'title': 'Create a dropdown, assign it an element id, and populate it with a list of items', 'category': 'UI Controls', 'params': ["'id'", "'option1'", "'etc'"] },
+  {'func': 'getText', 'title': 'Get the text from the specified element', 'category': 'UI Controls', 'params': ["'id'"], 'type': 'value' },
+  {'func': 'setText', 'title': 'Set the text for the specified element', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
+  {'func': 'createCheckbox', 'title': 'Create a checkbox and assign it an element id', 'category': 'UI Controls', 'params': ["'id'", "false"] },
+  {'func': 'createRadio', 'title': 'Create a radio button and assign it an element id', 'category': 'UI Controls', 'params': ["'id'", "false", "'group'"] },
+  {'func': 'getChecked', 'title': 'Get the state of a checkbox or radio button', 'category': 'UI Controls', 'params': ["'id'"], 'type': 'value' },
+  {'func': 'setChecked', 'title': 'Set the state of a checkbox or radio button', 'category': 'UI Controls', 'params': ["'id'", "true"] },
+  {'func': 'createImage', 'title': 'Create an image and assign it an element id', 'category': 'UI Controls', 'params': ["'id'", "'http://code.org/images/logo.png'"] },
+  {'func': 'getImageURL', 'title': 'Get the URL associated with an image or image upload button', 'category': 'UI Controls', 'params': ["'id'"], 'type': 'value' },
+  {'func': 'setImageURL', 'title': 'Set the URL for the specified image element id', 'category': 'UI Controls', 'params': ["'id'", "'http://code.org/images/logo.png'"] },
+  {'func': 'createImageUploadButton', 'title': 'Create an image upload button and assign it an element id', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
+  {'func': 'createCanvas', 'title': 'Create a canvas with width, height dimensions', 'category': 'Canvas', 'params': ["'id'", "320", "480"] },
+  {'func': 'canvasDrawLine', 'title': 'Draw a line on a canvas from x1, y1 to x2, y2', 'category': 'Canvas', 'params': ["'id'", "0", "0", "160", "240"] },
+  {'func': 'canvasDrawCircle', 'title': 'Draw a circle on a canvas with the specified coordinates for center (x, y) and radius', 'category': 'Canvas', 'params': ["'id'", "160", "240", "100"] },
+  {'func': 'canvasDrawRect', 'title': 'Draw a rectangle on a canvas with x, y, width, and height coordinates', 'category': 'Canvas', 'params': ["'id'", "80", "120", "160", "240"] },
+  {'func': 'canvasSetLineWidth', 'title': 'Set the line width for a canvas', 'category': 'Canvas', 'params': ["'id'", "3"] },
+  {'func': 'canvasSetStrokeColor', 'title': 'Set the stroke color for a canvas', 'category': 'Canvas', 'params': ["'id'", "'red'"] },
+  {'func': 'canvasSetFillColor', 'title': 'Set the fill color for a canvas', 'category': 'Canvas', 'params': ["'id'", "'yellow'"] },
+  {'func': 'canvasDrawImage', 'title': 'Draw an image on a canvas with the specified image element and x, y as the top left coordinates', 'category': 'Canvas', 'params': ["'id'", "'imageId'", "0", "0"] },
+  {'func': 'canvasGetImageData', 'title': 'Get the ImageData for a rectangle (x, y, width, height) within a canvas', 'category': 'Canvas', 'params': ["'id'", "0", "0", "320", "480"], 'type': 'value' },
+  {'func': 'canvasPutImageData', 'title': 'Set the ImageData for a rectangle within a canvas with x, y as the top left coordinates', 'category': 'Canvas', 'params': ["'id'", "imageData", "0", "0"] },
+  {'func': 'canvasClear', 'title': 'Clear all data on a canvas', 'category': 'Canvas', 'params': ["'id'"] },
+  {'func': 'writeSharedValue', 'title': 'Saves a value associated with the key, shared with everyone who uses the app.', 'category': 'Storage', 'params': ["'key'", "'value'", "function () {\n  \n}"] },
+  {'func': 'readSharedValue', 'title': 'Reads the value associated with the key, shared with everyone who uses the app.', 'category': 'Storage', 'params': ["'key'", "function (value) {\n  \n}"] },
+  {'func': 'createSharedRecord', 'title': 'createSharedRecord(record, onSuccess, onError); Creates a new shared record in table record.tableName.', 'category': 'Storage', 'params': ["{tableName:'abc', name:'Alice', age:7, male:false}", "function() {\n  \n}"] },
+  {'func': 'readSharedRecords', 'title': 'readSharedRecords(searchParams, onSuccess, onError); Reads all shared records whose properties match those on the searchParams object.', 'category': 'Storage', 'params': ["{tableName: 'abc'}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    createHtmlBlock('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
+  {'func': 'updateSharedRecord', 'title': 'updateSharedRecord(record, onSuccess, onFailure); Updates a shared record, identified by record.tableName and record.id.', 'category': 'Storage', 'params': ["{tableName:'abc', id: 1, name:'Bob', age:8, male:true}", "function() {\n  \n}"] },
+  {'func': 'deleteSharedRecord', 'title': 'deleteSharedRecord(record, onSuccess, onFailure)\nDeletes a shared record, identified by record.tableName and record.id.', 'category': 'Storage', 'params': ["{tableName:'abc', id: 1}", "function() {\n  \n}"] },
+  {'func': 'turtleMoveForward', 'title': 'Move the turtle forward the specified distance', 'category': 'Turtle', 'params': ["100"] },
+  {'func': 'turtleMoveBackward', 'title': 'Move the turtle backward the specified distance', 'category': 'Turtle', 'params': ["100"] },
+  {'func': 'turtleMove', 'title': 'Move the turtle by the specified x and y coordinates', 'category': 'Turtle', 'params': ["50", "50"] },
+  {'func': 'turtleMoveTo', 'title': 'Move the turtle to the specified x and y coordinates', 'category': 'Turtle', 'params': ["0", "0"] },
+  {'func': 'turtleTurnRight', 'title': 'Turn the turtle clockwise by the specified number of degrees', 'category': 'Turtle', 'params': ["90"] },
+  {'func': 'turtleTurnLeft', 'title': 'Turn the turtle counterclockwise by the specified number of degrees', 'category': 'Turtle', 'params': ["90"] },
+  {'func': 'turtlePenUp', 'title': "Pick up the turtle's pen", 'category': 'Turtle' },
+  {'func': 'turtlePenDown', 'title': "Set down the turtle's pen", 'category': 'Turtle' },
+  {'func': 'turtlePenWidth', 'title': 'Set the turtle to the specified pen width', 'category': 'Turtle', 'params': ["3"] },
+  {'func': 'turtlePenColor', 'title': 'Set the turtle to the specified pen color', 'category': 'Turtle', 'params': ["'red'"] },
+];
+
+module.exports.categories = {
+  'General': {
+    'color': 'blue',
+    'blocks': []
+  },
+  'UI Controls': {
+    'color': 'red',
+    'blocks': []
+  },
+  'Canvas': {
+    'color': 'yellow',
+    'blocks': []
+  },
+  'Storage': {
+    'color': 'orange',
+    'blocks': []
+  },
+  'Turtle': {
+    'color': 'yellow',
+    'blocks': []
+  },
+};
+
+},{}],8:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2519,7 +2692,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":159,"ejs":175}],7:[function(require,module,exports){
+},{"../../locale/current/common":170,"ejs":186}],7:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -2592,7 +2765,7 @@ function installCreateHtmlBlock(blockly, generator, blockInstallOptions) {
   };
 }
 
-},{"../../locale/current/applab":156,"../../locale/current/common":159,"../codegen":38,"../utils":154}],156:[function(require,module,exports){
+},{"../../locale/current/applab":167,"../../locale/current/common":170,"../codegen":41,"../utils":165}],167:[function(require,module,exports){
 /*applab*/ module.exports = window.blockly.appLocale;
 },{}],5:[function(require,module,exports){
 'use strict';
@@ -2606,6 +2779,60 @@ var AppStorage = module.exports;
 AppStorage.tempEncryptedAppId =
     window.location.hostname.split('.')[0] === 'localhost' ?
         "SmwVmYVl1V5UCCw1Ec6Dtw==" : "DvTw9X3pDcyDyil44S6qbw==";
+
+/**
+ * Reads the value associated with the key, accessible to all users of the app.
+ * @param {string} key The name of the key.
+ * @param {function(Object)} onSuccess Function to call on success with the
+       value retrieved from storage.
+ * @param {function(string)} onError Function to call on error with error msg.
+ */
+AppStorage.readSharedValue = function(key, onSuccess, onError) {
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = handleReadSharedValue.bind(req, onSuccess, onError);
+  var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + '/shared-properties/' + key;
+  req.open('GET', url, true);
+  req.send();
+};
+
+var handleReadSharedValue = function(onSuccess, onError) {
+  if (this.readyState !== 4) {
+    return;
+  }
+  if (this.status < 200 || this.status >= 300) {
+    onError('error reading value: unexpected http status ' + this.status);
+    return;
+  }
+  var value = JSON.parse(this.responseText);
+  onSuccess(value);
+};
+
+/**
+ * Saves the value associated with the key, accessible to all users of the app.
+ * @param {string} key The name of the key.
+ * @param {Object} value The value to associate with the key.
+ * @param {function()} onSuccess Function to call on success.
+ * @param {function(string)} onError Function to call on error with error msg.
+ */
+AppStorage.writeSharedValue = function(key, value, onSuccess, onError) {
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = handleWriteSharedValue.bind(req, onSuccess, onError);
+  var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + '/shared-properties/' + key;
+  req.open('POST', url, true);
+  req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+  req.send(JSON.stringify(value));
+};
+
+var handleWriteSharedValue = function(onSuccess, onError) {
+  if (this.readyState !== 4) {
+    return;
+  }
+  if (this.status < 200 || this.status >= 300) {
+    onError('error writing value: unexpected http status ' + this.status);
+    return;
+  }
+  onSuccess();
+};
 
 /**
  * Creates a new record in the specified table, accessible to all users.
@@ -3045,11 +3272,13 @@ exports.setStyle = function (blockId, elementId, style) {
 };
 
 exports.onEvent = function (blockId, elementId, eventName, func) {
+  var extraArgs = Array.prototype.slice.call(arguments).slice(4);
   return Applab.executeCmd(blockId,
                           'onEvent',
                           {'elementId': elementId,
                            'eventName': eventName,
-                           'func': func });
+                           'func': func,
+                           'extraArgs': extraArgs});
 };
 
 exports.startWebRequest = function (blockId, url, func) {
@@ -3070,6 +3299,29 @@ exports.clearTimeout = function (blockId, timeoutId) {
   return Applab.executeCmd(blockId,
                            'clearTimeout',
                            {'timeoutId': timeoutId });
+};
+
+exports.playSound = function (blockId, url) {
+  return Applab.executeCmd(blockId,
+                          'playSound',
+                          {'url': url});
+};
+
+exports.readSharedValue = function(blockId, key, onSuccess, onError) {
+  return Applab.executeCmd(blockId,
+                           'readSharedValue',
+                           {'key':key,
+                            'onSuccess': onSuccess,
+                            'onError': onError});
+};
+
+exports.writeSharedValue = function(blockId, key, value, onSuccess, onError) {
+  return Applab.executeCmd(blockId,
+                           'writeSharedValue',
+                           {'key':key,
+                            'value': value,
+                            'onSuccess': onSuccess,
+                            'onError': onError});
 };
 
 exports.createSharedRecord = function (blockId, record, onSuccess, onError) {
@@ -3104,4 +3356,63 @@ exports.deleteSharedRecord = function (blockId, record, onSuccess, onError) {
                            'onError': onError});
 };
 
-},{}]},{},[12]);
+exports.turtleMoveForward = function (blockId, distance) {
+  return Applab.executeCmd(blockId,
+                          'turtleMoveForward',
+                          {'distance': distance });
+};
+
+exports.turtleMoveBackward = function (blockId, distance) {
+  return Applab.executeCmd(blockId,
+                          'turtleMoveBackward',
+                          {'distance': distance });
+};
+
+exports.turtleMove = function (blockId, x, y) {
+  return Applab.executeCmd(blockId,
+                          'turtleMove',
+                          {'x': x,
+                           'y': y });
+};
+
+exports.turtleMoveTo = function (blockId, x, y) {
+  return Applab.executeCmd(blockId,
+                          'turtleMoveTo',
+                          {'x': x,
+                           'y': y });
+};
+
+exports.turtleTurnRight = function (blockId, degrees) {
+  return Applab.executeCmd(blockId,
+                          'turtleTurnRight',
+                          {'degrees': degrees });
+};
+
+exports.turtleTurnLeft = function (blockId, degrees) {
+  return Applab.executeCmd(blockId,
+                          'turtleTurnLeft',
+                          {'degrees': degrees });
+};
+
+exports.turtlePenUp = function (blockId) {
+  return Applab.executeCmd(blockId, 'turtlePenUp');
+};
+
+exports.turtlePenDown = function (blockId) {
+  return Applab.executeCmd(blockId, 'turtlePenDown');
+};
+
+exports.turtlePenWidth = function (blockId, width) {
+  return Applab.executeCmd(blockId,
+                          'turtlePenWidth',
+                          {'width': width });
+};
+
+exports.turtlePenColor = function (blockId, color) {
+  return Applab.executeCmd(blockId,
+                          'turtlePenColor',
+                          {'color': color });
+};
+
+
+},{}]},{},[13]);

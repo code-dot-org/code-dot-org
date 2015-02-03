@@ -243,6 +243,7 @@ pl-PL:
   dashboard_students_new_section: 'Utworzyłeś nową sekcję! Teraz dodaj swoich uczniów posługując się przyciskami <b>Dodaj ucznia</b> i <b>Dodaj wielu studentów</b> powyżej.'
   dashboard_students_placeholder_name: Imię ucznia
   dashboard_students_name: Imię/Nazwisko
+  dashboard_students_progress: Progress
   dashboard_students_age: Wiek
   dashboard_students_gender: Płeć
   dashboard_students_male: Mężczyzna
@@ -289,6 +290,10 @@ pl-PL:
   dashboard_login_picture: Obrazek/Zdjęcie
   dashboard_login_none: e-mail
   dashboard_new_password: nowe hasło
+  dashboard_progress_not_completed: nie została zakończona
+  dashboard_progress_completed_too_many_blocks: zakończona, zbyt wiele bloków
+  dashboard_progress_completed_perfect: zakończona, doskonale
+  dashboard_progress_furthest_level_attempted: próbowano najdalszy poziom
   stats_hoc_2013_heading: 'Nieprawdopodobne statystyki z ubiegłorocznej Godziny Kodowania. W ciągu zaledwie jednego tygodnia:'
   stats_hoc_2013_image_alt: Statystyki z Godziny Kodowania 2013
   dashboard_teacher: Nauczyciel

@@ -3,15 +3,17 @@ require 'os'
 require 'cdo/hip_chat'
 require 'cdo/rake_utils'
 
-def create_pegasus_db()
-  db = URI.parse CDO.pegasus_db_writer
+def create_database(uri)
+  db = URI.parse(uri)
+
   command = [
     'mysql',
     "--user=#{db.user}",
     "--host=#{db.host}",
   ]
-  command << "--execute=\"CREATE DATABASE IF NOT EXISTS #{CDO.pegasus_db_name}\""
+  command << "--execute=\"CREATE DATABASE IF NOT EXISTS #{db.path[1..-1]}\""
   command << "--password=#{db.password}" unless db.password.nil?
+
   system command.join(' ')
 end
 
@@ -111,6 +113,22 @@ namespace :build do
       end
     end
   end
+  
+  task :jupiter do
+    Dir.chdir(jupiter_dir) do
+      HipChat.log 'Stopping JUPITER service'
+      RakeUtils.stop_service 'jupiter' unless rack_env?(:development)
+
+      HipChat.log 'Migrating JUPITER database'
+      with_retries { RakeUtils.rake 'db:migrate' }
+
+      #HipChat.log 'Seeding JUPITER database'
+      #with_retries { RakeUtils.rake 'seed:migrate' }
+
+      HipChat.log 'Starting JUPITER service'
+      RakeUtils.start_service 'jupiter' unless rack_env?(:development)
+    end
+  end
 
   task :pegasus do
     Dir.chdir(pegasus_dir) do
@@ -196,9 +214,20 @@ namespace :install do
     if rack_env?(:development) && !CDO.chef_managed
       Dir.chdir(dashboard_dir) do
         RakeUtils.bundle_install
-        RakeUtils.rake 'db:create'
+        create_database CDO.dashboard_db_writer
         RakeUtils.rake 'db:migrate'
         RakeUtils.rake 'seed:all'
+      end
+    end
+  end
+
+  task :jupiter do
+    if rack_env?(:development) && !CDO.chef_managed
+      Dir.chdir(jupiter_dir) do
+        RakeUtils.bundle_install
+        create_database CDO.jupiter_database
+        RakeUtils.rake 'db:migrate'
+        #RakeUtils.rake 'seed:migrate'
       end
     end
   end
@@ -207,7 +236,7 @@ namespace :install do
     if rack_env?(:development) && !CDO.chef_managed
       Dir.chdir(pegasus_dir) do
         RakeUtils.bundle_install
-        create_pegasus_db
+        create_database CDO.pegasus_db_writer
         RakeUtils.rake 'db:migrate'
         RakeUtils.rake 'seed:migrate'
       end
@@ -218,6 +247,7 @@ namespace :install do
   #tasks << :blockly_core if CDO.build_blockly_core
   tasks << :apps if CDO.build_apps
   tasks << :dashboard if CDO.build_dashboard
+  tasks << :jupiter if CDO.build_jupiter
   tasks << :pegasus if CDO.build_pegasus
   task :all => tasks
 

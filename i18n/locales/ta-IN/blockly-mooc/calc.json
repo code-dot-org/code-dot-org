@@ -2,7 +2,8 @@
   "compute":"கணி",
   "equivalentExpression":"அதே தொடர் சரியாக பெற உங்கள் வாதங்களை மீள்ஒழுங்குபடுத்தி முயற்சிக்கவும்.",
   "extraTopBlocks":"உங்களிடம் இணைக்கப்படாத தொகுதிகள் உள்ளன. \"கணிப்புக்கு \" இந்த தொகுதிகளை  இணைக்க வேண்டும் என்று கருதுகிறிர்களா?",
+  "failedInput":"Your function does not return the right result for all values.",
   "goal":"குறிக்கோள்:",
-  "reinfFeedbackMsg":"இதோ உங்கள் கதை! அதில் தொடர், அல்லது அடுத்த புதிருக்கு நகர்!",
+  "reinfFeedbackMsg":"Here is your calculation! Continue working on it, or move on to the next puzzle!",
   "yourExpression":"உங்கள் வெளிப்பாடு:"
 }

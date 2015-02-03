@@ -48,7 +48,7 @@
         edit-code:
           desc: Uredite kodo (beta)
           MazeEC: Stopnja 1
-          Webapp: Stopnja 2
+          Applab: Stopnja 2
           ArtistEC: Stopnja 3
           StudioEC: Stopnja 4
         events:
@@ -103,6 +103,8 @@
         ArtistEC: Umetnik
         TextMatch: Poveži besede
         StudioEC: Play Lab
+        Applab: App Lab
+        NetSim: Internet Simulator
     trophy:
       name:
         Bronze: Bronasta
@@ -532,7 +534,7 @@
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell
           the word STORY
-        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        applab_ec_simple: Create your app by using the blocks in the toolbox.
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
           it in the new "penColor" block.'
         turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:
@@ -584,8 +586,8 @@
         instructions: Krog je posebna oblika. Lahko ugotoviš, s katero številko moraš
           zamenjati vprašaje, da narišeš krog?
       frozen circle function:
-        instructions: Uporabi nov blok "Ustvari krog" in ustvari 10 prekrivajočih
-          se krogov. Ne pozabite na skok naprej med krogi.
+        instructions: Uporabi nov blok "Ustvari" in ustvari 10 prekrivajočih se krogov.
+          Ne pozabite na skok naprej med krogi.
       frozen circle function in circle:
         instructions: Ustvarimo sedaj 20 prekrivajočih se krogov, tako da se med vsakima
           zasukamo za 18 stopinj.

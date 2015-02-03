@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -270,6 +270,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "projectileHiro":function(d){return "Hiro"},
 "projectileBaymax":function(d){return "Baymax"},
 "projectileRapunzel":function(d){return "Rapunzel"},
+"projectileCherry":function(d){return "cherry"},
+"projectileIce":function(d){return "ice"},
+"projectileDuck":function(d){return "duck"},
 "reinfFeedbackMsg":function(d){return "Poţi apăsa butonul \"Încearcă din nou\" pentru a reveni la povestea ta."},
 "repeatForever":function(d){return "repetă pentru totdeauna"},
 "repeatDo":function(d){return "fă"},
@@ -277,6 +280,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "saySprite":function(d){return "spune"},
 "saySpriteN":function(d){return "actorul "+appLocale.v(d,"spriteIndex")+" zii"},
 "saySpriteTooltip":function(d){return "Apare un balon cu textul asociat din partea actorului specificat."},
+"saySpriteChoices_1":function(d){return "Hi there!"},
+"saySpriteChoices_2":function(d){return "How are you?"},
+"saySpriteChoices_3":function(d){return "This is fun..."},
 "scoreText":function(d){return "Scor: "+appLocale.v(d,"playerScore")},
 "setBackground":function(d){return "seteaza fundalul"},
 "setBackgroundRandom":function(d){return "setează fundal aleatoriu"},
@@ -293,6 +299,12 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setBackgroundSpace":function(d){return "setează spaţiul ca fundal"},
 "setBackgroundTennis":function(d){return "setează terenul de tenis ca fundal"},
 "setBackgroundWinter":function(d){return "setează peisaj de iarnă ca fundal"},
+"setBackgroundLeafy":function(d){return "set leafy background"},
+"setBackgroundGrassy":function(d){return "set grassy background"},
+"setBackgroundFlower":function(d){return "set flower background"},
+"setBackgroundTile":function(d){return "set tile background"},
+"setBackgroundIcy":function(d){return "set icy background"},
+"setBackgroundSnowy":function(d){return "set snowy background"},
 "setBackgroundTooltip":function(d){return "Setează imaginea de fundal"},
 "setEnemySpeed":function(d){return "setează viteza inamicului"},
 "setPlayerSpeed":function(d){return "setează viteza jucătorului"},
@@ -384,6 +396,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "soundWinPoint2":function(d){return "câştigă punctul 2"},
 "soundWood":function(d){return "lemn"},
 "speed":function(d){return "viteză"},
+"startSetValue":function(d){return "start (rocket-height function)"},
 "stopSprite":function(d){return "opreşte"},
 "stopSpriteN":function(d){return "opreşte actorul "+appLocale.v(d,"spriteIndex")},
 "stopTooltip":function(d){return "Opreşte mişcarea unui actor."},

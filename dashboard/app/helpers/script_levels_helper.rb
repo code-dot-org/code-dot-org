@@ -96,6 +96,9 @@ module ScriptLevelsHelper
     script_data = {
       title: stage_title(script, script_level.stage_or_game),
       currentLevelIndex: script_level.stage_or_game_position - 1,
+      scriptId: script.id,
+      scriptLevelId: script_level.try(:level_id),
+      statsPath: header_stats_path,
       showStageLinks: script.twenty_hour? || script.stages.to_a.count > 1,
       levels: game_levels.map do |sl|
         completion_status, link = level_info(current_user, sl)
@@ -108,6 +111,7 @@ module ScriptLevelsHelper
         }
       end
     }
+    script_data[:linesOfCodeText] = t('nav.popup.lines', lines: current_user.total_lines) unless current_user.nil?
     script_data[:finishLink] = {text: t('nav.header.finished_hoc'), href: hoc_finish_url(script)} if script.hoc?
     if script.trophies && current_user
       progress = current_user.progress(script)

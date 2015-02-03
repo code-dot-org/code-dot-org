@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -157,6 +157,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "compute":function(d){return "beregn"},
 "equivalentExpression":function(d){return "Prøv at ændre rækkefølgen på dine argumenter for at få præcis det samme udtryk."},
 "extraTopBlocks":function(d){return "Du har blokke, som ikke er knyttet til andre. Ville du fastgøre dem  til \"beregn\" blokken?"},
+"failedInput":function(d){return "Your function does not return the right result for all values."},
 "goal":function(d){return "Mål:"},
 "reinfFeedbackMsg":function(d){return "Her er din historie! Fortsæt med at arbejde på den, eller gå videre til den næste opgave!"},
 "yourExpression":function(d){return "Dit udtryk:"}};

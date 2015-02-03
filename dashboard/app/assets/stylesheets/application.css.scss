@@ -319,8 +319,6 @@ em strong {
   color: $header_text;
   a:link {color:$header_text;}
   a:visited {color:$header_text;}
-  //a:hover {color:#FF00FF;}  /* mouse over link */
-  //a:active {color:#0000FF;}  /* selected link */
 
   #betainfo {
     font-size: 11px;
@@ -516,13 +514,6 @@ html, body {
   }
 }
 
-.header_row {
-//  min-height: 85px;
-  @media screen and (max-width: 1150px) {
-//    min-height: 75px;
-  }
-}
-
 .header_logo {
   position: absolute;
   float: left;
@@ -538,6 +529,9 @@ html, body {
     min-width: 55px;
     padding-top: 10px;
     min-width: 0px;
+  }
+  a:hover {
+    background-color: transparent;
   }
 }
 
@@ -630,19 +624,28 @@ html, body {
 
 }
 
-
-.header_user {
+.header_right {
   position: absolute;
   float: left;
   right: 25px;
-  text-align: right;
   margin-top: 9px;
   @media screen and (max-width: 1150px) {
     margin-top: 5px;
   }
+}
+
+.freeplay_links {
+  display: inline-block;
+  text-align: center;
+}
+
+.header_user {
+  display: inline-block;
+  text-align: right;
   background-color: rgb(255, 164, 0);
   border-radius: 5px;
   padding: 7px 14px;
+  margin-left: 5px;
   font-size: 14px;
   line-height: 20px;
   box-sizing: border-box;
@@ -1154,11 +1157,16 @@ a.download-video {
   background-color:#ddd;
   height:100px;
   .heading {
-    -moz-box-sizing:border-box; box-sizing:border-box; padding: 10px 0px 10px 0px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px 0px 10px 0px;
   }
   h3 {
     margin: 0;
-    color:rgb(88, 103, 113);
+    color: rgb(88, 103, 113);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .smalltext {
     font-size:13px;

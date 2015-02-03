@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -156,24 +156,24 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "circleBlockTitle":function(d){return "sirkel (radius, stil, farge)"},
 "displayBlockTitle":function(d){return "vis"},
-"ellipseBlockTitle":function(d){return "ellipse (breidd, høyde, stil, farge)"},
-"extraTopBlocks":function(d){return "Du har ledige blokker. Meinte du å knyte desse til \"Vis\"-blokka?"},
-"overlayBlockTitle":function(d){return "overlegg (topp, botn)"},
-"placeImageBlockTitle":function(d){return "plasser-bilde(x,y,bilde)"},
-"offsetBlockTitle":function(d){return "forskyving (x, y, bilde)"},
-"rectangleBlockTitle":function(d){return "rektangel (breidd, høgde, stil, farge)"},
-"reinfFeedbackMsg":function(d){return "Du kan trykke knappen \"Prøv igjen\" for å redigere teikninga di."},
+"ellipseBlockTitle":function(d){return "ellipse (bredde, høyde, stil, farge)"},
+"extraTopBlocks":function(d){return "Du har løse blokker. Mente du å feste disse til «vis» blokken?"},
+"overlayBlockTitle":function(d){return "overlegg (topp, bunn)"},
+"placeImageBlockTitle":function(d){return "plasser-bildet (x, y, bilde)"},
+"offsetBlockTitle":function(d){return "forskyvning (x, y, bilde)"},
+"rectangleBlockTitle":function(d){return "rektangel (bredde, høyde, stil, farge)"},
+"reinfFeedbackMsg":function(d){return "Du kan trykke knappen \"Forsøk igjen\" for å redigere tegningen."},
 "rotateImageBlockTitle":function(d){return "roter (grader, bilde)"},
 "scaleImageBlockTitle":function(d){return "skaler (faktor)"},
 "squareBlockTitle":function(d){return "kvadrat (størrelse, stil, farge)"},
 "starBlockTitle":function(d){return "stjerne (radius, stil, farge)"},
-"radialStarBlockTitle":function(d){return "radial-stjerne (punkter, indre, ytre, stil, farge)"},
+"radialStarBlockTitle":function(d){return "radial-stjerne (punkt, indre, ytre, stil, farge)"},
 "polygonBlockTitle":function(d){return "polygon (sides, length, style, color)"},
-"stringAppendBlockTitle":function(d){return "legg-til-tekst(første,andre)"},
-"stringLengthBlockTitle":function(d){return "tekst-lengde(tekst)"},
+"stringAppendBlockTitle":function(d){return "streng-tilføye (første, andre)"},
+"stringLengthBlockTitle":function(d){return "streng-lengde (streng)"},
 "textBlockTitle":function(d){return "tekst (streng, størrelse, farge)"},
 "triangleBlockTitle":function(d){return "trekant (størrelse, stil, farge)"},
-"underlayBlockTitle":function(d){return "underlag (botn, topp)"},
-"outline":function(d){return "ramme"},
+"underlayBlockTitle":function(d){return "underlegg (bunn, top)"},
+"outline":function(d){return "omriss"},
 "solid":function(d){return "heil"},
-"string":function(d){return "tekst"}};
+"string":function(d){return "streng"}};

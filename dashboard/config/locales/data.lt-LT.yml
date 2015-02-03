@@ -48,7 +48,7 @@
         edit-code:
           desc: Redaguoti kodą (beta)
           MazeEC: 1 Etapas
-          Webapp: 2 Etapas
+          Applab: 2 Etapas
           ArtistEC: 3 Etapas
           StudioEC: 4 Etapas
         events:
@@ -103,6 +103,8 @@
         ArtistEC: Menininkas
         TextMatch: Text Match
         StudioEC: Laboratorija
+        Applab: App Lab
+        NetSim: Internet Simulator
     trophy:
       name:
         Bronze: Bronza
@@ -310,19 +312,19 @@
           Patarimas: ką nors pakeitęs, patestuok savo programą, net jeigu jos neužbaigei.'
         turtle_3_4: Sugalvok, kaip panaudoti funkcijas „nubrėžk trikampį“ ir „nubrėžk
           kvadratą“ (bei keletą kitų blokelių), kad nupieštum namą aplink liūtą.
-        turtle_3_5: "Sukurk komandą „nupiešk namą“ ir panaudok ją, kad nupieštum namą
-          aplink dvi kates. \nSufleris: tiks blokelis „nauja komandą“, tik įrašyk
-          norimą komandos pavadinimą.\n"
+        turtle_3_5: "Sukurk komandą „namas“ ir panaudok ją, kad nupieštum namą aplink
+          dvi kates. \nSufleris: tiks blokelis „nauja komandą“, tik įrašyk norimą
+          komandos pavadinimą.\n"
         turtle_3_6: 'Naudodamas pavyzdį, komandai „nubrėžk trikampį“  leisk gauti
-          informaciją „dydis“. Tada nupiešk du skirtingo dydžio trikampius. (Sufleris:
-          kad komandai pridėtum informacijos laukus (parametrus), nuspausk ant žvaigždės)'
-        turtle_3_7: Komandai „nupiešk namą“ pridėk parametrą „ilgis“ ir nupiešk didelį
+          dydį „n“. Tada nupiešk du skirtingo dydžio trikampius. (Sufleris: kad komandai
+          pridėtum informacijos laukus (parametrus), nuspausk ant žvaigždės)'
+        turtle_3_7: Komandai „namas“ pridėk dydžio parametrą „n“ ir nupiešk didelį
           namą drambliui (jo kraštinės turi būti 150 pikselių)
-        turtle_3_8: Yra duoti visi blokai iš praeitos užduoties. Sukurk komandą „nupiešk
-          namą“. Pradėk piešti nuo kairiojo apatinio kampo ir nupiešk tris namus panaudodamas
-          šią komandą.
-        turtle_3_9: Ar sugebėsi sukurti komandą „nupiešk namą“ dar kartą? Pamėgink,
-          o po to nupiešk iš eilės tris didėjančius namus.
+        turtle_3_8: Sukurk komandą „namas“ pagal nurodytą dydį "n".  Nupiešk tris
+          skirtingo dydžio namus panaudodamas šią komandą. Pagalvok, kaip kiekvienam
+          namui nueiti į pradinę jo piešimo vietą.
+        turtle_3_9: Ar sugebėsi sukurti komandą „namas“ dar kartą? Pamėgink, o po
+          to nupiešk iš eilės tris didėjančius namus.
         turtle_3_10: Jau daug visko išmokai! Dabar gali panaudoti šiuos blokelius,
           kad nupieštum tai, ką nori. Pamėgink nupiešti žvaigždę, spiralę ar gražią
           snaigę.
@@ -555,7 +557,7 @@
           žodį "BELOW"
         maze_wordsearch_k_20: Pajudink mane į vieną pusę, paskui - kitą, kad parašyčiau
           žodį "STORY"
-        webapp_ec_simple: Sukurk savo web-progrmėlę naudodamas "createHtmlBlock".
+        applab_ec_simple: Create your app by using the blocks in the toolbox.
         turtle_ec_1_2: 'O dabar nubrėžk kvadratą. Pastaba: naudok savo mėgstamą spalvą,
           kurią gali pasirinkti naujame blokelyje „pieštuko spalva“.'
         turtle_ec_1_10: 'Šaunu, išsprendei tiek daug užduočių! O dabar gali nupiešti,
@@ -691,7 +693,7 @@
         function: Komandų kūrimas
         loop_while: „Kol“ blokelis
         loop_for: Blokelis-skaitiklis
-        parameters: Komandoms perduodami duomenys
+        parameters: Komandos su parametrais
         hoc_wrapup: „Programavimo valandos“ apibendrinimas
         Unplug1: Kas yra CS?
         Unplug2: Skaičiuojamasis mąstymas
@@ -762,7 +764,7 @@
         C4_math_artist: Programming the Artist with Math
         C4_function_edit: Editing Functions
         C4_function_create: Creating Functions
-        C4_function_parameters: Komandoms perduodami duomenys
+        C4_function_parameters: Komandos su parametrais
         C4_conditionals: Sąlyginiai sakiniai
         C4_unplugged_algorithms: Algorithms with Tangrams
         C4_unplugged_madlibs: Mad Libs

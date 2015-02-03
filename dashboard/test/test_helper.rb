@@ -27,6 +27,10 @@ class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
 
   setup do
+
+    # sponsor message calls PEGASUS_DB, stub it so we don't have to deal with this in test
+    UserHelpers.stubs(:random_donor).returns(name_s: 'Someone')
+
     set_env :test
 
     # how come this doesn't work:
@@ -158,18 +162,19 @@ class ActionController::TestCase
 
   def self.generate_admin_only_tests_for(action, params = {})
     test "should get #{action}" do
+      sign_in create(:admin)
       get action, params
       assert_response :success
     end
 
     test "should not get #{action} if not signed in" do
-      sign_out @admin
+      sign_out :user
       get action, params
       assert_redirected_to_sign_in
     end
 
     test "should not get #{action} if not admin" do
-      sign_in @not_admin
+      sign_in create(:user)
       get action, params
       assert_response :forbidden
     end

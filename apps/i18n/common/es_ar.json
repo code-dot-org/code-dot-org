@@ -88,6 +88,6 @@
   "signup": "Únete al curso de introducción",
   "hintHeader": "Aquí hay un consejo:",
   "genericFeedback": "Mira como terminaste, y trata de reparar tu programa.",
-  "toggleBlocksErrorMsg": "You need to correct an error in your program before it can be shown as blocks.",
+  "toggleBlocksErrorMsg": "Tienes que corregir un error en tu programa antes de que se pueda mostrar como bloques.",
   "defaultTwitterText": "Mira lo que hice"
 }

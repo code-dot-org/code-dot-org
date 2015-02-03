@@ -48,7 +48,7 @@
         edit-code:
           desc: Redigera Kod (beta)
           MazeEC: Steg 1
-          Webapp: Steg 2
+          Applab: Steg 2
           ArtistEC: Steg 3
           StudioEC: Steg 4
         events:
@@ -103,6 +103,8 @@
         ArtistEC: Konstnären
         TextMatch: Textmatchning
         StudioEC: Play Lab
+        Applab: App Lab
+        NetSim: Internet Simulator
     trophy:
       name:
         Bronze: Brons
@@ -559,7 +561,7 @@
           BELOW(nedanför)
         maze_wordsearch_k_20: Det här är ett test! Flytta mig en väg, sedan en annan
           för att stava ordet STORY(berättelse)
-        webapp_ec_simple: Skapa din webapp med hjälp av createHtmlBlock.
+        applab_ec_simple: Create your app by using the blocks in the toolbox.
         turtle_ec_1_2: 'Nu ska du rita en fyrkant. Obs: Använd din favoritfärg genom
           att välja det i nya "pennfärg" blocket.'
         turtle_ec_1_10: 'Du klarade det! Nu ritar du vad du vill. Några roliga idéer:

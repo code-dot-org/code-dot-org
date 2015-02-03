@@ -23,7 +23,7 @@ var locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -154,9 +154,9 @@ v:function(d,k){locale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){locale.c(d,k);return d[k] in p?p[d[k]]:(k=locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).locale = {
-"and":function(d){return "and"},
-"booleanTrue":function(d){return "true"},
-"booleanFalse":function(d){return "false"},
+"and":function(d){return "u"},
+"booleanTrue":function(d){return "veru/minnu"},
+"booleanFalse":function(d){return "falz"},
 "blocklyMessage":function(d){return "Blockly"},
 "catActions":function(d){return "Actions"},
 "catColour":function(d){return "Color"},
@@ -207,7 +207,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "play":function(d){return "play"},
 "print":function(d){return "Print"},
 "puzzleTitle":function(d){return "Puzzle "+locale.v(d,"puzzle_number")+" of "+locale.v(d,"stage_total")},
-"repeat":function(d){return "repeat"},
+"repeat":function(d){return "Irrepeti"},
 "resetProgram":function(d){return "Reset"},
 "runProgram":function(d){return "Run"},
 "runTooltip":function(d){return "Run the program defined by the blocks in the workspace."},
@@ -244,4 +244,4 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "hintHeader":function(d){return "Here's a tip:"},
 "genericFeedback":function(d){return "See how you ended up, and try to fix your program."},
 "toggleBlocksErrorMsg":function(d){return "You need to correct an error in your program before it can be shown as blocks."},
-"defaultTwitterText":function(d){return "Check out what I made"}};
+"defaultTwitterText":function(d){return "Ara x'ghamilt"}};

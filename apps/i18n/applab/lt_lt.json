@@ -19,12 +19,11 @@
   "repeatForever": "kartok visada",
   "repeatDo": " ",
   "repeatForeverTooltip": "Kartok veiksmus šiame bloke, kol vyksta programa.",
-  "shareWebappTwitter": "Šią programą sukūriau su @codeorg",
+  "shareApplabTwitter": "Šią programą sukūriau su @codeorg",
   "shareGame": "Dalintis savo programėle:",
   "stepIn": "Step in",
   "stepOver": "Step over",
   "stepOut": "Step out",
-  "turnBlack": "pajuoduok",
-  "turnBlackTooltip": "Ekranas patampa juodas.",
+  "viewData": "View Data",
   "yes": "Taip"
 }

@@ -314,10 +314,10 @@ bg:
           "Eval: Writing Contracts": 'Оценка: Писане на договори'
           "Calc: Defining Variables": 'Изчисление: Определяне на променливите'
           "Play Lab: Defining Variables (Big Game)": 'Игрална лаборатория: Дефиниране на променливи (голямата игра)'
-          "Eval: Defining Functions": 'Eval: Defining Functions'
+          "Eval: Defining Functions": 'Оценка: Дефиниране на функции'
           "Unplugged: The Design Recipe": 'Ънплъгд: Напиши рецепта'
-          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
-          "Eval: Functions": 'Eval: Functions'
+          "Play Lab: Defining Functions": 'Театрална лаборатория: Дефиниране на функции'
+          "Eval: Functions": 'Оценка: функции'
           "Play Lab: Animation (Big Game)": 'Игрална лаборатория: Анимация (голямата игра)'
           "Unplugged: Booleans": 'Ънплъгд: Booleans'
           "Eval: Boolean Operators": 'Оценка: Булеви оператори'
@@ -327,3 +327,28 @@ bg:
           "Eval: Conditionals": 'Оценка: Условия'
           "Unplugged: Collision Detection and the Distance Formula": 'Ънплъгд: Collision Detection и формула за разстояние'
           "Play Lab: Collision Detection (Big Game)": 'Игрална лаборатория: Collision Detection (голямата игра)'
+        infinity:
+          title: Театрална лаборатория
+          description_short: Създайте история или направете игра с Театрална лаборатория!
+          description: Създайте история или направете игра с Театрална лаборатория!
+          Play Lab: Театрална лаборатория
+        algebrademo:
+          description: 'Една шепа  пъзели, за демонстриране на  средата и езикът за програмиране, които се използвт в Code.org CS и в алгебрата'
+          Algebra Demo: Алгебра демо
+          Evaluation Blocks: Блокове за оценка
+          Making Pictures: Правене на снимки
+          Defining Variables: Дефиниране на променливите
+          Defining Simple Functions: Дефиниране на прости функции
+          The Design Recipe: Рецепта за дизайн
+        K5PD:
+          Introduction to PD: Въведение в PD
+        netsim:
+          title: Интернет симулатор
+          description_short: ""
+          description: ""
+          Internet Simulator: Интернет симулатор
+        Infinity:
+          title: Безкрайност Игрална лаборатория
+          description_short: Създайте история или направете игра без край в лабораторията!!
+          description: Създайте история или направете игра без край в лабораторията!
+          Infinity: Безкрайност

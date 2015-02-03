@@ -242,6 +242,7 @@ lt-LT:
   dashboard_students_new_section: 'Sukūrėte naują grupę! Dabar galite pridėt mokinius <b>po vieną (Add student)</b> arba <b>po daug (Add multiple students)</b> - žr mygtukus viršuje.'
   dashboard_students_placeholder_name: Mokinio vardas
   dashboard_students_name: Vardas
+  dashboard_students_progress: Progress
   dashboard_students_age: Amžius
   dashboard_students_gender: Lytis
   dashboard_students_male: Vyras
@@ -288,6 +289,10 @@ lt-LT:
   dashboard_login_picture: Paveikslėlis
   dashboard_login_none: El. paštas
   dashboard_new_password: naujas slaptažodis
+  dashboard_progress_not_completed: nebaigtas
+  dashboard_progress_completed_too_many_blocks: baigtas, panaudota per daug blokų
+  dashboard_progress_completed_perfect: puikiai išspręsta
+  dashboard_progress_furthest_level_attempted: išmėgintas aukščiausias lygis
   stats_hoc_2013_heading: 'Neįtikėtini praėjusių metų „Programavimo valandos“ rezultatai. Per vieną savaitę:'
   stats_hoc_2013_image_alt: Programavimo valandos statistika nuo 2013 metų
   dashboard_teacher: Mokytojas

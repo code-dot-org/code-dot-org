@@ -48,7 +48,7 @@ fr:
         edit-code:
           desc: Modifier le Code (bêta)
           MazeEC: Processus 1
-          Webapp: Processus 2
+          Applab: Processus 2
           ArtistEC: Processus 3
           StudioEC: Processus 4
         events:
@@ -99,10 +99,12 @@ fr:
         Jigsaw: Pièces de Puzzle
         MazeStep: Mode pas à pas du labyrinthe
         Wordsearch: Mots mêlés
-        Webapp: Appli en ligne
+        Webapp: App Lab
         ArtistEC: "L'Artiste"
         TextMatch: Correspondance de texte
         StudioEC: Labo
+        Applab: App Lab
+        NetSim: Internet Simulator
     trophy:
       name:
         Bronze: Bronze
@@ -242,7 +244,7 @@ fr:
         flappy_6: "Regardez si vous pouvez toujours marquer un point en changeant l'énergie que Flappy met dans ses battements d'ailes."
         flappy_7: "Ensuite, essayez de changer l'arrière-plan en attachant un autre bloc à bloc « lors du lancement »."
         flappy_8: "Vous pouvez changer l'apparence à tout moment, pas seulement au lancement du jeu. Essayez donc de choisir un arrière-plan aléatoire lorsque d'autres événements se produisent, par exemple, lors du dépassement d'un obstacle."
-        flappy_9: Pour pimenter un peu la sauce, lors du contact avec un obstacle ou le sol, au lieu de mettre fin à la partie, essayez de remettre le score à zéro.
+        flappy_9: To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0.
         flappy_11: "Créez votre propre jeu Flappy Bird. Vous pouvez changer tous les éléments visuels et tous les paramètres, même la pesanteur. Une fois que vous avez terminé, cliquez sur Terminer pour permettre à vos amis d'essayer votre jeu sur leur téléphone."
         flappy_k1_1: Jouer à Flappy Bird
         flappy_k1_2: "Attaches un bloc au bloc « lors d'un clic », puis cliques sur « Lancer ». Cliques sur l'écran ou tapotes-le pour déplacer Flappy vers la cible."
@@ -326,7 +328,7 @@ fr:
         maze_wordsearch_k_15: Déplace-moi dans une direction, puis une autre, pour épeler le terme AU-DESSUS
         maze_wordsearch_k_16: Déplace-moi dans une direction, puis une autre, pour épeler le terme EN DESSOUS
         maze_wordsearch_k_20: "C'est un test ! Déplace-moi dans une direction, puis une autre, pour épeler le mot HISTOIRE"
-        webapp_ec_simple: Créer votre appli en ligne grâce à createHtmlBlock.
+        applab_ec_simple: Create your app by using the blocks in the toolbox.
         turtle_ec_1_2: 'Maintenant, dessinez un carré. NOTE: utilisez votre couleur préferrée en la choisissant dans le nouveau block "penColor".'
         turtle_ec_1_10: 'Bien joué ! Maintenant, dessinez ce que vous voulez. Quelques idées plaisantes: un bonhomme allumette, flocon de neige ou une spirale. Essayez également le nouveau "penWidth" block. Amusez-vous bien !'
         studio_ec_sandbox: Crée ton propre jeu. Quand tu as fini, clic sur Terminer pour laisser tes amis essayer ton jeu sur leur téléphone.
@@ -444,7 +446,7 @@ fr:
         C1_maze_loops: Labyrinthe et boucles
         C1_playlab_storytelling: 'Jouer au Labo - Créer une Histoire'
         C1_planting_seed: Planter une Graine
-        C1_building_foundation: Building a Foundation
+        C1_building_foundation: Créer une Fondation
         C1_going_places_safely: Se déplacer en toute sécurité
         C2_maze_intro: Introduction au Dédale
         C2_artist_intro: "Introduction à l'Artiste"

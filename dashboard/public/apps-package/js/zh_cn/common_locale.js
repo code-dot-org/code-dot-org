@@ -23,7 +23,7 @@ var locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -243,5 +243,5 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "signup":function(d){return "注册账号后参加简介课程"},
 "hintHeader":function(d){return "这里有一个提示："},
 "genericFeedback":function(d){return "看你的程序时如何结束的，并尝试修复你的程序"},
-"toggleBlocksErrorMsg":function(d){return "You need to correct an error in your program before it can be shown as blocks."},
+"toggleBlocksErrorMsg":function(d){return "在作为一个程序块之前，您需要更正程序中的错误。"},
 "defaultTwitterText":function(d){return "看看我做了什么"}};

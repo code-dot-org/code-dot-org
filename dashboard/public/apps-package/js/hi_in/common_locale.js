@@ -23,7 +23,7 @@ var locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -175,7 +175,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "directionSouthLetter":function(d){return "S"},
 "directionEastLetter":function(d){return "E"},
 "directionWestLetter":function(d){return "W"},
-"end":function(d){return "end"},
+"end":function(d){return "अंत"},
 "emptyBlocksErrorMsg":function(d){return "\"दोहराएँ\" या \"यदि\" ब्लॉक को काम करने के लिए अपने अंदर अन्य ब्लॉक्स की ज़रूरत है । ध्यान दें कि भीतर के ब्लॉक बाहरी ब्लॉक में ठीक बैठें।"},
 "emptyFunctionBlocksErrorMsg":function(d){return "The function block needs to have other blocks inside it to work."},
 "errorEmptyFunctionBlockModal":function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."},
@@ -214,7 +214,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "score":function(d){return "score"},
 "showCodeHeader":function(d){return "Show Code"},
 "showBlocksHeader":function(d){return "Show Blocks"},
-"showGeneratedCode":function(d){return "Show code"},
+"showGeneratedCode":function(d){return "कोड देखें"},
 "stringEquals":function(d){return "string=?"},
 "subtitle":function(d){return "a visual programming environment"},
 "textVariable":function(d){return "text"},
@@ -232,16 +232,16 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "shareFailure":function(d){return "Sorry, we can't share this program."},
 "workspaceHeader":function(d){return "Assemble your blocks here: "},
 "workspaceHeaderJavaScript":function(d){return "Type your JavaScript code here"},
-"infinity":function(d){return "Infinity"},
-"rotateText":function(d){return "Rotate your device."},
-"orientationLock":function(d){return "Turn off orientation lock in device settings."},
-"wantToLearn":function(d){return "Want to learn to code?"},
-"watchVideo":function(d){return "Watch the Video"},
-"when":function(d){return "when"},
-"whenRun":function(d){return "when run"},
-"tryHOC":function(d){return "Try the Hour of Code"},
-"signup":function(d){return "Sign up for the intro course"},
-"hintHeader":function(d){return "Here's a tip:"},
-"genericFeedback":function(d){return "See how you ended up, and try to fix your program."},
-"toggleBlocksErrorMsg":function(d){return "You need to correct an error in your program before it can be shown as blocks."},
+"infinity":function(d){return "अनंत"},
+"rotateText":function(d){return "अपना डिवाइस घुमाएँ।"},
+"orientationLock":function(d){return "डिवाइस सेटिंग्स में ओरिएंटेशन ऑफ कर दें।"},
+"wantToLearn":function(d){return "क्या आप कोड लिखना जानना चाहते हैं।"},
+"watchVideo":function(d){return "ये वीडियो देखें"},
+"when":function(d){return "कब"},
+"whenRun":function(d){return "जब चलाएँ"},
+"tryHOC":function(d){return "एक घंटे कोडिंग की कोशिश करें "},
+"signup":function(d){return "परिचय course के लिए sign up करें"},
+"hintHeader":function(d){return "यहाँ एक टिप है:"},
+"genericFeedback":function(d){return "देखिये की आपने ये समाप्त कैसे किया , और अपना प्रोग्राम फिक्स करने की कोशिश करें।"},
+"toggleBlocksErrorMsg":function(d){return "इस प्रोग्राम को ब्लॉक्स में दिखाने से पहले आपको अपने प्रोग्राम में एक गलती सुधारनी पड़ेगी। "},
 "defaultTwitterText":function(d){return "Check out what I made"}};

@@ -1,5 +1,5 @@
 {
-  "ACTUAL":"tegelik",
+  "ACTUAL":"call",
   "ADD":"Lisa",
   "ADD_COMMENT":"Lisa kommentaar",
   "ADD_PARAMETER":"Lisa parameeter",
@@ -73,7 +73,7 @@
   "EXAMPLE_DESCRIPTION":"Määrab näite koos eeldatava ja tegeliku käitumisega",
   "EXPAND_ALL":"Laienda plokid",
   "EXPAND_BLOCK":"Laienda plokk",
-  "EXPECTED":"oodatud",
+  "EXPECTED":"result",
   "EXTERNAL_INPUTS":"Välised sisendid",
   "FUNCTION_CREATE":"Koosta funktsioon",
   "FUNCTION_EDIT":"muuda",

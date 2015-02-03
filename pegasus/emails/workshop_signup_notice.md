@@ -7,8 +7,10 @@ end
 
   workshop_row = DB[:forms].first(id:form.parent_id)
   workshop = JSON.parse(workshop_row[:data]).merge(JSON.parse(workshop_row[:processed_data]))
+
+  affiliate = DASHBOARD_DB[:users].where(id: workshop_row[:user_id]).first
 %>
-to: '<%= format_email_address(workshop['email_s'], workshop['name_s']) %>'
+to: '<%= format_email_address(affiliate[:email], affiliate[:name]) %>'
 from: "Code.org <info@code.org>"
 subject: "[Code.org] Workshop registration - <%= workshop['dates'].map{|i| i['date_s']}.join(', ') %>"
 litmus_tracking_id: "ioqy9lh1"

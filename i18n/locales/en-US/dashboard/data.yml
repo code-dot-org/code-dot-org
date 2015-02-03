@@ -48,7 +48,7 @@ en:
         edit-code:
           desc: crwdns5346:0crwdne5346:0
           MazeEC: crwdns5347:0crwdne5347:0
-          Webapp: crwdns20746:0crwdne20746:0
+          Applab: crwdns27899:0crwdne27899:0
           ArtistEC: crwdns21451:0crwdne21451:0
           StudioEC: crwdns23432:0crwdne23432:0
         events:
@@ -99,10 +99,12 @@ en:
         Jigsaw: crwdns4914:0crwdne4914:0
         MazeStep: crwdns5104:0crwdne5104:0
         Wordsearch: crwdns5361:0crwdne5361:0
-        Webapp: crwdns20747:0crwdne20747:0
+        Webapp: crwdns27900:0crwdne27900:0
         ArtistEC: crwdns21452:0crwdne21452:0
         TextMatch: crwdns22211:0crwdne22211:0
         StudioEC: crwdns23433:0crwdne23433:0
+        Applab: crwdns27901:0crwdne27901:0
+        NetSim: crwdns28006:0crwdne28006:0
     trophy:
       name:
         Bronze: crwdns2640:0crwdne2640:0
@@ -242,7 +244,7 @@ en:
         flappy_6: crwdns4656:0crwdne4656:0
         flappy_7: crwdns7345:0crwdne7345:0
         flappy_8: crwdns4847:0crwdne4847:0
-        flappy_9: crwdns4848:0crwdne4848:0
+        flappy_9: crwdns28007:0crwdne28007:0
         flappy_11: crwdns8504:0crwdne8504:0
         flappy_k1_1: crwdns5363:0crwdne5363:0
         flappy_k1_2: crwdns5364:0crwdne5364:0
@@ -322,7 +324,7 @@ en:
         maze_wordsearch_k_15: crwdns5993:0crwdne5993:0
         maze_wordsearch_k_16: crwdns5994:0crwdne5994:0
         maze_wordsearch_k_20: crwdns5998:0crwdne5998:0
-        webapp_ec_simple: crwdns21453:0crwdne21453:0
+        applab_ec_simple: crwdns27902:0crwdne27902:0
         turtle_ec_1_2: crwdns23293:0crwdne23293:0
         turtle_ec_1_10: crwdns22212:0crwdne22212:0
         studio_ec_sandbox: crwdns23437:0crwdne23437:0

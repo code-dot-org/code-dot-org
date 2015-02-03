@@ -48,7 +48,7 @@ az:
         edit-code:
           desc: Edit Code (beta)
           MazeEC: Mərhələ 1
-          Webapp: Mərhələ 2
+          Applab: Mərhələ 2
           ArtistEC: Mərhələ 3
           StudioEC: Mərhələ 4
         events:
@@ -99,10 +99,12 @@ az:
         Jigsaw: Jigsaw
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
-        Webapp: Webapp
+        Webapp: App Lab
         ArtistEC: Rəssam
         TextMatch: Text Match
         StudioEC: Oyun labı
+        Applab: App Lab
+        NetSim: Internet Simulator
     trophy:
       name:
         Bronze: Bürünc
@@ -247,7 +249,7 @@ az:
         flappy_6: See if you can still score a point after making Flappy flap either a smaller or larger amount.
         flappy_7: 'Next, try changing the scene by attaching another block to the "when run" block.'
         flappy_8: You can set visuals anytime, not just when the game starts. Try setting a RANDOM scene when other events happen, for example, when passing an obstacle.
-        flappy_9: To mix things up, when hitting an obstacle or the ground, instead of ending the game try setting the score back to 0.
+        flappy_9: To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0.
         flappy_11: "Create your own Flappy game. You can change all the visuals and all the rules, even the gravity. When you're done, click Finish to let friends try your game on their phones."
         flappy_k1_1: Play Flappy
         flappy_k1_2: 'Attach a block to the "when click" block, then press "Run". Click or tap the screen to move Flappy to the target.'
@@ -330,7 +332,7 @@ az:
         maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell the word STORY
-        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        applab_ec_simple: Create your app by using the blocks in the toolbox.
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColor" block.'
         turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new "penWidth" block. Have fun!'
         studio_ec_sandbox: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
@@ -426,7 +428,7 @@ az:
         loop_for: Sayğac bloku
         parameters: Parametrli funksiyalar
         hoc_wrapup: Kod Saatının yekunu
-        Unplug1: What is CS?
+        Unplug1: İnformatika nədir?
         Unplug2: Hesablama təfəkkürü
         Unplug3: Millimetrlik kağızda proqramlaşdırma
         Unplug4: Alqoritmlər
@@ -502,11 +504,11 @@ az:
         C4_unplugged_variables: Variables in Envelopes
         C4_unplugged_forloops: For Loops
         C4_unplugged_parameters: Songwriting with Parameters
-        C4_unplugged_binary: Binary
-        frozen_intro: Hour of Code Intro
-        frozen_loops: Introduction to Loops
-        frozen_functions: Introduction to Functions
-        playlab_intro: Introduction to Play Lab
+        C4_unplugged_binary: İkilik
+        frozen_intro: Kod Saatına giriş
+        frozen_loops: Dövrlərə giriş
+        frozen_functions: Funksiyalara giriş
+        playlab_intro: Oyun Labına giriş
         playlab_events: Play Lab Events
         playlab_repeat_forever: Play Lab Repeat Forever
     callout:

@@ -3,7 +3,7 @@ it-IT:
   select_language: Seleziona per favore la tua lingua
   computer_science: Informatica
   computer_science_edweek: "Settimana di Educazione all'Informatica"
-  csedweek_dates: December 8-14, 2014
+  csedweek_dates: 8-14 dicembre 2014
   csedweek_banner_hoc: |-
     L'<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Ora del Codice</a> è in arrivo. Insegnanti ed educatori, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">programmate la vostra Ora del Codice</a>
   csedweek_banner_teachers: |-
@@ -245,6 +245,7 @@ it-IT:
   dashboard_students_new_section: 'Hai creato una nuova classe! Ora aggiungi gli studenti utilizzando i pulsanti <b>Aggiungi uno studente</b> e <b>Aggiungi più studenti</b>qui sopra.'
   dashboard_students_placeholder_name: Nome dello studente
   dashboard_students_name: Nome
+  dashboard_students_progress: Avanzamento
   dashboard_students_age: Età
   dashboard_students_gender: Sesso
   dashboard_students_male: Maschile
@@ -291,6 +292,10 @@ it-IT:
   dashboard_login_picture: Immagine
   dashboard_login_none: Indirizzo di posta elettronica
   dashboard_new_password: nuova password
+  dashboard_progress_not_completed: non completato
+  dashboard_progress_completed_too_many_blocks: completato, ma usando troppi blocchi
+  dashboard_progress_completed_perfect: completato in modo perfetto
+  dashboard_progress_furthest_level_attempted: livello più avanzato che è stato provato
   stats_hoc_2013_heading: "incredibili statistiche dell'Ora del Codice dello scorso anno. In una settimana soltanto:"
   stats_hoc_2013_image_alt: "Statistiche dell'Ora del Codice per il 2013"
   dashboard_teacher: Insegnante
@@ -328,7 +333,7 @@ it-IT:
   carousel_heading_robots: Impara a programmare giocando con un robot
   carousel_heading_ide: Piattaforme didattiche popolari tra gli insegnanti
   educator_notes: Note per gli insegnanti
-  how_to_teach_hoc: How to Teach an Hour of Code
+  how_to_teach_hoc: Come insegnare un ora di codice
   more_resources_educators: Ulteriori risorse per insegnanti ed educatori in generale
   participants: partecipanti
   teachers_notes: Note per gli insegnanti

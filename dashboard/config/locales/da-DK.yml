@@ -1,4 +1,7 @@
 "da":
+  errors:
+    messages:
+      not_saved: 'Please correct the following errors:'
   activerecord:
     errors:
       messages:
@@ -347,11 +350,11 @@
     new_password_hint: (Efterlad blank hvis du ikke ønsker at ændre det)
     current_password_hint: (vi har brug for din nuværende adgangskode til at bekræfte
       dine ændringer)
-    delete: Delete your account
-    delete_text: Clicking the button below will delete your account.
-    delete_text_teacher_note: 'Please note: deleting your account will not delete
-      your students'' accounts.'
-    delete_confirm: Are you sure you want to delete your account?
+    delete: Slet din konto
+    delete_text: Klikkes på knappen nedenfor, slettes din konto.
+    delete_text_teacher_note: 'Bemærk venligst: Sletning af din konto vil ikke slette
+      dine studerendes konti.'
+    delete_confirm: Sikker på, at du vil slette din konto?
   user_level:
     completed: Fuldført
     tried: Forsøgt

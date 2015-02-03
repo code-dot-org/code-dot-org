@@ -2,7 +2,8 @@
   "compute":"izračunaj",
   "equivalentExpression":"Pokušaj presložiti svoje argumente da dobiješ posve jednak izraz.",
   "extraTopBlocks":"Postoje nespojeni blokovi. Želiš li da budu spojeni u blok \"izračunati\"?",
+  "failedInput":"Your function does not return the right result for all values.",
   "goal":"Cilj:",
-  "reinfFeedbackMsg":"Evo i tvoje priče! Nastavi raditi na njoj ili započni slijedeći zadatak!",
+  "reinfFeedbackMsg":"Here is your calculation! Continue working on it, or move on to the next puzzle!",
   "yourExpression":"Tvoj izraz:"
 }
