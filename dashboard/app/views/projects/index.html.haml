@@ -1,3 +1,5 @@
+- @page_title = "Projects"
+
 -if rack_env == :development
   %script{src: "/shared/js/angular/angular.js"}
   %script{src: "/shared/js/angular-route/angular-route.js"}
@@ -38,8 +40,7 @@
         //  'save':   {method: 'POST'},
         //  'query':  {method: 'GET', isArray:true},
         //  'remove': {method: 'DELETE'},
-        //  'delete': {method: 'DELETE'}
-        update: {method: 'POST', url: 'v2/apps/:id/update'},
+        //  'delete': {method: 'DELETE'} // don't use this because it doesn't work in IE9
       });
 
       Project.prototype.url = function() {
