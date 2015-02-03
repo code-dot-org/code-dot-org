@@ -218,7 +218,8 @@ NetSimLobby.prototype.refreshLobby_ = function () {
     // Just show the status line and the disconnect button
     $(this.lobbyClosedDiv_).show();
     $(this.lobbyOpenDiv_).hide();
-    $(this.connectionStatusSpan_).html(this.connection_.getReadableStatus());
+    $(this.connectionStatusSpan_).html(this.connection_.status_ + ' ' +
+        this.connection_.getStatusDetail());
 
   } else {
     // Show the lobby and connection selector

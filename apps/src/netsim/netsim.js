@@ -35,7 +35,6 @@
 /* global -Blockly */
 'use strict';
 
-var dom = require('../dom');
 var page = require('./page.html');
 var NetSimConnection = require('./NetSimConnection');
 var NetSimLogger = require('./NetSimLogger');

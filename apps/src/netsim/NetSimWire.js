@@ -41,12 +41,39 @@
 var netsimStorage = require('./netsimStorage');
 
 var NetSimWire = function () {
+  /**
+   * Instance this wire lives within, used to generate tablenames
+   * @type {string}
+   * @private
+   */
+  this.instanceID_ = undefined;
+
+  /**
+   * This wire's row ID within the _wire table
+   * @type {number}
+   */
   this.wireID = undefined;
+
+  /**
+   * Connected node row IDs within the _lobby table
+   * @type {number}
+   */
   this.localID = undefined;
   this.remoteID = undefined;
-  this.wireMode = 'duplex'; // Or simplex?
 
-  this.instanceID_ = undefined;
+  /**
+   * Assigned local addresses for the ends of this wire.
+   * When connected to a router, remoteAddress is always 1.
+   * @type {number}
+   */
+  this.localAddress = undefined;
+  this.remoteAddress = undefined;
+
+  /**
+   * Not used yet.
+   * @type {string}
+   */
+  this.wireMode = 'duplex'; // Or simplex?
 };
 module.exports = NetSimWire;
 
@@ -97,6 +124,8 @@ NetSimWire.prototype.buildRow_ = function () {
     lastPing: Date.now(),
     localID: this.localID,
     remoteID: this.remoteID,
+    localAddress: this.localAddress,
+    remoteAddress: this.remoteAddress,
     wireMode: this.wireMode
   };
 };
