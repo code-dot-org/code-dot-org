@@ -9,11 +9,10 @@ def find_instruction(f)
 			# then trim to only get the instruction string
 			line.strip
 			if line[-2,1] == ","
-				line = line[0...-2]
+				line = line[21...-3]
 			else
-				line = line[0...-1]
+				line = line[21...-2]
 			end
-			line = line[21...-1]
 			return line
 		end
 	end
@@ -21,9 +20,9 @@ def find_instruction(f)
 end
 
 def copy_instructions_to_yml(instructions)		
-  File.open("../config/locales/instructions.en.yml", "w+") do |f|     
-		f.write(({ "en" => instructions }).to_yaml)
-		File.write(f, File.read(f).gsub(/---\n/, ""))
+  File.open("../config/locales/instructions.en.yml", "w+") do |f|
+		f.write(({ "en" => { "data" => { "instructions" => instructions }}}).to_yaml)
+		File.write(f, File.read(f))
 	end
 end
 
