@@ -47,6 +47,18 @@ var NetSimLogger = require('./NetSimLogger');
 var LogLevel = NetSimLogger.LogLevel;
 
 /**
+ * Helper because we have so many callback arguments in this class.
+ * @param funcArg
+ * @returns {*}
+ */
+var defaultToEmptyFunction = function (funcArg) {
+  if (funcArg !== undefined) {
+    return funcArg;
+  }
+  return function () {};
+};
+
+/**
  * @param {string} instanceID
  * @param {?number} routerID - Lobby row ID for this router.  If null, use
  *        connectToLobby() to add this router to the lobby and get an ID.
@@ -103,10 +115,8 @@ NetSimRouter.RouterStatus = {
 };
 var RouterStatus = NetSimRouter.RouterStatus;
 
-NetSimRouter.create = function (instanceID, completionCallback) {
-  if (!completionCallback) {
-    completionCallback = function () {};
-  }
+NetSimRouter.create = function (instanceID, onComplete) {
+  onComplete = defaultToEmptyFunction(onComplete);
 
   var router = new NetSimRouter(instanceID);
   router.getLobbyTable().insert(router.buildLobbyRow_(), function (data) {
@@ -115,22 +125,20 @@ NetSimRouter.create = function (instanceID, completionCallback) {
       router.status_ = RouterStatus.READY;
       router.update(function (success) {
         if (success) {
-          completionCallback(router);
+          onComplete(router);
         } else {
           router.destroy();
-          completionCallback(null);
+          onComplete(null);
         }
       });
     } else {
-      completionCallback(null);
+      onComplete(null);
     }
   });
 };
 
-NetSimRouter.prototype.update = function (completionCallback) {
-  if (!completionCallback) {
-    completionCallback = function () {};
-  }
+NetSimRouter.prototype.update = function (onComplete) {
+  onComplete = defaultToEmptyFunction(onComplete);
 
   var self = this;
   this.countConnections(function (count) {
@@ -140,21 +148,19 @@ NetSimRouter.prototype.update = function (completionCallback) {
 
     self.getLobbyTable().update(self.routerID, self.buildLobbyRow_(),
         function (success) {
-          completionCallback(success);
+          onComplete(success);
         }
     );
   });
 };
 
-NetSimRouter.prototype.destroy = function (completionCallback) {
-  if (!completionCallback) {
-    completionCallback = function () {};
-  }
+NetSimRouter.prototype.destroy = function (onComplete) {
+  onComplete = defaultToEmptyFunction(onComplete);
 
   // TODO: Any other cleanup here?
 
   this.getLobbyTable().delete(this.routerID, function (success) {
-    completionCallback(success);
+    onComplete(success);
   });
 };
 
@@ -187,20 +193,73 @@ NetSimRouter.prototype.getDisplayName = function () {
   return "Router " + this.routerID;
 };
 
-NetSimRouter.prototype.countConnections = function (completeCallback) {
+NetSimRouter.prototype.getConnections = function (onComplete) {
+  onComplete = defaultToEmptyFunction(onComplete);
+
   var routerID = this.routerID;
   this.getWireTable().all(function (rows) {
     if (rows === null) {
-      completeCallback(0);
+      onComplete([]);
       return;
     }
 
-    // Router is always the remote end of a wire
     var myWires = rows.filter(function (row) {
       // TODO: Check for wire validity/timeout here?
       return row.remoteID === routerID;
     });
 
-    completeCallback(myWires.length);
+    onComplete(myWires);
+  });
+};
+
+NetSimRouter.prototype.countConnections = function (onComplete) {
+  onComplete = defaultToEmptyFunction(onComplete);
+
+  this.getConnections(function (wires) {
+    onComplete(wires.length);
+  });
+};
+
+/**
+ * @param [Array] haystack
+ * @param {*} needle
+ * @returns {boolean} TRUE if needle found in haystack
+ */
+var contains = function (haystack, needle) {
+  return haystack.some(function (element) {
+    return element === needle;
+  });
+};
+
+/**
+ * Cue router to check existing wires and find an open address for the
+ * given one.
+ * @param {!NetSimWire} wireNeedingAddress
+ * @param {function} onComplete
+ */
+NetSimRouter.prototype.assignAddressesToWire = function (wireNeedingAddress,
+    onComplete) {
+  onComplete = defaultToEmptyFunction(onComplete);
+
+  this.getConnections(function (wires) {
+    var addressList = wires.filter(function (wire) {
+      return wire.localAddress !== undefined;
+    }).map(function (wire) {
+      return wire.localAddress;
+    });
+
+    // Find the lowest unused integer address starting at 2
+    // Non-optimal, but should be okay since our address list should not exceed 10.
+    var newAddress = 2;
+    while (contains(addressList, newAddress)) {
+      newAddress++;
+    }
+
+    wireNeedingAddress.localAddress = newAddress;
+    wireNeedingAddress.remoteAddress = 1; // Always 1 for routers
+    wireNeedingAddress.update(onComplete);
+    // TODO (bbuchanan): There is a possible race condition here, where we would
+    // TODO              get the same address assigned to two clients.
+    // TODO              Recover?
   });
 };

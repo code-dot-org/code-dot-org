@@ -102,12 +102,6 @@ var NetSimConnection = function (displayName, logger /*=new NetSimLogger(NONE)*/
   this.status_ = NetSimConnection.ConnectionStatus.OFFLINE;
 
   /**
-   * @type {string}
-   * @private
-   */
-  this.statusDetail_ = '';
-
-  /**
    * Allows others to subscribe to connection status changes.
    * args: none
    * Notifies on:
@@ -185,7 +179,7 @@ NetSimConnection.prototype.buildLobbyRow_ = function () {
     name: this.displayName_,
     type: LobbyRowType.USER,
     status: this.status_,
-    statusDetail: this.statusDetail_
+    statusDetail: this.getStatusDetail()
   };
 };
 
@@ -300,8 +294,6 @@ NetSimConnection.prototype.setConnectionStatus_ = function (newStatus) {
       this.nextKeepAliveTime_ = 0;
       this.nextCleanUpTime_ = 0;
       this.logger_.info("Connected to node.");
-      this.statusDetail_ = " to router " + this.router_.routerID +
-          " on wire " + this.wire_.wireID;
       break;
 
     case ConnectionStatus.IN_LOBBY:
@@ -309,7 +301,6 @@ NetSimConnection.prototype.setConnectionStatus_ = function (newStatus) {
       this.nextCleanUpTime_ = 0;
       this.logger_.info("Connected to instance, assigned ID " +
           this.myLobbyRowID_, LogLevel.INFO);
-      this.statusDetail_ = "";
       break;
 
     case ConnectionStatus.OFFLINE:
@@ -317,15 +308,19 @@ NetSimConnection.prototype.setConnectionStatus_ = function (newStatus) {
       this.nextKeepAliveTime_ = Infinity;
       this.nextCleanUpTime_ = Infinity;
       this.logger_.info("Disconnected from instance", LogLevel.INFO);
-      this.statusDetail_ = "";
       break;
   }
   this.statusChanges.notifyObservers();
 };
 
-NetSimConnection.prototype.getReadableStatus = function () {
-  return this.status_ + ' to router ' + this.router_.routerID +
-      ' on wire ' + this.wire_.wireID;
+NetSimConnection.prototype.getStatusDetail = function () {
+  if (this.status_ === ConnectionStatus.CONNECTED) {
+    return ' (Address ' + this.wire_.localAddress + ') ' +
+        ' to router ' + this.router_.routerID +
+        ' (Address ' + this.wire_.remoteAddress + ')' +
+        ' on wire ' + this.wire_.wireID;
+  }
+  return '';
 };
 
 /**
@@ -449,7 +444,7 @@ NetSimConnection.prototype.cleanLobby_ = function () {
         rows.forEach(function (row) {
           if ((row.lastPing === undefined) ||
               (now - row.lastPing >= CONNECTION_TIMEOUT_WIRE_MS)) {
-            wireTable.delete(row.id, function (success) {
+            wireTable.delete(row.id, function () {
               self.logger_.info("Cleaned up wire " + row.id);
             });
           }
@@ -497,6 +492,8 @@ NetSimConnection.prototype.connectToRouter = function (routerID) {
       self.wire_ = wire;
       self.router_.countConnections(function (count) {
         if (count <= self.router_.MAX_CLIENT_CONNECTIONS) {
+          self.router_.assignAddressesToWire(self.wire_,
+              self.statusChanges.notifyObservers.bind(self.statusChanges));
           self.setConnectionStatus_(ConnectionStatus.CONNECTED);
         } else {
           // Oops!  We put the router over capacity, we should disconnect.
