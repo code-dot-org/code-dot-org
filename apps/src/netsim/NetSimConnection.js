@@ -34,6 +34,8 @@
 
 var netsimStorage = require('./netsimStorage');
 var NetSimLogger = require('./NetSimLogger');
+var NetSimRouter = require('./NetSimRouter');
+var NetSimWire = require('./NetSimWire');
 var LogLevel = NetSimLogger.LogLevel;
 var ObservableEvent = require('./ObservableEvent');
 
@@ -78,11 +80,11 @@ var NetSimConnection = function (displayName, logger /*=new NetSimLogger(NONE)*/
   }
 
   /**
-   * Access object for instance lobby
-   * @type {netsimStorage.SharedStorageTable}
+   * Connected instance.  Determines table names.
+   * @type {string}
    * @private
    */
-  this.lobbyTable_ = null;
+  this.instanceID_ = undefined;
 
   /**
    * This connection's unique Row ID within the lobby table.
@@ -92,10 +94,16 @@ var NetSimConnection = function (displayName, logger /*=new NetSimLogger(NONE)*/
   this.myLobbyRowID_ = undefined;
 
   /**
+   * @type {NetSimConnection.ConnectionStatus}
+   * @private
+   */
+  this.status_ = NetSimConnection.ConnectionStatus.OFFLINE;
+
+  /**
    * @type {string}
    * @private
    */
-  this.status_ = NetSimConnection.ClientStatus.OFFLINE;
+  this.statusDetail_ = '';
 
   /**
    * Allows others to subscribe to connection status changes.
@@ -114,33 +122,25 @@ var NetSimConnection = function (displayName, logger /*=new NetSimLogger(NONE)*/
    */
   this.nextKeepAliveTime_ = Infinity;
 
+  this.wire_ = null;
+  this.router_ = null;
+
   // Bind to onBeforeUnload event to attempt graceful disconnect
   window.addEventListener('beforeunload', this.onBeforeUnload_.bind(this));
 };
 module.exports = NetSimConnection;
 
 /**
- * Instance Connection Status enum
- * @readonly
- * @enum {number}
- */
-var ConnectionStatus = {
-  DISCONNECTED: 0,
-  CONNECTED: 1
-};
-NetSimConnection.ConnectionStatus = ConnectionStatus;
-
-/**
  * Client Connection Status enum
  * @readonly
  * @enum
  */
-var ClientStatus = {
+var ConnectionStatus = {
   OFFLINE: 'Offline',
   IN_LOBBY: 'In Lobby',
   CONNECTED: 'Connected'
 };
-NetSimConnection.ClientStatus = ClientStatus;
+NetSimConnection.ConnectionStatus = ConnectionStatus;
 
 /**
  * Lobby row-type enum
@@ -181,7 +181,8 @@ NetSimConnection.prototype.buildLobbyRow_ = function () {
     lastPing: Date.now(),
     name: this.displayName_,
     type: LobbyRowType.USER,
-    status: this.status_
+    status: this.status_,
+    statusDetail: this.statusDetail_
   };
 };
 
@@ -197,12 +198,10 @@ NetSimConnection.prototype.connectToInstance = function (instanceID) {
   }
 
   // Create and cache a lobby table connection
-  var tableName = instanceID + '_lobby';
-  this.lobbyTable_ = new netsimStorage.SharedStorageTable(
-     netsimStorage.APP_PUBLIC_KEY, tableName);
+  this.instanceID_ = instanceID;
 
   // Connect to the lobby table we just set
-  self.status_ = ClientStatus.IN_LOBBY;
+  self.status_ = ConnectionStatus.IN_LOBBY;
   this.connect_();
 };
 
@@ -211,7 +210,8 @@ NetSimConnection.prototype.connectToInstance = function (instanceID) {
  * @returns {netsimStorage.SharedStorageTable}
  */
 NetSimConnection.prototype.getLobbyTable = function () {
-  return this.lobbyTable_;
+  return new netsimStorage.SharedStorageTable(netsimStorage.APP_PUBLIC_KEY,
+      this.instanceID_ + '_lobby');
 };
 
 /**
@@ -223,11 +223,15 @@ NetSimConnection.prototype.disconnectFromInstance = function () {
     return;
   }
 
+  if (this.isConnectedToRouter()) {
+    this.disconnectFromRouter();
+  }
+
   // TODO (bbuchanan) : Check for other resources we need to clean up
   //                    before we disconnect from the instance.
 
   this.disconnectByRowID_(this.myLobbyRowID_);
-  this.setConnectionStatus_(ConnectionStatus.DISCONNECTED);
+  this.setConnectionStatus_(ConnectionStatus.OFFLINE);
 };
 
 /**
@@ -237,9 +241,10 @@ NetSimConnection.prototype.disconnectFromInstance = function () {
  */
 NetSimConnection.prototype.connect_ = function () {
   var self = this;
-  this.lobbyTable_.insert(this.buildLobbyRow_(), function (returnedData) {
+  this.getLobbyTable().insert(this.buildLobbyRow_(), function (returnedData) {
     if (returnedData) {
-      self.setConnectionStatus_(ConnectionStatus.CONNECTED, returnedData.id);
+      self.myLobbyRowID_ = returnedData.id;
+      self.setConnectionStatus_(ConnectionStatus.IN_LOBBY);
     } else {
       // TODO (bbuchanan) : Connect retry?
       self.logger_.log("Failed to connect to instance", LogLevel.ERROR);
@@ -260,7 +265,7 @@ NetSimConnection.prototype.disconnectByRowID_ = function (lobbyRowID) {
   }
 
   var self = this;
-  this.lobbyTable_.delete(lobbyRowID, function (succeeded) {
+  this.getLobbyTable().delete(lobbyRowID, function (succeeded) {
     if (succeeded) {
       self.logger_.log("Disconnected client " + lobbyRowID + " from instance.",
           LogLevel.INFO);
@@ -282,26 +287,38 @@ NetSimConnection.prototype.isConnectedToInstance = function () {
 
 /**
  *
- * @param {ConnectionStatus} newStatus
- * @param {number} lobbyRowID - Can be omitted for status DISCONNECTED
+ * @param {NetSimConnection.ConnectionStatus} newStatus
  * @private
  */
-NetSimConnection.prototype.setConnectionStatus_ = function (newStatus, lobbyRowID) {
+NetSimConnection.prototype.setConnectionStatus_ = function (newStatus) {
+  this.status_ = newStatus;
   switch (newStatus) {
     case ConnectionStatus.CONNECTED:
-        this.myLobbyRowID_ = lobbyRowID;
-        this.nextKeepAliveTime_ = 0;
-        this.logger_.log("Connected to instance, assigned ID " +
-            this.myLobbyRowID_, LogLevel.INFO);
-        break;
+      this.nextKeepAliveTime_ = 0;
+      this.logger_.info("Connected to node.");
+      this.statusDetail_ = " to router " + this.router_.routerID +
+          " on wire " + this.wire_.wireID;
+      break;
 
-    case ConnectionStatus.DISCONNECTED:
-        this.myLobbyRowID_ = undefined;
-        this.nextKeepAliveTime_ = Infinity;
-        this.logger_.log("Disconnected from instance", LogLevel.INFO);
+    case ConnectionStatus.IN_LOBBY:
+      this.nextKeepAliveTime_ = 0;
+      this.logger_.info("Connected to instance, assigned ID " +
+          this.myLobbyRowID_, LogLevel.INFO);
+      this.statusDetail_ = "";
+      break;
+
+    case ConnectionStatus.OFFLINE:
+      this.myLobbyRowID_ = undefined;
+      this.nextKeepAliveTime_ = Infinity;
+      this.logger_.info("Disconnected from instance", LogLevel.INFO);
+      this.statusDetail_ = "";
       break;
   }
   this.statusChanges.notifyObservers();
+};
+
+NetSimConnection.prototype.getReadableStatus = function () {
+  return this.status_ + ' to router ' + this.router_.routerID + ' on wire ' + this.wire_.wireID;
 };
 
 /**
@@ -318,11 +335,11 @@ NetSimConnection.prototype.keepAlive = function (callback) {
   }
 
   var self = this;
-  this.lobbyTable_.update(this.myLobbyRowID_, this.buildLobbyRow_(),
+  this.getLobbyTable().update(this.myLobbyRowID_, this.buildLobbyRow_(),
       function (succeeded) {
         callback(succeeded);
         if (!succeeded) {
-          self.setConnectionStatus_(ConnectionStatus.DISCONNECTED);
+          self.setConnectionStatus_(ConnectionStatus.OFFLINE);
           self.logger_.log("Reconnecting...", LogLevel.INFO);
           self.connect_();
         }
@@ -337,7 +354,7 @@ NetSimConnection.prototype.fetchLobbyListing = function (callback) {
   }
 
   var logger = this.logger_;
-  this.lobbyTable_.all(function (data) {
+  this.getLobbyTable().all(function (data) {
     if (null !== data) {
       callback(data);
     } else {
@@ -354,6 +371,15 @@ NetSimConnection.prototype.fetchLobbyListing = function (callback) {
 NetSimConnection.prototype.tick = function (clock) {
   if (clock.time >= this.nextKeepAliveTime_) {
     this.keepAlive();
+
+    // We also perform updates for our connected wires and routers
+    if (this.wire_) {
+      this.wire_.update();
+    }
+
+    if (this.router_) {
+      this.router_.update();
+    }
 
     // TODO (bbuchanan): Need a better policy for when to do this.  Or, we
     //                   might not need to once we have auto-expiring rows.
@@ -388,27 +414,98 @@ NetSimConnection.prototype.cleanLobby_ = function () {
   });
 };
 
+NetSimConnection.prototype.addRouterToLobby = function () {
+  if (!this.isConnectedToInstance()) {
+    this.logger_.error("Can't create a router without a connection");
+    return;
+  }
+
+  var self = this;
+  NetSimRouter.create(this.instanceID_, function () {
+    self.statusChanges.notifyObservers();
+  });
+};
+
+NetSimConnection.prototype.isConnectedToRouter = function () {
+  return this.wire_ !== null && this.router_ !== null;
+};
+
 /**
  * Establish a connection between the local client and the given
  * simulated router.
- * @param {NetSimRouter} router
+ * @param {number} routerID
  */
-NetSimConnection.prototype.connectToRouter = function (router) {
+NetSimConnection.prototype.connectToRouter = function (routerID) {
+  if (this.isConnectedToRouter()) {
+    this.logger_.warn("Auto-disconnecting from previous router.");
+    this.disconnectFromRouter();
+  }
+
+  // Create a local NetSimRouter for the remote router we want to connect with,
+  //   which runs the local router simulation.
+  this.router_ = new NetSimRouter(this.instanceID_, routerID);
+
+  // Optimistically create a wire and point it at the router
   var self = this;
-  router.ifBelowCapacity(function () {
-    self.status_ = ClientStatus.CONNECTED + ':' + router.routerID;
-    self.keepAlive(function (succeeded) {
-      if (succeeded) {
-        router.ifBeyondCapacity(function () {
-          self.logger_.warn("Router beyond capacity, disconnecting.");
-          self.status_ = ClientStatus.IN_LOBBY;
-          self.keepAlive();
-        }, function () {
-          router.pushStatusToRemote();
-        });
-      }
-    });
-  }, function () {
-    self.logger.warn("Router is full, cannot connect.");
+  self.createWire(routerID, function (wire) {
+    if (wire !== null) {
+      self.wire_ = wire;
+      self.router_.countConnections(function (count) {
+        if (count <= self.router_.MAX_CLIENT_CONNECTIONS) {
+          self.setConnectionStatus_(ConnectionStatus.CONNECTED);
+        } else {
+          // Oops!  We put the router over capacity, we should disconnect.
+          self.disconnectFromRouter();
+        }
+      });
+    }
+  });
+};
+
+NetSimConnection.prototype.disconnectFromRouter = function () {
+  if (!this.isConnectedToRouter()) {
+    this.logger_.warn("Cannot disconnect: Not connected.");
+    return;
+  }
+
+  var self = this;
+  this.wire_.destroy(function (success) {
+    if (success) {
+      // Simulate final router update as we disconnect, so if we are the
+      // last client to go, the router updates its connection status to
+      // 0/6 clients connected.
+      self.router_.update(function () {
+        self.wire_ = null;
+        self.router_ = null;
+        self.setConnectionStatus_(ConnectionStatus.IN_LOBBY);
+      });
+      self.wire_ = null;
+      self.router_ = null;
+      self.setConnectionStatus_(ConnectionStatus.IN_LOBBY);
+    }
+  });
+};
+
+NetSimConnection.prototype.createWire = function (remoteID, onComplete) {
+  if (!onComplete) {
+    onComplete = function () {}
+  }
+
+  var self = this;
+  NetSimWire.create(this.instanceID_, function (wire) {
+    if (wire !== null) {
+      wire.localID = self.myLobbyRowID_;
+      wire.remoteID = remoteID;
+      wire.update(function (success) {
+        if (success) {
+          onComplete(wire);
+        } else {
+          wire.destroy();
+          onComplete(null);
+        }
+      });
+    } else {
+      onComplete(null);
+    }
   });
 };

@@ -42,31 +42,22 @@
  */
 'use strict';
 
-var NetSimConnection = require('./NetSimConnection');
+var netsimStorage = require('./netsimStorage');
 var NetSimLogger = require('./NetSimLogger');
 var LogLevel = NetSimLogger.LogLevel;
 
 /**
- *
- * @param {!NetSimConnection} connection
+ * @param {string} instanceID
  * @param {?number} routerID - Lobby row ID for this router.  If null, use
  *        connectToLobby() to add this router to the lobby and get an ID.
  * @constructor
  */
-var NetSimRouter = function (connection, routerID) {
+var NetSimRouter = function (instanceID, routerID) {
   /**
-   * Instance connection that this lobby control will manipulate.
-   * @type {NetSimConnection}
+   * @type {string}
    * @private
    */
-  this.connection_ = connection;
-
-  /**
-   * Instance of logging API, gives us choke-point control over log output
-   * @type {NetSimLogger}
-   * @private
-   */
-  this.logger_ = connection.getLogger();
+  this.instanceID_ = instanceID;
 
   /**
    * This router's row ID (and unique ID) within the lobby table of the instance.
@@ -75,65 +66,106 @@ var NetSimRouter = function (connection, routerID) {
   this.routerID = routerID;
 
   /**
+   * Instance of logging API, gives us choke-point control over log output
+   * @type {NetSimLogger}
+   * @private
+   */
+  this.logger_ = new NetSimLogger(console, LogLevel.VERBOSE);
+
+  /**
    * @type {RouterStatus}
    * @private
    */
-  this.status_ = NetSimRouter.RouterStatus.OFFLINE;
+  this.status_ = NetSimRouter.RouterStatus.INITIALIZING;
 
   /**
    * @type {string}
    * @private
    */
-  this.displayName_ = "Router";
+  this.statusDetail_ = '';
 
   /**
-   * Cached list of connected client rows.  Gets updated anytime
-   * fetchConnectedClients is called.  Should not be depended on unless you
-   * know you've *just* updated it.
-   * @type {Array}
-   * @private
+   * @const
+   * @type {number}
    */
-  this.connectedClientCache_ = [];
-
-  if (this.routerID !== undefined) {
-    this.pullStatusFromRemote();
-  }
+  this.MAX_CLIENT_CONNECTIONS = 6;
 };
 module.exports = NetSimRouter;
-
-/**
- * @const
- * @type {number}
- */
-NetSimRouter.MAX_CLIENT_CONNECTIONS = 6;
 
 /**
  * @readonly
  * @enum {string}
  */
 NetSimRouter.RouterStatus = {
-  OFFLINE: 'Offline',
   INITIALIZING: 'Initializing',
   READY: 'Ready',
   FULL: 'Full'
 };
 var RouterStatus = NetSimRouter.RouterStatus;
 
-/**
- *
- * @returns {string}
- * @private
- */
-NetSimRouter.prototype.buildLobbyStatus_ = function () {
-  if (this.status_ === RouterStatus.READY) {
-    var connectionCount = this.connectedClientCache_.length;
-    if (connectionCount >= NetSimRouter.MAX_CLIENT_CONNECTIONS) {
-      return RouterStatus.FULL;
-    }
-    return RouterStatus.READY + ' (' + connectionCount + '/' +
-        NetSimRouter.MAX_CLIENT_CONNECTIONS + ')';
+NetSimRouter.create = function (instanceID, completionCallback) {
+  if (!completionCallback) {
+    completionCallback = function () {};
   }
-  return this.status_;
+
+  var router = new NetSimRouter(instanceID);
+  router.getLobbyTable().insert(router.buildLobbyRow_(), function (data) {
+    if (data) {
+      router.routerID = data.id;
+      router.status_ = RouterStatus.READY;
+      router.update(function (success) {
+        if (success) {
+          completionCallback(router);
+        } else {
+          router.destroy();
+          completionCallback(null);
+        }
+      });
+    } else {
+      completionCallback(null);
+    }
+  });
+};
+
+NetSimRouter.prototype.update = function (completionCallback) {
+  if (!completionCallback) {
+    completionCallback = function () {};
+  }
+
+  var self = this;
+  this.countConnections(function (count) {
+    self.status_ = count >= self.MAX_CLIENT_CONNECTIONS ?
+        RouterStatus.FULL : RouterStatus.READY;
+    self.statusDetail_ = '(' + count + '/' + self.MAX_CLIENT_CONNECTIONS + ')';
+
+    self.getLobbyTable().update(self.routerID, self.buildLobbyRow_(),
+        function (success) {
+          completionCallback(success);
+        }
+    );
+  });
+};
+
+NetSimRouter.prototype.destroy = function (completionCallback) {
+  if (!completionCallback) {
+    completionCallback = function () {};
+  }
+
+  // TODO: Any other cleanup here?
+
+  this.getLobbyTable().delete(this.routerID, function (success) {
+    completionCallback(success);
+  });
+};
+
+NetSimRouter.prototype.getLobbyTable = function () {
+  return new netsimStorage.SharedStorageTable(netsimStorage.APP_PUBLIC_KEY,
+      this.instanceID_ + '_lobby');
+};
+
+NetSimRouter.prototype.getWireTable = function () {
+  return new netsimStorage.SharedStorageTable(netsimStorage.APP_PUBLIC_KEY,
+      this.instanceID_ + '_wire');
 };
 
 /**
@@ -144,134 +176,31 @@ NetSimRouter.prototype.buildLobbyStatus_ = function () {
 NetSimRouter.prototype.buildLobbyRow_ = function () {
   return {
     lastPing: Date.now(),
-    name: this.displayName_,
-    type: NetSimConnection.LobbyRowType.ROUTER,
-    status: this.buildLobbyStatus_()
+    name: this.getDisplayName(),
+    type: 'router',
+    status: this.status_,
+    statusDetail: this.statusDetail_
   };
 };
 
-/**
- *
- */
-NetSimRouter.prototype.connectToLobby = function () {
-  if (!this.connection_.isConnectedToInstance()) {
-    this.logger_.error("Can't create a router without a connection");
-    return;
-  }
-
-  this.status_ = RouterStatus.INITIALIZING;
-
-  var self = this;
-  var lobbyTable = this.connection_.getLobbyTable();
-  lobbyTable.insert(this.buildLobbyRow_(), function (data) {
-    if (data) {
-      // First pass - just use the Row ID as the router ID
-      self.status_ = RouterStatus.READY;
-      self.routerID = data.id;
-      self.displayName_ = 'Router ' + self.routerID;
-      self.logger_.info(self.displayName_ + ' created.');
-      self.pushStatusToRemote();
-    } else {
-      self.logger_.error("Failed to create router");
-    }
-  });
+NetSimRouter.prototype.getDisplayName = function () {
+  return "Router " + this.routerID;
 };
 
-/**
- * A keepalive for routers, which puts their current state
- * into the remote table.
- */
-NetSimRouter.prototype.pushStatusToRemote = function () {
-  var self = this;
-  var lobbyTable = this.connection_.getLobbyTable();
-  lobbyTable.update(self.routerID, self.buildLobbyRow_(), function (success) {
-    if (success) {
-      self.logger_.info(self.displayName_ + ' status updated.');
-    } else {
-      self.logger_.warn(self.displayName_ + ' status update failed.');
+NetSimRouter.prototype.countConnections = function (completeCallback) {
+  var routerID = this.routerID;
+  this.getWireTable().all(function (rows) {
+    if (rows === null) {
+      completeCallback(0);
+      return;
     }
-  });
-};
 
-NetSimRouter.prototype.pullStatusFromRemote = function (onComplete) {
-  if (onComplete === undefined) {
-    onComplete = function () {};
-  }
-
-  if (this.routerID === undefined) {
-    this.logger_.error("Can't pull status from remote: Router doesn't " +
-    "exist on remote yet.");
-    return;
-  }
-
-  var self = this;
-  this.connection_.fetchLobbyListing(function (lobbyRows) {
-    var connectedClients = [];
-    var foundSelf = false;
-    lobbyRows.forEach(function (row) {
-      if (row.id === self.routerID) {
-        foundSelf = true;
-      }
-
-      if (self.isClientConnectedToMe_(row.status)) {
-        connectedClients.push(row);
-      }
+    // Router is always the remote end of a wire
+    var myWires = rows.filter(function (row) {
+      // TODO: Check for wire validity/timeout here?
+      return row.remoteID === routerID;
     });
 
-    self.connectedClientCache_ = connectedClients;
-    if (foundSelf) {
-      if (self.connectedClientCache_.length >= NetSimRouter.MAX_CLIENT_CONNECTIONS) {
-        self.status_ = RouterStatus.FULL;
-      } else {
-        self.status_ = RouterStatus.READY;
-      }
-    } else {
-      self.status_ = RouterStatus.OFFLINE;
-    }
-
-    onComplete();
-  });
-};
-
-NetSimRouter.prototype.fetchConnectedClients = function (onComplete) {
-  var self = this;
-  this.pullStatusFromRemote(function () {
-    onComplete(self.connectedClientCache_);
-  });
-};
-
-NetSimRouter.prototype.isClientConnectedToMe_ = function (clientStatus) {
-  // TODO (bbuchanan) : Remove this duplication of status format...
-  var re = new RegExp(NetSimConnection.ClientStatus.CONNECTED + ':' + this.routerID);
-  return re.test(clientStatus);
-};
-
-/**
- *
- * @param {function} thenCallback
- * @param {function} [elseCallback]
- */
-NetSimRouter.prototype.ifBelowCapacity = function (thenCallback, elseCallback) {
-  this.fetchConnectedClients(function (connectedClients) {
-    if (connectedClients.length < NetSimRouter.MAX_CLIENT_CONNECTIONS) {
-      thenCallback();
-    } else {
-      elseCallback();
-    }
-  });
-};
-
-/**
- *
- * @param {function} thenCallback
- * @param {function} [elseCallback]
- */
-NetSimRouter.prototype.ifBeyondCapacity = function (thenCallback, elseCallback) {
-  this.fetchConnectedClients(function (connectedClients) {
-    if (connectedClients.length > NetSimRouter.MAX_CLIENT_CONNECTIONS) {
-      thenCallback();
-    } else {
-      elseCallback();
-    }
-  });
+    completeCallback(myWires.length);
+  })
 };
