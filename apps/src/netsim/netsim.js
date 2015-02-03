@@ -37,8 +37,11 @@
 
 var dom = require('../dom');
 var page = require('./page.html');
-var utils = require('../utils');
-var _ = utils.getLodash();
+var NetSimConnection = require('./NetSimConnection');
+var NetSimLogger = require('./NetSimLogger');
+var DashboardUser = require('./DashboardUser');
+var NetSimLobby = require('./NetSimLobby');
+var RunLoop = require('./RunLoop');
 
 /**
  * The top-level Internet Simulator controller.
@@ -48,6 +51,35 @@ var NetSim = function () {
   this.skin = null;
   this.level = null;
   this.heading = 0;
+
+  /**
+   * Current user object which asynchronously grabs the current user's
+   * info from the dashboard API.
+   * @type {DashboardUser}
+   * @private
+   */
+  this.currentUser_ = DashboardUser.getCurrentUser();
+
+  /**
+   * Instance of logging API, gives us choke-point control over log output
+   * @type {NetSimLogger}
+   * @private
+   */
+  this.logger_ = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
+
+  /**
+   * Manager for connection to shared instance of netsim app.
+   * @type {NetSimConnection}
+   * @private
+   */
+  this.connection_ = null;
+
+  /**
+   * Tick and Render loop manager for the simulator
+   * @type {RunLoop}
+   * @private
+   */
+  this.runLoop_ = new RunLoop();
 };
 
 module.exports = NetSim;
@@ -82,7 +114,7 @@ NetSim.prototype.onSendButtonClick_ = function () {
 NetSim.prototype.attachHandlers_ = function () {
   dom.addClickTouchEvent(
       document.getElementById('netsim_sendbutton'),
-      _.bind(this.onSendButtonClick_, this)
+      this.onSendButtonClick_.bind(this)
   );
 };
 
@@ -111,17 +143,34 @@ NetSim.prototype.init = function(config) {
   });
 
   config.enableShowCode = false;
-  config.loadAudio = _.bind(this.loadAudio_, this);
+  config.loadAudio = this.loadAudio_.bind(this);
 
   // Override certain StudioApp methods - netsim does a lot of configuration
   // itself, because of its nonstandard layout.
-  this.studioApp_.configureDom = _.bind(this.configureDomOverride_,
-      this.studioApp_);
-  this.studioApp_.onResize = _.bind(this.onResizeOverride_, this.studioApp_);
+  this.studioApp_.configureDom = this.configureDomOverride_.bind(this.studioApp_);
+  this.studioApp_.onResize = this.onResizeOverride_.bind(this.studioApp_);
 
   this.studioApp_.init(config);
 
   this.attachHandlers_();
+
+  // Create netsim lobby widget in page
+  this.currentUser_.whenReady(function () {
+    // Do a deferred initialization of the connection object.
+    // TODO (bbuchanan) : Appending random number to user name only for debugging.
+    var userName = this.currentUser_.name + '_' + (Math.floor(Math.random() * 99) + 1);
+    this.connection_ = new NetSimConnection(userName, this.logger_);
+    this.runLoop_.tick.register(this.connection_, this.connection_.tick);
+    this.logger_.log("Connection manager created.");
+
+    var lobbyContainer = document.getElementById('netsim_lobby_container');
+    this.lobbyControl_ = NetSimLobby.createWithin(lobbyContainer, this.connection_);
+    this.runLoop_.tick.register(this.lobbyControl_, this.lobbyControl_.tick);
+    this.logger_.log("Lobby control created.");
+  }.bind(this));
+
+  // Begin the main simulation loop
+  this.runLoop_.begin();
 };
 
 /**
@@ -160,5 +209,4 @@ NetSim.prototype.onResizeOverride_ = function() {
   var parentWidth = parseInt(parentStyle.width, 10);
   div.style.top = divParent.offsetTop + 'px';
   div.style.width = parentWidth + 'px';
-  this.resizeHeaders(parentWidth);
 };

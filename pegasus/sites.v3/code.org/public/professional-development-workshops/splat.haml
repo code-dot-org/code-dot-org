@@ -73,7 +73,12 @@ rightbar: blank
         %label.control-label{for: "workshop-signup-email"} Email address
         %span.form-required-field *
         %div
-          %input#workshop-signup-email.form-control{name: "email_s", placeholder: "Email address", type: "text", required: true}/
+          %input#workshop-signup-email.form-control{name: "email_s", placeholder: "Email address", type: "email", required: true}/
+      .form-group
+        %label.control-label{for: "workshop-signup-email-confirm"} Confirm email address
+        %span.form-required-field *
+        %div
+          %input#workshop-signup-email-confirm.form-control{name: "email_confirm_s", placeholder: "Email address", type: "email", required: true}/
 
       .form-group
         %label.control-label{for: "workshop-signup-teacher-role"} Role (select all that apply)
@@ -150,7 +155,7 @@ rightbar: blank
         %label.control-label{for: "workshop-signup-number-students"} Number of students you teach
         %span.form-required-field *
         %div
-          %input#workshop-signup-teacher-title.form-control{name: "number_students_s", placeholder: "Number of students", type: "text", required: true}/
+          %input#workshop-signup-number-students.form-control{name: "number_students_s", placeholder: "Number of students", type: "text", required: true}/
 
     .form-group{style: 'margin-top: 45px;'}
       %button#btn-submit.btn.btn-default{type: "submit"} Submit
@@ -242,16 +247,36 @@ rightbar: blank
     {
       $('.has-error').removeClass('has-error');
 
-      errors = Object.keys(data.responseJSON);
-      errors_count = errors.length;
+      var errors = data.responseJSON;
+      var error_keys = Object.keys(errors);
+      var errors_count = error_keys.length;
+      var required_error = false;
+      var error_messages = [];
 
-      for (i = 0; i < errors_count; ++i) {
-        error_id = '#workshop-signup-' + errors[i].replace(/_/g, '-');
+      for (var i = 0; i < errors_count; i++) {
+        var error_list = errors[error_keys[i]];
+
+        if (error_list.indexOf('required') != -1) {
+          required_error = true;
+        }
+
+        if (error_list.indexOf('mismatch') != -1) {
+          error_messages.push('The email address fields do not match.');
+          $('#workshop-signup-email-confirm').parents('.form-group').addClass('has-error');
+        }
+
+        error_id = '#workshop-signup-' + error_keys[i].replace(/_/g, '-');
         error_id = error_id.replace(/-[sb]s?$/, '');
         $(error_id).parents('.form-group').addClass('has-error');
       }
 
-      $('#error-message').text('An error occurred. Please check to make sure all required fields have been filled out.').show();
+      if (required_error) {
+        error_messages.push('At least one required field was left empty.');
+      }
+
+      if (error_messages.length > 0) {
+        $('#error-message').html('<p>' + error_messages.join('</p><p>') + '</p>').show();
+      }
 
       $('body').scrollTop(0);
       $("#btn-submit").removeAttr('disabled');
