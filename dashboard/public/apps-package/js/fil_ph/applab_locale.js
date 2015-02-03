@@ -50,11 +50,10 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "repeatForever":function(d){return "ulitin ng walang katapusan"},
 "repeatDo":function(d){return "gawin"},
 "repeatForeverTooltip":function(d){return "Ipatupad ang mga pagkilos na ito sa block ng paulit-ulit habang ang app ay tumatakbo."},
-"shareWebappTwitter":function(d){return "Tingnan ang app na ginawa ko. Sinulat ko ito sa @codeorg"},
+"shareApplabTwitter":function(d){return "Tingnan ang app na ginawa ko. Sinulat ko ito sa @codeorg"},
 "shareGame":function(d){return "Ibahagi ang iyong app:"},
 "stepIn":function(d){return "Hakbang sa"},
 "stepOver":function(d){return "Hakbang sa paglipas ng"},
 "stepOut":function(d){return "Umalis"},
-"turnBlack":function(d){return "gawing itim"},
-"turnBlackTooltip":function(d){return "Pinapa-itim ang screen."},
+"viewData":function(d){return "View Data"},
 "yes":function(d){return "Oo"}};

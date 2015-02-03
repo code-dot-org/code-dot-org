@@ -3,7 +3,7 @@
   select_language: Lūdzu izvēlieties savu valodu
   computer_science: Datorzinātne
   computer_science_edweek: Datorzinātnes Izglītības nedēļa
-  csedweek_dates: December 8-14, 2014
+  csedweek_dates: 2014. gada 8. - 14. decembris
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Programmēšanas stunda</a> tuvojas. Aicinam visus skolotājus
     un organizatorus, <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -129,12 +129,12 @@
     un uzrakstījuši %{lines} rindas koda.'
   start_hoc: Sāc Programmēšanas stundu tagad
   contact_form_topic_press: Prese/mediji (intervija vai uzaicinājums sniegt runu)
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
-    - Michael Clark, Teacher'
-  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
-    - Nina Nichols Peery, Teacher'
-  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
-    Alzate, 5th grader'
+  stats_michael: '"Nekad, <b>vēl nekad</b> nebiju redzējis savus skolēnus tik iedvesmotos
+    no mācīšanās." - Michael Clark, skolotājs'
+  stats_nina: '"Katru dienu sasniedzu visaugstāko rezultātu&mdash; 100% atsaucību."
+    - Nina Nichols Peery, skolotāja'
+  stats_student: '"Es zināju, kā šāda iespēja ir <b>vienreiz mūžā</b>." - Mariana
+    Alzate, 5. klases skolniece'
   studiobar_title: Izpēti <a href='http://studio.code.org'>Kodu studiju</a>
   studiobar_elementary_title: Vienkāršākie kursi
   studiobar_elementary_body: Mūsu trīs  jaunie kursi priekš K&#8209;5
@@ -148,8 +148,8 @@
   studiobar_frozen_body: Veido ziemas brīnumzemi ar Annu un Elzu
   studiobar_donate_title: Ziedot
   studiobar_donate_body: Viens bērns par katru dolāru, ko ziedosi
-  studiobar_shop_title: Shop
-  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
+  studiobar_shop_title: Veikals
+  studiobar_shop_body: Lauz stereotipus. Valkā mūsu logo ar lepnumu.
   contact_form_topic_student: Skolēniem
   contact_form_topic_parent: Vecākiem
   contact_form_topic_teacher: Pasniedzējiem/skolotājiem
@@ -243,8 +243,8 @@
   dashboard_action_delete_yes: Jā
   dashboard_action_delete_no: Nē
   dashboard_action_confirm: Izdzēst?
-  dashboard_action_remove: Remove
-  dashboard_action_remove_confirm: Remove?
+  dashboard_action_remove: Noņemt
+  dashboard_action_remove_confirm: Noņemt?
   dashboard_action_done: Gatavs
   dashboard_action_required: nepieciešams
   dashboard_navigation_home_page: Skolotāju mājaslapa
@@ -292,6 +292,7 @@
     izmantojot pogas <b>Pievienot skolēnu</b> un <b>Pievienot vairākus skolēnus</b>.
   dashboard_students_placeholder_name: Skolēna vārds
   dashboard_students_name: Vārds
+  dashboard_students_progress: Progress
   dashboard_students_age: Vecums
   dashboard_students_gender: Dzimums
   dashboard_students_male: Vīrietis
@@ -349,6 +350,10 @@
   dashboard_login_picture: Attēls
   dashboard_login_none: E-pasts
   dashboard_new_password: Jauna parole
+  dashboard_progress_not_completed: Nav pabeigts
+  dashboard_progress_completed_too_many_blocks: Pabeigts, pārāk daudz bloki
+  dashboard_progress_completed_perfect: pabeigts, ideāli
+  dashboard_progress_furthest_level_attempted: tālākais līmenis mēģināts
   stats_hoc_2013_heading: 'Neticama statistika no pagāšā gada "Programmēšanas Stundas".
     Nieka nedēļā:'
   stats_hoc_2013_image_alt: Statistika no 2013 "Programmēšanas stunda"
@@ -389,7 +394,7 @@
   carousel_heading_robots: Iemāčies programēt ar robotiem
   carousel_heading_ide: Skolotāju starpā populāras platformas
   educator_notes: Pasniedzēju pieraksti
-  how_to_teach_hoc: How to Teach an Hour of Code
+  how_to_teach_hoc: Ko mācīt Programmēšanas stundā
   more_resources_educators: Vairāk resursi priekš skolotājiem un pasniedzējiem
   participants: Paslēpt kontekstu - Pieprasīt kontekstu
   teachers_notes: Skolotāju pieraksti

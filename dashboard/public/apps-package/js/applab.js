@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({12:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({13:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Applab = require('./applab');
@@ -16,7 +16,7 @@ window.applabMain = function(options) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":3,"./applab":6,"./blocks":7,"./levels":11,"./skins":13}],13:[function(require,module,exports){
+},{"../appMain":3,"./applab":6,"./blocks":7,"./levels":12,"./skins":14}],14:[function(require,module,exports){
 /**
  * Load Skin for Applab.
  */
@@ -35,7 +35,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":108}],11:[function(require,module,exports){
+},{"../skins":125}],12:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/applab');
@@ -69,60 +69,63 @@ levels.ec_simple = {
   'freePlay': true,
   'editCode': true,
   'sliderSpeed': 0.95,
-  'codeFunctions': [
-    {'func': 'onEvent', 'title': 'Execute code in response to an event for the specified element', 'category': 'General', 'params': ["'id'", "'click'", "function() {\n  \n}"] },
-    {'func': 'startWebRequest', 'title': 'Request data from the internet and execute code when the request is complete', 'category': 'General', 'params': ["'http://api.openweathermap.org/data/2.5/weather?q=London,uk'", "function(status, type, content) {\n  \n}"] },
-    {'func': 'setTimeout', 'title': 'Set a timer and execute code when that number of milliseconds has elapsed', 'category': 'General', 'params': ["function() {\n  \n}", "1000"] },
-    {'func': 'clearTimeout', 'title': 'Clear an existing timer by passing in the value returned from setTimeout()', 'category': 'General', 'params': ["0"] },
-    {'func': 'createHtmlBlock', 'title': 'Create a block of HTML and assign it an element id', 'category': 'General', 'params': ["'id'", "'html'"] },
-    {'func': 'replaceHtmlBlock', 'title': 'Replace a block of HTML associated with the specified id', 'category': 'General', 'params': ["'id'", "'html'"] },
-    {'func': 'deleteHtmlBlock', 'title': 'Delete the element with the specified id', 'category': 'General', 'params': ["'id'"] },
-    {'func': 'setParent', 'title': 'Set an element to become a child of a parent element', 'category': 'General', 'params': ["'id'", "'parentId'"] },
-    {'func': 'setPosition', 'title': 'Position an element with x, y, width, and height coordinates', 'category': 'General', 'params': ["'id'", "0", "0", "100", "100"] },
-    {'func': 'setStyle', 'title': 'Add CSS style text to an element', 'category': 'General', 'params': ["'id'", "'color:red;'"] },
-    {'func': 'getAttribute', 'category': 'General', 'params': ["'id'", "'scrollHeight'"], 'type': 'value' },
-    {'func': 'setAttribute', 'category': 'General', 'params': ["'id'", "'scrollHeight'", "200"]},
-    {'func': 'createButton', 'title': 'Create a button and assign it an element id', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
-    {'func': 'createTextInput', 'title': 'Create a text input and assign it an element id', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
-    {'func': 'createTextLabel', 'title': 'Create a text label, assign it an element id, and bind it to an associated element', 'category': 'UI Controls', 'params': ["'id'", "'text'", "'forId'"] },
-    {'func': 'createDropdown', 'title': 'Create a dropdown, assign it an element id, and populate it with a list of items', 'category': 'UI Controls', 'params': ["'id'", "'option1'", "'etc'"] },
-    {'func': 'getText', 'title': 'Get the text from the specified element', 'category': 'UI Controls', 'params': ["'id'"], 'type': 'value' },
-    {'func': 'setText', 'title': 'Set the text for the specified element', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
-    {'func': 'createCheckbox', 'title': 'Create a checkbox and assign it an element id', 'category': 'UI Controls', 'params': ["'id'", "false"] },
-    {'func': 'createRadio', 'title': 'Create a radio button and assign it an element id', 'category': 'UI Controls', 'params': ["'id'", "false", "'group'"] },
-    {'func': 'getChecked', 'title': 'Get the state of a checkbox or radio button', 'category': 'UI Controls', 'params': ["'id'"], 'type': 'value' },
-    {'func': 'setChecked', 'title': 'Set the state of a checkbox or radio button', 'category': 'UI Controls', 'params': ["'id'", "true"] },
-    {'func': 'createImage', 'title': 'Create an image and assign it an element id', 'category': 'UI Controls', 'params': ["'id'", "'http://code.org/images/logo.png'"] },
-    {'func': 'getImageURL', 'title': 'Get the URL associated with an image or image upload button', 'category': 'UI Controls', 'params': ["'id'"], 'type': 'value' },
-    {'func': 'setImageURL', 'title': 'Set the URL for the specified image element id', 'category': 'UI Controls', 'params': ["'id'", "'http://code.org/images/logo.png'"] },
-    {'func': 'createImageUploadButton', 'title': 'Create an image upload button and assign it an element id', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
-    {'func': 'createCanvas', 'title': 'Create a canvas with width, height dimensions', 'category': 'Canvas', 'params': ["'id'", "400", "600"] },
-    {'func': 'canvasDrawLine', 'title': 'Draw a line on a canvas from x1, y1 to x2, y2', 'category': 'Canvas', 'params': ["'id'", "0", "0", "400", "600"] },
-    {'func': 'canvasDrawCircle', 'title': 'Draw a circle on a canvas with the specified coordinates for center (x, y) and radius', 'category': 'Canvas', 'params': ["'id'", "200", "300", "100"] },
-    {'func': 'canvasDrawRect', 'title': 'Draw a rectangle on a canvas with x, y, width, and height coordinates', 'category': 'Canvas', 'params': ["'id'", "100", "200", "200", "200"] },
-    {'func': 'canvasSetLineWidth', 'title': 'Set the line width for a canvas', 'category': 'Canvas', 'params': ["'id'", "3"] },
-    {'func': 'canvasSetStrokeColor', 'title': 'Set the stroke color for a canvas', 'category': 'Canvas', 'params': ["'id'", "'red'"] },
-    {'func': 'canvasSetFillColor', 'title': 'Set the fill color for a canvas', 'category': 'Canvas', 'params': ["'id'", "'yellow'"] },
-    {'func': 'canvasDrawImage', 'title': 'Draw an image on a canvas with the specified image element and x, y as the top left coordinates', 'category': 'Canvas', 'params': ["'id'", "'imageId'", "0", "0"] },
-    {'func': 'canvasGetImageData', 'title': 'Get the ImageData for a rectangle (x, y, width, height) within a canvas', 'category': 'Canvas', 'params': ["'id'", "0", "0", "400", "600"], 'type': 'value' },
-    {'func': 'canvasPutImageData', 'title': 'Set the ImageData for a rectangle within a canvas with x, y as the top left coordinates', 'category': 'Canvas', 'params': ["'id'", "imageData", "0", "0"] },
-    {'func': 'canvasClear', 'title': 'Clear all data on a canvas', 'category': 'Canvas', 'params': ["'id'"] },
-    {'func': 'createSharedRecord', 'category': 'General', 'params': ["{tableName: 'abc',name:'Alice',age:7,male:false}", "function() {\n  \n}"] },
-    {'func': 'readSharedRecords', 'category': 'General', 'params': ["{tableName: 'abc'}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    for (var prop in records[i]) {\n      createHtmlBlock('id2', 'records[' + i + '].' + prop + ': ' + records[i][prop]);\n    }\n  }\n}"] },
-  ],
-  'categoryInfo': {
-    'General': {
-      'color': 'blue',
-      'blocks': []
-    },
-    'UI Controls': {
-      'color': 'red',
-      'blocks': []
-    },
-    'Canvas': {
-      'color': 'yellow',
-      'blocks': []
-    },
+  'appWidth': 320,
+  'appHeight': 480,
+  'codeFunctions': {
+    'onEvent': null,
+    'startWebRequest': null,
+    'setTimeout': null,
+    'clearTimeout': null,
+    'playSound': null,
+    'createHtmlBlock': null,
+    'replaceHtmlBlock': null,
+    'deleteHtmlBlock': null,
+    'setParent': null,
+    'setPosition': null,
+    'setStyle': null,
+    'getAttribute': null,
+    'setAttribute': null,
+    'createButton': null,
+    'createTextInput': null,
+    'createTextLabel': null,
+    'createDropdown': null,
+    'getText': null,
+    'setText': null,
+    'createCheckbox': null,
+    'createRadio': null,
+    'getChecked': null,
+    'setChecked': null,
+    'createImage': null,
+    'getImageURL': null,
+    'setImageURL': null,
+    'createImageUploadButton': null,
+    'createCanvas': null,
+    'canvasDrawLine': null,
+    'canvasDrawCircle': null,
+    'canvasDrawRect': null,
+    'canvasSetLineWidth': null,
+    'canvasSetStrokeColor': null,
+    'canvasSetFillColor': null,
+    'canvasDrawImage': null,
+    'canvasGetImageData': null,
+    'canvasPutImageData': null,
+    'canvasClear': null,
+    'readSharedValue': null,
+    'writeSharedValue': null,
+    'createSharedRecord': null,
+    'readSharedRecords': null,
+    'updateSharedRecord': null,
+    'deleteSharedRecord': null,
+    'turtleMoveForward': null,
+    'turtleMoveBackward': null,
+    'turtleMove': null,
+    'turtleMoveTo': null,
+    'turtleTurnRight': null,
+    'turtleTurnLeft': null,
+    'turtlePenUp': null,
+    'turtlePenDown': null,
+    'turtlePenWidth': null,
+    'turtlePenColor': null,
   },
 };
 
@@ -209,7 +212,7 @@ levels.full_sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-},{"../../locale/current/applab":150,"../block_utils":15,"../utils":148}],6:[function(require,module,exports){
+},{"../../locale/current/applab":167,"../block_utils":16,"../utils":165}],6:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -230,6 +233,7 @@ var page = require('../templates/page.html');
 var dom = require('../dom');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
+var dropletConfig = require('./dropletConfig');
 var Slider = require('../slider');
 var AppStorage = require('./appStorage');
 var FormStorage = require('./formStorage');
@@ -272,10 +276,18 @@ var StepType = {
   OUT:  3,
 };
 
+// The typical width of the visualization area (indepdendent of appWidth)
+var vizAppWidth = 400;
+// The default values for appWidth and appHeight (if not specified in the level)
+var defaultAppWidth = 400;
+var defaultAppHeight = 400;
+
 function loadLevel() {
   Applab.timeoutFailureTick = level.timeoutFailureTick || Infinity;
   Applab.minWorkspaceHeight = level.minWorkspaceHeight;
   Applab.softButtons_ = level.softButtons || {};
+  Applab.appWidth = level.appWidth || defaultAppWidth;
+  Applab.appHeight = level.appHeight || defaultAppHeight;
 
   // Override scalars.
   for (var key in level.scale) {
@@ -283,15 +295,96 @@ function loadLevel() {
   }
 }
 
+//
+// The visualization area adjusts its size using a series of CSS rules that are
+// tuned to make adjustments assuming a 400x400 visualization. Since applab
+// allows its visualization size to be set on a per-level basis, the function
+// below modifies the CSS rules to account for the per-level coordinates
+//
+// The visualization column will remain at 400 pixels wide in the max-width
+// case and scale downward from there. The visualization height will be set
+// to preserve the proper aspect ratio with respect to the current width.
+//
+// The divApplab coordinate space will be Applab.appWidth by Applab.appHeight.
+// The scale values are then adjusted such that the max-width case may result
+// in a scaled-up version of divApplab and the min-width case will typically
+// result in a scaled-down version of divApplab
+//
+
+function adjustAppSizeStyles() {
+  var vizScale = 1;
+  // We assume these are listed in this order:
+  var scaleFactors = [ 1.0, 0.875, 0.75, 0.675, 0.5 ];
+  if (vizAppWidth !== Applab.appWidth) {
+    vizScale = vizAppWidth / Applab.appWidth;
+    for (var ind = 0; ind < scaleFactors.length; ind++) {
+      scaleFactors[ind] *= vizScale;
+    }
+  }
+  var vizAppHeight = Applab.appHeight * vizScale;
+  var ss = document.styleSheets;
+  for (var i = 0; i < ss.length; i++) {
+    if (ss[i].href && (ss[i].href.indexOf('applab.css') !== -1)) {
+      // We found our applab specific stylesheet:
+      var rules = ss[i].cssRules || ss[i].rules;
+      var changedRules = 0;
+      var curScaleIndex = 0;
+      // Change the width/height plus a set of rules for each scale factor:
+      var totalRules = 1 + scaleFactors.length;
+      for (var j = 0; j < rules.length && changedRules < totalRules; j++) {
+        var childRules = rules[j].cssRules || rules[j].rules;
+        if (rules[j].selectorText === "div#visualization") {
+          // set the 'normal' width/height for the visualization itself
+          rules[j].style.cssText = "height: " + vizAppHeight +
+                                   "px; width: " + vizAppWidth + "px;";
+          changedRules++;
+        } else if (rules[j].media && childRules) {
+          var changedChildRules = 0;
+          var scale = scaleFactors[curScaleIndex];
+          for (var k = 0; k < childRules.length && changedChildRules < 3; k++) {
+            if (childRules[k].selectorText === "div#visualization.responsive") {
+              // For this scale factor...
+              // set the max-height and max-width for the visualization
+              childRules[k].style.cssText = "max-height: " +
+                  Applab.appHeight * scale + "px; max-width: " +
+                  Applab.appWidth * scale + "px;";
+              changedChildRules++;
+            } else if (childRules[k].selectorText === "div#visualizationColumn.responsive") {
+              // set the max-width for the parent visualizationColumn
+              childRules[k].style.cssText = "max-width: " +
+                  Applab.appWidth * scale + "px;";
+              changedChildRules++;
+            } else if (childRules[k].selectorText === "div#visualization.responsive > *") {
+              // and set the scale factor for all children of the visualization
+              // (importantly, the divApplab element)
+              childRules[k].style.cssText = "-webkit-transform: scale(" + scale +
+                  ");-ms-transform: scale(" + scale +
+                  ");transform: scale(" + scale + ");";
+              changedChildRules++;
+            }
+          }
+          if (changedChildRules) {
+            curScaleIndex++;
+            changedRules++;
+          }
+        }
+      }
+      // After processing the applab.css, stop looking for stylesheets:
+      break;
+    }
+  }
+}
+
 var drawDiv = function () {
   var divApplab = document.getElementById('divApplab');
-  var divWidth = parseInt(window.getComputedStyle(divApplab).width, 10);
+  divApplab.style.width = Applab.appWidth + "px";
+  divApplab.style.height = Applab.appHeight + "px";
 
   // TODO: one-time initial drawing
 
   // Adjust visualizationColumn width.
   var visualizationColumn = document.getElementById('visualizationColumn');
-  visualizationColumn.style.width = divWidth + 'px';
+  visualizationColumn.style.width = vizAppWidth + 'px';
 };
 
 function getCurrentTickLength() {
@@ -635,7 +728,13 @@ Applab.init = function(config) {
     config.level.sliderSpeed = 1.0;
   }
 
-  Applab.canvasScale = (window.devicePixelRatio > 1) ? window.devicePixelRatio : 1;
+  // If we are in mobile sharing mode, allow the viewport to handle scaling
+  // and override our default width target in vizAppWidth with the actual width
+  if (dom.isMobile() && config.hideSource) {
+    vizAppWidth = Applab.appWidth;
+  }
+
+  adjustAppSizeStyles();
 
   var showSlider = !config.hideSource && config.level.editCode;
   var showDebugButtons = !config.hideSource && config.level.editCode;
@@ -708,6 +807,11 @@ Applab.init = function(config) {
         e.stop();
       });
     }
+    
+    if (studioApp.share) {
+      // automatically run in share mode:
+      window.setTimeout(studioApp.runButtonClick.bind(studioApp), 0);
+    }
   };
 
   // arrangeStartBlocks(config);
@@ -719,6 +823,12 @@ Applab.init = function(config) {
 
   config.varsInGlobals = true;
   config.noButtonsBelowOnMobileShare = true;
+
+  config.dropletConfig = dropletConfig;
+
+  // Since the app width may not be 400, set this value in the config to
+  // ensure that the viewport is set up properly for scaling it up/down
+  config.mobileNoPaddingShareWidth = config.level.appWidth;
 
   // Applab.initMinimal();
 
@@ -759,11 +869,6 @@ Applab.init = function(config) {
     if (viewDataButton) {
       dom.addClickTouchEvent(viewDataButton, Applab.onViewData);
     }
-  }
-
-  if (studioApp.share) {
-    // automatically run in share mode:
-    window.setTimeout(studioApp.runButtonClick, 0);
   }
 };
 
@@ -813,6 +918,11 @@ studioApp.reset = function(first) {
   }
 
   // Reset configurable variables
+  Applab.turtle = {};
+  Applab.turtle.heading = 0;
+  Applab.turtle.x = Applab.appWidth / 2;
+  Applab.turtle.y = Applab.appHeight / 2;
+
   var divApplab = document.getElementById('divApplab');
 
   while (divApplab.firstChild) {
@@ -939,9 +1049,8 @@ var defineProcedures = function (blockType) {
   var code = Blockly.Generator.blockSpaceToCode('JavaScript', blockType);
   // TODO: handle editCode JS interpreter
   try { codegen.evalWith(code, {
-                         codeFunctions: level.codeFunctions,
                          studioApp: studioApp,
-                         Studio: api,
+                         Applab: api,
                          Globals: Applab.Globals } ); } catch (e) { }
 };
 
@@ -991,6 +1100,10 @@ JSONApi.parse = function(text) {
   return JSON.parse(text);
 };
 
+JSONApi.stringify = function(object) {
+  return JSON.stringify(object);
+};
+
 // Commented out, but available in case we want to expose the droplet/pencilcode
 // style random (with a min, max value)
 /*
@@ -1026,8 +1139,8 @@ Applab.execute = function() {
 
   var codeWhenRun;
   if (level.editCode) {
-    codeWhenRun = utils.generateCodeAliases(level.codeFunctions, 'Applab');
-    codeWhenRun += utils.generateCodeAliases(mathFunctions, 'Math');
+    codeWhenRun = utils.generateCodeAliases(level.codeFunctions, dropletConfig, 'Applab');
+    codeWhenRun += utils.generateCodeAliases(mathFunctions, null, 'Math');
     Applab.userCodeStartOffset = codeWhenRun.length;
     Applab.userCodeLineOffset = codeWhenRun.split("\n").length - 1;
     codeWhenRun += studioApp.editor.getValue();
@@ -1166,7 +1279,7 @@ Applab.encodedFeedbackImage = '';
 
 Applab.onViewData = function() {
   window.open(
-    '//' + getPegasusHost() + '/edit-csp-app/' + AppStorage.tempAppId,
+    '//' + getPegasusHost() + '/private/edit-csp-app/' + AppStorage.tempEncryptedAppId,
     '_blank');
 };
 
@@ -1247,66 +1360,14 @@ Applab.executeCmd = function (id, name, opts) {
 };
 
 //
-// Execute a command from a command queue
-//
-// Return false if the command is not complete (it will remain in the queue)
-// and this function will be called again with the same command later
-//
-// Return true if the command is complete
+// Execute an API command
 //
 
 Applab.callCmd = function (cmd) {
-  var retVal = true;
-  switch (cmd.name) {
-    /*
-    case 'wait':
-      if (!cmd.opts.started) {
-        studioApp.highlight(cmd.id);
-      }
-      return Studio.wait(cmd.opts);
-    */
-    case 'createHtmlBlock':
-    case 'replaceHtmlBlock':
-    case 'deleteHtmlBlock':
-    case 'createButton':
-    case 'createImage':
-    case 'createCanvas':
-    case 'canvasDrawLine':
-    case 'canvasDrawCircle':
-    case 'canvasDrawRect':
-    case 'canvasSetLineWidth':
-    case 'canvasSetStrokeColor':
-    case 'canvasSetFillColor':
-    case 'canvasDrawImage':
-    case 'canvasGetImageData':
-    case 'canvasPutImageData':
-    case 'canvasClear':
-    case 'createTextInput':
-    case 'createTextLabel':
-    case 'createCheckbox':
-    case 'createRadio':
-    case 'createDropdown':
-    case 'getAttribute':
-    case 'setAttribute':
-    case 'getText':
-    case 'setText':
-    case 'getChecked':
-    case 'setChecked':
-    case 'getImageURL':
-    case 'setImageURL':
-    case 'createImageUploadButton':
-    case 'setPosition':
-    case 'setParent':
-    case 'setStyle':
-    case 'onEvent':
-    case 'startWebRequest':
-    case 'setTimeout':
-    case 'clearTimeout':
-    case 'createSharedRecord':
-    case 'readSharedRecords':
-      studioApp.highlight(cmd.id);
-      retVal = Applab[cmd.name](cmd.opts);
-      break;
+  var retVal = false;
+  if (Applab[cmd.name] instanceof Function) {
+    studioApp.highlight(cmd.id);
+    retVal = Applab[cmd.name](cmd.opts);
   }
   return retVal;
 };
@@ -1366,6 +1427,96 @@ Applab.createImageUploadButton = function (opts) {
                  divApplab.appendChild(newLabel));
 };
 
+function getTurtleContext() {
+  var canvas = document.getElementById('turtleCanvas');
+
+  if (!canvas) {
+    var opts = { 'elementId': 'turtleCanvas' };
+    Applab.createCanvas(opts);
+    canvas = document.getElementById('turtleCanvas');
+  }
+
+  return canvas.getContext("2d");
+}
+
+Applab.turtleMoveTo = function (opts) {
+  var ctx = getTurtleContext();
+  if (ctx) {
+    ctx.beginPath();
+    ctx.moveTo(Applab.turtle.x, Applab.turtle.y);
+    Applab.turtle.x = opts.x;
+    Applab.turtle.y = opts.y;
+    ctx.lineTo(Applab.turtle.x, Applab.turtle.y);
+    ctx.stroke();
+  }
+};
+
+Applab.turtleMove = function (opts) {
+  var newOpts = {};
+  newOpts.x = Applab.turtle.x + opts.x;
+  newOpts.y = Applab.turtle.y + opts.y;
+  Applab.turtleMoveTo(newOpts);
+};
+
+Applab.turtleMoveForward = function (opts) {
+  var newOpts = {};
+  newOpts.x = Applab.turtle.x +
+    opts.distance * Math.sin(2 * Math.PI * Applab.turtle.heading / 360);
+  newOpts.y = Applab.turtle.y -
+      opts.distance * Math.cos(2 * Math.PI * Applab.turtle.heading / 360);
+  Applab.turtleMoveTo(newOpts);
+};
+
+Applab.turtleMoveBackward = function (opts) {
+  opts.distance = -opts.distance;
+  Applab.turtleMoveForward(opts);
+};
+
+Applab.turtleTurnRight = function (opts) {
+  Applab.turtle.heading += opts.degrees;
+  Applab.turtle.heading = (Applab.turtle.heading + 360) % 360;
+};
+
+Applab.turtleTurnLeft = function (opts) {
+  opts.degrees = -opts.degrees;
+  Applab.turtleTurnRight(opts);
+};
+
+Applab.turtlePenUp = function (opts) {
+  var ctx = getTurtleContext();
+  if (ctx) {
+    Applab.turtle.penUpColor = ctx.strokeStyle;
+    ctx.strokeStyle = "rgba(255, 255, 255, 0)";
+  }
+};
+
+Applab.turtlePenDown = function (opts) {
+  var ctx = getTurtleContext();
+  if (ctx && Applab.turtle.penUpColor) {
+    ctx.strokeStyle = Applab.turtle.penUpColor;
+    delete Applab.turtle.penUpColor;
+  }
+};
+
+Applab.turtlePenWidth = function (opts) {
+  var ctx = getTurtleContext();
+  if (ctx) {
+    ctx.lineWidth = opts.width;
+  }
+};
+
+Applab.turtlePenColor = function (opts) {
+  var ctx = getTurtleContext();
+  if (ctx) {
+    if (Applab.turtle.penUpColor) {
+      // pen is currently up, store this color for pen down
+      Applab.turtle.penUpColor = opts.color;
+    } else {
+      ctx.strokeStyle = opts.color;
+    }
+  }
+};
+
 Applab.createCanvas = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
@@ -1374,10 +1525,10 @@ Applab.createCanvas = function (opts) {
   if (newElement && ctx) {
     newElement.id = opts.elementId;
     // default width/height if params are missing
-    var width = opts.width || 400;
-    var height = opts.height || 600;
-    newElement.width = width * Applab.canvasScale;
-    newElement.height = height * Applab.canvasScale;
+    var width = opts.width || Applab.appWidth;
+    var height = opts.height || Applab.appHeight;
+    newElement.width = width;
+    newElement.height = height;
     newElement.style.width = width + 'px';
     newElement.style.height = height + 'px';
     // set transparent fill by default:
@@ -1394,8 +1545,8 @@ Applab.canvasDrawLine = function (opts) {
   var ctx = canvas.getContext("2d");
   if (ctx && divApplab.contains(canvas)) {
     ctx.beginPath();
-    ctx.moveTo(opts.x1 * Applab.canvasScale, opts.y1 * Applab.canvasScale);
-    ctx.lineTo(opts.x2 * Applab.canvasScale, opts.y2 * Applab.canvasScale);
+    ctx.moveTo(opts.x1, opts.y1);
+    ctx.lineTo(opts.x2, opts.y2);
     ctx.stroke();
     return true;
   }
@@ -1408,11 +1559,7 @@ Applab.canvasDrawCircle = function (opts) {
   var ctx = canvas.getContext("2d");
   if (ctx && divApplab.contains(canvas)) {
     ctx.beginPath();
-    ctx.arc(opts.x * Applab.canvasScale,
-            opts.y * Applab.canvasScale,
-            opts.radius * Applab.canvasScale,
-            0,
-            2 * Math.PI);
+    ctx.arc(opts.x, opts.y, opts.radius, 0, 2 * Math.PI);
     ctx.fill();
     ctx.stroke();
     return true;
@@ -1426,10 +1573,7 @@ Applab.canvasDrawRect = function (opts) {
   var ctx = canvas.getContext("2d");
   if (ctx && divApplab.contains(canvas)) {
     ctx.beginPath();
-    ctx.rect(opts.x * Applab.canvasScale,
-             opts.y * Applab.canvasScale,
-             opts.width * Applab.canvasScale,
-             opts.height * Applab.canvasScale);
+    ctx.rect(opts.x, opts.y, opts.width, opts.height);
     ctx.fill();
     ctx.stroke();
     return true;
@@ -1442,7 +1586,7 @@ Applab.canvasSetLineWidth = function (opts) {
   var canvas = document.getElementById(opts.elementId);
   var ctx = canvas.getContext("2d");
   if (ctx && divApplab.contains(canvas)) {
-    ctx.lineWidth = opts.width * Applab.canvasScale;
+    ctx.lineWidth = opts.width;
     return true;
   }
   return false;
@@ -1488,7 +1632,7 @@ Applab.canvasDrawImage = function (opts) {
   var ctx = canvas.getContext("2d");
   if (ctx && divApplab.contains(canvas) && divApplab.contains(image)) {
     var xScale, yScale;
-    xScale = yScale = Applab.canvasScale;
+    xScale = yScale = 1;
     if (opts.width) {
       xScale = xScale * (opts.width / image.width);
     }
@@ -1496,12 +1640,7 @@ Applab.canvasDrawImage = function (opts) {
       yScale = yScale * (opts.height / image.height);
     }
     ctx.save();
-    ctx.setTransform(xScale,
-                     0,
-                     0,
-                     yScale,
-                     opts.x * Applab.canvasScale,
-                     opts.y * Applab.canvasScale);
+    ctx.setTransform(xScale, 0, 0, yScale, opts.x, opts.y);
     ctx.drawImage(image, 0, 0);
     ctx.restore();
     return true;
@@ -1514,10 +1653,7 @@ Applab.canvasGetImageData = function (opts) {
   var canvas = document.getElementById(opts.elementId);
   var ctx = canvas.getContext("2d");
   if (ctx && divApplab.contains(canvas)) {
-    return ctx.getImageData(opts.x * Applab.canvasScale,
-                            opts.y * Applab.canvasScale,
-                            opts.width * Applab.canvasScale,
-                            opts.height * Applab.canvasScale);
+    return ctx.getImageData(opts.x, opts.y, opts.width, opts.height);
   }
 };
 
@@ -1531,9 +1667,7 @@ Applab.canvasPutImageData = function (opts) {
     var tmpImageData = ctx.createImageData(opts.imageData.width,
                                            opts.imageData.height);
     tmpImageData.data.set(opts.imageData.data);
-    return ctx.putImageData(tmpImageData,
-                            opts.x * Applab.canvasScale,
-                            opts.y * Applab.canvasScale);
+    return ctx.putImageData(tmpImageData, opts.x, opts.y);
   }
 };
 
@@ -1701,6 +1835,16 @@ Applab.setImageURL = function (opts) {
   return false;
 };
 
+Applab.playSound = function (opts) {
+  if (studioApp.cdoSounds) {
+    studioApp.cdoSounds.playURL(opts.url,
+                               {volume: 1.0,
+                                forceHTML5: true,
+                                allowHTML5Mobile: true
+    });
+  }
+};
+
 Applab.replaceHtmlBlock = function (opts) {
   var divApplab = document.getElementById('divApplab');
   var oldDiv = document.getElementById(opts.elementId);
@@ -1764,7 +1908,7 @@ Applab.onEventFired = function (opts, e) {
     // of just the 'e' parameter
     Applab.eventQueue.push({
       'fn': opts.func,
-      'arguments': [e]
+      'arguments': [e].concat(opts.extraArgs)
     });
   } else {
     Applab.eventQueue.push({'fn': opts.func});
@@ -1854,33 +1998,106 @@ Applab.clearTimeout = function (opts) {
 };
 
 Applab.createSharedRecord = function (opts) {
-  var record = codegen.marshalInterpreterToNative(Applab.interpreter,
-      opts.record);
-  AppStorage.createSharedRecord(record,
-      Applab.handleCreateSharedRecord.bind(this, opts.callback));
+  var onSuccess = Applab.handleCreateSharedRecord.bind(this, opts.onSuccess);
+  var onError = Applab.handleError.bind(this, opts.onError);
+  AppStorage.createSharedRecord(opts.record, onSuccess, onError);
 };
 
-Applab.handleCreateSharedRecord = function(interpreterCallback, record) {
-  Applab.eventQueue.push({
-    'fn': interpreterCallback,
-    'arguments': [record]
-  });
+Applab.handleCreateSharedRecord = function(successCallback, record) {
+  if (successCallback) {
+    Applab.eventQueue.push({
+      'fn': successCallback,
+      'arguments': [record]
+    });
+  }
+};
+
+Applab.handleError = function(errorCallback, message) {
+  if (errorCallback) {
+    Applab.eventQueue.push({
+      'fn': errorCallback,
+      'arguments': [message]
+    });
+  } else {
+    outputApplabConsole(message);
+  }
+};
+
+Applab.readSharedValue = function(opts) {
+  var onSuccess = Applab.handleReadSharedValue.bind(this, opts.onSuccess);
+  var onError = Applab.handleError.bind(this, opts.onError);
+  AppStorage.readSharedValue(opts.key, onSuccess, onError);
+};
+
+Applab.handleReadSharedValue = function(successCallback, value) {
+  if (successCallback) {
+    Applab.eventQueue.push({
+      'fn': successCallback,
+      'arguments': [value]
+    });
+  }
+};
+
+Applab.writeSharedValue = function(opts) {
+  var onSuccess = Applab.handleWriteSharedValue.bind(this, opts.onSuccess);
+  var onError = Applab.handleError.bind(this, opts.onError);
+  AppStorage.writeSharedValue(opts.key, opts.value, onSuccess, onError);
+};
+
+Applab.handleWriteSharedValue = function(successCallback) {
+  if (successCallback) {
+    Applab.eventQueue.push({
+      'fn': successCallback,
+      'arguments': []
+    });
+  }
 };
 
 Applab.readSharedRecords = function (opts) {
-  var searchParams = codegen.marshalInterpreterToNative(Applab.interpreter,
-      opts.searchParams);
-  AppStorage.readSharedRecords(
-      searchParams,
-      Applab.handleReadSharedRecords.bind(this, opts.callback));
+  var onSuccess = Applab.handleReadSharedRecords.bind(this, opts.onSuccess);
+  var onError = Applab.handleError.bind(this, opts.onError);
+  AppStorage.readSharedRecords(opts.searchParams, onSuccess, onError);
 };
 
-Applab.handleReadSharedRecords = function(interpreterCallback, records) {
-  Applab.eventQueue.push({
-    'fn': interpreterCallback,
-    'arguments': [records]
-  });
+Applab.handleReadSharedRecords = function(successCallback, records) {
+  if (successCallback) {
+    Applab.eventQueue.push({
+      'fn': successCallback,
+      'arguments': [records]
+    });
+  }
 };
+
+Applab.updateSharedRecord = function (opts) {
+  var onSuccess = Applab.handleUpdateSharedRecord.bind(this, opts.onSuccess);
+  var onError = Applab.handleError.bind(this, opts.onError);
+  AppStorage.updateSharedRecord(opts.record, onSuccess, onError);
+};
+
+Applab.handleUpdateSharedRecord = function(successCallback) {
+  if (successCallback) {
+    Applab.eventQueue.push({
+      'fn': successCallback,
+      'arguments': []
+    });
+  }
+};
+
+Applab.deleteSharedRecord = function (opts) {
+  var onSuccess = Applab.handleDeleteSharedRecord.bind(this, opts.onSuccess);
+  var onError = Applab.handleError.bind(this, opts.onError);
+  AppStorage.deleteSharedRecord(opts.record, onSuccess, onError);
+};
+
+Applab.handleDeleteSharedRecord = function(successCallback) {
+  if (successCallback) {
+    Applab.eventQueue.push({
+      'fn': successCallback,
+      'arguments': []
+    });
+  }
+};
+
 
 /*
 var onWaitComplete = function (opts) {
@@ -1953,7 +2170,7 @@ var getPegasusHost = function() {
       var name = window.location.hostname.split('.')[0];
       switch(name) {
         case 'localhost':
-          return 'localhost.code.org:9393';
+          return 'localhost.code.org:3000';
         case 'development':
         case 'staging':
         case 'test':
@@ -2151,7 +2368,7 @@ var getPegasusHost = function() {
         return Array(multiplier + 1).join(input)
     }
 
-},{"../../locale/current/applab":150,"../../locale/current/common":153,"../StudioApp":2,"../codegen":38,"../constants":39,"../dom":40,"../skins":108,"../slider":109,"../templates/page.html":128,"../utils":148,"../xml":149,"./api":4,"./appStorage":5,"./blocks":7,"./controls.html":8,"./extraControlRows.html":9,"./formStorage":10,"./visualization.html":14}],14:[function(require,module,exports){
+},{"../../locale/current/applab":167,"../../locale/current/common":170,"../StudioApp":2,"../codegen":41,"../constants":42,"../dom":43,"../skins":125,"../slider":126,"../templates/page.html":145,"../utils":165,"../xml":166,"./api":4,"./appStorage":5,"./blocks":7,"./controls.html":8,"./dropletConfig":9,"./extraControlRows.html":10,"./formStorage":11,"./visualization.html":15}],15:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2171,7 +2388,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":168}],10:[function(require,module,exports){
+},{"ejs":186}],11:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -2354,7 +2571,7 @@ FormStorage.getAppSecret = function() {
 };
 
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2374,7 +2591,88 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/applab":150,"../../locale/current/common":153,"ejs":168}],8:[function(require,module,exports){
+},{"../../locale/current/applab":167,"../../locale/current/common":170,"ejs":186}],9:[function(require,module,exports){
+module.exports.blocks = [
+  {'func': 'onEvent', 'title': 'Execute code in response to an event for the specified element. Additional parameters are passed to the callback function.', 'category': 'General', 'params': ["'id'", "'click'", "function(event) {\n  \n}"] },
+  {'func': 'startWebRequest', 'title': 'Request data from the internet and execute code when the request is complete', 'category': 'General', 'params': ["'http://api.openweathermap.org/data/2.5/weather?q=London,uk'", "function(status, type, content) {\n  \n}"] },
+  {'func': 'setTimeout', 'title': 'Set a timer and execute code when that number of milliseconds has elapsed', 'category': 'General', 'params': ["function() {\n  \n}", "1000"] },
+  {'func': 'clearTimeout', 'title': 'Clear an existing timer by passing in the value returned from setTimeout()', 'category': 'General', 'params': ["0"] },
+  {'func': 'playSound', 'title': 'Play the MP3, OGG, or WAV sound file from the specified URL', 'category': 'General', 'params': ["'http://soundbible.com/mp3/neck_snap-Vladimir-719669812.mp3'"] },
+  {'func': 'createHtmlBlock', 'title': 'Create a block of HTML and assign it an element id', 'category': 'General', 'params': ["'id'", "'html'"] },
+  {'func': 'replaceHtmlBlock', 'title': 'Replace a block of HTML associated with the specified id', 'category': 'General', 'params': ["'id'", "'html'"] },
+  {'func': 'deleteHtmlBlock', 'title': 'Delete the element with the specified id', 'category': 'General', 'params': ["'id'"] },
+  {'func': 'setParent', 'title': 'Set an element to become a child of a parent element', 'category': 'General', 'params': ["'id'", "'parentId'"] },
+  {'func': 'setPosition', 'title': 'Position an element with x, y, width, and height coordinates', 'category': 'General', 'params': ["'id'", "0", "0", "100", "100"] },
+  {'func': 'setStyle', 'title': 'Add CSS style text to an element', 'category': 'General', 'params': ["'id'", "'color:red;'"] },
+  {'func': 'getAttribute', 'category': 'General', 'params': ["'id'", "'scrollHeight'"], 'type': 'value' },
+  {'func': 'setAttribute', 'category': 'General', 'params': ["'id'", "'scrollHeight'", "200"]},
+  {'func': 'createButton', 'title': 'Create a button and assign it an element id', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
+  {'func': 'createTextInput', 'title': 'Create a text input and assign it an element id', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
+  {'func': 'createTextLabel', 'title': 'Create a text label, assign it an element id, and bind it to an associated element', 'category': 'UI Controls', 'params': ["'id'", "'text'", "'forId'"] },
+  {'func': 'createDropdown', 'title': 'Create a dropdown, assign it an element id, and populate it with a list of items', 'category': 'UI Controls', 'params': ["'id'", "'option1'", "'etc'"] },
+  {'func': 'getText', 'title': 'Get the text from the specified element', 'category': 'UI Controls', 'params': ["'id'"], 'type': 'value' },
+  {'func': 'setText', 'title': 'Set the text for the specified element', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
+  {'func': 'createCheckbox', 'title': 'Create a checkbox and assign it an element id', 'category': 'UI Controls', 'params': ["'id'", "false"] },
+  {'func': 'createRadio', 'title': 'Create a radio button and assign it an element id', 'category': 'UI Controls', 'params': ["'id'", "false", "'group'"] },
+  {'func': 'getChecked', 'title': 'Get the state of a checkbox or radio button', 'category': 'UI Controls', 'params': ["'id'"], 'type': 'value' },
+  {'func': 'setChecked', 'title': 'Set the state of a checkbox or radio button', 'category': 'UI Controls', 'params': ["'id'", "true"] },
+  {'func': 'createImage', 'title': 'Create an image and assign it an element id', 'category': 'UI Controls', 'params': ["'id'", "'http://code.org/images/logo.png'"] },
+  {'func': 'getImageURL', 'title': 'Get the URL associated with an image or image upload button', 'category': 'UI Controls', 'params': ["'id'"], 'type': 'value' },
+  {'func': 'setImageURL', 'title': 'Set the URL for the specified image element id', 'category': 'UI Controls', 'params': ["'id'", "'http://code.org/images/logo.png'"] },
+  {'func': 'createImageUploadButton', 'title': 'Create an image upload button and assign it an element id', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
+  {'func': 'createCanvas', 'title': 'Create a canvas with width, height dimensions', 'category': 'Canvas', 'params': ["'id'", "320", "480"] },
+  {'func': 'canvasDrawLine', 'title': 'Draw a line on a canvas from x1, y1 to x2, y2', 'category': 'Canvas', 'params': ["'id'", "0", "0", "160", "240"] },
+  {'func': 'canvasDrawCircle', 'title': 'Draw a circle on a canvas with the specified coordinates for center (x, y) and radius', 'category': 'Canvas', 'params': ["'id'", "160", "240", "100"] },
+  {'func': 'canvasDrawRect', 'title': 'Draw a rectangle on a canvas with x, y, width, and height coordinates', 'category': 'Canvas', 'params': ["'id'", "80", "120", "160", "240"] },
+  {'func': 'canvasSetLineWidth', 'title': 'Set the line width for a canvas', 'category': 'Canvas', 'params': ["'id'", "3"] },
+  {'func': 'canvasSetStrokeColor', 'title': 'Set the stroke color for a canvas', 'category': 'Canvas', 'params': ["'id'", "'red'"] },
+  {'func': 'canvasSetFillColor', 'title': 'Set the fill color for a canvas', 'category': 'Canvas', 'params': ["'id'", "'yellow'"] },
+  {'func': 'canvasDrawImage', 'title': 'Draw an image on a canvas with the specified image element and x, y as the top left coordinates', 'category': 'Canvas', 'params': ["'id'", "'imageId'", "0", "0"] },
+  {'func': 'canvasGetImageData', 'title': 'Get the ImageData for a rectangle (x, y, width, height) within a canvas', 'category': 'Canvas', 'params': ["'id'", "0", "0", "320", "480"], 'type': 'value' },
+  {'func': 'canvasPutImageData', 'title': 'Set the ImageData for a rectangle within a canvas with x, y as the top left coordinates', 'category': 'Canvas', 'params': ["'id'", "imageData", "0", "0"] },
+  {'func': 'canvasClear', 'title': 'Clear all data on a canvas', 'category': 'Canvas', 'params': ["'id'"] },
+  {'func': 'writeSharedValue', 'title': 'Saves a value associated with the key, shared with everyone who uses the app.', 'category': 'Storage', 'params': ["'key'", "'value'", "function () {\n  \n}"] },
+  {'func': 'readSharedValue', 'title': 'Reads the value associated with the key, shared with everyone who uses the app.', 'category': 'Storage', 'params': ["'key'", "function (value) {\n  \n}"] },
+  {'func': 'createSharedRecord', 'title': 'createSharedRecord(record, onSuccess, onError); Creates a new shared record in table record.tableName.', 'category': 'Storage', 'params': ["{tableName:'abc', name:'Alice', age:7, male:false}", "function() {\n  \n}"] },
+  {'func': 'readSharedRecords', 'title': 'readSharedRecords(searchParams, onSuccess, onError); Reads all shared records whose properties match those on the searchParams object.', 'category': 'Storage', 'params': ["{tableName: 'abc'}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    createHtmlBlock('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
+  {'func': 'updateSharedRecord', 'title': 'updateSharedRecord(record, onSuccess, onFailure); Updates a shared record, identified by record.tableName and record.id.', 'category': 'Storage', 'params': ["{tableName:'abc', id: 1, name:'Bob', age:8, male:true}", "function() {\n  \n}"] },
+  {'func': 'deleteSharedRecord', 'title': 'deleteSharedRecord(record, onSuccess, onFailure)\nDeletes a shared record, identified by record.tableName and record.id.', 'category': 'Storage', 'params': ["{tableName:'abc', id: 1}", "function() {\n  \n}"] },
+  {'func': 'turtleMoveForward', 'title': 'Move the turtle forward the specified distance', 'category': 'Turtle', 'params': ["100"] },
+  {'func': 'turtleMoveBackward', 'title': 'Move the turtle backward the specified distance', 'category': 'Turtle', 'params': ["100"] },
+  {'func': 'turtleMove', 'title': 'Move the turtle by the specified x and y coordinates', 'category': 'Turtle', 'params': ["50", "50"] },
+  {'func': 'turtleMoveTo', 'title': 'Move the turtle to the specified x and y coordinates', 'category': 'Turtle', 'params': ["0", "0"] },
+  {'func': 'turtleTurnRight', 'title': 'Turn the turtle clockwise by the specified number of degrees', 'category': 'Turtle', 'params': ["90"] },
+  {'func': 'turtleTurnLeft', 'title': 'Turn the turtle counterclockwise by the specified number of degrees', 'category': 'Turtle', 'params': ["90"] },
+  {'func': 'turtlePenUp', 'title': "Pick up the turtle's pen", 'category': 'Turtle' },
+  {'func': 'turtlePenDown', 'title': "Set down the turtle's pen", 'category': 'Turtle' },
+  {'func': 'turtlePenWidth', 'title': 'Set the turtle to the specified pen width', 'category': 'Turtle', 'params': ["3"] },
+  {'func': 'turtlePenColor', 'title': 'Set the turtle to the specified pen color', 'category': 'Turtle', 'params': ["'red'"] },
+];
+
+module.exports.categories = {
+  'General': {
+    'color': 'blue',
+    'blocks': []
+  },
+  'UI Controls': {
+    'color': 'red',
+    'blocks': []
+  },
+  'Canvas': {
+    'color': 'yellow',
+    'blocks': []
+  },
+  'Storage': {
+    'color': 'orange',
+    'blocks': []
+  },
+  'Turtle': {
+    'color': 'yellow',
+    'blocks': []
+  },
+};
+
+},{}],8:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2394,7 +2692,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":153,"ejs":168}],7:[function(require,module,exports){
+},{"../../locale/current/common":170,"ejs":186}],7:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -2467,7 +2765,7 @@ function installCreateHtmlBlock(blockly, generator, blockInstallOptions) {
   };
 }
 
-},{"../../locale/current/applab":150,"../../locale/current/common":153,"../codegen":38,"../utils":148}],150:[function(require,module,exports){
+},{"../../locale/current/applab":167,"../../locale/current/common":170,"../codegen":41,"../utils":165}],167:[function(require,module,exports){
 /*applab*/ module.exports = window.blockly.appLocale;
 },{}],5:[function(require,module,exports){
 'use strict';
@@ -2478,74 +2776,139 @@ function installCreateHtmlBlock(blockly, generator, blockInstallOptions) {
 var AppStorage = module.exports;
 
 // TODO(dave): remove once we can store ids for each app.
-AppStorage.tempAppId = 1337;
+AppStorage.tempEncryptedAppId =
+    window.location.hostname.split('.')[0] === 'localhost' ?
+        "SmwVmYVl1V5UCCw1Ec6Dtw==" : "DvTw9X3pDcyDyil44S6qbw==";
+
+/**
+ * Reads the value associated with the key, accessible to all users of the app.
+ * @param {string} key The name of the key.
+ * @param {function(Object)} onSuccess Function to call on success with the
+       value retrieved from storage.
+ * @param {function(string)} onError Function to call on error with error msg.
+ */
+AppStorage.readSharedValue = function(key, onSuccess, onError) {
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = handleReadSharedValue.bind(req, onSuccess, onError);
+  var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + '/shared-properties/' + key;
+  req.open('GET', url, true);
+  req.send();
+};
+
+var handleReadSharedValue = function(onSuccess, onError) {
+  if (this.readyState !== 4) {
+    return;
+  }
+  if (this.status < 200 || this.status >= 300) {
+    onError('error reading value: unexpected http status ' + this.status);
+    return;
+  }
+  var value = JSON.parse(this.responseText);
+  onSuccess(value);
+};
+
+/**
+ * Saves the value associated with the key, accessible to all users of the app.
+ * @param {string} key The name of the key.
+ * @param {Object} value The value to associate with the key.
+ * @param {function()} onSuccess Function to call on success.
+ * @param {function(string)} onError Function to call on error with error msg.
+ */
+AppStorage.writeSharedValue = function(key, value, onSuccess, onError) {
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = handleWriteSharedValue.bind(req, onSuccess, onError);
+  var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + '/shared-properties/' + key;
+  req.open('POST', url, true);
+  req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+  req.send(JSON.stringify(value));
+};
+
+var handleWriteSharedValue = function(onSuccess, onError) {
+  if (this.readyState !== 4) {
+    return;
+  }
+  if (this.status < 200 || this.status >= 300) {
+    onError('error writing value: unexpected http status ' + this.status);
+    return;
+  }
+  onSuccess();
+};
 
 /**
  * Creates a new record in the specified table, accessible to all users.
  * @param {string} record.tableName The name of the table to read from.
  * @param {Object} record Object containing other properties to store
  *     on the record.
- * @param {Function} callback Function to call with the resulting record.
+ * @param {function(Object)} onSuccess Function to call with the new record.
+ * @param {function(string)} onError Function to call with an error message
+ *    in case of failure.
  */
-AppStorage.createSharedRecord = function(record, callback) {
+AppStorage.createSharedRecord = function(record, onSuccess, onError) {
   var tableName = record.tableName;
   if (!tableName) {
-    console.log('readRecords: missing required property "tableName"');
+    onError('error creating record: missing required property "tableName"');
+    return;
+  }
+  if (record.id) {
+    onError('error creating record: record must not have an "id" property');
     return;
   }
   var req = new XMLHttpRequest();
-  req.onreadystatechange = handleCreateSharedRecord.bind(req, record, callback);
-  var url = "/v3/apps/" + AppStorage.tempAppId + "/shared-tables/" + tableName;
+  req.onreadystatechange = handleCreateSharedRecord.bind(req, onSuccess, onError);
+  var url = "/v3/apps/" + AppStorage.tempEncryptedAppId + "/shared-tables/" + tableName;
   req.open('POST', url, true);
   req.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
   req.send(JSON.stringify(record));
 };
 
-var handleCreateSharedRecord = function(record, callback) {
+var handleCreateSharedRecord = function(onSuccess, onError) {
   if (this.readyState !== 4) {
     return;
   }
-  if (this.status < 200 || this.status > 300) {
-    console.log('unexpected http status ' + this.status);
+  if (this.status < 200 || this.status >= 300) {
+    onError('error creating record: unexpected http status ' + this.status);
     return;
   }
-  callback(record);
+  var record = JSON.parse(this.responseText);
+  onSuccess(record);
 };
 
 /**
  * Reads records which match the searchParams specified by the user,
- * and passes them to the callback.
+ * and passes them to onSuccess.
  * @param {string} searchParams.tableName The name of the table to read from.
  * @param {string} searchParams.recordId Optional id of record to read.
  * @param {Object} searchParams Other search criteria. Only records
  *     whose contents match all criteria will be returned.
- * @param {Function} callback Function to call with an array of record objects.
+ * @param {function(Array)} onSuccess Function to call with an array of record
+       objects.
+ * @param {function(string)} onError Function to call with an error message
+ *     in case of failure.
  */
-AppStorage.readSharedRecords = function(searchParams, callback) {
+AppStorage.readSharedRecords = function(searchParams, onSuccess, onError) {
   var tableName = searchParams.tableName;
   if (!tableName) {
-    console.log('readRecords: missing required property "tableName"');
+    onError('error reading records: missing required property "tableName"');
     return;
   }
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleReadSharedRecords.bind(req, tableName,
-      searchParams, callback);
-  var url = '/v3/apps/' + AppStorage.tempAppId + "/shared-tables/" + tableName;
+      searchParams, onSuccess, onError);
+  var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + "/shared-tables/" + tableName;
   req.open('GET', url, true);
   req.send();
   
 };
 
-var handleReadSharedRecords = function(tableName, searchParams, callback) {
+var handleReadSharedRecords = function(tableName, searchParams, onSuccess, onError) {
   if (this.readyState !== 4) {
     return;
   }
-  if (this.status !== 200) {
-    console.log('readRecords failed with status ' + this.status);
+  if (this.status < 200 || this.status >= 300) {
+    onError('error reading records: unexpected http status ' + this.status);
     return;
   }
   var records = JSON.parse(this.responseText);
-  console.log(records);
   records = records.filter(function(record) {
     for (var prop in searchParams) {
       if (record[prop] !== searchParams[prop]) {
@@ -2554,7 +2917,98 @@ var handleReadSharedRecords = function(tableName, searchParams, callback) {
     }
     return true;
   });
-  callback(records);
+  onSuccess(records);
+};
+
+/**
+ * Updates a record in a table, accessible to all users.
+ * @param {string} record.tableName The name of the table to update.
+ * @param {string} record.id The id of the row to update.
+ * @param {Object} record Object containing other properites to update
+ *     on the record.
+ * @param {function()} onSuccess Function to call on success.
+ * @param {function(string)} onError Function to call with an error message
+ *    in case of failure.
+ */
+AppStorage.updateSharedRecord = function(record, onSuccess, onError) {
+  var tableName = record.tableName;
+  if (!tableName) {
+    onError('error updating record: missing required property "tableName"');
+    return;
+  }
+  var recordId = record.id;
+  if (!recordId) {
+    onError('error updating record: missing required property "id"');
+    return;
+  }
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = handleUpdateSharedRecord.bind(req, record, onSuccess, onError);
+  var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + '/shared-tables/' +
+      tableName + '/' + recordId;
+  req.open('POST', url, true);
+  req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+  req.send(JSON.stringify(record));
+};
+
+var handleUpdateSharedRecord = function(record, onSuccess, onError) {
+  if (this.readyState !== 4) {
+    return;
+  }
+  if (this.status === 404) {
+    onError('error updating record: could not find record id ' + record.id +
+            ' in table ' + record.tableName);
+    return;
+  }
+  if (this.status < 200 || this.status >= 300) {
+    onError('error updating record: unexpected http status ' + this.status);
+    return;
+  }
+  onSuccess();
+};
+
+/**
+ * Deletes a record from the specified table.
+ * @param {string} record.tableName The name of the table to delete from.
+ * @param {string} record.id The id of the record to delete.
+ * @param {Object} record Object whose other properties are ignored.
+ * @param {function()} onSuccess Function to call on success.
+ * @param {function(string)} onError Function to call with an error message
+ *    in case of failure.
+ */
+AppStorage.deleteSharedRecord = function(record, onSuccess, onError) {
+  var tableName = record.tableName;
+  if (!tableName) {
+    onError('error deleting record: missing required property "tableName"');
+    return;
+  }
+  var recordId = record.id;
+  if (!recordId) {
+    onError('error deleting record: missing required property "id"');
+    return;
+  }
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = handleDeleteSharedRecord.bind(req, record, onSuccess, onError);
+  var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + '/shared-tables/' +
+      tableName + '/' + recordId + '/delete';
+  req.open('POST', url, true);
+  req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+  req.send(JSON.stringify(record));
+};
+
+var handleDeleteSharedRecord = function(record, onSuccess, onError) {
+  if (this.readyState !== 4) {
+    return;
+  }
+  if (this.status === 404) {
+    onError('error deleting record: could not find record id ' + record.id +
+        ' in table ' + record.tableName);
+    return;
+  }
+  if (this.status < 200 || this.status >= 300) {
+    onError('error deleting record: unexpected http status ' + this.status);
+    return;
+  }
+  onSuccess();
 };
 
 },{}],4:[function(require,module,exports){
@@ -2818,11 +3272,13 @@ exports.setStyle = function (blockId, elementId, style) {
 };
 
 exports.onEvent = function (blockId, elementId, eventName, func) {
+  var extraArgs = Array.prototype.slice.call(arguments).slice(4);
   return Applab.executeCmd(blockId,
                           'onEvent',
                           {'elementId': elementId,
                            'eventName': eventName,
-                           'func': func });
+                           'func': func,
+                           'extraArgs': extraArgs});
 };
 
 exports.startWebRequest = function (blockId, url, func) {
@@ -2845,18 +3301,118 @@ exports.clearTimeout = function (blockId, timeoutId) {
                            {'timeoutId': timeoutId });
 };
 
-exports.createSharedRecord = function (blockId, record, callback) {
+exports.playSound = function (blockId, url) {
+  return Applab.executeCmd(blockId,
+                          'playSound',
+                          {'url': url});
+};
+
+exports.readSharedValue = function(blockId, key, onSuccess, onError) {
+  return Applab.executeCmd(blockId,
+                           'readSharedValue',
+                           {'key':key,
+                            'onSuccess': onSuccess,
+                            'onError': onError});
+};
+
+exports.writeSharedValue = function(blockId, key, value, onSuccess, onError) {
+  return Applab.executeCmd(blockId,
+                           'writeSharedValue',
+                           {'key':key,
+                            'value': value,
+                            'onSuccess': onSuccess,
+                            'onError': onError});
+};
+
+exports.createSharedRecord = function (blockId, record, onSuccess, onError) {
   return Applab.executeCmd(blockId,
                           'createSharedRecord',
                           {'record': record,
-                           'callback': callback });
+                           'onSuccess': onSuccess,
+                           'onError': onError});
 };
 
-exports.readSharedRecords = function (blockId, searchParams, callback) {
+exports.readSharedRecords = function (blockId, searchParams, onSuccess, onError) {
   return Applab.executeCmd(blockId,
                           'readSharedRecords',
                           {'searchParams': searchParams,
-                           'callback': callback });
+                           'onSuccess': onSuccess,
+                           'onError': onError});
 };
 
-},{}]},{},[12]);
+exports.updateSharedRecord = function (blockId, record, onSuccess, onError) {
+  return Applab.executeCmd(blockId,
+                          'updateSharedRecord',
+                          {'record': record,
+                           'onSuccess': onSuccess,
+                           'onError': onError});
+};
+
+exports.deleteSharedRecord = function (blockId, record, onSuccess, onError) {
+  return Applab.executeCmd(blockId,
+                          'deleteSharedRecord',
+                          {'record': record,
+                           'onSuccess': onSuccess,
+                           'onError': onError});
+};
+
+exports.turtleMoveForward = function (blockId, distance) {
+  return Applab.executeCmd(blockId,
+                          'turtleMoveForward',
+                          {'distance': distance });
+};
+
+exports.turtleMoveBackward = function (blockId, distance) {
+  return Applab.executeCmd(blockId,
+                          'turtleMoveBackward',
+                          {'distance': distance });
+};
+
+exports.turtleMove = function (blockId, x, y) {
+  return Applab.executeCmd(blockId,
+                          'turtleMove',
+                          {'x': x,
+                           'y': y });
+};
+
+exports.turtleMoveTo = function (blockId, x, y) {
+  return Applab.executeCmd(blockId,
+                          'turtleMoveTo',
+                          {'x': x,
+                           'y': y });
+};
+
+exports.turtleTurnRight = function (blockId, degrees) {
+  return Applab.executeCmd(blockId,
+                          'turtleTurnRight',
+                          {'degrees': degrees });
+};
+
+exports.turtleTurnLeft = function (blockId, degrees) {
+  return Applab.executeCmd(blockId,
+                          'turtleTurnLeft',
+                          {'degrees': degrees });
+};
+
+exports.turtlePenUp = function (blockId) {
+  return Applab.executeCmd(blockId, 'turtlePenUp');
+};
+
+exports.turtlePenDown = function (blockId) {
+  return Applab.executeCmd(blockId, 'turtlePenDown');
+};
+
+exports.turtlePenWidth = function (blockId, width) {
+  return Applab.executeCmd(blockId,
+                          'turtlePenWidth',
+                          {'width': width });
+};
+
+exports.turtlePenColor = function (blockId, color) {
+  return Applab.executeCmd(blockId,
+                          'turtlePenColor',
+                          {'color': color });
+};
+
+
+},{}]},{},[13]);

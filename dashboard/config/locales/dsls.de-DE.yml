@@ -87,6 +87,7 @@
         - 2 * -6: -2 *-6
         Type the arithmetic expression here: Geben Sie hier den mathematischen Ausdruck
           ein
+        -2 * -6: -2 * -6
       Blocks to Math 6:
         Convert Blocks to Math: Konvertiere die Blöcke zu Mathematik
         Type out the arithmetic expression that matches this code: Geben Sie den arithmetischen
@@ -117,47 +118,92 @@
         9-3+4: 
         Type the arithmetic expression here: Geben Sie hier den mathematischen Ausdruck
           ein
+        (9-3)+4*7: (9-3)+4*7
+        9-3+4*7: 9-3+4*7
     contract_match:
+      CREATING CONTRACTS FROM EXAMPLES 1:
+        CREATING CONTRACTS FROM EXAMPLES 1: CREATING CONTRACTS FROM EXAMPLES 1
+        Write a contract for a big red triangle that is 100 pixels in size: Write
+          a contract for a big red triangle that is 100 pixels in size
+        EXAMPLE 1.solution_blocks, 300: EXAMPLE 1.solution_blocks, 300
+        Big Triangle|image|color:string|size:Number: Big Triangle|image|color:string|size:Number
+      Creating Contracts From Examples 2:
+        Creating Contracts From Examples 2: Creating Contracts From Examples 2
+        Write a contract for a purple square that is 15 pixels in size.: Write a contract
+          for a purple square that is 15 pixels in size.
+        Example 2.solution_blocks, 300: Example 2.solution_blocks, 300
+        Square|image|color:string|size:Number: Square|image|color:string|size:Number
+      Creating Contracts From Examples 3A:
+        Creating Contracts From Examples 3A: Creating Contracts From Examples 3A
+        Banner Function block: Banner Function block
+        Examples 3.solution_blocks, 300: Examples 3.solution_blocks, 300
+        banner|image|text:string: banner|image|text:string
+      Creating Contracts From Examples 4:
+        Creating Contracts From Examples 4: Creating Contracts From Examples 4
+        Try using the "text" function to write this red text at size 40.: Try using
+          the "text" function to write this red text at size 40.
+        Examples 4.solution_blocks, 300: Examples 4.solution_blocks, 300
+        shrink|image|image:image: shrink|image|image:image
       Design Recipe 1.contract:
-        Design Recipe 1 Contract: Design Recipe 1 Contract
-        0: '? Write the contract for function called "wide-rect" which creates a rectangle
-          of given height and color that is twice as wide as it is tall.'
-        1: ': Write the contract for function called "wide-rect" which creates a rectangle
-          of given height and color that is twice as wide as it is tall.'
+        Design Recipe 1 Contract: Designvorlage 1 Vertrag
+        0: '? Schreibe den Befehl für die Funktion "wide-rect", welcher ein Rechteck,
+          das doppelt so breit wie hoch ist, mit angegebener Höhe und Farbe erstellt.'
+        1: ': Schreibe den Befehl für die Funktion "wide-rect", welcher ein Rechteck,
+          das doppelt so breit wie hoch ist, mit angegebener Höhe und Farbe erstellt.'
         wide-rect|Image|height:Number|color:string: wide-rect|Image|height:Number|color:string
+        ? Write the contract for function called "wide-rect" which creates a rectangle
+          of given height and color that is twice as wide as it is tall.
+        : Write the contract for function called "wide-rect" which creates a rectangle
+          of given height and color that is twice as wide as it is tall.
       Enter name here:
-        Enter title here: Enter title here
-        Enter prompt here: Enter prompt here
-        Contract Name|Number|Domain1:Number|Domain2:string: Contract Name|Number|Domain1:Number|Domain2:string
+        Enter title here: Titel hier eingeben
+        Enter prompt here: Unverzüglich hier eingeben
+        Contract Name|Number|Domain1:Number|Domain2:string: Vertragsname|Nummer|Bereich1:Nummer|Bereich2:text
       Eval Contracts 1 B:
-        Eval Contracts 1 B: Eval Contracts 1 B
-        Write a contract for the star function: Write a contract for the star function
+        Star Contract: Star Contract
+        Write a contract for the star function: Schreibe einen Befehl für die Sternenfunktion
         Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks,
           300
-        star|image|radius:Number|style:string|color:string: star|image|radius:Number|style:string|color:string
+        star|image|color:string|radius:Number|style:string: star|image|color:string|radius:Number|style:string
       Eval Contracts 2 B:
-        Eval Contracts 2 B: Eval Contracts 2 B
-        Write a contract for the rotate function: Write a contract for the rotate
-          function
-        Eval Contracts 2 A.solution_blocks, 300: Eval Contracts 2 A.solution_blocks,
+        Rotate Contract: Rotate Contract
+        Write a contract for the rotate function: Schreibe einen Befehl für die Rotation
+        Eval Contracts 2 A.solution_blocks, 300: Auswertung Befehle 2 A.Lösung_Blöcke,
           300
-        rotate|image|degrees:Number|image:image: rotate|image|degrees:Number|image:image
+        rotate|image|degrees:Number|image:image: Rotiere|Bild|Grad:Nummer|Bild:Bild
       Eval Contracts 3 B:
-        Eval Contracts 3 B: Eval Contracts 3 B
-        Write a contract for the text function: Write a contract for the text function
-        Eval Contracts 3 A.solution_blocks, 300: Eval Contracts 3 A.solution_blocks,
+        Text Contract: Text Contract
+        Write a contract for the text function: Schreibe einen Befehl für die Textfunktion
+        Eval Contracts 3 A.solution_blocks, 300: Auswertung Befehle 3 A.Lösung_Blöcke,
           300
-        text|image|string:string|size:Number|color:string: text|image|string:string|size:Number|color:string
+        text|image|color:string|size:Number|string:string: text|image|color:string|size:Number|string:string
       Eval Contracts 4 B:
-        Eval Contracts 4 B: Eval Contracts 4 B
-        Write a contract for the scale function: Write a contract for the scale function
-        Eval Contracts 4 A.solution_blocks, 300: Eval Contracts 4 A.solution_blocks,
+        Scale Contract: Scale Contract
+        Write a contract for the scale function: Schreibe einen Befehl für die Messfunktion
+        Eval Contracts 4 A.solution_blocks, 300: Auswertung Befehle 4 A.Lösung_Blöcke,
           300
-        scale|image|factor:Number|image:image: scale|image|factor:Number|image:image
+        scale|image|factor:Number|image:image: Skaliere|Bild|Faktor:Nummer|Bild:Bild
       Eval Design Recipe 1.contract:
-        Design Recipe 1 Contract: Design Recipe 1 Contract
-        0: '? Write the contract for function called "wide-rect" which creates a rectangle
-          of given height and color that is twice as wide as it is tall.'
-        1: ': Write the contract for function called "wide-rect" which creates a rectangle
-          of given height and color that is twice as wide as it is tall.'
+        Design Recipe 1 Contract: Designvorlage 1 Vertrag
+        0: '? Schreibe den Befehl für die Funktion "wide-rect", welcher ein Rechteck,
+          das doppelt so breit wie hoch ist, mit angegebener Höhe und Farbe erstellt.'
+        1: ': Schreibe den Befehl für die Funktion "wide-rect", welcher ein Rechteck,
+          das doppelt so breit wie hoch ist, mit angegebener Höhe und Farbe erstellt.'
         wide-rect|Image|height:Number|color:string: wide-rect|Image|height:Number|color:string
+        ? Write the contract for function called "wide-rect" which creates a rectangle
+          of given height and color that is twice as wide as it is tall.
+        : Write the contract for function called "wide-rect" which creates a rectangle
+          of given height and color that is twice as wide as it is tall.
+      Rocket Contract 1:
+        Contract for rocket-height: Contract for rocket-height
+        'Write a contract for the following question:': 'Write a contract for the
+          following question:'
+        0: '? A rocket blasts off, traveling at 15 meters per second. Write a function
+          called rocket-height that takes in the number of seconds that have passed
+          since the rocket took off, and which produces the height of the rocket at
+          that time.'
+        1: ': A rocket blasts off, traveling at 15 meters per second. Write a function
+          called rocket-height that takes in the number of seconds that have passed
+          since the rocket took off, and which produces the height of the rocket at
+          that time.'
+        rocket-height|Number|seconds:Number: rocket-height|Number|seconds:Number

@@ -77,10 +77,11 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def stage_or_game_total
-    @@stage_or_game_total ||= {}
-    @@stage_or_game_total[self.id] ||=
-      stage ? stage.script_levels.count :
-              script.script_levels_from_game(level.game_id).count
+    if stage
+      script.script_levels.to_a.count {|sl| sl.stage_id == stage_id}
+    else
+      script.script_levels.to_a.count {|sl| sl.level.game_id == level.game_id}
+    end
   end
 
   def self.cache_find(id)

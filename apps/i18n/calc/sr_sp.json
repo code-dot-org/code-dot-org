@@ -2,6 +2,7 @@
   "compute": "рачунај",
   "equivalentExpression": "Покушајте да прерасподелите своје аргументе како би добили идентичан израз.",
   "extraTopBlocks": "Имате неспојене блокове. Да ли сте мислили да спојите ове на блок \"рачунај\"?",
+  "failedInput": "Your function does not return the right result for all values.",
   "goal": "Циљ:",
   "reinfFeedbackMsg": "Ево ваше приче! Наставите да радите на њој, или започните следећи задатак!",
   "yourExpression": "Ваш израз:"

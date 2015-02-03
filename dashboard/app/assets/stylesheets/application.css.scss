@@ -50,7 +50,7 @@ p,pre,span {
 body {
   @include unselectable;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
-  padding: 10px;
+  padding: 0px;
   font-style: normal;
 }
 
@@ -319,8 +319,6 @@ em strong {
   color: $header_text;
   a:link {color:$header_text;}
   a:visited {color:$header_text;}
-  //a:hover {color:#FF00FF;}  /* mouse over link */
-  //a:active {color:#0000FF;}  /* selected link */
 
   #betainfo {
     font-size: 11px;
@@ -360,8 +358,7 @@ a.header_status_bar:hover {
 }
 
 .main {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding: 10px;
   a:link {font-family: 'Gotham 7r', sans-serif; font-weight: normal; color:$dark_color;}
   a:visited {font-family: 'Gotham 7r', sans-serif; font-weight: normal; color:$dark_color;}
   a:hover {font-family: 'Gotham 7r', sans-serif; font-weight: normal; color:$dark_color; background-color: transparent;   text-decoration: underline; }  /* mouse over link */
@@ -431,11 +428,7 @@ html, body {
 }
 
 .user_menu {
-  a:hover { background-color: transparent; text-decoration: none; display: inline-block; }
-}
-
-.user_menu a {
-  vertical-align: bottom;
+  cursor: pointer;
 }
 
 .user_options {
@@ -521,13 +514,6 @@ html, body {
   }
 }
 
-.header_row {
-//  min-height: 85px;
-  @media screen and (max-width: 1150px) {
-//    min-height: 75px;
-  }
-}
-
 .header_logo {
   position: absolute;
   float: left;
@@ -543,6 +529,9 @@ html, body {
     min-width: 55px;
     padding-top: 10px;
     min-width: 0px;
+  }
+  a:hover {
+    background-color: transparent;
   }
 }
 
@@ -635,19 +624,28 @@ html, body {
 
 }
 
-
-.header_user {
+.header_right {
   position: absolute;
   float: left;
   right: 25px;
-  text-align: right;
   margin-top: 9px;
   @media screen and (max-width: 1150px) {
     margin-top: 5px;
   }
+}
+
+.freeplay_links {
+  display: inline-block;
+  text-align: center;
+}
+
+.header_user {
+  display: inline-block;
+  text-align: right;
   background-color: rgb(255, 164, 0);
   border-radius: 5px;
   padding: 7px 14px;
+  margin-left: 5px;
   font-size: 14px;
   line-height: 20px;
   box-sizing: border-box;
@@ -657,13 +655,13 @@ html, body {
   }
 }
 .header_popup {
-  display:none;
-  top:auto;
-  position:absolute;
-  left:50%;
-  width:635px;
-  margin-left:-337px;
-  margin-top:-20px;
+  display: none;
+  position: absolute;
+  top: auto;
+  right: 0;
+  left: 0;
+  margin: 20px auto;
+  width: 635px;
   border: 20px solid $bkgnd_color;
   border-top: 5px;
   border-bottom: 5px;
@@ -689,6 +687,7 @@ html, body {
   overflow-y: auto;
   display: block;
   min-height: 1100px;
+  color: #333;
 
   .loading {
     height: 400px;
@@ -715,19 +714,8 @@ html, body {
   cursor: pointer;
 }
 
-.transparent_backdrop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1040;
-  background-color: transparent;
-}
-
-.header_trophy_link:hover {
-  background-color: transparent;
-  text-decoration: none;
+.header_trophy_link {
+  cursor: pointer;
 }
 
 .header_finished_link {
@@ -1169,11 +1157,16 @@ a.download-video {
   background-color:#ddd;
   height:100px;
   .heading {
-    -moz-box-sizing:border-box; box-sizing:border-box; padding: 10px 0px 10px 0px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px 0px 10px 0px;
   }
   h3 {
     margin: 0;
-    color:rgb(88, 103, 113);
+    color: rgb(88, 103, 113);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .smalltext {
     font-size:13px;

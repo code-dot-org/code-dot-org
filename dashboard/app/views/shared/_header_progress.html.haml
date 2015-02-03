@@ -1,48 +1,23 @@
 .header_level
-  %div{class: 'header_level_container'}
+  %div.header_level_container
     .header_text
     .progress_container
     .header_finished_link{style: 'display: none;'}
-    %a.header_trophy_link{style: 'display: none;', href: '#', onclick: 'return handlePopupClick(true);'}
+    %span.header_trophy_link{style: 'display: none;'}
       .header_text= t(:trophies)
       .header_status_bar.current_trophies
       .header_text.max_trophies
-    %span.stage_links{style: 'display: none;'}
-      %a.header_status_bar.level_free_play{title: t('nav.header.free_play.playlab'), href: playlab_freeplay_path}
-        %i.fa.fa-rocket
-      %a.header_status_bar.level_free_play{title: t('nav.header.free_play.artist'), href: artist_freeplay_path}
-        %i.fa.fa-pencil
-      %a.header_popup_link{href: '#', onclick: 'return handlePopupClick(false);'}
-        .header_popup_link_glyph
-          &#x25BC;
-        .header_popup_link_text= t(:more)
+    %span.header_popup_link{style: 'display: none;'}
+      .header_popup_link_glyph
+        &#x25BC;
+      .header_popup_link_text= t(:more)
 
-:javascript
-  //<![CDATA[
-  var scriptData = #{header_progress(@script_level).to_json};
-  $('.header_text').first().text(scriptData.title);
-  if (scriptData.finishLink) {
-    $('.header_finished_link').show().append($('<a>').attr('href', scriptData.finishLink.href).text(scriptData.finishLink.text));
-  }
-  if (scriptData.showStageLinks) {
-    $('.stage_links').show();
-  }
-  if (scriptData.trophies) {
-    $('.header_trophy_link').show();
-    $('.header_trophy_link .current_trophies').text(scriptData.trophies.current);
-    $('.header_trophy_link .max_trophies').text(scriptData.trophies.of + ' ' + scriptData.trophies.max);
-  }
-  var progressContainer = $('.progress_container');
-  scriptData.levels.forEach(function(level, index, levels) {
-    var defaultClass = level.assessment ? 'puzzle_outer_assessment' : 'puzzle_outer_level';
-    var link = $('<a>').attr('href', level.link).addClass('level_link').addClass(level.status).text(level.displayText);
-    if (level.unplugged) {
-      link.addClass('unplugged_level');
-    }
-    var div = $('<div>').addClass(index === scriptData.currentLevelIndex ? 'puzzle_outer_current' : defaultClass).append(link);
-    if (index === levels.length - 1) {
-      div.addClass('last');
-    }
-    progressContainer.append(div).append('\n');
-  });
-  //]]>
+.header_popup
+  .header_popup_header
+    %span= t('nav.popup.progress')
+    .header_text{style: 'float: right;'}
+  .header_popup_body
+    .loading
+  .header_popup_footer
+    .header_popup_close
+      = t('nav.popup.close')

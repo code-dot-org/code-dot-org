@@ -18,6 +18,7 @@ var page = require('../templates/page.html');
 var dom = require('../dom');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
+var dropletConfig = require('./dropletConfig');
 var Slider = require('../slider');
 var AppStorage = require('./appStorage');
 var FormStorage = require('./formStorage');
@@ -60,10 +61,18 @@ var StepType = {
   OUT:  3,
 };
 
+// The typical width of the visualization area (indepdendent of appWidth)
+var vizAppWidth = 400;
+// The default values for appWidth and appHeight (if not specified in the level)
+var defaultAppWidth = 400;
+var defaultAppHeight = 400;
+
 function loadLevel() {
   Applab.timeoutFailureTick = level.timeoutFailureTick || Infinity;
   Applab.minWorkspaceHeight = level.minWorkspaceHeight;
   Applab.softButtons_ = level.softButtons || {};
+  Applab.appWidth = level.appWidth || defaultAppWidth;
+  Applab.appHeight = level.appHeight || defaultAppHeight;
 
   // Override scalars.
   for (var key in level.scale) {
@@ -71,15 +80,96 @@ function loadLevel() {
   }
 }
 
+//
+// The visualization area adjusts its size using a series of CSS rules that are
+// tuned to make adjustments assuming a 400x400 visualization. Since applab
+// allows its visualization size to be set on a per-level basis, the function
+// below modifies the CSS rules to account for the per-level coordinates
+//
+// The visualization column will remain at 400 pixels wide in the max-width
+// case and scale downward from there. The visualization height will be set
+// to preserve the proper aspect ratio with respect to the current width.
+//
+// The divApplab coordinate space will be Applab.appWidth by Applab.appHeight.
+// The scale values are then adjusted such that the max-width case may result
+// in a scaled-up version of divApplab and the min-width case will typically
+// result in a scaled-down version of divApplab
+//
+
+function adjustAppSizeStyles() {
+  var vizScale = 1;
+  // We assume these are listed in this order:
+  var scaleFactors = [ 1.0, 0.875, 0.75, 0.675, 0.5 ];
+  if (vizAppWidth !== Applab.appWidth) {
+    vizScale = vizAppWidth / Applab.appWidth;
+    for (var ind = 0; ind < scaleFactors.length; ind++) {
+      scaleFactors[ind] *= vizScale;
+    }
+  }
+  var vizAppHeight = Applab.appHeight * vizScale;
+  var ss = document.styleSheets;
+  for (var i = 0; i < ss.length; i++) {
+    if (ss[i].href && (ss[i].href.indexOf('applab.css') !== -1)) {
+      // We found our applab specific stylesheet:
+      var rules = ss[i].cssRules || ss[i].rules;
+      var changedRules = 0;
+      var curScaleIndex = 0;
+      // Change the width/height plus a set of rules for each scale factor:
+      var totalRules = 1 + scaleFactors.length;
+      for (var j = 0; j < rules.length && changedRules < totalRules; j++) {
+        var childRules = rules[j].cssRules || rules[j].rules;
+        if (rules[j].selectorText === "div#visualization") {
+          // set the 'normal' width/height for the visualization itself
+          rules[j].style.cssText = "height: " + vizAppHeight +
+                                   "px; width: " + vizAppWidth + "px;";
+          changedRules++;
+        } else if (rules[j].media && childRules) {
+          var changedChildRules = 0;
+          var scale = scaleFactors[curScaleIndex];
+          for (var k = 0; k < childRules.length && changedChildRules < 3; k++) {
+            if (childRules[k].selectorText === "div#visualization.responsive") {
+              // For this scale factor...
+              // set the max-height and max-width for the visualization
+              childRules[k].style.cssText = "max-height: " +
+                  Applab.appHeight * scale + "px; max-width: " +
+                  Applab.appWidth * scale + "px;";
+              changedChildRules++;
+            } else if (childRules[k].selectorText === "div#visualizationColumn.responsive") {
+              // set the max-width for the parent visualizationColumn
+              childRules[k].style.cssText = "max-width: " +
+                  Applab.appWidth * scale + "px;";
+              changedChildRules++;
+            } else if (childRules[k].selectorText === "div#visualization.responsive > *") {
+              // and set the scale factor for all children of the visualization
+              // (importantly, the divApplab element)
+              childRules[k].style.cssText = "-webkit-transform: scale(" + scale +
+                  ");-ms-transform: scale(" + scale +
+                  ");transform: scale(" + scale + ");";
+              changedChildRules++;
+            }
+          }
+          if (changedChildRules) {
+            curScaleIndex++;
+            changedRules++;
+          }
+        }
+      }
+      // After processing the applab.css, stop looking for stylesheets:
+      break;
+    }
+  }
+}
+
 var drawDiv = function () {
   var divApplab = document.getElementById('divApplab');
-  var divWidth = parseInt(window.getComputedStyle(divApplab).width, 10);
+  divApplab.style.width = Applab.appWidth + "px";
+  divApplab.style.height = Applab.appHeight + "px";
 
   // TODO: one-time initial drawing
 
   // Adjust visualizationColumn width.
   var visualizationColumn = document.getElementById('visualizationColumn');
-  visualizationColumn.style.width = divWidth + 'px';
+  visualizationColumn.style.width = vizAppWidth + 'px';
 };
 
 function getCurrentTickLength() {
@@ -423,7 +513,13 @@ Applab.init = function(config) {
     config.level.sliderSpeed = 1.0;
   }
 
-  Applab.canvasScale = (window.devicePixelRatio > 1) ? window.devicePixelRatio : 1;
+  // If we are in mobile sharing mode, allow the viewport to handle scaling
+  // and override our default width target in vizAppWidth with the actual width
+  if (dom.isMobile() && config.hideSource) {
+    vizAppWidth = Applab.appWidth;
+  }
+
+  adjustAppSizeStyles();
 
   var showSlider = !config.hideSource && config.level.editCode;
   var showDebugButtons = !config.hideSource && config.level.editCode;
@@ -496,6 +592,11 @@ Applab.init = function(config) {
         e.stop();
       });
     }
+    
+    if (studioApp.share) {
+      // automatically run in share mode:
+      window.setTimeout(studioApp.runButtonClick.bind(studioApp), 0);
+    }
   };
 
   // arrangeStartBlocks(config);
@@ -507,6 +608,12 @@ Applab.init = function(config) {
 
   config.varsInGlobals = true;
   config.noButtonsBelowOnMobileShare = true;
+
+  config.dropletConfig = dropletConfig;
+
+  // Since the app width may not be 400, set this value in the config to
+  // ensure that the viewport is set up properly for scaling it up/down
+  config.mobileNoPaddingShareWidth = config.level.appWidth;
 
   // Applab.initMinimal();
 
@@ -547,11 +654,6 @@ Applab.init = function(config) {
     if (viewDataButton) {
       dom.addClickTouchEvent(viewDataButton, Applab.onViewData);
     }
-  }
-
-  if (studioApp.share) {
-    // automatically run in share mode:
-    window.setTimeout(studioApp.runButtonClick, 0);
   }
 };
 
@@ -601,6 +703,11 @@ studioApp.reset = function(first) {
   }
 
   // Reset configurable variables
+  Applab.turtle = {};
+  Applab.turtle.heading = 0;
+  Applab.turtle.x = Applab.appWidth / 2;
+  Applab.turtle.y = Applab.appHeight / 2;
+
   var divApplab = document.getElementById('divApplab');
 
   while (divApplab.firstChild) {
@@ -727,9 +834,8 @@ var defineProcedures = function (blockType) {
   var code = Blockly.Generator.blockSpaceToCode('JavaScript', blockType);
   // TODO: handle editCode JS interpreter
   try { codegen.evalWith(code, {
-                         codeFunctions: level.codeFunctions,
                          studioApp: studioApp,
-                         Studio: api,
+                         Applab: api,
                          Globals: Applab.Globals } ); } catch (e) { }
 };
 
@@ -779,6 +885,10 @@ JSONApi.parse = function(text) {
   return JSON.parse(text);
 };
 
+JSONApi.stringify = function(object) {
+  return JSON.stringify(object);
+};
+
 // Commented out, but available in case we want to expose the droplet/pencilcode
 // style random (with a min, max value)
 /*
@@ -814,8 +924,8 @@ Applab.execute = function() {
 
   var codeWhenRun;
   if (level.editCode) {
-    codeWhenRun = utils.generateCodeAliases(level.codeFunctions, 'Applab');
-    codeWhenRun += utils.generateCodeAliases(mathFunctions, 'Math');
+    codeWhenRun = utils.generateCodeAliases(level.codeFunctions, dropletConfig, 'Applab');
+    codeWhenRun += utils.generateCodeAliases(mathFunctions, null, 'Math');
     Applab.userCodeStartOffset = codeWhenRun.length;
     Applab.userCodeLineOffset = codeWhenRun.split("\n").length - 1;
     codeWhenRun += studioApp.editor.getValue();
@@ -954,7 +1064,7 @@ Applab.encodedFeedbackImage = '';
 
 Applab.onViewData = function() {
   window.open(
-    '//' + getPegasusHost() + '/edit-csp-app/' + AppStorage.tempAppId,
+    '//' + getPegasusHost() + '/private/edit-csp-app/' + AppStorage.tempEncryptedAppId,
     '_blank');
 };
 
@@ -1035,66 +1145,14 @@ Applab.executeCmd = function (id, name, opts) {
 };
 
 //
-// Execute a command from a command queue
-//
-// Return false if the command is not complete (it will remain in the queue)
-// and this function will be called again with the same command later
-//
-// Return true if the command is complete
+// Execute an API command
 //
 
 Applab.callCmd = function (cmd) {
-  var retVal = true;
-  switch (cmd.name) {
-    /*
-    case 'wait':
-      if (!cmd.opts.started) {
-        studioApp.highlight(cmd.id);
-      }
-      return Studio.wait(cmd.opts);
-    */
-    case 'createHtmlBlock':
-    case 'replaceHtmlBlock':
-    case 'deleteHtmlBlock':
-    case 'createButton':
-    case 'createImage':
-    case 'createCanvas':
-    case 'canvasDrawLine':
-    case 'canvasDrawCircle':
-    case 'canvasDrawRect':
-    case 'canvasSetLineWidth':
-    case 'canvasSetStrokeColor':
-    case 'canvasSetFillColor':
-    case 'canvasDrawImage':
-    case 'canvasGetImageData':
-    case 'canvasPutImageData':
-    case 'canvasClear':
-    case 'createTextInput':
-    case 'createTextLabel':
-    case 'createCheckbox':
-    case 'createRadio':
-    case 'createDropdown':
-    case 'getAttribute':
-    case 'setAttribute':
-    case 'getText':
-    case 'setText':
-    case 'getChecked':
-    case 'setChecked':
-    case 'getImageURL':
-    case 'setImageURL':
-    case 'createImageUploadButton':
-    case 'setPosition':
-    case 'setParent':
-    case 'setStyle':
-    case 'onEvent':
-    case 'startWebRequest':
-    case 'setTimeout':
-    case 'clearTimeout':
-    case 'createSharedRecord':
-    case 'readSharedRecords':
-      studioApp.highlight(cmd.id);
-      retVal = Applab[cmd.name](cmd.opts);
-      break;
+  var retVal = false;
+  if (Applab[cmd.name] instanceof Function) {
+    studioApp.highlight(cmd.id);
+    retVal = Applab[cmd.name](cmd.opts);
   }
   return retVal;
 };
@@ -1154,6 +1212,96 @@ Applab.createImageUploadButton = function (opts) {
                  divApplab.appendChild(newLabel));
 };
 
+function getTurtleContext() {
+  var canvas = document.getElementById('turtleCanvas');
+
+  if (!canvas) {
+    var opts = { 'elementId': 'turtleCanvas' };
+    Applab.createCanvas(opts);
+    canvas = document.getElementById('turtleCanvas');
+  }
+
+  return canvas.getContext("2d");
+}
+
+Applab.turtleMoveTo = function (opts) {
+  var ctx = getTurtleContext();
+  if (ctx) {
+    ctx.beginPath();
+    ctx.moveTo(Applab.turtle.x, Applab.turtle.y);
+    Applab.turtle.x = opts.x;
+    Applab.turtle.y = opts.y;
+    ctx.lineTo(Applab.turtle.x, Applab.turtle.y);
+    ctx.stroke();
+  }
+};
+
+Applab.turtleMove = function (opts) {
+  var newOpts = {};
+  newOpts.x = Applab.turtle.x + opts.x;
+  newOpts.y = Applab.turtle.y + opts.y;
+  Applab.turtleMoveTo(newOpts);
+};
+
+Applab.turtleMoveForward = function (opts) {
+  var newOpts = {};
+  newOpts.x = Applab.turtle.x +
+    opts.distance * Math.sin(2 * Math.PI * Applab.turtle.heading / 360);
+  newOpts.y = Applab.turtle.y -
+      opts.distance * Math.cos(2 * Math.PI * Applab.turtle.heading / 360);
+  Applab.turtleMoveTo(newOpts);
+};
+
+Applab.turtleMoveBackward = function (opts) {
+  opts.distance = -opts.distance;
+  Applab.turtleMoveForward(opts);
+};
+
+Applab.turtleTurnRight = function (opts) {
+  Applab.turtle.heading += opts.degrees;
+  Applab.turtle.heading = (Applab.turtle.heading + 360) % 360;
+};
+
+Applab.turtleTurnLeft = function (opts) {
+  opts.degrees = -opts.degrees;
+  Applab.turtleTurnRight(opts);
+};
+
+Applab.turtlePenUp = function (opts) {
+  var ctx = getTurtleContext();
+  if (ctx) {
+    Applab.turtle.penUpColor = ctx.strokeStyle;
+    ctx.strokeStyle = "rgba(255, 255, 255, 0)";
+  }
+};
+
+Applab.turtlePenDown = function (opts) {
+  var ctx = getTurtleContext();
+  if (ctx && Applab.turtle.penUpColor) {
+    ctx.strokeStyle = Applab.turtle.penUpColor;
+    delete Applab.turtle.penUpColor;
+  }
+};
+
+Applab.turtlePenWidth = function (opts) {
+  var ctx = getTurtleContext();
+  if (ctx) {
+    ctx.lineWidth = opts.width;
+  }
+};
+
+Applab.turtlePenColor = function (opts) {
+  var ctx = getTurtleContext();
+  if (ctx) {
+    if (Applab.turtle.penUpColor) {
+      // pen is currently up, store this color for pen down
+      Applab.turtle.penUpColor = opts.color;
+    } else {
+      ctx.strokeStyle = opts.color;
+    }
+  }
+};
+
 Applab.createCanvas = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
@@ -1162,10 +1310,10 @@ Applab.createCanvas = function (opts) {
   if (newElement && ctx) {
     newElement.id = opts.elementId;
     // default width/height if params are missing
-    var width = opts.width || 400;
-    var height = opts.height || 600;
-    newElement.width = width * Applab.canvasScale;
-    newElement.height = height * Applab.canvasScale;
+    var width = opts.width || Applab.appWidth;
+    var height = opts.height || Applab.appHeight;
+    newElement.width = width;
+    newElement.height = height;
     newElement.style.width = width + 'px';
     newElement.style.height = height + 'px';
     // set transparent fill by default:
@@ -1182,8 +1330,8 @@ Applab.canvasDrawLine = function (opts) {
   var ctx = canvas.getContext("2d");
   if (ctx && divApplab.contains(canvas)) {
     ctx.beginPath();
-    ctx.moveTo(opts.x1 * Applab.canvasScale, opts.y1 * Applab.canvasScale);
-    ctx.lineTo(opts.x2 * Applab.canvasScale, opts.y2 * Applab.canvasScale);
+    ctx.moveTo(opts.x1, opts.y1);
+    ctx.lineTo(opts.x2, opts.y2);
     ctx.stroke();
     return true;
   }
@@ -1196,11 +1344,7 @@ Applab.canvasDrawCircle = function (opts) {
   var ctx = canvas.getContext("2d");
   if (ctx && divApplab.contains(canvas)) {
     ctx.beginPath();
-    ctx.arc(opts.x * Applab.canvasScale,
-            opts.y * Applab.canvasScale,
-            opts.radius * Applab.canvasScale,
-            0,
-            2 * Math.PI);
+    ctx.arc(opts.x, opts.y, opts.radius, 0, 2 * Math.PI);
     ctx.fill();
     ctx.stroke();
     return true;
@@ -1214,10 +1358,7 @@ Applab.canvasDrawRect = function (opts) {
   var ctx = canvas.getContext("2d");
   if (ctx && divApplab.contains(canvas)) {
     ctx.beginPath();
-    ctx.rect(opts.x * Applab.canvasScale,
-             opts.y * Applab.canvasScale,
-             opts.width * Applab.canvasScale,
-             opts.height * Applab.canvasScale);
+    ctx.rect(opts.x, opts.y, opts.width, opts.height);
     ctx.fill();
     ctx.stroke();
     return true;
@@ -1230,7 +1371,7 @@ Applab.canvasSetLineWidth = function (opts) {
   var canvas = document.getElementById(opts.elementId);
   var ctx = canvas.getContext("2d");
   if (ctx && divApplab.contains(canvas)) {
-    ctx.lineWidth = opts.width * Applab.canvasScale;
+    ctx.lineWidth = opts.width;
     return true;
   }
   return false;
@@ -1276,7 +1417,7 @@ Applab.canvasDrawImage = function (opts) {
   var ctx = canvas.getContext("2d");
   if (ctx && divApplab.contains(canvas) && divApplab.contains(image)) {
     var xScale, yScale;
-    xScale = yScale = Applab.canvasScale;
+    xScale = yScale = 1;
     if (opts.width) {
       xScale = xScale * (opts.width / image.width);
     }
@@ -1284,12 +1425,7 @@ Applab.canvasDrawImage = function (opts) {
       yScale = yScale * (opts.height / image.height);
     }
     ctx.save();
-    ctx.setTransform(xScale,
-                     0,
-                     0,
-                     yScale,
-                     opts.x * Applab.canvasScale,
-                     opts.y * Applab.canvasScale);
+    ctx.setTransform(xScale, 0, 0, yScale, opts.x, opts.y);
     ctx.drawImage(image, 0, 0);
     ctx.restore();
     return true;
@@ -1302,10 +1438,7 @@ Applab.canvasGetImageData = function (opts) {
   var canvas = document.getElementById(opts.elementId);
   var ctx = canvas.getContext("2d");
   if (ctx && divApplab.contains(canvas)) {
-    return ctx.getImageData(opts.x * Applab.canvasScale,
-                            opts.y * Applab.canvasScale,
-                            opts.width * Applab.canvasScale,
-                            opts.height * Applab.canvasScale);
+    return ctx.getImageData(opts.x, opts.y, opts.width, opts.height);
   }
 };
 
@@ -1319,9 +1452,7 @@ Applab.canvasPutImageData = function (opts) {
     var tmpImageData = ctx.createImageData(opts.imageData.width,
                                            opts.imageData.height);
     tmpImageData.data.set(opts.imageData.data);
-    return ctx.putImageData(tmpImageData,
-                            opts.x * Applab.canvasScale,
-                            opts.y * Applab.canvasScale);
+    return ctx.putImageData(tmpImageData, opts.x, opts.y);
   }
 };
 
@@ -1489,6 +1620,16 @@ Applab.setImageURL = function (opts) {
   return false;
 };
 
+Applab.playSound = function (opts) {
+  if (studioApp.cdoSounds) {
+    studioApp.cdoSounds.playURL(opts.url,
+                               {volume: 1.0,
+                                forceHTML5: true,
+                                allowHTML5Mobile: true
+    });
+  }
+};
+
 Applab.replaceHtmlBlock = function (opts) {
   var divApplab = document.getElementById('divApplab');
   var oldDiv = document.getElementById(opts.elementId);
@@ -1552,7 +1693,7 @@ Applab.onEventFired = function (opts, e) {
     // of just the 'e' parameter
     Applab.eventQueue.push({
       'fn': opts.func,
-      'arguments': [e]
+      'arguments': [e].concat(opts.extraArgs)
     });
   } else {
     Applab.eventQueue.push({'fn': opts.func});
@@ -1642,33 +1783,106 @@ Applab.clearTimeout = function (opts) {
 };
 
 Applab.createSharedRecord = function (opts) {
-  var record = codegen.marshalInterpreterToNative(Applab.interpreter,
-      opts.record);
-  AppStorage.createSharedRecord(record,
-      Applab.handleCreateSharedRecord.bind(this, opts.callback));
+  var onSuccess = Applab.handleCreateSharedRecord.bind(this, opts.onSuccess);
+  var onError = Applab.handleError.bind(this, opts.onError);
+  AppStorage.createSharedRecord(opts.record, onSuccess, onError);
 };
 
-Applab.handleCreateSharedRecord = function(interpreterCallback, record) {
-  Applab.eventQueue.push({
-    'fn': interpreterCallback,
-    'arguments': [record]
-  });
+Applab.handleCreateSharedRecord = function(successCallback, record) {
+  if (successCallback) {
+    Applab.eventQueue.push({
+      'fn': successCallback,
+      'arguments': [record]
+    });
+  }
+};
+
+Applab.handleError = function(errorCallback, message) {
+  if (errorCallback) {
+    Applab.eventQueue.push({
+      'fn': errorCallback,
+      'arguments': [message]
+    });
+  } else {
+    outputApplabConsole(message);
+  }
+};
+
+Applab.readSharedValue = function(opts) {
+  var onSuccess = Applab.handleReadSharedValue.bind(this, opts.onSuccess);
+  var onError = Applab.handleError.bind(this, opts.onError);
+  AppStorage.readSharedValue(opts.key, onSuccess, onError);
+};
+
+Applab.handleReadSharedValue = function(successCallback, value) {
+  if (successCallback) {
+    Applab.eventQueue.push({
+      'fn': successCallback,
+      'arguments': [value]
+    });
+  }
+};
+
+Applab.writeSharedValue = function(opts) {
+  var onSuccess = Applab.handleWriteSharedValue.bind(this, opts.onSuccess);
+  var onError = Applab.handleError.bind(this, opts.onError);
+  AppStorage.writeSharedValue(opts.key, opts.value, onSuccess, onError);
+};
+
+Applab.handleWriteSharedValue = function(successCallback) {
+  if (successCallback) {
+    Applab.eventQueue.push({
+      'fn': successCallback,
+      'arguments': []
+    });
+  }
 };
 
 Applab.readSharedRecords = function (opts) {
-  var searchParams = codegen.marshalInterpreterToNative(Applab.interpreter,
-      opts.searchParams);
-  AppStorage.readSharedRecords(
-      searchParams,
-      Applab.handleReadSharedRecords.bind(this, opts.callback));
+  var onSuccess = Applab.handleReadSharedRecords.bind(this, opts.onSuccess);
+  var onError = Applab.handleError.bind(this, opts.onError);
+  AppStorage.readSharedRecords(opts.searchParams, onSuccess, onError);
 };
 
-Applab.handleReadSharedRecords = function(interpreterCallback, records) {
-  Applab.eventQueue.push({
-    'fn': interpreterCallback,
-    'arguments': [records]
-  });
+Applab.handleReadSharedRecords = function(successCallback, records) {
+  if (successCallback) {
+    Applab.eventQueue.push({
+      'fn': successCallback,
+      'arguments': [records]
+    });
+  }
 };
+
+Applab.updateSharedRecord = function (opts) {
+  var onSuccess = Applab.handleUpdateSharedRecord.bind(this, opts.onSuccess);
+  var onError = Applab.handleError.bind(this, opts.onError);
+  AppStorage.updateSharedRecord(opts.record, onSuccess, onError);
+};
+
+Applab.handleUpdateSharedRecord = function(successCallback) {
+  if (successCallback) {
+    Applab.eventQueue.push({
+      'fn': successCallback,
+      'arguments': []
+    });
+  }
+};
+
+Applab.deleteSharedRecord = function (opts) {
+  var onSuccess = Applab.handleDeleteSharedRecord.bind(this, opts.onSuccess);
+  var onError = Applab.handleError.bind(this, opts.onError);
+  AppStorage.deleteSharedRecord(opts.record, onSuccess, onError);
+};
+
+Applab.handleDeleteSharedRecord = function(successCallback) {
+  if (successCallback) {
+    Applab.eventQueue.push({
+      'fn': successCallback,
+      'arguments': []
+    });
+  }
+};
+
 
 /*
 var onWaitComplete = function (opts) {
@@ -1741,7 +1955,7 @@ var getPegasusHost = function() {
       var name = window.location.hostname.split('.')[0];
       switch(name) {
         case 'localhost':
-          return 'localhost.code.org:9393';
+          return 'localhost.code.org:3000';
         case 'development':
         case 'staging':
         case 'test':

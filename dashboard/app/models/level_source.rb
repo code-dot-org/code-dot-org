@@ -15,34 +15,27 @@ class LevelSource < ActiveRecord::Base
   # A level_source is considered to be standardized if it does not have this.
   XMLNS_STRING = ' xmlns="http://www.w3.org/1999/xhtml"'
 
-  def LevelSource.cache_enabled?
-    false
-#    @@cache_enabled ||= false
-#    rack_env?(:production) || @@cache_enabled
+  def LevelSource.cache_key(level_id, md5)
+    "#{level_id}-#{md5}"
   end
 
-  def LevelSource.level_source_cache()
-    @@level_sources_redis ||= rack_env?(:production) ? Redis.connect(url:CDO.level_sources_redis_url) : Hash.new
-  end
-
-  def self.find_identical_or_create(level, data)
+  def LevelSource.find_identical_or_create(level, data)
     md5 = Digest::MD5.hexdigest(data)
 
-    redis_key = "v6-#{level.id}-#{md5}"
-
-    marshalled = LevelSource.level_source_cache[redis_key] if LevelSource.cache_enabled?
-    level_source_object = Marshal.load(marshalled) if marshalled
-
-    unless level_source_object
-      level_source_object = self.where(level: level, md5: md5).first_or_create do |ls|
+    Rails.cache.fetch(cache_key(level.id, md5)) do
+      LevelSource.where(level: level, md5: md5).first_or_create do |ls|
         ls.data = data
       end
-      return nil unless level_source_object
-
-      LevelSource.level_source_cache[redis_key] = Marshal.dump(level_source_object) if LevelSource.cache_enabled?
     end
+  end
 
-    level_source_object
+  # we can't just use an association :through the activities
+  # association because of the way the indexes on activities work (we
+  # need to add level_id to the query)
+  def gallery_activities
+    GalleryActivity.
+      joins('inner join activities on activities.id = gallery_activities.activity_id').
+      where('activities.level_id' => level_id, 'activities.level_source_id' => id)
   end
 
   def standardized?
@@ -110,7 +103,6 @@ class LevelSource < ActiveRecord::Base
     result
   end
 
-  public
   def get_crowdsourced_hint
     return nil if I18n.locale != :'en-us'
     get_hint_from_source_internal(including: LevelSourceHint::CROWDSOURCED)

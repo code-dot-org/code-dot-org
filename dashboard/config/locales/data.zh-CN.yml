@@ -50,7 +50,7 @@
           desc: |
             编辑代码 (测试版)
           MazeEC: 第一阶段
-          Webapp: 第二阶段
+          Applab: 第二阶段
           ArtistEC: 第三阶段
           StudioEC: 第四阶段
         events:
@@ -105,6 +105,8 @@
         ArtistEC: 艺术家
         TextMatch: 文本匹配
         StudioEC: 播放实验室
+        Applab: App Lab
+        NetSim: Internet Simulator
     trophy:
       name:
         Bronze: 铜色
@@ -330,7 +332,7 @@
         maze_wordsearch_k_15: 把我向这边 然后向另一边移动来拼寫單詞ABOVE
         maze_wordsearch_k_16: 把我向这边 然后向另一边移动来拼寫單詞BELOW
         maze_wordsearch_k_20: 试验以下！先把我往一个方向移动，然后再往另一个方向移动，为了打出 《STORY》这个字
-        webapp_ec_simple: 使用 createHtmlBlock 来创建你的 web app。
+        applab_ec_simple: Create your app by using the blocks in the toolbox.
         turtle_ec_1_2: 现在，画个正方形。注意：从新的《penColor》模块中选用你最喜欢的颜色。
         turtle_ec_1_10: 你成功了！现在任由你随意画你喜欢的东西。你可以尝试画个火柴人、雪花、旋螺型或其他有趣的图画。还有，可别忘了试用新的
           penWidth 模块哦！玩乐愉快！
@@ -442,13 +444,13 @@
         Unplug9: Relay programming
         Unplug10: Internet
         Unplug11: 总结
-        C1_happy_maps_unplugged: Happy Maps
-        C1_moveitmoveit_unplugged: Move It, Move It
-        C1_bigevent_unplugged: The Big Event
-        C1_getting_loopy: Getting Loopy
+        C1_happy_maps_unplugged: 幸福地图
+        C1_moveitmoveit_unplugged: 移动它，移动它！
+        C1_bigevent_unplugged: 大事件
+        C1_getting_loopy: 越来越糊涂
         C1_pair_programming: Pair Programming
-        C1_maze_intro_sequencing: Maze Sequencing Intro
-        C1_maze_debugging: Maze Debugging
+        C1_maze_intro_sequencing: 迷宫测序介绍
+        C1_maze_debugging: 迷宫： 调试中
         C1_bee_level_intro: Bee Level - Intro
         C1_artist_intro: 艺术家简介
         C1_spelling_bee_intro: Spelling Bee Intro
@@ -456,9 +458,9 @@
         C1_bee_loops: Bee Loops
         C1_maze_loops: Maze Loops
         C1_playlab_storytelling: Play Lab - Create a Story
-        C1_planting_seed: Planting a Seed
-        C1_building_foundation: Building a Foundation
-        C1_going_places_safely: Going Places Safely
+        C1_planting_seed: 种植一颗种子
+        C1_building_foundation: 打基础
+        C1_going_places_safely: 去安全的地方
         C2_maze_intro: 迷宫简介
         C2_artist_intro: 艺术家简介
         C2_zuck_repeat_loop: Maze Loops
@@ -472,7 +474,7 @@
         C2_conditionals_with_cards: 条件语句
         C2_binary_bracelets: Binary Bracelets
         C2_relay_programming: 编程接力
-        C2_paper_airplanes: Paper Airplanes
+        C2_paper_airplanes: 纸飞机
         C2_digital_footprint: Your Digital Footprint
         C3_maze_level_4: Maze Loops
         C3_artist_intro: 艺术家简介
@@ -480,9 +482,9 @@
         C3_bee_functions: Bee Functions
         C3_bee_conditionals: Bee Conditionals
         C3_maze_conditionals: Maze Conditionals
-        C3_artist_nested_loops: Nested Loops
-        C3_farmer_while: While Loops
-        C3_bee_nested_loops: Nested Loops
+        C3_artist_nested_loops: 循环嵌套
+        C3_farmer_while: While循环
+        C3_bee_nested_loops: 循环嵌套
         C3_bee_debugging: 蜜蜂调试
         C3_bounce: 跳
         C3_playlab_create_game: Play Lab - Create a Game
@@ -507,9 +509,9 @@
         C4_unplugged_variables: Variables in Envelopes
         C4_unplugged_forloops: For Loops
         C4_unplugged_parameters: Songwriting with Parameters
-        C4_unplugged_binary: Binary
+        C4_unplugged_binary: 二进制
         frozen_intro: Hour of Code Intro
-        frozen_loops: Introduction to Loops
+        frozen_loops: 循环介绍
         frozen_functions: Introduction to Functions
         playlab_intro: Introduction to Play Lab
         playlab_events: Play Lab Events

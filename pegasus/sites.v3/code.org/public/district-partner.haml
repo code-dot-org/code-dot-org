@@ -27,10 +27,10 @@ rightbar: blank
     %a{href: "http://batchgeo.com/map/7fb0d312c4dbb83afff851981935957a"} Here is a map
     showing which districts have expressed interest in our program.
   %p.form-intro-text
-    We’re thrilled that you’re interested in partnering your district with Code.org. We are currently in our pilot year for the 2014-2015 school year and evaluating expansion for the 2015-2016 school year. By filling out this form you will be added to our list of districts to contact for
+    We’re thrilled that you’re interested in partnering your district with Code.org. We are currently accepting applications for the 2016-2017 school year as expansion for the 2015-2016 school year is now closed. By filling out this form you will be added to our list of districts to contact for
     %b
       %i potential
-    partnerships in the 2015-2016 school year. Completion does not mean guaranteed acceptance into our program as we have limited capacity. 
+    partnerships in the 2016-2017 school year. Completion does not mean guaranteed acceptance into our program as we have limited capacity. 
 
   #error-message{style: 'display: none'}
   .main-section
@@ -64,7 +64,7 @@ rightbar: blank
         .checkbox
           %label
             %input#commitment-district-hoc{name: "commitment_district_hoc_b", type: "checkbox", value: "1"}/
-            Organize a district-wide Hour of Code for CS Ed Week 2014
+            Organize a district-wide Hour of Code for CS Ed Week 2015
 
       .form-group
         .checkbox
@@ -97,16 +97,16 @@ rightbar: blank
         %div
           %input#district-elementary-schools.form-control{name: "district_elementary_schools_i", placeholder: "Number of elementary schools", required: "", type: "text"}/
     .subsection
-      %h3 2015-16 school year
+      %h3 2016-17 school year
       .form-group
         %label.control-label{for: "district-school-year-start-date"} Start date
-        #datepicker-school-year-start-date.input-group.date{"data-date" => "09/01/2015", "data-date-format" => "mm/dd/yyyy"}
+        #datepicker-school-year-start-date.input-group.date{"data-date" => "09/01/2016", "data-date-format" => "mm/dd/yyyy"}
           %input#district-school-year-start-date.form-control{name: "district_school_year_start_date_dt", placeholder: "mm/dd/yyyy", required: "", type: "text"}/
           %span.input-group-addon
             %i.glyphicon.glyphicon-calendar
       .form-group
         %label.control-label{for: "district-school-year-end-date"} End date
-        #datepicker-school-year-end-date.input-group.date{"data-date" => "06/01/2016", "data-date-format" => "mm/dd/yyyy"}
+        #datepicker-school-year-end-date.input-group.date{"data-date" => "06/01/2017", "data-date-format" => "mm/dd/yyyy"}
           %input#district-school-year-end-date.form-control{name: "district_school_year_end_date_dt", placeholder: "mm/dd/yyyy", required: "", type: "text"}/
           %span.input-group-addon
             %i.glyphicon.glyphicon-calendar
@@ -114,7 +114,7 @@ rightbar: blank
         .checkbox
           %label
             %input#district-school-year-estimated{name: "district_school_year_estimated_b", type: "checkbox", value: "1"}/
-            The 2015-16 district calendar has not been announced and the dates above are estimates.
+            The 2016-17 district calendar has not been announced and the dates above are estimates.
     .subsection
       %h3 Main district office
       .form-group
@@ -269,11 +269,11 @@ rightbar: blank
       pickTime: false
     });
 
-    $('#datepicker-school-year-start-date').datepicker('setStartDate', '01-01-2015');
-    $('#datepicker-school-year-start-date').datepicker('setEndDate', '12-31-2015');
+    $('#datepicker-school-year-start-date').datepicker('setStartDate', '01-01-2016');
+    $('#datepicker-school-year-start-date').datepicker('setEndDate', '12-31-2016');
 
-    $('#datepicker-school-year-end-date').datepicker('setStartDate', '01-01-2016');
-    $('#datepicker-school-year-end-date').datepicker('setEndDate', '12-31-2016');
+    $('#datepicker-school-year-end-date').datepicker('setStartDate', '01-01-2017');
+    $('#datepicker-school-year-end-date').datepicker('setEndDate', '12-31-2017');
 
     $('#coordinator-same-as-user').change(function() {
       if ($(this).is(':checked')) {

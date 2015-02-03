@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -77,27 +77,26 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catControl":function(d){return "Lussen"},
 "catEvents":function(d){return "Gebeurtenissen"},
 "catLogic":function(d){return "Logica"},
-"catMath":function(d){return "Wiskunde"},
+"catMath":function(d){return "wiskundige"},
 "catProcedures":function(d){return "Functies"},
-"catText":function(d){return "tekst"},
+"catText":function(d){return "Tekst"},
 "catVariables":function(d){return "Variabelen"},
-"continue":function(d){return "Verder"},
+"continue":function(d){return "Doorgaan"},
 "createHtmlBlock":function(d){return "maak HTML blok"},
 "createHtmlBlockTooltip":function(d){return "Maak een blok HTML in de app."},
 "finalLevel":function(d){return "Gefeliciteerd! je hebt de laatste puzzel opgelost."},
 "nextLevel":function(d){return "Gefeliciteerd! Je hebt de puzzel voltooid."},
 "no":function(d){return "Nee"},
-"numBlocksNeeded":function(d){return "Deze puzzel kan worden opgelost met %1 blokken."},
+"numBlocksNeeded":function(d){return "Deze puzzel kan opgelost worden met %1 blokken."},
 "pause":function(d){return "Pauze"},
 "reinfFeedbackMsg":function(d){return "Je kunt op de \"Opnieuw\" knop drukken om terug te gaan naar het uitvoeren van je app."},
 "repeatForever":function(d){return "blijven herhalen"},
 "repeatDo":function(d){return "voer uit"},
 "repeatForeverTooltip":function(d){return "Herhaal de acties in dit blok wanneer de app wordt uitgevoerd."},
-"shareWebappTwitter":function(d){return "Bekijk de app die ik heb gemaakt. Ik heb het zelf geschreven met @codeorg"},
+"shareApplabTwitter":function(d){return "Bekijk de app die ik heb gemaakt. Ik heb het zelf geschreven met @codeorg"},
 "shareGame":function(d){return "Deel je app:"},
 "stepIn":function(d){return "Stap in"},
 "stepOver":function(d){return "Stap over"},
 "stepOut":function(d){return "Stap uit"},
-"turnBlack":function(d){return "verdonker blok"},
-"turnBlackTooltip":function(d){return "Maakt het scherm zwart."},
+"viewData":function(d){return "Bekijk de Data"},
 "yes":function(d){return "Ja"}};

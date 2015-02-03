@@ -242,6 +242,7 @@ en-US:
   dashboard_students_new_section: crwdns7819:0crwdne7819:0
   dashboard_students_placeholder_name: crwdns18174:0crwdne18174:0
   dashboard_students_name: crwdns7820:0crwdne7820:0
+  dashboard_students_progress: crwdns27938:0crwdne27938:0
   dashboard_students_age: crwdns7821:0crwdne7821:0
   dashboard_students_gender: crwdns7822:0crwdne7822:0
   dashboard_students_male: crwdns18175:0crwdne18175:0
@@ -288,6 +289,10 @@ en-US:
   dashboard_login_picture: crwdns20752:0crwdne20752:0
   dashboard_login_none: crwdns20753:0crwdne20753:0
   dashboard_new_password: crwdns18197:0crwdne18197:0
+  dashboard_progress_not_completed: crwdns27939:0crwdne27939:0
+  dashboard_progress_completed_too_many_blocks: crwdns27940:0crwdne27940:0
+  dashboard_progress_completed_perfect: crwdns27941:0crwdne27941:0
+  dashboard_progress_furthest_level_attempted: crwdns27942:0crwdne27942:0
   stats_hoc_2013_heading: crwdns18198:0crwdne18198:0
   stats_hoc_2013_image_alt: crwdns18199:0crwdne18199:0
   dashboard_teacher: crwdns20754:0crwdne20754:0

@@ -130,12 +130,12 @@
     regels code geschreven.'
   start_hoc: Start het Uur Code nu
   contact_form_topic_press: Pers/media (interview of met betrokkenen spreken)
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
-    - Michael Clark, Teacher'
-  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
-    - Nina Nichols Peery, Teacher'
-  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
-    Alzate, 5th grader'
+  stats_michael: '"Ik heb <b> nog nooit </b> mijn leerlingen zo enthousiast gezien
+    over leren" -Michael Clark, leraar'
+  stats_nina: '"Iedere dag leverde hetzelfde resultaat &mdash; 100% deelname." -Nina
+    Nichols Peery, lerares'
+  stats_student: '"Ik wist dat dit een <b> een-keer-in-het-leven </b>  kans was" -Mariana
+    Alzate, groep8-er'
   studiobar_title: ontdek <a href='http://studio.code.org'>Code Studio</a>
   studiobar_elementary_title: Cursussen voor gevorderden
   studiobar_elementary_body: Onze drie Nieuwe Cursussen voor K&#8209;5
@@ -149,8 +149,8 @@
   studiobar_frozen_body: Maak een winterlandschap met Anna en Elsa
   studiobar_donate_title: Doneer
   studiobar_donate_body: Eén kind leert voor elke euro die u doneert
-  studiobar_shop_title: Shop
-  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
+  studiobar_shop_title: winkel
+  studiobar_shop_body: Breek stereotypes. Draag ons logo met trots.
   contact_form_topic_student: Ik ben een leerling
   contact_form_topic_parent: Ik ben een ouder
   contact_form_topic_teacher: Ik ben een leraar
@@ -243,8 +243,8 @@
   dashboard_action_delete_yes: Ja
   dashboard_action_delete_no: Nee
   dashboard_action_confirm: Verwijderen?
-  dashboard_action_remove: Remove
-  dashboard_action_remove_confirm: Remove?
+  dashboard_action_remove: verwijder
+  dashboard_action_remove_confirm: Verwijder?
   dashboard_action_done: Voltooid
   dashboard_action_required: verplicht
   dashboard_navigation_home_page: Startpagina voor de leerkracht
@@ -295,6 +295,7 @@
     hierboven.
   dashboard_students_placeholder_name: Naam student
   dashboard_students_name: naam
+  dashboard_students_progress: Voortgang
   dashboard_students_age: Leeftijd
   dashboard_students_gender: Geslacht
   dashboard_students_male: Man
@@ -353,6 +354,10 @@
   dashboard_login_picture: Beeld
   dashboard_login_none: E-mail
   dashboard_new_password: Nieuw wachtwoord
+  dashboard_progress_not_completed: niet voltooid
+  dashboard_progress_completed_too_many_blocks: voltooid, teveel blokken
+  dashboard_progress_completed_perfect: voltooid, perfect
+  dashboard_progress_furthest_level_attempted: verste niveau geprobeerd
   stats_hoc_2013_heading: 'Ongelooflijke Statistieken voor Uur van de Code van vorige
     jaar. In één week alleen al:'
   stats_hoc_2013_image_alt: Statistieken van Uur van de Code van 2013
@@ -391,7 +396,7 @@
   carousel_heading_robots: Leer robots te programmeren
   carousel_heading_ide: Platformen populair onder docenten
   educator_notes: Opvoeder notities
-  how_to_teach_hoc: How to Teach an Hour of Code
+  how_to_teach_hoc: Hoe leer je een Hour of Code
   more_resources_educators: Meer middelen voor leraren en opvoeders
   participants: Deelnemers
   teachers_notes: Leraar-nota's

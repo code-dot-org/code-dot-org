@@ -1,0 +1,56 @@
+<%
+  var msg = require('../../locale/current/common');
+  var netsimMsg = require('../../locale/current/netsim');
+%>
+
+<div id="rotateContainer" style="background-image: url(<%= assetUrl('media/mobile_tutorial_turnphone.png') %>)">
+  <div id="rotateText">
+    <p><%= msg.rotateText() %><br><%= msg.orientationLock() %></p>
+  </div>
+</div>
+
+<% var instructions = function() { -%>
+  <div id="bubble" class="clearfix">
+    <table id="prompt-table">
+      <tr>
+        <td id="prompt-icon-cell">
+          <img id="prompt-icon"/>
+        </td>
+        <td id="prompt-cell">
+          <p id="prompt">
+          </p>
+        </td>
+      </tr>
+    </table>
+    <div id="ani-gif-preview-wrapper">
+      <div id="ani-gif-preview">
+        <img id="play-button" src="<%= assetUrl('media/play-circle.png') %>"/>
+      </div>
+    </div>
+  </div>
+<% }; -%>
+
+<% // A spot for the server to inject some HTML for help content.
+var helpArea = function(html) { -%>
+  <% if (html) { -%>
+    <div id="helpArea">
+      <%- html %>
+    </div>
+  <% } -%>
+<% }; -%>
+
+<div id="appcontainer">
+  <div id="netsim">
+    <div id="netsim_lobby_container"></div>
+    <hr/>
+    <textarea id="netsim_inputbox"></textarea>
+    <input id="netsim_sendbutton" type="button" value="Send" />
+    <textarea id="netsim_recievelog"></textarea>
+  </div>
+  <div id="footers" dir="<%= data.localeDirection %>">
+    <% instructions() %>
+    <% helpArea(data.helpHtml) %>
+  </div>
+</div>
+
+<div class="clear"></div>

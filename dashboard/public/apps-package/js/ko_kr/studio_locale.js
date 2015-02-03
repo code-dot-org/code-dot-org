@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -270,6 +270,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "projectileHiro":function(d){return "히로"},
 "projectileBaymax":function(d){return "베이맥스"},
 "projectileRapunzel":function(d){return "라푼젤"},
+"projectileCherry":function(d){return "cherry"},
+"projectileIce":function(d){return "ice"},
+"projectileDuck":function(d){return "duck"},
 "reinfFeedbackMsg":function(d){return "\"다시 시작\"을 누르면 이야기를 다시 실행시킬 수 있습니다."},
 "repeatForever":function(d){return "무한반복"},
 "repeatDo":function(d){return "do"},
@@ -277,6 +280,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "saySprite":function(d){return "말하기 동작"},
 "saySpriteN":function(d){return "케릭터 "+appLocale.v(d,"spriteIndex")+" 가 말 함"},
 "saySpriteTooltip":function(d){return "지정한 케릭터가 말하는 말 풍선을 나타냅니다."},
+"saySpriteChoices_1":function(d){return "Hi there!"},
+"saySpriteChoices_2":function(d){return "How are you?"},
+"saySpriteChoices_3":function(d){return "This is fun..."},
 "scoreText":function(d){return "점수 : "+appLocale.v(d,"playerScore")},
 "setBackground":function(d){return "배경 설정"},
 "setBackgroundRandom":function(d){return "랜덤 배경 설정"},
@@ -293,6 +299,12 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setBackgroundSpace":function(d){return "우주 배경 설정"},
 "setBackgroundTennis":function(d){return "테니스 배경 설정"},
 "setBackgroundWinter":function(d){return "겨울 배경 설정"},
+"setBackgroundLeafy":function(d){return "set leafy background"},
+"setBackgroundGrassy":function(d){return "set grassy background"},
+"setBackgroundFlower":function(d){return "set flower background"},
+"setBackgroundTile":function(d){return "set tile background"},
+"setBackgroundIcy":function(d){return "set icy background"},
+"setBackgroundSnowy":function(d){return "set snowy background"},
 "setBackgroundTooltip":function(d){return "배경 이미지 설정"},
 "setEnemySpeed":function(d){return "상대방 스피드 설정"},
 "setPlayerSpeed":function(d){return "플레이어 속도 설정"},
@@ -384,6 +396,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "soundWinPoint2":function(d){return "득점 소리2"},
 "soundWood":function(d){return "나무 소리"},
 "speed":function(d){return "스피드"},
+"startSetValue":function(d){return "start (rocket-height function)"},
 "stopSprite":function(d){return "멈춤"},
 "stopSpriteN":function(d){return "캐릭터 "+appLocale.v(d,"spriteIndex")+" 멈춤"},
 "stopTooltip":function(d){return "케릭터의 움직임을 멈춤니다."},

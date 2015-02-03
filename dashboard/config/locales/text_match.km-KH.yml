@@ -15,6 +15,9 @@
         (9-3)+4: 
         9-3+4: 
         Type the arithmetic expression here: Type the arithmetic expression here
+        '123': '123'
+        (9-3)+4*7: (9-3)+4*7
+        9-3+4*7: 9-3+4*7
       Blocks to Math 1:
         Convert Blocks to Math: បម្លែងប្លុកទៅជា​គណិតវិទ្យា
         Type out the arithmetic expression that matches this code: វាយនៅកន្សោមនព្វន្ធដែលផ្គូផ្គងកូដនេះ
@@ -59,6 +62,7 @@
         - 2 * -6: -2 * -6
         Type the arithmetic expression here: Type the arithmetic expression here
         Blocks to Math 5.blocks.start_blocks: Blocks to Math 5.blocks.start_blocks
+        -2 * -6: -2 * -6
       Blocks to Math 6:
         Convert Blocks to Math: បម្លែងប្លុកទៅជា​គណិតវិទ្យា
         Type out the arithmetic expression that matches this code: វាយនៅកន្សោមនព្វន្ធដែលផ្គូផ្គងកូដនេះ

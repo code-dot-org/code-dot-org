@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -213,7 +213,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "moveDistanceTooltip":function(d){return "Liikuta hahmoa annettu määrä määrättyyn suuntaan."},
 "moveSprite":function(d){return "liikuta"},
 "moveSpriteN":function(d){return "liikuta hahmoa "+appLocale.v(d,"spriteIndex")},
-"toXY":function(d){return "to x,y"},
+"toXY":function(d){return "x,y pisteisiin"},
 "moveDown":function(d){return "siirrä alas"},
 "moveDownTooltip":function(d){return "Liikuta hahmoa alas."},
 "moveLeft":function(d){return "siirrä vasemmalle"},
@@ -265,11 +265,14 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "projectilePurpleHearts":function(d){return "violetit sydämet"},
 "projectileRedHearts":function(d){return "punaiset sydämet"},
 "projectileRandom":function(d){return "satunnainen"},
-"projectileAnna":function(d){return "Anna"},
-"projectileElsa":function(d){return "Elsa"},
-"projectileHiro":function(d){return "Hiro"},
-"projectileBaymax":function(d){return "Baymax"},
-"projectileRapunzel":function(d){return "Rapunzel"},
+"projectileAnna":function(d){return "koukku"},
+"projectileElsa":function(d){return "kimallus"},
+"projectileHiro":function(d){return "microbotit"},
+"projectileBaymax":function(d){return "raketti"},
+"projectileRapunzel":function(d){return "kattila"},
+"projectileCherry":function(d){return "kirsikka"},
+"projectileIce":function(d){return "jää"},
+"projectileDuck":function(d){return "ankka"},
 "reinfFeedbackMsg":function(d){return "Voit painaa \"Yritä uudelleen\" -painiketta palatakseksi toistamaan tarinaasi."},
 "repeatForever":function(d){return "toista jatkuvasti"},
 "repeatDo":function(d){return "tee"},
@@ -277,6 +280,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "saySprite":function(d){return "sano"},
 "saySpriteN":function(d){return "hahmo "+appLocale.v(d,"spriteIndex")+" sanoo"},
 "saySpriteTooltip":function(d){return "Näytä hahmolle puhekupla, jossa oheinen teksti."},
+"saySpriteChoices_1":function(d){return "Moikka!"},
+"saySpriteChoices_2":function(d){return "Mitä kuuluu?"},
+"saySpriteChoices_3":function(d){return "Tämä on hauskaa..."},
 "scoreText":function(d){return "Pisteet: "+appLocale.v(d,"playerScore")},
 "setBackground":function(d){return "aseta tausta"},
 "setBackgroundRandom":function(d){return "aseta satunnainen tausta"},
@@ -293,6 +299,12 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setBackgroundSpace":function(d){return "aseta avaruustausta"},
 "setBackgroundTennis":function(d){return "aseta tennistausta"},
 "setBackgroundWinter":function(d){return "aseta talvitausta"},
+"setBackgroundLeafy":function(d){return "aseta lehtevä tausta"},
+"setBackgroundGrassy":function(d){return "aseta ruohoinen tausta"},
+"setBackgroundFlower":function(d){return "Aseta kukkainen tausta"},
+"setBackgroundTile":function(d){return "aseta laatta tausta"},
+"setBackgroundIcy":function(d){return "aseta jäinen tausta"},
+"setBackgroundSnowy":function(d){return "aseta luminen tausta"},
 "setBackgroundTooltip":function(d){return "Aseta taustakuva"},
 "setEnemySpeed":function(d){return "aseta vihollisen nopeus"},
 "setPlayerSpeed":function(d){return "aseta pelaajan nopeus"},
@@ -384,6 +396,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "soundWinPoint2":function(d){return "voittopiste 2"},
 "soundWood":function(d){return "puu"},
 "speed":function(d){return "nopeus"},
+"startSetValue":function(d){return "Käynnistä (raketti-korkeus -toiminto)"},
 "stopSprite":function(d){return "pysähdy"},
 "stopSpriteN":function(d){return "pysäytä hahmo "+appLocale.v(d,"spriteIndex")},
 "stopTooltip":function(d){return "Pysäyttää hahmon liikkeen."},

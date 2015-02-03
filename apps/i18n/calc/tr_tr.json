@@ -2,6 +2,7 @@
   "compute": "hesapla",
   "equivalentExpression": "Aynı ifadeyi elde etmek için argümanlarınızı yeniden sıralayınız.",
   "extraTopBlocks": "Bağlantı yapılmamış bloklarınız var. Bunları \"hesapla\" bloğuna mı ekleyecektiniz?",
+  "failedInput": "Your function does not return the right result for all values.",
   "goal": "Amaç:",
   "reinfFeedbackMsg": "İşte hikayesi!Bunun üzerinde çalışmaya devam, ya da bir sonraki bulmaca üzerine hareket!",
   "yourExpression": "İfadeniz:"

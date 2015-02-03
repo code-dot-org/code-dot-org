@@ -43,12 +43,20 @@ Scenario:
   And I see no difference for "level load"
   And I close my eyes
 
-Scenario:
-  When I open my eyes to test "artist level"
-  And I am on "http://learn.code.org/s/course2/stage/7/puzzle/2?noautoplay=true"
+Scenario Outline: Simple blockly level page view
+  When I open my eyes to test "<test_name>"
+  And I am on "<url>"
   When I rotate to landscape
   And I see no difference for "initial load"
   And I wait to see "#x-close"
   And I press "x-close"
   And I see no difference for "closed dialog"
   And I close my eyes
+Examples:
+  | url                                                                | test_name            |
+  | http://learn.code.org/s/1/level/2?noautoplay=true                  | first maze level     |
+  | http://learn.code.org/s/course2/stage/7/puzzle/2?noautoplay=true   | artist level         |
+  | http://learn.code.org/s/playlab/stage/1/puzzle/10?noautoplay=true  | playlab level        |
+  | http://learn.code.org/s/course1/stage/3/puzzle/5?noautoplay=true   | jigsaw level         |
+  | http://learn.code.org/s/course1/stage/18/puzzle/10?noautoplay=true | course1 artist level |
+

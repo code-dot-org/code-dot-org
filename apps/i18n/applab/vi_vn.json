@@ -1,5 +1,5 @@
 {
-  "catActions": "Các hành động",
+  "catActions": "hành động",
   "catControl": "Vòng lặp",
   "catEvents": "Các sự kiện",
   "catLogic": "Logic",
@@ -11,7 +11,7 @@
   "createHtmlBlock": "tạo khối mã html",
   "createHtmlBlockTooltip": "Tạo ra một khối HTML trong ứng dụng.",
   "finalLevel": "Xin chúc mừng! Bạn đã hoàn thành câu đố cuối cùng.",
-  "nextLevel": "Chúc mừng. Bạn vừa hoàn thành bài tập này.",
+  "nextLevel": "Chúc mừng! Bạn đã hoàn thành câu đố này.",
   "no": "Không",
   "numBlocksNeeded": "Câu đố này có thể được giải quyết chỉ với %1 khối.",
   "pause": "Phá vỡ",
@@ -19,12 +19,11 @@
   "repeatForever": "Lặp lại mãi mãi",
   "repeatDo": "thực hiện",
   "repeatForeverTooltip": "Thực hiện các hành động trong khối này nhiều lần trong khi các ứng dụng đang chạy.",
-  "shareWebappTwitter": "Kiểm tra các ứng dụng tôi thực hiện. Tôi tự viết nó với @codeorg",
+  "shareApplabTwitter": "Kiểm tra các ứng dụng tôi thực hiện. Tôi tự viết nó với @codeorg",
   "shareGame": "Chia sẻ các ứng dụng của bạn:",
   "stepIn": "Bước vào",
   "stepOver": "Bước qua",
   "stepOut": "Bước ra ngoài",
-  "turnBlack": "chuyển sang màu đen",
-  "turnBlackTooltip": "Chuyển màn hình sang màu đen.",
+  "viewData": "View Data",
   "yes": "Đồng ý"
 }

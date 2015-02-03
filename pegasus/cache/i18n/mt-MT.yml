@@ -1,5 +1,5 @@
 "mt-MT":
-  hello: Hello world
+  hello: Haw Lilly
   select_language: Please select your language
   computer_science: Computer Science
   computer_science_edweek: Computer Science Education Week
@@ -17,7 +17,7 @@
     computer science
   petition_sign_message: 'If you agree, sign your name.  Join # others.'
   name: Name
-  email: Email
+  email: Ittre
   zipcode: ZIP code or country
   submit: Submit
   twentyhours_heading: Try our Intro to Computer Science Course
@@ -25,7 +25,7 @@
     and programming concepts in this follow-up course.
   hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
     8 - 14, 2014<br/>
-  hoc2014_students: Students
+  hoc2014_students: Studenti
   hoc2014_try: Try it
   hoc2014_teachers: Teachers
   hoc2014_host: Host it
@@ -74,7 +74,7 @@
   support_url: http://support.code.org/
   country: Country
   city: City
-  gender: Gender
+  gender: Sess
   boys: Boys
   girls: Girls
   give_my_hour: 'Give my Hour to:'
@@ -136,7 +136,7 @@
   studiobar_elementary_body: Our three new courses for K&#8209;5
   studiobar_hoc_title: The Hour of Code
   studiobar_hoc_body: Learn to code with Angry Birds
-  studiobar_flappy_title: Flappy Code
+  studiobar_flappy_title: Code ta' Flappy
   studiobar_flappy_body: Make and share your own Flappy game
   studiobar_teacher_title: Made for teachers
   studiobar_teacher_body: Introduce Code Studio in your classroom
@@ -199,7 +199,7 @@
   volunteer_engineer_submission_experience_university_student_or_researcher: Current
     university student (or researcher)
   volunteer_engineer_submission_experience_software_professional: Software professional
-  petition_age: Age
+  petition_age: Età
   dashboard_landing_title: Teacher Home Page
   dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
   dashboard_landing_video: Watch this video
@@ -213,10 +213,10 @@
   dashboard_landing_useful_links: Other useful links (in English only)
   dashboard_landing_office_hours: Ask a question in person! Visit our monthly video
     office hours.
-  dashboard_landing_print_certificates: Print certificates for students who finish
-    this course
-  dashboard_landing_educator_blog: Read about news and updates to our materials at
-    our Educator Blog
+  dashboard_landing_print_certificates: Pprintja certifikati ghal studenti li jtemmu
+    dan il-kors
+  dashboard_landing_educator_blog: Aqra aħbarijiet u aġġornamenti tal-materjali tagħna
+    fil-Blog ta l'Edukaturi
   dashboard_landing_smart_hints: Please help us to add smart hints to Code.org tutorials
   dashboard_landing_video_player: Test our new video player at your school
   dashboard_landing_progress_title: Main class progress
@@ -226,7 +226,7 @@
   dashboard_landing_available_courses: Here are the courses currently available for
     you and your students.
   dashboard_landing_loading: Loading...
-  dashboard_action_edit: Edit
+  dashboard_action_edit: Editja
   dashboard_action_save: Save
   dashboard_action_save_all: Save all
   dashboard_action_cancel: Cancel
@@ -259,10 +259,10 @@
     their progress and manage their accounts.
   dashboard_sections_table_section: Section
   dashboard_sections_table_secret: Login Type
-  dashboard_sections_table_grade: Grade
-  dashboard_sections_table_course: Course
-  dashboard_sections_table_students: Students
-  dashboard_sections_table_code: Section Code
+  dashboard_sections_table_grade: Grad
+  dashboard_sections_table_course: Kors
+  dashboard_sections_table_students: Studenti
+  dashboard_sections_table_code: Kodici tas-Sezzjoni
   dashboard_sections_name: Section Name
   dashboard_sections_choose_secret: If you would like to provide accounts to your
     students, choose a secret type of <b>word</b> or <b>picture</b> for that section.
@@ -284,8 +284,9 @@
     using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
   dashboard_students_placeholder_name: Student Name
   dashboard_students_name: Name
-  dashboard_students_age: Age
-  dashboard_students_gender: Gender
+  dashboard_students_progress: Progress
+  dashboard_students_age: Età
+  dashboard_students_gender: Sess
   dashboard_students_male: Male
   dashboard_students_female: Female
   dashboard_students_secret: Secret
@@ -337,8 +338,12 @@
   dashboard_grade_other: Other
   dashboard_login_word: Word
   dashboard_login_picture: Picture
-  dashboard_login_none: Email
+  dashboard_login_none: Ittre
   dashboard_new_password: new password
+  dashboard_progress_not_completed: not completed
+  dashboard_progress_completed_too_many_blocks: completed, too many blocks
+  dashboard_progress_completed_perfect: completed, perfect
+  dashboard_progress_furthest_level_attempted: furthest level attempted
   stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
     week alone:'
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
@@ -360,9 +365,9 @@
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: Learn More
   hoc2014_try_new_tutorials: Try our new Hour of Code tutorials
-  hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
+  hoc2014_try_new_tutorial: Prova il-kors gdid Hour of Code fis-sezzjoni beta
   hoc2014_try_scrat: Angry Birds, PvZ, and Scrat
-  hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
+  hoc2014_try_frozen: Artist ma' Anna u Elsa mil film Frozen
   carousel_heading_international: Tutorials in your language
   carousel_heading_domestic: Tutorials available in English
   carousel_heading_beginners: Tutorials for Beginners

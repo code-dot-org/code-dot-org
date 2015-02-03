@@ -3,7 +3,7 @@ pt-BR:
   select_language: Selecione seu idioma
   computer_science: Ciência da Computação
   computer_science_edweek: Semana de Educação em Ciência da Computação
-  csedweek_dates: December 8-14, 2014
+  csedweek_dates: De 8 a 14 de dezembro de 2014
   csedweek_banner_hoc: 'A <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hora do Código</a> está chegando. Professores e organizadores, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">planejem sua Hora do Código</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Você é professor de ciência da computação? Veja outros recursos da Semana de Educação em Ciência da Computação</a>'
   n_have_learned_an_hoc: '<h1>#</h1><h3>participaram da</h3><h2>Hora do Código</h2>'
@@ -105,7 +105,7 @@ pt-BR:
   start_hoc: Comece a Hora do Código agora
   contact_form_topic_press: Imprensa/mídia (entrevista ou falando de compromisso)
   stats_michael: '"Eu <b>nunca, nunca</b> vi meus alunos tão animados para aprender." - Michael Clark, professor'
-  stats_nina: '"Todos os dias produziram os mesmos resultados &mdash; 100% de comprometimento." - Nina Nichols Peery, Professora'
+  stats_nina: '"Todos os dias produziram os mesmos resultados&mdash; 100% de comprometimento." - Nina Nichols Peery, Professora'
   stats_student: '"Eu sabia que esta era uma chance <b>única</b>." - Mariana Alzate, aluna do 5º ano'
   studiobar_title: "Explore o <a href='http://studio.code.org'>Code Studio</a>"
   studiobar_elementary_title: Cursos para o Ensino Fundamental
@@ -242,6 +242,7 @@ pt-BR:
   dashboard_students_new_section: 'Você criou uma nova turma! Agora, adicione seus alunos usando os botões <b>Adicionar aluno</b> e <b>Adicionar vários alunos</b> acima.'
   dashboard_students_placeholder_name: Nome do estudante
   dashboard_students_name: Nome
+  dashboard_students_progress: Progresso
   dashboard_students_age: Idade
   dashboard_students_gender: Gênero
   dashboard_students_male: Masculino
@@ -288,6 +289,10 @@ pt-BR:
   dashboard_login_picture: Imagem
   dashboard_login_none: E-mail
   dashboard_new_password: nova senha
+  dashboard_progress_not_completed: não concluído
+  dashboard_progress_completed_too_many_blocks: concluído, muitos blocos
+  dashboard_progress_completed_perfect: concluído, perfeito
+  dashboard_progress_furthest_level_attempted: tentativa para o nível mais avançado
   stats_hoc_2013_heading: 'Estatísticas incríveis da Hora do Código do ano passado. Em apenas uma semana:'
   stats_hoc_2013_image_alt: Estatísticas da Hora do Código de 2013
   dashboard_teacher: Professor
@@ -323,7 +328,7 @@ pt-BR:
   carousel_heading_robots: Aprenda a programar com robôs
   carousel_heading_ide: Plataformas populares entre professores
   educator_notes: Observações do Educador
-  how_to_teach_hoc: How to Teach an Hour of Code
+  how_to_teach_hoc: Como ensinar a Hora do Código
   more_resources_educators: Mais recursos para professores e educadores
   participants: participantes
   teachers_notes: Observações do Professor

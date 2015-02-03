@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({117:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({134:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Studio = require('./studio');
@@ -16,7 +16,7 @@ window.studioMain = function(options) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":3,"./blocks":111,"./levels":116,"./skins":119,"./studio":120}],120:[function(require,module,exports){
+},{"../appMain":3,"./blocks":128,"./levels":133,"./skins":136,"./studio":137}],137:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -832,7 +832,7 @@ function checkForCollisions() {
 }
 
 Studio.onSvgDrag = function(e) {
-  if (Studio.intervalId) {
+  if (Studio.tickCount > 0) {
     Studio.gesturesObserved[e.gesture.direction] =
       Math.round(e.gesture.distance / DRAG_DISTANCE_TO_MOVE_RATIO);
     e.gesture.preventDefault();
@@ -844,7 +844,7 @@ Studio.onKey = function(e) {
   Studio.keyState[e.keyCode] = e.type;
 
   // If we are actively running our tick loop, suppress default event handling
-  if (Studio.intervalId &&
+  if (Studio.tickCount > 0 &&
       e.keyCode >= KeyCodes.LEFT && e.keyCode <= KeyCodes.DOWN) {
     e.preventDefault();
   }
@@ -858,7 +858,7 @@ Studio.onArrowButtonDown = function(e, idBtn) {
 
 Studio.onSpriteClicked = function(e, spriteIndex) {
   // If we are "running", call the event handler if registered.
-  if (Studio.intervalId) {
+  if (Studio.tickCount > 0) {
     callHandler('whenSpriteClicked-' + spriteIndex);
   }
   e.preventDefault();  // Stop normal events.
@@ -866,7 +866,7 @@ Studio.onSpriteClicked = function(e, spriteIndex) {
 
 Studio.onSvgClicked = function(e) {
   // If we are "running", check the cmdQueues.
-  if (Studio.intervalId) {
+  if (Studio.tickCount > 0){
     // Check the first command in all of the cmdQueues to see if there is a
     // pending "wait for click" command
     Studio.eventHandlers.forEach(function (handler) {
@@ -1112,9 +1112,11 @@ Studio.init = function(config) {
   // pre-load images asynchronously
   // (to reduce the likelihood that there is a delay when images
   //  are changed at runtime)
-  preloadActorImages();
-  preloadProjectileImages();
-  preloadBackgroundImages();
+  if (config.skin.preloadAssets) {
+    preloadActorImages();
+    preloadProjectileImages();
+    preloadBackgroundImages();
+  }
 };
 
 var preloadImage = function(url) {
@@ -1161,11 +1163,13 @@ Studio.clearEventHandlersKillTickLoop = function() {
     });
   }
   Studio.eventHandlers = [];
-  if (Studio.intervalId) {
-    window.clearInterval(Studio.intervalId);
-  }
+  if (Studio.perExecutionTimeouts) {
+    Studio.perExecutionTimeouts.forEach(function (timeout) {
+      clearInterval(timeout);
+    });
+   }
+  Studio.perExecutionTimeouts = [];
   Studio.tickCount = 0;
-  Studio.intervalId = 0;
   for (var i = 0; i < Studio.spriteCount; i++) {
     if (Studio.sprite[i] && Studio.sprite[i].bubbleTimeout) {
       window.clearTimeout(Studio.sprite[i].bubbleTimeout);
@@ -1266,6 +1270,13 @@ studioApp.reset = function(first) {
     Studio.displaySprite(i);
     document.getElementById('speechBubble' + i)
       .setAttribute('visibility', 'hidden');
+
+    document.getElementById('sprite' + i).removeAttribute('opacity');
+
+    var explosion = document.getElementById('explosion' + i);
+    if (explosion) {
+      explosion.setAttribute('visibility', 'hidden');
+    }
   }
 
   var svg = document.getElementById('svgStudio');
@@ -1288,6 +1299,9 @@ studioApp.reset = function(first) {
     finishClipRect.setAttribute('x', Studio.spriteGoals_[i].x);
     finishClipRect.setAttribute('y', Studio.spriteGoals_[i].y);
   }
+
+  // A little flag for script-based code to consume.
+  Studio.levelRestarted = true;
 };
 
 /**
@@ -1486,7 +1500,7 @@ Studio.execute = function() {
   var i;
 
   if (level.editCode) {
-    code = utils.generateCodeAliases(level.codeFunctions, 'Studio');
+    code = utils.generateCodeAliases(level.codeFunctions, null, 'Studio');
     code += studioApp.editor.getValue();
   }
 
@@ -1523,7 +1537,7 @@ Studio.execute = function() {
   studioApp.reset(false);
 
   if (level.editCode) {
-    var codeWhenRun = utils.generateCodeAliases(level.codeFunctions, 'Studio');
+    var codeWhenRun = utils.generateCodeAliases(level.codeFunctions, null, 'Studio');
     Studio.userCodeStartOffset = codeWhenRun.length;
     codeWhenRun += studioApp.editor.getValue();
     Studio.userCodeLength = codeWhenRun.length - Studio.userCodeStartOffset;
@@ -1562,7 +1576,8 @@ Studio.execute = function() {
     Studio.eventHandlers = handlers;
   }
 
-  Studio.intervalId = window.setInterval(Studio.onTick, Studio.scale.stepSpeed);
+  Studio.perExecutionTimeouts = [];
+  Studio.perExecutionTimeouts.push(window.setInterval(Studio.onTick, Studio.scale.stepSpeed));
 };
 
 Studio.feedbackImage = '';
@@ -1714,6 +1729,12 @@ var updateSpeechBubblePath = function (element) {
 
 Studio.displaySprite = function(i) {
   var sprite = Studio.sprite[i];
+
+  // avoid lots of unnecessary changes to hidden sprites
+  if (sprite.value === 'hidden') {
+    return;
+  }
+
   var xOffset = sprite.width * spriteFrameNumber(i);
 
   var spriteIcon = document.getElementById('sprite' + i);
@@ -1971,13 +1992,37 @@ Studio.vanishActor = function (opts) {
   explosion.setAttribute('y', spriteClipRect.getAttribute('y'));
   explosion.setAttribute('visibility', 'visible');
 
-  // hide the sprite
-  Studio.setSprite({
-    spriteIndex: opts.spriteIndex,
-    value: 'hidden'
-  });
+  var baseX = parseInt(spriteClipRect.getAttribute('x'), 10);
+  var numFrames = skin.explosionFrames;
+  if (numFrames && numFrames > 1) {
+    explosion.setAttribute('clip-path', 'url(#spriteClipPath' + opts.spriteIndex + ')');
+    explosion.setAttribute('width', numFrames * 100);
+    _.range(0, numFrames).forEach(function (i) {
+      Studio.perExecutionTimeouts.push(setTimeout(function () {
+        explosion.setAttribute('x', baseX - i * 100);
+        sprite.setAttribute('opacity', (numFrames - i) / numFrames);
+      }, i * 100));
+    });
+    Studio.perExecutionTimeouts.push(setTimeout(function () {
+      explosion.setAttribute('visibility', 'hidden');
+      // hide the sprite
+      Studio.setSprite({
+        spriteIndex: opts.spriteIndex,
+        value: 'hidden'
+      });
+      sprite.removeAttribute('opacity');
+
+    }, 100 * (numFrames + 1)));
+  } else {
+    // hide the sprite
+    Studio.setSprite({
+      spriteIndex: opts.spriteIndex,
+      value: 'hidden'
+    });
+  }
+
   // we append the url with the spriteIndex so that each sprites explosion gets
-  // treated as being differently, otherwise chrome will animate all existing
+  // treated as being different, otherwise chrome will animate all existing
   // explosions anytime we try to animate one of them
   explosion.setAttributeNS('http://www.w3.org/1999/xlink',
     'xlink:href', skin.explosion + "?spriteIndex=" + opts.spriteIndex);
@@ -2037,6 +2082,7 @@ Studio.setSprite = function (opts) {
   }
   sprite.visible = (spriteValue !== 'hidden' && !opts.forceHidden);
   spriteIcon.setAttribute('visibility', sprite.visible ? 'visible' : 'hidden');
+  sprite.value = opts.forceHidden ? 'hidden' : opts.value;
   if (spriteValue === 'hidden' || spriteValue === 'visible') {
     return;
   }
@@ -2046,7 +2092,12 @@ Studio.setSprite = function (opts) {
   // Reset height and width:
   sprite.height = sprite.size * skin.spriteHeight;
   sprite.width = sprite.size * skin.spriteWidth;
-  sprite.value = opts.forceHidden ? 'hidden' : opts.value;
+  if (skin.projectileSpriteHeight) {
+    sprite.projectileSpriteHeight = sprite.size * skin.projectileSpriteHeight;
+  }
+  if (skin.projectileSpriteWidth) {
+    sprite.projectileSpriteWidth = sprite.size * skin.projectileSpriteWidth;
+  }
 
   var spriteClipRect = document.getElementById('spriteClipRect' + spriteIndex);
   spriteClipRect.setAttribute('width', sprite.width);
@@ -2303,16 +2354,26 @@ Studio.throwProjectile = function (options) {
 
   var preventLoop = skin.preventProjectileLoop && skin.preventProjectileLoop(options.className);
 
+  var frames;
+
+  if (/.gif$/.test(skin[options.className])) {
+    frames = 1;
+  } else if (skin.specialProjectileFrames && skin.specialProjectileFrames[options.className]) {
+    frames = skin.specialProjectileFrames[options.className];
+  } else {
+    frames = skin.projectileFrames;
+  }
+
   var projectileOptions = {
-    frames: /.gif$/.test(skin[options.className]) ? 1 : skin.projectileFrames,
+    frames: frames,
     className: options.className,
     dir: options.dir,
     image: skin[options.className],
     loop: !preventLoop,
     spriteX: sourceSprite.x,
     spriteY: sourceSprite.y,
-    spriteHeight: sourceSprite.height,
-    spriteWidth: sourceSprite.width
+    spriteHeight: sourceSprite.projectileSpriteHeight || sourceSprite.height,
+    spriteWidth: sourceSprite.projectileSpriteWidth || sourceSprite.width,
   };
 
   var projectile = new Projectile(projectileOptions);
@@ -2663,7 +2724,17 @@ Studio.allGoalsVisited = function() {
     var goal = Studio.spriteGoals_[i];
     if (!goal.finished) {
       if (protagonistSprite) {
+        var wasGoalFinished = goal.finished;
+
         goal.finished = spriteAtGoal(protagonistSprite, goal);
+
+        // If goal was just finished, then call the "when actor touches anything handler"
+        if (!wasGoalFinished && goal.finished) {
+          var allowQueueExtension = false;
+          var prefix = 'whenSpriteCollided-' + Studio.protagonistSpriteIndex + '-';
+          callHandler(prefix + 'anything', allowQueueExtension);
+        }
+
       } else {
         goal.finished = false;
         for (var j = 0; j < Studio.sprite.length; j++) {
@@ -2724,7 +2795,7 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/current/common":153,"../../locale/current/studio":158,"../StudioApp":2,"../canvg/StackBlur.js":34,"../canvg/canvg.js":35,"../canvg/rgbcolor.js":36,"../canvg/svg_todataurl":37,"../codegen":38,"../constants":39,"../dom":40,"../skins":108,"../templates/page.html":128,"../utils":148,"../xml":149,"./api":110,"./blocks":111,"./collidable":112,"./constants":113,"./controls.html":114,"./extraControlRows.html":115,"./projectile":118,"./visualization.html":121}],121:[function(require,module,exports){
+},{"../../locale/current/common":170,"../../locale/current/studio":176,"../StudioApp":2,"../canvg/StackBlur.js":37,"../canvg/canvg.js":38,"../canvg/rgbcolor.js":39,"../canvg/svg_todataurl":40,"../codegen":41,"../constants":42,"../dom":43,"../skins":125,"../templates/page.html":145,"../utils":165,"../xml":166,"./api":127,"./blocks":128,"./collidable":129,"./constants":130,"./controls.html":131,"./extraControlRows.html":132,"./projectile":135,"./visualization.html":138}],138:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2744,7 +2815,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":168}],118:[function(require,module,exports){
+},{"ejs":186}],135:[function(require,module,exports){
 var Collidable = require('./collidable');
 var Direction = require('./constants').Direction;
 var constants = require('./constants');
@@ -2918,7 +2989,7 @@ Projectile.prototype.moveToNextPosition = function () {
   this.y = next.y;
 };
 
-},{"./collidable":112,"./constants":113}],119:[function(require,module,exports){
+},{"./collidable":129,"./constants":130}],136:[function(require,module,exports){
 /**
  * Load Skin for Studio.
  */
@@ -2937,8 +3008,22 @@ var VISIBLE_VALUE = constants.VISIBLE_VALUE;
 
 
 function loadInfinity(skin, assetUrl) {
+  skin.preloadAssets = false;
+
   skin.defaultBackground = 'leafy';
   skin.projectileFrames = 10;
+
+  skin.specialProjectileFrames = {
+    'projectile_cherry': 13,
+    'projectile_ice': 12,
+    'projectile_duck': 12
+  };
+
+  skin.explosion = skin.assetUrl('vanish.png');
+  skin.explosionFrames = 17;
+
+  skin.projectileSpriteWidth = 70;
+  skin.projectileSpriteHeight = 70;
 
   skin.avatarList = ['anna', 'elsa', 'hiro', 'baymax', 'rapunzel'];
   skin.avatarList.forEach(function (name) {
@@ -2964,25 +3049,45 @@ function loadInfinity(skin, assetUrl) {
   skin.projectile_elsa = skin.assetUrl('projectile_elsa.png');
   skin.projectile_baymax = skin.assetUrl('projectile_baymax.png');
   skin.projectile_rapunzel = skin.assetUrl('projectile_rapunzel.png');
+  skin.projectile_cherry = skin.assetUrl('projectile_cherry.png');
+  skin.projectile_ice = skin.assetUrl('projectile_ice.png');
+  skin.projectile_duck = skin.assetUrl('projectile_duck.png');
 
   skin.leafy = {
-    background: skin.assetUrl('background1.png')
+    background: skin.assetUrl('background_leafy.png')
   };
   skin.grassy = {
-    background: skin.assetUrl('background2.png')
+    background: skin.assetUrl('background_grassy.png')
+  };
+  skin.flower = {
+    background: skin.assetUrl('background_flower.png')
+  };
+  skin.tile = {
+    background: skin.assetUrl('background_tile.png')
+  };
+  skin.icy = {
+    background: skin.assetUrl('background_icy.png')
+  };
+  skin.snowy = {
+    background: skin.assetUrl('background_snowy.png')
   };
 
   // These are used by blocks.js to customize our dropdown blocks across skins
   skin.backgroundChoices = [
     [msg.setBackgroundRandom(), RANDOM_VALUE],
     // todo - come up with better names and i18n
-    ["set leafy background", '"leafy"'],
-    ["set grassy background", '"grassy"']];
+    [msg.setBackgroundLeafy(), '"leafy"'],
+    [msg.setBackgroundGrassy(), '"grassy"'],
+    [msg.setBackgroundFlower(), '"flower"'],
+    [msg.setBackgroundTile(), '"tile"'],
+    [msg.setBackgroundIcy(), '"icy"'],
+    [msg.setBackgroundSnowy(), '"snowy"'],
+    ];
 
   skin.backgroundChoicesK1 = [
     [skin.randomPurpleIcon, RANDOM_VALUE],
-    ["set leafy background", '"leafy"'],
-    ["set grassy background", '"grassy"']];
+    [msg.setBackgroundLeafy(), '"leafy"'],
+    [msg.setBackgroundGrassy(), '"grassy"']];
 
   skin.spriteChoices = [
     [msg.setSpriteHidden(), HIDDEN_VALUE],
@@ -3000,12 +3105,18 @@ function loadInfinity(skin, assetUrl) {
     [msg.projectileElsa(), '"projectile_elsa"'],
     [msg.projectileBaymax(), '"projectile_baymax"'],
     [msg.projectileRapunzel(), '"projectile_rapunzel"'],
+    [msg.projectileCherry(), '"projectile_cherry"'],
+    [msg.projectileIce(), '"projectile_ice"'],
+    [msg.projectileDuck(), '"projectile_duck"'],
     [msg.projectileRandom(), RANDOM_VALUE]];
 }
 
 function loadStudio(skin, assetUrl) {
   skin.defaultBackground = 'cave';
   skin.projectileFrames = 8;
+
+  skin.explosion = skin.assetUrl('explosion.gif');
+  skin.explosionThumbnail = skin.assetUrl('explosion_thumb.png');
 
   skin.hardcourt = {
     background: skin.assetUrl('background.png'),
@@ -3160,8 +3271,7 @@ exports.load = function(assetUrl, id) {
   skin.blue_fireball = skin.assetUrl('blue_fireball.png');
   skin.purple_fireball = skin.assetUrl('purple_fireball.png');
   skin.red_fireball = skin.assetUrl('red_fireball.png');
-  skin.explosion = skin.assetUrl('explosion.gif');
-  skin.explosionThumbnail = skin.assetUrl('explosion_thumb.png');
+
   skin.whenUp = skin.assetUrl('when-up.png');
   skin.whenDown = skin.assetUrl('when-down.png');
   skin.whenLeft = skin.assetUrl('when-left.png');
@@ -3204,6 +3314,7 @@ exports.load = function(assetUrl, id) {
   skin.spriteWidth = 100;
   skin.dropdownThumbnailWidth = 50;
   skin.dropdownThumbnailHeight = 50;
+  skin.preloadAssets = true;
 
   // take care of items specific to skins
   switch (skin.id) {
@@ -3218,7 +3329,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../../locale/current/studio":158,"../skins":108,"./constants":113}],116:[function(require,module,exports){
+},{"../../locale/current/studio":176,"../skins":125,"./constants":130}],133:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/studio');
@@ -4687,7 +4798,7 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
   'startBlocks': "",
 });
 
-},{"../../locale/current/studio":158,"../block_utils":15,"../utils":148,"./constants":113}],115:[function(require,module,exports){
+},{"../../locale/current/studio":176,"../block_utils":16,"../utils":165,"./constants":130}],132:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4707,7 +4818,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":153,"ejs":168}],114:[function(require,module,exports){
+},{"../../locale/current/common":170,"ejs":186}],131:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4727,7 +4838,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":153,"ejs":168}],112:[function(require,module,exports){
+},{"../../locale/current/common":170,"ejs":186}],129:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -4833,7 +4944,7 @@ Collidable.prototype.outOfBounds = function () {
          (this.y > studioApp.MAZE_HEIGHT + (this.height / 2));
 };
 
-},{"../StudioApp":2,"./constants":113}],111:[function(require,module,exports){
+},{"../StudioApp":2,"./constants":130}],128:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -6338,7 +6449,14 @@ exports.install = function(blockly, blockInstallOptions) {
         this.appendDummyInput()
           .appendTitle(msg.saySprite());
       }
-      if (options.params) {
+      if (options.restrictedDialog) {
+        var dropdown = new blockly.FieldDropdown(
+          [[msg.saySpriteChoices_1(), msg.saySpriteChoices_1()],
+           [msg.saySpriteChoices_2(), msg.saySpriteChoices_2()],
+           [msg.saySpriteChoices_3(), msg.saySpriteChoices_3()]]);
+        this.appendDummyInput().appendTitle(dropdown, 'VALUE');
+      }
+      else if (options.params) {
         this.appendValueInput('TEXT');
       } else {
         var quotedTextInput = this.appendDummyInput();
@@ -6365,6 +6483,7 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   blockly.Blocks.studio_saySprite = initSayBlock({});
+  blockly.Blocks.studio_saySpriteChoices = initSayBlock({'restrictedDialog': true});
   blockly.Blocks.studio_saySpriteParams = initSayBlock({'params': true});
   blockly.Blocks.studio_saySpriteParamsTime = initSayBlock({'params': true, 'time': true});
 
@@ -6374,6 +6493,14 @@ exports.install = function(blockly, blockInstallOptions) {
                '\', ' +
                (this.getTitleValue('SPRITE') || '0') + ', ' +
                blockly.JavaScript.quote_(this.getTitleValue('TEXT')) + ');\n';
+  };
+
+  generator.studio_saySpriteChoices = function() {
+    // Generate JavaScript for saying (choices version).
+    return 'Studio.saySprite(\'block_id_' + this.id +
+               '\', ' +
+               (this.getTitleValue('SPRITE') || '0') + ', \'' +
+               this.getTitles()[1].getValue() + '\');\n';
   };
 
   generator.studio_saySpriteParams = function() {
@@ -6603,9 +6730,9 @@ function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpr
   };
 }
 
-},{"../../locale/current/common":153,"../../locale/current/studio":158,"../StudioApp":2,"../codegen":38,"../functionalBlockUtils":69,"../sharedFunctionalBlocks":107,"../utils":148,"./constants":113}],158:[function(require,module,exports){
+},{"../../locale/current/common":170,"../../locale/current/studio":176,"../StudioApp":2,"../codegen":41,"../functionalBlockUtils":72,"../sharedFunctionalBlocks":124,"../utils":165,"./constants":130}],176:[function(require,module,exports){
 /*studio*/ module.exports = window.blockly.appLocale;
-},{}],110:[function(require,module,exports){
+},{}],127:[function(require,module,exports){
 var constants = require('./constants');
 
 exports.SpriteSpeed = {
@@ -6761,7 +6888,7 @@ exports.onEvent = function (id, eventName, func) {
   });
 };
 
-},{"./constants":113}],113:[function(require,module,exports){
+},{"./constants":130}],130:[function(require,module,exports){
 'use strict';
 
 exports.Direction = {
@@ -6938,7 +7065,7 @@ exports.HIDDEN_VALUE = '"hidden"';
 exports.CLICK_VALUE = '"click"';
 exports.VISIBLE_VALUE = '"visible"';
 
-},{}],37:[function(require,module,exports){
+},{}],40:[function(require,module,exports){
 /**
 	The missing SVG.toDataURL library for your SVG elements.
 
@@ -7161,7 +7288,7 @@ SVGElement.prototype.toDataURL = function(type, options) {
 	}
 }
 
-},{}],36:[function(require,module,exports){
+},{}],39:[function(require,module,exports){
 /**
  * A class to parse color values
  * @author Stoyan Stefanov <sstoo@gmail.com>
@@ -7451,7 +7578,7 @@ function RGBColor(color_string)
 }
 
 
-},{}],34:[function(require,module,exports){
+},{}],37:[function(require,module,exports){
 /*
 
 StackBlur - a fast almost Gaussian Blur For Canvas
@@ -8063,4 +8190,4 @@ function BlurStack()
 	this.a = 0;
 	this.next = null;
 }
-},{}]},{},[117]);
+},{}]},{},[134]);

@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -116,11 +116,10 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "repeatForever":function(d){return "repetă pentru totdeauna"},
 "repeatDo":function(d){return "fă"},
 "repeatForeverTooltip":function(d){return "Execută acțiunile din acest bloc în mod repetat în timpul rulării aplicaţiei."},
-"shareWebappTwitter":function(d){return "Testează aplicația pe care am făcut-o. Chiar eu am scris-o cu @codeorg"},
+"shareApplabTwitter":function(d){return "Testează aplicația pe care am făcut-o. Chiar eu am scris-o cu @codeorg"},
 "shareGame":function(d){return "Partajați-vă aplicația:"},
 "stepIn":function(d){return "Pas înăuntru"},
 "stepOver":function(d){return "Pas peste"},
 "stepOut":function(d){return "Pas afară"},
-"turnBlack":function(d){return "comută negru"},
-"turnBlackTooltip":function(d){return "Comută ecranul negru."},
+"viewData":function(d){return "View Data"},
 "yes":function(d){return "Da"}};

@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({22:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({23:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Bounce = require('./bounce');
@@ -16,7 +16,7 @@ window.bounceMain = function(options) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":3,"./blocks":18,"./bounce":19,"./levels":21,"./skins":23}],23:[function(require,module,exports){
+},{"../appMain":3,"./blocks":19,"./bounce":20,"./levels":22,"./skins":24}],24:[function(require,module,exports){
 /**
  * Load Skin for Bounce.
  */
@@ -109,7 +109,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":108}],21:[function(require,module,exports){
+},{"../skins":125}],22:[function(require,module,exports){
 /*jshint multistr: true */
 
 var Direction = require('./tiles').Direction;
@@ -540,7 +540,7 @@ module.exports = {
   },
 };
 
-},{"../block_utils":15,"./tiles":24}],19:[function(require,module,exports){
+},{"../block_utils":16,"./tiles":25}],20:[function(require,module,exports){
 /**
  * Blockly App: Bounce
  *
@@ -1597,7 +1597,7 @@ Bounce.execute = function() {
   Bounce.response = null;
 
   if (level.editCode) {
-    code = utils.generateCodeAliases(level.codeFunctions, 'Bounce');
+    code = utils.generateCodeAliases(level.codeFunctions, null, 'Bounce');
     code += studioApp.editor.getValue();
   }
 
@@ -1955,7 +1955,7 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/current/bounce":151,"../../locale/current/common":153,"../StudioApp":2,"../codegen":38,"../constants":39,"../dom":40,"../hammer":70,"../skins":108,"../templates/page.html":128,"../timeoutList":134,"../utils":148,"./api":17,"./controls.html":20,"./tiles":24,"./visualization.html":25}],25:[function(require,module,exports){
+},{"../../locale/current/bounce":168,"../../locale/current/common":170,"../StudioApp":2,"../codegen":41,"../constants":42,"../dom":43,"../hammer":73,"../skins":125,"../templates/page.html":145,"../timeoutList":151,"../utils":165,"./api":18,"./controls.html":21,"./tiles":25,"./visualization.html":26}],26:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1975,7 +1975,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":168}],20:[function(require,module,exports){
+},{"ejs":186}],21:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1998,7 +1998,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/bounce":151,"../../locale/current/common":153,"ejs":168}],18:[function(require,module,exports){
+},{"../../locale/current/bounce":168,"../../locale/current/common":170,"ejs":186}],19:[function(require,module,exports){
 /**
  * Blockly App: Bounce
  *
@@ -2493,9 +2493,9 @@ exports.install = function(blockly, blockInstallOptions) {
   delete blockly.Blocks.procedures_ifreturn;
 };
 
-},{"../../locale/current/bounce":151,"../codegen":38}],151:[function(require,module,exports){
+},{"../../locale/current/bounce":168,"../codegen":41}],168:[function(require,module,exports){
 /*bounce*/ module.exports = window.blockly.appLocale;
-},{}],17:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 var tiles = require('./tiles');
 var Direction = tiles.Direction;
 var SquareType = tiles.SquareType;
@@ -2677,7 +2677,7 @@ exports.bounceBall = function(id) {
   }
 };
 
-},{"../StudioApp":2,"./tiles":24}],24:[function(require,module,exports){
+},{"../StudioApp":2,"./tiles":25}],25:[function(require,module,exports){
 'use strict';
 
 /**
@@ -2716,4 +2716,4 @@ exports.SquareType = {
   OBSTACLE: 64
 };
 
-},{}]},{},[22]);
+},{}]},{},[23]);

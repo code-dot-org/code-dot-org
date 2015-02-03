@@ -242,6 +242,7 @@ uk-UA:
   dashboard_students_new_section: 'Ви створили нову групу! Тепер додавайте учнів, використовуючи кнопки <b>Додати учня</b> та <b>Додати учнів</b>.'
   dashboard_students_placeholder_name: "Ім'я учня"
   dashboard_students_name: Ім’я
+  dashboard_students_progress: Progress
   dashboard_students_age: Вік
   dashboard_students_gender: Стать
   dashboard_students_male: Чоловік
@@ -288,6 +289,10 @@ uk-UA:
   dashboard_login_picture: Зображення
   dashboard_login_none: Електронна пошта
   dashboard_new_password: новий пароль
+  dashboard_progress_not_completed: не завершено
+  dashboard_progress_completed_too_many_blocks: завершено, забагато блоків
+  dashboard_progress_completed_perfect: виконано, ідеально
+  dashboard_progress_furthest_level_attempted: останній відкритий рівень
   stats_hoc_2013_heading: 'Неймовірна статистика з минулорічної Години коду. Лише за тиждень:'
   stats_hoc_2013_image_alt: Статистика Години коду 2013 року
   dashboard_teacher: Вчитель
