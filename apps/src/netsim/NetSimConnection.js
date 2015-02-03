@@ -242,6 +242,16 @@ NetSimConnection.prototype.connect_ = function () {
     if (returnedData) {
       self.myLobbyRowID_ = returnedData.id;
       self.setConnectionStatus_(ConnectionStatus.IN_LOBBY);
+
+      // See if we have an active wire, and try to continue reconnecting
+      // if possible.
+      if (self.wire_) {
+        self.wire_.localID = self.myLobbyRowID_;
+        self.wire_.update(function () {
+          self.setConnectionStatus_(ConnectionStatus.CONNECTED);
+        });
+      }
+
     } else {
       // TODO (bbuchanan) : Connect retry?
       self.logger_.log("Failed to connect to instance", LogLevel.ERROR);
