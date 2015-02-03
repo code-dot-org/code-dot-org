@@ -19,7 +19,7 @@ Blockly.ContractEditorSectionView = function (canvas, opt_options) {
 
   this.header = new Blockly.SvgHeader(canvas, {
     headerText: this.textForCurrentState_(),
-    // onMouseDown: goog.bind(this.toggleCollapse_, this),
+    onMouseDown: goog.bind(this.toggleCollapse, this),
     backgroundColor: Blockly.ContractEditorSectionView.DARK_GRAY_HEX
   });
   this.collapsed_ = false;
@@ -46,8 +46,17 @@ Blockly.ContractEditorSectionView.prototype.textForCurrentState_ = function () {
  * Will visually collapse during next placement.
  * @private
  */
-Blockly.ContractEditorSectionView.prototype.toggleCollapse_ = function () {
-  this.collapsed_ = !this.collapsed_;
+Blockly.ContractEditorSectionView.prototype.toggleCollapse = function () {
+  this.setCollapsed_(!this.collapsed_);
+};
+
+/**
+ * Set the view
+ * @param isCollapsed
+ * @private
+ */
+Blockly.ContractEditorSectionView.prototype.setCollapsed_ = function (isCollapsed) {
+  this.collapsed_ = isCollapsed;
   if (this.onCollapseCallback_) {
     this.onCollapseCallback_(this.collapsed_);
   }

@@ -20,6 +20,7 @@ goog.require('goog.ui.decorate');
 goog.require('goog.ui.Component.EventType');
 goog.require('goog.events');
 goog.require('goog.color');
+goog.require('goog.array');
 
 /**
  * Class for a functional block-specific contract editor.
@@ -87,13 +88,21 @@ Blockly.ContractEditor.prototype.create_ = function() {
 
   this.contractSectionView_ = new Blockly.ContractEditorSectionView(canvasToDrawOn,
     {
-      headerText: "1. Contract and Purpose Statement" // TODO(bjordan): i18n
+      onCollapseCallback: goog.bind(function (isNowCollapsed) {
+        // goog.ui.showElement toggles between "hidden" and "hidden" due to
+        // inherited properties, so set display directly instead
+        this.contractDiv_.style.display = isNowCollapsed ? 'none' : 'block';
+        this.position_();
+      }, this),
+      headerText: "1. Contract and Purpose Statement" // TODO(bjordan): i18n,
     }
   );
+
+  this.hiddenExampleBlocks_ = [];
   this.examplesSectionView_ = new Blockly.ContractEditorSectionView(
     canvasToDrawOn, {
       headerText: "2. Examples", // TODO(bjordan): i18n
-      placeContentCallback: goog.bind(function(newY) {
+      placeContentCallback: goog.bind(function (newY) {
         var currentY = newY;
         currentY += Blockly.ContractEditor.EXAMPLE_BLOCK_SECTION_MAGIN_ABOVE;
         this.exampleBlocks.forEach(function(block, i) {
@@ -105,10 +114,64 @@ Blockly.ContractEditor.prototype.create_ = function() {
         }, this);
         currentY += Blockly.ContractEditor.EXAMPLE_BLOCK_SECTION_MAGIN_BELOW;
         return currentY;
+      }, this),
+      onCollapseCallback: goog.bind(function (isNowCollapsed) {
+        this.setBlockSubsetVisibility(!isNowCollapsed,
+          goog.bind(this.isBlockInExampleArea, this),
+          this.hiddenExampleBlocks_);
+        this.position_();
       }, this)
     });
+
+  this.hiddenDefinitionBlocks_ = [];
   this.definitionSectionView_ = new Blockly.ContractEditorSectionView(
-    canvasToDrawOn, {headerText: "3. Definition" /** TODO(bjordan) i18n */});
+    canvasToDrawOn, {
+      headerText: "3. Definition", /** TODO(bjordan) i18n */
+      onCollapseCallback: goog.bind(function (isNowCollapsed) {
+        this.flyout_.setVisibility(!isNowCollapsed);
+        this.setBlockSubsetVisibility(!isNowCollapsed,
+          goog.bind(this.isBlockInFunctionArea, this),
+          this.hiddenDefinitionBlocks_);
+        this.position_();
+      }, this)
+    });
+};
+
+/**
+ * Hides a set of blocks
+ * @param isVisible whether to set blocks in area visible (true) or invisible (false)
+ * @param blockFilter subset of blocks to look at
+ * @param hiddenBlockArray array containing currently hidden blocks, gets filled with
+ *                        newly hidden blocks if any are hidden
+ */
+Blockly.ContractEditor.prototype.setBlockSubsetVisibility = function(isVisible, blockFilter, hiddenBlockArray) {
+  if (isVisible) {
+    hiddenBlockArray.forEach(function (block) {
+      block.setUserVisible(true);
+    }, this);
+    goog.array.clear(hiddenBlockArray);
+  } else {
+    this.modalBlockSpace.getTopBlocks()
+      .filter(blockFilter)
+      .forEach(function (block) {
+        hiddenBlockArray.push(block);
+        block.setUserVisible(false);
+      }, this);
+  }
+};
+
+Blockly.ContractEditor.prototype.isBlockInFunctionArea = function(block) {
+  return block.blockSpace === this.modalBlockSpace && block.isUserVisible() &&
+    block.getRelativeToSurfaceXY().y >= this.getFlyoutTopPosition();
+};
+
+Blockly.ContractEditor.prototype.isBlockInExampleArea = function(block) {
+  return block.blockSpace === this.modalBlockSpace && block.isUserVisible() &&
+    block.getRelativeToSurfaceXY().y < this.getFlyoutTopPosition();
+};
+
+Blockly.ContractEditor.prototype.getFlyoutTopPosition = function () {
+  return (this.flyout_.getYPosition() - this.flyout_.getHeight());
 };
 
 Blockly.ContractEditor.prototype.hideAndRestoreBlocks_ = function() {

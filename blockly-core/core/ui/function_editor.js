@@ -51,12 +51,20 @@ Blockly.FunctionEditor = function() {
 
   this.closeButton_ = null;
   this.contractDiv_ = null;
+
+  /**
+   * @type {Blockly.HorizontalFlyout}
+   * @protected
+   */
   this.flyout_ = null;
   this.frameBase_ = null;
   this.frameInner_ = null;
   this.frameText_ = null;
   this.modalBackground_ = null;
   this.onResizeWrapper_ = null;
+
+  /** @type {BlockSpace} */
+  this.modalBlockSpace = null;
 };
 
 
