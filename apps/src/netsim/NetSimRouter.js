@@ -193,6 +193,10 @@ NetSimRouter.prototype.getDisplayName = function () {
   return "Router " + this.routerID;
 };
 
+NetSimRouter.prototype.getHostname = function () {
+  return this.getDisplayName().replace(/[^\w\d]/g, '').toLowerCase();
+};
+
 NetSimRouter.prototype.getConnections = function (onComplete) {
   onComplete = defaultToEmptyFunction(onComplete);
 
@@ -241,6 +245,7 @@ NetSimRouter.prototype.assignAddressesToWire = function (wireNeedingAddress,
     onComplete) {
   onComplete = defaultToEmptyFunction(onComplete);
 
+  var self = this;
   this.getConnections(function (wires) {
     var addressList = wires.filter(function (wire) {
       return wire.localAddress !== undefined;
@@ -257,9 +262,28 @@ NetSimRouter.prototype.assignAddressesToWire = function (wireNeedingAddress,
 
     wireNeedingAddress.localAddress = newAddress;
     wireNeedingAddress.remoteAddress = 1; // Always 1 for routers
+    wireNeedingAddress.remoteHostname = self.getHostname();
     wireNeedingAddress.update(onComplete);
     // TODO (bbuchanan): There is a possible race condition here, where we would
     // TODO              get the same address assigned to two clients.
     // TODO              Recover?
+  });
+};
+
+NetSimRouter.prototype.getAddressTable = function (onComplete) {
+  onComplete = defaultToEmptyFunction(onComplete);
+
+  var self = this;
+  this.getConnections(function (wires) {
+    var addressTable = wires.map(function (wire) {
+      return {
+        hostname: wire.localHostname,
+        address: wire.localAddress
+      };
+    }).concat({
+      hostname: self.getHostname(),
+      address: 1
+    });
+    onComplete(addressTable);
   });
 };

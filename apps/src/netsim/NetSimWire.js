@@ -70,6 +70,14 @@ var NetSimWire = function () {
   this.remoteAddress = undefined;
 
   /**
+   * Display hostnames for the ends of this wire.
+   * Generally, each endpoint should set its own hostname.
+   * @type {string}
+   */
+  this.localHostname = undefined;
+  this.remoteHostname = undefined;
+
+  /**
    * Not used yet.
    * @type {string}
    */
@@ -126,6 +134,8 @@ NetSimWire.prototype.buildRow_ = function () {
     remoteID: this.remoteID,
     localAddress: this.localAddress,
     remoteAddress: this.remoteAddress,
+    localHostname: this.localHostname,
+    remoteHostname: this.remoteHostname,
     wireMode: this.wireMode
   };
 };
