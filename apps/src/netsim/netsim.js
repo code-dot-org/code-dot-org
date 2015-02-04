@@ -40,6 +40,7 @@ var NetSimConnection = require('./NetSimConnection');
 var NetSimLogger = require('./NetSimLogger');
 var DashboardUser = require('./DashboardUser');
 var NetSimLobby = require('./NetSimLobby');
+var NetSimRouterPanel = require('./NetSimRouterPanel');
 var RunLoop = require('./RunLoop');
 
 /**
@@ -139,18 +140,28 @@ NetSim.prototype.init = function(config) {
     // Do a deferred initialization of the connection object.
     // TODO (bbuchanan) : Appending random number to user name only for debugging.
     var userName = this.currentUser_.name + '_' + (Math.floor(Math.random() * 99) + 1);
-    this.connection_ = new NetSimConnection(userName, this.logger_);
-    this.runLoop_.tick.register(this.connection_, this.connection_.tick);
-    this.logger_.log("Connection manager created.");
-
-    var lobbyContainer = document.getElementById('netsim_lobby_container');
-    this.lobbyControl_ = NetSimLobby.createWithin(lobbyContainer, this.connection_);
-    this.runLoop_.tick.register(this.lobbyControl_, this.lobbyControl_.tick);
-    this.logger_.log("Lobby control created.");
+    this.initWithUserName_(userName);
   }.bind(this));
 
   // Begin the main simulation loop
   this.runLoop_.begin();
+};
+
+NetSim.prototype.initWithUserName_ = function (userName) {
+  this.connection_ = new NetSimConnection(userName, this.logger_);
+  this.runLoop_.tick.register(this.connection_, this.connection_.tick);
+  this.logger_.info("Connection manager created.");
+
+  var lobbyContainer = document.getElementById('netsim_lobby_container');
+  this.lobbyControl_ = NetSimLobby.createWithin(lobbyContainer, this.connection_);
+  this.runLoop_.tick.register(this.lobbyControl_, this.lobbyControl_.tick);
+  this.logger_.info("Lobby control created.");
+
+  var routerPanelContainer = document.getElementById('netsim_tabzone');
+  this.routerPanel_ = NetSimRouterPanel.createWithin(routerPanelContainer,
+    this.connection_);
+  this.runLoop_.tick.register(this.routerPanel_, this.routerPanel_.tick);
+  this.logger_.info("Router panel control created");
 };
 
 /**

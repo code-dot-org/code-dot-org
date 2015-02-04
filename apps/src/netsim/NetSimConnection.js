@@ -500,6 +500,8 @@ NetSimConnection.prototype.connectToRouter = function (routerID) {
   self.createWire(routerID, function (wire) {
     if (wire !== null) {
       self.wire_ = wire;
+      self.wire_.localHostname = self.displayName_.replace(/[^\w\d]/, '').
+          toLowerCase();
       self.router_.countConnections(function (count) {
         if (count <= self.router_.MAX_CLIENT_CONNECTIONS) {
           self.router_.assignAddressesToWire(self.wire_,
