@@ -76,31 +76,9 @@ ExpressionNode.prototype.clone = function () {
 };
 
 /**
- * Can we evaluate this expression given the mapping
+ * See if we can evaluate this node by trying to do so and catching exceptions.
+ * @returns Whether we can evaluate.
  */
-// TODO - unit test (test case where mapping[this.value_] = 0
-ExpressionNode.prototype.canEvaluate_orig = function (mapping) {
-  mapping = mapping || {};
-  var type = this.getType();
-  if (type === ValueType.FUNCTION_CALL) {
-    return false;
-  }
-
-  if (type === ValueType.VARIABLE) {
-    return mapping[this.value_] !== undefined;
-  }
-
-  for (var i = 0; i < this.children_.length; i++) {
-    if (!this.children_[i].canEvaluate(mapping)) {
-      return false;
-    }
-  }
-
-  return true;
-};
-
-// TODO (brent) - is this try/catch a reasonable approach? seems a little gross
-// might be cleaner to have evaluate return error code/result pair
 ExpressionNode.prototype.canEvaluate = function (mapping) {
   try {
     this.evaluate(mapping);
@@ -350,7 +328,6 @@ ExpressionNode.prototype.hasSameSignature = function (other) {
 
 /**
  * Do the two nodes differ only in argument order.
- * TODO: unit test
  */
 ExpressionNode.prototype.isEquivalentTo = function (other) {
   // only ignore argument order for ARITHMETIC

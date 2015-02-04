@@ -9,14 +9,9 @@ var Equation = EquationSet.Equation;
 var ExpressionNode = require(testUtils.buildPath('calc/expressionNode.js'));
 
 /**
- * TODO (brent) - update explanatory comment
- * This is a little bit strange. I want to test getEquationFromBlock, which
- * depends on the existence of Blockly blocks. Rather than hack together a new
- * system to load Blockly in a node environment, I take advantage of the fact
- * that we already have this for level tests.
- * I'm running a bunch of validation using the blockSpace after the run is
- * complete (via customValidation), and don't really care about the result of
- * actually running.
+ * This is another example of me taking advantage of the fact that our level
+ * tests have a full Blockly environment. This allows me to more easily test
+ * things like DOM manipulations
  */
 
 var displayGoal = Calc.__testonly__.displayGoal;

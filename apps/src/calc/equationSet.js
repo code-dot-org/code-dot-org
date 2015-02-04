@@ -270,7 +270,6 @@ function getEquationFromBlock(block) {
         var input, childBlock;
         for (var i = 0; !!(input = block.getInput('ARG' + i)); i++) {
           childBlock = input.connection.targetBlock();
-          // TODO (brent) - better default?
           values.push(childBlock ? getEquationFromBlock(childBlock).expression :
             new ExpressionNode(0));
         }
@@ -284,17 +283,13 @@ function getEquationFromBlock(block) {
       var expression = firstChild ? getEquationFromBlock(firstChild).expression :
         new ExpressionNode(0);
 
-      // TODO(brent) - avoid accessing private
-      return new Equation(name, block.parameterNames_, expression);
+      return new Equation(name, block.getVars(), expression);
 
     case 'functional_parameters_get':
       return new Equation(null, [], new ExpressionNode(block.getTitleValue('VAR')));
 
     case 'functional_example':
-      // TODO (brent) - we dont do anything with functional_example yet, but
-      // this way we will at least persist it/not throw unknown type
       return null;
-
 
     default:
       throw "Unknown block type: " + block.type;
