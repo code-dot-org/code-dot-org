@@ -205,3 +205,7 @@ We do not disclose any personal information to third parties for marketing purpo
 ## Contacting Code.org
 
 Please contact Code.org with any questions or comments about this Privacy Notice, your Personal Information, our third-party disclosure practices, or your consent choices by writing us at [http://code.org/contact](http://code.org/contact) or at 1301 Fifth Avenue, Suite 1225, Seattle, WA 98101.
+<br />
+<br />
+<br />
+[![image](/images/fit-300/privacy-wide.jpg)](http://studentprivacypledge.org/)

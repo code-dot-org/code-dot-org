@@ -3,7 +3,6 @@ title: Jobs at Code.org
 nav: about_nav
 ---
 
-# Job Openings at Code.org
 
 ## HR Generalist (Seattle, WA preferred)
 **Job Summary:**
@@ -22,6 +21,7 @@ The HR Generalist plays a critical role in supporting Code.org staff in areas su
 **Qualifications:**
 
 The ideal candidate has the following qualifications:
+
 - A Bachelor’s degree and a minimum of 3 years of HR generalist experience or equivalent work experience. PHR certification preferred.
 - Professional demeanor, possessing excellent communication, organizational and interpersonal skills
 - Experience in marketing positions using internet and social media channels; demonstrated ability to generate a steady flow of qualified candidates
@@ -39,6 +39,64 @@ A high level of computer literacy is required; proficiency in working with Micro
 - Must pass a pre-employment background check
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+# Job Openings at Code.org
+##Videographer (Seattle, WA preferred)##
+**Job Summary:**
+
+Code.org is recruiting for a videographer who can collaborate with our education and development team to create educational and inspirational videos that teach computer science to students of all ages and diverse backgrounds. Full-time, long-term contract (approximately 9 months). 
+Responsibilities of the position include:
+
+- Working closely with other teams at Code.org to determine the video needs for various courses (aimed at K-12 students)
+- Brainstorming and story boarding ideas for each video, tailored to it’s audience and purpose 
+- Shooting footage for videos in interview format as well as in-class activities
+- Editing footage to create video ensembles 
+- Adding animations, sounds and graphics to create high production value videos
+- Working on several different videos in parallel  
+
+**Qualifications**
+
+The ideal candidate has the following qualifications:
+
+- Bachelors degree in film, digital media, graphic design or related field
+- 4+ years work experience in producing videos either as a generalist or as an animator/graphics expert
+- Experience in all stages of video production i.e: conception and story-boarding, shooting, media management, editing, animating needed graphics, and exporting appropriate format for YouTube, however our most urgent need is for an animator/graphics expert
+- Extensive experience with Adobe products (we use these exclusively for our video production)
+- A strong sense of design and story is key, as is a can-do / self-starter attitude
+- Excellent professional references
+- Must be a U.S. Citizen or Permanent Resident
+- Must pass a pre-employment background check
+
+Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+##Advocacy Researcher (Seattle, WA preferred)##
+**Job Summary:**
+
+Code.org is recruiting for an Advocacy Researcher who will provide assistance with our state policy and advocacy research needs. Part-time, long-term contract (6 months, with a possible extension based on need). 
+Responsibilities of the position include:
+
+- Research and analysis of state policy issues, including:
+	- State standards for K-12 education
+	- University admission requirements
+	- Teacher certification programs and pathways
+	- Course code implementation at the State Department of Education level and with local school districts
+	- Graduation credit requirements
+	- Pre-service teacher requirements
+- Develop policy recommendations and reports
+- Regularly update relevant statistics for messaging and advocacy  
+
+**Qualifications:**
+
+- 5-10 years experience in education policy and research (required)
+- Advanced Excel skills for data analysis (required)
+- Knowledge of K-12 computer science issues (preferred)
+- Strong writing and analytical skills
+- Ability to work in a fast-paced, team-based environment
+- Must be a U.S. Citizen or Permanent Resident
+- Must pass a pre-employment background check
+
+Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
 ## K-8 Program Manager (Seattle, WA preferred)##**Job Summary:**
 Code.org is looking for a K-8 Program Manager specializing in Middle School CS to support the goals of Code.org’s Education team through the development of middle school computer science curricula and a related professional development model. Responsibilities of the position include:- Sharing responsibility with the K-8 team for executing on a middle school education vision for the organization that includes integrating CS into Math and Science.- Designing, testing, revising, executing, managing, and evaluating a highly-scalable professional development model for the middle school programs.- Create both online and written middle school curricula; includes coordinating with internal teams (Development Team and Videographer) and third party vendors- Aligning middle school efforts with elementary and high school efforts- Collaborating with Product Team to develop curriculum-specific technology tools - Refining specs with Product Team for teacher dashboard
 - Working with video team to create/integrate educational videos in curriculum- Transition between elementary and middle school programs, as needed- Collaborating with remote Education team members**Qualifications:**The ideal candidate will have a Bachelor’s degree or higher in Education and 2-3 years of recent relevant computer science, mathematics, or science experience in a K-12 school setting. They also will have had experience working with the Math Common Core and Next Generation Science Standards within a curriculum writing and/or professional development capacity. Technology industry experience a plus.Must have strong leadership skills, possess exceptional writing and communications ability in English, and be tech-savvy. Must also be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Microsoft Office and Google Docs a must.Interested candidates should email a resume and cover letter, outlining how your skills and experience meet the qualifications of the position, to jobs@code.org. You may also choose to include a LinkedIn or related online profile

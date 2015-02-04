@@ -6,23 +6,28 @@ var ExpressionNode = require('./expressionNode');
  *   f(x) = x + 1
  *   name: f
  *   equation: x + 1
+ *   params: ['x']
  * In many cases, this will just be an expression with no name.
+ * @param {string} name Function or variable name. Null if compute expression
+ * @param {string[]} params List of parameter names if a function.
+ * @param {ExpressionNode} expression
  */
-var Equation = function (name, expression, variables) {
+var Equation = function (name, params, expression) {
   this.name = name;
+  this.params = params || [];
   this.expression = expression;
+
+  this.signature = this.name;
+  if (this.params.length > 0) {
+    this.signature += '(' + this.params.join(',') + ')';
+  }
 };
 
 /**
- * Equations come in three varieties:
- *  (1) Compute expression - name is null
- *  (2) Function - name is "fn(var1, var2, ...)"
- *  (3) Variable declaration - name is "x"
- * This method returns true if the name indicates it is a function.
+ * @returns True if a function
  */
 Equation.prototype.isFunction = function () {
-  // does the name end with parens enclosing variables
-  return /\(.*\)$/.test(this.name);
+  return this.params.length > 0;
 };
 
 /**
@@ -96,23 +101,16 @@ EquationSet.prototype.hasVariablesOrFunctions = function () {
 };
 
 /**
- * If the EquationSet has exactly one function and no variables, returns that
- * equation. If we have multiple functions or one function and some variables,
- * it returns null
- */
-EquationSet.prototype.singleFunction_ = function () {
-  if (this.equations_.length === 1 && this.equations_[0].isFunction()) {
-    return this.equations_[0];
-  }
-
-  return null;
-};
-
-/**
- * External callers only care about whether or not we have a single function
+ * @returns {boolean} True if the EquationSet has exactly one function and no
+ * variables. If we have multiple functions or one function and some variables,
+ * returns false.
  */
  EquationSet.prototype.hasSingleFunction = function () {
-   return this.singleFunction_() !== null;
+   if (this.equations_.length === 1 && this.equations_[0].isFunction()) {
+     return true;
+   }
+
+   return false;
  };
 
 /**
@@ -143,17 +141,15 @@ EquationSet.prototype.isIdenticalTo = function (otherSet) {
 };
 
 /**
- * Returns a list of equations (vars/functions) sorted by name.
+ * Returns a list of the non-compute equations (vars/functions) sorted by name.
  */
 EquationSet.prototype.sortedEquations = function () {
-  // TODO - this has side effects, do i care?
-  // sort by name. note - this sorts in place
+  // note: this has side effects, as it reorders equations. we could also
+  // ensure this was done only once if we had performance concerns
   this.equations_.sort(function (a, b) {
     return a.name.localeCompare(b.name);
   });
 
-  // append compute expression with name null
-  // return this.equations_.concat(this.compute_);
   return this.equations_;
 };
 
@@ -166,51 +162,56 @@ EquationSet.prototype.evaluate = function () {
 
 /**
  * Evaluate the given compute expression in the context of the EquationSet's
- * equations
+ * equations. For example, our equation set might define f(x) = x + 1, and this
+ * allows us to evaluate the expression f(1) or f(2)...
+ * @param {ExpressionNode} computeExpression The expression to evaluate
  */
 EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
-  // (1) no variables/functions. this is easy
+  // no variables/functions. this is easy
   if (this.equations_.length === 0) {
     return computeExpression.evaluate();
   }
 
+  // Iterate through our equations to generate our mapping. We may need to do
+  // this a few times. Stop trying as soon as we do a full iteration without
+  // adding anything new to our mapping.
   var mapping = {};
-  // (2) single function, no variables
-  // Map our parameter names to their input values.
-  var singleFunction = this.singleFunction_();
-  if (singleFunction !== null) {
-    // TODO (brent) - might be better if we didn't depend on the equation
-    // name being in a particular format
-    var variables = /\((.*)\)$/.exec(singleFunction.name)[1].split(',');
-    var caller = computeExpression;
-    if (caller.getType() !== ExpressionNode.ValueType.FUNCTION_CALL) {
-      throw new Error('expect function call');
-    }
-
-    if (caller.children.length !== variables.length) {
-      throw new Error('Unexpected: calling function with wrong number of inputs');
-    }
-
-    variables.forEach(function (item, index) {
-      // TODO (brent)- value feels like it should be a private maybe?
-      mapping[item] = caller.children[index].value;
-    });
-    return singleFunction.expression.evaluate(mapping);
-  }
-
-  // (3) no functions and one or more variables
-  var madeProgress = true;
-  while (madeProgress) {
+  var madeProgress;
+  var testMapping;
+  var setTestMappingToOne = function (item) {
+    testMapping[item] = 1;
+  };
+  do {
     madeProgress = false;
     for (var i = 0; i < this.equations_.length; i++) {
       var equation = this.equations_[i];
-      if (mapping[equation.name] === undefined &&
+      if (equation.isFunction()) {
+        if (mapping[equation.name]) {
+          continue;
+        }
+        // see if we can map if we replace our params
+        // note that params override existing vars in our testMapping
+        testMapping = _.clone(mapping);
+        equation.params.forEach(setTestMappingToOne);
+        if (!equation.expression.canEvaluate(testMapping)) {
+          continue;
+        }
+
+        // we have a valid mapping
+        madeProgress = true;
+        mapping[equation.name] = {
+          variables: equation.params,
+          expression: equation.expression
+        };
+      } else if (mapping[equation.name] === undefined &&
           equation.expression.canEvaluate(mapping)) {
+        // we have a variable that hasn't yet been mapped and can be
         madeProgress = true;
         mapping[equation.name] = equation.expression.evaluate(mapping);
       }
     }
-  }
+
+  } while (madeProgress);
 
   if (!computeExpression.canEvaluate(mapping)) {
     throw new Error("Can't resolve EquationSet");
@@ -222,7 +223,6 @@ EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
 /**
  * Given a Blockly block, generates an Equation.
  */
-// TODO (brent) - needs unit tests
 function getEquationFromBlock(block) {
   var name;
   if (!block) {
@@ -232,7 +232,7 @@ function getEquationFromBlock(block) {
   switch (block.type) {
     case 'functional_compute':
       if (!firstChild) {
-        return new Equation(null, null);
+        return new Equation(null, [], null);
       }
       return getEquationFromBlock(firstChild);
 
@@ -249,7 +249,7 @@ function getEquationFromBlock(block) {
         return getEquationFromBlock(argBlock).expression;
       });
 
-      return new Equation(null, new ExpressionNode(operation, args, block.id));
+      return new Equation(null, [], new ExpressionNode(operation, args, block.id));
 
     case 'functional_math_number':
     case 'functional_math_number_dropdown':
@@ -257,47 +257,39 @@ function getEquationFromBlock(block) {
       if (val === '???') {
         val = 0;
       }
-      return new Equation(null,
+      return new Equation(null, [],
         new ExpressionNode(parseInt(val, 10), [], block.id));
 
     case 'functional_call':
       name = block.getCallName();
       var def = Blockly.Procedures.getDefinition(name, Blockly.mainBlockSpace);
       if (def.isVariable()) {
-        return new Equation(null, new ExpressionNode(name));
+        return new Equation(null, [], new ExpressionNode(name));
       } else {
         var values = [];
         var input, childBlock;
         for (var i = 0; !!(input = block.getInput('ARG' + i)); i++) {
           childBlock = input.connection.targetBlock();
-          // TODO (brent) - better default?
           values.push(childBlock ? getEquationFromBlock(childBlock).expression :
             new ExpressionNode(0));
         }
-        return new Equation(null, new ExpressionNode(name, values));
+        return new Equation(null, [], new ExpressionNode(name, values));
       }
       break;
 
     case 'functional_definition':
       name = block.getTitleValue('NAME');
-      // TODO(brent) - avoid accessing private
-      if (block.parameterNames_.length) {
-        name += '(' + block.parameterNames_.join(',') +')';
-      }
+
       var expression = firstChild ? getEquationFromBlock(firstChild).expression :
         new ExpressionNode(0);
 
-      return new Equation(name, expression);
+      return new Equation(name, block.getVars(), expression);
 
     case 'functional_parameters_get':
-      return new Equation(null, new ExpressionNode(block.getTitleValue('VAR')));
+      return new Equation(null, [], new ExpressionNode(block.getTitleValue('VAR')));
 
     case 'functional_example':
-      // TODO (brent) - we dont do anything with functional_example yet, but
-      // this way we will at least persist it/not throw unknown type
-      // return new Equation('block' + block.id, null);
       return null;
-
 
     default:
       throw "Unknown block type: " + block.type;
