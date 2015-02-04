@@ -58,8 +58,8 @@ var NetSimWire = function () {
    * Connected node row IDs within the _lobby table
    * @type {number}
    */
-  this.localID = undefined;
-  this.remoteID = undefined;
+  this.localNodeID = undefined;
+  this.remoteNodeID = undefined;
 
   /**
    * Assigned local addresses for the ends of this wire.
@@ -148,8 +148,8 @@ NetSimWire.prototype.destroy = function (completionCallback) {
 NetSimWire.prototype.buildRow_ = function () {
   return {
     lastPing: Date.now(),
-    localID: this.localID,
-    remoteID: this.remoteID,
+    localNodeID: this.localNodeID,
+    remoteNodeID: this.remoteNodeID,
     localAddress: this.localAddress,
     remoteAddress: this.remoteAddress,
     localHostname: this.localHostname,
