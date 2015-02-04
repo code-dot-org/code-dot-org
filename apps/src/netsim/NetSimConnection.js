@@ -122,13 +122,10 @@ var NetSimConnection = function (displayName, logger /*=new NetSimLogger(NONE)*/
 
   /**
    * This connection's unique Row ID within the lobby table.
-   * Alternatively, think of this as a client node ID.
-   * TODO (bbuchanan): Consider a rename for this?
    * If undefined, we aren't connected to an instance.
    * @type {number}
-   * @private
    */
-  this.myLobbyRowID_ = undefined;
+  this.myNodeID = undefined;
 
   /**
    * Client's connection status, mostly used for upload to the lobby
@@ -186,7 +183,7 @@ var NetSimConnection = function (displayName, logger /*=new NetSimLogger(NONE)*/
    * If you *are* connected to another node, you should have one of these.
    * If you *are not* connected to another node, this should be null.
    * We are always the local end of this wire, so we assert that
-   *   this.wire_.localID === this.myLobbyRowID_
+   *   this.wire_.localID === this.myNodeID
    * @type {NetSimWire}
    * @private
    */
@@ -224,15 +221,14 @@ NetSimConnection.ConnectionStatus = ConnectionStatus;
 
 /**
  * All the types of nodes that can show up in the lobby
- * TODO (bbuchanan): Rename to NodeType?
  * @readonly
  * @enum {string}
  */
-var LobbyRowType = {
+var NodeType = {
   USER: 'user',
   ROUTER: 'router'
 };
-NetSimConnection.LobbyRowType = LobbyRowType;
+NetSimConnection.LobbyRowType = NodeType;
 
 /**
  * @returns {NetSimLogger}
@@ -261,7 +257,7 @@ NetSimConnection.prototype.buildLobbyRow_ = function () {
   return {
     lastPing: Date.now(),
     name: this.displayName_,
-    type: LobbyRowType.USER,
+    type: NodeType.USER,
     status: this.status_,
     statusDetail: this.getStatusDetail()
   };
@@ -307,7 +303,7 @@ NetSimConnection.prototype.disconnectFromInstance = function () {
 
   // TODO (bbuchanan) : Check for other resources we need to clean up.
 
-  this.disconnectByRowID_(this.myLobbyRowID_);
+  this.disconnectByRowID_(this.myNodeID);
   this.setConnectionStatus_(ConnectionStatus.OFFLINE);
 };
 
@@ -320,20 +316,19 @@ NetSimConnection.prototype.connect_ = function () {
   var self = this;
   this.getLobbyTable().insert(this.buildLobbyRow_(), function (returnedData) {
     if (returnedData) {
-      self.myLobbyRowID_ = returnedData.id;
+      self.myNodeID = returnedData.id;
       self.setConnectionStatus_(ConnectionStatus.IN_LOBBY);
 
       // See if we have an active wire, and try to continue reconnecting
       // if possible.
       if (self.wire_) {
-        self.wire_.localID = self.myLobbyRowID_;
+        self.wire_.localID = self.myNodeID;
         self.wire_.update(function () {
           self.setConnectionStatus_(ConnectionStatus.CONNECTED);
         });
       }
 
     } else {
-      // TODO (bbuchanan) : Connect retry?
       self.logger_.log("Failed to connect to instance", LogLevel.ERROR);
     }
   });
@@ -354,12 +349,9 @@ NetSimConnection.prototype.disconnectByRowID_ = function (lobbyRowID) {
   var self = this;
   this.getLobbyTable().delete(lobbyRowID, function (succeeded) {
     if (succeeded) {
-      self.logger_.log("Disconnected client " + lobbyRowID + " from instance.",
-          LogLevel.INFO);
+      self.logger_.info("Disconnected client " + lobbyRowID + " from instance.");
     } else {
-      // TODO (bbuchanan) : Disconnect retry?
-      self.logger_.log("Failed to disconnect client " + lobbyRowID + ".",
-          LogLevel.WARN);
+      self.logger_.warn("Failed to disconnect client " + lobbyRowID + ".");
     }
   });
 };
@@ -369,7 +361,7 @@ NetSimConnection.prototype.disconnectByRowID_ = function (lobbyRowID) {
  * @returns {boolean}
  */
 NetSimConnection.prototype.isConnectedToInstance = function () {
-  return (undefined !== this.myLobbyRowID_);
+  return (undefined !== this.myNodeID);
 };
 
 /**
@@ -390,11 +382,11 @@ NetSimConnection.prototype.setConnectionStatus_ = function (newStatus) {
       this.periodicKeepAlive_.enable();
       this.periodicCleanUp_.enable();
       this.logger_.info("Connected to instance, assigned ID " +
-          this.myLobbyRowID_, LogLevel.INFO);
+          this.myNodeID, LogLevel.INFO);
       break;
 
     case ConnectionStatus.OFFLINE:
-      this.myLobbyRowID_ = undefined;
+      this.myNodeID = undefined;
       this.periodicKeepAlive_.disable();
       this.periodicCleanUp_.disable();
       this.logger_.info("Disconnected from instance", LogLevel.INFO);
@@ -433,7 +425,7 @@ NetSimConnection.prototype.keepAlive = function (callback) {
   }
 
   var self = this;
-  this.getLobbyTable().update(this.myLobbyRowID_, this.buildLobbyRow_(),
+  this.getLobbyTable().update(this.myNodeID, this.buildLobbyRow_(),
       function (succeeded) {
         callback(succeeded);
         if (!succeeded) {
@@ -489,10 +481,10 @@ NetSimConnection.prototype.cleanLobby_ = function () {
   // Could eventually do some validation too.
   this.fetchLobbyListing(function (lobbyData) {
     lobbyData.forEach(function (lobbyRow) {
-      if (lobbyRow.type === LobbyRowType.USER &&
+      if (lobbyRow.type === NodeType.USER &&
           now - lobbyRow.lastPing >= CONNECTION_TIMEOUT_MS) {
         self.disconnectByRowID_(lobbyRow.id);
-      } else if (lobbyRow.type === LobbyRowType.ROUTER &&
+      } else if (lobbyRow.type === NodeType.ROUTER &&
           now - lobbyRow.lastPing >= CONNECTION_TIMEOUT_ROUTER_MS) {
         self.disconnectByRowID_(lobbyRow.id);
       }
@@ -621,7 +613,7 @@ NetSimConnection.prototype.createWire = function (remoteID, onComplete) {
   var self = this;
   NetSimWire.create(this.instanceID_, function (wire) {
     if (wire !== null) {
-      wire.localID = self.myLobbyRowID_;
+      wire.localID = self.myNodeID;
       wire.remoteID = remoteID;
       wire.update(function (success) {
         if (success) {

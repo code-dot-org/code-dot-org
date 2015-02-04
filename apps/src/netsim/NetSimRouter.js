@@ -173,8 +173,6 @@ NetSimRouter.prototype.update = function (onComplete) {
 NetSimRouter.prototype.destroy = function (onComplete) {
   onComplete = defaultToEmptyFunction(onComplete);
 
-  // TODO: Any other cleanup here?
-
   this.getLobbyTable().delete(this.routerID, function (success) {
     onComplete(success);
   });

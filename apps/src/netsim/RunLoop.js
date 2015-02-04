@@ -109,8 +109,6 @@ RunLoop.Clock = function () {
    * Time the current/most recent tick started, in ms.
    * Depending on browser this might be epoch time or time since load -
    *  therefore, don't use for absolute time!
-   * TODO (bbuchanan) : Could wrap this to absolutely be time-since-begin
-   *                    independent of implementation.
    * @type {number}
    */
   this.time = windowNow();
