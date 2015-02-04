@@ -53,6 +53,8 @@ module.exports.blocks = [
   {'func': 'turtlePenDown', 'title': "Set down the turtle's pen", 'category': 'Turtle' },
   {'func': 'turtlePenWidth', 'title': 'Set the turtle to the specified pen width', 'category': 'Turtle', 'params': ["3"] },
   {'func': 'turtlePenColor', 'title': 'Set the turtle to the specified pen color', 'category': 'Turtle', 'params': ["'red'"] },
+  {'func': 'turtleShow', 'title': "Show the turtle image at its current location", 'category': 'Turtle' },
+  {'func': 'turtleHide', 'title': "Hide the turtle image", 'category': 'Turtle' },
 ];
 
 module.exports.categories = {
