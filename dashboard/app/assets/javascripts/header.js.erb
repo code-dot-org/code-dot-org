@@ -24,12 +24,9 @@ if (!window.dashboard) {
  *   }>
  * }}
  */
-dashboard.buildHeader = function (scriptData) {
-
+dashboard.buildHeader = function () {
   // TODO: Global, until we create a component cache
   window.headerProgress = new HeaderProgress( $('.navbar-header') );
-  headerProgress.replaceState( scriptData );
-
 };
 
 
@@ -60,6 +57,8 @@ dashboard.buildHeader = function (scriptData) {
       this.$el = $el;
       this.$el.on('click', this.onClick);
       this.$el.on('destroyed', this.onDestroy);
+
+      this.props = $el.data();
 
       this.componentDidMount();
     }
@@ -150,7 +149,7 @@ dashboard.buildHeader = function (scriptData) {
 
     HeaderProgress.prototype.componentDidMount = function() {
       // TODO: enable the fetchProgress call here when we've removed the pushed state
-      // this.fetchProgress();
+      this.fetchProgress();
 
       // Create tooltips for the free-play icons
       $('.level_free_play').qtip({
@@ -167,13 +166,13 @@ dashboard.buildHeader = function (scriptData) {
     // Fetch the user's progress via an AJAX call
     // TODO: This should move to a store.
     HeaderProgress.prototype.fetchProgress = function() {
-      var url = this.$el.data('url') || '/popup/progress';
+      var url = this.props.url || '/popup/progress';
       var _this = this;
 
       $.getJSON(url, {
-        script_id: this.$el.data('script-name'),
-        stage_id: this.$el.data('stage-id'),
-        level_id: this.$el.data('level-id')
+        script_name: this.props.scriptName,
+        stage_id: this.props.stageId,
+        level_id: this.props.levelId
       })
       .done(function(data) {
         _this.replaceState(data);
@@ -189,8 +188,8 @@ dashboard.buildHeader = function (scriptData) {
       var state = this.state || {};
 
       // Don't render unless we have the data attributes
-      // TODO: REMOVE
-      if (!this.$el.data('script-name'))
+      // TODO: REMOVE after _header.html.haml is converted
+      if (!this.props.scriptName)
         return;
 
       // NOTE: All this DOM manipulation would be better done via a template - but we're in the process
@@ -280,8 +279,67 @@ dashboard.buildHeader = function (scriptData) {
 
     }
 
+    HeaderProgress.prototype.showPopup = function(show) {
+      var _this = this;
+
+      headerProgress.setState({
+        popped: !!show
+      });
+
+      // Have we loaded the stage HTML already?  If not, load it now.
+      if (this.state.stageHtml === undefined) {
+        this.state.stageHtml = false;
+
+        $.ajax({
+          url: this.state.statsPath,
+          data: {
+            script_id: this.state.scriptId,
+            script_level_id: this.state.scriptLevelId
+          },
+          success: function (result) {
+            _this.setState({
+              stageHtml: result
+            })
+
+            if (show == "trophies") {
+              // TODO: Jump to trophies
+            }
+          }
+        });
+      } else if (show == "trophies") {
+        // TODO: Jump to trophies
+      }
+
+      /* TODO:
+        function jumpToTrophies() {
+          window.scrollTo(0, +$('#trophies').offset().top);
+        }
+      */
+    }
+
     HeaderProgress.prototype.onClick = function(ev) {
       var el;
+
+      // Toggle more/less button
+      el = $(ev.target).closest('.header_trophy_link');
+      if (el.length) {
+        this.showPopup("trophies");
+        return;
+      }
+
+      // Toggle more/less button
+      el = $(ev.target).closest('.header_popup_link');
+      if (el.length) {
+        this.showPopup(!this.state.popped);
+        return;
+      }
+
+      // Close button
+      el = $(ev.target).closest('.header_popup_close');
+      if (el.length) {
+        this.showPopup(false);
+        return;
+      }
 
       el = $(ev.target).closest('.header_popup');
       if (el.length) {
@@ -289,48 +347,16 @@ dashboard.buildHeader = function (scriptData) {
         return;
       }
 
-      el = $(ev.target).closest('.header_popup_link');
-      if (el.length) {
-        ev.stopPropagation();
 
-        headerProgress.setState({
-          popped: !this.state.popped
-        });
-        return;
-      }
-
-      // Click on more/less, or trophies
-      // -- toggle state.popped
-      // -- lazy load the HTML
+      // TODO:
       // -- jump to the trophies if that was clicked
       // -- catch window clicks and close the popup
       // -- don't close the popup if clicking inside it
 
       /*
-        function lazyLoadPopup(trophiesClicked) {
-          if (!popupLoaded) {
-            popupLoaded = true;
-            $.ajax({
-              url: scriptData.statsPath,
-              data: {
-                script_id: scriptData.scriptId,
-                script_level_id: scriptData.scriptLevelId
-              }, success: function (result) {
-                $('.header_popup_body').html(result);
-                if (trophiesClicked) {
-                  jumpToTrophies();
-                }
-              }
-            });
-          } else if (trophiesClicked) {
-            jumpToTrophies();
-          }
-        }
         function jumpToTrophies() {
           window.scrollTo(0, +$('#trophies').offset().top);
         }
-
-
       */
 
       // TODO: Default behaviors
