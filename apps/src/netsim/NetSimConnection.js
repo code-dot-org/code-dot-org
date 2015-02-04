@@ -231,6 +231,15 @@ var NodeType = {
 NetSimConnection.LobbyRowType = NodeType;
 
 /**
+ * Attach own handlers to run loop events.
+ * @param {RunLoop} runLoop
+ */
+NetSimConnection.prototype.attachToRunLoop = function (runLoop) {
+  this.periodicKeepAlive_.attachToRunLoop(runLoop);
+  this.periodicCleanUp_.attachToRunLoop(runLoop);
+};
+
+/**
  * @returns {NetSimLogger}
  */
 NetSimConnection.prototype.getLogger = function () {
@@ -465,15 +474,6 @@ NetSimConnection.prototype.fetchLobbyListing = function (callback) {
       callback([]);
     }
   });
-};
-
-/**
- *
- * @param {RunLoop.Clock} clock
- */
-NetSimConnection.prototype.tick = function (clock) {
-  this.periodicKeepAlive_.tick(clock);
-  this.periodicCleanUp_.tick(clock);
 };
 
 /**
