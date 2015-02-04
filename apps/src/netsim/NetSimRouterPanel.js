@@ -84,15 +84,15 @@ module.exports = NetSimRouterPanel;
 NetSimRouterPanel.createWithin = function (element, connection) {
   var controller = new NetSimRouterPanel(connection);
   element.innerHTML = markup({});
-  controller.initialize();
+  this.bindElements_();
+  this.refresh();
   return controller;
 };
 
-NetSimRouterPanel.prototype.initialize = function () {
-  this.bindElements_();
-  this.refresh();
-};
-
+/**
+ * Get relevant elements from the page and bind them to local variables.
+ * @private
+ */
 NetSimRouterPanel.prototype.bindElements_ = function () {
   this.rootDiv_ = $('#netsim_router_panel');
   this.connectedSpan_ = this.rootDiv_.find('#connected');
@@ -100,6 +100,11 @@ NetSimRouterPanel.prototype.bindElements_ = function () {
   this.networkTable_ = this.rootDiv_.find('#netsim_router_network_table');
 };
 
+/**
+ * Handler for connection status changes.  Can update configuration and
+ * trigger a refresh of this view.
+ * @private
+ */
 NetSimRouterPanel.prototype.onConnectionStatusChange_ = function () {
   if (this.connection_.isConnectedToRouter()) {
     if (this.connection_.router_ !== this.router_) {
@@ -114,6 +119,9 @@ NetSimRouterPanel.prototype.onConnectionStatusChange_ = function () {
   }
 };
 
+/**
+ * Update the address table to show the list of nodes in the local network.
+ */
 NetSimRouterPanel.prototype.refresh = function () {
   if (this.router_) {
     this.connectedSpan_.show();
@@ -136,7 +144,6 @@ NetSimRouterPanel.prototype.refresh = function () {
 };
 
 /**
- *
  * @param {RunLoop.Clock} clock
  */
 NetSimRouterPanel.prototype.tick = function (clock) {

@@ -403,6 +403,10 @@ NetSimConnection.prototype.setConnectionStatus_ = function (newStatus) {
   this.statusChanges.notifyObservers();
 };
 
+/**
+ * Generates a status line to put in our lobby row.
+ * @returns {string}
+ */
 NetSimConnection.prototype.getStatusDetail = function () {
   if (this.status_ === ConnectionStatus.CONNECTED) {
     return ' (Address ' + this.wire_.localAddress + ') ' +
@@ -414,6 +418,8 @@ NetSimConnection.prototype.getStatusDetail = function () {
 };
 
 /**
+ * Update our lobby row, making sure it has our latest state and a new
+ * timestamp so that others know we are still present.
  * @param {function} [callback]
  */
 NetSimConnection.prototype.keepAlive = function (callback) {
@@ -438,6 +444,11 @@ NetSimConnection.prototype.keepAlive = function (callback) {
   });
 };
 
+/**
+ * Gets all rows in the lobby and passes them to callback.  Callback will
+ * get an empty array if we were unable to get lobby data.
+ * @param callback
+ */
 NetSimConnection.prototype.fetchLobbyListing = function (callback) {
   if (!this.isConnectedToInstance()) {
     this.logger_.log("Can't get lobby rows, not connected to instance.", LogLevel.WARN);
@@ -509,6 +520,9 @@ NetSimConnection.prototype.cleanLobby_ = function () {
   }
 };
 
+/**
+ * Adds a row to the lobby for a new router node.
+ */
 NetSimConnection.prototype.addRouterToLobby = function () {
   if (!this.isConnectedToInstance()) {
     this.logger_.error("Can't create a router without a connection");
@@ -521,6 +535,10 @@ NetSimConnection.prototype.addRouterToLobby = function () {
   });
 };
 
+/**
+ * Whether our client node is connected to a router node.
+ * @returns {boolean}
+ */
 NetSimConnection.prototype.isConnectedToRouter = function () {
   return this.wire_ !== null && this.router_ !== null;
 };
@@ -561,6 +579,10 @@ NetSimConnection.prototype.connectToRouter = function (routerID) {
   });
 };
 
+/**
+ * Disconnects our client node from the currently connected router node.
+ * Destroys the shared wire.
+ */
 NetSimConnection.prototype.disconnectFromRouter = function () {
   if (!this.isConnectedToRouter()) {
     this.logger_.warn("Cannot disconnect: Not connected.");
@@ -585,6 +607,12 @@ NetSimConnection.prototype.disconnectFromRouter = function () {
   });
 };
 
+/**
+ * Creates our local NetSimWire, connected to our client node on the
+ * local end and connected to the given remote node at the remote end.
+ * @param remoteID
+ * @param onComplete
+ */
 NetSimConnection.prototype.createWire = function (remoteID, onComplete) {
   if (!onComplete) {
     onComplete = function () {};

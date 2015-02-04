@@ -147,6 +147,13 @@ NetSim.prototype.init = function(config) {
   this.runLoop_.begin();
 };
 
+/**
+ * Initialization that can happen once we have a user name.
+ * Could collapse this back into init if at some point we can guarantee that
+ * user name is available on load.
+ * @param userName
+ * @private
+ */
 NetSim.prototype.initWithUserName_ = function (userName) {
   this.connection_ = new NetSimConnection(userName, this.logger_);
   this.runLoop_.tick.register(this.connection_, this.connection_.tick);
