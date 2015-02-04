@@ -4209,7 +4209,7 @@ function testFromBlock (node) {
   return {
     test: function(userBlock) {
       // Encode userBlock while ignoring child statements
-      var userElement = Blockly.Xml.blockToDom_(userBlock, true);
+      var userElement = Blockly.Xml.blockToDom(userBlock, true);
       return elementsEquivalent(node, userElement);
     },
     blockDisplayXML: xml.serialize(node)
@@ -4278,7 +4278,7 @@ function elementsEquivalent(expected, given) {
     }
     return expected.isEqualNode(given);
   }
-  // Not fully clear to me why, but blockToDom_ seems to return us an element
+  // Not fully clear to me why, but blockToDom seems to return us an element
   // with a tagName in all caps
   if (expected.tagName.toLowerCase() !== given.tagName.toLowerCase()) {
     return false;
@@ -16148,7 +16148,7 @@ exports.generateSimpleBlock = function (blockly, generator, options) {
  * @returns {*}
  */
 exports.domToBlock = function(blockDOM) {
-  return Blockly.Xml.domToBlock_(Blockly.mainBlockSpace, blockDOM);
+  return Blockly.Xml.domToBlock(Blockly.mainBlockSpace, blockDOM);
 };
 
 /**

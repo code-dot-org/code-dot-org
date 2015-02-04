@@ -416,7 +416,7 @@ Blockly.Flyout.prototype.show = function(xmlList) {
   } else {
     for (var i = 0, xml; xml = xmlList[i]; i++) {
       if (xml.tagName && xml.tagName.toUpperCase() == 'BLOCK') {
-        blocks.push(Blockly.Xml.domToBlock_(this.blockSpace_, xml));
+        blocks.push(Blockly.Xml.domToBlock(this.blockSpace_, xml));
         gaps.push(margin * 3);
       }
     }
@@ -659,9 +659,9 @@ Blockly.Flyout.prototype.createBlockFunc_ = function(originBlock) {
       return;
     }
     // Create the new block by cloning the block in the flyout (via XML).
-    var xml = Blockly.Xml.blockToDom_(originBlock);
+    var xml = Blockly.Xml.blockToDom(originBlock);
     var targetBlockSpace = flyout.targetBlockSpace_;
-    var block = Blockly.Xml.domToBlock_(targetBlockSpace, xml);
+    var block = Blockly.Xml.domToBlock(targetBlockSpace, xml);
     // Place it in the same spot as the flyout copy.
     var svgRootOld = originBlock.getSvgRoot();
     if (!svgRootOld) {

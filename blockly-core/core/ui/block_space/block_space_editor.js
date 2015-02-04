@@ -621,7 +621,7 @@ Blockly.BlockSpaceEditor.terminateDrag_ = function() {
  * @private
  */
 Blockly.BlockSpaceEditor.copy_ = function(block) {
-  var xmlBlock = Blockly.Xml.blockToDom_(block);
+  var xmlBlock = Blockly.Xml.blockToDom(block);
   Blockly.Xml.deleteNext(xmlBlock);
   // Encode start position in XML.
   var xy = block.getRelativeToSurfaceXY();
