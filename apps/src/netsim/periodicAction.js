@@ -46,7 +46,14 @@ var periodicAction = function (action, interval) {
   return {
 
     /**
-     *
+     * Attach action to provided RunLoop tick event.
+     * @param {RunLoop} runLoop
+     */
+    attachToRunLoop: function (runLoop) {
+      runLoop.tick.register(this, this.tick);
+    },
+
+    /**
      * @param clock
      */
     tick: function (clock) {

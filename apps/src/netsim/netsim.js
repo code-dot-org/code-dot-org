@@ -156,7 +156,7 @@ NetSim.prototype.init = function(config) {
  */
 NetSim.prototype.initWithUserName_ = function (userName) {
   this.connection_ = new NetSimConnection(userName, this.logger_);
-  this.runLoop_.tick.register(this.connection_, this.connection_.tick);
+  this.connection_.attachToRunLoop(this.runLoop_);
   this.logger_.info("Connection manager created.");
 
   var lobbyContainer = document.getElementById('netsim_lobby_container');
