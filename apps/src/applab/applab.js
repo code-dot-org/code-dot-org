@@ -275,9 +275,31 @@ Applab.onTick = function() {
   Applab.tickCount++;
   queueOnTick();
 
-  var atInitialBreakpoint = Applab.paused && Applab.nextStep === StepType.IN && Applab.tickCount === 1;
+  if (Applab.interpreter) {
+    Applab.executeInterpreter();
+  } else {
+    if (Applab.tickCount === 1) {
+      try { Applab.whenRunFunc(studioApp, api, Applab.Globals); } catch (e) { }
+    }
+  }
+
+  if (checkFinished()) {
+    Applab.onPuzzleComplete();
+  }
+};
+
+Applab.executeInterpreter = function (runUntilCallbackReturn) {
+  Applab.runUntilCallbackReturn = runUntilCallbackReturn;
+  if (runUntilCallbackReturn) {
+    delete Applab.lastCallbackRetVal;
+  }
+  Applab.seenEmptyGetCallbackDuringExecution = false;
+  Applab.seenReturnFromCallbackDuringExecution = false;
+
+  var atInitialBreakpoint = Applab.paused &&
+                            Applab.nextStep === StepType.IN &&
+                            Applab.tickCount === 1;
   var atMaxSpeed = getCurrentTickLength() === 0;
-  Applab.seenEmptyGetCallbackThisTick = false;
 
   if (Applab.paused) {
     switch (Applab.nextStep) {
@@ -302,183 +324,175 @@ Applab.onTick = function() {
     }
   }
 
-  if (Applab.interpreter) {
-    var doneUserLine = false;
-    var reachedBreak = false;
-    var unwindingAfterStep = false;
-    var inUserCode;
-    var userCodeRow;
-    var session = studioApp.editor.aceEditor.getSession();
-    // NOTE: when running with no source visible or at max speed with blocks, we
-    // call a simple function to just get the line number, otherwise we call a
-    // function that also selects the code:
-    var selectCodeFunc =
-      (studioApp.hideSource ||
-       (atMaxSpeed && !Applab.paused && studioApp.editor.currentlyUsingBlocks)) ?
-            codegen.getUserCodeLine :
-            codegen.selectCurrentCode;
+  var doneUserLine = false;
+  var reachedBreak = false;
+  var unwindingAfterStep = false;
+  var inUserCode;
+  var userCodeRow;
+  var session = studioApp.editor.aceEditor.getSession();
+  // NOTE: when running with no source visible or at max speed with blocks, we
+  // call a simple function to just get the line number, otherwise we call a
+  // function that also selects the code:
+  var selectCodeFunc =
+    (studioApp.hideSource ||
+     (atMaxSpeed && !Applab.paused && studioApp.editor.currentlyUsingBlocks)) ?
+          codegen.getUserCodeLine :
+          codegen.selectCurrentCode;
 
-    // In each tick, we will step the interpreter multiple times in a tight
-    // loop as long as we are interpreting code that the user can't see
-    // (function aliases at the beginning, getCallback event loop at the end)
-    for (var stepsThisTick = 0;
-         (stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK) || unwindingAfterStep;
-         stepsThisTick++) {
-      if ((reachedBreak && !unwindingAfterStep) ||
-          (doneUserLine && !atMaxSpeed) ||
-          Applab.seenEmptyGetCallbackThisTick) {
-        // stop stepping the interpreter and wait until the next tick once we:
-        // (1) reached a breakpoint and are done unwinding OR
-        // (2) completed a line of user code (while not running atMaxSpeed) OR
-        // (3) have seen an empty event queue in nativeGetCallback (no events)
-        break;
+  // In each tick, we will step the interpreter multiple times in a tight
+  // loop as long as we are interpreting code that the user can't see
+  // (function aliases at the beginning, getCallback event loop at the end)
+  for (var stepsThisTick = 0;
+       (stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK) || unwindingAfterStep;
+       stepsThisTick++) {
+    if ((reachedBreak && !unwindingAfterStep) ||
+        (doneUserLine && !atMaxSpeed) ||
+        Applab.seenEmptyGetCallbackDuringExecution ||
+        (runUntilCallbackReturn && Applab.seenReturnFromCallbackDuringExecution)) {
+      // stop stepping the interpreter and wait until the next tick once we:
+      // (1) reached a breakpoint and are done unwinding OR
+      // (2) completed a line of user code (while not running atMaxSpeed) OR
+      // (3) have seen an empty event queue in nativeGetCallback (no events) OR
+      // (4) have seen a nativeSetCallbackRetVal call in runUntilCallbackReturn mode
+      break;
+    }
+    userCodeRow = selectCodeFunc(Applab.interpreter,
+                                 Applab.cumulativeLength,
+                                 Applab.userCodeStartOffset,
+                                 Applab.userCodeLength,
+                                 studioApp.editor);
+    inUserCode = (-1 !== userCodeRow);
+    // Check to see if we've arrived at a new breakpoint:
+    //  (1) should be in user code
+    //  (2) should never happen while unwinding
+    //  (3) requires either
+    //   (a) atInitialBreakpoint OR
+    //   (b) isAceBreakpointRow() AND not still at the same line number where
+    //       we have already stopped from the last step/breakpoint
+    if (inUserCode && !unwindingAfterStep &&
+        (atInitialBreakpoint ||
+         (userCodeRow !== Applab.stoppedAtBreakpointRow &&
+          codegen.isAceBreakpointRow(session, userCodeRow)))) {
+      // Yes, arrived at a new breakpoint:
+      if (Applab.paused) {
+        // Overwrite the nextStep value. (If we hit a breakpoint during a step
+        // out or step over, this will cancel that step operation early)
+        Applab.nextStep = StepType.RUN;
+      } else {
+        Applab.onPauseButton();
       }
-      userCodeRow = selectCodeFunc(Applab.interpreter,
-                                   Applab.cumulativeLength,
-                                   Applab.userCodeStartOffset,
-                                   Applab.userCodeLength,
-                                   studioApp.editor);
-      inUserCode = (-1 !== userCodeRow);
-      // Check to see if we've arrived at a new breakpoint:
-      //  (1) should be in user code
-      //  (2) should never happen while unwinding
-      //  (3) requires either
-      //   (a) atInitialBreakpoint OR
-      //   (b) isAceBreakpointRow() AND not still at the same line number where
-      //       we have already stopped from the last step/breakpoint
-      if (inUserCode && !unwindingAfterStep &&
-          (atInitialBreakpoint ||
-           (userCodeRow !== Applab.stoppedAtBreakpointRow &&
-            codegen.isAceBreakpointRow(session, userCodeRow)))) {
-        // Yes, arrived at a new breakpoint:
-        if (Applab.paused) {
-          // Overwrite the nextStep value. (If we hit a breakpoint during a step
-          // out or step over, this will cancel that step operation early)
-          Applab.nextStep = StepType.RUN;
-        } else {
-          Applab.onPauseButton();
-        }
-        // Store some properties about where we stopped:
-        Applab.stoppedAtBreakpointRow = userCodeRow;
-        Applab.stoppedAtBreakpointStackDepth = Applab.interpreter.stateStack.length;
+      // Store some properties about where we stopped:
+      Applab.stoppedAtBreakpointRow = userCodeRow;
+      Applab.stoppedAtBreakpointStackDepth = Applab.interpreter.stateStack.length;
 
-        // Mark reachedBreak to stop stepping, and start unwinding if needed:
-        reachedBreak = true;
-        unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(Applab.interpreter);
-        continue;
+      // Mark reachedBreak to stop stepping, and start unwinding if needed:
+      reachedBreak = true;
+      unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(Applab.interpreter);
+      continue;
+    }
+    // If we've moved past the place of the last breakpoint hit without being
+    // deeper in the stack, we will discard the stoppedAtBreakpoint properties:
+    if (inUserCode &&
+        userCodeRow !== Applab.stoppedAtBreakpointRow &&
+        Applab.interpreter.stateStack.length <= Applab.stoppedAtBreakpointStackDepth) {
+      delete Applab.stoppedAtBreakpointRow;
+      delete Applab.stoppedAtBreakpointStackDepth;
+    }
+    // If we're unwinding, continue to update the stoppedAtBreakpoint properties
+    // to ensure that we have the right properties stored when the unwind completes:
+    if (inUserCode && unwindingAfterStep) {
+      Applab.stoppedAtBreakpointRow = userCodeRow;
+      Applab.stoppedAtBreakpointStackDepth = Applab.interpreter.stateStack.length;
+    }
+    try {
+      Applab.interpreter.step();
+      doneUserLine = doneUserLine ||
+        (inUserCode && Applab.interpreter.stateStack[0] && Applab.interpreter.stateStack[0].done);
+
+      // Remember the stack depths of call expressions (so we can implement 'step out')
+
+      // Truncate any history of call expressions seen deeper than our current stack position:
+      Applab.callExpressionSeenAtDepth.length = Applab.interpreter.stateStack.length + 1;
+
+      if (inUserCode && Applab.interpreter.stateStack[0].node.type === "CallExpression") {
+        // Store that we've seen a call expression at this depth in callExpressionSeenAtDepth:
+        Applab.callExpressionSeenAtDepth[Applab.interpreter.stateStack.length] = true;
       }
-      // If we've moved past the place of the last breakpoint hit without being
-      // deeper in the stack, we will discard the stoppedAtBreakpoint properties:
-      if (inUserCode &&
-          userCodeRow !== Applab.stoppedAtBreakpointRow &&
-          Applab.interpreter.stateStack.length <= Applab.stoppedAtBreakpointStackDepth) {
-        delete Applab.stoppedAtBreakpointRow;
-        delete Applab.stoppedAtBreakpointStackDepth;
-      }
-      // If we're unwinding, continue to update the stoppedAtBreakpoint properties
-      // to ensure that we have the right properties stored when the unwind completes:
-      if (inUserCode && unwindingAfterStep) {
-        Applab.stoppedAtBreakpointRow = userCodeRow;
-        Applab.stoppedAtBreakpointStackDepth = Applab.interpreter.stateStack.length;
-      }
-      try {
-        Applab.interpreter.step();
-        doneUserLine = doneUserLine ||
-          (inUserCode && Applab.interpreter.stateStack[0] && Applab.interpreter.stateStack[0].done);
 
-        // Remember the stack depths of call expressions (so we can implement 'step out')
-
-        // Truncate any history of call expressions seen deeper than our current stack position:
-        Applab.callExpressionSeenAtDepth.length = Applab.interpreter.stateStack.length + 1;
-
+      if (Applab.paused) {
+        // Store the first call expression stack depth seen while in this step operation:
         if (inUserCode && Applab.interpreter.stateStack[0].node.type === "CallExpression") {
-          // Store that we've seen a call expression at this depth in callExpressionSeenAtDepth:
-          Applab.callExpressionSeenAtDepth[Applab.interpreter.stateStack.length] = true;
+          if (typeof Applab.firstCallStackDepthThisStep === 'undefined') {
+            Applab.firstCallStackDepthThisStep = Applab.interpreter.stateStack.length;
+          }
         }
-
-        if (Applab.paused) {
-          // Store the first call expression stack depth seen while in this step operation:
-          if (inUserCode && Applab.interpreter.stateStack[0].node.type === "CallExpression") {
-            if (typeof Applab.firstCallStackDepthThisStep === 'undefined') {
-              Applab.firstCallStackDepthThisStep = Applab.interpreter.stateStack.length;
+        // For the step in case, we want to stop the interpreter as soon as we enter the callee:
+        if (!doneUserLine &&
+            inUserCode &&
+            Applab.nextStep === StepType.IN &&
+            Applab.interpreter.stateStack.length > Applab.firstCallStackDepthThisStep) {
+          reachedBreak = true;
+        }
+        // After the interpreter says a node is "done" (meaning it is time to stop), we will
+        // advance a little further to the start of the next statement. We achieve this by
+        // continuing to set unwindingAfterStep to true to keep the loop going:
+        if (doneUserLine || reachedBreak) {
+          var wasUnwinding = unwindingAfterStep;
+          // step() additional times if we know it to be safe to get us to the next statement:
+          unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(Applab.interpreter);
+          if (wasUnwinding && !unwindingAfterStep) {
+            // done unwinding.. select code that is next to execute:
+            userCodeRow = selectCodeFunc(Applab.interpreter,
+                                         Applab.cumulativeLength,
+                                         Applab.userCodeStartOffset,
+                                         Applab.userCodeLength,
+                                         studioApp.editor);
+            inUserCode = (-1 !== userCodeRow);
+            if (!inUserCode) {
+              // not in user code, so keep unwinding after all...
+              unwindingAfterStep = true;
             }
           }
-          // For the step in case, we want to stop the interpreter as soon as we enter the callee:
-          if (!doneUserLine &&
-              inUserCode &&
-              Applab.nextStep === StepType.IN &&
+        }
+
+        if ((reachedBreak || doneUserLine) && !unwindingAfterStep) {
+          if (Applab.nextStep === StepType.OUT &&
+              Applab.interpreter.stateStack.length > Applab.stepOutToStackDepth) {
+            // trying to step out, but we didn't get out yet... continue on.
+          } else if (Applab.nextStep === StepType.OVER &&
+              typeof Applab.firstCallStackDepthThisStep !== 'undefined' &&
               Applab.interpreter.stateStack.length > Applab.firstCallStackDepthThisStep) {
-            reachedBreak = true;
-          }
-          // After the interpreter says a node is "done" (meaning it is time to stop), we will
-          // advance a little further to the start of the next statement. We achieve this by
-          // continuing to set unwindingAfterStep to true to keep the loop going:
-          if (doneUserLine || reachedBreak) {
-            var wasUnwinding = unwindingAfterStep;
-            // step() additional times if we know it to be safe to get us to the next statement:
-            unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(Applab.interpreter);
-            if (wasUnwinding && !unwindingAfterStep) {
-              // done unwinding.. select code that is next to execute:
-              userCodeRow = selectCodeFunc(Applab.interpreter,
-                                           Applab.cumulativeLength,
-                                           Applab.userCodeStartOffset,
-                                           Applab.userCodeLength,
-                                           studioApp.editor);
-              inUserCode = (-1 !== userCodeRow);
-              if (!inUserCode) {
-                // not in user code, so keep unwinding after all...
-                unwindingAfterStep = true;
-              }
+            // trying to step over, and we're in deeper inside a function call... continue next onTick
+          } else {
+            // Our step operation is complete, reset nextStep to StepType.RUN to
+            // return to a normal 'break' state:
+            Applab.nextStep = StepType.RUN;
+            if (inUserCode) {
+              // Store some properties about where we stopped:
+              Applab.stoppedAtBreakpointRow = userCodeRow;
+              Applab.stoppedAtBreakpointStackDepth = Applab.interpreter.stateStack.length;
             }
-          }
-
-          if ((reachedBreak || doneUserLine) && !unwindingAfterStep) {
-            if (Applab.nextStep === StepType.OUT &&
-                Applab.interpreter.stateStack.length > Applab.stepOutToStackDepth) {
-              // trying to step out, but we didn't get out yet... continue on.
-            } else if (Applab.nextStep === StepType.OVER &&
-                typeof Applab.firstCallStackDepthThisStep !== 'undefined' &&
-                Applab.interpreter.stateStack.length > Applab.firstCallStackDepthThisStep) {
-              // trying to step over, and we're in deeper inside a function call... continue next onTick
-            } else {
-              // Our step operation is complete, reset nextStep to StepType.RUN to
-              // return to a normal 'break' state:
-              Applab.nextStep = StepType.RUN;
-              if (inUserCode) {
-                // Store some properties about where we stopped:
-                Applab.stoppedAtBreakpointRow = userCodeRow;
-                Applab.stoppedAtBreakpointStackDepth = Applab.interpreter.stateStack.length;
-              }
-              delete Applab.stepOutToStackDepth;
-              delete Applab.firstCallStackDepthThisStep;
-              document.getElementById('spinner').style.visibility = 'hidden';
-              break;
-            }
+            delete Applab.stepOutToStackDepth;
+            delete Applab.firstCallStackDepthThisStep;
+            document.getElementById('spinner').style.visibility = 'hidden';
+            break;
           }
         }
       }
-      catch(err) {
-        handleExecutionError(err, inUserCode ? (userCodeRow + 1) : undefined);
-        return;
-      }
     }
-    if (reachedBreak && atMaxSpeed) {
-      // If we were running atMaxSpeed and just reached a breakpoint, the
-      // code may not be selected in the editor, so do it now:
-      codegen.selectCurrentCode(Applab.interpreter,
-                                Applab.cumulativeLength,
-                                Applab.userCodeStartOffset,
-                                Applab.userCodeLength,
-                                studioApp.editor);
-    }
-  } else {
-    if (Applab.tickCount === 1) {
-      try { Applab.whenRunFunc(studioApp, api, Applab.Globals); } catch (e) { }
+    catch(err) {
+      handleExecutionError(err, inUserCode ? (userCodeRow + 1) : undefined);
+      return;
     }
   }
-
-  if (checkFinished()) {
-    Applab.onPuzzleComplete();
+  if (reachedBreak && atMaxSpeed) {
+    // If we were running atMaxSpeed and just reached a breakpoint, the
+    // code may not be selected in the editor, so do it now:
+    codegen.selectCurrentCode(Applab.interpreter,
+                              Applab.cumulativeLength,
+                              Applab.userCodeStartOffset,
+                              Applab.userCodeLength,
+                              studioApp.editor);
   }
 };
 
@@ -849,9 +863,31 @@ var defineProcedures = function (blockType) {
 var nativeGetCallback = function () {
   var retVal = Applab.eventQueue.shift();
   if (typeof retVal === "undefined") {
-    Applab.seenEmptyGetCallbackThisTick = true;
+    Applab.seenEmptyGetCallbackDuringExecution = true;
   }
   return retVal;
+};
+
+var nativeSetCallbackRetVal = function (retVal) {
+  if (Applab.eventQueue.length === 0) {
+    // If nothing else is in the event queue, then store this return value
+    // away so it can be returned in the native event handler
+    Applab.seenReturnFromCallbackDuringExecution = true;
+    Applab.lastCallbackRetVal = retVal;
+  }
+  // Provide warnings to the user if this function has been called with a
+  // meaningful return value while we are no longer in the native event handler
+
+  // TODO (cpirich): Check to see if the DOM event object was modified
+  // (preventDefault(), stopPropagation(), returnValue) and provide a similar
+  // warning since these won't work as expected unless running atMaxSpeed
+  if (!Applab.runUntilCallbackReturn &&
+      typeof Applab.lastCallbackRetVal !== 'undefined') {
+    outputApplabConsole("Function passed to onEvent() has taken too long - the return value was ignored.");
+    if (getCurrentTickLength() !== 0) {
+      outputApplabConsole("  (try moving the speed slider to its maximum value)");
+    }
+  }
 };
 
 var consoleApi = {};
@@ -933,7 +969,8 @@ Applab.execute = function() {
     // Append our mini-runtime after the user's code. This will spin and process
     // callback functions:
     codeWhenRun += '\nwhile (true) { var obj = getCallback(); ' +
-      'if (obj) { obj.fn.apply(null, obj.arguments ? obj.arguments : null); }}';
+      'if (obj) { var ret = obj.fn.apply(null, obj.arguments ? obj.arguments : null);' +
+                 'setCallbackRetVal(ret); }}';
     var session = studioApp.editor.aceEditor.getSession();
     Applab.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
   } else {
@@ -962,7 +999,6 @@ Applab.execute = function() {
                                           JSON: JSONApi,
                                           Globals: Applab.Globals });
 
-        var getCallbackObj = interpreter.createObject(interpreter.FUNCTION);
         // Only allow five levels of depth when marshalling the return value
         // since we will occasionally return DOM Event objects which contain
         // properties that recurse over and over...
@@ -972,6 +1008,12 @@ Applab.execute = function() {
                                                        5);
         interpreter.setProperty(scope,
                                 'getCallback',
+                                interpreter.createNativeFunction(wrapper));
+
+        wrapper = codegen.makeNativeMemberFunction(interpreter,
+                                                   nativeSetCallbackRetVal);
+        interpreter.setProperty(scope,
+                                'setCallbackRetVal',
                                 interpreter.createNativeFunction(wrapper));
       };
       try {
@@ -1698,6 +1740,18 @@ Applab.onEventFired = function (opts, e) {
   } else {
     Applab.eventQueue.push({'fn': opts.func});
   }
+  if (Applab.interpreter) {
+    // Execute the interpreter and if a return value is sent back from the
+    // interpreter's event handler, pass that back in the native world
+
+    // NOTE: the interpreter will not execute forever, if the event handler
+    // takes too long, executeInterpreter() will return and the native side
+    // will just see 'undefined' as the return value. The rest of the interpreter
+    // event handler will run in the next onTick(), but the return value will
+    // no longer have any effect.
+    Applab.executeInterpreter(true);
+    return Applab.lastCallbackRetVal;
+  }
 };
 
 Applab.onEvent = function (opts) {
@@ -1770,6 +1824,12 @@ Applab.onTimeoutFired = function (opts) {
   Applab.eventQueue.push({
     'fn': opts.func
   });
+  if (Applab.interpreter) {
+    // NOTE: the interpreter will not execute forever, if the event handler
+    // takes too long, executeInterpreter() will return and the rest of the
+    // user's code will execute in the next onTick()
+    Applab.executeInterpreter(true);
+  }
 };
 
 Applab.setTimeout = function (opts) {
