@@ -1212,17 +1212,53 @@ Applab.createImageUploadButton = function (opts) {
                  divApplab.appendChild(newLabel));
 };
 
+var TURTLE_X_OFFSET = -15;
+var TURTLE_Y_OFFSET = -22;
+
 function getTurtleContext() {
   var canvas = document.getElementById('turtleCanvas');
 
   if (!canvas) {
-    var opts = { 'elementId': 'turtleCanvas' };
-    Applab.createCanvas(opts);
+    // If there is not yet a turtleCanvas, create it:
+    Applab.createCanvas({ 'elementId': 'turtleCanvas' });
     canvas = document.getElementById('turtleCanvas');
+
+    // And create the turtle (defaults to visible):
+    Applab.turtle.visible = true;
+    var divApplab = document.getElementById('divApplab');
+    var turtleImage = document.createElement("img");
+    turtleImage.src = studioApp.assetUrl('media/applab/turtle.png');
+    turtleImage.id = 'turtleImage';
+    updateTurtleImage(turtleImage);
+    divApplab.appendChild(turtleImage);
   }
 
   return canvas.getContext("2d");
 }
+
+function updateTurtleImage(turtleImage) {
+  if (!turtleImage) {
+    turtleImage = document.getElementById('turtleImage');
+  }
+  turtleImage.style.left = (Applab.turtle.x + TURTLE_X_OFFSET) + 'px';
+  turtleImage.style.top = (Applab.turtle.y + TURTLE_Y_OFFSET) + 'px';
+  turtleImage.style.transform = 'rotate(' + Applab.turtle.heading + 'deg)';
+}
+
+function turtleSetVisibility (visible) {
+  // call this first to ensure there is a turtle (in case this is the first API)
+  getTurtleContext();
+  var turtleImage = document.getElementById('turtleImage');
+  turtleImage.style.visibility = visible ? 'visible' : 'hidden';
+}
+
+Applab.turtleShow = function (opts) {
+  turtleSetVisibility(true);
+};
+
+Applab.turtleHide = function (opts) {
+  turtleSetVisibility(false);
+};
 
 Applab.turtleMoveTo = function (opts) {
   var ctx = getTurtleContext();
@@ -1233,6 +1269,7 @@ Applab.turtleMoveTo = function (opts) {
     Applab.turtle.y = opts.y;
     ctx.lineTo(Applab.turtle.x, Applab.turtle.y);
     ctx.stroke();
+    updateTurtleImage();
   }
 };
 
@@ -1258,8 +1295,11 @@ Applab.turtleMoveBackward = function (opts) {
 };
 
 Applab.turtleTurnRight = function (opts) {
+  // call this first to ensure there is a turtle (in case this is the first API)
+  getTurtleContext();
   Applab.turtle.heading += opts.degrees;
   Applab.turtle.heading = (Applab.turtle.heading + 360) % 360;
+  updateTurtleImage();
 };
 
 Applab.turtleTurnLeft = function (opts) {
