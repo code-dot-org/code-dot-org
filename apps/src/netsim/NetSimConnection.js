@@ -238,6 +238,14 @@ NetSimConnection.prototype.getLogger = function () {
 };
 
 /**
+ * Turns local node's display name into a 'hostname'
+ * @returns {string}
+ */
+NetSimConnection.prototype.getMyHostname = function () {
+  return this.displayName_.replace(/[^\w\d]/g, '').toLowerCase();
+};
+
+/**
  * Before-unload handler, used to try and disconnect gracefully when
  * navigating away instead of just letting our record time out.
  * @private
@@ -555,8 +563,7 @@ NetSimConnection.prototype.connectToRouter = function (routerID) {
   self.createWire(routerID, function (wire) {
     if (wire !== null) {
       self.wire_ = wire;
-      self.wire_.localHostname = self.displayName_.replace(/[^\w\d]/, '').
-          toLowerCase();
+      self.wire_.localHostname = self.getMyHostname();
       self.router_.countConnections(function (count) {
         if (count <= self.router_.MAX_CLIENT_CONNECTIONS) {
           self.router_.assignAddressesToWire(self.wire_,
