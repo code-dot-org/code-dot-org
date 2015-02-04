@@ -84,8 +84,8 @@ module.exports = NetSimRouterPanel;
 NetSimRouterPanel.createWithin = function (element, connection) {
   var controller = new NetSimRouterPanel(connection);
   element.innerHTML = markup({});
-  this.bindElements_();
-  this.refresh();
+  controller.bindElements_();
+  controller.refresh();
   return controller;
 };
 
