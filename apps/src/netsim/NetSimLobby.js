@@ -245,31 +245,31 @@ NetSimLobby.prototype.refreshLobby_ = function () {
       });
 
       self.selectedListItem_ = undefined;
-      lobbyData.forEach(function (connection) {
+      lobbyData.forEach(function (simNode) {
         var item = $('<li>');
         $('<a>')
             .attr('href', '#')
-            .html(connection.name + ' : ' +
-                connection.status + ' ' +
-                connection.statusDetail)
+            .html(simNode.name + ' : ' +
+                simNode.status + ' ' +
+                simNode.statusDetail)
             .appendTo(item);
 
         // Style rows by row type.
-        if (connection.id === self.connection_.myLobbyRowID_) {
+        if (simNode.id === self.connection_.myNodeID) {
           item.addClass('own_row');
-        } else if (connection.type === NetSimConnection.LobbyRowType.ROUTER) {
+        } else if (simNode.type === NetSimConnection.LobbyRowType.ROUTER) {
           item.addClass('router_row');
         } else {
           item.addClass('user_row');
         }
 
         // Preserve selected item across refresh.
-        if (connection.id === self.selectedID_) {
+        if (simNode.id === self.selectedID_) {
           item.addClass('selected_row');
           self.selectedListItem_ = item;
         }
 
-        dom.addClickTouchEvent(item[0], self.onRowClick_.bind(self, item, connection));
+        dom.addClickTouchEvent(item[0], self.onRowClick_.bind(self, item, simNode));
         item.appendTo(lobbyList);
       });
 
@@ -293,7 +293,7 @@ NetSimLobby.prototype.refreshLobby_ = function () {
  */
 NetSimLobby.prototype.onRowClick_ = function (listItem, connectionTarget) {
   // Can't select own row
-  if (this.connection_.myLobbyRowID_ === connectionTarget.id) {
+  if (this.connection_.myNodeID === connectionTarget.id) {
     return;
   }
 
@@ -329,8 +329,6 @@ NetSimLobby.prototype.onSelectionChange = function () {
  */
 NetSimLobby.prototype.getUserSections_ = function (callback) {
   // TODO (bbuchanan) : Get owned sections as well, to support teachers.
-  // TODO (bbuchanan) : Handle failure case nicely.  Maybe wrap callback
-  //                    and nicely pass list to it.
   // TODO (bbuchanan): Wrap this away into a shared library for the v2/sections api
   $.ajax({
     dataType: 'json',
