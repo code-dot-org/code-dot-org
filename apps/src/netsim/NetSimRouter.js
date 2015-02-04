@@ -44,6 +44,7 @@
 
 var netsimStorage = require('./netsimStorage');
 var NetSimLogger = require('./NetSimLogger');
+var NetSimWire = require('./NetSimWire');
 var LogLevel = NetSimLogger.LogLevel;
 
 /**
@@ -230,11 +231,12 @@ NetSimRouter.prototype.getHostname = function () {
 /**
  * Query the wires table and pass the callback a list of wire table rows,
  * where all of the rows are wires attached to this router.
- * @param onComplete
+ * @param {function} onComplete, which accepts an Array of NetSimWire.
  */
 NetSimRouter.prototype.getConnections = function (onComplete) {
   onComplete = defaultToEmptyFunction(onComplete);
 
+  var instanceID = this.instanceID_;
   var routerID = this.routerID;
   this.getWireTable().all(function (rows) {
     if (rows === null) {
@@ -242,10 +244,13 @@ NetSimRouter.prototype.getConnections = function (onComplete) {
       return;
     }
 
-    var myWires = rows.filter(function (row) {
-      // TODO: Check for wire validity/timeout here?
-      return row.remoteNodeID === routerID;
-    });
+    var myWires = rows.
+        map(function (row) {
+          return new NetSimWire(instanceID, row);
+        }).
+        filter(function (wire){
+          return wire.remoteNodeID === routerID;
+        });
 
     onComplete(myWires);
   });
@@ -254,7 +259,7 @@ NetSimRouter.prototype.getConnections = function (onComplete) {
 /**
  * Query the wires table and pass the callback the total number of wires
  * connected to this router.
- * @param onComplete
+ * @param {function} onComplete, which accepts a number.
  */
 NetSimRouter.prototype.countConnections = function (onComplete) {
   onComplete = defaultToEmptyFunction(onComplete);
@@ -295,13 +300,13 @@ NetSimRouter.prototype.assignAddressesToWire = function (wireNeedingAddress,
 
     // Find the lowest unused integer address starting at 2
     // Non-optimal, but should be okay since our address list should not exceed 10.
-    var newAddress = 2;
+    var newAddress = 1;
     while (contains(addressList, newAddress)) {
       newAddress++;
     }
 
     wireNeedingAddress.localAddress = newAddress;
-    wireNeedingAddress.remoteAddress = 1; // Always 1 for routers
+    wireNeedingAddress.remoteAddress = 0; // Always 1 for routers
     wireNeedingAddress.remoteHostname = self.getHostname();
     wireNeedingAddress.update(onComplete);
     // TODO (bbuchanan): There is a possible race condition here, where we would
@@ -329,7 +334,7 @@ NetSimRouter.prototype.getAddressTable = function (onComplete) {
       };
     }).concat({
       hostname: self.getHostname(),
-      address: 1
+      address: 0
     });
     onComplete(addressTable);
   });
