@@ -98,16 +98,9 @@ NetSimLobby.createWithin = function (element, connection) {
   // Create a new NetSimLobby
   var controller = new NetSimLobby(connection);
   element.innerHTML = markup({});
-  controller.initialize();
+  controller.bindElements_();
+  controller.refreshInstanceList_();
   return controller;
-};
-
-/**
- *
- */
-NetSimLobby.prototype.initialize = function () {
-  this.bindElements_();
-  this.refreshInstanceList_();
 };
 
 /**
@@ -139,6 +132,14 @@ NetSimLobby.prototype.bindElements_ = function () {
   this.connectionStatusSpan_ = document.getElementById('netsim_lobby_statusbar');
 
   this.refreshLobby_();
+};
+
+/**
+ * Attach own handlers to run loop events.
+ * @param {RunLoop} runLoop
+ */
+NetSimLobby.prototype.attachToRunLoop = function (runLoop) {
+  this.periodicRefresh_.attachToRunLoop(runLoop);
 };
 
 /**
@@ -335,12 +336,4 @@ NetSimLobby.prototype.getUserSections_ = function (callback) {
     url: '/v2/sections/membership',
     success: callback
   });
-};
-
-/**
- *
- * @param {RunLoop.Clock} clock
- */
-NetSimLobby.prototype.tick = function (clock) {
-  this.periodicRefresh_.tick(clock);
 };
