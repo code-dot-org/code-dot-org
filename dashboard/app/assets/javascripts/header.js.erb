@@ -26,82 +26,10 @@ if (!window.dashboard) {
  */
 dashboard.buildHeader = function (scriptData) {
 
-  $('.header_text').first().text(scriptData.title);
-  if (scriptData.finishLink) {
-    $('.header_finished_link').show().append($('<a>').attr('href', scriptData.finishLink.href).text(scriptData.finishLink.text));
-  }
-  if (scriptData.showStageLinks) {
-    $('.header_popup_link').show();
-    $('.freeplay_links').show();
-  }
-  if (scriptData.trophies) {
-    $('.header_trophy_link').show();
-    $('.header_trophy_link .current_trophies').text(scriptData.trophies.current);
-    $('.header_trophy_link .max_trophies').text(scriptData.trophies.of + ' ' + scriptData.trophies.max);
-  }
-  if (scriptData.linesOfCodeText) {
-    $('.header_popup .header_text').text(scriptData.linesOfCodeText);
-  }
-
-
   // TODO: Global, until we create a component cache
-  window.headerProgress = new HeaderProgress( $('.progress_container') );
+  window.headerProgress = new HeaderProgress( $('.navbar-header') );
   headerProgress.replaceState( scriptData );
 
-  $('.level_free_play').qtip({
-    content: {
-      attr: 'title'
-    },
-    position: {
-      my: 'top center',
-      at: 'bottom center'
-    }
-  });
-
-  function showHeaderPopup(target) {
-    $('.header_popup').show();
-    $('.header_popup_link_glyph').html('&#x25B2;');
-    $('.header_popup_link_text').text('<%= I18n.t(:less) %>');
-    $(document).on('click', hideHeaderPopup);
-    lazyLoadPopup($(target).closest('.header_trophy_link').length > 0);
-  }
-  function hideHeaderPopup() {
-    $('.header_popup').hide();
-    $('.header_popup_link_glyph').html('&#x25BC;');
-    $('.header_popup_link_text').text('<%= I18n.t(:more) %>');
-    $(document).off('click', hideHeaderPopup);
-  }
-  $('.header_popup_link, .header_trophy_link').click(function (e) {
-    e.stopPropagation();
-    $('.header_popup').is(':visible') ? hideHeaderPopup() : showHeaderPopup(e.target);
-  });
-  $('.header_popup').click(function (e) {
-    e.stopPropagation(); // Clicks inside the popup shouldn't close it
-  });
-
-  var popupLoaded = false;
-  function lazyLoadPopup(trophiesClicked) {
-    if (!popupLoaded) {
-      popupLoaded = true;
-      $.ajax({
-        url: scriptData.statsPath,
-        data: {
-          script_id: scriptData.scriptId,
-          script_level_id: scriptData.scriptLevelId
-        }, success: function (result) {
-          $('.header_popup_body').html(result);
-          if (trophiesClicked) {
-            jumpToTrophies();
-          }
-        }
-      });
-    } else if (trophiesClicked) {
-      jumpToTrophies();
-    }
-  }
-  function jumpToTrophies() {
-    window.scrollTo(0, +$('#trophies').offset().top);
-  }
 };
 
 
@@ -162,8 +90,11 @@ dashboard.buildHeader = function (scriptData) {
         this.isUpdating = setTimeout( this.onUpdate, 1 );
       }
 
-      // TODO: This should be a merge!
-      this.state = state;
+      // Merge this into our state
+      for (var key in state) {
+        if (__hasProp.call(state, key))
+          this.state[key] = state[key];
+      }
     }
 
     // Replace my state and possibly re-render
@@ -173,15 +104,13 @@ dashboard.buildHeader = function (scriptData) {
         this.isUpdating = setTimeout( this.onUpdate, 1 );
       }
 
-      this.state = state;
+      this.state = state || {};
     }
 
     // My state has been changed
     UIComponent.prototype.onUpdate = function(ev) {
       // Don't do anything if no longer mounted
       if (this.isMounted()) {
-        // For now, always re-render completely
-        this.$el.html('');
         this.render();
       }
 
@@ -209,31 +138,6 @@ dashboard.buildHeader = function (scriptData) {
     return UIComponent;
   })();
 
-  /*
-  .header_middle
-    .header_level
-      .header_level_container
-        .header_text
-        .progress_container{data: {script_name: @script_level.script.name, stage_id:@script_level.stage.position, level_id:@script_level.position }}
-        .header_finished_link{style: 'display: none;'}
-        %span.header_trophy_link{style: 'display: none;'}
-          .header_text= t(:trophies)
-          .header_status_bar.current_trophies
-          .header_text.max_trophies
-        %span.header_popup_link{style: 'display: none;'}
-          .header_popup_link_glyph
-            &#x25BC;
-          .header_popup_link_text= t(:more)
-    .header_popup
-      .header_popup_header
-        %span= t('nav.popup.progress')
-        .header_text{style: 'float: right;'}
-      .header_popup_body
-        .loading
-      .header_popup_footer
-        .header_popup_close
-          = t('nav.popup.close')
-  */
 
   // class HeaderProgress extends UIComponent
   HeaderProgress = (function(_super) {
@@ -247,6 +151,17 @@ dashboard.buildHeader = function (scriptData) {
     HeaderProgress.prototype.componentDidMount = function() {
       // TODO: enable the fetchProgress call here when we've removed the pushed state
       // this.fetchProgress();
+
+      // Create tooltips for the free-play icons
+      $('.level_free_play').qtip({
+        content: {
+          attr: 'title'
+        },
+        position: {
+          my: 'top center',
+          at: 'bottom center'
+        }
+      });
     }
 
     // Fetch the user's progress via an AJAX call
@@ -269,32 +184,158 @@ dashboard.buildHeader = function (scriptData) {
     }
 
     HeaderProgress.prototype.render = function() {
-      var cl;
-      var levels = (this.state ? this.state.levels : null) || [];
+      var cl, el;
       var _this = this;
+      var state = this.state || {};
 
-      levels.forEach(function(level, index, levels) {
-        cl = 'level_link ' + level.status;
-        if (level.unplugged) {
-          cl += ' unplugged_level';
+      // Don't render unless we have the data attributes
+      // TODO: REMOVE
+      if (!this.$el.data('script-name'))
+        return;
+
+      // NOTE: All this DOM manipulation would be better done via a template - but we're in the process
+      // of picking a template language vs JSX
+
+      var $middle = _this.$el.find('.header_middle');
+      $middle.children().remove();
+      el = $('<div>').addClass('header_level').appendTo($middle);
+      var $container = $('<div>').addClass('header_level_container').appendTo(el);
+
+      // Title
+      if (state.title) {
+        $('<div>').addClass('header_text').text(state.title).appendTo($container);
+      }
+
+      // Progress: Render the array of levels
+      var levels = state.levels || [];
+      if (levels.length) {
+        var els = $.map(levels, function(level, index) {
+          cl = 'level_link ' + level.status;
+          if (level.unplugged)
+            cl += ' unplugged_level';
+          var link = $('<a>').addClass(cl).attr('href', level.link).text(level.displayText);
+
+          cl = level.assessment ? 'puzzle_outer_assessment' : 'puzzle_outer_level';
+          if (index === state.currentLevelIndex)
+            cl += ' puzzle_outer_current';
+          if (index === levels.length - 1)
+            cl += ' last';
+          return $('<div>').addClass(cl).append(link);
+        });
+
+        $('<div>').addClass('progress_container').append(els).appendTo($container);
+      }
+
+      // Finished link
+      if (state.finishLink) {
+        el = $('<div>').addClass('header_finished_link');
+        $('<a>').attr('href', state.finishLink.href).text(state.finishLink.text).appendTo(el);
+        el.appendTo($container);
+      }
+
+      // Trophies
+      if (state.trophies) {
+        el = $('<span>').addClass('header_trophy_link');
+        $('<div>').addClass('header_text').text('<%= I18n.t(:trophies) %>').appendTo(el);
+        $('<div>').addClass('header_status_bar current_trophies').text(state.trophies.current).appendTo(el);
+        $('<div>').addClass('header_text max_trophies').text(state.trophies.of + ' ' + state.trophies.max).appendTo(el);
+        el.appendTo($container);
+      }
+
+      // Stage popup
+      if (state.showStageLinks) {
+        el = $('<span>').addClass('header_popup_link');
+
+        if (state.popped) {
+          $('<div>').addClass('header_popup_link_glyph').html("&#x25B2;").appendTo(el);
+          $('<div>').addClass('header_popup_link_text').text('<%= I18n.t(:less) %>').appendTo(el);
+        } else {
+          $('<div>').addClass('header_popup_link_glyph').html("&#x25BC;").appendTo(el);
+          $('<div>').addClass('header_popup_link_text').text('<%= I18n.t(:more) %>').appendTo(el);
         }
-        var link = $('<a>').attr('href', level.link).addClass(cl).text(level.displayText);
+        el.appendTo($container);
 
-        cl = level.assessment ? 'puzzle_outer_assessment' : 'puzzle_outer_level';
-        if (index === _this.state.currentLevelIndex)
-          cl += ' puzzle_outer_current';
+        $('.freeplay_links').show();
+      } else {
+        $('.freeplay_links').hide();
+      }
 
-        var div = $('<div>').addClass(cl).append(link);
-        if (index === levels.length - 1) {
-          div.addClass('last');
-        }
-        _this.$el.append(div).append('\n');
-      });
+      // Popup stage navigation
+      if (state.popped) {
+        var header_popup = $('<div>').addClass('header_popup').appendTo($middle);
+
+        el = $('<div>').addClass('header_popup_header').appendTo(header_popup);
+        $('<span>').text('<%= I18n.t("nav.popup.progress") %>').appendTo(el);
+        if (state.linesOfCodeText)
+          $('<div>').addClass('header_text').css('float','right').text(state.linesOfCodeText).appendTo(el);
+
+        el = $('<div>').addClass('header_popup_body').appendTo(header_popup);
+        el.html(state.stageHtml || '<div class="loading"></div>');
+
+        el = $('<div>').addClass('header_popup_footer').appendTo(header_popup);
+        $('<div>').addClass('header_popup_close').text('<%= I18n.t("nav.popup.close") %>').appendTo(el);
+
+        header_popup.show(); // TODO: Not needed after removing the display:none; in the CSS
+      }
+
     }
 
     HeaderProgress.prototype.onClick = function(ev) {
+      var el;
+
+      el = $(ev.target).closest('.header_popup');
+      if (el.length) {
+        ev.stopPropagation(); // Clicks inside the popup shouldn't close it
+        return;
+      }
+
+      el = $(ev.target).closest('.header_popup_link');
+      if (el.length) {
+        ev.stopPropagation();
+
+        headerProgress.setState({
+          popped: !this.state.popped
+        });
+        return;
+      }
+
+      // Click on more/less, or trophies
+      // -- toggle state.popped
+      // -- lazy load the HTML
+      // -- jump to the trophies if that was clicked
+      // -- catch window clicks and close the popup
+      // -- don't close the popup if clicking inside it
+
+      /*
+        function lazyLoadPopup(trophiesClicked) {
+          if (!popupLoaded) {
+            popupLoaded = true;
+            $.ajax({
+              url: scriptData.statsPath,
+              data: {
+                script_id: scriptData.scriptId,
+                script_level_id: scriptData.scriptLevelId
+              }, success: function (result) {
+                $('.header_popup_body').html(result);
+                if (trophiesClicked) {
+                  jumpToTrophies();
+                }
+              }
+            });
+          } else if (trophiesClicked) {
+            jumpToTrophies();
+          }
+        }
+        function jumpToTrophies() {
+          window.scrollTo(0, +$('#trophies').offset().top);
+        }
+
+
+      */
+
       // TODO: Default behaviors
       alert('header click');
+
     }
 
     return HeaderProgress;
