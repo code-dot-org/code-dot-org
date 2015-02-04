@@ -197,7 +197,7 @@ function displayGoal(targetSet) {
     var sortedEquations = targetSet.sortedEquations();
     sortedEquations.forEach(function (equation) {
       tokenList = equation.expression.getTokenList(false);
-      displayEquation('answerExpression', equation.name, tokenList, nextRow++);
+      displayEquation('answerExpression', equation.signature, tokenList, nextRow++);
     });
   }
 
@@ -207,7 +207,7 @@ function displayGoal(targetSet) {
   if (hasSingleFunction) {
     tokenList = tokenList.concat(getTokenList(' = ' + result.toString()));
   }
-  displayEquation('answerExpression', computeEquation.name, tokenList, nextRow);
+  displayEquation('answerExpression', computeEquation.signature, tokenList, nextRow);
 }
 
 /**
@@ -445,7 +445,7 @@ function displayComplexUserExpressions () {
 
     tokenList = getTokenList(userEquation, expectedEquation);
 
-    displayEquation('userExpression', userEquation.name, tokenList, nextRow++,
+    displayEquation('userExpression', userEquation.signature, tokenList, nextRow++,
       'errorToken');
   });
 
