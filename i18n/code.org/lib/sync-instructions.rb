@@ -6,7 +6,7 @@ def find_instruction(f)
   f.each_line do |line|
     matches = line.match pattern
     if matches
-      return matches.captures.first
+      return matches.captures.first.gsub('\"', '"')
     end
   end
   nil
