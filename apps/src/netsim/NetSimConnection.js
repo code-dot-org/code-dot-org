@@ -38,6 +38,7 @@ var NetSimRouter = require('./NetSimRouter');
 var NetSimWire = require('./NetSimWire');
 var LogLevel = NetSimLogger.LogLevel;
 var ObservableEvent = require('./ObservableEvent');
+var periodicAction = require('./periodicAction');
 
 /**
  * How often a keep-alive message should be sent to the instance lobby
@@ -45,16 +46,46 @@ var ObservableEvent = require('./ObservableEvent');
  * @const
  */
 var KEEP_ALIVE_INTERVAL_MS = 2000;
+
+/**
+ * How often the client should run its clean-up job, removing expired rows
+ * from the instance tables
+ * @type {number}
+ * @const
+ */
 var CLEAN_UP_INTERVAL_MS = 10000;
 
 /**
  * Milliseconds before a client is considered 'disconnected' and
  * can be cleaned up by another client.
+ * Used for the cleanup job.
  * @type {number}
  * @const
  */
 var CONNECTION_TIMEOUT_MS = 30000; // 30 seconds
+
+/**
+ * Milliseconds before a router is considered 'disconnected' and
+ * can be cleaned up by a client.
+ * Routers get their keepAlive messages from connected clients, so in this
+ * case, any router that has no connected clients for 5 minutes can be
+ * cleaned up.
+ * Used for the cleanup job.
+ * @type {number}
+ * @const
+ */
 var CONNECTION_TIMEOUT_ROUTER_MS = 300000; // 5 minutes
+
+/**
+ * Milliseconds before a wire is considered 'disconnected' and
+ * can be cleaned up by a client.
+ * Wires get their keepAlive messages from connected clients, so in this
+ * case, any wire that has no connected client for 5 minutes can be
+ * cleaned up.
+ * Used for the cleanup job.
+ * @type {number}
+ * @const
+ */
 var CONNECTION_TIMEOUT_WIRE_MS = 300000; // 5 minutes
 
 /**
@@ -82,7 +113,8 @@ var NetSimConnection = function (displayName, logger /*=new NetSimLogger(NONE)*/
   }
 
   /**
-   * Connected instance.  Determines table names.
+   * Selected instance ID.  Used to dynamically determine table names.
+   * Tables are always scoped to the instance.
    * @type {string}
    * @private
    */
@@ -90,12 +122,17 @@ var NetSimConnection = function (displayName, logger /*=new NetSimLogger(NONE)*/
 
   /**
    * This connection's unique Row ID within the lobby table.
+   * Alternatively, think of this as a client node ID.
+   * TODO (bbuchanan): Consider a rename for this?
    * If undefined, we aren't connected to an instance.
    * @type {number}
+   * @private
    */
   this.myLobbyRowID_ = undefined;
 
   /**
+   * Client's connection status, mostly used for upload to the lobby
+   * so other clients can display it.
    * @type {NetSimConnection.ConnectionStatus}
    * @private
    */
@@ -107,19 +144,62 @@ var NetSimConnection = function (displayName, logger /*=new NetSimLogger(NONE)*/
    * Notifies on:
    * - Connect to instance
    * - Disconnect from instance
+   * - Connect to router
+   * - Got address from router
+   * - Disconnect from router
    * @type {ObservableEvent}
    */
   this.statusChanges = new ObservableEvent();
 
   /**
-   * When the next keepAlive update should be sent to the lobby
-   * @type {Number}
+   * Helper for sending keepAlive updates on a regular interval
+   * @type {periodicAction}
    * @private
    */
-  this.nextKeepAliveTime_ = Infinity;
-  this.nextCleanUpTime_ = Infinity;
+  this.periodicKeepAlive_ = periodicAction(function () {
+    this.keepAlive();
 
+    // TODO (bbuchanan): Call wire and router tick methods instead
+    // of owning their updates.
+    // simplify so we can just bind keepAlive to this action.
+
+    // We also perform updates for our connected wires and routers
+    if (this.wire_) {
+      this.wire_.update();
+    }
+
+    if (this.router_) {
+      this.router_.update();
+    }
+  }.bind(this), KEEP_ALIVE_INTERVAL_MS);
+
+  /**
+   * Helper for performing instance clean-up on a regular interval
+   * @type {periodicAction}
+   * @private
+   */
+  this.periodicCleanUp_ = periodicAction(this.cleanLobby_.bind(this),
+      CLEAN_UP_INTERVAL_MS);
+
+  /**
+   * This client node's simulated connection to another node.
+   * If you *are* connected to another node, you should have one of these.
+   * If you *are not* connected to another node, this should be null.
+   * We are always the local end of this wire, so we assert that
+   *   this.wire_.localID === this.myLobbyRowID_
+   * @type {NetSimWire}
+   * @private
+   */
   this.wire_ = null;
+
+  /**
+   * If this client node is connected to a router, this will be a NetSimRouter
+   * instance for that connected router.  Communication that we want to model
+   * still needs to happen over the wire - we use this object so that our
+   * client can help simulate the router's behavior.
+   * @type {NetSimRouter}
+   * @private
+   */
   this.router_ = null;
 
   // Bind to onBeforeUnload event to attempt graceful disconnect
@@ -128,7 +208,10 @@ var NetSimConnection = function (displayName, logger /*=new NetSimLogger(NONE)*/
 module.exports = NetSimConnection;
 
 /**
- * Client Connection Status enum
+ * Client node connection status enum
+ * - OFFLINE means you have no instance connection (not in lobby)
+ * - IN_LOBBY means you have an instance connection but no simulated connection
+ * - CONNECTED means you have a simulated connection to another node
  * @readonly
  * @enum
  */
@@ -140,7 +223,8 @@ var ConnectionStatus = {
 NetSimConnection.ConnectionStatus = ConnectionStatus;
 
 /**
- * Lobby row-type enum
+ * All the types of nodes that can show up in the lobby
+ * TODO (bbuchanan): Rename to NodeType?
  * @readonly
  * @enum {string}
  */
@@ -194,17 +278,14 @@ NetSimConnection.prototype.connectToInstance = function (instanceID) {
     this.disconnectFromInstance();
   }
 
-  // Create and cache a lobby table connection
   this.instanceID_ = instanceID;
-
-  // Connect to the lobby table we just set
   this.status_ = ConnectionStatus.IN_LOBBY;
   this.connect_();
 };
 
 /**
  * Get the current lobby table object, for manipulating the lobby.
- * @returns {netsimStorage.SharedStorageTable}
+ * @returns {SharedStorageTable}
  */
 NetSimConnection.prototype.getLobbyTable = function () {
   return new netsimStorage.SharedStorageTable(netsimStorage.APP_PUBLIC_KEY,
@@ -224,8 +305,7 @@ NetSimConnection.prototype.disconnectFromInstance = function () {
     this.disconnectFromRouter();
   }
 
-  // TODO (bbuchanan) : Check for other resources we need to clean up
-  //                    before we disconnect from the instance.
+  // TODO (bbuchanan) : Check for other resources we need to clean up.
 
   this.disconnectByRowID_(this.myLobbyRowID_);
   this.setConnectionStatus_(ConnectionStatus.OFFLINE);
@@ -301,22 +381,22 @@ NetSimConnection.prototype.setConnectionStatus_ = function (newStatus) {
   this.status_ = newStatus;
   switch (newStatus) {
     case ConnectionStatus.CONNECTED:
-      this.nextKeepAliveTime_ = 0;
-      this.nextCleanUpTime_ = 0;
+      this.periodicKeepAlive_.enable();
+      this.periodicCleanUp_.enable();
       this.logger_.info("Connected to node.");
       break;
 
     case ConnectionStatus.IN_LOBBY:
-      this.nextKeepAliveTime_ = 0;
-      this.nextCleanUpTime_ = 0;
+      this.periodicKeepAlive_.enable();
+      this.periodicCleanUp_.enable();
       this.logger_.info("Connected to instance, assigned ID " +
           this.myLobbyRowID_, LogLevel.INFO);
       break;
 
     case ConnectionStatus.OFFLINE:
       this.myLobbyRowID_ = undefined;
-      this.nextKeepAliveTime_ = Infinity;
-      this.nextCleanUpTime_ = Infinity;
+      this.periodicKeepAlive_.disable();
+      this.periodicCleanUp_.disable();
       this.logger_.info("Disconnected from instance", LogLevel.INFO);
       break;
   }
@@ -381,43 +461,8 @@ NetSimConnection.prototype.fetchLobbyListing = function (callback) {
  * @param {RunLoop.Clock} clock
  */
 NetSimConnection.prototype.tick = function (clock) {
-  if (clock.time >= this.nextKeepAliveTime_) {
-    this.keepAlive();
-
-    // We also perform updates for our connected wires and routers
-    if (this.wire_) {
-      this.wire_.update();
-    }
-
-    if (this.router_) {
-      this.router_.update();
-    }
-
-    if (this.nextKeepAliveTime_ === 0) {
-      this.nextKeepAliveTime_ = clock.time + KEEP_ALIVE_INTERVAL_MS;
-    } else {
-      // Stable increment
-      while (this.nextKeepAliveTime_ < clock.time) {
-        this.nextKeepAliveTime_ += KEEP_ALIVE_INTERVAL_MS;
-      }
-    }
-  }
-
-  // Client-driven cleanup of instance tables
-  // TODO (bbuchanan): Would be nice if this could go away entirely.
-  //                   Investigate auto-expiring rows.
-  if (clock.time >= this.nextCleanUpTime_) {
-    this.cleanLobby_();
-
-    if (this.nextCleanUpTime_ === 0) {
-      this.nextCleanUpTime_ = clock.time + CLEAN_UP_INTERVAL_MS;
-    } else {
-      // Stable increment
-      while (this.nextCleanUpTime_ < clock.time) {
-        this.nextCleanUpTime_ += CLEAN_UP_INTERVAL_MS;
-      }
-    }
-  }
+  this.periodicKeepAlive_.tick(clock);
+  this.periodicCleanUp_.tick(clock);
 };
 
 /**

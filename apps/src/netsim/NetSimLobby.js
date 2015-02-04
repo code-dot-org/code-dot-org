@@ -36,6 +36,7 @@
 var dom = require('../dom');
 var NetSimConnection = require('./NetSimConnection');
 var markup = require('./NetSimLobby.html');
+var periodicAction = require('./periodicAction');
 
 /**
  * How often the lobby should be auto-refreshed.
@@ -61,11 +62,12 @@ var NetSimLobby = function (connection) {
   this.connection_.statusChanges.register(this, this.refreshLobby_);
 
   /**
-   * When the lobby should be refreshed next
-   * @type {Number}
+   * Helper for running a regular lobby refresh
+   * @type {periodicAction}
    * @private
    */
-  this.nextAutoRefreshTime_ = Infinity;
+  this.periodicRefresh_ = periodicAction(this.refreshLobby_.bind(this),
+      AUTO_REFRESH_INTERVAL_MS);
 
   /**
    * Which item in the lobby is currently selected
@@ -145,7 +147,7 @@ NetSimLobby.prototype.bindElements_ = function () {
 NetSimLobby.prototype.onInstanceSelectorChange_ = function () {
   if (this.connection_.isConnectedToInstance()) {
     this.connection_.disconnectFromInstance();
-    this.nextAutoRefreshTime_ = Infinity;
+    this.periodicRefresh_.disable();
   }
 
   if (this.instanceSelector_.value !== '__none') {
@@ -213,15 +215,12 @@ NetSimLobby.prototype.refreshInstanceList_ = function () {
 NetSimLobby.prototype.refreshLobby_ = function () {
   var self = this;
   var lobbyList = this.lobbyList_;
+  var isInLobby = !this.connection_.isConnectedToRouter();
 
-  if (this.connection_.isConnectedToRouter()) {
-    // Just show the status line and the disconnect button
-    $(this.lobbyClosedDiv_).show();
-    $(this.lobbyOpenDiv_).hide();
-    $(this.connectionStatusSpan_).html(this.connection_.status_ + ' ' +
-        this.connection_.getStatusDetail());
+  this.periodicRefresh_.setActionInterval(isInLobby ?
+      AUTO_REFRESH_INTERVAL_MS : CLOSED_REFRESH_INTERVAL_MS);
 
-  } else {
+  if (isInLobby) {
     // Show the lobby and connection selector
     $(this.lobbyOpenDiv_).show();
     $(this.lobbyClosedDiv_).hide();
@@ -276,10 +275,14 @@ NetSimLobby.prototype.refreshLobby_ = function () {
 
       self.onSelectionChange();
 
-      if (self.nextAutoRefreshTime_ === Infinity) {
-        self.nextAutoRefreshTime_ = 0;
-      }
+      self.periodicRefresh_.enable();
     });
+  } else {
+    // Just show the status line and the disconnect button
+    $(this.lobbyClosedDiv_).show();
+    $(this.lobbyOpenDiv_).hide();
+    $(this.connectionStatusSpan_).html(this.connection_.status_ + ' ' +
+        this.connection_.getStatusDetail());
   }
 };
 
@@ -341,19 +344,5 @@ NetSimLobby.prototype.getUserSections_ = function (callback) {
  * @param {RunLoop.Clock} clock
  */
 NetSimLobby.prototype.tick = function (clock) {
-  if (clock.time >= this.nextAutoRefreshTime_) {
-    this.refreshLobby_();
-    var refreshInterval = this.connection_.isConnectedToRouter() ?
-        CLOSED_REFRESH_INTERVAL_MS : AUTO_REFRESH_INTERVAL_MS;
-
-    // TODO (bbuchanan) : Extract "interval" method generator for this and connection.
-    if (this.nextAutoRefreshTime_ === 0) {
-      this.nextAutoRefreshTime_ = clock.time + refreshInterval;
-    } else {
-      // Stable increment
-      while (this.nextAutoRefreshTime_ < clock.time) {
-        this.nextAutoRefreshTime_ += refreshInterval;
-      }
-    }
-  }
+  this.periodicRefresh_.tick(clock);
 };
