@@ -3,12 +3,13 @@
 # controllers)
 
 class ReportsController < ApplicationController
-  before_filter :authenticate_user!, except: [:header_stats]
+  before_filter :authenticate_user!, except: [:header_stats, :user_progress]
 
-  check_authorization except: [:header_stats, :students]
+  check_authorization except: [:header_stats, :user_progress, :students]
 
   before_action :set_script
   include LevelSourceHintsHelper
+  include LevelsHelper
 
   def user_stats
     @user = User.find(params[:user_id])
@@ -27,6 +28,24 @@ SQL
 
   def header_stats
     render file: 'shared/_user_stats', layout: false, locals: {user: current_user}
+  end
+
+  def user_progress
+
+    # TODO: What kind of errors should we be throwing?
+    script_name = params[:script_name]
+    stage_id = params[:stage_id]
+    level_id = params[:level_id]
+    raise ActiveRecord::RecordNotFound unless script_name && stage_id && level_id
+
+    script = Script.find_by_name(script_name)
+    raise ActiveRecord::RecordNotFound unless script
+
+    script_level = script.get_script_level_by_stage_and_position(stage_id, level_id)
+    raise ActiveRecord::RecordNotFound unless script_level
+
+    # Add in the user's current progress
+    render json: header_progress(script_level)
   end
 
   def prizes
