@@ -177,6 +177,12 @@ function loadStyle(name) {
   }));
 }
 
+$(document).ready(function() {
+  // TODO: Global, until we create a component cache
+  window.uiRouter = new UIRouter();
+  uiRouter.route();
+});
+
 loadStyle('common');
 loadStyle(appOptions.app);
 var promise;
