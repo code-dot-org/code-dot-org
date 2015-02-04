@@ -53,7 +53,7 @@ function displayGoalCustomValidator(assert) {
 
   displayGoalTest(assert, 'simple target', function () {
     var targetSet = new EquationSet();
-    targetSet.addEquation_(new Equation(null, new ExpressionNode(5)));
+    targetSet.addEquation_(new Equation(null, [], new ExpressionNode(5)));
 
     displayGoal(targetSet);
 
@@ -70,9 +70,9 @@ function displayGoalCustomValidator(assert) {
   //   // g(y) = y
   //   // compute: f(1) + g(2)
   //   var targetSet = new EquationSet();
-  //   targetSet.addEquation_(new Equation('f(x)', new ExpressionNode('x')));
-  //   targetSet.addEquation_(new Equation('g(y)', new ExpressionNode('y')));
-  //   targetSet.addEquation_(new Equation(null, new ExpressionNode('+', [
+  //   targetSet.addEquation_(new Equation('f', ['x'], new ExpressionNode('x')));
+  //   targetSet.addEquation_(new Equation('g', ['y'], new ExpressionNode('y')));
+  //   targetSet.addEquation_(new Equation(null, [], new ExpressionNode('+', [
   //     new ExpressionNode('f', [1]),
   //     new ExpressionNode('g', [2]),
   //   ])));
@@ -86,9 +86,9 @@ function displayGoalCustomValidator(assert) {
   //   // myvar = 1
   //   // compute: f(1) + myvar
   //   var targetSet = new EquationSet();
-  //   targetSet.addEquation_(new Equation('f(x)', new ExpressionNode('x')));
-  //   targetSet.addEquation_(new Equation('myvar', new ExpressionNode(1)));
-  //   targetSet.addEquation_(new Equation(null, new ExpressionNode('+', [
+  //   targetSet.addEquation_(new Equation('f', ['x'], new ExpressionNode('x')));
+  //   targetSet.addEquation_(new Equation('myvar', [], new ExpressionNode(1)));
+  //   targetSet.addEquation_(new Equation(null, [], new ExpressionNode('+', [
   //     new ExpressionNode('f', [1]),
   //     new ExpressionNode('myvar'),
   //   ])));
