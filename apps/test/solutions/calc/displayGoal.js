@@ -60,37 +60,41 @@ function displayGoalCustomValidator(assert) {
     assert.equal(g.children[0].getAttribute('class'), null);
   });
 
-  // displayGoalTest(assert, 'multiple functions', function () {
-  //   // f(x) = x
-  //   // g(y) = y
-  //   // compute: f(1) + g(2)
-  //   var targetSet = new EquationSet();
-  //   targetSet.addEquation_(new Equation('f', ['x'], new ExpressionNode('x')));
-  //   targetSet.addEquation_(new Equation('g', ['y'], new ExpressionNode('y')));
-  //   targetSet.addEquation_(new Equation(null, [], new ExpressionNode('+', [
-  //     new ExpressionNode('f', [1]),
-  //     new ExpressionNode('g', [2]),
-  //   ])));
-  //
-  //   displayGoal(targetSet);
-  //
-  // });
+  displayGoalTest(assert, 'multiple functions', function () {
+    // f(x) = x
+    // g(y) = y
+    // compute: f(1) + g(2)
+    var targetSet = new EquationSet();
+    targetSet.addEquation_(new Equation('f', ['x'], new ExpressionNode('x')));
+    targetSet.addEquation_(new Equation('g', ['y'], new ExpressionNode('y')));
+    targetSet.addEquation_(new Equation(null, [], new ExpressionNode('+', [
+      new ExpressionNode('f', [1]),
+      new ExpressionNode('g', [2]),
+    ])));
 
-  // displayGoalTest(assert, 'function and variable', function () {
-  //   // f(x) = x
-  //   // myvar = 1
-  //   // compute: f(1) + myvar
-  //   var targetSet = new EquationSet();
-  //   targetSet.addEquation_(new Equation('f', ['x'], new ExpressionNode('x')));
-  //   targetSet.addEquation_(new Equation('myvar', [], new ExpressionNode(1)));
-  //   targetSet.addEquation_(new Equation(null, [], new ExpressionNode('+', [
-  //     new ExpressionNode('f', [1]),
-  //     new ExpressionNode('myvar'),
-  //   ])));
-  //
-  //   displayGoal(targetSet);
-  //
-  // });
+    // this should actually throw (or we should at least throw somewhere in
+    // this scenario) pivotal #87578464
+    displayGoal(targetSet);
+
+  });
+
+  displayGoalTest(assert, 'function and variable', function () {
+    // f(x) = x
+    // myvar = 1
+    // compute: f(1) + myvar
+    var targetSet = new EquationSet();
+    targetSet.addEquation_(new Equation('f', ['x'], new ExpressionNode('x')));
+    targetSet.addEquation_(new Equation('myvar', [], new ExpressionNode(1)));
+    targetSet.addEquation_(new Equation(null, [], new ExpressionNode('+', [
+      new ExpressionNode('f', [1]),
+      new ExpressionNode('myvar'),
+    ])));
+
+    // this should actually throw (or we should at least throw somewhere in
+    // this scenario) pivotal #87578464
+    displayGoal(targetSet);
+
+  });
 
   return true;
 }
