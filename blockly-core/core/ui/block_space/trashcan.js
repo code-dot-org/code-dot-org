@@ -43,42 +43,42 @@ Blockly.Trashcan = function(blockSpace) {
  * @type {string}
  * @private
  */
-Blockly.Trashcan.prototype.CLOSED_URL_ = 'media/canclosed.png';
+Blockly.Trashcan.CLOSED_URL_ = 'media/canclosed.png';
 
 /**
  * URL of the lid image.
  * @type {string}
  * @private
  */
-Blockly.Trashcan.prototype.OPEN_URL_ = 'media/canopen.png';
+Blockly.Trashcan.OPEN_URL_ = 'media/canopen.png';
 
 /**
  * Width of both the trash can and lid images.
  * @type {number}
  * @private
  */
-Blockly.Trashcan.prototype.WIDTH_ = 70;
+Blockly.Trashcan.WIDTH_ = 70;
 
 /**
- * Height of the trashcan image.
+ * Height of the trashcan image in pixels.
  * @type {number}
  * @private
  */
-Blockly.Trashcan.prototype.HEIGHT_ = 70;
+Blockly.Trashcan.HEIGHT_ = 70;
 
 /**
- * Distance between trashcan and top edge of blockSpace.
+ * Distance between trashcan and top edge of blockSpace in pixels.
  * @type {number}
  * @private
  */
-Blockly.Trashcan.prototype.MARGIN_TOP_ = 15;
+Blockly.Trashcan.MARGIN_TOP_ = 15;
 
 /**
- * Distance between trashcan and right edge of blockSpace.
+ * Distance between trashcan and right edge of blockSpace in pixels.
  * @type {number}
  * @private
  */
-Blockly.Trashcan.prototype.MARGIN_SIDE_ = 22;
+Blockly.Trashcan.MARGIN_SIDE_ = 22;
 
 
 /**
@@ -86,7 +86,7 @@ Blockly.Trashcan.prototype.MARGIN_SIDE_ = 22;
 * @type {number}
 * @private
 */
-Blockly.Trashcan.prototype.MARGIN_HOTSPOT_ = 25;
+Blockly.Trashcan.MARGIN_HOTSPOT_ = 25;
 
 /**
  * Current open/close state of the lid.
@@ -150,17 +150,17 @@ Blockly.Trashcan.prototype.createDom = function() {
   this.svgGroup_ = Blockly.createSvgElement('g',
       {'id': 'trashcan', 'filter': 'url(#blocklyTrashcanShadowFilter)'}, null);
   this.svgClosedCan_ = Blockly.createSvgElement('image',
-      {'width': this.WIDTH_, 'height': this.HEIGHT_},
+      {'width': Blockly.Trashcan.WIDTH_, 'height': Blockly.Trashcan.HEIGHT_},
       this.svgGroup_);
   this.svgClosedCan_.setAttributeNS(
       'http://www.w3.org/1999/xlink', 'xlink:href',
-      Blockly.assetUrl(this.CLOSED_URL_));
+      Blockly.assetUrl(Blockly.Trashcan.CLOSED_URL_));
   this.svgOpenCan_ = Blockly.createSvgElement('image',
-      {'width': this.WIDTH_, 'height': this.HEIGHT_},
+      {'width': Blockly.Trashcan.WIDTH_, 'height': Blockly.Trashcan.HEIGHT_},
       this.svgGroup_);
   this.svgOpenCan_.setAttribute('visibility', 'hidden');
   this.svgOpenCan_.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-      Blockly.assetUrl(this.OPEN_URL_));
+      Blockly.assetUrl(Blockly.Trashcan.OPEN_URL_));
   return this.svgGroup_;
 };
 
@@ -189,7 +189,7 @@ Blockly.Trashcan.prototype.dispose = function() {
 };
 
 /**
- * Move the trash can to the top-right corner.
+ * Move the trash can to the top-right corner of its containing BlockSpace.
  * @private
  */
 Blockly.Trashcan.prototype.position_ = function() {
@@ -199,17 +199,33 @@ Blockly.Trashcan.prototype.position_ = function() {
     return;
   }
   if (Blockly.RTL) {
-    this.left_ = this.MARGIN_SIDE_;
+    this.left_ = Blockly.Trashcan.MARGIN_SIDE_;
   } else {
-    this.left_ = metrics.viewWidth - this.WIDTH_ - this.MARGIN_SIDE_;
+    this.left_ = metrics.viewWidth - Blockly.Trashcan.WIDTH_ - Blockly.Trashcan.MARGIN_SIDE_;
   }
-  this.top_ = this.MARGIN_TOP_ + this.extraYOffset_;
+  this.top_ = Blockly.Trashcan.MARGIN_TOP_ + this.extraYOffset_;
   this.svgGroup_.setAttribute('transform',
       'translate(' + this.left_ + ',' + this.top_ + ')');
 };
 
+/**
+ * Repositions trashcan a given number of pixels below the top of its containing BlockSpace
+ * @param pixelOffset
+ */
 Blockly.Trashcan.prototype.setYOffset = function(pixelOffset) {
   this.extraYOffset_ = pixelOffset;
+  this.position_();
+};
+
+Blockly.Trashcan.prototype.repositionBelowBlockSpaceTop = function(pixelOffset) {
+  this.setYOffset(pixelOffset - Blockly.Trashcan.MARGIN_TOP_);
+};
+
+/**
+ * Returns the trashcan's current height in pixels
+ */
+Blockly.Trashcan.prototype.getHeight = function() {
+  return Blockly.Trashcan.HEIGHT_;
 };
 
 /**
@@ -219,10 +235,10 @@ Blockly.Trashcan.prototype.setYOffset = function(pixelOffset) {
 Blockly.Trashcan.prototype.getRect = function() {
   var trashXY = Blockly.getSvgXY_(this.svgGroup_);
   return new goog.math.Rect(
-    trashXY.x - this.MARGIN_HOTSPOT_,
-    trashXY.y - this.MARGIN_HOTSPOT_,
-    this.WIDTH_ + 2 * this.MARGIN_HOTSPOT_,
-    this.HEIGHT_ + 2 * this.MARGIN_HOTSPOT_);
+    trashXY.x - Blockly.Trashcan.MARGIN_HOTSPOT_,
+    trashXY.y - Blockly.Trashcan.MARGIN_HOTSPOT_,
+    Blockly.Trashcan.WIDTH_ + 2 * Blockly.Trashcan.MARGIN_HOTSPOT_,
+    Blockly.Trashcan.HEIGHT_ + 2 * Blockly.Trashcan.MARGIN_HOTSPOT_);
   };
 
 /**
