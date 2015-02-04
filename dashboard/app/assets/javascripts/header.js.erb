@@ -2,34 +2,6 @@
  * Dynamic header generation and event bindings for header actions.
  */
 
-if (!window.dashboard) {
-  window.dashboard = {};
-}
-
-/**
- * @param scriptData{{
- *   title: string,
- *   finishLink: string,
- *   statsPath: string,
- *   showStageLinks: boolean,
- *   trophies: Object,
- *   scriptId: number,
- *   scriptLevelId: number,
- *   currentLevelIndex: number,
- *   levels: Array.<{
- *     displayText: string,
- *     status: string,
- *     unplugged: boolean,
- *     assessment: boolean
- *   }>
- * }}
- */
-dashboard.buildHeader = function () {
-  // TODO: Global, until we create a component cache
-  window.headerProgress = new HeaderProgress( $('.navbar-header') );
-};
-
-
 // TODO: Enable the 'destroyed' method?
 // (function($){ $.event.special.destroyed = { remove: function(o) { if (o.handler) { o.handler() } } } })(jQuery);
 
@@ -152,6 +124,7 @@ dashboard.buildHeader = function () {
       this.fetchProgress();
 
       // Create tooltips for the free-play icons
+      // TODO: Might be better to initialize this component elsewhere
       $('.level_free_play').qtip({
         content: {
           attr: 'title'
@@ -175,6 +148,24 @@ dashboard.buildHeader = function () {
         level_id: this.props.levelId
       })
       .done(function(data) {
+        /**
+         * @param data {{
+         *   title: string,
+         *   finishLink: string,
+         *   statsPath: string,
+         *   showStageLinks: boolean,
+         *   trophies: Object,
+         *   scriptId: number,
+         *   scriptLevelId: number,
+         *   currentLevelIndex: number,
+         *   levels: Array.<{
+         *     displayText: string,
+         *     status: string,
+         *     unplugged: boolean,
+         *     assessment: boolean
+         *   }>
+         * }}
+         */
         _this.replaceState(data);
       })
       .fail(function(xhr) {
@@ -188,7 +179,6 @@ dashboard.buildHeader = function () {
       var state = this.state || {};
 
       // Don't render unless we have the data attributes
-      // TODO: REMOVE after _header.html.haml is converted
       if (!this.props.scriptName)
         return;
 

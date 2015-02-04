@@ -177,6 +177,11 @@ function loadStyle(name) {
   }));
 }
 
+$(document).ready(function() {
+  // TODO: Global, until we create a component cache
+  window.headerProgress = new HeaderProgress( $('.navbar-header') );
+});
+
 loadStyle('common');
 loadStyle(appOptions.app);
 var promise;
