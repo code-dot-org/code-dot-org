@@ -1212,6 +1212,8 @@ Applab.createImageUploadButton = function (opts) {
                  divApplab.appendChild(newLabel));
 };
 
+// These offset are used to ensure that the turtle image is centered over
+// its x,y coordinates. The image is currently 31x45, so these offsets are 50%
 var TURTLE_X_OFFSET = -15;
 var TURTLE_Y_OFFSET = -22;
 
