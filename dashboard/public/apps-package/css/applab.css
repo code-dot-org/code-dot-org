@@ -98,8 +98,12 @@ div#visualization {
 #divApplab div {
   overflow: hidden; }
 
+img#turtleImage {
+  position: relative;
+  height: 45px; }
+
 .debug-console {
-  dispay: block; }
+  display: block; }
 
 .debug-console * {
   font-family: monospace;
