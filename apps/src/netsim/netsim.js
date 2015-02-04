@@ -161,13 +161,13 @@ NetSim.prototype.initWithUserName_ = function (userName) {
 
   var lobbyContainer = document.getElementById('netsim_lobby_container');
   this.lobbyControl_ = NetSimLobby.createWithin(lobbyContainer, this.connection_);
-  this.runLoop_.tick.register(this.lobbyControl_, this.lobbyControl_.tick);
+  this.lobbyControl_.attachToRunLoop(this.runLoop_);
   this.logger_.info("Lobby control created.");
 
   var routerPanelContainer = document.getElementById('netsim_tabzone');
   this.routerPanel_ = NetSimRouterPanel.createWithin(routerPanelContainer,
     this.connection_);
-  this.runLoop_.tick.register(this.routerPanel_, this.routerPanel_.tick);
+  this.routerPanel_.attachToRunLoop(this.runLoop_);
   this.logger_.info("Router panel control created");
 };
 

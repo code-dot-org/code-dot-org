@@ -101,6 +101,14 @@ NetSimRouterPanel.prototype.bindElements_ = function () {
 };
 
 /**
+ * Attach own handlers to run loop events.
+ * @param {RunLoop} runLoop
+ */
+NetSimRouterPanel.prototype.attachToRunLoop = function (runLoop) {
+  this.periodicRefresh_.attachToRunLoop(runLoop);
+};
+
+/**
  * Handler for connection status changes.  Can update configuration and
  * trigger a refresh of this view.
  * @private
@@ -141,11 +149,4 @@ NetSimRouterPanel.prototype.refresh = function () {
     this.notConnectedSpan_.show();
     this.connectedSpan_.hide();
   }
-};
-
-/**
- * @param {RunLoop.Clock} clock
- */
-NetSimRouterPanel.prototype.tick = function (clock) {
-  this.periodicRefresh_.tick(clock);
 };
