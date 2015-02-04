@@ -115,6 +115,13 @@ NetSimRouter.RouterStatus = {
 };
 var RouterStatus = NetSimRouter.RouterStatus;
 
+/**
+ * Static creation method: Creates a new router node on the given instance,
+ * calls the given callback with a local controller for the new router node
+ * when creation is complete.
+ * @param instanceID
+ * @param onComplete
+ */
 NetSimRouter.create = function (instanceID, onComplete) {
   onComplete = defaultToEmptyFunction(onComplete);
 
@@ -137,6 +144,11 @@ NetSimRouter.create = function (instanceID, onComplete) {
   });
 };
 
+/**
+ * Updates router status and lastPing time in lobby table - both keepAlive
+ * and making sure router's connection count is valid.
+ * @param onComplete
+ */
 NetSimRouter.prototype.update = function (onComplete) {
   onComplete = defaultToEmptyFunction(onComplete);
 
@@ -154,6 +166,10 @@ NetSimRouter.prototype.update = function (onComplete) {
   });
 };
 
+/**
+ * Removes router node from the lobby table.
+ * @param onComplete
+ */
 NetSimRouter.prototype.destroy = function (onComplete) {
   onComplete = defaultToEmptyFunction(onComplete);
 
@@ -164,11 +180,19 @@ NetSimRouter.prototype.destroy = function (onComplete) {
   });
 };
 
+/**
+ * Helper for getting lobby table of configured instance.
+ * @returns {exports.SharedStorageTable}
+ */
 NetSimRouter.prototype.getLobbyTable = function () {
   return new netsimStorage.SharedStorageTable(netsimStorage.APP_PUBLIC_KEY,
       this.instanceID_ + '_lobby');
 };
 
+/**
+ * Helper for getting wires table of configured instance.
+ * @returns {exports.SharedStorageTable}
+ */
 NetSimRouter.prototype.getWireTable = function () {
   return new netsimStorage.SharedStorageTable(netsimStorage.APP_PUBLIC_KEY,
       this.instanceID_ + '_wire');
@@ -189,14 +213,27 @@ NetSimRouter.prototype.buildLobbyRow_ = function () {
   };
 };
 
+/**
+ * Build display name that we put into lobby table for this router.
+ * @returns {string}
+ */
 NetSimRouter.prototype.getDisplayName = function () {
   return "Router " + this.routerID;
 };
 
+/**
+ * Build a router hostname that we can set on our wires.
+ * @returns {string}
+ */
 NetSimRouter.prototype.getHostname = function () {
   return this.getDisplayName().replace(/[^\w\d]/g, '').toLowerCase();
 };
 
+/**
+ * Query the wires table and pass the callback a list of wire table rows,
+ * where all of the rows are wires attached to this router.
+ * @param onComplete
+ */
 NetSimRouter.prototype.getConnections = function (onComplete) {
   onComplete = defaultToEmptyFunction(onComplete);
 
@@ -216,6 +253,11 @@ NetSimRouter.prototype.getConnections = function (onComplete) {
   });
 };
 
+/**
+ * Query the wires table and pass the callback the total number of wires
+ * connected to this router.
+ * @param onComplete
+ */
 NetSimRouter.prototype.countConnections = function (onComplete) {
   onComplete = defaultToEmptyFunction(onComplete);
 
@@ -270,6 +312,13 @@ NetSimRouter.prototype.assignAddressesToWire = function (wireNeedingAddress,
   });
 };
 
+/**
+ * Query the wires table and pass the callback a list of addresses and
+ * hostnames, which includes this router node and all of the nodes that are
+ * connected to this router by an active wire.
+ * Returns list of objects in form { hostname:{string}, address:{number} }
+ * @param onComplete
+ */
 NetSimRouter.prototype.getAddressTable = function (onComplete) {
   onComplete = defaultToEmptyFunction(onComplete);
 

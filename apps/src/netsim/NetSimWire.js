@@ -85,6 +85,12 @@ var NetSimWire = function () {
 };
 module.exports = NetSimWire;
 
+/**
+ * Static creation method.  Creates a new wire on the given instance, and
+ * then calls the callback with a local controller for the new wire.
+ * @param instanceID
+ * @param completionCallback
+ */
 NetSimWire.create = function (instanceID, completionCallback) {
   var wire = new NetSimWire();
 
@@ -99,11 +105,19 @@ NetSimWire.create = function (instanceID, completionCallback) {
   });
 };
 
+/**
+ * Helper that gets the wires table for the configured instance.
+ * @returns {exports.SharedStorageTable}
+ */
 NetSimWire.prototype.getTable = function () {
   return new netsimStorage.SharedStorageTable(netsimStorage.APP_PUBLIC_KEY,
       this.instanceID_ + '_wire');
 };
 
+/**
+ * Pushes latest wire status to the wires table, acting as a keepAlive.
+ * @param completionCallback
+ */
 NetSimWire.prototype.update = function (completionCallback) {
   if (!completionCallback) {
     completionCallback = function () {};
@@ -114,6 +128,10 @@ NetSimWire.prototype.update = function (completionCallback) {
   });
 };
 
+/**
+ * Removes this wire from the wires table.
+ * @param completionCallback
+ */
 NetSimWire.prototype.destroy = function (completionCallback) {
   if (!completionCallback) {
     completionCallback = function () {};
@@ -138,20 +156,4 @@ NetSimWire.prototype.buildRow_ = function () {
     remoteHostname: this.remoteHostname,
     wireMode: this.wireMode
   };
-};
-
-NetSimWire.prototype.putOutgoing = function () {
-
-};
-
-NetSimWire.prototype.putIncoming = function () {
-
-};
-
-NetSimWire.prototype.readOutgoing = function () {
-
-};
-
-NetSimWire.prototype.readIncoming = function () {
-
 };
