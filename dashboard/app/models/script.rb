@@ -202,7 +202,7 @@ class Script < ActiveRecord::Base
         stages = script_data[:stages]
         custom_i18n.deep_merge!(i18n)
         add_script({name: File.basename(script, '.script'),
-                    trophies: false,
+                    trophies: script_data[:trophies],
                     hidden: script_data[:hidden].nil? ? true : script_data[:hidden]},
                    stages.map{|stage| stage[:levels]}.flatten)
       end
@@ -314,7 +314,7 @@ class Script < ActiveRecord::Base
       transaction do
         script_data, i18n = ScriptDSL.parse(script_text, 'input', script_params[:name])
         Script.add_script({name: script_params[:name],
-                           trophies: false,
+                           trophies: script_data[:trophies],
                            hidden: script_data[:hidden].nil? ? true : script_data[:hidden]},
           script_data[:stages].map { |stage| stage[:levels] }.flatten)
         Script.update_i18n(i18n)
