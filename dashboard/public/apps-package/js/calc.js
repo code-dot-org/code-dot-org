@@ -30,8 +30,6 @@ window.calcMain = function(options) {
 
 'use strict';
 
-// TODO (brent) - check somewhere that we have only 1 top block
-
 var Calc = module.exports;
 
 /**
@@ -65,6 +63,8 @@ studioApp.setCheckForEmptyBlocks(false);
 
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
+
+var LINE_HEIGHT = 20;
 
 var appState = {
   targetSet: null,
@@ -170,7 +170,7 @@ Calc.init = function(config) {
 
     appState.targetSet = generateEquationSetFromBlockXml(solutionBlocks);
 
-    displayGoal();
+    displayGoal(appState.targetSet);
 
     // Adjust visualizationColumn width.
     var visualizationColumn = document.getElementById('visualizationColumn');
@@ -193,10 +193,10 @@ Calc.init = function(config) {
  *     variables, but no functions. Display compute expression and variables
  * (4) We have a target compute expression, and either multiple functions or
  *     one function and variable(s). Currently not supported.
- *     // TODO - make sure we throw for this
+ * @param {EquationSet} targetSet The target equation set.
  */
-function displayGoal() {
-  var computeEquation = appState.targetSet.computeEquation();
+function displayGoal(targetSet) {
+  var computeEquation = targetSet.computeEquation();
   if (!computeEquation || !computeEquation.expression) {
     return;
   }
@@ -205,22 +205,22 @@ function displayGoal() {
   // (i.e. compute expression). Otherwise show all equations.
   var tokenList;
   var nextRow = 0;
-  var hasSingleFunction = appState.targetSet.hasSingleFunction();
+  var hasSingleFunction = targetSet.hasSingleFunction();
   if (!hasSingleFunction) {
-    var sortedEquations = appState.targetSet.sortedEquations();
+    var sortedEquations = targetSet.sortedEquations();
     sortedEquations.forEach(function (equation) {
       tokenList = equation.expression.getTokenList(false);
-      displayEquation('answerExpression', equation.name, tokenList, nextRow++);
+      displayEquation('answerExpression', equation.signature, tokenList, nextRow++);
     });
   }
 
   tokenList = computeEquation.expression.getTokenList(false);
-  var result = appState.targetSet.evaluate();
+  var result = targetSet.evaluate();
 
   if (hasSingleFunction) {
     tokenList = tokenList.concat(getTokenList(' = ' + result.toString()));
   }
-  displayEquation('answerExpression', computeEquation.name, tokenList, nextRow);
+  displayEquation('answerExpression', computeEquation.signature, tokenList, nextRow);
 }
 
 /**
@@ -458,7 +458,7 @@ function displayComplexUserExpressions () {
 
     tokenList = getTokenList(userEquation, expectedEquation);
 
-    displayEquation('userExpression', userEquation.name, tokenList, nextRow++,
+    displayEquation('userExpression', userEquation.signature, tokenList, nextRow++,
       'errorToken');
   });
 
@@ -597,9 +597,6 @@ function displayEquation(parentId, name, tokenList, line, markClass) {
   parent.appendChild(g);
   var xPos = 0;
   var len;
-  // TODO (brent) in the case of functions, really we'd like the name to also be
-  // a tokenDiff - i.e. if target is foo(x,y) and user expression is foo(y, x)
-  // we'd like to highlight the differences
   if (name) {
     len = addText(g, (name + ' = '), xPos, null);
     xPos += len;
@@ -610,9 +607,8 @@ function displayEquation(parentId, name, tokenList, line, markClass) {
     xPos += len;
   }
 
-  // TODO (brent): handle case where expression is longer than width
   var xPadding = (CANVAS_WIDTH - g.getBoundingClientRect().width) / 2;
-  var yPos = (line * 20); // TODO - this shouldnt be hardcoded
+  var yPos = (line * LINE_HEIGHT);
   g.setAttribute('transform', 'translate(' + xPadding + ', ' + yPos + ')');
 }
 
@@ -659,7 +655,7 @@ function cloneNodeWithoutIds(elementId) {
  * App specific displayFeedback function that calls into
  * studioApp.displayFeedback when appropriate
  */
-var displayFeedback = function() {
+function displayFeedback() {
   if (!appState.response || appState.animating) {
     return;
   }
@@ -685,7 +681,7 @@ var displayFeedback = function() {
   }
 
   studioApp.displayFeedback(options);
-};
+}
 
 /**
  * Function to be called when the service report call is complete
@@ -698,6 +694,13 @@ function onReportComplete(response) {
   appState.response = response;
   displayFeedback();
 }
+
+/* start-test-block */
+// export private function(s) to expose to unit testing
+Calc.__testonly__ = {
+  displayGoal: displayGoal
+};
+/* end-test-block */
 
 },{"../../locale/current/calc":169,"../../locale/current/common":170,"../StudioApp":2,"../block_utils":16,"../dom":43,"../skins":125,"../templates/page.html":145,"../timeoutList":151,"../utils":165,"./api":27,"./controls.html":30,"./equationSet":31,"./expressionNode":32,"./inputIterator":33,"./levels":34,"./visualization.html":36}],36:[function(require,module,exports){
 module.exports= (function() {
@@ -821,23 +824,28 @@ var ExpressionNode = require('./expressionNode');
  *   f(x) = x + 1
  *   name: f
  *   equation: x + 1
+ *   params: ['x']
  * In many cases, this will just be an expression with no name.
+ * @param {string} name Function or variable name. Null if compute expression
+ * @param {string[]} params List of parameter names if a function.
+ * @param {ExpressionNode} expression
  */
-var Equation = function (name, expression) {
+var Equation = function (name, params, expression) {
   this.name = name;
+  this.params = params || [];
   this.expression = expression;
+
+  this.signature = this.name;
+  if (this.params.length > 0) {
+    this.signature += '(' + this.params.join(',') + ')';
+  }
 };
 
 /**
- * Equations come in three varieties:
- *  (1) Compute expression - name is null
- *  (2) Function - name is "fn(var1, var2, ...)"
- *  (3) Variable declaration - name is "x"
- * This method returns true if the name indicates it is a function.
+ * @returns True if a function
  */
 Equation.prototype.isFunction = function () {
-  // does the name end with parens enclosing variables
-  return /\(.*\)$/.test(this.name);
+  return this.params.length > 0;
 };
 
 /**
@@ -911,23 +919,16 @@ EquationSet.prototype.hasVariablesOrFunctions = function () {
 };
 
 /**
- * If the EquationSet has exactly one function and no variables, returns that
- * equation. If we have multiple functions or one function and some variables,
- * it returns null
- */
-EquationSet.prototype.singleFunction_ = function () {
-  if (this.equations_.length === 1 && this.equations_[0].isFunction()) {
-    return this.equations_[0];
-  }
-
-  return null;
-};
-
-/**
- * External callers only care about whether or not we have a single function
+ * @returns {boolean} True if the EquationSet has exactly one function and no
+ * variables. If we have multiple functions or one function and some variables,
+ * returns false.
  */
  EquationSet.prototype.hasSingleFunction = function () {
-   return this.singleFunction_() !== null;
+   if (this.equations_.length === 1 && this.equations_[0].isFunction()) {
+     return true;
+   }
+
+   return false;
  };
 
 /**
@@ -984,47 +985,51 @@ EquationSet.prototype.evaluate = function () {
  * @param {ExpressionNode} computeExpression The expression to evaluate
  */
 EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
-  // (1) no variables/functions. this is easy
+  // no variables/functions. this is easy
   if (this.equations_.length === 0) {
     return computeExpression.evaluate();
   }
 
+  // Iterate through our equations to generate our mapping. We may need to do
+  // this a few times. Stop trying as soon as we do a full iteration without
+  // adding anything new to our mapping.
   var mapping = {};
-  // (2) single function, no variables
-  // Map our parameter names to their input values.
-  var singleFunction = this.singleFunction_();
-  if (singleFunction !== null) {
-    // TODO (brent) - might be better if we didn't depend on the equation
-    // name being in a particular format
-    var variables = /\((.*)\)$/.exec(singleFunction.name)[1].split(',');
-    var caller = computeExpression;
-    if (caller.getType() !== ExpressionNode.ValueType.FUNCTION_CALL) {
-      throw new Error('expect function call');
-    }
-
-    if (caller.numChildren() !== variables.length) {
-      throw new Error('Unexpected: calling function with wrong number of inputs');
-    }
-
-    variables.forEach(function (item, index) {
-      mapping[item] = caller.getChildValue(index);
-    });
-    return singleFunction.expression.evaluate(mapping);
-  }
-
-  // (3) no functions and one or more variables
-  var madeProgress = true;
-  while (madeProgress) {
+  var madeProgress;
+  var testMapping;
+  var setTestMappingToOne = function (item) {
+    testMapping[item] = 1;
+  };
+  do {
     madeProgress = false;
     for (var i = 0; i < this.equations_.length; i++) {
       var equation = this.equations_[i];
-      if (mapping[equation.name] === undefined &&
+      if (equation.isFunction()) {
+        if (mapping[equation.name]) {
+          continue;
+        }
+        // see if we can map if we replace our params
+        // note that params override existing vars in our testMapping
+        testMapping = _.clone(mapping);
+        equation.params.forEach(setTestMappingToOne);
+        if (!equation.expression.canEvaluate(testMapping)) {
+          continue;
+        }
+
+        // we have a valid mapping
+        madeProgress = true;
+        mapping[equation.name] = {
+          variables: equation.params,
+          expression: equation.expression
+        };
+      } else if (mapping[equation.name] === undefined &&
           equation.expression.canEvaluate(mapping)) {
+        // we have a variable that hasn't yet been mapped and can be
         madeProgress = true;
         mapping[equation.name] = equation.expression.evaluate(mapping);
       }
     }
-  }
+
+  } while (madeProgress);
 
   if (!computeExpression.canEvaluate(mapping)) {
     throw new Error("Can't resolve EquationSet");
@@ -1045,7 +1050,7 @@ function getEquationFromBlock(block) {
   switch (block.type) {
     case 'functional_compute':
       if (!firstChild) {
-        return new Equation(null, null);
+        return new Equation(null, [], null);
       }
       return getEquationFromBlock(firstChild);
 
@@ -1062,7 +1067,7 @@ function getEquationFromBlock(block) {
         return getEquationFromBlock(argBlock).expression;
       });
 
-      return new Equation(null, new ExpressionNode(operation, args, block.id));
+      return new Equation(null, [], new ExpressionNode(operation, args, block.id));
 
     case 'functional_math_number':
     case 'functional_math_number_dropdown':
@@ -1070,47 +1075,39 @@ function getEquationFromBlock(block) {
       if (val === '???') {
         val = 0;
       }
-      return new Equation(null,
+      return new Equation(null, [],
         new ExpressionNode(parseInt(val, 10), [], block.id));
 
     case 'functional_call':
       name = block.getCallName();
       var def = Blockly.Procedures.getDefinition(name, Blockly.mainBlockSpace);
       if (def.isVariable()) {
-        return new Equation(null, new ExpressionNode(name));
+        return new Equation(null, [], new ExpressionNode(name));
       } else {
         var values = [];
         var input, childBlock;
         for (var i = 0; !!(input = block.getInput('ARG' + i)); i++) {
           childBlock = input.connection.targetBlock();
-          // TODO (brent) - better default?
           values.push(childBlock ? getEquationFromBlock(childBlock).expression :
             new ExpressionNode(0));
         }
-        return new Equation(null, new ExpressionNode(name, values));
+        return new Equation(null, [], new ExpressionNode(name, values));
       }
       break;
 
     case 'functional_definition':
       name = block.getTitleValue('NAME');
-      // TODO(brent) - avoid accessing private
-      if (block.parameterNames_.length) {
-        name += '(' + block.parameterNames_.join(',') +')';
-      }
+
       var expression = firstChild ? getEquationFromBlock(firstChild).expression :
         new ExpressionNode(0);
 
-      return new Equation(name, expression);
+      return new Equation(name, block.getVars(), expression);
 
     case 'functional_parameters_get':
-      return new Equation(null, new ExpressionNode(block.getTitleValue('VAR')));
+      return new Equation(null, [], new ExpressionNode(block.getTitleValue('VAR')));
 
     case 'functional_example':
-      // TODO (brent) - we dont do anything with functional_example yet, but
-      // this way we will at least persist it/not throw unknown type
-      // return new Equation('block' + block.id, null);
       return null;
-
 
     default:
       throw "Unknown block type: " + block.type;
@@ -1332,26 +1329,15 @@ ExpressionNode.prototype.clone = function () {
 };
 
 /**
- * Can we evaluate this expression given the mapping
+ * See if we can evaluate this node by trying to do so and catching exceptions.
+ * @returns Whether we can evaluate.
  */
-// TODO - unit test (test case where mapping[this.value_] = 0
 ExpressionNode.prototype.canEvaluate = function (mapping) {
-  mapping = mapping || {};
-  var type = this.getType();
-  if (type === ValueType.FUNCTION_CALL) {
+  try {
+    this.evaluate(mapping);
+  } catch (err) {
     return false;
   }
-
-  if (type === ValueType.VARIABLE) {
-    return mapping[this.value_] !== undefined;
-  }
-
-  for (var i = 0; i < this.children_.length; i++) {
-    if (!this.children_[i].canEvaluate(mapping)) {
-      return false;
-    }
-  }
-
   return true;
 };
 
@@ -1595,7 +1581,6 @@ ExpressionNode.prototype.hasSameSignature = function (other) {
 
 /**
  * Do the two nodes differ only in argument order.
- * TODO: unit test
  */
 ExpressionNode.prototype.isEquivalentTo = function (other) {
   // only ignore argument order for ARITHMETIC
@@ -1652,6 +1637,20 @@ ExpressionNode.prototype.getChildValue = function (index) {
  */
 ExpressionNode.prototype.setChildValue = function (index, value) {
   return this.children_[index].setValue(value);
+};
+
+/**
+ * Get a string representation of the tree
+ * Note: This is only used by test code, but is also generally useful to debug
+ */
+ExpressionNode.prototype.debug = function () {
+  if (this.children_.length === 0) {
+    return this.value_;
+  }
+  return "(" + this.value_ + " " +
+    this.children_.map(function (c) {
+      return c.debug();
+    }).join(' ') + ")";
 };
 
 /**
