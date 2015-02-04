@@ -244,7 +244,7 @@ NetSimRouter.prototype.getConnections = function (onComplete) {
 
     var myWires = rows.filter(function (row) {
       // TODO: Check for wire validity/timeout here?
-      return row.remoteID === routerID;
+      return row.remoteNodeID === routerID;
     });
 
     onComplete(myWires);

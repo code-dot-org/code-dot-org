@@ -183,7 +183,7 @@ var NetSimConnection = function (displayName, logger /*=new NetSimLogger(NONE)*/
    * If you *are* connected to another node, you should have one of these.
    * If you *are not* connected to another node, this should be null.
    * We are always the local end of this wire, so we assert that
-   *   this.wire_.localID === this.myNodeID
+   *   this.wire_.localNodeID === this.myNodeID
    * @type {NetSimWire}
    * @private
    */
@@ -322,7 +322,7 @@ NetSimConnection.prototype.connect_ = function () {
       // See if we have an active wire, and try to continue reconnecting
       // if possible.
       if (self.wire_) {
-        self.wire_.localID = self.myNodeID;
+        self.wire_.localNodeID = self.myNodeID;
         self.wire_.update(function () {
           self.setConnectionStatus_(ConnectionStatus.CONNECTED);
         });
@@ -602,10 +602,10 @@ NetSimConnection.prototype.disconnectFromRouter = function () {
 /**
  * Creates our local NetSimWire, connected to our client node on the
  * local end and connected to the given remote node at the remote end.
- * @param remoteID
+ * @param remoteNodeID
  * @param onComplete
  */
-NetSimConnection.prototype.createWire = function (remoteID, onComplete) {
+NetSimConnection.prototype.createWire = function (remoteNodeID, onComplete) {
   if (!onComplete) {
     onComplete = function () {};
   }
@@ -613,8 +613,8 @@ NetSimConnection.prototype.createWire = function (remoteID, onComplete) {
   var self = this;
   NetSimWire.create(this.instanceID_, function (wire) {
     if (wire !== null) {
-      wire.localID = self.myNodeID;
-      wire.remoteID = remoteID;
+      wire.localNodeID = self.myNodeID;
+      wire.remoteNodeID = remoteNodeID;
       wire.update(function (success) {
         if (success) {
           onComplete(wire);
