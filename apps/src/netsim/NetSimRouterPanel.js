@@ -34,6 +34,7 @@
 'use strict';
 
 var markup = require('./NetSimRouterPanel.html');
+var periodicAction = require('./periodicAction');
 
 /**
  * How often the lobby should be auto-refreshed.
@@ -57,11 +58,12 @@ var NetSimRouterPanel = function (connection) {
   this.connection_.statusChanges.register(this, this.onConnectionStatusChange_);
 
   /**
-   * When the lobby should be refreshed next
-   * @type {Number}
+   * Helper for triggering refresh on a regular interval
+   * @type {periodicAction}
    * @private
    */
-  this.nextAutoRefreshTime_ = Infinity;
+  this.periodicRefresh_ = periodicAction(this.refresh.bind(this),
+      AUTO_REFRESH_INTERVAL_MS);
 
   /**
    * Cached reference to router
@@ -102,12 +104,13 @@ NetSimRouterPanel.prototype.onConnectionStatusChange_ = function () {
   if (this.connection_.isConnectedToRouter()) {
     if (this.connection_.router_ !== this.router_) {
       this.router_ = this.connection_.router_;
-      this.nextAutoRefreshTime_ = 0;
+      this.periodicRefresh_.enable();
       // TODO : Attach to router change listener
     }
   } else {
     this.router_ = undefined;
-    this.nextAutoRefreshTime_ = Infinity;
+    this.refresh();
+    this.periodicRefresh_.disable();
   }
 };
 
@@ -137,18 +140,5 @@ NetSimRouterPanel.prototype.refresh = function () {
  * @param {RunLoop.Clock} clock
  */
 NetSimRouterPanel.prototype.tick = function (clock) {
-  if (clock.time >= this.nextAutoRefreshTime_) {
-    this.refresh();
-    var refreshInterval = AUTO_REFRESH_INTERVAL_MS;
-
-    // TODO (bbuchanan) : Extract "interval" method generator for this and connection.
-    if (this.nextAutoRefreshTime_ === 0) {
-      this.nextAutoRefreshTime_ = clock.time + refreshInterval;
-    } else {
-      // Stable increment
-      while (this.nextAutoRefreshTime_ < clock.time) {
-        this.nextAutoRefreshTime_ += refreshInterval;
-      }
-    }
-  }
+  this.periodicRefresh_.tick(clock);
 };
