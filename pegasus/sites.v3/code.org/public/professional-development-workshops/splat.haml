@@ -14,6 +14,8 @@ rightbar: blank
   -signup = JSON.parse(signup_row[:data])
   -signup_count += 1 unless signup['status_s'] == 'cancelled'
 
+-affiliate = Form2.from_row(DASHBOARD_DB[:users].where(id: form.user_id).first)
+
 -if first_date = data['dates'].first
   -first_date = Chronic.parse(first_date['date_s'] + ' ' + first_date['start_time_s'])
 
@@ -190,9 +192,9 @@ rightbar: blank
     .row
       .col-sm-4{style: "text-align: right;"} Workshop facilitator:
       .col-sm-8
-        = data['name_s']
+        = affiliate.name
         %br/
-        = data['email_s']
+        = affiliate.email
 
     -unless data['notes_s'].nil_or_empty?
       %p= data['notes_s']
