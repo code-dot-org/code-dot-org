@@ -62,7 +62,7 @@ describe('evaluateResults_/evaluateFunction_', function () {
     assert.deepEqual(outcome, otherOutcome);
   });
 
-  // TODO - figure out locale stuff in calc
+  // currently disabled until i figure out locale stuff in calc
   // it('fails when evaluate is different for non-compute inputs', function () {
   //   // f(x) = x + 1
   //   // f(2)
@@ -110,7 +110,6 @@ describe('evaluateResults_/evaluateFunction_', function () {
     assert.deepEqual(outcome, otherOutcome);
   });
 
-  // TODO (brent)- i think we want a more integration level test for this scenario too
   it('fails when target is simple expression and userSet hasSingleFunction', function () {
     // compute: 1 + 2
     var targetSet = new EquationSet();
@@ -129,7 +128,6 @@ describe('evaluateResults_/evaluateFunction_', function () {
     assert.equal(outcome.failedInput, null);
   });
 
-  // TODO (brent)- i think we want a more integration level test for this scenario too
   it('fails when target hasVariablesOrFunctions and user does not', function () {
     // x = 1
     // y = 2

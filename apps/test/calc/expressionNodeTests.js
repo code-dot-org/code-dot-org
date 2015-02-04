@@ -246,8 +246,9 @@ describe("ExpressionNode", function () {
       assert.equal(node.evaluate(mapping), 2);
     });
 
-    // TODO (brent) - this is broken right now, because it ends up evaluating y + x
-    // with the x value from f's context, instead of the global context
+    // pivotal # 87579850 - this is broken right now, because it ends up
+    // evaluating y + x with the x value from f's context, instead of the global
+    // context
     // it("can handle transitioning back to global var", function () {
     //   var mapping = {};
     //   // x = 1
@@ -307,7 +308,8 @@ describe("ExpressionNode", function () {
       node = new ExpressionNode('f', [1]);
       assert.equal(node.canEvaluate(mapping), false);
       assert.throws(function () {
-        // TODO (brent) - what it throws is Maximum callstack exceeded. i wonder if i
+        // pivotal # 87579626
+        // what it throws is Maximum callstack exceeded. i wonder if i
         // can/should get it to fail earlier
         // maybe when evaluating, remove self from mapping?
         node.evaluate(mapping);
@@ -370,7 +372,7 @@ describe("ExpressionNode", function () {
 
   });
 
-  it ("collapse", function () {
+  it("collapse", function () {
     var node, result;
 
     node = new ExpressionNode(2);
@@ -406,8 +408,6 @@ describe("ExpressionNode", function () {
     result = node.collapse();
     assert.equal(result, true);
     assert.equal(node.debug(), "(* 3 (- 3 1))");
-
-    // todo - test collapsing with mistakes
 
   });
 
@@ -464,7 +464,18 @@ describe("ExpressionNode", function () {
         ]);
       });
 
-      // TODO (brent) - what happens when we expect a var and get a fn?
+      it ('has a function', function () {
+        var node = new ExpressionNode('f', ['x', 'y']);
+        tokenList = node.getTokenListDiff(expected);
+        assert.deepEqual(tokenList, [
+          { str: 'f', marked: true},
+          { str: '(', marked: true},
+          { str: 'x', marked: true},
+          { str: ',', marked: true},
+          { str: 'y', marked: true},
+          { str: ')', marked: true}
+        ]);
+      });
     });
 
     describe("expect simple expression", function () {
@@ -746,9 +757,6 @@ describe("ExpressionNode", function () {
       new ExpressionNode("*", [1, 2])
     ]);
     assert.equal(node.isEquivalentTo(target), true);
-
-    // todo - more of these
-
   });
 
   describe('hasSameSignature', function () {
