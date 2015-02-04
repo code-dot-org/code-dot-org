@@ -40,65 +40,104 @@
 
 var netsimStorage = require('./netsimStorage');
 
-var NetSimWire = function () {
+/**
+ * Create a local controller for a simulated connection between nodes,
+ * which is stored in the _wire table on the instance.  The controller can
+ * be initialized with the JSON row from the table, effectively wrapping that
+ * data in helpful methods.
+ *
+ * @param {!string} instanceID - The instance where this wire lives.
+ * @param {Object} [wireRow] - A row out of the _wire table on the instance.
+ *        If provided, will initialize this wire with the given data.  If not,
+ *        this wire will initialize to default values.
+ * @constructor
+ */
+var NetSimWire = function (instanceID, wireRow) {
+  if (wireRow === undefined) {
+    wireRow = {};
+  }
+
   /**
    * Instance this wire lives within, used to generate tablenames
    * @type {string}
    * @private
    */
-  this.instanceID_ = undefined;
+  this.instanceID_ = instanceID;
 
   /**
    * This wire's row ID within the _wire table
    * @type {number}
    */
-  this.wireID = undefined;
+  this.wireID = wireRow.wireID;
 
   /**
    * Connected node row IDs within the _lobby table
    * @type {number}
    */
-  this.localNodeID = undefined;
-  this.remoteNodeID = undefined;
+  this.localNodeID = wireRow.localNodeID;
+  this.remoteNodeID = wireRow.remoteNodeID;
 
   /**
    * Assigned local addresses for the ends of this wire.
    * When connected to a router, remoteAddress is always 1.
    * @type {number}
    */
-  this.localAddress = undefined;
-  this.remoteAddress = undefined;
+  this.localAddress = wireRow.localAddress;
+  this.remoteAddress = wireRow.remoteAddress;
 
   /**
    * Display hostnames for the ends of this wire.
    * Generally, each endpoint should set its own hostname.
    * @type {string}
    */
-  this.localHostname = undefined;
-  this.remoteHostname = undefined;
+  this.localHostname = wireRow.localHostname;
+  this.remoteHostname = wireRow.remoteHostname;
 
   /**
    * Not used yet.
    * @type {string}
    */
-  this.wireMode = 'duplex'; // Or simplex?
+  this.wireMode = wireRow.wireMode !== undefined ?
+      wireRow.wireMode : 'duplex'; // Or simplex?
 };
 module.exports = NetSimWire;
 
 /**
- * Static creation method.  Creates a new wire on the given instance, and
+ * Static async creation method.  Creates a new wire on the given instance, and
  * then calls the callback with a local controller for the new wire.
- * @param instanceID
- * @param completionCallback
+ * @param {!string} instanceID - Unique identifier of instance where the _wire
+ *        table lives.
+ * @param {!function} completionCallback - Method that will be given the
+ *        created wire, or null if wire creation failed.
  */
 NetSimWire.create = function (instanceID, completionCallback) {
-  var wire = new NetSimWire();
-
-  wire.instanceID_ = instanceID;
+  var wire = new NetSimWire(instanceID);
   wire.getTable().insert(wire.buildRow_(), function (data) {
     if (data) {
       wire.wireID = data.id;
       completionCallback(wire);
+    } else {
+      completionCallback(null);
+    }
+  });
+};
+
+/**
+ * Static async construction method.  Gets the wire with the given wireID from
+ * the given instance, then calls the callback with a local controller for the
+ * found wire.
+ * @param {!string} instanceID - Unique identifier of instance where the _wire
+ *        table lives.
+ * @param {!number} wireID - Row identifier of the requested wire in the _wire
+ *        table.
+ * @param {!function} completionCallback - Method that will be given the
+ *        retrieved wire, or null if the wire request failed.
+ */
+NetSimWire.get = function (instanceID, wireID, completionCallback) {
+  var wire = new NetSimWire(instanceID);
+  wire.getTable().get(wireID, function (data) {
+    if (data) {
+      completionCallback(new NetSimWire(data));
     } else {
       completionCallback(null);
     }
