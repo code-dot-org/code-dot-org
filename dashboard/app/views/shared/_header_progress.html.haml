@@ -1,7 +1,7 @@
 .header_level
-  %div.header_level_container
+  .header_level_container
     .header_text
-    .progress_container
+    .progress_container{data: {script_name: @script_level.script.name, stage_id:@script_level.stage.position, level_id:@script_level.position }}
     .header_finished_link{style: 'display: none;'}
     %span.header_trophy_link{style: 'display: none;'}
       .header_text= t(:trophies)

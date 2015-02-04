@@ -25,6 +25,7 @@ if (!window.dashboard) {
  * }}
  */
 dashboard.buildHeader = function (scriptData) {
+
   $('.header_text').first().text(scriptData.title);
   if (scriptData.finishLink) {
     $('.header_finished_link').show().append($('<a>').attr('href', scriptData.finishLink.href).text(scriptData.finishLink.text));
@@ -41,19 +42,12 @@ dashboard.buildHeader = function (scriptData) {
   if (scriptData.linesOfCodeText) {
     $('.header_popup .header_text').text(scriptData.linesOfCodeText);
   }
-  var progressContainer = $('.progress_container');
-  scriptData.levels.forEach(function(level, index, levels) {
-    var defaultClass = level.assessment ? 'puzzle_outer_assessment' : 'puzzle_outer_level';
-    var link = $('<a>').attr('href', level.link).addClass('level_link').addClass(level.status).text(level.displayText);
-    if (level.unplugged) {
-      link.addClass('unplugged_level');
-    }
-    var div = $('<div>').addClass(index === scriptData.currentLevelIndex ? 'puzzle_outer_current' : defaultClass).append(link);
-    if (index === levels.length - 1) {
-      div.addClass('last');
-    }
-    progressContainer.append(div).append('\n');
-  });
+
+
+  // TODO: Global, until we create a component cache
+  window.headerProgress = new HeaderProgress( $('.progress_container') );
+  headerProgress.replaceState( scriptData );
+
   $('.level_free_play').qtip({
     content: {
       attr: 'title'
@@ -109,3 +103,205 @@ dashboard.buildHeader = function (scriptData) {
     window.scrollTo(0, +$('#trophies').offset().top);
   }
 };
+
+
+// TODO: Enable the 'destroyed' method?
+// (function($){ $.event.special.destroyed = { remove: function(o) { if (o.handler) { o.handler() } } } })(jQuery);
+
+// New private scope -- a lot of this is boilerplate for class structures, taken from coffeescript
+(function() {
+  var
+    __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
+    __hasProp = {}.hasOwnProperty,
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+    __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
+
+  // class UIComponent: this is a lightweight inheritable class modeled after React
+  UIComponent = (function() {
+
+    function UIComponent($el) {
+      this.onClick = __bind(this.onClick, this);
+      this.onUpdate = __bind(this.onUpdate, this);
+      this.onDestroy = __bind(this.onDestroy, this);
+
+      // Set the initial state
+      this.state = this.getInitialState() || {};
+
+      this.componentWillMount();
+
+      this.$el = $el;
+      this.$el.on('click', this.onClick);
+      this.$el.on('destroyed', this.onDestroy);
+
+      this.componentDidMount();
+    }
+
+    // Destroy a UI component
+    UIComponent.prototype.onDestroy = function() {
+      if (!this.isMounted())
+        return;
+
+      this.componentWillUnmount();
+
+      // Remove any event handlers
+      var $el = this.$el;
+      this.$el = null;
+      $el.off('click', this.onClick);
+      $el.on('destroyed', this.onDestroy);
+
+      this.componentDidUnmount();
+    }
+
+    // Return a default state for this component
+    UIComponent.prototype.getInitialState = function() { }
+
+    // Extend/merge my state and possibly re-render
+    UIComponent.prototype.setState = function(state) {
+      if (!this.isUpdating) {
+        // Allow things to settle - no need to call more than once per execution
+        this.isUpdating = setTimeout( this.onUpdate, 1 );
+      }
+
+      // TODO: This should be a merge!
+      this.state = state;
+    }
+
+    // Replace my state and possibly re-render
+    UIComponent.prototype.replaceState = function(state) {
+      if (!this.isUpdating) {
+        // Allow things to settle - no need to call more than once per execution
+        this.isUpdating = setTimeout( this.onUpdate, 1 );
+      }
+
+      this.state = state;
+    }
+
+    // My state has been changed
+    UIComponent.prototype.onUpdate = function(ev) {
+      // Don't do anything if no longer mounted
+      if (this.isMounted()) {
+        // For now, always re-render completely
+        this.$el.html('');
+        this.render();
+      }
+
+      // I'm no longer updating
+      delete this.isUpdating;
+    }
+
+    // Render into this element, given some state
+    // There is no default rendering
+    UIComponent.prototype.render = function() { }
+
+    // Handle a click
+    // There is no default click behavior
+    UIComponent.prototype.onClick = function(ev) { }
+
+    // Mount/unmount notifications
+    UIComponent.prototype.componentWillMount = function() { }
+    UIComponent.prototype.componentDidMount = function() { }
+    UIComponent.prototype.componentWillUnmount = function() { }
+    UIComponent.prototype.componentDidUnmount = function() { }
+    UIComponent.prototype.isMounted = function() {
+      return this.$el !== null;
+    }
+
+    return UIComponent;
+  })();
+
+  /*
+  .header_middle
+    .header_level
+      .header_level_container
+        .header_text
+        .progress_container{data: {script_name: @script_level.script.name, stage_id:@script_level.stage.position, level_id:@script_level.position }}
+        .header_finished_link{style: 'display: none;'}
+        %span.header_trophy_link{style: 'display: none;'}
+          .header_text= t(:trophies)
+          .header_status_bar.current_trophies
+          .header_text.max_trophies
+        %span.header_popup_link{style: 'display: none;'}
+          .header_popup_link_glyph
+            &#x25BC;
+          .header_popup_link_text= t(:more)
+    .header_popup
+      .header_popup_header
+        %span= t('nav.popup.progress')
+        .header_text{style: 'float: right;'}
+      .header_popup_body
+        .loading
+      .header_popup_footer
+        .header_popup_close
+          = t('nav.popup.close')
+  */
+
+  // class HeaderProgress extends UIComponent
+  HeaderProgress = (function(_super) {
+    __extends(HeaderProgress, _super);
+
+    // Must have a constructor
+    function HeaderProgress() {
+      return HeaderProgress.__super__.constructor.apply(this, arguments);
+    }
+
+    HeaderProgress.prototype.componentDidMount = function() {
+      // TODO: enable the fetchProgress call here when we've removed the pushed state
+      // this.fetchProgress();
+    }
+
+    // Fetch the user's progress via an AJAX call
+    // TODO: This should move to a store.
+    HeaderProgress.prototype.fetchProgress = function() {
+      var url = this.$el.data('url') || '/popup/progress';
+      var _this = this;
+
+      $.getJSON(url, {
+        script_id: this.$el.data('script-name'),
+        stage_id: this.$el.data('stage-id'),
+        level_id: this.$el.data('level-id')
+      })
+      .done(function(data) {
+        _this.replaceState(data);
+      })
+      .fail(function(xhr) {
+        // TODO: error case?
+      });
+    }
+
+    HeaderProgress.prototype.render = function() {
+      var cl;
+      var levels = (this.state ? this.state.levels : null) || [];
+      var _this = this;
+
+      levels.forEach(function(level, index, levels) {
+        cl = 'level_link ' + level.status;
+        if (level.unplugged) {
+          cl += ' unplugged_level';
+        }
+        var link = $('<a>').attr('href', level.link).addClass(cl).text(level.displayText);
+
+        cl = level.assessment ? 'puzzle_outer_assessment' : 'puzzle_outer_level';
+        if (index === _this.state.currentLevelIndex)
+          cl += ' puzzle_outer_current';
+
+        var div = $('<div>').addClass(cl).append(link);
+        if (index === levels.length - 1) {
+          div.addClass('last');
+        }
+        _this.$el.append(div).append('\n');
+      });
+    }
+
+    HeaderProgress.prototype.onClick = function(ev) {
+      // TODO: Default behaviors
+      alert('header click');
+    }
+
+    return HeaderProgress;
+  })(UIComponent);
+
+
+  // For now, create a global.  Later, this should be in module.exports
+  window.HeaderProgress = HeaderProgress;
+
+}).call(this);

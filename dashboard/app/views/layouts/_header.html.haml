@@ -20,11 +20,13 @@
           .header_logo
             = link_to(image_tag('codeorg-studio-logo.png'), '/')
 
-          .header_middle
-            - if @script_level
+          - if @script_level
+            .header_middle{data: {script_name: @script_level.script.name, stage_id:@script_level.stage.position, level_id:@script_level.position}}
               = render partial: 'shared/header_progress'
-            - elsif @edit_blocks
+          - elsif @edit_blocks
+            .header_middle
               .header_level{style:'font-size: 250%; line-height: 125%;'} Editing #{@edit_blocks.humanize}
+
           .header_right
             %span.freeplay_links{style: 'display: none;'}
               %a.header_status_bar.level_free_play{title: t('nav.header.free_play.playlab'), href: playlab_freeplay_path}
