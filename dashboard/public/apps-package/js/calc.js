@@ -30,8 +30,6 @@ window.calcMain = function(options) {
 
 'use strict';
 
-// TODO (brent) - check somewhere that we have only 1 top block
-
 var Calc = module.exports;
 
 /**
@@ -65,6 +63,8 @@ studioApp.setCheckForEmptyBlocks(false);
 
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
+
+var LINE_HEIGHT = 20;
 
 var appState = {
   targetSet: null,
@@ -170,7 +170,7 @@ Calc.init = function(config) {
 
     appState.targetSet = generateEquationSetFromBlockXml(solutionBlocks);
 
-    displayGoal();
+    displayGoal(appState.targetSet);
 
     // Adjust visualizationColumn width.
     var visualizationColumn = document.getElementById('visualizationColumn');
@@ -193,31 +193,34 @@ Calc.init = function(config) {
  *     variables, but no functions. Display compute expression and variables
  * (4) We have a target compute expression, and either multiple functions or
  *     one function and variable(s). Currently not supported.
- *     // TODO - make sure we throw for this
+ * @param {EquationSet} targetSet The target equation set.
  */
-function displayGoal() {
-  var computeEquation = appState.targetSet.computeEquation();
+function displayGoal(targetSet) {
+  var computeEquation = targetSet.computeEquation();
   if (!computeEquation || !computeEquation.expression) {
     return;
   }
 
   // If we have a single function, just show the evaluation
-  // (i.e. compute expression). Otherwise should all equations.
+  // (i.e. compute expression). Otherwise show all equations.
   var tokenList;
   var nextRow = 0;
-  if (!appState.targetSet.hasSingleFunction()) {
-    var sortedEquations = appState.targetSet.sortedEquations();
+  var hasSingleFunction = targetSet.hasSingleFunction();
+  if (!hasSingleFunction) {
+    var sortedEquations = targetSet.sortedEquations();
     sortedEquations.forEach(function (equation) {
       tokenList = equation.expression.getTokenList(false);
-      displayEquation('answerExpression', equation.name, tokenList, nextRow++);
+      displayEquation('answerExpression', equation.signature, tokenList, nextRow++);
     });
   }
 
   tokenList = computeEquation.expression.getTokenList(false);
-  var result = appState.targetSet.evaluate();
+  var result = targetSet.evaluate();
 
-  tokenList = tokenList.concat(getTokenList(' = ' + result.toString()));
-  displayEquation('answerExpression', computeEquation.name, tokenList, nextRow);
+  if (hasSingleFunction) {
+    tokenList = tokenList.concat(getTokenList(' = ' + result.toString()));
+  }
+  displayEquation('answerExpression', computeEquation.signature, tokenList, nextRow);
 }
 
 /**
@@ -306,12 +309,11 @@ Calc.evaluateFunction_ = function (targetSet, userSet) {
   // Now we want to use all combinations of inputs in the range [-100...100],
   // noting which set of inputs failed (if any)
   var possibleValues = _.range(1, 101).concat(_.range(-0, -101, -1));
-  var numParams = expression.children.length;
+  var numParams = expression.numChildren();
   var iterator = new InputIterator(possibleValues, numParams);
 
   var setChildToValue = function (val, index) {
-    // TODO - feels a little hacky directly modifying children
-    expression.children[index].value = val;
+    expression.setChildValue(index, val);
   };
 
   while (iterator.remaining() > 0 && !outcome.failedInput) {
@@ -320,7 +322,7 @@ Calc.evaluateFunction_ = function (targetSet, userSet) {
 
     if (targetSet.evaluateWithExpression(expression) !==
         userSet.evaluateWithExpression(expression)) {
-      outcome.failedInput = values.slice();
+      outcome.failedInput = _.clone(values);
     }
   }
 
@@ -410,7 +412,7 @@ Calc.execute = function() {
     app: 'calc',
     level: level.id,
     builder: level.builder,
-    result: appState.result,
+    result: appState.result === ResultType.SUCCESS,
     testResult: appState.testResults,
     program: encodeURIComponent(textBlocks),
     onComplete: onReportComplete
@@ -456,7 +458,7 @@ function displayComplexUserExpressions () {
 
     tokenList = getTokenList(userEquation, expectedEquation);
 
-    displayEquation('userExpression', userEquation.name, tokenList, nextRow++,
+    displayEquation('userExpression', userEquation.signature, tokenList, nextRow++,
       'errorToken');
   });
 
@@ -484,9 +486,8 @@ function displayComplexUserExpressions () {
 
   if (appState.failedInput) {
     var expression = computeEquation.expression.clone();
-    for (var c = 0; c < expression.children.length; c++) {
-      // TODO - feels a little hacky directly modifying children
-      expression.children[c].value = appState.failedInput[c];
+    for (var c = 0; c < expression.numChildren(); c++) {
+      expression.setChildValue(c, appState.failedInput[c]);
     }
     result = appState.userSet.evaluateWithExpression(expression).toString();
 
@@ -596,9 +597,6 @@ function displayEquation(parentId, name, tokenList, line, markClass) {
   parent.appendChild(g);
   var xPos = 0;
   var len;
-  // TODO (brent) in the case of functions, really we'd like the name to also be
-  // a tokenDiff - i.e. if target is foo(x,y) and user expression is foo(y, x)
-  // we'd like to highlight the differences
   if (name) {
     len = addText(g, (name + ' = '), xPos, null);
     xPos += len;
@@ -609,9 +607,8 @@ function displayEquation(parentId, name, tokenList, line, markClass) {
     xPos += len;
   }
 
-  // TODO (brent): handle case where expression is longer than width
   var xPadding = (CANVAS_WIDTH - g.getBoundingClientRect().width) / 2;
-  var yPos = (line * 20); // TODO - this shouldnt be hardcoded
+  var yPos = (line * LINE_HEIGHT);
   g.setAttribute('transform', 'translate(' + xPadding + ', ' + yPos + ')');
 }
 
@@ -658,7 +655,7 @@ function cloneNodeWithoutIds(elementId) {
  * App specific displayFeedback function that calls into
  * studioApp.displayFeedback when appropriate
  */
-var displayFeedback = function() {
+function displayFeedback() {
   if (!appState.response || appState.animating) {
     return;
   }
@@ -684,7 +681,7 @@ var displayFeedback = function() {
   }
 
   studioApp.displayFeedback(options);
-};
+}
 
 /**
  * Function to be called when the service report call is complete
@@ -697,6 +694,13 @@ function onReportComplete(response) {
   appState.response = response;
   displayFeedback();
 }
+
+/* start-test-block */
+// export private function(s) to expose to unit testing
+Calc.__testonly__ = {
+  displayGoal: displayGoal
+};
+/* end-test-block */
 
 },{"../../locale/current/calc":169,"../../locale/current/common":170,"../StudioApp":2,"../block_utils":16,"../dom":43,"../skins":125,"../templates/page.html":145,"../timeoutList":151,"../utils":165,"./api":27,"./controls.html":30,"./equationSet":31,"./expressionNode":32,"./inputIterator":33,"./levels":34,"./visualization.html":36}],36:[function(require,module,exports){
 module.exports= (function() {
@@ -765,7 +769,10 @@ module.exports = {
 var InputIterator = function (values, numParams) {
   this.numParams_ = numParams;
   this.remaining_ = Math.pow(values.length, numParams);
-  this.values_ = values;
+  this.availableValues_ = values;
+  // represents the index into values for each param for the current permutation
+  // set our first index to -1 so that it will get incremented to 0 on the first
+  // pass
   this.indices_ = [-1];
   for (var i = 1; i < numParams; i++) {
     this.indices_[i] = 0;
@@ -774,7 +781,9 @@ var InputIterator = function (values, numParams) {
 module.exports = InputIterator;
 
 /**
- * Get the next value, throwing if none remaing
+ * Get the next set of values, throwing if none remaing
+ * @returns {number[]} List of length numParams representing the next set of
+ *   inputs.
  */
 InputIterator.prototype.next = function () {
   if (this.remaining_ === 0) {
@@ -786,7 +795,7 @@ InputIterator.prototype.next = function () {
   do {
     wrapped = false;
     this.indices_[paramNum]++;
-    if (this.indices_[paramNum] === this.values_.length) {
+    if (this.indices_[paramNum] === this.availableValues_.length) {
       this.indices_[paramNum] = 0;
       paramNum++;
       wrapped = true;
@@ -795,12 +804,12 @@ InputIterator.prototype.next = function () {
   this.remaining_--;
 
   return this.indices_.map(function (index) {
-    return this.values_[index];
+    return this.availableValues_[index];
   }, this);
 };
 
 /**
- * @returns How many values are left
+ * @returns How many permutations are left
  */
 InputIterator.prototype.remaining = function () {
   return this.remaining_;
@@ -815,23 +824,28 @@ var ExpressionNode = require('./expressionNode');
  *   f(x) = x + 1
  *   name: f
  *   equation: x + 1
+ *   params: ['x']
  * In many cases, this will just be an expression with no name.
+ * @param {string} name Function or variable name. Null if compute expression
+ * @param {string[]} params List of parameter names if a function.
+ * @param {ExpressionNode} expression
  */
-var Equation = function (name, expression, variables) {
+var Equation = function (name, params, expression) {
   this.name = name;
+  this.params = params || [];
   this.expression = expression;
+
+  this.signature = this.name;
+  if (this.params.length > 0) {
+    this.signature += '(' + this.params.join(',') + ')';
+  }
 };
 
 /**
- * Equations come in three varieties:
- *  (1) Compute expression - name is null
- *  (2) Function - name is "fn(var1, var2, ...)"
- *  (3) Variable declaration - name is "x"
- * This method returns true if the name indicates it is a function.
+ * @returns True if a function
  */
 Equation.prototype.isFunction = function () {
-  // does the name end with parens enclosing variables
-  return /\(.*\)$/.test(this.name);
+  return this.params.length > 0;
 };
 
 /**
@@ -905,23 +919,16 @@ EquationSet.prototype.hasVariablesOrFunctions = function () {
 };
 
 /**
- * If the EquationSet has exactly one function and no variables, returns that
- * equation. If we have multiple functions or one function and some variables,
- * it returns null
- */
-EquationSet.prototype.singleFunction_ = function () {
-  if (this.equations_.length === 1 && this.equations_[0].isFunction()) {
-    return this.equations_[0];
-  }
-
-  return null;
-};
-
-/**
- * External callers only care about whether or not we have a single function
+ * @returns {boolean} True if the EquationSet has exactly one function and no
+ * variables. If we have multiple functions or one function and some variables,
+ * returns false.
  */
  EquationSet.prototype.hasSingleFunction = function () {
-   return this.singleFunction_() !== null;
+   if (this.equations_.length === 1 && this.equations_[0].isFunction()) {
+     return true;
+   }
+
+   return false;
  };
 
 /**
@@ -952,17 +959,15 @@ EquationSet.prototype.isIdenticalTo = function (otherSet) {
 };
 
 /**
- * Returns a list of equations (vars/functions) sorted by name.
+ * Returns a list of the non-compute equations (vars/functions) sorted by name.
  */
 EquationSet.prototype.sortedEquations = function () {
-  // TODO - this has side effects, do i care?
-  // sort by name. note - this sorts in place
+  // note: this has side effects, as it reorders equations. we could also
+  // ensure this was done only once if we had performance concerns
   this.equations_.sort(function (a, b) {
     return a.name.localeCompare(b.name);
   });
 
-  // append compute expression with name null
-  // return this.equations_.concat(this.compute_);
   return this.equations_;
 };
 
@@ -975,51 +980,56 @@ EquationSet.prototype.evaluate = function () {
 
 /**
  * Evaluate the given compute expression in the context of the EquationSet's
- * equations
+ * equations. For example, our equation set might define f(x) = x + 1, and this
+ * allows us to evaluate the expression f(1) or f(2)...
+ * @param {ExpressionNode} computeExpression The expression to evaluate
  */
 EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
-  // (1) no variables/functions. this is easy
+  // no variables/functions. this is easy
   if (this.equations_.length === 0) {
     return computeExpression.evaluate();
   }
 
+  // Iterate through our equations to generate our mapping. We may need to do
+  // this a few times. Stop trying as soon as we do a full iteration without
+  // adding anything new to our mapping.
   var mapping = {};
-  // (2) single function, no variables
-  // Map our parameter names to their input values.
-  var singleFunction = this.singleFunction_();
-  if (singleFunction !== null) {
-    // TODO (brent) - might be better if we didn't depend on the equation
-    // name being in a particular format
-    var variables = /\((.*)\)$/.exec(singleFunction.name)[1].split(',');
-    var caller = computeExpression;
-    if (caller.getType() !== ExpressionNode.ValueType.FUNCTION_CALL) {
-      throw new Error('expect function call');
-    }
-
-    if (caller.children.length !== variables.length) {
-      throw new Error('Unexpected: calling function with wrong number of inputs');
-    }
-
-    variables.forEach(function (item, index) {
-      // TODO (brent)- value feels like it should be a private maybe?
-      mapping[item] = caller.children[index].value;
-    });
-    return singleFunction.expression.evaluate(mapping);
-  }
-
-  // (3) no functions and one or more variables
-  var madeProgress = true;
-  while (madeProgress) {
+  var madeProgress;
+  var testMapping;
+  var setTestMappingToOne = function (item) {
+    testMapping[item] = 1;
+  };
+  do {
     madeProgress = false;
     for (var i = 0; i < this.equations_.length; i++) {
       var equation = this.equations_[i];
-      if (mapping[equation.name] === undefined &&
+      if (equation.isFunction()) {
+        if (mapping[equation.name]) {
+          continue;
+        }
+        // see if we can map if we replace our params
+        // note that params override existing vars in our testMapping
+        testMapping = _.clone(mapping);
+        equation.params.forEach(setTestMappingToOne);
+        if (!equation.expression.canEvaluate(testMapping)) {
+          continue;
+        }
+
+        // we have a valid mapping
+        madeProgress = true;
+        mapping[equation.name] = {
+          variables: equation.params,
+          expression: equation.expression
+        };
+      } else if (mapping[equation.name] === undefined &&
           equation.expression.canEvaluate(mapping)) {
+        // we have a variable that hasn't yet been mapped and can be
         madeProgress = true;
         mapping[equation.name] = equation.expression.evaluate(mapping);
       }
     }
-  }
+
+  } while (madeProgress);
 
   if (!computeExpression.canEvaluate(mapping)) {
     throw new Error("Can't resolve EquationSet");
@@ -1031,7 +1041,6 @@ EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
 /**
  * Given a Blockly block, generates an Equation.
  */
-// TODO (brent) - needs unit tests
 function getEquationFromBlock(block) {
   var name;
   if (!block) {
@@ -1041,7 +1050,7 @@ function getEquationFromBlock(block) {
   switch (block.type) {
     case 'functional_compute':
       if (!firstChild) {
-        return new Equation(null, null);
+        return new Equation(null, [], null);
       }
       return getEquationFromBlock(firstChild);
 
@@ -1058,7 +1067,7 @@ function getEquationFromBlock(block) {
         return getEquationFromBlock(argBlock).expression;
       });
 
-      return new Equation(null, new ExpressionNode(operation, args, block.id));
+      return new Equation(null, [], new ExpressionNode(operation, args, block.id));
 
     case 'functional_math_number':
     case 'functional_math_number_dropdown':
@@ -1066,47 +1075,39 @@ function getEquationFromBlock(block) {
       if (val === '???') {
         val = 0;
       }
-      return new Equation(null,
+      return new Equation(null, [],
         new ExpressionNode(parseInt(val, 10), [], block.id));
 
     case 'functional_call':
       name = block.getCallName();
       var def = Blockly.Procedures.getDefinition(name, Blockly.mainBlockSpace);
       if (def.isVariable()) {
-        return new Equation(null, new ExpressionNode(name));
+        return new Equation(null, [], new ExpressionNode(name));
       } else {
         var values = [];
         var input, childBlock;
         for (var i = 0; !!(input = block.getInput('ARG' + i)); i++) {
           childBlock = input.connection.targetBlock();
-          // TODO (brent) - better default?
           values.push(childBlock ? getEquationFromBlock(childBlock).expression :
             new ExpressionNode(0));
         }
-        return new Equation(null, new ExpressionNode(name, values));
+        return new Equation(null, [], new ExpressionNode(name, values));
       }
       break;
 
     case 'functional_definition':
       name = block.getTitleValue('NAME');
-      // TODO(brent) - avoid accessing private
-      if (block.parameterNames_.length) {
-        name += '(' + block.parameterNames_.join(',') +')';
-      }
+
       var expression = firstChild ? getEquationFromBlock(firstChild).expression :
         new ExpressionNode(0);
 
-      return new Equation(name, expression);
+      return new Equation(name, block.getVars(), expression);
 
     case 'functional_parameters_get':
-      return new Equation(null, new ExpressionNode(block.getTitleValue('VAR')));
+      return new Equation(null, [], new ExpressionNode(block.getTitleValue('VAR')));
 
     case 'functional_example':
-      // TODO (brent) - we dont do anything with functional_example yet, but
-      // this way we will at least persist it/not throw unknown type
-      // return new Equation('block' + block.id, null);
       return null;
-
 
     default:
       throw "Unknown block type: " + block.type;
@@ -1268,8 +1269,8 @@ var ValueType = {
 };
 
 var ExpressionNode = function (val, args, blockId) {
-  this.value = val;
-  this.blockId = blockId;
+  this.value_ = val;
+  this.blockId_ = blockId;
   if (args === undefined) {
     args = [];
   }
@@ -1278,7 +1279,7 @@ var ExpressionNode = function (val, args, blockId) {
     throw new Error("Expected array");
   }
 
-  this.children = args.map(function (item) {
+  this.children_ = args.map(function (item) {
     if (!(item instanceof ExpressionNode)) {
       item = new ExpressionNode(item);
     }
@@ -1301,18 +1302,18 @@ ExpressionNode.ValueType = ValueType;
  * What type of expression node is this?
  */
 ExpressionNode.prototype.getType = function () {
-  if (["+", "-", "*", "/"].indexOf(this.value) !== -1) {
+  if (["+", "-", "*", "/"].indexOf(this.value_) !== -1) {
     return ValueType.ARITHMETIC;
   }
 
-  if (typeof(this.value) === 'string') {
-    if (this.children.length === 0) {
+  if (typeof(this.value_) === 'string') {
+    if (this.children_.length === 0) {
       return ValueType.VARIABLE;
     }
     return ValueType.FUNCTION_CALL;
   }
 
-  if (typeof(this.value) === 'number') {
+  if (typeof(this.value_) === 'number') {
     return ValueType.NUMBER;
   }
 };
@@ -1321,33 +1322,22 @@ ExpressionNode.prototype.getType = function () {
  * Create a deep clone of this node
  */
 ExpressionNode.prototype.clone = function () {
-  var children = this.children.map(function (item) {
+  var children = this.children_.map(function (item) {
     return item.clone();
   });
-  return new ExpressionNode(this.value, children, this.blockId);
+  return new ExpressionNode(this.value_, children, this.blockId_);
 };
 
 /**
- * Can we evaluate this expression given the mapping
+ * See if we can evaluate this node by trying to do so and catching exceptions.
+ * @returns Whether we can evaluate.
  */
-// TODO - unit test (test case where mapping[this.value] = 0
 ExpressionNode.prototype.canEvaluate = function (mapping) {
-  mapping = mapping || {};
-  var type = this.getType();
-  if (type === ValueType.FUNCTION_CALL) {
+  try {
+    this.evaluate(mapping);
+  } catch (err) {
     return false;
   }
-
-  if (type === ValueType.VARIABLE) {
-    return mapping[this.value] !== undefined;
-  }
-
-  for (var i = 0; i < this.children.length; i++) {
-    if (!this.children[i].canEvaluate(mapping)) {
-      return false;
-    }
-  }
-
   return true;
 };
 
@@ -1358,19 +1348,19 @@ ExpressionNode.prototype.evaluate = function (mapping) {
   mapping = mapping || {};
   var type = this.getType();
 
-  if (type === ValueType.VARIABLE && mapping[this.value] !== undefined) {
+  if (type === ValueType.VARIABLE && mapping[this.value_] !== undefined) {
     var clone = this.clone();
-    clone.value = mapping[this.value];
+    clone.setValue(mapping[this.value_]);
     return clone.evaluate(mapping);
   }
 
-  if (type === ValueType.FUNCTION_CALL && mapping[this.value] !== undefined) {
-    var functionDef = mapping[this.value];
+  if (type === ValueType.FUNCTION_CALL && mapping[this.value_] !== undefined) {
+    var functionDef = mapping[this.value_];
     if (!functionDef.variables || !functionDef.expression) {
-      throw new Error('Bad mapping for: ' + this.value);
+      throw new Error('Bad mapping for: ' + this.value_);
     }
-    if (functionDef.variables.length !== this.children.length) {
-      throw new Error('Bad mapping for: ' + this.value);
+    if (functionDef.variables.length !== this.children_.length) {
+      throw new Error('Bad mapping for: ' + this.value_);
     }
     // Generate a new mapping so that if we have collisions between global
     // variables and function variables, the function vars take precedence
@@ -1379,7 +1369,7 @@ ExpressionNode.prototype.evaluate = function (mapping) {
       newMapping[key] = mapping[key];
     });
     functionDef.variables.forEach(function (variable, index) {
-      newMapping[variable] = this.children[index].value;
+      newMapping[variable] = this.getChildValue(index);
     }, this);
     return functionDef.expression.evaluate(newMapping);
   }
@@ -1388,17 +1378,17 @@ ExpressionNode.prototype.evaluate = function (mapping) {
     throw new Error('Must resolve variables/functions before evaluation');
   }
   if (type === ValueType.NUMBER) {
-    return this.value;
+    return this.value_;
   }
 
   if (type !== ValueType.ARITHMETIC) {
     throw new Error('Unexpected error');
   }
 
-  var left = this.children[0].evaluate(mapping);
-  var right = this.children[1].evaluate(mapping);
+  var left = this.children_[0].evaluate(mapping);
+  var right = this.children_[1].evaluate(mapping);
 
-  switch (this.value) {
+  switch (this.value_) {
     case '+':
       return left + right;
     case '-':
@@ -1408,7 +1398,7 @@ ExpressionNode.prototype.evaluate = function (mapping) {
     case '/':
       return left / right;
     default:
-      throw new Error('Unknown operator: ' + this.value);
+      throw new Error('Unknown operator: ' + this.value_);
     }
 };
 
@@ -1417,8 +1407,8 @@ ExpressionNode.prototype.evaluate = function (mapping) {
  */
 ExpressionNode.prototype.depth = function () {
   var max = 0;
-  for (var i = 0; i < this.children.length; i++) {
-    max = Math.max(max, 1 + this.children[i].depth());
+  for (var i = 0; i < this.children_.length; i++) {
+    max = Math.max(max, 1 + this.children_[i].depth());
   }
 
   return max;
@@ -1429,17 +1419,17 @@ ExpressionNode.prototype.depth = function () {
  * next node to collapse
  */
 ExpressionNode.prototype.getDeepestOperation = function () {
-  if (this.children.length === 0) {
+  if (this.children_.length === 0) {
     return null;
   }
 
   var deepestChild = null;
   var deepestDepth = 0;
-  for (var i = 0; i < this.children.length; i++) {
-    var depth = this.children[i].depth();
+  for (var i = 0; i < this.children_.length; i++) {
+    var depth = this.children_[i].depth();
     if (depth > deepestDepth) {
       deepestDepth = depth;
-      deepestChild = this.children[i];
+      deepestChild = this.children_[i];
     }
   }
 
@@ -1462,8 +1452,8 @@ ExpressionNode.prototype.collapse = function () {
 
   // We're the depest operation, implying both sides are numbers
   if (this === deepest) {
-    this.value = this.evaluate();
-    this.children = [];
+    this.value_ = this.evaluate();
+    this.children_ = [];
     return true;
   } else {
     return deepest.collapse();
@@ -1477,23 +1467,23 @@ ExpressionNode.prototype.collapse = function () {
  */
 ExpressionNode.prototype.getTokenListDiff = function (other) {
   var tokens;
-  var nodesMatch = other && (this.value === other.value) &&
-    (this.children.length === other.children.length);
+  var nodesMatch = other && (this.value_ === other.value_) &&
+    (this.children_.length === other.children_.length);
   var type = this.getType();
 
   // Empty function calls look slightly different, i.e. foo() instead of foo
-  if (this.children.length === 0) {
-    return [new Token(this.value.toString(), !nodesMatch)];
+  if (this.children_.length === 0) {
+    return [new Token(this.value_.toString(), !nodesMatch)];
   }
 
   if (type === ValueType.ARITHMETIC) {
     // Deal with arithmetic, which is always in the form (child0 operator child1)
     tokens = [new Token('(', !nodesMatch)];
-    if (this.children.length > 0) {
+    if (this.children_.length > 0) {
       tokens.push([
-        this.children[0].getTokenListDiff(nodesMatch && other.children[0]),
-        new Token(" " + this.value + " ", !nodesMatch),
-        this.children[1].getTokenListDiff(nodesMatch && other.children[1])
+        this.children_[0].getTokenListDiff(nodesMatch && other.children_[0]),
+        new Token(" " + this.value_ + " ", !nodesMatch),
+        this.children_[1].getTokenListDiff(nodesMatch && other.children_[1])
       ]);
     }
     tokens.push(new Token(')', !nodesMatch));
@@ -1501,15 +1491,15 @@ ExpressionNode.prototype.getTokenListDiff = function (other) {
   } else if (type === ValueType.FUNCTION_CALL) {
     // Deal with a function call which will generate something like: foo(1, 2, 3)
     tokens = [
-      new Token(this.value, this.value !== other.value),
+      new Token(this.value_, this.value_ !== other.value_),
       new Token('(', !nodesMatch)
     ];
 
-    for (var i = 0; i < this.children.length; i++) {
+    for (var i = 0; i < this.children_.length; i++) {
       if (i > 0) {
         tokens.push(new Token(',', !nodesMatch));
       }
-      tokens.push(this.children[i].getTokenListDiff(nodesMatch && other.children[i]));
+      tokens.push(this.children_[i].getTokenListDiff(nodesMatch && other.children_[i]));
     }
 
     tokens.push(new Token(")", !nodesMatch));
@@ -1536,13 +1526,13 @@ ExpressionNode.prototype.getTokenList = function (markDeepest) {
     throw new Error("Unsupported");
   }
 
-  var rightDeeper = this.children[1].depth() > this.children[0].depth();
+  var rightDeeper = this.children_[1].depth() > this.children_[0].depth();
 
   return _.flatten([
     new Token('(', false),
-    this.children[0].getTokenList(markDeepest && !rightDeeper),
-    new Token(" " + this.value + " ", false),
-    this.children[1].getTokenList(markDeepest && rightDeeper),
+    this.children_[0].getTokenList(markDeepest && !rightDeeper),
+    new Token(" " + this.value_ + " ", false),
+    this.children_[1].getTokenList(markDeepest && rightDeeper),
     new Token(')', false)
   ]);
 };
@@ -1551,13 +1541,13 @@ ExpressionNode.prototype.getTokenList = function (markDeepest) {
  * Is other exactly the same as this ExpressionNode tree.
  */
 ExpressionNode.prototype.isIdenticalTo = function (other) {
-  if (!other || this.value !== other.value ||
-      this.children.length !== other.children.length) {
+  if (!other || this.value_ !== other.value_ ||
+      this.children_.length !== other.children_.length) {
     return false;
   }
 
-  for (var i = 0; i < this.children.length; i++) {
-    if (!this.children[i].isIdenticalTo(other.children[i])) {
+  for (var i = 0; i < this.children_.length; i++) {
+    if (!this.children_[i].isIdenticalTo(other.children_[i])) {
       return false;
     }
   }
@@ -1578,11 +1568,11 @@ ExpressionNode.prototype.hasSameSignature = function (other) {
     return false;
   }
 
-  if (this.value !== other.value) {
+  if (this.value_ !== other.value_) {
     return false;
   }
 
-  if (this.children.length !== other.children.length) {
+  if (this.children_.length !== other.children_.length) {
     return false;
   }
 
@@ -1591,23 +1581,22 @@ ExpressionNode.prototype.hasSameSignature = function (other) {
 
 /**
  * Do the two nodes differ only in argument order.
- * TODO: unit test
  */
-ExpressionNode.prototype.isEquivalentTo = function (target) {
+ExpressionNode.prototype.isEquivalentTo = function (other) {
   // only ignore argument order for ARITHMETIC
   if (this.getType() !== ValueType.ARITHMETIC) {
-    return this.isIdenticalTo(target);
+    return this.isIdenticalTo(other);
   }
 
-  if (!target || this.value !== target.value) {
+  if (!other || this.value_ !== other.value_) {
     return false;
   }
 
-  var myLeft = this.children[0];
-  var myRight = this.children[1];
+  var myLeft = this.children_[0];
+  var myRight = this.children_[1];
 
-  var theirLeft = target.children[0];
-  var theirRight = target.children[1];
+  var theirLeft = other.children_[0];
+  var theirRight = other.children_[1];
 
   if (myLeft.isEquivalentTo(theirLeft)) {
     return myRight.isEquivalentTo(theirRight);
@@ -1616,6 +1605,52 @@ ExpressionNode.prototype.isEquivalentTo = function (target) {
     return myRight.isEquivalentTo(theirLeft);
   }
   return false;
+};
+
+/**
+ * @returns {number} How many children this node has
+ */
+ExpressionNode.prototype.numChildren = function () {
+  return this.children_.length;
+};
+
+/**
+ * Modify this ExpressionNode's value
+ */
+ExpressionNode.prototype.setValue = function (value) {
+  var type = this.getType();
+  if (type !== ValueType.VARIABLE && type !== ValueType.NUMBER) {
+    throw new Error("Can't modify value");
+  }
+  this.value_ = value;
+};
+
+/**
+ * Get the value of the child at index
+ */
+ExpressionNode.prototype.getChildValue = function (index) {
+  return this.children_[index].value_;
+};
+
+/**
+ * Set the value of the child at index
+ */
+ExpressionNode.prototype.setChildValue = function (index, value) {
+  return this.children_[index].setValue(value);
+};
+
+/**
+ * Get a string representation of the tree
+ * Note: This is only used by test code, but is also generally useful to debug
+ */
+ExpressionNode.prototype.debug = function () {
+  if (this.children_.length === 0) {
+    return this.value_;
+  }
+  return "(" + this.value_ + " " +
+    this.children_.map(function (c) {
+      return c.debug();
+    }).join(' ') + ")";
 };
 
 /**

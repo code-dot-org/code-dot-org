@@ -16,8 +16,6 @@
 
 'use strict';
 
-// TODO (brent) - check somewhere that we have only 1 top block
-
 var Calc = module.exports;
 
 /**
@@ -51,6 +49,8 @@ studioApp.setCheckForEmptyBlocks(false);
 
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
+
+var LINE_HEIGHT = 20;
 
 var appState = {
   targetSet: null,
@@ -156,7 +156,7 @@ Calc.init = function(config) {
 
     appState.targetSet = generateEquationSetFromBlockXml(solutionBlocks);
 
-    displayGoal();
+    displayGoal(appState.targetSet);
 
     // Adjust visualizationColumn width.
     var visualizationColumn = document.getElementById('visualizationColumn');
@@ -179,31 +179,34 @@ Calc.init = function(config) {
  *     variables, but no functions. Display compute expression and variables
  * (4) We have a target compute expression, and either multiple functions or
  *     one function and variable(s). Currently not supported.
- *     // TODO - make sure we throw for this
+ * @param {EquationSet} targetSet The target equation set.
  */
-function displayGoal() {
-  var computeEquation = appState.targetSet.computeEquation();
+function displayGoal(targetSet) {
+  var computeEquation = targetSet.computeEquation();
   if (!computeEquation || !computeEquation.expression) {
     return;
   }
 
   // If we have a single function, just show the evaluation
-  // (i.e. compute expression). Otherwise should all equations.
+  // (i.e. compute expression). Otherwise show all equations.
   var tokenList;
   var nextRow = 0;
-  if (!appState.targetSet.hasSingleFunction()) {
-    var sortedEquations = appState.targetSet.sortedEquations();
+  var hasSingleFunction = targetSet.hasSingleFunction();
+  if (!hasSingleFunction) {
+    var sortedEquations = targetSet.sortedEquations();
     sortedEquations.forEach(function (equation) {
       tokenList = equation.expression.getTokenList(false);
-      displayEquation('answerExpression', equation.name, tokenList, nextRow++);
+      displayEquation('answerExpression', equation.signature, tokenList, nextRow++);
     });
   }
 
   tokenList = computeEquation.expression.getTokenList(false);
-  var result = appState.targetSet.evaluate();
+  var result = targetSet.evaluate();
 
-  tokenList = tokenList.concat(getTokenList(' = ' + result.toString()));
-  displayEquation('answerExpression', computeEquation.name, tokenList, nextRow);
+  if (hasSingleFunction) {
+    tokenList = tokenList.concat(getTokenList(' = ' + result.toString()));
+  }
+  displayEquation('answerExpression', computeEquation.signature, tokenList, nextRow);
 }
 
 /**
@@ -292,12 +295,11 @@ Calc.evaluateFunction_ = function (targetSet, userSet) {
   // Now we want to use all combinations of inputs in the range [-100...100],
   // noting which set of inputs failed (if any)
   var possibleValues = _.range(1, 101).concat(_.range(-0, -101, -1));
-  var numParams = expression.children.length;
+  var numParams = expression.numChildren();
   var iterator = new InputIterator(possibleValues, numParams);
 
   var setChildToValue = function (val, index) {
-    // TODO - feels a little hacky directly modifying children
-    expression.children[index].value = val;
+    expression.setChildValue(index, val);
   };
 
   while (iterator.remaining() > 0 && !outcome.failedInput) {
@@ -306,7 +308,7 @@ Calc.evaluateFunction_ = function (targetSet, userSet) {
 
     if (targetSet.evaluateWithExpression(expression) !==
         userSet.evaluateWithExpression(expression)) {
-      outcome.failedInput = values.slice();
+      outcome.failedInput = _.clone(values);
     }
   }
 
@@ -396,7 +398,7 @@ Calc.execute = function() {
     app: 'calc',
     level: level.id,
     builder: level.builder,
-    result: appState.result,
+    result: appState.result === ResultType.SUCCESS,
     testResult: appState.testResults,
     program: encodeURIComponent(textBlocks),
     onComplete: onReportComplete
@@ -442,7 +444,7 @@ function displayComplexUserExpressions () {
 
     tokenList = getTokenList(userEquation, expectedEquation);
 
-    displayEquation('userExpression', userEquation.name, tokenList, nextRow++,
+    displayEquation('userExpression', userEquation.signature, tokenList, nextRow++,
       'errorToken');
   });
 
@@ -470,9 +472,8 @@ function displayComplexUserExpressions () {
 
   if (appState.failedInput) {
     var expression = computeEquation.expression.clone();
-    for (var c = 0; c < expression.children.length; c++) {
-      // TODO - feels a little hacky directly modifying children
-      expression.children[c].value = appState.failedInput[c];
+    for (var c = 0; c < expression.numChildren(); c++) {
+      expression.setChildValue(c, appState.failedInput[c]);
     }
     result = appState.userSet.evaluateWithExpression(expression).toString();
 
@@ -582,9 +583,6 @@ function displayEquation(parentId, name, tokenList, line, markClass) {
   parent.appendChild(g);
   var xPos = 0;
   var len;
-  // TODO (brent) in the case of functions, really we'd like the name to also be
-  // a tokenDiff - i.e. if target is foo(x,y) and user expression is foo(y, x)
-  // we'd like to highlight the differences
   if (name) {
     len = addText(g, (name + ' = '), xPos, null);
     xPos += len;
@@ -595,9 +593,8 @@ function displayEquation(parentId, name, tokenList, line, markClass) {
     xPos += len;
   }
 
-  // TODO (brent): handle case where expression is longer than width
   var xPadding = (CANVAS_WIDTH - g.getBoundingClientRect().width) / 2;
-  var yPos = (line * 20); // TODO - this shouldnt be hardcoded
+  var yPos = (line * LINE_HEIGHT);
   g.setAttribute('transform', 'translate(' + xPadding + ', ' + yPos + ')');
 }
 
@@ -644,7 +641,7 @@ function cloneNodeWithoutIds(elementId) {
  * App specific displayFeedback function that calls into
  * studioApp.displayFeedback when appropriate
  */
-var displayFeedback = function() {
+function displayFeedback() {
   if (!appState.response || appState.animating) {
     return;
   }
@@ -670,7 +667,7 @@ var displayFeedback = function() {
   }
 
   studioApp.displayFeedback(options);
-};
+}
 
 /**
  * Function to be called when the service report call is complete
@@ -683,3 +680,10 @@ function onReportComplete(response) {
   appState.response = response;
   displayFeedback();
 }
+
+/* start-test-block */
+// export private function(s) to expose to unit testing
+Calc.__testonly__ = {
+  displayGoal: displayGoal
+};
+/* end-test-block */
