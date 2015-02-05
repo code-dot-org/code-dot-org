@@ -3,8 +3,8 @@ var evalUtils = require('./evalUtils');
 
 var EvalCircle = function (radius, style, color) {
   evalUtils.ensureNumber(radius);
-  evalUtils.ensureString(style);
-  evalUtils.ensureString(color);
+  evalUtils.ensureStyle(style);
+  evalUtils.ensureColor(color);
 
   EvalImage.apply(this, [style, color]);
 

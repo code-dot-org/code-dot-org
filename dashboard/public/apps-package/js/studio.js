@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({134:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({135:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Studio = require('./studio');
@@ -16,7 +16,7 @@ window.studioMain = function(options) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":3,"./blocks":128,"./levels":133,"./skins":136,"./studio":137}],137:[function(require,module,exports){
+},{"../appMain":3,"./blocks":129,"./levels":134,"./skins":137,"./studio":138}],138:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -2795,7 +2795,7 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/current/common":170,"../../locale/current/studio":176,"../StudioApp":2,"../canvg/StackBlur.js":37,"../canvg/canvg.js":38,"../canvg/rgbcolor.js":39,"../canvg/svg_todataurl":40,"../codegen":41,"../constants":42,"../dom":43,"../skins":125,"../templates/page.html":145,"../utils":165,"../xml":166,"./api":127,"./blocks":128,"./collidable":129,"./constants":130,"./controls.html":131,"./extraControlRows.html":132,"./projectile":135,"./visualization.html":138}],138:[function(require,module,exports){
+},{"../../locale/current/common":171,"../../locale/current/studio":177,"../StudioApp":2,"../canvg/StackBlur.js":37,"../canvg/canvg.js":38,"../canvg/rgbcolor.js":39,"../canvg/svg_todataurl":40,"../codegen":41,"../constants":42,"../dom":43,"../skins":126,"../templates/page.html":146,"../utils":166,"../xml":167,"./api":128,"./blocks":129,"./collidable":130,"./constants":131,"./controls.html":132,"./extraControlRows.html":133,"./projectile":136,"./visualization.html":139}],139:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2815,7 +2815,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":186}],135:[function(require,module,exports){
+},{"ejs":187}],136:[function(require,module,exports){
 var Collidable = require('./collidable');
 var Direction = require('./constants').Direction;
 var constants = require('./constants');
@@ -2989,7 +2989,7 @@ Projectile.prototype.moveToNextPosition = function () {
   this.y = next.y;
 };
 
-},{"./collidable":129,"./constants":130}],136:[function(require,module,exports){
+},{"./collidable":130,"./constants":131}],137:[function(require,module,exports){
 /**
  * Load Skin for Studio.
  */
@@ -3329,7 +3329,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../../locale/current/studio":176,"../skins":125,"./constants":130}],133:[function(require,module,exports){
+},{"../../locale/current/studio":177,"../skins":126,"./constants":131}],134:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/studio');
@@ -4798,7 +4798,7 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
   'startBlocks': "",
 });
 
-},{"../../locale/current/studio":176,"../block_utils":16,"../utils":165,"./constants":130}],132:[function(require,module,exports){
+},{"../../locale/current/studio":177,"../block_utils":16,"../utils":166,"./constants":131}],133:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4818,7 +4818,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":170,"ejs":186}],131:[function(require,module,exports){
+},{"../../locale/current/common":171,"ejs":187}],132:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4838,7 +4838,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":170,"ejs":186}],129:[function(require,module,exports){
+},{"../../locale/current/common":171,"ejs":187}],130:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -4944,7 +4944,7 @@ Collidable.prototype.outOfBounds = function () {
          (this.y > studioApp.MAZE_HEIGHT + (this.height / 2));
 };
 
-},{"../StudioApp":2,"./constants":130}],128:[function(require,module,exports){
+},{"../StudioApp":2,"./constants":131}],129:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -6602,6 +6602,51 @@ exports.install = function(blockly, blockInstallOptions) {
     // in the global space. This may change in the future.
   };
 
+  blockly.Blocks.functional_start_setVars = {
+    init: function() {
+      var blockName = msg.startSetVars();
+      var blockType = 'none';
+      var blockArgs = [
+        {name: 'TITLE', type: 'function'},
+        {name: 'SUBTITLE', type: 'function'},
+        {name: 'BACKGROUND', type: 'function'},
+        {name: 'TARGET', type: 'function'},
+        {name: 'DANGER', type: 'function'},
+        {name: 'PLAYER', type: 'function'}
+      ];
+      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+    }
+  };
+
+  generator.functional_start_setVars = function() {
+    // For the current design, this doesn't need to generate any code.
+    // Though we pass in a function, we're not actually using that passed in
+    // function, and instead depend on a function of the required name existing
+    // in the global space. This may change in the future.
+  };
+
+  blockly.Blocks.functional_start_setFuncs = {
+    init: function() {
+      var blockName = msg.startSetVars();
+      var blockType = 'none';
+      var blockArgs = [
+        {name: 'update-target', type: 'function'},
+        {name: 'update-danger', type: 'function'},
+        {name: 'update-player', type: 'function'},
+        {name: 'collide?', type: 'function'},
+        {name: 'on-screen?', type: 'function'}
+      ];
+      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+    }
+  };
+
+  generator.functional_start_setFuncs = function() {
+    // For the current design, this doesn't need to generate any code.
+    // Though we pass in a function, we're not actually using that passed in
+    // function, and instead depend on a function of the required name existing
+    // in the global space. This may change in the future.
+  };
+
   installFunctionalApiCallBlock(blockly, generator, {
     blockName: 'functional_start_dummyOnMove',
     blockTitle: 'on-move (on-screen)',
@@ -6730,9 +6775,9 @@ function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpr
   };
 }
 
-},{"../../locale/current/common":170,"../../locale/current/studio":176,"../StudioApp":2,"../codegen":41,"../functionalBlockUtils":72,"../sharedFunctionalBlocks":124,"../utils":165,"./constants":130}],176:[function(require,module,exports){
+},{"../../locale/current/common":171,"../../locale/current/studio":177,"../StudioApp":2,"../codegen":41,"../functionalBlockUtils":73,"../sharedFunctionalBlocks":125,"../utils":166,"./constants":131}],177:[function(require,module,exports){
 /*studio*/ module.exports = window.blockly.appLocale;
-},{}],127:[function(require,module,exports){
+},{}],128:[function(require,module,exports){
 var constants = require('./constants');
 
 exports.SpriteSpeed = {
@@ -6888,7 +6933,7 @@ exports.onEvent = function (id, eventName, func) {
   });
 };
 
-},{"./constants":130}],130:[function(require,module,exports){
+},{"./constants":131}],131:[function(require,module,exports){
 'use strict';
 
 exports.Direction = {
@@ -8190,4 +8235,4 @@ function BlurStack()
 	this.a = 0;
 	this.next = null;
 }
-},{}]},{},[134]);
+},{}]},{},[135]);

@@ -3,7 +3,7 @@ title: Jobs at Code.org
 nav: about_nav
 ---
 
-
+# Job Openings at Code.org
 ## HR Generalist (Seattle, WA preferred)
 **Job Summary:**
 
@@ -31,20 +31,16 @@ The ideal candidate has the following qualifications:
 - Strong communication skills with the ability to maintain a high level of confidentiality
 - Must be extremely organized and detail oriented with strong time-management skills
 - Be highly comfortable working in a fast-paced, ambiguous, informal work environment 
-- Prior experience in technical recruiting and with a smaller startups, preferably a tech startup
+- **Prior experience in technical recruiting and with a smaller startups, preferably a tech startup**
 
 A high level of computer literacy is required; proficiency in working with Microsoft Office and Google Docs a must.
 
-- Must be a U.S. Citizen or Permanent Resident
-- Must pass a pre-employment background check
-
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-# Job Openings at Code.org
-##Videographer (Seattle, WA preferred)##
+## Videographer (Seattle, WA preferred)
 **Job Summary:**
 
-Code.org is recruiting for a videographer who can collaborate with our education and development team to create educational and inspirational videos that teach computer science to students of all ages and diverse backgrounds. Full-time, long-term contract (approximately 9 months). 
+Code.org is recruiting for a videographer who can collaborate with our education and development team to create educational and inspirational videos that teach computer science to students of all ages and diverse backgrounds. **Full-time, long-term contract (approximately 9 months).**
 Responsibilities of the position include:
 
 - Working closely with other teams at Code.org to determine the video needs for various courses (aimed at K-12 students)
@@ -64,15 +60,13 @@ The ideal candidate has the following qualifications:
 - Extensive experience with Adobe products (we use these exclusively for our video production)
 - A strong sense of design and story is key, as is a can-do / self-starter attitude
 - Excellent professional references
-- Must be a U.S. Citizen or Permanent Resident
-- Must pass a pre-employment background check
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-##Advocacy Researcher (Seattle, WA preferred)##
+## Advocacy Researcher (Seattle, WA preferred)
 **Job Summary:**
 
-Code.org is recruiting for an Advocacy Researcher who will provide assistance with our state policy and advocacy research needs. Part-time, long-term contract (6 months, with a possible extension based on need). 
+Code.org is recruiting for an Advocacy Researcher who will provide assistance with our state policy and advocacy research needs. **Part-time, long-term contract (6 months, with a possible extension based on need).** 
 Responsibilities of the position include:
 
 - Research and analysis of state policy issues, including:
@@ -92,19 +86,33 @@ Responsibilities of the position include:
 - Knowledge of K-12 computer science issues (preferred)
 - Strong writing and analytical skills
 - Ability to work in a fast-paced, team-based environment
-- Must be a U.S. Citizen or Permanent Resident
-- Must pass a pre-employment background check
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## K-8 Program Manager (Seattle, WA preferred)##**Job Summary:**
-Code.org is looking for a K-8 Program Manager specializing in Middle School CS to support the goals of Code.org’s Education team through the development of middle school computer science curricula and a related professional development model. Responsibilities of the position include:- Sharing responsibility with the K-8 team for executing on a middle school education vision for the organization that includes integrating CS into Math and Science.- Designing, testing, revising, executing, managing, and evaluating a highly-scalable professional development model for the middle school programs.- Create both online and written middle school curricula; includes coordinating with internal teams (Development Team and Videographer) and third party vendors- Aligning middle school efforts with elementary and high school efforts- Collaborating with Product Team to develop curriculum-specific technology tools - Refining specs with Product Team for teacher dashboard
-- Working with video team to create/integrate educational videos in curriculum- Transition between elementary and middle school programs, as needed- Collaborating with remote Education team members**Qualifications:**The ideal candidate will have a Bachelor’s degree or higher in Education and 2-3 years of recent relevant computer science, mathematics, or science experience in a K-12 school setting. They also will have had experience working with the Math Common Core and Next Generation Science Standards within a curriculum writing and/or professional development capacity. Technology industry experience a plus.Must have strong leadership skills, possess exceptional writing and communications ability in English, and be tech-savvy. Must also be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Microsoft Office and Google Docs a must.Interested candidates should email a resume and cover letter, outlining how your skills and experience meet the qualifications of the position, to jobs@code.org. You may also choose to include a LinkedIn or related online profile
+## K-8 Program Manager (Seattle, WA preferred)##
+**Job Summary:**
+Code.org is looking for a K-8 Program Manager specializing in Middle School CS to support the goals of Code.org’s Education team through the development of middle school computer science curricula and a related professional development model. Responsibilities of the position include:
 
-- Must be a U.S. Citizen or Permanent Resident
-- Must pass a pre-employment background check
+- Sharing responsibility with the K-8 team for executing on a middle school education vision for the organization that includes integrating CS into Math and Science.
+- Designing, testing, revising, executing, managing, and evaluating a highly-scalable professional development model for the middle school programs.
+- Create both online and written middle school curricula; includes coordinating with internal teams (Development Team and Videographer) and third party vendors
+- Aligning middle school efforts with elementary and high school efforts
+- Collaborating with Product Team to develop curriculum-specific technology tools 
+- Refining specs with Product Team for teacher dashboard
+- Working with video team to create/integrate educational videos in curriculum
+- Transition between elementary and middle school programs, as needed
+- Collaborating with remote Education team members
+
+**Qualifications:**
+
+The ideal candidate will have a Bachelor’s degree or higher in Education and 2-3 years of recent relevant computer science, mathematics, or science experience in a K-12 school setting. They also will have had experience working with the Math Common Core and Next Generation Science Standards within a curriculum writing and/or professional development capacity. Technology industry experience a plus.
+
+Must have strong leadership skills, possess exceptional writing and communications ability in English, and be tech-savvy. Must also be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Microsoft Office and Google Docs a must.
+
+Interested candidates should email a resume and cover letter, outlining how your skills and experience meet the qualifications of the position, to jobs@code.org. You may also choose to include a LinkedIn or related online profile.
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
 ## High School Program Manager (Seattle, WA preferred)##
 **Job Summary:**
 
@@ -126,9 +134,6 @@ The ideal candidate has related experience working with a team to design, develo
 The candidate should have a Bachelor’s degree or higher in Education and a minimum of two (2) years of recent relevant introductory computer science experience at a secondary level (grades 6-12). Prior curriculum and professional development experience preferred. Must have strong leadership skills, possess exceptional writing and communications ability in English, and be tech-savvy. Must also be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Microsoft Office and Google Docs a must.
 
 Interested candidates should email a resume and cover letter, outlining how your skills and experience meet the qualifications of the position, to jobs@code.org. Please highlight relevant experience in working with a team to design, develop, write, or implement curricular, educational or software products that have gone to market. You may also choose to include a LinkedIn or related online profile.
-
-- Must be a U.S. Citizen or Permanent Resident
-- Must pass a pre-employment background check
 
 **Location:** Seattle is preferred, but remote work is possible.
 
@@ -168,9 +173,6 @@ Ideally the position is in Seattle, but for an exceptional candidate working rem
 
 Interested candidates should email a resume and cover letter, outlining how your skills and experience meet the qualifications of the position, to jobs@code.org. You may also choose to include a LinkedIn or related online profile.
 
-- Must be a U.S. Citizen or Permanent Resident
-- Must pass a pre-employment background check
-
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## Grant Writer and Relationships Manager##
@@ -206,9 +208,6 @@ A high level of computer literacy is required; experience in fundraising for edu
 
 Please DO NOT apply for this position if you do not have experience in writing successful non-profit grant proposals. 
 
-- Must be a U.S. Citizen or Permanent Resident
-- Must pass a pre-employment background check
-
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## Regional Program Manager (Los Angeles, NYC, Ft. Lauderdale/Miami area)
@@ -235,9 +234,6 @@ Must be a self-starter, multi-tasker, excel under pressure, and work independent
 
 Ability and willingness to travel up to 25% of the time is required.
 
-- Must be a U.S. Citizen or Permanent Resident
-- Must pass a pre-employment background check
-
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## Operations/Developer (Seattle)
@@ -251,10 +247,6 @@ Code.org is recruiting for an operations-focused Ruby developer to run and enhan
 - Minimum of 3 years of experience as an operations focused developer
 - Ideally: deep expertise in Ruby, build systems, and Amazon Web Services
 - Ideally: has experienced startup culture
-
-- Must be a U.S. Citizen or Permanent Resident
-- Must pass a background check
-
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
@@ -271,10 +263,36 @@ Code.org is building interactive tutorials for computer science courses starting
 - Ideally: deep expertise in either JavaScript or Ruby
 - Ideally: has experienced startup culture
 
-- Must be a U.S. Citizen or Permanent Resident
-- Must pass a pre-employment background check
-
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+
+## K-5 Computer Science Professional Development Facilitator (Part-time, contract; Seattle, WA only) 
+
+**Job Summary**
+
+Code.org is looking for a part-time facilitator to host professional development workshops in Seattle, WA for K-5 educators. (For more information about our curriculum, visit http://code.org/k5.) This role is not only about leading the professional development, but also handling the logistics of each workshop. 
+
+Responsibilities of this position include:
+
+- Logistics of workshop, including posting the workshop on the Code.org website, arranging food for the workshop, and following up with participants as necessary
+- Facilitating a 7-hour workshop on a weekend (at least) once a month, including content about computer science and equity within the field 
+- Set-up/clean-up of venue the day of the workshop
+- Adapting the template agenda of the workshop as the candidate sees fit
+- Navigating Code.org system of tracking participant attendance and payment system for facilitators
+- Communicating with Code.org as needed to refill supplies we provide you for the workshops
+
+Marketing, materials, and training for workshops are provided by Code.org. 
+
+**Qualifications**
+
+The ideal candidate is an excellent communicator, exceptionally well-spoken, and an engaging educator. Must also be tech-savvy, possess the ability to multi-task, and work well independently. 
+
+The candidate should have experience leading professional development for teachers and be very comfortable with computer science at an elementary school level. Prior experience with education at the elementary school level preferred. Proficiency in working with Google Docs a must.
+
+No benefits are offered for this position.
+
+Interested candidates should email a resume and cover letter, outlining how your skills and experience meet the qualifications of the position, to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
 
 
 ## Benefits 
@@ -289,4 +307,7 @@ Code.org offers a competitive employee benefits package that includes:
 - Medical, dental and vision premiums paid at 100% for FT positions
 - Option to participate in 403b retirement savings plan
 
-No relocation packages.
+
+**Must be a U.S. Citizen or Permanent Resident and be capable of passing a pre-employment background check**
+
+No relocation packages

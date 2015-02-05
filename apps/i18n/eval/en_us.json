@@ -1,4 +1,6 @@
 {
+  "badColorStringError": "You used an invalid color string: {val}",
+  "badStyleStringError": "You used an invalid style string: {val}",
   "circleBlockTitle": "circle (radius, style, color)",
   "displayBlockTitle": "display",
   "ellipseBlockTitle": "ellipse (width, height, style, color)",
