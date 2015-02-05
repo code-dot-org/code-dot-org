@@ -3,7 +3,7 @@ en:
   data:
     instructions:
       ' (copy 1)_instruction': "Try the \"repeat\" block to use fewer blocks..."
-      ''2-3 Maze sq10_instruction': "Get me to the pig! What blocks got repeated?"
+      '''2-3 Maze sq10_instruction': "Get me to the pig! What blocks got repeated?"
       2-3 _instruction: "Purple flowers may have either 1 or 0 nectar. Be careful
         not to collect nectar from a purple flower if it doesn't have any."
       2-3 Artist 1 new_instruction: "Hi, I'm an artist. You can write code to make
