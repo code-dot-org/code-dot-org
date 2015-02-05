@@ -1,6 +1,7 @@
 module Ops
   class WorkshopsController < ::ApplicationController
     # CanCan provides automatic resource loading and authorization for default index + CRUD actions
+    check_authorization
     load_and_authorize_resource
 
     # POST /ops/workshops
@@ -11,7 +12,21 @@ module Ops
 
     # GET /ops/workshops
     def index
-      render json: @workshops.as_json
+      my_workshops =
+        if current_user.admin?
+          # For admins, list all workshops.
+          @workshops
+        elsif current_user.permission?('district_contact')
+          # For district contacts, list all workshops in all cohorts in their district.
+          @workshops.includes(cohort: :districts).where(districts: {contact_id: current_user.try(:id)})
+        elsif current_user.permission?('facilitator')
+          # For facilitators, list all workshops they're facilitating.
+          @workshops.where(facilitator: current_user)
+        else
+          # For other teachers, list all workshops they're attending.
+          @workshops.includes(:teachers).where(users: {id: current_user.try(:id)})
+        end
+      render json: my_workshops.try(:as_json)
     end
 
     # GET /ops/workshops/1

@@ -11,6 +11,24 @@ module Ops
       @facilitator = create(:facilitator)
     end
 
+    test 'Facilitators can view all workshops they are facilitating' do
+      #87055150
+      sign_out @admin
+      sign_in @workshop.facilitator
+      get :index
+      assert_response :success
+      assert_equal 1, JSON.parse(@response.body).length
+    end
+
+    test 'District contacts can view all workshops in all cohorts in their district' do
+      #87054994 (part 1)
+      sign_out @admin
+      sign_in @workshop.districts.first.contact
+      get :index
+      assert_response :success
+      assert_equal 1, JSON.parse(@response.body).length
+    end
+
     # Test index + CRUD controller actions
 
     test 'list all workshops' do
@@ -56,5 +74,25 @@ module Ops
       end
       assert_response :success
     end
+
+    # Access tests
+    test 'Anonymous users cannot affect workshops' do
+      sign_out @admin
+      all_forbidden
+    end
+
+    test 'Logged-in teachers cannot affect workshops' do
+      sign_out @admin
+      sign_in create(:user)
+      all_forbidden
+    end
+
+    def all_forbidden
+      get :index
+      assert_response :forbidden
+      get :show, id: @workshop.id
+      assert_response :forbidden
+    end
+
   end
 end

@@ -1,7 +1,13 @@
 module Ops
   class DistrictsController < ::ApplicationController
     # CanCan provides automatic resource loading and authorization for default index + CRUD actions
+    check_authorization
     load_and_authorize_resource
+
+    def teachers
+      p "Teachers: #{@districts.users}"
+      render json: @districts.users.as_json
+    end
 
     # POST /ops/districts
     def create

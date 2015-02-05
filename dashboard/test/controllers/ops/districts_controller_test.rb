@@ -4,21 +4,56 @@ module Ops
     include Devise::TestHelpers
 
     setup do
-      @admin = create(:admin)
+      @admin = create :admin
       sign_in @admin
       @district = create(:district)
     end
 
+    test 'District contact can view all teachers in their district' do
+      #87054980
+      assert_routing({ path: 'ops/districts/1/teachers', method: :get }, { controller: 'ops/districts', action: 'teachers', id: '1' })
+      sign_out @admin
+      sign_in @district.contact
+      get :teachers, id: @district.id
+      assert_response :success
+      p @response.body
+    end
+
     # Test index + CRUD controller actions
 
-    test 'list all districts' do
+    test 'Ops team can list all districts' do
       assert_routing({ path: 'ops/districts', method: :get }, { controller: 'ops/districts', action: 'index' })
 
       get :index
       assert_response :success
     end
 
-    test 'create district' do
+    test 'Anonymous users cannot affect districts' do
+      sign_out @admin
+      all_forbidden
+    end
+
+    test 'Logged-in teachers cannot affect districts' do
+      sign_out @admin
+      sign_in create(:user)
+      all_forbidden
+    end
+
+    def all_forbidden
+      get :index
+      assert_response :forbidden
+      post :create, district: {name: 'test'}
+      assert_response :forbidden
+      get :show, id: @district.id
+      assert_response :forbidden
+      patch :update, id: @district.id, district: {name: 'name'}
+      assert_response :forbidden
+      delete :destroy, id: @district.id
+      assert_response :forbidden
+    end
+
+    test 'Ops team can create Districts' do
+      #87053952
       assert_routing({ path: 'ops/districts', method: :post }, { controller: 'ops/districts', action: 'create' })
 
       assert_difference 'District.count' do
@@ -41,7 +76,6 @@ module Ops
       patch :update, id: @district.id, district: {name: new_name}
 
       get :show, id: @district.id
-      p @response.body
       assert_equal new_name, JSON.parse(@response.body)['name']
       assert_response :success
     end
@@ -50,7 +84,7 @@ module Ops
       assert_routing({ path: 'ops/districts/1', method: :delete }, { controller: 'ops/districts', action: 'destroy', id: '1' })
 
       assert_difference 'District.count', -1 do
-        get :destroy, id: @district.id
+        delete :destroy, id: @district.id
       end
       assert_response :success
     end

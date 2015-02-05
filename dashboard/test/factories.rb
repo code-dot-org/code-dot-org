@@ -14,15 +14,16 @@ FactoryGirl.define do
 
     factory :teacher do
       user_type User::TYPE_TEACHER
+      factory :facilitator do
+        name 'Facilitator Person'
+      end
+      factory :district_contact do
+        name 'District Contact Person'
+      end
     end
 
     factory :student do
       user_type User::TYPE_STUDENT
-    end
-
-    factory :facilitator do
-      user_type User::TYPE_TEACHER
-      name 'Facilitator Person'
     end
   end
 
@@ -183,11 +184,13 @@ FactoryGirl.define do
   end
 
   factory :cohort do
+    districts {[create(:district)]}
   end
 
   factory :district do
     name 'District 13'
     location 'Panem'
+    contact {create(:district_contact).tap{|dc|dc.permission = 'district_contact'}}
   end
 
   factory :workshop do
@@ -196,6 +199,8 @@ FactoryGirl.define do
     location 'Somewhere, USA'
     instructions 'Test workshop instructions.'
     cohort {create :cohort}
-    facilitator {create :facilitator}
+    facilitator {
+      create(:facilitator).tap{|f| f.permission = 'facilitator'}
+    }
   end
 end
