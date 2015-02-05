@@ -21,7 +21,7 @@ module Ops
 
     # PATCH/PUT /ops/attendance/1
     def update
-      @workshop_attendance.update!(params[:cohort])
+      @workshop_attendance.update!(params[:workshop_attendance])
       render json: @workshop_attendance.as_json
     end
 
@@ -34,7 +34,7 @@ module Ops
     private
     # Required for CanCanCan to work with strong parameters
     # (see: http://guides.rubyonrails.org/action_controller_overview.html#strong-parameters)
-    def cohort_params
+    def workshop_attendance_params
       params.require(:workshop_attendance).permit(
           :teacher_id,
           :segment_id
