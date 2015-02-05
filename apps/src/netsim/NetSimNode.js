@@ -140,10 +140,14 @@ NetSimNode.prototype.getStatusDetail = function () {
  * @param {function} [onComplete]
  */
 NetSimNode.prototype.connectToNode = function (otherNode, onComplete) {
+  if (!onComplete) {
+    onComplete = function () {};
+  }
+
   var self = this;
   NetSimWire.create(this.instance_, function (wire) {
     if (wire === null) {
-      onComplete && onComplete(null);
+      onComplete(null);
       return;
     }
 
@@ -152,7 +156,7 @@ NetSimNode.prototype.connectToNode = function (otherNode, onComplete) {
     wire.update(function (success) {
       if (!success) {
         wire.destroy(function () {
-          onComplete && onComplete(null);
+          onComplete(null);
         });
         return;
       }
@@ -160,12 +164,12 @@ NetSimNode.prototype.connectToNode = function (otherNode, onComplete) {
       otherNode.acceptConnection(self, function (success) {
         if (!success) {
           wire.destroy(function () {
-            onComplete && onComplete(null);
+            onComplete(null);
           });
           return;
         }
 
-        onComplete && onComplete(wire);
+        onComplete(wire);
       });
     });
   });
