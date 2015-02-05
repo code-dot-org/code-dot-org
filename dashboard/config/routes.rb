@@ -70,7 +70,10 @@ Dashboard::Application.routes.draw do
   get '/home_insert', to: 'home#home_insert'
   get '/health_check', to: 'home#health_check'
   get '/admin/debug', to: 'home#debug'
-  get '/home/gallery_activites', to: 'home#gallery_activities'
+  get '/home/:action', controller: 'home'
+
+  get '/projects', to: 'projects#index'
+  get '/projects/:template', to: 'projects#template'
 
   post '/locale', to: 'home#set_locale', as: 'locale'
   

@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({77:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({81:[function(require,module,exports){
 // Functions for checking required blocks.
 
 /**
@@ -57,7 +57,7 @@ exports.define = function(name) {
   };
 };
 
-},{}],35:[function(require,module,exports){
+},{}],38:[function(require,module,exports){
 /*
  * canvg.js - Javascript SVG parser and renderer on Canvas
  * MIT Licensed 
@@ -3025,7 +3025,7 @@ if (typeof(CanvasRenderingContext2D) != 'undefined') {
 	}
 }
 
-},{}],113:[function(require,module,exports){
+},{}],125:[function(require,module,exports){
 /**
  * A set of functional blocks
  */
@@ -3514,7 +3514,7 @@ function installCond(blockly, generator) {
   };
 }
 
-},{"../locale/current/common":159,"./functionalBlockUtils":69,"./utils":154}],69:[function(require,module,exports){
+},{"../locale/current/common":171,"./functionalBlockUtils":73,"./utils":166}],73:[function(require,module,exports){
 var utils = require('./utils');
 var _ = utils.getLodash();
 
@@ -3658,7 +3658,7 @@ module.exports.installStringPicker = function(blockly, generator, options) {
   };
 };
 
-},{"./utils":154}],140:[function(require,module,exports){
+},{"./utils":166}],152:[function(require,module,exports){
 var list = [];
 
 /**
@@ -3676,7 +3676,7 @@ exports.clearTimeouts = function () {
   list = [];
 };
 
-},{}],134:[function(require,module,exports){
+},{}],146:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3700,7 +3700,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":159,"ejs":175}],115:[function(require,module,exports){
+},{"../../locale/current/common":171,"ejs":187}],127:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -3965,7 +3965,7 @@ Slider.bindEvent_ = function(element, name, func) {
 
 module.exports = Slider;
 
-},{"./dom":40}],114:[function(require,module,exports){
+},{"./dom":43}],126:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -4107,7 +4107,7 @@ module.exports = function(app, levels, options) {
           // for editCode levels, we have to delay the onInitialize callback
           // until the droplet editor has loaded.
           // TODO: build a proper state machine with onEditorReady() callback
-          setTimeout(options.onInitialize, 0);
+          setTimeout(options.onInitialize.bind(options), 0);
         } else {
           options.onInitialize();
         }
@@ -4116,7 +4116,7 @@ module.exports = function(app, levels, options) {
   });
 };
 
-},{"./StudioApp":2,"./blocksCommon":16,"./dom":40,"./required_block_utils":112,"./utils":154}],112:[function(require,module,exports){
+},{"./StudioApp":2,"./blocksCommon":17,"./dom":43,"./required_block_utils":124,"./utils":166}],124:[function(require,module,exports){
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
@@ -4209,7 +4209,7 @@ function testFromBlock (node) {
   return {
     test: function(userBlock) {
       // Encode userBlock while ignoring child statements
-      var userElement = Blockly.Xml.blockToDom_(userBlock, true);
+      var userElement = Blockly.Xml.blockToDom(userBlock, true);
       return elementsEquivalent(node, userElement);
     },
     blockDisplayXML: xml.serialize(node)
@@ -4278,7 +4278,7 @@ function elementsEquivalent(expected, given) {
     }
     return expected.isEqualNode(given);
   }
-  // Not fully clear to me why, but blockToDom_ seems to return us an element
+  // Not fully clear to me why, but blockToDom seems to return us an element
   // with a tagName in all caps
   if (expected.tagName.toLowerCase() !== given.tagName.toLowerCase()) {
     return false;
@@ -4394,7 +4394,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"../locale/current/common":159,"./block_utils":15,"./utils":154,"./xml":155}],16:[function(require,module,exports){
+},{"../locale/current/common":171,"./block_utils":16,"./utils":166,"./xml":167}],17:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -4559,7 +4559,7 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/current/common":159}],2:[function(require,module,exports){
+},{"../locale/current/common":171}],2:[function(require,module,exports){
 // Globals:
 //   Blockly
 
@@ -4577,8 +4577,8 @@ var FeedbackUtils = require('./feedback');
 * The minimum width of a playable whole blockly game.
 */
 var MIN_WIDTH = 900;
-var MIN_MOBILE_SHARE_WIDTH = 450;
-var MOBILE_NO_PADDING_SHARE_WIDTH = 400;
+var MOBILE_SHARE_WIDTH_PADDING = 50;
+var DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
 var WORKSPACE_PLAYSPACE_GAP = 15;
 var BLOCK_X_COORDINATE = 70;
 var BLOCK_Y_COORDINATE = 30;
@@ -4778,7 +4778,7 @@ StudioApp.prototype.init = function(config) {
   // Fixes viewport for small screens.
   var viewport = document.querySelector('meta[name="viewport"]');
   if (viewport) {
-    this.fixViewportForSmallScreens_(viewport);
+    this.fixViewportForSmallScreens_(viewport, config);
   }
 
   var showCode = document.getElementById('show-code-header');
@@ -4897,6 +4897,7 @@ StudioApp.prototype.init = function(config) {
   if (this.editCode) {
     this.handleEditCode_({
       codeFunctions: config.level.codeFunctions,
+      dropletConfig: config.dropletConfig,
       categoryInfo: config.level.categoryInfo,
       startBlocks: config.level.startBlocks,
       afterEditorReady: config.afterEditorReady,
@@ -5350,7 +5351,7 @@ StudioApp.prototype.resizeHeaders = function (fullWorkspaceWidth) {
   if (toolboxHeader) {
     if (this.editCode) {
       // If in the droplet editor, but not using blocks, keep categoryWidth at 0
-      if (this.editor.currentlyUsingBlocks) {
+      if (this.editor && this.editor.currentlyUsingBlocks) {
         // Set toolboxWidth based on the block palette width:
         var categories = document.querySelector('.droplet-palette-wrapper');
         toolboxWidth = parseInt(window.getComputedStyle(categories).width, 10);
@@ -5561,19 +5562,20 @@ StudioApp.prototype.setIdealBlockNumber_ = function() {
 /**
  *
  */
-StudioApp.prototype.fixViewportForSmallScreens_ = function (viewport) {
+StudioApp.prototype.fixViewportForSmallScreens_ = function (viewport, config) {
   var deviceWidth;
   var desiredWidth;
   var minWidth;
   if (this.share && dom.isMobile()) {
+    var mobileNoPaddingShareWidth =
+      config.mobileNoPaddingShareWidth || DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH;
     // for mobile sharing, don't assume landscape mode, use screen.width
     deviceWidth = desiredWidth = screen.width;
     if (this.noPadding && screen.width < MAX_PHONE_WIDTH) {
-      desiredWidth = Math.min(desiredWidth,
-        MOBILE_NO_PADDING_SHARE_WIDTH);
+      desiredWidth = Math.min(desiredWidth, mobileNoPaddingShareWidth);
     }
-    minWidth = this.noPadding ?
-      MOBILE_NO_PADDING_SHARE_WIDTH : MIN_MOBILE_SHARE_WIDTH;
+    minWidth = mobileNoPaddingShareWidth +
+      (this.noPadding ? 0 : MOBILE_SHARE_WIDTH_PADDING);
   }
   else {
     // assume we are in landscape mode, so width is the longer of the two
@@ -5670,7 +5672,7 @@ StudioApp.prototype.configureDom = function (config) {
     visualizationColumn.style.minHeight = this.MIN_WORKSPACE_HEIGHT + 'px';
   }
 
-  if (!config.embed && !this.share) {
+  if (!config.embed && !config.hideSource) {
     // Make the visualization responsive to screen size, except on share page.
     visualization.className += " responsive";
     visualizationColumn.className += " responsive";
@@ -5731,18 +5733,19 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     
     this.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
       mode: 'javascript',
-      modeOptions: utils.generateDropletModeOptions(options.codeFunctions),
+      modeOptions: utils.generateDropletModeOptions(options.codeFunctions,
+        options.dropletConfig),
       palette: utils.generateDropletPalette(options.codeFunctions,
-        options.categoryInfo)
+        options.dropletConfig)
     });
 
     this.editor.aceEditor.setShowPrintMargin(false);
 
     // Add an ace completer for the API functions exposed for this level
-    if (options.codeFunctions) {
+    if (options.codeFunctions || options.dropletConfig) {
       var langTools = window.ace.require("ace/ext/language_tools");
       langTools.addCompleter(
-        utils.generateAceApiCompleter(options.codeFunctions));
+        utils.generateAceApiCompleter(options.codeFunctions, options.dropletConfig));
     }
 
     this.editor.aceEditor.setOptions({
@@ -5868,7 +5871,7 @@ StudioApp.prototype.hasExtraTopBlocks = function () {
   return this.feedback_.hasExtraTopBlocks();
 };
 
-},{"../locale/current/common":159,"./ResizeSensor":1,"./block_utils":15,"./constants.js":39,"./dom":40,"./feedback":58,"./templates/builder.html":128,"./templates/buttons.html":129,"./templates/instructions.html":131,"./templates/learn.html":132,"./templates/makeYourOwn.html":133,"./utils":154,"./xml":155,"url":174}],174:[function(require,module,exports){
+},{"../locale/current/common":171,"./ResizeSensor":1,"./block_utils":16,"./constants.js":42,"./dom":43,"./feedback":62,"./templates/builder.html":140,"./templates/buttons.html":141,"./templates/instructions.html":143,"./templates/learn.html":144,"./templates/makeYourOwn.html":145,"./utils":166,"./xml":167,"url":186}],186:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6577,13 +6580,13 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":170,"querystring":173}],173:[function(require,module,exports){
+},{"punycode":182,"querystring":185}],185:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":171,"./encode":172}],172:[function(require,module,exports){
+},{"./decode":183,"./encode":184}],184:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6670,7 +6673,7 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],171:[function(require,module,exports){
+},{}],183:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6756,7 +6759,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],170:[function(require,module,exports){
+},{}],182:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -7267,7 +7270,7 @@ var isArray = Array.isArray || function (xs) {
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],133:[function(require,module,exports){
+},{}],145:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7287,7 +7290,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":159,"ejs":175}],132:[function(require,module,exports){
+},{"../../locale/current/common":171,"ejs":187}],144:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7309,7 +7312,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":159,"ejs":175}],131:[function(require,module,exports){
+},{"../../locale/current/common":171,"ejs":187}],143:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7329,7 +7332,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":159,"ejs":175}],128:[function(require,module,exports){
+},{"../../locale/current/common":171,"ejs":187}],140:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7349,7 +7352,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":175}],58:[function(require,module,exports){
+},{"ejs":187}],62:[function(require,module,exports){
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
 var HINT_REQUEST_PLACEMENT = {
   NONE: 0,  // This value must not be changed.
@@ -8506,7 +8509,7 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
   });
 };
 
-},{"../locale/current/common":159,"./codegen":38,"./constants":39,"./dom":40,"./feedbackBlocks":59,"./templates/buttons.html":129,"./templates/code.html":130,"./templates/shareFailure.html":136,"./templates/sharing.html":137,"./templates/showCode.html":138,"./templates/trophy.html":139,"./utils":154,"./xml":155}],154:[function(require,module,exports){
+},{"../locale/current/common":171,"./codegen":41,"./constants":42,"./dom":43,"./feedbackBlocks":63,"./templates/buttons.html":141,"./templates/code.html":142,"./templates/shareFailure.html":148,"./templates/sharing.html":149,"./templates/showCode.html":150,"./templates/trophy.html":151,"./utils":166,"./xml":167}],166:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
 
@@ -8645,25 +8648,58 @@ exports.wrapNumberValidatorsForLevelBuilder = function () {
   };
 };
 
+function mergeFunctionsWithConfig(codeFunctions, dropletConfig) {
+  var merged = [];
+
+  if (codeFunctions instanceof Array) {
+    // codeFunctions is in an array, use those exactly:
+    merged = codeFunctions;
+  } else if (codeFunctions instanceof Object &&
+             dropletConfig &&
+             dropletConfig.blocks) {
+    var dropletBlocks = dropletConfig.blocks;
+    // codeFunctions is an object with named key/value pairs
+    //  key is a block name from dropletBlocks
+    //  value is an object that can be used to override block defaults
+    for (var i = 0; i < dropletBlocks.length; i++) {
+      var block = dropletBlocks[i];
+      if (dropletBlocks[i].func in codeFunctions) {
+        // We found this particular block, now override the defaults with extend
+        merged.push(exports.extend(dropletBlocks[i],
+                    codeFunctions[dropletBlocks[i].func]));
+      }
+    }
+  }
+  return merged;
+}
+
 /**
  * Generate code aliases in Javascript based on some level data.
  */
-exports.generateCodeAliases = function (codeFunctions, parentObjName) {
+exports.generateCodeAliases = function (codeFunctions, dropletConfig, parentObjName) {
   var code = '';
-  // Insert aliases from level codeBlocks into code
-  if (codeFunctions) {
-    for (var i = 0; i < codeFunctions.length; i++) {
-      var cf = codeFunctions[i];
-      code += "var " + cf.func + " = function() { ";
-      if (cf.idArgNone) {
-        code += "return " + parentObjName + "." + cf.func + ".apply(" +
-                parentObjName + ", arguments); };\n";
-      } else {
-        code += "var newArgs = " +
-          (cf.idArgLast ? "arguments.concat(['']);" : "[''].concat(arguments);") +
-          " return " + parentObjName + "." + cf.func +
-          ".apply(" + parentObjName + ", newArgs); };\n";
-      }
+  var aliasFunctions;
+  if (codeFunctions instanceof Array) {
+    // codeFunctions is in an array, use those exactly:
+    aliasFunctions = codeFunctions;
+  } else if (dropletConfig && dropletConfig.blocks) {
+    // use dropletConfig.blocks in its entirety (creating aliases for all
+    // functions available in this app, even those not in this level's palette)
+    aliasFunctions = dropletConfig.blocks;
+  }
+
+  // Insert aliases from aliasFunctions into code
+  for (var i = 0; i < aliasFunctions.length; i++) {
+    var cf = aliasFunctions[i];
+    code += "var " + cf.func + " = function() { ";
+    if (cf.idArgNone) {
+      code += "return " + parentObjName + "." + cf.func + ".apply(" +
+              parentObjName + ", arguments); };\n";
+    } else {
+      code += "var newArgs = " +
+        (cf.idArgLast ? "arguments.concat(['']);" : "[''].concat(arguments);") +
+        " return " + parentObjName + "." + cf.func +
+        ".apply(" + parentObjName + ", newArgs); };\n";
     }
   }
   return code;
@@ -8672,7 +8708,7 @@ exports.generateCodeAliases = function (codeFunctions, parentObjName) {
 /**
  * Generate a palette for the droplet editor based on some level data.
  */
-exports.generateDropletPalette = function (codeFunctions, categoryInfo) {
+exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
   // TODO: figure out localization for droplet scenario
   var stdPalette = [
     {
@@ -8768,36 +8804,38 @@ exports.generateDropletPalette = function (codeFunctions, categoryInfo) {
       'blocks': []
     }
   };
-  categoryInfo = categoryInfo || defCategoryInfo;
+  categoryInfo = (dropletConfig && dropletConfig.categories) || defCategoryInfo;
 
-  if (codeFunctions) {
-    for (var i = 0; i < codeFunctions.length; i++) {
-      var cf = codeFunctions[i];
-      if (cf.category === 'hidden') {
-        continue;
-      }
-      var block = cf.func + "(";
-      if (cf.params) {
-        for (var j = 0; j < cf.params.length; j++) {
-          if (j !== 0) {
-            block += ", ";
-          }
-          block += cf.params[j];
-        }
-      }
-      block += ")";
-      var blockPair = {
-        block: block,
-        title: cf.title || cf.func
-      };
-      categoryInfo[cf.category || 'Actions'].blocks.push(blockPair);
+  var mergedFunctions = mergeFunctionsWithConfig(codeFunctions, dropletConfig);
+
+  for (var i = 0; i < mergedFunctions.length; i++) {
+    var cf = mergedFunctions[i];
+    if (cf.category === 'hidden') {
+      continue;
     }
+    var block = cf.func + "(";
+    if (cf.params) {
+      for (var j = 0; j < cf.params.length; j++) {
+        if (j !== 0) {
+          block += ", ";
+        }
+        block += cf.params[j];
+      }
+    }
+    block += ")";
+    var blockPair = {
+      block: block,
+      title: cf.title || cf.func
+    };
+    categoryInfo[cf.category || 'Actions'].blocks.push(blockPair);
   }
 
   var addedPalette = [];
   for (var category in categoryInfo) {
     categoryInfo[category].name = category;
-    addedPalette.push(categoryInfo[category]);
+    if (categoryInfo[category].blocks.length > 0) {
+      addedPalette.push(categoryInfo[category]);
+    }
   }
 
   return addedPalette.concat(stdPalette);
@@ -8806,11 +8844,12 @@ exports.generateDropletPalette = function (codeFunctions, categoryInfo) {
 /**
  * Generate an Ace editor completer for a set of APIs based on some level data.
  */
-exports.generateAceApiCompleter = function (codeFunctions) {
+exports.generateAceApiCompleter = function (codeFunctions, dropletConfig) {
   var apis = [];
 
-  for (var i = 0; i < codeFunctions.length; i++) {
-    var cf = codeFunctions[i];
+  var mergedFunctions = mergeFunctionsWithConfig(codeFunctions, dropletConfig);
+  for (var i = 0; i < mergedFunctions.length; i++) {
+    var cf = mergedFunctions[i];
     if (cf.category === 'hidden') {
       continue;
     }
@@ -8835,7 +8874,7 @@ exports.generateAceApiCompleter = function (codeFunctions) {
 /**
  * Generate modeOptions for the droplet editor based on some level data.
  */
-exports.generateDropletModeOptions = function (codeFunctions) {
+exports.generateDropletModeOptions = function (codeFunctions, dropletConfig) {
   var modeOptions = {
     blockFunctions: [],
     valueFunctions: ['random', 'round', 'abs', 'max', 'min'],
@@ -8851,29 +8890,28 @@ exports.generateDropletModeOptions = function (codeFunctions) {
   EITHER_FUNCTIONS = ['button', 'read', 'readstr', 'readnum', 'table', 'append', 'finish', 'loadscript'];
 */
 
-  if (codeFunctions) {
-    for (var i = 0; i < codeFunctions.length; i++) {
-      if (codeFunctions[i].type === 'value') {
-        modeOptions.valueFunctions.push(codeFunctions[i].func);
-      }
-      else if (codeFunctions[i].type === 'either') {
-        modeOptions.eitherFunctions.push(codeFunctions[i].func);
-      }
-      else if (codeFunctions[i].type !== 'hidden') {
-        modeOptions.blockFunctions.push(codeFunctions[i].func);
-      }
+  var mergedFunctions = mergeFunctionsWithConfig(codeFunctions, dropletConfig);
+  for (var i = 0; i < mergedFunctions.length; i++) {
+    if (mergedFunctions[i].type === 'value') {
+      modeOptions.valueFunctions.push(mergedFunctions[i].func);
+    }
+    else if (mergedFunctions[i].type === 'either') {
+      modeOptions.eitherFunctions.push(mergedFunctions[i].func);
+    }
+    else if (mergedFunctions[i].type !== 'hidden') {
+      modeOptions.blockFunctions.push(mergedFunctions[i].func);
     }
   }
 
   return modeOptions;
 };
 
-},{"./hammer":70,"./lodash":78,"./xml":155}],78:[function(require,module,exports){
+},{"./hammer":74,"./lodash":82,"./xml":167}],82:[function(require,module,exports){
 (function (global){
 /**
  * @license
  * Lo-Dash 2.4.1 (Custom Build) <http://lodash.com/>
- * Build: `lodash include="debounce,reject,map,value,range,without,sample,create,flatten,isEmpty,wrap,size,bind,contains,last" --output src/lodash.js`
+ * Build: `lodash include="debounce,reject,map,value,range,without,sample,create,flatten,isEmpty,wrap,size,bind,contains,last,clone" --output src/lodash.js`
  * Copyright 2012-2013 The Dojo Foundation <http://dojofoundation.org/>
  * Based on Underscore.js 1.5.2 <http://underscorejs.org/LICENSE>
  * Copyright 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -8900,6 +8938,9 @@ exports.generateDropletModeOptions = function (codeFunctions) {
   /** Used as the max size of the `arrayPool` and `objectPool` */
   var maxPoolSize = 40;
 
+  /** Used to match regexp flags from their coerced string values */
+  var reFlags = /\w*$/;
+
   /** Used to detected named functions */
   var reFuncName = /^\s*function[ \n\r\t]+\w/;
 
@@ -8923,6 +8964,14 @@ exports.generateDropletModeOptions = function (codeFunctions) {
       objectClass = '[object Object]',
       regexpClass = '[object RegExp]',
       stringClass = '[object String]';
+
+  /** Used to identify object classifications that `_.clone` supports */
+  var cloneableClasses = {};
+  cloneableClasses[funcClass] = false;
+  cloneableClasses[argsClass] = cloneableClasses[arrayClass] =
+  cloneableClasses[boolClass] = cloneableClasses[dateClass] =
+  cloneableClasses[numberClass] = cloneableClasses[objectClass] =
+  cloneableClasses[regexpClass] = cloneableClasses[stringClass] = true;
 
   /** Used as the property descriptor for `__bindData__` */
   var descriptor = {
@@ -9240,6 +9289,17 @@ exports.generateDropletModeOptions = function (codeFunctions) {
       nativeMin = Math.min,
       nativeRandom = Math.random;
 
+  /** Used to lookup a built-in constructor by [[Class]] */
+  var ctorByClass = {};
+  ctorByClass[arrayClass] = Array;
+  ctorByClass[boolClass] = Boolean;
+  ctorByClass[dateClass] = Date;
+  ctorByClass[funcClass] = Function;
+  ctorByClass[objectClass] = Object;
+  ctorByClass[numberClass] = Number;
+  ctorByClass[regexpClass] = RegExp;
+  ctorByClass[stringClass] = String;
+
   /** Used to avoid iterating non-enumerable properties in IE < 9 */
   var nonEnumProps = {};
   nonEnumProps[arrayClass] = nonEnumProps[dateClass] = nonEnumProps[numberClass] = { 'constructor': true, 'toLocaleString': true, 'toString': true, 'valueOf': true };
@@ -9465,6 +9525,20 @@ exports.generateDropletModeOptions = function (codeFunctions) {
      * @type boolean
      */
     support.unindexedChars = ('x'[0] + Object('x')[0]) != 'xx';
+
+    /**
+     * Detect if a DOM node's [[Class]] is resolvable (all but IE < 9)
+     * and that the JS engine errors when attempting to coerce an object to
+     * a string without a `toString` function.
+     *
+     * @memberOf _.support
+     * @type boolean
+     */
+    try {
+      support.nodeClass = !(toString.call(document) == objectClass && !({ 'toString': 0 } + ''));
+    } catch(e) {
+      support.nodeClass = true;
+    }
   }(1));
 
   /*--------------------------------------------------------------------------*/
@@ -9604,6 +9678,98 @@ exports.generateDropletModeOptions = function (codeFunctions) {
     }
     setBindData(bound, bindData);
     return bound;
+  }
+
+  /**
+   * The base implementation of `_.clone` without argument juggling or support
+   * for `thisArg` binding.
+   *
+   * @private
+   * @param {*} value The value to clone.
+   * @param {boolean} [isDeep=false] Specify a deep clone.
+   * @param {Function} [callback] The function to customize cloning values.
+   * @param {Array} [stackA=[]] Tracks traversed source objects.
+   * @param {Array} [stackB=[]] Associates clones with source counterparts.
+   * @returns {*} Returns the cloned value.
+   */
+  function baseClone(value, isDeep, callback, stackA, stackB) {
+    if (callback) {
+      var result = callback(value);
+      if (typeof result != 'undefined') {
+        return result;
+      }
+    }
+    // inspect [[Class]]
+    var isObj = isObject(value);
+    if (isObj) {
+      var className = toString.call(value);
+      if (!cloneableClasses[className] || (!support.nodeClass && isNode(value))) {
+        return value;
+      }
+      var ctor = ctorByClass[className];
+      switch (className) {
+        case boolClass:
+        case dateClass:
+          return new ctor(+value);
+
+        case numberClass:
+        case stringClass:
+          return new ctor(value);
+
+        case regexpClass:
+          result = ctor(value.source, reFlags.exec(value));
+          result.lastIndex = value.lastIndex;
+          return result;
+      }
+    } else {
+      return value;
+    }
+    var isArr = isArray(value);
+    if (isDeep) {
+      // check for circular references and return corresponding clone
+      var initedStack = !stackA;
+      stackA || (stackA = getArray());
+      stackB || (stackB = getArray());
+
+      var length = stackA.length;
+      while (length--) {
+        if (stackA[length] == value) {
+          return stackB[length];
+        }
+      }
+      result = isArr ? ctor(value.length) : {};
+    }
+    else {
+      result = isArr ? slice(value) : assign({}, value);
+    }
+    // add array properties assigned by `RegExp#exec`
+    if (isArr) {
+      if (hasOwnProperty.call(value, 'index')) {
+        result.index = value.index;
+      }
+      if (hasOwnProperty.call(value, 'input')) {
+        result.input = value.input;
+      }
+    }
+    // exit for shallow clone
+    if (!isDeep) {
+      return result;
+    }
+    // add the source value to the stack of traversed objects
+    // and associate it with its clone
+    stackA.push(value);
+    stackB.push(result);
+
+    // recursively populate clone (susceptible to call stack limits)
+    (isArr ? baseEach : forOwn)(value, function(objValue, key) {
+      result[key] = baseClone(objValue, isDeep, callback, stackA, stackB);
+    });
+
+    if (initedStack) {
+      releaseArray(stackA);
+      releaseArray(stackB);
+    }
+    return result;
   }
 
   /**
@@ -9902,7 +10068,7 @@ exports.generateDropletModeOptions = function (codeFunctions) {
         return baseIsEqual(aWrapped ? a.__wrapped__ : a, bWrapped ? b.__wrapped__ : b, callback, isWhere, stackA, stackB);
       }
       // exit for functions and DOM nodes
-      if (className != objectClass) {
+      if (className != objectClass || (!support.nodeClass && (isNode(a) || isNode(b)))) {
         return false;
       }
       // in older versions of Opera, `arguments` objects have `Array` constructors
@@ -10353,6 +10519,57 @@ exports.generateDropletModeOptions = function (codeFunctions) {
       ),
     'loop': 'result[index] = callback ? callback(result[index], iterable[index]) : iterable[index]'
   });
+
+  /**
+   * Creates a clone of `value`. If `isDeep` is `true` nested objects will also
+   * be cloned, otherwise they will be assigned by reference. If a callback
+   * is provided it will be executed to produce the cloned values. If the
+   * callback returns `undefined` cloning will be handled by the method instead.
+   * The callback is bound to `thisArg` and invoked with one argument; (value).
+   *
+   * @static
+   * @memberOf _
+   * @category Objects
+   * @param {*} value The value to clone.
+   * @param {boolean} [isDeep=false] Specify a deep clone.
+   * @param {Function} [callback] The function to customize cloning values.
+   * @param {*} [thisArg] The `this` binding of `callback`.
+   * @returns {*} Returns the cloned value.
+   * @example
+   *
+   * var characters = [
+   *   { 'name': 'barney', 'age': 36 },
+   *   { 'name': 'fred',   'age': 40 }
+   * ];
+   *
+   * var shallow = _.clone(characters);
+   * shallow[0] === characters[0];
+   * // => true
+   *
+   * var deep = _.clone(characters, true);
+   * deep[0] === characters[0];
+   * // => false
+   *
+   * _.mixin({
+   *   'clone': _.partialRight(_.clone, function(value) {
+   *     return _.isElement(value) ? value.cloneNode(false) : undefined;
+   *   })
+   * });
+   *
+   * var clone = _.clone(document.body);
+   * clone.childNodes.length;
+   * // => 0
+   */
+  function clone(value, isDeep, callback, thisArg) {
+    // allows working with "Collections" methods without using their `index`
+    // and `collection` arguments for `isDeep` and `callback`
+    if (typeof isDeep != 'boolean' && isDeep != null) {
+      thisArg = callback;
+      callback = isDeep;
+      isDeep = false;
+    }
+    return baseClone(value, isDeep, typeof callback == 'function' && baseCreateCallback(callback, thisArg, 1));
+  }
 
   /**
    * Creates an object that inherits from the given `prototype` object. If a
@@ -11794,6 +12011,8 @@ exports.generateDropletModeOptions = function (codeFunctions) {
 
   /*--------------------------------------------------------------------------*/
 
+  // add functions that return unwrapped values when chaining
+  lodash.clone = clone;
   lodash.contains = contains;
   lodash.identity = identity;
   lodash.indexOf = indexOf;
@@ -11942,7 +12161,7 @@ exports.generateDropletModeOptions = function (codeFunctions) {
 }.call(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],70:[function(require,module,exports){
+},{}],74:[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-22
  * http://eightmedia.github.io/hammer.js
  *
@@ -14106,7 +14325,7 @@ if(typeof define == 'function' && define.amd) {
 }
 
 })(window);
-},{}],139:[function(require,module,exports){
+},{}],151:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -14126,7 +14345,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":175}],138:[function(require,module,exports){
+},{"ejs":187}],150:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -14146,7 +14365,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":159,"ejs":175}],137:[function(require,module,exports){
+},{"../../locale/current/common":171,"ejs":187}],149:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -14166,7 +14385,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":159,"ejs":175}],136:[function(require,module,exports){
+},{"../../locale/current/common":171,"ejs":187}],148:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -14186,7 +14405,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":175}],130:[function(require,module,exports){
+},{"ejs":187}],142:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -14206,7 +14425,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":175}],129:[function(require,module,exports){
+},{"ejs":187}],141:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -14226,9 +14445,9 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":159,"ejs":175}],159:[function(require,module,exports){
+},{"../../locale/current/common":171,"ejs":187}],171:[function(require,module,exports){
 /*common*/ module.exports = window.blockly.locale;
-},{}],59:[function(require,module,exports){
+},{}],63:[function(require,module,exports){
 var constants = require('./constants');
 var readonly = require('./templates/readonly.html');
 
@@ -14357,7 +14576,7 @@ FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
   return blockXMLStrings.join('');
 };
 
-},{"./constants":39,"./templates/readonly.html":135}],135:[function(require,module,exports){
+},{"./constants":42,"./templates/readonly.html":147}],147:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -14378,7 +14597,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":175}],175:[function(require,module,exports){
+},{"ejs":187}],187:[function(require,module,exports){
 
 /*!
  * EJS
@@ -14733,7 +14952,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":176,"./utils":177,"fs":167,"path":168}],177:[function(require,module,exports){
+},{"./filters":188,"./utils":189,"fs":179,"path":180}],189:[function(require,module,exports){
 
 /*!
  * EJS
@@ -14757,7 +14976,7 @@ exports.escape = function(html){
     .replace(/"/g, '&quot;');
 };
  
-},{}],176:[function(require,module,exports){
+},{}],188:[function(require,module,exports){
 
 /*!
  * EJS - Filters
@@ -14956,7 +15175,7 @@ exports.get = function(obj, prop){
 exports.json = function(obj){
   return JSON.stringify(obj);
 };
-},{}],168:[function(require,module,exports){
+},{}],180:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -15184,7 +15403,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require('_process'))
-},{"_process":169}],169:[function(require,module,exports){
+},{"_process":181}],181:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -15243,9 +15462,9 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],167:[function(require,module,exports){
+},{}],179:[function(require,module,exports){
 
-},{}],38:[function(require,module,exports){
+},{}],41:[function(require,module,exports){
 var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
 var LOOP_HIGHLIGHT = 'loopHighlight();\n';
@@ -15635,7 +15854,7 @@ exports.functionFromCode = function(code, options) {
   }
 };
 
-},{}],40:[function(require,module,exports){
+},{}],43:[function(require,module,exports){
 exports.addReadyListener = function(callback) {
   if (document.readyState === "complete") {
     setTimeout(callback, 1);
@@ -15742,7 +15961,7 @@ exports.isIOS = function() {
   return reg.test(window.navigator.userAgent);
 };
 
-},{}],39:[function(require,module,exports){
+},{}],42:[function(require,module,exports){
 /**
  * @fileoverview Constants used in production code and tests.
  */
@@ -15818,13 +16037,22 @@ exports.KeyCodes = {
   DOWN: 40
 };
 
-},{}],15:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 var xml = require('./xml');
 
+/**
+ * Create the xml for a level's toolbox
+ * @param {string} blocks The xml of the blocks to go in the toolbox
+ */
 exports.createToolbox = function(blocks) {
   return '<xml id="toolbox" style="display: none;">' + blocks + '</xml>';
 };
 
+/**
+ * Create the xml for a block of the given type
+ * @param {string} type The type of the block
+ * @param {Object.<string,string>} [titles] Dictionary of titles mapping name to value
+ */
 exports.blockOfType = function(type, titles) {
   var titleText = '';
   if (titles) {
@@ -15835,6 +16063,13 @@ exports.blockOfType = function(type, titles) {
   return '<block type="' + type + '">' + titleText +'</block>';
 };
 
+/**
+ * Create the xml for a block of the given type, with the provided child nested
+ * in a next block
+ * @param {string} type The type of the block
+ * @param {Object.<string,string>} [titles] Dictionary of titles mapping name to value
+ * @param {string} child Xml for the child block
+ */
 exports.blockWithNext = function (type, titles, child) {
   var titleText = '';
   if (titles) {
@@ -15857,6 +16092,9 @@ exports.blocksFromList = function (types) {
   return this.blockWithNext(types[0], {}, this.blocksFromList(types.slice(1)));
 };
 
+/**
+ * Create the xml for a category in a toolbox
+ */
 exports.createCategory = function(name, blocks, custom) {
   return '<category name="' + name + '"' +
           (custom ? ' custom="' + custom + '"' : '') +
@@ -15910,7 +16148,7 @@ exports.generateSimpleBlock = function (blockly, generator, options) {
  * @returns {*}
  */
 exports.domToBlock = function(blockDOM) {
-  return Blockly.Xml.domToBlock_(Blockly.mainBlockSpace, blockDOM);
+  return Blockly.Xml.domToBlock(Blockly.mainBlockSpace, blockDOM);
 };
 
 /**
@@ -15986,6 +16224,9 @@ exports.forceInsertTopBlock = function (input, blockType) {
 
 /**
  * Generate the xml for a block for the calc app.
+ * @param {string} type Type for this block
+ * @param {number[]|string[]} args List of args, where each arg is either the
+ *   xml for a child block, a number, or the name of a variable.
  */
 exports.calcBlockXml = function (type, args) {
   var str = '<block type="' + type + '" inline="false">';
@@ -15995,6 +16236,12 @@ exports.calcBlockXml = function (type, args) {
     if (typeof(arg) === "number") {
       arg = '<block type="functional_math_number"><title name="NUM">' + arg +
         '</title></block>';
+    } else if (/^<block/.test(arg)) {
+      // we have xml, dont make any changes
+      arg = arg;
+    } else {
+      // we think we have a variable
+      arg = exports.calcBlockGetVar(arg);
     }
     str += arg;
     str += '</functional_input>';
@@ -16004,6 +16251,27 @@ exports.calcBlockXml = function (type, args) {
   return str;
 };
 
+/**
+ * @returns the xml for a functional_parameters_get block with the given
+ *   variableName
+ */
+exports.calcBlockGetVar = function (variableName) {
+  return '' +
+    '<block type="functional_parameters_get" uservisible="false">' +
+    '  <mutation>' +
+    '    <outputtype>Number</outputtype>' +
+    '  </mutation>' +
+    '  <title name="VAR">' + variableName + '</title>' +
+    '</block>';
+};
+
+/**
+ * Generate the xml for a math block (either calc or eval apps).
+ * @param {string} type Type for this block
+ * @param {Object.<string,string} inputs Dictionary mapping input name to the
+     xml for that input
+ * @param {Object.<string.string>} [titles] Dictionary of titles mapping name to value
+ */
 exports.mathBlockXml = function (type, inputs, titles) {
   var str = '<block type="' + type + '" inline="false">';
   for (var title in titles) {
@@ -16019,7 +16287,7 @@ exports.mathBlockXml = function (type, inputs, titles) {
   return str;
 };
 
-},{"./xml":155}],155:[function(require,module,exports){
+},{"./xml":167}],167:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();

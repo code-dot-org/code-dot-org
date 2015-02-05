@@ -27,15 +27,15 @@ fr:
           title: Cours 1
           Artist 2: "L'Artiste 2"
           Happy Maps: Happy Maps
-          Move it, Move it: Move it, Move it
+          Move it, Move it: Déplacez le, déplacez le
           "Real-life Algorithms: Plant a Seed": 'Les algorithmes : Planter une graine'
-          Building a Foundation: Building a Foundation
+          Building a Foundation: Créer une Fondation
           Getting Loopy: Tourner en rond
           The Big Event: Le Grand Evénement
           Going Places Safely: Se déplacer en toute sécurité
           description: "Ce 1er cours est conçu pour les lecteurs débutants, afin de leur permettre de créer des programmes informatiques qui les aideront à apprendre à collaborer les uns avec les autres, développer les compétences de résolution de problèmes et persister à travers des tâches difficiles. A la fin de ce cours, les élèves créeront leur propre jeu personnalisé ou une histoire qu'ils pourront partager. Recommandé pour les maternelles moyenne-section."
           "Bee: Sequence": 'Abeille : séquence'
-          "Artist: Sequence": 'Artist: Sequence'
+          "Artist: Sequence": 'Artiste : Séquence'
           "Artist: Shapes": "L'Artiste : les Formes"
           "Maze: Loops": 'Labyrinthe : les boucles'
           "Bee: Loops": 'Abeille : Les boucles'
@@ -70,7 +70,7 @@ fr:
           Your Digital Footprint: Votre empreinte numérique
           description: "Le cours 2 s'adresse aux élèves qui savent lire et n'ont aucune expérience en programmation. Dans ce cours les élèves créeront des programmes pour résoudre des problèmes et développer des jeux interactifs qu'ils pourront partager. Recommandé pour les CE1-CM2."
           "Maze: Sequence": 'Labyrinthe : Parcours'
-          "Artist: Sequence": 'Artist: Sequence'
+          "Artist: Sequence": 'Artiste : Séquence'
           "Maze: Loops": 'Labyrinthe : les boucles'
           "Artist: Loops": 'Artiste : Les boucles'
           "Bee: Loops": 'Abeille : Les boucles'
@@ -101,8 +101,8 @@ fr:
           Artist Functions with Parameters: 'Artiste : fonctions avec paramètres'
           Computational Thinking: Algorithmique
           Functional Suncatchers: Functional Suncatchers
-          Songwriting Parameters: Songwriting Parameters
-          Dice Race: Dice Race
+          Songwriting Parameters: Paramètres de composition
+          Dice Race: Course de Dés
           Internet: Internet
           Crowdsourcing: Financement participatif
           Digital Citizenship: Citoyenneté numérique
@@ -129,7 +129,7 @@ fr:
           "Farmer: While Loops2": 'Fermier : les boucles "tant que" 2'
           "Bee: Nested Loops2": 'Abeille : les boucles imbriquées 2'
           "Bee: Debugging2": 'Abeilles : Le débogage 2'
-          "Artist: Patterns": 'Artist: Patterns'
+          "Artist: Patterns": 'Artiste : Modèles'
           Songwriting: Écriture de chansons
           description_audience: 8 ans et + (après le cours 2)
           description_short: Le cours 3 fait suite au cours 2.
@@ -147,19 +147,19 @@ fr:
           "Artist: Writing Contracts": 'Artist: Writing Contracts'
           "Calc: Defining Variables": 'Calc: Defining Variables'
           "Play Lab: Defining Variables": 'Labo : Definir des variables'
-          The Design Recipe: The Design Recipe
-          "Artist: Defining Functions": 'Artist: Defining Functions'
+          The Design Recipe: La Recette de la Conception
+          "Artist: Defining Functions": 'Artiste : Définition de fonctions'
           "Play Lab: Defining Functions": 'Play Lab: Design Recipe'
           "Artist: Functions": 'Artiste : les fonctions'
-          "Play Lab: Animation": 'Play Lab: Animation'
+          "Play Lab: Animation": 'Labo Jeu: Animation'
           Booleans: Booléens
           "Play Lab: Booleans": 'Play Lab : Booléens'
           "Calc: Boolean Operators": 'Calc: Opérateurs Booléens'
           "Play Lab: Boolean Operators": 'Play Lab : Opérateurs Booléens'
           Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
-          "Artist: Conditionals": 'Artist: Conditionals'
+          "Artist: Conditionals": 'Artiste : Instructions conditionnelles'
           Collision Detection and the Distance Formula: Collision Detection and the Distance Formula
-          "Play Lab: Collision Detection": 'Play Lab: Collision Detection'
+          "Play Lab: Collision Detection": 'Labo Jeu: Détection de Collision'
           "Unplugged: Ninja Cat and the Coordinate Plane": 'Unplugged: Ninja Cat and the Coordinate Plane'
           "Eval: Strings and Images": 'Eval: Strings and Images'
           "Unplugged: Contracts": 'Unplugged: Contracts'
@@ -231,16 +231,16 @@ fr:
           "Unplugged: Songwriting with Parameters": 'Travaux libres : utiliser des paramètres pour écrire des chansons'
           "Artist: Functions with Parameters": 'Artiste : Fonctions avec Paramètres'
           "Unplugged: Binary": 'Unplugged: Binary'
-          Bee Binary: Bee Binary
-          Farmer Binary: Farmer Binary
+          Bee Binary: Abeille binaire
+          Farmer Binary: Agriculteur binaire
           Maze and Bee: Labyrinthe et abeille
-          Artist Binary: Artist Binary
+          Artist Binary: Artiste binaire
           description_audience: 10 ans et + (après le Cours 3)
         Course4pre:
           description_short: "Un court rattrapage des concepts pour les élèves n'ayant pas suivi les cours 2 et 3."
           Course 4 Prerequisite: Cours 4 prérequis
           "Maze: Sequence": 'Labyrinthe : Parcours'
-          "Artist: Sequence": 'Artist: Sequence'
+          "Artist: Sequence": 'Artiste : Séquence'
           "Artist: Loops": 'Artiste : Les boucles'
           "Bee: Conditionals": 'Abeille : les instructions conditionnelles'
           "Artist: Nested Loops": 'Artiste : les boucles imbriquées'
@@ -252,7 +252,7 @@ fr:
           description_short: "Un court rattrapage des concepts pour les élèves n'ayant pas suivi les cours 2 et 3."
           Course 4 Prerequisite: Cours 4 prérequis
           "Maze: Sequence": 'Labyrinthe : Parcours'
-          "Artist: Sequence": 'Artist: Sequence'
+          "Artist: Sequence": 'Artiste : Séquence'
           "Artist: Loops": 'Artiste : Les boucles'
           "Bee: Conditionals": 'Abeille : les instructions conditionnelles'
           "Artist: Nested Loops": 'Artiste : les boucles imbriquées'
@@ -264,7 +264,7 @@ fr:
           description_short: "Un court rattrapage des concepts pour les élèves n'ayant pas suivi les cours 2 et 3."
           Course 4 Prerequisite: Cours 4 prérequis
           "Maze: Sequence": 'Labyrinthe : Parcours'
-          "Artist: Sequence": 'Artist: Sequence'
+          "Artist: Sequence": 'Artiste : Séquence'
           "Artist: Loops": 'Artiste : Les boucles'
           "Bee: Conditionals": 'Abeille : les instructions conditionnelles'
           "Artist: Nested Loops": 'Artiste : les boucles imbriquées'
@@ -286,12 +286,12 @@ fr:
           title: particulier
           description_short: particulier
           description: particulier
-          Special: Special
+          Special: Spécial
         special:
           title: particulier
           description_short: particulier
           description: particulier
-          Special: Special
+          Special: Spécial
           Binary: Binaire
         usabilitymsm:
           Usability testing for MSM: Usability testing for MSM
@@ -305,7 +305,7 @@ fr:
           Conditionals: Instructions conditionnelles
           Free Play: Travail libre
         algebra:
-          title: Computer Science in Algebra
+          title: Informatique en algèbre
           description: Learn Functional Programming through Algebra
           "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
           "Calc: Evaluation Blocks": 'Calc: Evaluation Blocks'
@@ -316,7 +316,7 @@ fr:
           "Play Lab: Defining Variables (Big Game)": 'Play Lab: Defining Variables (Big Game)'
           "Eval: Defining Functions": 'Eval: Defining Functions'
           "Unplugged: The Design Recipe": 'Unplugged: The Design Recipe'
-          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
+          "Play Lab: Defining Functions": 'Labo Jeu: Définition de fonctions'
           "Eval: Functions": 'Eval: Functions'
           "Play Lab: Animation (Big Game)": 'Play Lab: Animation (Big Game)'
           "Unplugged: Booleans": 'Unplugged: Booleans'
@@ -327,3 +327,28 @@ fr:
           "Eval: Conditionals": 'Eval: Conditionals'
           "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Distance Formula'
           "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
+        infinity:
+          title: Labo
+          description_short: Programmer une histoire ou un jeu avec le Labo !
+          description: Programmer une histoire ou un jeu avec le Labo !
+          Play Lab: Labo
+        algebrademo:
+          description: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
+          Algebra Demo: Algebra Demo
+          Evaluation Blocks: Evaluation Blocks
+          Making Pictures: Making Pictures
+          Defining Variables: Définition de Variables
+          Defining Simple Functions: Defining Simple Functions
+          The Design Recipe: La Recette de la Conception
+        K5PD:
+          Introduction to PD: Introduction to PD
+        netsim:
+          title: Internet Simulator
+          description_short: ""
+          description: ""
+          Internet Simulator: Internet Simulator
+        Infinity:
+          title: Infinity Playlab
+          description_short: Create a story or make a game with Infinity Play Lab!!
+          description: Create a story or make a game with Infinity Play Lab!
+          Infinity: Infini

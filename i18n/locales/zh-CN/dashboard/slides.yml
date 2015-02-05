@@ -176,8 +176,7 @@ zh:
         text: If-else 语句描述在两个事件间的选择。让我们看看一个例子，与我们的好朋友松鼠Scrat一起使用if-else语句。
       2:
         image: notes/saloni_ifelse_scrat2.jpg
-        text: |-
-          This block looks the same as the "if" block, but there's an extra part at the bottom that says "else". If I put a "move forward" block where it says "do" and a "turn left" block where it says "else", that means Scrat the squirrel will move forward if there's a path ahead. If there's not a path ahead, Scrat will turn left.
+        text: 这个语句块看起来和“if”(如果)条件语句块一样，但在它的下面多出了一个“else”(否则)语句块部分。 如果我加一个“前进”块到“do”(做)的地方，再加一个“turn left”(向左转)块到“else”的地方，这样一来，如果Scrat the Squirrel(小松鼠斯克莱特)的前方有路，那么他就会向前走。如果他前面没有路，斯科莱特就会向左转。
       3:
         image: notes/saloni_ifelse_scrat3.jpg
         text: |-

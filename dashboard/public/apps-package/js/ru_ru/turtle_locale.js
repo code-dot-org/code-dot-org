@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -164,15 +164,15 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catVariables":function(d){return "переменные"},
 "catLogic":function(d){return "Логика"},
 "colourTooltip":function(d){return "Меняет цвет карандаша."},
-"createACircle":function(d){return "Создать круг"},
-"createSnowflakeSquare":function(d){return "Создать квадратную снежинку"},
-"createSnowflakeParallelogram":function(d){return "Создание снежинки-параллелограмма"},
-"createSnowflakeLine":function(d){return "Создание снежинки-линии"},
-"createSnowflakeSpiral":function(d){return "Создание снежинки-спирали"},
-"createSnowflakeFlower":function(d){return "Создать снежинку-цветок"},
-"createSnowflakeFractal":function(d){return "Создать снежинку-фрактал"},
-"createSnowflakeRandom":function(d){return "Создать случайную снежинку"},
-"createASnowflakeBranch":function(d){return "Создать снежинку-ветвь"},
+"createACircle":function(d){return "создать круг"},
+"createSnowflakeSquare":function(d){return "создать квадратную снежинку"},
+"createSnowflakeParallelogram":function(d){return "создание снежинки-параллелограмма"},
+"createSnowflakeLine":function(d){return "создание снежинки-линии"},
+"createSnowflakeSpiral":function(d){return "создание снежинки-спирали"},
+"createSnowflakeFlower":function(d){return "создать снежинку-цветок"},
+"createSnowflakeFractal":function(d){return "создать снежинку-фрактал"},
+"createSnowflakeRandom":function(d){return "создать случайную снежинку"},
+"createASnowflakeBranch":function(d){return "создать снежинку-ветвь"},
 "degrees":function(d){return "градусов"},
 "depth":function(d){return "глубина"},
 "dots":function(d){return "точек"},
@@ -192,7 +192,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "drawATree":function(d){return "нарисовать дерево"},
 "drawUpperWave":function(d){return "нарисовать верхнюю волну"},
 "drawLowerWave":function(d){return "нарисовать нижнюю волну"},
-"drawStamp":function(d){return "Создать штамп"},
+"drawStamp":function(d){return "создать штамп"},
 "heightParameter":function(d){return "высота"},
 "hideTurtle":function(d){return "скрыть художника"},
 "jump":function(d){return "прыгнуть"},
@@ -203,7 +203,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "jumpNorthTooltip":function(d){return "Перемещает художника на север, не оставляя следов."},
 "jumpSouthTooltip":function(d){return "Перемещает художника на юг, не оставляя следов."},
 "jumpWestTooltip":function(d){return "Перемещает художника на запад, не оставляя следов."},
-"lengthFeedback":function(d){return "У Вас всё правильно, кроме длин перемещений."},
+"lengthFeedback":function(d){return "У вас всё правильно, кроме длин перемещений."},
 "lengthParameter":function(d){return "длина"},
 "loopVariable":function(d){return "счётчик"},
 "moveBackward":function(d){return "двигаться назад на"},
@@ -219,7 +219,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "penDown":function(d){return "опустить карандаш"},
 "penTooltip":function(d){return "Поднимает или опускает карандаш для того, чтобы начать или закончить рисовать."},
 "penUp":function(d){return "поднять карандаш"},
-"reinfFeedbackMsg":function(d){return "Вот ваш рисунок! Продолжайте работать или перейдите к следующей загадке."},
+"reinfFeedbackMsg":function(d){return "Вот ваш рисунок! Продолжайте работать или перейдите к следующей головоломке."},
 "setColour":function(d){return "выбрать цвет"},
 "setPattern":function(d){return "установить шаблон"},
 "setWidth":function(d){return "задать ширину"},

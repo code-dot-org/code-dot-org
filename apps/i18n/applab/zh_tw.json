@@ -5,7 +5,7 @@
   "catLogic": "邏輯類別",
   "catMath": "運算類別",
   "catProcedures": "函數類別",
-  "catText": "本文",
+  "catText": "文本",
   "catVariables": "變數類別",
   "continue": "繼續 ",
   "createHtmlBlock": "建立HTML區塊",
@@ -19,12 +19,11 @@
   "repeatForever": "永遠重複",
   "repeatDo": "執行",
   "repeatForeverTooltip": "當app運作時，這個程式積木裡的動作會重複執行",
-  "shareWebappTwitter": "快來看看我在 @codeorg 做的 app",
+  "shareApplabTwitter": "快來看看我在 @codeorg 做的 app",
   "shareGame": "分享你的app:",
   "stepIn": "步入",
   "stepOver": "跨過",
   "stepOut": "走出去",
-  "turnBlack": "變黑",
-  "turnBlackTooltip": "把螢幕變成黑色",
+  "viewData": "View Data",
   "yes": "是"
 }

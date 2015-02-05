@@ -1,4 +1,7 @@
 "he":
+  errors:
+    messages:
+      not_saved: 'נא תקן את השגיאות הבאות:'
   activerecord:
     errors:
       messages:
@@ -22,7 +25,7 @@
   add_teacher_form:
     code:
       label: 'הוסף מורה:'
-      placeholder: Section Code (ABCDEF)
+      placeholder: אזור קוד (אבגדהו)
     submit: הוסף מורה
   add_hint_form:
     placeholder: הכניסו בבקשה את הרמז שלכם כאן

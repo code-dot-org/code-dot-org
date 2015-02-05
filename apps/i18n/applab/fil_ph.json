@@ -19,12 +19,11 @@
   "repeatForever": "ulitin ng walang katapusan",
   "repeatDo": "gawin",
   "repeatForeverTooltip": "Ipatupad ang mga pagkilos na ito sa block ng paulit-ulit habang ang app ay tumatakbo.",
-  "shareWebappTwitter": "Tingnan ang app na ginawa ko. Sinulat ko ito sa @codeorg",
+  "shareApplabTwitter": "Tingnan ang app na ginawa ko. Sinulat ko ito sa @codeorg",
   "shareGame": "Ibahagi ang iyong app:",
   "stepIn": "Hakbang sa",
   "stepOver": "Hakbang sa paglipas ng",
   "stepOut": "Umalis",
-  "turnBlack": "gawing itim",
-  "turnBlackTooltip": "Pinapa-itim ang screen.",
+  "viewData": "View Data",
   "yes": "Oo"
 }

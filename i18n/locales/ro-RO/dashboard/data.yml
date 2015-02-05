@@ -48,7 +48,7 @@ ro:
         edit-code:
           desc: Editează codul (beta)
           MazeEC: Etapa 1
-          Webapp: Etapa 2
+          Applab: Etapa 2
           ArtistEC: Etapa 3
           StudioEC: Etapa 4
         events:
@@ -99,10 +99,12 @@ ro:
         Jigsaw: Puzzle
         MazeStep: Modul Pas Labirint
         Wordsearch: Cautare de cuvinte
-        Webapp: Webapp
+        Webapp: App Lab
         ArtistEC: Artistul
         TextMatch: Potrivire de text
         StudioEC: Laborator de Joacă
+        Applab: App Lab
+        NetSim: Internet Simulator
     trophy:
       name:
         Bronze: Bronz
@@ -242,7 +244,7 @@ ro:
         flappy_6: Verifică dacă încă mai poți înscrie un punct după ce-l faci pe Flappy să dea din aripi mai mult sau mai puțin.
         flappy_7: 'Apoi, încercaţi să schimbaţi scena prin ataşarea unui alt bloc la blocul "atunci când rulaţi".'
         flappy_8: Poți seta vizuale oricând, nu doar atunci când începe jocul. Încearcă să setezi o scenă aleatorie când alte incidente se întâmplă.
-        flappy_9: Pentru a complica lucrurile, la lovirea de un obstacol sau sol, în loc să se termine jocul încearcă stabilirea scorului înapoi la 0.
+        flappy_9: To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0.
         flappy_11: Creați-vă propriul joc Flappy. Puteţi schimba toate aspectele vizuale şi toate regulile, chiar şi gravitația. Când aţi terminat, faceţi clic pe Terminare pentru a permite prietenilor să încerce jocul pe telefoanele lor.
         flappy_k1_1: Joacă Flappy
         flappy_k1_2: 'Atașează un bloc la blocul "când clic", apoi apasă "Rulează Programul". Fă clic sau bate ușor cu degetul pe ecran ca să îl muți pe Flappy la țintă.'
@@ -322,7 +324,7 @@ ro:
         maze_wordsearch_k_15: Mișcați-mă într-un sens, apoi în celălalt ca să spun literele cuvântului DEASUPRA
         maze_wordsearch_k_16: Mișcați-mă într-un sens, apoi în celălalt ca să spun literele cuvântului DEDESUBT
         maze_wordsearch_k_20: Acesta este un test! Mișcați-mă într-un sens, apoi în celălalt ca să spun literele cuvântului POVESTE
-        webapp_ec_simple: Creați-vă propria aplicație web folosind createHtmlBlock.
+        applab_ec_simple: Create your app by using the blocks in the toolbox.
         turtle_ec_1_2: 'Acum, desenați un pătrat. Atenție: folosți culoarea favorită alegând-o din noul bloc ”penColor”.'
         turtle_ec_1_10: 'Ați reușit! Acum, desenați orice doriți. Unele idei distractive: o figură băţ, fulg de nea sau spirală. Încercați, de asemenea, noul bloc "penWidth". Distracţie plăcută!'
         studio_ec_sandbox: Creați-vă propriul joc. Când aţi terminat, faceţi clic pe Terminare pentru a permite prietenilor să vă testeze jocul pe telefoanele lor.

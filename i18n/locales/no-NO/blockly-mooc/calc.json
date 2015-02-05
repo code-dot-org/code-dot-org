@@ -1,8 +1,9 @@
 {
-  "compute":"beregn",
-  "equivalentExpression":"Prøv å endre rekkefølgen på argumentene dine for å få nøyaktig samme uttrykk.",
-  "extraTopBlocks":"Du har ledige blokker. Mente du å knytte disse til \"beregn\" blokken?",
+  "compute":"rekn ut",
+  "equivalentExpression":"Prøv å endre rekkjefylga på argumenta dine for å få nøyaktig same uttrykk.",
+  "extraTopBlocks":"Du har ledige blokker. Meinte du knyte desse til \"regn ut\"-blokka?",
+  "failedInput":"Your function does not return the right result for all values.",
   "goal":"Mål:",
-  "reinfFeedbackMsg":"Her er din historie! Fortsett å jobbe på den, eller gå videre til neste oppgave!",
-  "yourExpression":"Ditt uttrykk:"
+  "reinfFeedbackMsg":"Here is your calculation! Continue working on it, or move on to the next puzzle!",
+  "yourExpression":"Uttrykket ditt:"
 }

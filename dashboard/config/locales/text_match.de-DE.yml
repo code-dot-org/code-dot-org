@@ -16,6 +16,9 @@
         9-3+4: 
         Type the arithmetic expression here: Geben Sie hier den mathematischen Ausdruck
           ein
+        '123': '123'
+        (9-3)+4*7: (9-3)+4*7
+        9-3+4*7: 9-3+4*7
       Blocks to Math 1:
         Convert Blocks to Math: Konvertiere die Blöcke zu Mathematik
         Type out the arithmetic expression that matches this code: Geben Sie den arithmetischen
@@ -70,6 +73,7 @@
         Type the arithmetic expression here: Geben Sie hier den mathematischen Ausdruck
           ein
         Blocks to Math 5.blocks.start_blocks: Blocks to Math 5.blocks.start_blocks
+        -2 * -6: -2 * -6
       Blocks to Math 6:
         Convert Blocks to Math: Konvertiere die Blöcke zu Mathematik
         Type out the arithmetic expression that matches this code: Geben Sie den arithmetischen

@@ -288,6 +288,7 @@
     használatával.
   dashboard_students_placeholder_name: Diák neve
   dashboard_students_name: Név
+  dashboard_students_progress: Progress
   dashboard_students_age: Kor
   dashboard_students_gender: Nem
   dashboard_students_male: Férfi
@@ -345,6 +346,10 @@
   dashboard_login_picture: Kép
   dashboard_login_none: Email
   dashboard_new_password: új jelszó
+  dashboard_progress_not_completed: Nincs készen
+  dashboard_progress_completed_too_many_blocks: elkészült, túl sok a blokk
+  dashboard_progress_completed_perfect: elkészült, tökéletes
+  dashboard_progress_furthest_level_attempted: a legmagasabb szint megpróbálva
   stats_hoc_2013_heading: 'Szédületes statisztika a tavalyi Kódolás Órája programról.
     Egyetlen hét alatt:'
   stats_hoc_2013_image_alt: Statisztika a 2013-as Kódolás Órája programról
@@ -1061,8 +1066,3 @@
   sphero_beyond_longdescription: Akár oktató vagy akár szülő, az SPRK órák egy szórakoztató
     gyorstalpalót jelentenek a gyerekeknek a robotok programozásával, a matematikai
     és tudományos képzettségük fejlesztése közben.
-  dashboard_students_progress: Progress
-  dashboard_progress_not_completed: not completed
-  dashboard_progress_completed_too_many_blocks: completed, too many blocks
-  dashboard_progress_completed_perfect: completed, perfect
-  dashboard_progress_furthest_level_attempted: furthest level attempted

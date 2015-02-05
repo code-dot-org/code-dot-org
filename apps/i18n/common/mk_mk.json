@@ -51,7 +51,7 @@
   "numLinesOfCodeWritten": "Само што напиша {numLines, plural, one {1 Линија} other {# Линии}} на Кодови!",
   "play": "Пушти",
   "print": "Печати",
-  "puzzleTitle": "Загатка  {puzzle_number} на {stage_total}",
+  "puzzleTitle": "Загатка {puzzle_number} на {stage_total}",
   "repeat": "повтори",
   "resetProgram": "Од почеток ,Ресетирање",
   "runProgram": "Трчај",

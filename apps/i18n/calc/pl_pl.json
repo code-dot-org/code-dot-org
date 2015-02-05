@@ -2,6 +2,7 @@
   "compute": "Oblicz",
   "equivalentExpression": "Spróbuj zmienić kolejność argumentów, aby dostać dokładnie to samo wyrażenie.",
   "extraTopBlocks": "Masz niezałączone bloki. Czy chciałeś je dołączyć do bloku obliczeniowego?",
+  "failedInput": "Your function does not return the right result for all values.",
   "goal": "Cel:",
   "reinfFeedbackMsg": "Oto Twoja opowieść! Pracuj nadal nad nią lub przejdź do następnej zagadki!",
   "yourExpression": "Twoje wyrażenie:"

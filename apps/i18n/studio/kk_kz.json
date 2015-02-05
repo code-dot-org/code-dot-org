@@ -285,5 +285,18 @@
   "whenSpriteCollidedWithTopEdge": "touches top edge",
   "whenUp": "when up arrow",
   "whenUpTooltip": "Execute the actions below when the up arrow key is pressed.",
-  "yes": "Yes"
+  "yes": "Yes",
+  "projectileCherry": "cherry",
+  "projectileIce": "ice",
+  "projectileDuck": "duck",
+  "saySpriteChoices_1": "Hi there!",
+  "saySpriteChoices_2": "How are you?",
+  "saySpriteChoices_3": "This is fun...",
+  "setBackgroundLeafy": "set leafy background",
+  "setBackgroundGrassy": "set grassy background",
+  "setBackgroundFlower": "set flower background",
+  "setBackgroundTile": "set tile background",
+  "setBackgroundIcy": "set icy background",
+  "setBackgroundSnowy": "set snowy background",
+  "startSetValue": "start (rocket-height function)"
 }

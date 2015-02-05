@@ -1,4 +1,7 @@
 ja:
+  errors:
+    messages:
+      not_saved: 'Please correct the following errors:'
   activerecord:
     errors:
       messages:
@@ -21,7 +24,7 @@ ja:
   welcome_back: 'Welcome Back, %{name}'
   add_teacher_form:
     code:
-      label: 'Add a teacher:'
+      label: 先生を追加：
       placeholder: Section Code (ABCDEF)
     submit: 先生を追加
   add_hint_form:
@@ -61,7 +64,7 @@ ja:
     need_unlock: ロック解除用のEメールが届いていない
   signup_form:
     overview_student: '登録することで、あなた自身の進み具合を管理できるようになります。あなたのメールアドレスは、主にパスワードを忘れた際、パスワードを再設定するために使用します。もっと詳しいことが知りたいかたは、<a href="http://code.org/privacy">個人情報の取扱いについて</a>をご覧ください。'
-    overview_teacher: "Teach computer science in your classroom by signing up for an account.<p/> You'll be able to add your students and track their progress."
+    overview_teacher: 'サインアップすることで、コンピューターサイエンスを教えることができます。<p/>あなたの生徒を追加することで、あなたは彼らの進捗状況を管理することができます。'
     no_signup_message: '<a target="_blank"href="http://learn.code.org"> いろいろなステージとパズルを見られます。</a>あなたの進捗状況を保存するためにはサインアップしてください'
     teacher_educator_guide: 教育者のガイドを参照する
     teacher_pitch: 先生としてCode.orgに登録する
@@ -83,9 +86,9 @@ ja:
     valid_password: 有効なパスワード ！
     invalid_password: 'パスワードを%d文字以上で入力'
     mismatch_password: 入力した 2 つのパスワードが一致しません
-    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/>For users under 13, email addresses are not stored in a form that allows us to contact them."
-    teacher_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>."
-    additional_information: We need some additional information to continue signing you up.
+    student_terms: "Code.org <a href='http://code.org/tos'> サービス利用規約</a>を守ることに同意します。もしあなたが13歳より年下なら、保護者(ほごしゃ) の方に確認をもらって Code.org のサービスを使用します。あなたが13歳より年下なら、あなたのメールアドレスはこちらからの連絡に使われることはありません。"
+    teacher_terms: "Code.org <a href='http://code.org/tos'> サービス利用規約</a> を守ることに同意します。"
+    additional_information: サインアップを続けるために、私たちはさらにいくつかの情報が必要です。
   signin_form:
     title: すでにアカウントをお持ちですか？サインイン
     login: メールまたはユーザー名
@@ -99,8 +102,8 @@ ja:
   signinsection:
     welcome: '%{section_name} へようこそ！'
     name: 名前を選ぶ
-    picture: Now find your secret picture
-    words: Now enter your secret words
+    picture: あなたの秘密の画像を見つけてください
+    words: あなたの秘密の言葉を入力してください
     login: ログイン
   password:
     reset_form:
@@ -133,7 +136,7 @@ ja:
       no_teacher: "'%{teacher_email_or_code}'を使用してサインインした人を見つけられませんでした。ここでサインアップして、もう一度追加してください"
       section_not_found: "'%{section_code}' というセクションはありません"
       blank_code: セクションのコードを入力してください
-      cant_join_own_section: "Sorry, you can't join your own section."
+      cant_join_own_section: 申し訳ありません。あなたはログインすることができません。
     mail:
       invite_student:
         subject: '%{teacher_name} のクラスを Code.org で参加 ！%{teacher_name}'
@@ -150,7 +153,7 @@ ja:
     code: 'コード:'
     redeem_header: 'To redeem:'
     donorschoose_register: DonorsChoose.orgに教師として登録
-    donorschoose_project: Post a project
+    donorschoose_project: プロジェクトを投稿
     donorschoose_how_to: あなたのコードを使用する方法
     success: あなたの賞金は獲得できました。下のコードを参照する
     error: あなたの賞金は償還できませんでした、もう一度やり直す
@@ -167,7 +170,7 @@ ja:
       msg: '%{prize_name} 賞金を本当に請求してもいいですか？'
       msg_student: '注: 賞品は、 1 つの種類のみを選択できます'
       msg_publicschool: 米国公立学校の教師であることを証明してください
-      msg_visit_website: Visit website
+      msg_visit_website: ウェブサイト
     providers:
       apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
@@ -242,27 +245,27 @@ ja:
       remove: この教師を削除してもよろしいですか。
     tools: 先生向けのツール
     followers:
-      section: 'Section:'
+      section: セクション：
       stages: 'Stage(s) to display:'
-      show_past: 'Show student activity (%{bullet_html}) in the past:'
+      show_past: '過去の生徒の活動 (%{bullet_html}) を表示：'
       levels_key: Levels key
-      perfect: Completed, perfect
+      perfect: 完了
       completed: 完了しましたが、ブロックを使いすぎです
-      tried: Tried, but not completed
-      not_tried: Not tried yet
-      activity: 'Indicates student activity in the last %{hours} %{plural}'
-      no_section: No assigned section
+      tried: 未完了
+      not_tried: 未実施
+      activity: '過去 %{hours} %{plural} 時間の生徒の活動を指摘：'
+      no_section: 割り当てられたセクションはありません
       trophies: トロフィー
     students:
       name: 名前
       username: ユーザー名
       password: パスワード
       manage: 生徒の管理
-      dashboard: Go to Teacher Dashboard
+      dashboard: 先生用のダッシュボードへ
       add: 生徒を追加する
-      remove: remove student
-      confirm_remove: Are you sure you want to remove this student?
-      help_reassign: To divide your class into multiple sections, select students to assign to a new section.
+      remove: 生徒のデータを削除
+      confirm_remove: この生徒のデータを削除してもよろしいですか？
+      help_reassign: クラスをセクションに分割し、生徒を新しいセクションに割り当てます。
       help_register: Instead of making you spend a lot of time individually importing student data, you can set up your class quickly by asking them to signup. Your students will need to choose usernames and passwords, but they WILL NOT be required to provide an email address. If a student forgets their password, you will be able to reset it for them.
       register: 生徒が自分で登録するよう促してください
       vist: Ask your students to visit

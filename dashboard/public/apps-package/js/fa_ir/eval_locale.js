@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -164,7 +164,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "rectangleBlockTitle":function(d){return "مستطیل (عرض، ارتفاع، سبک، رنگ)"},
 "reinfFeedbackMsg":function(d){return "تو می توانی دکمه \"دوباره امتحان کن\" را فشار دهی تا نقاشیت را  ویرایش کنید."},
 "rotateImageBlockTitle":function(d){return "چرخش (درجه، تصویر)"},
-"scaleImageBlockTitle":function(d){return "مقیاس (فاکتور)"},
+"scaleImageBlockTitle":function(d){return "مقیاس (عامل، تصویر)"},
 "squareBlockTitle":function(d){return "مربع (اندازه، سبک، رنگ)"},
 "starBlockTitle":function(d){return "ستاره (شعاع، سبک، رنگ)"},
 "radialStarBlockTitle":function(d){return "ستاره شعاعی (نقاط، درونی، بیرونی، سبک، رنگ)"},

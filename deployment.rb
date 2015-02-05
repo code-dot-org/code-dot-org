@@ -41,9 +41,10 @@ def load_configuration()
 
   {
     'app_servers'                 => {},
-    'build_apps'               => false,
+    'build_apps'                  => false,
     'build_blockly_core'          => false,
     'build_dashboard'             => true,
+    'build_jupiter'               => false,
     'build_pegasus'               => true,
     'dashboard_db_name'           => "dashboard_#{rack_env}",
     'dashboard_devise_pepper'     => 'not a pepper!',
@@ -57,16 +58,21 @@ def load_configuration()
     'db_writer'                   => 'mysql://root@localhost/',
     'hip_chat_log_room'           => rack_env.to_s,
     'hip_chat_logging'            => false,
+    'jupiter_database'            => "mysql2://root@localhost/jupiter_#{rack_env}",
+    'jupiter_database_logging'    => rack_env == :development,
+    'jupiter_database_reader'     => nil,
+    'jupiter_port'                => 3000,
+    'jupiter_workers'             => 4,
     'home_dir'                    => File.expand_path('~'),
     'languages'                   => load_languages(File.join(root_dir, 'pegasus', 'data', 'cdo-languages.csv')),
-    'localize_apps'            => false,
+    'localize_apps'               => false,
     'name'                        => hostname,
     'npm_use_sudo'                => ((rack_env != :development) && OS.linux?),
     'pegasus_db_name'             => rack_env == :production ? 'pegasus' : "pegasus_#{rack_env}",
     'pegasus_honeybadger_api_key' =>'00000000',
     'pegasus_port'                => 3000,
     'pegasus_unicorn_name'        => 'pegasus',
-    'pegasus_workers'             => 4,
+    'pegasus_workers'             => 8,
     'poste_host'                  => 'localhost.code.org:3000',
     'poste_secret'                => 'not a real secret',
     'rack_env'                    => rack_env,
@@ -90,6 +96,7 @@ def load_configuration()
     config.merge! local_config
 
     config['apps_api_secret']     ||= config['poste_secret']
+    config['jupiter_session_secret'] ||= config['poste_secret']
     config['daemon']              ||= [:development, :levelbuilder, :staging, :test].include?(rack_env) || config['name'] == 'daemon'
     config['dashboard_db_reader'] ||= config['db_reader'] + config['dashboard_db_name']
     config['dashboard_db_writer'] ||= config['db_writer'] + config['dashboard_db_name']
@@ -209,6 +216,10 @@ end
 
 def home_dir(*paths)
   File.join(CDO.home_dir, *paths)
+end
+
+def jupiter_dir(*paths)
+  deploy_dir('jupiter', *paths)
 end
 
 def pegasus_dir(*paths)

@@ -294,19 +294,19 @@ es-AR:
           Special: Especial
           Binary: Binario
         usabilitymsm:
-          Usability testing for MSM: Usability testing for MSM
-          Evaluation Blocks: Evaluation Blocks
+          Usability testing for MSM: Pruebas de usabilidad para MSM
+          Evaluation Blocks: Bloques de evaluación
           Blocks to Math: Bloques para matemáticas
-          Strings and Images: Strings and Images
-          Defining Variables: Defining Variables
-          Defining Functions: Defining Functions
-          Design Recipe: Design Recipe
+          Strings and Images: Cadenas de texto e imágenes
+          Defining Variables: Definición de Variables
+          Defining Functions: Definición de funciones
+          Design Recipe: Receta de diseño
           Booleans: Valores booleanos
           Conditionals: Condicionales
-          Free Play: Free Play
+          Free Play: Juego libre
         algebra:
-          title: Computer Science in Algebra
-          description: Learn Functional Programming through Algebra
+          title: Ciencias de la computación en álgebra
+          description: Aprender programación funcional a través del álgebra
           "Unplugged: Video Games and Coordinate Planes": 'Desconectado: videojuegos y planos de coordenadas'
           "Calc: Evaluation Blocks": 'Calc: Bloques de evaluación'
           "Eval: Strings and Images": 'Eval: Cadenas e imágenes'
@@ -314,10 +314,10 @@ es-AR:
           "Eval: Writing Contracts": 'Eval: Redacción de contratos'
           "Calc: Defining Variables": 'Calc: Definiendo Variables'
           "Play Lab: Defining Variables (Big Game)": 'Laboratorio de juegos: Definición de Variables (Big Game)'
-          "Eval: Defining Functions": 'Eval: Defining Functions'
+          "Eval: Defining Functions": 'Eval: Definición de funciones'
           "Unplugged: The Design Recipe": 'Desconectado: La receta de diseño'
-          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
-          "Eval: Functions": 'Eval: Functions'
+          "Play Lab: Defining Functions": 'Laboratorio de juegos: Definiendo funciones'
+          "Eval: Functions": 'Evaluación: funciones'
           "Play Lab: Animation (Big Game)": 'Laboratorio de juegos: Animación (Big Game)'
           "Unplugged: Booleans": 'Desconectado: Booleanos'
           "Eval: Boolean Operators": 'Eval: Operadores booleanos'
@@ -327,3 +327,28 @@ es-AR:
           "Eval: Conditionals": 'Eval: condicionales'
           "Unplugged: Collision Detection and the Distance Formula": 'Desconectado: Detección de colisiones y la fórmula de distancia'
           "Play Lab: Collision Detection (Big Game)": 'Laboratorio de juegos: Detección de colisiones (Big Game)'
+        infinity:
+          title: Laboratorio de Juegos
+          description_short: ¡Crea una historia o haz un juego con Laboratorio de Juegos!
+          description: ¡Crea una historia o haz un juego con Laboratorio de Juegos!
+          Play Lab: Laboratorio de Juegos
+        algebrademo:
+          description: Un puñado de puzzles para demostrar el entorno y el lenguaje de programación utilizado en Code.org CS en Álgebra
+          Algebra Demo: Demo de álgebra
+          Evaluation Blocks: Bloques de evaluación
+          Making Pictures: Making Pictures
+          Defining Variables: Definición de Variables
+          Defining Simple Functions: Definiendo funciones simples
+          The Design Recipe: La receta de diseño
+        K5PD:
+          Introduction to PD: Introducción al DP
+        netsim:
+          title: Internet Simulator
+          description_short: ""
+          description: ""
+          Internet Simulator: Internet Simulator
+        Infinity:
+          title: Infinity Playlab
+          description_short: Create a story or make a game with Infinity Play Lab!!
+          description: Create a story or make a game with Infinity Play Lab!
+          Infinity: Infinito

@@ -48,7 +48,7 @@ fi:
         edit-code:
           desc: Muokkaa koodia (beta)
           MazeEC: Vaihe 1
-          Webapp: Vaihe 2
+          Applab: Vaihe 2
           ArtistEC: Vaihe 3
           StudioEC: Vaihe 4
         events:
@@ -99,10 +99,12 @@ fi:
         Jigsaw: Palapeli
         MazeStep: Sokkelo askeltila
         Wordsearch: Sanaetsintä
-        Webapp: Verkkosovellus
+        Webapp: App Lab
         ArtistEC: Taiteilija
         TextMatch: Tekstin yhdistäminen
         StudioEC: Pelilabra
+        Applab: App Lab
+        NetSim: Internet Simulator
     trophy:
       name:
         Bronze: Pronssi
@@ -244,7 +246,7 @@ fi:
         flappy_6: Kokeile, pystytkö vielä saamaan pisteitä, jos laitat Flappyn räpyttelemään pienemmän tai suuremman määrän.
         flappy_7: 'Seuraavaksi, kokeile muuttaa taustakuvaa liittämällä toinen lohko "suoritettaessa"-lohko.'
         flappy_8: Voit asettaa ulkoasuun liittyvät asiat koska tahansa, ei vain pelin käynnistyessä. Kokeile asettaa SATUNNAINEN kohtaus kun muita tapahtumia tapahtuu, esim. kun ohitat esteen.
-        flappy_9: Sotketaanpa asioita vähän. Kun törmäät esteeseen tai maahan, vaihda peli nollaamaan pisteet pelin lopettamisen sijaan.
+        flappy_9: To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0.
         flappy_11: Luo oma Flappy-pelisi. Voit muuttaa kaikkia ulkoasuun ja sääntöihin liittyviä asioita, myös painovoimaa. Kun olet valmis, napsauta Valmis antaaksesi ystäviesi kokeilla peliäsi heidän puhelimissaan.
         flappy_k1_1: Pelaa Flappy-peliä
         flappy_k1_2: 'Liitä lohko "napsautuksella"-lohkoon ja paina "Suorita". Napsauta ruutua siirtääksesi Flappy maaliin.'
@@ -324,7 +326,7 @@ fi:
         maze_wordsearch_k_15: Liikuta minua yhteen suuntaan, sitten toiseen suuntaan ja kirjoita sana ABOVE (yläpuolella suomeksi)
         maze_wordsearch_k_16: Liikuta minua yhteen suuntaan, sitten toiseen suuntaan ja kirjoita sana BELOW (alla suomeksi)
         maze_wordsearch_k_20: Tämä on kokeilu! Liikuta minua yhteen suuntaan, sitten toiseen suuntaan ja kirjoita sana STORY (tarina suomeksi)
-        webapp_ec_simple: Luo verkkosovelluksesi käyttäen createHtmlBlock:ia.
+        applab_ec_simple: Create your app by using the blocks in the toolbox.
         turtle_ec_1_2: 'Piirrä nyt neliö. Huomautus: käytä suosikkiväriäsi valitsemalla se "kynän väri" lohkolla.'
         turtle_ec_1_10: 'Teit sen! Nyt voit piirtää mitä haluat. Joitakin hauskoja ideoita: tikku-ukko, lumihiutale tai kierre. Kokeile myös uutta "penWidth" lohkoa. Pidä hauskaa!'
         studio_ec_sandbox: 'Luo oma pelisi.  Kun olet valmis, napsauta Valmis, niin voit antaa ystäviesikin kokeilla tarinaasi puhelimissaan.'

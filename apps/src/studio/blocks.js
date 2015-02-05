@@ -1502,7 +1502,14 @@ exports.install = function(blockly, blockInstallOptions) {
         this.appendDummyInput()
           .appendTitle(msg.saySprite());
       }
-      if (options.params) {
+      if (options.restrictedDialog) {
+        var dropdown = new blockly.FieldDropdown(
+          [[msg.saySpriteChoices_1(), msg.saySpriteChoices_1()],
+           [msg.saySpriteChoices_2(), msg.saySpriteChoices_2()],
+           [msg.saySpriteChoices_3(), msg.saySpriteChoices_3()]]);
+        this.appendDummyInput().appendTitle(dropdown, 'VALUE');
+      }
+      else if (options.params) {
         this.appendValueInput('TEXT');
       } else {
         var quotedTextInput = this.appendDummyInput();
@@ -1529,6 +1536,7 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   blockly.Blocks.studio_saySprite = initSayBlock({});
+  blockly.Blocks.studio_saySpriteChoices = initSayBlock({'restrictedDialog': true});
   blockly.Blocks.studio_saySpriteParams = initSayBlock({'params': true});
   blockly.Blocks.studio_saySpriteParamsTime = initSayBlock({'params': true, 'time': true});
 
@@ -1538,6 +1546,14 @@ exports.install = function(blockly, blockInstallOptions) {
                '\', ' +
                (this.getTitleValue('SPRITE') || '0') + ', ' +
                blockly.JavaScript.quote_(this.getTitleValue('TEXT')) + ');\n';
+  };
+
+  generator.studio_saySpriteChoices = function() {
+    // Generate JavaScript for saying (choices version).
+    return 'Studio.saySprite(\'block_id_' + this.id +
+               '\', ' +
+               (this.getTitleValue('SPRITE') || '0') + ', \'' +
+               this.getTitles()[1].getValue() + '\');\n';
   };
 
   generator.studio_saySpriteParams = function() {
@@ -1633,6 +1649,51 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   generator.functional_start_setValue = function() {
+    // For the current design, this doesn't need to generate any code.
+    // Though we pass in a function, we're not actually using that passed in
+    // function, and instead depend on a function of the required name existing
+    // in the global space. This may change in the future.
+  };
+
+  blockly.Blocks.functional_start_setVars = {
+    init: function() {
+      var blockName = msg.startSetVars();
+      var blockType = 'none';
+      var blockArgs = [
+        {name: 'TITLE', type: 'function'},
+        {name: 'SUBTITLE', type: 'function'},
+        {name: 'BACKGROUND', type: 'function'},
+        {name: 'TARGET', type: 'function'},
+        {name: 'DANGER', type: 'function'},
+        {name: 'PLAYER', type: 'function'}
+      ];
+      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+    }
+  };
+
+  generator.functional_start_setVars = function() {
+    // For the current design, this doesn't need to generate any code.
+    // Though we pass in a function, we're not actually using that passed in
+    // function, and instead depend on a function of the required name existing
+    // in the global space. This may change in the future.
+  };
+
+  blockly.Blocks.functional_start_setFuncs = {
+    init: function() {
+      var blockName = msg.startSetVars();
+      var blockType = 'none';
+      var blockArgs = [
+        {name: 'update-target', type: 'function'},
+        {name: 'update-danger', type: 'function'},
+        {name: 'update-player', type: 'function'},
+        {name: 'collide?', type: 'function'},
+        {name: 'on-screen?', type: 'function'}
+      ];
+      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+    }
+  };
+
+  generator.functional_start_setFuncs = function() {
     // For the current design, this doesn't need to generate any code.
     // Though we pass in a function, we're not actually using that passed in
     // function, and instead depend on a function of the required name existing

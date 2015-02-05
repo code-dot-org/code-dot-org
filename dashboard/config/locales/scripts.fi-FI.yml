@@ -153,7 +153,7 @@
           Unit 1: Yksikkö 1
           Unit 2: Yksikkö 2
           Ninja Cat and the Coordinate Plane: Ninjakissa ja koordinaattiavaruus
-          'Calc: Circles of Evaluation': 'Calc: Arvioinnin ympyrät'
+          'Calc: Circles of Evaluation': Calc:Ratkaisumallit
           'Artist: Strings and Images': 'Taiteilija: Merkkijonot ja kuvat'
           Contracts: Sopimukset
           'Artist: Writing Contracts': 'Taiteilija: sopimusten kirjoittaminen'
@@ -328,19 +328,20 @@
           Special: Erikoistoiminnot
           Binary: Binääri
         usabilitymsm:
-          Usability testing for MSM: Usability testing for MSM
-          Evaluation Blocks: Evaluation Blocks
+          Usability testing for MSM: Käytettävyystestaus MSM (keskikoulun matikkaa)
+            varten
+          Evaluation Blocks: Arviointi lohkot
           Blocks to Math: Matematiikkalohkot
-          Strings and Images: Strings and Images
-          Defining Variables: Defining Variables
-          Defining Functions: Defining Functions
-          Design Recipe: Design Recipe
+          Strings and Images: Merkkijonoja ja kuvia
+          Defining Variables: Määritellään muuttujat
+          Defining Functions: Funktioiden määrittely
+          Design Recipe: Suunnittele resepti
           Booleans: Totuusarvot
           Conditionals: Ehtolausekkeet
-          Free Play: Free Play
+          Free Play: Ilmainen peli
         algebra:
-          title: Computer Science in Algebra
-          description: Learn Functional Programming through Algebra
+          title: Tietotekniikkaa algebraan
+          description: Opi funktionaalista ohjelmointia algebran avulla
           'Unplugged: Video Games and Coordinate Planes': 'Tietokoneeton tekeminen:
             videopelit ja koordinaattitasot'
           'Calc: Evaluation Blocks': 'Calc: laskentalohkot'
@@ -350,10 +351,10 @@
           'Calc: Defining Variables': 'Calc: muuttujien määrittely'
           'Play Lab: Defining Variables (Big Game)': 'Pelilabra: muuttujien määrittely
             (Big Game)'
-          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Eval: Defining Functions': 'Eval: Funktioiden määrittely'
           'Unplugged: The Design Recipe': 'Tietokoneeton tekeminen: suunnitteluresepti'
-          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
-          'Eval: Functions': 'Eval: Functions'
+          'Play Lab: Defining Functions': 'Pelilabra: Funktioiden määrittely'
+          'Eval: Functions': 'Eval: Funktiot'
           'Play Lab: Animation (Big Game)': 'Pelilabra: Animaatio (Iso Peli)'
           'Unplugged: Booleans': 'TIetokoneeton tekeminen: totuusarvot'
           'Eval: Boolean Operators': 'Eval: totuusarvo-operaattorit'
@@ -366,3 +367,29 @@
             tekeminen: törmäyksen havaitseminen ja etäisyyskaava'
           'Play Lab: Collision Detection (Big Game)': 'Pelilabra: Törmäyksen tunnistaminen
             (Iso Peli)'
+        infinity:
+          title: Pelilabra
+          description_short: Suunnittele ja luo oma tarina tai peli Pelilabrassa!
+          description: Suunnittele ja luo oma tarina tai peli Pelilabrassa!
+          Play Lab: Pelilabra
+        algebrademo:
+          description: Kourallinen palapelejä esittämään ympäristöä ja ohjelmointikieltä,
+            jota käytetään algebran Code.org CS :ssä
+          Algebra Demo: Algebran esittely
+          Evaluation Blocks: Arviointi lohkot
+          Making Pictures: Kuvia tekemässä
+          Defining Variables: Määritellään muuttujat
+          Defining Simple Functions: Yksinkertaisten funktioiden määrittely
+          The Design Recipe: Suunnitteluresepti
+        K5PD:
+          Introduction to PD: Johdatus PD:hen (ammattitason kehittelyyn)
+        netsim:
+          title: Internet Simulator
+          description_short: ''
+          description: ''
+          Internet Simulator: Internet Simulator
+        Infinity:
+          title: Infinity Pelilabra
+          description_short: Luo tarina tai tee peli Infinity Peli Labrassa!!
+          description: Luo tarina tai tee peli Infinity Peli Labrassa!
+          Infinity: Ääretön

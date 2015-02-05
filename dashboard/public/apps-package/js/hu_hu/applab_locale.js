@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -44,13 +44,13 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "catActions":function(d){return "Műveletek"},
-"catControl":function(d){return "Ciklusok"},
+"catControl":function(d){return "hurkok"},
 "catEvents":function(d){return "Események"},
 "catLogic":function(d){return "Logika"},
 "catMath":function(d){return "Matematika"},
-"catProcedures":function(d){return "Függvények"},
+"catProcedures":function(d){return "funkciók"},
 "catText":function(d){return "szöveg"},
-"catVariables":function(d){return "Változók"},
+"catVariables":function(d){return "változók"},
 "continue":function(d){return "Tovább"},
 "createHtmlBlock":function(d){return "html blokk készítése"},
 "createHtmlBlockTooltip":function(d){return "HTML-ből álló blokkot készít az app-ban."},
@@ -63,11 +63,10 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "repeatForever":function(d){return "végtelen ismétlés"},
 "repeatDo":function(d){return "csináld"},
 "repeatForeverTooltip":function(d){return "A műveletek ismételt végrehajtása ebben a blokkban amíg az app fut."},
-"shareWebappTwitter":function(d){return "Nézd meg az appot amit csináltam. Magam írtam a code.org felületén"},
+"shareApplabTwitter":function(d){return "Nézd meg az appot amit csináltam. Magam írtam a code.org felületén"},
 "shareGame":function(d){return "App megosztása:"},
 "stepIn":function(d){return "Belépés"},
 "stepOver":function(d){return "Átlépés"},
 "stepOut":function(d){return "Kilépés"},
-"turnBlack":function(d){return "elsötétít"},
-"turnBlackTooltip":function(d){return "Elsötétíti a képernyőt."},
+"viewData":function(d){return "View Data"},
 "yes":function(d){return "Igen"}};
