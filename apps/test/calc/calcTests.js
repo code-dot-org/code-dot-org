@@ -17,15 +17,15 @@ describe('evaluateResults_/evaluateFunction_', function () {
     // f(x, y) = x + y
     // f(2, 2)
     var targetSet = new EquationSet();
-    targetSet.addEquation_(new Equation('f(x,y)', new ExpressionNode('+', ['x', 'y'])));
-    targetSet.addEquation_(new Equation(null, new ExpressionNode('f', [1,2])));
+    targetSet.addEquation_(new Equation('f', ['x','y'], new ExpressionNode('+', ['x', 'y'])));
+    targetSet.addEquation_(new Equation(null, [], new ExpressionNode('f', [1,2])));
 
 
     // f(x) = x + x
     // f(2)
     var userSet = new EquationSet();
-    userSet.addEquation_(new Equation('f(x)', new ExpressionNode('+', ['x', 'x'])));
-    userSet.addEquation_(new Equation(null, new ExpressionNode('f', [2])));
+    userSet.addEquation_(new Equation('f', ['x'], new ExpressionNode('+', ['x', 'x'])));
+    userSet.addEquation_(new Equation(null, [], new ExpressionNode('f', [2])));
 
     var outcome = Calc.evaluateFunction_(targetSet, userSet);
     assert.equal(outcome.result, ResultType.FAILURE);
@@ -42,14 +42,14 @@ describe('evaluateResults_/evaluateFunction_', function () {
     // f(x) = x + 1
     // f(2)
     var targetSet = new EquationSet();
-    targetSet.addEquation_(new Equation('f(x)', new ExpressionNode('+', ['x', 1])));
-    targetSet.addEquation_(new Equation(null, new ExpressionNode('f', [2])));
+    targetSet.addEquation_(new Equation('f', ['x'], new ExpressionNode('+', ['x', 1])));
+    targetSet.addEquation_(new Equation(null, [], new ExpressionNode('f', [2])));
 
     // f(x) = x + 2
     // f(2)
     var userSet = new EquationSet();
-    userSet.addEquation_(new Equation('f(x)', new ExpressionNode('+', ['x', 2])));
-    userSet.addEquation_(new Equation(null, new ExpressionNode('f', [2])));
+    userSet.addEquation_(new Equation('f', ['x'], new ExpressionNode('+', ['x', 2])));
+    userSet.addEquation_(new Equation(null, [], new ExpressionNode('f', [2])));
 
     var outcome = Calc.evaluateFunction_(targetSet, userSet);
     assert.equal(outcome.result, ResultType.FAILURE);
@@ -62,19 +62,19 @@ describe('evaluateResults_/evaluateFunction_', function () {
     assert.deepEqual(outcome, otherOutcome);
   });
 
-  // TODO - figure out locale stuff in calc
+  // currently disabled until i figure out locale stuff in calc
   // it('fails when evaluate is different for non-compute inputs', function () {
   //   // f(x) = x + 1
   //   // f(2)
   //   var targetSet = new EquationSet();
-  //   targetSet.addEquation_(new Equation('f(x)', new ExpressionNode('+', ['x', 1])));
-  //   targetSet.addEquation_(new Equation(null, new ExpressionNode('f', [2])));
+  //   targetSet.addEquation_(new Equation('f', ['x'], new ExpressionNode('+', ['x', 1])));
+  //   targetSet.addEquation_(new Equation(null, [], new ExpressionNode('f', [2])));
   //
   //   // f(x) = 3
   //   // f(2)
   //   var userSet = new EquationSet();
-  //   userSet.addEquation_(new Equation('f(x)', new ExpressionNode(3)));
-  //   userSet.addEquation_(new Equation(null, new ExpressionNode('f', [2])));
+  //   userSet.addEquation_(new Equation('f', ['x'], new ExpressionNode(3)));
+  //   userSet.addEquation_(new Equation(null, [], new ExpressionNode('f', [2])));
   //
   //   debugger;
   //   var outcome = Calc.evaluateFunction_(targetSet, userSet);
@@ -88,16 +88,16 @@ describe('evaluateResults_/evaluateFunction_', function () {
     // f(x) = x + 1
     // f(2)
     var targetSet = new EquationSet();
-    targetSet.addEquation_(new Equation('f(x)', new ExpressionNode('+', ['x', 1])));
-    targetSet.addEquation_(new Equation(null, new ExpressionNode('f', [2])));
+    targetSet.addEquation_(new Equation('f', ['x'], new ExpressionNode('+', ['x', 1])));
+    targetSet.addEquation_(new Equation(null, [], new ExpressionNode('f', [2])));
 
     // f(x) = x = 1
     // yvar = 1
     // f(2)
     var userSet = new EquationSet();
-    userSet.addEquation_(new Equation('f(x)', new ExpressionNode('+', ['x', 1])));
-    userSet.addEquation_(new Equation('yvar', new ExpressionNode(1)));
-    userSet.addEquation_(new Equation(null, new ExpressionNode('f', [2])));
+    userSet.addEquation_(new Equation('f', ['x'], new ExpressionNode('+', ['x', 1])));
+    userSet.addEquation_(new Equation('yvar', [], new ExpressionNode(1)));
+    userSet.addEquation_(new Equation(null, [], new ExpressionNode('f', [2])));
 
     var outcome = Calc.evaluateFunction_(targetSet, userSet);
     assert.equal(outcome.result, ResultType.FAILURE);
@@ -110,17 +110,16 @@ describe('evaluateResults_/evaluateFunction_', function () {
     assert.deepEqual(outcome, otherOutcome);
   });
 
-  // TODO (brent)- i think we want a more integration level test for this scenario too
   it('fails when target is simple expression and userSet hasSingleFunction', function () {
     // compute: 1 + 2
     var targetSet = new EquationSet();
-    targetSet.addEquation_(new Equation(null, new ExpressionNode('+', [1, 2])));
+    targetSet.addEquation_(new Equation(null, [], new ExpressionNode('+', [1, 2])));
 
     // f(x) = x
     // compute: f(3)
     var userSet = new EquationSet();
-    userSet.addEquation_(new Equation('f(x)', new ExpressionNode('x')));
-    userSet.addEquation_(new Equation(null, new ExpressionNode('f', [3])));
+    userSet.addEquation_(new Equation('f', ['x'], new ExpressionNode('x')));
+    userSet.addEquation_(new Equation(null, [], new ExpressionNode('f', [3])));
 
     var outcome = Calc.evaluateResults_(targetSet, userSet);
     assert.equal(outcome.result, ResultType.FAILURE);
@@ -129,15 +128,14 @@ describe('evaluateResults_/evaluateFunction_', function () {
     assert.equal(outcome.failedInput, null);
   });
 
-  // TODO (brent)- i think we want a more integration level test for this scenario too
   it('fails when target hasVariablesOrFunctions and user does not', function () {
     // x = 1
     // y = 2
     // compute: x + y
     var targetSet = new EquationSet();
-    targetSet.addEquation_(new Equation('x', new ExpressionNode(1)));
-    targetSet.addEquation_(new Equation('y', new ExpressionNode(2)));
-    targetSet.addEquation_(new Equation(null, new ExpressionNode('+', ['x', 'y'])));
+    targetSet.addEquation_(new Equation('x', [], new ExpressionNode(1)));
+    targetSet.addEquation_(new Equation('y', [], new ExpressionNode(2)));
+    targetSet.addEquation_(new Equation(null, [], new ExpressionNode('+', ['x', 'y'])));
 
     // compute: 1 + 2
     var userSet = new EquationSet();
@@ -155,17 +153,17 @@ describe('evaluateResults_/evaluateFunction_', function () {
     // y = x + 1
     // compute: y
     var targetSet = new EquationSet();
-    targetSet.addEquation_(new Equation('x', new ExpressionNode(1)));
-    targetSet.addEquation_(new Equation('y', new ExpressionNode('+', ['x', 1])));
-    targetSet.addEquation_(new Equation(null, new ExpressionNode('y')));
+    targetSet.addEquation_(new Equation('x', [], new ExpressionNode(1)));
+    targetSet.addEquation_(new Equation('y', [], new ExpressionNode('+', ['x', 1])));
+    targetSet.addEquation_(new Equation(null, [], new ExpressionNode('y')));
 
     // x = 1
     // y = x + 1
     // compute: y
     var userSet = new EquationSet();
-    userSet.addEquation_(new Equation('x', new ExpressionNode(1)));
-    userSet.addEquation_(new Equation('y', new ExpressionNode('+', ['x', 1])));
-    userSet.addEquation_(new Equation(null, new ExpressionNode('y')));
+    userSet.addEquation_(new Equation('x', [], new ExpressionNode(1)));
+    userSet.addEquation_(new Equation('y', [], new ExpressionNode('+', ['x', 1])));
+    userSet.addEquation_(new Equation(null, [], new ExpressionNode('y')));
 
     var outcome = Calc.evaluateResults_(targetSet, userSet);
     assert.equal(outcome.result, ResultType.SUCCESS);
@@ -179,17 +177,17 @@ describe('evaluateResults_/evaluateFunction_', function () {
     // y = x + 1
     // compute: y
     var targetSet = new EquationSet();
-    targetSet.addEquation_(new Equation('x', new ExpressionNode(1)));
-    targetSet.addEquation_(new Equation('y', new ExpressionNode('+', ['x', 1])));
-    targetSet.addEquation_(new Equation(null, new ExpressionNode('y')));
+    targetSet.addEquation_(new Equation('x', [], new ExpressionNode(1)));
+    targetSet.addEquation_(new Equation('y', [], new ExpressionNode('+', ['x', 1])));
+    targetSet.addEquation_(new Equation(null, [], new ExpressionNode('y')));
 
     // x = 1
     // y = x + 2
     // compute: y
     var userSet = new EquationSet();
-    userSet.addEquation_(new Equation('x', new ExpressionNode(1)));
-    userSet.addEquation_(new Equation('y', new ExpressionNode('+', ['x', 2])));
-    userSet.addEquation_(new Equation(null, new ExpressionNode('y')));
+    userSet.addEquation_(new Equation('x', [], new ExpressionNode(1)));
+    userSet.addEquation_(new Equation('y', [], new ExpressionNode('+', ['x', 2])));
+    userSet.addEquation_(new Equation(null, [], new ExpressionNode('y')));
 
     var outcome = Calc.evaluateResults_(targetSet, userSet);
     assert.equal(outcome.result, ResultType.FAILURE);

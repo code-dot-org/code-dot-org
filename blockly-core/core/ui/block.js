@@ -650,9 +650,9 @@ Blockly.Block.prototype.showHelp_ = function() {
  */
 Blockly.Block.prototype.duplicate_ = function() {
   // Create a duplicate via XML.
-  var xmlBlock = Blockly.Xml.blockToDom_(this);
+  var xmlBlock = Blockly.Xml.blockToDom(this);
   Blockly.Xml.deleteNext(xmlBlock);
-  var newBlock = Blockly.Xml.domToBlock_(
+  var newBlock = Blockly.Xml.domToBlock(
       /** @type {!Blockly.BlockSpace} */ (this.blockSpace), xmlBlock);
   // Move the duplicate next to the old block.
   var xy = this.getRelativeToSurfaceXY();
@@ -1664,7 +1664,7 @@ Blockly.Block.prototype.setFunctionalOutput = function(hasOutput, opt_check) {
 };
 
 Blockly.Block.prototype.changeFunctionalOutput = function(newType) {
-  this.setHSV.apply(this, Blockly.ContractEditor.typesToColors[newType]);
+  this.setHSV.apply(this, Blockly.ContractEditor.typesToColorsHSV[newType]);
   this.previousConnection = this.previousConnection || new Blockly.Connection(this, Blockly.FUNCTIONAL_OUTPUT);
   this.previousConnection.setCheck(newType);
 

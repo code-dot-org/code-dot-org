@@ -77,38 +77,44 @@ module.exports = {
       customValidator: function (assert) {
         validateGeneratedEquation(assert,
           blockUtils.calcBlockXml('functional_plus', [1, 2]),
-          new Equation(null, new ExpressionNode('+', [1, 2]))
+          new Equation(null, [], new ExpressionNode('+', [1, 2]))
         );
 
         validateGeneratedEquation(assert,
           blockUtils.calcBlockXml('functional_minus', [4, 3]),
-          new Equation(null, new ExpressionNode('-', [4, 3]))
+          new Equation(null, [], new ExpressionNode('-', [4, 3]))
         );
 
         validateGeneratedEquation(assert,
           blockUtils.calcBlockXml('functional_times', [5, 6]),
-          new Equation(null, new ExpressionNode('*', [5, 6]))
+          new Equation(null, [], new ExpressionNode('*', [5, 6]))
         );
 
         validateGeneratedEquation(assert,
           blockUtils.calcBlockXml('functional_dividedby', [7, 8]),
-          new Equation(null, new ExpressionNode('/', [7, 8]))
+          new Equation(null, [], new ExpressionNode('/', [7, 8]))
         );
 
         validateGeneratedEquation(assert,
           blockUtils.mathBlockXml('functional_math_number', null, { NUM: 1 } ),
-          new Equation(null, new ExpressionNode(1))
+          new Equation(null, [], new ExpressionNode(1))
+        );
+
+        // float instead of int
+        validateGeneratedEquation(assert,
+          blockUtils.mathBlockXml('functional_math_number', null, { NUM: 1.2 } ),
+          new Equation(null, [], new ExpressionNode(1.2))
         );
 
         validateGeneratedEquation(assert,
           blockUtils.mathBlockXml('functional_math_number_dropdown', null, { NUM: 1 } ),
-          new Equation(null, new ExpressionNode(1))
+          new Equation(null, [], new ExpressionNode(1))
         );
 
         // math_number with ???
         validateGeneratedEquation(assert,
           blockUtils.mathBlockXml('functional_math_number_dropdown', null, { NUM: '???' } ),
-          new Equation(null, new ExpressionNode(0))
+          new Equation(null, [], new ExpressionNode(0))
         );
 
         // Equation generation depends on the function call and definition both
@@ -139,7 +145,7 @@ module.exports = {
           '</block>';
         validateGeneratedEquation(assert,
           functional_call,
-          new Equation(null, new ExpressionNode('f', [0])),
+          new Equation(null, [], new ExpressionNode('f', [0])),
           blockIndex
         );
 
@@ -156,7 +162,7 @@ module.exports = {
           '</block>';
         validateGeneratedEquation(assert,
           functional_definition,
-          new Equation('f(x)', new ExpressionNode('x'))
+          new Equation('f', ['x'], new ExpressionNode('x'))
         );
 
         var functional_definition_two_args = '' +
@@ -173,13 +179,13 @@ module.exports = {
           '</block>';
         validateGeneratedEquation(assert,
           functional_definition_two_args,
-          new Equation('f(x,y)', new ExpressionNode('+', ['x', 'y']))
+          new Equation('f', ['x','y'], new ExpressionNode('+', ['x', 'y']))
         );
 
         // functional_parameters_get
         validateGeneratedEquation(assert,
           blockUtils.calcBlockGetVar('x'),
-          new Equation(null, new ExpressionNode('x'))
+          new Equation(null, [], new ExpressionNode('x'))
         );
 
         var functional_example = '' +
