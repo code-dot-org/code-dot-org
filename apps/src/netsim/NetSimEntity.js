@@ -101,14 +101,12 @@ module.exports = NetSimEntity;
  *        created entity, or null if entity creation failed.
  */
 NetSimEntity.create = function (EntityType, instance, onComplete) {
-  onComplete = onComplete || function () {};
-
   var entity = new EntityType(instance);
   entity.getTable_().insert(entity.buildRow_(), function (row) {
     if (row) {
-      onComplete(new EntityType(instance, row));
+      onComplete && onComplete(new EntityType(instance, row));
     } else {
-      onComplete(null);
+      onComplete && onComplete(null);
     }
   });
 };
@@ -125,29 +123,27 @@ NetSimEntity.create = function (EntityType, instance, onComplete) {
  *        found entity, or null if entity search failed.
  */
 NetSimEntity.get = function (EntityType, entityID, instance, onComplete) {
-  onComplete = onComplete || function () {};
-
   var entity = new EntityType(instance);
   entity.getTable_().fetch(entityID, function (row) {
     if (row) {
-      onComplete(new EntityType(instance, row));
+      onComplete && onComplete(new EntityType(instance, row));
     } else {
-      onComplete(null);
+      onComplete && onComplete(null);
     }
   });
 };
 
 NetSimEntity.prototype.update = function (onComplete) {
-  onComplete = onComplete || function () {};
-
   this.lastPing_ = Date.now();
-  this.getTable_().update(this.entityID, this.buildRow_(), onComplete);
+  this.getTable_().update(this.entityID, this.buildRow_(), function (success) {
+    onComplete && onComplete(success);
+  });
 };
 
 NetSimEntity.prototype.destroy = function (onComplete) {
-  onComplete = onComplete || function () {};
-
-  this.getTable_().delete(this.entityID, onComplete);
+  this.getTable_().delete(this.entityID, function (success) {
+    onComplete && onComplete(success);
+  });
 };
 
 NetSimEntity.prototype.getTable_ = function () {
