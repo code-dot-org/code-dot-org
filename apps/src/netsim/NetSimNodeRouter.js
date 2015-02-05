@@ -47,18 +47,6 @@ var NetSimEntity = require('./NetSimEntity');
 var NetSimWire = require('./NetSimWire');
 
 /**
- * Helper because we have so many callback arguments in this class.
- * @param funcArg
- * @returns {*}
- */
-var defaultToEmptyFunction = function (funcArg) {
-  if (funcArg !== undefined) {
-    return funcArg;
-  }
-  return function () {};
-};
-
-/**
  * @param {!netsimInstance} instance
  * @param {Object} [routerRow] - Lobby row for this router.
  * @constructor
@@ -125,7 +113,7 @@ var RouterStatus = NetSimNodeRouter.RouterStatus;
  * @param onComplete
  */
 NetSimNodeRouter.prototype.update = function (onComplete) {
-  onComplete = defaultToEmptyFunction(onComplete);
+  onComplete = onComplete || function () {};
 
   var self = this;
   this.countConnections(function (count) {
@@ -167,7 +155,7 @@ NetSimNodeRouter.prototype.getWireTable = function () {
  * @param {function} onComplete, which accepts an Array of NetSimWire.
  */
 NetSimNodeRouter.prototype.getConnections = function (onComplete) {
-  onComplete = defaultToEmptyFunction(onComplete);
+  onComplete = onComplete || function () {};
 
   var instance = this.instance_;
   var routerID = this.entityID;
@@ -195,7 +183,7 @@ NetSimNodeRouter.prototype.getConnections = function (onComplete) {
  * @param {function} onComplete, which accepts a number.
  */
 NetSimNodeRouter.prototype.countConnections = function (onComplete) {
-  onComplete = defaultToEmptyFunction(onComplete);
+  onComplete = onComplete || function () {};
 
   this.getConnections(function (wires) {
     onComplete(wires.length);
@@ -244,7 +232,7 @@ NetSimNodeRouter.prototype.acceptConnection = function (otherNode, onComplete) {
  * @param {function} [onComplete] reports success or failure.
  */
 NetSimNodeRouter.prototype.requestAddress = function (wire, hostname, onComplete) {
-  onComplete = defaultToEmptyFunction(onComplete);
+  onComplete = onComplete || function () {};
 
 
   // General strategy: Create a list of existing remote addresses, pick a
@@ -282,7 +270,7 @@ NetSimNodeRouter.prototype.requestAddress = function (wire, hostname, onComplete
  * @param onComplete
  */
 NetSimNodeRouter.prototype.getAddressTable = function (onComplete) {
-  onComplete = defaultToEmptyFunction(onComplete);
+  onComplete = onComplete || function () {};
 
   var self = this;
   this.getConnections(function (wires) {
