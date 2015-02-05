@@ -18845,19 +18845,23 @@ Blockly.HorizontalFlyout.prototype.show = function(xmlList) {
   this.width_ = Math.max(0, metrics.viewWidth - this.CORNER_RADIUS * 2);
   Blockly.HorizontalFlyout.superClass_.show.apply(this, arguments)
 };
-Blockly.HorizontalFlyout.prototype.setVisibility = function(show) {
-  return show ? this.softShow() : this.softHide()
-};
-Blockly.HorizontalFlyout.prototype.softHide = function() {
-  Blockly.addClass_(this.svgGroup_, "userHidden")
-};
-Blockly.HorizontalFlyout.prototype.softShow = function() {
-  Blockly.removeClass_(this.svgGroup_, "userHidden")
-};
 Blockly.HorizontalFlyout.prototype.hide = function() {
   this.height_ = 10;
   this.flyoutRows = 0;
   Blockly.HorizontalFlyout.superClass_.hide.apply(this, arguments)
+};
+Blockly.HorizontalFlyout.prototype.setVisibility = function(show) {
+  if(show) {
+    this.softShow()
+  }else {
+    this.softHide()
+  }
+};
+Blockly.HorizontalFlyout.prototype.softHide = function() {
+  Blockly.addClass_(this.svgGroup_, "hiddenFlyout")
+};
+Blockly.HorizontalFlyout.prototype.softShow = function() {
+  Blockly.removeClass_(this.svgGroup_, "hiddenFlyout")
 };
 Blockly.HorizontalFlyout.prototype.position_ = function() {
   if(!this.isVisible()) {
@@ -23546,7 +23550,7 @@ Blockly.Css.setCursor = function(cursor, opt_svg) {
     setCursorOnBackgroundElement(opt_svg)
   }
 };
-Blockly.Css.CONTENT = [".blocklyDraggable {", "}", "#blockly {", "  border: 1px solid #ddd;", "}", "#blockly .userHidden {", "  display: none !important;", "}", "#blockly.readonly .userHidden {", "  display: inline;", "}", "#blockly.readonly {", "  border: 0;", "}", "#blockly.edit .userHidden {", "  display: inline;", "  fill-opacity: 0.5;", "}", "#blockly.edit .userHidden .blocklyPath {", "  fill-opacity: 0.5;", "}", "#blockly.edit .userHidden .blocklyPathDark, #blockly.edit .userHidden .blocklyPathLight {", 
+Blockly.Css.CONTENT = [".blocklyDraggable {", "}", "#blockly {", "  border: 1px solid #ddd;", "}", "#blockly .userHidden {", "  display: none;", "}", "#blockly .hiddenFlyout {", "  display: none !important;", "}", "#blockly.readonly .userHidden {", "  display: inline;", "}", "#blockly.readonly {", "  border: 0;", "}", "#blockly.edit .userHidden {", "  display: inline;", "  fill-opacity: 0.5;", "}", "#blockly.edit .userHidden .blocklyPath {", "  fill-opacity: 0.5;", "}", "#blockly.edit .userHidden .blocklyPathDark, #blockly.edit .userHidden .blocklyPathLight {", 
 "  display: none;", "}", ".blocklySvg {", "  cursor: pointer;", "  background-color: #fff;", "  overflow: hidden;", "}", "g.blocklyDraggable {", "  -ms-touch-action: none;", "  touch-action: none;", "}", ".blocklyWidgetDiv {", "  position: absolute;", "  display: none;", "  z-index: 999;", "}", ".blocklyResizeSE {", "  fill: #aaa;", "  cursor: se-resize;", "}", ".blocklyResizeSW {", "  fill: #aaa;", "  cursor: sw-resize;", "}", ".blocklyResizeLine {", "  stroke-width: 1;", "  stroke: #888;", "}", 
 ".blocklyHighlightedConnectionPath {", "  stroke-width: 4px;", "  stroke: #fc3;", "  fill: none;", "}", ".blocklyPathLight {", "  fill: none;", "  stroke-width: 2;", "  stroke-linecap: round;", "}", ".blocklySpotlight>.blocklyPath {", "  fill: #fc3;", "}", ".blocklySelected:not(.blocklyUndeletable)>.blocklyPath {", "  stroke-width: 3px;", "  stroke: #fc3;", "}", ".blocklySelected:not(.blocklyUndeletable)>.blocklyPathLight {", "  display: none;", "}", ".blocklyUndeletable>.blocklyEditableText>rect {", 
 "  fill-opacity: 1.0;", "  fill: #ffdb74;", "}", ".blocklyDragging>.blocklyPath,", ".blocklyDragging>.blocklyPathLight {", "  fill-opacity: 0.8;", "  stroke-opacity: 0.8;", "}", ".blocklyDragging>.blocklyPathDark {", "  display: none;", "}", ".blocklyDisabled>.blocklyPath {", "  fill-opacity: 0.50;", "  stroke-opacity: 0.50;", "}", ".blocklyDisabled>.blocklyPathLight,", ".blocklyDisabled>.blocklyPathDark {", "  display: none;", "}", ".blocklyText {", "  cursor: default;", "  font-family: sans-serif;", 
