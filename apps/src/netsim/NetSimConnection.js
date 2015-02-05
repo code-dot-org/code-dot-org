@@ -417,9 +417,9 @@ NetSimConnection.prototype.setConnectionStatus_ = function (newStatus) {
 NetSimConnection.prototype.getStatusDetail = function () {
   if (this.status_ === ConnectionStatus.CONNECTED) {
     return ' (Address ' + this.wire_.localAddress + ') ' +
-        ' to router ' + this.router_.routerID +
+        ' to router ' + this.router_.entityID +
         ' (Address ' + this.wire_.remoteAddress + ')' +
-        ' on wire ' + this.wire_.wireID;
+        ' on wire ' + this.wire_.entityID;
   }
   return '';
 };
@@ -502,7 +502,7 @@ NetSimConnection.prototype.cleanLobby_ = function () {
   // Eventually, would be better to validate whether wire endpoints exist
   // Although, that will conflict with the mutual-connect stuff later.
   if (this.wire_) {
-    var wireTable = this.wire_.getTable();
+    var wireTable = this.wire_.getTable_();
     wireTable.all(function (rows) {
       if (rows !== null) {
         rows.forEach(function (row) {
@@ -552,24 +552,25 @@ NetSimConnection.prototype.connectToRouter = function (routerID) {
     this.disconnectFromRouter();
   }
 
-  // Create a local NetSimRouter for the remote router we want to connect with,
-  //   which runs the local router simulation.
-  this.router_ = new NetSimRouter(this.instance_, routerID);
-
-  // Optimistically create a wire and point it at the router
   var self = this;
-  self.createWire(routerID, function (wire) {
-    if (wire !== null) {
-      self.wire_ = wire;
-      self.wire_.localHostname = self.getMyHostname();
-      self.router_.countConnections(function (count) {
-        if (count <= self.router_.MAX_CLIENT_CONNECTIONS) {
-          self.router_.assignAddressesToWire(self.wire_,
-              self.statusChanges.notifyObservers.bind(self.statusChanges));
-          self.setConnectionStatus_(ConnectionStatus.CONNECTED);
-        } else {
-          // Oops!  We put the router over capacity, we should disconnect.
-          self.disconnectFromRouter();
+  NetSimRouter.get(routerID, this.instance_, function (router) {
+    self.router_ = router;
+    if (router) {
+      // Optimistically create a wire and point it at the router
+      self.createWire(routerID, function (wire) {
+        if (wire !== null) {
+          self.wire_ = wire;
+          self.wire_.localHostname = self.getMyHostname();
+          self.router_.countConnections(function (count) {
+            if (count <= self.router_.MAX_CLIENT_CONNECTIONS) {
+              self.router_.assignAddressesToWire(self.wire_,
+                  self.statusChanges.notifyObservers.bind(self.statusChanges));
+              self.setConnectionStatus_(ConnectionStatus.CONNECTED);
+            } else {
+              // Oops!  We put the router over capacity, we should disconnect.
+              self.disconnectFromRouter();
+            }
+          });
         }
       });
     }
