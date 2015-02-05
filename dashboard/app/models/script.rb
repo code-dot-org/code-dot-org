@@ -194,29 +194,29 @@ class Script < ActiveRecord::Base
   SCRIPT_MAP = Hash[SCRIPT_CSV_MAPPING.map { |x| x.include?(':') ? x.split(':') : [x, x.downcase] }]
 
   def self.setup(default_files, custom_files)
-    scripts = []
-    # Load default scripts from yml (csv embedded)
-    default_files.map { |yml| load_yaml(yml, SCRIPT_MAP) }
-    .sort_by { |options, _| options['id'] }
-    .map { |options, data| scripts << [options, data]}
-
-    custom_i18n = {}
-    # Load custom scripts from Script DSL format
-    custom_files.map do |script|
-      name = File.basename(script, '.script')
-      script_data, i18n = ScriptDSL.parse_file(script)
-      stages = script_data[:stages]
-      custom_i18n.deep_merge!(i18n)
-      scripts << [{
-        name: name,
-        trophies: script_data[:trophies],
-        hidden: script_data[:hidden].nil? ? true : script_data[:hidden],
-        id: LEGACY_SCRIPT_ID[name],
-      }, stages.map{|stage| stage[:levels]}.flatten]
-    end
-
     transaction do
-      # Stable sort by ID, ensuring scripts with no ID end up at the end
+      scripts = []
+      # Load default scripts from yml (csv embedded)
+      default_files.map { |yml| load_yaml(yml, SCRIPT_MAP) }
+      .sort_by { |options, _| options['id'] }
+      .map { |options, data| scripts << [options, data]}
+
+      custom_i18n = {}
+      # Load custom scripts from Script DSL format
+      custom_files.map do |script|
+        name = File.basename(script, '.script')
+        script_data, i18n = ScriptDSL.parse_file(script)
+        stages = script_data[:stages]
+        custom_i18n.deep_merge!(i18n)
+        scripts << [{
+          name: name,
+          trophies: script_data[:trophies],
+          hidden: script_data[:hidden].nil? ? true : script_data[:hidden],
+          id: LEGACY_SCRIPT_ID[name],
+        }, stages.map{|stage| stage[:levels]}.flatten]
+      end
+
+      # Stable sort by ID then add each script, ensuring scripts with no ID end up at the end
       result = scripts.sort_by.with_index{ |args, idx| [args[0][:id] || Float::INFINITY, idx] }.map do |args|
         add_script(*args)
       end
