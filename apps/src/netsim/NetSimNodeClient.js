@@ -91,9 +91,7 @@ NetSimNodeClient.create = function (instance, onComplete) {
   NetSimEntity.create(NetSimNodeClient, instance, onComplete);
 };
 
-/**
- * @inheritdoc
- */
+/** @inheritdoc */
 NetSimNodeClient.prototype.getNodeType = function () {
   return NetSimNodeClient.getNodeType();
 };
@@ -101,13 +99,12 @@ NetSimNodeClient.getNodeType = function () {
   return 'user';
 };
 
-/**
- * @inheritdoc
- */
+/** @inheritdoc */
 NetSimNodeClient.prototype.getStatus = function () {
   return this.status_ ? this.status_ : 'Online';
 };
 
+/** Set node's display name.  Does not trigger an update! */
 NetSimNodeClient.prototype.setDisplayName = function (displayName) {
   this.displayName_ = displayName;
 };
@@ -203,7 +200,6 @@ NetSimNodeClient.prototype.reconnect_ = function (onComplete) {
 };
 
 /**
- *
  * @param {!NetSimRouter} router
  * @param {function} onComplete({boolean}success)
  */

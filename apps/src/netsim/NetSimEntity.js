@@ -39,7 +39,6 @@
 var ObservableEvent = require('./ObservableEvent');
 
 /**
- *
  * @param {!netsimInstance} instance
  * @param {Object} [entityRow] JSON row from table.
  * @constructor
@@ -137,6 +136,7 @@ NetSimEntity.get = function (EntityType, entityID, instance, onComplete) {
   });
 };
 
+/** Push entity state into remote storage. */
 NetSimEntity.prototype.update = function (onComplete) {
   onComplete = onComplete || function () {};
 
@@ -144,17 +144,20 @@ NetSimEntity.prototype.update = function (onComplete) {
   this.getTable_().update(this.entityID, this.buildRow_(), onComplete);
 };
 
+/** Remove entity from remote storage. */
 NetSimEntity.prototype.destroy = function (onComplete) {
   onComplete = onComplete || function () {};
 
   this.getTable_().delete(this.entityID, onComplete);
 };
 
+/** Get storage table for this entity type. */
 NetSimEntity.prototype.getTable_ = function () {
   // This method should be implemented by an inheriting class.
   throw new Error('Method getTable_ is not implemented.');
 };
 
+/** Construct table row for this entity. */
 NetSimEntity.prototype.buildRow_ = function () {
   return {
     lastPing: Date.now()

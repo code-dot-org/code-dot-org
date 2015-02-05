@@ -113,18 +113,14 @@ NetSimConnection.prototype.attachToRunLoop = function (runLoop) {
   runLoop.tick.register(this, this.tick);
 };
 
-/**
- * @param {!RunLoop.Clock} clock
- */
+/** @param {!RunLoop.Clock} clock */
 NetSimConnection.prototype.tick = function (clock) {
   if (this.myNode) {
     this.myNode.tick(clock);
   }
 };
 
-/**
- * @returns {NetSimLogger}
- */
+/** @returns {NetSimLogger} */
 NetSimConnection.prototype.getLogger = function () {
   return logger;
 };
@@ -155,9 +151,7 @@ NetSimConnection.prototype.connectToInstance = function (instanceID) {
   this.createMyClientNode_();
 };
 
-/**
- * Ends the connection to the netsim instance.
- */
+/** Ends the connection to the netsim instance. */
 NetSimConnection.prototype.disconnectFromInstance = function () {
   if (!this.isConnectedToInstance()) {
     logger.warn("Redundant disconnect call.");
@@ -284,9 +278,7 @@ NetSimConnection.prototype.cleanLobby_ = function () {
   });
 };
 
-/**
- * Adds a row to the lobby for a new router node.
- */
+/** Adds a row to the lobby for a new router node. */
 NetSimConnection.prototype.addRouterToLobby = function () {
   var self = this;
   NetSimNodeRouter.create(this.instance_, function () {

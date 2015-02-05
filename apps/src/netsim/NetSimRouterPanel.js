@@ -127,9 +127,7 @@ NetSimRouterPanel.prototype.onConnectionStatusChange_ = function () {
   }
 };
 
-/**
- * Update the address table to show the list of nodes in the local network.
- */
+/** Update the address table to show the list of nodes in the local network. */
 NetSimRouterPanel.prototype.refresh = function () {
   if (this.myConnectedRouter) {
     this.connectedSpan_.show();

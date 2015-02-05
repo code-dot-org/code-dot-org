@@ -41,7 +41,6 @@ var superClass = require('./NetSimEntity');
 var NetSimWire = require('./NetSimWire');
 
 /**
- *
  * @param {!netsimInstance} instance
  * @param {Object} [nodeRow] JSON row from table.
  * @constructor
@@ -76,10 +75,12 @@ NetSimNode.prototype = Object.create(superClass.prototype);
 NetSimNode.prototype.constructor = NetSimNode;
 module.exports = NetSimNode;
 
+/** Get storage table for nodes */
 NetSimNode.prototype.getTable_= function () {
   return this.instance_.getLobbyTable();
 };
 
+/** Build table row for this node */
 NetSimNode.prototype.buildRow_ = function () {
   return $.extend(superClass.prototype.buildRow_.call(this), {
     name: this.getDisplayName(),

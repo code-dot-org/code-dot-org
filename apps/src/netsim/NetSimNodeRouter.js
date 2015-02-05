@@ -124,16 +124,12 @@ NetSimNodeRouter.prototype.update = function (onComplete) {
   });
 };
 
-/**
- * @inheritdoc
- */
+/** @inheritdoc */
 NetSimNodeRouter.prototype.getDisplayName = function () {
   return "Router " + this.entityID;
 };
 
-/**
- * @inheritdoc
- */
+/** @inheritdoc */
 NetSimNodeRouter.prototype.getNodeType = function () {
   return NetSimNodeRouter.getNodeType();
 };

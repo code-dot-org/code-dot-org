@@ -35,9 +35,7 @@
 /* global $ */
 'use strict';
 
-/**
- * Namespace for app storage.
- */
+/** Namespace for app storage. */
 var netsimStorage = module.exports;
 
 /**

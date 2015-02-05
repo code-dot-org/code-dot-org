@@ -143,9 +143,7 @@ NetSimLobby.prototype.attachToRunLoop = function (runLoop) {
   this.periodicRefresh_.attachToRunLoop(runLoop);
 };
 
-/**
- *
- */
+/** Handler for picking a new instance from the dropdown. */
 NetSimLobby.prototype.onInstanceSelectorChange_ = function () {
   if (this.connection_.isConnectedToInstance()) {
     this.connection_.disconnectFromInstance();
@@ -157,10 +155,12 @@ NetSimLobby.prototype.onInstanceSelectorChange_ = function () {
   }
 };
 
+/** Handler for clicking the "Add Router" button. */
 NetSimLobby.prototype.addRouterButtonClick_ = function () {
   this.connection_.addRouterToLobby();
 };
 
+/** Handler for clicking the "Connect" button. */
 NetSimLobby.prototype.connectButtonClick_ = function () {
   if (!this.selectedID_) {
     return;
@@ -169,6 +169,7 @@ NetSimLobby.prototype.connectButtonClick_ = function () {
   this.connection_.connectToRouter(this.selectedID_);
 };
 
+/** Handler for clicking the "disconnect" button. */
 NetSimLobby.prototype.disconnectButtonClick_ = function () {
   this.connection_.disconnectFromRouter();
 };
@@ -214,6 +215,10 @@ NetSimLobby.prototype.refreshInstanceList_ = function () {
   });
 };
 
+/**
+ * Triggers a full state update based on the connection object's current status.
+ * @private
+ */
 NetSimLobby.prototype.refreshLobby_ = function () {
   var self = this;
   var lobbyList = this.lobbyList_;
@@ -293,7 +298,6 @@ NetSimLobby.prototype.refreshLobby_ = function () {
 };
 
 /**
- *
  * @param {*} connectionTarget - Lobby row for clicked item
  * @private
  */
@@ -323,6 +327,7 @@ NetSimLobby.prototype.onRowClick_ = function (listItem, connectionTarget) {
   this.onSelectionChange();
 };
 
+/** Handler for selecting/deselcting a row in the lobby listing. */
 NetSimLobby.prototype.onSelectionChange = function () {
   this.connectButton_.disabled = (this.selectedListItem_ === undefined);
 };
