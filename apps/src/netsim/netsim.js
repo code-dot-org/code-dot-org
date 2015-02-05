@@ -37,7 +37,6 @@
 
 var page = require('./page.html');
 var NetSimConnection = require('./NetSimConnection');
-var NetSimLogger = require('./NetSimLogger');
 var DashboardUser = require('./DashboardUser');
 var NetSimLobby = require('./NetSimLobby');
 var NetSimRouterPanel = require('./NetSimRouterPanel');
@@ -59,13 +58,6 @@ var NetSim = function () {
    * @private
    */
   this.currentUser_ = DashboardUser.getCurrentUser();
-
-  /**
-   * Instance of logging API, gives us choke-point control over log output
-   * @type {NetSimLogger}
-   * @private
-   */
-  this.logger_ = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
 
   /**
    * Manager for connection to shared instance of netsim app.
@@ -155,20 +147,17 @@ NetSim.prototype.init = function(config) {
  * @private
  */
 NetSim.prototype.initWithUserName_ = function (userName) {
-  this.connection_ = new NetSimConnection(userName, this.logger_);
+  this.connection_ = new NetSimConnection(userName);
   this.connection_.attachToRunLoop(this.runLoop_);
-  this.logger_.info("Connection manager created.");
 
   var lobbyContainer = document.getElementById('netsim_lobby_container');
   this.lobbyControl_ = NetSimLobby.createWithin(lobbyContainer, this.connection_);
   this.lobbyControl_.attachToRunLoop(this.runLoop_);
-  this.logger_.info("Lobby control created.");
 
   var routerPanelContainer = document.getElementById('netsim_tabzone');
   this.routerPanel_ = NetSimRouterPanel.createWithin(routerPanelContainer,
     this.connection_);
   this.routerPanel_.attachToRunLoop(this.runLoop_);
-  this.logger_.info("Router panel control created");
 };
 
 /**
@@ -177,9 +166,6 @@ NetSim.prototype.initWithUserName_ = function (userName) {
  * @private
  */
 NetSim.prototype.loadAudio_ = function () {
-  this.studioApp_.loadAudio(this.skin.winSound, 'win');
-  this.studioApp_.loadAudio(this.skin.startSound, 'start');
-  this.studioApp_.loadAudio(this.skin.failureSound, 'failure');
 };
 
 /**

@@ -36,6 +36,8 @@
 /* global Date */
 'use strict';
 
+var ObservableEvent = require('./ObservableEvent');
+
 /**
  * Helper because we have so many callback arguments in this class.
  * @param funcArg
@@ -93,6 +95,13 @@ var NetSimEntity = function (instance, entityRow) {
    * @type {number}
    */
   this.ENTITY_KEEPALIVE_MS = 30000;
+
+  /**
+   * Change event fired when entity's state changes in a way that
+   * should be reported.
+   * @type {ObservableEvent}
+   */
+  this.onChange = new ObservableEvent();
 };
 module.exports = NetSimEntity;
 

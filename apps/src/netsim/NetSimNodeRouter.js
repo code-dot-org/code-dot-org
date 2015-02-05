@@ -271,7 +271,7 @@ NetSimNodeRouter.prototype.requestAddress = function (wire, hostname, onComplete
     wire.update(onComplete);
     // TODO: Fix possibility of two routers getting addresses by verifying
     //       after updating the wire.
-  })
+  });
 };
 
 /**
