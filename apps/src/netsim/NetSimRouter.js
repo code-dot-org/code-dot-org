@@ -163,20 +163,6 @@ NetSimRouter.prototype.getNodeType = function () {
 };
 
 /**
- * @inheritdoc
- */
-NetSimRouter.prototype.getStatus = function () {
-  return this.status_;
-};
-
-/**
- * @inheritdoc
- */
-NetSimRouter.prototype.getStatusDetail = function () {
-  return this.statusDetail_;
-};
-
-/**
  * Helper for getting wires table of configured instance.
  * @returns {exports.SharedStorageTable}
  */
