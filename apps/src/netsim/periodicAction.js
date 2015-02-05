@@ -34,7 +34,6 @@
 'use strict';
 
 /**
- *
  * @param {function} action
  * @param {number} interval - time between calls to action in milliseconds
  * @returns {{tick: Function, enable: Function, disable: Function}}
@@ -53,9 +52,7 @@ var periodicAction = function (action, interval) {
       runLoop.tick.register(this, this.tick);
     },
 
-    /**
-     * @param clock
-     */
+    /** @param clock */
     tick: function (clock) {
       if (clock.time >= nextActionTime) {
         action(clock);
@@ -71,18 +68,14 @@ var periodicAction = function (action, interval) {
       }
     },
 
-    /**
-     * Cause the action to resume running on the next tick.
-     */
+    /** Cause the action to resume running on the next tick. */
     enable: function () {
       if (nextActionTime === Infinity) {
         nextActionTime = 0;
       }
     },
 
-    /**
-     * Cause the action to stop running.
-     */
+    /** Cause the action to stop running. */
     disable: function () {
       nextActionTime = Infinity;
     },

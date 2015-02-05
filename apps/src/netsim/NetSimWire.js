@@ -114,9 +114,7 @@ NetSimWire.prototype.getTable_ = function () {
   return this.instance_.getWireTable();
 };
 
-/**
- * Build own row for the wire table
- */
+/** Build own row for the wire table  */
 NetSimWire.prototype.buildRow_ = function () {
   return $.extend(superClass.prototype.buildRow_.call(this), {
     localNodeID: this.localNodeID,

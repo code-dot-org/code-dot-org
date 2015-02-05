@@ -86,16 +86,10 @@ var RunLoop = function () {
    */
   this.tick_ = this.buildTickMethod_();
 
-  /**
-   *
-   * @type {ObservableEvent}
-   */
+  /**  @type {ObservableEvent} */
   this.tick = new ObservableEvent();
 
-  /**
-   *
-   * @type {ObservableEvent}
-   */
+  /** @type {ObservableEvent} */
   this.render = new ObservableEvent();
 };
 module.exports = RunLoop;
@@ -149,9 +143,7 @@ RunLoop.prototype.buildTickMethod_ = function () {
   return tickMethod;
 };
 
-/**
- * Start the run loop (runs immediately)
- */
+/** Start the run loop (runs immediately) */
 RunLoop.prototype.begin = function () {
   this.enabled = true;
   this.clock.time = windowNow();
