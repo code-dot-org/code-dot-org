@@ -222,6 +222,9 @@ NetSimLobby.prototype.refreshLobby_ = function () {
 
   if (!isOnInstance) {
     this.instanceSelector_.value = '__none';
+    $(this.addRouterButton_).hide();
+  } else {
+    $(this.addRouterButton_).show();
   }
 
   this.periodicRefresh_.setActionInterval(isInLobby ?
