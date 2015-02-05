@@ -242,6 +242,8 @@
   "soundWood": "wood",
   "speed": "speed",
   "startSetValue": "start (rocket-height function)",
+  "startSetVars": "game_vars (TITLE, SUBTITLE, BACKGROUND, TARGET, DANGER, PLAYER)",
+  "startSetFuncs": "game_funcs (update-target, update-danger, update-player, collide?, on-screen?)",
   "stopSprite": "stop",
   "stopSpriteN": "stop actor {spriteIndex}",
   "stopTooltip": "Stops an actor's movement.",
