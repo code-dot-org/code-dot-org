@@ -287,6 +287,8 @@ class Studio < Grid
 <category name="Functions" custom="PROCEDURE" />
 <category name="Functional variables" custom="FUNCTIONAL_VARIABLE" />
 <category name="Functional Start">
+  <block type="functional_start_setFuncs" />
+  <block type="functional_start_setVars" />
   <block type="functional_start_setValue" />
   <block type="functional_start_setBackground" />
   <block type="functional_start_setSpeeds" />
