@@ -35,7 +35,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":125}],12:[function(require,module,exports){
+},{"../skins":126}],12:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/applab');
@@ -214,7 +214,7 @@ levels.full_sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-},{"../../locale/current/applab":167,"../block_utils":16,"../utils":165}],6:[function(require,module,exports){
+},{"../../locale/current/applab":168,"../block_utils":16,"../utils":166}],6:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -2472,7 +2472,7 @@ var getPegasusHost = function() {
         return Array(multiplier + 1).join(input)
     }
 
-},{"../../locale/current/applab":167,"../../locale/current/common":170,"../StudioApp":2,"../codegen":41,"../constants":42,"../dom":43,"../skins":125,"../slider":126,"../templates/page.html":145,"../utils":165,"../xml":166,"./api":4,"./appStorage":5,"./blocks":7,"./controls.html":8,"./dropletConfig":9,"./extraControlRows.html":10,"./formStorage":11,"./visualization.html":15}],15:[function(require,module,exports){
+},{"../../locale/current/applab":168,"../../locale/current/common":171,"../StudioApp":2,"../codegen":41,"../constants":42,"../dom":43,"../skins":126,"../slider":127,"../templates/page.html":146,"../utils":166,"../xml":167,"./api":4,"./appStorage":5,"./blocks":7,"./controls.html":8,"./dropletConfig":9,"./extraControlRows.html":10,"./formStorage":11,"./visualization.html":15}],15:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2492,7 +2492,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":186}],11:[function(require,module,exports){
+},{"ejs":187}],11:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -2695,7 +2695,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/applab":167,"../../locale/current/common":170,"ejs":186}],9:[function(require,module,exports){
+},{"../../locale/current/applab":168,"../../locale/current/common":171,"ejs":187}],9:[function(require,module,exports){
 module.exports.blocks = [
   {'func': 'onEvent', 'title': 'Execute code in response to an event for the specified element. Additional parameters are passed to the callback function.', 'category': 'General', 'params': ["'id'", "'click'", "function(event) {\n  \n}"] },
   {'func': 'startWebRequest', 'title': 'Request data from the internet and execute code when the request is complete', 'category': 'General', 'params': ["'http://api.openweathermap.org/data/2.5/weather?q=London,uk'", "function(status, type, content) {\n  \n}"] },
@@ -2798,7 +2798,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":170,"ejs":186}],7:[function(require,module,exports){
+},{"../../locale/current/common":171,"ejs":187}],7:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -2871,7 +2871,7 @@ function installCreateHtmlBlock(blockly, generator, blockInstallOptions) {
   };
 }
 
-},{"../../locale/current/applab":167,"../../locale/current/common":170,"../codegen":41,"../utils":165}],167:[function(require,module,exports){
+},{"../../locale/current/applab":168,"../../locale/current/common":171,"../codegen":41,"../utils":166}],168:[function(require,module,exports){
 /*applab*/ module.exports = window.blockly.appLocale;
 },{}],5:[function(require,module,exports){
 'use strict';
