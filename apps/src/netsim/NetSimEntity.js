@@ -39,20 +39,6 @@
 var ObservableEvent = require('./ObservableEvent');
 
 /**
- * Helper because we have so many callback arguments in this class.
- * @param funcArg
- * @returns {*}
- * TODO (bbuchanan) : Move this to utilities somewhere, or find
- *  a matching utility?
- */
-var defaultToEmptyFunction = function (funcArg) {
-  if (funcArg !== undefined) {
-    return funcArg;
-  }
-  return function () {};
-};
-
-/**
  *
  * @param {!netsimInstance} instance
  * @param {Object} [entityRow] JSON row from table.
@@ -115,7 +101,7 @@ module.exports = NetSimEntity;
  *        created entity, or null if entity creation failed.
  */
 NetSimEntity.create = function (EntityType, instance, onComplete) {
-  onComplete = defaultToEmptyFunction(onComplete);
+  onComplete = onComplete || function () {};
 
   var entity = new EntityType(instance);
   entity.getTable_().insert(entity.buildRow_(), function (row) {
@@ -139,7 +125,7 @@ NetSimEntity.create = function (EntityType, instance, onComplete) {
  *        found entity, or null if entity search failed.
  */
 NetSimEntity.get = function (EntityType, entityID, instance, onComplete) {
-  onComplete = defaultToEmptyFunction(onComplete);
+  onComplete = onComplete || function () {};
 
   var entity = new EntityType(instance);
   entity.getTable_().fetch(entityID, function (row) {
@@ -152,14 +138,14 @@ NetSimEntity.get = function (EntityType, entityID, instance, onComplete) {
 };
 
 NetSimEntity.prototype.update = function (onComplete) {
-  onComplete = defaultToEmptyFunction(onComplete);
+  onComplete = onComplete || function () {};
 
   this.lastPing_ = Date.now();
   this.getTable_().update(this.entityID, this.buildRow_(), onComplete);
 };
 
 NetSimEntity.prototype.destroy = function (onComplete) {
-  onComplete = defaultToEmptyFunction(onComplete);
+  onComplete = onComplete || function () {};
 
   this.getTable_().delete(this.entityID, onComplete);
 };
