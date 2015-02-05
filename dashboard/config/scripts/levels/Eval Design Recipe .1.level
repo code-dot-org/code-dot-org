@@ -16,7 +16,8 @@
     "use_modal_function_editor": "false",
     "free_play": "false",
     "default_num_example_blocks": "2",
-    "min_workspace_height": "1500"
+    "min_workspace_height": "1500",
+    "callout_json": "[\r\n  {\"localization_key\":\"edit_function\",\"element_id\":\"[block-id='18'] > .blocklyIconGroup\",\"qtip_config\":{\"position\":{\"adjust\":{},\"my\":\"top left\",\"at\":\"right center\"},\"style\":{}}}\r\n]"
   }
 }]]></config>
   <blocks>
