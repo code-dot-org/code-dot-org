@@ -13,6 +13,13 @@
 
  - **For open or pending tickets:** See if the requester has responded with follow-up information. If they have, follow steps [A] or [B] above. If a requester hasn't responded back to us in over 7 days, use the "User Response Time > 7 Days" macro and mark as solved.
 
+ 3. Choose the "Stale Developer Tickets" view
+
+ - **For pending tickets:** Use the "User Response Time > 7 Days" macro and solve the ticket
+
+ - **For new or open tickets:** Tag the assignee in Zendesk room so that they respond and/or close it themselves
+
+
 # IN PIVOTAL
 
 1. Open the zendesk column (more --> Zendesk or "Zendesk" in the left-hand nav)
