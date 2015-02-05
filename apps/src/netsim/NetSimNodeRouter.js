@@ -64,14 +64,14 @@ var defaultToEmptyFunction = function (funcArg) {
  * @constructor
  * @augments NetSimNode
  */
-var NetSimRouter = function (instance, routerRow) {
+var NetSimNodeRouter = function (instance, routerRow) {
   superClass.call(this, instance, routerRow);
 
   /**
    * @type {RouterStatus}
    * @private
    */
-  this.status_ = NetSimRouter.RouterStatus.READY;
+  this.status_ = NetSimNodeRouter.RouterStatus.READY;
 
   /**
    * @type {string}
@@ -85,9 +85,9 @@ var NetSimRouter = function (instance, routerRow) {
    */
   this.MAX_CLIENT_CONNECTIONS = 6;
 };
-NetSimRouter.prototype = Object.create(superClass.prototype);
-NetSimRouter.prototype.constructor = NetSimRouter;
-module.exports = NetSimRouter;
+NetSimNodeRouter.prototype = Object.create(superClass.prototype);
+NetSimNodeRouter.prototype.constructor = NetSimNodeRouter;
+module.exports = NetSimNodeRouter;
 
 /**
  * Static async creation method. See NetSimEntity.create().
@@ -95,8 +95,8 @@ module.exports = NetSimRouter;
  * @param {function} [onComplete] - Method that will be given the
  *        created entity, or null if entity creation failed.
  */
-NetSimRouter.create = function (instance, onComplete) {
-  NetSimEntity.create(NetSimRouter, instance, function (router) {
+NetSimNodeRouter.create = function (instance, onComplete) {
+  NetSimEntity.create(NetSimNodeRouter, instance, function (router) {
     // Always try and update router immediately, to set its DisplayName
     // correctly.
     if (router) {
@@ -116,27 +116,27 @@ NetSimRouter.create = function (instance, onComplete) {
  * @param {function} [onComplete] - Method that will be given the
  *        found entity, or null if entity search failed.
  */
-NetSimRouter.get = function (routerID, instance, onComplete) {
-  NetSimEntity.get(NetSimRouter, routerID, instance, onComplete);
+NetSimNodeRouter.get = function (routerID, instance, onComplete) {
+  NetSimEntity.get(NetSimNodeRouter, routerID, instance, onComplete);
 };
 
 /**
  * @readonly
  * @enum {string}
  */
-NetSimRouter.RouterStatus = {
+NetSimNodeRouter.RouterStatus = {
   INITIALIZING: 'Initializing',
   READY: 'Ready',
   FULL: 'Full'
 };
-var RouterStatus = NetSimRouter.RouterStatus;
+var RouterStatus = NetSimNodeRouter.RouterStatus;
 
 /**
  * Updates router status and lastPing time in lobby table - both keepAlive
  * and making sure router's connection count is valid.
  * @param onComplete
  */
-NetSimRouter.prototype.update = function (onComplete) {
+NetSimNodeRouter.prototype.update = function (onComplete) {
   onComplete = defaultToEmptyFunction(onComplete);
 
   var self = this;
@@ -151,14 +151,17 @@ NetSimRouter.prototype.update = function (onComplete) {
 /**
  * @inheritdoc
  */
-NetSimRouter.prototype.getDisplayName = function () {
+NetSimNodeRouter.prototype.getDisplayName = function () {
   return "Router " + this.entityID;
 };
 
 /**
  * @inheritdoc
  */
-NetSimRouter.prototype.getNodeType = function () {
+NetSimNodeRouter.prototype.getNodeType = function () {
+  return NetSimNodeRouter.getNodeType();
+};
+NetSimNodeRouter.getNodeType = function () {
   return 'router';
 };
 
@@ -166,7 +169,7 @@ NetSimRouter.prototype.getNodeType = function () {
  * Helper for getting wires table of configured instance.
  * @returns {exports.SharedStorageTable}
  */
-NetSimRouter.prototype.getWireTable = function () {
+NetSimNodeRouter.prototype.getWireTable = function () {
   return this.instance_.getWireTable();
 };
 
@@ -175,7 +178,7 @@ NetSimRouter.prototype.getWireTable = function () {
  * where all of the rows are wires attached to this router.
  * @param {function} onComplete, which accepts an Array of NetSimWire.
  */
-NetSimRouter.prototype.getConnections = function (onComplete) {
+NetSimNodeRouter.prototype.getConnections = function (onComplete) {
   onComplete = defaultToEmptyFunction(onComplete);
 
   var instance = this.instance_;
@@ -203,7 +206,7 @@ NetSimRouter.prototype.getConnections = function (onComplete) {
  * connected to this router.
  * @param {function} onComplete, which accepts a number.
  */
-NetSimRouter.prototype.countConnections = function (onComplete) {
+NetSimNodeRouter.prototype.countConnections = function (onComplete) {
   onComplete = defaultToEmptyFunction(onComplete);
 
   this.getConnections(function (wires) {
@@ -228,7 +231,7 @@ var contains = function (haystack, needle) {
  * @param {!NetSimWire} wireNeedingAddress
  * @param {function} onComplete
  */
-NetSimRouter.prototype.assignAddressesToWire = function (wireNeedingAddress,
+NetSimNodeRouter.prototype.assignAddressesToWire = function (wireNeedingAddress,
     onComplete) {
   onComplete = defaultToEmptyFunction(onComplete);
 
@@ -264,7 +267,7 @@ NetSimRouter.prototype.assignAddressesToWire = function (wireNeedingAddress,
  * Returns list of objects in form { hostname:{string}, address:{number} }
  * @param onComplete
  */
-NetSimRouter.prototype.getAddressTable = function (onComplete) {
+NetSimNodeRouter.prototype.getAddressTable = function (onComplete) {
   onComplete = defaultToEmptyFunction(onComplete);
 
   var self = this;

@@ -67,10 +67,10 @@ var NetSimRouterPanel = function (connection) {
 
   /**
    * Cached reference to router
-   * @type {NetSimRouter}
+   * @type {NetSimNodeRouter}
    * @private
    */
-  this.router_ = undefined;
+  this.myConnectedRouter = undefined;
 };
 module.exports = NetSimRouterPanel;
 
@@ -115,13 +115,13 @@ NetSimRouterPanel.prototype.attachToRunLoop = function (runLoop) {
  */
 NetSimRouterPanel.prototype.onConnectionStatusChange_ = function () {
   if (this.connection_.isConnectedToRouter()) {
-    if (this.connection_.router_ !== this.router_) {
-      this.router_ = this.connection_.router_;
+    if (this.connection_.myConnectedRouter !== this.myConnectedRouter) {
+      this.myConnectedRouter = this.connection_.myConnectedRouter;
       this.periodicRefresh_.enable();
       // TODO : Attach to router change listener
     }
   } else {
-    this.router_ = undefined;
+    this.myConnectedRouter = undefined;
     this.refresh();
     this.periodicRefresh_.disable();
   }
@@ -131,12 +131,12 @@ NetSimRouterPanel.prototype.onConnectionStatusChange_ = function () {
  * Update the address table to show the list of nodes in the local network.
  */
 NetSimRouterPanel.prototype.refresh = function () {
-  if (this.router_) {
+  if (this.myConnectedRouter) {
     this.connectedSpan_.show();
     this.notConnectedSpan_.hide();
 
     var self = this;
-    this.router_.getAddressTable(function (rows) {
+    this.myConnectedRouter.getAddressTable(function (rows) {
       self.networkTable_.empty();
       $('<tr><th>Hostname</th><th>Address</th></tr>').
           appendTo(self.networkTable_);
