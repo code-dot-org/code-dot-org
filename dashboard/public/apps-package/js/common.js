@@ -15877,8 +15877,6 @@ exports.setText = function(node, string) {
 
 
 var addEvent = function(element, eventName, handler) {
-  element.addEventListener(eventName, handler, false);
-
   var isIE11Touch = window.navigator.pointerEnabled;
   var isIE10Touch = window.navigator.msPointerEnabled;
   var isStandardTouch = 'ontouchend' in document.documentElement;
@@ -15897,6 +15895,8 @@ var addEvent = function(element, eventName, handler) {
       e.preventDefault();  // Stop mouse events.
       handler(e);
     }, false);
+  } else {
+    element.addEventListener(eventName, handler, false);
   }
 };
 
