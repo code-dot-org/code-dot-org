@@ -1,0 +1,6 @@
+name 'Multi Define Funcs 2'
+title 'g(y) = y + 3'
+question 'What is the name of the parameter?'
+wrong 'g'
+right 'y'
+wrong '3'

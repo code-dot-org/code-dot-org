@@ -518,6 +518,24 @@ en:
         (rectangle 10 2 "solid" "red"): (rectangle 10 2 "solid" "red")
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): (rectangle (+ 8 2) (- 7 5) "solid" "red")
         (rectangle (+ 8 2) (- 7 5) solid red): (rectangle (+ 8 2) (- 7 5) solid red)
+      Multi Define Funcs 1:
+        g(y) = y + 3: g(y) = y + 3
+        What is the name of this function?: What is the name of this function?
+        g: g
+        y: y
+        '3': '3'
+      Multi Define Funcs 2:
+        g(y) = y + 3: g(y) = y + 3
+        What is the name of the parameter?: What is the name of the parameter?
+        g: g
+        y: y
+        '3': '3'
+      Multi Define Funcs 3:
+        g(y) = y + 3: g(y) = y + 3
+        What should g(2) return?: What should g(2) return?
+        '6': '6'
+        '5': '5'
+        y: y
       Multi Strings Images 1:
         Strings and Images Multiple Choice: Strings and Images Multiple Choice
         Multi Strings Images 1.blocks3.level: Multi Strings Images 1.blocks3.level
