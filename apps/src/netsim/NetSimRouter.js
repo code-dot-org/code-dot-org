@@ -42,7 +42,6 @@
  */
 'use strict';
 
-var netsimStorage = require('./netsimStorage');
 var NetSimLogger = require('./NetSimLogger');
 var NetSimWire = require('./NetSimWire');
 var LogLevel = NetSimLogger.LogLevel;
@@ -60,17 +59,17 @@ var defaultToEmptyFunction = function (funcArg) {
 };
 
 /**
- * @param {string} instanceID
+ * @param {!netsimInstance} instance
  * @param {?number} routerID - Lobby row ID for this router.  If null, use
  *        connectToLobby() to add this router to the lobby and get an ID.
  * @constructor
  */
-var NetSimRouter = function (instanceID, routerID) {
+var NetSimRouter = function (instance, routerID) {
   /**
-   * @type {string}
+   * @type {netsimInstance}
    * @private
    */
-  this.instanceID_ = instanceID;
+  this.instance_ = instance;
 
   /**
    * This router's row ID (and unique ID) within the lobby table of the instance.
@@ -120,13 +119,13 @@ var RouterStatus = NetSimRouter.RouterStatus;
  * Static creation method: Creates a new router node on the given instance,
  * calls the given callback with a local controller for the new router node
  * when creation is complete.
- * @param instanceID
+ * @param {!netsimInstance} instance
  * @param onComplete
  */
-NetSimRouter.create = function (instanceID, onComplete) {
+NetSimRouter.create = function (instance, onComplete) {
   onComplete = defaultToEmptyFunction(onComplete);
 
-  var router = new NetSimRouter(instanceID);
+  var router = new NetSimRouter(instance);
   router.getLobbyTable().insert(router.buildLobbyRow_(), function (data) {
     if (data) {
       router.routerID = data.id;
@@ -184,8 +183,7 @@ NetSimRouter.prototype.destroy = function (onComplete) {
  * @returns {exports.SharedStorageTable}
  */
 NetSimRouter.prototype.getLobbyTable = function () {
-  return new netsimStorage.SharedStorageTable(netsimStorage.APP_PUBLIC_KEY,
-      this.instanceID_ + '_lobby');
+  return this.instance_.getLobbyTable();
 };
 
 /**
@@ -193,8 +191,7 @@ NetSimRouter.prototype.getLobbyTable = function () {
  * @returns {exports.SharedStorageTable}
  */
 NetSimRouter.prototype.getWireTable = function () {
-  return new netsimStorage.SharedStorageTable(netsimStorage.APP_PUBLIC_KEY,
-      this.instanceID_ + '_wire');
+  return this.instance_.getWireTable();
 };
 
 /**
@@ -236,7 +233,7 @@ NetSimRouter.prototype.getHostname = function () {
 NetSimRouter.prototype.getConnections = function (onComplete) {
   onComplete = defaultToEmptyFunction(onComplete);
 
-  var instanceID = this.instanceID_;
+  var instance = this.instance_;
   var routerID = this.routerID;
   this.getWireTable().all(function (rows) {
     if (rows === null) {
@@ -246,7 +243,7 @@ NetSimRouter.prototype.getConnections = function (onComplete) {
 
     var myWires = rows.
         map(function (row) {
-          return new NetSimWire(instanceID, row);
+          return new NetSimWire(instance, row);
         }).
         filter(function (wire){
           return wire.remoteNodeID === routerID;
