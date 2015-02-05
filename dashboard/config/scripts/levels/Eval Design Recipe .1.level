@@ -8,7 +8,7 @@
     "skin": "eval",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Here's a Design Recipe for a function called \"square circle\" with domain Number String and range Image. Look at the two examples we've provided and write the function definition.",
+    "instructions": "Here's a Design Recipe for a function called \"square-circle\" with domain Number String and range Image. Look at the two examples we've provided and write the function definition.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -25,7 +25,7 @@
         <block type="functional_display" inline="false" deletable="false" movable="false">
           <functional_input name="ARG1">
             <block type="functional_call" inline="false" movable="false">
-              <mutation name="square circle">
+              <mutation name="square-circle">
                 <arg name="size" type="Number"/>
                 <arg name="color" type="string"/>
               </mutation>
@@ -49,7 +49,7 @@
             <description>Output a white circle bounded by a square of given size and color</description>
             <outputtype>image</outputtype>
           </mutation>
-          <title name="NAME">square circle</title>
+          <title name="NAME">square-circle</title>
         </block>
         <block type="functional_example" inline="false" uservisible="false">
           <functional_input name="EXPECTED">
@@ -96,7 +96,7 @@
           </functional_input>
           <functional_input name="ACTUAL">
             <block type="functional_call" inline="false" uservisible="false">
-              <mutation name="square circle">
+              <mutation name="square-circle">
                 <arg name="size" type="Number"/>
                 <arg name="color" type="string"/>
               </mutation>
@@ -158,7 +158,7 @@
           </functional_input>
           <functional_input name="ACTUAL">
             <block type="functional_call" inline="false" uservisible="false">
-              <mutation name="square circle">
+              <mutation name="square-circle">
                 <arg name="size" type="Number"/>
                 <arg name="color" type="string"/>
               </mutation>
