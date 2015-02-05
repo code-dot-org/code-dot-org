@@ -442,12 +442,6 @@
         el = $('<div>').addClass('header_popup_footer').appendTo(header_popup);
         $('<div>').addClass('header_popup_close').text('<%= I18n.t("nav.popup.close") %>').appendTo(el);
 
-        if (state.stageHtml && state.jumpToTrophies) {
-          var off = $('#trophies').offset();
-          if (off)
-            window.scrollTo(0, +off.top);
-        }
-
         // Catch clicks anywhere else and close the popup
         $(document).on('click', this.onModalClick);
       } else {
@@ -459,14 +453,16 @@
       // This is totally cheating by React rules.  But it's intentional: we don't want to force another
       // update so we just edit the state directly.  (React would notice that the change had no DOM effect,
       // but we don't have that optimization.)
-      if (this.state.stageHtml)
+      if (this.state.stageHtml && this.state.jumpToTrophies) {
+        var off = $('#trophies').offset();
+        if (off)
+          window.scrollTo(0, +off.top);
         delete this.state.jumpToTrophies;
+      }
     }
 
     // Three possible arguments: true, false, or "trophies" (the last one autoscrolls the page to the bottom of the popup)
     HeaderProgress.prototype.showPopup = function(show) {
-      var _this = this;
-
       headerProgress.setState({
         popped: !!show,
         jumpToTrophies: show == 'trophies'
