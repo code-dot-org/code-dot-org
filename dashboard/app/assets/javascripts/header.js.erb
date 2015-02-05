@@ -2,8 +2,24 @@
  * Dynamic header generation and event bindings for header actions.
  */
 
-// TODO: Enable the 'destroyed' method?
+// TODO: Enable the 'destroyed' method?   No need if we're just going to switch to React later.
 // (function($){ $.event.special.destroyed = { remove: function(o) { if (o.handler) { o.handler() } } } })(jQuery);
+
+
+// ****************
+//  IMPORTANT NOTE
+// ****************
+//
+// This file contains proof-of-concept code (though it's safe for production)
+// - UIComponent is an example React implementation
+// - UIStore is an example Flux implementation
+// - UIRouter is a really simple router
+//
+// These classes (and the derived ones) look pretty 'bulky' as they are written today.
+// If we begin using React, this file will shrink to less than half of its current size.
+// With CoffeeScript it'll shrink at least another half.
+// There's really not that much "logic" here, it's just boilerplate that can be eliminated!
+
 
 // New private scope -- a lot of this is boilerplate for class structures, taken from coffeescript
 (function() {
@@ -118,10 +134,9 @@
 
 
 
-  // class UIStore: this is a lightweight inheritable class modeled after Flux
+  // class UIStore: this is a lightweight inheritable *ABSTRACT* class modeled after Flux
   // UIStore is "offline-aware", meaning that it will load assets in a different way when
-  // it knows that there is no network connection.  By default, the offline method is to
-  // make direct file:// requeuests.  TODO: allow subclasses to override the offline method.
+  // it knows that there is no network connection.
   UIStore = (function() {
 
     function UIStore() {
@@ -155,14 +170,14 @@
     // Resolve a dynamic asset by combining the base asset filename + a serialized version of the args
     // MUST override this.  It's okay to use args and dataType to determine the URL.
     UIStore.prototype.resolveUrl = function(args, dataType) {
-      return "/data";
+      throw new Error("This store has not specified its URL.");
     }
 
     // Resolve a static asset by combining the base asset filename + a serialized version of the args
     // MUST override this if you want to support offline access.
     // Example: return "/data/file_" + args.id + "." + dataType;
     UIStore.prototype.resolveFilename = function(args, dataType) {
-      throw new Error("Offline access is not supported.");
+      throw new Error("This store does not support offline mode.");
     }
 
     // Resolve the AJAX parameters for a dynamic request
@@ -205,14 +220,19 @@
       return $.ajax(ajax);
     }
 
-    // Load JSON structure directly
+    // Load JSON data into this store.
     UIStore.prototype.load = function(args) {
       return this.$load(args, "json");
     }
 
-    // Load XML and return it as a JSON structure
+    // Helper: Load XML and return it as a JSON structure
     UIStore.prototype.loadXML = function(args) {
       return this.$load(args, "xml");
+    }
+
+    // Helper: Load HTML into this store, as a string
+    UIStore.prototype.loadHTML = function(args) {
+      return this.$load(args, "html");
     }
 
     return UIStore;
@@ -252,13 +272,33 @@
     }
 
     HeaderStore.prototype.resolveFilename = function(args, dataType) {
-      return "/progress_" + args.script_name + "_" + args.stage_id + "_" + args.level_id + ".json";
+      return "/progress_" + args.script_name + "_" + args.stage_id + "_" + args.level_id + "." + dataType;
     }
 
     return HeaderStore;
   })(UIStore);
 
 
+
+  // ScriptStore: load the script progress (used in the header dropdown)
+  ScriptStore = (function(_super) {
+    __extends(ScriptStore, _super);
+
+    // Must have a constructor
+    function ScriptStore() {
+      return ScriptStore.__super__.constructor.apply(this, arguments);
+    }
+
+    ScriptStore.prototype.resolveUrl = function(args, dataType) {
+      return "/popup/stats";
+    }
+
+    ScriptStore.prototype.resolveFilename = function(args, dataType) {
+      return "/script_" + args.script_id + "." + dataType;
+    }
+
+    return ScriptStore;
+  })(UIStore);
 
 
 
@@ -274,12 +314,20 @@
     }
 
     HeaderProgress.prototype.componentDidMount = function() {
+      var _this = this;
 
       // Create a new HeaderStore and bind it to my state.
       // TODO: Is this the right place to put this?
       // It guarantees there will be at least one render cycle before we try to load the header.
       this.headerStore = new HeaderStore();
       this.headerStore.notify( __bind(this.replaceState, this) );
+
+      this.scriptStore = new ScriptStore();
+      this.scriptStore.notify(function(html) {
+        _this.setState({
+          stageHtml: html
+        });
+      })
 
       // TODO: Handle props changing.
       if (this.props.scriptName)
@@ -411,36 +459,29 @@
       // This is totally cheating by React rules.  But it's intentional: we don't want to force another
       // update so we just edit the state directly.  (React would notice that the change had no DOM effect,
       // but we don't have that optimization.)
-      delete this.state.jumpToTrophies;
+      if (this.state.stageHtml)
+        delete this.state.jumpToTrophies;
     }
 
     // Three possible arguments: true, false, or "trophies" (the last one autoscrolls the page to the bottom of the popup)
     HeaderProgress.prototype.showPopup = function(show) {
       var _this = this;
-      var afterRender = null;
 
       headerProgress.setState({
         popped: !!show,
         jumpToTrophies: show == 'trophies'
-      }, afterRender);
+      });
 
       // Have we loaded the stage HTML already?  If not, load it now.
       if (this.state.popped && (this.state.stageHtml === undefined)) {
-        this.state.stageHtml = false;
+        this.state.stageHtml = false; // prevent multiple loads
 
-        $.ajax({
-          url: this.state.statsPath,
-          data: {
-            script_id: this.state.scriptId,
-            script_level_id: this.state.scriptLevelId
-          },
-          success: function (result) {
-            _this.setState({
-              stageHtml: result,
-              jumpToTrophies: show == 'trophies'
-            }, afterRender)
-          }
+        // Ask the script store to load a particular script.
+        this.scriptStore.loadHTML({
+          script_id: this.state.scriptId,
+          script_level_id: this.state.scriptLevelId
         });
+
       }
     }
 
@@ -450,6 +491,7 @@
       // Toggle more/less button
       el = $(ev.target).closest('.header_trophy_link');
       if (el.length) {
+        ev.stopPropagation(); // Otherwise it will count as a click outside the modal.
         this.showPopup("trophies");
         return;
       }
@@ -457,6 +499,7 @@
       // Toggle more/less button
       el = $(ev.target).closest('.header_popup_link');
       if (el.length) {
+        ev.stopPropagation();
         this.showPopup(!this.state.popped);
         return;
       }
@@ -485,6 +528,8 @@
 
 
   // For now, create a global.  Later, this should be in module.exports
+  // (Note these are already global since they're not declared via 'var'.
   window.HeaderProgress = HeaderProgress;
+  window.HeaderStore = HeaderStore;
 
 }).call(this);
