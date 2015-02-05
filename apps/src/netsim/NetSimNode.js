@@ -38,12 +38,14 @@
 'use strict';
 
 var superClass = require('./NetSimEntity');
+var NetSimWire = require('./NetSimWire');
 
 /**
  *
  * @param {!netsimInstance} instance
  * @param {Object} [nodeRow] JSON row from table.
  * @constructor
+ * @augments NetSimEntity
  */
 var NetSimNode = function (instance, nodeRow) {
   superClass.call(this, instance, nodeRow);
@@ -126,4 +128,60 @@ NetSimNode.prototype.getStatus = function () {
  */
 NetSimNode.prototype.getStatusDetail = function () {
   return this.statusDetail_ ? this.statusDetail_ : '';
+};
+
+/**
+ * Establish a connection between this node and another node,
+ * by creating a wire between them, and verifying that the remote node
+ * can accept the connection.
+ * When finished, calls onComplete({the new wire})
+ * On failure, calls onComplete(null)
+ * @param {!NetSimNode} otherNode
+ * @param {function} [onComplete]
+ */
+NetSimNode.prototype.connectToNode = function (otherNode, onComplete) {
+  if (!onComplete) {
+    onComplete = function () {};
+  }
+
+  var self = this;
+  NetSimWire.create(this.instance_, function (wire) {
+    if (wire === null) {
+      onComplete(null);
+      return;
+    }
+
+    wire.localNodeID = self.entityID;
+    wire.remoteNodeID = otherNode.entityID;
+    wire.update(function (success) {
+      if (!success) {
+        wire.destroy(function () {
+          onComplete(null);
+        });
+        return;
+      }
+
+      otherNode.acceptConnection(self, function (success) {
+        if (!success) {
+          wire.destroy(function () {
+            onComplete(null);
+          });
+          return;
+        }
+
+        onComplete(wire);
+      });
+    });
+  });
+};
+
+/**
+ * Called when another node establishes a connection to this one, giving this
+ * node a chance to reject the connection.
+ * @param {!NetSimNode} otherNode attempting to connect to this one
+ * @param {!function} onComplete response method - should call with TRUE
+ *        if connection is allowed, FALSE if connection is rejected.
+ */
+NetSimNode.prototype.acceptConnection = function (otherNode, onComplete) {
+  onComplete(true);
 };

@@ -68,18 +68,6 @@ var NetSimNodeRouter = function (instance, routerRow) {
   superClass.call(this, instance, routerRow);
 
   /**
-   * @type {RouterStatus}
-   * @private
-   */
-  this.status_ = NetSimNodeRouter.RouterStatus.READY;
-
-  /**
-   * @type {string}
-   * @private
-   */
-  this.statusDetail_ = '';
-
-  /**
    * @const
    * @type {number}
    */
@@ -226,15 +214,41 @@ var contains = function (haystack, needle) {
 };
 
 /**
- * Cue router to check existing wires and find an open address for the
- * given one.
- * @param {!NetSimWire} wireNeedingAddress
- * @param {function} onComplete
+ * Called when another node establishes a connection to this one, giving this
+ * node a chance to reject the connection.
+ *
+ * The router checks against its connection limit, and rejects the connection
+ * if its limit is now exceeded.
+ *
+ * @param {!NetSimNode} otherNode attempting to connect to this one
+ * @param {!function} onComplete response method - should call with TRUE
+ *        if connection is allowed, FALSE if connection is rejected.
  */
-NetSimNodeRouter.prototype.assignAddressesToWire = function (wireNeedingAddress,
-    onComplete) {
+NetSimNodeRouter.prototype.acceptConnection = function (otherNode, onComplete) {
+  var self = this;
+  this.countConnections(function (count) {
+    if (count > self.MAX_CLIENT_CONNECTIONS) {
+      onComplete(false);
+      return;
+    }
+
+    onComplete(true);
+  });
+};
+
+/**
+ * Assign a new address for hostname on wire, calling onComplete(success)
+ * when done.
+ * @param {!NetSimWire} wire that lacks addresses or hostnames
+ * @param {string} hostname of requesting node
+ * @param {function} [onComplete] reports success or failure.
+ */
+NetSimNodeRouter.prototype.requestAddress = function (wire, hostname, onComplete) {
   onComplete = defaultToEmptyFunction(onComplete);
 
+
+  // General strategy: Create a list of existing remote addresses, pick a
+  // new one, and assign it to the provided wire.
   var self = this;
   this.getConnections(function (wires) {
     var addressList = wires.filter(function (wire) {
@@ -250,14 +264,14 @@ NetSimNodeRouter.prototype.assignAddressesToWire = function (wireNeedingAddress,
       newAddress++;
     }
 
-    wireNeedingAddress.localAddress = newAddress;
-    wireNeedingAddress.remoteAddress = 0; // Always 1 for routers
-    wireNeedingAddress.remoteHostname = self.getHostname();
-    wireNeedingAddress.update(onComplete);
-    // TODO (bbuchanan): There is a possible race condition here, where we would
-    // TODO              get the same address assigned to two clients.
-    // TODO              Recover?
-  });
+    wire.localAddress = newAddress;
+    wire.localHostname = hostname;
+    wire.remoteAddress = 0; // Always 0 for routers
+    wire.remoteHostname = self.getHostname();
+    wire.update(onComplete);
+    // TODO: Fix possibility of two routers getting addresses by verifying
+    //       after updating the wire.
+  })
 };
 
 /**

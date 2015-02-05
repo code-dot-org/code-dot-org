@@ -63,7 +63,7 @@ var NetSimEntity = function (instance, entityRow) {
 
   /**
    * @type {netsimInstance}
-   * @private
+   * @protected
    */
   this.instance_ = instance;
 
@@ -83,8 +83,16 @@ var NetSimEntity = function (instance, entityRow) {
   /**
    * How long (in milliseconds) this entity is allowed to remain in
    * storage without being cleaned up.
+   * @type {number}
    */
   this.ENTITY_TIMEOUT_MS = 300000;
+
+  /**
+   * How often (in milliseconds) this entity's status should be pushed
+   * to the server to keep the row active.
+   * @type {number}
+   */
+  this.ENTITY_KEEPALIVE_MS = 30000;
 };
 module.exports = NetSimEntity;
 
@@ -163,5 +171,18 @@ NetSimEntity.prototype.buildRow_ = function () {
  * @returns {boolean}
  */
 NetSimEntity.prototype.isExpired = function () {
+  // TODO: Subclasses should reimplement this method to include
+  // validation checks; e.g. a NetSimWire is expired if one of its
+  // endpoints no longer exists.
   return Date.now() - this.lastPing_ >= this.ENTITY_TIMEOUT_MS;
+};
+
+/**
+ * Default Entity tick ensures keepAlive messages get sent for this entity.
+ * @param {!RunLoop.Clock} clock
+ */
+NetSimEntity.prototype.tick = function () {
+  if (Date.now() - this.lastPing_ >= this.ENTITY_KEEPALIVE_MS){
+    this.update();
+  }
 };

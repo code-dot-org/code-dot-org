@@ -115,8 +115,8 @@ NetSimRouterPanel.prototype.attachToRunLoop = function (runLoop) {
  */
 NetSimRouterPanel.prototype.onConnectionStatusChange_ = function () {
   if (this.connection_.isConnectedToRouter()) {
-    if (this.connection_.myConnectedRouter !== this.myConnectedRouter) {
-      this.myConnectedRouter = this.connection_.myConnectedRouter;
+    if (this.connection_.myNode.myRouter !== this.myConnectedRouter) {
+      this.myConnectedRouter = this.connection_.myNode.myRouter;
       this.periodicRefresh_.enable();
       // TODO : Attach to router change listener
     }

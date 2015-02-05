@@ -58,9 +58,31 @@ var NetSimNodeClient = function (instance, clientRow) {
   /**
    * How long (in milliseconds) this entity is allowed to remain in
    * storage without being cleaned up.
+   * @type {number}
    * @override
    */
   this.ENTITY_TIMEOUT_MS = 30000;
+
+  /**
+   * How often (in milliseconds) this entity's status should be pushed
+   * to the server to keep the row active.
+   * @type {number}
+   * @override
+   */
+  this.ENTITY_KEEPALIVE_MS = 2000;
+
+  /**
+   * Client nodes can only have one wire at a time.
+   * @type {NetSimWire}
+   */
+  this.myWire = null;
+
+  /**
+   * Client nodes can be connected to a router, which they will
+   * help to simulate.
+   * @type {NetSimRouter}
+   */
+  this.myRouter = null;
 };
 NetSimNodeClient.prototype = Object.create(superClass.prototype);
 NetSimNodeClient.prototype.constructor = NetSimNodeClient;
@@ -88,4 +110,142 @@ NetSimNodeClient.getNodeType = function () {
 
 NetSimNodeClient.prototype.setDisplayName = function (displayName) {
   this.displayName_ = displayName;
+};
+
+/**
+ * Our client tick can also tick its connected wire and its remote client.
+ * @param {!RunLoop.Clock} clock
+ */
+NetSimNodeClient.prototype.tick = function (clock) {
+  superClass.prototype.tick.call(this, clock);
+
+  if (this.myWire) {
+    this.myWire.tick(clock);
+  }
+
+  if (this.myRouter) {
+    this.myRouter.tick(clock);
+  }
+};
+
+/**
+ * If a client update fails, should attempt an automatic reconnect.
+ * @param {function} [onComplete]
+ * @param {boolean} [autoReconnect=true]
+ */
+NetSimNodeClient.prototype.update = function (onComplete, autoReconnect) {
+  if (!onComplete) {
+    onComplete = function () {};
+  }
+  if (autoReconnect === undefined) {
+    autoReconnect = true;
+  }
+
+  var self = this;
+  superClass.prototype.update.call(this, function (success) {
+    if (!success && autoReconnect) {
+      self.reconnect_(onComplete);
+    } else {
+      onComplete(success);
+    }
+  });
+};
+
+/**
+ * Reconnection sequence for client node, in which it tries to grab a
+ * new node ID and propagate it across the simulation.
+ * @param {!function} onComplete (success)
+ * @private
+ */
+NetSimNodeClient.prototype.reconnect_ = function (onComplete) {
+  var self = this;
+  NetSimNodeClient.create(this.instance_, function (node) {
+    if (!node) {
+      // Reconnect failed
+      onComplete(false);
+      return;
+    }
+
+    // Steal the new row's entity ID
+    self.entityID = node.entityID;
+    self.update(function (success) {
+      if (!success) {
+        // Reconnect failed
+        onComplete(false);
+        return;
+      }
+
+      // If we have a wire, we also have to update it to be reconnected.
+      if (self.myWire !== null) {
+        self.myWire.localNodeID = self.entityID;
+        self.myWire.update(function (success) {
+          if (!success) {
+            // Reconnect failed
+            onComplete(false);
+            return;
+          }
+
+          // Wire reconnected as well - we're good.
+          onComplete(true);
+        });
+      } else {
+        // Sufficient - we are reconnected
+        onComplete(true);
+      }
+    }, false); // No auto-reconnect this time.
+  })
+};
+
+/**
+ *
+ * @param {!NetSimRouter} router
+ * @param {function} onComplete({boolean}success)
+ */
+NetSimNodeClient.prototype.connectToRouter = function (router, onComplete) {
+  if (!onComplete) {
+    onComplete = function () {};
+  }
+
+  var self = this;
+  this.connectToNode(router, function (wire) {
+    if (!wire) {
+      onComplete(false);
+      return;
+    }
+
+    self.myWire = wire;
+    self.myRouter = router;
+    router.requestAddress(wire, self.getHostname(), function (success) {
+      if (!success) {
+        wire.destroy(function () {
+          onComplete(false);
+        });
+        return;
+      }
+
+      self.myWire = wire;
+      self.myRouter = router;
+      // Trigger an immediate router update so its connection count is correct.
+      self.myRouter.update(onComplete);
+    });
+  });
+};
+
+NetSimNodeClient.prototype.disconnectRemote = function (onComplete) {
+  if (!onComplete) {
+    onComplete = function () {};
+  }
+
+  var self = this;
+  this.myWire.destroy(function (success) {
+    if (!success) {
+      onComplete(success);
+      return;
+    }
+
+    self.myWire = null;
+    self.myRouter = null;
+    // Trigger an immediate router update so its connection count is correct.
+    self.myRouter.update(onComplete);
+  });
 };

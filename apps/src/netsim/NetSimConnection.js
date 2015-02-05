@@ -42,13 +42,6 @@ var periodicAction = require('./periodicAction');
 var netsimInstance = require('./netsimInstance');
 
 /**
- * How often a keep-alive message should be sent to the instance lobby
- * @type {number}
- * @const
- */
-var KEEP_ALIVE_INTERVAL_MS = 2000;
-
-/**
  * How often the client should run its clean-up job, removing expired rows
  * from the instance tables
  * @type {number}
@@ -94,26 +87,6 @@ var NetSimConnection = function (displayName, logger /*=new NetSimLogger(NONE)*/
   this.myNode = null;
 
   /**
-   * This client node's simulated connection to another node.
-   * If you *are* connected to another node, you should have one of these.
-   * If you *are not* connected to another node, this should be null.
-   * We are always the local end of this wire, so we assert that
-   *   this.myWire.localNodeID === this.myNode.entityID
-   * @type {NetSimWire}
-   */
-  this.myWire = null;
-
-  /**
-   * If this client node is connected to a router, this will be a NetSimNodeRouter
-   * instance for that connected router.  Communication that we want to model
-   * still needs to happen over the wire - we use this object so that our
-   * client can help simulate the router's behavior.
-   * @type {NetSimNodeRouter}
-   *
-   */
-  this.myConnectedRouter = null;
-
-  /**
    * Allows others to subscribe to connection status changes.
    * args: none
    * Notifies on:
@@ -125,31 +98,6 @@ var NetSimConnection = function (displayName, logger /*=new NetSimLogger(NONE)*/
    * @type {ObservableEvent}
    */
   this.statusChanges = new ObservableEvent();
-
-  /**
-   * Helper for sending keepAlive updates on a regular interval
-   * @type {periodicAction}
-   * @private
-   */
-  this.periodicKeepAlive_ = periodicAction(function () {
-    var self = this;
-    if (this.myNode) {
-      this.myNode.update(function(succeeded) {
-        if (!succeeded) {
-          self.logger_.info("Reconnecting...");
-          self.createMyClientNode_();
-        }
-      });
-    }
-
-    if (this.myWire) {
-      this.myWire.update();
-    }
-
-    if (this.myConnectedRouter) {
-      this.myConnectedRouter.update();
-    }
-  }.bind(this), KEEP_ALIVE_INTERVAL_MS);
 
   /**
    * Helper for performing instance clean-up on a regular interval
@@ -169,10 +117,19 @@ module.exports = NetSimConnection;
  * @param {RunLoop} runLoop
  */
 NetSimConnection.prototype.attachToRunLoop = function (runLoop) {
-  this.periodicKeepAlive_.attachToRunLoop(runLoop);
-  this.periodicKeepAlive_.enable();
   this.periodicCleanUp_.attachToRunLoop(runLoop);
   this.periodicCleanUp_.enable();
+
+  runLoop.tick.register(this, this.tick);
+};
+
+/**
+ * @param {!RunLoop.Clock} clock
+ */
+NetSimConnection.prototype.tick = function (clock) {
+  if (this.myNode) {
+    this.myNode.tick(clock);
+  }
 };
 
 /**
@@ -239,19 +196,9 @@ NetSimConnection.prototype.createMyClientNode_ = function () {
     if (node) {
       self.myNode = node;
       self.myNode.setDisplayName(self.displayName_);
-      // Set status?  Default status to something nice?
       self.myNode.update(function () {
         self.statusChanges.notifyObservers();
       });
-
-      // See if we have an active wire, and try to continue reconnecting
-      // if possible.
-      if (self.myWire) {
-        self.myWire.localNodeID = self.myNode.entityID;
-        self.myWire.update(function () {
-          self.statusChanges.notifyObservers();
-        });
-      }
     } else {
       self.logger_.error("Failed to create client node.");
     }
@@ -350,7 +297,7 @@ NetSimConnection.prototype.addRouterToLobby = function () {
  * @returns {boolean}
  */
 NetSimConnection.prototype.isConnectedToRouter = function () {
-  return this.myWire !== null && this.myConnectedRouter !== null;
+  return this.myNode && this.myNode.myRouter;
 };
 
 /**
@@ -366,25 +313,13 @@ NetSimConnection.prototype.connectToRouter = function (routerID) {
 
   var self = this;
   NetSimNodeRouter.get(routerID, this.instance_, function (router) {
-    self.myConnectedRouter = router;
-    if (router) {
-      // Optimistically create a wire and point it at the router
-      self.createWire(routerID, function (wire) {
-        if (wire !== null) {
-          self.myWire = wire;
-          self.myWire.localHostname = self.myNode.getHostname();
-          self.myConnectedRouter.countConnections(function (count) {
-            if (count <= self.myConnectedRouter.MAX_CLIENT_CONNECTIONS) {
-              self.myConnectedRouter.assignAddressesToWire(self.myWire,
-                  self.statusChanges.notifyObservers.bind(self.statusChanges));
-            } else {
-              // Oops!  We put the router over capacity, we should disconnect.
-              self.disconnectFromRouter();
-            }
-          });
-        }
-      });
+    if (!router) {
+      return;
     }
+
+    self.myNode.connectToRouter(router, function () {
+      self.statusChanges.notifyObservers();
+    });
   });
 };
 
@@ -399,46 +334,7 @@ NetSimConnection.prototype.disconnectFromRouter = function () {
   }
 
   var self = this;
-  this.myWire.destroy(function (success) {
-    if (success) {
-      // Simulate final router update as we disconnect, so if we are the
-      // last client to go, the router updates its connection status to
-      // 0/6 clients connected.
-      self.myConnectedRouter.update(function () {
-        self.statusChanges.notifyObservers();
-      });
-      self.myWire = null;
-      self.myConnectedRouter = null;
-    }
-  });
-};
-
-/**
- * Creates our local NetSimWire, connected to our client node on the
- * local end and connected to the given remote node at the remote end.
- * @param remoteNodeID
- * @param onComplete
- */
-NetSimConnection.prototype.createWire = function (remoteNodeID, onComplete) {
-  if (!onComplete) {
-    onComplete = function () {};
-  }
-
-  var self = this;
-  NetSimWire.create(this.instance_, function (wire) {
-    if (wire !== null) {
-      wire.localNodeID = self.myNode.entityID;
-      wire.remoteNodeID = remoteNodeID;
-      wire.update(function (success) {
-        if (success) {
-          onComplete(wire);
-        } else {
-          wire.destroy();
-          onComplete(null);
-        }
-      });
-    } else {
-      onComplete(null);
-    }
+  this.myNode.disconnectRemote(function () {
+    self.statusChanges.notifyObservers();
   });
 };
