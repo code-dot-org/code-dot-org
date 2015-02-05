@@ -8734,12 +8734,6 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
       color: 'green',
       blocks: [
         {
-          block: 'var x = __;',
-          title: 'Create a variable for the first time'
-        }, {
-          block: 'x = __;',
-          title: 'Reassign a variable'
-        }, {
           block: '__ + __',
           title: 'Add two numbers'
         }, {
@@ -8778,6 +8772,21 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
         }
       ]
     }, {
+      name: 'Variables',
+      color: 'blue',
+      blocks: [
+        {
+          block: 'var x = __;',
+          title: 'Create a variable for the first time'
+        }, {
+          block: 'x = __;',
+          title: 'Reassign a variable'
+        }, {
+          block: 'var x = [1, 2, 3, 4];',
+          title: 'Create a variable and initialize it as an array'
+        }
+      ]
+    }, {
       name: 'Functions',
       color: 'violet',
       blocks: [
@@ -8807,15 +8816,13 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
   categoryInfo = (dropletConfig && dropletConfig.categories) || defCategoryInfo;
 
   var mergedFunctions = mergeFunctionsWithConfig(codeFunctions, dropletConfig);
+  var i, j;
 
-  for (var i = 0; i < mergedFunctions.length; i++) {
+  for (i = 0; i < mergedFunctions.length; i++) {
     var cf = mergedFunctions[i];
-    if (cf.category === 'hidden') {
-      continue;
-    }
     var block = cf.func + "(";
     if (cf.params) {
-      for (var j = 0; j < cf.params.length; j++) {
+      for (j = 0; j < cf.params.length; j++) {
         if (j !== 0) {
           block += ", ";
         }
@@ -8833,12 +8840,26 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
   var addedPalette = [];
   for (var category in categoryInfo) {
     categoryInfo[category].name = category;
+    for (j = 0; j < stdPalette.length; j++) {
+      if (stdPalette[j].name === category) {
+        // This category is in the stdPalette, merge in its blocks:
+        categoryInfo[category].blocks =
+            categoryInfo[category].blocks.concat(stdPalette[j].blocks);
+        break;
+      }
+    }
     if (categoryInfo[category].blocks.length > 0) {
       addedPalette.push(categoryInfo[category]);
     }
   }
 
-  return addedPalette.concat(stdPalette);
+  for (j = 0; j < stdPalette.length; j++) {
+    if (!(stdPalette[j].name in categoryInfo)) {
+      // This category from the stdPalette hasn't been referenced yet, add it:
+      addedPalette.push(stdPalette[j]);
+    }
+  }
+  return addedPalette;
 };
 
 /**
@@ -8850,13 +8871,10 @@ exports.generateAceApiCompleter = function (codeFunctions, dropletConfig) {
   var mergedFunctions = mergeFunctionsWithConfig(codeFunctions, dropletConfig);
   for (var i = 0; i < mergedFunctions.length; i++) {
     var cf = mergedFunctions[i];
-    if (cf.category === 'hidden') {
-      continue;
-    }
     apis.push({
       name: 'api',
       value: cf.func,
-      meta: 'local'
+      meta: cf.category
     });
   }
 
@@ -15877,8 +15895,6 @@ exports.setText = function(node, string) {
 
 
 var addEvent = function(element, eventName, handler) {
-  element.addEventListener(eventName, handler, false);
-
   var isIE11Touch = window.navigator.pointerEnabled;
   var isIE10Touch = window.navigator.msPointerEnabled;
   var isStandardTouch = 'ontouchend' in document.documentElement;
@@ -15897,6 +15913,8 @@ var addEvent = function(element, eventName, handler) {
       e.preventDefault();  // Stop mouse events.
       handler(e);
     }, false);
+  } else {
+    element.addEventListener(eventName, handler, false);
   }
 };
 
