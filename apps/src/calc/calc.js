@@ -224,11 +224,15 @@ studioApp.runButtonClick = function() {
  * called first.
  */
 Calc.resetButtonClick = function () {
-  appState.message = null;
-  appState.currentAnimationDepth = 0;
-  timeoutList.clearTimeouts();
-
   appState.animating = false;
+  appState.response = null;
+  appState.message = null;
+  appState.result = null;
+  appState.testResults = null;
+  appState.currentAnimationDepth = 0;
+  appState.failedInput = null;
+
+  timeoutList.clearTimeouts();
 
   clearSvgUserExpression();
 };
@@ -405,6 +409,11 @@ Calc.execute = function() {
   };
 
   studioApp.report(reportData);
+
+  // Display feedback immediately
+  if (appState.testResults === TestResults.QUESTION_MARKS_IN_NUMBER_FIELD) {
+    return displayFeedback();
+  }
 
   appState.animating = true;
   if (appState.result === ResultType.SUCCESS &&
@@ -650,7 +659,9 @@ function displayFeedback() {
   level.extraTopBlocks = calcMsg.extraTopBlocks();
   var appDiv = null;
   // Show svg in feedback dialog
-  appDiv = cloneNodeWithoutIds('svgCalc');
+  if (appState.testResults !== TestResults.QUESTION_MARKS_IN_NUMBER_FIELD) {
+    appDiv = cloneNodeWithoutIds('svgCalc');
+  }
   var options = {
     app: 'Calc',
     skin: skin.id,
