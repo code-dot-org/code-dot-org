@@ -68,14 +68,23 @@ var NetSimEntity = function (instance, entityRow) {
   this.instance_ = instance;
 
   /**
+   * Cached last ping time for this entity
+   * @type {number}
+   * @private
+   */
+  this.lastPing_ = entityRow.lastPing;
+
+  /**
    * Node's row ID within the _lobby table.  Unique within instance.
    * @type {number}
    */
   this.entityID = entityRow.id;
 
-  // Logger?
-  // Status?
-  // StatusDetail?
+  /**
+   * How long (in milliseconds) this entity is allowed to remain in
+   * storage without being cleaned up.
+   */
+  this.ENTITY_TIMEOUT_MS = 300000;
 };
 module.exports = NetSimEntity;
 
@@ -128,6 +137,7 @@ NetSimEntity.get = function (EntityType, entityID, instance, onComplete) {
 NetSimEntity.prototype.update = function (onComplete) {
   onComplete = defaultToEmptyFunction(onComplete);
 
+  this.lastPing_ = Date.now();
   this.getTable_().update(this.entityID, this.buildRow_(), onComplete);
 };
 
@@ -146,4 +156,12 @@ NetSimEntity.prototype.buildRow_ = function () {
   return {
     lastPing: Date.now()
   };
+};
+
+/**
+ * Whether this entity's row has been touched within its timeout.
+ * @returns {boolean}
+ */
+NetSimEntity.prototype.isExpired = function () {
+  return Date.now() - this.lastPing_ >= this.ENTITY_TIMEOUT_MS;
 };

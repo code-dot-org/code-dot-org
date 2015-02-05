@@ -34,7 +34,7 @@
 'use strict';
 
 var dom = require('../dom');
-var NetSimConnection = require('./NetSimConnection');
+var NetSimNodeRouter = require('./NetSimNodeRouter');
 var markup = require('./NetSimLobby.html');
 var periodicAction = require('./periodicAction');
 
@@ -232,14 +232,12 @@ NetSimLobby.prototype.refreshLobby_ = function () {
       return;
     }
 
-    this.connection_.fetchLobbyListing(function (lobbyData) {
+    this.connection_.getAllNodes(function (lobbyData) {
       $(lobbyList).empty();
       $(self.connectButton_).show();
 
       lobbyData.sort(function (a, b) {
-        if (a.name === b.name) {
-          return 0;
-        } else if (a.name > b.name) {
+        if (a.getDisplayName() > b.getDisplayName()) {
           return 1;
         }
         return -1;
@@ -250,22 +248,22 @@ NetSimLobby.prototype.refreshLobby_ = function () {
         var item = $('<li>');
         $('<a>')
             .attr('href', '#')
-            .html(simNode.name + ' : ' +
-                simNode.status + ' ' +
-                simNode.statusDetail)
+            .html(simNode.getDisplayName() + ' : ' +
+                simNode.getStatus() + ' ' +
+                simNode.getStatusDetail())
             .appendTo(item);
 
         // Style rows by row type.
-        if (simNode.id === self.connection_.myNodeID) {
+        if (simNode.entityID === self.connection_.myNode.entityID) {
           item.addClass('own_row');
-        } else if (simNode.type === NetSimConnection.LobbyRowType.ROUTER) {
+        } else if (simNode.getNodeType() === NetSimNodeRouter.getNodeType()) {
           item.addClass('router_row');
         } else {
           item.addClass('user_row');
         }
 
         // Preserve selected item across refresh.
-        if (simNode.id === self.selectedID_) {
+        if (simNode.entityID === self.selectedID_) {
           item.addClass('selected_row');
           self.selectedListItem_ = item;
         }
@@ -282,8 +280,8 @@ NetSimLobby.prototype.refreshLobby_ = function () {
     // Just show the status line and the disconnect button
     $(this.lobbyClosedDiv_).show();
     $(this.lobbyOpenDiv_).hide();
-    $(this.connectionStatusSpan_).html(this.connection_.status_ + ' ' +
-        this.connection_.getStatusDetail());
+    $(this.connectionStatusSpan_).html(this.connection_.myNode.getStatus() + ' ' +
+        this.connection_.myNode.getStatusDetail());
   }
 };
 
@@ -294,7 +292,7 @@ NetSimLobby.prototype.refreshLobby_ = function () {
  */
 NetSimLobby.prototype.onRowClick_ = function (listItem, connectionTarget) {
   // Can't select own row
-  if (this.connection_.myNodeID === connectionTarget.id) {
+  if (this.connection_.myNode.entityID === connectionTarget.entityID) {
     return;
   }
 
@@ -309,8 +307,8 @@ NetSimLobby.prototype.onRowClick_ = function (listItem, connectionTarget) {
   this.selectedListItem_ = undefined;
 
   // If we clicked on a different row, select the new row
-  if (connectionTarget.id !== oldSelectedID) {
-    this.selectedID_ = connectionTarget.id;
+  if (connectionTarget.entityID !== oldSelectedID) {
+    this.selectedID_ = connectionTarget.entityID;
     this.selectedListItem_ = listItem;
     this.selectedListItem_.addClass('selected_row');
   }

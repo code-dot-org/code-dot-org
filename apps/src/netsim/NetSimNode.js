@@ -48,7 +48,27 @@ var superClass = require('./NetSimEntity');
 var NetSimNode = function (instance, nodeRow) {
   superClass.call(this, instance, nodeRow);
 
-  this.nodeType_ = undefined;
+  if (nodeRow === undefined) {
+    nodeRow = {};
+  }
+
+  /**
+   * @type {string}
+   * @private
+   */
+  this.displayName_ = nodeRow.name;
+
+  /**
+   * @type {string}
+   * @private
+   */
+  this.status_ = nodeRow.status;
+
+  /**
+   * @type {string}
+   * @private
+   */
+  this.statusDetail_ = nodeRow.statusDetail;
 };
 NetSimNode.prototype = Object.create(superClass.prototype);
 NetSimNode.prototype.constructor = NetSimNode;
@@ -72,7 +92,7 @@ NetSimNode.prototype.buildRow_ = function () {
  * @returns {string}
  */
 NetSimNode.prototype.getDisplayName = function () {
-  return '';
+  return this.displayName_ ? this.displayName_ : '[New Node]';
 };
 
 /**
@@ -96,7 +116,7 @@ NetSimNode.prototype.getNodeType = function () {
  * @returns {string}
  */
 NetSimNode.prototype.getStatus = function () {
-  return '';
+  return this.status_;
 };
 
 /**
@@ -105,5 +125,5 @@ NetSimNode.prototype.getStatus = function () {
  * @returns {string}
  */
 NetSimNode.prototype.getStatusDetail = function () {
-  return '';
+  return this.statusDetail_ ? this.statusDetail_ : '';
 };
