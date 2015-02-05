@@ -77,7 +77,7 @@ gem 'jbuilder', '~> 1.2'
 
 # authentication and permissions
 gem 'devise'
-gem 'cancan'
+gem 'cancancan', '~> 1.10' #CanCan is dead, long live CanCanCan
 
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'

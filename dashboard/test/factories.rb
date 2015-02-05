@@ -19,6 +19,11 @@ FactoryGirl.define do
     factory :student do
       user_type User::TYPE_STUDENT
     end
+
+    factory :facilitator do
+      user_type User::TYPE_TEACHER
+      name 'Facilitator Person'
+    end
   end
 
   factory :section do
@@ -175,5 +180,22 @@ FactoryGirl.define do
   factory :user_script do
     user {create :student}
     script
+  end
+
+  factory :cohort do
+  end
+
+  factory :district do
+    name 'District 13'
+    location 'Panem'
+  end
+
+  factory :workshop do
+    name 'My Workshop'
+    program_type 'CSP'
+    location 'Somewhere, USA'
+    instructions 'Test workshop instructions.'
+    cohort {create :cohort}
+    facilitator {create :facilitator}
   end
 end
