@@ -21,22 +21,20 @@
       this.onUpdate = __bind(this.onUpdate, this);
       this.onDestroy = __bind(this.onDestroy, this);
 
-      // Set the initial state
-      this.state = this.getInitialState() || {};
-
-      this.componentWillMount();
-
       this.$el = $el;
       this.$el.on('click', this.onClick);
       this.$el.on('destroyed', this.onDestroy);
 
       this.props = $el.data();
+      this.isMounting = true;
 
-      this.componentDidMount();
+      // Set the initial state
+      this.replaceState( this.getInitialState() || {} );
     }
 
     // Destroy a UI component
     UIComponent.prototype.onDestroy = function() {
+      // Don't do anything if already not mounted
       if (!this.isMounted())
         return;
 
@@ -78,15 +76,20 @@
       this.state = state || {};
     }
 
-    // My state has been changed
+    // My state has been changed, and we've let all other processes yield, so we know
+    // there are no more changes coming.  Time to update the DOM.
     UIComponent.prototype.onUpdate = function(ev) {
       // Don't do anything if no longer mounted
-      if (this.isMounted()) {
-        this.render();
-      }
+      if (!this.isMounted())
+        return;
 
-      // I'm no longer updating
+      this.isMounting ? this.componentWillMount() : this.componentWillUpdate();
+
+      this.render();
       delete this.isUpdating;
+
+      this.isMounting ? this.componentDidMount() : this.componentDidUpdate();
+      delete this.isMounting;
     }
 
     // Render into this element, given some state
@@ -102,6 +105,8 @@
     UIComponent.prototype.componentDidMount = function() { }
     UIComponent.prototype.componentWillUnmount = function() { }
     UIComponent.prototype.componentDidUnmount = function() { }
+    UIComponent.prototype.componentWillUpdate = function() { }
+    UIComponent.prototype.componentDidUpdate = function() { }
     UIComponent.prototype.isMounted = function() {
       return this.$el !== null;
     }
@@ -116,11 +121,14 @@
 
     // Must have a constructor
     function HeaderProgress() {
+      this.onModalClick = __bind(this.onModalClick, this);
+
       return HeaderProgress.__super__.constructor.apply(this, arguments);
     }
 
     HeaderProgress.prototype.componentDidMount = function() {
-      // TODO: enable the fetchProgress call here when we've removed the pushed state
+      var _this = this;
+
       this.fetchProgress();
 
       // Create tooltips for the free-play icons
@@ -141,6 +149,10 @@
     HeaderProgress.prototype.fetchProgress = function() {
       var url = this.props.url || '/popup/progress';
       var _this = this;
+
+      // Don't fetch unless we are initialized with a script
+      if (!this.props.scriptName)
+        return;
 
       $.getJSON(url, {
         script_name: this.props.scriptName,
@@ -178,7 +190,7 @@
       var _this = this;
       var state = this.state || {};
 
-      // Don't render unless we have the data attributes
+      // Don't render unless we are initialized with a script
       if (!this.props.scriptName)
         return;
 
@@ -264,20 +276,38 @@
         el = $('<div>').addClass('header_popup_footer').appendTo(header_popup);
         $('<div>').addClass('header_popup_close').text('<%= I18n.t("nav.popup.close") %>').appendTo(el);
 
-        header_popup.show(); // TODO: Not needed after removing the display:none; in the CSS
-      }
+        if (state.stageHtml && state.jumpToTrophies) {
+          var off = $('#trophies').offset();
+          if (off)
+            window.scrollTo(0, +off.top);
+        }
 
+        // Catch clicks anywhere else and close the popup
+        $(document).on('click', this.onModalClick);
+      } else {
+        $(document).off('click', this.onModalClick);
+      }
     }
 
+    HeaderProgress.prototype.componentDidUpdate = function() {
+      // This is totally cheating by React rules.  But it's intentional: we don't want to force another
+      // update so we just edit the state directly.  (React would notice that the change had no DOM effect,
+      // but we don't have that optimization.)
+      delete this.state.jumpToTrophies;
+    }
+
+    // Three possible arguments: true, false, or "trophies" (the last one autoscrolls the page to the bottom of the popup)
     HeaderProgress.prototype.showPopup = function(show) {
       var _this = this;
+      var afterRender = null;
 
       headerProgress.setState({
-        popped: !!show
-      });
+        popped: !!show,
+        jumpToTrophies: show == 'trophies'
+      }, afterRender);
 
       // Have we loaded the stage HTML already?  If not, load it now.
-      if (this.state.stageHtml === undefined) {
+      if (this.state.popped && (this.state.stageHtml === undefined)) {
         this.state.stageHtml = false;
 
         $.ajax({
@@ -288,23 +318,12 @@
           },
           success: function (result) {
             _this.setState({
-              stageHtml: result
-            })
-
-            if (show == "trophies") {
-              // TODO: Jump to trophies
-            }
+              stageHtml: result,
+              jumpToTrophies: show == 'trophies'
+            }, afterRender)
           }
         });
-      } else if (show == "trophies") {
-        // TODO: Jump to trophies
       }
-
-      /* TODO:
-        function jumpToTrophies() {
-          window.scrollTo(0, +$('#trophies').offset().top);
-        }
-      */
     }
 
     HeaderProgress.prototype.onClick = function(ev) {
@@ -330,28 +349,17 @@
         this.showPopup(false);
         return;
       }
+    }
 
+    HeaderProgress.prototype.onModalClick = function(ev) {
+      var el;
+
+      // Clicks outside the popup close it
       el = $(ev.target).closest('.header_popup');
-      if (el.length) {
-        ev.stopPropagation(); // Clicks inside the popup shouldn't close it
+      if (!el.length) {
+        this.showPopup(false);
         return;
       }
-
-
-      // TODO:
-      // -- jump to the trophies if that was clicked
-      // -- catch window clicks and close the popup
-      // -- don't close the popup if clicking inside it
-
-      /*
-        function jumpToTrophies() {
-          window.scrollTo(0, +$('#trophies').offset().top);
-        }
-      */
-
-      // TODO: Default behaviors
-      alert('header click');
-
     }
 
     return HeaderProgress;

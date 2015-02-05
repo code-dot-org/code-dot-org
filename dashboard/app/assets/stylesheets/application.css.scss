@@ -545,6 +545,10 @@ html, body {
   display: inline-block;
 }
 
+.header_level_container > * {
+  margin-left: 5px;
+}
+
 .header_level {
   padding-top: 6px;
   padding-bottom: 0;
@@ -560,14 +564,36 @@ html, body {
     background-color: #eee;
     border: 1px solid #ccc;
     display: inline-block;
-    padding: 5px 10px;
+    padding: 5px 5px 5px 10px;
     border-radius: 5px;
   }
-  /* current and last are large dots */
+
+  /* most dots are small */
+  .puzzle_outer_level,
+  .puzzle_outer_assessment {
+    margin: 0 5px 0 -1px;
+    vertical-align: middle;
+    border-radius: 11px;
+    line-height: 1px;
+
+    .level_link {
+      min-width: 1px;
+      width: 1px;
+      height: 1px;
+      border-radius: 9px;
+      padding: 3px;
+      margin: 1px;
+      /* hack to hide the number: */
+      font-size: 0px;
+      color: transparent;
+    }
+  }
+
+  /* current and last dots are large */
   .puzzle_outer_current,
   .puzzle_outer_level.last,
   .puzzle_outer_assessment.last {
-    margin: 0 -1px;
+    margin: 0 5px 0 -1px;
     vertical-align: middle;
     border-radius: 20px;
 
@@ -590,26 +616,7 @@ html, body {
     }
   }
 
-  /* all others are small dot */
-  .puzzle_outer_level,
-  .puzzle_outer_assessment {
-    margin: 0 -1px;
-    vertical-align: middle;
-    border-radius: 11px;
-    line-height: 1px;
 
-    .level_link {
-      min-width: 1px;
-      width: 1px;
-      height: 1px;
-      border-radius: 9px;
-      padding: 3px;
-      margin: 1px;
-      /* hack to hide the number: */
-      font-size: 0px;
-      color: transparent;
-    }
-  }
 
   .level_link:hover {
     text-decoration: none;
@@ -655,7 +662,6 @@ html, body {
   }
 }
 .header_popup {
-  display: none;
   position: absolute;
   top: auto;
   right: 0;
