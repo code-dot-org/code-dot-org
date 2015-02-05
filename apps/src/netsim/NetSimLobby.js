@@ -34,6 +34,7 @@
 'use strict';
 
 var dom = require('../dom');
+var NetSimNodeClient = require('./NetSimNodeClient');
 var NetSimNodeRouter = require('./NetSimNodeRouter');
 var markup = require('./NetSimLobby.html');
 var periodicAction = require('./periodicAction');
@@ -250,21 +251,19 @@ NetSimLobby.prototype.refreshLobby_ = function () {
 
       self.selectedListItem_ = undefined;
       lobbyData.forEach(function (simNode) {
-        var item = $('<li>');
-        $('<a>')
-            .attr('href', '#')
-            .html(simNode.getDisplayName() + ' : ' +
-                simNode.getStatus() + ' ' +
-                simNode.getStatusDetail())
-            .appendTo(item);
+        var item = $('<li>').html(
+            simNode.getDisplayName() + ' : ' +
+            simNode.getStatus() + ' ' +
+            simNode.getStatusDetail());
 
         // Style rows by row type.
-        if (simNode.entityID === self.connection_.myNode.entityID) {
-          item.addClass('own_row');
-        } else if (simNode.getNodeType() === NetSimNodeRouter.getNodeType()) {
+        if (simNode.getNodeType() === NetSimNodeRouter.getNodeType()) {
           item.addClass('router_row');
         } else {
           item.addClass('user_row');
+          if (simNode.entityID === self.connection_.myNode.entityID) {
+            item.addClass('own_row');
+          }
         }
 
         // Preserve selected item across refresh.
@@ -296,8 +295,8 @@ NetSimLobby.prototype.refreshLobby_ = function () {
  * @private
  */
 NetSimLobby.prototype.onRowClick_ = function (listItem, connectionTarget) {
-  // Can't select own row
-  if (this.connection_.myNode.entityID === connectionTarget.entityID) {
+  // Can't select user rows (for now)
+  if (NetSimNodeClient.getNodeType() === connectionTarget.getNodeType()) {
     return;
   }
 
