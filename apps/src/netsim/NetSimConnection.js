@@ -36,10 +36,11 @@ var NetSimLogger = require('./NetSimLogger');
 var NetSimNodeClient = require('./NetSimNodeClient');
 var NetSimNodeRouter = require('./NetSimNodeRouter');
 var NetSimWire = require('./NetSimWire');
-var LogLevel = NetSimLogger.LogLevel;
 var ObservableEvent = require('./ObservableEvent');
 var periodicAction = require('./periodicAction');
 var netsimInstance = require('./netsimInstance');
+
+var logger = new NetSimLogger(NetSimLogger.LogLevel.VERBOSE);
 
 /**
  * How often the client should run its clean-up job, removing expired rows
@@ -52,26 +53,15 @@ var CLEAN_UP_INTERVAL_MS = 10000;
 /**
  * A connection to a NetSim instance
  * @param {string} displayName - Name for person on local end
- * @param {NetSimLogger} logger - A log control interface, default nullimpl
  * @constructor
  */
-var NetSimConnection = function (displayName, logger /*=new NetSimLogger(NONE)*/) {
+var NetSimConnection = function (displayName) {
   /**
    * Display name for user on local end of connection, to be uploaded to others.
    * @type {string}
    * @private
    */
   this.displayName_ = displayName;
-
-  /**
-   * Instance of logging API, gives us choke-point control over log output
-   * @type {NetSimLogger}
-   * @private
-   */
-  this.logger_ = logger;
-  if (undefined === this.logger_) {
-    this.logger_ = new NetSimLogger(console, LogLevel.NONE);
-  }
 
   /**
    * Selected instance.
@@ -136,7 +126,7 @@ NetSimConnection.prototype.tick = function (clock) {
  * @returns {NetSimLogger}
  */
 NetSimConnection.prototype.getLogger = function () {
-  return this.logger_;
+  return logger;
 };
 
 /**
@@ -157,7 +147,7 @@ NetSimConnection.prototype.onBeforeUnload_ = function () {
  */
 NetSimConnection.prototype.connectToInstance = function (instanceID) {
   if (this.isConnectedToInstance()) {
-    this.logger_.log("Auto-closing previous connection...", LogLevel.WARN);
+    logger.warn("Auto-closing previous connection...");
     this.disconnectFromInstance();
   }
 
@@ -170,7 +160,7 @@ NetSimConnection.prototype.connectToInstance = function (instanceID) {
  */
 NetSimConnection.prototype.disconnectFromInstance = function () {
   if (!this.isConnectedToInstance()) {
-    this.logger_.log("Redundant disconnect call.", LogLevel.WARN);
+    logger.warn("Redundant disconnect call.");
     return;
   }
 
@@ -195,14 +185,26 @@ NetSimConnection.prototype.createMyClientNode_ = function () {
   NetSimNodeClient.create(this.instance_, function (node) {
     if (node) {
       self.myNode = node;
+      self.myNode.onChange.register(self, self.onMyNodeChange_);
       self.myNode.setDisplayName(self.displayName_);
       self.myNode.update(function () {
         self.statusChanges.notifyObservers();
       });
     } else {
-      self.logger_.error("Failed to create client node.");
+      logger.error("Failed to create client node.");
     }
   });
+};
+
+/**
+ * Detects when local client node is unable to reconnect, and kicks user
+ * out of the instance.
+ * @private
+ */
+NetSimConnection.prototype.onMyNodeChange_= function () {
+  if (this.myNode.getStatus() === 'Offline') {
+    this.disconnectFromInstance();
+  }
 };
 
 /**
@@ -220,7 +222,7 @@ NetSimConnection.prototype.isConnectedToInstance = function () {
  */
 NetSimConnection.prototype.getAllNodes = function (callback) {
   if (!this.isConnectedToInstance()) {
-    this.logger_.warn("Can't get lobby rows, not connected to instance.");
+    logger.warn("Can't get lobby rows, not connected to instance.");
     callback([]);
     return;
   }
@@ -228,7 +230,7 @@ NetSimConnection.prototype.getAllNodes = function (callback) {
   var self = this;
   this.instance_.getLobbyTable().all(function (rows) {
     if (!rows) {
-      self.logger_.warn("Lobby data request failed, using empty list.");
+      logger.warn("Lobby data request failed, using empty list.");
       callback([]);
       return;
     }
@@ -307,17 +309,21 @@ NetSimConnection.prototype.isConnectedToRouter = function () {
  */
 NetSimConnection.prototype.connectToRouter = function (routerID) {
   if (this.isConnectedToRouter()) {
-    this.logger_.warn("Auto-disconnecting from previous router.");
+    logger.warn("Auto-disconnecting from previous router.");
     this.disconnectFromRouter();
   }
 
   var self = this;
   NetSimNodeRouter.get(routerID, this.instance_, function (router) {
     if (!router) {
+      logger.warn('Failed to find router with ID ' + routerID);
       return;
     }
 
-    self.myNode.connectToRouter(router, function () {
+    self.myNode.connectToRouter(router, function (success) {
+      if (!success) {
+        logger.warn('Failed to connect to ' + router.getDisplayName());
+      }
       self.statusChanges.notifyObservers();
     });
   });
@@ -329,7 +335,7 @@ NetSimConnection.prototype.connectToRouter = function (routerID) {
  */
 NetSimConnection.prototype.disconnectFromRouter = function () {
   if (!this.isConnectedToRouter()) {
-    this.logger_.warn("Cannot disconnect: Not connected.");
+    logger.warn("Cannot disconnect: Not connected.");
     return;
   }
 

@@ -49,13 +49,6 @@ var NetSimNodeClient = function (instance, clientRow) {
   superClass.call(this, instance, clientRow);
 
   /**
-   * @type {string}
-   * @private
-   * @override
-   */
-  this.status_ = 'Online';
-
-  /**
    * How long (in milliseconds) this entity is allowed to remain in
    * storage without being cleaned up.
    * @type {number}
@@ -108,6 +101,13 @@ NetSimNodeClient.getNodeType = function () {
   return 'user';
 };
 
+/**
+ * @inheritdoc
+ */
+NetSimNodeClient.prototype.getStatus = function () {
+  return this.status_ ? this.status_ : 'Online';
+};
+
 NetSimNodeClient.prototype.setDisplayName = function (displayName) {
   this.displayName_ = displayName;
 };
@@ -144,7 +144,13 @@ NetSimNodeClient.prototype.update = function (onComplete, autoReconnect) {
   var self = this;
   superClass.prototype.update.call(this, function (success) {
     if (!success && autoReconnect) {
-      self.reconnect_(onComplete);
+      self.reconnect_(function (success) {
+        if (!success){
+          self.status_ = 'Offline';
+          self.onChange.notifyObservers();
+        }
+        onComplete(success);
+      });
     } else {
       onComplete(success);
     }
@@ -193,7 +199,7 @@ NetSimNodeClient.prototype.reconnect_ = function (onComplete) {
         onComplete(true);
       }
     }, false); // No auto-reconnect this time.
-  })
+  });
 };
 
 /**
@@ -244,8 +250,8 @@ NetSimNodeClient.prototype.disconnectRemote = function (onComplete) {
     }
 
     self.myWire = null;
-    self.myRouter = null;
     // Trigger an immediate router update so its connection count is correct.
     self.myRouter.update(onComplete);
+    self.myRouter = null;
   });
 };

@@ -216,7 +216,12 @@ NetSimLobby.prototype.refreshInstanceList_ = function () {
 NetSimLobby.prototype.refreshLobby_ = function () {
   var self = this;
   var lobbyList = this.lobbyList_;
+  var isOnInstance = this.connection_.isConnectedToInstance();
   var isInLobby = !this.connection_.isConnectedToRouter();
+
+  if (!isOnInstance) {
+    this.instanceSelector_.value = '__none';
+  }
 
   this.periodicRefresh_.setActionInterval(isInLobby ?
       AUTO_REFRESH_INTERVAL_MS : CLOSED_REFRESH_INTERVAL_MS);
