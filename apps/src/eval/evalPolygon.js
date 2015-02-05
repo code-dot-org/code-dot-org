@@ -4,8 +4,8 @@ var evalUtils = require('./evalUtils');
 var EvalPolygon = function (sideCount, length, style, color) {
   evalUtils.ensureNumber(sideCount);
   evalUtils.ensureNumber(length);
-  evalUtils.ensureString(style);
-  evalUtils.ensureString(color);
+  evalUtils.ensureStyle(style);
+  evalUtils.ensureColor(color);
 
   EvalImage.apply(this, [style, color]);
 

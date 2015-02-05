@@ -18,8 +18,7 @@ def main()
 end
 
 def send_reminder_email(form)
-  #recipient = Poste2.ensure_recipient(form['email_s'], ip_address:'127.0.0.1')
-  recipient = Poste2.ensure_recipient('rick@code.org', ip_address:'127.0.0.1')
+  recipient = Poste2.ensure_recipient(form['email_s'], ip_address:'127.0.0.1')
   puts recipient.to_json
   Poste2.send_message('workshop_signup_reminder', recipient, form_id:form['id'])
 end
