@@ -4,8 +4,8 @@ var evalUtils = require('./evalUtils');
 var EvalRect = function (width, height, style, color) {
   evalUtils.ensureNumber(width);
   evalUtils.ensureNumber(height);
-  evalUtils.ensureString(style);
-  evalUtils.ensureString(color);
+  evalUtils.ensureStyle(style);
+  evalUtils.ensureColor(color);
 
   EvalImage.apply(this, [style, color]);
 

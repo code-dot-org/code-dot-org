@@ -258,7 +258,7 @@ function getEquationFromBlock(block) {
         val = 0;
       }
       return new Equation(null, [],
-        new ExpressionNode(parseInt(val, 10), [], block.id));
+        new ExpressionNode(parseFloat(val), [], block.id));
 
     case 'functional_call':
       name = block.getCallName();
