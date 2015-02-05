@@ -72,13 +72,13 @@ See the [Using Honeybadger](https://github.com/code-dot-org/code-dot-org/blob/st
 
 ### New Relic Alerts
 
-![New Relic Alert]()
+![New Relic Alert](https://cloud.githubusercontent.com/assets/1920530/6067148/40c14ef4-ad27-11e4-8b34-94a064c76cf8.png)
 
 Most of the time, these alerts will close themselves by just downgrading to a warning. You can check back in on the error after about 2 hours if it hasn't closed itself. See if there is an actual impact to users:
 
 1. Click on the SERVERS tab. Check the server that the error was alerting. If the memory chart shows high growth to 90/95% and plateaus, this is OK. It is bad if it continues to grow.
 
-![Server Dashboard]()
+![Server Dashboard](https://cloud.githubusercontent.com/assets/1920530/6067153/4d0ba308-ad27-11e4-8189-90ea7ee5e8e9.png)
 
 2. Click the BROWSER tab. Look at the pageload time column. Dashboard is typically ~1.6sec and Pegasus is ~4.5sec. If it's much higher, this is bad.
 3. Click on Dashboard and/or Pegasus to see more details. At the top, you can change the Time Picker to change the range to last 6 hours. If there's a significant jump in page load times, this is bad.
