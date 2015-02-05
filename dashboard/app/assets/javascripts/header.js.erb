@@ -247,16 +247,17 @@
       return HeaderStore.__super__.constructor.apply(this, arguments);
     }
 
-    HeaderStore.prototype.resolveUrl = function() {
+    HeaderStore.prototype.resolveUrl = function(args, dataType) {
       return "/popup/progress";
     }
 
-    HeaderStore.prototype.resolveFilename = function(args) {
-      return "/popup/progress"; // TODO: Arg serialization format
+    HeaderStore.prototype.resolveFilename = function(args, dataType) {
+      return "/progress_" + args.script_name + "_" + args.stage_id + "_" + args.level_id + ".json";
     }
 
     return HeaderStore;
   })(UIStore);
+
 
 
 
