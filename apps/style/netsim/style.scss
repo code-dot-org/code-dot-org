@@ -41,13 +41,19 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
 }
 
 #netsim_lobby_list {
+  background-color: white;
+  padding: 0.5em;
+  border: inset darkslategray thin;
+  list-style: none;
+
   li {
     background-color: white;
+    padding: 0.3em;
   }
 
   .own_row {
     font-weight: bold;
-    background-color: paleturquoise;
+    background-color: lightcyan;
   }
 
   .user_row {
@@ -55,10 +61,18 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
   }
 
   .router_row {
-    background-color: papayawhip;
+    cursor: pointer;
+  }
+  .router_row:hover {
+    color: black;
+    background-color: rgba(255, 140, 0, 0.21);
   }
 
   .selected_row {
-    border: solid red thin;
+    color: white;
+    background-color: darkorange;
+  }
+  .selected_row:hover {
+    background-color: darkorange;
   }
 }
