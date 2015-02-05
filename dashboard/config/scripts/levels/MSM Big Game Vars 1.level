@@ -21,14 +21,18 @@
     "edge_collisions": "false",
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "false",
-    "sprites_hidden_to_start": "false",
-    "coordinate_grid_background": "false"
+    "sprites_hidden_to_start": "true",
+    "coordinate_grid_background": "false",
+    "default_num_example_blocks": "2",
+    "disable_sharing": "false",
+    "generate_function_pass_blocks": "true",
+    "timeout_after_when_run": "false"
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="functional_call" inline="false" editable="false">
+        <block type="functional_call" inline="false">
           <mutation name="make-game">
             <arg name="title" type="string"/>
             <arg name="subtitle" type="string"/>
@@ -74,6 +78,11 @@
             <isfunctionalvariable>true</isfunctionalvariable>
           </mutation>
           <title name="NAME">TITLE</title>
+          <functional_input name="STACK">
+            <block type="functional_call">
+              <mutation name="SUBTITLE"/>
+            </block>
+          </functional_input>
         </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
