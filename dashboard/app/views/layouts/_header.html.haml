@@ -20,10 +20,8 @@
           .header_logo
             = link_to(image_tag('codeorg-studio-logo.png'), '/')
 
-          - if @script_level
-            .header_middle
-          - elsif @edit_blocks
-            .header_middle
+          .header_middle
+            - if @edit_blocks
               .header_level{style:'font-size: 250%; line-height: 125%;'} Editing #{@edit_blocks.humanize}
 
           .header_right
