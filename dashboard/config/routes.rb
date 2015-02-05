@@ -170,10 +170,13 @@ Dashboard::Application.routes.draw do
 
   post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
 
-  # GET /ops/district/:id, etc
   namespace :ops do
+    # /ops/district/:id
     resources :districts
-    resources :workshops
+    resources :cohorts
+    resources :workshops do
+      resources :segments, shallow: true # See http://guides.rubyonrails.org/routing.html#shallow-nesting
+    end
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
