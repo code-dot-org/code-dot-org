@@ -77,10 +77,10 @@ NetSimNodeRouter.create = function (instance, onComplete) {
     // correctly.
     if (router) {
       router.update(function () {
-        onComplete && onComplete(router);
+        onComplete(router);
       });
     } else {
-      onComplete && onComplete(router);
+      onComplete(router);
     }
   });
 };
@@ -113,6 +113,8 @@ var RouterStatus = NetSimNodeRouter.RouterStatus;
  * @param onComplete
  */
 NetSimNodeRouter.prototype.update = function (onComplete) {
+  onComplete = onComplete || function () {};
+
   var self = this;
   this.countConnections(function (count) {
     self.status_ = count >= self.MAX_CLIENT_CONNECTIONS ?
@@ -150,9 +152,11 @@ NetSimNodeRouter.prototype.getWireTable = function () {
 /**
  * Query the wires table and pass the callback a list of wire table rows,
  * where all of the rows are wires attached to this router.
- * @param {!function} onComplete which accepts an Array of NetSimWire.
+ * @param {function} onComplete, which accepts an Array of NetSimWire.
  */
 NetSimNodeRouter.prototype.getConnections = function (onComplete) {
+  onComplete = onComplete || function () {};
+
   var instance = this.instance_;
   var routerID = this.entityID;
   this.getWireTable().all(function (rows) {
@@ -176,9 +180,11 @@ NetSimNodeRouter.prototype.getConnections = function (onComplete) {
 /**
  * Query the wires table and pass the callback the total number of wires
  * connected to this router.
- * @param {!function} onComplete which accepts a number.
+ * @param {function} onComplete, which accepts a number.
  */
 NetSimNodeRouter.prototype.countConnections = function (onComplete) {
+  onComplete = onComplete || function () {};
+
   this.getConnections(function (wires) {
     onComplete(wires.length);
   });
@@ -226,6 +232,9 @@ NetSimNodeRouter.prototype.acceptConnection = function (otherNode, onComplete) {
  * @param {function} [onComplete] reports success or failure.
  */
 NetSimNodeRouter.prototype.requestAddress = function (wire, hostname, onComplete) {
+  onComplete = onComplete || function () {};
+
+
   // General strategy: Create a list of existing remote addresses, pick a
   // new one, and assign it to the provided wire.
   var self = this;
@@ -258,9 +267,11 @@ NetSimNodeRouter.prototype.requestAddress = function (wire, hostname, onComplete
  * hostnames, which includes this router node and all of the nodes that are
  * connected to this router by an active wire.
  * Returns list of objects in form { hostname:{string}, address:{number} }
- * @param {!function} onComplete
+ * @param onComplete
  */
 NetSimNodeRouter.prototype.getAddressTable = function (onComplete) {
+  onComplete = onComplete || function () {};
+
   var self = this;
   this.getConnections(function (wires) {
     var addressTable = wires.map(function (wire) {

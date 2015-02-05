@@ -134,6 +134,9 @@ NetSimNodeClient.prototype.tick = function (clock) {
  * @param {boolean} [autoReconnect=true]
  */
 NetSimNodeClient.prototype.update = function (onComplete, autoReconnect) {
+  if (!onComplete) {
+    onComplete = function () {};
+  }
   if (autoReconnect === undefined) {
     autoReconnect = true;
   }
@@ -146,10 +149,10 @@ NetSimNodeClient.prototype.update = function (onComplete, autoReconnect) {
           self.status_ = 'Offline';
           self.onChange.notifyObservers();
         }
-        onComplete && onComplete(success);
+        onComplete(success);
       });
     } else {
-      onComplete && onComplete(success);
+      onComplete(success);
     }
   });
 };
@@ -205,10 +208,14 @@ NetSimNodeClient.prototype.reconnect_ = function (onComplete) {
  * @param {function} onComplete({boolean}success)
  */
 NetSimNodeClient.prototype.connectToRouter = function (router, onComplete) {
+  if (!onComplete) {
+    onComplete = function () {};
+  }
+
   var self = this;
   this.connectToNode(router, function (wire) {
     if (!wire) {
-      onComplete && onComplete(false);
+      onComplete(false);
       return;
     }
 
@@ -217,7 +224,7 @@ NetSimNodeClient.prototype.connectToRouter = function (router, onComplete) {
     router.requestAddress(wire, self.getHostname(), function (success) {
       if (!success) {
         wire.destroy(function () {
-          onComplete && onComplete(false);
+          onComplete(false);
         });
         return;
       }
@@ -230,16 +237,15 @@ NetSimNodeClient.prototype.connectToRouter = function (router, onComplete) {
   });
 };
 
-/**
- * Destroys connection between this client node and whatever other node
- * it has a simulated connection to.
- * @param onComplete
- */
 NetSimNodeClient.prototype.disconnectRemote = function (onComplete) {
+  if (!onComplete) {
+    onComplete = function () {};
+  }
+
   var self = this;
   this.myWire.destroy(function (success) {
     if (!success) {
-      onComplete && onComplete(success);
+      onComplete(success);
       return;
     }
 
