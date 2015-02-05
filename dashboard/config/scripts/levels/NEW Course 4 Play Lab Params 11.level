@@ -270,6 +270,44 @@
           </block>
         </category>
         <category name="Functions" custom="PROCEDURE">
+          <block type="procedures_callnoreturn" inline="false">
+            <mutation name="jump">
+              <arg name="height"/>
+              <arg name="actor"/>
+            </mutation>
+          </block>
+          <block type="procedures_callnoreturn" inline="false">
+            <mutation name="patrol">
+              <arg name="actor"/>
+              <arg name="speed"/>
+            </mutation>
+          </block>
+        </category>
+        <category name="Variables" custom="VARIABLE">
+          <block type="variables_set" inline="false">
+            <title name="VAR">points</title>
+          </block>
+          <block type="variables_get">
+            <title name="VAR">points</title>
+          </block>
+          <block type="variables_set" inline="false">
+            <title name="VAR">actor</title>
+          </block>
+          <block type="variables_get">
+            <title name="VAR">actor</title>
+          </block>
+          <block type="variables_set" inline="false">
+            <title name="VAR">speed</title>
+          </block>
+          <block type="variables_get">
+            <title name="VAR">speed</title>
+          </block>
+          <block type="variables_set" inline="false">
+            <title name="VAR">i</title>
+          </block>
+          <block type="variables_get">
+            <title name="VAR">i</title>
+          </block>
           <block type="procedures_defnoreturn" uservisible="false">
             <mutation>
               <arg name="height"/>
@@ -308,12 +346,6 @@
               </block>
             </statement>
           </block>
-          <block type="procedures_callnoreturn" inline="false">
-            <mutation name="jump">
-              <arg name="height"/>
-              <arg name="actor"/>
-            </mutation>
-          </block>
           <block type="procedures_defnoreturn" uservisible="false">
             <mutation>
               <arg name="actor"/>
@@ -351,26 +383,6 @@
                 </next>
               </block>
             </statement>
-          </block>
-          <block type="procedures_callnoreturn" inline="false">
-            <mutation name="patrol">
-              <arg name="actor"/>
-              <arg name="speed"/>
-            </mutation>
-          </block>
-        </category>
-        <category name="Variables" custom="VARIABLE">
-          <block type="variables_set" inline="false">
-            <title name="VAR">points</title>
-          </block>
-          <block type="variables_get">
-            <title name="VAR">points</title>
-          </block>
-          <block type="variables_set" inline="false">
-            <title name="VAR">i</title>
-          </block>
-          <block type="variables_get">
-            <title name="VAR">i</title>
           </block>
         </category>
       </xml>
