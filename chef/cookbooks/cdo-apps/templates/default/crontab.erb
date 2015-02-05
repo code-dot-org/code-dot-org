@@ -58,6 +58,7 @@ if node['cdo-apps']['daemon']
   if node.chef_environment == 'production'
     cronjob at:'*/15 * * * *', do:deploy_dir('bin','activity-monitor')
     cronjob at:'0 * * * *', do:bin_dir('import_sendy_unsubscribers')
+    cronjob at:'@daily', do:pegasus_dir('sites.v3/code.org/bin/send_workshop_reminder_emails'), notify:'rick@code.org'
   end
 
   cronjob at:'*/1 * * * *', do:bin_dir('process_forms')
