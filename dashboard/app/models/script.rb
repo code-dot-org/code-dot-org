@@ -196,13 +196,13 @@ class Script < ActiveRecord::Base
   def self.setup(default_files, custom_files)
     scripts = []
     # Load default scripts from yml (csv embedded)
-    default_scripts = default_files.map { |yml| load_yaml(yml, SCRIPT_MAP) }
+    default_files.map { |yml| load_yaml(yml, SCRIPT_MAP) }
     .sort_by { |options, _| options['id'] }
     .map { |options, data| scripts << [options, data]}
 
     custom_i18n = {}
     # Load custom scripts from Script DSL format
-    custom_scripts = custom_files.map do |script|
+    custom_files.map do |script|
       name = File.basename(script, '.script')
       script_data, i18n = ScriptDSL.parse_file(script)
       stages = script_data[:stages]
@@ -217,12 +217,11 @@ class Script < ActiveRecord::Base
 
     transaction do
       # Stable sort by ID, ensuring scripts with no ID end up at the end
-      scripts.sort_by.with_index{ |args, idx| [args[0][:id] || Float::INFINITY, idx] }.each do |args|
+      result = scripts.sort_by.with_index{ |args, idx| [args[0][:id] || Float::INFINITY, idx] }.map do |args|
         add_script(*args)
       end
+      [result, custom_i18n]
     end
-
-    [(default_scripts + custom_scripts), custom_i18n]
   end
 
   def self.add_script(options, data)
