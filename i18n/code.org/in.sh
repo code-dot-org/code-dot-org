@@ -32,6 +32,9 @@ for file in $(find $orig_dir -name '*.en.yml'); do
   cp_in $file $loc_dir${relname%.en.yml}.yml
 done
 
+# Pull in the levelbuilder made level instructions
+ruby ./lib/sync-instructions.rb
+
 
 ### Blockly Mooc
 

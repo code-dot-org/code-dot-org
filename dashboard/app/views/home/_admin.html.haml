@@ -4,13 +4,10 @@
       Admins:
       %a{href: '#', onclick: '$(".admin .content").toggle(); return false;'} [hide/show]
     .content
-      %h3= t(:demos)
-      = link_to 'Videos', videos_path
-      |
-      = link_to 'Recent Activity', all_usage_path
-      %br/
-      %br/
       %ul
+        %li= link_to 'Projects', projects_path
+        %li= link_to 'Videos', videos_path
+        %li= link_to 'Recent Activity', all_usage_path
         %li= link_to 'Feedback System', frequent_unsuccessful_level_sources_path
         %li
           = link_to('Scripts', scripts_path)
@@ -20,7 +17,7 @@
               %li
                 = link_to("(#{t 'crud.edit'})", edit_script_path(script)) unless script.default_script?
                 = link_to(data_t_suffix('script.name', script.name, 'title'), script_level_path(script, ScriptLevel::NEXT))
-      = link_to t('builder.manage'), new_level_path
-      %h3= link_to 'Admin Stats', admin_stats_path
-      %h3= link_to 'Gallery', gallery_activities_path
-      %h3= link_to 'Assume Identity', assume_identity_form_path
+        %li= link_to t('builder.manage'), new_level_path
+        %li= link_to 'Admin Stats', admin_stats_path
+        %li= link_to 'Gallery', gallery_activities_path
+        %li= link_to 'Assume Identity', assume_identity_form_path

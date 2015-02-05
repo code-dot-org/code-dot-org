@@ -88,6 +88,8 @@ levels.ec_simple = {
     'turtlePenDown': null,
     'turtlePenWidth': null,
     'turtlePenColor': null,
+    'turtleShow': null,
+    'turtleHide': null,
   },
 };
 

@@ -4622,12 +4622,12 @@ Blockly.Xml.blockSpaceToDom = function(blockSpace) {
   var xml = Blockly.isMsie() ? document.createElementNS(null, "xml") : document.createElement("xml");
   var blocks = blockSpace.getTopBlocks(true);
   for(var i = 0, block;block = blocks[i];i++) {
-    var element = Blockly.Xml.blockToDom_(block);
+    var element = Blockly.Xml.blockToDom(block);
     xml.appendChild(element)
   }
   return xml
 };
-Blockly.Xml.blockToDom_ = function(block, ignoreChildBlocks) {
+Blockly.Xml.blockToDom = function(block, ignoreChildBlocks) {
   var element = goog.dom.createDom("block");
   element.setAttribute("type", block.type);
   if(block.mutationToDom) {
@@ -4684,7 +4684,7 @@ Blockly.Xml.blockToDom_ = function(block, ignoreChildBlocks) {
         }
       }
       if(childBlock && !ignoreChild) {
-        container.appendChild(Blockly.Xml.blockToDom_(childBlock));
+        container.appendChild(Blockly.Xml.blockToDom(childBlock));
         empty = false
       }
     }
@@ -4723,7 +4723,7 @@ Blockly.Xml.blockToDom_ = function(block, ignoreChildBlocks) {
   if(block.nextConnection && !ignoreChildBlocks) {
     var nextBlock = block.nextConnection.targetBlock();
     if(nextBlock) {
-      var container = goog.dom.createDom("next", null, Blockly.Xml.blockToDom_(nextBlock));
+      var container = goog.dom.createDom("next", null, Blockly.Xml.blockToDom(nextBlock));
       element.appendChild(container)
     }
   }
@@ -4766,7 +4766,7 @@ Blockly.Xml.domToBlockSpace = function(blockSpace, xml) {
   var width = metrics ? metrics.viewWidth : 0;
   for(var x = 0, xmlChild;xmlChild = xml.childNodes[x];x++) {
     if(xmlChild.nodeName.toLowerCase() == "block") {
-      var block = Blockly.Xml.domToBlock_(blockSpace, xmlChild);
+      var block = Blockly.Xml.domToBlock(blockSpace, xmlChild);
       var blockX = parseInt(xmlChild.getAttribute("x"), 10);
       var blockY = parseInt(xmlChild.getAttribute("y"), 10);
       if(!isNaN(blockX) && !isNaN(blockY)) {
@@ -4776,7 +4776,7 @@ Blockly.Xml.domToBlockSpace = function(blockSpace, xml) {
   }
   blockSpace.events.dispatchEvent(Blockly.BlockSpace.EVENTS.EVENT_BLOCKS_IMPORTED)
 };
-Blockly.Xml.domToBlock_ = function(blockSpace, xmlBlock) {
+Blockly.Xml.domToBlock = function(blockSpace, xmlBlock) {
   var prototypeName = xmlBlock.getAttribute("type");
   var id = xmlBlock.getAttribute("id");
   var block = new Blockly.Block(blockSpace, prototypeName, id);
@@ -4861,7 +4861,7 @@ Blockly.Xml.domToBlock_ = function(blockSpace, xmlBlock) {
           throw"Input does not exist: " + name;
         }
         if(firstRealGrandchild && firstRealGrandchild.nodeName.toLowerCase() == "block") {
-          blockChild = Blockly.Xml.domToBlock_(blockSpace, firstRealGrandchild);
+          blockChild = Blockly.Xml.domToBlock(blockSpace, firstRealGrandchild);
           if(blockChild.outputConnection) {
             input.connection.connect(blockChild.outputConnection)
           }else {
@@ -4882,7 +4882,7 @@ Blockly.Xml.domToBlock_ = function(blockSpace, xmlBlock) {
               throw"Next statement is already connected.";
             }
           }
-          blockChild = Blockly.Xml.domToBlock_(blockSpace, firstRealGrandchild);
+          blockChild = Blockly.Xml.domToBlock(blockSpace, firstRealGrandchild);
           if(!blockChild.previousConnection) {
             throw"Next block does not have previous statement.";
           }
@@ -5780,13 +5780,13 @@ Blockly.Trashcan = function(blockSpace) {
   this.blockSpace_ = blockSpace;
   this.extraYOffset_ = 0
 };
-Blockly.Trashcan.prototype.CLOSED_URL_ = "media/canclosed.png";
-Blockly.Trashcan.prototype.OPEN_URL_ = "media/canopen.png";
-Blockly.Trashcan.prototype.WIDTH_ = 70;
-Blockly.Trashcan.prototype.HEIGHT_ = 70;
-Blockly.Trashcan.prototype.MARGIN_TOP_ = 15;
-Blockly.Trashcan.prototype.MARGIN_SIDE_ = 22;
-Blockly.Trashcan.prototype.MARGIN_HOTSPOT_ = 25;
+Blockly.Trashcan.CLOSED_URL_ = "media/canclosed.png";
+Blockly.Trashcan.OPEN_URL_ = "media/canopen.png";
+Blockly.Trashcan.WIDTH_ = 70;
+Blockly.Trashcan.HEIGHT_ = 70;
+Blockly.Trashcan.MARGIN_TOP_ = 15;
+Blockly.Trashcan.MARGIN_SIDE_ = 22;
+Blockly.Trashcan.MARGIN_HOTSPOT_ = 25;
 Blockly.Trashcan.prototype.isOpen = false;
 Blockly.Trashcan.prototype.radius = 50;
 Blockly.Trashcan.prototype.svgGroup_ = null;
@@ -5796,11 +5796,11 @@ Blockly.Trashcan.prototype.left_ = 0;
 Blockly.Trashcan.prototype.top_ = 0;
 Blockly.Trashcan.prototype.createDom = function() {
   this.svgGroup_ = Blockly.createSvgElement("g", {"id":"trashcan", "filter":"url(#blocklyTrashcanShadowFilter)"}, null);
-  this.svgClosedCan_ = Blockly.createSvgElement("image", {"width":this.WIDTH_, "height":this.HEIGHT_}, this.svgGroup_);
-  this.svgClosedCan_.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", Blockly.assetUrl(this.CLOSED_URL_));
-  this.svgOpenCan_ = Blockly.createSvgElement("image", {"width":this.WIDTH_, "height":this.HEIGHT_}, this.svgGroup_);
+  this.svgClosedCan_ = Blockly.createSvgElement("image", {"width":Blockly.Trashcan.WIDTH_, "height":Blockly.Trashcan.HEIGHT_}, this.svgGroup_);
+  this.svgClosedCan_.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", Blockly.assetUrl(Blockly.Trashcan.CLOSED_URL_));
+  this.svgOpenCan_ = Blockly.createSvgElement("image", {"width":Blockly.Trashcan.WIDTH_, "height":Blockly.Trashcan.HEIGHT_}, this.svgGroup_);
   this.svgOpenCan_.setAttribute("visibility", "hidden");
-  this.svgOpenCan_.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", Blockly.assetUrl(this.OPEN_URL_));
+  this.svgOpenCan_.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", Blockly.assetUrl(Blockly.Trashcan.OPEN_URL_));
   return this.svgGroup_
 };
 Blockly.Trashcan.prototype.init = function() {
@@ -5823,19 +5823,26 @@ Blockly.Trashcan.prototype.position_ = function() {
     return
   }
   if(Blockly.RTL) {
-    this.left_ = this.MARGIN_SIDE_
+    this.left_ = Blockly.Trashcan.MARGIN_SIDE_
   }else {
-    this.left_ = metrics.viewWidth - this.WIDTH_ - this.MARGIN_SIDE_
+    this.left_ = metrics.viewWidth - Blockly.Trashcan.WIDTH_ - Blockly.Trashcan.MARGIN_SIDE_
   }
-  this.top_ = this.MARGIN_TOP_ + this.extraYOffset_;
+  this.top_ = Blockly.Trashcan.MARGIN_TOP_ + this.extraYOffset_;
   this.svgGroup_.setAttribute("transform", "translate(" + this.left_ + "," + this.top_ + ")")
 };
 Blockly.Trashcan.prototype.setYOffset = function(pixelOffset) {
-  this.extraYOffset_ = pixelOffset
+  this.extraYOffset_ = pixelOffset;
+  this.position_()
+};
+Blockly.Trashcan.prototype.repositionBelowBlockSpaceTop = function(pixelOffset) {
+  this.setYOffset(pixelOffset - Blockly.Trashcan.MARGIN_TOP_)
+};
+Blockly.Trashcan.prototype.getHeight = function() {
+  return Blockly.Trashcan.HEIGHT_
 };
 Blockly.Trashcan.prototype.getRect = function() {
   var trashXY = Blockly.getSvgXY_(this.svgGroup_);
-  return new goog.math.Rect(trashXY.x - this.MARGIN_HOTSPOT_, trashXY.y - this.MARGIN_HOTSPOT_, this.WIDTH_ + 2 * this.MARGIN_HOTSPOT_, this.HEIGHT_ + 2 * this.MARGIN_HOTSPOT_)
+  return new goog.math.Rect(trashXY.x - Blockly.Trashcan.MARGIN_HOTSPOT_, trashXY.y - Blockly.Trashcan.MARGIN_HOTSPOT_, Blockly.Trashcan.WIDTH_ + 2 * Blockly.Trashcan.MARGIN_HOTSPOT_, Blockly.Trashcan.HEIGHT_ + 2 * Blockly.Trashcan.MARGIN_HOTSPOT_)
 };
 Blockly.Trashcan.prototype.setOpen_ = function(state) {
   if(this.isOpen == state) {
@@ -6085,7 +6092,7 @@ Blockly.BlockSpace.prototype.paste = function(clipboard) {
   if(xmlBlock.getElementsByTagName("block").length >= this.remainingCapacity()) {
     return
   }
-  var block = Blockly.Xml.domToBlock_(this, xmlBlock);
+  var block = Blockly.Xml.domToBlock(this, xmlBlock);
   var blockX = parseInt(xmlBlock.getAttribute("x"), 10);
   var blockY = parseInt(xmlBlock.getAttribute("y"), 10);
   if(!isNaN(blockX) && !isNaN(blockY)) {
@@ -12451,7 +12458,7 @@ Blockly.ContextMenu.hide = function() {
 };
 Blockly.ContextMenu.callbackFactory = function(block, xml) {
   return function() {
-    var newBlock = Blockly.Xml.domToBlock_(block.blockSpace, xml);
+    var newBlock = Blockly.Xml.domToBlock(block.blockSpace, xml);
     var xy = block.getRelativeToSurfaceXY();
     if(Blockly.RTL) {
       xy.x -= Blockly.SNAP_RADIUS
@@ -14446,9 +14453,9 @@ Blockly.Block.prototype.showHelp_ = function() {
   }
 };
 Blockly.Block.prototype.duplicate_ = function() {
-  var xmlBlock = Blockly.Xml.blockToDom_(this);
+  var xmlBlock = Blockly.Xml.blockToDom(this);
   Blockly.Xml.deleteNext(xmlBlock);
-  var newBlock = Blockly.Xml.domToBlock_((this.blockSpace), xmlBlock);
+  var newBlock = Blockly.Xml.domToBlock((this.blockSpace), xmlBlock);
   var xy = this.getRelativeToSurfaceXY();
   if(Blockly.RTL) {
     xy.x -= Blockly.SNAP_RADIUS
@@ -15057,7 +15064,7 @@ Blockly.Block.prototype.setFunctionalOutput = function(hasOutput, opt_check) {
   }
 };
 Blockly.Block.prototype.changeFunctionalOutput = function(newType) {
-  this.setHSV.apply(this, Blockly.ContractEditor.typesToColors[newType]);
+  this.setHSV.apply(this, Blockly.ContractEditor.typesToColorsHSV[newType]);
   this.previousConnection = this.previousConnection || new Blockly.Connection(this, Blockly.FUNCTIONAL_OUTPUT);
   this.previousConnection.setCheck(newType);
   if(this.rendered) {
@@ -15548,7 +15555,7 @@ Blockly.Flyout.prototype.show = function(xmlList) {
       }else {
         for(var i = 0, xml;xml = xmlList[i];i++) {
           if(xml.tagName && xml.tagName.toUpperCase() == "BLOCK") {
-            blocks.push(Blockly.Xml.domToBlock_(this.blockSpace_, xml));
+            blocks.push(Blockly.Xml.domToBlock(this.blockSpace_, xml));
             gaps.push(margin * 3)
           }
         }
@@ -15690,9 +15697,9 @@ Blockly.Flyout.prototype.createBlockFunc_ = function(originBlock) {
     if(originBlock.disabled) {
       return
     }
-    var xml = Blockly.Xml.blockToDom_(originBlock);
+    var xml = Blockly.Xml.blockToDom(originBlock);
     var targetBlockSpace = flyout.targetBlockSpace_;
-    var block = Blockly.Xml.domToBlock_(targetBlockSpace, xml);
+    var block = Blockly.Xml.domToBlock(targetBlockSpace, xml);
     var svgRootOld = originBlock.getSvgRoot();
     if(!svgRootOld) {
       throw"originBlock is not rendered.";
@@ -18650,6 +18657,17 @@ Blockly.Procedures.getDefinition = function(name, blockSpace) {
     return block.getProcedureInfo && Blockly.Names.equals(block.getProcedureInfo().name, name)
   })
 };
+goog.provide("Blockly.CustomCssClassMenuRenderer");
+goog.require("goog.ui.MenuRenderer");
+Blockly.CustomCssClassMenuRenderer = function(customCssClass) {
+  this.customCssClass_ = customCssClass;
+  Blockly.CustomCssClassMenuRenderer.superClass_.constructor.call(this)
+};
+goog.inherits(Blockly.CustomCssClassMenuRenderer, goog.ui.MenuRenderer);
+goog.addSingletonGetter(Blockly.CustomCssClassMenuRenderer);
+Blockly.CustomCssClassMenuRenderer.prototype.getCssClass = function() {
+  return goog.ui.MenuRenderer.CSS_CLASS + " " + this.customCssClass_
+};
 goog.provide("goog.structs.LinkedMap");
 goog.require("goog.structs.Map");
 goog.structs.LinkedMap = function(opt_maxCount, opt_cache) {
@@ -18827,6 +18845,15 @@ Blockly.HorizontalFlyout.prototype.show = function(xmlList) {
   this.width_ = Math.max(0, metrics.viewWidth - this.CORNER_RADIUS * 2);
   Blockly.HorizontalFlyout.superClass_.show.apply(this, arguments)
 };
+Blockly.HorizontalFlyout.prototype.setVisibility = function(show) {
+  return show ? this.softShow() : this.softHide()
+};
+Blockly.HorizontalFlyout.prototype.softHide = function() {
+  Blockly.addClass_(this.svgGroup_, "userHidden")
+};
+Blockly.HorizontalFlyout.prototype.softShow = function() {
+  Blockly.removeClass_(this.svgGroup_, "userHidden")
+};
 Blockly.HorizontalFlyout.prototype.hide = function() {
   this.height_ = 10;
   this.flyoutRows = 0;
@@ -18857,6 +18884,9 @@ Blockly.HorizontalFlyout.prototype.position_ = function() {
   if(this.scrollbar_) {
     this.scrollbar_.resize()
   }
+};
+Blockly.HorizontalFlyout.prototype.getYPosition = function() {
+  return this.customYOffset || 0
 };
 Blockly.HorizontalFlyout.prototype.layoutBlock_ = function(block, cursor, gap, initialX) {
   var blockHW = block.getHeightWidth();
@@ -18895,7 +18925,8 @@ Blockly.FunctionEditor = function() {
   this.frameInner_ = null;
   this.frameText_ = null;
   this.modalBackground_ = null;
-  this.onResizeWrapper_ = null
+  this.onResizeWrapper_ = null;
+  this.modalBlockSpace = null
 };
 Blockly.FunctionEditor.prototype.definitionBlockType = "procedures_defnoreturn";
 Blockly.FunctionEditor.prototype.parameterBlockType = "parameters_get";
@@ -18928,7 +18959,7 @@ Blockly.FunctionEditor.prototype.addParamsFromProcedure_ = function() {
 };
 Blockly.FunctionEditor.prototype.openWithNewFunction = function(opt_blockCreationCallback) {
   this.ensureCreated_();
-  var tempFunctionDefinitionBlock = Blockly.Xml.domToBlock_(Blockly.mainBlockSpace, Blockly.createSvgElement("block", {type:this.definitionBlockType}));
+  var tempFunctionDefinitionBlock = Blockly.Xml.domToBlock(Blockly.mainBlockSpace, Blockly.createSvgElement("block", {type:this.definitionBlockType}));
   tempFunctionDefinitionBlock.userCreated = true;
   if(opt_blockCreationCallback) {
     opt_blockCreationCallback(tempFunctionDefinitionBlock)
@@ -19013,9 +19044,10 @@ Blockly.FunctionEditor.prototype.paramsAsParallelArrays_ = function() {
 };
 Blockly.FunctionEditor.prototype.show = function() {
   this.ensureCreated_();
+  this.position_();
   goog.style.showElement(this.container_, true);
   goog.style.showElement(this.modalBackground_, true);
-  Blockly.focusedBlockSpace = Blockly.modalBlockSpace;
+  Blockly.focusedBlockSpace = this.modalBlockSpace;
   if(Blockly.selected) {
     Blockly.selected.unselect()
   }
@@ -19036,7 +19068,7 @@ Blockly.FunctionEditor.prototype.hideIfOpen = function() {
     return
   }
   this.hideAndRestoreBlocks_();
-  Blockly.modalBlockSpace.clear()
+  this.modalBlockSpace.clear()
 };
 Blockly.FunctionEditor.prototype.hideAndRestoreBlocks_ = function() {
   goog.style.showElement(this.container_, false);
@@ -19054,16 +19086,16 @@ Blockly.FunctionEditor.prototype.hideAndRestoreBlocks_ = function() {
 Blockly.FunctionEditor.prototype.moveToMainBlockSpace_ = function(blockToMove) {
   blockToMove.setUserVisible(false);
   blockToMove.setMovable(true);
-  var dom = Blockly.Xml.blockToDom_(blockToMove);
+  var dom = Blockly.Xml.blockToDom(blockToMove);
   blockToMove.dispose(false, false, true);
-  Blockly.Xml.domToBlock_(Blockly.mainBlockSpace, dom)
+  Blockly.Xml.domToBlock(Blockly.mainBlockSpace, dom)
 };
 Blockly.FunctionEditor.prototype.moveToModalBlockSpace_ = function(blockToMove) {
   blockToMove.setUserVisible(true);
-  var dom = Blockly.Xml.blockToDom_(blockToMove);
+  var dom = Blockly.Xml.blockToDom(blockToMove);
   blockToMove.dispose(false, false, true);
-  var newCopyOfBlock = Blockly.Xml.domToBlock_(Blockly.modalBlockSpace, dom);
-  newCopyOfBlock.moveTo(Blockly.RTL ? Blockly.modalBlockSpace.getMetrics().viewWidth - FRAME_MARGIN_SIDE : FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);
+  var newCopyOfBlock = Blockly.Xml.domToBlock(this.modalBlockSpace, dom);
+  newCopyOfBlock.moveTo(Blockly.RTL ? this.modalBlockSpace.getMetrics().viewWidth - FRAME_MARGIN_SIDE : FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);
   newCopyOfBlock.setMovable(false);
   return newCopyOfBlock
 };
@@ -19074,17 +19106,19 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   this.container_ = document.createElement("div");
   this.container_.setAttribute("id", "modalContainer");
   goog.dom.getElement("blockly").appendChild(this.container_);
-  Blockly.modalBlockSpaceEditor = new Blockly.BlockSpaceEditor(this.container_, goog.bind(this.calculateMetrics_, this));
-  Blockly.modalBlockSpace = Blockly.modalBlockSpaceEditor.blockSpace;
-  Blockly.modalBlockSpace.customFlyoutMetrics_ = Blockly.mainBlockSpace.getMetrics;
-  Blockly.modalBlockSpaceEditor.addChangeListener(Blockly.mainBlockSpace.fireChangeEvent);
+  this.modalBlockSpaceEditor = new Blockly.BlockSpaceEditor(this.container_, goog.bind(this.calculateMetrics_, this));
+  this.modalBlockSpace = this.modalBlockSpaceEditor.blockSpace;
+  this.modalBlockSpace.customFlyoutMetrics_ = Blockly.mainBlockSpace.getMetrics;
+  Blockly.modalBlockSpace = this.modalBlockSpace;
+  Blockly.modalBlockSpaceEditor = this.modalBlockSpaceEditor;
+  this.modalBlockSpaceEditor.addChangeListener(Blockly.mainBlockSpace.fireChangeEvent);
   this.modalBackground_ = Blockly.createSvgElement("g", {"class":"modalBackground"});
   Blockly.mainBlockSpaceEditor.appendSVGChild(this.modalBackground_);
   this.addCloseButton_();
   this.createContractDom_();
-  Blockly.bindEvent_(goog.dom.getElement("modalContainer"), "mousedown", null, function(e) {
+  Blockly.bindEvent_(goog.dom.getElement("modalContainer"), "mousedown", this, function(e) {
     if(e.target === e.currentTarget) {
-      Blockly.modalBlockSpaceEditor.hideChaff();
+      this.modalBlockSpaceEditor.hideChaff();
       if(Blockly.selected) {
         Blockly.selected.unselect()
       }
@@ -19108,31 +19142,36 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   }
   this.setupParametersToolbox_();
   this.addEditorFrame_();
-  this.position_();
   this.onResizeWrapper_ = Blockly.bindEvent_(window, goog.events.EventType.RESIZE, this, this.position_);
-  Blockly.modalBlockSpaceEditor.svgResize()
+  this.modalBlockSpaceEditor.svgResize()
 };
 Blockly.FunctionEditor.prototype.calculateMetrics_ = function() {
   var metrics = Blockly.mainBlockSpace.getMetrics();
-  var contractDivHeight = this.contractDiv_ ? this.contractDiv_.getBoundingClientRect().height : 0;
-  var topOffset = FRAME_MARGIN_TOP + Blockly.Bubble.BORDER_WIDTH + FRAME_HEADER_HEIGHT;
   metrics.absoluteLeft += FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH + 1;
-  metrics.absoluteTop += topOffset + contractDivHeight;
+  metrics.absoluteTop += this.getBlockSpaceEditorTopOffset();
   metrics.viewWidth -= (FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH) * 2;
-  metrics.viewHeight -= FRAME_MARGIN_TOP + Blockly.Bubble.BORDER_WIDTH + topOffset;
+  metrics.viewHeight -= FRAME_MARGIN_TOP + Blockly.Bubble.BORDER_WIDTH + this.getWindowBorderChromeHeight();
   return metrics
+};
+Blockly.FunctionEditor.prototype.getBlockSpaceEditorTopOffset = function() {
+  return this.getWindowBorderChromeHeight() + this.getContractDivHeight()
+};
+Blockly.FunctionEditor.prototype.getWindowBorderChromeHeight = function() {
+  return FRAME_MARGIN_TOP + Blockly.Bubble.BORDER_WIDTH + FRAME_HEADER_HEIGHT
+};
+Blockly.FunctionEditor.prototype.getContractDivHeight = function() {
+  return this.contractDiv_ ? this.contractDiv_.getBoundingClientRect().height : 0
 };
 Blockly.FunctionEditor.prototype.layOutBlockSpaceItems_ = function() {
   if(!this.functionDefinitionBlock || !this.isOpen()) {
     return
   }
-  var currentX = Blockly.RTL ? Blockly.modalBlockSpace.getMetrics().viewWidth - FRAME_MARGIN_SIDE : FRAME_MARGIN_SIDE;
+  var currentX = Blockly.RTL ? this.modalBlockSpace.getMetrics().viewWidth - FRAME_MARGIN_SIDE : FRAME_MARGIN_SIDE;
   var currentY = 0;
   currentY += this.flyout_.getHeight();
   this.flyout_.customYOffset = currentY;
   this.flyout_.position_();
-  Blockly.modalBlockSpace.trashcan.setYOffset(currentY);
-  Blockly.modalBlockSpace.trashcan.position_();
+  this.modalBlockSpace.trashcan.setYOffset(currentY);
   currentY += FRAME_MARGIN_TOP;
   this.functionDefinitionBlock.moveTo(currentX, currentY)
 };
@@ -19142,17 +19181,17 @@ Blockly.FunctionEditor.prototype.addCloseButton_ = function() {
   var r = Blockly.createSvgElement("rect", {"rx":12, "ry":12, "fill":"#7665a0", "stroke":"white", "stroke-width":"2.5"}, this.closeButton_);
   var text = Blockly.createSvgElement("text", {"x":padding, "y":padding, "class":"blocklyText"}, this.closeButton_);
   text.textContent = Blockly.Msg.SAVE_AND_CLOSE;
-  Blockly.modalBlockSpaceEditor.appendSVGChild(this.closeButton_);
+  this.modalBlockSpaceEditor.appendSVGChild(this.closeButton_);
   var bounds = text.getBoundingClientRect();
   r.setAttribute("width", bounds.width + 2 * padding);
   r.setAttribute("height", bounds.height + padding);
   r.setAttribute("y", -bounds.height + padding - 1)
 };
 Blockly.FunctionEditor.prototype.setupParametersToolbox_ = function() {
-  this.flyout_ = new Blockly.HorizontalFlyout(Blockly.modalBlockSpaceEditor);
+  this.flyout_ = new Blockly.HorizontalFlyout(this.modalBlockSpaceEditor);
   var flyoutDom = this.flyout_.createDom();
-  Blockly.modalBlockSpace.svgGroup_.insertBefore(flyoutDom, Blockly.modalBlockSpace.svgBlockCanvas_);
-  this.flyout_.init(Blockly.modalBlockSpace, false);
+  this.modalBlockSpace.svgGroup_.insertBefore(flyoutDom, this.modalBlockSpace.svgBlockCanvas_);
+  this.flyout_.init(this.modalBlockSpace, false);
   this.bindToolboxHandlers_()
 };
 Blockly.FunctionEditor.prototype.addEditorFrame_ = function() {
@@ -19164,7 +19203,7 @@ Blockly.FunctionEditor.prototype.addEditorFrame_ = function() {
   this.frameText_.textContent = Blockly.Msg.FUNCTION_HEADER
 };
 Blockly.FunctionEditor.prototype.position_ = function() {
-  var metrics = Blockly.modalBlockSpace.getMetrics();
+  var metrics = this.modalBlockSpace.getMetrics();
   var width = metrics.viewWidth;
   var height = metrics.viewHeight;
   this.frameBase_.setAttribute("width", width + 2 * Blockly.Bubble.BORDER_WIDTH);
@@ -19178,7 +19217,7 @@ Blockly.FunctionEditor.prototype.position_ = function() {
   }
   this.contractDiv_.style.width = width + "px";
   this.closeButton_.setAttribute("transform", "translate(" + (Blockly.RTL ? 5 : metrics.absoluteLeft + metrics.viewWidth + 14 - this.closeButton_.firstElementChild.getAttribute("width")) + ",19)");
-  Blockly.modalBlockSpaceEditor.svgResize();
+  this.modalBlockSpaceEditor.svgResize();
   this.layOutBlockSpaceItems_()
 };
 Blockly.FunctionEditor.prototype.createContractDom_ = function() {
@@ -19190,13 +19229,54 @@ Blockly.FunctionEditor.prototype.createContractDom_ = function() {
   if(!Blockly.disableParamEditing) {
     this.contractDiv_.innerHTML += "<div>" + Blockly.Msg.FUNCTION_PARAMETERS_LABEL + "</div>" + '<div><input id="paramAddText" type="text" style="width: 200px;"> ' + '<button id="paramAddButton" class="btn">' + Blockly.Msg.ADD_PARAMETER + "</button>"
   }
-  var metrics = Blockly.modalBlockSpace.getMetrics();
+  var metrics = this.modalBlockSpace.getMetrics();
   var left = metrics.absoluteLeft;
   this.contractDiv_.style.left = left + "px";
   this.contractDiv_.style.top = metrics.absoluteTop + "px";
   this.contractDiv_.style.width = metrics.viewWidth + "px";
   this.contractDiv_.style.display = "block";
   this.container_.insertBefore(this.contractDiv_, this.container_.firstChild)
+};
+goog.provide("Blockly.ContractEditorSectionView");
+Blockly.ContractEditorSectionView = function(canvas, opt_options) {
+  this.headerText_ = opt_options.headerText;
+  this.onCollapseCallback_ = opt_options.onCollapseCallback;
+  this.placeContentCallback = opt_options.placeContentCallback;
+  this.headerHeight = opt_options.headerHeight || Blockly.ContractEditorSectionView.DEFAULT_HEADER_HEIGHT;
+  this.header = new Blockly.SvgHeader(canvas, {headerText:this.textForCurrentState_(), onMouseDown:goog.bind(this.toggleCollapse, this), backgroundColor:Blockly.ContractEditorSectionView.DARK_GRAY_HEX});
+  this.collapsed_ = false
+};
+Blockly.ContractEditorSectionView.DOWN_TRIANGLE_CHARACTER = "\u25bc";
+Blockly.ContractEditorSectionView.RIGHT_TRIANGLE_CHARACTER = "\u25b6";
+Blockly.ContractEditorSectionView.DARK_GRAY_HEX = "#898989";
+Blockly.ContractEditorSectionView.DEFAULT_HEADER_HEIGHT = 50;
+Blockly.ContractEditorSectionView.prototype.textForCurrentState_ = function() {
+  if(!this.onCollapseCallback_) {
+    return this.headerText_
+  }
+  var arrow = this.collapsed_ ? Blockly.ContractEditorSectionView.RIGHT_TRIANGLE_CHARACTER : Blockly.ContractEditorSectionView.DOWN_TRIANGLE_CHARACTER;
+  return arrow + " " + this.headerText_
+};
+Blockly.ContractEditorSectionView.prototype.toggleCollapse = function() {
+  this.setCollapsed_(!this.collapsed_)
+};
+Blockly.ContractEditorSectionView.prototype.setCollapsed_ = function(isCollapsed) {
+  this.collapsed_ = isCollapsed;
+  if(this.onCollapseCallback_) {
+    this.onCollapseCallback_(this.collapsed_)
+  }
+  this.header.setText(this.textForCurrentState_())
+};
+Blockly.ContractEditorSectionView.prototype.placeAndGetNewY = function(currentY, width) {
+  this.header.setPositionSize(currentY, width, this.headerHeight);
+  currentY += this.headerHeight;
+  if(this.collapsed_) {
+    return currentY
+  }
+  if(this.placeContentCallback) {
+    currentY += this.placeContentCallback(currentY)
+  }
+  return currentY
 };
 goog.provide("goog.style.bidi");
 goog.require("goog.dom");
@@ -20569,6 +20649,36 @@ goog.ui.Select.prototype.setOpen = function(open, opt_e) {
 goog.ui.registry.setDecoratorByClassName(goog.getCssName("goog-select"), function() {
   return new goog.ui.Select(null)
 });
+goog.provide("Blockly.SvgHeader");
+var TEXT_PADDING_LEFT = "10";
+Blockly.SvgHeader = function(parent, opt_options) {
+  var options = opt_options || {backgroundColor:"#000", headerText:"Default Header"};
+  var extraStyle = options.onMouseDown ? "" : "pointer-events: none;";
+  this.svgGroup_ = Blockly.createSvgElement("g", {style:extraStyle}, parent, {belowExisting:true});
+  this.grayRectangleElement_ = Blockly.createSvgElement("rect", {"fill":options.backgroundColor, "style":extraStyle}, this.svgGroup_);
+  this.textElement_ = Blockly.createSvgElement("text", {"class":"contractEditorHeaderText", "style":extraStyle}, this.svgGroup_);
+  if(options.headerText) {
+    this.textElement_.textContent = options.headerText
+  }
+  if(options.onMouseDown) {
+    Blockly.bindEvent_(this.svgGroup_, "mousedown", null, options.onMouseDown)
+  }
+};
+Blockly.SvgHeader.prototype.setPositionSize = function(yOffset, width, height) {
+  this.svgGroup_.setAttribute("transform", "translate(" + 0 + "," + yOffset + ")");
+  this.grayRectangleElement_.setAttribute("width", width);
+  this.grayRectangleElement_.setAttribute("height", height);
+  this.textElement_.setAttribute("x", TEXT_PADDING_LEFT);
+  var rectangleMiddleY = height / 2;
+  var thirdTextHeight = this.textElement_.getBBox().height / 3;
+  this.textElement_.setAttribute("y", rectangleMiddleY + thirdTextHeight)
+};
+Blockly.SvgHeader.prototype.setText = function(text) {
+  this.textElement_.textContent = text
+};
+Blockly.SvgHeader.prototype.removeSelf = function() {
+  goog.dom.removeNode(this.svgGroup_)
+};
 goog.provide("goog.color.names");
 goog.color.names = {"aliceblue":"#f0f8ff", "antiquewhite":"#faebd7", "aqua":"#00ffff", "aquamarine":"#7fffd4", "azure":"#f0ffff", "beige":"#f5f5dc", "bisque":"#ffe4c4", "black":"#000000", "blanchedalmond":"#ffebcd", "blue":"#0000ff", "blueviolet":"#8a2be2", "brown":"#a52a2a", "burlywood":"#deb887", "cadetblue":"#5f9ea0", "chartreuse":"#7fff00", "chocolate":"#d2691e", "coral":"#ff7f50", "cornflowerblue":"#6495ed", "cornsilk":"#fff8dc", "crimson":"#dc143c", "cyan":"#00ffff", "darkblue":"#00008b", "darkcyan":"#008b8b", 
 "darkgoldenrod":"#b8860b", "darkgray":"#a9a9a9", "darkgreen":"#006400", "darkgrey":"#a9a9a9", "darkkhaki":"#bdb76b", "darkmagenta":"#8b008b", "darkolivegreen":"#556b2f", "darkorange":"#ff8c00", "darkorchid":"#9932cc", "darkred":"#8b0000", "darksalmon":"#e9967a", "darkseagreen":"#8fbc8f", "darkslateblue":"#483d8b", "darkslategray":"#2f4f4f", "darkslategrey":"#2f4f4f", "darkturquoise":"#00ced1", "darkviolet":"#9400d3", "deeppink":"#ff1493", "deepskyblue":"#00bfff", "dimgray":"#696969", "dimgrey":"#696969", 
@@ -21037,6 +21147,9 @@ goog.ui.registry.setDecoratorByClassName(goog.ui.FlatMenuButtonRenderer.CSS_CLAS
 });
 goog.provide("Blockly.ContractEditor");
 goog.require("Blockly.FunctionEditor");
+goog.require("Blockly.ContractEditorSectionView");
+goog.require("Blockly.SvgHeader");
+goog.require("Blockly.CustomCssClassMenuRenderer");
 goog.require("goog.ui.Component.EventType");
 goog.require("goog.ui.FlatMenuButtonRenderer");
 goog.require("goog.ui.Option");
@@ -21046,114 +21159,111 @@ goog.require("goog.ui.decorate");
 goog.require("goog.ui.Component.EventType");
 goog.require("goog.events");
 goog.require("goog.color");
-Blockly.ContractEditorDropdownMenuRenderer = function() {
-  Blockly.ContractEditorDropdownMenuRenderer.superClass_.constructor.call(this)
-};
-goog.inherits(Blockly.ContractEditorDropdownMenuRenderer, goog.ui.MenuRenderer);
-goog.addSingletonGetter(Blockly.ContractEditorDropdownMenuRenderer);
-Blockly.ContractEditorDropdownMenuRenderer.prototype.getCssClass = function() {
-  return"goog-menu colored-type-dropdown"
-};
-Blockly.SVGHeader = function(parent, opt_options) {
-  opt_options = opt_options || {};
-  this.padding = {left:10};
-  var extraStyle = opt_options.onMouseDown ? "" : "pointer-events: none;";
-  this.svgGroup_ = Blockly.createSvgElement("g", {style:extraStyle}, parent, {belowExisting:true});
-  this.grayRectangleElement_ = Blockly.createSvgElement("rect", {"fill":"#dddddd", "style":extraStyle}, this.svgGroup_);
-  this.textElement_ = Blockly.createSvgElement("text", {"class":"blackBlocklyText", "style":extraStyle}, this.svgGroup_);
-  if(opt_options.headerText) {
-    this.textElement_.textContent = opt_options.headerText
-  }
-  if(opt_options.onMouseDown) {
-    Blockly.bindEvent_(this.svgGroup_, "mousedown", opt_options.onMouseDownContext, opt_options.onMouseDown)
-  }
-};
-Blockly.SVGHeader.prototype.setPositionSize = function(yOffset, width, height) {
-  this.svgGroup_.setAttribute("transform", "translate(" + 0 + "," + yOffset + ")");
-  this.grayRectangleElement_.setAttribute("width", width);
-  this.grayRectangleElement_.setAttribute("height", height);
-  this.textElement_.setAttribute("x", this.padding.left);
-  var rectangleMiddleY = height / 2;
-  var thirdTextHeight = this.textElement_.getBBox().height / 3;
-  this.textElement_.setAttribute("y", rectangleMiddleY + thirdTextHeight)
-};
-Blockly.SVGHeader.prototype.setText = function(text) {
-  this.textElement_.textContent = text
-};
-Blockly.SVGHeader.prototype.removeSelf = function() {
-  goog.dom.removeNode(this.svgGroup_)
-};
-Blockly.ExampleBlockView = function(block, exampleIndex, onCollapseCallback) {
-  this.block = block;
-  this.exampleNumber = Blockly.ExampleBlockView.START_EXAMPLE_COUNT_AT + exampleIndex;
-  this.header = new Blockly.SVGHeader(block.blockSpace.svgBlockCanvas_, {headerText:this.textForCurrentState_(), onMouseDown:this.toggleCollapse_, onMouseDownContext:this});
-  this.collapsed_ = false;
-  this.onCollapseCallback_ = onCollapseCallback
-};
-Blockly.ExampleBlockView.START_EXAMPLE_COUNT_AT = 1;
-Blockly.ExampleBlockView.DOWN_TRIANGLE_CHARACTER = "\u25bc";
-Blockly.ExampleBlockView.RIGHT_TRIANGLE_CHARACTER = "\u25b6";
-Blockly.ExampleBlockView.prototype.textForCurrentState_ = function() {
-  var arrow = this.collapsed_ ? Blockly.ExampleBlockView.RIGHT_TRIANGLE_CHARACTER : Blockly.ExampleBlockView.DOWN_TRIANGLE_CHARACTER;
-  return arrow + " " + Blockly.Msg.EXAMPLE + " " + this.exampleNumber
-};
-Blockly.ExampleBlockView.prototype.toggleCollapse_ = function() {
-  this.collapsed_ = !this.collapsed_;
-  this.block.setUserVisible(!this.collapsed_);
-  this.onCollapseCallback_();
-  this.header.setText(this.textForCurrentState_())
-};
-Blockly.ExampleBlockView.prototype.placeStartingAt = function(currentX, currentY, width, headerHeight) {
-  this.header.setPositionSize(currentY, width, headerHeight);
-  currentY += headerHeight;
-  if(this.collapsed_) {
-    return currentY
-  }
-  currentY += FRAME_MARGIN_TOP;
-  this.block.moveTo(currentX, currentY);
-  currentY += this.block.getHeightWidth().height;
-  currentY += FRAME_MARGIN_TOP;
-  return currentY
-};
+goog.require("goog.array");
+var EXAMPLE_BLOCK_MARGIN_BELOW = 20;
+var EXAMPLE_BLOCK_MARGIN_LEFT = 15;
+var EXAMPLE_BLOCK_SECTION_MAGIN_BELOW = 10;
+var EXAMPLE_BLOCK_SECTION_MAGIN_ABOVE = 15;
+var FUNCTION_BLOCK_MARGIN_ABOVE = 15;
+var HEADER_HEIGHT = 50;
 Blockly.ContractEditor = function() {
   Blockly.ContractEditor.superClass_.constructor.call(this);
   this.inputTypeSelector = null;
   this.outputTypeSelector = null;
-  this.exampleBlockViews_ = [];
-  this.functionDefinitionHeader_ = null
+  this.exampleBlocks = [];
+  this.contractSectionView_ = null;
+  this.examplesSectionView_ = null;
+  this.definitionSectionView_ = null;
+  this.sections = new goog.structs.LinkedMap
 };
 goog.inherits(Blockly.ContractEditor, Blockly.FunctionEditor);
 Blockly.ContractEditor.EXAMPLE_BLOCK_TYPE = "functional_example";
 Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME = "ACTUAL";
-Blockly.ContractEditor.MARGIN_BELOW_EXAMPLES = 50;
-Blockly.ContractEditor.typesToColors = {"none":[0, 0, 0.6], "Number":[192, 1, 0.99], "string":[180, 1, 0.6], "image":[285, 1, 0.8], "boolean":[90, 1, 0.4]};
+Blockly.ContractEditor.typesToColorsHSV = {"none":[0, 0, 0.6], "Number":[192, 1, 0.99], "string":[180, 1, 0.6], "image":[285, 1, 0.8], "boolean":[90, 1, 0.4]};
+Blockly.ContractEditor.DEFAULT_OUTPUT_TYPE = "none";
+Blockly.ContractEditor.DEFAULT_PARAMETER_TYPE = "none";
 Blockly.ContractEditor.prototype.definitionBlockType = "functional_definition";
 Blockly.ContractEditor.prototype.parameterBlockType = "functional_parameters_get";
 Blockly.ContractEditor.prototype.create_ = function() {
-  Blockly.ContractEditor.superClass_.create_.call(this)
+  Blockly.ContractEditor.superClass_.create_.call(this);
+  var canvasToDrawOn = this.modalBlockSpace.svgBlockCanvas_;
+  this.contractSectionView_ = new Blockly.ContractEditorSectionView(canvasToDrawOn, {onCollapseCallback:goog.bind(function(isNowCollapsed) {
+    this.contractDiv_.style.display = isNowCollapsed ? "none" : "block";
+    this.position_()
+  }, this), headerText:"1. Contract and Purpose Statement"});
+  this.hiddenExampleBlocks_ = [];
+  this.examplesSectionView_ = new Blockly.ContractEditorSectionView(canvasToDrawOn, {headerText:"2. Examples", placeContentCallback:goog.bind(function(newY) {
+    var currentY = newY;
+    currentY += EXAMPLE_BLOCK_SECTION_MAGIN_ABOVE;
+    this.exampleBlocks.forEach(function(block, i) {
+      if(i !== 0) {
+        currentY += EXAMPLE_BLOCK_MARGIN_BELOW
+      }
+      block.moveTo(EXAMPLE_BLOCK_MARGIN_LEFT, currentY);
+      currentY += block.getHeightWidth().height
+    }, this);
+    currentY += EXAMPLE_BLOCK_SECTION_MAGIN_BELOW;
+    return currentY
+  }, this), onCollapseCallback:goog.bind(function(isNowCollapsed) {
+    this.setBlockSubsetVisibility(!isNowCollapsed, goog.bind(this.isBlockInExampleArea, this), this.hiddenExampleBlocks_);
+    this.position_()
+  }, this)});
+  this.hiddenDefinitionBlocks_ = [];
+  this.definitionSectionView_ = new Blockly.ContractEditorSectionView(canvasToDrawOn, {headerText:"3. Definition", onCollapseCallback:goog.bind(function(isNowCollapsed) {
+    this.flyout_.setVisibility(!isNowCollapsed);
+    this.setBlockSubsetVisibility(!isNowCollapsed, goog.bind(this.isBlockInFunctionArea, this), this.hiddenDefinitionBlocks_);
+    this.position_()
+  }, this)})
+};
+Blockly.ContractEditor.prototype.setBlockSubsetVisibility = function(isVisible, blockFilter, hiddenBlockArray) {
+  if(isVisible) {
+    hiddenBlockArray.forEach(function(block) {
+      block.setUserVisible(true)
+    }, this);
+    goog.array.clear(hiddenBlockArray)
+  }else {
+    this.modalBlockSpace.getTopBlocks().filter(blockFilter).forEach(function(block) {
+      hiddenBlockArray.push(block);
+      block.setUserVisible(false)
+    }, this)
+  }
+};
+Blockly.ContractEditor.prototype.isBlockInFunctionArea = function(block) {
+  return block.blockSpace === this.modalBlockSpace && (block.isUserVisible() && block.getRelativeToSurfaceXY().y >= this.getFlyoutTopPosition())
+};
+Blockly.ContractEditor.prototype.isBlockInExampleArea = function(block) {
+  return block.blockSpace === this.modalBlockSpace && (block.isUserVisible() && block.getRelativeToSurfaceXY().y < this.getFlyoutTopPosition())
+};
+Blockly.ContractEditor.prototype.getFlyoutTopPosition = function() {
+  return this.flyout_.getYPosition() - this.flyout_.getHeight()
 };
 Blockly.ContractEditor.prototype.hideAndRestoreBlocks_ = function() {
   Blockly.ContractEditor.superClass_.hideAndRestoreBlocks_.call(this);
-  this.exampleBlockViews_.forEach(function(exampleBlockView) {
-    this.moveToMainBlockSpace_(exampleBlockView.block);
-    exampleBlockView.header.removeSelf()
+  this.exampleBlocks.forEach(function(exampleBlock) {
+    this.moveToMainBlockSpace_(exampleBlock)
   }, this);
-  this.functionDefinitionHeader_.removeSelf();
-  goog.array.clear(this.exampleBlockViews_)
+  goog.array.clear(this.exampleBlocks)
 };
 Blockly.ContractEditor.prototype.openAndEditFunction = function(functionName) {
   Blockly.ContractEditor.superClass_.openAndEditFunction.call(this, functionName);
+  this.createExampleBlocks_(functionName);
+  this.position_();
+  this.setTypeDropdownDefaults()
+};
+Blockly.ContractEditor.prototype.createExampleBlocks_ = function(functionName) {
   var exampleBlocks = Blockly.mainBlockSpace.findFunctionExamples(functionName);
-  exampleBlocks.forEach(function(exampleBlock, index) {
-    var exampleBlockView = new Blockly.ExampleBlockView(this.moveToModalBlockSpace_(exampleBlock), index, goog.bind(this.position_, this));
-    this.exampleBlockViews_.push(exampleBlockView)
-  }, this);
-  this.createDefinitionHeader_();
-  this.position_()
+  exampleBlocks.forEach(function(exampleBlock) {
+    var movedExampleBlock = this.moveToModalBlockSpace_(exampleBlock);
+    this.exampleBlocks.push(movedExampleBlock)
+  }, this)
+};
+Blockly.ContractEditor.prototype.setTypeDropdownDefaults = function() {
+  this.inputTypeSelector.setValue(Blockly.ContractEditor.DEFAULT_PARAMETER_TYPE);
+  this.outputTypeSelector.setValue(this.functionDefinitionBlock.getOutputType() || "none")
 };
 Blockly.ContractEditor.prototype.openWithNewFunction = function(opt_blockCreationCallback) {
   this.ensureCreated_();
-  var tempFunctionDefinitionBlock = Blockly.Xml.domToBlock_(Blockly.mainBlockSpace, Blockly.createSvgElement("block", {type:this.definitionBlockType}));
+  var tempFunctionDefinitionBlock = Blockly.Xml.domToBlock(Blockly.mainBlockSpace, Blockly.createSvgElement("block", {type:this.definitionBlockType}));
   if(opt_blockCreationCallback) {
     opt_blockCreationCallback(tempFunctionDefinitionBlock)
   }
@@ -21162,11 +21272,8 @@ Blockly.ContractEditor.prototype.openWithNewFunction = function(opt_blockCreatio
   }
   this.openAndEditFunction(tempFunctionDefinitionBlock.getTitleValue("NAME"))
 };
-Blockly.ContractEditor.prototype.createDefinitionHeader_ = function() {
-  this.functionDefinitionHeader_ = new Blockly.SVGHeader(Blockly.modalBlockSpace.svgBlockCanvas_, {headerText:Blockly.Msg.DEFINE_HEADER_DEFINITION})
-};
 Blockly.ContractEditor.prototype.createExampleBlock_ = function(functionDefinitionBlock) {
-  var temporaryExampleBlock = Blockly.Xml.domToBlock_(Blockly.mainBlockSpace, Blockly.createSvgElement("block", {type:Blockly.ContractEditor.EXAMPLE_BLOCK_TYPE}));
+  var temporaryExampleBlock = Blockly.Xml.domToBlock(Blockly.mainBlockSpace, Blockly.createSvgElement("block", {type:Blockly.ContractEditor.EXAMPLE_BLOCK_TYPE}));
   var caller = Blockly.Procedures.createCallerFromDefinition(Blockly.mainBlockSpace, functionDefinitionBlock);
   temporaryExampleBlock.attachBlockToInputName(caller, Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME);
   return temporaryExampleBlock
@@ -21175,38 +21282,36 @@ Blockly.ContractEditor.prototype.layOutBlockSpaceItems_ = function() {
   if(!this.isOpen()) {
     return
   }
-  var headerHeight = 50;
   var fullWidth = Blockly.modalBlockSpace.getMetrics().viewWidth;
   var currentX = Blockly.RTL ? fullWidth - FRAME_MARGIN_SIDE : FRAME_MARGIN_SIDE;
-  var trashcanOffset = (Blockly.modalBlockSpace.trashcan.HEIGHT_ - headerHeight) / 2;
-  Blockly.modalBlockSpace.trashcan.setYOffset(-trashcanOffset);
-  Blockly.modalBlockSpace.trashcan.position_();
+  this.contractSectionView_.placeAndGetNewY(-this.getContractDivHeight() - HEADER_HEIGHT, fullWidth);
+  this.positionTrashcanVerticalMiddleOfTopHeader_();
   var currentY = 0;
-  this.exampleBlockViews_.forEach(function(exampleBlockView) {
-    currentY = exampleBlockView.placeStartingAt(currentX, currentY, fullWidth, headerHeight)
-  }, this);
-  if(this.functionDefinitionHeader_) {
-    this.functionDefinitionHeader_.setPositionSize(currentY, fullWidth, headerHeight);
-    currentY += headerHeight
-  }
+  currentY = this.examplesSectionView_.placeAndGetNewY(currentY, fullWidth);
+  currentY = this.definitionSectionView_.placeAndGetNewY(currentY, fullWidth);
   if(this.flyout_) {
     currentY += this.flyout_.getHeight();
     this.flyout_.customYOffset = currentY;
     this.flyout_.position_()
   }
-  currentY += FRAME_MARGIN_TOP;
+  currentY += FUNCTION_BLOCK_MARGIN_ABOVE;
   if(this.functionDefinitionBlock) {
     this.functionDefinitionBlock.moveTo(currentX, currentY)
   }
+};
+Blockly.ContractEditor.prototype.positionTrashcanVerticalMiddleOfTopHeader_ = function() {
+  var trashcan = this.modalBlockSpace.trashcan;
+  var trashcanHeaderDifference = trashcan.getHeight() - HEADER_HEIGHT;
+  trashcan.repositionBelowBlockSpaceTop(-trashcanHeaderDifference / 2)
 };
 Blockly.ContractEditor.prototype.createContractDom_ = function() {
   this.contractDiv_ = goog.dom.createDom("div", "blocklyToolboxDiv paramToolbox blocklyText");
   if(Blockly.RTL) {
     this.contractDiv_.setAttribute("dir", "RTL")
   }
-  this.contractDiv_.innerHTML = "<div>" + Blockly.Msg.FUNCTIONAL_NAME_LABEL + "</div>" + '<div><input id="functionNameText" type="text"></div>' + '<div id="description-area" style="margin: 0px;">' + "<div>" + Blockly.Msg.FUNCTIONAL_DESCRIPTION_LABEL + "</div>" + '<div><textarea id="functionDescriptionText" rows="2"></textarea></div>' + "</div>" + '<div id="outputTypeTitle">' + Blockly.Msg.FUNCTIONAL_RANGE_LABEL + "</div>" + '<span id="outputTypeDropdown"></span>' + '<div id="domain-area" style="margin: 0px;">' + 
-  "<div>" + Blockly.Msg.FUNCTIONAL_DOMAIN_LABEL + "</div>" + '<div><input id="paramAddText" type="text" style="width: 200px;" ' + 'placeholder="' + Blockly.Msg.FUNCTIONAL_NAME_LABEL + '"> ' + '<span id="paramTypeDropdown"></span>' + '<button id="paramAddButton" class="btn">' + Blockly.Msg.ADD + "</button>" + "</div>" + "</div>";
-  var metrics = Blockly.modalBlockSpace.getMetrics();
+  this.contractDiv_.innerHTML = "<div>" + Blockly.Msg.FUNCTIONAL_NAME_LABEL + "</div>" + '<div><input id="functionNameText" type="text"></div>' + '<div id="domain-area" style="margin: 0px;">' + "<div>" + Blockly.Msg.FUNCTIONAL_DOMAIN_LABEL + "</div>" + '<div><input id="paramAddText" type="text" style="width: 200px;" ' + 'placeholder="' + Blockly.Msg.FUNCTIONAL_NAME_LABEL + '"> ' + '<span id="paramTypeDropdown"></span>' + '<button id="paramAddButton" class="btn">' + Blockly.Msg.ADD + "</button>" + 
+  "</div>" + '<div id="outputTypeTitle">' + Blockly.Msg.FUNCTIONAL_RANGE_LABEL + "</div>" + '<span id="outputTypeDropdown"></span>' + '<div id="description-area" style="margin: 0px;">' + "<div>" + Blockly.Msg.FUNCTIONAL_DESCRIPTION_LABEL + "</div>" + '<div><textarea id="functionDescriptionText" rows="2"></textarea></div>' + "</div>" + "</div>";
+  var metrics = this.modalBlockSpace.getMetrics();
   this.contractDiv_.style.left = metrics.absoluteLeft + "px";
   this.contractDiv_.style.top = metrics.absoluteTop + "px";
   this.contractDiv_.style.width = metrics.viewWidth + "px";
@@ -21215,9 +21320,12 @@ Blockly.ContractEditor.prototype.createContractDom_ = function() {
   this.initializeInputTypeDropdown_();
   this.initializeOutputTypeDropdown_()
 };
+Blockly.ContractEditor.prototype.getBlockSpaceEditorTopOffset = function() {
+  return this.getWindowBorderChromeHeight() + this.getContractDivHeight() + HEADER_HEIGHT
+};
 Blockly.ContractEditor.prototype.setupUIForBlock_ = function(targetFunctionDefinitionBlock) {
   var isEditingVariable = targetFunctionDefinitionBlock.isVariable();
-  this.frameText_.textContent = isEditingVariable ? Blockly.Msg.FUNCTIONAL_VARIABLE_HEADER : Blockly.Msg.FUNCTION_HEADER;
+  this.frameText_.textContent = isEditingVariable ? Blockly.Msg.FUNCTIONAL_VARIABLE_HEADER : Blockly.Msg.CONTRACT_EDITOR_HEADER;
   goog.dom.setTextContent(goog.dom.getElement("outputTypeTitle"), isEditingVariable ? Blockly.Msg.FUNCTIONAL_VARIABLE_TYPE : Blockly.Msg.FUNCTIONAL_RANGE_LABEL);
   goog.style.showElement(goog.dom.getElement("domain-area"), !isEditingVariable);
   goog.style.showElement(goog.dom.getElement("description-area"), !isEditingVariable);
@@ -21246,30 +21354,58 @@ Blockly.ContractEditor.prototype.addParamsFromProcedure_ = function() {
 };
 Blockly.ContractEditor.prototype.initializeOutputTypeDropdown_ = function() {
   this.outputTypeSelector = this.createTypeDropdown_();
-  goog.events.listen(this.outputTypeSelector, goog.ui.Component.EventType.CHANGE, goog.bind(this.outputTypeDropdownChange, this));
-  this.outputTypeSelector.render(goog.dom.getElement("outputTypeDropdown"))
+  this.outputTypeSelector.render(this.getOutputTypeDropdownElement_());
+  goog.events.listen(this.outputTypeSelector, goog.ui.Component.EventType.CHANGE, goog.bind(this.outputTypeDropdownChange_, this))
 };
-Blockly.ContractEditor.prototype.outputTypeDropdownChange = function(comboBoxEvent) {
+Blockly.ContractEditor.prototype.outputTypeDropdownChange_ = function(comboBoxEvent) {
   var newType = comboBoxEvent.target.getContent();
-  this.functionDefinitionBlock.updateOutputType(newType)
+  var menuButtonRenderer = goog.ui.FlatMenuButtonRenderer.getInstance();
+  var menuButtonElement = menuButtonRenderer.getContentElement(this.getOutputTypeDropdownElement_());
+  var newColorHSV = Blockly.ContractEditor.typesToColorsHSV[newType];
+  this.setBackgroundFromHSV(menuButtonElement, newColorHSV);
+  this.setFrameColor_(newColorHSV);
+  if(this.functionDefinitionBlock) {
+    this.functionDefinitionBlock.updateOutputType(newType)
+  }
+};
+Blockly.ContractEditor.prototype.setFrameColor_ = function(hsvColor) {
+  this.frameBase_.style.fill = goog.color.hsvToHex(hsvColor[0], hsvColor[1], hsvColor[2] * 255)
+};
+Blockly.ContractEditor.prototype.getOutputTypeDropdownElement_ = function() {
+  return goog.dom.getElement("outputTypeDropdown")
+};
+Blockly.ContractEditor.prototype.getInputTypeDropdownElement_ = function() {
+  return goog.dom.getElement("paramTypeDropdown")
 };
 Blockly.ContractEditor.prototype.initializeInputTypeDropdown_ = function() {
   this.inputTypeSelector = this.createTypeDropdown_();
-  this.inputTypeSelector.render(goog.dom.getElement("paramTypeDropdown"))
+  this.inputTypeSelector.render(goog.dom.getElement("paramTypeDropdown"));
+  goog.events.listen(this.inputTypeSelector, goog.ui.Component.EventType.CHANGE, goog.bind(this.inputTypeDropdownChange_, this))
+};
+Blockly.ContractEditor.prototype.inputTypeDropdownChange_ = function(comboBoxEvent) {
+  var newType = comboBoxEvent.target.getContent();
+  this.colorInputButtonForType_(newType)
+};
+Blockly.ContractEditor.prototype.colorInputButtonForType_ = function(newType) {
+  var menuButtonRenderer = goog.ui.FlatMenuButtonRenderer.getInstance();
+  var menuButtonElement = menuButtonRenderer.getContentElement(this.getInputTypeDropdownElement_());
+  this.setBackgroundFromHSV(menuButtonElement, Blockly.ContractEditor.typesToColorsHSV[newType])
 };
 Blockly.ContractEditor.prototype.createTypeDropdown_ = function() {
-  var newTypeDropdown = new goog.ui.Select(null, null, goog.ui.FlatMenuButtonRenderer.getInstance(), null, Blockly.ContractEditorDropdownMenuRenderer.getInstance());
-  goog.object.forEach(Blockly.ContractEditor.typesToColors, function(color, key) {
+  var newTypeDropdown = new goog.ui.Select(null, null, goog.ui.FlatMenuButtonRenderer.getInstance(), null, new Blockly.CustomCssClassMenuRenderer("colored-type-dropdown"));
+  goog.object.forEach(Blockly.ContractEditor.typesToColorsHSV, function(color, key) {
     var menuItem = new goog.ui.MenuItem(key);
     newTypeDropdown.addItem(menuItem);
     this.setMenuItemColor_(menuItem, color)
   }, this);
-  newTypeDropdown.setDefaultCaption(Blockly.Msg.FUNCTIONAL_TYPE_LABEL);
   return newTypeDropdown
 };
 Blockly.ContractEditor.prototype.setMenuItemColor_ = function(menuItem, hsvColor) {
   var menuItemElement = menuItem.getElement();
-  menuItemElement.style.background = goog.color.hsvToHex(hsvColor[0], hsvColor[1], hsvColor[2] * 255)
+  this.setBackgroundFromHSV(menuItemElement, hsvColor)
+};
+Blockly.ContractEditor.prototype.setBackgroundFromHSV = function(element, hsvColor) {
+  element.style.background = goog.color.hsvToHex(hsvColor[0], hsvColor[1], hsvColor[2] * 255)
 };
 goog.provide("Blockly.FieldIcon");
 goog.require("Blockly.FieldLabel");
@@ -23055,7 +23191,7 @@ Blockly.BlockSpaceEditor.terminateDrag_ = function() {
   Blockly.Flyout.terminateDrag_()
 };
 Blockly.BlockSpaceEditor.copy_ = function(block) {
-  var xmlBlock = Blockly.Xml.blockToDom_(block);
+  var xmlBlock = Blockly.Xml.blockToDom(block);
   Blockly.Xml.deleteNext(xmlBlock);
   var xy = block.getRelativeToSurfaceXY();
   xmlBlock.setAttribute("x", Blockly.RTL ? -xy.x : xy.x);
@@ -23410,31 +23546,31 @@ Blockly.Css.setCursor = function(cursor, opt_svg) {
     setCursorOnBackgroundElement(opt_svg)
   }
 };
-Blockly.Css.CONTENT = [".blocklyDraggable {", "}", "#blockly {", "  border: 1px solid #ddd;", "}", "#blockly .userHidden {", "  display: none;", "}", "#blockly.readonly .userHidden {", "  display: inline;", "}", "#blockly.readonly {", "  border: 0;", "}", "#blockly.edit .userHidden {", "  display: inline;", "  fill-opacity: 0.5;", "}", "#blockly.edit .userHidden .blocklyPath {", "  fill-opacity: 0.5;", "}", "#blockly.edit .userHidden .blocklyPathDark, #blockly.edit .userHidden .blocklyPathLight {", 
+Blockly.Css.CONTENT = [".blocklyDraggable {", "}", "#blockly {", "  border: 1px solid #ddd;", "}", "#blockly .userHidden {", "  display: none !important;", "}", "#blockly.readonly .userHidden {", "  display: inline;", "}", "#blockly.readonly {", "  border: 0;", "}", "#blockly.edit .userHidden {", "  display: inline;", "  fill-opacity: 0.5;", "}", "#blockly.edit .userHidden .blocklyPath {", "  fill-opacity: 0.5;", "}", "#blockly.edit .userHidden .blocklyPathDark, #blockly.edit .userHidden .blocklyPathLight {", 
 "  display: none;", "}", ".blocklySvg {", "  cursor: pointer;", "  background-color: #fff;", "  overflow: hidden;", "}", "g.blocklyDraggable {", "  -ms-touch-action: none;", "  touch-action: none;", "}", ".blocklyWidgetDiv {", "  position: absolute;", "  display: none;", "  z-index: 999;", "}", ".blocklyResizeSE {", "  fill: #aaa;", "  cursor: se-resize;", "}", ".blocklyResizeSW {", "  fill: #aaa;", "  cursor: sw-resize;", "}", ".blocklyResizeLine {", "  stroke-width: 1;", "  stroke: #888;", "}", 
 ".blocklyHighlightedConnectionPath {", "  stroke-width: 4px;", "  stroke: #fc3;", "  fill: none;", "}", ".blocklyPathLight {", "  fill: none;", "  stroke-width: 2;", "  stroke-linecap: round;", "}", ".blocklySpotlight>.blocklyPath {", "  fill: #fc3;", "}", ".blocklySelected:not(.blocklyUndeletable)>.blocklyPath {", "  stroke-width: 3px;", "  stroke: #fc3;", "}", ".blocklySelected:not(.blocklyUndeletable)>.blocklyPathLight {", "  display: none;", "}", ".blocklyUndeletable>.blocklyEditableText>rect {", 
 "  fill-opacity: 1.0;", "  fill: #ffdb74;", "}", ".blocklyDragging>.blocklyPath,", ".blocklyDragging>.blocklyPathLight {", "  fill-opacity: 0.8;", "  stroke-opacity: 0.8;", "}", ".blocklyDragging>.blocklyPathDark {", "  display: none;", "}", ".blocklyDisabled>.blocklyPath {", "  fill-opacity: 0.50;", "  stroke-opacity: 0.50;", "}", ".blocklyDisabled>.blocklyPathLight,", ".blocklyDisabled>.blocklyPathDark {", "  display: none;", "}", ".blocklyText {", "  cursor: default;", "  font-family: sans-serif;", 
-"  font-size: 11pt;", "  fill: #fff;", "}", ".blackBlocklyText {", "  cursor: default;", "  font-family: sans-serif;", "  font-size: 11pt;", "  fill: #333;", "}", ".blocklyNonEditableText>text {", "  pointer-events: none;", "}", ".blocklyNonEditableText>rect,", ".blocklyEditableText>rect {", "  fill: #fff;", "  fill-opacity: 0.6;", "}", ".blocklyNonEditableText>text,", ".blocklyEditableText>text {", "  fill: #000;", "}", ".blocklyEditableText:hover>rect {", "  stroke-width: 2;", "  stroke: #fff;", 
-"}", "/*", " * Don't allow users to select text.  It gets annoying when trying to", " * drag a block and selected text moves instead.", " */", ".blocklySvg text {", "  -moz-user-select: none;", "  -webkit-user-select: none;", "  user-select: none;", "  cursor: inherit;", "}", ".blocklyHidden {", "  display: none;", "}", ".blocklyFieldDropdown:not(.blocklyHidden) {", "  display: block;", "}", ".blocklyTooltipBackground {", "  fill: #ffffc7;", "  stroke-width: 1px;", "  stroke: #d8d8d8;", "}", ".blocklyTooltipShadow,", 
-".blocklyContextMenuShadow,", ".blocklyDropdownMenuShadow {", "  fill: #bbb;", "  filter: url(#blocklyShadowFilter);", "}", ".blocklyTooltipText {", "  font-family: sans-serif;", "  font-size: 9pt;", "  fill: #000;", "}", "#modalEditorClose:hover>rect {", "  fill: #0094ca;", "}", ".blocklyIconShield {", "  cursor: default;", "  fill: #00c;", "  stroke-width: 1px;", "  stroke: #ccc;", "}", ".blocklyIconGroup:hover>.blocklyIconShield {", "  fill: #00f;", "  stroke: #fff;", "}", ".blocklyIconGroup:hover>.blocklyIconMark {", 
-"  fill: #fff;", "}", ".blocklyIconMark {", "  cursor: default !important;", "  font-family: sans-serif;", "  font-size: 9pt;", "  font-weight: bold;", "  fill: #ccc;", "  text-anchor: middle;", "}", ".blocklyWarningBody {", "}", ".blocklyMinimalBody {", "  margin: 0;", "  padding: 0;", "}", ".blocklyCommentTextarea {", "  margin: 0;", "  padding: 2px;", "  border: 0;", "  resize: none;", "  background-color: #ffc;", "}", ".blocklyHtmlInput {", "  font-family: sans-serif;", "  font-size: 11pt;", 
-"  border: none;", "  outline: none;", "  width: 100%;", "  -moz-appearance: textfield;", "}", ".blocklyHtmlInput::-webkit-inner-spin-button, .blocklyHtmlInput::-webkit-outer-spin-button {", "  -webkit-appearance: none;", "}", ".blocklyContextMenuBackground,", ".blocklyMutatorBackground {", "  fill: #fff;", "  stroke-width: 1;", "  stroke: #ddd;", "}", ".newFunctionDiv {", "  position: absolute;", "  top: 120px;", "  left: 600px;", "}", ".blocklyContextMenuOptions>.blocklyMenuDiv,", ".blocklyContextMenuOptions>.blocklyMenuDivDisabled,", 
-".blocklyDropdownMenuOptions>.blocklyMenuDiv {", "  fill: #fff;", "}", ".blocklyContextMenuOptions>.blocklyMenuDiv:hover>rect,", ".blocklyDropdownMenuOptions>.blocklyMenuDiv:hover>rect {", "  fill: #57e;", "}", ".blocklyMenuSelected>rect {", "  fill: #57e;", "}", ".blocklyMenuText {", "  cursor: default !important;", "  font-family: sans-serif;", "  font-size: 15px; /* All context menu sizes are based on pixels. */", "  fill: #000;", "}", ".blocklyContextMenuOptions>.blocklyMenuDiv:hover>.blocklyMenuText,", 
-".blocklyDropdownMenuOptions>.blocklyMenuDiv:hover>.blocklyMenuText {", "  fill: #fff;", "}", ".blocklyMenuSelected>.blocklyMenuText {", "  fill: #fff;", "}", ".blocklyMenuDivDisabled>.blocklyMenuText {", "  fill: #ccc;", "}", ".blocklyFlyoutBackground {", "  fill: #ddd;", "  fill-opacity: 0.8;", "}", ".blocklyBackground {", "  fill: #666;", "}", ".blocklyScrollbarBackground {", "  fill: #fff;", "  stroke-width: 1;", "  stroke: #e4e4e4;", "}", ".blocklyScrollbarKnob {", "  fill: #ccc;", "}", ".blocklyScrollbarBackground:hover+.blocklyScrollbarKnob,", 
-".blocklyScrollbarKnob:hover {", "  fill: #bbb;", "}", ".blocklyInvalidInput {", "  background: #faa;", "}", ".blocklyAngleCircle {", "  stroke: #444;", "  stroke-width: 1;", "  fill: #ddd;", "  fill-opacity: 0.8;", "}", ".blocklyAngleMarks {", "  stroke: #444;", "  stroke-width: 1;", "}", ".blocklyAngleGuage {", "  fill: #d00;", "  fill-opacity: 0.8;  ", "}", ".blocklyContextMenu {", "  border-radius: 4px;", "}", ".blocklyDropdownMenu {", "  padding: 0 !important;", "  position: relative !important;", 
-"}", ".blocklyRectangularDropdownMenu .goog-menuitem {", "  height: 100%;", "  padding: 0 !important;", "  border-radius: 5px;", "  margin-bottom: 4px !important;", "}", ".fieldRectangularDropdownBackdrop {", "  fill: #fff;", "  fill-opacity: 0.6;", "}", ".blocklyRectangularDropdownArrow {", "  fill: #7965a1;", "  font-size: 20px !important;", "}", ".blocklyRectangularDropdownMenu .goog-menuitem-highlight, .goog-menuitem-hover {", "  border-color: #7965a1 !important;", "  border-style: dotted !important;", 
-"  border-width: 0px !important;", "  margin: -4px -4px 0 !important;", "  border-width: 4px !important;", "  border-style: solid !important;", "  padding-bottom: 0px !important;", "  padding-top: 0px !important;", "}", ".colored-type-dropdown .goog-menuitem-highlight .goog-menuitem-content {", "  color: blue;", "}", ".colored-type-dropdown .goog-menuitem-content {", "  color: white;", "}", ".blocklyRectangularDropdownMenu img {", "  -webkit-border-radius: 5px;", "  -moz-border-radius: 5px;", "  border-radius: 5px;", 
-"}", ".blocklyRectangularDropdownMenu {", "  border-radius: 5px;", "  box-shadow: none !important;", "}", ".goog-option-selected .goog-menuitem-checkbox,", ".goog-option-selected .goog-menuitem-icon {", "}", "/* Category tree in Toolbox. */", ".blocklyToolboxDiv {", "  background-color: #ddd;", "  display: none;", "  overflow-x: visible;", "  overflow-y: auto;", "  position: absolute;", "}", ".blocklyTreeRoot {", "  padding: 4px 0;", "}", ".blocklyTreeRoot:focus {", "  outline: none;", "}", ".blocklyTreeRow {", 
-"  line-height: 22px;", "  height: 22px;", "  padding-right: 1em;", "  white-space: nowrap;", "}", '.blocklyToolboxDiv[dir="RTL"] .blocklyTreeRow {', "  padding-right: 0;", "  padding-left: 1em !important;", "}", ".blocklyTreeRow:hover {", "  background-color: #e4e4e4;", "}", ".blocklyTreeIcon {", "  height: 16px;", "  width: 16px;", "  vertical-align: middle;", "  background-image: url(%TREE_PATH%);", "}", ".blocklyTreeIconClosedLtr {", "  background-position: -32px -1px;", "}", ".blocklyTreeIconClosedRtl {", 
-"  background-position: 0px -1px;", "}", ".blocklyTreeIconOpen {", "  background-position: -16px -1px;", "}", ".blocklyTreeIconNone {", "  background-position: -48px -1px;", "}", ".blocklyTreeSelected>.blocklyTreeIconClosedLtr {", "  background-position: -32px -17px;", "}", ".blocklyTreeSelected>.blocklyTreeIconClosedRtl {", "  background-position: 0px -17px;", "}", ".blocklyTreeSelected>.blocklyTreeIconOpen {", "  background-position: -16px -17px;", "}", ".blocklyTreeSelected>.blocklyTreeIconNone {", 
-"  background-position: -48px -17px;", "}", ".blocklyTreeLabel {", "  cursor: default;", "  font-family: sans-serif;", "  font-size: 16px;", "  padding: 0 3px;", "  vertical-align: middle;", "}", ".blocklyTreeSelected {", "  background-color: #57e !important;", "}", ".blocklyTreeSelected .blocklyTreeLabel {", "  color: #fff;", "}", ".blocklyArrow {", "  font-size: 80%;", "}", ".paramToolbox {", "  padding: 0 0 5px 0;", "}", ".paramToolbox input, .paramToolbox textarea {", "  box-sizing: border-box;", 
-"  width: 100%;", "  margin: 0;", "  resize: none;", "}", ".paramToolbox input, .paramToolbox button {", "  height: 30px;", "  margin: 0;", "}", ".paramToolbox div {", "  margin: 4px 10px;", "}", "#modalContainer {", "  position: absolute;", "  top: 40px;", "  width: 100%;", "  height: 100%;", "}", "#modalContainer > svg {", "  position: absolute;", "  top: 0;", "  left: 0;", "  background: transparent;", "  pointer-events: none;", "}", "#modalContainer > svg * {", "  pointer-events: visiblePainted;", 
-"}", "/*", " * Copyright 2007 The Closure Library Authors. All Rights Reserved.", " *", " * Use of this source code is governed by the Apache License, Version 2.0.", " * See the COPYING file for details.", " */", "/* Author: pupius@google.com (Daniel Pupius) */", "/*", " Styles to make the colorpicker look like the old gmail color picker", " NOTE: without CSS scoping this will override styles defined in palette.css", "*/", ".goog-palette {", "  outline: none;", "  cursor: default;", "}", ".goog-palette-table {", 
-"  border: 1px solid #666;", "  border-collapse: collapse;", "}", ".goog-palette-cell {", "  height: 25px;", "  width: 25px;", "  margin: 0;", "  border: 0;", "  text-align: center;", "  vertical-align: middle;", "  border-right: 1px solid #666;", "  font-size: 1px;", "}", ".goog-palette-colorswatch {", "  position: relative;", "  height: 25px;", "  width: 25px;", "  border: 1px solid #666;", "}", ".goog-palette-cell-hover .goog-palette-colorswatch {", "  border: 1px solid #FFF;", "}", ".goog-palette-cell-selected .goog-palette-colorswatch {", 
-"  border: 1px solid #000;", "  color: #fff;", "}", ".goog-menu {", "  background: #fff;", "  border-color: #ccc #666 #666 #ccc;", "  border-style: solid;", "  border-width: 1px;", "  cursor: default;", "  font: normal 13px Arial, sans-serif;", "  margin: 0;", "  outline: none;", "  padding: 4px 0;", "  position: absolute;", "  z-index: 20000;", "}", ".goog-menuitem {", "  color: #000;", "  font: normal 13px Arial, sans-serif;", "  list-style: none;", "  margin: 0;", "  padding: 4px 7em 4px 28px;", 
-"  white-space: nowrap;", "}", ".goog-menuitem.goog-menuitem-rtl {", "  padding-left: 7em;", "  padding-right: 28px;", "}", ".goog-menu-nocheckbox .goog-menuitem,", ".goog-menu-noicon .goog-menuitem {", "  padding-left: 12px;", "}", ".goog-menu-noaccel .goog-menuitem {", "  padding-right: 20px;", "}", ".goog-menuitem-content {", "  color: #000;", "  font-size: 15px;", "}", ".goog-menuitem-disabled .goog-menuitem-accel,", ".goog-menuitem-disabled .goog-menuitem-content {", "  color: #ccc !important;", 
-"}", ".goog-menuitem-disabled .goog-menuitem-icon {", "  opacity: 0.3;", "  -moz-opacity: 0.3;", "  filter: alpha(opacity=30);", "}", ".goog-menuitem-highlight,", ".goog-menuitem-hover {", "  background-color: #d6e9f8;", "  border-color: #d6e9f8;", "  border-style: dotted;", "  border-width: 1px 0;", "  padding-bottom: 3px;", "  padding-top: 3px;", "}", ".goog-menuitem-checkbox,", ".goog-menuitem-icon {", "  background-repeat: no-repeat;", "  height: 16px;", "  left: 6px;", "  position: absolute;", 
-"  right: auto;", "  vertical-align: middle;", "  width: 16px;", "}", ".goog-menuitem-rtl .goog-menuitem-checkbox,", ".goog-menuitem-rtl .goog-menuitem-icon {", "  left: auto;", "  right: 6px;", "}", ".goog-option-selected .goog-menuitem-checkbox,", ".goog-option-selected .goog-menuitem-icon {", "}", ".goog-menuitem-accel {", "  color: #999;", "  direction: ltr;", "  left: auto;", "  padding: 0 6px;", "  position: absolute;", "  right: 0;", "  text-align: right;", "}", ".goog-menuitem-rtl .goog-menuitem-accel {", 
+"  font-size: 11pt;", "  fill: #fff;", "}", ".contractEditorHeaderText {", "  cursor: default;", "  font-size: 18pt;", "  fill: #fff;", "}", ".blocklyNonEditableText>text {", "  pointer-events: none;", "}", ".blocklyNonEditableText>rect,", ".blocklyEditableText>rect {", "  fill: #fff;", "  fill-opacity: 0.6;", "}", ".blocklyNonEditableText>text,", ".blocklyEditableText>text {", "  fill: #000;", "}", ".blocklyEditableText:hover>rect {", "  stroke-width: 2;", "  stroke: #fff;", "}", "/*", " * Don't allow users to select text.  It gets annoying when trying to", 
+" * drag a block and selected text moves instead.", " */", ".blocklySvg text {", "  -moz-user-select: none;", "  -webkit-user-select: none;", "  user-select: none;", "  cursor: inherit;", "}", ".blocklyHidden {", "  display: none;", "}", ".blocklyFieldDropdown:not(.blocklyHidden) {", "  display: block;", "}", ".blocklyTooltipBackground {", "  fill: #ffffc7;", "  stroke-width: 1px;", "  stroke: #d8d8d8;", "}", ".blocklyTooltipShadow,", ".blocklyContextMenuShadow,", ".blocklyDropdownMenuShadow {", 
+"  fill: #bbb;", "  filter: url(#blocklyShadowFilter);", "}", ".blocklyTooltipText {", "  font-family: sans-serif;", "  font-size: 9pt;", "  fill: #000;", "}", "#modalEditorClose:hover>rect {", "  fill: #0094ca;", "}", ".blocklyIconShield {", "  cursor: default;", "  fill: #00c;", "  stroke-width: 1px;", "  stroke: #ccc;", "}", ".blocklyIconGroup:hover>.blocklyIconShield {", "  fill: #00f;", "  stroke: #fff;", "}", ".blocklyIconGroup:hover>.blocklyIconMark {", "  fill: #fff;", "}", ".blocklyIconMark {", 
+"  cursor: default !important;", "  font-family: sans-serif;", "  font-size: 9pt;", "  font-weight: bold;", "  fill: #ccc;", "  text-anchor: middle;", "}", ".blocklyWarningBody {", "}", ".blocklyMinimalBody {", "  margin: 0;", "  padding: 0;", "}", ".blocklyCommentTextarea {", "  margin: 0;", "  padding: 2px;", "  border: 0;", "  resize: none;", "  background-color: #ffc;", "}", ".blocklyHtmlInput {", "  font-family: sans-serif;", "  font-size: 11pt;", "  border: none;", "  outline: none;", "  width: 100%;", 
+"  -moz-appearance: textfield;", "}", ".blocklyHtmlInput::-webkit-inner-spin-button, .blocklyHtmlInput::-webkit-outer-spin-button {", "  -webkit-appearance: none;", "}", ".blocklyContextMenuBackground,", ".blocklyMutatorBackground {", "  fill: #fff;", "  stroke-width: 1;", "  stroke: #ddd;", "}", ".newFunctionDiv {", "  position: absolute;", "  top: 120px;", "  left: 600px;", "}", "#paramTypeDropdown .goog-flat-menu-button-caption,", "#outputTypeDropdown .goog-flat-menu-button-caption {", "  color: white;", 
+"}", ".blocklyContextMenuOptions>.blocklyMenuDiv,", ".blocklyContextMenuOptions>.blocklyMenuDivDisabled,", ".blocklyDropdownMenuOptions>.blocklyMenuDiv {", "  fill: #fff;", "}", ".blocklyContextMenuOptions>.blocklyMenuDiv:hover>rect,", ".blocklyDropdownMenuOptions>.blocklyMenuDiv:hover>rect {", "  fill: #57e;", "}", ".blocklyMenuSelected>rect {", "  fill: #57e;", "}", ".blocklyMenuText {", "  cursor: default !important;", "  font-family: sans-serif;", "  font-size: 15px; /* All context menu sizes are based on pixels. */", 
+"  fill: #000;", "}", ".blocklyContextMenuOptions>.blocklyMenuDiv:hover>.blocklyMenuText,", ".blocklyDropdownMenuOptions>.blocklyMenuDiv:hover>.blocklyMenuText {", "  fill: #fff;", "}", ".blocklyMenuSelected>.blocklyMenuText {", "  fill: #fff;", "}", ".blocklyMenuDivDisabled>.blocklyMenuText {", "  fill: #ccc;", "}", ".blocklyFlyoutBackground {", "  fill: #ddd;", "  fill-opacity: 0.8;", "}", ".blocklyBackground {", "  fill: #666;", "}", ".blocklyScrollbarBackground {", "  fill: #fff;", "  stroke-width: 1;", 
+"  stroke: #e4e4e4;", "}", ".blocklyScrollbarKnob {", "  fill: #ccc;", "}", ".blocklyScrollbarBackground:hover+.blocklyScrollbarKnob,", ".blocklyScrollbarKnob:hover {", "  fill: #bbb;", "}", ".blocklyInvalidInput {", "  background: #faa;", "}", ".blocklyAngleCircle {", "  stroke: #444;", "  stroke-width: 1;", "  fill: #ddd;", "  fill-opacity: 0.8;", "}", ".blocklyAngleMarks {", "  stroke: #444;", "  stroke-width: 1;", "}", ".blocklyAngleGuage {", "  fill: #d00;", "  fill-opacity: 0.8;  ", "}", ".blocklyContextMenu {", 
+"  border-radius: 4px;", "}", ".blocklyDropdownMenu {", "  padding: 0 !important;", "  position: relative !important;", "}", ".blocklyRectangularDropdownMenu .goog-menuitem {", "  height: 100%;", "  padding: 0 !important;", "  border-radius: 5px;", "  margin-bottom: 4px !important;", "}", ".fieldRectangularDropdownBackdrop {", "  fill: #fff;", "  fill-opacity: 0.6;", "}", ".blocklyRectangularDropdownArrow {", "  fill: #7965a1;", "  font-size: 20px !important;", "}", ".blocklyRectangularDropdownMenu .goog-menuitem-highlight, .goog-menuitem-hover {", 
+"  border-color: #7965a1 !important;", "  border-style: dotted !important;", "  border-width: 0px !important;", "  margin: -4px -4px 0 !important;", "  border-width: 4px !important;", "  border-style: solid !important;", "  padding-bottom: 0px !important;", "  padding-top: 0px !important;", "}", ".colored-type-dropdown .goog-menuitem-highlight .goog-menuitem-content {", "  color: blue;", "}", ".colored-type-dropdown .goog-menuitem-content {", "  color: white;", "}", ".blocklyRectangularDropdownMenu img {", 
+"  -webkit-border-radius: 5px;", "  -moz-border-radius: 5px;", "  border-radius: 5px;", "}", ".blocklyRectangularDropdownMenu {", "  border-radius: 5px;", "  box-shadow: none !important;", "}", ".goog-option-selected .goog-menuitem-checkbox,", ".goog-option-selected .goog-menuitem-icon {", "}", "/* Category tree in Toolbox. */", ".blocklyToolboxDiv {", "  background-color: #ddd;", "  display: none;", "  overflow-x: visible;", "  overflow-y: auto;", "  position: absolute;", "}", ".blocklyTreeRoot {", 
+"  padding: 4px 0;", "}", ".blocklyTreeRoot:focus {", "  outline: none;", "}", ".blocklyTreeRow {", "  line-height: 22px;", "  height: 22px;", "  padding-right: 1em;", "  white-space: nowrap;", "}", '.blocklyToolboxDiv[dir="RTL"] .blocklyTreeRow {', "  padding-right: 0;", "  padding-left: 1em !important;", "}", ".blocklyTreeRow:hover {", "  background-color: #e4e4e4;", "}", ".blocklyTreeIcon {", "  height: 16px;", "  width: 16px;", "  vertical-align: middle;", "  background-image: url(%TREE_PATH%);", 
+"}", ".blocklyTreeIconClosedLtr {", "  background-position: -32px -1px;", "}", ".blocklyTreeIconClosedRtl {", "  background-position: 0px -1px;", "}", ".blocklyTreeIconOpen {", "  background-position: -16px -1px;", "}", ".blocklyTreeIconNone {", "  background-position: -48px -1px;", "}", ".blocklyTreeSelected>.blocklyTreeIconClosedLtr {", "  background-position: -32px -17px;", "}", ".blocklyTreeSelected>.blocklyTreeIconClosedRtl {", "  background-position: 0px -17px;", "}", ".blocklyTreeSelected>.blocklyTreeIconOpen {", 
+"  background-position: -16px -17px;", "}", ".blocklyTreeSelected>.blocklyTreeIconNone {", "  background-position: -48px -17px;", "}", ".blocklyTreeLabel {", "  cursor: default;", "  font-family: sans-serif;", "  font-size: 16px;", "  padding: 0 3px;", "  vertical-align: middle;", "}", ".blocklyTreeSelected {", "  background-color: #57e !important;", "}", ".blocklyTreeSelected .blocklyTreeLabel {", "  color: #fff;", "}", ".blocklyArrow {", "  font-size: 80%;", "}", ".paramToolbox {", "  padding: 0 0 5px 0;", 
+"}", ".paramToolbox input, .paramToolbox textarea {", "  box-sizing: border-box;", "  width: 100%;", "  margin: 0;", "  resize: none;", "}", ".paramToolbox input, .paramToolbox button {", "  height: 30px;", "  margin: 0;", "}", ".paramToolbox div {", "  margin: 4px 10px;", "}", "#modalContainer {", "  position: absolute;", "  top: 40px;", "  width: 100%;", "  height: 100%;", "}", "#modalContainer > svg {", "  position: absolute;", "  top: 0;", "  left: 0;", "  background: transparent;", "  pointer-events: none;", 
+"}", "#modalContainer > svg * {", "  pointer-events: visiblePainted;", "}", "/*", " * Copyright 2007 The Closure Library Authors. All Rights Reserved.", " *", " * Use of this source code is governed by the Apache License, Version 2.0.", " * See the COPYING file for details.", " */", "/* Author: pupius@google.com (Daniel Pupius) */", "/*", " Styles to make the colorpicker look like the old gmail color picker", " NOTE: without CSS scoping this will override styles defined in palette.css", "*/", ".goog-palette {", 
+"  outline: none;", "  cursor: default;", "}", ".goog-palette-table {", "  border: 1px solid #666;", "  border-collapse: collapse;", "}", ".goog-palette-cell {", "  height: 25px;", "  width: 25px;", "  margin: 0;", "  border: 0;", "  text-align: center;", "  vertical-align: middle;", "  border-right: 1px solid #666;", "  font-size: 1px;", "}", ".goog-palette-colorswatch {", "  position: relative;", "  height: 25px;", "  width: 25px;", "  border: 1px solid #666;", "}", ".goog-palette-cell-hover .goog-palette-colorswatch {", 
+"  border: 1px solid #FFF;", "}", ".goog-palette-cell-selected .goog-palette-colorswatch {", "  border: 1px solid #000;", "  color: #fff;", "}", ".goog-menu {", "  background: #fff;", "  border-color: #ccc #666 #666 #ccc;", "  border-style: solid;", "  border-width: 1px;", "  cursor: default;", "  font: normal 13px Arial, sans-serif;", "  margin: 0;", "  outline: none;", "  padding: 4px 0;", "  position: absolute;", "  z-index: 20000;", "}", ".goog-menuitem {", "  color: #000;", "  font: normal 13px Arial, sans-serif;", 
+"  list-style: none;", "  margin: 0;", "  padding: 4px 7em 4px 28px;", "  white-space: nowrap;", "}", ".goog-menuitem.goog-menuitem-rtl {", "  padding-left: 7em;", "  padding-right: 28px;", "}", ".goog-menu-nocheckbox .goog-menuitem,", ".goog-menu-noicon .goog-menuitem {", "  padding-left: 12px;", "}", ".goog-menu-noaccel .goog-menuitem {", "  padding-right: 20px;", "}", ".goog-menuitem-content {", "  color: #000;", "  font-size: 15px;", "}", ".goog-menuitem-disabled .goog-menuitem-accel,", ".goog-menuitem-disabled .goog-menuitem-content {", 
+"  color: #ccc !important;", "}", ".goog-menuitem-disabled .goog-menuitem-icon {", "  opacity: 0.3;", "  -moz-opacity: 0.3;", "  filter: alpha(opacity=30);", "}", ".goog-menuitem-highlight,", ".goog-menuitem-hover {", "  background-color: #d6e9f8;", "  border-color: #d6e9f8;", "  border-style: dotted;", "  border-width: 1px 0;", "  padding-bottom: 3px;", "  padding-top: 3px;", "}", ".goog-menuitem-checkbox,", ".goog-menuitem-icon {", "  background-repeat: no-repeat;", "  height: 16px;", "  left: 6px;", 
+"  position: absolute;", "  right: auto;", "  vertical-align: middle;", "  width: 16px;", "}", ".goog-menuitem-rtl .goog-menuitem-checkbox,", ".goog-menuitem-rtl .goog-menuitem-icon {", "  left: auto;", "  right: 6px;", "}", ".goog-option-selected .goog-menuitem-checkbox,", ".goog-option-selected .goog-menuitem-icon {", "}", ".goog-menuitem-accel {", "  color: #999;", "  direction: ltr;", "  left: auto;", "  padding: 0 6px;", "  position: absolute;", "  right: 0;", "  text-align: right;", "}", ".goog-menuitem-rtl .goog-menuitem-accel {", 
 "  left: 0;", "  right: auto;", "  text-align: left;", "}", ".goog-menuitem-mnemonic-hint {", "  text-decoration: underline;", "}", ".goog-menuitem-mnemonic-separator {", "  color: #999;", "  font-size: 12px;", "  padding-left: 4px;", "}", ".goog-menuseparator {", "  border-top: 1px solid #ccc;", "  margin: 4px 0;", "  padding: 0;", "}", ".goog-flat-menu-button {", "  background-color: #fff;", "  border: 1px solid #c9c9c9;", "  color: #333;", "  cursor: pointer;", "  font: normal 95%;", "  list-style: none;", 
 "  margin: 0 2px;", "  outline: none;", "  padding: 1px 4px;", "  position: relative;", "  text-decoration: none;", "  vertical-align: middle;", "}", ".goog-flat-menu-button-disabled * {", "  border-color: #ccc;", "  color: #999;", "  cursor: default;", "}", ".goog-flat-menu-button-hover {", "  border-color: #9cf #69e #69e #7af !important; /* Hover border wins. */", "}", ".goog-flat-menu-button-active {", "  background-color: #bbb;", "  background-position: bottom left;", "}", ".goog-flat-menu-button-focused {", 
 "  border-color: #bbb;", "}", ".goog-flat-menu-button-caption {", "  padding-right: 10px;", "  vertical-align: top;", "}", ".goog-flat-menu-button-dropdown {", "  /* Client apps may override the URL at which they serve the sprite. */", "  background: url(https://ssl.gstatic.com/editor/editortoolbar.png) no-repeat -388px 0;", "  position: absolute;", "  right: 2px;", "  top: 0;", "  vertical-align: top;", "  width: 7px;", "}", ".goog-inline-block {", "  position: relative;", "  display: -moz-inline-box; /* Ignored by FF3 and later. */", 
@@ -23512,7 +23648,7 @@ Blockly.parseOptions_ = function(options) {
   return{RTL:!!options["rtl"], collapse:hasCollapse, readOnly:readOnly, maxBlocks:options["maxBlocks"] || Infinity, assetUrl:options["assetUrl"] || function(path) {
     return"./" + path
   }, hasCategories:hasCategories, hasScrollbars:hasScrollbars, hasTrashcan:hasTrashcan, varsInGlobals:options["varsInGlobals"] || false, generateFunctionPassBlocks:options["generateFunctionPassBlocks"] || false, languageTree:tree, disableParamEditing:options["disableParamEditing"] || false, disableVariableEditing:options["disableVariableEditing"] || false, useModalFunctionEditor:options["useModalFunctionEditor"] || false, useContractEditor:options["useContractEditor"] || false, defaultNumExampleBlocks:options["defaultNumExampleBlocks"] || 
-  0, grayOutUndeletableBlocks:grayOutUndeletableBlocks, editBlocks:options["editBlocks"] || false}
+  2, grayOutUndeletableBlocks:grayOutUndeletableBlocks, editBlocks:options["editBlocks"] || false}
 };
 Blockly.initUISounds_ = function() {
   Blockly.loadAudio_([Blockly.assetUrl("media/click.mp3"), Blockly.assetUrl("media/click.wav"), Blockly.assetUrl("media/click.ogg")], "click");

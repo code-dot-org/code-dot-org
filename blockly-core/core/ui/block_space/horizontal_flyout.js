@@ -32,6 +32,18 @@ Blockly.HorizontalFlyout.prototype.show = function(xmlList) {
   Blockly.HorizontalFlyout.superClass_.show.apply(this, arguments);
 };
 
+Blockly.HorizontalFlyout.prototype.setVisibility = function(show) {
+  return show ? this.softShow() : this.softHide()
+};
+
+Blockly.HorizontalFlyout.prototype.softHide = function() {
+  Blockly.addClass_(this.svgGroup_, 'userHidden');
+};
+
+Blockly.HorizontalFlyout.prototype.softShow = function() {
+  Blockly.removeClass_(this.svgGroup_, 'userHidden');
+};
+
 /**
  * Hide and empty the flyout.
  */
@@ -78,6 +90,10 @@ Blockly.HorizontalFlyout.prototype.position_ = function() {
   if (this.scrollbar_) {
     this.scrollbar_.resize();
   }
+};
+
+Blockly.HorizontalFlyout.prototype.getYPosition = function () {
+  return this.customYOffset || 0;
 };
 
 /**

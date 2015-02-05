@@ -164,7 +164,7 @@ module LevelsHelper
   end
 
   def localize_levelbuilder_instructions
-    loc_val = data_t("levelbuilder.#{@level.name}", "instructions")
+    loc_val = data_t("instructions", "#{@level.name}_instruction")
     @level.properties['instructions'] = loc_val unless loc_val.nil?
   end
 
@@ -326,13 +326,15 @@ module LevelsHelper
       ext = File.extname(path)
       base_level = File.basename(path, ext)
       level = Level.find_by(name: base_level)
+      block_type = ext.slice(1..-1)
       content_tag(:iframe, '', {
-          src: url_for(controller: :levels, action: :embed_blocks, level_id: level.id, block_type: ext.slice(1..-1)).strip,
+          src: url_for(controller: :levels, action: :embed_blocks, level_id: level.id, block_type: block_type).strip,
           width: width ? width.strip : '100%',
           scrolling: 'no',
           seamless: 'seamless',
           style: 'border: none;',
       })
+
     elsif File.extname(path) == '.level'
       base_level = File.basename(path, '.level')
       level = Level.find_by(name: base_level)
