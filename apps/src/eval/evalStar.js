@@ -5,8 +5,8 @@ var EvalStar = function (pointCount, inner, outer, style, color) {
   evalUtils.ensureNumber(pointCount);
   evalUtils.ensureNumber(inner);
   evalUtils.ensureNumber(outer);
-  evalUtils.ensureString(style);
-  evalUtils.ensureString(color);
+  evalUtils.ensureStyle(style);
+  evalUtils.ensureColor(color);
 
   EvalImage.apply(this, [style, color]);
 
