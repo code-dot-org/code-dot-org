@@ -32,13 +32,13 @@
  */
 'use strict';
 
-var netsimStorage = require('./netsimStorage');
 var NetSimLogger = require('./NetSimLogger');
 var NetSimRouter = require('./NetSimRouter');
 var NetSimWire = require('./NetSimWire');
 var LogLevel = NetSimLogger.LogLevel;
 var ObservableEvent = require('./ObservableEvent');
 var periodicAction = require('./periodicAction');
+var netsimInstance = require('./netsimInstance');
 
 /**
  * How often a keep-alive message should be sent to the instance lobby
@@ -113,12 +113,11 @@ var NetSimConnection = function (displayName, logger /*=new NetSimLogger(NONE)*/
   }
 
   /**
-   * Selected instance ID.  Used to dynamically determine table names.
-   * Tables are always scoped to the instance.
-   * @type {string}
+   * Selected instance.
+   * @type {netsimInstance}
    * @private
    */
-  this.instanceID_ = undefined;
+  this.instance_ = null;
 
   /**
    * This connection's unique Row ID within the lobby table.
@@ -291,7 +290,7 @@ NetSimConnection.prototype.connectToInstance = function (instanceID) {
     this.disconnectFromInstance();
   }
 
-  this.instanceID_ = instanceID;
+  this.instance_ = netsimInstance(instanceID);
   this.status_ = ConnectionStatus.IN_LOBBY;
   this.connect_();
 };
@@ -300,9 +299,8 @@ NetSimConnection.prototype.connectToInstance = function (instanceID) {
  * Get the current lobby table object, for manipulating the lobby.
  * @returns {SharedStorageTable}
  */
-NetSimConnection.prototype.getLobbyTable = function () {
-  return new netsimStorage.SharedStorageTable(netsimStorage.APP_PUBLIC_KEY,
-      this.instanceID_ + '_lobby');
+NetSimConnection.prototype.getTable = function () {
+  return this.instance_.getLobbyTable();
 };
 
 /**
@@ -331,7 +329,7 @@ NetSimConnection.prototype.disconnectFromInstance = function () {
  */
 NetSimConnection.prototype.connect_ = function () {
   var self = this;
-  this.getLobbyTable().insert(this.buildLobbyRow_(), function (returnedData) {
+  this.getTable().insert(this.buildLobbyRow_(), function (returnedData) {
     if (returnedData) {
       self.myNodeID = returnedData.id;
       self.setConnectionStatus_(ConnectionStatus.IN_LOBBY);
@@ -364,7 +362,7 @@ NetSimConnection.prototype.disconnectByRowID_ = function (lobbyRowID) {
   }
 
   var self = this;
-  this.getLobbyTable().delete(lobbyRowID, function (succeeded) {
+  this.getTable().delete(lobbyRowID, function (succeeded) {
     if (succeeded) {
       self.logger_.info("Disconnected client " + lobbyRowID + " from instance.");
     } else {
@@ -442,7 +440,7 @@ NetSimConnection.prototype.keepAlive = function (callback) {
   }
 
   var self = this;
-  this.getLobbyTable().update(this.myNodeID, this.buildLobbyRow_(),
+  this.getTable().update(this.myNodeID, this.buildLobbyRow_(),
       function (succeeded) {
         callback(succeeded);
         if (!succeeded) {
@@ -466,7 +464,7 @@ NetSimConnection.prototype.fetchLobbyListing = function (callback) {
   }
 
   var logger = this.logger_;
-  this.getLobbyTable().all(function (data) {
+  this.getTable().all(function (data) {
     if (null !== data) {
       callback(data);
     } else {
@@ -530,7 +528,7 @@ NetSimConnection.prototype.addRouterToLobby = function () {
   }
 
   var self = this;
-  NetSimRouter.create(this.instanceID_, function () {
+  NetSimRouter.create(this.instance_, function () {
     self.statusChanges.notifyObservers();
   });
 };
@@ -556,7 +554,7 @@ NetSimConnection.prototype.connectToRouter = function (routerID) {
 
   // Create a local NetSimRouter for the remote router we want to connect with,
   //   which runs the local router simulation.
-  this.router_ = new NetSimRouter(this.instanceID_, routerID);
+  this.router_ = new NetSimRouter(this.instance_, routerID);
 
   // Optimistically create a wire and point it at the router
   var self = this;
@@ -618,7 +616,7 @@ NetSimConnection.prototype.createWire = function (remoteNodeID, onComplete) {
   }
 
   var self = this;
-  NetSimWire.create(this.instanceID_, function (wire) {
+  NetSimWire.create(this.instance_, function (wire) {
     if (wire !== null) {
       wire.localNodeID = self.myNodeID;
       wire.remoteNodeID = remoteNodeID;

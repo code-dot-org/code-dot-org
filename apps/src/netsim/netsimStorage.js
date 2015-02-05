@@ -41,15 +41,6 @@
 var netsimStorage = module.exports;
 
 /**
- * App key, unique to netsim, used for connecting with the storage API.
- * @type {string}
- */
-// TODO (bbuchanan): remove once we can store ids for each app? (userid:1 apppid:42)
-netsimStorage.APP_PUBLIC_KEY =
-    window.location.hostname.split('.')[0] === 'localhost' ?
-        "JGW2rHUp_UCMW_fQmRf6iQ==" : "HQJ8GCCMGP7Yh8MrtDusIA==";
-
-/**
  * API for interacting with an app storage table on the server
  * @constructor
  */

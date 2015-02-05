@@ -38,21 +38,19 @@
  */
 'use strict';
 
-var netsimStorage = require('./netsimStorage');
-
 /**
  * Create a local controller for a simulated connection between nodes,
  * which is stored in the _wire table on the instance.  The controller can
  * be initialized with the JSON row from the table, effectively wrapping that
  * data in helpful methods.
  *
- * @param {!string} instanceID - The instance where this wire lives.
+ * @param {!netsimInstance} instance - The instance where this wire lives.
  * @param {Object} [wireRow] - A row out of the _wire table on the instance.
  *        If provided, will initialize this wire with the given data.  If not,
  *        this wire will initialize to default values.
  * @constructor
  */
-var NetSimWire = function (instanceID, wireRow) {
+var NetSimWire = function (instance, wireRow) {
   if (wireRow === undefined) {
     wireRow = {};
   }
@@ -62,7 +60,7 @@ var NetSimWire = function (instanceID, wireRow) {
    * @type {string}
    * @private
    */
-  this.instanceID_ = instanceID;
+  this.instance_ = instance;
 
   /**
    * This wire's row ID within the _wire table
@@ -105,13 +103,12 @@ module.exports = NetSimWire;
 /**
  * Static async creation method.  Creates a new wire on the given instance, and
  * then calls the callback with a local controller for the new wire.
- * @param {!string} instanceID - Unique identifier of instance where the _wire
- *        table lives.
+ * @param {!netsimInstance} instance - Where the _wire table lives.
  * @param {!function} completionCallback - Method that will be given the
  *        created wire, or null if wire creation failed.
  */
-NetSimWire.create = function (instanceID, completionCallback) {
-  var wire = new NetSimWire(instanceID);
+NetSimWire.create = function (instance, completionCallback) {
+  var wire = new NetSimWire(instance);
   wire.getTable().insert(wire.buildRow_(), function (data) {
     if (data) {
       wire.wireID = data.id;
@@ -126,15 +123,14 @@ NetSimWire.create = function (instanceID, completionCallback) {
  * Static async construction method.  Gets the wire with the given wireID from
  * the given instance, then calls the callback with a local controller for the
  * found wire.
- * @param {!string} instanceID - Unique identifier of instance where the _wire
- *        table lives.
+ * @param {!netsimInstance} instance - Where the _wire table lives.
  * @param {!number} wireID - Row identifier of the requested wire in the _wire
  *        table.
  * @param {!function} completionCallback - Method that will be given the
  *        retrieved wire, or null if the wire request failed.
  */
-NetSimWire.get = function (instanceID, wireID, completionCallback) {
-  var wire = new NetSimWire(instanceID);
+NetSimWire.get = function (instance, wireID, completionCallback) {
+  var wire = new NetSimWire(instance);
   wire.getTable().get(wireID, function (data) {
     if (data) {
       completionCallback(new NetSimWire(data));
@@ -149,8 +145,7 @@ NetSimWire.get = function (instanceID, wireID, completionCallback) {
  * @returns {exports.SharedStorageTable}
  */
 NetSimWire.prototype.getTable = function () {
-  return new netsimStorage.SharedStorageTable(netsimStorage.APP_PUBLIC_KEY,
-      this.instanceID_ + '_wire');
+  return this.instance_.getWireTable();
 };
 
 /**
