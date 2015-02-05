@@ -42,9 +42,9 @@
  */
 'use strict';
 
-var NetSimLogger = require('./NetSimLogger');
+var superClass = require('./NetSimNode');
+var NetSimEntity = require('./NetSimEntity');
 var NetSimWire = require('./NetSimWire');
-var LogLevel = NetSimLogger.LogLevel;
 
 /**
  * Helper because we have so many callback arguments in this class.
@@ -60,35 +60,18 @@ var defaultToEmptyFunction = function (funcArg) {
 
 /**
  * @param {!netsimInstance} instance
- * @param {?number} routerID - Lobby row ID for this router.  If null, use
- *        connectToLobby() to add this router to the lobby and get an ID.
+ * @param {Object} [routerRow] - Lobby row for this router.
  * @constructor
+ * @augments NetSimNode
  */
-var NetSimRouter = function (instance, routerID) {
-  /**
-   * @type {netsimInstance}
-   * @private
-   */
-  this.instance_ = instance;
-
-  /**
-   * This router's row ID (and unique ID) within the lobby table of the instance.
-   * @type {?number}
-   */
-  this.routerID = routerID;
-
-  /**
-   * Instance of logging API, gives us choke-point control over log output
-   * @type {NetSimLogger}
-   * @private
-   */
-  this.logger_ = new NetSimLogger(console, LogLevel.VERBOSE);
+var NetSimRouter = function (instance, routerRow) {
+  superClass.call(this, instance, routerRow);
 
   /**
    * @type {RouterStatus}
    * @private
    */
-  this.status_ = NetSimRouter.RouterStatus.INITIALIZING;
+  this.status_ = NetSimRouter.RouterStatus.READY;
 
   /**
    * @type {string}
@@ -102,7 +85,40 @@ var NetSimRouter = function (instance, routerID) {
    */
   this.MAX_CLIENT_CONNECTIONS = 6;
 };
+NetSimRouter.prototype = Object.create(superClass.prototype);
+NetSimRouter.prototype.constructor = NetSimRouter;
 module.exports = NetSimRouter;
+
+/**
+ * Static async creation method. See NetSimEntity.create().
+ * @param {!netsimInstance} instance
+ * @param {function} [onComplete] - Method that will be given the
+ *        created entity, or null if entity creation failed.
+ */
+NetSimRouter.create = function (instance, onComplete) {
+  NetSimEntity.create(NetSimRouter, instance, function (router) {
+    // Always try and update router immediately, to set its DisplayName
+    // correctly.
+    if (router) {
+      router.update(function () {
+        onComplete(router);
+      });
+    } else {
+      onComplete(router);
+    }
+  });
+};
+
+/**
+ * Static async retrieval method.  See NetSimEntity.get().
+ * @param {!number} entityID - The row ID for the entity you'd like to find.
+ * @param {!netsimInstance} instance
+ * @param {function} [onComplete] - Method that will be given the
+ *        found entity, or null if entity search failed.
+ */
+NetSimRouter.get = function (routerID, instance, onComplete) {
+  NetSimEntity.get(NetSimRouter, routerID, instance, onComplete);
+};
 
 /**
  * @readonly
@@ -114,35 +130,6 @@ NetSimRouter.RouterStatus = {
   FULL: 'Full'
 };
 var RouterStatus = NetSimRouter.RouterStatus;
-
-/**
- * Static creation method: Creates a new router node on the given instance,
- * calls the given callback with a local controller for the new router node
- * when creation is complete.
- * @param {!netsimInstance} instance
- * @param onComplete
- */
-NetSimRouter.create = function (instance, onComplete) {
-  onComplete = defaultToEmptyFunction(onComplete);
-
-  var router = new NetSimRouter(instance);
-  router.getLobbyTable().insert(router.buildLobbyRow_(), function (data) {
-    if (data) {
-      router.routerID = data.id;
-      router.status_ = RouterStatus.READY;
-      router.update(function (success) {
-        if (success) {
-          onComplete(router);
-        } else {
-          router.destroy();
-          onComplete(null);
-        }
-      });
-    } else {
-      onComplete(null);
-    }
-  });
-};
 
 /**
  * Updates router status and lastPing time in lobby table - both keepAlive
@@ -157,33 +144,36 @@ NetSimRouter.prototype.update = function (onComplete) {
     self.status_ = count >= self.MAX_CLIENT_CONNECTIONS ?
         RouterStatus.FULL : RouterStatus.READY;
     self.statusDetail_ = '(' + count + '/' + self.MAX_CLIENT_CONNECTIONS + ')';
-
-    self.getLobbyTable().update(self.routerID, self.buildLobbyRow_(),
-        function (success) {
-          onComplete(success);
-        }
-    );
+    superClass.prototype.update.call(self, onComplete);
   });
 };
 
 /**
- * Removes router node from the lobby table.
- * @param onComplete
+ * @inheritdoc
  */
-NetSimRouter.prototype.destroy = function (onComplete) {
-  onComplete = defaultToEmptyFunction(onComplete);
-
-  this.getLobbyTable().delete(this.routerID, function (success) {
-    onComplete(success);
-  });
+NetSimRouter.prototype.getDisplayName = function () {
+  return "Router " + this.entityID;
 };
 
 /**
- * Helper for getting lobby table of configured instance.
- * @returns {exports.SharedStorageTable}
+ * @inheritdoc
  */
-NetSimRouter.prototype.getLobbyTable = function () {
-  return this.instance_.getLobbyTable();
+NetSimRouter.prototype.getNodeType = function () {
+  return 'router';
+};
+
+/**
+ * @inheritdoc
+ */
+NetSimRouter.prototype.getStatus = function () {
+  return this.status_;
+};
+
+/**
+ * @inheritdoc
+ */
+NetSimRouter.prototype.getStatusDetail = function () {
+  return this.statusDetail_;
 };
 
 /**
@@ -195,37 +185,6 @@ NetSimRouter.prototype.getWireTable = function () {
 };
 
 /**
- * Helper that builds a lobby-table row in a consistent
- * format, based on the current connection state.
- * @private
- */
-NetSimRouter.prototype.buildLobbyRow_ = function () {
-  return {
-    lastPing: Date.now(),
-    name: this.getDisplayName(),
-    type: 'router',
-    status: this.status_,
-    statusDetail: this.statusDetail_
-  };
-};
-
-/**
- * Build display name that we put into lobby table for this router.
- * @returns {string}
- */
-NetSimRouter.prototype.getDisplayName = function () {
-  return "Router " + this.routerID;
-};
-
-/**
- * Build a router hostname that we can set on our wires.
- * @returns {string}
- */
-NetSimRouter.prototype.getHostname = function () {
-  return this.getDisplayName().replace(/[^\w\d]/g, '').toLowerCase();
-};
-
-/**
  * Query the wires table and pass the callback a list of wire table rows,
  * where all of the rows are wires attached to this router.
  * @param {function} onComplete, which accepts an Array of NetSimWire.
@@ -234,7 +193,7 @@ NetSimRouter.prototype.getConnections = function (onComplete) {
   onComplete = defaultToEmptyFunction(onComplete);
 
   var instance = this.instance_;
-  var routerID = this.routerID;
+  var routerID = this.entityID;
   this.getWireTable().all(function (rows) {
     if (rows === null) {
       onComplete([]);
