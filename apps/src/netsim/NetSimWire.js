@@ -52,6 +52,7 @@ var superClass = require('./NetSimEntity');
  *        If provided, will initialize this wire with the given data.  If not,
  *        this wire will initialize to default values.
  * @constructor
+ * @augments NetSimEntity
  */
 var NetSimWire = function (instance, wireRow) {
   superClass.call(this, instance, wireRow);
