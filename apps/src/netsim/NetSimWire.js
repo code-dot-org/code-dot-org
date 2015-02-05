@@ -36,7 +36,10 @@
  maxparams: 3,
  maxstatements: 200
  */
+/* global $ */
 'use strict';
+
+var superClass = require('./NetSimEntity');
 
 /**
  * Create a local controller for a simulated connection between nodes,
@@ -51,22 +54,12 @@
  * @constructor
  */
 var NetSimWire = function (instance, wireRow) {
+  superClass.call(this, instance, wireRow);
+
+  // Default empty wireRow object
   if (wireRow === undefined) {
     wireRow = {};
   }
-
-  /**
-   * Instance this wire lives within, used to generate tablenames
-   * @type {string}
-   * @private
-   */
-  this.instance_ = instance;
-
-  /**
-   * This wire's row ID within the _wire table
-   * @type {number}
-   */
-  this.wireID = wireRow.wireID;
 
   /**
    * Connected node row IDs within the _lobby table
@@ -98,90 +91,33 @@ var NetSimWire = function (instance, wireRow) {
   this.wireMode = wireRow.wireMode !== undefined ?
       wireRow.wireMode : 'duplex'; // Or simplex?
 };
+NetSimWire.prototype = Object.create(superClass.prototype);
+NetSimWire.prototype.constructor = NetSimWire;
 module.exports = NetSimWire;
 
 /**
- * Static async creation method.  Creates a new wire on the given instance, and
- * then calls the callback with a local controller for the new wire.
- * @param {!netsimInstance} instance - Where the _wire table lives.
- * @param {!function} completionCallback - Method that will be given the
- *        created wire, or null if wire creation failed.
+ * Static async creation method.  See NetSimEntity.create().
+ * @param {!netsimInstance} instance
+ * @param {function} [onComplete] - Method that will be given the
+ *        created entity, or null if entity creation failed.
  */
-NetSimWire.create = function (instance, completionCallback) {
-  var wire = new NetSimWire(instance);
-  wire.getTable().insert(wire.buildRow_(), function (data) {
-    if (data) {
-      wire.wireID = data.id;
-      completionCallback(wire);
-    } else {
-      completionCallback(null);
-    }
-  });
-};
-
-/**
- * Static async construction method.  Gets the wire with the given wireID from
- * the given instance, then calls the callback with a local controller for the
- * found wire.
- * @param {!netsimInstance} instance - Where the _wire table lives.
- * @param {!number} wireID - Row identifier of the requested wire in the _wire
- *        table.
- * @param {!function} completionCallback - Method that will be given the
- *        retrieved wire, or null if the wire request failed.
- */
-NetSimWire.get = function (instance, wireID, completionCallback) {
-  var wire = new NetSimWire(instance);
-  wire.getTable().get(wireID, function (data) {
-    if (data) {
-      completionCallback(new NetSimWire(data));
-    } else {
-      completionCallback(null);
-    }
-  });
+NetSimWire.create = function (instance, onComplete) {
+  superClass.create(NetSimWire, instance, onComplete);
 };
 
 /**
  * Helper that gets the wires table for the configured instance.
  * @returns {exports.SharedStorageTable}
  */
-NetSimWire.prototype.getTable = function () {
+NetSimWire.prototype.getTable_ = function () {
   return this.instance_.getWireTable();
-};
-
-/**
- * Pushes latest wire status to the wires table, acting as a keepAlive.
- * @param completionCallback
- */
-NetSimWire.prototype.update = function (completionCallback) {
-  if (!completionCallback) {
-    completionCallback = function () {};
-  }
-
-  this.getTable().update(this.wireID, this.buildRow_(), function (success) {
-    completionCallback(success);
-  });
-};
-
-/**
- * Removes this wire from the wires table.
- * @param completionCallback
- */
-NetSimWire.prototype.destroy = function (completionCallback) {
-  if (!completionCallback) {
-    completionCallback = function () {};
-  }
-
-  this.getTable().delete(this.wireID, function (success) {
-    completionCallback(success);
-  });
 };
 
 /**
  * Build own row for the wire table
  */
 NetSimWire.prototype.buildRow_ = function () {
-  return {
-    lastPing: Date.now(),
+  return $.extend(superClass.prototype.buildRow_.call(this), {
     localNodeID: this.localNodeID,
     remoteNodeID: this.remoteNodeID,
     localAddress: this.localAddress,
@@ -189,5 +125,5 @@ NetSimWire.prototype.buildRow_ = function () {
     localHostname: this.localHostname,
     remoteHostname: this.remoteHostname,
     wireMode: this.wireMode
-  };
+  });
 };
