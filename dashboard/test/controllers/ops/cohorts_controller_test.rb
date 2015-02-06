@@ -75,6 +75,26 @@ module Ops
       assert_equal teachers.map{|x|x.name}, teacher_info.map{|x|x[:name]}
     end
 
+    test 'Create Cohort from a list, including existing teacher account' do
+      teacher_info = (1..5).map{|x| {name: "Teacher #{x}", email: "teacher_#{x}@school.edu", district: @cohort.districts.first.name}}
+
+      # Add existing teacher account to teacher info list
+      teacher = create(:teacher, district: @cohort.districts.first)
+      teacher_info.push({name: teacher.name, email: teacher.email, district: teacher.district.name})
+
+      # Only 5 new teachers created, not 6
+      assert_difference ->{User.count}, 5 do
+        assert_difference ->{Cohort.count} do
+          post :create, cohort: {name: 'Cohort name', district_names: [@cohort.districts.first.name], teacher_info: teacher_info}
+        end
+      end
+      assert_response :success
+      teachers = Cohort.last.teachers
+
+      # Existing teacher added to cohort along with new teachers
+      assert_equal teachers.map{|x|x.name}.sort, teacher_info.map{|x|x[:name]}.sort
+    end
+
     test 'read cohort info' do
       assert_routing({ path: 'ops/cohorts/1', method: :get }, { controller: 'ops/cohorts', action: 'show', id: '1' })
 
