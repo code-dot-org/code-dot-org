@@ -179,7 +179,8 @@ function loadStyle(name) {
 
 $(document).ready(function() {
   // TODO: Global, until we create a component cache
-  window.headerProgress = new HeaderProgress( $('.header-wrapper') );
+  window.uiRouter = new UIRouter();
+  uiRouter.route();
 });
 
 loadStyle('common');

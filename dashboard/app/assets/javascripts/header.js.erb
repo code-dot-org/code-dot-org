@@ -32,7 +32,7 @@
   // class UIComponent: this is a lightweight inheritable class modeled after React
   UIComponent = (function() {
 
-    function UIComponent($el) {
+    function UIComponent($el, props) {
       this.onClick = __bind(this.onClick, this);
       this.onUpdate = __bind(this.onUpdate, this);
       this.onDestroy = __bind(this.onDestroy, this);
@@ -41,7 +41,7 @@
       this.$el.on('click', this.onClick);
       this.$el.on('destroyed', this.onDestroy);
 
-      this.props = $el.data();
+      this.props = props || $el.data();
       this.isMounting = true;
 
       // Set the initial state
@@ -135,11 +135,12 @@
 
 
   // class UIRouter: this is an incredibly simple router with our routes baked into it.
+  // This will be completely replaced when we choose a router.
   UIRouter = (function() {
 
     function UIRouter() { }
 
-    UIRouter.prototype.getRoute = function() {
+    UIRouter.prototype.route = function() {
       var re, parts,
         url = window.location.href;
 
@@ -148,21 +149,23 @@
       re = /\/s\/\d+\/level\/(\d+)$/i;
       parts = url.match(re);
       if (parts) {
-        return {
+        window.headerProgress = new HeaderProgress( $('.header-wrapper'), {
           script_name: '20-hour',
           level_id: parts[1]
-        }
+        });
+        return;
       }
 
       // s/:script_name/stage/:stage_id/level/:level_id
       re = /\/s\/(.+)\/stage\/(\d+)\/puzzle\/(\d+)$/i;
       parts = url.match(re);
       if (parts) {
-        return {
+        window.headerProgress = new HeaderProgress( $('.header-wrapper'), {
           script_name: parts[1],
           stage_id: parts[2],
           level_id: parts[3]
-        }
+        });
+        return;
       }
 
       // Unknown route
@@ -350,11 +353,10 @@
     __extends(HeaderProgress, _super);
 
     // Must have a constructor
-    function HeaderProgress() {
+    function HeaderProgress($el, props) {
       HeaderProgress.__super__.constructor.apply(this, arguments);
 
       this.onModalClick = __bind(this.onModalClick, this);
-      this.props = Router.getRoute();
 
       return this;
     }
@@ -505,7 +507,7 @@
 
     // Three possible arguments: true, false, or "trophies" (the last one autoscrolls the page to the bottom of the popup)
     HeaderProgress.prototype.showPopup = function(show) {
-      headerProgress.setState({
+      this.setState({
         popped: !!show,
         jumpToTrophies: show == 'trophies'
       });
@@ -569,6 +571,6 @@
   // (Note these are already global since they're not declared via 'var'.
   window.HeaderProgress = HeaderProgress;
   window.HeaderStore = HeaderStore;
-  window.Router = new UIRouter();
+  window.UIRouter = UIRouter;
 
 }).call(this);
