@@ -36,6 +36,26 @@ Make sure we're deploying to prod daily during the ramp-up to HoC.  There's no a
   * Check that there are no UI test failures
   * DTP: Create and merge a PR for [production...test](https://github.com/code-dot-org/code-dot-org/compare/production...test)
 
+UI tests failing after DTT?
+
+![UI tests failing](https://cloud.githubusercontent.com/assets/1920530/6073132/09a54654-ad5f-11e4-9a9f-d58ae89ff024.png)
+
+Tests will automatically re-run if something failed. If it fails again, try this:
+  * Run the test again locally `ubuntu@test:~/test/dashboard/test/ui$ ./runner.rb -p2 -c iPad3,iPhone5S #runs two tests in parallel` 
+  * Try it yourself in [Browserstack](http://www.browserstack.com/start), match the operating system and browser version then re-enact the failing scenario. See the HTML output in the error message for the failing scenarios.
+  * Check the [Browserstack logs/screenshots](http://www.browserstack.com/automate). Select the test in the left menu. Investiage in the tabs: Text Logs, Visual Logs, or Exceptions.
+  * It might be a Browserstack error, try running the tests on production `ubuntu@test:~/test/dashboard/test/ui$ ./runner.rb -p2 -c iPad3,iPhone5S -d studio.code.org`
+
+Did eye tests/applitools tests fail?
+
+![Eye tests failed](https://cloud.githubusercontent.com/assets/1920530/6073179/bdf7a4d0-ad5f-11e4-8cad-3a9d4fe3e4f6.png)
+
+View the console to see what tests failed. Eye tests will find discrepancies on screenshots of the site and highlight them in pink. Look carefully, the changes are often very small.
+  * If the change is acceptable (i.e. the copyright in the footer was updated from 2014 to 2015), click Accept in the upper right hand corner
+  * Adjust the baseline so that the screenshot will expect the change next time around
+  * If there is a questionable error, verify with @Developers if the change is expected. Otherwise, fix error.
+  * For more info, see the [UI tests with Applitools Eyes](https://github.com/code-dot-org/code-dot-org/blob/staging/docs/testing-with-applitools-eyes.md) doc
+
 ### Investigate Slow DB Queries
 This is a temporary item leading up to the HoC launch.  [Follow the steps to access error/mysql-error-running.log] (http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.Procedural.Viewing.html), then address each slow query:
   * Always slow: run it via script (every 5 min, every day, etc.)
