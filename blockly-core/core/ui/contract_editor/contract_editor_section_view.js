@@ -23,6 +23,7 @@ Blockly.ContractEditorSectionView = function (canvas, opt_options) {
     backgroundColor: Blockly.ContractEditorSectionView.DARK_GRAY_HEX
   });
   this.collapsed_ = false;
+  this.showHeader_ = true;
 };
 
 Blockly.ContractEditorSectionView.DOWN_TRIANGLE_CHARACTER = '\u25BC'; // ▼
@@ -63,6 +64,25 @@ Blockly.ContractEditorSectionView.prototype.setCollapsed_ = function (isCollapse
   this.header.setText(this.textForCurrentState_());
 };
 
+Blockly.ContractEditorSectionView.prototype.hideCompletely = function () {
+  this.setCollapsed_(true);
+  this.setHeaderVisible(false);
+};
+
+Blockly.ContractEditorSectionView.prototype.showHeaderAndExpand = function () {
+  this.setCollapsed_(false);
+  this.setHeaderVisible(true);
+};
+
+/**
+ * Show or hide the header
+ * @param showHeader
+ * @private
+ */
+Blockly.ContractEditorSectionView.prototype.setHeaderVisible = function (showHeader) {
+  this.showHeader_ = showHeader;
+};
+
 /**
  * Places the example header and block at the specified location,
  * returning an incremented Y coordinate
@@ -71,8 +91,12 @@ Blockly.ContractEditorSectionView.prototype.setCollapsed_ = function (isCollapse
  * @returns {Number} the currentY to continue laying out at
  */
 Blockly.ContractEditorSectionView.prototype.placeAndGetNewY = function (currentY, width) {
-  this.header.setPositionSize(currentY, width, this.headerHeight);
-  currentY += this.headerHeight;
+  this.header.setVisible(this.showHeader_);
+
+  if (this.showHeader_) {
+    this.header.setPositionSize(currentY, width, this.headerHeight);
+    currentY += this.headerHeight;
+  }
 
   if (this.collapsed_) {
     return currentY;

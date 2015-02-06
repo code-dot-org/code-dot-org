@@ -416,7 +416,7 @@ Blockly.FunctionEditor.prototype.calculateMetrics_ = function() {
   var metrics = Blockly.mainBlockSpace.getMetrics();
   metrics.absoluteLeft +=
     FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH + 1;
-  metrics.absoluteTop += this.getBlockSpaceEditorTopOffset();
+  metrics.absoluteTop += this.getBlockSpaceEditorToScreenTop_();
   metrics.viewWidth -=
     (FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH) * 2;
   metrics.viewHeight -=
@@ -428,7 +428,7 @@ Blockly.FunctionEditor.prototype.calculateMetrics_ = function() {
  * @returns {Number} in pixels
  * @protected
  */
-Blockly.FunctionEditor.prototype.getBlockSpaceEditorTopOffset = function () {
+Blockly.FunctionEditor.prototype.getBlockSpaceEditorToScreenTop_ = function () {
   return this.getWindowBorderChromeHeight() + this.getContractDivHeight();
 };
 
