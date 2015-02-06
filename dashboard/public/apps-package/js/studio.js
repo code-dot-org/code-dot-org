@@ -6684,7 +6684,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
   blockly.Blocks.functional_start_setFuncs = {
     init: function() {
-      var blockName = msg.startSetVars();
+      var blockName = msg.startSetFuncs();
       var blockType = 'none';
       var blockArgs = [
         {name: 'update-target', type: 'function'},
