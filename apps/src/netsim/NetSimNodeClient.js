@@ -217,6 +217,8 @@ NetSimNodeClient.prototype.connectToRouter = function (router, onComplete) {
 
     self.myWire = wire;
     self.myRouter = router;
+    self.myRouter.setSimulateForSender(self.entityID);
+
     router.requestAddress(wire, self.getHostname(), function (success) {
       if (!success) {
         wire.destroy(function () {
