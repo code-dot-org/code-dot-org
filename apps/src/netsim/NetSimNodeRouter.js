@@ -68,7 +68,7 @@ module.exports = NetSimNodeRouter;
 /**
  * Static async creation method. See NetSimEntity.create().
  * @param {!NetSimShard} shard
- * @param {function} [onComplete] - Method that will be given the
+ * @param {!function} onComplete - Method that will be given the
  *        created entity, or null if entity creation failed.
  */
 NetSimNodeRouter.create = function (shard, onComplete) {
@@ -87,9 +87,9 @@ NetSimNodeRouter.create = function (shard, onComplete) {
 
 /**
  * Static async retrieval method.  See NetSimEntity.get().
- * @param {!number} entityID - The row ID for the entity you'd like to find.
+ * @param {!number} routerID - The row ID for the entity you'd like to find.
  * @param {!NetSimShard} shard
- * @param {function} [onComplete] - Method that will be given the
+ * @param {!function} onComplete - Method that will be given the
  *        found entity, or null if entity search failed.
  */
 NetSimNodeRouter.get = function (routerID, shard, onComplete) {

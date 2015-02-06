@@ -99,7 +99,7 @@ module.exports = NetSimWire;
 /**
  * Static async creation method.  See NetSimEntity.create().
  * @param {!NetSimShard} shard
- * @param {function} [onComplete] - Method that will be given the
+ * @param {!function} onComplete - Method that will be given the
  *        created entity, or null if entity creation failed.
  */
 NetSimWire.create = function (shard, onComplete) {
