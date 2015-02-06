@@ -722,6 +722,10 @@ html, body {
 
 .header_trophy_link {
   cursor: pointer;
+
+  .current_trophies {
+    margin: 0 5px;
+  }
 }
 
 .header_finished_link {
