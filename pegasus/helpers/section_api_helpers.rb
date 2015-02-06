@@ -53,13 +53,9 @@ class DashboardStudent
 
     row = DASHBOARD_DB[:users].
       left_outer_join(:secret_pictures, id: :secret_picture_id).
-      left_outer_join(Sequel.as(:secret_words, :secret_words_1), id: :users__secret_word_1_id).
-      left_outer_join(Sequel.as(:secret_words, :secret_words_2), id: :users__secret_word_2_id).
       select(*fields,
              :secret_pictures__name___secret_picture_name,
              :secret_pictures__path___secret_picture_path,
-             :secret_words_1__word___secret_word_1,
-             :secret_words_2__word___secret_word_2
             ).
       where(users__id:id).
       server(:default).
@@ -106,7 +102,8 @@ class DashboardStudent
       :users__gender___gender,
       :users__birthday___birthday,
       :users__prize_earned___prize_earned,
-      :users__total_lines___total_lines
+      :users__total_lines___total_lines,
+      :users__secret_words___secret_words
     ]
   end
 
@@ -132,8 +129,7 @@ class DashboardStudent
   def self.random_secrets
     {
      secret_picture_id: random_secret_picture_id,
-     secret_word_1_id: random_secret_word_id,
-     secret_word_2_id: random_secret_word_id
+     secret_words: random_secret_words
     }
   end
 
@@ -141,8 +137,13 @@ class DashboardStudent
     SecureRandom.random_number(DASHBOARD_DB[:secret_pictures].count) + 1
   end
 
-  def self.random_secret_word_id
-    SecureRandom.random_number(DASHBOARD_DB[:secret_words].count) + 1
+  def self.random_secret_words
+    "#{random_secret_word} #{random_secret_word}"
+  end
+
+  def self.random_secret_word
+    random_id = SecureRandom.random_number(DASHBOARD_DB[:secret_words].count) + 1
+    DASHBOARD_DB[:secret_words].first(id: random_id)[:word]
   end
 
   PEPPER = CDO.dashboard_devise_pepper
@@ -332,14 +333,10 @@ class DashboardSection
     @students ||= DASHBOARD_DB[:followers].
       join(:users, id: :student_user_id).
       left_outer_join(:secret_pictures, id: :secret_picture_id).
-      left_outer_join(Sequel.as(:secret_words, :secret_words_1), id: :users__secret_word_1_id).
-      left_outer_join(Sequel.as(:secret_words, :secret_words_2), id: :users__secret_word_2_id).
       select(Sequel.as(:student_user_id, :id),
              *DashboardStudent.fields,
              :secret_pictures__name___secret_picture_name,
-             :secret_pictures__path___secret_picture_path,
-             :secret_words_1__word___secret_word_1,
-             :secret_words_2__word___secret_word_2).
+             :secret_pictures__path___secret_picture_path).
       distinct(:student_user_id).
       where(section_id:@row[:id]).
       map{|row| row.merge({

@@ -80,8 +80,6 @@ def load_configuration()
     'read_only'                   => false,
     'ruby_installer'              => rack_env == :development ? 'rbenv' : 'system',
     'root_dir'                    => root_dir,
-    'sendy_db_reader'             => 'mysql://root@localhost/',
-    'sendy_db_writer'             => 'mysql://root@localhost/',
     'varnish_instances'           => [],
   }.tap do |config|
     raise "'#{rack_env}' is not known environment." unless config['rack_envs'].include?(rack_env)
