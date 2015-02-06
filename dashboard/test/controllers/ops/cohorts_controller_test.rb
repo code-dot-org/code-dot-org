@@ -47,16 +47,16 @@ module Ops
       assert_routing({ path: 'ops/cohorts', method: :post }, { controller: 'ops/cohorts', action: 'create' })
 
       assert_difference 'Cohort.count' do
-        post :create
+        post :create, cohort: {name: 'Cohort name'}
       end
       assert_response :success
     end
 
     test 'Ops team can create a Cohort from a list of teacher ids' do
       #87054348 (part 1)
-      teachers = create_list(:teacher, 5)
+      teachers = create_list(:teacher, 5, district: @cohort.districts.first)
       assert_difference 'Cohort.count' do
-        post :create, cohort: {name: 'Cohort name', teacher_ids: teachers.map(&:id)}
+        post :create, cohort: {name: 'Cohort name', district_names: [@cohort.districts.first.name], teacher_ids: teachers.map(&:id)}
       end
       assert_response :success
       assert_equal Cohort.last.teachers, teachers
