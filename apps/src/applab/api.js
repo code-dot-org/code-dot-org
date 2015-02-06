@@ -300,51 +300,55 @@ exports.playSound = function (blockId, url) {
                           {'url': url});
 };
 
-exports.readSharedValue = function(blockId, key, onSuccess, onError) {
+exports.getKeyValue = function(blockId, key, onSuccess, onError) {
   return Applab.executeCmd(blockId,
-                           'readSharedValue',
+                           'getKeyValue',
                            {'key':key,
                             'onSuccess': onSuccess,
                             'onError': onError});
 };
 
-exports.writeSharedValue = function(blockId, key, value, onSuccess, onError) {
+exports.setKeyValue = function(blockId, key, value, onSuccess, onError) {
   return Applab.executeCmd(blockId,
-                           'writeSharedValue',
+                           'setKeyValue',
                            {'key':key,
                             'value': value,
                             'onSuccess': onSuccess,
                             'onError': onError});
 };
 
-exports.createSharedRecord = function (blockId, record, onSuccess, onError) {
+exports.createRecord = function (blockId, table, record, onSuccess, onError) {
   return Applab.executeCmd(blockId,
-                          'createSharedRecord',
-                          {'record': record,
+                          'createRecord',
+                          {'table': table,
+                           'record': record,
                            'onSuccess': onSuccess,
                            'onError': onError});
 };
 
-exports.readSharedRecords = function (blockId, searchParams, onSuccess, onError) {
+exports.readRecords = function (blockId, table, searchParams, onSuccess, onError) {
   return Applab.executeCmd(blockId,
-                          'readSharedRecords',
-                          {'searchParams': searchParams,
+                          'readRecords',
+                          {'table': table,
+                           'searchParams': searchParams,
                            'onSuccess': onSuccess,
                            'onError': onError});
 };
 
-exports.updateSharedRecord = function (blockId, record, onSuccess, onError) {
+exports.updateRecord = function (blockId, table, record, onSuccess, onError) {
   return Applab.executeCmd(blockId,
-                          'updateSharedRecord',
-                          {'record': record,
+                          'updateRecord',
+                          {'table': table,
+                           'record': record,
                            'onSuccess': onSuccess,
                            'onError': onError});
 };
 
-exports.deleteSharedRecord = function (blockId, record, onSuccess, onError) {
+exports.deleteRecord = function (blockId, table, record, onSuccess, onError) {
   return Applab.executeCmd(blockId,
-                          'deleteSharedRecord',
-                          {'record': record,
+                          'deleteRecord',
+                          {'table': table,
+                           'record': record,
                            'onSuccess': onSuccess,
                            'onError': onError});
 };
