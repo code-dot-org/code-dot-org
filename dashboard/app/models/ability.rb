@@ -25,7 +25,8 @@ class Ability
         User,
         Follower,
         District,
-        Workshop
+        Workshop,
+        Cohort
       ]
     end
 
