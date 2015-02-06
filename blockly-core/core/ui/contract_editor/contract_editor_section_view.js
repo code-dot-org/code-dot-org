@@ -109,7 +109,7 @@ Blockly.ContractEditorSectionView.prototype.setHeaderVisible = function (showHea
 Blockly.ContractEditorSectionView.prototype.placeAndGetNewY = function (currentY, width) {
   var startY = currentY;
 
-  this.header.setVisible(this.showHeader_);
+  this.header_.setVisible(this.showHeader_);
 
   if (this.showHeader_) {
     this.header_.setPositionSize(currentY, width, this.headerHeight);
