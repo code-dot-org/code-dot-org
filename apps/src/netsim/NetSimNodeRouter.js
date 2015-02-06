@@ -47,6 +47,12 @@ var NetSimEntity = require('./NetSimEntity');
 var NetSimWire = require('./NetSimWire');
 
 /**
+ * @type {number}
+ * @readonly
+ */
+var MAX_CLIENT_CONNECTIONS = 6;
+
+/**
  * @param {!NetSimShard} shard
  * @param {Object} [routerRow] - Lobby row for this router.
  * @constructor
@@ -56,10 +62,13 @@ var NetSimNodeRouter = function (shard, routerRow) {
   superClass.call(this, shard, routerRow);
 
   /**
-   * @const
+   * Determines a subset of connection and message events that this
+   * router will respond to, only managing events from the given node ID,
+   * to avoid conflicting with other clients also simulating this router.
    * @type {number}
+   * @private
    */
-  this.MAX_CLIENT_CONNECTIONS = 6;
+  this.simulateForSender_ = undefined;
 };
 NetSimNodeRouter.prototype = Object.create(superClass.prototype);
 NetSimNodeRouter.prototype.constructor = NetSimNodeRouter;
@@ -117,9 +126,9 @@ NetSimNodeRouter.prototype.update = function (onComplete) {
 
   var self = this;
   this.countConnections(function (count) {
-    self.status_ = count >= self.MAX_CLIENT_CONNECTIONS ?
+    self.status_ = count >= MAX_CLIENT_CONNECTIONS ?
         RouterStatus.FULL : RouterStatus.READY;
-    self.statusDetail_ = '(' + count + '/' + self.MAX_CLIENT_CONNECTIONS + ')';
+    self.statusDetail_ = '(' + count + '/' + MAX_CLIENT_CONNECTIONS + ')';
     superClass.prototype.update.call(self, onComplete);
   });
 };
@@ -135,6 +144,15 @@ NetSimNodeRouter.prototype.getNodeType = function () {
 };
 NetSimNodeRouter.getNodeType = function () {
   return 'router';
+};
+
+/**
+ * Puts this router controller into a mode where it will only
+ * simulate for connection and messages -from- the given node.
+ * @param {!number} nodeID
+ */
+NetSimNodeRouter.prototype.setSimulateForSender = function (nodeID) {
+  this.simulateForSender_ = nodeID;
 };
 
 /**
@@ -211,7 +229,7 @@ var contains = function (haystack, needle) {
 NetSimNodeRouter.prototype.acceptConnection = function (otherNode, onComplete) {
   var self = this;
   this.countConnections(function (count) {
-    if (count > self.MAX_CLIENT_CONNECTIONS) {
+    if (count > MAX_CLIENT_CONNECTIONS) {
       onComplete(false);
       return;
     }
