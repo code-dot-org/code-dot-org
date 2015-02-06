@@ -36,11 +36,10 @@ function drawGraph() {
   var errMsg = "Length ";
 
   // Read width, height out of the bit string (where width is given in byte 0, height in byte 1).
-
   var w = binToInt(readByte(binCode, 0));
   var h = binToInt(readByte(binCode, 1));
-  document.getElementById("width").value = w;
-  document.getElementById("height").value = h;
+  document.getElementById("width").value = document.getElementById("widthRange").value = w;
+  document.getElementById("height").value = document.getElementById("heightRange").value = h;
 
   var bitsPerPix = binToInt(readByte(binCode, 2));
   console.debug("read bits per pix: " + bitsPerPix);

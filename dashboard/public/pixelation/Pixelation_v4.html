@@ -10,15 +10,15 @@
     </div>
     <div id="input">
       <label>width:
-        <input type=number min=0 max=255 id="width" value="0" size=2 onKeyUp="setSliders()">
-        <input type="range" value=15 min=1 max=255 id="widthRange" oninput="changeVal('width')">
+        <input type="number" min="1" max="255" id="width" oninput="setSliders()">
+        <input type="range" min="1" max="255" id="widthRange" oninput="changeVal('width')">
       </label><br>
       <label>height:
-        <input type=number min=0 max=255 id="height" value="0" size=2 onKeyUp="setSliders();">
-        <input type="range" value=15 min=1 max=255 id="heightRange" oninput="changeVal('height')">
+        <input type=number min="1" max="255" id="height" oninput="setSliders();">
+        <input type="range" min="1" max="255" id="heightRange" oninput="changeVal('height')">
       </label><br>
       <label>(color) bits/pixel:
-        <input type=number min=1 max=24 id="bitsPerPixel" value="3" onkeyup="setSliders();" size=2>
+        <input type=number min=1 max=24 id="bitsPerPixel" value="3" oninput="setSliders();" size=2>
         <input type=range class="slider" id="bitsPerPixelSlider" min=1 max=24 value=1 step=1 oninput="changeVal('bitsPerPixel')">
       </label>
       <br>
