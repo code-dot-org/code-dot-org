@@ -96,12 +96,10 @@ module.exports = NetSimEntity;
  * @param {!function} EntityType - The constructor for the entity type you want
  *        to create.
  * @param {!NetSimShard} shard
- * @param {function} [onComplete] - Method that will be given the
+ * @param {!function} onComplete - Method that will be given the
  *        created entity, or null if entity creation failed.
  */
 NetSimEntity.create = function (EntityType, shard, onComplete) {
-  onComplete = onComplete || function () {};
-
   var entity = new EntityType(shard);
   entity.getTable_().create(entity.buildRow_(), function (row) {
     if (row) {
@@ -120,12 +118,10 @@ NetSimEntity.create = function (EntityType, shard, onComplete) {
  *        to find.
  * @param {!number} entityID - The row ID for the entity you'd like to find.
  * @param {!NetSimShard} shard
- * @param {function} [onComplete] - Method that will be given the
+ * @param {!function} onComplete - Method that will be given the
  *        found entity, or null if entity search failed.
  */
 NetSimEntity.get = function (EntityType, entityID, shard, onComplete) {
-  onComplete = onComplete || function () {};
-
   var entity = new EntityType(shard);
   entity.getTable_().read(entityID, function (row) {
     if (row) {

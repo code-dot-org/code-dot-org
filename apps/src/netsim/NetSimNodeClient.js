@@ -84,7 +84,7 @@ module.exports = NetSimNodeClient;
 /**
  * Static async creation method. See NetSimEntity.create().
  * @param {!NetSimShard} shard
- * @param {function} [onComplete] - Method that will be given the
+ * @param {!function} onComplete - Method that will be given the
  *        created entity, or null if entity creation failed.
  */
 NetSimNodeClient.create = function (shard, onComplete) {
