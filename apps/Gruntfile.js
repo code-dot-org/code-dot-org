@@ -190,7 +190,8 @@ config.sass = {
       outputStyle: (MINIFY ? 'compressed' : 'nested')
     },
     files: {
-      'build/package/css/common.css': 'style/common.scss'
+      'build/package/css/common.css': 'style/common.scss',
+      'build/package/css/readonly.css': 'style/readonly.scss'
     }
   }
 };
