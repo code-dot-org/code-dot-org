@@ -113,7 +113,7 @@ namespace :build do
       end
     end
   end
-  
+
   task :jupiter do
     Dir.chdir(jupiter_dir) do
       HipChat.log 'Stopping JUPITER service'
