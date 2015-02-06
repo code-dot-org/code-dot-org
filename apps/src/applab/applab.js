@@ -1923,13 +1923,13 @@ Applab.clearTimeout = function (opts) {
   window.clearTimeout(opts.timeoutId);
 };
 
-Applab.createSharedRecord = function (opts) {
-  var onSuccess = Applab.handleCreateSharedRecord.bind(this, opts.onSuccess);
+Applab.createRecord = function (opts) {
+  var onSuccess = Applab.handleCreateRecord.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
-  AppStorage.createSharedRecord(opts.record, onSuccess, onError);
+  AppStorage.createRecord(opts.table, opts.record, onSuccess, onError);
 };
 
-Applab.handleCreateSharedRecord = function(successCallback, record) {
+Applab.handleCreateRecord = function(successCallback, record) {
   if (successCallback) {
     Applab.eventQueue.push({
       'fn': successCallback,
@@ -1949,13 +1949,13 @@ Applab.handleError = function(errorCallback, message) {
   }
 };
 
-Applab.readSharedValue = function(opts) {
-  var onSuccess = Applab.handleReadSharedValue.bind(this, opts.onSuccess);
+Applab.getKeyValue = function(opts) {
+  var onSuccess = Applab.handleReadValue.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
-  AppStorage.readSharedValue(opts.key, onSuccess, onError);
+  AppStorage.getKeyValue(opts.key, onSuccess, onError);
 };
 
-Applab.handleReadSharedValue = function(successCallback, value) {
+Applab.handleReadValue = function(successCallback, value) {
   if (successCallback) {
     Applab.eventQueue.push({
       'fn': successCallback,
@@ -1964,13 +1964,13 @@ Applab.handleReadSharedValue = function(successCallback, value) {
   }
 };
 
-Applab.writeSharedValue = function(opts) {
-  var onSuccess = Applab.handleWriteSharedValue.bind(this, opts.onSuccess);
+Applab.setKeyValue = function(opts) {
+  var onSuccess = Applab.handleSetKeyValue.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
-  AppStorage.writeSharedValue(opts.key, opts.value, onSuccess, onError);
+  AppStorage.setKeyValue(opts.key, opts.value, onSuccess, onError);
 };
 
-Applab.handleWriteSharedValue = function(successCallback) {
+Applab.handleSetKeyValue = function(successCallback) {
   if (successCallback) {
     Applab.eventQueue.push({
       'fn': successCallback,
@@ -1979,13 +1979,13 @@ Applab.handleWriteSharedValue = function(successCallback) {
   }
 };
 
-Applab.readSharedRecords = function (opts) {
-  var onSuccess = Applab.handleReadSharedRecords.bind(this, opts.onSuccess);
+Applab.readRecords = function (opts) {
+  var onSuccess = Applab.handleReadRecords.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
-  AppStorage.readSharedRecords(opts.searchParams, onSuccess, onError);
+  AppStorage.readRecords(opts.table, opts.searchParams, onSuccess, onError);
 };
 
-Applab.handleReadSharedRecords = function(successCallback, records) {
+Applab.handleReadRecords = function(successCallback, records) {
   if (successCallback) {
     Applab.eventQueue.push({
       'fn': successCallback,
@@ -1994,13 +1994,13 @@ Applab.handleReadSharedRecords = function(successCallback, records) {
   }
 };
 
-Applab.updateSharedRecord = function (opts) {
-  var onSuccess = Applab.handleUpdateSharedRecord.bind(this, opts.onSuccess);
+Applab.updateRecord = function (opts) {
+  var onSuccess = Applab.handleUpdateRecord.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
-  AppStorage.updateSharedRecord(opts.record, onSuccess, onError);
+  AppStorage.updateRecord(opts.table, opts.record, onSuccess, onError);
 };
 
-Applab.handleUpdateSharedRecord = function(successCallback) {
+Applab.handleUpdateRecord = function(successCallback) {
   if (successCallback) {
     Applab.eventQueue.push({
       'fn': successCallback,
@@ -2009,13 +2009,13 @@ Applab.handleUpdateSharedRecord = function(successCallback) {
   }
 };
 
-Applab.deleteSharedRecord = function (opts) {
-  var onSuccess = Applab.handleDeleteSharedRecord.bind(this, opts.onSuccess);
+Applab.deleteRecord = function (opts) {
+  var onSuccess = Applab.handleDeleteRecord.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
-  AppStorage.deleteSharedRecord(opts.record, onSuccess, onError);
+  AppStorage.deleteRecord(opts.table, opts.record, onSuccess, onError);
 };
 
-Applab.handleDeleteSharedRecord = function(successCallback) {
+Applab.handleDeleteRecord = function(successCallback) {
   if (successCallback) {
     Applab.eventQueue.push({
       'fn': successCallback,
