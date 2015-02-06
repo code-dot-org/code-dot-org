@@ -1,13 +1,5 @@
 :css
   textarea { width: 100% }
-  
-  .callouteditor input {
-    width: auto
-  }
-
-  .callouteditor select {
-    width: auto
-  }
 
 - content_for(:head) do
   = stylesheet_link_tag    'editor/blockly_editor', media: 'all'
@@ -78,187 +70,70 @@
   %p Number is a multiplier for how long each step takes (so higher numbers are slower). Default is 5 for Maze, 2 for Bee.
   = f.number_field :step_speed
 
-
-
 .field.callouteditor
-  %label Edit Callouts
+  - (0...3).each do |x|
+    %label Callout #{x+1}
 
-  -#WARNING:
-  -#Repetition level: High
-
-  .callout0
-    %table
-      %tr
-        %td Use this callout?
-        %td Callout name (localization_key)
-        %td Callout text
-        %td Element callout refers to (element_id)
-        %td Location of qtip on callout
-        %td Location on element qtip points to
-        %td Qtip x distance adjust
-        %td Qtip y distance adjust
-        %td Hide qtip
-      %tr
-        %td
-          %input{:class => "use_callout_0", :type => 'checkbox'}
-        %td
-          -#stretch goal: disable this input and autogenerate callout name (e.g. frozen_cross_rotate_callout0...callout1, etc.)
-          %input{:class => "localization_key_0", :type => 'text', :placeholder => 'Name of callout'}
-        %td
-          %input{:class => "callout_text_0", :type => 'text', :placeholder => 'Text of callout'}
-        %td
-          -#stretch goal: change this input to a select and list all of the elements and sub-elements of the particular level (e.g. [block-id='1'], #runButton, #turn_right_qtip > .blocklyEditableText:eq(1), etc.)
-          %input{:class => "element_id_0", :type => 'text', :placeholder => 'ID of element'}
-        %td
-          %select{:class => "qtip_position_my_0"}
-            %option{:value => 'bottom left'} Bottom left
-            %option{:value => 'bottom center'} Bottom center
-            %option{:value => 'bottom right'} Bottom right
-            %option{:value => 'right bottom'} Right bottom
-            %option{:value => 'right center'} Right center
-            %option{:value => 'right top'} Right top
-            %option{:value => 'top right'} Top right
-            %option{:value => 'top center'} Top center
-            %option{:value => 'top left'} Top left
-            %option{:value => 'left top'} Left top
-            %option{:value => 'left center'} Left center
-            %option{:value => 'left bottom'} Left bottom
-        %td
-          %select{:class => "qtip_position_at_0"}
-            %option{:value => 'top right'} Top right
-            %option{:value => 'top center'} Top center
-            %option{:value => 'top left'} Top left
-            %option{:value => 'left top'} Left top
-            %option{:value => 'left center'} Left center
-            %option{:value => 'left bottom'} Left bottom
-            %option{:value => 'bottom left'} Bottom left
-            %option{:value => 'bottom center'} Bottom center
-            %option{:value => 'bottom right'} Bottom right
-            %option{:value => 'right bottom'} Right bottom
-            %option{:value => 'right center'} Right center
-            %option{:value => 'right top'} Right top
-        %td
-          %input{:class => "qtip_position_adjust_x_0", :type => 'number'}
-        %td
-          %input{:class => "qtip_position_adjust_y_0", :type => 'number'}
-        %td
-          %input{:class => "qtip_hide_0", :type => 'checkbox'}
-
-  .callout1
-    %table
-      %tr
-        %td Use this callout?
-        %td Callout name (localization_key)
-        %td Callout text
-        %td Element callout refers to (element_id)
-        %td Location of qtip on callout
-        %td Location on element qtip points to
-        %td Qtip x distance adjust
-        %td Qtip y distance adjust
-        %td Hide qtip
-      %tr
-        %td
-          %input{:class => "use_callout_1", :type => 'checkbox'}
-        %td
-          -#stretch goal: disable this input and autogenerate callout name (e.g. frozen_cross_rotate_callout0...callout1, etc.)
-          %input{:class => "localization_key_1", :type => 'text', :placeholder => 'Name of callout'}
-        %td
-          %input{:class => "callout_text_1", :type => 'text', :placeholder => 'Text of callout'}
-        %td
-          -#stretch goal: change this input to a select and list all of the elements and sub-elements of the particular level (e.g. [block-id='1'], #runButton, #turn_right_qtip > .blocklyEditableText:eq(1), etc.)
-          %input{:class => "element_id_1", :type => 'text', :placeholder => 'ID of element'}
-        %td
-          %select{:class => "qtip_position_my_1"}
-            %option{:value => 'bottom left'} Bottom left
-            %option{:value => 'bottom center'} Bottom center
-            %option{:value => 'bottom right'} Bottom right
-            %option{:value => 'right bottom'} Right bottom
-            %option{:value => 'right center'} Right center
-            %option{:value => 'right top'} Right top
-            %option{:value => 'top right'} Top right
-            %option{:value => 'top center'} Top center
-            %option{:value => 'top left'} Top left
-            %option{:value => 'left top'} Left top
-            %option{:value => 'left center'} Left center
-            %option{:value => 'left bottom'} Left bottom
-        %td
-          %select{:class => "qtip_position_at_1"}
-            %option{:value => 'top right'} Top right
-            %option{:value => 'top center'} Top center
-            %option{:value => 'top left'} Top left
-            %option{:value => 'left top'} Left top
-            %option{:value => 'left center'} Left center
-            %option{:value => 'left bottom'} Left bottom
-            %option{:value => 'bottom left'} Bottom left
-            %option{:value => 'bottom center'} Bottom center
-            %option{:value => 'bottom right'} Bottom right
-            %option{:value => 'right bottom'} Right bottom
-            %option{:value => 'right center'} Right center
-            %option{:value => 'right top'} Right top
-        %td
-          %input{:class => "qtip_position_adjust_x_1", :type => 'number'}
-        %td
-          %input{:class => "qtip_position_adjust_y_1", :type => 'number'}
-        %td
-          %input{:class => "qtip_hide_1", :type => 'checkbox'}
-
-  .callout2
-    %table
-      %tr
-        %td Use this callout?
-        %td Callout name (localization_key)
-        %td Callout text
-        %td Element callout refers to (element_id)
-        %td Location of qtip on callout
-        %td Location on element qtip points to
-        %td Qtip x distance adjust
-        %td Qtip y distance adjust
-        %td Hide qtip
-      %tr
-        %td
-          %input{:class => "use_callout_2", :type => 'checkbox'}
-        %td
-          -#stretch goal: disable this input and autogenerate callout name (e.g. frozen_cross_rotate_callout0...callout1, etc.)
-          %input{:class => "localization_key_2", :type => 'text', :placeholder => 'Name of callout'}
-        %td
-          %input{:class => "callout_text_2", :type => 'text', :placeholder => 'Text of callout'}
-        %td
-          -#stretch goal: change this input to a select and list all of the elements and sub-elements of the particular level (e.g. [block-id='1'], #runButton, #turn_right_qtip > .blocklyEditableText:eq(1), etc.)
-          %input{:class => "element_id_2", :type => 'text', :placeholder => 'ID of element'}
-        %td
-          %select{:class => "qtip_position_my_2"}
-            %option{:value => 'bottom left'} Bottom left
-            %option{:value => 'bottom center'} Bottom center
-            %option{:value => 'bottom right'} Bottom right
-            %option{:value => 'right bottom'} Right bottom
-            %option{:value => 'right center'} Right center
-            %option{:value => 'right top'} Right top
-            %option{:value => 'top right'} Top right
-            %option{:value => 'top center'} Top center
-            %option{:value => 'top left'} Top left
-            %option{:value => 'left top'} Left top
-            %option{:value => 'left center'} Left center
-            %option{:value => 'left bottom'} Left bottom
-        %td
-          %select{:class => "qtip_position_at_2"}
-            %option{:value => 'top right'} Top right
-            %option{:value => 'top center'} Top center
-            %option{:value => 'top left'} Top left
-            %option{:value => 'left top'} Left top
-            %option{:value => 'left center'} Left center
-            %option{:value => 'left bottom'} Left bottom
-            %option{:value => 'bottom left'} Bottom left
-            %option{:value => 'bottom center'} Bottom center
-            %option{:value => 'bottom right'} Bottom right
-            %option{:value => 'right bottom'} Right bottom
-            %option{:value => 'right center'} Right center
-            %option{:value => 'right top'} Right top
-        %td
-          %input{:class => "qtip_position_adjust_x_2", :type => 'number'}
-        %td
-          %input{:class => "qtip_position_adjust_y_2", :type => 'number'}
-        %td
-          %input{:class => "qtip_hide_2", :type => 'checkbox'}
+    %div{:class => "callouts#{x}"}
+      %table
+        %tr
+          %td Use callout?
+          %td Element ID
+          %td Localization Key
+          %td Callout text
+        %tr
+          %td
+            %input{:class => "use_callout_#{x}", :type => 'checkbox'}
+          %td
+            %input{:class => "element_id_#{x}", :type => 'text', :placeholder => 'Element callout refers to'}          
+          %td
+            %input{:class => "localization_key_#{x}", :type => 'text', :placeholder => 'Name of callout'}
+          %td{:colspan => 2}
+            %input{:class => "callout_text_#{x}", :type => 'text', :placeholder => 'Text of callout', :style => "width: 97%"}
+        %tr
+          %td Hide qtip?
+          %td Qtip on callout
+          %td Qtip points to Element
+          %td Qtip x distance adjust
+          %td Qtip y distance adjust    
+        %tr    
+          %td
+            %input{:class => "qtip_hide_#{x}", :type => 'checkbox'}
+          %td
+            %select{:class => "qtip_position_my_#{x}"}
+              %option{:value => 'top left'} Top left
+              %option{:value => 'top center'} Top center
+              %option{:value => 'top right'} Top right
+              %option{:value => 'right top'} Right top
+              %option{:value => 'right center'} Right center
+              %option{:value => 'right bottom'} Right bottom
+              %option{:value => 'bottom right'} Bottom right
+              %option{:value => 'bottom center'} Bottom center
+              %option{:value => 'bottom left'} Bottom left
+              %option{:value => 'left bottom'} Left bottom
+              %option{:value => 'left center'} Left center
+              %option{:value => 'left top'} Left top  
+          %td
+            %select{:class => "qtip_position_at_#{x}"}
+              %option{:value => 'top left'} Top left
+              %option{:value => 'top center'} Top center
+              %option{:value => 'top right'} Top right
+              %option{:value => 'right top'} Right top
+              %option{:value => 'right center'} Right center
+              %option{:value => 'right bottom'} Right bottom
+              %option{:value => 'bottom right'} Bottom right
+              %option{:value => 'bottom center'} Bottom center
+              %option{:value => 'bottom left'} Bottom left
+              %option{:value => 'left bottom'} Left bottom
+              %option{:value => 'left center'} Left center
+              %option{:value => 'left top'} Left top  
+          %td
+            %input{:class => "qtip_position_adjust_x_#{x}", :type => 'number'}
+          %td
+            %input{:class => "qtip_position_adjust_y_#{x}", :type => 'number'}
+    - unless x==2
+      %hr
+    
 
 .field
   = f.label :callout_json
