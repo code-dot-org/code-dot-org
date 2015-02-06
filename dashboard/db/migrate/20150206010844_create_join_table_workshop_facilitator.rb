@@ -3,9 +3,9 @@ class CreateJoinTableWorkshopFacilitator < ActiveRecord::Migration
     create_join_table :workshops, :facilitators do |t|
       t.references :workshops, index: true, null: false
       t.references :facilitators, index: true, null: false
-
-      remove_column :workshops, :facilitator_id
-      remove_index :workshops, :facilitator_id
     end
+
+    remove_column :workshops, :facilitator_id
+    remove_index :workshops, :facilitator_id
   end
 end
