@@ -8734,12 +8734,6 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
       color: 'green',
       blocks: [
         {
-          block: 'var x = __;',
-          title: 'Create a variable for the first time'
-        }, {
-          block: 'x = __;',
-          title: 'Reassign a variable'
-        }, {
           block: '__ + __',
           title: 'Add two numbers'
         }, {
@@ -8778,6 +8772,21 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
         }
       ]
     }, {
+      name: 'Variables',
+      color: 'blue',
+      blocks: [
+        {
+          block: 'var x = __;',
+          title: 'Create a variable for the first time'
+        }, {
+          block: 'x = __;',
+          title: 'Reassign a variable'
+        }, {
+          block: 'var x = [1, 2, 3, 4];',
+          title: 'Create a variable and initialize it as an array'
+        }
+      ]
+    }, {
       name: 'Functions',
       color: 'violet',
       blocks: [
@@ -8807,15 +8816,13 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
   categoryInfo = (dropletConfig && dropletConfig.categories) || defCategoryInfo;
 
   var mergedFunctions = mergeFunctionsWithConfig(codeFunctions, dropletConfig);
+  var i, j;
 
-  for (var i = 0; i < mergedFunctions.length; i++) {
+  for (i = 0; i < mergedFunctions.length; i++) {
     var cf = mergedFunctions[i];
-    if (cf.category === 'hidden') {
-      continue;
-    }
     var block = cf.func + "(";
     if (cf.params) {
-      for (var j = 0; j < cf.params.length; j++) {
+      for (j = 0; j < cf.params.length; j++) {
         if (j !== 0) {
           block += ", ";
         }
@@ -8833,12 +8840,26 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
   var addedPalette = [];
   for (var category in categoryInfo) {
     categoryInfo[category].name = category;
+    for (j = 0; j < stdPalette.length; j++) {
+      if (stdPalette[j].name === category) {
+        // This category is in the stdPalette, merge in its blocks:
+        categoryInfo[category].blocks =
+            categoryInfo[category].blocks.concat(stdPalette[j].blocks);
+        break;
+      }
+    }
     if (categoryInfo[category].blocks.length > 0) {
       addedPalette.push(categoryInfo[category]);
     }
   }
 
-  return addedPalette.concat(stdPalette);
+  for (j = 0; j < stdPalette.length; j++) {
+    if (!(stdPalette[j].name in categoryInfo)) {
+      // This category from the stdPalette hasn't been referenced yet, add it:
+      addedPalette.push(stdPalette[j]);
+    }
+  }
+  return addedPalette;
 };
 
 /**
@@ -8850,13 +8871,10 @@ exports.generateAceApiCompleter = function (codeFunctions, dropletConfig) {
   var mergedFunctions = mergeFunctionsWithConfig(codeFunctions, dropletConfig);
   for (var i = 0; i < mergedFunctions.length; i++) {
     var cf = mergedFunctions[i];
-    if (cf.category === 'hidden') {
-      continue;
-    }
     apis.push({
       name: 'api',
       value: cf.func,
-      meta: 'local'
+      meta: cf.category
     });
   }
 
@@ -14588,8 +14606,8 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<!DOCTYPE html>\n<html dir="', escape((2,  options.localeDirection )), '">\n<head>\n  <meta charset="utf-8">\n  <title>Blockly</title>\n  <script type="text/javascript" src="', escape((6,  assetUrl('js/blockly.js') )), '"></script>\n  <script type="text/javascript" src="', escape((7,  assetUrl('js/' + options.locale + '/blockly_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((8,  assetUrl('js/common.js') )), '"></script>\n  <script type="text/javascript" src="', escape((9,  assetUrl('js/' + options.locale + '/common_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((10,  assetUrl('js/' + options.locale + '/' + app + '_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((11,  assetUrl('js/' + app + '.js') )), '"></script>\n  <script type="text/javascript">\n    ');13; // delay to onload to fix IE9. 
-; buf.push('\n    window.onload = function() {\n      ', escape((15,  app )), 'Main(', (15,  JSON.stringify(options) ), ');\n    };\n  </script>\n</head>\n<body>\n  <div id="blockly" class="readonly"></div>\n  <style>\n    html, body {\n      background-color: transparent;\n      margin: 0;\n      padding:0;\n      overflow: hidden;\n      height: 100%;\n      font-family: \'Gotham A\', \'Gotham B\', sans-serif;\n    }\n    .blocklyText, .blocklyMenuText, .blocklyTreeLabel, .blocklyHtmlInput,\n        .blocklyIconMark, .blocklyTooltipText, .goog-menuitem-content {\n      font-family: \'Gotham A\', \'Gotham B\', sans-serif;\n    }\n    #blockly>svg {\n      background-color: transparent;\n      border: none;\n    }\n    #blockly {\n      position: absolute;\n      top: 0;\n      left: 0;\n      overflow: hidden;\n      height: 100%;\n      width: 100%;\n    }\n  </style>\n</body>\n</html>\n'); })();
+ buf.push('<!DOCTYPE html>\n<html dir="', escape((2,  options.localeDirection )), '">\n<head>\n  <meta charset="utf-8">\n  <title>Blockly</title>\n  <link href="', escape((6,  assetUrl('css/common.css') )), '" media="all" rel="stylesheet">\n  <script type="text/javascript" src="', escape((7,  assetUrl('js/blockly.js') )), '"></script>\n  <script type="text/javascript" src="', escape((8,  assetUrl('js/' + options.locale + '/blockly_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((9,  assetUrl('js/common.js') )), '"></script>\n  <script type="text/javascript" src="', escape((10,  assetUrl('js/' + options.locale + '/common_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((11,  assetUrl('js/' + options.locale + '/' + app + '_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((12,  assetUrl('js/' + app + '.js') )), '"></script>\n  <script type="text/javascript">\n    ');14; // delay to onload to fix IE9. 
+; buf.push('\n    window.onload = function() {\n      ', escape((16,  app )), 'Main(', (16,  JSON.stringify(options) ), ');\n    };\n  </script>\n</head>\n<body class="readonly">\n  <div id="blockly"></div>\n</body>\n</html>\n'); })();
 } 
 return buf.join('');
 };

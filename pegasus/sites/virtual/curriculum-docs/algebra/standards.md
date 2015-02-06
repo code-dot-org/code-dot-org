@@ -42,6 +42,8 @@ Lesson <%= index + 1 %>: <%=lesson[:name_s] %>
 
 [/together]
 
+<a href="http://creativecommons.org/"><img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0"></a>  
+
 [/content]
 
 <link rel="stylesheet" type="text/css" href="../morestyle.css"/>

@@ -67,7 +67,9 @@ class Studio < Grid
       </block>
     </value>
   </block>
+  <block type="studio_setSpriteParamValue"/>
   <block type="studio_setBackground" />
+  <block type="studio_setBackgroundParam" />
   <block type="studio_showTitleScreen">
     <title name="TITLE">type title here</title>
     <title name="TEXT">type text here</title>
@@ -318,6 +320,10 @@ class Studio < Grid
   <block type="functional_logical_or" />
   <block type="functional_logical_not" />
   <block type="functional_boolean" />
+</category>
+<category name ="Functional Image">
+  <block type="functional_sprite_dropdown" />
+  <block type="functional_background_dropdown" />
 </category>
 <category name ="Functional Cond">
   <block type="functional_cond" />
