@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150128022616) do
+ActiveRecord::Schema.define(version: 20150206010844) do
 
   create_table "activities", force: true do |t|
     t.integer  "user_id"
@@ -115,6 +115,16 @@ ActiveRecord::Schema.define(version: 20150128022616) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "facilitators_workshops", id: false, force: true do |t|
+    t.integer "workshop_id",     null: false
+    t.integer "facilitator_id",  null: false
+    t.integer "workshops_id",    null: false
+    t.integer "facilitators_id", null: false
+  end
+
+  add_index "facilitators_workshops", ["facilitators_id"], name: "index_facilitators_workshops_on_facilitators_id", using: :btree
+  add_index "facilitators_workshops", ["workshops_id"], name: "index_facilitators_workshops_on_workshops_id", using: :btree
 
   create_table "followers", force: true do |t|
     t.integer  "user_id",         null: false
@@ -464,17 +474,15 @@ ActiveRecord::Schema.define(version: 20150128022616) do
 
   create_table "workshops", force: true do |t|
     t.string   "name"
-    t.string   "program_type",   null: false
+    t.string   "program_type", null: false
     t.string   "location"
     t.string   "instructions"
-    t.integer  "cohort_id",      null: false
-    t.integer  "facilitator_id", null: false
+    t.integer  "cohort_id",    null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   add_index "workshops", ["cohort_id"], name: "index_workshops_on_cohort_id", using: :btree
-  add_index "workshops", ["facilitator_id"], name: "index_workshops_on_facilitator_id", using: :btree
   add_index "workshops", ["name"], name: "index_workshops_on_name", using: :btree
   add_index "workshops", ["program_type"], name: "index_workshops_on_program_type", using: :btree
 
