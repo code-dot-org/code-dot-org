@@ -38,7 +38,7 @@ var NetSimNodeRouter = require('./NetSimNodeRouter');
 var NetSimWire = require('./NetSimWire');
 var ObservableEvent = require('./ObservableEvent');
 var periodicAction = require('./periodicAction');
-var netsimInstance = require('./netsimInstance');
+var NetSimTables = require('./NetSimTables');
 
 var logger = new NetSimLogger(NetSimLogger.LogLevel.VERBOSE);
 
@@ -65,10 +65,10 @@ var NetSimConnection = function (displayName) {
 
   /**
    * Selected instance.
-   * @type {netsimInstance}
+   * @type {NetSimTables}
    * @private
    */
-  this.instance_ = null;
+  this.instanceTables_ = null;
 
   /**
    * The local client's node representation within the instance.
@@ -147,7 +147,7 @@ NetSimConnection.prototype.connectToInstance = function (instanceID) {
     this.disconnectFromInstance();
   }
 
-  this.instance_ = netsimInstance(instanceID);
+  this.instanceTables_ = new NetSimTables(instanceID);
   this.createMyClientNode_();
 };
 
@@ -176,7 +176,7 @@ NetSimConnection.prototype.disconnectFromInstance = function () {
  */
 NetSimConnection.prototype.createMyClientNode_ = function () {
   var self = this;
-  NetSimNodeClient.create(this.instance_, function (node) {
+  NetSimNodeClient.create(this.instanceTables_, function (node) {
     if (node) {
       self.myNode = node;
       self.myNode.onChange.register(self, self.onMyNodeChange_);
@@ -222,7 +222,7 @@ NetSimConnection.prototype.getAllNodes = function (callback) {
   }
 
   var self = this;
-  this.instance_.getLobbyTable().all(function (rows) {
+  this.instanceTables_.lobbyTable.readAll(function (rows) {
     if (!rows) {
       logger.warn("Lobby data request failed, using empty list.");
       callback([]);
@@ -231,9 +231,9 @@ NetSimConnection.prototype.getAllNodes = function (callback) {
 
     var nodes = rows.map(function (row) {
       if (row.type === NetSimNodeClient.getNodeType()) {
-        return new NetSimNodeClient(self.instance_, row);
+        return new NetSimNodeClient(self.instanceTables_, row);
       } else if (row.type === NetSimNodeRouter.getNodeType()) {
-        return new NetSimNodeRouter(self.instance_, row);
+        return new NetSimNodeRouter(self.instanceTables_, row);
       }
     }).filter(function (node) {
       return node !== undefined;
@@ -248,7 +248,7 @@ NetSimConnection.prototype.getAllNodes = function (callback) {
  * @private
  */
 NetSimConnection.prototype.cleanLobby_ = function () {
-  if (!this.instance_) {
+  if (!this.instanceTables_) {
     return;
   }
 
@@ -265,10 +265,10 @@ NetSimConnection.prototype.cleanLobby_ = function () {
 
   // Cleaning wires
   // TODO (bbuchanan): Extract method to get all wires.
-  this.instance_.getWireTable().all(function (rows) {
+  this.instanceTables_.wireTable.readAll(function (rows) {
     if (rows) {
       rows.map(function (row) {
-        return new NetSimWire(self.instance_, row);
+        return new NetSimWire(self.instanceTables_, row);
       }).forEach(function (wire) {
         if (wire.isExpired()) {
           wire.destroy();
@@ -281,7 +281,7 @@ NetSimConnection.prototype.cleanLobby_ = function () {
 /** Adds a row to the lobby for a new router node. */
 NetSimConnection.prototype.addRouterToLobby = function () {
   var self = this;
-  NetSimNodeRouter.create(this.instance_, function () {
+  NetSimNodeRouter.create(this.instanceTables_, function () {
     self.statusChanges.notifyObservers();
   });
 };
@@ -306,7 +306,7 @@ NetSimConnection.prototype.connectToRouter = function (routerID) {
   }
 
   var self = this;
-  NetSimNodeRouter.get(routerID, this.instance_, function (router) {
+  NetSimNodeRouter.get(routerID, this.instanceTables_, function (router) {
     if (!router) {
       logger.warn('Failed to find router with ID ' + routerID);
       return;

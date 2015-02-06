@@ -39,20 +39,20 @@
 var ObservableEvent = require('./ObservableEvent');
 
 /**
- * @param {!netsimInstance} instance
+ * @param {!NetSimTables} instanceTables
  * @param {Object} [entityRow] JSON row from table.
  * @constructor
  */
-var NetSimEntity = function (instance, entityRow) {
+var NetSimEntity = function (instanceTables, entityRow) {
   if (entityRow === undefined) {
     entityRow = {};
   }
 
   /**
-   * @type {netsimInstance}
+   * @type {NetSimTables}
    * @protected
    */
-  this.instance_ = instance;
+  this.instanceTables_ = instanceTables;
 
   /**
    * Cached last ping time for this entity
@@ -95,7 +95,7 @@ module.exports = NetSimEntity;
  * and then calls the callback with a local controller for the new entity.
  * @param {!function} EntityType - The constructor for the entity type you want
  *        to create.
- * @param {!netsimInstance} instance
+ * @param {!NetSimTables} instance
  * @param {function} [onComplete] - Method that will be given the
  *        created entity, or null if entity creation failed.
  */
@@ -103,7 +103,7 @@ NetSimEntity.create = function (EntityType, instance, onComplete) {
   onComplete = onComplete || function () {};
 
   var entity = new EntityType(instance);
-  entity.getTable_().insert(entity.buildRow_(), function (row) {
+  entity.getTable_().create(entity.buildRow_(), function (row) {
     if (row) {
       onComplete(new EntityType(instance, row));
     } else {
@@ -119,7 +119,7 @@ NetSimEntity.create = function (EntityType, instance, onComplete) {
  * @param {!function} EntityType - The constructor for the entity type you want
  *        to find.
  * @param {!number} entityID - The row ID for the entity you'd like to find.
- * @param {!netsimInstance} instance
+ * @param {!NetSimTables} instance
  * @param {function} [onComplete] - Method that will be given the
  *        found entity, or null if entity search failed.
  */
@@ -127,7 +127,7 @@ NetSimEntity.get = function (EntityType, entityID, instance, onComplete) {
   onComplete = onComplete || function () {};
 
   var entity = new EntityType(instance);
-  entity.getTable_().fetch(entityID, function (row) {
+  entity.getTable_().read(entityID, function (row) {
     if (row) {
       onComplete(new EntityType(instance, row));
     } else {

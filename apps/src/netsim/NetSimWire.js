@@ -47,7 +47,7 @@ var superClass = require('./NetSimEntity');
  * be initialized with the JSON row from the table, effectively wrapping that
  * data in helpful methods.
  *
- * @param {!netsimInstance} instance - The instance where this wire lives.
+ * @param {!NetSimTables} instance - The instance where this wire lives.
  * @param {Object} [wireRow] - A row out of the _wire table on the instance.
  *        If provided, will initialize this wire with the given data.  If not,
  *        this wire will initialize to default values.
@@ -98,7 +98,7 @@ module.exports = NetSimWire;
 
 /**
  * Static async creation method.  See NetSimEntity.create().
- * @param {!netsimInstance} instance
+ * @param {!NetSimTables} instance
  * @param {function} [onComplete] - Method that will be given the
  *        created entity, or null if entity creation failed.
  */
@@ -108,10 +108,10 @@ NetSimWire.create = function (instance, onComplete) {
 
 /**
  * Helper that gets the wires table for the configured instance.
- * @returns {exports.SharedStorageTable}
+ * @returns {exports.SharedTable}
  */
 NetSimWire.prototype.getTable_ = function () {
-  return this.instance_.getWireTable();
+  return this.instanceTables_.wireTable;
 };
 
 /** Build own row for the wire table  */

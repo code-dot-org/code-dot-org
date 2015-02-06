@@ -47,7 +47,7 @@ var NetSimEntity = require('./NetSimEntity');
 var NetSimWire = require('./NetSimWire');
 
 /**
- * @param {!netsimInstance} instance
+ * @param {!NetSimTables} instance
  * @param {Object} [routerRow] - Lobby row for this router.
  * @constructor
  * @augments NetSimNode
@@ -67,7 +67,7 @@ module.exports = NetSimNodeRouter;
 
 /**
  * Static async creation method. See NetSimEntity.create().
- * @param {!netsimInstance} instance
+ * @param {!NetSimTables} instance
  * @param {function} [onComplete] - Method that will be given the
  *        created entity, or null if entity creation failed.
  */
@@ -88,7 +88,7 @@ NetSimNodeRouter.create = function (instance, onComplete) {
 /**
  * Static async retrieval method.  See NetSimEntity.get().
  * @param {!number} entityID - The row ID for the entity you'd like to find.
- * @param {!netsimInstance} instance
+ * @param {!NetSimTables} instance
  * @param {function} [onComplete] - Method that will be given the
  *        found entity, or null if entity search failed.
  */
@@ -139,10 +139,10 @@ NetSimNodeRouter.getNodeType = function () {
 
 /**
  * Helper for getting wires table of configured instance.
- * @returns {exports.SharedStorageTable}
+ * @returns {exports.SharedTable}
  */
 NetSimNodeRouter.prototype.getWireTable = function () {
-  return this.instance_.getWireTable();
+  return this.instanceTables_.wireTable;
 };
 
 /**
@@ -153,9 +153,9 @@ NetSimNodeRouter.prototype.getWireTable = function () {
 NetSimNodeRouter.prototype.getConnections = function (onComplete) {
   onComplete = onComplete || function () {};
 
-  var instance = this.instance_;
+  var instanceTables = this.instanceTables_;
   var routerID = this.entityID;
-  this.getWireTable().all(function (rows) {
+  this.instanceTables_.wireTable.readAll(function (rows) {
     if (rows === null) {
       onComplete([]);
       return;
@@ -163,7 +163,7 @@ NetSimNodeRouter.prototype.getConnections = function (onComplete) {
 
     var myWires = rows.
         map(function (row) {
-          return new NetSimWire(instance, row);
+          return new NetSimWire(instanceTables, row);
         }).
         filter(function (wire){
           return wire.remoteNodeID === routerID;
