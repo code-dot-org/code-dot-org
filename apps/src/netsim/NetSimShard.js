@@ -46,6 +46,37 @@ var APP_PUBLIC_KEY =
     window.location.hostname.split('.')[0] === 'localhost' ?
         "JGW2rHUp_UCMW_fQmRf6iQ==" : "HQJ8GCCMGP7Yh8MrtDusIA==";
 
+
+/**
+ * Wrap remote storage table in a netsim-specific wrapper.
+ * I hope to implement local cache and/or notifications here.
+ * @param {!string} tableName
+ * @constructor
+ */
+var NetSimTable = function (tableName) {
+  this.remoteTable_ = new SharedTable(APP_PUBLIC_KEY, tableName);
+};
+
+NetSimTable.prototype.readAll = function (callback) {
+  this.remoteTable_.readAll(callback);
+};
+
+NetSimTable.prototype.read = function (id, callback) {
+  this.remoteTable_.read(id, callback);
+};
+
+NetSimTable.prototype.create = function (value, callback) {
+  this.remoteTable_.create(value, callback);
+};
+
+NetSimTable.prototype.update = function (id, value, callback) {
+  this.remoteTable_.update(id, value, callback);
+};
+
+NetSimTable.prototype.delete = function (id, callback) {
+  this.remoteTable_.delete(id, callback);
+};
+
 /**
  * A shard is an isolated, complete simulation state shared by a subset of
  * users.  It's made of a set of storage tables set apart by a particular
@@ -59,12 +90,12 @@ var APP_PUBLIC_KEY =
 var NetSimShard = function (shardID) {
   /** @type {string} */
   this.shardID = shardID;
+  
+  /** @type {NetSimTable} */
+  this.lobbyTable = new NetSimTable(instanceID + '_node');
 
-  /** @type {SharedTable} */
-  this.lobbyTable = new SharedTable(APP_PUBLIC_KEY, shardID + '_node');
-
-  /** @type {SharedTable} */
-  this.wireTable = new SharedTable(APP_PUBLIC_KEY, shardID + '_wire');
+  /** @type {NetSimTable} */
+  this.wireTable = new NetSimTable(instanceID + '_wire');
 };
 
 module.exports = NetSimShard;

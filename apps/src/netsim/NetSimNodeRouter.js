@@ -227,7 +227,6 @@ var contains = function (haystack, needle) {
  *        if connection is allowed, FALSE if connection is rejected.
  */
 NetSimNodeRouter.prototype.acceptConnection = function (otherNode, onComplete) {
-  var self = this;
   this.countConnections(function (count) {
     if (count > MAX_CLIENT_CONNECTIONS) {
       onComplete(false);
