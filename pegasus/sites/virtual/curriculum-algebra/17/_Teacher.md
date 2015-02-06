@@ -69,23 +69,23 @@ This lesson has three new and important words:<br/>
    - Otherwise, point out that they were not completely quiet for a full thirty seconds, so they *do not* get the reward.
 - Ask the class "What was the *condition* of the reward?"
   - The condition was *IF* you were quiet for 30 seconds
-     - If you were, the condition would be true, and you would get the reward.
-     - If you weren't, the condition would be false, so the reward woud not apply.
+     - If you were, the condition would be true, then you would get the reward.
+     - If you weren't, the condition would be false, then the reward woud not apply.
   - Can we come up with another conditional?
-     - If I say "question," you raise your hand
-     - If I sneeze, you say "Gesundheit."
+     - If I say "question," then you raise your hand
+     - If I sneeze, then you say "Gesundheit."
      - What examples can you come up with?
 - Sometimes, we want to have an extra condition, in case the "IF" statement is not true.
   - This extra condition is called an "ELSE" statement
   - When the "IF" condition isn't met, we can look at the "ELSE" for what to do
-     - Example: IF I draw a 7, everybody claps. Or ELSE, everyone says "Awwwwwwe."
+     - Example: IF I draw a 7, then everybody claps. Or ELSE, everyone says "Awwwwww"
      - Let's try it. (Draw a card and see if your class reacts appropriately.)
   - Ask the class to analyze what just happened. 
      - What was the IF?
      - What was the ELSE?
      - Which condition was met?
   - Believe it or not, we have even one more option.
-     - What if I wanted you to clap if I draw a 7, or else if I draw something less than seven you say "YAY," or else you say "Awwwwwwwe"?
+     - What if I wanted you to clap if I draw a 7, or else if I draw something less than seven you say "YAY," or else you say "Awwwwwww"?
          - This is why we have the terms If, Else If, and Else.
          - If is the first condition
          - Else-if gets looked at only if the "If" isn't true.
