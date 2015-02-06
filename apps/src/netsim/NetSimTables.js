@@ -34,7 +34,7 @@
 /* global window */
 'use strict';
 
-var netsimStorage = require('./netsimStorage');
+var SharedTable = require('../appsApi').SharedTable;
 
 /**
  * App key, unique to netsim, used for connecting with the storage API.
@@ -47,26 +47,20 @@ var APP_PUBLIC_KEY =
         "JGW2rHUp_UCMW_fQmRf6iQ==" : "HQJ8GCCMGP7Yh8MrtDusIA==";
 
 /**
- * Create a netsimInstance object which wraps an instance ID and provides
- * easy access to shared storage tables for that instance.
+ * Wraps an instance ID and provides easy access to shared storage tables
+ * for the instance, used commonly across the NetSim app.
  * @param {!string} instanceID
- * @returns {{getInstanceID: Function, getLobbyTable: Function, getWireTable: Function}}
+ * @constructor
  */
-var netsimInstance = function (instanceID) {
-  return {
-    getInstanceID: function () {
-      return instanceID;
-    },
+var NetSimTables = function (instanceID) {
+  /** @type {string} */
+  this.instanceID = instanceID;
 
-    getLobbyTable: function () {
-      return new netsimStorage.SharedStorageTable(
-          APP_PUBLIC_KEY, instanceID + '_lobby');
-    },
+  /** @type {SharedTable} */
+  this.lobbyTable = new SharedTable(APP_PUBLIC_KEY, instanceID + '_node');
 
-    getWireTable: function () {
-      return new netsimStorage.SharedStorageTable(
-          APP_PUBLIC_KEY, instanceID + '_wire');
-    }
-  };
+  /** @type {SharedTable} */
+  this.wireTable = new SharedTable(APP_PUBLIC_KEY, instanceID + '_wire');
 };
-module.exports = netsimInstance;
+
+module.exports = NetSimTables;

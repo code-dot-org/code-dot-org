@@ -40,7 +40,7 @@ var superClass = require('./NetSimNode');
 var NetSimEntity = require('./NetSimEntity');
 
 /**
- * @param {!netsimInstance} instance
+ * @param {!NetSimTables} instance
  * @param {Object} [clientRow] - Lobby row for this router.
  * @constructor
  * @augments NetSimNode
@@ -83,7 +83,7 @@ module.exports = NetSimNodeClient;
 
 /**
  * Static async creation method. See NetSimEntity.create().
- * @param {!netsimInstance} instance
+ * @param {!NetSimTables} instance
  * @param {function} [onComplete] - Method that will be given the
  *        created entity, or null if entity creation failed.
  */
@@ -162,7 +162,7 @@ NetSimNodeClient.prototype.update = function (onComplete, autoReconnect) {
  */
 NetSimNodeClient.prototype.reconnect_ = function (onComplete) {
   var self = this;
-  NetSimNodeClient.create(this.instance_, function (node) {
+  NetSimNodeClient.create(this.instanceTables_, function (node) {
     if (!node) {
       // Reconnect failed
       onComplete(false);
