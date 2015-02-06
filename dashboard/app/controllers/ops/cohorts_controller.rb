@@ -1,7 +1,7 @@
 module Ops
   class CohortsController < ::ApplicationController
     # CanCan provides automatic resource loading and authorization for default index + CRUD actions
-    before_filter :convert_teacher_info, only: [:create, :update]
+    before_filter :convert_teacher_info, :convert_district_names, only: [:create, :update]
     load_and_authorize_resource
 
     # POST /ops/cohorts/1/teacher/1 (todo: set up this custom route manually)
@@ -45,10 +45,23 @@ module Ops
     def cohort_params
       params.require(:cohort).permit(
           :name,
+          :district_ids => [],
+          :district_names => [],
+          :districts => [],
           :teachers => [],
           :teacher_ids => [], # permit array of scalar values
           :teacher_info => [:name, :email, :district] # permit array of objects with specified keys
       )
+    end
+
+    # Support district_names in the API
+    def convert_district_names
+      district_names_list = params[:cohort].delete :district_names
+      if district_names_list
+        params[:cohort][:districts] = district_names_list.map do |district_name|
+          district = District.find_by(name: district_name) || raise("Invalid District: '#{district_name}'")
+        end
+      end
     end
 
     # Uses a teacher_info object to batch-create new Teacher accounts,
@@ -57,17 +70,19 @@ module Ops
       teacher_info_list = params[:cohort].delete :teacher_info
       if teacher_info_list
         params[:cohort][:teachers] = teacher_info_list.map do |info|
-          email = info.delete 'email'
           district_name = info.delete 'district'
           district = District.find_by(name: district_name) || raise("Invalid District: '#{district_name}'")
-          User.create_with(info.merge(
-            district: district,
+          info['district'] = district
+          email = info.delete 'email'
+          teacher = User.create_with({
             user_type: 'teacher',
             age: '21+',
-            password: 'changeit'
-          )).find_or_initialize_by(
+            password: 'changeit' # ops team should provide unique passwords
+          }.merge(info)).find_or_create_by(
             email: email
           )
+          teacher.update(info) # Update existing teacher accounts with specified info
+          teacher
         end
       end
     end

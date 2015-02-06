@@ -67,7 +67,7 @@ module Ops
       teacher_info = (1..5).map{|x| {name: "Teacher #{x}", email: "teacher_#{x}@school.edu", district: @cohort.districts.first.name}}
       assert_difference ->{User.count}, 5 do
         assert_difference ->{Cohort.count} do
-          post :create, cohort: {name: 'Cohort name', teacher_info: teacher_info}
+          post :create, cohort: {name: 'Cohort name', district_names: [@cohort.districts.first.name], teacher_info: teacher_info}
         end
       end
       assert_response :success
