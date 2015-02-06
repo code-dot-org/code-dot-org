@@ -14,7 +14,7 @@ module Ops
     test 'Facilitators can view all workshops they are facilitating' do
       #87055150
       sign_out @admin
-      sign_in @workshop.facilitator
+      sign_in @workshop.facilitators.first
       get :index
       assert_response :success
       assert_equal 1, JSON.parse(@response.body).length
