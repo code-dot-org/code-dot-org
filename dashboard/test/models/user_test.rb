@@ -364,8 +364,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'reset_secret_words' do
     user = create :user
-    user.secret_word_1_id = nil
-    user.secret_word_2_id = nil
+    user.secret_words = nil
     user.save!
 
     # don't have one
