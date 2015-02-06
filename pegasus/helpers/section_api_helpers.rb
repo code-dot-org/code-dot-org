@@ -143,7 +143,7 @@ class DashboardStudent
 
   def self.random_secret_word
     random_id = SecureRandom.random_number(DASHBOARD_DB[:secret_words].count) + 1
-    DASHBOARD_DB[:secret_words].first(id: random_id)
+    DASHBOARD_DB[:secret_words].first(id: random_id)[:word]
   end
 
   PEPPER = CDO.dashboard_devise_pepper
