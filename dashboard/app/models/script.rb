@@ -34,11 +34,6 @@ class Script < ActiveRecord::Base
   COURSE3_NAME = 'course3'
   COURSE4_NAME = 'course4'
 
-  # Hardcoded scriptIDs were replaced with .script files, but they still need to map to the same ID on a fresh DB
-  LEGACY_SCRIPT_ID = {
-      '20-hour' => TWENTY_HOUR_ID,
-  }
-
   def Script.twenty_hour_script
     Script.get_from_cache(Script::TWENTY_HOUR_ID)
   end
@@ -195,11 +190,11 @@ class Script < ActiveRecord::Base
 
   def self.setup(default_files, custom_files)
     transaction do
-      scripts = []
+      scripts_to_add = []
       # Load default scripts from yml (csv embedded)
       default_files.map { |yml| load_yaml(yml, SCRIPT_MAP) }
       .sort_by { |options, _| options['id'] }
-      .map { |options, data| scripts << [options, data]}
+      .map { |options, data| scripts_to_add << [options, data]}
 
       custom_i18n = {}
       # Load custom scripts from Script DSL format
@@ -208,19 +203,19 @@ class Script < ActiveRecord::Base
         script_data, i18n = ScriptDSL.parse_file(script)
         stages = script_data[:stages]
         custom_i18n.deep_merge!(i18n)
-        scripts << [{
+        scripts_to_add << [{
           name: name,
           trophies: script_data[:trophies],
           hidden: script_data[:hidden].nil? ? true : script_data[:hidden],
-          id: LEGACY_SCRIPT_ID[name],
+          id: script_data[:id],
         }, stages.map{|stage| stage[:levels]}.flatten]
       end
 
       # Stable sort by ID then add each script, ensuring scripts with no ID end up at the end
-      result = scripts.sort_by.with_index{ |args, idx| [args[0][:id] || Float::INFINITY, idx] }.map do |args|
+      added_scripts = scripts_to_add.sort_by.with_index{ |args, idx| [args[0][:id] || Float::INFINITY, idx] }.map do |args|
         add_script(*args)
       end
-      [result, custom_i18n]
+      [added_scripts, custom_i18n]
     end
   end
 

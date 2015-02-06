@@ -1,6 +1,7 @@
 class ScriptDSL < BaseDSL
   def initialize
     super
+    @id = nil
     @title = nil
     @description_short = nil
     @description = nil
@@ -14,6 +15,10 @@ class ScriptDSL < BaseDSL
     @video_key_for_next_level = nil
     @hidden = true
     @trophies = false
+  end
+
+  def id(id)
+    @id = ActiveRecord::ConnectionAdapters::Column::value_to_integer(id)
   end
 
   def title(title)
@@ -50,7 +55,7 @@ class ScriptDSL < BaseDSL
 
   def parse_output
     stage(nil)
-    {stages: @stages, hidden: @hidden, trophies: @trophies}
+    {id: @id, stages: @stages, hidden: @hidden, trophies: @trophies}
   end
 
   def concepts(*items)
