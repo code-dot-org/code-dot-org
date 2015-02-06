@@ -142,7 +142,7 @@
 
     UIRouter.prototype.route = function() {
       var re, parts,
-        url = window.location.href;
+        url = window.location.pathname;
 
       // s/:script_id/level/:level_id
       // (only applies to the 20-hour course)
@@ -375,7 +375,7 @@
         _this.setState({
           stageHtml: html
         });
-      })
+      });
 
       // TODO: Handle props changing.
       if (this.props.script_name)
