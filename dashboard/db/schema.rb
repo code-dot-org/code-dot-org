@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150206025555) do
+ActiveRecord::Schema.define(version: 20150206192655) do
 
   create_table "activities", force: true do |t|
     t.integer  "user_id"
@@ -120,14 +120,9 @@ ActiveRecord::Schema.define(version: 20150206025555) do
   end
 
   create_table "facilitators_workshops", id: false, force: true do |t|
-    t.integer "workshop_id",     null: false
-    t.integer "facilitator_id",  null: false
-    t.integer "workshops_id",    null: false
-    t.integer "facilitators_id", null: false
+    t.integer "workshop_id",    null: false
+    t.integer "facilitator_id", null: false
   end
-
-  add_index "facilitators_workshops", ["facilitators_id"], name: "index_facilitators_workshops_on_facilitators_id", using: :btree
-  add_index "facilitators_workshops", ["workshops_id"], name: "index_facilitators_workshops_on_workshops_id", using: :btree
 
   create_table "followers", force: true do |t|
     t.integer  "user_id",         null: false

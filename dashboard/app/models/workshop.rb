@@ -11,9 +11,11 @@ class Workshop < ActiveRecord::Base
 
   # A Workshop is associated with a Cohort
   belongs_to :cohort
-
   has_many :districts, through: :cohort
 
-  # A Workshop has a Facilitator(s)
-  has_and_belongs_to_many :facilitator, class_name: 'User'
+  # A Workshop has at least one Facilitator(s)
+  has_and_belongs_to_many :facilitators,
+                          class_name: 'User',
+                          association_foreign_key: 'facilitator_id',
+                          join_table: 'facilitators_workshops'
 end

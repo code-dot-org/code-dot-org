@@ -42,7 +42,7 @@ module Ops
       assert_routing({ path: 'ops/workshops', method: :post }, { controller: 'ops/workshops', action: 'create' })
 
       assert_difference 'Workshop.count' do
-        post :create, workshop: {name: 'test workshop', program_type: 'CSP', cohort_id: @cohort, facilitator_id: @facilitator}
+        post :create, workshop: {name: 'test workshop', program_type: 'CSP', cohort_id: @cohort, facilitator_ids: [@facilitator]}
       end
       assert_response :success
     end

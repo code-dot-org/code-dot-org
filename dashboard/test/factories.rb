@@ -199,8 +199,8 @@ FactoryGirl.define do
     location 'Somewhere, USA'
     instructions 'Test workshop instructions.'
     cohort {create :cohort}
-    facilitator {
+    facilitators {[
       create(:facilitator).tap{|f| f.permission = 'facilitator'}
-    }
+    ]}
   end
 end
