@@ -179,7 +179,7 @@ function loadStyle(name) {
 
 $(document).ready(function() {
   // TODO: Global, until we create a component cache
-  window.headerProgress = new HeaderProgress( $('.navbar-header') );
+  window.headerProgress = new HeaderProgress( $('.header-wrapper') );
 });
 
 loadStyle('common');

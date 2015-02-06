@@ -15,7 +15,7 @@
 
   .navbar-static-top.header{class: 'hide_on_mobile'}
     .container{style: (@full_width ? 'width: 880px;' : '')}
-      .navbar-header{data: {script_name: @script_level.try(:script).try(:name), stage_id:@script_level.try(:stage).try(:position), level_id:@script_level.try(:position)}}
+      .navbar-header
         .row.header_row
           .header_logo
             = link_to(image_tag('codeorg-studio-logo.png'), '/')

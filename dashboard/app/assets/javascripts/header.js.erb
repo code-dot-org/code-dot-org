@@ -134,6 +134,48 @@
 
 
 
+  // class UIRouter: this is an incredibly simple router with our routes baked into it.
+  UIRouter = (function() {
+
+    function UIRouter() { }
+
+    UIRouter.prototype.getRoute = function() {
+      var re, parts,
+        url = window.location.href;
+
+      // s/:script_id/level/:level_id
+      // (only applies to the 20-hour course)
+      re = /\/s\/\d+\/level\/(\d+)$/i;
+      parts = url.match(re);
+      if (parts) {
+        return {
+          script_name: '20-hour',
+          level_id: parts[1]
+        }
+      }
+
+      // s/:script_name/stage/:stage_id/level/:level_id
+      re = /\/s\/(.+)\/stage\/(\d+)\/puzzle\/(\d+)$/i;
+      parts = url.match(re);
+      if (parts) {
+        return {
+          script_name: parts[1],
+          stage_id: parts[2],
+          level_id: parts[3]
+        }
+      }
+
+      // Unknown route
+      return null;
+    }
+
+
+    return UIRouter;
+  })();
+
+
+
+
   // class UIStore: this is a lightweight inheritable *ABSTRACT* class modeled after Flux
   // UIStore is "offline-aware", meaning that it will load assets in a different way when
   // it knows that there is no network connection.
@@ -240,6 +282,7 @@
 
 
 
+
   // class HeaderStore extends UIStore
       /**
      * @param data {{
@@ -308,9 +351,12 @@
 
     // Must have a constructor
     function HeaderProgress() {
-      this.onModalClick = __bind(this.onModalClick, this);
+      HeaderProgress.__super__.constructor.apply(this, arguments);
 
-      return HeaderProgress.__super__.constructor.apply(this, arguments);
+      this.onModalClick = __bind(this.onModalClick, this);
+      this.props = Router.getRoute();
+
+      return this;
     }
 
     HeaderProgress.prototype.componentDidMount = function() {
@@ -330,12 +376,8 @@
       })
 
       // TODO: Handle props changing.
-      if (this.props.scriptName)
-        this.headerStore.load({
-          script_name: this.props.scriptName,
-          stage_id: this.props.stageId,
-          level_id: this.props.levelId
-        });
+      if (this.props.script_name)
+        this.headerStore.load( this.props );
 
       // Create tooltips for the free-play icons
       // TODO: Might be better to initialize this component elsewhere
@@ -357,7 +399,7 @@
       var state = this.state || {};
 
       // Don't render unless we are initialized with a script
-      if (!this.props.scriptName)
+      if (!this.props.script_name)
         return;
 
       // NOTE: All this DOM manipulation would be better done via a template - but we're in the process
@@ -527,5 +569,6 @@
   // (Note these are already global since they're not declared via 'var'.
   window.HeaderProgress = HeaderProgress;
   window.HeaderStore = HeaderStore;
+  window.Router = new UIRouter();
 
 }).call(this);
