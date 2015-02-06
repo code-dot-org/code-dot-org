@@ -3,7 +3,10 @@ module Ops
   # see: http://guides.rubyonrails.org/routing.html#nested-resources
   class SegmentsController < ::ApplicationController
     # CanCan provides automatic resource loading and authorization for default index + CRUD actions
-    load_and_authorize_resource
+    load_and_authorize_resource :workshop
+
+    # Load shallow nested resource. See https://github.com/CanCanCommunity/cancancan/wiki/Nested-Resources#shallow-nesting
+    load_and_authorize_resource through: :workshop, shallow: true
 
     # POST /ops/workshops/1/segments
     def create
@@ -38,7 +41,6 @@ module Ops
     # (see: http://guides.rubyonrails.org/action_controller_overview.html#strong-parameters)
     def segment_params
       params.require(:segment).permit(
-        :workshop_id,
         :start,
         :end
       )

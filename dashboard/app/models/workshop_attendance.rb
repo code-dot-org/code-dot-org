@@ -1,4 +1,5 @@
 class WorkshopAttendance < ActiveRecord::Base
-  has_one :segment
-  has_one :teacher, source: :user
+  self.table_name = 'workshop_attendance'
+  belongs_to :segment
+  belongs_to :teacher, class_name: 'User'
 end

@@ -38,7 +38,8 @@ module Ops
       assert_response :success
     end
 
-    test 'create workshop' do
+    test 'Ops team can create workshops' do
+      #87054134
       assert_routing({ path: 'ops/workshops', method: :post }, { controller: 'ops/workshops', action: 'create' })
 
       assert_difference 'Workshop.count' do

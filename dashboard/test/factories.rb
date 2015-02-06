@@ -203,4 +203,10 @@ FactoryGirl.define do
       create(:facilitator).tap{|f| f.permission = 'facilitator'}
     ]}
   end
+
+  factory :segment do
+    workshop {create :workshop}
+    start DateTime.now
+    self.send(:end, DateTime.now + 1.day)
+  end
 end
