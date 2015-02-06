@@ -4,9 +4,9 @@ module Ops
     check_authorization
     load_and_authorize_resource
 
+    # get /ops/districts/1/teachers
     def teachers
-      p "Teachers: #{@districts.users}"
-      render json: @districts.users.as_json
+      render json: @district.users.as_json
     end
 
     # POST /ops/districts

@@ -32,7 +32,7 @@ module Ops
     def all_forbidden
       get :index
       assert_response :forbidden
-      post :create
+      post :create, cohort: {name: 'x'}
       assert_response :forbidden
       get :show, id: @cohort.id
       assert_response :forbidden

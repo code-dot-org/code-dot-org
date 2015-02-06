@@ -56,6 +56,7 @@ module Ops
 
     # Support district_names in the API
     def convert_district_names
+      return unless params[:cohort]
       district_names_list = params[:cohort].delete :district_names
       if district_names_list
         params[:cohort][:districts] = district_names_list.map do |district_name|
@@ -67,6 +68,7 @@ module Ops
     # Uses a teacher_info object to batch-create new Teacher accounts,
     # matching existing accounts by email.
     def convert_teacher_info
+      return unless params[:cohort]
       teacher_info_list = params[:cohort].delete :teacher_info
       if teacher_info_list
         params[:cohort][:teachers] = teacher_info_list.map do |info|

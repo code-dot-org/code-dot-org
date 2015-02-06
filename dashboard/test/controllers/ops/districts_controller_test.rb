@@ -14,9 +14,11 @@ module Ops
       assert_routing({ path: 'ops/districts/1/teachers', method: :get }, { controller: 'ops/districts', action: 'teachers', id: '1' })
       sign_out @admin
       sign_in @district.contact
+      teacher = create(:teacher)
+      @district.users << teacher
       get :teachers, id: @district.id
       assert_response :success
-      p @response.body
+      assert_equal teacher.email, JSON.parse(@response.body).first['email']
     end
 
     # Test index + CRUD controller actions
