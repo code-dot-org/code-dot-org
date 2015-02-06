@@ -23,6 +23,16 @@ Hour of Code has won the support of both [Republicans and Democrats](https://www
 
 [/col-50]
 
+## Press Kit
+
+<div style='margin-left:40px'>
+<%= view :news_presskit %>
+</div>
+
+## Partnership Logo
+
+If you're an official Code.org partner (such as a school district, or a tutorial partner), you may reproduce the "In partnership with Code.org" logo using the guidelines and media files in [this ZIP file](/files/partner-logo.zip). Code.org&reg; and **any version of CODE logo may not be used without the explicit permission of Code.org**, and only according to the approved logo guidelines.
+
 ## Code.org announcements
 
 <div style='margin-left:40px'>
@@ -40,15 +50,5 @@ Hour of Code has won the support of both [Republicans and Democrats](https://www
 <div style='margin-left:40px'>
 <%= view :news_tag, tag:'csnews' %>
 </div>
-
-## Press Kit
-
-<div style='margin-left:40px'>
-<%= view :news_presskit %>
-</div>
-
-## Partnership Logo
-
-If you're an official Code.org partner (such as a school district, or a tutorial partner), you may reproduce the "In partnership with Code.org" logo using the guidelines and media files in [this ZIP file](/files/partner-logo.zip). Code.org&reg; and **any version of CODE logo may not be used without the explicit permission of Code.org**, and only according to the approved logo guidelines.
 
 <br/>
