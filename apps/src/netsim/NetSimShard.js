@@ -181,6 +181,9 @@ var NetSimShard = function (shardID) {
 
   /** @type {NetSimTable} */
   this.wireTable = new NetSimTable(instanceID + '_wire');
+
+  /** @type {NetSimTable} */
+  this.messageTable = new NetSimTable(instanceID + '_message');
 };
 
 module.exports = NetSimShard;
