@@ -63,6 +63,8 @@ We work hard to build an environment that is supported by all modern web browser
 
 [/together]
 
+<a href="http://creativecommons.org/"><img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0"></a>  
+
 [/content]
 
 
