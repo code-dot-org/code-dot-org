@@ -35,6 +35,8 @@
 'use strict';
 
 var SharedTable = require('../appsApi').SharedTable;
+var _ = require('../utils').getLodash();
+var ObservableEvent = require('./ObservableEvent');
 
 /**
  * App key, unique to netsim, used for connecting with the storage API.
@@ -54,27 +56,110 @@ var APP_PUBLIC_KEY =
  * @constructor
  */
 var NetSimTable = function (tableName) {
+  /**
+   * Actual API to the remote shared table.
+   * @type {SharedTable}
+   * @private
+   */
   this.remoteTable_ = new SharedTable(APP_PUBLIC_KEY, tableName);
+
+  /**
+   * Store table contents locally, so we can detect when changes occur.
+   * @type {Object}
+   * @private
+   */
+  this.cache_ = {};
+
+  /**
+   * Event that fires when full table updates indicate a change,
+   * when rows are added, or when rows are removed, or when rows change.
+   * @type {ObservableEvent}
+   */
+  this.tableChangeEvent = new ObservableEvent();
 };
 
 NetSimTable.prototype.readAll = function (callback) {
-  this.remoteTable_.readAll(callback);
+  var self = this;
+  this.remoteTable_.readAll(function (data) {
+    callback(data);
+    if (data !== null) {
+      self.fullCacheUpdate_(data);
+    }
+  });
 };
 
 NetSimTable.prototype.read = function (id, callback) {
-  this.remoteTable_.read(id, callback);
+  var self = this;
+  this.remoteTable_.read(id, function (data) {
+    callback(data);
+    if (data !== undefined) {
+      self.updateCacheRow_(id, data);
+    }
+  });
 };
 
 NetSimTable.prototype.create = function (value, callback) {
-  this.remoteTable_.create(value, callback);
+  var self = this;
+  this.remoteTable_.create(value, function (data) {
+    callback(data);
+    if (data !== undefined) {
+      self.addRowToCache_(data);
+    }
+  });
 };
 
 NetSimTable.prototype.update = function (id, value, callback) {
-  this.remoteTable_.update(id, value, callback);
+  var self = this;
+  this.remoteTable_.update(id, value, function (success) {
+    callback(success);
+    if (success) {
+      self.updateCacheRow_(id, value);
+    }
+  });
 };
 
 NetSimTable.prototype.delete = function (id, callback) {
-  this.remoteTable_.delete(id, callback);
+  var self = this;
+  this.remoteTable_.delete(id, function (success) {
+    callback(success);
+    if (success) {
+      self.removeRowFromCache_(id);
+    }
+  });
+};
+
+NetSimTable.prototype.fullCacheUpdate_ = function (allRows) {
+  // Rebuild entire cache
+  var newCache = allRows.reduce(function (prev, currentRow) {
+    prev[currentRow] = currentRow;
+    return prev;
+  }, {});
+
+  // Check for changes, if anything changed notify all observers on table.
+  if (!_.isEqual(this.cache_, newCache)) {
+    this.cache_ = newCache;
+    this.tableChangeEvent.notifyObservers();
+  }
+};
+
+NetSimTable.prototype.addRowToCache_ = function (row) {
+  this.cache_[row.id] = row;
+  this.tableChangeEvent.notifyObservers();
+};
+
+NetSimTable.prototype.removeRowFromCache_ = function (id) {
+  if (this.cache_[id] !== undefined) {
+    this.cache_[id] = undefined;
+    this.tableChangeEvent.notifyObservers();
+  }
+};
+
+NetSimTable.prototype.updateCacheRow_ = function (id, row) {
+  var oldRow = this.cache_[id];
+  if (!_.isEqual(oldRow, row)) {
+    this.cache_[id] = row;
+    this.tableChangeEvent.notifyObservers();
+  }
 };
 
 /**
