@@ -90,7 +90,7 @@ NetSimTable.prototype.delete = function (id, callback) {
 var NetSimShard = function (shardID) {
   /** @type {string} */
   this.shardID = shardID;
-  
+
   /** @type {NetSimTable} */
   this.lobbyTable = new NetSimTable(instanceID + '_node');
 
