@@ -1,13 +1,12 @@
-- if @level.properties['free_play'] == 'true' # TODO this doesn't work for non-levelbuilder levels
-  %a#create-project{href: '#'} Create project
+.project-ui{style: 'display: none'}
+  %span Project:
+  %a#create-project.btn.btn-default{href: '#'} Create project
   %span#project-name
   %span#save-project
   %form#project-form{style: 'display: none'}
     Rename:
     %input#name{type: 'text'}
     %input{type: 'submit'}
-- else
-  Not freeplay, cannot create project
 
 %script{src: '/shared/js/apps_api.js'}
 
@@ -37,6 +36,12 @@
             console.log('failed to fetch project ' + window.location.hash);
           }
         });
+    }
+  });
+
+  $(document).bind('appInitialized', function() {
+    if (appOptions && appOptions.level && appOptions.level.freePlay) {
+      $('.project-ui').show();
     }
   });
 
@@ -81,7 +86,7 @@
     }, function(app) {
       if (app) {
         currentApp = app;
-        console.log("Created" + currentApp.createdAt);
+        console.log("Created " + currentApp.createdAt);
         displayCurrentApp();
       } else {
         console.log("Failed to create.");

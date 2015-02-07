@@ -32,6 +32,7 @@ var api = require('./api');
 var page = require('../templates/page.html');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
+var CustomEvalError = require('./evalError');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -48,8 +49,7 @@ studioApp.setCheckForEmptyBlocks(false);
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
 
-// This property is set in the api call to draw, and extracted in
-// getDrawableFromBlocks
+// This property is set in the api call to draw, and extracted in evalCode
 Eval.displayedObject = null;
 
 /**
@@ -106,8 +106,8 @@ Eval.init = function(config) {
       var solutionBlocks = blockUtils.forceInsertTopBlock(level.solutionBlocks,
         config.forceInsertTopBlock);
 
-      var answerObject = getDrawableFromBlocks(solutionBlocks);
-      if (answerObject) {
+      var answerObject = getDrawableFromBlockXml(solutionBlocks);
+      if (answerObject && answerObject.draw) {
         answerObject.draw(document.getElementById('answer'));
       }
     }
@@ -146,14 +146,25 @@ Eval.resetButtonClick = function () {
 
 };
 
-
+/**
+ * Evaluates user code, catching any exceptions.
+ * @return {EvalImage|CustomEvalError} EvalImage on success, CustomEvalError on
+ *  handleable failure, null on unexpected failure.
+ */
 function evalCode (code) {
   try {
     codegen.evalWith(code, {
       StudioApp: studioApp,
       Eval: api
     });
+
+    var object = Eval.displayedObject;
+    Eval.displayedObject = null;
+    return object;
   } catch (e) {
+    if (e instanceof CustomEvalError) {
+      return e;
+    }
     // Infinity is thrown if we detect an infinite loop. In that case we'll
     // stop further execution, animate what occured before the infinite loop,
     // and analyze success/failure based on what was drawn.
@@ -172,31 +183,35 @@ function evalCode (code) {
 }
 
 /**
- * Generates a drawable evalImage from the blocks in the workspace. If blockXml
+ * Get a drawable EvalImage from the blocks currently in the workspace
+ * @return {EvalImage|CustomEvalError}
+ */
+function getDrawableFromBlockspace() {
+  var code = Blockly.Generator.blockSpaceToCode('JavaScript', ['functional_display', 'functional_definition']);
+  var result = evalCode(code);
+  return result;
+}
+
+/**
+ * Generates a drawable EvalImage from the blocks in the workspace. If blockXml
  * is provided, temporarily sticks those blocks into the workspace to generate
  * the evalImage, then deletes blocks.
+ * @return {EvalImage|CustomEvalError}
  */
-function getDrawableFromBlocks(blockXml) {
-  if (blockXml) {
-    if (Blockly.mainBlockSpace.getTopBlocks().length !== 0) {
-      throw new Error("getDrawableFromBlocks shouldn't be called with blocks if " +
-        "we already have blocks in the workspace");
-    }
-    // Temporarily put the blocks into the workspace so that we can generate code
-    studioApp.loadBlocks(blockXml);
+function getDrawableFromBlockXml(blockXml) {
+  if (Blockly.mainBlockSpace.getTopBlocks().length !== 0) {
+    throw new Error("getDrawableFromBlocks shouldn't be called with blocks if " +
+      "we already have blocks in the workspace");
   }
+  // Temporarily put the blocks into the workspace so that we can generate code
+  studioApp.loadBlocks(blockXml);
 
-  var code = Blockly.Generator.blockSpaceToCode('JavaScript', ['functional_display', 'functional_definition']);
-  evalCode(code);
-  var object = Eval.displayedObject;
-  Eval.displayedObject = null;
+  var result = getDrawableFromBlockspace();
 
-  if (blockXml) {
-    // Remove the blocks
-    Blockly.mainBlockSpace.getTopBlocks().forEach(function (b) { b.dispose(); });
-  }
+  // Remove the blocks
+  Blockly.mainBlockSpace.getTopBlocks().forEach(function (b) { b.dispose(); });
 
-  return object;
+  return result;
 }
 
 /**
@@ -207,13 +222,22 @@ Eval.execute = function() {
   Eval.testResults = TestResults.NO_TESTS_RUN;
   Eval.message = undefined;
 
-  var userObject = getDrawableFromBlocks(null);
-  if (userObject) {
+  var userObject = getDrawableFromBlockspace();
+  if (userObject && userObject.draw) {
     userObject.draw(document.getElementById("user"));
   }
 
-  Eval.result = evaluateAnswer();
-  Eval.testResults = studioApp.getTestResults(Eval.result);
+  // If we got a CustomEvalError, set error message appropriately.
+  if (userObject instanceof CustomEvalError) {
+    Eval.result = false;
+    Eval.testResults = TestResults.APP_SPECIFIC_FAIL;
+
+    Eval.message = userObject.feedbackMessage;
+  } else {
+    // We got an EvalImage back, compare it to our target
+    Eval.result = evaluateAnswer();
+    Eval.testResults = studioApp.getTestResults(Eval.result);
+  }
 
   if (level.freePlay) {
     Eval.testResults = TestResults.FREE_PLAY;
@@ -281,7 +305,7 @@ var displayFeedback = function(response) {
   // override extra top blocks message
   level.extraTopBlocks = evalMsg.extraTopBlocks();
 
-  studioApp.displayFeedback({
+  var options = {
     app: 'Eval',
     skin: skin.id,
     feedbackType: Eval.testResults,
@@ -289,8 +313,12 @@ var displayFeedback = function(response) {
     level: level,
     appStrings: {
       reinfFeedbackMsg: evalMsg.reinfFeedbackMsg()
-    },
-  });
+    }
+  };
+  if (Eval.message) {
+    options.message = Eval.message;
+  }
+  studioApp.displayFeedback(options);
 };
 
 /**

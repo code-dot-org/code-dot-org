@@ -50,8 +50,6 @@ class User < ActiveRecord::Base
   belongs_to :secret_picture
   before_create :generate_secret_picture
   
-  belongs_to :secret_word_1, class_name: SecretWord
-  belongs_to :secret_word_2, class_name: SecretWord
   before_create :generate_secret_words
 
   # a bit of trickery to sort most recently started/assigned/progressed scripts first and then completed
@@ -460,14 +458,8 @@ SQL
     save!
   end
 
-  def secret_words
-    return nil unless secret_word_1 && secret_word_2
-    "#{secret_word_1.word} #{secret_word_2.word}"
-  end
-
   def generate_secret_words
-    self.secret_word_1 = SecretWord.random
-    self.secret_word_2 = SecretWord.random
+    self.secret_words = [SecretWord.random, SecretWord.random].join(" ")
   end
 
   def reset_secret_words

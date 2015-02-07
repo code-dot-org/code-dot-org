@@ -11,6 +11,7 @@ var baseOptions = {
       wrapExistingClipPaths();
       handleClipPathChanges();
     }
+    $(document).trigger('appInitialized');
   },
   createCallouts: function() {
     $.fn.qtip.zindex = 500;

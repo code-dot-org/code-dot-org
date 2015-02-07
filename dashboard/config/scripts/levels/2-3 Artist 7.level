@@ -95,51 +95,45 @@
               <title name="DIR">moveForward</title>
               <title name="VALUE">25</title>
               <next>
-                <block type="draw_move_by_constant">
-                  <title name="DIR">moveBackward</title>
-                  <title name="VALUE">25</title>
+                <block type="draw_turn_by_constant">
+                  <title name="DIR">turnLeft</title>
+                  <title name="VALUE">90</title>
                   <next>
-                    <block type="draw_turn_by_constant">
-                      <title name="DIR">turnLeft</title>
-                      <title name="VALUE">90</title>
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">25</title>
                       <next>
-                        <block type="draw_move_by_constant">
-                          <title name="DIR">moveForward</title>
-                          <title name="VALUE">25</title>
+                        <block type="draw_turn_by_constant">
+                          <title name="DIR">turnLeft</title>
+                          <title name="VALUE">90</title>
                           <next>
-                            <block type="draw_turn_by_constant">
-                              <title name="DIR">turnRight</title>
-                              <title name="VALUE">90</title>
+                            <block type="draw_move_by_constant">
+                              <title name="DIR">moveForward</title>
+                              <title name="VALUE">25</title>
                               <next>
-                                <block type="draw_move_by_constant">
-                                  <title name="DIR">moveForward</title>
-                                  <title name="VALUE">25</title>
+                                <block type="draw_turn_by_constant">
+                                  <title name="DIR">turnLeft</title>
+                                  <title name="VALUE">90</title>
                                   <next>
-                                    <block type="draw_turn_by_constant">
-                                      <title name="DIR">turnRight</title>
-                                      <title name="VALUE">90</title>
+                                    <block type="draw_move_by_constant">
+                                      <title name="DIR">moveForward</title>
+                                      <title name="VALUE">50</title>
                                       <next>
-                                        <block type="draw_move_by_constant">
-                                          <title name="DIR">moveForward</title>
-                                          <title name="VALUE">50</title>
+                                        <block type="draw_turn_by_constant">
+                                          <title name="DIR">turnLeft</title>
+                                          <title name="VALUE">90</title>
                                           <next>
-                                            <block type="draw_turn_by_constant">
-                                              <title name="DIR">turnRight</title>
-                                              <title name="VALUE">90</title>
+                                            <block type="draw_move_by_constant">
+                                              <title name="DIR">moveForward</title>
+                                              <title name="VALUE">25</title>
                                               <next>
-                                                <block type="draw_move_by_constant">
-                                                  <title name="DIR">moveForward</title>
-                                                  <title name="VALUE">25</title>
+                                                <block type="draw_turn_by_constant">
+                                                  <title name="DIR">turnLeft</title>
+                                                  <title name="VALUE">90</title>
                                                   <next>
-                                                    <block type="draw_turn_by_constant">
-                                                      <title name="DIR">turnRight</title>
-                                                      <title name="VALUE">90</title>
-                                                      <next>
-                                                        <block type="draw_move_by_constant">
-                                                          <title name="DIR">moveForward</title>
-                                                          <title name="VALUE">25</title>
-                                                        </block>
-                                                      </next>
+                                                    <block type="draw_move_by_constant">
+                                                      <title name="DIR">moveForward</title>
+                                                      <title name="VALUE">25</title>
                                                     </block>
                                                   </next>
                                                 </block>
