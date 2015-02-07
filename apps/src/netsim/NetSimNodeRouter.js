@@ -119,7 +119,7 @@ var RouterStatus = NetSimNodeRouter.RouterStatus;
 /**
  * Updates router status and lastPing time in lobby table - both keepAlive
  * and making sure router's connection count is valid.
- * @param onComplete
+ * @param {function} [onComplete] - Optional success/failure callback
  */
 NetSimNodeRouter.prototype.update = function (onComplete) {
   onComplete = onComplete || function () {};
@@ -157,7 +157,7 @@ NetSimNodeRouter.prototype.setSimulateForSender = function (nodeID) {
 
 /**
  * Helper for getting wires table of configured shard.
- * @returns {exports.SharedTable}
+ * @returns {NetSimTable}
  */
 NetSimNodeRouter.prototype.getWireTable = function () {
   return this.shard_.wireTable;
@@ -166,7 +166,7 @@ NetSimNodeRouter.prototype.getWireTable = function () {
 /**
  * Query the wires table and pass the callback a list of wire table rows,
  * where all of the rows are wires attached to this router.
- * @param {function} onComplete, which accepts an Array of NetSimWire.
+ * @param {function} onComplete which accepts an Array of NetSimWire.
  */
 NetSimNodeRouter.prototype.getConnections = function (onComplete) {
   onComplete = onComplete || function () {};
@@ -194,7 +194,7 @@ NetSimNodeRouter.prototype.getConnections = function (onComplete) {
 /**
  * Query the wires table and pass the callback the total number of wires
  * connected to this router.
- * @param {function} onComplete, which accepts a number.
+ * @param {function} onComplete which accepts a number.
  */
 NetSimNodeRouter.prototype.countConnections = function (onComplete) {
   onComplete = onComplete || function () {};
@@ -205,7 +205,7 @@ NetSimNodeRouter.prototype.countConnections = function (onComplete) {
 };
 
 /**
- * @param [Array] haystack
+ * @param {Array} haystack
  * @param {*} needle
  * @returns {boolean} TRUE if needle found in haystack
  */
@@ -227,13 +227,15 @@ var contains = function (haystack, needle) {
  *        if connection is allowed, FALSE if connection is rejected.
  */
 NetSimNodeRouter.prototype.acceptConnection = function (otherNode, onComplete) {
+  var self = this;
   this.countConnections(function (count) {
     if (count > MAX_CLIENT_CONNECTIONS) {
       onComplete(false);
       return;
     }
 
-    onComplete(true);
+    // Trigger an update, which will correct our connection count
+    self.update(onComplete);
   });
 };
 

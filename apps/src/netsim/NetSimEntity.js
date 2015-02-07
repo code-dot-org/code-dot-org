@@ -132,7 +132,10 @@ NetSimEntity.get = function (EntityType, entityID, shard, onComplete) {
   });
 };
 
-/** Push entity state into remote storage. */
+/**
+ * Push entity state into remote storage.
+ * @param {function} [onComplete] - Optional success callback.
+ */
 NetSimEntity.prototype.update = function (onComplete) {
   onComplete = onComplete || function () {};
 
