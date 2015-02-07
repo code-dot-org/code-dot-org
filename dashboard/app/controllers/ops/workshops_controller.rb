@@ -21,7 +21,7 @@ module Ops
           @workshops.includes(cohort: :districts).where(districts: {contact_id: current_user.try(:id)})
         elsif current_user.permission?('facilitator')
           # For facilitators, list all workshops they're facilitating.
-          @workshops.where(facilitator: current_user)
+          @workshops.joins(:facilitators).where(facilitators_workshops: {facilitator_id: current_user.try(:id)})
         else
           # For other teachers, list all workshops they're attending.
           @workshops.includes(:teachers).where(users: {id: current_user.try(:id)})

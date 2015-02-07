@@ -182,7 +182,9 @@ Dashboard::Application.routes.draw do
     end
     resources :cohorts
     resources :workshops do
-      resources :segments, shallow: true # See http://guides.rubyonrails.org/routing.html#shallow-nesting
+      resources :segments, shallow: true do # See http://guides.rubyonrails.org/routing.html#shallow-nesting
+        resources :workshop_attendance, path: '/attendance', shallow: true
+      end
     end
   end
 

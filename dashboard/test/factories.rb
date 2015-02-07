@@ -185,6 +185,7 @@ FactoryGirl.define do
 
   factory :cohort do
     districts {[create(:district)]}
+    teachers {[create(:teacher, district: districts.first)]}
   end
 
   factory :district do
@@ -208,5 +209,11 @@ FactoryGirl.define do
     workshop {create :workshop}
     start DateTime.now
     self.send(:end, DateTime.now + 1.day)
+  end
+
+  factory :attendance, class: WorkshopAttendance do
+    segment {create :segment}
+    teacher {create(:teacher, district: segment.workshop.cohort.districts.first)}
+    status 'present'
   end
 end

@@ -62,7 +62,6 @@ module Ops
       patch :update, id: @workshop.id, workshop: {name: new_name}
 
       get :show, id: @workshop.id
-      p @response.body
       assert_equal new_name, JSON.parse(@response.body)['name']
       assert_response :success
     end

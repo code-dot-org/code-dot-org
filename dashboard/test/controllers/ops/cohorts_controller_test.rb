@@ -9,6 +9,11 @@ module Ops
       @cohort = create(:cohort)
     end
 
+    test 'District Contact can add/drop teachers in their district from a cohort' do
+      #87054720
+
+    end
+
     # Test index + CRUD controller actions
 
     test 'Ops team can list all cohorts' do

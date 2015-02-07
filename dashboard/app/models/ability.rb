@@ -24,9 +24,11 @@ class Ability
         :reports,
         User,
         Follower,
+        # Ops models
         District,
         Workshop,
-        Cohort
+        Cohort,
+        WorkshopAttendance
       ]
     end
 

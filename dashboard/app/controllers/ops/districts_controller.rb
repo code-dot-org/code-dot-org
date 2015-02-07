@@ -1,12 +1,14 @@
 module Ops
   class DistrictsController < ::ApplicationController
+    respond_to :html, :xml, :json
+
     # CanCan provides automatic resource loading and authorization for default index + CRUD actions
     check_authorization
     load_and_authorize_resource
 
     # get /ops/districts/1/teachers
     def teachers
-      render json: @district.users.as_json
+      respond_with @district.users
     end
 
     # POST /ops/districts
@@ -17,18 +19,18 @@ module Ops
 
     # GET /ops/districts
     def index
-      render json: @districts.as_json
+      respond_with @districts
     end
 
     # GET /ops/districts/1
     def show
-      render json: @district.as_json
+      respond_with @district
     end
 
     # PATCH/PUT /ops/districts/1
     def update
       @district.update!(params[:district])
-      render json: @district.as_json
+      respond_with @district
     end
 
     # DELETE /ops/districts/1

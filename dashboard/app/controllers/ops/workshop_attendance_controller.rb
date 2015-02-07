@@ -1,7 +1,9 @@
 module Ops
   class WorkshopAttendanceController < ::ApplicationController
     # CanCan provides automatic resource loading and authorization for default index + CRUD actions
-    load_and_authorize_resource
+    load_and_authorize_resource :segment
+    # Load shallow nested resource. See https://github.com/CanCanCommunity/cancancan/wiki/Nested-Resources#shallow-nesting
+    load_and_authorize_resource through: :segment, through_association: :attendances, shallow: true
 
     # POST /ops/attendance/1
     def create
@@ -21,7 +23,7 @@ module Ops
 
     # PATCH/PUT /ops/attendance/1
     def update
-      @workshop_attendance.update!(params[:workshop_attendance])
+      @workshop_attendance.update_attributes(params[:workshop_attendance])
       render json: @workshop_attendance.as_json
     end
 
@@ -37,7 +39,8 @@ module Ops
     def workshop_attendance_params
       params.require(:workshop_attendance).permit(
           :teacher_id,
-          :segment_id
+          :segment_id,
+          :status
       )
     end
   end
