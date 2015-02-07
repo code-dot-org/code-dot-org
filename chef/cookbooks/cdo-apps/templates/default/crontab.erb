@@ -61,7 +61,7 @@ if node['cdo-apps']['daemon']
   end
 
   cronjob at:'*/1 * * * *', do:bin_dir('process_forms')
-  cronjob at:'*/5 * * * *', do:bin_dir('analyze_hoc_activity')
+  cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'analyze_hoc_activity')
   cronjob at:'*/1 * * * *', do:bin_dir('deliver_poste_messages')
   cronjob at:'*/1 * * * *', do:"#{bin_dir('geocode_hoc_activity')} 2>&1 > /dev/null"
 
