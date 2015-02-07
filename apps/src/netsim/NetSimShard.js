@@ -173,17 +173,14 @@ NetSimTable.prototype.updateCacheRow_ = function (id, row) {
  * @constructor
  */
 var NetSimShard = function (shardID) {
-  /** @type {string} */
-  this.shardID = shardID;
+  /** @type {NetSimTable} */
+  this.lobbyTable = new NetSimTable(shardID + '_node');
 
   /** @type {NetSimTable} */
-  this.lobbyTable = new NetSimTable(instanceID + '_node');
+  this.wireTable = new NetSimTable(shardID + '_wire');
 
   /** @type {NetSimTable} */
-  this.wireTable = new NetSimTable(instanceID + '_wire');
-
-  /** @type {NetSimTable} */
-  this.messageTable = new NetSimTable(instanceID + '_message');
+  this.messageTable = new NetSimTable(shardID + '_message');
 };
 
 module.exports = NetSimShard;
