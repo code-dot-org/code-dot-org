@@ -390,3 +390,7 @@ en:
           description_short: Create a story or make a game with Infinity Play Lab!!
           description: Create a story or make a game with Infinity Play Lab!
           Infinity: Infinity
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
