@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require_relative '../../../src/env'
+require File.expand_path('../../pegasus/src/env', __FILE__)
 require 'cdo/hip_chat'
 require 'cdo/solr'
 require src_dir 'forms'
@@ -111,7 +111,7 @@ def main()
 
   HipChat.log messages.join('; ') unless messages.empty?
 
-  system "#{File.expand_path('../deliver_poste_messages', __FILE__).shellescape} 2>&1" unless receipt_count == 0
+  system "#{deploy_dir('bin', 'deliver_poste_messages').shellescape} 2>&1" unless receipt_count == 0
 end
 
 main if only_one_running?(__FILE__)
