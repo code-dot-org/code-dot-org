@@ -29,7 +29,7 @@
  unused: true,
 
  maxlen: 90,
- maxparams: 3,
+ maxparams: 4,
  maxstatements: 200
  */
 /* global $ */
@@ -62,7 +62,7 @@ ApiRequestHelper.prototype.post = function (localUrl, data, callback) {
     contentType: 'application/json; charset=utf-8',
     data: JSON.stringify(data)
   }).done(function (/*result, text*/) {
-    callback(true)
+    callback(true);
   }).fail(function (/*request, status, error*/) {
     callback(false);
   });
@@ -76,7 +76,7 @@ ApiRequestHelper.prototype.postToGet = function (localUrl, data, callback,
     contentType: 'application/json; charset=utf-8',
     data: JSON.stringify(data)
   }).done(function (result /*, text*/) {
-    callback(result)
+    callback(result);
   }).fail(function (/*request, status, error*/) {
     callback(failureValue);
   });
@@ -90,7 +90,7 @@ ApiRequestHelper.prototype.delete = function (localUrl, callback) {
     callback(true);
   }).fail(function (/*request, status, error*/) {
     callback(false);
-  })
+  });
 };
 
 /**
