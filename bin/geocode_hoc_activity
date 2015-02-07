@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require_relative '../../../src/env'
+require File.expand_path('../../pegasus/src/env', __FILE__)
 require src_dir 'database'
 
 BATCH_SIZE = 4000
