@@ -73,7 +73,7 @@ var NetSimNodeClient = function (shard, clientRow) {
   /**
    * Client nodes can be connected to a router, which they will
    * help to simulate.
-   * @type {NetSimRouter}
+   * @type {NetSimNodeRouter}
    */
   this.myRouter = null;
 };
@@ -200,8 +200,8 @@ NetSimNodeClient.prototype.reconnect_ = function (onComplete) {
 };
 
 /**
- * @param {!NetSimRouter} router
- * @param {function} onComplete({boolean}success)
+ * @param {!NetSimNodeRouter} router
+ * @param {function} onComplete (success)
  */
 NetSimNodeClient.prototype.connectToRouter = function (router, onComplete) {
   if (!onComplete) {
@@ -229,8 +229,7 @@ NetSimNodeClient.prototype.connectToRouter = function (router, onComplete) {
 
       self.myWire = wire;
       self.myRouter = router;
-      // Trigger an immediate router update so its connection count is correct.
-      self.myRouter.update(onComplete);
+      onComplete(true);
     });
   });
 };
