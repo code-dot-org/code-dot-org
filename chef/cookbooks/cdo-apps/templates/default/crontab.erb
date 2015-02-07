@@ -60,9 +60,9 @@ if node['cdo-apps']['daemon']
     cronjob at:'@daily', do:pegasus_dir('sites.v3/code.org/bin/send_workshop_reminder_emails'), notify:'rick@code.org'
   end
 
-  cronjob at:'*/1 * * * *', do:bin_dir('process_forms')
+  cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'process_forms')
   cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'analyze_hoc_activity')
-  cronjob at:'*/1 * * * *', do:bin_dir('deliver_poste_messages')
+  cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'deliver_poste_messages')
   cronjob at:'*/1 * * * *', do:"#{bin_dir('geocode_hoc_activity')} 2>&1 > /dev/null"
 
   build_target = node.chef_environment == 'test' ? 'test-websites' : 'websites'
