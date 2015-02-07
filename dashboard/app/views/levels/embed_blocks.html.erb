@@ -1,18 +1,19 @@
 <%- # Embedded Blockly block html template. Derived from /blockly/src/templates/readonly.html.ejs, converted to erb %>
-<%- blockly_path = "#{ActionController::Base.asset_host}/blockly/" %>
-<%- options = @options %>
-<%- app = @app %>
+<%- options = local_assigns %>
+<%- blockly_path = options[:baseUrl] %>
+<%- app = options.delete :app %>
 <!DOCTYPE html>
 <html dir="<%= locale_dir %>">
 <head>
   <meta charset="utf-8">
   <title>Blockly</title>
+  <link href="<%= "#{blockly_path}css/common.css" %>" media="all" rel="stylesheet">
   <script type="text/javascript" src="<%= "#{blockly_path}js/blockly.js" %>"></script>
   <script type="text/javascript" src="<%= "#{blockly_path}js/#{options[:locale]}/blockly_locale.js" %>"></script>
   <script type="text/javascript" src="<%= "#{blockly_path}js/common.js" %>"></script>
   <script type="text/javascript" src="<%= "#{blockly_path}js/#{options[:locale]}/common_locale.js" %>"></script>
-  <script type="text/javascript" src="<%= "#{blockly_path}js/#{app}.js" %>"></script>
   <script type="text/javascript" src="<%= "#{blockly_path}js/#{options[:locale]}/#{app}_locale.js" %>"></script>
+  <script type="text/javascript" src="<%= "#{blockly_path}js/#{app}.js" %>"></script>
   <script type="text/javascript">
     <% # delay to onload to fix IE9. %>
     window.onload = function() {
@@ -20,33 +21,7 @@
     };
   </script>
 </head>
-<body>
-<div id="blockly" class="readonly"></div>
-<style>
-  html, body {
-    background-color: transparent;
-    margin: 0;
-    padding:0;
-    overflow: hidden;
-    height: 100%;
-    font-family: 'Gotham A', 'Gotham B', sans-serif;
-  }
-  .blocklyText, .blocklyMenuText, .blocklyTreeLabel, .blocklyHtmlInput,
-  .blocklyIconMark, .blocklyTooltipText, .goog-menuitem-content {
-    font-family: 'Gotham A', 'Gotham B', sans-serif;
-  }
-  #blockly>svg {
-    background-color: transparent;
-    border: none;
-  }
-  #blockly {
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    height: 100%;
-    width: 100%;
-  }
-</style>
+<body class="readonly embed-block">
+<div id="blockly"></div>
 </body>
 </html>

@@ -19,7 +19,8 @@
     "impressive": "false",
     "start_direction": "90",
     "x": "175",
-    "y": "250"
+    "y": "250",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>

@@ -8,7 +8,7 @@
     "skin": "eval",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Here's a Design Recipe for a function called \"square circle\" with domain Number String and range Image. Look at the two examples we've provided and write the function definition.",
+    "instructions": "Here's a Design Recipe for a function called \"square-circle\" with domain Number String and range Image. Look at the two examples we've provided and write the function definition.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -16,7 +16,8 @@
     "use_modal_function_editor": "false",
     "free_play": "false",
     "default_num_example_blocks": "2",
-    "min_workspace_height": "1500"
+    "min_workspace_height": "1500",
+    "callout_json": "[\r\n  {\"localization_key\":\"edit_function\",\"element_id\":\"[block-id='18'] > .blocklyIconGroup\",\"qtip_config\":{\"position\":{\"adjust\":{},\"my\":\"top left\",\"at\":\"right center\"},\"style\":{}}}\r\n]"
   }
 }]]></config>
   <blocks>
@@ -25,7 +26,7 @@
         <block type="functional_display" inline="false" deletable="false" movable="false">
           <functional_input name="ARG1">
             <block type="functional_call" inline="false" movable="false">
-              <mutation name="square circle">
+              <mutation name="square-circle">
                 <arg name="size" type="Number"/>
                 <arg name="color" type="string"/>
               </mutation>
@@ -49,7 +50,7 @@
             <description>Output a white circle bounded by a square of given size and color</description>
             <outputtype>image</outputtype>
           </mutation>
-          <title name="NAME">square circle</title>
+          <title name="NAME">square-circle</title>
         </block>
         <block type="functional_example" inline="false" uservisible="false">
           <functional_input name="EXPECTED">
@@ -96,7 +97,7 @@
           </functional_input>
           <functional_input name="ACTUAL">
             <block type="functional_call" inline="false" uservisible="false">
-              <mutation name="square circle">
+              <mutation name="square-circle">
                 <arg name="size" type="Number"/>
                 <arg name="color" type="string"/>
               </mutation>
@@ -158,7 +159,7 @@
           </functional_input>
           <functional_input name="ACTUAL">
             <block type="functional_call" inline="false" uservisible="false">
-              <mutation name="square circle">
+              <mutation name="square-circle">
                 <arg name="size" type="Number"/>
                 <arg name="color" type="string"/>
               </mutation>
