@@ -388,6 +388,14 @@ exports.turtlePenDown = function (blockId) {
   return Applab.executeCmd(blockId, 'turtlePenDown');
 };
 
+exports.turtleShow = function (blockId) {
+  return Applab.executeCmd(blockId, 'turtleShow');
+};
+
+exports.turtleHide = function (blockId) {
+  return Applab.executeCmd(blockId, 'turtleHide');
+};
+
 exports.turtlePenWidth = function (blockId, width) {
   return Applab.executeCmd(blockId,
                           'turtlePenWidth',

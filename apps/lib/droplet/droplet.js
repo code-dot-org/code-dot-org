@@ -7439,6 +7439,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       'MemberExpression': 'value',
       'IfStatement': 'control',
       'ForStatement': 'control',
+      'ForInStatement': 'control',
       'UpdateExpression': 'command',
       'VariableDeclaration': 'command',
       'LogicalExpression': 'value',
@@ -7758,6 +7759,15 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
               this.jsSocketAndMark(indentDepth, node.update, depth + 1, 10);
             }
             return this.mark(indentDepth, node.body, depth + 1);
+          case 'ForInStatement':
+            this.jsBlock(node, depth, bounds);
+            if (node.left != null) {
+              this.jsSocketAndMark(indentDepth, node.left, depth + 1, NEVER_PAREN, null, ['foreach-lhs']);
+            }
+            if (node.right != null) {
+              this.jsSocketAndMark(indentDepth, node.right, depth + 1, 10);
+            }
+            return this.mark(indentDepth, node.body, depth + 1);
           case 'BlockStatement':
             prefix = this.getIndentPrefix(this.getBounds(node), indentDepth);
             indentDepth += prefix.length;
@@ -7905,6 +7915,11 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
               }
             }
             return _results10;
+            break;
+          case 'Literal':
+            return null;
+          default:
+            return console.log('Unrecognized', node);
         }
       };
 
@@ -8104,7 +8119,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       'resize_palette': [],
       'redraw_main': [],
       'redraw_palette': [],
-      'set_palette': [],
+      'rebuild_palette': [],
       'mousedown': [],
       'mousemove': [],
       'mouseup': [],
@@ -8176,6 +8191,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
           ctx: this.mainCtx,
           draw: this.draw
         };
+        this.bindings = {};
         this.view = new view.View(extend_(this.standardViewSettings, {
           respectEphemeral: true
         }));
@@ -8263,7 +8279,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         this.tree.start.insert(this.cursor);
         this.resizeBlockMode();
         this.redrawMain();
-        this.redrawPalette();
+        this.rebuildPalette();
         if (this.mode == null) {
           this.setEditorState(false);
         }
@@ -8338,7 +8354,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         }
         this.paletteCtx.setTransform(1, 0, 0, 1, -this.scrollOffsets.palette.x, -this.scrollOffsets.palette.y);
         this.paletteHighlightCtx.setTransform(1, 0, 0, 1, -this.scrollOffsets.palette.x, -this.scrollOffsets.palette.y);
-        return this.redrawPalette();
+        return this.rebuildPalette();
       };
 
       return Editor;
@@ -8499,6 +8515,17 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       _results = [];
       for (_j = 0, _len1 = _ref2.length; _j < _len1; _j++) {
         binding = _ref2[_j];
+        _results.push(binding.call(this));
+      }
+      return _results;
+    };
+    Editor.prototype.rebuildPalette = function() {
+      var binding, _i, _len, _ref1, _results;
+      this.redrawPalette();
+      _ref1 = editorBindings.rebuild_palette;
+      _results = [];
+      for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
+        binding = _ref1[_i];
         _results.push(binding.call(this));
       }
       return _results;
@@ -9249,18 +9276,10 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
             _this.currentPaletteGroupHeader = paletteGroupHeader;
             _this.currentPaletteIndex = i;
             _this.currentPaletteGroupHeader.className += ' droplet-palette-group-header-selected';
-            return _this.redrawPalette();
+            return _this.rebuildPalette();
           };
           clickHandler = function() {
-            var event, _k, _len2, _ref3, _results;
-            updatePalette();
-            _ref3 = editorBindings.set_palette;
-            _results = [];
-            for (_k = 0, _len2 = _ref3.length; _k < _len2; _k++) {
-              event = _ref3[_k];
-              _results.push(event.call(_this));
-            }
-            return _results;
+            return updatePalette();
           };
           paletteGroupHeader.addEventListener('click', clickHandler);
           paletteGroupHeader.addEventListener('touchstart', clickHandler);
@@ -9320,7 +9339,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         return this.paletteHighlightPath.draw(this.paletteHighlightCtx);
       }
     });
-    hook('redraw_palette', 0, function() {
+    hook('rebuild_palette', 1, function() {
       var block, bounds, data, hoverDiv, _fn, _i, _len, _ref1, _ref2, _results;
       this.paletteScrollerStuffing.innerHTML = '';
       this.currentHighlightedPaletteBlock = null;
@@ -10871,6 +10890,11 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       this.mainScrollerStuffing.className = 'droplet-main-scroller-stuffing';
       this.mainScroller.appendChild(this.mainScrollerStuffing);
       this.dropletElement.appendChild(this.mainScroller);
+      this.wrapperElement.addEventListener('scroll', (function(_this) {
+        return function() {
+          return _this.wrapperElement.scrollTop = _this.wrapperElement.scrollLeft = 0;
+        };
+      })(this));
       this.mainScroller.addEventListener('scroll', (function(_this) {
         return function() {
           _this.scrollOffsets.main.y = _this.mainScroller.scrollTop;
@@ -10942,7 +10966,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         this.dragView.clearCache();
         this.gutter.style.width = this.aceEditor.renderer.$gutterLayer.gutterWidth + 'px';
         this.redrawMain();
-        return this.redrawPalette();
+        return this.rebuildPalette();
       }
     };
     Editor.prototype.setFontFamily = function(fontFamily) {
@@ -10954,7 +10978,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       this.dragView.clearCache();
       this.gutter.style.fontFamily = fontFamily;
       this.redrawMain();
-      return this.redrawPalette();
+      return this.rebuildPalette();
     };
     Editor.prototype.setFontSize = function(fontSize) {
       this.setFontSize_raw(fontSize);
@@ -11153,9 +11177,6 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         return this.lastAceSeenValue = value;
       }
     };
-    hook('populate', 0, function() {
-      return this.bindings = {};
-    });
     Editor.prototype.on = function(event, handler) {
       return this.bindings[event] = handler;
     };
@@ -11225,7 +11246,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       this.clearDrag();
       this.redrawMain();
     };
-    hook('set_palette', 0, function() {
+    hook('rebuild_palette', 0, function() {
       return this.fireEvent('changepalette', []);
     });
     touchEvents = {

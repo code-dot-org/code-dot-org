@@ -100,6 +100,12 @@ module.exports = {
           new Equation(null, [], new ExpressionNode(1))
         );
 
+        // float instead of int
+        validateGeneratedEquation(assert,
+          blockUtils.mathBlockXml('functional_math_number', null, { NUM: 1.2 } ),
+          new Equation(null, [], new ExpressionNode(1.2))
+        );
+
         validateGeneratedEquation(assert,
           blockUtils.mathBlockXml('functional_math_number_dropdown', null, { NUM: 1 } ),
           new Equation(null, [], new ExpressionNode(1))

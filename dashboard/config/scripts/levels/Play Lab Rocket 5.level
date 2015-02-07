@@ -6,10 +6,10 @@
   "user_id": 1,
   "properties": {
     "skin": "studio",
-    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n  return ((Studio.Globals.time == 5 && Studio.Globals.height == 375) && (Studio.Globals.rocket_height(2) == 60));\r\n}",
-    "failure_condition": "function () {\r\n  return ((Studio.Globals.time > 5) && ((Studio.Globals.rocket_height(5) != 375) || (Studio.Globals.rocket_height(2) != 60) || (Studio.Globals.rocket_height(10) != 1500)));\r\n }",
+    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n  return ((Studio.Globals.time == 6 && Studio.Globals.height == 370) && (Studio.Globals.rocket_height(2) == 50));\r\n}",
+    "failure_condition": "function () {\r\n  return ((Studio.Globals.time > 6) && ((Studio.Globals.rocket_height(2) != 50) || (Studio.Globals.rocket_height(3) != 100) || (Studio.Globals.rocket_height(10) != 1010)));\r\n }",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "instructions": "That's much better, but I think our rocket can go faster than 1 m/s^2 - let's write a function that accelerates the rocket at 10 m/s^2.",
+    "instructions": "Much better, but let's write one more function with simple acceleration. This time the rocket should be 20 meters at 1 second, 50 meters at 2 seconds, 100 at 3 seconds, and 170 at 4 seconds.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -29,51 +29,45 @@
     "min_workspace_height": "1000",
     "default_num_example_blocks": "2",
     "disable_sharing": "false",
+    "generate_function_pass_blocks": "true",
+    "timeout_after_when_run": "false",
     "maze_data": null
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="functional_start_setValue" inline="false">
-          <functional_input name="VALUE">
-            <block type="functional_call" inline="false">
-              <mutation name="rocket-height">
-                <arg name="seconds" type="Number"/>
-              </mutation>
-              <functional_input name="ARG0">
-                <block type="functional_call">
-                  <mutation name="time-elapsed"/>
-                </block>
-              </functional_input>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_example" inline="false" uservisible="false">
-          <functional_input name="ACTUAL">
-            <block type="functional_call" inline="false" uservisible="false">
-              <mutation name="rocket-height">
-                <arg name="seconds" type="Number"/>
-              </mutation>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_example" inline="false" uservisible="false">
-          <functional_input name="ACTUAL">
-            <block type="functional_call" inline="false" uservisible="false">
-              <mutation name="rocket-height">
-                <arg name="seconds" type="Number"/>
-              </mutation>
-            </block>
-          </functional_input>
-        </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
             <arg name="seconds" type="Number"/>
-            <description>Given a Number "seconds," return the height of a rocket traveling at 10 m/s^2.</description>
             <outputtype>Number</outputtype>
           </mutation>
           <title name="NAME">rocket-height</title>
+        </block>
+        <block type="functional_start_setValue" inline="false">
+          <functional_input name="VALUE">
+            <block type="functional_pass">
+              <mutation name="rocket-height"/>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_example" inline="false" uservisible="false">
+          <functional_input name="ACTUAL">
+            <block type="functional_call" inline="false" uservisible="false">
+              <mutation name="rocket-height">
+                <arg name="seconds" type="Number"/>
+              </mutation>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_example" inline="false" uservisible="false">
+          <functional_input name="ACTUAL">
+            <block type="functional_call" inline="false" uservisible="false">
+              <mutation name="rocket-height">
+                <arg name="seconds" type="Number"/>
+              </mutation>
+            </block>
+          </functional_input>
         </block>
         <block type="when_run" uservisible="false">
           <next>
@@ -101,13 +95,6 @@
               </next>
             </block>
           </next>
-        </block>
-        <block type="functional_definition" inline="false" uservisible="false">
-          <mutation>
-            <outputtype>Number</outputtype>
-            <isfunctionalvariable>true</isfunctionalvariable>
-          </mutation>
-          <title name="NAME">time-elapsed</title>
         </block>
         <block type="studio_repeatForever" uservisible="false">
           <statement name="DO">
@@ -222,7 +209,7 @@
           <block type="functional_definition" inline="false" uservisible="false">
             <mutation>
               <arg name="seconds" type="Number"/>
-              <description>Given a Number "seconds," return the height of a rocket traveling at 15 meters per second.</description>
+              <description/>
               <outputtype>Number</outputtype>
             </mutation>
             <title name="NAME">rocket-height</title>

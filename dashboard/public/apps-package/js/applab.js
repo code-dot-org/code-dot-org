@@ -35,7 +35,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":125}],12:[function(require,module,exports){
+},{"../skins":126}],12:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/applab');
@@ -77,14 +77,8 @@ levels.ec_simple = {
     'setTimeout': null,
     'clearTimeout': null,
     'playSound': null,
-    'createHtmlBlock': null,
-    'replaceHtmlBlock': null,
     'deleteHtmlBlock': null,
-    'setParent': null,
     'setPosition': null,
-    'setStyle': null,
-    'getAttribute': null,
-    'setAttribute': null,
     'createButton': null,
     'createTextInput': null,
     'createTextLabel': null,
@@ -126,8 +120,20 @@ levels.ec_simple = {
     'turtlePenDown': null,
     'turtlePenWidth': null,
     'turtlePenColor': null,
+    'turtleShow': null,
+    'turtleHide': null,
   },
 };
+
+// Functions in Advanced category currently disabled in all levels:
+/*
+ 'createHtmlBlock': null,
+ 'replaceHtmlBlock': null,
+ 'setStyle': null,
+ 'getAttribute': null,
+ 'setAttribute': null,
+ 'setParent': null,
+*/
 
 levels.full_sandbox =  {
   'scrollbars' : true,
@@ -212,7 +218,7 @@ levels.full_sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-},{"../../locale/current/applab":167,"../block_utils":16,"../utils":165}],6:[function(require,module,exports){
+},{"../../locale/current/applab":168,"../block_utils":16,"../utils":166}],6:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -490,9 +496,31 @@ Applab.onTick = function() {
   Applab.tickCount++;
   queueOnTick();
 
-  var atInitialBreakpoint = Applab.paused && Applab.nextStep === StepType.IN && Applab.tickCount === 1;
+  if (Applab.interpreter) {
+    Applab.executeInterpreter();
+  } else {
+    if (Applab.tickCount === 1) {
+      try { Applab.whenRunFunc(studioApp, api, Applab.Globals); } catch (e) { }
+    }
+  }
+
+  if (checkFinished()) {
+    Applab.onPuzzleComplete();
+  }
+};
+
+Applab.executeInterpreter = function (runUntilCallbackReturn) {
+  Applab.runUntilCallbackReturn = runUntilCallbackReturn;
+  if (runUntilCallbackReturn) {
+    delete Applab.lastCallbackRetVal;
+  }
+  Applab.seenEmptyGetCallbackDuringExecution = false;
+  Applab.seenReturnFromCallbackDuringExecution = false;
+
+  var atInitialBreakpoint = Applab.paused &&
+                            Applab.nextStep === StepType.IN &&
+                            Applab.tickCount === 1;
   var atMaxSpeed = getCurrentTickLength() === 0;
-  Applab.seenEmptyGetCallbackThisTick = false;
 
   if (Applab.paused) {
     switch (Applab.nextStep) {
@@ -517,183 +545,175 @@ Applab.onTick = function() {
     }
   }
 
-  if (Applab.interpreter) {
-    var doneUserLine = false;
-    var reachedBreak = false;
-    var unwindingAfterStep = false;
-    var inUserCode;
-    var userCodeRow;
-    var session = studioApp.editor.aceEditor.getSession();
-    // NOTE: when running with no source visible or at max speed with blocks, we
-    // call a simple function to just get the line number, otherwise we call a
-    // function that also selects the code:
-    var selectCodeFunc =
-      (studioApp.hideSource ||
-       (atMaxSpeed && !Applab.paused && studioApp.editor.currentlyUsingBlocks)) ?
-            codegen.getUserCodeLine :
-            codegen.selectCurrentCode;
+  var doneUserLine = false;
+  var reachedBreak = false;
+  var unwindingAfterStep = false;
+  var inUserCode;
+  var userCodeRow;
+  var session = studioApp.editor.aceEditor.getSession();
+  // NOTE: when running with no source visible or at max speed with blocks, we
+  // call a simple function to just get the line number, otherwise we call a
+  // function that also selects the code:
+  var selectCodeFunc =
+    (studioApp.hideSource ||
+     (atMaxSpeed && !Applab.paused && studioApp.editor.currentlyUsingBlocks)) ?
+          codegen.getUserCodeLine :
+          codegen.selectCurrentCode;
 
-    // In each tick, we will step the interpreter multiple times in a tight
-    // loop as long as we are interpreting code that the user can't see
-    // (function aliases at the beginning, getCallback event loop at the end)
-    for (var stepsThisTick = 0;
-         (stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK) || unwindingAfterStep;
-         stepsThisTick++) {
-      if ((reachedBreak && !unwindingAfterStep) ||
-          (doneUserLine && !atMaxSpeed) ||
-          Applab.seenEmptyGetCallbackThisTick) {
-        // stop stepping the interpreter and wait until the next tick once we:
-        // (1) reached a breakpoint and are done unwinding OR
-        // (2) completed a line of user code (while not running atMaxSpeed) OR
-        // (3) have seen an empty event queue in nativeGetCallback (no events)
-        break;
+  // In each tick, we will step the interpreter multiple times in a tight
+  // loop as long as we are interpreting code that the user can't see
+  // (function aliases at the beginning, getCallback event loop at the end)
+  for (var stepsThisTick = 0;
+       (stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK) || unwindingAfterStep;
+       stepsThisTick++) {
+    if ((reachedBreak && !unwindingAfterStep) ||
+        (doneUserLine && !atMaxSpeed) ||
+        Applab.seenEmptyGetCallbackDuringExecution ||
+        (runUntilCallbackReturn && Applab.seenReturnFromCallbackDuringExecution)) {
+      // stop stepping the interpreter and wait until the next tick once we:
+      // (1) reached a breakpoint and are done unwinding OR
+      // (2) completed a line of user code (while not running atMaxSpeed) OR
+      // (3) have seen an empty event queue in nativeGetCallback (no events) OR
+      // (4) have seen a nativeSetCallbackRetVal call in runUntilCallbackReturn mode
+      break;
+    }
+    userCodeRow = selectCodeFunc(Applab.interpreter,
+                                 Applab.cumulativeLength,
+                                 Applab.userCodeStartOffset,
+                                 Applab.userCodeLength,
+                                 studioApp.editor);
+    inUserCode = (-1 !== userCodeRow);
+    // Check to see if we've arrived at a new breakpoint:
+    //  (1) should be in user code
+    //  (2) should never happen while unwinding
+    //  (3) requires either
+    //   (a) atInitialBreakpoint OR
+    //   (b) isAceBreakpointRow() AND not still at the same line number where
+    //       we have already stopped from the last step/breakpoint
+    if (inUserCode && !unwindingAfterStep &&
+        (atInitialBreakpoint ||
+         (userCodeRow !== Applab.stoppedAtBreakpointRow &&
+          codegen.isAceBreakpointRow(session, userCodeRow)))) {
+      // Yes, arrived at a new breakpoint:
+      if (Applab.paused) {
+        // Overwrite the nextStep value. (If we hit a breakpoint during a step
+        // out or step over, this will cancel that step operation early)
+        Applab.nextStep = StepType.RUN;
+      } else {
+        Applab.onPauseButton();
       }
-      userCodeRow = selectCodeFunc(Applab.interpreter,
-                                   Applab.cumulativeLength,
-                                   Applab.userCodeStartOffset,
-                                   Applab.userCodeLength,
-                                   studioApp.editor);
-      inUserCode = (-1 !== userCodeRow);
-      // Check to see if we've arrived at a new breakpoint:
-      //  (1) should be in user code
-      //  (2) should never happen while unwinding
-      //  (3) requires either
-      //   (a) atInitialBreakpoint OR
-      //   (b) isAceBreakpointRow() AND not still at the same line number where
-      //       we have already stopped from the last step/breakpoint
-      if (inUserCode && !unwindingAfterStep &&
-          (atInitialBreakpoint ||
-           (userCodeRow !== Applab.stoppedAtBreakpointRow &&
-            codegen.isAceBreakpointRow(session, userCodeRow)))) {
-        // Yes, arrived at a new breakpoint:
-        if (Applab.paused) {
-          // Overwrite the nextStep value. (If we hit a breakpoint during a step
-          // out or step over, this will cancel that step operation early)
-          Applab.nextStep = StepType.RUN;
-        } else {
-          Applab.onPauseButton();
-        }
-        // Store some properties about where we stopped:
-        Applab.stoppedAtBreakpointRow = userCodeRow;
-        Applab.stoppedAtBreakpointStackDepth = Applab.interpreter.stateStack.length;
+      // Store some properties about where we stopped:
+      Applab.stoppedAtBreakpointRow = userCodeRow;
+      Applab.stoppedAtBreakpointStackDepth = Applab.interpreter.stateStack.length;
 
-        // Mark reachedBreak to stop stepping, and start unwinding if needed:
-        reachedBreak = true;
-        unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(Applab.interpreter);
-        continue;
+      // Mark reachedBreak to stop stepping, and start unwinding if needed:
+      reachedBreak = true;
+      unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(Applab.interpreter);
+      continue;
+    }
+    // If we've moved past the place of the last breakpoint hit without being
+    // deeper in the stack, we will discard the stoppedAtBreakpoint properties:
+    if (inUserCode &&
+        userCodeRow !== Applab.stoppedAtBreakpointRow &&
+        Applab.interpreter.stateStack.length <= Applab.stoppedAtBreakpointStackDepth) {
+      delete Applab.stoppedAtBreakpointRow;
+      delete Applab.stoppedAtBreakpointStackDepth;
+    }
+    // If we're unwinding, continue to update the stoppedAtBreakpoint properties
+    // to ensure that we have the right properties stored when the unwind completes:
+    if (inUserCode && unwindingAfterStep) {
+      Applab.stoppedAtBreakpointRow = userCodeRow;
+      Applab.stoppedAtBreakpointStackDepth = Applab.interpreter.stateStack.length;
+    }
+    try {
+      Applab.interpreter.step();
+      doneUserLine = doneUserLine ||
+        (inUserCode && Applab.interpreter.stateStack[0] && Applab.interpreter.stateStack[0].done);
+
+      // Remember the stack depths of call expressions (so we can implement 'step out')
+
+      // Truncate any history of call expressions seen deeper than our current stack position:
+      Applab.callExpressionSeenAtDepth.length = Applab.interpreter.stateStack.length + 1;
+
+      if (inUserCode && Applab.interpreter.stateStack[0].node.type === "CallExpression") {
+        // Store that we've seen a call expression at this depth in callExpressionSeenAtDepth:
+        Applab.callExpressionSeenAtDepth[Applab.interpreter.stateStack.length] = true;
       }
-      // If we've moved past the place of the last breakpoint hit without being
-      // deeper in the stack, we will discard the stoppedAtBreakpoint properties:
-      if (inUserCode &&
-          userCodeRow !== Applab.stoppedAtBreakpointRow &&
-          Applab.interpreter.stateStack.length <= Applab.stoppedAtBreakpointStackDepth) {
-        delete Applab.stoppedAtBreakpointRow;
-        delete Applab.stoppedAtBreakpointStackDepth;
-      }
-      // If we're unwinding, continue to update the stoppedAtBreakpoint properties
-      // to ensure that we have the right properties stored when the unwind completes:
-      if (inUserCode && unwindingAfterStep) {
-        Applab.stoppedAtBreakpointRow = userCodeRow;
-        Applab.stoppedAtBreakpointStackDepth = Applab.interpreter.stateStack.length;
-      }
-      try {
-        Applab.interpreter.step();
-        doneUserLine = doneUserLine ||
-          (inUserCode && Applab.interpreter.stateStack[0] && Applab.interpreter.stateStack[0].done);
 
-        // Remember the stack depths of call expressions (so we can implement 'step out')
-
-        // Truncate any history of call expressions seen deeper than our current stack position:
-        Applab.callExpressionSeenAtDepth.length = Applab.interpreter.stateStack.length + 1;
-
+      if (Applab.paused) {
+        // Store the first call expression stack depth seen while in this step operation:
         if (inUserCode && Applab.interpreter.stateStack[0].node.type === "CallExpression") {
-          // Store that we've seen a call expression at this depth in callExpressionSeenAtDepth:
-          Applab.callExpressionSeenAtDepth[Applab.interpreter.stateStack.length] = true;
+          if (typeof Applab.firstCallStackDepthThisStep === 'undefined') {
+            Applab.firstCallStackDepthThisStep = Applab.interpreter.stateStack.length;
+          }
         }
-
-        if (Applab.paused) {
-          // Store the first call expression stack depth seen while in this step operation:
-          if (inUserCode && Applab.interpreter.stateStack[0].node.type === "CallExpression") {
-            if (typeof Applab.firstCallStackDepthThisStep === 'undefined') {
-              Applab.firstCallStackDepthThisStep = Applab.interpreter.stateStack.length;
+        // For the step in case, we want to stop the interpreter as soon as we enter the callee:
+        if (!doneUserLine &&
+            inUserCode &&
+            Applab.nextStep === StepType.IN &&
+            Applab.interpreter.stateStack.length > Applab.firstCallStackDepthThisStep) {
+          reachedBreak = true;
+        }
+        // After the interpreter says a node is "done" (meaning it is time to stop), we will
+        // advance a little further to the start of the next statement. We achieve this by
+        // continuing to set unwindingAfterStep to true to keep the loop going:
+        if (doneUserLine || reachedBreak) {
+          var wasUnwinding = unwindingAfterStep;
+          // step() additional times if we know it to be safe to get us to the next statement:
+          unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(Applab.interpreter);
+          if (wasUnwinding && !unwindingAfterStep) {
+            // done unwinding.. select code that is next to execute:
+            userCodeRow = selectCodeFunc(Applab.interpreter,
+                                         Applab.cumulativeLength,
+                                         Applab.userCodeStartOffset,
+                                         Applab.userCodeLength,
+                                         studioApp.editor);
+            inUserCode = (-1 !== userCodeRow);
+            if (!inUserCode) {
+              // not in user code, so keep unwinding after all...
+              unwindingAfterStep = true;
             }
           }
-          // For the step in case, we want to stop the interpreter as soon as we enter the callee:
-          if (!doneUserLine &&
-              inUserCode &&
-              Applab.nextStep === StepType.IN &&
+        }
+
+        if ((reachedBreak || doneUserLine) && !unwindingAfterStep) {
+          if (Applab.nextStep === StepType.OUT &&
+              Applab.interpreter.stateStack.length > Applab.stepOutToStackDepth) {
+            // trying to step out, but we didn't get out yet... continue on.
+          } else if (Applab.nextStep === StepType.OVER &&
+              typeof Applab.firstCallStackDepthThisStep !== 'undefined' &&
               Applab.interpreter.stateStack.length > Applab.firstCallStackDepthThisStep) {
-            reachedBreak = true;
-          }
-          // After the interpreter says a node is "done" (meaning it is time to stop), we will
-          // advance a little further to the start of the next statement. We achieve this by
-          // continuing to set unwindingAfterStep to true to keep the loop going:
-          if (doneUserLine || reachedBreak) {
-            var wasUnwinding = unwindingAfterStep;
-            // step() additional times if we know it to be safe to get us to the next statement:
-            unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(Applab.interpreter);
-            if (wasUnwinding && !unwindingAfterStep) {
-              // done unwinding.. select code that is next to execute:
-              userCodeRow = selectCodeFunc(Applab.interpreter,
-                                           Applab.cumulativeLength,
-                                           Applab.userCodeStartOffset,
-                                           Applab.userCodeLength,
-                                           studioApp.editor);
-              inUserCode = (-1 !== userCodeRow);
-              if (!inUserCode) {
-                // not in user code, so keep unwinding after all...
-                unwindingAfterStep = true;
-              }
+            // trying to step over, and we're in deeper inside a function call... continue next onTick
+          } else {
+            // Our step operation is complete, reset nextStep to StepType.RUN to
+            // return to a normal 'break' state:
+            Applab.nextStep = StepType.RUN;
+            if (inUserCode) {
+              // Store some properties about where we stopped:
+              Applab.stoppedAtBreakpointRow = userCodeRow;
+              Applab.stoppedAtBreakpointStackDepth = Applab.interpreter.stateStack.length;
             }
-          }
-
-          if ((reachedBreak || doneUserLine) && !unwindingAfterStep) {
-            if (Applab.nextStep === StepType.OUT &&
-                Applab.interpreter.stateStack.length > Applab.stepOutToStackDepth) {
-              // trying to step out, but we didn't get out yet... continue on.
-            } else if (Applab.nextStep === StepType.OVER &&
-                typeof Applab.firstCallStackDepthThisStep !== 'undefined' &&
-                Applab.interpreter.stateStack.length > Applab.firstCallStackDepthThisStep) {
-              // trying to step over, and we're in deeper inside a function call... continue next onTick
-            } else {
-              // Our step operation is complete, reset nextStep to StepType.RUN to
-              // return to a normal 'break' state:
-              Applab.nextStep = StepType.RUN;
-              if (inUserCode) {
-                // Store some properties about where we stopped:
-                Applab.stoppedAtBreakpointRow = userCodeRow;
-                Applab.stoppedAtBreakpointStackDepth = Applab.interpreter.stateStack.length;
-              }
-              delete Applab.stepOutToStackDepth;
-              delete Applab.firstCallStackDepthThisStep;
-              document.getElementById('spinner').style.visibility = 'hidden';
-              break;
-            }
+            delete Applab.stepOutToStackDepth;
+            delete Applab.firstCallStackDepthThisStep;
+            document.getElementById('spinner').style.visibility = 'hidden';
+            break;
           }
         }
       }
-      catch(err) {
-        handleExecutionError(err, inUserCode ? (userCodeRow + 1) : undefined);
-        return;
-      }
     }
-    if (reachedBreak && atMaxSpeed) {
-      // If we were running atMaxSpeed and just reached a breakpoint, the
-      // code may not be selected in the editor, so do it now:
-      codegen.selectCurrentCode(Applab.interpreter,
-                                Applab.cumulativeLength,
-                                Applab.userCodeStartOffset,
-                                Applab.userCodeLength,
-                                studioApp.editor);
-    }
-  } else {
-    if (Applab.tickCount === 1) {
-      try { Applab.whenRunFunc(studioApp, api, Applab.Globals); } catch (e) { }
+    catch(err) {
+      handleExecutionError(err, inUserCode ? (userCodeRow + 1) : undefined);
+      return;
     }
   }
-
-  if (checkFinished()) {
-    Applab.onPuzzleComplete();
+  if (reachedBreak && atMaxSpeed) {
+    // If we were running atMaxSpeed and just reached a breakpoint, the
+    // code may not be selected in the editor, so do it now:
+    codegen.selectCurrentCode(Applab.interpreter,
+                              Applab.cumulativeLength,
+                              Applab.userCodeStartOffset,
+                              Applab.userCodeLength,
+                              studioApp.editor);
   }
 };
 
@@ -1064,9 +1084,31 @@ var defineProcedures = function (blockType) {
 var nativeGetCallback = function () {
   var retVal = Applab.eventQueue.shift();
   if (typeof retVal === "undefined") {
-    Applab.seenEmptyGetCallbackThisTick = true;
+    Applab.seenEmptyGetCallbackDuringExecution = true;
   }
   return retVal;
+};
+
+var nativeSetCallbackRetVal = function (retVal) {
+  if (Applab.eventQueue.length === 0) {
+    // If nothing else is in the event queue, then store this return value
+    // away so it can be returned in the native event handler
+    Applab.seenReturnFromCallbackDuringExecution = true;
+    Applab.lastCallbackRetVal = retVal;
+  }
+  // Provide warnings to the user if this function has been called with a
+  // meaningful return value while we are no longer in the native event handler
+
+  // TODO (cpirich): Check to see if the DOM event object was modified
+  // (preventDefault(), stopPropagation(), returnValue) and provide a similar
+  // warning since these won't work as expected unless running atMaxSpeed
+  if (!Applab.runUntilCallbackReturn &&
+      typeof Applab.lastCallbackRetVal !== 'undefined') {
+    outputApplabConsole("Function passed to onEvent() has taken too long - the return value was ignored.");
+    if (getCurrentTickLength() !== 0) {
+      outputApplabConsole("  (try moving the speed slider to its maximum value)");
+    }
+  }
 };
 
 var consoleApi = {};
@@ -1148,7 +1190,8 @@ Applab.execute = function() {
     // Append our mini-runtime after the user's code. This will spin and process
     // callback functions:
     codeWhenRun += '\nwhile (true) { var obj = getCallback(); ' +
-      'if (obj) { obj.fn.apply(null, obj.arguments ? obj.arguments : null); }}';
+      'if (obj) { var ret = obj.fn.apply(null, obj.arguments ? obj.arguments : null);' +
+                 'setCallbackRetVal(ret); }}';
     var session = studioApp.editor.aceEditor.getSession();
     Applab.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
   } else {
@@ -1177,7 +1220,6 @@ Applab.execute = function() {
                                           JSON: JSONApi,
                                           Globals: Applab.Globals });
 
-        var getCallbackObj = interpreter.createObject(interpreter.FUNCTION);
         // Only allow five levels of depth when marshalling the return value
         // since we will occasionally return DOM Event objects which contain
         // properties that recurse over and over...
@@ -1187,6 +1229,12 @@ Applab.execute = function() {
                                                        5);
         interpreter.setProperty(scope,
                                 'getCallback',
+                                interpreter.createNativeFunction(wrapper));
+
+        wrapper = codegen.makeNativeMemberFunction(interpreter,
+                                                   nativeSetCallbackRetVal);
+        interpreter.setProperty(scope,
+                                'setCallbackRetVal',
                                 interpreter.createNativeFunction(wrapper));
       };
       try {
@@ -1427,17 +1475,55 @@ Applab.createImageUploadButton = function (opts) {
                  divApplab.appendChild(newLabel));
 };
 
+// These offset are used to ensure that the turtle image is centered over
+// its x,y coordinates. The image is currently 31x45, so these offsets are 50%
+var TURTLE_X_OFFSET = -15;
+var TURTLE_Y_OFFSET = -22;
+
 function getTurtleContext() {
   var canvas = document.getElementById('turtleCanvas');
 
   if (!canvas) {
-    var opts = { 'elementId': 'turtleCanvas' };
-    Applab.createCanvas(opts);
+    // If there is not yet a turtleCanvas, create it:
+    Applab.createCanvas({ 'elementId': 'turtleCanvas' });
     canvas = document.getElementById('turtleCanvas');
+
+    // And create the turtle (defaults to visible):
+    Applab.turtle.visible = true;
+    var divApplab = document.getElementById('divApplab');
+    var turtleImage = document.createElement("img");
+    turtleImage.src = studioApp.assetUrl('media/applab/turtle.png');
+    turtleImage.id = 'turtleImage';
+    updateTurtleImage(turtleImage);
+    divApplab.appendChild(turtleImage);
   }
 
   return canvas.getContext("2d");
 }
+
+function updateTurtleImage(turtleImage) {
+  if (!turtleImage) {
+    turtleImage = document.getElementById('turtleImage');
+  }
+  turtleImage.style.left = (Applab.turtle.x + TURTLE_X_OFFSET) + 'px';
+  turtleImage.style.top = (Applab.turtle.y + TURTLE_Y_OFFSET) + 'px';
+  turtleImage.style.transform = 'rotate(' + Applab.turtle.heading + 'deg)';
+}
+
+function turtleSetVisibility (visible) {
+  // call this first to ensure there is a turtle (in case this is the first API)
+  getTurtleContext();
+  var turtleImage = document.getElementById('turtleImage');
+  turtleImage.style.visibility = visible ? 'visible' : 'hidden';
+}
+
+Applab.turtleShow = function (opts) {
+  turtleSetVisibility(true);
+};
+
+Applab.turtleHide = function (opts) {
+  turtleSetVisibility(false);
+};
 
 Applab.turtleMoveTo = function (opts) {
   var ctx = getTurtleContext();
@@ -1448,6 +1534,7 @@ Applab.turtleMoveTo = function (opts) {
     Applab.turtle.y = opts.y;
     ctx.lineTo(Applab.turtle.x, Applab.turtle.y);
     ctx.stroke();
+    updateTurtleImage();
   }
 };
 
@@ -1473,8 +1560,11 @@ Applab.turtleMoveBackward = function (opts) {
 };
 
 Applab.turtleTurnRight = function (opts) {
+  // call this first to ensure there is a turtle (in case this is the first API)
+  getTurtleContext();
   Applab.turtle.heading += opts.degrees;
   Applab.turtle.heading = (Applab.turtle.heading + 360) % 360;
+  updateTurtleImage();
 };
 
 Applab.turtleTurnLeft = function (opts) {
@@ -1913,6 +2003,18 @@ Applab.onEventFired = function (opts, e) {
   } else {
     Applab.eventQueue.push({'fn': opts.func});
   }
+  if (Applab.interpreter) {
+    // Execute the interpreter and if a return value is sent back from the
+    // interpreter's event handler, pass that back in the native world
+
+    // NOTE: the interpreter will not execute forever, if the event handler
+    // takes too long, executeInterpreter() will return and the native side
+    // will just see 'undefined' as the return value. The rest of the interpreter
+    // event handler will run in the next onTick(), but the return value will
+    // no longer have any effect.
+    Applab.executeInterpreter(true);
+    return Applab.lastCallbackRetVal;
+  }
 };
 
 Applab.onEvent = function (opts) {
@@ -1985,6 +2087,12 @@ Applab.onTimeoutFired = function (opts) {
   Applab.eventQueue.push({
     'fn': opts.func
   });
+  if (Applab.interpreter) {
+    // NOTE: the interpreter will not execute forever, if the event handler
+    // takes too long, executeInterpreter() will return and the rest of the
+    // user's code will execute in the next onTick()
+    Applab.executeInterpreter(true);
+  }
 };
 
 Applab.setTimeout = function (opts) {
@@ -2368,7 +2476,7 @@ var getPegasusHost = function() {
         return Array(multiplier + 1).join(input)
     }
 
-},{"../../locale/current/applab":167,"../../locale/current/common":170,"../StudioApp":2,"../codegen":41,"../constants":42,"../dom":43,"../skins":125,"../slider":126,"../templates/page.html":145,"../utils":165,"../xml":166,"./api":4,"./appStorage":5,"./blocks":7,"./controls.html":8,"./dropletConfig":9,"./extraControlRows.html":10,"./formStorage":11,"./visualization.html":15}],15:[function(require,module,exports){
+},{"../../locale/current/applab":168,"../../locale/current/common":171,"../StudioApp":2,"../codegen":41,"../constants":42,"../dom":43,"../skins":126,"../slider":127,"../templates/page.html":146,"../utils":166,"../xml":167,"./api":4,"./appStorage":5,"./blocks":7,"./controls.html":8,"./dropletConfig":9,"./extraControlRows.html":10,"./formStorage":11,"./visualization.html":15}],15:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2388,7 +2496,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":186}],11:[function(require,module,exports){
+},{"ejs":187}],11:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -2591,35 +2699,27 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/applab":167,"../../locale/current/common":170,"ejs":186}],9:[function(require,module,exports){
+},{"../../locale/current/applab":168,"../../locale/current/common":171,"ejs":187}],9:[function(require,module,exports){
 module.exports.blocks = [
-  {'func': 'onEvent', 'title': 'Execute code in response to an event for the specified element. Additional parameters are passed to the callback function.', 'category': 'General', 'params': ["'id'", "'click'", "function(event) {\n  \n}"] },
-  {'func': 'startWebRequest', 'title': 'Request data from the internet and execute code when the request is complete', 'category': 'General', 'params': ["'http://api.openweathermap.org/data/2.5/weather?q=London,uk'", "function(status, type, content) {\n  \n}"] },
-  {'func': 'setTimeout', 'title': 'Set a timer and execute code when that number of milliseconds has elapsed', 'category': 'General', 'params': ["function() {\n  \n}", "1000"] },
-  {'func': 'clearTimeout', 'title': 'Clear an existing timer by passing in the value returned from setTimeout()', 'category': 'General', 'params': ["0"] },
-  {'func': 'playSound', 'title': 'Play the MP3, OGG, or WAV sound file from the specified URL', 'category': 'General', 'params': ["'http://soundbible.com/mp3/neck_snap-Vladimir-719669812.mp3'"] },
-  {'func': 'createHtmlBlock', 'title': 'Create a block of HTML and assign it an element id', 'category': 'General', 'params': ["'id'", "'html'"] },
-  {'func': 'replaceHtmlBlock', 'title': 'Replace a block of HTML associated with the specified id', 'category': 'General', 'params': ["'id'", "'html'"] },
-  {'func': 'deleteHtmlBlock', 'title': 'Delete the element with the specified id', 'category': 'General', 'params': ["'id'"] },
-  {'func': 'setParent', 'title': 'Set an element to become a child of a parent element', 'category': 'General', 'params': ["'id'", "'parentId'"] },
-  {'func': 'setPosition', 'title': 'Position an element with x, y, width, and height coordinates', 'category': 'General', 'params': ["'id'", "0", "0", "100", "100"] },
-  {'func': 'setStyle', 'title': 'Add CSS style text to an element', 'category': 'General', 'params': ["'id'", "'color:red;'"] },
-  {'func': 'getAttribute', 'category': 'General', 'params': ["'id'", "'scrollHeight'"], 'type': 'value' },
-  {'func': 'setAttribute', 'category': 'General', 'params': ["'id'", "'scrollHeight'", "200"]},
-  {'func': 'createButton', 'title': 'Create a button and assign it an element id', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
-  {'func': 'createTextInput', 'title': 'Create a text input and assign it an element id', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
-  {'func': 'createTextLabel', 'title': 'Create a text label, assign it an element id, and bind it to an associated element', 'category': 'UI Controls', 'params': ["'id'", "'text'", "'forId'"] },
-  {'func': 'createDropdown', 'title': 'Create a dropdown, assign it an element id, and populate it with a list of items', 'category': 'UI Controls', 'params': ["'id'", "'option1'", "'etc'"] },
-  {'func': 'getText', 'title': 'Get the text from the specified element', 'category': 'UI Controls', 'params': ["'id'"], 'type': 'value' },
-  {'func': 'setText', 'title': 'Set the text for the specified element', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
-  {'func': 'createCheckbox', 'title': 'Create a checkbox and assign it an element id', 'category': 'UI Controls', 'params': ["'id'", "false"] },
-  {'func': 'createRadio', 'title': 'Create a radio button and assign it an element id', 'category': 'UI Controls', 'params': ["'id'", "false", "'group'"] },
-  {'func': 'getChecked', 'title': 'Get the state of a checkbox or radio button', 'category': 'UI Controls', 'params': ["'id'"], 'type': 'value' },
-  {'func': 'setChecked', 'title': 'Set the state of a checkbox or radio button', 'category': 'UI Controls', 'params': ["'id'", "true"] },
-  {'func': 'createImage', 'title': 'Create an image and assign it an element id', 'category': 'UI Controls', 'params': ["'id'", "'http://code.org/images/logo.png'"] },
-  {'func': 'getImageURL', 'title': 'Get the URL associated with an image or image upload button', 'category': 'UI Controls', 'params': ["'id'"], 'type': 'value' },
-  {'func': 'setImageURL', 'title': 'Set the URL for the specified image element id', 'category': 'UI Controls', 'params': ["'id'", "'http://code.org/images/logo.png'"] },
-  {'func': 'createImageUploadButton', 'title': 'Create an image upload button and assign it an element id', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
+  {'func': 'onEvent', 'title': 'Execute code in response to an event for the specified element. Additional parameters are passed to the callback function.', 'category': 'UI controls', 'params': ["'id'", "'click'", "function(event) {\n  \n}"] },
+  {'func': 'createButton', 'title': 'Create a button and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "'text'"] },
+  {'func': 'createTextInput', 'title': 'Create a text input and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "'text'"] },
+  {'func': 'createTextLabel', 'title': 'Create a text label, assign it an element id, and bind it to an associated element', 'category': 'UI controls', 'params': ["'id'", "'text'", "'forId'"] },
+  {'func': 'createDropdown', 'title': 'Create a dropdown, assign it an element id, and populate it with a list of items', 'category': 'UI controls', 'params': ["'id'", "'option1'", "'etc'"] },
+  {'func': 'getText', 'title': 'Get the text from the specified element', 'category': 'UI controls', 'params': ["'id'"], 'type': 'value' },
+  {'func': 'setText', 'title': 'Set the text for the specified element', 'category': 'UI controls', 'params': ["'id'", "'text'"] },
+  {'func': 'createCheckbox', 'title': 'Create a checkbox and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "false"] },
+  {'func': 'createRadio', 'title': 'Create a radio button and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "false", "'group'"] },
+  {'func': 'getChecked', 'title': 'Get the state of a checkbox or radio button', 'category': 'UI controls', 'params': ["'id'"], 'type': 'value' },
+  {'func': 'setChecked', 'title': 'Set the state of a checkbox or radio button', 'category': 'UI controls', 'params': ["'id'", "true"] },
+  {'func': 'createImage', 'title': 'Create an image and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "'http://code.org/images/logo.png'"] },
+  {'func': 'getImageURL', 'title': 'Get the URL associated with an image or image upload button', 'category': 'UI controls', 'params': ["'id'"], 'type': 'value' },
+  {'func': 'setImageURL', 'title': 'Set the URL for the specified image element id', 'category': 'UI controls', 'params': ["'id'", "'http://code.org/images/logo.png'"] },
+  {'func': 'playSound', 'title': 'Play the MP3, OGG, or WAV sound file from the specified URL', 'category': 'UI controls', 'params': ["'http://soundbible.com/mp3/neck_snap-Vladimir-719669812.mp3'"] },
+  {'func': 'deleteHtmlBlock', 'title': 'Delete the element with the specified id', 'category': 'UI controls', 'params': ["'id'"] },
+  {'func': 'setPosition', 'title': 'Position an element with x, y, width, and height coordinates', 'category': 'UI controls', 'params': ["'id'", "0", "0", "100", "100"] },
+  {'func': 'createImageUploadButton', 'title': 'Create an image upload button and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "'text'"] },
+
   {'func': 'createCanvas', 'title': 'Create a canvas with width, height dimensions', 'category': 'Canvas', 'params': ["'id'", "320", "480"] },
   {'func': 'canvasDrawLine', 'title': 'Draw a line on a canvas from x1, y1 to x2, y2', 'category': 'Canvas', 'params': ["'id'", "0", "0", "160", "240"] },
   {'func': 'canvasDrawCircle', 'title': 'Draw a circle on a canvas with the specified coordinates for center (x, y) and radius', 'category': 'Canvas', 'params': ["'id'", "160", "240", "100"] },
@@ -2631,12 +2731,15 @@ module.exports.blocks = [
   {'func': 'canvasGetImageData', 'title': 'Get the ImageData for a rectangle (x, y, width, height) within a canvas', 'category': 'Canvas', 'params': ["'id'", "0", "0", "320", "480"], 'type': 'value' },
   {'func': 'canvasPutImageData', 'title': 'Set the ImageData for a rectangle within a canvas with x, y as the top left coordinates', 'category': 'Canvas', 'params': ["'id'", "imageData", "0", "0"] },
   {'func': 'canvasClear', 'title': 'Clear all data on a canvas', 'category': 'Canvas', 'params': ["'id'"] },
-  {'func': 'writeSharedValue', 'title': 'Saves a value associated with the key, shared with everyone who uses the app.', 'category': 'Storage', 'params': ["'key'", "'value'", "function () {\n  \n}"] },
-  {'func': 'readSharedValue', 'title': 'Reads the value associated with the key, shared with everyone who uses the app.', 'category': 'Storage', 'params': ["'key'", "function (value) {\n  \n}"] },
-  {'func': 'createSharedRecord', 'title': 'createSharedRecord(record, onSuccess, onError); Creates a new shared record in table record.tableName.', 'category': 'Storage', 'params': ["{tableName:'abc', name:'Alice', age:7, male:false}", "function() {\n  \n}"] },
-  {'func': 'readSharedRecords', 'title': 'readSharedRecords(searchParams, onSuccess, onError); Reads all shared records whose properties match those on the searchParams object.', 'category': 'Storage', 'params': ["{tableName: 'abc'}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    createHtmlBlock('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
-  {'func': 'updateSharedRecord', 'title': 'updateSharedRecord(record, onSuccess, onFailure); Updates a shared record, identified by record.tableName and record.id.', 'category': 'Storage', 'params': ["{tableName:'abc', id: 1, name:'Bob', age:8, male:true}", "function() {\n  \n}"] },
-  {'func': 'deleteSharedRecord', 'title': 'deleteSharedRecord(record, onSuccess, onFailure)\nDeletes a shared record, identified by record.tableName and record.id.', 'category': 'Storage', 'params': ["{tableName:'abc', id: 1}", "function() {\n  \n}"] },
+
+  {'func': 'startWebRequest', 'title': 'Request data from the internet and execute code when the request is complete', 'category': 'Data', 'params': ["'http://api.openweathermap.org/data/2.5/weather?q=London,uk'", "function(status, type, content) {\n  \n}"] },
+  {'func': 'writeSharedValue', 'title': 'Saves a value associated with the key, shared with everyone who uses the app.', 'category': 'Data', 'params': ["'key'", "'value'", "function () {\n  \n}"] },
+  {'func': 'readSharedValue', 'title': 'Reads the value associated with the key, shared with everyone who uses the app.', 'category': 'Data', 'params': ["'key'", "function (value) {\n  \n}"] },
+  {'func': 'createSharedRecord', 'title': 'createSharedRecord(record, onSuccess, onError); Creates a new shared record in table record.tableName.', 'category': 'Data', 'params': ["{tableName:'abc', name:'Alice', age:7, male:false}", "function() {\n  \n}"] },
+  {'func': 'readSharedRecords', 'title': 'readSharedRecords(searchParams, onSuccess, onError); Reads all shared records whose properties match those on the searchParams object.', 'category': 'Data', 'params': ["{tableName: 'abc'}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    createHtmlBlock('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
+  {'func': 'updateSharedRecord', 'title': 'updateSharedRecord(record, onSuccess, onFailure); Updates a shared record, identified by record.tableName and record.id.', 'category': 'Data', 'params': ["{tableName:'abc', id: 1, name:'Bob', age:8, male:true}", "function() {\n  \n}"] },
+  {'func': 'deleteSharedRecord', 'title': 'deleteSharedRecord(record, onSuccess, onFailure)\nDeletes a shared record, identified by record.tableName and record.id.', 'category': 'Data', 'params': ["{tableName:'abc', id: 1}", "function() {\n  \n}"] },
+
   {'func': 'turtleMoveForward', 'title': 'Move the turtle forward the specified distance', 'category': 'Turtle', 'params': ["100"] },
   {'func': 'turtleMoveBackward', 'title': 'Move the turtle backward the specified distance', 'category': 'Turtle', 'params': ["100"] },
   {'func': 'turtleMove', 'title': 'Move the turtle by the specified x and y coordinates', 'category': 'Turtle', 'params': ["50", "50"] },
@@ -2647,14 +2750,22 @@ module.exports.blocks = [
   {'func': 'turtlePenDown', 'title': "Set down the turtle's pen", 'category': 'Turtle' },
   {'func': 'turtlePenWidth', 'title': 'Set the turtle to the specified pen width', 'category': 'Turtle', 'params': ["3"] },
   {'func': 'turtlePenColor', 'title': 'Set the turtle to the specified pen color', 'category': 'Turtle', 'params': ["'red'"] },
+  {'func': 'turtleShow', 'title': "Show the turtle image at its current location", 'category': 'Turtle' },
+  {'func': 'turtleHide', 'title': "Hide the turtle image", 'category': 'Turtle' },
+
+  {'func': 'setTimeout', 'title': 'Set a timer and execute code when that number of milliseconds has elapsed', 'category': 'Control', 'params': ["function() {\n  \n}", "1000"] },
+  {'func': 'clearTimeout', 'title': 'Clear an existing timer by passing in the value returned from setTimeout()', 'category': 'Control', 'params': ["0"] },
+
+  {'func': 'createHtmlBlock', 'title': 'Create a block of HTML and assign it an element id', 'category': 'Advanced', 'params': ["'id'", "'html'"] },
+  {'func': 'replaceHtmlBlock', 'title': 'Replace a block of HTML associated with the specified id', 'category': 'Advanced', 'params': ["'id'", "'html'"] },
+  {'func': 'setParent', 'title': 'Set an element to become a child of a parent element', 'category': 'Advanced', 'params': ["'id'", "'parentId'"] },
+  {'func': 'setStyle', 'title': 'Add CSS style text to an element', 'category': 'Advanced', 'params': ["'id'", "'color:red;'"] },
+  {'func': 'getAttribute', 'category': 'Advanced', 'params': ["'id'", "'scrollHeight'"], 'type': 'value' },
+  {'func': 'setAttribute', 'category': 'Advanced', 'params': ["'id'", "'scrollHeight'", "200"]},
 ];
 
 module.exports.categories = {
-  'General': {
-    'color': 'blue',
-    'blocks': []
-  },
-  'UI Controls': {
+  'UI controls': {
     'color': 'red',
     'blocks': []
   },
@@ -2662,12 +2773,20 @@ module.exports.categories = {
     'color': 'yellow',
     'blocks': []
   },
-  'Storage': {
+  'Data': {
     'color': 'orange',
     'blocks': []
   },
   'Turtle': {
     'color': 'yellow',
+    'blocks': []
+  },
+  'Advanced': {
+    'color': 'blue',
+    'blocks': []
+  },
+  'Control': {
+    'color': 'blue',
     'blocks': []
   },
 };
@@ -2692,7 +2811,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":170,"ejs":186}],7:[function(require,module,exports){
+},{"../../locale/current/common":171,"ejs":187}],7:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -2765,7 +2884,7 @@ function installCreateHtmlBlock(blockly, generator, blockInstallOptions) {
   };
 }
 
-},{"../../locale/current/applab":167,"../../locale/current/common":170,"../codegen":41,"../utils":165}],167:[function(require,module,exports){
+},{"../../locale/current/applab":168,"../../locale/current/common":171,"../codegen":41,"../utils":166}],168:[function(require,module,exports){
 /*applab*/ module.exports = window.blockly.appLocale;
 },{}],5:[function(require,module,exports){
 'use strict';
@@ -3400,6 +3519,14 @@ exports.turtlePenUp = function (blockId) {
 
 exports.turtlePenDown = function (blockId) {
   return Applab.executeCmd(blockId, 'turtlePenDown');
+};
+
+exports.turtleShow = function (blockId) {
+  return Applab.executeCmd(blockId, 'turtleShow');
+};
+
+exports.turtleHide = function (blockId) {
+  return Applab.executeCmd(blockId, 'turtleHide');
 };
 
 exports.turtlePenWidth = function (blockId, width) {

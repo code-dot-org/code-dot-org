@@ -39,14 +39,8 @@ levels.ec_simple = {
     'setTimeout': null,
     'clearTimeout': null,
     'playSound': null,
-    'createHtmlBlock': null,
-    'replaceHtmlBlock': null,
     'deleteHtmlBlock': null,
-    'setParent': null,
     'setPosition': null,
-    'setStyle': null,
-    'getAttribute': null,
-    'setAttribute': null,
     'createButton': null,
     'createTextInput': null,
     'createTextLabel': null,
@@ -88,8 +82,20 @@ levels.ec_simple = {
     'turtlePenDown': null,
     'turtlePenWidth': null,
     'turtlePenColor': null,
+    'turtleShow': null,
+    'turtleHide': null,
   },
 };
+
+// Functions in Advanced category currently disabled in all levels:
+/*
+ 'createHtmlBlock': null,
+ 'replaceHtmlBlock': null,
+ 'setStyle': null,
+ 'getAttribute': null,
+ 'setAttribute': null,
+ 'setParent': null,
+*/
 
 levels.full_sandbox =  {
   'scrollbars' : true,

@@ -32,18 +32,6 @@ Blockly.HorizontalFlyout.prototype.show = function(xmlList) {
   Blockly.HorizontalFlyout.superClass_.show.apply(this, arguments);
 };
 
-Blockly.HorizontalFlyout.prototype.setVisibility = function(show) {
-  return show ? this.softShow() : this.softHide()
-};
-
-Blockly.HorizontalFlyout.prototype.softHide = function() {
-  Blockly.addClass_(this.svgGroup_, 'userHidden');
-};
-
-Blockly.HorizontalFlyout.prototype.softShow = function() {
-  Blockly.removeClass_(this.svgGroup_, 'userHidden');
-};
-
 /**
  * Hide and empty the flyout.
  */
@@ -51,6 +39,28 @@ Blockly.HorizontalFlyout.prototype.hide = function() {
   this.height_ = 10;
   this.flyoutRows = 0;
   Blockly.HorizontalFlyout.superClass_.hide.apply(this, arguments);
+};
+
+Blockly.HorizontalFlyout.prototype.setVisibility = function(show) {
+  if (show) {
+    this.softShow();
+  } else {
+    this.softHide();
+  }
+};
+
+/**
+ * Hides flyout—soft in that it doesn't destroy all flyout blocks
+ */
+Blockly.HorizontalFlyout.prototype.softHide = function() {
+  Blockly.addClass_(this.svgGroup_, 'hiddenFlyout');
+};
+
+/**
+ * Shows flyout—soft in that it doesn't also populate new blocks
+ */
+Blockly.HorizontalFlyout.prototype.softShow = function() {
+  Blockly.removeClass_(this.svgGroup_, 'hiddenFlyout');
 };
 
 /**
