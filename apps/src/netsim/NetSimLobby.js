@@ -16,7 +16,7 @@
  */
 
 /**
- * @fileoverview Generator and controller for instance lobby/connection controls.
+ * @fileoverview Generator and controller for shard lobby/connection controls.
  */
 
 /* jshint
@@ -48,14 +48,14 @@ var AUTO_REFRESH_INTERVAL_MS = 5000;
 var CLOSED_REFRESH_INTERVAL_MS = 30000;
 
 /**
- * @param {NetSimConnection} connection - The instance connection that this
+ * @param {NetSimConnection} connection - The shard connection that this
  *                           lobby control will manipulate.
  * @constructor
  */
 var NetSimLobby = function (connection) {
 
   /**
-   * Instance connection that this lobby control will manipulate.
+   * Shard connection that this lobby control will manipulate.
    * @type {NetSimConnection}
    * @private
    */
@@ -100,7 +100,7 @@ NetSimLobby.createWithin = function (element, connection) {
   var controller = new NetSimLobby(connection);
   element.innerHTML = markup({});
   controller.bindElements_();
-  controller.refreshInstanceList_();
+  controller.refreshShardList_();
   return controller;
 };
 
@@ -113,8 +113,8 @@ NetSimLobby.prototype.bindElements_ = function () {
   this.lobbyOpenDiv_ = document.getElementById('netsim_lobby_open');
   this.lobbyClosedDiv_ = document.getElementById('netsim_lobby_closed');
 
-  this.instanceSelector_ = document.getElementById('netsim_instance_select');
-  $(this.instanceSelector_).change(this.onInstanceSelectorChange_.bind(this));
+  this.shardSelector_ = document.getElementById('netsim_shard_select');
+  $(this.shardSelector_).change(this.onShardSelectorChange_.bind(this));
 
   this.lobbyList_ = document.getElementById('netsim_lobby_list');
 
@@ -143,15 +143,15 @@ NetSimLobby.prototype.attachToRunLoop = function (runLoop) {
   this.periodicRefresh_.attachToRunLoop(runLoop);
 };
 
-/** Handler for picking a new instance from the dropdown. */
-NetSimLobby.prototype.onInstanceSelectorChange_ = function () {
-  if (this.connection_.isConnectedToInstance()) {
-    this.connection_.disconnectFromInstance();
+/** Handler for picking a new shard from the dropdown. */
+NetSimLobby.prototype.onShardSelectorChange_ = function () {
+  if (this.connection_.isConnectedToShard()) {
+    this.connection_.disconnectFromShard();
     this.periodicRefresh_.disable();
   }
 
-  if (this.instanceSelector_.value !== '__none') {
-    this.connection_.connectToInstance(this.instanceSelector_.value);
+  if (this.shardSelector_.value !== '__none') {
+    this.connection_.connectToShard(this.shardSelector_.value);
   }
 };
 
@@ -178,20 +178,20 @@ NetSimLobby.prototype.disconnectButtonClick_ = function () {
  * Make an async request against the dashboard API to
  * reload and populate the user sections list.
  */
-NetSimLobby.prototype.refreshInstanceList_ = function () {
+NetSimLobby.prototype.refreshShardList_ = function () {
   var self = this;
-  // TODO (bbuchanan) : Use unique level ID when generating instance ID
+  // TODO (bbuchanan) : Use unique level ID when generating shard ID
   var levelID = 'demo';
-  var instanceSelector = this.instanceSelector_;
+  var shardSelector = this.shardSelector_;
   this.getUserSections_(function (data) {
-    $(instanceSelector).empty();
+    $(shardSelector).empty();
 
     if (0 === data.length){
       // If we didn't get any sections, we must deny access
       $('<option>')
           .val('__none')
           .html('-- NONE FOUND --')
-          .appendTo(instanceSelector);
+          .appendTo(shardSelector);
       return;
     } else {
       // If we have more than one section, require the user
@@ -199,19 +199,19 @@ NetSimLobby.prototype.refreshInstanceList_ = function () {
       $('<option>')
           .val('__none')
           .html('-- PICK ONE --')
-          .appendTo(instanceSelector);
+          .appendTo(shardSelector);
     }
 
-    // Add all instances to the dropdown
+    // Add all shards to the dropdown
     data.forEach(function (section) {
       // TODO (bbuchanan) : Put teacher names in sections
       $('<option>')
           .val('netsim_' + levelID + '_' + section.id)
           .html(section.name)
-          .appendTo(instanceSelector);
+          .appendTo(shardSelector);
     });
 
-    self.onInstanceSelectorChange_();
+    self.onShardSelectorChange_();
   });
 };
 
@@ -222,11 +222,11 @@ NetSimLobby.prototype.refreshInstanceList_ = function () {
 NetSimLobby.prototype.refreshLobby_ = function () {
   var self = this;
   var lobbyList = this.lobbyList_;
-  var isOnInstance = this.connection_.isConnectedToInstance();
+  var isOnShard = this.connection_.isConnectedToShard();
   var isInLobby = !this.connection_.isConnectedToRouter();
 
-  if (!isOnInstance) {
-    this.instanceSelector_.value = '__none';
+  if (!isOnShard) {
+    this.shardSelector_.value = '__none';
     $(this.addRouterButton_).hide();
   } else {
     $(this.addRouterButton_).show();
@@ -240,7 +240,7 @@ NetSimLobby.prototype.refreshLobby_ = function () {
     $(this.lobbyOpenDiv_).show();
     $(this.lobbyClosedDiv_).hide();
 
-    if (!this.connection_.isConnectedToInstance()) {
+    if (!this.connection_.isConnectedToShard()) {
       $(lobbyList).empty();
       $(this.connectButton_).hide();
       return;

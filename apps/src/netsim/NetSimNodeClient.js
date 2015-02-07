@@ -40,13 +40,13 @@ var superClass = require('./NetSimNode');
 var NetSimEntity = require('./NetSimEntity');
 
 /**
- * @param {!NetSimTables} instance
+ * @param {!NetSimShard} shard
  * @param {Object} [clientRow] - Lobby row for this router.
  * @constructor
  * @augments NetSimNode
  */
-var NetSimNodeClient = function (instance, clientRow) {
-  superClass.call(this, instance, clientRow);
+var NetSimNodeClient = function (shard, clientRow) {
+  superClass.call(this, shard, clientRow);
 
   /**
    * How long (in milliseconds) this entity is allowed to remain in
@@ -83,12 +83,12 @@ module.exports = NetSimNodeClient;
 
 /**
  * Static async creation method. See NetSimEntity.create().
- * @param {!NetSimTables} instance
+ * @param {!NetSimShard} shard
  * @param {function} [onComplete] - Method that will be given the
  *        created entity, or null if entity creation failed.
  */
-NetSimNodeClient.create = function (instance, onComplete) {
-  NetSimEntity.create(NetSimNodeClient, instance, onComplete);
+NetSimNodeClient.create = function (shard, onComplete) {
+  NetSimEntity.create(NetSimNodeClient, shard, onComplete);
 };
 
 /** @inheritdoc */
@@ -162,7 +162,7 @@ NetSimNodeClient.prototype.update = function (onComplete, autoReconnect) {
  */
 NetSimNodeClient.prototype.reconnect_ = function (onComplete) {
   var self = this;
-  NetSimNodeClient.create(this.instanceTables_, function (node) {
+  NetSimNodeClient.create(this.shard_, function (node) {
     if (!node) {
       // Reconnect failed
       onComplete(false);

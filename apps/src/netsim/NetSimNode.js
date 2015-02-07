@@ -17,7 +17,7 @@
 
 /**
  * @fileoverview Client model of simulated network entity, which lives
- * in an instance table.
+ * in a shard table.
  *
  * Wraps the entity row with helper methods for examining and maintaining
  * the entity state in shared storage.
@@ -41,13 +41,13 @@ var superClass = require('./NetSimEntity');
 var NetSimWire = require('./NetSimWire');
 
 /**
- * @param {!NetSimTables} instance
+ * @param {!NetSimShard} shard
  * @param {Object} [nodeRow] JSON row from table.
  * @constructor
  * @augments NetSimEntity
  */
-var NetSimNode = function (instance, nodeRow) {
-  superClass.call(this, instance, nodeRow);
+var NetSimNode = function (shard, nodeRow) {
+  superClass.call(this, shard, nodeRow);
 
   if (nodeRow === undefined) {
     nodeRow = {};
@@ -81,7 +81,7 @@ module.exports = NetSimNode;
  * @private
  */
 NetSimNode.prototype.getTable_= function () {
-  return this.instanceTables_.lobbyTable;
+  return this.shard_.lobbyTable;
 };
 
 /** Build table row for this node */
@@ -150,7 +150,7 @@ NetSimNode.prototype.connectToNode = function (otherNode, onComplete) {
   }
 
   var self = this;
-  NetSimWire.create(this.instanceTables_, function (wire) {
+  NetSimWire.create(this.shard_, function (wire) {
     if (wire === null) {
       onComplete(null);
       return;

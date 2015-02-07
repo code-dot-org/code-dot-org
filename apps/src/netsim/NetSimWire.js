@@ -19,10 +19,10 @@
  * @fileoverview Client model simulated connection to another node.
  *
  * Distinct from NetSimConnection, which represents the client's actual
- * connection to the simulator instance, this is a simulated connection
- * between simulated notes.
+ * connection to the simulator shard, this is a simulated connection
+ * between simulated nodes.
  *
- * In shared storage, this shows up as a row in the {instance}_wire table.
+ * In shared storage, this shows up as a row in the {shardID}_wire table.
  */
 
 /* jshint
@@ -43,19 +43,19 @@ var superClass = require('./NetSimEntity');
 
 /**
  * Create a local controller for a simulated connection between nodes,
- * which is stored in the _wire table on the instance.  The controller can
+ * which is stored in the _wire table on the shard.  The controller can
  * be initialized with the JSON row from the table, effectively wrapping that
  * data in helpful methods.
  *
- * @param {!NetSimTables} instance - The instance where this wire lives.
- * @param {Object} [wireRow] - A row out of the _wire table on the instance.
+ * @param {!NetSimShard} shard - The shard where this wire lives.
+ * @param {Object} [wireRow] - A row out of the _wire table on the shard.
  *        If provided, will initialize this wire with the given data.  If not,
  *        this wire will initialize to default values.
  * @constructor
  * @augments NetSimEntity
  */
-var NetSimWire = function (instance, wireRow) {
-  superClass.call(this, instance, wireRow);
+var NetSimWire = function (shard, wireRow) {
+  superClass.call(this, shard, wireRow);
 
   // Default empty wireRow object
   if (wireRow === undefined) {
@@ -98,20 +98,20 @@ module.exports = NetSimWire;
 
 /**
  * Static async creation method.  See NetSimEntity.create().
- * @param {!NetSimTables} instance
+ * @param {!NetSimShard} shard
  * @param {function} [onComplete] - Method that will be given the
  *        created entity, or null if entity creation failed.
  */
-NetSimWire.create = function (instance, onComplete) {
-  superClass.create(NetSimWire, instance, onComplete);
+NetSimWire.create = function (shard, onComplete) {
+  superClass.create(NetSimWire, shard, onComplete);
 };
 
 /**
- * Helper that gets the wires table for the configured instance.
+ * Helper that gets the wires table for the configured shard.
  * @returns {exports.SharedTable}
  */
 NetSimWire.prototype.getTable_ = function () {
-  return this.instanceTables_.wireTable;
+  return this.shard_.wireTable;
 };
 
 /** Build own row for the wire table  */

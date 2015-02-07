@@ -17,7 +17,7 @@
 
 /**
  * @fileoverview Client model of simulated network entity, which lives
- * in an instance table.
+ * in a shard table.
  *
  * Wraps the entity row with helper methods for examining and maintaining
  * the entity state in shared storage.
@@ -39,20 +39,20 @@
 var ObservableEvent = require('./ObservableEvent');
 
 /**
- * @param {!NetSimTables} instanceTables
+ * @param {!NetSimShard} shard
  * @param {Object} [entityRow] JSON row from table.
  * @constructor
  */
-var NetSimEntity = function (instanceTables, entityRow) {
+var NetSimEntity = function (shard, entityRow) {
   if (entityRow === undefined) {
     entityRow = {};
   }
 
   /**
-   * @type {NetSimTables}
+   * @type {NetSimShard}
    * @protected
    */
-  this.instanceTables_ = instanceTables;
+  this.shard_ = shard;
 
   /**
    * Cached last ping time for this entity
@@ -91,21 +91,21 @@ var NetSimEntity = function (instanceTables, entityRow) {
 module.exports = NetSimEntity;
 
 /**
- * Static async creation method.  Creates a new entity on the given instance,
+ * Static async creation method.  Creates a new entity on the given shard,
  * and then calls the callback with a local controller for the new entity.
  * @param {!function} EntityType - The constructor for the entity type you want
  *        to create.
- * @param {!NetSimTables} instance
+ * @param {!NetSimShard} shard
  * @param {function} [onComplete] - Method that will be given the
  *        created entity, or null if entity creation failed.
  */
-NetSimEntity.create = function (EntityType, instance, onComplete) {
+NetSimEntity.create = function (EntityType, shard, onComplete) {
   onComplete = onComplete || function () {};
 
-  var entity = new EntityType(instance);
+  var entity = new EntityType(shard);
   entity.getTable_().create(entity.buildRow_(), function (row) {
     if (row) {
-      onComplete(new EntityType(instance, row));
+      onComplete(new EntityType(shard, row));
     } else {
       onComplete(null);
     }
@@ -114,22 +114,22 @@ NetSimEntity.create = function (EntityType, instance, onComplete) {
 
 /**
  * Static async retrieval method.  Searches for a new entity on the given
- * instance, and then calls the callback with a local controller for the
+ * shard, and then calls the callback with a local controller for the
  * found entity.
  * @param {!function} EntityType - The constructor for the entity type you want
  *        to find.
  * @param {!number} entityID - The row ID for the entity you'd like to find.
- * @param {!NetSimTables} instance
+ * @param {!NetSimShard} shard
  * @param {function} [onComplete] - Method that will be given the
  *        found entity, or null if entity search failed.
  */
-NetSimEntity.get = function (EntityType, entityID, instance, onComplete) {
+NetSimEntity.get = function (EntityType, entityID, shard, onComplete) {
   onComplete = onComplete || function () {};
 
-  var entity = new EntityType(instance);
+  var entity = new EntityType(shard);
   entity.getTable_().read(entityID, function (row) {
     if (row) {
-      onComplete(new EntityType(instance, row));
+      onComplete(new EntityType(shard, row));
     } else {
       onComplete(null);
     }

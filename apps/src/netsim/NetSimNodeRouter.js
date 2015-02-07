@@ -47,13 +47,13 @@ var NetSimEntity = require('./NetSimEntity');
 var NetSimWire = require('./NetSimWire');
 
 /**
- * @param {!NetSimTables} instance
+ * @param {!NetSimShard} shard
  * @param {Object} [routerRow] - Lobby row for this router.
  * @constructor
  * @augments NetSimNode
  */
-var NetSimNodeRouter = function (instance, routerRow) {
-  superClass.call(this, instance, routerRow);
+var NetSimNodeRouter = function (shard, routerRow) {
+  superClass.call(this, shard, routerRow);
 
   /**
    * @const
@@ -67,12 +67,12 @@ module.exports = NetSimNodeRouter;
 
 /**
  * Static async creation method. See NetSimEntity.create().
- * @param {!NetSimTables} instance
+ * @param {!NetSimShard} shard
  * @param {function} [onComplete] - Method that will be given the
  *        created entity, or null if entity creation failed.
  */
-NetSimNodeRouter.create = function (instance, onComplete) {
-  NetSimEntity.create(NetSimNodeRouter, instance, function (router) {
+NetSimNodeRouter.create = function (shard, onComplete) {
+  NetSimEntity.create(NetSimNodeRouter, shard, function (router) {
     // Always try and update router immediately, to set its DisplayName
     // correctly.
     if (router) {
@@ -88,12 +88,12 @@ NetSimNodeRouter.create = function (instance, onComplete) {
 /**
  * Static async retrieval method.  See NetSimEntity.get().
  * @param {!number} entityID - The row ID for the entity you'd like to find.
- * @param {!NetSimTables} instance
+ * @param {!NetSimShard} shard
  * @param {function} [onComplete] - Method that will be given the
  *        found entity, or null if entity search failed.
  */
-NetSimNodeRouter.get = function (routerID, instance, onComplete) {
-  NetSimEntity.get(NetSimNodeRouter, routerID, instance, onComplete);
+NetSimNodeRouter.get = function (routerID, shard, onComplete) {
+  NetSimEntity.get(NetSimNodeRouter, routerID, shard, onComplete);
 };
 
 /**
@@ -138,11 +138,11 @@ NetSimNodeRouter.getNodeType = function () {
 };
 
 /**
- * Helper for getting wires table of configured instance.
+ * Helper for getting wires table of configured shard.
  * @returns {exports.SharedTable}
  */
 NetSimNodeRouter.prototype.getWireTable = function () {
-  return this.instanceTables_.wireTable;
+  return this.shard_.wireTable;
 };
 
 /**
@@ -153,9 +153,9 @@ NetSimNodeRouter.prototype.getWireTable = function () {
 NetSimNodeRouter.prototype.getConnections = function (onComplete) {
   onComplete = onComplete || function () {};
 
-  var instanceTables = this.instanceTables_;
+  var shard = this.shard_;
   var routerID = this.entityID;
-  this.instanceTables_.wireTable.readAll(function (rows) {
+  this.shard_.wireTable.readAll(function (rows) {
     if (rows === null) {
       onComplete([]);
       return;
@@ -163,7 +163,7 @@ NetSimNodeRouter.prototype.getConnections = function (onComplete) {
 
     var myWires = rows.
         map(function (row) {
-          return new NetSimWire(instanceTables, row);
+          return new NetSimWire(shard, row);
         }).
         filter(function (wire){
           return wire.remoteNodeID === routerID;

@@ -60,7 +60,7 @@ var NetSim = function () {
   this.currentUser_ = DashboardUser.getCurrentUser();
 
   /**
-   * Manager for connection to shared instance of netsim app.
+   * Manager for connection to shared shard of netsim app.
    * @type {NetSimConnection}
    * @private
    */
