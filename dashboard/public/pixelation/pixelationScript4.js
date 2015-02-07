@@ -8,7 +8,7 @@ function drawGraph() {
   var c = document.getElementById("canvas");
   var ctx = c.getContext("2d");
   ctx.fillStyle = "#CCCCCC";
-  ctx.fillRect(0, 0, 500, 500);
+  ctx.fillRect(0, 0, 400, 400);
   ctx.fillStyle = "#000000";
 
   var binCode = "";
@@ -57,7 +57,7 @@ function drawGraph() {
   }
   errMsg += "binary:" + colorNums.length + ", WxH:" + (w * h);
 
-  var sqSizeMax = parseInt((500 / Math.max(w, h)) - 1);
+  var sqSizeMax = parseInt((400 / Math.max(w, h)) - 1);
   sqSizeMax = Math.max(sqSizeMax, 1);
   console.debug("Calculating sqSize max=" + sqSizeMax);
 
@@ -343,15 +343,4 @@ function showPNG(canvasId) {
   var w = window.open(canvas.toDataURL(), canvasId,
       "width=" + canvas.width + ", height=" + canvas.height + ", left=100, menubar=0, titlebar=0, scrollbars=0");
   w.focus();
-}
-
-function saveBitsWindow(bitText) {
-
-  var myWindow = window.open("", "Bits", "width=200, height=200");
-  myWindow.document.write("<p>Below are the bits you entered to create an image."
-      + "<br>You can copy/paste them from here to some other place for safe keeping."
-      + "<br>NOTE: you will lose this data once you close this window.</p><hr>"
-      + "<pre width=60>" + bitText + "</pre>");
-  myWindow.focus();
-  myWindow.resizeBy(300, 300);
 }

@@ -1,62 +1,56 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <link type="text/css" rel="stylesheet" href="pixelationStyles.css">
-    <script type="text/javascript" src="pixelationScript4.js"></script>
-  </head>
-  <body onLoad="drawGraph(); formatBitDisplay();">
-    <div id="canvasDiv">
-      <canvas id="canvas" width=500 height=500></canvas>
+<link type="text/css" rel="stylesheet" href="/pixelation/pixelationStyles.css">
+<script type="text/javascript" src="/pixelation/pixelationScript4.js"></script>
+<div id="visualizationColumn" class="responsive">
+  <div id="visualization" class="responsive">
+    <canvas id="canvas" width="400" height="400"></canvas>
+  </div>
+  <div id="belowVisualization">
+    <p>Here is the file format structure for a color image:</p>
+    <div id="file_format">
+      <div class="byte">Width: 1 byte</div>
+      <div class="byte">Height: 1 byte</div>
+      <div class="byte">Bits per Pixel: 1 byte</div>
+      <div>n bits of pixel data<br>n = Width * Height * Bits per Pixel</div>
     </div>
-    <div id="input">
-      <label>width:
-        <input type="number" min="1" max="255" id="width" oninput="setSliders()">
-        <input type="range" min="1" max="255" id="widthRange" oninput="changeVal('width')">
-      </label><br>
-      <label>height:
-        <input type=number min="1" max="255" id="height" oninput="setSliders();">
-        <input type="range" min="1" max="255" id="heightRange" oninput="changeVal('height')">
-      </label><br>
-      <label>(color) bits/pixel:
-        <input type=number min=1 max=24 id="bitsPerPixel" value="3" oninput="setSliders();" size=2>
-        <input type=range class="slider" id="bitsPerPixelSlider" min=1 max=24 value=1 step=1 oninput="changeVal('bitsPerPixel')">
-      </label>
-      <br>
-      <br>
-      <label>bin:
-        <input type="radio" name="binHex" id="binHexRadio" value="bin" checked="checked" onChange="hexToBin(); drawGraph();">
-      </label>
-      <label>hex:
-        <input type="radio" name="binHex" id="binHexRadio" value="hex" onChange="binToHex(); drawGraph();">
-      </label>
-      <button onClick="formatBitDisplay();" title="Click on this to lay bits out in a readable fashion">Format</button>
-      <button onClick="unformatBits();">Un-Format</button>
-      <br>
-      Binary Code:
-      <br>
-      <textarea id="binaryImage" onkeyup="drawGraph();" style="position: relative;">0000 1111 0000 1111 0000 0011</textarea>
-      <div style="clear: both;">
-        <label class="canvasInputLabel">Zoom:
-          <input type=range id="sqSizeSlider" onChange="drawGraph()" value=32 min=1 max=100>
-        </label>
-        <label id="sqSizeLabel" class="canvasInputLabel"></label>
-        <br>
-        <label class="canvasInputLabel">Show pixel border
-          <input type=checkbox id="showPixelBorder" onChange="drawGraph()" checked=true>
-        </label>
-        |
-        <input type=button value="save PNG" onClick="showPNG('canvas')">
-        <input type=button value="save bits" onClick="saveBitsWindow(document.getElementById('binaryImage').value)">
-      </div>
-      <div id="err">length:</div>
-      <div id="example">EXAMPLE: (a 4x2 image at 3 bits/pix which shows all 8 possible colors)
-        000001000000001000000011000001010011100101110111
-      </div>
-    </div>
-    <div id="directionsDiv">
-      Here is the file format structure for a color image.  You might start by trying the example below.  Copy / Paste the bits.<br>
-      For setting the width, height and bits/pixel you can enter it straight into the binary code, or use the sliders and number boxes.<br>
-      <img src="ColorFileFormatStructure_v2.png">
-    </div>
-  </body>
-</html>
+  </div>
+</div>
+<div id="visualizationEditor" class="responsive">
+  <label>Width:
+    <input type="number" min="1" max="255" id="width" oninput="setSliders()">
+    <input type="range" min="1" max="255" id="widthRange" oninput="changeVal('width')">
+  </label>
+  <label>Height:
+    <input type=number min="1" max="255" id="height" oninput="setSliders();">
+    <input type="range" min="1" max="255" id="heightRange" oninput="changeVal('height')">
+  </label>
+  <label>Bits per Pixel:
+    <input type=number min=1 max=24 id="bitsPerPixel" value="3" oninput="setSliders();" size=2>
+    <input type=range id="bitsPerPixelSlider" min=1 max=24 value=1 step=1 oninput="changeVal('bitsPerPixel')">
+  </label>
+  <label class="canvasInputLabel">Zoom:
+    <input type=range id="sqSizeSlider" oninput="drawGraph()" value="48" min="1" max="100">
+    <span id="sqSizeLabel" class="canvasInputLabel"></span>
+  </label>
+  <label class="canvasInputLabel">Show pixel border
+    <input type=checkbox id="showPixelBorder" onChange="drawGraph()" checked=true>
+  </label>
+  <div class="label_group">
+    <label>Binary:
+      <input type="radio" name="binHex" id="binHexRadio" value="bin" checked="checked" onChange="hexToBin(); drawGraph();">
+    </label>
+    <label>Hexadecimal:
+      <input type="radio" name="binHex" id="binHexRadio" value="hex" onChange="binToHex(); drawGraph();">
+    </label>
+  </div>
+  <label>Pixel Code:
+    <textarea id="binaryImage" onkeyup="drawGraph();" style="position: relative;">000010010000100000000011000001010011100101110111000001010011100101110111000001010011100101110111000001010011100101110111000001010011100101110111000001010011100101110111000001010011100101110111000001010011100101110111000001010011100101110111</textarea>
+  </label>
+  <button onClick="formatBitDisplay();" title="Click on this to lay bits out in a readable fashion">Format</button>
+  <button onClick="unformatBits();">Un-Format</button>
+  <button onClick="showPNG('canvas')">Save PNG</button>
+  <div id="err">length:</div>
+</div>
+<script>
+  drawGraph();
+  formatBitDisplay();
+</script>
