@@ -16,8 +16,8 @@
  */
 
 /**
- * @fileoverview Instance object that wraps an instance ID
- * with helpers for getting certain tables out of the instance.
+ * @fileoverview Wraps a shard ID with helpers for getting certain tables
+ * out of the shard.
  */
 
 /* jshint
@@ -47,20 +47,24 @@ var APP_PUBLIC_KEY =
         "JGW2rHUp_UCMW_fQmRf6iQ==" : "HQJ8GCCMGP7Yh8MrtDusIA==";
 
 /**
- * Wraps an instance ID and provides easy access to shared storage tables
- * for the instance, used commonly across the NetSim app.
- * @param {!string} instanceID
+ * A shard is an isolated, complete simulation state shared by a subset of
+ * users.  It's made of a set of storage tables set apart by a particular
+ * shard ID in their names.  We use shards to allow students to interact only
+ * with their particular class while still storing all NetSim tables under
+ * the same App ID.
+ *
+ * @param {!string} shardID
  * @constructor
  */
-var NetSimTables = function (instanceID) {
+var NetSimShard = function (shardID) {
   /** @type {string} */
-  this.instanceID = instanceID;
+  this.shardID = shardID;
 
   /** @type {SharedTable} */
-  this.lobbyTable = new SharedTable(APP_PUBLIC_KEY, instanceID + '_node');
+  this.lobbyTable = new SharedTable(APP_PUBLIC_KEY, shardID + '_node');
 
   /** @type {SharedTable} */
-  this.wireTable = new SharedTable(APP_PUBLIC_KEY, instanceID + '_wire');
+  this.wireTable = new SharedTable(APP_PUBLIC_KEY, shardID + '_wire');
 };
 
-module.exports = NetSimTables;
+module.exports = NetSimShard;

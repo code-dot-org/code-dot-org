@@ -38,20 +38,20 @@ var NetSimNodeRouter = require('./NetSimNodeRouter');
 var NetSimWire = require('./NetSimWire');
 var ObservableEvent = require('./ObservableEvent');
 var periodicAction = require('./periodicAction');
-var NetSimTables = require('./NetSimTables');
+var NetSimShard = require('./NetSimShard');
 
 var logger = new NetSimLogger(NetSimLogger.LogLevel.VERBOSE);
 
 /**
  * How often the client should run its clean-up job, removing expired rows
- * from the instance tables
+ * from the shard tables
  * @type {number}
  * @const
  */
 var CLEAN_UP_INTERVAL_MS = 10000;
 
 /**
- * A connection to a NetSim instance
+ * A connection to a NetSim shard
  * @param {string} displayName - Name for person on local end
  * @constructor
  */
@@ -64,14 +64,20 @@ var NetSimConnection = function (displayName) {
   this.displayName_ = displayName;
 
   /**
-   * Selected instance.
-   * @type {NetSimTables}
+   * Accessor object for select simulation shard's tables, where an shard
+   * is a group of tables shared by a group of users, allowing them to observe
+   * a common network state.
+   *
+   * See en.wikipedia.org/wiki/Instance_dungeon for a popular example of this
+   * concept.
+   *
+   * @type {NetSimShard}
    * @private
    */
-  this.instanceTables_ = null;
+  this.shard_ = null;
 
   /**
-   * The local client's node representation within the instance.
+   * The local client's node representation within the shard.
    * @type {NetSimNodeClient}
    */
   this.myNode = null;
@@ -80,8 +86,8 @@ var NetSimConnection = function (displayName) {
    * Allows others to subscribe to connection status changes.
    * args: none
    * Notifies on:
-   * - Connect to instance
-   * - Disconnect from instance
+   * - Connect to shard
+   * - Disconnect from shard
    * - Connect to router
    * - Got address from router
    * - Disconnect from router
@@ -90,7 +96,7 @@ var NetSimConnection = function (displayName) {
   this.statusChanges = new ObservableEvent();
 
   /**
-   * Helper for performing instance clean-up on a regular interval
+   * Helper for performing shard clean-up on a regular interval
    * @type {periodicAction}
    * @private
    */
@@ -131,29 +137,29 @@ NetSimConnection.prototype.getLogger = function () {
  * @private
  */
 NetSimConnection.prototype.onBeforeUnload_ = function () {
-  if (this.isConnectedToInstance()) {
-    this.disconnectFromInstance();
+  if (this.isConnectedToShard()) {
+    this.disconnectFromShard();
   }
 };
 
 /**
- * Establishes a new connection to a netsim instance, closing the old one
+ * Establishes a new connection to a netsim shard, closing the old one
  * if present.
- * @param {string} instanceID
+ * @param {string} shardID
  */
-NetSimConnection.prototype.connectToInstance = function (instanceID) {
-  if (this.isConnectedToInstance()) {
+NetSimConnection.prototype.connectToShard = function (shardID) {
+  if (this.isConnectedToShard()) {
     logger.warn("Auto-closing previous connection...");
-    this.disconnectFromInstance();
+    this.disconnectFromShard();
   }
 
-  this.instanceTables_ = new NetSimTables(instanceID);
+  this.shard_ = new NetSimShard(shardID);
   this.createMyClientNode_();
 };
 
-/** Ends the connection to the netsim instance. */
-NetSimConnection.prototype.disconnectFromInstance = function () {
-  if (!this.isConnectedToInstance()) {
+/** Ends the connection to the netsim shard. */
+NetSimConnection.prototype.disconnectFromShard = function () {
+  if (!this.isConnectedToShard()) {
     logger.warn("Redundant disconnect call.");
     return;
   }
@@ -176,7 +182,7 @@ NetSimConnection.prototype.disconnectFromInstance = function () {
  */
 NetSimConnection.prototype.createMyClientNode_ = function () {
   var self = this;
-  NetSimNodeClient.create(this.instanceTables_, function (node) {
+  NetSimNodeClient.create(this.shard_, function (node) {
     if (node) {
       self.myNode = node;
       self.myNode.onChange.register(self, self.onMyNodeChange_);
@@ -192,20 +198,20 @@ NetSimConnection.prototype.createMyClientNode_ = function () {
 
 /**
  * Detects when local client node is unable to reconnect, and kicks user
- * out of the instance.
+ * out of the shard.
  * @private
  */
 NetSimConnection.prototype.onMyNodeChange_= function () {
   if (this.myNode.getStatus() === 'Offline') {
-    this.disconnectFromInstance();
+    this.disconnectFromShard();
   }
 };
 
 /**
- * Whether we are currently connected to a netsim instance
+ * Whether we are currently connected to a netsim shard
  * @returns {boolean}
  */
-NetSimConnection.prototype.isConnectedToInstance = function () {
+NetSimConnection.prototype.isConnectedToShard = function () {
   return (null !== this.myNode);
 };
 
@@ -215,14 +221,14 @@ NetSimConnection.prototype.isConnectedToInstance = function () {
  * @param callback
  */
 NetSimConnection.prototype.getAllNodes = function (callback) {
-  if (!this.isConnectedToInstance()) {
-    logger.warn("Can't get lobby rows, not connected to instance.");
+  if (!this.isConnectedToShard()) {
+    logger.warn("Can't get lobby rows, not connected to shard.");
     callback([]);
     return;
   }
 
   var self = this;
-  this.instanceTables_.lobbyTable.readAll(function (rows) {
+  this.shard_.lobbyTable.readAll(function (rows) {
     if (!rows) {
       logger.warn("Lobby data request failed, using empty list.");
       callback([]);
@@ -231,9 +237,9 @@ NetSimConnection.prototype.getAllNodes = function (callback) {
 
     var nodes = rows.map(function (row) {
       if (row.type === NetSimNodeClient.getNodeType()) {
-        return new NetSimNodeClient(self.instanceTables_, row);
+        return new NetSimNodeClient(self.shard_, row);
       } else if (row.type === NetSimNodeRouter.getNodeType()) {
-        return new NetSimNodeRouter(self.instanceTables_, row);
+        return new NetSimNodeRouter(self.shard_, row);
       }
     }).filter(function (node) {
       return node !== undefined;
@@ -248,7 +254,7 @@ NetSimConnection.prototype.getAllNodes = function (callback) {
  * @private
  */
 NetSimConnection.prototype.cleanLobby_ = function () {
-  if (!this.instanceTables_) {
+  if (!this.shard_) {
     return;
   }
 
@@ -265,10 +271,10 @@ NetSimConnection.prototype.cleanLobby_ = function () {
 
   // Cleaning wires
   // TODO (bbuchanan): Extract method to get all wires.
-  this.instanceTables_.wireTable.readAll(function (rows) {
+  this.shard_.wireTable.readAll(function (rows) {
     if (rows) {
       rows.map(function (row) {
-        return new NetSimWire(self.instanceTables_, row);
+        return new NetSimWire(self.shard_, row);
       }).forEach(function (wire) {
         if (wire.isExpired()) {
           wire.destroy();
@@ -281,7 +287,7 @@ NetSimConnection.prototype.cleanLobby_ = function () {
 /** Adds a row to the lobby for a new router node. */
 NetSimConnection.prototype.addRouterToLobby = function () {
   var self = this;
-  NetSimNodeRouter.create(this.instanceTables_, function () {
+  NetSimNodeRouter.create(this.shard_, function () {
     self.statusChanges.notifyObservers();
   });
 };
@@ -306,7 +312,7 @@ NetSimConnection.prototype.connectToRouter = function (routerID) {
   }
 
   var self = this;
-  NetSimNodeRouter.get(routerID, this.instanceTables_, function (router) {
+  NetSimNodeRouter.get(routerID, this.shard_, function (router) {
     if (!router) {
       logger.warn('Failed to find router with ID ' + routerID);
       return;
