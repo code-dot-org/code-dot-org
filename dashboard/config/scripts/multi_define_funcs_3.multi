@@ -1,0 +1,6 @@
+name 'Multi Define Funcs 3'
+title 'g(y) = y + 3'
+question 'What should g(2) return?'
+wrong '6'
+right '5'
+wrong 'y'

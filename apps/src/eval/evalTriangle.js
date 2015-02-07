@@ -3,8 +3,8 @@ var evalUtils = require('./evalUtils');
 
 var EvalTriangle = function (edge, style, color) {
   evalUtils.ensureNumber(edge);
-  evalUtils.ensureString(style);
-  evalUtils.ensureString(color);
+  evalUtils.ensureStyle(style);
+  evalUtils.ensureColor(color);
 
   EvalImage.apply(this, [style, color]);
 

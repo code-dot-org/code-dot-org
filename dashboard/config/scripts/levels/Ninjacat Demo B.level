@@ -15,7 +15,7 @@
       "upButton"
     ],
     "embed": "true",
-    "instructions": "\r\nLet’s begin by exploring a simple videogame, and then figuring out how it works. You can use the arrow keys to move the ninja left, right and jump - try to catch the unicorn and avoid the dragon!\r\n\r\n\r\n\r\n  \r\n\r\n",
+    "instructions": "Let’s begin by exploring a simple videogame, and then figuring out how it works. You can use the arrow keys to move the ninja left, right and jump - try to catch the unicorn and avoid the dragon!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",
@@ -28,7 +28,10 @@
     "sprites_hidden_to_start": "true",
     "coordinate_grid_background": "false",
     "free_play": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "maze_data": null,
+    "generate_function_pass_blocks": "false",
+    "timeout_after_when_run": "false"
   }
 }]]></config>
   <blocks>

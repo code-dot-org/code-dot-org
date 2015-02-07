@@ -4,7 +4,7 @@ var evalUtils = require('./evalUtils');
 var EvalText = function (text, fontSize, color) {
   evalUtils.ensureString(text);
   evalUtils.ensureNumber(fontSize);
-  evalUtils.ensureString(color);
+  evalUtils.ensureColor(color);
 
   EvalImage.apply(this, ['solid', color]);
 
