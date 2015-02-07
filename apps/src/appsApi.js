@@ -39,60 +39,89 @@
 /** Namespace for app storage. */
 var appsApi = module.exports;
 
+var ApiRequestHelper = function (baseUrl) {
+  this.apiBaseUrl_ = baseUrl;
+};
+
+ApiRequestHelper.prototype.get = function (localUrl, callback, failureValue) {
+  $.ajax({
+    url: this.apiBaseUrl_ + localUrl,
+    type: 'get',
+    dataType: 'json'
+  }).done(function (result /*, text*/) {
+    callback(result);
+  }).fail(function (/*request, status, error*/) {
+    callback(failureValue);
+  });
+};
+
+ApiRequestHelper.prototype.post = function (localUrl, data, callback) {
+  $.ajax({
+    url: this.apiBaseUrl_ + localUrl,
+    type: 'post',
+    contentType: 'application/json; charset=utf-8',
+    data: JSON.stringify(data)
+  }).done(function (/*result, text*/) {
+    callback(true)
+  }).fail(function (/*request, status, error*/) {
+    callback(false);
+  });
+};
+
+ApiRequestHelper.prototype.postToGet = function (localUrl, data, callback,
+    failureValue) {
+  $.ajax({
+    url: this.apiBaseUrl_ + localUrl,
+    type: 'post',
+    contentType: 'application/json; charset=utf-8',
+    data: JSON.stringify(data)
+  }).done(function (result /*, text*/) {
+    callback(result)
+  }).fail(function (/*request, status, error*/) {
+    callback(failureValue);
+  });
+};
+
+ApiRequestHelper.prototype.delete = function (localUrl, callback) {
+  $.ajax({
+    url: this.apiBaseUrl_ + localUrl,
+    type: 'delete'
+  }).done(function (/*result, text*/) {
+    callback(true);
+  }).fail(function (/*request, status, error*/) {
+    callback(false);
+  })
+};
+
 /**
- * Accessor object for an app's remote storage space.
+ * API for master apps table on the server.
  * @constructor
  */
-appsApi.AppStorage = function () {
-  this.apiBaseUrl_ = '/v3/apps';
+appsApi.AppsTable = function () {
+  this.requestHelper_ = new ApiRequestHelper('/v3/apps');
 };
 
 /**
  * @param {!function} callback
  */
-appsApi.AppStorage.prototype.readAll = function (callback) {
-  $.ajax({
-    url: this.apiBaseUrl_,
-    type: 'get',
-    dataType: 'json'
-  }).done(function (data /*, text*/) {
-    callback(data);
-  }).fail(function (/*request, status, error*/) {
-    callback(null);
-  });
+appsApi.AppsTable.prototype.readAll = function (callback) {
+  this.requestHelper_.get('', callback, null);
 };
 
 /**
- * @param {!string} id
+ * @param {!string} id - unique app GUID
  * @param {!function} callback
  */
-appsApi.AppStorage.prototype.read = function (id, callback) {
-  $.ajax({
-    url: this.apiBaseUrl_ + '/' + id,
-    type: 'get',
-    dataType: 'json'
-  }).done(function (data /*, text*/) {
-    callback(data);
-  }).fail(function (/*request, status, error*/) {
-    callback(undefined);
-  });
+appsApi.AppsTable.prototype.read = function (id, callback) {
+  this.requestHelper_.get('/' + id, callback, undefined);
 };
 
 /**
  * @param {!Object} value
  * @param {!function} callback
  */
-appsApi.AppStorage.prototype.create = function (value, callback) {
-  $.ajax({
-    url: this.apiBaseUrl_,
-    type: 'post',
-    contentType: 'application/json; charset=utf-8',
-    data: JSON.stringify(value)
-  }).done(function (data /*, text*/) {
-    callback(data);
-  }).fail(function (/*request, status, error*/) {
-    callback(undefined);
-  });
+appsApi.AppsTable.prototype.create = function (value, callback) {
+  this.requestHelper_.postToGet('', value, callback, undefined);
 };
 
 /**
@@ -100,114 +129,93 @@ appsApi.AppStorage.prototype.create = function (value, callback) {
  * @param {!Object} value
  * @param {!function} callback
  */
-appsApi.AppStorage.prototype.update = function (id, value, callback) {
-  $.ajax({
-    url: this.apiBaseUrl_ + '/' + id,
-    type: 'post',
-    contentType: 'application/json; charset=utf-8',
-    data: JSON.stringify(value)
-  }).done(function (/*data, text*/) {
-    callback(true);
-  }).fail(function (/*request, status, error*/) {
-    callback(false);
-  });
+appsApi.AppsTable.prototype.update = function (id, value, callback) {
+  this.requestHelper_.post('/' + id, value, callback);
 };
 
 /**
  * @param {!string} id
  * @param {!function} callback
  */
-appsApi.AppStorage.prototype.delete = function (id, callback) {
-  $.ajax({
-    url: this.apiBaseUrl_ + '/' + id + '/delete',
-    type: 'post',
-    dataType: 'json'
-  }).done(function (/*data, text*/) {
-    callback(true);
-  }).fail(function (/*request, status, error*/) {
-    callback(false);
-  });
+appsApi.AppsTable.prototype.delete = function (id, callback) {
+  this.requestHelper_.delete('/' + id, callback);
 };
+
+/**
+ * App-specific Shared Storage Table
+ * Data stored in this table can by modified and retrieved by all users of
+ * a particular app, but is not shared between apps.
+ * Only real difference with parent class AppsTable is that these
+ * tables deal in numeric row IDs, not string GUIDs.  Implementation
+ * shouldn't care though.
+ * @constructor
+ * @augments appsApi.AppsTable
+ */
+appsApi.SharedTable = function (app_publickey, table_name) {
+  appsApi.AppsTable.call(this);
+  /** Shared tables just use a different base URL */
+  this.requestHelper_ = new ApiRequestHelper('/v3/apps/' + app_publickey +
+  '/shared-tables/' + table_name);
+};
+appsApi.SharedTable.prototype = Object.create(appsApi.AppsTable.prototype);
+appsApi.SharedTable.prototype.constructor = appsApi.SharedTable;
+
+/**
+ * App-specific User Storage Table
+ * Data stored in this table can only be modified and retrieved by a particular
+ * user of an app.
+ * @constructor
+ * @augments appsApi.AppsTable
+ */
+appsApi.UserTable = function (app_publickey, table_name) {
+  appsApi.AppsTable.call(this);
+  /** User tables just use a different base URL */
+  this.requestHelper_ = new ApiRequestHelper('/v3/apps/' + app_publickey +
+  '/user-tables/' + table_name);
+};
+appsApi.UserTable.prototype = Object.create(appsApi.AppsTable.prototype);
+appsApi.UserTable.prototype.constructor = appsApi.UserTable;
 
 /**
  * API for interacting with app property bags on the server.
  * This property bag is shared between all users of the app.
  *
+ * @param {!string} app_publickey
+ * @constructor
+ */
+appsApi.PropertyBag = function (app_publickey) {
+  this.requestHelper_ = new ApiRequestHelper('/v3/apps' + app_publickey +
+      '/shared-properties');
+};
+
+appsApi.PropertyBag.prototype.readAll = function (callback) {
+  this.requestHelper_.get('', callback, null);
+};
+
+appsApi.PropertyBag.prototype.read = function (key, callback) {
+  this.requestHelper_.get('/' + key, callback, undefined);
+};
+
+appsApi.PropertyBag.prototype.set = function (key, value, callback) {
+  this.requestHelper_.post('/' + key, value, callback);
+};
+
+appsApi.PropertyBag.prototype.delete = function (key, callback) {
+  this.requestHelper_.delete('/' + key, callback);
+};
+
+/**
+ * App-specific User-specific property bag
+ * Only accessible to the current user of the particular app.
  * @param app_publickey
  * @constructor
- * @augments appsApi.AppStorage
+ * @augments appsApi.PropertyBag
  */
-appsApi.SharedPropertyBag = function (app_publickey) {
-  appsApi.AppStorage.call(this);
-
-  /** For the most part, property bags just use a different base URL. */
-  this.apiBaseUrl_ = '/v3/apps/' + app_publickey + '/shared-properties';
+appsApi.UserPropertyBag = function (app_publickey) {
+  appsApi.PropertyBag.call(this, app_publickey);
+  /** User property bags just use a different base URL */
+  this.requestHelper_ = new ApiRequestHelper('/v3/apps/' + app_publickey +
+  '/user-properties');
 };
-appsApi.SharedPropertyBag.prototype = Object.create(appsApi.AppStorage.prototype);
-appsApi.SharedPropertyBag.prototype.constructor = appsApi.SharedPropertyBag;
-
-/**
- * The 'create' operation doesn't make sense for a property bag;
- * it's just an 'update' with an empty value object.
- * That returns the empty object to the callback instead of 'true'
- *
- * @param {!string} id - Storage key
- * @param {!function} callback
- * @override
- */
-appsApi.SharedPropertyBag.prototype.create = function (id, callback) {
-  appsApi.AppStorage.update.call(this, id, {}, function (success) {
-    if (success) {
-      callback({});
-    } else {
-      callback(undefined);
-    }
-  });
-};
-
-/**
- * Alias for 'update'.
- *
- * @param {!string} id
- * @param {!Object} value
- * @param {!function} callback
- */
-appsApi.SharedPropertyBag.prototype.set = function (id, value, callback) {
-  appsApi.AppStorage.update.call(this, id, value, callback);
-};
-
-/**
- * API for interacting with an app storage table on the server.
- * This table is shared between all users of the app.
- *
- * @param {!string} app_publickey - An app identifier.
- * @param {!string} table_name - App-defined name for this table.
- * @constructor
- */
-appsApi.SharedTable = function (app_publickey, table_name) {
-  appsApi.AppStorage.call(this);
-
-  /** Shared tables just use a different base URL */
-  this.apiBaseUrl_ = '/v3/apps/' + app_publickey + '/shared-tables/' + table_name;
-};
-appsApi.SharedTable.prototype = Object.create(appsApi.AppStorage.prototype);
-appsApi.SharedTable.prototype.constructor = appsApi.SharedTable;
-
-/**
- * User data table scoped to a particular user of an app.
- * Data in this table will only be accessible and manipulable by the
- * user that put it there.  It cannot be shared between users of an app.
- *
- * @param {!string} app_publickey - An app identifier.
- * @param {!string} table_name - App-defined name for this table.
- * @constructor
- * @augments appsApi.SharedTable
- */
-appsApi.UserTable = function (app_publickey, table_name) {
-  appsApi.AppStorage.call(this, app_publickey, table_name);
-
-  /** User tables just use a different base URL */
-  this.apiBaseUrl_ = '/v3/apps/' + app_publickey + '/user-tables/' + table_name;
-};
-appsApi.UserTable.prototype = Object.create(appsApi.AppStorage.prototype);
-appsApi.UserTable.prototype.constructor = appsApi.UserTable;
+appsApi.UserPropertyBag.prototype = Object.create(appsApi.PropertyBag.prototype);
+appsApi.UserPropertyBag.prototype.constructor = appsApi.UserPropertyBag;
