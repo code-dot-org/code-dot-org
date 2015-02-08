@@ -15,7 +15,7 @@
   color: #fff;
   background: #000;
   font: bold 14pt monospace;
-  padding: 1px 5px;
+  padding: 1px 7px;
 }
 
 #pixel_format .r {
@@ -28,6 +28,10 @@
 
 #pixel_format .b {
   color: #00f;
+}
+
+#pixel_format .unknown {
+  color: #999;
 }
 
 #pixel_data {

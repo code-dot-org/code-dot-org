@@ -16,9 +16,10 @@ function drawGraph() {
   ctx.fillRect(0, 0, MAX_SIZE, MAX_SIZE);
 
   var binCode = "";
+  var hexMode = document.getElementsByName("binHex")[1].checked;
 
   // If the hex radio button is currently selected.
-  if (document.getElementsByName("binHex")[1].checked) {
+  if (hexMode) {
     // Then we need to get the binary representation for this function to work.
     // The text area should preserve line breaks, spaces, and hex digits.
     pixel_data.value = pixel_data.value.replace(/[^0-9A-F \n]/gi, "");
@@ -66,14 +67,27 @@ function drawGraph() {
   }
 
   var bitsPerPixel = parseInt(document.getElementById("bitsPerPixel").value);
-  if (bitsPerPixel % 3 === 0) {
-    var str = pad('', bitsPerPixel / 3, '1');
-    pixel_format.innerHTML =
-        '<span class="r">' + str + '</span>'
-        + '<span class="g">' + str + '</span>'
-        + '<span class="b">' + str + '</span>';
+  if (hexMode && bitsPerPixel % 4 !== 0) {
+    pixel_format.innerHTML = '<span class="unknown">' + pad('', Math.ceil(bitsPerPixel / 4), '?') + '</span>';
   } else {
-    pixel_format.innerHTML = pad('', bitsPerPixel, '1');
+    if (bitsPerPixel % 3 === 0) {
+      var str;
+      if (hexMode) {
+        str = pad('', bitsPerPixel / 12, 'F');
+      } else {
+        str = pad('', bitsPerPixel / 3, '1');
+      }
+      pixel_format.innerHTML =
+          '<span class="r">' + str + '</span>'
+          + '<span class="g">' + str + '</span>'
+          + '<span class="b">' + str + '</span>';
+    } else {
+      if (hexMode) {
+        pixel_format.innerHTML = pad('', bitsPerPixel / 4, 'F');
+      } else {
+        pixel_format.innerHTML = pad('', bitsPerPixel, '1');
+      }
+    }
   }
 }
 
