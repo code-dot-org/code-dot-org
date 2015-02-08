@@ -33,7 +33,6 @@ function drawGraph() {
     binCode = document.getElementById("binaryImage").value.replace(/[^01]/gi, "");
     console.debug("bin is checked, binCODE:" + binCode);
   }
-  var errMsg = "Length ";
 
   // Read width, height out of the bit string (where width is given in byte 0, height in byte 1).
   var w = binToInt(readByte(binCode, 0));
@@ -49,13 +48,6 @@ function drawGraph() {
 
   var imgBitString = binCode.substring(24, binCode.length);
   var colorNums = bitsToColors(imgBitString, bitsPerPix);
-
-  if (colorNums.length != w * h) {
-    errMsg += "ERROR. ";
-  } else {
-    errMsg += "ok. ";
-  }
-  errMsg += "binary:" + colorNums.length + ", WxH:" + (w * h);
 
   var sqSizeMax = parseInt((400 / Math.max(w, h)) - 1);
   sqSizeMax = Math.max(sqSizeMax, 1);
@@ -84,8 +76,6 @@ function drawGraph() {
       ctx.fillRect(x * (sqSize + pixelBorder), y * (sqSize + pixelBorder), sqSize, sqSize);
     }
   }
-
-  document.getElementById("err").innerHTML = errMsg;
 }
 
 function formatBitDisplay() {

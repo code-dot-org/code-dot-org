@@ -14,10 +14,6 @@
   font-family: monospace;
 }
 
-#err {
-  color: #CC0000;
-}
-
 #file_format div {
   padding: 3px 5px;
   border: 1px solid #000;
