@@ -192,6 +192,10 @@ function hexToBinPvt(allHexDigits) {
 }
 
 function binToHexPvt(allBits) {
+
+  while (allBits.length % 4 !== 0) {
+    allBits += '0';
+  }
   var hexString = "";
   // Work in chunks of 8.
   for (var i = 0; i < allBits.length; i += 4) {
