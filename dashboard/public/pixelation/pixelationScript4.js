@@ -6,6 +6,7 @@
 
 var MAX_SIZE = 400;
 
+var pixel_format = document.querySelector('#pixel_format');
 var pixel_data = document.querySelector("#pixel_data");
 var canvas = document.querySelector("#canvas");
 
@@ -62,6 +63,17 @@ function drawGraph() {
       ctx.fillStyle = colorNums[(y * w) + x] || "#fdd";
       ctx.fillRect(left + x * sqSize + offset, top + y * sqSize + offset, fillSize, fillSize);
     }
+  }
+
+  var bitsPerPixel = parseInt(document.getElementById("bitsPerPixel").value);
+  if (bitsPerPixel % 3 === 0) {
+    var str = pad('', bitsPerPixel / 3, '1');
+    pixel_format.innerHTML =
+        '<span class="r">' + str + '</span>'
+        + '<span class="g">' + str + '</span>'
+        + '<span class="b">' + str + '</span>';
+  } else {
+    pixel_format.innerHTML = pad('', bitsPerPixel, '1');
   }
 }
 

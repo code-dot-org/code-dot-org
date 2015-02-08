@@ -7,11 +7,35 @@
   float: left;
 }
 
+#pixel_format_container {
+  float: right;
+}
+
+#pixel_format {
+  color: #fff;
+  background: #000;
+  font: bold 14pt monospace;
+  padding: 1px 5px;
+}
+
+#pixel_format .r {
+  color: #f00;
+}
+
+#pixel_format .g {
+  color: #0f0;
+}
+
+#pixel_format .b {
+  color: #00f;
+}
+
 #pixel_data {
   width: 100%;
   height: 350px;
   font-family: monospace;
   box-sizing: border-box;
+  margin-top: 5px;
 }
 
 #file_format div {
