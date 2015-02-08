@@ -28,10 +28,6 @@
     <input type=range id="bitsPerPixelSlider" min=1 max=24 value=1 step=1 oninput="changeVal('bitsPerPixel')">
     <span id="pixel_format"></span>
   </label>
-  <label class="canvasInputLabel">Zoom:
-    <input type=range id="sqSizeSlider" oninput="drawGraph()" value="48" min="1" max="100">
-    <span id="sqSizeLabel" class="canvasInputLabel"></span>
-  </label>
   <div class="label_group">
     <label>Binary:
       <input type="radio" name="binHex" id="binHexRadio" value="bin" checked="checked" onChange="hexToBin(); drawGraph();">
@@ -41,7 +37,7 @@
     </label>
   </div>
   <label>Pixel Data:
-    <textarea id="pixel_data" onkeyup="drawGraph();" style="position: relative;">000010010000100000000011000001010011100101110111000001010011100101110111000001010011100101110111000001010011100101110111000001010011100101110111000001010011100101110111000001010011100101110111000001010011100101110111000001010011100101110111</textarea>
+    <textarea id="pixel_data" onkeyup="drawGraph();" style="position: relative;">000010000000100000000011000001010011100101110111001010011100101110111000010011100101110111000001011100101110111000001010100101110111000001010011101110111000001010011100110111000001010011100101111000001010011100101110</textarea>
   </label>
   <button onClick="formatBitDisplay();" title="Click on this to lay bits out in a readable fashion">Format</button>
   <button onClick="unformatBits();">Un-Format</button>

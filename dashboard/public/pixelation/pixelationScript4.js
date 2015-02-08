@@ -4,14 +4,15 @@
  * Original code written by Baker Franke.
  */
 
+var MAX_SIZE = 400;
+
 var pixel_data = document.querySelector("#pixel_data");
 var canvas = document.querySelector("#canvas");
 
 function drawGraph() {
   var ctx = canvas.getContext("2d");
-  ctx.fillStyle = "#CCCCCC";
-  ctx.fillRect(0, 0, 400, 400);
-  ctx.fillStyle = "#000000";
+  ctx.fillStyle = "#000";
+  ctx.fillRect(0, 0, MAX_SIZE, MAX_SIZE);
 
   var binCode = "";
 
@@ -46,21 +47,20 @@ function drawGraph() {
   var imgBitString = binCode.substring(24, binCode.length);
   var colorNums = bitsToColors(imgBitString, bitsPerPix);
 
-  var sqSizeMax = parseInt(400 / Math.max(w, h));
-  sqSizeMax = Math.max(sqSizeMax, 1);
-  console.debug("Calculating sqSize max=" + sqSizeMax);
+  var sqSize = MAX_SIZE / Math.max(w, h);
+  var fillSize = sqSize * 0.95;
+  var offset = (sqSize - fillSize) / 2;
+  if (sqSize - fillSize < 0.33) {
+    fillSize += 1;
+    offset = 0;
+  }
 
-  document.getElementById("sqSizeSlider").setAttribute("max", sqSizeMax);
-
-  var sqSize = parseInt(document.getElementById("sqSizeSlider").value);
-  document.getElementById("sqSizeLabel").innerHTML = sqSize + " px";
-  canvas.width = w * sqSize;
-  canvas.height = h * sqSize;
-
+  var left = (MAX_SIZE - w * sqSize) / 2;
+  var top = (MAX_SIZE - h * sqSize) / 2;
   for (var y = 0; y < h; y++) {
     for (var x = 0; x < w; x++) {
       ctx.fillStyle = colorNums[(y * w) + x] || "#fdd";
-      ctx.fillRect(x * sqSize, y * sqSize, sqSize * 0.95, sqSize * 0.95);
+      ctx.fillRect(left + x * sqSize + offset, top + y * sqSize + offset, fillSize, fillSize);
     }
   }
 }

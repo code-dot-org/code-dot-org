@@ -1,20 +1,10 @@
 #visualization {
   width: 400px;
-  background: #000;
   overflow: hidden;
 }
 
 #visualizationColumn {
   float: left;
-}
-
-#canvas {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
 }
 
 #pixel_data {
