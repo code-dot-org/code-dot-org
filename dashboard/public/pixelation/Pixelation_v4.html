@@ -15,33 +15,48 @@
   </div>
 </div>
 <div id="visualizationEditor" class="responsive">
-  <label>Width:
-    <input type="number" min="1" max="255" id="width" oninput="setSliders()">
-    <input type="range" min="1" max="255" id="widthRange" oninput="changeVal('width')">
-  </label>
-  <label>Height:
-    <input type=number min="1" max="255" id="height" oninput="setSliders();">
-    <input type="range" min="1" max="255" id="heightRange" oninput="changeVal('height')">
-  </label>
-  <label>Bits per Pixel:
-    <input type=number min=1 max=24 id="bitsPerPixel" value="3" oninput="setSliders();" size=2>
-    <input type=range id="bitsPerPixelSlider" min=1 max=24 value=1 step=1 oninput="changeVal('bitsPerPixel')">
-    <span id="pixel_format"></span>
-  </label>
+  <table id="image_controls">
+    <tr>
+      <td>
+        <label for="width">Image width:</label>
+      </td><td>
+        <input type="number" min="1" max="255" id="width" oninput="setSliders();">
+      </td><td>
+        <input type="range" min="1" max="255" id="widthRange" oninput="changeVal('width');">
+      </td>
+    </tr><tr>
+      <td>
+        <label for="height">Image height:</label>
+      </td><td>
+        <input type="number" min="1" max="255" id="height" oninput="setSliders();">
+      </td><td>
+        <input type="range" min="1" max="255" id="heightRange" oninput="changeVal('height');">
+      </td>
+    </tr><tr>
+      <td>
+        <label for="bitsPerPixel">Bits per pixel:</label>
+      </td><td>
+        <input type="number" min=1 max=24 id="bitsPerPixel" value="3" oninput="setSliders();">
+      </td><td>
+        <input type=range id="bitsPerPixelSlider" min=1 max=24 value=1 step=1 oninput="changeVal('bitsPerPixel')">
+      </td>
+    </tr>
+  </table>
+  <span id="pixel_format"></span>
   <div class="label_group">
     <label>Binary:
-      <input type="radio" name="binHex" id="binHexRadio" value="bin" checked="checked" onChange="hexToBin(); drawGraph();">
+      <input type="radio" name="binHex" id="binHexRadio" value="bin" checked="checked" onchange="hexToBin(); drawGraph();">
     </label>
     <label>Hexadecimal:
-      <input type="radio" name="binHex" id="binHexRadio" value="hex" onChange="binToHex(); drawGraph();">
+      <input type="radio" name="binHex" id="binHexRadio" value="hex" onchange="binToHex(); drawGraph();">
     </label>
   </div>
-  <label>Pixel Data:
-    <textarea id="pixel_data" onkeyup="drawGraph();" style="position: relative;">000010000000100000000011000001010011100101110111001010011100101110111000010011100101110111000001011100101110111000001010100101110111000001010011101110111000001010011100110111000001010011100101111000001010011100101110</textarea>
-  </label>
+  <textarea id="pixel_data" oninput="drawGraph();">
+    000010000000100000000011000001010011100101110111001010011100101110111000010011100101110111000001011100101110111000001010100101110111000001010011101110111000001010011100110111000001010011100101111000001010011100101110
+  </textarea>
   <button onClick="formatBitDisplay();" title="Click on this to lay bits out in a readable fashion">Format</button>
   <button onClick="unformatBits();">Un-Format</button>
-  <button onClick="showPNG('canvas')">Save PNG</button>
+  <button onClick="showPNG('canvas');">Save PNG</button>
 </div>
 <script>
   drawGraph();
