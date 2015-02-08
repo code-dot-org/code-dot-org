@@ -2,7 +2,7 @@ require File.expand_path('../../../../config/environment.rb', __FILE__)
 
 def replace_hostname(url)
   if ENV['DASHBOARD_TEST_DOMAIN']
-    url = url.gsub(/\/\/learn.code.org\//, "//" + ENV['DASHBOARD_TEST_DOMAIN'] + "/")
+    url = url.gsub(/\/\/(learn|studio).code.org\//, "//" + ENV['DASHBOARD_TEST_DOMAIN'] + "/")
   end
   if ENV['PEGASUS_TEST_DOMAIN']
     url = url.gsub(/\/\/code.org\//, "//" + ENV['PEGASUS_TEST_DOMAIN'] + "/")
@@ -24,6 +24,12 @@ end
 Then /^I see "([.#])([^"]*)"$/ do |selector_symbol, name|
   selection_criteria = selector_symbol == '#' ? {:id => name} : {:class => name}
   @browser.find_element(selection_criteria)
+end
+
+Then /^I do not see "([.#])([^"]*)"$/ do |selector_symbol, name|
+  selection_criteria = selector_symbol == '#' ? {:id => name} : {:class => name}
+  elements = @browser.find_elements(selection_criteria)
+  elements.length.should eq 0
 end
 
 When /^I wait until element "([^"]*)" has text "([^"]*)"$/ do |selector, text|
@@ -67,6 +73,10 @@ end
 
 When /^I press "([^"]*)" using jQuery$/ do |selector|
   @browser.execute_script("$('" + selector + "').click()");
+end
+
+When /^I press "([^"]*)" DOM using jQuery$/ do |selector|
+  @browser.execute_script("$('" + selector + "').get(0).click()");
 end
 
 When /^I press dropdown item "([^"]*)"$/ do |index|
