@@ -1,37 +1,35 @@
 /**
  * Pixelation widget for visualizing image encoding.
  *
- * Original code by Baker Franke.
+ * Original code written by Baker Franke.
  */
 
+var pixel_data = document.querySelector("#pixel_data");
+var canvas = document.querySelector("#canvas");
+
 function drawGraph() {
-  var c = document.getElementById("canvas");
-  var ctx = c.getContext("2d");
+  var ctx = canvas.getContext("2d");
   ctx.fillStyle = "#CCCCCC";
   ctx.fillRect(0, 0, 400, 400);
   ctx.fillStyle = "#000000";
 
   var binCode = "";
-  var binCodeDisplay = "";
 
   // If the hex radio button is currently selected.
   if (document.getElementsByName("binHex")[1].checked) {
-
     // Then we need to get the binary representation for this function to work.
-    var allHexDigits = document.getElementById("binaryImage").value.replace(/[^0-9A-F]/gi, "");
+    // The text area should preserve line breaks, spaces, and hex digits.
+    pixel_data.value = pixel_data.value.replace(/[^0-9A-F \n]/gi, "");
 
-    binCode = hexToBinPvt(allHexDigits);
-    console.debug("hex is checked, binCODE:" + binCode);
-  }
-  else {
+    // Binary code needs to have everything stripped and converted.
+    binCode = hexToBinPvt(pixel_data.value.replace(/[^0-9A-F]/gi, ""));
+  } else {
     // Otherwise take the straight binary from the text input.
-    // The text area should preserve line breaks, 0s and 1s.
-    binCodeDisplay = document.getElementById("binaryImage").value.replace(/[^01 \n]/gi, "");
-    document.getElementById("binaryImage").value = binCodeDisplay;
+    // The text area should preserve line breaks, spaces, 0s, and 1s.
+    pixel_data.value = pixel_data.value.replace(/[^01 \n]/gi, "");
 
     // Binary code needs to have everything stripped except for 0s and 1s.
-    binCode = document.getElementById("binaryImage").value.replace(/[^01]/gi, "");
-    console.debug("bin is checked, binCODE:" + binCode);
+    binCode = pixel_data.value.replace(/[^01]/gi, "");
   }
 
   // Read width, height out of the bit string (where width is given in byte 0, height in byte 1).
@@ -41,7 +39,6 @@ function drawGraph() {
   document.getElementById("height").value = document.getElementById("heightRange").value = h;
 
   var bitsPerPix = binToInt(readByte(binCode, 2));
-  console.debug("read bits per pix: " + bitsPerPix);
 
   document.getElementById("bitsPerPixel").value = bitsPerPix;
   document.getElementById("bitsPerPixelSlider").value = bitsPerPix;
@@ -49,7 +46,7 @@ function drawGraph() {
   var imgBitString = binCode.substring(24, binCode.length);
   var colorNums = bitsToColors(imgBitString, bitsPerPix);
 
-  var sqSizeMax = parseInt((400 / Math.max(w, h)) - 1);
+  var sqSizeMax = parseInt(400 / Math.max(w, h));
   sqSizeMax = Math.max(sqSizeMax, 1);
   console.debug("Calculating sqSize max=" + sqSizeMax);
 
@@ -57,42 +54,32 @@ function drawGraph() {
 
   var sqSize = parseInt(document.getElementById("sqSizeSlider").value);
   document.getElementById("sqSizeLabel").innerHTML = sqSize + " px";
-
-  var pixelBorder = 0;
-  if (document.getElementById("showPixelBorder").checked) {
-    pixelBorder = 1;
-  }
-  document.getElementById("canvas").width = w * (sqSize + pixelBorder);
-  document.getElementById("canvas").height = h * (sqSize + pixelBorder);
+  canvas.width = w * sqSize;
+  canvas.height = h * sqSize;
 
   for (var y = 0; y < h; y++) {
     for (var x = 0; x < w; x++) {
-      var index = (y * w) + x;
-      if (index >= colorNums.length) {
-        ctx.fillStyle = "#FFDDDD";
-      } else {
-        ctx.fillStyle = colorNums[index];
-      }
-      ctx.fillRect(x * (sqSize + pixelBorder), y * (sqSize + pixelBorder), sqSize, sqSize);
+      ctx.fillStyle = colorNums[(y * w) + x] || "#fdd";
+      ctx.fillRect(x * sqSize, y * sqSize, sqSize * 0.95, sqSize * 0.95);
     }
   }
 }
 
 function formatBitDisplay() {
 
-  var theData = document.getElementById("binaryImage").value;
+  var theData = pixel_data.value;
   var chunksPerLine = parseInt(document.getElementById("width").value);
   var chunkSize = parseInt(document.getElementById("bitsPerPixel").value);
 
   // If in binary mode.
   var newBits = formatBits(theData, chunkSize, chunksPerLine);
   if (newBits != null) {
-    document.getElementById("binaryImage").value = newBits;
+    pixel_data.value = newBits;
   }
 }
 
 function unformatBits() {
-  document.getElementById("binaryImage").value = document.getElementById("binaryImage").value.replace(/[ \n]/g, "");
+  pixel_data.value = pixel_data.value.replace(/[ \n]/g, "");
 }
 
 /**
@@ -154,15 +141,15 @@ function formatBits(bitString, chunkSize, chunksPerLine) {
 }
 
 function hexToBin() {
-  var allHexDigits = document.getElementById("binaryImage").value.replace(/[^0-9A-F]/gi, "");
+  var allHexDigits = pixel_data.value.replace(/[^0-9A-F]/gi, "");
   console.debug("about to convert HEX2BIN and write to text area");
-  document.getElementById("binaryImage").value = hexToBinPvt(allHexDigits);
+  pixel_data.value = hexToBinPvt(allHexDigits);
   formatBitDisplay();
 }
 
 function pad(str, len, prefix) {
 
-  while (str.length !== len) {
+  while (str.length < len) {
     str = prefix + str;
   }
   return str;
@@ -189,10 +176,10 @@ function binToHexPvt(allBits) {
 
 function binToHex() {
 
-  var allBits = document.getElementById("binaryImage").value.replace(/[^01]/gi, "");
+  var allBits = pixel_data.value.replace(/[^01]/gi, "");
   console.debug("about to convert BIN2HEX and write to text area");
 
-  document.getElementById("binaryImage").value = binToHexPvt(allBits);
+  pixel_data.value = binToHexPvt(allBits);
   formatBitDisplay();
 }
 
@@ -238,11 +225,11 @@ function getColorVal2(binVal, bitsPerPixel) {
  * Extract the given byte from the bitString.
  */
 function readByte(bitString, byteNum) {
-  return bitString.substring(byteNum * 8, byteNum * 8 + 8);
+  return bitString.substr(byteNum * 8, 8);
 }
 
 function binToInt(bits) {
-  return (bits.length == 0) ? 0 : parseInt(bits, 2);
+  return parseInt(bits, 2) || 0;
 }
 
 /**
@@ -302,7 +289,7 @@ function updateBinaryDataToMatchSliders() {
   var bppByte = pad(parseInt(document.getElementById("bitsPerPixelSlider").value).toString(2), 8, "0");
 
 
-  var justBits = document.getElementById("binaryImage").value.replace(/[ \n]/g, "");
+  var justBits = pixel_data.value.replace(/[ \n]/g, "");
   var isHex = ("hex" == document.querySelector('input[name="binHex"]:checked').value);
 
   if (isHex) {
@@ -318,7 +305,7 @@ function updateBinaryDataToMatchSliders() {
   }
 
   // Note: unformatted at this point.
-  document.getElementById("binaryImage").value = newBits;
+  pixel_data.value = newBits;
 
   formatBitDisplay();
 }
