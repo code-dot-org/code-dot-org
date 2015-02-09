@@ -1,6 +1,6 @@
 :css
   textarea { width: 100% }
-  
+
   .callouteditor input {
     width: auto
   }
@@ -37,6 +37,17 @@
 .field
   = f.label :open_function_definition, 'Auto-open function definition'
   = f.text_field :open_function_definition, placeholder: 'name of function to open'
+%table.contract-editor-config
+  %tr
+    %th Section
+    %th Highlight
+    %th Collapse
+  -%w(contract examples definition).each_with_index do |section, i|
+    %tr
+      %td #{i + 1}. #{section.titleize}
+      %td= boolean_check_box f, "#{section}_highlight".to_sym
+      %td= boolean_check_box f, "#{section}_collapse".to_sym
+
 .field
   = f.label :disable_param_editing, 'Enable param editing in function blocks'
   = f.check_box :disable_param_editing, {}, 'false', 'true'

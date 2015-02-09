@@ -377,7 +377,7 @@ StudioApp.prototype.init = function(config) {
     }, this));
 
     if (config.level.openFunctionDefinition) {
-      Blockly.functionEditor.openAndEditFunction(config.level.openFunctionDefinition);
+      Blockly.functionEditor.openWithLevelConfiguration(config.level);
     }
   }
 };
@@ -1168,7 +1168,7 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     // Ensure global ace variable is the same as window.ace
     // (important because they can be different in our test environment)
     ace = window.ace;
-    
+
     this.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
       mode: 'javascript',
       modeOptions: utils.generateDropletModeOptions(options.codeFunctions,
