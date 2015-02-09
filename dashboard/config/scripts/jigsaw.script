@@ -2,7 +2,7 @@ id '7'
 title 'Jigsaw'
 description ""
 
-Jigsaw
+stage 'Jigsaw'
 skin 'jigsaw'
 level 'blockly:Jigsaw:1'
 skin 'jigsaw'

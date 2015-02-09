@@ -3,7 +3,7 @@ title 'Flappy Code'
 description "Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!"
 hidden 'false'
 
-Flappy Code
+stage 'Flappy Code'
 skin 'flappy'
 level 'blockly:Flappy:1'
 skin 'flappy'

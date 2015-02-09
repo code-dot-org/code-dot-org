@@ -422,3 +422,34 @@ en:
           The Internet: The Internet
           The Artist 5: The Artist 5
           Wrap-up: Wrap-up
+        edit-code:
+          title: Edit Code
+          description: ''
+          The Maze: The Maze
+          Applab: Applab
+          The Artist: The Artist
+          Play Lab: Play Lab
+        events:
+          title: Events
+          description: ''
+          Bounce: Bounce
+          Studio: Studio
+          Calc: Calc
+          Eval: Eval
+        flappy:
+          title: Flappy Code
+          description: Wanna write your own game in less than 10 minutes? Try our
+            Flappy Code tutorial!
+          Flappy Code: Flappy Code
+        jigsaw:
+          title: Jigsaw
+          description: ''
+          Jigsaw: Jigsaw
+        step:
+          title: Step
+          description: ''
+          Step: Step
+        Hour of Code:
+          title: Hour of Code 2013
+          description: ''
+          Hour of Code 2013: Hour of Code 2013

@@ -2,7 +2,7 @@ id '8'
 title 'Step'
 description ""
 
-Step
+stage 'Step'
 skin 'birds'
 level 'blockly:MazeStep:2_1_step'
 skin 'birds'
