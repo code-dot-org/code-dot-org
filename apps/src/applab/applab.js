@@ -1210,7 +1210,7 @@ Applab.container = function (opts) {
   return Boolean(divApplab.appendChild(newDiv));
 };
 
-Applab.createButton = function (opts) {
+Applab.button = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newButton = document.createElement("button");
@@ -1221,7 +1221,7 @@ Applab.createButton = function (opts) {
                  divApplab.appendChild(newButton));
 };
 
-Applab.createImage = function (opts) {
+Applab.image = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newImage = document.createElement("img");
@@ -1231,7 +1231,7 @@ Applab.createImage = function (opts) {
   return Boolean(divApplab.appendChild(newImage));
 };
 
-Applab.createImageUploadButton = function (opts) {
+Applab.imageUploadButton = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   // To avoid showing the ugly fileupload input element, we create a label
@@ -1558,7 +1558,7 @@ Applab.putImageData = function (opts) {
   }
 };
 
-Applab.createTextInput = function (opts) {
+Applab.textInput = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newInput = document.createElement("input");
@@ -1568,7 +1568,7 @@ Applab.createTextInput = function (opts) {
   return Boolean(divApplab.appendChild(newInput));
 };
 
-Applab.createTextLabel = function (opts) {
+Applab.textLabel = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newLabel = document.createElement("label");
@@ -1583,7 +1583,7 @@ Applab.createTextLabel = function (opts) {
                  divApplab.appendChild(newLabel));
 };
 
-Applab.createCheckbox = function (opts) {
+Applab.checkbox = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newCheckbox = document.createElement("input");
@@ -1594,7 +1594,7 @@ Applab.createCheckbox = function (opts) {
   return Boolean(divApplab.appendChild(newCheckbox));
 };
 
-Applab.createRadio = function (opts) {
+Applab.radioButton = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newRadio = document.createElement("input");
@@ -1606,7 +1606,7 @@ Applab.createRadio = function (opts) {
   return Boolean(divApplab.appendChild(newRadio));
 };
 
-Applab.createDropdown = function (opts) {
+Applab.dropdown = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newSelect = document.createElement("select");
@@ -1751,6 +1751,26 @@ Applab.deleteElement = function (opts) {
       delete Applab.activeCanvas;
     }
     return Boolean(div.parentElement.removeChild(div));
+  }
+  return false;
+};
+
+Applab.showElement = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  var div = document.getElementById(opts.elementId);
+  if (divApplab.contains(div)) {
+    div.style.visibility = 'visible';
+    return true;
+  }
+  return false;
+};
+
+Applab.hideElement = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  var div = document.getElementById(opts.elementId);
+  if (divApplab.contains(div)) {
+    div.style.visibility = 'hidden';
+    return true;
   }
   return false;
 };

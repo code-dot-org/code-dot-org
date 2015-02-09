@@ -26,16 +26,28 @@ exports.deleteElement = function (blockId, elementId) {
                           {'elementId': elementId });
 };
 
-exports.createButton = function (blockId, elementId, text) {
+exports.showElement = function (blockId, elementId) {
   return Applab.executeCmd(blockId,
-                          'createButton',
+                          'showElement',
+                          {'elementId': elementId });
+};
+
+exports.hideElement = function (blockId, elementId) {
+  return Applab.executeCmd(blockId,
+                          'hideElement',
+                          {'elementId': elementId });
+};
+
+exports.button = function (blockId, elementId, text) {
+  return Applab.executeCmd(blockId,
+                          'button',
                           {'elementId': elementId,
                            'text': text });
 };
 
-exports.createImage = function (blockId, elementId, src) {
+exports.image = function (blockId, elementId, src) {
   return Applab.executeCmd(blockId,
-                          'createImage',
+                          'image',
                           {'elementId': elementId,
                            'src': src });
 };
@@ -139,31 +151,31 @@ exports.putImageData = function (blockId, imageData, x, y) {
                            'y': y });
 };
 
-exports.createTextInput = function (blockId, elementId, text) {
+exports.textInput = function (blockId, elementId, text) {
   return Applab.executeCmd(blockId,
-                          'createTextInput',
+                          'textInput',
                           {'elementId': elementId,
                            'text': text });
 };
 
-exports.createTextLabel = function (blockId, elementId, text, forId) {
+exports.textLabel = function (blockId, elementId, text, forId) {
   return Applab.executeCmd(blockId,
-                          'createTextLabel',
+                          'textLabel',
                           {'elementId': elementId,
                            'text': text,
                            'forId': forId });
 };
 
-exports.createCheckbox = function (blockId, elementId, checked) {
+exports.checkbox = function (blockId, elementId, checked) {
   return Applab.executeCmd(blockId,
-                          'createCheckbox',
+                          'checkbox',
                           {'elementId': elementId,
                            'checked': checked });
 };
 
-exports.createRadio = function (blockId, elementId, checked, name) {
+exports.radioButton = function (blockId, elementId, checked, name) {
   return Applab.executeCmd(blockId,
-                          'createRadio',
+                          'radioButton',
                           {'elementId': elementId,
                            'checked': checked,
                            'name': name });
@@ -182,10 +194,10 @@ exports.setChecked = function (blockId, elementId, checked) {
                            'checked': checked });
 };
 
-exports.createDropdown = function (blockId, elementId) {
+exports.dropdown = function (blockId, elementId) {
   var optionsArray = Array.prototype.slice.call(arguments, 2);
   return Applab.executeCmd(blockId,
-                          'createDropdown',
+                          'dropdown',
                           {'elementId': elementId,
                            'optionsArray': optionsArray });
 };
@@ -231,9 +243,9 @@ exports.setImageURL = function (blockId, elementId, src) {
                            'src': src });
 };
 
-exports.createImageUploadButton = function (blockId, elementId, text) {
+exports.imageUploadButton = function (blockId, elementId, text) {
   return Applab.executeCmd(blockId,
-                           'createImageUploadButton',
+                           'imageUploadButton',
                            {'elementId': elementId,
                             'text': text });
 };
