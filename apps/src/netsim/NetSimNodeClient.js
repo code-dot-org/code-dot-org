@@ -80,6 +80,20 @@ var NetSimNodeClient = function (shard, clientRow) {
    * @type {NetSimNodeRouter}
    */
   this.myRouter = null;
+
+  /**
+   * Widget where we will post sent messages.
+   * @type {NetSimLogWidget}
+   * @private
+   */
+  this.sentLog_ = null;
+
+  /**
+   * Widget where we will post received messages
+   * @type {NetSimLogWidget}
+   * @private
+   */
+  this.receivedLog_ = null;
 };
 NetSimNodeClient.prototype = Object.create(superClass.prototype);
 NetSimNodeClient.prototype.constructor = NetSimNodeClient;
@@ -111,6 +125,17 @@ NetSimNodeClient.prototype.getStatus = function () {
 /** Set node's display name.  Does not trigger an update! */
 NetSimNodeClient.prototype.setDisplayName = function (displayName) {
   this.displayName_ = displayName;
+};
+
+/**
+ * Configure this node controller to post sent and received messages to the
+ * given log widgets.
+ * @param {!NetSimLogWidget} sentLog
+ * @param {!NetSimLogWidget} receivedLog
+ */
+NetSimNodeClient.prototype.setLogs = function (sentLog, receivedLog) {
+  this.sentLog_ = sentLog;
+  this.receivedLog_ = receivedLog;
 };
 
 /**
@@ -269,7 +294,17 @@ NetSimNodeClient.prototype.sendMessage = function (payload) {
 
   var localNodeID = this.myWire.localNodeID;
   var remoteNodeID = this.myWire.remoteNodeID;
-  NetSimMessage.send(this.shard_, localNodeID, remoteNodeID, payload, function (success) {
-    logger.info('Local node sent message: ' + JSON.stringify(payload));
-  });
+  var self = this;
+  NetSimMessage.send(this.shard_, localNodeID, remoteNodeID, payload,
+      function (success) {
+        if (success) {
+          logger.info('Local node sent message: ' + JSON.stringify(payload));
+          if (self.sentLog_) {
+            self.sentLog_.log(JSON.stringify(payload));
+          }
+        } else {
+          logger.error('Failed to send message: ' + JSON.stringify(payload));
+        }
+      }
+  );
 };

@@ -52,16 +52,30 @@ var CLEAN_UP_INTERVAL_MS = 10000;
 
 /**
  * A connection to a NetSim shard
- * @param {string} displayName - Name for person on local end
+ * @param {!string} displayName - Name for person on local end
+ * @param {!NetSimLogWidget} sentLog - Widget to post sent messages to
+ * @param {!NetSimLogWidget} receivedLog - Widget to post received messages to
  * @constructor
  */
-var NetSimConnection = function (displayName) {
+var NetSimConnection = function (displayName, sentLog, receivedLog) {
   /**
    * Display name for user on local end of connection, to be uploaded to others.
    * @type {string}
    * @private
    */
   this.displayName_ = displayName;
+
+  /**
+   * @type {NetSimLogWidget}
+   * @private
+   */
+  this.sentLog_ = sentLog;
+
+  /**
+   * @type {NetSimLogWidget}
+   * @private
+   */
+  this.receivedLog_ = receivedLog;
 
   /**
    * Accessor object for select simulation shard's tables, where an shard
@@ -187,6 +201,7 @@ NetSimConnection.prototype.createMyClientNode_ = function () {
       self.myNode = node;
       self.myNode.onChange.register(self, self.onMyNodeChange_);
       self.myNode.setDisplayName(self.displayName_);
+      self.myNode.setLogs(self.sentLog_, self.receivedLog_);
       self.myNode.update(function () {
         self.statusChanges.notifyObservers();
       });

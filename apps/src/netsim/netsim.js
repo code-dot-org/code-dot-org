@@ -41,6 +41,7 @@ var DashboardUser = require('./DashboardUser');
 var NetSimLobby = require('./NetSimLobby');
 var NetSimRouterPanel = require('./NetSimRouterPanel');
 var NetSimSendWidget = require('./NetSimSendWidget');
+var NetSimLogWidget = require('./NetSimLogWidget');
 var RunLoop = require('./RunLoop');
 
 /**
@@ -148,7 +149,13 @@ NetSim.prototype.init = function(config) {
  * @private
  */
 NetSim.prototype.initWithUserName_ = function (userName) {
-  this.connection_ = new NetSimConnection(userName);
+  this.receivedMessageLog_ = NetSimLogWidget.createWithin(
+      document.getElementById('netsim_received'), 'Received Messages');
+  this.sentMessageLog_ = NetSimLogWidget.createWithin(
+      document.getElementById('netsim_sent'), 'Sent Messages');
+
+  this.connection_ = new NetSimConnection(userName, this.sentMessageLog_,
+      this.receivedMessageLog_);
   this.connection_.attachToRunLoop(this.runLoop_);
 
   var lobbyContainer = document.getElementById('netsim_lobby_container');
