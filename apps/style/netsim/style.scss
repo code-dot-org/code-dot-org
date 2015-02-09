@@ -40,11 +40,39 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
   font-size: 20px;
 }
 
-.netsim_lobby_user_row {
+#netsim_lobby_list {
   background-color: white;
-}
+  padding: 0.5em;
+  border: inset darkslategray thin;
+  list-style: none;
 
-.netsim_lobby_own_row {
-  font-weight: bold;
-  background-color: paleturquoise;
+  li {
+    background-color: white;
+    padding: 0.3em;
+  }
+
+  .own_row {
+    font-weight: bold;
+    background-color: lightcyan;
+  }
+
+  .user_row {
+
+  }
+
+  .router_row {
+    cursor: pointer;
+  }
+  .router_row:hover {
+    color: black;
+    background-color: rgba(255, 140, 0, 0.21);
+  }
+
+  .selected_row {
+    color: white;
+    background-color: darkorange;
+  }
+  .selected_row:hover {
+    background-color: darkorange;
+  }
 }
