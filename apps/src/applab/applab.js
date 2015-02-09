@@ -717,6 +717,7 @@ studioApp.reset = function(first) {
   }
 
   // Reset configurable variables
+  delete Applab.activeCanvas;
   Applab.turtle = {};
   Applab.turtle.heading = 0;
   Applab.turtle.x = Applab.appWidth / 2;
@@ -1199,7 +1200,7 @@ Applab.callCmd = function (cmd) {
   return retVal;
 };
 
-Applab.createHtmlBlock = function (opts) {
+Applab.container = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newDiv = document.createElement("div");
@@ -1263,8 +1264,9 @@ function getTurtleContext() {
   var canvas = document.getElementById('turtleCanvas');
 
   if (!canvas) {
-    // If there is not yet a turtleCanvas, create it:
-    Applab.createCanvas({ 'elementId': 'turtleCanvas' });
+    // If there is not yet a turtleCanvas, create it (but don't make it the
+    // active canvas):
+    Applab.createCanvas({ 'elementId': 'turtleCanvas', 'notActive': true });
     canvas = document.getElementById('turtleCanvas');
 
     // And create the turtle (defaults to visible):
@@ -1296,15 +1298,15 @@ function turtleSetVisibility (visible) {
   turtleImage.style.visibility = visible ? 'visible' : 'hidden';
 }
 
-Applab.turtleShow = function (opts) {
+Applab.show = function (opts) {
   turtleSetVisibility(true);
 };
 
-Applab.turtleHide = function (opts) {
+Applab.hide = function (opts) {
   turtleSetVisibility(false);
 };
 
-Applab.turtleMoveTo = function (opts) {
+Applab.moveTo = function (opts) {
   var ctx = getTurtleContext();
   if (ctx) {
     ctx.beginPath();
@@ -1317,41 +1319,57 @@ Applab.turtleMoveTo = function (opts) {
   }
 };
 
-Applab.turtleMove = function (opts) {
+Applab.move = function (opts) {
   var newOpts = {};
   newOpts.x = Applab.turtle.x + opts.x;
   newOpts.y = Applab.turtle.y + opts.y;
-  Applab.turtleMoveTo(newOpts);
+  Applab.moveTo(newOpts);
 };
 
-Applab.turtleMoveForward = function (opts) {
+Applab.moveForward = function (opts) {
   var newOpts = {};
+  var distance = 25;
+  if (typeof opts.distance !== 'undefined') {
+    distance = opts.distance;
+  }
   newOpts.x = Applab.turtle.x +
-    opts.distance * Math.sin(2 * Math.PI * Applab.turtle.heading / 360);
+    distance * Math.sin(2 * Math.PI * Applab.turtle.heading / 360);
   newOpts.y = Applab.turtle.y -
-      opts.distance * Math.cos(2 * Math.PI * Applab.turtle.heading / 360);
-  Applab.turtleMoveTo(newOpts);
+    distance * Math.cos(2 * Math.PI * Applab.turtle.heading / 360);
+  Applab.moveTo(newOpts);
 };
 
-Applab.turtleMoveBackward = function (opts) {
-  opts.distance = -opts.distance;
-  Applab.turtleMoveForward(opts);
+Applab.moveBackward = function (opts) {
+  var distance = -25;
+  if (typeof opts.distance !== 'undefined') {
+    distance = -opts.distance;
+  }
+  Applab.moveForward({'distance': distance });
 };
 
-Applab.turtleTurnRight = function (opts) {
+Applab.turnRight = function (opts) {
   // call this first to ensure there is a turtle (in case this is the first API)
   getTurtleContext();
-  Applab.turtle.heading += opts.degrees;
+
+  var degrees = 90;
+  if (typeof opts.degrees !== 'undefined') {
+    degrees = opts.degrees;
+  }
+
+  Applab.turtle.heading += degrees;
   Applab.turtle.heading = (Applab.turtle.heading + 360) % 360;
   updateTurtleImage();
 };
 
-Applab.turtleTurnLeft = function (opts) {
-  opts.degrees = -opts.degrees;
-  Applab.turtleTurnRight(opts);
+Applab.turnLeft = function (opts) {
+  var degrees = -90;
+  if (typeof opts.degrees !== 'undefined') {
+    degrees = -opts.degrees;
+  }
+  Applab.turnRight({'degrees': degrees });
 };
 
-Applab.turtlePenUp = function (opts) {
+Applab.penUp = function (opts) {
   var ctx = getTurtleContext();
   if (ctx) {
     Applab.turtle.penUpColor = ctx.strokeStyle;
@@ -1359,7 +1377,7 @@ Applab.turtlePenUp = function (opts) {
   }
 };
 
-Applab.turtlePenDown = function (opts) {
+Applab.penDown = function (opts) {
   var ctx = getTurtleContext();
   if (ctx && Applab.turtle.penUpColor) {
     ctx.strokeStyle = Applab.turtle.penUpColor;
@@ -1367,14 +1385,14 @@ Applab.turtlePenDown = function (opts) {
   }
 };
 
-Applab.turtlePenWidth = function (opts) {
+Applab.penWidth = function (opts) {
   var ctx = getTurtleContext();
   if (ctx) {
     ctx.lineWidth = opts.width;
   }
 };
 
-Applab.turtlePenColor = function (opts) {
+Applab.penColor = function (opts) {
   var ctx = getTurtleContext();
   if (ctx) {
     if (Applab.turtle.penUpColor) {
@@ -1403,16 +1421,29 @@ Applab.createCanvas = function (opts) {
     // set transparent fill by default:
     ctx.fillStyle = "rgba(255, 255, 255, 0)";
 
+    if (!Applab.activeCanvas && !opts.notActive) {
+      // If there is no active canvas and the caller doesn't specify otherwise,
+      // we'll make this the active canvas for subsequent API calls:
+      Applab.activeCanvas = newElement;
+    }
+
     return Boolean(divApplab.appendChild(newElement));
   }
   return false;
 };
 
-Applab.canvasDrawLine = function (opts) {
-  var divApplab = document.getElementById('divApplab');
+Applab.setActiveCanvas = function (opts) {
   var canvas = document.getElementById(opts.elementId);
-  var ctx = canvas.getContext("2d");
-  if (ctx && divApplab.contains(canvas)) {
+  if (divApplab.contains(canvas)) {
+    Applab.activeCanvas = canvas;
+    return true;
+  }
+  return false;
+};
+
+Applab.line = function (opts) {
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
     ctx.beginPath();
     ctx.moveTo(opts.x1, opts.y1);
     ctx.lineTo(opts.x2, opts.y2);
@@ -1422,11 +1453,9 @@ Applab.canvasDrawLine = function (opts) {
   return false;
 };
 
-Applab.canvasDrawCircle = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  var canvas = document.getElementById(opts.elementId);
-  var ctx = canvas.getContext("2d");
-  if (ctx && divApplab.contains(canvas)) {
+Applab.circle = function (opts) {
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
     ctx.beginPath();
     ctx.arc(opts.x, opts.y, opts.radius, 0, 2 * Math.PI);
     ctx.fill();
@@ -1436,11 +1465,9 @@ Applab.canvasDrawCircle = function (opts) {
   return false;
 };
 
-Applab.canvasDrawRect = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  var canvas = document.getElementById(opts.elementId);
-  var ctx = canvas.getContext("2d");
-  if (ctx && divApplab.contains(canvas)) {
+Applab.rect = function (opts) {
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
     ctx.beginPath();
     ctx.rect(opts.x, opts.y, opts.width, opts.height);
     ctx.fill();
@@ -1450,56 +1477,47 @@ Applab.canvasDrawRect = function (opts) {
   return false;
 };
 
-Applab.canvasSetLineWidth = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  var canvas = document.getElementById(opts.elementId);
-  var ctx = canvas.getContext("2d");
-  if (ctx && divApplab.contains(canvas)) {
+Applab.setStrokeWidth = function (opts) {
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
     ctx.lineWidth = opts.width;
     return true;
   }
   return false;
 };
 
-Applab.canvasSetStrokeColor = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  var canvas = document.getElementById(opts.elementId);
-  var ctx = canvas.getContext("2d");
-  if (ctx && divApplab.contains(canvas)) {
+Applab.setStrokeColor = function (opts) {
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
     ctx.strokeStyle = String(opts.color);
     return true;
   }
   return false;
 };
 
-Applab.canvasSetFillColor = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  var canvas = document.getElementById(opts.elementId);
-  var ctx = canvas.getContext("2d");
-  if (ctx && divApplab.contains(canvas)) {
+Applab.setFillColor = function (opts) {
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
     ctx.fillStyle = String(opts.color);
     return true;
   }
   return false;
 };
 
-Applab.canvasClear = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  var canvas = document.getElementById(opts.elementId);
-  var ctx = canvas.getContext("2d");
-  if (ctx && divApplab.contains(canvas)) {
+Applab.clearCanvas = function (opts) {
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     return true;
   }
   return false;
 };
 
-Applab.canvasDrawImage = function (opts) {
+Applab.drawImage = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  var canvas = document.getElementById(opts.elementId);
   var image = document.getElementById(opts.imageId);
-  var ctx = canvas.getContext("2d");
-  if (ctx && divApplab.contains(canvas) && divApplab.contains(image)) {
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx && divApplab.contains(image)) {
     var xScale, yScale;
     xScale = yScale = 1;
     if (opts.width) {
@@ -1517,20 +1535,16 @@ Applab.canvasDrawImage = function (opts) {
   return false;
 };
 
-Applab.canvasGetImageData = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  var canvas = document.getElementById(opts.elementId);
-  var ctx = canvas.getContext("2d");
-  if (ctx && divApplab.contains(canvas)) {
+Applab.getImageData = function (opts) {
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
     return ctx.getImageData(opts.x, opts.y, opts.width, opts.height);
   }
 };
 
-Applab.canvasPutImageData = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  var canvas = document.getElementById(opts.elementId);
-  var ctx = canvas.getContext("2d");
-  if (ctx && divApplab.contains(canvas)) {
+Applab.putImageData = function (opts) {
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
     // Create tmpImageData and initialize it because opts.imageData is not
     // going to be a real ImageData object if it came from the interpreter
     var tmpImageData = ctx.createImageData(opts.imageData.width,
@@ -1714,23 +1728,24 @@ Applab.playSound = function (opts) {
   }
 };
 
-Applab.replaceHtmlBlock = function (opts) {
+Applab.innerHTML = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  var oldDiv = document.getElementById(opts.elementId);
-  if (divApplab.contains(oldDiv)) {
-    var newDiv = document.createElement("div");
-    newDiv.id = opts.elementId;
-    newDiv.innerHTML = opts.html;
-
-    return Boolean(oldDiv.parentElement.replaceChild(newDiv, oldDiv));
+  var div = document.getElementById(opts.elementId);
+  if (divApplab.contains(div)) {
+    div.innerHTML = opts.html;
+    return true;
   }
   return false;
 };
 
-Applab.deleteHtmlBlock = function (opts) {
+Applab.deleteElement = function (opts) {
   var divApplab = document.getElementById('divApplab');
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
+    // Special check to see if the active canvas is being deleted
+    if (div == Applab.activeCanvas || div.contains(Applab.activeCanvas)) {
+      delete Applab.activeCanvas;
+    }
     return Boolean(div.parentElement.removeChild(div));
   }
   return false;
