@@ -48,6 +48,12 @@ var APP_PUBLIC_KEY =
     window.location.hostname.split('.')[0] === 'localhost' ?
         "JGW2rHUp_UCMW_fQmRf6iQ==" : "HQJ8GCCMGP7Yh8MrtDusIA==";
 
+/**
+ * Maximum time (in milliseconds) that tables should wait between full cache
+ * updates from the server.
+ * @type {number}
+ */
+var POLLING_DELAY_MS = 5000;
 
 /**
  * Wrap remote storage table in a netsim-specific wrapper.
@@ -76,6 +82,14 @@ var NetSimTable = function (tableName) {
    * @type {ObservableEvent}
    */
   this.tableChangeEvent = new ObservableEvent();
+
+  /**
+   * Unix timestamp for last time this table's cache contents were fully
+   * updated.  Used to determine when to poll the server for changes.
+   * @type {number}
+   * @private
+   */
+  this.lastFullUpdateTime_ = 0;
 };
 
 NetSimTable.prototype.readAll = function (callback) {
@@ -140,6 +154,8 @@ NetSimTable.prototype.fullCacheUpdate_ = function (allRows) {
     this.cache_ = newCache;
     this.tableChangeEvent.notifyObservers(this.arrayFromCache_());
   }
+
+  this.lastFullUpdateTime_ = Date.now();
 };
 
 NetSimTable.prototype.addRowToCache_ = function (row) {
@@ -165,9 +181,18 @@ NetSimTable.prototype.updateCacheRow_ = function (id, row) {
 NetSimTable.prototype.arrayFromCache_ = function () {
   var result = [];
   for (var k in this.cache_) {
-    result.push(this.cache_[k]);
+    if (this.cache_.hasOwnProperty(k)) {
+      result.push(this.cache_[k]);
+    }
   }
   return result;
+};
+
+/** Polls server for updates, if it's been long enough. */
+NetSimTable.prototype.tick = function () {
+  if (Date.now() - this.lastFullUpdateTime_ > POLLING_DELAY_MS) {
+    this.readAll(function () {});
+  }
 };
 
 /**
@@ -190,5 +215,17 @@ var NetSimShard = function (shardID) {
   /** @type {NetSimTable} */
   this.messageTable = new NetSimTable(shardID + '_message');
 };
-
 module.exports = NetSimShard;
+
+/**
+ * This tick allows our tables to poll the server for changes.
+ * @param {!RunLoop.Clock} clock
+ */
+NetSimShard.prototype.tick = function (clock) {
+  // TODO (bbuchanan): Eventaully, these polling events should just be
+  //                   backup for the notification system.
+
+  // Only tick the message table for now - not clear that lobby or wire
+  // tables need this yet.
+  this.messageTable.tick(clock);
+};
