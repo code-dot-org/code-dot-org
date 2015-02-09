@@ -6,23 +6,23 @@ exports.randomFromArray = function (values) {
 
 // APIs needed for droplet and/or blockly (must include blockId):
 
-exports.createHtmlBlock = function (blockId, elementId, html) {
+exports.container = function (blockId, elementId, html) {
   return Applab.executeCmd(blockId,
-                          'createHtmlBlock',
+                          'container',
                           {'elementId': elementId,
                            'html': html });
 };
 
-exports.replaceHtmlBlock = function (blockId, elementId, html) {
+exports.innerHTML = function (blockId, elementId, html) {
   return Applab.executeCmd(blockId,
-                          'replaceHtmlBlock',
+                          'innerHTML',
                           {'elementId': elementId,
                            'html': html });
 };
 
-exports.deleteHtmlBlock = function (blockId, elementId) {
+exports.deleteElement = function (blockId, elementId) {
   return Applab.executeCmd(blockId,
-                          'deleteHtmlBlock',
+                          'deleteElement',
                           {'elementId': elementId });
 };
 
@@ -58,88 +58,83 @@ exports.createCanvas = function (blockId, elementId, width, height) {
                            'height': height });
 };
 
-exports.canvasDrawLine = function (blockId, elementId, x1, y1, x2, y2) {
+exports.setActiveCanvas = function (blockId, elementId) {
   return Applab.executeCmd(blockId,
-                          'canvasDrawLine',
-                          {'elementId': elementId,
-                           'x1': x1,
+                          'setActiveCanvas',
+                          {'elementId': elementId  });
+};
+
+exports.line = function (blockId, x1, y1, x2, y2) {
+  return Applab.executeCmd(blockId,
+                          'line',
+                          {'x1': x1,
                            'y1': y1,
                            'x2': x2,
                            'y2': y2 });
 };
 
-exports.canvasDrawCircle = function (blockId, elementId, x, y, radius) {
+exports.circle = function (blockId, x, y, radius) {
   return Applab.executeCmd(blockId,
-                          'canvasDrawCircle',
-                          {'elementId': elementId,
-                           'x': x,
+                          'circle',
+                          {'x': x,
                            'y': y,
                            'radius': radius });
 };
 
-exports.canvasDrawRect = function (blockId, elementId, x, y, width, height) {
+exports.rect = function (blockId, x, y, width, height) {
   return Applab.executeCmd(blockId,
-                          'canvasDrawRect',
-                          {'elementId': elementId,
+                          'rect',
+                          {'x': x,
+                           'y': y,
+                           'width': width,
+                           'height': height });
+};
+
+exports.setStrokeWidth = function (blockId, width) {
+  return Applab.executeCmd(blockId,
+                          'setStrokeWidth',
+                          {'width': width });
+};
+
+exports.setStrokeColor = function (blockId, color) {
+  return Applab.executeCmd(blockId,
+                          'setStrokeColor',
+                          {'color': color });
+};
+
+exports.setFillColor = function (blockId, color) {
+  return Applab.executeCmd(blockId,
+                          'setFillColor',
+                          {'color': color });
+};
+
+exports.clearCanvas = function (blockId) {
+  return Applab.executeCmd(blockId, 'clearCanvas');
+};
+
+exports.drawImage = function (blockId, imageId, x, y, width, height) {
+  return Applab.executeCmd(blockId,
+                          'drawImage',
+                          {'imageId': imageId,
                            'x': x,
                            'y': y,
                            'width': width,
                            'height': height });
 };
 
-exports.canvasSetLineWidth = function (blockId, elementId, width) {
+exports.getImageData = function (blockId, x, y, width, height) {
   return Applab.executeCmd(blockId,
-                          'canvasSetLineWidth',
-                          {'elementId': elementId,
-                           'width': width });
-};
-
-exports.canvasSetStrokeColor = function (blockId, elementId, color) {
-  return Applab.executeCmd(blockId,
-                          'canvasSetStrokeColor',
-                          {'elementId': elementId,
-                           'color': color });
-};
-
-exports.canvasSetFillColor = function (blockId, elementId, color) {
-  return Applab.executeCmd(blockId,
-                          'canvasSetFillColor',
-                          {'elementId': elementId,
-                           'color': color });
-};
-
-exports.canvasClear = function (blockId, elementId) {
-  return Applab.executeCmd(blockId,
-                          'canvasClear',
-                          {'elementId': elementId });
-};
-
-exports.canvasDrawImage = function (blockId, elementId, imageId, x, y, width, height) {
-  return Applab.executeCmd(blockId,
-                          'canvasDrawImage',
-                          {'elementId': elementId,
-                           'imageId': imageId,
-                           'x': x,
+                          'getImageData',
+                          {'x': x,
                            'y': y,
                            'width': width,
                            'height': height });
 };
 
-exports.canvasGetImageData = function (blockId, elementId, x, y, width, height) {
+exports.putImageData = function (blockId, imageData, x, y) {
   return Applab.executeCmd(blockId,
-                          'canvasGetImageData',
-                          {'elementId': elementId,
-                           'x': x,
-                           'y': y,
-                           'width': width,
-                           'height': height });
-};
-
-exports.canvasPutImageData = function (blockId, elementId, imageData, x, y) {
-  return Applab.executeCmd(blockId,
-                          'canvasPutImageData',
-                          {'elementId': elementId,
-                           'imageData': imageData,
+                          'putImageData',
+                          {'imageData': imageData,
                            'x': x,
                            'y': y });
 };
@@ -342,69 +337,69 @@ exports.deleteSharedRecord = function (blockId, record, onSuccess, onError) {
                            'onError': onError});
 };
 
-exports.turtleMoveForward = function (blockId, distance) {
+exports.moveForward = function (blockId, distance) {
   return Applab.executeCmd(blockId,
-                          'turtleMoveForward',
+                          'moveForward',
                           {'distance': distance });
 };
 
-exports.turtleMoveBackward = function (blockId, distance) {
+exports.moveBackward = function (blockId, distance) {
   return Applab.executeCmd(blockId,
-                          'turtleMoveBackward',
+                          'moveBackward',
                           {'distance': distance });
 };
 
-exports.turtleMove = function (blockId, x, y) {
+exports.move = function (blockId, x, y) {
   return Applab.executeCmd(blockId,
-                          'turtleMove',
+                          'move',
                           {'x': x,
                            'y': y });
 };
 
-exports.turtleMoveTo = function (blockId, x, y) {
+exports.moveTo = function (blockId, x, y) {
   return Applab.executeCmd(blockId,
-                          'turtleMoveTo',
+                          'moveTo',
                           {'x': x,
                            'y': y });
 };
 
-exports.turtleTurnRight = function (blockId, degrees) {
+exports.turnRight = function (blockId, degrees) {
   return Applab.executeCmd(blockId,
-                          'turtleTurnRight',
+                          'turnRight',
                           {'degrees': degrees });
 };
 
-exports.turtleTurnLeft = function (blockId, degrees) {
+exports.turnLeft = function (blockId, degrees) {
   return Applab.executeCmd(blockId,
-                          'turtleTurnLeft',
+                          'turnLeft',
                           {'degrees': degrees });
 };
 
-exports.turtlePenUp = function (blockId) {
-  return Applab.executeCmd(blockId, 'turtlePenUp');
+exports.penUp = function (blockId) {
+  return Applab.executeCmd(blockId, 'penUp');
 };
 
-exports.turtlePenDown = function (blockId) {
-  return Applab.executeCmd(blockId, 'turtlePenDown');
+exports.penDown = function (blockId) {
+  return Applab.executeCmd(blockId, 'penDown');
 };
 
-exports.turtleShow = function (blockId) {
-  return Applab.executeCmd(blockId, 'turtleShow');
+exports.show = function (blockId) {
+  return Applab.executeCmd(blockId, 'show');
 };
 
-exports.turtleHide = function (blockId) {
-  return Applab.executeCmd(blockId, 'turtleHide');
+exports.hide = function (blockId) {
+  return Applab.executeCmd(blockId, 'hide');
 };
 
-exports.turtlePenWidth = function (blockId, width) {
+exports.penWidth = function (blockId, width) {
   return Applab.executeCmd(blockId,
-                          'turtlePenWidth',
+                          'penWidth',
                           {'width': width });
 };
 
-exports.turtlePenColor = function (blockId, color) {
+exports.penColor = function (blockId, color) {
   return Applab.executeCmd(blockId,
-                          'turtlePenColor',
+                          'penColor',
                           {'color': color });
 };
 

@@ -1717,12 +1717,12 @@ exports.install = function(blockly, blockInstallOptions) {
       var blockName = msg.startSetVars();
       var blockType = 'none';
       var blockArgs = [
-        {name: 'TITLE', type: 'function'},
-        {name: 'SUBTITLE', type: 'function'},
-        {name: 'BACKGROUND', type: 'function'},
-        {name: 'TARGET', type: 'function'},
-        {name: 'DANGER', type: 'function'},
-        {name: 'PLAYER', type: 'function'}
+        {name: 'title', type: 'string'},
+        {name: 'subtitle', type: 'string'},
+        {name: 'background', type: 'image'},
+        {name: 'player', type: 'image'},
+        {name: 'target', type: 'image'},
+        {name: 'danger', type: 'image'}
       ];
       initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
     }

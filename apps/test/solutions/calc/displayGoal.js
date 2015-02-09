@@ -72,9 +72,9 @@ function displayGoalCustomValidator(assert) {
       new ExpressionNode('g', [2]),
     ])));
 
-    // this should actually throw (or we should at least throw somewhere in
-    // this scenario) pivotal #87578464
-    displayGoal(targetSet);
+    assert.throws(function () {
+      displayGoal(targetSet);
+    });
 
   });
 
@@ -90,9 +90,9 @@ function displayGoalCustomValidator(assert) {
       new ExpressionNode('myvar'),
     ])));
 
-    // this should actually throw (or we should at least throw somewhere in
-    // this scenario) pivotal #87578464
-    displayGoal(targetSet);
+    assert.throws(function () {
+      displayGoal(targetSet);
+    });
 
   });
 
