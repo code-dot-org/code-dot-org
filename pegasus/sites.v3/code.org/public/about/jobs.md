@@ -91,6 +91,7 @@ Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.o
 
 ## <a name="k8-pm" href="#k8-pm">K-8 Program Manager (Seattle, WA preferred)</a>
 **Job Summary:**
+
 Code.org is looking for a K-8 Program Manager specializing in Middle School CS to support the goals of Code.org’s Education team through the development of middle school computer science curricula and a related professional development model. Responsibilities of the position include:
 
 - Sharing responsibility with the K-8 team for executing on a middle school education vision for the organization that includes integrating CS into Math and Science.
@@ -113,7 +114,7 @@ Interested candidates should email a resume and cover letter, outlining how your
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## High School Program Manager (Seattle, WA preferred)##
+## <a name="HS-PM" href="#HS-PM">High School Program Manager (Seattle, WA preferred)</a> 
 **Job Summary:**
 
 Code.org is looking for a High School Program Manager to work with and support the goals of Code.org’s Education team through the development of high school computer science curriculum and related professional development.
@@ -138,7 +139,8 @@ Interested candidates should email a resume and cover letter, outlining how your
 **Location:** Seattle is preferred, but remote work is possible.
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-## Data Scientist / Quantitative Data Analyst (Seattle, WA preferred)##
+
+## <a name="data-scientist" href="#data-scientist">Data Scientist / Quantitative Data Analyst (Seattle, WA preferred)</a>
 
 **Job Summary:**
 
@@ -175,7 +177,7 @@ Interested candidates should email a resume and cover letter, outlining how your
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## Grant Writer and Relationships Manager##
+## <a name="grant-writer" href="#grant-writer">Grant Writer and Relationships Manager</a>
 
 **Job Summary:**
 
@@ -210,7 +212,7 @@ Please DO NOT apply for this position if you do not have experience in writing s
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## Regional Program Manager (Los Angeles, NYC, Ft. Lauderdale/Miami area)
+## <a name="reg-PM" href="#reg-PM">Regional Program Manager (Los Angeles, NYC, Ft. Lauderdale/Miami area)</a>
 
 **Job Summary:** 
 
@@ -236,7 +238,7 @@ Ability and willingness to travel up to 25% of the time is required.
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## Operations/Developer (Seattle)
+## <a name="ops-dev" href="#ops-dev">Operations/Developer (Seattle)</a>
 
 **Job Summary:** 
 
@@ -250,7 +252,7 @@ Code.org is recruiting for an operations-focused Ruby developer to run and enhan
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## Software Engineer (Seattle)
+## <a name="engineer" href="#engineer">Software Engineer (Seattle)</a>
 
 **Job Summary:**
 
@@ -266,9 +268,9 @@ Code.org is building interactive tutorials for computer science courses starting
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
-## K-5 Computer Science Professional Development Facilitator (Part-time, contract; Seattle, WA only) 
+## <a name="k5-facilitator" href="#k5-facilitator">K-5 Computer Science Professional Development Facilitator (Part-time, contract; Seattle, WA only)</a>
 
-**Job Summary**
+**Job Summary:**
 
 Code.org is looking for a part-time facilitator to host professional development workshops in Seattle, WA for K-5 educators. (For more information about our curriculum, visit http://code.org/k5.) This role is not only about leading the professional development, but also handling the logistics of each workshop. 
 
