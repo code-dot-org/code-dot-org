@@ -101,32 +101,32 @@
             %input{class: "qtip_hide_#{x}", type: 'checkbox'}
           %td
             %select{class: "qtip_position_my_#{x}"}
-              %option{:value => 'top left'} Top left
-              %option{:value => 'top center'} Top center
-              %option{:value => 'top right'} Top right
-              %option{:value => 'right top'} Right top
-              %option{:value => 'right center'} Right center
-              %option{:value => 'right bottom'} Right bottom
-              %option{:value => 'bottom right'} Bottom right
-              %option{:value => 'bottom center'} Bottom center
-              %option{:value => 'bottom left'} Bottom left
-              %option{:value => 'left bottom'} Left bottom
-              %option{:value => 'left center'} Left center
-              %option{:value => 'left top'} Left top  
+              %option{value: 'top left'} Top left
+              %option{value: 'top center'} Top center
+              %option{value: 'top right'} Top right
+              %option{value: 'right top'} Right top
+              %option{value: 'right center'} Right center
+              %option{value: 'right bottom'} Right bottom
+              %option{value: 'bottom right'} Bottom right
+              %option{value: 'bottom center'} Bottom center
+              %option{value: 'bottom left'} Bottom left
+              %option{value: 'left bottom'} Left bottom
+              %option{value: 'left center'} Left center
+              %option{value: 'left top'} Left top  
           %td
             %select{class: "qtip_position_at_#{x}"}
-              %option{:value => 'top left'} Top left
-              %option{:value => 'top center'} Top center
-              %option{:value => 'top right'} Top right
-              %option{:value => 'right top'} Right top
-              %option{:value => 'right center'} Right center
-              %option{:value => 'right bottom'} Right bottom
-              %option{:value => 'bottom right'} Bottom right
-              %option{:value => 'bottom center'} Bottom center
-              %option{:value => 'bottom left'} Bottom left
-              %option{:value => 'left bottom'} Left bottom
-              %option{:value => 'left center'} Left center
-              %option{:value => 'left top'} Left top  
+              %option{value: 'top left'} Top left
+              %option{value: 'top center'} Top center
+              %option{value: 'top right'} Top right
+              %option{value: 'right top'} Right top
+              %option{value: 'right center'} Right center
+              %option{value: 'right bottom'} Right bottom
+              %option{value: 'bottom right'} Bottom right
+              %option{value: 'bottom center'} Bottom center
+              %option{value: 'bottom left'} Bottom left
+              %option{value: 'left bottom'} Left bottom
+              %option{value: 'left center'} Left center
+              %option{value: 'left top'} Left top  
           %td
             %input{class: "qtip_position_adjust_x_#{x}", type: 'number'}
           %td
@@ -137,7 +137,7 @@
 
 .field
   = f.label :callout_json
-  %div{:style => '-webkit-user-select: text'}
+  %div{style: '-webkit-user-select: text'}
     %pre
       = preserve "Example: [\n  {\"localization_key\": \"run\", \"callout_text\": \"Hit \"Run\" to try your program\", \"element_id\": \"#runButton\"},\n  {\"localization_key\": \"drag_blocks\", \"callout_text\": \"Drag a \"move\" block and snap it below the other block\", \"element_id\": \"[block-id='1']\", \"qtip_config\": {\n    \"position\": {\"my\": \"top left\", \"at\": \"bottom right\", \"adjust\": {\"x\": 22, \"y\":60}},\n    \"style\": { \"classes\": \"no-tip\" }}\n  }\n]"
   = f.text_area :callout_json, rows: 4
