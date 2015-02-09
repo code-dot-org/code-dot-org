@@ -5,6 +5,11 @@ module Ops
     # Load shallow nested resource. See https://github.com/CanCanCommunity/cancancan/wiki/Nested-Resources#shallow-nesting
     load_and_authorize_resource through: :segment, through_association: :attendances, shallow: true
 
+    # GET /ops/attendance/teacher/1
+    def teacher
+
+    end
+
     # POST /ops/attendance/1
     def create
       @workshop_attendance.save!

@@ -11,16 +11,16 @@ module Ops
     end
 
     test 'District Contact can view attendance for all workshops in a cohort' do
-
+      #87054994 part 1 TODO
     end
 
     test 'District Contact can view attendance per teacher' do
-
+      #87054994 part 2 TODO
+      assert_routing({ path: 'ops/attendance/teacher/1', method: :get}, { controller: 'ops/workshop_attendance', action: 'teacher', teacher_id: '1'})
     end
 
     test "Facilitators can mark attendance for each workshop's time slot" do
-      #87055176
-
+      #87055176 TODO
     end
 
     # Test index + CRUD controller actions
@@ -57,7 +57,7 @@ module Ops
     end
 
     test 'Ops team can mark attendance' do
-      assert_routing({ path: 'ops/segments/1/attendance', segment_id: '1', method: :post }, { controller: 'ops/workshop_attendance', segment_id: '1', action: 'create' })
+      assert_routing({ path: 'ops/segments/1/attendance', method: :post }, { controller: 'ops/workshop_attendance', segment_id: '1', action: 'create' })
 
       assert_difference 'WorkshopAttendance.count' do
         workshop_teacher = @attendance.segment.workshop.teachers.first.id

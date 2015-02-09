@@ -183,9 +183,11 @@ Dashboard::Application.routes.draw do
     resources :cohorts
     resources :workshops do
       resources :segments, shallow: true do # See http://guides.rubyonrails.org/routing.html#shallow-nesting
-        resources :workshop_attendance, path: '/attendance', shallow: true
+        resources :workshop_attendance, path: '/attendance', shallow: true do
+        end
       end
     end
+    get 'attendance/teacher/:teacher_id', action: 'teacher', controller: 'workshop_attendance'
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
