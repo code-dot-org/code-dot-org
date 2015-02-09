@@ -22,5 +22,6 @@ Scenario: Open the navigation popup, stats block appears, click a level
   And I wait to see ".user-stats-block"
   Then element ".user-stats-block .game-group:eq(3)" contains text "Stage"
   And element ".user-stats-block .puzzle_outer_current" contains text "2"
+  And element ".header_popup_link_text" has text "LESS"
   When I press ".user-stats-block .game-group:eq(3) .level:eq(6) a" DOM using jQuery
   Then check that I am on "http://studio.code.org/s/course1/stage/4/puzzle/7"
