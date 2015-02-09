@@ -4,7 +4,7 @@ nav: about_nav
 ---
 
 # Job Openings at Code.org
-## HR Generalist (Seattle, WA preferred)
+## <a name="hr-generalist" href="#hr-generalist">HR Generalist (Seattle, WA preferred)</a>
 **Job Summary:**
 
 The HR Generalist plays a critical role in supporting Code.org staff in areas such as recruiting and hiring, benefits, performance reviews, and workforce compliance. The candidate selected for this should have experience supporting a multi-state employer and hiring technical employees in a fast-paced start-up environment. Full-time, salaried. Responsibilities of the position include:
@@ -37,7 +37,7 @@ A high level of computer literacy is required; proficiency in working with Micro
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## Videographer (Seattle, WA preferred)
+## <a name="videographer" href="#videographer">Videographer (Seattle, WA preferred)</a>
 **Job Summary:**
 
 Code.org is recruiting for a videographer who can collaborate with our education and development team to create educational and inspirational videos that teach computer science to students of all ages and diverse backgrounds. **Full-time, long-term contract (approximately 9 months).**
@@ -63,7 +63,7 @@ The ideal candidate has the following qualifications:
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## Advocacy Researcher (Seattle, WA preferred)
+## <a name="advocacy-researcher" href="#advocacy-researcher">Advocacy Researcher (Seattle, WA preferred)</a>    
 **Job Summary:**
 
 Code.org is recruiting for an Advocacy Researcher who will provide assistance with our state policy and advocacy research needs. **Part-time, long-term contract (6 months, with a possible extension based on need).** 
@@ -89,7 +89,7 @@ Responsibilities of the position include:
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## K-8 Program Manager (Seattle, WA preferred)##
+## <a name="k8-pm" href="#k8-pm">K-8 Program Manager (Seattle, WA preferred)</a>
 **Job Summary:**
 Code.org is looking for a K-8 Program Manager specializing in Middle School CS to support the goals of Code.org’s Education team through the development of middle school computer science curricula and a related professional development model. Responsibilities of the position include:
 
