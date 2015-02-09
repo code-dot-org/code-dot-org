@@ -349,20 +349,22 @@ NetSimNodeRouter.prototype.onMessageTableChange_ = function (rows) {
 };
 
 NetSimNodeRouter.prototype.routeMessage_ = function (message, myWires) {
+  // Pull the message of the wire, and hold it in-memory until we route it.
+  // We'll create a new one with the same payload if we have to send it on.
+  message.destroy();
+
   // Find a connection to route this message to.
   var toAddress = message.payload.toAddress;
   if (toAddress === undefined) {
     //Malformed packet? Throw it away
     logger.warn("Router encountered a malformed packet: " +
     JSON.stringify(message.payload));
-    message.destroy();
     return;
   }
 
   if (toAddress === 0) {
     // Message was sent to me, the router.  It's arrived!  We're done with it.
     logger.info("Router received: " + JSON.stringify(message.payload));
-    message.destroy();
     return;
   }
 
@@ -373,7 +375,6 @@ NetSimNodeRouter.prototype.routeMessage_ = function (message, myWires) {
     // Destination address not in local network.
     // Route message out of network (for now, throw it away)
     logger.info("Message left network: " + JSON.stringify(message.payload));
-    message.destroy();
     return;
   }
 
@@ -383,6 +384,6 @@ NetSimNodeRouter.prototype.routeMessage_ = function (message, myWires) {
 
   // Create a new message with a new payload.
   NetSimMessage.send(this.shard_, destWire.remoteNodeID, destWire.localNodeID, message.payload, function (success) {
-    logger.info("Message re-routed to node " + destWire.localAddress);
+    logger.info("Message re-routed to " + destWire.localHostname + " (node " + destWire.localNodeID + ")");
   });
 };
