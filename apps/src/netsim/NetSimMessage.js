@@ -29,7 +29,7 @@
  unused: true,
 
  maxlen: 90,
- maxparams: 4,
+ maxparams: 5,
  maxstatements: 200
  */
 /* global $ */
@@ -47,20 +47,26 @@ var superClass = require('./NetSimEntity');
  * Any message that exists in the table is 'in transit' to a node.  Nodes
  * should remove messages as soon as they receive them.
  *
- * @param {!NetSimTables} instance - The instance where this wire lives.
+ * @param {!NetSimShard} shard - The shard where this wire lives.
  * @param {Object} [messageRow] - A row out of the _message table on the
- *        instance.  If provided, will initialize this message with the given
+ *        shard.  If provided, will initialize this message with the given
  *        data.  If not, this message will initialize to default values.
  * @constructor
  * @augments NetSimEntity
  */
-var NetSimMessage = function (instance, messageRow) {
-  superClass.call(this, instance, messageRow);
+var NetSimMessage = function (shard, messageRow) {
+  superClass.call(this, shard, messageRow);
 
   // Default empty wireRow object
   if (messageRow === undefined) {
     messageRow = {};
   }
+
+  /**
+   * Node ID that this message is 'in transit' from.
+   * @type {number}
+   */
+  this.fromNodeID = messageRow.fromNodeID;
 
   /**
    * Node ID that this message is 'in transit' to.
@@ -79,15 +85,17 @@ NetSimMessage.prototype.constructor = NetSimMessage;
 module.exports = NetSimMessage;
 
 /**
- * Static async creation method.  Creates a new message on the given instance,
+ * Static async creation method.  Creates a new message on the given shard,
  * and then calls the callback with a success boolean.
- * @param {!NetSimTables} instance
+ * @param {!NetSimShard} shard
+ * @param {!number} fromNodeID - sender node ID
  * @param {!number} toNodeID - destination node ID
  * @param {*} payload - message content
  * @param {!function} onComplete (success)
  */
-NetSimMessage.send = function (instance, toNodeID, payload, onComplete) {
-  var entity = new NetSimMessage(instance);
+NetSimMessage.send = function (shard, fromNodeID, toNodeID, payload, onComplete) {
+  var entity = new NetSimMessage(shard);
+  entity.fromNodeID = fromNodeID;
   entity.toNodeID = toNodeID;
   entity.payload = payload;
   entity.getTable_().create(entity.buildRow_(), function (row) {
@@ -97,15 +105,16 @@ NetSimMessage.send = function (instance, toNodeID, payload, onComplete) {
 
 /**
  * Helper that gets the wires table for the configured instance.
- * @returns {exports.SharedTable}
+ * @returns {NetSimTable}
  */
 NetSimMessage.prototype.getTable_ = function () {
-  return this.instanceTables_.messageTable;
+  return this.shard_.messageTable;
 };
 
 /** Build own row for the message table  */
 NetSimMessage.prototype.buildRow_ = function () {
   return $.extend(superClass.prototype.buildRow_.call(this), {
+    fromNodeID: this.fromNodeID,
     toNodeID: this.toNodeID,
     payload: this.payload
   });

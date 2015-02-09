@@ -40,6 +40,7 @@ var NetSimConnection = require('./NetSimConnection');
 var DashboardUser = require('./DashboardUser');
 var NetSimLobby = require('./NetSimLobby');
 var NetSimRouterPanel = require('./NetSimRouterPanel');
+var NetSimSendWidget = require('./NetSimSendWidget');
 var RunLoop = require('./RunLoop');
 
 /**
@@ -154,10 +155,14 @@ NetSim.prototype.initWithUserName_ = function (userName) {
   this.lobbyControl_ = NetSimLobby.createWithin(lobbyContainer, this.connection_);
   this.lobbyControl_.attachToRunLoop(this.runLoop_);
 
-  var routerPanelContainer = document.getElementById('netsim_tabzone');
+  var routerPanelContainer = document.getElementById('netsim_tabpanel');
   this.routerPanel_ = NetSimRouterPanel.createWithin(routerPanelContainer,
-    this.connection_);
+      this.connection_);
   this.routerPanel_.attachToRunLoop(this.runLoop_);
+
+  var sendWidgetContainer = document.getElementById('netsim_send');
+  this.sendWidget_ = NetSimSendWidget.createWithin(sendWidgetContainer,
+      this.connection_);
 };
 
 /**
