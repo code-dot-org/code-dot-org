@@ -195,6 +195,11 @@ function displayGoal(targetSet) {
   if (!hasSingleFunction) {
     var sortedEquations = targetSet.sortedEquations();
     sortedEquations.forEach(function (equation) {
+      if (equation.isFunction() && sortedEquations.length > 1) {
+        throw new Error("Calc doesn't support goal with multiple functions or " +
+          "mixed functions/vars");
+      }
+
       tokenList = equation.expression.getTokenList(false);
       displayEquation('answerExpression', equation.signature, tokenList, nextRow++);
     });
@@ -474,7 +479,7 @@ function displayComplexUserExpressions () {
     tokenList = tokenList.concat(getTokenList(' = '),
       getTokenList(result, expectedResult));
   } else {
-    tokenList = getTokenList(computeEquation, appState.targetSet.computeEquation);
+    tokenList = getTokenList(computeEquation, appState.targetSet.computeEquation());
   }
 
   displayEquation('userExpression', null, tokenList, nextRow++, 'errorToken');
