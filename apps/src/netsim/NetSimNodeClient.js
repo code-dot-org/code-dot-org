@@ -136,6 +136,9 @@ NetSimNodeClient.prototype.setDisplayName = function (displayName) {
 NetSimNodeClient.prototype.setLogs = function (sentLog, receivedLog) {
   this.sentLog_ = sentLog;
   this.receivedLog_ = receivedLog;
+
+  // Subscribe to message table changes
+  this.shard_.messageTable.tableChangeEvent.register(this, this.onMessageTableChange_);
 };
 
 /**
@@ -307,4 +310,50 @@ NetSimNodeClient.prototype.sendMessage = function (payload) {
         }
       }
   );
+};
+
+/**
+ * Listens for changes to the message table.  Detects and handles messages
+ * sent to this node.
+ * @param {Array} rows
+ * @private
+ */
+NetSimNodeClient.prototype.onMessageTableChange_ = function (rows) {
+  if (this.isProcessingMessages_) {
+    // We're already in this method, getting called recursively because
+    // we are making changes to the table.  Ignore this call.
+    return;
+  }
+
+  var self = this;
+  var messages = rows.map(function (row) {
+    return new NetSimMessage(self.shard_, row);
+  }).filter(function (message) {
+    return message.toNodeID === self.entityID;
+  });
+
+  // If any messages are for us, get our routing table and process messages.
+  if (messages.length > 0) {
+    this.isProcessingMessages_ = true;
+    messages.forEach(function (message) {
+      self.handleMessage_(message);
+    });
+    this.isProcessingMessages_ = false;
+  }
+};
+
+/**
+ * Post message to 'received' log.
+ * @param {!NetSimMessage} message
+ * @private
+ */
+NetSimNodeClient.prototype.handleMessage_ = function (message) {
+  // Pull the message off the wire, and hold it in-memory until we route it.
+  // We'll create a new one with the same payload if we have to send it on.
+  message.destroy();
+
+  // TODO: How much validation should we do here?
+  if (this.receivedLog_) {
+    this.receivedLog_.log(JSON.stringify(message.payload));
+  }
 };

@@ -349,7 +349,7 @@ NetSimNodeRouter.prototype.onMessageTableChange_ = function (rows) {
 };
 
 NetSimNodeRouter.prototype.routeMessage_ = function (message, myWires) {
-  // Pull the message of the wire, and hold it in-memory until we route it.
+  // Pull the message off the wire, and hold it in-memory until we route it.
   // We'll create a new one with the same payload if we have to send it on.
   message.destroy();
 
