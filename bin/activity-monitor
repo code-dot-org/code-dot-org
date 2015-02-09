@@ -1,11 +1,8 @@
 #!/usr/bin/env ruby
-# including dashboard environment doesn't work if not in the dashboard dir
-Dir.chdir(File.expand_path('../../dashboard', __FILE__))
-require_relative '../dashboard/config/environment'
+require File.expand_path('../../dashboard/config/environment', __FILE__)
 require 'cdo/only_one'
 require 'cdo/hip_chat'
 require 'cdo/user_agent_parser'
-
 
 FiveMinutes = 5 * 60 * 1000
 OneHour = 60 * 60 * 1000
