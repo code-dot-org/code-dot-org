@@ -135,6 +135,10 @@ NetSimConnection.prototype.attachToRunLoop = function (runLoop) {
 
 /** @param {!RunLoop.Clock} clock */
 NetSimConnection.prototype.tick = function (clock) {
+  if (this.shard_) {
+    this.shard_.tick(clock);
+  }
+
   if (this.myNode) {
     this.myNode.tick(clock);
   }
