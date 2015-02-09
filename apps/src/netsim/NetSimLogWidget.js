@@ -92,5 +92,17 @@ NetSimLogWidget.prototype.onClearButtonPress_ = function () {
  * Put a message into the log.
  */
 NetSimLogWidget.prototype.log = function (message) {
+  var scrollArea = this.scrollArea_;
+  var wasScrolledToEnd =
+      scrollArea[0].scrollHeight - scrollArea[0].scrollTop <=
+      scrollArea.outerHeight();
+
   $('<div>').html(message).appendTo(this.scrollArea_);
+
+  // Auto-scroll
+  if (wasScrolledToEnd) {
+    var scrollTimeMs = 250;
+    scrollArea.animate({ scrollTop: scrollArea[0].scrollHeight},
+        scrollTimeMs);
+  }
 };
