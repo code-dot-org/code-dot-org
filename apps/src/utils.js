@@ -235,13 +235,22 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
           title: 'Divide two numbers'
         }, {
           block: '__ === __',
-          title: 'Compare two numbers'
+          title: 'Test for equal value and equal type'
+        }, {
+          block: '__ !== __',
+          title: 'Test for not equal value or not equal type'
         }, {
           block: '__ > __',
           title: 'Compare two numbers'
         }, {
           block: '__ < __',
           title: 'Compare two numbers'
+        }, {
+          block: '__ && __',
+          title: 'Logical AND of two booleans'
+        }, {
+          block: '__ || __',
+          title: 'Logical OR of two booleans'
         }, {
           block: 'random()',
           title: 'Get a random number between 0 and 1'
