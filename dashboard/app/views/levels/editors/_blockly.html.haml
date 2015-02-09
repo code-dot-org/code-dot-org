@@ -74,7 +74,7 @@
   - (0...3).each do |x|
     %label Callout #{x+1}
 
-    %div{:class => "callouts#{x}"}
+    %div{class: "callouts#{x}"}
       %table
         %tr
           %td Use callout?
@@ -83,13 +83,13 @@
           %td Callout text
         %tr
           %td
-            %input{:class => "use_callout_#{x}", :type => 'checkbox'}
+            %input{class: "use_callout_#{x}", type: 'checkbox'}
           %td
-            %input{:class => "element_id_#{x}", :type => 'text', :placeholder => 'Element callout refers to'}          
+            %input{class: "element_id_#{x}", type: 'text', placeholder: 'Element callout refers to'}          
           %td
-            %input{:class => "localization_key_#{x}", :type => 'text', :placeholder => 'Name of callout'}
-          %td{:colspan => 2}
-            %input{:class => "callout_text_#{x}", :type => 'text', :placeholder => 'Text of callout', :style => "width: 97%"}
+            %input{class: "localization_key_#{x}", type: 'text', placeholder: 'Name of callout'}
+          %td{colspan: 2}
+            %input{class: "callout_text_#{x}", type: 'text', placeholder: 'Text of callout', style: "width: 97%"}
         %tr
           %td Hide qtip?
           %td Qtip on callout
@@ -98,9 +98,9 @@
           %td Qtip y distance adjust    
         %tr    
           %td
-            %input{:class => "qtip_hide_#{x}", :type => 'checkbox'}
+            %input{class: "qtip_hide_#{x}", type: 'checkbox'}
           %td
-            %select{:class => "qtip_position_my_#{x}"}
+            %select{class: "qtip_position_my_#{x}"}
               %option{:value => 'top left'} Top left
               %option{:value => 'top center'} Top center
               %option{:value => 'top right'} Top right
@@ -114,7 +114,7 @@
               %option{:value => 'left center'} Left center
               %option{:value => 'left top'} Left top  
           %td
-            %select{:class => "qtip_position_at_#{x}"}
+            %select{class: "qtip_position_at_#{x}"}
               %option{:value => 'top left'} Top left
               %option{:value => 'top center'} Top center
               %option{:value => 'top right'} Top right
@@ -128,9 +128,9 @@
               %option{:value => 'left center'} Left center
               %option{:value => 'left top'} Left top  
           %td
-            %input{:class => "qtip_position_adjust_x_#{x}", :type => 'number'}
+            %input{class: "qtip_position_adjust_x_#{x}", type: 'number'}
           %td
-            %input{:class => "qtip_position_adjust_y_#{x}", :type => 'number'}
+            %input{class: "qtip_position_adjust_y_#{x}", type: 'number'}
     - unless x==2
       %hr
     
@@ -176,20 +176,20 @@
 
     for (var i=0; i<callouts.length; i++) {
       if (parsecallouts[i]) {
-        $(".use_callout_"+i).prop("checked", true)
-        $(".localization_key_"+i).val(parsecallouts[i].localization_key)
-        $(".callout_text_"+i).val(parsecallouts[i].callout_text)
-        $(".element_id_"+i).val(parsecallouts[i].element_id)
+        $(".use_callout_" + i).prop("checked", true)
+        $(".localization_key_" + i).val(parsecallouts[i].localization_key)
+        $(".callout_text_" + i).val(parsecallouts[i].callout_text)
+        $(".element_id_" + i).val(parsecallouts[i].element_id)
         if ((parsecallouts[i].qtip_config) && (parsecallouts[i].qtip_config.position))
-          $(".qtip_position_my_"+i).val(parsecallouts[i].qtip_config.position.my)
+          $(".qtip_position_my_" + i).val(parsecallouts[i].qtip_config.position.my)
         if ((parsecallouts[i].qtip_config) && (parsecallouts[i].qtip_config.position))
-          $(".qtip_position_at_"+i).val(parsecallouts[i].qtip_config.position.at)
+          $(".qtip_position_at_" + i).val(parsecallouts[i].qtip_config.position.at)
         if ((parsecallouts[i].qtip_config) && (parsecallouts[i].qtip_config.position) && (parsecallouts[i].qtip_config.position.adjust))
-          $(".qtip_position_adjust_x_"+i).val(parsecallouts[i].qtip_config.position.adjust.x)
+          $(".qtip_position_adjust_x_" + i).val(parsecallouts[i].qtip_config.position.adjust.x)
         if ((parsecallouts[i].qtip_config) && (parsecallouts[i].qtip_config.position) && (parsecallouts[i].qtip_config.position.adjust))
-          $(".qtip_position_adjust_y_"+i).val(parsecallouts[i].qtip_config.position.adjust.y)
+          $(".qtip_position_adjust_y_" + i).val(parsecallouts[i].qtip_config.position.adjust.y)
         if ((parsecallouts[i].qtip_config) && (parsecallouts[i].qtip_config.style) && (parsecallouts[i].qtip_config.style.classes) && (parsecallouts[i].qtip_config.style.classes == "no-tip"))
-          $(".qtip_hide_"+i).prop("checked", true)
+          $(".qtip_hide_" + i).prop("checked", true)
       }
     }
   }
@@ -208,35 +208,35 @@
     updated_callouts[i].qtip_config.position.adjust = {}
     updated_callouts[i].qtip_config.style = {};
 
-    if ($('.localization_key_'+i).val().length > 0)
-      updated_callouts[i].localization_key = $('.localization_key_'+i).val();
-    if ($('.callout_text_'+i).val().length > 0)
-      updated_callouts[i].callout_text = $('.callout_text_'+i).val();
-    if ($('.element_id_'+i).val().length > 0)
-      updated_callouts[i].element_id = $('.element_id_'+i).val();
-    if ($('.qtip_position_my_'+i).val().length > 0)
-      updated_callouts[i].qtip_config.position.my = $('.qtip_position_my_'+i).val();
-    if ($('.qtip_position_at_'+i).val().length > 0)
-      updated_callouts[i].qtip_config.position.at = $('.qtip_position_at_'+i).val();
-    if ($('.qtip_position_adjust_x_'+i).val().length > 0)
-      updated_callouts[i].qtip_config.position.adjust.x = $('.qtip_position_adjust_x_'+i).val();
-    if ($('.qtip_position_adjust_y_'+i).val().length > 0)
-      updated_callouts[i].qtip_config.position.adjust.y = $('.qtip_position_adjust_y_'+i).val();
-    if ($(".qtip_hide_"+i).prop("checked") == true)
+    if ($('.localization_key_' + i).val().length > 0)
+      updated_callouts[i].localization_key = $('.localization_key_' + i).val();
+    if ($('.callout_text_' + i).val().length > 0)
+      updated_callouts[i].callout_text = $('.callout_text_' + i).val();
+    if ($('.element_id_' + i).val().length > 0)
+      updated_callouts[i].element_id = $('.element_id_' + i).val();
+    if ($('.qtip_position_my_' + i).val().length > 0)
+      updated_callouts[i].qtip_config.position.my = $('.qtip_position_my_' + i).val();
+    if ($('.qtip_position_at_' + i).val().length > 0)
+      updated_callouts[i].qtip_config.position.at = $('.qtip_position_at_' + i).val();
+    if ($('.qtip_position_adjust_x_' + i).val().length > 0)
+      updated_callouts[i].qtip_config.position.adjust.x = $('.qtip_position_adjust_x_' + i).val();
+    if ($('.qtip_position_adjust_y_' + i).val().length > 0)
+      updated_callouts[i].qtip_config.position.adjust.y = $('.qtip_position_adjust_y_' + i).val();
+    if ($(".qtip_hide_" + i).prop("checked") == true)
       updated_callouts[i].qtip_config.style.classes = "no-tip"
   }
 
   $(".callouteditor input, .callouteditor select").change(function() {
     for (var i=0; i<updated_callouts.length; i++) {
-      updated_callouts[i].localization_key = $(".localization_key_"+i).val();
-      updated_callouts[i].callout_text = $(".callout_text_"+i).val();
-      updated_callouts[i].element_id = $(".element_id_"+i).val();
-      updated_callouts[i].qtip_config.position.my = $(".qtip_position_my_"+i).val()
-      updated_callouts[i].qtip_config.position.at = $(".qtip_position_at_"+i).val()
-      updated_callouts[i].qtip_config.position.adjust.x = parseInt($(".qtip_position_adjust_x_"+i).val())
-      updated_callouts[i].qtip_config.position.adjust.y = parseInt($(".qtip_position_adjust_y_"+i).val())
+      updated_callouts[i].localization_key = $(".localization_key_" + i).val();
+      updated_callouts[i].callout_text = $(".callout_text_" + i).val();
+      updated_callouts[i].element_id = $(".element_id_" + i).val();
+      updated_callouts[i].qtip_config.position.my = $(".qtip_position_my_" + i).val()
+      updated_callouts[i].qtip_config.position.at = $(".qtip_position_at_" + i).val()
+      updated_callouts[i].qtip_config.position.adjust.x = parseInt($(".qtip_position_adjust_x_" + i).val())
+      updated_callouts[i].qtip_config.position.adjust.y = parseInt($(".qtip_position_adjust_y_" + i).val())
 
-      if ($(".qtip_hide_"+i).prop("checked") == true)
+      if ($(".qtip_hide_" + i).prop("checked") == true)
         updated_callouts[i].qtip_config.style.classes = "no-tip"
       else
         updated_callouts[i].qtip_config.style.classes = "";
