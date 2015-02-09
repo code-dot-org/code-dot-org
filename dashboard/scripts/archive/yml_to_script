@@ -14,6 +14,6 @@ lines[3..-1].each do |line|
     prev_game = game
   end
   puts "skin '#{tokens[3]}'" unless tokens[3].empty?
-  puts %Q-concepts '#{tokens[4].split(',').map(&:strip).join("', '")}'-
+  puts %Q-concepts '#{tokens[4].split(',').map(&:strip).join("', '")}'- unless tokens[4].nil? || tokens[4].empty?
   puts "level 'blockly:#{game}:#{tokens[2]}'"
 end
