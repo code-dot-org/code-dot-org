@@ -383,7 +383,19 @@ NetSimNodeRouter.prototype.routeMessage_ = function (message, myWires) {
   var destWire = destWires[0];
 
   // Create a new message with a new payload.
-  NetSimMessage.send(this.shard_, destWire.remoteNodeID, destWire.localNodeID, message.payload, function (success) {
-    logger.info("Message re-routed to " + destWire.localHostname + " (node " + destWire.localNodeID + ")");
-  });
+  NetSimMessage.send(
+      this.shard_,
+      destWire.remoteNodeID,
+      destWire.localNodeID,
+      message.payload,
+      function (success) {
+        if (success) {
+          logger.info("Message re-routed to " + destWire.localHostname +
+              " (node " + destWire.localNodeID + ")");
+          // TODO: add to router log here.
+        } else {
+          logger.info("Dropped packet: " + JSON.stringify(message.payload));
+        }
+      }
+  );
 };
