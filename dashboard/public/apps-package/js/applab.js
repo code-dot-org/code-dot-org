@@ -78,21 +78,22 @@ levels.ec_simple = {
     'clearTimeout': null,
     'playSound': null,
     'deleteElement': null,
+    'showElement': null,
+    'hideElement': null,
     'setPosition': null,
-    'createButton': null,
-    'createTextInput': null,
-    'createTextLabel': null,
-    'createDropdown': null,
+    'button': null,
+    'textInput': null,
+    'textLabel': null,
+    'dropdown': null,
     'getText': null,
     'setText': null,
-    'createCheckbox': null,
-    'createRadio': null,
+    'checkbox': null,
+    'radioButton': null,
     'getChecked': null,
     'setChecked': null,
-    'createImage': null,
+    'image': null,
     'getImageURL': null,
     'setImageURL': null,
-    'createImageUploadButton': null,
     'createCanvas': null,
     'setActiveCanvas': null,
     'line': null,
@@ -1432,7 +1433,7 @@ Applab.container = function (opts) {
   return Boolean(divApplab.appendChild(newDiv));
 };
 
-Applab.createButton = function (opts) {
+Applab.button = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newButton = document.createElement("button");
@@ -1443,7 +1444,7 @@ Applab.createButton = function (opts) {
                  divApplab.appendChild(newButton));
 };
 
-Applab.createImage = function (opts) {
+Applab.image = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newImage = document.createElement("img");
@@ -1453,7 +1454,7 @@ Applab.createImage = function (opts) {
   return Boolean(divApplab.appendChild(newImage));
 };
 
-Applab.createImageUploadButton = function (opts) {
+Applab.imageUploadButton = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   // To avoid showing the ugly fileupload input element, we create a label
@@ -1780,7 +1781,7 @@ Applab.putImageData = function (opts) {
   }
 };
 
-Applab.createTextInput = function (opts) {
+Applab.textInput = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newInput = document.createElement("input");
@@ -1790,7 +1791,7 @@ Applab.createTextInput = function (opts) {
   return Boolean(divApplab.appendChild(newInput));
 };
 
-Applab.createTextLabel = function (opts) {
+Applab.textLabel = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newLabel = document.createElement("label");
@@ -1805,7 +1806,7 @@ Applab.createTextLabel = function (opts) {
                  divApplab.appendChild(newLabel));
 };
 
-Applab.createCheckbox = function (opts) {
+Applab.checkbox = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newCheckbox = document.createElement("input");
@@ -1816,7 +1817,7 @@ Applab.createCheckbox = function (opts) {
   return Boolean(divApplab.appendChild(newCheckbox));
 };
 
-Applab.createRadio = function (opts) {
+Applab.radioButton = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newRadio = document.createElement("input");
@@ -1828,7 +1829,7 @@ Applab.createRadio = function (opts) {
   return Boolean(divApplab.appendChild(newRadio));
 };
 
-Applab.createDropdown = function (opts) {
+Applab.dropdown = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newSelect = document.createElement("select");
@@ -1973,6 +1974,26 @@ Applab.deleteElement = function (opts) {
       delete Applab.activeCanvas;
     }
     return Boolean(div.parentElement.removeChild(div));
+  }
+  return false;
+};
+
+Applab.showElement = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  var div = document.getElementById(opts.elementId);
+  if (divApplab.contains(div)) {
+    div.style.visibility = 'visible';
+    return true;
+  }
+  return false;
+};
+
+Applab.hideElement = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  var div = document.getElementById(opts.elementId);
+  if (divApplab.contains(div)) {
+    div.style.visibility = 'hidden';
+    return true;
   }
   return false;
 };
@@ -2722,23 +2743,24 @@ return buf.join('');
 },{"../../locale/current/applab":177,"../../locale/current/common":180,"ejs":196}],9:[function(require,module,exports){
 module.exports.blocks = [
   {'func': 'onEvent', 'title': 'Execute code in response to an event for the specified element. Additional parameters are passed to the callback function.', 'category': 'UI controls', 'params': ["'id'", "'click'", "function(event) {\n  \n}"] },
-  {'func': 'createButton', 'title': 'Create a button and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "'text'"] },
-  {'func': 'createTextInput', 'title': 'Create a text input and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "'text'"] },
-  {'func': 'createTextLabel', 'title': 'Create a text label, assign it an element id, and bind it to an associated element', 'category': 'UI controls', 'params': ["'id'", "'text'", "'forId'"] },
-  {'func': 'createDropdown', 'title': 'Create a dropdown, assign it an element id, and populate it with a list of items', 'category': 'UI controls', 'params': ["'id'", "'option1'", "'etc'"] },
+  {'func': 'button', 'title': 'Create a button and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "'text'"] },
+  {'func': 'textInput', 'title': 'Create a text input and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "'text'"] },
+  {'func': 'textLabel', 'title': 'Create a text label, assign it an element id, and bind it to an associated element', 'category': 'UI controls', 'params': ["'id'", "'text'", "'forId'"] },
+  {'func': 'dropdown', 'title': 'Create a dropdown, assign it an element id, and populate it with a list of items', 'category': 'UI controls', 'params': ["'id'", "'option1'", "'etc'"] },
   {'func': 'getText', 'title': 'Get the text from the specified element', 'category': 'UI controls', 'params': ["'id'"], 'type': 'value' },
   {'func': 'setText', 'title': 'Set the text for the specified element', 'category': 'UI controls', 'params': ["'id'", "'text'"] },
-  {'func': 'createCheckbox', 'title': 'Create a checkbox and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "false"] },
-  {'func': 'createRadio', 'title': 'Create a radio button and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "false", "'group'"] },
+  {'func': 'checkbox', 'title': 'Create a checkbox and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "false"] },
+  {'func': 'radioButton', 'title': 'Create a radio button and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "false", "'group'"] },
   {'func': 'getChecked', 'title': 'Get the state of a checkbox or radio button', 'category': 'UI controls', 'params': ["'id'"], 'type': 'value' },
   {'func': 'setChecked', 'title': 'Set the state of a checkbox or radio button', 'category': 'UI controls', 'params': ["'id'", "true"] },
-  {'func': 'createImage', 'title': 'Create an image and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "'http://code.org/images/logo.png'"] },
+  {'func': 'image', 'title': 'Create an image and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "'http://code.org/images/logo.png'"] },
   {'func': 'getImageURL', 'title': 'Get the URL associated with an image or image upload button', 'category': 'UI controls', 'params': ["'id'"], 'type': 'value' },
   {'func': 'setImageURL', 'title': 'Set the URL for the specified image element id', 'category': 'UI controls', 'params': ["'id'", "'http://code.org/images/logo.png'"] },
   {'func': 'playSound', 'title': 'Play the MP3, OGG, or WAV sound file from the specified URL', 'category': 'UI controls', 'params': ["'http://soundbible.com/mp3/neck_snap-Vladimir-719669812.mp3'"] },
+  {'func': 'showElement', 'title': 'Show the element with the specified id', 'category': 'UI controls', 'params': ["'id'"] },
+  {'func': 'hideElement', 'title': 'Hide the element with the specified id', 'category': 'UI controls', 'params': ["'id'"] },
   {'func': 'deleteElement', 'title': 'Delete the element with the specified id', 'category': 'UI controls', 'params': ["'id'"] },
   {'func': 'setPosition', 'title': 'Position an element with x, y, width, and height coordinates', 'category': 'UI controls', 'params': ["'id'", "0", "0", "100", "100"] },
-  {'func': 'createImageUploadButton', 'title': 'Create an image upload button and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "'text'"] },
 
   {'func': 'createCanvas', 'title': 'Create a canvas with the specified id, and optionally set width and height dimensions', 'category': 'Canvas', 'params': ["'id'", "320", "480"] },
   {'func': 'setActiveCanvas', 'title': 'Set the canvas id for subsequent canvas commands (only needed when there are multiple canvas elements)', 'category': 'Canvas', 'params': ["'id'"] },
@@ -2777,6 +2799,7 @@ module.exports.blocks = [
   {'func': 'setTimeout', 'title': 'Set a timer and execute code when that number of milliseconds has elapsed', 'category': 'Control', 'params': ["function() {\n  \n}", "1000"] },
   {'func': 'clearTimeout', 'title': 'Clear an existing timer by passing in the value returned from setTimeout()', 'category': 'Control', 'params': ["0"] },
 
+  {'func': 'imageUploadButton', 'title': 'Create an image upload button and assign it an element id', 'category': 'Advanced', 'params': ["'id'", "'text'"] },
   {'func': 'container', 'title': 'Create a division container with the specified element id, and optionally set its inner HTML', 'category': 'Advanced', 'params': ["'id'", "'html'"] },
   {'func': 'innerHTML', 'title': 'Set the inner HTML for the element with the specified id', 'category': 'Advanced', 'params': ["'id'", "'html'"] },
   {'func': 'setParent', 'title': 'Set an element to become a child of a parent element', 'category': 'Advanced', 'params': ["'id'", "'parentId'"] },
@@ -3180,16 +3203,28 @@ exports.deleteElement = function (blockId, elementId) {
                           {'elementId': elementId });
 };
 
-exports.createButton = function (blockId, elementId, text) {
+exports.showElement = function (blockId, elementId) {
   return Applab.executeCmd(blockId,
-                          'createButton',
+                          'showElement',
+                          {'elementId': elementId });
+};
+
+exports.hideElement = function (blockId, elementId) {
+  return Applab.executeCmd(blockId,
+                          'hideElement',
+                          {'elementId': elementId });
+};
+
+exports.button = function (blockId, elementId, text) {
+  return Applab.executeCmd(blockId,
+                          'button',
                           {'elementId': elementId,
                            'text': text });
 };
 
-exports.createImage = function (blockId, elementId, src) {
+exports.image = function (blockId, elementId, src) {
   return Applab.executeCmd(blockId,
-                          'createImage',
+                          'image',
                           {'elementId': elementId,
                            'src': src });
 };
@@ -3293,31 +3328,31 @@ exports.putImageData = function (blockId, imageData, x, y) {
                            'y': y });
 };
 
-exports.createTextInput = function (blockId, elementId, text) {
+exports.textInput = function (blockId, elementId, text) {
   return Applab.executeCmd(blockId,
-                          'createTextInput',
+                          'textInput',
                           {'elementId': elementId,
                            'text': text });
 };
 
-exports.createTextLabel = function (blockId, elementId, text, forId) {
+exports.textLabel = function (blockId, elementId, text, forId) {
   return Applab.executeCmd(blockId,
-                          'createTextLabel',
+                          'textLabel',
                           {'elementId': elementId,
                            'text': text,
                            'forId': forId });
 };
 
-exports.createCheckbox = function (blockId, elementId, checked) {
+exports.checkbox = function (blockId, elementId, checked) {
   return Applab.executeCmd(blockId,
-                          'createCheckbox',
+                          'checkbox',
                           {'elementId': elementId,
                            'checked': checked });
 };
 
-exports.createRadio = function (blockId, elementId, checked, name) {
+exports.radioButton = function (blockId, elementId, checked, name) {
   return Applab.executeCmd(blockId,
-                          'createRadio',
+                          'radioButton',
                           {'elementId': elementId,
                            'checked': checked,
                            'name': name });
@@ -3336,10 +3371,10 @@ exports.setChecked = function (blockId, elementId, checked) {
                            'checked': checked });
 };
 
-exports.createDropdown = function (blockId, elementId) {
+exports.dropdown = function (blockId, elementId) {
   var optionsArray = Array.prototype.slice.call(arguments, 2);
   return Applab.executeCmd(blockId,
-                          'createDropdown',
+                          'dropdown',
                           {'elementId': elementId,
                            'optionsArray': optionsArray });
 };
@@ -3385,9 +3420,9 @@ exports.setImageURL = function (blockId, elementId, src) {
                            'src': src });
 };
 
-exports.createImageUploadButton = function (blockId, elementId, text) {
+exports.imageUploadButton = function (blockId, elementId, text) {
   return Applab.executeCmd(blockId,
-                           'createImageUploadButton',
+                           'imageUploadButton',
                            {'elementId': elementId,
                             'text': text });
 };
