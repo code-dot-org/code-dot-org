@@ -8868,9 +8868,18 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
 exports.generateAceApiCompleter = function (codeFunctions, dropletConfig) {
   var apis = [];
 
-  var mergedFunctions = mergeFunctionsWithConfig(codeFunctions, dropletConfig);
-  for (var i = 0; i < mergedFunctions.length; i++) {
-    var cf = mergedFunctions[i];
+  var completerFunctions;
+  if (codeFunctions instanceof Array) {
+    // codeFunctions is in an array, use those exactly:
+    completerFunctions = codeFunctions;
+  } else if (dropletConfig && dropletConfig.blocks) {
+    // use dropletConfig.blocks in its entirety (completer will include all
+    // functions available in this app, even those not in this level's palette)
+    completerFunctions = dropletConfig.blocks;
+  }
+
+  for (var i = 0; i < completerFunctions.length; i++) {
+    var cf = completerFunctions[i];
     apis.push({
       name: 'api',
       value: cf.func,

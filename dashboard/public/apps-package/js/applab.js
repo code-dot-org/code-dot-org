@@ -58,7 +58,7 @@ levels.simple = {
   },
   'freePlay': true,
   'toolbox':
-      tb('<block type="applab_createHtmlBlock" inline="true"> \
+      tb('<block type="applab_container" inline="true"> \
         <value name="ID"><block type="text"><title name="TEXT">id</title></block></value> \
         <value name="HTML"><block type="text"><title name="TEXT">html</title></block></value></block>'),
   'startBlocks':
@@ -77,7 +77,7 @@ levels.ec_simple = {
     'setTimeout': null,
     'clearTimeout': null,
     'playSound': null,
-    'deleteHtmlBlock': null,
+    'deleteElement': null,
     'setPosition': null,
     'createButton': null,
     'createTextInput': null,
@@ -94,41 +94,42 @@ levels.ec_simple = {
     'setImageURL': null,
     'createImageUploadButton': null,
     'createCanvas': null,
-    'canvasDrawLine': null,
-    'canvasDrawCircle': null,
-    'canvasDrawRect': null,
-    'canvasSetLineWidth': null,
-    'canvasSetStrokeColor': null,
-    'canvasSetFillColor': null,
-    'canvasDrawImage': null,
-    'canvasGetImageData': null,
-    'canvasPutImageData': null,
-    'canvasClear': null,
+    'setActiveCanvas': null,
+    'line': null,
+    'circle': null,
+    'rect': null,
+    'setStrokeWidth': null,
+    'setStrokeColor': null,
+    'setFillColor': null,
+    'drawImage': null,
+    'getImageData': null,
+    'putImageData': null,
+    'clearCanvas': null,
     'readSharedValue': null,
     'writeSharedValue': null,
     'createSharedRecord': null,
     'readSharedRecords': null,
     'updateSharedRecord': null,
     'deleteSharedRecord': null,
-    'turtleMoveForward': null,
-    'turtleMoveBackward': null,
-    'turtleMove': null,
-    'turtleMoveTo': null,
-    'turtleTurnRight': null,
-    'turtleTurnLeft': null,
-    'turtlePenUp': null,
-    'turtlePenDown': null,
-    'turtlePenWidth': null,
-    'turtlePenColor': null,
-    'turtleShow': null,
-    'turtleHide': null,
+    'moveForward': null,
+    'moveBackward': null,
+    'move': null,
+    'moveTo': null,
+    'turnRight': null,
+    'turnLeft': null,
+    'penUp': null,
+    'penDown': null,
+    'penWidth': null,
+    'penColor': null,
+    'show': null,
+    'hide': null,
   },
 };
 
 // Functions in Advanced category currently disabled in all levels:
 /*
- 'createHtmlBlock': null,
- 'replaceHtmlBlock': null,
+ 'container': null,
+ 'innerHTML': null,
  'setStyle': null,
  'getAttribute': null,
  'setAttribute': null,
@@ -938,6 +939,7 @@ studioApp.reset = function(first) {
   }
 
   // Reset configurable variables
+  delete Applab.activeCanvas;
   Applab.turtle = {};
   Applab.turtle.heading = 0;
   Applab.turtle.x = Applab.appWidth / 2;
@@ -1420,7 +1422,7 @@ Applab.callCmd = function (cmd) {
   return retVal;
 };
 
-Applab.createHtmlBlock = function (opts) {
+Applab.container = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newDiv = document.createElement("div");
@@ -1484,8 +1486,9 @@ function getTurtleContext() {
   var canvas = document.getElementById('turtleCanvas');
 
   if (!canvas) {
-    // If there is not yet a turtleCanvas, create it:
-    Applab.createCanvas({ 'elementId': 'turtleCanvas' });
+    // If there is not yet a turtleCanvas, create it (but don't make it the
+    // active canvas):
+    Applab.createCanvas({ 'elementId': 'turtleCanvas', 'notActive': true });
     canvas = document.getElementById('turtleCanvas');
 
     // And create the turtle (defaults to visible):
@@ -1517,15 +1520,15 @@ function turtleSetVisibility (visible) {
   turtleImage.style.visibility = visible ? 'visible' : 'hidden';
 }
 
-Applab.turtleShow = function (opts) {
+Applab.show = function (opts) {
   turtleSetVisibility(true);
 };
 
-Applab.turtleHide = function (opts) {
+Applab.hide = function (opts) {
   turtleSetVisibility(false);
 };
 
-Applab.turtleMoveTo = function (opts) {
+Applab.moveTo = function (opts) {
   var ctx = getTurtleContext();
   if (ctx) {
     ctx.beginPath();
@@ -1538,41 +1541,57 @@ Applab.turtleMoveTo = function (opts) {
   }
 };
 
-Applab.turtleMove = function (opts) {
+Applab.move = function (opts) {
   var newOpts = {};
   newOpts.x = Applab.turtle.x + opts.x;
   newOpts.y = Applab.turtle.y + opts.y;
-  Applab.turtleMoveTo(newOpts);
+  Applab.moveTo(newOpts);
 };
 
-Applab.turtleMoveForward = function (opts) {
+Applab.moveForward = function (opts) {
   var newOpts = {};
+  var distance = 25;
+  if (typeof opts.distance !== 'undefined') {
+    distance = opts.distance;
+  }
   newOpts.x = Applab.turtle.x +
-    opts.distance * Math.sin(2 * Math.PI * Applab.turtle.heading / 360);
+    distance * Math.sin(2 * Math.PI * Applab.turtle.heading / 360);
   newOpts.y = Applab.turtle.y -
-      opts.distance * Math.cos(2 * Math.PI * Applab.turtle.heading / 360);
-  Applab.turtleMoveTo(newOpts);
+    distance * Math.cos(2 * Math.PI * Applab.turtle.heading / 360);
+  Applab.moveTo(newOpts);
 };
 
-Applab.turtleMoveBackward = function (opts) {
-  opts.distance = -opts.distance;
-  Applab.turtleMoveForward(opts);
+Applab.moveBackward = function (opts) {
+  var distance = -25;
+  if (opts.distance !== 'undefined') {
+    distance = -opts.distance;
+  }
+  Applab.moveForward({'distance': distance });
 };
 
-Applab.turtleTurnRight = function (opts) {
+Applab.turnRight = function (opts) {
   // call this first to ensure there is a turtle (in case this is the first API)
   getTurtleContext();
-  Applab.turtle.heading += opts.degrees;
+
+  var degrees = 90;
+  if (typeof opts.degrees !== 'undefined') {
+    degrees = opts.degrees;
+  }
+
+  Applab.turtle.heading += degrees;
   Applab.turtle.heading = (Applab.turtle.heading + 360) % 360;
   updateTurtleImage();
 };
 
-Applab.turtleTurnLeft = function (opts) {
-  opts.degrees = -opts.degrees;
-  Applab.turtleTurnRight(opts);
+Applab.turnLeft = function (opts) {
+  var degrees = -90;
+  if (typeof opts.degrees !== 'undefined') {
+    degrees = -opts.degrees;
+  }
+  Applab.turnRight({'degrees': degrees });
 };
 
-Applab.turtlePenUp = function (opts) {
+Applab.penUp = function (opts) {
   var ctx = getTurtleContext();
   if (ctx) {
     Applab.turtle.penUpColor = ctx.strokeStyle;
@@ -1580,7 +1599,7 @@ Applab.turtlePenUp = function (opts) {
   }
 };
 
-Applab.turtlePenDown = function (opts) {
+Applab.penDown = function (opts) {
   var ctx = getTurtleContext();
   if (ctx && Applab.turtle.penUpColor) {
     ctx.strokeStyle = Applab.turtle.penUpColor;
@@ -1588,14 +1607,14 @@ Applab.turtlePenDown = function (opts) {
   }
 };
 
-Applab.turtlePenWidth = function (opts) {
+Applab.penWidth = function (opts) {
   var ctx = getTurtleContext();
   if (ctx) {
     ctx.lineWidth = opts.width;
   }
 };
 
-Applab.turtlePenColor = function (opts) {
+Applab.penColor = function (opts) {
   var ctx = getTurtleContext();
   if (ctx) {
     if (Applab.turtle.penUpColor) {
@@ -1624,16 +1643,30 @@ Applab.createCanvas = function (opts) {
     // set transparent fill by default:
     ctx.fillStyle = "rgba(255, 255, 255, 0)";
 
+    if (!Applab.activeCanvas && !opts.notActive) {
+      // If there is no active canvas and the caller doesn't specify otherwise,
+      // we'll make this the active canvas for subsequent API calls:
+      Applab.activeCanvas = newElement;
+    }
+
     return Boolean(divApplab.appendChild(newElement));
   }
   return false;
 };
 
-Applab.canvasDrawLine = function (opts) {
+Applab.setActiveCanvas = function (opts) {
   var divApplab = document.getElementById('divApplab');
   var canvas = document.getElementById(opts.elementId);
-  var ctx = canvas.getContext("2d");
-  if (ctx && divApplab.contains(canvas)) {
+  if (divApplab.contains(canvas)) {
+    Applab.activeCanvas = canvas;
+    return true;
+  }
+  return false;
+};
+
+Applab.line = function (opts) {
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
     ctx.beginPath();
     ctx.moveTo(opts.x1, opts.y1);
     ctx.lineTo(opts.x2, opts.y2);
@@ -1643,11 +1676,9 @@ Applab.canvasDrawLine = function (opts) {
   return false;
 };
 
-Applab.canvasDrawCircle = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  var canvas = document.getElementById(opts.elementId);
-  var ctx = canvas.getContext("2d");
-  if (ctx && divApplab.contains(canvas)) {
+Applab.circle = function (opts) {
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
     ctx.beginPath();
     ctx.arc(opts.x, opts.y, opts.radius, 0, 2 * Math.PI);
     ctx.fill();
@@ -1657,11 +1688,9 @@ Applab.canvasDrawCircle = function (opts) {
   return false;
 };
 
-Applab.canvasDrawRect = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  var canvas = document.getElementById(opts.elementId);
-  var ctx = canvas.getContext("2d");
-  if (ctx && divApplab.contains(canvas)) {
+Applab.rect = function (opts) {
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
     ctx.beginPath();
     ctx.rect(opts.x, opts.y, opts.width, opts.height);
     ctx.fill();
@@ -1671,56 +1700,50 @@ Applab.canvasDrawRect = function (opts) {
   return false;
 };
 
-Applab.canvasSetLineWidth = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  var canvas = document.getElementById(opts.elementId);
-  var ctx = canvas.getContext("2d");
-  if (ctx && divApplab.contains(canvas)) {
+Applab.setStrokeWidth = function (opts) {
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
     ctx.lineWidth = opts.width;
     return true;
   }
   return false;
 };
 
-Applab.canvasSetStrokeColor = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  var canvas = document.getElementById(opts.elementId);
-  var ctx = canvas.getContext("2d");
-  if (ctx && divApplab.contains(canvas)) {
+Applab.setStrokeColor = function (opts) {
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
     ctx.strokeStyle = String(opts.color);
     return true;
   }
   return false;
 };
 
-Applab.canvasSetFillColor = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  var canvas = document.getElementById(opts.elementId);
-  var ctx = canvas.getContext("2d");
-  if (ctx && divApplab.contains(canvas)) {
+Applab.setFillColor = function (opts) {
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
     ctx.fillStyle = String(opts.color);
     return true;
   }
   return false;
 };
 
-Applab.canvasClear = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  var canvas = document.getElementById(opts.elementId);
-  var ctx = canvas.getContext("2d");
-  if (ctx && divApplab.contains(canvas)) {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+Applab.clearCanvas = function (opts) {
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
+    ctx.clearRect(0,
+                  0,
+                  Applab.activeCanvas.width,
+                  Applab.activeCanvas.height);
     return true;
   }
   return false;
 };
 
-Applab.canvasDrawImage = function (opts) {
+Applab.drawImage = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  var canvas = document.getElementById(opts.elementId);
   var image = document.getElementById(opts.imageId);
-  var ctx = canvas.getContext("2d");
-  if (ctx && divApplab.contains(canvas) && divApplab.contains(image)) {
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx && divApplab.contains(image)) {
     var xScale, yScale;
     xScale = yScale = 1;
     if (opts.width) {
@@ -1738,20 +1761,16 @@ Applab.canvasDrawImage = function (opts) {
   return false;
 };
 
-Applab.canvasGetImageData = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  var canvas = document.getElementById(opts.elementId);
-  var ctx = canvas.getContext("2d");
-  if (ctx && divApplab.contains(canvas)) {
+Applab.getImageData = function (opts) {
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
     return ctx.getImageData(opts.x, opts.y, opts.width, opts.height);
   }
 };
 
-Applab.canvasPutImageData = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  var canvas = document.getElementById(opts.elementId);
-  var ctx = canvas.getContext("2d");
-  if (ctx && divApplab.contains(canvas)) {
+Applab.putImageData = function (opts) {
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
     // Create tmpImageData and initialize it because opts.imageData is not
     // going to be a real ImageData object if it came from the interpreter
     var tmpImageData = ctx.createImageData(opts.imageData.width,
@@ -1935,23 +1954,24 @@ Applab.playSound = function (opts) {
   }
 };
 
-Applab.replaceHtmlBlock = function (opts) {
+Applab.innerHTML = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  var oldDiv = document.getElementById(opts.elementId);
-  if (divApplab.contains(oldDiv)) {
-    var newDiv = document.createElement("div");
-    newDiv.id = opts.elementId;
-    newDiv.innerHTML = opts.html;
-
-    return Boolean(oldDiv.parentElement.replaceChild(newDiv, oldDiv));
+  var div = document.getElementById(opts.elementId);
+  if (divApplab.contains(div)) {
+    div.innerHTML = opts.html;
+    return true;
   }
   return false;
 };
 
-Applab.deleteHtmlBlock = function (opts) {
+Applab.deleteElement = function (opts) {
   var divApplab = document.getElementById('divApplab');
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
+    // Special check to see if the active canvas is being deleted
+    if (div == Applab.activeCanvas || div.contains(Applab.activeCanvas)) {
+      delete Applab.activeCanvas;
+    }
     return Boolean(div.parentElement.removeChild(div));
   }
   return false;
@@ -2716,48 +2736,49 @@ module.exports.blocks = [
   {'func': 'getImageURL', 'title': 'Get the URL associated with an image or image upload button', 'category': 'UI controls', 'params': ["'id'"], 'type': 'value' },
   {'func': 'setImageURL', 'title': 'Set the URL for the specified image element id', 'category': 'UI controls', 'params': ["'id'", "'http://code.org/images/logo.png'"] },
   {'func': 'playSound', 'title': 'Play the MP3, OGG, or WAV sound file from the specified URL', 'category': 'UI controls', 'params': ["'http://soundbible.com/mp3/neck_snap-Vladimir-719669812.mp3'"] },
-  {'func': 'deleteHtmlBlock', 'title': 'Delete the element with the specified id', 'category': 'UI controls', 'params': ["'id'"] },
+  {'func': 'deleteElement', 'title': 'Delete the element with the specified id', 'category': 'UI controls', 'params': ["'id'"] },
   {'func': 'setPosition', 'title': 'Position an element with x, y, width, and height coordinates', 'category': 'UI controls', 'params': ["'id'", "0", "0", "100", "100"] },
   {'func': 'createImageUploadButton', 'title': 'Create an image upload button and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "'text'"] },
 
-  {'func': 'createCanvas', 'title': 'Create a canvas with width, height dimensions', 'category': 'Canvas', 'params': ["'id'", "320", "480"] },
-  {'func': 'canvasDrawLine', 'title': 'Draw a line on a canvas from x1, y1 to x2, y2', 'category': 'Canvas', 'params': ["'id'", "0", "0", "160", "240"] },
-  {'func': 'canvasDrawCircle', 'title': 'Draw a circle on a canvas with the specified coordinates for center (x, y) and radius', 'category': 'Canvas', 'params': ["'id'", "160", "240", "100"] },
-  {'func': 'canvasDrawRect', 'title': 'Draw a rectangle on a canvas with x, y, width, and height coordinates', 'category': 'Canvas', 'params': ["'id'", "80", "120", "160", "240"] },
-  {'func': 'canvasSetLineWidth', 'title': 'Set the line width for a canvas', 'category': 'Canvas', 'params': ["'id'", "3"] },
-  {'func': 'canvasSetStrokeColor', 'title': 'Set the stroke color for a canvas', 'category': 'Canvas', 'params': ["'id'", "'red'"] },
-  {'func': 'canvasSetFillColor', 'title': 'Set the fill color for a canvas', 'category': 'Canvas', 'params': ["'id'", "'yellow'"] },
-  {'func': 'canvasDrawImage', 'title': 'Draw an image on a canvas with the specified image element and x, y as the top left coordinates', 'category': 'Canvas', 'params': ["'id'", "'imageId'", "0", "0"] },
-  {'func': 'canvasGetImageData', 'title': 'Get the ImageData for a rectangle (x, y, width, height) within a canvas', 'category': 'Canvas', 'params': ["'id'", "0", "0", "320", "480"], 'type': 'value' },
-  {'func': 'canvasPutImageData', 'title': 'Set the ImageData for a rectangle within a canvas with x, y as the top left coordinates', 'category': 'Canvas', 'params': ["'id'", "imageData", "0", "0"] },
-  {'func': 'canvasClear', 'title': 'Clear all data on a canvas', 'category': 'Canvas', 'params': ["'id'"] },
+  {'func': 'createCanvas', 'title': 'Create a canvas with the specified id, and optionally set width and height dimensions', 'category': 'Canvas', 'params': ["'id'", "320", "480"] },
+  {'func': 'setActiveCanvas', 'title': 'Set the canvas id for subsequent canvas commands (only needed when there are multiple canvas elements)', 'category': 'Canvas', 'params': ["'id'"] },
+  {'func': 'line', 'title': 'Draw a line on the active canvas from x1, y1 to x2, y2', 'category': 'Canvas', 'params': ["0", "0", "160", "240"] },
+  {'func': 'circle', 'title': 'Draw a circle on the active  canvas with the specified coordinates for center (x, y) and radius', 'category': 'Canvas', 'params': ["160", "240", "100"] },
+  {'func': 'rect', 'title': 'Draw a rectangle on the active  canvas with x, y, width, and height coordinates', 'category': 'Canvas', 'params': ["80", "120", "160", "240"] },
+  {'func': 'setStrokeWidth', 'title': 'Set the line width for the active  canvas', 'category': 'Canvas', 'params': ["3"] },
+  {'func': 'setStrokeColor', 'title': 'Set the stroke color for the active  canvas', 'category': 'Canvas', 'params': ["'red'"] },
+  {'func': 'setFillColor', 'title': 'Set the fill color for the active  canvas', 'category': 'Canvas', 'params': ["'yellow'"] },
+  {'func': 'drawImage', 'title': 'Draw an image on the active  canvas with the specified image element and x, y as the top left coordinates', 'category': 'Canvas', 'params': ["'imageId'", "0", "0"] },
+  {'func': 'getImageData', 'title': 'Get the ImageData for a rectangle (x, y, width, height) within the active  canvas', 'category': 'Canvas', 'params': ["0", "0", "320", "480"], 'type': 'value' },
+  {'func': 'putImageData', 'title': 'Set the ImageData for a rectangle within the active  canvas with x, y as the top left coordinates', 'category': 'Canvas', 'params': ["imageData", "0", "0"] },
+  {'func': 'clearCanvas', 'title': 'Clear all data on the active canvas', 'category': 'Canvas', },
 
   {'func': 'startWebRequest', 'title': 'Request data from the internet and execute code when the request is complete', 'category': 'Data', 'params': ["'http://api.openweathermap.org/data/2.5/weather?q=London,uk'", "function(status, type, content) {\n  \n}"] },
   {'func': 'writeSharedValue', 'title': 'Saves a value associated with the key, shared with everyone who uses the app.', 'category': 'Data', 'params': ["'key'", "'value'", "function () {\n  \n}"] },
   {'func': 'readSharedValue', 'title': 'Reads the value associated with the key, shared with everyone who uses the app.', 'category': 'Data', 'params': ["'key'", "function (value) {\n  \n}"] },
   {'func': 'createSharedRecord', 'title': 'createSharedRecord(record, onSuccess, onError); Creates a new shared record in table record.tableName.', 'category': 'Data', 'params': ["{tableName:'abc', name:'Alice', age:7, male:false}", "function() {\n  \n}"] },
-  {'func': 'readSharedRecords', 'title': 'readSharedRecords(searchParams, onSuccess, onError); Reads all shared records whose properties match those on the searchParams object.', 'category': 'Data', 'params': ["{tableName: 'abc'}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    createHtmlBlock('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
+  {'func': 'readSharedRecords', 'title': 'readSharedRecords(searchParams, onSuccess, onError); Reads all shared records whose properties match those on the searchParams object.', 'category': 'Data', 'params': ["{tableName: 'abc'}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    container('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
   {'func': 'updateSharedRecord', 'title': 'updateSharedRecord(record, onSuccess, onFailure); Updates a shared record, identified by record.tableName and record.id.', 'category': 'Data', 'params': ["{tableName:'abc', id: 1, name:'Bob', age:8, male:true}", "function() {\n  \n}"] },
   {'func': 'deleteSharedRecord', 'title': 'deleteSharedRecord(record, onSuccess, onFailure)\nDeletes a shared record, identified by record.tableName and record.id.', 'category': 'Data', 'params': ["{tableName:'abc', id: 1}", "function() {\n  \n}"] },
 
-  {'func': 'turtleMoveForward', 'title': 'Move the turtle forward the specified distance', 'category': 'Turtle', 'params': ["100"] },
-  {'func': 'turtleMoveBackward', 'title': 'Move the turtle backward the specified distance', 'category': 'Turtle', 'params': ["100"] },
-  {'func': 'turtleMove', 'title': 'Move the turtle by the specified x and y coordinates', 'category': 'Turtle', 'params': ["50", "50"] },
-  {'func': 'turtleMoveTo', 'title': 'Move the turtle to the specified x and y coordinates', 'category': 'Turtle', 'params': ["0", "0"] },
-  {'func': 'turtleTurnRight', 'title': 'Turn the turtle clockwise by the specified number of degrees', 'category': 'Turtle', 'params': ["90"] },
-  {'func': 'turtleTurnLeft', 'title': 'Turn the turtle counterclockwise by the specified number of degrees', 'category': 'Turtle', 'params': ["90"] },
-  {'func': 'turtlePenUp', 'title': "Pick up the turtle's pen", 'category': 'Turtle' },
-  {'func': 'turtlePenDown', 'title': "Set down the turtle's pen", 'category': 'Turtle' },
-  {'func': 'turtlePenWidth', 'title': 'Set the turtle to the specified pen width', 'category': 'Turtle', 'params': ["3"] },
-  {'func': 'turtlePenColor', 'title': 'Set the turtle to the specified pen color', 'category': 'Turtle', 'params': ["'red'"] },
-  {'func': 'turtleShow', 'title': "Show the turtle image at its current location", 'category': 'Turtle' },
-  {'func': 'turtleHide', 'title': "Hide the turtle image", 'category': 'Turtle' },
+  {'func': 'moveForward', 'title': 'Move the turtle forward the specified distance', 'category': 'Turtle', 'params': ["25"] },
+  {'func': 'moveBackward', 'title': 'Move the turtle backward the specified distance', 'category': 'Turtle', 'params': ["25"] },
+  {'func': 'move', 'title': 'Move the turtle by the specified x and y coordinates', 'category': 'Turtle', 'params': ["25", "25"] },
+  {'func': 'moveTo', 'title': 'Move the turtle to the specified x and y coordinates', 'category': 'Turtle', 'params': ["0", "0"] },
+  {'func': 'turnRight', 'title': 'Turn the turtle clockwise by the specified number of degrees', 'category': 'Turtle', 'params': ["90"] },
+  {'func': 'turnLeft', 'title': 'Turn the turtle counterclockwise by the specified number of degrees', 'category': 'Turtle', 'params': ["90"] },
+  {'func': 'penUp', 'title': "Pick up the turtle's pen", 'category': 'Turtle' },
+  {'func': 'penDown', 'title': "Set down the turtle's pen", 'category': 'Turtle' },
+  {'func': 'penWidth', 'title': 'Set the turtle to the specified pen width', 'category': 'Turtle', 'params': ["3"] },
+  {'func': 'penColor', 'title': 'Set the turtle to the specified pen color', 'category': 'Turtle', 'params': ["'red'"] },
+  {'func': 'show', 'title': "Show the turtle image at its current location", 'category': 'Turtle' },
+  {'func': 'hide', 'title': "Hide the turtle image", 'category': 'Turtle' },
 
   {'func': 'setTimeout', 'title': 'Set a timer and execute code when that number of milliseconds has elapsed', 'category': 'Control', 'params': ["function() {\n  \n}", "1000"] },
   {'func': 'clearTimeout', 'title': 'Clear an existing timer by passing in the value returned from setTimeout()', 'category': 'Control', 'params': ["0"] },
 
-  {'func': 'createHtmlBlock', 'title': 'Create a block of HTML and assign it an element id', 'category': 'Advanced', 'params': ["'id'", "'html'"] },
-  {'func': 'replaceHtmlBlock', 'title': 'Replace a block of HTML associated with the specified id', 'category': 'Advanced', 'params': ["'id'", "'html'"] },
+  {'func': 'container', 'title': 'Create a division container with the specified element id, and optionally set its inner HTML', 'category': 'Advanced', 'params': ["'id'", "'html'"] },
+  {'func': 'innerHTML', 'title': 'Set the inner HTML for the element with the specified id', 'category': 'Advanced', 'params': ["'id'", "'html'"] },
   {'func': 'setParent', 'title': 'Set an element to become a child of a parent element', 'category': 'Advanced', 'params': ["'id'", "'parentId'"] },
   {'func': 'setStyle', 'title': 'Add CSS style text to an element', 'category': 'Advanced', 'params': ["'id'", "'color:red;'"] },
   {'func': 'getAttribute', 'category': 'Advanced', 'params': ["'id'", "'scrollHeight'"], 'type': 'value' },
@@ -2856,30 +2877,30 @@ exports.install = function(blockly, blockInstallOptions) {
     return '\n';
   };
 
-  installCreateHtmlBlock(blockly, generator, blockInstallOptions);
+  installContainer(blockly, generator, blockInstallOptions);
 };
 
-function installCreateHtmlBlock(blockly, generator, blockInstallOptions) {
-  blockly.Blocks.applab_createHtmlBlock = {
+function installContainer(blockly, generator, blockInstallOptions) {
+  blockly.Blocks.applab_container = {
     helpUrl: '',
     init: function() {
       this.setHSV(184, 1.00, 0.74);
-      this.appendDummyInput().appendTitle(msg.createHtmlBlock());
+      this.appendDummyInput().appendTitle(msg.container());
       this.appendValueInput('ID');
       this.appendValueInput('HTML');
       this.setPreviousStatement(true);
       this.setInputsInline(true);
       this.setNextStatement(true);
-      this.setTooltip(msg.createHtmlBlockTooltip());
+      this.setTooltip(msg.containerTooltip());
     }
   };
 
-  generator.applab_createHtmlBlock = function() {
+  generator.applab_container = function() {
     var idParam = Blockly.JavaScript.valueToCode(this, 'ID',
         Blockly.JavaScript.ORDER_NONE) || '';
     var htmlParam = Blockly.JavaScript.valueToCode(this, 'HTML',
         Blockly.JavaScript.ORDER_NONE) || '';
-    return 'Applab.createHtmlBlock(\'block_id_' + this.id +
+    return 'Applab.container(\'block_id_' + this.id +
                '\', ' + idParam + ', ' + htmlParam + ');\n';
   };
 }
@@ -3139,23 +3160,23 @@ exports.randomFromArray = function (values) {
 
 // APIs needed for droplet and/or blockly (must include blockId):
 
-exports.createHtmlBlock = function (blockId, elementId, html) {
+exports.container = function (blockId, elementId, html) {
   return Applab.executeCmd(blockId,
-                          'createHtmlBlock',
+                          'container',
                           {'elementId': elementId,
                            'html': html });
 };
 
-exports.replaceHtmlBlock = function (blockId, elementId, html) {
+exports.innerHTML = function (blockId, elementId, html) {
   return Applab.executeCmd(blockId,
-                          'replaceHtmlBlock',
+                          'innerHTML',
                           {'elementId': elementId,
                            'html': html });
 };
 
-exports.deleteHtmlBlock = function (blockId, elementId) {
+exports.deleteElement = function (blockId, elementId) {
   return Applab.executeCmd(blockId,
-                          'deleteHtmlBlock',
+                          'deleteElement',
                           {'elementId': elementId });
 };
 
@@ -3191,88 +3212,83 @@ exports.createCanvas = function (blockId, elementId, width, height) {
                            'height': height });
 };
 
-exports.canvasDrawLine = function (blockId, elementId, x1, y1, x2, y2) {
+exports.setActiveCanvas = function (blockId, elementId) {
   return Applab.executeCmd(blockId,
-                          'canvasDrawLine',
-                          {'elementId': elementId,
-                           'x1': x1,
+                          'setActiveCanvas',
+                          {'elementId': elementId  });
+};
+
+exports.line = function (blockId, x1, y1, x2, y2) {
+  return Applab.executeCmd(blockId,
+                          'line',
+                          {'x1': x1,
                            'y1': y1,
                            'x2': x2,
                            'y2': y2 });
 };
 
-exports.canvasDrawCircle = function (blockId, elementId, x, y, radius) {
+exports.circle = function (blockId, x, y, radius) {
   return Applab.executeCmd(blockId,
-                          'canvasDrawCircle',
-                          {'elementId': elementId,
-                           'x': x,
+                          'circle',
+                          {'x': x,
                            'y': y,
                            'radius': radius });
 };
 
-exports.canvasDrawRect = function (blockId, elementId, x, y, width, height) {
+exports.rect = function (blockId, x, y, width, height) {
   return Applab.executeCmd(blockId,
-                          'canvasDrawRect',
-                          {'elementId': elementId,
+                          'rect',
+                          {'x': x,
+                           'y': y,
+                           'width': width,
+                           'height': height });
+};
+
+exports.setStrokeWidth = function (blockId, width) {
+  return Applab.executeCmd(blockId,
+                          'setStrokeWidth',
+                          {'width': width });
+};
+
+exports.setStrokeColor = function (blockId, color) {
+  return Applab.executeCmd(blockId,
+                          'setStrokeColor',
+                          {'color': color });
+};
+
+exports.setFillColor = function (blockId, color) {
+  return Applab.executeCmd(blockId,
+                          'setFillColor',
+                          {'color': color });
+};
+
+exports.clearCanvas = function (blockId) {
+  return Applab.executeCmd(blockId, 'clearCanvas');
+};
+
+exports.drawImage = function (blockId, imageId, x, y, width, height) {
+  return Applab.executeCmd(blockId,
+                          'drawImage',
+                          {'imageId': imageId,
                            'x': x,
                            'y': y,
                            'width': width,
                            'height': height });
 };
 
-exports.canvasSetLineWidth = function (blockId, elementId, width) {
+exports.getImageData = function (blockId, x, y, width, height) {
   return Applab.executeCmd(blockId,
-                          'canvasSetLineWidth',
-                          {'elementId': elementId,
-                           'width': width });
-};
-
-exports.canvasSetStrokeColor = function (blockId, elementId, color) {
-  return Applab.executeCmd(blockId,
-                          'canvasSetStrokeColor',
-                          {'elementId': elementId,
-                           'color': color });
-};
-
-exports.canvasSetFillColor = function (blockId, elementId, color) {
-  return Applab.executeCmd(blockId,
-                          'canvasSetFillColor',
-                          {'elementId': elementId,
-                           'color': color });
-};
-
-exports.canvasClear = function (blockId, elementId) {
-  return Applab.executeCmd(blockId,
-                          'canvasClear',
-                          {'elementId': elementId });
-};
-
-exports.canvasDrawImage = function (blockId, elementId, imageId, x, y, width, height) {
-  return Applab.executeCmd(blockId,
-                          'canvasDrawImage',
-                          {'elementId': elementId,
-                           'imageId': imageId,
-                           'x': x,
+                          'getImageData',
+                          {'x': x,
                            'y': y,
                            'width': width,
                            'height': height });
 };
 
-exports.canvasGetImageData = function (blockId, elementId, x, y, width, height) {
+exports.putImageData = function (blockId, imageData, x, y) {
   return Applab.executeCmd(blockId,
-                          'canvasGetImageData',
-                          {'elementId': elementId,
-                           'x': x,
-                           'y': y,
-                           'width': width,
-                           'height': height });
-};
-
-exports.canvasPutImageData = function (blockId, elementId, imageData, x, y) {
-  return Applab.executeCmd(blockId,
-                          'canvasPutImageData',
-                          {'elementId': elementId,
-                           'imageData': imageData,
+                          'putImageData',
+                          {'imageData': imageData,
                            'x': x,
                            'y': y });
 };
@@ -3475,69 +3491,69 @@ exports.deleteSharedRecord = function (blockId, record, onSuccess, onError) {
                            'onError': onError});
 };
 
-exports.turtleMoveForward = function (blockId, distance) {
+exports.moveForward = function (blockId, distance) {
   return Applab.executeCmd(blockId,
-                          'turtleMoveForward',
+                          'moveForward',
                           {'distance': distance });
 };
 
-exports.turtleMoveBackward = function (blockId, distance) {
+exports.moveBackward = function (blockId, distance) {
   return Applab.executeCmd(blockId,
-                          'turtleMoveBackward',
+                          'moveBackward',
                           {'distance': distance });
 };
 
-exports.turtleMove = function (blockId, x, y) {
+exports.move = function (blockId, x, y) {
   return Applab.executeCmd(blockId,
-                          'turtleMove',
+                          'move',
                           {'x': x,
                            'y': y });
 };
 
-exports.turtleMoveTo = function (blockId, x, y) {
+exports.moveTo = function (blockId, x, y) {
   return Applab.executeCmd(blockId,
-                          'turtleMoveTo',
+                          'moveTo',
                           {'x': x,
                            'y': y });
 };
 
-exports.turtleTurnRight = function (blockId, degrees) {
+exports.turnRight = function (blockId, degrees) {
   return Applab.executeCmd(blockId,
-                          'turtleTurnRight',
+                          'turnRight',
                           {'degrees': degrees });
 };
 
-exports.turtleTurnLeft = function (blockId, degrees) {
+exports.turnLeft = function (blockId, degrees) {
   return Applab.executeCmd(blockId,
-                          'turtleTurnLeft',
+                          'turnLeft',
                           {'degrees': degrees });
 };
 
-exports.turtlePenUp = function (blockId) {
-  return Applab.executeCmd(blockId, 'turtlePenUp');
+exports.penUp = function (blockId) {
+  return Applab.executeCmd(blockId, 'penUp');
 };
 
-exports.turtlePenDown = function (blockId) {
-  return Applab.executeCmd(blockId, 'turtlePenDown');
+exports.penDown = function (blockId) {
+  return Applab.executeCmd(blockId, 'penDown');
 };
 
-exports.turtleShow = function (blockId) {
-  return Applab.executeCmd(blockId, 'turtleShow');
+exports.show = function (blockId) {
+  return Applab.executeCmd(blockId, 'show');
 };
 
-exports.turtleHide = function (blockId) {
-  return Applab.executeCmd(blockId, 'turtleHide');
+exports.hide = function (blockId) {
+  return Applab.executeCmd(blockId, 'hide');
 };
 
-exports.turtlePenWidth = function (blockId, width) {
+exports.penWidth = function (blockId, width) {
   return Applab.executeCmd(blockId,
-                          'turtlePenWidth',
+                          'penWidth',
                           {'width': width });
 };
 
-exports.turtlePenColor = function (blockId, color) {
+exports.penColor = function (blockId, color) {
   return Applab.executeCmd(blockId,
-                          'turtlePenColor',
+                          'penColor',
                           {'color': color });
 };
 
