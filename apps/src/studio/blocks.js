@@ -1720,9 +1720,9 @@ exports.install = function(blockly, blockInstallOptions) {
         {name: 'title', type: 'string'},
         {name: 'subtitle', type: 'string'},
         {name: 'background', type: 'image'},
+        {name: 'player', type: 'image'},
         {name: 'target', type: 'image'},
-        {name: 'danger', type: 'image'},
-        {name: 'player', type: 'image'}
+        {name: 'danger', type: 'image'}
       ];
       initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
     }
