@@ -190,23 +190,32 @@ class Script < ActiveRecord::Base
 
   def self.setup(default_files, custom_files)
     transaction do
+      scripts_to_add = []
       # Load default scripts from yml (csv embedded)
-      default_scripts = default_files.map { |yml| load_yaml(yml, SCRIPT_MAP) }
+      default_files.map { |yml| load_yaml(yml, SCRIPT_MAP) }
       .sort_by { |options, _| options['id'] }
-      .map { |options, data| add_script(options, data) }
+      .map { |options, data| scripts_to_add << [options, data]}
 
       custom_i18n = {}
       # Load custom scripts from Script DSL format
-      custom_scripts = custom_files.map do |script|
+      custom_files.map do |script|
+        name = File.basename(script, '.script')
         script_data, i18n = ScriptDSL.parse_file(script)
         stages = script_data[:stages]
         custom_i18n.deep_merge!(i18n)
-        add_script({name: File.basename(script, '.script'),
-                    trophies: false,
-                    hidden: script_data[:hidden].nil? ? true : script_data[:hidden]},
-                   stages.map{|stage| stage[:levels]}.flatten)
+        scripts_to_add << [{
+          name: name,
+          trophies: script_data[:trophies],
+          hidden: script_data[:hidden].nil? ? true : script_data[:hidden],
+          id: script_data[:id],
+        }, stages.map{|stage| stage[:levels]}.flatten]
       end
-      [(default_scripts + custom_scripts), custom_i18n]
+
+      # Stable sort by ID then add each script, ensuring scripts with no ID end up at the end
+      added_scripts = scripts_to_add.sort_by.with_index{ |args, idx| [args[0][:id] || Float::INFINITY, idx] }.map do |args|
+        add_script(*args)
+      end
+      [added_scripts, custom_i18n]
     end
   end
 
@@ -314,7 +323,7 @@ class Script < ActiveRecord::Base
       transaction do
         script_data, i18n = ScriptDSL.parse(script_text, 'input', script_params[:name])
         Script.add_script({name: script_params[:name],
-                           trophies: false,
+                           trophies: script_data[:trophies],
                            hidden: script_data[:hidden].nil? ? true : script_data[:hidden]},
           script_data[:stages].map { |stage| stage[:levels] }.flatten)
         Script.update_i18n(i18n)

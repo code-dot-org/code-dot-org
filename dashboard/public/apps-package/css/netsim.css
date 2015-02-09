@@ -33,9 +33,24 @@
 .expr {
   font-size: 20px; }
 
-.netsim_lobby_user_row {
-  background-color: white; }
-
-.netsim_lobby_own_row {
-  font-weight: bold;
-  background-color: paleturquoise; }
+#netsim_lobby_list {
+  background-color: white;
+  padding: 0.5em;
+  border: inset darkslategray thin;
+  list-style: none; }
+  #netsim_lobby_list li {
+    background-color: white;
+    padding: 0.3em; }
+  #netsim_lobby_list .own_row {
+    font-weight: bold;
+    background-color: lightcyan; }
+  #netsim_lobby_list .router_row {
+    cursor: pointer; }
+  #netsim_lobby_list .router_row:hover {
+    color: black;
+    background-color: rgba(255, 140, 0, 0.21); }
+  #netsim_lobby_list .selected_row {
+    color: white;
+    background-color: darkorange; }
+  #netsim_lobby_list .selected_row:hover {
+    background-color: darkorange; }
