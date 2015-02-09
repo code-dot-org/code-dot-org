@@ -78,21 +78,22 @@ levels.ec_simple = {
     'clearTimeout': null,
     'playSound': null,
     'deleteElement': null,
+    'showElement': null,
+    'hideElement': null,
     'setPosition': null,
-    'createButton': null,
-    'createTextInput': null,
-    'createTextLabel': null,
-    'createDropdown': null,
+    'button': null,
+    'textInput': null,
+    'textLabel': null,
+    'dropdown': null,
     'getText': null,
     'setText': null,
-    'createCheckbox': null,
-    'createRadio': null,
+    'checkbox': null,
+    'radioButton': null,
     'getChecked': null,
     'setChecked': null,
-    'createImage': null,
+    'image': null,
     'getImageURL': null,
     'setImageURL': null,
-    'createImageUploadButton': null,
     'createCanvas': null,
     'setActiveCanvas': null,
     'line': null,
@@ -105,12 +106,12 @@ levels.ec_simple = {
     'getImageData': null,
     'putImageData': null,
     'clearCanvas': null,
-    'readSharedValue': null,
-    'writeSharedValue': null,
-    'createSharedRecord': null,
-    'readSharedRecords': null,
-    'updateSharedRecord': null,
-    'deleteSharedRecord': null,
+    'getKeyValue': null,
+    'setKeyValue': null,
+    'createRecord': null,
+    'readRecords': null,
+    'updateRecord': null,
+    'deleteRecord': null,
     'moveForward': null,
     'moveBackward': null,
     'move': null,
@@ -1432,7 +1433,7 @@ Applab.container = function (opts) {
   return Boolean(divApplab.appendChild(newDiv));
 };
 
-Applab.createButton = function (opts) {
+Applab.button = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newButton = document.createElement("button");
@@ -1443,7 +1444,7 @@ Applab.createButton = function (opts) {
                  divApplab.appendChild(newButton));
 };
 
-Applab.createImage = function (opts) {
+Applab.image = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newImage = document.createElement("img");
@@ -1453,7 +1454,7 @@ Applab.createImage = function (opts) {
   return Boolean(divApplab.appendChild(newImage));
 };
 
-Applab.createImageUploadButton = function (opts) {
+Applab.imageUploadButton = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   // To avoid showing the ugly fileupload input element, we create a label
@@ -1780,7 +1781,7 @@ Applab.putImageData = function (opts) {
   }
 };
 
-Applab.createTextInput = function (opts) {
+Applab.textInput = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newInput = document.createElement("input");
@@ -1790,7 +1791,7 @@ Applab.createTextInput = function (opts) {
   return Boolean(divApplab.appendChild(newInput));
 };
 
-Applab.createTextLabel = function (opts) {
+Applab.textLabel = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newLabel = document.createElement("label");
@@ -1805,7 +1806,7 @@ Applab.createTextLabel = function (opts) {
                  divApplab.appendChild(newLabel));
 };
 
-Applab.createCheckbox = function (opts) {
+Applab.checkbox = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newCheckbox = document.createElement("input");
@@ -1816,7 +1817,7 @@ Applab.createCheckbox = function (opts) {
   return Boolean(divApplab.appendChild(newCheckbox));
 };
 
-Applab.createRadio = function (opts) {
+Applab.radioButton = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newRadio = document.createElement("input");
@@ -1828,7 +1829,7 @@ Applab.createRadio = function (opts) {
   return Boolean(divApplab.appendChild(newRadio));
 };
 
-Applab.createDropdown = function (opts) {
+Applab.dropdown = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newSelect = document.createElement("select");
@@ -1973,6 +1974,26 @@ Applab.deleteElement = function (opts) {
       delete Applab.activeCanvas;
     }
     return Boolean(div.parentElement.removeChild(div));
+  }
+  return false;
+};
+
+Applab.showElement = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  var div = document.getElementById(opts.elementId);
+  if (divApplab.contains(div)) {
+    div.style.visibility = 'visible';
+    return true;
+  }
+  return false;
+};
+
+Applab.hideElement = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  var div = document.getElementById(opts.elementId);
+  if (divApplab.contains(div)) {
+    div.style.visibility = 'hidden';
+    return true;
   }
   return false;
 };
@@ -2125,13 +2146,13 @@ Applab.clearTimeout = function (opts) {
   window.clearTimeout(opts.timeoutId);
 };
 
-Applab.createSharedRecord = function (opts) {
-  var onSuccess = Applab.handleCreateSharedRecord.bind(this, opts.onSuccess);
+Applab.createRecord = function (opts) {
+  var onSuccess = Applab.handleCreateRecord.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
-  AppStorage.createSharedRecord(opts.record, onSuccess, onError);
+  AppStorage.createRecord(opts.table, opts.record, onSuccess, onError);
 };
 
-Applab.handleCreateSharedRecord = function(successCallback, record) {
+Applab.handleCreateRecord = function(successCallback, record) {
   if (successCallback) {
     Applab.eventQueue.push({
       'fn': successCallback,
@@ -2151,13 +2172,13 @@ Applab.handleError = function(errorCallback, message) {
   }
 };
 
-Applab.readSharedValue = function(opts) {
-  var onSuccess = Applab.handleReadSharedValue.bind(this, opts.onSuccess);
+Applab.getKeyValue = function(opts) {
+  var onSuccess = Applab.handleReadValue.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
-  AppStorage.readSharedValue(opts.key, onSuccess, onError);
+  AppStorage.getKeyValue(opts.key, onSuccess, onError);
 };
 
-Applab.handleReadSharedValue = function(successCallback, value) {
+Applab.handleReadValue = function(successCallback, value) {
   if (successCallback) {
     Applab.eventQueue.push({
       'fn': successCallback,
@@ -2166,13 +2187,13 @@ Applab.handleReadSharedValue = function(successCallback, value) {
   }
 };
 
-Applab.writeSharedValue = function(opts) {
-  var onSuccess = Applab.handleWriteSharedValue.bind(this, opts.onSuccess);
+Applab.setKeyValue = function(opts) {
+  var onSuccess = Applab.handleSetKeyValue.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
-  AppStorage.writeSharedValue(opts.key, opts.value, onSuccess, onError);
+  AppStorage.setKeyValue(opts.key, opts.value, onSuccess, onError);
 };
 
-Applab.handleWriteSharedValue = function(successCallback) {
+Applab.handleSetKeyValue = function(successCallback) {
   if (successCallback) {
     Applab.eventQueue.push({
       'fn': successCallback,
@@ -2181,13 +2202,13 @@ Applab.handleWriteSharedValue = function(successCallback) {
   }
 };
 
-Applab.readSharedRecords = function (opts) {
-  var onSuccess = Applab.handleReadSharedRecords.bind(this, opts.onSuccess);
+Applab.readRecords = function (opts) {
+  var onSuccess = Applab.handleReadRecords.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
-  AppStorage.readSharedRecords(opts.searchParams, onSuccess, onError);
+  AppStorage.readRecords(opts.table, opts.searchParams, onSuccess, onError);
 };
 
-Applab.handleReadSharedRecords = function(successCallback, records) {
+Applab.handleReadRecords = function(successCallback, records) {
   if (successCallback) {
     Applab.eventQueue.push({
       'fn': successCallback,
@@ -2196,13 +2217,13 @@ Applab.handleReadSharedRecords = function(successCallback, records) {
   }
 };
 
-Applab.updateSharedRecord = function (opts) {
-  var onSuccess = Applab.handleUpdateSharedRecord.bind(this, opts.onSuccess);
+Applab.updateRecord = function (opts) {
+  var onSuccess = Applab.handleUpdateRecord.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
-  AppStorage.updateSharedRecord(opts.record, onSuccess, onError);
+  AppStorage.updateRecord(opts.table, opts.record, onSuccess, onError);
 };
 
-Applab.handleUpdateSharedRecord = function(successCallback) {
+Applab.handleUpdateRecord = function(successCallback) {
   if (successCallback) {
     Applab.eventQueue.push({
       'fn': successCallback,
@@ -2211,13 +2232,13 @@ Applab.handleUpdateSharedRecord = function(successCallback) {
   }
 };
 
-Applab.deleteSharedRecord = function (opts) {
-  var onSuccess = Applab.handleDeleteSharedRecord.bind(this, opts.onSuccess);
+Applab.deleteRecord = function (opts) {
+  var onSuccess = Applab.handleDeleteRecord.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
-  AppStorage.deleteSharedRecord(opts.record, onSuccess, onError);
+  AppStorage.deleteRecord(opts.table, opts.record, onSuccess, onError);
 };
 
-Applab.handleDeleteSharedRecord = function(successCallback) {
+Applab.handleDeleteRecord = function(successCallback) {
   if (successCallback) {
     Applab.eventQueue.push({
       'fn': successCallback,
@@ -2722,23 +2743,24 @@ return buf.join('');
 },{"../../locale/current/applab":177,"../../locale/current/common":180,"ejs":196}],9:[function(require,module,exports){
 module.exports.blocks = [
   {'func': 'onEvent', 'title': 'Execute code in response to an event for the specified element. Additional parameters are passed to the callback function.', 'category': 'UI controls', 'params': ["'id'", "'click'", "function(event) {\n  \n}"] },
-  {'func': 'createButton', 'title': 'Create a button and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "'text'"] },
-  {'func': 'createTextInput', 'title': 'Create a text input and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "'text'"] },
-  {'func': 'createTextLabel', 'title': 'Create a text label, assign it an element id, and bind it to an associated element', 'category': 'UI controls', 'params': ["'id'", "'text'", "'forId'"] },
-  {'func': 'createDropdown', 'title': 'Create a dropdown, assign it an element id, and populate it with a list of items', 'category': 'UI controls', 'params': ["'id'", "'option1'", "'etc'"] },
+  {'func': 'button', 'title': 'Create a button and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "'text'"] },
+  {'func': 'textInput', 'title': 'Create a text input and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "'text'"] },
+  {'func': 'textLabel', 'title': 'Create a text label, assign it an element id, and bind it to an associated element', 'category': 'UI controls', 'params': ["'id'", "'text'", "'forId'"] },
+  {'func': 'dropdown', 'title': 'Create a dropdown, assign it an element id, and populate it with a list of items', 'category': 'UI controls', 'params': ["'id'", "'option1'", "'etc'"] },
   {'func': 'getText', 'title': 'Get the text from the specified element', 'category': 'UI controls', 'params': ["'id'"], 'type': 'value' },
   {'func': 'setText', 'title': 'Set the text for the specified element', 'category': 'UI controls', 'params': ["'id'", "'text'"] },
-  {'func': 'createCheckbox', 'title': 'Create a checkbox and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "false"] },
-  {'func': 'createRadio', 'title': 'Create a radio button and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "false", "'group'"] },
+  {'func': 'checkbox', 'title': 'Create a checkbox and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "false"] },
+  {'func': 'radioButton', 'title': 'Create a radio button and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "false", "'group'"] },
   {'func': 'getChecked', 'title': 'Get the state of a checkbox or radio button', 'category': 'UI controls', 'params': ["'id'"], 'type': 'value' },
   {'func': 'setChecked', 'title': 'Set the state of a checkbox or radio button', 'category': 'UI controls', 'params': ["'id'", "true"] },
-  {'func': 'createImage', 'title': 'Create an image and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "'http://code.org/images/logo.png'"] },
+  {'func': 'image', 'title': 'Create an image and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "'http://code.org/images/logo.png'"] },
   {'func': 'getImageURL', 'title': 'Get the URL associated with an image or image upload button', 'category': 'UI controls', 'params': ["'id'"], 'type': 'value' },
   {'func': 'setImageURL', 'title': 'Set the URL for the specified image element id', 'category': 'UI controls', 'params': ["'id'", "'http://code.org/images/logo.png'"] },
   {'func': 'playSound', 'title': 'Play the MP3, OGG, or WAV sound file from the specified URL', 'category': 'UI controls', 'params': ["'http://soundbible.com/mp3/neck_snap-Vladimir-719669812.mp3'"] },
+  {'func': 'showElement', 'title': 'Show the element with the specified id', 'category': 'UI controls', 'params': ["'id'"] },
+  {'func': 'hideElement', 'title': 'Hide the element with the specified id', 'category': 'UI controls', 'params': ["'id'"] },
   {'func': 'deleteElement', 'title': 'Delete the element with the specified id', 'category': 'UI controls', 'params': ["'id'"] },
   {'func': 'setPosition', 'title': 'Position an element with x, y, width, and height coordinates', 'category': 'UI controls', 'params': ["'id'", "0", "0", "100", "100"] },
-  {'func': 'createImageUploadButton', 'title': 'Create an image upload button and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "'text'"] },
 
   {'func': 'createCanvas', 'title': 'Create a canvas with the specified id, and optionally set width and height dimensions', 'category': 'Canvas', 'params': ["'id'", "320", "480"] },
   {'func': 'setActiveCanvas', 'title': 'Set the canvas id for subsequent canvas commands (only needed when there are multiple canvas elements)', 'category': 'Canvas', 'params': ["'id'"] },
@@ -2754,12 +2776,12 @@ module.exports.blocks = [
   {'func': 'clearCanvas', 'title': 'Clear all data on the active canvas', 'category': 'Canvas', },
 
   {'func': 'startWebRequest', 'title': 'Request data from the internet and execute code when the request is complete', 'category': 'Data', 'params': ["'http://api.openweathermap.org/data/2.5/weather?q=London,uk'", "function(status, type, content) {\n  \n}"] },
-  {'func': 'writeSharedValue', 'title': 'Saves a value associated with the key, shared with everyone who uses the app.', 'category': 'Data', 'params': ["'key'", "'value'", "function () {\n  \n}"] },
-  {'func': 'readSharedValue', 'title': 'Reads the value associated with the key, shared with everyone who uses the app.', 'category': 'Data', 'params': ["'key'", "function (value) {\n  \n}"] },
-  {'func': 'createSharedRecord', 'title': 'createSharedRecord(record, onSuccess, onError); Creates a new shared record in table record.tableName.', 'category': 'Data', 'params': ["{tableName:'abc', name:'Alice', age:7, male:false}", "function() {\n  \n}"] },
-  {'func': 'readSharedRecords', 'title': 'readSharedRecords(searchParams, onSuccess, onError); Reads all shared records whose properties match those on the searchParams object.', 'category': 'Data', 'params': ["{tableName: 'abc'}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    container('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
-  {'func': 'updateSharedRecord', 'title': 'updateSharedRecord(record, onSuccess, onFailure); Updates a shared record, identified by record.tableName and record.id.', 'category': 'Data', 'params': ["{tableName:'abc', id: 1, name:'Bob', age:8, male:true}", "function() {\n  \n}"] },
-  {'func': 'deleteSharedRecord', 'title': 'deleteSharedRecord(record, onSuccess, onFailure)\nDeletes a shared record, identified by record.tableName and record.id.', 'category': 'Data', 'params': ["{tableName:'abc', id: 1}", "function() {\n  \n}"] },
+  {'func': 'setKeyValue', 'title': 'Saves the value associated with the key to the remote data store.', 'category': 'Data', 'params': ["'key'", "'value'", "function () {\n  \n}"] },
+  {'func': 'getKeyValue', 'title': 'Reads the value associated with the key from the remote data store.', 'category': 'Data', 'params': ["'key'", "function (value) {\n  \n}"] },
+  {'func': 'createRecord', 'title': 'createRecord(table, record, onSuccess); Creates a new record in the specified table.', 'category': 'Data', 'params': ["'mytable'", "{name:'Alice'}", "function() {\n  \n}"] },
+  {'func': 'readRecords', 'title': 'readRecords(table, searchParams, onSuccess); Reads all records whose properties match those on the searchParams object.', 'category': 'Data', 'params': ["'mytable'", "{id:1}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    createTextLabel('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
+  {'func': 'updateRecord', 'title': 'updateRecord(table, record, onSuccess); Updates a record, identified by record.id.', 'category': 'Data', 'params': ["'mytable'", "{id:1, name:'Bob'}", "function() {\n  \n}"] },
+  {'func': 'deleteRecord', 'title': 'deleteRecord(table, record, onSuccess); Deletes a record, identified by record.id.', 'category': 'Data', 'params': ["'mytable'", "{id:1}", "function() {\n  \n}"] },
 
   {'func': 'moveForward', 'title': 'Move the turtle forward the specified distance', 'category': 'Turtle', 'params': ["25"] },
   {'func': 'moveBackward', 'title': 'Move the turtle backward the specified distance', 'category': 'Turtle', 'params': ["25"] },
@@ -2777,6 +2799,7 @@ module.exports.blocks = [
   {'func': 'setTimeout', 'title': 'Set a timer and execute code when that number of milliseconds has elapsed', 'category': 'Control', 'params': ["function() {\n  \n}", "1000"] },
   {'func': 'clearTimeout', 'title': 'Clear an existing timer by passing in the value returned from setTimeout()', 'category': 'Control', 'params': ["0"] },
 
+  {'func': 'imageUploadButton', 'title': 'Create an image upload button and assign it an element id', 'category': 'Advanced', 'params': ["'id'", "'text'"] },
   {'func': 'container', 'title': 'Create a division container with the specified element id, and optionally set its inner HTML', 'category': 'Advanced', 'params': ["'id'", "'html'"] },
   {'func': 'innerHTML', 'title': 'Set the inner HTML for the element with the specified id', 'category': 'Advanced', 'params': ["'id'", "'html'"] },
   {'func': 'setParent', 'title': 'Set an element to become a child of a parent element', 'category': 'Advanced', 'params': ["'id'", "'parentId'"] },
@@ -2927,15 +2950,15 @@ AppStorage.tempEncryptedAppId =
        value retrieved from storage.
  * @param {function(string)} onError Function to call on error with error msg.
  */
-AppStorage.readSharedValue = function(key, onSuccess, onError) {
+AppStorage.getKeyValue = function(key, onSuccess, onError) {
   var req = new XMLHttpRequest();
-  req.onreadystatechange = handleReadSharedValue.bind(req, onSuccess, onError);
+  req.onreadystatechange = handleGetKeyValue.bind(req, onSuccess, onError);
   var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + '/shared-properties/' + key;
   req.open('GET', url, true);
   req.send();
 };
 
-var handleReadSharedValue = function(onSuccess, onError) {
+var handleGetKeyValue = function(onSuccess, onError) {
   if (this.readyState !== 4) {
     return;
   }
@@ -2954,16 +2977,16 @@ var handleReadSharedValue = function(onSuccess, onError) {
  * @param {function()} onSuccess Function to call on success.
  * @param {function(string)} onError Function to call on error with error msg.
  */
-AppStorage.writeSharedValue = function(key, value, onSuccess, onError) {
+AppStorage.setKeyValue = function(key, value, onSuccess, onError) {
   var req = new XMLHttpRequest();
-  req.onreadystatechange = handleWriteSharedValue.bind(req, onSuccess, onError);
+  req.onreadystatechange = handleSetKeyValue.bind(req, onSuccess, onError);
   var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + '/shared-properties/' + key;
   req.open('POST', url, true);
   req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
   req.send(JSON.stringify(value));
 };
 
-var handleWriteSharedValue = function(onSuccess, onError) {
+var handleSetKeyValue = function(onSuccess, onError) {
   if (this.readyState !== 4) {
     return;
   }
@@ -2976,17 +2999,16 @@ var handleWriteSharedValue = function(onSuccess, onError) {
 
 /**
  * Creates a new record in the specified table, accessible to all users.
- * @param {string} record.tableName The name of the table to read from.
+ * @param {string} tableName The name of the table to read from.
  * @param {Object} record Object containing other properties to store
  *     on the record.
  * @param {function(Object)} onSuccess Function to call with the new record.
  * @param {function(string)} onError Function to call with an error message
  *    in case of failure.
  */
-AppStorage.createSharedRecord = function(record, onSuccess, onError) {
-  var tableName = record.tableName;
+AppStorage.createRecord = function(tableName, record, onSuccess, onError) {
   if (!tableName) {
-    onError('error creating record: missing required property "tableName"');
+    onError('error creating record: missing required parameter "tableName"');
     return;
   }
   if (record.id) {
@@ -2994,14 +3016,14 @@ AppStorage.createSharedRecord = function(record, onSuccess, onError) {
     return;
   }
   var req = new XMLHttpRequest();
-  req.onreadystatechange = handleCreateSharedRecord.bind(req, onSuccess, onError);
+  req.onreadystatechange = handleCreateRecord.bind(req, onSuccess, onError);
   var url = "/v3/apps/" + AppStorage.tempEncryptedAppId + "/shared-tables/" + tableName;
   req.open('POST', url, true);
   req.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
   req.send(JSON.stringify(record));
 };
 
-var handleCreateSharedRecord = function(onSuccess, onError) {
+var handleCreateRecord = function(onSuccess, onError) {
   if (this.readyState !== 4) {
     return;
   }
@@ -3016,8 +3038,8 @@ var handleCreateSharedRecord = function(onSuccess, onError) {
 /**
  * Reads records which match the searchParams specified by the user,
  * and passes them to onSuccess.
- * @param {string} searchParams.tableName The name of the table to read from.
- * @param {string} searchParams.recordId Optional id of record to read.
+ * @param {string} tableName The name of the table to read from.
+ * @param {string} searchParams.id Optional id of record to read.
  * @param {Object} searchParams Other search criteria. Only records
  *     whose contents match all criteria will be returned.
  * @param {function(Array)} onSuccess Function to call with an array of record
@@ -3025,14 +3047,13 @@ var handleCreateSharedRecord = function(onSuccess, onError) {
  * @param {function(string)} onError Function to call with an error message
  *     in case of failure.
  */
-AppStorage.readSharedRecords = function(searchParams, onSuccess, onError) {
-  var tableName = searchParams.tableName;
+AppStorage.readRecords = function(tableName, searchParams, onSuccess, onError) {
   if (!tableName) {
-    onError('error reading records: missing required property "tableName"');
+    onError('error reading records: missing required parameter "tableName"');
     return;
   }
   var req = new XMLHttpRequest();
-  req.onreadystatechange = handleReadSharedRecords.bind(req, tableName,
+  req.onreadystatechange = handleReadRecords.bind(req,
       searchParams, onSuccess, onError);
   var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + "/shared-tables/" + tableName;
   req.open('GET', url, true);
@@ -3040,7 +3061,7 @@ AppStorage.readSharedRecords = function(searchParams, onSuccess, onError) {
   
 };
 
-var handleReadSharedRecords = function(tableName, searchParams, onSuccess, onError) {
+var handleReadRecords = function(searchParams, onSuccess, onError) {
   if (this.readyState !== 4) {
     return;
   }
@@ -3062,7 +3083,7 @@ var handleReadSharedRecords = function(tableName, searchParams, onSuccess, onErr
 
 /**
  * Updates a record in a table, accessible to all users.
- * @param {string} record.tableName The name of the table to update.
+ * @param {string} tableName The name of the table to update.
  * @param {string} record.id The id of the row to update.
  * @param {Object} record Object containing other properites to update
  *     on the record.
@@ -3070,10 +3091,9 @@ var handleReadSharedRecords = function(tableName, searchParams, onSuccess, onErr
  * @param {function(string)} onError Function to call with an error message
  *    in case of failure.
  */
-AppStorage.updateSharedRecord = function(record, onSuccess, onError) {
-  var tableName = record.tableName;
+AppStorage.updateRecord = function(tableName, record, onSuccess, onError) {
   if (!tableName) {
-    onError('error updating record: missing required property "tableName"');
+    onError('error updating record: missing required parameter "tableName"');
     return;
   }
   var recordId = record.id;
@@ -3082,7 +3102,7 @@ AppStorage.updateSharedRecord = function(record, onSuccess, onError) {
     return;
   }
   var req = new XMLHttpRequest();
-  req.onreadystatechange = handleUpdateSharedRecord.bind(req, record, onSuccess, onError);
+  req.onreadystatechange = handleUpdateRecord.bind(req, tableName, record, onSuccess, onError);
   var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + '/shared-tables/' +
       tableName + '/' + recordId;
   req.open('POST', url, true);
@@ -3090,13 +3110,13 @@ AppStorage.updateSharedRecord = function(record, onSuccess, onError) {
   req.send(JSON.stringify(record));
 };
 
-var handleUpdateSharedRecord = function(record, onSuccess, onError) {
+var handleUpdateRecord = function(tableName, record, onSuccess, onError) {
   if (this.readyState !== 4) {
     return;
   }
   if (this.status === 404) {
     onError('error updating record: could not find record id ' + record.id +
-            ' in table ' + record.tableName);
+            ' in table ' + tableName);
     return;
   }
   if (this.status < 200 || this.status >= 300) {
@@ -3108,17 +3128,16 @@ var handleUpdateSharedRecord = function(record, onSuccess, onError) {
 
 /**
  * Deletes a record from the specified table.
- * @param {string} record.tableName The name of the table to delete from.
+ * @param {string} tableName The name of the table to delete from.
  * @param {string} record.id The id of the record to delete.
  * @param {Object} record Object whose other properties are ignored.
  * @param {function()} onSuccess Function to call on success.
  * @param {function(string)} onError Function to call with an error message
  *    in case of failure.
  */
-AppStorage.deleteSharedRecord = function(record, onSuccess, onError) {
-  var tableName = record.tableName;
+AppStorage.deleteRecord = function(tableName, record, onSuccess, onError) {
   if (!tableName) {
-    onError('error deleting record: missing required property "tableName"');
+    onError('error deleting record: missing required parameter "tableName"');
     return;
   }
   var recordId = record.id;
@@ -3127,7 +3146,7 @@ AppStorage.deleteSharedRecord = function(record, onSuccess, onError) {
     return;
   }
   var req = new XMLHttpRequest();
-  req.onreadystatechange = handleDeleteSharedRecord.bind(req, record, onSuccess, onError);
+  req.onreadystatechange = handleDeleteRecord.bind(req, tableName, record, onSuccess, onError);
   var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + '/shared-tables/' +
       tableName + '/' + recordId + '/delete';
   req.open('POST', url, true);
@@ -3135,7 +3154,7 @@ AppStorage.deleteSharedRecord = function(record, onSuccess, onError) {
   req.send(JSON.stringify(record));
 };
 
-var handleDeleteSharedRecord = function(record, onSuccess, onError) {
+var handleDeleteRecord = function(tableName, record, onSuccess, onError) {
   if (this.readyState !== 4) {
     return;
   }
@@ -3180,16 +3199,28 @@ exports.deleteElement = function (blockId, elementId) {
                           {'elementId': elementId });
 };
 
-exports.createButton = function (blockId, elementId, text) {
+exports.showElement = function (blockId, elementId) {
   return Applab.executeCmd(blockId,
-                          'createButton',
+                          'showElement',
+                          {'elementId': elementId });
+};
+
+exports.hideElement = function (blockId, elementId) {
+  return Applab.executeCmd(blockId,
+                          'hideElement',
+                          {'elementId': elementId });
+};
+
+exports.button = function (blockId, elementId, text) {
+  return Applab.executeCmd(blockId,
+                          'button',
                           {'elementId': elementId,
                            'text': text });
 };
 
-exports.createImage = function (blockId, elementId, src) {
+exports.image = function (blockId, elementId, src) {
   return Applab.executeCmd(blockId,
-                          'createImage',
+                          'image',
                           {'elementId': elementId,
                            'src': src });
 };
@@ -3293,31 +3324,31 @@ exports.putImageData = function (blockId, imageData, x, y) {
                            'y': y });
 };
 
-exports.createTextInput = function (blockId, elementId, text) {
+exports.textInput = function (blockId, elementId, text) {
   return Applab.executeCmd(blockId,
-                          'createTextInput',
+                          'textInput',
                           {'elementId': elementId,
                            'text': text });
 };
 
-exports.createTextLabel = function (blockId, elementId, text, forId) {
+exports.textLabel = function (blockId, elementId, text, forId) {
   return Applab.executeCmd(blockId,
-                          'createTextLabel',
+                          'textLabel',
                           {'elementId': elementId,
                            'text': text,
                            'forId': forId });
 };
 
-exports.createCheckbox = function (blockId, elementId, checked) {
+exports.checkbox = function (blockId, elementId, checked) {
   return Applab.executeCmd(blockId,
-                          'createCheckbox',
+                          'checkbox',
                           {'elementId': elementId,
                            'checked': checked });
 };
 
-exports.createRadio = function (blockId, elementId, checked, name) {
+exports.radioButton = function (blockId, elementId, checked, name) {
   return Applab.executeCmd(blockId,
-                          'createRadio',
+                          'radioButton',
                           {'elementId': elementId,
                            'checked': checked,
                            'name': name });
@@ -3336,10 +3367,10 @@ exports.setChecked = function (blockId, elementId, checked) {
                            'checked': checked });
 };
 
-exports.createDropdown = function (blockId, elementId) {
+exports.dropdown = function (blockId, elementId) {
   var optionsArray = Array.prototype.slice.call(arguments, 2);
   return Applab.executeCmd(blockId,
-                          'createDropdown',
+                          'dropdown',
                           {'elementId': elementId,
                            'optionsArray': optionsArray });
 };
@@ -3385,9 +3416,9 @@ exports.setImageURL = function (blockId, elementId, src) {
                            'src': src });
 };
 
-exports.createImageUploadButton = function (blockId, elementId, text) {
+exports.imageUploadButton = function (blockId, elementId, text) {
   return Applab.executeCmd(blockId,
-                           'createImageUploadButton',
+                           'imageUploadButton',
                            {'elementId': elementId,
                             'text': text });
 };
@@ -3442,51 +3473,55 @@ exports.playSound = function (blockId, url) {
                           {'url': url});
 };
 
-exports.readSharedValue = function(blockId, key, onSuccess, onError) {
+exports.getKeyValue = function(blockId, key, onSuccess, onError) {
   return Applab.executeCmd(blockId,
-                           'readSharedValue',
+                           'getKeyValue',
                            {'key':key,
                             'onSuccess': onSuccess,
                             'onError': onError});
 };
 
-exports.writeSharedValue = function(blockId, key, value, onSuccess, onError) {
+exports.setKeyValue = function(blockId, key, value, onSuccess, onError) {
   return Applab.executeCmd(blockId,
-                           'writeSharedValue',
+                           'setKeyValue',
                            {'key':key,
                             'value': value,
                             'onSuccess': onSuccess,
                             'onError': onError});
 };
 
-exports.createSharedRecord = function (blockId, record, onSuccess, onError) {
+exports.createRecord = function (blockId, table, record, onSuccess, onError) {
   return Applab.executeCmd(blockId,
-                          'createSharedRecord',
-                          {'record': record,
+                          'createRecord',
+                          {'table': table,
+                           'record': record,
                            'onSuccess': onSuccess,
                            'onError': onError});
 };
 
-exports.readSharedRecords = function (blockId, searchParams, onSuccess, onError) {
+exports.readRecords = function (blockId, table, searchParams, onSuccess, onError) {
   return Applab.executeCmd(blockId,
-                          'readSharedRecords',
-                          {'searchParams': searchParams,
+                          'readRecords',
+                          {'table': table,
+                           'searchParams': searchParams,
                            'onSuccess': onSuccess,
                            'onError': onError});
 };
 
-exports.updateSharedRecord = function (blockId, record, onSuccess, onError) {
+exports.updateRecord = function (blockId, table, record, onSuccess, onError) {
   return Applab.executeCmd(blockId,
-                          'updateSharedRecord',
-                          {'record': record,
+                          'updateRecord',
+                          {'table': table,
+                           'record': record,
                            'onSuccess': onSuccess,
                            'onError': onError});
 };
 
-exports.deleteSharedRecord = function (blockId, record, onSuccess, onError) {
+exports.deleteRecord = function (blockId, table, record, onSuccess, onError) {
   return Applab.executeCmd(blockId,
-                          'deleteSharedRecord',
-                          {'record': record,
+                          'deleteRecord',
+                          {'table': table,
+                           'record': record,
                            'onSuccess': onSuccess,
                            'onError': onError});
 };
