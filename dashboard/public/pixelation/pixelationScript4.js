@@ -9,14 +9,18 @@ var MAX_SIZE = 400;
 var pixel_format = document.querySelector('#pixel_format');
 var pixel_data = document.querySelector("#pixel_data");
 var canvas = document.querySelector("#canvas");
+var ctx = canvas.getContext("2d");
+
+function isHex() {
+  return "hex" == document.querySelector('input[name="binHex"]:checked').value;
+}
 
 function drawGraph() {
-  var ctx = canvas.getContext("2d");
   ctx.fillStyle = "#000";
   ctx.fillRect(0, 0, MAX_SIZE, MAX_SIZE);
 
   var binCode = "";
-  var hexMode = document.getElementsByName("binHex")[1].checked;
+  var hexMode = isHex();
 
   // If the hex radio button is currently selected.
   if (hexMode) {
@@ -49,6 +53,7 @@ function drawGraph() {
   var imgBitString = binCode.substring(24, binCode.length);
   var colorNums = bitsToColors(imgBitString, bitsPerPix);
 
+  // Auto-size pixel borders and edge offsets.
   var sqSize = MAX_SIZE / Math.max(w, h);
   var fillSize = sqSize * 0.95;
   var offset = (sqSize - fillSize) / 2;
@@ -57,6 +62,7 @@ function drawGraph() {
     offset = 0;
   }
 
+  // Draw image.
   var left = (MAX_SIZE - w * sqSize) / 2;
   var top = (MAX_SIZE - h * sqSize) / 2;
   for (var y = 0; y < h; y++) {
@@ -66,9 +72,10 @@ function drawGraph() {
     }
   }
 
+  // Update pixel format indicator.
   var bitsPerPixel = parseInt(document.getElementById("bitsPerPixel").value);
   if (hexMode && bitsPerPixel % 4 !== 0) {
-    pixel_format.innerHTML = '<span class="unknown">' + pad('', Math.ceil(bitsPerPixel / 4), '?') + '</span>';
+    pixel_format.innerHTML = '<span class="unknown">' + pad('', Math.ceil(bitsPerPixel / 4), '-') + '</span>';
   } else {
     if (bitsPerPixel % 3 === 0) {
       var str;
@@ -114,65 +121,56 @@ function unformatBits() {
 function formatBits(bitString, chunkSize, chunksPerLine) {
 
   var justBits = bitString.replace(/[ \n]/g, "");
-  console.debug("BEFORE: " + justBits);
-
-  var isHex = "hex" == document.querySelector('input[name="binHex"]:checked').value;
-
   var formattedBits = "";
+
   // First break out first 3 bytes (w, h, bpp).
-  if (isHex) {
-    formattedBits += justBits.substring(0, 2) + "\n"; //width
-    formattedBits += justBits.substring(2, 4) + "\n"; //height
-    formattedBits += justBits.substring(4, 6) + "\n"; //bpp
+  if (isHex()) {
+    formattedBits += justBits.substr(0, 2) + "\n"; //width
+    formattedBits += justBits.substr(2, 2) + "\n"; //height
+    formattedBits += justBits.substr(4, 2) + "\n"; //bpp
     // Remove first 24 bits from justBits.
-    justBits = justBits.substring(6);
+    justBits = justBits.substr(6);
   } else {
     // Binary.
-    formattedBits += justBits.substring(0, 4) + " " + justBits.substring(4, 8) + "\n";
-    formattedBits += justBits.substring(8, 12) + " " + justBits.substring(12, 16) + "\n";
-    formattedBits += justBits.substring(16, 20) + " " + justBits.substring(20, 24) + "\n";
+    formattedBits += justBits.substr(0, 4) + " " + justBits.substr(4, 4) + "\n";
+    formattedBits += justBits.substr(8, 4) + " " + justBits.substr(12, 4) + "\n";
+    formattedBits += justBits.substr(16, 4) + " " + justBits.substr(20, 4) + "\n";
 
     // Remove first 24 bits from justBits.
-    justBits = justBits.substring(24);
+    justBits = justBits.substr(24);
   }
 
-  if (isHex && chunkSize % 4 != 0) {
-    // If in hex mode can't break stuff up that's not multiple of 4 bits.
-    formattedBits += justBits;
-    return formattedBits;
-  }
-
-  if (isHex) {
-    // Every char is 4 bits in hex.
+  if (isHex()) {
+    if (chunkSize % 4 !== 0) {
+      // If in hex mode can't break stuff up that's not multiple of 4 bits.
+      formattedBits += justBits;
+      return formattedBits;
+    }
+    // Else every char is 4 bits in hex.
     chunkSize = chunkSize / 4;
   }
 
-  var lineLengthCount = 0;
-  var charsPerLine = chunksPerLine * (chunkSize + 1);
-
-  while (justBits.length > 0) {
-    formattedBits += justBits.substring(0, chunkSize) + " ";
-    lineLengthCount += (chunkSize + 1);
-    justBits = justBits.substring(chunkSize);
-
-    // Place line break based on width chosen by user, where line width = (chunkSize + 1) * width.
-    if (lineLengthCount == charsPerLine) {
-      formattedBits += "\n";
-      lineLengthCount = 0;
+  // Add spaces to main pixel data section.
+  for (var i = 0, lineChunkCount = 1; i < justBits.length; i += chunkSize, lineChunkCount++) {
+    formattedBits += justBits.substr(i, chunkSize) + " ";
+    if (lineChunkCount === chunksPerLine) {
+      formattedBits += '\n';
+      lineChunkCount = 0;
     }
   }
 
-  console.debug("AFTER: " + formattedBits);
   return formattedBits;
 }
 
 function hexToBin() {
   var allHexDigits = pixel_data.value.replace(/[^0-9A-F]/gi, "");
-  console.debug("about to convert HEX2BIN and write to text area");
   pixel_data.value = hexToBinPvt(allHexDigits);
   formatBitDisplay();
 }
 
+/**
+ * Add `prefix` to the beginning of the given string until it reaches the given length.
+ */
 function pad(str, len, prefix) {
 
   while (str.length < len) {
@@ -193,6 +191,7 @@ function hexToBinPvt(allHexDigits) {
 
 function binToHexPvt(allBits) {
 
+  // Ensure bit string is half-byte aligned
   while (allBits.length % 4 !== 0) {
     allBits += '0';
   }
@@ -207,7 +206,6 @@ function binToHexPvt(allBits) {
 function binToHex() {
 
   var allBits = pixel_data.value.replace(/[^01]/gi, "");
-  console.debug("about to convert BIN2HEX and write to text area");
 
   pixel_data.value = binToHexPvt(allBits);
   formatBitDisplay();
@@ -221,31 +219,24 @@ function binToHex() {
 function getColorVal2(binVal, bitsPerPixel) {
 
   // Assume binVal is size of bits per pixel.
-  console.debug("bitsPerPixel = " + bitsPerPixel);
-
   var numColors = Math.pow(2, bitsPerPixel);
   var bitsPerColor = parseInt(bitsPerPixel / 3);
 
   if (bitsPerColor * 3 != bitsPerPixel) {
+    // Greyscale
     var val = (binToInt(binVal) / (numColors - 1)) * 255;
     val = parseInt(val);
-    console.debug("Grayscale! -- " + val);
     return "rgb(" + val + ", " + val + ", " + val + ")";
   } else {
-    console.debug("bitsPerColor = " + bitsPerColor);
     var maxRGBVal = Math.max(Math.pow(2, bitsPerColor) - 1, 1);
 
     var R = binVal.substring(0, bitsPerColor);
     var G = binVal.substring(bitsPerColor, bitsPerColor * 2);
     var B = binVal.substring(bitsPerColor * 2, bitsPerColor * 3);
 
-    console.debug("rgb=" + R + "," + G + "," + B);
-
     var Rval = parseInt((binToInt(R) / (maxRGBVal)) * 255);
     var Gval = parseInt((binToInt(G) / (maxRGBVal)) * 255);
     var Bval = parseInt((binToInt(B) / (maxRGBVal)) * 255);
-
-    console.debug("rgbVals=" + Rval + "," + Gval + "," + Bval);
 
     return "rgb(" + Rval + "," + Gval + "," + Bval + ")";
   }
@@ -320,9 +311,8 @@ function updateBinaryDataToMatchSliders() {
 
 
   var justBits = pixel_data.value.replace(/[ \n]/g, "");
-  var isHex = ("hex" == document.querySelector('input[name="binHex"]:checked').value);
 
-  if (isHex) {
+  if (isHex()) {
     justBits = hexToBinPvt(justBits);
   }
 
@@ -330,7 +320,7 @@ function updateBinaryDataToMatchSliders() {
   if (justBits.length > 24) {
     newBits += justBits.substring(24);
   }
-  if (isHex) {
+  if (isHex()) {
     newBits = binToHexPvt(newBits);
   }
 
@@ -346,7 +336,6 @@ function updateBinaryDataToMatchSliders() {
  */
 function showPNG(canvasId) {
 
-  var canvas = document.getElementById(canvasId);
   var w = window.open(canvas.toDataURL(), canvasId,
       "width=" + canvas.width + ", height=" + canvas.height + ", left=100, menubar=0, titlebar=0, scrollbars=0");
   w.focus();
