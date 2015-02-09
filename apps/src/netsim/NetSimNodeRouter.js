@@ -44,7 +44,11 @@
 
 var superClass = require('./NetSimNode');
 var NetSimEntity = require('./NetSimEntity');
+var NetSimLogger = require('./NetSimLogger');
 var NetSimWire = require('./NetSimWire');
+var NetSimMessage = require('./NetSimMessage');
+
+var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
 
 /**
  * @type {number}
@@ -69,6 +73,9 @@ var NetSimNodeRouter = function (shard, routerRow) {
    * @private
    */
   this.simulateForSender_ = undefined;
+
+  // Subscribe to message table changes
+  this.shard_.messageTable.tableChangeEvent.register(this, this.onMessageTableChange_);
 };
 NetSimNodeRouter.prototype = Object.create(superClass.prototype);
 NetSimNodeRouter.prototype.constructor = NetSimNodeRouter;
@@ -299,5 +306,83 @@ NetSimNodeRouter.prototype.getAddressTable = function (onComplete) {
       address: 0
     });
     onComplete(addressTable);
+  });
+};
+
+
+/**
+ * When the message table changes, we might have a new message to handle.
+ * Check for and handle unhandled messages.
+ * @private
+ */
+NetSimNodeRouter.prototype.onMessageTableChange_ = function (rows) {
+
+  if (!this.simulateForSender_) {
+    // Not configured to handle anything yet; don't process messages.
+    return;
+  }
+
+  if (this.isProcessingMessages_) {
+    // We're already in this method, getting called recursively because
+    // we are making changes to the table.  Ignore this call.
+    return;
+  }
+
+  var self = this;
+  var messages = rows.map(function (row) {
+    return new NetSimMessage(self.shard_, row);
+  }).filter(function (message) {
+    return message.fromNodeID === self.simulateForSender_ &&
+        message.toNodeID === self.entityID;
+  });
+
+  // If any messages are for us, get our routing table and process messages.
+  if (messages.length > 0) {
+    this.isProcessingMessages_ = true;
+    this.getConnections(function (wires) {
+      messages.forEach(function (message) {
+        self.routeMessage_(message, wires);
+      });
+      self.isProcessingMessages_ = false;
+    });
+  }
+};
+
+NetSimNodeRouter.prototype.routeMessage_ = function (message, myWires) {
+  // Find a connection to route this message to.
+  var toAddress = message.payload.toAddress;
+  if (toAddress === undefined) {
+    //Malformed packet? Throw it away
+    logger.warn("Router encountered a malformed packet: " +
+    JSON.stringify(message.payload));
+    message.destroy();
+    return;
+  }
+
+  if (toAddress === 0) {
+    // Message was sent to me, the router.  It's arrived!  We're done with it.
+    logger.info("Router received: " + JSON.stringify(message.payload));
+    message.destroy();
+    return;
+  }
+
+  var destWires = myWires.filter(function (wire) {
+    return wire.localAddress === toAddress;
+  });
+  if (destWires.length === 0) {
+    // Destination address not in local network.
+    // Route message out of network (for now, throw it away)
+    logger.info("Message left network: " + JSON.stringify(message.payload));
+    message.destroy();
+    return;
+  }
+
+  // TODO: Handle bad state where more than one wire matches dest address?
+
+  var destWire = destWires[0];
+
+  // Create a new message with a new payload.
+  NetSimMessage.send(this.shard_, destWire.remoteNodeID, destWire.localNodeID, message.payload, function (success) {
+    logger.info("Message re-routed to node " + destWire.localAddress);
   });
 };

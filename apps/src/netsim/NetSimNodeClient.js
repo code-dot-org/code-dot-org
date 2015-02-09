@@ -38,6 +38,10 @@
 
 var superClass = require('./NetSimNode');
 var NetSimEntity = require('./NetSimEntity');
+var NetSimMessage = require('./NetSimMessage');
+var NetSimLogger = require('./NetSimLogger');
+
+var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
 
 /**
  * @param {!NetSimShard} shard
@@ -250,5 +254,22 @@ NetSimNodeClient.prototype.disconnectRemote = function (onComplete) {
     // Trigger an immediate router update so its connection count is correct.
     self.myRouter.update(onComplete);
     self.myRouter = null;
+  });
+};
+
+/**
+ * Put a message on our outgoing wire, to whatever we are connected to
+ * at the moment.
+ * @param payload
+ */
+NetSimNodeClient.prototype.sendMessage = function (payload) {
+  if (!this.myWire) {
+    return;
+  }
+
+  var localNodeID = this.myWire.localNodeID;
+  var remoteNodeID = this.myWire.remoteNodeID;
+  NetSimMessage.send(this.shard_, localNodeID, remoteNodeID, payload, function (success) {
+    logger.info('Local node sent message: ' + JSON.stringify(payload));
   });
 };

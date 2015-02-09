@@ -138,19 +138,19 @@ NetSimTable.prototype.fullCacheUpdate_ = function (allRows) {
   // Check for changes, if anything changed notify all observers on table.
   if (!_.isEqual(this.cache_, newCache)) {
     this.cache_ = newCache;
-    this.tableChangeEvent.notifyObservers();
+    this.tableChangeEvent.notifyObservers(this.arrayFromCache_());
   }
 };
 
 NetSimTable.prototype.addRowToCache_ = function (row) {
   this.cache_[row.id] = row;
-  this.tableChangeEvent.notifyObservers();
+  this.tableChangeEvent.notifyObservers(this.arrayFromCache_());
 };
 
 NetSimTable.prototype.removeRowFromCache_ = function (id) {
   if (this.cache_[id] !== undefined) {
     this.cache_[id] = undefined;
-    this.tableChangeEvent.notifyObservers();
+    this.tableChangeEvent.notifyObservers(this.arrayFromCache_());
   }
 };
 
@@ -158,8 +158,16 @@ NetSimTable.prototype.updateCacheRow_ = function (id, row) {
   var oldRow = this.cache_[id];
   if (!_.isEqual(oldRow, row)) {
     this.cache_[id] = row;
-    this.tableChangeEvent.notifyObservers();
+    this.tableChangeEvent.notifyObservers(this.arrayFromCache_());
   }
+};
+
+NetSimTable.prototype.arrayFromCache_ = function () {
+  var result = [];
+  for (var k in this.cache_) {
+    result.push(this.cache_[k]);
+  }
+  return result;
 };
 
 /**
