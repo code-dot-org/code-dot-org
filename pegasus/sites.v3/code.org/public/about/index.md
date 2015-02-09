@@ -29,7 +29,7 @@ Hour of Code has won the support of both [Republicans and Democrats](https://www
 
 | Code.org Goal | Accomplishment |
 |------|----------------|
-| Inspire students | Tens of millions of students have tried the [Hour of Code](/learn). |
+| Inspire students | Tens of millions of students have tried the [Hour of Code](/learn). 48% female. |
 | Create fantastic  courses | 99% of teachers recommend the Code.org [intro CS curriculum](http://learn.code.org) |
 | Reach classrooms | Our [intro courses](http://studio.code.org) are in 90,000 classrooms, reaching 4M students |
 | Improve diversity in CS | In our online courses, 43% of  students are girls and 37% are black or Hispanic. In our high school classrooms, [34% are girls, and 60% African American or Hispanic](http://codeorg.tumblr.com/post/98856300118/diversity) |
