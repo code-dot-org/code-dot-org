@@ -53,7 +53,7 @@
       <input type="radio" name="binHex" id="binHexRadio" value="hex" onchange="binToHex(); drawGraph();">
     </label>
   </div>
-  <textarea id="pixel_data" oninput="drawGraph();">
+  <textarea id="pixel_data" oninput="drawGraph();" autocapitalize="false" autocorrect="false" autocomplete="false" spellcheck="false">
     000001110000011100000011001010011100101110001010011100101110001010011100101110001010011100101110001010011100101110001010011100101110001010011100101110001010011100101110001
   </textarea>
   <button onClick="formatBitDisplay();" title="Click on this to lay bits out in a readable fashion">Format</button>
