@@ -1341,7 +1341,7 @@ Applab.moveForward = function (opts) {
 
 Applab.moveBackward = function (opts) {
   var distance = -25;
-  if (typeof opts.distance !== 'undefined') {
+  if (opts.distance !== 'undefined') {
     distance = -opts.distance;
   }
   Applab.moveForward({'distance': distance });
@@ -1433,6 +1433,7 @@ Applab.createCanvas = function (opts) {
 };
 
 Applab.setActiveCanvas = function (opts) {
+  var divApplab = document.getElementById('divApplab');
   var canvas = document.getElementById(opts.elementId);
   if (divApplab.contains(canvas)) {
     Applab.activeCanvas = canvas;
@@ -1507,7 +1508,10 @@ Applab.setFillColor = function (opts) {
 Applab.clearCanvas = function (opts) {
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.clearRect(0,
+                  0,
+                  Applab.activeCanvas.width,
+                  Applab.activeCanvas.height);
     return true;
   }
   return false;
