@@ -241,6 +241,7 @@ class Script < ActiveRecord::Base
         end
 #      end
 
+        # TODO use Level.find_by_key
       if row[:name].try(:start_with?, 'blockly:')
         row[:name], row[:game], row[:level_num] = row.delete(:name).split(':')
       end
