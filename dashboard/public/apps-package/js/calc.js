@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({35:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({36:[function(require,module,exports){
 var appMain = require('../appMain');
 window.Calc = require('./calc');
 var blocks = require('./blocks');
@@ -11,7 +11,7 @@ window.calcMain = function(options) {
   appMain(window.Calc, levels, options);
 };
 
-},{"../appMain":3,"../skins":126,"./blocks":28,"./calc":29,"./levels":34}],29:[function(require,module,exports){
+},{"../appMain":3,"../skins":135,"./blocks":29,"./calc":30,"./levels":35}],30:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -209,6 +209,11 @@ function displayGoal(targetSet) {
   if (!hasSingleFunction) {
     var sortedEquations = targetSet.sortedEquations();
     sortedEquations.forEach(function (equation) {
+      if (equation.isFunction() && sortedEquations.length > 1) {
+        throw new Error("Calc doesn't support goal with multiple functions or " +
+          "mixed functions/vars");
+      }
+
       tokenList = equation.expression.getTokenList(false);
       displayEquation('answerExpression', equation.signature, tokenList, nextRow++);
     });
@@ -238,11 +243,15 @@ studioApp.runButtonClick = function() {
  * called first.
  */
 Calc.resetButtonClick = function () {
-  appState.message = null;
-  appState.currentAnimationDepth = 0;
-  timeoutList.clearTimeouts();
-
   appState.animating = false;
+  appState.response = null;
+  appState.message = null;
+  appState.result = null;
+  appState.testResults = null;
+  appState.currentAnimationDepth = 0;
+  appState.failedInput = null;
+
+  timeoutList.clearTimeouts();
 
   clearSvgUserExpression();
 };
@@ -420,6 +429,11 @@ Calc.execute = function() {
 
   studioApp.report(reportData);
 
+  // Display feedback immediately
+  if (appState.testResults === TestResults.QUESTION_MARKS_IN_NUMBER_FIELD) {
+    return displayFeedback();
+  }
+
   appState.animating = true;
   if (appState.result === ResultType.SUCCESS &&
       !appState.userSet.hasVariablesOrFunctions() &&
@@ -479,7 +493,7 @@ function displayComplexUserExpressions () {
     tokenList = tokenList.concat(getTokenList(' = '),
       getTokenList(result, expectedResult));
   } else {
-    tokenList = getTokenList(computeEquation, appState.targetSet.computeEquation);
+    tokenList = getTokenList(computeEquation, appState.targetSet.computeEquation());
   }
 
   displayEquation('userExpression', null, tokenList, nextRow++, 'errorToken');
@@ -664,7 +678,9 @@ function displayFeedback() {
   level.extraTopBlocks = calcMsg.extraTopBlocks();
   var appDiv = null;
   // Show svg in feedback dialog
-  appDiv = cloneNodeWithoutIds('svgCalc');
+  if (appState.testResults !== TestResults.QUESTION_MARKS_IN_NUMBER_FIELD) {
+    appDiv = cloneNodeWithoutIds('svgCalc');
+  }
   var options = {
     app: 'Calc',
     skin: skin.id,
@@ -702,7 +718,7 @@ Calc.__testonly__ = {
 };
 /* end-test-block */
 
-},{"../../locale/current/calc":170,"../../locale/current/common":171,"../StudioApp":2,"../block_utils":16,"../dom":43,"../skins":126,"../templates/page.html":146,"../timeoutList":152,"../utils":166,"./api":27,"./controls.html":30,"./equationSet":31,"./expressionNode":32,"./inputIterator":33,"./levels":34,"./visualization.html":36}],36:[function(require,module,exports){
+},{"../../locale/current/calc":179,"../../locale/current/common":180,"../StudioApp":2,"../block_utils":17,"../dom":44,"../skins":135,"../templates/page.html":155,"../timeoutList":161,"../utils":175,"./api":28,"./controls.html":31,"./equationSet":32,"./expressionNode":33,"./inputIterator":34,"./levels":35,"./visualization.html":37}],37:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -722,7 +738,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/calc":170,"ejs":187}],34:[function(require,module,exports){
+},{"../../locale/current/calc":179,"ejs":196}],35:[function(require,module,exports){
 var msg = require('../../locale/current/calc');
 var blockUtils = require('../block_utils');
 
@@ -761,7 +777,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/current/calc":170,"../block_utils":16}],33:[function(require,module,exports){
+},{"../../locale/current/calc":179,"../block_utils":17}],34:[function(require,module,exports){
 /**
  * Given a set of values (i.e. [1,2,3], and a number of parameters, generates
  * all possible combinations of values.
@@ -815,7 +831,7 @@ InputIterator.prototype.remaining = function () {
   return this.remaining_;
 };
 
-},{}],31:[function(require,module,exports){
+},{}],32:[function(require,module,exports){
 var _ = require('../utils').getLodash();
 var ExpressionNode = require('./expressionNode');
 
@@ -923,13 +939,13 @@ EquationSet.prototype.hasVariablesOrFunctions = function () {
  * variables. If we have multiple functions or one function and some variables,
  * returns false.
  */
- EquationSet.prototype.hasSingleFunction = function () {
+EquationSet.prototype.hasSingleFunction = function () {
    if (this.equations_.length === 1 && this.equations_[0].isFunction()) {
      return true;
    }
 
    return false;
- };
+};
 
 /**
  * Are two EquationSets identical? This is considered to be true if their
@@ -1121,7 +1137,7 @@ EquationSet.__testonly__ = {
 };
 /* end-test-block */
 
-},{"../utils":166,"./expressionNode":32}],30:[function(require,module,exports){
+},{"../utils":175,"./expressionNode":33}],31:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1144,7 +1160,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/calc":170,"../../locale/current/common":171,"ejs":187}],28:[function(require,module,exports){
+},{"../../locale/current/calc":179,"../../locale/current/common":180,"ejs":196}],29:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -1236,9 +1252,9 @@ function installCompute(blockly, generator, gensym) {
   };
 }
 
-},{"../../locale/current/calc":170,"../../locale/current/common":171,"../functionalBlockUtils":73,"../sharedFunctionalBlocks":125}],170:[function(require,module,exports){
+},{"../../locale/current/calc":179,"../../locale/current/common":180,"../functionalBlockUtils":74,"../sharedFunctionalBlocks":134}],179:[function(require,module,exports){
 /*calc*/ module.exports = window.blockly.appLocale;
-},{}],27:[function(require,module,exports){
+},{}],28:[function(require,module,exports){
 var ExpressionNode = require('./expressionNode');
 
 exports.compute = function (expr, blockId) {
@@ -1250,7 +1266,7 @@ exports.expression = function (operator, arg1, arg2, blockId) {
   return new ExpressionNode(operator, [arg1, arg2], blockId);
 };
 
-},{"./expressionNode":32}],32:[function(require,module,exports){
+},{"./expressionNode":33}],33:[function(require,module,exports){
 var utils = require('../utils');
 var _ = utils.getLodash();
 
@@ -1666,4 +1682,4 @@ var Token = function (str, marked) {
 };
 ExpressionNode.Token = Token;
 
-},{"../utils":166}]},{},[35]);
+},{"../utils":175}]},{},[36]);
