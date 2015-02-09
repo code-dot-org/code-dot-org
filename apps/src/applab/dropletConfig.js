@@ -33,12 +33,12 @@ module.exports.blocks = [
   {'func': 'clearCanvas', 'title': 'Clear all data on the active canvas', 'category': 'Canvas', },
 
   {'func': 'startWebRequest', 'title': 'Request data from the internet and execute code when the request is complete', 'category': 'Data', 'params': ["'http://api.openweathermap.org/data/2.5/weather?q=London,uk'", "function(status, type, content) {\n  \n}"] },
-  {'func': 'writeSharedValue', 'title': 'Saves a value associated with the key, shared with everyone who uses the app.', 'category': 'Data', 'params': ["'key'", "'value'", "function () {\n  \n}"] },
-  {'func': 'readSharedValue', 'title': 'Reads the value associated with the key, shared with everyone who uses the app.', 'category': 'Data', 'params': ["'key'", "function (value) {\n  \n}"] },
-  {'func': 'createSharedRecord', 'title': 'createSharedRecord(record, onSuccess, onError); Creates a new shared record in table record.tableName.', 'category': 'Data', 'params': ["{tableName:'abc', name:'Alice', age:7, male:false}", "function() {\n  \n}"] },
-  {'func': 'readSharedRecords', 'title': 'readSharedRecords(searchParams, onSuccess, onError); Reads all shared records whose properties match those on the searchParams object.', 'category': 'Data', 'params': ["{tableName: 'abc'}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    container('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
-  {'func': 'updateSharedRecord', 'title': 'updateSharedRecord(record, onSuccess, onFailure); Updates a shared record, identified by record.tableName and record.id.', 'category': 'Data', 'params': ["{tableName:'abc', id: 1, name:'Bob', age:8, male:true}", "function() {\n  \n}"] },
-  {'func': 'deleteSharedRecord', 'title': 'deleteSharedRecord(record, onSuccess, onFailure)\nDeletes a shared record, identified by record.tableName and record.id.', 'category': 'Data', 'params': ["{tableName:'abc', id: 1}", "function() {\n  \n}"] },
+  {'func': 'setKeyValue', 'title': 'Saves the value associated with the key to the remote data store.', 'category': 'Data', 'params': ["'key'", "'value'", "function () {\n  \n}"] },
+  {'func': 'getKeyValue', 'title': 'Reads the value associated with the key from the remote data store.', 'category': 'Data', 'params': ["'key'", "function (value) {\n  \n}"] },
+  {'func': 'createRecord', 'title': 'createRecord(table, record, onSuccess); Creates a new record in the specified table.', 'category': 'Data', 'params': ["'mytable'", "{name:'Alice'}", "function() {\n  \n}"] },
+  {'func': 'readRecords', 'title': 'readRecords(table, searchParams, onSuccess); Reads all records whose properties match those on the searchParams object.', 'category': 'Data', 'params': ["'mytable'", "{id:1}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    createTextLabel('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
+  {'func': 'updateRecord', 'title': 'updateRecord(table, record, onSuccess); Updates a record, identified by record.id.', 'category': 'Data', 'params': ["'mytable'", "{id:1, name:'Bob'}", "function() {\n  \n}"] },
+  {'func': 'deleteRecord', 'title': 'deleteRecord(table, record, onSuccess); Deletes a record, identified by record.id.', 'category': 'Data', 'params': ["'mytable'", "{id:1}", "function() {\n  \n}"] },
 
   {'func': 'moveForward', 'title': 'Move the turtle forward the specified distance', 'category': 'Turtle', 'params': ["25"] },
   {'func': 'moveBackward', 'title': 'Move the turtle backward the specified distance', 'category': 'Turtle', 'params': ["25"] },
