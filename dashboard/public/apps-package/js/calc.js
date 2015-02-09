@@ -209,6 +209,11 @@ function displayGoal(targetSet) {
   if (!hasSingleFunction) {
     var sortedEquations = targetSet.sortedEquations();
     sortedEquations.forEach(function (equation) {
+      if (equation.isFunction() && sortedEquations.length > 1) {
+        throw new Error("Calc doesn't support goal with multiple functions or " +
+          "mixed functions/vars");
+      }
+
       tokenList = equation.expression.getTokenList(false);
       displayEquation('answerExpression', equation.signature, tokenList, nextRow++);
     });
@@ -238,11 +243,15 @@ studioApp.runButtonClick = function() {
  * called first.
  */
 Calc.resetButtonClick = function () {
-  appState.message = null;
-  appState.currentAnimationDepth = 0;
-  timeoutList.clearTimeouts();
-
   appState.animating = false;
+  appState.response = null;
+  appState.message = null;
+  appState.result = null;
+  appState.testResults = null;
+  appState.currentAnimationDepth = 0;
+  appState.failedInput = null;
+
+  timeoutList.clearTimeouts();
 
   clearSvgUserExpression();
 };
@@ -420,6 +429,11 @@ Calc.execute = function() {
 
   studioApp.report(reportData);
 
+  // Display feedback immediately
+  if (appState.testResults === TestResults.QUESTION_MARKS_IN_NUMBER_FIELD) {
+    return displayFeedback();
+  }
+
   appState.animating = true;
   if (appState.result === ResultType.SUCCESS &&
       !appState.userSet.hasVariablesOrFunctions() &&
@@ -479,7 +493,7 @@ function displayComplexUserExpressions () {
     tokenList = tokenList.concat(getTokenList(' = '),
       getTokenList(result, expectedResult));
   } else {
-    tokenList = getTokenList(computeEquation, appState.targetSet.computeEquation);
+    tokenList = getTokenList(computeEquation, appState.targetSet.computeEquation());
   }
 
   displayEquation('userExpression', null, tokenList, nextRow++, 'errorToken');
@@ -664,7 +678,9 @@ function displayFeedback() {
   level.extraTopBlocks = calcMsg.extraTopBlocks();
   var appDiv = null;
   // Show svg in feedback dialog
-  appDiv = cloneNodeWithoutIds('svgCalc');
+  if (appState.testResults !== TestResults.QUESTION_MARKS_IN_NUMBER_FIELD) {
+    appDiv = cloneNodeWithoutIds('svgCalc');
+  }
   var options = {
     app: 'Calc',
     skin: skin.id,
@@ -923,13 +939,13 @@ EquationSet.prototype.hasVariablesOrFunctions = function () {
  * variables. If we have multiple functions or one function and some variables,
  * returns false.
  */
- EquationSet.prototype.hasSingleFunction = function () {
+EquationSet.prototype.hasSingleFunction = function () {
    if (this.equations_.length === 1 && this.equations_[0].isFunction()) {
      return true;
    }
 
    return false;
- };
+};
 
 /**
  * Are two EquationSets identical? This is considered to be true if their
