@@ -106,7 +106,7 @@ Code.org is looking for a K-8 Program Manager specializing in Middle School CS t
 
 **Qualifications:**
 
-The ideal candidate will have a Bachelor’s degree or higher in Education and 2-3 years of recent relevant computer science, mathematics, or science experience in a K-12 school setting. They also will have had experience working with the Math Common Core and Next Generation Science Standards within a curriculum writing and/or professional development capacity. Technology industry experience a plus.
+The ideal candidate will have a Bachelor’s degree or higher in Education and 2-3 years of recent relevant computer science, mathematics, or science experience in a K-12 school setting. While a degree in computer science is optional, a comprehensive knowledge of computer science is expected. They also will have had experience working with the Math Common Core and Next Generation Science Standards within a curriculum writing and/or professional development capacity. Technology industry experience a plus.
 
 Must have strong leadership skills, possess exceptional writing and communications ability in English, and be tech-savvy. Must also be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Microsoft Office and Google Docs a must.
 
@@ -132,7 +132,7 @@ Responsibilities of the position include:
 
 The ideal candidate has related experience working with a team to design, develop, write, or implement curricular, educational or software products that have gone to market. 
 
-The candidate should have a Bachelor’s degree or higher in Education and a minimum of two (2) years of recent relevant introductory computer science experience at a secondary level (grades 6-12). Prior curriculum and professional development experience preferred. Must have strong leadership skills, possess exceptional writing and communications ability in English, and be tech-savvy. Must also be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Microsoft Office and Google Docs a must.
+The candidate should have a Bachelor’s degree or higher in Education and a minimum of two (2) years of recent relevant introductory computer science experience at a secondary level (grades 6-12). While a degree in computer science is optional, a comprehensive knowledge of computer science is expected. Prior curriculum and professional development experience preferred. Must have strong leadership skills, possess exceptional writing and communications ability in English, and be tech-savvy. Must also be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Microsoft Office and Google Docs a must.
 
 Interested candidates should email a resume and cover letter, outlining how your skills and experience meet the qualifications of the position, to jobs@code.org. Please highlight relevant experience in working with a team to design, develop, write, or implement curricular, educational or software products that have gone to market. You may also choose to include a LinkedIn or related online profile.
 
