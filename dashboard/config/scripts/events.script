@@ -2,7 +2,7 @@ id '4'
 title 'Events'
 description ""
 
-Bounce
+stage 'Bounce'
 skin 'bounce'
 level 'blockly:Bounce:1'
 skin 'bounce'
@@ -24,16 +24,16 @@ level 'blockly:Bounce:11'
 skin 'bounce'
 level 'blockly:Bounce:12'
 
-Studio
+stage 'Studio'
 skin 'studio'
 level 'blockly:Studio:full_sandbox'
 skin 'infinity'
 level 'blockly:Studio:full_sandbox_infinity'
 
-Calc
+stage 'Calc'
 skin 'calc'
 level 'blockly:Calc:example1'
 
-Eval
+stage 'Eval'
 skin 'eval'
 level 'blockly:Eval:eval1'

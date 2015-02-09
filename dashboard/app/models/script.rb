@@ -207,6 +207,7 @@ class Script < ActiveRecord::Base
           name: name,
           trophies: script_data[:trophies],
           hidden: script_data[:hidden].nil? ? true : script_data[:hidden],
+          wrapup_video: script_data[:wrapup_video],
           id: script_data[:id],
         }, stages.map{|stage| stage[:levels]}.flatten]
       end
@@ -322,10 +323,12 @@ class Script < ActiveRecord::Base
     begin
       transaction do
         script_data, i18n = ScriptDSL.parse(script_text, 'input', script_params[:name])
-        Script.add_script({name: script_params[:name],
-                           trophies: script_data[:trophies],
-                           hidden: script_data[:hidden].nil? ? true : script_data[:hidden]},
-          script_data[:stages].map { |stage| stage[:levels] }.flatten)
+        Script.add_script({
+          name: script_params[:name],
+          trophies: script_data[:trophies],
+          hidden: script_data[:hidden].nil? ? true : script_data[:hidden],
+          wrapup_video: script_data[:wrapup_video],
+        }, script_data[:stages].map { |stage| stage[:levels] }.flatten)
         Script.update_i18n(i18n)
       end
     rescue Exception => e
