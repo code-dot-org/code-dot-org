@@ -74,6 +74,7 @@ NetSimSendWidget.createWithin = function (element, connection) {
  */
 NetSimSendWidget.prototype.bindElements_ = function () {
   this.rootDiv_ = $('#netsim_send_widget');
+  this.toAddressTextbox_ = this.rootDiv_.find('#to_address');
   this.payloadTextbox_ = this.rootDiv_.find('#payload');
   this.sendButton_ = this.rootDiv_.find('#send_button');
 
@@ -102,7 +103,7 @@ NetSimSendWidget.prototype.onSendButtonPress_ = function () {
   }
 
   myNode.sendMessage({
-    toAddress: 0,
+    toAddress: parseInt(this.toAddressTextbox_.val(), 10),
     messageContent: this.payloadTextbox_.val()
   });
 };
