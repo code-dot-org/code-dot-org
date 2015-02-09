@@ -26,16 +26,28 @@ exports.deleteElement = function (blockId, elementId) {
                           {'elementId': elementId });
 };
 
-exports.createButton = function (blockId, elementId, text) {
+exports.showElement = function (blockId, elementId) {
   return Applab.executeCmd(blockId,
-                          'createButton',
+                          'showElement',
+                          {'elementId': elementId });
+};
+
+exports.hideElement = function (blockId, elementId) {
+  return Applab.executeCmd(blockId,
+                          'hideElement',
+                          {'elementId': elementId });
+};
+
+exports.button = function (blockId, elementId, text) {
+  return Applab.executeCmd(blockId,
+                          'button',
                           {'elementId': elementId,
                            'text': text });
 };
 
-exports.createImage = function (blockId, elementId, src) {
+exports.image = function (blockId, elementId, src) {
   return Applab.executeCmd(blockId,
-                          'createImage',
+                          'image',
                           {'elementId': elementId,
                            'src': src });
 };
@@ -139,31 +151,31 @@ exports.putImageData = function (blockId, imageData, x, y) {
                            'y': y });
 };
 
-exports.createTextInput = function (blockId, elementId, text) {
+exports.textInput = function (blockId, elementId, text) {
   return Applab.executeCmd(blockId,
-                          'createTextInput',
+                          'textInput',
                           {'elementId': elementId,
                            'text': text });
 };
 
-exports.createTextLabel = function (blockId, elementId, text, forId) {
+exports.textLabel = function (blockId, elementId, text, forId) {
   return Applab.executeCmd(blockId,
-                          'createTextLabel',
+                          'textLabel',
                           {'elementId': elementId,
                            'text': text,
                            'forId': forId });
 };
 
-exports.createCheckbox = function (blockId, elementId, checked) {
+exports.checkbox = function (blockId, elementId, checked) {
   return Applab.executeCmd(blockId,
-                          'createCheckbox',
+                          'checkbox',
                           {'elementId': elementId,
                            'checked': checked });
 };
 
-exports.createRadio = function (blockId, elementId, checked, name) {
+exports.radioButton = function (blockId, elementId, checked, name) {
   return Applab.executeCmd(blockId,
-                          'createRadio',
+                          'radioButton',
                           {'elementId': elementId,
                            'checked': checked,
                            'name': name });
@@ -182,10 +194,10 @@ exports.setChecked = function (blockId, elementId, checked) {
                            'checked': checked });
 };
 
-exports.createDropdown = function (blockId, elementId) {
+exports.dropdown = function (blockId, elementId) {
   var optionsArray = Array.prototype.slice.call(arguments, 2);
   return Applab.executeCmd(blockId,
-                          'createDropdown',
+                          'dropdown',
                           {'elementId': elementId,
                            'optionsArray': optionsArray });
 };
@@ -231,9 +243,9 @@ exports.setImageURL = function (blockId, elementId, src) {
                            'src': src });
 };
 
-exports.createImageUploadButton = function (blockId, elementId, text) {
+exports.imageUploadButton = function (blockId, elementId, text) {
   return Applab.executeCmd(blockId,
-                           'createImageUploadButton',
+                           'imageUploadButton',
                            {'elementId': elementId,
                             'text': text });
 };
@@ -288,51 +300,55 @@ exports.playSound = function (blockId, url) {
                           {'url': url});
 };
 
-exports.readSharedValue = function(blockId, key, onSuccess, onError) {
+exports.getKeyValue = function(blockId, key, onSuccess, onError) {
   return Applab.executeCmd(blockId,
-                           'readSharedValue',
+                           'getKeyValue',
                            {'key':key,
                             'onSuccess': onSuccess,
                             'onError': onError});
 };
 
-exports.writeSharedValue = function(blockId, key, value, onSuccess, onError) {
+exports.setKeyValue = function(blockId, key, value, onSuccess, onError) {
   return Applab.executeCmd(blockId,
-                           'writeSharedValue',
+                           'setKeyValue',
                            {'key':key,
                             'value': value,
                             'onSuccess': onSuccess,
                             'onError': onError});
 };
 
-exports.createSharedRecord = function (blockId, record, onSuccess, onError) {
+exports.createRecord = function (blockId, table, record, onSuccess, onError) {
   return Applab.executeCmd(blockId,
-                          'createSharedRecord',
-                          {'record': record,
+                          'createRecord',
+                          {'table': table,
+                           'record': record,
                            'onSuccess': onSuccess,
                            'onError': onError});
 };
 
-exports.readSharedRecords = function (blockId, searchParams, onSuccess, onError) {
+exports.readRecords = function (blockId, table, searchParams, onSuccess, onError) {
   return Applab.executeCmd(blockId,
-                          'readSharedRecords',
-                          {'searchParams': searchParams,
+                          'readRecords',
+                          {'table': table,
+                           'searchParams': searchParams,
                            'onSuccess': onSuccess,
                            'onError': onError});
 };
 
-exports.updateSharedRecord = function (blockId, record, onSuccess, onError) {
+exports.updateRecord = function (blockId, table, record, onSuccess, onError) {
   return Applab.executeCmd(blockId,
-                          'updateSharedRecord',
-                          {'record': record,
+                          'updateRecord',
+                          {'table': table,
+                           'record': record,
                            'onSuccess': onSuccess,
                            'onError': onError});
 };
 
-exports.deleteSharedRecord = function (blockId, record, onSuccess, onError) {
+exports.deleteRecord = function (blockId, table, record, onSuccess, onError) {
   return Applab.executeCmd(blockId,
-                          'deleteSharedRecord',
-                          {'record': record,
+                          'deleteRecord',
+                          {'table': table,
+                           'record': record,
                            'onSuccess': onSuccess,
                            'onError': onError});
 };

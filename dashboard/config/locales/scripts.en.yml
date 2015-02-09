@@ -397,3 +397,28 @@ en:
           description_short: Create a story or make a game with Infinity Play Lab!!
           description: Create a story or make a game with Infinity Play Lab!
           Infinity: Infinity
+        20-hour:
+          title: K-8 Intro to Computer Science Course (15-25 hours)
+          description: This 20-hour course introduces core computer science and programming
+            concepts. The course is designed for use in classrooms for grades K-8,
+            but it is fun to learn at all ages.
+          Introduction to Computer Science: Introduction to Computer Science
+          The Maze: The Maze
+          Computational Thinking: Computational Thinking
+          Graph Paper Programming: Graph Paper Programming
+          The Artist: The Artist
+          Algorithms: Algorithms
+          The Artist 2: The Artist 2
+          Functions: Functions
+          The Farmer: The Farmer
+          Conditionals: Conditionals
+          The Artist 3: The Artist 3
+          Song Writing: Song Writing
+          The Farmer 2: The Farmer 2
+          Abstraction: Abstraction
+          The Artist 4: The Artist 4
+          Relay Programming: Relay Programming
+          The Farmer 3: The Farmer 3
+          The Internet: The Internet
+          The Artist 5: The Artist 5
+          Wrap-up: Wrap-up
