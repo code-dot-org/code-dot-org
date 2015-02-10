@@ -38,6 +38,10 @@
 
 var superClass = require('./NetSimNode');
 var NetSimEntity = require('./NetSimEntity');
+var NetSimMessage = require('./NetSimMessage');
+var NetSimLogger = require('./NetSimLogger');
+
+var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
 
 /**
  * @param {!NetSimShard} shard
@@ -73,9 +77,23 @@ var NetSimNodeClient = function (shard, clientRow) {
   /**
    * Client nodes can be connected to a router, which they will
    * help to simulate.
-   * @type {NetSimRouter}
+   * @type {NetSimNodeRouter}
    */
   this.myRouter = null;
+
+  /**
+   * Widget where we will post sent messages.
+   * @type {NetSimLogWidget}
+   * @private
+   */
+  this.sentLog_ = null;
+
+  /**
+   * Widget where we will post received messages
+   * @type {NetSimLogWidget}
+   * @private
+   */
+  this.receivedLog_ = null;
 };
 NetSimNodeClient.prototype = Object.create(superClass.prototype);
 NetSimNodeClient.prototype.constructor = NetSimNodeClient;
@@ -84,7 +102,7 @@ module.exports = NetSimNodeClient;
 /**
  * Static async creation method. See NetSimEntity.create().
  * @param {!NetSimShard} shard
- * @param {function} [onComplete] - Method that will be given the
+ * @param {!function} onComplete - Method that will be given the
  *        created entity, or null if entity creation failed.
  */
 NetSimNodeClient.create = function (shard, onComplete) {
@@ -107,6 +125,20 @@ NetSimNodeClient.prototype.getStatus = function () {
 /** Set node's display name.  Does not trigger an update! */
 NetSimNodeClient.prototype.setDisplayName = function (displayName) {
   this.displayName_ = displayName;
+};
+
+/**
+ * Configure this node controller to post sent and received messages to the
+ * given log widgets.
+ * @param {!NetSimLogWidget} sentLog
+ * @param {!NetSimLogWidget} receivedLog
+ */
+NetSimNodeClient.prototype.setLogs = function (sentLog, receivedLog) {
+  this.sentLog_ = sentLog;
+  this.receivedLog_ = receivedLog;
+
+  // Subscribe to message table changes
+  this.shard_.messageTable.tableChangeEvent.register(this, this.onMessageTableChange_);
 };
 
 /**
@@ -200,8 +232,8 @@ NetSimNodeClient.prototype.reconnect_ = function (onComplete) {
 };
 
 /**
- * @param {!NetSimRouter} router
- * @param {function} onComplete({boolean}success)
+ * @param {!NetSimNodeRouter} router
+ * @param {function} onComplete (success)
  */
 NetSimNodeClient.prototype.connectToRouter = function (router, onComplete) {
   if (!onComplete) {
@@ -217,6 +249,8 @@ NetSimNodeClient.prototype.connectToRouter = function (router, onComplete) {
 
     self.myWire = wire;
     self.myRouter = router;
+    self.myRouter.setSimulateForSender(self.entityID);
+
     router.requestAddress(wire, self.getHostname(), function (success) {
       if (!success) {
         wire.destroy(function () {
@@ -227,8 +261,9 @@ NetSimNodeClient.prototype.connectToRouter = function (router, onComplete) {
 
       self.myWire = wire;
       self.myRouter = router;
-      // Trigger an immediate router update so its connection count is correct.
-      self.myRouter.update(onComplete);
+      self.status_ = "Connected to " + router.getDisplayName() +
+          " with address " + wire.localAddress;
+      self.update(onComplete);
     });
   });
 };
@@ -250,4 +285,77 @@ NetSimNodeClient.prototype.disconnectRemote = function (onComplete) {
     self.myRouter.update(onComplete);
     self.myRouter = null;
   });
+};
+
+/**
+ * Put a message on our outgoing wire, to whatever we are connected to
+ * at the moment.
+ * @param payload
+ */
+NetSimNodeClient.prototype.sendMessage = function (payload) {
+  if (!this.myWire) {
+    return;
+  }
+
+  var localNodeID = this.myWire.localNodeID;
+  var remoteNodeID = this.myWire.remoteNodeID;
+  var self = this;
+  NetSimMessage.send(this.shard_, localNodeID, remoteNodeID, payload,
+      function (success) {
+        if (success) {
+          logger.info('Local node sent message: ' + JSON.stringify(payload));
+          if (self.sentLog_) {
+            self.sentLog_.log(JSON.stringify(payload));
+          }
+        } else {
+          logger.error('Failed to send message: ' + JSON.stringify(payload));
+        }
+      }
+  );
+};
+
+/**
+ * Listens for changes to the message table.  Detects and handles messages
+ * sent to this node.
+ * @param {Array} rows
+ * @private
+ */
+NetSimNodeClient.prototype.onMessageTableChange_ = function (rows) {
+  if (this.isProcessingMessages_) {
+    // We're already in this method, getting called recursively because
+    // we are making changes to the table.  Ignore this call.
+    return;
+  }
+
+  var self = this;
+  var messages = rows.map(function (row) {
+    return new NetSimMessage(self.shard_, row);
+  }).filter(function (message) {
+    return message.toNodeID === self.entityID;
+  });
+
+  // If any messages are for us, get our routing table and process messages.
+  if (messages.length > 0) {
+    this.isProcessingMessages_ = true;
+    messages.forEach(function (message) {
+      self.handleMessage_(message);
+    });
+    this.isProcessingMessages_ = false;
+  }
+};
+
+/**
+ * Post message to 'received' log.
+ * @param {!NetSimMessage} message
+ * @private
+ */
+NetSimNodeClient.prototype.handleMessage_ = function (message) {
+  // Pull the message off the wire, and hold it in-memory until we route it.
+  // We'll create a new one with the same payload if we have to send it on.
+  message.destroy();
+
+  // TODO: How much validation should we do here?
+  if (this.receivedLog_) {
+    this.receivedLog_.log(JSON.stringify(message.payload));
+  }
 };
