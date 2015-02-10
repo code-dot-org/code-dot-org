@@ -301,9 +301,6 @@ NetSimNodeRouter.prototype.getAddressTable = function (onComplete) {
         hostname: wire.localHostname,
         address: wire.localAddress
       };
-    }).concat({
-      hostname: self.getHostname(),
-      address: 0
     });
     onComplete(addressTable);
   });
