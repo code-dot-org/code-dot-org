@@ -138,7 +138,8 @@ NetSimNodeClient.prototype.setLogs = function (sentLog, receivedLog) {
   this.receivedLog_ = receivedLog;
 
   // Subscribe to message table changes
-  this.shard_.messageTable.tableChangeEvent.register(this, this.onMessageTableChange_);
+  this.shard_.messageTable.tableChangeEvent
+      .register(this.onMessageTableChange_.bind(this));
 };
 
 /**
