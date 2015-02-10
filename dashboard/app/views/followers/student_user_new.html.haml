@@ -20,12 +20,15 @@
         - @user.errors.full_messages.each do |msg|
           %li= msg
 
+  -# Hack to look for a specific pattern in the class name to decide if it's a workshop.
+  - user_type = @section.name.to_s =~ /^Workshop on [\d\/]+ at .+$/ ? User::TYPE_TEACHER : User::TYPE_STUDENT
+
   #signup
     .row
       .span8.signupblock
         = form_for(@user, url: { action: :student_register }) do |f|
 
-          = f.hidden_field :user_type
+          = f.hidden_field :user_type, value: user_type
           = f.hidden_field :locale, value: locale
           = f.hidden_field :hashed_email
 
@@ -52,14 +55,28 @@
               = f.password_field :password_confirmation, class: 'input-xlarge fieldblock'
             %span#password_message_confirmation
             %br/
-            .itemblock
-              .labelblock
-                = t('signup_form.age')
-              = f.select :age, User::AGE_DROPDOWN_OPTIONS, include_blank: true, class: 'fieldblock'
-            .itemblock
-              .labelblock
-                = t('signup_form.gender')
-              = f.select :gender, gender_options
+            - if user_type == User::TYPE_TEACHER
+              .itemblock
+                .labelblock
+                  = t('signup_form.school_name')
+                = f.text_field :school, class: 'input-xlarge fieldblock'
+              %br/
+              .itemblock
+                .labelblock
+                  = t('signup_form.school_address')
+                = f.text_area :full_address, class: 'input-xxlarge fieldblock', placeholder: t('signup_form.address_placeholder'), rows: 4
+              %br/
+
+              = f.hidden_field :age, value: '21'
+            - if user_type == User::TYPE_STUDENT
+              .itemblock
+                .labelblock
+                  = t('signup_form.age')
+                = f.select :age, User::AGE_DROPDOWN_OPTIONS, include_blank: true, class: 'fieldblock'
+              .itemblock
+                .labelblock
+                  = t('signup_form.gender')
+                = f.select :gender, gender_options
             %br/
             = submit_tag 'Register', class: 'btn btn-primary'
 
