@@ -1,5 +1,6 @@
 #pageheader-wrapper
-  #pageheader
+  - pageheader_class = request.path_info == "/index2" ? "pageheader_translucent" : ""
+  #pageheader{class: pageheader_class}
     .content
       #left
         %a{:href=>"/"}
@@ -11,8 +12,11 @@
         %a.headerlink{:href=>"/learn"}LEARN
         %a.headerlink{:href=>"/educate"}TEACH
         %a.headerlink{:href=>"/promote"}STATS
-        %a.headerlink{:href=>"/help"}HOW TO HELP
-        %a.headerlink{:href=>"/about"}ABOUT
+        - if request.path_info == "/index2"
+          %a.headerlink{:href=>"/help"}HELP US
+        - else
+          %a.headerlink{:href=>"/help"}HOW TO HELP
+          %a.headerlink{:href=>"/about"}ABOUT
 
     #clear{:style=>'clear:both'}
 
