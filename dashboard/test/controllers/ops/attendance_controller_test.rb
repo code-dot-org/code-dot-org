@@ -54,9 +54,13 @@ module Ops
       #87055176
 
       # Facilitator gets a list of all teachers in the workshop (e.g., /ops/workshops/1/teachers)
-      # Facilitator POSTs an object to the segment path with a list of {id: status} entries
-      assert_routing({ path: 'ops/segments/1/attendance', method: :post }, { controller: 'ops/workshop_attendance', action: 'index', segment_id: '1'})
+      # Facilitator POSTs an object to the segment path containing an array of {id: status} entries
+      assert_routing({ path: 'ops/segments/1/attendance/batch', method: :post }, { controller: 'ops/workshop_attendance', action: 'batch', segment_id: '1'})
 
+      segment = @attendance.segment
+      teacher = segment.workshop.teachers.first
+      post :batch, segment_id: segment.id, attendance: [[teacher.id, 'tardy']]
+      assert_response :success
     end
 
     # Test index + CRUD controller actions

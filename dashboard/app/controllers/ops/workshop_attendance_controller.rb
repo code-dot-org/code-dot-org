@@ -36,13 +36,29 @@ module Ops
       end
     end
 
-    # POST /ops/attendance/1
+    # Batched version of #create.
+    # POST /ops/segments/1/attendance/batch
+    def batch
+      attendances = params.require(:attendance)
+      p "attendances: #{attendances}"
+      workshop = @segment.workshop
+      teachers = workshop.teacher_ids
+      attendances.each do |id, status|
+        raise("Teacher id #{id} not in workshop #{workshop.name}. Teachers: #{teachers}") unless teachers.include? id.to_i
+        WorkshopAttendance.create_with(status: status)
+            .find_or_create_by(teacher_id: id, segment_id: @segment.id)
+            .update!(status: status)
+      end
+      render text: 'OK'
+    end
+
+    # POST /ops/segments/1/attendance
     def create
       @workshop_attendance.save!
       render text: 'OK'
     end
 
-    # GET /ops/attendance
+    # GET /ops/segments/1/attendance
     def index
       respond_with @workshop_attendance
     end
