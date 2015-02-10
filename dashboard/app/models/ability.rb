@@ -57,11 +57,13 @@ class Ability
     end
 
     if user.permission? 'facilitator'
-      can :manage, Workshop
+      can :read, Workshop
+      can :teachers, Workshop
     end
 
     if user.permission? 'district_contact'
-      can :manage, District
+      can :teachers, District
+      can [:cohort, :teacher], WorkshopAttendance
     end
 
     #

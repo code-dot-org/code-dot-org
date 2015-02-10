@@ -186,8 +186,12 @@ Dashboard::Application.routes.draw do
         resources :workshop_attendance, path: '/attendance', shallow: true do
         end
       end
+      member do
+        get 'teachers'
+      end
     end
     get 'attendance/teacher/:teacher_id', action: 'teacher', controller: 'workshop_attendance'
+    get 'attendance/cohort/:cohort_id', action: 'cohort', controller: 'workshop_attendance'
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

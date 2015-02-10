@@ -1,8 +1,20 @@
 module Ops
   class WorkshopsController < ::ApplicationController
+    respond_to :html, :xml, :json
+
     # CanCan provides automatic resource loading and authorization for default index + CRUD actions
     check_authorization
     load_and_authorize_resource
+
+    # GET /ops/workshops/1/cohort
+    # Get the full cohort list of teachers in a specific workshop (for facilitators)
+    def teachers
+      # first name, last name, email, district, gender and any workshop details that are available for teachers
+      teachers = @workshop.teachers.includes(:district).select('users.id, users.name, users.email, users.username, users.gender')
+      respond_with teachers do |format|
+        format.json { render json: teachers.as_json(include: :district) }
+      end
+    end
 
     # POST /ops/workshops
     def create
