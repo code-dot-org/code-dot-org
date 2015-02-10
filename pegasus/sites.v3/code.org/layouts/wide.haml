@@ -1,0 +1,28 @@
+.wrapper
+  -if header['theme'] == 'responsive'
+    #desktop-header.desktop-feature
+      -#= view :header
+    #mobile-header.mobile-headers.mobile-feature
+      = view :mobile_header_responsive
+  -else
+    = view :header
+
+  -containerClass = "container_fullwidth"
+
+  %div{:class=>containerClass}
+
+    -if header['theme'] == 'responsive'
+      =body
+
+      #clearboth{:style=>"clear:both"}
+      .desktop-feature
+
+  .push
+
+-if header['theme'] == 'responsive'
+  .desktop-feature
+    = view :footer
+  .mobile-headers.mobile-feature
+    = view :mobile_footer_responsive
+-else
+  = view :footer
