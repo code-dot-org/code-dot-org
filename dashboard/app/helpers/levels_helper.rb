@@ -104,11 +104,12 @@ module LevelsHelper
     callouts.map do |callout|
       callout_hash = callout.attributes
       callout_hash.delete('localization_key')
-        if language != 'en'
-          callout_hash['localized_text'] = data_t('callout.text', callout.localization_key)
-        else
-          callout_hash['localized_text'] = callout.callout_text
-        end
+      callout_text = data_t('callout.text', callout.localization_key)
+      if language == 'en' || callout_text.nil?
+        callout_hash['localized_text'] = callout.callout_text
+      else
+        callout_hash['localized_text'] = callout_text
+      end
       callout_hash
     end
   end
