@@ -53,18 +53,21 @@ function drawGraph() {
   var imgBitString = binCode.substring(24, binCode.length);
   var colorNums = bitsToColors(imgBitString, bitsPerPix);
 
-  // Auto-size pixel borders and edge offsets.
-  var sqSize = MAX_SIZE / Math.max(w, h);
-  var fillSize = sqSize * 0.95;
-  var offset = (sqSize - fillSize) / 2;
-  if (sqSize - fillSize < 0.33) {
-    fillSize += 1;
-    offset = 0;
+  var sqSize = 1, fillSize = 1, offset = 0;
+  if (!document.querySelector('input#actual_size:checked')) {
+    // Auto-size pixel borders and edge offsets.
+    sqSize = MAX_SIZE / Math.max(w, h);
+    fillSize = sqSize * 0.95;
+    offset = (sqSize - fillSize) / 2;
+    if (sqSize - fillSize < 0.33) {
+      fillSize += 1;
+      offset = 0;
+    }
   }
 
   // Draw image.
-  var left = (MAX_SIZE - w * sqSize) / 2;
-  var top = (MAX_SIZE - h * sqSize) / 2;
+  var left = Math.floor((MAX_SIZE - w * sqSize) / 2);
+  var top = Math.floor((MAX_SIZE - h * sqSize) / 2);
   for (var y = 0; y < h; y++) {
     for (var x = 0; x < w; x++) {
       ctx.fillStyle = colorNums[(y * w) + x] || "#fdd";
