@@ -39,7 +39,7 @@
     }
   });
 
-  $(document).bind('appInitialized', function() {
+  $(document).bind('appInitialized', function(ev, appOptions) {
     if (appOptions && appOptions.level && appOptions.level.freePlay) {
       $('.project-ui').show();
     }

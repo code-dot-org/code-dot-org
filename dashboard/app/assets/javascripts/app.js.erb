@@ -33,7 +33,7 @@
       this.$el.on('click', this.onClick);
       this.$el.on('destroyed', this.onDestroy);
 
-      this.props = props || $el.data();
+      this.props = $.extend({}, $el.data(), props);
       this.isMounting = true;
 
       // Set the initial state
@@ -136,15 +136,31 @@
       var re, parts,
         url = window.location.pathname;
 
+      var headerStore = new HeaderStore();
+
+      // Special handling for #blocklyApp, which could be on any route.
+      var el = $('#blocklyApp');
+      if (el.length) {
+        window.blocklyApp = new BlocklyApp( el, {
+          headerStore: headerStore
+        });
+      }
+
       // s/:script_id/level/:level_id
       // (only applies to the 20-hour course)
       re = /\/s\/\d+\/level\/(\d+)$/i;
       parts = url.match(re);
       if (parts) {
         window.headerProgress = new HeaderProgress( $('.header-wrapper'), {
+          headerStore: headerStore,
+          level_id: parts[1]
+        });
+
+        headerStore.load({
           script_name: '20-hour',
           level_id: parts[1]
         });
+
         return;
       }
 
@@ -153,10 +169,16 @@
       parts = url.match(re);
       if (parts) {
         window.headerProgress = new HeaderProgress( $('.header-wrapper'), {
+          headerStore: headerStore,
+          level_id: parts[3]
+        });
+
+        headerStore.load({
           script_name: parts[1],
           stage_id: parts[2],
           level_id: parts[3]
         });
+
         return;
       }
 
@@ -181,15 +203,15 @@
       this.onAjaxFailure = __bind(this.onAjaxFailure, this);
 
       this.value = null; // Empty store
+      this.notificationCallbacks = [];
     }
 
     // Get the value of this store
     UIStore.prototype.value = function() { return this.value; }
 
     // When this store changes, notify via callback(data)
-    // TODO: Maintain a list of callbacks
     UIStore.prototype.notify = function(callback) {
-      this.notificationCallback = callback;
+      this.notificationCallbacks.push(callback);
     }
 
     // Internal call to process any data that's being saved
@@ -200,8 +222,8 @@
       this.value = this.process(data);
 
       // Note: Flux uses emitters...
-      if (this.notificationCallback)
-        this.notificationCallback(this.value);
+      for (var i = 0; i < this.notificationCallbacks.length; i++)
+        this.notificationCallbacks[i](this.value);
     }
 
     // Resolve a dynamic asset by combining the base asset filename + a serialized version of the args
@@ -286,21 +308,13 @@
 
     UIFrame.prototype.init = function() {
       this.router.route();
-
-      // Special handling for #blocklyApp
-      var el = $('#blocklyApp');
-      if (el.length) {
-        this.app = new BlocklyApp( el, { opts: window.appOptions });
-      }
-
     }
 
-    // Returns a function which returns a $.Deferred instance. When executed, the
-    // function loads the given app script.
-    UIFrame.prototype.loadSource = function(src) {
+    // Load the script at a given URL and return a promise that resolves when it has executed
+    UIFrame.prototype.loadSource = function(url) {
       return function () {
         return $.ajax({
-          url: src,
+          url: url,
           dataType: "script",
           cache: true
         });
@@ -308,11 +322,11 @@
     }
 
     // Loads the given app stylesheet.
-    UIFrame.prototype.loadStyle = function(href) {
+    UIFrame.prototype.loadStyle = function(url) {
       $('<link>', {
         rel: 'stylesheet',
         type: 'text/css',
-        href: href
+        href: url
       }).appendTo(document.body);
     }
 
@@ -328,27 +342,93 @@
 
     // Must have a constructor
     function BlocklyApp() {
-      // TODO: Remove this
-      window.startTiming('Puzzle', window.script_path, '');
+      BlocklyApp.__super__.constructor.apply(this, arguments);
 
-      return BlocklyApp.__super__.constructor.apply(this, arguments);
+      return this;
+    }
+
+    BlocklyApp.prototype.render = function() {
+      var el;
+
+      this.$el.html('');
+
+      $('<div>').addClass('loading').appendTo(this.$el);
+
+      el = $('<div>').addClass('slow_load').text('<%= I18n.t(:slow_loading) %>').appendTo(this.$el);
+
+      $('<br>').appendTo(el);
+
+      $('<a>', {
+        href: 'javascript: location.reload();'
+      }).text('<%= I18n.t(:try_reloading) %>').appendTo(el);
+    }
+
+    BlocklyApp.prototype.componentDidMount = function() {
+      var _this = this;
+
+      // Show the slow-loading warning if it takes more than 10 seconds to initialize
+      var slow_load = _this.$el.find('.slow_load');
+      setTimeout(function() {
+        slow_load.show();
+      }, 10000);
+
+      // When the headerStore gets data, update blockly
+      this.props.headerStore.notify( function(data) {
+
+        // Set up the blockly options, starting from some default values
+        var opts = $.extend({
+          baseUrl: '/blockly/',
+          containerId: _this.$el.attr('id'),
+          scriptPath: _this.props.scriptpath
+        }, data.level);
+
+        // Kick-start the blockly scripts
+        _this.loadAssets(opts)
+        .then(function() {
+          _this.startBlockly(opts);
+        });
+
+      });
+
     }
 
     BlocklyApp.prototype.loadSource = function(name) {
-      return Frame.loadSource(this.props.opts.baseUrl + 'js/' + name + '.js');
+      return Frame.loadSource(this.baseUrl + 'js/' + name + '.js');
     }
 
     BlocklyApp.prototype.loadStyle = function(name) {
-      return Frame.loadStyle(this.props.opts.baseUrl + 'css/' + name + '.css');
+      return Frame.loadStyle(this.baseUrl + 'css/' + name + '.css');
+    }
+
+    // Load the assets required for a certain level
+    BlocklyApp.prototype.loadAssets = function(opts) {
+      this.baseUrl = opts.baseUrl;
+
+      this.loadStyle('common');
+      this.loadStyle(opts.app);
+
+      var promise;
+      if (opts.droplet) {
+        loadStyle('droplet/droplet.min');
+        promise = this.loadSource('jsinterpreter/acorn_interpreter')()
+          .then(this.loadSource('requirejs/require'))
+          .then(this.loadSource('ace/ace'))
+          .then(this.loadSource('ace/ext-language_tools'))
+          .then(this.loadSource('droplet/droplet-full.min'));
+      } else {
+        promise = this.loadSource('blockly')()
+          .then(this.loadSource(opts.locale + '/blockly_locale'));
+      }
+      return promise.then(this.loadSource('common' + opts.pretty))
+        .then(this.loadSource(opts.locale + '/common_locale'))
+        .then(this.loadSource(opts.locale + '/' + opts.app + '_locale'))
+        .then(this.loadSource(opts.app + opts.pretty));
     }
 
     // Sets up default options and initializes blockly
-    BlocklyApp.prototype.startBlockly = function(name) {
+    BlocklyApp.prototype.startBlockly = function(opts) {
       if (!this.isMounted())
         return;
-
-      var opts = this.props.opts;
-      opts.containerId = this.$el.attr('id');
 
       // Turn string values into functions for keys that begin with 'fn_' (JSON can't contain function definitions)
       // E.g. { fn_example: 'function () { return; }' } becomes { example: function () { return; } }
@@ -374,6 +454,9 @@
         position: { blockYCoordinateInterval: 25 },
         onInitialize: function() {
 
+          // TODO: Has moving this broken something?
+          window.startTiming('Puzzle', this.scriptPath, '');
+
           // Hide callouts when the function editor is closed (otherwise they jump to the top left corner)
           $(window).on('function_editor_closed', function() {
             $('.cdo-qtips').qtip('hide');
@@ -384,7 +467,7 @@
             wrapExistingClipPaths();
             handleClipPathChanges();
           }
-          $(document).trigger('appInitialized');
+          $(document).trigger('appInitialized', this);
         },
         createCallouts: function() {
           $.fn.qtip.zindex = 500;
@@ -462,15 +545,15 @@
           });
         },
         onAttempt: function(report) {
-          report.fallbackResponse = appOptions.report.fallback_response;
-          report.callback = appOptions.report.callback;
+          report.fallbackResponse = this.report.fallback_response;
+          report.callback = this.report.callback;
           // Track puzzle attempt event
-          trackEvent('Puzzle', 'Attempt', script_path, report.pass ? 1 : 0);
+          trackEvent('Puzzle', 'Attempt', this.scriptPath, report.pass ? 1 : 0);
           if (report.pass) {
-            trackEvent('Puzzle', 'Success', script_path, report.attempt);
-            stopTiming('Puzzle', script_path, '');
+            trackEvent('Puzzle', 'Success', this.scriptPath, report.attempt);
+            stopTiming('Puzzle', this.scriptPath, '');
           }
-          trackEvent('Activity', 'Lines of Code', script_path, report.lines);
+          trackEvent('Activity', 'Lines of Code', this.scriptPath, report.lines);
           sendReport(report);
         },
         onResetPressed: function() {
@@ -489,13 +572,13 @@
           }
         },
         showInstructionsWrapper: function(showInstructions) {
-          var hasInstructions = appOptions.level.instructions || appOptions.level.aniGifURL;
-          if (!hasInstructions || this.share || appOptions.level.skipInstructionsPopup) {
+          var hasInstructions = this.level.instructions || this.level.aniGifURL;
+          if (!hasInstructions || this.share || this.level.skipInstructionsPopup) {
             return;
           }
 
-          if (appOptions.autoplayVideo) {
-            showVideoDialog(appOptions.autoplayVideo);
+          if (this.autoplayVideo) {
+            showVideoDialog(this.autoplayVideo);
             $('.video-modal').on('hidden.bs.modal', function () {
               showInstructions();
             });
@@ -506,58 +589,6 @@
       });
 
       window[opts.app + 'Main'](opts);
-    }
-
-    BlocklyApp.prototype.render = function() {
-      var el;
-
-      this.$el.html('');
-
-      $('<div>').addClass('loading').appendTo(this.$el);
-
-      el = $('<div>').addClass('slow_load').text('<%= I18n.t(:slow_loading) %>').appendTo(this.$el);
-
-      $('<br>').appendTo(el);
-
-      $('<a>', {
-        href: 'javascript: location.reload();'
-      }).text('<%= I18n.t(:try_reloading) %>').appendTo(el);
-    }
-
-    BlocklyApp.prototype.componentDidMount = function() {
-      var _this = this;
-
-      // Show a slow-loading warning if it takes more than 10 seconds to initialize
-      var slow_load = _this.$el.find('.slow_load');
-      setTimeout(function() {
-        slow_load.show();
-      }, 10000);
-
-      var opts = this.props.opts || {};
-
-      // Load the required assets
-      this.loadStyle('common');
-      this.loadStyle(opts.app);
-
-      var promise;
-      if (opts.droplet) {
-        loadStyle('droplet/droplet.min');
-        promise = this.loadSource('jsinterpreter/acorn_interpreter')()
-          .then(this.loadSource('requirejs/require'))
-          .then(this.loadSource('ace/ace'))
-          .then(this.loadSource('ace/ext-language_tools'))
-          .then(this.loadSource('droplet/droplet-full.min'));
-      } else {
-        promise = this.loadSource('blockly')()
-          .then(this.loadSource(opts.locale + '/blockly_locale'));
-      }
-      promise.then(this.loadSource('common' + opts.pretty))
-        .then(this.loadSource(opts.locale + '/common_locale'))
-        .then(this.loadSource(opts.locale + '/' + opts.app + '_locale'))
-        .then(this.loadSource(opts.app + opts.pretty))
-        .then(function() {
-          _this.startBlockly();
-        });
     }
 
     return BlocklyApp;

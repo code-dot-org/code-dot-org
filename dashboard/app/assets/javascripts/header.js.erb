@@ -89,22 +89,18 @@
     HeaderProgress.prototype.componentDidMount = function() {
       var _this = this;
 
-      // Create a new HeaderStore and bind it to my state.
       // TODO: Is this the right place to put this?
       // It guarantees there will be at least one render cycle before we try to load the header.
-      this.headerStore = new HeaderStore();
-      this.headerStore.notify( __bind(this.replaceState, this) );
+      this.props.headerStore.notify( __bind(this.replaceState, this) );
 
+      // This store is used to load the HTML overview of the entire script
+      // TODO: Combine this with the headerStore
       this.scriptStore = new ScriptStore();
       this.scriptStore.notify(function(html) {
         _this.setState({
           stageHtml: html
         });
       });
-
-      // TODO: Handle props changing.
-      if (this.props.script_name)
-        this.headerStore.load( this.props );
 
       // Create tooltips for the free-play icons
       // TODO: Might be better to initialize this component elsewhere
@@ -130,7 +126,7 @@
       var progress = state.progress || {};
 
       // Don't render unless we are initialized with a script
-      if (!this.props.script_name)
+      if (!script)
         return;
 
       // NOTE: All this DOM manipulation would be better done via a template - but we're in the process
@@ -251,7 +247,7 @@
 
         // Ask the script store to load a particular script.
         this.scriptStore.loadHTML({
-          script_name: this.props.script_name
+          script_id: this.script.id
         });
 
       }

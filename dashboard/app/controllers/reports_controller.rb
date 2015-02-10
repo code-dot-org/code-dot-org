@@ -58,6 +58,7 @@ SQL
 
     # Add in the user's current progress
     stage = script_level.stage
+    level = script_level.level
     game = script_level.level.game
 
     # TODO:  Do we really need to check all these options?
@@ -114,12 +115,37 @@ SQL
 
     end
 
+    # Prepare some globals for blockly_options()
+    @script = script
+    @level = level
+    @game = game
+    @script_level = script_level
+    @current_user = current_user
+
+    # TODO: @callouts,@autoplay_video_info,@fallback_response,@callback,@level_source_id,@phone_share_url
+
+    if level.unplugged?
+      # TODO: what does an unplugged level need?  'levels/unplug', locals: {app: @game.app}
+      level_data = {}
+    elsif level.is_a?(Blockly) && level.embed == 'true' && !@edit_blocks
+      level_data = blockly_options({ embed: true, hide_source: true, no_padding: true, show_finish: true })
+    elsif level.is_a?(DSLDefined)
+      # TODO: partial "levels/#{level.class.to_s.underscore}"
+      # TODO: What do I need to create 'levels/reference_area' ?
+      level_data = {}
+    else
+      level_data = blockly_options()
+    end
+    level_data[:locale] = js_locale
+
     render json: {
       script: {
+        id: script.id,
         stages: script.stages.to_a.count,
         trophies: !!script.trophies
       },
       stage: stage_data,
+      level: level_data,
       progress: user_data
     }
   end
