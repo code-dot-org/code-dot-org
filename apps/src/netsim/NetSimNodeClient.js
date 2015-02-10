@@ -261,7 +261,9 @@ NetSimNodeClient.prototype.connectToRouter = function (router, onComplete) {
 
       self.myWire = wire;
       self.myRouter = router;
-      onComplete(true);
+      self.status_ = "Connected to " + router.getDisplayName() +
+          " with address " + wire.localAddress;
+      self.update(onComplete);
     });
   });
 };
