@@ -38,6 +38,10 @@ el:
   whats_next_promote: "<a href='http://hourofcode.com/resources'> Προωθήστε την Ώρα του κώδικα</a>"
   n_have_learned_an_hoc: '<h1>#</h1><h3>έχει δοκιμάσει μια </h3><h2>Ώρα του κώδικα</h2>'
   anybody_can_learn: Όλοι μπορούν να μάθουν.
+  share_on_facebook: Μοιράσου το στο Facebook
+  share_on_twitter: Μοιράσου το στο Twitter
+  beyond_an_hour: Μετά από μια ώρα του κώδικα
+  get_started: Έναρξη
   register_now: Εγγραφείτε τώρα
   front_join_us_heading: Μια ώρα του κώδικα για κάθε μαθητή.
   front_join_us_description: H επιστήμη υπολογιστών είναι θεμέλιο για κάθε μαθητή. Βοηθήστε μας να το εισαγάγουμε σε 100 εκατομμύρια.
