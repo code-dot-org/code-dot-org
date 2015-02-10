@@ -173,106 +173,101 @@
       codeMirror('solution');
 
 :javascript
-  var callout_editor = CodeMirror.fromTextArea($('#level_callout_json').get(0), {
-    mode: 'javascript',
-    viewportMargin: Infinity,
-    matchBrackets: true
-  });
+  // <![CDATA[
+    var callout_editor = CodeMirror.fromTextArea($('#level_callout_json').get(0), {
+      mode: 'javascript',
+      viewportMargin: Infinity,
+      matchBrackets: true
+    });
 
-  var callouts = callout_editor.getValue();
-  var i = callouts.length - 1;
+    var callouts = callout_editor.getValue();
 
-  if (callouts.length > 0) {
-    var parsecallouts = JSON.parse(callouts);
+    if (callouts.length > 0) {
+      var parsecallouts = JSON.parse(callouts);
 
-    while(i>=0) {
-      if (parsecallouts[i]) {
-        $(".use_callout_" + i).prop("checked", true);
-        $(".localization_key_" + i).val(parsecallouts[i].localization_key);
-        $(".callout_text_" + i).val(parsecallouts[i].callout_text);
-        $(".element_id_" + i).val(parsecallouts[i].element_id);
-        if ((parsecallouts[i].qtip_config) && (parsecallouts[i].qtip_config.position))
-          $(".qtip_position_my_" + i).val(parsecallouts[i].qtip_config.position.my);
-        if ((parsecallouts[i].qtip_config) && (parsecallouts[i].qtip_config.position))
-          $(".qtip_position_at_" + i).val(parsecallouts[i].qtip_config.position.at);
-        if ((parsecallouts[i].qtip_config) && (parsecallouts[i].qtip_config.position) && (parsecallouts[i].qtip_config.position.adjust))
-          $(".qtip_position_adjust_x_" + i).val(parsecallouts[i].qtip_config.position.adjust.x);
-        if ((parsecallouts[i].qtip_config) && (parsecallouts[i].qtip_config.position) && (parsecallouts[i].qtip_config.position.adjust))
-          $(".qtip_position_adjust_y_" + i).val(parsecallouts[i].qtip_config.position.adjust.y);
-        if ((parsecallouts[i].qtip_config) && (parsecallouts[i].qtip_config.style) && (parsecallouts[i].qtip_config.style.classes) && (parsecallouts[i].qtip_config.style.classes == "no-tip"))
-          $(".qtip_hide_" + i).prop("checked", true);
+      for(var i=0; i<callouts.length; i++) {
+        if (parsecallouts[i]) {
+          $(".use_callout_" + i).prop("checked", true);
+          $(".localization_key_" + i).val(parsecallouts[i].localization_key);
+          $(".callout_text_" + i).val(parsecallouts[i].callout_text);
+          $(".element_id_" + i).val(parsecallouts[i].element_id);
+          if ((parsecallouts[i].qtip_config) && (parsecallouts[i].qtip_config.position))
+            $(".qtip_position_my_" + i).val(parsecallouts[i].qtip_config.position.my);
+          if ((parsecallouts[i].qtip_config) && (parsecallouts[i].qtip_config.position))
+            $(".qtip_position_at_" + i).val(parsecallouts[i].qtip_config.position.at);
+          if ((parsecallouts[i].qtip_config) && (parsecallouts[i].qtip_config.position) && (parsecallouts[i].qtip_config.position.adjust))
+            $(".qtip_position_adjust_x_" + i).val(parsecallouts[i].qtip_config.position.adjust.x);
+          if ((parsecallouts[i].qtip_config) && (parsecallouts[i].qtip_config.position) && (parsecallouts[i].qtip_config.position.adjust))
+            $(".qtip_position_adjust_y_" + i).val(parsecallouts[i].qtip_config.position.adjust.y);
+          if ((parsecallouts[i].qtip_config) && (parsecallouts[i].qtip_config.style) && (parsecallouts[i].qtip_config.style.classes) && (parsecallouts[i].qtip_config.style.classes == "no-tip"))
+            $(".qtip_hide_" + i).prop("checked", true);
+        }
       }
-      i--;
     }
-  }
 
-  var updated_callouts_0 = {};
-  var updated_callouts_1 = {};
-  var updated_callouts_2 = {};
-  var updated_callouts = [updated_callouts_0, updated_callouts_1, updated_callouts_2];
+    var updated_callouts_0 = {};
+    var updated_callouts_1 = {};
+    var updated_callouts_2 = {};
+    var updated_callouts = [updated_callouts_0, updated_callouts_1, updated_callouts_2];
 
-  i = updated_callouts.length - 1;
-  while(i>=0) {
-    updated_callouts[i].localization_key = "";
-    updated_callouts[i].callout_text = "";
-    updated_callouts[i].element_id = "";
-    updated_callouts[i].qtip_config = {};
-    updated_callouts[i].qtip_config.position = {};
-    updated_callouts[i].qtip_config.position.adjust = {};
-    updated_callouts[i].qtip_config.style = {};
+    for(i=0; i<updated_callouts.length; i++) {
+      updated_callouts[i].localization_key = "";
+      updated_callouts[i].callout_text = "";
+      updated_callouts[i].element_id = "";
+      updated_callouts[i].qtip_config = {};
+      updated_callouts[i].qtip_config.position = {};
+      updated_callouts[i].qtip_config.position.adjust = {};
+      updated_callouts[i].qtip_config.style = {};
 
-    if ($('.localization_key_' + i).val().length > 0)
-      updated_callouts[i].localization_key = $('.localization_key_' + i).val();
-    if ($('.callout_text_' + i).val().length > 0)
-      updated_callouts[i].callout_text = $('.callout_text_' + i).val();
-    if ($('.element_id_' + i).val().length > 0)
-      updated_callouts[i].element_id = $('.element_id_' + i).val();
-    if ($('.qtip_position_my_' + i).val().length > 0)
-      updated_callouts[i].qtip_config.position.my = $('.qtip_position_my_' + i).val();
-    if ($('.qtip_position_at_' + i).val().length > 0)
-      updated_callouts[i].qtip_config.position.at = $('.qtip_position_at_' + i).val();
-    if ($('.qtip_position_adjust_x_' + i).val().length > 0)
-      updated_callouts[i].qtip_config.position.adjust.x = $('.qtip_position_adjust_x_' + i).val();
-    if ($('.qtip_position_adjust_y_' + i).val().length > 0)
-      updated_callouts[i].qtip_config.position.adjust.y = $('.qtip_position_adjust_y_' + i).val();
-    if ($(".qtip_hide_" + i).prop("checked") == true)
-      updated_callouts[i].qtip_config.style.classes = "no-tip";
-    i--;
-  }
-
-  $(".callouteditor input, .callouteditor select").change(function() {
-    i = updated_callouts.length - 1;
-    while(i>=0) {
-      updated_callouts[i].localization_key = $(".localization_key_" + i).val();
-      updated_callouts[i].callout_text = $(".callout_text_" + i).val();
-      updated_callouts[i].element_id = $(".element_id_" + i).val();
-      updated_callouts[i].qtip_config.position.my = $(".qtip_position_my_" + i).val();
-      updated_callouts[i].qtip_config.position.at = $(".qtip_position_at_" + i).val();
-      updated_callouts[i].qtip_config.position.adjust.x = parseInt($(".qtip_position_adjust_x_" + i).val());
-      updated_callouts[i].qtip_config.position.adjust.y = parseInt($(".qtip_position_adjust_y_" + i).val());
-
+      if ($('.localization_key_' + i).val().length > 0)
+        updated_callouts[i].localization_key = $('.localization_key_' + i).val();
+      if ($('.callout_text_' + i).val().length > 0)
+        updated_callouts[i].callout_text = $('.callout_text_' + i).val();
+      if ($('.element_id_' + i).val().length > 0)
+        updated_callouts[i].element_id = $('.element_id_' + i).val();
+      if ($('.qtip_position_my_' + i).val().length > 0)
+        updated_callouts[i].qtip_config.position.my = $('.qtip_position_my_' + i).val();
+      if ($('.qtip_position_at_' + i).val().length > 0)
+        updated_callouts[i].qtip_config.position.at = $('.qtip_position_at_' + i).val();
+      if ($('.qtip_position_adjust_x_' + i).val().length > 0)
+        updated_callouts[i].qtip_config.position.adjust.x = $('.qtip_position_adjust_x_' + i).val();
+      if ($('.qtip_position_adjust_y_' + i).val().length > 0)
+        updated_callouts[i].qtip_config.position.adjust.y = $('.qtip_position_adjust_y_' + i).val();
       if ($(".qtip_hide_" + i).prop("checked") == true)
         updated_callouts[i].qtip_config.style.classes = "no-tip";
-      else
-        updated_callouts[i].qtip_config.style.classes = "";
-
-      i--;
-    }
-    
-    callout_editor.setValue("[\r")
-    if ($(".use_callout_0").prop("checked") == true) {
-      var stringified_callouts_0 = JSON.stringify(updated_callouts[0]);
-      callout_editor.replaceRange("  " + stringified_callouts_0 + "\r", CodeMirror.Pos(callout_editor.lastLine()));
     }
 
-    if ($(".use_callout_1").prop("checked") == true) {
-      var stringified_callouts_1 = JSON.stringify(updated_callouts[1]);
-      callout_editor.replaceRange(",  " + stringified_callouts_1 + "\r", CodeMirror.Pos(callout_editor.lastLine()));
-    }
+    $(".callouteditor input, .callouteditor select").change(function() {
+      for(i=0; i<updated_callouts.length; i++) {
+        updated_callouts[i].localization_key = $(".localization_key_" + i).val();
+        updated_callouts[i].callout_text = $(".callout_text_" + i).val();
+        updated_callouts[i].element_id = $(".element_id_" + i).val();
+        updated_callouts[i].qtip_config.position.my = $(".qtip_position_my_" + i).val();
+        updated_callouts[i].qtip_config.position.at = $(".qtip_position_at_" + i).val();
+        updated_callouts[i].qtip_config.position.adjust.x = parseInt($(".qtip_position_adjust_x_" + i).val());
+        updated_callouts[i].qtip_config.position.adjust.y = parseInt($(".qtip_position_adjust_y_" + i).val());
 
-    if ($(".use_callout_2").prop("checked") == true) {
-      var stringified_callouts_2 = JSON.stringify(updated_callouts[2]);
-      callout_editor.replaceRange(",  " + stringified_callouts_2 + "\r", CodeMirror.Pos(callout_editor.lastLine()));
-    }
-    callout_editor.replaceRange("]", CodeMirror.Pos(callout_editor.lastLine()));
-  })
+        if ($(".qtip_hide_" + i).prop("checked") == true)
+          updated_callouts[i].qtip_config.style.classes = "no-tip";
+        else
+          updated_callouts[i].qtip_config.style.classes = "";
+      }
+      
+      callout_editor.setValue("[\r")
+      if ($(".use_callout_0").prop("checked") == true) {
+        var stringified_callouts_0 = JSON.stringify(updated_callouts[0]);
+        callout_editor.replaceRange("  " + stringified_callouts_0 + "\r", CodeMirror.Pos(callout_editor.lastLine()));
+      }
+
+      if ($(".use_callout_1").prop("checked") == true) {
+        var stringified_callouts_1 = JSON.stringify(updated_callouts[1]);
+        callout_editor.replaceRange(",  " + stringified_callouts_1 + "\r", CodeMirror.Pos(callout_editor.lastLine()));
+      }
+
+      if ($(".use_callout_2").prop("checked") == true) {
+        var stringified_callouts_2 = JSON.stringify(updated_callouts[2]);
+        callout_editor.replaceRange(",  " + stringified_callouts_2 + "\r", CodeMirror.Pos(callout_editor.lastLine()));
+      }
+      callout_editor.replaceRange("]", CodeMirror.Pos(callout_editor.lastLine()));
+    })
+  // ]]>
