@@ -34,6 +34,9 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 ## Materials, Resources and Prep
 
+### For the Student
+- [Blank Design Recipe Form](design_recipe.pdf)
+
 ### For the Teacher
 - [Lesson Slide Deck](https://docs.google.com/a/code.org/presentation/d/1pKZEo764Rrr39fVnOJkjSFRRbqA_cq_vTCxP0dpbAy4)
 

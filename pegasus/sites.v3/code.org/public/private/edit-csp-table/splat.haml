@@ -1,6 +1,4 @@
 -dont_cache
--not_authorized! unless dashboard_user
--forbidden! unless dashboard_user[:admin]
 
 -encrypted_app_id = request.splat_path_info[1..-1].split('/').first
 -app_id = storage_decrypt_app_id(encrypted_app_id).last.to_s
