@@ -1,13 +1,18 @@
 <div id="netsim_lobby_open">
+  <label for="netsim_lobby_name">My Name:</label>
+  <input id="netsim_lobby_name" type="text" />
+  <input id="netsim_lobby_set_name_button" type="button" value="Set Name" />
   <label for="netsim_shard_select">My Section:</label>
   <select id="netsim_shard_select">
     <option selected value="__none">Loading...</option>
   </select>
+  <a class="shardLink" href="#">Share this private network</a>
   <input type="button" id="netsim_lobby_add_router" value="Add Router" />
   <ul id="netsim_lobby_list"></ul>
   <input type="button" id="netsim_lobby_connect" value="Connect" />
 </div>
 <div id="netsim_lobby_closed">
     <span id="netsim_lobby_statusbar">...</span>
+    <a class="shardLink" href="#">Share this private network</a>
     <input type="button" id="netsim_lobby_disconnect" value="Disconnect" />
 </div>

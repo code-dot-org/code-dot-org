@@ -27,7 +27,7 @@
  unused: true,
 
  maxlen: 90,
- maxparams: 3,
+ maxparams: 4,
  maxstatements: 200
  */
 /* global $ */
@@ -49,10 +49,12 @@ var CLOSED_REFRESH_INTERVAL_MS = 30000;
 
 /**
  * @param {NetSimConnection} connection - The shard connection that this
- *                           lobby control will manipulate.
+ *        lobby control will manipulate.
+ * @param {DashboardUser} user - The current user, logged in or not.
+ * @param {string} [shardID]
  * @constructor
  */
-var NetSimLobby = function (connection) {
+var NetSimLobby = function (connection, user, shardID) {
 
   /**
    * Shard connection that this lobby control will manipulate.
@@ -61,6 +63,20 @@ var NetSimLobby = function (connection) {
    */
   this.connection_ = connection;
   this.connection_.statusChanges.register(this, this.refreshLobby_);
+
+  /**
+   * Current user, logged in or no.
+   * @type {DashboardUser}
+   * @private
+   */
+  this.user_ = user;
+
+  /**
+   * Query-driven shard ID to use.
+   * @type {string}
+   * @private
+   */
+  this.overrideShardID_ = shardID;
 
   /**
    * Helper for running a regular lobby refresh
@@ -90,17 +106,20 @@ module.exports = NetSimLobby;
  * Generate a new NetSimLobby object, putting
  * its markup within the provided element and returning
  * the controller object.
- * @param {DOMElement} The container for the lobby markup
- * @param {NetSimConnection} The connection manager to use
+ * @param {DOMElement} element The container for the lobby markup
+ * @param {NetSimConnection} connection The connection manager to use
+ * @param {DashboardUser} user The current user info
+ * @param {string} [shardID] A particular shard ID to use, can be omitted which
+ *        causes the system to look for user section shards, or generate a
+ *        new one.
  * @return {NetSimLobby} A new controller for the generated lobby
  * @static
  */
-NetSimLobby.createWithin = function (element, connection) {
+NetSimLobby.createWithin = function (element, connection, user, shardID) {
   // Create a new NetSimLobby
-  var controller = new NetSimLobby(connection);
+  var controller = new NetSimLobby(connection, user, shardID);
   element.innerHTML = markup({});
   controller.bindElements_();
-  controller.refreshShardList_();
   return controller;
 };
 
@@ -112,6 +131,11 @@ NetSimLobby.createWithin = function (element, connection) {
 NetSimLobby.prototype.bindElements_ = function () {
   this.lobbyOpenDiv_ = document.getElementById('netsim_lobby_open');
   this.lobbyClosedDiv_ = document.getElementById('netsim_lobby_closed');
+
+  this.nameInput_ = $('#netsim_lobby_name');
+  this.setNameButton_ = $('#netsim_lobby_set_name_button');
+  dom.addClickTouchEvent(this.setNameButton_[0],
+      this.setNameButtonClick_.bind(this));
 
   this.shardSelector_ = document.getElementById('netsim_shard_select');
   $(this.shardSelector_).change(this.onShardSelectorChange_.bind(this));
@@ -132,7 +156,17 @@ NetSimLobby.prototype.bindElements_ = function () {
 
   this.connectionStatusSpan_ = document.getElementById('netsim_lobby_statusbar');
 
-  this.refreshLobby_();
+  $('.shardLink').hide();
+
+  if (this.user_.isSignedIn) {
+    this.nameInput_.val(this.user_.name);
+    this.nameInput_.prop('disabled', true);
+    this.setNameButton_.hide();
+
+    this.refreshShardList_();
+  } else {
+    this.shardSelector_.disabled = true;
+  }
 };
 
 /**
@@ -143,15 +177,25 @@ NetSimLobby.prototype.attachToRunLoop = function (runLoop) {
   this.periodicRefresh_.attachToRunLoop(runLoop);
 };
 
+NetSimLobby.prototype.setNameButtonClick_ = function () {
+  this.nameInput_.prop('disabled', true);
+  this.setNameButton_.hide();
+  this.shardSelector_.disabled = false;
+  this.refreshShardList_();
+};
+
 /** Handler for picking a new shard from the dropdown. */
 NetSimLobby.prototype.onShardSelectorChange_ = function () {
   if (this.connection_.isConnectedToShard()) {
     this.connection_.disconnectFromShard();
     this.periodicRefresh_.disable();
+    this.nameInput_.disabled = false;
   }
 
   if (this.shardSelector_.value !== '__none') {
-    this.connection_.connectToShard(this.shardSelector_.value);
+    this.nameInput_.disabled = true;
+    this.connection_.connectToShard(this.shardSelector_.value,
+        this.nameInput_.val());
   }
 };
 
@@ -183,17 +227,26 @@ NetSimLobby.prototype.refreshShardList_ = function () {
   // TODO (bbuchanan) : Use unique level ID when generating shard ID
   var levelID = 'demo';
   var shardSelector = this.shardSelector_;
+
+  if (this.overrideShardID_ !== undefined) {
+    this.useShard(this.overrideShardID_);
+    return;
+  }
+
+  if (!this.user_.isSignedIn) {
+    this.useRandomShard();
+    return;
+  }
+
   this.getUserSections_(function (data) {
+    if (0 === data.length) {
+      this.useRandomShard();
+      return;
+    }
+
     $(shardSelector).empty();
 
-    if (0 === data.length){
-      // If we didn't get any sections, we must deny access
-      $('<option>')
-          .val('__none')
-          .html('-- NONE FOUND --')
-          .appendTo(shardSelector);
-      return;
-    } else {
+    if (data.length > 1) {
       // If we have more than one section, require the user
       // to pick one.
       $('<option>')
@@ -213,6 +266,40 @@ NetSimLobby.prototype.refreshShardList_ = function () {
 
     self.onShardSelectorChange_();
   });
+};
+
+function createGuid()
+{
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+    var r = Math.random()*16|0, v = c === 'x' ? r : (r&0x3|0x8);
+    return v.toString(16);
+  });
+}
+
+NetSimLobby.prototype.useRandomShard = function () {
+  this.randomShardID = 'netsim_' + createGuid();
+  this.useShard(this.randomShardID);
+};
+
+NetSimLobby.prototype.useShard = function (shardID) {
+  $(this.shardSelector_).empty();
+
+  $('<option>')
+      .val(shardID)
+      .html('My Private Network')
+      .appendTo(this.shardSelector_);
+
+  $('.shardLink').
+      attr('href', this.buildShareLink(shardID)).
+      show();
+
+  this.onShardSelectorChange_();
+};
+
+NetSimLobby.prototype.buildShareLink = function (shardID) {
+  var baseLocation = document.location.protocol + '//' +
+      document.location.host + document.location.pathname;
+  return baseLocation + '?s=' + shardID;
 };
 
 /**

@@ -52,18 +52,17 @@ var CLEAN_UP_INTERVAL_MS = 10000;
 
 /**
  * A connection to a NetSim shard
- * @param {!string} displayName - Name for person on local end
  * @param {!NetSimLogWidget} sentLog - Widget to post sent messages to
  * @param {!NetSimLogWidget} receivedLog - Widget to post received messages to
  * @constructor
  */
-var NetSimConnection = function (displayName, sentLog, receivedLog) {
+var NetSimConnection = function (sentLog, receivedLog) {
   /**
    * Display name for user on local end of connection, to be uploaded to others.
    * @type {string}
    * @private
    */
-  this.displayName_ = displayName;
+  this.displayName_ = '';
 
   /**
    * @type {NetSimLogWidget}
@@ -163,16 +162,17 @@ NetSimConnection.prototype.onBeforeUnload_ = function () {
 /**
  * Establishes a new connection to a netsim shard, closing the old one
  * if present.
- * @param {string} shardID
+ * @param {!string} shardID
+ * @param {!string} displayName
  */
-NetSimConnection.prototype.connectToShard = function (shardID) {
+NetSimConnection.prototype.connectToShard = function (shardID, displayName) {
   if (this.isConnectedToShard()) {
     logger.warn("Auto-closing previous connection...");
     this.disconnectFromShard();
   }
 
   this.shard_ = new NetSimShard(shardID);
-  this.createMyClientNode_();
+  this.createMyClientNode_(displayName);
 };
 
 /** Ends the connection to the netsim shard. */
@@ -196,15 +196,16 @@ NetSimConnection.prototype.disconnectFromShard = function () {
 /**
  * Given a lobby table has already been configured, connects to that table
  * by inserting a row for ourselves into that table and saving the row ID.
+ * @param {!string} displayName
  * @private
  */
-NetSimConnection.prototype.createMyClientNode_ = function () {
+NetSimConnection.prototype.createMyClientNode_ = function (displayName) {
   var self = this;
   NetSimNodeClient.create(this.shard_, function (node) {
     if (node) {
       self.myNode = node;
       self.myNode.onChange.register(self, self.onMyNodeChange_);
-      self.myNode.setDisplayName(self.displayName_);
+      self.myNode.setDisplayName(displayName);
       self.myNode.setLogs(self.sentLog_, self.receivedLog_);
       self.myNode.update(function () {
         self.statusChanges.notifyObservers();
