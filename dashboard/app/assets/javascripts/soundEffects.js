@@ -64,21 +64,21 @@ function Sounds() {
 /**
  * Registers a sound from a list of sound URL paths.
  * Note: you can only register one sound resource per file type
- * @param {Array.<string>} filenames list of sound file URLs ending in their
+ * @param {Array.<string>} soundPaths list of sound file URLs ending in their
  *                                   file format (.mp3|.ogg|.wav)
  * @param {string} soundID ID for sound
  */
-Sounds.prototype.registerByFilenamesAndID = function (filenames, soundID) {
+Sounds.prototype.registerByFilenamesAndID = function (soundPaths, soundID) {
   var soundRegistrationConfig = { id: soundID };
-  for (var i = 0; i < filenames.length; i++) {
-    var filename = filenames[i];
+  for (var i = 0; i < soundPaths.length; i++) {
+    var soundFilePath = soundPaths[i];
     var getExtensionRegexp = /\.(\w+)(\?.*)?$/;
-    var extensionCaptureGroups = filename.match(getExtensionRegexp);
+    var extensionCaptureGroups = soundFilePath.match(getExtensionRegexp);
     if (extensionCaptureGroups) {
       // Extend soundRegistrationConfig with format options
       // so e.g. soundRegistrationConfig['mp3'] = 'file.mp3'
       var extension = extensionCaptureGroups[1];
-      soundRegistrationConfig[extension] = filename;
+      soundRegistrationConfig[extension] = soundFilePath;
     }
   }
   this.register(soundRegistrationConfig);
