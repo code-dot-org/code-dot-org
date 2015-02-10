@@ -33,15 +33,9 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 # Teaching Guide
 
 ## Materials, Resources and Prep
-### For the Student
-- Playing Cards
-- Paper for keeping track of how a program reacts to a card
-- Pens & Pencils
 
 ### For the Teacher
 - [Lesson Slide Deck](https://docs.google.com/a/code.org/presentation/d/1OnNkpXDU6GZreGRvquQU1qRKbEeH8WTvRU5DhlgI2Hk/)
-- One [Sample Program](/curriculum/course2/12/Activity12-Conditionals.pdf) for the class to look at
-- Print one [Conditionals with Cards Assessment](/curriculum/course2/12/Assessment12-Conditionals.pdf) for each student
 
 [/together]
 
@@ -55,7 +49,7 @@ This lesson has three new and important words:<br/>
 
 - **Clause** - a question and its corresponding answer in a conditional expression
 - **Conditional** - a code expression made of questions and answers
-- **Piecewise Function** - a function that computes different expressions based on its input
+- **Piecewise Function** - a function which evaluates the domain before choosing how to create the range
 
 ### <a name="GetStarted"></a> 2) Conditionals
 
@@ -121,8 +115,73 @@ Now let's play a game.
 ## Activities:
 ### <a name="Activity1"></a> 3) Conditionals and Piecewise Functions
 
-**This really needs an unpluggedy activity**
+Say to the class:
 
+- If I say *startAll*, then you all stand up and become computers that are obeying commands that are given.
+- If I say *shutDownAll*, then you all sit down and are no longer processing commands.  This is how we end the game.
+- If I say *shutDown*([“name1”,”name2”,...]), then any names listed must sit down.  When an individual makes a mistake, this is how they are removed from the game.  
+- Other than these commands, there is only one other command you know:  
+  *SimonSez*(“action”)
+
+The contract for SimonSez looks like this:
+SimonSez: String -> studentAction
+
+Review the contract parts:  name, domain, range, parameters(input types), return types(output values)
+
+Say to the class: “Here is what the initial code looks like.  We will add several clauses but the clauses that are there will always be there and the final else action (often called the default result) will always be Left Hand Down.”
+
+>  if (“Right Hand Up”) -> RaiseRightHand  
+>  elseif (“Right Hand Down”) -> LowerRightHand  
+>  elseif(“Left Hand Up”) -> LeftHandUp  
+>  else LeftHandDown  
+
+Example Play: (before beginning, you may want to review right and left with them, perhaps even writing it on the board for the slightly dyslexic) 
+
+- startAll
+- SimonSez(“Right Hand Up”)
+- SimonSez(“Right Hand Down”)
+- SimonSez(“Left Hand Up”)
+- SimonSez(“Right Hand Up”)
+- SimonSez(“Hokey Pokey”)   // should put left hand down.
+- SimonSez(“Left Hand Up”)
+- SimonSez(“Right Down”)      // “trick”.  No matches. Goes to default
+
+If anyone makes a mistake above make sure to say shutDown([“Sam”,”Pat”,Francis”...])
+
+You will likely want to go one more round before doing a restartAll.
+
+Say to the class:  “We will now add the following clauses to the middle of our code.  All the other pieces are still there.”
+
+> elseif(“Turn 180”) -> Turn180Clockwise  
+> elseif(“Turn 90”) -> Turn90Clockwise  
+
+Possible “tricks” to throw in as you randomly call out commands:  “Raise Right Hand”, “Lower Left Hand”, “Turn -90”, “Turn 270”, “Spin”
+
+Continue playing using both the commands in the clauses as well as the suggested “tricks” that will result in the default else of Left Hand Down.  Note that if Left Hand is already Down, this command still works but appears to do nothing.  Be sure to make students sit when then do things incorrectly.  Play until the students stop making errors and then add more clauses OR let one of the students be the controller and you join the ranks of the computers.
+
+Other suggestions to add (all at once or two at a time):
+> elseif(“Right Leg Forward”) -> RightLegForward  
+> elseif(“Right Leg Normal”) -> RightLegNormal  
+> elseif(“Left Leg Backward”) -> LeftLegBackward  
+> elseif(“Left Leg Normal”) -> LeftLegNormal  
+> elseif(“Head Look Up”) -> HeadLookUp  
+> elseif(“Head Look Normal”) -> HeadLookNormal  
+
+Note that if you want to add movement like step forward that you might want to add a sub-conditional such as “If way is blocked, ignore” or “If way is blocked, turn 180”.
+
+### Connection to Mathematics and Life
+
+There are piecewise functions in Mathematics as well.  The absolute value function y = |x| can be re-written as   
+y = { -x : x<0 , x : x>0, 0 }  
+Note that in mathematical terms, that the clause for the domain is usually listed second instead of first.  
+
+A data plan on a phone bill might be structured as:
+
+* $40 for less than 5 GB
+* $ 8 per GB for 5-10 GB
+* $12 per GB for using more than 10GB. 
+
+This could be graphed with the following piecewise function y = { 40: x<5, 8x: 5 =< x =< 10, 12x: x>10 }
 
 [/together]
 
