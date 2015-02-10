@@ -9,9 +9,25 @@ Tens of millions of students of all ages and backgrounds have tried an Hour of C
 
 While students worldwide join together to learn an Hour of Code during [our international campaign each December](http://hourofcode.com/), you can bring it to your students anytime.
 
+<br />
+
 [<button>Try the tutorials</button>](/learn) &nbsp;&nbsp; [<button>How-to guide for educators</button>](http://hourofcode.com/resources/how-to)
 
-![image](/images/fit-600/infographics/60-million-students.png)
+<br />
+<br />
+<br />
+
+<%= view :testimonials %>
+
+<br />
+<br />
+
+![image](/images/fit-380/infographics/60-million-students.png) &nbsp;&nbsp;&nbsp;&nbsp;![image](/images/fit-380/infographics/twice-every-second.png) 
+
+<br />
+<br />
+
+[<button>Try the tutorials</button>](/learn) &nbsp;&nbsp; [<button>How-to guide for educators</button>](http://hourofcode.com/resources/how-to)
 
 
 
