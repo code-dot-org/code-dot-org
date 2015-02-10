@@ -34,6 +34,7 @@
 'use strict';
 
 var dom = require('../dom');
+var utils = require('../utils');
 var NetSimNodeClient = require('./NetSimNodeClient');
 var NetSimNodeRouter = require('./NetSimNodeRouter');
 var markup = require('./NetSimLobby.html');
@@ -272,16 +273,8 @@ NetSimLobby.prototype.refreshShardList_ = function () {
   });
 };
 
-function createGuid()
-{
-  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-    var r = Math.random()*16|0, v = c === 'x' ? r : (r&0x3|0x8);
-    return v.toString(16);
-  });
-}
-
 NetSimLobby.prototype.useRandomShard = function () {
-  this.randomShardID = 'netsim_' + createGuid();
+  this.randomShardID = 'netsim_' + utils.createUuid();
   this.useShard(this.randomShardID);
 };
 
