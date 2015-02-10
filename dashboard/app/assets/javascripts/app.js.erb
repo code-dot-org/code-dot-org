@@ -148,7 +148,7 @@
 
       // s/:script_id/level/:level_id
       // (only applies to the 20-hour course)
-      re = /\/s\/\d+\/level\/(\d+)$/i;
+      re = /\/s\/\d+\/(level|puzzle)\/(\d+)$/i;
       parts = url.match(re);
       if (parts) {
         window.headerProgress = new HeaderProgress( $('.header-wrapper'), {
@@ -157,7 +157,7 @@
 
         headerStore.load({
           script_name: '20-hour',
-          level_id: parts[1]
+          level_id: parts[2]
         });
 
         return;
