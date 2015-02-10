@@ -170,7 +170,7 @@
       // Finished link
       if (stage.finishLink) {
         el = $('<div>').addClass('header_finished_link');
-        $('<a>').attr('href', state.finishLink.href).text(state.finishLink.text).appendTo(el);
+        $('<a>').attr('href', stage.finishLink.href).text(stage.finishLink.text).appendTo(el);
         el.appendTo($container);
       }
 
