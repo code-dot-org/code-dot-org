@@ -1,0 +1,7 @@
+name 'msm variables multi 4'
+title 'define x 3<br>define p 8<br>define q hello'
+question 'What is the value of x?'
+right '3'
+wrong '15'
+wrong 'do not know'
+
