@@ -27,7 +27,7 @@ Thank you for attending a Code.org K-5 workshop with <%= facilitator_name %><%= 
     <center>
   <![endif]-->
       <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fcode.org%2Feducate%2Fk5"
-style="background-color:#7e5ca2;border-radius:4px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:13px;font-weight:bold;line-height:45px;text-align:center;text-decoration:none;width:180px;-webkit-text-size-adjust:none;">Share on Facebook</a>
+style="background-color:#7e5ca2;border-radius:4px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:13px;font-weight:bold;line-height:35px;text-align:center;text-decoration:none;width:170px;-webkit-text-size-adjust:none;">Share on Facebook</a>
   <!--[if mso]>
     </center>
   </v:roundrect>
@@ -37,7 +37,7 @@ style="background-color:#7e5ca2;border-radius:4px;color:#ffffff;display:inline-b
     <center>
   <![endif]-->
       <a href="https://twitter.com/intent/tweet?hashtags=&related=codeorg&text=Sign+up+for+computer+science+professional+development+for+K-5+educators.&url=http%3A%2F%2Fbit.ly%2F1uLtsJE"
-style="background-color:#7e5ca2;border-radius:4px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:13px;font-weight:bold;line-height:45px;text-align:center;text-decoration:none;width:180px;-webkit-text-size-adjust:none;">Share on Twitter</a>
+style="background-color:#7e5ca2;border-radius:4px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:13px;font-weight:bold;line-height:35px;text-align:center;text-decoration:none;width:170px;-webkit-text-size-adjust:none;">Share on Twitter</a>
   <!--[if mso]>
     </center>
   </v:roundrect>
