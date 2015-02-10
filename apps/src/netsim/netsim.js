@@ -178,7 +178,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
   this.connection_ = new NetSimConnection(this.sentMessageLog_,
       this.receivedMessageLog_);
   this.connection_.attachToRunLoop(this.runLoop_);
-  this.connection_.statusChanges.register(this, this.refresh_);
+  this.connection_.statusChanges.register(this.refresh_.bind(this));
 
   var lobbyContainer = document.getElementById('netsim_lobby_container');
   this.lobbyControl_ = NetSimLobby.createWithin(lobbyContainer,

@@ -71,7 +71,7 @@ var NetSimLobby = function (connection, user, shardID) {
    * @private
    */
   this.connection_ = connection;
-  this.connection_.statusChanges.register(this, this.refresh_);
+  this.connection_.statusChanges.register(this.refresh_.bind(this));
 
   /**
    * Current user, logged in or no.

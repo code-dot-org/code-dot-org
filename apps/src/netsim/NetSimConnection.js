@@ -129,7 +129,7 @@ NetSimConnection.prototype.attachToRunLoop = function (runLoop) {
   this.periodicCleanUp_.attachToRunLoop(runLoop);
   this.periodicCleanUp_.enable();
 
-  runLoop.tick.register(this, this.tick);
+  runLoop.tick.register(this.tick.bind(this));
 };
 
 /** @param {!RunLoop.Clock} clock */
@@ -204,7 +204,7 @@ NetSimConnection.prototype.createMyClientNode_ = function (displayName) {
   NetSimNodeClient.create(this.shard_, function (node) {
     if (node) {
       self.myNode = node;
-      self.myNode.onChange.register(self, self.onMyNodeChange_);
+      self.myNode.onChange.register(self.onMyNodeChange_.bind(self));
       self.myNode.setDisplayName(displayName);
       self.myNode.setLogs(self.sentLog_, self.receivedLog_);
       self.myNode.update(function () {

@@ -55,7 +55,8 @@ var NetSimRouterPanel = function (connection) {
    * @private
    */
   this.connection_ = connection;
-  this.connection_.statusChanges.register(this, this.onConnectionStatusChange_);
+  this.connection_.statusChanges
+      .register(this.onConnectionStatusChange_.bind(this));
 
   /**
    * Helper for triggering refresh on a regular interval
