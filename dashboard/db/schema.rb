@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150206185854) do
+ActiveRecord::Schema.define(version: 20150210190212) do
 
   create_table "activities", force: true do |t|
     t.integer  "user_id"
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 20150206185854) do
     t.integer  "script_level_id"
     t.text     "qtip_config"
     t.string   "on"
+    t.string   "callout_text"
   end
 
   create_table "concepts", force: true do |t|
