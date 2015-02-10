@@ -20,8 +20,9 @@
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "callout_json": "[{\"localization_key\": \"repeat_blocks\", \"element_id\": \"[block-id='4']\", \"qtip_config\": {\"position\": {\"my\": \"left center\", \"at\": \"right center\"}}}]",
-    "impressive": "false"
+    "callout_json": "[\r\n  {\"localization_key\":\"repeat_blocks\",\"callout_text\":\"Use the \\\"Repeat\\\" block and wrap it around the blocks in the workspace\",\"element_id\":\"[block-id='4']\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"left center\",\"at\":\"right center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
+    "impressive": "false",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>
