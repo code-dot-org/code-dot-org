@@ -17,7 +17,8 @@
     "free_play": "false",
     "open_function_definition": "rect-wide",
     "default_num_example_blocks": "2",
-    "min_workspace_height": "1500"
+    "min_workspace_height": "1500",
+    "callout_json": "[\r\n  {\"localization_key\":\"function_editor_draw_square\",\"callout_text\":\"This is your function definition. These blocks run everytime you use the \\\"draw a square\\\" block\",\"element_id\":\"[block-id='38']\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"bottom center\",\"at\":\"top center\"},\"style\":{\"classes\":\"\"}}}\r\n]"
   }
 }]]></config>
   <blocks>
