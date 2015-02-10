@@ -509,7 +509,19 @@
     }
 
     BlocklyApp.prototype.render = function() {
-      // Nothing to do yet because it's all server-side rendered
+      var el;
+
+      this.$el.html('');
+
+      $('<div>').addClass('loading').appendTo(this.$el);
+
+      el = $('<div>').addClass('slow_load').text('<%= I18n.t(:slow_loading) %>').appendTo(this.$el);
+
+      $('<br>').appendTo(el);
+
+      $('<a>', {
+        href: 'javascript: location.reload();'
+      }).text('<%= I18n.t(:try_reloading) %>').appendTo(el);
     }
 
     BlocklyApp.prototype.componentDidMount = function() {

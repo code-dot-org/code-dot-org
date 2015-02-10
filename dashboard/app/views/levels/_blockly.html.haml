@@ -5,15 +5,10 @@
 %div{style: 'display: none;'}= render partial: 'levels/reference_area'
 
 #blocklyApp
-  .loading
-  .slow_load
-    = t(:slow_loading)
-    %br
-    %a{href: 'javascript: location.reload();'}= t(:try_reloading)
 
-  :javascript
-    //<![CDATA[
-    var script_path = "#{@script_level && build_script_level_path(@script_level)}";
-    var appOptions = #{blockly_options(local_assigns).to_json};
-    appOptions.locale = '#{js_locale}';
-    //]]>
+:javascript
+  //<![CDATA[
+  var script_path = "#{@script_level && build_script_level_path(@script_level)}";
+  var appOptions = #{blockly_options(local_assigns).to_json};
+  appOptions.locale = '#{js_locale}';
+  //]]>
