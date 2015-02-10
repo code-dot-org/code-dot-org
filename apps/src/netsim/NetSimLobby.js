@@ -299,9 +299,9 @@ NetSimLobby.prototype.useShard = function (shardID) {
       .html('My Private Network')
       .appendTo(this.shardSelector_);
 
-  this.shardLinks_.
-      attr('href', this.buildShareLink(shardID)).
-      show();
+  this.shardLinks_
+      .attr('href', this.buildShareLink(shardID))
+      .show();
 
   this.onShardSelectorChange_();
 };

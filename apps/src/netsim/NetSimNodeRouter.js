@@ -186,11 +186,11 @@ NetSimNodeRouter.prototype.getConnections = function (onComplete) {
       return;
     }
 
-    var myWires = rows.
-        map(function (row) {
+    var myWires = rows
+        .map(function (row) {
           return new NetSimWire(shard, row);
-        }).
-        filter(function (wire){
+        })
+        .filter(function (wire){
           return wire.remoteNodeID === routerID;
         });
 
