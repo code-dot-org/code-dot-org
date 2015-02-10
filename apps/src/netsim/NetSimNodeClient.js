@@ -338,7 +338,17 @@ NetSimNodeClient.prototype.onMessageTableChange_ = function (rows) {
   if (messages.length > 0) {
     this.isProcessingMessages_ = true;
     messages.forEach(function (message) {
-      self.handleMessage_(message);
+
+      // Pull the message off the wire, and hold it in-memory until we route it.
+      // We'll create a new one with the same payload if we have to send it on.
+      message.destroy(function (success) {
+        if (success) {
+          self.handleMessage_(message);
+        } else {
+          logger.error("Error pulling message off the wire.");
+        }
+      });
+
     });
     this.isProcessingMessages_ = false;
   }
@@ -350,10 +360,6 @@ NetSimNodeClient.prototype.onMessageTableChange_ = function (rows) {
  * @private
  */
 NetSimNodeClient.prototype.handleMessage_ = function (message) {
-  // Pull the message off the wire, and hold it in-memory until we route it.
-  // We'll create a new one with the same payload if we have to send it on.
-  message.destroy();
-
   // TODO: How much validation should we do here?
   if (this.receivedLog_) {
     this.receivedLog_.log(JSON.stringify(message.payload));

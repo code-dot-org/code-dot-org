@@ -337,7 +337,17 @@ NetSimNodeRouter.prototype.onMessageTableChange_ = function (rows) {
     this.isProcessingMessages_ = true;
     this.getConnections(function (wires) {
       messages.forEach(function (message) {
-        self.routeMessage_(message, wires);
+
+        // Pull the message off the wire, and hold it in-memory until we route it.
+        // We'll create a new one with the same payload if we have to send it on.
+        message.destroy(function (success) {
+          if (success) {
+            self.routeMessage_(message, wires);
+          } else {
+            logger.error("Error pulling message off the wire for routing");
+          }
+        });
+
       });
       self.isProcessingMessages_ = false;
     });
@@ -345,10 +355,6 @@ NetSimNodeRouter.prototype.onMessageTableChange_ = function (rows) {
 };
 
 NetSimNodeRouter.prototype.routeMessage_ = function (message, myWires) {
-  // Pull the message off the wire, and hold it in-memory until we route it.
-  // We'll create a new one with the same payload if we have to send it on.
-  message.destroy();
-
   // Find a connection to route this message to.
   var toAddress = message.payload.toAddress;
   if (toAddress === undefined) {
