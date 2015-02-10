@@ -38,6 +38,10 @@ es:
   whats_next_promote: "<a href='http://hourofcode.com/resources'>Promueve la Hora de Código</a>"
   n_have_learned_an_hoc: '<h1>#</h1><h3>han probado la</h3><h2>Hora del código</h2>'
   anybody_can_learn: Cualquier persona puede aprender.
+  get_started: Inicio
+  beyond_an_hour: Más allá de una Hora del Código
+  share_on_facebook: Compartir en Facebook
+  share_on_twitter: Compartir en Facebook
   register_now: Registrate Ahora
   front_join_us_heading: Una hora de código para cada estudiante.
   front_join_us_description: Las ciencias de computación son una base para todo estudiante. Ayúdanos a presentarlas a 100 millones.

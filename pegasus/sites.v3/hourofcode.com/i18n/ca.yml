@@ -38,6 +38,10 @@ ca:
   whats_next_promote: "<a href='http://hourofcode.com/resources'>Promote the Hour of Code</a>"
   n_have_learned_an_hoc: '<h1>#</h1><h3>has provat una</h3><h2>Hora de Codi</h2>'
   anybody_can_learn: Qualsevol pot aprendre.
+  share_on_facebook: Comparteix a Facebook
+  share_on_twitter: Comparteix a Twitter
+  beyond_an_hour: Més enllà d'una Hora del Codi
+  get_started: Inici
   register_now: "Registra't ara"
   front_join_us_heading: Una Hora de Codi per a cada alumne.
   front_join_us_description: "La informàtica és la base per a tots els estudiants. Ajuda'ns a arribar als 100 milions."

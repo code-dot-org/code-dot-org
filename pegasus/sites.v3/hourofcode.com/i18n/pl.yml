@@ -37,6 +37,10 @@ pl:
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>Jak przeprowadzić Godzinę kodowania?</a>"
   whats_next_promote: "<a href='http://hourofcode.com/resources'>Promuj Godzinę kodowania</a>"
   n_have_learned_an_hoc: '<h1>#</h1><h3>spróbowało</h3><h2>Godziny Kodowania</h2>'
+  share_on_facebook: Udostępnij na Facebooku
+  share_on_twitter: Udostępnij na Twitterze
+  beyond_an_hour: Poza Godziną Kodowania
+  get_started: Start
   anybody_can_learn: Każdy może się nauczyć.
   register_now: Zapisz się teraz
   front_join_us_heading: Godzina Kodowania dla każdego ucznia.

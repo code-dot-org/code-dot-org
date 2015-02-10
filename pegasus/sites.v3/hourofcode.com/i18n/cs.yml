@@ -38,6 +38,10 @@ cs:
   whats_next_promote: "<a href='http://hourofcode.com/resources'>Propagovat Hodinu kódu</a>"
   n_have_learned_an_hoc: '<h1>#</h1><h3>zkusil jsem si</h3><h2>Hodinu kódu</h2>'
   anybody_can_learn: Kdokoliv se může učit.
+  share_on_facebook: Sdílet na Facebooku
+  share_on_twitter: Sdílet na Twitteru
+  beyond_an_hour: Beyond an Hour of Code
+  get_started: Spustit
   register_now: Zaregistrovat se nyní
   front_join_us_heading: Hodina kódu pro každého studenta.
   front_join_us_description: Informatika je základem pro každého studenta. Pomozte nám ji představit stovce milionů.

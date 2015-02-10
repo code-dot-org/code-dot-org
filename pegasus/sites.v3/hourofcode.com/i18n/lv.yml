@@ -40,6 +40,10 @@ lv:
   whats_next_promote: |-
     <a href='http://hourofcode.com/resources'>Reklamēt "Programmēšanas stundu"</a>
   n_have_learned_an_hoc: '<h1>#</h1><h3>ir mēģinājuši</h3><h2>"Programmēšanas stunda"</h2>'
+  share_on_facebook: Dalīties ar Facebook
+  share_on_twitter: Share ar Twitter
+  beyond_an_hour: Pēc Programmēšanas stundas
+  get_started: Sākt
   anybody_can_learn: Jebkurš var iemācīties.
   register_now: Reģistrējies tagad
   front_join_us_heading: '"Programmēšanas stunda" katram skolēnam.'

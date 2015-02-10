@@ -38,6 +38,10 @@ hu:
   whats_next_promote: "<a href='http://hourofcode.com/resources'>Népszerűsítsd a Kódolás Óráját</a>"
   n_have_learned_an_hoc: '<h1>#</h1><h3> fő vett már részt </h3><h2>Hour of Code</h2> órán'
   anybody_can_learn: Bárki megtanulhatja.
+  share_on_facebook: Megosztás a Facebookon
+  share_on_twitter: Megosztás a Twitteren
+  beyond_an_hour: A Kódolás óráján túl
+  get_started: Kezdés
   register_now: Regisztrálj most
   front_join_us_heading: Minden diáknak legyen egy Kódolás Órája.
   front_join_us_description: Az informatika megismerése alapszükséglet minden diák számára. Segíts hogy legalább 100 millióan hozzájussanak.

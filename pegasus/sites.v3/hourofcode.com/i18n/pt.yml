@@ -37,6 +37,10 @@ pt:
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'> como executar uma hora de código</a>"
   whats_next_promote: "<a href='http://hourofcode.com/resources'> promover a hora do código</a>"
   n_have_learned_an_hoc: '<h1>#</h1><h3>tentaram uma</h3><h2>HORA do CÓDIGO</h2>'
+  share_on_facebook: Compartilhar no Facebook
+  share_on_twitter: Compartilhar no Twitter
+  beyond_an_hour: Além da Hora do Código
+  get_started: Começar
   anybody_can_learn: Qualquer um pode aprender.
   register_now: Registe-se Agora
   front_join_us_heading: Uma Hora do Código para cada aluno.
