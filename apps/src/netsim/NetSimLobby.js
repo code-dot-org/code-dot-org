@@ -49,6 +49,14 @@ var AUTO_REFRESH_INTERVAL_MS = 5000;
 var CLOSED_REFRESH_INTERVAL_MS = 30000;
 
 /**
+ * Value of any option in the shard selector that does not
+ * represent an actual shard - e.g. '-- PICK ONE --'
+ * @type {string}
+ * @const
+ */
+var SELECTOR_NONE_VALUE = 'none';
+
+/**
  * @param {NetSimConnection} connection - The shard connection that this
  *        lobby control will manipulate.
  * @param {DashboardUser} user - The current user, logged in or not.
@@ -197,7 +205,7 @@ NetSimLobby.prototype.onShardSelectorChange_ = function () {
     this.nameInput_.disabled = false;
   }
 
-  if (this.shardSelector_.val() !== '__none') {
+  if (this.shardSelector_.val() !== SELECTOR_NONE_VALUE) {
     this.nameInput_.disabled = true;
     this.connection_.connectToShard(this.shardSelector_.val(),
         this.nameInput_.val());
@@ -255,7 +263,7 @@ NetSimLobby.prototype.refreshShardList_ = function () {
       // If we have more than one section, require the user
       // to pick one.
       $('<option>')
-          .val('__none')
+          .val(SELECTOR_NONE_VALUE)
           .html('-- PICK ONE --')
           .appendTo(shardSelector);
     }
@@ -353,7 +361,7 @@ NetSimLobby.prototype.refreshOpenLobby_ = function () {
 
   // Do we have a shard yet?
   if (!this.connection_.isConnectedToShard()) {
-    this.shardSelector_.val('__none');
+    this.shardSelector_.val(SELECTOR_NONE_VALUE);
     this.addRouterButton_.hide();
     this.lobbyList_.hide();
     this.connectButton_.hide();
