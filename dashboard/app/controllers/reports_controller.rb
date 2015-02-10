@@ -28,8 +28,13 @@ SQL
 
   def header_stats
     script_name = params[:script_name]
+    script_id = params[:script_id]
 
-    @script = Script.find_by_name(script_name)
+    if script_name
+      @script = Script.find_by_name(script_name)
+    elsif script_id
+      @script = Script.find(script_id)
+    end
     raise ActiveRecord::RecordNotFound unless @script
 
     render file: 'shared/_user_stats', layout: false, locals: { user: current_user }
