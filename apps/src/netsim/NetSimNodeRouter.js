@@ -294,7 +294,6 @@ NetSimNodeRouter.prototype.requestAddress = function (wire, hostname, onComplete
 NetSimNodeRouter.prototype.getAddressTable = function (onComplete) {
   onComplete = onComplete || function () {};
 
-  var self = this;
   this.getConnections(function (wires) {
     var addressTable = wires.map(function (wire) {
       return {
