@@ -5,6 +5,8 @@ module Ops
     # CanCan provides automatic resource loading and authorization for default index + CRUD actions
     check_authorization
     load_and_authorize_resource
+    skip_before_filter :verify_authenticity_token
+    respond_to :html, :xml, :json
 
     # get /ops/districts/1/teachers
     def teachers
@@ -19,7 +21,7 @@ module Ops
 
     # GET /ops/districts
     def index
-      respond_with @districts
+      render text: @districts.to_json
     end
 
     # GET /ops/districts/1
