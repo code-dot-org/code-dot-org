@@ -53,8 +53,8 @@ module Ops
     test 'Facilitators can mark attendance for each segment' do
       #87055176
 
-      # Facilitator gets a list of all teachers in the workshop (e.g., /ops/workshops/1/teachers)
-      # Facilitator POSTs an object to the segment path containing an array of {id: status} entries
+      # Facilitator gets a list of all teachers in the workshop (e.g., GET /ops/workshops/1/teachers)
+      # Facilitator POSTs an object to the segment path: {attendance => [[id, status], [id, status], ..]}
       assert_routing({ path: 'ops/segments/1/attendance/batch', method: :post }, { controller: 'ops/workshop_attendance', action: 'batch', segment_id: '1'})
 
       segment = @attendance.segment
