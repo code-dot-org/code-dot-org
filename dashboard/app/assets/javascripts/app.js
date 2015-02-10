@@ -277,19 +277,281 @@
 
 
 
-  // class Application
-  var Application = (function() {
+  // class UIFrame
+  var UIFrame = (function() {
 
-    function Application() {
+    function UIFrame() {
       this.router = new UIRouter();
     }
 
-    Application.prototype.init = function() {
+    UIFrame.prototype.init = function() {
       this.router.route();
+
+      // Special handling for #blocklyApp
+      var el = $('#blocklyApp');
+      if (el.length) {
+        this.app = new BlocklyApp( el, { opts: window.appOptions });
+      }
+
     }
 
-    return Application;
+    // Returns a function which returns a $.Deferred instance. When executed, the
+    // function loads the given app script.
+    UIFrame.prototype.loadSource = function(src) {
+      return function () {
+        return $.ajax({
+          url: src,
+          dataType: "script",
+          cache: true
+        });
+      }
+    }
+
+    // Loads the given app stylesheet.
+    UIFrame.prototype.loadStyle = function(href) {
+      $('<link>', {
+        rel: 'stylesheet',
+        type: 'text/css',
+        href: href
+      }).appendTo(document.body);
+    }
+
+    return UIFrame;
   })();
+
+
+
+
+  // class BlocklyApp extends UIComponent
+  var BlocklyApp = (function(_super) {
+    __extends(BlocklyApp, _super);
+
+    // Must have a constructor
+    function BlocklyApp() {
+      // TODO: Remove this
+      window.startTiming('Puzzle', window.script_path, '');
+
+      return BlocklyApp.__super__.constructor.apply(this, arguments);
+    }
+
+    BlocklyApp.prototype.loadSource = function(name) {
+      return Frame.loadSource(this.props.opts.baseUrl + 'js/' + name + '.js');
+    }
+
+    BlocklyApp.prototype.loadStyle = function(name) {
+      return Frame.loadStyle(this.props.opts.baseUrl + 'css/' + name + '.css');
+    }
+
+    // Sets up default options and initializes blockly
+    BlocklyApp.prototype.startBlockly = function(name) {
+      if (!this.isMounted())
+        return;
+
+      var opts = this.props.opts;
+      opts.containerId = this.$el.attr('id');
+
+      // Turn string values into functions for keys that begin with 'fn_' (JSON can't contain function definitions)
+      // E.g. { fn_example: 'function () { return; }' } becomes { example: function () { return; } }
+      (function fixUpFunctions(node) {
+        if (typeof node !== 'object') return;
+
+        for (var i in node) {
+          if (/^fn_/.test(i)) {
+            try {
+              node[i.replace(/^fn_/, '')] = eval('(' + node[i] + ')');
+            } catch (e) { }
+          } else {
+            fixUpFunctions(node[i]);
+          }
+        }
+      })(opts.level);
+
+      // Add all the default options for blockly.
+      // Note that "this" in functions below is the blockly object, not this component.
+      $.extend(opts, {
+        Dialog: Dialog,
+        cdoSounds: CDOSounds,
+        position: { blockYCoordinateInterval: 25 },
+        onInitialize: function() {
+
+          // Hide callouts when the function editor is closed (otherwise they jump to the top left corner)
+          $(window).on('function_editor_closed', function() {
+            $('.cdo-qtips').qtip('hide');
+          });
+
+          this.createCallouts();
+          if (window.wrapExistingClipPaths && window.handleClipPathChanges) {
+            wrapExistingClipPaths();
+            handleClipPathChanges();
+          }
+          $(document).trigger('appInitialized');
+        },
+        createCallouts: function() {
+          $.fn.qtip.zindex = 500;
+          this.callouts && this.callouts.every(function(callout) {
+            var selector = callout.element_id; // jquery selector.
+            if ($(selector).length === 0 && !callout.on) {
+              return true;
+            }
+
+            var defaultConfig = {
+              content: {
+                text: callout.localized_text,
+                title: {
+                  button: $('<div class="tooltip-x-close"/>')
+                }
+              },
+              style: {
+                classes: "",
+                tip: {
+                  width: 20,
+                  height: 20
+                }
+              },
+              position: {
+                my: "bottom left",
+                at: "top right"
+              },
+              hide: {
+                event: 'click mousedown touchstart'
+              },
+              show: false // don't show on mouseover
+            };
+
+            var customConfig = $.parseJSON(callout.qtip_config);
+            var config = $.extend(true, {}, defaultConfig, customConfig);
+            config.style.classes = config.style.classes.concat(" cdo-qtips");
+
+            function reverseDirection(token) {
+              if (/left/i.test(token)) {
+                token = 'right';
+              } else if (/right/i.test(token)) {
+                token = 'left';
+              }
+              return token;
+            }
+
+            function reverseCallout(position) {
+              position = position.split(/\s+/);
+              var a = position[0];
+              var b = position[1];
+              return reverseDirection(a) + reverseDirection(b);
+            }
+
+            // Reverse callouts in RTL mode
+            if (Blockly.RTL) {
+              config.position.my = reverseCallout(config.position.my);
+              config.position.at = reverseCallout(config.position.at);
+              if (config.position.adjust) {
+                config.position.adjust.x *= -1;
+              }
+            }
+
+            if (callout.on) {
+              window.addEventListener(callout.on, function() {
+                if (!callout.seen && $(selector).length > 0) {
+                  callout.seen = true;
+                  $(selector).qtip(config).qtip('show');
+                }
+              });
+            } else {
+              $(selector).qtip(config).qtip('show');
+            }
+
+            return true;
+          });
+        },
+        onAttempt: function(report) {
+          report.fallbackResponse = appOptions.report.fallback_response;
+          report.callback = appOptions.report.callback;
+          // Track puzzle attempt event
+          trackEvent('Puzzle', 'Attempt', script_path, report.pass ? 1 : 0);
+          if (report.pass) {
+            trackEvent('Puzzle', 'Success', script_path, report.attempt);
+            stopTiming('Puzzle', script_path, '');
+          }
+          trackEvent('Activity', 'Lines of Code', script_path, report.lines);
+          sendReport(report);
+        },
+        onResetPressed: function() {
+          cancelReport();
+        },
+        onContinue: function() {
+          if (lastServerResponse.videoInfo) {
+            showVideoDialog(lastServerResponse.videoInfo);
+          } else if (lastServerResponse.nextRedirect) {
+            window.location.href = lastServerResponse.nextRedirect;
+          }
+        },
+        backToPreviousLevel: function() {
+          if (lastServerResponse.previousLevelRedirect) {
+            window.location.href = lastServerResponse.previousLevelRedirect;
+          }
+        },
+        showInstructionsWrapper: function(showInstructions) {
+          var hasInstructions = appOptions.level.instructions || appOptions.level.aniGifURL;
+          if (!hasInstructions || this.share || appOptions.level.skipInstructionsPopup) {
+            return;
+          }
+
+          if (appOptions.autoplayVideo) {
+            showVideoDialog(appOptions.autoplayVideo);
+            $('.video-modal').on('hidden.bs.modal', function () {
+              showInstructions();
+            });
+          } else {
+            showInstructions();
+          }
+        }
+      });
+
+      window[opts.app + 'Main'](opts);
+    }
+
+    BlocklyApp.prototype.render = function() {
+      // Nothing to do yet because it's all server-side rendered
+    }
+
+    BlocklyApp.prototype.componentDidMount = function() {
+      var _this = this;
+
+      // Show a slow-loading warning if it takes more than 10 seconds to initialize
+      var slow_load = _this.$el.find('.slow_load');
+      setTimeout(function() {
+        slow_load.show();
+      }, 10000);
+
+      var opts = this.props.opts || {};
+
+      // Load the required assets
+      this.loadStyle('common');
+      this.loadStyle(opts.app);
+
+      var promise;
+      if (opts.droplet) {
+        loadStyle('droplet/droplet.min');
+        promise = this.loadSource('jsinterpreter/acorn_interpreter')()
+          .then(this.loadSource('requirejs/require'))
+          .then(this.loadSource('ace/ace'))
+          .then(this.loadSource('ace/ext-language_tools'))
+          .then(this.loadSource('droplet/droplet-full.min'));
+      } else {
+        promise = this.loadSource('blockly')()
+          .then(this.loadSource(opts.locale + '/blockly_locale'));
+      }
+      promise.then(this.loadSource('common' + opts.pretty))
+        .then(this.loadSource(opts.locale + '/common_locale'))
+        .then(this.loadSource(opts.locale + '/' + opts.app + '_locale'))
+        .then(this.loadSource(opts.app + opts.pretty))
+        .then(function() {
+          _this.startBlockly();
+        });
+    }
+
+    return BlocklyApp;
+  })(UIComponent);
+
+
 
 
 
@@ -298,10 +560,13 @@
   window.UIStore = UIStore;
   window.UIComponent = UIComponent;
   window.UIRouter = UIRouter;
-  window.App = new Application();
+  window.UIFrame = UIFrame;
+  window.BlocklyApp = BlocklyApp;
+
+  window.Frame = new UIFrame();
 
   $(document).ready(function() {
-    window.App.init();
+    Frame.init();
   });
 
 }).call(this);

@@ -48,8 +48,6 @@ if (!window.console.log) {
   window.console.log = function () { };
 }
 
-var KEY_ESCAPE = 27;
-
 // Wrap existing window onerror caller with a script error check.  If we have a
 // script error and a url, throw that so that we have the info in new relic.
 var windowOnError = window.onerror;
@@ -63,16 +61,13 @@ window.onerror = function (msg, url, ln) {
 };
 
 // Prevent escape from canceling page loads.
+var KEY_ESCAPE = 27;
 $(document).keydown(function(e) {
   if (e.keyCode === KEY_ESCAPE) {
     e.stopPropagation();
     e.preventDefault();
   }
 });
-
-setTimeout(function() {
-  $('#blocklyApp .slow_load').show();
-}, 10000);
 
 function cache_bust_only() {
     return 'bust cache';
