@@ -27,12 +27,15 @@ SQL
   end
 
   def header_stats
-    render file: 'shared/_user_stats', layout: false, locals: {user: current_user}
+    script_name = params[:script_name]
+
+    @script = Script.find_by_name(script_name)
+    raise ActiveRecord::RecordNotFound unless @script
+
+    render file: 'shared/_user_stats', layout: false, locals: { user: current_user }
   end
 
   def user_progress
-
-    # TODO: What kind of errors should we be throwing?
     script_name = params[:script_name]
     stage_id = params[:stage_id]
     level_id = params[:level_id]
@@ -49,8 +52,77 @@ SQL
     raise ActiveRecord::RecordNotFound unless script_level
 
     # Add in the user's current progress
-    render json: header_progress(script_level)
+    stage = script_level.stage
+    game = script_level.level.game
+
+    # TODO:  Do we really need to check all these options?
+    # Why are we looking at the user's "game" etc to show a script map?
+    game_levels =
+      if current_user
+        current_user.levels_from_script(script, game.id, stage)
+      elsif stage
+        script.script_levels.to_a.select{|sl| sl.stage_id == script_level.stage_id}
+      else
+        script.script_levels.to_a.select{|sl| sl.level.game_id == script_level.level.game_id}
+      end
+
+    stage_data = {
+      title: stage_title(script, script_level.stage_or_game),
+      levels: game_levels.map do |sl|
+        {
+          id: sl.level.id,
+          label: sl.level_display_text,
+          link: build_script_level_path(sl),
+          unplugged: !!sl.level.unplugged?,
+          assessment: !!sl.assessment
+        }
+      end
+    }
+
+    if script.hoc?
+      stage_data[:finishLink] = {
+        text: t('nav.header.finished_hoc'),
+        href: hoc_finish_url(script)
+      }
+    end
+
+    # USER-SPECIFIC DATA
+    if current_user
+      user_data = {
+        linesOfCode: current_user.total_lines,
+        linesOfCodeText: t('nav.popup.lines', lines: current_user.total_lines),
+        status: {}
+      }
+      game_levels.map do |sl|
+        completion_status, link = level_info(current_user, sl)
+        user_data[:status][sl.level.id] = completion_status unless completion_status == 'not_tried'
+      end
+
+      if script.trophies
+        progress = current_user.progress(script)
+        user_data[:trophies] = {
+          current: progress['current_trophies'],
+          of: t(:of),
+          max: progress['max_trophies']
+        }
+      end
+
+    end
+
+    render json: {
+      script: {
+        stages: script.stages.to_a.count,
+        trophies: !!script.trophies
+      },
+      stage: stage_data,
+      progress: user_data
+    }
   end
+
+
+
+
+
 
   def prizes
     authorize! :read, current_user

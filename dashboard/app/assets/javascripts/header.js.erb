@@ -291,12 +291,8 @@
      * @param data {{
      *   title: string,
      *   finishLink: string,
-     *   statsPath: string,
      *   showStageLinks: boolean,
      *   trophies: Object,
-     *   scriptId: number,
-     *   scriptLevelId: number,
-     *   currentLevelIndex: number,
      *   levels: Array.<{
      *     displayText: string,
      *     status: string,
@@ -400,6 +396,10 @@
       var _this = this;
       var state = this.state || {};
 
+      var script = state.script || {};
+      var stage = state.stage || {};
+      var progress = state.progress || {};
+
       // Don't render unless we are initialized with a script
       if (!this.props.script_name)
         return;
@@ -413,21 +413,25 @@
       var $container = $('<div>').addClass('header_level_container').appendTo(el);
 
       // Title
-      if (state.title) {
-        $('<div>').addClass('header_text header_level_text').text(state.title).appendTo($container);
+      if (stage.title) {
+        $('<div>').addClass('header_text header_level_text').text(stage.title).appendTo($container);
       }
 
       // Progress: Render the array of levels
-      var levels = state.levels || [];
+      var levels = stage.levels || [];
+      var level_id = parseInt(this.props.level_id, 10);
+
       if (levels.length) {
         var els = $.map(levels, function(level, index) {
-          cl = 'level_link ' + level.status;
+          var status = progress.status || {};
+
+          cl = 'level_link ' + (status[level.id] || 'not_tried');
           if (level.unplugged)
             cl += ' unplugged_level';
-          var link = $('<a>').addClass(cl).attr('href', level.link).text(level.displayText);
+          var link = $('<a>').addClass(cl).attr('href', level.link).text(level.label);
 
           cl = level.assessment ? 'puzzle_outer_assessment' : 'puzzle_outer_level';
-          if (index === state.currentLevelIndex)
+          if (index === level_id - 1)
             cl += ' puzzle_outer_current';
           if (index === levels.length - 1)
             cl += ' last';
@@ -438,23 +442,23 @@
       }
 
       // Finished link
-      if (state.finishLink) {
+      if (stage.finishLink) {
         el = $('<div>').addClass('header_finished_link');
         $('<a>').attr('href', state.finishLink.href).text(state.finishLink.text).appendTo(el);
         el.appendTo($container);
       }
 
       // Trophies
-      if (state.trophies) {
+      if (progress.trophies) {
         el = $('<span>').addClass('header_trophy_link');
         $('<div>').addClass('header_text').text('<%= I18n.t(:trophies) %>').appendTo(el);
-        $('<div>').addClass('header_status_bar current_trophies').text(state.trophies.current).appendTo(el);
-        $('<div>').addClass('header_text max_trophies').text(state.trophies.of + ' ' + state.trophies.max).appendTo(el);
+        $('<div>').addClass('header_status_bar current_trophies').text(progress.trophies.current).appendTo(el);
+        $('<div>').addClass('header_text max_trophies').text(progress.trophies.of + ' ' + progress.trophies.max).appendTo(el);
         el.appendTo($container);
       }
 
-      // Stage popup
-      if (state.showStageLinks) {
+      // Show stage popup if there is more than one stage, or trophies
+      if (script.stages > 1 || script.trophies) {
         el = $('<span>').addClass('header_popup_link');
 
         if (state.popped) {
@@ -477,8 +481,8 @@
 
         el = $('<div>').addClass('header_popup_header').appendTo(header_popup);
         $('<span>').text('<%= I18n.t("nav.popup.progress") %>').appendTo(el);
-        if (state.linesOfCodeText)
-          $('<div>').addClass('header_text').css('float','right').text(state.linesOfCodeText).appendTo(el);
+        if (progress.linesOfCodeText)
+          $('<div>').addClass('header_text').css('float','right').text(progress.linesOfCodeText).appendTo(el);
 
         el = $('<div>').addClass('header_popup_body').appendTo(header_popup);
         el.html(state.stageHtml || '<div class="loading"></div>');
@@ -518,8 +522,7 @@
 
         // Ask the script store to load a particular script.
         this.scriptStore.loadHTML({
-          script_id: this.state.scriptId,
-          script_level_id: this.state.scriptLevelId
+          script_name: this.props.script_name
         });
 
       }
