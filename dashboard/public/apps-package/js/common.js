@@ -3025,7 +3025,7 @@ if (typeof(CanvasRenderingContext2D) != 'undefined') {
 	}
 }
 
-},{}],134:[function(require,module,exports){
+},{}],139:[function(require,module,exports){
 /**
  * A set of functional blocks
  */
@@ -3514,7 +3514,7 @@ function installCond(blockly, generator) {
   };
 }
 
-},{"../locale/current/common":180,"./functionalBlockUtils":74,"./utils":175}],74:[function(require,module,exports){
+},{"../locale/current/common":185,"./functionalBlockUtils":74,"./utils":180}],74:[function(require,module,exports){
 var utils = require('./utils');
 var _ = utils.getLodash();
 
@@ -3658,7 +3658,7 @@ module.exports.installStringPicker = function(blockly, generator, options) {
   };
 };
 
-},{"./utils":175}],161:[function(require,module,exports){
+},{"./utils":180}],166:[function(require,module,exports){
 var list = [];
 
 /**
@@ -3676,7 +3676,7 @@ exports.clearTimeouts = function () {
   list = [];
 };
 
-},{}],155:[function(require,module,exports){
+},{}],160:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3700,7 +3700,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":180,"ejs":196}],136:[function(require,module,exports){
+},{"../../locale/current/common":185,"ejs":201}],141:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -3965,7 +3965,7 @@ Slider.bindEvent_ = function(element, name, func) {
 
 module.exports = Slider;
 
-},{"./dom":44}],135:[function(require,module,exports){
+},{"./dom":44}],140:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -4116,7 +4116,7 @@ module.exports = function(app, levels, options) {
   });
 };
 
-},{"./StudioApp":2,"./blocksCommon":18,"./dom":44,"./required_block_utils":133,"./utils":175}],133:[function(require,module,exports){
+},{"./StudioApp":2,"./blocksCommon":18,"./dom":44,"./required_block_utils":138,"./utils":180}],138:[function(require,module,exports){
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
@@ -4394,7 +4394,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"../locale/current/common":180,"./block_utils":17,"./utils":175,"./xml":176}],18:[function(require,module,exports){
+},{"../locale/current/common":185,"./block_utils":17,"./utils":180,"./xml":181}],18:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -4559,7 +4559,7 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/current/common":180}],2:[function(require,module,exports){
+},{"../locale/current/common":185}],2:[function(require,module,exports){
 // Globals:
 //   Blockly
 
@@ -5871,7 +5871,7 @@ StudioApp.prototype.hasExtraTopBlocks = function () {
   return this.feedback_.hasExtraTopBlocks();
 };
 
-},{"../locale/current/common":180,"./ResizeSensor":1,"./block_utils":17,"./constants.js":43,"./dom":44,"./feedback":63,"./templates/builder.html":149,"./templates/buttons.html":150,"./templates/instructions.html":152,"./templates/learn.html":153,"./templates/makeYourOwn.html":154,"./utils":175,"./xml":176,"url":195}],195:[function(require,module,exports){
+},{"../locale/current/common":185,"./ResizeSensor":1,"./block_utils":17,"./constants.js":43,"./dom":44,"./feedback":63,"./templates/builder.html":154,"./templates/buttons.html":155,"./templates/instructions.html":157,"./templates/learn.html":158,"./templates/makeYourOwn.html":159,"./utils":180,"./xml":181,"url":200}],200:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6580,13 +6580,13 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":191,"querystring":194}],194:[function(require,module,exports){
+},{"punycode":196,"querystring":199}],199:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":192,"./encode":193}],193:[function(require,module,exports){
+},{"./decode":197,"./encode":198}],198:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6673,7 +6673,7 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],192:[function(require,module,exports){
+},{}],197:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6759,7 +6759,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],191:[function(require,module,exports){
+},{}],196:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -7270,7 +7270,7 @@ var isArray = Array.isArray || function (xs) {
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],154:[function(require,module,exports){
+},{}],159:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7290,7 +7290,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":180,"ejs":196}],153:[function(require,module,exports){
+},{"../../locale/current/common":185,"ejs":201}],158:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7312,7 +7312,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":180,"ejs":196}],152:[function(require,module,exports){
+},{"../../locale/current/common":185,"ejs":201}],157:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7332,7 +7332,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":180,"ejs":196}],149:[function(require,module,exports){
+},{"../../locale/current/common":185,"ejs":201}],154:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7352,7 +7352,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":196}],63:[function(require,module,exports){
+},{"ejs":201}],63:[function(require,module,exports){
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
 var HINT_REQUEST_PLACEMENT = {
   NONE: 0,  // This value must not be changed.
@@ -8509,7 +8509,7 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
   });
 };
 
-},{"../locale/current/common":180,"./codegen":42,"./constants":43,"./dom":44,"./feedbackBlocks":64,"./templates/buttons.html":150,"./templates/code.html":151,"./templates/shareFailure.html":157,"./templates/sharing.html":158,"./templates/showCode.html":159,"./templates/trophy.html":160,"./utils":175,"./xml":176}],175:[function(require,module,exports){
+},{"../locale/current/common":185,"./codegen":42,"./constants":43,"./dom":44,"./feedbackBlocks":64,"./templates/buttons.html":155,"./templates/code.html":156,"./templates/shareFailure.html":162,"./templates/sharing.html":163,"./templates/showCode.html":164,"./templates/trophy.html":165,"./utils":180,"./xml":181}],180:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
 
@@ -8942,12 +8942,12 @@ exports.generateDropletModeOptions = function (codeFunctions, dropletConfig) {
   return modeOptions;
 };
 
-},{"./hammer":75,"./lodash":83,"./xml":176}],83:[function(require,module,exports){
+},{"./hammer":75,"./lodash":83,"./xml":181}],83:[function(require,module,exports){
 (function (global){
 /**
  * @license
  * Lo-Dash 2.4.1 (Custom Build) <http://lodash.com/>
- * Build: `lodash include="debounce,reject,map,value,range,without,sample,create,flatten,isEmpty,wrap,size,bind,contains,last,clone" --output src/lodash.js`
+ * Build: `lodash include="debounce,reject,map,value,range,without,sample,create,flatten,isEmpty,wrap,size,bind,contains,last,clone,isEqual" --output src/lodash.js`
  * Copyright 2012-2013 The Dojo Foundation <http://dojofoundation.org/>
  * Based on Underscore.js 1.5.2 <http://underscorejs.org/LICENSE>
  * Copyright 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -10767,6 +10767,48 @@ exports.generateDropletModeOptions = function (codeFunctions, dropletConfig) {
   }
 
   /**
+   * Performs a deep comparison between two values to determine if they are
+   * equivalent to each other. If a callback is provided it will be executed
+   * to compare values. If the callback returns `undefined` comparisons will
+   * be handled by the method instead. The callback is bound to `thisArg` and
+   * invoked with two arguments; (a, b).
+   *
+   * @static
+   * @memberOf _
+   * @category Objects
+   * @param {*} a The value to compare.
+   * @param {*} b The other value to compare.
+   * @param {Function} [callback] The function to customize comparing values.
+   * @param {*} [thisArg] The `this` binding of `callback`.
+   * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
+   * @example
+   *
+   * var object = { 'name': 'fred' };
+   * var copy = { 'name': 'fred' };
+   *
+   * object == copy;
+   * // => false
+   *
+   * _.isEqual(object, copy);
+   * // => true
+   *
+   * var words = ['hello', 'goodbye'];
+   * var otherWords = ['hi', 'goodbye'];
+   *
+   * _.isEqual(words, otherWords, function(a, b) {
+   *   var reGreet = /^(?:hello|hi)$/i,
+   *       aGreet = _.isString(a) && reGreet.test(a),
+   *       bGreet = _.isString(b) && reGreet.test(b);
+   *
+   *   return (aGreet || bGreet) ? (aGreet == bGreet) : undefined;
+   * });
+   * // => true
+   */
+  function isEqual(a, b, callback, thisArg) {
+    return baseIsEqual(a, b, typeof callback == 'function' && baseCreateCallback(callback, thisArg, 2));
+  }
+
+  /**
    * Checks if `value` is a function.
    *
    * @static
@@ -12055,6 +12097,7 @@ exports.generateDropletModeOptions = function (codeFunctions, dropletConfig) {
   lodash.isArguments = isArguments;
   lodash.isArray = isArray;
   lodash.isEmpty = isEmpty;
+  lodash.isEqual = isEqual;
   lodash.isFunction = isFunction;
   lodash.isObject = isObject;
   lodash.isString = isString;
@@ -14361,7 +14404,7 @@ if(typeof define == 'function' && define.amd) {
 }
 
 })(window);
-},{}],160:[function(require,module,exports){
+},{}],165:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -14381,7 +14424,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":196}],159:[function(require,module,exports){
+},{"ejs":201}],164:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -14401,7 +14444,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":180,"ejs":196}],158:[function(require,module,exports){
+},{"../../locale/current/common":185,"ejs":201}],163:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -14421,7 +14464,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":180,"ejs":196}],157:[function(require,module,exports){
+},{"../../locale/current/common":185,"ejs":201}],162:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -14441,7 +14484,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":196}],151:[function(require,module,exports){
+},{"ejs":201}],156:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -14461,7 +14504,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":196}],150:[function(require,module,exports){
+},{"ejs":201}],155:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -14481,7 +14524,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":180,"ejs":196}],180:[function(require,module,exports){
+},{"../../locale/current/common":185,"ejs":201}],185:[function(require,module,exports){
 /*common*/ module.exports = window.blockly.locale;
 },{}],64:[function(require,module,exports){
 var constants = require('./constants');
@@ -14612,7 +14655,7 @@ FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
   return blockXMLStrings.join('');
 };
 
-},{"./constants":43,"./templates/readonly.html":156}],156:[function(require,module,exports){
+},{"./constants":43,"./templates/readonly.html":161}],161:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -14633,7 +14676,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":196}],196:[function(require,module,exports){
+},{"ejs":201}],201:[function(require,module,exports){
 
 /*!
  * EJS
@@ -14988,7 +15031,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":197,"./utils":198,"fs":188,"path":189}],198:[function(require,module,exports){
+},{"./filters":202,"./utils":203,"fs":193,"path":194}],203:[function(require,module,exports){
 
 /*!
  * EJS
@@ -15012,7 +15055,7 @@ exports.escape = function(html){
     .replace(/"/g, '&quot;');
 };
  
-},{}],197:[function(require,module,exports){
+},{}],202:[function(require,module,exports){
 
 /*!
  * EJS - Filters
@@ -15211,7 +15254,7 @@ exports.get = function(obj, prop){
 exports.json = function(obj){
   return JSON.stringify(obj);
 };
-},{}],189:[function(require,module,exports){
+},{}],194:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -15439,7 +15482,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require('_process'))
-},{"_process":190}],190:[function(require,module,exports){
+},{"_process":195}],195:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -15498,7 +15541,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],188:[function(require,module,exports){
+},{}],193:[function(require,module,exports){
 
 },{}],42:[function(require,module,exports){
 var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
@@ -16323,7 +16366,7 @@ exports.mathBlockXml = function (type, inputs, titles) {
   return str;
 };
 
-},{"./xml":176}],176:[function(require,module,exports){
+},{"./xml":181}],181:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
