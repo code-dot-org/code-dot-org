@@ -281,11 +281,16 @@ NetSimLobby.prototype.refreshShardList_ = function () {
   });
 };
 
+/** Generates a new random shard ID and immediately selects it. */
 NetSimLobby.prototype.useRandomShard = function () {
-  this.randomShardID = 'netsim_' + utils.createUuid();
-  this.useShard(this.randomShardID);
+  this.useShard('netsim_' + utils.createUuid());
 };
 
+/**
+ * Forces the shard selector to contain only the given option,
+ * and immediately selects that option.
+ * @param {!string} shardID - unique shard identifier
+ */
 NetSimLobby.prototype.useShard = function (shardID) {
   this.shardSelector_.empty();
 
