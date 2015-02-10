@@ -1,0 +1,60 @@
+---
+theme: angular
+---
+- authentication_required!
+- forbidden! unless dashboard_user[:user_type] == 'teacher'
+
+- @page_title = "Districts"
+
+
+%div{'ng-app' => 'districtsApp', 'ng-view' => ''}
+
+:javascript
+  'use strict';
+
+  // Declare app level module which depends on filters, and services
+  angular.module('districtsApp', [
+    'ngRoute',
+    'ngResource',
+    'districtsApp.controllers',
+    'districtsApp.services'
+  ]).config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/',
+                        {templateUrl: '/ops-dashboard/districts',
+                         controller: 'DistrictsController'});
+    $routeProvider.otherwise({redirectTo: '/'});
+  }]);
+
+  // SERVICES
+  var services = angular.module('districtsApp.services', []).
+      value('version', '0.1');
+
+  services.factory('districtsService', ['$resource',
+    function($resource) {
+      var District = $resource('/ops/districts/:id', {}, {
+        // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
+        //  'get':    {method: 'GET'},
+        //  'save':   {method: 'POST'},
+        //  'query':  {method: 'GET', isArray:true},
+        //  'remove': {method: 'DELETE'},
+        //  'delete': {method: 'DELETE'} // don't use this because it doesn't work in IE9
+      });
+
+      return District;
+    }]);
+
+  // CONTROLLERS
+
+  var controllers = angular.module('districtsApp.controllers', []).
+      value('version', '0.1');
+
+  controllers.controller('DistrictsController', ['$scope', '$route', '$routeParams', '$location', '$window', 'districtsService',
+    function($scope, $route, $routeParams, $location, $window, districtsService) {
+      $scope.districtsLoaded = false;
+
+      $scope.districts = districtsService.query();
+
+      $scope.districts.$promise.then(function(districts) {
+        $scope.districtsLoaded = true;
+      }).catch($scope.genericError);
+  }]);

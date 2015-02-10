@@ -1,0 +1,13 @@
+---
+layout: none
+template: none
+---
+
+%h1
+  Helloooo
+%h1 Districts
+
+%ul{"ng-repeat" => "district in districts"}
+  %li
+    {{district.name}}
+  %button.btn.btn-danger{'ng-click' => 'district.$remove({id: district.id})'} Delete
