@@ -283,6 +283,7 @@ module LevelsHelper
 
     # Set some values that Blockly expects on the root of its options string
     app_options = {
+      id: @level.id,
       baseUrl: "#{ActionController::Base.asset_host}/blockly/",
       app: @game.try(:app),
       levelId: @level.level_num,

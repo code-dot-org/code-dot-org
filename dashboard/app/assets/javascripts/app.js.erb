@@ -152,8 +152,7 @@
       parts = url.match(re);
       if (parts) {
         window.headerProgress = new HeaderProgress( $('.header-wrapper'), {
-          headerStore: headerStore,
-          level_id: parts[1]
+          headerStore: headerStore
         });
 
         headerStore.load({
@@ -164,13 +163,40 @@
         return;
       }
 
+      // hoc|k8intro|editcode|2014|builder|flappy|jigsaw/:level
+      re = /\/(\w+)\/(\d+)$/i;
+      parts = url.match(re);
+      if (parts) {
+        var apps = {
+          hoc: 'Hour of Code',
+          k8intro: '20-hour',
+          editcode: 'edit-code',
+          '2014': 'events',
+          flappy: 'flappy',
+          jigsaw: 'jigsaw'
+        };
+
+        var app = apps[parts[1]];
+        if (app) {
+          window.headerProgress = new HeaderProgress( $('.header-wrapper'), {
+            headerStore: headerStore
+          });
+
+          headerStore.load({
+            script_name: app,
+            level_id: parts[2]
+          });
+
+          return;
+        }
+      }
+
       // s/:script_name/stage/:stage_id/level/:level_id
       re = /\/s\/(.+)\/stage\/(\d+)\/puzzle\/(\d+)$/i;
       parts = url.match(re);
       if (parts) {
         window.headerProgress = new HeaderProgress( $('.header-wrapper'), {
-          headerStore: headerStore,
-          level_id: parts[3]
+          headerStore: headerStore
         });
 
         headerStore.load({

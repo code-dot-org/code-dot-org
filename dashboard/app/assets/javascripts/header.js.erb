@@ -123,6 +123,7 @@
 
       var script = state.script || {};
       var stage = state.stage || {};
+      var level = state.level || {};
       var progress = state.progress || {};
 
       // Don't render unless we are initialized with a script
@@ -144,7 +145,7 @@
 
       // Progress: Render the array of levels
       var levels = stage.levels || [];
-      var level_id = parseInt(this.props.level_id, 10);
+      var level_id = level.id;
 
       if (levels.length) {
         var els = $.map(levels, function(level, index) {
@@ -156,7 +157,7 @@
           var link = $('<a>').addClass(cl).attr('href', level.link).text(level.label);
 
           cl = level.assessment ? 'puzzle_outer_assessment' : 'puzzle_outer_level';
-          if (index === level_id - 1)
+          if (level.id == level_id)
             cl += ' puzzle_outer_current';
           if (index === levels.length - 1)
             cl += ' last';
