@@ -207,6 +207,18 @@ li p {
   margin: 0;
 }
 
+.fill-in { width: 100% }
+
+.fill-in tbody tr.empty { height: 75px; }
+
+.fill-in .sub {
+  vertical-align: bottom;
+  font-size: .8em;
+  font-style: italic;
+  color: #999;
+  padding-bottom: 5px;
+}
+
 @page  
 { 
     size: auto;    
