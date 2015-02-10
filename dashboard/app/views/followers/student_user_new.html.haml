@@ -1,5 +1,3 @@
-- user_type = params[:user_type] == User::TYPE_TEACHER ? User::TYPE_TEACHER : User::TYPE_STUDENT
-
 - if !@section
   Please enter the code shared with you by your teacher. It's a 6-character code made up of letters and numbers
   %br/
@@ -21,6 +19,9 @@
       %ul
         - @user.errors.full_messages.each do |msg|
           %li= msg
+
+  -# Hack to look for a specific pattern in the class name to decide if it's a workshop.
+  - user_type = @section.name.to_s =~ /^Workshop on [\d\/]+ at .+$/ ? User::TYPE_TEACHER : User::TYPE_STUDENT
 
   #signup
     .row
