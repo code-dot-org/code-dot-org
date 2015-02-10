@@ -40,6 +40,15 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
   font-size: 20px;
 }
 
+#netsim_rightcol {
+  float: right;
+  width: 300px;
+}
+
+#netsim_leftcol {
+  margin-right: 320px;
+}
+
 #netsim_lobby_list {
   background-color: white;
   padding: 0.5em;
@@ -75,4 +84,24 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
   .selected_row:hover {
     background-color: darkorange;
   }
+}
+
+.netsim_log_widget {
+  border: solid darkgray thin;
+  margin: 0.5em;
+  padding: 0.5em;
+
+  #scroll_area {
+    border: inset darkgray 2px;
+    background-color: white;
+    height: 100px;
+    width: 400px;
+    overflow: scroll;
+  }
+}
+
+.netsim_send_widget {
+  border: solid darkgray thin;
+  margin: 0.5em;
+  padding: 0.5em;
 }
