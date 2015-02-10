@@ -78,6 +78,9 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
   this.userVisible_ = true;
   this.collapsed_ = false;
   this.dragging_ = false;
+  // Used to hide function blocks when not in modal workspace. This property
+  // is not serialized/deserialized.
+  this.currentlyHidden_ = false;
   /**
    * The label which can be clicked to edit this block. This field is
    * currently set only for functional_call blocks.
@@ -1321,6 +1324,18 @@ Blockly.Block.prototype.setUserVisible = function(userVisible) {
   });
 };
 
+Blockly.Block.prototype.isCurrentlyHidden = function () {
+  return this.currentlyHidden_;
+};
+
+Blockly.Block.prototype.setCurrentlyHidden = function (hidden) {
+  if (!this.svg_) {
+    throw 'Uninitialized block cannot set visibility.  Call block.initSvg()';
+  }
+  this.currentlyHidden_ = hidden;
+  this.svg_.setVisible(!hidden);
+};
+
 /**
  * Set the URL of this block's help page.
  * @param {string|Function} url URL string for block help, or function that
@@ -2124,18 +2139,6 @@ Blockly.Block.prototype.render = function() {
     throw 'Uninitialized block cannot be rendered.  Call block.initSvg()';
   }
   this.svg_.render();
-};
-
-
-/**
- * Set the blocks visibility.
- * @param {string} visible Whether or not the block should be visible
- */
-Blockly.Block.prototype.setVisible = function (visible) {
-  if (!this.svg_) {
-    throw 'Uninitialized block cannot set visibility.  Call block.initSvg()';
-  }
-  this.svg_.setVisible(visible);
 };
 
 /**
