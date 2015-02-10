@@ -109,7 +109,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":135}],23:[function(require,module,exports){
+},{"../skins":140}],23:[function(require,module,exports){
 /*jshint multistr: true */
 
 var Direction = require('./tiles').Direction;
@@ -1955,7 +1955,7 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/current/bounce":178,"../../locale/current/common":180,"../StudioApp":2,"../codegen":42,"../constants":43,"../dom":44,"../hammer":75,"../skins":135,"../templates/page.html":155,"../timeoutList":161,"../utils":175,"./api":19,"./controls.html":22,"./tiles":26,"./visualization.html":27}],27:[function(require,module,exports){
+},{"../../locale/current/bounce":183,"../../locale/current/common":185,"../StudioApp":2,"../codegen":42,"../constants":43,"../dom":44,"../hammer":75,"../skins":140,"../templates/page.html":160,"../timeoutList":166,"../utils":180,"./api":19,"./controls.html":22,"./tiles":26,"./visualization.html":27}],27:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1975,7 +1975,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":196}],22:[function(require,module,exports){
+},{"ejs":201}],22:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1998,7 +1998,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/bounce":178,"../../locale/current/common":180,"ejs":196}],20:[function(require,module,exports){
+},{"../../locale/current/bounce":183,"../../locale/current/common":185,"ejs":201}],20:[function(require,module,exports){
 /**
  * Blockly App: Bounce
  *
@@ -2493,7 +2493,7 @@ exports.install = function(blockly, blockInstallOptions) {
   delete blockly.Blocks.procedures_ifreturn;
 };
 
-},{"../../locale/current/bounce":178,"../codegen":42}],178:[function(require,module,exports){
+},{"../../locale/current/bounce":183,"../codegen":42}],183:[function(require,module,exports){
 /*bounce*/ module.exports = window.blockly.appLocale;
 },{}],19:[function(require,module,exports){
 var tiles = require('./tiles');

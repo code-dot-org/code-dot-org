@@ -37,6 +37,10 @@ ro:
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'> Cum să organizezi Hour of Code</a>"
   whats_next_promote: "<a href='http://hourofcode.com/resources/how-to'> Promovează Hour of Code</a>"
   n_have_learned_an_hoc: '<h1>#</h1><h3>a încercat o</h3><h2>Ora de Programare</h2>'
+  share_on_facebook: Distribuie pe Facebook
+  share_on_twitter: Distribuie pe Twitter
+  beyond_an_hour: 'Dincolo de o Oră de Cod '
+  get_started: Începe
   anybody_can_learn: Oricine poate învăța.
   register_now: Înregistrează-te acum
   front_join_us_heading: O oră de programare pentru fiecare student.
