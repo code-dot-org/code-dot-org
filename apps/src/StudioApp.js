@@ -506,7 +506,11 @@ StudioApp.prototype.toggleRunReset = function(button) {
 };
 
 /**
- *
+ * Attempts to associate a set of audio files to a given name
+ * Handles the case where cdoSounds does not exist, e.g. in tests
+ * and grunt dev preview mode
+ * @param {Array.<string>} filenames file paths for sounds
+ * @param {string} name ID to associate sound effect with
  */
 StudioApp.prototype.loadAudio = function(filenames, name) {
   if (!this.cdoSounds) {
@@ -517,7 +521,10 @@ StudioApp.prototype.loadAudio = function(filenames, name) {
 };
 
 /**
- *
+ * Attempts to play a sound effect
+ * @param {string} name sound ID
+ * @param {Object} options for sound playback
+ * @param {number} options.volume value between 0.0 and 1.0 specifying volume
  */
 StudioApp.prototype.playAudio = function(name, options) {
   if (!this.cdoSounds) {
@@ -531,7 +538,8 @@ StudioApp.prototype.playAudio = function(name, options) {
 };
 
 /**
- *
+ * Stops looping a given sound
+ * @param {string} name ID of sound
  */
 StudioApp.prototype.stopLoopingAudio = function(name) {
   if (!this.cdoSounds) {
