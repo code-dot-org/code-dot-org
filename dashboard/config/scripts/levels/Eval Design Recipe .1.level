@@ -17,7 +17,8 @@
     "free_play": "false",
     "default_num_example_blocks": "2",
     "min_workspace_height": "1500",
-    "callout_json": "[\r\n  {\"localization_key\":\"edit_function\",\"element_id\":\"[block-id='18'] > .blocklyIconGroup\",\"qtip_config\":{\"position\":{\"adjust\":{},\"my\":\"top left\",\"at\":\"right center\"},\"style\":{}}}\r\n]"
+    "callout_json": "[\r\n  {\"localization_key\":\"edit_function\",\"element_id\":\"[block-id='18'] > .blocklyIconGroup\",\"qtip_config\":{\r\n    \"position\":{\"adjust\":{},\"my\":\"top left\",\"at\":\"right center\"},\"style\":{}}\r\n  },\r\n  {\"on\": \"function_editor_opened\", \"localization_key\": \"function_editor_draw_square\", \"element_id\": \"[block-id='50']\",\r\n   \"qtip_config\": {\r\n    \"position\": {\"my\": \"top left\", \"at\": \"right center\"}}\r\n  }\r\n]",
+    "step_speed": "5"
   }
 }]]></config>
   <blocks>
