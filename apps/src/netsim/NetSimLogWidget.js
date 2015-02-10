@@ -52,9 +52,7 @@ module.exports = NetSimLogWidget;
 NetSimLogWidget.uniqueIDCounter = 0;
 
 /**
- * Generate a new NetSimLogWidget, puttig it on the page and hooking
- * it up to the given connection where it will update to reflect the
- * state of the connected router, if there is one.
+ * Generate a new NetSimLogWidget, putting it on the page.
  * @param element
  * @param {!string} title - The log widget header text
  */
