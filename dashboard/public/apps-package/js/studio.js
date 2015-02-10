@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({144:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({149:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Studio = require('./studio');
@@ -16,7 +16,7 @@ window.studioMain = function(options) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":3,"./blocks":138,"./levels":143,"./skins":146,"./studio":147}],147:[function(require,module,exports){
+},{"../appMain":3,"./blocks":143,"./levels":148,"./skins":151,"./studio":152}],152:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -2795,7 +2795,7 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/current/common":180,"../../locale/current/studio":186,"../StudioApp":2,"../canvg/StackBlur.js":38,"../canvg/canvg.js":39,"../canvg/rgbcolor.js":40,"../canvg/svg_todataurl":41,"../codegen":42,"../constants":43,"../dom":44,"../skins":135,"../templates/page.html":155,"../utils":175,"../xml":176,"./api":137,"./blocks":138,"./collidable":139,"./constants":140,"./controls.html":141,"./extraControlRows.html":142,"./projectile":145,"./visualization.html":148}],148:[function(require,module,exports){
+},{"../../locale/current/common":185,"../../locale/current/studio":191,"../StudioApp":2,"../canvg/StackBlur.js":38,"../canvg/canvg.js":39,"../canvg/rgbcolor.js":40,"../canvg/svg_todataurl":41,"../codegen":42,"../constants":43,"../dom":44,"../skins":140,"../templates/page.html":160,"../utils":180,"../xml":181,"./api":142,"./blocks":143,"./collidable":144,"./constants":145,"./controls.html":146,"./extraControlRows.html":147,"./projectile":150,"./visualization.html":153}],153:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2815,7 +2815,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":196}],145:[function(require,module,exports){
+},{"ejs":201}],150:[function(require,module,exports){
 var Collidable = require('./collidable');
 var Direction = require('./constants').Direction;
 var constants = require('./constants');
@@ -2989,7 +2989,7 @@ Projectile.prototype.moveToNextPosition = function () {
   this.y = next.y;
 };
 
-},{"./collidable":139,"./constants":140}],146:[function(require,module,exports){
+},{"./collidable":144,"./constants":145}],151:[function(require,module,exports){
 /**
  * Load Skin for Studio.
  */
@@ -3329,7 +3329,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../../locale/current/studio":186,"../skins":135,"./constants":140}],143:[function(require,module,exports){
+},{"../../locale/current/studio":191,"../skins":140,"./constants":145}],148:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/studio');
@@ -4798,7 +4798,7 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
   'startBlocks': "",
 });
 
-},{"../../locale/current/studio":186,"../block_utils":17,"../utils":175,"./constants":140}],142:[function(require,module,exports){
+},{"../../locale/current/studio":191,"../block_utils":17,"../utils":180,"./constants":145}],147:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4818,7 +4818,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":180,"ejs":196}],141:[function(require,module,exports){
+},{"../../locale/current/common":185,"ejs":201}],146:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4838,7 +4838,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":180,"ejs":196}],139:[function(require,module,exports){
+},{"../../locale/current/common":185,"ejs":201}],144:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -4944,7 +4944,7 @@ Collidable.prototype.outOfBounds = function () {
          (this.y > studioApp.MAZE_HEIGHT + (this.height / 2));
 };
 
-},{"../StudioApp":2,"./constants":140}],138:[function(require,module,exports){
+},{"../StudioApp":2,"./constants":145}],143:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -6878,9 +6878,9 @@ function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpr
   };
 }
 
-},{"../../locale/current/common":180,"../../locale/current/studio":186,"../StudioApp":2,"../codegen":42,"../functionalBlockUtils":74,"../sharedFunctionalBlocks":134,"../utils":175,"./constants":140}],186:[function(require,module,exports){
+},{"../../locale/current/common":185,"../../locale/current/studio":191,"../StudioApp":2,"../codegen":42,"../functionalBlockUtils":74,"../sharedFunctionalBlocks":139,"../utils":180,"./constants":145}],191:[function(require,module,exports){
 /*studio*/ module.exports = window.blockly.appLocale;
-},{}],137:[function(require,module,exports){
+},{}],142:[function(require,module,exports){
 var constants = require('./constants');
 
 exports.SpriteSpeed = {
@@ -7036,7 +7036,7 @@ exports.onEvent = function (id, eventName, func) {
   });
 };
 
-},{"./constants":140}],140:[function(require,module,exports){
+},{"./constants":145}],145:[function(require,module,exports){
 'use strict';
 
 exports.Direction = {
@@ -8338,4 +8338,4 @@ function BlurStack()
 	this.a = 0;
 	this.next = null;
 }
-},{}]},{},[144]);
+},{}]},{},[149]);
