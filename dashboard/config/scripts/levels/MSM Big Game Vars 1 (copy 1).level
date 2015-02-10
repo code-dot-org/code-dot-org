@@ -1,7 +1,7 @@
 <Studio>
   <config><![CDATA[{
   "game_id": 33,
-  "created_at": "2014-11-21T22:21:22.000Z",
+  "created_at": "2015-02-09T21:58:11.128Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -31,8 +31,7 @@
       "downButton",
       "upButton"
     ],
-    "step_speed": "100",
-    "maze_data": null
+    "step_speed": "100"
   }
 }]]></config>
   <blocks>
@@ -837,30 +836,9 @@
           </block>
         </category>
         <category name="Image">
-          <block type="functional_sprite_dropdown">
-            <title name="SPRITE_INDEX">dog</title>
-          </block>
-          <block type="functional_background_dropdown">
-            <title name="BACKGROUND">"cave"</title>
-          </block>
-        </category>
-        <category name="Boolean">
-          <block type="functional_greater_than" inline="false"/>
-          <block type="functional_less_than" inline="false"/>
-          <block type="functional_number_equals" inline="false"/>
-          <block type="functional_string_equals" inline="false"/>
-          <block type="functional_logical_and" inline="false"/>
-          <block type="functional_logical_or" inline="false"/>
-          <block type="functional_logical_not" inline="false"/>
-          <block type="functional_boolean">
-            <title name="VAL">true</title>
-          </block>
-        </category>
-        <category name="Cond">
-          <block type="functional_cond" inline="false"/>
+          <block type="functional_circle"/>
         </category>
         <category name="Variables" custom="FUNCTIONAL_VARIABLE"/>
-        <category name="Functions" custom="PROCEDURE"/>
       </xml>
     </toolbox_blocks>
   </blocks>

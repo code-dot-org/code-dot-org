@@ -1,7 +1,7 @@
 <Studio>
   <config><![CDATA[{
   "game_id": 33,
-  "created_at": "2014-11-21T22:21:22.000Z",
+  "created_at": "2015-02-09T21:58:11.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -10,7 +10,7 @@
     "failure_condition": "function () {\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "In the Variables toolbox you'll see several variables that define how your game characters look, move, and interact",
+    "instructions": "All variables and functions are currently empty stubs. Each puzzle progression will be focused on defining and handful of them, and therefore adding functionality.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -38,6 +38,225 @@
   <blocks>
     <start_blocks>
       <xml>
+        <block type="functional_definition" inline="false" uservisible="false">
+          <mutation>
+            <outputtype>image</outputtype>
+            <isfunctionalvariable>true</isfunctionalvariable>
+          </mutation>
+          <title name="NAME">target</title>
+          <functional_input name="STACK">
+            <block type="functional_sprite_dropdown" uservisible="false">
+              <title name="SPRITE_INDEX">penguin</title>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_example" inline="false" uservisible="false">
+          <functional_input name="ACTUAL">
+            <block type="functional_call" inline="false" uservisible="false">
+              <mutation name="collide?">
+                <arg name="px" type="Number"/>
+                <arg name="py" type="Number"/>
+                <arg name="cx" type="Number"/>
+                <arg name="cy" type="Number"/>
+              </mutation>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_example" inline="false" uservisible="false">
+          <functional_input name="ACTUAL">
+            <block type="functional_call" inline="false" uservisible="false">
+              <mutation name="collide?">
+                <arg name="px" type="Number"/>
+                <arg name="py" type="Number"/>
+                <arg name="cx" type="Number"/>
+                <arg name="cy" type="Number"/>
+              </mutation>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_definition" inline="false" uservisible="false">
+          <mutation>
+            <arg name="px" type="Number"/>
+            <arg name="py" type="Number"/>
+            <arg name="cx" type="Number"/>
+            <arg name="cy" type="Number"/>
+            <outputtype>boolean</outputtype>
+          </mutation>
+          <title name="NAME">collide?</title>
+          <functional_input name="STACK">
+            <block type="functional_boolean" uservisible="false">
+              <title name="VAL">false</title>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_example" inline="false" uservisible="false">
+          <functional_input name="ACTUAL">
+            <block type="functional_call" inline="false" uservisible="false">
+              <mutation name="onscreen?">
+                <arg name="x" type="Number"/>
+              </mutation>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_example" inline="false" uservisible="false">
+          <functional_input name="ACTUAL">
+            <block type="functional_call" inline="false" uservisible="false">
+              <mutation name="onscreen?">
+                <arg name="x" type="Number"/>
+              </mutation>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_definition" inline="false" uservisible="false">
+          <mutation>
+            <arg name="x" type="Number"/>
+            <outputtype>boolean</outputtype>
+          </mutation>
+          <title name="NAME">onscreen?</title>
+          <functional_input name="STACK">
+            <block type="functional_boolean" uservisible="false">
+              <title name="VAL">true</title>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_example" inline="false" uservisible="false">
+          <functional_input name="ACTUAL">
+            <block type="functional_call" inline="false" uservisible="false">
+              <mutation name="update-player">
+                <arg name="key" type="string"/>
+                <arg name="y" type="Number"/>
+              </mutation>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_example" inline="false" uservisible="false">
+          <functional_input name="ACTUAL">
+            <block type="functional_call" inline="false" uservisible="false">
+              <mutation name="update-player">
+                <arg name="key" type="string"/>
+                <arg name="y" type="Number"/>
+              </mutation>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_definition" inline="false" uservisible="false">
+          <mutation>
+            <arg name="key" type="string"/>
+            <arg name="y" type="Number"/>
+            <outputtype>Number</outputtype>
+          </mutation>
+          <title name="NAME">update-player</title>
+          <functional_input name="STACK">
+            <block type="functional_parameters_get" uservisible="false">
+              <mutation>
+                <outputtype>Number</outputtype>
+              </mutation>
+              <title name="VAR">y</title>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_example" inline="false" uservisible="false">
+          <functional_input name="ACTUAL">
+            <block type="functional_call" inline="false" uservisible="false">
+              <mutation name="update-danger">
+                <arg name="x" type="Number"/>
+              </mutation>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_example" inline="false" uservisible="false">
+          <functional_input name="ACTUAL">
+            <block type="functional_call" inline="false" uservisible="false">
+              <mutation name="update-danger">
+                <arg name="x" type="Number"/>
+              </mutation>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_definition" inline="false" uservisible="false">
+          <mutation>
+            <arg name="x" type="Number"/>
+            <outputtype>Number</outputtype>
+          </mutation>
+          <title name="NAME">update-danger</title>
+          <functional_input name="STACK">
+            <block type="functional_parameters_get" uservisible="false">
+              <mutation>
+                <outputtype>Number</outputtype>
+              </mutation>
+              <title name="VAR">x</title>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_definition" inline="false" uservisible="false">
+          <mutation>
+            <outputtype>string</outputtype>
+            <isfunctionalvariable>true</isfunctionalvariable>
+          </mutation>
+          <title name="NAME">title</title>
+          <functional_input name="STACK">
+            <block type="functional_string" uservisible="false">
+              <title name="VAL">My Game</title>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_example" inline="false" uservisible="false">
+          <functional_input name="ACTUAL">
+            <block type="functional_call" inline="false" uservisible="false">
+              <mutation name="update-target">
+                <arg name="x" type="Number"/>
+              </mutation>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_definition" inline="false" uservisible="false">
+          <mutation>
+            <outputtype>image</outputtype>
+            <isfunctionalvariable>true</isfunctionalvariable>
+          </mutation>
+          <title name="NAME">danger</title>
+          <functional_input name="STACK">
+            <block type="functional_sprite_dropdown" uservisible="false">
+              <title name="SPRITE_INDEX">cat</title>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_example" inline="false" uservisible="false">
+          <functional_input name="ACTUAL">
+            <block type="functional_call" inline="false" uservisible="false">
+              <mutation name="update-target">
+                <arg name="x" type="Number"/>
+              </mutation>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_definition" inline="false" uservisible="false">
+          <mutation>
+            <outputtype>image</outputtype>
+            <isfunctionalvariable>true</isfunctionalvariable>
+          </mutation>
+          <title name="NAME">player</title>
+          <functional_input name="STACK">
+            <block type="functional_sprite_dropdown" uservisible="false">
+              <title name="SPRITE_INDEX">dog</title>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_definition" inline="false" uservisible="false">
+          <mutation>
+            <arg name="x" type="Number"/>
+            <outputtype>Number</outputtype>
+          </mutation>
+          <title name="NAME">update-target</title>
+          <functional_input name="STACK">
+            <block type="functional_parameters_get" uservisible="false">
+              <mutation>
+                <outputtype>Number</outputtype>
+              </mutation>
+              <title name="VAR">x</title>
+            </block>
+          </functional_input>
+        </block>
         <block type="functional_call" inline="false" deletable="false" movable="false" editable="false" id="game_vars">
           <mutation name="game-variables">
             <arg name="title" type="string"/>
@@ -108,48 +327,6 @@
         <block type="functional_example" inline="false" uservisible="false">
           <functional_input name="ACTUAL">
             <block type="functional_call" inline="false" uservisible="false">
-              <mutation name="update-player">
-                <arg name="key" type="string"/>
-                <arg name="y" type="Number"/>
-              </mutation>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_example" inline="false" uservisible="false">
-          <functional_input name="ACTUAL">
-            <block type="functional_call" inline="false" uservisible="false">
-              <mutation name="update-player">
-                <arg name="key" type="string"/>
-                <arg name="y" type="Number"/>
-              </mutation>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_example" inline="false" uservisible="false">
-          <functional_input name="ACTUAL">
-            <block type="functional_call" inline="false" uservisible="false">
-              <mutation name="collide?">
-                <arg name="px" type="Number"/>
-                <arg name="py" type="Number"/>
-                <arg name="cx" type="Number"/>
-                <arg name="cy" type="Number"/>
-              </mutation>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_definition" inline="false" uservisible="false">
-          <mutation>
-            <arg name="px" type="Number"/>
-            <arg name="py" type="Number"/>
-            <arg name="cx" type="Number"/>
-            <arg name="cy" type="Number"/>
-            <outputtype>Number</outputtype>
-          </mutation>
-          <title name="NAME">collide?</title>
-        </block>
-        <block type="functional_example" inline="false" uservisible="false">
-          <functional_input name="ACTUAL">
-            <block type="functional_call" inline="false" uservisible="false">
               <mutation name="distance">
                 <arg name="px" type="Number"/>
                 <arg name="py" type="Number"/>
@@ -163,107 +340,6 @@
           <functional_input name="ACTUAL">
             <block type="functional_call" inline="false" uservisible="false">
               <mutation name="distance">
-                <arg name="px" type="Number"/>
-                <arg name="py" type="Number"/>
-                <arg name="cx" type="Number"/>
-                <arg name="cy" type="Number"/>
-              </mutation>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_definition" inline="false" uservisible="false">
-          <mutation>
-            <arg name="key" type="string"/>
-            <arg name="y" type="Number"/>
-            <outputtype>Number</outputtype>
-          </mutation>
-          <title name="NAME">update-player</title>
-          <functional_input name="STACK">
-            <block type="functional_cond" inline="false" uservisible="false">
-              <mutation pairs="0,1"/>
-              <functional_input name="COND0">
-                <block type="functional_string_equals" inline="false" uservisible="false">
-                  <functional_input name="ARG1">
-                    <block type="functional_parameters_get" uservisible="false">
-                      <mutation>
-                        <outputtype>string</outputtype>
-                      </mutation>
-                      <title name="VAR">key</title>
-                    </block>
-                  </functional_input>
-                  <functional_input name="ARG2">
-                    <block type="functional_string" uservisible="false">
-                      <title name="VAL">up</title>
-                    </block>
-                  </functional_input>
-                </block>
-              </functional_input>
-              <functional_input name="VALUE0">
-                <block type="functional_plus" inline="false" uservisible="false">
-                  <functional_input name="ARG1">
-                    <block type="functional_parameters_get" uservisible="false">
-                      <mutation>
-                        <outputtype>Number</outputtype>
-                      </mutation>
-                      <title name="VAR">y</title>
-                    </block>
-                  </functional_input>
-                  <functional_input name="ARG2">
-                    <block type="functional_math_number" uservisible="false">
-                      <title name="NUM">10</title>
-                    </block>
-                  </functional_input>
-                </block>
-              </functional_input>
-              <functional_input name="COND1">
-                <block type="functional_string_equals" inline="false" uservisible="false">
-                  <functional_input name="ARG1">
-                    <block type="functional_parameters_get" uservisible="false">
-                      <mutation>
-                        <outputtype>string</outputtype>
-                      </mutation>
-                      <title name="VAR">key</title>
-                    </block>
-                  </functional_input>
-                  <functional_input name="ARG2">
-                    <block type="functional_string" uservisible="false">
-                      <title name="VAL">down</title>
-                    </block>
-                  </functional_input>
-                </block>
-              </functional_input>
-              <functional_input name="VALUE1">
-                <block type="functional_minus" inline="false" uservisible="false">
-                  <functional_input name="ARG1">
-                    <block type="functional_parameters_get" uservisible="false">
-                      <mutation>
-                        <outputtype>Number</outputtype>
-                      </mutation>
-                      <title name="VAR">y</title>
-                    </block>
-                  </functional_input>
-                  <functional_input name="ARG2">
-                    <block type="functional_math_number" uservisible="false">
-                      <title name="NUM">10</title>
-                    </block>
-                  </functional_input>
-                </block>
-              </functional_input>
-              <functional_input name="DEFAULT">
-                <block type="functional_parameters_get" uservisible="false">
-                  <mutation>
-                    <outputtype>Number</outputtype>
-                  </mutation>
-                  <title name="VAR">y</title>
-                </block>
-              </functional_input>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_example" inline="false" uservisible="false">
-          <functional_input name="ACTUAL">
-            <block type="functional_call" inline="false" uservisible="false">
-              <mutation name="collide?">
                 <arg name="px" type="Number"/>
                 <arg name="py" type="Number"/>
                 <arg name="cx" type="Number"/>
@@ -292,93 +368,24 @@
             </block>
           </functional_input>
         </block>
+        <block type="functional_definition" inline="false" uservisible="false">
+          <mutation>
+            <outputtype>image</outputtype>
+            <isfunctionalvariable>true</isfunctionalvariable>
+          </mutation>
+          <title name="NAME">bg</title>
+          <functional_input name="STACK">
+            <block type="functional_background_dropdown" uservisible="false">
+              <title name="BACKGROUND">"cave"</title>
+            </block>
+          </functional_input>
+        </block>
         <block type="functional_example" inline="false" uservisible="false">
           <functional_input name="ACTUAL">
             <block type="functional_call" inline="false" uservisible="false">
               <mutation name="line-length">
                 <arg name="a" type="Number"/>
                 <arg name="b" type="Number"/>
-              </mutation>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_example" inline="false" uservisible="false">
-          <functional_input name="ACTUAL">
-            <block type="functional_call" inline="false" uservisible="false">
-              <mutation name="onscreen?">
-                <arg name="x" type="Number"/>
-              </mutation>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_example" inline="false" uservisible="false">
-          <functional_input name="ACTUAL">
-            <block type="functional_call" inline="false" uservisible="false">
-              <mutation name="onscreen?">
-                <arg name="x" type="Number"/>
-              </mutation>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_definition" inline="false" uservisible="false">
-          <mutation>
-            <arg name="x" type="Number"/>
-            <outputtype>boolean</outputtype>
-          </mutation>
-          <title name="NAME">onscreen?</title>
-          <functional_input name="STACK">
-            <block type="functional_logical_and" inline="false" uservisible="false">
-              <functional_input name="ARG1">
-                <block type="functional_greater_than" inline="false" uservisible="false">
-                  <functional_input name="ARG1">
-                    <block type="functional_parameters_get" uservisible="false">
-                      <mutation>
-                        <outputtype>Number</outputtype>
-                      </mutation>
-                      <title name="VAR">x</title>
-                    </block>
-                  </functional_input>
-                  <functional_input name="ARG2">
-                    <block type="functional_math_number" uservisible="false">
-                      <title name="NUM">-50</title>
-                    </block>
-                  </functional_input>
-                </block>
-              </functional_input>
-              <functional_input name="ARG2">
-                <block type="functional_less_than" inline="false" uservisible="false">
-                  <functional_input name="ARG1">
-                    <block type="functional_parameters_get" uservisible="false">
-                      <mutation>
-                        <outputtype>Number</outputtype>
-                      </mutation>
-                      <title name="VAR">x</title>
-                    </block>
-                  </functional_input>
-                  <functional_input name="ARG2">
-                    <block type="functional_math_number" uservisible="false">
-                      <title name="NUM">450</title>
-                    </block>
-                  </functional_input>
-                </block>
-              </functional_input>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_example" inline="false" uservisible="false">
-          <functional_input name="ACTUAL">
-            <block type="functional_call" inline="false" uservisible="false">
-              <mutation name="update-target">
-                <arg name="x" type="Number"/>
-              </mutation>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_example" inline="false" uservisible="false">
-          <functional_input name="ACTUAL">
-            <block type="functional_call" inline="false" uservisible="false">
-              <mutation name="update-target">
-                <arg name="x" type="Number"/>
               </mutation>
             </block>
           </functional_input>
@@ -452,132 +459,6 @@
                   </functional_input>
                 </block>
               </functional_input>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_example" inline="false" uservisible="false">
-          <functional_input name="ACTUAL">
-            <block type="functional_call" inline="false" uservisible="false">
-              <mutation name="update-danger">
-                <arg name="x" type="Number"/>
-              </mutation>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_definition" inline="false" uservisible="false">
-          <mutation>
-            <arg name="x" type="Number"/>
-            <outputtype>Number</outputtype>
-          </mutation>
-          <title name="NAME">update-danger</title>
-          <functional_input name="STACK">
-            <block type="functional_minus" inline="false" uservisible="false">
-              <functional_input name="ARG1">
-                <block type="functional_parameters_get" uservisible="false">
-                  <mutation>
-                    <outputtype>Number</outputtype>
-                  </mutation>
-                  <title name="VAR">x</title>
-                </block>
-              </functional_input>
-              <functional_input name="ARG2">
-                <block type="functional_math_number" uservisible="false">
-                  <title name="NUM">10</title>
-                </block>
-              </functional_input>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_definition" inline="false" uservisible="false">
-          <mutation>
-            <arg name="x" type="Number"/>
-            <outputtype>Number</outputtype>
-          </mutation>
-          <title name="NAME">update-target</title>
-          <functional_input name="STACK">
-            <block type="functional_plus" inline="false" uservisible="false">
-              <functional_input name="ARG1">
-                <block type="functional_parameters_get" uservisible="false">
-                  <mutation>
-                    <outputtype>Number</outputtype>
-                  </mutation>
-                  <title name="VAR">x</title>
-                </block>
-              </functional_input>
-              <functional_input name="ARG2">
-                <block type="functional_math_number" uservisible="false">
-                  <title name="NUM">10</title>
-                </block>
-              </functional_input>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_definition" inline="false" uservisible="false">
-          <mutation>
-            <outputtype>image</outputtype>
-            <isfunctionalvariable>true</isfunctionalvariable>
-          </mutation>
-          <title name="NAME">bg</title>
-          <functional_input name="STACK">
-            <block type="functional_background_dropdown" uservisible="false">
-              <title name="BACKGROUND">"rainbow"</title>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_example" inline="false" uservisible="false">
-          <functional_input name="ACTUAL">
-            <block type="functional_call" inline="false" uservisible="false">
-              <mutation name="update-danger">
-                <arg name="x" type="Number"/>
-              </mutation>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_definition" inline="false" uservisible="false">
-          <mutation>
-            <outputtype>image</outputtype>
-            <isfunctionalvariable>true</isfunctionalvariable>
-          </mutation>
-          <title name="NAME">danger</title>
-          <functional_input name="STACK">
-            <block type="functional_sprite_dropdown" uservisible="false">
-              <title name="SPRITE_INDEX">soccergirl</title>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_definition" inline="false" uservisible="false">
-          <mutation>
-            <outputtype>string</outputtype>
-            <isfunctionalvariable>true</isfunctionalvariable>
-          </mutation>
-          <title name="NAME">title</title>
-          <functional_input name="STACK">
-            <block type="functional_string" uservisible="false">
-              <title name="VAL">My Game</title>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_definition" inline="false" uservisible="false">
-          <mutation>
-            <outputtype>image</outputtype>
-            <isfunctionalvariable>true</isfunctionalvariable>
-          </mutation>
-          <title name="NAME">target</title>
-          <functional_input name="STACK">
-            <block type="functional_sprite_dropdown" uservisible="false">
-              <title name="SPRITE_INDEX">bat</title>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_definition" inline="false" uservisible="false">
-          <mutation>
-            <outputtype>image</outputtype>
-            <isfunctionalvariable>true</isfunctionalvariable>
-          </mutation>
-          <title name="NAME">player</title>
-          <functional_input name="STACK">
-            <block type="functional_sprite_dropdown" uservisible="false">
-              <title name="SPRITE_INDEX">cat</title>
             </block>
           </functional_input>
         </block>

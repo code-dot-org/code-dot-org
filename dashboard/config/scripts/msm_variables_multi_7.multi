@@ -1,0 +1,7 @@
+name 'msm variables multi 7'
+title 'f(x) = x + 3'
+question 'What is the name of the function?'
+wrong 'f'
+right 'x'
+wrong '3'
+
