@@ -174,7 +174,18 @@ Blockly.SOUNDS_ = {};
 window.AudioContext = window.AudioContext || window.webkitAudioContext;
 
 if (window.AudioContext) {
-  Blockly.CONTEXT = new AudioContext();
+  try {
+    Blockly.AUDIO_CONTEXT = new AudioContext();
+  } catch (e) {
+    /**
+      * Chrome occasionally chokes on creating singleton AudioContext instances in separate tabs
+      * when iframes are open, potentially related to:
+      *    https://code.google.com/p/chromium/issues/detail?id=308784
+      * or https://code.google.com/p/chromium/issues/detail?id=160022
+      *
+      * In the Chrome case, this will fall-back to the `window.Audio` method
+      */
+  }
 }
 
 /**
@@ -261,7 +272,7 @@ Blockly.clipboard_ = null;
  */
 Blockly.onSoundLoad_ = function(request, name) {
   var onload = function() {
-    Blockly.CONTEXT.decodeAudioData(request.response, function(buffer) {
+    Blockly.AUDIO_CONTEXT.decodeAudioData(request.response, function(buffer) {
       // Create an initial dummy sound.
       Blockly.SOUNDS_[name] = Blockly.createSoundFromBuffer_({buffer: buffer});
     });
@@ -277,22 +288,22 @@ Blockly.onSoundLoad_ = function(request, name) {
  * @return {AudioBufferSourceNode} The sound.
  */
 Blockly.createSoundFromBuffer_ = function(options) {
-  var source = Blockly.CONTEXT.createBufferSource();
+  var source = Blockly.AUDIO_CONTEXT.createBufferSource();
   source.buffer = options.buffer;
   source.loop = options.loop;
 
   // Older version of chrome call this createGainNode instead of createGain
   var gainNode;
-  if (Blockly.CONTEXT.createGain) {
-    gainNode = Blockly.CONTEXT.createGain();
-  } else if (Blockly.CONTEXT.createGainNode) {
-    gainNode = Blockly.CONTEXT.createGainNode();
+  if (Blockly.AUDIO_CONTEXT.createGain) {
+    gainNode = Blockly.AUDIO_CONTEXT.createGain();
+  } else if (Blockly.AUDIO_CONTEXT.createGainNode) {
+    gainNode = Blockly.AUDIO_CONTEXT.createGainNode();
   } else {
     return null;
   }
 
   source.connect(gainNode);
-  gainNode.connect(Blockly.CONTEXT.destination);
+  gainNode.connect(Blockly.AUDIO_CONTEXT.destination);
   gainNode.gain.value = options.volume || 1;
   return source;
 };
@@ -331,7 +342,7 @@ Blockly.loadAudio_ = function(filenames, name) {
     }
     // We have a playable filename or undefined.
     if (filename) {
-      if (window.AudioContext) {
+      if (Blockly.AUDIO_CONTEXT) {
         Blockly.loadWebAudio_(filename, name);
       } else {
         var sound = new window.Audio(filename);
@@ -358,7 +369,7 @@ Blockly.playAudio = function(name, options) {
   var sound = Blockly.SOUNDS_[name];
   var options = options || {};
   if (sound) {
-    if (window.AudioContext) {
+    if (Blockly.AUDIO_CONTEXT) {
       options.buffer = sound.buffer;
       var newSound = Blockly.createSoundFromBuffer_(options);
       // Play sound, older versions of the Web Audio API used noteOn(Off).
