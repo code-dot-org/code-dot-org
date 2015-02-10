@@ -103,9 +103,8 @@ private
       @start_blocks = current_user.last_attempt(@level).try(:level_source).try(:data)
     elsif params[:level_source_id]
       level_source = LevelSource.find(params[:level_source_id])
-      if level_source.try(:level_id) == @level.id # sanity check
-        @start_blocks = level_source.data
-      end
+      # we do multiple level projects, so we don't check that the level_source.level_id matches the loaded level
+      @start_blocks = level_source.data
     end
   end
 

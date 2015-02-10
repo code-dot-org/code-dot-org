@@ -21,11 +21,11 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 ### **Activity: Video Games and the Coordinate Plane**
 
-3) [Dissecting a Demo](#Activity1)<br/>
+3) [Reverse Engineer a Demo](#Activity1)<br/>
 4) [Coordinate Planes](#Activity2)  
 
 ### **Wrap-up**
-5) [Flash Chat](#WrapUp) - What did we learn?  
+5) [Brainstorming a Game](#WrapUp)  
 
 ### **Assessment**
 6) [Coordinate Plane Assessment](#Assessment)
@@ -38,7 +38,8 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 ## Materials, Resources and Prep
 ### For the Student
-- Blank sheet of paper
+- [Reverse Engineering Table](reverse_engineering.pdf) or blank sheet of paper
+- [Videogame Design Template](game_template.pdf) or blank sheet of paper
 
 ### For the Teacher
 - [Lesson slide deck](https://docs.google.com/a/code.org/presentation/d/1DF3XNkI4yellzRJL8ItqZU546UT9BaXWeKY7AmI0gsc/)
@@ -56,8 +57,8 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 This lesson has three new and important words:<br/>
 
 - **Apply** - use a given function on some inputs
-- **Arguments** - the inputs to a function; expressions for arguments follow the name of a function
-- **Programming Language** - a set of rules for writing code that a computer can evaluate
+- **Reverse Engineer** - to extract knowledge or design information from an existing product
+- **Sprite** - a graphic character on the screen.  Sometimes called a bitmap or an image.
 
 ### <a name="GetStarted"></a> 2) Learning a Language
 Welcome to Code.org CS in Algebra! In this course, you’ll be learning a new programming language - a way to tell computers exactly what you want them to do. Just like English, Spanish or French, a programming language has its own vocabulary and grammar that you’ll have to learn. Fortunately, the language you’ll be using here has a lot in common with simple math that you already know!
@@ -80,7 +81,7 @@ A mathematical expression is like a sentence: it’s an instruction for doing so
 [together]
 
 ## Activities:
-### <a name="Activity1"></a> 3) Dissecting a Demo
+### <a name="Activity1"></a> 3) Reverse Engineer a Demo
 
 Let’s begin by exploring a simple video game, and then figuring out how it works. Open this link to play the game, and spend a minute or two exploring it. You can use the arrow keys to move the ninja left, right and jump - try to catch the unicorn and avoid the dragon!
 
@@ -122,8 +123,10 @@ A coordinate represents a single point, and an image is (by definition) many poi
 When we write down these coordinates, we always put the x before the y (just like in the alphabet!). Most of the time, you’ll see coordinates written like this: (200, 50) meaning that the x-coordinate is 200 and the y-coordinate is 50.
 
 Depending on how a character moves, their position might change only along the x-axis, only along the y-axis, or both. Look back to the table you made. Can the Ninja move up and down in the game? Can he move left and right? So what’s changing: his x-coordinate, his y-coordinate, or both? What about the clouds? Do they move up and down? Left and right? Both?
+
+OPTIONAL ACTIVITY:  Depending on timing and the background of your students, having one student place a character on a large graph and another student stating the coordinates is excellent practice.  Students often need extra practice remembering which coordinate comes first.  Coordinates do not have to be exact but it should be in the correct order.  Extending this to all four quadrants to include negative numbers is also excellent practice.
  
-Fill in the rest of the table, identifying what is changing for each of your characters.
+Fill in the rest of the reverse-engineering table, identifying what is changing for each of your characters.
 
 [/together]
 

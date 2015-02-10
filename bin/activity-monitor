@@ -1,11 +1,19 @@
 #!/usr/bin/env ruby
-# including dashboard environment doesn't work if not in the dashboard dir
-Dir.chdir(File.expand_path('../../dashboard', __FILE__))
-require_relative '../dashboard/config/environment'
+#
+# This script monitors level completion rates and issues HipChat complaints if a significant
+# number of browsers has attempted a level without anybody finishing it successfully.
+#
+# Currently data is sent to LogEntries for collection and collation via TCP-based log. This
+# script collects a 1 hour period worth of data, analyzes it, and reports.
+#
+# FUTURE THOUGHTS: This is the only reason we use LogEntries. We could probably just use a
+#   an RDS database, MongoDB, or even just a regular log file and eliminate the cost of
+#   LogEntries.
+#
+require File.expand_path('../../dashboard/config/environment', __FILE__)
 require 'cdo/only_one'
 require 'cdo/hip_chat'
 require 'cdo/user_agent_parser'
-
 
 FiveMinutes = 5 * 60 * 1000
 OneHour = 60 * 60 * 1000

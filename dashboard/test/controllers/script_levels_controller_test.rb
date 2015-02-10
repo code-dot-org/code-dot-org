@@ -33,7 +33,41 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal @script_level, assigns(:script_level)
   end
 
+  test 'project template level sets start blocks' do
+    template_level = create :level
+    template_level.start_blocks = '<xml/>'
+    template_level.save!
 
+    real_level = create :level
+    real_level.project_template_level_name = template_level.name
+    real_level.start_blocks = "<should:override/>"
+    real_level.save!
+
+    sl = create :script_level, :with_stage, level: real_level
+    get :show, script_id: sl.script.to_param, stage_id: '1', id: '1'
+
+    assert_response :success
+    # start blocks comes from project_level not real_level
+    assert_equal '<xml/>', assigns(:start_blocks)
+  end
+
+  test 'project template level sets toolbox blocks' do
+    template_level = create :level
+    template_level.toolbox_blocks = '<xml><toolbox/></xml>'
+    template_level.save!
+
+    real_level = create :level
+    real_level.project_template_level_name = template_level.name
+    real_level.toolbox_blocks = "<should:override/>"
+    real_level.save!
+
+    sl = create :script_level, :with_stage, level: real_level
+    get :show, script_id: sl.script.to_param, stage_id: '1', id: '1'
+
+    assert_response :success
+    # toolbox blocks comes from project_level not real_level
+    assert_equal '<xml><toolbox/></xml>', assigns(:toolbox_blocks)
+  end
 
   test 'should show video in twenty hour script level' do
     get :show, script_id: Script::TWENTY_HOUR_ID, id: @script_level.id
