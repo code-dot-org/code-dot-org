@@ -16,7 +16,7 @@
  */
 
 /**
- * @fileoverview Generator and controller for instance lobby/connection controls.
+ * @fileoverview Generator and controller for shard lobby/connection controls.
  */
 
 /* jshint
@@ -33,7 +33,11 @@
 /* global $ */
 'use strict';
 
+var dom = require('../dom');
+var NetSimNodeClient = require('./NetSimNodeClient');
+var NetSimNodeRouter = require('./NetSimNodeRouter');
 var markup = require('./NetSimLobby.html');
+var periodicAction = require('./periodicAction');
 
 /**
  * How often the lobby should be auto-refreshed.
@@ -41,16 +45,17 @@ var markup = require('./NetSimLobby.html');
  * @const
  */
 var AUTO_REFRESH_INTERVAL_MS = 5000;
+var CLOSED_REFRESH_INTERVAL_MS = 30000;
 
 /**
- * @param {NetSimConnection} connection - The instance connection that this
+ * @param {NetSimConnection} connection - The shard connection that this
  *                           lobby control will manipulate.
  * @constructor
  */
 var NetSimLobby = function (connection) {
 
   /**
-   * Instance connection that this lobby control will manipulate.
+   * Shard connection that this lobby control will manipulate.
    * @type {NetSimConnection}
    * @private
    */
@@ -58,11 +63,26 @@ var NetSimLobby = function (connection) {
   this.connection_.statusChanges.register(this, this.refreshLobby_);
 
   /**
-   * When the lobby should be refreshed next
-   * @type {Number}
+   * Helper for running a regular lobby refresh
+   * @type {periodicAction}
    * @private
    */
-  this.nextAutoRefreshTime_ = Infinity;
+  this.periodicRefresh_ = periodicAction(this.refreshLobby_.bind(this),
+      AUTO_REFRESH_INTERVAL_MS);
+
+  /**
+   * Which item in the lobby is currently selected
+   * @type {number}
+   * @private
+   */
+  this.selectedID_ = undefined;
+
+  /**
+   * Which listItem DOM element is currently selected
+   * @type {*}
+   * @private
+   */
+  this.selectedListItem_ = undefined;
 };
 module.exports = NetSimLobby;
 
@@ -79,16 +99,9 @@ NetSimLobby.createWithin = function (element, connection) {
   // Create a new NetSimLobby
   var controller = new NetSimLobby(connection);
   element.innerHTML = markup({});
-  controller.initialize();
+  controller.bindElements_();
+  controller.refreshShardList_();
   return controller;
-};
-
-/**
- *
- */
-NetSimLobby.prototype.initialize = function () {
-  this.bindElements_();
-  this.refreshInstanceList_();
 };
 
 /**
@@ -97,44 +110,88 @@ NetSimLobby.prototype.initialize = function () {
  * Also attach method handlers.
  */
 NetSimLobby.prototype.bindElements_ = function () {
-  this.instanceSelector_ = document.getElementById('netsim_instance_select');
-  $(this.instanceSelector_).change(this.onInstanceSelectorChange_.bind(this));
+  this.lobbyOpenDiv_ = document.getElementById('netsim_lobby_open');
+  this.lobbyClosedDiv_ = document.getElementById('netsim_lobby_closed');
+
+  this.shardSelector_ = document.getElementById('netsim_shard_select');
+  $(this.shardSelector_).change(this.onShardSelectorChange_.bind(this));
 
   this.lobbyList_ = document.getElementById('netsim_lobby_list');
+
+  this.addRouterButton_ = document.getElementById('netsim_lobby_add_router');
+  dom.addClickTouchEvent(this.addRouterButton_,
+      this.addRouterButtonClick_.bind(this));
+
+  this.connectButton_ = document.getElementById('netsim_lobby_connect');
+  dom.addClickTouchEvent(this.connectButton_,
+      this.connectButtonClick_.bind(this));
+
+  this.disconnectButton_ = document.getElementById('netsim_lobby_disconnect');
+  dom.addClickTouchEvent(this.disconnectButton_,
+      this.disconnectButtonClick_.bind(this));
+
+  this.connectionStatusSpan_ = document.getElementById('netsim_lobby_statusbar');
+
+  this.refreshLobby_();
 };
 
 /**
- *
+ * Attach own handlers to run loop events.
+ * @param {RunLoop} runLoop
  */
-NetSimLobby.prototype.onInstanceSelectorChange_ = function () {
-  if (this.connection_.isConnectedToInstance()) {
-    this.connection_.disconnectFromInstance();
-    this.nextAutoRefreshTime_ = Infinity;
+NetSimLobby.prototype.attachToRunLoop = function (runLoop) {
+  this.periodicRefresh_.attachToRunLoop(runLoop);
+};
+
+/** Handler for picking a new shard from the dropdown. */
+NetSimLobby.prototype.onShardSelectorChange_ = function () {
+  if (this.connection_.isConnectedToShard()) {
+    this.connection_.disconnectFromShard();
+    this.periodicRefresh_.disable();
   }
 
-  if (this.instanceSelector_.value !== '__none') {
-    this.connection_.connectToInstance(this.instanceSelector_.value);
+  if (this.shardSelector_.value !== '__none') {
+    this.connection_.connectToShard(this.shardSelector_.value);
   }
+};
+
+/** Handler for clicking the "Add Router" button. */
+NetSimLobby.prototype.addRouterButtonClick_ = function () {
+  this.connection_.addRouterToLobby();
+};
+
+/** Handler for clicking the "Connect" button. */
+NetSimLobby.prototype.connectButtonClick_ = function () {
+  if (!this.selectedID_) {
+    return;
+  }
+
+  this.connection_.connectToRouter(this.selectedID_);
+};
+
+/** Handler for clicking the "disconnect" button. */
+NetSimLobby.prototype.disconnectButtonClick_ = function () {
+  this.connection_.disconnectFromRouter();
 };
 
 /**
  * Make an async request against the dashboard API to
  * reload and populate the user sections list.
  */
-NetSimLobby.prototype.refreshInstanceList_ = function () {
+NetSimLobby.prototype.refreshShardList_ = function () {
   var self = this;
-  // TODO (bbuchanan) : Use unique level ID when generating instance ID
+  // TODO (bbuchanan) : Use unique level ID when generating shard ID
   var levelID = 'demo';
-  var instanceSelector = this.instanceSelector_;
+  var shardSelector = this.shardSelector_;
   this.getUserSections_(function (data) {
-    $(instanceSelector).empty();
+    $(shardSelector).empty();
 
     if (0 === data.length){
       // If we didn't get any sections, we must deny access
       $('<option>')
           .val('__none')
           .html('-- NONE FOUND --')
-          .appendTo(instanceSelector);
+          .appendTo(shardSelector);
       return;
     } else {
       // If we have more than one section, require the user
@@ -142,63 +199,137 @@ NetSimLobby.prototype.refreshInstanceList_ = function () {
       $('<option>')
           .val('__none')
           .html('-- PICK ONE --')
-          .appendTo(instanceSelector);
+          .appendTo(shardSelector);
     }
 
-    // Add all instances to the dropdown
+    // Add all shards to the dropdown
     data.forEach(function (section) {
       // TODO (bbuchanan) : Put teacher names in sections
       $('<option>')
           .val('netsim_' + levelID + '_' + section.id)
           .html(section.name)
-          .appendTo(instanceSelector);
+          .appendTo(shardSelector);
     });
 
-    self.onInstanceSelectorChange_();
+    self.onShardSelectorChange_();
   });
 };
 
+/**
+ * Triggers a full state update based on the connection object's current status.
+ * @private
+ */
 NetSimLobby.prototype.refreshLobby_ = function () {
   var self = this;
   var lobbyList = this.lobbyList_;
+  var isOnShard = this.connection_.isConnectedToShard();
+  var isInLobby = !this.connection_.isConnectedToRouter();
 
-  if (!this.connection_.isConnectedToInstance()) {
-    $(lobbyList).empty();
+  if (!isOnShard) {
+    this.shardSelector_.value = '__none';
+    $(this.addRouterButton_).hide();
+  } else {
+    $(this.addRouterButton_).show();
+  }
+
+  this.periodicRefresh_.setActionInterval(isInLobby ?
+      AUTO_REFRESH_INTERVAL_MS : CLOSED_REFRESH_INTERVAL_MS);
+
+  if (isInLobby) {
+    // Show the lobby and connection selector
+    $(this.lobbyOpenDiv_).show();
+    $(this.lobbyClosedDiv_).hide();
+
+    if (!this.connection_.isConnectedToShard()) {
+      $(lobbyList).empty();
+      $(this.connectButton_).hide();
+      return;
+    }
+
+    this.connection_.getAllNodes(function (lobbyData) {
+      $(lobbyList).empty();
+      $(self.connectButton_).show();
+
+      lobbyData.sort(function (a, b) {
+        if (a.getDisplayName() > b.getDisplayName()) {
+          return 1;
+        }
+        return -1;
+      });
+
+      self.selectedListItem_ = undefined;
+      lobbyData.forEach(function (simNode) {
+        var item = $('<li>').html(
+            simNode.getDisplayName() + ' : ' +
+            simNode.getStatus() + ' ' +
+            simNode.getStatusDetail());
+
+        // Style rows by row type.
+        if (simNode.getNodeType() === NetSimNodeRouter.getNodeType()) {
+          item.addClass('router_row');
+        } else {
+          item.addClass('user_row');
+          if (simNode.entityID === self.connection_.myNode.entityID) {
+            item.addClass('own_row');
+          }
+        }
+
+        // Preserve selected item across refresh.
+        if (simNode.entityID === self.selectedID_) {
+          item.addClass('selected_row');
+          self.selectedListItem_ = item;
+        }
+
+        dom.addClickTouchEvent(item[0], self.onRowClick_.bind(self, item, simNode));
+        item.appendTo(lobbyList);
+      });
+
+      self.onSelectionChange();
+
+      self.periodicRefresh_.enable();
+    });
+  } else {
+    // Just show the status line and the disconnect button
+    $(this.lobbyClosedDiv_).show();
+    $(this.lobbyOpenDiv_).hide();
+    $(this.connectionStatusSpan_).html(this.connection_.myNode.getStatus() + ' ' +
+        this.connection_.myNode.getStatusDetail());
+  }
+};
+
+/**
+ * @param {*} connectionTarget - Lobby row for clicked item
+ * @private
+ */
+NetSimLobby.prototype.onRowClick_ = function (listItem, connectionTarget) {
+  // Can't select user rows (for now)
+  if (NetSimNodeClient.getNodeType() === connectionTarget.getNodeType()) {
     return;
   }
 
-  this.connection_.getLobbyListing(function (lobbyData) {
-    $(lobbyList).empty();
+  var oldSelectedID = this.selectedID_;
+  var oldSelectedListItem = this.selectedListItem_;
 
-    lobbyData.sort(function (a, b) {
-      if (a.name === b.name) {
-        return 0;
-      } else if (a.name > b.name) {
-        return 1;
-      }
-      return -1;
-    });
+  // Deselect old row
+  if (oldSelectedListItem) {
+    oldSelectedListItem.removeClass('selected_row');
+  }
+  this.selectedID_ = undefined;
+  this.selectedListItem_ = undefined;
 
-    // TODO (bbuchanan): This should eventually generate an interactive list
-    lobbyData.forEach(function (connection) {
-      var item = $('<li>');
-      if (connection.id === self.connection_.myLobbyRowID_) {
-        item.addClass('netsim_lobby_own_row');
-        item.html(connection.name + ' : ' + connection.status + ' : Me');
-      } else {
-        item.addClass('netsim_lobby_user_row');
-        $('<a>')
-            .attr('href', '#')
-            .html(connection.name + ' : ' + connection.status)
-            .appendTo(item);
-      }
-      item.appendTo(lobbyList);
-    });
+  // If we clicked on a different row, select the new row
+  if (connectionTarget.entityID !== oldSelectedID) {
+    this.selectedID_ = connectionTarget.entityID;
+    this.selectedListItem_ = listItem;
+    this.selectedListItem_.addClass('selected_row');
+  }
 
-    if (self.nextAutoRefreshTime_ === Infinity) {
-      self.nextAutoRefreshTime_ = 0;
-    }
-  }); 
+  this.onSelectionChange();
+};
+
+/** Handler for selecting/deselcting a row in the lobby listing. */
+NetSimLobby.prototype.onSelectionChange = function () {
+  this.connectButton_.disabled = (this.selectedListItem_ === undefined);
 };
 
 /**
@@ -209,31 +340,10 @@ NetSimLobby.prototype.refreshLobby_ = function () {
  */
 NetSimLobby.prototype.getUserSections_ = function (callback) {
   // TODO (bbuchanan) : Get owned sections as well, to support teachers.
-  // TODO (bbuchanan) : Handle failure case nicely.  Maybe wrap callback
-  //                    and nicely pass list to it.
   // TODO (bbuchanan): Wrap this away into a shared library for the v2/sections api
   $.ajax({
     dataType: 'json',
     url: '/v2/sections/membership',
     success: callback
   });
-};
-
-/**
- *
- * @param {RunLoop.Clock} clock
- */
-NetSimLobby.prototype.tick = function (clock) {
-  // TODO (bbuchanan) : Extract "interval" method generator for this and connection.
-  if (clock.time >= this.nextAutoRefreshTime_) {
-    this.refreshLobby_();
-    if (this.nextAutoRefreshTime_ === 0) {
-      this.nextAutoRefreshTime_ = clock.time + AUTO_REFRESH_INTERVAL_MS;
-    } else {
-      // Stable increment
-      while (this.nextAutoRefreshTime_ < clock.time) {
-        this.nextAutoRefreshTime_ += AUTO_REFRESH_INTERVAL_MS;
-      }
-    }
-  }
 };

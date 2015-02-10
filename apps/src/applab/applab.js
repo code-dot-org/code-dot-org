@@ -717,6 +717,7 @@ studioApp.reset = function(first) {
   }
 
   // Reset configurable variables
+  delete Applab.activeCanvas;
   Applab.turtle = {};
   Applab.turtle.heading = 0;
   Applab.turtle.x = Applab.appWidth / 2;
@@ -1199,7 +1200,7 @@ Applab.callCmd = function (cmd) {
   return retVal;
 };
 
-Applab.createHtmlBlock = function (opts) {
+Applab.container = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newDiv = document.createElement("div");
@@ -1209,7 +1210,7 @@ Applab.createHtmlBlock = function (opts) {
   return Boolean(divApplab.appendChild(newDiv));
 };
 
-Applab.createButton = function (opts) {
+Applab.button = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newButton = document.createElement("button");
@@ -1220,7 +1221,7 @@ Applab.createButton = function (opts) {
                  divApplab.appendChild(newButton));
 };
 
-Applab.createImage = function (opts) {
+Applab.image = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newImage = document.createElement("img");
@@ -1230,7 +1231,7 @@ Applab.createImage = function (opts) {
   return Boolean(divApplab.appendChild(newImage));
 };
 
-Applab.createImageUploadButton = function (opts) {
+Applab.imageUploadButton = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   // To avoid showing the ugly fileupload input element, we create a label
@@ -1263,8 +1264,9 @@ function getTurtleContext() {
   var canvas = document.getElementById('turtleCanvas');
 
   if (!canvas) {
-    // If there is not yet a turtleCanvas, create it:
-    Applab.createCanvas({ 'elementId': 'turtleCanvas' });
+    // If there is not yet a turtleCanvas, create it (but don't make it the
+    // active canvas):
+    Applab.createCanvas({ 'elementId': 'turtleCanvas', 'notActive': true });
     canvas = document.getElementById('turtleCanvas');
 
     // And create the turtle (defaults to visible):
@@ -1296,15 +1298,15 @@ function turtleSetVisibility (visible) {
   turtleImage.style.visibility = visible ? 'visible' : 'hidden';
 }
 
-Applab.turtleShow = function (opts) {
+Applab.show = function (opts) {
   turtleSetVisibility(true);
 };
 
-Applab.turtleHide = function (opts) {
+Applab.hide = function (opts) {
   turtleSetVisibility(false);
 };
 
-Applab.turtleMoveTo = function (opts) {
+Applab.moveTo = function (opts) {
   var ctx = getTurtleContext();
   if (ctx) {
     ctx.beginPath();
@@ -1317,41 +1319,57 @@ Applab.turtleMoveTo = function (opts) {
   }
 };
 
-Applab.turtleMove = function (opts) {
+Applab.move = function (opts) {
   var newOpts = {};
   newOpts.x = Applab.turtle.x + opts.x;
   newOpts.y = Applab.turtle.y + opts.y;
-  Applab.turtleMoveTo(newOpts);
+  Applab.moveTo(newOpts);
 };
 
-Applab.turtleMoveForward = function (opts) {
+Applab.moveForward = function (opts) {
   var newOpts = {};
+  var distance = 25;
+  if (typeof opts.distance !== 'undefined') {
+    distance = opts.distance;
+  }
   newOpts.x = Applab.turtle.x +
-    opts.distance * Math.sin(2 * Math.PI * Applab.turtle.heading / 360);
+    distance * Math.sin(2 * Math.PI * Applab.turtle.heading / 360);
   newOpts.y = Applab.turtle.y -
-      opts.distance * Math.cos(2 * Math.PI * Applab.turtle.heading / 360);
-  Applab.turtleMoveTo(newOpts);
+    distance * Math.cos(2 * Math.PI * Applab.turtle.heading / 360);
+  Applab.moveTo(newOpts);
 };
 
-Applab.turtleMoveBackward = function (opts) {
-  opts.distance = -opts.distance;
-  Applab.turtleMoveForward(opts);
+Applab.moveBackward = function (opts) {
+  var distance = -25;
+  if (opts.distance !== 'undefined') {
+    distance = -opts.distance;
+  }
+  Applab.moveForward({'distance': distance });
 };
 
-Applab.turtleTurnRight = function (opts) {
+Applab.turnRight = function (opts) {
   // call this first to ensure there is a turtle (in case this is the first API)
   getTurtleContext();
-  Applab.turtle.heading += opts.degrees;
+
+  var degrees = 90;
+  if (typeof opts.degrees !== 'undefined') {
+    degrees = opts.degrees;
+  }
+
+  Applab.turtle.heading += degrees;
   Applab.turtle.heading = (Applab.turtle.heading + 360) % 360;
   updateTurtleImage();
 };
 
-Applab.turtleTurnLeft = function (opts) {
-  opts.degrees = -opts.degrees;
-  Applab.turtleTurnRight(opts);
+Applab.turnLeft = function (opts) {
+  var degrees = -90;
+  if (typeof opts.degrees !== 'undefined') {
+    degrees = -opts.degrees;
+  }
+  Applab.turnRight({'degrees': degrees });
 };
 
-Applab.turtlePenUp = function (opts) {
+Applab.penUp = function (opts) {
   var ctx = getTurtleContext();
   if (ctx) {
     Applab.turtle.penUpColor = ctx.strokeStyle;
@@ -1359,7 +1377,7 @@ Applab.turtlePenUp = function (opts) {
   }
 };
 
-Applab.turtlePenDown = function (opts) {
+Applab.penDown = function (opts) {
   var ctx = getTurtleContext();
   if (ctx && Applab.turtle.penUpColor) {
     ctx.strokeStyle = Applab.turtle.penUpColor;
@@ -1367,14 +1385,14 @@ Applab.turtlePenDown = function (opts) {
   }
 };
 
-Applab.turtlePenWidth = function (opts) {
+Applab.penWidth = function (opts) {
   var ctx = getTurtleContext();
   if (ctx) {
     ctx.lineWidth = opts.width;
   }
 };
 
-Applab.turtlePenColor = function (opts) {
+Applab.penColor = function (opts) {
   var ctx = getTurtleContext();
   if (ctx) {
     if (Applab.turtle.penUpColor) {
@@ -1403,16 +1421,30 @@ Applab.createCanvas = function (opts) {
     // set transparent fill by default:
     ctx.fillStyle = "rgba(255, 255, 255, 0)";
 
+    if (!Applab.activeCanvas && !opts.notActive) {
+      // If there is no active canvas and the caller doesn't specify otherwise,
+      // we'll make this the active canvas for subsequent API calls:
+      Applab.activeCanvas = newElement;
+    }
+
     return Boolean(divApplab.appendChild(newElement));
   }
   return false;
 };
 
-Applab.canvasDrawLine = function (opts) {
+Applab.setActiveCanvas = function (opts) {
   var divApplab = document.getElementById('divApplab');
   var canvas = document.getElementById(opts.elementId);
-  var ctx = canvas.getContext("2d");
-  if (ctx && divApplab.contains(canvas)) {
+  if (divApplab.contains(canvas)) {
+    Applab.activeCanvas = canvas;
+    return true;
+  }
+  return false;
+};
+
+Applab.line = function (opts) {
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
     ctx.beginPath();
     ctx.moveTo(opts.x1, opts.y1);
     ctx.lineTo(opts.x2, opts.y2);
@@ -1422,11 +1454,9 @@ Applab.canvasDrawLine = function (opts) {
   return false;
 };
 
-Applab.canvasDrawCircle = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  var canvas = document.getElementById(opts.elementId);
-  var ctx = canvas.getContext("2d");
-  if (ctx && divApplab.contains(canvas)) {
+Applab.circle = function (opts) {
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
     ctx.beginPath();
     ctx.arc(opts.x, opts.y, opts.radius, 0, 2 * Math.PI);
     ctx.fill();
@@ -1436,11 +1466,9 @@ Applab.canvasDrawCircle = function (opts) {
   return false;
 };
 
-Applab.canvasDrawRect = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  var canvas = document.getElementById(opts.elementId);
-  var ctx = canvas.getContext("2d");
-  if (ctx && divApplab.contains(canvas)) {
+Applab.rect = function (opts) {
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
     ctx.beginPath();
     ctx.rect(opts.x, opts.y, opts.width, opts.height);
     ctx.fill();
@@ -1450,56 +1478,50 @@ Applab.canvasDrawRect = function (opts) {
   return false;
 };
 
-Applab.canvasSetLineWidth = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  var canvas = document.getElementById(opts.elementId);
-  var ctx = canvas.getContext("2d");
-  if (ctx && divApplab.contains(canvas)) {
+Applab.setStrokeWidth = function (opts) {
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
     ctx.lineWidth = opts.width;
     return true;
   }
   return false;
 };
 
-Applab.canvasSetStrokeColor = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  var canvas = document.getElementById(opts.elementId);
-  var ctx = canvas.getContext("2d");
-  if (ctx && divApplab.contains(canvas)) {
+Applab.setStrokeColor = function (opts) {
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
     ctx.strokeStyle = String(opts.color);
     return true;
   }
   return false;
 };
 
-Applab.canvasSetFillColor = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  var canvas = document.getElementById(opts.elementId);
-  var ctx = canvas.getContext("2d");
-  if (ctx && divApplab.contains(canvas)) {
+Applab.setFillColor = function (opts) {
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
     ctx.fillStyle = String(opts.color);
     return true;
   }
   return false;
 };
 
-Applab.canvasClear = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  var canvas = document.getElementById(opts.elementId);
-  var ctx = canvas.getContext("2d");
-  if (ctx && divApplab.contains(canvas)) {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+Applab.clearCanvas = function (opts) {
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
+    ctx.clearRect(0,
+                  0,
+                  Applab.activeCanvas.width,
+                  Applab.activeCanvas.height);
     return true;
   }
   return false;
 };
 
-Applab.canvasDrawImage = function (opts) {
+Applab.drawImage = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  var canvas = document.getElementById(opts.elementId);
   var image = document.getElementById(opts.imageId);
-  var ctx = canvas.getContext("2d");
-  if (ctx && divApplab.contains(canvas) && divApplab.contains(image)) {
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx && divApplab.contains(image)) {
     var xScale, yScale;
     xScale = yScale = 1;
     if (opts.width) {
@@ -1517,20 +1539,16 @@ Applab.canvasDrawImage = function (opts) {
   return false;
 };
 
-Applab.canvasGetImageData = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  var canvas = document.getElementById(opts.elementId);
-  var ctx = canvas.getContext("2d");
-  if (ctx && divApplab.contains(canvas)) {
+Applab.getImageData = function (opts) {
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
     return ctx.getImageData(opts.x, opts.y, opts.width, opts.height);
   }
 };
 
-Applab.canvasPutImageData = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  var canvas = document.getElementById(opts.elementId);
-  var ctx = canvas.getContext("2d");
-  if (ctx && divApplab.contains(canvas)) {
+Applab.putImageData = function (opts) {
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
     // Create tmpImageData and initialize it because opts.imageData is not
     // going to be a real ImageData object if it came from the interpreter
     var tmpImageData = ctx.createImageData(opts.imageData.width,
@@ -1540,7 +1558,7 @@ Applab.canvasPutImageData = function (opts) {
   }
 };
 
-Applab.createTextInput = function (opts) {
+Applab.textInput = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newInput = document.createElement("input");
@@ -1550,7 +1568,7 @@ Applab.createTextInput = function (opts) {
   return Boolean(divApplab.appendChild(newInput));
 };
 
-Applab.createTextLabel = function (opts) {
+Applab.textLabel = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newLabel = document.createElement("label");
@@ -1565,7 +1583,7 @@ Applab.createTextLabel = function (opts) {
                  divApplab.appendChild(newLabel));
 };
 
-Applab.createCheckbox = function (opts) {
+Applab.checkbox = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newCheckbox = document.createElement("input");
@@ -1576,7 +1594,7 @@ Applab.createCheckbox = function (opts) {
   return Boolean(divApplab.appendChild(newCheckbox));
 };
 
-Applab.createRadio = function (opts) {
+Applab.radioButton = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newRadio = document.createElement("input");
@@ -1588,7 +1606,7 @@ Applab.createRadio = function (opts) {
   return Boolean(divApplab.appendChild(newRadio));
 };
 
-Applab.createDropdown = function (opts) {
+Applab.dropdown = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newSelect = document.createElement("select");
@@ -1714,24 +1732,45 @@ Applab.playSound = function (opts) {
   }
 };
 
-Applab.replaceHtmlBlock = function (opts) {
+Applab.innerHTML = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  var oldDiv = document.getElementById(opts.elementId);
-  if (divApplab.contains(oldDiv)) {
-    var newDiv = document.createElement("div");
-    newDiv.id = opts.elementId;
-    newDiv.innerHTML = opts.html;
-
-    return Boolean(oldDiv.parentElement.replaceChild(newDiv, oldDiv));
+  var div = document.getElementById(opts.elementId);
+  if (divApplab.contains(div)) {
+    div.innerHTML = opts.html;
+    return true;
   }
   return false;
 };
 
-Applab.deleteHtmlBlock = function (opts) {
+Applab.deleteElement = function (opts) {
   var divApplab = document.getElementById('divApplab');
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
+    // Special check to see if the active canvas is being deleted
+    if (div == Applab.activeCanvas || div.contains(Applab.activeCanvas)) {
+      delete Applab.activeCanvas;
+    }
     return Boolean(div.parentElement.removeChild(div));
+  }
+  return false;
+};
+
+Applab.showElement = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  var div = document.getElementById(opts.elementId);
+  if (divApplab.contains(div)) {
+    div.style.visibility = 'visible';
+    return true;
+  }
+  return false;
+};
+
+Applab.hideElement = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  var div = document.getElementById(opts.elementId);
+  if (divApplab.contains(div)) {
+    div.style.visibility = 'hidden';
+    return true;
   }
   return false;
 };
@@ -1884,13 +1923,13 @@ Applab.clearTimeout = function (opts) {
   window.clearTimeout(opts.timeoutId);
 };
 
-Applab.createSharedRecord = function (opts) {
-  var onSuccess = Applab.handleCreateSharedRecord.bind(this, opts.onSuccess);
+Applab.createRecord = function (opts) {
+  var onSuccess = Applab.handleCreateRecord.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
-  AppStorage.createSharedRecord(opts.record, onSuccess, onError);
+  AppStorage.createRecord(opts.table, opts.record, onSuccess, onError);
 };
 
-Applab.handleCreateSharedRecord = function(successCallback, record) {
+Applab.handleCreateRecord = function(successCallback, record) {
   if (successCallback) {
     Applab.eventQueue.push({
       'fn': successCallback,
@@ -1910,13 +1949,13 @@ Applab.handleError = function(errorCallback, message) {
   }
 };
 
-Applab.readSharedValue = function(opts) {
-  var onSuccess = Applab.handleReadSharedValue.bind(this, opts.onSuccess);
+Applab.getKeyValue = function(opts) {
+  var onSuccess = Applab.handleReadValue.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
-  AppStorage.readSharedValue(opts.key, onSuccess, onError);
+  AppStorage.getKeyValue(opts.key, onSuccess, onError);
 };
 
-Applab.handleReadSharedValue = function(successCallback, value) {
+Applab.handleReadValue = function(successCallback, value) {
   if (successCallback) {
     Applab.eventQueue.push({
       'fn': successCallback,
@@ -1925,13 +1964,13 @@ Applab.handleReadSharedValue = function(successCallback, value) {
   }
 };
 
-Applab.writeSharedValue = function(opts) {
-  var onSuccess = Applab.handleWriteSharedValue.bind(this, opts.onSuccess);
+Applab.setKeyValue = function(opts) {
+  var onSuccess = Applab.handleSetKeyValue.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
-  AppStorage.writeSharedValue(opts.key, opts.value, onSuccess, onError);
+  AppStorage.setKeyValue(opts.key, opts.value, onSuccess, onError);
 };
 
-Applab.handleWriteSharedValue = function(successCallback) {
+Applab.handleSetKeyValue = function(successCallback) {
   if (successCallback) {
     Applab.eventQueue.push({
       'fn': successCallback,
@@ -1940,13 +1979,13 @@ Applab.handleWriteSharedValue = function(successCallback) {
   }
 };
 
-Applab.readSharedRecords = function (opts) {
-  var onSuccess = Applab.handleReadSharedRecords.bind(this, opts.onSuccess);
+Applab.readRecords = function (opts) {
+  var onSuccess = Applab.handleReadRecords.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
-  AppStorage.readSharedRecords(opts.searchParams, onSuccess, onError);
+  AppStorage.readRecords(opts.table, opts.searchParams, onSuccess, onError);
 };
 
-Applab.handleReadSharedRecords = function(successCallback, records) {
+Applab.handleReadRecords = function(successCallback, records) {
   if (successCallback) {
     Applab.eventQueue.push({
       'fn': successCallback,
@@ -1955,13 +1994,13 @@ Applab.handleReadSharedRecords = function(successCallback, records) {
   }
 };
 
-Applab.updateSharedRecord = function (opts) {
-  var onSuccess = Applab.handleUpdateSharedRecord.bind(this, opts.onSuccess);
+Applab.updateRecord = function (opts) {
+  var onSuccess = Applab.handleUpdateRecord.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
-  AppStorage.updateSharedRecord(opts.record, onSuccess, onError);
+  AppStorage.updateRecord(opts.table, opts.record, onSuccess, onError);
 };
 
-Applab.handleUpdateSharedRecord = function(successCallback) {
+Applab.handleUpdateRecord = function(successCallback) {
   if (successCallback) {
     Applab.eventQueue.push({
       'fn': successCallback,
@@ -1970,13 +2009,13 @@ Applab.handleUpdateSharedRecord = function(successCallback) {
   }
 };
 
-Applab.deleteSharedRecord = function (opts) {
-  var onSuccess = Applab.handleDeleteSharedRecord.bind(this, opts.onSuccess);
+Applab.deleteRecord = function (opts) {
+  var onSuccess = Applab.handleDeleteRecord.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
-  AppStorage.deleteSharedRecord(opts.record, onSuccess, onError);
+  AppStorage.deleteRecord(opts.table, opts.record, onSuccess, onError);
 };
 
-Applab.handleDeleteSharedRecord = function(successCallback) {
+Applab.handleDeleteRecord = function(successCallback) {
   if (successCallback) {
     Applab.eventQueue.push({
       'fn': successCallback,

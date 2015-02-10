@@ -51,6 +51,7 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 This lesson has one new and important word:<br/>
 
 - **Boolean** - a type of data with two values: true and false
+- **Return** - used as a synonym for output of a function
 
 ### <a name="GetStarted"></a> 2) Booleans - True or False?
 
@@ -98,19 +99,26 @@ Give each student a card and have them answer the following questions on it (fee
 
 Then collect the cards and shuffle them. To play the game, follow these steps:
 
-- Select a card
-- Read the answer to #8 and say this is the person we are looking for
-- Have all the students stand up.
-- Begin asking true/false based on the card questions
-    - Start with simple true/false questions like "is your hair brown?" or "is your favorite number greater than 7?"
-    - After a few simple questions, move on to questions using "and," "or," and "not." eg:
-        - Do you have siblings OR wear glasses?
-        - Is the last digit of your phone number greater than 5 AND less than 8?
-        - Is your favorite color NOT purple?
-    - Students who answer False to a question must sit down.
-    - The person who is still standing at the end is the person.
+ - Select a card
+ - Say: I’m going to read the answer to #8 but if it is you, don’t say anything.
+ - Say: Now everyone stand up and we are going to ask some questions with Boolean answers to help determine who this person is.
+ - Begin the following true/false questions.  Preface each one with “If you answer false to the following question, please sit down.”  The person whose card you are reading should always answer true so you will need to change the example questions below.  For this example, the answers were brown, yes, 13, blue, December, Yes, and 9
 
-After one round, explain about boolean logic and how x and y means both x and y are true. X or Y means only x or y has to be true. You can also talk about the amount of information you get from a question. If you have time, let students take turns as the quizmaster, coming up with their own Boolean questions.
+1. My hair color is brown.
+2. I wear contacts or glasses.  (you only have to answer true to One of these to remain standing)
+3. My favorite number is greater than 10 and less than 20. (you must answer true to both these.)
+4. My favorite color is blue or green.
+5. I was not born in April.
+6. I have at least one sibling.
+7. The last digit of my phone number is a prime number.
+
+Because of how numbers 3,4, 5, and 7 were asked it is likely that some people will still be standing.  You will need to revisit these and ask them again in a more narrow fashion such as “My favorite color is blue”.
+
+Play this several times.  Be creative with using or’s and and’s.  Remind students that the OR means that either part of the statement being true will result in the entire statement being true.  In English, an “or” is often an “exclusive or” such as “You can have chicken or fish.”  In English, you only get to pick one, but with Boolean logic you could have chicken, fish, or both!!  For the example person above, “I was born in December OR my favorite number is 13” is true.  Note that “I was born in December AND my favorite number is 13” is also true.
+
+Have a student try to act as the quizmaster after several rounds.  If a mistake is made by you, a student quizmaster, or the person whose card you are reading, see if you can analyze where the mistake was made or why the question being asked might not have been clear.
+
+And how does this all connect with our game?  Is the player too far left or too far right?
 
 [/together]
 

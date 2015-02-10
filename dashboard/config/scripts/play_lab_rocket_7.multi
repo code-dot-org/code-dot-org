@@ -1,0 +1,7 @@
+name 'Play Lab Rocket 7'
+title 'Rocket Multiple Choice'
+question 'Which function would describe a rocket that reaches 4 meters at 2 seconds, 16 meters at 4 seconds, and  256 meters at 16 seconds?'
+wrong "rocket-height(seconds) = seconds * 2"
+right "rocket-height(seconds) = seconds * seconds"
+wrong "rocket-height(seconds) = seconds * 4"
+wrong "rocket-height(seconds) = seconds * 16"

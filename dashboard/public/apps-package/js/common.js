@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({81:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({82:[function(require,module,exports){
 // Functions for checking required blocks.
 
 /**
@@ -57,7 +57,7 @@ exports.define = function(name) {
   };
 };
 
-},{}],38:[function(require,module,exports){
+},{}],39:[function(require,module,exports){
 /*
  * canvg.js - Javascript SVG parser and renderer on Canvas
  * MIT Licensed 
@@ -3025,7 +3025,7 @@ if (typeof(CanvasRenderingContext2D) != 'undefined') {
 	}
 }
 
-},{}],125:[function(require,module,exports){
+},{}],139:[function(require,module,exports){
 /**
  * A set of functional blocks
  */
@@ -3514,7 +3514,7 @@ function installCond(blockly, generator) {
   };
 }
 
-},{"../locale/current/common":171,"./functionalBlockUtils":73,"./utils":166}],73:[function(require,module,exports){
+},{"../locale/current/common":185,"./functionalBlockUtils":74,"./utils":180}],74:[function(require,module,exports){
 var utils = require('./utils');
 var _ = utils.getLodash();
 
@@ -3658,7 +3658,7 @@ module.exports.installStringPicker = function(blockly, generator, options) {
   };
 };
 
-},{"./utils":166}],152:[function(require,module,exports){
+},{"./utils":180}],166:[function(require,module,exports){
 var list = [];
 
 /**
@@ -3676,7 +3676,7 @@ exports.clearTimeouts = function () {
   list = [];
 };
 
-},{}],146:[function(require,module,exports){
+},{}],160:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3700,7 +3700,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":171,"ejs":187}],127:[function(require,module,exports){
+},{"../../locale/current/common":185,"ejs":201}],141:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -3965,7 +3965,7 @@ Slider.bindEvent_ = function(element, name, func) {
 
 module.exports = Slider;
 
-},{"./dom":43}],126:[function(require,module,exports){
+},{"./dom":44}],140:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -4116,7 +4116,7 @@ module.exports = function(app, levels, options) {
   });
 };
 
-},{"./StudioApp":2,"./blocksCommon":17,"./dom":43,"./required_block_utils":124,"./utils":166}],124:[function(require,module,exports){
+},{"./StudioApp":2,"./blocksCommon":18,"./dom":44,"./required_block_utils":138,"./utils":180}],138:[function(require,module,exports){
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
@@ -4394,7 +4394,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"../locale/current/common":171,"./block_utils":16,"./utils":166,"./xml":167}],17:[function(require,module,exports){
+},{"../locale/current/common":185,"./block_utils":17,"./utils":180,"./xml":181}],18:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -4559,7 +4559,7 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/current/common":171}],2:[function(require,module,exports){
+},{"../locale/current/common":185}],2:[function(require,module,exports){
 // Globals:
 //   Blockly
 
@@ -5871,7 +5871,7 @@ StudioApp.prototype.hasExtraTopBlocks = function () {
   return this.feedback_.hasExtraTopBlocks();
 };
 
-},{"../locale/current/common":171,"./ResizeSensor":1,"./block_utils":16,"./constants.js":42,"./dom":43,"./feedback":62,"./templates/builder.html":140,"./templates/buttons.html":141,"./templates/instructions.html":143,"./templates/learn.html":144,"./templates/makeYourOwn.html":145,"./utils":166,"./xml":167,"url":186}],186:[function(require,module,exports){
+},{"../locale/current/common":185,"./ResizeSensor":1,"./block_utils":17,"./constants.js":43,"./dom":44,"./feedback":63,"./templates/builder.html":154,"./templates/buttons.html":155,"./templates/instructions.html":157,"./templates/learn.html":158,"./templates/makeYourOwn.html":159,"./utils":180,"./xml":181,"url":200}],200:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6580,13 +6580,13 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":182,"querystring":185}],185:[function(require,module,exports){
+},{"punycode":196,"querystring":199}],199:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":183,"./encode":184}],184:[function(require,module,exports){
+},{"./decode":197,"./encode":198}],198:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6673,7 +6673,7 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],183:[function(require,module,exports){
+},{}],197:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6759,7 +6759,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],182:[function(require,module,exports){
+},{}],196:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -7270,7 +7270,7 @@ var isArray = Array.isArray || function (xs) {
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],145:[function(require,module,exports){
+},{}],159:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7290,7 +7290,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":171,"ejs":187}],144:[function(require,module,exports){
+},{"../../locale/current/common":185,"ejs":201}],158:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7312,7 +7312,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":171,"ejs":187}],143:[function(require,module,exports){
+},{"../../locale/current/common":185,"ejs":201}],157:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7332,7 +7332,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":171,"ejs":187}],140:[function(require,module,exports){
+},{"../../locale/current/common":185,"ejs":201}],154:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7352,7 +7352,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":187}],62:[function(require,module,exports){
+},{"ejs":201}],63:[function(require,module,exports){
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
 var HINT_REQUEST_PLACEMENT = {
   NONE: 0,  // This value must not be changed.
@@ -8509,7 +8509,7 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
   });
 };
 
-},{"../locale/current/common":171,"./codegen":41,"./constants":42,"./dom":43,"./feedbackBlocks":63,"./templates/buttons.html":141,"./templates/code.html":142,"./templates/shareFailure.html":148,"./templates/sharing.html":149,"./templates/showCode.html":150,"./templates/trophy.html":151,"./utils":166,"./xml":167}],166:[function(require,module,exports){
+},{"../locale/current/common":185,"./codegen":42,"./constants":43,"./dom":44,"./feedbackBlocks":64,"./templates/buttons.html":155,"./templates/code.html":156,"./templates/shareFailure.html":162,"./templates/sharing.html":163,"./templates/showCode.html":164,"./templates/trophy.html":165,"./utils":180,"./xml":181}],180:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
 
@@ -8734,12 +8734,6 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
       color: 'green',
       blocks: [
         {
-          block: 'var x = __;',
-          title: 'Create a variable for the first time'
-        }, {
-          block: 'x = __;',
-          title: 'Reassign a variable'
-        }, {
           block: '__ + __',
           title: 'Add two numbers'
         }, {
@@ -8753,13 +8747,22 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
           title: 'Divide two numbers'
         }, {
           block: '__ === __',
-          title: 'Compare two numbers'
+          title: 'Test for equal value and equal type'
+        }, {
+          block: '__ !== __',
+          title: 'Test for not equal value or not equal type'
         }, {
           block: '__ > __',
           title: 'Compare two numbers'
         }, {
           block: '__ < __',
           title: 'Compare two numbers'
+        }, {
+          block: '__ && __',
+          title: 'Logical AND of two booleans'
+        }, {
+          block: '__ || __',
+          title: 'Logical OR of two booleans'
         }, {
           block: 'random()',
           title: 'Get a random number between 0 and 1'
@@ -8775,6 +8778,21 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
         }, {
           block: 'min(__, __)',
           title: 'Minimum value'
+        }
+      ]
+    }, {
+      name: 'Variables',
+      color: 'blue',
+      blocks: [
+        {
+          block: 'var x = __;',
+          title: 'Create a variable for the first time'
+        }, {
+          block: 'x = __;',
+          title: 'Reassign a variable'
+        }, {
+          block: 'var x = [1, 2, 3, 4];',
+          title: 'Create a variable and initialize it as an array'
         }
       ]
     }, {
@@ -8807,15 +8825,13 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
   categoryInfo = (dropletConfig && dropletConfig.categories) || defCategoryInfo;
 
   var mergedFunctions = mergeFunctionsWithConfig(codeFunctions, dropletConfig);
+  var i, j;
 
-  for (var i = 0; i < mergedFunctions.length; i++) {
+  for (i = 0; i < mergedFunctions.length; i++) {
     var cf = mergedFunctions[i];
-    if (cf.category === 'hidden') {
-      continue;
-    }
     var block = cf.func + "(";
     if (cf.params) {
-      for (var j = 0; j < cf.params.length; j++) {
+      for (j = 0; j < cf.params.length; j++) {
         if (j !== 0) {
           block += ", ";
         }
@@ -8833,12 +8849,26 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
   var addedPalette = [];
   for (var category in categoryInfo) {
     categoryInfo[category].name = category;
+    for (j = 0; j < stdPalette.length; j++) {
+      if (stdPalette[j].name === category) {
+        // This category is in the stdPalette, merge in its blocks:
+        categoryInfo[category].blocks =
+            categoryInfo[category].blocks.concat(stdPalette[j].blocks);
+        break;
+      }
+    }
     if (categoryInfo[category].blocks.length > 0) {
       addedPalette.push(categoryInfo[category]);
     }
   }
 
-  return addedPalette.concat(stdPalette);
+  for (j = 0; j < stdPalette.length; j++) {
+    if (!(stdPalette[j].name in categoryInfo)) {
+      // This category from the stdPalette hasn't been referenced yet, add it:
+      addedPalette.push(stdPalette[j]);
+    }
+  }
+  return addedPalette;
 };
 
 /**
@@ -8847,16 +8877,22 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
 exports.generateAceApiCompleter = function (codeFunctions, dropletConfig) {
   var apis = [];
 
-  var mergedFunctions = mergeFunctionsWithConfig(codeFunctions, dropletConfig);
-  for (var i = 0; i < mergedFunctions.length; i++) {
-    var cf = mergedFunctions[i];
-    if (cf.category === 'hidden') {
-      continue;
-    }
+  var completerFunctions;
+  if (codeFunctions instanceof Array) {
+    // codeFunctions is in an array, use those exactly:
+    completerFunctions = codeFunctions;
+  } else if (dropletConfig && dropletConfig.blocks) {
+    // use dropletConfig.blocks in its entirety (completer will include all
+    // functions available in this app, even those not in this level's palette)
+    completerFunctions = dropletConfig.blocks;
+  }
+
+  for (var i = 0; i < completerFunctions.length; i++) {
+    var cf = completerFunctions[i];
     apis.push({
       name: 'api',
       value: cf.func,
-      meta: 'local'
+      meta: cf.category
     });
   }
 
@@ -8906,12 +8942,12 @@ exports.generateDropletModeOptions = function (codeFunctions, dropletConfig) {
   return modeOptions;
 };
 
-},{"./hammer":74,"./lodash":82,"./xml":167}],82:[function(require,module,exports){
+},{"./hammer":75,"./lodash":83,"./xml":181}],83:[function(require,module,exports){
 (function (global){
 /**
  * @license
  * Lo-Dash 2.4.1 (Custom Build) <http://lodash.com/>
- * Build: `lodash include="debounce,reject,map,value,range,without,sample,create,flatten,isEmpty,wrap,size,bind,contains,last,clone" --output src/lodash.js`
+ * Build: `lodash include="debounce,reject,map,value,range,without,sample,create,flatten,isEmpty,wrap,size,bind,contains,last,clone,isEqual" --output src/lodash.js`
  * Copyright 2012-2013 The Dojo Foundation <http://dojofoundation.org/>
  * Based on Underscore.js 1.5.2 <http://underscorejs.org/LICENSE>
  * Copyright 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -10731,6 +10767,48 @@ exports.generateDropletModeOptions = function (codeFunctions, dropletConfig) {
   }
 
   /**
+   * Performs a deep comparison between two values to determine if they are
+   * equivalent to each other. If a callback is provided it will be executed
+   * to compare values. If the callback returns `undefined` comparisons will
+   * be handled by the method instead. The callback is bound to `thisArg` and
+   * invoked with two arguments; (a, b).
+   *
+   * @static
+   * @memberOf _
+   * @category Objects
+   * @param {*} a The value to compare.
+   * @param {*} b The other value to compare.
+   * @param {Function} [callback] The function to customize comparing values.
+   * @param {*} [thisArg] The `this` binding of `callback`.
+   * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
+   * @example
+   *
+   * var object = { 'name': 'fred' };
+   * var copy = { 'name': 'fred' };
+   *
+   * object == copy;
+   * // => false
+   *
+   * _.isEqual(object, copy);
+   * // => true
+   *
+   * var words = ['hello', 'goodbye'];
+   * var otherWords = ['hi', 'goodbye'];
+   *
+   * _.isEqual(words, otherWords, function(a, b) {
+   *   var reGreet = /^(?:hello|hi)$/i,
+   *       aGreet = _.isString(a) && reGreet.test(a),
+   *       bGreet = _.isString(b) && reGreet.test(b);
+   *
+   *   return (aGreet || bGreet) ? (aGreet == bGreet) : undefined;
+   * });
+   * // => true
+   */
+  function isEqual(a, b, callback, thisArg) {
+    return baseIsEqual(a, b, typeof callback == 'function' && baseCreateCallback(callback, thisArg, 2));
+  }
+
+  /**
    * Checks if `value` is a function.
    *
    * @static
@@ -12019,6 +12097,7 @@ exports.generateDropletModeOptions = function (codeFunctions, dropletConfig) {
   lodash.isArguments = isArguments;
   lodash.isArray = isArray;
   lodash.isEmpty = isEmpty;
+  lodash.isEqual = isEqual;
   lodash.isFunction = isFunction;
   lodash.isObject = isObject;
   lodash.isString = isString;
@@ -12161,7 +12240,7 @@ exports.generateDropletModeOptions = function (codeFunctions, dropletConfig) {
 }.call(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],74:[function(require,module,exports){
+},{}],75:[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-22
  * http://eightmedia.github.io/hammer.js
  *
@@ -14325,7 +14404,7 @@ if(typeof define == 'function' && define.amd) {
 }
 
 })(window);
-},{}],151:[function(require,module,exports){
+},{}],165:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -14345,7 +14424,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":187}],150:[function(require,module,exports){
+},{"ejs":201}],164:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -14365,7 +14444,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":171,"ejs":187}],149:[function(require,module,exports){
+},{"../../locale/current/common":185,"ejs":201}],163:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -14385,7 +14464,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":171,"ejs":187}],148:[function(require,module,exports){
+},{"../../locale/current/common":185,"ejs":201}],162:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -14405,7 +14484,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":187}],142:[function(require,module,exports){
+},{"ejs":201}],156:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -14425,7 +14504,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":187}],141:[function(require,module,exports){
+},{"ejs":201}],155:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -14445,9 +14524,9 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":171,"ejs":187}],171:[function(require,module,exports){
+},{"../../locale/current/common":185,"ejs":201}],185:[function(require,module,exports){
 /*common*/ module.exports = window.blockly.locale;
-},{}],63:[function(require,module,exports){
+},{}],64:[function(require,module,exports){
 var constants = require('./constants');
 var readonly = require('./templates/readonly.html');
 
@@ -14576,7 +14655,7 @@ FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
   return blockXMLStrings.join('');
 };
 
-},{"./constants":42,"./templates/readonly.html":147}],147:[function(require,module,exports){
+},{"./constants":43,"./templates/readonly.html":161}],161:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -14588,8 +14667,8 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<!DOCTYPE html>\n<html dir="', escape((2,  options.localeDirection )), '">\n<head>\n  <meta charset="utf-8">\n  <title>Blockly</title>\n  <script type="text/javascript" src="', escape((6,  assetUrl('js/blockly.js') )), '"></script>\n  <script type="text/javascript" src="', escape((7,  assetUrl('js/' + options.locale + '/blockly_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((8,  assetUrl('js/common.js') )), '"></script>\n  <script type="text/javascript" src="', escape((9,  assetUrl('js/' + options.locale + '/common_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((10,  assetUrl('js/' + options.locale + '/' + app + '_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((11,  assetUrl('js/' + app + '.js') )), '"></script>\n  <script type="text/javascript">\n    ');13; // delay to onload to fix IE9. 
-; buf.push('\n    window.onload = function() {\n      ', escape((15,  app )), 'Main(', (15,  JSON.stringify(options) ), ');\n    };\n  </script>\n</head>\n<body>\n  <div id="blockly" class="readonly"></div>\n  <style>\n    html, body {\n      background-color: transparent;\n      margin: 0;\n      padding:0;\n      overflow: hidden;\n      height: 100%;\n      font-family: \'Gotham A\', \'Gotham B\', sans-serif;\n    }\n    .blocklyText, .blocklyMenuText, .blocklyTreeLabel, .blocklyHtmlInput,\n        .blocklyIconMark, .blocklyTooltipText, .goog-menuitem-content {\n      font-family: \'Gotham A\', \'Gotham B\', sans-serif;\n    }\n    #blockly>svg {\n      background-color: transparent;\n      border: none;\n    }\n    #blockly {\n      position: absolute;\n      top: 0;\n      left: 0;\n      overflow: hidden;\n      height: 100%;\n      width: 100%;\n    }\n  </style>\n</body>\n</html>\n'); })();
+ buf.push('<!DOCTYPE html>\n<html dir="', escape((2,  options.localeDirection )), '">\n<head>\n  <meta charset="utf-8">\n  <title>Blockly</title>\n  <link href="', escape((6,  assetUrl('css/common.css') )), '" media="all" rel="stylesheet">\n  <script type="text/javascript" src="', escape((7,  assetUrl('js/blockly.js') )), '"></script>\n  <script type="text/javascript" src="', escape((8,  assetUrl('js/' + options.locale + '/blockly_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((9,  assetUrl('js/common.js') )), '"></script>\n  <script type="text/javascript" src="', escape((10,  assetUrl('js/' + options.locale + '/common_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((11,  assetUrl('js/' + options.locale + '/' + app + '_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((12,  assetUrl('js/' + app + '.js') )), '"></script>\n  <script type="text/javascript">\n    ');14; // delay to onload to fix IE9. 
+; buf.push('\n    window.onload = function() {\n      ', escape((16,  app )), 'Main(', (16,  JSON.stringify(options) ), ');\n    };\n  </script>\n</head>\n<body class="readonly">\n  <div id="blockly"></div>\n</body>\n</html>\n'); })();
 } 
 return buf.join('');
 };
@@ -14597,7 +14676,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":187}],187:[function(require,module,exports){
+},{"ejs":201}],201:[function(require,module,exports){
 
 /*!
  * EJS
@@ -14952,7 +15031,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":188,"./utils":189,"fs":179,"path":180}],189:[function(require,module,exports){
+},{"./filters":202,"./utils":203,"fs":193,"path":194}],203:[function(require,module,exports){
 
 /*!
  * EJS
@@ -14976,7 +15055,7 @@ exports.escape = function(html){
     .replace(/"/g, '&quot;');
 };
  
-},{}],188:[function(require,module,exports){
+},{}],202:[function(require,module,exports){
 
 /*!
  * EJS - Filters
@@ -15175,7 +15254,7 @@ exports.get = function(obj, prop){
 exports.json = function(obj){
   return JSON.stringify(obj);
 };
-},{}],180:[function(require,module,exports){
+},{}],194:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -15403,7 +15482,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require('_process'))
-},{"_process":181}],181:[function(require,module,exports){
+},{"_process":195}],195:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -15462,9 +15541,9 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],179:[function(require,module,exports){
+},{}],193:[function(require,module,exports){
 
-},{}],41:[function(require,module,exports){
+},{}],42:[function(require,module,exports){
 var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
 var LOOP_HIGHLIGHT = 'loopHighlight();\n';
@@ -15854,7 +15933,7 @@ exports.functionFromCode = function(code, options) {
   }
 };
 
-},{}],43:[function(require,module,exports){
+},{}],44:[function(require,module,exports){
 exports.addReadyListener = function(callback) {
   if (document.readyState === "complete") {
     setTimeout(callback, 1);
@@ -15961,7 +16040,7 @@ exports.isIOS = function() {
   return reg.test(window.navigator.userAgent);
 };
 
-},{}],42:[function(require,module,exports){
+},{}],43:[function(require,module,exports){
 /**
  * @fileoverview Constants used in production code and tests.
  */
@@ -16037,7 +16116,7 @@ exports.KeyCodes = {
   DOWN: 40
 };
 
-},{}],16:[function(require,module,exports){
+},{}],17:[function(require,module,exports){
 var xml = require('./xml');
 
 /**
@@ -16287,7 +16366,7 @@ exports.mathBlockXml = function (type, inputs, titles) {
   return str;
 };
 
-},{"./xml":167}],167:[function(require,module,exports){
+},{"./xml":181}],181:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();

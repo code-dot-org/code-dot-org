@@ -48,7 +48,7 @@ if node['cdo-apps']['daemon']
 
   if node.chef_environment == 'staging'
     cronjob at:'@reboot', do:home_dir('.dropbox-dist', 'dropboxd')
-    cronjob at:'*/2 * * * *', do:bin_dir('import_google_sheets')
+    cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'import_google_sheets')
     cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','run_server_generate_curriculum_pdfs'), notify:'brian@code.org'
     cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','collate_pdfs'), notify:'brian@code.org'
     cronjob at:'*/2 * * * *', do:dashboard_dir('bin','build_scripts'), notify:'dev@code.org'
@@ -57,14 +57,13 @@ if node['cdo-apps']['daemon']
 
   if node.chef_environment == 'production'
     cronjob at:'*/15 * * * *', do:deploy_dir('bin','activity-monitor')
-    cronjob at:'0 * * * *', do:bin_dir('import_sendy_unsubscribers')
-    cronjob at:'@daily', do:pegasus_dir('sites.v3/code.org/bin/send_workshop_reminder_emails'), notify:'rick@code.org'
+    cronjob at:'@daily', do:deploy_dir('bin', 'send_workshop_reminder_emails'), notify:'rick@code.org'
   end
 
-  cronjob at:'*/1 * * * *', do:bin_dir('process_forms')
-  cronjob at:'*/5 * * * *', do:bin_dir('analyze_hoc_activity')
-  cronjob at:'*/1 * * * *', do:bin_dir('deliver_poste_messages')
-  cronjob at:'*/1 * * * *', do:"#{bin_dir('geocode_hoc_activity')} 2>&1 > /dev/null"
+  cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'process_forms')
+  cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'analyze_hoc_activity')
+  cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'deliver_poste_messages')
+  cronjob at:'*/1 * * * *', do:"#{deploy_dir('bin', 'geocode_hoc_activity')} 2>&1 > /dev/null"
 
   build_target = node.chef_environment == 'test' ? 'test-websites' : 'websites'
   cronjob at:'*/1 * * * *', do:"#{aws_dir('build_and_mail_log')} #{build_target}", notify:'dev+build@code.org'

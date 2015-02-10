@@ -78,7 +78,7 @@ class JupiterApp < Sinatra::Base
     logger = create_logger
     database = create_database(logger)
    
-    OmniAuth.config.full_host = "https://#{CDO.canonical_hostname('jupiter.code.org')}"
+    OmniAuth.config.full_host = "https://#{CDO.canonical_hostname('jupiter.code.org')}" if rack_env?(:production)
  
     set :database, database
     set :logger, logger
@@ -101,7 +101,6 @@ class JupiterApp < Sinatra::Base
     @footer = :layout_footer
 
     @scripts = [
-      '/js/jquery.min.js',
       '/js/jupiter.js',
     ]
 
@@ -121,6 +120,10 @@ class JupiterApp < Sinatra::Base
 
   get '/' do
     haml :home
+  end
+  
+  get '/report-bug' do
+    haml :report_bug
   end
   
   get '/signin' do

@@ -1,6 +1,5 @@
 name 'Creating Contracts From Examples 4'
-title 'Creating Contracts From Examples 4'
-content1 'Try using the "text" function to write this red text at size 40.'
+title 'Shrink Contract'
+content1 'Try using the "shrink" function.'
 content2 'Examples 4.solution_blocks, 300'
 answer 'shrink|image|image:image'
-
