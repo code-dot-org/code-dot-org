@@ -18,7 +18,7 @@ attachments:
 <%
 facebook = {:u=>"http://code.org/k5"}
 facebook_link = "https://www.facebook.com/sharer/sharer.php?#{facebook.to_query}"
-twitter = {:related=>'codeorg', :hashtags=>'', :text=>"I'm bringing computer science to my classroom with @codeorg! Find a local workshop to join me."}
+twitter = {:related=>'codeorg', :hashtags=>'', :text=>"I'm bringing computer science to my classroom with @codeorg! Find a local workshop to join me.", :url=>'http://code.org/k5'}
 twitter_link = "https://twitter.com/intent/tweet?#{twitter.to_query}"
 %>
 <% unless recipient.name.nil_or_empty? %>
