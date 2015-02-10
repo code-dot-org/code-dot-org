@@ -588,7 +588,7 @@ Studio.onTick = function() {
   // Run key event handlers for any keys that are down:
   for (var key in KeyCodes) {
     if (Studio.keyState[KeyCodes[key]] &&
-        Studio.keyState[KeyCodes[key]] == "keydown") {
+        Studio.keyState[KeyCodes[key]] === "keydown") {
       switch (KeyCodes[key]) {
         case KeyCodes.LEFT:
           callHandler('when-left');
@@ -608,7 +608,7 @@ Studio.onTick = function() {
 
   for (var btn in ArrowIds) {
     if (Studio.btnState[ArrowIds[btn]] &&
-        Studio.btnState[ArrowIds[btn]] == ButtonState.DOWN) {
+        Studio.btnState[ArrowIds[btn]] === ButtonState.DOWN) {
       switch (ArrowIds[btn]) {
         case ArrowIds.LEFT:
           callHandler('when-left');

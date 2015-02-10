@@ -14,7 +14,7 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "true",
     "free_play": "true",
-    "scrollbars": "true",
+    "scrollbars": "false",
     "embed": "false"
   }
 }]]></config>
