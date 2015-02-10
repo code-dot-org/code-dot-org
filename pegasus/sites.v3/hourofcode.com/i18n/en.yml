@@ -44,7 +44,11 @@
 
   n_have_learned_an_hoc: "<h1>#</h1><h3>have tried an</h3><h2>HOUR of CODE</h2>"
   anybody_can_learn: 'Anybody can learn.'
+  get_started: 'Start'
+  beyond_an_hour: 'Beyond an Hour of Code'
   register_now: 'Register Now'
+  share_on_facebook: 'Share on Facebook'
+  share_on_twitter: 'Share on Twitter'
 
   front_join_us_heading: 'An Hour of Code for every student.'
   front_join_us_description: 'Computer science is a foundation for every student. Help us introduce it to 100 million.'
