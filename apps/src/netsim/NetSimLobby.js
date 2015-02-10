@@ -62,7 +62,7 @@ var NetSimLobby = function (connection, user, shardID) {
    * @private
    */
   this.connection_ = connection;
-  this.connection_.statusChanges.register(this, this.refreshLobby_);
+  this.connection_.statusChanges.register(this, this.refresh_);
 
   /**
    * Current user, logged in or no.
@@ -83,7 +83,7 @@ var NetSimLobby = function (connection, user, shardID) {
    * @type {periodicAction}
    * @private
    */
-  this.periodicRefresh_ = periodicAction(this.refreshLobby_.bind(this),
+  this.periodicRefresh_ = periodicAction(this.refresh_.bind(this),
       AUTO_REFRESH_INTERVAL_MS);
 
   /**
@@ -120,6 +120,7 @@ NetSimLobby.createWithin = function (element, connection, user, shardID) {
   var controller = new NetSimLobby(connection, user, shardID);
   element.innerHTML = markup({});
   controller.bindElements_();
+  controller.refresh_();
   return controller;
 };
 
@@ -129,43 +130,46 @@ NetSimLobby.createWithin = function (element, connection, user, shardID) {
  * Also attach method handlers.
  */
 NetSimLobby.prototype.bindElements_ = function () {
-  this.lobbyOpenDiv_ = document.getElementById('netsim_lobby_open');
-  this.lobbyClosedDiv_ = document.getElementById('netsim_lobby_closed');
+  // Root
+  this.openRoot_ = $('#netsim_lobby_open');
+  this.closedRoot_ = $('#netsim_lobby_closed');
 
-  this.nameInput_ = $('#netsim_lobby_name');
-  this.setNameButton_ = $('#netsim_lobby_set_name_button');
+  // Open
+  this.displayNameView_ = this.openRoot_.find('#display_name_view');
+  this.shardView_ = this.openRoot_.find('#shard_view');
+
+  // Open -> display_name_view
+  this.nameInput_ = this.displayNameView_.find('#netsim_lobby_name');
+  this.setNameButton_ = this.displayNameView_.find('#netsim_lobby_set_name_button');
   dom.addClickTouchEvent(this.setNameButton_[0],
       this.setNameButtonClick_.bind(this));
 
-  this.shardSelector_ = document.getElementById('netsim_shard_select');
-  $(this.shardSelector_).change(this.onShardSelectorChange_.bind(this));
-
-  this.lobbyList_ = document.getElementById('netsim_lobby_list');
-
-  this.addRouterButton_ = document.getElementById('netsim_lobby_add_router');
-  dom.addClickTouchEvent(this.addRouterButton_,
+  // Open -> shard_view
+  this.shardSelector_ = this.shardView_.find('#netsim_shard_select');
+  this.shardSelector_.change(this.onShardSelectorChange_.bind(this));
+  this.addRouterButton_ = this.shardView_.find('#netsim_lobby_add_router');
+  dom.addClickTouchEvent(this.addRouterButton_[0],
       this.addRouterButtonClick_.bind(this));
-
-  this.connectButton_ = document.getElementById('netsim_lobby_connect');
-  dom.addClickTouchEvent(this.connectButton_,
+  this.lobbyList_ = this.shardView_.find('#netsim_lobby_list');
+  this.connectButton_ = this.shardView_.find('#netsim_lobby_connect');
+  dom.addClickTouchEvent(this.connectButton_[0],
       this.connectButtonClick_.bind(this));
 
-  this.disconnectButton_ = document.getElementById('netsim_lobby_disconnect');
-  dom.addClickTouchEvent(this.disconnectButton_,
+  // Closed
+  this.disconnectButton_ = this.closedRoot_.find('#netsim_lobby_disconnect');
+  dom.addClickTouchEvent(this.disconnectButton_[0],
       this.disconnectButtonClick_.bind(this));
 
-  this.connectionStatusSpan_ = document.getElementById('netsim_lobby_statusbar');
+  this.connectionStatusSpan_ = this.closedRoot_.find('#netsim_lobby_statusbar');
 
-  $('.shardLink').hide();
+  // Collections
+  this.shardLinks_ = $('.shardLink');
 
+  // Initialization
+  this.shardLinks_.hide();
   if (this.user_.isSignedIn) {
     this.nameInput_.val(this.user_.name);
-    this.nameInput_.prop('disabled', true);
-    this.setNameButton_.hide();
-
     this.refreshShardList_();
-  } else {
-    this.shardSelector_.disabled = true;
   }
 };
 
@@ -180,7 +184,7 @@ NetSimLobby.prototype.attachToRunLoop = function (runLoop) {
 NetSimLobby.prototype.setNameButtonClick_ = function () {
   this.nameInput_.prop('disabled', true);
   this.setNameButton_.hide();
-  this.shardSelector_.disabled = false;
+  this.shardSelector_.attr('disabled', false);
   this.refreshShardList_();
 };
 
@@ -192,9 +196,9 @@ NetSimLobby.prototype.onShardSelectorChange_ = function () {
     this.nameInput_.disabled = false;
   }
 
-  if (this.shardSelector_.value !== '__none') {
+  if (this.shardSelector_.val() !== '__none') {
     this.nameInput_.disabled = true;
-    this.connection_.connectToShard(this.shardSelector_.value,
+    this.connection_.connectToShard(this.shardSelector_.val(),
         this.nameInput_.val());
   }
 };
@@ -282,14 +286,14 @@ NetSimLobby.prototype.useRandomShard = function () {
 };
 
 NetSimLobby.prototype.useShard = function (shardID) {
-  $(this.shardSelector_).empty();
+  this.shardSelector_.empty();
 
   $('<option>')
       .val(shardID)
       .html('My Private Network')
       .appendTo(this.shardSelector_);
 
-  $('.shardLink').
+  this.shardLinks_.
       attr('href', this.buildShareLink(shardID)).
       show();
 
@@ -302,86 +306,123 @@ NetSimLobby.prototype.buildShareLink = function (shardID) {
   return baseLocation + '?s=' + shardID;
 };
 
+NetSimLobby.prototype.refresh_ = function () {
+  if (this.connection_.isConnectedToRouter()) {
+    this.refreshClosedLobby_();
+  } else {
+    this.refreshOpenLobby_();
+  }
+};
+
 /**
- * Triggers a full state update based on the connection object's current status.
+ * Just show the status line and the disconnect button.
  * @private
  */
-NetSimLobby.prototype.refreshLobby_ = function () {
+NetSimLobby.prototype.refreshClosedLobby_ = function () {
+  this.closedRoot_.show();
+  this.openRoot_.hide();
+
+  // Update connection status
+  this.connectionStatusSpan_.html(
+      this.connection_.myNode.getStatus() + ' ' +
+      this.connection_.myNode.getStatusDetail());
+
+  // Share link state?
+
+  // Disconnect button state?
+
+  this.periodicRefresh_.setActionInterval(CLOSED_REFRESH_INTERVAL_MS);
+  this.periodicRefresh_.enable();
+};
+
+/**
+ * Show preconnect controls (name, shard-select) and actual lobby listing.
+ * @private
+ */
+NetSimLobby.prototype.refreshOpenLobby_ = function () {
+  this.openRoot_.show();
+  this.closedRoot_.hide();
+
+  // Do we have a name yet?
+  if (this.nameInput_.val() === '') {
+    this.nameInput_.prop('disabled', false);
+    this.setNameButton_.show();
+
+    this.shardView_.hide();
+    this.periodicRefresh_.disable();
+    return;
+  }
+
+  // We have a name
+  this.nameInput_.prop('disabled', true);
+  this.setNameButton_.hide();
+  this.shardView_.show();
+
+  // Do we have a shard yet?
+  if (!this.connection_.isConnectedToShard()) {
+    this.shardSelector_.val('__none');
+    this.addRouterButton_.hide();
+    this.lobbyList_.hide();
+    this.connectButton_.hide();
+    this.periodicRefresh_.disable();
+    return;
+  }
+
+  // We have a shard
+  this.addRouterButton_.show();
+  this.lobbyList_.show();
+  this.connectButton_.show();
+  this.refreshLobbyList_();
+};
+
+/**
+ * Reload the lobby listing of nodes.
+ * @private
+ */
+NetSimLobby.prototype.refreshLobbyList_ = function () {
   var self = this;
-  var lobbyList = this.lobbyList_;
-  var isOnShard = this.connection_.isConnectedToShard();
-  var isInLobby = !this.connection_.isConnectedToRouter();
+  this.connection_.getAllNodes(function (lobbyData) {
+    self.lobbyList_.empty();
 
-  if (!isOnShard) {
-    this.shardSelector_.value = '__none';
-    $(this.addRouterButton_).hide();
-  } else {
-    $(this.addRouterButton_).show();
-  }
-
-  this.periodicRefresh_.setActionInterval(isInLobby ?
-      AUTO_REFRESH_INTERVAL_MS : CLOSED_REFRESH_INTERVAL_MS);
-
-  if (isInLobby) {
-    // Show the lobby and connection selector
-    $(this.lobbyOpenDiv_).show();
-    $(this.lobbyClosedDiv_).hide();
-
-    if (!this.connection_.isConnectedToShard()) {
-      $(lobbyList).empty();
-      $(this.connectButton_).hide();
-      return;
-    }
-
-    this.connection_.getAllNodes(function (lobbyData) {
-      $(lobbyList).empty();
-      $(self.connectButton_).show();
-
-      lobbyData.sort(function (a, b) {
-        if (a.getDisplayName() > b.getDisplayName()) {
-          return 1;
-        }
-        return -1;
-      });
-
-      self.selectedListItem_ = undefined;
-      lobbyData.forEach(function (simNode) {
-        var item = $('<li>').html(
-            simNode.getDisplayName() + ' : ' +
-            simNode.getStatus() + ' ' +
-            simNode.getStatusDetail());
-
-        // Style rows by row type.
-        if (simNode.getNodeType() === NetSimNodeRouter.getNodeType()) {
-          item.addClass('router_row');
-        } else {
-          item.addClass('user_row');
-          if (simNode.entityID === self.connection_.myNode.entityID) {
-            item.addClass('own_row');
-          }
-        }
-
-        // Preserve selected item across refresh.
-        if (simNode.entityID === self.selectedID_) {
-          item.addClass('selected_row');
-          self.selectedListItem_ = item;
-        }
-
-        dom.addClickTouchEvent(item[0], self.onRowClick_.bind(self, item, simNode));
-        item.appendTo(lobbyList);
-      });
-
-      self.onSelectionChange();
-
-      self.periodicRefresh_.enable();
+    lobbyData.sort(function (a, b) {
+      if (a.getDisplayName() > b.getDisplayName()) {
+        return 1;
+      }
+      return -1;
     });
-  } else {
-    // Just show the status line and the disconnect button
-    $(this.lobbyClosedDiv_).show();
-    $(this.lobbyOpenDiv_).hide();
-    $(this.connectionStatusSpan_).html(this.connection_.myNode.getStatus() + ' ' +
-        this.connection_.myNode.getStatusDetail());
-  }
+
+    self.selectedListItem_ = undefined;
+    lobbyData.forEach(function (simNode) {
+      var item = $('<li>').html(
+          simNode.getDisplayName() + ' : ' +
+          simNode.getStatus() + ' ' +
+          simNode.getStatusDetail());
+
+      // Style rows by row type.
+      if (simNode.getNodeType() === NetSimNodeRouter.getNodeType()) {
+        item.addClass('router_row');
+      } else {
+        item.addClass('user_row');
+        if (simNode.entityID === self.connection_.myNode.entityID) {
+          item.addClass('own_row');
+        }
+      }
+
+      // Preserve selected item across refresh.
+      if (simNode.entityID === self.selectedID_) {
+        item.addClass('selected_row');
+        self.selectedListItem_ = item;
+      }
+
+      dom.addClickTouchEvent(item[0], self.onRowClick_.bind(self, item, simNode));
+      item.appendTo(self.lobbyList_);
+    });
+
+    self.onSelectionChange();
+
+    self.periodicRefresh_.setActionInterval(AUTO_REFRESH_INTERVAL_MS);
+    self.periodicRefresh_.enable();
+  });
 };
 
 /**
@@ -416,7 +457,7 @@ NetSimLobby.prototype.onRowClick_ = function (listItem, connectionTarget) {
 
 /** Handler for selecting/deselcting a row in the lobby listing. */
 NetSimLobby.prototype.onSelectionChange = function () {
-  this.connectButton_.disabled = (this.selectedListItem_ === undefined);
+  this.connectButton_.attr('disabled', (this.selectedListItem_ === undefined));
 };
 
 /**

@@ -167,6 +167,8 @@ NetSim.prototype.getOverrideShardID = function () {
  * @private
  */
 NetSim.prototype.initWithUserName_ = function (user) {
+  this.mainContainer_ = $('#netsim');
+
   this.receivedMessageLog_ = NetSimLogWidget.createWithin(
       document.getElementById('netsim_received'), 'Received Messages');
   this.sentMessageLog_ = NetSimLogWidget.createWithin(
@@ -175,6 +177,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
   this.connection_ = new NetSimConnection(this.sentMessageLog_,
       this.receivedMessageLog_);
   this.connection_.attachToRunLoop(this.runLoop_);
+  this.connection_.statusChanges.register(this, this.refresh_);
 
   var lobbyContainer = document.getElementById('netsim_lobby_container');
   this.lobbyControl_ = NetSimLobby.createWithin(lobbyContainer,
@@ -189,6 +192,20 @@ NetSim.prototype.initWithUserName_ = function (user) {
   var sendWidgetContainer = document.getElementById('netsim_send');
   this.sendWidget_ = NetSimSendWidget.createWithin(sendWidgetContainer,
       this.connection_);
+
+  this.refresh_();
+};
+
+/**
+ * Respond to connection status changes show/hide the main content area.
+ * @private
+ */
+NetSim.prototype.refresh_ = function () {
+  if (this.connection_.isConnectedToRouter()) {
+    this.mainContainer_.show();
+  } else {
+    this.mainContainer_.hide();
+  }
 };
 
 /**
