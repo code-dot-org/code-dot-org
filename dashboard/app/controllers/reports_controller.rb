@@ -49,7 +49,7 @@ SQL
     script = Script.find_by_name(script_name)
     raise ActiveRecord::RecordNotFound unless script
 
-    if script.twenty_hour?
+    if script.default_script?
       script_level = script.get_script_level_by_chapter(level_id)
     else
       script_level = script.get_script_level_by_stage_and_position(stage_id, level_id)
