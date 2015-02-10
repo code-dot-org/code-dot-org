@@ -89,12 +89,12 @@ zh:
   signup_thank_you_message: 我們已經寄給您確認的電子郵件，內容包含了可以幫助您入門的相關資訊。
   map_header: '# 小時的編碼活動在世界各地'
   map_header_company: '# 由公司主辦'
-  map_search_placeholder: Search for Hour of Code events
-  map_search_search: Search
-  map_search_reset: Reset
-  meta_tag_og_title: The Hour of Code is here
+  map_search_placeholder: 搜尋Hour of Code活動
+  map_search_search: 搜尋
+  map_search_reset: 清除
+  meta_tag_og_title: Hour of Code在此處
   meta_tag_og_description: 一小時編程是一個全球性的活動，觸及數千萬個來自180多個國家，30多種語言，由4歲到104 歲的學生。
-  meta_tag_twitter_title: The Hour of Code is here
+  meta_tag_twitter_title: Hour of Code在此處
   meta_tag_twitter_description: 一小時程式設計是一個全球性的活動，觸及數千萬個來自180多個國家，30多種語言，由4歲到104 歲的學生。
   twitter_default_text: '我將要參加今年的 #HourOfCode，你呢？@codeorg'
   hardware_prizes_form_name_label: 您的姓名
