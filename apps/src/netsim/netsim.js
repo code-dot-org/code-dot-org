@@ -33,6 +33,7 @@
  maxstatements: 200
 */
 /* global -Blockly */
+/* global $ */
 'use strict';
 
 var page = require('./page.html');
