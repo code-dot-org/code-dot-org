@@ -22,6 +22,7 @@ class Blockly < Level
     default_num_example_blocks
     open_function_definition
     callout_json
+    project_template_level_name
   )
 
   before_validation {

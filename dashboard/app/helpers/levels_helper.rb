@@ -41,8 +41,16 @@ module LevelsHelper
     select_and_track_autoplay_video
 
     if @level.is_a? Blockly
-      @toolbox_blocks = @toolbox_blocks || @level.toolbox_blocks
-      @start_blocks = initial_blocks(current_user, @level) || @start_blocks || @level.start_blocks
+      @toolbox_blocks =
+        @toolbox_blocks ||
+        @level.try(:project_template_level).try(:toolbox_blocks) ||
+        @level.toolbox_blocks
+
+      @start_blocks =
+        initial_blocks(current_user, @level) || # check if this level inherits solution from previous level
+        @start_blocks ||
+        @level.try(:project_template_level).try(:start_blocks) ||
+        @level.start_blocks
     end
 
     select_and_remember_callouts(@script_level.nil?)
@@ -242,6 +250,7 @@ module LevelsHelper
       embed
       generate_function_pass_blocks
       timeout_after_when_run
+      project_template_level_name
     ).map{ |x| x.include?(':') ? x.split(':') : [x,x.camelize(:lower)]}]
     .each do |dashboard, blockly|
       # Select first valid value from 1. local_assigns, 2. property of @level object, 3. named instance variable, 4. properties json
