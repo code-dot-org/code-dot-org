@@ -136,11 +136,11 @@ NetSimRouterPanel.prototype.refresh = function () {
     var self = this;
     this.myConnectedRouter.getAddressTable(function (rows) {
       self.networkTable_.empty();
-      $('<tr><th>Hostname</th><th>Address</th></tr>').
-          appendTo(self.networkTable_);
+      $('<tr><th>Hostname</th><th>Address</th></tr>')
+          .appendTo(self.networkTable_);
       rows.forEach(function (row) {
-        $('<tr><td>' + row.hostname + '</td><td>' + row.address + '</td></tr>').
-            appendTo(self.networkTable_);
+        $('<tr><td>' + row.hostname + '</td><td>' + row.address + '</td></tr>')
+            .appendTo(self.networkTable_);
       });
     });
   } else {
