@@ -21,6 +21,29 @@ Dear <%= recipient.name %>,
 
 Thank you for attending a Code.org K-5 workshop with <%= facilitator_name %><%= start_date ? " on #{Chronic.parse(start_date).strftime('%A, %B %d %Y')}" : '' %> at <%= location_name %>! We hope you had an awesome time and that you feel prepared to bring computer science to your little learners!
 
+<div><!--[if mso]>
+  <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fcode.org%2Feducate%2Fk5" style="height:45px;v-text-anchor:middle;width:180px;" arcsize="9%" stroke="f" fillcolor="#7e5ca2">
+    <w:anchorlock/>
+    <center>
+  <![endif]-->
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fcode.org%2Feducate%2Fk5"
+style="background-color:#7e5ca2;border-radius:4px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:13px;font-weight:bold;line-height:45px;text-align:center;text-decoration:none;width:180px;-webkit-text-size-adjust:none;">Share on Facebook</a>
+  <!--[if mso]>
+    </center>
+  </v:roundrect>
+<![endif]--><!--[if mso]>
+  <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://twitter.com/intent/tweet?hashtags=&related=codeorg&text=Sign+up+for+computer+science+professional+development+for+K-5+educators.&url=http%3A%2F%2Fbit.ly%2F1uLtsJE" style="height:45px;v-text-anchor:middle;width:180px;" arcsize="9%" stroke="f" fillcolor="#7e5ca2">
+    <w:anchorlock/>
+    <center>
+  <![endif]-->
+      <a href="https://twitter.com/intent/tweet?hashtags=&related=codeorg&text=Sign+up+for+computer+science+professional+development+for+K-5+educators.&url=http%3A%2F%2Fbit.ly%2F1uLtsJE"
+style="background-color:#7e5ca2;border-radius:4px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:13px;font-weight:bold;line-height:45px;text-align:center;text-decoration:none;width:180px;-webkit-text-size-adjust:none;">Share on Twitter</a>
+  <!--[if mso]>
+    </center>
+  </v:roundrect>
+<![endif]-->
+</div>
+
 Attached to this email, you will find a personalized certificate acknowledging your successful completion of Code.org's K-5 Professional Development.
 
 Please take a moment to complete [this short survey](http://code.org/professional-development-workshop-surveys/<%= workshop_id %>) to rate your facilitator and workshop experience. Completing the survey will qualify you to receive supplies at no cost for the unplugged activities from Course 1, 2 or 3. It will also help us improve our K-5 Professional Development program.
