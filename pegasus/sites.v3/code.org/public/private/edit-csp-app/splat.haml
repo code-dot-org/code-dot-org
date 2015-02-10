@@ -1,10 +1,8 @@
 -dont_cache
--not_authorized! unless dashboard_user
--forbidden! unless dashboard_user[:admin]
 
 -encrypted_app_id = request.splat_path_info[1..-1].split('/').first
 -app_id = storage_decrypt_app_id(encrypted_app_id).last.to_s
--app_tables = DB[:app_tables].where(app_id:app_id).group(:table_name)
+-app_tables = DB[:app_tables].where(app_id:app_id, storage_id:nil).group(:table_name)
 
 %form#csp_tables
   %table
@@ -27,7 +25,7 @@
       %td
         %button
           Add
-  %a{href:"/v3/apps/#{encrypted_app_id}/shared-properties", target:"_blank"}
+  %a{href:"/private/csp-properties/#{encrypted_app_id}", target:"_blank"}
     view key/value pairs
 
 :javascript
