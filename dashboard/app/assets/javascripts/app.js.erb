@@ -275,6 +275,9 @@
       ajax.dataType = dataType;
       ajax.success = fnSave || this.save;
       ajax.error = this.onAjaxError;
+      ajax.beforeSend = function(xhr) {
+        xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))
+      };
 
       return $.ajax(ajax);
     }
@@ -378,8 +381,7 @@
         // Set up the blockly options, starting from some default values
         var opts = $.extend({
           baseUrl: '/blockly/',
-          containerId: _this.$el.attr('id'),
-          scriptPath: _this.props.scriptpath
+          containerId: _this.$el.attr('id')
         }, data.level);
 
         // Kick-start the blockly scripts
@@ -452,7 +454,9 @@
         Dialog: Dialog,
         cdoSounds: CDOSounds,
         position: { blockYCoordinateInterval: 25 },
+
         onInitialize: function() {
+          // When called, "this" is bound to the options hash itself
 
           // TODO: Has moving this broken something?
           window.startTiming('Puzzle', this.scriptPath, '');
@@ -467,8 +471,10 @@
             wrapExistingClipPaths();
             handleClipPathChanges();
           }
+
           $(document).trigger('appInitialized', this);
         },
+
         createCallouts: function() {
           $.fn.qtip.zindex = 500;
           this.callouts && this.callouts.every(function(callout) {
@@ -544,22 +550,27 @@
             return true;
           });
         },
+
         onAttempt: function(report) {
           report.fallbackResponse = this.report.fallback_response;
           report.callback = this.report.callback;
+
           // Track puzzle attempt event
           trackEvent('Puzzle', 'Attempt', this.scriptPath, report.pass ? 1 : 0);
           if (report.pass) {
             trackEvent('Puzzle', 'Success', this.scriptPath, report.attempt);
-            stopTiming('Puzzle', this.scriptPath, '');
+            window.stopTiming('Puzzle', this.scriptPath, '');
           }
           trackEvent('Activity', 'Lines of Code', this.scriptPath, report.lines);
+
+          // Send the report
           sendReport(report);
         },
         onResetPressed: function() {
           cancelReport();
         },
         onContinue: function() {
+          // TODO: Should not be using a global "lastServerResponse" here?
           if (lastServerResponse.videoInfo) {
             showVideoDialog(lastServerResponse.videoInfo);
           } else if (lastServerResponse.nextRedirect) {
@@ -567,6 +578,7 @@
           }
         },
         backToPreviousLevel: function() {
+          // TODO: Should not be using a global "lastServerResponse" here?
           if (lastServerResponse.previousLevelRedirect) {
             window.location.href = lastServerResponse.previousLevelRedirect;
           }
@@ -587,6 +599,20 @@
           }
         }
       });
+
+      // TODO: need a better way to bind this.  Consult with cpirich
+      // Summary of the problem: onAttempt (and others) used global variables to get at the option
+      // state like .scriptPath, as well as global functions like sendReport()
+      // Ideally these would be available as local methods, but the current appMain & StudioApp code
+      // does not offer any way to get at options.scriptPath when calling .onAttempt.
+      // We could bind functions in onInitialize, but that's called *after* the functions have already
+      // been copied out into the StudioApp.
+      // The bigger question is: what *should* "this" be when calling parameters in the config block?
+      // Getting to sendReport() is a whole other issue but maybe it's fine to leave as-is
+      opts.onAttempt = __bind(opts.onAttempt, opts);
+      opts.onContinue = __bind(opts.onContinue, opts);
+      opts.backToPreviousLevel = __bind(opts.backToPreviousLevel, opts);
+      opts.onResetPressed = __bind(opts.onResetPressed, opts);
 
       window[opts.app + 'Main'](opts);
     }

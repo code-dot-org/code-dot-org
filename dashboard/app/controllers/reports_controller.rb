@@ -121,8 +121,15 @@ SQL
     @game = game
     @script_level = script_level
     @current_user = current_user
+    @callback = milestone_url(user_id: current_user.try(:id) || 0, script_level_id: script_level)
+    @fallback_response = {
+      success: milestone_response(script_level: script_level, solved?: true),
+      failure: milestone_response(script_level: script_level, solved?: false)
+    }
+    @level_source_id = level.ideal_level_source_id
+    set_videos_and_blocks_and_callouts_and_instructions  # @callouts, @autoplay_video_info
 
-    # TODO: @callouts,@autoplay_video_info,@fallback_response,@callback,@level_source_id,@phone_share_url
+    # TODO: @phone_share_url
 
     if level.unplugged?
       # TODO: what does an unplugged level need?  'levels/unplug', locals: {app: @game.app}
@@ -136,6 +143,7 @@ SQL
     else
       level_data = blockly_options()
     end
+    level_data[:scriptPath] = build_script_level_path(script_level)
     level_data[:locale] = js_locale
 
     render json: {
