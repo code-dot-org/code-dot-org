@@ -21,7 +21,7 @@
     "use_contract_editor": "false",
     "impressive": "false",
     "embed": "false",
-    "callout_json": "[{\r\n  \"localization_key\": \"degrees_per_side\",\r\n  \"element_id\": \"[block-id='29']\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"top center\", \"at\": \"bottom center\"}\r\n  }\r\n}]",
+    "callout_json": "[\r\n  {\"localization_key\":\"degrees_per_side\",\"callout_text\":\"Divide 360 by the number of sides to get the size of each angle in degrees.\",\"element_id\":\"[block-id='29']\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
     "disable_sharing": "false"
   }
 }]]></config>
