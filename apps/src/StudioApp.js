@@ -48,6 +48,10 @@ var StudioApp = function () {
   this.enableShowCode = true;
   this.editCode = false;
   this.usingBlockly_ = true;
+
+  /**
+   * @type {AudioPlayer}
+   */
   this.cdoSounds = null;
   this.Dialog = null;
   this.editor = null;
@@ -177,7 +181,7 @@ StudioApp.prototype.configure = function (options) {
 };
 
 /**
- * Common startup tasks for all apps.
+ * Common startup tasks for all apps. Happens after configure.
  */
 StudioApp.prototype.init = function(config) {
   if (!config) {
@@ -505,45 +509,36 @@ StudioApp.prototype.toggleRunReset = function(button) {
  *
  */
 StudioApp.prototype.loadAudio = function(filenames, name) {
-  if (this.isUsingBlockly()) {
-    Blockly.loadAudio_(filenames, name);
-  } else if (this.cdoSounds) {
-    var regOpts = { id: name };
-    for (var i = 0; i < filenames.length; i++) {
-      var filename = filenames[i];
-      var ext = filename.match(/\.(\w+)(\?.*)?$/);
-      if (ext) {
-        // Extend regOpts so regOpts.mp3 = 'file.mp3'
-        regOpts[ext[1]] = filename;
-      }
-    }
-    this.cdoSounds.register(regOpts);
+  if (!this.cdoSounds) {
+    return;
   }
+
+  this.cdoSounds.registerByFilenamesAndID(filenames, name);
 };
 
 /**
  *
  */
 StudioApp.prototype.playAudio = function(name, options) {
+  if (!this.cdoSounds) {
+    return;
+  }
+
   options = options || {};
   var defaultOptions = {volume: 0.5};
   var newOptions = utils.extend(defaultOptions, options);
-  if (this.isUsingBlockly()) {
-    Blockly.playAudio(name, newOptions);
-  } else if (this.cdoSounds) {
-    this.cdoSounds.play(name, newOptions);
-  }
+  this.cdoSounds.play(name, newOptions);
 };
 
 /**
  *
  */
 StudioApp.prototype.stopLoopingAudio = function(name) {
-  if (this.isUsingBlockly()) {
-    Blockly.stopLoopingAudio(name);
-  } else if (this.cdoSounds) {
-    this.cdoSounds.stopLoopingAudio(name);
+  if (!this.cdoSounds) {
+    return;
   }
+
+  this.cdoSounds.stopLoopingAudio(name);
 };
 
 /**
@@ -565,7 +560,7 @@ StudioApp.prototype.inject = function(div, options) {
     toolbox: document.getElementById('toolbox'),
     trashcan: true
   };
-  Blockly.inject(div, utils.extend(defaults, options));
+  Blockly.inject(div, utils.extend(defaults, options), this.cdoSounds);
 };
 
 /**
@@ -589,7 +584,7 @@ StudioApp.prototype.localeDirection = function() {
 };
 
 /**
-* Initialize Blockly for a readonly iframe.  Called on page load.
+* Initialize Blockly for a readonly iframe.  Called on page load. No sounds.
 * XML argument may be generated from the console with:
 * Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)).slice(5, -6)
 */
@@ -1168,7 +1163,7 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     // Ensure global ace variable is the same as window.ace
     // (important because they can be different in our test environment)
     ace = window.ace;
-    
+
     this.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
       mode: 'javascript',
       modeOptions: utils.generateDropletModeOptions(options.codeFunctions,

@@ -1,4 +1,31 @@
 /**
+ * Interface for a sound registry and playback mechanism
+ * @interface AudioPlayer
+ */
+function AudioPlayer() {}
+
+/**
+ * Register a sound to a given ID
+ *
+ * @function
+ * @name AudioPlayer#register
+ * @param {Object} options
+ * @param {string} options.id the sound ID for playback
+ * @param {string} [options.mp3] path to mp3 file
+ * @param {string} [options.ogg] path to ogg file
+ * @param {string} [options.wav] path to wav file
+ */
+
+/**
+ * Attempt to play back a sound with a given ID (if exists)
+ *
+ * @function
+ * @name AudioPlayer#play
+ * @param {Object} options
+ * @param {number} volume volume for sound playback (between 0.0 and 1.0)
+ */
+
+/**
  * Simple registry for cross-browser sound effect playback.
  * Will play sounds using Web Audio or HTML5 Audio element where available.
  *
@@ -9,6 +36,7 @@
  *   mySounds.register({id: 'myFirstSound', ogg: '/mysound.ogg', mp3: '/mysound.mp3'});
  *   mySounds.play('myFirstSound');
  * @constructor
+ * @implements AudioPlayer
  */
 function Sounds() {
   window.AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -32,6 +60,26 @@ function Sounds() {
 
   this.soundsById = {};
 }
+
+/**
+ * @param {Array.<string>} filenames ending in (.mp3|.ogg|.wav)
+ * @param {string} soundID ID for sound
+ */
+Sounds.prototype.registerByFilenamesAndID = function (filenames, soundID) {
+  var soundRegistrationConfig = { id: soundID };
+  for (var i = 0; i < filenames.length; i++) {
+    var filename = filenames[i];
+    var getExtensionRegexp = /\.(\w+)(\?.*)?$/;
+    var extensionCaptureGroups = filename.match(getExtensionRegexp);
+    if (extensionCaptureGroups) {
+      // Extend soundRegistrationConfig
+      // so soundRegistrationConfig.mp3 = 'file.mp3'
+      var extension = extensionCaptureGroups[1];
+      soundRegistrationConfig[extension] = filename;
+    }
+  }
+  this.register(soundRegistrationConfig);
+};
 
 Sounds.prototype.register = function (config) {
   var sound = new Sound(config, this.audioContext);
