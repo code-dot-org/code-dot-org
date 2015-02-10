@@ -91,7 +91,9 @@ DashboardUser.getCurrentUser = function () {
         DashboardUser.currentUser_.initialize_(data);
       },
       error: function (/*jqXHR, textStatus, errorThrown*/) {
-        throw new Error("Unable to retrieve current user info.");
+        DashboardUser.currentUser_.initialize_({
+          isSignedIn: false
+        });
       }
     });
   }
@@ -106,6 +108,7 @@ DashboardUser.getCurrentUser = function () {
 DashboardUser.prototype.initialize_ = function (data) {
   this.id = data.id;
   this.name = data.name;
+  this.isSignedIn = data.isSignedIn !== false;
   this.isReady = true;
 
   // Call any queued callbacks

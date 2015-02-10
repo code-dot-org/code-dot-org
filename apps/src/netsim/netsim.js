@@ -131,10 +131,7 @@ NetSim.prototype.init = function(config) {
 
   // Create netsim lobby widget in page
   this.currentUser_.whenReady(function () {
-    // Do a deferred initialization of the connection object.
-    // TODO (bbuchanan) : Appending random number to user name only for debugging.
-    var userName = this.currentUser_.name + '_' + (Math.floor(Math.random() * 99) + 1);
-    this.initWithUserName_(userName);
+    this.initWithUserName_(this.currentUser_);
   }.bind(this));
 
   // Begin the main simulation loop
@@ -142,24 +139,46 @@ NetSim.prototype.init = function(config) {
 };
 
 /**
+ * Extracts query parameters from a full URL and returns them as a simple
+ * object.
+ * @returns {*}
+ */
+NetSim.prototype.getOverrideShardID = function () {
+  var parts = location.search.split('?');
+  if (parts.length === 1) {
+    return undefined;
+  }
+
+  var shardID;
+  parts[1].split('&').forEach(function (param) {
+    var sides = param.split('=');
+    if (sides.length > 1 && sides[0] === 's') {
+      shardID = sides[1];
+    }
+  });
+  return shardID;
+};
+
+/**
  * Initialization that can happen once we have a user name.
  * Could collapse this back into init if at some point we can guarantee that
  * user name is available on load.
- * @param userName
+ * @param {DashboardUser} user
  * @private
  */
-NetSim.prototype.initWithUserName_ = function (userName) {
+NetSim.prototype.initWithUserName_ = function (user) {
   this.receivedMessageLog_ = NetSimLogWidget.createWithin(
       document.getElementById('netsim_received'), 'Received Messages');
   this.sentMessageLog_ = NetSimLogWidget.createWithin(
       document.getElementById('netsim_sent'), 'Sent Messages');
 
-  this.connection_ = new NetSimConnection(userName, this.sentMessageLog_,
+  this.connection_ = new NetSimConnection(this.sentMessageLog_,
       this.receivedMessageLog_);
   this.connection_.attachToRunLoop(this.runLoop_);
 
   var lobbyContainer = document.getElementById('netsim_lobby_container');
-  this.lobbyControl_ = NetSimLobby.createWithin(lobbyContainer, this.connection_);
+  this.lobbyControl_ = NetSimLobby.createWithin(lobbyContainer,
+      this.connection_, user, this.getOverrideShardID());
   this.lobbyControl_.attachToRunLoop(this.runLoop_);
 
   var routerPanelContainer = document.getElementById('netsim_tabpanel');
