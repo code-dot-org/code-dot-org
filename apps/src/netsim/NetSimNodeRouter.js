@@ -44,7 +44,17 @@
 
 var superClass = require('./NetSimNode');
 var NetSimEntity = require('./NetSimEntity');
+var NetSimLogger = require('./NetSimLogger');
 var NetSimWire = require('./NetSimWire');
+var NetSimMessage = require('./NetSimMessage');
+
+var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
+
+/**
+ * @type {number}
+ * @readonly
+ */
+var MAX_CLIENT_CONNECTIONS = 6;
 
 /**
  * @param {!NetSimShard} shard
@@ -56,10 +66,16 @@ var NetSimNodeRouter = function (shard, routerRow) {
   superClass.call(this, shard, routerRow);
 
   /**
-   * @const
+   * Determines a subset of connection and message events that this
+   * router will respond to, only managing events from the given node ID,
+   * to avoid conflicting with other clients also simulating this router.
    * @type {number}
+   * @private
    */
-  this.MAX_CLIENT_CONNECTIONS = 6;
+  this.simulateForSender_ = undefined;
+
+  // Subscribe to message table changes
+  this.shard_.messageTable.tableChangeEvent.register(this, this.onMessageTableChange_);
 };
 NetSimNodeRouter.prototype = Object.create(superClass.prototype);
 NetSimNodeRouter.prototype.constructor = NetSimNodeRouter;
@@ -68,7 +84,7 @@ module.exports = NetSimNodeRouter;
 /**
  * Static async creation method. See NetSimEntity.create().
  * @param {!NetSimShard} shard
- * @param {function} [onComplete] - Method that will be given the
+ * @param {!function} onComplete - Method that will be given the
  *        created entity, or null if entity creation failed.
  */
 NetSimNodeRouter.create = function (shard, onComplete) {
@@ -87,9 +103,9 @@ NetSimNodeRouter.create = function (shard, onComplete) {
 
 /**
  * Static async retrieval method.  See NetSimEntity.get().
- * @param {!number} entityID - The row ID for the entity you'd like to find.
+ * @param {!number} routerID - The row ID for the entity you'd like to find.
  * @param {!NetSimShard} shard
- * @param {function} [onComplete] - Method that will be given the
+ * @param {!function} onComplete - Method that will be given the
  *        found entity, or null if entity search failed.
  */
 NetSimNodeRouter.get = function (routerID, shard, onComplete) {
@@ -110,16 +126,16 @@ var RouterStatus = NetSimNodeRouter.RouterStatus;
 /**
  * Updates router status and lastPing time in lobby table - both keepAlive
  * and making sure router's connection count is valid.
- * @param onComplete
+ * @param {function} [onComplete] - Optional success/failure callback
  */
 NetSimNodeRouter.prototype.update = function (onComplete) {
   onComplete = onComplete || function () {};
 
   var self = this;
   this.countConnections(function (count) {
-    self.status_ = count >= self.MAX_CLIENT_CONNECTIONS ?
+    self.status_ = count >= MAX_CLIENT_CONNECTIONS ?
         RouterStatus.FULL : RouterStatus.READY;
-    self.statusDetail_ = '(' + count + '/' + self.MAX_CLIENT_CONNECTIONS + ')';
+    self.statusDetail_ = '(' + count + '/' + MAX_CLIENT_CONNECTIONS + ')';
     superClass.prototype.update.call(self, onComplete);
   });
 };
@@ -138,8 +154,17 @@ NetSimNodeRouter.getNodeType = function () {
 };
 
 /**
+ * Puts this router controller into a mode where it will only
+ * simulate for connection and messages -from- the given node.
+ * @param {!number} nodeID
+ */
+NetSimNodeRouter.prototype.setSimulateForSender = function (nodeID) {
+  this.simulateForSender_ = nodeID;
+};
+
+/**
  * Helper for getting wires table of configured shard.
- * @returns {exports.SharedTable}
+ * @returns {NetSimTable}
  */
 NetSimNodeRouter.prototype.getWireTable = function () {
   return this.shard_.wireTable;
@@ -148,7 +173,7 @@ NetSimNodeRouter.prototype.getWireTable = function () {
 /**
  * Query the wires table and pass the callback a list of wire table rows,
  * where all of the rows are wires attached to this router.
- * @param {function} onComplete, which accepts an Array of NetSimWire.
+ * @param {function} onComplete which accepts an Array of NetSimWire.
  */
 NetSimNodeRouter.prototype.getConnections = function (onComplete) {
   onComplete = onComplete || function () {};
@@ -176,7 +201,7 @@ NetSimNodeRouter.prototype.getConnections = function (onComplete) {
 /**
  * Query the wires table and pass the callback the total number of wires
  * connected to this router.
- * @param {function} onComplete, which accepts a number.
+ * @param {function} onComplete which accepts a number.
  */
 NetSimNodeRouter.prototype.countConnections = function (onComplete) {
   onComplete = onComplete || function () {};
@@ -187,7 +212,7 @@ NetSimNodeRouter.prototype.countConnections = function (onComplete) {
 };
 
 /**
- * @param [Array] haystack
+ * @param {Array} haystack
  * @param {*} needle
  * @returns {boolean} TRUE if needle found in haystack
  */
@@ -211,12 +236,13 @@ var contains = function (haystack, needle) {
 NetSimNodeRouter.prototype.acceptConnection = function (otherNode, onComplete) {
   var self = this;
   this.countConnections(function (count) {
-    if (count > self.MAX_CLIENT_CONNECTIONS) {
+    if (count > MAX_CLIENT_CONNECTIONS) {
       onComplete(false);
       return;
     }
 
-    onComplete(true);
+    // Trigger an update, which will correct our connection count
+    self.update(onComplete);
   });
 };
 
@@ -268,17 +294,104 @@ NetSimNodeRouter.prototype.requestAddress = function (wire, hostname, onComplete
 NetSimNodeRouter.prototype.getAddressTable = function (onComplete) {
   onComplete = onComplete || function () {};
 
-  var self = this;
   this.getConnections(function (wires) {
     var addressTable = wires.map(function (wire) {
       return {
         hostname: wire.localHostname,
         address: wire.localAddress
       };
-    }).concat({
-      hostname: self.getHostname(),
-      address: 0
     });
     onComplete(addressTable);
   });
+};
+
+
+/**
+ * When the message table changes, we might have a new message to handle.
+ * Check for and handle unhandled messages.
+ * @private
+ */
+NetSimNodeRouter.prototype.onMessageTableChange_ = function (rows) {
+
+  if (!this.simulateForSender_) {
+    // Not configured to handle anything yet; don't process messages.
+    return;
+  }
+
+  if (this.isProcessingMessages_) {
+    // We're already in this method, getting called recursively because
+    // we are making changes to the table.  Ignore this call.
+    return;
+  }
+
+  var self = this;
+  var messages = rows.map(function (row) {
+    return new NetSimMessage(self.shard_, row);
+  }).filter(function (message) {
+    return message.fromNodeID === self.simulateForSender_ &&
+        message.toNodeID === self.entityID;
+  });
+
+  // If any messages are for us, get our routing table and process messages.
+  if (messages.length > 0) {
+    this.isProcessingMessages_ = true;
+    this.getConnections(function (wires) {
+      messages.forEach(function (message) {
+        self.routeMessage_(message, wires);
+      });
+      self.isProcessingMessages_ = false;
+    });
+  }
+};
+
+NetSimNodeRouter.prototype.routeMessage_ = function (message, myWires) {
+  // Pull the message off the wire, and hold it in-memory until we route it.
+  // We'll create a new one with the same payload if we have to send it on.
+  message.destroy();
+
+  // Find a connection to route this message to.
+  var toAddress = message.payload.toAddress;
+  if (toAddress === undefined) {
+    //Malformed packet? Throw it away
+    logger.warn("Router encountered a malformed packet: " +
+    JSON.stringify(message.payload));
+    return;
+  }
+
+  if (toAddress === 0) {
+    // Message was sent to me, the router.  It's arrived!  We're done with it.
+    logger.info("Router received: " + JSON.stringify(message.payload));
+    return;
+  }
+
+  var destWires = myWires.filter(function (wire) {
+    return wire.localAddress === toAddress;
+  });
+  if (destWires.length === 0) {
+    // Destination address not in local network.
+    // Route message out of network (for now, throw it away)
+    logger.info("Message left network: " + JSON.stringify(message.payload));
+    return;
+  }
+
+  // TODO: Handle bad state where more than one wire matches dest address?
+
+  var destWire = destWires[0];
+
+  // Create a new message with a new payload.
+  NetSimMessage.send(
+      this.shard_,
+      destWire.remoteNodeID,
+      destWire.localNodeID,
+      message.payload,
+      function (success) {
+        if (success) {
+          logger.info("Message re-routed to " + destWire.localHostname +
+              " (node " + destWire.localNodeID + ")");
+          // TODO: add to router log here.
+        } else {
+          logger.info("Dropped packet: " + JSON.stringify(message.payload));
+        }
+      }
+  );
 };

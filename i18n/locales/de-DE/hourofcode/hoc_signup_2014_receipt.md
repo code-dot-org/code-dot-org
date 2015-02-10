@@ -1,6 +1,6 @@
 * * *
 
-from: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)" subject: "Thanks for signing up to host an Hour of Code!" litmus_tracking_id: "5g5lyi1a"
+Von: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)" Betreff: "Vielen Dank, dass du eine Hour of Code Veranstaltung angemeldet hast!" litmus_tracking_id: "5g5lyi1a"
 
 * * *
 
@@ -14,7 +14,7 @@ Va multumim pentru inregistrare. Daca aveti nevoie de ajutor sau aveti orice int
 
 # Danke, dass Du Dich als Veranstalter für eine Hour of Code angemeldet hast!
 
-**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](http://<%= hostname %>/prizes)
+**JEDER** Hour of Code Veranstalter erhält 10 GB Dropbox-Speicherplatz oder $10 Skype-Guthaben als Dankeschön. [Details](http://<%= hostname %>/prizes)
 
 ## 1. Weitersagen
 
@@ -24,22 +24,22 @@ Erzähl deinen Freunden von #HourOfCode.
 
 ## 2. Frage deine Schule eine Hour of Code anzubieten
 
-[Sende diese email](http://<%= hostname %>/resources#email) oder gebe [dieses handout](http://<%= hostname %>/files/schools-handout.pdf) an deinen Schulleiter.
+[Sende diese E-Mail](http://<%= hostname %>/resources#email) oder gebe [diese Informationen](http://<%= hostname %>/files/schools-handout.pdf) an deinen Schulleiter.
 
 <% end %>
 
-## 3. Ask your employer to get involved
+## 3. Frage deinen Arbeitgeber sich zu engagieren
 
-[Send this email](http://<%= hostname %>/resources#email) to your manager, or the CEO. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf).
+[Sende diese E-Mail](http://<%= hostname %>/resources#email) an deinen Vorgesetzten, oder an den Geschäftsführer. Oder [gib ihm diese Informationen](http://<%= hostname %>/resources/hoc-one-pager.pdf).
 
-## 4. Promote Hour of Code within your community
+## 4. Stelle die Hour of Code deinen Freunden vor
 
 Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
 
-## 5. Ask a local elected official to support the Hour of Code
+## 5. Frage eine öffentliche Stelle ob sie die Hour of Code unterstützen möchte
 
-[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[Sende diese E-Mail](http://<%= hostname %>/resources#politicians) an den für dich zuständigen Bürgermeister, Stadtrat, oder die Schulbehörde. Oder [gib ihnen diese Informationen](http://<%= hostname %>/resources/hoc-one-pager.pdf) und lade sie ein, deine Schule zu besuchen.
 
 * * *
 
-Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](%= unsubscribe_link %).
+Code.org ist eine gemäß 501(c)(3) gemeinnützige Organisation. Unsere Adresse ist 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Du möchtest keine weiteren E-Mails empfangen? [Abmelden](%= unsubscribe_link %).
