@@ -38,6 +38,10 @@ es:
   whats_next_promote: "<a href='http://hourofcode.com/resources'>Promueve la Hora de Código</a>"
   n_have_learned_an_hoc: '<h1>#</h1><h3>han probado la</h3><h2>Hora del código</h2>'
   anybody_can_learn: Cualquier persona puede aprender.
+  get_started: Inicio
+  beyond_an_hour: Más allá de una Hora del Código
+  share_on_facebook: Compartir en Facebook
+  share_on_twitter: Compartir en Facebook
   register_now: Registrate Ahora
   front_join_us_heading: Una hora de código para cada estudiante.
   front_join_us_description: Las ciencias de computación son una base para todo estudiante. Ayúdanos a presentarlas a 100 millones.
@@ -89,12 +93,12 @@ es:
   signup_thank_you_message: Te enviamos un email de confirmación con la información que le ayudará a comenzar.
   map_header: 'Eventos de # Hora de Programación alrededor del mundo'
   map_header_company: '#por los organizadores de la compañía'
-  map_search_placeholder: Search for Hour of Code events
-  map_search_search: Search
-  map_search_reset: Reset
-  meta_tag_og_title: The Hour of Code is here
+  map_search_placeholder: Buscar eventos de la Hora del código
+  map_search_search: Buscar
+  map_search_reset: Reestablecer
+  meta_tag_og_title: La Hora del código está aquí
   meta_tag_og_description: La hora del código es un movimiento global en el que participan decenas de millones de estudiantes, con edades entre 4 y 104 años, en más de 180 países y en más de 30 idiomas.
-  meta_tag_twitter_title: The Hour of Code is here
+  meta_tag_twitter_title: La Hora del código está aquí
   meta_tag_twitter_description: La hora del código es un movimiento global en el que participan decenas de millones de estudiantes en más de 180 países y en más de 30 idiomas, con edades entre 4 y 104 años.
   twitter_default_text: 'Yo participo este año en #HoraDeCódigo, ¿Y tú? @codeorg'
   hardware_prizes_form_name_label: Tu nombre
