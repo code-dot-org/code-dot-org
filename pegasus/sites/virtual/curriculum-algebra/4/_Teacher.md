@@ -25,7 +25,7 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 4) [Writing Contracts](#Activity2)  
 
 ### **Wrap-up**
-5) [Flash Chat](#WrapUp) - What did we learn?  
+5) [Keep Up Your Contracts](#WrapUp)  
 
 ### **Assessment**
 6) [Contracts Assessment](#Assessment)

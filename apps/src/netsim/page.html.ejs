@@ -41,11 +41,17 @@ var helpArea = function(html) { -%>
 
 <div id="appcontainer">
   <div id="netsim">
-    <div id="netsim_lobby_container"></div>
-    <hr/>
-    <textarea id="netsim_inputbox"></textarea>
-    <input id="netsim_sendbutton" type="button" value="Send" />
-    <textarea id="netsim_recievelog"></textarea>
+    <div id="netsim_rightcol">
+      <div id="netsim_vizualization"></div>
+      <div id="netsim_tabpanel"></div>
+    </div>
+    <div id="netsim_leftcol">
+      <div id="netsim_lobby_container"></div>
+      <div id="netsim_received"></div>
+      <div id="netsim_sent"></div>
+      <div id="netsim_send"></div>
+    </div>
+
   </div>
   <div id="footers" dir="<%= data.localeDirection %>">
     <% instructions() %>

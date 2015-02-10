@@ -35,12 +35,13 @@
 /* global -Blockly */
 'use strict';
 
-var dom = require('../dom');
 var page = require('./page.html');
 var NetSimConnection = require('./NetSimConnection');
-var NetSimLogger = require('./NetSimLogger');
 var DashboardUser = require('./DashboardUser');
 var NetSimLobby = require('./NetSimLobby');
+var NetSimRouterPanel = require('./NetSimRouterPanel');
+var NetSimSendWidget = require('./NetSimSendWidget');
+var NetSimLogWidget = require('./NetSimLogWidget');
 var RunLoop = require('./RunLoop');
 
 /**
@@ -61,14 +62,7 @@ var NetSim = function () {
   this.currentUser_ = DashboardUser.getCurrentUser();
 
   /**
-   * Instance of logging API, gives us choke-point control over log output
-   * @type {NetSimLogger}
-   * @private
-   */
-  this.logger_ = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
-
-  /**
-   * Manager for connection to shared instance of netsim app.
+   * Manager for connection to shared shard of netsim app.
    * @type {NetSimConnection}
    * @private
    */
@@ -93,29 +87,10 @@ NetSim.prototype.injectStudioApp = function (studioApp) {
 };
 
 /**
- * Handler for clicking on the send button in the middle of the screen.
- * This is a temporary handler for a temporary UI element - may get
- * torn out.
- * @private
- */
-NetSim.prototype.onSendButtonClick_ = function () {
-  // TODO (bbuchanan) : This is super hacky "hello world" stuff.  remove it.
-  var now = new Date();
-  var fromBox = document.getElementById('netsim_inputbox');
-  var toBox = document.getElementById('netsim_recievelog');
-  toBox.value += '[' + now.toTimeString() + '] ' + fromBox.value + '\n';
-  toBox.scrollTop = toBox.scrollHeight;
-};
-
-/**
  * Hook up input handlers to controls on the netsim page
  * @private
  */
 NetSim.prototype.attachHandlers_ = function () {
-  dom.addClickTouchEvent(
-      document.getElementById('netsim_sendbutton'),
-      this.onSendButtonClick_.bind(this)
-  );
 };
 
 /**
@@ -159,18 +134,42 @@ NetSim.prototype.init = function(config) {
     // Do a deferred initialization of the connection object.
     // TODO (bbuchanan) : Appending random number to user name only for debugging.
     var userName = this.currentUser_.name + '_' + (Math.floor(Math.random() * 99) + 1);
-    this.connection_ = new NetSimConnection(userName, this.logger_);
-    this.runLoop_.tick.register(this.connection_, this.connection_.tick);
-    this.logger_.log("Connection manager created.");
-
-    var lobbyContainer = document.getElementById('netsim_lobby_container');
-    this.lobbyControl_ = NetSimLobby.createWithin(lobbyContainer, this.connection_);
-    this.runLoop_.tick.register(this.lobbyControl_, this.lobbyControl_.tick);
-    this.logger_.log("Lobby control created.");
+    this.initWithUserName_(userName);
   }.bind(this));
 
   // Begin the main simulation loop
   this.runLoop_.begin();
+};
+
+/**
+ * Initialization that can happen once we have a user name.
+ * Could collapse this back into init if at some point we can guarantee that
+ * user name is available on load.
+ * @param userName
+ * @private
+ */
+NetSim.prototype.initWithUserName_ = function (userName) {
+  this.receivedMessageLog_ = NetSimLogWidget.createWithin(
+      document.getElementById('netsim_received'), 'Received Messages');
+  this.sentMessageLog_ = NetSimLogWidget.createWithin(
+      document.getElementById('netsim_sent'), 'Sent Messages');
+
+  this.connection_ = new NetSimConnection(userName, this.sentMessageLog_,
+      this.receivedMessageLog_);
+  this.connection_.attachToRunLoop(this.runLoop_);
+
+  var lobbyContainer = document.getElementById('netsim_lobby_container');
+  this.lobbyControl_ = NetSimLobby.createWithin(lobbyContainer, this.connection_);
+  this.lobbyControl_.attachToRunLoop(this.runLoop_);
+
+  var routerPanelContainer = document.getElementById('netsim_tabpanel');
+  this.routerPanel_ = NetSimRouterPanel.createWithin(routerPanelContainer,
+      this.connection_);
+  this.routerPanel_.attachToRunLoop(this.runLoop_);
+
+  var sendWidgetContainer = document.getElementById('netsim_send');
+  this.sendWidget_ = NetSimSendWidget.createWithin(sendWidgetContainer,
+      this.connection_);
 };
 
 /**
@@ -179,9 +178,6 @@ NetSim.prototype.init = function(config) {
  * @private
  */
 NetSim.prototype.loadAudio_ = function () {
-  this.studioApp_.loadAudio(this.skin.winSound, 'win');
-  this.studioApp_.loadAudio(this.skin.startSound, 'start');
-  this.studioApp_.loadAudio(this.skin.failureSound, 'failure');
 };
 
 /**
