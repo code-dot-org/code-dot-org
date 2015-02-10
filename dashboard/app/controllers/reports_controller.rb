@@ -42,12 +42,17 @@ SQL
 
   def user_progress
     script_name = params[:script_name]
+    script_id = params[:script_id]
+
+    if script_name
+      script = Script.find_by_name(script_name)
+    elsif script_id
+      script = Script.find(script_id)
+    end
+    raise ActiveRecord::RecordNotFound unless script
+
     stage_id = params[:stage_id]
     level_id = params[:level_id]
-    raise ActiveRecord::RecordNotFound unless script_name && level_id
-
-    script = Script.find_by_name(script_name)
-    raise ActiveRecord::RecordNotFound unless script
 
     if script.default_script?
       script_level = script.get_script_level_by_chapter(level_id)

@@ -147,8 +147,8 @@
       }
 
       // s/:script_id/level/:level_id
-      // (only applies to the 20-hour course)
-      re = /\/s\/\d+\/(level|puzzle)\/(\d+)$/i;
+      // (only applies to the default scripts ID < 8)
+      re = /\/s\/(\d+)\/(level|puzzle)\/(\d+)$/i;
       parts = url.match(re);
       if (parts) {
         window.headerProgress = new HeaderProgress( $('.header-wrapper'), {
@@ -156,8 +156,8 @@
         });
 
         headerStore.load({
-          script_name: '20-hour',
-          level_id: parts[2]
+          script_id: parts[1],
+          level_id: parts[3]
         });
 
         return;
@@ -437,7 +437,7 @@
 
       var promise;
       if (opts.droplet) {
-        loadStyle('droplet/droplet.min');
+        this.loadStyle('droplet/droplet.min');
         promise = this.loadSource('jsinterpreter/acorn_interpreter')()
           .then(this.loadSource('requirejs/require'))
           .then(this.loadSource('ace/ace'))
