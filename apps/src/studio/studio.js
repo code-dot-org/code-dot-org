@@ -153,7 +153,15 @@ function loadLevel() {
   Studio.softButtons_ = level.softButtons || {};
   // protagonistSpriteIndex was originally mispelled. accept either spelling.
   Studio.protagonistSpriteIndex = level.protagonistSpriteIndex || level.protaganistSpriteIndex;
-  Studio.bigGameInfo = new BigGameInfo();
+
+  switch (level.customGameType && level.customGameType.toLowerCase()) {
+    case 'biggame':
+      Studio.customGame = new BigGameInfo();
+      break;
+    case 'samthebutterfly':
+      // TODO
+      break;
+  }
 
   if (level.avatarList) {
     Studio.startAvatars = level.avatarList.slice();
@@ -547,6 +555,10 @@ function callHandler (name, allowQueueExtension) {
 
 Studio.onTick = function() {
   Studio.tickCount++;
+
+  if (Studio.customGame) {
+    Studio.customGame.onTick();
+  }
 
   if (Studio.interpreter) {
     var doneUserCodeStep = false;
