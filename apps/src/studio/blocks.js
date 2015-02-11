@@ -1857,6 +1857,9 @@ exports.install = function(blockly, blockInstallOptions) {
         ');\n';
   };
 
+  /**
+   * functional_sprite_dropdown
+   */
   blockly.Blocks.functional_sprite_dropdown = {
     helpUrl: '',
     init: function() {
@@ -1882,6 +1885,9 @@ exports.install = function(blockly, blockInstallOptions) {
     return blockly.JavaScript.quote_(this.getTitleValue('SPRITE_INDEX'));
   };
 
+  /**
+   * functional_background_dropdown
+   */
   blockly.Blocks.functional_background_dropdown = {
     helpUrl: '',
     init: function() {
@@ -1901,6 +1907,41 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.functional_background_dropdown = function () {
     // returns the sprite index
     return this.getTitleValue('BACKGROUND');
+  };
+
+  /**
+   * functional_sqrt
+   */
+  blockly.Blocks.functional_sqrt = {
+    helpUrl: '',
+    init: function() {
+      initTitledFunctionalBlock(this, 'sqrt', 'Number', [
+        { name: 'ARG1', type: 'Number' }
+      ]);
+    }
+  };
+
+  generator.functional_sqrt = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    return 'Math.sqrt(' + arg1 + ');';
+  };
+
+  /**
+   * functional_keydown
+   */
+  blockly.Blocks.functional_keydown = {
+    helpUrl: '',
+    init: function() {
+      // todo = localize
+      initTitledFunctionalBlock(this, 'keydown?', 'boolean', [
+        { name: 'ARG1', type: 'Number' }
+      ]);
+    }
+  };
+
+  generator.functional_keydown = function() {
+    var keyCode = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || - 1;
+    return 'Studio.isKeyDown(' + keyCode + ');';
   };
 };
 
