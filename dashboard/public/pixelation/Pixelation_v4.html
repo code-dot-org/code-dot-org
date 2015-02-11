@@ -65,6 +65,10 @@
   <button onClick="showPNG('canvas');">Save PNG</button>
 </div>
 <script>
+  if (!window.options) {
+    window.options = {};
+  }
+  // TODO: do something with `options.version`
   drawGraph();
   formatBitDisplay();
 </script>
