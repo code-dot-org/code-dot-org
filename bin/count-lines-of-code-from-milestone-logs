@@ -1,4 +1,13 @@
 #!/usr/bin/env ruby
+#
+# This script downloads milestone logs from our S3 bucket, counts the lines of code documented
+# in the logs, and stores the total lines (per instance, per log, per day) in
+# pegasus/cache/milestone-cache.json.
+#
+# Logs for days that are over are .gz compressed in S3. The log for the current day is not
+# compressed and updates are uploaded hourly. See upload-logs-to-s3 for details on the upload
+# side.
+#
 require_relative '../deployment'
 require 'cdo/aws/s3'
 

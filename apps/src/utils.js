@@ -222,12 +222,6 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
       color: 'green',
       blocks: [
         {
-          block: 'var x = __;',
-          title: 'Create a variable for the first time'
-        }, {
-          block: 'x = __;',
-          title: 'Reassign a variable'
-        }, {
           block: '__ + __',
           title: 'Add two numbers'
         }, {
@@ -241,13 +235,22 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
           title: 'Divide two numbers'
         }, {
           block: '__ === __',
-          title: 'Compare two numbers'
+          title: 'Test for equal value and equal type'
+        }, {
+          block: '__ !== __',
+          title: 'Test for not equal value or not equal type'
         }, {
           block: '__ > __',
           title: 'Compare two numbers'
         }, {
           block: '__ < __',
           title: 'Compare two numbers'
+        }, {
+          block: '__ && __',
+          title: 'Logical AND of two booleans'
+        }, {
+          block: '__ || __',
+          title: 'Logical OR of two booleans'
         }, {
           block: 'random()',
           title: 'Get a random number between 0 and 1'
@@ -263,6 +266,21 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
         }, {
           block: 'min(__, __)',
           title: 'Minimum value'
+        }
+      ]
+    }, {
+      name: 'Variables',
+      color: 'blue',
+      blocks: [
+        {
+          block: 'var x = __;',
+          title: 'Create a variable for the first time'
+        }, {
+          block: 'x = __;',
+          title: 'Reassign a variable'
+        }, {
+          block: 'var x = [1, 2, 3, 4];',
+          title: 'Create a variable and initialize it as an array'
         }
       ]
     }, {
@@ -295,15 +313,13 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
   categoryInfo = (dropletConfig && dropletConfig.categories) || defCategoryInfo;
 
   var mergedFunctions = mergeFunctionsWithConfig(codeFunctions, dropletConfig);
+  var i, j;
 
-  for (var i = 0; i < mergedFunctions.length; i++) {
+  for (i = 0; i < mergedFunctions.length; i++) {
     var cf = mergedFunctions[i];
-    if (cf.category === 'hidden') {
-      continue;
-    }
     var block = cf.func + "(";
     if (cf.params) {
-      for (var j = 0; j < cf.params.length; j++) {
+      for (j = 0; j < cf.params.length; j++) {
         if (j !== 0) {
           block += ", ";
         }
@@ -321,12 +337,26 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
   var addedPalette = [];
   for (var category in categoryInfo) {
     categoryInfo[category].name = category;
+    for (j = 0; j < stdPalette.length; j++) {
+      if (stdPalette[j].name === category) {
+        // This category is in the stdPalette, merge in its blocks:
+        categoryInfo[category].blocks =
+            categoryInfo[category].blocks.concat(stdPalette[j].blocks);
+        break;
+      }
+    }
     if (categoryInfo[category].blocks.length > 0) {
       addedPalette.push(categoryInfo[category]);
     }
   }
 
-  return addedPalette.concat(stdPalette);
+  for (j = 0; j < stdPalette.length; j++) {
+    if (!(stdPalette[j].name in categoryInfo)) {
+      // This category from the stdPalette hasn't been referenced yet, add it:
+      addedPalette.push(stdPalette[j]);
+    }
+  }
+  return addedPalette;
 };
 
 /**
@@ -335,16 +365,22 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
 exports.generateAceApiCompleter = function (codeFunctions, dropletConfig) {
   var apis = [];
 
-  var mergedFunctions = mergeFunctionsWithConfig(codeFunctions, dropletConfig);
-  for (var i = 0; i < mergedFunctions.length; i++) {
-    var cf = mergedFunctions[i];
-    if (cf.category === 'hidden') {
-      continue;
-    }
+  var completerFunctions;
+  if (codeFunctions instanceof Array) {
+    // codeFunctions is in an array, use those exactly:
+    completerFunctions = codeFunctions;
+  } else if (dropletConfig && dropletConfig.blocks) {
+    // use dropletConfig.blocks in its entirety (completer will include all
+    // functions available in this app, even those not in this level's palette)
+    completerFunctions = dropletConfig.blocks;
+  }
+
+  for (var i = 0; i < completerFunctions.length; i++) {
+    var cf = completerFunctions[i];
     apis.push({
       name: 'api',
       value: cf.func,
-      meta: 'local'
+      meta: cf.category
     });
   }
 
@@ -392,4 +428,21 @@ exports.generateDropletModeOptions = function (codeFunctions, dropletConfig) {
   }
 
   return modeOptions;
+};
+
+/**
+ * Generate a random identifier in a format matching the RFC-4122 specification.
+ *
+ * Taken from
+ * {@link http://byronsalau.com/blog/how-to-create-a-guid-uuid-in-javascript/}
+ *
+ * @see RFC-4122 standard {@link http://www.ietf.org/rfc/rfc4122.txt}
+ *
+ * @returns {string} RFC4122-compliant UUID
+ */
+exports.createUuid = function () {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+    var r = Math.random()*16|0, v = c === 'x' ? r : (r&0x3|0x8);
+    return v.toString(16);
+  });
 };

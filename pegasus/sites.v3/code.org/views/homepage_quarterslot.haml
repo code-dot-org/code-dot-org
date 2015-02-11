@@ -1,0 +1,8 @@
+.div.col-25.col-mobile-50{style: "float:left; /*min-width:250px; */ padding:10px 5px 10px 5px"}
+  %a{href: entry[:url_s]}
+    .slotbox{style: "position:relative; height:200px; overflow:hidden"}
+      %img{src: entry[:image_t], style: "position:absolute; top:0px; left:0px; height:100%"}
+      .greybox{style: "position:absolute; bottom:0px; left:0px; height:45px; background-color: rgba(0,0,0,0.4); color:white; width:100%; padding:10px; font-size:20px; text-align:left; font-family: 'Gotham 5r', sans-serif;"}
+        =entry[:text1_s]
+      - if entry[:watermark_s] == "codestudio"
+        %img{src: "/shared/images/codeorg-studio-logo-horizontal.png", style: "position:absolute; top:0px; left:0px; width:100px; background-color:rgba(255,255,255,0.8); padding:5px; border-radius:5px; margin-top:4px; margin-left:4px"}
