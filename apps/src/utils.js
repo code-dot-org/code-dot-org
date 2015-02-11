@@ -408,7 +408,7 @@ exports.generateAceApiCompleter = function (codeFunctions, dropletConfig) {
 };
 
 function populateModeOptionsFromConfigBlocks(modeOptions, configBlocks) {
-  for (i = 0; i < configBlocks.length; i++) {
+  for (var i = 0; i < configBlocks.length; i++) {
     if (configBlocks[i].type === 'value') {
       modeOptions.valueFunctions.push(configBlocks[i].func);
     }
