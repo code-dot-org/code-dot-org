@@ -154,12 +154,14 @@ function loadLevel() {
   // protagonistSpriteIndex was originally mispelled. accept either spelling.
   Studio.protagonistSpriteIndex = level.protagonistSpriteIndex || level.protaganistSpriteIndex;
 
-  switch (level.customGameType && level.customGameType.toLowerCase()) {
+  var customGameType = level.customGameType || '';
+  switch (customGameType.replace(/ /g,'').toLowerCase()) {
     case 'biggame':
       Studio.customGame = new BigGameInfo();
       break;
     case 'samthebutterfly':
-      // TODO
+      // Going forward, we may also want to move Sam the Butterfly logic
+      // into code
       break;
   }
 
