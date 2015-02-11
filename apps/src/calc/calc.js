@@ -421,24 +421,6 @@ Calc.execute = function() {
   }
 };
 
-
-/**
- * @param {Blockly.Block} block Block to check
- * @returns true if the block has a connection without a block attached
- */
-function isUnfilledBlock(block) {
-  return block.inputList.some(function (input) {
-    return input.connection && !input.connection.targetBlock();
-  });
-}
-
-/**
- * @returns true if any block in the workspace has an unfilled input
- */
-function hasUnfilledBlock() {
-  return Blockly.mainBlockSpace.getAllBlocks().some(isUnfilledBlock);
-}
-
 /**
  * Fill appState with the results of program execution.
  */
@@ -446,7 +428,7 @@ function generateResults() {
   appState.message = undefined;
 
   // Check for pre-execution errors
-  if (hasUnfilledBlock()) {
+  if (studioApp.hasUnfilledBlock()) {
     appState.result = ResultType.FAILURE;
     appState.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
     appState.message = calcMsg.emptyFunctionalBlock();
