@@ -607,7 +607,7 @@ Studio.onTick = function() {
   // Run key event handlers for any keys that are down:
   for (var key in KeyCodes) {
     if (Studio.keyState[KeyCodes[key]] &&
-        Studio.keyState[KeyCodes[key]] == "keydown") {
+        Studio.keyState[KeyCodes[key]] === "keydown") {
       switch (KeyCodes[key]) {
         case KeyCodes.LEFT:
           callHandler('when-left');
@@ -627,7 +627,7 @@ Studio.onTick = function() {
 
   for (var btn in ArrowIds) {
     if (Studio.btnState[ArrowIds[btn]] &&
-        Studio.btnState[ArrowIds[btn]] == ButtonState.DOWN) {
+        Studio.btnState[ArrowIds[btn]] === ButtonState.DOWN) {
       switch (ArrowIds[btn]) {
         case ArrowIds.LEFT:
           callHandler('when-left');
@@ -6804,6 +6804,9 @@ exports.install = function(blockly, blockInstallOptions) {
         ');\n';
   };
 
+  /**
+   * functional_sprite_dropdown
+   */
   blockly.Blocks.functional_sprite_dropdown = {
     helpUrl: '',
     init: function() {
@@ -6829,6 +6832,9 @@ exports.install = function(blockly, blockInstallOptions) {
     return blockly.JavaScript.quote_(this.getTitleValue('SPRITE_INDEX'));
   };
 
+  /**
+   * functional_background_dropdown
+   */
   blockly.Blocks.functional_background_dropdown = {
     helpUrl: '',
     init: function() {
@@ -6848,6 +6854,41 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.functional_background_dropdown = function () {
     // returns the sprite index
     return this.getTitleValue('BACKGROUND');
+  };
+
+  /**
+   * functional_sqrt
+   */
+  blockly.Blocks.functional_sqrt = {
+    helpUrl: '',
+    init: function() {
+      initTitledFunctionalBlock(this, 'sqrt', 'Number', [
+        { name: 'ARG1', type: 'Number' }
+      ]);
+    }
+  };
+
+  generator.functional_sqrt = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    return 'Math.sqrt(' + arg1 + ');';
+  };
+
+  /**
+   * functional_keydown
+   */
+  blockly.Blocks.functional_keydown = {
+    helpUrl: '',
+    init: function() {
+      // todo = localize
+      initTitledFunctionalBlock(this, 'keydown?', 'boolean', [
+        { name: 'ARG1', type: 'Number' }
+      ]);
+    }
+  };
+
+  generator.functional_keydown = function() {
+    var keyCode = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || - 1;
+    return 'Studio.isKeyDown(' + keyCode + ');';
   };
 };
 
@@ -7034,6 +7075,14 @@ exports.onEvent = function (id, eventName, func) {
     'eventName': String(eventName),
     'func': func
   });
+};
+
+/**
+ * @param {number} keyCode
+ * @returns {boolean} True if key is currently down
+ */
+exports.isKeyDown = function (keyCode) {
+  return Studio.keyState[keyCode] === 'keydown';
 };
 
 },{"./constants":145}],145:[function(require,module,exports){

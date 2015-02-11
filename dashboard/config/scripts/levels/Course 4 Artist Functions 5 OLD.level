@@ -21,7 +21,8 @@
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
     "embed": "false",
-    "callout_json": "[{\r\n  \"localization_key\": \"house_hint\",\r\n  \"element_id\": \"[block-id='20']\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"top left\", \"at\": \"bottom left\"},\r\n    \"style\": { \"classes\": \"no-tip\" }\r\n  }\r\n}]"
+    "callout_json": "[\r\n  {\"localization_key\":\"house_hint\",\"callout_text\":\"It's ok if the picture doesn't look like a house yet. We will fix it in the next puzzle.\",\"element_id\":\"[block-id='20']\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top left\",\"at\":\"bottom left\"},\"style\":{\"classes\":\"no-tip\"}}}\r\n]",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>

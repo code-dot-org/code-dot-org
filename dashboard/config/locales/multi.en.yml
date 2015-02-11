@@ -518,6 +518,84 @@ en:
         (rectangle 10 2 "solid" "red"): (rectangle 10 2 "solid" "red")
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): (rectangle (+ 8 2) (- 7 5) "solid" "red")
         (rectangle (+ 8 2) (- 7 5) solid red): (rectangle (+ 8 2) (- 7 5) solid red)
+      msm variables multi 1:
+        x = 15<br/>a = 2<br>b = 6: x = 15<br/>a = 2<br>b = 6
+        What is the value of x?: What is the value of x?
+        a function: a function
+        '15': '15'
+        x: x
+      msm variables multi 10:
+        f(x) = x * 17: f(x) = x * 17
+        What is the name of the function?: What is the name of the function?
+        f: f
+        x: x
+        '17': '17'
+      msm variables multi 11:
+        f(x) = x * 17: f(x) = x * 17
+        What is the name of the parameter?: What is the name of the parameter?
+        f: f
+        x: x
+        '17': '17'
+      msm variables multi 12:
+        (define (f x) (*x 17)): (define (f x) (*x 17))
+        What is the name of the variable?: What is the name of the variable?
+        f: f
+        x: x
+        '17': '17'
+      msm variables multi 13:
+        f(x) = x * 17: f(x) = x * 17
+        What is f(1)?: What is f(1)?
+        x: x
+        '117': '117'
+        '17': '17'
+      msm variables multi 2:
+        x = 15<br>a = 2<br>b = 6: x = 15<br>a = 2<br>b = 6
+        What is the value of a + b?: What is the value of a + b?
+        '8': '8'
+        function: function
+        ab: ab
+      msm variables multi 3:
+        x = 15<br/>a = 2<br>b = 6: x = 15<br/>a = 2<br>b = 6
+        What is the value of x-10?: What is the value of x-10?
+        a function: a function
+        '5': '5'
+        x: x
+      msm variables multi 4:
+        define x 3<br>define p 8<br>define q hello: define x 3<br>define p 8<br>define q hello
+        What is the value of x?: What is the value of x?
+        '3': '3'
+        '15': '15'
+        do not know: do not know
+      msm variables multi 5:
+        define x 3<br>define p 8<br>define q hello: define x 3<br>define p 8<br>define q hello
+        What is the value of (p - x)?: What is the value of (p - x)?
+        q: q
+        '3': '3'
+        '5': '5'
+      msm variables multi 6:
+        define x 3<br>define p 8<br>define q hello: define x 3<br>define p 8<br>define q hello
+        What is the value of string-length(q)?: What is the value of string-length(q)?
+        '1': '1'
+        hello: hello
+        '5': '5'
+      msm variables multi 7:
+        f(x) = x + 3: f(x) = x + 3
+        What is the name of the function?: What is the name of the function?
+        f: f
+        x: x
+        '3': '3'
+      msm variables multi 8:
+        f(x) = x + 3: f(x) = x + 3
+        What is the name of the variable?: What is the name of the variable?
+        f: f
+        x: x
+        '3': '3'
+      msm variables multi 9:
+        f(x) = x + 3: f(x) = x + 3
+        What is f(2)?: What is f(2)?
+        '6': '6'
+        '5': '5'
+        x: x
       Multi Define Funcs 1:
         g(y) = y + 3: g(y) = y + 3
         What is the name of this function?: What is the name of this function?
@@ -552,6 +630,29 @@ en:
         a week-long course to learn about computers: a week-long course to learn about computers
         a set of instructions you give a computer to execute: a set of instructions you give a computer to execute
         a secret password: a secret password
+      Play Lab Rocket 6:
+        Rocket Multiple Choice: Rocket Multiple Choice
+        Which function would describe a rocket that reaches 24 meters at 2 seconds, 60 meters at 5 seconds, and 108 meters at 9 seconds?: Which function would describe a rocket that reaches 24 meters at 2 seconds, 60 meters at 5 seconds, and 108 meters at 9 seconds?
+        rocket-height (seconds) = seconds + 12: rocket-height (seconds) = seconds + 12
+        rocket-height (seconds) = seconds * 12: rocket-height (seconds) = seconds * 12
+        rocket-height (seconds) = 48 / seconds: rocket-height (seconds) = 48 / seconds
+        rocket-height (seconds)  = seconds * 48: rocket-height (seconds)  = seconds * 48
+      Play Lab Rocket 7:
+        Rocket Multiple Choice: Rocket Multiple Choice
+        ? Which function would describe a rocket that reaches 4 meters at 2 seconds, 16 meters at 4 seconds, and  256 meters at 16 seconds?
+        : Which function would describe a rocket that reaches 4 meters at 2 seconds, 16 meters at 4 seconds, and  256 meters at 16 seconds?
+        rocket-height(seconds) = seconds * 2: rocket-height(seconds) = seconds * 2
+        rocket-height(seconds) = seconds * seconds: rocket-height(seconds) = seconds * seconds
+        rocket-height(seconds) = seconds * 4: rocket-height(seconds) = seconds * 4
+        rocket-height(seconds) = seconds * 16: rocket-height(seconds) = seconds * 16
+      Play Lab Rocket 8:
+        Rocket Multiple Choice: Rocket Multiple Choice
+        ? Which function would describe a rocket that reaches 47 meters at 5 seconds, 97 meters at 10 seconds, and 147 meters at 15 seconds?
+        : Which function would describe a rocket that reaches 47 meters at 5 seconds, 97 meters at 10 seconds, and 147 meters at 15 seconds?
+        rocket-height(seconds) = seconds * 7 + 10: rocket-height(seconds) = seconds * 7 + 10
+        rocket-height(seconds) = seconds * 10 + 7: rocket-height(seconds) = seconds * 10 + 7
+        rocket-height(seconds) = seconds * 7 + 3: rocket-height(seconds) = seconds * 7 + 3
+        rocket-height(seconds) = seconds * 10 - 3: rocket-height(seconds) = seconds * 10 - 3
       test multi image:
         Maze Multiple Choice Two: Maze Multiple Choice Two
         /script_assets/matches/images/head.jpg,400: /script_assets/matches/images/head.jpg,400
@@ -579,7 +680,7 @@ en:
         wrong answer: wrong answer
         right answer: right answer
       unique level name here:
-        title: title
+        line1<br/>line2: line1<br/>line2
         description here: description here
         Question: Question
         wrong answer: wrong answer
