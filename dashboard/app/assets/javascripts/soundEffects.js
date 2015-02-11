@@ -92,7 +92,9 @@ Sounds.prototype.register = function (config) {
 
 Sounds.prototype.play = function (soundId, options) {
   var sound = this.soundsById[soundId];
-  sound.play(options);
+  if (sound) {
+    sound.play(options);
+  }
 };
 
 Sounds.prototype.playURL = function (url, playbackOptions) {
