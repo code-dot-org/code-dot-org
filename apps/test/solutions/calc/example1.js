@@ -67,7 +67,17 @@ module.exports = {
           blockUtils.calcBlockXml('functional_plus', [3]) // missing second input
         ]) +
       '</xml>'
-
+    },
+    {
+      description: 'extra top block',
+      expected: {
+        result: false,
+        testResult: TestResults.EXTRA_TOP_BLOCKS_FAIL
+      },
+      xml: '<xml>' +
+        blockUtils.calcBlockXml('functional_plus', [1, 2]) +
+        blockUtils.calcBlockXml('functional_plus', [3, 2]) +
+      '</xml>'
     }
   ]
 };
