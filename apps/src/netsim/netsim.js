@@ -183,7 +183,6 @@ NetSim.prototype.initWithUserName_ = function (user) {
   var lobbyContainer = document.getElementById('netsim_lobby_container');
   this.lobbyControl_ = NetSimLobby.createWithin(lobbyContainer,
       this.connection_, user, this.getOverrideShardID());
-  this.lobbyControl_.attachToRunLoop(this.runLoop_);
 
   var routerPanelContainer = document.getElementById('netsim_tabpanel');
   this.routerPanel_ = NetSimRouterPanel.createWithin(routerPanelContainer,
