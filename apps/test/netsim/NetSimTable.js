@@ -1,9 +1,11 @@
 var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
 var NetSimTable = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimTable');
+var _ = testUtils.requireWithGlobalsCheckBuildFolder('utils').getLodash();
 
 var assertEqual = function (left, right) {
-  assert(left === right, left + '===' + right);
+  assert(_.isEqual(left, right),
+      JSON.stringify(left) + ' equals ' + JSON.stringify(right));
 };
 
 /**
@@ -190,26 +192,33 @@ describe("NetSimTable", function () {
     });
 
     netsimTable.create({data: "A"}, callback);
-    assertEqual(
-        JSON.stringify(receivedTableData),
-        '[{"data":"A","id":1}]');
+    assertEqual(receivedTableData,
+        [
+          {data: "A", id: 1}
+        ]);
 
     // Remote change
     apiTable.create({data: "B"}, callback);
     netsimTable.readAll(callback);
-    assertEqual(
-        JSON.stringify(receivedTableData),
-        '[{"data":"A","id":1},{"data":"B","id":2}]');
+    assertEqual(receivedTableData,
+        [
+          {data: "A", id: 1},
+          {data: "B", id: 2}
+        ]);
 
     netsimTable.update(2, {data: "C"}, callback);
-    assertEqual(
-        JSON.stringify(receivedTableData),
-        '[{"data":"A","id":1},{"data":"C","id":2}]');
+    assertEqual(receivedTableData,
+        [
+          {data: "A", id: 1},
+          {data: "C", id: 2}
+        ]);
 
     netsimTable.delete(1, callback);
     assertEqual(
-        JSON.stringify(receivedTableData),
-        '[{"data":"C","id":2}]');
+        receivedTableData,
+        [
+          {data: "C", id: 2}
+        ]);
   });
 
   it ("polls table on tick", function () {
