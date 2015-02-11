@@ -90,7 +90,7 @@ You'll need to do this once:
   1. Add `build_apps: true`
   1. Add `build_blockly_core: true`
   1. Add `use_my_apps: true`
-1. `rake install`
+1. `rake install:apps`
 
 This configures your system to build apps (and blockly-core) whenever you run `rake build` and to use the version of blockly that you build yourself.
 
