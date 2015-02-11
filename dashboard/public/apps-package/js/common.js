@@ -5874,6 +5874,23 @@ StudioApp.prototype.hasExtraTopBlocks = function () {
   return this.feedback_.hasExtraTopBlocks();
 };
 
+/**
+ * @param {Blockly.Block} block Block to check
+ * @returns true if the block has a connection without a block attached
+ */
+function isUnfilledBlock(block) {
+  return block.inputList.some(function (input) {
+    return input.connection && !input.connection.targetBlock();
+  });
+}
+
+/**
+ * @returns true if any block in the workspace has an unfilled input
+ */
+StudioApp.prototype.hasUnfilledBlock = function () {
+  return Blockly.mainBlockSpace.getAllBlocks().some(isUnfilledBlock);
+};
+
 },{"../locale/current/common":185,"./ResizeSensor":1,"./block_utils":17,"./constants.js":43,"./dom":44,"./feedback":63,"./templates/builder.html":154,"./templates/buttons.html":155,"./templates/instructions.html":157,"./templates/learn.html":158,"./templates/makeYourOwn.html":159,"./utils":180,"./xml":181,"url":200}],200:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -10532,7 +10549,7 @@ exports.createUuid = function () {
 /**
  * @license
  * Lo-Dash 2.4.1 (Custom Build) <http://lodash.com/>
- * Build: `lodash include="debounce,reject,map,value,range,without,sample,create,flatten,isEmpty,wrap,size,bind,contains,last,clone,isEqual" --output src/lodash.js`
+ * Build: `lodash include="debounce,reject,map,value,range,without,sample,create,flatten,isEmpty,wrap,size,bind,contains,last,clone,isEqual,find" --output src/lodash.js`
  * Copyright 2012-2013 The Dojo Foundation <http://dojofoundation.org/>
  * Based on Underscore.js 1.5.2 <http://underscorejs.org/LICENSE>
  * Copyright 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -12602,6 +12619,74 @@ exports.createUuid = function () {
   }
 
   /**
+   * Iterates over elements of a collection, returning the first element that
+   * the callback returns truey for. The callback is bound to `thisArg` and
+   * invoked with three arguments; (value, index|key, collection).
+   *
+   * If a property name is provided for `callback` the created "_.pluck" style
+   * callback will return the property value of the given element.
+   *
+   * If an object is provided for `callback` the created "_.where" style callback
+   * will return `true` for elements that have the properties of the given object,
+   * else `false`.
+   *
+   * @static
+   * @memberOf _
+   * @alias detect, findWhere
+   * @category Collections
+   * @param {Array|Object|string} collection The collection to iterate over.
+   * @param {Function|Object|string} [callback=identity] The function called
+   *  per iteration. If a property name or object is provided it will be used
+   *  to create a "_.pluck" or "_.where" style callback, respectively.
+   * @param {*} [thisArg] The `this` binding of `callback`.
+   * @returns {*} Returns the found element, else `undefined`.
+   * @example
+   *
+   * var characters = [
+   *   { 'name': 'barney',  'age': 36, 'blocked': false },
+   *   { 'name': 'fred',    'age': 40, 'blocked': true },
+   *   { 'name': 'pebbles', 'age': 1,  'blocked': false }
+   * ];
+   *
+   * _.find(characters, function(chr) {
+   *   return chr.age < 40;
+   * });
+   * // => { 'name': 'barney', 'age': 36, 'blocked': false }
+   *
+   * // using "_.where" callback shorthand
+   * _.find(characters, { 'age': 1 });
+   * // =>  { 'name': 'pebbles', 'age': 1, 'blocked': false }
+   *
+   * // using "_.pluck" callback shorthand
+   * _.find(characters, 'blocked');
+   * // => { 'name': 'fred', 'age': 40, 'blocked': true }
+   */
+  function find(collection, callback, thisArg) {
+    callback = lodash.createCallback(callback, thisArg, 3);
+
+    if (isArray(collection)) {
+      var index = -1,
+          length = collection.length;
+
+      while (++index < length) {
+        var value = collection[index];
+        if (callback(value, index, collection)) {
+          return value;
+        }
+      }
+    } else {
+      var result;
+      baseEach(collection, function(value, index, collection) {
+        if (callback(value, index, collection)) {
+          result = value;
+          return false;
+        }
+      });
+      return result;
+    }
+  }
+
+  /**
    * Iterates over elements of a collection, executing the callback for each
    * element. The callback is bound to `thisArg` and invoked with three arguments;
    * (value, index|key, collection). Callbacks may exit iteration early by
@@ -13677,6 +13762,7 @@ exports.createUuid = function () {
   // add functions that return unwrapped values when chaining
   lodash.clone = clone;
   lodash.contains = contains;
+  lodash.find = find;
   lodash.identity = identity;
   lodash.indexOf = indexOf;
   lodash.isArguments = isArguments;
@@ -13692,6 +13778,8 @@ exports.createUuid = function () {
   lodash.size = size;
   lodash.sortedIndex = sortedIndex;
 
+  lodash.detect = find;
+  lodash.findWhere = find;
   lodash.include = contains;
 
   mixin(function() {
@@ -16136,6 +16224,7 @@ exports.TestResults = {
   PARAM_INPUT_UNATTACHED: 15,    // Function not called with enough params.
   INCOMPLETE_BLOCK_IN_FUNCTION: 16, // Incomplete block inside a function.
   QUESTION_MARKS_IN_NUMBER_FIELD: 17, // Block has ??? instead of a value.
+  EMPTY_FUNCTIONAL_BLOCK: 18,    // There's a functional block with an open input
 
   // The level was solved in a non-optimal way.  User may advance or retry.
   TOO_MANY_BLOCKS_FAIL: 20,   // More than the ideal number of blocks were used.
