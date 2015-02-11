@@ -35,6 +35,7 @@ var ArtistAPI = require('./api');
 var page = require('../templates/page.html');
 var utils = require('../utils');
 var Slider = require('../slider');
+var blockAnalysis = require('../blockAnalysis');
 var _ = utils.getLodash();
 
 var CANVAS_HEIGHT = 400;
@@ -713,10 +714,12 @@ Artist.prototype.execute = function() {
   // Reset the graphic.
   this.studioApp_.reset();
 
-  if (this.studioApp_.hasExtraTopBlocks()) {
-    // immediately check answer, which will fail and report top level blocks
-    this.checkAnswer();
-    return;
+  if (this.studioApp_.isUsingBlockly()) {
+    if (blockAnalysis.hasExtraTopBlocks(Blockly)) {
+      // immediately check answer, which will fail and report top level blocks
+      this.checkAnswer();
+      return;
+    }
   }
 
   if (this.level.editCode) {

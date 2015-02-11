@@ -2,29 +2,33 @@ var wrench = require('wrench');
 var testUtils = require('./util/testUtils');
 var assert = testUtils.assert;
 var canvas = require('canvas');
+var blockAnalysis = testUtils.requireWithGlobalsCheckBuildFolder('blockAnalysis');
 
-// Some of our feedback tests need to use Image
+// Some of our tests need to use Image
 global.Image = canvas.Image;
 global.Turtle = {};
 
 testUtils.setupLocales();
 
-/**
- * Loads blocks into the workspace, then calls
- * checkForEmptyContainerBlockFailure_ and validates
- * that the result matches the expected result.
- */
-describe("checkForEmptyContainerBlockFailure_", function () {
+describe("runStaticAnalysis", function () {
   var studioApp;
   var TestResults;
 
   // create our environment
   beforeEach(function () {
     testUtils.setupTestBlockly();
+    var blocksCommon = testUtils.requireWithGlobalsCheckBuildFolder('blocksCommon');
+    blocksCommon.install(Blockly, {});
+
     studioApp = testUtils.getStudioAppSingleton();
     TestResults = studioApp.TestResults;
   });
 
+  /**
+   * Loads blocks into the workspace, then calls
+   * runStaticAnalysis and validates
+   * that the result matches the expected result.
+   */
   var checkResultForBlocks = function (args) {
     studioApp.loadBlocks(args.blockXml);
 
@@ -35,73 +39,182 @@ describe("checkForEmptyContainerBlockFailure_", function () {
     assert(!args.blockXml || loaded, "either we didnt have  input xml" +
         "or we did, and we loaded something");
 
-    assert.equal(args.result,
-        studioApp.feedback_.checkForEmptyContainerBlockFailure_());
+    assert.equal(args.result, blockAnalysis.runStaticAnalysis(Blockly,
+        args, true));
   };
 
-  it("returns ALL_PASS when no blocks are present", function () {
-    checkResultForBlocks({
-      result: TestResults.ALL_PASS,
-      blockXml: ''
+  describe("when detecting empty container blocks", function () {
+
+    it("returns ALL_PASS when no blocks are present", function () {
+      checkResultForBlocks({
+        shouldCheckForEmptyBlocks: true,
+        allowExtraTopBlocks: true,
+        result: TestResults.ALL_PASS,
+        blockXml: ''
+      });
+    });
+
+    it ("returns ALL_PASS when no container blocks are present", function () {
+      checkResultForBlocks({
+        shouldCheckForEmptyBlocks: true,
+        allowExtraTopBlocks: true,
+        result: TestResults.ALL_PASS,
+        blockXml: '<xml><block type="text_print"></block></xml>'
+      });
+    });
+
+    it ("returns EMPTY_BLOCK_FAIL when an empty contianer block is present", function () {
+      checkResultForBlocks({
+        shouldCheckForEmptyBlocks: true,
+        allowExtraTopBlocks: true,
+        result: TestResults.EMPTY_BLOCK_FAIL,
+        blockXml: '<xml>' +
+                    '<block type="controls_repeat">' +
+                      '<title name="TIMES">4</title>' +
+                    '</block>' +
+                  '</xml>'
+      });
+    });
+
+    it ("returns ALL_PASS when all container blocks are filled", function () {
+      checkResultForBlocks({
+        shouldCheckForEmptyBlocks: true,
+        allowExtraTopBlocks: true,
+        result: TestResults.ALL_PASS,
+        blockXml: '<xml>' +
+                    '<block type="controls_repeat">' +
+                      '<title name="TIMES">4</title>' +
+                      '<statement name="DO">' +
+                        '<block type="text_print"></block>' +
+                      '</statement>' +
+                    '</block>' +
+                  '</xml>'
+      });
+    });
+
+    it ("returns EMPTY_FUNCTION_BLOCK_FAIL when an empty function block is present", function () {
+      checkResultForBlocks({
+        shouldCheckForEmptyBlocks: true,
+        allowExtraTopBlocks: true,
+        result: TestResults.EMPTY_FUNCTION_BLOCK_FAIL,
+        blockXml: '<xml>' +
+                    '<block type="procedures_defnoreturn">' +
+                      '<mutation/>' +
+                      '<title name="NAME">do something</title>' +
+                    '</block>' +
+                  '</xml>'
+      });
+    });
+
+    it ("returns ALL_PASS when all function blocks are filled", function () {
+      checkResultForBlocks({
+        shouldCheckForEmptyBlocks: true,
+        allowExtraTopBlocks: true,
+        result: TestResults.ALL_PASS,
+        blockXml: '<xml>' +
+                    '<block type="procedures_defnoreturn">' +
+                      '<mutation/>' +
+                      '<title name="NAME">do something</title>' +
+                      '<statement name="STACK">' +
+                        '<block type="text_print"></block>' +
+                      '</statement>' +
+                    '</block>' +
+                  '</xml>'
+      });
     });
   });
 
-  it ("returns ALL_PASS when no container blocks are present", function () {
-    checkResultForBlocks({
-      result: TestResults.ALL_PASS,
-      blockXml: '<xml><block type="text_print"></block></xml>'
-    });
-  });
+  describe("when detecting extra top blocks", function () {
 
-  it ("returns EMPTY_BLOCK_FAIL when an empty contianer block is present", function () {
-    checkResultForBlocks({
-      result: TestResults.EMPTY_BLOCK_FAIL,
-      blockXml: '<xml>' +
-                  '<block type="controls_repeat">' +
-                    '<title name="TIMES">4</title>' +
-                  '</block>' +
-                '</xml>'
+    it("returns ALL_PASS when no blocks are present", function () {
+      checkResultForBlocks({
+        shouldCheckForEmptyBlocks: false,
+        allowExtraTopBlocks: false,
+        result: TestResults.ALL_PASS,
+        blockXml: ''
+      });
     });
-  });
 
-  it ("returns ALL_PASS when all container blocks are filled", function () {
-    checkResultForBlocks({
-      result: TestResults.ALL_PASS,
-      blockXml: '<xml>' +
-                  '<block type="controls_repeat">' +
-                    '<title name="TIMES">4</title>' +
-                    '<statement name="DO">' +
-                      '<block type="text_print"></block>' +
-                    '</statement>' +
-                  '</block>' +
-                '</xml>'
+    it ("returns ALL_PASS when only a when_run block is present", function () {
+      checkResultForBlocks({
+        shouldCheckForEmptyBlocks: false,
+        allowExtraTopBlocks: false,
+        result: TestResults.ALL_PASS,
+        blockXml: '<xml><block type="when_run"></block></xml>'
+      });
     });
-  });
 
-  it ("returns EMPTY_FUNCTION_BLOCK_FAIL when an empty function block is present", function () {
-    checkResultForBlocks({
-      result: TestResults.EMPTY_FUNCTION_BLOCK_FAIL,
-      blockXml: '<xml>' +
-                  '<block type="procedures_defnoreturn">' +
-                    '<mutation/>' +
-                    '<title name="NAME">do something</title>' +
-                  '</block>' +
-                '</xml>'
+    it ("returns ALL_PASS when all blocks are connected to when_run", function () {
+      checkResultForBlocks({
+        shouldCheckForEmptyBlocks: false,
+        allowExtraTopBlocks: false,
+        result: TestResults.ALL_PASS,
+        blockXml: '<xml>' +
+                    '<block type="when_run">' +
+                      '<next>' +
+                        '<block type="variables_set" inline="false">' +
+                          '<title name="VAR">i</title>' +
+                        '</block>' +
+                      '</next>' +
+                    '</block>' +
+                  '</xml>'
+      });
     });
-  });
 
-  it ("returns ALL_PASS when all function blocks are filled", function () {
-    checkResultForBlocks({
-      result: TestResults.ALL_PASS,
-      blockXml: '<xml>' +
-                  '<block type="procedures_defnoreturn">' +
-                    '<mutation/>' +
-                    '<title name="NAME">do something</title>' +
-                    '<statement name="STACK">' +
-                      '<block type="text_print"></block>' +
-                    '</statement>' +
-                  '</block>' +
-                '</xml>'
+    it ("returns EXTRA_TOP_BLOCKS_FAIL when extra top blocks are present", function () {
+      checkResultForBlocks({
+        shouldCheckForEmptyBlocks: false,
+        allowExtraTopBlocks: false,
+        result: TestResults.EXTRA_TOP_BLOCKS_FAIL,
+        blockXml: '<xml>' +
+                    '<block type="when_run"></block>' +
+                    '<block type="variables_set" inline="false">' +
+                      '<title name="VAR">i</title>' +
+                    '</block>' +
+                  '</xml>'
+      });
+    });
+
+    it ("returns ALL_PASS when extra top blocks are all entry point blocks", function () {
+      checkResultForBlocks({
+        shouldCheckForEmptyBlocks: false,
+        allowExtraTopBlocks: false,
+        result: TestResults.ALL_PASS,
+        blockXml: '<xml>' +
+                    '<block type="when_run"></block>' +
+                    '<block type="when_run"></block>' +
+                    '<block type="when_run"></block>' +
+                  '</xml>'
+      });
+    });
+
+    it ("returns ALL_PASS when extra top blocks are function definitions", function () {
+      checkResultForBlocks({
+        shouldCheckForEmptyBlocks: false,
+        allowExtraTopBlocks: false,
+        result: TestResults.ALL_PASS,
+        blockXml: '<xml>' +
+                    '<block type="when_run"></block>' +
+                    '<block type="procedures_defnoreturn">' +
+                      '<mutation/>' +
+                      '<title name="NAME">do something</title>' +
+                    '</block>' +
+                  '</xml>'
+      });
+    });
+
+    it ("returns ALL_PASS when extra top blocks are disabled", function () {
+      checkResultForBlocks({
+        shouldCheckForEmptyBlocks: false,
+        allowExtraTopBlocks: false,
+        result: TestResults.ALL_PASS,
+        blockXml: '<xml>' +
+                    '<block type="when_run"></block>' +
+                    '<block type="variables_set" inline="false" disabled="true">' +
+                      '<title name="VAR">i</title>' +
+                    '</block>' +
+                  '</xml>'
+      });
     });
   });
 });
@@ -111,11 +224,11 @@ describe("checkForEmptyContainerBlockFailure_", function () {
  * getMissingRequiredBlocks and validates that the result matches the
  * options.expectedResult
  */
-describe("getMissingRequiredBlocks_ tests", function () {
+describe("getMissingRequiredBlocks tests", function () {
   var studioApp;
 
   /**
-   * getMissingRequiredBlocks_ will return us an array of requiredBlocks.  We
+   * getMissingRequiredBlocks will return us an array of requiredBlocks.  We
    * can't validate these using a simple assert.deepEqual because some blocks
    * contain a members generated functions.  These functions are the same in
    * terms of contents, but do not share the same space in memory, and thus
@@ -172,7 +285,7 @@ describe("getMissingRequiredBlocks_ tests", function () {
     assert(!options.userBlockXml || loaded, "either we didnt have  input xml" +
       "or we did, and we loaded something");
 
-    var missing = studioApp.feedback_.getMissingRequiredBlocks_(
+    var missing = blockAnalysis.getMissingRequiredBlocks(Blockly,
         options.requiredBlocks, options.numToFlag);
     validateMissingRequiredBlocks(missing.blocksToDisplay, options.expectedResult);
   }

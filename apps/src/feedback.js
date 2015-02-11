@@ -17,16 +17,13 @@ var FeedbackUtils = function (studioApp) {
 };
 module.exports = FeedbackUtils;
 
-// Globals used in this file:
-//   Blockly
-
+/* globals Blockly: true */
+var blockAnalysis = require('./blockAnalysis');
 var trophy = require('./templates/trophy.html');
-var utils = require('./utils');
-var _ = utils.getLodash();
+var _ = require('./utils').getLodash();
 var codegen = require('./codegen');
 var msg = require('../locale/current/common');
 var dom = require('./dom');
-var xml = require('./xml');
 var FeedbackBlocks = require('./feedbackBlocks');
 var constants = require('./constants');
 var TestResults = constants.TestResults;
@@ -65,9 +62,9 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   }
   var feedbackBlocks;
   if (this.studioApp_.isUsingBlockly()) {
-    feedbackBlocks = new FeedbackBlocks(
-        options,
-        this.getMissingRequiredBlocks_(requiredBlocks, maxRequiredBlocksToFlag),
+    var missingBlocks = blockAnalysis.getMissingRequiredBlocks(
+        Blockly, requiredBlocks, maxRequiredBlocksToFlag);
+    feedbackBlocks = new FeedbackBlocks(options, missingBlocks,
         this.studioApp_);
   }
   // feedbackMessage must be initialized after feedbackBlocks
@@ -274,7 +271,7 @@ FeedbackUtils.prototype.getNumBlocksUsed = function() {
     }
     return codeLines;
   }
-  return this.getUserBlocks_().length;
+  return blockAnalysis.getUserBlocks(Blockly).length;
 };
 
 /**
@@ -295,7 +292,7 @@ FeedbackUtils.prototype.getNumCountableBlocks = function() {
     }
     return codeLines;
   }
-  return this.getCountableBlocks_().length;
+  return blockAnalysis.getCountableBlocks(Blockly).length;
 };
 
 /**
@@ -684,8 +681,7 @@ FeedbackUtils.prototype.canContinueToNextLevel = function(feedbackType) {
 FeedbackUtils.prototype.getGeneratedCodeString_ = function() {
   if (this.studioApp_.editCode) {
     return this.studioApp_.editor ? this.studioApp_.editor.getValue() : '';
-  }
-  else {
+  } else {
     return codegen.workspaceCode(Blockly);
   }
 };
@@ -775,180 +771,6 @@ FeedbackUtils.prototype.showToggleBlocksError = function(Dialog) {
 };
 
 /**
- * Get an empty container block, if any are present.
- * @return {Blockly.Block} an empty container block, or null if none exist.
- */
-FeedbackUtils.prototype.getEmptyContainerBlock_ = function() {
-  var blocks = Blockly.mainBlockSpace.getAllBlocks();
-  for (var i = 0; i < blocks.length; i++) {
-    var block = blocks[i];
-    for (var j = 0; j < block.inputList.length; j++) {
-      var input = block.inputList[j];
-      if (input.type == Blockly.NEXT_STATEMENT &&
-          !input.connection.targetConnection) {
-        return block;
-      }
-    }
-  }
-  return null;
-};
-
-/**
- * Check for empty container blocks, and return an appropriate failure
- * code if any are found.
- * @return {TestResults} ALL_PASS if no empty blocks are present, or
- *   EMPTY_BLOCK_FAIL or EMPTY_FUNCTION_BLOCK_FAIL if empty blocks
- *   are found.
- */
-FeedbackUtils.prototype.checkForEmptyContainerBlockFailure_ = function() {
-  var emptyBlock = this.getEmptyContainerBlock_();
-  if (!emptyBlock) {
-    return TestResults.ALL_PASS;
-  }
-
-  var type = emptyBlock.type;
-  if (type === 'procedures_defnoreturn' || type === 'procedures_defreturn') {
-    return TestResults.EMPTY_FUNCTION_BLOCK_FAIL;
-  }
-
-  // Block is assumed to be "if" or "repeat" if we reach here.
-  // This is where to add checks if you want a different TestResult
-  // for "controls_for_counter" blocks, for example.
-  return TestResults.EMPTY_BLOCK_FAIL;
-};
-
-/**
- * Check whether the user code has all the blocks required for the level.
- * @param {!Array} requiredBlocks The blocks that are required to be used in
- *   the solution to this level.
- * @return {boolean} true if all blocks are present, false otherwise.
- */
-FeedbackUtils.prototype.hasAllRequiredBlocks_ = function(requiredBlocks) {
-  // It's okay (maybe faster) to pass 1 for maxBlocksToFlag, since in the end
-  // we want to check that there are zero blocks missing.
-  var maxBlocksToFlag = 1;
-  return this.getMissingRequiredBlocks_(requiredBlocks, maxBlocksToFlag).blocksToDisplay.length === 0;
-};
-
-/**
- * Get blocks that the user intends in the program. These are the blocks that
- * are used when checking for required blocks and when determining lines of code
- * written.
- * @return {Array<Object>} The blocks.
- */
-FeedbackUtils.prototype.getUserBlocks_ = function() {
-  var allBlocks = Blockly.mainBlockSpace.getAllBlocks();
-  var blocks = allBlocks.filter(function(block) {
-    return !block.disabled && block.isEditable() && block.type !== 'when_run';
-  });
-  return blocks;
-};
-
-/**
- * Get countable blocks in the program, namely any that are not disabled.
- * These are used when determined the number of blocks relative to the ideal
- * block count.
- * @return {Array<Object>} The blocks.
- */
-FeedbackUtils.prototype.getCountableBlocks_ = function() {
-  var allBlocks = Blockly.mainBlockSpace.getAllBlocks();
-  var blocks = allBlocks.filter(function(block) {
-    return !block.disabled;
-  });
-  return blocks;
-};
-
-/**
- * Check to see if the user's code contains the required blocks for a level.
- * @param {!Array} requiredBlocks The blocks that are required to be used in
- *   the solution to this level.
- * @param {number} maxBlocksToFlag The maximum number of blocks to return.
- * @return {{blocksToDisplay:!Array, message:?string}} 'missingBlocks' is an
- *   array of array of strings where each array of strings is a set of blocks
- *   that at least one of them should be used. Each block is represented as the
- *   prefix of an id in the corresponding template.soy. 'message' is an
- *   optional message to override the default error text.
- */
-FeedbackUtils.prototype.getMissingRequiredBlocks_ = function (requiredBlocks,
-    maxBlocksToFlag) {
-  var missingBlocks = [];
-  var customMessage = null;
-  var code = null;  // JavaScript code, which is initialized lazily.
-  if (requiredBlocks && requiredBlocks.length) {
-    var userBlocks = this.getUserBlocks_();
-    // For each list of required blocks
-    // Keep track of the number of the missing block lists. It should not be
-    // bigger than the maxBlocksToFlag param.
-    var missingBlockNum = 0;
-    for (var i = 0;
-         i < requiredBlocks.length &&
-             missingBlockNum < maxBlocksToFlag;
-         i++) {
-      var requiredBlock = requiredBlocks[i];
-      // For each of the test
-      // If at least one of the tests succeeded, we consider the required block
-      // is used
-      var usedRequiredBlock = false;
-      for (var testId = 0; testId < requiredBlock.length; testId++) {
-        var test = requiredBlock[testId].test;
-        if (typeof test === 'string') {
-          code = code || Blockly.Generator.blockSpaceToCode('JavaScript');
-          if (code.indexOf(test) !== -1) {
-            // Succeeded, moving to the next list of tests
-            usedRequiredBlock = true;
-            break;
-          }
-        } else if (typeof test === 'function') {
-          if (userBlocks.some(test)) {
-            // Succeeded, moving to the next list of tests
-            usedRequiredBlock = true;
-            break;
-          } else {
-            customMessage = requiredBlock[testId].message || customMessage;
-          }
-        } else {
-          throw new Error('Bad test: ' + test);
-        }
-      }
-      if (!usedRequiredBlock) {
-        missingBlockNum++;
-        missingBlocks = missingBlocks.concat(requiredBlocks[i][0]);
-      }
-    }
-  }
-  return {
-    blocksToDisplay: missingBlocks,
-    message: customMessage
-  };
-};
-
-/**
- * Do we have any floating blocks not attached to an event block or function block?
- */
-FeedbackUtils.prototype.hasExtraTopBlocks = function () {
-  if (this.studioApp_.editCode) {
-    return false;
-  }
-  var topBlocks = Blockly.mainBlockSpace.getTopBlocks();
-  for (var i = 0; i < topBlocks.length; i++) {
-    // ignore disabled top blocks. we have a level turtle:2_7 that depends on
-    // having disabled top level blocks
-    if (topBlocks[i].disabled) {
-      continue;
-    }
-    // Ignore top blocks which are functional definitions.
-    if (topBlocks[i].type === 'functional_definition') {
-      continue;
-    }
-    // None of our top level blocks should have a previous connection.
-    if (topBlocks[i].previousConnection) {
-      return true;
-    }
-  }
-  return false;
-};
-
-/**
  * Runs the tests and returns results.
  * @param {boolean} levelComplete Did the user successfully complete the level?
  * @param {!Array} requiredBlocks The blocks that are required to be used in
@@ -967,52 +789,14 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
         this.studioApp_.TestResults.ALL_PASS :
         this.studioApp_.TestResults.TOO_FEW_BLOCKS_FAIL;
   }
-  if (shouldCheckForEmptyBlocks) {
-    var emptyBlockFailure = this.checkForEmptyContainerBlockFailure_();
-    if (emptyBlockFailure !== TestResults.ALL_PASS) {
-      return emptyBlockFailure;
-    }
-  }
-  if (!options.allowTopBlocks && this.hasExtraTopBlocks()) {
-    return TestResults.EXTRA_TOP_BLOCKS_FAIL;
-  }
-  if (Blockly.useContractEditor || Blockly.useModalFunctionEditor) {
-    if (this.hasUnusedParam_()) {
-      return TestResults.UNUSED_PARAM;
-    }
-    if (this.hasUnusedFunction_()) {
-      return TestResults.UNUSED_FUNCTION;
-    }
-    if (this.hasParamInputUnattached_()) {
-      return TestResults.PARAM_INPUT_UNATTACHED;
-    }
-    if (this.hasIncompleteBlockInFunction_()) {
-      return TestResults.INCOMPLETE_BLOCK_IN_FUNCTION;
-    }
-  }
-  if (this.hasQuestionMarksInNumberField_()) {
-    return TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
-  }
-  if (!this.hasAllRequiredBlocks_(requiredBlocks)) {
-    return levelComplete ?
-        TestResults.MISSING_BLOCK_FINISHED :
-        TestResults.MISSING_BLOCK_UNFINISHED;
-  }
-  var numEnabledBlocks = this.getNumCountableBlocks();
-  if (!levelComplete) {
-    if (this.studioApp_.IDEAL_BLOCK_NUM &&
-        this.studioApp_.IDEAL_BLOCK_NUM !== Infinity &&
-        numEnabledBlocks < this.studioApp_.IDEAL_BLOCK_NUM) {
-      return TestResults.TOO_FEW_BLOCKS_FAIL;
-    }
-    return TestResults.LEVEL_INCOMPLETE_FAIL;
-  }
-  if (this.studioApp_.IDEAL_BLOCK_NUM &&
-      numEnabledBlocks > this.studioApp_.IDEAL_BLOCK_NUM) {
-    return TestResults.TOO_MANY_BLOCKS_FAIL;
-  } else {
-    return TestResults.ALL_PASS;
-  }
+
+  // If we get this far, we assume that Blockly is being used.
+  return blockAnalysis.runStaticAnalysis(Blockly, {
+    shouldCheckForEmptyBlocks: shouldCheckForEmptyBlocks,
+    allowExtraTopBlocks: options.allowTopBlocks,
+    idealBlockCount: this.studioApp_.IDEAL_BLOCK_NUM,
+    requiredBlocks: requiredBlocks
+  }, levelComplete);
 };
 
 /**
@@ -1049,107 +833,5 @@ FeedbackUtils.prototype.createModalDialogWithIcon = function(options) {
     onHidden: options.onHidden,
     onKeydown: btn ? keydownHandler : undefined,
     id: options.id
-  });
-};
-
-/**
- * Check for '???' instead of a value in block fields.
- */
-FeedbackUtils.prototype.hasQuestionMarksInNumberField_ = function () {
-  return Blockly.mainBlockSpace.getAllBlocks().some(function(block) {
-    return block.getTitles().some(function(title) {
-      return title.value_ === '???';
-    });
-  });
-};
-
-/**
- * Ensure that all procedure definitions actually use the parameters they define
- * inside the procedure.
- */
-FeedbackUtils.prototype.hasUnusedParam_ = function () {
-  var self = this;
-  return Blockly.mainBlockSpace.getAllBlocks().some(function(userBlock) {
-    var params = userBlock.parameterNames_;
-    // Only search procedure definitions
-    return params && params.some(function(paramName) {
-      // Unused param if there's no parameters_get descendant with the same name
-      return !self.hasMatchingDescendant_(userBlock, function(block) {
-        return (block.type === 'parameters_get' ||
-            block.type === 'functional_parameters_get' ||
-            block.type === 'variables_get') &&
-            block.getTitleValue('VAR') === paramName;
-      });
-    });
-  });
-};
-
-/**
- * Ensure that all procedure calls have each parameter input connected.
- */
-FeedbackUtils.prototype.hasParamInputUnattached_ = function () {
-  return Blockly.mainBlockSpace.getAllBlocks().some(function(userBlock) {
-    // Only check procedure_call* blocks
-    if (!/^procedures_call/.test(userBlock.type)) {
-      return false;
-    }
-    return userBlock.inputList.filter(function(input) {
-      return (/^ARG/.test(input.name));
-    }).some(function(argInput) {
-      // Unattached param input if any ARG* connection target is null
-      return !argInput.connection.targetConnection;
-    });
-  });
-};
-
-/**
- * Ensure that all user-declared procedures have associated call blocks.
- */
-FeedbackUtils.prototype.hasUnusedFunction_ = function () {
-  var userDefs = [];
-  var callBlocks = {};
-  Blockly.mainBlockSpace.getAllBlocks().forEach(function (block) {
-    var name = block.getTitleValue('NAME');
-    if (/^procedures_def/.test(block.type) && block.userCreated) {
-      userDefs.push(name);
-    } else if (/^procedures_call/.test(block.type)) {
-      callBlocks[name] = true;
-    }
-  });
-  // Unused function if some user def doesn't have a matching call
-  return userDefs.some(function(name) { return !callBlocks[name]; });
-};
-
-/**
- * Ensure there are no incomplete blocks inside any function definitions.
- */
-FeedbackUtils.prototype.hasIncompleteBlockInFunction_ = function () {
-  var self = this;
-  return Blockly.mainBlockSpace.getAllBlocks().some(function(userBlock) {
-    // Only search procedure definitions
-    if (!userBlock.parameterNames_) {
-      return false;
-    }
-    return self.hasMatchingDescendant_(userBlock, function(block) {
-      // Incomplete block if any input connection target is null
-      return block.inputList.some(function(input) {
-        return input.type === Blockly.INPUT_VALUE &&
-            !input.connection.targetConnection;
-      });
-    });
-  });
-};
-
-/**
- * Returns true if any descendant (inclusive) of the given node matches the
- * given filter.
- */
-FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
-  if (filter(node)) {
-    return true;
-  }
-  var self = this;
-  return node.childBlocks_.some(function (child) {
-    return self.hasMatchingDescendant_(child, filter);
   });
 };
