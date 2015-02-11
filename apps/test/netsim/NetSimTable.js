@@ -3,7 +3,7 @@ var assert = testUtils.assert;
 var NetSimTable = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimTable');
 
 var assertEqual = function (left, right) {
-  assert(left === right, '' + left + '===' + right);
+  assert(left === right, left + '===' + right);
 };
 
 /**
@@ -124,14 +124,14 @@ describe("NetSimTable", function () {
   });
 
   it ("notifies on readAll if any remote row changed", function () {
-    netsimTable.create({data:"A"}, callback);
+    netsimTable.create({data: "A"}, callback);
 
     notified = false;
     netsimTable.readAll(callback);
     assertEqual(notified, false);
 
     // Remote update - doesn't hit our caches
-    apiTable.update(1, {data:"B"}, callback);
+    apiTable.update(1, {data: "B"}, callback);
 
     notified = false;
     netsimTable.readAll(callback);
@@ -139,14 +139,14 @@ describe("NetSimTable", function () {
   });
 
   it ("notifies on read if the requested remote row changed", function () {
-    netsimTable.create({data:"A"}, callback);
+    netsimTable.create({data: "A"}, callback);
 
     notified = false;
     netsimTable.read(1, callback);
     assertEqual(notified, false);
 
     // Remote update - doesn't hit our caches
-    apiTable.update(1, {data:"B"}, callback);
+    apiTable.update(1, {data: "B"}, callback);
 
     notified = false;
     netsimTable.read(1, callback);
@@ -160,14 +160,14 @@ describe("NetSimTable", function () {
   });
 
   it ("notifies on update if the cache row changed", function () {
-    netsimTable.create({data:"A"}, callback);
+    netsimTable.create({data: "A"}, callback);
 
     notified = false;
-    netsimTable.update(1, {data:"A"}, callback);
+    netsimTable.update(1, {data: "A"}, callback);
     assertEqual(notified, false);
 
     notified = false;
-    netsimTable.update(1, {data:"B"}, callback);
+    netsimTable.update(1, {data: "B"}, callback);
     assertEqual(notified, true);
   });
 
@@ -189,19 +189,19 @@ describe("NetSimTable", function () {
       receivedTableData = newTableData;
     });
 
-    netsimTable.create({data:"A"}, callback);
+    netsimTable.create({data: "A"}, callback);
     assertEqual(
         JSON.stringify(receivedTableData),
         '[{"data":"A","id":1}]');
 
     // Remote change
-    apiTable.create({data:"B"}, callback);
+    apiTable.create({data: "B"}, callback);
     netsimTable.readAll(callback);
     assertEqual(
         JSON.stringify(receivedTableData),
         '[{"data":"A","id":1},{"data":"B","id":2}]');
 
-    netsimTable.update(2, {data:"C"}, callback);
+    netsimTable.update(2, {data: "C"}, callback);
     assertEqual(
         JSON.stringify(receivedTableData),
         '[{"data":"A","id":1},{"data":"C","id":2}]');
