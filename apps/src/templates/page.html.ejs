@@ -88,7 +88,9 @@ var helpArea = function(html) { -%>
       </div>
     </div>
     <div id="show-code-header" class="blockly-header"><span><%= msg.showCodeHeader() %></span></div>
-    <div id="clear-puzzle-header" class="blockly-header"><span><%= msg.clearPuzzleHeader() %></span></div>
+    <% if (!data.editCode) { %>
+      <div id="clear-puzzle-header" class="blockly-header"><span><%= msg.clearPuzzleHeader() %></span></div>
+    <% } %>
   </div>
   <% if (data.editCode) { %>
     <div id="codeTextbox"></div>

@@ -784,7 +784,8 @@ StudioApp.prototype.resizeHeaders = function (fullWorkspaceWidth) {
   var showCodeWidth = 0;
 
   var clearPuzzleHeader = document.getElementById('clear-puzzle-header');
-  var clearPuzzleWidth = clearPuzzleHeader.getBoundingClientRect().width;
+  var clearPuzzleWidth = clearPuzzleHeader
+      ? clearPuzzleHeader.getBoundingClientRect().width : 0;
 
   var headersDiv = document.getElementById('headers');
   if (headersDiv) {
