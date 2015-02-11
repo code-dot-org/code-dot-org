@@ -40,6 +40,7 @@ theme: angular
         //  'query':  {method: 'GET', isArray:true},
         //  'remove': {method: 'DELETE'},
         //  'delete': {method: 'DELETE'} // don't use this because it doesn't work in IE9
+        update: {method:'PUT', url: '/ops/districts/:id'}
       });
 
       return District;
@@ -56,16 +57,28 @@ theme: angular
 
       $scope.districts = districtsService.query();
 
-      $scope.save = function () {
-        var newDistrict = new districtsService($scope.district);
-        newDistrict.$save().then(
-          function(saved) {
-            $scope.district = saved; /* just in case it has been modified on server */
-            districtsService.query().$promise.then(function (districts) {
-              $scope.districts = districts;
-            });
-          }
-        );
+      $scope.save = function (district) {
+        if (district.id) {
+          var newDistrict = new districtsService($scope.district);
+          districtsService.update({id: district.id}, district).$promise.then(
+            function(result_district) {
+              $scope.districts[$scope.districts.indexOf(district)] = result_district;
+                districtsService.query().$promise.then(function (districts) {
+                $scope.districts = districts;
+              });
+            }
+          ).catch($scope.genericError);
+        } else { // update existing
+          var newDistrict = new districtsService($scope.district);
+          newDistrict.$save().then(
+            function(saved) {
+              $scope.district = saved; /* just in case it has been modified on server */
+              districtsService.query().$promise.then(function (districts) {
+                $scope.districts = districts;
+              });
+            }
+          );
+        }
       }
 
       $scope.districts.$promise.then(function(districts) {
