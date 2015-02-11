@@ -78,8 +78,7 @@ var NetSimShard = module.exports = function (shardID) {
 NetSimShard.prototype.tick = function (clock) {
   // TODO (bbuchanan): Eventaully, these polling events should just be
   //                   backup for the notification system.
-
-  // Only tick the message table for now - not clear that lobby or wire
-  // tables need this yet.
+  this.nodeTable.tick(clock);
+  this.wireTable.tick(clock);
   this.messageTable.tick(clock);
 };

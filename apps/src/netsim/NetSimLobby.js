@@ -35,9 +35,13 @@
 
 var dom = require('../dom');
 var utils = require('../utils');
+var netsimUtils = require('./netsimUtils');
+var NetSimLogger = require('./NetSimLogger');
 var NetSimNodeClient = require('./NetSimNodeClient');
 var NetSimNodeRouter = require('./NetSimNodeRouter');
 var markup = require('./NetSimLobby.html');
+
+var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
 
 /**
  * Value of any option in the shard selector that does not
@@ -63,6 +67,16 @@ var NetSimLobby = function (connection, user, shardID) {
    */
   this.connection_ = connection;
   this.connection_.statusChanges.register(this.refresh_.bind(this));
+  logger.info("NetSimLobby registered to connection statusChanges");
+  this.connection_.shardChange.register(this.onShardChange_.bind(this));
+  logger.info("NetSimLobby registered to connection shardChanges");
+
+  /**
+   * A reference to the currently connected shard.
+   * @type {?NetSimShard}
+   * @private
+   */
+  this.shard_ = null;
 
   /**
    * Current user, logged in or no.
@@ -163,6 +177,33 @@ NetSimLobby.prototype.bindElements_ = function () {
     this.nameInput_.val(this.user_.name);
     this.refreshShardList_();
   }
+};
+
+/**
+ * Called whenever the connection notifies us that we've connected to,
+ * or disconnected from, a shard.
+ * @param {?NetSimShard} newShard - null if disconnected.
+ * @private
+ */
+NetSimLobby.prototype.onShardChange_= function (newShard) {
+  this.shard_ = newShard;
+  if (this.shard_ !== null) {
+    this.shard_.nodeTable.tableChange
+        .register(this.onNodeTableChange_.bind(this));
+    logger.info("NetSimLobby registered to nodeTable tableChange");
+  }
+};
+
+/**
+ * Called whenever a change is detected in the nodes table - which should
+ * trigger a refresh of the lobby listing
+ * @param {!Array} rows
+ * @private
+ */
+NetSimLobby.prototype.onNodeTableChange_ = function (rows) {
+  // Refresh lobby listing.
+  var nodes = netsimUtils.nodesFromRows(this.shard_, rows);
+  this.refreshLobbyList_(nodes);
 };
 
 NetSimLobby.prototype.setNameButtonClick_ = function () {
@@ -347,54 +388,54 @@ NetSimLobby.prototype.refreshOpenLobby_ = function () {
   this.addRouterButton_.show();
   this.lobbyList_.show();
   this.connectButton_.show();
-  this.refreshLobbyList_();
+  this.connection_.getAllNodes(function (lobbyData) {
+    this.refreshLobbyList_(lobbyData);
+  }.bind(this));
 };
 
 /**
  * Reload the lobby listing of nodes.
+ * @param {!Array.<NetSimNodeClient>} lobbyData
  * @private
  */
-NetSimLobby.prototype.refreshLobbyList_ = function () {
-  var self = this;
-  this.connection_.getAllNodes(function (lobbyData) {
-    self.lobbyList_.empty();
+NetSimLobby.prototype.refreshLobbyList_ = function (lobbyData) {
+  this.lobbyList_.empty();
 
-    lobbyData.sort(function (a, b) {
-      if (a.getDisplayName() > b.getDisplayName()) {
-        return 1;
-      }
-      return -1;
-    });
-
-    self.selectedListItem_ = undefined;
-    lobbyData.forEach(function (simNode) {
-      var item = $('<li>').html(
-          simNode.getDisplayName() + ' : ' +
-          simNode.getStatus() + ' ' +
-          simNode.getStatusDetail());
-
-      // Style rows by row type.
-      if (simNode.getNodeType() === NetSimNodeRouter.getNodeType()) {
-        item.addClass('router_row');
-      } else {
-        item.addClass('user_row');
-        if (simNode.entityID === self.connection_.myNode.entityID) {
-          item.addClass('own_row');
-        }
-      }
-
-      // Preserve selected item across refresh.
-      if (simNode.entityID === self.selectedID_) {
-        item.addClass('selected_row');
-        self.selectedListItem_ = item;
-      }
-
-      dom.addClickTouchEvent(item[0], self.onRowClick_.bind(self, item, simNode));
-      item.appendTo(self.lobbyList_);
-    });
-
-    self.onSelectionChange();
+  lobbyData.sort(function (a, b) {
+    if (a.getDisplayName() > b.getDisplayName()) {
+      return 1;
+    }
+    return -1;
   });
+
+  this.selectedListItem_ = undefined;
+  lobbyData.forEach(function (simNode) {
+    var item = $('<li>').html(
+        simNode.getDisplayName() + ' : ' +
+        simNode.getStatus() + ' ' +
+        simNode.getStatusDetail());
+
+    // Style rows by row type.
+    if (simNode.getNodeType() === NetSimNodeRouter.getNodeType()) {
+      item.addClass('router_row');
+    } else {
+      item.addClass('user_row');
+      if (simNode.entityID === this.connection_.myNode.entityID) {
+        item.addClass('own_row');
+      }
+    }
+
+    // Preserve selected item across refresh.
+    if (simNode.entityID === this.selectedID_) {
+      item.addClass('selected_row');
+      this.selectedListItem_ = item;
+    }
+
+    dom.addClickTouchEvent(item[0], this.onRowClick_.bind(this, item, simNode));
+    item.appendTo(this.lobbyList_);
+  }.bind(this));
+
+  this.onSelectionChange();
 };
 
 /**

@@ -59,7 +59,7 @@ var NetSimTable = module.exports = function (storageTable) {
    * when rows are added, or when rows are removed, or when rows change.
    * @type {ObservableEvent}
    */
-  this.tableChangeEvent = new ObservableEvent();
+  this.tableChange = new ObservableEvent();
 
   /**
    * Store table contents locally, so we can detect when changes occur.
@@ -132,7 +132,7 @@ NetSimTable.prototype.fullCacheUpdate_ = function (allRows) {
   // Check for changes, if anything changed notify all observers on table.
   if (!_.isEqual(this.cache_, newCache)) {
     this.cache_ = newCache;
-    this.tableChangeEvent.notifyObservers(this.arrayFromCache_());
+    this.tableChange.notifyObservers(this.arrayFromCache_());
   }
 
   this.lastFullUpdateTime_ = Date.now();
@@ -140,13 +140,13 @@ NetSimTable.prototype.fullCacheUpdate_ = function (allRows) {
 
 NetSimTable.prototype.addRowToCache_ = function (row) {
   this.cache_[row.id] = row;
-  this.tableChangeEvent.notifyObservers(this.arrayFromCache_());
+  this.tableChange.notifyObservers(this.arrayFromCache_());
 };
 
 NetSimTable.prototype.removeRowFromCache_ = function (id) {
   if (this.cache_[id] !== undefined) {
     delete this.cache_[id];
-    this.tableChangeEvent.notifyObservers(this.arrayFromCache_());
+    this.tableChange.notifyObservers(this.arrayFromCache_());
   }
 };
 
@@ -159,7 +159,7 @@ NetSimTable.prototype.updateCacheRow_ = function (id, row) {
 
   if (!_.isEqual(oldRow, newRow)) {
     this.cache_[id] = newRow;
-    this.tableChangeEvent.notifyObservers(this.arrayFromCache_());
+    this.tableChange.notifyObservers(this.arrayFromCache_());
   }
 };
 
