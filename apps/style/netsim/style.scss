@@ -102,7 +102,7 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
     background-color: white;
     height: 100px;
     width: 400px;
-    overflow: scroll;
+    overflow-y: scroll;
   }
 }
 
