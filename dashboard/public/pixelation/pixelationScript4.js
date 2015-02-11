@@ -39,19 +39,52 @@ function drawGraph() {
     binCode = pixel_data.value.replace(/[^01]/gi, "");
   }
 
-  // Read width, height out of the bit string (where width is given in byte 0, height in byte 1).
-  var w = binToInt(readByte(binCode, 0));
-  var h = binToInt(readByte(binCode, 1));
-  document.getElementById("width").value = document.getElementById("widthRange").value = w;
-  document.getElementById("height").value = document.getElementById("heightRange").value = h;
+  var w, h, bitsPerPix = 1;
+  if (options.version == '1') {
+    w = document.getElementById("width").value;
+    h = document.getElementById("height").value;
+  } else {
+    // Read width, height out of the bit string (where width is given in byte 0, height in byte 1).
+    w = binToInt(readByte(binCode, 0));
+    h = binToInt(readByte(binCode, 1));
+    document.getElementById("width").value = document.getElementById("widthRange").value = w;
+    document.getElementById("height").value = document.getElementById("heightRange").value = h;
+    binCode = binCode.substring(16, binCode.length);
 
-  var bitsPerPix = binToInt(readByte(binCode, 2));
+    if (options.version != '2') {
+      bitsPerPix = binToInt(readByte(binCode, 0));
+      document.getElementById("bitsPerPixel").value = bitsPerPix;
+      document.getElementById("bitsPerPixelSlider").value = bitsPerPix;
+      binCode = binCode.substring(8, binCode.length);
 
-  document.getElementById("bitsPerPixel").value = bitsPerPix;
-  document.getElementById("bitsPerPixelSlider").value = bitsPerPix;
+      // Update pixel format indicator.
+      var bitsPerPixel = parseInt(document.getElementById("bitsPerPixel").value);
+      if (hexMode && bitsPerPixel % 4 !== 0) {
+        pixel_format.innerHTML = '<span class="unknown">' + pad('', Math.ceil(bitsPerPixel / 4), '-') + '</span>';
+      } else {
+        if (bitsPerPixel % 3 === 0) {
+          var str;
+          if (hexMode) {
+            str = pad('', bitsPerPixel / 12, 'F');
+          } else {
+            str = pad('', bitsPerPixel / 3, '1');
+          }
+          pixel_format.innerHTML =
+              '<span class="r">' + str + '</span>'
+              + '<span class="g">' + str + '</span>'
+              + '<span class="b">' + str + '</span>';
+        } else {
+          if (hexMode) {
+            pixel_format.innerHTML = pad('', bitsPerPixel / 4, 'F');
+          } else {
+            pixel_format.innerHTML = pad('', bitsPerPixel, '1');
+          }
+        }
+      }
+    }
+  }
 
-  var imgBitString = binCode.substring(24, binCode.length);
-  var colorNums = bitsToColors(imgBitString, bitsPerPix);
+  var colorNums = bitsToColors(binCode, bitsPerPix);
 
   var sqSize = 1, fillSize = 1, offset = 0;
   if (!document.querySelector('input#actual_size:checked')) {
@@ -72,31 +105,6 @@ function drawGraph() {
     for (var x = 0; x < w; x++) {
       ctx.fillStyle = colorNums[(y * w) + x] || "#fdd";
       ctx.fillRect(left + x * sqSize + offset, top + y * sqSize + offset, fillSize, fillSize);
-    }
-  }
-
-  // Update pixel format indicator.
-  var bitsPerPixel = parseInt(document.getElementById("bitsPerPixel").value);
-  if (hexMode && bitsPerPixel % 4 !== 0) {
-    pixel_format.innerHTML = '<span class="unknown">' + pad('', Math.ceil(bitsPerPixel / 4), '-') + '</span>';
-  } else {
-    if (bitsPerPixel % 3 === 0) {
-      var str;
-      if (hexMode) {
-        str = pad('', bitsPerPixel / 12, 'F');
-      } else {
-        str = pad('', bitsPerPixel / 3, '1');
-      }
-      pixel_format.innerHTML =
-          '<span class="r">' + str + '</span>'
-          + '<span class="g">' + str + '</span>'
-          + '<span class="b">' + str + '</span>';
-    } else {
-      if (hexMode) {
-        pixel_format.innerHTML = pad('', bitsPerPixel / 4, 'F');
-      } else {
-        pixel_format.innerHTML = pad('', bitsPerPixel, '1');
-      }
     }
   }
 }
@@ -126,21 +134,29 @@ function formatBits(bitString, chunkSize, chunksPerLine) {
   var justBits = bitString.replace(/[ \n]/g, "");
   var formattedBits = "";
 
-  // First break out first 3 bytes (w, h, bpp).
-  if (isHex()) {
-    formattedBits += justBits.substr(0, 2) + "\n"; //width
-    formattedBits += justBits.substr(2, 2) + "\n"; //height
-    formattedBits += justBits.substr(4, 2) + "\n"; //bpp
-    // Remove first 24 bits from justBits.
-    justBits = justBits.substr(6);
-  } else {
-    // Binary.
-    formattedBits += justBits.substr(0, 4) + " " + justBits.substr(4, 4) + "\n";
-    formattedBits += justBits.substr(8, 4) + " " + justBits.substr(12, 4) + "\n";
-    formattedBits += justBits.substr(16, 4) + " " + justBits.substr(20, 4) + "\n";
-
-    // Remove first 24 bits from justBits.
-    justBits = justBits.substr(24);
+  if (options.version != '1') {
+    // First break out first 2 bytes (width, height).
+    if (isHex()) {
+      formattedBits += justBits.substr(0, 2) + "\n";
+      formattedBits += justBits.substr(2, 2) + "\n";
+      if (options.version == '3') {
+        // Break out the next byte (bits per pixel)
+        formattedBits += justBits.substr(4, 2) + "\n";
+        justBits = justBits.substr(6);
+      } else {
+        justBits = justBits.substr(4);
+      }
+    } else {
+      // Binary.
+      formattedBits += justBits.substr(0, 4) + " " + justBits.substr(4, 4) + "\n";
+      formattedBits += justBits.substr(8, 4) + " " + justBits.substr(12, 4) + "\n";
+      if (options.version == '3') {
+        formattedBits += justBits.substr(16, 4) + " " + justBits.substr(20, 4) + "\n";
+        justBits = justBits.substr(24);
+      } else {
+        justBits = justBits.substr(16);
+      }
+    }
   }
 
   if (isHex()) {
@@ -267,7 +283,9 @@ function bitsToColors(bitString, bitsPerPixel) {
     colorList.push(getColorVal2(bitString.substring(i, i + bitsPerPixel), bitsPerPixel));
 
   }
-  if ((bitString.length / bitsPerPixel) != colorList.length) colorList.pop();
+  if ((bitString.length / bitsPerPixel) != colorList.length) {
+    colorList.pop();
+  }
 
   return colorList;
 }
@@ -277,7 +295,7 @@ function changeVal(elementID) {
 
   if (elementID == "width") {
     val = document.getElementById("widthRange").value;
-  } else if (elementID = "bitsPerPixel") {
+  } else if (elementID == "bitsPerPixel") {
     val = document.getElementById("bitsPerPixelSlider").value;
 
     if (val == 0) {
@@ -290,8 +308,10 @@ function changeVal(elementID) {
   // Make textbox value match slider value.
   document.getElementById(elementID).value = val;
 
-  updateBinaryDataToMatchSliders();
-  formatBitDisplay();
+  if (options.version != '1') {
+    updateBinaryDataToMatchSliders();
+    formatBitDisplay();
+  }
   drawGraph();
 }
 
