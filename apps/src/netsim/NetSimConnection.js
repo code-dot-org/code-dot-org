@@ -35,6 +35,7 @@
 var NetSimLogger = require('./NetSimLogger');
 var NetSimClientNode = require('./NetSimClientNode');
 var NetSimRouterNode = require('./NetSimRouterNode');
+var NetSimLocalClientNode = require('./NetSimLocalClientNode');
 var NetSimWire = require('./NetSimWire');
 var ObservableEvent = require('./ObservableEvent');
 var periodicAction = require('./periodicAction');
@@ -204,7 +205,7 @@ NetSimConnection.prototype.disconnectFromShard = function () {
  * @private
  */
 NetSimConnection.prototype.createMyClientNode_ = function (displayName) {
-  NetSimClientNode.create(this.shard_, function (node) {
+  NetSimLocalClientNode.create(this.shard_, function (node) {
     if (node) {
       this.myNode = node;
       this.myNode.onChange.register(this.onMyNodeChange_.bind(this));
@@ -242,6 +243,8 @@ NetSimConnection.prototype.isConnectedToShard = function () {
 /**
  * Gets all rows in the lobby and passes them to callback.  Callback will
  * get an empty array if we were unable to get lobby data.
+ * TODO: Remove this, get rows from the table and use the netsimUtils methods
+ * instead.
  * @param callback
  */
 NetSimConnection.prototype.getAllNodes = function (callback) {
