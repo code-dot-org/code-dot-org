@@ -8,7 +8,7 @@ template: none
 -#%button.btn.btn-white
 -#  New District
 
-%table{style:'width: 100%; margin-top: 20px;'}
+%table{"ng-controller" => "DistrictsController", style:'width: 100%; margin-top: 20px;'}
   %tr
     %th.manage-th
       District Name
@@ -26,8 +26,8 @@ template: none
     %td
       {{district.contact_id}}
     %td
-      %button.btn.btn-danger{'ng-click' => 'district.$remove({id: district.id}) && adjust(districts, $index)'} Delete
-  %tr{"ng-controller" => "DistrictsController"}
+      %button.btn.btn-danger{'ng-click' => 'district.$remove({id: district.id}) && districts.splice($index, 1);'} Delete
+  %tr
     %td
       %input{"ng-model" => "district.name", type:"text"}
     %td

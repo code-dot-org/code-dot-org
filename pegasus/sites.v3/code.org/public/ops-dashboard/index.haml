@@ -52,13 +52,15 @@ theme: angular
       $scope.districts = districtsService.query();
 
       $scope.save = function () {
-        //var newDistrict = new districtsService($scope.district);
-        //newDistrict.$save();
-        districtsService.save($scope.district);
-      }
-
-      $scope.adjust = function (districts, index) {
-        districts.splice(index, 1);
+        var newDistrict = new districtsService($scope.district);
+        newDistrict.$save().then(
+          function(saved) {
+            $scope.district = saved; /* just in case it has been modified on server */
+            districtsService.query().$promise.then(function (districts) {
+              $scope.districts = districts;
+            });
+          }
+        );
       }
 
       $scope.districts.$promise.then(function(districts) {
