@@ -19,7 +19,7 @@ module.exports = {
       description: "Nothing",
       expected: {
         result: false,
-        testResult: TestResults.LEVEL_INCOMPLETE_FAIL
+        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
       },
       xml: '<xml>' +
       '</xml>'
