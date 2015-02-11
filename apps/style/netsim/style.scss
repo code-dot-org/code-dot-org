@@ -43,6 +43,12 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
 #netsim_rightcol {
   float: right;
   width: 300px;
+
+  #netsim_visualization {
+    img {
+      width: 100%;
+    }
+  }
 }
 
 #netsim_leftcol {
