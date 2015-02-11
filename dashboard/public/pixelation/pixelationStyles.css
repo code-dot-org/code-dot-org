@@ -16,6 +16,11 @@
   background: #000;
   font: bold 14pt monospace;
   padding: 1px 7px;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 #pixel_format .r {
