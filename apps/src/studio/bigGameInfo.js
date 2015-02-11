@@ -1,3 +1,5 @@
+/* global Studio */
+
 var Direction = require('./constants').Direction;
 
 var BigGameInfo = function () {
@@ -22,13 +24,13 @@ BigGameInfo.prototype.onTick = function () {
   this.updateSpriteX_(this.dangerSpriteIndex, this.update_danger.bind(this));
 
   // For every key and button down, call update_player
-  for (key in Studio.keyState) {
+  for (var key in Studio.keyState) {
     if (Studio.keyState[key] === 'keydown') {
       this.updatePlayer_(key);
     }
   }
 
-  for (btn in Studio.btnState) {
+  for (var btn in Studio.btnState) {
     if (Studio.btnState[btn]) {
       if (btn === 'leftButton') {
         this.updatePlayer_(37);
@@ -81,7 +83,7 @@ BigGameInfo.prototype.updatePlayer_ = function (key) {
 
   // reinvertY
   playerSprite.y = Studio.MAZE_HEIGHT - newUserSpaceY;
-}
+};
 
 /**
  * Calls the user provided update_target function, or no-op if none was provided.
