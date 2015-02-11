@@ -450,7 +450,7 @@ function generateResults() {
     appState.result = ResultType.FAILURE;
     appState.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
     appState.message = calcMsg.emptyFunctionalBlock();
-    return
+    return;
   }
 
   appState.userSet = new EquationSet(Blockly.mainBlockSpace.getTopBlocks());
