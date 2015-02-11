@@ -935,14 +935,6 @@ exports.random = function (min, max)
 };
 */
 
-var mathFunctions = [
-  {'func': 'random', 'idArgNone': true },
-  {'func': 'round', 'idArgNone': true },
-  {'func': 'abs', 'idArgNone': true },
-  {'func': 'max', 'idArgNone': true },
-  {'func': 'min', 'idArgNone': true },
-];
-
 /**
  * Execute the app
  */
@@ -962,7 +954,6 @@ Applab.execute = function() {
   var codeWhenRun;
   if (level.editCode) {
     codeWhenRun = utils.generateCodeAliases(level.codeFunctions, dropletConfig, 'Applab');
-    codeWhenRun += utils.generateCodeAliases(mathFunctions, null, 'Math');
     Applab.userCodeStartOffset = codeWhenRun.length;
     Applab.userCodeLineOffset = codeWhenRun.split("\n").length - 1;
     codeWhenRun += studioApp.editor.getValue();
@@ -993,12 +984,11 @@ Applab.execute = function() {
     if (level.editCode) {
       // Use JS interpreter on editCode levels
       var initFunc = function(interpreter, scope) {
-        codegen.initJSInterpreter(interpreter, scope, {
-                                          StudioApp: studioApp,
-                                          Applab: api,
-                                          console: consoleApi,
-                                          JSON: JSONApi,
-                                          Globals: Applab.Globals });
+        codegen.initJSInterpreter(interpreter,
+                                  scope,
+                                  { Applab: api,
+                                    console: consoleApi,
+                                    JSON: JSONApi });
 
         // Only allow five levels of depth when marshalling the return value
         // since we will occasionally return DOM Event objects which contain
