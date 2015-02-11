@@ -310,6 +310,7 @@ class Studio < Grid
   <block type="functional_math_number_dropdown">
     <title name="NUM" config="2,3,4,5,6,7,8,9,10,11,12">???</title>
   </block>
+  <block type="functional_sqrt"></block>
 </category>
 <category name="Functional Boolean">
   <block type="functional_greater_than" />
@@ -320,6 +321,7 @@ class Studio < Grid
   <block type="functional_logical_or" />
   <block type="functional_logical_not" />
   <block type="functional_boolean" />
+  <block type="functional_keydown" />
 </category>
 <category name ="Functional Image">
   <block type="functional_sprite_dropdown" />
