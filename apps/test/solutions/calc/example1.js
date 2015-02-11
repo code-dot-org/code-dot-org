@@ -51,9 +51,23 @@ module.exports = {
       description: "empty answer",
       expected: {
         result: false,
-        testResult: TestResults.LEVEL_INCOMPLETE_FAIL
+        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
       },
       xml: '<xml></xml>'
+    },
+    {
+      description: 'empty input',
+      expected: {
+        result: false,
+        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
+      },
+      xml: '<xml>' +
+        blockUtils.calcBlockXml('functional_times', [
+          blockUtils.calcBlockXml('functional_plus', [1, 2]),
+          blockUtils.calcBlockXml('functional_plus', [3]) // missing second input
+        ]) +
+      '</xml>'
+
     }
   ]
 };
