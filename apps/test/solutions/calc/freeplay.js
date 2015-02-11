@@ -65,8 +65,8 @@ module.exports = {
     {
       description: 'empty answer',
       expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY
+        result: false,
+        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
       },
       xml: '<xml></xml>'
     }

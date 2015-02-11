@@ -15,7 +15,7 @@
     "use_modal_function_editor": "false",
     "free_play": "false",
     "embed": "false",
-    "callout_json": "[\r\n  {\"localization_key\":\"type_string\",\"callout_text\":\"Drag this type string block to the display on the work space and enter \\\"Hello, world!\\\" in this type string block. \",\"element_id\":\"#callout_here\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"left center\",\"at\":\"right bottom\"},\"style\":{\"classes\":\"\"}}}\r\n]"
+    "callout_json": "[\r\n  {\"localization_key\":\"type_string\",\"callout_text\":\"Drag this string block to the display on the work space. \",\"element_id\":\"#callout_here\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"left center\",\"at\":\"right bottom\"},\"style\":{\"classes\":\"\"}}}\r\n]"
   }
 }]]></config>
   <blocks>

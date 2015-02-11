@@ -63,6 +63,7 @@ var appState = {
   currentAnimationDepth: 0,
   failedInput: null
 };
+Calc.appState_ = appState;
 
 var stepSpeed = 2000;
 
@@ -385,20 +386,7 @@ Calc.evaluateResults_ = function (targetSet, userSet) {
  * Execute the user's code.
  */
 Calc.execute = function() {
-  appState.userSet = new EquationSet(Blockly.mainBlockSpace.getTopBlocks());
-  appState.failedInput = null;
-
-  if (level.freePlay || level.edit_blocks) {
-    appState.result = ResultType.SUCCESS;
-    appState.testResults = TestResults.FREE_PLAY;
-    appState.message = undefined;
-  } else {
-    var outcome = Calc.evaluateResults_(appState.targetSet, appState.userSet);
-    appState.result = outcome.result;
-    appState.testResults = outcome.testResults;
-    appState.message = outcome.message;
-    appState.failedInput = outcome.failedInput;
-  }
+  generateResults();
 
   var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   var textBlocks = Blockly.Xml.domToText(xml);
@@ -416,7 +404,7 @@ Calc.execute = function() {
   studioApp.report(reportData);
 
   // Display feedback immediately
-  if (appState.testResults === TestResults.QUESTION_MARKS_IN_NUMBER_FIELD) {
+  if (isPreAnimationFailure(appState.testResults)) {
     return displayFeedback();
   }
 
@@ -432,6 +420,56 @@ Calc.execute = function() {
     }, stepSpeed);
   }
 };
+
+function isPreAnimationFailure(testResult) {
+  return testResult === TestResults.QUESTION_MARKS_IN_NUMBER_FIELD ||
+    testResult === TestResults.EMPTY_FUNCTIONAL_BLOCK ||
+    testResult === TestResults.EXTRA_TOP_BLOCKS_FAIL;
+}
+
+/**
+ * Fill appState with the results of program execution.
+ */
+function generateResults() {
+  appState.message = undefined;
+
+  // Check for pre-execution errors
+  if (studioApp.hasExtraTopBlocks()) {
+    appState.result = ResultType.FAILURE;
+    appState.testResults = TestResults.EXTRA_TOP_BLOCKS_FAIL;
+    return;
+  }
+
+  if (studioApp.hasUnfilledBlock()) {
+    appState.result = ResultType.FAILURE;
+    appState.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
+
+    // Gate message on whether or not it's the compute block that's empty
+    var compute = _.find(Blockly.mainBlockSpace.getTopBlocks(), function (item) {
+      return item.type === 'functional_compute';
+    });
+    if (compute && !compute.getInputTargetBlock('ARG1')) {
+      appState.message = calcMsg.emptyComputeBlock();
+    } else {
+      appState.message = calcMsg.emptyFunctionalBlock();
+    }
+    return;
+  }
+
+  appState.userSet = new EquationSet(Blockly.mainBlockSpace.getTopBlocks());
+  appState.failedInput = null;
+
+  if (level.freePlay || level.edit_blocks) {
+    appState.result = ResultType.SUCCESS;
+    appState.testResults = TestResults.FREE_PLAY;
+  } else {
+    var outcome = Calc.evaluateResults_(appState.targetSet, appState.userSet);
+    appState.result = outcome.result;
+    appState.testResults = outcome.testResults;
+    appState.message = outcome.message;
+    appState.failedInput = outcome.failedInput;
+  }
+}
 
 /**
  * If we have any functions or variables in our expression set, we don't support
@@ -664,7 +702,7 @@ function displayFeedback() {
   level.extraTopBlocks = calcMsg.extraTopBlocks();
   var appDiv = null;
   // Show svg in feedback dialog
-  if (appState.testResults !== TestResults.QUESTION_MARKS_IN_NUMBER_FIELD) {
+  if (!isPreAnimationFailure(appState.testResults)) {
     appDiv = cloneNodeWithoutIds('svgCalc');
   }
   var options = {
@@ -700,6 +738,7 @@ function onReportComplete(response) {
 /* start-test-block */
 // export private function(s) to expose to unit testing
 Calc.__testonly__ = {
-  displayGoal: displayGoal
+  displayGoal: displayGoal,
+  appState: appState
 };
 /* end-test-block */
