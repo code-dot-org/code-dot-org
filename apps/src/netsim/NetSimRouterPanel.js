@@ -55,7 +55,8 @@ var NetSimRouterPanel = function (connection) {
    * @private
    */
   this.connection_ = connection;
-  this.connection_.statusChanges.register(this, this.onConnectionStatusChange_);
+  this.connection_.statusChanges
+      .register(this.onConnectionStatusChange_.bind(this));
 
   /**
    * Helper for triggering refresh on a regular interval
@@ -136,11 +137,11 @@ NetSimRouterPanel.prototype.refresh = function () {
     var self = this;
     this.myConnectedRouter.getAddressTable(function (rows) {
       self.networkTable_.empty();
-      $('<tr><th>Hostname</th><th>Address</th></tr>').
-          appendTo(self.networkTable_);
+      $('<tr><th>Hostname</th><th>Address</th></tr>')
+          .appendTo(self.networkTable_);
       rows.forEach(function (row) {
-        $('<tr><td>' + row.hostname + '</td><td>' + row.address + '</td></tr>').
-            appendTo(self.networkTable_);
+        $('<tr><td>' + row.hostname + '</td><td>' + row.address + '</td></tr>')
+            .appendTo(self.networkTable_);
       });
     });
   } else {

@@ -85,17 +85,18 @@
           %td
             %input{class: "use_callout_#{x}", type: 'checkbox'}
           %td
-            %input{class: "element_id_#{x}", type: 'text', placeholder: 'Element callout refers to'}          
+            %input{class: "element_id_#{x}", type: 'text', placeholder: '#runButton'}          
           %td
-            %input{class: "localization_key_#{x}", type: 'text', placeholder: 'Name of callout'}
-          %td{colspan: 2}
+            %input{class: "localization_key_#{x}", type: 'text', placeholder: 'level_name_callout1'}
+          %td{colspan: 3}
             %input{class: "callout_text_#{x}", type: 'text', placeholder: 'Text of callout', style: "width: 97%"}
         %tr
           %td Hide qtip?
           %td Qtip on callout
           %td Qtip points to Element
-          %td Qtip x distance adjust
-          %td Qtip y distance adjust    
+          %td X distance
+          %td Y distance
+          %td On function   
         %tr    
           %td
             %input{class: "qtip_hide_#{x}", type: 'checkbox'}
@@ -128,9 +129,11 @@
               %option{value: 'left center'} Left center
               %option{value: 'left top'} Left top  
           %td
-            %input{class: "qtip_position_adjust_x_#{x}", type: 'number'}
+            %input{class: "qtip_position_adjust_x_#{x}", type: 'number', style: 'width: 80px;'}
           %td
-            %input{class: "qtip_position_adjust_y_#{x}", type: 'number'}
+            %input{class: "qtip_position_adjust_y_#{x}", type: 'number', style: 'width: 80px;'}
+          %td
+            %input{class: "on_#{x}", type: 'text', placeholder: 'function_editor_opened'}
     - unless x==2
       %hr
     
@@ -191,6 +194,7 @@
           $(".localization_key_" + i).val(parsecallouts[i].localization_key);
           $(".callout_text_" + i).val(parsecallouts[i].callout_text);
           $(".element_id_" + i).val(parsecallouts[i].element_id);
+          $(".on_" + i).val(parsecallouts[i].on);
           if ((parsecallouts[i].qtip_config) && (parsecallouts[i].qtip_config.position))
             $(".qtip_position_my_" + i).val(parsecallouts[i].qtip_config.position.my);
           if ((parsecallouts[i].qtip_config) && (parsecallouts[i].qtip_config.position))
@@ -214,6 +218,7 @@
       updated_callouts[i].localization_key = "";
       updated_callouts[i].callout_text = "";
       updated_callouts[i].element_id = "";
+      updated_callouts[i].on = "";
       updated_callouts[i].qtip_config = {};
       updated_callouts[i].qtip_config.position = {};
       updated_callouts[i].qtip_config.position.adjust = {};
@@ -225,6 +230,8 @@
         updated_callouts[i].callout_text = $('.callout_text_' + i).val();
       if ($('.element_id_' + i).val().length > 0)
         updated_callouts[i].element_id = $('.element_id_' + i).val();
+      if ($('.on_' + i).val().length > 0)
+        updated_callouts[i].on = $('.on_' + i).val();
       if ($('.qtip_position_my_' + i).val().length > 0)
         updated_callouts[i].qtip_config.position.my = $('.qtip_position_my_' + i).val();
       if ($('.qtip_position_at_' + i).val().length > 0)
@@ -242,6 +249,7 @@
         updated_callouts[i].localization_key = $(".localization_key_" + i).val();
         updated_callouts[i].callout_text = $(".callout_text_" + i).val();
         updated_callouts[i].element_id = $(".element_id_" + i).val();
+        updated_callouts[i].on = $(".on_" + i).val();
         updated_callouts[i].qtip_config.position.my = $(".qtip_position_my_" + i).val();
         updated_callouts[i].qtip_config.position.at = $(".qtip_position_at_" + i).val();
         updated_callouts[i].qtip_config.position.adjust.x = parseInt($(".qtip_position_adjust_x_" + i).val());

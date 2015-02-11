@@ -81,7 +81,7 @@ module.exports = NetSimNode;
  * @private
  */
 NetSimNode.prototype.getTable_= function () {
-  return this.shard_.lobbyTable;
+  return this.shard_.nodeTable;
 };
 
 /** Build table row for this node */
