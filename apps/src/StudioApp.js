@@ -783,6 +783,9 @@ StudioApp.prototype.resizeHeaders = function (fullWorkspaceWidth) {
   var toolboxWidth = 0;
   var showCodeWidth = 0;
 
+  var clearPuzzleHeader = document.getElementById('clear-puzzle-header');
+  var clearPuzzleWidth = clearPuzzleHeader.getBoundingClientRect().width;
+
   var headersDiv = document.getElementById('headers');
   if (headersDiv) {
     headersDiv.style.width = fullWorkspaceWidth + 'px';
@@ -795,7 +798,7 @@ StudioApp.prototype.resizeHeaders = function (fullWorkspaceWidth) {
       if (this.editor && this.editor.currentlyUsingBlocks) {
         // Set toolboxWidth based on the block palette width:
         var categories = document.querySelector('.droplet-palette-wrapper');
-        toolboxWidth = parseInt(window.getComputedStyle(categories).width, 10);
+        toolboxWidth = categories.getBoundingClientRect().width;
       }
     } else if (this.isUsingBlockly()) {
       toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
@@ -808,7 +811,7 @@ StudioApp.prototype.resizeHeaders = function (fullWorkspaceWidth) {
     var minWorkspaceWidthForShowCode = this.editCode ? 250 : 450;
     if (this.enableShowCode &&
         (fullWorkspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
-      showCodeWidth = parseInt(window.getComputedStyle(showCodeHeader).width, 10);
+      showCodeWidth = showCodeHeader.getBoundingClientRect().width;
       showCodeHeader.style.display = "";
     } else {
       showCodeHeader.style.display = "none";
@@ -818,7 +821,7 @@ StudioApp.prototype.resizeHeaders = function (fullWorkspaceWidth) {
   var workspaceHeader = document.getElementById('workspace-header');
   if (workspaceHeader) {
     workspaceHeader.style.width =
-        (fullWorkspaceWidth - toolboxWidth - showCodeWidth) + 'px';
+        (fullWorkspaceWidth - toolboxWidth - clearPuzzleWidth - showCodeWidth) + 'px';
   }
 };
 
