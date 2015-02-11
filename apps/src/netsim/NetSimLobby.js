@@ -38,15 +38,6 @@ var utils = require('../utils');
 var NetSimNodeClient = require('./NetSimNodeClient');
 var NetSimNodeRouter = require('./NetSimNodeRouter');
 var markup = require('./NetSimLobby.html');
-var periodicAction = require('./periodicAction');
-
-/**
- * How often the lobby should be auto-refreshed.
- * @type {number}
- * @const
- */
-var AUTO_REFRESH_INTERVAL_MS = 5000;
-var CLOSED_REFRESH_INTERVAL_MS = 30000;
 
 /**
  * Value of any option in the shard selector that does not
@@ -88,14 +79,6 @@ var NetSimLobby = function (connection, user, shardID) {
   this.overrideShardID_ = shardID;
 
   /**
-   * Helper for running a regular lobby refresh
-   * @type {periodicAction}
-   * @private
-   */
-  this.periodicRefresh_ = periodicAction(this.refresh_.bind(this),
-      AUTO_REFRESH_INTERVAL_MS);
-
-  /**
    * Which item in the lobby is currently selected
    * @type {number}
    * @private
@@ -115,7 +98,7 @@ module.exports = NetSimLobby;
  * Generate a new NetSimLobby object, putting
  * its markup within the provided element and returning
  * the controller object.
- * @param {DOMElement} element The container for the lobby markup
+ * @param {HTMLElement} element The container for the lobby markup
  * @param {NetSimConnection} connection The connection manager to use
  * @param {DashboardUser} user The current user info
  * @param {string} [shardID] A particular shard ID to use, can be omitted which
@@ -182,14 +165,6 @@ NetSimLobby.prototype.bindElements_ = function () {
   }
 };
 
-/**
- * Attach own handlers to run loop events.
- * @param {RunLoop} runLoop
- */
-NetSimLobby.prototype.attachToRunLoop = function (runLoop) {
-  this.periodicRefresh_.attachToRunLoop(runLoop);
-};
-
 NetSimLobby.prototype.setNameButtonClick_ = function () {
   this.nameInput_.prop('disabled', true);
   this.setNameButton_.hide();
@@ -201,7 +176,6 @@ NetSimLobby.prototype.setNameButtonClick_ = function () {
 NetSimLobby.prototype.onShardSelectorChange_ = function () {
   if (this.connection_.isConnectedToShard()) {
     this.connection_.disconnectFromShard();
-    this.periodicRefresh_.disable();
     this.nameInput_.disabled = false;
   }
 
@@ -336,9 +310,6 @@ NetSimLobby.prototype.refreshClosedLobby_ = function () {
   // Share link state?
 
   // Disconnect button state?
-
-  this.periodicRefresh_.setActionInterval(CLOSED_REFRESH_INTERVAL_MS);
-  this.periodicRefresh_.enable();
 };
 
 /**
@@ -355,7 +326,6 @@ NetSimLobby.prototype.refreshOpenLobby_ = function () {
     this.setNameButton_.show();
 
     this.shardView_.hide();
-    this.periodicRefresh_.disable();
     return;
   }
 
@@ -370,7 +340,6 @@ NetSimLobby.prototype.refreshOpenLobby_ = function () {
     this.addRouterButton_.hide();
     this.lobbyList_.hide();
     this.connectButton_.hide();
-    this.periodicRefresh_.disable();
     return;
   }
 
@@ -425,9 +394,6 @@ NetSimLobby.prototype.refreshLobbyList_ = function () {
     });
 
     self.onSelectionChange();
-
-    self.periodicRefresh_.setActionInterval(AUTO_REFRESH_INTERVAL_MS);
-    self.periodicRefresh_.enable();
   });
 };
 
