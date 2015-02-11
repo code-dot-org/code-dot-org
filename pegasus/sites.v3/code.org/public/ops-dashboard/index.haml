@@ -1,9 +1,6 @@
 ---
 theme: angular
 ---
-- authentication_required!
-- forbidden! unless dashboard_user[:user_type] == 'teacher'
-
 - @page_title = "Districts"
 
 
@@ -53,6 +50,16 @@ theme: angular
       $scope.districtsLoaded = false;
 
       $scope.districts = districtsService.query();
+
+      $scope.save = function () {
+        //var newDistrict = new districtsService($scope.district);
+        //newDistrict.$save();
+        districtsService.save($scope.district);
+      }
+
+      $scope.adjust = function (districts, index) {
+        districts.splice(index, 1);
+      }
 
       $scope.districts.$promise.then(function(districts) {
         $scope.districtsLoaded = true;

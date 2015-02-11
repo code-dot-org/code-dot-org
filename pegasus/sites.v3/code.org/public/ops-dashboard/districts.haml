@@ -5,24 +5,35 @@ template: none
 
 %h1 Districts
 
-%ul{"ng-repeat" => "district in districts"}
-  %p{style:"display: inline-block"}
-    {{district.name}}
-  %button.btn.btn-danger{'ng-click' => 'district.$remove({id: district.id})'} Delete
-%h1 New District
+-#%button.btn.btn-white
+-#  New District
 
-%form{"ng-submit" => "save()", "ng-controller" => "DistrictsController"}
-  %label
-    ID
-    %input{"ng-model" => "district.id", type:"text"}
-  %label
-    Name
-    %input{"ng-model" => "district.name", type:"text"}
-  %label
-    Location
-    %input{"ng-model" => "district.location", type:"text"}
-  %label
-    Contact ID
-    %input{"ng-model" => "district.contact_id", type:"text"}
-  %input{type: "submit"}
-    Save
+%table{style:'width: 100%; margin-top: 20px;'}
+  %tr
+    %th.manage-th
+      District Name
+    %th.manage-th
+      Location
+    %th.manage-th
+      District Contact
+    %th.manage-th
+      Manage
+  %tr{"ng-repeat" => "district in districts"}
+    %td
+      {{district.name}}
+    %td
+      {{district.location}}
+    %td
+      {{district.contact_id}}
+    %td
+      %button.btn.btn-danger{'ng-click' => 'district.$remove({id: district.id}) && adjust(districts, $index)'} Delete
+  %tr{"ng-controller" => "DistrictsController"}
+    %td
+      %input{"ng-model" => "district.name", type:"text"}
+    %td
+      %input{"ng-model" => "district.location", type:"text"}
+    %td
+      %input{"ng-model" => "district.contact_id", type:"select"}
+    %td
+      %button{"ng-click" => "save()"}
+        Create New District
