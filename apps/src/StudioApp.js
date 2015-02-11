@@ -1168,7 +1168,7 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     // Ensure global ace variable is the same as window.ace
     // (important because they can be different in our test environment)
     ace = window.ace;
-    
+
     this.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
       mode: 'javascript',
       modeOptions: utils.generateDropletModeOptions(options.codeFunctions,
@@ -1308,3 +1308,20 @@ StudioApp.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
 StudioApp.prototype.hasExtraTopBlocks = function () {
   return this.feedback_.hasExtraTopBlocks();
 };
+
+/**
+ * @param {Blockly.Block} block Block to check
+ * @returns true if the block has a connection without a block attached
+ */
+function isUnfilledBlock(block) {
+  return block.inputList.some(function (input) {
+    return input.connection && !input.connection.targetBlock();
+  });
+}
+
+/**
+ * @returns true if any block in the workspace has an unfilled input
+ */
+StudioApp.prototype.hasUnfilledBlock = function () {
+  return Blockly.mainBlockSpace.getAllBlocks().some(isUnfilledBlock);
+}

@@ -222,25 +222,31 @@ Eval.execute = function() {
   Eval.testResults = TestResults.NO_TESTS_RUN;
   Eval.message = undefined;
 
-  var userObject = getDrawableFromBlockspace();
-  if (userObject && userObject.draw) {
-    userObject.draw(document.getElementById("user"));
-  }
-
-  // If we got a CustomEvalError, set error message appropriately.
-  if (userObject instanceof CustomEvalError) {
+  if (studioApp.hasUnfilledBlock()) {
     Eval.result = false;
-    Eval.testResults = TestResults.APP_SPECIFIC_FAIL;
-
-    Eval.message = userObject.feedbackMessage;
+    Eval.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
+    Eval.message = evalMsg.emptyFunctionalBlock();
   } else {
-    // We got an EvalImage back, compare it to our target
-    Eval.result = evaluateAnswer();
-    Eval.testResults = studioApp.getTestResults(Eval.result);
-  }
+    var userObject = getDrawableFromBlockspace();
+    if (userObject && userObject.draw) {
+      userObject.draw(document.getElementById("user"));
+    }
 
-  if (level.freePlay) {
-    Eval.testResults = TestResults.FREE_PLAY;
+    // If we got a CustomEvalError, set error message appropriately.
+    if (userObject instanceof CustomEvalError) {
+      Eval.result = false;
+      Eval.testResults = TestResults.APP_SPECIFIC_FAIL;
+
+      Eval.message = userObject.feedbackMessage;
+    } else {
+      // We got an EvalImage back, compare it to our target
+      Eval.result = evaluateAnswer();
+      Eval.testResults = studioApp.getTestResults(Eval.result);
+    }
+
+    if (level.freePlay) {
+      Eval.testResults = TestResults.FREE_PLAY;
+    }
   }
 
   var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
