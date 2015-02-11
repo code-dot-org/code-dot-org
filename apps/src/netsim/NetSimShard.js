@@ -207,13 +207,13 @@ NetSimTable.prototype.tick = function () {
  */
 var NetSimShard = function (shardID) {
   /** @type {NetSimTable} */
-  this.lobbyTable = new NetSimTable(shardID + '_node');
+  this.nodeTable = new NetSimTable(shardID + '_n');
 
   /** @type {NetSimTable} */
-  this.wireTable = new NetSimTable(shardID + '_wire');
+  this.wireTable = new NetSimTable(shardID + '_w');
 
   /** @type {NetSimTable} */
-  this.messageTable = new NetSimTable(shardID + '_message');
+  this.messageTable = new NetSimTable(shardID + '_m');
 };
 module.exports = NetSimShard;
 
