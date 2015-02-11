@@ -63,6 +63,7 @@ var appState = {
   currentAnimationDepth: 0,
   failedInput: null
 };
+Calc.appState_ = appState;
 
 var stepSpeed = 2000;
 
@@ -442,8 +443,16 @@ function generateResults() {
   if (studioApp.hasUnfilledBlock()) {
     appState.result = ResultType.FAILURE;
     appState.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
-    // TODO - gate on compute or not
-    appState.message = calcMsg.emptyFunctionalBlock();
+
+    // Gate message on whether or not it's the compute block that's empty
+    var compute = _.find(Blockly.mainBlockSpace.getTopBlocks(), function (item) {
+      return item.type === 'functional_compute';
+    });
+    if (compute && !compute.getInputTargetBlock('ARG1')) {
+      appState.message = calcMsg.emptyComputeBlock();
+    } else {
+      appState.message = calcMsg.emptyFunctionalBlock();
+    }
     return;
   }
 
@@ -729,6 +738,7 @@ function onReportComplete(response) {
 /* start-test-block */
 // export private function(s) to expose to unit testing
 Calc.__testonly__ = {
-  displayGoal: displayGoal
+  displayGoal: displayGoal,
+  appState: appState
 };
 /* end-test-block */

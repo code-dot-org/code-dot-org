@@ -1,6 +1,8 @@
 var testUtils = require('../../util/testUtils');
 var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
 var blockUtils = require(testUtils.buildPath('block_utils'));
+testUtils.setupLocale('calc');
+var calcMsg = require(testUtils.buildPath('../locale/current/calc'));
 
 module.exports = {
   app: "calc",
@@ -53,6 +55,10 @@ module.exports = {
         result: false,
         testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
       },
+      customValidator: function (assert) {
+        assert.equal(Calc.__testonly__.appState.message, calcMsg.emptyComputeBlock());
+        return true;
+      },
       xml: '<xml></xml>'
     },
     {
@@ -60,6 +66,10 @@ module.exports = {
       expected: {
         result: false,
         testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
+      },
+      customValidator: function (assert) {
+        assert.equal(Calc.__testonly__.appState.message, calcMsg.emptyFunctionalBlock());
+        return true;
       },
       xml: '<xml>' +
         blockUtils.calcBlockXml('functional_times', [
