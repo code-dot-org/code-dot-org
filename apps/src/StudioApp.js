@@ -1324,4 +1324,4 @@ function isUnfilledBlock(block) {
  */
 StudioApp.prototype.hasUnfilledBlock = function () {
   return Blockly.mainBlockSpace.getAllBlocks().some(isUnfilledBlock);
-}
+};
