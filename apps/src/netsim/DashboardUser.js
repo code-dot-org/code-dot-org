@@ -76,9 +76,11 @@ module.exports = DashboardUser;
 DashboardUser.currentUser_ = null;
 
 /**
- * Have the current user object passed to a given callback.
- * @param callback(currentUser) which can be called immediately if this
- *   value is cached.
+ * Kick of an asynchronous request for the current user's data, and immediately
+ * pass back a placeholder object that has a whenReady method others can
+ * use to guarantee the data is present.
+ *
+ * @return {DashboardUser} that doesn't have its data yet, but will soon.
  */
 DashboardUser.getCurrentUser = function () {
   if (!DashboardUser.currentUser_) {
@@ -88,10 +90,12 @@ DashboardUser.getCurrentUser = function () {
       type: 'get',
       dataType: 'json',
       success: function (data /*, textStatus, jqXHR*/) {
-        DashboardUser.currentUser_.initialize_(data);
+        DashboardUser.currentUser_.initialize(data);
       },
       error: function (/*jqXHR, textStatus, errorThrown*/) {
-        throw new Error("Unable to retrieve current user info.");
+        DashboardUser.currentUser_.initialize({
+          isSignedIn: false
+        });
       }
     });
   }
@@ -101,11 +105,11 @@ DashboardUser.getCurrentUser = function () {
 /**
  * Load data into user from async request, when ready.
  * @param data
- * @private
  */
-DashboardUser.prototype.initialize_ = function (data) {
+DashboardUser.prototype.initialize = function (data) {
   this.id = data.id;
   this.name = data.name;
+  this.isSignedIn = data.isSignedIn !== false;
   this.isReady = true;
 
   // Call any queued callbacks
@@ -118,7 +122,7 @@ DashboardUser.prototype.initialize_ = function (data) {
 /**
  * Provide code to be called when this object is ready to use
  * Possible for it to be called immediately.
- * @param callback
+ * @param {!function} callback
  */
 DashboardUser.prototype.whenReady = function (callback) {
   if (this.isReady) {

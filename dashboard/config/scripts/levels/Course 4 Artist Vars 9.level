@@ -22,7 +22,7 @@
     "slider_speed": ".5",
     "ideal": "11",
     "disable_sharing": "false",
-    "callout_json": "[{\r\n  \"localization_key\": \"set_sides\",\r\n  \"element_id\": \"#set_sides_qtip\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"left center\", \"at\": \"right center\"}\r\n  }\r\n}]"
+    "callout_json": "[\r\n  {\"localization_key\":\"set_sides\",\"callout_text\":\"Use this block to set \\\"sides\\\" to the number needed to complete the puzzle.\",\"element_id\":\"#set_sides_qtip\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"left center\",\"at\":\"right center\"},\"style\":{\"classes\":\"\"}}}\r\n]"
   }
 }]]></config>
   <blocks>
