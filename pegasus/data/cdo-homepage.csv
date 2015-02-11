@@ -1,0 +1,9 @@
+id_s!,type_s,text1_s,url_s,watermark_s,image_t,active_s
+hoc,widehero,The Hour of Code,http://code.org/learn,,/images/logo_skype_classroom.jpg,show
+elementary,slot,The Hour of Code,http://code.org/learn,,/shared/images/courses/logo_tall_elementary.jpg,show
+frozen,slot,Frozen with Anna and Elsa,http://studio.code.org/s/frozen/reset,codestudio,/shared/images/courses/logo_tall_frozen.jpg,show
+teacher,slot,Teacher Dashboard,http://code.org/educate/k5,,/shared/images/courses/logo_tall_teacher.jpg,show
+studio,slot,All of our tutorials,http://studio.code.org,codestudio,/shared/images/courses/logo_tall_elementary.jpg,nah
+course4,slot,Course 4,http://studio.code.org/s/course4/reset,codestudio,/shared/images/courses/logo_tall_course4.jpg,nah
+shop,slot,Shop,http://code.org/shop,,/shared/images/courses/logo_tall_shop.jpg,show
+petition,petition,,,,,show
