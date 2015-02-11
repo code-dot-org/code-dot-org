@@ -78,53 +78,48 @@ var NetSimTable = module.exports = function (storageTable) {
 };
 
 NetSimTable.prototype.readAll = function (callback) {
-  var self = this;
   this.remoteTable_.readAll(function (data) {
     callback(data);
     if (data !== null) {
-      self.fullCacheUpdate_(data);
+      this.fullCacheUpdate_(data);
     }
-  });
+  }.bind(this));
 };
 
 NetSimTable.prototype.read = function (id, callback) {
-  var self = this;
   this.remoteTable_.read(id, function (data) {
     callback(data);
     if (data !== undefined) {
-      self.updateCacheRow_(id, data);
+      this.updateCacheRow_(id, data);
     }
-  });
+  }.bind(this));
 };
 
 NetSimTable.prototype.create = function (value, callback) {
-  var self = this;
   this.remoteTable_.create(value, function (data) {
     callback(data);
     if (data !== undefined) {
-      self.addRowToCache_(data);
+      this.addRowToCache_(data);
     }
-  });
+  }.bind(this));
 };
 
 NetSimTable.prototype.update = function (id, value, callback) {
-  var self = this;
   this.remoteTable_.update(id, value, function (success) {
     callback(success);
     if (success) {
-      self.updateCacheRow_(id, value);
+      this.updateCacheRow_(id, value);
     }
-  });
+  }.bind(this));
 };
 
 NetSimTable.prototype.delete = function (id, callback) {
-  var self = this;
   this.remoteTable_.delete(id, function (success) {
     callback(success);
     if (success) {
-      self.removeRowFromCache_(id);
+      this.removeRowFromCache_(id);
     }
-  });
+  }.bind(this));
 };
 
 NetSimTable.prototype.fullCacheUpdate_ = function (allRows) {
