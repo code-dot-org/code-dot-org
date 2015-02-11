@@ -10215,8 +10215,18 @@ exports.wrapNumberValidatorsForLevelBuilder = function () {
   };
 };
 
+exports.randomNumber = function (min, max) {
+  if (typeof max === 'undefined') {
+    // If only one parameter is specified, use it as the max with zero as min:
+    max = min;
+    min = 0;
+  }
+  // Use double-tilde to ensure we are dealing with integers:
+  return Math.floor(Math.random() * (~~max - ~~min + 1)) + ~~min;
+};
+
 exports.dropletGlobalConfigBlocks = [
-  {'func': 'random', 'parent': Math, 'category': 'Math', 'type': 'value' },
+  {'func': 'randomNumber', 'parent': exports, 'category': 'Math', 'type': 'value' },
   {'func': 'round', 'parent': Math, 'category': 'Math', 'type': 'value' },
   {'func': 'abs', 'parent': Math, 'category': 'Math', 'type': 'value' },
   {'func': 'max', 'parent': Math, 'category': 'Math', 'type': 'value' },
@@ -10343,8 +10353,11 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
           block: '__ || __',
           title: 'Logical OR of two booleans'
         }, {
-          block: 'random()',
-          title: 'Get a random number between 0 and 1'
+          block: 'randomNumber(__)',
+          title: 'Get a random number between 0 and the specified maximum value'
+        }, {
+          block: 'randomNumber(__, __)',
+          title: 'Get a random number between the specified minimum and maximum values'
         }, {
           block: 'round(__)',
           title: 'Round to the nearest integer'
