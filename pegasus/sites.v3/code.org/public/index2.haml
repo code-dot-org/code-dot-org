@@ -1,0 +1,138 @@
+---
+theme: responsive
+banner: null
+layout: wide
+<%
+  if request.site == 'csedweek.org'
+%>
+social:
+  "og:title": "The Hour of Code is here"
+  "og:description": "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104."
+  "og:image": "http://csedweek.org/images/hoc-video-thumbnail.jpg"
+  "og:image:width": "1200"
+  "og:image:height": "627"
+  "og:video:url": "http://youtubeeducation.com/v/FC5FbmsH4fw"
+  "og:video:secure_url": "https://youtubeeducation.com/v/FC5FbmsH4fw"
+  "og:video:type": "application/x-shockwave-flash"
+  "og:video:width": "640"
+  "og:video:height": "360"
+  "twitter:card": "player"
+  "twitter:site": "@codeorg"
+  "twitter:url": "http://code.org/"
+  "twitter:title": "The Hour of Code is here"
+  "twitter:description": "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104."
+  "twitter:image:src": "http://csedweek.org/images/hoc-video-thumbnail.jpg"
+  "twitter:player": "https://youtubeeducation.com/v/FC5FbmsH4fw"
+  "twitter:player:width": "640"
+  "twitter:player:height": "360"
+<%
+  else
+%>
+social:
+  "og:title": "Every child deserves opportunity"
+  "og:description": "Every student in every school deserves the opportunity to study computer science."
+  "og:image": "http://code.org/images/code-video-thumbnail.jpg"
+  "og:image:width": "1440"
+  "og:image:height": "810"
+  "og:video:url": "http://youtubeeducation.com/v/nKIu9yen5nc"
+  "og:video:secure_url": "https://youtubeeducation.com/v/nKIu9yen5nc"
+  "og:video:type": "application/x-shockwave-flash"
+  "og:video:width": "640"
+  "og:video:height": "360"
+<%
+  end
+%>
+
+---
+
+- imageheight = 500
+
+#top{style: "position:relative; height: #{imageheight}px; width:100%; overflow:hidden"}
+  #fullwidth0{style: "z-index: -5; position:absolute; left: 0; top: 0; background-image: url('/images/obama_podium.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 1; background-position: 0% 0%"}
+
+  #fullwidth{style: "/*position:absolute; left:0; top: 0; */width: 100%; /*height:#{imageheight}px*/"}
+
+    .thegap{style: "height: 1px"}
+      &nbsp;
+
+    = view :header
+
+  #fullwidth1{style: "color: white; font-size: 24px"}
+    #caption1{style: "left: 100px; top: 220px; position: absolute; opacity: 0"}
+      &ldquo;Don't just play on your phone, 
+    
+    #caption2{style: "left: 300px; top: 255px; position: absolute; opacity: 0"}
+      program it.&rdquo; 
+ 
+    #caption3{style: "left: 240px; top: 300px; position: absolute; opacity: 0; font-size: 18px"}
+      President Barack Obama
+
+    -#playbutton{style: "left: 966px; top:350px; position:absolute; opacity: 1"}
+      %img{src: "/shared/images/play-button.png", width:"50"}
+      %span{style: "left: 400px; font-size:16px"}
+        Watch the video
+
+    #action{style: "left: 966px; top: 261px; position: absolute; opacity: 0;"}
+      %button{style: "font-weight: 500; font-size: 20px; height: 50px; width: 250px;"}
+        Sign the petition
+      
+
+#slots{style: "text-align:center"}
+  - DB[:cdo_homepage].where(type_s: "slot", active_s: ["show","hide"]).all do |entry|
+    - display = entry[:active_s] == "hide" ? "none" : "block"
+    .slot{style: "display: #{display}"}
+      = view :homepage_quarterslot, entry: entry
+
+-facebook = {:u=>"http://#{request.site}/"}
+
+-if request.site == 'csedweek.org'
+  -twitter = {:related=>'codeorg', :hashtags=>'', :text=>I18n.t(:hoc_is_here)}
+  -twitter[:hashtags] = 'HourOfCode' unless I18n.t(:hoc_is_here).include? '#HourOfCode'
+-else
+  -twitter = {:related=>'codeorg', :hashtags=>'', :text=>"Why don't more schools teach computer science? We can fix this. http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more."}
+
+-twitter[:url] = "http://#{request.site}/" unless twitter[:text].include? "http://#{request.site}/" || "#{twitter[:text]} http://#{request.site}/".length > 140
+
+%script{:src=>"/js/jquery.placeholder.js"}
+
+- if request.site == 'code.org'
+  #user_hero
+
+  %div{:style=>'clear:both;'}
+
+- if DB[:cdo_homepage].where(type_s: "petition")
+  = view :petition_expand
+
+= view 'popup_window.js'
+
+:javascript
+  var petition;
+
+  $(document).ready()
+  {
+    petition = new Petition();
+  }
+  
+  $(document).ready()
+  {
+    $("#caption1").delay(500).animate({ left: "150px", opacity: 0.8 }, { duration: 2000 });
+    $("#caption2").delay(1000).animate({ left: "190px", opacity: 0.8 }, { duration: 2000 });
+    $("#caption3").delay(3500).animate({ opacity: 0.6 }, { duration: 2000 });
+
+    $("#playbutton").delay(5000).animate({ opacity: 1 }, { duration: 2000 });
+    $("#action").delay(5000).animate({ opacity: 1 }, { duration: 2000 });
+  }
+
+- if request.site == 'code.org'
+  :javascript
+    $(document).ready_not(function() {
+      $.ajax({
+        type: "GET",
+        url: '/dashboardapi/user_hero',
+        //data: "id=" + id, // appears as $_GET['id'] @ ur backend side
+        success: function(data) {
+          // data is ur summary
+          $('#user_hero').html(data);
+        }
+      });
+    });
