@@ -275,9 +275,31 @@ Applab.onTick = function() {
   Applab.tickCount++;
   queueOnTick();
 
-  var atInitialBreakpoint = Applab.paused && Applab.nextStep === StepType.IN && Applab.tickCount === 1;
+  if (Applab.interpreter) {
+    Applab.executeInterpreter();
+  } else {
+    if (Applab.tickCount === 1) {
+      try { Applab.whenRunFunc(studioApp, api, Applab.Globals); } catch (e) { }
+    }
+  }
+
+  if (checkFinished()) {
+    Applab.onPuzzleComplete();
+  }
+};
+
+Applab.executeInterpreter = function (runUntilCallbackReturn) {
+  Applab.runUntilCallbackReturn = runUntilCallbackReturn;
+  if (runUntilCallbackReturn) {
+    delete Applab.lastCallbackRetVal;
+  }
+  Applab.seenEmptyGetCallbackDuringExecution = false;
+  Applab.seenReturnFromCallbackDuringExecution = false;
+
+  var atInitialBreakpoint = Applab.paused &&
+                            Applab.nextStep === StepType.IN &&
+                            Applab.tickCount === 1;
   var atMaxSpeed = getCurrentTickLength() === 0;
-  Applab.seenEmptyGetCallbackThisTick = false;
 
   if (Applab.paused) {
     switch (Applab.nextStep) {
@@ -302,183 +324,175 @@ Applab.onTick = function() {
     }
   }
 
-  if (Applab.interpreter) {
-    var doneUserLine = false;
-    var reachedBreak = false;
-    var unwindingAfterStep = false;
-    var inUserCode;
-    var userCodeRow;
-    var session = studioApp.editor.aceEditor.getSession();
-    // NOTE: when running with no source visible or at max speed with blocks, we
-    // call a simple function to just get the line number, otherwise we call a
-    // function that also selects the code:
-    var selectCodeFunc =
-      (studioApp.hideSource ||
-       (atMaxSpeed && !Applab.paused && studioApp.editor.currentlyUsingBlocks)) ?
-            codegen.getUserCodeLine :
-            codegen.selectCurrentCode;
+  var doneUserLine = false;
+  var reachedBreak = false;
+  var unwindingAfterStep = false;
+  var inUserCode;
+  var userCodeRow;
+  var session = studioApp.editor.aceEditor.getSession();
+  // NOTE: when running with no source visible or at max speed with blocks, we
+  // call a simple function to just get the line number, otherwise we call a
+  // function that also selects the code:
+  var selectCodeFunc =
+    (studioApp.hideSource ||
+     (atMaxSpeed && !Applab.paused && studioApp.editor.currentlyUsingBlocks)) ?
+          codegen.getUserCodeLine :
+          codegen.selectCurrentCode;
 
-    // In each tick, we will step the interpreter multiple times in a tight
-    // loop as long as we are interpreting code that the user can't see
-    // (function aliases at the beginning, getCallback event loop at the end)
-    for (var stepsThisTick = 0;
-         (stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK) || unwindingAfterStep;
-         stepsThisTick++) {
-      if ((reachedBreak && !unwindingAfterStep) ||
-          (doneUserLine && !atMaxSpeed) ||
-          Applab.seenEmptyGetCallbackThisTick) {
-        // stop stepping the interpreter and wait until the next tick once we:
-        // (1) reached a breakpoint and are done unwinding OR
-        // (2) completed a line of user code (while not running atMaxSpeed) OR
-        // (3) have seen an empty event queue in nativeGetCallback (no events)
-        break;
+  // In each tick, we will step the interpreter multiple times in a tight
+  // loop as long as we are interpreting code that the user can't see
+  // (function aliases at the beginning, getCallback event loop at the end)
+  for (var stepsThisTick = 0;
+       (stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK) || unwindingAfterStep;
+       stepsThisTick++) {
+    if ((reachedBreak && !unwindingAfterStep) ||
+        (doneUserLine && !atMaxSpeed) ||
+        Applab.seenEmptyGetCallbackDuringExecution ||
+        (runUntilCallbackReturn && Applab.seenReturnFromCallbackDuringExecution)) {
+      // stop stepping the interpreter and wait until the next tick once we:
+      // (1) reached a breakpoint and are done unwinding OR
+      // (2) completed a line of user code (while not running atMaxSpeed) OR
+      // (3) have seen an empty event queue in nativeGetCallback (no events) OR
+      // (4) have seen a nativeSetCallbackRetVal call in runUntilCallbackReturn mode
+      break;
+    }
+    userCodeRow = selectCodeFunc(Applab.interpreter,
+                                 Applab.cumulativeLength,
+                                 Applab.userCodeStartOffset,
+                                 Applab.userCodeLength,
+                                 studioApp.editor);
+    inUserCode = (-1 !== userCodeRow);
+    // Check to see if we've arrived at a new breakpoint:
+    //  (1) should be in user code
+    //  (2) should never happen while unwinding
+    //  (3) requires either
+    //   (a) atInitialBreakpoint OR
+    //   (b) isAceBreakpointRow() AND not still at the same line number where
+    //       we have already stopped from the last step/breakpoint
+    if (inUserCode && !unwindingAfterStep &&
+        (atInitialBreakpoint ||
+         (userCodeRow !== Applab.stoppedAtBreakpointRow &&
+          codegen.isAceBreakpointRow(session, userCodeRow)))) {
+      // Yes, arrived at a new breakpoint:
+      if (Applab.paused) {
+        // Overwrite the nextStep value. (If we hit a breakpoint during a step
+        // out or step over, this will cancel that step operation early)
+        Applab.nextStep = StepType.RUN;
+      } else {
+        Applab.onPauseButton();
       }
-      userCodeRow = selectCodeFunc(Applab.interpreter,
-                                   Applab.cumulativeLength,
-                                   Applab.userCodeStartOffset,
-                                   Applab.userCodeLength,
-                                   studioApp.editor);
-      inUserCode = (-1 !== userCodeRow);
-      // Check to see if we've arrived at a new breakpoint:
-      //  (1) should be in user code
-      //  (2) should never happen while unwinding
-      //  (3) requires either
-      //   (a) atInitialBreakpoint OR
-      //   (b) isAceBreakpointRow() AND not still at the same line number where
-      //       we have already stopped from the last step/breakpoint
-      if (inUserCode && !unwindingAfterStep &&
-          (atInitialBreakpoint ||
-           (userCodeRow !== Applab.stoppedAtBreakpointRow &&
-            codegen.isAceBreakpointRow(session, userCodeRow)))) {
-        // Yes, arrived at a new breakpoint:
-        if (Applab.paused) {
-          // Overwrite the nextStep value. (If we hit a breakpoint during a step
-          // out or step over, this will cancel that step operation early)
-          Applab.nextStep = StepType.RUN;
-        } else {
-          Applab.onPauseButton();
-        }
-        // Store some properties about where we stopped:
-        Applab.stoppedAtBreakpointRow = userCodeRow;
-        Applab.stoppedAtBreakpointStackDepth = Applab.interpreter.stateStack.length;
+      // Store some properties about where we stopped:
+      Applab.stoppedAtBreakpointRow = userCodeRow;
+      Applab.stoppedAtBreakpointStackDepth = Applab.interpreter.stateStack.length;
 
-        // Mark reachedBreak to stop stepping, and start unwinding if needed:
-        reachedBreak = true;
-        unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(Applab.interpreter);
-        continue;
+      // Mark reachedBreak to stop stepping, and start unwinding if needed:
+      reachedBreak = true;
+      unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(Applab.interpreter);
+      continue;
+    }
+    // If we've moved past the place of the last breakpoint hit without being
+    // deeper in the stack, we will discard the stoppedAtBreakpoint properties:
+    if (inUserCode &&
+        userCodeRow !== Applab.stoppedAtBreakpointRow &&
+        Applab.interpreter.stateStack.length <= Applab.stoppedAtBreakpointStackDepth) {
+      delete Applab.stoppedAtBreakpointRow;
+      delete Applab.stoppedAtBreakpointStackDepth;
+    }
+    // If we're unwinding, continue to update the stoppedAtBreakpoint properties
+    // to ensure that we have the right properties stored when the unwind completes:
+    if (inUserCode && unwindingAfterStep) {
+      Applab.stoppedAtBreakpointRow = userCodeRow;
+      Applab.stoppedAtBreakpointStackDepth = Applab.interpreter.stateStack.length;
+    }
+    try {
+      Applab.interpreter.step();
+      doneUserLine = doneUserLine ||
+        (inUserCode && Applab.interpreter.stateStack[0] && Applab.interpreter.stateStack[0].done);
+
+      // Remember the stack depths of call expressions (so we can implement 'step out')
+
+      // Truncate any history of call expressions seen deeper than our current stack position:
+      Applab.callExpressionSeenAtDepth.length = Applab.interpreter.stateStack.length + 1;
+
+      if (inUserCode && Applab.interpreter.stateStack[0].node.type === "CallExpression") {
+        // Store that we've seen a call expression at this depth in callExpressionSeenAtDepth:
+        Applab.callExpressionSeenAtDepth[Applab.interpreter.stateStack.length] = true;
       }
-      // If we've moved past the place of the last breakpoint hit without being
-      // deeper in the stack, we will discard the stoppedAtBreakpoint properties:
-      if (inUserCode &&
-          userCodeRow !== Applab.stoppedAtBreakpointRow &&
-          Applab.interpreter.stateStack.length <= Applab.stoppedAtBreakpointStackDepth) {
-        delete Applab.stoppedAtBreakpointRow;
-        delete Applab.stoppedAtBreakpointStackDepth;
-      }
-      // If we're unwinding, continue to update the stoppedAtBreakpoint properties
-      // to ensure that we have the right properties stored when the unwind completes:
-      if (inUserCode && unwindingAfterStep) {
-        Applab.stoppedAtBreakpointRow = userCodeRow;
-        Applab.stoppedAtBreakpointStackDepth = Applab.interpreter.stateStack.length;
-      }
-      try {
-        Applab.interpreter.step();
-        doneUserLine = doneUserLine ||
-          (inUserCode && Applab.interpreter.stateStack[0] && Applab.interpreter.stateStack[0].done);
 
-        // Remember the stack depths of call expressions (so we can implement 'step out')
-
-        // Truncate any history of call expressions seen deeper than our current stack position:
-        Applab.callExpressionSeenAtDepth.length = Applab.interpreter.stateStack.length + 1;
-
+      if (Applab.paused) {
+        // Store the first call expression stack depth seen while in this step operation:
         if (inUserCode && Applab.interpreter.stateStack[0].node.type === "CallExpression") {
-          // Store that we've seen a call expression at this depth in callExpressionSeenAtDepth:
-          Applab.callExpressionSeenAtDepth[Applab.interpreter.stateStack.length] = true;
+          if (typeof Applab.firstCallStackDepthThisStep === 'undefined') {
+            Applab.firstCallStackDepthThisStep = Applab.interpreter.stateStack.length;
+          }
         }
-
-        if (Applab.paused) {
-          // Store the first call expression stack depth seen while in this step operation:
-          if (inUserCode && Applab.interpreter.stateStack[0].node.type === "CallExpression") {
-            if (typeof Applab.firstCallStackDepthThisStep === 'undefined') {
-              Applab.firstCallStackDepthThisStep = Applab.interpreter.stateStack.length;
+        // For the step in case, we want to stop the interpreter as soon as we enter the callee:
+        if (!doneUserLine &&
+            inUserCode &&
+            Applab.nextStep === StepType.IN &&
+            Applab.interpreter.stateStack.length > Applab.firstCallStackDepthThisStep) {
+          reachedBreak = true;
+        }
+        // After the interpreter says a node is "done" (meaning it is time to stop), we will
+        // advance a little further to the start of the next statement. We achieve this by
+        // continuing to set unwindingAfterStep to true to keep the loop going:
+        if (doneUserLine || reachedBreak) {
+          var wasUnwinding = unwindingAfterStep;
+          // step() additional times if we know it to be safe to get us to the next statement:
+          unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(Applab.interpreter);
+          if (wasUnwinding && !unwindingAfterStep) {
+            // done unwinding.. select code that is next to execute:
+            userCodeRow = selectCodeFunc(Applab.interpreter,
+                                         Applab.cumulativeLength,
+                                         Applab.userCodeStartOffset,
+                                         Applab.userCodeLength,
+                                         studioApp.editor);
+            inUserCode = (-1 !== userCodeRow);
+            if (!inUserCode) {
+              // not in user code, so keep unwinding after all...
+              unwindingAfterStep = true;
             }
           }
-          // For the step in case, we want to stop the interpreter as soon as we enter the callee:
-          if (!doneUserLine &&
-              inUserCode &&
-              Applab.nextStep === StepType.IN &&
+        }
+
+        if ((reachedBreak || doneUserLine) && !unwindingAfterStep) {
+          if (Applab.nextStep === StepType.OUT &&
+              Applab.interpreter.stateStack.length > Applab.stepOutToStackDepth) {
+            // trying to step out, but we didn't get out yet... continue on.
+          } else if (Applab.nextStep === StepType.OVER &&
+              typeof Applab.firstCallStackDepthThisStep !== 'undefined' &&
               Applab.interpreter.stateStack.length > Applab.firstCallStackDepthThisStep) {
-            reachedBreak = true;
-          }
-          // After the interpreter says a node is "done" (meaning it is time to stop), we will
-          // advance a little further to the start of the next statement. We achieve this by
-          // continuing to set unwindingAfterStep to true to keep the loop going:
-          if (doneUserLine || reachedBreak) {
-            var wasUnwinding = unwindingAfterStep;
-            // step() additional times if we know it to be safe to get us to the next statement:
-            unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(Applab.interpreter);
-            if (wasUnwinding && !unwindingAfterStep) {
-              // done unwinding.. select code that is next to execute:
-              userCodeRow = selectCodeFunc(Applab.interpreter,
-                                           Applab.cumulativeLength,
-                                           Applab.userCodeStartOffset,
-                                           Applab.userCodeLength,
-                                           studioApp.editor);
-              inUserCode = (-1 !== userCodeRow);
-              if (!inUserCode) {
-                // not in user code, so keep unwinding after all...
-                unwindingAfterStep = true;
-              }
+            // trying to step over, and we're in deeper inside a function call... continue next onTick
+          } else {
+            // Our step operation is complete, reset nextStep to StepType.RUN to
+            // return to a normal 'break' state:
+            Applab.nextStep = StepType.RUN;
+            if (inUserCode) {
+              // Store some properties about where we stopped:
+              Applab.stoppedAtBreakpointRow = userCodeRow;
+              Applab.stoppedAtBreakpointStackDepth = Applab.interpreter.stateStack.length;
             }
-          }
-
-          if ((reachedBreak || doneUserLine) && !unwindingAfterStep) {
-            if (Applab.nextStep === StepType.OUT &&
-                Applab.interpreter.stateStack.length > Applab.stepOutToStackDepth) {
-              // trying to step out, but we didn't get out yet... continue on.
-            } else if (Applab.nextStep === StepType.OVER &&
-                typeof Applab.firstCallStackDepthThisStep !== 'undefined' &&
-                Applab.interpreter.stateStack.length > Applab.firstCallStackDepthThisStep) {
-              // trying to step over, and we're in deeper inside a function call... continue next onTick
-            } else {
-              // Our step operation is complete, reset nextStep to StepType.RUN to
-              // return to a normal 'break' state:
-              Applab.nextStep = StepType.RUN;
-              if (inUserCode) {
-                // Store some properties about where we stopped:
-                Applab.stoppedAtBreakpointRow = userCodeRow;
-                Applab.stoppedAtBreakpointStackDepth = Applab.interpreter.stateStack.length;
-              }
-              delete Applab.stepOutToStackDepth;
-              delete Applab.firstCallStackDepthThisStep;
-              document.getElementById('spinner').style.visibility = 'hidden';
-              break;
-            }
+            delete Applab.stepOutToStackDepth;
+            delete Applab.firstCallStackDepthThisStep;
+            document.getElementById('spinner').style.visibility = 'hidden';
+            break;
           }
         }
       }
-      catch(err) {
-        handleExecutionError(err, inUserCode ? (userCodeRow + 1) : undefined);
-        return;
-      }
     }
-    if (reachedBreak && atMaxSpeed) {
-      // If we were running atMaxSpeed and just reached a breakpoint, the
-      // code may not be selected in the editor, so do it now:
-      codegen.selectCurrentCode(Applab.interpreter,
-                                Applab.cumulativeLength,
-                                Applab.userCodeStartOffset,
-                                Applab.userCodeLength,
-                                studioApp.editor);
-    }
-  } else {
-    if (Applab.tickCount === 1) {
-      try { Applab.whenRunFunc(studioApp, api, Applab.Globals); } catch (e) { }
+    catch(err) {
+      handleExecutionError(err, inUserCode ? (userCodeRow + 1) : undefined);
+      return;
     }
   }
-
-  if (checkFinished()) {
-    Applab.onPuzzleComplete();
+  if (reachedBreak && atMaxSpeed) {
+    // If we were running atMaxSpeed and just reached a breakpoint, the
+    // code may not be selected in the editor, so do it now:
+    codegen.selectCurrentCode(Applab.interpreter,
+                              Applab.cumulativeLength,
+                              Applab.userCodeStartOffset,
+                              Applab.userCodeLength,
+                              studioApp.editor);
   }
 };
 
@@ -703,6 +717,7 @@ studioApp.reset = function(first) {
   }
 
   // Reset configurable variables
+  delete Applab.activeCanvas;
   Applab.turtle = {};
   Applab.turtle.heading = 0;
   Applab.turtle.x = Applab.appWidth / 2;
@@ -849,9 +864,31 @@ var defineProcedures = function (blockType) {
 var nativeGetCallback = function () {
   var retVal = Applab.eventQueue.shift();
   if (typeof retVal === "undefined") {
-    Applab.seenEmptyGetCallbackThisTick = true;
+    Applab.seenEmptyGetCallbackDuringExecution = true;
   }
   return retVal;
+};
+
+var nativeSetCallbackRetVal = function (retVal) {
+  if (Applab.eventQueue.length === 0) {
+    // If nothing else is in the event queue, then store this return value
+    // away so it can be returned in the native event handler
+    Applab.seenReturnFromCallbackDuringExecution = true;
+    Applab.lastCallbackRetVal = retVal;
+  }
+  // Provide warnings to the user if this function has been called with a
+  // meaningful return value while we are no longer in the native event handler
+
+  // TODO (cpirich): Check to see if the DOM event object was modified
+  // (preventDefault(), stopPropagation(), returnValue) and provide a similar
+  // warning since these won't work as expected unless running atMaxSpeed
+  if (!Applab.runUntilCallbackReturn &&
+      typeof Applab.lastCallbackRetVal !== 'undefined') {
+    outputApplabConsole("Function passed to onEvent() has taken too long - the return value was ignored.");
+    if (getCurrentTickLength() !== 0) {
+      outputApplabConsole("  (try moving the speed slider to its maximum value)");
+    }
+  }
 };
 
 var consoleApi = {};
@@ -933,7 +970,8 @@ Applab.execute = function() {
     // Append our mini-runtime after the user's code. This will spin and process
     // callback functions:
     codeWhenRun += '\nwhile (true) { var obj = getCallback(); ' +
-      'if (obj) { obj.fn.apply(null, obj.arguments ? obj.arguments : null); }}';
+      'if (obj) { var ret = obj.fn.apply(null, obj.arguments ? obj.arguments : null);' +
+                 'setCallbackRetVal(ret); }}';
     var session = studioApp.editor.aceEditor.getSession();
     Applab.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
   } else {
@@ -962,7 +1000,6 @@ Applab.execute = function() {
                                           JSON: JSONApi,
                                           Globals: Applab.Globals });
 
-        var getCallbackObj = interpreter.createObject(interpreter.FUNCTION);
         // Only allow five levels of depth when marshalling the return value
         // since we will occasionally return DOM Event objects which contain
         // properties that recurse over and over...
@@ -972,6 +1009,12 @@ Applab.execute = function() {
                                                        5);
         interpreter.setProperty(scope,
                                 'getCallback',
+                                interpreter.createNativeFunction(wrapper));
+
+        wrapper = codegen.makeNativeMemberFunction(interpreter,
+                                                   nativeSetCallbackRetVal);
+        interpreter.setProperty(scope,
+                                'setCallbackRetVal',
                                 interpreter.createNativeFunction(wrapper));
       };
       try {
@@ -1157,7 +1200,7 @@ Applab.callCmd = function (cmd) {
   return retVal;
 };
 
-Applab.createHtmlBlock = function (opts) {
+Applab.container = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newDiv = document.createElement("div");
@@ -1167,7 +1210,7 @@ Applab.createHtmlBlock = function (opts) {
   return Boolean(divApplab.appendChild(newDiv));
 };
 
-Applab.createButton = function (opts) {
+Applab.button = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newButton = document.createElement("button");
@@ -1178,7 +1221,7 @@ Applab.createButton = function (opts) {
                  divApplab.appendChild(newButton));
 };
 
-Applab.createImage = function (opts) {
+Applab.image = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newImage = document.createElement("img");
@@ -1188,7 +1231,7 @@ Applab.createImage = function (opts) {
   return Boolean(divApplab.appendChild(newImage));
 };
 
-Applab.createImageUploadButton = function (opts) {
+Applab.imageUploadButton = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   // To avoid showing the ugly fileupload input element, we create a label
@@ -1212,19 +1255,58 @@ Applab.createImageUploadButton = function (opts) {
                  divApplab.appendChild(newLabel));
 };
 
+// These offset are used to ensure that the turtle image is centered over
+// its x,y coordinates. The image is currently 31x45, so these offsets are 50%
+var TURTLE_X_OFFSET = -15;
+var TURTLE_Y_OFFSET = -22;
+
 function getTurtleContext() {
   var canvas = document.getElementById('turtleCanvas');
 
   if (!canvas) {
-    var opts = { 'elementId': 'turtleCanvas' };
-    Applab.createCanvas(opts);
+    // If there is not yet a turtleCanvas, create it (but don't make it the
+    // active canvas):
+    Applab.createCanvas({ 'elementId': 'turtleCanvas', 'notActive': true });
     canvas = document.getElementById('turtleCanvas');
+
+    // And create the turtle (defaults to visible):
+    Applab.turtle.visible = true;
+    var divApplab = document.getElementById('divApplab');
+    var turtleImage = document.createElement("img");
+    turtleImage.src = studioApp.assetUrl('media/applab/turtle.png');
+    turtleImage.id = 'turtleImage';
+    updateTurtleImage(turtleImage);
+    divApplab.appendChild(turtleImage);
   }
 
   return canvas.getContext("2d");
 }
 
-Applab.turtleMoveTo = function (opts) {
+function updateTurtleImage(turtleImage) {
+  if (!turtleImage) {
+    turtleImage = document.getElementById('turtleImage');
+  }
+  turtleImage.style.left = (Applab.turtle.x + TURTLE_X_OFFSET) + 'px';
+  turtleImage.style.top = (Applab.turtle.y + TURTLE_Y_OFFSET) + 'px';
+  turtleImage.style.transform = 'rotate(' + Applab.turtle.heading + 'deg)';
+}
+
+function turtleSetVisibility (visible) {
+  // call this first to ensure there is a turtle (in case this is the first API)
+  getTurtleContext();
+  var turtleImage = document.getElementById('turtleImage');
+  turtleImage.style.visibility = visible ? 'visible' : 'hidden';
+}
+
+Applab.show = function (opts) {
+  turtleSetVisibility(true);
+};
+
+Applab.hide = function (opts) {
+  turtleSetVisibility(false);
+};
+
+Applab.moveTo = function (opts) {
   var ctx = getTurtleContext();
   if (ctx) {
     ctx.beginPath();
@@ -1233,41 +1315,61 @@ Applab.turtleMoveTo = function (opts) {
     Applab.turtle.y = opts.y;
     ctx.lineTo(Applab.turtle.x, Applab.turtle.y);
     ctx.stroke();
+    updateTurtleImage();
   }
 };
 
-Applab.turtleMove = function (opts) {
+Applab.move = function (opts) {
   var newOpts = {};
   newOpts.x = Applab.turtle.x + opts.x;
   newOpts.y = Applab.turtle.y + opts.y;
-  Applab.turtleMoveTo(newOpts);
+  Applab.moveTo(newOpts);
 };
 
-Applab.turtleMoveForward = function (opts) {
+Applab.moveForward = function (opts) {
   var newOpts = {};
+  var distance = 25;
+  if (typeof opts.distance !== 'undefined') {
+    distance = opts.distance;
+  }
   newOpts.x = Applab.turtle.x +
-    opts.distance * Math.sin(2 * Math.PI * Applab.turtle.heading / 360);
+    distance * Math.sin(2 * Math.PI * Applab.turtle.heading / 360);
   newOpts.y = Applab.turtle.y -
-      opts.distance * Math.cos(2 * Math.PI * Applab.turtle.heading / 360);
-  Applab.turtleMoveTo(newOpts);
+    distance * Math.cos(2 * Math.PI * Applab.turtle.heading / 360);
+  Applab.moveTo(newOpts);
 };
 
-Applab.turtleMoveBackward = function (opts) {
-  opts.distance = -opts.distance;
-  Applab.turtleMoveForward(opts);
+Applab.moveBackward = function (opts) {
+  var distance = -25;
+  if (opts.distance !== 'undefined') {
+    distance = -opts.distance;
+  }
+  Applab.moveForward({'distance': distance });
 };
 
-Applab.turtleTurnRight = function (opts) {
-  Applab.turtle.heading += opts.degrees;
+Applab.turnRight = function (opts) {
+  // call this first to ensure there is a turtle (in case this is the first API)
+  getTurtleContext();
+
+  var degrees = 90;
+  if (typeof opts.degrees !== 'undefined') {
+    degrees = opts.degrees;
+  }
+
+  Applab.turtle.heading += degrees;
   Applab.turtle.heading = (Applab.turtle.heading + 360) % 360;
+  updateTurtleImage();
 };
 
-Applab.turtleTurnLeft = function (opts) {
-  opts.degrees = -opts.degrees;
-  Applab.turtleTurnRight(opts);
+Applab.turnLeft = function (opts) {
+  var degrees = -90;
+  if (typeof opts.degrees !== 'undefined') {
+    degrees = -opts.degrees;
+  }
+  Applab.turnRight({'degrees': degrees });
 };
 
-Applab.turtlePenUp = function (opts) {
+Applab.penUp = function (opts) {
   var ctx = getTurtleContext();
   if (ctx) {
     Applab.turtle.penUpColor = ctx.strokeStyle;
@@ -1275,7 +1377,7 @@ Applab.turtlePenUp = function (opts) {
   }
 };
 
-Applab.turtlePenDown = function (opts) {
+Applab.penDown = function (opts) {
   var ctx = getTurtleContext();
   if (ctx && Applab.turtle.penUpColor) {
     ctx.strokeStyle = Applab.turtle.penUpColor;
@@ -1283,14 +1385,14 @@ Applab.turtlePenDown = function (opts) {
   }
 };
 
-Applab.turtlePenWidth = function (opts) {
+Applab.penWidth = function (opts) {
   var ctx = getTurtleContext();
   if (ctx) {
     ctx.lineWidth = opts.width;
   }
 };
 
-Applab.turtlePenColor = function (opts) {
+Applab.penColor = function (opts) {
   var ctx = getTurtleContext();
   if (ctx) {
     if (Applab.turtle.penUpColor) {
@@ -1319,16 +1421,30 @@ Applab.createCanvas = function (opts) {
     // set transparent fill by default:
     ctx.fillStyle = "rgba(255, 255, 255, 0)";
 
+    if (!Applab.activeCanvas && !opts.notActive) {
+      // If there is no active canvas and the caller doesn't specify otherwise,
+      // we'll make this the active canvas for subsequent API calls:
+      Applab.activeCanvas = newElement;
+    }
+
     return Boolean(divApplab.appendChild(newElement));
   }
   return false;
 };
 
-Applab.canvasDrawLine = function (opts) {
+Applab.setActiveCanvas = function (opts) {
   var divApplab = document.getElementById('divApplab');
   var canvas = document.getElementById(opts.elementId);
-  var ctx = canvas.getContext("2d");
-  if (ctx && divApplab.contains(canvas)) {
+  if (divApplab.contains(canvas)) {
+    Applab.activeCanvas = canvas;
+    return true;
+  }
+  return false;
+};
+
+Applab.line = function (opts) {
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
     ctx.beginPath();
     ctx.moveTo(opts.x1, opts.y1);
     ctx.lineTo(opts.x2, opts.y2);
@@ -1338,11 +1454,9 @@ Applab.canvasDrawLine = function (opts) {
   return false;
 };
 
-Applab.canvasDrawCircle = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  var canvas = document.getElementById(opts.elementId);
-  var ctx = canvas.getContext("2d");
-  if (ctx && divApplab.contains(canvas)) {
+Applab.circle = function (opts) {
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
     ctx.beginPath();
     ctx.arc(opts.x, opts.y, opts.radius, 0, 2 * Math.PI);
     ctx.fill();
@@ -1352,11 +1466,9 @@ Applab.canvasDrawCircle = function (opts) {
   return false;
 };
 
-Applab.canvasDrawRect = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  var canvas = document.getElementById(opts.elementId);
-  var ctx = canvas.getContext("2d");
-  if (ctx && divApplab.contains(canvas)) {
+Applab.rect = function (opts) {
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
     ctx.beginPath();
     ctx.rect(opts.x, opts.y, opts.width, opts.height);
     ctx.fill();
@@ -1366,56 +1478,50 @@ Applab.canvasDrawRect = function (opts) {
   return false;
 };
 
-Applab.canvasSetLineWidth = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  var canvas = document.getElementById(opts.elementId);
-  var ctx = canvas.getContext("2d");
-  if (ctx && divApplab.contains(canvas)) {
+Applab.setStrokeWidth = function (opts) {
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
     ctx.lineWidth = opts.width;
     return true;
   }
   return false;
 };
 
-Applab.canvasSetStrokeColor = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  var canvas = document.getElementById(opts.elementId);
-  var ctx = canvas.getContext("2d");
-  if (ctx && divApplab.contains(canvas)) {
+Applab.setStrokeColor = function (opts) {
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
     ctx.strokeStyle = String(opts.color);
     return true;
   }
   return false;
 };
 
-Applab.canvasSetFillColor = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  var canvas = document.getElementById(opts.elementId);
-  var ctx = canvas.getContext("2d");
-  if (ctx && divApplab.contains(canvas)) {
+Applab.setFillColor = function (opts) {
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
     ctx.fillStyle = String(opts.color);
     return true;
   }
   return false;
 };
 
-Applab.canvasClear = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  var canvas = document.getElementById(opts.elementId);
-  var ctx = canvas.getContext("2d");
-  if (ctx && divApplab.contains(canvas)) {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+Applab.clearCanvas = function (opts) {
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
+    ctx.clearRect(0,
+                  0,
+                  Applab.activeCanvas.width,
+                  Applab.activeCanvas.height);
     return true;
   }
   return false;
 };
 
-Applab.canvasDrawImage = function (opts) {
+Applab.drawImage = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  var canvas = document.getElementById(opts.elementId);
   var image = document.getElementById(opts.imageId);
-  var ctx = canvas.getContext("2d");
-  if (ctx && divApplab.contains(canvas) && divApplab.contains(image)) {
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx && divApplab.contains(image)) {
     var xScale, yScale;
     xScale = yScale = 1;
     if (opts.width) {
@@ -1433,20 +1539,16 @@ Applab.canvasDrawImage = function (opts) {
   return false;
 };
 
-Applab.canvasGetImageData = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  var canvas = document.getElementById(opts.elementId);
-  var ctx = canvas.getContext("2d");
-  if (ctx && divApplab.contains(canvas)) {
+Applab.getImageData = function (opts) {
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
     return ctx.getImageData(opts.x, opts.y, opts.width, opts.height);
   }
 };
 
-Applab.canvasPutImageData = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  var canvas = document.getElementById(opts.elementId);
-  var ctx = canvas.getContext("2d");
-  if (ctx && divApplab.contains(canvas)) {
+Applab.putImageData = function (opts) {
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
     // Create tmpImageData and initialize it because opts.imageData is not
     // going to be a real ImageData object if it came from the interpreter
     var tmpImageData = ctx.createImageData(opts.imageData.width,
@@ -1456,7 +1558,7 @@ Applab.canvasPutImageData = function (opts) {
   }
 };
 
-Applab.createTextInput = function (opts) {
+Applab.textInput = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newInput = document.createElement("input");
@@ -1466,7 +1568,7 @@ Applab.createTextInput = function (opts) {
   return Boolean(divApplab.appendChild(newInput));
 };
 
-Applab.createTextLabel = function (opts) {
+Applab.textLabel = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newLabel = document.createElement("label");
@@ -1481,7 +1583,7 @@ Applab.createTextLabel = function (opts) {
                  divApplab.appendChild(newLabel));
 };
 
-Applab.createCheckbox = function (opts) {
+Applab.checkbox = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newCheckbox = document.createElement("input");
@@ -1492,7 +1594,7 @@ Applab.createCheckbox = function (opts) {
   return Boolean(divApplab.appendChild(newCheckbox));
 };
 
-Applab.createRadio = function (opts) {
+Applab.radioButton = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newRadio = document.createElement("input");
@@ -1504,7 +1606,7 @@ Applab.createRadio = function (opts) {
   return Boolean(divApplab.appendChild(newRadio));
 };
 
-Applab.createDropdown = function (opts) {
+Applab.dropdown = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newSelect = document.createElement("select");
@@ -1630,24 +1732,45 @@ Applab.playSound = function (opts) {
   }
 };
 
-Applab.replaceHtmlBlock = function (opts) {
+Applab.innerHTML = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  var oldDiv = document.getElementById(opts.elementId);
-  if (divApplab.contains(oldDiv)) {
-    var newDiv = document.createElement("div");
-    newDiv.id = opts.elementId;
-    newDiv.innerHTML = opts.html;
-
-    return Boolean(oldDiv.parentElement.replaceChild(newDiv, oldDiv));
+  var div = document.getElementById(opts.elementId);
+  if (divApplab.contains(div)) {
+    div.innerHTML = opts.html;
+    return true;
   }
   return false;
 };
 
-Applab.deleteHtmlBlock = function (opts) {
+Applab.deleteElement = function (opts) {
   var divApplab = document.getElementById('divApplab');
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
+    // Special check to see if the active canvas is being deleted
+    if (div == Applab.activeCanvas || div.contains(Applab.activeCanvas)) {
+      delete Applab.activeCanvas;
+    }
     return Boolean(div.parentElement.removeChild(div));
+  }
+  return false;
+};
+
+Applab.showElement = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  var div = document.getElementById(opts.elementId);
+  if (divApplab.contains(div)) {
+    div.style.visibility = 'visible';
+    return true;
+  }
+  return false;
+};
+
+Applab.hideElement = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  var div = document.getElementById(opts.elementId);
+  if (divApplab.contains(div)) {
+    div.style.visibility = 'hidden';
+    return true;
   }
   return false;
 };
@@ -1697,6 +1820,18 @@ Applab.onEventFired = function (opts, e) {
     });
   } else {
     Applab.eventQueue.push({'fn': opts.func});
+  }
+  if (Applab.interpreter) {
+    // Execute the interpreter and if a return value is sent back from the
+    // interpreter's event handler, pass that back in the native world
+
+    // NOTE: the interpreter will not execute forever, if the event handler
+    // takes too long, executeInterpreter() will return and the native side
+    // will just see 'undefined' as the return value. The rest of the interpreter
+    // event handler will run in the next onTick(), but the return value will
+    // no longer have any effect.
+    Applab.executeInterpreter(true);
+    return Applab.lastCallbackRetVal;
   }
 };
 
@@ -1770,6 +1905,12 @@ Applab.onTimeoutFired = function (opts) {
   Applab.eventQueue.push({
     'fn': opts.func
   });
+  if (Applab.interpreter) {
+    // NOTE: the interpreter will not execute forever, if the event handler
+    // takes too long, executeInterpreter() will return and the rest of the
+    // user's code will execute in the next onTick()
+    Applab.executeInterpreter(true);
+  }
 };
 
 Applab.setTimeout = function (opts) {
@@ -1782,13 +1923,13 @@ Applab.clearTimeout = function (opts) {
   window.clearTimeout(opts.timeoutId);
 };
 
-Applab.createSharedRecord = function (opts) {
-  var onSuccess = Applab.handleCreateSharedRecord.bind(this, opts.onSuccess);
+Applab.createRecord = function (opts) {
+  var onSuccess = Applab.handleCreateRecord.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
-  AppStorage.createSharedRecord(opts.record, onSuccess, onError);
+  AppStorage.createRecord(opts.table, opts.record, onSuccess, onError);
 };
 
-Applab.handleCreateSharedRecord = function(successCallback, record) {
+Applab.handleCreateRecord = function(successCallback, record) {
   if (successCallback) {
     Applab.eventQueue.push({
       'fn': successCallback,
@@ -1808,13 +1949,13 @@ Applab.handleError = function(errorCallback, message) {
   }
 };
 
-Applab.readSharedValue = function(opts) {
-  var onSuccess = Applab.handleReadSharedValue.bind(this, opts.onSuccess);
+Applab.getKeyValue = function(opts) {
+  var onSuccess = Applab.handleReadValue.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
-  AppStorage.readSharedValue(opts.key, onSuccess, onError);
+  AppStorage.getKeyValue(opts.key, onSuccess, onError);
 };
 
-Applab.handleReadSharedValue = function(successCallback, value) {
+Applab.handleReadValue = function(successCallback, value) {
   if (successCallback) {
     Applab.eventQueue.push({
       'fn': successCallback,
@@ -1823,13 +1964,13 @@ Applab.handleReadSharedValue = function(successCallback, value) {
   }
 };
 
-Applab.writeSharedValue = function(opts) {
-  var onSuccess = Applab.handleWriteSharedValue.bind(this, opts.onSuccess);
+Applab.setKeyValue = function(opts) {
+  var onSuccess = Applab.handleSetKeyValue.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
-  AppStorage.writeSharedValue(opts.key, opts.value, onSuccess, onError);
+  AppStorage.setKeyValue(opts.key, opts.value, onSuccess, onError);
 };
 
-Applab.handleWriteSharedValue = function(successCallback) {
+Applab.handleSetKeyValue = function(successCallback) {
   if (successCallback) {
     Applab.eventQueue.push({
       'fn': successCallback,
@@ -1838,13 +1979,13 @@ Applab.handleWriteSharedValue = function(successCallback) {
   }
 };
 
-Applab.readSharedRecords = function (opts) {
-  var onSuccess = Applab.handleReadSharedRecords.bind(this, opts.onSuccess);
+Applab.readRecords = function (opts) {
+  var onSuccess = Applab.handleReadRecords.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
-  AppStorage.readSharedRecords(opts.searchParams, onSuccess, onError);
+  AppStorage.readRecords(opts.table, opts.searchParams, onSuccess, onError);
 };
 
-Applab.handleReadSharedRecords = function(successCallback, records) {
+Applab.handleReadRecords = function(successCallback, records) {
   if (successCallback) {
     Applab.eventQueue.push({
       'fn': successCallback,
@@ -1853,13 +1994,13 @@ Applab.handleReadSharedRecords = function(successCallback, records) {
   }
 };
 
-Applab.updateSharedRecord = function (opts) {
-  var onSuccess = Applab.handleUpdateSharedRecord.bind(this, opts.onSuccess);
+Applab.updateRecord = function (opts) {
+  var onSuccess = Applab.handleUpdateRecord.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
-  AppStorage.updateSharedRecord(opts.record, onSuccess, onError);
+  AppStorage.updateRecord(opts.table, opts.record, onSuccess, onError);
 };
 
-Applab.handleUpdateSharedRecord = function(successCallback) {
+Applab.handleUpdateRecord = function(successCallback) {
   if (successCallback) {
     Applab.eventQueue.push({
       'fn': successCallback,
@@ -1868,13 +2009,13 @@ Applab.handleUpdateSharedRecord = function(successCallback) {
   }
 };
 
-Applab.deleteSharedRecord = function (opts) {
-  var onSuccess = Applab.handleDeleteSharedRecord.bind(this, opts.onSuccess);
+Applab.deleteRecord = function (opts) {
+  var onSuccess = Applab.handleDeleteRecord.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
-  AppStorage.deleteSharedRecord(opts.record, onSuccess, onError);
+  AppStorage.deleteRecord(opts.table, opts.record, onSuccess, onError);
 };
 
-Applab.handleDeleteSharedRecord = function(successCallback) {
+Applab.handleDeleteRecord = function(successCallback) {
   if (successCallback) {
     Applab.eventQueue.push({
       'fn': successCallback,

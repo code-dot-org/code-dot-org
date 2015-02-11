@@ -76,26 +76,15 @@ ExpressionNode.prototype.clone = function () {
 };
 
 /**
- * Can we evaluate this expression given the mapping
+ * See if we can evaluate this node by trying to do so and catching exceptions.
+ * @returns Whether we can evaluate.
  */
-// TODO - unit test (test case where mapping[this.value_] = 0
 ExpressionNode.prototype.canEvaluate = function (mapping) {
-  mapping = mapping || {};
-  var type = this.getType();
-  if (type === ValueType.FUNCTION_CALL) {
+  try {
+    this.evaluate(mapping);
+  } catch (err) {
     return false;
   }
-
-  if (type === ValueType.VARIABLE) {
-    return mapping[this.value_] !== undefined;
-  }
-
-  for (var i = 0; i < this.children_.length; i++) {
-    if (!this.children_[i].canEvaluate(mapping)) {
-      return false;
-    }
-  }
-
   return true;
 };
 
@@ -339,7 +328,6 @@ ExpressionNode.prototype.hasSameSignature = function (other) {
 
 /**
  * Do the two nodes differ only in argument order.
- * TODO: unit test
  */
 ExpressionNode.prototype.isEquivalentTo = function (other) {
   // only ignore argument order for ARITHMETIC
@@ -396,6 +384,20 @@ ExpressionNode.prototype.getChildValue = function (index) {
  */
 ExpressionNode.prototype.setChildValue = function (index, value) {
   return this.children_[index].setValue(value);
+};
+
+/**
+ * Get a string representation of the tree
+ * Note: This is only used by test code, but is also generally useful to debug
+ */
+ExpressionNode.prototype.debug = function () {
+  if (this.children_.length === 0) {
+    return this.value_;
+  }
+  return "(" + this.value_ + " " +
+    this.children_.map(function (c) {
+      return c.debug();
+    }).join(' ') + ")";
 };
 
 /**
