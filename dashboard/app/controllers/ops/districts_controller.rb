@@ -6,7 +6,6 @@ module Ops
     check_authorization
     load_and_authorize_resource
     skip_before_filter :verify_authenticity_token
-    respond_to :html, :xml, :json
 
     # get /ops/districts/1/teachers
     def teachers
@@ -21,7 +20,7 @@ module Ops
 
     # GET /ops/districts
     def index
-      render text: @districts.to_json
+      respond_with @districts
     end
 
     # GET /ops/districts/1
