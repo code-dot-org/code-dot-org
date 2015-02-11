@@ -693,7 +693,7 @@ function cloneNodeWithoutIds(elementId) {
  * App specific displayFeedback function that calls into
  * studioApp.displayFeedback when appropriate
  */
-function displayFeedback(includeAppDiv) {
+function displayFeedback() {
   if (!appState.response || appState.animating) {
     return;
   }
