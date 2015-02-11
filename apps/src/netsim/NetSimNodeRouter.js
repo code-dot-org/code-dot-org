@@ -75,7 +75,7 @@ var NetSimNodeRouter = function (shard, routerRow) {
   this.simulateForSender_ = undefined;
 
   // Subscribe to message table changes
-  this.shard_.messageTable.tableChangeEvent
+  this.shard_.messageTable.tableChange
       .register(this.onMessageTableChange_.bind(this));
 };
 NetSimNodeRouter.prototype = Object.create(superClass.prototype);

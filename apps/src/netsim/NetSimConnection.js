@@ -96,6 +96,13 @@ var NetSimConnection = function (sentLog, receivedLog) {
   this.myNode = null;
 
   /**
+   * Event: Connected to, or disconnected from, a shard.
+   * Specifically, added or removed our client node from the shard's node table.
+   * @type {ObservableEvent}
+   */
+  this.shardChange = new ObservableEvent();
+
+  /**
    * Allows others to subscribe to connection status changes.
    * args: none
    * Notifies on:
@@ -134,12 +141,9 @@ NetSimConnection.prototype.attachToRunLoop = function (runLoop) {
 
 /** @param {!RunLoop.Clock} clock */
 NetSimConnection.prototype.tick = function (clock) {
-  if (this.shard_) {
-    this.shard_.tick(clock);
-  }
-
   if (this.myNode) {
     this.myNode.tick(clock);
+    this.shard_.tick(clock);
   }
 };
 
@@ -186,11 +190,11 @@ NetSimConnection.prototype.disconnectFromShard = function () {
     this.disconnectFromRouter();
   }
 
-  var self = this;
   this.myNode.destroy(function () {
-    self.myNode = null;
-    self.statusChanges.notifyObservers();
-  });
+    this.myNode = null;
+    this.shardChange.notifyObservers(null);
+    this.statusChanges.notifyObservers();
+  }.bind(this));
 };
 
 /**
@@ -200,20 +204,20 @@ NetSimConnection.prototype.disconnectFromShard = function () {
  * @private
  */
 NetSimConnection.prototype.createMyClientNode_ = function (displayName) {
-  var self = this;
   NetSimNodeClient.create(this.shard_, function (node) {
     if (node) {
-      self.myNode = node;
-      self.myNode.onChange.register(self.onMyNodeChange_.bind(self));
-      self.myNode.setDisplayName(displayName);
-      self.myNode.setLogs(self.sentLog_, self.receivedLog_);
-      self.myNode.update(function () {
-        self.statusChanges.notifyObservers();
-      });
+      this.myNode = node;
+      this.myNode.onChange.register(this.onMyNodeChange_.bind(this));
+      this.myNode.setDisplayName(displayName);
+      this.myNode.setLogs(this.sentLog_, this.receivedLog_);
+      this.myNode.update(function () {
+        this.shardChange.notifyObservers(this.shard_);
+        this.statusChanges.notifyObservers();
+      }.bind(this));
     } else {
       logger.error("Failed to create client node.");
     }
-  });
+  }.bind(this));
 };
 
 /**
