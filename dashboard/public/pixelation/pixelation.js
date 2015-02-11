@@ -11,6 +11,13 @@ var pixel_data = document.querySelector("#pixel_data");
 var canvas = document.querySelector("#canvas");
 var ctx = canvas.getContext("2d");
 
+var widthText = document.getElementById("width");
+var widthRange = document.getElementById("widthRange");
+var heightText = document.getElementById("height");
+var heightRange = document.getElementById("heightRange");
+var bitsPerPixelText = document.getElementById("heightRange");
+var bitsPerPixelRange = document.getElementById("bitsPerPixelSlider");
+
 function isHex() {
   return "hex" == document.querySelector('input[name="binHex"]:checked').value;
 }
@@ -41,24 +48,24 @@ function drawGraph() {
 
   var w, h, bitsPerPix = 1;
   if (options.version == '1') {
-    w = document.getElementById("width").value;
-    h = document.getElementById("height").value;
+    w = widthText.value;
+    h = heightText.value;
   } else {
     // Read width, height out of the bit string (where width is given in byte 0, height in byte 1).
     w = binToInt(readByte(binCode, 0));
     h = binToInt(readByte(binCode, 1));
-    document.getElementById("width").value = document.getElementById("widthRange").value = w;
-    document.getElementById("height").value = document.getElementById("heightRange").value = h;
+    widthText.value = widthRange.value = w;
+    heightText.value = heightRange.value = h;
     binCode = binCode.substring(16, binCode.length);
 
     if (options.version != '2') {
       bitsPerPix = binToInt(readByte(binCode, 0));
-      document.getElementById("bitsPerPixel").value = bitsPerPix;
-      document.getElementById("bitsPerPixelSlider").value = bitsPerPix;
+      bitsPerPixelText.value = bitsPerPix;
+      bitsPerPixelRange.value = bitsPerPix;
       binCode = binCode.substring(8, binCode.length);
 
       // Update pixel format indicator.
-      var bitsPerPixel = parseInt(document.getElementById("bitsPerPixel").value);
+      var bitsPerPixel = parseInt(bitsPerPixelText.value);
       if (hexMode && bitsPerPixel % 4 !== 0) {
         pixel_format.innerHTML = '<span class="unknown">' + pad('', Math.ceil(bitsPerPixel / 4), '-') + '</span>';
       } else {
@@ -112,8 +119,8 @@ function drawGraph() {
 function formatBitDisplay() {
 
   var theData = pixel_data.value;
-  var chunksPerLine = parseInt(document.getElementById("width").value);
-  var chunkSize = parseInt(document.getElementById("bitsPerPixel").value);
+  var chunksPerLine = parseInt(widthText.value);
+  var chunkSize = parseInt(bitsPerPixelText.value);
 
   // If in binary mode.
   var newBits = formatBits(theData, chunkSize, chunksPerLine);
@@ -235,7 +242,7 @@ function binToHex() {
  * of bits.  Can be assigned to R, G, B.  Need bitsPerPixel to handle irregular length binVals, which should only happen
  * with jagged ends of bit strings.
  */
-function getColorVal2(binVal, bitsPerPixel) {
+function getColorVal(binVal, bitsPerPixel) {
 
   // Assume binVal is size of bits per pixel.
   var numColors = Math.pow(2, bitsPerPixel);
@@ -280,7 +287,7 @@ function bitsToColors(bitString, bitsPerPixel) {
   var colorList = [];
 
   for (var i = 0; i < bitString.length; i += bitsPerPixel) {
-    colorList.push(getColorVal2(bitString.substring(i, i + bitsPerPixel), bitsPerPixel));
+    colorList.push(getColorVal(bitString.substring(i, i + bitsPerPixel), bitsPerPixel));
 
   }
   if ((bitString.length / bitsPerPixel) != colorList.length) {
@@ -294,15 +301,15 @@ function changeVal(elementID) {
   var val = -1;
 
   if (elementID == "width") {
-    val = document.getElementById("widthRange").value;
+    val = widthRange.value;
   } else if (elementID == "bitsPerPixel") {
-    val = document.getElementById("bitsPerPixelSlider").value;
+    val = bitsPerPixelRange.value;
 
     if (val == 0) {
       val = 1;
     }
   } else {
-    val = document.getElementById("heightRange").value;
+    val = heightRange.value;
   }
 
   // Make textbox value match slider value.
@@ -317,9 +324,9 @@ function changeVal(elementID) {
 
 function setSliders() {
 
-  document.getElementById("heightRange").value = document.getElementById("height").value;
-  document.getElementById("widthRange").value = document.getElementById("width").value;
-  document.getElementById("bitsPerPixelSlider").value = document.getElementById("bitsPerPixel").value;
+  heightRange.value = heightText.value;
+  widthRange.value = widthText.value;
+  bitsPerPixelRange.value = bitsPerPixelText.value;
 
   updateBinaryDataToMatchSliders();
   formatBitDisplay();
@@ -328,9 +335,9 @@ function setSliders() {
 
 function updateBinaryDataToMatchSliders() {
 
-  var heightByte = pad(parseInt(document.getElementById("heightRange").value).toString(2), 8, "0");
-  var widthByte = pad(parseInt(document.getElementById("widthRange").value).toString(2), 8, "0");
-  var bppByte = pad(parseInt(document.getElementById("bitsPerPixelSlider").value).toString(2), 8, "0");
+  var heightByte = pad(parseInt(heightRange.value).toString(2), 8, "0");
+  var widthByte = pad(parseInt(widthRange.value).toString(2), 8, "0");
+  var bppByte = pad(parseInt(bitsPerPixelRange.value).toString(2), 8, "0");
 
 
   var justBits = pixel_data.value.replace(/[ \n]/g, "");
