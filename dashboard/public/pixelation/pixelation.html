@@ -51,15 +51,13 @@
   </label>
   <div class="label_group">
     <label>Binary:
-      <input type="radio" name="binHex" id="binHexRadio" value="bin" checked="checked" onchange="hexToBin(); drawGraph();">
+      <input type="radio" name="binHex" value="bin" checked="checked" onchange="hexToBin(); drawGraph();">
     </label>
     <label>Hexadecimal:
-      <input type="radio" name="binHex" id="binHexRadio" value="hex" onchange="binToHex(); drawGraph();">
+      <input type="radio" name="binHex" value="hex" onchange="binToHex(); drawGraph();">
     </label>
   </div>
-  <textarea id="pixel_data" oninput="drawGraph();" autocapitalize="false" autocorrect="false" autocomplete="false" spellcheck="false">
-    000001110000011100000011001010011100101110001010011100101110001010011100101110001010011100101110001010011100101110001010011100101110001010011100101110001010011100101110001
-  </textarea>
+  <textarea id="pixel_data" oninput="drawGraph();" autocapitalize="false" autocorrect="false" autocomplete="false" spellcheck="false"></textarea>
   <button onclick="formatBitDisplay();" title="Click on this to lay bits out in a readable fashion">Format</button>
   <button onclick="unformatBits();">Un-Format</button>
 </div>
@@ -73,6 +71,10 @@
   } else if (options.version == '2') {
     $('.hide_on_v2').hide();
   }
+  if (options.hex) {
+    $('input[name="binHex"][value="hex"]').prop('checked', true);
+  }
+  pixel_data.value = options.data;
   drawGraph();
   formatBitDisplay();
 </script>
