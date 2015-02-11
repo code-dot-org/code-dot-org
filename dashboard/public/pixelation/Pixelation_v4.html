@@ -5,9 +5,10 @@
     <canvas id="canvas" width="400" height="400"></canvas>
   </div>
   <div id="belowVisualization">
-    <label>Actual size:
+    <label class="right">Actual size:
       <input type="checkbox" id="actual_size" onchange="drawGraph();">
     </label>
+    <button onclick="showPNG();">Save Image</button>
     <p>Here is the file format structure for a color image:</p>
     <div id="file_format">
       <div class="byte">Width: 1 byte</div>

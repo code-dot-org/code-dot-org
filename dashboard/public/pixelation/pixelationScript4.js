@@ -337,9 +337,9 @@ function updateBinaryDataToMatchSliders() {
  * Creates a PNG the given canvas and opens it in a new window.  Image can be copy/pasted, saved, etc. from there.
  * @param canvasId the id of the canvas you want to make a PNG of.
  */
-function showPNG(canvasId) {
+function showPNG() {
 
-  var w = window.open(canvas.toDataURL(), canvasId,
+  var w = window.open(canvas.toDataURL(), 'ShowImageWindow',
       "width=" + canvas.width + ", height=" + canvas.height + ", left=100, menubar=0, titlebar=0, scrollbars=0");
   w.focus();
 }
