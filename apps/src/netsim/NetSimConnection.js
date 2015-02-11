@@ -33,8 +33,8 @@
 'use strict';
 
 var NetSimLogger = require('./NetSimLogger');
-var NetSimNodeClient = require('./NetSimNodeClient');
-var NetSimNodeRouter = require('./NetSimNodeRouter');
+var NetSimClientNode = require('./NetSimClientNode');
+var NetSimRouterNode = require('./NetSimRouterNode');
 var NetSimWire = require('./NetSimWire');
 var ObservableEvent = require('./ObservableEvent');
 var periodicAction = require('./periodicAction');
@@ -91,7 +91,7 @@ var NetSimConnection = function (sentLog, receivedLog) {
 
   /**
    * The local client's node representation within the shard.
-   * @type {NetSimNodeClient}
+   * @type {NetSimClientNode}
    */
   this.myNode = null;
 
@@ -204,7 +204,7 @@ NetSimConnection.prototype.disconnectFromShard = function () {
  * @private
  */
 NetSimConnection.prototype.createMyClientNode_ = function (displayName) {
-  NetSimNodeClient.create(this.shard_, function (node) {
+  NetSimClientNode.create(this.shard_, function (node) {
     if (node) {
       this.myNode = node;
       this.myNode.onChange.register(this.onMyNodeChange_.bind(this));
@@ -260,10 +260,10 @@ NetSimConnection.prototype.getAllNodes = function (callback) {
     }
 
     var nodes = rows.map(function (row) {
-      if (row.type === NetSimNodeClient.getNodeType()) {
-        return new NetSimNodeClient(self.shard_, row);
-      } else if (row.type === NetSimNodeRouter.getNodeType()) {
-        return new NetSimNodeRouter(self.shard_, row);
+      if (row.type === NetSimClientNode.getNodeType()) {
+        return new NetSimClientNode(self.shard_, row);
+      } else if (row.type === NetSimRouterNode.getNodeType()) {
+        return new NetSimRouterNode(self.shard_, row);
       }
     }).filter(function (node) {
       return node !== undefined;
@@ -311,7 +311,7 @@ NetSimConnection.prototype.cleanLobby_ = function () {
 /** Adds a row to the lobby for a new router node. */
 NetSimConnection.prototype.addRouterToLobby = function () {
   var self = this;
-  NetSimNodeRouter.create(this.shard_, function () {
+  NetSimRouterNode.create(this.shard_, function () {
     self.statusChanges.notifyObservers();
   });
 };
@@ -336,7 +336,7 @@ NetSimConnection.prototype.connectToRouter = function (routerID) {
   }
 
   var self = this;
-  NetSimNodeRouter.get(routerID, this.shard_, function (router) {
+  NetSimRouterNode.get(routerID, this.shard_, function (router) {
     if (!router) {
       logger.warn('Failed to find router with ID ' + routerID);
       return;

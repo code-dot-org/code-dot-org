@@ -27,8 +27,8 @@
  */
 'use strict';
 
-var NetSimNodeClient = require('./NetSimNodeClient');
-var NetSimNodeRouter = require('./NetSimNodeRouter');
+var NetSimClientNode = require('./NetSimClientNode');
+var NetSimRouterNode = require('./NetSimRouterNode');
 
 /**
  * Given a set of rows from the node table on a shard, gives back a set of node
@@ -41,10 +41,10 @@ var NetSimNodeRouter = require('./NetSimNodeRouter');
 module.exports.nodesFromRows = function (shard, rows) {
   return rows
       .map(function (row) {
-        if (row.type === NetSimNodeClient.getNodeType()) {
-          return new NetSimNodeClient(shard, row);
-        } else if (row.type == NetSimNodeRouter.getNodeType()) {
-          return new NetSimNodeRouter(shard, row);
+        if (row.type === NetSimClientNode.getNodeType()) {
+          return new NetSimClientNode(shard, row);
+        } else if (row.type == NetSimRouterNode.getNodeType()) {
+          return new NetSimRouterNode(shard, row);
         }
         // Oops!  We probably shouldn't ever get here.
         throw new Error("Unable to map row to node.");

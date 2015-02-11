@@ -68,7 +68,7 @@ var NetSimRouterPanel = function (connection) {
 
   /**
    * Cached reference to router
-   * @type {NetSimNodeRouter}
+   * @type {NetSimRouterNode}
    * @private
    */
   this.myConnectedRouter = undefined;

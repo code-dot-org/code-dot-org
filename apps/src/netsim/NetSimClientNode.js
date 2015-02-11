@@ -49,7 +49,7 @@ var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
  * @constructor
  * @augments NetSimNode
  */
-var NetSimNodeClient = function (shard, clientRow) {
+var NetSimClientNode = function (shard, clientRow) {
   superClass.call(this, shard, clientRow);
 
   /**
@@ -77,7 +77,7 @@ var NetSimNodeClient = function (shard, clientRow) {
   /**
    * Client nodes can be connected to a router, which they will
    * help to simulate.
-   * @type {NetSimNodeRouter}
+   * @type {NetSimRouterNode}
    */
   this.myRouter = null;
 
@@ -95,9 +95,9 @@ var NetSimNodeClient = function (shard, clientRow) {
    */
   this.receivedLog_ = null;
 };
-NetSimNodeClient.prototype = Object.create(superClass.prototype);
-NetSimNodeClient.prototype.constructor = NetSimNodeClient;
-module.exports = NetSimNodeClient;
+NetSimClientNode.prototype = Object.create(superClass.prototype);
+NetSimClientNode.prototype.constructor = NetSimClientNode;
+module.exports = NetSimClientNode;
 
 /**
  * Static async creation method. See NetSimEntity.create().
@@ -105,25 +105,25 @@ module.exports = NetSimNodeClient;
  * @param {!function} onComplete - Method that will be given the
  *        created entity, or null if entity creation failed.
  */
-NetSimNodeClient.create = function (shard, onComplete) {
-  NetSimEntity.create(NetSimNodeClient, shard, onComplete);
+NetSimClientNode.create = function (shard, onComplete) {
+  NetSimEntity.create(NetSimClientNode, shard, onComplete);
 };
 
 /** @inheritdoc */
-NetSimNodeClient.prototype.getNodeType = function () {
-  return NetSimNodeClient.getNodeType();
+NetSimClientNode.prototype.getNodeType = function () {
+  return NetSimClientNode.getNodeType();
 };
-NetSimNodeClient.getNodeType = function () {
+NetSimClientNode.getNodeType = function () {
   return 'user';
 };
 
 /** @inheritdoc */
-NetSimNodeClient.prototype.getStatus = function () {
+NetSimClientNode.prototype.getStatus = function () {
   return this.status_ ? this.status_ : 'Online';
 };
 
 /** Set node's display name.  Does not trigger an update! */
-NetSimNodeClient.prototype.setDisplayName = function (displayName) {
+NetSimClientNode.prototype.setDisplayName = function (displayName) {
   this.displayName_ = displayName;
 };
 
@@ -133,7 +133,7 @@ NetSimNodeClient.prototype.setDisplayName = function (displayName) {
  * @param {!NetSimLogWidget} sentLog
  * @param {!NetSimLogWidget} receivedLog
  */
-NetSimNodeClient.prototype.setLogs = function (sentLog, receivedLog) {
+NetSimClientNode.prototype.setLogs = function (sentLog, receivedLog) {
   this.sentLog_ = sentLog;
   this.receivedLog_ = receivedLog;
 
@@ -146,7 +146,7 @@ NetSimNodeClient.prototype.setLogs = function (sentLog, receivedLog) {
  * Our client tick can also tick its connected wire and its remote client.
  * @param {!RunLoop.Clock} clock
  */
-NetSimNodeClient.prototype.tick = function (clock) {
+NetSimClientNode.prototype.tick = function (clock) {
   superClass.prototype.tick.call(this, clock);
 
   if (this.myWire) {
@@ -163,7 +163,7 @@ NetSimNodeClient.prototype.tick = function (clock) {
  * @param {function} [onComplete]
  * @param {boolean} [autoReconnect=true]
  */
-NetSimNodeClient.prototype.update = function (onComplete, autoReconnect) {
+NetSimClientNode.prototype.update = function (onComplete, autoReconnect) {
   if (!onComplete) {
     onComplete = function () {};
   }
@@ -193,9 +193,9 @@ NetSimNodeClient.prototype.update = function (onComplete, autoReconnect) {
  * @param {!function} onComplete (success)
  * @private
  */
-NetSimNodeClient.prototype.reconnect_ = function (onComplete) {
+NetSimClientNode.prototype.reconnect_ = function (onComplete) {
   var self = this;
-  NetSimNodeClient.create(this.shard_, function (node) {
+  NetSimClientNode.create(this.shard_, function (node) {
     if (!node) {
       // Reconnect failed
       onComplete(false);
@@ -233,10 +233,10 @@ NetSimNodeClient.prototype.reconnect_ = function (onComplete) {
 };
 
 /**
- * @param {!NetSimNodeRouter} router
+ * @param {!NetSimRouterNode} router
  * @param {function} onComplete (success)
  */
-NetSimNodeClient.prototype.connectToRouter = function (router, onComplete) {
+NetSimClientNode.prototype.connectToRouter = function (router, onComplete) {
   if (!onComplete) {
     onComplete = function () {};
   }
@@ -269,7 +269,7 @@ NetSimNodeClient.prototype.connectToRouter = function (router, onComplete) {
   });
 };
 
-NetSimNodeClient.prototype.disconnectRemote = function (onComplete) {
+NetSimClientNode.prototype.disconnectRemote = function (onComplete) {
   if (!onComplete) {
     onComplete = function () {};
   }
@@ -293,7 +293,7 @@ NetSimNodeClient.prototype.disconnectRemote = function (onComplete) {
  * at the moment.
  * @param payload
  */
-NetSimNodeClient.prototype.sendMessage = function (payload) {
+NetSimClientNode.prototype.sendMessage = function (payload) {
   if (!this.myWire) {
     return;
   }
@@ -321,7 +321,7 @@ NetSimNodeClient.prototype.sendMessage = function (payload) {
  * @param {Array} rows
  * @private
  */
-NetSimNodeClient.prototype.onMessageTableChange_ = function (rows) {
+NetSimClientNode.prototype.onMessageTableChange_ = function (rows) {
   if (this.isProcessingMessages_) {
     // We're already in this method, getting called recursively because
     // we are making changes to the table.  Ignore this call.
@@ -360,7 +360,7 @@ NetSimNodeClient.prototype.onMessageTableChange_ = function (rows) {
  * @param {!NetSimMessage} message
  * @private
  */
-NetSimNodeClient.prototype.handleMessage_ = function (message) {
+NetSimClientNode.prototype.handleMessage_ = function (message) {
   // TODO: How much validation should we do here?
   if (this.receivedLog_) {
     this.receivedLog_.log(JSON.stringify(message.payload));

@@ -62,7 +62,7 @@ var MAX_CLIENT_CONNECTIONS = 6;
  * @constructor
  * @augments NetSimNode
  */
-var NetSimNodeRouter = function (shard, routerRow) {
+var NetSimRouterNode = function (shard, routerRow) {
   superClass.call(this, shard, routerRow);
 
   /**
@@ -78,9 +78,9 @@ var NetSimNodeRouter = function (shard, routerRow) {
   this.shard_.messageTable.tableChange
       .register(this.onMessageTableChange_.bind(this));
 };
-NetSimNodeRouter.prototype = Object.create(superClass.prototype);
-NetSimNodeRouter.prototype.constructor = NetSimNodeRouter;
-module.exports = NetSimNodeRouter;
+NetSimRouterNode.prototype = Object.create(superClass.prototype);
+NetSimRouterNode.prototype.constructor = NetSimRouterNode;
+module.exports = NetSimRouterNode;
 
 /**
  * Static async creation method. See NetSimEntity.create().
@@ -88,8 +88,8 @@ module.exports = NetSimNodeRouter;
  * @param {!function} onComplete - Method that will be given the
  *        created entity, or null if entity creation failed.
  */
-NetSimNodeRouter.create = function (shard, onComplete) {
-  NetSimEntity.create(NetSimNodeRouter, shard, function (router) {
+NetSimRouterNode.create = function (shard, onComplete) {
+  NetSimEntity.create(NetSimRouterNode, shard, function (router) {
     // Always try and update router immediately, to set its DisplayName
     // correctly.
     if (router) {
@@ -109,27 +109,27 @@ NetSimNodeRouter.create = function (shard, onComplete) {
  * @param {!function} onComplete - Method that will be given the
  *        found entity, or null if entity search failed.
  */
-NetSimNodeRouter.get = function (routerID, shard, onComplete) {
-  NetSimEntity.get(NetSimNodeRouter, routerID, shard, onComplete);
+NetSimRouterNode.get = function (routerID, shard, onComplete) {
+  NetSimEntity.get(NetSimRouterNode, routerID, shard, onComplete);
 };
 
 /**
  * @readonly
  * @enum {string}
  */
-NetSimNodeRouter.RouterStatus = {
+NetSimRouterNode.RouterStatus = {
   INITIALIZING: 'Initializing',
   READY: 'Ready',
   FULL: 'Full'
 };
-var RouterStatus = NetSimNodeRouter.RouterStatus;
+var RouterStatus = NetSimRouterNode.RouterStatus;
 
 /**
  * Updates router status and lastPing time in lobby table - both keepAlive
  * and making sure router's connection count is valid.
  * @param {function} [onComplete] - Optional success/failure callback
  */
-NetSimNodeRouter.prototype.update = function (onComplete) {
+NetSimRouterNode.prototype.update = function (onComplete) {
   onComplete = onComplete || function () {};
 
   var self = this;
@@ -142,15 +142,15 @@ NetSimNodeRouter.prototype.update = function (onComplete) {
 };
 
 /** @inheritdoc */
-NetSimNodeRouter.prototype.getDisplayName = function () {
+NetSimRouterNode.prototype.getDisplayName = function () {
   return "Router " + this.entityID;
 };
 
 /** @inheritdoc */
-NetSimNodeRouter.prototype.getNodeType = function () {
-  return NetSimNodeRouter.getNodeType();
+NetSimRouterNode.prototype.getNodeType = function () {
+  return NetSimRouterNode.getNodeType();
 };
-NetSimNodeRouter.getNodeType = function () {
+NetSimRouterNode.getNodeType = function () {
   return 'router';
 };
 
@@ -159,7 +159,7 @@ NetSimNodeRouter.getNodeType = function () {
  * simulate for connection and messages -from- the given node.
  * @param {!number} nodeID
  */
-NetSimNodeRouter.prototype.setSimulateForSender = function (nodeID) {
+NetSimRouterNode.prototype.setSimulateForSender = function (nodeID) {
   this.simulateForSender_ = nodeID;
 };
 
@@ -167,7 +167,7 @@ NetSimNodeRouter.prototype.setSimulateForSender = function (nodeID) {
  * Helper for getting wires table of configured shard.
  * @returns {NetSimTable}
  */
-NetSimNodeRouter.prototype.getWireTable = function () {
+NetSimRouterNode.prototype.getWireTable = function () {
   return this.shard_.wireTable;
 };
 
@@ -176,7 +176,7 @@ NetSimNodeRouter.prototype.getWireTable = function () {
  * where all of the rows are wires attached to this router.
  * @param {function} onComplete which accepts an Array of NetSimWire.
  */
-NetSimNodeRouter.prototype.getConnections = function (onComplete) {
+NetSimRouterNode.prototype.getConnections = function (onComplete) {
   onComplete = onComplete || function () {};
 
   var shard = this.shard_;
@@ -204,7 +204,7 @@ NetSimNodeRouter.prototype.getConnections = function (onComplete) {
  * connected to this router.
  * @param {function} onComplete which accepts a number.
  */
-NetSimNodeRouter.prototype.countConnections = function (onComplete) {
+NetSimRouterNode.prototype.countConnections = function (onComplete) {
   onComplete = onComplete || function () {};
 
   this.getConnections(function (wires) {
@@ -234,7 +234,7 @@ var contains = function (haystack, needle) {
  * @param {!function} onComplete response method - should call with TRUE
  *        if connection is allowed, FALSE if connection is rejected.
  */
-NetSimNodeRouter.prototype.acceptConnection = function (otherNode, onComplete) {
+NetSimRouterNode.prototype.acceptConnection = function (otherNode, onComplete) {
   var self = this;
   this.countConnections(function (count) {
     if (count > MAX_CLIENT_CONNECTIONS) {
@@ -254,7 +254,7 @@ NetSimNodeRouter.prototype.acceptConnection = function (otherNode, onComplete) {
  * @param {string} hostname of requesting node
  * @param {function} [onComplete] reports success or failure.
  */
-NetSimNodeRouter.prototype.requestAddress = function (wire, hostname, onComplete) {
+NetSimRouterNode.prototype.requestAddress = function (wire, hostname, onComplete) {
   onComplete = onComplete || function () {};
 
 
@@ -292,7 +292,7 @@ NetSimNodeRouter.prototype.requestAddress = function (wire, hostname, onComplete
  * Returns list of objects in form { hostname:{string}, address:{number} }
  * @param onComplete
  */
-NetSimNodeRouter.prototype.getAddressTable = function (onComplete) {
+NetSimRouterNode.prototype.getAddressTable = function (onComplete) {
   onComplete = onComplete || function () {};
 
   this.getConnections(function (wires) {
@@ -312,7 +312,7 @@ NetSimNodeRouter.prototype.getAddressTable = function (onComplete) {
  * Check for and handle unhandled messages.
  * @private
  */
-NetSimNodeRouter.prototype.onMessageTableChange_ = function (rows) {
+NetSimRouterNode.prototype.onMessageTableChange_ = function (rows) {
 
   if (!this.simulateForSender_) {
     // Not configured to handle anything yet; don't process messages.
@@ -355,7 +355,7 @@ NetSimNodeRouter.prototype.onMessageTableChange_ = function (rows) {
   }
 };
 
-NetSimNodeRouter.prototype.routeMessage_ = function (message, myWires) {
+NetSimRouterNode.prototype.routeMessage_ = function (message, myWires) {
   // Find a connection to route this message to.
   var toAddress = message.payload.toAddress;
   if (toAddress === undefined) {

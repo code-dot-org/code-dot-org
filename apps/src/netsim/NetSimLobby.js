@@ -37,8 +37,8 @@ var dom = require('../dom');
 var utils = require('../utils');
 var netsimUtils = require('./netsimUtils');
 var NetSimLogger = require('./NetSimLogger');
-var NetSimNodeClient = require('./NetSimNodeClient');
-var NetSimNodeRouter = require('./NetSimNodeRouter');
+var NetSimClientNode = require('./NetSimClientNode');
+var NetSimRouterNode = require('./NetSimRouterNode');
 var markup = require('./NetSimLobby.html');
 
 var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
@@ -395,7 +395,7 @@ NetSimLobby.prototype.refreshOpenLobby_ = function () {
 
 /**
  * Reload the lobby listing of nodes.
- * @param {!Array.<NetSimNodeClient>} lobbyData
+ * @param {!Array.<NetSimClientNode>} lobbyData
  * @private
  */
 NetSimLobby.prototype.refreshLobbyList_ = function (lobbyData) {
@@ -416,7 +416,7 @@ NetSimLobby.prototype.refreshLobbyList_ = function (lobbyData) {
         simNode.getStatusDetail());
 
     // Style rows by row type.
-    if (simNode.getNodeType() === NetSimNodeRouter.getNodeType()) {
+    if (simNode.getNodeType() === NetSimRouterNode.getNodeType()) {
       item.addClass('router_row');
     } else {
       item.addClass('user_row');
@@ -444,7 +444,7 @@ NetSimLobby.prototype.refreshLobbyList_ = function (lobbyData) {
  */
 NetSimLobby.prototype.onRowClick_ = function (listItem, connectionTarget) {
   // Can't select user rows (for now)
-  if (NetSimNodeClient.getNodeType() === connectionTarget.getNodeType()) {
+  if (NetSimClientNode.getNodeType() === connectionTarget.getNodeType()) {
     return;
   }
 
