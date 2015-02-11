@@ -366,7 +366,8 @@ config.mochaTest = {
     },
     src: [
       'test/*.js',
-      'test/calc/*.js'
+      'test/calc/*.js',
+      'test/netsim/*.js'
     ]
   }
 };
