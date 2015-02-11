@@ -15,7 +15,7 @@ var widthText = document.getElementById("width");
 var widthRange = document.getElementById("widthRange");
 var heightText = document.getElementById("height");
 var heightRange = document.getElementById("heightRange");
-var bitsPerPixelText = document.getElementById("heightRange");
+var bitsPerPixelText = document.getElementById("bitsPerPixel");
 var bitsPerPixelRange = document.getElementById("bitsPerPixelSlider");
 
 function isHex() {
