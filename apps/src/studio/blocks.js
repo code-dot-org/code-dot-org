@@ -1767,7 +1767,7 @@ exports.install = function(blockly, blockInstallOptions) {
       var functionName = Blockly.JavaScript.variableDB_.getName(inputBlockName,
         Blockly.Procedures.NAME_TYPE);
 
-      Studio.bigGameInfo.functionNames[input.name] = functionName;
+      Studio.customGame.functionNames[input.name] = functionName;
     }, this);
   };
 
