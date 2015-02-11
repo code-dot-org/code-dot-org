@@ -15,11 +15,11 @@ describe("ObservableEvent", function () {
 
   describe("Registration and call ordering", function () {
     it ("calls registered functions in order of registration", function () {
-      eventA.register(null, funcX);
-      eventA.register(null, funcX);
-      eventA.register(null, funcY);
-      eventA.register(null, funcX);
-      eventA.register(null, funcY);
+      eventA.register(funcX);
+      eventA.register(funcX);
+      eventA.register(funcY);
+      eventA.register(funcX);
+      eventA.register(funcY);
 
       eventA.notifyObservers();
 
@@ -27,8 +27,8 @@ describe("ObservableEvent", function () {
     });
 
     it ("does not share functions between events", function () {
-      eventA.register(null, funcX);
-      eventB.register(null, funcY);
+      eventA.register(funcX);
+      eventB.register(funcY);
 
       eventA.notifyObservers();
 
@@ -36,9 +36,9 @@ describe("ObservableEvent", function () {
     });
 
     it ("can be fired multiple times", function () {
-      eventA.register(null, funcX);
-      eventA.register(null, funcX);
-      eventA.register(null, funcY);
+      eventA.register(funcX);
+      eventA.register(funcX);
+      eventA.register(funcY);
 
       eventA.notifyObservers();
 
@@ -54,9 +54,9 @@ describe("ObservableEvent", function () {
     var key1, key2, key3;
 
     beforeEach(function () {
-      key1 = eventA.register(null, funcX);
-      key2 = eventA.register(null, funcY);
-      key3 = eventA.register(null, funcX);
+      key1 = eventA.register(funcX);
+      key2 = eventA.register(funcY);
+      key3 = eventA.register(funcX);
     });
 
     it ("returns a frozen key", function () {
@@ -87,7 +87,7 @@ describe("ObservableEvent", function () {
     });
   });
 
-  it ("binds `this` to the observingObj passed into register", function () {
+  it ("respects binding `this` to the function passed into register", function () {
     var observerA = { log: "" };
     var observerB = { log: "" };
     var funcUsesThis = function () {
@@ -95,8 +95,8 @@ describe("ObservableEvent", function () {
       this.that = this;
     };
 
-    eventA.register(observerA, funcUsesThis);
-    eventA.register(observerB, funcUsesThis);
+    eventA.register(funcUsesThis.bind(observerA));
+    eventA.register(funcUsesThis.bind(observerB));
     eventA.notifyObservers();
 
     assert(observerA.log === "Z");
@@ -111,8 +111,8 @@ describe("ObservableEvent", function () {
       log += note;
     };
 
-    eventA.register(null, funcX);
-    eventA.register(null, funcWithArg);
+    eventA.register(funcX);
+    eventA.register(funcWithArg);
 
     eventA.notifyObservers("W");
 
