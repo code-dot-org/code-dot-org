@@ -5,6 +5,7 @@
  *
  */
 'use strict';
+/* global Studio */
 
 var studioApp = require('../StudioApp').singleton;
 var msg = require('../../locale/current/studio');
@@ -1763,7 +1764,6 @@ exports.install = function(blockly, blockInstallOptions) {
         return;
       }
       var inputBlockName = inputBlock.getTitleValue('NAME');
-      // TODO (brent) - private accessor
       var functionName = Blockly.JavaScript.variableDB_.getName(inputBlockName,
         Blockly.Procedures.NAME_TYPE);
 
