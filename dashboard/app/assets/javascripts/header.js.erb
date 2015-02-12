@@ -237,6 +237,20 @@
       } else {
         $(document).off('click', this.onModalClick);
       }
+
+      // The user signin button is rendered by client code if it wasn't sent by the server
+      // Offline mode shouldn't show it.
+      var $right = this.$el.find('.header_right');
+      if (!$right.find('.header_user').length) {
+        $right.append(
+          $('<div>').addClass('header_user').append(
+            $('<a>', {
+              href: '/users/sign_in',
+              id: 'signin_button'
+            }).addClass('button-signin').text('<%= I18n.t("nav.user.signin") %>')
+          )
+        );
+      }
     }
 
     HeaderProgress.prototype.componentDidUpdate = function() {

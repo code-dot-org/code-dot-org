@@ -26,6 +26,6 @@
                 %i.fa.fa-pencil
 
             - # TODO OFFLINE: user component
-            - if params[:controller] !~ /^sessions/
+            - if current_user && params[:controller] !~ /^sessions/
               .header_user
                 = render partial: 'shared/user_header'

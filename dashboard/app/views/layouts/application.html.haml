@@ -37,21 +37,3 @@
       = render partial: 'layouts/footer'
 
     = yield :body_scripts
-
-    :javascript
-      function hideUserOptions() {
-        $('.user_options').hide();
-        $('.user_menu_glyph').html('&#x25BC;');
-        $(document).off('click', hideUserOptions);
-      }
-      $('.user_menu').click(function (e) {
-        if ($('.user_options').is(':hidden')) {
-          e.stopPropagation();
-          $('.user_options').show();
-          $('.user_menu_glyph').html('&#x25B2;');
-          $(document).on('click', hideUserOptions);
-        }
-      });
-      $('.user_options').click(function (e) {
-        e.stopPropagation(); // Clicks inside the popup shouldn't close it
-      });

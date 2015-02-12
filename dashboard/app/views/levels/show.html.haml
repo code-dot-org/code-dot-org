@@ -16,15 +16,18 @@
   #title
     %h4{style: 'margin-left: auto; margin-right: auto; max-width: 800px;'}!= @level.properties['instructions']
   - # Pass special parameters to Blockly partial for embedded level type.
-  = render partial: 'levels/blockly', locals: {embed: true, hide_source: true, no_padding: true, show_finish: true}
+  - # TODO OFFLINE: {embed: true, hide_source: true, no_padding: true, show_finish: true}
+  #reference_area
+  #blocklyApp
 - else
-  = render partial: 'levels/blockly'
+  #reference_area
+  #blocklyApp
 
-- # TODO OFFLINE
+- # TODO OFFLINE: attach the cookie via the script callback URL?
 - if @script.try(:hoc?) && (@script_level.try(:chapter) == 1 || @script_level.try(:position) == 1)
   -# special tracking image to make sure a cookie is set when hoc starts (/hoc/1)
   = image_tag(tracking_pixel_url(@script))
 
-- # TODO OFFLINE
+- # TODO OFFLINE: client-side callback to pop up admin tools
 - if current_user.try(:admin?)
   = render partial: 'levels/admin'
