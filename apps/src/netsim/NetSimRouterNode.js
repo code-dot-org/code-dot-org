@@ -27,7 +27,8 @@
  */
 'use strict';
 
-var superClass = require('./NetSimNode');
+require('../utils');
+var NetSimNode = require('./NetSimNode');
 var NetSimEntity = require('./NetSimEntity');
 var NetSimLogger = require('./NetSimLogger');
 var NetSimWire = require('./NetSimWire');
@@ -61,7 +62,7 @@ var MAX_CLIENT_CONNECTIONS = 6;
  * @augments NetSimNode
  */
 var NetSimRouterNode = module.exports = function (shard, routerRow) {
-  superClass.call(this, shard, routerRow);
+  NetSimNode.call(this, shard, routerRow);
 
   /**
    * Determines a subset of connection and message events that this
@@ -79,8 +80,7 @@ var NetSimRouterNode = module.exports = function (shard, routerRow) {
    */
   this.heartbeat_ = null;
 };
-NetSimRouterNode.prototype = Object.create(superClass.prototype);
-NetSimRouterNode.prototype.constructor = NetSimRouterNode;
+NetSimRouterNode.inherits(NetSimNode);
 
 /**
  * Static async creation method. See NetSimEntity.create().
@@ -169,7 +169,7 @@ NetSimRouterNode.prototype.update = function (onComplete) {
     self.status_ = count >= MAX_CLIENT_CONNECTIONS ?
         RouterStatus.FULL : RouterStatus.READY;
     self.statusDetail_ = '(' + count + '/' + MAX_CLIENT_CONNECTIONS + ')';
-    superClass.prototype.update.call(self, onComplete);
+    NetSimRouterNode.superPrototype.update.call(self, onComplete);
   });
 };
 

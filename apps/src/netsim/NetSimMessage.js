@@ -34,7 +34,8 @@
  */
 'use strict';
 
-var superClass = require('./NetSimEntity');
+require('../utils');
+var NetSimEntity = require('./NetSimEntity');
 
 /**
  * Local controller for a message that is 'on the wire'
@@ -55,7 +56,7 @@ var superClass = require('./NetSimEntity');
  */
 var NetSimMessage = module.exports = function (shard, messageRow) {
   messageRow = messageRow !== undefined ? messageRow : {};
-  superClass.call(this, shard, messageRow);
+  NetSimEntity.call(this, shard, messageRow);
 
   /**
    * Node ID that this message is 'in transit' from.
@@ -75,8 +76,7 @@ var NetSimMessage = module.exports = function (shard, messageRow) {
    */
   this.payload = messageRow.payload;
 };
-NetSimMessage.prototype = Object.create(superClass.prototype);
-NetSimMessage.prototype.constructor = NetSimMessage;
+NetSimMessage.inherits(NetSimEntity);
 
 /**
  * Static async creation method.  Creates a new message on the given shard,

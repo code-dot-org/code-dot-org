@@ -27,7 +27,8 @@
  */
 'use strict';
 
-var superClass = require('./NetSimEntity');
+require('../utils');
+var NetSimEntity = require('./NetSimEntity');
 
 /**
  * Local controller for a simulated connection between nodes,
@@ -44,7 +45,7 @@ var superClass = require('./NetSimEntity');
  */
 var NetSimWire = module.exports = function (shard, wireRow) {
   wireRow = wireRow !== undefined ? wireRow : {};
-  superClass.call(this, shard, wireRow);
+  NetSimEntity.call(this, shard, wireRow);
 
   /**
    * Connected node row IDs within the _lobby table
@@ -69,8 +70,7 @@ var NetSimWire = module.exports = function (shard, wireRow) {
   this.localHostname = wireRow.localHostname;
   this.remoteHostname = wireRow.remoteHostname;
 };
-NetSimWire.prototype = Object.create(superClass.prototype);
-NetSimWire.prototype.constructor = NetSimWire;
+NetSimWire.inherits(NetSimEntity);
 
 /**
  * Static async creation method.  See NetSimEntity.create().
@@ -79,7 +79,7 @@ NetSimWire.prototype.constructor = NetSimWire;
  *        created entity, or null if entity creation failed.
  */
 NetSimWire.create = function (shard, onComplete) {
-  superClass.create(NetSimWire, shard, onComplete);
+  NetSimEntity.create(NetSimWire, shard, onComplete);
 };
 
 /**

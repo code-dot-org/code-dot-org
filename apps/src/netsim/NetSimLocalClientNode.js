@@ -27,7 +27,8 @@
  */
 'use strict';
 
-var superClass = require('./NetSimClientNode');
+require('../utils');
+var NetSimClientNode = require('./NetSimClientNode');
 var NetSimEntity = require('./NetSimEntity');
 var NetSimMessage = require('./NetSimMessage');
 var NetSimHeartbeat = require('./NetSimHeartbeat');
@@ -47,7 +48,7 @@ var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
  * @augments NetSimClientNode
  */
 var NetSimLocalClientNode = module.exports = function (shard, clientRow) {
-  superClass.call(this, shard, clientRow);
+  NetSimClientNode.call(this, shard, clientRow);
 
   /**
    * Client nodes can only have one wire at a time.
@@ -83,8 +84,7 @@ var NetSimLocalClientNode = module.exports = function (shard, clientRow) {
    */
   this.heartbeat_ = null;
 };
-NetSimLocalClientNode.prototype = Object.create(superClass.prototype);
-NetSimLocalClientNode.prototype.constructor = NetSimLocalClientNode;
+NetSimLocalClientNode.inherits(NetSimClientNode);
 
 /**
  * Static async creation method. See NetSimEntity.create().
@@ -178,7 +178,7 @@ NetSimLocalClientNode.prototype.update = function (onComplete, autoReconnect) {
   }
 
   var self = this;
-  superClass.prototype.update.call(this, function (success) {
+  NetSimLocalClientNode.superPrototype.update.call(this, function (success) {
     if (!success && autoReconnect) {
       self.reconnect_(function (success) {
         if (!success){

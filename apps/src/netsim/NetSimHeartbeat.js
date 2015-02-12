@@ -27,7 +27,8 @@
  */
 'use strict';
 
-var superClass = require('./NetSimEntity');
+require('../utils');
+var NetSimEntity = require('./NetSimEntity');
 
 /**
  * How often a heartbeat is sent, in milliseconds
@@ -46,7 +47,7 @@ var HEARTBEAT_INTERVAL_MS = 5000;
  */
 var NetSimHeartbeat = module.exports = function (shard, row) {
   row = row !== undefined ? row : {};
-  superClass.call(this, shard, row);
+  NetSimEntity.call(this, shard, row);
 
   /** @type {number} Row ID in node table */
   this.nodeID_ = row.nodeID;
@@ -54,8 +55,7 @@ var NetSimHeartbeat = module.exports = function (shard, row) {
   /** @type {number} unix timestamp (ms) */
   this.time_ = row.time !== undefined ? row.time : 0;
 };
-NetSimHeartbeat.prototype = Object.create(superClass.prototype);
-NetSimHeartbeat.prototype.constructor = NetSimHeartbeat;
+NetSimHeartbeat.inherits(NetSimEntity);
 
 /**
  * Static async creation method.  See NetSimEntity.create().
@@ -64,7 +64,7 @@ NetSimHeartbeat.prototype.constructor = NetSimHeartbeat;
  *        created entity, or null if entity creation failed.
  */
 NetSimHeartbeat.create = function (shard, onComplete) {
-  superClass.create(NetSimHeartbeat, shard, onComplete);
+  NetSimEntity.create(NetSimHeartbeat, shard, onComplete);
 };
 
 NetSimHeartbeat.getOrCreate = function (shard, nodeID, onComplete) {
