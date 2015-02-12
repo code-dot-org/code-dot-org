@@ -14,21 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-/**
- * @fileoverview Client model of simulated router
- *
- * Represents the client's view of a given router, provides methods for
- *   letting the client interact with the router, and wraps the client's
- *   work doing part of the router simulation.
- *
- * A router -exists- when it has a row in the lobby table of type 'router'
- * A router is connected to a user when a 'user' row exists in the lobby
- *   table that has a status 'Connected to {router ID} by wires {X, Y}'.
- * A router will also share a wire (simplex) or wires (duplex) with each user,
- *   which appear in the wire table.
- */
-
 /* jshint
  funcscope: true,
  newcap: true,
@@ -57,6 +42,18 @@ var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
 var MAX_CLIENT_CONNECTIONS = 6;
 
 /**
+ * Client model of simulated router
+ *
+ * Represents the client's view of a given router, provides methods for
+ *   letting the client interact with the router, and wraps the client's
+ *   work doing part of the router simulation.
+ *
+ * A router -exists- when it has a row in the lobby table of type 'router'
+ * A router is connected to a user when a 'user' row exists in the lobby
+ *   table that has a status 'Connected to {router ID} by wires {X, Y}'.
+ * A router will also share a wire (simplex) or wires (duplex) with each user,
+ *   which appear in the wire table.
+ *
  * @param {!NetSimShard} shard
  * @param {Object} [routerRow] - Lobby row for this router.
  * @constructor
@@ -74,7 +71,6 @@ var NetSimRouterNode = function (shard, routerRow) {
    */
   this.simulateForSender_ = undefined;
 
-  // Subscribe to message table changes
   this.shard_.messageTable.tableChange
       .register(this.onMessageTableChange_.bind(this));
 };
@@ -161,14 +157,6 @@ NetSimRouterNode.getNodeType = function () {
  */
 NetSimRouterNode.prototype.setSimulateForSender = function (nodeID) {
   this.simulateForSender_ = nodeID;
-};
-
-/**
- * Helper for getting wires table of configured shard.
- * @returns {NetSimTable}
- */
-NetSimRouterNode.prototype.getWireTable = function () {
-  return this.shard_.wireTable;
 };
 
 /**

@@ -32,7 +32,6 @@
  maxparams: 5,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 var superClass = require('./NetSimEntity');
@@ -55,12 +54,8 @@ var superClass = require('./NetSimEntity');
  * @augments NetSimEntity
  */
 var NetSimMessage = function (shard, messageRow) {
+  messageRow = messageRow !== undefined ? messageRow : {};
   superClass.call(this, shard, messageRow);
-
-  // Default empty wireRow object
-  if (messageRow === undefined) {
-    messageRow = {};
-  }
 
   /**
    * Node ID that this message is 'in transit' from.
@@ -113,9 +108,9 @@ NetSimMessage.prototype.getTable_ = function () {
 
 /** Build own row for the message table  */
 NetSimMessage.prototype.buildRow_ = function () {
-  return $.extend(superClass.prototype.buildRow_.call(this), {
+  return {
     fromNodeID: this.fromNodeID,
     toNodeID: this.toNodeID,
     payload: this.payload
-  });
+  };
 };
