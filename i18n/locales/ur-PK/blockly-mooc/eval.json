@@ -9,7 +9,7 @@
   "rectangleBlockTitle":"rectangle (width, height, style, color)",
   "reinfFeedbackMsg":"You can press the \"Try again\" button to edit your drawing.",
   "rotateImageBlockTitle":"rotate (degrees, image)",
-  "scaleImageBlockTitle":"پیمانہ (عنصر)",
+  "scaleImageBlockTitle":"scale (factor, image)",
   "squareBlockTitle":"مربع (سائز، سٹائل، رنگ)",
   "starBlockTitle":"ستارہ (رداس، سٹائل، رنگ)",
   "radialStarBlockTitle":"شعاعی ستارہ (نکات، داخلی، خارجی، سٹائل، رنگ)",

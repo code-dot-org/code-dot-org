@@ -1,4 +1,7 @@
 zh:
+  errors:
+    messages:
+      not_saved: 'Please correct the following errors:'
   activerecord:
     errors:
       messages:
@@ -293,10 +296,10 @@ zh:
     email_resend_confirm: 重新发送确认指令
     new_password_hint: （如果你不想改变它，留空白）
     current_password_hint: （我们需要您的当前密码以确认您的更改）
-    delete: Delete your account
-    delete_text: Clicking the button below will delete your account.
-    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
-    delete_confirm: Are you sure you want to delete your account?
+    delete: 删除你的帐号
+    delete_text: 点击下面的按钮将会删除你的帐号
+    delete_text_teacher_note: 请注意：删除你的帐号并不会同时删除你学生的帐号。
+    delete_confirm: 你确定删除这个帐号吗？
   user_level:
     completed: 已完成
     tried: 试过了

@@ -24,7 +24,7 @@ tr:
           Multi & Match: 'Çoklu & Eşleştirme'
           K-1 Flappy: K-1 Salınım
           Flappy non blockly: Bloksuz salınma
-          title: Course 1
+          title: Ders 1
           Artist 2: Aktör 2
           Happy Maps: Mutlu Haritalar
           Move it, Move it: Oynat, Oynat
@@ -33,7 +33,7 @@ tr:
           Getting Loopy: Döngüselleşme
           The Big Event: Büyük Olay
           Going Places Safely: Biryerlere Güvenle Gitmek
-          description: Course 1 is designed to allow early readers to create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.
+          description: Ders 1, küçük okuyucuların bilgisayar programı oluşturmalarında yardımcı olması, problem çözmedeki becerilerini geliştirmeleri, zor görevleri yapabilmeleri ve başkaları ile birlikte çalışabilmeleri için tasarlanmıştır. Dersin sonunda, öğrenciler, paylaşabilecekleri kendi farklı hikayelerini veya oyunlarını oluşturabilecekler. K-1 sınıfları için önerilir.
           "Bee: Sequence": 'Arı: Sıra'
           "Artist: Sequence": 'Aktör: Sıra'
           "Artist: Shapes": 'Aktör: Şekiller'
@@ -41,8 +41,8 @@ tr:
           "Bee: Loops": 'Arı: Döngüler'
           "Studio: Create a Story": 'Oyun Laboratuvarı: Bir Hikaye Oluşturun'
           "Artist: Loops": 'Aktör: Döngüler'
-          description_audience: Ages 4+ (pre-readers)
-          description_short: Course 1 is designed for early readers.
+          description_audience: 4 yaş üstü (çocuk okuyucular)
+          description_short: Ders 1 çocuklar için tasarlanmıştır.
         course2:
           The Maze: Labirent
           Suzi: Suzi
@@ -68,7 +68,7 @@ tr:
           Binary Bracelets: İkilik Bileklikler
           The Big Event: Büyük Olay
           Your Digital Footprint: Dijital İziniz
-          description: Course 2 is designed for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
+          description: Ders 2 önceden herhangi bir programlama deneyimi olmayan ve okuma-yazma bilen öğrenciler için tasarlanmıştır. Bu derste öğrenciler sorunlarını çözmek ve paylaşabilecekleri hikayeler ile interaktif oyun oluşturabilecekler. 2-5. Sınıflar için tavsiye edilir.
           "Maze: Sequence": 'Labirent: Sıra'
           "Artist: Sequence": 'Aktör: Sıra'
           "Maze: Loops": 'Labirent: Döngüler'
@@ -80,8 +80,8 @@ tr:
           "Artist: Sequence2": 'Aktör: Sıra2'
           "Maze: Sequence2": 'Labirent: Sıra2'
           "Artist: Nested Loops": 'Aktör: Yerleştirilmiş Döngüler'
-          description_audience: 'Ages  6+ (reading required)'
-          description_short: Course 2 is designed for students who can read.
+          description_audience: 6 yaş ve üstü (okuma becerisi gerekir)
+          description_short: Ders 2, okuma bilen öğrenciler için tasarlanmıştır.
         course3:
           The Maze: Labirent
           "Studio: Create a Story": 'Oyun Laboratuvarı: Bir Hikaye Oluşturun'
@@ -101,13 +101,13 @@ tr:
           Artist Functions with Parameters: Parametreli Aktör Fonksiyonları
           Computational Thinking: Sayısal Düşünme
           Functional Suncatchers: Fonksiyonel Güneş Avcıları
-          Songwriting Parameters: Songwriting Parameters
+          Songwriting Parameters: Müzik yazarlığı parametreleri
           Dice Race: Zar Yarışı
           Internet: İnternet
           Crowdsourcing: "Kalabalık Kaynaklandırma 'Crowdsourcing'"
           Digital Citizenship: Sayısal Vatandaşlık
           Farmer - While Loops: 'Çiftçi - While Döngüleri'
-          description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
+          description: "Ders 3, Ders 2'yi alan öğrenciler için tasarlanmıştır. Öğrenciler, daha karmaşık sorunlar için bulunan esnek çözümleri uygulamak için önceki derste öğrendikleri programlama konularını daha çok inceleyecekler. Dersin sonunda, öğrenciler, herhangi birisiyle paylaşabilecekleri interaktif hikaye ve oyun oluşturabilecekler. 4 ve 5. sınıflar için önerilir."
           "Studio: Create a Game": 'Oyun Laboratuvarı: Bir Oyun Oluşturmak'
           Maze: Labirent
           Artist: Aktör
@@ -129,10 +129,10 @@ tr:
           "Farmer: While Loops2": 'Çiftçi: While Döngüleri2'
           "Bee: Nested Loops2": 'Arı: Yerleştirilmiş Döngüler2'
           "Bee: Debugging2": 'Arı: Ayıklama2'
-          "Artist: Patterns": 'Artist: Patterns'
+          "Artist: Patterns": 'Sanatçı: Desenler'
           Songwriting: Şarkı yazma
-          description_audience: Ages 8+ (after Course 2)
-          description_short: Course 3 is a follow-up to Course 2.
+          description_audience: 8 yaş ve üstü (Ders 2 sonrası)
+          description_short: "Ders 3, Ders 2'nin devamıdır."
         msm:
           title: Ortaokul Matematiği
           description: Ortaokul Matematiği için özel çalışma sürüyor.
@@ -140,105 +140,105 @@ tr:
           Assessments: Değerlendirmeler
           Unit 1: Ünite 1
           Unit 2: İkinci Ünite
-          Ninja Cat and the Coordinate Plane: Ninja Cat and the Coordinate Plane
-          "Calc: Circles of Evaluation": 'Calc: Circles of Evaluation'
-          "Artist: Strings and Images": 'Artist: Strings and Images'
-          Contracts: Contracts
-          "Artist: Writing Contracts": 'Artist: Writing Contracts'
-          "Calc: Defining Variables": 'Calc: Defining Variables'
-          "Play Lab: Defining Variables": 'Play Lab: Defining Variables'
-          The Design Recipe: The Design Recipe
-          "Artist: Defining Functions": 'Artist: Defining Functions'
-          "Play Lab: Defining Functions": 'Play Lab: Design Recipe'
+          Ninja Cat and the Coordinate Plane: Ninja Kedi ve Koordinat Düzlemi
+          "Calc: Circles of Evaluation": 'Hesaplama: PUKÖ döngüsü'
+          "Artist: Strings and Images": 'Sanatçı: Diziler ve Görüntüler'
+          Contracts: Teknikler
+          "Artist: Writing Contracts": 'Sanatçı: Teknikleri Yazma'
+          "Calc: Defining Variables": 'Hesaplama: Değişkenleri Tanımlama'
+          "Play Lab: Defining Variables": 'Play Lab: Değişkenleri Tanımlama'
+          The Design Recipe: Tasarım Tarifi
+          "Artist: Defining Functions": 'Sanatçı: Fonksiyonları Tanımlama'
+          "Play Lab: Defining Functions": 'Play Lab: Tasarım Tarifi'
           "Artist: Functions": 'Aktör: Fonksiyonlar'
-          "Play Lab: Animation": 'Play Lab: Animation'
-          Booleans: Booleans
-          "Play Lab: Booleans": 'Play Lab: Booleans'
-          "Calc: Boolean Operators": 'Calc: Boolean Operators'
-          "Play Lab: Boolean Operators": 'Play Lab: Boolean Operators'
-          Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
-          "Artist: Conditionals": 'Artist: Conditionals'
-          Collision Detection and the Distance Formula: Collision Detection and the Distance Formula
-          "Play Lab: Collision Detection": 'Play Lab: Collision Detection'
-          "Unplugged: Ninja Cat and the Coordinate Plane": 'Unplugged: Ninja Cat and the Coordinate Plane'
-          "Eval: Strings and Images": 'Eval: Strings and Images'
-          "Unplugged: Contracts": 'Unplugged: Contracts'
-          "Eval: Writing Contracts": 'Eval: Writing Contracts'
-          "Unplugged: The Design Recipe": 'Unplugged: The Design Recipe'
-          "Eval: Defining Functions": 'Eval: Fast Functions'
-          "Eval: Functions": 'Eval: Design Recipe'
-          "Unplugged: Booleans": 'Unplugged: Booleans'
-          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals and Piecewise Functions'
-          "Eval: Conditionals": 'Eval: Conditionals'
-          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Distance Formula'
-          "Calc: Evaluation Blocks": 'Calc: Evaluation Blocks'
-          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
-          "Eval: Boolean Operators": 'Eval: Boolean Operators'
-          Blocks to Math: Blocks to Math
-          "Play Lab: Defining Variables (Big Game)": 'Play Lab: Defining Variables (Big Game)'
-          "Play Lab: Animation (Big Game)": 'Play Lab: Animation (Big Game)'
-          "Play Lab: Boolean (Big Game)": 'Play Lab: Boolean (Big Game)'
-          "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
-          "Eval: Fast Functions": 'Eval: Fast Functions'
-          "Play Lab: Design Recipe": 'Play Lab: Design Recipe'
-          "Eval: Design Recipe": 'Eval: Design Recipe'
+          "Play Lab: Animation": 'Play Lab: Animasyon'
+          Booleans: Boolean Değerleri
+          "Play Lab: Booleans": 'Play Lab: Boolean Değerleri'
+          "Calc: Boolean Operators": 'Hesaplama: Boolean Operatörleri'
+          "Play Lab: Boolean Operators": 'Play Lab: Boolean Operatörleri'
+          Conditionals and Piecewise Functions: Koşullar ve Parçalı Fonksiyonlar
+          "Artist: Conditionals": 'Sanatçı: Koşullar'
+          Collision Detection and the Distance Formula: Kaza algılama ve Uzaklık Formülü
+          "Play Lab: Collision Detection": 'Play Lap: Kaza Algılama'
+          "Unplugged: Ninja Cat and the Coordinate Plane": 'Unplugged: Ninja Kedi ve Koordinat Düzlemi'
+          "Eval: Strings and Images": 'Eval: Diziler ve Görüntüler'
+          "Unplugged: Contracts": 'Unplugged: Teknikler'
+          "Eval: Writing Contracts": 'Eval: Yazım Teknikleri'
+          "Unplugged: The Design Recipe": 'Unplugged: Tasarım Tarifi'
+          "Eval: Defining Functions": 'Eval: Hızlı Fonksiyonlar'
+          "Eval: Functions": 'Eval: Tasarım Tarifi'
+          "Unplugged: Booleans": 'Unplugged: Boolean Değerleri'
+          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Şartlar ve Parçalı Fonksiyonlar'
+          "Eval: Conditionals": 'Eval: Şartlar'
+          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Kaza Algılama ve Mesafe Formülü'
+          "Calc: Evaluation Blocks": 'Calc: Değerlendirme Blokları'
+          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Oyunları ve Koordinat Düzlemleri'
+          "Eval: Boolean Operators": 'Eval: Boolean Operatörleri'
+          Blocks to Math: Matematik için bloklar
+          "Play Lab: Defining Variables (Big Game)": 'Play Lab: Değişkenleri Tanımlama (Büyük Oyun)'
+          "Play Lab: Animation (Big Game)": 'Play Lab: Animasyon (Büyük Oyun)'
+          "Play Lab: Boolean (Big Game)": 'Play Lab: Boolean (Büyük Oyun)'
+          "Play Lab: Collision Detection (Big Game)": 'Play Lab: Kaza Algılama (Büyük Oyun)'
+          "Eval: Fast Functions": 'Eval: Hızlı Fonksiyonlar'
+          "Play Lab: Design Recipe": 'Play Lab: Tasarım Tarifi'
+          "Eval: Design Recipe": 'Eval: Tasarım Tarifi'
         playlab:
-          title: Play Lab
-          description: Create a story or make a game with Play Lab!
-          Play Lab: Play Lab
-          description_short: Create a story or make a game with Play Lab!
+          title: Oyun Laboratuvarı
+          description: Oyun Laboratuvarı ile hikaye yarat veya oyun yap!
+          Play Lab: Oyun Laboratuvarı
+          description_short: Oyun Laboratuvarı ile hikaye yarat veya oyun yap!
         artist:
           title: Aktör
-          description: Draw cool pictures and designs with the Artist!
+          description: Sanatçı ile harika resimler ve tasarımlar yap!
           Artist: Aktör
-          description_short: Draw cool pictures and designs with the Artist!
+          description_short: Sanatçı ile harika resimler ve tasarımlar yap!
         scrat:
           title: Scrat
-          description_short: Scrat short description.
-          description: Scrat long description
+          description_short: Scrat kısa açıklama.
+          description: Scrat uzun açıklama
           "Maze: Sequence": 'Labirent: Sıra'
         hourofcode:
           Maze: Labirent
           title: Saat Kodu
-          description: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
-          description_short: Try the basics of computer science with many fun characters!
+          description: Angry Birds, Plants vs. Zombies karakterlerini ve Buz Devrinden sincap Scrat ile birlikte bilgisayar biliminin temel yapısını dene!
+          description_short: Birçok eğlenceli karakterler ile birlikte bilgisayar biliminin temel öğelerini dene!
         frozen:
-          title: Code with Anna and Elsa
-          description: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
+          title: Anna ve Elsa ile kodlama yap
+          description: "Hadi kod kullanarak sihri ve buzun güzelliğini keşfedecek olan Anna ve Elsa'ya katıl. Buz kayağı ve kış harikalar diyarı gibi kar taneleri ve desenler oluşturacaksın sonra bunları arkadaşlarınla paylaşabileceksin!"
           Artist: Aktör
           description_short: "Buzun büyüsü ve güzelliğini keşfetmek için Anna ve Elsa'ya katılıp kodlama yapalım."
         course4:
-          description_short: Students taking Course 4 should have already taken Courses 2 and 3.
-          description: Course 4 is designed for students who have taken Course 2 and 3. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8.
-          "Artist: Variables": 'Artist: Variables'
-          "Bee: For Loops": 'Bee: For Loops'
-          title: Course 4
-          "Algorithms: Tangrams": 'Algorithms: Tangrams'
+          description_short: "Ders 4'ü alan öğrenciler Ders 2 ve 3'ü almış olmalıdır."
+          description: "Ders 4, Ders 3 ve Ders 2'yi alan öğrenciler için tasarlanmıştır. Öğrenciler, daha karmaşık sorunlar için bulunan esnek çözümleri uygulamak için önceki derste öğrendikleri programlama konularını daha çok inceleyecekler. Dersin sonunda, öğrenciler, herhangi birisiyle paylaşabilecekleri interaktif hikaye ve oyun oluşturabilecekler. 4-8. sınıflar için önerilir."
+          "Artist: Variables": 'Sanatçı: Değişkenler'
+          "Bee: For Loops": 'Arı: For Döngüleri'
+          title: Ders 4
+          "Algorithms: Tangrams": 'Algoritmalar: Tangramlar'
           Variables: Değişkenler
-          "Play Lab: Variables": 'Play Lab: Variables'
-          "Play Lab: Functions with Parameters": 'Play Lab: Functions with Parameters'
-          "Bee: Functions with Parameters": 'Bee: Functions with Parameters'
-          "Artist: For Loops": 'Artist: For Loops'
-          "Play Lab: For Loops": 'Play Lab: For Loops'
+          "Play Lab: Variables": 'Oyun Laboratuvarı: Değişkenler'
+          "Play Lab: Functions with Parameters": 'Oyun Laboratuvarı: Fonksiyonlar ve Parametreler'
+          "Bee: Functions with Parameters": 'Arı: Fonksiyonlar ve Parametreler'
+          "Artist: For Loops": 'Sanatçı: For Döngüleri'
+          "Play Lab: For Loops": 'Oyun Laboratuvarı: For Döngüleri'
           "Artist: Functions": 'Aktör: Fonksiyonlar'
-          "Artist: Functions with Paraqmeters": 'Artist: Functions with Paraqmeters'
-          "Unplugged: Tangrams": 'Unplugged: Tangrams'
+          "Artist: Functions with Paraqmeters": 'Sanatçı: Fonksiyonlar ve Parametreler'
+          "Unplugged: Tangrams": 'Unplugged: Tangramlar'
           Artist: Aktör
-          Bee: Bee
-          "Unplugged: Envelope Variables": 'Unplugged: Envelope Variables'
-          "Unplugged: Madlibs": 'Unplugged: Madlibs'
-          "Unplugged: For Loop Fun": 'Unplugged: For Loop Fun'
-          "Unplugged: Songwriting with Parameters": 'Unplugged: Songwriting with Parameters'
-          "Artist: Functions with Parameters": 'Artist: Functions with Parameters'
-          "Unplugged: Binary": 'Unplugged: Binary'
-          Bee Binary: Bee Binary
-          Farmer Binary: Farmer Binary
-          Maze and Bee: Maze and Bee
-          Artist Binary: Artist Binary
-          description_audience: Ages 10+ (after Course 3)
+          Bee: Arı
+          "Unplugged: Envelope Variables": 'Bağımsız: Fişteki Değişkenler'
+          "Unplugged: Madlibs": 'Bağımsız: Madlibs'
+          "Unplugged: For Loop Fun": 'Bağımsız: Döngü Eğlencesi İçin'
+          "Unplugged: Songwriting with Parameters": 'Unplugged: Parametrelerle şarkı yazarlığı'
+          "Artist: Functions with Parameters": 'Sanatçı: Fonksiyonlar ve Parametreler'
+          "Unplugged: Binary": 'Unplugged: İkili Taban'
+          Bee Binary: Arı İkili Taban
+          Farmer Binary: Çiftçi İkili Taban
+          Maze and Bee: Labirent ve Arı
+          Artist Binary: Sanaçtı İkili Taban
+          description_audience: 10 Yaş ve Üstü (Ders 3 sonrası)
         Course4pre:
-          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
+          description_short: "Ders 2 ve 3'ü almamış öğrenciler için kavramların artırılması."
+          Course 4 Prerequisite: Ders 4 Ön Koşulu
           "Maze: Sequence": 'Labirent: Sıra'
           "Artist: Sequence": 'Aktör: Sıra'
           "Artist: Loops": 'Aktör: Döngüler'
@@ -249,8 +249,8 @@ tr:
           "Artist: Functions": 'Aktör: Fonksiyonlar'
           "Bee: Debugging": 'Arı: Ayıklama'
         course4pre:
-          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
+          description_short: "Ders 2 ve 3'ü almamış öğrenciler için kavramların artırılması."
+          Course 4 Prerequisite: Ders 4 Ön Koşulu
           "Maze: Sequence": 'Labirent: Sıra'
           "Artist: Sequence": 'Aktör: Sıra'
           "Artist: Loops": 'Aktör: Döngüler'
@@ -261,8 +261,8 @@ tr:
           "Artist: Functions": 'Aktör: Fonksiyonlar'
           "Bee: Debugging": 'Arı: Ayıklama'
         Course4pre (Case Conflict):
-          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
+          description_short: "Ders 2 ve 3'ü almamış öğrenciler için kavramların artırılması."
+          Course 4 Prerequisite: Ders 4 Ön Koşulu
           "Maze: Sequence": 'Labirent: Sıra'
           "Artist: Sequence": 'Aktör: Sıra'
           "Artist: Loops": 'Aktör: Döngüler'
@@ -273,57 +273,82 @@ tr:
           "Artist: Functions": 'Aktör: Fonksiyonlar'
           "Bee: Debugging": 'Arı: Ayıklama'
         usability:
-          Intro: Intro
-          Variables and For Loops: Variables and For Loops
-          Functions and Functions with Parameters: Functions and Functions with Parameters
-          title: Usability Testing
+          Intro: Giriş
+          Variables and For Loops: Değişkenler ve For Döngüleri
+          Functions and Functions with Parameters: Fonsiyonlar ve Parametreleri Verilen Fonksiyonlar
+          title: Kullanılabilirlik Testi
           description_short: ""
-          description: A selection of Course 4 levels for usability testing.
+          description: Kullanılabilirlik testi için Ders 4 seviyelerinden bir seçim.
           Variables: Değişkenler
-          For Loops: For Loops
+          For Loops: For Döngüleri
           Binary: İkili
         potus:
-          title: special
-          description_short: special
-          description: special
-          Special: Special
+          title: özel
+          description_short: özel
+          description: özel
+          Special: Özel
         special:
-          title: special
-          description_short: special
-          description: special
-          Special: Special
+          title: özel
+          description_short: özel
+          description: özel
+          Special: Özel
           Binary: İkili
         usabilitymsm:
-          Usability testing for MSM: Usability testing for MSM
-          Evaluation Blocks: Evaluation Blocks
-          Blocks to Math: Blocks to Math
-          Strings and Images: Strings and Images
-          Defining Variables: Defining Variables
-          Defining Functions: Defining Functions
-          Design Recipe: Design Recipe
-          Booleans: Booleans
+          Usability testing for MSM: Ortaokul Matematiği için Kullanılabilirlik Testi
+          Evaluation Blocks: Değerlendirme Blokları
+          Blocks to Math: Matematik için bloklar
+          Strings and Images: Diziler ve Görüntüler
+          Defining Variables: Değişkenler Tanımlama
+          Defining Functions: Fonksiyonlar Tanımlama
+          Design Recipe: Tasarım Tarifi
+          Booleans: Boolean Değerleri
           Conditionals: Koşullar
-          Free Play: Free Play
+          Free Play: Ücretsiz Oyna
         algebra:
-          title: Computer Science in Algebra
-          description: Learn Functional Programming through Algebra
-          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
-          "Calc: Evaluation Blocks": 'Calc: Evaluation Blocks'
-          "Eval: Strings and Images": 'Eval: Strings and Images'
-          "Unplugged: Contracts": 'Unplugged: Contracts'
-          "Eval: Writing Contracts": 'Eval: Writing Contracts'
-          "Calc: Defining Variables": 'Calc: Defining Variables'
-          "Play Lab: Defining Variables (Big Game)": 'Play Lab: Defining Variables (Big Game)'
-          "Eval: Defining Functions": 'Eval: Defining Functions'
-          "Unplugged: The Design Recipe": 'Unplugged: The Design Recipe'
-          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
-          "Eval: Functions": 'Eval: Functions'
-          "Play Lab: Animation (Big Game)": 'Play Lab: Animation (Big Game)'
-          "Unplugged: Booleans": 'Unplugged: Booleans'
-          "Eval: Boolean Operators": 'Eval: Boolean Operators'
-          "Play Lab: Booleans": 'Play Lab: Booleans'
-          "Play Lab: Boolean (Big Game)": 'Play Lab: Boolean (Big Game)'
-          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals and Piecewise Functions'
-          "Eval: Conditionals": 'Eval: Conditionals'
-          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Distance Formula'
-          "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
+          title: Cebirde Bilgisayar Bilimi
+          description: Cebir Yoluyla Fonksiyonel Programlamayı Öğren
+          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Oyunları ve Koordinat Düzlemleri'
+          "Calc: Evaluation Blocks": 'Calc: Değerlendirme Blokları'
+          "Eval: Strings and Images": 'Eval: Diziler ve Görüntüler'
+          "Unplugged: Contracts": 'Unplugged: Teknikler'
+          "Eval: Writing Contracts": 'Eval: Yazım Teknikleri'
+          "Calc: Defining Variables": 'Hesaplama: Değişkenleri Tanımlama'
+          "Play Lab: Defining Variables (Big Game)": 'Play Lab: Değişkenleri Tanımlama (Büyük Oyun)'
+          "Eval: Defining Functions": 'Eval: Fonksiyonları Tanımlama'
+          "Unplugged: The Design Recipe": 'Unplugged: Tasarım Tarifi'
+          "Play Lab: Defining Functions": 'Oyun Laboratuvarı: Fonksiyonları Tanımlama'
+          "Eval: Functions": 'Eval: Fonksiyonlar'
+          "Play Lab: Animation (Big Game)": 'Play Lab: Animasyon (Büyük Oyun)'
+          "Unplugged: Booleans": 'Unplugged: Boolean Değerleri'
+          "Eval: Boolean Operators": 'Eval: Boolean Operatörleri'
+          "Play Lab: Booleans": 'Play Lab: Boolean Değerleri'
+          "Play Lab: Boolean (Big Game)": 'Play Lab: Boolean (Büyük Oyun)'
+          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Şartlar ve Parçalı Fonksiyonlar'
+          "Eval: Conditionals": 'Eval: Şartlar'
+          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Kaza Algılama ve Mesafe Formülü'
+          "Play Lab: Collision Detection (Big Game)": 'Play Lab: Kaza Algılama (Büyük Oyun)'
+        infinity:
+          title: Oyun Laboratuvarı
+          description_short: Oyun Laboratuvarı ile hikaye yarat veya oyun yap!
+          description: Oyun Laboratuvarı ile hikaye yarat veya oyun yap!
+          Play Lab: Oyun Laboratuvarı
+        algebrademo:
+          description: "Çevrendekileri ve Code.org'ta cebirin içindeki bilgisayar biliminde kullanılan programlama dilini göstermek için kullanışlı bulmacalar"
+          Algebra Demo: Cebir Demo
+          Evaluation Blocks: Değerlendirme Blokları
+          Making Pictures: Resim Yapma
+          Defining Variables: Değişkenler Tanımlama
+          Defining Simple Functions: Basit Fonksiyonları Tanımlama
+          The Design Recipe: Tasarım Tarifi
+        K5PD:
+          Introduction to PD: Kişisel Geliştirme Giriş
+        netsim:
+          title: İnternet Simülatörü
+          description_short: ""
+          description: ""
+          Internet Simulator: İnternet Simülatörü
+        Infinity:
+          title: Infinity Oyun Laboratuvarı
+          description_short: Infinity Oyun Laboratuvarı ile bir hikaye oluştur veya oyun yap!!
+          description: Infinity Oyun Laboratuvarı ile bir hikaye oluştur veya oyun yap!
+          Infinity: Sonsuz

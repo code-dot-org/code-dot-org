@@ -5,58 +5,55 @@
         test:
           'Jigsaw: Learn to drag and drop': 拼图： 学习拖放
           The Maze: 迷宫
-          Multi: Multi
-          Match: Match
+          Multi: 多
+          Match: 匹配
           Math Image: 数学图片
           title: 测试课程
           description: 只是一个内部测试的课程。
         course1:
           'Jigsaw: Learn to drag and drop': 拼图： 学习拖放
-          'Maze: Sequence': 'Maze: Sequence'
-          'Maze: Debugging': 'Maze: Debugging'
-          'Artist 1: Intro': 'Artist 1: Intro'
-          Artists 2: Artists 2
-          Spelling Bee: Spelling Bee
-          Spelling Bee not blockly: Spelling Bee not blockly
-          'Bee 1: Intro': 'Bee 1: Intro'
-          'Maze 2: Loops': 'Maze 2: Loops'
-          'Bee 2: Loops': 'Bee 2: Loops'
-          Multi & Match: Multi & Match
-          K-1 Flappy: K-1 Flappy
-          Flappy non blockly: Flappy non blockly
-          title: Course 1
-          Artist 2: Artist 2
-          Happy Maps: Happy Maps
-          Move it, Move it: Move it, Move it
-          'Real-life Algorithms: Plant a Seed': 'Real-life Algorithms: Plant a Seed'
-          Building a Foundation: Building a Foundation
-          Getting Loopy: Getting Loopy
-          The Big Event: The Big Event
-          Going Places Safely: Going Places Safely
-          description: Course 1 is designed to allow early readers to create computer
-            programs that will help them learn to collaborate with others, develop
-            problem-solving skills, and persist through difficult tasks. By the end
-            of this course, students create their very own custom game or story that
-            they can share. Recommended for grades K-1.
-          'Bee: Sequence': 'Bee: Sequence'
-          'Artist: Sequence': 'Artist: Sequence'
-          'Artist: Shapes': 'Artist: Shapes'
-          'Maze: Loops': 'Maze: Loops'
+          'Maze: Sequence': 迷宫： 序列
+          'Maze: Debugging': 迷宫： 调试中
+          'Artist 1: Intro': 艺术家 1： 简介
+          Artists 2: 艺术家 2
+          Spelling Bee: 拼字比赛
+          Spelling Bee not blockly: blockly不是拼字比赛
+          'Bee 1: Intro': 蜜蜂 1： 简介
+          'Maze 2: Loops': 迷宫 2： 循环
+          'Bee 2: Loops': 蜜蜂 2： 循环
+          Multi & Match: 多重选择 & 匹配
+          K-1 Flappy: K-1 小飞人
+          Flappy non blockly: Flappy Bird 不是 blockly
+          title: '课程 1:'
+          Artist 2: 艺术家 2
+          Happy Maps: 幸福地图
+          Move it, Move it: 移动它，移动它
+          'Real-life Algorithms: Plant a Seed': 真实算法： 播种一颗种子
+          Building a Foundation: 打基础
+          Getting Loopy: 越来越糊涂
+          The Big Event: 大事件
+          Going Places Safely: 去安全的地方
+          description: 课程 1 旨在能让初学者创建计算机程序，在这个过程中帮助他们学习如何与他人进行协作、 提高解决问题的能力，并通过不断努力完成艰巨的任务。这门课程结束时，学生能创建他们自己编写的游戏或故事，并分享给别人。推荐等级
+            K-1。
+          'Bee: Sequence': 蜜蜂： 序列
+          'Artist: Sequence': 艺术家： 序列
+          'Artist: Shapes': 艺术家： 形状
+          'Maze: Loops': 迷宫： 循环
           'Bee: Loops': 蜜蜂： 循环
-          'Studio: Create a Story': 'Play Lab: Create a Story'
+          'Studio: Create a Story': 'Play Lab: 创建一个故事'
           'Artist: Loops': 'Artist: Loops'
-          description_audience: Ages 4+ (pre-readers)
+          description_audience: 年龄 4 + （学前）
           description_short: 课程1是为小朋友设计的
         course2:
           The Maze: 迷宫
-          Suzi: Suzi
+          Suzi: 苏茜
           The Artist: 艺术家
           Artist Debugging: Artist Debugging
           Bounce: 跳
-          'Studio: Create a Story': 'Play Lab: Create a Story'
+          'Studio: Create a Story': 'Play Lab: 创建一个故事'
           Artist Loops: Artist Loops
           Bee Conditionals: Bee Conditionals
-          Flappy: Flappy
+          Flappy: Flappy Bird
           title: 课程2
           Bee Loops: Bee Loops
           Artist Functions: Artist Functions
@@ -66,19 +63,19 @@
           Maze Loops: Maze Loops
           Graph Paper Programming: 方格纸编程
           'Real-life Algorithms: Paper Planes': 'Real-life Algorithms: Paper Planes'
-          Getting Loopy: Getting Loopy
+          Getting Loopy: 越来越糊涂
           Relay programming: Relay programming
           Conditionals: 条件语句
           Binary Bracelets: Binary Bracelets
-          The Big Event: The Big Event
+          The Big Event: 大事件
           Your Digital Footprint: Your Digital Footprint
           description: Course 2 is designed for students who can read and have no
             prior programming experience. In this course students will create programs
             to solve problems and develop interactive games or stories they can share.
             Recommended for grades 2-5.
-          'Maze: Sequence': 'Maze: Sequence'
-          'Artist: Sequence': 'Artist: Sequence'
-          'Maze: Loops': 'Maze: Loops'
+          'Maze: Sequence': 迷宫： 序列
+          'Artist: Sequence': 艺术家： 序列
+          'Maze: Loops': 迷宫： 循环
           'Artist: Loops': 'Artist: Loops'
           'Bee: Loops': 蜜蜂： 循环
           'Bee: Debugging': 'Bee: Debugging'
@@ -91,7 +88,7 @@
           description_short: Course 2 is designed for students who can read.
         course3:
           The Maze: 迷宫
-          'Studio: Create a Story': 'Play Lab: Create a Story'
+          'Studio: Create a Story': 'Play Lab: 创建一个故事'
           The Artist: 艺术家
           title: Course 3
           Artist Functions: Artist Functions
@@ -214,7 +211,7 @@
           title: Scrat
           description_short: Scrat short description.
           description: Scrat long description
-          'Maze: Sequence': 'Maze: Sequence'
+          'Maze: Sequence': 迷宫： 序列
         hourofcode:
           Maze: 迷宫
           title: 编程一小时
@@ -265,8 +262,8 @@
           description_short: A brief rampup of concepts for students who have not
             taken Course 2 and 3.
           Course 4 Prerequisite: Course 4 Prerequisite
-          'Maze: Sequence': 'Maze: Sequence'
-          'Artist: Sequence': 'Artist: Sequence'
+          'Maze: Sequence': 迷宫： 序列
+          'Artist: Sequence': 艺术家： 序列
           'Artist: Loops': 'Artist: Loops'
           'Bee: Conditionals': 'Bee: Conditionals'
           'Artist: Nested Loops': 'Artist: Nested Loops'
@@ -278,8 +275,8 @@
           description_short: A brief rampup of concepts for students who have not
             taken Course 2 and 3.
           Course 4 Prerequisite: Course 4 Prerequisite
-          'Maze: Sequence': 'Maze: Sequence'
-          'Artist: Sequence': 'Artist: Sequence'
+          'Maze: Sequence': 迷宫： 序列
+          'Artist: Sequence': 艺术家： 序列
           'Artist: Loops': 'Artist: Loops'
           'Bee: Conditionals': 'Bee: Conditionals'
           'Artist: Nested Loops': 'Artist: Nested Loops'
@@ -291,8 +288,8 @@
           description_short: A brief rampup of concepts for students who have not
             taken Course 2 and 3.
           Course 4 Prerequisite: Course 4 Prerequisite
-          'Maze: Sequence': 'Maze: Sequence'
-          'Artist: Sequence': 'Artist: Sequence'
+          'Maze: Sequence': 迷宫： 序列
+          'Artist: Sequence': 艺术家： 序列
           'Artist: Loops': 'Artist: Loops'
           'Bee: Conditionals': 'Bee: Conditionals'
           'Artist: Nested Loops': 'Artist: Nested Loops'
@@ -309,7 +306,7 @@
           description: A selection of Course 4 levels for usability testing.
           Variables: 变量
           For Loops: For Loops
-          Binary: Binary
+          Binary: 二进制
         potus:
           title: special
           description_short: special
@@ -320,7 +317,7 @@
           description_short: special
           description: special
           Special: Special
-          Binary: Binary
+          Binary: 二进制
         usabilitymsm:
           Usability testing for MSM: Usability testing for MSM
           Evaluation Blocks: Evaluation Blocks
@@ -360,3 +357,29 @@
             Detection and the Distance Formula'
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
             (Big Game)'
+        infinity:
+          title: 播放实验室
+          description_short: 创建一个故事或做游戏玩实验室！
+          description: 创建一个故事或做游戏玩实验室！
+          Play Lab: 播放实验室
+        algebrademo:
+          description: A handful of puzzles to demonstrate the environment and programming
+            language used in Code.org CS in Algebra
+          Algebra Demo: Algebra Demo
+          Evaluation Blocks: Evaluation Blocks
+          Making Pictures: Making Pictures
+          Defining Variables: Defining Variables
+          Defining Simple Functions: Defining Simple Functions
+          The Design Recipe: The Design Recipe
+        K5PD:
+          Introduction to PD: Introduction to PD
+        netsim:
+          title: Internet Simulator
+          description_short: ''
+          description: ''
+          Internet Simulator: Internet Simulator
+        Infinity:
+          title: Infinity Playlab
+          description_short: Create a story or make a game with Infinity Play Lab!!
+          description: Create a story or make a game with Infinity Play Lab!
+          Infinity: 无限

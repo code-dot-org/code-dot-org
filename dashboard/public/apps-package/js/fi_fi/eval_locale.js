@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -164,11 +164,11 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "rectangleBlockTitle":function(d){return "suorakulmio (leveys, korkeus, tyyli, väri)"},
 "reinfFeedbackMsg":function(d){return "Voit painaa \"Kokeile uudelleen\" -painiketta muokataksesi piirustustasi."},
 "rotateImageBlockTitle":function(d){return "kierrä (astetta, kuva)"},
-"scaleImageBlockTitle":function(d){return "skaalaa (kerroin)"},
+"scaleImageBlockTitle":function(d){return "mittakaava (kerroin, kuva)"},
 "squareBlockTitle":function(d){return "neliö (koko, tyyli, väri)"},
 "starBlockTitle":function(d){return "tähti (säde, tyyli, väri)"},
 "radialStarBlockTitle":function(d){return "sädetähti (pisteet, sisä, ulko, tyyli, väri)"},
-"polygonBlockTitle":function(d){return "polygon (sides, length, style, color)"},
+"polygonBlockTitle":function(d){return "monikulmio (sivut, pituus, tyyli, väri)"},
 "stringAppendBlockTitle":function(d){return "merkkijono liitä (ensimmäinen, toinen)"},
 "stringLengthBlockTitle":function(d){return "merkkijonon pituus (merkkijono)"},
 "textBlockTitle":function(d){return "teksti (merkkijono, koko, väri)"},

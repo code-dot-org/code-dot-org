@@ -48,7 +48,7 @@ hu:
         edit-code:
           desc: Szerkeszd a kódot (béta)
           MazeEC: 1. szakasz
-          Webapp: 2. szakasz
+          Applab: 2. szakasz
           ArtistEC: 3. szakasz
           StudioEC: 4. szakasz
         events:
@@ -99,10 +99,12 @@ hu:
         Jigsaw: Kirakós játék
         MazeStep: Labirintus üzemmód
         Wordsearch: Szókeresés
-        Webapp: Web alkalmazás
+        Webapp: App Lab
         ArtistEC: A művész
         TextMatch: Szöveg Egyezés
         StudioEC: Játéklabor
+        Applab: App Lab
+        NetSim: Internet Simulator
     trophy:
       name:
         Bronze: Bronz
@@ -244,7 +246,7 @@ hu:
         flappy_6: 'Kíváncsi vagyok, hogy át tudnál-e menni az első akadályon, hogyha átállítanád Flappy csapásainak hosszát, '
         flappy_7: 'A következőkben próbáld megváltoztatni a helyzetet úgy, hogy a "mikor fut" blokkhoz egy újabb blokkot csatolsz.'
         flappy_8: Bármikor átállíthatod a játék környezetét, nem csak akkor, amikor elkezdődik. Próbáld ki a RANDOM HÁTTÉR beállítást különböző eseményekhez, például egy akadály áthaladásakor.
-        flappy_9: Hogy kicsit felkavarjuk a dolgokat, változtasd meg a szabályokat. Amikor beleütközöl egy akadályba, a játék ne álljon meg, hanem csak a pontszámlálót állítsd vissza nullára.
+        flappy_9: To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0.
         flappy_11: Hozz létre egy saját Flappy játékot! Meg tudod változtatni a kinézetet és az összes szabályt, sőt még a gravitációt is. Ha elkészültél, kattints a Befejezés gombra, hogy a barátaid is kipróbálhassák a játékodat a telefonjaikon!
         flappy_k1_1: Flappy játék
         flappy_k1_2: 'Csatolj egy blokkot a "klikkelés" eseményhez, majd nyomd meg a "Futtatás"-t. Kattintson, vagy érintse meg a képernyőt, és mozgassa Flappy-t a célba.'
@@ -324,7 +326,7 @@ hu:
         maze_wordsearch_k_15: Mozgass engem egy irányba, majd egy másikba hogy az ABOVE szót betűzzem
         maze_wordsearch_k_16: Mozgass engem egy irányba, majd egy másikba hogy a BELOW szót betűzzem
         maze_wordsearch_k_20: Ez egy próba! Mozgass engem egy irányba, majd egy másikba hogy a STORY szót betűzzem
-        webapp_ec_simple: 'Hozz létre egy web alkalmazást a  createHtmlBlock használatával.'
+        applab_ec_simple: Create your app by using the blocks in the toolbox.
         turtle_ec_1_2: 'Most rajzolj egy négyzetet. Megjegyzés: használd a kedvenc színedet úgy, hogy azt az új "penColor" blokkból veszed ki.'
         turtle_ec_1_10: 'Megcsináltad! Most rajzolj bármit amit csak akarsz. Néhány szórakoztató ötlet: egy pálcikaember, hópehely, vagy spirál. Próbáld ki az új "penWidth" blokkot is. Jó szórakozást!'
         studio_ec_sandbox: Hozz létre saját játékot! Ha elkészültél, kattints a Befejezés gombra, hogy barátaid is kipróbálhassák a játékodat a telefonjaikon!

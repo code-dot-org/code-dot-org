@@ -331,19 +331,19 @@
           Special: Speciale
           Binary: Binaire
         usabilitymsm:
-          Usability testing for MSM: Usability testing for MSM
-          Evaluation Blocks: Evaluation Blocks
+          Usability testing for MSM: Bruikbaarheidstests voor MSM
+          Evaluation Blocks: evaluatie blokken
           Blocks to Math: Blokken naar Wiskunde
-          Strings and Images: Strings and Images
-          Defining Variables: Defining Variables
-          Defining Functions: Defining Functions
-          Design Recipe: Design Recipe
+          Strings and Images: Tekenreeksen en afbeeldingen
+          Defining Variables: Variabelen definiëren
+          Defining Functions: Functies definiëren
+          Design Recipe: Ontwerp recept
           Booleans: Booleans
           Conditionals: Voorwaardelijke instructies
-          Free Play: Free Play
+          Free Play: Gratis spelen
         algebra:
-          title: Computer Science in Algebra
-          description: Learn Functional Programming through Algebra
+          title: Informatica in Algebra
+          description: Leer functioneel programmeren door Algebra
           'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video-Games
             en Coordinaat Vliegtuigen'
           'Calc: Evaluation Blocks': 'Calc: Evaluatie blokken'
@@ -353,10 +353,10 @@
           'Calc: Defining Variables': 'Calc: Variabelen definiëren'
           'Play Lab: Defining Variables (Big Game)': 'Speel Lab: Variabelen definiëren
             (Groot Spel)'
-          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Eval: Defining Functions': 'Eval: Het definiëren van functies'
           'Unplugged: The Design Recipe': 'Unplugged: Het ontwerp recept'
-          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
-          'Eval: Functions': 'Eval: Functions'
+          'Play Lab: Defining Functions': 'Speel Lab: Definieer Functies'
+          'Eval: Functions': 'Eval: functies'
           'Play Lab: Animation (Big Game)': 'Speel Lab: Animatie (Groot Spel)'
           'Unplugged: Booleans': 'Unplugged: Booleans'
           'Eval: Boolean Operators': 'Eval: Booleaanse operatoren'
@@ -369,3 +369,29 @@
             en de afstand formule'
           'Play Lab: Collision Detection (Big Game)': 'Speel Lab: Botsingdetectie
             (Groot Spel)'
+        infinity:
+          title: Speel Lab
+          description_short: Maak een verhaal of een spel met Speel Lab!
+          description: Maak een verhaal of een spel met Speel Lab!
+          Play Lab: Speel Lab
+        algebrademo:
+          description: Een handvol puzzels om de programmeertaal en omgeving te tonen
+            die gebruikt is in Code.org CS in Algebra
+          Algebra Demo: Algebra Demo
+          Evaluation Blocks: evaluatie blokken
+          Making Pictures: Foto's maken
+          Defining Variables: Variabelen definiëren
+          Defining Simple Functions: Eenvoudige functies definiëren
+          The Design Recipe: Het ontwerp Recept
+        K5PD:
+          Introduction to PD: Inleiding tot PD
+        netsim:
+          title: Internet Simulator
+          description_short: ''
+          description: ''
+          Internet Simulator: Internet Simulator
+        Infinity:
+          title: Infinity Playlab
+          description_short: Maak een verhaal of spel met Infinity Play Lab!!
+          description: Maak een verhaal of spel met Infinity Play Lab!
+          Infinity: Oneindig

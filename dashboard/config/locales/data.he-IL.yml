@@ -48,7 +48,7 @@
         edit-code:
           desc: ערוך קוד (בטא)
           MazeEC: שלב 1
-          Webapp: שלב 2
+          Applab: שלב 2
           ArtistEC: שלב 3
           StudioEC: שלב 4
         events:
@@ -103,6 +103,8 @@
         ArtistEC: האמן
         TextMatch: Text Match
         StudioEC: Play Lab
+        Applab: App Lab
+        NetSim: Internet Simulator
     trophy:
       name:
         Bronze: ארד
@@ -510,7 +512,7 @@
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell
           the word STORY
-        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        applab_ec_simple: Create your app by using the blocks in the toolbox.
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
           it in the new "penColor" block.'
         turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:
@@ -737,7 +739,7 @@
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
-        run: Hit "Run" to try your program
+        run: לחץ על "התחל" כדי לנסות את התוכנה שלך
         watch_again: Click here to watch the video again
         gray_block_explanation: Blocks that are grey can't be deleted. Can you solve
           the puzzle anyway?
@@ -750,8 +752,8 @@
           block to enable an actor for this story
         studio_say_text: Type what you want your actor to say within these quotes
         jigsaw_click: Click this block!
-        move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
-          Run" block to make Elsa move forward
+        move_elsa_forward: גרור בלוק "הזז קדימה" והצמד מתחת לבלוק "מתי לרוץ", בשביל
+          שאלזה תזוז קדימה
         turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down
           determines how much Elsa turns
         replace_questions: Use the drop-down to replace "???" with a number

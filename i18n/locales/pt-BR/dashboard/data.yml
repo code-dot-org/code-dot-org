@@ -48,7 +48,7 @@ pt-BR:
         edit-code:
           desc: Editar Código (beta)
           MazeEC: Fase 1
-          Webapp: Fase 2
+          Applab: Fase 2
           ArtistEC: Fase 3
           StudioEC: Fase 4
         events:
@@ -99,10 +99,12 @@ pt-BR:
         Jigsaw: Quebra-cabeça
         MazeStep: Modo Labirinto
         Wordsearch: Caça Palavras
-        Webapp: Webapp
+        Webapp: Laboratório de Aplicativo
         ArtistEC: O Artista
         TextMatch: Correspondência de texto
         StudioEC: Laboratório
+        Applab: Laboratório de Aplicativo
+        NetSim: Simulador de internet
     trophy:
       name:
         Bronze: Bronze
@@ -244,7 +246,7 @@ pt-BR:
         flappy_6: Veja se você ainda pode marcar um ponto depois de fazer o passarinho bater as asas mais ou menos.
         flappy_7: 'Em seguida, tente mudar a cena conectando outro bloco ao bloco "quando o jogo começa".'
         flappy_8: Você pode definir o visual a qualquer momento, não apenas quando o jogo começa. Tente criar um cenário ALEATÓRIO quando outros eventos acontecerem, por exemplo, ao passar um obstáculo.
-        flappy_9: Para mudar um pouco, ao bater em um obstáculo ou no chão, faça com que o placar volte a 0 ao invés de terminar o jogo.
+        flappy_9: Para misturar as coisas, ao invés de terminar o jogo quando bater em um obstáculo, tente fazer a pontuação voltar a 0.
         flappy_11: Crie seu próprio jogo Flappy Bird. Você pode mudar o visual e todas as regras, até mesmo a gravidade. Quando terminar, clique em Concluir para que seus amigos joguem seu jogo em seus celulares.
         flappy_k1_1: Jogar Flappy Bird
         flappy_k1_2: 'Conecte um bloco no bloco "quando clicar" e, em seguida, clique em "Executar". Clique ou toque na tela para mover o passarinho em direção ao alvo.'
@@ -326,7 +328,7 @@ pt-BR:
         maze_wordsearch_k_15: Movimente-me para um lado, e então para o outro, para formar a palavra ABOVE
         maze_wordsearch_k_16: Movimente-me para um lado, e então para o outro, para formar a palavra BELOW
         maze_wordsearch_k_20: Isso é um teste! Movimente-me para um lado, e então para o outro, para formar a palavra STORY
-        webapp_ec_simple: Crie seu aplicativo da Web com createHtmlBlock.
+        applab_ec_simple: Crie seu aplicativo usando os blocos na caixa de ferramentas.
         turtle_ec_1_2: 'Agora, desenhe um quadrado. NOTA: use sua cor preferida selecionando-a no novo bloco "Cor da caneta".'
         turtle_ec_1_10: 'Muito bem! Agora, desenhe o que quiser. Veja algumas ideias divertidas para desenhar: um boneco, um floco de neve ou uma espiral. Use também o novo bloco "Largura da caneta". Divirta-se!'
         studio_ec_sandbox: Crie seu próprio jogo. Quando terminar, clique em Concluir para deixar que seus amigos experimentem seu jogo em seus celulares.

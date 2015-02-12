@@ -3,7 +3,7 @@
   select_language: Por favor seleccione su idioma
   computer_science: Ciencias de la computación
   computer_science_edweek: Semana de Educación en Ciencias de la Computación
-  csedweek_dates: December 8-14, 2014
+  csedweek_dates: 8-14 de Diciembre, 2014
   csedweek_banner_hoc: 'Se acerca la <a href="http://hourofcode.com" style="color:
     white; text-decoration:underline; font-weight:bold">Hora del código</a>.  Se convoca
     a todos los maestros y organizadores, <a href="http://hourofcode.com" style="color:
@@ -134,8 +134,8 @@
     por el aprendizaje." - Michael Clark, Profesor'
   stats_nina: '"Cada día produzco los mismos resultados &mdash; 100% de compromiso."
     - Nina Nichols Peery, docente'
-  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
-    Alzate, 5th grader'
+  stats_student: '"Sabía que era una oportunidad <b>única en la vida</b>."-Mariana
+    Alzate, estudiante de 5o grado'
   studiobar_title: Explora <a href='http://studio.code.org'>Code Studio</a>
   studiobar_elementary_title: Cursos elementales
   studiobar_elementary_body: Nuestros tres nuevos cursos para K&#8209;5
@@ -149,8 +149,8 @@
   studiobar_frozen_body: Crea un paisaje invernal con Anna y Elsa
   studiobar_donate_title: Dona
   studiobar_donate_body: Un niño aprende por cada dólar que done
-  studiobar_shop_title: Shop
-  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
+  studiobar_shop_title: Tienda
+  studiobar_shop_body: Rompe los estereotipos. Usa nuestro logotipo con orgullo.
   contact_form_topic_student: Soy un estudiante
   contact_form_topic_parent: Soy un padre
   contact_form_topic_teacher: Soy un profesor/educador
@@ -248,8 +248,8 @@
   dashboard_action_delete_yes: Sí
   dashboard_action_delete_no: 'No'
   dashboard_action_confirm: ¿Borrar?
-  dashboard_action_remove: Remove
-  dashboard_action_remove_confirm: Remove?
+  dashboard_action_remove: eliminar
+  dashboard_action_remove_confirm: ¿eliminar?
   dashboard_action_done: Hecho
   dashboard_action_required: obligatorio
   dashboard_navigation_home_page: Página de inicio del maestro
@@ -298,6 +298,7 @@
     alumnos</b>.
   dashboard_students_placeholder_name: Nombre del alumno
   dashboard_students_name: Nombre
+  dashboard_students_progress: Progreso
   dashboard_students_age: Edad
   dashboard_students_gender: Género
   dashboard_students_male: Varón
@@ -357,6 +358,11 @@
   dashboard_login_picture: Imagen
   dashboard_login_none: Correo electrónico
   dashboard_new_password: nueva contraseña
+  dashboard_progress_not_completed: No completado
+  dashboard_progress_completed_too_many_blocks: completado, pero tiene demasiados
+    bloques
+  dashboard_progress_completed_perfect: completado, perfecto
+  dashboard_progress_furthest_level_attempted: Nivel más alto intentado
   stats_hoc_2013_heading: 'Increíbles estadísticas de la Hora del Código del año pasado.
     En sólo una semana:'
   stats_hoc_2013_image_alt: Estadísticas de Hora del Código del 2013
@@ -400,7 +406,7 @@
   carousel_heading_robots: Aprende a programar con robots
   carousel_heading_ide: Plataformas populares entre los docentes
   educator_notes: Notas del educador
-  how_to_teach_hoc: How to Teach an Hour of Code
+  how_to_teach_hoc: Cómo enseñar  una "Hora de código"
   more_resources_educators: Más recursos para profesores y educadores
   participants: participantes
   teachers_notes: Notas del profesor
@@ -1072,8 +1078,3 @@
   sphero_beyond_longdescription: Si eres un educador o un padre, las lecciones SPRK
     proveen a los niños un divertido curso intensivo de programación de robots, y
     permite mejorar habilidades en matemáticas y ciencias.
-  dashboard_students_progress: Progress
-  dashboard_progress_not_completed: not completed
-  dashboard_progress_completed_too_many_blocks: completed, too many blocks
-  dashboard_progress_completed_perfect: completed, perfect
-  dashboard_progress_furthest_level_attempted: furthest level attempted

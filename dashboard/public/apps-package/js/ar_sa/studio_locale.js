@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -270,6 +270,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "projectileHiro":function(d){return "هيرو"},
 "projectileBaymax":function(d){return "بايماكس"},
 "projectileRapunzel":function(d){return "رابونزيل"},
+"projectileCherry":function(d){return "cherry"},
+"projectileIce":function(d){return "ice"},
+"projectileDuck":function(d){return "duck"},
 "reinfFeedbackMsg":function(d){return "يمكنك الضغط على زر \"حاول مرة أخرى\" للعودة للعبة الخاصة بك."},
 "repeatForever":function(d){return "كرّر باستمرار"},
 "repeatDo":function(d){return "نفّذ"},
@@ -277,6 +280,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "saySprite":function(d){return "قُل"},
 "saySpriteN":function(d){return "تقول الشخصية "+appLocale.v(d,"spriteIndex")},
 "saySpriteTooltip":function(d){return "يطفو على فقاعة كلام مع النص المرتبط به من الفاعل المحدد."},
+"saySpriteChoices_1":function(d){return "Hi there!"},
+"saySpriteChoices_2":function(d){return "How are you?"},
+"saySpriteChoices_3":function(d){return "This is fun..."},
 "scoreText":function(d){return "النقاط: "+appLocale.v(d,"playerScore")},
 "setBackground":function(d){return "تعيين خلفية"},
 "setBackgroundRandom":function(d){return "تعيين خلفية عشوائية"},
@@ -293,6 +299,12 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setBackgroundSpace":function(d){return "وضع خلفية للفضاء"},
 "setBackgroundTennis":function(d){return "وضع خلفية للتنس"},
 "setBackgroundWinter":function(d){return "وضع خلفية الشتاء"},
+"setBackgroundLeafy":function(d){return "set leafy background"},
+"setBackgroundGrassy":function(d){return "set grassy background"},
+"setBackgroundFlower":function(d){return "set flower background"},
+"setBackgroundTile":function(d){return "set tile background"},
+"setBackgroundIcy":function(d){return "set icy background"},
+"setBackgroundSnowy":function(d){return "set snowy background"},
 "setBackgroundTooltip":function(d){return "تعيين صورة الخلفية"},
 "setEnemySpeed":function(d){return "حدد سرعة العدو"},
 "setPlayerSpeed":function(d){return "حدد سرعة اللاعب"},
@@ -384,6 +396,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "soundWinPoint2":function(d){return "نقطة الفوز 2"},
 "soundWood":function(d){return "الخشب"},
 "speed":function(d){return "السرعة"},
+"startSetValue":function(d){return "start (rocket-height function)"},
 "stopSprite":function(d){return "وقف"},
 "stopSpriteN":function(d){return "إيقاف الصورة "+appLocale.v(d,"spriteIndex")},
 "stopTooltip":function(d){return "توقف حركة عنصر فاعل."},

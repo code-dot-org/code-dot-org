@@ -10,7 +10,7 @@
   "continue": "Pokračovať",
   "createHtmlBlock": "vytvor html blok",
   "createHtmlBlockTooltip": "Vytvorí HTML blok v aplikácii.",
-  "finalLevel": "Gratulujem! Vyriešil si poslednú úlohu.",
+  "finalLevel": "Gratulujem! Vyriešili ste posledné puzzle.",
   "nextLevel": "Gratulujem! Vyriešil si hádanku.",
   "no": "Nie",
   "numBlocksNeeded": "Táto hádanka môže byť vyriešená s %1 blokmi.",
@@ -19,12 +19,11 @@
   "repeatForever": "opakovať donekonečna",
   "repeatDo": "vykonaj",
   "repeatForeverTooltip": "Akcie v tomto bloku sa budú opakovane vykonávať počas behu aplikácie.",
-  "shareWebappTwitter": "Pozri sa na aplikáciu, ktorú som urobil. Napísal som to sám s @codeorg",
+  "shareApplabTwitter": "Pozri sa na aplikáciu, ktorú som urobil. Napísal som to sám s @codeorg",
   "shareGame": "Zdieľaj svoju aplikáciu:",
   "stepIn": "Krok do",
   "stepOver": "Krok cez",
   "stepOut": "Krok von",
-  "turnBlack": "nastav čiernu",
-  "turnBlackTooltip": "Nastaví čiernu farbu obrazovky.",
+  "viewData": "View Data",
   "yes": "Áno"
 }

@@ -33,12 +33,17 @@
  maxstatements: 200
 */
 /* global -Blockly */
+/* global $ */
 'use strict';
 
-var dom = require('../dom');
 var page = require('./page.html');
-var utils = require('../utils');
-var _ = utils.getLodash();
+var NetSimConnection = require('./NetSimConnection');
+var DashboardUser = require('./DashboardUser');
+var NetSimLobby = require('./NetSimLobby');
+var NetSimRouterPanel = require('./NetSimRouterPanel');
+var NetSimSendWidget = require('./NetSimSendWidget');
+var NetSimLogWidget = require('./NetSimLogWidget');
+var RunLoop = require('./RunLoop');
 
 /**
  * The top-level Internet Simulator controller.
@@ -48,6 +53,28 @@ var NetSim = function () {
   this.skin = null;
   this.level = null;
   this.heading = 0;
+
+  /**
+   * Current user object which asynchronously grabs the current user's
+   * info from the dashboard API.
+   * @type {DashboardUser}
+   * @private
+   */
+  this.currentUser_ = DashboardUser.getCurrentUser();
+
+  /**
+   * Manager for connection to shared shard of netsim app.
+   * @type {NetSimConnection}
+   * @private
+   */
+  this.connection_ = null;
+
+  /**
+   * Tick and Render loop manager for the simulator
+   * @type {RunLoop}
+   * @private
+   */
+  this.runLoop_ = new RunLoop();
 };
 
 module.exports = NetSim;
@@ -61,29 +88,10 @@ NetSim.prototype.injectStudioApp = function (studioApp) {
 };
 
 /**
- * Handler for clicking on the send button in the middle of the screen.
- * This is a temporary handler for a temporary UI element - may get
- * torn out.
- * @private
- */
-NetSim.prototype.onSendButtonClick_ = function () {
-  // TODO (bbuchanan) : This is super hacky "hello world" stuff.  remove it.
-  var now = new Date();
-  var fromBox = document.getElementById('netsim_inputbox');
-  var toBox = document.getElementById('netsim_recievelog');
-  toBox.value += '[' + now.toTimeString() + '] ' + fromBox.value + '\n';
-  toBox.scrollTop = toBox.scrollHeight;
-};
-
-/**
  * Hook up input handlers to controls on the netsim page
  * @private
  */
 NetSim.prototype.attachHandlers_ = function () {
-  dom.addClickTouchEvent(
-      document.getElementById('netsim_sendbutton'),
-      _.bind(this.onSendButtonClick_, this)
-  );
 };
 
 /**
@@ -111,17 +119,94 @@ NetSim.prototype.init = function(config) {
   });
 
   config.enableShowCode = false;
-  config.loadAudio = _.bind(this.loadAudio_, this);
+  config.loadAudio = this.loadAudio_.bind(this);
 
   // Override certain StudioApp methods - netsim does a lot of configuration
   // itself, because of its nonstandard layout.
-  this.studioApp_.configureDom = _.bind(this.configureDomOverride_,
-      this.studioApp_);
-  this.studioApp_.onResize = _.bind(this.onResizeOverride_, this.studioApp_);
+  this.studioApp_.configureDom = this.configureDomOverride_.bind(this.studioApp_);
+  this.studioApp_.onResize = this.onResizeOverride_.bind(this.studioApp_);
 
   this.studioApp_.init(config);
 
   this.attachHandlers_();
+
+  // Create netsim lobby widget in page
+  this.currentUser_.whenReady(function () {
+    this.initWithUserName_(this.currentUser_);
+  }.bind(this));
+
+  // Begin the main simulation loop
+  this.runLoop_.begin();
+};
+
+/**
+ * Extracts query parameters from a full URL and returns them as a simple
+ * object.
+ * @returns {*}
+ */
+NetSim.prototype.getOverrideShardID = function () {
+  var parts = location.search.split('?');
+  if (parts.length === 1) {
+    return undefined;
+  }
+
+  var shardID;
+  parts[1].split('&').forEach(function (param) {
+    var sides = param.split('=');
+    if (sides.length > 1 && sides[0] === 's') {
+      shardID = sides[1];
+    }
+  });
+  return shardID;
+};
+
+/**
+ * Initialization that can happen once we have a user name.
+ * Could collapse this back into init if at some point we can guarantee that
+ * user name is available on load.
+ * @param {DashboardUser} user
+ * @private
+ */
+NetSim.prototype.initWithUserName_ = function (user) {
+  this.mainContainer_ = $('#netsim');
+
+  this.receivedMessageLog_ = NetSimLogWidget.createWithin(
+      document.getElementById('netsim_received'), 'Received Messages');
+  this.sentMessageLog_ = NetSimLogWidget.createWithin(
+      document.getElementById('netsim_sent'), 'Sent Messages');
+
+  this.connection_ = new NetSimConnection(this.sentMessageLog_,
+      this.receivedMessageLog_);
+  this.connection_.attachToRunLoop(this.runLoop_);
+  this.connection_.statusChanges.register(this.refresh_.bind(this));
+
+  var lobbyContainer = document.getElementById('netsim_lobby_container');
+  this.lobbyControl_ = NetSimLobby.createWithin(lobbyContainer,
+      this.connection_, user, this.getOverrideShardID());
+  this.lobbyControl_.attachToRunLoop(this.runLoop_);
+
+  var routerPanelContainer = document.getElementById('netsim_tabpanel');
+  this.routerPanel_ = NetSimRouterPanel.createWithin(routerPanelContainer,
+      this.connection_);
+  this.routerPanel_.attachToRunLoop(this.runLoop_);
+
+  var sendWidgetContainer = document.getElementById('netsim_send');
+  this.sendWidget_ = NetSimSendWidget.createWithin(sendWidgetContainer,
+      this.connection_);
+
+  this.refresh_();
+};
+
+/**
+ * Respond to connection status changes show/hide the main content area.
+ * @private
+ */
+NetSim.prototype.refresh_ = function () {
+  if (this.connection_.isConnectedToRouter()) {
+    this.mainContainer_.show();
+  } else {
+    this.mainContainer_.hide();
+  }
 };
 
 /**
@@ -130,9 +215,6 @@ NetSim.prototype.init = function(config) {
  * @private
  */
 NetSim.prototype.loadAudio_ = function () {
-  this.studioApp_.loadAudio(this.skin.winSound, 'win');
-  this.studioApp_.loadAudio(this.skin.startSound, 'start');
-  this.studioApp_.loadAudio(this.skin.failureSound, 'failure');
 };
 
 /**
@@ -160,5 +242,4 @@ NetSim.prototype.onResizeOverride_ = function() {
   var parentWidth = parseInt(parentStyle.width, 10);
   div.style.top = divParent.offsetTop + 'px';
   div.style.width = parentWidth + 'px';
-  this.resizeHeaders(parentWidth);
 };

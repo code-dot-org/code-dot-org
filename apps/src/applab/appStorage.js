@@ -11,18 +11,71 @@ AppStorage.tempEncryptedAppId =
         "SmwVmYVl1V5UCCw1Ec6Dtw==" : "DvTw9X3pDcyDyil44S6qbw==";
 
 /**
+ * Reads the value associated with the key, accessible to all users of the app.
+ * @param {string} key The name of the key.
+ * @param {function(Object)} onSuccess Function to call on success with the
+       value retrieved from storage.
+ * @param {function(string)} onError Function to call on error with error msg.
+ */
+AppStorage.getKeyValue = function(key, onSuccess, onError) {
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = handleGetKeyValue.bind(req, onSuccess, onError);
+  var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + '/shared-properties/' + key;
+  req.open('GET', url, true);
+  req.send();
+};
+
+var handleGetKeyValue = function(onSuccess, onError) {
+  if (this.readyState !== 4) {
+    return;
+  }
+  if (this.status < 200 || this.status >= 300) {
+    onError('error reading value: unexpected http status ' + this.status);
+    return;
+  }
+  var value = JSON.parse(this.responseText);
+  onSuccess(value);
+};
+
+/**
+ * Saves the value associated with the key, accessible to all users of the app.
+ * @param {string} key The name of the key.
+ * @param {Object} value The value to associate with the key.
+ * @param {function()} onSuccess Function to call on success.
+ * @param {function(string)} onError Function to call on error with error msg.
+ */
+AppStorage.setKeyValue = function(key, value, onSuccess, onError) {
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = handleSetKeyValue.bind(req, onSuccess, onError);
+  var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + '/shared-properties/' + key;
+  req.open('POST', url, true);
+  req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+  req.send(JSON.stringify(value));
+};
+
+var handleSetKeyValue = function(onSuccess, onError) {
+  if (this.readyState !== 4) {
+    return;
+  }
+  if (this.status < 200 || this.status >= 300) {
+    onError('error writing value: unexpected http status ' + this.status);
+    return;
+  }
+  onSuccess();
+};
+
+/**
  * Creates a new record in the specified table, accessible to all users.
- * @param {string} record.tableName The name of the table to read from.
+ * @param {string} tableName The name of the table to read from.
  * @param {Object} record Object containing other properties to store
  *     on the record.
  * @param {function(Object)} onSuccess Function to call with the new record.
  * @param {function(string)} onError Function to call with an error message
  *    in case of failure.
  */
-AppStorage.createSharedRecord = function(record, onSuccess, onError) {
-  var tableName = record.tableName;
+AppStorage.createRecord = function(tableName, record, onSuccess, onError) {
   if (!tableName) {
-    onError('error creating record: missing required property "tableName"');
+    onError('error creating record: missing required parameter "tableName"');
     return;
   }
   if (record.id) {
@@ -30,14 +83,14 @@ AppStorage.createSharedRecord = function(record, onSuccess, onError) {
     return;
   }
   var req = new XMLHttpRequest();
-  req.onreadystatechange = handleCreateSharedRecord.bind(req, onSuccess, onError);
+  req.onreadystatechange = handleCreateRecord.bind(req, onSuccess, onError);
   var url = "/v3/apps/" + AppStorage.tempEncryptedAppId + "/shared-tables/" + tableName;
   req.open('POST', url, true);
   req.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
   req.send(JSON.stringify(record));
 };
 
-var handleCreateSharedRecord = function(onSuccess, onError) {
+var handleCreateRecord = function(onSuccess, onError) {
   if (this.readyState !== 4) {
     return;
   }
@@ -52,8 +105,8 @@ var handleCreateSharedRecord = function(onSuccess, onError) {
 /**
  * Reads records which match the searchParams specified by the user,
  * and passes them to onSuccess.
- * @param {string} searchParams.tableName The name of the table to read from.
- * @param {string} searchParams.recordId Optional id of record to read.
+ * @param {string} tableName The name of the table to read from.
+ * @param {string} searchParams.id Optional id of record to read.
  * @param {Object} searchParams Other search criteria. Only records
  *     whose contents match all criteria will be returned.
  * @param {function(Array)} onSuccess Function to call with an array of record
@@ -61,14 +114,13 @@ var handleCreateSharedRecord = function(onSuccess, onError) {
  * @param {function(string)} onError Function to call with an error message
  *     in case of failure.
  */
-AppStorage.readSharedRecords = function(searchParams, onSuccess, onError) {
-  var tableName = searchParams.tableName;
+AppStorage.readRecords = function(tableName, searchParams, onSuccess, onError) {
   if (!tableName) {
-    onError('error reading records: missing required property "tableName"');
+    onError('error reading records: missing required parameter "tableName"');
     return;
   }
   var req = new XMLHttpRequest();
-  req.onreadystatechange = handleReadSharedRecords.bind(req, tableName,
+  req.onreadystatechange = handleReadRecords.bind(req,
       searchParams, onSuccess, onError);
   var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + "/shared-tables/" + tableName;
   req.open('GET', url, true);
@@ -76,7 +128,7 @@ AppStorage.readSharedRecords = function(searchParams, onSuccess, onError) {
   
 };
 
-var handleReadSharedRecords = function(tableName, searchParams, onSuccess, onError) {
+var handleReadRecords = function(searchParams, onSuccess, onError) {
   if (this.readyState !== 4) {
     return;
   }
@@ -98,7 +150,7 @@ var handleReadSharedRecords = function(tableName, searchParams, onSuccess, onErr
 
 /**
  * Updates a record in a table, accessible to all users.
- * @param {string} record.tableName The name of the table to update.
+ * @param {string} tableName The name of the table to update.
  * @param {string} record.id The id of the row to update.
  * @param {Object} record Object containing other properites to update
  *     on the record.
@@ -106,10 +158,9 @@ var handleReadSharedRecords = function(tableName, searchParams, onSuccess, onErr
  * @param {function(string)} onError Function to call with an error message
  *    in case of failure.
  */
-AppStorage.updateSharedRecord = function(record, onSuccess, onError) {
-  var tableName = record.tableName;
+AppStorage.updateRecord = function(tableName, record, onSuccess, onError) {
   if (!tableName) {
-    onError('error updating record: missing required property "tableName"');
+    onError('error updating record: missing required parameter "tableName"');
     return;
   }
   var recordId = record.id;
@@ -118,7 +169,7 @@ AppStorage.updateSharedRecord = function(record, onSuccess, onError) {
     return;
   }
   var req = new XMLHttpRequest();
-  req.onreadystatechange = handleUpdateSharedRecord.bind(req, record, onSuccess, onError);
+  req.onreadystatechange = handleUpdateRecord.bind(req, tableName, record, onSuccess, onError);
   var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + '/shared-tables/' +
       tableName + '/' + recordId;
   req.open('POST', url, true);
@@ -126,13 +177,13 @@ AppStorage.updateSharedRecord = function(record, onSuccess, onError) {
   req.send(JSON.stringify(record));
 };
 
-var handleUpdateSharedRecord = function(record, onSuccess, onError) {
+var handleUpdateRecord = function(tableName, record, onSuccess, onError) {
   if (this.readyState !== 4) {
     return;
   }
   if (this.status === 404) {
     onError('error updating record: could not find record id ' + record.id +
-            ' in table ' + record.tableName);
+            ' in table ' + tableName);
     return;
   }
   if (this.status < 200 || this.status >= 300) {
@@ -144,17 +195,16 @@ var handleUpdateSharedRecord = function(record, onSuccess, onError) {
 
 /**
  * Deletes a record from the specified table.
- * @param {string} record.tableName The name of the table to delete from.
+ * @param {string} tableName The name of the table to delete from.
  * @param {string} record.id The id of the record to delete.
  * @param {Object} record Object whose other properties are ignored.
  * @param {function()} onSuccess Function to call on success.
  * @param {function(string)} onError Function to call with an error message
  *    in case of failure.
  */
-AppStorage.deleteSharedRecord = function(record, onSuccess, onError) {
-  var tableName = record.tableName;
+AppStorage.deleteRecord = function(tableName, record, onSuccess, onError) {
   if (!tableName) {
-    onError('error deleting record: missing required property "tableName"');
+    onError('error deleting record: missing required parameter "tableName"');
     return;
   }
   var recordId = record.id;
@@ -163,7 +213,7 @@ AppStorage.deleteSharedRecord = function(record, onSuccess, onError) {
     return;
   }
   var req = new XMLHttpRequest();
-  req.onreadystatechange = handleDeleteSharedRecord.bind(req, record, onSuccess, onError);
+  req.onreadystatechange = handleDeleteRecord.bind(req, tableName, record, onSuccess, onError);
   var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + '/shared-tables/' +
       tableName + '/' + recordId + '/delete';
   req.open('POST', url, true);
@@ -171,7 +221,7 @@ AppStorage.deleteSharedRecord = function(record, onSuccess, onError) {
   req.send(JSON.stringify(record));
 };
 
-var handleDeleteSharedRecord = function(record, onSuccess, onError) {
+var handleDeleteRecord = function(tableName, record, onSuccess, onError) {
   if (this.readyState !== 4) {
     return;
   }

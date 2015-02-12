@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -154,7 +154,7 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"catActions":function(d){return "Các hành động"},
+"catActions":function(d){return "hành động"},
 "catControl":function(d){return "Vòng lặp"},
 "catEvents":function(d){return "Các sự kiện"},
 "catLogic":function(d){return "Logic"},
@@ -166,7 +166,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "createHtmlBlock":function(d){return "tạo khối mã html"},
 "createHtmlBlockTooltip":function(d){return "Tạo ra một khối HTML trong ứng dụng."},
 "finalLevel":function(d){return "Xin chúc mừng! Bạn đã hoàn thành câu đố cuối cùng."},
-"nextLevel":function(d){return "Chúc mừng. Bạn vừa hoàn thành bài tập này."},
+"nextLevel":function(d){return "Chúc mừng! Bạn đã hoàn thành câu đố này."},
 "no":function(d){return "Không"},
 "numBlocksNeeded":function(d){return "Câu đố này có thể được giải quyết chỉ với %1 khối."},
 "pause":function(d){return "Phá vỡ"},
@@ -174,11 +174,10 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "repeatForever":function(d){return "Lặp lại mãi mãi"},
 "repeatDo":function(d){return "thực hiện"},
 "repeatForeverTooltip":function(d){return "Thực hiện các hành động trong khối này nhiều lần trong khi các ứng dụng đang chạy."},
-"shareWebappTwitter":function(d){return "Kiểm tra các ứng dụng tôi thực hiện. Tôi tự viết nó với @codeorg"},
+"shareApplabTwitter":function(d){return "Kiểm tra các ứng dụng tôi thực hiện. Tôi tự viết nó với @codeorg"},
 "shareGame":function(d){return "Chia sẻ các ứng dụng của bạn:"},
 "stepIn":function(d){return "Bước vào"},
 "stepOver":function(d){return "Bước qua"},
 "stepOut":function(d){return "Bước ra ngoài"},
-"turnBlack":function(d){return "chuyển sang màu đen"},
-"turnBlackTooltip":function(d){return "Chuyển màn hình sang màu đen."},
+"viewData":function(d){return "View Data"},
 "yes":function(d){return "Đồng ý"}};

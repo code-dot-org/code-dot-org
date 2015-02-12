@@ -29,7 +29,7 @@
 .front-header-banner h1 {
   color: white;
   margin: 0px;
-  font-size: 56px;
+  font-size: 24px;
 }
 .front-header-banner h2 {
   color: white;
@@ -39,7 +39,8 @@
 .front-header-banner h3 {
   color: white;
   margin: 0px;
-  font-size: 32px;
+  font-size: 22px;
+  line-height: 2.2em;
 }
 .front-header-banner h4 {
   color: white;
@@ -89,7 +90,7 @@ label.has-error {
 }
 @media (max-width: 500px) {
   .front-header-banner h1 {
-      font-size: 36px;
+      font-size: 14px;
   }
   .front-header-banner h2 {
       font-size: 16px;

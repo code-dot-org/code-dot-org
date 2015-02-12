@@ -23,7 +23,7 @@ var appLocale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -114,11 +114,11 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catEvents":function(d){return "События"},
 "catLogic":function(d){return "Логика"},
 "catMath":function(d){return "Математика"},
-"catProcedures":function(d){return "Процедуры"},
-"catText":function(d){return "текст"},
-"catVariables":function(d){return "Переменные"},
+"catProcedures":function(d){return "функции"},
+"catText":function(d){return "Текст"},
+"catVariables":function(d){return "переменные"},
 "continue":function(d){return "Продолжить"},
-"createHtmlBlock":function(d){return "Создать блок html"},
+"createHtmlBlock":function(d){return "создать блок html"},
 "createHtmlBlockTooltip":function(d){return "Создаёт блок HTML в приложении."},
 "finalLevel":function(d){return "Поздравляю! Последняя головоломка решена."},
 "nextLevel":function(d){return "Поздравляю! Головоломка решена."},
@@ -126,14 +126,13 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "numBlocksNeeded":function(d){return "Эта головоломка может быть решена с помощью %1 блоков."},
 "pause":function(d){return "Пауза"},
 "reinfFeedbackMsg":function(d){return "Можно нажать кнопку «Повторить», чтобы вернуться к запуску приложения."},
-"repeatForever":function(d){return "повторять снова и снова"},
+"repeatForever":function(d){return "повторять бесконечно"},
 "repeatDo":function(d){return "выполнить"},
-"repeatForeverTooltip":function(d){return "Выполнить действия в этом блоке многократно, пока приложение испольняется."},
-"shareWebappTwitter":function(d){return "Проверьте приложение,которое я сделал. Я написал его сам с помощью @codeorg"},
+"repeatForeverTooltip":function(d){return "Выполнить действия в этом блоке многократно, пока приложение выполняется."},
+"shareApplabTwitter":function(d){return "Проверьте приложение, которое я сделал. Я написал его сам с помощью @codeorg"},
 "shareGame":function(d){return "Поделиться своим приложением:"},
-"stepIn":function(d){return "Вмешиваться"},
-"stepOver":function(d){return "перешагнуть"},
-"stepOut":function(d){return "отступить"},
-"turnBlack":function(d){return "повернуть назад"},
-"turnBlackTooltip":function(d){return "Закрашивает экран черным."},
+"stepIn":function(d){return "Войти"},
+"stepOver":function(d){return "Перешагнуть"},
+"stepOut":function(d){return "Отступить"},
+"viewData":function(d){return "Просмотр данных"},
 "yes":function(d){return "Да"}};

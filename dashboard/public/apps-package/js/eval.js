@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({56:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({61:[function(require,module,exports){
 var appMain = require('../appMain');
 window.Eval = require('./eval');
 var blocks = require('./blocks');
@@ -11,7 +11,7 @@ window.evalMain = function(options) {
   appMain(window.Eval, levels, options);
 };
 
-},{"../appMain":3,"../skins":114,"./blocks":42,"./eval":44,"./levels":55}],44:[function(require,module,exports){
+},{"../appMain":3,"../skins":141,"./blocks":46,"./eval":48,"./levels":60}],48:[function(require,module,exports){
 (function (global){
 /**
  * Blockly Demo: Eval Graphics
@@ -47,6 +47,7 @@ var api = require('./api');
 var page = require('../templates/page.html');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
+var CustomEvalError = require('./evalError');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -63,8 +64,7 @@ studioApp.setCheckForEmptyBlocks(false);
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
 
-// This property is set in the api call to draw, and extracted in
-// getDrawableFromBlocks
+// This property is set in the api call to draw, and extracted in evalCode
 Eval.displayedObject = null;
 
 /**
@@ -121,8 +121,8 @@ Eval.init = function(config) {
       var solutionBlocks = blockUtils.forceInsertTopBlock(level.solutionBlocks,
         config.forceInsertTopBlock);
 
-      var answerObject = getDrawableFromBlocks(solutionBlocks);
-      if (answerObject) {
+      var answerObject = getDrawableFromBlockXml(solutionBlocks);
+      if (answerObject && answerObject.draw) {
         answerObject.draw(document.getElementById('answer'));
       }
     }
@@ -161,14 +161,25 @@ Eval.resetButtonClick = function () {
 
 };
 
-
+/**
+ * Evaluates user code, catching any exceptions.
+ * @return {EvalImage|CustomEvalError} EvalImage on success, CustomEvalError on
+ *  handleable failure, null on unexpected failure.
+ */
 function evalCode (code) {
   try {
     codegen.evalWith(code, {
       StudioApp: studioApp,
       Eval: api
     });
+
+    var object = Eval.displayedObject;
+    Eval.displayedObject = null;
+    return object;
   } catch (e) {
+    if (e instanceof CustomEvalError) {
+      return e;
+    }
     // Infinity is thrown if we detect an infinite loop. In that case we'll
     // stop further execution, animate what occured before the infinite loop,
     // and analyze success/failure based on what was drawn.
@@ -187,31 +198,35 @@ function evalCode (code) {
 }
 
 /**
- * Generates a drawable evalImage from the blocks in the workspace. If blockXml
+ * Get a drawable EvalImage from the blocks currently in the workspace
+ * @return {EvalImage|CustomEvalError}
+ */
+function getDrawableFromBlockspace() {
+  var code = Blockly.Generator.blockSpaceToCode('JavaScript', ['functional_display', 'functional_definition']);
+  var result = evalCode(code);
+  return result;
+}
+
+/**
+ * Generates a drawable EvalImage from the blocks in the workspace. If blockXml
  * is provided, temporarily sticks those blocks into the workspace to generate
  * the evalImage, then deletes blocks.
+ * @return {EvalImage|CustomEvalError}
  */
-function getDrawableFromBlocks(blockXml) {
-  if (blockXml) {
-    if (Blockly.mainBlockSpace.getTopBlocks().length !== 0) {
-      throw new Error("getDrawableFromBlocks shouldn't be called with blocks if " +
-        "we already have blocks in the workspace");
-    }
-    // Temporarily put the blocks into the workspace so that we can generate code
-    studioApp.loadBlocks(blockXml);
+function getDrawableFromBlockXml(blockXml) {
+  if (Blockly.mainBlockSpace.getTopBlocks().length !== 0) {
+    throw new Error("getDrawableFromBlocks shouldn't be called with blocks if " +
+      "we already have blocks in the workspace");
   }
+  // Temporarily put the blocks into the workspace so that we can generate code
+  studioApp.loadBlocks(blockXml);
 
-  var code = Blockly.Generator.blockSpaceToCode('JavaScript', ['functional_display', 'functional_definition']);
-  evalCode(code);
-  var object = Eval.displayedObject;
-  Eval.displayedObject = null;
+  var result = getDrawableFromBlockspace();
 
-  if (blockXml) {
-    // Remove the blocks
-    Blockly.mainBlockSpace.getTopBlocks().forEach(function (b) { b.dispose(); });
-  }
+  // Remove the blocks
+  Blockly.mainBlockSpace.getTopBlocks().forEach(function (b) { b.dispose(); });
 
-  return object;
+  return result;
 }
 
 /**
@@ -222,16 +237,31 @@ Eval.execute = function() {
   Eval.testResults = TestResults.NO_TESTS_RUN;
   Eval.message = undefined;
 
-  var userObject = getDrawableFromBlocks(null);
-  if (userObject) {
-    userObject.draw(document.getElementById("user"));
-  }
+  if (studioApp.hasUnfilledBlock()) {
+    Eval.result = false;
+    Eval.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
+    Eval.message = evalMsg.emptyFunctionalBlock();
+  } else {
+    var userObject = getDrawableFromBlockspace();
+    if (userObject && userObject.draw) {
+      userObject.draw(document.getElementById("user"));
+    }
 
-  Eval.result = evaluateAnswer();
-  Eval.testResults = studioApp.getTestResults(Eval.result);
+    // If we got a CustomEvalError, set error message appropriately.
+    if (userObject instanceof CustomEvalError) {
+      Eval.result = false;
+      Eval.testResults = TestResults.APP_SPECIFIC_FAIL;
 
-  if (level.freePlay) {
-    Eval.testResults = TestResults.FREE_PLAY;
+      Eval.message = userObject.feedbackMessage;
+    } else {
+      // We got an EvalImage back, compare it to our target
+      Eval.result = evaluateAnswer();
+      Eval.testResults = studioApp.getTestResults(Eval.result);
+    }
+
+    if (level.freePlay) {
+      Eval.testResults = TestResults.FREE_PLAY;
+    }
   }
 
   var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
@@ -296,7 +326,7 @@ var displayFeedback = function(response) {
   // override extra top blocks message
   level.extraTopBlocks = evalMsg.extraTopBlocks();
 
-  studioApp.displayFeedback({
+  var options = {
     app: 'Eval',
     skin: skin.id,
     feedbackType: Eval.testResults,
@@ -304,8 +334,12 @@ var displayFeedback = function(response) {
     level: level,
     appStrings: {
       reinfFeedbackMsg: evalMsg.reinfFeedbackMsg()
-    },
-  });
+    }
+  };
+  if (Eval.message) {
+    options.message = Eval.message;
+  }
+  studioApp.displayFeedback(options);
 };
 
 /**
@@ -320,7 +354,7 @@ function onReportComplete(response) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../../locale/current/common":159,"../../locale/current/eval":160,"../StudioApp":2,"../block_utils":15,"../canvg/canvg.js":35,"../codegen":38,"../dom":40,"../skins":114,"../templates/page.html":134,"./api":41,"./controls.html":43,"./levels":55,"./visualization.html":57}],57:[function(require,module,exports){
+},{"../../locale/current/common":187,"../../locale/current/eval":188,"../StudioApp":2,"../block_utils":17,"../canvg/canvg.js":39,"../codegen":42,"../dom":44,"../skins":141,"../templates/page.html":162,"./api":45,"./controls.html":47,"./evalError":51,"./levels":60,"./visualization.html":62}],62:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -340,7 +374,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":175}],55:[function(require,module,exports){
+},{"ejs":203}],60:[function(require,module,exports){
 var msg = require('../../locale/current/eval');
 var blockUtils = require('../block_utils');
 
@@ -408,7 +442,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/current/eval":160,"../block_utils":15}],43:[function(require,module,exports){
+},{"../../locale/current/eval":188,"../block_utils":17}],47:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -431,7 +465,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":159,"../../locale/current/eval":160,"ejs":175}],42:[function(require,module,exports){
+},{"../../locale/current/common":187,"../../locale/current/eval":188,"ejs":203}],46:[function(require,module,exports){
 /**
  * Blockly Demo: Eval Graphics
  *
@@ -729,9 +763,7 @@ function installFunctionalBlock (blockly, generator, gensym, options) {
   };
 }
 
-},{"../../locale/current/common":159,"../../locale/current/eval":160,"../functionalBlockUtils":69,"../sharedFunctionalBlocks":113,"./evalUtils":54}],160:[function(require,module,exports){
-/*eval*/ module.exports = window.blockly.appLocale;
-},{}],41:[function(require,module,exports){
+},{"../../locale/current/common":187,"../../locale/current/eval":188,"../functionalBlockUtils":74,"../sharedFunctionalBlocks":140,"./evalUtils":59}],45:[function(require,module,exports){
 var evalUtils = require('./evalUtils');
 var EvalImage = require('./evalImage');
 var EvalText = require('./evalText');
@@ -852,14 +884,14 @@ exports.stringLength = function (str) {
   return str.length;
 };
 
-},{"./evalCircle":45,"./evalEllipse":46,"./evalImage":47,"./evalMulti":48,"./evalPolygon":49,"./evalRect":50,"./evalStar":51,"./evalText":52,"./evalTriangle":53,"./evalUtils":54}],53:[function(require,module,exports){
+},{"./evalCircle":49,"./evalEllipse":50,"./evalImage":52,"./evalMulti":53,"./evalPolygon":54,"./evalRect":55,"./evalStar":56,"./evalText":57,"./evalTriangle":58,"./evalUtils":59}],58:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
 var EvalTriangle = function (edge, style, color) {
   evalUtils.ensureNumber(edge);
-  evalUtils.ensureString(style);
-  evalUtils.ensureString(color);
+  evalUtils.ensureStyle(style);
+  evalUtils.ensureColor(color);
 
   EvalImage.apply(this, [style, color]);
 
@@ -903,14 +935,14 @@ EvalTriangle.prototype.draw = function (parent) {
   EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalImage":47,"./evalUtils":54}],52:[function(require,module,exports){
+},{"./evalImage":52,"./evalUtils":59}],57:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
 var EvalText = function (text, fontSize, color) {
   evalUtils.ensureString(text);
   evalUtils.ensureNumber(fontSize);
-  evalUtils.ensureString(color);
+  evalUtils.ensureColor(color);
 
   EvalImage.apply(this, ['solid', color]);
 
@@ -938,7 +970,7 @@ EvalText.prototype.draw = function (parent) {
   EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalImage":47,"./evalUtils":54}],51:[function(require,module,exports){
+},{"./evalImage":52,"./evalUtils":59}],56:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -946,8 +978,8 @@ var EvalStar = function (pointCount, inner, outer, style, color) {
   evalUtils.ensureNumber(pointCount);
   evalUtils.ensureNumber(inner);
   evalUtils.ensureNumber(outer);
-  evalUtils.ensureString(style);
-  evalUtils.ensureString(color);
+  evalUtils.ensureStyle(style);
+  evalUtils.ensureColor(color);
 
   EvalImage.apply(this, [style, color]);
 
@@ -985,15 +1017,15 @@ EvalStar.prototype.draw = function (parent) {
   EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalImage":47,"./evalUtils":54}],50:[function(require,module,exports){
+},{"./evalImage":52,"./evalUtils":59}],55:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
 var EvalRect = function (width, height, style, color) {
   evalUtils.ensureNumber(width);
   evalUtils.ensureNumber(height);
-  evalUtils.ensureString(style);
-  evalUtils.ensureString(color);
+  evalUtils.ensureStyle(style);
+  evalUtils.ensureColor(color);
 
   EvalImage.apply(this, [style, color]);
 
@@ -1020,15 +1052,15 @@ EvalRect.prototype.draw = function (parent) {
   EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalImage":47,"./evalUtils":54}],49:[function(require,module,exports){
+},{"./evalImage":52,"./evalUtils":59}],54:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
 var EvalPolygon = function (sideCount, length, style, color) {
   evalUtils.ensureNumber(sideCount);
   evalUtils.ensureNumber(length);
-  evalUtils.ensureString(style);
-  evalUtils.ensureString(color);
+  evalUtils.ensureStyle(style);
+  evalUtils.ensureColor(color);
 
   EvalImage.apply(this, [style, color]);
 
@@ -1059,7 +1091,7 @@ EvalPolygon.prototype.draw = function (parent) {
   EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalImage":47,"./evalUtils":54}],48:[function(require,module,exports){
+},{"./evalImage":52,"./evalUtils":59}],53:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -1102,15 +1134,15 @@ EvalMulti.prototype.draw = function (parent) {
   EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalImage":47,"./evalUtils":54}],46:[function(require,module,exports){
+},{"./evalImage":52,"./evalUtils":59}],50:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
 var EvalCircle = function (width, height, style, color) {
   evalUtils.ensureNumber(width);
   evalUtils.ensureNumber(height);
-  evalUtils.ensureString(style);
-  evalUtils.ensureString(color);
+  evalUtils.ensureStyle(style);
+  evalUtils.ensureColor(color);
 
   EvalImage.apply(this, [style, color]);
 
@@ -1135,14 +1167,14 @@ EvalCircle.prototype.draw = function (parent) {
   EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalImage":47,"./evalUtils":54}],45:[function(require,module,exports){
+},{"./evalImage":52,"./evalUtils":59}],49:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
 var EvalCircle = function (radius, style, color) {
   evalUtils.ensureNumber(radius);
-  evalUtils.ensureString(style);
-  evalUtils.ensureString(color);
+  evalUtils.ensureStyle(style);
+  evalUtils.ensureColor(color);
 
   EvalImage.apply(this, [style, color]);
 
@@ -1170,7 +1202,7 @@ EvalCircle.prototype.rotate = function () {
   // a bitmap.
 };
 
-},{"./evalImage":47,"./evalUtils":54}],47:[function(require,module,exports){
+},{"./evalImage":52,"./evalUtils":59}],52:[function(require,module,exports){
 var evalUtils = require('./evalUtils');
 
 var EvalImage = function (style, color) {
@@ -1231,7 +1263,11 @@ EvalImage.prototype.scale = function (scaleX, scaleY) {
   this.scaleY_ = scaleY;
 };
 
-},{"./evalUtils":54}],54:[function(require,module,exports){
+},{"./evalUtils":59}],59:[function(require,module,exports){
+var CustomEvalError = require('./evalError');
+var utils = require('../utils');
+var _ = utils.getLodash();
+
 /**
  * Throws an expection if val is not of the expected type. Type is either a
  * string (like "number" or "string") or an object (Like EvalImage).
@@ -1244,6 +1280,39 @@ module.exports.ensureNumber = function (val) {
   return module.exports.ensureType(val, "number");
 };
 
+/**
+ * Style is either "solid", "outline", or a percentage i.e. "70%"
+ */
+module.exports.ensureStyle = function (val) {
+  if (val.slice(-1) === '%') {
+    var opacity = module.exports.getOpacity(val);
+    if (opacity >= 0 && opacity <= 1.0) {
+      return;
+    }
+  } if (_.contains(['outline', 'solid'], val)) {
+    return;
+  }
+  throw new CustomEvalError(CustomEvalError.Type.BadStyle, val);
+};
+
+/**
+ * Checks to see if this is a valid color, throwing if it isnt. Color validity
+ * is determined by setting the value on an html element and seeing if it takes.
+ */
+module.exports.ensureColor = function (val) {
+  var e = document.createElement('div');
+  e.style.color = val;
+  // We can't check that e.style.color === val, since some vals will be
+  // transformed (i.e. #fff -> rgb(255, 255, 255)
+  if (!e.style.color) {
+    throw new CustomEvalError(CustomEvalError.Type.BadColor, val);
+  }
+};
+
+/**
+ * @param val
+ * @param {string|Class} type
+ */
 module.exports.ensureType = function (val, type) {
   if (typeof(type) === "string") {
     if (typeof(val) !== type) {
@@ -1273,7 +1342,7 @@ module.exports.getStroke = function (style, color) {
  * Get the opacity from the style. Style is a string that is either a word or
  * percentage (i.e. 25%).
  */
-module.exports.getOpacity = function (style, color) {
+module.exports.getOpacity = function (style) {
   var alpha = 1.0;
   if (style.slice(-1) === "%") {
     alpha = parseInt(style.slice(0, -1), 10) / 100;
@@ -1292,4 +1361,36 @@ module.exports.cartesianToPixel = function (cartesianY) {
   return 400 - cartesianY;
 };
 
-},{}]},{},[56]);
+},{"../utils":182,"./evalError":51}],51:[function(require,module,exports){
+var evalMsg = require('../../locale/current/eval');
+
+/**
+ * An Eval error indicating that something bad happened, but we understand
+ * the bad and want our app to handle it (i.e. user used an invalid style
+ * string and we want to display an error message).
+ */
+var CustomEvalError = function (type, val) {
+  this.type = type;
+  
+  switch (type) {
+    case CustomEvalError.Type.BadStyle:
+      this.feedbackMessage = evalMsg.badStyleStringError({val: val});
+      break;
+    case CustomEvalError.Type.BadColor:
+      this.feedbackMessage = evalMsg.badColorStringError({val: val});
+      break;
+    default:
+      this.feedbackMessag = '';
+      break;
+  }
+};
+module.exports = CustomEvalError;
+
+CustomEvalError.Type = {
+  BadStyle: 0,
+  BadColor: 1
+};
+
+},{"../../locale/current/eval":188}],188:[function(require,module,exports){
+/*eval*/ module.exports = window.blockly.appLocale;
+},{}]},{},[61]);

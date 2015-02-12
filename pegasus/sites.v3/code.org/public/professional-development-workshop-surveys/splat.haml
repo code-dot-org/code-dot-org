@@ -441,7 +441,10 @@ rightbar: blank
           State
           %span.form-required-field *
         %div
-          %input#k5-send-materials-state.form-control{name: "send_materials_state_s", placeholder: "State", type: "text"}
+          %select#k5-send-materials-state.form-control{name: "send_materials_state_s"}
+            %option{selected: true, value: ""}
+            -DB[:geography_us_states].order(:name_s).each do |i|
+              %option{value: i[:code_s]}= i[:name_s]
       .form-group
         %label.control-label{for: "k5-send-materials-zip"}<
           Zip code

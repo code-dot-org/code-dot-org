@@ -15,8 +15,8 @@ var FeedbackUtils = require('./feedback');
 * The minimum width of a playable whole blockly game.
 */
 var MIN_WIDTH = 900;
-var MIN_MOBILE_SHARE_WIDTH = 450;
-var MOBILE_NO_PADDING_SHARE_WIDTH = 400;
+var MOBILE_SHARE_WIDTH_PADDING = 50;
+var DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
 var WORKSPACE_PLAYSPACE_GAP = 15;
 var BLOCK_X_COORDINATE = 70;
 var BLOCK_Y_COORDINATE = 30;
@@ -48,6 +48,10 @@ var StudioApp = function () {
   this.enableShowCode = true;
   this.editCode = false;
   this.usingBlockly_ = true;
+
+  /**
+   * @type {AudioPlayer}
+   */
   this.cdoSounds = null;
   this.Dialog = null;
   this.editor = null;
@@ -177,7 +181,7 @@ StudioApp.prototype.configure = function (options) {
 };
 
 /**
- * Common startup tasks for all apps.
+ * Common startup tasks for all apps. Happens after configure.
  */
 StudioApp.prototype.init = function(config) {
   if (!config) {
@@ -216,7 +220,7 @@ StudioApp.prototype.init = function(config) {
   // Fixes viewport for small screens.
   var viewport = document.querySelector('meta[name="viewport"]');
   if (viewport) {
-    this.fixViewportForSmallScreens_(viewport);
+    this.fixViewportForSmallScreens_(viewport, config);
   }
 
   var showCode = document.getElementById('show-code-header');
@@ -335,6 +339,7 @@ StudioApp.prototype.init = function(config) {
   if (this.editCode) {
     this.handleEditCode_({
       codeFunctions: config.level.codeFunctions,
+      dropletConfig: config.dropletConfig,
       categoryInfo: config.level.categoryInfo,
       startBlocks: config.level.startBlocks,
       afterEditorReady: config.afterEditorReady,
@@ -501,48 +506,47 @@ StudioApp.prototype.toggleRunReset = function(button) {
 };
 
 /**
- *
+ * Attempts to associate a set of audio files to a given name
+ * Handles the case where cdoSounds does not exist, e.g. in tests
+ * and grunt dev preview mode
+ * @param {Array.<string>} filenames file paths for sounds
+ * @param {string} name ID to associate sound effect with
  */
 StudioApp.prototype.loadAudio = function(filenames, name) {
-  if (this.isUsingBlockly()) {
-    Blockly.loadAudio_(filenames, name);
-  } else if (this.cdoSounds) {
-    var regOpts = { id: name };
-    for (var i = 0; i < filenames.length; i++) {
-      var filename = filenames[i];
-      var ext = filename.match(/\.(\w+)(\?.*)?$/);
-      if (ext) {
-        // Extend regOpts so regOpts.mp3 = 'file.mp3'
-        regOpts[ext[1]] = filename;
-      }
-    }
-    this.cdoSounds.register(regOpts);
+  if (!this.cdoSounds) {
+    return;
   }
+
+  this.cdoSounds.registerByFilenamesAndID(filenames, name);
 };
 
 /**
- *
+ * Attempts to play a sound effect
+ * @param {string} name sound ID
+ * @param {Object} options for sound playback
+ * @param {number} options.volume value between 0.0 and 1.0 specifying volume
  */
 StudioApp.prototype.playAudio = function(name, options) {
+  if (!this.cdoSounds) {
+    return;
+  }
+
   options = options || {};
   var defaultOptions = {volume: 0.5};
   var newOptions = utils.extend(defaultOptions, options);
-  if (this.isUsingBlockly()) {
-    Blockly.playAudio(name, newOptions);
-  } else if (this.cdoSounds) {
-    this.cdoSounds.play(name, newOptions);
-  }
+  this.cdoSounds.play(name, newOptions);
 };
 
 /**
- *
+ * Stops looping a given sound
+ * @param {string} name ID of sound
  */
 StudioApp.prototype.stopLoopingAudio = function(name) {
-  if (this.isUsingBlockly()) {
-    Blockly.stopLoopingAudio(name);
-  } else if (this.cdoSounds) {
-    this.cdoSounds.stopLoopingAudio(name);
+  if (!this.cdoSounds) {
+    return;
   }
+
+  this.cdoSounds.stopLoopingAudio(name);
 };
 
 /**
@@ -564,7 +568,7 @@ StudioApp.prototype.inject = function(div, options) {
     toolbox: document.getElementById('toolbox'),
     trashcan: true
   };
-  Blockly.inject(div, utils.extend(defaults, options));
+  Blockly.inject(div, utils.extend(defaults, options), this.cdoSounds);
 };
 
 /**
@@ -588,7 +592,7 @@ StudioApp.prototype.localeDirection = function() {
 };
 
 /**
-* Initialize Blockly for a readonly iframe.  Called on page load.
+* Initialize Blockly for a readonly iframe.  Called on page load. No sounds.
 * XML argument may be generated from the console with:
 * Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)).slice(5, -6)
 */
@@ -788,7 +792,7 @@ StudioApp.prototype.resizeHeaders = function (fullWorkspaceWidth) {
   if (toolboxHeader) {
     if (this.editCode) {
       // If in the droplet editor, but not using blocks, keep categoryWidth at 0
-      if (this.editor.currentlyUsingBlocks) {
+      if (this.editor && this.editor.currentlyUsingBlocks) {
         // Set toolboxWidth based on the block palette width:
         var categories = document.querySelector('.droplet-palette-wrapper');
         toolboxWidth = parseInt(window.getComputedStyle(categories).width, 10);
@@ -999,19 +1003,20 @@ StudioApp.prototype.setIdealBlockNumber_ = function() {
 /**
  *
  */
-StudioApp.prototype.fixViewportForSmallScreens_ = function (viewport) {
+StudioApp.prototype.fixViewportForSmallScreens_ = function (viewport, config) {
   var deviceWidth;
   var desiredWidth;
   var minWidth;
   if (this.share && dom.isMobile()) {
+    var mobileNoPaddingShareWidth =
+      config.mobileNoPaddingShareWidth || DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH;
     // for mobile sharing, don't assume landscape mode, use screen.width
     deviceWidth = desiredWidth = screen.width;
     if (this.noPadding && screen.width < MAX_PHONE_WIDTH) {
-      desiredWidth = Math.min(desiredWidth,
-        MOBILE_NO_PADDING_SHARE_WIDTH);
+      desiredWidth = Math.min(desiredWidth, mobileNoPaddingShareWidth);
     }
-    minWidth = this.noPadding ?
-      MOBILE_NO_PADDING_SHARE_WIDTH : MIN_MOBILE_SHARE_WIDTH;
+    minWidth = mobileNoPaddingShareWidth +
+      (this.noPadding ? 0 : MOBILE_SHARE_WIDTH_PADDING);
   }
   else {
     // assume we are in landscape mode, so width is the longer of the two
@@ -1108,7 +1113,7 @@ StudioApp.prototype.configureDom = function (config) {
     visualizationColumn.style.minHeight = this.MIN_WORKSPACE_HEIGHT + 'px';
   }
 
-  if (!config.embed && !this.share) {
+  if (!config.embed && !config.hideSource) {
     // Make the visualization responsive to screen size, except on share page.
     visualization.className += " responsive";
     visualizationColumn.className += " responsive";
@@ -1166,21 +1171,22 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     // Ensure global ace variable is the same as window.ace
     // (important because they can be different in our test environment)
     ace = window.ace;
-    
+
     this.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
       mode: 'javascript',
-      modeOptions: utils.generateDropletModeOptions(options.codeFunctions),
+      modeOptions: utils.generateDropletModeOptions(options.codeFunctions,
+        options.dropletConfig),
       palette: utils.generateDropletPalette(options.codeFunctions,
-        options.categoryInfo)
+        options.dropletConfig)
     });
 
     this.editor.aceEditor.setShowPrintMargin(false);
 
     // Add an ace completer for the API functions exposed for this level
-    if (options.codeFunctions) {
+    if (options.codeFunctions || options.dropletConfig) {
       var langTools = window.ace.require("ace/ext/language_tools");
       langTools.addCompleter(
-        utils.generateAceApiCompleter(options.codeFunctions));
+        utils.generateAceApiCompleter(options.codeFunctions, options.dropletConfig));
     }
 
     this.editor.aceEditor.setOptions({
@@ -1304,4 +1310,21 @@ StudioApp.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
  */
 StudioApp.prototype.hasExtraTopBlocks = function () {
   return this.feedback_.hasExtraTopBlocks();
+};
+
+/**
+ * @param {Blockly.Block} block Block to check
+ * @returns true if the block has a connection without a block attached
+ */
+function isUnfilledBlock(block) {
+  return block.inputList.some(function (input) {
+    return input.connection && !input.connection.targetBlock();
+  });
+}
+
+/**
+ * @returns true if any block in the workspace has an unfilled input
+ */
+StudioApp.prototype.hasUnfilledBlock = function () {
+  return Blockly.mainBlockSpace.getAllBlocks().some(isUnfilledBlock);
 };

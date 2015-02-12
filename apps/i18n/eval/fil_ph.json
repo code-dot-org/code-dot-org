@@ -17,8 +17,8 @@
   "stringAppendBlockTitle": "string-append (first, second)",
   "stringLengthBlockTitle": "string-length (string)",
   "textBlockTitle": "text (string, size, kulay)",
-  "triangleBlockTitle": "triangle (size, style, color)",
-  "underlayBlockTitle": "underlay (bottom, top)",
+  "triangleBlockTitle": "triangulo (laki, estilo, kulay)",
+  "underlayBlockTitle": "underlay (ilalim, ibabaw)",
   "outline": "outline",
   "solid": "solid",
   "string": "string"

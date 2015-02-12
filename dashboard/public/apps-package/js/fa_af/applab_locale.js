@@ -50,11 +50,10 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "repeatForever":function(d){return "تکرار بی‌پایان"},
 "repeatDo":function(d){return "انجام بده"},
 "repeatForeverTooltip":function(d){return "وقتی برنامه در حال اجراست، اقدامات داخل این بلوک را بطور پی در پی اجرا کن."},
-"shareWebappTwitter":function(d){return "برنامه‌ای که ساخته‌ام را ببین. من خودم با @codeorg آن را نوشته‌ام"},
+"shareApplabTwitter":function(d){return "برنامه‌ای که ساخته‌ام را ببین. من خودم با @codeorg آن را نوشته‌ام"},
 "shareGame":function(d){return "App خود را به اشتراک بگذارید:"},
 "stepIn":function(d){return "به داخل قدم بگذار"},
 "stepOver":function(d){return "از رویش قدم بگذار"},
 "stepOut":function(d){return "به بیرون قدم بگذار"},
-"turnBlack":function(d){return "سیاه کن"},
-"turnBlackTooltip":function(d){return "صفحه نمایش سیاه  می شود."},
+"viewData":function(d){return "داده ها را ببین"},
 "yes":function(d){return "بله"}};
