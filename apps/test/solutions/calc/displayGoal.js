@@ -1,5 +1,6 @@
 var testUtils = require('../../util/testUtils');
-testUtils.setupLocales();
+testUtils.setupLocale('calc');
+
 var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
 var blockUtils = require(testUtils.buildPath('block_utils'));
 var studioApp = require(testUtils.buildPath('StudioApp')).singleton;
@@ -28,8 +29,8 @@ module.exports = {
     {
       description: "displayGoal",
       expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY
+        result: false,
+        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
       },
       // Run all validation in a single test to avoid the overhead of new node
       // processes

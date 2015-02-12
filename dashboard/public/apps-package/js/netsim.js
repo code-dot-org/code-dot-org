@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({133:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({134:[function(require,module,exports){
 var appMain = require('../appMain');
 var studioApp = require('../StudioApp').singleton;
 var NetSim = require('./netsim');
@@ -15,7 +15,7 @@ window.netsimMain = function(options) {
   appMain(netSim, levels, options);
 };
 
-},{"../StudioApp":2,"../appMain":3,"./levels":132,"./netsim":134,"./skins":137}],137:[function(require,module,exports){
+},{"../StudioApp":2,"../appMain":3,"./levels":133,"./netsim":135,"./skins":138}],138:[function(require,module,exports){
 var skinBase = require('../skins');
 
 exports.load = function (assetUrl, id) {
@@ -23,7 +23,7 @@ exports.load = function (assetUrl, id) {
   return skin;
 };
 
-},{"../skins":140}],134:[function(require,module,exports){
+},{"../skins":141}],135:[function(require,module,exports){
 /**
  * Internet Simulator
  *
@@ -270,7 +270,7 @@ NetSim.prototype.onResizeOverride_ = function() {
   div.style.width = parentWidth + 'px';
 };
 
-},{"./DashboardUser":111,"./NetSimConnection":112,"./NetSimLobby":115,"./NetSimLogWidget":117,"./NetSimRouterPanel":124,"./NetSimSendWidget":126,"./RunLoop":130,"./controls.html":131,"./page.html":135}],135:[function(require,module,exports){
+},{"./DashboardUser":111,"./NetSimConnection":112,"./NetSimLobby":115,"./NetSimLogWidget":117,"./NetSimRouterPanel":124,"./NetSimSendWidget":126,"./RunLoop":131,"./controls.html":132,"./page.html":136}],136:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -286,7 +286,7 @@ with (locals || {}) { (function(){
   var msg = require('../../locale/current/common');
   var netsimMsg = require('../../locale/current/netsim');
 ; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n        <img id="play-button" src="', escape((26,  assetUrl('media/play-circle.png') )), '"/>\n      </div>\n    </div>\n  </div>\n');30; };; buf.push('\n');31; // A spot for the server to inject some HTML for help content.
-var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n<div id="appcontainer">\n  <div id="netsim_lobby_container"></div>\n  <div id="netsim">\n    <div id="netsim_rightcol">\n      <div id="netsim_vizualization"></div>\n      <div id="netsim_tabpanel"></div>\n    </div>\n    <div id="netsim_leftcol">\n      <div id="netsim_received"></div>\n      <div id="netsim_sent"></div>\n      <div id="netsim_send"></div>\n    </div>\n\n  </div>\n  <div id="footers" dir="', escape((50,  data.localeDirection )), '">\n    ');51; instructions() ; buf.push('\n    ');52; helpArea(data.helpHtml) ; buf.push('\n  </div>\n</div>\n\n<div class="clear"></div>\n'); })();
+var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n<div id="appcontainer">\n  <div id="netsim_lobby_container"></div>\n  <div id="netsim">\n    <div id="netsim_rightcol">\n      <div id="netsim_vizualization">\n        <img src="', escape((41,  assetUrl('media/netsim/netsim_viz_mock.png') )), '" />\n      </div>\n      <div id="netsim_tabpanel"></div>\n    </div>\n    <div id="netsim_leftcol">\n      <div id="netsim_received"></div>\n      <div id="netsim_sent"></div>\n      <div id="netsim_send"></div>\n    </div>\n\n  </div>\n  <div id="footers" dir="', escape((52,  data.localeDirection )), '">\n    ');53; instructions() ; buf.push('\n    ');54; helpArea(data.helpHtml) ; buf.push('\n  </div>\n</div>\n\n<div class="clear"></div>\n'); })();
 } 
 return buf.join('');
 };
@@ -294,7 +294,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":185,"../../locale/current/netsim":190,"ejs":201}],132:[function(require,module,exports){
+},{"../../locale/current/common":186,"../../locale/current/netsim":191,"ejs":202}],133:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/netsim');
@@ -308,9 +308,9 @@ levels.netsim_demo = {
   'freePlay': true
 };
 
-},{"../../locale/current/netsim":190}],190:[function(require,module,exports){
+},{"../../locale/current/netsim":191}],191:[function(require,module,exports){
 /*netsim*/ module.exports = window.blockly.appLocale;
-},{}],131:[function(require,module,exports){
+},{}],132:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -330,7 +330,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":201}],130:[function(require,module,exports){
+},{"ejs":202}],131:[function(require,module,exports){
 /**
  * Copyright 2015 Code.org
  * http://code.org/
@@ -492,7 +492,7 @@ RunLoop.prototype.end = function () {
   this.enabled = false;
 };
 
-},{"./ObservableEvent":129}],126:[function(require,module,exports){
+},{"./ObservableEvent":130}],126:[function(require,module,exports){
 /**
  * Copyright 2015 Code.org
  * http://code.org/
@@ -624,7 +624,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":201}],124:[function(require,module,exports){
+},{"ejs":202}],124:[function(require,module,exports){
 /**
  * Copyright 2015 Code.org
  * http://code.org/
@@ -777,7 +777,7 @@ NetSimRouterPanel.prototype.refresh = function () {
   }
 };
 
-},{"./NetSimRouterPanel.html":123,"./periodicAction":136}],123:[function(require,module,exports){
+},{"./NetSimRouterPanel.html":123,"./periodicAction":137}],123:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -797,7 +797,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":201}],117:[function(require,module,exports){
+},{"ejs":202}],117:[function(require,module,exports){
 /**
  * Copyright 2015 Code.org
  * http://code.org/
@@ -925,7 +925,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":201}],115:[function(require,module,exports){
+},{"ejs":202}],115:[function(require,module,exports){
 /**
  * Copyright 2015 Code.org
  * http://code.org/
@@ -1410,7 +1410,7 @@ NetSimLobby.prototype.getUserSections_ = function (callback) {
   });
 };
 
-},{"../dom":44,"../utils":180,"./NetSimLobby.html":114,"./NetSimNodeClient":121,"./NetSimNodeRouter":122,"./periodicAction":136}],114:[function(require,module,exports){
+},{"../dom":44,"../utils":181,"./NetSimLobby.html":114,"./NetSimNodeClient":121,"./NetSimNodeRouter":122,"./periodicAction":137}],114:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1430,7 +1430,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":201}],112:[function(require,module,exports){
+},{"ejs":202}],112:[function(require,module,exports){
 /**
  * Copyright 2015 Code.org
  * http://code.org/
@@ -1795,7 +1795,7 @@ NetSimConnection.prototype.disconnectFromRouter = function () {
     self.statusChanges.notifyObservers();
   });
 };
-},{"./NetSimLogger":118,"./NetSimNodeClient":121,"./NetSimNodeRouter":122,"./NetSimShard":127,"./NetSimWire":128,"./ObservableEvent":129,"./periodicAction":136}],136:[function(require,module,exports){
+},{"./NetSimLogger":118,"./NetSimNodeClient":121,"./NetSimNodeRouter":122,"./NetSimShard":127,"./NetSimWire":129,"./ObservableEvent":130,"./periodicAction":137}],137:[function(require,module,exports){
 /**
  * Copyright 2015 Code.org
  * http://code.org/
@@ -1936,8 +1936,7 @@ module.exports = periodicAction;
 'use strict';
 
 var SharedTable = require('../appsApi').SharedTable;
-var _ = require('../utils').getLodash();
-var ObservableEvent = require('./ObservableEvent');
+var NetSimTable = require('./NetSimTable');
 
 /**
  * App key, unique to netsim, used for connecting with the storage API.
@@ -1950,6 +1949,76 @@ var APP_PUBLIC_KEY =
         "JGW2rHUp_UCMW_fQmRf6iQ==" : "HQJ8GCCMGP7Yh8MrtDusIA==";
 
 /**
+ * A shard is an isolated, complete simulation state shared by a subset of
+ * users.  It's made of a set of storage tables set apart by a particular
+ * shard ID in their names.  We use shards to allow students to interact only
+ * with their particular class while still storing all NetSim tables under
+ * the same App ID.
+ *
+ * @param {!string} shardID
+ * @constructor
+ */
+var NetSimShard = module.exports = function (shardID) {
+  /** @type {NetSimTable} */
+  this.nodeTable = new NetSimTable(
+      new SharedTable(APP_PUBLIC_KEY, shardID + '_n'));
+
+  /** @type {NetSimTable} */
+  this.wireTable = new NetSimTable(
+      new SharedTable(APP_PUBLIC_KEY, shardID + '_w'));
+
+  /** @type {NetSimTable} */
+  this.messageTable = new NetSimTable(
+      new SharedTable(APP_PUBLIC_KEY, shardID + '_m'));
+};
+
+/**
+ * This tick allows our tables to poll the server for changes.
+ * @param {!RunLoop.Clock} clock
+ */
+NetSimShard.prototype.tick = function (clock) {
+  // TODO (bbuchanan): Eventaully, these polling events should just be
+  //                   backup for the notification system.
+
+  // Only tick the message table for now - not clear that lobby or wire
+  // tables need this yet.
+  this.messageTable.tick(clock);
+};
+},{"../appsApi":16,"./NetSimTable":128}],128:[function(require,module,exports){
+/**
+ * Copyright 2015 Code.org
+ * http://code.org/
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+
+ maxlen: 90,
+ maxparams: 3,
+ maxstatements: 200
+ */
+'use strict';
+
+var _ = require('../utils').getLodash();
+var ObservableEvent = require('./ObservableEvent');
+
+/**
  * Maximum time (in milliseconds) that tables should wait between full cache
  * updates from the server.
  * @type {number}
@@ -1957,25 +2026,20 @@ var APP_PUBLIC_KEY =
 var POLLING_DELAY_MS = 5000;
 
 /**
- * Wrap remote storage table in a netsim-specific wrapper.
- * I hope to implement local cache and/or notifications here.
- * @param {!string} tableName
+ * Wraps the app storage table API in an object with local
+ * cacheing and callbacks, which provides a notification API to the rest
+ * of the NetSim code.
+ * @param {!SharedTable} storageTable - The remote storage table to wrap.
  * @constructor
  */
-var NetSimTable = function (tableName) {
+var NetSimTable = module.exports = function (storageTable) {
   /**
    * Actual API to the remote shared table.
    * @type {SharedTable}
    * @private
    */
-  this.remoteTable_ = new SharedTable(APP_PUBLIC_KEY, tableName);
+  this.remoteTable_ = storageTable;
 
-  /**
-   * Store table contents locally, so we can detect when changes occur.
-   * @type {Object}
-   * @private
-   */
-  this.cache_ = {};
 
   /**
    * Event that fires when full table updates indicate a change,
@@ -1983,6 +2047,13 @@ var NetSimTable = function (tableName) {
    * @type {ObservableEvent}
    */
   this.tableChangeEvent = new ObservableEvent();
+
+  /**
+   * Store table contents locally, so we can detect when changes occur.
+   * @type {Object}
+   * @private
+   */
+  this.cache_ = {};
 
   /**
    * Unix timestamp for last time this table's cache contents were fully
@@ -1994,59 +2065,54 @@ var NetSimTable = function (tableName) {
 };
 
 NetSimTable.prototype.readAll = function (callback) {
-  var self = this;
   this.remoteTable_.readAll(function (data) {
     callback(data);
     if (data !== null) {
-      self.fullCacheUpdate_(data);
+      this.fullCacheUpdate_(data);
     }
-  });
+  }.bind(this));
 };
 
 NetSimTable.prototype.read = function (id, callback) {
-  var self = this;
   this.remoteTable_.read(id, function (data) {
     callback(data);
     if (data !== undefined) {
-      self.updateCacheRow_(id, data);
+      this.updateCacheRow_(id, data);
     }
-  });
+  }.bind(this));
 };
 
 NetSimTable.prototype.create = function (value, callback) {
-  var self = this;
   this.remoteTable_.create(value, function (data) {
     callback(data);
     if (data !== undefined) {
-      self.addRowToCache_(data);
+      this.addRowToCache_(data);
     }
-  });
+  }.bind(this));
 };
 
 NetSimTable.prototype.update = function (id, value, callback) {
-  var self = this;
   this.remoteTable_.update(id, value, function (success) {
     callback(success);
     if (success) {
-      self.updateCacheRow_(id, value);
+      this.updateCacheRow_(id, value);
     }
-  });
+  }.bind(this));
 };
 
 NetSimTable.prototype.delete = function (id, callback) {
-  var self = this;
   this.remoteTable_.delete(id, function (success) {
     callback(success);
     if (success) {
-      self.removeRowFromCache_(id);
+      this.removeRowFromCache_(id);
     }
-  });
+  }.bind(this));
 };
 
 NetSimTable.prototype.fullCacheUpdate_ = function (allRows) {
   // Rebuild entire cache
   var newCache = allRows.reduce(function (prev, currentRow) {
-    prev[currentRow] = currentRow;
+    prev[currentRow.id] = currentRow;
     return prev;
   }, {});
 
@@ -2066,15 +2132,20 @@ NetSimTable.prototype.addRowToCache_ = function (row) {
 
 NetSimTable.prototype.removeRowFromCache_ = function (id) {
   if (this.cache_[id] !== undefined) {
-    this.cache_[id] = undefined;
+    delete this.cache_[id];
     this.tableChangeEvent.notifyObservers(this.arrayFromCache_());
   }
 };
 
 NetSimTable.prototype.updateCacheRow_ = function (id, row) {
   var oldRow = this.cache_[id];
-  if (!_.isEqual(oldRow, row)) {
-    this.cache_[id] = row;
+  var newRow = row;
+
+  // Manually apply ID which should be present in row.
+  newRow.id = id;
+
+  if (!_.isEqual(oldRow, newRow)) {
+    this.cache_[id] = newRow;
     this.tableChangeEvent.notifyObservers(this.arrayFromCache_());
   }
 };
@@ -2096,41 +2167,7 @@ NetSimTable.prototype.tick = function () {
   }
 };
 
-/**
- * A shard is an isolated, complete simulation state shared by a subset of
- * users.  It's made of a set of storage tables set apart by a particular
- * shard ID in their names.  We use shards to allow students to interact only
- * with their particular class while still storing all NetSim tables under
- * the same App ID.
- *
- * @param {!string} shardID
- * @constructor
- */
-var NetSimShard = function (shardID) {
-  /** @type {NetSimTable} */
-  this.nodeTable = new NetSimTable(shardID + '_n');
-
-  /** @type {NetSimTable} */
-  this.wireTable = new NetSimTable(shardID + '_w');
-
-  /** @type {NetSimTable} */
-  this.messageTable = new NetSimTable(shardID + '_m');
-};
-module.exports = NetSimShard;
-
-/**
- * This tick allows our tables to poll the server for changes.
- * @param {!RunLoop.Clock} clock
- */
-NetSimShard.prototype.tick = function (clock) {
-  // TODO (bbuchanan): Eventaully, these polling events should just be
-  //                   backup for the notification system.
-
-  // Only tick the message table for now - not clear that lobby or wire
-  // tables need this yet.
-  this.messageTable.tick(clock);
-};
-},{"../appsApi":16,"../utils":180,"./ObservableEvent":129}],122:[function(require,module,exports){
+},{"../utils":181,"./ObservableEvent":130}],122:[function(require,module,exports){
 /**
  * Copyright 2015 Code.org
  * http://code.org/
@@ -2535,7 +2572,7 @@ NetSimNodeRouter.prototype.routeMessage_ = function (message, myWires) {
       }
   );
 };
-},{"./NetSimEntity":113,"./NetSimLogger":118,"./NetSimMessage":119,"./NetSimNode":120,"./NetSimWire":128}],121:[function(require,module,exports){
+},{"./NetSimEntity":113,"./NetSimLogger":118,"./NetSimMessage":119,"./NetSimNode":120,"./NetSimWire":129}],121:[function(require,module,exports){
 /**
  * Copyright 2015 Code.org
  * http://code.org/
@@ -3097,7 +3134,7 @@ NetSimNode.prototype.connectToNode = function (otherNode, onComplete) {
 NetSimNode.prototype.acceptConnection = function (otherNode, onComplete) {
   onComplete(true);
 };
-},{"./NetSimEntity":113,"./NetSimWire":128}],128:[function(require,module,exports){
+},{"./NetSimEntity":113,"./NetSimWire":129}],129:[function(require,module,exports){
 /**
  * Copyright 2015 Code.org
  * http://code.org/
@@ -3536,7 +3573,7 @@ NetSimEntity.prototype.tick = function () {
     this.update();
   }
 };
-},{"./ObservableEvent":129}],129:[function(require,module,exports){
+},{"./ObservableEvent":130}],130:[function(require,module,exports){
 /**
  * Copyright 2015 Code.org
  * http://code.org/
@@ -4133,4 +4170,4 @@ appsApi.UserPropertyBag = function (app_publickey) {
 };
 appsApi.UserPropertyBag.prototype = Object.create(appsApi.PropertyBag.prototype);
 appsApi.UserPropertyBag.prototype.constructor = appsApi.UserPropertyBag;
-},{}]},{},[133]);
+},{}]},{},[134]);
