@@ -78,9 +78,6 @@ var NetSimRouterNode = function (shard, routerRow) {
    * @private
    */
   this.heartbeat_ = null;
-
-  this.shard_.messageTable.tableChange
-      .register(this.onMessageTableChange_.bind(this));
 };
 NetSimRouterNode.prototype = Object.create(superClass.prototype);
 NetSimRouterNode.prototype.constructor = NetSimRouterNode;
@@ -195,8 +192,26 @@ NetSimRouterNode.getNodeType = function () {
  * simulate for connection and messages -from- the given node.
  * @param {!number} nodeID
  */
-NetSimRouterNode.prototype.setSimulateForSender = function (nodeID) {
+NetSimRouterNode.prototype.initializeSimulation = function (nodeID) {
   this.simulateForSender_ = nodeID;
+  if (nodeID !== undefined) {
+    this.messageTableChangeKey_ = this.shard_.messageTable.tableChange
+        .register(this.onMessageTableChange_.bind(this));
+    logger.info("Router registered for messageTable tableChange");
+  }
+};
+
+/**
+ * Gives the simulating node a chance to unregister from anything it
+ * was observing.
+ */
+NetSimRouterNode.prototype.stopSimulation = function () {
+  if (this.messageTableChangeKey_ !== undefined) {
+    this.shard_.messageTable.tableChange
+        .unregister(this.messageTableChangeKey_);
+    this.messageTableChangeKey_ = undefined;
+    logger.info("Router unregistered from messageTable tableChange");
+  }
 };
 
 /**
