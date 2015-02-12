@@ -483,6 +483,12 @@ function generateResults() {
     appState.message = outcome.message;
     appState.failedInput = outcome.failedInput;
   }
+
+  // Override default message for LEVEL_INCOMPLETE_FAIL
+  if (appState.testResults === TestResults.LEVEL_INCOMPLETE_FAIL &&
+      !appState.message) {
+    appState.message = calcMsg.levelIncompleteError();
+  }
 }
 
 /**
@@ -757,7 +763,7 @@ Calc.__testonly__ = {
 };
 /* end-test-block */
 
-},{"../../locale/current/calc":185,"../../locale/current/common":186,"../StudioApp":2,"../block_utils":17,"../dom":44,"../skins":141,"../templates/page.html":161,"../timeoutList":167,"../utils":181,"./api":28,"./controls.html":31,"./equationSet":32,"./expressionNode":33,"./inputIterator":34,"./levels":35,"./visualization.html":37}],37:[function(require,module,exports){
+},{"../../locale/current/calc":186,"../../locale/current/common":187,"../StudioApp":2,"../block_utils":17,"../dom":44,"../skins":141,"../templates/page.html":162,"../timeoutList":168,"../utils":182,"./api":28,"./controls.html":31,"./equationSet":32,"./expressionNode":33,"./inputIterator":34,"./levels":35,"./visualization.html":37}],37:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -777,7 +783,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/calc":185,"ejs":202}],35:[function(require,module,exports){
+},{"../../locale/current/calc":186,"ejs":203}],35:[function(require,module,exports){
 var msg = require('../../locale/current/calc');
 var blockUtils = require('../block_utils');
 
@@ -816,7 +822,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/current/calc":185,"../block_utils":17}],34:[function(require,module,exports){
+},{"../../locale/current/calc":186,"../block_utils":17}],34:[function(require,module,exports){
 /**
  * Given a set of values (i.e. [1,2,3], and a number of parameters, generates
  * all possible combinations of values.
@@ -1176,7 +1182,7 @@ EquationSet.__testonly__ = {
 };
 /* end-test-block */
 
-},{"../utils":181,"./expressionNode":33}],31:[function(require,module,exports){
+},{"../utils":182,"./expressionNode":33}],31:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1199,7 +1205,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/calc":185,"../../locale/current/common":186,"ejs":202}],29:[function(require,module,exports){
+},{"../../locale/current/calc":186,"../../locale/current/common":187,"ejs":203}],29:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -1291,7 +1297,7 @@ function installCompute(blockly, generator, gensym) {
   };
 }
 
-},{"../../locale/current/calc":185,"../../locale/current/common":186,"../functionalBlockUtils":74,"../sharedFunctionalBlocks":140}],185:[function(require,module,exports){
+},{"../../locale/current/calc":186,"../../locale/current/common":187,"../functionalBlockUtils":74,"../sharedFunctionalBlocks":140}],186:[function(require,module,exports){
 /*calc*/ module.exports = window.blockly.appLocale;
 },{}],28:[function(require,module,exports){
 var ExpressionNode = require('./expressionNode');
@@ -1721,4 +1727,4 @@ var Token = function (str, marked) {
 };
 ExpressionNode.Token = Token;
 
-},{"../utils":181}]},{},[36]);
+},{"../utils":182}]},{},[36]);
