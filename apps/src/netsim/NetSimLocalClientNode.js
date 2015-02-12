@@ -46,7 +46,7 @@ var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
  * @constructor
  * @augments NetSimClientNode
  */
-var NetSimLocalClientNode = function (shard, clientRow) {
+var NetSimLocalClientNode = module.exports = function (shard, clientRow) {
   superClass.call(this, shard, clientRow);
 
   /**
@@ -85,7 +85,6 @@ var NetSimLocalClientNode = function (shard, clientRow) {
 };
 NetSimLocalClientNode.prototype = Object.create(superClass.prototype);
 NetSimLocalClientNode.prototype.constructor = NetSimLocalClientNode;
-module.exports = NetSimLocalClientNode;
 
 /**
  * Static async creation method. See NetSimEntity.create().

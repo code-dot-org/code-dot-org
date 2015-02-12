@@ -60,7 +60,7 @@ var MAX_CLIENT_CONNECTIONS = 6;
  * @constructor
  * @augments NetSimNode
  */
-var NetSimRouterNode = function (shard, routerRow) {
+var NetSimRouterNode = module.exports = function (shard, routerRow) {
   superClass.call(this, shard, routerRow);
 
   /**
@@ -81,7 +81,6 @@ var NetSimRouterNode = function (shard, routerRow) {
 };
 NetSimRouterNode.prototype = Object.create(superClass.prototype);
 NetSimRouterNode.prototype.constructor = NetSimRouterNode;
-module.exports = NetSimRouterNode;
 
 /**
  * Static async creation method. See NetSimEntity.create().

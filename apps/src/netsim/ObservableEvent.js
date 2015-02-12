@@ -37,7 +37,7 @@
  * without attaching anything to the DOM or other global scope.
  * @constructor
  */
-var ObservableEvent = function () {
+var ObservableEvent = module.exports = function () {
   /**
    * Objects observing this.
    * @type {Array}
@@ -45,7 +45,6 @@ var ObservableEvent = function () {
    */
   this.observerList_ = [];
 };
-module.exports = ObservableEvent;
 
 /**
  * Subscribe a method to be called when notifyObservers is called.

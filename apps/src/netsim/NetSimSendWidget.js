@@ -42,7 +42,7 @@ var dom = require('../dom');
  * @param {NetSimConnection} connection
  * @constructor
  */
-var NetSimSendWidget = function (connection) {
+var NetSimSendWidget = module.exports = function (connection) {
   /**
    * Connection that owns the router we will represent / manipulate
    * @type {NetSimConnection}
@@ -52,7 +52,6 @@ var NetSimSendWidget = function (connection) {
   this.connection_.statusChanges
       .register(this.onConnectionStatusChange_.bind(this));
 };
-module.exports = NetSimSendWidget;
 
 /**
  * Generate a new NetSimSendWidget, puttig it on the page and hooking

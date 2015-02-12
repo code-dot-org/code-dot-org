@@ -64,7 +64,7 @@ var FALLBACK_MS_PER_TICK = (1000 / FALLBACK_FPS);
  *
  * @constructor
  */
-var RunLoop = function () {
+var RunLoop = module.exports = function () {
 
   /**
    * Whether the run-loop will continue running.
@@ -92,7 +92,6 @@ var RunLoop = function () {
   /** @type {ObservableEvent} */
   this.render = new ObservableEvent();
 };
-module.exports = RunLoop;
 
 /**
  * Simple tracking for time values

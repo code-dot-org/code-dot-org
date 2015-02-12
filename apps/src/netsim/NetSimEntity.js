@@ -38,7 +38,7 @@ var ObservableEvent = require('./ObservableEvent');
  * @param {Object} [entityRow] JSON row from table.
  * @constructor
  */
-var NetSimEntity = function (shard, entityRow) {
+var NetSimEntity = module.exports = function (shard, entityRow) {
   if (entityRow === undefined) {
     entityRow = {};
   }
@@ -62,7 +62,6 @@ var NetSimEntity = function (shard, entityRow) {
    */
   this.onChange = new ObservableEvent();
 };
-module.exports = NetSimEntity;
 
 /**
  * Static async creation method.  Creates a new entity on the given shard,

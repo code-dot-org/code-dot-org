@@ -58,7 +58,7 @@ var SELECTOR_NONE_VALUE = 'none';
  * @param {string} [shardID]
  * @constructor
  */
-var NetSimLobby = function (connection, user, shardID) {
+var NetSimLobby = module.exports = function (connection, user, shardID) {
 
   /**
    * Shard connection that this lobby control will manipulate.
@@ -106,7 +106,6 @@ var NetSimLobby = function (connection, user, shardID) {
    */
   this.selectedListItem_ = undefined;
 };
-module.exports = NetSimLobby;
 
 /**
  * Generate a new NetSimLobby object, putting

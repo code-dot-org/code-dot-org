@@ -40,9 +40,8 @@ var dom = require('../dom');
 /**
  * @constructor
  */
-var NetSimLogWidget = function () {
+var NetSimLogWidget = module.exports = function () {
 };
-module.exports = NetSimLogWidget;
 
 /**
  * Static counter used to generate/uniquely identify different instances
