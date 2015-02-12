@@ -1,4 +1,8 @@
-var Direction = require('./constants').Direction;
+var studioConstants = require('./constants');
+var Direction = studioConstants.Direction;
+var Position = studioConstants.Position;
+var codegen = require('../codegen');
+var api = require('./api');
 
 /**
  * Interface for a set of custom game logic for playlab
@@ -22,6 +26,7 @@ function CustomGameLogic(studio) {}
 var BigGameLogic = function (studio) {
   this.studio_ = studio;
   this.functionNames = {};
+  this.cached_ = {};
 
   this.playerSpriteIndex = 0;
   this.targetSpriteIndex = 1;
@@ -29,10 +34,14 @@ var BigGameLogic = function (studio) {
 };
 
 BigGameLogic.prototype.onTick = function () {
+  if (this.studio_.tickCount === 1) {
+    this.onFirstTick_();
+    return;
+  }
+
    // Don't start until the title is over
   var titleScreenTitle = document.getElementById('titleScreenTitle');
-  if (this.studio_.tickCount <= 1 ||
-      titleScreenTitle.getAttribute('visibility') === "visible") {
+  if (titleScreenTitle.getAttribute('visibility') === "visible") {
     return;
   }
 
@@ -61,6 +70,25 @@ BigGameLogic.prototype.onTick = function () {
       }
     }
   }
+};
+
+BigGameLogic.prototype.onFirstTick_ = function () {
+  // create a queue, add a bunch of commands to it by calling the api methods,
+  // then execute the queue.
+  this.studio_.currentCmdQueue = [];
+  api.setBackground(null, this.resolveVariable('background'));
+  api.setSpritePosition(null, this.playerSpriteIndex, Position.MIDDLECENTER);
+  api.setSprite(null, this.playerSpriteIndex, this.resolveVariable('player'));
+  api.setSpritePosition(null, this.targetSpriteIndex, Position.TOPLEFT);
+  api.setSprite(null, this.targetSpriteIndex, this.resolveVariable('target'));
+  api.setSpritePosition(null, this.dangerSpriteIndex, Position.BOTTOMRIGHT);
+  api.setSprite(null, this.dangerSpriteIndex, this.resolveVariable('danger'));
+  api.showTitleScreen(null, this.resolveVariable('title'), this.resolveVariable('subtitle'));
+
+  this.studio_.currentCmdQueue.forEach(function (cmd) {
+    this.studio_.callCmd(cmd);
+  }, this);
+  this.studio_.currentCmdQueue = null;
 };
 
 /**
@@ -167,6 +195,24 @@ BigGameLogic.prototype.getPassedFunction_ = function (name) {
   }
 
   return userFunction;
+};
+
+BigGameLogic.prototype.cacheBlock = function (key, block) {
+  this.cached_[key] = block;
+};
+
+BigGameLogic.prototype.resolveVariable = function (key) {
+  var result = '';
+  var block = this.cached_[key];
+  if (block) {
+    var code = 'return ' + Blockly.JavaScript.blockToCode(block);
+
+    result = codegen.evalWith(code, {
+      Studio: api,
+      Globals: Studio.Globals
+    });
+  }
+  return result;
 };
 
 module.exports = BigGameLogic;

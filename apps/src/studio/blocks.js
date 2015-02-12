@@ -1736,18 +1736,31 @@ exports.install = function(blockly, blockInstallOptions) {
     // in the global space. This may change in the future.
   };
 
+  /**
+   * functional_start_setFuncs
+   * Even those this is called setFuncs, we are passed both functions and
+   * variables. Our generator stashes the passed values on our customLogic
+   * object (which is BigGameLogic).
+   */
   blockly.Blocks.functional_start_setFuncs = {
     init: function() {
       var blockName = msg.startSetFuncs();
       var blockType = 'none';
-      var blockArgs = [
+      this.blockArgs = [
+        {name: 'title', type: 'string'},
+        {name: 'subtitle', type: 'string'},
+        {name: 'background', type: 'image'},
+        {name: 'danger', type: 'image'},
+        {name: 'target', type: 'image'},
+        {name: 'player', type: 'image'},
         {name: 'update-target', type: 'function'},
         {name: 'update-danger', type: 'function'},
         {name: 'update-player', type: 'function'},
         {name: 'collide?', type: 'function'},
         {name: 'on-screen?', type: 'function'}
       ];
-      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+      var wrapWidth = 3;
+      initTitledFunctionalBlock(this, blockName, blockType, this.blockArgs, wrapWidth);
     }
   };
 
@@ -1755,19 +1768,26 @@ exports.install = function(blockly, blockInstallOptions) {
     // For each of our inputs (i.e. update-target, update-danger, etc.) get
     // the attached block and figure out what it's function name is. Store
     // that on BigGameLogic so we can know what functions to call later.
-    this.inputList.forEach(function (input) {
-      if (input.type !== Blockly.FUNCTIONAL_INPUT) {
-        return;
-      }
-      var inputBlock = this.getInputTargetBlock(input.name);
+    this.blockArgs.forEach(function (arg) {
+      var inputBlock = this.getInputTargetBlock(arg.name);
       if (!inputBlock) {
         return;
       }
-      var inputBlockName = inputBlock.getTitleValue('NAME');
-      var functionName = Blockly.JavaScript.variableDB_.getName(inputBlockName,
-        Blockly.Procedures.NAME_TYPE);
 
-      Studio.customLogic.functionNames[input.name] = functionName;
+      Studio.customLogic.cacheBlock(arg.name, inputBlock);
+      // TODO - what happens when i pass in a string
+      // if (arg.type === 'string') {
+        // if (inputBlock.type === 'functional_string') {
+        //Blockly.JavaScript.statementToCode(inputBlock, 'VAL')
+        // Studio.customLogic.variables[arg.name] =
+
+      if (arg.type === 'function') {
+        var inputBlockName = inputBlock.getTitleValue('NAME');
+        var generatedName = Blockly.JavaScript.variableDB_.getName(inputBlockName,
+          Blockly.Procedures.NAME_TYPE);
+
+        Studio.customLogic.functionNames[arg.name] = generatedName;
+      }
     }, this);
   };
 
