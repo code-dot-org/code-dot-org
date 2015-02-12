@@ -1,9 +1,15 @@
 %link{rel: 'stylesheet', href: asset_path('blockly/css/common.css')}
+- href = asset_path @level.properties['href']
+- is_markdown = href.end_with? '.md'
+= javascript_include_tag 'Showdown.min.js' if is_markdown
 
 #external
   :javascript
     var options = #{@level.properties['options'].to_json}
-
-    $.ajax("#{asset_path @level.properties['href']}").done(function (data) {
+    var href = "#{href}"
+    $.ajax(href).done(function (data) {
+      if(#{is_markdown}) {
+        data = new Showdown.converter().makeHtml(data);
+      }
       $('#external').html(data);
     });
