@@ -40,7 +40,7 @@
  * Represents a Dashboard user account - could be a teacher, a student, etc.
  * @constructor
  */
-var DashboardUser = function () {
+var DashboardUser = module.exports = function () {
   /**
    * Indicates whether the async call has completed yet.
    * @type {boolean}
@@ -66,7 +66,6 @@ var DashboardUser = function () {
    */
   this.name = "";
 };
-module.exports = DashboardUser;
 
 /**
  * @type {DashboardUser}

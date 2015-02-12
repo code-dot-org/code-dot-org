@@ -53,7 +53,7 @@ var superClass = require('./NetSimEntity');
  * @constructor
  * @augments NetSimEntity
  */
-var NetSimMessage = function (shard, messageRow) {
+var NetSimMessage = module.exports = function (shard, messageRow) {
   messageRow = messageRow !== undefined ? messageRow : {};
   superClass.call(this, shard, messageRow);
 
@@ -77,7 +77,6 @@ var NetSimMessage = function (shard, messageRow) {
 };
 NetSimMessage.prototype = Object.create(superClass.prototype);
 NetSimMessage.prototype.constructor = NetSimMessage;
-module.exports = NetSimMessage;
 
 /**
  * Static async creation method.  Creates a new message on the given shard,

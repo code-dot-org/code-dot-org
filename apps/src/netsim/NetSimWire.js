@@ -42,7 +42,7 @@ var superClass = require('./NetSimEntity');
  * @constructor
  * @augments NetSimEntity
  */
-var NetSimWire = function (shard, wireRow) {
+var NetSimWire = module.exports = function (shard, wireRow) {
   wireRow = wireRow !== undefined ? wireRow : {};
   superClass.call(this, shard, wireRow);
 
@@ -71,7 +71,6 @@ var NetSimWire = function (shard, wireRow) {
 };
 NetSimWire.prototype = Object.create(superClass.prototype);
 NetSimWire.prototype.constructor = NetSimWire;
-module.exports = NetSimWire;
 
 /**
  * Static async creation method.  See NetSimEntity.create().

@@ -47,7 +47,7 @@ var logger = new NetSimLogger(NetSimLogger.LogLevel.VERBOSE);
  * @param {!NetSimLogWidget} receivedLog - Widget to post received messages to
  * @constructor
  */
-var NetSimConnection = function (sentLog, receivedLog) {
+var NetSimConnection = module.exports = function (sentLog, receivedLog) {
   /**
    * Display name for user on local end of connection, to be uploaded to others.
    * @type {string}
@@ -109,7 +109,6 @@ var NetSimConnection = function (sentLog, receivedLog) {
   // Bind to onBeforeUnload event to attempt graceful disconnect
   window.addEventListener('beforeunload', this.onBeforeUnload_.bind(this));
 };
-module.exports = NetSimConnection;
 
 /**
  * Attach own handlers to run loop events.

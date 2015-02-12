@@ -48,7 +48,7 @@ var AUTO_REFRESH_INTERVAL_MS = 5000;
  * @param {NetSimConnection} connection
  * @constructor
  */
-var NetSimRouterPanel = function (connection) {
+var NetSimRouterPanel = module.exports = function (connection) {
   /**
    * Connection that owns the router we will represent / manipulate
    * @type {NetSimConnection}
@@ -73,7 +73,6 @@ var NetSimRouterPanel = function (connection) {
    */
   this.myConnectedRouter = undefined;
 };
-module.exports = NetSimRouterPanel;
 
 /**
  * Generate a new NetSimRouterPanel, puttig it on the page and hooking

@@ -44,12 +44,11 @@ var superClass = require('./NetSimNode');
  * @constructor
  * @augments NetSimNode
  */
-var NetSimClientNode = function (shard, clientRow) {
+var NetSimClientNode = module.exports = function (shard, clientRow) {
   superClass.call(this, shard, clientRow);
 };
 NetSimClientNode.prototype = Object.create(superClass.prototype);
 NetSimClientNode.prototype.constructor = NetSimClientNode;
-module.exports = NetSimClientNode;
 
 /** @inheritdoc */
 NetSimClientNode.prototype.getNodeType = function () {

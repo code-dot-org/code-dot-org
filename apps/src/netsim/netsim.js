@@ -49,7 +49,7 @@ var RunLoop = require('./RunLoop');
  * The top-level Internet Simulator controller.
  * @param {StudioApp} studioApp The studioApp instance to build upon.
  */
-var NetSim = function () {
+var NetSim = module.exports = function () {
   this.skin = null;
   this.level = null;
   this.heading = 0;
@@ -76,8 +76,6 @@ var NetSim = function () {
    */
   this.runLoop_ = new RunLoop();
 };
-
-module.exports = NetSim;
 
 
 /**

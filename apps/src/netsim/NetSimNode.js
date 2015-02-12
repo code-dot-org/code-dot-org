@@ -43,7 +43,7 @@ var NetSimWire = require('./NetSimWire');
  * @constructor
  * @augments NetSimEntity
  */
-var NetSimNode = function (shard, nodeRow) {
+var NetSimNode = module.exports = function (shard, nodeRow) {
   nodeRow = nodeRow !== undefined ? nodeRow : {};
   superClass.call(this, shard, nodeRow);
 
@@ -67,7 +67,6 @@ var NetSimNode = function (shard, nodeRow) {
 };
 NetSimNode.prototype = Object.create(superClass.prototype);
 NetSimNode.prototype.constructor = NetSimNode;
-module.exports = NetSimNode;
 
 /**
  * Get shared table for nodes
