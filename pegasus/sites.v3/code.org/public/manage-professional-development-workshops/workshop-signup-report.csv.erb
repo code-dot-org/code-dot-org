@@ -1,0 +1,18 @@
+<%=
+
+dont_cache
+content_type :csv
+
+authentication_required!
+forbidden! unless dashboard_user[:user_type] == 'teacher'
+forbidden! unless have_permission?('create_professional_development_workshop') || dashboard_user[:admin]
+
+workshop = PEGASUS_DB[:forms].where(kind: 'ProfessionalDevelopmentWorkshop', secret: params[:workshop]).first
+pass unless workshop
+
+response.headers['Content-Disposition'] = "attachment;filename=Workshop Signups - #{workshop[:id]}.csv"
+
+require 'cdo/csv'
+CSV.generate_from_dataset(generate_professional_development_workshop_signup_report(params[:workshop]))
+
+%>

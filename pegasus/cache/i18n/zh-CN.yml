@@ -3,12 +3,12 @@
   select_language: 请选择您的语言
   computer_science: 计算机科学
   computer_science_edweek: 计算机科学教育周
-  csedweek_dates: December 8-14, 2014
+  csedweek_dates: 2014 年 12 月 8-14 日
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">《一小时编程</a>即将来临。邀请所有的老师和组织领导们<a href="http://hourofcode.com"
     style="color: white; text-decoration:underline; font-weight:bold">策划您自己的编程一小时</a>。'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
-    none; font-weight: 400">您是一位计算机科学教师吗？请您参阅其他 CSEdWeek 的资源</a>'
+    none; font-weight: 400">您是一位计算机科学教师吗？请您参阅更多计算机科学教育周的资源</a>'
   n_have_learned_an_hoc: <h1>#</h1><h3>尝试了</h3><h2>编程一小时</h2>
   anybody_can_learn: 人人都可以学。
   learn_now: 现在开始学习
@@ -19,22 +19,22 @@
   zipcode: 邮政编码或国家
   submit: 提交
   twentyhours_heading: 看看我们对计算机科学课程的简介
-  twentyhours_text: 完成您的第一个编程一小时了吗？在此后续课程中了解更多核心计算机科学和编程的概念。
+  twentyhours_text: 完成您的第一个编程一小时了吗？在此后续课程中更深入的了解计算机科学和编程的概念。
   hoc2014_heading: 加入<a href="http://hourofcode.com">《一小时编程》</a><br/>2014年12月8至14日<br/>
   hoc2014_students: 学生
   hoc2014_try: 体验一下
   hoc2014_teachers: 教师
   hoc2014_host: 举办它
-  hoc2014_everyone: 所有人
+  hoc2014_everyone: 每个人
   hoc2014_support: 支持它
   hoc2014_whatishoc: 什么是编程一小时？
   twentyhours_trynow: 现在就试试
-  california_heading: 邀请您的学校推行计算机科学教育。
+  california_heading: 邀请您的学校开展计算机科学教育。
   california_text: 任何一个老师都可以利用我们的<a href='http://studio.code.org/'>免费课程</a>做教材。任何小学都有能力<a
     href='http://code.org/educate/k5'>教导计算机科学</a>。要求您的高中<a href='http://code.org/educate/districts'>与我们合作.
-  california_button: 了解详情
+  california_button: 学习更多内容
   flappy_heading: 给Code.org放飞生日
-  flappy_text: Code.org 刚满 1 岁。 <br/> <br/>通过制作您自己自定义的 <b>Flappy</b> 游戏和我们一起庆祝。用代码编写您自己的规则，并与朋友分享
+  flappy_text: Code.org  1 岁了。 <br/> <br/>制作属于你您自己 <b>飞扬</b> 游戏和我们一起庆祝吧。用代码编写您自己的规则，并与朋友分享
     ！
   view_english_site: 查看英语网站
   non_english_tutorials: 翻译成多种语言的教程：
@@ -43,13 +43,14 @@
   all_ages: 所有年龄
   beginner: 初学者
   n_participants: '# 参与者'
-  go: 进行
+  go: 出发
   thank_you_: 谢谢！
   congratulations: 恭喜你！
   congratulations_on_completing_hoc: 恭喜你完成编程一小时。
-  get_a_certificate_of_achievement: 获取证书
+  get_a_certificate_of_achievement: 获取结业证书
   enter_valid_email: 请输入一个有效的电子邮件地址
-  get_a_certificate_message: '我们会向您发送证书和有关的信息 关于如何<a href=''/learn/beyond''> 学习 超出一小时</a> '
+  get_a_certificate_message: '我们会向您发送证书和有关的信息 关于如何<a href=''/learn/beyond''> 学习 1小时
+    以外 </a> '
   get_a_certificate_message_after: 请通过单击以下载或打印证书。现在，请继续参与我们 <a href='http://studio.code.org'>其他课程</a>，或通过
     <a href='/learn/beyond'>《一小时以外编程》</a>查看更多的选择。
   thanks_for_submitting: 感谢提交！
@@ -110,12 +111,9 @@
   students_and_lines: '%{students}学生完成了Hour of Code 并且写了 %{lines} 行的代码。'
   start_hoc: 现在就开始一小时编程吧
   contact_form_topic_press: 新闻/媒体（采访或演讲）
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
-    - Michael Clark, Teacher'
-  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
-    - Nina Nichols Peery, Teacher'
-  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
-    Alzate, 5th grader'
+  stats_michael: “我<b>从不曾</b>见到我的学生们抱有如此大的学习热情。”- 迈克尔.克拉克，教师
+  stats_nina: '"每一天学生们都如此 &mdash; 100%参与."-尼娜尼科尔斯佩里，老师'
+  stats_student: '"我知到这是一个<b>千载难逢</b> 的机会。" - 马里亚纳.阿尔泽特，五年级学生'
   studiobar_title: 探讨我们的 <a href='http://studio.code.org'>《编程工作室》</a>
   studiobar_elementary_title: 初级课程
   studiobar_elementary_body: 为 K&#8209;5 所制的三项新课程
@@ -129,8 +127,8 @@
   studiobar_frozen_body: 与安娜和埃尔莎创建一个冬季仙境
   studiobar_donate_title: 捐赠
   studiobar_donate_body: 你捐的每一美元让一个孩子学会
-  studiobar_shop_title: Shop
-  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
+  studiobar_shop_title: 商店
+  studiobar_shop_body: 突破束缚，展现我们自己的骄傲。
   contact_form_topic_student: 我是一个学生
   contact_form_topic_parent: 我是家长
   contact_form_topic_teacher: 我的老师或教育家
@@ -212,8 +210,8 @@
   dashboard_action_delete_yes: 是
   dashboard_action_delete_no: 不
   dashboard_action_confirm: 要删除吗？
-  dashboard_action_remove: Remove
-  dashboard_action_remove_confirm: Remove?
+  dashboard_action_remove: 移除
+  dashboard_action_remove_confirm: 移除？
   dashboard_action_done: 完成
   dashboard_action_required: 必填
   dashboard_navigation_home_page: 教师主页
@@ -253,6 +251,7 @@
   dashboard_students_new_section: 您已经创建了一个新的学习小组！现在，使用上面的<b>添加学生</b>和<b>添加多个学生</b>按钮来添加学生进组。
   dashboard_students_placeholder_name: 学生姓名
   dashboard_students_name: 姓名
+  dashboard_students_progress: Progress
   dashboard_students_age: 年龄
   dashboard_students_gender: 性别
   dashboard_students_male: 男性
@@ -300,6 +299,10 @@
   dashboard_login_picture: 图片
   dashboard_login_none: 电子邮件
   dashboard_new_password: 新密码
+  dashboard_progress_not_completed: 未完成
+  dashboard_progress_completed_too_many_blocks: 完成，使用太多块
+  dashboard_progress_completed_perfect: 完成了, 完美
+  dashboard_progress_furthest_level_attempted: 尝试过最远的水平
   stats_hoc_2013_heading: 在去年的Hour of Code活动中的惊人数据。在一周之内：
   stats_hoc_2013_image_alt: 2013年Hour of Code统计数据
   dashboard_teacher: 老师
@@ -317,7 +320,7 @@
   dashboard_faq: 常见的问题
   code_hoc_coming: 代码小时就在这里 — — 12 月 8-14 ！
   code_sign_up: 注册以便在CS教育周期间参加
-  learn_more: 了解详情
+  learn_more: 学习更多内容
   hoc2014_try_new_tutorials: 试试我们新的编程一小时教程
   hoc2014_try_new_tutorial: 试试我们新的beta 版的一小时代码教程
   hoc2014_try_scrat: 愤怒的小鸟、PvZ和Scrat
@@ -335,7 +338,7 @@
   carousel_heading_robots: 学习使用机器人进行编程
   carousel_heading_ide: 在教师中流行的平台
   educator_notes: 教育家笔记
-  how_to_teach_hoc: How to Teach an Hour of Code
+  how_to_teach_hoc: 如何教授一小代码
   more_resources_educators: 给教师和教育工作者们的更多资源
   participants: 参与者
   teachers_notes: 老师的笔记
@@ -561,9 +564,7 @@
   frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
     magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
     and make a winter wonderland that you can then share with your friends!
-  playlab_longdescription: Create a story or make a game with Play Lab! Make animals,
-    pirates, zombies, ninjas, and many more characters move, make sounds, score points,
-    and even throw fireballs!
+  playlab_longdescription: 用游戏实验室创作一个故事或制作一个游戏！使动物，海盗，僵尸，忍者和许多别的角色，动起来，发出声音，记录得分甚至是发射火球。
   codeorg_beyond_name: 介绍电脑科学 (学龄前到8 年级）
   khan_beyond_name: 学习电脑程式设计
   tynker_beyond_name: 学习电脑程式设计
@@ -776,8 +777,3 @@
   alice_beyond_longdescription: 采用创新的编程环境，以支持创建3D动画，爱丽丝项目提供教学和学习计算思维的工具和材料，解决问题，和计算机编程,
     跨越年龄和年级的频谱。
   sphero_beyond_longdescription: 无论你是教育工作者或者是父母，SPRK课程可以让孩子们快乐地学习给机器人编程，同时又有助于他们对数学和科学的学习。
-  dashboard_students_progress: Progress
-  dashboard_progress_not_completed: not completed
-  dashboard_progress_completed_too_many_blocks: completed, too many blocks
-  dashboard_progress_completed_perfect: completed, perfect
-  dashboard_progress_furthest_level_attempted: furthest level attempted

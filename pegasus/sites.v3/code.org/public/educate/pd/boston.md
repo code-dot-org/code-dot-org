@@ -2,14 +2,8 @@
 title: Boston PD
 nav: pd_nav
 ---
-<a id="top"></a>
 
 # Professional Development - Boston
-
-- [I'm attending High School PD...](#hs)
-- [I'm attending Administrator / Counselor PD...](#admin)
-
-<a id="hs"></a>
 
 ## High School Professional Development
 
@@ -54,23 +48,6 @@ Laptop
 Option 1: 6/22/15 - 6/24/15
 <br />
 Option 2: 6/29/15 - 7/1/15
-
-[**Back to the top**](#top)
-
-
-<a id="admin"></a>
-## Administrator and Counselor Professional Development
-
-### Phase 1: Preparation and Reflection
-
-Milestone Complete! 
-
-### Phase 2: Teaching and Learning Studio
-
-Milestone Complete! 
-
-[**Back to the top**](#top)
-
 
 ----------
 Please visit [FAQs](/educate/pd/faq) for more information.

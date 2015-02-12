@@ -1,4 +1,7 @@
 #!/usr/bin/env ruby
+#
+# This dumps the configuratin settings for the current environment.
+#
 require_relative '../deployment'
 
 def main()

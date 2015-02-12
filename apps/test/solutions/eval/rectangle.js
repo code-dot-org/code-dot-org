@@ -20,7 +20,7 @@ module.exports = {
       description: "Nothing",
       expected: {
         result: false,
-        testResult: TestResults.LEVEL_INCOMPLETE_FAIL
+        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
       },
       xml: '<xml>' +
       '</xml>'
@@ -48,6 +48,36 @@ module.exports = {
           'WIDTH': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 50 } ),
           'HEIGHT': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 100 } ),
           'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'red' } ),
+          'STYLE': blockUtils.mathBlockXml('functional_string', null, { VAL: 'outline' })
+        }) +
+      '</xml>'
+    },
+    {
+      description: "bad style",
+      expected: {
+        result: false,
+        testResult: TestResults.APP_SPECIFIC_FAIL
+      },
+      xml: '<xml>' +
+        blockUtils.mathBlockXml('functional_rectangle', {
+          'WIDTH': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 50 } ),
+          'HEIGHT': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 100 } ),
+          'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'red' } ),
+          'STYLE': blockUtils.mathBlockXml('functional_string', null, { VAL: 'badstyle' })
+        }) +
+      '</xml>'
+    },
+    {
+      description: "bad color",
+      expected: {
+        result: false,
+        testResult: TestResults.APP_SPECIFIC_FAIL
+      },
+      xml: '<xml>' +
+        blockUtils.mathBlockXml('functional_rectangle', {
+          'WIDTH': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 50 } ),
+          'HEIGHT': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 100 } ),
+          'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'badcolor' } ),
           'STYLE': blockUtils.mathBlockXml('functional_string', null, { VAL: 'outline' })
         }) +
       '</xml>'

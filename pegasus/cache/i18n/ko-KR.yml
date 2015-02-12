@@ -265,6 +265,7 @@
     눌러 학생들을 추가하세요.
   dashboard_students_placeholder_name: 학생 이름
   dashboard_students_name: 이름
+  dashboard_students_progress: Progress
   dashboard_students_age: 나이
   dashboard_students_gender: 성별
   dashboard_students_male: 남
@@ -315,6 +316,10 @@
   dashboard_login_picture: 그림
   dashboard_login_none: 이메일
   dashboard_new_password: 새 비밀번호
+  dashboard_progress_not_completed: 완료되지 않음
+  dashboard_progress_completed_too_many_blocks: 완료되었지만, 너무 많은 블럭들을 사용함
+  dashboard_progress_completed_perfect: 완료
+  dashboard_progress_furthest_level_attempted: 시도한 가장 높은 레벨
   stats_hoc_2013_heading: '지난 Hour of Code 이후의 폭발적 통계수치. 지난 1주일:'
   stats_hoc_2013_image_alt: 203 Hour of Code 이후 통계수치
   dashboard_teacher: 선생님
@@ -880,8 +885,3 @@
     solving), 컴퓨터 프로그래밍을 교육하고 배울 수 있습니다.
   sphero_beyond_longdescription: SPRK 교육과정을 통해 아이들이 로봇이 충돌을 피하도록 하는 재미있는 프로그래밍 과정을
     통해 수학 과학 능력을 향상시킬 수 있습니다.
-  dashboard_students_progress: Progress
-  dashboard_progress_not_completed: not completed
-  dashboard_progress_completed_too_many_blocks: completed, too many blocks
-  dashboard_progress_completed_perfect: completed, perfect
-  dashboard_progress_furthest_level_attempted: furthest level attempted

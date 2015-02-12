@@ -35,6 +35,7 @@
         <block type="functional_display" inline="false" deletable="false" movable="false">
           <functional_input name="ARG1">
             <block type="functional_cond" inline="false" editable="false" movable="false">
+              <mutation pairs="0,1"/>
               <functional_input name="COND0">
                 <block type="functional_greater_than" inline="false" editable="false" movable="false">
                   <functional_input name="ARG1">
@@ -109,8 +110,13 @@
     </toolbox_blocks>
     <solution_blocks>
       <xml>
-        <block type="functional_cond"/>
-        <block type="functional_display" inline="false" deletable="false" movable="false"/>
+        <block type="functional_display" inline="false" deletable="false" movable="false">
+          <functional_input name="ARG1">
+            <block type="functional_string">
+              <title name="VAL">It's just right.</title>
+            </block>
+          </functional_input>
+        </block>
       </xml>
     </solution_blocks>
   </blocks>

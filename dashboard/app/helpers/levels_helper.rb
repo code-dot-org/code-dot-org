@@ -42,12 +42,16 @@ module LevelsHelper
     @callouts = select_and_remember_callouts(@script_level.nil?)
 
     if @level.is_a? Blockly
-      @toolbox_blocks = @toolbox_blocks || @level.toolbox_blocks
-      @start_blocks = initial_blocks(current_user, @level) || @start_blocks || @level.start_blocks
-    end
+      @toolbox_blocks =
+        @toolbox_blocks ||
+        @level.try(:project_template_level).try(:toolbox_blocks) ||
+        @level.toolbox_blocks
 
-    if current_user && params[:load_previous]
-      @start_blocks = current_user.last_attempt(@level).try(:level_source).try(:data)
+      @start_blocks =
+        initial_blocks(current_user, @level) || # check if this level inherits solution from previous level
+        @start_blocks ||
+        @level.try(:project_template_level).try(:start_blocks) ||
+        @level.start_blocks
     end
 
     localize_levelbuilder_instructions
@@ -82,6 +86,7 @@ module LevelsHelper
         available_callouts = JSON.parse(@level.callout_json).map do |callout_definition|
           Callout.new(element_id: callout_definition['element_id'],
               localization_key: callout_definition['localization_key'],
+              callout_text: callout_definition['callout_text'],
               qtip_config: callout_definition['qtip_config'].to_json,
               on: callout_definition['on'])
         end
@@ -97,7 +102,12 @@ module LevelsHelper
     callouts_to_show.map do |callout|
       callout_hash = callout.attributes
       callout_hash.delete('localization_key')
-      callout_hash['localized_text'] = data_t('callout.text', callout.localization_key)
+      callout_text = data_t('callout.text', callout.localization_key)
+      if I18n.locale == 'en-us' || callout_text.nil?
+        callout_hash['localized_text'] = callout.callout_text
+      else
+        callout_hash['localized_text'] = callout_text
+      end
       callout_hash
     end
   end
@@ -166,8 +176,10 @@ module LevelsHelper
   end
 
   def localize_levelbuilder_instructions
-    loc_val = data_t("levelbuilder.#{@level.name}", "instructions")
-    @level.properties['instructions'] = loc_val unless loc_val.nil?
+    if I18n.locale != 'en-us'
+      loc_val = data_t("instructions", "#{@level.name}_instruction")
+      @level.properties['instructions'] = loc_val unless loc_val.nil?
+    end
   end
 
   # Code for generating the blockly options hash
@@ -243,6 +255,8 @@ module LevelsHelper
       embed
       generate_function_pass_blocks
       timeout_after_when_run
+      custom_game_type
+      project_template_level_name
     ).map{ |x| x.include?(':') ? x.split(':') : [x,x.camelize(:lower)]}]
     .each do |dashboard, blockly|
       # Select first valid value from 1. local_assigns, 2. property of @level object, 3. named instance variable, 4. properties json
@@ -327,13 +341,15 @@ module LevelsHelper
       ext = File.extname(path)
       base_level = File.basename(path, ext)
       level = Level.find_by(name: base_level)
+      block_type = ext.slice(1..-1)
       content_tag(:iframe, '', {
-          src: url_for(controller: :script_levels, action: :embed_blocks, level_id: level.id, block_type: ext.slice(1..-1)).strip,
+          src: url_for(controller: :script_levels, action: :embed_blocks, level_id: level.id, block_type: block_type).strip,
           width: width ? width.strip : '100%',
           scrolling: 'no',
           seamless: 'seamless',
           style: 'border: none;',
       })
+
     elsif File.extname(path) == '.level'
       base_level = File.basename(path, '.level')
       level = Level.find_by(name: base_level)

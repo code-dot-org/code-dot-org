@@ -45,6 +45,7 @@ class Tutorials
     api_domain = api_domain.gsub('eu.code.org','code.org')
     api_domain = api_domain.gsub('ro.code.org','code.org')
     api_domain = api_domain.gsub('uk.code.org','code.org')
+    api_domain = api_domain.gsub('za.code.org','code.org')
     "http://#{api_domain}/api/hour/begin/#{code}"
   end
 

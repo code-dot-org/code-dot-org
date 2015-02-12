@@ -20,6 +20,7 @@ var page = require('../templates/page.html');
 var dom = require('../dom');
 var Collidable = require('./collidable');
 var Projectile = require('./projectile');
+var BigGameLogic = require('./bigGameLogic');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
 var _ = utils.getLodash();
@@ -152,6 +153,16 @@ function loadLevel() {
   Studio.softButtons_ = level.softButtons || {};
   // protagonistSpriteIndex was originally mispelled. accept either spelling.
   Studio.protagonistSpriteIndex = level.protagonistSpriteIndex || level.protaganistSpriteIndex;
+
+  switch (level.customGameType) {
+    case 'Big Game':
+      Studio.customLogic = new BigGameLogic(Studio);
+      break;
+    case 'SamTheButterfly':
+      // Going forward, we may also want to move Sam the Butterfly logic
+      // into code
+      break;
+  }
 
   if (level.avatarList) {
     Studio.startAvatars = level.avatarList.slice();
@@ -546,6 +557,10 @@ function callHandler (name, allowQueueExtension) {
 Studio.onTick = function() {
   Studio.tickCount++;
 
+  if (Studio.customLogic) {
+    Studio.customLogic.onTick();
+  }
+
   if (Studio.interpreter) {
     var doneUserCodeStep = false;
     // In each tick, we will step the interpreter multiple times in a tight
@@ -588,7 +603,7 @@ Studio.onTick = function() {
   // Run key event handlers for any keys that are down:
   for (var key in KeyCodes) {
     if (Studio.keyState[KeyCodes[key]] &&
-        Studio.keyState[KeyCodes[key]] == "keydown") {
+        Studio.keyState[KeyCodes[key]] === "keydown") {
       switch (KeyCodes[key]) {
         case KeyCodes.LEFT:
           callHandler('when-left');
@@ -608,7 +623,7 @@ Studio.onTick = function() {
 
   for (var btn in ArrowIds) {
     if (Studio.btnState[ArrowIds[btn]] &&
-        Studio.btnState[ArrowIds[btn]] == ButtonState.DOWN) {
+        Studio.btnState[ArrowIds[btn]] === ButtonState.DOWN) {
       switch (ArrowIds[btn]) {
         case ArrowIds.LEFT:
           callHandler('when-left');
@@ -1481,7 +1496,7 @@ Studio.execute = function() {
   var i;
 
   if (level.editCode) {
-    code = utils.generateCodeAliases(level.codeFunctions, 'Studio');
+    code = utils.generateCodeAliases(level.codeFunctions, null, 'Studio');
     code += studioApp.editor.getValue();
   }
 
@@ -1492,6 +1507,7 @@ Studio.execute = function() {
     registerHandlers(handlers, 'functional_start_setSpeeds', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackgroundAndSpeeds',
         'whenGameStarts');
+    registerHandlers(handlers, 'functional_start_setFuncs', 'whenGameStarts');
     registerHandlers(handlers, 'studio_whenLeft', 'when-left');
     registerHandlers(handlers, 'studio_whenRight', 'when-right');
     registerHandlers(handlers, 'studio_whenUp', 'when-up');
@@ -1518,7 +1534,7 @@ Studio.execute = function() {
   studioApp.reset(false);
 
   if (level.editCode) {
-    var codeWhenRun = utils.generateCodeAliases(level.codeFunctions, 'Studio');
+    var codeWhenRun = utils.generateCodeAliases(level.codeFunctions, null, 'Studio');
     Studio.userCodeStartOffset = codeWhenRun.length;
     codeWhenRun += studioApp.editor.getValue();
     Studio.userCodeLength = codeWhenRun.length - Studio.userCodeStartOffset;
@@ -2063,6 +2079,7 @@ Studio.setSprite = function (opts) {
   }
   sprite.visible = (spriteValue !== 'hidden' && !opts.forceHidden);
   spriteIcon.setAttribute('visibility', sprite.visible ? 'visible' : 'hidden');
+  sprite.value = opts.forceHidden ? 'hidden' : opts.value;
   if (spriteValue === 'hidden' || spriteValue === 'visible') {
     return;
   }
@@ -2078,7 +2095,6 @@ Studio.setSprite = function (opts) {
   if (skin.projectileSpriteWidth) {
     sprite.projectileSpriteWidth = sprite.size * skin.projectileSpriteWidth;
   }
-  sprite.value = opts.forceHidden ? 'hidden' : opts.value;
 
   var spriteClipRect = document.getElementById('spriteClipRect' + spriteIndex);
   spriteClipRect.setAttribute('width', sprite.width);

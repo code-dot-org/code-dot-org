@@ -288,6 +288,7 @@
     pomocí tlačítka <b>Přidat studenta</b> a <b>Přidat více studentů</b> výše.
   dashboard_students_placeholder_name: Jméno studenta
   dashboard_students_name: Jméno
+  dashboard_students_progress: Progress
   dashboard_students_age: Věk
   dashboard_students_gender: Pohlaví
   dashboard_students_male: Muž
@@ -344,6 +345,10 @@
   dashboard_login_picture: Obrázek
   dashboard_login_none: E-mail
   dashboard_new_password: nové heslo
+  dashboard_progress_not_completed: nedokončeno
+  dashboard_progress_completed_too_many_blocks: dokončeno, až příliš mnoho bloků
+  dashboard_progress_completed_perfect: dokončeno, perfektní
+  dashboard_progress_furthest_level_attempted: furthest level attempted
   stats_hoc_2013_heading: 'Neuvěřitelná statistika z loňské Hodiny kódu. Během jediného
     týdne:'
   stats_hoc_2013_image_alt: Statistika z Hodiny kódu 2013
@@ -1016,8 +1021,3 @@
   sphero_beyond_longdescription: Ať už jste pedagog nebo rodič, SPRK lekce přináší
     dětem zábavný rychlý kurz programování robotů zatímco také zdokonaluje jejich
     znalosti v matematice a vědě.
-  dashboard_students_progress: Progress
-  dashboard_progress_not_completed: not completed
-  dashboard_progress_completed_too_many_blocks: completed, too many blocks
-  dashboard_progress_completed_perfect: completed, perfect
-  dashboard_progress_furthest_level_attempted: furthest level attempted

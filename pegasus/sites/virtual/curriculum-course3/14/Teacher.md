@@ -4,7 +4,7 @@ view: page_curriculum
 theme: none
 ---
 
-<%= partial('curriculum_header', :unittitle=>'Course 2', :lesson=>10, :title=> 'Bee: Debugging', :unplugged=>false, :time=>30) %>
+<%= partial('curriculum_header', :unittitle=>'Course 3', :lesson=>14, :title=> 'Bee: Debugging', :unplugged=>false, :time=>30) %>
 
 [content]
 
