@@ -483,6 +483,12 @@ function generateResults() {
     appState.message = outcome.message;
     appState.failedInput = outcome.failedInput;
   }
+
+  // Override default message for LEVEL_INCOMPLETE_FAIL
+  if (appState.testResults === TestResults.LEVEL_INCOMPLETE_FAIL &&
+      !appState.message) {
+    appState.message = calcMsg.levelIncompleteError();
+  }
 }
 
 /**
