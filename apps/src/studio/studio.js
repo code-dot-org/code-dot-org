@@ -567,6 +567,17 @@ function callHandler (name, allowQueueExtension) {
   });
 }
 
+/**
+ * Calls provided function using our api - i.e. treats func as if it's code
+ * generated from blocks.
+ */
+Studio.callApiCode = function (name, func) {
+  registerEventHandler(Studio.eventHandlers, name, func);
+  // generate the cmdQueue
+  callHandler(name);
+  Studio.executeQueue(name);
+};
+
 Studio.onTick = function() {
   Studio.tickCount++;
 
