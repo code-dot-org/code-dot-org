@@ -4,6 +4,7 @@ nav: about_nav
 ---
 
 # Job Openings at Code.org
+
 ## <a name="hr-generalist" href="#hr-generalist">HR Generalist (Seattle, WA preferred)</a>
 **Job Summary:**
 
@@ -34,32 +35,6 @@ The ideal candidate has the following qualifications:
 - **Prior experience in technical recruiting and with a smaller startups, preferably a tech startup**
 
 A high level of computer literacy is required; proficiency in working with Microsoft Office and Google Docs a must.
-
-Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
-## <a name="videographer" href="#videographer">Videographer (Seattle, WA preferred)</a>
-**Job Summary:**
-
-Code.org is recruiting for a videographer who can collaborate with our education and development team to create educational and inspirational videos that teach computer science to students of all ages and diverse backgrounds. **Full-time, long-term contract (approximately 9 months).**
-Responsibilities of the position include:
-
-- Working closely with other teams at Code.org to determine the video needs for various courses (aimed at K-12 students)
-- Brainstorming and story boarding ideas for each video, tailored to it’s audience and purpose 
-- Shooting footage for videos in interview format as well as in-class activities
-- Editing footage to create video ensembles 
-- Adding animations, sounds and graphics to create high production value videos
-- Working on several different videos in parallel  
-
-**Qualifications**
-
-The ideal candidate has the following qualifications:
-
-- Bachelors degree in film, digital media, graphic design or related field
-- 4+ years work experience in producing videos either as a generalist or as an animator/graphics expert
-- Experience in all stages of video production i.e: conception and story-boarding, shooting, media management, editing, animating needed graphics, and exporting appropriate format for YouTube, however our most urgent need is for an animator/graphics expert
-- Extensive experience with Adobe products (we use these exclusively for our video production)
-- A strong sense of design and story is key, as is a can-do / self-starter attitude
-- Excellent professional references
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
