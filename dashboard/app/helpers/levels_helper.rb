@@ -258,6 +258,7 @@ module LevelsHelper
       embed
       generate_function_pass_blocks
       timeout_after_when_run
+      custom_game_type
       project_template_level_name
     ).map{ |x| x.include?(':') ? x.split(':') : [x,x.camelize(:lower)]}]
     .each do |dashboard, blockly|
