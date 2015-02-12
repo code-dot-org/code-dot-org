@@ -179,7 +179,7 @@ config.lodash = {
       'include': [
         'debounce', 'reject', 'map', 'value', 'range', 'without', 'sample',
         'create', 'flatten', 'isEmpty', 'wrap', 'size', 'bind', 'contains',
-        'last', 'clone', 'isEqual']
+        'last', 'clone', 'isEqual', 'find']
     }
   }
 };
@@ -366,7 +366,8 @@ config.mochaTest = {
     },
     src: [
       'test/*.js',
-      'test/calc/*.js'
+      'test/calc/*.js',
+      'test/netsim/*.js'
     ]
   }
 };

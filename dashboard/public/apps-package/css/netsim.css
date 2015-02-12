@@ -36,6 +36,8 @@
 #netsim_rightcol {
   float: right;
   width: 300px; }
+  #netsim_rightcol #netsim_visualization img {
+    width: 100%; }
 
 #netsim_leftcol {
   margin-right: 320px; }
@@ -71,7 +73,7 @@
     background-color: white;
     height: 100px;
     width: 400px;
-    overflow: scroll; }
+    overflow-y: scroll; }
 
 .netsim_send_widget {
   border: solid darkgray thin;

@@ -45,37 +45,43 @@ social:
 
 ---
 
-- imageheight = 500
 
-#top{style: "position:relative; height: #{imageheight}px; width:100%; overflow:hidden"}
+#top{style: "position:relative; width:100%; overflow:hidden"}
   #fullwidth0{style: "z-index: -5; position:absolute; left: 0; top: 0; background-image: url('/images/obama_podium.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 1; background-position: 0% 0%"}
 
-  #fullwidth{style: "/*position:absolute; left:0; top: 0; */width: 100%; /*height:#{imageheight}px*/"}
-
+  #fullwidth{style: "width: 100%;"}
     .thegap{style: "height: 1px"}
       &nbsp;
+    #desktop-header.desktop-feature
+      = view :header
+    #mobile-header.mobile-headers.mobile-feature
+      = view :mobile_header_responsive      
 
-    = view :header
+  .container_responsive{style: "color: white; font-size: 24px"}
+    .col-66{style: "position:relative;"}
+      #leftvideo{style: "width: 100%"}
+        = view :index_video_reveal
+        %div{style:"clear:both"}
+        %br/
 
-  #fullwidth1{style: "color: white; font-size: 24px"}
-    #caption1{style: "left: 100px; top: 220px; position: absolute; opacity: 0"}
-      &ldquo;Don't just play on your phone, 
-    
-    #caption2{style: "left: 300px; top: 255px; position: absolute; opacity: 0"}
-      program it.&rdquo; 
- 
-    #caption3{style: "left: 240px; top: 300px; position: absolute; opacity: 0; font-size: 18px"}
-      President Barack Obama
+      #leftbutton{style: "position:absolute; left:0; top:0; text-align:center; width:100%"}
 
-    -#playbutton{style: "left: 966px; top:350px; position:absolute; opacity: 1"}
-      %img{src: "/shared/images/play-button.png", width:"50"}
-      %span{style: "left: 400px; font-size:16px"}
-        Watch the video
+        #caption1{style: "left: 0px; top: 68px; position: absolute; opacity: 0"}
+          &ldquo;Don't just play on your phone, 
+        #caption2{style: "left: 200px; top: 107px; position: absolute; opacity: 0"}
+          program it.&rdquo; 
+        #caption3{style: "left: 140px; top: 156px; position: absolute; opacity: 0; font-size: 18px"}
+          President Barack Obama
 
-    #action{style: "left: 966px; top: 261px; position: absolute; opacity: 0;"}
-      %button{style: "font-weight: 500; font-size: 20px; height: 50px; width: 250px;"}
-        Sign the petition
-      
+    .col-33{style: "position:relative; padding: 20px; margin-top:40px; text-align:center"}     
+      #playvideo{style: "opacity: 0"}
+        %img{src: "/shared/images/play-button.png", width:"40", onclick: "return startVideo();", style: "cursor: pointer"}
+        %span{style: "font-size:20px"}
+          Watch the video
+      %div{style: "height:40px"}
+      #action{style: "opacity: 0"}
+        %button{style: "font-weight: 500; font-size: 20px; height: 50px", onclick: "expandPetition(); adjustScroll('petitionblock');"}
+          Sign the petition
 
 #slots{style: "text-align:center"}
   - DB[:cdo_homepage].where(type_s: "slot", active_s: ["show","hide"]).all do |entry|
@@ -98,7 +104,7 @@ social:
 - if request.site == 'code.org'
   #user_hero
 
-  %div{:style=>'clear:both;'}
+  %div{style: 'clear:both;'}
 
 - if DB[:cdo_homepage].where(type_s: "petition")
   = view :petition_expand
@@ -115,11 +121,12 @@ social:
   
   $(document).ready()
   {
-    $("#caption1").delay(500).animate({ left: "150px", opacity: 0.8 }, { duration: 2000 });
-    $("#caption2").delay(1000).animate({ left: "190px", opacity: 0.8 }, { duration: 2000 });
+    $("#caption1").delay(500).animate({ left: "50px", opacity: 0.8 }, { duration: 2000 });
+    $("#caption2").delay(1000).animate({ left: "90px", opacity: 0.8 }, { duration: 2000 });
     $("#caption3").delay(3500).animate({ opacity: 0.6 }, { duration: 2000 });
 
     $("#playbutton").delay(5000).animate({ opacity: 1 }, { duration: 2000 });
+    $("#playvideo").delay(4000).animate({ opacity: 1 }, { duration: 2000 });
     $("#action").delay(5000).animate({ opacity: 1 }, { duration: 2000 });
   }
 
@@ -136,3 +143,53 @@ social:
         }
       });
     });
+
+
+
+:javascript
+
+  function adjustScroll(destination)
+  {
+    $('html, body').animate({
+      scrollTop: $("#" + destination).offset().top
+    }, 1000);
+  }
+
+  var currentImage = 0;
+  var timerId;
+  var videoStarted = false;
+
+  function cycleImage()
+  {
+    var nextImage = (currentImage + 1) % 4;
+    $("#fullwidth" + currentImage).fadeTo(2000, 0);
+    $("#fullwidth" + nextImage ).fadeTo(2000, videoStarted ? 0.3 : 1);
+    currentImage = nextImage;
+
+    /*if (videoStarted)
+      console.log("fading light to ", nextImage);
+    else
+      console.log("fading normal to ", nextImage);*/
+  }
+
+  $.not_ready()
+  {
+    timerId = setInterval(cycleImage, 6000);
+
+  }
+
+  function startVideo()
+  {
+    if (videoStarted)
+      return;
+
+    $("<iframe allowfullscreen frameborder='0' src='https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0&amp;autoplay=1&cc_load_policy=1' style='position:absolute; top: 0; left: 0; width: 100%; height: 100%; background-color:black;'></iframe>").appendTo("#videodiv");
+
+    $("#videodiv").fadeTo(1000, 1);
+    $("#leftbutton").fadeTo(500, 0).remove();
+
+    $("#fullwidth" + currentImage).fadeTo(1000, 0.3);
+
+    videoStarted = true;
+    clearInterval(timerId);
+  }
