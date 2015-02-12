@@ -7,7 +7,7 @@
   "properties": {
     "skin": "calc",
     "embed": "false",
-    "instructions": "You can actually set a variable using the value of another variable! Here's a new variable called \"months\" - use the expression you came up with in the last puzzle to set \"months\" to the number of months in \"age\"",
+    "instructions": "You can actually set a variable using the value of another variable! Here's a new variable called \"age in months\" - use the expression you came up with in the last puzzle to set \"age in months\" to the number of months in \"age\"",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -15,16 +15,33 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "true",
     "free_play": "false",
-    "open_function_definition": "months"
+    "open_function_definition": "months",
+    "callout_json": "[\r\n  {\"localization_key\":\"Calc Vars 2.1_edit\",\"callout_text\":\"how now\",\"element_id\":\"#callout_here\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top left\",\"at\":\"top left\"},\"style\":{\"classes\":\"\"}}}\r\n]"
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
+        <block type="functional_definition" inline="false" uservisible="false">
+          <mutation>
+            <outputtype>Number</outputtype>
+            <isfunctionalvariable>true</isfunctionalvariable>
+          </mutation>
+          <title name="NAME">age in months</title>
+          <functional_input name="STACK">
+            <block type="functional_times" inline="false" uservisible="false">
+              <functional_input name="ARG1">
+                <block type="functional_call" uservisible="false">
+                  <mutation name="age"/>
+                </block>
+              </functional_input>
+            </block>
+          </functional_input>
+        </block>
         <block type="functional_compute" inline="false" deletable="false" movable="false">
           <functional_input name="ARG1">
-            <block type="functional_call">
-              <mutation name="months"/>
+            <block type="functional_call" id="callout_here">
+              <mutation name="age in months"/>
             </block>
           </functional_input>
         </block>
@@ -37,22 +54,6 @@
           <functional_input name="STACK">
             <block type="functional_math_number" uservisible="false">
               <title name="NUM">17</title>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_definition" inline="false" uservisible="false">
-          <mutation>
-            <outputtype>Number</outputtype>
-            <isfunctionalvariable>true</isfunctionalvariable>
-          </mutation>
-          <title name="NAME">months</title>
-          <functional_input name="STACK">
-            <block type="functional_times" inline="false" uservisible="false">
-              <functional_input name="ARG1">
-                <block type="functional_call" uservisible="false">
-                  <mutation name="age"/>
-                </block>
-              </functional_input>
             </block>
           </functional_input>
         </block>
@@ -84,31 +85,12 @@
     </toolbox_blocks>
     <solution_blocks>
       <xml>
-        <block type="functional_compute" inline="false" deletable="false" movable="false">
-          <functional_input name="ARG1">
-            <block type="functional_call">
-              <mutation name="months"/>
-            </block>
-          </functional_input>
-        </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
             <outputtype>Number</outputtype>
             <isfunctionalvariable>true</isfunctionalvariable>
           </mutation>
-          <title name="NAME">age</title>
-          <functional_input name="STACK">
-            <block type="functional_math_number" uservisible="false">
-              <title name="NUM">17</title>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_definition" inline="false" uservisible="false">
-          <mutation>
-            <outputtype>Number</outputtype>
-            <isfunctionalvariable>true</isfunctionalvariable>
-          </mutation>
-          <title name="NAME">months</title>
+          <title name="NAME">age in months</title>
           <functional_input name="STACK">
             <block type="functional_times" inline="false" uservisible="false">
               <functional_input name="ARG1">
@@ -121,6 +103,25 @@
                   <title name="NUM">12</title>
                 </block>
               </functional_input>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_compute" inline="false" deletable="false" movable="false">
+          <functional_input name="ARG1">
+            <block type="functional_call">
+              <mutation name="age in months"/>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_definition" inline="false" uservisible="false">
+          <mutation>
+            <outputtype>Number</outputtype>
+            <isfunctionalvariable>true</isfunctionalvariable>
+          </mutation>
+          <title name="NAME">age</title>
+          <functional_input name="STACK">
+            <block type="functional_math_number" uservisible="false">
+              <title name="NUM">17</title>
             </block>
           </functional_input>
         </block>

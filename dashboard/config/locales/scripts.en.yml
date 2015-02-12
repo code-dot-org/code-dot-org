@@ -397,6 +397,10 @@ en:
           description_short: Create a story or make a game with Infinity Play Lab!!
           description: Create a story or make a game with Infinity Play Lab!
           Infinity: Infinity
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
         20-hour:
           title: K-8 Intro to Computer Science Course (15-25 hours)
           description: This 20-hour course introduces core computer science and programming

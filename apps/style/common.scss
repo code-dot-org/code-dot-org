@@ -156,6 +156,10 @@ div.droplet-palette-group-header-selected {
 
 /* Shrink the visualization area on small displays. */
 
+#visualizationEditor.responsive {
+  margin-left: 400px;
+  padding-left: 15px;
+}
 #visualization.responsive > * {
   -webkit-transform-origin: 0 0;
   -ms-transform-origin: 0 0;
@@ -176,12 +180,16 @@ div.droplet-palette-group-header-selected {
 }
 
 @media screen and (min-width: 1101px) and (max-width: 1150px) {
+  $width: 350px;
   #visualization.responsive {
-    max-height: 350px;
-    max-width: 350px;
+    max-height: $width;
+    max-width: $width;
   }
   #visualizationColumn.responsive {
-    max-width: 350px;
+    max-width: $width;
+  }
+  #visualizationEditor.responsive {
+    margin-left: $width;
   }
   #visualization.responsive > * {
     -webkit-transform: scale(0.875);
@@ -195,12 +203,16 @@ div.droplet-palette-group-header-selected {
 }
 
 @media screen and (min-width: 1051px) and (max-width: 1100px) {
+  $width: 300px;
   #visualization.responsive {
-    max-height: 300px;
-    max-width: 300px;
+    max-height: $width;
+    max-width: $width;
   }
   #visualizationColumn.responsive {
-    max-width: 300px;
+    max-width: $width;
+  }
+  #visualizationEditor.responsive {
+    margin-left: $width;
   }
   #visualization.responsive > * {
     -webkit-transform: scale(0.75);
@@ -214,12 +226,16 @@ div.droplet-palette-group-header-selected {
 }
 
 @media screen and (min-width: 1001px) and (max-width: 1050px) {
+  $width: 250px;
   #visualization.responsive {
-    max-height: 250px;
-    max-width: 250px;
+    max-height: $width;
+    max-width: $width;
   }
   #visualizationColumn.responsive {
-    max-width: 250px;
+    max-width: $width;
+  }
+  #visualizationEditor.responsive {
+    margin-left: $width;
   }
   #visualization.responsive > * {
     -webkit-transform: scale(0.625);
@@ -233,12 +249,16 @@ div.droplet-palette-group-header-selected {
 }
 
 @media screen and (max-width: 1000px) {
+  $width: 200px;
   #visualization.responsive {
-    max-height: 200px;
-    max-width: 200px;
+    max-height: $width;
+    max-width: $width;
   }
   #visualizationColumn.responsive {
-    max-width: 200px;
+    max-width: $width;
+  }
+  #visualizationEditor.responsive {
+    margin-left: $width;
   }
   #visualization.responsive > * {
     -webkit-transform: scale(0.5);
