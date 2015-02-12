@@ -156,7 +156,7 @@ function loadLevel() {
 
   switch (level.customGameType) {
     case 'Big Game':
-      Studio.customLogic = new BigGameLogic();
+      Studio.customLogic = new BigGameLogic(Studio);
       break;
     case 'SamTheButterfly':
       // Going forward, we may also want to move Sam the Butterfly logic
