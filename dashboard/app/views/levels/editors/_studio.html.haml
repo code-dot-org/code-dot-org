@@ -16,8 +16,8 @@
   = boolean_check_box f, :timeout_after_when_run
 .field
   = f.label :custom_game_type, 'Custom game type'
-  %p Used to tell playlab we want to run some of our custom onTick logic. Currently supports "Big Game" and "Sam The Butterfly" (case and spaces are ignored).
-  = f.text_field :custom_game_type, placeholder: 'custom game type'
+  %p Used to tell playlab we want to run some of our custom onTick logic.
+  = f.select :custom_game_type, options_for_select(["", "Big Game"], @level.custom_game_type)
 .field
   = f.label :success_condition, 'Success condition'
   %p Optional JavaScript function to run every tick. If the function ever return true, the level immediately succeeds.
