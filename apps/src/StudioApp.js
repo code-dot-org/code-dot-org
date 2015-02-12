@@ -384,6 +384,12 @@ StudioApp.prototype.init = function(config) {
       Blockly.functionEditor.openAndEditFunction(config.level.openFunctionDefinition);
     }
   }
+
+  // Bind listener to 'Clear Puzzle' button
+  dom.addClickTouchEvent(document.querySelector('#clear-puzzle-header'), (function () {
+    Blockly.mainBlockSpace.clear();
+    this.setStartBlocks_(config);
+  }).bind(this));
 };
 
 /**
@@ -1221,6 +1227,19 @@ StudioApp.prototype.setCheckForEmptyBlocks = function (checkBlocks) {
 };
 
 /**
+ * Add the starting block(s).
+ */
+StudioApp.prototype.setStartBlocks_ = function (config) {
+  var startBlocks = config.level.startBlocks || '';
+  if (config.forceInsertTopBlock) {
+    startBlocks =
+        blockUtils.forceInsertTopBlock(startBlocks, config.forceInsertTopBlock);
+  }
+  startBlocks = this.arrangeBlockPosition(startBlocks, config.blockArrangement);
+  this.loadBlocks(startBlocks);
+};
+
+/**
  *
  */
 StudioApp.prototype.handleUsingBlockly_ = function (config) {
@@ -1274,14 +1293,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
   if (config.afterInject) {
     config.afterInject();
   }
-
-  // Add the starting block(s).
-  var startBlocks = config.level.startBlocks || '';
-  if (config.forceInsertTopBlock) {
-    startBlocks = blockUtils.forceInsertTopBlock(startBlocks, config.forceInsertTopBlock);
-  }
-  startBlocks = this.arrangeBlockPosition(startBlocks, config.blockArrangement);
-  this.loadBlocks(startBlocks);
+  this.setStartBlocks_(config);
 };
 
 /**
