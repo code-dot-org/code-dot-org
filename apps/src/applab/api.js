@@ -391,6 +391,44 @@ exports.turnLeft = function (blockId, degrees) {
                           {'degrees': degrees });
 };
 
+exports.turnTo = function (blockId, direction) {
+  return Applab.executeCmd(blockId,
+                           'turnTo',
+                           {'direction': direction });
+};
+
+exports.arcRight = function (blockId, degrees, radius) {
+  return Applab.executeCmd(blockId,
+                           'arcRight',
+                           {'degrees': degrees,
+                            'radius': radius });
+};
+
+exports.arcLeft = function (blockId, degrees, radius) {
+  return Applab.executeCmd(blockId,
+                           'arcLeft',
+                           {'degrees': degrees,
+                            'radius': radius });
+};
+
+exports.dot = function (blockId, radius) {
+  return Applab.executeCmd(blockId,
+                           'dot',
+                           {'radius': radius });
+};
+
+exports.getX = function (blockId) {
+  return Applab.executeCmd(blockId, 'getX');
+};
+
+exports.getY = function (blockId) {
+  return Applab.executeCmd(blockId, 'getY');
+};
+
+exports.getDirection = function (blockId) {
+  return Applab.executeCmd(blockId, 'getDirection');
+};
+
 exports.penUp = function (blockId) {
   return Applab.executeCmd(blockId, 'penUp');
 };
