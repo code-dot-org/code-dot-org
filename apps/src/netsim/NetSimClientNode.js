@@ -27,7 +27,8 @@
  */
 'use strict';
 
-var superClass = require('./NetSimNode');
+require('../utils');
+var NetSimNode = require('./NetSimNode');
 
 /**
  * Client model of simulated node
@@ -45,10 +46,9 @@ var superClass = require('./NetSimNode');
  * @augments NetSimNode
  */
 var NetSimClientNode = module.exports = function (shard, clientRow) {
-  superClass.call(this, shard, clientRow);
+  NetSimNode.call(this, shard, clientRow);
 };
-NetSimClientNode.prototype = Object.create(superClass.prototype);
-NetSimClientNode.prototype.constructor = NetSimClientNode;
+NetSimClientNode.inherits(NetSimNode);
 
 /** @inheritdoc */
 NetSimClientNode.prototype.getNodeType = function () {

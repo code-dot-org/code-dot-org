@@ -25,10 +25,10 @@
  maxparams: 3,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
-var superClass = require('./NetSimEntity');
+require('../utils');
+var NetSimEntity = require('./NetSimEntity');
 var NetSimWire = require('./NetSimWire');
 
 /**
@@ -45,7 +45,7 @@ var NetSimWire = require('./NetSimWire');
  */
 var NetSimNode = module.exports = function (shard, nodeRow) {
   nodeRow = nodeRow !== undefined ? nodeRow : {};
-  superClass.call(this, shard, nodeRow);
+  NetSimEntity.call(this, shard, nodeRow);
 
   /**
    * @type {string}
@@ -65,8 +65,7 @@ var NetSimNode = module.exports = function (shard, nodeRow) {
    */
   this.statusDetail_ = nodeRow.statusDetail;
 };
-NetSimNode.prototype = Object.create(superClass.prototype);
-NetSimNode.prototype.constructor = NetSimNode;
+NetSimNode.inherits(NetSimEntity);
 
 /**
  * Get shared table for nodes
@@ -79,12 +78,12 @@ NetSimNode.prototype.getTable_= function () {
 
 /** Build table row for this node */
 NetSimNode.prototype.buildRow_ = function () {
-  return $.extend(superClass.prototype.buildRow_.call(this), {
+  return {
     type: this.getNodeType(),
     name: this.getDisplayName(),
     status: this.getStatus(),
     statusDetail: this.getStatusDetail()
-  });
+  };
 };
 
 /**
