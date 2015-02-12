@@ -17,6 +17,7 @@ var NetSimRouterNode = require('./NetSimRouterNode');
 var NetSimLocalClientNode = require('./NetSimLocalClientNode');
 var ObservableEvent = require('./ObservableEvent');
 var NetSimShard = require('./NetSimShard');
+var NetSimShardCleaner = require('./NetSimShardCleaner');
 
 var logger = new NetSimLogger(NetSimLogger.LogLevel.VERBOSE);
 
@@ -58,6 +59,13 @@ var NetSimConnection = module.exports = function (sentLog, receivedLog) {
    * @private
    */
   this.shard_ = null;
+
+  /**
+   *
+   * @type {NetSimShardCleaner}
+   * @private
+   */
+  this.shardCleaner_ = null;
 
   /**
    * The local client's node representation within the shard.
@@ -102,6 +110,7 @@ NetSimConnection.prototype.tick = function (clock) {
   if (this.myNode) {
     this.myNode.tick(clock);
     this.shard_.tick(clock);
+    this.shardCleaner_.tick(clock);
   }
 };
 
@@ -134,6 +143,7 @@ NetSimConnection.prototype.connectToShard = function (shardID, displayName) {
   }
 
   this.shard_ = new NetSimShard(shardID);
+  this.shardCleaner_ = new NetSimShardCleaner(this.shard_);
   this.createMyClientNode_(displayName);
 };
 
