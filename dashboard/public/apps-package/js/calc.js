@@ -11,7 +11,7 @@ window.calcMain = function(options) {
   appMain(window.Calc, levels, options);
 };
 
-},{"../appMain":3,"../skins":140,"./blocks":29,"./calc":30,"./levels":35}],30:[function(require,module,exports){
+},{"../appMain":3,"../skins":141,"./blocks":29,"./calc":30,"./levels":35}],30:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -77,6 +77,7 @@ var appState = {
   currentAnimationDepth: 0,
   failedInput: null
 };
+Calc.appState_ = appState;
 
 var stepSpeed = 2000;
 
@@ -399,20 +400,7 @@ Calc.evaluateResults_ = function (targetSet, userSet) {
  * Execute the user's code.
  */
 Calc.execute = function() {
-  appState.userSet = new EquationSet(Blockly.mainBlockSpace.getTopBlocks());
-  appState.failedInput = null;
-
-  if (level.freePlay || level.edit_blocks) {
-    appState.result = ResultType.SUCCESS;
-    appState.testResults = TestResults.FREE_PLAY;
-    appState.message = undefined;
-  } else {
-    var outcome = Calc.evaluateResults_(appState.targetSet, appState.userSet);
-    appState.result = outcome.result;
-    appState.testResults = outcome.testResults;
-    appState.message = outcome.message;
-    appState.failedInput = outcome.failedInput;
-  }
+  generateResults();
 
   var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   var textBlocks = Blockly.Xml.domToText(xml);
@@ -430,7 +418,7 @@ Calc.execute = function() {
   studioApp.report(reportData);
 
   // Display feedback immediately
-  if (appState.testResults === TestResults.QUESTION_MARKS_IN_NUMBER_FIELD) {
+  if (isPreAnimationFailure(appState.testResults)) {
     return displayFeedback();
   }
 
@@ -446,6 +434,56 @@ Calc.execute = function() {
     }, stepSpeed);
   }
 };
+
+function isPreAnimationFailure(testResult) {
+  return testResult === TestResults.QUESTION_MARKS_IN_NUMBER_FIELD ||
+    testResult === TestResults.EMPTY_FUNCTIONAL_BLOCK ||
+    testResult === TestResults.EXTRA_TOP_BLOCKS_FAIL;
+}
+
+/**
+ * Fill appState with the results of program execution.
+ */
+function generateResults() {
+  appState.message = undefined;
+
+  // Check for pre-execution errors
+  if (studioApp.hasExtraTopBlocks()) {
+    appState.result = ResultType.FAILURE;
+    appState.testResults = TestResults.EXTRA_TOP_BLOCKS_FAIL;
+    return;
+  }
+
+  if (studioApp.hasUnfilledBlock()) {
+    appState.result = ResultType.FAILURE;
+    appState.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
+
+    // Gate message on whether or not it's the compute block that's empty
+    var compute = _.find(Blockly.mainBlockSpace.getTopBlocks(), function (item) {
+      return item.type === 'functional_compute';
+    });
+    if (compute && !compute.getInputTargetBlock('ARG1')) {
+      appState.message = calcMsg.emptyComputeBlock();
+    } else {
+      appState.message = calcMsg.emptyFunctionalBlock();
+    }
+    return;
+  }
+
+  appState.userSet = new EquationSet(Blockly.mainBlockSpace.getTopBlocks());
+  appState.failedInput = null;
+
+  if (level.freePlay || level.edit_blocks) {
+    appState.result = ResultType.SUCCESS;
+    appState.testResults = TestResults.FREE_PLAY;
+  } else {
+    var outcome = Calc.evaluateResults_(appState.targetSet, appState.userSet);
+    appState.result = outcome.result;
+    appState.testResults = outcome.testResults;
+    appState.message = outcome.message;
+    appState.failedInput = outcome.failedInput;
+  }
+}
 
 /**
  * If we have any functions or variables in our expression set, we don't support
@@ -678,7 +716,7 @@ function displayFeedback() {
   level.extraTopBlocks = calcMsg.extraTopBlocks();
   var appDiv = null;
   // Show svg in feedback dialog
-  if (appState.testResults !== TestResults.QUESTION_MARKS_IN_NUMBER_FIELD) {
+  if (!isPreAnimationFailure(appState.testResults)) {
     appDiv = cloneNodeWithoutIds('svgCalc');
   }
   var options = {
@@ -714,11 +752,12 @@ function onReportComplete(response) {
 /* start-test-block */
 // export private function(s) to expose to unit testing
 Calc.__testonly__ = {
-  displayGoal: displayGoal
+  displayGoal: displayGoal,
+  appState: appState
 };
 /* end-test-block */
 
-},{"../../locale/current/calc":184,"../../locale/current/common":185,"../StudioApp":2,"../block_utils":17,"../dom":44,"../skins":140,"../templates/page.html":160,"../timeoutList":166,"../utils":180,"./api":28,"./controls.html":31,"./equationSet":32,"./expressionNode":33,"./inputIterator":34,"./levels":35,"./visualization.html":37}],37:[function(require,module,exports){
+},{"../../locale/current/calc":185,"../../locale/current/common":186,"../StudioApp":2,"../block_utils":17,"../dom":44,"../skins":141,"../templates/page.html":161,"../timeoutList":167,"../utils":181,"./api":28,"./controls.html":31,"./equationSet":32,"./expressionNode":33,"./inputIterator":34,"./levels":35,"./visualization.html":37}],37:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -738,7 +777,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/calc":184,"ejs":201}],35:[function(require,module,exports){
+},{"../../locale/current/calc":185,"ejs":202}],35:[function(require,module,exports){
 var msg = require('../../locale/current/calc');
 var blockUtils = require('../block_utils');
 
@@ -777,7 +816,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/current/calc":184,"../block_utils":17}],34:[function(require,module,exports){
+},{"../../locale/current/calc":185,"../block_utils":17}],34:[function(require,module,exports){
 /**
  * Given a set of values (i.e. [1,2,3], and a number of parameters, generates
  * all possible combinations of values.
@@ -1137,7 +1176,7 @@ EquationSet.__testonly__ = {
 };
 /* end-test-block */
 
-},{"../utils":180,"./expressionNode":33}],31:[function(require,module,exports){
+},{"../utils":181,"./expressionNode":33}],31:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1160,7 +1199,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/calc":184,"../../locale/current/common":185,"ejs":201}],29:[function(require,module,exports){
+},{"../../locale/current/calc":185,"../../locale/current/common":186,"ejs":202}],29:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -1252,7 +1291,7 @@ function installCompute(blockly, generator, gensym) {
   };
 }
 
-},{"../../locale/current/calc":184,"../../locale/current/common":185,"../functionalBlockUtils":74,"../sharedFunctionalBlocks":139}],184:[function(require,module,exports){
+},{"../../locale/current/calc":185,"../../locale/current/common":186,"../functionalBlockUtils":74,"../sharedFunctionalBlocks":140}],185:[function(require,module,exports){
 /*calc*/ module.exports = window.blockly.appLocale;
 },{}],28:[function(require,module,exports){
 var ExpressionNode = require('./expressionNode');
@@ -1682,4 +1721,4 @@ var Token = function (str, marked) {
 };
 ExpressionNode.Token = Token;
 
-},{"../utils":180}]},{},[36]);
+},{"../utils":181}]},{},[36]);

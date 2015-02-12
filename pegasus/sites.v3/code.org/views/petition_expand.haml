@@ -1,16 +1,8 @@
-.greybox{style: " background-image: url('/images/petition_background.jpg');   /*height:300px; padding-top:50px; margin-top:0px; padding-left: 200px; padding-right:200px*/ margin-bottom:10px"}
-  #petitioninfo
-    Do you support us?  
-    %a{href: "#", style: "color:white"}
-      Like us on Facebook, 
-    %a{href: "#", style: "color:white"}
-      Follow us on Twitter,
-    and 
-    %span{style: "cursor: pointer", onclick: "$('#petitioninfo').fadeOut(); $('#form').slideDown('slow').animate({ opacity: 1 }, { queue: false, duration: 'slow' });"}
-      Sign our Petition &#x25BC;
+#petitionblock.greybox{style: " background-image: url('/images/petition_background.jpg');   /*height:300px; padding-top:50px; margin-top:0px; padding-left: 200px; padding-right:200px*/ margin-bottom:10px"}
+
+  #petition_message{:style=>"font-size: 21px; line-height:28px; font-family: 'Gotham 5r', sans-serif;"}=I18n.t:petition_message
 
   #form.container_responsive{style: "display:none"}
-    #petition_message{:style=>"font-size: 21px; line-height:28px; font-family: 'Gotham 5r', sans-serif;"}=I18n.t:petition_message
     #petition_sign_message.desktop-feature{:style=>"font-size: 18px; line-height:20px; font-weight:400; margin-top:10px"}=I18n.t(:petition_sign_message).gsub("#", format_integer_with_commas(fetch_metrics['petition_signatures']).to_s)
 
     %form#petition_form{:onsubmit=>"return petition.signPetition()"}
@@ -51,14 +43,32 @@
         .col-18.i-agree-button
           %button#gobutton.button_enabled{:style=>"min-width:100px; margin-bottom:10px; font-family: 'Gotham 5r', sans-serif;"}=I18n.t :i_agree
 
-  #thanks{:style=>"display:none"}
+  #thanks.container_responsive{:style=>"display:none"}
     %br
     %span{:style=>"font-size: 18px"}=I18n.t :petition_thankyou
     %br
     %br
 
+  %div{style: "clear:both"}
+  .container_responsive{style: "margin-top:10px"}
+    #threedivs{style: "text-align:center"}
+      %span#signpetitionclick{style: "cursor: pointer; font-weight:bold; padding-right:40px; vertical-align: 5px;", onclick: "expandPetition();"}
+        Sign our petition. &#x25BE;
+
+      %span
+        <iframe style="width:80px; height:20px;" src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2Fcodeorg&amp;width&amp;layout=button&amp;action=like&amp;show_faces=true&amp;share=false&amp;height=80&amp;appId=744615728903015" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:80px;" allowTransparency="true"></iframe>
+
+      %span
+        <a href="https://twitter.com/codeorg" class="twitter-follow-button" data-show-count="false">Follow @codeorg</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
 :javascript
+
+  function expandPetition()
+  {
+    $('#petitioninfo').fadeOut(); 
+    $('#signpetitionclick').fadeOut();
+    $('#form').slideDown('slow').animate({ opacity: 1 }, { queue: false, duration: 'slow' });
+  }
 
   function Petition()
   {
