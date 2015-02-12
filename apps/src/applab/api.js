@@ -365,6 +365,13 @@ exports.deleteRecord = function (blockId, table, record, onSuccess, onError) {
                            'onError': onError});
 };
 
+exports.getUserId = function (blockId, onSuccess, onError) {
+  return Applab.executeCmd(blockId,
+                          'getUserId',
+                          {'onSuccess': onSuccess,
+                           'onError': onError});
+};
+
 exports.moveForward = function (blockId, distance) {
   return Applab.executeCmd(blockId,
                           'moveForward',
