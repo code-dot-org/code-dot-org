@@ -1,18 +1,12 @@
-- @script ||= Script.twenty_hour_script
-
+- # TODO OFFLINE: move these to the client
 - if browser.cdo_unsupported?
   = render partial: 'layouts/unsupported_browser'
 - elsif browser.cdo_partially_supported?
   = render partial: 'layouts/partially_supported_browser'
+- if browser.chrome? && browser.version.to_s.to_i == 34
+  %script{src: '/shared/js/chrome34Fix.js'}
 
-.header-wrapper.hide_on_mobile{class: ('feedback-bug-links' if @script_level && @script.show_report_bug_link?)}
-  - if @script_level && @script.show_report_bug_link?
-    #betainfo
-      - if @script.feedback_url
-        = link_to t('landing.feedback'), @script.feedback_url
-        |
-      = link_to t('landing.report_bug'), @script_level.report_bug_url(request), target: '_blank'
-
+.header-wrapper.hide_on_mobile
   .navbar-static-top.header{class: 'hide_on_mobile'}
     .container{style: (@full_width ? 'width: 880px;' : '')}
       .navbar-header
@@ -30,6 +24,8 @@
                 %i.fa.fa-rocket
               %a.header_status_bar.level_free_play{title: t('nav.header.free_play.artist'), href: artist_freeplay_path}
                 %i.fa.fa-pencil
+
+            - # TODO OFFLINE: user component
             - if params[:controller] !~ /^sessions/
               .header_user
                 = render partial: 'shared/user_header'

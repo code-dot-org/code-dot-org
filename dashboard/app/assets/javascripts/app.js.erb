@@ -30,7 +30,7 @@
       this.onDestroy = __bind(this.onDestroy, this);
 
       this.$el = $el;
-      this.$el.on('click', this.onClick);
+      this.$el.on('click touchstart', this.onClick);
       this.$el.on('destroyed', this.onDestroy);
 
       this.props = $.extend({}, $el.data(), props);
@@ -51,7 +51,7 @@
       // Remove any event handlers
       var $el = this.$el;
       this.$el = null;
-      $el.off('click', this.onClick);
+      $el.off('click touchstart', this.onClick);
       $el.on('destroyed', this.onDestroy);
 
       this.componentDidUnmount();
@@ -96,6 +96,8 @@
       this.render();
       delete this.isUpdating;
 
+      this.$el.addClass('ui-rendered');
+
       this.isMounting ? this.componentDidMount() : this.componentDidUpdate();
       delete this.isMounting;
     }
@@ -133,18 +135,26 @@
     function UIRouter() { }
 
     UIRouter.prototype.route = function() {
-      var re, parts,
+      var re, parts, el,
         url = window.location.pathname;
 
       var headerStore = new HeaderStore();
 
       // Special handling for #blocklyApp, which could be on any route.
-      var el = $('#blocklyApp');
+      el = $('#blocklyApp');
       if (el.length) {
         window.blocklyApp = new BlocklyApp( el, {
           headerStore: headerStore
         });
       }
+
+      el = $('#reference_area');
+      if (el.length) {
+        window.blocklyApp = new ReferenceArea( el, {
+          headerStore: headerStore
+        });
+      }
+
 
       // s/:script_id/level/:level_id
       // (only applies to the default scripts ID < 8)
@@ -362,6 +372,94 @@
     return UIFrame;
   })();
 
+
+  // class ReferenceArea extends UIComponent
+  var ReferenceArea = (function(_super) {
+    __extends(ReferenceArea, _super);
+
+    // Must have a constructor
+    function ReferenceArea() {
+      ReferenceArea.__super__.constructor.apply(this, arguments);
+
+      return this;
+    }
+
+    ReferenceArea.prototype.render = function() {
+      var el;
+
+      var state = this.state || {};
+      var level = state.level || {}
+
+      this.$el.html('');  // Clear out the children
+      this.$el.addClass('reference_area');
+
+      // if (current_user.teacher? || current_user.admin?)
+      if (level.solutionPath) {
+        el = $('<div>').addClass('solution_link').appendTo(this.$el);
+
+        $('<a>').attr('href', level.solutionPath).text('<%= I18n.t("reference_area.teacher") %>').appendTo(el);
+      }
+
+      if (level.relatedVideos) {
+        $('<p>').addClass('help_title').text('<%= I18n.t("reference_area.title") %>').appendTo(this.$el);
+        $('<p>').addClass('help_subtitle').text('<%= I18n.t("reference_area.subtitle") %>').appendTo(this.$el);
+
+        for (var i = 0; i < level.relatedVideos.length; i++) {
+          var video = level.relatedVideos[i];
+
+          el = $('<a>', {
+            data: video.data,  // Note this doesn't show as data- attributes, but does work.
+            href: '#'
+          }).addClass('video_link').appendTo(this.$el);
+          var img = $('<img>', {
+            id: 'thumbnail_' + video.youtube_code,
+            src: video.thumbnail_url,
+            width: 39*4.7
+            // height: 50*4.7,
+          }).addClass('video_thumbnail').appendTo(el);
+          el.append( $('<div>').addClass('video_name').append( $('<span>').text(video.name) ) );
+
+          if ((i % 2) == 1)
+            $('<div>').addClass('clear').appendTo(this.$el);
+        }
+
+        $('<div>').addClass('clear').appendTo(this.$el);
+      }
+    }
+
+
+    ReferenceArea.prototype.componentDidMount = function() {
+      var _this = this;
+
+      // When the headerStore gets data, update blockly
+      this.props.headerStore.notify( function(data) {
+        _this.setState({
+          level: $.extend({}, data.level)
+        });
+      });
+
+    }
+
+    ReferenceArea.prototype.onClick = function(ev) {
+      var el;
+
+      // Click on a video
+      el = $(ev.target).closest('.video_link');
+      if (el.length) {
+        ev.stopPropagation();
+
+        showVideoDialog( $.extend({
+          enable_fallback: true,
+          autoplay: true
+        }, el.data()) );
+
+        return;
+      }
+    }
+
+
+    return ReferenceArea;
+  })(UIComponent);
 
 
 

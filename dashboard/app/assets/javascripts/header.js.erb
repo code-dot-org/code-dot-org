@@ -133,6 +133,22 @@
       // NOTE: All this DOM manipulation would be better done via a template - but we're in the process
       // of picking a template language vs JSX
 
+      if (level.reportBugLink) {
+        this.$el.addClass('feedback-bug-links');
+        var beta = $('<div>').attr('id', 'betainfo').prependTo(this.$el);
+
+        if (level.feedbackUrl) {
+          beta.append( $('<a>').attr('href', level.feedbackUrl).text('<%= I18n.t("landing.feedback") %>') );
+          beta.append( document.createTextNode(' | ') );
+        }
+
+        beta.append( $('<a>').attr('href', level.reportBugLink).attr('_target', 'blank').text('<%= I18n.t("landing.report_bug") %>') );
+      } else {
+        this.$el.removeClass('feedback-bug-links');
+        this.$el.find('#betainfo').remove();
+      }
+
+
       var $middle = _this.$el.find('.header_middle');
       $middle.children().remove();
       el = $('<div>').addClass('header_level').appendTo($middle);

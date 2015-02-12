@@ -143,13 +143,30 @@ SQL
       level_data = blockly_options({ embed: true, hide_source: true, no_padding: true, show_finish: true })
     elsif level.is_a?(DSLDefined)
       # TODO: partial "levels/#{level.class.to_s.underscore}"
-      # TODO: What do I need to create 'levels/reference_area' ?
       level_data = {}
     else
       level_data = blockly_options()
     end
     level_data[:scriptPath] = build_script_level_path(script_level)
+    if level.ideal_level_source_id
+      level_data[:solutionPath] = script_level_solution_path(script, level)  # TODO: Only for teachers?
+    end
     level_data[:locale] = js_locale
+    if !level.related_videos.nil? && !level.related_videos.empty?
+      level_data[:relatedVideos] = level.related_videos.map do |video|
+        {
+          name: data_t('video.name', video.key),
+          youtube_code: video.youtube_code,
+          data: video_info(video),
+          thumbnail_url: video_thumbnail_path(video)
+        }
+      end
+    end
+
+    if script_level && script.show_report_bug_link?
+      level_data[:feedbackUrl] = script.feedback_url
+      level_data[:reportBugLink] = script_level.report_bug_url(request)
+    end
 
     render json: {
       script: {

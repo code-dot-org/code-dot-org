@@ -1,3 +1,4 @@
+- # TODO OFFLINE
 - @page_title = level_title
 - content_for :head do
   - if @game.share_mobile_fullscreen?
@@ -5,20 +6,12 @@
   - if @game.app == 'flappy'
     = tag 'meta', name: 'description', content: 'Code your own Flappy game'
 
-#notes-content{style: 'display: none;'}
-  %ul
-    %li
-      %a{href: '#video'}
-        = I18n.t('video.tab')
-        %span.video-name
-    %li
-      %a{href: '#notes-outer'}= I18n.t('video.notes')
-
+- # TODO OFFLINE
 - if @game.unplugged?
   = render partial: 'levels/unplug', locals: {app: @game.app}
 - elsif @level.is_a?(DSLDefined)
   = render partial: "levels/#{@level.class.to_s.underscore}"
-  %div{style: 'width: 400px'}= render partial: 'levels/reference_area'
+  #reference_area{style: 'width: 400px'}
 - elsif @level.is_a?(Blockly) && @level.embed == 'true' && !@edit_blocks
   #title
     %h4{style: 'margin-left: auto; margin-right: auto; max-width: 800px;'}!= @level.properties['instructions']
@@ -27,9 +20,11 @@
 - else
   = render partial: 'levels/blockly'
 
+- # TODO OFFLINE
 - if @script.try(:hoc?) && (@script_level.try(:chapter) == 1 || @script_level.try(:position) == 1)
   -# special tracking image to make sure a cookie is set when hoc starts (/hoc/1)
   = image_tag(tracking_pixel_url(@script))
 
+- # TODO OFFLINE
 - if current_user.try(:admin?)
   = render partial: 'levels/admin'

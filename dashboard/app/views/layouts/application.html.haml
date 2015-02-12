@@ -3,6 +3,7 @@
 - show_header = !(@embed)
 %html{dir: locale_dir}
   %head
+    - # TODO OFFLINE
     %title= @page_title ? "#{t(:appname)} - #{@page_title}" : t(:appname)
     = ::NewRelic::Agent.browser_timing_header rescue ''
     = tag :meta, name: 'viewport', content: 'minimal-ui'
@@ -15,6 +16,7 @@
     = yield :head
     = render partial: 'layouts/analytics'
   %body
+    - # TODO OFFLINE
     - if current_user && current_user.age.nil?
       = render partial: 'layouts/age_interstitial'
 
@@ -31,7 +33,25 @@
       - if show_footer
         .push
 
-    - if show_footer 
+    - if show_footer
       = render partial: 'layouts/footer'
 
     = yield :body_scripts
+
+    :javascript
+      function hideUserOptions() {
+        $('.user_options').hide();
+        $('.user_menu_glyph').html('&#x25BC;');
+        $(document).off('click', hideUserOptions);
+      }
+      $('.user_menu').click(function (e) {
+        if ($('.user_options').is(':hidden')) {
+          e.stopPropagation();
+          $('.user_options').show();
+          $('.user_menu_glyph').html('&#x25B2;');
+          $(document).on('click', hideUserOptions);
+        }
+      });
+      $('.user_options').click(function (e) {
+        e.stopPropagation(); // Clicks inside the popup shouldn't close it
+      });

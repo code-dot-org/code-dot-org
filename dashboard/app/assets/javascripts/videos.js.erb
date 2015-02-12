@@ -24,9 +24,19 @@ function showVideoDialog(options) {
   var aspectRatio = 16 / 9;
 
   var body = $('<div/>');
-  var content = $('#notes-content').contents().clone();
-  content.find('.video-name').text(options.name);
-  body.append(content);
+  body.append(
+    $('<ul>').append(
+      $('<li>').append(
+        $('<a>').attr('href', '#video').text('<%= I18n.t("video.tab") %>').append(
+          $('<span>').addClass('video-name').text(options.name)
+        )
+      )
+    ).append(
+      $('<li>').append(
+        $('<a>').attr('href', '#notes-outer').text('<%= I18n.t("video.notes") %>')
+      )
+    )
+  );
 
   var video = createVideo(options);
   body.append(video);
