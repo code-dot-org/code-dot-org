@@ -75,6 +75,8 @@ Dashboard::Application.routes.draw do
   get '/projects', to: 'projects#index'
   get '/projects/:template', to: 'projects#template'
 
+  get '/p/:app', to: 'projects#new'
+
   post '/locale', to: 'home#set_locale', as: 'locale'
   
   get '/lang/it', to: 'home#set_locale', as: 'lang/it', locale: 'it-IT'
