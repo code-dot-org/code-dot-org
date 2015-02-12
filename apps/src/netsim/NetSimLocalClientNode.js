@@ -124,18 +124,33 @@ NetSimLocalClientNode.prototype.setDisplayName = function (displayName) {
 };
 
 /**
- * Configure this node controller to post sent and received messages to the
- * given log widgets.
+ * Configure this node controller to actively simulate, and to post sent and
+ * received messages to the given log widgets.
  * @param {!NetSimLogWidget} sentLog
  * @param {!NetSimLogWidget} receivedLog
  */
-NetSimLocalClientNode.prototype.setLogs = function (sentLog, receivedLog) {
+NetSimLocalClientNode.prototype.initializeSimulation = function (sentLog,
+    receivedLog) {
   this.sentLog_ = sentLog;
   this.receivedLog_ = receivedLog;
 
   // Subscribe to message table changes
-  this.shard_.messageTable.tableChange
+  this.messageTableChangeKey_ = this.shard_.messageTable.tableChange
       .register(this.onMessageTableChange_.bind(this));
+  logger.info("Local node registered for messageTable tableChange");
+};
+
+/**
+ * Gives the simulating node a chance to unregister from anything it was
+ * observing.
+ */
+NetSimLocalClientNode.prototype.stopSimulation = function () {
+  if (this.messageTableChangeKey_ !== undefined) {
+    this.shard_.messageTable.tableChange
+        .unregister(this.messageTableChangeKey_);
+    this.messageTableChangeKey_ = undefined;
+    logger.info("Local node registered for messageTable tableChange");
+  }
 };
 
 /**
@@ -242,7 +257,7 @@ NetSimLocalClientNode.prototype.connectToRouter = function (router, onComplete) 
 
     self.myWire = wire;
     self.myRouter = router;
-    self.myRouter.setSimulateForSender(self.entityID);
+    self.myRouter.initializeSimulation(self.entityID);
 
     router.requestAddress(wire, self.getHostname(), function (success) {
       if (!success) {
@@ -276,6 +291,7 @@ NetSimLocalClientNode.prototype.disconnectRemote = function (onComplete) {
     self.myWire = null;
     // Trigger an immediate router update so its connection count is correct.
     self.myRouter.update(onComplete);
+    self.myRouter.stopSimulation();
     self.myRouter = null;
   });
 };
