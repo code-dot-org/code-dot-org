@@ -20,7 +20,7 @@ var page = require('../templates/page.html');
 var dom = require('../dom');
 var Collidable = require('./collidable');
 var Projectile = require('./projectile');
-var BigGameInfo = require('./bigGameInfo');
+var BigGameLogic = require('./bigGameLogic');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
 var _ = utils.getLodash();
@@ -156,7 +156,7 @@ function loadLevel() {
 
   switch (level.customGameType) {
     case 'Big Game':
-      Studio.customGame = new BigGameInfo();
+      Studio.customLogic = new BigGameLogic();
       break;
     case 'SamTheButterfly':
       // Going forward, we may also want to move Sam the Butterfly logic
@@ -557,8 +557,8 @@ function callHandler (name, allowQueueExtension) {
 Studio.onTick = function() {
   Studio.tickCount++;
 
-  if (Studio.customGame) {
-    Studio.customGame.onTick();
+  if (Studio.customLogic) {
+    Studio.customLogic.onTick();
   }
 
   if (Studio.interpreter) {
