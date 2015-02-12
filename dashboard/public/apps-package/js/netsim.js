@@ -294,7 +294,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":186,"../../locale/current/netsim":191,"ejs":202}],133:[function(require,module,exports){
+},{"../../locale/current/common":187,"../../locale/current/netsim":192,"ejs":203}],133:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/netsim');
@@ -308,7 +308,7 @@ levels.netsim_demo = {
   'freePlay': true
 };
 
-},{"../../locale/current/netsim":191}],191:[function(require,module,exports){
+},{"../../locale/current/netsim":192}],192:[function(require,module,exports){
 /*netsim*/ module.exports = window.blockly.appLocale;
 },{}],132:[function(require,module,exports){
 module.exports= (function() {
@@ -330,7 +330,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":202}],131:[function(require,module,exports){
+},{"ejs":203}],131:[function(require,module,exports){
 /**
  * Copyright 2015 Code.org
  * http://code.org/
@@ -624,7 +624,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":202}],124:[function(require,module,exports){
+},{"ejs":203}],124:[function(require,module,exports){
 /**
  * Copyright 2015 Code.org
  * http://code.org/
@@ -797,7 +797,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":202}],117:[function(require,module,exports){
+},{"ejs":203}],117:[function(require,module,exports){
 /**
  * Copyright 2015 Code.org
  * http://code.org/
@@ -925,7 +925,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":202}],115:[function(require,module,exports){
+},{"ejs":203}],115:[function(require,module,exports){
 /**
  * Copyright 2015 Code.org
  * http://code.org/
@@ -1410,7 +1410,7 @@ NetSimLobby.prototype.getUserSections_ = function (callback) {
   });
 };
 
-},{"../dom":44,"../utils":181,"./NetSimLobby.html":114,"./NetSimNodeClient":121,"./NetSimNodeRouter":122,"./periodicAction":137}],114:[function(require,module,exports){
+},{"../dom":44,"../utils":182,"./NetSimLobby.html":114,"./NetSimNodeClient":121,"./NetSimNodeRouter":122,"./periodicAction":137}],114:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1430,7 +1430,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":202}],112:[function(require,module,exports){
+},{"ejs":203}],112:[function(require,module,exports){
 /**
  * Copyright 2015 Code.org
  * http://code.org/
@@ -2167,7 +2167,7 @@ NetSimTable.prototype.tick = function () {
   }
 };
 
-},{"../utils":181,"./ObservableEvent":130}],122:[function(require,module,exports){
+},{"../utils":182,"./ObservableEvent":130}],122:[function(require,module,exports){
 /**
  * Copyright 2015 Code.org
  * http://code.org/
