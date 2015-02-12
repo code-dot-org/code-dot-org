@@ -5,6 +5,7 @@
  *
  */
 'use strict';
+/* global Studio */
 
 var studioApp = require('../StudioApp').singleton;
 var msg = require('../../locale/current/studio');
@@ -29,7 +30,7 @@ var CLICK_VALUE = constants.CLICK_VALUE;
 var VISIBLE_VALUE = constants.VISIBLE_VALUE;
 
 var generateSetterCode = function (opts) {
-  var value = opts.ctx.getTitleValue('VALUE');
+  var value = opts.value || opts.ctx.getTitleValue('VALUE');
   if (value === RANDOM_VALUE) {
     var possibleValues =
       _(opts.ctx.VALUES)
@@ -1233,8 +1234,34 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
+  blockly.Blocks.studio_setBackgroundParam = {
+    helpUrl: '',
+    init: function() {
+      this.setHSV(312, 0.32, 0.62);
+      this.VALUES = skin.backgroundChoices;
+
+      this.appendDummyInput()
+        .appendTitle(msg.setBackground());
+      this.appendValueInput('VALUE');
+
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setBackgroundTooltip());
+    }
+  };
+
   generator.studio_setBackground = function() {
     return generateSetterCode({ctx: this, name: 'setBackground'});
+  };
+  generator.studio_setBackgroundParam = function () {
+    var backgroundValue = blockly.JavaScript.valueToCode(this, 'VALUE',
+      Blockly.JavaScript.ORDER_NONE);
+
+    return generateSetterCode({
+      value: backgroundValue,
+      ctx: this,
+      name: 'setBackground'});
   };
 
   /**
@@ -1378,6 +1405,25 @@ exports.install = function(blockly, blockInstallOptions) {
         this.setTooltip(msg.setSpriteTooltip());
       }
     };
+
+    blockly.Blocks.studio_setSpriteParamValue = {
+      helpUrl: '',
+      init: function() {
+        this.setHSV(312, 0.32, 0.62);
+        if (spriteCount > 1) {
+          this.appendDummyInput()
+            .appendTitle(spriteNumberTextDropdown(msg.setSpriteN), 'SPRITE');
+        } else {
+          this.appendDummyInput()
+            .appendTitle(msg.setSprite());
+        }
+        this.appendValueInput('VALUE');
+        this.setInputsInline(true);
+        this.setPreviousStatement(true);
+        this.setNextStatement(true);
+        this.setTooltip(msg.setSpriteTooltip());
+      }
+    };
   }
 
   generator.studio_setSprite = function() {
@@ -1391,6 +1437,18 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.studio_setSpriteParams = function() {
     var indexString = getSpriteIndex(this);
     return generateSetterCode({
+      ctx: this,
+      extraParams: indexString,
+      name: 'setSprite'});
+  };
+
+  generator.studio_setSpriteParamValue = function() {
+    var indexString = this.getTitleValue('SPRITE') || '0';
+    var spriteValue = blockly.JavaScript.valueToCode(this, 'VALUE',
+      Blockly.JavaScript.ORDER_NONE);
+
+    return generateSetterCode({
+      value: spriteValue,
       ctx: this,
       extraParams: indexString,
       name: 'setSprite'});
@@ -1660,12 +1718,12 @@ exports.install = function(blockly, blockInstallOptions) {
       var blockName = msg.startSetVars();
       var blockType = 'none';
       var blockArgs = [
-        {name: 'TITLE', type: 'function'},
-        {name: 'SUBTITLE', type: 'function'},
-        {name: 'BACKGROUND', type: 'function'},
-        {name: 'TARGET', type: 'function'},
-        {name: 'DANGER', type: 'function'},
-        {name: 'PLAYER', type: 'function'}
+        {name: 'title', type: 'string'},
+        {name: 'subtitle', type: 'string'},
+        {name: 'background', type: 'image'},
+        {name: 'player', type: 'image'},
+        {name: 'target', type: 'image'},
+        {name: 'danger', type: 'image'}
       ];
       initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
     }
@@ -1680,7 +1738,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
   blockly.Blocks.functional_start_setFuncs = {
     init: function() {
-      var blockName = msg.startSetVars();
+      var blockName = msg.startSetFuncs();
       var blockType = 'none';
       var blockArgs = [
         {name: 'update-target', type: 'function'},
@@ -1694,10 +1752,23 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   generator.functional_start_setFuncs = function() {
-    // For the current design, this doesn't need to generate any code.
-    // Though we pass in a function, we're not actually using that passed in
-    // function, and instead depend on a function of the required name existing
-    // in the global space. This may change in the future.
+    // For each of our inputs (i.e. update-target, update-danger, etc.) get
+    // the attached block and figure out what it's function name is. Store
+    // that on BigGameLogic so we can know what functions to call later.
+    this.inputList.forEach(function (input) {
+      if (input.type !== Blockly.FUNCTIONAL_INPUT) {
+        return;
+      }
+      var inputBlock = this.getInputTargetBlock(input.name);
+      if (!inputBlock) {
+        return;
+      }
+      var inputBlockName = inputBlock.getTitleValue('NAME');
+      var functionName = Blockly.JavaScript.variableDB_.getName(inputBlockName,
+        Blockly.Procedures.NAME_TYPE);
+
+      Studio.customLogic.functionNames[input.name] = functionName;
+    }, this);
   };
 
   installFunctionalApiCallBlock(blockly, generator, {
@@ -1798,6 +1869,93 @@ exports.install = function(blockly, blockInstallOptions) {
     var spriteParam = getSpriteIndex(this);
     return 'Studio.vanish(\'block_id_' + this.id + '\', ' + spriteParam +
         ');\n';
+  };
+
+  /**
+   * functional_sprite_dropdown
+   */
+  blockly.Blocks.functional_sprite_dropdown = {
+    helpUrl: '',
+    init: function() {
+      this.setHSV.apply(this, functionalBlockUtils.colors.image);
+
+      this.VALUES = skin.spriteChoices;
+
+      var choices = _.map(startAvatars, function (skinId) {
+        return [skin[skinId].dropdownThumbnail, skinId];
+      });
+      var dropdown = new blockly.FieldImageDropdown(choices,
+        skin.dropdownThumbnailWidth, skin.dropdownThumbnailHeight);
+
+      this.appendDummyInput()
+        .appendTitle(dropdown, 'SPRITE_INDEX');
+
+      this.setFunctionalOutput(true);
+    }
+  };
+
+  generator.functional_sprite_dropdown = function () {
+    // returns the sprite index
+    return blockly.JavaScript.quote_(this.getTitleValue('SPRITE_INDEX'));
+  };
+
+  /**
+   * functional_background_dropdown
+   */
+  blockly.Blocks.functional_background_dropdown = {
+    helpUrl: '',
+    init: function() {
+      this.setHSV.apply(this, functionalBlockUtils.colors.image);
+
+      this.VALUES = skin.backgroundChoicesK1;
+      var dropdown = new blockly.FieldImageDropdown(skin.backgroundChoicesK1,
+        skin.dropdownThumbnailWidth, skin.dropdownThumbnailHeight);
+
+      this.appendDummyInput()
+        .appendTitle(dropdown, 'BACKGROUND');
+
+      this.setFunctionalOutput(true);
+    }
+  };
+
+  generator.functional_background_dropdown = function () {
+    // returns the sprite index
+    return this.getTitleValue('BACKGROUND');
+  };
+
+  /**
+   * functional_sqrt
+   */
+  blockly.Blocks.functional_sqrt = {
+    helpUrl: '',
+    init: function() {
+      initTitledFunctionalBlock(this, 'sqrt', 'Number', [
+        { name: 'ARG1', type: 'Number' }
+      ]);
+    }
+  };
+
+  generator.functional_sqrt = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    return 'Math.sqrt(' + arg1 + ');';
+  };
+
+  /**
+   * functional_keydown
+   */
+  blockly.Blocks.functional_keydown = {
+    helpUrl: '',
+    init: function() {
+      // todo = localize
+      initTitledFunctionalBlock(this, 'keydown?', 'boolean', [
+        { name: 'ARG1', type: 'Number' }
+      ]);
+    }
+  };
+
+  generator.functional_keydown = function() {
+    var keyCode = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || - 1;
+    return 'Studio.isKeyDown(' + keyCode + ');';
   };
 };
 

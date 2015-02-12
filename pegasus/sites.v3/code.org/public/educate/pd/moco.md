@@ -29,7 +29,7 @@ Phase 3 is designed to provide teachers with professional support, guidance, and
 
 1/24/2015
 <br />
-2/28/2015
+3/28/2015
 
 8:30am - 3:30pm
 <br />

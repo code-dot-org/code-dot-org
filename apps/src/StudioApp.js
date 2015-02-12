@@ -48,6 +48,10 @@ var StudioApp = function () {
   this.enableShowCode = true;
   this.editCode = false;
   this.usingBlockly_ = true;
+
+  /**
+   * @type {AudioPlayer}
+   */
   this.cdoSounds = null;
   this.Dialog = null;
   this.editor = null;
@@ -177,7 +181,7 @@ StudioApp.prototype.configure = function (options) {
 };
 
 /**
- * Common startup tasks for all apps.
+ * Common startup tasks for all apps. Happens after configure.
  */
 StudioApp.prototype.init = function(config) {
   if (!config) {
@@ -502,48 +506,47 @@ StudioApp.prototype.toggleRunReset = function(button) {
 };
 
 /**
- *
+ * Attempts to associate a set of audio files to a given name
+ * Handles the case where cdoSounds does not exist, e.g. in tests
+ * and grunt dev preview mode
+ * @param {Array.<string>} filenames file paths for sounds
+ * @param {string} name ID to associate sound effect with
  */
 StudioApp.prototype.loadAudio = function(filenames, name) {
-  if (this.isUsingBlockly()) {
-    Blockly.loadAudio_(filenames, name);
-  } else if (this.cdoSounds) {
-    var regOpts = { id: name };
-    for (var i = 0; i < filenames.length; i++) {
-      var filename = filenames[i];
-      var ext = filename.match(/\.(\w+)(\?.*)?$/);
-      if (ext) {
-        // Extend regOpts so regOpts.mp3 = 'file.mp3'
-        regOpts[ext[1]] = filename;
-      }
-    }
-    this.cdoSounds.register(regOpts);
+  if (!this.cdoSounds) {
+    return;
   }
+
+  this.cdoSounds.registerByFilenamesAndID(filenames, name);
 };
 
 /**
- *
+ * Attempts to play a sound effect
+ * @param {string} name sound ID
+ * @param {Object} options for sound playback
+ * @param {number} options.volume value between 0.0 and 1.0 specifying volume
  */
 StudioApp.prototype.playAudio = function(name, options) {
+  if (!this.cdoSounds) {
+    return;
+  }
+
   options = options || {};
   var defaultOptions = {volume: 0.5};
   var newOptions = utils.extend(defaultOptions, options);
-  if (this.isUsingBlockly()) {
-    Blockly.playAudio(name, newOptions);
-  } else if (this.cdoSounds) {
-    this.cdoSounds.play(name, newOptions);
-  }
+  this.cdoSounds.play(name, newOptions);
 };
 
 /**
- *
+ * Stops looping a given sound
+ * @param {string} name ID of sound
  */
 StudioApp.prototype.stopLoopingAudio = function(name) {
-  if (this.isUsingBlockly()) {
-    Blockly.stopLoopingAudio(name);
-  } else if (this.cdoSounds) {
-    this.cdoSounds.stopLoopingAudio(name);
+  if (!this.cdoSounds) {
+    return;
   }
+
+  this.cdoSounds.stopLoopingAudio(name);
 };
 
 /**
@@ -565,7 +568,7 @@ StudioApp.prototype.inject = function(div, options) {
     toolbox: document.getElementById('toolbox'),
     trashcan: true
   };
-  Blockly.inject(div, utils.extend(defaults, options));
+  Blockly.inject(div, utils.extend(defaults, options), this.cdoSounds);
 };
 
 /**
@@ -589,7 +592,7 @@ StudioApp.prototype.localeDirection = function() {
 };
 
 /**
-* Initialize Blockly for a readonly iframe.  Called on page load.
+* Initialize Blockly for a readonly iframe.  Called on page load. No sounds.
 * XML argument may be generated from the console with:
 * Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)).slice(5, -6)
 */
@@ -1307,4 +1310,21 @@ StudioApp.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
  */
 StudioApp.prototype.hasExtraTopBlocks = function () {
   return this.feedback_.hasExtraTopBlocks();
+};
+
+/**
+ * @param {Blockly.Block} block Block to check
+ * @returns true if the block has a connection without a block attached
+ */
+function isUnfilledBlock(block) {
+  return block.inputList.some(function (input) {
+    return input.connection && !input.connection.targetBlock();
+  });
+}
+
+/**
+ * @returns true if any block in the workspace has an unfilled input
+ */
+StudioApp.prototype.hasUnfilledBlock = function () {
+  return Blockly.mainBlockSpace.getAllBlocks().some(isUnfilledBlock);
 };

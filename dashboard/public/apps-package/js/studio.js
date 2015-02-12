@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({135:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({151:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Studio = require('./studio');
@@ -16,7 +16,7 @@ window.studioMain = function(options) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":3,"./blocks":129,"./levels":134,"./skins":137,"./studio":138}],138:[function(require,module,exports){
+},{"../appMain":3,"./blocks":145,"./levels":150,"./skins":153,"./studio":154}],154:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -39,6 +39,7 @@ var page = require('../templates/page.html');
 var dom = require('../dom');
 var Collidable = require('./collidable');
 var Projectile = require('./projectile');
+var BigGameLogic = require('./bigGameLogic');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
 var _ = utils.getLodash();
@@ -171,6 +172,16 @@ function loadLevel() {
   Studio.softButtons_ = level.softButtons || {};
   // protagonistSpriteIndex was originally mispelled. accept either spelling.
   Studio.protagonistSpriteIndex = level.protagonistSpriteIndex || level.protaganistSpriteIndex;
+
+  switch (level.customGameType) {
+    case 'Big Game':
+      Studio.customLogic = new BigGameLogic(Studio);
+      break;
+    case 'SamTheButterfly':
+      // Going forward, we may also want to move Sam the Butterfly logic
+      // into code
+      break;
+  }
 
   if (level.avatarList) {
     Studio.startAvatars = level.avatarList.slice();
@@ -565,6 +576,10 @@ function callHandler (name, allowQueueExtension) {
 Studio.onTick = function() {
   Studio.tickCount++;
 
+  if (Studio.customLogic) {
+    Studio.customLogic.onTick();
+  }
+
   if (Studio.interpreter) {
     var doneUserCodeStep = false;
     // In each tick, we will step the interpreter multiple times in a tight
@@ -607,7 +622,7 @@ Studio.onTick = function() {
   // Run key event handlers for any keys that are down:
   for (var key in KeyCodes) {
     if (Studio.keyState[KeyCodes[key]] &&
-        Studio.keyState[KeyCodes[key]] == "keydown") {
+        Studio.keyState[KeyCodes[key]] === "keydown") {
       switch (KeyCodes[key]) {
         case KeyCodes.LEFT:
           callHandler('when-left');
@@ -627,7 +642,7 @@ Studio.onTick = function() {
 
   for (var btn in ArrowIds) {
     if (Studio.btnState[ArrowIds[btn]] &&
-        Studio.btnState[ArrowIds[btn]] == ButtonState.DOWN) {
+        Studio.btnState[ArrowIds[btn]] === ButtonState.DOWN) {
       switch (ArrowIds[btn]) {
         case ArrowIds.LEFT:
           callHandler('when-left');
@@ -1511,6 +1526,7 @@ Studio.execute = function() {
     registerHandlers(handlers, 'functional_start_setSpeeds', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackgroundAndSpeeds',
         'whenGameStarts');
+    registerHandlers(handlers, 'functional_start_setFuncs', 'whenGameStarts');
     registerHandlers(handlers, 'studio_whenLeft', 'when-left');
     registerHandlers(handlers, 'studio_whenRight', 'when-right');
     registerHandlers(handlers, 'studio_whenUp', 'when-up');
@@ -2795,7 +2811,7 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/current/common":171,"../../locale/current/studio":177,"../StudioApp":2,"../canvg/StackBlur.js":37,"../canvg/canvg.js":38,"../canvg/rgbcolor.js":39,"../canvg/svg_todataurl":40,"../codegen":41,"../constants":42,"../dom":43,"../skins":126,"../templates/page.html":146,"../utils":166,"../xml":167,"./api":128,"./blocks":129,"./collidable":130,"./constants":131,"./controls.html":132,"./extraControlRows.html":133,"./projectile":136,"./visualization.html":139}],139:[function(require,module,exports){
+},{"../../locale/current/common":187,"../../locale/current/studio":193,"../StudioApp":2,"../canvg/StackBlur.js":38,"../canvg/canvg.js":39,"../canvg/rgbcolor.js":40,"../canvg/svg_todataurl":41,"../codegen":42,"../constants":43,"../dom":44,"../skins":141,"../templates/page.html":162,"../utils":182,"../xml":183,"./api":143,"./bigGameLogic":144,"./blocks":145,"./collidable":146,"./constants":147,"./controls.html":148,"./extraControlRows.html":149,"./projectile":152,"./visualization.html":155}],155:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2815,7 +2831,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":187}],136:[function(require,module,exports){
+},{"ejs":203}],152:[function(require,module,exports){
 var Collidable = require('./collidable');
 var Direction = require('./constants').Direction;
 var constants = require('./constants');
@@ -2989,7 +3005,7 @@ Projectile.prototype.moveToNextPosition = function () {
   this.y = next.y;
 };
 
-},{"./collidable":130,"./constants":131}],137:[function(require,module,exports){
+},{"./collidable":146,"./constants":147}],153:[function(require,module,exports){
 /**
  * Load Skin for Studio.
  */
@@ -3329,7 +3345,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../../locale/current/studio":177,"../skins":126,"./constants":131}],134:[function(require,module,exports){
+},{"../../locale/current/studio":193,"../skins":141,"./constants":147}],150:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/studio');
@@ -4798,7 +4814,7 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
   'startBlocks': "",
 });
 
-},{"../../locale/current/studio":177,"../block_utils":16,"../utils":166,"./constants":131}],133:[function(require,module,exports){
+},{"../../locale/current/studio":193,"../block_utils":17,"../utils":182,"./constants":147}],149:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4818,7 +4834,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":171,"ejs":187}],132:[function(require,module,exports){
+},{"../../locale/current/common":187,"ejs":203}],148:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4838,7 +4854,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":171,"ejs":187}],130:[function(require,module,exports){
+},{"../../locale/current/common":187,"ejs":203}],146:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -4944,7 +4960,7 @@ Collidable.prototype.outOfBounds = function () {
          (this.y > studioApp.MAZE_HEIGHT + (this.height / 2));
 };
 
-},{"../StudioApp":2,"./constants":131}],129:[function(require,module,exports){
+},{"../StudioApp":2,"./constants":147}],145:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -4952,6 +4968,7 @@ Collidable.prototype.outOfBounds = function () {
  *
  */
 'use strict';
+/* global Studio */
 
 var studioApp = require('../StudioApp').singleton;
 var msg = require('../../locale/current/studio');
@@ -4976,7 +4993,7 @@ var CLICK_VALUE = constants.CLICK_VALUE;
 var VISIBLE_VALUE = constants.VISIBLE_VALUE;
 
 var generateSetterCode = function (opts) {
-  var value = opts.ctx.getTitleValue('VALUE');
+  var value = opts.value || opts.ctx.getTitleValue('VALUE');
   if (value === RANDOM_VALUE) {
     var possibleValues =
       _(opts.ctx.VALUES)
@@ -6180,8 +6197,34 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
+  blockly.Blocks.studio_setBackgroundParam = {
+    helpUrl: '',
+    init: function() {
+      this.setHSV(312, 0.32, 0.62);
+      this.VALUES = skin.backgroundChoices;
+
+      this.appendDummyInput()
+        .appendTitle(msg.setBackground());
+      this.appendValueInput('VALUE');
+
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setBackgroundTooltip());
+    }
+  };
+
   generator.studio_setBackground = function() {
     return generateSetterCode({ctx: this, name: 'setBackground'});
+  };
+  generator.studio_setBackgroundParam = function () {
+    var backgroundValue = blockly.JavaScript.valueToCode(this, 'VALUE',
+      Blockly.JavaScript.ORDER_NONE);
+
+    return generateSetterCode({
+      value: backgroundValue,
+      ctx: this,
+      name: 'setBackground'});
   };
 
   /**
@@ -6325,6 +6368,25 @@ exports.install = function(blockly, blockInstallOptions) {
         this.setTooltip(msg.setSpriteTooltip());
       }
     };
+
+    blockly.Blocks.studio_setSpriteParamValue = {
+      helpUrl: '',
+      init: function() {
+        this.setHSV(312, 0.32, 0.62);
+        if (spriteCount > 1) {
+          this.appendDummyInput()
+            .appendTitle(spriteNumberTextDropdown(msg.setSpriteN), 'SPRITE');
+        } else {
+          this.appendDummyInput()
+            .appendTitle(msg.setSprite());
+        }
+        this.appendValueInput('VALUE');
+        this.setInputsInline(true);
+        this.setPreviousStatement(true);
+        this.setNextStatement(true);
+        this.setTooltip(msg.setSpriteTooltip());
+      }
+    };
   }
 
   generator.studio_setSprite = function() {
@@ -6338,6 +6400,18 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.studio_setSpriteParams = function() {
     var indexString = getSpriteIndex(this);
     return generateSetterCode({
+      ctx: this,
+      extraParams: indexString,
+      name: 'setSprite'});
+  };
+
+  generator.studio_setSpriteParamValue = function() {
+    var indexString = this.getTitleValue('SPRITE') || '0';
+    var spriteValue = blockly.JavaScript.valueToCode(this, 'VALUE',
+      Blockly.JavaScript.ORDER_NONE);
+
+    return generateSetterCode({
+      value: spriteValue,
       ctx: this,
       extraParams: indexString,
       name: 'setSprite'});
@@ -6607,12 +6681,12 @@ exports.install = function(blockly, blockInstallOptions) {
       var blockName = msg.startSetVars();
       var blockType = 'none';
       var blockArgs = [
-        {name: 'TITLE', type: 'function'},
-        {name: 'SUBTITLE', type: 'function'},
-        {name: 'BACKGROUND', type: 'function'},
-        {name: 'TARGET', type: 'function'},
-        {name: 'DANGER', type: 'function'},
-        {name: 'PLAYER', type: 'function'}
+        {name: 'title', type: 'string'},
+        {name: 'subtitle', type: 'string'},
+        {name: 'background', type: 'image'},
+        {name: 'player', type: 'image'},
+        {name: 'target', type: 'image'},
+        {name: 'danger', type: 'image'}
       ];
       initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
     }
@@ -6627,7 +6701,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
   blockly.Blocks.functional_start_setFuncs = {
     init: function() {
-      var blockName = msg.startSetVars();
+      var blockName = msg.startSetFuncs();
       var blockType = 'none';
       var blockArgs = [
         {name: 'update-target', type: 'function'},
@@ -6641,10 +6715,23 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   generator.functional_start_setFuncs = function() {
-    // For the current design, this doesn't need to generate any code.
-    // Though we pass in a function, we're not actually using that passed in
-    // function, and instead depend on a function of the required name existing
-    // in the global space. This may change in the future.
+    // For each of our inputs (i.e. update-target, update-danger, etc.) get
+    // the attached block and figure out what it's function name is. Store
+    // that on BigGameLogic so we can know what functions to call later.
+    this.inputList.forEach(function (input) {
+      if (input.type !== Blockly.FUNCTIONAL_INPUT) {
+        return;
+      }
+      var inputBlock = this.getInputTargetBlock(input.name);
+      if (!inputBlock) {
+        return;
+      }
+      var inputBlockName = inputBlock.getTitleValue('NAME');
+      var functionName = Blockly.JavaScript.variableDB_.getName(inputBlockName,
+        Blockly.Procedures.NAME_TYPE);
+
+      Studio.customLogic.functionNames[input.name] = functionName;
+    }, this);
   };
 
   installFunctionalApiCallBlock(blockly, generator, {
@@ -6746,6 +6833,93 @@ exports.install = function(blockly, blockInstallOptions) {
     return 'Studio.vanish(\'block_id_' + this.id + '\', ' + spriteParam +
         ');\n';
   };
+
+  /**
+   * functional_sprite_dropdown
+   */
+  blockly.Blocks.functional_sprite_dropdown = {
+    helpUrl: '',
+    init: function() {
+      this.setHSV.apply(this, functionalBlockUtils.colors.image);
+
+      this.VALUES = skin.spriteChoices;
+
+      var choices = _.map(startAvatars, function (skinId) {
+        return [skin[skinId].dropdownThumbnail, skinId];
+      });
+      var dropdown = new blockly.FieldImageDropdown(choices,
+        skin.dropdownThumbnailWidth, skin.dropdownThumbnailHeight);
+
+      this.appendDummyInput()
+        .appendTitle(dropdown, 'SPRITE_INDEX');
+
+      this.setFunctionalOutput(true);
+    }
+  };
+
+  generator.functional_sprite_dropdown = function () {
+    // returns the sprite index
+    return blockly.JavaScript.quote_(this.getTitleValue('SPRITE_INDEX'));
+  };
+
+  /**
+   * functional_background_dropdown
+   */
+  blockly.Blocks.functional_background_dropdown = {
+    helpUrl: '',
+    init: function() {
+      this.setHSV.apply(this, functionalBlockUtils.colors.image);
+
+      this.VALUES = skin.backgroundChoicesK1;
+      var dropdown = new blockly.FieldImageDropdown(skin.backgroundChoicesK1,
+        skin.dropdownThumbnailWidth, skin.dropdownThumbnailHeight);
+
+      this.appendDummyInput()
+        .appendTitle(dropdown, 'BACKGROUND');
+
+      this.setFunctionalOutput(true);
+    }
+  };
+
+  generator.functional_background_dropdown = function () {
+    // returns the sprite index
+    return this.getTitleValue('BACKGROUND');
+  };
+
+  /**
+   * functional_sqrt
+   */
+  blockly.Blocks.functional_sqrt = {
+    helpUrl: '',
+    init: function() {
+      initTitledFunctionalBlock(this, 'sqrt', 'Number', [
+        { name: 'ARG1', type: 'Number' }
+      ]);
+    }
+  };
+
+  generator.functional_sqrt = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    return 'Math.sqrt(' + arg1 + ');';
+  };
+
+  /**
+   * functional_keydown
+   */
+  blockly.Blocks.functional_keydown = {
+    helpUrl: '',
+    init: function() {
+      // todo = localize
+      initTitledFunctionalBlock(this, 'keydown?', 'boolean', [
+        { name: 'ARG1', type: 'Number' }
+      ]);
+    }
+  };
+
+  generator.functional_keydown = function() {
+    var keyCode = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || - 1;
+    return 'Studio.isKeyDown(' + keyCode + ');';
+  };
 };
 
 function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpriteImageDropdown, blockInstallOptions) {
@@ -6775,9 +6949,183 @@ function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpr
   };
 }
 
-},{"../../locale/current/common":171,"../../locale/current/studio":177,"../StudioApp":2,"../codegen":41,"../functionalBlockUtils":73,"../sharedFunctionalBlocks":125,"../utils":166,"./constants":131}],177:[function(require,module,exports){
+},{"../../locale/current/common":187,"../../locale/current/studio":193,"../StudioApp":2,"../codegen":42,"../functionalBlockUtils":74,"../sharedFunctionalBlocks":140,"../utils":182,"./constants":147}],193:[function(require,module,exports){
 /*studio*/ module.exports = window.blockly.appLocale;
-},{}],128:[function(require,module,exports){
+},{}],144:[function(require,module,exports){
+var Direction = require('./constants').Direction;
+
+/**
+ * Interface for a set of custom game logic for playlab
+ * @param {Studio} studio Reference to global studio object
+ * @interface CustomGameLogic
+ */
+function CustomGameLogic(studio) {}
+
+/**
+ * Logic to be run once per playlab tick
+ *
+ * @function
+ * @name CustomGameLogic#onTick
+ */
+
+/**
+ * Custom logic for the MSM BigGame
+ * @constructor
+ * @implements CustomGameLogic
+ */
+var BigGameLogic = function (studio) {
+  this.studio_ = studio;
+  this.functionNames = {};
+
+  this.playerSpriteIndex = 0;
+  this.targetSpriteIndex = 1;
+  this.dangerSpriteIndex = 2;
+};
+
+BigGameLogic.prototype.onTick = function () {
+   // Don't start until the title is over
+  var titleScreenTitle = document.getElementById('titleScreenTitle');
+  if (this.studio_.tickCount <= 1 ||
+      titleScreenTitle.getAttribute('visibility') === "visible") {
+    return;
+  }
+
+  // Update target, using onscreen and update_target
+  this.updateSpriteX_(this.targetSpriteIndex, this.update_target.bind(this));
+  // Update danger, using onscreen and update_danger
+  this.updateSpriteX_(this.dangerSpriteIndex, this.update_danger.bind(this));
+
+  // For every key and button down, call update_player
+  for (var key in this.studio_.keyState) {
+    if (this.studio_.keyState[key] === 'keydown') {
+      this.updatePlayer_(key);
+    }
+  }
+
+  for (var btn in this.studio_.btnState) {
+    if (this.studio_.btnState[btn]) {
+      if (btn === 'leftButton') {
+        this.updatePlayer_(37);
+      } else if (btn === 'upButton') {
+        this.updatePlayer_(38);
+      } else if (btn === 'rightButton') {
+        this.updatePlayer_(39);
+      } else if (btn === 'downButton') {
+        this.updatePlayer_(40);
+      }
+    }
+  }
+};
+
+/**
+ * Update a sprite's x coordinates using the user updateFunction. If
+ * sprite goes of screen, we reset to the other side of the screen.
+ */
+BigGameLogic.prototype.updateSpriteX_ = function (spriteIndex, updateFunction) {
+  var sprite = this.studio_.sprite[spriteIndex];
+  // sprite.x is the left. get the center
+  var centerX = sprite.x + sprite.width / 2;
+
+  var newCenterX = updateFunction(centerX);
+  sprite.x = newCenterX - sprite.width / 2;
+
+  // Current behavior is that as soon as we go offscreen, we reset to the other
+  // side. We could add a delay if we want.
+  if (!this.onscreen(newCenterX)) {
+    // reset to other side
+    if (sprite.dir === Direction.EAST) {
+      sprite.x = 0 - sprite.width;
+    } else {
+      sprite.x = this.studio_.MAZE_WIDTH;
+    }
+    sprite.y = Math.floor(Math.random() * (this.studio_.MAZE_HEIGHT - sprite.height));
+  }
+};
+
+/**
+ * Update the player sprite, using the user provided function.
+ */
+BigGameLogic.prototype.updatePlayer_ = function (key) {
+  var playerSprite = this.studio_.sprite[this.playerSpriteIndex];
+
+  // invert Y
+  var userSpaceY = this.studio_.MAZE_HEIGHT - playerSprite.y;
+
+  var newUserSpaceY = this.update_player(key, userSpaceY);
+
+  // reinvertY
+  playerSprite.y = this.studio_.MAZE_HEIGHT - newUserSpaceY;
+};
+
+/**
+ * Calls the user provided update_target function, or no-op if none was provided.
+ * @param {number} x Current x location of target
+ * @returns {number} New x location of target
+ */
+BigGameLogic.prototype.update_target = function (x) {
+  return this.getPassedFunction_('update-target')(x);
+};
+
+/**
+ * Calls the user provided update_danger function, or no-op if none was provided.
+ * @param {number} x Current x location of the danger sprite
+ * @returns {number} New x location of the danger target
+ */
+BigGameLogic.prototype.update_danger = function (x) {
+  return this.getPassedFunction_('update-danger')(x);
+};
+
+/**
+ * Calls the user provided update_player function, or no-op if none was provided.
+ * @param {number} key KeyCode of key that is down
+ * @param {number} y Current y location of player. (is this in an inverted coordinate space?)
+ * @returns {number} New y location of the player
+ */
+BigGameLogic.prototype.update_player = function (key, y) {
+  return this.getPassedFunction_('update-player')(key, y);
+};
+
+/**
+ * Calls the user provided onscreen? function, or no-op if none was provided.
+ * @param {number} x An x location
+ * @returns {boolean} True if x location is onscreen?
+ */
+BigGameLogic.prototype.onscreen = function (x) {
+  return this.getPassedFunction_('on-screen?')(x);
+};
+
+/**
+ * Calls the user provided collide? function, or no-op if none was provided.
+ * @param {number} px Player's x location
+ * @param {number} py Player's y location
+ * @param {number} cx Collider's x location
+ * @param {number} cy Collider's y location
+ * @returns {boolean} True if objects collide
+ */
+BigGameLogic.prototype.collide = function (px, py, cx, cy) {
+  return this.getPassedFunction_('collide?')(px, py, cx, cy);
+};
+
+/**
+ * @returns the user function that was passed in
+ */
+BigGameLogic.prototype.getPassedFunction_ = function (name) {
+  var userFunctionName = this.functionNames[name];
+  if (!userFunctionName) {
+    return function () {}; // noop
+  }
+
+  var userFunction = this.studio_.Globals[userFunctionName];
+  if (!userFunction) {
+    throw new Error('Unexepcted');
+  }
+
+  return userFunction;
+};
+
+module.exports = BigGameLogic;
+
+},{"./constants":147}],143:[function(require,module,exports){
 var constants = require('./constants');
 
 exports.SpriteSpeed = {
@@ -6933,7 +7281,15 @@ exports.onEvent = function (id, eventName, func) {
   });
 };
 
-},{"./constants":131}],131:[function(require,module,exports){
+/**
+ * @param {number} keyCode
+ * @returns {boolean} True if key is currently down
+ */
+exports.isKeyDown = function (keyCode) {
+  return Studio.keyState[keyCode] === 'keydown';
+};
+
+},{"./constants":147}],147:[function(require,module,exports){
 'use strict';
 
 exports.Direction = {
@@ -7110,7 +7466,7 @@ exports.HIDDEN_VALUE = '"hidden"';
 exports.CLICK_VALUE = '"click"';
 exports.VISIBLE_VALUE = '"visible"';
 
-},{}],40:[function(require,module,exports){
+},{}],41:[function(require,module,exports){
 /**
 	The missing SVG.toDataURL library for your SVG elements.
 
@@ -7333,7 +7689,7 @@ SVGElement.prototype.toDataURL = function(type, options) {
 	}
 }
 
-},{}],39:[function(require,module,exports){
+},{}],40:[function(require,module,exports){
 /**
  * A class to parse color values
  * @author Stoyan Stefanov <sstoo@gmail.com>
@@ -7623,7 +7979,7 @@ function RGBColor(color_string)
 }
 
 
-},{}],37:[function(require,module,exports){
+},{}],38:[function(require,module,exports){
 /*
 
 StackBlur - a fast almost Gaussian Blur For Canvas
@@ -8235,4 +8591,4 @@ function BlurStack()
 	this.a = 0;
 	this.next = null;
 }
-},{}]},{},[135]);
+},{}]},{},[151]);

@@ -136,6 +136,25 @@ exports.wrapNumberValidatorsForLevelBuilder = function () {
   };
 };
 
+exports.randomNumber = function (min, max) {
+  if (typeof max === 'undefined') {
+    // If only one parameter is specified, use it as the max with zero as min:
+    max = min;
+    min = 0;
+  }
+  // Use double-tilde to ensure we are dealing with integers:
+  return Math.floor(Math.random() * (~~max - ~~min + 1)) + ~~min;
+};
+
+exports.dropletGlobalConfigBlocks = [
+  {'func': 'randomNumber', 'parent': exports, 'category': 'Math', 'type': 'value' },
+  {'func': 'round', 'parent': Math, 'category': 'Math', 'type': 'value' },
+  {'func': 'abs', 'parent': Math, 'category': 'Math', 'type': 'value' },
+  {'func': 'max', 'parent': Math, 'category': 'Math', 'type': 'value' },
+  {'func': 'min', 'parent': Math, 'category': 'Math', 'type': 'value' },
+  {'func': 'prompt', 'parent': window, 'category': 'Variables', 'type': 'value' },
+];
+
 function mergeFunctionsWithConfig(codeFunctions, dropletConfig) {
   var merged = [];
 
@@ -161,20 +180,23 @@ function mergeFunctionsWithConfig(codeFunctions, dropletConfig) {
   return merged;
 }
 
+function selectFunctionsOrFullConfig(codeFunctions, dropletConfig) {
+  if (codeFunctions instanceof Array) {
+    // codeFunctions is in an array, use those exactly:
+    return codeFunctions;
+  } else if (dropletConfig && dropletConfig.blocks) {
+    // use dropletConfig.blocks in its entirety (including all functions, even
+    // those not in this level's palette)
+    return dropletConfig.blocks;
+  }
+}
+
 /**
  * Generate code aliases in Javascript based on some level data.
  */
 exports.generateCodeAliases = function (codeFunctions, dropletConfig, parentObjName) {
   var code = '';
-  var aliasFunctions;
-  if (codeFunctions instanceof Array) {
-    // codeFunctions is in an array, use those exactly:
-    aliasFunctions = codeFunctions;
-  } else if (dropletConfig && dropletConfig.blocks) {
-    // use dropletConfig.blocks in its entirety (creating aliases for all
-    // functions available in this app, even those not in this level's palette)
-    aliasFunctions = dropletConfig.blocks;
-  }
+  var aliasFunctions = selectFunctionsOrFullConfig(codeFunctions, dropletConfig);
 
   // Insert aliases from aliasFunctions into code
   for (var i = 0; i < aliasFunctions.length; i++) {
@@ -234,8 +256,11 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
           block: '__ / __',
           title: 'Divide two numbers'
         }, {
-          block: '__ === __',
-          title: 'Compare two numbers'
+          block: '__ == __',
+          title: 'Test for equality'
+        }, {
+          block: '__ != __',
+          title: 'Test for inequality'
         }, {
           block: '__ > __',
           title: 'Compare two numbers'
@@ -243,8 +268,17 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
           block: '__ < __',
           title: 'Compare two numbers'
         }, {
-          block: 'random()',
-          title: 'Get a random number between 0 and 1'
+          block: '__ && __',
+          title: 'Logical AND of two booleans'
+        }, {
+          block: '__ || __',
+          title: 'Logical OR of two booleans'
+        }, {
+          block: 'randomNumber(__)',
+          title: 'Get a random number between 0 and the specified maximum value'
+        }, {
+          block: 'randomNumber(__, __)',
+          title: 'Get a random number between the specified minimum and maximum values'
         }, {
           block: 'round(__)',
           title: 'Round to the nearest integer'
@@ -272,6 +306,9 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
         }, {
           block: 'var x = [1, 2, 3, 4];',
           title: 'Create a variable and initialize it as an array'
+        }, {
+          block: 'var x = prompt("Enter a value");',
+          title: 'Create a variable and assign it a value by displaying a prompt'
         }
       ]
     }, {
@@ -350,21 +387,27 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
   return addedPalette;
 };
 
+function populateCompleterApisFromConfigBlocks(apis, configBlocks) {
+  for (var i = 0; i < configBlocks.length; i++) {
+    var cf = configBlocks[i];
+    apis.push({
+      name: 'api',
+      value: cf.func,
+      meta: cf.category || 'Actions'
+    });
+  }
+}
+
 /**
  * Generate an Ace editor completer for a set of APIs based on some level data.
  */
 exports.generateAceApiCompleter = function (codeFunctions, dropletConfig) {
   var apis = [];
 
-  var mergedFunctions = mergeFunctionsWithConfig(codeFunctions, dropletConfig);
-  for (var i = 0; i < mergedFunctions.length; i++) {
-    var cf = mergedFunctions[i];
-    apis.push({
-      name: 'api',
-      value: cf.func,
-      meta: cf.category
-    });
-  }
+  populateCompleterApisFromConfigBlocks(apis, exports.dropletGlobalConfigBlocks);
+
+  var configBlocks = selectFunctionsOrFullConfig(codeFunctions, dropletConfig);
+  populateCompleterApisFromConfigBlocks(apis, configBlocks);
 
   return {
     getCompletions: function(editor, session, pos, prefix, callback) {
@@ -377,13 +420,27 @@ exports.generateAceApiCompleter = function (codeFunctions, dropletConfig) {
   };
 };
 
+function populateModeOptionsFromConfigBlocks(modeOptions, configBlocks) {
+  for (var i = 0; i < configBlocks.length; i++) {
+    if (configBlocks[i].type === 'value') {
+      modeOptions.valueFunctions.push(configBlocks[i].func);
+    }
+    else if (configBlocks[i].type === 'either') {
+      modeOptions.eitherFunctions.push(configBlocks[i].func);
+    }
+    else if (configBlocks[i].type !== 'hidden') {
+      modeOptions.blockFunctions.push(configBlocks[i].func);
+    }
+  }
+}
+
 /**
  * Generate modeOptions for the droplet editor based on some level data.
  */
 exports.generateDropletModeOptions = function (codeFunctions, dropletConfig) {
   var modeOptions = {
     blockFunctions: [],
-    valueFunctions: ['random', 'round', 'abs', 'max', 'min'],
+    valueFunctions: [],
     eitherFunctions: [],
   };
 
@@ -396,18 +453,27 @@ exports.generateDropletModeOptions = function (codeFunctions, dropletConfig) {
   EITHER_FUNCTIONS = ['button', 'read', 'readstr', 'readnum', 'table', 'append', 'finish', 'loadscript'];
 */
 
-  var mergedFunctions = mergeFunctionsWithConfig(codeFunctions, dropletConfig);
-  for (var i = 0; i < mergedFunctions.length; i++) {
-    if (mergedFunctions[i].type === 'value') {
-      modeOptions.valueFunctions.push(mergedFunctions[i].func);
-    }
-    else if (mergedFunctions[i].type === 'either') {
-      modeOptions.eitherFunctions.push(mergedFunctions[i].func);
-    }
-    else if (mergedFunctions[i].type !== 'hidden') {
-      modeOptions.blockFunctions.push(mergedFunctions[i].func);
-    }
-  }
+  populateModeOptionsFromConfigBlocks(modeOptions, exports.dropletGlobalConfigBlocks);
+
+  var configBlocks = selectFunctionsOrFullConfig(codeFunctions, dropletConfig);
+  populateModeOptionsFromConfigBlocks(modeOptions, configBlocks);
 
   return modeOptions;
+};
+
+/**
+ * Generate a random identifier in a format matching the RFC-4122 specification.
+ *
+ * Taken from
+ * {@link http://byronsalau.com/blog/how-to-create-a-guid-uuid-in-javascript/}
+ *
+ * @see RFC-4122 standard {@link http://www.ietf.org/rfc/rfc4122.txt}
+ *
+ * @returns {string} RFC4122-compliant UUID
+ */
+exports.createUuid = function () {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+    var r = Math.random()*16|0, v = c === 'x' ? r : (r&0x3|0x8);
+    return v.toString(16);
+  });
 };

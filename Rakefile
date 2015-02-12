@@ -148,7 +148,7 @@ namespace :build do
 
       if CDO.daemon && !rack_env?(:development)
         HipChat.log 'Analyzing <b>pegasus</b> hour-of-code activity...'
-        RakeUtils.system 'sites.v3/code.org/bin/analyze_hoc_activity'
+        RakeUtils.system deploy_dir('bin', 'analyze_hoc_activity')
       end
 
       HipChat.log 'Starting <b>pegasus</b>.'

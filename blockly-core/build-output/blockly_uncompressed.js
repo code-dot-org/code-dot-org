@@ -23658,7 +23658,7 @@ goog.provide("Blockly.inject");
 goog.require("Blockly.Css");
 goog.require("Blockly.BlockSpaceEditor");
 goog.require("goog.dom");
-Blockly.inject = function(container, opt_options) {
+Blockly.inject = function(container, opt_options, opt_audioPlayer) {
   if(!goog.dom.contains(document, container)) {
     throw"Error: container is not in current document.";
   }
@@ -23667,7 +23667,10 @@ Blockly.inject = function(container, opt_options) {
   }
   goog.ui.Component.setDefaultRightToLeft(Blockly.RTL);
   Blockly.Css.inject();
-  Blockly.initUISounds_();
+  if(opt_audioPlayer) {
+    Blockly.audioPlayer = opt_audioPlayer;
+    Blockly.registerUISounds_(Blockly.audioPlayer)
+  }
   Blockly.mainBlockSpaceEditor = new Blockly.BlockSpaceEditor(container);
   Blockly.mainBlockSpace = Blockly.mainBlockSpaceEditor.blockSpace;
   if(Blockly.useModalFunctionEditor) {
@@ -23729,9 +23732,9 @@ Blockly.parseOptions_ = function(options) {
   }, hasCategories:hasCategories, hasScrollbars:hasScrollbars, hasTrashcan:hasTrashcan, varsInGlobals:options["varsInGlobals"] || false, generateFunctionPassBlocks:options["generateFunctionPassBlocks"] || false, languageTree:tree, disableParamEditing:options["disableParamEditing"] || false, disableVariableEditing:options["disableVariableEditing"] || false, useModalFunctionEditor:options["useModalFunctionEditor"] || false, useContractEditor:options["useContractEditor"] || false, defaultNumExampleBlocks:options["defaultNumExampleBlocks"] || 
   2, grayOutUndeletableBlocks:grayOutUndeletableBlocks, editBlocks:options["editBlocks"] || false}
 };
-Blockly.initUISounds_ = function() {
-  Blockly.loadAudio_([Blockly.assetUrl("media/click.mp3"), Blockly.assetUrl("media/click.wav"), Blockly.assetUrl("media/click.ogg")], "click");
-  Blockly.loadAudio_([Blockly.assetUrl("media/delete.mp3"), Blockly.assetUrl("media/delete.ogg"), Blockly.assetUrl("media/delete.wav")], "delete")
+Blockly.registerUISounds_ = function(audioPlayer) {
+  audioPlayer.register({id:"click", mp3:Blockly.assetUrl("media/click.mp3"), wav:Blockly.assetUrl("media/click.wav"), ogg:Blockly.assetUrl("media/click.ogg")});
+  audioPlayer.register({id:"delete", mp3:Blockly.assetUrl("media/delete.mp3"), wav:Blockly.assetUrl("media/delete.wav"), ogg:Blockly.assetUrl("media/delete.ogg")})
 };
 goog.provide("Blockly.WidgetDiv");
 goog.require("Blockly.Css");
@@ -24019,11 +24022,6 @@ Blockly.OPPOSITE_TYPE[Blockly.NEXT_STATEMENT] = Blockly.PREVIOUS_STATEMENT;
 Blockly.OPPOSITE_TYPE[Blockly.PREVIOUS_STATEMENT] = Blockly.NEXT_STATEMENT;
 Blockly.OPPOSITE_TYPE[Blockly.FUNCTIONAL_INPUT] = Blockly.FUNCTIONAL_OUTPUT;
 Blockly.OPPOSITE_TYPE[Blockly.FUNCTIONAL_OUTPUT] = Blockly.FUNCTIONAL_INPUT;
-Blockly.SOUNDS_ = {};
-window.AudioContext = window.AudioContext || window.webkitAudioContext;
-if(window.AudioContext) {
-  Blockly.CONTEXT = new AudioContext
-}
 Blockly.selected = null;
 Blockly.readOnly = false;
 Blockly.highlightedConnection_ = null;
@@ -24036,102 +24034,9 @@ Blockly.COLLAPSE_CHARS = 30;
 Blockly.mainBlockSpace = null;
 Blockly.mainBlockSpaceEditor = null;
 Blockly.clipboard_ = null;
-Blockly.onSoundLoad_ = function(request, name) {
-  var onload = function() {
-    Blockly.CONTEXT.decodeAudioData(request.response, function(buffer) {
-      Blockly.SOUNDS_[name] = Blockly.createSoundFromBuffer_({buffer:buffer})
-    })
-  };
-  return onload
-};
-Blockly.createSoundFromBuffer_ = function(options) {
-  var source = Blockly.CONTEXT.createBufferSource();
-  source.buffer = options.buffer;
-  source.loop = options.loop;
-  var gainNode;
-  if(Blockly.CONTEXT.createGain) {
-    gainNode = Blockly.CONTEXT.createGain()
-  }else {
-    if(Blockly.CONTEXT.createGainNode) {
-      gainNode = Blockly.CONTEXT.createGainNode()
-    }else {
-      return null
-    }
-  }
-  source.connect(gainNode);
-  gainNode.connect(Blockly.CONTEXT.destination);
-  gainNode.gain.value = options.volume || 1;
-  return source
-};
-Blockly.loadWebAudio_ = function(filename, name) {
-  var request = new XMLHttpRequest;
-  request.open("GET", filename, true);
-  request.responseType = "arraybuffer";
-  request.onload = Blockly.onSoundLoad_(request, name);
-  request.send()
-};
-Blockly.loadAudio_ = function(filenames, name) {
-  if(window.Audio && filenames.length) {
-    var audioTest = new window.Audio;
-    for(var i = 0, filename;filename = filenames[i];i++) {
-      var ext = filename.match(/\.(\w+)(\?.*)?$/);
-      if(ext && audioTest.canPlayType("audio/" + ext[1])) {
-        break
-      }
-    }
-    if(filename) {
-      if(window.AudioContext) {
-        Blockly.loadWebAudio_(filename, name)
-      }else {
-        var sound = new window.Audio(filename);
-        if(sound && sound.play) {
-          if(!goog.userAgent.isDocumentMode(9)) {
-            sound.play();
-            sound.pause()
-          }
-          Blockly.SOUNDS_[name] = sound
-        }
-      }
-    }
-  }
-};
-Blockly.playAudio = function(name, options) {
-  var sound = Blockly.SOUNDS_[name];
-  var options = options || {};
-  if(sound) {
-    if(window.AudioContext) {
-      options.buffer = sound.buffer;
-      var newSound = Blockly.createSoundFromBuffer_(options);
-      newSound.start ? newSound.start(0) : newSound.noteOn(0);
-      Blockly.SOUNDS_[name] = newSound
-    }else {
-      if(!goog.userAgent.MOBILE) {
-        sound.volume = options.volume !== undefined ? options.volume : 1;
-        sound.loop = options.loop;
-        sound.play()
-      }
-    }
-  }
-};
-Blockly.stopLoopingAudio = function(name) {
-  var sound = Blockly.SOUNDS_[name];
-  try {
-    if(sound) {
-      if(sound.stop) {
-        sound.stop(0)
-      }else {
-        if(sound.noteOff) {
-          sound.noteOff(0)
-        }else {
-          sound.pause()
-        }
-      }
-    }
-  }catch(e) {
-    if(e.name === "InvalidStateError") {
-    }else {
-      throw e;
-    }
+Blockly.playAudio = function(name) {
+  if(Blockly.audioPlayer) {
+    Blockly.audioPlayer.play(name)
   }
 };
 Blockly.removeAllRanges = function() {
