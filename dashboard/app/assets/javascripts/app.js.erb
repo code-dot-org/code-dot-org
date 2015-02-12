@@ -139,6 +139,9 @@
         url = window.location.pathname;
 
       var headerStore = new HeaderStore();
+      window.headerBar = new HeaderBar( $('.header-wrapper'), {
+        headerStore: headerStore
+      });
 
       // Special handling for #blocklyApp, which could be on any route.
       el = $('#blocklyApp');
@@ -155,16 +158,11 @@
         });
       }
 
-
       // s/:script_id/level/:level_id
       // (only applies to the default scripts ID < 8)
       re = /\/s\/(\d+)\/(level|puzzle)\/(\d+)$/i;
       parts = url.match(re);
       if (parts) {
-        window.headerProgress = new HeaderProgress( $('.header-wrapper'), {
-          headerStore: headerStore
-        });
-
         headerStore.load({
           script_id: parts[1],
           level_id: parts[3]
@@ -188,10 +186,6 @@
 
         var app = apps[parts[1]];
         if (app) {
-          window.headerProgress = new HeaderProgress( $('.header-wrapper'), {
-            headerStore: headerStore
-          });
-
           headerStore.load({
             script_name: app,
             level_id: parts[2]
@@ -205,10 +199,6 @@
       re = /\/s\/(.+)\/stage\/(\d+)\/puzzle\/(\d+)$/i;
       parts = url.match(re);
       if (parts) {
-        window.headerProgress = new HeaderProgress( $('.header-wrapper'), {
-          headerStore: headerStore
-        });
-
         headerStore.load({
           script_name: parts[1],
           stage_id: parts[2],

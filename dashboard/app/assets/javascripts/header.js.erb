@@ -73,20 +73,20 @@
 
 
 
-  // class HeaderProgress extends UIComponent
-  HeaderProgress = (function(_super) {
-    __extends(HeaderProgress, _super);
+  // class HeaderBar extends UIComponent
+  HeaderBar = (function(_super) {
+    __extends(HeaderBar, _super);
 
     // Must have a constructor
-    function HeaderProgress($el, props) {
-      HeaderProgress.__super__.constructor.apply(this, arguments);
+    function HeaderBar($el, props) {
+      HeaderBar.__super__.constructor.apply(this, arguments);
 
       this.onModalClick = __bind(this.onModalClick, this);
 
       return this;
     }
 
-    HeaderProgress.prototype.componentDidMount = function() {
+    HeaderBar.prototype.componentDidMount = function() {
       var _this = this;
 
       // TODO: Is this the right place to put this?
@@ -116,7 +116,7 @@
     }
 
 
-    HeaderProgress.prototype.render = function() {
+    HeaderBar.prototype.render = function() {
       var cl, el;
       var _this = this;
       var state = this.state || {};
@@ -126,7 +126,21 @@
       var level = state.level || {};
       var progress = state.progress || {};
 
-      // Don't render unless we are initialized with a script
+      // The user signin button is rendered by client code if it wasn't sent by the server
+      // Offline mode shouldn't show it.
+      var $right = this.$el.find('.header_right');
+      if (!$right.find('.header_user').length) {
+        $right.append(
+          $('<div>').addClass('header_user').append(
+            $('<a>', {
+              href: '/users/sign_in',
+              id: 'signin_button'
+            }).addClass('button-signin').text('<%= I18n.t("nav.user.signin") %>')
+          )
+        );
+      }
+
+      // Don't render the progress buttons unless we are initialized with a script
       if (!script)
         return;
 
@@ -237,23 +251,9 @@
       } else {
         $(document).off('click', this.onModalClick);
       }
-
-      // The user signin button is rendered by client code if it wasn't sent by the server
-      // Offline mode shouldn't show it.
-      var $right = this.$el.find('.header_right');
-      if (!$right.find('.header_user').length) {
-        $right.append(
-          $('<div>').addClass('header_user').append(
-            $('<a>', {
-              href: '/users/sign_in',
-              id: 'signin_button'
-            }).addClass('button-signin').text('<%= I18n.t("nav.user.signin") %>')
-          )
-        );
-      }
     }
 
-    HeaderProgress.prototype.componentDidUpdate = function() {
+    HeaderBar.prototype.componentDidUpdate = function() {
       // This is totally cheating by React rules.  But it's intentional: we don't want to force another
       // update so we just edit the state directly.  (React would notice that the change had no DOM effect,
       // but we don't have that optimization.)
@@ -266,7 +266,7 @@
     }
 
     // Three possible arguments: true, false, or "trophies" (the last one autoscrolls the page to the bottom of the popup)
-    HeaderProgress.prototype.showPopup = function(show) {
+    HeaderBar.prototype.showPopup = function(show) {
       this.setState({
         popped: !!show,
         jumpToTrophies: show == 'trophies'
@@ -284,7 +284,7 @@
       }
     }
 
-    HeaderProgress.prototype.onClick = function(ev) {
+    HeaderBar.prototype.onClick = function(ev) {
       var el;
 
       // Toggle more/less button
@@ -311,7 +311,7 @@
       }
     }
 
-    HeaderProgress.prototype.onModalClick = function(ev) {
+    HeaderBar.prototype.onModalClick = function(ev) {
       var el;
 
       // Clicks outside the popup close it
@@ -322,13 +322,13 @@
       }
     }
 
-    return HeaderProgress;
+    return HeaderBar;
   })(UIComponent);
 
 
   // For now, create a global.  Later, this should be in module.exports
   // (Note these are already global since they're not declared via 'var'.
-  window.HeaderProgress = HeaderProgress;
+  window.HeaderBar = HeaderBar;
   window.HeaderStore = HeaderStore;
 
 }).call(this);
