@@ -1754,7 +1754,7 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.functional_start_setFuncs = function() {
     // For each of our inputs (i.e. update-target, update-danger, etc.) get
     // the attached block and figure out what it's function name is. Store
-    // that on bigGameInfo so we can know what functions to call later.
+    // that on BigGameLogic so we can know what functions to call later.
     this.inputList.forEach(function (input) {
       if (input.type !== Blockly.FUNCTIONAL_INPUT) {
         return;
@@ -1767,7 +1767,7 @@ exports.install = function(blockly, blockInstallOptions) {
       var functionName = Blockly.JavaScript.variableDB_.getName(inputBlockName,
         Blockly.Procedures.NAME_TYPE);
 
-      Studio.customGame.functionNames[input.name] = functionName;
+      Studio.customLogic.functionNames[input.name] = functionName;
     }, this);
   };
 

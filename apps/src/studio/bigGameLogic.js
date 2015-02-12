@@ -1,6 +1,25 @@
 var Direction = require('./constants').Direction;
 
-var BigGameInfo = function (studio) {
+/**
+ * Interface for a set of custom game logic for playlab
+ * @param {Studio} studio Reference to global studio object
+ * @interface CustomGameLogic
+ */
+function CustomGameLogic(studio) {}
+
+/**
+ * Logic to be run once per playlab tick
+ *
+ * @function
+ * @name CustomGameLogic#onTick
+ */
+
+/**
+ * Custom logic for the MSM BigGame
+ * @constructor
+ * @implements CustomGameLogic
+ */
+var BigGameLogic = function (studio) {
   this.studio_ = studio;
   this.functionNames = {};
 
@@ -9,7 +28,7 @@ var BigGameInfo = function (studio) {
   this.dangerSpriteIndex = 2;
 };
 
-BigGameInfo.prototype.onTick = function () {
+BigGameLogic.prototype.onTick = function () {
    // Don't start until the title is over
   var titleScreenTitle = document.getElementById('titleScreenTitle');
   if (this.studio_.tickCount <= 1 ||
@@ -48,7 +67,7 @@ BigGameInfo.prototype.onTick = function () {
  * Update a sprite's x coordinates using the user updateFunction. If
  * sprite goes of screen, we reset to the other side of the screen.
  */
-BigGameInfo.prototype.updateSpriteX_ = function (spriteIndex, updateFunction) {
+BigGameLogic.prototype.updateSpriteX_ = function (spriteIndex, updateFunction) {
   var sprite = this.studio_.sprite[spriteIndex];
   // sprite.x is the left. get the center
   var centerX = sprite.x + sprite.width / 2;
@@ -72,7 +91,7 @@ BigGameInfo.prototype.updateSpriteX_ = function (spriteIndex, updateFunction) {
 /**
  * Update the player sprite, using the user provided function.
  */
-BigGameInfo.prototype.updatePlayer_ = function (key) {
+BigGameLogic.prototype.updatePlayer_ = function (key) {
   var playerSprite = this.studio_.sprite[this.playerSpriteIndex];
 
   // invert Y
@@ -89,7 +108,7 @@ BigGameInfo.prototype.updatePlayer_ = function (key) {
  * @param {number} x Current x location of target
  * @returns {number} New x location of target
  */
-BigGameInfo.prototype.update_target = function (x) {
+BigGameLogic.prototype.update_target = function (x) {
   return this.getPassedFunction_('update-target')(x);
 };
 
@@ -98,7 +117,7 @@ BigGameInfo.prototype.update_target = function (x) {
  * @param {number} x Current x location of the danger sprite
  * @returns {number} New x location of the danger target
  */
-BigGameInfo.prototype.update_danger = function (x) {
+BigGameLogic.prototype.update_danger = function (x) {
   return this.getPassedFunction_('update-danger')(x);
 };
 
@@ -108,7 +127,7 @@ BigGameInfo.prototype.update_danger = function (x) {
  * @param {number} y Current y location of player. (is this in an inverted coordinate space?)
  * @returns {number} New y location of the player
  */
-BigGameInfo.prototype.update_player = function (key, y) {
+BigGameLogic.prototype.update_player = function (key, y) {
   return this.getPassedFunction_('update-player')(key, y);
 };
 
@@ -117,7 +136,7 @@ BigGameInfo.prototype.update_player = function (key, y) {
  * @param {number} x An x location
  * @returns {boolean} True if x location is onscreen?
  */
-BigGameInfo.prototype.onscreen = function (x) {
+BigGameLogic.prototype.onscreen = function (x) {
   return this.getPassedFunction_('on-screen?')(x);
 };
 
@@ -129,14 +148,14 @@ BigGameInfo.prototype.onscreen = function (x) {
  * @param {number} cy Collider's y location
  * @returns {boolean} True if objects collide
  */
-BigGameInfo.prototype.collide = function (px, py, cx, cy) {
+BigGameLogic.prototype.collide = function (px, py, cx, cy) {
   return this.getPassedFunction_('collide?')(px, py, cx, cy);
 };
 
 /**
  * @returns the user function that was passed in
  */
-BigGameInfo.prototype.getPassedFunction_ = function (name) {
+BigGameLogic.prototype.getPassedFunction_ = function (name) {
   var userFunctionName = this.functionNames[name];
   if (!userFunctionName) {
     return function () {}; // noop
@@ -150,4 +169,4 @@ BigGameInfo.prototype.getPassedFunction_ = function (name) {
   return userFunction;
 };
 
-module.exports = BigGameInfo;
+module.exports = BigGameLogic;
