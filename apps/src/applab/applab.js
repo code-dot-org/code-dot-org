@@ -2132,6 +2132,20 @@ Applab.handleDeleteRecord = function(successCallback) {
   }
 };
 
+Applab.getUserId = function (opts) {
+  var onSuccess = Applab.handleGetUserId.bind(this, opts.onSuccess);
+  var onError = Applab.handleError.bind(this, opts.onError);
+  AppStorage.getUserId(onSuccess, onError);
+};
+
+Applab.handleGetUserId = function(successCallback, userId) {
+  if (successCallback) {
+    Applab.eventQueue.push({
+      'fn': successCallback,
+      'arguments': [userId]
+    });
+  }
+};
 
 /*
 var onWaitComplete = function (opts) {

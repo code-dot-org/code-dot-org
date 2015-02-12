@@ -270,4 +270,22 @@ class AppsApi < Sinatra::Base
     call(env.merge('REQUEST_METHOD'=>'POST'))
   end
 
+  #
+  #
+  # USER
+  #
+  #
+  
+  #
+  # GET /v3/apps/<app-id>/user-id
+  #
+  # Returns a consistent, unique id for this user of this app.
+  #
+  get %r{/v3/apps/([^/]+)/user-id$} do |app_id|
+    dont_cache
+    content_type :json
+    app_id = storage_decrypt_app_id(app_id).last
+    storage_encrypt_app_user_id(app_id, storage_id('user')).to_json
+  end
+
 end
