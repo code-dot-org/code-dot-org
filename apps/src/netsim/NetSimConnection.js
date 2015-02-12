@@ -36,20 +36,10 @@ var NetSimLogger = require('./NetSimLogger');
 var NetSimClientNode = require('./NetSimClientNode');
 var NetSimRouterNode = require('./NetSimRouterNode');
 var NetSimLocalClientNode = require('./NetSimLocalClientNode');
-var NetSimWire = require('./NetSimWire');
 var ObservableEvent = require('./ObservableEvent');
-var periodicAction = require('./periodicAction');
 var NetSimShard = require('./NetSimShard');
 
 var logger = new NetSimLogger(NetSimLogger.LogLevel.VERBOSE);
-
-/**
- * How often the client should run its clean-up job, removing expired rows
- * from the shard tables
- * @type {number}
- * @const
- */
-var CLEAN_UP_INTERVAL_MS = 10000;
 
 /**
  * A connection to a NetSim shard
@@ -116,14 +106,6 @@ var NetSimConnection = function (sentLog, receivedLog) {
    */
   this.statusChanges = new ObservableEvent();
 
-  /**
-   * Helper for performing shard clean-up on a regular interval
-   * @type {periodicAction}
-   * @private
-   */
-  this.periodicCleanUp_ = periodicAction(this.cleanLobby_.bind(this),
-      CLEAN_UP_INTERVAL_MS);
-
   // Bind to onBeforeUnload event to attempt graceful disconnect
   window.addEventListener('beforeunload', this.onBeforeUnload_.bind(this));
 };
@@ -134,9 +116,6 @@ module.exports = NetSimConnection;
  * @param {RunLoop} runLoop
  */
 NetSimConnection.prototype.attachToRunLoop = function (runLoop) {
-  this.periodicCleanUp_.attachToRunLoop(runLoop);
-  this.periodicCleanUp_.enable();
-
   runLoop.tick.register(this.tick.bind(this));
 };
 
@@ -273,41 +252,6 @@ NetSimConnection.prototype.getAllNodes = function (callback) {
     });
 
     callback(nodes);
-  });
-};
-
-/**
- * Triggers a sweep of the lobby table that removes timed-out client rows.
- * @private
- */
-NetSimConnection.prototype.cleanLobby_ = function () {
-  if (!this.shard_) {
-    return;
-  }
-
-  var self = this;
-
-  // Cleaning the lobby of old users and routers
-  this.getAllNodes(function (nodes) {
-    nodes.forEach(function (node) {
-     if (node.isExpired()) {
-       node.destroy();
-     }
-    });
-  });
-
-  // Cleaning wires
-  // TODO (bbuchanan): Extract method to get all wires.
-  this.shard_.wireTable.readAll(function (rows) {
-    if (rows) {
-      rows.map(function (row) {
-        return new NetSimWire(self.shard_, row);
-      }).forEach(function (wire) {
-        if (wire.isExpired()) {
-          wire.destroy();
-        }
-      });
-    }
   });
 };
 

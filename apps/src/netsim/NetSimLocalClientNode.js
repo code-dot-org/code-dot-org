@@ -14,14 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-/**
- * @fileoverview Client model of node being simulated on the local client.
- *
- * Provides special access for manipulating the locally-owned client node in
- * ways that you aren't allowed to manipulate other client nodes.
- */
-
 /* jshint
  funcscope: true,
  newcap: true,
@@ -43,6 +35,11 @@ var NetSimLogger = require('./NetSimLogger');
 var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
 
 /**
+ * Client model of node being simulated on the local client.
+ *
+ * Provides special access for manipulating the locally-owned client node in
+ * ways that you aren't allowed to manipulate other client nodes.
+ *
  * @param {!NetSimShard} shard
  * @param {Object} [clientRow] - Lobby row for this router.
  * @constructor
@@ -118,19 +115,12 @@ NetSimLocalClientNode.prototype.setLogs = function (sentLog, receivedLog) {
 };
 
 /**
- * Our client tick can also tick its connected wire and its remote client.
+ * Our own client must send a regular heartbeat to broadcast its presence on
+ * the shard.
  * @param {!RunLoop.Clock} clock
  */
-NetSimLocalClientNode.prototype.tick = function (clock) {
-  superClass.prototype.tick.call(this, clock);
-
-  if (this.myWire) {
-    this.myWire.tick(clock);
-  }
-
-  if (this.myRouter) {
-    this.myRouter.tick(clock);
-  }
+NetSimLocalClientNode.prototype.tick = function (/*clock*/) {
+  // TODO
 };
 
 /**

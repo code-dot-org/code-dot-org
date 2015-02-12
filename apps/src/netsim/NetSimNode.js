@@ -14,15 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-/**
- * @fileoverview Client model of simulated network entity, which lives
- * in a shard table.
- *
- * Wraps the entity row with helper methods for examining and maintaining
- * the entity state in shared storage.
- */
-
 /* jshint
  funcscope: true,
  newcap: true,
@@ -41,17 +32,20 @@ var superClass = require('./NetSimEntity');
 var NetSimWire = require('./NetSimWire');
 
 /**
+ * Client model of simulated network entity, which lives
+ * in a shard table.
+ *
+ * Wraps the entity row with helper methods for examining and maintaining
+ * the entity state in shared storage.
+ *
  * @param {!NetSimShard} shard
  * @param {Object} [nodeRow] JSON row from table.
  * @constructor
  * @augments NetSimEntity
  */
 var NetSimNode = function (shard, nodeRow) {
+  nodeRow = nodeRow !== undefined ? nodeRow : {};
   superClass.call(this, shard, nodeRow);
-
-  if (nodeRow === undefined) {
-    nodeRow = {};
-  }
 
   /**
    * @type {string}
@@ -87,8 +81,8 @@ NetSimNode.prototype.getTable_= function () {
 /** Build table row for this node */
 NetSimNode.prototype.buildRow_ = function () {
   return $.extend(superClass.prototype.buildRow_.call(this), {
-    name: this.getDisplayName(),
     type: this.getNodeType(),
+    name: this.getDisplayName(),
     status: this.getStatus(),
     statusDetail: this.getStatusDetail()
   });
