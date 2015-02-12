@@ -1695,7 +1695,12 @@ function spriteFrameNumber (index, opts) {
     }
   }
 
-  if ((sprite.frameCounts.turns === 7 || sprite.frameCounts.turns === 8) && sprite.displayDir !== Direction.SOUTH) {
+  if ((sprite.frameCounts.turns === 8) && sprite.displayDir !== Direction.SOUTH) {
+    // turn frames start after normal and animation frames
+    return sprite.frameCounts.normal + sprite.frameCounts.animation + 1 +
+      frameDirTable[sprite.displayDir];
+  }
+  if ((sprite.frameCounts.turns === 7) && sprite.displayDir !== Direction.SOUTH) {
     // turn frames start after normal and animation frames
     return sprite.frameCounts.normal + sprite.frameCounts.animation +
       frameDirTable[sprite.displayDir];
@@ -1757,7 +1762,7 @@ Studio.displaySprite = function(i, isWalking) {
   var spriteRegularIcon = document.getElementById('sprite' + i);
   var spriteWalkIcon = document.getElementById('spriteWalk' + i);
 
-  var spriteIcon, spriteClipRect;
+  var spriteIcon, spriteClipRect, unusedSpriteClipRect;
   var xOffset, yOffset;
 
   if (skin[sprite.value].walk && isWalking) {
@@ -1770,6 +1775,7 @@ Studio.displaySprite = function(i, isWalking) {
 
     spriteIcon = spriteWalkIcon;
     spriteClipRect = document.getElementById('spriteWalkClipRect' + i);
+    unusedSpriteClipRect = document.getElementById('spriteClipRect' + i);
 
   } else {
     // Show regular sprite, and hide walk sprite.
@@ -1781,6 +1787,7 @@ Studio.displaySprite = function(i, isWalking) {
 
     spriteIcon = spriteRegularIcon;
     spriteClipRect = document.getElementById('spriteClipRect' + i);
+    unusedSpriteClipRect = document.getElementById('spriteWalkClipRect' + i);
   }
 
   var xCoordPrev = spriteClipRect.getAttribute('x');
@@ -1818,6 +1825,12 @@ Studio.displaySprite = function(i, isWalking) {
 
   spriteClipRect.setAttribute('x', sprite.x);
   spriteClipRect.setAttribute('y', sprite.y);
+
+  // Update the other clip rect too, so that calculations involving
+  // inter-frame differences (just above, to calculate sprite.dir)
+  // are correct when we transition between spritesheets.
+  unusedSpriteClipRect.setAttribute('x', sprite.x);
+  unusedSpriteClipRect.setAttribute('y', sprite.y);
 
   var speechBubble = document.getElementById('speechBubble' + i);
   var speechBubblePath = document.getElementById('speechBubblePath' + i);
