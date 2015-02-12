@@ -5,6 +5,7 @@
  *
  */
 'use strict';
+/* global Studio */
 
 var studioApp = require('../StudioApp').singleton;
 var msg = require('../../locale/current/studio');
@@ -1751,10 +1752,23 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   generator.functional_start_setFuncs = function() {
-    // For the current design, this doesn't need to generate any code.
-    // Though we pass in a function, we're not actually using that passed in
-    // function, and instead depend on a function of the required name existing
-    // in the global space. This may change in the future.
+    // For each of our inputs (i.e. update-target, update-danger, etc.) get
+    // the attached block and figure out what it's function name is. Store
+    // that on BigGameLogic so we can know what functions to call later.
+    this.inputList.forEach(function (input) {
+      if (input.type !== Blockly.FUNCTIONAL_INPUT) {
+        return;
+      }
+      var inputBlock = this.getInputTargetBlock(input.name);
+      if (!inputBlock) {
+        return;
+      }
+      var inputBlockName = inputBlock.getTitleValue('NAME');
+      var functionName = Blockly.JavaScript.variableDB_.getName(inputBlockName,
+        Blockly.Procedures.NAME_TYPE);
+
+      Studio.customLogic.functionNames[input.name] = functionName;
+    }, this);
   };
 
   installFunctionalApiCallBlock(blockly, generator, {

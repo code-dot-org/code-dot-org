@@ -4,6 +4,19 @@ nav: about_nav
 ---
 
 # Job Openings at Code.org
+
+- [Head of Product/Marketing](#head-product)
+- [Head of Engineering](#head-engineering)
+- [HR Generalist](#hr-generalist)
+- [Grant Writer and Relationships Manager](#grant-writer)
+- [K-8 Program Manager](#K8-PM)
+- [High School Program Manager](#HS-PM)
+- [Regional Program Manager (Los Angeles, NYC, Ft. Lauderdale/Miami area)](#reg-PM)
+- [Advocacy Researcher](#advocacy-researcher)
+- [Data Scientist / Quantitative Data Analyst](#data-scientist)
+- [Operations/Developer](#ops-dev)
+- [Software Engineer](#engineer)
+
 ## <a name="hr-generalist" href="#hr-generalist">HR Generalist (Seattle, WA preferred)</a>
 **Job Summary:**
 
@@ -37,32 +50,6 @@ A high level of computer literacy is required; proficiency in working with Micro
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="videographer" href="#videographer">Videographer (Seattle, WA preferred)</a>
-**Job Summary:**
-
-Code.org is recruiting for a videographer who can collaborate with our education and development team to create educational and inspirational videos that teach computer science to students of all ages and diverse backgrounds. **Full-time, long-term contract (approximately 9 months).**
-Responsibilities of the position include:
-
-- Working closely with other teams at Code.org to determine the video needs for various courses (aimed at K-12 students)
-- Brainstorming and story boarding ideas for each video, tailored to it’s audience and purpose 
-- Shooting footage for videos in interview format as well as in-class activities
-- Editing footage to create video ensembles 
-- Adding animations, sounds and graphics to create high production value videos
-- Working on several different videos in parallel  
-
-**Qualifications**
-
-The ideal candidate has the following qualifications:
-
-- Bachelors degree in film, digital media, graphic design or related field
-- 4+ years work experience in producing videos either as a generalist or as an animator/graphics expert
-- Experience in all stages of video production i.e: conception and story-boarding, shooting, media management, editing, animating needed graphics, and exporting appropriate format for YouTube, however our most urgent need is for an animator/graphics expert
-- Extensive experience with Adobe products (we use these exclusively for our video production)
-- A strong sense of design and story is key, as is a can-do / self-starter attitude
-- Excellent professional references
-
-Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
 ## <a name="advocacy-researcher" href="#advocacy-researcher">Advocacy Researcher (Seattle, WA preferred)</a>    
 **Job Summary:**
 
@@ -89,7 +76,7 @@ Responsibilities of the position include:
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="k8-pm" href="#k8-pm">K-8 Program Manager (Seattle, WA preferred)</a>
+## <a name="K8-PM" href="#K8-PM">K-8 Program Manager (Seattle, WA preferred)</a>
 **Job Summary:**
 
 Code.org is looking for a K-8 Program Manager specializing in Middle School CS to support the goals of Code.org’s Education team through the development of middle school computer science curricula and a related professional development model. Responsibilities of the position include:
@@ -139,6 +126,48 @@ Interested candidates should email a resume and cover letter, outlining how your
 **Location:** Seattle is preferred, but remote work is possible.
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+## <a name="head-product" href="#head-product">Head of Product/Marketing (Seattle, WA)</a>
+**Job Summary:**
+
+Code.org is recruiting for an experienced Head of Product/Marketing who can lead the Product and Marketing teams. Full-time, salaried. Responsibilities of the position include:
+
+- Acting as central point of leadership for Code.org curriculum + technology products and services
+- Providing end-end ownership of the Code.org website and web services, including the curriculum platform used by tens of millions of students and hundreds of thousands of classrooms
+- High level ownership of Code.org marketing - celebrities, videos, social media, testimonials, and the international Hour of Code grassroots movement
+- Managing a team comprising product management, user experience, video production and marketing
+- Managing high visibility partnerships such as the one with Disney for the 2014 Hour of Code with Anna and Elsa (from Frozen)
+- Jack of all trades given the disparate types of activities Code.org engages in, and supporting all of them with marketing programs and helping identify how engineering can improve our work
+
+**Qualifications:**
+
+- Bachelor’s degree with a background in Computer Science (as a major or a minor)
+- 3+ years experience as a technical product manager, i.e. defining product, writing specs, closely managing engineering projects, hands on design
+- 3+ years experience as a manager of other PMs
+- Experience with building / managing / marketing of a Web site and/or web services
+- Experience in consumer marketing (PR, social media, advertising) desired, but not required
+
+Interested candidates should email a resume or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+## <a name="head-engineering" href="#head-engineering">Head of Engineering (Seattle, WA)</a>
+**Job Summary:**
+
+Code.org is recruiting for an experienced Head of Engineering. Full-time, salaried. Responsibilities of the position include:
+
+- Partnering with the Head of Product/Marketing to build a curriculum platform that reaches tens of millions of students and hundreds of thousands of classrooms
+- Manage the Code.org engineering team (team of 10+ software engineers)
+- Set architectural direction for how Code.org's web site, services, and tutorial platform is built
+- Hiring, career development, and mentorship of new engineers
+
+**Qualifications:**
+
+- Bachelor’s degree with a major in Computer Science
+- 10+ years as a software engineer or manager of software engineers
+- 5+ years as a manager of software engineers; past experience managing a team of at least 7 engineers
+- Full stack Web engineering experience, i.e. databases, application, front-end
+- Experienced in what it takes to scale a large back-end; scalability, analytics, particularly the modern tools of the trade
+- Mobile development experience (iOS, Android) desired but not required
+
+Interested candidates should email a resume or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## <a name="data-scientist" href="#data-scientist">Data Scientist / Quantitative Data Analyst (Seattle, WA preferred)</a>
 
@@ -266,35 +295,6 @@ Code.org is building interactive tutorials for computer science courses starting
 - Ideally: has experienced startup culture
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
-
-## <a name="k5-facilitator" href="#k5-facilitator">K-5 Computer Science Professional Development Facilitator (Part-time, contract; Seattle, WA only)</a>
-
-**Job Summary:**
-
-Code.org is looking for a part-time facilitator to host professional development workshops in Seattle, WA for K-5 educators. (For more information about our curriculum, visit http://code.org/k5.) This role is not only about leading the professional development, but also handling the logistics of each workshop. 
-
-Responsibilities of this position include:
-
-- Logistics of workshop, including posting the workshop on the Code.org website, arranging food for the workshop, and following up with participants as necessary
-- Facilitating a 7-hour workshop on a weekend (at least) once a month, including content about computer science and equity within the field 
-- Set-up/clean-up of venue the day of the workshop
-- Adapting the template agenda of the workshop as the candidate sees fit
-- Navigating Code.org system of tracking participant attendance and payment system for facilitators
-- Communicating with Code.org as needed to refill supplies we provide you for the workshops
-
-Marketing, materials, and training for workshops are provided by Code.org. 
-
-**Qualifications**
-
-The ideal candidate is an excellent communicator, exceptionally well-spoken, and an engaging educator. Must also be tech-savvy, possess the ability to multi-task, and work well independently. 
-
-The candidate should have experience leading professional development for teachers and be very comfortable with computer science at an elementary school level. Prior experience with education at the elementary school level preferred. Proficiency in working with Google Docs a must.
-
-No benefits are offered for this position.
-
-Interested candidates should email a resume and cover letter, outlining how your skills and experience meet the qualifications of the position, to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
 
 
 ## Benefits 
