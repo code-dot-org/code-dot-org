@@ -1,8 +1,7 @@
-/* global Studio */
-
 var Direction = require('./constants').Direction;
 
-var BigGameInfo = function () {
+var BigGameInfo = function (studio) {
+  this.studio_ = studio;
   this.functionNames = {};
 
   this.playerSpriteIndex = 0;
@@ -13,7 +12,7 @@ var BigGameInfo = function () {
 BigGameInfo.prototype.onTick = function () {
    // Don't start until the title is over
   var titleScreenTitle = document.getElementById('titleScreenTitle');
-  if (Studio.tickCount <= 1 ||
+  if (this.studio_.tickCount <= 1 ||
       titleScreenTitle.getAttribute('visibility') === "visible") {
     return;
   }
@@ -24,14 +23,14 @@ BigGameInfo.prototype.onTick = function () {
   this.updateSpriteX_(this.dangerSpriteIndex, this.update_danger.bind(this));
 
   // For every key and button down, call update_player
-  for (var key in Studio.keyState) {
-    if (Studio.keyState[key] === 'keydown') {
+  for (var key in this.studio_.keyState) {
+    if (this.studio_.keyState[key] === 'keydown') {
       this.updatePlayer_(key);
     }
   }
 
-  for (var btn in Studio.btnState) {
-    if (Studio.btnState[btn]) {
+  for (var btn in this.studio_.btnState) {
+    if (this.studio_.btnState[btn]) {
       if (btn === 'leftButton') {
         this.updatePlayer_(37);
       } else if (btn === 'upButton') {
@@ -50,7 +49,7 @@ BigGameInfo.prototype.onTick = function () {
  * sprite goes of screen, we reset to the other side of the screen.
  */
 BigGameInfo.prototype.updateSpriteX_ = function (spriteIndex, updateFunction) {
-  var sprite = Studio.sprite[spriteIndex];
+  var sprite = this.studio_.sprite[spriteIndex];
   // sprite.x is the left. get the center
   var centerX = sprite.x + sprite.width / 2;
 
@@ -64,9 +63,9 @@ BigGameInfo.prototype.updateSpriteX_ = function (spriteIndex, updateFunction) {
     if (sprite.dir === Direction.EAST) {
       sprite.x = 0 - sprite.width;
     } else {
-      sprite.x = Studio.MAZE_WIDTH;
+      sprite.x = this.studio_.MAZE_WIDTH;
     }
-    sprite.y = Math.floor(Math.random() * (Studio.MAZE_HEIGHT - sprite.height));
+    sprite.y = Math.floor(Math.random() * (this.studio_.MAZE_HEIGHT - sprite.height));
   }
 };
 
@@ -74,15 +73,15 @@ BigGameInfo.prototype.updateSpriteX_ = function (spriteIndex, updateFunction) {
  * Update the player sprite, using the user provided function.
  */
 BigGameInfo.prototype.updatePlayer_ = function (key) {
-  var playerSprite = Studio.sprite[this.playerSpriteIndex];
+  var playerSprite = this.studio_.sprite[this.playerSpriteIndex];
 
   // invert Y
-  var userSpaceY = Studio.MAZE_HEIGHT - playerSprite.y;
+  var userSpaceY = this.studio_.MAZE_HEIGHT - playerSprite.y;
 
   var newUserSpaceY = this.update_player(key, userSpaceY);
 
   // reinvertY
-  playerSprite.y = Studio.MAZE_HEIGHT - newUserSpaceY;
+  playerSprite.y = this.studio_.MAZE_HEIGHT - newUserSpaceY;
 };
 
 /**
@@ -143,7 +142,7 @@ BigGameInfo.prototype.getPassedFunction_ = function (name) {
     return function () {}; // noop
   }
 
-  var userFunction = Studio.Globals[userFunctionName];
+  var userFunction = this.studio_.Globals[userFunctionName];
   if (!userFunction) {
     throw new Error('Unexepcted');
   }
