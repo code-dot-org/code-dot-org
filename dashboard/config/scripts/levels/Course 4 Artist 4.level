@@ -20,7 +20,7 @@
     "impressive": "false",
     "use_contract_editor": "false",
     "embed": "false",
-    "callout_json": "[\r\n  {\"localization_key\": \"repeat_full_circle\", \"element_id\": \"#repeat_block_qtip > .blocklyEditableText\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"top center\", \"at\": \"bottom center\"}}\r\n  }\r\n]",
+    "callout_json": "[\r\n  {\"localization_key\":\"repeat_full_circle\",\"callout_text\":\"Enter in the number of times the zombie has to move to make a full circle\",\"element_id\":\"#repeat_block_qtip > .blocklyEditableText\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
     "disable_sharing": "false"
   }
 }]]></config>
