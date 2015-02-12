@@ -4,6 +4,8 @@ nav: about_nav
 ---
 
 # Job Openings at Code.org
+- [HR Generalist (Seattle, WA preferred)](#hr-generalist)
+- [Advocacy Researcher (Seattle, WA preferred)](#advocacy-researcher)
 
 ## <a name="hr-generalist" href="#hr-generalist">HR Generalist (Seattle, WA preferred)</a>
 **Job Summary:**
