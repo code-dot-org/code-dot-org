@@ -1775,19 +1775,6 @@ exports.install = function(blockly, blockInstallOptions) {
       }
 
       Studio.customLogic.cacheBlock(arg.name, inputBlock);
-      // TODO - what happens when i pass in a string
-      // if (arg.type === 'string') {
-        // if (inputBlock.type === 'functional_string') {
-        //Blockly.JavaScript.statementToCode(inputBlock, 'VAL')
-        // Studio.customLogic.variables[arg.name] =
-
-      if (arg.type === 'function') {
-        var inputBlockName = inputBlock.getTitleValue('NAME');
-        var generatedName = Blockly.JavaScript.variableDB_.getName(inputBlockName,
-          Blockly.Procedures.NAME_TYPE);
-
-        Studio.customLogic.functionNames[arg.name] = generatedName;
-      }
     }, this);
   };
 
