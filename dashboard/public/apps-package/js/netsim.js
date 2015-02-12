@@ -3987,6 +3987,8 @@ DashboardUser.prototype.whenReady = function (callback) {
 /* global JSON */
 'use strict';
 
+require('./utils');
+
 /** Namespace for app storage. */
 var appsApi = module.exports;
 
@@ -4108,8 +4110,7 @@ appsApi.SharedTable = function (app_publickey, table_name) {
   this.requestHelper_ = new ApiRequestHelper('/v3/apps/' + app_publickey +
   '/shared-tables/' + table_name);
 };
-appsApi.SharedTable.prototype = Object.create(appsApi.AppsTable.prototype);
-appsApi.SharedTable.prototype.constructor = appsApi.SharedTable;
+appsApi.SharedTable.inherits(appsApi.AppsTable);
 
 /**
  * App-specific User Storage Table
@@ -4124,8 +4125,7 @@ appsApi.UserTable = function (app_publickey, table_name) {
   this.requestHelper_ = new ApiRequestHelper('/v3/apps/' + app_publickey +
   '/user-tables/' + table_name);
 };
-appsApi.UserTable.prototype = Object.create(appsApi.AppsTable.prototype);
-appsApi.UserTable.prototype.constructor = appsApi.UserTable;
+appsApi.UserTable.inherits(appsApi.AppsTable);
 
 /**
  * API for interacting with app property bags on the server.
@@ -4168,6 +4168,5 @@ appsApi.UserPropertyBag = function (app_publickey) {
   this.requestHelper_ = new ApiRequestHelper('/v3/apps/' + app_publickey +
   '/user-properties');
 };
-appsApi.UserPropertyBag.prototype = Object.create(appsApi.PropertyBag.prototype);
-appsApi.UserPropertyBag.prototype.constructor = appsApi.UserPropertyBag;
-},{}]},{},[134]);
+appsApi.UserPropertyBag.inherits(appsApi.PropertyBag);
+},{"./utils":182}]},{},[134]);
