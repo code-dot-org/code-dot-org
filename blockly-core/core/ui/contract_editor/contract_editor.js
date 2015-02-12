@@ -136,6 +136,9 @@ Blockly.ContractEditor.prototype.create_ = function() {
     canvasToDrawOn, {
       headerText: "2. Examples", // TODO(bjordan): i18n
       placeContentCallback: goog.bind(function (currentY) {
+        if (this.exampleBlocks.length === 0) {
+          return currentY;
+        }
         var newY = currentY;
         newY += EXAMPLE_BLOCK_SECTION_MAGIN_ABOVE;
         this.exampleBlocks.forEach(function(block, i) {
@@ -397,9 +400,17 @@ Blockly.ContractEditor.prototype.createContractDom_ = function() {
   this.initializeOutputTypeDropdown_();
 };
 
+Blockly.ContractEditor.prototype.chromeBottomToContractDivDistance_ = function () {
+  return (this.isShowingHeaders_() ? HEADER_HEIGHT : 0);
+};
+
+Blockly.ContractEditor.prototype.getContractDomTopY_ = function () {
+  return this.getWindowBorderChromeHeight() +
+    this.chromeBottomToContractDivDistance_();
+};
+
 Blockly.ContractEditor.prototype.getBlockSpaceEditorToContractSectionTop_ = function () {
-  return this.getContractDivHeight() +
-    (this.isShowingHeaders_() ? HEADER_HEIGHT : 0);
+  return this.getContractDivHeight() + this.chromeBottomToContractDivDistance_();
 };
 
 Blockly.ContractEditor.prototype.getBlockSpaceEditorToScreenTop_ = function () {

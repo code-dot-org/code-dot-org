@@ -562,8 +562,8 @@ Blockly.FunctionEditor.prototype.position_ = function() {
     this.frameText_.setAttribute('x', width - 2 * FRAME_MARGIN_SIDE);
   }
 
-  // Reposition contract div
-  this.positionContractDiv_(metrics);
+  // Resize contract div width
+  this.positionSizeContractDom_();
 
   // Move the close button
   this.closeButton_.setAttribute('transform', 'translate(' +
@@ -577,11 +577,20 @@ Blockly.FunctionEditor.prototype.position_ = function() {
   this.layOutBlockSpaceItems_();
 };
 
-Blockly.FunctionEditor.prototype.positionContractDiv_ = function (metrics) {
+Blockly.FunctionEditor.prototype.positionSizeContractDom_ = function () {
+  var metrics = this.modalBlockSpace.getMetrics();
   var left = metrics.absoluteLeft;
   this.contractDiv_.style.left = left + 'px';
-  this.contractDiv_.style.top = metrics.absoluteTop + 'px';
+  this.contractDiv_.style.top = this.getContractDomTopY_() + 'px';
   this.contractDiv_.style.width = metrics.viewWidth + 'px';
+};
+
+/**
+ * @returns {number} Y position for contract DOM
+ * @protected
+ */
+Blockly.FunctionEditor.prototype.getContractDomTopY_ = function() {
+  return this.getWindowBorderChromeHeight();
 };
 
 Blockly.FunctionEditor.prototype.createContractDom_ = function() {
@@ -602,7 +611,7 @@ Blockly.FunctionEditor.prototype.createContractDom_ = function() {
       + '<button id="paramAddButton" class="btn">' + Blockly.Msg.ADD_PARAMETER
       + '</button>';
   }
-  this.positionContractDiv_(this.modalBlockSpace.getMetrics());
+  this.positionSizeContractDom_();
   this.contractDiv_.style.display = 'block';
   this.container_.insertBefore(this.contractDiv_, this.container_.firstChild);
 };
