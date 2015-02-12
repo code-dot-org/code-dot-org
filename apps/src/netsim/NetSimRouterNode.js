@@ -32,6 +32,7 @@ var NetSimEntity = require('./NetSimEntity');
 var NetSimLogger = require('./NetSimLogger');
 var NetSimWire = require('./NetSimWire');
 var NetSimMessage = require('./NetSimMessage');
+var NetSimHeartbeat = require('./NetSimHeartbeat');
 
 var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
 
@@ -71,6 +72,13 @@ var NetSimRouterNode = function (shard, routerRow) {
    */
   this.simulateForSender_ = undefined;
 
+  /**
+   * If ticked, tells the network that this router is being used.
+   * @type {NetSimHeartbeat}
+   * @private
+   */
+  this.heartbeat_ = null;
+
   this.shard_.messageTable.tableChange
       .register(this.onMessageTableChange_.bind(this));
 };
@@ -86,15 +94,24 @@ module.exports = NetSimRouterNode;
  */
 NetSimRouterNode.create = function (shard, onComplete) {
   NetSimEntity.create(NetSimRouterNode, shard, function (router) {
-    // Always try and update router immediately, to set its DisplayName
-    // correctly.
-    if (router) {
+    if (router === null) {
+      onComplete(null);
+      return;
+    }
+
+    NetSimHeartbeat.getOrCreate(shard, router.entityID, function (heartbeat) {
+      if (heartbeat === null) {
+        onComplete(null);
+        return;
+      }
+
+      // Always try and update router immediately, to set its DisplayName
+      // correctly.
+      router.heartbeat_ = heartbeat;
       router.update(function () {
         onComplete(router);
       });
-    } else {
-      onComplete(router);
-    }
+    });
   });
 };
 
@@ -106,7 +123,22 @@ NetSimRouterNode.create = function (shard, onComplete) {
  *        found entity, or null if entity search failed.
  */
 NetSimRouterNode.get = function (routerID, shard, onComplete) {
-  NetSimEntity.get(NetSimRouterNode, routerID, shard, onComplete);
+  NetSimEntity.get(NetSimRouterNode, routerID, shard, function (router) {
+    if (router === null) {
+      onComplete(null);
+      return;
+    }
+
+    NetSimHeartbeat.getOrCreate(shard, routerID, function (heartbeat) {
+      if (heartbeat === null) {
+        onComplete(null);
+        return;
+      }
+
+      router.heartbeat_ = heartbeat;
+      onComplete(router);
+    });
+  });
 };
 
 /**
@@ -119,6 +151,14 @@ NetSimRouterNode.RouterStatus = {
   FULL: 'Full'
 };
 var RouterStatus = NetSimRouterNode.RouterStatus;
+
+/**
+ * Ticks heartbeat, telling the network that router is in use.
+ * @param {RunLoop.Clock} clock
+ */
+NetSimRouterNode.prototype.tick = function (clock) {
+  this.heartbeat_.tick(clock);
+};
 
 /**
  * Updates router status and lastPing time in lobby table - both keepAlive

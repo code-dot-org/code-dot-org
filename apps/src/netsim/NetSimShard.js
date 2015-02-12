@@ -69,6 +69,10 @@ var NetSimShard = module.exports = function (shardID) {
   /** @type {NetSimTable} */
   this.messageTable = new NetSimTable(
       new SharedTable(APP_PUBLIC_KEY, shardID + '_m'));
+
+  /** @type {NetSimTable} */
+  this.heartbeatTable = new NetSimTable(
+      new SharedTable(APP_PUBLIC_KEY, shardID + '_h'));
 };
 
 /**

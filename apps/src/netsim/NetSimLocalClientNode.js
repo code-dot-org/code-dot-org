@@ -30,6 +30,7 @@
 var superClass = require('./NetSimClientNode');
 var NetSimEntity = require('./NetSimEntity');
 var NetSimMessage = require('./NetSimMessage');
+var NetSimHeartbeat = require('./NetSimHeartbeat');
 var NetSimLogger = require('./NetSimLogger');
 
 var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
@@ -74,6 +75,13 @@ var NetSimLocalClientNode = function (shard, clientRow) {
    * @private
    */
   this.receivedLog_ = null;
+
+  /**
+   * Tells the network that we're alive
+   * @type {NetSimHeartbeat}
+   * @private
+   */
+  this.heartbeat_ = null;
 };
 NetSimLocalClientNode.prototype = Object.create(superClass.prototype);
 NetSimLocalClientNode.prototype.constructor = NetSimLocalClientNode;
@@ -86,7 +94,23 @@ module.exports = NetSimLocalClientNode;
  *        created entity, or null if entity creation failed.
  */
 NetSimLocalClientNode.create = function (shard, onComplete) {
-  NetSimEntity.create(NetSimLocalClientNode, shard, onComplete);
+  NetSimEntity.create(NetSimLocalClientNode, shard, function (node) {
+    if (node === null) {
+      onComplete(null);
+      return;
+    }
+
+    // Give our newly-created local node a heartbeat
+    NetSimHeartbeat.getOrCreate(shard, node.entityID, function (heartbeat) {
+      if (heartbeat === null) {
+        onComplete(null);
+        return;
+      }
+
+      node.heartbeat_ = heartbeat;
+      onComplete(node);
+    });
+  });
 };
 
 /** @inheritdoc */
@@ -119,8 +143,11 @@ NetSimLocalClientNode.prototype.setLogs = function (sentLog, receivedLog) {
  * the shard.
  * @param {!RunLoop.Clock} clock
  */
-NetSimLocalClientNode.prototype.tick = function (/*clock*/) {
-  // TODO
+NetSimLocalClientNode.prototype.tick = function (clock) {
+  this.heartbeat_.tick(clock);
+  if (this.myRouter) {
+    this.myRouter.tick(clock);
+  }
 };
 
 /**
