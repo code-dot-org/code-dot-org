@@ -129,10 +129,14 @@ NetSimShardCleaner.prototype.cleanShard = function () {
 
     this.stepRunner_ = new StepRunner([
       new CacheTable(this, 'heartbeat', this.shard_.heartbeatTable),
+      new CleanHeartbeats(this),
+
+      new CacheTable(this, 'heartbeat', this.shard_.heartbeatTable),
       new CacheTable(this, 'node', this.shard_.nodeTable),
+      new CleanNodes(this),
+
       new CacheTable(this, 'wire', this.shard_.wireTable),
       new CacheTable(this, 'message', this.shard_.messageTable),
-      new CleanHeartbeats(this),
       // Clean nodes
       // Clean wires
       // Clean messages
@@ -269,6 +273,33 @@ CleanHeartbeats.prototype.onBegin = function () {
 };
 
 CleanHeartbeats.prototype.tick = function (clock) {
+  this.steps_.tick(clock);
+  if (this.steps_.isDone()) {
+    this.end();
+  }
+};
+
+var CleanNodes = function (cleaner) {
+  CleaningStep.call(this, cleaner);
+};
+CleanNodes.inherits(CleaningStep);
+
+CleanNodes.prototype.onBegin = function () {
+  var nodeRows = this.cleaner_.tableCache['node'];
+  var heartbeatRows = this.cleaner_.tableCache['heartbeat'];
+  var toDelete = nodeRows.filter(function (row) {
+    return heartbeatRows.every(function (heartbeat) {
+      return heartbeat.nodeID !== row.id;
+    });
+  }).map(function (row) {
+    return new NetSimNode(this.cleaner_.shard_, row);
+  }.bind(this));
+  this.steps_ = new StepRunner(toDelete.map(function(node) {
+    return new DestroyEntity(this.cleaner_, rode);
+  }.bind(this)));
+};
+
+CleanNodes.prototype.tick = function (clock) {
   this.steps_.tick(clock);
   if (this.steps_.isDone()) {
     this.end();
