@@ -328,8 +328,10 @@ function setSliders() {
   widthRange.value = widthText.value;
   bitsPerPixelRange.value = bitsPerPixelText.value;
 
-  updateBinaryDataToMatchSliders();
-  formatBitDisplay();
+  if (options.version != '1') {
+    updateBinaryDataToMatchSliders();
+    formatBitDisplay();
+  }
   drawGraph();
 }
 
@@ -339,16 +341,22 @@ function updateBinaryDataToMatchSliders() {
   var widthByte = pad(parseInt(widthRange.value).toString(2), 8, "0");
   var bppByte = pad(parseInt(bitsPerPixelRange.value).toString(2), 8, "0");
 
-
   var justBits = pixel_data.value.replace(/[ \n]/g, "");
 
   if (isHex()) {
     justBits = hexToBinPvt(justBits);
   }
 
-  var newBits = widthByte + heightByte + bppByte;
-  if (justBits.length > 24) {
-    newBits += justBits.substring(24);
+  var newBits = widthByte + heightByte;
+  if (options.version == '3') {
+    newBits += bppByte;
+    if (justBits.length > 24) {
+      newBits += justBits.substring(24);
+    }
+  } else {
+    if (justBits.length > 16) {
+      newBits += justBits.substring(16);
+    }
   }
   if (isHex()) {
     newBits = binToHexPvt(newBits);
