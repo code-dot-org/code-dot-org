@@ -1779,7 +1779,7 @@ Studio.displaySprite = function(i, isWalking) {
   var spriteIcon, spriteClipRect, unusedSpriteClipRect;
   var xOffset, yOffset;
 
-  if (skin[sprite.value].walk && isWalking) {
+  if (sprite.value !== undefined && skin[sprite.value] && skin[sprite.value].walk && isWalking) {
     // Show walk sprite, and hide regular sprite.
     spriteRegularIcon.setAttribute('visibility', 'hidden');
     spriteWalkIcon.setAttribute('visibility', 'visible');
