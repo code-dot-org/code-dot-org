@@ -1,23 +1,4 @@
 /**
- * Internet Simulator
- *
- * Copyright 2015 Code.org
- * http://code.org/
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-/**
  * @fileoverview Internet Simulator app for Code.org.
  */
 
@@ -49,7 +30,7 @@ var RunLoop = require('./RunLoop');
  * The top-level Internet Simulator controller.
  * @param {StudioApp} studioApp The studioApp instance to build upon.
  */
-var NetSim = function () {
+var NetSim = module.exports = function () {
   this.skin = null;
   this.level = null;
   this.heading = 0;
@@ -76,8 +57,6 @@ var NetSim = function () {
    */
   this.runLoop_ = new RunLoop();
 };
-
-module.exports = NetSim;
 
 
 /**
@@ -183,7 +162,6 @@ NetSim.prototype.initWithUserName_ = function (user) {
   var lobbyContainer = document.getElementById('netsim_lobby_container');
   this.lobbyControl_ = NetSimLobby.createWithin(lobbyContainer,
       this.connection_, user, this.getOverrideShardID());
-  this.lobbyControl_.attachToRunLoop(this.runLoop_);
 
   var routerPanelContainer = document.getElementById('netsim_tabpanel');
   this.routerPanel_ = NetSimRouterPanel.createWithin(routerPanelContainer,
