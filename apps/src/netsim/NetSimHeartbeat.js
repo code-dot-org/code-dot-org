@@ -30,6 +30,11 @@ var HEARTBEAT_INTERVAL_MS = 5000;
  * @augments NetSimEntity
  */
 var NetSimHeartbeat = module.exports = function (shard, row) {
+  // TODO (bbuchanan): Consider:
+  //      Will this scale?  Can we move the heartbeat system to an in-memory
+  //      store on the server - or even better, hook into whatever our
+  //      notification service uses to read presence on a channel?
+  
   row = row !== undefined ? row : {};
   NetSimEntity.call(this, shard, row);
 
@@ -51,6 +56,9 @@ NetSimHeartbeat.create = function (shard, onComplete) {
   NetSimEntity.create(NetSimHeartbeat, shard, onComplete);
 };
 
+// TODO (bbuchanan): Extend storage API to support an upsert operation, and
+//      use that here.  Would be even better if our backend storage supported
+//      it (like mongodb).
 NetSimHeartbeat.getOrCreate = function (shard, nodeID, onComplete) {
   shard.heartbeatTable.readAll(function (rows) {
     var nodeRows = rows
