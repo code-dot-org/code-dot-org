@@ -216,7 +216,9 @@ Blockly.ContractEditor.prototype.openWithLevelConfiguration = function (levelCon
 };
 
 Blockly.ContractEditor.prototype.setSectionHighlighted = function (viewToHighlight) {
-  this.allSections_.forEach(function (view) { view.setHighlighted(false) }, this);
+  this.allSections_.forEach(function (view) {
+    view.setHighlighted(false);
+  }, this);
   viewToHighlight.setHighlighted(true);
 };
 
