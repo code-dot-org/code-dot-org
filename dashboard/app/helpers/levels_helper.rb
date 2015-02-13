@@ -8,8 +8,6 @@ module LevelsHelper
     case script_level.script_id
     when Script::HOC_ID
       script_puzzle_path(script_level.script, script_level.chapter)
-    when Script::TWENTY_HOUR_ID
-      script_level_path(script_level.script, script_level)
     when Script::EDIT_CODE_ID
       editcode_chapter_path(script_level.chapter)
     when Script::TWENTY_FOURTEEN_LEVELS_ID
