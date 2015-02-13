@@ -178,8 +178,9 @@ NetSimRouterNode.getNodeType = function () {
 NetSimRouterNode.prototype.initializeSimulation = function (nodeID) {
   this.simulateForSender_ = nodeID;
   if (nodeID !== undefined) {
-    this.messageTableChangeKey_ = this.shard_.messageTable.tableChange
-        .register(this.onMessageTableChange_.bind(this));
+    var newMessageEvent = this.shard_.messageTable.tableChange;
+    var newMessageHandler = this.onMessageTableChange_.bind(this);
+    this.newMessageEventKey_ = newMessageEvent.register(newMessageHandler);
     logger.info("Router registered for messageTable tableChange");
   }
 };
@@ -189,10 +190,10 @@ NetSimRouterNode.prototype.initializeSimulation = function (nodeID) {
  * was observing.
  */
 NetSimRouterNode.prototype.stopSimulation = function () {
-  if (this.messageTableChangeKey_ !== undefined) {
-    this.shard_.messageTable.tableChange
-        .unregister(this.messageTableChangeKey_);
-    this.messageTableChangeKey_ = undefined;
+  if (this.newMessageEventKey_ !== undefined) {
+    var newMessageEvent = this.shard_.messageTable.tableChange;
+    newMessageEvent.unregister(this.newMessageEventKey_);
+    this.newMessageEventKey_ = undefined;
     logger.info("Router unregistered from messageTable tableChange");
   }
 };
