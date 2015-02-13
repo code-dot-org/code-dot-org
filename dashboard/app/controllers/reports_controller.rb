@@ -3,9 +3,9 @@
 # controllers)
 
 class ReportsController < ApplicationController
-  before_filter :authenticate_user!, except: [:header_stats, :user_progress]
+  before_filter :authenticate_user!, except: [:header_stats, :user_progress, :get_script]
 
-  check_authorization except: [:header_stats, :user_progress, :students]
+  check_authorization except: [:header_stats, :user_progress, :get_script, :students]
 
   before_action :set_script
   include LevelSourceHintsHelper
@@ -26,23 +26,9 @@ order by ul.updated_at desc limit 2
 SQL
   end
 
-  def header_stats
-    script_name = params[:script_name]
-    script_id = params[:script_id]
-
-    if script_name
-      @script = Script.find_by_name(script_name)
-    elsif script_id
-      @script = Script.find(script_id)
-    end
-    raise ActiveRecord::RecordNotFound unless @script
-
-    render file: 'shared/_user_stats', layout: false, locals: { user: current_user }
-  end
-
-  def user_progress
-    script_name = params[:script_name]
-    script_id = params[:script_id]
+  def find_script(p)
+    script_name = p[:script_name]
+    script_id = p[:script_id]
 
     if script_name
       script = Script.find_by_name(script_name)
@@ -51,6 +37,10 @@ SQL
     end
     raise ActiveRecord::RecordNotFound unless script
 
+    script
+  end
+
+  def find_script_level(script, p)
     stage_id = params[:stage_id]
     level_id = params[:level_id]
 
@@ -61,17 +51,70 @@ SQL
     end
     raise ActiveRecord::RecordNotFound unless script_level
 
-    # Add in the user's current progress
+    script_level
+  end
+
+  def header_stats
+    @script = find_script(params)
+    render file: 'shared/_user_stats', layout: false, locals: { user: current_user }
+  end
+
+  def get_script
+    script = find_script(params)
+
+    s = {
+      stages: []
+    }
+
+    levels = script.script_levels.group_by(&:stage_or_game)
+    levels.each_pair do |stage_or_game, sl_group|
+
+        stage = {
+          # TODO: more stuff needed?
+          id: stage_or_game.id,
+          levels: [],
+          title: stage_title(script, stage_or_game)
+        }
+
+        if script.has_lesson_plan?
+          stage[:lesson_plan_html_url] = lesson_plan_html_url(stage_or_game)
+        end
+
+        sl_group.sort_by {|sl| sl.stage_or_game_position}
+        sl_group.each do |sl|
+          if sl.level.unplugged?
+            kind = 'unplugged'
+          elsif sl.assessment
+            kind = 'assessment'
+          elsif
+            kind = 'blockly'
+          end
+
+          level = {
+            id: sl.level.id,
+            kind: kind,
+            title: sl.level_display_text,
+            path: build_script_level_path(sl)
+          }
+          stage[:levels].push level
+        end
+
+        s[:stages].push stage
+    end
+
+    render json: s
+  end
+
+  def user_progress
+    script = find_script(params)
+    script_level = find_script_level(script, params)
+
     stage = script_level.stage
     level = script_level.level
     game = script_level.level.game
 
-    # TODO:  Do we really need to check all these options?
-    # Why are we looking at the user's "game" etc to show a script map?
     game_levels =
-      if current_user
-        current_user.levels_from_script(script, game.id, stage)
-      elsif stage
+      if stage
         script.script_levels.to_a.select{|sl| sl.stage_id == script_level.stage_id}
       else
         script.script_levels.to_a.select{|sl| sl.level.game_id == script_level.level.game_id}
@@ -102,12 +145,23 @@ SQL
       user_data = {
         linesOfCode: current_user.total_lines,
         linesOfCodeText: t('nav.popup.lines', lines: current_user.total_lines),
-        status: {}
+        levels: {}
       }
-      game_levels.map do |sl|
+
+      # Get all user_levels
+      user_levels = current_user.levels_from_script(script)
+
+      user_levels.map do |sl|
         completion_status, link = level_info(current_user, sl)
-        user_data[:status][sl.level.id] = completion_status unless completion_status == 'not_tried'
+        if completion_status != 'not_tried'
+          user_data[:levels][sl.level.id] = {
+            status: completion_status
+            # More info could go in here...
+          }
+        end
       end
+
+      user_data[:disableSocialShare] = true if current_user.under_13?
 
       if script.trophies
         progress = current_user.progress(script)
@@ -120,33 +174,39 @@ SQL
 
     end
 
-    # Prepare some globals for blockly_options()
-    @script = script
-    @level = level
-    @game = game
-    @script_level = script_level
-    @current_user = current_user
-    @callback = milestone_url(user_id: current_user.try(:id) || 0, script_level_id: script_level)
-    @fallback_response = {
-      success: milestone_response(script_level: script_level, solved?: true),
-      failure: milestone_response(script_level: script_level, solved?: false)
-    }
-    @level_source_id = level.ideal_level_source_id
-    set_videos_and_blocks_and_callouts_and_instructions  # @callouts, @autoplay_video_info
-
-    # TODO: @phone_share_url
-
+    # Level-specific data
     if level.unplugged?
       # TODO: what does an unplugged level need?  'levels/unplug', locals: {app: @game.app}
       level_data = {}
-    elsif level.is_a?(Blockly) && level.embed == 'true' && !@edit_blocks
-      level_data = blockly_options({ embed: true, hide_source: true, no_padding: true, show_finish: true })
     elsif level.is_a?(DSLDefined)
       # TODO: partial "levels/#{level.class.to_s.underscore}"
       level_data = {}
     else
+      # Prepare some globals for blockly_options()
+      # Intentionally does not set @current_user since this is a static callback
+      @script = script
+      @level = level
+      @game = game
+      @script_level = script_level
+      @callback = milestone_url(user_id: current_user.try(:id) || 0, script_level_id: script_level)
+      @fallback_response = {
+        success: milestone_response(script_level: script_level, solved?: true),
+        failure: milestone_response(script_level: script_level, solved?: false)
+      }
+      @level_source_id = level.ideal_level_source_id
+      # TODO: @phone_share_url
+      set_videos_and_blocks_and_callouts_and_instructions  # @callouts, @autoplay_video_info
+
       level_data = blockly_options()
+      if (level.embed == 'true' && !@edit_blocks)
+        level_data[:embed] = true
+        level_data[:hide_source] = true
+        level_data[:no_padding] = true
+        level_data[:show_finish] = true
+        level_data[:disableSocialShare] = true
+      end
     end
+
     level_data[:scriptPath] = build_script_level_path(script_level)
     if level.ideal_level_source_id
       level_data[:solutionPath] = script_level_solution_path(script, level)  # TODO: Only for teachers?

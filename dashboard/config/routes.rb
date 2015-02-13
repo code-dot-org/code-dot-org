@@ -159,6 +159,7 @@ Dashboard::Application.routes.draw do
   get '/stats/level/:level_id', to: 'reports#level_stats', as: 'level_stats'
   get '/popup/stats', to: 'reports#header_stats', as: 'header_stats'
   get '/popup/progress', to: 'reports#user_progress', as: 'user_progress'
+  get '/popup/script', to: 'reports#get_script', as: 'get_script'
   get '/redeemprizes', to: 'reports#prizes', as: 'my_prizes'
 
   get '/notes/:key', to: 'notes#index'
