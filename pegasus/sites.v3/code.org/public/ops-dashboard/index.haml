@@ -1,24 +1,22 @@
 ---
 theme: angular
 ---
-- @page_title = "Districts"
-
-
-%div{'ng-app' => 'districtsApp', 'ng-view' => ''}
+%div{'ng-app' => 'opsApp', 'ng-view' => ''}
 
 :javascript
   'use strict';
 
   // Declare app level module which depends on filters, and services
-  angular.module('districtsApp', [
+  angular.module('opsApp', [
     'ngRoute',
     'ngResource',
-    'districtsApp.controllers',
-    'districtsApp.services'
+    'opsApp.controllers',
+    'opsApp.services'
   ]).config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/',
-                        {templateUrl: '/ops-dashboard/districts',
-                         controller: 'DistrictsController'});
+                        {templateUrl: '/ops-dashboard/landing'});
+    $routeProvider.when('/districts',              {templateUrl: '/ops-dashboard/districts', controller: 'DistrictsController'});
+    $routeProvider.when('/workshops',              {templateUrl: '/ops-dashboard/workshops', controller: 'WorkshopsController'});
     $routeProvider.otherwise({redirectTo: '/'});
   }]).config(['$httpProvider', function($httpProvider) {
     // X-Requested-With header required for CSRF requests protected by Rack::Protection::JsonCsrf included by Sinatra.
@@ -28,7 +26,7 @@ theme: angular
   }]);
 
   // SERVICES
-  var services = angular.module('districtsApp.services', []).
+  var services = angular.module('opsApp.services', []).
       value('version', '0.1');
 
   services.factory('districtsService', ['$resource',
@@ -40,15 +38,31 @@ theme: angular
         //  'query':  {method: 'GET', isArray:true},
         //  'remove': {method: 'DELETE'},
         //  'delete': {method: 'DELETE'} // don't use this because it doesn't work in IE9
-        update: {method:'PUT', url: '/ops/districts/:id'}
+        update: {method:'PUT', url: '/ops/districts/:id'},
+        save: {method:'PATCH', url: '/ops/districts/:id'}
       });
 
       return District;
     }]);
 
+  services.factory('workshopsService', ['$resource',
+    function($resource){
+      var Workshop = $resource('/ops/workshops/:id', {}, {
+      // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
+      //  'get':    {method:'GET'},
+      //  'save':   {method:'POST'},
+      //  'query':  {method:'GET', isArray:true},
+      //  'remove': {method:'DELETE'},
+      //  'delete': {method:'DELETE'}
+      update: {method:'PUT', url: '/ops/workshops/:id'}
+      });
+
+      return Workshop;
+    }]);
+
   // CONTROLLERS
 
-  var controllers = angular.module('districtsApp.controllers', []).
+  var controllers = angular.module('opsApp.controllers', []).
       value('version', '0.1');
 
   controllers.controller('DistrictsController', ['$scope', '$route', '$routeParams', '$location', '$window', 'districtsService',
@@ -68,7 +82,7 @@ theme: angular
               });
             }
           ).catch($scope.genericError);
-        } else { // update existing
+        } else {
           var newDistrict = new districtsService($scope.district);
           newDistrict.$save().then(
             function(saved) {
@@ -84,4 +98,36 @@ theme: angular
       $scope.districts.$promise.then(function(districts) {
         $scope.districtsLoaded = true;
       }).catch($scope.genericError);
+  }]);
+
+  controllers.controller('WorkshopsController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService',
+    function($scope, $route, $routeParams, $location, $window, workshopsService) {
+      $scope.workshopsLoaded = false;
+
+      $scope.workshops = workshopsService.query();
+
+      $scope.save = function (workshop) {
+        if (workshop.id) {
+          var newWorkshop = new workshopsService($scope.workshop);
+          workshopsService.update({id: workshop.id}, workshop).$promise.then(
+            function(result_workshop) {
+              $scope.workshops[$scope.workshops.indexOf(workshop)] = result_workshop;
+                workshopsService.query().$promise.then(function (workshops) {
+                $scope.workshops = workshops;
+              });
+            }
+          ).catch($scope.genericError);
+        } else {
+          var newWorkshop = new workshopsService($scope.workshop);
+          newWorkshop.$save().then(
+            function(saved) {
+              $scope.workshop = saved; /* just in case it has been modified on server */
+              workshopsService.query().$promise.then(function (workshops) {
+                $scope.workshops = workshops;
+              });
+            }
+          );
+        }
+      }
+
   }]);

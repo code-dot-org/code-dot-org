@@ -1,0 +1,53 @@
+---
+layout: none
+template: none
+---
+
+%h1 Workshops
+
+%table{'ng-controller' => 'WorkshopsController', style:'width:100%; margin-top:20px;'}
+  %tr
+    %th.manage-th
+      Workshops Name
+    %th.manage-th
+      Program Type
+    %th.manage-th
+      Cohort ID
+    %th.manage-th
+      Manage
+  %tr{"ng-repeat" => "workshop in workshops"}
+    %td
+      %span{'ng-hide' => 'workshop.editing', }
+        {{workshop.name}}
+      %input{'ng-show' => 'workshop.editing', 'ng-model' => 'workshop.name', type:'text', value:'{{workshop.name}}'}
+    %td
+      %span{'ng-hide' => 'workshop.editing', }
+        {{workshop.program_type}}
+      %input{'ng-show' => 'workshop.editing', 'ng-model' => 'workshop.program_type', type:'text', value:'{{workshop.program_type}}'}
+    %td
+      %span{'ng-hide' => 'workshop.editing', }
+        {{workshop.cohort_id}}
+      %input{'ng-show' => 'workshop.editing', 'ng-model' => 'workshop.cohort_id', type:'text', value:'{{workshop.cohort_id}}'}
+    %td
+      %button.btn.btn-white{'ng-click' => 'workshop.editing = true', 'ng-hide' => 'workshop.editing'} Edit
+      %button.btn.btn-danger{'ng-click' => 'workshop.$remove({id: workshop.id}) && workshops.splice($index, 1);', 'ng-hide' => 'workshop.editing'} Delete
+      %button.btn.btn-primary{'ng-click' => 'save(workshop)', 'ng-show' => 'workshop.editing'} Save
+      %button.btn.btn-white{'ng-click' => 'workshop.editing = false', 'ng-show' => 'workshop.editing'} Cancel
+
+    %tr
+    %td
+      %input{'ng-model' => 'workshop.name', type:'text'}
+    %td
+      %input{'ng-model' => 'workshop.program_type', type:'text'}
+    %td
+      %input{'ng-model' => 'workshop.cohort_id', type:'text'}
+    %td
+      %button.btn.btn-primary{'ng-click' => 'save(workshop)'}
+        Save
+      %button.btn.btn-white{'ng-click' => ''}
+        Cancel
+
+:css
+  .btn {
+    width:48%
+  }
