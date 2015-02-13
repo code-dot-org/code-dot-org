@@ -95,7 +95,7 @@ describe("NetSimTable", function () {
     netsimTable = new NetSimTable(apiTable);
     callback = function () {};
     notified = false;
-    netsimTable.tableChangeEvent.register(function () {
+    netsimTable.tableChange.register(function () {
       notified = true;
     });
   });
@@ -187,7 +187,7 @@ describe("NetSimTable", function () {
 
   it ("passes new full table contents to notification callbacks", function () {
     var receivedTableData;
-    netsimTable.tableChangeEvent.register(function (newTableData) {
+    netsimTable.tableChange.register(function (newTableData) {
       receivedTableData = newTableData;
     });
 
