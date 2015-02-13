@@ -251,6 +251,19 @@ var drawMap = function () {
       spriteIcon.setAttribute('clip-path', 'url(#spriteClipPath' + i + ')');
       svg.appendChild(spriteIcon);
 
+      // Add support for walking spritesheet.
+      var spriteWalkIcon = document.createElementNS(SVG_NS, 'image');
+      spriteWalkIcon.setAttribute('id', 'spriteWalk' + i);
+      spriteWalkIcon.setAttribute('clip-path', 'url(#spriteWalkClipPath' + i + ')');
+      svg.appendChild(spriteWalkIcon);
+
+      var spriteWalkClip = document.createElementNS(SVG_NS, 'clipPath');
+      spriteWalkClip.setAttribute('id', 'spriteWalkClipPath' + i);
+      var spriteWalkClipRect = document.createElementNS(SVG_NS, 'rect');
+      spriteWalkClipRect.setAttribute('id', 'spriteWalkClipRect' + i);
+      spriteWalkClip.appendChild(spriteWalkClipRect);
+      svg.appendChild(spriteWalkClip);
+
       dom.addMouseDownTouchEvent(spriteIcon,
         delegate(this, Studio.onSpriteClicked, i));
     }
@@ -671,13 +684,16 @@ Studio.onTick = function() {
   for (i = 0; i < Studio.spriteCount; i++) {
     performQueuedMoves(i);
 
+    var isWalking = true;
+
     // After 5 ticks of no movement, turn sprite forward
     if (Studio.tickCount - Studio.sprite[i].lastMove > TICKS_BEFORE_FACE_SOUTH) {
       Studio.sprite[i].dir = Direction.SOUTH;
+      isWalking = false;
     }
 
     // Display sprite:
-    Studio.displaySprite(i);
+    Studio.displaySprite(i, isWalking);
   }
 
   for (i = 0; i < Studio.projectiles.length; i++) {
@@ -1658,6 +1674,16 @@ frameDirTable[Direction.NORTHWEST]  = 4;
 frameDirTable[Direction.WEST]       = 5;
 frameDirTable[Direction.SOUTHWEST]  = 6;
 
+var frameDirTableWalking = {};
+frameDirTableWalking[Direction.SOUTH]      = 0;
+frameDirTableWalking[Direction.SOUTHEAST]  = 1;
+frameDirTableWalking[Direction.EAST]       = 2;
+frameDirTableWalking[Direction.NORTHEAST]  = 3;
+frameDirTableWalking[Direction.NORTH]      = 4;
+frameDirTableWalking[Direction.NORTHWEST]  = 5;
+frameDirTableWalking[Direction.WEST]       = 6;
+frameDirTableWalking[Direction.SOUTHWEST]  = 7;
+
 var ANIM_RATE = 6;
 var ANIM_OFFSET = 7; // Each sprite animates at a slightly different time
 var ANIM_AFTER_NUM_NORMAL_FRAMES = 8;
@@ -1668,11 +1694,29 @@ var TICKS_BEFORE_FACE_SOUTH = 5;
 /**
  * Given direction/emotion/tickCount, calculate which frame number we should
  * display for sprite.
+ * @param {boolean} opts.walkDirection - Return walking direction (0-7)
+ * @param {boolean} opts.walkFrame - Return walking animation frame
  */
-function spriteFrameNumber (index) {
+function spriteFrameNumber (index, opts) {
   var sprite = Studio.sprite[index];
   var frameNum = 0;
-  if (sprite.frameCounts.turns === 7 && sprite.displayDir !== Direction.SOUTH) {
+
+  var currentTime = new Date();
+  var elapsed = currentTime - Studio.startTime;
+
+  if (opts && opts.walkDirection) {
+    return frameDirTableWalking[sprite.displayDir];
+  }
+  else if (opts && opts.walkFrame && sprite.timePerFrame) {
+    return Math.floor(elapsed / sprite.timePerFrame) % sprite.frameCounts.walk;
+  }
+
+  if ((sprite.frameCounts.turns === 8) && sprite.displayDir !== Direction.SOUTH) {
+    // turn frames start after normal and animation frames
+    return sprite.frameCounts.normal + sprite.frameCounts.animation + 1 +
+      frameDirTable[sprite.displayDir];
+  }
+  if ((sprite.frameCounts.turns === 7) && sprite.displayDir !== Direction.SOUTH) {
     // turn frames start after normal and animation frames
     return sprite.frameCounts.normal + sprite.frameCounts.animation +
       frameDirTable[sprite.displayDir];
@@ -1688,16 +1732,13 @@ function spriteFrameNumber (index) {
   }
 
   if (sprite.frameCounts.normal > 1 && sprite.timePerFrame) {
-    var currentTime = new Date();
-    var ellapsed = currentTime - Studio.startTime;
-
-    // Use ellapsed time instead of tickCount
-    frameNum = Math.floor(ellapsed / sprite.timePerFrame) % sprite.frameCounts.normal;
+    // Use elapsed time instead of tickCount
+    frameNum = Math.floor(elapsed / sprite.timePerFrame) % sprite.frameCounts.normal;
   }
 
   if (!frameNum && sprite.emotion !== Emotions.NORMAL &&
     sprite.frameCounts.emotions > 0) {
-    // emotion frames proceed normal, animation, turn frames
+    // emotion frames precede normal, animation, turn frames
     frameNum = sprite.frameCounts.normal + sprite.frameCounts.animation +
       sprite.frameCounts.turns + (sprite.emotion - 1);
   }
@@ -1724,7 +1765,7 @@ var updateSpeechBubblePath = function (element) {
                                               onRight));
 };
 
-Studio.displaySprite = function(i) {
+Studio.displaySprite = function(i, isWalking) {
   var sprite = Studio.sprite[i];
 
   // avoid lots of unnecessary changes to hidden sprites
@@ -1732,10 +1773,36 @@ Studio.displaySprite = function(i) {
     return;
   }
 
-  var xOffset = sprite.width * spriteFrameNumber(i);
+  var spriteRegularIcon = document.getElementById('sprite' + i);
+  var spriteWalkIcon = document.getElementById('spriteWalk' + i);
 
-  var spriteIcon = document.getElementById('sprite' + i);
-  var spriteClipRect = document.getElementById('spriteClipRect' + i);
+  var spriteIcon, spriteClipRect, unusedSpriteClipRect;
+  var xOffset, yOffset;
+
+  if (skin[sprite.value].walk && isWalking) {
+    // Show walk sprite, and hide regular sprite.
+    spriteRegularIcon.setAttribute('visibility', 'hidden');
+    spriteWalkIcon.setAttribute('visibility', 'visible');
+
+    xOffset = sprite.width * spriteFrameNumber(i, {walkDirection: true});
+    yOffset = sprite.height * spriteFrameNumber(i, {walkFrame: true});
+
+    spriteIcon = spriteWalkIcon;
+    spriteClipRect = document.getElementById('spriteWalkClipRect' + i);
+    unusedSpriteClipRect = document.getElementById('spriteClipRect' + i);
+
+  } else {
+    // Show regular sprite, and hide walk sprite.
+    spriteRegularIcon.setAttribute('visibility', 'visible');
+    spriteWalkIcon.setAttribute('visibility', 'hidden');
+
+    xOffset = sprite.width * spriteFrameNumber(i);
+    yOffset = 0;
+
+    spriteIcon = spriteRegularIcon;
+    spriteClipRect = document.getElementById('spriteClipRect' + i);
+    unusedSpriteClipRect = document.getElementById('spriteWalkClipRect' + i);
+  }
 
   var xCoordPrev = spriteClipRect.getAttribute('x');
   var yCoordPrev = spriteClipRect.getAttribute('y');
@@ -1768,10 +1835,16 @@ Studio.displaySprite = function(i) {
   }
 
   spriteIcon.setAttribute('x', sprite.x - xOffset);
-  spriteIcon.setAttribute('y', sprite.y);
+  spriteIcon.setAttribute('y', sprite.y - yOffset);
 
   spriteClipRect.setAttribute('x', sprite.x);
   spriteClipRect.setAttribute('y', sprite.y);
+
+  // Update the other clip rect too, so that calculations involving
+  // inter-frame differences (just above, to calculate sprite.dir)
+  // are correct when we transition between spritesheets.
+  unusedSpriteClipRect.setAttribute('x', sprite.x);
+  unusedSpriteClipRect.setAttribute('y', sprite.y);
 
   var speechBubble = document.getElementById('speechBubble' + i);
   var speechBubblePath = document.getElementById('speechBubblePath' + i);
@@ -2077,6 +2150,19 @@ Studio.setSprite = function (opts) {
   if (!spriteIcon) {
     return;
   }
+
+  // If this skin has walking spritesheet, then load that too.
+  var spriteWalk = null;
+  if (skin[spriteValue].walk) {
+    spriteWalk = document.getElementById('spriteWalk' + spriteIndex);
+    if (!spriteWalk) {
+      return;
+    }
+
+    // Hide the walking sprite at this stage.
+    spriteWalk.setAttribute('visibility', 'hidden');
+  }
+
   sprite.visible = (spriteValue !== 'hidden' && !opts.forceHidden);
   spriteIcon.setAttribute('visibility', sprite.visible ? 'visible' : 'hidden');
   sprite.value = opts.forceHidden ? 'hidden' : opts.value;
@@ -2104,6 +2190,20 @@ Studio.setSprite = function (opts) {
     skin[spriteValue].sprite);
   spriteIcon.setAttribute('width', sprite.width * spriteTotalFrames(spriteIndex));
   spriteIcon.setAttribute('height', sprite.height);
+
+  if (spriteWalk) {
+    // And set up the cliprect so we can show the right item from the spritesheet.
+    var spriteWalkClipRect = document.getElementById('spriteWalkClipRect' + spriteIndex);
+    spriteWalkClipRect.setAttribute('width', sprite.width);
+    spriteWalkClipRect.setAttribute('height', sprite.height);
+
+    spriteWalk.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
+      skin[spriteValue].walk);
+    var spriteFramecounts = Studio.sprite[spriteIndex].frameCounts;
+    spriteWalk.setAttribute('width', sprite.width * spriteFramecounts.turns); // 800
+    spriteWalk.setAttribute('height', sprite.height * spriteFramecounts.walk); // 1200
+  }
+
   // call display right away since the frame number may have changed:
   Studio.displaySprite(spriteIndex);
 };
