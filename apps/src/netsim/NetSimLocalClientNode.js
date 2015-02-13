@@ -123,8 +123,9 @@ NetSimLocalClientNode.prototype.initializeSimulation = function (sentLog,
   this.receivedLog_ = receivedLog;
 
   // Subscribe to message table changes
-  this.messageTableChangeKey_ = this.shard_.messageTable.tableChange
-      .register(this.onMessageTableChange_.bind(this));
+  var newMessageEvent = this.shard_.messageTable.tableChange;
+  var newMessageHandler = this.onMessageTableChange_.bind(this);
+  this.newMessageEventKey_ = newMessageEvent.register(newMessageHandler);
   logger.info("Local node registered for messageTable tableChange");
 };
 
@@ -133,10 +134,10 @@ NetSimLocalClientNode.prototype.initializeSimulation = function (sentLog,
  * observing.
  */
 NetSimLocalClientNode.prototype.stopSimulation = function () {
-  if (this.messageTableChangeKey_ !== undefined) {
-    this.shard_.messageTable.tableChange
-        .unregister(this.messageTableChangeKey_);
-    this.messageTableChangeKey_ = undefined;
+  if (this.newMessageEventKey_ !== undefined) {
+    var newMessageEvent = this.shard_.messageTable.tableChange;
+    newMessageEvent.unregister(this.newMessageEventKey_);
+    this.newMessageEventKey_ = undefined;
     logger.info("Local node registered for messageTable tableChange");
   }
 };
