@@ -5,7 +5,7 @@ This .md file should only contain information which is specific to Code.org engi
 
 ## To update levelbuilder to match staging:
 
-1. On GitHub, open a pull request from `staging` into `levelbuilder`
+1. On GitHub, open a pull request from `staging` into `levelbuilder`, link: [levelbuilder...staging](https://github.com/code-dot-org/code-dot-org/compare/levelbuilder...staging?expand=1)
   1. Or in your local repository:
     - `git checkout levelbuilder`
     - `git pull origin levelbuilder` To make sure you're up-to-date.
