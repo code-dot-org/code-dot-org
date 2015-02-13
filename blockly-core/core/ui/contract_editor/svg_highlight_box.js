@@ -15,11 +15,15 @@ Blockly.SvgHighlightBox = function (parent, opt_options) {
 
   var extraStyle = 'pointer-events: none;';
 
-  this.svgGroup_ = Blockly.createSvgElement('g', {style: extraStyle},
-    parent);
-  this.highlightRectangle_ = Blockly.createSvgElement('rect',
-    {'fill': 'none', 'stroke-width': thickness, 'stroke': color}
-    , this.svgGroup_);
+  this.svgGroup_ = Blockly.createSvgElement('g', {
+    style: extraStyle
+  }, parent);
+
+  this.highlightRectangle_ = Blockly.createSvgElement('rect', {
+    'fill': 'none',
+    'stroke-width': thickness,
+    'stroke': color
+  }, this.svgGroup_);
 };
 
 /**
