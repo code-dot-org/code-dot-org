@@ -184,8 +184,7 @@ Blockly.ContractEditor.prototype.create_ = function() {
         if (this.functionDefinitionBlock) {
           var fullWidth = Blockly.modalBlockSpace.getMetrics().viewWidth;
           var functionDefinitionX = Blockly.RTL ? fullWidth - FRAME_MARGIN_SIDE : FRAME_MARGIN_SIDE;
-          this.functionDefinitionBlock.moveTo(
-            functionDefinitionX, currentY);
+          this.functionDefinitionBlock.moveTo(functionDefinitionX, currentY);
           currentY += this.functionDefinitionBlock.getHeightWidth().height;
         }
 
