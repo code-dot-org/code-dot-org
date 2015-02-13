@@ -1,12 +1,23 @@
 <div id="netsim_router_panel">
   <span id="not_connected">No router connected.</span>
   <span id="connected">
-    <h1>My network</h1>
-    <table id="netsim_router_network_table">
-      <tr>
-        <th>Name</th>
-        <th>Address</th>
-      </tr>
-    </table>
+    <div id="dns_mode_control">
+      <h1>DNS Mode</h1>
+      <input id="dns_mode_none" type="radio" name="dns_mode" /><label for="dns_mode_none">None</label>
+      <input id="dns_mode_manual" type="radio" name="dns_mode" /><label for="dns_mode_manual">Manual</label>
+      <input id="dns_mode_automatic" type="radio" name="dns_mode" /><label for="dns_mode_automatic">Automatic</label>
+    </div>
+    <div id="dns_mode_manual_controls">
+      <input id="become_dns_button" type="button" value="Become DNS" />
+    </div>
+    <div id="network_table">
+      <h1>My network</h1>
+      <table id="netsim_router_network_table">
+        <tr>
+          <th>Name</th>
+          <th>Address</th>
+        </tr>
+      </table>
+    </div>
   </span>
 </div>
