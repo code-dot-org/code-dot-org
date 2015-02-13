@@ -2153,7 +2153,7 @@ Studio.setSprite = function (opts) {
 
   // If this skin has walking spritesheet, then load that too.
   var spriteWalk = null;
-  if (skin[spriteValue].walk) {
+  if (spriteValue !== undefined && skin[spriteValue] && skin[spriteValue].walk) {
     spriteWalk = document.getElementById('spriteWalk' + spriteIndex);
     if (!spriteWalk) {
       return;
