@@ -1744,8 +1744,6 @@ exports.install = function(blockly, blockInstallOptions) {
    */
   blockly.Blocks.functional_start_setFuncs = {
     init: function() {
-      var blockName = msg.startSetFuncs();
-      var blockType = 'none';
       this.blockArgs = [
         {name: 'title', type: 'string'},
         {name: 'subtitle', type: 'string'},
@@ -1759,8 +1757,48 @@ exports.install = function(blockly, blockInstallOptions) {
         {name: 'collide?', type: 'function'},
         {name: 'on-screen?', type: 'function'}
       ];
-      var wrapWidth = 3;
-      initTitledFunctionalBlock(this, blockName, blockType, this.blockArgs, wrapWidth);
+      this.setFunctional(true, {
+        headerHeight: 30
+      });
+      this.setHSV.apply(this, functionalBlockUtils.colors.none);
+
+      var options = {
+        fixedSize: { height: 35 }
+      };
+
+      this.appendDummyInput()
+        .appendTitle(new Blockly.FieldLabel('game_funcs', options))
+        .setAlign(Blockly.ALIGN_LEFT);
+
+      var rows = [
+        'title, subtitle, background',
+        [this.blockArgs[0], this.blockArgs[1], this.blockArgs[2]],
+        'danger, target, player',
+        [this.blockArgs[3], this.blockArgs[4], this.blockArgs[5]],
+        'update-target, update-danger, update-player',
+        [this.blockArgs[6], this.blockArgs[7], this.blockArgs[8]],
+        'collide?, on-screen?',
+        [this.blockArgs[9], this.blockArgs[10]]
+      ];
+
+      rows.forEach(function (row) {
+        if (typeof(row) === 'string') {
+          this.appendDummyInput()
+            .appendTitle(new Blockly.FieldLabel(row));
+        } else {
+          row.forEach(function (blockArg, index) {
+            var input = this.appendFunctionalInput(blockArg.name);
+            if (index !== 0) {
+              input.setInline(true);
+            }
+            input.setHSV.apply(input, functionalBlockUtils.colors[blockArg.type]);
+            input.setCheck(blockArg.type);
+            input.setAlign(Blockly.ALIGN_LEFT);
+          }, this);
+        }
+      }, this);
+
+      this.setFunctionalOutput(false);
     }
   };
 
