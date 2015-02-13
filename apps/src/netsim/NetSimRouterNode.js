@@ -19,6 +19,7 @@ var NetSimLogger = require('./NetSimLogger');
 var NetSimWire = require('./NetSimWire');
 var NetSimMessage = require('./NetSimMessage');
 var NetSimHeartbeat = require('./NetSimHeartbeat');
+var ObservableEvent = require('./ObservableEvent');
 
 var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
 
@@ -107,6 +108,14 @@ var NetSimRouterNode = module.exports = function (shard, row) {
    * @private
    */
   this.addressTableCache_ = [];
+
+  /**
+   * Event others can observe, which we fire when the local network
+   * address table changes.
+   *
+   * @type {ObservableEvent}
+   */
+  this.addressTableChange = new ObservableEvent();
 };
 NetSimRouterNode.inherits(NetSimNode);
 
@@ -388,20 +397,10 @@ NetSimRouterNode.prototype.requestAddress = function (wire, hostname, onComplete
  * hostnames, which includes this router node and all of the nodes that are
  * connected to this router by an active wire.
  * Returns list of objects in form { hostname:{string}, address:{number} }
- * @param onComplete
+ * @returns {Array}
  */
-NetSimRouterNode.prototype.getAddressTable = function (onComplete) {
-  onComplete = onComplete || function () {};
-
-  this.getConnections(function (wires) {
-    var addressTable = wires.map(function (wire) {
-      return {
-        hostname: wire.localHostname,
-        address: wire.localAddress
-      };
-    });
-    onComplete(addressTable);
-  });
+NetSimRouterNode.prototype.getAddressTable = function () {
+  return this.addressTableCache_;
 };
 
 /**
@@ -426,12 +425,12 @@ NetSimRouterNode.prototype.updateAddressTable = function (myWires) {
       hostname: wire.localHostname,
       address: wire.localAddress,
       dnsNode: (wire.localNodeID === this.dnsNodeID_)
-    }
+    };
   }.bind(this));
 
   if (!_.isEqual(this.addressTableCache_, newAddressTable)) {
     this.addressTableCache_ = newAddressTable;
-    // Notify?
+    this.addressTableChange.notifyObservers(newAddressTable);
   }
 };
 

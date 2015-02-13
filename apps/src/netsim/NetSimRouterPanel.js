@@ -13,6 +13,9 @@
 'use strict';
 
 var markup = require('./NetSimRouterPanel.html');
+var NetSimLogger = require('./NetSimLogger');
+
+var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
 
 /**
  * Generator and controller for router information view.
@@ -26,8 +29,8 @@ var NetSimRouterPanel = module.exports = function (connection) {
    * @private
    */
   this.connection_ = connection;
-  this.connection_.statusChanges
-      .register(this.onConnectionStatusChange_.bind(this));
+  this.connection_.shardChange.register(this.onShardChange_.bind(this));
+  logger.info("RouterPanel registered to connection shardChange");
 
   /**
    * Cached reference to router
@@ -64,20 +67,37 @@ NetSimRouterPanel.prototype.bindElements_ = function () {
 };
 
 /**
- * Handler for connection status changes.  Can update configuration and
- * trigger a refresh of this view.
+ * Called whenever the connection notifies us that we've connected to,
+ * or disconnected from, a shard.
+ * @param {?NetSimShard} newShard - null if disconnected.
+ * @param {?NetSimLocalClientNode} localNode - null if disconnected
  * @private
  */
-NetSimRouterPanel.prototype.onConnectionStatusChange_ = function () {
-  if (this.connection_.isConnectedToRouter()) {
-    if (this.connection_.myNode.myRouter !== this.myConnectedRouter) {
-      this.myConnectedRouter = this.connection_.myNode.myRouter;
-      // TODO : Attach to router change listener
-    }
-  } else {
-    this.myConnectedRouter = undefined;
-    this.refresh();
+NetSimRouterPanel.prototype.onShardChange_= function (newShard, localNode) {
+  if (localNode) {
+    localNode.routerChange.register(this.onRouterChange_.bind(this));
+    logger.info("RouterPanel registered to localNode routerChange");
   }
+};
+
+/**
+ * Called whenever the local node notifies that we've been connected to,
+ * or disconnected from, a router.
+ * @param {?NetSimWire} wire - null if disconnected.
+ * @param {?NetSimRouterNode} router - null if disconnected
+ * @private
+ */
+NetSimRouterPanel.prototype.onRouterChange_ = function (wire, router) {
+  this.myConnectedRouter = router;
+  this.refresh();
+  if (router) {
+    router.addressTableChange.register(this.onAddressTableChange_.bind(this));
+    logger.info("RouterPanel registered to router addressTableChange");
+  }
+};
+
+NetSimRouterPanel.prototype.onAddressTableChange_ = function (addressTableData) {
+  this.refreshAddressTable_(addressTableData);
 };
 
 /** Update the address table to show the list of nodes in the local network. */
@@ -86,18 +106,19 @@ NetSimRouterPanel.prototype.refresh = function () {
     this.connectedSpan_.show();
     this.notConnectedSpan_.hide();
 
-    var self = this;
-    this.myConnectedRouter.getAddressTable(function (rows) {
-      self.networkTable_.empty();
-      $('<tr><th>Hostname</th><th>Address</th></tr>')
-          .appendTo(self.networkTable_);
-      rows.forEach(function (row) {
-        $('<tr><td>' + row.hostname + '</td><td>' + row.address + '</td></tr>')
-            .appendTo(self.networkTable_);
-      });
-    });
+    this.refreshAddressTable_(this.myConnectedRouter.getAddressTable());
   } else {
     this.notConnectedSpan_.show();
     this.connectedSpan_.hide();
   }
+};
+
+NetSimRouterPanel.prototype.refreshAddressTable_ = function (addressTableData) {
+  var tableBody = this.networkTable_.find('tbody');
+  tableBody.empty();
+
+  addressTableData.forEach(function (row) {
+    $('<tr><td>' + row.hostname + '</td><td>' + row.address + '</td></tr>')
+        .appendTo(tableBody);
+  });
 };
