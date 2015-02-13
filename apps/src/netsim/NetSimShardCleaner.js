@@ -28,8 +28,14 @@
 'use strict';
 
 var utils = require('../utils');
+var commands = require('./commands');
+var Command = commands.Command;
+var CommandSequence = commands.CommandSequence;
 var NetSimEntity = require('./NetSimEntity');
 var NetSimHeartbeat = require('./NetSimHeartbeat');
+var NetSimNode = require('./NetSimNode');
+var NetSimWire = require('./NetSimWire');
+var NetSimMessage = require('./NetSimMessage');
 var NetSimLogger = require('./NetSimLogger');
 
 var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
@@ -63,8 +69,8 @@ CleaningHeartbeat.getAllCurrent = function (shard, onComplete) {
   shard.heartbeatTable.readAll(function (rows) {
     var heartbeats = rows
         .filter(function (row) {
-          return row.cleaner === true
-              && Date.now() - row.time_ < CLEANING_HEARTBEAT_TIMEOUT;
+          return row.cleaner === true &&
+              Date.now() - row.time_ < CLEANING_HEARTBEAT_TIMEOUT;
         })
         .map(function (row) {
           return new CleaningHeartbeat(shard, row);
@@ -113,10 +119,10 @@ NetSimShardCleaner.prototype.tick = function (clock) {
     this.heartbeat_.tick(clock);
   }
 
-  if (this.stepRunner_){
-    this.stepRunner_.tick(clock);
-    if (this.stepRunner_.isDone()){
-      this.stepRunner_ = undefined;
+  if (this.steps_){
+    this.steps_.tick(clock);
+    if (this.steps_.isFinished()){
+      this.steps_ = undefined;
     }
   }
 };
@@ -127,7 +133,7 @@ NetSimShardCleaner.prototype.cleanShard = function () {
       return;
     }
 
-    this.stepRunner_ = new StepRunner([
+    this.steps_ = new CommandSequence([
       new CacheTable(this, 'heartbeat', this.shard_.heartbeatTable),
       new CleanHeartbeats(this),
 
@@ -135,13 +141,16 @@ NetSimShardCleaner.prototype.cleanShard = function () {
       new CacheTable(this, 'node', this.shard_.nodeTable),
       new CleanNodes(this),
 
+      new CacheTable(this, 'node', this.shard_.nodeTable),
       new CacheTable(this, 'wire', this.shard_.wireTable),
+      new CleanWires(this),
+
       new CacheTable(this, 'message', this.shard_.messageTable),
-      // Clean nodes
-      // Clean wires
-      // Clean messages
+      new CleanMessages(this),
+
       new ReleaseCleaningLock(this)
     ]);
+    this.steps_.begin();
   }.bind(this));
 };
 
@@ -177,7 +186,7 @@ NetSimShardCleaner.prototype.releaseCleaningLock = function (onComplete) {
     this.nextAttempt_ = Date.now() + CLEANING_INTERVAL_MS;
     logger.info("Cleaning lock released");
     onComplete(success);
-  }.bind(this))
+  }.bind(this));
 };
 
 NetSimShardCleaner.prototype.cacheTable = function (key, rows) {
@@ -185,147 +194,194 @@ NetSimShardCleaner.prototype.cacheTable = function (key, rows) {
     this.tableCache = {};
   }
   this.tableCache[key] = rows;
+  logger.info("Cached table " + key);
 };
 
-var StepRunner = function (steps) {
-  this.steps_ = steps;
+NetSimShardCleaner.prototype.getTableCache = function (key) {
+  return this.tableCache[key];
 };
 
-StepRunner.prototype.tick = function (clock) {
-  while (this.steps_.length > 0) {
-    if (!this.steps_[0].isStarted()) {
-      this.steps_[0].begin();
-    } else {
-      this.steps_[0].tick(clock);
-    }
-
-    if (this.steps_[0].isFinished()) {
-      this.steps_.shift();
-    } else {
-      break;
-    }
-  }
+NetSimShardCleaner.prototype.getShard = function () {
+  return this.shard_;
 };
 
-StepRunner.prototype.isDone = function () {
-  return this.steps_.length === 0;
-};
-
-var CleaningStep = function (cleaner) {
-  this.cleaner_ = cleaner;
-  this.isStarted_ = false;
-  this.isFinished_ = false;
-};
-
-CleaningStep.prototype.begin = function () {
-  this.isStarted_ = true;
-  this.onBegin();
-};
-CleaningStep.prototype.onBegin = function () {};
-
-CleaningStep.prototype.tick = function () {};
-
-CleaningStep.prototype.end = function () {
-  this.onEnd();
-  this.isFinished_ = true;
-};
-CleaningStep.prototype.onEnd = function () {};
-
-CleaningStep.prototype.isStarted = function () {
-  return this.isStarted_;
-};
-
-CleaningStep.prototype.isFinished = function () {
-  return this.isFinished_;
-};
-
+/**
+ *
+ * @param cleaner
+ * @param key
+ * @param table
+ * @constructor
+ * @augments Command
+ */
 var CacheTable = function (cleaner, key, table) {
-  CleaningStep.call(this, cleaner);
+  Command.call(this);
+  this.cleaner_ = cleaner;
   this.key_ = key;
   this.table_ = table;
 };
-CacheTable.inherits(CleaningStep);
+CacheTable.inherits(Command);
 
-CacheTable.prototype.onBegin = function () {
-  logger.info("Begin caching table " + this.key_);
+CacheTable.prototype.onBegin_ = function () {
   this.table_.readAll(function (rows) {
     this.cleaner_.cacheTable(this.key_, rows);
-    logger.info("Cached table " + this.key_);
-    this.end();
+    this.succeed();
   }.bind(this));
 };
 
-var CleanHeartbeats = function (cleaner) {
-  CleaningStep.call(this, cleaner);
+/**
+ *
+ * @param entity
+ * @constructor
+ * @augments Command
+ */
+var DestroyEntity = function (entity) {
+  Command.call(this);
+  this.entity_ = entity;
 };
-CleanHeartbeats.inherits(CleaningStep);
+DestroyEntity.inherits(Command);
+
+DestroyEntity.prototype.onBegin = function () {
+  this.entity_.destroy(function (success) {
+    if (success) {
+      logger.info("Deleted entity");
+      this.succeed();
+    } else {
+      this.fail();
+    }
+  }.bind(this));
+};
+
+/**
+ *
+ * @param cleaner
+ * @constructor
+ * @augments Command
+ */
+var ReleaseCleaningLock = function (cleaner) {
+  Command.call(this);
+  this.cleaner_ = cleaner;
+};
+ReleaseCleaningLock.inherits(Command);
+
+ReleaseCleaningLock.prototype.onBegin = function () {
+  this.cleaner_.releaseCleaningLock(function (success) {
+    if (success) {
+      this.succeed();
+    } else {
+      this.fail();
+    }
+  }.bind(this));
+};
+
+/**
+ *
+ * @param cleaner
+ * @constructor
+ * @augments CommandSequence
+ */
+var CleanHeartbeats = function (cleaner) {
+  CommandSequence.call(this);
+  this.cleaner_ = cleaner;
+};
+CleanHeartbeats.inherits(CommandSequence);
 
 var HEARTBEAT_TIMEOUT_MS = 30000;
-CleanHeartbeats.prototype.onBegin = function () {
-  var heartbeatRows = this.cleaner_.tableCache['heartbeat'];
-  var toDelete = heartbeatRows.filter(function (row) {
+/**
+ *
+ * @private
+ * @override
+ */
+CleanHeartbeats.prototype.onBegin_ = function () {
+  var heartbeatRows = this.cleaner_.getTableCache('heartbeat');
+  this.commandList_ = heartbeatRows.filter(function (row) {
     return Date.now() - row.time > HEARTBEAT_TIMEOUT_MS;
-  });
-  var steps = toDelete.map(function (row) {
-    return new DestroyEntity(this.cleaner_, new NetSimHeartbeat(this.cleaner_.shard_, row));
+  }).map(function (row) {
+    return new DestroyEntity(new NetSimHeartbeat(this.cleaner_.getShard(), row));
   }.bind(this));
-  this.steps_ = new StepRunner(steps);
+  CommandSequence.prototype.onBegin_.call(this);
 };
 
-CleanHeartbeats.prototype.tick = function (clock) {
-  this.steps_.tick(clock);
-  if (this.steps_.isDone()) {
-    this.end();
-  }
-};
-
+/**
+ *
+ * @param cleaner
+ * @constructor
+ * @augments CommandSequence
+ */
 var CleanNodes = function (cleaner) {
-  CleaningStep.call(this, cleaner);
+  CommandSequence.call(this);
+  this.cleaner_ = cleaner;
 };
-CleanNodes.inherits(CleaningStep);
+CleanNodes.inherits(CommandSequence);
 
-CleanNodes.prototype.onBegin = function () {
-  var nodeRows = this.cleaner_.tableCache['node'];
-  var heartbeatRows = this.cleaner_.tableCache['heartbeat'];
-  var toDelete = nodeRows.filter(function (row) {
+/**
+ *
+ * @private
+ * @override
+ */
+CleanNodes.prototype.onBegin_ = function () {
+  var heartbeatRows = this.cleaner_.getTableCache('heartbeat');
+  var nodeRows = this.cleaner_.getTableCache('node');
+  this.commandList_ = nodeRows.filter(function (row) {
     return heartbeatRows.every(function (heartbeat) {
       return heartbeat.nodeID !== row.id;
     });
   }).map(function (row) {
-    return new NetSimNode(this.cleaner_.shard_, row);
+    return new DestroyEntity(new NetSimNode(this.cleaner_.getShard(), row));
   }.bind(this));
-  this.steps_ = new StepRunner(toDelete.map(function(node) {
-    return new DestroyEntity(this.cleaner_, rode);
-  }.bind(this)));
+  CommandSequence.prototype.onBegin_.call(this);
 };
 
-CleanNodes.prototype.tick = function (clock) {
-  this.steps_.tick(clock);
-  if (this.steps_.isDone()) {
-    this.end();
-  }
+/**
+ *
+ * @param cleaner
+ * @constructor
+ * @augments CommandSequence
+ */
+var CleanWires = function (cleaner) {
+  CommandSequence.call(this);
+  this.cleaner_ = cleaner;
 };
+CleanWires.inherits(CommandSequence);
 
-var DestroyEntity = function (cleaner, entity) {
-  CleaningStep.call(this, cleaner);
-  this.entity_ = entity;
-};
-DestroyEntity.inherits(CleaningStep);
-
-DestroyEntity.prototype.onBegin = function () {
-  this.entity_.destroy(function () {
-    this.end();
-    logger.info("Deleted entity");
+/**
+ *
+ * @private
+ * @override
+ */
+CleanWires.prototype.onBegin_ = function () {
+  var nodeRows = this.cleaner_.getTableCache('node');
+  var wireRows = this.cleaner_.getTableRows('wire');
+  this.commandList_ = wireRows.filter(function (row) {
+    // Only wires whose ends point to valid nodes?
+    return false;
+  }).map(function (row) {
+    return new DestroyEntity(new NetSimWire(this.cleaner_.getShard(), row));
   }.bind(this));
 };
 
-var ReleaseCleaningLock = function (cleaner) {
-  CleaningStep.call(this, cleaner);
+/**
+ *
+ * @param cleaner
+ * @constructor
+ * @augments CommandSequence
+ */
+var CleanMessages = function (cleaner) {
+  CommandSequence.call(this);
 };
-ReleaseCleaningLock.inherits(CleaningStep);
+CleanMessages.inherits(CommandSequence);
 
-ReleaseCleaningLock.prototype.onBegin = function () {
-  this.cleaner_.releaseCleaningLock(function (success) {
-    this.end();
+/**
+ *
+ * @private
+ * @override
+ */
+CleanMessages.prototype.onBegin_ = function () {
+  var nodeRows = this.cleaner_.getTableCache('node');
+  var messageRows = this.cleaner_.getTableRows('message');
+  this.commandList_ = messageRows.filter(function (row) {
+    // Only messages with a valid destination?
+    return false;
+  }).map(function (row) {
+    return new DestroyEntity(new NetSimMessage(this.cleaner_.getShard(), row));
   }.bind(this));
 };
