@@ -5,8 +5,8 @@ template: none
 
 %h1 Districts
 
-%button.btn-white{'ng-click' => 'district.creation = true'}
-  New District
+-#%button.btn-white{'ng-click' => 'district.creation = true'}
+-#  New District
 
 %table{'ng-controller' => 'DistrictsController', style:'width:100%; margin-top:20px;'}
   %tr
@@ -34,8 +34,8 @@ template: none
     %td
       %button.btn.btn-white{'ng-click' => 'district.editing = true', 'ng-hide' => 'district.editing'} Edit
       %button.btn.btn-danger{'ng-click' => 'district.$remove({id: district.id}) && districts.splice($index, 1);', 'ng-hide' => 'district.editing'} Delete
-      %button.btn.btn-white{'ng-click' => 'save(district)', 'ng-show' => 'district.editing'} Save
       %button.btn.btn-white{'ng-click' => 'district.editing = false', 'ng-show' => 'district.editing'} Cancel
+      %button.btn.btn-primary{'ng-click' => 'save(district)', 'ng-show' => 'district.editing'} Save
   %tr
     %td
       %input{'ng-model' => 'district.name', type:'text'}
@@ -44,7 +44,7 @@ template: none
     %td
       %input{'ng-model' => 'district.contact_id', type:'select'}
     %td
-      %button.btn.btn-white{'ng-click' => 'save(district)'}
+      %button.btn.btn-primary{'ng-click' => 'save(district)'}
         Save
       %button.btn.btn-white{'ng-click' => 'district.creation = false'}
         Cancel
