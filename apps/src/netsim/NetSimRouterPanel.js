@@ -13,14 +13,6 @@
 'use strict';
 
 var markup = require('./NetSimRouterPanel.html');
-var periodicAction = require('./periodicAction');
-
-/**
- * How often the lobby should be auto-refreshed.
- * @type {number}
- * @const
- */
-var AUTO_REFRESH_INTERVAL_MS = 5000;
 
 /**
  * Generator and controller for router information view.
@@ -36,14 +28,6 @@ var NetSimRouterPanel = module.exports = function (connection) {
   this.connection_ = connection;
   this.connection_.statusChanges
       .register(this.onConnectionStatusChange_.bind(this));
-
-  /**
-   * Helper for triggering refresh on a regular interval
-   * @type {periodicAction}
-   * @private
-   */
-  this.periodicRefresh_ = periodicAction(this.refresh.bind(this),
-      AUTO_REFRESH_INTERVAL_MS);
 
   /**
    * Cached reference to router
@@ -80,14 +64,6 @@ NetSimRouterPanel.prototype.bindElements_ = function () {
 };
 
 /**
- * Attach own handlers to run loop events.
- * @param {RunLoop} runLoop
- */
-NetSimRouterPanel.prototype.attachToRunLoop = function (runLoop) {
-  this.periodicRefresh_.attachToRunLoop(runLoop);
-};
-
-/**
  * Handler for connection status changes.  Can update configuration and
  * trigger a refresh of this view.
  * @private
@@ -96,13 +72,11 @@ NetSimRouterPanel.prototype.onConnectionStatusChange_ = function () {
   if (this.connection_.isConnectedToRouter()) {
     if (this.connection_.myNode.myRouter !== this.myConnectedRouter) {
       this.myConnectedRouter = this.connection_.myNode.myRouter;
-      this.periodicRefresh_.enable();
       // TODO : Attach to router change listener
     }
   } else {
     this.myConnectedRouter = undefined;
     this.refresh();
-    this.periodicRefresh_.disable();
   }
 };
 
