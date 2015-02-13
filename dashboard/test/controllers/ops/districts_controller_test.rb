@@ -10,6 +10,7 @@ module Ops
       @district = create(:district)
     end
 
+
     test 'District contact can view all teachers in their district' do
       #87054980
       assert_routing({ path: 'ops/districts/1/teachers', method: :get }, { controller: 'ops/districts', action: 'teachers', id: '1' })
@@ -80,6 +81,16 @@ module Ops
 
       get :show, id: @district.id
       assert_equal new_name, JSON.parse(@response.body)['name']
+      assert_response :success
+    end
+
+    test 'Ops team can assign District Contact to District' do
+      #87053900
+      assert_routing({ path: 'ops/districts/1', method: :put }, { controller: 'ops/districts', action: 'update', id: '1' })
+      teacher = create(:teacher)
+      put :update, id: @district.id, district: {contact_id: teacher.id}
+      get :show, id: @district.id
+      assert_equal teacher.id, JSON.parse(@response.body)['contact_id']
       assert_response :success
     end
 

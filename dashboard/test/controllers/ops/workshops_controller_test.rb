@@ -4,6 +4,7 @@ module Ops
     include Devise::TestHelpers
 
     setup do
+      @request.headers['Accept'] = 'application/json'
       @admin = create(:admin)
       sign_in @admin
       @workshop = create(:workshop)
@@ -12,12 +13,24 @@ module Ops
     end
 
     test 'Facilitators can view all workshops they are facilitating' do
-      #87055150
+      # GET /ops/workshops
+      #87055150 (part 1)
       sign_out @admin
       sign_in @workshop.facilitators.first
       get :index
       assert_response :success
       assert_equal 1, JSON.parse(@response.body).length
+    end
+
+    test "Facilitators can list all teachers in their workshop's cohort" do
+      #87055150 (part 2)
+      # first name, last name, email, district, gender and any workshop details that are available for teachers
+      assert_routing({ path: 'ops/workshops/1/teachers', method: :get }, { controller: 'ops/workshops', action: 'teachers', id: '1' })
+
+      sign_in @workshop.facilitators.first
+      get :teachers, id: @workshop.id
+      assert_response :success
+      p JSON.parse(@response.body)
     end
 
     test 'District contacts can view all workshops in all cohorts in their district' do

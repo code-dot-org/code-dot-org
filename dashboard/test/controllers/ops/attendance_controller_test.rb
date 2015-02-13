@@ -5,22 +5,62 @@ module Ops
     tests WorkshopAttendanceController
 
     setup do
+      @request.headers['Accept'] = 'application/json'
       @admin = create :admin
       sign_in @admin
       @attendance = create(:attendance)
     end
 
     test 'District Contact can view attendance for all workshops in a cohort' do
-      #87054994 part 1 TODO
+      #87054994 part 1
+      assert_routing({ path: 'ops/attendance/cohort/1', method: :get}, { controller: 'ops/workshop_attendance', action: 'cohort', cohort_id: '1'})
+
+      sign_out @admin
+      cohort = @attendance.segment.workshop.cohort
+      district = cohort.districts.first
+      sign_in district.contact
+
+      get :cohort, cohort_id: cohort.id
+      assert_response :success
+      response = JSON.parse(@response.body)
+      assert_equal 'present', response['workshops'].first['segments'].first['attendances'].first['status']
     end
 
-    test 'District Contact can view attendance per teacher' do
-      #87054994 part 2 TODO
+    test 'District Contact can view attendance per teacher in their district' do
+      #87054994 part 2
+      # Get ALL attendance for a single teacher, grouped by workshop
       assert_routing({ path: 'ops/attendance/teacher/1', method: :get}, { controller: 'ops/workshop_attendance', action: 'teacher', teacher_id: '1'})
+
+      sign_out @admin
+      cohort = @attendance.segment.workshop.cohort
+      district = cohort.districts.first
+      sign_in district.contact
+
+      get :teacher, teacher_id: @attendance.teacher.id
+      assert_response :success
+      p JSON.parse(@response.body)
     end
 
-    test "Facilitators can mark attendance for each workshop's time slot" do
-      #87055176 TODO
+    test 'District Contact cannot view attendance for teachers not in their district' do
+      sign_out @admin
+
+    end
+
+    test 'Facilitators can view attendance for all segments in their workshop' do
+
+    end
+
+    test 'Facilitators can mark attendance for each segment' do
+      #87055176
+
+      # Facilitator gets a list of all teachers in the workshop (e.g., GET /ops/workshops/1/teachers)
+      # Facilitator POSTs an object to the segment path: {attendance => [[id, status], [id, status], ..]}
+      assert_routing({ path: 'ops/segments/1/attendance/batch', method: :post }, { controller: 'ops/workshop_attendance', action: 'batch', segment_id: '1'})
+
+      segment = @attendance.segment
+      teacher = segment.workshop.teachers.first
+      post :batch, segment_id: segment.id, attendance: [[teacher.id, 'tardy']]
+      assert_response :success
     end
 
     # Test index + CRUD controller actions

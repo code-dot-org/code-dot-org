@@ -44,7 +44,7 @@ module Ops
     # Required for CanCanCan to work with strong parameters
     # (see: http://guides.rubyonrails.org/action_controller_overview.html#strong-parameters)
     def district_params
-      params.require(:district).permit(:name, :location)
+      params.require(:district).permit(:name, :location, :contact_id)
     end
   end
 end
