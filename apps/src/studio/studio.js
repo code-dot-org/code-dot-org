@@ -1678,6 +1678,8 @@ var TICKS_BEFORE_FACE_SOUTH = 5;
 /**
  * Given direction/emotion/tickCount, calculate which frame number we should
  * display for sprite.
+ * @param {boolean} opts.walkDirection - Return walking direction (0-7)
+ * @param {boolean} opts.walkFrame - Return walking animation frame
  */
 function spriteFrameNumber (index, opts) {
   var sprite = Studio.sprite[index];
@@ -1689,10 +1691,8 @@ function spriteFrameNumber (index, opts) {
   if (opts && opts.walkDirection) {
     return frameDirTableWalking[sprite.displayDir];
   }
-  else if (opts && opts.walkFrame) {
-    if (sprite.timePerFrame) {
-      return Math.floor(elapsed / sprite.timePerFrame) % sprite.frameCounts.walk;
-    }
+  else if (opts && opts.walkFrame && sprite.timePerFrame) {
+    return Math.floor(elapsed / sprite.timePerFrame) % sprite.frameCounts.walk;
   }
 
   if ((sprite.frameCounts.turns === 8) && sprite.displayDir !== Direction.SOUTH) {
@@ -1748,8 +1748,6 @@ var updateSpeechBubblePath = function (element) {
                                               onTop,
                                               onRight));
 };
-
-var frameUpto = 0;
 
 Studio.displaySprite = function(i, isWalking) {
   var sprite = Studio.sprite[i];
