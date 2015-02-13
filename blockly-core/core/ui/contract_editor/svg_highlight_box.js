@@ -9,6 +9,7 @@ goog.provide('Blockly.SvgHighlightBox');
  * @constructor
  */
 Blockly.SvgHighlightBox = function (parent, opt_options) {
+  opt_options = opt_options || {};
   var color = opt_options.color || '#000';
   var thickness = opt_options.thickness || '30';
 
