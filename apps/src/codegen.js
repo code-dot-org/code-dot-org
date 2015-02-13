@@ -178,6 +178,23 @@ function populateGlobalFunctions(interpreter, scope) {
   }
 }
 
+function populateJSFunctions(interpreter) {
+  // The interpreter is missing some basic JS functions. Add them as needed:
+
+  // Add static methods from String:
+  var functions = ['fromCharCode'];
+  for (var i = 0; i < functions.length; i++) {
+    var wrapper = exports.makeNativeMemberFunction(interpreter,
+                                                   String[functions[i]],
+                                                   String);
+    interpreter.setProperty(interpreter.STRING,
+                            functions[i],
+                            interpreter.createNativeFunction(wrapper),
+                            false,
+                            true);
+  }
+}
+
 /**
  * Initialize a JS interpreter.
  */
@@ -194,6 +211,7 @@ exports.initJSInterpreter = function (interpreter, scope, options) {
     populateFunctionsIntoScope(interpreter, obj, options[optsObj]);
   }
   populateGlobalFunctions(interpreter, scope);
+  populateJSFunctions(interpreter);
 };
 
 /**
