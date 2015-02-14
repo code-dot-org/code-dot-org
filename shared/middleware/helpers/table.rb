@@ -6,10 +6,11 @@ class Table
   class NotFound < Sinatra::NotFound
   end
 
-  def initialize(app_id, storage_id, table_name)
+  def initialize(app_id, storage_id, table_name, my_storage_id)
     app_owner, @app_id = storage_decrypt_app_id(app_id) # TODO(if/when needed): Ensure this is a registered app?
     @storage_id = storage_id
     @table_name = table_name
+    @can_enumerate = @can_modify = storage_id != -1 || app_owner == my_storage_id
   
     @table = PEGASUS_DB[:app_tables]
   end
@@ -19,7 +20,7 @@ class Table
   end
   
   def delete(id)
-    delete_count = items.where(row_id:id).delete
+    delete_count = @can_modify ? items.where(row_id:id).delete : 0
     raise NotFound, "row `#{id}` not found `#{@table_name}` table" unless delete_count > 0
     true
   end
@@ -31,6 +32,8 @@ class Table
   end
   
   def insert(value, ip_address)
+    raise NotFound unless @can_modify
+
     row = {
       app_id:@app_id,
       storage_id:@storage_id,
@@ -57,6 +60,8 @@ class Table
   end
 
   def update(id, value, ip_address)
+    raise NotFound unless @can_modify
+
     row = {
       value:value.to_json,
       updated_at:DateTime.now,
@@ -69,6 +74,8 @@ class Table
   end
   
   def to_a()
+    raise NotFound unless @can_enumerate
+
     items.map do |row|
       JSON.load(row[:value]).merge(id:row[:row_id])
     end
