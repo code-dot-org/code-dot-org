@@ -387,9 +387,13 @@ StudioApp.prototype.init = function(config) {
 
   // Bind listener to 'Clear Puzzle' button
   dom.addClickTouchEvent(document.querySelector('#clear-puzzle-header'), (function () {
-    Blockly.functionEditor.hideIfOpen();
-    Blockly.mainBlockSpace.clear();
-    this.setStartBlocks_(config);
+    this.feedback_.showClearPuzzleConfirmation(this.Dialog, (function () {
+      if (Blockly.functionEditor) {
+        Blockly.functionEditor.hideIfOpen();
+      }
+      Blockly.mainBlockSpace.clear();
+      this.setStartBlocks_(config);
+    }).bind(this));
   }).bind(this));
 };
 
