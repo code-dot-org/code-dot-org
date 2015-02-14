@@ -13,6 +13,7 @@
 'use strict';
 
 var markup = require('./NetSimRouterPanel.html');
+var NetSimRouterNode = require('./NetSimRouterNode');
 var NetSimLogger = require('./NetSimLogger');
 
 var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
@@ -37,7 +38,7 @@ var NetSimRouterPanel = module.exports = function (connection) {
    * @type {NetSimRouterNode}
    * @private
    */
-  this.myConnectedRouter = undefined;
+  this.myConnectedRouter = null;
 };
 
 /**
@@ -91,9 +92,16 @@ NetSimRouterPanel.prototype.onRouterChange_ = function (wire, router) {
   this.myConnectedRouter = router;
   this.refresh();
   if (router) {
+    router.stateChange.register(this.onRouterStateChange_.bind(this));
+    logger.info("RouterPanel registered to router stateChange");
+
     router.addressTableChange.register(this.onAddressTableChange_.bind(this));
     logger.info("RouterPanel registered to router addressTableChange");
   }
+};
+
+NetSimRouterPanel.prototype.onRouterStateChange_ = function () {
+  this.refresh();
 };
 
 NetSimRouterPanel.prototype.onAddressTableChange_ = function (addressTableData) {
@@ -114,11 +122,39 @@ NetSimRouterPanel.prototype.refresh = function () {
 };
 
 NetSimRouterPanel.prototype.refreshAddressTable_ = function (addressTableData) {
+  var dnsMode = this.getDnsMode_();
   var tableBody = this.networkTable_.find('tbody');
   tableBody.empty();
 
   addressTableData.forEach(function (row) {
-    $('<tr><td>' + row.hostname + '</td><td>' + row.address + '</td></tr>')
-        .appendTo(tableBody);
+    var displayHostname = row.hostname;
+    if (row.isDnsNode && dnsMode !== NetSimRouterNode.DnsMode.NONE) {
+      displayHostname += " (DNS)";
+    }
+    var displayAddress = '';
+    if (dnsMode === NetSimRouterNode.DnsMode.NONE || row.isDnsNode || row.isLocal) {
+      displayAddress = row.address;
+    }
+
+    var tableRow = $('<tr>');
+    $('<td>').html(displayHostname).appendTo(tableRow);
+    $('<td>').html(displayAddress).appendTo(tableRow);
+
+    if (row.isLocal) {
+      tableRow.addClass('localNode');
+    }
+
+    if (row.isDnsNode){
+      tableRow.addClass('dnsNode');
+    }
+
+    tableRow.appendTo(tableBody);
   });
+};
+
+NetSimRouterPanel.prototype.getDnsMode_ = function () {
+  if (this.myConnectedRouter) {
+    return this.myConnectedRouter.dnsMode;
+  }
+  return NetSimRouterNode.DnsMode.NONE;
 };
