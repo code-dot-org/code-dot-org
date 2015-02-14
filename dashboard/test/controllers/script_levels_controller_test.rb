@@ -536,21 +536,4 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       get :show, script_id: 'course1', stage_id: 1, id: 4000
     end
   end
-
-  test 'can show embed level when not signed in' do
-    level = create(:artist)
-    sign_out(@admin)
-
-    get :embed_level, level_id: level
-    assert_response :success
-  end
-
-  test 'can show embed blocks when not signed in' do
-    level = create(:artist)
-    sign_out(@admin)
-
-    get :embed_blocks, level_id: level, block_type: :solution_blocks
-    assert_response :success
-  end
-
 end
