@@ -1038,6 +1038,11 @@ Applab.execute = function() {
     }
   }
 
+  // Set focus on divApplab so key events can be handled right from the start
+  // without requiring the user to adjust focus:
+  var divApplab = document.getElementById('divApplab');
+  divApplab.focus();
+
   Applab.running = true;
   queueOnTick();
 };
@@ -1899,6 +1904,11 @@ Applab.onEventFired = function (opts, e) {
 
 Applab.onEvent = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // Special case the id of 'body' to mean the app's container (divApplab)
+  // TODO (cpirich): apply this logic more broadly (setStyle, etc.)
+  if (opts.elementId === 'body') {
+    opts.elementId = 'divApplab';
+  }
   var domElement = document.getElementById(opts.elementId);
   if (divApplab.contains(domElement)) {
     switch (opts.eventName) {
