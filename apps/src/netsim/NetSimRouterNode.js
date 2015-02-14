@@ -30,15 +30,6 @@ var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
 var MAX_CLIENT_CONNECTIONS = 6;
 
 /**
- * @enum {string}
- */
-var DnsMode = {
-  NONE: 'none',
-  MANUAL: 'manual',
-  AUTOMATIC: 'automatic'
-};
-
-/**
  * Client model of simulated router
  *
  * Represents the client's view of a given router, provides methods for
@@ -66,8 +57,8 @@ var NetSimRouterNode = module.exports = function (shard, row) {
    * @type {DnsMode}
    * @private
    */
-  this.dnsMode_ = row.dnsMode !== undefined ?
-      row.dnsMode : DnsMode.NONE;
+  this.dnsMode = row.dnsMode !== undefined ?
+      row.dnsMode : NetSimRouterNode.DnsMode.NONE;
 
   /**
    * Sets current DNS node ID for the router's local network.
@@ -75,7 +66,7 @@ var NetSimRouterNode = module.exports = function (shard, row) {
    * @type {number}
    * @private
    */
-  this.dnsNodeID_ = row.dnsNodeID;
+  this.dnsNodeID = row.dnsNodeID;
 
   /**
    * Determines a subset of connection and message events that this
@@ -100,6 +91,24 @@ var NetSimRouterNode = module.exports = function (shard, row) {
   this.heartbeat_ = null;
 
   /**
+   * Local cache of our remote row, used to decide whether our state has
+   * changed.
+   * 
+   * Not persisted to server.
+   * 
+   * @type {Object}
+   * @private
+   */
+  this.stateCache_ = {};
+  
+  /**
+   * Event others can observe, which we fire when our own remote row changes.
+   * 
+   * @type {ObservableEvent}
+   */
+  this.stateChange = new ObservableEvent();
+  
+  /**
    * Local cache of router hostname => address table.
    *
    * Not persisted on server.
@@ -118,6 +127,16 @@ var NetSimRouterNode = module.exports = function (shard, row) {
   this.addressTableChange = new ObservableEvent();
 };
 NetSimRouterNode.inherits(NetSimNode);
+
+/**
+ * @enum {string}
+ */
+var DnsMode = {
+  NONE: 'none',
+  MANUAL: 'manual',
+  AUTOMATIC: 'automatic'
+};
+NetSimRouterNode.DnsMode = DnsMode;
 
 /**
  * Static async creation method. See NetSimEntity.create().
@@ -194,8 +213,8 @@ NetSimRouterNode.prototype.buildRow_ = function () {
   return utils.extend(
       NetSimRouterNode.superPrototype.buildRow_.call(this),
       {
-        dnsMode: this.dnsMode_,
-        dnsNodeID: this.dnsNodeID_
+        dnsMode: this.dnsMode,
+        dnsNodeID: this.dnsNodeID
       }
   );
 };
@@ -246,6 +265,11 @@ NetSimRouterNode.getNodeType = function () {
 NetSimRouterNode.prototype.initializeSimulation = function (nodeID) {
   this.simulateForSender_ = nodeID;
   if (nodeID !== undefined) {
+    var nodeChangeEvent = this.shard_.nodeTable.tableChange;
+    var nodeChangeHandler = this.onNodeTableChange_.bind(this);
+    this.nodeChangeKey_ = nodeChangeEvent.register(nodeChangeHandler);
+    logger.info("Router registered for nodeTable tableChange");
+    
     var wireChangeEvent = this.shard_.wireTable.tableChange;
     var wireChangeHandler = this.onWireTableChange_.bind(this);
     this.wireChangeKey_ = wireChangeEvent.register(wireChangeHandler);
@@ -263,6 +287,13 @@ NetSimRouterNode.prototype.initializeSimulation = function (nodeID) {
  * was observing.
  */
 NetSimRouterNode.prototype.stopSimulation = function () {
+  if (this.nodeChangeKey_ !== undefined) {
+    var nodeChangeEvent = this.shard_.messageTable.tableChange;
+    nodeChangeEvent.unregister(this.nodeChangeKey_);
+    this.nodeChangeKey_ = undefined;
+    logger.info("Router unregistered from nodeTable tableChange");
+  }
+  
   if (this.wireChangeKey_ !== undefined) {
     var wireChangeEvent = this.shard_.messageTable.tableChange;
     wireChangeEvent.unregister(this.wireChangeKey_);
@@ -404,6 +435,35 @@ NetSimRouterNode.prototype.getAddressTable = function () {
 };
 
 /**
+ * When the node table changes, we check whether our own row has changed
+ * and propagate those changes as appropriate.
+ * @param rows
+ * @private
+ */
+NetSimRouterNode.prototype.onNodeTableChange_ = function (rows) {
+  var myRow = _.find(rows, function (row) {
+    return row.id === this.entityID;
+  }.bind(this));
+
+  if (myRow === undefined) {
+    // Something terrible happened!  Abort!
+    return;
+  }
+
+  if (!_.isEqual(this.stateCache_, myRow)) {
+    this.stateCache_ = myRow;
+    logger.info("Router state changed.");
+    this.onMyStateChange_(myRow);
+  }
+};
+
+NetSimRouterNode.prototype.onMyStateChange_ = function (remoteRow) {
+  this.dnsMode = remoteRow.dnsMode;
+  this.dnsNodeID = remoteRow.dnsNodeID;
+  this.stateChange.notifyObservers(this);
+};
+
+/**
  * When the wires table changes, we may have a new connection or have lost
  * a connection.  Propagate updates about our connections
  * @param rows
@@ -416,6 +476,8 @@ NetSimRouterNode.prototype.onWireTableChange_ = function (rows) {
     return new NetSimWire(this.shard_, row);
   }.bind(this));
 
+  // TODO: How else do we respond to this event?
+
   this.updateAddressTable(myWires);
 };
 
@@ -424,12 +486,14 @@ NetSimRouterNode.prototype.updateAddressTable = function (myWires) {
     return {
       hostname: wire.localHostname,
       address: wire.localAddress,
-      dnsNode: (wire.localNodeID === this.dnsNodeID_)
+      isLocal: (wire.localNodeID === this.simulateForSender_),
+      isDnsNode: (wire.localNodeID === this.dnsNodeID)
     };
   }.bind(this));
 
   if (!_.isEqual(this.addressTableCache_, newAddressTable)) {
     this.addressTableCache_ = newAddressTable;
+    logger.info("Router address table changed.");
     this.addressTableChange.notifyObservers(newAddressTable);
   }
 };
