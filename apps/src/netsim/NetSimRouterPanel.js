@@ -62,6 +62,13 @@ NetSimRouterPanel.createWithin = function (element, connection) {
  */
 NetSimRouterPanel.prototype.bindElements_ = function () {
   this.rootDiv_ = $('#netsim_router_panel');
+
+  this.dnsModeRadios_ = this.rootDiv_.find('input[type="radio"][name="dns_mode"]');
+  this.dnsModeRadios_.change(this.onDnsModeChange_.bind(this));
+  this.dnsModeNone_ = this.dnsModeRadios_.siblings('#dns_mode_none');
+  this.dnsModeManual_ = this.dnsModeRadios_.siblings('#dns_mode_manual');
+  this.dnsModeAutomatic_ = this.dnsModeRadios_.siblings('#dns_mode_automatic');
+
   this.connectedSpan_ = this.rootDiv_.find('#connected');
   this.notConnectedSpan_ = this.rootDiv_.find('#not_connected');
   this.networkTable_ = this.rootDiv_.find('#netsim_router_network_table');
@@ -108,16 +115,33 @@ NetSimRouterPanel.prototype.onAddressTableChange_ = function (addressTableData) 
   this.refreshAddressTable_(addressTableData);
 };
 
+NetSimRouterPanel.prototype.onDnsModeChange_ = function () {
+  var router = this.myConnectedRouter;
+  router.dnsMode = this.dnsModeRadios_.siblings(':checked').val();
+  router.update();
+};
+
 /** Update the address table to show the list of nodes in the local network. */
 NetSimRouterPanel.prototype.refresh = function () {
   if (this.myConnectedRouter) {
     this.connectedSpan_.show();
     this.notConnectedSpan_.hide();
-
+    this.refreshDnsModeSelector_();
     this.refreshAddressTable_(this.myConnectedRouter.getAddressTable());
   } else {
     this.notConnectedSpan_.show();
     this.connectedSpan_.hide();
+  }
+};
+
+NetSimRouterPanel.prototype.refreshDnsModeSelector_ = function () {
+  var dnsMode = this.getDnsMode_();
+  if (dnsMode === NetSimRouterNode.DnsMode.NONE) {
+    this.dnsModeNone_.prop('checked', true);
+  } else if (dnsMode === NetSimRouterNode.DnsMode.MANUAL) {
+    this.dnsModeManual_.prop('checked', true);
+  } else if (dnsMode === NetSimRouterNode.DnsMode.AUTOMATIC) {
+    this.dnsModeAutomatic_.prop('checked', true);
   }
 };
 
