@@ -2,6 +2,11 @@
 title: About Us
 nav: about_nav
 ---
+
+<%
+  stats = PROPERTIES.get(:about_stats)
+%>
+
 # About Us
 
 Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. Our vision is that every student in every school should have the opportunity to learn computer science. We believe computer science and computer programming should be part of the core curriculum in education, alongside other science, technology, engineering, and mathematics (STEM) courses, such as biology, physics, chemistry and algebra.
@@ -29,6 +34,10 @@ Hour of Code has won the support of both [Republicans and Democrats](https://www
 
 | Code.org Goal | Accomplishment |
 |------|----------------|
+| Number Served | <%= stats['number_served'] %> |
+| Students Registered | <%= stats['number_students'] %> |
+| Teachers Registered | <%= stats['number_teachers'] %> |
+| Females Registered | <%= stats['percent_female'] %>% |
 | Inspire students | Tens of millions of students have tried the [Hour of Code](/learn). 48% female. |
 | Create fantastic  courses | 99% of teachers recommend the Code.org [intro CS curriculum](http://learn.code.org) |
 | Reach classrooms | Our [intro courses](http://studio.code.org) are in 100,000 classrooms, reaching almost 5M students |
