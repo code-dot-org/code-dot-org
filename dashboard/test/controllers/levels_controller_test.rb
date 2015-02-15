@@ -476,6 +476,9 @@ class LevelsControllerTest < ActionController::TestCase
     level = create(:artist)
     sign_out(@user)
 
+    get :show, id: level
+    assert_response :redirect
+
     get :embed_level, level_id: level
     assert_response :success
   end
@@ -483,6 +486,9 @@ class LevelsControllerTest < ActionController::TestCase
   test 'can show embed blocks when not signed in' do
     level = create(:artist)
     sign_out(@user)
+
+    get :show, id: level
+    assert_response :redirect
 
     get :embed_blocks, level_id: level, block_type: :solution_blocks
     assert_response :success
