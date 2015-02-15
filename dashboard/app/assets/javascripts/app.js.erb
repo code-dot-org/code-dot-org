@@ -158,6 +158,17 @@
         });
       }
 
+      // Right now, the static is a fixed route
+      if (window.Frame.isStatic) {
+        headerStore.load({
+          script_name: 'course1',
+          stage_id: 3,
+          level_id: 3
+        });
+
+        return;
+      }
+
       // s/:script_id/level/:level_id
       // (only applies to the default scripts ID < 8)
       re = /\/s\/(\d+)\/(level|puzzle)\/(\d+)$/i;
@@ -229,15 +240,16 @@
       this.onAjaxFailure = __bind(this.onAjaxFailure, this);
 
       this.value = null; // Empty store
-      this.notificationCallbacks = [];
+      this.subscribers = [];
+      this.offline = false;
     }
 
     // Get the value of this store
     UIStore.prototype.value = function() { return this.value; }
 
     // When this store changes, notify via callback(data)
-    UIStore.prototype.notify = function(callback) {
-      this.notificationCallbacks.push(callback);
+    UIStore.prototype.subscribe = function(callback) {
+      this.subscribers.push(callback);
     }
 
     // Internal call to process any data that's being saved
@@ -248,8 +260,8 @@
       this.value = this.process(data);
 
       // Note: Flux uses emitters...
-      for (var i = 0; i < this.notificationCallbacks.length; i++)
-        this.notificationCallbacks[i](this.value);
+      for (var i = 0; i < this.subscribers.length; i++)
+        this.subscribers[i](this.value);
     }
 
     // Resolve a dynamic asset by combining the base asset filename + a serialized version of the args
@@ -260,8 +272,8 @@
 
     // Resolve a static asset by combining the base asset filename + a serialized version of the args
     // MUST override this if you want to support offline access.
-    // Example: return "/data/file_" + args.id + "." + dataType;
-    UIStore.prototype.resolveFilename = function(args, dataType) {
+    // Example: return "/data/file_" + args.id;
+    UIStore.prototype.resolveStatic = function(args) {
       throw new Error("This store does not support offline mode.");
     }
 
@@ -274,20 +286,6 @@
       };
     }
 
-    // What are the AJAX parameters for this callback?
-    // If you override this, the override should be offline-aware.
-    UIStore.prototype.resolveAjax = function(args, dataType) {
-      var ajax;
-
-      if (!this.offline)
-        return this.resolve(args);
-
-      // Offline case
-      return {
-        url: this.resolveFilename(args, dataType)
-      };
-    }
-
     UIStore.prototype.onAjaxFailure = function(xhr, status, message) {
       // TODO
     }
@@ -297,15 +295,12 @@
       dataType = dataType || "json";
 
       // Set up the AJAX call to request the asset and then store the data, or raise an error.
-      var ajax = this.resolveAjax(args, dataType);
+      var ajax = this.resolve(args, dataType);
       ajax.dataType = dataType;
       ajax.success = fnSave || this.save;
       ajax.error = this.onAjaxError;
-      ajax.beforeSend = function(xhr) {
-        xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))
-      };
 
-      return $.ajax(ajax);
+      return window.Frame.load(ajax, this.resolveStatic);
     }
 
     // Load JSON data into this store.
@@ -331,18 +326,132 @@
   // class UIFrame
   var UIFrame = (function() {
 
+    var loaded_resources = {};
+
+    // Create an AJAX transport for static script loading
+    // This works for both file:// and http:// links
+    // 1. File is loaded as a <SCRIPT> tag
+    // 2. The file contains a call to RESOURCE({ ...json... });
+    // 3. RESOURCE() stores the JSON away for later retrieval
+    window.RESOURCE = function (json) {
+      loaded_resources[Math.random(1)] = json;
+    };
+    $.ajaxTransport( "static", function( s ) {
+      var script, callback, result;
+      return {
+        send: function( _, complete ) {
+
+          if (s.isStaticResource) {
+            s.dataTypes[ 0 ] = "json";
+            s.url += "?jsonp=RESOURCE";
+          } else {
+            s.dataTypes[ 0 ] = "script";
+          }
+
+          script = jQuery("<script>", {
+            charset: s.scriptCharset,
+            src: s.url
+          }).on(
+            "load error",
+            callback = function( evt ) {
+              script.remove();
+              callback = null;
+
+              if (s.isStaticResource) {
+                // TODO: are there asynchronicity issues here?
+                var json;
+                for (var key in loaded_resources) {
+                  json = loaded_resources[key];
+                  delete loaded_resources[key];
+                  break;
+                }
+
+                result = { json: json };
+              }
+
+              if ( evt ) {
+                complete( evt.type === "error" ? 404 : 200, evt.type, result);
+              }
+            }
+          );
+          document.head.appendChild( script[ 0 ] );
+        },
+        abort: function() {
+          if ( callback ) {
+            callback();
+          }
+        }
+      };
+    });
+
     function UIFrame() {
-      this.router = new UIRouter();
     }
 
     UIFrame.prototype.init = function() {
+      this.csrfToken = $('meta[name="csrf-token"]').attr('content');
+      this.isStatic = this.detectStatic();
+
+      // Static environment ignores BASE HREF and looks for resources in the directory of this script.
+      if (this.isStatic) {
+        this.baseUrl = document.URL.substr(0, document.URL.lastIndexOf('/'));
+      } else {
+        this.baseUrl = this.baseURI();
+      }
+
+      this.router = new UIRouter();
       this.router.route();
+    }
+
+    UIFrame.prototype.baseURI = function() {
+      // Check expected property.
+      if (document.baseURI)
+        return document.baseURI;
+      var base = document.getElementsByTagName('base');
+      if (base.length > 0)
+        return base[0].href;
+      return document.URL;
+    }
+
+    // Eventually we could support various modes of offline (disconnects, etc)
+    UIFrame.prototype.detectStatic = function() {
+      return window.location.protocol == "file:";
+    }
+
+    // Load the script at a given URL and return a promise that resolves when it has executed
+    UIFrame.prototype.load = function(ajax, resolveStatic) {
+      ajax.beforeSend = function(xhr) {
+        xhr.setRequestHeader('X-CSRF-Token', this.csrfToken);
+      };
+
+      if (this.isStatic) {
+        // All resources must be loaded via <SCRIPT> tag when offline.
+        ajax.dataType = "static";
+
+        // Static resolution replaces the URL with a static equivalent
+        if (resolveStatic) {
+          // All static resources are wrapped as .JS files
+          ajax.url = this.baseUrl + resolveStatic(ajax.data) + ".js";
+          delete ajax.data;
+          ajax.cache = true;
+          ajax.isStaticResource = true;
+        } else {
+          // For now, we still load real javascripts from the live server.
+          ajax.url = this.baseURI() + ajax.url;
+        }
+
+      }
+
+      return $.ajax(ajax);
     }
 
     // Load the script at a given URL and return a promise that resolves when it has executed
     UIFrame.prototype.loadSource = function(url) {
+      var _this = this;
+
+      // TODO: Temporary until we are bundling 
+
       return function () {
-        return $.ajax({
+        return _this.load({
           url: url,
           dataType: "script",
           cache: true
@@ -356,7 +465,7 @@
         rel: 'stylesheet',
         type: 'text/css',
         href: url
-      }).appendTo(document.body);
+      }).appendTo(document.head);
     }
 
     return UIFrame;
@@ -422,7 +531,7 @@
       var _this = this;
 
       // When the headerStore gets data, update blockly
-      this.props.headerStore.notify( function(data) {
+      this.props.headerStore.subscribe( function(data) {
         _this.setState({
           level: $.extend({}, data.level)
         });
@@ -490,7 +599,7 @@
       }, 10000);
 
       // When the headerStore gets data, update blockly
-      this.props.headerStore.notify( function(data) {
+      this.props.headerStore.subscribe( function(data) {
 
         // Set up the blockly options, starting from some default values
         var opts = $.extend({

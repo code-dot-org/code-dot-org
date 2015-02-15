@@ -42,8 +42,8 @@
       return "/popup/progress";
     }
 
-    HeaderStore.prototype.resolveFilename = function(args, dataType) {
-      return "/progress_" + args.script_name + "_" + args.stage_id + "_" + args.level_id + "." + dataType;
+    HeaderStore.prototype.resolveStatic = function(args) {
+      return "/progress_" + args.script_name + "_" + args.stage_id + "_" + args.level_id;
     }
 
     return HeaderStore;
@@ -64,8 +64,8 @@
       return "/popup/script";
     }
 
-    ScriptStore.prototype.resolveFilename = function(args, dataType) {
-      return "/scripts/script_" + args.script_id + "." + dataType;
+    ScriptStore.prototype.resolveStatic = function(args) {
+      return "/script_" + args.script_id;
     }
 
     return ScriptStore;
@@ -91,15 +91,14 @@
 
       // TODO: Is this the right place to put this?
       // It guarantees there will be at least one render cycle before we try to load the header.
-      this.props.headerStore.notify( __bind(this.replaceState, this) );
+      this.props.headerStore.subscribe( __bind(this.replaceState, this) );
 
       // This store is used to load the HTML overview of the entire script
       // TODO: Combine this with the headerStore
       this.scriptStore = new ScriptStore();
-      this.scriptStore.notify(function(script) {
+      this.scriptStore.subscribe(function(script) {
         _this.setState({
-          scriptDefinition: script,
-          stageHtml: 'Loaded!'
+          scriptDefinition: script
         });
       });
 
@@ -327,7 +326,7 @@
       // This is totally cheating by React rules.  But it's intentional: we don't want to force another
       // update so we just edit the state directly.  (React would notice that the change had no DOM effect,
       // but we don't have that optimization.)
-      if (this.state.stageHtml && this.state.jumpToTrophies) {
+      if (this.state.scriptDefinition && this.state.jumpToTrophies) {
         var off = $('#trophies').offset();
         if (off)
           window.scrollTo(0, +off.top);
@@ -343,8 +342,8 @@
       });
 
       // Have we loaded the stage HTML already?  If not, load it now.
-      if (this.state.popped && (this.state.stageHtml === undefined)) {
-        this.state.stageHtml = false; // prevent multiple loads
+      if (this.state.popped && (this.state.scriptDefinition === undefined)) {
+        this.state.scriptDefinition = false; // prevent multiple loads
 
         // Ask the script store to load a particular script.
         this.scriptStore.load({
