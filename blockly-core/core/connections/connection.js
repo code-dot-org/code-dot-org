@@ -446,7 +446,7 @@ Blockly.Connection.prototype.unhighlight = function() {
  */
 Blockly.Connection.prototype.getNotchPaths = function () {
   var constraints = this && this.check_ || [];
-  if (constraints.length === 1 && constraints[0] === 'function') {
+  if (constraints.length === 1 && constraints[0] === Blockly.BlockValueType.FUNCTION) {
     return SQUARE_NOTCH_PATHS;
   }
   return ROUNDED_NOTCH_PATHS;
