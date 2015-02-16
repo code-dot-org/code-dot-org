@@ -748,8 +748,8 @@ FeedbackUtils.prototype.showGeneratedCode = function(Dialog) {
  */
 FeedbackUtils.prototype.showClearPuzzleConfirmation = function(Dialog, callback) {
   var codeDiv = document.createElement('div');
-  codeDiv.innerHTML = '<p class="dialog-title">' + msg.clearPuzzleConfirmHeader() + '</p>'
-      + '<p>' + msg.clearPuzzleConfirm() + '</p>';
+  codeDiv.innerHTML = '<p class="dialog-title">' + msg.clearPuzzleConfirmHeader() + '</p>' +
+      '<p>' + msg.clearPuzzleConfirm() + '</p>';
 
   var buttons = document.createElement('div');
   buttons.innerHTML = require('./templates/buttons.html')({
