@@ -125,7 +125,7 @@ div.droplet-palette-group-header-selected {
 #codeWorkspace {
   position: absolute;
   bottom: 10px;
-  box-shadow: 7px 7px 10px #888;
+  box-shadow: 7px 7px 10px rgba(0,0,0,0.5);
   margin-left: 415px;
   border: 4px solid #ddd;
   overflow: hidden;
@@ -355,7 +355,7 @@ button:active {
   border: 1px solid #888 !important;
 }
 button:hover {
-  box-shadow: 2px 2px 5px #888;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
 }
 button.disabled, button[disabled=disabled], button:disabled {
   border: 1px solid #C7C7C7;
@@ -454,7 +454,7 @@ input[type="radio"] {
   border: 1px solid #000;
   position: absolute;
   border-radius: 8px;
-  box-shadow: 5px 5px 5px #888;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
   padding: 10px;
   z-index: 20000;
 }
@@ -464,7 +464,7 @@ input[type="radio"] {
   background-color: #fff;
   color: #000;
   border-radius: 6px;
-  box-shadow: 5px 5px 5px #888;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
 }
 #dialogShadow {
   @include fill-container;
