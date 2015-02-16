@@ -1337,6 +1337,13 @@ StudioApp.prototype.hasExtraTopBlocks = function () {
 };
 
 /**
+ *
+ */
+StudioApp.prototype.hasQuestionMarksInNumberField = function () {
+  return this.feedback_.hasQuestionMarksInNumberField();
+};
+
+/**
  * @param {Blockly.Block} block Block to check
  * @returns true if the block has a connection without a block attached
  */
