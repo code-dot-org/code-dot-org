@@ -75,7 +75,7 @@ var NetSimLocalClientNode = module.exports = function (shard, clientRow) {
   this.heartbeat_ = null;
 
   /**
-   * Change event others can observer, which we will fire when we
+   * Change event others can observe, which we will fire when we
    * connect to a router or disconnect from a router.
    * @type {ObservableEvent}
    */

@@ -445,6 +445,7 @@ NetSimRouterNode.prototype.getAddressTable = function () {
  * and propagate those changes as appropriate.
  * @param rows
  * @private
+ * @throws
  */
 NetSimRouterNode.prototype.onNodeTableChange_ = function (rows) {
   var myRow = _.find(rows, function (row) {
@@ -452,8 +453,7 @@ NetSimRouterNode.prototype.onNodeTableChange_ = function (rows) {
   }.bind(this));
 
   if (myRow === undefined) {
-    // Something terrible happened!  Abort!
-    return;
+    throw new Error("Unable to find router node in node table listing.");
   }
 
   if (!_.isEqual(this.stateCache_, myRow)) {
