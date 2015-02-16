@@ -916,7 +916,7 @@ html[dir=rtl] .qtip-content {
   color: #000;
   border: 1px solid #000;
   border-radius: 8px;
-  box-shadow: 5px 5px 5px #888;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
   padding: 10px;
 }
 
@@ -1753,7 +1753,7 @@ button:active {
   border: 1px solid #888 !important;
 }
 button:hover {
-  @include box-shadow(2px 2px 5px #888);
+  @include box-shadow(2px 2px 5px rgba(0,0,0,0.5));
 }
 button.disabled, button[disabled=disabled] {
   border: 1px solid #C7C7C7;
