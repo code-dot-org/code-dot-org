@@ -104,7 +104,8 @@ private
       # we do multiple level projects, so we don't check that the level_source.level_id matches the loaded level
       @start_blocks = level_source.data
     else
-      @start_blocks = current_user.last_attempt(@level).try(:level_source).try(:data)
+      last_attempt = current_user.last_attempt(@level).try(:level_source).try(:data)
+      @start_blocks = last_attempt unless last_attempt.nil?
     end
   end
 
