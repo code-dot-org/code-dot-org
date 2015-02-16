@@ -260,6 +260,7 @@ module LevelsHelper
       timeout_after_when_run
       custom_game_type
       project_template_level_name
+      scrollbars
     ).map{ |x| x.include?(':') ? x.split(':') : [x,x.camelize(:lower)]}]
     .each do |dashboard, blockly|
       # Select first valid value from 1. local_assigns, 2. property of @level object, 3. named instance variable, 4. properties json
@@ -317,7 +318,6 @@ module LevelsHelper
     }
     app_options[:scriptId] = @script.id if @script
     app_options[:levelGameName] = @level.game.name if @level.game
-    app_options[:scrollbars] = blockly_value(@level.scrollbars) if @level.is_a?(Blockly) && @level.scrollbars
     app_options[:skinId] = @level.skin if @level.is_a?(Blockly)
     app_options[:level_source_id] = @level_source_id if @level_source_id
     app_options[:sendToPhone] = request.location.try(:country_code) == 'US' ||
