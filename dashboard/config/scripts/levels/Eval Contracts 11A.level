@@ -22,8 +22,8 @@
       <xml>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
-            <arg name="text" type="string"/>
-            <outputtype>image</outputtype>
+            <arg name="text" type="String"/>
+            <outputtype>Image</outputtype>
           </mutation>
           <title name="NAME">banner</title>
           <functional_input name="STACK">
@@ -31,7 +31,7 @@
               <functional_input name="TEXT">
                 <block type="functional_parameters_get" uservisible="false">
                   <mutation>
-                    <outputtype>string</outputtype>
+                    <outputtype>String</outputtype>
                   </mutation>
                   <title name="VAR">text</title>
                 </block>
@@ -53,7 +53,7 @@
           <functional_input name="ACTUAL">
             <block type="functional_call" inline="false" uservisible="false">
               <mutation name="banner">
-                <arg name="text" type="string"/>
+                <arg name="text" type="String"/>
               </mutation>
             </block>
           </functional_input>
@@ -62,7 +62,7 @@
           <functional_input name="ACTUAL">
             <block type="functional_call" inline="false" uservisible="false">
               <mutation name="banner">
-                <arg name="text" type="string"/>
+                <arg name="text" type="String"/>
               </mutation>
             </block>
           </functional_input>
@@ -71,7 +71,7 @@
           <functional_input name="ARG1">
             <block type="functional_call" inline="false">
               <mutation name="banner">
-                <arg name="text" type="string"/>
+                <arg name="text" type="String"/>
               </mutation>
             </block>
           </functional_input>
@@ -134,8 +134,8 @@
       <xml>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
-            <arg name="text" type="string"/>
-            <outputtype>image</outputtype>
+            <arg name="text" type="String"/>
+            <outputtype>Image</outputtype>
           </mutation>
           <title name="NAME">banner</title>
           <functional_input name="STACK">
@@ -143,7 +143,7 @@
               <functional_input name="TEXT">
                 <block type="functional_parameters_get" uservisible="false">
                   <mutation>
-                    <outputtype>string</outputtype>
+                    <outputtype>String</outputtype>
                   </mutation>
                   <title name="VAR">text</title>
                 </block>
@@ -165,7 +165,7 @@
           <functional_input name="ACTUAL">
             <block type="functional_call" inline="false" uservisible="false">
               <mutation name="banner">
-                <arg name="text" type="string"/>
+                <arg name="text" type="String"/>
               </mutation>
             </block>
           </functional_input>
@@ -174,7 +174,7 @@
           <functional_input name="ACTUAL">
             <block type="functional_call" inline="false" uservisible="false">
               <mutation name="banner">
-                <arg name="text" type="string"/>
+                <arg name="text" type="String"/>
               </mutation>
             </block>
           </functional_input>
@@ -183,7 +183,7 @@
           <functional_input name="ARG1">
             <block type="functional_call" inline="false">
               <mutation name="banner">
-                <arg name="text" type="string"/>
+                <arg name="text" type="String"/>
               </mutation>
               <functional_input name="ARG0">
                 <block type="functional_string">
