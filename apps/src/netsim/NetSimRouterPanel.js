@@ -14,6 +14,7 @@
 
 var markup = require('./NetSimRouterPanel.html');
 var NetSimRouterNode = require('./NetSimRouterNode');
+var DnsMode = NetSimRouterNode.DnsMode;
 var NetSimLogger = require('./NetSimLogger');
 
 var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
@@ -32,6 +33,12 @@ var NetSimRouterPanel = module.exports = function (connection) {
   this.connection_ = connection;
   this.connection_.shardChange.register(this.onShardChange_.bind(this));
   logger.info("RouterPanel registered to connection shardChange");
+
+  /**
+   *
+   * @type {NetSimLocalClientNode}
+   */
+  this.myLocalNode = null;
 
   /**
    * Cached reference to router
@@ -65,9 +72,10 @@ NetSimRouterPanel.prototype.bindElements_ = function () {
 
   this.dnsModeRadios_ = this.rootDiv_.find('input[type="radio"][name="dns_mode"]');
   this.dnsModeRadios_.change(this.onDnsModeChange_.bind(this));
-  this.dnsModeNone_ = this.dnsModeRadios_.siblings('#dns_mode_none');
-  this.dnsModeManual_ = this.dnsModeRadios_.siblings('#dns_mode_manual');
-  this.dnsModeAutomatic_ = this.dnsModeRadios_.siblings('#dns_mode_automatic');
+
+  this.dnsModeManualControls_ = this.rootDiv_.find('#dns_mode_manual_controls');
+  this.becomeDnsButton_ = this.dnsModeManualControls_.find('#become_dns_button');
+  this.becomeDnsButton_.click(this.onBecomeDnsButtonClick_.bind(this));
 
   this.connectedSpan_ = this.rootDiv_.find('#connected');
   this.notConnectedSpan_ = this.rootDiv_.find('#not_connected');
@@ -77,11 +85,12 @@ NetSimRouterPanel.prototype.bindElements_ = function () {
 /**
  * Called whenever the connection notifies us that we've connected to,
  * or disconnected from, a shard.
- * @param {?NetSimShard} newShard - null if disconnected.
- * @param {?NetSimLocalClientNode} localNode - null if disconnected
+ * @param {NetSimShard} newShard - null if disconnected.
+ * @param {NetSimLocalClientNode} localNode - null if disconnected
  * @private
  */
 NetSimRouterPanel.prototype.onShardChange_= function (newShard, localNode) {
+  this.myLocalNode = localNode;
   if (localNode) {
     localNode.routerChange.register(this.onRouterChange_.bind(this));
     logger.info("RouterPanel registered to localNode routerChange");
@@ -102,8 +111,8 @@ NetSimRouterPanel.prototype.onRouterChange_ = function (wire, router) {
     router.stateChange.register(this.onRouterStateChange_.bind(this));
     logger.info("RouterPanel registered to router stateChange");
 
-    router.addressTableChange.register(this.onAddressTableChange_.bind(this));
-    logger.info("RouterPanel registered to router addressTableChange");
+    router.wiresChange.register(this.onRouterWiresChange_.bind(this));
+    logger.info("RouterPanel registered to router wiresChange");
   }
 };
 
@@ -111,13 +120,19 @@ NetSimRouterPanel.prototype.onRouterStateChange_ = function () {
   this.refresh();
 };
 
-NetSimRouterPanel.prototype.onAddressTableChange_ = function (addressTableData) {
-  this.refreshAddressTable_(addressTableData);
+NetSimRouterPanel.prototype.onRouterWiresChange_ = function () {
+  this.refreshAddressTable_(this.myConnectedRouter.getAddressTable());
 };
 
 NetSimRouterPanel.prototype.onDnsModeChange_ = function () {
   var router = this.myConnectedRouter;
   router.dnsMode = this.dnsModeRadios_.siblings(':checked').val();
+  router.update();
+};
+
+NetSimRouterPanel.prototype.onBecomeDnsButtonClick_ = function () {
+  var router = this.myConnectedRouter;
+  router.dnsNodeID = this.myLocalNode.entityID;
   router.update();
 };
 
@@ -136,12 +151,15 @@ NetSimRouterPanel.prototype.refresh = function () {
 
 NetSimRouterPanel.prototype.refreshDnsModeSelector_ = function () {
   var dnsMode = this.getDnsMode_();
-  if (dnsMode === NetSimRouterNode.DnsMode.NONE) {
-    this.dnsModeNone_.prop('checked', true);
-  } else if (dnsMode === NetSimRouterNode.DnsMode.MANUAL) {
-    this.dnsModeManual_.prop('checked', true);
-  } else if (dnsMode === NetSimRouterNode.DnsMode.AUTOMATIC) {
-    this.dnsModeAutomatic_.prop('checked', true);
+
+  this.dnsModeRadios_
+      .siblings('[value="' + dnsMode + '"]')
+      .prop('checked', true);
+
+  if (dnsMode === DnsMode.MANUAL) {
+    this.dnsModeManualControls_.show();
+  } else {
+    this.dnsModeManualControls_.hide();
   }
 };
 
@@ -152,11 +170,11 @@ NetSimRouterPanel.prototype.refreshAddressTable_ = function (addressTableData) {
 
   addressTableData.forEach(function (row) {
     var displayHostname = row.hostname;
-    if (row.isDnsNode && dnsMode !== NetSimRouterNode.DnsMode.NONE) {
+    if (row.isDnsNode && dnsMode !== DnsMode.NONE) {
       displayHostname += " (DNS)";
     }
     var displayAddress = '';
-    if (dnsMode === NetSimRouterNode.DnsMode.NONE || row.isDnsNode || row.isLocal) {
+    if (dnsMode === DnsMode.NONE || row.isDnsNode || row.isLocal) {
       displayAddress = row.address;
     }
 
@@ -168,7 +186,7 @@ NetSimRouterPanel.prototype.refreshAddressTable_ = function (addressTableData) {
       tableRow.addClass('localNode');
     }
 
-    if (row.isDnsNode){
+    if (row.isDnsNode && dnsMode !== DnsMode.NONE) {
       tableRow.addClass('dnsNode');
     }
 
@@ -180,5 +198,5 @@ NetSimRouterPanel.prototype.getDnsMode_ = function () {
   if (this.myConnectedRouter) {
     return this.myConnectedRouter.dnsMode;
   }
-  return NetSimRouterNode.DnsMode.NONE;
+  return DnsMode.NONE;
 };

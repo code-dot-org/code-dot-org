@@ -107,24 +107,25 @@ var NetSimRouterNode = module.exports = function (shard, row) {
    * @type {ObservableEvent}
    */
   this.stateChange = new ObservableEvent();
-  
+
   /**
-   * Local cache of router hostname => address table.
+   * Local cache of wires attached to this router, used for detecting and
+   * broadcasting relevant changes.
    *
    * Not persisted on server.
    *
    * @type {Array}
    * @private
    */
-  this.addressTableCache_ = [];
+  this.myWireRowCache_ = [];
 
   /**
-   * Event others can observe, which we fire when the local network
-   * address table changes.
+   * Event others can observe, which we fire when the router's set of wires
+   * changes indicating a change in the local network.
    *
    * @type {ObservableEvent}
    */
-  this.addressTableChange = new ObservableEvent();
+  this.wiresChange = new ObservableEvent();
 };
 NetSimRouterNode.inherits(NetSimNode);
 
@@ -424,14 +425,19 @@ NetSimRouterNode.prototype.requestAddress = function (wire, hostname, onComplete
 };
 
 /**
- * Query the wires table and pass the callback a list of addresses and
- * hostnames, which includes this router node and all of the nodes that are
- * connected to this router by an active wire.
- * Returns list of objects in form { hostname:{string}, address:{number} }
- * @returns {Array}
+ * @returns {Array} A list of remote nodes connected to this router, including
+ *          their hostname, address, whether they are the local node, and
+ *          whether they are the current DNS node for the network.
  */
 NetSimRouterNode.prototype.getAddressTable = function () {
-  return this.addressTableCache_;
+  return this.myWireRowCache_.map(function (row) {
+    return {
+      hostname: row.localHostname,
+      address: row.localAddress,
+      isLocal: (row.localNodeID === this.simulateForSender_),
+      isDnsNode: (row.localNodeID === this.dnsNodeID)
+    };
+  }.bind(this));
 };
 
 /**
@@ -470,31 +476,14 @@ NetSimRouterNode.prototype.onMyStateChange_ = function (remoteRow) {
  * @private
  */
 NetSimRouterNode.prototype.onWireTableChange_ = function (rows) {
-  var myWires = rows.filter(function (row) {
+  var myWireRows = rows.filter(function (row) {
     return row.remoteNodeID === this.entityID;
-  }.bind(this)).map(function (row) {
-    return new NetSimWire(this.shard_, row);
   }.bind(this));
 
-  // TODO: How else do we respond to this event?
-
-  this.updateAddressTable(myWires);
-};
-
-NetSimRouterNode.prototype.updateAddressTable = function (myWires) {
-  var newAddressTable = myWires.map(function (wire) {
-    return {
-      hostname: wire.localHostname,
-      address: wire.localAddress,
-      isLocal: (wire.localNodeID === this.simulateForSender_),
-      isDnsNode: (wire.localNodeID === this.dnsNodeID)
-    };
-  }.bind(this));
-
-  if (!_.isEqual(this.addressTableCache_, newAddressTable)) {
-    this.addressTableCache_ = newAddressTable;
-    logger.info("Router address table changed.");
-    this.addressTableChange.notifyObservers(newAddressTable);
+  if (!_.isEqual(this.myWireRowCache_, myWireRows)) {
+    this.myWireRowCache_ = myWireRows;
+    logger.info("Router wires changed.");
+    this.wiresChange.notifyObservers();
   }
 };
 
