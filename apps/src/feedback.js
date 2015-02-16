@@ -712,7 +712,7 @@ FeedbackUtils.prototype.getGeneratedCodeElement_ = function() {
 };
 
 /**
- *
+ * Display the 'Show Code' modal dialog.
  */
 FeedbackUtils.prototype.showGeneratedCode = function(Dialog) {
   var codeDiv = this.getGeneratedCodeElement_();
@@ -743,7 +743,8 @@ FeedbackUtils.prototype.showGeneratedCode = function(Dialog) {
 };
 
 /**
- *
+ * Display the "Clear Puzzle" confirmation dialog.  Calls `callback` if the user
+ * confirms they want to clear the puzzle.
  */
 FeedbackUtils.prototype.showClearPuzzleConfirmation = function(Dialog, callback) {
   var codeDiv = document.createElement('div');
