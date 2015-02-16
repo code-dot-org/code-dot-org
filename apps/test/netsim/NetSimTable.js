@@ -1,12 +1,7 @@
 var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
+var assertEqual = testUtils.assertEqual;
 var NetSimTable = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimTable');
-var _ = testUtils.requireWithGlobalsCheckBuildFolder('utils').getLodash();
-
-var assertEqual = function (left, right) {
-  assert(_.isEqual(left, right),
-      JSON.stringify(left) + ' equals ' + JSON.stringify(right));
-};
 
 /**
  * Storage table API placeholder for testing, always hits callbacks immediately
