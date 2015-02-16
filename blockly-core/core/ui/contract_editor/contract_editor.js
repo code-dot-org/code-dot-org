@@ -8,6 +8,9 @@
 goog.provide('Blockly.ContractEditor');
 
 goog.require('Blockly.FunctionEditor');
+goog.require('Blockly.FunctionalBlockUtils');
+goog.require('Blockly.BlockValueType');
+goog.require('Blockly.FunctionalTypeColors');
 goog.require('Blockly.ContractEditorSectionView');
 goog.require('Blockly.SvgHeader');
 goog.require('Blockly.SvgHighlightBox');
@@ -29,6 +32,13 @@ goog.require('goog.array');
 /** @const */ var EXAMPLE_BLOCK_SECTION_MAGIN_ABOVE = 15; // px
 /** @const */ var FUNCTION_BLOCK_VERTICAL_MARGIN = 15; // px
 /** @const */ var HEADER_HEIGHT = 50; //px
+
+/** @const */ var USER_TYPE_CHOICES = [
+  Blockly.BlockValueType.NUMBER,
+  Blockly.BlockValueType.STRING,
+  Blockly.BlockValueType.IMAGE,
+  Blockly.BlockValueType.BOOLEAN
+];
 
 /** The following must match up with level config parameters */
 /** @const */ var CONTRACT_SECTION_NAME = 'contract';
@@ -91,16 +101,15 @@ goog.inherits(Blockly.ContractEditor, Blockly.FunctionEditor);
 Blockly.ContractEditor.EXAMPLE_BLOCK_TYPE = 'functional_example';
 Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME = 'ACTUAL';
 
-Blockly.ContractEditor.typesToColorsHSV = {
-  // 'none': [0, 0, 0.6], // not available to users
-  'Number': [192, 1.00, 0.99], // 00ccff
-  'string': [180, 1.00, 0.60], // 0099999
-  'image': [285, 1.00, 0.80], // 9900cc
-  'boolean': [90, 1.00, 0.4] // 336600
-};
+Blockly.ContractEditor.typesToColorsHSV = goog.object.filter(
+  Blockly.FunctionalTypeColors,
+  function (value, key) {
+    return goog.array.contains(USER_TYPE_CHOICES, key);
+  }
+);
 
-Blockly.ContractEditor.DEFAULT_OUTPUT_TYPE = 'Number';
-Blockly.ContractEditor.DEFAULT_PARAMETER_TYPE = 'Number';
+Blockly.ContractEditor.DEFAULT_OUTPUT_TYPE = Blockly.BlockValueType.NUMBER;
+Blockly.ContractEditor.DEFAULT_PARAMETER_TYPE = Blockly.BlockValueType.NUMBER;
 
 Blockly.ContractEditor.prototype.definitionBlockType = 'functional_definition';
 Blockly.ContractEditor.prototype.parameterBlockType = 'functional_parameters_get';
