@@ -171,7 +171,6 @@ BigGameLogic.prototype.getFunc_ = function (key) {
  */
 BigGameLogic.prototype.update_target = function (x) {
   return this.getFunc_('update-target')(x);
-  // return this.getFunc_('update-target')(x);
 };
 
 /**
