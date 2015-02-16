@@ -30,7 +30,7 @@ describe("NetSimEntity", function () {
 
   it ("disallows static fetch of base type", function () {
     assertThrows(Error, function () {
-      NetSimEntity.create(NetSimEntity, undefined, function () {});
+      NetSimEntity.get(NetSimEntity, 1, undefined, function () {});
     });
   });
 });
