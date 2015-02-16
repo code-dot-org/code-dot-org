@@ -5899,6 +5899,13 @@ StudioApp.prototype.hasExtraTopBlocks = function () {
 };
 
 /**
+ *
+ */
+StudioApp.prototype.hasQuestionMarksInNumberField = function () {
+  return this.feedback_.hasQuestionMarksInNumberField();
+};
+
+/**
  * @param {Blockly.Block} block Block to check
  * @returns true if the block has a connection without a block attached
  */
@@ -8432,7 +8439,7 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
       return TestResults.INCOMPLETE_BLOCK_IN_FUNCTION;
     }
   }
-  if (this.hasQuestionMarksInNumberField_()) {
+  if (this.hasQuestionMarksInNumberField()) {
     return TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
   }
   if (!this.hasAllRequiredBlocks_(requiredBlocks)) {
@@ -8497,10 +8504,10 @@ FeedbackUtils.prototype.createModalDialogWithIcon = function(options) {
 /**
  * Check for '???' instead of a value in block fields.
  */
-FeedbackUtils.prototype.hasQuestionMarksInNumberField_ = function () {
+FeedbackUtils.prototype.hasQuestionMarksInNumberField = function () {
   return Blockly.mainBlockSpace.getAllBlocks().some(function(block) {
     return block.getTitles().some(function(title) {
-      return title.value_ === '???';
+      return title.value_ === '???' || title.text_ === '???';
     });
   });
 };

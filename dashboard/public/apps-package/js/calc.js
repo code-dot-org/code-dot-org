@@ -347,6 +347,9 @@ Calc.evaluateFunction_ = function (targetSet, userSet) {
   return outcome;
 };
 
+/**
+ * @returns outcome object
+ */
 Calc.evaluateResults_ = function (targetSet, userSet) {
   var identical, user, target;
   var outcome = {
@@ -467,6 +470,12 @@ function generateResults() {
     } else {
       appState.message = calcMsg.emptyFunctionalBlock();
     }
+    return;
+  }
+
+  if (studioApp.hasQuestionMarksInNumberField()) {
+    appState.result = ResultType.FAILURE;
+    appState.testResults = TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
     return;
   }
 
