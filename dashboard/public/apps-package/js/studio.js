@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({151:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({154:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Studio = require('./studio');
@@ -16,7 +16,7 @@ window.studioMain = function(options) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":3,"./blocks":145,"./levels":150,"./skins":153,"./studio":154}],154:[function(require,module,exports){
+},{"../appMain":3,"./blocks":148,"./levels":153,"./skins":156,"./studio":157}],157:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -269,6 +269,19 @@ var drawMap = function () {
       spriteIcon.setAttribute('id', 'sprite' + i);
       spriteIcon.setAttribute('clip-path', 'url(#spriteClipPath' + i + ')');
       svg.appendChild(spriteIcon);
+
+      // Add support for walking spritesheet.
+      var spriteWalkIcon = document.createElementNS(SVG_NS, 'image');
+      spriteWalkIcon.setAttribute('id', 'spriteWalk' + i);
+      spriteWalkIcon.setAttribute('clip-path', 'url(#spriteWalkClipPath' + i + ')');
+      svg.appendChild(spriteWalkIcon);
+
+      var spriteWalkClip = document.createElementNS(SVG_NS, 'clipPath');
+      spriteWalkClip.setAttribute('id', 'spriteWalkClipPath' + i);
+      var spriteWalkClipRect = document.createElementNS(SVG_NS, 'rect');
+      spriteWalkClipRect.setAttribute('id', 'spriteWalkClipRect' + i);
+      spriteWalkClip.appendChild(spriteWalkClipRect);
+      svg.appendChild(spriteWalkClip);
 
       dom.addMouseDownTouchEvent(spriteIcon,
         delegate(this, Studio.onSpriteClicked, i));
@@ -573,6 +586,20 @@ function callHandler (name, allowQueueExtension) {
   });
 }
 
+/**
+ * This is a little weird, but is effectively a way for us to call api code
+ * (i.e. the methods in studio/api.js) so that we can essentially simulate
+ * generated code. It does this by creating an event handler for the given name,
+ * calling the handler - which results in func being executed to generate a
+ * command queue - and then executing the command queue.
+ */
+Studio.callApiCode = function (name, func) {
+  registerEventHandler(Studio.eventHandlers, name, func);
+  // generate the cmdQueue
+  callHandler(name);
+  Studio.executeQueue(name);
+};
+
 Studio.onTick = function() {
   Studio.tickCount++;
 
@@ -690,13 +717,16 @@ Studio.onTick = function() {
   for (i = 0; i < Studio.spriteCount; i++) {
     performQueuedMoves(i);
 
+    var isWalking = true;
+
     // After 5 ticks of no movement, turn sprite forward
     if (Studio.tickCount - Studio.sprite[i].lastMove > TICKS_BEFORE_FACE_SOUTH) {
       Studio.sprite[i].dir = Direction.SOUTH;
+      isWalking = false;
     }
 
     // Display sprite:
-    Studio.displaySprite(i);
+    Studio.displaySprite(i, isWalking);
   }
 
   for (i = 0; i < Studio.projectiles.length; i++) {
@@ -1677,6 +1707,16 @@ frameDirTable[Direction.NORTHWEST]  = 4;
 frameDirTable[Direction.WEST]       = 5;
 frameDirTable[Direction.SOUTHWEST]  = 6;
 
+var frameDirTableWalking = {};
+frameDirTableWalking[Direction.SOUTH]      = 0;
+frameDirTableWalking[Direction.SOUTHEAST]  = 1;
+frameDirTableWalking[Direction.EAST]       = 2;
+frameDirTableWalking[Direction.NORTHEAST]  = 3;
+frameDirTableWalking[Direction.NORTH]      = 4;
+frameDirTableWalking[Direction.NORTHWEST]  = 5;
+frameDirTableWalking[Direction.WEST]       = 6;
+frameDirTableWalking[Direction.SOUTHWEST]  = 7;
+
 var ANIM_RATE = 6;
 var ANIM_OFFSET = 7; // Each sprite animates at a slightly different time
 var ANIM_AFTER_NUM_NORMAL_FRAMES = 8;
@@ -1687,11 +1727,29 @@ var TICKS_BEFORE_FACE_SOUTH = 5;
 /**
  * Given direction/emotion/tickCount, calculate which frame number we should
  * display for sprite.
+ * @param {boolean} opts.walkDirection - Return walking direction (0-7)
+ * @param {boolean} opts.walkFrame - Return walking animation frame
  */
-function spriteFrameNumber (index) {
+function spriteFrameNumber (index, opts) {
   var sprite = Studio.sprite[index];
   var frameNum = 0;
-  if (sprite.frameCounts.turns === 7 && sprite.displayDir !== Direction.SOUTH) {
+
+  var currentTime = new Date();
+  var elapsed = currentTime - Studio.startTime;
+
+  if (opts && opts.walkDirection) {
+    return frameDirTableWalking[sprite.displayDir];
+  }
+  else if (opts && opts.walkFrame && sprite.timePerFrame) {
+    return Math.floor(elapsed / sprite.timePerFrame) % sprite.frameCounts.walk;
+  }
+
+  if ((sprite.frameCounts.turns === 8) && sprite.displayDir !== Direction.SOUTH) {
+    // turn frames start after normal and animation frames
+    return sprite.frameCounts.normal + sprite.frameCounts.animation + 1 +
+      frameDirTable[sprite.displayDir];
+  }
+  if ((sprite.frameCounts.turns === 7) && sprite.displayDir !== Direction.SOUTH) {
     // turn frames start after normal and animation frames
     return sprite.frameCounts.normal + sprite.frameCounts.animation +
       frameDirTable[sprite.displayDir];
@@ -1707,16 +1765,13 @@ function spriteFrameNumber (index) {
   }
 
   if (sprite.frameCounts.normal > 1 && sprite.timePerFrame) {
-    var currentTime = new Date();
-    var ellapsed = currentTime - Studio.startTime;
-
-    // Use ellapsed time instead of tickCount
-    frameNum = Math.floor(ellapsed / sprite.timePerFrame) % sprite.frameCounts.normal;
+    // Use elapsed time instead of tickCount
+    frameNum = Math.floor(elapsed / sprite.timePerFrame) % sprite.frameCounts.normal;
   }
 
   if (!frameNum && sprite.emotion !== Emotions.NORMAL &&
     sprite.frameCounts.emotions > 0) {
-    // emotion frames proceed normal, animation, turn frames
+    // emotion frames precede normal, animation, turn frames
     frameNum = sprite.frameCounts.normal + sprite.frameCounts.animation +
       sprite.frameCounts.turns + (sprite.emotion - 1);
   }
@@ -1743,7 +1798,7 @@ var updateSpeechBubblePath = function (element) {
                                               onRight));
 };
 
-Studio.displaySprite = function(i) {
+Studio.displaySprite = function(i, isWalking) {
   var sprite = Studio.sprite[i];
 
   // avoid lots of unnecessary changes to hidden sprites
@@ -1751,10 +1806,36 @@ Studio.displaySprite = function(i) {
     return;
   }
 
-  var xOffset = sprite.width * spriteFrameNumber(i);
+  var spriteRegularIcon = document.getElementById('sprite' + i);
+  var spriteWalkIcon = document.getElementById('spriteWalk' + i);
 
-  var spriteIcon = document.getElementById('sprite' + i);
-  var spriteClipRect = document.getElementById('spriteClipRect' + i);
+  var spriteIcon, spriteClipRect, unusedSpriteClipRect;
+  var xOffset, yOffset;
+
+  if (sprite.value !== undefined && skin[sprite.value] && skin[sprite.value].walk && isWalking) {
+    // Show walk sprite, and hide regular sprite.
+    spriteRegularIcon.setAttribute('visibility', 'hidden');
+    spriteWalkIcon.setAttribute('visibility', 'visible');
+
+    xOffset = sprite.width * spriteFrameNumber(i, {walkDirection: true});
+    yOffset = sprite.height * spriteFrameNumber(i, {walkFrame: true});
+
+    spriteIcon = spriteWalkIcon;
+    spriteClipRect = document.getElementById('spriteWalkClipRect' + i);
+    unusedSpriteClipRect = document.getElementById('spriteClipRect' + i);
+
+  } else {
+    // Show regular sprite, and hide walk sprite.
+    spriteRegularIcon.setAttribute('visibility', 'visible');
+    spriteWalkIcon.setAttribute('visibility', 'hidden');
+
+    xOffset = sprite.width * spriteFrameNumber(i);
+    yOffset = 0;
+
+    spriteIcon = spriteRegularIcon;
+    spriteClipRect = document.getElementById('spriteClipRect' + i);
+    unusedSpriteClipRect = document.getElementById('spriteWalkClipRect' + i);
+  }
 
   var xCoordPrev = spriteClipRect.getAttribute('x');
   var yCoordPrev = spriteClipRect.getAttribute('y');
@@ -1787,10 +1868,16 @@ Studio.displaySprite = function(i) {
   }
 
   spriteIcon.setAttribute('x', sprite.x - xOffset);
-  spriteIcon.setAttribute('y', sprite.y);
+  spriteIcon.setAttribute('y', sprite.y - yOffset);
 
   spriteClipRect.setAttribute('x', sprite.x);
   spriteClipRect.setAttribute('y', sprite.y);
+
+  // Update the other clip rect too, so that calculations involving
+  // inter-frame differences (just above, to calculate sprite.dir)
+  // are correct when we transition between spritesheets.
+  unusedSpriteClipRect.setAttribute('x', sprite.x);
+  unusedSpriteClipRect.setAttribute('y', sprite.y);
 
   var speechBubble = document.getElementById('speechBubble' + i);
   var speechBubblePath = document.getElementById('speechBubblePath' + i);
@@ -2096,6 +2183,19 @@ Studio.setSprite = function (opts) {
   if (!spriteIcon) {
     return;
   }
+
+  // If this skin has walking spritesheet, then load that too.
+  var spriteWalk = null;
+  if (spriteValue !== undefined && skin[spriteValue] && skin[spriteValue].walk) {
+    spriteWalk = document.getElementById('spriteWalk' + spriteIndex);
+    if (!spriteWalk) {
+      return;
+    }
+
+    // Hide the walking sprite at this stage.
+    spriteWalk.setAttribute('visibility', 'hidden');
+  }
+
   sprite.visible = (spriteValue !== 'hidden' && !opts.forceHidden);
   spriteIcon.setAttribute('visibility', sprite.visible ? 'visible' : 'hidden');
   sprite.value = opts.forceHidden ? 'hidden' : opts.value;
@@ -2123,6 +2223,20 @@ Studio.setSprite = function (opts) {
     skin[spriteValue].sprite);
   spriteIcon.setAttribute('width', sprite.width * spriteTotalFrames(spriteIndex));
   spriteIcon.setAttribute('height', sprite.height);
+
+  if (spriteWalk) {
+    // And set up the cliprect so we can show the right item from the spritesheet.
+    var spriteWalkClipRect = document.getElementById('spriteWalkClipRect' + spriteIndex);
+    spriteWalkClipRect.setAttribute('width', sprite.width);
+    spriteWalkClipRect.setAttribute('height', sprite.height);
+
+    spriteWalk.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
+      skin[spriteValue].walk);
+    var spriteFramecounts = Studio.sprite[spriteIndex].frameCounts;
+    spriteWalk.setAttribute('width', sprite.width * spriteFramecounts.turns); // 800
+    spriteWalk.setAttribute('height', sprite.height * spriteFramecounts.walk); // 1200
+  }
+
   // call display right away since the frame number may have changed:
   Studio.displaySprite(spriteIndex);
 };
@@ -2811,7 +2925,7 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/current/common":187,"../../locale/current/studio":193,"../StudioApp":2,"../canvg/StackBlur.js":38,"../canvg/canvg.js":39,"../canvg/rgbcolor.js":40,"../canvg/svg_todataurl":41,"../codegen":42,"../constants":43,"../dom":44,"../skins":141,"../templates/page.html":162,"../utils":182,"../xml":183,"./api":143,"./bigGameLogic":144,"./blocks":145,"./collidable":146,"./constants":147,"./controls.html":148,"./extraControlRows.html":149,"./projectile":152,"./visualization.html":155}],155:[function(require,module,exports){
+},{"../../locale/current/common":190,"../../locale/current/studio":196,"../StudioApp":2,"../canvg/StackBlur.js":38,"../canvg/canvg.js":39,"../canvg/rgbcolor.js":40,"../canvg/svg_todataurl":41,"../codegen":42,"../constants":43,"../dom":44,"../skins":144,"../templates/page.html":165,"../utils":185,"../xml":186,"./api":146,"./bigGameLogic":147,"./blocks":148,"./collidable":149,"./constants":150,"./controls.html":151,"./extraControlRows.html":152,"./projectile":155,"./visualization.html":158}],158:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2831,7 +2945,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":203}],152:[function(require,module,exports){
+},{"ejs":206}],155:[function(require,module,exports){
 var Collidable = require('./collidable');
 var Direction = require('./constants').Direction;
 var constants = require('./constants');
@@ -3005,7 +3119,7 @@ Projectile.prototype.moveToNextPosition = function () {
   this.y = next.y;
 };
 
-},{"./collidable":146,"./constants":147}],153:[function(require,module,exports){
+},{"./collidable":149,"./constants":150}],156:[function(require,module,exports){
 /**
  * Load Skin for Studio.
  */
@@ -3045,12 +3159,14 @@ function loadInfinity(skin, assetUrl) {
   skin.avatarList.forEach(function (name) {
     skin[name] = {
       sprite: skin.assetUrl('avatar_' + name + '.png'),
+      walk: skin.assetUrl('walk_' + name + '.png'),
       dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
       frameCounts: {
-        normal: 20,
+        normal: 19,
         animation: 0,
-        turns: 7,
-        emotions: 0
+        turns: 8,
+        emotions: 0,
+        walk: 12
       },
       timePerFrame: 100
     };
@@ -3345,7 +3461,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../../locale/current/studio":193,"../skins":141,"./constants":147}],150:[function(require,module,exports){
+},{"../../locale/current/studio":196,"../skins":144,"./constants":150}],153:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/studio');
@@ -4814,7 +4930,7 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
   'startBlocks': "",
 });
 
-},{"../../locale/current/studio":193,"../block_utils":17,"../utils":182,"./constants":147}],149:[function(require,module,exports){
+},{"../../locale/current/studio":196,"../block_utils":17,"../utils":185,"./constants":150}],152:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4834,7 +4950,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":187,"ejs":203}],148:[function(require,module,exports){
+},{"../../locale/current/common":190,"ejs":206}],151:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4854,7 +4970,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":187,"ejs":203}],146:[function(require,module,exports){
+},{"../../locale/current/common":190,"ejs":206}],149:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -4960,7 +5076,7 @@ Collidable.prototype.outOfBounds = function () {
          (this.y > studioApp.MAZE_HEIGHT + (this.height / 2));
 };
 
-},{"../StudioApp":2,"./constants":147}],145:[function(require,module,exports){
+},{"../StudioApp":2,"./constants":150}],148:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -6699,18 +6815,69 @@ exports.install = function(blockly, blockInstallOptions) {
     // in the global space. This may change in the future.
   };
 
+  /**
+   * functional_start_setFuncs
+   * Even those this is called setFuncs, we are passed both functions and
+   * variables. Our generator stashes the passed values on our customLogic
+   * object (which is BigGameLogic).
+   */
   blockly.Blocks.functional_start_setFuncs = {
     init: function() {
-      var blockName = msg.startSetFuncs();
-      var blockType = 'none';
-      var blockArgs = [
+      this.blockArgs = [
+        {name: 'title', type: 'string'},
+        {name: 'subtitle', type: 'string'},
+        {name: 'background', type: 'image'},
+        {name: 'danger', type: 'image'},
+        {name: 'target', type: 'image'},
+        {name: 'player', type: 'image'},
         {name: 'update-target', type: 'function'},
         {name: 'update-danger', type: 'function'},
         {name: 'update-player', type: 'function'},
         {name: 'collide?', type: 'function'},
         {name: 'on-screen?', type: 'function'}
       ];
-      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+      this.setFunctional(true, {
+        headerHeight: 30
+      });
+      this.setHSV.apply(this, functionalBlockUtils.colors.none);
+
+      var options = {
+        fixedSize: { height: 35 }
+      };
+
+      this.appendDummyInput()
+        .appendTitle(new Blockly.FieldLabel('game_funcs', options))
+        .setAlign(Blockly.ALIGN_LEFT);
+
+      var rows = [
+        'title, subtitle, background',
+        [this.blockArgs[0], this.blockArgs[1], this.blockArgs[2]],
+        'danger, target, player',
+        [this.blockArgs[3], this.blockArgs[4], this.blockArgs[5]],
+        'update-target, update-danger, update-player',
+        [this.blockArgs[6], this.blockArgs[7], this.blockArgs[8]],
+        'collide?, on-screen?',
+        [this.blockArgs[9], this.blockArgs[10]]
+      ];
+
+      rows.forEach(function (row) {
+        if (typeof(row) === 'string') {
+          this.appendDummyInput()
+            .appendTitle(new Blockly.FieldLabel(row));
+        } else {
+          row.forEach(function (blockArg, index) {
+            var input = this.appendFunctionalInput(blockArg.name);
+            if (index !== 0) {
+              input.setInline(true);
+            }
+            input.setHSV.apply(input, functionalBlockUtils.colors[blockArg.type]);
+            input.setCheck(blockArg.type);
+            input.setAlign(Blockly.ALIGN_LEFT);
+          }, this);
+        }
+      }, this);
+
+      this.setFunctionalOutput(false);
     }
   };
 
@@ -6718,19 +6885,13 @@ exports.install = function(blockly, blockInstallOptions) {
     // For each of our inputs (i.e. update-target, update-danger, etc.) get
     // the attached block and figure out what it's function name is. Store
     // that on BigGameLogic so we can know what functions to call later.
-    this.inputList.forEach(function (input) {
-      if (input.type !== Blockly.FUNCTIONAL_INPUT) {
-        return;
-      }
-      var inputBlock = this.getInputTargetBlock(input.name);
+    this.blockArgs.forEach(function (arg) {
+      var inputBlock = this.getInputTargetBlock(arg.name);
       if (!inputBlock) {
         return;
       }
-      var inputBlockName = inputBlock.getTitleValue('NAME');
-      var functionName = Blockly.JavaScript.variableDB_.getName(inputBlockName,
-        Blockly.Procedures.NAME_TYPE);
 
-      Studio.customLogic.functionNames[input.name] = functionName;
+      Studio.customLogic.cacheBlock(arg.name, inputBlock);
     }, this);
   };
 
@@ -6949,10 +7110,14 @@ function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpr
   };
 }
 
-},{"../../locale/current/common":187,"../../locale/current/studio":193,"../StudioApp":2,"../codegen":42,"../functionalBlockUtils":74,"../sharedFunctionalBlocks":140,"../utils":182,"./constants":147}],193:[function(require,module,exports){
+},{"../../locale/current/common":190,"../../locale/current/studio":196,"../StudioApp":2,"../codegen":42,"../functionalBlockUtils":74,"../sharedFunctionalBlocks":143,"../utils":185,"./constants":150}],196:[function(require,module,exports){
 /*studio*/ module.exports = window.blockly.appLocale;
-},{}],144:[function(require,module,exports){
-var Direction = require('./constants').Direction;
+},{}],147:[function(require,module,exports){
+var studioConstants = require('./constants');
+var Direction = studioConstants.Direction;
+var Position = studioConstants.Position;
+var codegen = require('../codegen');
+var api = require('./api');
 
 /**
  * Interface for a set of custom game logic for playlab
@@ -6975,7 +7140,7 @@ function CustomGameLogic(studio) {}
  */
 var BigGameLogic = function (studio) {
   this.studio_ = studio;
-  this.functionNames = {};
+  this.cached_ = {};
 
   this.playerSpriteIndex = 0;
   this.targetSpriteIndex = 1;
@@ -6983,10 +7148,14 @@ var BigGameLogic = function (studio) {
 };
 
 BigGameLogic.prototype.onTick = function () {
+  if (this.studio_.tickCount === 1) {
+    this.onFirstTick_();
+    return;
+  }
+
    // Don't start until the title is over
   var titleScreenTitle = document.getElementById('titleScreenTitle');
-  if (this.studio_.tickCount <= 1 ||
-      titleScreenTitle.getAttribute('visibility') === "visible") {
+  if (titleScreenTitle.getAttribute('visibility') === "visible") {
     return;
   }
 
@@ -6998,23 +7167,40 @@ BigGameLogic.prototype.onTick = function () {
   // For every key and button down, call update_player
   for (var key in this.studio_.keyState) {
     if (this.studio_.keyState[key] === 'keydown') {
-      this.updatePlayer_(key);
+      this.handleUpdatePlayer_(key);
     }
   }
 
   for (var btn in this.studio_.btnState) {
     if (this.studio_.btnState[btn]) {
       if (btn === 'leftButton') {
-        this.updatePlayer_(37);
+        this.handleUpdatePlayer_(37);
       } else if (btn === 'upButton') {
-        this.updatePlayer_(38);
+        this.handleUpdatePlayer_(38);
       } else if (btn === 'rightButton') {
-        this.updatePlayer_(39);
+        this.handleUpdatePlayer_(39);
       } else if (btn === 'downButton') {
-        this.updatePlayer_(40);
+        this.handleUpdatePlayer_(40);
       }
     }
   }
+};
+
+/**
+ * When game starts logic
+ */
+BigGameLogic.prototype.onFirstTick_ = function () {
+  var func = function (StudioApp, Studio, Globals) {
+    Studio.setBackground(null, this.getVar_('background'));
+    Studio.setSpritePosition(null, this.playerSpriteIndex, Position.MIDDLECENTER);
+    Studio.setSprite(null, this.playerSpriteIndex, this.getVar_('player'));
+    Studio.setSpritePosition(null, this.targetSpriteIndex, Position.TOPLEFT);
+    Studio.setSprite(null, this.targetSpriteIndex, this.getVar_('target'));
+    Studio.setSpritePosition(null, this.dangerSpriteIndex, Position.BOTTOMRIGHT);
+    Studio.setSprite(null, this.dangerSpriteIndex, this.getVar_('danger'));
+    Studio.showTitleScreen(null, this.getVar_('title'), this.getVar_('subtitle'));
+  }.bind(this);
+  this.studio_.callApiCode('BigGame.onFirstTick', func);
 };
 
 /**
@@ -7045,7 +7231,7 @@ BigGameLogic.prototype.updateSpriteX_ = function (spriteIndex, updateFunction) {
 /**
  * Update the player sprite, using the user provided function.
  */
-BigGameLogic.prototype.updatePlayer_ = function (key) {
+BigGameLogic.prototype.handleUpdatePlayer_ = function (key) {
   var playerSprite = this.studio_.sprite[this.playerSpriteIndex];
 
   // invert Y
@@ -7057,13 +7243,49 @@ BigGameLogic.prototype.updatePlayer_ = function (key) {
   playerSprite.y = this.studio_.MAZE_HEIGHT - newUserSpaceY;
 };
 
+BigGameLogic.prototype.cacheBlock = function (key, block) {
+  this.cached_[key] = block;
+};
+
+/**
+ * Takes a cached block for a function of variable, and calculates the value
+ * @returns The result of calling the code for the cached block. If the cached
+ *   block was a function_pass, this means we get back a function that can
+ *   now be called.
+ */
+BigGameLogic.prototype.resolveCachedBlock_ = function (key) {
+  var result = '';
+  var block = this.cached_[key];
+  if (!block) {
+    return result;
+  }
+
+  var code = 'return ' + Blockly.JavaScript.blockToCode(block);
+  result = codegen.evalWith(code, {
+    Studio: api,
+    Globals: Studio.Globals
+  });
+  return result;
+};
+
+/**
+ * getVar/getFunc just call resolveCachedBlock_, but are provided for clarity
+ */
+BigGameLogic.prototype.getVar_ = function (key) {
+  return this.resolveCachedBlock_(key);
+};
+
+BigGameLogic.prototype.getFunc_ = function (key) {
+  return this.resolveCachedBlock_(key);
+};
+
 /**
  * Calls the user provided update_target function, or no-op if none was provided.
  * @param {number} x Current x location of target
  * @returns {number} New x location of target
  */
 BigGameLogic.prototype.update_target = function (x) {
-  return this.getPassedFunction_('update-target')(x);
+  return this.getFunc_('update-target')(x);
 };
 
 /**
@@ -7072,7 +7294,7 @@ BigGameLogic.prototype.update_target = function (x) {
  * @returns {number} New x location of the danger target
  */
 BigGameLogic.prototype.update_danger = function (x) {
-  return this.getPassedFunction_('update-danger')(x);
+  return this.getFunc_('update-danger')(x);
 };
 
 /**
@@ -7082,7 +7304,7 @@ BigGameLogic.prototype.update_danger = function (x) {
  * @returns {number} New y location of the player
  */
 BigGameLogic.prototype.update_player = function (key, y) {
-  return this.getPassedFunction_('update-player')(key, y);
+  return this.getFunc_('update-player')(key, y);
 };
 
 /**
@@ -7091,7 +7313,7 @@ BigGameLogic.prototype.update_player = function (key, y) {
  * @returns {boolean} True if x location is onscreen?
  */
 BigGameLogic.prototype.onscreen = function (x) {
-  return this.getPassedFunction_('on-screen?')(x);
+  return this.getFunc_('on-screen?')(x);
 };
 
 /**
@@ -7103,29 +7325,13 @@ BigGameLogic.prototype.onscreen = function (x) {
  * @returns {boolean} True if objects collide
  */
 BigGameLogic.prototype.collide = function (px, py, cx, cy) {
-  return this.getPassedFunction_('collide?')(px, py, cx, cy);
+  return this.getFunc_('collide?')(px, py, cx, cy);
 };
 
-/**
- * @returns the user function that was passed in
- */
-BigGameLogic.prototype.getPassedFunction_ = function (name) {
-  var userFunctionName = this.functionNames[name];
-  if (!userFunctionName) {
-    return function () {}; // noop
-  }
-
-  var userFunction = this.studio_.Globals[userFunctionName];
-  if (!userFunction) {
-    throw new Error('Unexepcted');
-  }
-
-  return userFunction;
-};
 
 module.exports = BigGameLogic;
 
-},{"./constants":147}],143:[function(require,module,exports){
+},{"../codegen":42,"./api":146,"./constants":150}],146:[function(require,module,exports){
 var constants = require('./constants');
 
 exports.SpriteSpeed = {
@@ -7289,7 +7495,7 @@ exports.isKeyDown = function (keyCode) {
   return Studio.keyState[keyCode] === 'keydown';
 };
 
-},{"./constants":147}],147:[function(require,module,exports){
+},{"./constants":150}],150:[function(require,module,exports){
 'use strict';
 
 exports.Direction = {
@@ -8591,4 +8797,4 @@ function BlurStack()
 	this.a = 0;
 	this.next = null;
 }
-},{}]},{},[151]);
+},{}]},{},[154]);

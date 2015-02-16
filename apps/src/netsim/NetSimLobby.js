@@ -1,24 +1,3 @@
-/**
- * Copyright 2015 Code.org
- * http://code.org/
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-/**
- * @fileoverview Generator and controller for shard lobby/connection controls.
- */
-
 /* jshint
  funcscope: true,
  newcap: true,
@@ -35,18 +14,13 @@
 
 var dom = require('../dom');
 var utils = require('../utils');
-var NetSimNodeClient = require('./NetSimNodeClient');
-var NetSimNodeRouter = require('./NetSimNodeRouter');
+var netsimUtils = require('./netsimUtils');
+var NetSimLogger = require('./NetSimLogger');
+var NetSimClientNode = require('./NetSimClientNode');
+var NetSimRouterNode = require('./NetSimRouterNode');
 var markup = require('./NetSimLobby.html');
-var periodicAction = require('./periodicAction');
 
-/**
- * How often the lobby should be auto-refreshed.
- * @type {number}
- * @const
- */
-var AUTO_REFRESH_INTERVAL_MS = 5000;
-var CLOSED_REFRESH_INTERVAL_MS = 30000;
+var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
 
 /**
  * Value of any option in the shard selector that does not
@@ -57,13 +31,15 @@ var CLOSED_REFRESH_INTERVAL_MS = 30000;
 var SELECTOR_NONE_VALUE = 'none';
 
 /**
+ * Generator and controller for shard lobby/connection controls.
+ *
  * @param {NetSimConnection} connection - The shard connection that this
  *        lobby control will manipulate.
  * @param {DashboardUser} user - The current user, logged in or not.
  * @param {string} [shardID]
  * @constructor
  */
-var NetSimLobby = function (connection, user, shardID) {
+var NetSimLobby = module.exports = function (connection, user, shardID) {
 
   /**
    * Shard connection that this lobby control will manipulate.
@@ -72,6 +48,16 @@ var NetSimLobby = function (connection, user, shardID) {
    */
   this.connection_ = connection;
   this.connection_.statusChanges.register(this.refresh_.bind(this));
+  logger.info("NetSimLobby registered to connection statusChanges");
+  this.connection_.shardChange.register(this.onShardChange_.bind(this));
+  logger.info("NetSimLobby registered to connection shardChanges");
+
+  /**
+   * A reference to the currently connected shard.
+   * @type {?NetSimShard}
+   * @private
+   */
+  this.shard_ = null;
 
   /**
    * Current user, logged in or no.
@@ -88,14 +74,6 @@ var NetSimLobby = function (connection, user, shardID) {
   this.overrideShardID_ = shardID;
 
   /**
-   * Helper for running a regular lobby refresh
-   * @type {periodicAction}
-   * @private
-   */
-  this.periodicRefresh_ = periodicAction(this.refresh_.bind(this),
-      AUTO_REFRESH_INTERVAL_MS);
-
-  /**
    * Which item in the lobby is currently selected
    * @type {number}
    * @private
@@ -109,13 +87,12 @@ var NetSimLobby = function (connection, user, shardID) {
    */
   this.selectedListItem_ = undefined;
 };
-module.exports = NetSimLobby;
 
 /**
  * Generate a new NetSimLobby object, putting
  * its markup within the provided element and returning
  * the controller object.
- * @param {DOMElement} element The container for the lobby markup
+ * @param {HTMLElement} element The container for the lobby markup
  * @param {NetSimConnection} connection The connection manager to use
  * @param {DashboardUser} user The current user info
  * @param {string} [shardID] A particular shard ID to use, can be omitted which
@@ -183,11 +160,30 @@ NetSimLobby.prototype.bindElements_ = function () {
 };
 
 /**
- * Attach own handlers to run loop events.
- * @param {RunLoop} runLoop
+ * Called whenever the connection notifies us that we've connected to,
+ * or disconnected from, a shard.
+ * @param {?NetSimShard} newShard - null if disconnected.
+ * @private
  */
-NetSimLobby.prototype.attachToRunLoop = function (runLoop) {
-  this.periodicRefresh_.attachToRunLoop(runLoop);
+NetSimLobby.prototype.onShardChange_= function (newShard) {
+  this.shard_ = newShard;
+  if (this.shard_ !== null) {
+    this.shard_.nodeTable.tableChange
+        .register(this.onNodeTableChange_.bind(this));
+    logger.info("NetSimLobby registered to nodeTable tableChange");
+  }
+};
+
+/**
+ * Called whenever a change is detected in the nodes table - which should
+ * trigger a refresh of the lobby listing
+ * @param {!Array} rows
+ * @private
+ */
+NetSimLobby.prototype.onNodeTableChange_ = function (rows) {
+  // Refresh lobby listing.
+  var nodes = netsimUtils.nodesFromRows(this.shard_, rows);
+  this.refreshLobbyList_(nodes);
 };
 
 NetSimLobby.prototype.setNameButtonClick_ = function () {
@@ -201,7 +197,6 @@ NetSimLobby.prototype.setNameButtonClick_ = function () {
 NetSimLobby.prototype.onShardSelectorChange_ = function () {
   if (this.connection_.isConnectedToShard()) {
     this.connection_.disconnectFromShard();
-    this.periodicRefresh_.disable();
     this.nameInput_.disabled = false;
   }
 
@@ -336,9 +331,6 @@ NetSimLobby.prototype.refreshClosedLobby_ = function () {
   // Share link state?
 
   // Disconnect button state?
-
-  this.periodicRefresh_.setActionInterval(CLOSED_REFRESH_INTERVAL_MS);
-  this.periodicRefresh_.enable();
 };
 
 /**
@@ -355,7 +347,6 @@ NetSimLobby.prototype.refreshOpenLobby_ = function () {
     this.setNameButton_.show();
 
     this.shardView_.hide();
-    this.periodicRefresh_.disable();
     return;
   }
 
@@ -370,7 +361,6 @@ NetSimLobby.prototype.refreshOpenLobby_ = function () {
     this.addRouterButton_.hide();
     this.lobbyList_.hide();
     this.connectButton_.hide();
-    this.periodicRefresh_.disable();
     return;
   }
 
@@ -378,57 +368,55 @@ NetSimLobby.prototype.refreshOpenLobby_ = function () {
   this.addRouterButton_.show();
   this.lobbyList_.show();
   this.connectButton_.show();
-  this.refreshLobbyList_();
+  this.connection_.getAllNodes(function (lobbyData) {
+    this.refreshLobbyList_(lobbyData);
+  }.bind(this));
 };
 
 /**
  * Reload the lobby listing of nodes.
+ * @param {!Array.<NetSimClientNode>} lobbyData
  * @private
  */
-NetSimLobby.prototype.refreshLobbyList_ = function () {
-  var self = this;
-  this.connection_.getAllNodes(function (lobbyData) {
-    self.lobbyList_.empty();
+NetSimLobby.prototype.refreshLobbyList_ = function (lobbyData) {
+  this.lobbyList_.empty();
 
-    lobbyData.sort(function (a, b) {
-      if (a.getDisplayName() > b.getDisplayName()) {
-        return 1;
-      }
-      return -1;
-    });
-
-    self.selectedListItem_ = undefined;
-    lobbyData.forEach(function (simNode) {
-      var item = $('<li>').html(
-          simNode.getDisplayName() + ' : ' +
-          simNode.getStatus() + ' ' +
-          simNode.getStatusDetail());
-
-      // Style rows by row type.
-      if (simNode.getNodeType() === NetSimNodeRouter.getNodeType()) {
-        item.addClass('router_row');
-      } else {
-        item.addClass('user_row');
-        if (simNode.entityID === self.connection_.myNode.entityID) {
-          item.addClass('own_row');
-        }
-      }
-
-      // Preserve selected item across refresh.
-      if (simNode.entityID === self.selectedID_) {
-        item.addClass('selected_row');
-        self.selectedListItem_ = item;
-      }
-
-      dom.addClickTouchEvent(item[0], self.onRowClick_.bind(self, item, simNode));
-      item.appendTo(self.lobbyList_);
-    });
-
-    self.onSelectionChange();
-
-    self.periodicRefresh_.setActionInterval(AUTO_REFRESH_INTERVAL_MS);
-    self.periodicRefresh_.enable();
+  lobbyData.sort(function (a, b) {
+    // TODO (bbuchanan): Make this sort localization-friendly.
+    if (a.getDisplayName() > b.getDisplayName()) {
+      return 1;
+    }
+    return -1;
   });
+
+  this.selectedListItem_ = undefined;
+  lobbyData.forEach(function (simNode) {
+    var item = $('<li>').html(
+        simNode.getDisplayName() + ' : ' +
+        simNode.getStatus() + ' ' +
+        simNode.getStatusDetail());
+
+    // Style rows by row type.
+    if (simNode.getNodeType() === NetSimRouterNode.getNodeType()) {
+      item.addClass('router_row');
+    } else {
+      item.addClass('user_row');
+      if (simNode.entityID === this.connection_.myNode.entityID) {
+        item.addClass('own_row');
+      }
+    }
+
+    // Preserve selected item across refresh.
+    if (simNode.entityID === this.selectedID_) {
+      item.addClass('selected_row');
+      this.selectedListItem_ = item;
+    }
+
+    dom.addClickTouchEvent(item[0], this.onRowClick_.bind(this, item, simNode));
+    item.appendTo(this.lobbyList_);
+  }.bind(this));
+
+  this.onSelectionChange();
 };
 
 /**
@@ -437,7 +425,7 @@ NetSimLobby.prototype.refreshLobbyList_ = function () {
  */
 NetSimLobby.prototype.onRowClick_ = function (listItem, connectionTarget) {
   // Can't select user rows (for now)
-  if (NetSimNodeClient.getNodeType() === connectionTarget.getNodeType()) {
+  if (NetSimClientNode.getNodeType() === connectionTarget.getNodeType()) {
     return;
   }
 
