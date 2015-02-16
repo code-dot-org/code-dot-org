@@ -159,8 +159,8 @@ function installStringEquals(blockly, generator, gensym) {
     helpUrl: '',
     init: function() {
       initTitledFunctionalBlock(this, msg.stringEquals(), blockly.BlockValueType.BOOLEAN, [
-        { name: 'ARG1', type: Blockly.BlockValueType.STRING },
-        { name: 'ARG2', type: Blockly.BlockValueType.STRING }
+        { name: 'ARG1', type: blockly.BlockValueType.STRING },
+        { name: 'ARG2', type: blockly.BlockValueType.STRING }
       ]);
     }
   };
@@ -304,7 +304,7 @@ function installString(blockly, generator) {
         .appendTitle(new Blockly.FieldTextInput(''), 'VAL')
         .appendTitle(new Blockly.FieldLabel('"'))
         .setAlign(Blockly.ALIGN_CENTRE);
-      this.setFunctionalOutput(true, Blockly.BlockValueType.STRING);
+      this.setFunctionalOutput(true, blockly.BlockValueType.STRING);
     }
   };
 
