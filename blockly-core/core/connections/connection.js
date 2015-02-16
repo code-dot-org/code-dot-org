@@ -613,16 +613,17 @@ Blockly.Connection.prototype.checkAllowedConnectionType_ = function(otherConnect
 };
 
 /**
- * Returns whether this connection accepts any type
+ * Returns whether this connection is compatible with any/every type
+ * @returns {boolean}
  */
 Blockly.Connection.prototype.acceptsAnyType = function() {
   return !this.check_ || this.acceptsType_(Blockly.BlockValueType.NONE);
 };
 
 /**
- * Returns whether this connection
+ * Returns whether this connection is compatible with a given type
  * @param type
- * @returns {boolean|*}
+ * @returns {boolean}
  * @private
  */
 Blockly.Connection.prototype.acceptsType_ = function(type) {
