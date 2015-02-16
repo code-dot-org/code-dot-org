@@ -40,9 +40,9 @@ Several documents describe the overarching themes and direction of the course.
 ### 2015
 Revisions and updates to the 2014 docs are coming soon that will include:
 
-- updated timelines and dates for curriculum and PD delivery
-- updated curriculum map and syllabus that reflects changes since 2014
- 
+- CS Principles [Curriculum Overview 2015](/files/CSPCurriculumOverview2015.pdf) (rev. Feb. 2015)
+- An [image of the curriculum](/files/CSPCurriculumMap2015.png)
+- [Unit Coverage of the CSP Framework](/files/CSPFrameworkCoverage.png)
 
 
 <br />
@@ -53,7 +53,7 @@ Revisions and updates to the 2014 docs are coming soon that will include:
 | Link| Unit Description |
 | :------------------:|-----------|
 |  [![binary magic](csp/images/thumb_binaryMagic.png "Unit 1")](/educate/csp/unit1) [Unit 1](/educate/csp/unit1) | **Sending Bits and Encoding Information** What can be represented with a single bit and how do we get a single bit of information from one place to another? This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. Topics include: the digital representation of information - numbers, text, images, and communication protocols | 
-|*Coming Soon*| **Algorithms and Networking** Build students' problem solving skills through unplugged and computer-based problems. Students are asked to express algorithmic solutions with increasing formality of language to analyze algorithms. Topics include: encryption, security, computationally hard problems, and internet protocols|
+|*Coming Soon*| **The Internet** Build students' problem solving skills through unplugged and computer-based problems. Students are asked to express algorithmic solutions with increasing formality of language to analyze algorithms. Topics include: encryption, security, computationally hard problems, and internet protocols|
 |*Coming Soon*| **Programming** Introduces a formal programming language, JavaScript. The programming sequence enables students to write simple programs to be executed in web pages. |
 |*Coming Soon*| **Data** Students will develop an understanding of the nature and structure of data that enables them to ask and answer questions about the data effectively.|
 |*Coming Soon*| **Innovation** Synthesizes the topics covered in the previous units and leads students through a the practice of researching and understanding the technology behind some modern innovations.|

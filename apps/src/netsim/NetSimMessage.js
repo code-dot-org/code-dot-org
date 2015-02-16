@@ -1,26 +1,3 @@
-/**
- * Copyright 2015 Code.org
- * http://code.org/
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-/**
- * @fileoverview Entity for message transmitted between two nodes
- *
- * These should really never be updated, only created and deleted.
- */
-
 /* jshint
  funcscope: true,
  newcap: true,
@@ -32,10 +9,10 @@
  maxparams: 5,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
-var superClass = require('./NetSimEntity');
+require('../utils');
+var NetSimEntity = require('./NetSimEntity');
 
 /**
  * Local controller for a message that is 'on the wire'
@@ -54,13 +31,9 @@ var superClass = require('./NetSimEntity');
  * @constructor
  * @augments NetSimEntity
  */
-var NetSimMessage = function (shard, messageRow) {
-  superClass.call(this, shard, messageRow);
-
-  // Default empty wireRow object
-  if (messageRow === undefined) {
-    messageRow = {};
-  }
+var NetSimMessage = module.exports = function (shard, messageRow) {
+  messageRow = messageRow !== undefined ? messageRow : {};
+  NetSimEntity.call(this, shard, messageRow);
 
   /**
    * Node ID that this message is 'in transit' from.
@@ -80,9 +53,7 @@ var NetSimMessage = function (shard, messageRow) {
    */
   this.payload = messageRow.payload;
 };
-NetSimMessage.prototype = Object.create(superClass.prototype);
-NetSimMessage.prototype.constructor = NetSimMessage;
-module.exports = NetSimMessage;
+NetSimMessage.inherits(NetSimEntity);
 
 /**
  * Static async creation method.  Creates a new message on the given shard,
@@ -113,9 +84,9 @@ NetSimMessage.prototype.getTable_ = function () {
 
 /** Build own row for the message table  */
 NetSimMessage.prototype.buildRow_ = function () {
-  return $.extend(superClass.prototype.buildRow_.call(this), {
+  return {
     fromNodeID: this.fromNodeID,
     toNodeID: this.toNodeID,
     payload: this.payload
-  });
+  };
 };

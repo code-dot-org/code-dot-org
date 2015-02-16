@@ -1,24 +1,3 @@
-/**
- * Copyright 2015 Code.org
- * http://code.org/
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-/**
- * @fileoverview Generator and controller for router information view.
- */
-
 /* jshint
  funcscope: true,
  newcap: true,
@@ -44,11 +23,11 @@ var periodicAction = require('./periodicAction');
 var AUTO_REFRESH_INTERVAL_MS = 5000;
 
 /**
- *
+ * Generator and controller for router information view.
  * @param {NetSimConnection} connection
  * @constructor
  */
-var NetSimRouterPanel = function (connection) {
+var NetSimRouterPanel = module.exports = function (connection) {
   /**
    * Connection that owns the router we will represent / manipulate
    * @type {NetSimConnection}
@@ -68,12 +47,11 @@ var NetSimRouterPanel = function (connection) {
 
   /**
    * Cached reference to router
-   * @type {NetSimNodeRouter}
+   * @type {NetSimRouterNode}
    * @private
    */
   this.myConnectedRouter = undefined;
 };
-module.exports = NetSimRouterPanel;
 
 /**
  * Generate a new NetSimRouterPanel, puttig it on the page and hooking
