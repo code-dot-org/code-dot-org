@@ -586,6 +586,20 @@ function callHandler (name, allowQueueExtension) {
   });
 }
 
+/**
+ * This is a little weird, but is effectively a way for us to call api code
+ * (i.e. the methods in studio/api.js) so that we can essentially simulate
+ * generated code. It does this by creating an event handler for the given name,
+ * calling the handler - which results in func being executed to generate a
+ * command queue - and then executing the command queue.
+ */
+Studio.callApiCode = function (name, func) {
+  registerEventHandler(Studio.eventHandlers, name, func);
+  // generate the cmdQueue
+  callHandler(name);
+  Studio.executeQueue(name);
+};
+
 Studio.onTick = function() {
   Studio.tickCount++;
 
@@ -6801,18 +6815,69 @@ exports.install = function(blockly, blockInstallOptions) {
     // in the global space. This may change in the future.
   };
 
+  /**
+   * functional_start_setFuncs
+   * Even those this is called setFuncs, we are passed both functions and
+   * variables. Our generator stashes the passed values on our customLogic
+   * object (which is BigGameLogic).
+   */
   blockly.Blocks.functional_start_setFuncs = {
     init: function() {
-      var blockName = msg.startSetFuncs();
-      var blockType = 'none';
-      var blockArgs = [
+      this.blockArgs = [
+        {name: 'title', type: 'string'},
+        {name: 'subtitle', type: 'string'},
+        {name: 'background', type: 'image'},
+        {name: 'danger', type: 'image'},
+        {name: 'target', type: 'image'},
+        {name: 'player', type: 'image'},
         {name: 'update-target', type: 'function'},
         {name: 'update-danger', type: 'function'},
         {name: 'update-player', type: 'function'},
         {name: 'collide?', type: 'function'},
         {name: 'on-screen?', type: 'function'}
       ];
-      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+      this.setFunctional(true, {
+        headerHeight: 30
+      });
+      this.setHSV.apply(this, functionalBlockUtils.colors.none);
+
+      var options = {
+        fixedSize: { height: 35 }
+      };
+
+      this.appendDummyInput()
+        .appendTitle(new Blockly.FieldLabel('game_funcs', options))
+        .setAlign(Blockly.ALIGN_LEFT);
+
+      var rows = [
+        'title, subtitle, background',
+        [this.blockArgs[0], this.blockArgs[1], this.blockArgs[2]],
+        'danger, target, player',
+        [this.blockArgs[3], this.blockArgs[4], this.blockArgs[5]],
+        'update-target, update-danger, update-player',
+        [this.blockArgs[6], this.blockArgs[7], this.blockArgs[8]],
+        'collide?, on-screen?',
+        [this.blockArgs[9], this.blockArgs[10]]
+      ];
+
+      rows.forEach(function (row) {
+        if (typeof(row) === 'string') {
+          this.appendDummyInput()
+            .appendTitle(new Blockly.FieldLabel(row));
+        } else {
+          row.forEach(function (blockArg, index) {
+            var input = this.appendFunctionalInput(blockArg.name);
+            if (index !== 0) {
+              input.setInline(true);
+            }
+            input.setHSV.apply(input, functionalBlockUtils.colors[blockArg.type]);
+            input.setCheck(blockArg.type);
+            input.setAlign(Blockly.ALIGN_LEFT);
+          }, this);
+        }
+      }, this);
+
+      this.setFunctionalOutput(false);
     }
   };
 
@@ -6820,19 +6885,13 @@ exports.install = function(blockly, blockInstallOptions) {
     // For each of our inputs (i.e. update-target, update-danger, etc.) get
     // the attached block and figure out what it's function name is. Store
     // that on BigGameLogic so we can know what functions to call later.
-    this.inputList.forEach(function (input) {
-      if (input.type !== Blockly.FUNCTIONAL_INPUT) {
-        return;
-      }
-      var inputBlock = this.getInputTargetBlock(input.name);
+    this.blockArgs.forEach(function (arg) {
+      var inputBlock = this.getInputTargetBlock(arg.name);
       if (!inputBlock) {
         return;
       }
-      var inputBlockName = inputBlock.getTitleValue('NAME');
-      var functionName = Blockly.JavaScript.variableDB_.getName(inputBlockName,
-        Blockly.Procedures.NAME_TYPE);
 
-      Studio.customLogic.functionNames[input.name] = functionName;
+      Studio.customLogic.cacheBlock(arg.name, inputBlock);
     }, this);
   };
 
@@ -7054,7 +7113,11 @@ function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpr
 },{"../../locale/current/common":190,"../../locale/current/studio":196,"../StudioApp":2,"../codegen":42,"../functionalBlockUtils":74,"../sharedFunctionalBlocks":143,"../utils":185,"./constants":150}],196:[function(require,module,exports){
 /*studio*/ module.exports = window.blockly.appLocale;
 },{}],147:[function(require,module,exports){
-var Direction = require('./constants').Direction;
+var studioConstants = require('./constants');
+var Direction = studioConstants.Direction;
+var Position = studioConstants.Position;
+var codegen = require('../codegen');
+var api = require('./api');
 
 /**
  * Interface for a set of custom game logic for playlab
@@ -7077,7 +7140,7 @@ function CustomGameLogic(studio) {}
  */
 var BigGameLogic = function (studio) {
   this.studio_ = studio;
-  this.functionNames = {};
+  this.cached_ = {};
 
   this.playerSpriteIndex = 0;
   this.targetSpriteIndex = 1;
@@ -7085,10 +7148,14 @@ var BigGameLogic = function (studio) {
 };
 
 BigGameLogic.prototype.onTick = function () {
+  if (this.studio_.tickCount === 1) {
+    this.onFirstTick_();
+    return;
+  }
+
    // Don't start until the title is over
   var titleScreenTitle = document.getElementById('titleScreenTitle');
-  if (this.studio_.tickCount <= 1 ||
-      titleScreenTitle.getAttribute('visibility') === "visible") {
+  if (titleScreenTitle.getAttribute('visibility') === "visible") {
     return;
   }
 
@@ -7100,23 +7167,40 @@ BigGameLogic.prototype.onTick = function () {
   // For every key and button down, call update_player
   for (var key in this.studio_.keyState) {
     if (this.studio_.keyState[key] === 'keydown') {
-      this.updatePlayer_(key);
+      this.handleUpdatePlayer_(key);
     }
   }
 
   for (var btn in this.studio_.btnState) {
     if (this.studio_.btnState[btn]) {
       if (btn === 'leftButton') {
-        this.updatePlayer_(37);
+        this.handleUpdatePlayer_(37);
       } else if (btn === 'upButton') {
-        this.updatePlayer_(38);
+        this.handleUpdatePlayer_(38);
       } else if (btn === 'rightButton') {
-        this.updatePlayer_(39);
+        this.handleUpdatePlayer_(39);
       } else if (btn === 'downButton') {
-        this.updatePlayer_(40);
+        this.handleUpdatePlayer_(40);
       }
     }
   }
+};
+
+/**
+ * When game starts logic
+ */
+BigGameLogic.prototype.onFirstTick_ = function () {
+  var func = function (StudioApp, Studio, Globals) {
+    Studio.setBackground(null, this.getVar_('background'));
+    Studio.setSpritePosition(null, this.playerSpriteIndex, Position.MIDDLECENTER);
+    Studio.setSprite(null, this.playerSpriteIndex, this.getVar_('player'));
+    Studio.setSpritePosition(null, this.targetSpriteIndex, Position.TOPLEFT);
+    Studio.setSprite(null, this.targetSpriteIndex, this.getVar_('target'));
+    Studio.setSpritePosition(null, this.dangerSpriteIndex, Position.BOTTOMRIGHT);
+    Studio.setSprite(null, this.dangerSpriteIndex, this.getVar_('danger'));
+    Studio.showTitleScreen(null, this.getVar_('title'), this.getVar_('subtitle'));
+  }.bind(this);
+  this.studio_.callApiCode('BigGame.onFirstTick', func);
 };
 
 /**
@@ -7147,7 +7231,7 @@ BigGameLogic.prototype.updateSpriteX_ = function (spriteIndex, updateFunction) {
 /**
  * Update the player sprite, using the user provided function.
  */
-BigGameLogic.prototype.updatePlayer_ = function (key) {
+BigGameLogic.prototype.handleUpdatePlayer_ = function (key) {
   var playerSprite = this.studio_.sprite[this.playerSpriteIndex];
 
   // invert Y
@@ -7159,13 +7243,49 @@ BigGameLogic.prototype.updatePlayer_ = function (key) {
   playerSprite.y = this.studio_.MAZE_HEIGHT - newUserSpaceY;
 };
 
+BigGameLogic.prototype.cacheBlock = function (key, block) {
+  this.cached_[key] = block;
+};
+
+/**
+ * Takes a cached block for a function of variable, and calculates the value
+ * @returns The result of calling the code for the cached block. If the cached
+ *   block was a function_pass, this means we get back a function that can
+ *   now be called.
+ */
+BigGameLogic.prototype.resolveCachedBlock_ = function (key) {
+  var result = '';
+  var block = this.cached_[key];
+  if (!block) {
+    return result;
+  }
+
+  var code = 'return ' + Blockly.JavaScript.blockToCode(block);
+  result = codegen.evalWith(code, {
+    Studio: api,
+    Globals: Studio.Globals
+  });
+  return result;
+};
+
+/**
+ * getVar/getFunc just call resolveCachedBlock_, but are provided for clarity
+ */
+BigGameLogic.prototype.getVar_ = function (key) {
+  return this.resolveCachedBlock_(key);
+};
+
+BigGameLogic.prototype.getFunc_ = function (key) {
+  return this.resolveCachedBlock_(key);
+};
+
 /**
  * Calls the user provided update_target function, or no-op if none was provided.
  * @param {number} x Current x location of target
  * @returns {number} New x location of target
  */
 BigGameLogic.prototype.update_target = function (x) {
-  return this.getPassedFunction_('update-target')(x);
+  return this.getFunc_('update-target')(x);
 };
 
 /**
@@ -7174,7 +7294,7 @@ BigGameLogic.prototype.update_target = function (x) {
  * @returns {number} New x location of the danger target
  */
 BigGameLogic.prototype.update_danger = function (x) {
-  return this.getPassedFunction_('update-danger')(x);
+  return this.getFunc_('update-danger')(x);
 };
 
 /**
@@ -7184,7 +7304,7 @@ BigGameLogic.prototype.update_danger = function (x) {
  * @returns {number} New y location of the player
  */
 BigGameLogic.prototype.update_player = function (key, y) {
-  return this.getPassedFunction_('update-player')(key, y);
+  return this.getFunc_('update-player')(key, y);
 };
 
 /**
@@ -7193,7 +7313,7 @@ BigGameLogic.prototype.update_player = function (key, y) {
  * @returns {boolean} True if x location is onscreen?
  */
 BigGameLogic.prototype.onscreen = function (x) {
-  return this.getPassedFunction_('on-screen?')(x);
+  return this.getFunc_('on-screen?')(x);
 };
 
 /**
@@ -7205,29 +7325,13 @@ BigGameLogic.prototype.onscreen = function (x) {
  * @returns {boolean} True if objects collide
  */
 BigGameLogic.prototype.collide = function (px, py, cx, cy) {
-  return this.getPassedFunction_('collide?')(px, py, cx, cy);
+  return this.getFunc_('collide?')(px, py, cx, cy);
 };
 
-/**
- * @returns the user function that was passed in
- */
-BigGameLogic.prototype.getPassedFunction_ = function (name) {
-  var userFunctionName = this.functionNames[name];
-  if (!userFunctionName) {
-    return function () {}; // noop
-  }
-
-  var userFunction = this.studio_.Globals[userFunctionName];
-  if (!userFunction) {
-    throw new Error('Unexepcted');
-  }
-
-  return userFunction;
-};
 
 module.exports = BigGameLogic;
 
-},{"./constants":150}],146:[function(require,module,exports){
+},{"../codegen":42,"./api":146,"./constants":150}],146:[function(require,module,exports){
 var constants = require('./constants');
 
 exports.SpriteSpeed = {
