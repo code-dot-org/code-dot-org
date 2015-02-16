@@ -537,23 +537,19 @@ function displayComplexUserExpressions () {
 
   // Now display our compute equation and the result of evaluating it
   var computeType = computeEquation && computeEquation.expression.getType();
-  if (computeType === ExpressionNode.ValueType.FUNCTION_CALL ||
-      computeType === ExpressionNode.ValueType.VARIABLE) {
-    var targetEquation = appState.targetSet.computeEquation();
+  var targetEquation = appState.targetSet.computeEquation();
 
-    // We're either a variable or a function call. Generate a tokenList (since
-    // we could actually be different than the goal)
-    tokenList = getTokenList(computeEquation, targetEquation);
+  // We're either a variable or a function call. Generate a tokenList (since
+  // we could actually be different than the goal)
+  tokenList = getTokenList(computeEquation, targetEquation);
 
-    result = appState.userSet.evaluate().toString();
-    var expectedResult = appState.targetSet.computeEquation() === null ?
-      result : appState.targetSet.evaluate().toString();
+  result = appState.userSet.evaluate().toString();
+  var expectedResult = appState.targetSet.computeEquation() === null ?
+    result : appState.targetSet.evaluate().toString();
 
-    tokenList = tokenList.concat(getTokenList(' = '),
-      getTokenList(result, expectedResult));
-  } else {
-    tokenList = getTokenList(computeEquation, appState.targetSet.computeEquation());
-  }
+  // add a tokenList diffing our results
+  tokenList = tokenList.concat(getTokenList(' = '),
+    getTokenList(result, expectedResult));
 
   displayEquation('userExpression', null, tokenList, nextRow++, 'errorToken');
 
