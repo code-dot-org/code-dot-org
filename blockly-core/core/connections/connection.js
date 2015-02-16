@@ -28,6 +28,7 @@ goog.provide('Blockly.ConnectionDB');
 
 goog.require('Blockly.BlockSpace');
 goog.require('goog.array');
+goog.require('goog.string');
 
 /**
  * SVG paths for drawing next/previous notch from left to right, left to right
@@ -629,6 +630,47 @@ Blockly.Connection.prototype.acceptsType_ = function(type) {
 };
 
 /**
+ * Change a connection's compatibility.
+ * @param {*} check Compatible value type or list of value types.
+ *     Null if all types are compatible.
+ * @return {!Blockly.Connection} The connection being modified
+ *     (to allow chaining).
+ */
+Blockly.Connection.prototype.setCheck = function(check) {
+  if (check) {
+    // Ensure that check is in an array.
+    if (!(check instanceof Array)) {
+      check = [check];
+    }
+
+    this.check_ = check;
+
+    var legacyTypeFound = Blockly.Connection.findLegacyType_(check);
+    if (legacyTypeFound) {
+      // Intended for temporary post-rename debugging
+      // Should not be hit by normal usage
+      // TODO(bjordan): Remove once confident no remaining usages
+      console.log("Legacy type format found: " + legacyTypeFound + " ... converting.");
+      this.check_ = this.check_.map(goog.string.toTitleCase);
+    }
+
+    // The new value type may not be compatible with the existing connection.
+    if (this.targetConnection && !this.checkAllowedConnectionType_(this.targetConnection)) {
+      if (this.isSuperior()) {
+        this.targetBlock().setParent(null);
+      } else {
+        this.sourceBlock_.setParent(null);
+      }
+      // Bump away.
+      this.sourceBlock_.bumpNeighbours_();
+    }
+  } else {
+    this.check_ = null;
+  }
+  return this;
+};
+
+/**
  * Tries to find a legacy type check on this connection
  * @returns {*}
  * @private
@@ -652,44 +694,6 @@ Blockly.Connection.isLegacyType_ = function(type) {
   return startsWithLowercase
 };
 
-/**
- * Change a connection's compatibility.
- * @param {*} check Compatible value type or list of value types.
- *     Null if all types are compatible.
- * @return {!Blockly.Connection} The connection being modified
- *     (to allow chaining).
- */
-Blockly.Connection.prototype.setCheck = function(check) {
-  if (check) {
-    // Ensure that check is in an array.
-    if (!(check instanceof Array)) {
-      check = [check];
-    }
-
-    this.check_ = check;
-
-    var legacyTypeFound = Blockly.Connection.findLegacyType_(check);
-    if (legacyTypeFound) {
-      console.log("Legacy Type Found:");
-      console.log(legacyTypeFound);
-      throw 'Error: found legacy type check (see console)';
-    }
-
-    // The new value type may not be compatible with the existing connection.
-    if (this.targetConnection && !this.checkAllowedConnectionType_(this.targetConnection)) {
-      if (this.isSuperior()) {
-        this.targetBlock().setParent(null);
-      } else {
-        this.sourceBlock_.setParent(null);
-      }
-      // Bump away.
-      this.sourceBlock_.bumpNeighbours_();
-    }
-  } else {
-    this.check_ = null;
-  }
-  return this;
-};
 
 /**
  * Find all nearby compatible connections to this connection.
