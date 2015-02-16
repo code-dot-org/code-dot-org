@@ -38,7 +38,7 @@ Blockly.Blocks.functional_definition = {
       headerHeight: 0,
       rowBuffer: 3
     });
-    this.setFunctionalOutput(true, 'Number');
+    this.setFunctionalOutput(true, Blockly.BlockValueType.NUMBER);
     var name = Blockly.Procedures.findLegalName(Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE, this);
     this.appendDummyInput()
         .appendTitle(Blockly.Msg.DEFINE_FUNCTION_DEFINE)
@@ -352,7 +352,7 @@ Blockly.Blocks.functional_call = {
         .setAlign(Blockly.ALIGN_CENTRE)
         .setInline(x > 0);
       var currentParameterType = this.currentParameterTypes_[x];
-      input.setHSV.apply(input, Blockly.ContractEditor.typesToColorsHSV[currentParameterType]);
+      input.setHSV.apply(input, Blockly.FunctionalTypeColors[currentParameterType]);
       input.setCheck(currentParameterType);
       if (this.currentParameterIDs_) {
         // Reconnect any child blocks.
