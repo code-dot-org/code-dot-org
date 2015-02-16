@@ -33,6 +33,13 @@ This .md file should only contain information which is specific to Code.org engi
 
 # Did it break?
 
+## Open issues and workarounds:
+
+- Updating English-language strings from .script file doesn't automatically update localized strings ([#82514628](https://www.pivotaltracker.com/story/show/82514628)). Workarounds:
+ 1. After updating the description in the .script file, delete the entry for the script in scripts.en.yml, then run rake seed:scripts (or rake seed:all.
+ 1. Modify the entry in scripts.en.yml directly to update description text (you don't even need to modify the text in the .script file).
+- Renaming a level in LB keeps the old .level file around ([#78597388](https://www.pivotaltracker.com/story/show/78597388)). Workaround: Manually delete the old level after rename.
+
 ## Record not found
 
 Did you get an error message like:
