@@ -386,15 +386,18 @@ StudioApp.prototype.init = function(config) {
   }
 
   // Bind listener to 'Clear Puzzle' button
-  dom.addClickTouchEvent(document.querySelector('#clear-puzzle-header'), (function () {
-    this.feedback_.showClearPuzzleConfirmation(this.Dialog, (function () {
-      if (Blockly.functionEditor) {
-        Blockly.functionEditor.hideIfOpen();
-      }
-      Blockly.mainBlockSpace.clear();
-      this.setStartBlocks_(config);
+  var clearPuzzleHeader = document.getElementById('clear-puzzle-header');
+  if (clearPuzzleHeader) {
+    dom.addClickTouchEvent(clearPuzzleHeader, (function() {
+      this.feedback_.showClearPuzzleConfirmation(this.Dialog, (function() {
+        if (Blockly.functionEditor) {
+          Blockly.functionEditor.hideIfOpen();
+        }
+        Blockly.mainBlockSpace.clear();
+        this.setStartBlocks_(config);
+      }).bind(this));
     }).bind(this));
-  }).bind(this));
+  }
 };
 
 /**
