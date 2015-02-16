@@ -1,30 +1,10 @@
 var testUtils = require('../util/testUtils');
-var assert = testUtils.assert;
+var assertEqual = testUtils.assertEqual;
+var assertThrows = testUtils.assertThrows;
 
 var NetSimEntity = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimEntity');
-var _ = testUtils.requireWithGlobalsCheckBuildFolder('utils').getLodash();
-
-var assertEqual = function (left, right) {
-  assert(_.isEqual(left, right),
-      JSON.stringify(left) + ' equals ' + JSON.stringify(right));
-};
-
-var assertThrows = function (exceptionType, fn) {
-  var x;
-  try {
-    fn();
-  } catch (e) {
-    x = e;
-  }
-  assert(x !== undefined, "Didn't throw!");
-  assert(x.constructor === exceptionType, "Threw " + x.constructor.name +
-      ", expected " + exceptionType.name + "; " +
-      JSON.stringify(x));
-};
 
 describe("NetSimEntity", function () {
-  var apiTable, netsimTable, callback, notified;
-
   it ("default entityID is undefined", function () {
     var entity = new NetSimEntity(undefined, undefined);
     assertEqual(entity.entityID, undefined);
