@@ -50,16 +50,22 @@ Command.prototype.failed = function () {
 };
 
 Command.prototype.begin = function () {
-  this.onBegin_();
   this.status_ = commandState.WORKING;
+  this.onBegin_();
 };
 
 Command.prototype.succeed = function () {
+  if (!this.isStarted()) {
+    throw new Error("Command cannot succeed before it begins.");
+  }
   this.status_ = commandState.SUCCESS;
   this.onEnd_();
 };
 
 Command.prototype.fail = function () {
+  if (!this.isStarted()) {
+    throw new Error("Command cannot fail before it begins.");
+  }
   this.status_ = commandState.FAILURE;
   this.onEnd_();
 };
