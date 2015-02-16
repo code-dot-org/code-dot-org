@@ -795,8 +795,8 @@ StudioApp.prototype.resizeHeaders = function (fullWorkspaceWidth) {
   var showCodeWidth = 0;
 
   var clearPuzzleHeader = document.getElementById('clear-puzzle-header');
-  var clearPuzzleWidth = clearPuzzleHeader
-      ? clearPuzzleHeader.getBoundingClientRect().width : 0;
+  var clearPuzzleWidth = clearPuzzleHeader ?
+      clearPuzzleHeader.getBoundingClientRect().width : 0;
 
   var headersDiv = document.getElementById('headers');
   if (headersDiv) {
@@ -1237,8 +1237,8 @@ StudioApp.prototype.setCheckForEmptyBlocks = function (checkBlocks) {
 StudioApp.prototype.setStartBlocks_ = function (config) {
   var startBlocks = config.level.startBlocks || '';
   if (config.forceInsertTopBlock) {
-    startBlocks =
-        blockUtils.forceInsertTopBlock(startBlocks, config.forceInsertTopBlock);
+    startBlocks = blockUtils.forceInsertTopBlock(startBlocks,
+        config.forceInsertTopBlock);
   }
   startBlocks = this.arrangeBlockPosition(startBlocks, config.blockArrangement);
   this.loadBlocks(startBlocks);
