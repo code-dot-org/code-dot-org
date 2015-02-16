@@ -273,7 +273,7 @@ Blockly.Blocks.functional_call = {
     this.blockSpace.events.listen(Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE,
       this.updateAttributesFromDefinition_, false, this);
 
-    this.changeFunctionalOutput('none');
+    this.changeFunctionalOutput(Blockly.BlockValueType.NONE);
   },
   updateAttributesFromDefinition_: function() {
     var procedureDefinition = Blockly.Procedures.getDefinition(
@@ -452,7 +452,7 @@ Blockly.Blocks.functional_pass = {
 
     this.setFunctional(true);
 
-    this.changeFunctionalOutput('function');
+    this.changeFunctionalOutput(Blockly.BlockValueType.FUNCTION);
   },
   openEditor: function() {
     Blockly.functionEditor.openAndEditFunction(this.getTitleValue('NAME'));
