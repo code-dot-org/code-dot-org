@@ -200,3 +200,17 @@ exports.assertThrows = function (exceptionType, fn) {
       ", expected " + exceptionType.name +
       "; exception: " + JSON.stringify(x));
 };
+
+/**
+ * Checks that an object has a property with the given name, independent
+ * of its prototype.
+ *
+ * @param {*} obj - Object that should contain the property.
+ * @param {string} propertyName - Name of the property the object should
+ *        contain at own depth.
+ */
+exports.assertOwnProperty = function (obj, propertyName) {
+  assert(obj.hasOwnProperty(propertyName), "Expected " +
+      obj.constructor.name + " to have a property '" +
+      propertyName + "' but no such property was found.");
+};

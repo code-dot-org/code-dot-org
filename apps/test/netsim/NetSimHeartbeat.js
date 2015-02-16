@@ -1,6 +1,7 @@
 var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
+var assertOwnProperty = testUtils.assertOwnProperty;
 var netsimTestUtils = require('../util/netsimTestUtils');
 var fauxShard = netsimTestUtils.fauxShard;
 
@@ -13,20 +14,28 @@ describe("NetSimHeartbeat", function () {
     testShard = fauxShard();
   });
 
-  it ("default entityID is undefined", function () {
-    var heartbeat = new NetSimHeartbeat(testShard, undefined);
-    assertEqual(heartbeat.entityID, undefined);
-  });
+  describe("default row structure", function () {
+    var row;
 
-  it ("default nodeID is undefined", function () {
-    var heartbeat = new NetSimHeartbeat(testShard, undefined);
-    assertEqual(heartbeat.nodeID, undefined);
+    beforeEach(function () {
+      var heartbeat = new NetSimHeartbeat(testShard);
+      row = heartbeat.buildRow_();
+    });
+
+    it ("nodeID (default undefined)", function () {
+      assertOwnProperty(row, 'nodeID');
+      assertEqual(row.fromNodeID, undefined);
+    });
+
+    it ("time (default 0)", function () {
+      assertOwnProperty(row, 'time');
+      assertEqual(row.time, 0);
+    });
   });
 
   it ("Implements getTable_ pointing to the heartbeat table", function () {
-    var entity = new NetSimHeartbeat(testShard, undefined);
-    var table = entity.getTable_();
-    assert(table === testShard.heartbeatTable);
+    var heartbeat = new NetSimHeartbeat(testShard, undefined);
+    assert(heartbeat.getTable_() === testShard.heartbeatTable);
   });
 
   it ("buildRow_ method includes needed fields", function () {
