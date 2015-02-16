@@ -63,26 +63,25 @@ describe('evaluateResults_/evaluateFunction_', function () {
   });
 
   // currently disabled until i figure out locale stuff in calc
-  // it('fails when evaluate is different for non-compute inputs', function () {
-  //   // f(x) = x + 1
-  //   // f(2)
-  //   var targetSet = new EquationSet();
-  //   targetSet.addEquation_(new Equation('f', ['x'], new ExpressionNode('+', ['x', 1])));
-  //   targetSet.addEquation_(new Equation(null, [], new ExpressionNode('f', [2])));
-  //
-  //   // f(x) = 3
-  //   // f(2)
-  //   var userSet = new EquationSet();
-  //   userSet.addEquation_(new Equation('f', ['x'], new ExpressionNode(3)));
-  //   userSet.addEquation_(new Equation(null, [], new ExpressionNode('f', [2])));
-  //
-  //   debugger;
-  //   var outcome = Calc.evaluateFunction_(targetSet, userSet);
-  //   assert.equal(outcome.result, ResultType.FAILURE);
-  //   assert.equal(outcome.testResults, TestResults.APP_SPECIFIC_FAIL);
-  //   assert.notEqual(outcome.message, undefined);
-  //   assert.deepEqual(outcome.failedInput, [0,0,0]);
-  // });
+  it('fails when evaluate is different for non-compute inputs', function () {
+    // f(x) = x + 1
+    // f(2)
+    var targetSet = new EquationSet();
+    targetSet.addEquation_(new Equation('f', ['x'], new ExpressionNode('+', ['x', 1])));
+    targetSet.addEquation_(new Equation(null, [], new ExpressionNode('f', [2])));
+
+    // f(x) = 3
+    // f(2)
+    var userSet = new EquationSet();
+    userSet.addEquation_(new Equation('f', ['x'], new ExpressionNode(3)));
+    userSet.addEquation_(new Equation(null, [], new ExpressionNode('f', [2])));
+
+    var outcome = Calc.evaluateFunction_(targetSet, userSet);
+    assert.equal(outcome.result, ResultType.FAILURE);
+    assert.equal(outcome.testResults, TestResults.APP_SPECIFIC_FAIL);
+    assert.notEqual(outcome.message, undefined);
+    assert.deepEqual(outcome.failedInput, [1]);
+  });
 
   it('fails when target has singleFunction, userSet does not', function () {
     // f(x) = x + 1
