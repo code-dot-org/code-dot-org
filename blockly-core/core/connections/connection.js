@@ -692,7 +692,7 @@ Blockly.Connection.findLegacyType_ = function(checkArray) {
 
 Blockly.Connection.isLegacyType_ = function(type) {
   var startsWithLowercase = /^[a-z]/.test(type);
-  return startsWithLowercase
+  return startsWithLowercase;
 };
 
 
