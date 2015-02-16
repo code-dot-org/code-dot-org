@@ -17,6 +17,7 @@ theme: angular
                         {templateUrl: '/ops-dashboard/landing'});
     $routeProvider.when('/districts',              {templateUrl: '/ops-dashboard/districts', controller: 'DistrictsController'});
     $routeProvider.when('/workshops',              {templateUrl: '/ops-dashboard/workshops', controller: 'WorkshopsController'});
+    $routeProvider.when('/cohorts',              {templateUrl: '/ops-dashboard/cohorts', controller: 'WorkshopsController'});
     $routeProvider.otherwise({redirectTo: '/'});
   }]).config(['$httpProvider', function($httpProvider) {
     // X-Requested-With header required for CSRF requests protected by Rack::Protection::JsonCsrf included by Sinatra.
@@ -38,8 +39,7 @@ theme: angular
         //  'query':  {method: 'GET', isArray:true},
         //  'remove': {method: 'DELETE'},
         //  'delete': {method: 'DELETE'} // don't use this because it doesn't work in IE9
-        update: {method:'PUT', url: '/ops/districts/:id'},
-        save: {method:'PATCH', url: '/ops/districts/:id'}
+        update: {method:'PUT', url: '/ops/districts/:id'}
       });
 
       return District;
@@ -58,6 +58,20 @@ theme: angular
       });
 
       return Workshop;
+    }]);
+
+  services.factory('cohortsService', ['$resource',
+    function($resource){
+      var Cohort = $resource('/ops/cohorts/:id', {}, {
+      // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
+      //  'get':    {method:'GET'},
+      //  'save':   {method:'POST'},
+      //  'query':  {method:'GET', isArray:true},
+      //  'remove': {method:'DELETE'},
+      //  'delete': {method:'DELETE'}
+      });
+
+      return Cohort;
     }]);
 
   // CONTROLLERS
@@ -100,11 +114,30 @@ theme: angular
       }).catch($scope.genericError);
   }]);
 
-  controllers.controller('WorkshopsController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService',
-    function($scope, $route, $routeParams, $location, $window, workshopsService) {
+  controllers.controller('WorkshopsController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'cohortsService',
+    function($scope, $route, $routeParams, $location, $window, workshopsService, cohortsService) {
+
+      $scope.programs = [{name:"MSS"}, {name:"MSM"}, {name:"ECS"}, {name:"CSP"}];
+
       $scope.workshopsLoaded = false;
 
       $scope.workshops = workshopsService.query();
+      $scope.cohorts = cohortsService.query();
+
+      $scope.cohortName = function (cohortId) {
+        if ($scope.cohorts) {
+          var name = "";
+          $scope.cohorts.forEach(function (e) {
+            if (e.id == cohortId) {
+              name = e.name;
+            }
+          });
+          if (name != "") {
+            return name;
+          }
+        }
+        return "N/A";
+      }
 
       $scope.save = function (workshop) {
         if (workshop.id) {

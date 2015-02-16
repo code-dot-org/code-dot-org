@@ -12,7 +12,7 @@ template: none
     %th.manage-th
       Program Type
     %th.manage-th
-      Cohort ID
+      Cohort
     %th.manage-th
       Manage
   %tr{"ng-repeat" => "workshop in workshops"}
@@ -23,10 +23,11 @@ template: none
     %td
       %span{'ng-hide' => 'workshop.editing', }
         {{workshop.program_type}}
-      %input{'ng-show' => 'workshop.editing', 'ng-model' => 'workshop.program_type', type:'text', value:'{{workshop.program_type}}'}
+      %select{'ng-show' => 'workshop.editing', 'ng-model' => 'workshop.program_type'}
+        %option{'ng-repeat' => 'program in programs', 'value' => '{{program.name}}'}{{program.name}}
     %td
-      %span{'ng-hide' => 'workshop.editing', }
-        {{workshop.cohort_id}}
+      %span{'ng-hide' => 'workshop.editing'}
+        {{cohortName(workshop.cohort_id)}}
       %input{'ng-show' => 'workshop.editing', 'ng-model' => 'workshop.cohort_id', type:'text', value:'{{workshop.cohort_id}}'}
     %td
       %button.btn.btn-white{'ng-click' => 'workshop.editing = true', 'ng-hide' => 'workshop.editing'} Edit
@@ -38,14 +39,16 @@ template: none
     %td
       %input{'ng-model' => 'workshop.name', type:'text'}
     %td
-      %input{'ng-model' => 'workshop.program_type', type:'text'}
+      %select{'ng-model' => 'workshop.program_type'}
+        %option{'ng-repeat' => 'program in programs', 'value' => '{{program.name}}'}
+          {{program.name}}
     %td
-      %input{'ng-model' => 'workshop.cohort_id', type:'text'}
+      %select{'ng-model' => 'workshop.cohort_id'}
+        %option{'ng-repeat' => 'cohort in cohorts', 'value' => '{{cohort.id}}'}
+          {{cohort.name}}
     %td
-      %button.btn.btn-primary{'ng-click' => 'save(workshop)'}
-        Save
-      %button.btn.btn-white{'ng-click' => ''}
-        Cancel
+      %button.btn.btn-primary{'ng-click' => 'save(workshop)', style:'width:100%'}
+        Create new workshop
 
 :css
   .btn {

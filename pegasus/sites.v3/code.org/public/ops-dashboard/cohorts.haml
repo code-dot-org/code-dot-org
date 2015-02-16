@@ -1,0 +1,14 @@
+---
+layout: none
+template: none
+---
+
+%h1 Cohorts
+
+-#%button.btn-white{'ng-click' => 'district.creation = true'}
+-#  New District
+
+%table{'ng-controller' => 'DistrictsController', style:'width:100%; margin-top:20px;'}
+  %ul{"ng-repeat" => "cohort in cohorts"}
+    %li
+      {{cohort.name}}
