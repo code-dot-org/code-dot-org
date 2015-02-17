@@ -137,7 +137,7 @@ class HomeControllerTest < ActionController::TestCase
       elsif script.flappy?
         url = "http://test.host/flappy"
       else
-        url = "http://test.host/s/#{script.to_param}"
+        url = "http://test.host/s/#{CGI.escape(script.to_param).gsub('+', '%20')}"
       end
       assert_select "#continue a[href^=#{url}]" # continue link
       assert_select 'h3',  I18n.t("data.script.name.#{script.name}.title") # script title
