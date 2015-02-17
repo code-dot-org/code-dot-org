@@ -132,12 +132,15 @@ SQL
     if level.unplugged?
       # TODO: what does an unplugged level need?  'levels/unplug', locals: {app: @game.app}
       level_data = {
-        kind: 'unplugged'
+        kind: 'unplugged',
+        level: script_level.summarize
       }
     elsif level.is_a?(DSLDefined)
       # TODO: partial "levels/#{level.class.to_s.underscore}"
       level_data = {
-        kind: 'dsl'
+        kind: 'dsl',
+        level: script_level.summarize,
+        app: level.class.to_s
       }
     else
       # Prepare some globals for blockly_options()
@@ -168,7 +171,6 @@ SQL
     if level.ideal_level_source_id
       level_data[:solutionPath] = script_level_solution_path(script, level)  # TODO: Only for teachers?
     end
-    level_data[:end_of_stage] = true if script_level.end_of_stage?
     level_data[:locale] = js_locale
     if !level.related_videos.nil? && !level.related_videos.empty?
       level_data[:relatedVideos] = level.related_videos.map do |video|

@@ -160,10 +160,13 @@
 
       // Right now, the static is a fixed route
       if (window.Frame.isStatic) {
+        var params = Frame.queryParams();
+
+        script_name = params.script;
         headerStore.load({
-          script_name: 'course1',
-          stage_id: 3,
-          level_id: 3
+          script_name: params.script,
+          stage_id: params.stage,
+          level_id: params.level
         });
 
         return;
@@ -416,6 +419,20 @@
 
       this.router = new UIRouter();
       this.router.route();
+    }
+
+    // http://stackoverflow.com/a/21152762/7104
+    // Decode query parameters
+    UIFrame.prototype.queryParams = function (url) {
+      url = url || location.search;
+      var qd = {};
+
+      url.substr(1).split("&").forEach(function(item) {
+        var k = item.split("=")[0],
+          v = decodeURIComponent(item.split("=")[1]); 
+        (k in qd) ? qd[k].push(v) : qd[k] = [v,]
+      });
+      return qd;
     }
 
     // This is work in progress to patch the XmlHttpRequest service to prevent us from making
