@@ -154,9 +154,12 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
+"badColorStringError":function(d){return "You used an invalid color string: "+appLocale.v(d,"val")},
+"badStyleStringError":function(d){return "You used an invalid style string: "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "círculo (raio, estilo, cor)"},
 "displayBlockTitle":function(d){return "exibir"},
 "ellipseBlockTitle":function(d){return "elipse (largura, altura, estilo, cor)"},
+"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "extraTopBlocks":function(d){return "Alguns de seus blocos estão soltos. Você pretendia conectá-los ao bloco \"exibir\"?"},
 "overlayBlockTitle":function(d){return "sobreposição (superior, inferior)"},
 "placeImageBlockTitle":function(d){return "lugar-imagem (x, y, imagem)"},

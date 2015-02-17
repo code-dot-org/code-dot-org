@@ -155,9 +155,13 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "compute":function(d){return "reikna"},
+"emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
+"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "equivalentExpression":function(d){return "Prófaðu að umraða liðunum til að fá nákvæmlega sama dæmi."},
 "extraTopBlocks":function(d){return "Það eru ótengdir kubbar. Var meiningin að tengja þá við \"reikna\" kubbinn?"},
-"failedInput":function(d){return "Your function does not return the right result for all values."},
+"failedInput":function(d){return "Fallið þitt gefur stundum ekki rétta útkomu."},
 "goal":function(d){return "Markmið:"},
-"reinfFeedbackMsg":function(d){return "Hér er sagan þín! Haltu áfram að vinna að henni eða farðu í næstu þraut!"},
-"yourExpression":function(d){return "Dæmið þitt:"}};
+"levelIncompleteError":function(d){return "Your expression does not match the goal."},
+"reinfFeedbackMsg":function(d){return "Hér er útreikningur þinn! Haltu áfram að vinna með þetta eða færðu þig í næstu þraut!"},
+"yourExpression":function(d){return "Formúlan þín:"},
+"wrongInput":function(d){return "You are calling your function with the wrong value."}};

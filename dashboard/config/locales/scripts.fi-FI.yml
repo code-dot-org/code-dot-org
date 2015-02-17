@@ -383,13 +383,49 @@
           The Design Recipe: Suunnitteluresepti
         K5PD:
           Introduction to PD: Johdatus PD:hen (ammattitason kehittelyyn)
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and
+            3
         netsim:
-          title: Internet Simulator
+          title: Internet simulaattori
           description_short: ''
           description: ''
-          Internet Simulator: Internet Simulator
+          Internet Simulator: Internet simulaattori
         Infinity:
           title: Infinity Pelilabra
           description_short: Luo tarina tai tee peli Infinity Peli Labrassa!!
           description: Luo tarina tai tee peli Infinity Peli Labrassa!
           Infinity: Ääretön
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: Johdanto tietotekniikkaan -kurssi 5–14-vuotiaille (15–25 tuntia)
+          description: Tämä 20 tunnin kurssi esittelee keskeiset tietotekniikan ja
+            ohjelmoinnin käsitteet. Kurssi on suunniteltu käytettäväksi peruskouluissa,
+            mutta siinä on hauskaa opittavaa kaiken ikäisille.
+          Introduction to Computer Science: Johdanto tietojenkäsittelyyn
+          The Maze: Sokkelo
+          Computational Thinking: Laskennallinen ajattelu
+          Graph Paper Programming: Ruutupaperiohjelmointi
+          The Artist: Taiteilija
+          Algorithms: Algoritmit
+          The Artist 2: Taiteilija 2
+          Functions: Funktiot
+          The Farmer: Maanviljelijä
+          Conditionals: Ehtolausekkeet
+          The Artist 3: Taiteilija 3
+          Song Writing: Sävellys
+          The Farmer 2: Maanviljelijä 2
+          Abstraction: Abstraktio
+          The Artist 4: Taiteilija 4
+          Relay Programming: Releohjelmointi
+          The Farmer 3: Maanviljelijä 3
+          The Internet: Internetti
+          The Artist 5: Taiteilija 5
+          Wrap-up: Yhteenveto

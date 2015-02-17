@@ -1,7 +1,7 @@
 ar:
   errors:
     messages:
-      not_saved: 'Please correct the following errors:'
+      not_saved: 'من فضلك، قم بتصحيح الأخطاء التالية:'
   activerecord:
     errors:
       messages:
@@ -297,6 +297,8 @@ ar:
     student_teacher_disassociated: 'تم إزالة % {teacher_name} كمدرس ل % {student_name}'
   user:
     email_confirm_needed: 'لم يتم تأكيد عنوان البريد الإلكتروني:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: إعادة إرسال رسالة تأكيد تعليمات
     new_password_hint: (اتركه فارغاً إذا كنت لا ترغب في تغييره)
     current_password_hint: (أدخل كلمة المرور الحالية لتأكيد التغييرات الخاصة بحسابك)
@@ -479,7 +481,7 @@ ar:
           title: 'مقدمة عن درس "علوم الكمبيوتر" للمستوى المبتدئ والمتوسط  (من 15 الى 25 ساعة)'
           description: هذا الكورس 20 ساعة حول مقدمة عن علوم الكمبيوتر ومفاهيم البرمجة. تم تصميم هذا الكورس للاستخدام في الفصول الدراسية للصفوف الابتدائية والمتوسطة، ولكن أنها متعة للتعلم لكل الإعمار.
         Hour of Code:
-          title: ساعة البرمجة
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: تعديل كود البرنامج

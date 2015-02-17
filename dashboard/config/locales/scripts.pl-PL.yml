@@ -380,6 +380,13 @@
           The Design Recipe: The Design Recipe
         K5PD:
           Introduction to PD: Introduction to PD
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and
+            3
         netsim:
           title: Internet Simulator
           description_short: ''
@@ -390,3 +397,33 @@
           description_short: Create a story or make a game with Infinity Play Lab!!
           description: Create a story or make a game with Infinity Play Lab!
           Infinity: Nieskończoność
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: Kurs Wprowadzenia do Informatyki dla K-8 (15-25 godzin)
+          description: Ten 20-godzinny godzinny kurs wprowadza podstawowe pojęcia
+            z zakresu informatyki i programowania. Kurs jest przeznaczony do użytku
+            klasach od 1 do 8, może być również przyjemną nauką we wszystkich grupach
+            wiekowych.
+          Introduction to Computer Science: Wprowadzenie do informatyki
+          The Maze: Labirynt
+          Computational Thinking: Myślenie komputacyjne
+          Graph Paper Programming: Programowanie na papierze milimetrowym
+          The Artist: Artysta
+          Algorithms: Algorytmy
+          The Artist 2: Artysta 2
+          Functions: Funkcje
+          The Farmer: Rolnik
+          Conditionals: Warunkowe
+          The Artist 3: Artysta 3
+          Song Writing: Pisanie piosenek
+          The Farmer 2: Rolnik 2
+          Abstraction: Abstrakcja
+          The Artist 4: Artysta 4
+          Relay Programming: Programowanie przekaźnika
+          The Farmer 3: Rolnik 3
+          The Internet: Internet
+          The Artist 5: Artysta 5
+          Wrap-up: Podsumowanie

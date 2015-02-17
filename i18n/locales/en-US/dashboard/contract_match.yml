@@ -73,12 +73,14 @@ en:
         Write a contract for a big orange red that is 100 pixels in size: crwdns27864:0crwdne27864:0
         Write a contract for a big red that is 100 pixels in size: crwdns27865:0crwdne27865:0
         "Big Triangle|image|color:string|size:Number": crwdns27866:0crwdne27866:0
+        Big Triangle: crwdns33869:0crwdne33869:0
       Creating Contracts From Examples 2:
         Creating Contracts From Examples 2: crwdns27867:0crwdne27867:0
         Write a contract for a purple square that is 15 pixels in size.: crwdns27868:0crwdne27868:0
         EXAMPLE 2.solution_blocks, 300: crwdns27869:0crwdne27869:0
         "Square|image|color:string|size:Number": crwdns27870:0crwdne27870:0
         Example 2.solution_blocks, 300: crwdns27871:0crwdne27871:0
+        Square Contract: crwdns33870:0crwdne33870:0
       Creating Contracts From Examples 3:
         Creating Contracts From Examples 3: crwdns27872:0crwdne27872:0
         Try using the "text" function to write this red text at size 40.: crwdns27873:0crwdne27873:0
@@ -104,9 +106,27 @@ en:
         "banner|text:string": crwdns27891:0crwdne27891:0
         "banner:image|text:string": crwdns27892:0crwdne27892:0
         "banner|image|text:string": crwdns27893:0crwdne27893:0
+        Banner Contract: crwdns33871:0crwdne33871:0
       Creating Contracts From Examples 4:
         Creating Contracts From Examples 4: crwdns27894:0crwdne27894:0
         Try using the "text" function to write this red text at size 40.: crwdns27895:0crwdne27895:0
         Examples 4.solution_blocks, 300: crwdns27896:0crwdne27896:0
         "shrink|image|circle:image": crwdns27897:0crwdne27897:0
         "shrink|image|image:image": crwdns27898:0crwdne27898:0
+        Try using the "shrink" function.: crwdns33872:0crwdne33872:0
+        Shrink Contract: crwdns33873:0crwdne33873:0
+      Eval Contracts B:
+        Star Contract: crwdns33874:0crwdne33874:0
+        Write a contract for the star function: crwdns33875:0crwdne33875:0
+        Eval Contracts 1 A.solution_blocks, 300: crwdns33876:0crwdne33876:0
+        "star|image|color:string|radius:Number|style:string": crwdns33877:0crwdne33877:0
+      Eval Contracts D:
+        Rotate Contract: crwdns33878:0crwdne33878:0
+        Write a contract for the rotate function: crwdns33879:0crwdne33879:0
+        Eval Contracts 2 A.solution_blocks, 300: crwdns33880:0crwdne33880:0
+        "rotate|image|degrees:Number|image:image": crwdns33881:0crwdne33881:0
+      Eval Contracts F:
+        Text Contract: crwdns33882:0crwdne33882:0
+        Write a contract for the text function: crwdns33883:0crwdne33883:0
+        Eval Contracts 3 A.solution_blocks, 300: crwdns33884:0crwdne33884:0
+        "text|image|color:string|size:Number|string:string": crwdns33885:0crwdne33885:0

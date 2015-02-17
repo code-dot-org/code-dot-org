@@ -6,7 +6,7 @@ tr-TR:
   csedweek_dates: 8-14 Aralık 2014
   csedweek_banner_hoc: 'T<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Kodlama Saati</a> geliyor. Öğretmenleri organizatörleri , <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Kodlama Saati Planlamaya</a> davet ediyoruz'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400"> Bilgisayar öğretmeni misiniz? Diğer CSEdWeek kaynaklara bakın</a>'
-  n_have_learned_an_hoc: '<h1>#</h1><h3>bir denedi</h3><h2>Kod Saati</h2>'
+  n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
   anybody_can_learn: Herkes öğrenebilir.
   learn_now: Şimdi Öğren
   petition_message: Her okuldaki her öğrencinin bilgisayar bilimlerini öğrenmek için fırsatı olmalıdır
