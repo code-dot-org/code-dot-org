@@ -5,6 +5,7 @@ var assertClose = testUtils.assertClose;
 var assertOwnProperty = testUtils.assertOwnProperty;
 var netsimTestUtils = require('../util/netsimTestUtils');
 var fauxShard = netsimTestUtils.fauxShard;
+var assertTableSize = netsimTestUtils.assertTableSize;
 
 var NetSimHeartbeat = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimHeartbeat');
 
@@ -145,9 +146,7 @@ describe("NetSimHeartbeat", function () {
     assert(heartbeat, "Created a heartbeat");
 
     // Check that table is not empty
-    testShard.heartbeatTable.readAll(function (rows) {
-      assertEqual(rows.length, 1);
-    });
+    assertTableSize(testShard, 'heartbeatTable', 1);
 
     // Destory heartbeat
     testShard.heartbeatTable.log('');
@@ -155,9 +154,7 @@ describe("NetSimHeartbeat", function () {
     assert("destroy", testShard.heartbeatTable.log().slice(0, 7));
 
     // Check that table is empty
-    testShard.heartbeatTable.readAll(function (rows) {
-      assertEqual(rows.length, 0);
-    });
+    assertTableSize(testShard, 'heartbeatTable', 0);
   });
 
 });

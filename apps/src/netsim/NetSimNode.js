@@ -121,20 +121,16 @@ NetSimNode.prototype.getStatusDetail = function () {
  * @param {function} [onComplete]
  */
 NetSimNode.prototype.connectToNode = function (otherNode, onComplete) {
-  if (!onComplete) {
-    onComplete = function () {};
-  }
+  onComplete = (onComplete !== undefined) ? onComplete : function () {};
 
   var self = this;
-  NetSimWire.create(this.shard_, function (wire) {
+  NetSimWire.create(this.shard_, this.entityID, otherNode.entityID, function (wire) {
     if (wire === null) {
       onComplete(null);
       return;
     }
 
-    wire.localNodeID = self.entityID;
-    wire.remoteNodeID = otherNode.entityID;
-    wire.update(function (success) {
+    otherNode.acceptConnection(self, function (success) {
       if (!success) {
         wire.destroy(function () {
           onComplete(null);
@@ -142,16 +138,7 @@ NetSimNode.prototype.connectToNode = function (otherNode, onComplete) {
         return;
       }
 
-      otherNode.acceptConnection(self, function (success) {
-        if (!success) {
-          wire.destroy(function () {
-            onComplete(null);
-          });
-          return;
-        }
-
-        onComplete(wire);
-      });
+      onComplete(wire);
     });
   });
 };

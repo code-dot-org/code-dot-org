@@ -44,7 +44,8 @@ var logger = NetSimLogger.getSingleton();
  * How often a cleaning job should be kicked off.
  * @type {number}
  */
-var CLEANING_INTERVAL_MS = 30000;
+var CLEANING_RETRY_INTERVAL_MS = 60000;
+var CLEANING_SUCCESS_INTERVAL_MS = 300000;
 
 /**
  * How long a cleaning lock (heartbeat) must be untouched before can be
@@ -111,7 +112,7 @@ var NetSimShardCleaner = module.exports = function (shard) {
  */
 NetSimShardCleaner.prototype.tick = function (clock) {
   if (Date.now() >= this.nextAttempt_) {
-    this.nextAttempt_ = Date.now() + CLEANING_INTERVAL_MS;
+    this.nextAttempt_ = Date.now() + CLEANING_RETRY_INTERVAL_MS;
     this.cleanShard();
   }
 
@@ -188,7 +189,7 @@ NetSimShardCleaner.prototype.getCleaningLock = function (onComplete) {
 NetSimShardCleaner.prototype.releaseCleaningLock = function (onComplete) {
   this.heartbeat_.destroy(function (success) {
     this.heartbeat_ = null;
-    this.nextAttempt_ = Date.now() + CLEANING_INTERVAL_MS;
+    this.nextAttempt_ = Date.now() + CLEANING_SUCCESS_INTERVAL_MS;
     logger.info("Cleaning lock released");
     onComplete(success);
   }.bind(this));
