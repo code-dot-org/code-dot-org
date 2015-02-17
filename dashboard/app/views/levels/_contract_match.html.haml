@@ -9,20 +9,20 @@
       %input#functionNameText{type: 'text', placeholder: 'Name'}
     %div#outputTypeTitle Range
     %select#rangeInput
-      %option none
+      %option None
       %option Number
-      %option string
-      %option image
-      %option boolean
+      %option String
+      %option Image
+      %option Boolean
     %div#domainTitle Domain
     %div
       %input#domainItemText{type: 'text', placeholder: 'Name'}
       %select#domainInput
-        %option none
+        %option None
         %option Number
-        %option string
-        %option image
-        %option boolean
+        %option String
+        %option Image
+        %option Boolean
       %button#addButton Add
     %div#domainItems
     = render partial: 'levels/dialog', locals: {app: app, data: data}
