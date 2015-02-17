@@ -93,22 +93,41 @@ CleaningHeartbeat.prototype.buildRow_ = function () {
  * Every once in a while, a client will invoke the cleaning routine, which
  * begins by attempting to get a cleaning lock on the shard.  If lock is
  * obtained we can be sure that no other client is trying to clean the shard
- * right now, and we proceed to clean the other tables of expired rows.
+ * right now, and we proceed to clean the tables of expired rows.
  *
  * @param {!NetSimShard} shard
  * @constructor
  */
 var NetSimShardCleaner = module.exports = function (shard) {
+
+  /**
+   * Shard we intend to keep clean.
+   * @type {NetSimShard}
+   * @private
+   */
   this.shard_ = shard;
 
+  /**
+   * Local timestamp (milliseconds) of when we next intend to
+   * kick off a cleaning routine.
+   * @type {number}
+   * @private
+   */
   this.nextAttempt_ = Date.now();
 
+  /**
+   * A special heartbeat that acts as our cleaning lock on the shard
+   * and prevents other clients from cleaning at the same time.
+   * @type {CleaningHeartbeat}
+   * @private
+   */
   this.heartbeat_ = null;
 };
 
 /**
  * Check whether enough time has passed since our last cleaning
  * attempt, and if so try to start a cleaning routine.
+ * @param {RunLoop.Clock} clock
  */
 NetSimShardCleaner.prototype.tick = function (clock) {
   if (Date.now() >= this.nextAttempt_) {
@@ -128,6 +147,9 @@ NetSimShardCleaner.prototype.tick = function (clock) {
   }
 };
 
+/**
+ * Attempt to begin a cleaning routine.
+ */
 NetSimShardCleaner.prototype.cleanShard = function () {
   this.getCleaningLock(function (isLockAcquired) {
     if (!isLockAcquired) {
@@ -155,10 +177,21 @@ NetSimShardCleaner.prototype.cleanShard = function () {
   }.bind(this));
 };
 
+/**
+ * Whether this cleaner currently has the only permission to clean
+ * shard tables.
+ * @returns {boolean}
+ */
 NetSimShardCleaner.prototype.hasCleaningLock = function () {
   return this.heartbeat_ !== null;
 };
 
+/**
+ * Attempt to acquire a cleaning lock by creating a CleaningHeartbeat
+ * of our own, that does not collide with any existing CleaningHeartbeats.
+ * @param {!function} onComplete - called when operation completes, with
+ *        boolean "success" argument.
+ */
 NetSimShardCleaner.prototype.getCleaningLock = function (onComplete) {
   CleaningHeartbeat.create(this.shard_, function (heartbeat) {
     if (heartbeat === null) {
@@ -186,6 +219,12 @@ NetSimShardCleaner.prototype.getCleaningLock = function (onComplete) {
   }.bind(this));
 };
 
+/**
+ * Remove and destroy this cleaner's CleaningHeartbeat, giving another
+ * client the chance to acquire a lock.
+ * @param {!function} onComplete - called when operation completes, with
+ *        boolean "success" argument.
+ */
 NetSimShardCleaner.prototype.releaseCleaningLock = function (onComplete) {
   this.heartbeat_.destroy(function (success) {
     this.heartbeat_ = null;
@@ -195,6 +234,11 @@ NetSimShardCleaner.prototype.releaseCleaningLock = function (onComplete) {
   }.bind(this));
 };
 
+/**
+ * Sets key-value pair on cleaner's table cache.
+ * @param {!string} key - usually table's name.
+ * @param {!Array} rows - usually table data.
+ */
 NetSimShardCleaner.prototype.cacheTable = function (key, rows) {
   if (this.tableCache === undefined) {
     this.tableCache = {};
@@ -202,30 +246,60 @@ NetSimShardCleaner.prototype.cacheTable = function (key, rows) {
   this.tableCache[key] = rows;
 };
 
+/**
+ * Look up value for key in cleaner's table cache.
+ * @param {!string} key - usually table's name.
+ * @returns {Array} table's cached data.
+ */
 NetSimShardCleaner.prototype.getTableCache = function (key) {
   return this.tableCache[key];
 };
 
+/**
+ * Get shard that cleaner is operating on.
+ * @returns {NetSimShard}
+ */
 NetSimShardCleaner.prototype.getShard = function () {
   return this.shard_;
 };
 
 /**
+ * Command that asynchronously fetches all rows for the given table
+ * and stores them in the cleaner's tableCache for the given key.
  *
- * @param cleaner
- * @param key
- * @param table
+ * @param {!NetSimShardCleaner} cleaner
+ * @param {!string} key
+ * @param {!NetSimTable} table
  * @constructor
  * @augments Command
  */
 var CacheTable = function (cleaner, key, table) {
   Command.call(this);
+
+  /**
+   * @type {NetSimShardCleaner}
+   * @private
+   */
   this.cleaner_ = cleaner;
+
+  /**
+   * @type {string}
+   * @private
+   */
   this.key_ = key;
+
+  /**
+   * @type {!NetSimTable}
+   * @private
+   */
   this.table_ = table;
 };
 CacheTable.inherits(Command);
 
+/**
+ * Trigger asynchronous readAll request on table.
+ * @private
+ */
 CacheTable.prototype.onBegin_ = function () {
   logger.info('Begin CacheTable[' + this.key_ + ']');
   this.table_.readAll(function (rows) {
@@ -235,17 +309,27 @@ CacheTable.prototype.onBegin_ = function () {
 };
 
 /**
+ * Command that calls destroy() on the provided entity.
  *
- * @param entity
+ * @param {!NetSimEntity} entity
  * @constructor
  * @augments Command
  */
 var DestroyEntity = function (entity) {
   Command.call(this);
+
+  /**
+   * @type {!NetSimEntity}
+   * @private
+   */
   this.entity_ = entity;
 };
 DestroyEntity.inherits(Command);
 
+/**
+ * Call destory() on stored entity.
+ * @private
+ */
 DestroyEntity.prototype.onBegin_ = function () {
 
   logger.info('Begin DestroyEntity[' + this.entity_.entityID + ']');
@@ -260,17 +344,27 @@ DestroyEntity.prototype.onBegin_ = function () {
 };
 
 /**
+ * Command that tells cleaner to release its cleaning lock.
  *
- * @param cleaner
+ * @param {!NetSimShardCleaner} cleaner
  * @constructor
  * @augments Command
  */
 var ReleaseCleaningLock = function (cleaner) {
   Command.call(this);
+
+  /**
+   * @type {!NetSimShardCleaner}
+   * @private
+   */
   this.cleaner_ = cleaner;
 };
 ReleaseCleaningLock.inherits(Command);
 
+/**
+ * Tell cleaner to release its cleaning lock.
+ * @private
+ */
 ReleaseCleaningLock.prototype.onBegin_ = function () {
   logger.info('Begin ReleaseCleaningLock');
   this.cleaner_.releaseCleaningLock(function (success) {
@@ -283,20 +377,32 @@ ReleaseCleaningLock.prototype.onBegin_ = function () {
 };
 
 /**
+ * Command that scans cleaner's heartbeat table cache for expired heartbeats,
+ * and deletes them one at a time.
  *
- * @param cleaner
+ * @param {!NetSimShardCleaner} cleaner
  * @constructor
  * @augments CommandSequence
  */
 var CleanHeartbeats = function (cleaner) {
   CommandSequence.call(this);
+
+  /**
+   * @type {!NetSimShardCleaner}
+   * @private
+   */
   this.cleaner_ = cleaner;
 };
 CleanHeartbeats.inherits(CommandSequence);
 
-var HEARTBEAT_TIMEOUT_MS = 30000;
 /**
- *
+ * How old a heartbeat can be without being cleaned up.
+ * @type {number}
+ * @const
+ */
+var HEARTBEAT_TIMEOUT_MS = 30000;
+
+/**
  * @private
  * @override
  */
@@ -312,19 +418,25 @@ CleanHeartbeats.prototype.onBegin_ = function () {
 };
 
 /**
+ * Command that scans cleaner's node table cache, and then deletes all
+ * nodes that don't have matching heartbeats in the heartbeat table cache.
  *
- * @param cleaner
+ * @param {!NetSimShardCleaner} cleaner
  * @constructor
  * @augments CommandSequence
  */
 var CleanNodes = function (cleaner) {
   CommandSequence.call(this);
+
+  /**
+   * @type {!NetSimShardCleaner}
+   * @private
+   */
   this.cleaner_ = cleaner;
 };
 CleanNodes.inherits(CommandSequence);
 
 /**
- *
  * @private
  * @override
  */
@@ -343,19 +455,25 @@ CleanNodes.prototype.onBegin_ = function () {
 };
 
 /**
+ * Command that scans cleaner's Wires table cache, and deletes any wires
+ * that are associated with nodes that aren't in the node table cache.
  *
- * @param cleaner
+ * @param {!NetSimShardCleaner} cleaner
  * @constructor
  * @augments CommandSequence
  */
 var CleanWires = function (cleaner) {
   CommandSequence.call(this);
+
+  /**
+   * @type {!NetSimShardCleaner}
+   * @private
+   */
   this.cleaner_ = cleaner;
 };
 CleanWires.inherits(CommandSequence);
 
 /**
- *
  * @private
  * @override
  */
@@ -376,19 +494,25 @@ CleanWires.prototype.onBegin_ = function () {
 };
 
 /**
+ * Command that scans the cleaner's message table cache, and deletes any
+ * messages in transit to nodes that no longer exist in the node table cache.
  *
- * @param cleaner
+ * @param {!NetSimShardCleaner} cleaner
  * @constructor
  * @augments CommandSequence
  */
 var CleanMessages = function (cleaner) {
   CommandSequence.call(this);
+
+  /**
+   * @type {!NetSimShardCleaner}
+   * @private
+   */
   this.cleaner_ = cleaner;
 };
 CleanMessages.inherits(CommandSequence);
 
 /**
- *
  * @private
  * @override
  */
