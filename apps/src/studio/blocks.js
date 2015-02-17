@@ -395,7 +395,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.00, 0.74);
       this.appendValueInput('SPRITE')
-          .setCheck(Blockly.BlockValueType.NUMBER)
+          .setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(msg.stopSpriteN({spriteIndex: ''}));
       this.setPreviousStatement(true);
       this.setInputsInline(true);
@@ -589,7 +589,7 @@ exports.install = function(blockly, blockInstallOptions) {
       this.setHSV(184, 1.00, 0.74);
       if (spriteCount > 1) {
         this.appendValueInput('SPRITE')
-          .setCheck(Blockly.BlockValueType.NUMBER)
+          .setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(msg.moveSpriteN({spriteIndex: ''}));
       } else {
         this.appendDummyInput()
@@ -598,9 +598,9 @@ exports.install = function(blockly, blockInstallOptions) {
       this.appendDummyInput()
         .appendTitle(msg.toXY());
       this.appendValueInput('XPOS')
-        .setCheck(Blockly.BlockValueType.NUMBER);
+        .setCheck(blockly.BlockValueType.NUMBER);
       this.appendValueInput('YPOS')
-        .setCheck(Blockly.BlockValueType.NUMBER);
+        .setCheck(blockly.BlockValueType.NUMBER);
       this.setPreviousStatement(true);
       this.setInputsInline(true);
       this.setNextStatement(true);
@@ -773,7 +773,7 @@ exports.install = function(blockly, blockInstallOptions) {
       this.setHSV(184, 1.00, 0.74);
       if (options.sprite) {
         this.appendValueInput('SPRITE')
-            .setCheck(Blockly.BlockValueType.NUMBER)
+            .setCheck(blockly.BlockValueType.NUMBER)
             .appendTitle(msg.moveSpriteN({spriteIndex: ''}));
       } else if (spriteCount > 1) {
         if (isK1) {
@@ -802,7 +802,7 @@ exports.install = function(blockly, blockInstallOptions) {
         .appendTitle('\t');
       if (options.params) {
         this.appendValueInput('DISTANCE')
-          .setCheck(Blockly.BlockValueType.NUMBER);
+          .setCheck(blockly.BlockValueType.NUMBER);
         this.appendDummyInput()
           .appendTitle(msg.moveDistancePixels());
       } else {
@@ -1097,9 +1097,9 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       this.setHSV(184, 1.00, 0.74);
-      this.appendValueInput('SPRITE').setCheck(Blockly.BlockValueType.NUMBER)
+      this.appendValueInput('SPRITE').setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(msg.setSpriteN({spriteIndex: ''}));
-      this.appendValueInput('VALUE').setCheck(Blockly.BlockValueType.NUMBER)
+      this.appendValueInput('VALUE').setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(msg.speed());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -1167,9 +1167,9 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       this.setHSV(184, 1.00, 0.74);
-      this.appendValueInput('SPRITE').setCheck(Blockly.BlockValueType.NUMBER)
+      this.appendValueInput('SPRITE').setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(msg.setSpriteN({spriteIndex: ''}));
-      this.appendValueInput('VALUE').setCheck(Blockly.BlockValueType.NUMBER)
+      this.appendValueInput('VALUE').setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(msg.size());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -1395,7 +1395,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
         this.setHSV(312, 0.32, 0.62);
         this.appendValueInput('SPRITE')
-            .setCheck(Blockly.BlockValueType.NUMBER)
+            .setCheck(blockly.BlockValueType.NUMBER)
             .appendTitle(msg.setSpriteN({spriteIndex: ''}));
         this.appendDummyInput()
             .appendTitle(dropdown, 'VALUE');
@@ -1494,7 +1494,7 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       this.setHSV(184, 1.00, 0.74);
-      this.appendValueInput('SPRITE').setCheck(Blockly.BlockValueType.NUMBER)
+      this.appendValueInput('SPRITE').setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(msg.setSpriteN({spriteIndex: ''}));
       var dropdown = new blockly.FieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[1][1]);  // default to normal
@@ -1544,7 +1544,7 @@ exports.install = function(blockly, blockInstallOptions) {
     block.init = function() {
       this.setHSV(184, 1.00, 0.74);
       if (options.time) {
-        this.appendValueInput('SPRITE').setCheck(Blockly.BlockValueType.NUMBER)
+        this.appendValueInput('SPRITE').setCheck(blockly.BlockValueType.NUMBER)
             .appendTitle(msg.actor());
         this.appendDummyInput()
             .appendTitle(msg.saySprite());
@@ -1581,7 +1581,7 @@ exports.install = function(blockly, blockInstallOptions) {
               Blockly.assetUrl('media/quote1.png'), 12, 12));
       }
       if (options.time) {
-        this.appendValueInput('TIME').setCheck(Blockly.BlockValueType.NUMBER).appendTitle(msg.for());
+        this.appendValueInput('TIME').setCheck(blockly.BlockValueType.NUMBER).appendTitle(msg.for());
         this.appendDummyInput().appendTitle(msg.waitSeconds());
       }
       this.setInputsInline(true);
@@ -1645,7 +1645,7 @@ exports.install = function(blockly, blockInstallOptions) {
         this.appendDummyInput()
           .appendTitle(msg.waitFor());
         this.appendValueInput('VALUE')
-          .setCheck(Blockly.BlockValueType.NUMBER);
+          .setCheck(blockly.BlockValueType.NUMBER);
         this.appendDummyInput()
           .appendTitle(msg.waitSeconds());
       } else {
@@ -1901,7 +1901,7 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       this.setHSV(184, 1.00, 0.74);
-      this.appendValueInput('SPRITE').setCheck(Blockly.BlockValueType.NUMBER)
+      this.appendValueInput('SPRITE').setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(msg.vanishActorN({spriteIndex: ''}));
       this.setPreviousStatement(true);
       this.setInputsInline(true);
