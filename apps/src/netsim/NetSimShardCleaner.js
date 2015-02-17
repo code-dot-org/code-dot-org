@@ -54,18 +54,44 @@ var CLEANING_SUCCESS_INTERVAL_MS = 300000;
  */
 var CLEANING_HEARTBEAT_TIMEOUT = 15000;
 
+/**
+ * Special heartbeat type that acts as a cleaning lock across the shard
+ * for the NetSimShardCleaner module.
+ *
+ * @param {!NetSimShard} shard
+ * @param {*} row
+ * @constructor
+ * @augments NetSimHeartbeat
+ */
 var CleaningHeartbeat = function (shard, row) {
   row = row !== undefined ? row : {};
   NetSimHeartbeat.call(this, shard, row);
 
+  /**
+   * @type {number}
+   * @private
+   * @override
+   */
   this.nodeID_ = 0;
 };
 CleaningHeartbeat.inherits(NetSimHeartbeat);
 
+/**
+ * Static creation method for a CleaningHeartbeat.
+ * @param {!NetSimShard} shard
+ * @param {!function} onComplete - Callback that is passed the new
+ *        CleaningHeartbeat object.
+ */
 CleaningHeartbeat.create = function (shard, onComplete) {
   NetSimEntity.create(CleaningHeartbeat, shard, onComplete);
 };
 
+/**
+ * Static getter for all non-expired cleaning locks on the shard.
+ * @param {!NetSimShard} shard
+ * @param {!function} onComplete - callback that receives an array of the non-
+ *        expired cleaning locks.
+ */
 CleaningHeartbeat.getAllCurrent = function (shard, onComplete) {
   shard.heartbeatTable.readAll(function (rows) {
     var heartbeats = rows
@@ -80,6 +106,12 @@ CleaningHeartbeat.getAllCurrent = function (shard, onComplete) {
   });
 };
 
+/**
+ * CleaningHeartbeat row has an extra field to indicate its special type.
+ * @returns {*}
+ * @private
+ * @override
+ */
 CleaningHeartbeat.prototype.buildRow_ = function () {
   return utils.extend(
       CleaningHeartbeat.superPrototype.buildRow_.call(this),
@@ -113,7 +145,7 @@ var NetSimShardCleaner = module.exports = function (shard) {
    * @type {number}
    * @private
    */
-  this.nextAttempt_ = Date.now();
+  this.nextAttemptTime_ = Date.now();
 
   /**
    * A special heartbeat that acts as our cleaning lock on the shard
@@ -130,8 +162,8 @@ var NetSimShardCleaner = module.exports = function (shard) {
  * @param {RunLoop.Clock} clock
  */
 NetSimShardCleaner.prototype.tick = function (clock) {
-  if (Date.now() >= this.nextAttempt_) {
-    this.nextAttempt_ = Date.now() + CLEANING_RETRY_INTERVAL_MS;
+  if (Date.now() >= this.nextAttemptTime_) {
+    this.nextAttemptTime_ = Date.now() + CLEANING_RETRY_INTERVAL_MS;
     this.cleanShard();
   }
 
@@ -228,7 +260,7 @@ NetSimShardCleaner.prototype.getCleaningLock = function (onComplete) {
 NetSimShardCleaner.prototype.releaseCleaningLock = function (onComplete) {
   this.heartbeat_.destroy(function (success) {
     this.heartbeat_ = null;
-    this.nextAttempt_ = Date.now() + CLEANING_SUCCESS_INTERVAL_MS;
+    this.nextAttemptTime_ = Date.now() + CLEANING_SUCCESS_INTERVAL_MS;
     logger.info("Cleaning lock released");
     onComplete(success);
   }.bind(this));
