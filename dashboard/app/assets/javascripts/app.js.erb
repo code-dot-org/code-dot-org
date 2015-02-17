@@ -482,9 +482,9 @@
           ajax.url = this.getAbsolutePath(staticPath, this.serverRoot);
           // ajax.url = this.getAbsolutePath(staticPath);
 
-          delete ajax.data;
-          ajax.cache = true;
-          ajax.isStaticResource = true;
+          delete ajax.data; // Static resources can't do anything with params
+          ajax.cache = true;  // Static resources will have long cache times
+          ajax.isStaticResource = true;  // Expect a JSONP resoponse
         } else {
           if (ajax.dataType != 'script')
             console.error("Request for " + ajax.url + " has no static handler.")

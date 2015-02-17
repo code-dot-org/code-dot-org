@@ -102,7 +102,7 @@ SQL
         s[:stages].push stage
     end
 
-    render :json => s, :callback => params['jsonp']
+    render :json => JSON.pretty_generate(s), :callback => params['jsonp']
   end
 
   def user_progress
@@ -239,7 +239,7 @@ SQL
       progress: user_data
     }
 
-    render :json => reply, :callback => params['jsonp']
+    render :json => JSON.pretty_generate(reply), :callback => params['jsonp']
   end
 
 
