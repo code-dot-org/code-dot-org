@@ -101,13 +101,6 @@ goog.inherits(Blockly.ContractEditor, Blockly.FunctionEditor);
 Blockly.ContractEditor.EXAMPLE_BLOCK_TYPE = 'functional_example';
 Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME = 'ACTUAL';
 
-Blockly.ContractEditor.typesToColorsHSV = goog.object.filter(
-  Blockly.FunctionalTypeColors,
-  function (value, key) {
-    return goog.array.contains(USER_TYPE_CHOICES, key);
-  }
-);
-
 Blockly.ContractEditor.DEFAULT_OUTPUT_TYPE = Blockly.BlockValueType.NUMBER;
 Blockly.ContractEditor.DEFAULT_PARAMETER_TYPE = Blockly.BlockValueType.NUMBER;
 
@@ -510,7 +503,7 @@ Blockly.ContractEditor.prototype.outputTypeDropdownChange_ = function(comboBoxEv
   var newType = comboBoxEvent.target.getContent();
   var menuButtonRenderer = goog.ui.FlatMenuButtonRenderer.getInstance();
   var menuButtonElement = menuButtonRenderer.getContentElement(this.getOutputTypeDropdownElement_());
-  var newColorHSV = Blockly.ContractEditor.typesToColorsHSV[newType];
+  var newColorHSV = Blockly.FunctionalTypeColors[newType];
   this.setBackgroundFromHSV(menuButtonElement, newColorHSV);
   this.setFrameColor_(newColorHSV);
 
@@ -550,7 +543,7 @@ Blockly.ContractEditor.prototype.inputTypeDropdownChange_ = function(comboBoxEve
 Blockly.ContractEditor.prototype.colorInputButtonForType_ = function(newType) {
   var menuButtonRenderer = goog.ui.FlatMenuButtonRenderer.getInstance();
   var menuButtonElement = menuButtonRenderer.getContentElement(this.getInputTypeDropdownElement_());
-  this.setBackgroundFromHSV(menuButtonElement, Blockly.ContractEditor.typesToColorsHSV[newType]);
+  this.setBackgroundFromHSV(menuButtonElement, Blockly.FunctionalTypeColors[newType]);
 };
 
 /**
@@ -562,10 +555,10 @@ Blockly.ContractEditor.prototype.createTypeDropdown_ = function() {
     goog.ui.FlatMenuButtonRenderer.getInstance(),
     null,
     new Blockly.CustomCssClassMenuRenderer('colored-type-dropdown'));
-  goog.object.forEach(Blockly.ContractEditor.typesToColorsHSV, function(color, key) {
-    var menuItem = new goog.ui.MenuItem(key);
+  USER_TYPE_CHOICES.forEach(function (choiceKey) {
+    var menuItem = new goog.ui.MenuItem(choiceKey);
     newTypeDropdown.addItem(menuItem);
-    this.setMenuItemColor_(menuItem, color);
+    this.setMenuItemColor_(menuItem, Blockly.FunctionalTypeColors[choiceKey]);
   }, this);
   return newTypeDropdown;
 };
