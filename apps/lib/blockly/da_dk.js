@@ -24,6 +24,7 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "rød";
 Blockly.Msg.COLOUR_RGB_TITLE = "farv med";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "Opret en farve med den angivne mængde af rød, grøn og blå.  Alle værdier skal være mellem 0 og 100.";
+Blockly.Msg.CONTRACT_EDITOR_HEADER = "Designopskrift";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "hop ud af løkken";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "Fortsæt med næste iteration af løkken";

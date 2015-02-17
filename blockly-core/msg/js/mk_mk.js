@@ -24,6 +24,7 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "Црвена";
 Blockly.Msg.COLOUR_RGB_TITLE = "обои со";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "Направете боја со одредено црвена, зелена, и сина боја. Сите вредности мора да бидат помеѓу 0 и 100 .";
+Blockly.Msg.CONTRACT_EDITOR_HEADER = "Design Recipe";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "прекини го повторувањето";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "продолжи со следното повторување";
