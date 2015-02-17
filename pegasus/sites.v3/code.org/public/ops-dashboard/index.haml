@@ -171,8 +171,11 @@ theme: angular
       $scope.hasCohorts = false;
       $scope.cohorts = cohortsService.query();
 
-      $scope.confirm_delete = function(cohort)
-      {
+      $scope.cohorts.$promise.then(function(cohorts){
+        $scope.hasCohorts = true;
+      });
+
+      $scope.confirm_delete = function(cohort) {
         cohort.confirmDelete = true;
       }
 
