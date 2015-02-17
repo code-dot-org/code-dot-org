@@ -26,14 +26,14 @@ order by ul.updated_at desc limit 2
 SQL
   end
 
+  # Find a script by name OR id, including someone who pased an ID into name.
   def find_script(p)
-    script_name = p[:script_name]
-    script_id = p[:script_id]
+    name_or_id = p[:script_name] or p[:script_id]
 
-    if script_name
-      script = Script.find_by_name(script_name)
-    elsif script_id
-      script = Script.find(script_id)
+    if name_or_id.match(/\A\d+\z/)
+      script = Script.find(name_or_id.to_i)
+    else
+      script = Script.find_by_name(name_or_id)
     end
     raise ActiveRecord::RecordNotFound unless script
 
