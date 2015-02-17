@@ -5,17 +5,10 @@ var assertClose = testUtils.assertClose;
 var assertOwnProperty = testUtils.assertOwnProperty;
 var netsimTestUtils = require('../util/netsimTestUtils');
 var fauxShard = netsimTestUtils.fauxShard;
+var assertTableSize = netsimTestUtils.assertTableSize;
 
 var NetSimShardCleaner = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimShardCleaner');
 var NetSimLogger = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimLogger');
-
-var assertTableSize = function (shard, tableName, size) {
-  shard[tableName].readAll(function (rows) {
-    assert(rows.length === size, "Expected table '" + tableName +
-    "' to contain " + size + " rows, but it had " + rows.length +
-    " rows.");
-  });
-};
 
 var makeNode = function (shard) {
   var newNodeID;
