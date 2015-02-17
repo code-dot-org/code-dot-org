@@ -159,7 +159,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catColour":function(d){return "Boja"},
 "catControl":function(d){return "Petlje"},
 "catMath":function(d){return "Matematika"},
-"catProcedures":function(d){return "Functions"},
+"catProcedures":function(d){return "Funkcije"},
 "catTurtle":function(d){return "Akcije"},
 "catVariables":function(d){return "Varijable"},
 "catLogic":function(d){return "Logika"},
