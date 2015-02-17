@@ -726,6 +726,8 @@
       // When the headerStore gets data, update blockly
       this.props.headerStore.subscribe( function(data) {
 
+        data.level.level_id = data.level.level.id; // because level.id gets overwritten by the DIV id inside blockly somewhere
+
         // Set up the blockly options, starting from some default values
         var opts = $.extend({
           baseUrl: '/blockly/',

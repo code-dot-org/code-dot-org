@@ -178,7 +178,9 @@
       var levelProgress = progress.levels || {};
 
       if (levels.length) {
-        var level_id = level.level.id; // Current level
+        // This is a bit of a hack.  Level.level.id gets overwritten when blockly initializes, so it's been cached in another
+        // location until we can fix that.
+        var level_id = level.level_id || level.level.id;
 
         var els = $.map(levels, function(level, index) {
           var status = levelProgress[level.id] || {};
