@@ -277,6 +277,8 @@ Eval.execute = function() {
     onComplete: onReportComplete
   };
 
+  studioApp.playAudio(Eval.result ? 'win' : 'failure');
+
   studioApp.report(reportData);
 };
 
