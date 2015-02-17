@@ -11,7 +11,7 @@
     "failure_condition": "function () {\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,16,0,0,16,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "Move Hiro right to Baymax, and play a sound when they touch.",
+    "instructions": "Hiro is Actor 1.  Move him right to Baymax, and play a sound when they touch.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -26,14 +26,17 @@
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
     "first_sprite_index": "2",
-    "generate_function_pass_blocks": "false"
+    "generate_function_pass_blocks": "false",
+    "maze_data": null,
+    "timeout_after_when_run": "false",
+    "callout_json": "[\r\n  {\"localization_key\":\"Infinity_move_collide_callout\",\"callout_text\":\"Play a sound when this event occurs.\",\"element_id\":\"#eventBlock\",\"on\":\"\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top left\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n]"
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
         <block type="when_run" x="80" y="20"/>
-        <block type="studio_whenSpriteCollided" x="80" y="200">
+        <block type="studio_whenSpriteCollided" x="80" y="200" id="eventBlock">
           <title name="SPRITE1">0</title>
           <title name="SPRITE2">1</title>
         </block>
@@ -47,7 +50,7 @@
           <title name="DISTANCE">100</title>
         </block>
         <block type="studio_playSound">
-          <title name="SOUND">hit</title>
+          <title name="SOUND">winpoint2</title>
         </block>
       </xml>
     </toolbox_blocks>

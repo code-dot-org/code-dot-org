@@ -7,7 +7,7 @@
   "properties": {
     "skin": "infinity",
     "background": "icy",
-    "success_condition": "function () {\r\n  var currentTime = new Date().getTime();\r\n\r\n  // Let's wait 2 seconds before indicating the success.\r\n  if (window.successTime && successTime + 2000 < currentTime)\r\n  {\r\n    console.log(\"success!\");\r\n    return true;\r\n  }\r\n  else if (! window.successTime && Studio.sprite[0].isCollidingWith(1))\r\n  {\r\n    console.log(\"setting success\");\r\n    window.successTime = currentTime;\r\n  }\r\n  \r\n  // Sample conditions:\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
+    "success_condition": "function () {\r\n  var currentTime = new Date().getTime();\r\n\r\n  // Let's wait 2 seconds before indicating the success.\r\n  if (window.successTime && successTime + 2000 < currentTime)\r\n  {\r\n    //console.log(\"success!\");\r\n    return true;\r\n  }\r\n  else if (! window.successTime && Studio.sprite[0].isCollidingWith(1))\r\n  {\r\n    //console.log(\"setting success\");\r\n    window.successTime = currentTime;\r\n  }\r\n}",
     "failure_condition": "function () {\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,16,0,0,0,16,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
@@ -26,13 +26,16 @@
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
     "first_sprite_index": "2",
-    "generate_function_pass_blocks": "false"
+    "generate_function_pass_blocks": "false",
+    "timeout_after_when_run": "false",
+    "maze_data": null,
+    "callout_json": "[\r\n  {\"localization_key\":\"Infinity_move_right_runbutton\",\"callout_text\":\"Add move block here\",\"element_id\":\"#whenRun\",\"on\":\"\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top left\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n]"
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run"/>
+        <block type="when_run" x="100" id="whenRun"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>

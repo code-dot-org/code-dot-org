@@ -12,7 +12,7 @@ nav: about_nav
 - [K-8 Program Manager](#K8-PM)
 - [High School Program Manager](#HS-PM)
 - [Regional Program Manager (Los Angeles, NYC, Ft. Lauderdale/Miami area)](#reg-PM)
-- [Advocacy Researcher](#advocacy-researcher)
+- [Policy Research Analyst](#advocacy-researcher)
 - [Data Scientist / Quantitative Data Analyst](#data-scientist)
 - [Operations/Developer](#ops-dev)
 - [Software Engineer](#engineer)
@@ -50,10 +50,10 @@ A high level of computer literacy is required; proficiency in working with Micro
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="advocacy-researcher" href="#advocacy-researcher">Advocacy Researcher (Seattle, WA preferred)</a>    
+## <a name="advocacy-researcher" href="#advocacy-researcher">Policy Research Analyst (Seattle, WA preferred)</a>    
 **Job Summary:**
 
-Code.org is recruiting for an Advocacy Researcher who will provide assistance with our state policy and advocacy research needs. **Part-time, long-term contract (6 months, with a possible extension based on need).** 
+Code.org is recruiting for an Policy Research Analyst who will provide assistance with our state policy and advocacy research needs. **Part-time, long-term contract (6 months, with a possible extension based on need).** 
 Responsibilities of the position include:
 
 - Research and analysis of state policy issues, including:
