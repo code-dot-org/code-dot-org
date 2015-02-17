@@ -103,7 +103,7 @@ private
       level_source = LevelSource.find(params[:level_source_id])
       # we do multiple level projects, so we don't check that the level_source.level_id matches the loaded level
       @start_blocks = level_source.data
-    else
+    elsif current_user.try(:admin?)
       last_attempt = current_user.last_attempt(@level).try(:level_source).try(:data)
       @start_blocks = last_attempt unless last_attempt.nil?
     end
