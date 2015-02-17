@@ -19,7 +19,7 @@ for locale in $locales; do
   perl -i ./lib/fix-ruby-yml.pl $orig_dir/$locale.yml
 
   # Merge in all the other Yaml files.
-  for file in $(find $loc_dir -name '*.yml' -and -not -name 'base.yml'); do
+  for file in $(find $loc_dir -name '*.yml' -and -not -name 'base.yml' -and -not -name 'instructions.yml'); do
     relname=${file#$loc_dir}
     ruby ./lib/merge-translation.rb "yml" $en_dir$relname $file $orig_dir${relname%.yml}.${locale}.yml
     perl -i ./lib/fix-ruby-yml.pl $orig_dir${relname%.yml}.${locale}.yml

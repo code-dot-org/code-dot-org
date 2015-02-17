@@ -23,6 +23,9 @@ orig_dir=../../dashboard/config/locales
 loc_dir=../locales/source/dashboard
 mkdir -p $loc_dir
 
+# Pull in the levelbuilder made level instructions
+ruby ./lib/sync-instructions.rb
+
 # Special case the un-prefixed Yaml file.
 cp_in $orig_dir/en.yml $loc_dir/base.yml
 
@@ -31,10 +34,6 @@ for file in $(find $orig_dir -name '*.en.yml'); do
   relname=${file#$orig_dir}
   cp_in $file $loc_dir${relname%.en.yml}.yml
 done
-
-# Pull in the levelbuilder made level instructions
-ruby ./lib/sync-instructions.rb
-
 
 ### Blockly Mooc
 

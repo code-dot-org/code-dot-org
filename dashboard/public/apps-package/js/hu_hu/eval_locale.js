@@ -154,9 +154,12 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
+"badColorStringError":function(d){return "You used an invalid color string: "+appLocale.v(d,"val")},
+"badStyleStringError":function(d){return "You used an invalid style string: "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "kör (sugár, stílus, szín)"},
 "displayBlockTitle":function(d){return "megjelenítés"},
 "ellipseBlockTitle":function(d){return "ellipszis (szélesség, magasság, stílus, szín)"},
+"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "extraTopBlocks":function(d){return "Vannak különálló blokkok a táblán. Csatold őket a \"Megjelenítés\" blokkhoz!"},
 "overlayBlockTitle":function(d){return "borítás (felső, alsó)"},
 "placeImageBlockTitle":function(d){return "kép elhelyezése (x, y, kép)"},

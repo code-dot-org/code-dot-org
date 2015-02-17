@@ -6,7 +6,7 @@ bg-BG:
   csedweek_dates: 8-14 декември 2014 г.
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> Часът на кодирането</a> идва. Призоваваме всички учители и организатори, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> да планират техния Час на кодирането</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Вие учител по ИТ или  информатика  сте? Вhttps://crowdin.com/translate/codeorg/56/enus-bg#вижте други ресурси на CSEdWeek</a>'
-  n_have_learned_an_hoc: '<h1>#</h1><h3>са се опитали</h3><h2>Часът на кодирането</h2>'
+  n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
   anybody_can_learn: Всеки може да се научи.
   learn_now: Научете сега
   petition_message: Всеки ученик във всяко училище трябва да има възможност да учи компютърни науки

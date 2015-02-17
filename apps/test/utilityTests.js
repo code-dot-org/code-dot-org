@@ -11,6 +11,118 @@ var assert = testUtils.assert;
 var _ = require(buildDir + '/js/lodash');
 var mazeUtils = require(buildDir + '/js/maze/mazeUtils');
 
+describe("Function.prototype.inherits", function () {
+  var A, B, C;
+
+  beforeEach(function () {
+    A = function () {
+      this.usedConstructorA = true;
+    };
+
+    B = function () {
+      this.usedConstructorB = true;
+      this.onConstructB();
+    };
+    B.inherits(A);
+    B.prototype.onConstructB = function () {};
+
+    C = function () {
+      this.usedConstructorC = true;
+      this.onConstructC();
+    };
+    C.inherits(B);
+    C.prototype.onConstructC = function () {};
+  });
+
+  it ("establishes a correct prototype chain", function () {
+    var a = new A();
+    assert(a instanceof A, "a instanceof A");
+    assert(!(a instanceof B), "!(a instanceof B)");
+    assert(!(a instanceof C), "!(a instanceof C)");
+
+    var b = new B();
+    assert(b instanceof A, "b instanceof A");
+    assert(b instanceof B, "b instanceof B");
+    assert(!(b instanceof C), "!(b instanceof C)");
+
+    var c = new C();
+    assert(c instanceof A, "c instanceof A");
+    assert(c instanceof B, "c instanceof B");
+    assert(c instanceof C, "c instanceof C");
+  });
+
+  it ("sets the object's constructor property correctly", function () {
+    // Object's constructor property should always end up set to the
+    // function that constructed it.
+    // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/
+    //       Reference/Global_Objects/Object/constructor
+    var a = new A();
+    assert(a.constructor === A, "a.constructor === A");
+
+    var b = new B();
+    assert(b.constructor === B, "b.constructor === B");
+
+    var c = new C();
+    assert(c.constructor === C, "c.constructor === C");
+  });
+
+  it ("calls only the current constructor by default", function () {
+    var a = new A();
+    assert(a.usedConstructorA === true, "a.usedConstructorA === true");
+
+    var b = new B();
+    assert(b.usedConstructorA !== true, "b.usedConstructorA !== true");
+    assert(b.usedConstructorB === true, "b.usedConstructorB === true");
+
+    var c = new C();
+    assert(c.usedConstructorA !== true, "c.usedConstructorA !== true");
+    assert(c.usedConstructorB !== true, "c.usedConstructorB !== true");
+    assert(c.usedConstructorC === true, "c.usedConstructorC === true");
+  });
+
+  it ("can chain constructor calls", function () {
+    B.prototype.onConstructB = function () {
+      A.call(this);
+    };
+
+    C.prototype.onConstructC = function () {
+      B.call(this);
+    };
+
+    var b = new B();
+    assert(b.usedConstructorA === true, "b.usedConstructorA === true");
+    assert(b.usedConstructorB === true, "b.usedConstructorB === true");
+
+    var c = new C();
+    assert(c.usedConstructorA === true, "c.usedConstructorA === true");
+    assert(c.usedConstructorB === true, "c.usedConstructorB === true");
+    assert(c.usedConstructorC === true, "c.usedConstructorC === true");
+  });
+
+  it ("exposes superPrototype for chaining methods", function () {
+    A.prototype.noise = function () {
+      return "fizz";
+    };
+
+    B.prototype.noise = function () {
+      return B.superPrototype.noise.call(this) + "bang";
+    };
+
+    C.prototype.noise = function () {
+      return C.superPrototype.noise.call(this) + "pop";
+    };
+
+    var a = new A();
+    assert(a.noise() === "fizz", "a.noise() === 'fizz'");
+
+    var b = new B();
+    assert(b.noise() === "fizzbang", "b.noise() === 'fizzbang'");
+
+    var c = new C();
+    assert(c.noise() === "fizzbangpop", "c.noise() === 'fizzbangpop'");
+  });
+});
+
 describe("utils", function() {
   it("can debounce a repeated function call", function() {
     var counter = 0;

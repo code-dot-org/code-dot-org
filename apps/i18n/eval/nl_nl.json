@@ -1,7 +1,10 @@
 {
+  "badColorStringError": "You used an invalid color string: {val}",
+  "badStyleStringError": "You used an invalid style string: {val}",
   "circleBlockTitle": "cirkel (straal, stijl, kleur)",
   "displayBlockTitle": "weergeven",
   "ellipseBlockTitle": "ellips (breedte, hoogte, stijl, kleur)",
+  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "extraTopBlocks": "U hebt niet-vastgemaakte blokken. Wilde je deze vastmaken aan het blok \"weergeven\"?",
   "overlayBlockTitle": "overlay (boven, onder)",
   "placeImageBlockTitle": "plaats-afbeelding (x, y, afbeelding)",

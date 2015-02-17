@@ -63,3 +63,9 @@ Help Code.org bring computer science courses to New York schools:
 * Share this page with your teacher or principal (see [sample letter](/promote/nycletter))
 * Make a [generous donation to Code.org](/donate)
 * See [other ways to help](/help)
+
+
+## Questions? 
+
+Get in touch with us [here](http://support.code.org/).
+

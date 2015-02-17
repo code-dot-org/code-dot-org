@@ -82,12 +82,42 @@ class LevelsHelperTest < ActionView::TestCase
     @level.level_num = 'custom'
     @level.callout_json = '[{"localization_key": "run", "element_id": "#runButton"}]'
 
-    select_and_remember_callouts
-    assert_equal 1, @callouts.count
-    assert_equal '#runButton', @callouts[0]['element_id']
-    assert_equal 'Hit "Run" to try your program', @callouts[0]['localized_text']
+    callouts = select_and_remember_callouts
+    assert_equal 1, callouts.count
+    assert_equal '#runButton', callouts[0]['element_id']
+    assert_equal 'Hit "Run" to try your program', callouts[0]['localized_text']
 
-    select_and_remember_callouts
-    assert_equal 0, @callouts.count
+    callouts = select_and_remember_callouts
+    assert_equal 0, callouts.count
+  end
+
+  test "should select only callouts for current script level" do
+    script = create(:script)
+    @level = create(:level, :blockly, user_id: nil)
+    stage = create(:stage, script: script)
+    @script_level = create(:script_level, script: script, level: @level, stage: stage)
+
+    callout1 = create(:callout, script_level: @script_level)
+    callout2 = create(:callout, script_level: @script_level)
+    irrelevant_callout = create(:callout)
+
+    callouts = select_and_remember_callouts
+
+    assert callouts.any? { |callout| callout['id'] == callout1.id }
+    assert callouts.any? { |callout| callout['id'] == callout2.id }
+    assert callouts.none? { |callout| callout['id'] == irrelevant_callout.id }
+  end
+
+  test "should localize callouts" do
+    script = create(:script)
+    @level = create(:level, :blockly, user_id: nil)
+    stage = create(:stage, script: script)
+    @script_level = create(:script_level, script: script, level: @level, stage: stage)
+
+    create(:callout, script_level: @script_level, localization_key: 'run')
+
+    callouts = select_and_remember_callouts
+
+    assert callouts.any?{ |c| c['localized_text'] == 'Hit "Run" to try your program'}
   end
 end

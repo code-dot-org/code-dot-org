@@ -378,6 +378,13 @@
           The Design Recipe: The Design Recipe
         K5PD:
           Introduction to PD: Introduction to PD
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and
+            3
         netsim:
           title: Internet Simulator
           description_short: ''
@@ -388,3 +395,32 @@
           description_short: Create a story or make a game with Infinity Play Lab!!
           description: Create a story or make a game with Infinity Play Lab!
           Infinity: Nekonečno
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: Kurz K-8 Úvod do počítačové vědy (15-25 hodin)
+          description: Tento 20-ti hodinový kurz představuje základní koncepty počítačových
+            věd a programování. Kurz je navrhnut pro děti od 1. po 7. třídu (stupeň
+            K-8), ale jistě bude bavit studenty jakéhokoliv věku.
+          Introduction to Computer Science: Úvod do počítačové vědy
+          The Maze: Bludiště
+          Computational Thinking: Aritmetické Myšlení
+          Graph Paper Programming: Programování Na Milimetrovém Papíru
+          The Artist: Umělec
+          Algorithms: Algoritmy
+          The Artist 2: Malíř 2
+          Functions: Funkce
+          The Farmer: Farmářka
+          Conditionals: Podmínky
+          The Artist 3: Malíř 3
+          Song Writing: Psaní Písně
+          The Farmer 2: Farmářka 2
+          Abstraction: Abstrakce
+          The Artist 4: Malíř 4
+          Relay Programming: Štafetové Programování
+          The Farmer 3: Farmářka 3
+          The Internet: Internet
+          The Artist 5: Malíř 5
+          Wrap-up: Shrnutí

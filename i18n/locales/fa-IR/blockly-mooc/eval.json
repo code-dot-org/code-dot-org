@@ -1,7 +1,10 @@
 {
+  "badColorStringError":"You used an invalid color string: {val}",
+  "badStyleStringError":"You used an invalid style string: {val}",
   "circleBlockTitle":"دایره (شعاع، سبک، رنگ)",
   "displayBlockTitle":"نمایش",
   "ellipseBlockTitle":"بیضی (عرض، ارتفاع، سبک، رنگ)",
+  "emptyFunctionalBlock":"You have a block with an unfilled input.",
   "extraTopBlocks":"تو چندتا بلوک وصل نشده داری. آیا میخواستی به بلوک \"نمایش\" وصلشان کنی؟",
   "overlayBlockTitle":"پوشش (بالا، پایین)",
   "placeImageBlockTitle":"مکان تصویر (x، y، تصویر)",

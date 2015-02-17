@@ -765,6 +765,7 @@
         playlab_intro: Introduction to Play Lab
         playlab_events: Play Lab Events
         playlab_repeat_forever: Play Lab Repeat Forever
+        C2_digital_footprint_v2: Your Digital Footprint
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

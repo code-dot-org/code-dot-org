@@ -8,8 +8,8 @@
   "catText":"текст",
   "catVariables":"Променљиве",
   "continue":"Настави",
-  "createHtmlBlock":"направи хипертекст блок",
-  "createHtmlBlockTooltip":"Прави блок хипертекста у апликацији.",
+  "container":"create container",
+  "containerTooltip":"Creates a division container and sets its inner HTML.",
   "finalLevel":"Честитамо! Решили сте финалну слагалицу.",
   "nextLevel":"Честитке! Завршили сте пузлу.",
   "no":"не",
@@ -24,6 +24,6 @@
   "stepIn":"Ускочи",
   "stepOver":"Прескочи",
   "stepOut":"Искочи",
-  "viewData":"View Data",
+  "viewData":"Погледај Податке",
   "yes":"Да"
 }

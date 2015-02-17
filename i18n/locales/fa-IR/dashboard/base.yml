@@ -294,6 +294,8 @@ fa:
     student_teacher_disassociated: '%{teacher_name}  به عنوان یک معلم برای %{student_name} حذف شده است'
   user:
     email_confirm_needed: 'آدرس ایمیل تأیید نشده است:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: ارسال مجدد دستورالعمل‌های تأیید
     new_password_hint: (اگر نمی خواهید تغییر بدهید خالی بگذارید)
     current_password_hint: (کلمه عبور برای ذخیره تغییرات لازم است)
@@ -476,7 +478,7 @@ fa:
           title: دوره معرفی علوم کامپیوتر(15 تا 25 ساعت)
           description: این دوره 20 ساعته به معرفی مفاهیم اساسی علوم کامپیوتر و برنامه نویسی می پردازد. این دوره برای استفاده در کلاس های درس K-8 (دوره ابتدایی تا پایان دوره راهنمایی)طراحی شده است، اما می تواند برای همه سنین دیگر نیز جالب باشد.
         Hour of Code:
-          title: ساعت كد نويسي
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: ویرایش کد
