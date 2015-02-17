@@ -24,6 +24,7 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "rosso";
 Blockly.Msg.COLOUR_RGB_TITLE = "colora con";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "Crea un colore con la quantità specificata di rosso, verde e blu.  Tutti i valori devono essere tra 0 e 100.";
+Blockly.Msg.CONTRACT_EDITOR_HEADER = "La Ricetta della Progettazione";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "http://it.wikipedia.org/wiki/Struttura_di_controllo#Iterazione";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "esci dal blocco di ripetizione";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "prosegui con la successiva ripetizione del blocco di ripetizione";

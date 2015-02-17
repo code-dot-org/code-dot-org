@@ -111,3 +111,29 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
   margin: 0.5em;
   padding: 0.5em;
 }
+
+#netsim_router_panel {
+  #dns_mode_control {
+    input[type="radio"] {
+      vertical-align: middle;
+      margin: 0;
+    }
+
+    label {
+      display: inline;
+      margin-left: 1em;
+    }
+  }
+
+  #netsim_router_network_table {
+    .localNode {
+      font-weight: bold;
+      background-color: lightcyan;
+    }
+
+    .dnsNode {
+      color: white;
+      background-color: darkorange;
+    }
+  }
+}
