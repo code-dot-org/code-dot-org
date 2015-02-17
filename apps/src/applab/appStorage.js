@@ -237,28 +237,25 @@ var handleDeleteRecord = function(tableName, record, onSuccess, onError) {
   onSuccess();
 };
 
-
 /**
  * Gets a unique, consistent id for the current user of the current app.
  * @param {function()} onSuccess Function to call on success.
- * @param {function(string)} onError Function to call with an error message
- *    in case of failure.
  */
-AppStorage.getUserId = function(onSuccess, onError) {
+AppStorage.getUserId = function(onSuccess) {
   var req = new XMLHttpRequest();
-  req.onreadystatechange = handleGetUserId.bind(req, onSuccess, onError);
+  req.onreadystatechange = handleGetUserId.bind(req, onSuccess);
   var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + '/user-id';
   req.open('GET', url, true);
   req.send();
 };
 
-var handleGetUserId = function(onSuccess, onError) {
+var handleGetUserId = function(onSuccess) {
   if (this.readyState !== 4) {
     return;
   }
   if (this.status < 200 || this.status >= 300) {
-    onError('error getting user id: unexpected http status ' + this.status);
-    return;
+    throw new Error('error getting user id: unexpected http status ' +
+        this.status);
   }
   var userId = JSON.parse(this.responseText);
   onSuccess(userId);

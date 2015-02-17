@@ -21,6 +21,7 @@ var utils = require('../utils');
 var dropletConfig = require('./dropletConfig');
 var Slider = require('../slider');
 var AppStorage = require('./appStorage');
+var StorageUser = require('./storageUser');
 var FormStorage = require('./formStorage');
 var constants = require('../constants');
 var KeyCodes = constants.KeyCodes;
@@ -1044,7 +1045,15 @@ Applab.execute = function() {
   divApplab.focus();
 
   Applab.running = true;
-  queueOnTick();
+
+  // The getUserId block depends on the storage user ID having already
+  // been loaded from the server.
+  var editorCode = studioApp.editor.getValue();
+  if (editorCode && editorCode.indexOf('getUserId') !== -1) {
+    StorageUser.getCurrentUser().whenReady(queueOnTick);
+  } else {
+    queueOnTick();
+  }
 };
 
 Applab.onPauseButton = function() {
@@ -2133,18 +2142,11 @@ Applab.handleDeleteRecord = function(successCallback) {
 };
 
 Applab.getUserId = function (opts) {
-  var onSuccess = Applab.handleGetUserId.bind(this, opts.onSuccess);
-  var onError = Applab.handleError.bind(this, opts.onError);
-  AppStorage.getUserId(onSuccess, onError);
-};
-
-Applab.handleGetUserId = function(successCallback, userId) {
-  if (successCallback) {
-    Applab.eventQueue.push({
-      'fn': successCallback,
-      'arguments': [userId]
-    });
+  var userId = StorageUser.getCurrentUser().userId;
+  if (!userId) {
+    throw new Error("User ID failed to load.");
   }
+  return userId;
 };
 
 /*
