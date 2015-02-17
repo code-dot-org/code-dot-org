@@ -4,7 +4,7 @@ var assertEqual = testUtils.assertEqual;
 var assertThrows = testUtils.assertThrows;
 
 var utils = testUtils.requireWithGlobalsCheckBuildFolder('utils');
-var commands = testUtils.requireWithGlobalsCheckBuildFolder('netsim/commands');
+var commands = testUtils.requireWithGlobalsCheckBuildFolder('commands');
 var Command = commands.Command;
 var CommandSequence = commands.CommandSequence;
 

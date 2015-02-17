@@ -28,7 +28,7 @@
 'use strict';
 
 var utils = require('../utils');
-var commands = require('./commands');
+var commands = require('../commands');
 var Command = commands.Command;
 var CommandSequence = commands.CommandSequence;
 var NetSimEntity = require('./NetSimEntity');

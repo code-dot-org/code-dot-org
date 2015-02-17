@@ -11,7 +11,7 @@
  */
 'use strict';
 
-require('../utils');
+require('./utils');
 
 var commands = module.exports;
 
