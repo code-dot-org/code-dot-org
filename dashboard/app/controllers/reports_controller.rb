@@ -117,14 +117,20 @@ SQL
       if stage
         script.script_levels.to_a.select{|sl| sl.stage_id == script_level.stage_id}
       else
-        script.script_levels.to_a.select{|sl| sl.level.game_id == script_level.level.game_id}
+        script.script_levels.to_a.select{|sl| sl.level.game_id == level.game_id}
       end
 
     stage_data = {
+      id: stage.id,
+      position: stage.position,
+      script_name: script.name,
+      script_id: script.id,
+      script_stages: script.stages.to_a.count,
       title: stage_title(script, script_level.stage_or_game),
       levels: game_levels.map do |sl|
         {
           id: sl.level.id,
+          position: sl.stage_or_game_position,
           label: sl.level_display_text,
           link: build_script_level_path(sl),
           unplugged: !!sl.level.unplugged?,
@@ -138,40 +144,6 @@ SQL
         text: t('nav.header.finished_hoc'),
         href: hoc_finish_url(script)
       }
-    end
-
-    # USER-SPECIFIC DATA
-    if current_user
-      user_data = {
-        linesOfCode: current_user.total_lines,
-        linesOfCodeText: t('nav.popup.lines', lines: current_user.total_lines),
-        levels: {}
-      }
-
-      # Get all user_levels
-      user_levels = current_user.levels_from_script(script)
-
-      user_levels.map do |sl|
-        completion_status, link = level_info(current_user, sl)
-        if completion_status != 'not_tried'
-          user_data[:levels][sl.level.id] = {
-            status: completion_status
-            # More info could go in here...
-          }
-        end
-      end
-
-      user_data[:disableSocialShare] = true if current_user.under_13?
-
-      if script.trophies
-        progress = current_user.progress(script)
-        user_data[:trophies] = {
-          current: progress['current_trophies'],
-          of: t(:of),
-          max: progress['max_trophies']
-        }
-      end
-
     end
 
     # Level-specific data
@@ -229,15 +201,46 @@ SQL
     end
 
     reply = {
-      script: {
-        id: script.id,
-        stages: script.stages.to_a.count,
-        trophies: !!script.trophies
-      },
       stage: stage_data,
       level: level_data,
-      progress: user_data
     }
+
+
+    # USER-SPECIFIC DATA - should eventually move to its own callback?
+    if current_user
+      user_data = {
+        linesOfCode: current_user.total_lines,
+        linesOfCodeText: t('nav.popup.lines', lines: current_user.total_lines),
+        levels: {}
+      }
+
+      # Get all user_levels
+      user_levels = current_user.levels_from_script(script)
+
+      user_levels.map do |sl|
+        completion_status, link = level_info(current_user, sl)
+        if completion_status != 'not_tried'
+          user_data[:levels][sl.level.id] = {
+            status: completion_status
+            # More info could go in here...
+          }
+        end
+      end
+
+      user_data[:disableSocialShare] = true if current_user.under_13?
+
+      if script.trophies
+        progress = current_user.progress(script)
+        user_data[:trophies] = {
+          current: progress['current_trophies'],
+          of: t(:of),
+          max: progress['max_trophies']
+        }
+      end
+
+      reply[:progress] = user_data
+    end
+
 
     render :json => JSON.pretty_generate(reply), :callback => params['jsonp']
   end
