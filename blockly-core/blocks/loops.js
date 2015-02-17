@@ -72,7 +72,7 @@ Blockly.Blocks.controls_whileUntil = {
     this.setHelpUrl(Blockly.Msg.CONTROLS_WHILEUNTIL_HELPURL);
     this.setHSV(322, 0.90, 0.95);
     this.appendValueInput('BOOL')
-        .setCheck('Boolean')
+        .setCheck(Blockly.BlockValueType.BOOLEAN)
         .appendTitle(new Blockly.FieldDropdown(OPERATORS), 'MODE');
     this.appendStatementInput('DO')
         .appendTitle(Blockly.Msg.CONTROLS_WHILEUNTIL_INPUT_DO);
@@ -143,7 +143,7 @@ Blockly.Blocks.controls_forEach = {
     this.setHelpUrl(Blockly.Msg.CONTROLS_FOREACH_HELPURL);
     this.setHSV(322, 0.90, 0.95);
     this.appendValueInput('LIST')
-        .setCheck('Array')
+        .setCheck(Blockly.BlockValueType.ARRAY)
         .appendTitle(Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM)
         .appendTitle(new Blockly.FieldVariable(null), 'VAR')
         .appendTitle(Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST);

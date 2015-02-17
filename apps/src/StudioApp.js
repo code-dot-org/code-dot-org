@@ -381,7 +381,7 @@ StudioApp.prototype.init = function(config) {
     }, this));
 
     if (config.level.openFunctionDefinition) {
-      Blockly.functionEditor.openAndEditFunction(config.level.openFunctionDefinition);
+      Blockly.functionEditor.openWithLevelConfiguration(config.level);
     }
   }
 
