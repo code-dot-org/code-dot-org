@@ -4,7 +4,7 @@ bs:
       name:
         test:
           "Jigsaw: Learn to drag and drop": 'Jigsaw: Learn to drag and drop'
-          The Maze: The Maze
+          The Maze: Labirint
           Multi: Multi
           Match: Match
           Math Image: Math Image
@@ -44,11 +44,11 @@ bs:
           description_audience: Ages 4+ (pre-readers)
           description_short: Course 1 is designed for early readers.
         course2:
-          The Maze: The Maze
+          The Maze: Labirint
           Suzi: Suzi
-          The Artist: The Artist
+          The Artist: Umjetnik
           Artist Debugging: Artist Debugging
-          Bounce: Bounce
+          Bounce: Odskok
           "Studio: Create a Story": 'Play Lab: Create a Story'
           Artist Loops: Artist Loops
           Bee Conditionals: Bee Conditionals
@@ -60,11 +60,11 @@ bs:
           Bee Debugging: Bee Debugging
           Bee Functions: Bee Functions
           Maze Loops: Maze Loops
-          Graph Paper Programming: Graph Paper Programming
+          Graph Paper Programming: Papirno Programiranje Grafikona
           "Real-life Algorithms: Paper Planes": 'Real-life Algorithms: Paper Planes'
           Getting Loopy: Getting Loopy
           Relay programming: Relay programming
-          Conditionals: Conditionals
+          Conditionals: Uvjeti
           Binary Bracelets: Binary Bracelets
           The Big Event: The Big Event
           Your Digital Footprint: Your Digital Footprint
@@ -83,9 +83,9 @@ bs:
           description_audience: 'Ages  6+ (reading required)'
           description_short: Course 2 is designed for students who can read.
         course3:
-          The Maze: The Maze
+          The Maze: Labirint
           "Studio: Create a Story": 'Play Lab: Create a Story'
-          The Artist: The Artist
+          The Artist: Umjetnik
           title: Course 3
           Artist Functions: Artist Functions
           Artist For Loops: Artist For Loops
@@ -96,10 +96,10 @@ bs:
           Bee Debugging: Bee Debugging
           Bee Functions: Bee Functions
           Artist Functions with Params: Artist Functions with Params
-          Bounce: Bounce
+          Bounce: Odskok
           Maze Conditionals: Maze Conditionals
           Artist Functions with Parameters: Artist Functions with Parameters
-          Computational Thinking: Computational Thinking
+          Computational Thinking: Računarsko razmišljanje
           Functional Suncatchers: Functional Suncatchers
           Songwriting Parameters: Songwriting Parameters
           Dice Race: Dice Race
@@ -136,7 +136,7 @@ bs:
         msm:
           title: Middle School Math
           description: Private work in progress for Middle School Math.
-          Graph Paper Programming: Graph Paper Programming
+          Graph Paper Programming: Papirno Programiranje Grafikona
           Assessments: Assessments
           Unit 1: Unit 1
           Unit 2: Unit 2
@@ -199,7 +199,7 @@ bs:
           "Maze: Sequence": 'Maze: Sequence'
         hourofcode:
           Maze: Maze
-          title: Hour of Code
+          title: Sat Kodiranja
           description: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
           description_short: Try the basics of computer science with many fun characters!
         frozen:
@@ -302,7 +302,7 @@ bs:
           Defining Functions: Defining Functions
           Design Recipe: Design Recipe
           Booleans: Booleans
-          Conditionals: Conditionals
+          Conditionals: Uvjeti
           Free Play: Free Play
         algebra:
           title: Computer Science in Algebra
@@ -342,6 +342,12 @@ bs:
           The Design Recipe: The Design Recipe
         K5PD:
           Introduction to PD: Introduction to PD
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and 3
         netsim:
           title: Internet Simulator
           description_short: ""
@@ -352,3 +358,30 @@ bs:
           description_short: Create a story or make a game with Infinity Play Lab!!
           description: Create a story or make a game with Infinity Play Lab!
           Infinity: Beskonačnost
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: Uvod u informatiku za osnovnu školu (15-25 sati)
+          description: Ovaj 20-satni kurs objašnjava osnovne koncepte programiranja i nformatike. Kurs je namijenjen za korištenje u nižim razredima osnovne škole, ali je zabavan za učenje bez obzira na dob polaznika.
+          Introduction to Computer Science: Uvod u računarstvo
+          The Maze: Labirint
+          Computational Thinking: Računarsko razmišljanje
+          Graph Paper Programming: Papirno Programiranje Grafikona
+          The Artist: Umjetnik
+          Algorithms: Algoritmi
+          The Artist 2: Umjetnik 2
+          Functions: Funkcije
+          The Farmer: Farmer
+          Conditionals: Uvjeti
+          The Artist 3: Umjetnik 3
+          Song Writing: Pisanje Pjesmi
+          The Farmer 2: Farmer 2
+          Abstraction: Apstrakcija
+          The Artist 4: Umjetnik 4
+          Relay Programming: Štafeta Programiranje
+          The Farmer 3: Farmer 3
+          The Internet: Internet
+          The Artist 5: Umjetnik 5
+          Wrap-up: Zamotavanje

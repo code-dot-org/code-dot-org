@@ -38,7 +38,8 @@ module LevelsHelper
   end
 
   def set_videos_and_blocks_and_callouts_and_instructions
-    select_and_track_autoplay_video
+    @autoplay_video_info = select_and_track_autoplay_video
+    @callouts = select_and_remember_callouts(@script_level.nil?)
 
     if @level.is_a? Blockly
       @toolbox_blocks ||=
@@ -50,7 +51,6 @@ module LevelsHelper
         @level.start_blocks
     end
 
-    select_and_remember_callouts(@script_level.nil?)
     localize_levelbuilder_instructions
   end
 
@@ -72,11 +72,11 @@ module LevelsHelper
 
     seen_videos.add(autoplay_video.key)
     session[:videos_seen] = seen_videos
-    @autoplay_video_info = video_info(autoplay_video) unless params[:noautoplay]
+    video_info(autoplay_video) unless params[:noautoplay]
   end
 
   def select_and_remember_callouts(always_show = false)
-    session[:callouts_seen] ||= Set.new()
+    session[:callouts_seen] ||= Set.new
     available_callouts = []
     if @level.custom?
       unless @level.try(:callout_json).blank?
@@ -91,14 +91,12 @@ module LevelsHelper
     else
       available_callouts = @script_level.callouts if @script_level
     end
-    @callouts_to_show = available_callouts
+    # Filter if already seen (unless always_show)
+    callouts_to_show = available_callouts
       .reject { |c| !always_show && session[:callouts_seen].include?(c.localization_key) }
       .each { |c| session[:callouts_seen].add(c.localization_key) }
-    @callouts = make_localized_hash_of_callouts(@callouts_to_show)
-  end
-
-  def make_localized_hash_of_callouts(callouts)
-    callouts.map do |callout|
+    # Localize
+    callouts_to_show.map do |callout|
       callout_hash = callout.attributes
       callout_hash.delete('localization_key')
       callout_text = data_t('callout.text', callout.localization_key)
@@ -227,7 +225,6 @@ module LevelsHelper
       default_num_example_blocks
       impressive
       open_function_definition
-      callout_json
       disable_sharing
       hide_source
       share
@@ -238,6 +235,7 @@ module LevelsHelper
       timeout_after_when_run
       custom_game_type
       project_template_level_name
+      scrollbars
     ).map{ |x| x.include?(':') ? x.split(':') : [x,x.camelize(:lower)]}]
     .each do |dashboard, blockly|
       # Select first valid value from 1. local_assigns, 2. property of @level object, 3. named instance variable, 4. properties json
@@ -295,7 +293,6 @@ module LevelsHelper
     }
     app_options[:scriptId] = @script.id if @script
     app_options[:levelGameName] = @level.game.name if @level.game
-    app_options[:scrollbars] = blockly_value(@level.scrollbars) if @level.is_a?(Blockly) && @level.scrollbars
     app_options[:skinId] = @level.skin if @level.is_a?(Blockly)
     app_options[:level_source_id] = @level_source_id if @level_source_id
     app_options[:sendToPhone] = request.location.try(:country_code) == 'US' ||
@@ -336,7 +333,7 @@ module LevelsHelper
       level = Level.find_by(name: base_level)
       content_tag(:div,
         content_tag(:iframe, '', {
-          src: url_for(id: level.id, controller: :levels, action: :show, embed: true).strip,
+          src: url_for(level_id: level.id, controller: :levels, action: :embed_level).strip,
           width: (width ? width.strip : '100%'),
           scrolling: 'no',
           seamless: 'seamless',

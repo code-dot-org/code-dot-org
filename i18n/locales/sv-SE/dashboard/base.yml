@@ -303,6 +303,8 @@ sv:
     student_teacher_disassociated: '%{teacher_name} har tagits bort som lärare för %{student_name}'
   user:
     email_confirm_needed: 'E-postadressen har inte bekräftats:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Skicka instruktioner för bekräftelse igen
     new_password_hint: (lämna tomt om du inte vill ändra det)
     current_password_hint: (vi behöver ditt nuvarande lösenord att bekräfta dina ändringar)
@@ -485,7 +487,7 @@ sv:
           title: Introduktion till grundskolekurs i datavetenskap (15-25 timmar)
           description: Denna 20-timmars kurs introducerar grundläggande datavetenskap och programmeringsbegrepp. Kursen är utformad för användning i klassrummet från förskoleklass till årskurs 8, men det är roligt att lära sig i alla åldrar.
         Hour of Code:
-          title: Timmen med Kod
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: Redigera kod

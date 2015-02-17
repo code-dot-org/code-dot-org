@@ -567,6 +567,20 @@ function callHandler (name, allowQueueExtension) {
   });
 }
 
+/**
+ * This is a little weird, but is effectively a way for us to call api code
+ * (i.e. the methods in studio/api.js) so that we can essentially simulate
+ * generated code. It does this by creating an event handler for the given name,
+ * calling the handler - which results in func being executed to generate a
+ * command queue - and then executing the command queue.
+ */
+Studio.callApiCode = function (name, func) {
+  registerEventHandler(Studio.eventHandlers, name, func);
+  // generate the cmdQueue
+  callHandler(name);
+  Studio.executeQueue(name);
+};
+
 Studio.onTick = function() {
   Studio.tickCount++;
 
@@ -686,8 +700,9 @@ Studio.onTick = function() {
 
     var isWalking = true;
 
-    // After 5 ticks of no movement, turn sprite forward
-    if (Studio.tickCount - Studio.sprite[i].lastMove > TICKS_BEFORE_FACE_SOUTH) {
+    // After 5 ticks of no movement, turn sprite forward.
+    if (Studio.sprite[i].lastMove === Infinity ||
+        Studio.tickCount - Studio.sprite[i].lastMove > TICKS_BEFORE_FACE_SOUTH) {
       Studio.sprite[i].dir = Direction.SOUTH;
       isWalking = false;
     }

@@ -24,6 +24,7 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "vermelho";
 Blockly.Msg.COLOUR_RGB_TITLE = "colorir com";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "Crie uma cor com as quantidades de vermelho, verde e azul que foram determinadas. Todos os valores devem estar entre 0 e 100.";
+Blockly.Msg.CONTRACT_EDITOR_HEADER = "Receita de design";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "interrompe o laço";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "continua com a próxima iteração do laço";

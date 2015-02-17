@@ -378,6 +378,13 @@
           The Design Recipe: The Design Recipe
         K5PD:
           Introduction to PD: Introduction to PD
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and
+            3
         netsim:
           title: Internet Simulator
           description_short: ''
@@ -388,3 +395,32 @@
           description_short: Create a story or make a game with Infinity Play Lab!!
           description: Create a story or make a game with Infinity Play Lab!
           Infinity: অসীম
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: '''K-৮ পরিচিতি'' থেকে ''কম্পিউটার বিজ্ঞানের কোর্স'' (১৫-২৫ ঘন্টা)'
+          description: This 20-hour course introduces core computer science and programming
+            concepts. The course is designed for use in classrooms for grades K-8,
+            but it is fun to learn at all ages.
+          Introduction to Computer Science: কম্পিউটার বিজ্ঞান পরিচিতি
+          The Maze: গোলকধাঁধা
+          Computational Thinking: গণিতিক চিন্তা-ভাবনা
+          Graph Paper Programming: ছক-কাগজে প্রোগ্রামিং
+          The Artist: শিল্পী
+          Algorithms: অ্যালগরিদম
+          The Artist 2: চিত্রকর ২
+          Functions: ফাংশনগুলি
+          The Farmer: কৃষক
+          Conditionals: শর্তযুক্ত
+          The Artist 3: পটুয়া ৩
+          Song Writing: গান লিখা
+          The Farmer 2: কৃষক ২
+          Abstraction: Abstraction
+          The Artist 4: চিত্রকর ৪
+          Relay Programming: রিলে-স্যুইচ প্রোগ্রামিং
+          The Farmer 3: কৃষক ৩
+          The Internet: ইন্টারনেট
+          The Artist 5: চিত্রকর ৫
+          Wrap-up: গুটিয়ে নেয়া

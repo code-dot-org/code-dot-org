@@ -154,9 +154,12 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
+"badColorStringError":function(d){return "You used an invalid color string: "+appLocale.v(d,"val")},
+"badStyleStringError":function(d){return "You used an invalid style string: "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "円 (半径、スタイル、色)"},
 "displayBlockTitle":function(d){return "ひょうじ"},
 "ellipseBlockTitle":function(d){return "楕円 (幅、高さ、スタイル、色)"},
+"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "extraTopBlocks":function(d){return "使っていないブロックがあります。\"表示\"ブロックにつなごうと思っていましたか？"},
 "overlayBlockTitle":function(d){return "上に重ねる (上、下)"},
 "placeImageBlockTitle":function(d){return "画像を配置 (縦座標、横座標、画像)"},

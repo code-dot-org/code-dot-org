@@ -35,7 +35,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":144}],12:[function(require,module,exports){
+},{"../skins":142}],12:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/applab');
@@ -227,7 +227,7 @@ levels.full_sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-},{"../../locale/current/applab":187,"../block_utils":17,"../utils":185}],6:[function(require,module,exports){
+},{"../../locale/current/applab":185,"../block_utils":17,"../utils":183}],6:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -1268,6 +1268,11 @@ Applab.execute = function() {
     }
   }
 
+  // Set focus on divApplab so key events can be handled right from the start
+  // without requiring the user to adjust focus:
+  var divApplab = document.getElementById('divApplab');
+  divApplab.focus();
+
   Applab.running = true;
   queueOnTick();
 };
@@ -2129,6 +2134,11 @@ Applab.onEventFired = function (opts, e) {
 
 Applab.onEvent = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // Special case the id of 'body' to mean the app's container (divApplab)
+  // TODO (cpirich): apply this logic more broadly (setStyle, etc.)
+  if (opts.elementId === 'body') {
+    opts.elementId = 'divApplab';
+  }
   var domElement = document.getElementById(opts.elementId);
   if (divApplab.contains(domElement)) {
     switch (opts.eventName) {
@@ -2586,7 +2596,7 @@ var getPegasusHost = function() {
         return Array(multiplier + 1).join(input)
     }
 
-},{"../../locale/current/applab":187,"../../locale/current/common":190,"../StudioApp":2,"../codegen":42,"../constants":43,"../dom":44,"../skins":144,"../slider":145,"../templates/page.html":165,"../utils":185,"../xml":186,"./api":4,"./appStorage":5,"./blocks":7,"./controls.html":8,"./dropletConfig":9,"./extraControlRows.html":10,"./formStorage":11,"./visualization.html":15}],15:[function(require,module,exports){
+},{"../../locale/current/applab":185,"../../locale/current/common":188,"../StudioApp":2,"../codegen":42,"../constants":43,"../dom":44,"../skins":142,"../slider":143,"../templates/page.html":163,"../utils":183,"../xml":184,"./api":4,"./appStorage":5,"./blocks":7,"./controls.html":8,"./dropletConfig":9,"./extraControlRows.html":10,"./formStorage":11,"./visualization.html":15}],15:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2598,7 +2608,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<div id="divApplab">\n</div>\n'); })();
+ buf.push('<div id="divApplab" tabindex="1">\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -2606,7 +2616,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":206}],11:[function(require,module,exports){
+},{"ejs":204}],11:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -2809,7 +2819,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/applab":187,"../../locale/current/common":190,"ejs":206}],9:[function(require,module,exports){
+},{"../../locale/current/applab":185,"../../locale/current/common":188,"ejs":204}],9:[function(require,module,exports){
 module.exports.blocks = [
   {'func': 'onEvent', 'title': 'Execute code in response to an event for the specified element. Additional parameters are passed to the callback function.', 'category': 'UI controls', 'params': ["'id'", "'click'", "function(event) {\n  \n}"] },
   {'func': 'button', 'title': 'Create a button and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "'text'"] },
@@ -2931,7 +2941,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":190,"ejs":206}],7:[function(require,module,exports){
+},{"../../locale/current/common":188,"ejs":204}],7:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -3004,7 +3014,7 @@ function installContainer(blockly, generator, blockInstallOptions) {
   };
 }
 
-},{"../../locale/current/applab":187,"../../locale/current/common":190,"../codegen":42,"../utils":185}],187:[function(require,module,exports){
+},{"../../locale/current/applab":185,"../../locale/current/common":188,"../codegen":42,"../utils":183}],185:[function(require,module,exports){
 /*applab*/ module.exports = window.blockly.appLocale;
 },{}],5:[function(require,module,exports){
 'use strict';

@@ -1,7 +1,10 @@
 {
+  "badColorStringError": "You used an invalid color string: {val}",
+  "badStyleStringError": "You used an invalid style string: {val}",
   "circleBlockTitle": "Kreis (Radius, Stil, Farbe)",
   "displayBlockTitle": "Display",
   "ellipseBlockTitle": "Ellipse (Breite, Höhe, Stil, Farbe)",
+  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "extraTopBlocks": "Sie haben freie Blöcke. Möchtest du diese an den \"Anzeige\" Block anfügen?",
   "overlayBlockTitle": "Overlay (oben, unten)",
   "placeImageBlockTitle": "Ort-Bild (x, y, Bild)",

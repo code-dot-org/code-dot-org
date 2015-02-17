@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({179:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({177:[function(require,module,exports){
 var appMain = require('../appMain');
 var studioApp = require('../StudioApp').singleton;
 var Artist = require('./turtle');
@@ -18,7 +18,7 @@ window.turtleMain = function(options) {
   appMain(artist, levels, options);
 };
 
-},{"../StudioApp":2,"../appMain":3,"./blocks":174,"./levels":178,"./skins":181,"./turtle":184}],181:[function(require,module,exports){
+},{"../StudioApp":2,"../appMain":3,"./blocks":172,"./levels":176,"./skins":179,"./turtle":182}],179:[function(require,module,exports){
 var skinBase = require('../skins');
 
 exports.load = function (assetUrl, id) {
@@ -79,7 +79,7 @@ exports.load = function (assetUrl, id) {
   return skin;
 };
 
-},{"../skins":144}],174:[function(require,module,exports){
+},{"../skins":142}],172:[function(require,module,exports){
 /**
  * Blockly Demo: Turtle Graphics
  *
@@ -403,7 +403,7 @@ exports.install = function(blockly, blockInstallOptions) {
           .appendTitle(msg.drawASquare());
       this.appendValueInput('VALUE')
           .setAlign(blockly.ALIGN_RIGHT)
-          .setCheck('Number')
+          .setCheck(blockly.BlockValueType.NUMBER)
               .appendTitle(msg.lengthParameter() + ':');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -438,7 +438,7 @@ exports.install = function(blockly, blockInstallOptions) {
           .appendTitle(msg.drawASnowman());
       this.appendValueInput('VALUE')
           .setAlign(blockly.ALIGN_RIGHT)
-          .setCheck('Number')
+          .setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(msg.lengthParameter() + ':');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -546,7 +546,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.00, 0.74);
       this.appendValueInput('VALUE')
-          .setCheck('Number')
+          .setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(new blockly.FieldDropdown(
               blockly.Blocks.draw_move.DIRECTIONS), 'DIR');
       this.appendDummyInput()
@@ -576,7 +576,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.00, 0.74);
       this.appendValueInput('VALUE')
-          .setCheck('Number')
+          .setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(new blockly.FieldDropdown(
               blockly.Blocks.jump.DIRECTIONS), 'DIR');
       this.appendDummyInput()
@@ -790,7 +790,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.00, 0.74);
       this.appendValueInput('VALUE')
-          .setCheck('Number')
+          .setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(new blockly.FieldDropdown(
               blockly.Blocks.draw_turn.DIRECTIONS), 'DIR');
       this.appendDummyInput()
@@ -822,7 +822,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.00, 0.74);
       this.appendValueInput('WIDTH')
-          .setCheck('Number')
+          .setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(msg.setWidth());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -890,7 +890,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(196, 1.0, 0.79);
       this.appendValueInput('COLOUR')
-          .setCheck('Colour')
+          .setCheck(blockly.BlockValueType.COLOUR)
           .appendTitle(msg.setColour());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -1025,7 +1025,7 @@ exports.install = function(blockly, blockInstallOptions) {
   customLevelBlocks.install(blockly, generator, gensym);
 };
 
-},{"../../locale/current/common":190,"../../locale/current/turtle":197,"./colours":175,"./customLevelBlocks":177,"./turtle":184}],184:[function(require,module,exports){
+},{"../../locale/current/common":188,"../../locale/current/turtle":195,"./colours":173,"./customLevelBlocks":175,"./turtle":182}],182:[function(require,module,exports){
 /**
  * Blockly Demo: Turtle Graphics
  *
@@ -2481,7 +2481,7 @@ Artist.prototype.resetStepInfo_ = function () {
   this.stepDistanceCovered = 0;
 };
 
-},{"../../locale/current/common":190,"../../locale/current/turtle":197,"../codegen":42,"../slider":145,"../templates/page.html":165,"../utils":185,"./api":173,"./colours":175,"./controls.html":176,"./levels":178}],178:[function(require,module,exports){
+},{"../../locale/current/common":188,"../../locale/current/turtle":195,"../codegen":42,"../slider":143,"../templates/page.html":163,"../utils":183,"./api":171,"./colours":173,"./controls.html":174,"./levels":176}],176:[function(require,module,exports){
 var levelBase = require('../level_base');
 var Colours = require('./colours');
 var answer = require('./answers').answer;
@@ -3383,7 +3383,7 @@ levels.ec_1_10 = utils.extend(levels['1_10'], {
   'startBlocks': "moveForward(100);\n",
 });
 
-},{"../../locale/current/turtle":197,"../block_utils":17,"../level_base":82,"../utils":185,"./answers":172,"./colours":175,"./requiredBlocks":180,"./startBlocks.xml":182,"./toolbox.xml":183}],183:[function(require,module,exports){
+},{"../../locale/current/turtle":195,"../block_utils":17,"../level_base":81,"../utils":183,"./answers":170,"./colours":173,"./requiredBlocks":178,"./startBlocks.xml":180,"./toolbox.xml":181}],181:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3511,7 +3511,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/turtle":197,"ejs":206}],182:[function(require,module,exports){
+},{"../../locale/current/turtle":195,"ejs":204}],180:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3577,7 +3577,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/turtle":197,"ejs":206}],180:[function(require,module,exports){
+},{"../../locale/current/turtle":195,"ejs":204}],178:[function(require,module,exports){
 /**
  * Sets BlocklyApp constants that depend on the page and level.
  * This encapsulates many functions used for StudioApp.requiredBlocks_.
@@ -3781,7 +3781,7 @@ module.exports = {
   defineWithArg: defineWithArg,
 };
 
-},{"../required_block_utils":142}],176:[function(require,module,exports){
+},{"../required_block_utils":140}],174:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3801,7 +3801,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":206}],177:[function(require,module,exports){
+},{"ejs":204}],175:[function(require,module,exports){
 /**
  * A set of blocks used by some of our custom levels (i.e. built by level builder)
  */
@@ -3858,7 +3858,7 @@ function installDrawASquare(blockly, generator, gensym) {
           .appendTitle(msg.drawASquare());
       this.appendValueInput('VALUE')
           .setAlign(blockly.ALIGN_RIGHT)
-          .setCheck('Number')
+          .setCheck(Blockly.BlockValueType.NUMBER)
               .appendTitle(msg.lengthParameter() + ':');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -3906,7 +3906,7 @@ function installCreateACircle(blockly, generator, gensym) {
           .appendTitle(msg.createACircle());
       this.appendValueInput('VALUE')
           .setAlign(blockly.ALIGN_RIGHT)
-          .setCheck('Number')
+          .setCheck(Blockly.BlockValueType.NUMBER)
               .appendTitle(msg.sizeParameter() + ':');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -3976,7 +3976,7 @@ function installDrawARhombus(blockly, generator, gensym) {
           .appendTitle(msg.drawARhombus());
       this.appendValueInput('VALUE')
           .setAlign(blockly.ALIGN_RIGHT)
-          .setCheck('Number')
+          .setCheck(Blockly.BlockValueType.NUMBER)
               .appendTitle(msg.lengthParameter() + ':');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -4014,7 +4014,7 @@ function installDrawATriangle(blockly, generator, gensym) {
           .appendTitle(msg.drawATriangle());
       this.appendValueInput('VALUE')
           .setAlign(blockly.ALIGN_RIGHT)
-          .setCheck('Number')
+          .setCheck(Blockly.BlockValueType.NUMBER)
               .appendTitle(msg.lengthParameter() + ':');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -4051,7 +4051,7 @@ function installDrawAHexagon(blockly, generator, gensym) {
           .appendTitle(msg.drawAHexagon());
       this.appendValueInput('VALUE')
           .setAlign(blockly.ALIGN_RIGHT)
-          .setCheck('Number')
+          .setCheck(Blockly.BlockValueType.NUMBER)
               .appendTitle(msg.lengthParameter() + ':');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -4088,7 +4088,7 @@ function installDrawAHouse(blockly, generator, gensym) {
           .appendTitle(msg.drawAHouse());
       this.appendValueInput('VALUE')
           .setAlign(blockly.ALIGN_RIGHT)
-          .setCheck('Number')
+          .setCheck(Blockly.BlockValueType.NUMBER)
               .appendTitle(msg.lengthParameter() + ':');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -4133,7 +4133,7 @@ function installDrawAFlower(blockly, generator, gensym) {
           .appendTitle(msg.drawAFlower());
       this.appendValueInput('VALUE')
           .setAlign(blockly.ALIGN_RIGHT)
-          .setCheck('Number')
+          .setCheck(Blockly.BlockValueType.NUMBER)
               .appendTitle(msg.lengthParameter() + ':');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -4217,7 +4217,7 @@ function installDrawAStar(blockly, generator, gensym) {
           .appendTitle(msg.drawAStar());
       this.appendValueInput('VALUE')
           .setAlign(blockly.ALIGN_RIGHT)
-          .setCheck('Number')
+          .setCheck(Blockly.BlockValueType.NUMBER)
               .appendTitle(msg.lengthParameter() + ':');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -4312,7 +4312,7 @@ function installDrawARocket(blockly, generator, gensym) {
           .appendTitle(msg.drawARocket());
       this.appendValueInput('VALUE')
           .setAlign(blockly.ALIGN_RIGHT)
-          .setCheck('Number')
+          .setCheck(Blockly.BlockValueType.NUMBER)
               .appendTitle(msg.lengthParameter() + ':');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -4366,7 +4366,7 @@ function installDrawAPlanet(blockly, generator, gensym) {
           .appendTitle(msg.drawAPlanet());
       this.appendValueInput('VALUE')
           .setAlign(blockly.ALIGN_RIGHT)
-          .setCheck('Number')
+          .setCheck(Blockly.BlockValueType.NUMBER)
               .appendTitle(msg.lengthParameter() + ':');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -4404,7 +4404,7 @@ function installDrawUpperWave(blockly, generator, gensym) {
           .appendTitle(msg.drawUpperWave());
       this.appendValueInput('VALUE')
           .setAlign(blockly.ALIGN_RIGHT)
-          .setCheck('Number')
+          .setCheck(Blockly.BlockValueType.NUMBER)
               .appendTitle(msg.lengthParameter() + ':');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -4440,7 +4440,7 @@ function installDrawLowerWave(blockly, generator, gensym) {
           .appendTitle(msg.drawLowerWave());
       this.appendValueInput('VALUE')
           .setAlign(blockly.ALIGN_RIGHT)
-          .setCheck('Number')
+          .setCheck(Blockly.BlockValueType.NUMBER)
               .appendTitle(msg.lengthParameter() + ':');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -4490,9 +4490,9 @@ function installCreateASnowflakeDropdown(blockly, generator, gensym) {
   };
 }
 
-},{"../../locale/current/turtle":197,"../utils":185}],197:[function(require,module,exports){
+},{"../../locale/current/turtle":195,"../utils":183}],195:[function(require,module,exports){
 /*turtle*/ module.exports = window.blockly.appLocale;
-},{}],175:[function(require,module,exports){
+},{}],173:[function(require,module,exports){
 // Create a limited colour palette to avoid overwhelming new users
 // and to make colour checking easier.  These definitions cannot be
 // moved to blocks.js, which is loaded later, since they are used in
@@ -4525,7 +4525,7 @@ var Colours = {
 
 module.exports = Colours;
 
-},{}],172:[function(require,module,exports){
+},{}],170:[function(require,module,exports){
 /**
  * Blockly Demo: Turtle Graphics
  *
@@ -4872,7 +4872,7 @@ exports.answer = function(page, level) {
   return api.log;
 };
 
-},{"./api":173}],173:[function(require,module,exports){
+},{"./api":171}],171:[function(require,module,exports){
 var utils = require('../utils');
 var _ = utils.getLodash();
 
@@ -5066,4 +5066,4 @@ ArtistAPI.prototype.drawStamp = function(stamp, id) {
   this.log.push(['stamp', stamp, id]);
 };
 
-},{"../utils":185}]},{},[179]);
+},{"../utils":183}]},{},[177]);

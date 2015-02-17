@@ -2,6 +2,7 @@
   "and":"şi",
   "booleanTrue":"adevărat",
   "booleanFalse":"fals",
+  "blocks":"blocks",
   "blocklyMessage":"Blockly",
   "catActions":"Acţiuni",
   "catColour":"Culoare",
@@ -12,6 +13,9 @@
   "catProcedures":"Funcţii",
   "catText":"text",
   "catVariables":"Variabile",
+  "clearPuzzle":"Clear Puzzle",
+  "clearPuzzleConfirm":"This will delete all blocks and reset the puzzle to its start state.",
+  "clearPuzzleConfirmHeader":"Are you sure you want to clear the puzzle?",
   "codeTooltip":"Vezi codul JavaScript generat.",
   "continue":"Continuă",
   "dialogCancel":"Anulează",
@@ -77,6 +81,7 @@
   "shareFailure":"Ne pare rau, nu putem să distribuim acest program.",
   "workspaceHeader":"Asamblează-ţi blocurile aici: ",
   "workspaceHeaderJavaScript":"Tastează codul JavaScript aici",
+  "workspaceHeaderShort":"Workspace: ",
   "infinity":"Infinit",
   "rotateText":"Rotește dispozitivul tău.",
   "orientationLock":"Oprește blocarea de orientare în setările dispozitivului.",
@@ -88,6 +93,6 @@
   "signup":"Înscrie-te la cursul introductiv",
   "hintHeader":"Iată un sfat:",
   "genericFeedback":"Vezi cum se termină şi încearcă să-ți corectezi programul.",
-  "toggleBlocksErrorMsg":"You need to correct an error in your program before it can be shown as blocks.",
+  "toggleBlocksErrorMsg":"Trebuie să corectați o eroare în programul dumneavoastră înainte să poată fi inclusă ca bloc.",
   "defaultTwitterText":"Verifică ceea ce am creat"
 }

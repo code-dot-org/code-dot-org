@@ -1,7 +1,10 @@
 {
+  "badColorStringError":"You used an invalid color string: {val}",
+  "badStyleStringError":"You used an invalid style string: {val}",
   "circleBlockTitle":"Círculo (raio, estilo, cor)",
   "displayBlockTitle":"Exibir",
   "ellipseBlockTitle":"Elipse (largura, altura, estilo, cor)",
+  "emptyFunctionalBlock":"You have a block with an unfilled input.",
   "extraTopBlocks":"Você tem blocos não acoplados. Você quis dizer para anexar este para o bloco \"display\"?",
   "overlayBlockTitle":"Degradê (Topo, Botão)",
   "placeImageBlockTitle":"place-image (x, y, image)",
