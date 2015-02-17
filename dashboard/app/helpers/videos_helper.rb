@@ -9,7 +9,7 @@ module VideosHelper
         wmode: 'transparent',
         iv_load_policy: 3
     }
-    if language != 'en'
+    if language && (language != 'en')
       defaults.merge!(
           cc_lang_pref: language,
           cc_load_policy: 1

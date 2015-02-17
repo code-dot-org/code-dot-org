@@ -79,6 +79,7 @@ SQL
           # TODO: more stuff needed?
           id: stage_or_game.id,
           position: position,
+          name: stage_name(script, stage_or_game),
           title: stage_title(script, stage_or_game),
           levels: []
         }
@@ -88,7 +89,7 @@ SQL
         end
 
         sl_group.sort_by {|sl| sl.stage_or_game_position}
-        stage[:levels] = sl_group.map { |sl| sl.summarize }
+        stage[:levels] = sl_group.map { |sl| summarize_script_level(sl) }
 
         s[:stages].push stage
     end
@@ -117,8 +118,9 @@ SQL
       script_name: script.name,
       script_id: script.id,
       script_stages: script.stages.to_a.count,
+      name: stage_name(script, script_level.stage_or_game),
       title: stage_title(script, script_level.stage_or_game),
-      levels: game_levels.map { |sl| sl.summarize }
+      levels: game_levels.map { |sl| summarize_script_level(sl) }
     }
 
     if script.hoc?
@@ -133,13 +135,13 @@ SQL
       # TODO: what does an unplugged level need?  'levels/unplug', locals: {app: @game.app}
       level_data = {
         kind: 'unplugged',
-        level: script_level.summarize
+        level: summarize_script_level(script_level)
       }
     elsif level.is_a?(DSLDefined)
       # TODO: partial "levels/#{level.class.to_s.underscore}"
       level_data = {
         kind: 'dsl',
-        level: script_level.summarize,
+        level: summarize_script_level(script_level),
         app: level.class.to_s
       }
     else
@@ -150,10 +152,6 @@ SQL
       @game = game
       @script_level = script_level
       @callback = milestone_url(user_id: current_user.try(:id) || 0, script_level_id: script_level)
-      @fallback_response = {
-        success: milestone_response(script_level: script_level, solved?: true),
-        failure: milestone_response(script_level: script_level, solved?: false)
-      }
       @level_source_id = level.ideal_level_source_id
       # TODO: @phone_share_url
       set_videos_and_blocks_and_callouts_and_instructions  # @callouts, @autoplay_video_info

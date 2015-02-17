@@ -72,18 +72,12 @@ class ApplicationController < ActionController::Base
     script_level = options[:script_level]
 
     if script_level
-      previous_level = script_level.previous_level
-      if previous_level
-        response[:previous_level] = build_script_level_path(previous_level)
-      end
-
       # if they solved it, figure out next level
       if options[:solved?]
         response[:total_lines] = options[:total_lines]
         response[:trophy_updates] = options[:trophy_updates] unless options[:trophy_updates].blank?
         response[:new_level_completed] = options[:new_level_completed]
-        response[:x_level_path] = build_script_level_path(script_level)
-        script_level_solved_response(response, script_level)
+        response[:message] = 'good job'
       else # not solved
         response[:message] = 'try again'
       end
@@ -107,7 +101,7 @@ class ApplicationController < ActionController::Base
     if current_user &&
         options[:level_source].try(:id) &&
         options[:solved?] &&
-        options[:activity] && 
+        options[:activity] &&
         options[:level_source_image]
       response[:save_to_gallery_url] = gallery_activities_path(gallery_activity: {activity_id: options[:activity].id})
     end

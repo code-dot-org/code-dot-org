@@ -7785,12 +7785,15 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
       // Success.
       case TestResults.ALL_PASS:
       case TestResults.FREE_PLAY:
-        var finalLevel = (options.response &&
-            (options.response.message == "no more levels"));
-        var stageCompleted = null;
-        if (options.response && options.response.stage_changing) {
-          stageCompleted = options.response.stage_changing.previous.name;
+        var finalLevel, stageCompleted;
+
+        // Is this a script or stage completion?
+        if (options.level.next === false) {
+        	finalLevel = true;
+        } else if (options.level.next) {
+        	stageCompleted = options.level.stage_name;
         }
+
         var msgParams = {
           numTrophies: options.numTrophies,
           stageNumber: 0, // TODO: remove once localized strings have been fixed

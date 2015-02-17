@@ -40,8 +40,9 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def end_of_stage?
-    stage ? stage.script_levels.to_a.last == self :
-      next_progression_level && (level.game_id != next_progression_level.level.game_id)
+    return stage.script_levels.to_a.last == self if stage
+    return true if !next_progression_level
+    return (level.game_id != next_progression_level.level.game_id)
   end
 
   def stage_position_str
@@ -99,41 +100,5 @@ class ScriptLevel < ActiveRecord::Base
     @@script_level_map ||= ScriptLevel.includes([{level: [:game, :concepts]}, :script]).index_by(&:id)
     @@script_level_map[id]
   end
-
-  def summarize
-    if level.unplugged?
-      kind = 'unplugged'
-    elsif assessment
-      kind = 'assessment'
-    elsif
-      kind = 'blockly'
-    end
-
-    summary = {
-      id: level.id,
-      position: level_position,
-      kind: kind,
-      title: level_display_text
-    }
-
-    if previous_level
-      if previous_level.stage_position != stage_position
-        summary[:previous] = [ previous_level.stage_position, previous_level.level_position ]
-      end
-    else
-      summary[:previous] = false
-    end
-
-    if end_of_stage?
-      if next_level
-        summary[:next] = [ next_progression_level.stage_position, next_progression_level.level_position ]
-      else
-        summary[:next] = false
-      end
-    end
-
-    summary
-  end
-
 
 end

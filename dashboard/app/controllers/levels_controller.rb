@@ -23,11 +23,6 @@ class LevelsController < ApplicationController
   def show
     set_videos_and_blocks_and_callouts_and_instructions
 
-    @fallback_response = {
-      success: {message: 'good job'},
-      failure: {message: 'try again'}
-    }
-
     @full_width = true
     if params[:embed]
       @hide_source = true

@@ -1,24 +1,4 @@
 module ScriptLevelsHelper
-  def script_level_solved_response(response, script_level)
-    next_user_redirect = next_progression_level_or_redirect_path(script_level)
-
-    if has_another_level_to_go_to(script_level)
-      if script_level.end_of_stage?
-        response[:stage_changing] = {previous: {name: script_level.name}}
-      end
-    else
-      response[:message] = 'no more levels'
-
-      if script_level.script.wrapup_video
-        response[:video_info] = wrapup_video_then_redirect_response(
-            script_level.script.wrapup_video, next_user_redirect)
-        return
-      end
-    end
-
-    response[:redirect] = next_user_redirect
-  end
-
   def has_another_level_to_go_to(script_level)
     script_level.next_progression_level
   end
@@ -39,12 +19,6 @@ module ScriptLevelsHelper
     next_level ?
         build_script_level_path(next_level) :
         script_completion_redirect(script_level.script)
-  end
-
-  def wrapup_video_then_redirect_response(wrapup_video, redirect)
-    video_info_response = video_info(wrapup_video)
-    video_info_response[:redirect] = redirect
-    video_info_response
   end
 
   def script_completion_redirect(script)
@@ -79,4 +53,44 @@ module ScriptLevelsHelper
     end
   end
 
+  def summarize_script_level(sl)
+    if sl.level.unplugged?
+      kind = 'unplugged'
+    elsif sl.assessment
+      kind = 'assessment'
+    elsif
+      kind = 'blockly'
+    end
+
+    summary = {
+      id: sl.level.id,
+      position: sl.level_position,
+      kind: kind,
+      title: sl.level_display_text
+    }
+
+    # Add a previous pointer if it's not the obvious (level-1)
+    if sl.previous_level
+      if sl.previous_level.stage_position != sl.stage_position
+        summary[:previous] = [ sl.previous_level.stage_position, sl.previous_level.level_position ]
+      end
+    else
+      summary[:previous] = false
+    end
+
+    # Add a next pointer if it's not the obvious (level+1)
+    if sl.end_of_stage?
+      if sl.next_level
+        summary[:next] = [ sl.next_level.stage_position, sl.next_level.level_position ]
+      else
+        # This is the final level in the script
+        summary[:next] = false
+        if (sl.script.wrapup_video)
+          summary[:wrapupVideo] = video_info(sl.script.wrapup_video)
+        end
+      end
+    end
+
+    summary
+  end
 end

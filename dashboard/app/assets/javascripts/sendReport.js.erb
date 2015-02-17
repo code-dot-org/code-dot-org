@@ -1,48 +1,41 @@
-var lastAjaxRequest;
-var lastServerResponse = {};
 var sendReport = function(report, scriptPath) {
-  var thisAjax;
-
   var data = $.extend({}, report);
   delete data.onComplete;
 
   var reportComplete = function (response, textStatus, xhr) {
-    if (thisAjax !== lastAjaxRequest) {
-      return;
-    }
-
-    lastAjaxRequest = null;
-    lastServerResponse = {
-      report_error: report['error']
-    };
     if (response) {
-      lastServerResponse.nextRedirect = response['redirect'];
-      lastServerResponse.previousLevelRedirect = response['previous_level'];
-      lastServerResponse.videoInfo = response['video_info'];
-      response.levelPath = scriptPath;  // This used to be passed back from the milestone API
+      // ==============
+      // TODO: Removing lastServerResponse -- and therefore nextRedirect, previousLevelRedirect, and videoInfo has broken
+      // all other level types besides Blockly.
+      // They'll need to be updated to the new method of asking the level (which is a good idea anyway since they are just
+      // extra copies of the same code.)
+      // ==============
+
+      // This used to be passed back from the milestone API.  It's used in a place that might not have easy access to
+      // scriptPath, so we pack it in until we can remove that location.
+      response.levelPath = scriptPath;
     }
 
     if (report.onComplete)
       report.onComplete(response);
   };
 
-  lastAjaxRequest = thisAjax = Frame.load({
-    type: 'POST',
-    url: report.callback,
-    contentType: 'application/x-www-form-urlencoded',
+  // Make a POST request
+  return Frame.save({
+    url: report.milestone,
     data: data,
-    dataType: 'json',
     success: reportComplete,
     error: function (xhr, textStatus, thrownError) {
+      // Ignore an aborted API call
+      if (textStatus == "abort")
+        return;
+
+      // It's okay if milestone fails. Catch the error and pretend it succeeded with minimal info.
       report['error'] = xhr.responseText;
-      reportComplete(report.fallbackResponse[report.pass ? 'success' : 'failure']);
+      reportComplete({
+        message: report.pass ? 'good job' : 'try again',
+        design: 'white_background'
+      });
     }
   });
-};
-
-var cancelReport = function() {
-  if (lastAjaxRequest) {
-    lastAjaxRequest.abort();
-  }
-  lastAjaxRequest = null;
 };

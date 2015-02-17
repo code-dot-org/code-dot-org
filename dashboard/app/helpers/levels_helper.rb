@@ -187,7 +187,7 @@ module LevelsHelper
   # Code for generating the blockly options hash
   def blockly_options(local_assigns={})
     # Use values from properties json when available (use String keys instead of Symbols for consistency)
-    level = @script_level.summarize.stringify_keys.merge(@level.properties)
+    level = summarize_script_level(@script_level).stringify_keys.merge(@level.properties)
     level['stage'] = @script_level.stage_position
 
     # Set some specific values - TODO: can we do this entirely from summarize?
@@ -308,10 +308,7 @@ module LevelsHelper
       callouts: @callouts,
       cacheBust: blockly_cache_bust,
       autoplayVideo: @autoplay_video_info,
-      report: {
-          fallback_response: @fallback_response,
-          callback: @callback,
-      },
+      milestone: @callback,
       droplet: @game.try(:uses_droplet?),
       pretty: Rails.configuration.pretty_apps ? '' : '.min',
     }
