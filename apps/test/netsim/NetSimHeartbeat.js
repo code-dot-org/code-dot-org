@@ -1,7 +1,7 @@
 var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
-var assertClose = testUtils.assertClose;
+var assertWithinRange = testUtils.assertWithinRange;
 var assertOwnProperty = testUtils.assertOwnProperty;
 var netsimTestUtils = require('../util/netsimTestUtils');
 var fauxShard = netsimTestUtils.fauxShard;
@@ -31,7 +31,7 @@ describe("NetSimHeartbeat", function () {
 
     it ("time (default Date.now())", function () {
       assertOwnProperty(row, 'time');
-      assertClose(row.time, Date.now(), 10);
+      assertWithinRange(row.time, Date.now(), 10);
     });
   });
 
@@ -133,7 +133,7 @@ describe("NetSimHeartbeat", function () {
     testShard.heartbeatTable.log('');
     originalHeartbeat.tick();
     assertEqual("update", testShard.heartbeatTable.log().slice(0, 6));
-    assertClose(Date.now(), originalHeartbeat.time_, 10);
+    assertWithinRange(Date.now(), originalHeartbeat.time_, 10);
   });
 
   it ("can be removed from the remote table with destroy()", function () {

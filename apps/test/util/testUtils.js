@@ -170,7 +170,7 @@ exports.assertEqual = function (left, right) {
  * @param {number} right
  * @param {number} maxDelta
  */
-exports.assertClose = function (left, right, maxDelta) {
+exports.assertWithinRange = function (left, right, maxDelta) {
   assert(Math.abs(left - right) <= maxDelta, "Values " + left + " and " +
       right + " are more than " + maxDelta + " apart.");
 };

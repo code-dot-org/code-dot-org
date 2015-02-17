@@ -1,7 +1,7 @@
 var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
-var assertClose = testUtils.assertClose;
+var assertWithinRange = testUtils.assertWithinRange;
 var assertOwnProperty = testUtils.assertOwnProperty;
 var netsimTestUtils = require('../util/netsimTestUtils');
 var fauxShard = netsimTestUtils.fauxShard;
@@ -54,7 +54,7 @@ describe("NetSimShardCleaner", function () {
   });
 
   it ("makes a cleaning attempt on its first tick", function () {
-    assertClose(cleaner.nextAttempt_, Date.now(), 10);
+    assertWithinRange(cleaner.nextAttempt_, Date.now(), 10);
     cleaner.tick({});
     assert(cleaner.nextAttempt_ > Date.now(), "Next attempt pushed into future");
   });
