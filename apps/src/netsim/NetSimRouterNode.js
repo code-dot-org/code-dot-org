@@ -15,6 +15,7 @@ var utils = require('../utils');
 var _ = utils.getLodash();
 var NetSimNode = require('./NetSimNode');
 var NetSimEntity = require('./NetSimEntity');
+var NetSimLogEntry = require('./NetSimLogEntry');
 var NetSimLogger = require('./NetSimLogger');
 var NetSimWire = require('./NetSimWire');
 var NetSimMessage = require('./NetSimMessage');
@@ -188,6 +189,7 @@ NetSimRouterNode.get = function (routerID, shard, onComplete) {
         return;
       }
 
+      router.info("Router initialized");
       router.heartbeat_ = heartbeat;
       onComplete(router);
     });
@@ -351,6 +353,27 @@ NetSimRouterNode.prototype.countConnections = function (onComplete) {
   });
 };
 
+NetSimRouterNode.prototype.log = function (logText, logLevel) {
+  NetSimLogEntry.create(
+      this.shard_,
+      this.entityID,
+      logText,
+      logLevel,
+      function () {});
+};
+
+NetSimRouterNode.prototype.info = function (logText) {
+  this.log(logText, NetSimLogEntry.LogLevel.INFO);
+};
+
+NetSimRouterNode.prototype.warn = function (logText) {
+  this.log(logText, NetSimLogEntry.LogLevel.WARN);
+};
+
+NetSimRouterNode.prototype.error = function (logText) {
+  this.log(logText, NetSimLogEntry.LogLevel.ERROR);
+};
+
 /**
  * @param {Array} haystack
  * @param {*} needle
@@ -377,9 +400,13 @@ NetSimRouterNode.prototype.acceptConnection = function (otherNode, onComplete) {
   var self = this;
   this.countConnections(function (count) {
     if (count > MAX_CLIENT_CONNECTIONS) {
+      self.warn('Rejected connection from "' + otherNode.getHostname() +
+          '"; connection limit reached.');
       onComplete(false);
       return;
     }
+
+    self.info('Accepted connection from "' + otherNode.getHostname() + '"');
 
     // Trigger an update, which will correct our connection count
     self.update(onComplete);
@@ -418,7 +445,10 @@ NetSimRouterNode.prototype.requestAddress = function (wire, hostname, onComplete
     wire.localHostname = hostname;
     wire.remoteAddress = 0; // Always 0 for routers
     wire.remoteHostname = self.getHostname();
-    wire.update(onComplete);
+    wire.update(function (success) {
+      self.info('Address ' + newAddress + ' assigned to host "' + hostname + '"');
+      onComplete(success);
+    });
     // TODO: Fix possibility of two routers getting addresses by verifying
     //       after updating the wire.
   });
@@ -541,14 +571,13 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires) {
   var toAddress = message.payload.toAddress;
   if (toAddress === undefined) {
     //Malformed packet? Throw it away
-    logger.warn("Router encountered a malformed packet: " +
-    JSON.stringify(message.payload));
+    this.warn("Blocked malformed packet: " + message.payload);
     return;
   }
 
   if (toAddress === 0) {
-    // Message was sent to me, the router.  It's arrived!  We're done with it.
-    logger.info("Router received: " + JSON.stringify(message.payload));
+    // Message was sent to me, the router.  It's arrived!
+    this.warn("Packet addressed to router: " + message.payload);
     return;
   }
 
@@ -557,8 +586,7 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires) {
   });
   if (destWires.length === 0) {
     // Destination address not in local network.
-    // Route message out of network (for now, throw it away)
-    logger.info("Message left network: " + JSON.stringify(message.payload));
+    this.info("Packet routed out of network: " + message.payload);
     return;
   }
 
@@ -574,12 +602,10 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires) {
       message.payload,
       function (success) {
         if (success) {
-          logger.info("Message re-routed to " + destWire.localHostname +
-              " (node " + destWire.localNodeID + ")");
-          // TODO: add to router log here.
+          this.info("Packet routed to " + destWire.localHostname);
         } else {
           logger.info("Dropped packet: " + JSON.stringify(message.payload));
         }
-      }
+      }.bind(this)
   );
 };
