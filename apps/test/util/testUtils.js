@@ -165,6 +165,17 @@ exports.assertEqual = function (left, right) {
 };
 
 /**
+ * Check that two numbers are close, within a given threshold.
+ * @param {number} left
+ * @param {number} right
+ * @param {number} maxDelta
+ */
+exports.assertClose = function (left, right, maxDelta) {
+  assert(Math.abs(left - right) <= maxDelta, "Values " + left + " and " +
+      right + " are more than " + maxDelta + " apart.");
+};
+
+/**
  * Checks that executing certain code results in an exception of the
  * exact given type being thrown.  Produces usable output when assertions
  * fail.
