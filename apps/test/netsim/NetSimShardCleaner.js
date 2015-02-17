@@ -101,6 +101,22 @@ describe("NetSimShardCleaner", function () {
     assert(!cleaner2.hasCleaningLock());
   });
 
+  it ("ignores cleaning locks older than 15 seconds", function () {
+    testShard.heartbeatTable.create({
+      nodeID: 0,
+      time: Date.now() - 15001,
+      cleaner: true
+    }, function () {});
+
+    assertTableSize(testShard, 'heartbeatTable', 1);
+
+    cleaner.getCleaningLock(function (success) {
+      assert(success === true, "Cleaner gets cleaning lock");
+    });
+
+    assertTableSize(testShard, 'heartbeatTable', 2);
+  });
+
   it ("can release cleaning lock", function () {
     cleaner.getCleaningLock(function (success) {
       assert(success === true, "Cleaner gets lock.");
