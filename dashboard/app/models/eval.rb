@@ -2,6 +2,7 @@ class Eval < Blockly
   serialized_attrs %w(
     solution_blocks
     free_play
+    coordinate_grid_background
   )
 
   before_save :update_ideal_level_source
