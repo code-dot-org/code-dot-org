@@ -687,7 +687,8 @@ Studio.onTick = function() {
     var isWalking = true;
 
     // After 5 ticks of no movement, turn sprite forward
-    if (Studio.tickCount - Studio.sprite[i].lastMove > TICKS_BEFORE_FACE_SOUTH) {
+    if (Studio.sprite[i].lastMove === Infinity ||
+        Studio.tickCount - Studio.sprite[i].lastMove > TICKS_BEFORE_FACE_SOUTH) {
       Studio.sprite[i].dir = Direction.SOUTH;
       isWalking = false;
     }
