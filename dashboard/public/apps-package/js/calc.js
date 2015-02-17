@@ -11,7 +11,7 @@ window.calcMain = function(options) {
   appMain(window.Calc, levels, options);
 };
 
-},{"../appMain":3,"../skins":143,"./blocks":29,"./calc":30,"./levels":35}],30:[function(require,module,exports){
+},{"../appMain":3,"../skins":142,"./blocks":29,"./calc":30,"./levels":35}],30:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -781,7 +781,7 @@ Calc.__testonly__ = {
 };
 /* end-test-block */
 
-},{"../../locale/current/calc":188,"../../locale/current/common":189,"../StudioApp":2,"../block_utils":17,"../dom":44,"../skins":143,"../templates/page.html":164,"../timeoutList":170,"../utils":184,"./api":28,"./controls.html":31,"./equationSet":32,"./expressionNode":33,"./inputIterator":34,"./levels":35,"./visualization.html":37}],37:[function(require,module,exports){
+},{"../../locale/current/calc":187,"../../locale/current/common":188,"../StudioApp":2,"../block_utils":17,"../dom":44,"../skins":142,"../templates/page.html":163,"../timeoutList":169,"../utils":183,"./api":28,"./controls.html":31,"./equationSet":32,"./expressionNode":33,"./inputIterator":34,"./levels":35,"./visualization.html":37}],37:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -801,7 +801,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/calc":188,"ejs":205}],35:[function(require,module,exports){
+},{"../../locale/current/calc":187,"ejs":204}],35:[function(require,module,exports){
 var msg = require('../../locale/current/calc');
 var blockUtils = require('../block_utils');
 
@@ -840,7 +840,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/current/calc":188,"../block_utils":17}],34:[function(require,module,exports){
+},{"../../locale/current/calc":187,"../block_utils":17}],34:[function(require,module,exports){
 /**
  * Given a set of values (i.e. [1,2,3], and a number of parameters, generates
  * all possible combinations of values.
@@ -1200,7 +1200,7 @@ EquationSet.__testonly__ = {
 };
 /* end-test-block */
 
-},{"../utils":184,"./expressionNode":33}],31:[function(require,module,exports){
+},{"../utils":183,"./expressionNode":33}],31:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1223,7 +1223,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/calc":188,"../../locale/current/common":189,"ejs":205}],29:[function(require,module,exports){
+},{"../../locale/current/calc":187,"../../locale/current/common":188,"ejs":204}],29:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -1254,9 +1254,6 @@ var commonMsg = require('../../locale/current/common');
 
 var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
 
-var functionalBlockUtils = require('../functionalBlockUtils');
-var initTitledFunctionalBlock = functionalBlockUtils.initTitledFunctionalBlock;
-
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function(blockly, blockInstallOptions) {
   var skin = blockInstallOptions.skin;
@@ -1275,35 +1272,11 @@ exports.install = function(blockly, blockInstallOptions) {
 
 };
 
-function initFunctionalBlock(block, title, numArgs) {
-  block.setHSV(184, 1.00, 0.74);
-  block.setFunctional(true, {
-    headerHeight: 30,
-  });
-
-  var options = {
-    fixedSize: { height: 35 },
-    fontSize: 25 // in pixels
-  };
-
-  block.appendDummyInput()
-      .appendTitle(new Blockly.FieldLabel(title, options))
-      .setAlign(Blockly.ALIGN_CENTRE);
-  for (var i = 1; i <= numArgs; i++) {
-    block.appendFunctionalInput('ARG' + i)
-         .setInline(i > 1)
-         .setHSV(184, 1.00, 0.74)
-         .setCheck(Blockly.BlockValueType.NUMBER);
-  }
-
-  block.setFunctionalOutput(true, Blockly.BlockValueType.NUMBER);
-}
-
 function installCompute(blockly, generator, gensym) {
   blockly.Blocks.functional_compute = {
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, msg.compute(), blockly.BlockValueType.NONE, [
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, msg.compute(), blockly.BlockValueType.NONE, [
         { name: 'ARG1', type: blockly.BlockValueType.NUMBER }
       ]);
     }
@@ -1315,7 +1288,7 @@ function installCompute(blockly, generator, gensym) {
   };
 }
 
-},{"../../locale/current/calc":188,"../../locale/current/common":189,"../functionalBlockUtils":74,"../sharedFunctionalBlocks":142}],188:[function(require,module,exports){
+},{"../../locale/current/calc":187,"../../locale/current/common":188,"../sharedFunctionalBlocks":141}],187:[function(require,module,exports){
 /*calc*/ module.exports = window.blockly.appLocale;
 },{}],28:[function(require,module,exports){
 var ExpressionNode = require('./expressionNode');
@@ -1745,4 +1718,4 @@ var Token = function (str, marked) {
 };
 ExpressionNode.Token = Token;
 
-},{"../utils":184}]},{},[36]);
+},{"../utils":183}]},{},[36]);

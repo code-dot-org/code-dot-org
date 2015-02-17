@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({82:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({81:[function(require,module,exports){
 // Functions for checking required blocks.
 
 /**
@@ -3025,15 +3025,13 @@ if (typeof(CanvasRenderingContext2D) != 'undefined') {
 	}
 }
 
-},{}],142:[function(require,module,exports){
+},{}],141:[function(require,module,exports){
 /**
  * A set of functional blocks
  */
 var utils = require('./utils');
 var _ = utils.getLodash();
 var msg = require('../locale/current/common');
-var functionalBlockUtils = require('./functionalBlockUtils');
-var initTitledFunctionalBlock = functionalBlockUtils.initTitledFunctionalBlock;
 
 exports.install = function(blockly, generator, gensym) {
   installPlus(blockly, generator, gensym);
@@ -3058,7 +3056,7 @@ function installPlus(blockly, generator, gensym) {
 
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, '+', blockly.BlockValueType.NUMBER, [
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, '+', blockly.BlockValueType.NUMBER, [
         { name: 'ARG1', type: blockly.BlockValueType.NUMBER },
         { name: 'ARG2', type: blockly.BlockValueType.NUMBER }
       ]);
@@ -3076,7 +3074,7 @@ function installMinus(blockly, generator, gensym) {
   blockly.Blocks.functional_minus = {
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, '-', blockly.BlockValueType.NUMBER, [
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, '-', blockly.BlockValueType.NUMBER, [
         { name: 'ARG1', type: blockly.BlockValueType.NUMBER },
         { name: 'ARG2', type: blockly.BlockValueType.NUMBER }
       ]);
@@ -3094,7 +3092,7 @@ function installTimes(blockly, generator, gensym) {
   blockly.Blocks.functional_times = {
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, '*', blockly.BlockValueType.NUMBER, [
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, '*', blockly.BlockValueType.NUMBER, [
         { name: 'ARG1', type: blockly.BlockValueType.NUMBER },
         { name: 'ARG2', type: blockly.BlockValueType.NUMBER }
       ]);
@@ -3112,7 +3110,7 @@ function installDividedBy(blockly, generator, gensym) {
   blockly.Blocks.functional_dividedby = {
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, '/', blockly.BlockValueType.NUMBER, [
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, '/', blockly.BlockValueType.NUMBER, [
         { name: 'ARG1', type: blockly.BlockValueType.NUMBER },
         { name: 'ARG2', type: blockly.BlockValueType.NUMBER }
       ]);
@@ -3132,7 +3130,7 @@ function installGreaterThan(blockly, generator, gensym) {
   blockly.Blocks.functional_greater_than = {
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, '>', blockly.BlockValueType.BOOLEAN, [
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, '>', blockly.BlockValueType.BOOLEAN, [
         { name: 'ARG1', type: blockly.BlockValueType.NUMBER },
         { name: 'ARG2', type: blockly.BlockValueType.NUMBER }
       ]);
@@ -3150,7 +3148,7 @@ function installLessThan(blockly, generator, gensym) {
   blockly.Blocks.functional_less_than = {
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, '<', blockly.BlockValueType.BOOLEAN, [
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, '<', blockly.BlockValueType.BOOLEAN, [
         { name: 'ARG1', type: blockly.BlockValueType.NUMBER },
         { name: 'ARG2', type: blockly.BlockValueType.NUMBER }
       ]);
@@ -3168,7 +3166,7 @@ function installNumberEquals(blockly, generator, gensym) {
   blockly.Blocks.functional_number_equals = {
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, '=', blockly.BlockValueType.BOOLEAN, [
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, '=', blockly.BlockValueType.BOOLEAN, [
         { name: 'ARG1', type: blockly.BlockValueType.NUMBER },
         { name: 'ARG2', type: blockly.BlockValueType.NUMBER }
       ]);
@@ -3186,7 +3184,7 @@ function installStringEquals(blockly, generator, gensym) {
   blockly.Blocks.functional_string_equals = {
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, msg.stringEquals(), blockly.BlockValueType.BOOLEAN, [
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, msg.stringEquals(), blockly.BlockValueType.BOOLEAN, [
         { name: 'ARG1', type: blockly.BlockValueType.STRING },
         { name: 'ARG2', type: blockly.BlockValueType.STRING }
       ]);
@@ -3206,7 +3204,7 @@ function installLogicalAnd(blockly, generator, gensym) {
   blockly.Blocks.functional_logical_and = {
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, 'and', blockly.BlockValueType.BOOLEAN, [
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, 'and', blockly.BlockValueType.BOOLEAN, [
         { name: 'ARG1', type: blockly.BlockValueType.BOOLEAN },
         { name: 'ARG2', type: blockly.BlockValueType.BOOLEAN }
       ]);
@@ -3224,7 +3222,7 @@ function installLogicalOr(blockly, generator, gensym) {
   blockly.Blocks.functional_logical_or = {
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, 'or', blockly.BlockValueType.BOOLEAN, [
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, 'or', blockly.BlockValueType.BOOLEAN, [
         { name: 'ARG1', type: blockly.BlockValueType.BOOLEAN },
         { name: 'ARG2', type: blockly.BlockValueType.BOOLEAN }
       ]);
@@ -3242,7 +3240,7 @@ function installLogicalNot(blockly, generator, gensym) {
   blockly.Blocks.functional_logical_not = {
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, 'not', blockly.BlockValueType.BOOLEAN, [
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, 'not', blockly.BlockValueType.BOOLEAN, [
         { name: 'ARG1', type: blockly.BlockValueType.BOOLEAN }
       ]);
     }
@@ -3262,7 +3260,7 @@ function installBoolean(blockly, generator, gensym) {
         headerHeight: 0,
         rowBuffer: 3
       });
-      this.setHSV.apply(this, functionalBlockUtils.colors[blockly.BlockValueType.BOOLEAN]);
+      this.setHSV.apply(this, blockly.FunctionalTypeColors[blockly.BlockValueType.BOOLEAN]);
       var values = blockly.Blocks.functional_boolean.VALUES;
       this.appendDummyInput()
           .appendTitle(new blockly.FieldDropdown(values), 'VAL')
@@ -3288,7 +3286,7 @@ function installMathNumber(blockly, generator, gensym) {
         headerHeight: 0,
         rowBuffer: 3
       });
-      this.setHSV.apply(this, functionalBlockUtils.colors[blockly.BlockValueType.NUMBER]);
+      this.setHSV.apply(this, blockly.FunctionalTypeColors[blockly.BlockValueType.NUMBER]);
       this.appendDummyInput()
           .appendTitle(new Blockly.FieldTextInput('0',
             Blockly.FieldTextInput.numberValidator), 'NUM')
@@ -3308,7 +3306,7 @@ function installMathNumber(blockly, generator, gensym) {
         headerHeight: 0,
         rowBuffer: 3
       });
-      this.setHSV.apply(this, functionalBlockUtils.colors[blockly.BlockValueType.NUMBER]);
+      this.setHSV.apply(this, blockly.FunctionalTypeColors[blockly.BlockValueType.NUMBER]);
       this.appendDummyInput()
           .appendTitle(new Blockly.FieldDropdown(), 'NUM')
           .setAlign(Blockly.ALIGN_CENTRE);
@@ -3326,7 +3324,7 @@ function installString(blockly, generator) {
         headerHeight: 0,
         rowBuffer: 3
       });
-      this.setHSV.apply(this, functionalBlockUtils.colors[blockly.BlockValueType.STRING]);
+      this.setHSV.apply(this, blockly.FunctionalTypeColors[blockly.BlockValueType.STRING]);
       this.appendDummyInput()
         .appendTitle(new Blockly.FieldLabel('"'))
         .appendTitle(new Blockly.FieldTextInput(''), 'VAL')
@@ -3390,7 +3388,7 @@ function installCond(blockly, generator) {
       this.pairs_.push(id);
 
       var cond = this.appendFunctionalInput('COND' + id);
-      cond.setHSV.apply(cond, functionalBlockUtils.colors[blockly.BlockValueType.BOOLEAN]);
+      cond.setHSV.apply(cond, blockly.FunctionalTypeColors[blockly.BlockValueType.BOOLEAN]);
       cond.setCheck(blockly.BlockValueType.BOOLEAN);
       this.moveInputBefore('COND' + id, 'DEFAULT');
 
@@ -3514,17 +3512,7 @@ function installCond(blockly, generator) {
   };
 }
 
-},{"../locale/current/common":189,"./functionalBlockUtils":74,"./utils":184}],74:[function(require,module,exports){
-if (!window.Blockly) {
-  return;
-}
-
-module.exports.colors = Blockly.FunctionalTypeColors;
-module.exports.initTitledFunctionalBlock = Blockly.FunctionalBlockUtils.initTitledFunctionalBlock;
-module.exports.installFunctionalApiCallBlock = Blockly.FunctionalBlockUtils.installFunctionalApiCallBlock;
-module.exports.installStringPicker = Blockly.FunctionalBlockUtils.installStringPicker;
-
-},{}],170:[function(require,module,exports){
+},{"../locale/current/common":188,"./utils":183}],169:[function(require,module,exports){
 var list = [];
 
 /**
@@ -3542,7 +3530,7 @@ exports.clearTimeouts = function () {
   list = [];
 };
 
-},{}],164:[function(require,module,exports){
+},{}],163:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3566,7 +3554,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":189,"ejs":205}],144:[function(require,module,exports){
+},{"../../locale/current/common":188,"ejs":204}],143:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -3831,7 +3819,7 @@ Slider.bindEvent_ = function(element, name, func) {
 
 module.exports = Slider;
 
-},{"./dom":44}],143:[function(require,module,exports){
+},{"./dom":44}],142:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -3982,7 +3970,7 @@ module.exports = function(app, levels, options) {
   });
 };
 
-},{"./StudioApp":2,"./blocksCommon":18,"./dom":44,"./required_block_utils":141,"./utils":184}],141:[function(require,module,exports){
+},{"./StudioApp":2,"./blocksCommon":18,"./dom":44,"./required_block_utils":140,"./utils":183}],140:[function(require,module,exports){
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
@@ -4260,7 +4248,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"../locale/current/common":189,"./block_utils":17,"./utils":184,"./xml":185}],18:[function(require,module,exports){
+},{"../locale/current/common":188,"./block_utils":17,"./utils":183,"./xml":184}],18:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -4425,7 +4413,7 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/current/common":189}],2:[function(require,module,exports){
+},{"../locale/current/common":188}],2:[function(require,module,exports){
 // Globals:
 //   Blockly
 
@@ -5788,7 +5776,7 @@ StudioApp.prototype.hasUnfilledBlock = function () {
   return Blockly.mainBlockSpace.getAllBlocks().some(isUnfilledBlock);
 };
 
-},{"../locale/current/common":189,"./ResizeSensor":1,"./block_utils":17,"./constants.js":43,"./dom":44,"./feedback":63,"./templates/builder.html":158,"./templates/buttons.html":159,"./templates/instructions.html":161,"./templates/learn.html":162,"./templates/makeYourOwn.html":163,"./utils":184,"./xml":185,"url":204}],204:[function(require,module,exports){
+},{"../locale/current/common":188,"./ResizeSensor":1,"./block_utils":17,"./constants.js":43,"./dom":44,"./feedback":63,"./templates/builder.html":157,"./templates/buttons.html":158,"./templates/instructions.html":160,"./templates/learn.html":161,"./templates/makeYourOwn.html":162,"./utils":183,"./xml":184,"url":203}],203:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6497,13 +6485,13 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":200,"querystring":203}],203:[function(require,module,exports){
+},{"punycode":199,"querystring":202}],202:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":201,"./encode":202}],202:[function(require,module,exports){
+},{"./decode":200,"./encode":201}],201:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6590,7 +6578,7 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],201:[function(require,module,exports){
+},{}],200:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6676,7 +6664,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],200:[function(require,module,exports){
+},{}],199:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -7187,7 +7175,7 @@ var isArray = Array.isArray || function (xs) {
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],163:[function(require,module,exports){
+},{}],162:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7207,7 +7195,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":189,"ejs":205}],162:[function(require,module,exports){
+},{"../../locale/current/common":188,"ejs":204}],161:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7229,7 +7217,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":189,"ejs":205}],161:[function(require,module,exports){
+},{"../../locale/current/common":188,"ejs":204}],160:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7249,7 +7237,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":189,"ejs":205}],158:[function(require,module,exports){
+},{"../../locale/current/common":188,"ejs":204}],157:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7269,7 +7257,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":205}],63:[function(require,module,exports){
+},{"ejs":204}],63:[function(require,module,exports){
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
 var HINT_REQUEST_PLACEMENT = {
   NONE: 0,  // This value must not be changed.
@@ -8469,7 +8457,7 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
   });
 };
 
-},{"../locale/current/common":189,"./codegen":42,"./constants":43,"./dom":44,"./feedbackBlocks":64,"./templates/buttons.html":159,"./templates/code.html":160,"./templates/shareFailure.html":166,"./templates/sharing.html":167,"./templates/showCode.html":168,"./templates/trophy.html":169,"./utils":184,"./xml":185}],169:[function(require,module,exports){
+},{"../locale/current/common":188,"./codegen":42,"./constants":43,"./dom":44,"./feedbackBlocks":64,"./templates/buttons.html":158,"./templates/code.html":159,"./templates/shareFailure.html":165,"./templates/sharing.html":166,"./templates/showCode.html":167,"./templates/trophy.html":168,"./utils":183,"./xml":184}],168:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8489,7 +8477,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":205}],168:[function(require,module,exports){
+},{"ejs":204}],167:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8509,7 +8497,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":189,"ejs":205}],167:[function(require,module,exports){
+},{"../../locale/current/common":188,"ejs":204}],166:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8529,7 +8517,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":189,"ejs":205}],166:[function(require,module,exports){
+},{"../../locale/current/common":188,"ejs":204}],165:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8549,7 +8537,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":205}],160:[function(require,module,exports){
+},{"ejs":204}],159:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8569,7 +8557,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":205}],159:[function(require,module,exports){
+},{"ejs":204}],158:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8589,7 +8577,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":189,"ejs":205}],189:[function(require,module,exports){
+},{"../../locale/current/common":188,"ejs":204}],188:[function(require,module,exports){
 /*common*/ module.exports = window.blockly.locale;
 },{}],64:[function(require,module,exports){
 var constants = require('./constants');
@@ -8720,7 +8708,7 @@ FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
   return blockXMLStrings.join('');
 };
 
-},{"./constants":43,"./templates/readonly.html":165}],165:[function(require,module,exports){
+},{"./constants":43,"./templates/readonly.html":164}],164:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8741,7 +8729,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":205}],205:[function(require,module,exports){
+},{"ejs":204}],204:[function(require,module,exports){
 
 /*!
  * EJS
@@ -9096,7 +9084,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":206,"./utils":207,"fs":197,"path":198}],207:[function(require,module,exports){
+},{"./filters":205,"./utils":206,"fs":196,"path":197}],206:[function(require,module,exports){
 
 /*!
  * EJS
@@ -9120,7 +9108,7 @@ exports.escape = function(html){
     .replace(/"/g, '&quot;');
 };
  
-},{}],206:[function(require,module,exports){
+},{}],205:[function(require,module,exports){
 
 /*!
  * EJS - Filters
@@ -9319,7 +9307,7 @@ exports.get = function(obj, prop){
 exports.json = function(obj){
   return JSON.stringify(obj);
 };
-},{}],198:[function(require,module,exports){
+},{}],197:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -9547,7 +9535,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require('_process'))
-},{"_process":199}],199:[function(require,module,exports){
+},{"_process":198}],198:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -9606,7 +9594,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],197:[function(require,module,exports){
+},{}],196:[function(require,module,exports){
 
 },{}],42:[function(require,module,exports){
 var utils = require('./utils');
@@ -10034,7 +10022,7 @@ exports.functionFromCode = function(code, options) {
   }
 };
 
-},{"./utils":184}],184:[function(require,module,exports){
+},{"./utils":183}],183:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
 
@@ -10517,7 +10505,7 @@ exports.createUuid = function () {
   });
 };
 
-},{"./hammer":75,"./lodash":83,"./xml":185}],83:[function(require,module,exports){
+},{"./hammer":74,"./lodash":82,"./xml":184}],82:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -13886,7 +13874,7 @@ exports.createUuid = function () {
 }.call(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],75:[function(require,module,exports){
+},{}],74:[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-22
  * http://eightmedia.github.io/hammer.js
  *
@@ -16484,7 +16472,7 @@ exports.mathBlockXml = function (type, inputs, titles) {
   return str;
 };
 
-},{"./xml":185}],185:[function(require,module,exports){
+},{"./xml":184}],184:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
