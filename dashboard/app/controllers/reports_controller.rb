@@ -82,10 +82,7 @@ SQL
     end
 
     if script.hoc?
-      stage_data[:finishLink] = {
-        text: t('nav.header.finished_hoc'),
-        href: hoc_finish_url(script)
-      }
+      stage_data[:finishText] = t('nav.header.finished_hoc')
     end
 
     if !levels

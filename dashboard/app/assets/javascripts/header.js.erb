@@ -209,7 +209,10 @@
       // Finished link
       if (stage.finishLink) {
         el = $('<div>').addClass('header_finished_link');
-        $('<a>').attr('href', stage.finishLink.href).text(stage.finishLink.text).appendTo(el);
+        var href = Frame.linkTo({
+          complete: script.script_name
+        })
+        $('<a>').attr('href', href).text(stage.finishText).appendTo(el);
         el.appendTo($container);
       }
 

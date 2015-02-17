@@ -575,6 +575,16 @@
         }
       }
 
+      if (route.complete) {
+        // For now, completion routes are always online.
+        switch (route.complete) {
+          case 'Hour of Code':
+            return "/api/hour/finish";
+          default:
+            // TODO
+        }
+      }
+
       // Not a recognized route
       return null;
     }
