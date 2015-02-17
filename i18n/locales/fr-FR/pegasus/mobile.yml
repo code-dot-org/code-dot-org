@@ -7,7 +7,7 @@ fr-FR:
   csedweek_banner_hoc: |-
     L' <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Heure de Code</a> approche. Appel à tous les enseignants et les organisateurs à <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">plannifier votre heure de Code</a>
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Etes vous un enseignant en informatique ? Consultez nos autres ressources CSEdWeek</a>'
-  n_have_learned_an_hoc: '<h1>#</h1><h3>personnes ont essayé une</h3><h2>Heure de Code</h2>'
+  n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
   anybody_can_learn: Tout le monde peut apprendre.
   learn_now: Apprends Maintenant
   petition_message: "Tout étudiant dans toute école doit avoir la possibilité d'apprendre l'informatique"
@@ -248,7 +248,7 @@ fr-FR:
   dashboard_students_new_section: 'Vous avez créé une nouvelle section ! Maintenant, ajoutez vos élèves en utilisant les boutons <b>Ajouter étudiant</b> et <b>Ajouter plusieurs étudiants</b> ci-dessus.'
   dashboard_students_placeholder_name: "Nom de l'élève"
   dashboard_students_name: Nom
-  dashboard_students_progress: Progress
+  dashboard_students_progress: Avancement
   dashboard_students_age: Age
   dashboard_students_gender: Sexe
   dashboard_students_male: Masculin

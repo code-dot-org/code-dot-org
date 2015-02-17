@@ -1038,6 +1038,11 @@ Applab.execute = function() {
     }
   }
 
+  // Set focus on divApplab so key events can be handled right from the start
+  // without requiring the user to adjust focus:
+  var divApplab = document.getElementById('divApplab');
+  divApplab.focus();
+
   Applab.running = true;
   queueOnTick();
 };
@@ -1254,9 +1259,8 @@ function getTurtleContext() {
   var canvas = document.getElementById('turtleCanvas');
 
   if (!canvas) {
-    // If there is not yet a turtleCanvas, create it (but don't make it the
-    // active canvas):
-    Applab.createCanvas({ 'elementId': 'turtleCanvas', 'notActive': true });
+    // If there is not yet a turtleCanvas, create it:
+    Applab.createCanvas({ 'elementId': 'turtleCanvas', 'turtleCanvas': true });
     canvas = document.getElementById('turtleCanvas');
 
     // And create the turtle (defaults to visible):
@@ -1359,6 +1363,75 @@ Applab.turnLeft = function (opts) {
   Applab.turnRight({'degrees': degrees });
 };
 
+Applab.turnTo = function (opts) {
+  var degrees = opts.direction - Applab.turtle.heading;
+  Applab.turnRight({'degrees': degrees });
+};
+
+// Turn along an arc with a specified radius (by default, turn clockwise, so
+// the center of the arc is 90 degrees clockwise of the current heading)
+// if opts.counterclockwise, the center point is 90 degrees counterclockwise
+
+Applab.arcRight = function (opts) {
+  // call this first to ensure there is a turtle (in case this is the first API)
+  var centerAngle = opts.counterclockwise ? -90 : 90;
+  var clockwiseDegrees = opts.counterclockwise ? -opts.degrees : opts.degrees;
+  var ctx = getTurtleContext();
+  if (ctx) {
+    var centerX = Applab.turtle.x +
+      opts.radius * Math.sin(2 * Math.PI * (Applab.turtle.heading + centerAngle) / 360);
+    var centerY = Applab.turtle.y -
+      opts.radius * Math.cos(2 * Math.PI * (Applab.turtle.heading + centerAngle) / 360);
+
+    var startAngle =
+      2 * Math.PI * (Applab.turtle.heading + (opts.counterclockwise ? 0 : 180)) / 360;
+    var endAngle = startAngle + (2 * Math.PI * clockwiseDegrees / 360);
+
+    ctx.beginPath();
+    ctx.arc(centerX, centerY, opts.radius, startAngle, endAngle, opts.counterclockwise);
+    ctx.stroke();
+
+    Applab.turtle.heading = (Applab.turtle.heading + clockwiseDegrees + 360) % 360;
+    var xMovement = opts.radius * Math.cos(2 * Math.PI * Applab.turtle.heading / 360);
+    var yMovement = opts.radius * Math.sin(2 * Math.PI * Applab.turtle.heading / 360);
+    Applab.turtle.x = centerX + (opts.counterclockwise ? xMovement : -xMovement);
+    Applab.turtle.y = centerY + (opts.counterclockwise ? yMovement : -yMovement);
+    updateTurtleImage();
+  }
+};
+
+Applab.arcLeft = function (opts) {
+  opts.counterclockwise = true;
+  Applab.arcRight(opts);
+};
+
+Applab.getX = function (opts) {
+  var ctx = getTurtleContext();
+  return Applab.turtle.x;
+};
+
+Applab.getY = function (opts) {
+  var ctx = getTurtleContext();
+  return Applab.turtle.y;
+};
+
+Applab.getDirection = function (opts) {
+  var ctx = getTurtleContext();
+  return Applab.turtle.heading;
+};
+
+Applab.dot = function (opts) {
+  var ctx = getTurtleContext();
+  if (ctx) {
+    ctx.beginPath();
+    ctx.arc(Applab.turtle.x, Applab.turtle.y, opts.radius, 0, 2 * Math.PI);
+    ctx.fill();
+    ctx.stroke();
+    return true;
+  }
+
+};
+
 Applab.penUp = function (opts) {
   var ctx = getTurtleContext();
   if (ctx) {
@@ -1371,6 +1444,7 @@ Applab.penDown = function (opts) {
   var ctx = getTurtleContext();
   if (ctx && Applab.turtle.penUpColor) {
     ctx.strokeStyle = Applab.turtle.penUpColor;
+    ctx.fillStyle = Applab.turtle.penUpColor;
     delete Applab.turtle.penUpColor;
   }
 };
@@ -1390,6 +1464,7 @@ Applab.penColor = function (opts) {
       Applab.turtle.penUpColor = opts.color;
     } else {
       ctx.strokeStyle = opts.color;
+      ctx.fillStyle = opts.color;
     }
   }
 };
@@ -1408,11 +1483,13 @@ Applab.createCanvas = function (opts) {
     newElement.height = height;
     newElement.style.width = width + 'px';
     newElement.style.height = height + 'px';
-    // set transparent fill by default:
-    ctx.fillStyle = "rgba(255, 255, 255, 0)";
+    if (!opts.turtleCanvas) {
+      // set transparent fill by default (unless it is the turtle canvas):
+      ctx.fillStyle = "rgba(255, 255, 255, 0)";
+    }
 
-    if (!Applab.activeCanvas && !opts.notActive) {
-      // If there is no active canvas and the caller doesn't specify otherwise,
+    if (!Applab.activeCanvas && !opts.turtleCanvas) {
+      // If there is no active canvas and this isn't the turtleCanvas,
       // we'll make this the active canvas for subsequent API calls:
       Applab.activeCanvas = newElement;
     }
@@ -1827,6 +1904,11 @@ Applab.onEventFired = function (opts, e) {
 
 Applab.onEvent = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // Special case the id of 'body' to mean the app's container (divApplab)
+  // TODO (cpirich): apply this logic more broadly (setStyle, etc.)
+  if (opts.elementId === 'body') {
+    opts.elementId = 'divApplab';
+  }
   var domElement = document.getElementById(opts.elementId);
   if (divApplab.contains(domElement)) {
     switch (opts.eventName) {

@@ -8,8 +8,8 @@
   "catText": "text",
   "catVariables": "Variabile",
   "continue": "Continuă",
-  "createHtmlBlock": "creare bloc html",
-  "createHtmlBlockTooltip": "Creează un bloc HTML în aplicație.",
+  "container": "create container",
+  "containerTooltip": "Creates a division container and sets its inner HTML.",
   "finalLevel": "Felicitări! Ai rezolvat puzzle-ul final.",
   "nextLevel": "Felicitări! Ai finalizat acest puzzle.",
   "no": "Nu",
@@ -24,6 +24,6 @@
   "stepIn": "Pas înăuntru",
   "stepOver": "Pas peste",
   "stepOut": "Pas afară",
-  "viewData": "View Data",
+  "viewData": "Vizualizare date",
   "yes": "Da"
 }

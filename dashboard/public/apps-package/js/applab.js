@@ -35,7 +35,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":141}],12:[function(require,module,exports){
+},{"../skins":143}],12:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/applab');
@@ -118,6 +118,13 @@ levels.ec_simple = {
     'moveTo': null,
     'turnRight': null,
     'turnLeft': null,
+    'turnTo': null,
+    'arcRight': null,
+    'arcLeft': null,
+    'dot': null,
+    'getX': null,
+    'getY': null,
+    'getDirection': null,
     'penUp': null,
     'penDown': null,
     'penWidth': null,
@@ -220,7 +227,7 @@ levels.full_sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-},{"../../locale/current/applab":183,"../block_utils":17,"../utils":181}],6:[function(require,module,exports){
+},{"../../locale/current/applab":186,"../block_utils":17,"../utils":184}],6:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -1261,6 +1268,11 @@ Applab.execute = function() {
     }
   }
 
+  // Set focus on divApplab so key events can be handled right from the start
+  // without requiring the user to adjust focus:
+  var divApplab = document.getElementById('divApplab');
+  divApplab.focus();
+
   Applab.running = true;
   queueOnTick();
 };
@@ -1477,9 +1489,8 @@ function getTurtleContext() {
   var canvas = document.getElementById('turtleCanvas');
 
   if (!canvas) {
-    // If there is not yet a turtleCanvas, create it (but don't make it the
-    // active canvas):
-    Applab.createCanvas({ 'elementId': 'turtleCanvas', 'notActive': true });
+    // If there is not yet a turtleCanvas, create it:
+    Applab.createCanvas({ 'elementId': 'turtleCanvas', 'turtleCanvas': true });
     canvas = document.getElementById('turtleCanvas');
 
     // And create the turtle (defaults to visible):
@@ -1582,6 +1593,75 @@ Applab.turnLeft = function (opts) {
   Applab.turnRight({'degrees': degrees });
 };
 
+Applab.turnTo = function (opts) {
+  var degrees = opts.direction - Applab.turtle.heading;
+  Applab.turnRight({'degrees': degrees });
+};
+
+// Turn along an arc with a specified radius (by default, turn clockwise, so
+// the center of the arc is 90 degrees clockwise of the current heading)
+// if opts.counterclockwise, the center point is 90 degrees counterclockwise
+
+Applab.arcRight = function (opts) {
+  // call this first to ensure there is a turtle (in case this is the first API)
+  var centerAngle = opts.counterclockwise ? -90 : 90;
+  var clockwiseDegrees = opts.counterclockwise ? -opts.degrees : opts.degrees;
+  var ctx = getTurtleContext();
+  if (ctx) {
+    var centerX = Applab.turtle.x +
+      opts.radius * Math.sin(2 * Math.PI * (Applab.turtle.heading + centerAngle) / 360);
+    var centerY = Applab.turtle.y -
+      opts.radius * Math.cos(2 * Math.PI * (Applab.turtle.heading + centerAngle) / 360);
+
+    var startAngle =
+      2 * Math.PI * (Applab.turtle.heading + (opts.counterclockwise ? 0 : 180)) / 360;
+    var endAngle = startAngle + (2 * Math.PI * clockwiseDegrees / 360);
+
+    ctx.beginPath();
+    ctx.arc(centerX, centerY, opts.radius, startAngle, endAngle, opts.counterclockwise);
+    ctx.stroke();
+
+    Applab.turtle.heading = (Applab.turtle.heading + clockwiseDegrees + 360) % 360;
+    var xMovement = opts.radius * Math.cos(2 * Math.PI * Applab.turtle.heading / 360);
+    var yMovement = opts.radius * Math.sin(2 * Math.PI * Applab.turtle.heading / 360);
+    Applab.turtle.x = centerX + (opts.counterclockwise ? xMovement : -xMovement);
+    Applab.turtle.y = centerY + (opts.counterclockwise ? yMovement : -yMovement);
+    updateTurtleImage();
+  }
+};
+
+Applab.arcLeft = function (opts) {
+  opts.counterclockwise = true;
+  Applab.arcRight(opts);
+};
+
+Applab.getX = function (opts) {
+  var ctx = getTurtleContext();
+  return Applab.turtle.x;
+};
+
+Applab.getY = function (opts) {
+  var ctx = getTurtleContext();
+  return Applab.turtle.y;
+};
+
+Applab.getDirection = function (opts) {
+  var ctx = getTurtleContext();
+  return Applab.turtle.heading;
+};
+
+Applab.dot = function (opts) {
+  var ctx = getTurtleContext();
+  if (ctx) {
+    ctx.beginPath();
+    ctx.arc(Applab.turtle.x, Applab.turtle.y, opts.radius, 0, 2 * Math.PI);
+    ctx.fill();
+    ctx.stroke();
+    return true;
+  }
+
+};
+
 Applab.penUp = function (opts) {
   var ctx = getTurtleContext();
   if (ctx) {
@@ -1594,6 +1674,7 @@ Applab.penDown = function (opts) {
   var ctx = getTurtleContext();
   if (ctx && Applab.turtle.penUpColor) {
     ctx.strokeStyle = Applab.turtle.penUpColor;
+    ctx.fillStyle = Applab.turtle.penUpColor;
     delete Applab.turtle.penUpColor;
   }
 };
@@ -1613,6 +1694,7 @@ Applab.penColor = function (opts) {
       Applab.turtle.penUpColor = opts.color;
     } else {
       ctx.strokeStyle = opts.color;
+      ctx.fillStyle = opts.color;
     }
   }
 };
@@ -1631,11 +1713,13 @@ Applab.createCanvas = function (opts) {
     newElement.height = height;
     newElement.style.width = width + 'px';
     newElement.style.height = height + 'px';
-    // set transparent fill by default:
-    ctx.fillStyle = "rgba(255, 255, 255, 0)";
+    if (!opts.turtleCanvas) {
+      // set transparent fill by default (unless it is the turtle canvas):
+      ctx.fillStyle = "rgba(255, 255, 255, 0)";
+    }
 
-    if (!Applab.activeCanvas && !opts.notActive) {
-      // If there is no active canvas and the caller doesn't specify otherwise,
+    if (!Applab.activeCanvas && !opts.turtleCanvas) {
+      // If there is no active canvas and this isn't the turtleCanvas,
       // we'll make this the active canvas for subsequent API calls:
       Applab.activeCanvas = newElement;
     }
@@ -2050,6 +2134,11 @@ Applab.onEventFired = function (opts, e) {
 
 Applab.onEvent = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // Special case the id of 'body' to mean the app's container (divApplab)
+  // TODO (cpirich): apply this logic more broadly (setStyle, etc.)
+  if (opts.elementId === 'body') {
+    opts.elementId = 'divApplab';
+  }
   var domElement = document.getElementById(opts.elementId);
   if (divApplab.contains(domElement)) {
     switch (opts.eventName) {
@@ -2507,7 +2596,7 @@ var getPegasusHost = function() {
         return Array(multiplier + 1).join(input)
     }
 
-},{"../../locale/current/applab":183,"../../locale/current/common":186,"../StudioApp":2,"../codegen":42,"../constants":43,"../dom":44,"../skins":141,"../slider":142,"../templates/page.html":161,"../utils":181,"../xml":182,"./api":4,"./appStorage":5,"./blocks":7,"./controls.html":8,"./dropletConfig":9,"./extraControlRows.html":10,"./formStorage":11,"./visualization.html":15}],15:[function(require,module,exports){
+},{"../../locale/current/applab":186,"../../locale/current/common":189,"../StudioApp":2,"../codegen":42,"../constants":43,"../dom":44,"../skins":143,"../slider":144,"../templates/page.html":164,"../utils":184,"../xml":185,"./api":4,"./appStorage":5,"./blocks":7,"./controls.html":8,"./dropletConfig":9,"./extraControlRows.html":10,"./formStorage":11,"./visualization.html":15}],15:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2519,7 +2608,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<div id="divApplab">\n</div>\n'); })();
+ buf.push('<div id="divApplab" tabindex="1">\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -2527,7 +2616,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":202}],11:[function(require,module,exports){
+},{"ejs":205}],11:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -2730,7 +2819,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/applab":183,"../../locale/current/common":186,"ejs":202}],9:[function(require,module,exports){
+},{"../../locale/current/applab":186,"../../locale/current/common":189,"ejs":205}],9:[function(require,module,exports){
 module.exports.blocks = [
   {'func': 'onEvent', 'title': 'Execute code in response to an event for the specified element. Additional parameters are passed to the callback function.', 'category': 'UI controls', 'params': ["'id'", "'click'", "function(event) {\n  \n}"] },
   {'func': 'button', 'title': 'Create a button and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "'text'"] },
@@ -2777,8 +2866,15 @@ module.exports.blocks = [
   {'func': 'moveBackward', 'title': 'Move the turtle backward the specified distance', 'category': 'Turtle', 'params': ["25"] },
   {'func': 'move', 'title': 'Move the turtle by the specified x and y coordinates', 'category': 'Turtle', 'params': ["25", "25"] },
   {'func': 'moveTo', 'title': 'Move the turtle to the specified x and y coordinates', 'category': 'Turtle', 'params': ["0", "0"] },
+  {'func': 'dot', 'title': "Draw a dot in the turtle's location with the specified radius", 'category': 'Turtle', 'params': ["5"] },
   {'func': 'turnRight', 'title': 'Turn the turtle clockwise by the specified number of degrees', 'category': 'Turtle', 'params': ["90"] },
   {'func': 'turnLeft', 'title': 'Turn the turtle counterclockwise by the specified number of degrees', 'category': 'Turtle', 'params': ["90"] },
+  {'func': 'turnTo', 'title': 'Turn the turtle to the specified direction (0 degrees is pointing up)', 'category': 'Turtle', 'params': ["0"] },
+  {'func': 'arcRight', 'title': 'Move the turtle in a clockwise arc using the specified number of degrees and radius', 'category': 'Turtle', 'params': ["90", "25"] },
+  {'func': 'arcLeft', 'title': 'Move the turtle in a counterclockwise arc using the specified number of degrees and radius', 'category': 'Turtle', 'params': ["90", "25"] },
+  {'func': 'getX', 'title': "Get the turtle's x position", 'category': 'Turtle', 'type': 'value' },
+  {'func': 'getY', 'title': "Get the turtle's y position", 'category': 'Turtle', 'type': 'value' },
+  {'func': 'getDirection', 'title': "Get the turtle's direction (0 degrees is pointing up)", 'category': 'Turtle', 'type': 'value' },
   {'func': 'penUp', 'title': "Pick up the turtle's pen", 'category': 'Turtle' },
   {'func': 'penDown', 'title': "Set down the turtle's pen", 'category': 'Turtle' },
   {'func': 'penWidth', 'title': 'Set the turtle to the specified pen width', 'category': 'Turtle', 'params': ["3"] },
@@ -2845,7 +2941,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":186,"ejs":202}],7:[function(require,module,exports){
+},{"../../locale/current/common":189,"ejs":205}],7:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -2918,7 +3014,7 @@ function installContainer(blockly, generator, blockInstallOptions) {
   };
 }
 
-},{"../../locale/current/applab":183,"../../locale/current/common":186,"../codegen":42,"../utils":181}],183:[function(require,module,exports){
+},{"../../locale/current/applab":186,"../../locale/current/common":189,"../codegen":42,"../utils":184}],186:[function(require,module,exports){
 /*applab*/ module.exports = window.blockly.appLocale;
 },{}],5:[function(require,module,exports){
 'use strict';
@@ -3552,6 +3648,44 @@ exports.turnLeft = function (blockId, degrees) {
   return Applab.executeCmd(blockId,
                           'turnLeft',
                           {'degrees': degrees });
+};
+
+exports.turnTo = function (blockId, direction) {
+  return Applab.executeCmd(blockId,
+                           'turnTo',
+                           {'direction': direction });
+};
+
+exports.arcRight = function (blockId, degrees, radius) {
+  return Applab.executeCmd(blockId,
+                           'arcRight',
+                           {'degrees': degrees,
+                            'radius': radius });
+};
+
+exports.arcLeft = function (blockId, degrees, radius) {
+  return Applab.executeCmd(blockId,
+                           'arcLeft',
+                           {'degrees': degrees,
+                            'radius': radius });
+};
+
+exports.dot = function (blockId, radius) {
+  return Applab.executeCmd(blockId,
+                           'dot',
+                           {'radius': radius });
+};
+
+exports.getX = function (blockId) {
+  return Applab.executeCmd(blockId, 'getX');
+};
+
+exports.getY = function (blockId) {
+  return Applab.executeCmd(blockId, 'getY');
+};
+
+exports.getDirection = function (blockId) {
+  return Applab.executeCmd(blockId, 'getDirection');
 };
 
 exports.penUp = function (blockId) {

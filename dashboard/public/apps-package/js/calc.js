@@ -11,7 +11,7 @@ window.calcMain = function(options) {
   appMain(window.Calc, levels, options);
 };
 
-},{"../appMain":3,"../skins":141,"./blocks":29,"./calc":30,"./levels":35}],30:[function(require,module,exports){
+},{"../appMain":3,"../skins":143,"./blocks":29,"./calc":30,"./levels":35}],30:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -340,6 +340,12 @@ Calc.evaluateFunction_ = function (targetSet, userSet) {
     outcome.result = ResultType.FAILURE;
     outcome.testResults = TestResults.APP_SPECIFIC_FAIL;
     outcome.message = calcMsg.failedInput();
+  } else if (!targetSet.computeEquation().expression.isIdenticalTo(
+      userSet.computeEquation().expression)) {
+    // we have the right function, but are calling with the wrong inputs
+    outcome.result = ResultType.FAILURE;
+    outcome.testResults = TestResults.APP_SPECIFIC_FAIL;
+    outcome.message = calcMsg.wrongInput();
   } else {
     outcome.result = ResultType.SUCCESS;
     outcome.testResults = TestResults.ALL_PASS;
@@ -347,6 +353,9 @@ Calc.evaluateFunction_ = function (targetSet, userSet) {
   return outcome;
 };
 
+/**
+ * @returns outcome object
+ */
 Calc.evaluateResults_ = function (targetSet, userSet) {
   var identical, user, target;
   var outcome = {
@@ -470,6 +479,12 @@ function generateResults() {
     return;
   }
 
+  if (studioApp.hasQuestionMarksInNumberField()) {
+    appState.result = ResultType.FAILURE;
+    appState.testResults = TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
+    return;
+  }
+
   appState.userSet = new EquationSet(Blockly.mainBlockSpace.getTopBlocks());
   appState.failedInput = null;
 
@@ -482,6 +497,12 @@ function generateResults() {
     appState.testResults = outcome.testResults;
     appState.message = outcome.message;
     appState.failedInput = outcome.failedInput;
+  }
+
+  // Override default message for LEVEL_INCOMPLETE_FAIL
+  if (appState.testResults === TestResults.LEVEL_INCOMPLETE_FAIL &&
+      !appState.message) {
+    appState.message = calcMsg.levelIncompleteError();
   }
 }
 
@@ -516,23 +537,19 @@ function displayComplexUserExpressions () {
 
   // Now display our compute equation and the result of evaluating it
   var computeType = computeEquation && computeEquation.expression.getType();
-  if (computeType === ExpressionNode.ValueType.FUNCTION_CALL ||
-      computeType === ExpressionNode.ValueType.VARIABLE) {
-    var targetEquation = appState.targetSet.computeEquation();
+  var targetEquation = appState.targetSet.computeEquation();
 
-    // We're either a variable or a function call. Generate a tokenList (since
-    // we could actually be different than the goal)
-    tokenList = getTokenList(computeEquation, targetEquation);
+  // We're either a variable or a function call. Generate a tokenList (since
+  // we could actually be different than the goal)
+  tokenList = getTokenList(computeEquation, targetEquation);
 
-    result = appState.userSet.evaluate().toString();
-    var expectedResult = appState.targetSet.computeEquation() === null ?
-      result : appState.targetSet.evaluate().toString();
+  result = appState.userSet.evaluate().toString();
+  var expectedResult = appState.targetSet.computeEquation() === null ?
+    result : appState.targetSet.evaluate().toString();
 
-    tokenList = tokenList.concat(getTokenList(' = '),
-      getTokenList(result, expectedResult));
-  } else {
-    tokenList = getTokenList(computeEquation, appState.targetSet.computeEquation());
-  }
+  // add a tokenList diffing our results
+  tokenList = tokenList.concat(getTokenList(' = '),
+    getTokenList(result, expectedResult));
 
   displayEquation('userExpression', null, tokenList, nextRow++, 'errorToken');
 
@@ -757,7 +774,7 @@ Calc.__testonly__ = {
 };
 /* end-test-block */
 
-},{"../../locale/current/calc":185,"../../locale/current/common":186,"../StudioApp":2,"../block_utils":17,"../dom":44,"../skins":141,"../templates/page.html":161,"../timeoutList":167,"../utils":181,"./api":28,"./controls.html":31,"./equationSet":32,"./expressionNode":33,"./inputIterator":34,"./levels":35,"./visualization.html":37}],37:[function(require,module,exports){
+},{"../../locale/current/calc":188,"../../locale/current/common":189,"../StudioApp":2,"../block_utils":17,"../dom":44,"../skins":143,"../templates/page.html":164,"../timeoutList":170,"../utils":184,"./api":28,"./controls.html":31,"./equationSet":32,"./expressionNode":33,"./inputIterator":34,"./levels":35,"./visualization.html":37}],37:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -777,7 +794,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/calc":185,"ejs":202}],35:[function(require,module,exports){
+},{"../../locale/current/calc":188,"ejs":205}],35:[function(require,module,exports){
 var msg = require('../../locale/current/calc');
 var blockUtils = require('../block_utils');
 
@@ -816,7 +833,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/current/calc":185,"../block_utils":17}],34:[function(require,module,exports){
+},{"../../locale/current/calc":188,"../block_utils":17}],34:[function(require,module,exports){
 /**
  * Given a set of values (i.e. [1,2,3], and a number of parameters, generates
  * all possible combinations of values.
@@ -1176,7 +1193,7 @@ EquationSet.__testonly__ = {
 };
 /* end-test-block */
 
-},{"../utils":181,"./expressionNode":33}],31:[function(require,module,exports){
+},{"../utils":184,"./expressionNode":33}],31:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1199,7 +1216,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/calc":185,"../../locale/current/common":186,"ejs":202}],29:[function(require,module,exports){
+},{"../../locale/current/calc":188,"../../locale/current/common":189,"ejs":205}],29:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -1291,7 +1308,7 @@ function installCompute(blockly, generator, gensym) {
   };
 }
 
-},{"../../locale/current/calc":185,"../../locale/current/common":186,"../functionalBlockUtils":74,"../sharedFunctionalBlocks":140}],185:[function(require,module,exports){
+},{"../../locale/current/calc":188,"../../locale/current/common":189,"../functionalBlockUtils":74,"../sharedFunctionalBlocks":142}],188:[function(require,module,exports){
 /*calc*/ module.exports = window.blockly.appLocale;
 },{}],28:[function(require,module,exports){
 var ExpressionNode = require('./expressionNode');
@@ -1721,4 +1738,4 @@ var Token = function (str, marked) {
 };
 ExpressionNode.Token = Token;
 
-},{"../utils":181}]},{},[36]);
+},{"../utils":184}]},{},[36]);

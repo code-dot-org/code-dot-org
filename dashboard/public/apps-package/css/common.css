@@ -518,12 +518,15 @@ input[type="radio"] {
       line-height: 40px; }
   #headers #toolbox-header {
     border-right: 1px solid gray; }
-  #headers #show-code-header {
+  #headers #clear-puzzle-header, #headers #show-code-header {
     cursor: pointer;
-    width: 150px;
     border-left: 1px solid gray; }
-    #headers #show-code-header:hover {
+    #headers #clear-puzzle-header:hover, #headers #show-code-header:hover {
       background-color: #0094ca; }
+    #headers #clear-puzzle-header span, #headers #show-code-header span {
+      padding: 0 20px; }
+  #headers #clear-puzzle-header:hover {
+    background-color: #c00; }
   #headers .block-counter-default {
     color: white; }
   #headers .block-counter-overflow {
@@ -535,7 +538,7 @@ input[type="radio"] {
 #headers[dir=rtl] #toolbox-header {
   border-right: 0;
   border-left: 1px solid gray; }
-#headers[dir=rtl] #show-code-header {
+#headers[dir=rtl] #clear-puzzle-header, #headers[dir=rtl] #show-code-header {
   border-left: 0;
   border-right: 1px solid gray; }
 

@@ -300,6 +300,8 @@ he:
     student_teacher_disassociated: '% {teacher_name} הוסר כמורה של % {student_name}'
   user:
     email_confirm_needed: 'כתובת הדוא"ל עוד לא אושרה:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: 'שלח מחדש הוראות אישור דוא"ל'
     new_password_hint: (השאר ריק אם אין ברצונך לשנות)
     current_password_hint: (אנחנו צריכים את הסיסמה הנוכחית שלך כדי לאשר את השינויים שלך)
@@ -482,7 +484,7 @@ he:
           title: ק-8 מבוא לקורס במדעי המחשב (15-25 שעות)
           description: קורס בן 20 שעות זה, מציג בפניך בסיס במדעי המחשב וברעיונות בתכנות. הקורס מתוכנן לשימוש בכיתות גן עד ח׳, אבל זה כיף ללמוד בכל הגילאים.
         Hour of Code:
-          title: שעה של קוד
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: עריכת קוד
