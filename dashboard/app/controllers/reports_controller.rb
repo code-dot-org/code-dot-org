@@ -60,6 +60,49 @@ SQL
     render file: 'shared/_user_stats', layout: false, locals: { user: current_user }
   end
 
+  def summarize_stage(script, stage_or_game, levels)
+    if stage_or_game.instance_of? Game
+      game = stage_or_game
+    else
+      stage = stage_or_game
+    end
+
+    stage_data = {
+      id: stage_or_game.id,
+      position: game ? 1 : stage.position,
+      script_name: script.name,
+      script_id: script.id,
+      script_stages: script.stages.to_a.count,
+      name: stage_name(script, stage_or_game),
+      title: stage_title(script, stage_or_game)
+    }
+
+    if script.has_lesson_plan?
+      stage_data[:lesson_plan_html_url] = lesson_plan_html_url(stage_or_game)
+    end
+
+    if script.hoc?
+      stage_data[:finishLink] = {
+        text: t('nav.header.finished_hoc'),
+        href: hoc_finish_url(script)
+      }
+    end
+
+    if !levels
+      levels =
+        if game
+          script.script_levels.to_a.select{ |sl| sl.level.game_id == game.id }
+        else
+          script.script_levels.to_a.select{ |sl| sl.stage_id == stage.id }
+        end
+    end
+
+    levels.sort_by { |sl| sl.stage_or_game_position }
+    stage_data[:levels] = levels.map { |sl| summarize_script_level(sl) }
+
+    stage_data
+  end
+
   def get_script
     script = find_script(params)
 
@@ -73,25 +116,7 @@ SQL
 
     levels = script.script_levels.group_by(&:stage_or_game)
     levels.each_pair do |stage_or_game, sl_group|
-
-        position += 1
-        stage = {
-          # TODO: more stuff needed?
-          id: stage_or_game.id,
-          position: position,
-          name: stage_name(script, stage_or_game),
-          title: stage_title(script, stage_or_game),
-          levels: []
-        }
-
-        if script.has_lesson_plan?
-          stage[:lesson_plan_html_url] = lesson_plan_html_url(stage_or_game)
-        end
-
-        sl_group.sort_by {|sl| sl.stage_or_game_position}
-        stage[:levels] = sl_group.map { |sl| summarize_script_level(sl) }
-
-        s[:stages].push stage
+      s[:stages].push summarize_stage(script, stage_or_game, sl_group)
     end
 
     render :json => JSON.pretty_generate(s), :callback => params['jsonp']
@@ -105,30 +130,7 @@ SQL
     level = script_level.level
     game = script_level.level.game
 
-    game_levels =
-      if stage
-        script.script_levels.to_a.select{|sl| sl.stage_id == script_level.stage_id}
-      else
-        script.script_levels.to_a.select{|sl| sl.level.game_id == level.game_id}
-      end
-
-    stage_data = {
-      id: stage.nil? ? nil : stage.id,
-      position: stage.nil? ? 1 : stage.position,
-      script_name: script.name,
-      script_id: script.id,
-      script_stages: script.stages.to_a.count,
-      name: stage_name(script, script_level.stage_or_game),
-      title: stage_title(script, script_level.stage_or_game),
-      levels: game_levels.map { |sl| summarize_script_level(sl) }
-    }
-
-    if script.hoc?
-      stage_data[:finishLink] = {
-        text: t('nav.header.finished_hoc'),
-        href: hoc_finish_url(script)
-      }
-    end
+    stage_data = summarize_stage(script, script_level.stage_or_game, nil)
 
     # Level-specific data
     if level.unplugged?
