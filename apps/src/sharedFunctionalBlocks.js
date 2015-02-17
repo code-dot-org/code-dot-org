@@ -234,7 +234,7 @@ function installBoolean(blockly, generator, gensym) {
         headerHeight: 0,
         rowBuffer: 3
       });
-      this.setHSV.apply(this, functionalBlockUtils.colors.boolean);
+      this.setHSV.apply(this, functionalBlockUtils.colors[blockly.BlockValueType.BOOLEAN]);
       var values = blockly.Blocks.functional_boolean.VALUES;
       this.appendDummyInput()
           .appendTitle(new blockly.FieldDropdown(values), 'VAL')
@@ -260,7 +260,7 @@ function installMathNumber(blockly, generator, gensym) {
         headerHeight: 0,
         rowBuffer: 3
       });
-      this.setHSV.apply(this, functionalBlockUtils.colors.Number);
+      this.setHSV.apply(this, functionalBlockUtils.colors[blockly.BlockValueType.NUMBER]);
       this.appendDummyInput()
           .appendTitle(new Blockly.FieldTextInput('0',
             Blockly.FieldTextInput.numberValidator), 'NUM')
@@ -280,7 +280,7 @@ function installMathNumber(blockly, generator, gensym) {
         headerHeight: 0,
         rowBuffer: 3
       });
-      this.setHSV.apply(this, functionalBlockUtils.colors.Number);
+      this.setHSV.apply(this, functionalBlockUtils.colors[blockly.BlockValueType.NUMBER]);
       this.appendDummyInput()
           .appendTitle(new Blockly.FieldDropdown(), 'NUM')
           .setAlign(Blockly.ALIGN_CENTRE);
@@ -298,7 +298,7 @@ function installString(blockly, generator) {
         headerHeight: 0,
         rowBuffer: 3
       });
-      this.setHSV.apply(this, functionalBlockUtils.colors.string);
+      this.setHSV.apply(this, functionalBlockUtils.colors[blockly.BlockValueType.STRING]);
       this.appendDummyInput()
         .appendTitle(new Blockly.FieldLabel('"'))
         .appendTitle(new Blockly.FieldTextInput(''), 'VAL')
@@ -362,7 +362,7 @@ function installCond(blockly, generator) {
       this.pairs_.push(id);
 
       var cond = this.appendFunctionalInput('COND' + id);
-      cond.setHSV.apply(cond, functionalBlockUtils.colors.boolean);
+      cond.setHSV.apply(cond, functionalBlockUtils.colors[blockly.BlockValueType.BOOLEAN]);
       cond.setCheck(blockly.BlockValueType.BOOLEAN);
       this.moveInputBefore('COND' + id, 'DEFAULT');
 

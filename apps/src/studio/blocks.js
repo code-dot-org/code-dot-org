@@ -1877,7 +1877,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.functional_sprite_dropdown = {
     helpUrl: '',
     init: function() {
-      this.setHSV.apply(this, functionalBlockUtils.colors.image);
+      this.setHSV.apply(this, functionalBlockUtils.colors[blockly.BlockValueType.IMAGE]);
 
       this.VALUES = skin.spriteChoices;
 
@@ -1905,7 +1905,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.functional_background_dropdown = {
     helpUrl: '',
     init: function() {
-      this.setHSV.apply(this, functionalBlockUtils.colors.image);
+      this.setHSV.apply(this, functionalBlockUtils.colors[blockly.BlockValueType.IMAGE]);
 
       this.VALUES = skin.backgroundChoicesK1;
       var dropdown = new blockly.FieldImageDropdown(skin.backgroundChoicesK1,
