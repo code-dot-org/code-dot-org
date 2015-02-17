@@ -54,9 +54,9 @@ describe("NetSimShardCleaner", function () {
   });
 
   it ("makes a cleaning attempt on its first tick", function () {
-    assertWithinRange(cleaner.nextAttempt_, Date.now(), 10);
+    assertWithinRange(cleaner.nextAttemptTime_, Date.now(), 10);
     cleaner.tick({});
-    assert(cleaner.nextAttempt_ > Date.now(), "Next attempt pushed into future");
+    assert(cleaner.nextAttemptTime_ > Date.now(), "Next attempt pushed into future");
   });
 
   it ("gets Cleaning Lock by putting a special row in the heartbeat table", function () {
