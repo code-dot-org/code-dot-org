@@ -1,30 +1,3 @@
-/**
- * Copyright 2015 Code.org
- * http://code.org/
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-/**
- * @fileoverview Client model simulated connection to another node.
- *
- * Distinct from NetSimConnection, which represents the client's actual
- * connection to the simulator shard, this is a simulated connection
- * between simulated nodes.
- *
- * In shared storage, this shows up as a row in the {shardID}_wire table.
- */
-
 /* jshint
  funcscope: true,
  newcap: true,
@@ -36,14 +9,14 @@
  maxparams: 3,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
-var superClass = require('./NetSimEntity');
+require('../utils');
+var NetSimEntity = require('./NetSimEntity');
 
 /**
- * Create a local controller for a simulated connection between nodes,
- * which is stored in the _wire table on the shard.  The controller can
+ * Local controller for a simulated connection between nodes,
+ * which is stored in the wire table on the shard.  The controller can
  * be initialized with the JSON row from the table, effectively wrapping that
  * data in helpful methods.
  *
@@ -54,13 +27,9 @@ var superClass = require('./NetSimEntity');
  * @constructor
  * @augments NetSimEntity
  */
-var NetSimWire = function (shard, wireRow) {
-  superClass.call(this, shard, wireRow);
-
-  // Default empty wireRow object
-  if (wireRow === undefined) {
-    wireRow = {};
-  }
+var NetSimWire = module.exports = function (shard, wireRow) {
+  wireRow = wireRow !== undefined ? wireRow : {};
+  NetSimEntity.call(this, shard, wireRow);
 
   /**
    * Connected node row IDs within the _lobby table
@@ -84,17 +53,8 @@ var NetSimWire = function (shard, wireRow) {
    */
   this.localHostname = wireRow.localHostname;
   this.remoteHostname = wireRow.remoteHostname;
-
-  /**
-   * Not used yet.
-   * @type {string}
-   */
-  this.wireMode = wireRow.wireMode !== undefined ?
-      wireRow.wireMode : 'duplex'; // Or simplex?
 };
-NetSimWire.prototype = Object.create(superClass.prototype);
-NetSimWire.prototype.constructor = NetSimWire;
-module.exports = NetSimWire;
+NetSimWire.inherits(NetSimEntity);
 
 /**
  * Static async creation method.  See NetSimEntity.create().
@@ -103,12 +63,12 @@ module.exports = NetSimWire;
  *        created entity, or null if entity creation failed.
  */
 NetSimWire.create = function (shard, onComplete) {
-  superClass.create(NetSimWire, shard, onComplete);
+  NetSimEntity.create(NetSimWire, shard, onComplete);
 };
 
 /**
  * Helper that gets the wires table for the configured shard.
- * @returns {exports.SharedTable}
+ * @returns {NetSimTable}
  */
 NetSimWire.prototype.getTable_ = function () {
   return this.shard_.wireTable;
@@ -116,13 +76,12 @@ NetSimWire.prototype.getTable_ = function () {
 
 /** Build own row for the wire table  */
 NetSimWire.prototype.buildRow_ = function () {
-  return $.extend(superClass.prototype.buildRow_.call(this), {
+  return {
     localNodeID: this.localNodeID,
     remoteNodeID: this.remoteNodeID,
     localAddress: this.localAddress,
     remoteAddress: this.remoteAddress,
     localHostname: this.localHostname,
-    remoteHostname: this.remoteHostname,
-    wireMode: this.wireMode
-  });
+    remoteHostname: this.remoteHostname
+  };
 };

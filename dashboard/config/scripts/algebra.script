@@ -145,7 +145,10 @@ level 'Calc Design Recipe 3'
 level 'Calc Design Recipe 4'
 
 stage 'Play Lab: Animation (Big Game)'
-level 'Eval Placeholder'
+level 'Big Game Animation 1'
+level 'Big Game Animation 2'
+level 'Big Game Animation 3'
+level 'Big Game Animation 4'
 
 stage 'Unplugged: Booleans'
 level 'Booleans'

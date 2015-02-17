@@ -1778,12 +1778,13 @@ Blockly.BlockSvg.prototype.renderDrawRightNextStatement_ = function(renderInfo, 
 Blockly.BlockSvg.prototype.renderDrawRightInline_ = function(renderInfo, inputRows, rowIndex, connectionsXY) {
   var row = inputRows[rowIndex];
   var hasFunctionalInput = false;
+  var align = row[0].align;
   if(row[0].type === Blockly.FUNCTIONAL_INPUT) {
     var widths = BS.SEP_SPACE_X * (row.length - 1);
     row.forEach(function(input) {
       widths += input.renderWidth
     });
-    if(inputRows.rightEdge > widths) {
+    if(inputRows.rightEdge > widths && align === Blockly.ALIGN_CENTRE) {
       renderInfo.curX = (inputRows.rightEdge - widths) / 2
     }
   }

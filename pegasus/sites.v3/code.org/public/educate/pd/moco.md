@@ -26,16 +26,13 @@ Milestone Complete!
 Phase 3 is designed to provide teachers with professional support, guidance, and feedback during the school year and experiences with an online community of practice.
 
 #### Save The Dates ####
-
-1/24/2015
-<br />
 3/28/2015
 
 8:30am - 3:30pm
 <br />
 Breakfast and lunch will be served. 
 
-#### January 24th Location ####
+#### March 28th Location ####
 Howard University
 <br />
 LK Downing Engineering Building 
@@ -58,20 +55,6 @@ Coming Summer 2015
 
 <br/>
 [**Back to the top**](#top)
-
-<a id="admin"></a>
-## Administrator and Counselor Professional Development
-
-### Phase 1: Preparation and Reflection
-
-Milestone Complete!
- 
-### Phase 2: Teaching and Learning Studio
-
-Milestone Complete!
-
-[**Back to the top**](#top)
-
 
 ----------
 Please visit [FAQs](/educate/pd/faq) for more information.
