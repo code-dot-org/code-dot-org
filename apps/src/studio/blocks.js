@@ -1736,18 +1736,69 @@ exports.install = function(blockly, blockInstallOptions) {
     // in the global space. This may change in the future.
   };
 
+  /**
+   * functional_start_setFuncs
+   * Even those this is called setFuncs, we are passed both functions and
+   * variables. Our generator stashes the passed values on our customLogic
+   * object (which is BigGameLogic).
+   */
   blockly.Blocks.functional_start_setFuncs = {
     init: function() {
-      var blockName = msg.startSetFuncs();
-      var blockType = blockly.BlockValueType.NONE;
-      var blockArgs = [
+      this.blockArgs = [
+        {name: 'title', type: blockly.BlockValueType.STRING},
+        {name: 'subtitle', type: blockly.BlockValueType.STRING},
+        {name: 'background', type: blockly.BlockValueType.IMAGE},
+        {name: 'danger', type: blockly.BlockValueType.IMAGE},
+        {name: 'target', type: blockly.BlockValueType.IMAGE},
+        {name: 'player', type: blockly.BlockValueType.IMAGE},
         {name: 'update-target', type: blockly.BlockValueType.FUNCTION},
         {name: 'update-danger', type: blockly.BlockValueType.FUNCTION},
         {name: 'update-player', type: blockly.BlockValueType.FUNCTION},
         {name: 'collide?', type: blockly.BlockValueType.FUNCTION},
         {name: 'on-screen?', type: blockly.BlockValueType.FUNCTION}
       ];
-      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+      this.setFunctional(true, {
+        headerHeight: 30
+      });
+      this.setHSV.apply(this, functionalBlockUtils.colors.none);
+
+      var options = {
+        fixedSize: { height: 35 }
+      };
+
+      this.appendDummyInput()
+        .appendTitle(new Blockly.FieldLabel('game_funcs', options))
+        .setAlign(Blockly.ALIGN_LEFT);
+
+      var rows = [
+        'title, subtitle, background',
+        [this.blockArgs[0], this.blockArgs[1], this.blockArgs[2]],
+        'danger, target, player',
+        [this.blockArgs[3], this.blockArgs[4], this.blockArgs[5]],
+        'update-target, update-danger, update-player',
+        [this.blockArgs[6], this.blockArgs[7], this.blockArgs[8]],
+        'collide?, on-screen?',
+        [this.blockArgs[9], this.blockArgs[10]]
+      ];
+
+      rows.forEach(function (row) {
+        if (typeof(row) === 'string') {
+          this.appendDummyInput()
+            .appendTitle(new Blockly.FieldLabel(row));
+        } else {
+          row.forEach(function (blockArg, index) {
+            var input = this.appendFunctionalInput(blockArg.name);
+            if (index !== 0) {
+              input.setInline(true);
+            }
+            input.setHSV.apply(input, functionalBlockUtils.colors[blockArg.type]);
+            input.setCheck(blockArg.type);
+            input.setAlign(Blockly.ALIGN_LEFT);
+          }, this);
+        }
+      }, this);
+
+      this.setFunctionalOutput(false);
     }
   };
 
@@ -1755,19 +1806,13 @@ exports.install = function(blockly, blockInstallOptions) {
     // For each of our inputs (i.e. update-target, update-danger, etc.) get
     // the attached block and figure out what it's function name is. Store
     // that on BigGameLogic so we can know what functions to call later.
-    this.inputList.forEach(function (input) {
-      if (input.type !== Blockly.FUNCTIONAL_INPUT) {
-        return;
-      }
-      var inputBlock = this.getInputTargetBlock(input.name);
+    this.blockArgs.forEach(function (arg) {
+      var inputBlock = this.getInputTargetBlock(arg.name);
       if (!inputBlock) {
         return;
       }
-      var inputBlockName = inputBlock.getTitleValue('NAME');
-      var functionName = Blockly.JavaScript.variableDB_.getName(inputBlockName,
-        Blockly.Procedures.NAME_TYPE);
 
-      Studio.customLogic.functionNames[input.name] = functionName;
+      Studio.customLogic.cacheBlock(arg.name, inputBlock);
     }, this);
   };
 

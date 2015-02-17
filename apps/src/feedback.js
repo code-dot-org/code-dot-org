@@ -712,7 +712,7 @@ FeedbackUtils.prototype.getGeneratedCodeElement_ = function() {
 };
 
 /**
- *
+ * Display the 'Show Code' modal dialog.
  */
 FeedbackUtils.prototype.showGeneratedCode = function(Dialog) {
   var codeDiv = this.getGeneratedCodeElement_();
@@ -735,6 +735,49 @@ FeedbackUtils.prototype.showGeneratedCode = function(Dialog) {
   var okayButton = buttons.querySelector('#ok-button');
   if (okayButton) {
     dom.addClickTouchEvent(okayButton, function() {
+      dialog.hide();
+    });
+  }
+
+  dialog.show();
+};
+
+/**
+ * Display the "Clear Puzzle" confirmation dialog.  Calls `callback` if the user
+ * confirms they want to clear the puzzle.
+ */
+FeedbackUtils.prototype.showClearPuzzleConfirmation = function(Dialog, callback) {
+  var codeDiv = document.createElement('div');
+  codeDiv.innerHTML = '<p class="dialog-title">' + msg.clearPuzzleConfirmHeader() + '</p>' +
+      '<p>' + msg.clearPuzzleConfirm() + '</p>';
+
+  var buttons = document.createElement('div');
+  buttons.innerHTML = require('./templates/buttons.html')({
+    data: {
+      clearPuzzle: true,
+      cancel: true
+    }
+  });
+  codeDiv.appendChild(buttons);
+
+  var dialog = this.createModalDialogWithIcon({
+    Dialog: Dialog,
+    contentDiv: codeDiv,
+    icon: this.studioApp_.icon,
+    defaultBtnSelector: '#again-button'
+  });
+
+  var cancelButton = buttons.querySelector('#again-button');
+  if (cancelButton) {
+    dom.addClickTouchEvent(cancelButton, function() {
+      dialog.hide();
+    });
+  }
+
+  var clearPuzzleButton = buttons.querySelector('#continue-button');
+  if (clearPuzzleButton) {
+    dom.addClickTouchEvent(clearPuzzleButton, function() {
+      callback();
       dialog.hide();
     });
   }
@@ -990,7 +1033,7 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
       return TestResults.INCOMPLETE_BLOCK_IN_FUNCTION;
     }
   }
-  if (this.hasQuestionMarksInNumberField_()) {
+  if (this.hasQuestionMarksInNumberField()) {
     return TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
   }
   if (!this.hasAllRequiredBlocks_(requiredBlocks)) {
@@ -1055,10 +1098,10 @@ FeedbackUtils.prototype.createModalDialogWithIcon = function(options) {
 /**
  * Check for '???' instead of a value in block fields.
  */
-FeedbackUtils.prototype.hasQuestionMarksInNumberField_ = function () {
+FeedbackUtils.prototype.hasQuestionMarksInNumberField = function () {
   return Blockly.mainBlockSpace.getAllBlocks().some(function(block) {
     return block.getTitles().some(function(title) {
-      return title.value_ === '???';
+      return title.value_ === '???' || title.text_ === '???';
     });
   });
 };
