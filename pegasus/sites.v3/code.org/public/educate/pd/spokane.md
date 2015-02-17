@@ -60,21 +60,6 @@ Laptop
 
 [**Back to the top**](#top)
 
-
-<a id="admin"></a>
-## Administrator and Counselor Professional Development
-
-### Phase 1: Preparation and Reflection
-
-Milestone Complete!
-
-### Phase 2: Teaching and Learning Studio
-
-Milestone Complete!
-
-[**Back to the top**](#top)
-
-
 ----------
 Please visit [FAQs](/educate/pd/faq) for more information.
 

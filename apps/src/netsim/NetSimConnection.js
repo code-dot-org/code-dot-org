@@ -151,7 +151,7 @@ NetSimConnection.prototype.disconnectFromShard = function () {
   this.myNode.destroy(function () {
     this.myNode.stopSimulation();
     this.myNode = null;
-    this.shardChange.notifyObservers(null);
+    this.shardChange.notifyObservers(null, null);
     this.statusChanges.notifyObservers();
   }.bind(this));
 };
@@ -170,7 +170,7 @@ NetSimConnection.prototype.createMyClientNode_ = function (displayName) {
       this.myNode.setDisplayName(displayName);
       this.myNode.initializeSimulation(this.sentLog_, this.receivedLog_);
       this.myNode.update(function () {
-        this.shardChange.notifyObservers(this.shard_);
+        this.shardChange.notifyObservers(this.shard_, this.myNode);
         this.statusChanges.notifyObservers();
       }.bind(this));
     } else {

@@ -166,7 +166,6 @@ NetSim.prototype.initWithUserName_ = function (user) {
   var routerPanelContainer = document.getElementById('netsim_tabpanel');
   this.routerPanel_ = NetSimRouterPanel.createWithin(routerPanelContainer,
       this.connection_);
-  this.routerPanel_.attachToRunLoop(this.runLoop_);
 
   var sendWidgetContainer = document.getElementById('netsim_send');
   this.sendWidget_ = NetSimSendWidget.createWithin(sendWidgetContainer,
