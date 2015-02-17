@@ -362,7 +362,8 @@
           }).on(
             "load error",
             callback = function( evt ) {
-              script.remove();
+              // If we remove this, we can't debug it.
+              // script.remove();
               callback = null;
 
               if (s.isStaticResource) {
@@ -509,9 +510,23 @@
 
         // All resources must be loaded via <SCRIPT> tag when offline.
         ajax.dataType = "static";
+      } else if (ajax.dataType == "script") {
+        // Use our static script loader instead of $.getScript, which deletes the <script>
+        // element and makes it hard to debug into the script.
+        ajax.dataType = "static";
+
       }
 
       return $.ajax(ajax);
+    }
+
+    // Write to an API - assumes a POST that returns JSON
+    UIFrame.prototype.save = function(ajax) {
+      ajax.method = ajax.method || "POST";
+      ajax.dataType = ajax.dataType || "json";
+      ajax.contentType = ajax.contentType || "application/x-www-form-urlencoded";
+
+      return this.load(ajax);
     }
 
     // Load the script at a given URL and return a promise that resolves when it has executed
@@ -534,34 +549,44 @@
 
     // Return a route to a link.  This interface will be improved when we use a real router.
     UIFrame.prototype.linkTo = function(route, forceOnline) {
-      if (this.isStatic && !forceOnline)
-        return window.location.pathname + "?" + $.param( route, true );
+      // Calculate route for script levels
+      if (route.script) {
+        if (this.isStatic && !forceOnline)
+          return window.location.pathname + "?" + $.param( route, true );
 
-      // Some hardcoded URLs for special scripts
-      switch (route.script) {
-        case '20-hour':
-          return "/s/1/level/" + route.level;
-        case 'Hour of Code':
-          return "/s/2/puzzle/" + route.level;
-        case 'edit-code':
-          return "/editcode/" + route.level;
-        case 'events':
-          return "/2014/" + route.level;
-        case 'flappy':
-          return "/flappy/" + route.level;
-        case 'jigsaw':
-          return "/jigsaw/" + route.level;
-        case 'step':
-          return "/s/step/puzzle/" + route.level;
-        case 'hourofcode':
-          return "/hoc/" + route.level;
-        default:
-          return "/s/" + route.script + "/stage/" + route.stage + "/puzzle/" + route.level;
+        switch (route.script) {
+          case '20-hour':
+            return "/s/1/level/" + route.level;
+          case 'Hour of Code':
+            return "/hoc/" + route.level;
+          case 'edit-code':
+            return "/editcode/" + route.level;
+          case 'events':
+            return "/2014/" + route.level;
+          case 'flappy':
+            return "/flappy/" + route.level;
+          case 'jigsaw':
+            return "/jigsaw/" + route.level;
+          case 'step':
+            return "/s/step/puzzle/" + route.level;
+          case 'hourofcode':  // TODO: For some reason, URLs for #21 generate URLs that resolve to #2. Why?
+            return "/hoc/" + route.level;
+          default:
+            return "/s/" + route.script + "/stage/" + route.stage + "/puzzle/" + route.level;
+        }
       }
+
+      // Not a recognized route
+      return null;
     }
 
     UIFrame.prototype.goTo = function(route) {
-      window.location.href = this.linkTo(route);
+      var url = this.linkTo(route);
+      if (!url)
+        return false;
+
+      window.location.href = url;
+      return true;
     }
 
     return UIFrame;
@@ -711,7 +736,7 @@
 
         // Blockly baseUrl must be an absolute path.
         opts.baseUrl = Frame.getAbsolutePath(opts.baseUrl);
-        opts.level_info = opts.level;   // Creating this for now because .level gets overwritten by a bunch of stuff. TODO: OK to just use .level?
+        opts.level.stage_name = data.stage.name;
 
         // Kick-start the blockly scripts
         _this.loadAssets(opts)
@@ -885,55 +910,109 @@
         },
 
         onAttempt: function(report) {
-          report.fallbackResponse = this.report.fallback_response;
-          report.callback = this.report.callback;
+          var scriptPath = this.scriptPath;
+          var _this = this;
 
           // Track puzzle attempt event
-          trackEvent('Puzzle', 'Attempt', this.scriptPath, report.pass ? 1 : 0);
+          trackEvent('Puzzle', 'Attempt', scriptPath, report.pass ? 1 : 0);
           if (report.pass) {
-            trackEvent('Puzzle', 'Success', this.scriptPath, report.attempt);
-            window.stopTiming('Puzzle', this.scriptPath, '');
+            trackEvent('Puzzle', 'Success', scriptPath, report.attempt);
+            window.stopTiming('Puzzle', scriptPath, '');
           }
-          trackEvent('Activity', 'Lines of Code', this.scriptPath, report.lines);
+          trackEvent('Activity', 'Lines of Code', scriptPath, report.lines);
 
-          // Send the report
-          sendReport(report, this.scriptPath);
+          // ==============
+          // TODO: Removing lastServerResponse -- and therefore nextRedirect, previousLevelRedirect, and videoInfo has broken
+          // all other level types besides Blockly.
+          // They'll need to be updated to the new method of querying the level info (which is a good idea anyway since they are just
+          // extra copies of the same code.)
+          // ==============
+
+          var onMilestone = function(response) {
+            _this.report = null;
+
+            // This used to be passed back from the milestone API.  It's used in a place that might not have easy access to
+            // scriptPath, so we pack it in until we can remove that location.
+            response.levelPath = scriptPath;
+
+            if (report.onComplete)
+              report.onComplete(response);
+          }
+
+          var data = $.extend({}, report);
+          delete data.onComplete;
+
+          // Make a POST request to the milestone API
+          if (this.report)
+            this.report.abort();
+          this.report = Frame.save({
+            url: this.milestone,
+            data: data,
+            success: onMilestone,
+            error: function (xhr, textStatus, thrownError) {
+              // Ignore an aborted API call
+              if (textStatus == "abort")
+                return;
+
+              // It's okay if milestone fails. Catch the error and pretend it succeeded with minimal info.
+              onMilestone({
+                'error': xhr.responseText,
+                message: report.pass ? 'good job' : 'try again',
+                design: 'white_background'
+              });
+            }
+          });
         },
         onResetPressed: function() {
-          cancelReport();
+          if (this.report) {
+            this.report.abort();
+            this.report = null;
+          }
         },
         onContinue: function() {
-          // TODO: Should not be using a global "lastServerResponse" here?
-          if (lastServerResponse.videoInfo) {
-            showVideoDialog(lastServerResponse.videoInfo);
-          } else if (lastServerResponse.nextRedirect) {
-            if (opts.level_info.next === false) {
-              // TODO: COMPLETED!
-              return;
-            }
+          var route;
 
-            var next = opts.level_info.next || [ opts.level_info.stage, opts.level_info.position + 1];
-            Frame.goTo({
+          // Is this level the script completion?
+          if (opts.level.next === false) {
+            // TODO: COMPLETED!
+            route = {
+              complete: opts.script_name
+            };
+          } else {
+            // Calculate the next level and route to it.
+            var next = opts.level.next || [ opts.level.stage, opts.level.position + 1];
+            route = {
               script: opts.script_name,
               stage: next[0],
               level: next[1]
-            });
+            };
+          }
+
+          // If this level has a wrap-up video, show it before moving on.
+          if (opts.level.wrapupVideo) {
+            opts.level.wrapupVideo.redirect = Frame.linkTo(route);  // someday, can just pass in a route.
+            showVideoDialog(opts.level.wrapupVideo);
+          } else {
+            if (!Frame.goTo(route)) {
+              // TODO: What kind of message should the user get?
+            }
           }
         },
         backToPreviousLevel: function() {
-          // TODO: Should not be using a global "lastServerResponse" here?
-          if (lastServerResponse.previousLevelRedirect) {
-            if (opts.level_info.previous === false) {
-              // TODO: BEGINNING
-              return
-            }
+          if (opts.level.previous === false) {
+            // TODO: Does this mean anything or do we just fail silently?
+            return;
+          }
 
-            var prev = opts.level_info.previous || [ opts.level_info.stage, opts.level_info.position - 1];
-            Frame.goTo({
-              script: opts.script_name,
-              stage: prev[0],
-              level: prev[1]
-            });
+          // Calculate the previous level and route to it.
+          var prev = opts.level.previous || [ opts.level.stage, opts.level.position - 1];
+          var route = {
+            script: opts.script_name,
+            stage: prev[0],
+            level: prev[1]
+          };
+          if (!Frame.goTo(route)) {
+            // TODO: What kind of message should the user get?
           }
         },
         showInstructionsWrapper: function(showInstructions) {
