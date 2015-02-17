@@ -1,15 +1,7 @@
 %link{rel: 'stylesheet', href: asset_path('blockly/css/common.css')}
 - href = asset_path @level.properties['href']
-- is_markdown = href.end_with? '.md'
-= javascript_include_tag 'Showdown.min.js' if is_markdown
-
+:javascript
+  var options = #{@level.properties['options'].to_json}
 #external
-  :javascript
-    var options = #{@level.properties['options'].to_json}
-    var href = "#{href}"
-    $.ajax(href).done(function (data) {
-      if(#{is_markdown}) {
-        data = new Showdown.converter().makeHtml(data);
-      }
-      $('#external').html(data);
-    });
+  / Load the external file through ActionView templates.
+  = ActionView::Base.new('public', {}, ActionController::Base.new).render(file: href)
