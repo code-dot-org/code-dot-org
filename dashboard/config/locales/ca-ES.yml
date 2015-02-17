@@ -349,6 +349,8 @@
       %{student_name}'
   user:
     email_confirm_needed: 'L''adreça de correu electrònic no ha estat confirmada:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Torna a enviar les instruccions de confirmació
     new_password_hint: (deixa-ho en blanc si no vols canviar-lo)
     current_password_hint: (necessitem la teva contrasenya actual per a confirmar

@@ -17,6 +17,7 @@ var NetSimEntity = require('./NetSimEntity');
 var NetSimMessage = require('./NetSimMessage');
 var NetSimHeartbeat = require('./NetSimHeartbeat');
 var NetSimLogger = require('./NetSimLogger');
+var ObservableEvent = require('./ObservableEvent');
 
 var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
 
@@ -72,6 +73,13 @@ var NetSimLocalClientNode = module.exports = function (shard, clientRow) {
    * @private
    */
   this.heartbeat_ = null;
+
+  /**
+   * Change event others can observe, which we will fire when we
+   * connect to a router or disconnect from a router.
+   * @type {ObservableEvent}
+   */
+  this.routerChange = new ObservableEvent();
 };
 NetSimLocalClientNode.inherits(NetSimClientNode);
 
@@ -258,6 +266,8 @@ NetSimLocalClientNode.prototype.connectToRouter = function (router, onComplete) 
 
       self.myWire = wire;
       self.myRouter = router;
+      self.routerChange.notifyObservers(self.myWire, self.myRouter);
+
       self.status_ = "Connected to " + router.getDisplayName() +
       " with address " + wire.localAddress;
       self.update(onComplete);
@@ -282,6 +292,7 @@ NetSimLocalClientNode.prototype.disconnectRemote = function (onComplete) {
     self.myRouter.update(onComplete);
     self.myRouter.stopSimulation();
     self.myRouter = null;
+    self.routerChange.notifyObservers(null, null);
   });
 };
 

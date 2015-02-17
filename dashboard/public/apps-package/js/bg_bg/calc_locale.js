@@ -155,9 +155,13 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "compute":function(d){return "изчисляване"},
+"emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
+"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "equivalentExpression":function(d){return "Опитайте пренареждане на аргументите, за да получите точно един и същи израз."},
 "extraTopBlocks":function(d){return "Имате незакачени блокове. Имате ли намерение да ги закачите към изчислителния блок?"},
-"failedInput":function(d){return "Your function does not return the right result for all values."},
+"failedInput":function(d){return "Вашата функция не връща правилният резултат за всички стойности."},
 "goal":function(d){return "Цел:"},
-"reinfFeedbackMsg":function(d){return "Тук е вашата история! Продължете работата по нея, или преминете към следващия пъзел!"},
-"yourExpression":function(d){return "Вашият израз:"}};
+"levelIncompleteError":function(d){return "Your expression does not match the goal."},
+"reinfFeedbackMsg":function(d){return "Ето вашето изчисление! Продължете работата по него, или да преминете към следващия пъзел!"},
+"yourExpression":function(d){return "Вашият израз:"},
+"wrongInput":function(d){return "You are calling your function with the wrong value."}};

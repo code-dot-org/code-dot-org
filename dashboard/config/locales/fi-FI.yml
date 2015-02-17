@@ -334,14 +334,16 @@
       %{student_name}
   user:
     email_confirm_needed: 'Sähköpostiosoitetta ei ole vahvistettu:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Lähetä vahvistusohjeet uudestaan
     new_password_hint: (jätä tyhjäksi jos et halua vaihtaa)
     current_password_hint: (anna nykyinen salasanasi, jotta voimme vahvistaa muutokset)
-    delete: Delete your account
-    delete_text: Clicking the button below will delete your account.
-    delete_text_teacher_note: 'Please note: deleting your account will not delete
-      your students'' accounts.'
-    delete_confirm: Are you sure you want to delete your account?
+    delete: Poista tilisi
+    delete_text: Klikkaamalla alla olevaa painiketta poistat tilisi.
+    delete_text_teacher_note: 'Huomaa: oman tilisi poistaminen ei poista opiskelijoittesi
+      käyttäjätilejä.'
+    delete_confirm: Oletko varma, että haluat poistaa sinun käyttäjätilisi?
   user_level:
     completed: Valmis
     tried: Kokeili
@@ -587,6 +589,6 @@
     completed_perfect: valmis, täydellinen
     furthest_level_attempted: vaikein taso jota yritetty
   studio:
-    courses_working_on: Courses you're working on
-    completed_courses: Completed courses
-    all_courses: All courses
+    courses_working_on: Kursseja, joilla olet työskennellyt
+    completed_courses: Valmiit kurssit
+    all_courses: Kaikki kurssit

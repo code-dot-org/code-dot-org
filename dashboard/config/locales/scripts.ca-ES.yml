@@ -385,6 +385,13 @@
           The Design Recipe: The Design Recipe
         K5PD:
           Introduction to PD: Introduction to PD
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and
+            3
         netsim:
           title: Internet Simulator
           description_short: ''
@@ -395,3 +402,32 @@
           description_short: Create a story or make a game with Infinity Play Lab!!
           description: Create a story or make a game with Infinity Play Lab!
           Infinity: Infinit
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: Curs d'introducció a la informàtica per a ESO (15-25 hores)
+          description: Aquest curs de 20 hores és una introducció als conceptes bàsics
+            d'informàtica i programació. El curs ha estat dissenyat per impartir a
+            alumnes de 1er d'ESO, però és divertit d'aprendre a qualsevol edat.
+          Introduction to Computer Science: Introducció a la informàtica
+          The Maze: El laberint
+          Computational Thinking: Pensament computacional
+          Graph Paper Programming: Programació de paper quadriculat
+          The Artist: L'artista
+          Algorithms: Algorismes
+          The Artist 2: L'artista 2
+          Functions: Funcions
+          The Farmer: La pagesa
+          Conditionals: Condicionals
+          The Artist 3: L'artista 3
+          Song Writing: Composició de la cançó
+          The Farmer 2: La pagesa 2
+          Abstraction: Abstracció
+          The Artist 4: L'artista 4
+          Relay Programming: Programació en relleus
+          The Farmer 3: La pagesa 3
+          The Internet: Internet
+          The Artist 5: L'artista 5
+          Wrap-up: Recapitulació

@@ -648,6 +648,105 @@
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): (المستطيل (+ 8 2) (-7 5) "الصلبة"
           "الأحمر")
         (rectangle (+ 8 2) (- 7 5) solid red): (المستطيل (+ 8 2) (-7 5) الأحمر الصلبة)
+      msm variables multi 1:
+        x = 15<br/>a = 2<br>b = 6: x = 15<br/>a = 2<br>b = 6
+        What is the value of x?: What is the value of x?
+        a function: a function
+        15: '15'
+        x: x
+      msm variables multi 10:
+        f(x) = x * 17: f(x) = x * 17
+        What is the name of the function?: What is the name of the function?
+        f: f
+        x: x
+        17: '17'
+      msm variables multi 11:
+        f(x) = x * 17: f(x) = x * 17
+        What is the name of the parameter?: What is the name of the parameter?
+        f: f
+        x: x
+        17: '17'
+      msm variables multi 12:
+        (define (f x) (*x 17)): (define (f x) (*x 17))
+        What is the name of the variable?: What is the name of the variable?
+        f: f
+        x: x
+        17: '17'
+      msm variables multi 13:
+        f(x) = x * 17: f(x) = x * 17
+        What is f(1)?: What is f(1)?
+        x: x
+        117: '117'
+        17: '17'
+      msm variables multi 2:
+        x = 15<br>a = 2<br>b = 6: x = 15<br>a = 2<br>b = 6
+        What is the value of a + b?: What is the value of a + b?
+        8: '8'
+        function: function
+        ab: ab
+      msm variables multi 3:
+        x = 15<br/>a = 2<br>b = 6: x = 15<br/>a = 2<br>b = 6
+        What is the value of x-10?: What is the value of x-10?
+        a function: a function
+        5: '5'
+        x: x
+      msm variables multi 4:
+        define x 3<br>define p 8<br>define q hello: define x 3<br>define p 8<br>define
+          q hello
+        What is the value of x?: What is the value of x?
+        3: '3'
+        15: '15'
+        do not know: do not know
+      msm variables multi 5:
+        define x 3<br>define p 8<br>define q hello: define x 3<br>define p 8<br>define
+          q hello
+        What is the value of (p - x)?: What is the value of (p - x)?
+        q: q
+        3: '3'
+        5: '5'
+      msm variables multi 6:
+        define x 3<br>define p 8<br>define q hello: define x 3<br>define p 8<br>define
+          q hello
+        What is the value of string-length(q)?: What is the value of string-length(q)?
+        1: '1'
+        hello: مرحبا
+        5: '5'
+      msm variables multi 7:
+        f(x) = x + 3: f(x) = x + 3
+        What is the name of the function?: What is the name of the function?
+        f: f
+        x: x
+        3: '3'
+      msm variables multi 8:
+        f(x) = x + 3: f(x) = x + 3
+        What is the name of the variable?: What is the name of the variable?
+        f: f
+        x: x
+        3: '3'
+      msm variables multi 9:
+        f(x) = x + 3: f(x) = x + 3
+        What is f(2)?: What is f(2)?
+        6: '6'
+        5: '5'
+        x: x
+      Multi Define Funcs 1:
+        g(y) = y + 3: g(y) = y + 3
+        What is the name of this function?: What is the name of this function?
+        g: g
+        y: true
+        3: '3'
+      Multi Define Funcs 2:
+        g(y) = y + 3: g(y) = y + 3
+        What is the name of the parameter?: What is the name of the parameter?
+        g: g
+        y: true
+        3: '3'
+      Multi Define Funcs 3:
+        g(y) = y + 3: g(y) = y + 3
+        What should g(2) return?: What should g(2) return?
+        6: '6'
+        5: '5'
+        y: true
       Multi Strings Images 1:
         Strings and Images Multiple Choice: Strings and Images Multiple Choice
         Multi Strings Images 1.blocks3.level: Multi Strings Images 1.blocks3.level
@@ -661,6 +760,55 @@
           1.blocks3.start_blocks, 300, 100
         Multi Strings Images 1.blocks4.start_blocks, 300, 100: Multi Strings Images
           1.blocks4.start_blocks, 300, 100
+      PDK5 Basic CS:
+        Video Follow-up Question: Video Follow-up Question
+        Answer this question based on the video you just watched.: Answer this question
+          based on the video you just watched.
+        'A computer program, or code, is:': 'A computer program, or code, is:'
+        a part inside of a computer: a part inside of a computer
+        a week-long course to learn about computers: a week-long course to learn about
+          computers
+        a set of instructions you give a computer to execute: a set of instructions
+          you give a computer to execute
+        a secret password: a secret password
+      Play Lab Rocket 6:
+        Rocket Multiple Choice: Rocket Multiple Choice
+        Which function would describe a rocket that reaches 24 meters at 2 seconds, 60 meters at 5 seconds, and 108 meters at 9 seconds?: Which
+          function would describe a rocket that reaches 24 meters at 2 seconds, 60
+          meters at 5 seconds, and 108 meters at 9 seconds?
+        rocket-height (seconds) = seconds + 12: rocket-height (seconds) = seconds
+          + 12
+        rocket-height (seconds) = seconds * 12: rocket-height (seconds) = seconds
+          * 12
+        rocket-height (seconds) = 48 / seconds: rocket-height (seconds) = 48 / seconds
+        rocket-height (seconds)  = seconds * 48: rocket-height (seconds)  = seconds
+          * 48
+      Play Lab Rocket 7:
+        Rocket Multiple Choice: Rocket Multiple Choice
+        0: '? Which function would describe a rocket that reaches 4 meters at 2 seconds,
+          16 meters at 4 seconds, and  256 meters at 16 seconds?'
+        1: ': Which function would describe a rocket that reaches 4 meters at 2 seconds,
+          16 meters at 4 seconds, and  256 meters at 16 seconds?'
+        rocket-height(seconds) = seconds * 2: rocket-height(seconds) = seconds * 2
+        rocket-height(seconds) = seconds * seconds: rocket-height(seconds) = seconds
+          * seconds
+        rocket-height(seconds) = seconds * 4: rocket-height(seconds) = seconds * 4
+        rocket-height(seconds) = seconds * 16: rocket-height(seconds) = seconds *
+          16
+      Play Lab Rocket 8:
+        Rocket Multiple Choice: Rocket Multiple Choice
+        0: '? Which function would describe a rocket that reaches 47 meters at 5 seconds,
+          97 meters at 10 seconds, and 147 meters at 15 seconds?'
+        1: ': Which function would describe a rocket that reaches 47 meters at 5 seconds,
+          97 meters at 10 seconds, and 147 meters at 15 seconds?'
+        rocket-height(seconds) = seconds * 7 + 10: rocket-height(seconds) = seconds
+          * 7 + 10
+        rocket-height(seconds) = seconds * 10 + 7: rocket-height(seconds) = seconds
+          * 10 + 7
+        rocket-height(seconds) = seconds * 7 + 3: rocket-height(seconds) = seconds
+          * 7 + 3
+        rocket-height(seconds) = seconds * 10 - 3: rocket-height(seconds) = seconds
+          * 10 - 3
       test multi image:
         Maze Multiple Choice Two: متاهة اثنين خيار متعددة
         /script_assets/matches/images/head.jpg,400: /script_assets/matches/images/head.jpg,400
@@ -686,8 +834,14 @@
         Martha Washington: مارثا واشنطن
         George Washington: جورج واشنطن
         George Jetson: جورج جيتسون
+      Test 1:
+        This is a test: This is a test
+        whatever: whatever
+        this is a question?: this is a question?
+        wrong answer: إجابة خاطئة
+        right answer: الجواب الصحيح
       unique level name here:
-        title: العنوان
+        line1<br/>line2: line1<br/>line2
         description here: الوصف هنا
         Question: سؤال
         wrong answer: إجابة خاطئة

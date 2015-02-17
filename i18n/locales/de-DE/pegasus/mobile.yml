@@ -6,7 +6,7 @@ de-DE:
   csedweek_dates: 14. Dezember, 2014
   csedweek_banner_hoc: 'Die <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> Stunde des Code</a> kommt näher. Dies ist ein Aufruf an alle Lehrer und Organisatoren, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> plant Eure Stunde des Codes</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400"> Sind Sie ein CS-Lehrer? Hier finden Sie weiteres CSEdWeek-Material</a>'
-  n_have_learned_an_hoc: '<h1>#</h1><h3>absolvierten eine</h3><h2>Hour of Code</h2>'
+  n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
   anybody_can_learn: Jeder kann es lernen.
   learn_now: Jetzt lernen
   petition_message: Jeder Schüler in jeder Schule sollte die Möglichkeit haben, Informatik zu lernen
