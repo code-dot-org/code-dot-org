@@ -103,6 +103,7 @@ exports.fauxShard = function () {
     nodeTable: exports.fauxStorageTable(),
     wireTable: exports.fauxStorageTable(),
     messageTable: exports.fauxStorageTable(),
+    logTable: exports.fauxStorageTable(),
     heartbeatTable: exports.fauxStorageTable()
   };
 };
