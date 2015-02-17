@@ -12,10 +12,6 @@ var msg = require('../../locale/current/studio');
 var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
 var commonMsg = require('../../locale/current/common');
 var codegen = require('../codegen');
-var functionalBlockUtils = require('../functionalBlockUtils');
-var installFunctionalApiCallBlock =
-  functionalBlockUtils.installFunctionalApiCallBlock;
-var initTitledFunctionalBlock = functionalBlockUtils.initTitledFunctionalBlock;
 var constants = require('./constants');
 var utils = require('../utils');
 var _ = utils.getLodash();
@@ -1702,7 +1698,7 @@ exports.install = function(blockly, blockInstallOptions) {
       var blockName = msg.startSetValue();
       var blockType = blockly.BlockValueType.NONE;
       var blockArgs = [{name: 'VALUE', type: blockly.BlockValueType.FUNCTION}];
-      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
     }
   };
 
@@ -1725,7 +1721,7 @@ exports.install = function(blockly, blockInstallOptions) {
         {name: 'target', type: blockly.BlockValueType.IMAGE},
         {name: 'danger', type: blockly.BlockValueType.IMAGE}
       ];
-      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
     }
   };
 
@@ -1760,7 +1756,7 @@ exports.install = function(blockly, blockInstallOptions) {
       this.setFunctional(true, {
         headerHeight: 30
       });
-      this.setHSV.apply(this, functionalBlockUtils.colors[blockly.BlockValueType.NONE]);
+      this.setHSV.apply(this, blockly.FunctionalTypeColors[blockly.BlockValueType.NONE]);
 
       var options = {
         fixedSize: { height: 35 }
@@ -1791,7 +1787,7 @@ exports.install = function(blockly, blockInstallOptions) {
             if (index !== 0) {
               input.setInline(true);
             }
-            input.setHSV.apply(input, functionalBlockUtils.colors[blockArg.type]);
+            input.setHSV.apply(input, blockly.FunctionalTypeColors[blockArg.type]);
             input.setCheck(blockArg.type);
             input.setAlign(Blockly.ALIGN_LEFT);
           }, this);
@@ -1816,13 +1812,13 @@ exports.install = function(blockly, blockInstallOptions) {
     }, this);
   };
 
-  installFunctionalApiCallBlock(blockly, generator, {
+  blockly.FunctionalBlockUtils.installFunctionalApiCallBlock(blockly, generator, {
     blockName: 'functional_start_dummyOnMove',
     blockTitle: 'on-move (on-screen)',
     args: [{name: 'VAL', type: blockly.BlockValueType.FUNCTION}]
   });
 
-  installFunctionalApiCallBlock(blockly, generator, {
+  blockly.FunctionalBlockUtils.installFunctionalApiCallBlock(blockly, generator, {
     blockName: 'functional_start_setBackground',
     blockTitle: 'start (background)',
     apiName: 'Studio.setBackground',
@@ -1837,7 +1833,7 @@ exports.install = function(blockly, blockInstallOptions) {
         {name: 'PLAYER_SPEED', type: 'Number'},
         {name: 'ENEMY_SPEED', type: 'Number'}
       ];
-      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
     }
   };
 
@@ -1863,7 +1859,7 @@ exports.install = function(blockly, blockInstallOptions) {
         {name: 'PLAYER_SPEED', type: 'Number'},
         {name: 'ENEMY_SPEED', type: 'Number'}
       ];
-      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
     }
   };
 
@@ -1892,7 +1888,7 @@ exports.install = function(blockly, blockInstallOptions) {
   // API instead of here.
   var functional_background_values = skin.backgroundChoices.slice(1);
 
-  functionalBlockUtils.installStringPicker(blockly, generator, {
+  blockly.FunctionalBlockUtils.installStringPicker(blockly, generator, {
     blockName: 'functional_background_string_picker',
     values: functional_background_values
   });
@@ -1922,7 +1918,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.functional_sprite_dropdown = {
     helpUrl: '',
     init: function() {
-      this.setHSV.apply(this, functionalBlockUtils.colors[blockly.BlockValueType.IMAGE]);
+      this.setHSV.apply(this, blockly.FunctionalTypeColors[blockly.BlockValueType.IMAGE]);
 
       this.VALUES = skin.spriteChoices;
 
@@ -1950,7 +1946,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.functional_background_dropdown = {
     helpUrl: '',
     init: function() {
-      this.setHSV.apply(this, functionalBlockUtils.colors[blockly.BlockValueType.IMAGE]);
+      this.setHSV.apply(this, blockly.FunctionalTypeColors[blockly.BlockValueType.IMAGE]);
 
       this.VALUES = skin.backgroundChoicesK1;
       var dropdown = new blockly.FieldImageDropdown(skin.backgroundChoicesK1,
@@ -1974,7 +1970,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.functional_sqrt = {
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, 'sqrt', 'Number', [
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, 'sqrt', 'Number', [
         { name: 'ARG1', type: 'Number' }
       ]);
     }
@@ -1992,7 +1988,7 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       // todo = localize
-      initTitledFunctionalBlock(this, 'keydown?', blockly.BlockValueType.BOOLEAN, [
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, 'keydown?', blockly.BlockValueType.BOOLEAN, [
         { name: 'ARG1', type: 'Number' }
       ]);
     }
