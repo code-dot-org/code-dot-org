@@ -190,6 +190,8 @@ module LevelsHelper
     level = @level.properties.dup || {}
 
     # Set some specific values
+    level['position'] = @script_level.script.id < 9 ? @script_level.chapter : @script_level.stage_or_game_position
+
     level['puzzle_number'] = @script_level ? @script_level.stage_or_game_position : 1
     level['stage_total'] = @script_level ? @script_level.stage_or_game_total : @level.game.levels.count
     if @level.is_a?(Maze) && @level.step_mode

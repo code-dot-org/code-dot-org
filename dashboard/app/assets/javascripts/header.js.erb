@@ -46,6 +46,16 @@
       return "/level-" + args.script_name + "-" + args.stage_id + "-" + args.level_id;
     }
 
+    HeaderStore.prototype.patch = function(value) {
+      value = value || {};
+      value.scriptPath = Frame.linkTo({
+        script: value.stage.script_name,
+        stage: value.stage.position,
+        level: value.level.level.position
+      });
+      return value;
+    }
+
     return HeaderStore;
   })(UIStore);
 
@@ -182,10 +192,16 @@
         var els = $.map(levels, function(level, index) {
           var status = levelProgress[level.id] || {};
 
+          var href = Frame.linkTo({
+            script: stage.script_name,
+            stage: stage.position,
+            level: level.position
+          });
+
           cl = 'level_link ' + (status.status || 'not_tried');
           if (level.unplugged)
             cl += ' unplugged_level';
-          var link = $('<a>').addClass(cl).attr('href', level.link).text(level.label);
+          var link = $('<a>').addClass(cl).attr('href', href).text(level.label);
 
           cl = level.assessment ? 'puzzle_outer_assessment' : 'puzzle_outer_level';
           if (level.id == level_id)
@@ -270,8 +286,14 @@
               var level = stage.levels[l];
               var status = levelProgress[level.id] || {};
 
+              var href = Frame.linkTo({
+                script: state.scriptDefinition.name,
+                stage: stage.position,
+                level: level.position
+              });
+
               cl = 'level_link ' + (status.status || 'not_tried');
-              var linkEl = $('<a>').attr('href', level.path ).addClass(cl);
+              var linkEl = $('<a>').attr('href', href ).addClass(cl);
 
               outer_cl = 'puzzle_outer_level';
               if (level.id == level_id)
@@ -347,7 +369,7 @@
 
         // Ask the script store to load a particular script.
         this.scriptStore.load({
-          script_id: this.state.script.id
+          script_id: this.state.stage.script_id
         });
 
       }

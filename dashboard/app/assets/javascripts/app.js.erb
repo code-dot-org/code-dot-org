@@ -515,6 +515,34 @@
       }).appendTo(document.head);
     }
 
+    // Return a route to a link.  This interface will be improved when we use a real router.
+    UIFrame.prototype.linkTo = function(route) {
+      if (this.isStatic)
+        return window.location.pathname + "?" + $.param( route, true );
+
+      // Some hardcoded URLs for special scripts
+      switch (route.script) {
+        case '20-hour':
+          return "/s/1/level/" + route.level;
+        case 'Hour of Code':
+          return "/s/2/puzzle/" + route.level;
+        case 'edit-code':
+          return "/editcode/" + route.level;
+        case 'events':
+          return "/2014/" + route.level;
+        case 'flappy':
+          return "/flappy/" + route.level;
+        case 'jigsaw':
+          return "/jigsaw/" + route.level;
+        case 'step':
+          return "/s/step/puzzle/" + route.level;
+        case 'hourofcode':
+          return "/hoc/" + route.level;
+        default:
+          return "/s/" + route.script + "/stage/" + route.stage + "/level/" + route.level;
+      }
+    }
+
     return UIFrame;
   })();
 

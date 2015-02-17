@@ -28,7 +28,8 @@ SQL
 
   # Find a script by name OR id, including someone who pased an ID into name.
   def find_script(p)
-    name_or_id = p[:script_name] or p[:script_id]
+    name_or_id = p[:script_name]
+    name_or_id = p[:script_id] if name_or_id.nil?
 
     if name_or_id.match(/\A\d+\z/)
       script = Script.find(name_or_id.to_i)
@@ -63,17 +64,23 @@ SQL
     script = find_script(params)
 
     s = {
+      id: script.id,
+      name: script.name,
       stages: []
     }
+
+    position = 0
 
     levels = script.script_levels.group_by(&:stage_or_game)
     levels.each_pair do |stage_or_game, sl_group|
 
+        position += 1
         stage = {
           # TODO: more stuff needed?
           id: stage_or_game.id,
-          levels: [],
-          title: stage_title(script, stage_or_game)
+          position: position,
+          title: stage_title(script, stage_or_game),
+          levels: []
         }
 
         if script.has_lesson_plan?
@@ -92,9 +99,10 @@ SQL
 
           level = {
             id: sl.level.id,
+            position: script.id < 9 ? sl.chapter : sl.stage_or_game_position,
             kind: kind,
             title: sl.level_display_text,
-            path: build_script_level_path(sl)
+            x_path: build_script_level_path(sl)   # <-- moved to client-side generation
           }
           stage[:levels].push level
         end
@@ -121,8 +129,8 @@ SQL
       end
 
     stage_data = {
-      id: stage.id,
-      position: stage.position,
+      id: stage.nil? ? nil : stage.id,
+      position: stage.nil? ? 1 : stage.position,
       script_name: script.name,
       script_id: script.id,
       script_stages: script.stages.to_a.count,
@@ -130,9 +138,9 @@ SQL
       levels: game_levels.map do |sl|
         {
           id: sl.level.id,
-          position: sl.stage_or_game_position,
+          position: script.id < 9 ? sl.chapter : sl.stage_or_game_position,
           label: sl.level_display_text,
-          link: build_script_level_path(sl),
+          x_link: build_script_level_path(sl),   # <-- moved to client-side generation
           unplugged: !!sl.level.unplugged?,
           assessment: !!sl.assessment
         }
@@ -179,7 +187,6 @@ SQL
       end
     end
 
-    level_data[:scriptPath] = build_script_level_path(script_level)
     if level.ideal_level_source_id
       level_data[:solutionPath] = script_level_solution_path(script, level)  # TODO: Only for teachers?
     end
