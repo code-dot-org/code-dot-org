@@ -39,7 +39,7 @@ var NetSimHeartbeat = module.exports = function (shard, row) {
   NetSimEntity.call(this, shard, row);
 
   /** @type {number} Row ID in node table */
-  this.nodeID_ = row.nodeID;
+  this.nodeID = row.nodeID;
 
   /** @type {number} unix timestamp (ms) */
   this.time_ = row.time !== undefined ? row.time : 0;
@@ -74,9 +74,17 @@ NetSimHeartbeat.getOrCreate = function (shard, nodeID, onComplete) {
     } else {
       NetSimHeartbeat.create(shard, function (newHeartbeat) {
         if (newHeartbeat) {
-          newHeartbeat.nodeID_ = nodeID;
+          newHeartbeat.nodeID = nodeID;
         }
-        onComplete(newHeartbeat);
+        newHeartbeat.update(function (success) {
+          if (!success) {
+            // Failed to fully create heartbeat
+            newHeartbeat.destroy();
+            onComplete(null);
+            return;
+          }
+          onComplete(newHeartbeat);
+        });
       });
     }
   });
@@ -97,8 +105,8 @@ NetSimHeartbeat.prototype.getTable_ = function () {
  */
 NetSimHeartbeat.prototype.buildRow_ = function () {
   return {
-    nodeID: this.nodeID_,
-    time: Date.now()
+    nodeID: this.nodeID,
+    time: this.time_
   };
 };
 
