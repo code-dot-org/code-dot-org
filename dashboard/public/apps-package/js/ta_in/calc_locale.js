@@ -155,9 +155,13 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "compute":function(d){return "கணி"},
+"emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
+"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "equivalentExpression":function(d){return "அதே தொடர் சரியாக பெற உங்கள் வாதங்களை மீள்ஒழுங்குபடுத்தி முயற்சிக்கவும்."},
 "extraTopBlocks":function(d){return "உங்களிடம் இணைக்கப்படாத தொகுதிகள் உள்ளன. \"கணிப்புக்கு \" இந்த தொகுதிகளை  இணைக்க வேண்டும் என்று கருதுகிறிர்களா?"},
 "failedInput":function(d){return "Your function does not return the right result for all values."},
 "goal":function(d){return "குறிக்கோள்:"},
+"levelIncompleteError":function(d){return "Your expression does not match the goal."},
 "reinfFeedbackMsg":function(d){return "இதோ உங்கள் கதை! அதில் தொடர், அல்லது அடுத்த புதிருக்கு நகர்!"},
-"yourExpression":function(d){return "உங்கள் வெளிப்பாடு:"}};
+"yourExpression":function(d){return "உங்கள் வெளிப்பாடு:"},
+"wrongInput":function(d){return "You are calling your function with the wrong value."}};

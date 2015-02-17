@@ -30,26 +30,6 @@ The following domains white-listed for access:
 
 At this time, there are no minimum requirements for computers.
 
-### Office Hours
-
-Office hours will be available bi-weekly from 5:00pm-6:00pm in both Eastern and Pacific Time Zones. 
-
-The virtual meetings will be hosted via Blue Jeans Video Conference. If this is your first time using Blue Jeans, we recommend clicking on the meeting link 5 minutes prior to the start time as you will be prompted to download a plugin, which is required to access the virtual meeting. No login or account is required to join the virtual meeting.
-
-### November Office Hours
-
-Tuesday, November 4th
-<br/>
-- Eastern Time: 5:00 PM - 6:00 PM - [Click here](https://bluejeans.com/757225757) to join virtual meeting. To join via phone, dial: 408-740-7256 and enter Conference ID: 757225757. 
-<br/>
-- Pacific Time: 5:00 PM - 6:00 PM - [Click here](https://bluejeans.com/612114978) to join virtual meeting. To join via phone, dial: 408-740-7256 and enter Conference ID: 612114978.
-
-Thursday, November 20th
-<br/>
-- Eastern Time: 5:00 PM - 6:00 PM - [Click here](https://bluejeans.com/727972202) to join virtual meeting. To join via phone, dial: 408-740-7256 and enter Conference ID: 727972202.
-<br/>
-- Pacific Time: 5:00 PM - 6:00 PM - [Click here](https://bluejeans.com/188278137) to join virtual meeting. To join via phone, dial: 408-740-7256 and enter Conference ID: 188278137.
-<br/>
 
 ### Additional ECS Resources
 

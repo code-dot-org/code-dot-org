@@ -60,7 +60,6 @@ var appState = {
   message: null,
   result: null,
   testResults: null,
-  currentAnimationDepth: 0,
   failedInput: null
 };
 Calc.appState_ = appState;
@@ -235,7 +234,6 @@ Calc.resetButtonClick = function () {
   appState.message = null;
   appState.result = null;
   appState.testResults = null;
-  appState.currentAnimationDepth = 0;
   appState.failedInput = null;
 
   timeoutList.clearTimeouts();
@@ -326,6 +324,12 @@ Calc.evaluateFunction_ = function (targetSet, userSet) {
     outcome.result = ResultType.FAILURE;
     outcome.testResults = TestResults.APP_SPECIFIC_FAIL;
     outcome.message = calcMsg.failedInput();
+  } else if (!targetSet.computeEquation().expression.isIdenticalTo(
+      userSet.computeEquation().expression)) {
+    // we have the right function, but are calling with the wrong inputs
+    outcome.result = ResultType.FAILURE;
+    outcome.testResults = TestResults.APP_SPECIFIC_FAIL;
+    outcome.message = calcMsg.wrongInput();
   } else {
     outcome.result = ResultType.SUCCESS;
     outcome.testResults = TestResults.ALL_PASS;
@@ -333,6 +337,9 @@ Calc.evaluateFunction_ = function (targetSet, userSet) {
   return outcome;
 };
 
+/**
+ * @returns outcome object
+ */
 Calc.evaluateResults_ = function (targetSet, userSet) {
   var identical, user, target;
   var outcome = {
@@ -403,6 +410,8 @@ Calc.execute = function() {
 
   studioApp.report(reportData);
 
+  studioApp.playAudio(appState.result === ResultType.SUCCESS ? 'win' : 'failure');
+
   // Display feedback immediately
   if (isPreAnimationFailure(appState.testResults)) {
     return displayFeedback();
@@ -412,7 +421,7 @@ Calc.execute = function() {
   if (appState.result === ResultType.SUCCESS &&
       !appState.userSet.hasVariablesOrFunctions() &&
       !level.edit_blocks) {
-    Calc.step();
+    Calc.step(0);
   } else {
     displayComplexUserExpressions();
     timeoutList.setTimeout(function () {
@@ -453,6 +462,12 @@ function generateResults() {
     } else {
       appState.message = calcMsg.emptyFunctionalBlock();
     }
+    return;
+  }
+
+  if (studioApp.hasQuestionMarksInNumberField()) {
+    appState.result = ResultType.FAILURE;
+    appState.testResults = TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
     return;
   }
 
@@ -508,23 +523,19 @@ function displayComplexUserExpressions () {
 
   // Now display our compute equation and the result of evaluating it
   var computeType = computeEquation && computeEquation.expression.getType();
-  if (computeType === ExpressionNode.ValueType.FUNCTION_CALL ||
-      computeType === ExpressionNode.ValueType.VARIABLE) {
-    var targetEquation = appState.targetSet.computeEquation();
+  var targetEquation = appState.targetSet.computeEquation();
 
-    // We're either a variable or a function call. Generate a tokenList (since
-    // we could actually be different than the goal)
-    tokenList = getTokenList(computeEquation, targetEquation);
+  // We're either a variable or a function call. Generate a tokenList (since
+  // we could actually be different than the goal)
+  tokenList = getTokenList(computeEquation, targetEquation);
 
-    result = appState.userSet.evaluate().toString();
-    var expectedResult = appState.targetSet.computeEquation() === null ?
-      result : appState.targetSet.evaluate().toString();
+  result = appState.userSet.evaluate().toString();
+  var expectedResult = appState.targetSet.computeEquation() === null ?
+    result : appState.targetSet.evaluate().toString();
 
-    tokenList = tokenList.concat(getTokenList(' = '),
-      getTokenList(result, expectedResult));
-  } else {
-    tokenList = getTokenList(computeEquation, appState.targetSet.computeEquation());
-  }
+  // add a tokenList diffing our results
+  tokenList = tokenList.concat(getTokenList(' = '),
+    getTokenList(result, expectedResult));
 
   displayEquation('userExpression', null, tokenList, nextRow++, 'errorToken');
 
@@ -552,15 +563,16 @@ function stopAnimatingAndDisplayFeedback() {
  * collapsing the next node in our tree. If that node failed expectations, we
  * will stop further evaluation.
  */
-Calc.step = function () {
-  if (animateUserExpression(appState.currentAnimationDepth)) {
-    stopAnimatingAndDisplayFeedback();
-    return;
-  }
-  appState.currentAnimationDepth++;
-
+Calc.step = function (animationDepth) {
+  var isFinal = animateUserExpression(animationDepth);
   timeoutList.setTimeout(function () {
-    Calc.step();
+    if (isFinal) {
+      // one deeper to remove highlighting
+      animateUserExpression(animationDepth + 1);
+      stopAnimatingAndDisplayFeedback();
+    } else {
+      Calc.step(animationDepth + 1);
+    }
   }, stepSpeed);
 };
 
@@ -598,27 +610,33 @@ function animateUserExpression (maxNumSteps) {
 
   var current = userExpression.clone();
   var previousExpression = current;
-  var currentDepth = 0;
+  var numCollapses = 0;
+  // Each step draws a single line
   for (var currentStep = 0; currentStep <= maxNumSteps && !finished; currentStep++) {
     var tokenList;
-    if (currentDepth === maxNumSteps) {
+    if (numCollapses === maxNumSteps) {
+      // This is the last line in the current animation, highlight what has
+      // changed since the last line
       tokenList = current.getTokenListDiff(previousExpression);
-    } else if (currentDepth + 1 === maxNumSteps) {
+    } else if (numCollapses + 1 === maxNumSteps) {
+      // This is the second to last line. Highlight the block being collapsed,
+      // and the deepest operation (that will be collapsed on the next line)
       var deepest = current.getDeepestOperation();
       if (deepest) {
         studioApp.highlight('block_id_' + deepest.blockId);
       }
       tokenList = current.getTokenList(true);
     } else {
+      // Don't highlight anything
       tokenList = current.getTokenList(false);
     }
-    displayEquation('userExpression', null, tokenList, currentDepth, 'markedToken');
+    displayEquation('userExpression', null, tokenList, numCollapses, 'markedToken');
     previousExpression = current.clone();
     if (current.collapse()) {
-      currentDepth++;
-    } else if (currentStep - currentDepth > 2) {
-      // we want to go one more step after the last collapse so that we show
-      // our last line without highlighting it
+      numCollapses++;
+    } else if (currentStep === numCollapses + 1) {
+      // go one past our num collapses so that the last line gets highlighted
+      // on its own
       finished = true;
     }
   }
