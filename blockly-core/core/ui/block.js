@@ -1663,6 +1663,10 @@ Blockly.Block.prototype.setFunctionalOutput = function(hasOutput, opt_check) {
   }
 };
 
+/**
+ * Sets this block to have a new functional output type
+ * @param {Blockly.BlockValueType} newType
+ */
 Blockly.Block.prototype.changeFunctionalOutput = function(newType) {
   this.setHSV.apply(this, Blockly.FunctionalTypeColors[newType]);
   this.previousConnection = this.previousConnection || new Blockly.Connection(this, Blockly.FUNCTIONAL_OUTPUT);
