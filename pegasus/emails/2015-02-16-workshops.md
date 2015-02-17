@@ -1,7 +1,7 @@
 ---
-from: 'Hadi Partovi (Code.org) <hadi_partovi@code.org>'
+from: 'Hadi Partovi <hadi_partovi@code.org>'
 subject: "A special opportunity for elementary teachers"
-litmus_tracking_id: "y8czo8o9"
+litmus_tracking_id: "isikmczo"
 ---
 
 I’m writing because you joined as a teacher on Code.org’s learning platform, [Code Studio](http://studio.code.org/). 
@@ -11,29 +11,29 @@ For teachers in K-5, we offer one-day professional development workshops in 60 U
 ### Fantastic workshops, all costs covered!
 4,000 teachers have participated and most say it’s the best PD they’ve ever attended.
 
-<a href= "https://code.org/educate/k5"><button>Reserve a spot at a workshop near you near you </button></a> (US teachers only)
+**[Reserve a spot at a workshop near you near you](https://code.org/educate/k5)** (US teachers only)
 
 ### What’s in a workshop?
 An experienced computer science facilitator will prepare you to teach our courses for grades K-5. You’ll learn:
 
-- Basics of computer science
+- The basics of computer science
 - How to guide students through our online curriculum
 - How to use the teacher dashboard
 - “Unplugged” computer science activities<br />
 [Learn more](https://code.org/k5)
 
 ### All costs are covered by Code.org
-There’s no charge. You’ll also receive:
+There’s no charge for you. You’ll also receive:
 
-- Printed curriculum guide
-- Certificate of completion (which could count for PD credit)
+- A printed curriculum guide
+- A certificate of completion (which could count for PD credit)
 - Supplies for unplugged lessons
 - Fun Code.org swag
 
 [Find a workshop](https://code.org/educate/k5) near you. Give your students a head start on learning foundational computer science.
 
 
-Hadi Partovi
+Hadi Partovi<br />
 founder, Code.org
 
 
