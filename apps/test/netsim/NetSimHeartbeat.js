@@ -128,7 +128,8 @@ describe("NetSimHeartbeat", function () {
     assertEqual("", testShard.heartbeatTable.log().slice(0, 13));
 
     // Tick after 5 seconds updates retrieved time
-    originalHeartbeat.time_ = Date.now() - 5001;
+    var fiveSecondsAgo = Date.now() - 5001;
+    originalHeartbeat.time_ = fiveSecondsAgo;
     testShard.heartbeatTable.log('');
     originalHeartbeat.tick();
     assertEqual("update", testShard.heartbeatTable.log().slice(0, 6));
