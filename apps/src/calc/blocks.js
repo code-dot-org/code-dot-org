@@ -67,18 +67,18 @@ function initFunctionalBlock(block, title, numArgs) {
     block.appendFunctionalInput('ARG' + i)
          .setInline(i > 1)
          .setHSV(184, 1.00, 0.74)
-         .setCheck('Number');
+         .setCheck(Blockly.BlockValueType.NUMBER);
   }
 
-  block.setFunctionalOutput(true, 'Number');
+  block.setFunctionalOutput(true, Blockly.BlockValueType.NUMBER);
 }
 
 function installCompute(blockly, generator, gensym) {
   blockly.Blocks.functional_compute = {
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, msg.compute(), 'none', [
-        { name: 'ARG1', type: 'Number' }
+      initTitledFunctionalBlock(this, msg.compute(), blockly.BlockValueType.NONE, [
+        { name: 'ARG1', type: blockly.BlockValueType.NUMBER }
       ]);
     }
   };
