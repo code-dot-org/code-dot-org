@@ -24,8 +24,8 @@
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
             <arg name="size" type="Number"/>
-            <arg name="color" type="string"/>
-            <outputtype>image</outputtype>
+            <arg name="color" type="String"/>
+            <outputtype>Image</outputtype>
           </mutation>
           <title name="NAME">my-shape</title>
           <functional_input name="STACK">
@@ -56,7 +56,7 @@
             <block type="functional_call" inline="false" uservisible="false">
               <mutation name="my-shape">
                 <arg name="size" type="Number"/>
-                <arg name="color" type="string"/>
+                <arg name="color" type="String"/>
               </mutation>
             </block>
           </functional_input>
@@ -66,7 +66,7 @@
             <block type="functional_call" inline="false" uservisible="false">
               <mutation name="my-shape">
                 <arg name="size" type="Number"/>
-                <arg name="color" type="string"/>
+                <arg name="color" type="String"/>
               </mutation>
             </block>
           </functional_input>
@@ -76,7 +76,7 @@
             <block type="functional_call" inline="false">
               <mutation name="my-shape">
                 <arg name="size" type="Number"/>
-                <arg name="color" type="string"/>
+                <arg name="color" type="String"/>
               </mutation>
             </block>
           </functional_input>

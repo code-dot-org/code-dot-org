@@ -11,7 +11,7 @@ window.evalMain = function(options) {
   appMain(window.Eval, levels, options);
 };
 
-},{"../appMain":3,"../skins":143,"./blocks":46,"./eval":48,"./levels":60}],48:[function(require,module,exports){
+},{"../appMain":3,"../skins":142,"./blocks":46,"./eval":48,"./levels":60}],48:[function(require,module,exports){
 (function (global){
 /**
  * Blockly Demo: Eval Graphics
@@ -260,6 +260,7 @@ Eval.execute = function() {
     }
 
     if (level.freePlay) {
+      Eval.result = true;
       Eval.testResults = TestResults.FREE_PLAY;
     }
   }
@@ -276,6 +277,8 @@ Eval.execute = function() {
     program: encodeURIComponent(textBlocks),
     onComplete: onReportComplete
   };
+
+  studioApp.playAudio(Eval.result ? 'win' : 'failure');
 
   studioApp.report(reportData);
 };
@@ -354,7 +357,7 @@ function onReportComplete(response) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../../locale/current/common":189,"../../locale/current/eval":190,"../StudioApp":2,"../block_utils":17,"../canvg/canvg.js":39,"../codegen":42,"../dom":44,"../skins":143,"../templates/page.html":164,"./api":45,"./controls.html":47,"./evalError":51,"./levels":60,"./visualization.html":62}],62:[function(require,module,exports){
+},{"../../locale/current/common":188,"../../locale/current/eval":189,"../StudioApp":2,"../block_utils":17,"../canvg/canvg.js":39,"../codegen":42,"../dom":44,"../skins":142,"../templates/page.html":163,"./api":45,"./controls.html":47,"./evalError":51,"./levels":60,"./visualization.html":62}],62:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -374,7 +377,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":205}],60:[function(require,module,exports){
+},{"ejs":204}],60:[function(require,module,exports){
 var msg = require('../../locale/current/eval');
 var blockUtils = require('../block_utils');
 
@@ -442,7 +445,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/current/eval":190,"../block_utils":17}],47:[function(require,module,exports){
+},{"../../locale/current/eval":189,"../block_utils":17}],47:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -465,7 +468,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":189,"../../locale/current/eval":190,"ejs":205}],46:[function(require,module,exports){
+},{"../../locale/current/common":188,"../../locale/current/eval":189,"ejs":204}],46:[function(require,module,exports){
 /**
  * Blockly Demo: Eval Graphics
  *
@@ -496,9 +499,6 @@ var commonMsg = require('../../locale/current/common');
 
 var evalUtils = require('./evalUtils');
 var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
-var functionalBlockUtils = require('../functionalBlockUtils');
-var colors = functionalBlockUtils.colors;
-var initTitledFunctionalBlock = functionalBlockUtils.initTitledFunctionalBlock;
 
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function(blockly, blockInstallOptions) {
@@ -518,9 +518,9 @@ exports.install = function(blockly, blockInstallOptions) {
     blockName: 'functional_display',
     blockTitle: msg.displayBlockTitle(),
     apiName: 'display',
-    returnType: 'none',
+    returnType: blockly.BlockValueType.NONE,
     args: [
-      { name: 'ARG1', type: 'none' },
+      { name: 'ARG1', type: blockly.BlockValueType.NONE },
     ]
   });
 
@@ -530,9 +530,9 @@ exports.install = function(blockly, blockInstallOptions) {
     blockTitle: msg.circleBlockTitle(),
     apiName: 'circle',
     args: [
-      { name: 'SIZE', type: 'Number' },
-      { name: 'STYLE', type: 'string' },
-      { name: 'COLOR', type: 'string' }
+      { name: 'SIZE', type: blockly.BlockValueType.NUMBER },
+      { name: 'STYLE', type: blockly.BlockValueType.STRING },
+      { name: 'COLOR', type: blockly.BlockValueType.STRING }
     ]
   });
 
@@ -541,9 +541,9 @@ exports.install = function(blockly, blockInstallOptions) {
     blockTitle: msg.triangleBlockTitle(),
     apiName: 'triangle',
     args: [
-      { name: 'SIZE', type: 'Number' },
-      { name: 'STYLE', type: 'string' },
-      { name: 'COLOR', type: 'string' }
+      { name: 'SIZE', type: blockly.BlockValueType.NUMBER },
+      { name: 'STYLE', type: blockly.BlockValueType.STRING },
+      { name: 'COLOR', type: blockly.BlockValueType.STRING }
     ]
   });
 
@@ -552,9 +552,9 @@ exports.install = function(blockly, blockInstallOptions) {
     blockTitle: msg.squareBlockTitle(),
     apiName: 'square',
     args: [
-      { name: 'SIZE', type: 'Number' },
-      { name: 'STYLE', type: 'string' },
-      { name: 'COLOR', type: 'string' }
+      { name: 'SIZE', type: blockly.BlockValueType.NUMBER },
+      { name: 'STYLE', type: blockly.BlockValueType.STRING },
+      { name: 'COLOR', type: blockly.BlockValueType.STRING }
     ]
   });
 
@@ -563,10 +563,10 @@ exports.install = function(blockly, blockInstallOptions) {
     blockTitle: msg.rectangleBlockTitle(),
     apiName: 'rectangle',
     args: [
-      { name: 'WIDTH', type: 'Number' },
-      { name: 'HEIGHT', type: 'Number' },
-      { name: 'STYLE', type: 'string' },
-      { name: 'COLOR', type: 'string' }
+      { name: 'WIDTH', type: blockly.BlockValueType.NUMBER },
+      { name: 'HEIGHT', type: blockly.BlockValueType.NUMBER },
+      { name: 'STYLE', type: blockly.BlockValueType.STRING },
+      { name: 'COLOR', type: blockly.BlockValueType.STRING }
     ]
   });
 
@@ -575,10 +575,10 @@ exports.install = function(blockly, blockInstallOptions) {
     blockTitle: msg.ellipseBlockTitle(),
     apiName: 'ellipse',
     args: [
-      { name: 'WIDTH', type: 'Number' },
-      { name: 'HEIGHT', type: 'Number' },
-      { name: 'STYLE', type: 'string' },
-      { name: 'COLOR', type: 'string' }
+      { name: 'WIDTH', type: blockly.BlockValueType.NUMBER },
+      { name: 'HEIGHT', type: blockly.BlockValueType.NUMBER },
+      { name: 'STYLE', type: blockly.BlockValueType.STRING },
+      { name: 'COLOR', type: blockly.BlockValueType.STRING }
     ]
   });
 
@@ -587,9 +587,9 @@ exports.install = function(blockly, blockInstallOptions) {
     blockTitle: msg.starBlockTitle(),
     apiName: 'star',
     args: [
-      { name: 'SIZE', type: 'Number' },
-      { name: 'STYLE', type: 'string' },
-      { name: 'COLOR', type: 'string' }
+      { name: 'SIZE', type: blockly.BlockValueType.NUMBER },
+      { name: 'STYLE', type: blockly.BlockValueType.STRING },
+      { name: 'COLOR', type: blockly.BlockValueType.STRING }
     ]
   });
 
@@ -598,11 +598,11 @@ exports.install = function(blockly, blockInstallOptions) {
     blockTitle: msg.radialStarBlockTitle(),
     apiName: 'radialStar',
     args: [
-      { name: 'POINTS', type: 'Number' },
-      { name: 'INNER', type: 'Number' },
-      { name: 'OUTER', type: 'Number' },
-      { name: 'STYLE', type: 'string' },
-      { name: 'COLOR', type: 'string' }
+      { name: 'POINTS', type: blockly.BlockValueType.NUMBER },
+      { name: 'INNER', type: blockly.BlockValueType.NUMBER },
+      { name: 'OUTER', type: blockly.BlockValueType.NUMBER },
+      { name: 'STYLE', type: blockly.BlockValueType.STRING },
+      { name: 'COLOR', type: blockly.BlockValueType.STRING }
     ]
   });
 
@@ -611,10 +611,10 @@ exports.install = function(blockly, blockInstallOptions) {
     blockTitle: msg.polygonBlockTitle(),
     apiName: 'polygon',
     args: [
-      { name: 'SIDES', type: 'Number' },
-      { name: 'LENGTH', type: 'Number' },
-      { name: 'STYLE', type: 'string' },
-      { name: 'COLOR', type: 'string' }
+      { name: 'SIDES', type: blockly.BlockValueType.NUMBER },
+      { name: 'LENGTH', type: blockly.BlockValueType.NUMBER },
+      { name: 'STYLE', type: blockly.BlockValueType.STRING },
+      { name: 'COLOR', type: blockly.BlockValueType.STRING }
     ]
   });
 
@@ -623,9 +623,9 @@ exports.install = function(blockly, blockInstallOptions) {
     blockTitle: msg.textBlockTitle(),
     apiName: 'text',
     args: [
-      { name: 'TEXT', type: 'string' },
-      { name: 'SIZE', type: 'Number' },
-      { name: 'COLOR', type: 'string' }
+      { name: 'TEXT', type: blockly.BlockValueType.STRING },
+      { name: 'SIZE', type: blockly.BlockValueType.NUMBER },
+      { name: 'COLOR', type: blockly.BlockValueType.STRING }
     ]
   });
 
@@ -635,8 +635,8 @@ exports.install = function(blockly, blockInstallOptions) {
     blockTitle: msg.overlayBlockTitle(),
     apiName: 'overlay',
     args: [
-      { name: 'TOP', type: 'image' },
-      { name: 'BOTTOM', type: 'image' },
+      { name: 'TOP', type: blockly.BlockValueType.IMAGE },
+      { name: 'BOTTOM', type: blockly.BlockValueType.IMAGE },
     ]
   });
 
@@ -645,8 +645,8 @@ exports.install = function(blockly, blockInstallOptions) {
     blockTitle: msg.underlayBlockTitle(),
     apiName: 'underlay',
     args: [
-      { name: 'BOTTOM', type: 'image' },
-      { name: 'TOP', type: 'image' }
+      { name: 'BOTTOM', type: blockly.BlockValueType.IMAGE },
+      { name: 'TOP', type: blockly.BlockValueType.IMAGE }
     ]
   });
 
@@ -655,9 +655,9 @@ exports.install = function(blockly, blockInstallOptions) {
     blockTitle: msg.placeImageBlockTitle(),
     apiName: 'placeImage',
     args: [
-      { name: 'X', type: 'Number' },
-      { name: 'Y', type: 'Number' },
-      { name: 'IMAGE', type: 'image' }
+      { name: 'X', type: blockly.BlockValueType.NUMBER },
+      { name: 'Y', type: blockly.BlockValueType.NUMBER },
+      { name: 'IMAGE', type: blockly.BlockValueType.IMAGE }
     ]
   });
 
@@ -666,9 +666,9 @@ exports.install = function(blockly, blockInstallOptions) {
     blockTitle: msg.offsetBlockTitle(),
     apiName: 'offset',
     args: [
-      { name: 'X', type: 'Number' },
-      { name: 'Y', type: 'Number' },
-      { name: 'IMAGE', type: 'image' }
+      { name: 'X', type: blockly.BlockValueType.NUMBER },
+      { name: 'Y', type: blockly.BlockValueType.NUMBER },
+      { name: 'IMAGE', type: blockly.BlockValueType.IMAGE }
     ]
   });
 
@@ -677,8 +677,8 @@ exports.install = function(blockly, blockInstallOptions) {
     blockTitle: msg.rotateImageBlockTitle(),
     apiName: 'rotateImage',
     args: [
-      { name: 'DEGREES', type: 'Number' },
-      { name: 'IMAGE', type: 'image' }
+      { name: 'DEGREES', type: blockly.BlockValueType.NUMBER },
+      { name: 'IMAGE', type: blockly.BlockValueType.IMAGE }
     ]
   });
 
@@ -687,8 +687,8 @@ exports.install = function(blockly, blockInstallOptions) {
     blockTitle: msg.scaleImageBlockTitle(),
     apiName: 'scaleImage',
     args: [
-      { name: 'FACTOR', type: 'Number' },
-      { name: 'IMAGE', type: 'image' }
+      { name: 'FACTOR', type: blockly.BlockValueType.NUMBER },
+      { name: 'IMAGE', type: blockly.BlockValueType.IMAGE }
     ]
   });
 
@@ -697,10 +697,10 @@ exports.install = function(blockly, blockInstallOptions) {
     blockName: 'string_append',
     blockTitle: msg.stringAppendBlockTitle(),
     apiName: 'stringAppend',
-    returnType: 'string',
+    returnType: blockly.BlockValueType.STRING,
     args: [
-      { name: 'FIRST', type: 'string' },
-      { name: 'SECOND', type: 'string' }
+      { name: 'FIRST', type: blockly.BlockValueType.STRING },
+      { name: 'SECOND', type: blockly.BlockValueType.STRING }
     ]
   });
 
@@ -709,13 +709,13 @@ exports.install = function(blockly, blockInstallOptions) {
     blockName: 'string_length',
     blockTitle: msg.stringLengthBlockTitle(),
     apiName: 'stringLength',
-    returnType: 'Number',
+    returnType: blockly.BlockValueType.NUMBER,
     args: [
-      { name: 'STR', type: 'string' }
+      { name: 'STR', type: blockly.BlockValueType.STRING }
     ]
   });
 
-  functionalBlockUtils.installStringPicker(blockly, generator, {
+  blockly.FunctionalBlockUtils.installStringPicker(blockly, generator, {
     blockName: 'functional_style',
     values: [
       [msg.solid(), 'solid'],
@@ -733,11 +733,11 @@ function installFunctionalBlock (blockly, generator, gensym, options) {
   var blockTitle = options.blockTitle;
   var apiName = options.apiName;
   var args = options.args;
-  var returnType = options.returnType || 'image';
+  var returnType = options.returnType || blockly.BlockValueType.IMAGE;
 
   blockly.Blocks[blockName] = {
     init: function () {
-      initTitledFunctionalBlock(this, blockTitle, returnType, args);
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, blockTitle, returnType, args);
     }
   };
 
@@ -748,7 +748,7 @@ function installFunctionalBlock (blockly, generator, gensym, options) {
       var apiArg = Blockly.JavaScript.statementToCode(this, arg.name, false);
       // Provide defaults
       if (!apiArg) {
-        if (arg.type === 'Number') {
+        if (arg.type === blockly.BlockValueType.NUMBER) {
           apiArg = '0';
         } else if (arg.name === 'STYLE') {
           apiArg = blockly.JavaScript.quote_('solid');
@@ -763,7 +763,7 @@ function installFunctionalBlock (blockly, generator, gensym, options) {
   };
 }
 
-},{"../../locale/current/common":189,"../../locale/current/eval":190,"../functionalBlockUtils":74,"../sharedFunctionalBlocks":142,"./evalUtils":59}],45:[function(require,module,exports){
+},{"../../locale/current/common":188,"../../locale/current/eval":189,"../sharedFunctionalBlocks":141,"./evalUtils":59}],45:[function(require,module,exports){
 var evalUtils = require('./evalUtils');
 var EvalImage = require('./evalImage');
 var EvalText = require('./evalText');
@@ -1361,7 +1361,7 @@ module.exports.cartesianToPixel = function (cartesianY) {
   return 400 - cartesianY;
 };
 
-},{"../utils":184,"./evalError":51}],51:[function(require,module,exports){
+},{"../utils":183,"./evalError":51}],51:[function(require,module,exports){
 var evalMsg = require('../../locale/current/eval');
 
 /**
@@ -1391,6 +1391,6 @@ CustomEvalError.Type = {
   BadColor: 1
 };
 
-},{"../../locale/current/eval":190}],190:[function(require,module,exports){
+},{"../../locale/current/eval":189}],189:[function(require,module,exports){
 /*eval*/ module.exports = window.blockly.appLocale;
 },{}]},{},[61]);
