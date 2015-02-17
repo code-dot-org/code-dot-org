@@ -154,9 +154,12 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
+"badColorStringError":function(d){return "You used an invalid color string: "+appLocale.v(d,"val")},
+"badStyleStringError":function(d){return "You used an invalid style string: "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "دائرة (نصف القطر ، النمط ، اللون)"},
 "displayBlockTitle":function(d){return "عرض"},
 "ellipseBlockTitle":function(d){return "القطع الناقص (العرض ، الارتفاع ، النمط واللون )"},
+"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "extraTopBlocks":function(d){return "لديك كتل غير متصلة. هل تقصد بإتصال هذه إلى كتلة \"العرض\" ؟"},
 "overlayBlockTitle":function(d){return "تداخل (الأعلى، الأسفل)"},
 "placeImageBlockTitle":function(d){return "وضع الصورة (س، ص، صورة)"},

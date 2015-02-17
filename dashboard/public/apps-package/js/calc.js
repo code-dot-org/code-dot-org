@@ -74,7 +74,6 @@ var appState = {
   message: null,
   result: null,
   testResults: null,
-  currentAnimationDepth: 0,
   failedInput: null
 };
 Calc.appState_ = appState;
@@ -249,7 +248,6 @@ Calc.resetButtonClick = function () {
   appState.message = null;
   appState.result = null;
   appState.testResults = null;
-  appState.currentAnimationDepth = 0;
   appState.failedInput = null;
 
   timeoutList.clearTimeouts();
@@ -426,6 +424,8 @@ Calc.execute = function() {
 
   studioApp.report(reportData);
 
+  studioApp.playAudio(appState.result === ResultType.SUCCESS ? 'win' : 'failure');
+
   // Display feedback immediately
   if (isPreAnimationFailure(appState.testResults)) {
     return displayFeedback();
@@ -435,7 +435,7 @@ Calc.execute = function() {
   if (appState.result === ResultType.SUCCESS &&
       !appState.userSet.hasVariablesOrFunctions() &&
       !level.edit_blocks) {
-    Calc.step();
+    Calc.step(0);
   } else {
     displayComplexUserExpressions();
     timeoutList.setTimeout(function () {
@@ -577,15 +577,16 @@ function stopAnimatingAndDisplayFeedback() {
  * collapsing the next node in our tree. If that node failed expectations, we
  * will stop further evaluation.
  */
-Calc.step = function () {
-  if (animateUserExpression(appState.currentAnimationDepth)) {
-    stopAnimatingAndDisplayFeedback();
-    return;
-  }
-  appState.currentAnimationDepth++;
-
+Calc.step = function (animationDepth) {
+  var isFinal = animateUserExpression(animationDepth);
   timeoutList.setTimeout(function () {
-    Calc.step();
+    if (isFinal) {
+      // one deeper to remove highlighting
+      animateUserExpression(animationDepth + 1);
+      stopAnimatingAndDisplayFeedback();
+    } else {
+      Calc.step(animationDepth + 1);
+    }
   }, stepSpeed);
 };
 
@@ -623,27 +624,33 @@ function animateUserExpression (maxNumSteps) {
 
   var current = userExpression.clone();
   var previousExpression = current;
-  var currentDepth = 0;
+  var numCollapses = 0;
+  // Each step draws a single line
   for (var currentStep = 0; currentStep <= maxNumSteps && !finished; currentStep++) {
     var tokenList;
-    if (currentDepth === maxNumSteps) {
+    if (numCollapses === maxNumSteps) {
+      // This is the last line in the current animation, highlight what has
+      // changed since the last line
       tokenList = current.getTokenListDiff(previousExpression);
-    } else if (currentDepth + 1 === maxNumSteps) {
+    } else if (numCollapses + 1 === maxNumSteps) {
+      // This is the second to last line. Highlight the block being collapsed,
+      // and the deepest operation (that will be collapsed on the next line)
       var deepest = current.getDeepestOperation();
       if (deepest) {
         studioApp.highlight('block_id_' + deepest.blockId);
       }
       tokenList = current.getTokenList(true);
     } else {
+      // Don't highlight anything
       tokenList = current.getTokenList(false);
     }
-    displayEquation('userExpression', null, tokenList, currentDepth, 'markedToken');
+    displayEquation('userExpression', null, tokenList, numCollapses, 'markedToken');
     previousExpression = current.clone();
     if (current.collapse()) {
-      currentDepth++;
-    } else if (currentStep - currentDepth > 2) {
-      // we want to go one more step after the last collapse so that we show
-      // our last line without highlighting it
+      numCollapses++;
+    } else if (currentStep === numCollapses + 1) {
+      // go one past our num collapses so that the last line gets highlighted
+      // on its own
       finished = true;
     }
   }
