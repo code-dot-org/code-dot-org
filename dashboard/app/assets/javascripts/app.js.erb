@@ -341,6 +341,11 @@
       return {
         send: function( _, complete ) {
 
+          // If needed, we could create a way to store or simulate postbacks.
+          if (s.type != 'GET') {
+            throw new Error(ajax.type + "s are not supported.")
+          }
+
           if (s.isStaticResource) {
             s.dataTypes[ 0 ] = "json";
             s.url += "?jsonp=RESOURCE";
@@ -388,18 +393,59 @@
     }
 
     UIFrame.prototype.init = function() {
-      this.csrfToken = $('meta[name="csrf-token"]').attr('content');
-      this.isStatic = this.detectStatic();
-
       // Static environment ignores BASE HREF and looks for resources in the directory of this script.
+      this.isStatic = this.detectStatic();
       if (this.isStatic) {
-        this.baseUrl = document.URL.substr(0, document.URL.lastIndexOf('/'));
+        this.rootUrl = this.baseUrl = document.URL.substr(0, document.URL.lastIndexOf('/'));
+
+        // For now, initial scripts and CSS are still loaded from the server using a BASE HREF
+        // pointing at the server.  Once the initial assets are loaded, everything else
+        // is loaded from relative paths on the static site, so we remove it.
+        // Once assets are bundled for static mode, we won't need to have the BASE HREF at all.
+        $('base').remove();
       } else {
         this.baseUrl = this.baseURI();
+        this.rootUrl = window.location.protocol + "//" + window.location.host;
       }
+
+      // Hook into the global CSRF handler so that all requests are made with a valid token
+      this.patchCSRF();
 
       this.router = new UIRouter();
       this.router.route();
+    }
+
+    // This is work in progress to patch the XmlHttpRequest service to prevent us from making
+    // requests to a file:// URL (because that will fail and prevent other scripts from running.)
+    // It also forces the CSRF token into all requests, although there are other ways to do
+    // that once we get all the $.ajax() calls under control.
+    UIFrame.prototype.patchCSRF = function() {
+      var token = $('meta[name=csrf-token]').attr('content');
+
+      var send = XMLHttpRequest.prototype.send;
+      XMLHttpRequest.prototype.send = function(data) {
+        if (this.skip)
+          return;
+        return send.apply(this, arguments);
+      };
+
+      var open = XMLHttpRequest.prototype.open;
+      XMLHttpRequest.prototype.open = function(data) {
+        var resp = open.apply(this, arguments);
+
+        if (arguments[1].substr(0,5) == 'file:') {
+          console.error('skipping ' + arguments[1]);
+          this.skip = true;
+        }
+        this.setRequestHeader('X-CSRF-Token', token);
+        return resp;
+      };
+    }
+
+    UIFrame.prototype.getAbsolutePath = function(path) {
+      if (path[0] == '/')
+        return this.rootUrl + path;
+      return this.baseUrl + "/" + path;
     }
 
     UIFrame.prototype.baseURI = function() {
@@ -419,24 +465,21 @@
 
     // Load the script at a given URL and return a promise that resolves when it has executed
     UIFrame.prototype.load = function(ajax, resolveStatic) {
-      ajax.beforeSend = function(xhr) {
-        xhr.setRequestHeader('X-CSRF-Token', this.csrfToken);
-      };
-
       if (this.isStatic) {
+        ajax.type = ajax.type || 'GET';
+
         // All resources must be loaded via <SCRIPT> tag when offline.
         ajax.dataType = "static";
 
         // Static resolution replaces the URL with a static equivalent
         if (resolveStatic) {
           // All static resources are wrapped as .JS files
-          ajax.url = this.baseUrl + resolveStatic(ajax.data) + ".js";
+          ajax.url = this.getAbsolutePath(resolveStatic(ajax.data)) + ".js";
           delete ajax.data;
           ajax.cache = true;
           ajax.isStaticResource = true;
         } else {
           // For now, we still load real javascripts from the live server.
-          ajax.url = this.baseURI() + ajax.url;
         }
 
       }
@@ -446,17 +489,11 @@
 
     // Load the script at a given URL and return a promise that resolves when it has executed
     UIFrame.prototype.loadSource = function(url) {
-      var _this = this;
-
-      // TODO: Temporary until we are bundling 
-
-      return function () {
-        return _this.load({
-          url: url,
-          dataType: "script",
-          cache: true
-        });
-      }
+      return this.load({
+        url: url,
+        dataType: "script",
+        cache: true
+      });
     }
 
     // Loads the given app stylesheet.
@@ -607,6 +644,9 @@
           containerId: _this.$el.attr('id')
         }, data.level);
 
+        // Blockly baseUrl must be an absolute path.
+        opts.baseUrl = Frame.getAbsolutePath(opts.baseUrl);
+
         // Kick-start the blockly scripts
         _this.loadAssets(opts)
         .then(function() {
@@ -618,7 +658,11 @@
     }
 
     BlocklyApp.prototype.loadSource = function(name) {
-      return Frame.loadSource(this.baseUrl + 'js/' + name + '.js');
+      var _this = this;
+
+      return function () {
+        return Frame.loadSource(_this.baseUrl + 'js/' + name + '.js');
+      };
     }
 
     BlocklyApp.prototype.loadStyle = function(name) {

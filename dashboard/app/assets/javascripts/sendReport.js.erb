@@ -1,41 +1,51 @@
 var lastAjaxRequest;
 var lastServerResponse = {};
 var sendReport = function(report) {
-  // jQuery can do this implicitly, but when url-encoding it, jQuery calls a method that
-  // shows the result dialog immediately
-  var queryItems = [];
-  for (var key in report) {
-    if (report.hasOwnProperty(key) && key != 'onComplete') {
-      queryItems.push(key + '=' + report[key]);
-    }
-  }
-  var queryString = queryItems.join('&');
+  var thisAjax;
 
-  var thisAjax = jQuery.ajax({
+  var data = $.extend({}, report);
+  delete data.onComplete;
+
+  lastAjaxRequest = thisAjax = Frame.load({
     type: 'POST',
     url: report.callback,
     contentType: 'application/x-www-form-urlencoded',
-    data: queryString,
+    data: data,
     dataType: 'json',
-    beforeSend: function(xhr) {
-      xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))
-    },
     success: function (response) {
       if (thisAjax !== lastAjaxRequest) {
         return;
       }
-      reportComplete(report, response);
+
+      lastAjaxRequest = null;
+      lastServerResponse.report_error = null;
+      lastServerResponse.nextRedirect = response['redirect'];
+      lastServerResponse.previousLevelRedirect = response['previous_level'];
+      lastServerResponse.videoInfo = response['video_info'];
+
+      if (report.onComplete)
+        report.onComplete(response);
     },
     error: function (xhr, textStatus, thrownError) {
       if (thisAjax !== lastAjaxRequest) {
         return;
       }
       report['error'] = xhr.responseText;
-      reportComplete(report, getFallbackResponse(report));
+
+      lastAjaxRequest = null;
+      if (report.fallbackResponse) {
+        var response = report.fallbackResponse[report.pass ? 'success' : 'failure'];
+
+        lastServerResponse.report_error = report['error'];
+        lastServerResponse.nextRedirect = response['redirect'];
+        lastServerResponse.previousLevelRedirect = response['previous_level'];
+        lastServerResponse.videoInfo = response['video_info'];
+      }
+
+      if (report.onComplete)
+        report.onComplete(response);
     }
   });
-
-  lastAjaxRequest = thisAjax;
 };
 
 var cancelReport = function() {
@@ -44,25 +54,3 @@ var cancelReport = function() {
   }
   lastAjaxRequest = null;
 };
-
-function getFallbackResponse(report) {
-  if (!report.fallbackResponse) {
-    return null;
-  }
-  return report.pass ?
-            report.fallbackResponse.success :
-            report.fallbackResponse.failure;
-}
-
-function reportComplete(report, response) {
-  lastAjaxRequest = null;
-  if (response) {
-    lastServerResponse.report_error = report['error'];
-    lastServerResponse.nextRedirect = response['redirect'];
-    lastServerResponse.previousLevelRedirect = response['previous_level'];
-    lastServerResponse.videoInfo = response['video_info'];
-  }
-  if (report.onComplete) {
-    report.onComplete(response);
-  }
-}
