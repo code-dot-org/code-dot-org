@@ -20,6 +20,7 @@ FactoryGirl.define do
       factory :district_contact do
         name 'District Contact Person'
       end
+      birthday Date.new(1980, 03, 14)
     end
 
     factory :student do

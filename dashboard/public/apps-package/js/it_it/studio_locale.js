@@ -397,6 +397,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "soundWood":function(d){return "legno"},
 "speed":function(d){return "velocità"},
 "startSetValue":function(d){return "partenza (funzione Altezza-Razzo)"},
+"startSetVars":function(d){return "game_vars (title, subtitle, background, target, danger, player)"},
+"startSetFuncs":function(d){return "game_funcs (update-target, update-danger, update-player, collide?, on-screen?)"},
 "stopSprite":function(d){return "ferma"},
 "stopSpriteN":function(d){return "ferma il personaggio "+appLocale.v(d,"spriteIndex")},
 "stopTooltip":function(d){return "Ferma il movimento di un personaggio."},

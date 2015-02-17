@@ -1,7 +1,7 @@
 "nl":
   errors:
     messages:
-      not_saved: 'Please correct the following errors:'
+      not_saved: 'Corrigeer de volgende fouten:'
   activerecord:
     errors:
       messages:
@@ -353,15 +353,17 @@
       %{student_name}'
   user:
     email_confirm_needed: 'Emailadres is niet bevestigd:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Verstuur de bevestigingsinstructie nog een keer
     new_password_hint: (laat leeg als je het niet wilt veranderen)
     current_password_hint: (we hebben je huidige wachtwoord nodig om je veranderingen
       te bevestigen)
-    delete: Delete your account
-    delete_text: Clicking the button below will delete your account.
-    delete_text_teacher_note: 'Please note: deleting your account will not delete
-      your students'' accounts.'
-    delete_confirm: Are you sure you want to delete your account?
+    delete: Verwijder jouw account
+    delete_text: Door op de knop hieronder te drukken verwijder je jouw account.
+    delete_text_teacher_note: 'Let op: door jouw account te verwijderen, worden de
+      accounts van de leerlingen niet verwijderd.'
+    delete_confirm: Weet je zeker dat je jouw account wil verwijderen?
   user_level:
     completed: Voltooid
     tried: Probeerde

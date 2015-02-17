@@ -1,7 +1,10 @@
 {
+  "badColorStringError": "You used an invalid color string: {val}",
+  "badStyleStringError": "You used an invalid style string: {val}",
   "circleBlockTitle": "круг (радиус, стил, боја)",
   "displayBlockTitle": "Покажи",
   "ellipseBlockTitle": "елипса (ширина, висина, стил, боја)",
+  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "extraTopBlocks": "Имате неповрзани блокови. Дали мислевте да се закачите на овие на \"Прикажи\" блок?",
   "overlayBlockTitle": "шалче (горе, долу)",
   "placeImageBlockTitle": "место-на сликата (x, y, слика)",

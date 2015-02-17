@@ -296,6 +296,8 @@ lv:
     student_teacher_disassociated: 'Pasniedzējs %{teacher_name} ir noņemts no skolēna %{student_name}'
   user:
     email_confirm_needed: 'E-pasta adrese nav apstiprināta:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Atkārtoti nosūtīt apstiprinājumu instrukcijas
     new_password_hint: (atstājiet tukšu, ja nevēlaties mainīt to)
     current_password_hint: (nepieciešama jūsu pašreizējā parole, lai apstiprinātu izmaiņas)
@@ -478,7 +480,7 @@ lv:
           title: K-8 Ievads Datorzinātņu kursos (15-25stundas)
           description: šis 20 stundu kurss iepazīstina ar datorzinību un programmēšanas pamatiem. Kurss ir izveidots, lai to varētu izmantot pamatskolas klasēs, bet tas sagādās prieku mācīties visos vecumos.
         Hour of Code:
-          title: Programmēšanas stunda
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: rediģēt kodu

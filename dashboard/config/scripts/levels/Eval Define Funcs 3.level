@@ -25,7 +25,7 @@
           <mutation>
             <arg name="radius" type="Number"/>
             <description>Produces a purple circle of given radius</description>
-            <outputtype>image</outputtype>
+            <outputtype>Image</outputtype>
           </mutation>
           <title name="NAME">purple-circle</title>
           <functional_input name="STACK">
@@ -116,7 +116,7 @@
           <mutation>
             <arg name="radius"/>
             <description>Produces a purple circle of given radius</description>
-            <outputtype>image</outputtype>
+            <outputtype>Image</outputtype>
           </mutation>
           <title name="NAME">purple circle</title>
           <functional_input name="STACK">

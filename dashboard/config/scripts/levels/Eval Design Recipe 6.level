@@ -16,7 +16,7 @@
     "use_modal_function_editor": "false",
     "default_num_example_blocks": "2",
     "free_play": "false",
-    "instructions": "Using the Design Recipe, write a function \"large-polygon\" that should output a polygon of given sides and color that takes up most of the window, regardless of the number of sides. To make sure that the polygon doesn't get too large as you increase the number of sides, side length should be inversely proportional to side number using the expression 800/sides."
+    "instructions": "Using the Design Recipe, write a function \"large-polygon\" that should output a polygon of given sides and color that takes up most of the window, regardless of the number of sides. To make sure that the polygon doesn't get too large as you increase the number of sides, side length should be inversely proportional to side number, with a length of (800/sides)."
   }
 }]]></config>
   <blocks>
@@ -27,7 +27,7 @@
             <block type="functional_call" inline="false" movable="false">
               <mutation name="large-polygon">
                 <arg name="sides" type="Number"/>
-                <arg name="color" type="string"/>
+                <arg name="color" type="String"/>
               </mutation>
               <functional_input name="ARG0">
                 <block type="functional_math_number" movable="false" editable="false">
@@ -47,7 +47,7 @@
             <block type="functional_call" inline="false" uservisible="false">
               <mutation name="large-polygon">
                 <arg name="sides" type="Number"/>
-                <arg name="color" type="string"/>
+                <arg name="color" type="String"/>
               </mutation>
             </block>
           </functional_input>
@@ -57,7 +57,7 @@
             <block type="functional_call" inline="false" uservisible="false">
               <mutation name="large-polygon">
                 <arg name="sides" type="Number"/>
-                <arg name="color" type="string"/>
+                <arg name="color" type="String"/>
               </mutation>
             </block>
           </functional_input>
@@ -65,8 +65,8 @@
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
             <arg name="sides" type="Number"/>
-            <arg name="color" type="string"/>
-            <outputtype>image</outputtype>
+            <arg name="color" type="String"/>
+            <outputtype>Image</outputtype>
           </mutation>
           <title name="NAME">large-polygon</title>
         </block>

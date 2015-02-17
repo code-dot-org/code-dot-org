@@ -6,7 +6,7 @@ is-IS:
   csedweek_dates: 8.-14. desember 2014
   csedweek_banner_hoc: 'Nú styttist í <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Klukkustund kóðunar</a>. Kennarar og stjórnendur: <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">byrjið að undirbúa ykkar Klukkustund kóðunar</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Ertu tölvunarfræðikennari? Kannaðu annað efni sem er í boði í tilefni CSEdWeek</a>'
-  n_have_learned_an_hoc: '<h1>#</h1><h3>hafa prófað</h3><h2>Klukkustund kóðunar</h2>'
+  n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
   anybody_can_learn: Allir geta lært.
   learn_now: Læra núna
   petition_message: Allir nemendur í öllum skólum ættu að fá tækifæri til að læra tölvunarfræði
@@ -123,7 +123,7 @@ is-IS:
   studiobar_donate_title: Styrkja
   studiobar_donate_body: Eitt barn lærir fyrir hvern dollar sem þú gefur
   studiobar_shop_title: Verslun
-  studiobar_shop_body: Brjóttu upp staðalímyndir. Klæðstu merkinu okkar með stolti.
+  studiobar_shop_body: Klæðstu merkinu okkar með stolti.
   contact_form_topic_student: Ég er nemandi
   contact_form_topic_parent: Ég er foreldri
   contact_form_topic_teacher: Ég er kennari/fræðari

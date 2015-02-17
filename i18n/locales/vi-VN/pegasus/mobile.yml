@@ -3,11 +3,11 @@ vi-VN:
   select_language: Vui lòng chọn ngôn ngữ của bạn
   computer_science: Khoa học máy tính
   computer_science_edweek: Tuần giáo dục khoa học máy tính
-  csedweek_dates: December 8-14, 2014
+  csedweek_dates: 'Từ ngày 8-14 tháng  12 năm 2014'
   csedweek_banner_hoc: |-
     <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Giờ Mã</a> đang đến. Gọi điện cho tất cả giáo viên và các tổ chức, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">lập kết hoạch 'Giờ Mã' của bạn</a>
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Bạn là giáo viên Tin Học? Xem thêm thư viện tuần giáo dục Tin Học.</a>'
-  n_have_learned_an_hoc: '<h1>#</h1><h3>đã cố gắng một</h3><h2>Giờ Mã</h2>'
+  n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
   anybody_can_learn: Tất cả mọi người điều có thể học.
   learn_now: Học ngay
   petition_message: Mỗi học sinh trong tất cả các trường nên có cơ hội để tìm hiểu khoa học máy tính
@@ -46,12 +46,12 @@ vi-VN:
   get_a_certificate_of_achievement: Lấy chứng nhận thành tích
   enter_valid_email: Vui lòng nhập một địa chỉ email hợp lệ
   get_a_certificate_message: "Chúng tôi sẽ gửi cho bạn một Giấy Chứng Nhận và Thông Tin về việc làm thế nào để <a href='/learn/beyond'>Học Trong Vòng Một Giờ</a>"
-  get_a_certificate_message_after: "Click on the certificate to download or print it. Now, keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>."
+  get_a_certificate_message_after: "Click vào phần certificate để tải về hoặc in ra. Bây giờ, tiếp tục với <a href='http://studio.code.org'>other courses</a>, hoặc tham khảo thêm một vài lựa chọn ở <a href='/learn/beyond'>Learn beyond One Hour</a>."
   thanks_for_submitting: Cảm ơn bạn vì đã chấp nhận!
   if_you_enjoyed: Nếu bạn cảm thấy việc học Code thật thú vị thì hãy rủ bạn bè cùng tham gia nhé! Chúng tớ mong muốn cả thế giới có thể học về nó.
   personalize_certificate: Cá nhân hoá chứng chỉ của bạn
   share_achievement: Chia sẻ thành tích của bạn
-  beyond_hour_message: "Keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>."
+  beyond_hour_message: "Tiếp tục với <a href='http://studio.code.org'>other courses</a>, hoặc tham khảo thêm một vài lựa chọn ở <a href='/learn/beyond'>Learn beyond One Hour</a>."
   leaderboards_for_hoc: Bảng thành tích của the Hour of Code.
   support_url: http://support.code.org/
   country: Quốc gia
@@ -66,8 +66,8 @@ vi-VN:
   thanks_for_voting: Cảm ơn bạn đã bỏ phiếu!
   share_on_facebook: Chia sẻ lên Facebook
   share_on_twitter: Chia sẻ lên Twitter
-  beyond_an_hour: Beyond an Hour of Code
-  get_started: Start
+  beyond_an_hour: Hơn cả một tiếng học lập trinh
+  get_started: Bắt đầu
   i_agree: Tôi đồng ý
   participant_select: -Chọn-
   participant_student: học sinh
@@ -75,8 +75,8 @@ vi-VN:
   participant_educator: Giáo viên
   participant_engineer: Kĩ sư phần mềm
   participant_other: Không có ở trên
-  print_all: Print all
-  print_ice_art: Print your ice art
+  print_all: In tất cả
+  print_ice_art: In tác phẩm Ice art của bạn
   create_art_with_zombie: or make advanced art with zombie
   i_am_a: Tôi là một
   never_spam: Chúng tôi sẽ không bao giờ gửi tin nhắn rác cho bạn

@@ -380,6 +380,13 @@
           The Design Recipe: The Design Recipe
         K5PD:
           Introduction to PD: Introduction to PD
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and
+            3
         netsim:
           title: Internet Simulator
           description_short: ''
@@ -390,3 +397,32 @@
           description_short: Create a story or make a game with Infinity Play Lab!!
           description: Create a story or make a game with Infinity Play Lab!
           Infinity: Neskončnost
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: Uvod v računalništvo (15-25 ur) za osnovno šolo (ZDA)
+          description: Ta 20-urni tečaj predstavlja bistvo računalništva in konceptov
+            programiranja. Tečaj je namenjen za uporabo v razredih K-8, vendar je
+            zabaven za učenje v vseh starostih.
+          Introduction to Computer Science: Uvod v računalništvo
+          The Maze: Labirint
+          Computational Thinking: Računalniško razmišljanje
+          Graph Paper Programming: Obarvajmo kvadratke
+          The Artist: Umetnik
+          Algorithms: Algoritmi
+          The Artist 2: Umetnik 2
+          Functions: Funkcije
+          The Farmer: Kmetovanje
+          Conditionals: Pogoji
+          The Artist 3: Umetnik 3
+          Song Writing: Pisanje pesmi
+          The Farmer 2: Kmetovanje 2
+          Abstraction: Abstrakcija
+          The Artist 4: Umetnik 4
+          Relay Programming: Relejsko programiranje
+          The Farmer 3: Kmetovanje 3
+          The Internet: Internet
+          The Artist 5: Umetnik 5
+          Wrap-up: Povzetek

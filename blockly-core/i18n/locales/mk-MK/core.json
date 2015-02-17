@@ -23,6 +23,7 @@
   "COLOUR_RGB_RED": "Црвена",
   "COLOUR_RGB_TITLE": "обои со",
   "COLOUR_RGB_TOOLTIP": "Направете боја со одредено црвена, зелена, и сина боја. Сите вредности мора да бидат помеѓу 0 и 100 .",
+  "CONTRACT_EDITOR_HEADER": "Design Recipe",
   "CONTROLS_FLOW_STATEMENTS_HELPURL": "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK": "прекини го повторувањето",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE": "продолжи со следното повторување",

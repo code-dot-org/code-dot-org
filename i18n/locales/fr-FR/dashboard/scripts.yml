@@ -17,7 +17,7 @@ fr:
           "Artist 1: Intro": 'Artiste 1: Intro'
           Artists 2: Artistes 2
           Spelling Bee: Dictée de lettres
-          Spelling Bee not blockly: Spelling Bee not blockly
+          Spelling Bee not blockly: Epeler abeille sans Blockly
           "Bee 1: Intro": 'Abeille 1: Intro'
           "Maze 2: Loops": 'Labyrinthe 2 : Les boucles'
           "Bee 2: Loops": 'Abeille 2: boucles'
@@ -26,7 +26,7 @@ fr:
           Flappy non blockly: Flappy non blockly
           title: Cours 1
           Artist 2: "L'Artiste 2"
-          Happy Maps: Happy Maps
+          Happy Maps: Cartes joyeuses
           Move it, Move it: Déplacez le, déplacez le
           "Real-life Algorithms: Plant a Seed": 'Les algorithmes : Planter une graine'
           Building a Foundation: Créer une Fondation
@@ -100,7 +100,7 @@ fr:
           Maze Conditionals: 'Labyrinthe : instructions conditionnelles'
           Artist Functions with Parameters: 'Artiste : fonctions avec paramètres'
           Computational Thinking: Algorithmique
-          Functional Suncatchers: Functional Suncatchers
+          Functional Suncatchers: Vitraux fonctionnels
           Songwriting Parameters: Paramètres de composition
           Dice Race: Course de Dés
           Internet: Internet
@@ -134,18 +134,18 @@ fr:
           description_audience: 8 ans et + (après le cours 2)
           description_short: Le cours 3 fait suite au cours 2.
         msm:
-          title: Middle School Math
+          title: Maths élémentaires
           description: Chantier interdit au public dans le collège Middle School Math.
           Graph Paper Programming: Programmation sur papier quadrillé
           Assessments: Évaluations
           Unit 1: Unité 1
           Unit 2: Unité 2
-          Ninja Cat and the Coordinate Plane: Ninja Cat and the Coordinate Plane
-          "Calc: Circles of Evaluation": 'Calc: Circles of Evaluation'
+          Ninja Cat and the Coordinate Plane: Le chat ninja et le plan
+          "Calc: Circles of Evaluation": "Calc: Cercles d'évaluation"
           "Artist: Strings and Images": 'Artiste : Textes et Images'
           Contracts: Contrats
-          "Artist: Writing Contracts": 'Artist: Writing Contracts'
-          "Calc: Defining Variables": 'Calc: Defining Variables'
+          "Artist: Writing Contracts": 'Artiste : Rédaction des contrats'
+          "Calc: Defining Variables": 'Calc : Définir les variables'
           "Play Lab: Defining Variables": 'Labo : Definir des variables'
           The Design Recipe: La Recette de la Conception
           "Artist: Defining Functions": 'Artiste : Définition de fonctions'
@@ -158,7 +158,7 @@ fr:
           "Play Lab: Boolean Operators": 'Play Lab : Opérateurs Booléens'
           Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
           "Artist: Conditionals": 'Artiste : Instructions conditionnelles'
-          Collision Detection and the Distance Formula: Collision Detection and the Distance Formula
+          Collision Detection and the Distance Formula: Détection de collision et la formule de la Distance
           "Play Lab: Collision Detection": 'Labo Jeu: Détection de Collision'
           "Unplugged: Ninja Cat and the Coordinate Plane": 'Unplugged: Ninja Cat and the Coordinate Plane'
           "Eval: Strings and Images": 'Eval: Strings and Images'
@@ -171,7 +171,7 @@ fr:
           "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals and Piecewise Functions'
           "Eval: Conditionals": 'Eval: Conditionals'
           "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Distance Formula'
-          "Calc: Evaluation Blocks": 'Calc: Evaluation Blocks'
+          "Calc: Evaluation Blocks": "Calc : Blocs d'évaluation"
           "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
           "Eval: Boolean Operators": 'Eval : Opérateurs Booléens'
           Blocks to Math: Blocks to Math
@@ -194,8 +194,8 @@ fr:
           description_short: "Dessinez des super images et schémas avec l'Artiste!"
         scrat:
           title: Scrat
-          description_short: Scrat short description.
-          description: Scrat long description
+          description_short: Courte description de Scrat.
+          description: Longue description de Scrat
           "Maze: Sequence": 'Labyrinthe : Parcours'
         hourofcode:
           Maze: Labyrinthe
@@ -295,29 +295,29 @@ fr:
           Binary: Binaire
         usabilitymsm:
           Usability testing for MSM: Usability testing for MSM
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: "Blocs d'évaluation"
           Blocks to Math: Blocks to Math
           Strings and Images: Textes et Images
           Defining Variables: Définition de Variables
           Defining Functions: Définition de fonctions
-          Design Recipe: Design Recipe
+          Design Recipe: Recette de conception
           Booleans: Booléens
           Conditionals: Instructions conditionnelles
           Free Play: Travail libre
         algebra:
           title: Informatique en algèbre
-          description: Learn Functional Programming through Algebra
+          description: "Apprendre la programmation fonctionnelle par l'algèbre"
           "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
-          "Calc: Evaluation Blocks": 'Calc: Evaluation Blocks'
+          "Calc: Evaluation Blocks": "Calc : Blocs d'évaluation"
           "Eval: Strings and Images": 'Eval: Strings and Images'
           "Unplugged: Contracts": 'Unplugged: Contracts'
           "Eval: Writing Contracts": 'Eval: Writing Contracts'
-          "Calc: Defining Variables": 'Calc: Defining Variables'
+          "Calc: Defining Variables": 'Calc : Définir les variables'
           "Play Lab: Defining Variables (Big Game)": 'Play Lab: Defining Variables (Big Game)'
           "Eval: Defining Functions": 'Eval: Defining Functions'
           "Unplugged: The Design Recipe": 'Unplugged: The Design Recipe'
           "Play Lab: Defining Functions": 'Labo Jeu: Définition de fonctions'
-          "Eval: Functions": 'Eval: Functions'
+          "Eval: Functions": 'Eval : fonctions'
           "Play Lab: Animation (Big Game)": 'Play Lab: Animation (Big Game)'
           "Unplugged: Booleans": 'Unplugged: Booleans'
           "Eval: Boolean Operators": 'Eval : Opérateurs Booléens'
@@ -333,22 +333,55 @@ fr:
           description: Programmer une histoire ou un jeu avec le Labo !
           Play Lab: Labo
         algebrademo:
-          description: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
-          Algebra Demo: Algebra Demo
-          Evaluation Blocks: Evaluation Blocks
-          Making Pictures: Making Pictures
+          description: "Une poignée de puzzles pour montrer l'environnement et le langage de programmation utilisé dans Code.org CS en algèbre"
+          Algebra Demo: "Démo de l'algèbre"
+          Evaluation Blocks: "Blocs d'évaluation"
+          Making Pictures: Faire des photos
           Defining Variables: Définition de Variables
-          Defining Simple Functions: Defining Simple Functions
+          Defining Simple Functions: Définir des fonctions simples
           The Design Recipe: La Recette de la Conception
         K5PD:
-          Introduction to PD: Introduction to PD
+          Introduction to PD: Introduction au développement professionnel
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and 3
         netsim:
-          title: Internet Simulator
+          title: "Simulateur d'Internet"
           description_short: ""
           description: ""
-          Internet Simulator: Internet Simulator
+          Internet Simulator: "Simulateur d'Internet"
         Infinity:
-          title: Infinity Playlab
+          title: Playlab Infini
           description_short: Create a story or make a game with Infinity Play Lab!!
           description: Create a story or make a game with Infinity Play Lab!
           Infinity: Infini
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: "Cours d'introduction à l'informatique pour l'école primaire (15-25 heures)"
+          description: "Ce cours de 20 heures introduit les notions de base de l'informatique et les concepts de la programmation. Il est conçu pour la grande section jusqu'à la 4ème (14 ans et moins), mais il n'y a pas d'âge pour apprendre."
+          Introduction to Computer Science: "Introduction à l'Informatique"
+          The Maze: Le labyrinthe
+          Computational Thinking: "L'algorithmique"
+          Graph Paper Programming: Programmation sur papier quadrillé
+          The Artist: "L'Artiste"
+          Algorithms: Algorithmes
+          The Artist 2: "L'Artiste 2"
+          Functions: Fonctions
+          The Farmer: Le Fermier
+          Conditionals: Instructions conditionnelles
+          The Artist 3: "L'Artiste 3"
+          Song Writing: Ecriture de chanson
+          The Farmer 2: Le Fermier 2
+          Abstraction: Abstraction
+          The Artist 4: "L'Artiste 4"
+          Relay Programming: Les relais
+          The Farmer 3: Le Fermier 3
+          The Internet: La Toile
+          The Artist 5: "L'Artiste 5"
+          Wrap-up: Résumé

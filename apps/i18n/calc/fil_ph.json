@@ -1,9 +1,13 @@
 {
   "compute": "compute",
+  "emptyComputeBlock": "You must attach a block to the \"compute\" block.",
+  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "equivalentExpression": "Subukang ayusin ang iyong mga argument upang makuha ang parehong ekspresyon.",
   "extraTopBlocks": "Mayroon kang hindi nakasama na mga block. Ibig mo bang isama ito sa \"compute\" block?",
   "failedInput": "Your function does not return the right result for all values.",
   "goal": "Goal:",
+  "levelIncompleteError": "Your expression does not match the goal.",
   "reinfFeedbackMsg": "Heto na ang inyong kuwento! Magpatuloy sa pagsagot dito, o lumipat sa susunod na palaisipan!",
-  "yourExpression": "Ang iyong expression:"
+  "yourExpression": "Ang iyong expression:",
+  "wrongInput": "You are calling your function with the wrong value."
 }

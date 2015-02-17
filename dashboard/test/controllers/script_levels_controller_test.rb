@@ -33,7 +33,41 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal @script_level, assigns(:script_level)
   end
 
+  test 'project template level sets start blocks' do
+    template_level = create :level
+    template_level.start_blocks = '<xml/>'
+    template_level.save!
 
+    real_level = create :level
+    real_level.project_template_level_name = template_level.name
+    real_level.start_blocks = "<should:override/>"
+    real_level.save!
+
+    sl = create :script_level, :with_stage, level: real_level
+    get :show, script_id: sl.script.to_param, stage_id: '1', id: '1'
+
+    assert_response :success
+    # start blocks comes from project_level not real_level
+    assert_equal '<xml/>', assigns(:start_blocks)
+  end
+
+  test 'project template level sets toolbox blocks' do
+    template_level = create :level
+    template_level.toolbox_blocks = '<xml><toolbox/></xml>'
+    template_level.save!
+
+    real_level = create :level
+    real_level.project_template_level_name = template_level.name
+    real_level.toolbox_blocks = "<should:override/>"
+    real_level.save!
+
+    sl = create :script_level, :with_stage, level: real_level
+    get :show, script_id: sl.script.to_param, stage_id: '1', id: '1'
+
+    assert_response :success
+    # toolbox blocks comes from project_level not real_level
+    assert_equal '<xml><toolbox/></xml>', assigns(:toolbox_blocks)
+  end
 
   test 'should show video in twenty hour script level' do
     get :show, script_id: Script::TWENTY_HOUR_ID, id: @script_level.id
@@ -333,40 +367,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert !session['warden.user.user.key']
   end
 
-  test "should select only callouts for current script level" do
-    @controller.expects :slog
-
-    script = create(:script)
-    level = create(:level, :blockly, user_id: nil)
-    stage = create(:stage, script: script)
-    script_level = create(:script_level, script: script, level: level, stage: stage)
-
-    callout1 = create(:callout, script_level: script_level)
-    callout2 = create(:callout, script_level: script_level)
-    irrelevant_callout = create(:callout)
-
-    get :show, script_id: script.name, stage_id: stage.position, id: script_level.position
-
-    assert(assigns(:callouts_to_show).include?(callout1))
-    assert(assigns(:callouts_to_show).include?(callout2))
-    assert(!assigns(:callouts_to_show).include?(irrelevant_callout))
-  end
-
-  test "should localize callouts" do
-    @controller.expects :slog
-
-    script = create(:script)
-    level = create(:level, :blockly, user_id: nil)
-    stage = create(:stage, script: script)
-    script_level = create(:script_level, script: script, level: level, stage: stage)
-
-    create(:callout, script_level: script_level, localization_key: 'run')
-
-    get :show, script_id: script.name, stage_id: stage.position, id: script_level.position
-
-    assert assigns(:callouts).find{|c| c['localized_text'] == 'Hit "Run" to try your program'}
-  end
-
   test "should render blockly partial for blockly levels" do
     @controller.expects :slog
 
@@ -536,5 +536,4 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       get :show, script_id: 'course1', stage_id: 1, id: 4000
     end
   end
-
 end

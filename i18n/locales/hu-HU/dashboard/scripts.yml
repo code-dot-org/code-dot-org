@@ -342,6 +342,12 @@ hu:
           The Design Recipe: A dizájn receptje
         K5PD:
           Introduction to PD: Introduction to PD
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and 3
         netsim:
           title: Internet Simulator
           description_short: ""
@@ -352,3 +358,30 @@ hu:
           description_short: Create a story or make a game with Infinity Play Lab!!
           description: Create a story or make a game with Infinity Play Lab!
           Infinity: Végtelen
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: 'K-8 Bevezető tanfolyam a  számítógép tudományhoz  (15-25 óra)'
+          description: 'Ez a 20 órás kurzus bemutatja a  számítástechnika és programozás alap fogalmait. A kurzus általános iskolásoknak lett kitalálva, de mindenki számára jó időtöltés lehet.'
+          Introduction to Computer Science: Bevezetés a számítástechnikába
+          The Maze: A labirintus
+          Computational Thinking: Számítógépes gondolkodás
+          Graph Paper Programming: Grafikus programozás
+          The Artist: A művész
+          Algorithms: algoritmusok
+          The Artist 2: A művész 2
+          Functions: Függvények
+          The Farmer: A Farmer
+          Conditionals: Feltételek
+          The Artist 3: A művész 3
+          Song Writing: Dal iras
+          The Farmer 2: A Farmer 2
+          Abstraction: Absztrakció
+          The Artist 4: A művész 4
+          Relay Programming: Váltó programozás
+          The Farmer 3: A Farmer 3
+          The Internet: Az internet
+          The Artist 5: A művész 5
+          Wrap-up: Összefoglaló

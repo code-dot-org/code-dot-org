@@ -337,6 +337,7 @@ class UserTest < ActiveSupport::TestCase
     user = create :user
     assert user.secret_picture
     assert user.secret_words
+    assert user.secret_words !~ /SecretWord/ # using the actual word not the object to_s
   end
 
   test 'reset_secret_picture' do
@@ -364,8 +365,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'reset_secret_words' do
     user = create :user
-    user.secret_word_1_id = nil
-    user.secret_word_2_id = nil
+    user.secret_words = nil
     user.save!
 
     # don't have one
@@ -839,5 +839,17 @@ class UserTest < ActiveSupport::TestCase
     end
     
     assert_equal expected_usernames, users.collect(&:username)
+  end
+
+  test 'email confirmation required for teachers' do
+    user = create :teacher, email: 'my_email@test.xx'
+    assert user.confirmation_required?
+    assert !user.confirmed_at
+  end
+
+  test 'email confirmation not required for students' do
+    user = create :student, email: 'my_email@test.xx'
+    assert !user.confirmation_required?
+    assert !user.confirmed_at
   end
 end
