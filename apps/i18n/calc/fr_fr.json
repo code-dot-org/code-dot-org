@@ -1,9 +1,13 @@
 {
   "compute": "calculer",
+  "emptyComputeBlock": "You must attach a block to the \"compute\" block.",
+  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "equivalentExpression": "Essayez de réorganiser vos arguments pour obtenir exactement la même expression.",
   "extraTopBlocks": "Vous avez des blocs non attachés. Vouliez-vous les rattacher au bloc \"calcul\"?",
-  "failedInput": "Your function does not return the right result for all values.",
+  "failedInput": "Votre fonction ne renvoie pas le bon résultat pour toutes les valeurs.",
   "goal": "Objectif :",
-  "reinfFeedbackMsg": "Voici votre histoire ! Continuer à travailler dessus, ou passer à la prochaine énigme !",
-  "yourExpression": "Votre expression :"
+  "levelIncompleteError": "Your expression does not match the goal.",
+  "reinfFeedbackMsg": "Voici votre calcul ! Continuez à travailler là-dessus, ou passez à la prochaine énigme !",
+  "yourExpression": "Votre expression :",
+  "wrongInput": "You are calling your function with the wrong value."
 }

@@ -173,7 +173,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "incrementPlayerScoreTooltip":function(d){return "เพิ่มคะแนนผู้เล่น 1 คะแนน"},
 "nextLevel":function(d){return "ขอแสดงความยินดีคุณสำเร็จปริศนานี้."},
 "no":function(d){return "ไม่ใช่"},
-"numBlocksNeeded":function(d){return "This puzzle can be solved with %1 blocks."},
+"numBlocksNeeded":function(d){return "ปริศนานี้สามารถแก้ได้เพียงแค่ %1 บล็อกเท่านั้นเอง"},
 "playSoundRandom":function(d){return "เล่นเพลงไม่ตามลำดับ"},
 "playSoundBounce":function(d){return "play bounce sound"},
 "playSoundCrunch":function(d){return "play crunch sound"},

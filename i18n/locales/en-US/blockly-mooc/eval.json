@@ -1,7 +1,10 @@
 {
+  "badColorStringError":"crwdns34864:0{val}crwdne34864:0",
+  "badStyleStringError":"crwdns34865:0{val}crwdne34865:0",
   "circleBlockTitle":"crwdns22032:0crwdne22032:0",
   "displayBlockTitle":"crwdns22297:0crwdne22297:0",
   "ellipseBlockTitle":"crwdns22033:0crwdne22033:0",
+  "emptyFunctionalBlock":"crwdns34866:0crwdne34866:0",
   "extraTopBlocks":"crwdns22298:0crwdne22298:0",
   "overlayBlockTitle":"crwdns22034:0crwdne22034:0",
   "placeImageBlockTitle":"crwdns22035:0crwdne22035:0",

@@ -280,7 +280,7 @@ StudioApp.prototype.init = function(config) {
       var vizCol = document.getElementById('visualizationColumn');
       var width = vizCol.offsetWidth;
       var height = vizCol.offsetHeight;
-      var displayWidth = MOBILE_NO_PADDING_SHARE_WIDTH;
+      var displayWidth = DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH;
       var scale = Math.min(width / displayWidth, height / displayWidth);
       var viz = document.getElementById('visualization');
       viz.style['transform-origin'] = 'left top';
@@ -383,6 +383,20 @@ StudioApp.prototype.init = function(config) {
     if (config.level.openFunctionDefinition) {
       Blockly.functionEditor.openAndEditFunction(config.level.openFunctionDefinition);
     }
+  }
+
+  // Bind listener to 'Clear Puzzle' button
+  var clearPuzzleHeader = document.getElementById('clear-puzzle-header');
+  if (clearPuzzleHeader) {
+    dom.addClickTouchEvent(clearPuzzleHeader, (function() {
+      this.feedback_.showClearPuzzleConfirmation(this.Dialog, (function() {
+        if (Blockly.functionEditor) {
+          Blockly.functionEditor.hideIfOpen();
+        }
+        Blockly.mainBlockSpace.clear();
+        this.setStartBlocks_(config);
+      }).bind(this));
+    }).bind(this));
   }
 };
 
@@ -783,6 +797,10 @@ StudioApp.prototype.resizeHeaders = function (fullWorkspaceWidth) {
   var toolboxWidth = 0;
   var showCodeWidth = 0;
 
+  var clearPuzzleHeader = document.getElementById('clear-puzzle-header');
+  var clearPuzzleWidth = clearPuzzleHeader ?
+      clearPuzzleHeader.getBoundingClientRect().width : 0;
+
   var headersDiv = document.getElementById('headers');
   if (headersDiv) {
     headersDiv.style.width = fullWorkspaceWidth + 'px';
@@ -795,7 +813,7 @@ StudioApp.prototype.resizeHeaders = function (fullWorkspaceWidth) {
       if (this.editor && this.editor.currentlyUsingBlocks) {
         // Set toolboxWidth based on the block palette width:
         var categories = document.querySelector('.droplet-palette-wrapper');
-        toolboxWidth = parseInt(window.getComputedStyle(categories).width, 10);
+        toolboxWidth = categories.getBoundingClientRect().width;
       }
     } else if (this.isUsingBlockly()) {
       toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
@@ -808,7 +826,7 @@ StudioApp.prototype.resizeHeaders = function (fullWorkspaceWidth) {
     var minWorkspaceWidthForShowCode = this.editCode ? 250 : 450;
     if (this.enableShowCode &&
         (fullWorkspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
-      showCodeWidth = parseInt(window.getComputedStyle(showCodeHeader).width, 10);
+      showCodeWidth = showCodeHeader.getBoundingClientRect().width;
       showCodeHeader.style.display = "";
     } else {
       showCodeHeader.style.display = "none";
@@ -818,7 +836,7 @@ StudioApp.prototype.resizeHeaders = function (fullWorkspaceWidth) {
   var workspaceHeader = document.getElementById('workspace-header');
   if (workspaceHeader) {
     workspaceHeader.style.width =
-        (fullWorkspaceWidth - toolboxWidth - showCodeWidth) + 'px';
+        (fullWorkspaceWidth - toolboxWidth - clearPuzzleWidth - showCodeWidth) + 'px';
   }
 };
 
@@ -1217,6 +1235,19 @@ StudioApp.prototype.setCheckForEmptyBlocks = function (checkBlocks) {
 };
 
 /**
+ * Add the starting block(s).
+ */
+StudioApp.prototype.setStartBlocks_ = function (config) {
+  var startBlocks = config.level.startBlocks || '';
+  if (config.forceInsertTopBlock) {
+    startBlocks = blockUtils.forceInsertTopBlock(startBlocks,
+        config.forceInsertTopBlock);
+  }
+  startBlocks = this.arrangeBlockPosition(startBlocks, config.blockArrangement);
+  this.loadBlocks(startBlocks);
+};
+
+/**
  *
  */
 StudioApp.prototype.handleUsingBlockly_ = function (config) {
@@ -1270,14 +1301,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
   if (config.afterInject) {
     config.afterInject();
   }
-
-  // Add the starting block(s).
-  var startBlocks = config.level.startBlocks || '';
-  if (config.forceInsertTopBlock) {
-    startBlocks = blockUtils.forceInsertTopBlock(startBlocks, config.forceInsertTopBlock);
-  }
-  startBlocks = this.arrangeBlockPosition(startBlocks, config.blockArrangement);
-  this.loadBlocks(startBlocks);
+  this.setStartBlocks_(config);
 };
 
 /**
@@ -1310,6 +1334,13 @@ StudioApp.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
  */
 StudioApp.prototype.hasExtraTopBlocks = function () {
   return this.feedback_.hasExtraTopBlocks();
+};
+
+/**
+ *
+ */
+StudioApp.prototype.hasQuestionMarksInNumberField = function () {
+  return this.feedback_.hasQuestionMarksInNumberField();
 };
 
 /**

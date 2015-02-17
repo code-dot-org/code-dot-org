@@ -48,7 +48,7 @@ fa-AF:
           Suzi: سوزی
           The Artist: هنرمند
           Artist Debugging: اشکال زدایی هنرمند
-          Bounce: Bounce
+          Bounce: پریدن
           "Studio: Create a Story": 'آزمایشگاه بازی: یک داستان بنویس'
           Artist Loops: حلقه های هنرمند
           Bee Conditionals: شرطی های زنبور عسل
@@ -96,7 +96,7 @@ fa-AF:
           Bee Debugging: اشکال زدایی زنبور عسل
           Bee Functions: توابع زنبور عسل
           Artist Functions with Params: توابع هنرمند با پارامترها
-          Bounce: Bounce
+          Bounce: پریدن
           Maze Conditionals: شرطی های هزارتو
           Artist Functions with Parameters: توابع هنرمند با پارامترها
           Computational Thinking: تفکر محاسباتی
@@ -342,13 +342,46 @@ fa-AF:
           The Design Recipe: دستور العمل طرح
         K5PD:
           Introduction to PD: آشنايي با پیشرفت حرفه ای
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and 3
         netsim:
-          title: Internet Simulator
+          title: شبیه ساز اینترنت
           description_short: ""
           description: ""
-          Internet Simulator: Internet Simulator
+          Internet Simulator: شبیه ساز اینترنت
         Infinity:
           title: آزمایشگاه بازی بی نهایت
           description_short: با آزمایشگاه بازی بینهایت یک داستان یا یک بازی ایجاد کنید!!
           description: با آزمایشگاه بازی بینهایت یک داستان یا یک بازی ایجاد کنید!
           Infinity: بی نهایت
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: دوره معرفی علوم کامپیوتر(15 تا 25 ساعت)
+          description: این دوره 20 ساعته به معرفی مفاهیم اساسی علوم کامپیوتر و برنامه نویسی می پردازد. این دوره برای استفاده در کلاس های درس K-8 (دوره ابتدایی تا پایان دوره راهنمایی)طراحی شده است، اما می تواند برای همه سنین دیگر نیز جالب باشد.
+          Introduction to Computer Science: آشنایی با علوم کامپیوتر
+          The Maze: پیچ و خم
+          Computational Thinking: تفکر محاسباتی
+          Graph Paper Programming: 'برنامه نویسی روی کاغذ شطرنجی '
+          The Artist: هنرمند
+          Algorithms: الگوریتم
+          The Artist 2: هنرمند 2
+          Functions: توابع
+          The Farmer: کشاورز
+          Conditionals: مشروط
+          The Artist 3: هنرمند 3
+          Song Writing: آهنگ سازی
+          The Farmer 2: کشاورز 2
+          Abstraction: انتزاع
+          The Artist 4: هنرمند 4
+          Relay Programming: برنامه نویسی رله
+          The Farmer 3: کشاورز 3
+          The Internet: اینترنت
+          The Artist 5: هنرمند 5
+          Wrap-up: خلاصه

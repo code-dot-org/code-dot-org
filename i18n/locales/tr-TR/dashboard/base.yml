@@ -295,6 +295,8 @@ tr:
     student_teacher_disassociated: "% {teacher_name},  % {student_name} 'in öğretmeni olmaktan kaldırıldı"
   user:
     email_confirm_needed: 'Eposta adresiniz teyit edilmedi:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Onay yönergelerini yeniden gönder
     new_password_hint: (Eğer değiştirmek iştemiyorsanız boş bırakın)
     current_password_hint: (Değişikliklerinizi onaylamak için geçerli parolanız gerekiyor)
@@ -477,7 +479,7 @@ tr:
           title: K-8 Bilişim Teknolojileri Kursu Tanıtımı (15-25 saat)
           description: Bu 20 saatlik ders temel bilgisayar bilimi ve programlama kavramlarını tanıtır. Ders, K-8 dersliklerinde kullanılmak üzere tasarlanmıştır, ama her yaştan öğrenmek için eğlencelidir.
         Hour of Code:
-          title: Saat Kodu
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: Kodu Düzenle

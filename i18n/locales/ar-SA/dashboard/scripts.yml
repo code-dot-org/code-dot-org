@@ -342,6 +342,12 @@ ar:
           The Design Recipe: وصفه التصميم
         K5PD:
           Introduction to PD: Introduction to PD
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and 3
         netsim:
           title: Internet Simulator
           description_short: ""
@@ -352,3 +358,30 @@ ar:
           description_short: Create a story or make a game with Infinity Play Lab!!
           description: Create a story or make a game with Infinity Play Lab!
           Infinity: ما لانهاية
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: 'مقدمة عن درس "علوم الكمبيوتر" للمستوى المبتدئ والمتوسط  (من 15 الى 25 ساعة)'
+          description: هذا الكورس 20 ساعة حول مقدمة عن علوم الكمبيوتر ومفاهيم البرمجة. تم تصميم هذا الكورس للاستخدام في الفصول الدراسية للصفوف الابتدائية والمتوسطة، ولكن أنها متعة للتعلم لكل الإعمار.
+          Introduction to Computer Science: مقدمة في علوم الكمبيوتر
+          The Maze: المتاهة
+          Computational Thinking: التفكير الحاسوبي
+          Graph Paper Programming: برمجة ورقة الرسم البياني
+          The Artist: الاعب
+          Algorithms: الخوارزميات
+          The Artist 2: الرسام 2
+          Functions: الدوال
+          The Farmer: المزارع
+          Conditionals: الجمل الشرطية
+          The Artist 3: الرسام 3
+          Song Writing: كتابة الاغنية
+          The Farmer 2: المزارع 2
+          Abstraction: خلاصة
+          The Artist 4: الرسام 4
+          Relay Programming: برمجة السباق
+          The Farmer 3: المزارع 3
+          The Internet: الانترنت
+          The Artist 5: الرسام 5
+          Wrap-up: الجلسة الختامية

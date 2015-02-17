@@ -36,12 +36,14 @@ fr:
         Type out the arithmetic expression that matches this code: "Tapez l'expression arithmétique qui correspond à ce code"
         Blocks to Math 1.blocks.start_blocks, 200: Blocks to Math 1.blocks.start_blocks, 200
         4 + 5: 4 + 5
+        (4+5): (4+5)
         Type the arithmetic expression here: "Tapez l'expression arithmétique ici"
       Blocks to Math 2:
         Convert Blocks to Math: Traduire des blocs en expressions mathématiques
         Type out the arithmetic expression that matches this code: "Tapez l'expression arithmétique qui correspond à ce code"
         Blocks to Math 2.blocks.start_blocks, 200: Blocks to Math 2.blocks.start_blocks, 200
         7 * 6: '7 * 6'
+        (7 * 6): '(7 * 6)'
         Type the arithmetic expression here: "Tapez l'expression arithmétique ici"
       Blocks to Math 3:
         Convert Blocks to Math: Traduire des blocs en expressions mathématiques
@@ -49,6 +51,7 @@ fr:
         Blocks to Math 3.blocks.start_blocks: Blocks to Math 3.blocks.start_blocks
         (2 * 3) - (1 + 0): '(2 * 3) - (1 + 0)'
         2 * 3 - (1 + 0): '2 * 3 - (1 + 0)'
+        ((2 * 3) - (1 + 0)): '((2 * 3) - (1 + 0))'
         Type the arithmetic expression here: "Tapez l'expression arithmétique ici"
       Blocks to Math 4:
         Convert Blocks to Math: Traduire des blocs en expressions mathématiques
@@ -56,6 +59,7 @@ fr:
         Blocks to Math 4.blocks.start_blocks: Blocks to Math 4.blocks.start_blocks
         (5 + 8) - 12: '(5 + 8) - 12'
         5 + 8 - 12: '5 + 8 - 12'
+        ((5 + 8) - 12): '((5 + 8) - 12)'
         Type the arithmetic expression here: "Tapez l'expression arithmétique ici"
       Blocks to Math 5:
         Convert Blocks to Math: Traduire des blocs en expressions mathématiques
@@ -64,6 +68,7 @@ fr:
         (-2) * (-6):
           - 
             2 * -6: '-2 * -6'
+        ((-2) * (-6)): '((-2) * (-6))'
         Type the arithmetic expression here: "Tapez l'expression arithmétique ici"
       Blocks to Math 6:
         Convert Blocks to Math: Traduire des blocs en expressions mathématiques
@@ -73,12 +78,14 @@ fr:
         ((4 - 1) * -2) + 12: '((4 - 1) * -2) + 12'
         (4 - 1) * (-2) + 12: '(4 - 1) * (-2) + 12'
         (4 - 1) * -2 + 12: '(4 - 1) * -2 + 12'
+        ((4 - 1) * (-2)) + 12): '((4 - 1) * (-2)) + 12)'
         Type the arithmetic expression here: "Tapez l'expression arithmétique ici"
       Blocks to Math 7:
         Convert Blocks to Math: Traduire des blocs en expressions mathématiques
         Type out the arithmetic expression that matches this code: "Tapez l'expression arithmétique qui correspond à ce code"
         Blocks to Math 7.blocks.start_blocks: Blocks to Math 7.blocks.start_blocks
         10 / (2 * (3 + 1)): '10 / (2 * (3 + 1))'
+        (10 / (2 * (3 + 1)): '(10 / (2 * (3 + 1))'
         Type the arithmetic expression here: "Tapez l'expression arithmétique ici"
       text match test:
         Mathematical Expression Assessment: "Évaluation de l'Expression mathématique"
@@ -90,25 +97,25 @@ fr:
         Type the arithmetic expression here: "Tapez l'expression arithmétique ici"
     contract_match:
       CREATING CONTRACTS FROM EXAMPLES 1:
-        CREATING CONTRACTS FROM EXAMPLES 1: CREATING CONTRACTS FROM EXAMPLES 1
+        Big Triangle: Big Triangle
         Write a contract for a big red triangle that is 100 pixels in size: Write a contract for a big red triangle that is 100 pixels in size
         EXAMPLE 1.solution_blocks, 300: EXAMPLE 1.solution_blocks, 300
         "Big Triangle|image|color:string|size:Number": Big Triangle|image|color:string|size:Number
       Creating Contracts From Examples 2:
-        Creating Contracts From Examples 2: Creating Contracts From Examples 2
-        Write a contract for a purple square that is 15 pixels in size.: Write a contract for a purple square that is 15 pixels in size.
+        Square Contract: Square Contract
+        Write a contract for a purple square that is 15 pixels in size.: Écrire un contrat pour un carré violet de 15 pixels de côté.
         Example 2.solution_blocks, 300: Example 2.solution_blocks, 300
         "Square|image|color:string|size:Number": Square|image|color:string|size:Number
       Creating Contracts From Examples 3A:
-        Creating Contracts From Examples 3A: Creating Contracts From Examples 3A
-        Banner Function block: Banner Function block
-        Examples 3.solution_blocks, 300: Examples 3.solution_blocks, 300
-        "banner|image|text:string": banner|image|text:string
+        Banner Contract: Banner Contract
+        Banner Function block: Bloc de la fonction bannière
+        Examples 3.solution_blocks, 300: Exemples 3.solution_blocs, 300
+        "banner|image|text:string": Bannière|image|Texte:Chaine
       Creating Contracts From Examples 4:
-        Creating Contracts From Examples 4: Creating Contracts From Examples 4
-        Try using the "text" function to write this red text at size 40.: 'Try using the "text" function to write this red text at size 40.'
-        Examples 4.solution_blocks, 300: Examples 4.solution_blocks, 300
-        "shrink|image|image:image": shrink|image|image:image
+        Shrink Contract: Shrink Contract
+        Try using the "shrink" function.: 'Try using the "shrink" function.'
+        Examples 4.solution_blocks, 300: Exemples 4.solution_blocs, 300
+        "shrink|image|image:image": Shrink|image|image:image
       Design Recipe 1.contract:
         Design Recipe 1 Contract: Design Recipe 1 Contract
         0: '? Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.'
@@ -119,25 +126,40 @@ fr:
         Enter prompt here: "Tapez ici l'invite"
         "Contract Name|Number|Domain1:Number|Domain2:string": Nom du Contrat|Nombre|Domaine1:Nombre|Domaine2:texte
       Eval Contracts 1 B:
-        Star Contract: Star Contract
+        Star Contract: Contrat étoile
         Write a contract for the star function: Écrire un contrat pour la fonction étoile
         Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks, 300
         "star|image|color:string|radius:Number|style:string": star|image|color:string|radius:Number|style:string
       Eval Contracts 2 B:
-        Rotate Contract: Rotate Contract
+        Rotate Contract: Contrat rotation
         Write a contract for the rotate function: Écrire un contrat pour la fonction rotation
         Eval Contracts 2 A.solution_blocks, 300: Eval Contracts 2 A.solution_blocks, 300
         "rotate|image|degrees:Number|image:image": rotate|image|degrees:Number|image:image
       Eval Contracts 3 B:
-        Text Contract: Text Contract
+        Text Contract: Contrat texte
         Write a contract for the text function: Écrire un contrat pour la fonction texte
         Eval Contracts 3 A.solution_blocks, 300: Eval Contracts 3 A.solution_blocks, 300
         "text|image|color:string|size:Number|string:string": text|image|color:string|size:Number|string:string
       Eval Contracts 4 B:
-        Scale Contract: Scale Contract
+        Scale Contract: Contrat échelle
         Write a contract for the scale function: "Écrire un contrat pour la fonction d'échelle"
         Eval Contracts 4 A.solution_blocks, 300: Eval Contracts 4 A.solution_blocks, 300
         "scale|image|factor:Number|image:image": scale|image|factor:Number|image:image
+      Eval Contracts B:
+        Star Contract: Contrat étoile
+        Write a contract for the star function: Écrire un contrat pour la fonction étoile
+        Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks, 300
+        "star|image|color:string|radius:Number|style:string": star|image|color:string|radius:Number|style:string
+      Eval Contracts D:
+        Rotate Contract: Contrat rotation
+        Write a contract for the rotate function: Écrire un contrat pour la fonction rotation
+        Eval Contracts 2 A.solution_blocks, 300: Eval Contracts 2 A.solution_blocks, 300
+        "rotate|image|degrees:Number|image:image": rotate|image|degrees:Number|image:image
+      Eval Contracts F:
+        Text Contract: Contrat texte
+        Write a contract for the text function: Écrire un contrat pour la fonction texte
+        Eval Contracts 3 A.solution_blocks, 300: Eval Contracts 3 A.solution_blocks, 300
+        "text|image|color:string|size:Number|string:string": text|image|color:string|size:Number|string:string
       Eval Design Recipe 1.contract:
         Design Recipe 1 Contract: Design Recipe 1 Contract
         0: '? Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.'
@@ -145,7 +167,17 @@ fr:
         "wide-rect|Image|height:Number|color:string": wide-rect|Image|height:Number|color:string
       Rocket Contract 1:
         Contract for rocket-height: Contract for rocket-height
-        "Write a contract for the following question:": 'Write a contract for the following question:'
-        0: '? A rocket blasts off, traveling at 15 meters per second. Write a function called rocket-height that takes in the number of seconds that have passed since the rocket took off, and which produces the height of the rocket at that time.'
-        1: ': A rocket blasts off, traveling at 15 meters per second. Write a function called rocket-height that takes in the number of seconds that have passed since the rocket took off, and which produces the height of the rocket at that time.'
-        "rocket-height|Number|seconds:Number": rocket-height|Number|seconds:Number
+        "Write a contract for the following question:": 'Ecrire un contrat pour les questions suivantes :'
+        0: '? Une fusée décolle, voyageant à 15 mètres par seconde. Écrire une fonction appelée hauteur-fusée qui reçoit le nombre de secondes écoulées depuis que la fusée à décollé, et qui donne la hauteur de la fusée à ce moment-là.'
+        1: ': Une fusée décolle, voyageant à 15 mètres par seconde. Écrire une fonction appelée hauteur-fusée qui reçoit le nombre de secondes écoulées depuis que la fusée à décollé, et qui donne la hauteur de la fusée à ce moment-là.'
+        "rocket-height|Number|seconds:Number": hauteur-fusée|Nombre|secondes:Nombre
+    external:
+      Pixelation 1:
+        Pixelation 1: Pixelation 1
+        Create images with bits and bytes.: Create images with bits and bytes.
+      Pixelation 2:
+        Pixelation 2: Pixelation 2
+        Create images with bits and bytes.: Create images with bits and bytes.
+      Pixelation 3:
+        Pixelation 3: Pixelation 3
+        Create images with bits and bytes.: Create images with bits and bytes.
