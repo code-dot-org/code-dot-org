@@ -5,7 +5,7 @@ This .md file should only contain information which is specific to Code.org engi
 
 ## To update levelbuilder to match staging:
 
-1. On GitHub, open a pull request from `staging` into `levelbuilder`
+1. On GitHub, open a pull request from `staging` into `levelbuilder`, link: [levelbuilder...staging](https://github.com/code-dot-org/code-dot-org/compare/levelbuilder...staging?expand=1)
   1. Or in your local repository:
     - `git checkout levelbuilder`
     - `git pull origin levelbuilder` To make sure you're up-to-date.
@@ -32,6 +32,13 @@ This .md file should only contain information which is specific to Code.org engi
 1. On GitHub, open a pull request from `levelbuilder` into `staging`.
 
 # Did it break?
+
+## Open issues and workarounds:
+
+- Updating English-language strings from .script file doesn't automatically update localized strings ([#82514628](https://www.pivotaltracker.com/story/show/82514628)). Workarounds:
+ 1. After updating the description in the .script file, delete the entry for the script in scripts.en.yml, then run rake seed:scripts (or rake seed:all.
+ 1. Modify the entry in scripts.en.yml directly to update description text (you don't even need to modify the text in the .script file).
+- Renaming a level in LB keeps the old .level file around ([#78597388](https://www.pivotaltracker.com/story/show/78597388)). Workaround: Manually delete the old level after rename.
 
 ## Record not found
 

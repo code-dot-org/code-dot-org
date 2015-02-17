@@ -24,6 +24,7 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "rood";
 Blockly.Msg.COLOUR_RGB_TITLE = "kleur met";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "Maak een kleur met de opgegeven hoeveelheid rood, groen en blauw.  Alle waarden moeten tussen 0 en 100.";
+Blockly.Msg.CONTRACT_EDITOR_HEADER = "Ontwerp recept";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "uit lus springen";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "doorgaan met de volgende herhaling van de lus";

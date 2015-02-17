@@ -24,6 +24,7 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "紅";
 Blockly.Msg.COLOUR_RGB_TITLE = "顏色選擇";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "以指定的紅、 綠和藍的數值來產生顏色。所有值必須都是介於 0 和 100 之間。";
+Blockly.Msg.CONTRACT_EDITOR_HEADER = "Design Recipe";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "停止迴圈";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "繼續下一個 迴圈";
