@@ -403,7 +403,7 @@ exports.install = function(blockly, blockInstallOptions) {
           .appendTitle(msg.drawASquare());
       this.appendValueInput('VALUE')
           .setAlign(blockly.ALIGN_RIGHT)
-          .setCheck('Number')
+          .setCheck(blockly.BlockValueType.NUMBER)
               .appendTitle(msg.lengthParameter() + ':');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -438,7 +438,7 @@ exports.install = function(blockly, blockInstallOptions) {
           .appendTitle(msg.drawASnowman());
       this.appendValueInput('VALUE')
           .setAlign(blockly.ALIGN_RIGHT)
-          .setCheck('Number')
+          .setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(msg.lengthParameter() + ':');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -546,7 +546,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.00, 0.74);
       this.appendValueInput('VALUE')
-          .setCheck('Number')
+          .setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(new blockly.FieldDropdown(
               blockly.Blocks.draw_move.DIRECTIONS), 'DIR');
       this.appendDummyInput()
@@ -576,7 +576,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.00, 0.74);
       this.appendValueInput('VALUE')
-          .setCheck('Number')
+          .setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(new blockly.FieldDropdown(
               blockly.Blocks.jump.DIRECTIONS), 'DIR');
       this.appendDummyInput()
@@ -790,7 +790,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.00, 0.74);
       this.appendValueInput('VALUE')
-          .setCheck('Number')
+          .setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(new blockly.FieldDropdown(
               blockly.Blocks.draw_turn.DIRECTIONS), 'DIR');
       this.appendDummyInput()
@@ -822,7 +822,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.00, 0.74);
       this.appendValueInput('WIDTH')
-          .setCheck('Number')
+          .setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(msg.setWidth());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -890,7 +890,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(196, 1.0, 0.79);
       this.appendValueInput('COLOUR')
-          .setCheck('Colour')
+          .setCheck(blockly.BlockValueType.COLOUR)
           .appendTitle(msg.setColour());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -3858,7 +3858,7 @@ function installDrawASquare(blockly, generator, gensym) {
           .appendTitle(msg.drawASquare());
       this.appendValueInput('VALUE')
           .setAlign(blockly.ALIGN_RIGHT)
-          .setCheck('Number')
+          .setCheck(Blockly.BlockValueType.NUMBER)
               .appendTitle(msg.lengthParameter() + ':');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -3906,7 +3906,7 @@ function installCreateACircle(blockly, generator, gensym) {
           .appendTitle(msg.createACircle());
       this.appendValueInput('VALUE')
           .setAlign(blockly.ALIGN_RIGHT)
-          .setCheck('Number')
+          .setCheck(Blockly.BlockValueType.NUMBER)
               .appendTitle(msg.sizeParameter() + ':');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -3976,7 +3976,7 @@ function installDrawARhombus(blockly, generator, gensym) {
           .appendTitle(msg.drawARhombus());
       this.appendValueInput('VALUE')
           .setAlign(blockly.ALIGN_RIGHT)
-          .setCheck('Number')
+          .setCheck(Blockly.BlockValueType.NUMBER)
               .appendTitle(msg.lengthParameter() + ':');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -4014,7 +4014,7 @@ function installDrawATriangle(blockly, generator, gensym) {
           .appendTitle(msg.drawATriangle());
       this.appendValueInput('VALUE')
           .setAlign(blockly.ALIGN_RIGHT)
-          .setCheck('Number')
+          .setCheck(Blockly.BlockValueType.NUMBER)
               .appendTitle(msg.lengthParameter() + ':');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -4051,7 +4051,7 @@ function installDrawAHexagon(blockly, generator, gensym) {
           .appendTitle(msg.drawAHexagon());
       this.appendValueInput('VALUE')
           .setAlign(blockly.ALIGN_RIGHT)
-          .setCheck('Number')
+          .setCheck(Blockly.BlockValueType.NUMBER)
               .appendTitle(msg.lengthParameter() + ':');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -4088,7 +4088,7 @@ function installDrawAHouse(blockly, generator, gensym) {
           .appendTitle(msg.drawAHouse());
       this.appendValueInput('VALUE')
           .setAlign(blockly.ALIGN_RIGHT)
-          .setCheck('Number')
+          .setCheck(Blockly.BlockValueType.NUMBER)
               .appendTitle(msg.lengthParameter() + ':');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -4133,7 +4133,7 @@ function installDrawAFlower(blockly, generator, gensym) {
           .appendTitle(msg.drawAFlower());
       this.appendValueInput('VALUE')
           .setAlign(blockly.ALIGN_RIGHT)
-          .setCheck('Number')
+          .setCheck(Blockly.BlockValueType.NUMBER)
               .appendTitle(msg.lengthParameter() + ':');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -4217,7 +4217,7 @@ function installDrawAStar(blockly, generator, gensym) {
           .appendTitle(msg.drawAStar());
       this.appendValueInput('VALUE')
           .setAlign(blockly.ALIGN_RIGHT)
-          .setCheck('Number')
+          .setCheck(Blockly.BlockValueType.NUMBER)
               .appendTitle(msg.lengthParameter() + ':');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -4312,7 +4312,7 @@ function installDrawARocket(blockly, generator, gensym) {
           .appendTitle(msg.drawARocket());
       this.appendValueInput('VALUE')
           .setAlign(blockly.ALIGN_RIGHT)
-          .setCheck('Number')
+          .setCheck(Blockly.BlockValueType.NUMBER)
               .appendTitle(msg.lengthParameter() + ':');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -4366,7 +4366,7 @@ function installDrawAPlanet(blockly, generator, gensym) {
           .appendTitle(msg.drawAPlanet());
       this.appendValueInput('VALUE')
           .setAlign(blockly.ALIGN_RIGHT)
-          .setCheck('Number')
+          .setCheck(Blockly.BlockValueType.NUMBER)
               .appendTitle(msg.lengthParameter() + ':');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -4404,7 +4404,7 @@ function installDrawUpperWave(blockly, generator, gensym) {
           .appendTitle(msg.drawUpperWave());
       this.appendValueInput('VALUE')
           .setAlign(blockly.ALIGN_RIGHT)
-          .setCheck('Number')
+          .setCheck(Blockly.BlockValueType.NUMBER)
               .appendTitle(msg.lengthParameter() + ':');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -4440,7 +4440,7 @@ function installDrawLowerWave(blockly, generator, gensym) {
           .appendTitle(msg.drawLowerWave());
       this.appendValueInput('VALUE')
           .setAlign(blockly.ALIGN_RIGHT)
-          .setCheck('Number')
+          .setCheck(Blockly.BlockValueType.NUMBER)
               .appendTitle(msg.lengthParameter() + ':');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
