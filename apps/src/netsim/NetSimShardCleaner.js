@@ -36,6 +36,7 @@ var NetSimHeartbeat = require('./NetSimHeartbeat');
 var NetSimNode = require('./NetSimNode');
 var NetSimWire = require('./NetSimWire');
 var NetSimMessage = require('./NetSimMessage');
+var NetSimLogEntry = require('./NetSimLogEntry');
 var NetSimLogger = require('./NetSimLogger');
 
 var logger = NetSimLogger.getSingleton();
@@ -202,6 +203,9 @@ NetSimShardCleaner.prototype.cleanShard = function () {
 
       new CacheTable(this, 'message', this.shard_.messageTable),
       new CleanMessages(this),
+
+      new CacheTable(this, 'log', this.shard_.logTable),
+      new CleanLogs(this),
 
       new ReleaseCleaningLock(this)
     ]);
@@ -558,6 +562,37 @@ CleanMessages.prototype.onBegin_ = function () {
     });
   }).map(function (row) {
     return new DestroyEntity(new NetSimMessage(this.cleaner_.getShard(), row));
+  }.bind(this));
+  CommandSequence.prototype.onBegin_.call(this);
+};
+
+/**
+ *
+ * @param cleaner
+ * @constructor
+ * @augments CommandSequence
+ */
+var CleanLogs = function (cleaner) {
+  CommandSequence.call(this);
+  this.cleaner_ = cleaner;
+};
+CleanLogs.inherits(CommandSequence);
+
+/**
+ *
+ * @private
+ * @override
+ */
+CleanLogs.prototype.onBegin_ = function () {
+  logger.info('Begin CleanLogs');
+  var nodeRows = this.cleaner_.getTableCache('node');
+  var logRows = this.cleaner_.getTableCache('log');
+  this.commandList_ = logRows.filter(function (logRow) {
+    return nodeRows.every(function (nodeRow) {
+      return nodeRow.id !== logRow.nodeID;
+    });
+  }).map(function (row) {
+    return new DestroyEntity(new NetSimLogEntry(this.cleaner_.getShard(), row));
   }.bind(this));
   CommandSequence.prototype.onBegin_.call(this);
 };
