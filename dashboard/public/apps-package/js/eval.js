@@ -260,6 +260,7 @@ Eval.execute = function() {
     }
 
     if (level.freePlay) {
+      Eval.result = true;
       Eval.testResults = TestResults.FREE_PLAY;
     }
   }
