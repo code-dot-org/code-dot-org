@@ -132,7 +132,7 @@ describe("CommandSequence", function () {
   FailCommand.inherits(Command);
   FailCommand.prototype.onBegin_ = function () {
     this.fail();
-  }
+  };
 
   beforeEach(function () {
     sequenceLog = '';

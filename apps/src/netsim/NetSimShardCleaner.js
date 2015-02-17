@@ -97,7 +97,7 @@ CleaningHeartbeat.prototype.buildRow_ = function () {
  * @param {!NetSimShard} shard
  * @constructor
  */
-var NetSimShardCleaner = module.exports = function (shard, logger) {
+var NetSimShardCleaner = module.exports = function (shard) {
   this.shard_ = shard;
 
   this.nextAttempt_ = Date.now();
@@ -199,7 +199,6 @@ NetSimShardCleaner.prototype.cacheTable = function (key, rows) {
     this.tableCache = {};
   }
   this.tableCache[key] = rows;
-  logger.info("Cached table " + key);
 };
 
 NetSimShardCleaner.prototype.getTableCache = function (key) {
@@ -227,6 +226,7 @@ var CacheTable = function (cleaner, key, table) {
 CacheTable.inherits(Command);
 
 CacheTable.prototype.onBegin_ = function () {
+  logger.info('Begin CacheTable[' + this.key_ + ']');
   this.table_.readAll(function (rows) {
     this.cleaner_.cacheTable(this.key_, rows);
     this.succeed();
@@ -245,7 +245,9 @@ var DestroyEntity = function (entity) {
 };
 DestroyEntity.inherits(Command);
 
-DestroyEntity.prototype.onBegin = function () {
+DestroyEntity.prototype.onBegin_ = function () {
+
+  logger.info('Begin DestroyEntity[' + this.entity_.entityID + ']');
   this.entity_.destroy(function (success) {
     if (success) {
       logger.info("Deleted entity");
@@ -268,7 +270,8 @@ var ReleaseCleaningLock = function (cleaner) {
 };
 ReleaseCleaningLock.inherits(Command);
 
-ReleaseCleaningLock.prototype.onBegin = function () {
+ReleaseCleaningLock.prototype.onBegin_ = function () {
+  logger.info('Begin ReleaseCleaningLock');
   this.cleaner_.releaseCleaningLock(function (success) {
     if (success) {
       this.succeed();
@@ -297,6 +300,7 @@ var HEARTBEAT_TIMEOUT_MS = 30000;
  * @override
  */
 CleanHeartbeats.prototype.onBegin_ = function () {
+  logger.info('Begin CleanHeartbeats');
   var heartbeatRows = this.cleaner_.getTableCache('heartbeat');
   this.commandList_ = heartbeatRows.filter(function (row) {
     return Date.now() - row.time > HEARTBEAT_TIMEOUT_MS;
@@ -324,6 +328,7 @@ CleanNodes.inherits(CommandSequence);
  * @override
  */
 CleanNodes.prototype.onBegin_ = function () {
+  logger.info('Begin CleanNodes');
   var heartbeatRows = this.cleaner_.getTableCache('heartbeat');
   var nodeRows = this.cleaner_.getTableCache('node');
   this.commandList_ = nodeRows.filter(function (row) {
@@ -354,14 +359,19 @@ CleanWires.inherits(CommandSequence);
  * @override
  */
 CleanWires.prototype.onBegin_ = function () {
+  logger.info('Begin CleanWires');
   var nodeRows = this.cleaner_.getTableCache('node');
   var wireRows = this.cleaner_.getTableCache('wire');
-  this.commandList_ = wireRows.filter(function (row) {
-    // Only wires whose ends point to valid nodes?
-    return false;
+  this.commandList_ = wireRows.filter(function (wireRow) {
+    return !(nodeRows.some(function (nodeRow) {
+      return nodeRow.id === wireRow.localNodeID;
+    }) && nodeRows.some(function (nodeRow) {
+      return nodeRow.id === wireRow.remoteNodeID;
+    }));
   }).map(function (row) {
     return new DestroyEntity(new NetSimWire(this.cleaner_.getShard(), row));
   }.bind(this));
+  CommandSequence.prototype.onBegin_.call(this);
 };
 
 /**
@@ -372,6 +382,7 @@ CleanWires.prototype.onBegin_ = function () {
  */
 var CleanMessages = function (cleaner) {
   CommandSequence.call(this);
+  this.cleaner_ = cleaner;
 };
 CleanMessages.inherits(CommandSequence);
 
@@ -381,12 +392,15 @@ CleanMessages.inherits(CommandSequence);
  * @override
  */
 CleanMessages.prototype.onBegin_ = function () {
+  logger.info('Begin CleanMessages');
   var nodeRows = this.cleaner_.getTableCache('node');
   var messageRows = this.cleaner_.getTableCache('message');
-  this.commandList_ = messageRows.filter(function (row) {
-    // Only messages with a valid destination?
-    return false;
+  this.commandList_ = messageRows.filter(function (messageRow) {
+    return nodeRows.every(function (nodeRow) {
+      return nodeRow.id !== messageRow.toNodeID;
+    });
   }).map(function (row) {
     return new DestroyEntity(new NetSimMessage(this.cleaner_.getShard(), row));
   }.bind(this));
+  CommandSequence.prototype.onBegin_.call(this);
 };
