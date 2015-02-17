@@ -1,7 +1,7 @@
 var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
-var assertClose = testUtils.assertClose;
+var assertWithinRange = testUtils.assertWithinRange;
 var assertOwnProperty = testUtils.assertOwnProperty;
 var netsimTestUtils = require('../util/netsimTestUtils');
 var fauxShard = netsimTestUtils.fauxShard;
@@ -46,7 +46,7 @@ describe("NetSimLogEntry", function () {
 
     it ("timestamp (default Date.now())", function () {
       assertOwnProperty(row, 'timestamp');
-      assertClose(row.timestamp, Date.now(), 10);
+      assertWithinRange(row.timestamp, Date.now(), 10);
     });
   });
 
@@ -88,7 +88,7 @@ describe("NetSimLogEntry", function () {
         assertEqual(row.nodeID, nodeID);
         assertEqual(row.logText, logText);
         assertEqual(row.logLevel, logLevel);
-        assertClose(row.timestamp, Date.now(), 10);
+        assertWithinRange(row.timestamp, Date.now(), 10);
       });
     });
 

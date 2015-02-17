@@ -125,10 +125,12 @@ NetSimRouterPanel.prototype.onRouterChange_ = function (wire, router) {
 
   // Hook up new handlers
   if (router) {
-    this.routerStateChangeKey = router.stateChange.register(this.onRouterStateChange_.bind(this));
+    this.routerStateChangeKey = router.stateChange.register(
+        this.onRouterStateChange_.bind(this));
     logger.info("RouterPanel registered to router stateChange");
 
-    this.routerWireChangeKey = router.wiresChange.register(this.onRouterWiresChange_.bind(this));
+    this.routerWireChangeKey = router.wiresChange.register(
+        this.onRouterWiresChange_.bind(this));
     logger.info("RouterPanel registered to router wiresChange");
   }
 };
