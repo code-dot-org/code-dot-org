@@ -240,7 +240,6 @@
 
     function UIStore() {
       this.save = __bind(this.save, this);
-      this.onAjaxFailure = __bind(this.onAjaxFailure, this);
 
       this.value = null; // Empty store
       this.subscribers = [];
@@ -287,10 +286,6 @@
         url: this.resolveUrl(args, dataType),
         data: args
       };
-    }
-
-    UIStore.prototype.onAjaxFailure = function(xhr, status, message) {
-      // TODO
     }
 
     // Load data into this store
@@ -822,7 +817,7 @@
         onInitialize: function() {
           // When called, "this" is bound to the options hash itself
 
-          // TODO: Has moving this broken something?
+          // TODO: Confirm that moving this to onInitialize is ok - no timing effects?
           window.startTiming('Puzzle', this.scriptPath, '');
 
           // Hide callouts when the function editor is closed (otherwise they jump to the top left corner)
@@ -980,7 +975,6 @@
 
           // Is this level the script completion?
           if (opts.level.next === false) {
-            // TODO: COMPLETED!
             route = {
               complete: opts.script_name
             };
@@ -1000,13 +994,13 @@
             showVideoDialog(opts.level.wrapupVideo);
           } else {
             if (!Frame.goTo(route)) {
-              // TODO: What kind of message should the user get?
+              // What kind of message should the user get?
             }
           }
         },
         backToPreviousLevel: function() {
           if (opts.level.previous === false) {
-            // TODO: Does this mean anything or do we just fail silently?
+            // Does this mean anything or do we just fail silently?
             return;
           }
 
@@ -1018,7 +1012,7 @@
             level: prev[1]
           };
           if (!Frame.goTo(route)) {
-            // TODO: What kind of message should the user get?
+            // What kind of message should the user get?
           }
         },
         showInstructionsWrapper: function(showInstructions) {
@@ -1038,7 +1032,7 @@
         }
       });
 
-      // TODO: need a better way to bind this.  Consult with cpirich
+      // TODO: need a better way to bind this.
       // Summary of the problem: onAttempt (and others) used global variables to get at the option
       // state like .scriptPath, as well as global functions like sendReport()
       // Ideally these would be available as local methods, but the current appMain & StudioApp code
@@ -1046,7 +1040,6 @@
       // We could bind functions in onInitialize, but that's called *after* the functions have already
       // been copied out into the StudioApp.
       // The bigger question is: what *should* "this" be when calling parameters in the config block?
-      // Getting to sendReport() is a whole other issue but maybe it's fine to leave as-is
       opts.onAttempt = __bind(opts.onAttempt, opts);
       opts.onContinue = __bind(opts.onContinue, opts);
       opts.backToPreviousLevel = __bind(opts.backToPreviousLevel, opts);

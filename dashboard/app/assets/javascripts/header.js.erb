@@ -94,7 +94,6 @@
       this.props.headerStore.subscribe( __bind(this.replaceState, this) );
 
       // This store is used to load the HTML overview of the entire script
-      // TODO: Combine this with the headerStore
       this.scriptStore = new ScriptStore();
       this.scriptStore.subscribe(function(script) {
         _this.setState({
