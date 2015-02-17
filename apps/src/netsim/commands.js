@@ -144,7 +144,11 @@ Command.prototype.onEnd_ = function () {};
 /**
  * A CommandSequence is constructed with a list of commands to be executed
  * in order, either until a command fails or the end of the list is reached.
- * Each command will be executed after the previous command succeeds.
+ * Each command will be started on the first tick where the previous command
+ * is found to be successful: If a command succeeds between ticks, the next
+ * command will start on the next tick, but if a command succeeds _during_
+ * a tick (in its tick() or onBegin_() methods) then the next command may
+ * begin immediately.
  *
  * The CommandSequence is itself a command which succeeds after all of the
  * commands it contains have succeeded, or fails if any of the commands it
