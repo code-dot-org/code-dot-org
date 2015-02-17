@@ -105,7 +105,10 @@ private
       @start_blocks = level_source.data
     elsif current_user.try(:admin?)
       last_attempt = current_user.last_attempt(@level).try(:level_source).try(:data)
-      @start_blocks = last_attempt if last_attempt
+      if last_attempt
+        @original_start_blocks = @start_blocks
+        @start_blocks = last_attempt
+      end
     end
   end
 
