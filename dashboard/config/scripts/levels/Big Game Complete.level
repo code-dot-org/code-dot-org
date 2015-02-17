@@ -276,12 +276,12 @@
         </block>
         <block type="functional_call" inline="false" deletable="false" movable="false" editable="false" id="game_vars">
           <mutation name="game-variables">
-            <arg name="title" type="string"/>
-            <arg name="subtitle" type="string"/>
-            <arg name="background" type="image"/>
-            <arg name="danger" type="image"/>
-            <arg name="target" type="image"/>
-            <arg name="player" type="image"/>
+            <arg name="title" type="String"/>
+            <arg name="subtitle" type="String"/>
+            <arg name="background" type="Image"/>
+            <arg name="danger" type="Image"/>
+            <arg name="target" type="Image"/>
+            <arg name="player" type="Image"/>
           </mutation>
           <functional_input name="ARG0" id="title_input">
             <block type="functional_call" deletable="false" movable="false">

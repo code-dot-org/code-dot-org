@@ -1760,7 +1760,7 @@ exports.install = function(blockly, blockInstallOptions) {
       this.setFunctional(true, {
         headerHeight: 30
       });
-      this.setHSV.apply(this, functionalBlockUtils.colors.none);
+      this.setHSV.apply(this, functionalBlockUtils.colors[blockly.BlockValueType.NONE]);
 
       var options = {
         fixedSize: { height: 35 }

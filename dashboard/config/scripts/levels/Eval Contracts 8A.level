@@ -100,7 +100,7 @@
         <block type="functional_call" inline="false">
           <mutation name="big-triangle">
             <arg name="size" type="Number"/>
-            <arg name="color" type="string"/>
+            <arg name="color" type="String"/>
           </mutation>
         </block>
       </xml>

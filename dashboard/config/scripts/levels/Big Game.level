@@ -222,7 +222,7 @@
           <mutation>
             <arg name="x" type="Number"/>
             <description>Is the character visible on the right side of the screen?</description>
-            <outputtype>boolean</outputtype>
+            <outputtype>Boolean</outputtype>
           </mutation>
           <title name="NAME">safe-right?</title>
           <functional_input name="STACK">
@@ -253,7 +253,7 @@
           <mutation>
             <arg name="x" type="Number"/>
             <description>Is the character visible on the left side of the screen?</description>
-            <outputtype>boolean</outputtype>
+            <outputtype>Boolean</outputtype>
           </mutation>
           <title name="NAME">safe-left?</title>
           <functional_input name="STACK">
@@ -293,7 +293,7 @@
           <functional_input name="ACTUAL">
             <block type="functional_call" inline="false" uservisible="false">
               <mutation name="update-player">
-                <arg name="key" type="string"/>
+                <arg name="key" type="String"/>
                 <arg name="y" type="Number"/>
               </mutation>
             </block>
@@ -377,7 +377,7 @@
           <mutation>
             <arg name="x" type="Number"/>
             <description>Given an sprite's x coordinate, determine if the sprite is visible on screen</description>
-            <outputtype>boolean</outputtype>
+            <outputtype>Boolean</outputtype>
           </mutation>
           <title name="NAME">onscreen?</title>
           <functional_input name="STACK">
@@ -393,7 +393,7 @@
             <arg name="cx" type="Number"/>
             <arg name="cy" type="Number"/>
             <description>Given the player's x and y, and a character's x and y, determine if they have collided</description>
-            <outputtype>boolean</outputtype>
+            <outputtype>Boolean</outputtype>
           </mutation>
           <title name="NAME">collide?</title>
           <functional_input name="STACK">
@@ -415,7 +415,7 @@
           <functional_input name="ACTUAL">
             <block type="functional_call" inline="false" uservisible="false">
               <mutation name="update-player">
-                <arg name="key" type="string"/>
+                <arg name="key" type="String"/>
                 <arg name="y" type="Number"/>
               </mutation>
             </block>
@@ -423,7 +423,7 @@
         </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
-            <arg name="key" type="string"/>
+            <arg name="key" type="String"/>
             <arg name="y" type="Number"/>
             <description>Given the player's y coordinate and a keycode for direction, return the new y</description>
             <outputtype>Number</outputtype>
@@ -499,7 +499,7 @@
         </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
-            <outputtype>image</outputtype>
+            <outputtype>Image</outputtype>
             <isfunctionalvariable>true</isfunctionalvariable>
           </mutation>
           <title name="NAME">target</title>
@@ -511,7 +511,7 @@
         </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
-            <outputtype>string</outputtype>
+            <outputtype>String</outputtype>
             <isfunctionalvariable>true</isfunctionalvariable>
           </mutation>
           <title name="NAME">title</title>
@@ -523,7 +523,7 @@
         </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
-            <outputtype>image</outputtype>
+            <outputtype>Image</outputtype>
             <isfunctionalvariable>true</isfunctionalvariable>
           </mutation>
           <title name="NAME">danger</title>
@@ -535,7 +535,7 @@
         </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
-            <outputtype>image</outputtype>
+            <outputtype>Image</outputtype>
             <isfunctionalvariable>true</isfunctionalvariable>
           </mutation>
           <title name="NAME">player</title>
@@ -547,7 +547,7 @@
         </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
-            <outputtype>image</outputtype>
+            <outputtype>Image</outputtype>
             <isfunctionalvariable>true</isfunctionalvariable>
           </mutation>
           <title name="NAME">bg</title>
@@ -559,7 +559,7 @@
         </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
-            <outputtype>string</outputtype>
+            <outputtype>String</outputtype>
             <isfunctionalvariable>true</isfunctionalvariable>
           </mutation>
           <title name="NAME">subtitle</title>
