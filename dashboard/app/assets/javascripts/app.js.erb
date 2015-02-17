@@ -343,7 +343,7 @@
 
           // If needed, we could create a way to store or simulate postbacks.
           if (s.type != 'GET') {
-            throw new Error(ajax.type + "s are not supported.")
+            throw new Error(s.type + "s are not supported.")
           }
 
           if (s.isStaticResource) {
