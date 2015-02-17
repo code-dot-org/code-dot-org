@@ -6,7 +6,7 @@ az-AZ:
   csedweek_dates: 8-14 dekabr 2014
   csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">plan your Hour of Code</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
-  n_have_learned_an_hoc: '<h1>#</h1><h3>nəfər artıq </h3><h2>Kod Saatı</h2>nda özünü sınayıb'
+  n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
   anybody_can_learn: Hər kəs öyrənə bilər.
   learn_now: İndi öyrən
   petition_message: Hər bir məktəbdə hər bir şagirdin informatikanı öyrənmək imkanı olmalıdır

@@ -344,6 +344,8 @@ sq:
     student_teacher_disassociated: '%{teacher_name} është hequr si mësues për%{student_name}'
   user:
     email_confirm_needed: 'Adresa e emailit nuk është konfirmuar:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Ridërgo udhëzimet e konfirmimit
     new_password_hint: (lëre bosh nëse nuk do ta ndryshosh atë)
     current_password_hint: (me kemi nevojë për fjalëkalimin tënd aktual që të konfirmojmë ndryshimet e tua)
@@ -526,7 +528,7 @@ sq:
           title: Hyrja K-8 tek Kursi i Shkencave Kompjuterike (15-25 orë)
           description: Ky kurs që zgjat 20 orë, na njeh me ën e shkences kompjuterike dhe konceptet e programimit. Kursi është dizenjuar të përdoret nga klasat e nivelit K-8, por është argetuese të mësohet nga të gjitha moshat.
         Hour of Code:
-          title: Ora e kodimit
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: Ndrysho kodin

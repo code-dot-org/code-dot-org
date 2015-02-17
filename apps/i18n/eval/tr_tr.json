@@ -1,7 +1,10 @@
 {
+  "badColorStringError": "You used an invalid color string: {val}",
+  "badStyleStringError": "You used an invalid style string: {val}",
   "circleBlockTitle": "çember (yarıçap,stil,renk)",
   "displayBlockTitle": "görüntüle",
   "ellipseBlockTitle": "Elips (genişlik, yükseklik, stil, renk)",
+  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "extraTopBlocks": "Bağlantı yapılmamış bloklarınız var. Bunları \"görüntüleme\" bloğuyla mı ilişkilendirecek istediniz?",
   "overlayBlockTitle": "kaplama (üst, alt)",
   "placeImageBlockTitle": "Görüntü Yerleştir (x, y, resim)",

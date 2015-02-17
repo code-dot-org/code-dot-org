@@ -315,6 +315,8 @@
       삭제되었습니다.'
   user:
     email_confirm_needed: '이메일 주소가 확인되지 않았습니다:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: 이메일 확인 재발송
     new_password_hint: (바꾸고 싶지 않으면, 비워 두세요)
     current_password_hint: (수정하기 위해 비밀번호를 한 번 더 입력해 주세요.)

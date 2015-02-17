@@ -1,9 +1,13 @@
 {
   "compute": "hitung",
+  "emptyComputeBlock": "You must attach a block to the \"compute\" block.",
+  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "equivalentExpression": "cuba menyusun semula hujah anda untuk mendapatkan maksud yang sama.",
   "extraTopBlocks": "anda mempunyai blok-blok tidak terikat. adakah anda bermaksud untuk mengepilkan blok-blok ini kepada blok \"penghitung\"?",
   "failedInput": "Your function does not return the right result for all values.",
   "goal": "matlamat:",
+  "levelIncompleteError": "Your expression does not match the goal.",
   "reinfFeedbackMsg": "Here is your story! Continue working on it, or move on to the next puzzle!",
-  "yourExpression": "Ungkapan anda:"
+  "yourExpression": "Ungkapan anda:",
+  "wrongInput": "You are calling your function with the wrong value."
 }

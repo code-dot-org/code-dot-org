@@ -1,7 +1,10 @@
 {
+  "badColorStringError":"You used an invalid color string: {val}",
+  "badStyleStringError":"You used an invalid style string: {val}",
   "circleBlockTitle":"krog (polmer, slog, barva)",
   "displayBlockTitle":"prikaži",
   "ellipseBlockTitle":"elipsa (širina, višina, slog, barva)",
+  "emptyFunctionalBlock":"You have a block with an unfilled input.",
   "extraTopBlocks":"Nekaj blokov ostaja nezdruženih. Jih želite dodati k bloku za prikaz?",
   "overlayBlockTitle":"prosojnice (zgoraj, spodaj)",
   "placeImageBlockTitle":"postavi sliko (x, y, slika)",

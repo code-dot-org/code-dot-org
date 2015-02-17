@@ -24,6 +24,7 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december/html/spec/colorper.html";
 Blockly.Msg.COLOUR_RGB_RED = "लाल";
 Blockly.Msg.COLOUR_RGB_TITLE = "से रंगिए";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "लाल, हरे और नीले रंग की निर्दिष्ट मात्रा के उपयोग से एक रंग बनाएँ।  सभीका मूल्य 0 और 100 के बीच होना चाहिए।";
+Blockly.Msg.CONTRACT_EDITOR_HEADER = "Design Recipe";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "लूप से बाहर निकलें ";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "लूप का अगला चक्र जारी रखें ";

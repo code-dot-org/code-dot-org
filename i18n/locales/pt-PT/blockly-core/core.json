@@ -1,5 +1,5 @@
 {
-  "ACTUAL":"call",
+  "ACTUAL":"chamada",
   "ADD":"Adicionar",
   "ADD_COMMENT":"Adicionar Comentário",
   "ADD_PARAMETER":"Adicionar Parâmetro",
@@ -23,6 +23,7 @@
   "COLOUR_RGB_RED":"vermelho",
   "COLOUR_RGB_TITLE":"pintar com",
   "COLOUR_RGB_TOOLTIP":"Crie uma cor com uma quantidade específica de vermelho, verde e azul. Todos os valores devem estar entre 0 e 100.",
+  "CONTRACT_EDITOR_HEADER":"Design Recipe",
   "CONTROLS_FLOW_STATEMENTS_HELPURL":"https:\/\/code.google.com\/p\/blockly\/wiki\/Loops#Loop_Termination_Blocks",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK":"sair do ciclo",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE":"continuar com a próxima iteração do ciclo",
@@ -73,7 +74,7 @@
   "EXAMPLE_DESCRIPTION":"Define um exemplo com um comportamento esperado e real",
   "EXPAND_ALL":"Expandir Blocos",
   "EXPAND_BLOCK":"Expandir Bloco",
-  "EXPECTED":"result",
+  "EXPECTED":"resultado",
   "EXTERNAL_INPUTS":"Entradas externas",
   "FUNCTION_CREATE":"Crie uma Função",
   "FUNCTION_EDIT":"edit",

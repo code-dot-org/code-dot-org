@@ -360,6 +360,8 @@
       per %{student_name}'
   user:
     email_confirm_needed: 'L''indirizzo di posta elettronica non è stato confermato:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Reinvia le istruzioni di conferma
     new_password_hint: (lascialo vuoto se non vuoi cambiarlo)
     current_password_hint: (inserisci la tua password corrente per confermare i cambiamenti)
@@ -561,13 +563,13 @@
   multi:
     wrong_title: Risposta non corretta
     wrong_body: La risposta che hai inserito non è corretta.  Per favore riprova!
-    correct_title: Corretto
-    correct_body: Questa è la risposta corretta.
+    correct_title: Molto bene!
+    correct_body: Questa risposta è corretta.
   match:
-    wrong_title: Soluzione non corretta
-    wrong_body: La soluzione che hai inserito non è corretta.  Per favore riprova!
-    correct_title: Corretto
-    correct_body: Questa è la risposta corretta.
+    wrong_title: Riprova!
+    wrong_body: Questa risposta non è corretta.  Per favore riprova.
+    correct_title: Molto bene!
+    correct_body: Questa risposta è corretta.
   text_match:
     placeholder: Inserisci qui la tua risposta
   dialog:

@@ -224,7 +224,7 @@
           description: Descrizione lunga di Scrat
           'Maze: Sequence': 'Labirinto: Sequenze'
         hourofcode:
-          Maze: Labirinto
+          Maze: Esercizio di Verifica (Risposte Multiple)
           title: L'Ora del Codice
           description: Impara i concetti base dell'informatica con i personaggi di
             Angry Birds, Plant vs. Zombies, e Scrat di L'Era Glaciale!
@@ -345,7 +345,7 @@
           Design Recipe: La Ricetta della Progettazione
           Booleans: Valori Booleani
           Conditionals: Istruzioni condizionali
-          Free Play: Gioca liberamente
+          Free Play: Tempo di giocare
         algebra:
           title: Informatica in Algebra
           description: Impara la Programmazione Funzionale mediante l'Algebra
@@ -390,6 +390,13 @@
           The Design Recipe: La Ricetta della Progettazione
         K5PD:
           Introduction to PD: Introduzione a PD
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and
+            3
         netsim:
           title: Simulatore di Internet
           description_short: ''
@@ -401,3 +408,34 @@
             dell'Infinito"!
           description: Crea una storia o costruisci un gioco col "Laboratorio dell'Infinito"!
           Infinity: Infinito
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: Corso introduttivo di informatica per scuole elementari e medie inferiori
+            (in 20 lezioni)
+          description: Questo corso in 20 lezioni introduce i concetti fondamentali
+            dell'informatica e della programmazione. Il corso è progettato per l'uso
+            nelle scuole elementari e medie inferiori, ma è divertente per imparare
+            a qualunque età.
+          Introduction to Computer Science: Cos'è l'informatica
+          The Maze: Il labirinto
+          Computational Thinking: Pensiero computazionale
+          Graph Paper Programming: Programmazione su carta a quadretti
+          The Artist: L'artista
+          Algorithms: Algoritmi
+          The Artist 2: L'artista 2
+          Functions: Funzioni
+          The Farmer: La Contadina
+          Conditionals: Istruzioni condizionali
+          The Artist 3: L'artista 3
+          Song Writing: Composizione di canzoni
+          The Farmer 2: La Contadina 2
+          Abstraction: Astrazione
+          The Artist 4: L'artista 4
+          Relay Programming: Programmazione a Staffetta
+          The Farmer 3: La Contadina 3
+          The Internet: Internet
+          The Artist 5: L'artista 5
+          Wrap-up: Conclusione
