@@ -3025,7 +3025,7 @@ if (typeof(CanvasRenderingContext2D) != 'undefined') {
 	}
 }
 
-},{}],143:[function(require,module,exports){
+},{}],142:[function(require,module,exports){
 /**
  * A set of functional blocks
  */
@@ -3514,7 +3514,7 @@ function installCond(blockly, generator) {
   };
 }
 
-},{"../locale/current/common":190,"./functionalBlockUtils":74,"./utils":185}],74:[function(require,module,exports){
+},{"../locale/current/common":189,"./functionalBlockUtils":74,"./utils":184}],74:[function(require,module,exports){
 var utils = require('./utils');
 var _ = utils.getLodash();
 
@@ -3658,7 +3658,7 @@ module.exports.installStringPicker = function(blockly, generator, options) {
   };
 };
 
-},{"./utils":185}],171:[function(require,module,exports){
+},{"./utils":184}],170:[function(require,module,exports){
 var list = [];
 
 /**
@@ -3676,7 +3676,7 @@ exports.clearTimeouts = function () {
   list = [];
 };
 
-},{}],165:[function(require,module,exports){
+},{}],164:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3692,7 +3692,7 @@ with (locals || {}) { (function(){
   var msg = require('../../locale/current/common');
   var hideRunButton = locals.hideRunButton || false;
 ; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n        <img id="play-button" src="', escape((26,  assetUrl('media/play-circle.png') )), '"/>\n      </div>\n    </div>\n  </div>\n');30; };; buf.push('\n');31; // A spot for the server to inject some HTML for help content.
-var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (38,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((44,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((45,  msg.runProgram() )), '</div>\n        <img src="', escape((46,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((49,  msg.resetProgram() )), '</div>\n        <img src="', escape((50,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');52; if (data.controls) { ; buf.push('\n      ', (53,  data.controls ), '\n      ');54; } ; buf.push('\n      ');55; if (data.extraControlRows) { ; buf.push('\n      ', (56,  data.extraControlRows ), '\n      ');57; } ; buf.push('\n    </div>\n\n    ');60; instructions() ; buf.push('\n    ');61; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n');66; if (data.editCode) { ; buf.push('\n  <div id="codeWorkspace">\n');68; } else { ; buf.push('\n  <div id="blockly">\n');70; } ; buf.push('\n  <div id="headers" dir="', escape((71,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((72,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span id="workspace-header-span">', escape((74,  msg.workspaceHeader())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((76,  data.blockCounterClass )), '>\n          ', escape((77,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((80,  data.idealBlockNumber )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((83,  msg.showCodeHeader() )), '</span></div>\n  </div>\n  ');85; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox"></div>\n  ');87; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
+var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (38,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((44,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((45,  msg.runProgram() )), '</div>\n        <img src="', escape((46,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((49,  msg.resetProgram() )), '</div>\n        <img src="', escape((50,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');52; if (data.controls) { ; buf.push('\n      ', (53,  data.controls ), '\n      ');54; } ; buf.push('\n      ');55; if (data.extraControlRows) { ; buf.push('\n      ', (56,  data.extraControlRows ), '\n      ');57; } ; buf.push('\n    </div>\n\n    ');60; instructions() ; buf.push('\n    ');61; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n');66; if (data.editCode) { ; buf.push('\n  <div id="codeWorkspace">\n');68; } else { ; buf.push('\n  <div id="blockly">\n');70; } ; buf.push('\n  <div id="headers" dir="', escape((71,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((72,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span id="workspace-header-span">', escape((74,  msg.workspaceHeaderShort())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((76,  data.blockCounterClass )), '>\n          ', escape((77,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((80,  data.idealBlockNumber )), '</span>\n        <span> ', escape((81,  msg.blocks() )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((84,  msg.showCodeHeader() )), '</span></div>\n    ');85; if (!data.editCode) { ; buf.push('\n      <div id="clear-puzzle-header" class="blockly-header"><span>', escape((86,  msg.clearPuzzle() )), '</span></div>\n    ');87; } ; buf.push('\n  </div>\n  ');89; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox"></div>\n  ');91; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
 } 
 return buf.join('');
 };
@@ -3700,7 +3700,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":190,"ejs":206}],145:[function(require,module,exports){
+},{"../../locale/current/common":189,"ejs":205}],144:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -3965,7 +3965,7 @@ Slider.bindEvent_ = function(element, name, func) {
 
 module.exports = Slider;
 
-},{"./dom":44}],144:[function(require,module,exports){
+},{"./dom":44}],143:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -4116,7 +4116,7 @@ module.exports = function(app, levels, options) {
   });
 };
 
-},{"./StudioApp":2,"./blocksCommon":18,"./dom":44,"./required_block_utils":142,"./utils":185}],142:[function(require,module,exports){
+},{"./StudioApp":2,"./blocksCommon":18,"./dom":44,"./required_block_utils":141,"./utils":184}],141:[function(require,module,exports){
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
@@ -4394,7 +4394,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"../locale/current/common":190,"./block_utils":17,"./utils":185,"./xml":186}],18:[function(require,module,exports){
+},{"../locale/current/common":189,"./block_utils":17,"./utils":184,"./xml":185}],18:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -4559,7 +4559,7 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/current/common":190}],2:[function(require,module,exports){
+},{"../locale/current/common":189}],2:[function(require,module,exports){
 // Globals:
 //   Blockly
 
@@ -4945,6 +4945,20 @@ StudioApp.prototype.init = function(config) {
     if (config.level.openFunctionDefinition) {
       Blockly.functionEditor.openAndEditFunction(config.level.openFunctionDefinition);
     }
+  }
+
+  // Bind listener to 'Clear Puzzle' button
+  var clearPuzzleHeader = document.getElementById('clear-puzzle-header');
+  if (clearPuzzleHeader) {
+    dom.addClickTouchEvent(clearPuzzleHeader, (function() {
+      this.feedback_.showClearPuzzleConfirmation(this.Dialog, (function() {
+        if (Blockly.functionEditor) {
+          Blockly.functionEditor.hideIfOpen();
+        }
+        Blockly.mainBlockSpace.clear();
+        this.setStartBlocks_(config);
+      }).bind(this));
+    }).bind(this));
   }
 };
 
@@ -5345,6 +5359,10 @@ StudioApp.prototype.resizeHeaders = function (fullWorkspaceWidth) {
   var toolboxWidth = 0;
   var showCodeWidth = 0;
 
+  var clearPuzzleHeader = document.getElementById('clear-puzzle-header');
+  var clearPuzzleWidth = clearPuzzleHeader ?
+      clearPuzzleHeader.getBoundingClientRect().width : 0;
+
   var headersDiv = document.getElementById('headers');
   if (headersDiv) {
     headersDiv.style.width = fullWorkspaceWidth + 'px';
@@ -5357,7 +5375,7 @@ StudioApp.prototype.resizeHeaders = function (fullWorkspaceWidth) {
       if (this.editor && this.editor.currentlyUsingBlocks) {
         // Set toolboxWidth based on the block palette width:
         var categories = document.querySelector('.droplet-palette-wrapper');
-        toolboxWidth = parseInt(window.getComputedStyle(categories).width, 10);
+        toolboxWidth = categories.getBoundingClientRect().width;
       }
     } else if (this.isUsingBlockly()) {
       toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
@@ -5370,7 +5388,7 @@ StudioApp.prototype.resizeHeaders = function (fullWorkspaceWidth) {
     var minWorkspaceWidthForShowCode = this.editCode ? 250 : 450;
     if (this.enableShowCode &&
         (fullWorkspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
-      showCodeWidth = parseInt(window.getComputedStyle(showCodeHeader).width, 10);
+      showCodeWidth = showCodeHeader.getBoundingClientRect().width;
       showCodeHeader.style.display = "";
     } else {
       showCodeHeader.style.display = "none";
@@ -5380,7 +5398,7 @@ StudioApp.prototype.resizeHeaders = function (fullWorkspaceWidth) {
   var workspaceHeader = document.getElementById('workspace-header');
   if (workspaceHeader) {
     workspaceHeader.style.width =
-        (fullWorkspaceWidth - toolboxWidth - showCodeWidth) + 'px';
+        (fullWorkspaceWidth - toolboxWidth - clearPuzzleWidth - showCodeWidth) + 'px';
   }
 };
 
@@ -5779,6 +5797,19 @@ StudioApp.prototype.setCheckForEmptyBlocks = function (checkBlocks) {
 };
 
 /**
+ * Add the starting block(s).
+ */
+StudioApp.prototype.setStartBlocks_ = function (config) {
+  var startBlocks = config.level.startBlocks || '';
+  if (config.forceInsertTopBlock) {
+    startBlocks = blockUtils.forceInsertTopBlock(startBlocks,
+        config.forceInsertTopBlock);
+  }
+  startBlocks = this.arrangeBlockPosition(startBlocks, config.blockArrangement);
+  this.loadBlocks(startBlocks);
+};
+
+/**
  *
  */
 StudioApp.prototype.handleUsingBlockly_ = function (config) {
@@ -5832,14 +5863,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
   if (config.afterInject) {
     config.afterInject();
   }
-
-  // Add the starting block(s).
-  var startBlocks = config.level.startBlocks || '';
-  if (config.forceInsertTopBlock) {
-    startBlocks = blockUtils.forceInsertTopBlock(startBlocks, config.forceInsertTopBlock);
-  }
-  startBlocks = this.arrangeBlockPosition(startBlocks, config.blockArrangement);
-  this.loadBlocks(startBlocks);
+  this.setStartBlocks_(config);
 };
 
 /**
@@ -5875,6 +5899,13 @@ StudioApp.prototype.hasExtraTopBlocks = function () {
 };
 
 /**
+ *
+ */
+StudioApp.prototype.hasQuestionMarksInNumberField = function () {
+  return this.feedback_.hasQuestionMarksInNumberField();
+};
+
+/**
  * @param {Blockly.Block} block Block to check
  * @returns true if the block has a connection without a block attached
  */
@@ -5891,7 +5922,7 @@ StudioApp.prototype.hasUnfilledBlock = function () {
   return Blockly.mainBlockSpace.getAllBlocks().some(isUnfilledBlock);
 };
 
-},{"../locale/current/common":190,"./ResizeSensor":1,"./block_utils":17,"./constants.js":43,"./dom":44,"./feedback":63,"./templates/builder.html":159,"./templates/buttons.html":160,"./templates/instructions.html":162,"./templates/learn.html":163,"./templates/makeYourOwn.html":164,"./utils":185,"./xml":186,"url":205}],205:[function(require,module,exports){
+},{"../locale/current/common":189,"./ResizeSensor":1,"./block_utils":17,"./constants.js":43,"./dom":44,"./feedback":63,"./templates/builder.html":158,"./templates/buttons.html":159,"./templates/instructions.html":161,"./templates/learn.html":162,"./templates/makeYourOwn.html":163,"./utils":184,"./xml":185,"url":204}],204:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6600,13 +6631,13 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":201,"querystring":204}],204:[function(require,module,exports){
+},{"punycode":200,"querystring":203}],203:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":202,"./encode":203}],203:[function(require,module,exports){
+},{"./decode":201,"./encode":202}],202:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6693,7 +6724,7 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],202:[function(require,module,exports){
+},{}],201:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6779,7 +6810,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],201:[function(require,module,exports){
+},{}],200:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -7290,7 +7321,7 @@ var isArray = Array.isArray || function (xs) {
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],164:[function(require,module,exports){
+},{}],163:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7310,7 +7341,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":190,"ejs":206}],163:[function(require,module,exports){
+},{"../../locale/current/common":189,"ejs":205}],162:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7332,7 +7363,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":190,"ejs":206}],162:[function(require,module,exports){
+},{"../../locale/current/common":189,"ejs":205}],161:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7352,7 +7383,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":190,"ejs":206}],159:[function(require,module,exports){
+},{"../../locale/current/common":189,"ejs":205}],158:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7372,7 +7403,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":206}],63:[function(require,module,exports){
+},{"ejs":205}],63:[function(require,module,exports){
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
 var HINT_REQUEST_PLACEMENT = {
   NONE: 0,  // This value must not be changed.
@@ -8087,7 +8118,7 @@ FeedbackUtils.prototype.getGeneratedCodeElement_ = function() {
 };
 
 /**
- *
+ * Display the 'Show Code' modal dialog.
  */
 FeedbackUtils.prototype.showGeneratedCode = function(Dialog) {
   var codeDiv = this.getGeneratedCodeElement_();
@@ -8110,6 +8141,49 @@ FeedbackUtils.prototype.showGeneratedCode = function(Dialog) {
   var okayButton = buttons.querySelector('#ok-button');
   if (okayButton) {
     dom.addClickTouchEvent(okayButton, function() {
+      dialog.hide();
+    });
+  }
+
+  dialog.show();
+};
+
+/**
+ * Display the "Clear Puzzle" confirmation dialog.  Calls `callback` if the user
+ * confirms they want to clear the puzzle.
+ */
+FeedbackUtils.prototype.showClearPuzzleConfirmation = function(Dialog, callback) {
+  var codeDiv = document.createElement('div');
+  codeDiv.innerHTML = '<p class="dialog-title">' + msg.clearPuzzleConfirmHeader() + '</p>' +
+      '<p>' + msg.clearPuzzleConfirm() + '</p>';
+
+  var buttons = document.createElement('div');
+  buttons.innerHTML = require('./templates/buttons.html')({
+    data: {
+      clearPuzzle: true,
+      cancel: true
+    }
+  });
+  codeDiv.appendChild(buttons);
+
+  var dialog = this.createModalDialogWithIcon({
+    Dialog: Dialog,
+    contentDiv: codeDiv,
+    icon: this.studioApp_.icon,
+    defaultBtnSelector: '#again-button'
+  });
+
+  var cancelButton = buttons.querySelector('#again-button');
+  if (cancelButton) {
+    dom.addClickTouchEvent(cancelButton, function() {
+      dialog.hide();
+    });
+  }
+
+  var clearPuzzleButton = buttons.querySelector('#continue-button');
+  if (clearPuzzleButton) {
+    dom.addClickTouchEvent(clearPuzzleButton, function() {
+      callback();
       dialog.hide();
     });
   }
@@ -8365,7 +8439,7 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
       return TestResults.INCOMPLETE_BLOCK_IN_FUNCTION;
     }
   }
-  if (this.hasQuestionMarksInNumberField_()) {
+  if (this.hasQuestionMarksInNumberField()) {
     return TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
   }
   if (!this.hasAllRequiredBlocks_(requiredBlocks)) {
@@ -8430,10 +8504,10 @@ FeedbackUtils.prototype.createModalDialogWithIcon = function(options) {
 /**
  * Check for '???' instead of a value in block fields.
  */
-FeedbackUtils.prototype.hasQuestionMarksInNumberField_ = function () {
+FeedbackUtils.prototype.hasQuestionMarksInNumberField = function () {
   return Blockly.mainBlockSpace.getAllBlocks().some(function(block) {
     return block.getTitles().some(function(title) {
-      return title.value_ === '???';
+      return title.value_ === '???' || title.text_ === '???';
     });
   });
 };
@@ -8529,7 +8603,7 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
   });
 };
 
-},{"../locale/current/common":190,"./codegen":42,"./constants":43,"./dom":44,"./feedbackBlocks":64,"./templates/buttons.html":160,"./templates/code.html":161,"./templates/shareFailure.html":167,"./templates/sharing.html":168,"./templates/showCode.html":169,"./templates/trophy.html":170,"./utils":185,"./xml":186}],170:[function(require,module,exports){
+},{"../locale/current/common":189,"./codegen":42,"./constants":43,"./dom":44,"./feedbackBlocks":64,"./templates/buttons.html":159,"./templates/code.html":160,"./templates/shareFailure.html":166,"./templates/sharing.html":167,"./templates/showCode.html":168,"./templates/trophy.html":169,"./utils":184,"./xml":185}],169:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8549,7 +8623,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":206}],169:[function(require,module,exports){
+},{"ejs":205}],168:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8569,7 +8643,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":190,"ejs":206}],168:[function(require,module,exports){
+},{"../../locale/current/common":189,"ejs":205}],167:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8589,7 +8663,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":190,"ejs":206}],167:[function(require,module,exports){
+},{"../../locale/current/common":189,"ejs":205}],166:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8609,7 +8683,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":206}],161:[function(require,module,exports){
+},{"ejs":205}],160:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8629,7 +8703,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":206}],160:[function(require,module,exports){
+},{"ejs":205}],159:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8641,7 +8715,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/current/common'); ; buf.push('\n\n');3; if (data.ok) {; buf.push('  <div class="farSide" style="padding: 1ex 3ex 0">\n    <button id="ok-button" class="secondary">\n      ', escape((5,  msg.dialogOK() )), '\n    </button>\n  </div>\n');8; }; buf.push('\n');9; if (data.previousLevel) {; buf.push('  <button id="back-button" class="launch">\n    ', escape((10,  msg.backToPreviousLevel() )), '\n  </button>\n');12; }; buf.push('\n');13; if (data.tryAgain) {; buf.push('  ');13; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="again-button" class="launch arrow-container arrow-left">\n      <div class="arrow-head"><img src="', escape((14,  data.assetUrl('media/tryagain-arrow-head.png') )), '" alt="Arrowhead" width="67" height="130"/></div>\n      <div class="arrow-text">', escape((15,  msg.tryAgain() )), '</div>\n    </div>\n  ');17; } else {; buf.push('    ');17; if (data.hintRequestExperiment === "left") {; buf.push('      <button id="hint-request-button" class="launch">\n        ', escape((18,  msg.hintRequest() )), '\n      </button>\n      <button id="again-button" class="launch">\n        ', escape((21,  msg.tryAgain() )), '\n      </button>\n    ');23; } else if (data.hintRequestExperiment == "right") {; buf.push('      <button id="again-button" class="launch">\n        ', escape((24,  msg.tryAgain() )), '\n      </button>\n      <button id="hint-request-button" class="launch">\n        ', escape((27,  msg.hintRequest() )), '\n      </button>\n    ');29; } else {; buf.push('      <button id="again-button" class="launch">\n        ', escape((30,  msg.tryAgain() )), '\n      </button>\n    ');32; }; buf.push('  ');32; }; buf.push('');32; }; buf.push('\n');33; if (data.nextLevel) {; buf.push('  ');33; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="continue-button" class="launch arrow-container arrow-right">\n      <div class="arrow-head"><img src="', escape((34,  data.assetUrl('media/next-arrow-head.png') )), '" alt="Arrowhead" width="66" height="130"/></div>\n      <div class="arrow-text">', escape((35,  msg.continue() )), '</div>\n    </div>\n  ');37; } else {; buf.push('    <button id="continue-button" class="launch" style="float: right">\n      ', escape((38,  msg.continue() )), '\n    </button>\n  ');40; }; buf.push('');40; }; buf.push(''); })();
+ buf.push('');1; var msg = require('../../locale/current/common'); ; buf.push('\n\n');3; if (data.ok) {; buf.push('  <div class="farSide" style="padding: 1ex 3ex 0">\n    <button id="ok-button" class="secondary">\n      ', escape((5,  msg.dialogOK() )), '\n    </button>\n  </div>\n');8; }; buf.push('\n');9; if (data.cancel) {; buf.push('<button id="again-button">\n    ', escape((10,  msg.dialogCancel() )), '\n</button>\n');12; }; buf.push('\n');13; if (data.clearPuzzle) {; buf.push('<button id="continue-button" class="launch" style="float: right">\n    ', escape((14,  msg.clearPuzzle() )), '\n</button>\n');16; }; buf.push('\n');17; if (data.previousLevel) {; buf.push('  <button id="back-button" class="launch">\n    ', escape((18,  msg.backToPreviousLevel() )), '\n  </button>\n');20; }; buf.push('\n');21; if (data.tryAgain) {; buf.push('  ');21; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="again-button" class="launch arrow-container arrow-left">\n      <div class="arrow-head"><img src="', escape((22,  data.assetUrl('media/tryagain-arrow-head.png') )), '" alt="Arrowhead" width="67" height="130"/></div>\n      <div class="arrow-text">', escape((23,  msg.tryAgain() )), '</div>\n    </div>\n  ');25; } else {; buf.push('    ');25; if (data.hintRequestExperiment === "left") {; buf.push('      <button id="hint-request-button" class="launch">\n        ', escape((26,  msg.hintRequest() )), '\n      </button>\n      <button id="again-button" class="launch">\n        ', escape((29,  msg.tryAgain() )), '\n      </button>\n    ');31; } else if (data.hintRequestExperiment == "right") {; buf.push('      <button id="again-button" class="launch">\n        ', escape((32,  msg.tryAgain() )), '\n      </button>\n      <button id="hint-request-button" class="launch">\n        ', escape((35,  msg.hintRequest() )), '\n      </button>\n    ');37; } else {; buf.push('      <button id="again-button" class="launch">\n        ', escape((38,  msg.tryAgain() )), '\n      </button>\n    ');40; }; buf.push('  ');40; }; buf.push('');40; }; buf.push('\n');41; if (data.nextLevel) {; buf.push('  ');41; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="continue-button" class="launch arrow-container arrow-right">\n      <div class="arrow-head"><img src="', escape((42,  data.assetUrl('media/next-arrow-head.png') )), '" alt="Arrowhead" width="66" height="130"/></div>\n      <div class="arrow-text">', escape((43,  msg.continue() )), '</div>\n    </div>\n  ');45; } else {; buf.push('    <button id="continue-button" class="launch" style="float: right">\n      ', escape((46,  msg.continue() )), '\n    </button>\n  ');48; }; buf.push('');48; }; buf.push(''); })();
 } 
 return buf.join('');
 };
@@ -8649,7 +8723,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":190,"ejs":206}],190:[function(require,module,exports){
+},{"../../locale/current/common":189,"ejs":205}],189:[function(require,module,exports){
 /*common*/ module.exports = window.blockly.locale;
 },{}],64:[function(require,module,exports){
 var constants = require('./constants');
@@ -8780,7 +8854,7 @@ FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
   return blockXMLStrings.join('');
 };
 
-},{"./constants":43,"./templates/readonly.html":166}],166:[function(require,module,exports){
+},{"./constants":43,"./templates/readonly.html":165}],165:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8801,7 +8875,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":206}],206:[function(require,module,exports){
+},{"ejs":205}],205:[function(require,module,exports){
 
 /*!
  * EJS
@@ -9156,7 +9230,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":207,"./utils":208,"fs":198,"path":199}],208:[function(require,module,exports){
+},{"./filters":206,"./utils":207,"fs":197,"path":198}],207:[function(require,module,exports){
 
 /*!
  * EJS
@@ -9180,7 +9254,7 @@ exports.escape = function(html){
     .replace(/"/g, '&quot;');
 };
  
-},{}],207:[function(require,module,exports){
+},{}],206:[function(require,module,exports){
 
 /*!
  * EJS - Filters
@@ -9379,7 +9453,7 @@ exports.get = function(obj, prop){
 exports.json = function(obj){
   return JSON.stringify(obj);
 };
-},{}],199:[function(require,module,exports){
+},{}],198:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -9607,7 +9681,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require('_process'))
-},{"_process":200}],200:[function(require,module,exports){
+},{"_process":199}],199:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -9666,7 +9740,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],198:[function(require,module,exports){
+},{}],197:[function(require,module,exports){
 
 },{}],42:[function(require,module,exports){
 var utils = require('./utils');
@@ -10094,7 +10168,7 @@ exports.functionFromCode = function(code, options) {
   }
 };
 
-},{"./utils":185}],185:[function(require,module,exports){
+},{"./utils":184}],184:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
 
@@ -10577,7 +10651,7 @@ exports.createUuid = function () {
   });
 };
 
-},{"./hammer":75,"./lodash":83,"./xml":186}],83:[function(require,module,exports){
+},{"./hammer":75,"./lodash":83,"./xml":185}],83:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -16544,7 +16618,7 @@ exports.mathBlockXml = function (type, inputs, titles) {
   return str;
 };
 
-},{"./xml":186}],186:[function(require,module,exports){
+},{"./xml":185}],185:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();

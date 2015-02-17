@@ -8,8 +8,8 @@
   "catText": "Texte",
   "catVariables": "variables",
   "continue": "Continuer",
-  "createHtmlBlock": "créer le bloc html",
-  "createHtmlBlockTooltip": "Crée un bloc de code HTML dans l'application.",
+  "container": "create container",
+  "containerTooltip": "Creates a division container and sets its inner HTML.",
   "finalLevel": "Félicitations ! Vous avez résolu l'énigme finale.",
   "nextLevel": "Félicitations ! Vous avez terminé cette énigme.",
   "no": "Non",
@@ -24,6 +24,6 @@
   "stepIn": "Entrer",
   "stepOver": "Esquiver",
   "stepOut": "Abandonner",
-  "viewData": "View Data",
+  "viewData": "Voir les données",
   "yes": "Oui"
 }

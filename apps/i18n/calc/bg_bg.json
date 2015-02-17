@@ -1,9 +1,13 @@
 {
   "compute": "изчисляване",
+  "emptyComputeBlock": "You must attach a block to the \"compute\" block.",
+  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "equivalentExpression": "Опитайте пренареждане на аргументите, за да получите точно един и същи израз.",
   "extraTopBlocks": "Имате незакачени блокове. Имате ли намерение да ги закачите към изчислителния блок?",
-  "failedInput": "Your function does not return the right result for all values.",
+  "failedInput": "Вашата функция не връща правилният резултат за всички стойности.",
   "goal": "Цел:",
-  "reinfFeedbackMsg": "Тук е вашата история! Продължете работата по нея, или преминете към следващия пъзел!",
-  "yourExpression": "Вашият израз:"
+  "levelIncompleteError": "Your expression does not match the goal.",
+  "reinfFeedbackMsg": "Ето вашето изчисление! Продължете работата по него, или да преминете към следващия пъзел!",
+  "yourExpression": "Вашият израз:",
+  "wrongInput": "You are calling your function with the wrong value."
 }

@@ -163,4 +163,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "goal":function(d){return "Goal:"},
 "levelIncompleteError":function(d){return "Your expression does not match the goal."},
 "reinfFeedbackMsg":function(d){return "Here is your calculation! Continue working on it, or move on to the next puzzle!"},
-"yourExpression":function(d){return "Your expression:"}};
+"yourExpression":function(d){return "Your expression:"},
+"wrongInput":function(d){return "You are calling your function with the wrong value."}};

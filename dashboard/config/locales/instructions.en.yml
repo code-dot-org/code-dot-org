@@ -3,7 +3,8 @@ en:
   data:
     instructions:
       ' (copy 1)_instruction': "Try the \"repeat\" block to use fewer blocks..."
-      '''2-3 Maze sq10_instruction': "Get me to the pig! What blocks got repeated?"
+      10A_instruction: "Alright let's complete this puzzle with a Green Square that
+        is 175 pixels in size."
       2-3 _instruction: "Purple flowers may have either 1 or 0 nectar. Be careful
         not to collect nectar from a purple flower if it doesn't have any."
       2-3 Artist 1 new_instruction: "Hi, I'm an artist. You can write code to make
@@ -46,7 +47,7 @@ en:
       2-3 Artist Debugging 10_instruction: "The direction pad on my game controller
         is too narrow. Hint: Make it wider by 10 pixels"
       2-3 Artist Debugging 11_instruction: "Help me finish my beautiful snowflake.
-        How many times to do I need to repeat to finish it?"
+        How many times do I need to \"repeat\" to finish it?"
       2-3 Artist Debugging 12_instruction: "I'm supposed to add an ocean wave to
         this scene.  Can you help me?"
       2-3 Artist Debugging 2_instruction: "The code for the three whiskers that you
@@ -748,20 +749,6 @@ en:
       Artist Functions 4.0_instruction: "We have given you most of the code to create
         a function. However there seems to be something missing. Can you make this
         function block complete?"
-      ? |-
-        Artist Functions 5.0
-        _instruction
-      : "Are you ready to create your own \"Function Block\"? Click on the \"Functions\"
-        block in the tool box, name it \"draw a triangle\", then create a triangle
-        as you have done before with the Action and Loops blocks. Then click on the
-        Save and Close in the upper right hand corner. Hint: Create a triangle that
-        is 100 pixels in length."
-      Artist Functions 5.0_instruction: "Create your own function block. Click on
-        the \"Functions\" in the tool box, and click on \"create a function.\" Give
-        your function block a name, then create a 40 pixel square as you have done
-        before with the Actions and Loops blocks. Click on the \"Save and Close\"
-        in the upper right hand corner. Hint: Don't forget to drag your new function
-        block from the tool box to the \"When run\" block."
       Artist Functions 5.0_1_instruction: "Are you ready to create your own \"Function
         Block\"? Click on the \"Functions\" block in the tool box, name it \"draw
         a triangle\", then create a triangle as you have done before with the Action
@@ -846,6 +833,48 @@ en:
       Basic_instruction: "No instructions please"
       Bee procedures demo_instruction: "Collect nectar from each flower"
       bee-test-1_instruction: "Get the bee to the nectar"
+      Big Game Animation 1 (copy 1)_instruction: "Now that you've learned to write
+        simple linear functions, let's work on using them to add some movement to
+        our game. Click play to see what your game can currently do (not much!), update
+        any variables you like, and then click finish to move on."
+      Big Game Animation 1_instruction: "Now that you've learned to write simple
+        linear functions, let's work on using them to add some movement to our game.
+        Click play to see what your game can currently do (not much!), update any
+        variables you like, and then click finish to move on."
+      Big Game Animation 2_instruction: "The function 'update-target' function
+        takes the target's current x value, and returns an updated value. Complete
+        the 'update-target' function so that it adds to the x value each time it
+        is called. The more you add to x, the faster the target will go."
+      Big Game Complete_instruction: "A demo of the completed CS in Algebra Big Game
+        project"
+      Big Game Vars 1 (copy 1)_instruction: "Let's get started on your Big Game!
+        Here you'll see a whole bunch of placeholder code that you'll eventually
+        replace with your own, but for now we're only going to worry about defining
+        variables. Click \"Run\" to see what the game looks like with the default
+        values."
+      Big Game Vars 1_instruction: "Let's get started on your Big Game! Here you'll
+        see a whole bunch of placeholder code that you'll eventually replace with
+        your own, but for now we're only going to worry about defining variables.
+        Click \"Run\" to see what the game looks like with the default values."
+      Big Game Vars 2 (copy 1)_instruction: "The first step to making this game your
+        own is to give it a good Title. Click edit on the 'title' and 'subtitle'
+        variables and change them to something new."
+      Big Game Vars 2_instruction: "The first step to making this game your own is
+        to give it a good Title. Click edit on the 'title' and 'subtitle' variables
+        and change them to something new."
+      Big Game Vars 3 (copy 1)_instruction: "Now let's set the background for your
+        new game. Edit the 'bg' variable and select a new background Image from
+        the dropdown."
+      Big Game Vars 3_instruction: "Now let's set the background for your new game.
+        Edit the 'bg' variable and select a new background Image from the dropdown."
+      Big Game Vars 4 (copy 1)_instruction: "Awesome, now you can update the variables
+        for your Player, Target, and Danger. Feel free to play with all of the variables
+        at this point to make your game look like you'd like it to. Click 'finish'
+        when you're done."
+      Big Game Vars 4_instruction: "Awesome, now you can update the variables for
+        your Player, Target, and Danger. Feel free to play with all of the variables
+        at this point to make your game look like you'd like it to. Click 'finish'
+        when you're done."
       BowShoot1_instruction: "Use the repeat block to collect all the nectar!"
       Brendan Artist work_instruction: "none"
       Brendan Test Maze 1_instruction: "Here's my first maze."
@@ -972,13 +1001,13 @@ en:
         you write an expression that calculates \"age\" in days?"
       Calc Vars 1_instruction: "Variables allow us to store values that we can then
         use repeatedly throughout our programs. Here's a variable called \"age\"
-        - set it to  14 and click run."
+        - set its value to 14 and click run."
       Calc Vars 2 (copy 1)_instruction: "Here we've set the \"age\" variable to
         17 - can you write an expression that calculates \"age\" in months?"
       Calc Vars 2.1_instruction: "You can actually set a variable using the value
-        of another variable! Here's a new variable called \"months\" - use the expression
-        you came up with in the last puzzle to set \"months\" to the number of months
-        in \"age\""
+        of another variable! Here's a new variable called \"age in months\" - use
+        the expression you came up with in the last puzzle to set \"age in months\"
+        to the number of months in \"age\""
       Calc Vars 2_instruction: "Can you write an expression that calculates \"age\"
         in months?"
       Calc Vars 3 (copy 1)_instruction: "Can you add to this code so that it calculates
@@ -1576,8 +1605,29 @@ en:
       Eval Cond 5_instruction: "Here's a similar function \"red shape\" with an
         additional parameter for size. Complete the conditionals so the correct image
         is drawn for \"circle,\" \"triangle,\" and \"star.\""
+      Eval Cond 6_instruction: "Write a function called food-critic, which takes
+        in the name of a food and produces a String that says how you feel about that
+        food. For example, (food-critic “pizza”) might evaluate to “delicious”, but
+        (food-critic “rotten eggs”) might evaluate to “gross!”. Choose at least two
+        foods to review, but you can you write more if you like!  Don’t forget to
+        add an “else” clause!\r\nOne example - and part of the definition -  has already
+        been done for you!"
+      Eval Cond 7_instruction: "Write a function called green-shape, which takes
+        in the name of a shape and produces a solid green shape. Your function should
+        work with at least “circle”, “star” and “rectangle”, but you can add other
+        shapes if you like. You can choose the size of each shape. Don’t forget to
+        add an “else” clause!\r\nOne example - and part of the definition -  has already
+        been done for you!\r\n"
+      Eval Cond 8_instruction: "Suppose you want to own a car at 21, or have your
+        own business by 30. Write a function called life-goals, which takes in an
+        age and produces a string that describes your life goals by then. Don’t forget
+        to add an “else” clause!\r\n"
       Eval Contracts 1_instruction: "Use the \"star\" function to produce a red star
         with a 60 pixel radius"
+      Eval Contracts 10A_instruction: "Alright let's complete this puzzle with a
+        Green Square that is 175 pixels in size."
+      Eval Contracts 11A_instruction: "Can you complete this puzzle to read \"Hello
+        World\" in the banner?"
       Eval Contracts 2_instruction: "Check out the \"rotate\" function - can you
         use it to rotate this 90 pixel green square by 45 degrees?"
       Eval Contracts 3_instruction: "Try using the \"text\" function to write this
@@ -1590,6 +1640,16 @@ en:
         is scaled either larger or smaller than the input image. Try scaling this
         circle by a factor of 10 - how is the resulting image different than if you'd
         just made a circle of that size in the first place?"
+      Eval Contracts 8A_instruction: "Can you complete this puzzle? The big-triangle
+        is 200 pixels in size and purple?"
+      Eval Contracts A_instruction: "Use the \"star\" function to produce a red star
+        with a 60 pixel radius"
+      Eval Contracts C_instruction: "Check out the \"rotate\" function - can you
+        use it to rotate this 90 pixel green square by 45 degrees?"
+      Eval Contracts E_instruction: "Try using the \"text\" function to write this
+        teal text at size 40."
+      Eval Contracts shrink_instruction: "Can you complete this image using the \"shrink\"
+        function block? The radius is 20. "
       Eval Define Funcs 1_instruction: "Here's a new function called \"green-triangle\"
         that takes a single Number for size and produces a green triangle. Use the
         new function to create a 125 pixel green triangle"
@@ -1670,7 +1730,7 @@ en:
         controls its style. Draw this orange outlined circle using the special string
         block with a dropdown to make sure you only use valid styles."
       Eval Strings Images 4_instruction: "Try using the \"rectangle\" block to draw
-        this blue rectangle - it is 175 pixels wide and 100 pixels tall."
+        this red rectangle - it is 175 pixels wide and 100 pixels tall."
       Eval Strings Images 5_instruction: "Try using this new Evaluation Block called
         \"overlay\" to place a 100 pixel white triangle on top of a 200 pixel red
         circle."
@@ -1776,9 +1836,10 @@ en:
       Infinity_catch_instruction: "Control Anna to catch Elsa who is moving back
         and forth."
       Infinity_finale_instruction: "Create anything you like and share it!"
-      Infinity_move_collide_instruction: "Move Hiro right to Baymax, and play a sound
-        when they touch."
-      Infinity_move_directions_instruction: "Move Baymax to touch two other characters."
+      Infinity_move_collide_instruction: "Hiro is Actor 1.  Move him right to Baymax,
+        and play a sound when they touch."
+      Infinity_move_directions_instruction: "Baymax is Actor 3.  Add Move blocks
+        and then move him using the arrows.  Make him touch two other characters."
       Infinity_move_right_instruction: "Move Hiro right to Baymax."
       Infinity_repeat_instruction: "Use a \"repeat forever\" block to make Elsa move
         up and down 400 pixels."
@@ -1940,8 +2001,16 @@ en:
       maze level test_instruction: "Do this!"
       Maze screenshot Work_instruction: "Test instructions"
       Maze_111111_instruction: "Move the bird east to get to the pig"
+      MSM Big Game Empty_instruction: "All variables and functions are currently
+        empty stubs. Each puzzle progression will be focused on defining and handful
+        of them, and therefore adding functionality."
+      MSM Big Game Vars 1 (copy 1)_instruction: "In the Variables toolbox you'll
+        see several variables that define how your game characters look, move, and
+        interact"
       MSM Big Game Vars 1_instruction: "In the Variables toolbox you'll see several
         variables that define how your game characters look, move, and interact"
+      MSM Big Game Vars Backup_instruction: "In the Variables toolbox you'll see
+        several variables that define how your game characters look, move, and interact"
       MSM Defining Vars 1 (copy 1)_instruction: "Write a program that produces a
         50 pixel solid green triangle."
       MSM Defining Vars 1_instruction: "Write a program that produces a 50 pixel
@@ -1983,6 +2052,8 @@ en:
       Neat Eval Functions_instruction: "Check out these sweet functions."
       NEW Artist Artist Functions 3_instruction: "Here is a new type of Block. It
         is called a \"Function block.\" Click on \"RUN\" to see what it can do. "
+      New Artist Project_instruction: "Draw something awesome! Your code is saved
+        as a project that you can return to at any time."
       NEW Course 2 Artist Functions 12_instruction: "Can you create a new function
         called \"draw a line of squares\" function?"
       NEW Course 4 Artist Functions 1_instruction: "Can you draw a square that is
@@ -2041,6 +2112,9 @@ en:
         pixels."
       NEW Course 4 Artist Params 14_instruction: "Can you recreate these shapes?
         Drag the \"length\" parameter into the function definition. "
+      NEW Course 4 Artist Params 15 (copy 1)_instruction: "Freeplay: Here are the
+        functions you've written, and some more for you to play with. Draw something
+        awesome!"
       NEW Course 4 Artist Params 15_instruction: "Freeplay: Here are the functions
         you've written, and some more for you to play with. Draw something awesome!"
       NEW Course 4 Artist Params 2 _instruction: "Create a “draw a triangle function
@@ -2120,6 +2194,8 @@ en:
       NEW Course 4 Bee For Loops 9_instruction: "If your loop is counting down, the
         increment is subtracted from your counter variable each loop. What should
         your increment be to collect 9, then 6, and then 3 nectar?"
+      NEW Course 4 Play Lab Params 11 (copy 1)_instruction: "It's Free Play time!
+        Have fun with all the blocks in your tool box. "
       NEW Course 4 Play Lab Params 11_instruction: "It's Free Play time! Have fun
         with all the blocks in your tool box. "
       NEW Course 4 Play Lab Params 5 5_instruction: "Fill in actor parameter inputs
@@ -2128,13 +2204,15 @@ en:
         do? Press “Run” to see what happens.”"
       NEW Course 4 Play Labs For Loops 8 Free Play_instruction: "It's Free Play
         time, have fun with all the blocks in your tool box. "
+      New Play Lab Project_instruction: "Create your own story or game! Your code
+        is saved as a project you can return to at any time."
       Ninjacat Demo B (copy 1)_instruction: "\r\nLet’s begin by exploring a simple
         videogame, and then figuring out how it works. You can use the arrow keys
         to move the ninja left, right and jump - try to catch the unicorn and avoid
         the dragon!\r\n\r\n\r\n\r\n  \r\n\r\n"
-      Ninjacat Demo B_instruction: "\r\nLet’s begin by exploring a simple videogame,
+      Ninjacat Demo B_instruction: "Let’s begin by exploring a simple videogame,
         and then figuring out how it works. You can use the arrow keys to move the
-        ninja left, right and jump - try to catch the unicorn and avoid the dragon!\r\n\r\n\r\n\r\n  \r\n\r\n"
+        ninja left, right and jump - try to catch the unicorn and avoid the dragon!"
       perpendicular_instruction: "Now let's see if we can create two perpendicular
         lines. Perpendicular lines are two lines that intersect at a right, or 90
         degree, angle."
@@ -2163,12 +2241,12 @@ en:
         function that describes a rocket that travels at \"seconds\" squared meters
         per second."
       Play Lab Rocket 4_instruction: "Real rockets start off slowly and gain speed
-        over time - let's make ours do the same! Can you write a function that makes
-        the rocket start at 10 m/s at 1 second, 20 m/s at 2 seconds, 30 m/s and 3
-        seconds, and so on?"
-      Play Lab Rocket 5_instruction: "That's much better, but I think our rocket
-        can go faster than 1 m/s^2 - let's write a function that accelerates the
-        rocket at 10 m/s^2."
+        over time - let's add some simple acceleration to it! Can you write a function
+        that describes a rocket that is at 10 meters at 1 second, 40 meters at 2 seconds,
+        90 meters at 3 seconds, 160 at 4 seconds and so on?"
+      Play Lab Rocket 5_instruction: "Much better, but let's write one more function
+        with simple acceleration. This time the rocket should be 20 meters at 1 second,
+        50 meters at 2 seconds, 100 at 3 seconds, and 170 at 4 seconds."
       Play Labs For Loops 3_instruction: "If we count by larger numbers we could
         go even higher. Try making the dog count from 10 up to 1000 10 at a time."
       Play Labs For Loops 4_instruction: "Changing the increment can be helpful,
@@ -2239,6 +2317,8 @@ en:
       scrat 20_instruction: "Can you add just 3 blocks to help me solve a more complex
         maze? If you do it right, I can walk any curvy path no matter the length.
         Hurry! The ice is melting!"
+      shrink_instruction: "Can you complete this puzzle by writing out \"Hello World!\"
+        in solid red text that is 40 pixels in size?"
       snowflake base_instruction: "Create these 3 lines that are 45 degrees apart"
       snowflake branch_instruction: "Now let's make each line 30 pixels long. Create
         the first branch of a snowflake by repeating the 3 line pattern three times."
@@ -2264,6 +2344,11 @@ en:
       : "Welcome to Artist! First off, let's try to make a simple square using the
         turn block and move forward block."
       Standalone_Artist_1_instruction: "Welcome to Artist! First off, let's try
+        to make a simple square using the turn right block and move forward block.
+        Each side should be 100 pixels long."
+      Standalone_Artist_1v1_instruction: "Welcome to Artist! First off, let's try
+        to make a simple square using the turn block and move forward block."
+      Standalone_Artist_1v2_instruction: "Welcome to Artist! First off, let's try
         to make a simple square using the turn right block and move forward block.
         Each side should be 100 pixels long."
       Standalone_Artist_2_instruction: "Draw this diamond with 120 and 60 degree
@@ -2293,6 +2378,9 @@ en:
       Standalone_Artist_9_instruction: "Now go ahead and make whatever picture you'd
         like! You've even got an empty function that you can make do whatever you
         want!"
+      Standalone_Artist_v2_instruction: "Welcome to Artist! First off, let's try
+        to make a simple square using the turn right block and move forward block.
+        Each side should be 100 pixels long."
       temp_for_ross_instruction: "This pig is ruffling my feathers. Help me find
         him!"
       Test Artist Level_instruction: "This is a test artist level"

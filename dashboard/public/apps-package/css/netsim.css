@@ -79,3 +79,16 @@
   border: solid darkgray thin;
   margin: 0.5em;
   padding: 0.5em; }
+
+#netsim_router_panel #dns_mode_control input[type="radio"] {
+  vertical-align: middle;
+  margin: 0; }
+#netsim_router_panel #dns_mode_control label {
+  display: inline;
+  margin-left: 1em; }
+#netsim_router_panel #netsim_router_network_table .localNode {
+  font-weight: bold;
+  background-color: lightcyan; }
+#netsim_router_panel #netsim_router_network_table .dnsNode {
+  color: white;
+  background-color: darkorange; }

@@ -397,6 +397,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "soundWood":function(d){return "چوب"},
 "speed":function(d){return "سرعت"},
 "startSetValue":function(d){return "شروع (تابع ارتفاع موشک)"},
+"startSetVars":function(d){return "game_vars (title, subtitle, background, target, danger, player)"},
+"startSetFuncs":function(d){return "game_funcs (update-target, update-danger, update-player, collide?, on-screen?)"},
 "stopSprite":function(d){return "بایست"},
 "stopSpriteN":function(d){return "توقف بازیگر "+appLocale.v(d,"spriteIndex")},
 "stopTooltip":function(d){return "حرکت یک عملگر را متوقف می کند."},

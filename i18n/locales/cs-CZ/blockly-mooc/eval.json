@@ -1,7 +1,10 @@
 {
+  "badColorStringError":"You used an invalid color string: {val}",
+  "badStyleStringError":"You used an invalid style string: {val}",
   "circleBlockTitle":"kruh (poloměr, styl, barva)",
   "displayBlockTitle":"zobraz",
   "ellipseBlockTitle":"Elipsa (šířka, výška, styl, barva)",
+  "emptyFunctionalBlock":"You have a block with an unfilled input.",
   "extraTopBlocks":"Máš nepřipojené bloky. Nechceš je připojit k bloku \"zobraz\"?",
   "overlayBlockTitle":"překrytí (zhora, zdola)",
   "placeImageBlockTitle":"umístit obrázek (x, y, obrázek)",

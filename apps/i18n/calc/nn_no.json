@@ -1,9 +1,13 @@
 {
   "compute": "beregn",
+  "emptyComputeBlock": "You must attach a block to the \"compute\" block.",
+  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "equivalentExpression": "Prøv å endre rekkefølgen på argumentene dine for å få nøyaktig samme uttrykk.",
   "extraTopBlocks": "Du har ledige blokker. Mente du å knytte disse til \"beregn\" blokken?",
   "failedInput": "Your function does not return the right result for all values.",
   "goal": "Mål:",
+  "levelIncompleteError": "Your expression does not match the goal.",
   "reinfFeedbackMsg": "Her er din historie! Fortset arbeidet, eller gå vidare til neste puslespel!",
-  "yourExpression": "Ditt uttrykk:"
+  "yourExpression": "Ditt uttrykk:",
+  "wrongInput": "You are calling your function with the wrong value."
 }

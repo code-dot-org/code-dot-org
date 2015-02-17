@@ -23,6 +23,7 @@
   "COLOUR_RGB_RED":"màu đỏ",
   "COLOUR_RGB_TITLE":"tô màu với",
   "COLOUR_RGB_TOOLTIP":"Tạo một màu theo lượng màu đỏ, xanh lá cây, xanh da trời được chỉ định. Tất cả các giá trị phải nằm trong khoảng từ 0 tới 100.",
+  "CONTRACT_EDITOR_HEADER":"Design Recipe",
   "CONTROLS_FLOW_STATEMENTS_HELPURL":"https:\/\/code.google.com\/p\/blockly\/wiki\/Loops#Loop_Termination_Blocks",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK":"thoát khỏi vòng lặp",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE":"sang lần lặp tiếp theo",
