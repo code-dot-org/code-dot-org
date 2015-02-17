@@ -1,7 +1,3 @@
-#epiceditor{style: 'height: 350px;'}
-= stylesheet_link_tag    'editor/external_editor', media: 'all'
-= javascript_include_tag 'editor/external_editor'
-
 :css
   textarea { width: 100% }
 - if @filename
@@ -10,3 +6,33 @@
   - cols = @dsl_file ? @dsl_file.lines.max_by(&:length).length : 20
   - rows = @dsl_file ? @dsl_file.lines.count + 1 : 10
   = text_area_tag('level[dsl_text]', @dsl_file || (@level.dsl_default), rows: rows, cols: cols, style: 'width:500px')
+
+%p Markdown Editor
+#epiceditor{style: 'height: 350px; border: 5px;'}
+= stylesheet_link_tag    'editor/markdown_editor', media: 'all'
+= javascript_include_tag 'editor/markdown_editor'
+
+:javascript
+  var dslElement = $('#level_dsl_text');
+  var dslText = dslElement.val();
+  // Match against markdown heredoc syntax and capture contents in [2].
+  var regex = /markdown <<(\w*)\n([\s\S]*)\n\1$/m;
+  var match = regex.exec(dslText);
+  if(match && match[2]) {
+    var markdownText = match[2];
+    epicEditor.importFile('markdown', markdownText);
+    epicEditor.load('markdown')
+  } else {
+    epicEditor.importFile('markdown', '');
+    epicEditor.load('markdown')
+  }
+  epicEditor.on('update', function () {
+    var editorText = epicEditor.exportFile();
+    var dslText = dslElement.val();
+    if(regex.exec(dslText)) {
+      var replacedText = dslText.replace(regex,'markdown <<$1\n' + editorText + '\n$1');
+    } else {
+      var replacedText = dslText + '\nmarkdown <<MARKDOWN\n' + editorText + '\nMARKDOWN';
+    }
+    dslElement.val(replacedText);
+  });
