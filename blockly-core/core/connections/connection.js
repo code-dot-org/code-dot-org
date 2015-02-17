@@ -436,6 +436,10 @@ Blockly.Connection.prototype.unhighlight = function() {
  *
  */
 Blockly.Connection.prototype.getNotchPaths = function () {
+  if (Blockly.Connection.NOTCH_PATHS_OVERRIDE) {
+    return Blockly.Connection.NOTCH_PATHS_OVERRIDE;
+  }
+
   var constraints = this && this.check_ || [];
   if (constraints.length === 1 && constraints[0] === 'function') {
     return SQUARE_NOTCH_PATHS;
