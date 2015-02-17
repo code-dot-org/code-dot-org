@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({134:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({136:[function(require,module,exports){
 var appMain = require('../appMain');
 var studioApp = require('../StudioApp').singleton;
 var NetSim = require('./netsim');
@@ -15,7 +15,7 @@ window.netsimMain = function(options) {
   appMain(netSim, levels, options);
 };
 
-},{"../StudioApp":2,"../appMain":3,"./levels":133,"./netsim":135,"./skins":138}],138:[function(require,module,exports){
+},{"../StudioApp":2,"../appMain":3,"./levels":135,"./netsim":137,"./skins":140}],140:[function(require,module,exports){
 var skinBase = require('../skins');
 
 exports.load = function (assetUrl, id) {
@@ -23,26 +23,7 @@ exports.load = function (assetUrl, id) {
   return skin;
 };
 
-},{"../skins":141}],135:[function(require,module,exports){
-/**
- * Internet Simulator
- *
- * Copyright 2015 Code.org
- * http://code.org/
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
+},{"../skins":143}],137:[function(require,module,exports){
 /**
  * @fileoverview Internet Simulator app for Code.org.
  */
@@ -75,7 +56,7 @@ var RunLoop = require('./RunLoop');
  * The top-level Internet Simulator controller.
  * @param {StudioApp} studioApp The studioApp instance to build upon.
  */
-var NetSim = function () {
+var NetSim = module.exports = function () {
   this.skin = null;
   this.level = null;
   this.heading = 0;
@@ -102,8 +83,6 @@ var NetSim = function () {
    */
   this.runLoop_ = new RunLoop();
 };
-
-module.exports = NetSim;
 
 
 /**
@@ -209,12 +188,10 @@ NetSim.prototype.initWithUserName_ = function (user) {
   var lobbyContainer = document.getElementById('netsim_lobby_container');
   this.lobbyControl_ = NetSimLobby.createWithin(lobbyContainer,
       this.connection_, user, this.getOverrideShardID());
-  this.lobbyControl_.attachToRunLoop(this.runLoop_);
 
   var routerPanelContainer = document.getElementById('netsim_tabpanel');
   this.routerPanel_ = NetSimRouterPanel.createWithin(routerPanelContainer,
       this.connection_);
-  this.routerPanel_.attachToRunLoop(this.runLoop_);
 
   var sendWidgetContainer = document.getElementById('netsim_send');
   this.sendWidget_ = NetSimSendWidget.createWithin(sendWidgetContainer,
@@ -270,7 +247,7 @@ NetSim.prototype.onResizeOverride_ = function() {
   div.style.width = parentWidth + 'px';
 };
 
-},{"./DashboardUser":111,"./NetSimConnection":112,"./NetSimLobby":115,"./NetSimLogWidget":117,"./NetSimRouterPanel":124,"./NetSimSendWidget":126,"./RunLoop":131,"./controls.html":132,"./page.html":136}],136:[function(require,module,exports){
+},{"./DashboardUser":111,"./NetSimConnection":113,"./NetSimLobby":117,"./NetSimLogWidget":120,"./NetSimRouterPanel":126,"./NetSimSendWidget":128,"./RunLoop":133,"./controls.html":134,"./page.html":139}],139:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -294,7 +271,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":187,"../../locale/current/netsim":192,"ejs":203}],133:[function(require,module,exports){
+},{"../../locale/current/common":189,"../../locale/current/netsim":194,"ejs":205}],135:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/netsim');
@@ -308,9 +285,9 @@ levels.netsim_demo = {
   'freePlay': true
 };
 
-},{"../../locale/current/netsim":192}],192:[function(require,module,exports){
+},{"../../locale/current/netsim":194}],194:[function(require,module,exports){
 /*netsim*/ module.exports = window.blockly.appLocale;
-},{}],132:[function(require,module,exports){
+},{}],134:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -330,28 +307,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":203}],131:[function(require,module,exports){
-/**
- * Copyright 2015 Code.org
- * http://code.org/
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-/**
- * @fileoverview Simple run-loop manager
- */
-
+},{"ejs":205}],133:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -394,10 +350,10 @@ var FALLBACK_MS_PER_TICK = (1000 / FALLBACK_FPS);
 
 
 /**
- *
+ * Simple run-loop manager
  * @constructor
  */
-var RunLoop = function () {
+var RunLoop = module.exports = function () {
 
   /**
    * Whether the run-loop will continue running.
@@ -425,7 +381,6 @@ var RunLoop = function () {
   /** @type {ObservableEvent} */
   this.render = new ObservableEvent();
 };
-module.exports = RunLoop;
 
 /**
  * Simple tracking for time values
@@ -492,28 +447,7 @@ RunLoop.prototype.end = function () {
   this.enabled = false;
 };
 
-},{"./ObservableEvent":130}],126:[function(require,module,exports){
-/**
- * Copyright 2015 Code.org
- * http://code.org/
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-/**
- * @fileoverview Generator and controller for message sending view.
- */
-
+},{"./ObservableEvent":132}],128:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -533,11 +467,11 @@ var dom = require('../dom');
 
 
 /**
- *
+ * Generator and controller for message sending view.
  * @param {NetSimConnection} connection
  * @constructor
  */
-var NetSimSendWidget = function (connection) {
+var NetSimSendWidget = module.exports = function (connection) {
   /**
    * Connection that owns the router we will represent / manipulate
    * @type {NetSimConnection}
@@ -547,7 +481,6 @@ var NetSimSendWidget = function (connection) {
   this.connection_.statusChanges
       .register(this.onConnectionStatusChange_.bind(this));
 };
-module.exports = NetSimSendWidget;
 
 /**
  * Generate a new NetSimSendWidget, puttig it on the page and hooking
@@ -604,7 +537,7 @@ NetSimSendWidget.prototype.onSendButtonPress_ = function () {
   });
 };
 
-},{"../dom":44,"./NetSimSendWidget.html":125}],125:[function(require,module,exports){
+},{"../dom":44,"./NetSimSendWidget.html":127}],127:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -624,28 +557,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":203}],124:[function(require,module,exports){
-/**
- * Copyright 2015 Code.org
- * http://code.org/
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-/**
- * @fileoverview Generator and controller for router information view.
- */
-
+},{"ejs":205}],126:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -661,46 +573,40 @@ return buf.join('');
 'use strict';
 
 var markup = require('./NetSimRouterPanel.html');
-var periodicAction = require('./periodicAction');
+var NetSimRouterNode = require('./NetSimRouterNode');
+var DnsMode = NetSimRouterNode.DnsMode;
+var NetSimLogger = require('./NetSimLogger');
+
+var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
 
 /**
- * How often the lobby should be auto-refreshed.
- * @type {number}
- * @const
- */
-var AUTO_REFRESH_INTERVAL_MS = 5000;
-
-/**
- *
+ * Generator and controller for router information view.
  * @param {NetSimConnection} connection
  * @constructor
  */
-var NetSimRouterPanel = function (connection) {
+var NetSimRouterPanel = module.exports = function (connection) {
   /**
    * Connection that owns the router we will represent / manipulate
    * @type {NetSimConnection}
    * @private
    */
   this.connection_ = connection;
-  this.connection_.statusChanges
-      .register(this.onConnectionStatusChange_.bind(this));
+  this.connection_.shardChange.register(this.onShardChange_.bind(this));
+  logger.info("RouterPanel registered to connection shardChange");
 
   /**
-   * Helper for triggering refresh on a regular interval
-   * @type {periodicAction}
-   * @private
+   *
+   * @type {NetSimLocalClientNode}
    */
-  this.periodicRefresh_ = periodicAction(this.refresh.bind(this),
-      AUTO_REFRESH_INTERVAL_MS);
+  this.myLocalNode = null;
 
   /**
    * Cached reference to router
-   * @type {NetSimNodeRouter}
+   * @type {NetSimRouterNode}
    * @private
    */
-  this.myConnectedRouter = undefined;
+  this.myConnectedRouter = null;
 };
-module.exports = NetSimRouterPanel;
 
 /**
  * Generate a new NetSimRouterPanel, puttig it on the page and hooking
@@ -723,36 +629,71 @@ NetSimRouterPanel.createWithin = function (element, connection) {
  */
 NetSimRouterPanel.prototype.bindElements_ = function () {
   this.rootDiv_ = $('#netsim_router_panel');
+
+  this.dnsModeRadios_ = this.rootDiv_.find('input[type="radio"][name="dns_mode"]');
+  this.dnsModeRadios_.change(this.onDnsModeChange_.bind(this));
+
+  this.dnsModeManualControls_ = this.rootDiv_.find('#dns_mode_manual_controls');
+  this.becomeDnsButton_ = this.dnsModeManualControls_.find('#become_dns_button');
+  this.becomeDnsButton_.click(this.onBecomeDnsButtonClick_.bind(this));
+
   this.connectedSpan_ = this.rootDiv_.find('#connected');
   this.notConnectedSpan_ = this.rootDiv_.find('#not_connected');
   this.networkTable_ = this.rootDiv_.find('#netsim_router_network_table');
 };
 
 /**
- * Attach own handlers to run loop events.
- * @param {RunLoop} runLoop
+ * Called whenever the connection notifies us that we've connected to,
+ * or disconnected from, a shard.
+ * @param {NetSimShard} newShard - null if disconnected.
+ * @param {NetSimLocalClientNode} localNode - null if disconnected
+ * @private
  */
-NetSimRouterPanel.prototype.attachToRunLoop = function (runLoop) {
-  this.periodicRefresh_.attachToRunLoop(runLoop);
+NetSimRouterPanel.prototype.onShardChange_= function (newShard, localNode) {
+  this.myLocalNode = localNode;
+  if (localNode) {
+    localNode.routerChange.register(this.onRouterChange_.bind(this));
+    logger.info("RouterPanel registered to localNode routerChange");
+  }
 };
 
 /**
- * Handler for connection status changes.  Can update configuration and
- * trigger a refresh of this view.
+ * Called whenever the local node notifies that we've been connected to,
+ * or disconnected from, a router.
+ * @param {?NetSimWire} wire - null if disconnected.
+ * @param {?NetSimRouterNode} router - null if disconnected
  * @private
  */
-NetSimRouterPanel.prototype.onConnectionStatusChange_ = function () {
-  if (this.connection_.isConnectedToRouter()) {
-    if (this.connection_.myNode.myRouter !== this.myConnectedRouter) {
-      this.myConnectedRouter = this.connection_.myNode.myRouter;
-      this.periodicRefresh_.enable();
-      // TODO : Attach to router change listener
-    }
-  } else {
-    this.myConnectedRouter = undefined;
-    this.refresh();
-    this.periodicRefresh_.disable();
+NetSimRouterPanel.prototype.onRouterChange_ = function (wire, router) {
+  this.myConnectedRouter = router;
+  this.refresh();
+  if (router) {
+    router.stateChange.register(this.onRouterStateChange_.bind(this));
+    logger.info("RouterPanel registered to router stateChange");
+
+    router.wiresChange.register(this.onRouterWiresChange_.bind(this));
+    logger.info("RouterPanel registered to router wiresChange");
   }
+};
+
+NetSimRouterPanel.prototype.onRouterStateChange_ = function () {
+  this.refresh();
+};
+
+NetSimRouterPanel.prototype.onRouterWiresChange_ = function () {
+  this.refreshAddressTable_(this.myConnectedRouter.getAddressTable());
+};
+
+NetSimRouterPanel.prototype.onDnsModeChange_ = function () {
+  var router = this.myConnectedRouter;
+  router.dnsMode = this.dnsModeRadios_.siblings(':checked').val();
+  router.update();
+};
+
+NetSimRouterPanel.prototype.onBecomeDnsButtonClick_ = function () {
+  var router = this.myConnectedRouter;
+  router.dnsNodeID = this.myLocalNode.entityID;
+  router.update();
 };
 
 /** Update the address table to show the list of nodes in the local network. */
@@ -760,24 +701,66 @@ NetSimRouterPanel.prototype.refresh = function () {
   if (this.myConnectedRouter) {
     this.connectedSpan_.show();
     this.notConnectedSpan_.hide();
-
-    var self = this;
-    this.myConnectedRouter.getAddressTable(function (rows) {
-      self.networkTable_.empty();
-      $('<tr><th>Hostname</th><th>Address</th></tr>')
-          .appendTo(self.networkTable_);
-      rows.forEach(function (row) {
-        $('<tr><td>' + row.hostname + '</td><td>' + row.address + '</td></tr>')
-            .appendTo(self.networkTable_);
-      });
-    });
+    this.refreshDnsModeSelector_();
+    this.refreshAddressTable_(this.myConnectedRouter.getAddressTable());
   } else {
     this.notConnectedSpan_.show();
     this.connectedSpan_.hide();
   }
 };
 
-},{"./NetSimRouterPanel.html":123,"./periodicAction":137}],123:[function(require,module,exports){
+NetSimRouterPanel.prototype.refreshDnsModeSelector_ = function () {
+  var dnsMode = this.getDnsMode_();
+
+  this.dnsModeRadios_
+      .siblings('[value="' + dnsMode + '"]')
+      .prop('checked', true);
+
+  if (dnsMode === DnsMode.MANUAL) {
+    this.dnsModeManualControls_.show();
+  } else {
+    this.dnsModeManualControls_.hide();
+  }
+};
+
+NetSimRouterPanel.prototype.refreshAddressTable_ = function (addressTableData) {
+  var dnsMode = this.getDnsMode_();
+  var tableBody = this.networkTable_.find('tbody');
+  tableBody.empty();
+
+  addressTableData.forEach(function (row) {
+    var displayHostname = row.hostname;
+    if (row.isDnsNode && dnsMode !== DnsMode.NONE) {
+      displayHostname += " (DNS)";
+    }
+    var displayAddress = '';
+    if (dnsMode === DnsMode.NONE || row.isDnsNode || row.isLocal) {
+      displayAddress = row.address;
+    }
+
+    var tableRow = $('<tr>');
+    $('<td>').html(displayHostname).appendTo(tableRow);
+    $('<td>').html(displayAddress).appendTo(tableRow);
+
+    if (row.isLocal) {
+      tableRow.addClass('localNode');
+    }
+
+    if (row.isDnsNode && dnsMode !== DnsMode.NONE) {
+      tableRow.addClass('dnsNode');
+    }
+
+    tableRow.appendTo(tableBody);
+  });
+};
+
+NetSimRouterPanel.prototype.getDnsMode_ = function () {
+  if (this.myConnectedRouter) {
+    return this.myConnectedRouter.dnsMode;
+  }
+  return DnsMode.NONE;
+};
+},{"./NetSimLogger":121,"./NetSimRouterNode":124,"./NetSimRouterPanel.html":125}],125:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -789,7 +772,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<div id="netsim_router_panel">\n  <span id="not_connected">No router connected.</span>\n  <span id="connected">\n    <h1>My network</h1>\n    <table id="netsim_router_network_table">\n      <tr>\n        <th>Name</th>\n        <th>Address</th>\n      </tr>\n    </table>\n  </span>\n</div>'); })();
+ buf.push('<div id="netsim_router_panel">\n  <span id="not_connected">No router connected.</span>\n  <span id="connected">\n    <div id="dns_mode_control">\n      <h1>DNS Mode</h1>\n      <input id="dns_mode_none" type="radio" name="dns_mode" value="none" /><label for="dns_mode_none">None</label>\n      <br/><input id="dns_mode_manual" type="radio" name="dns_mode" value="manual" /><label for="dns_mode_manual">Manual</label>\n      <br/><input id="dns_mode_automatic" type="radio" name="dns_mode" value="automatic" /><label for="dns_mode_automatic">Automatic</label>\n    </div>\n    <div id="dns_mode_manual_controls">\n      <input id="become_dns_button" type="button" value="Become DNS" />\n    </div>\n    <div id="network_table">\n      <h1>My network</h1>\n      <table id="netsim_router_network_table">\n        <thead>\n          <tr>\n            <th>Hostname</th>\n            <th>Address</th>\n          </tr>\n        </thead>\n        <tbody></tbody>\n      </table>\n    </div>\n  </span>\n</div>'); })();
 } 
 return buf.join('');
 };
@@ -797,28 +780,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":203}],117:[function(require,module,exports){
-/**
- * Copyright 2015 Code.org
- * http://code.org/
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-/**
- * @fileoverview Generator and controller for message log.
- */
-
+},{"ejs":205}],120:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -838,11 +800,11 @@ var dom = require('../dom');
 
 
 /**
+ * Generator and controller for message log.
  * @constructor
  */
-var NetSimLogWidget = function () {
+var NetSimLogWidget = module.exports = function () {
 };
-module.exports = NetSimLogWidget;
 
 /**
  * Static counter used to generate/uniquely identify different instances
@@ -905,7 +867,7 @@ NetSimLogWidget.prototype.log = function (message) {
   }
 };
 
-},{"../dom":44,"./NetSimLogWidget.html":116}],116:[function(require,module,exports){
+},{"../dom":44,"./NetSimLogWidget.html":119}],119:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -925,28 +887,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":203}],115:[function(require,module,exports){
-/**
- * Copyright 2015 Code.org
- * http://code.org/
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-/**
- * @fileoverview Generator and controller for shard lobby/connection controls.
- */
-
+},{"ejs":205}],117:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -963,18 +904,13 @@ return buf.join('');
 
 var dom = require('../dom');
 var utils = require('../utils');
-var NetSimNodeClient = require('./NetSimNodeClient');
-var NetSimNodeRouter = require('./NetSimNodeRouter');
+var netsimUtils = require('./netsimUtils');
+var NetSimLogger = require('./NetSimLogger');
+var NetSimClientNode = require('./NetSimClientNode');
+var NetSimRouterNode = require('./NetSimRouterNode');
 var markup = require('./NetSimLobby.html');
-var periodicAction = require('./periodicAction');
 
-/**
- * How often the lobby should be auto-refreshed.
- * @type {number}
- * @const
- */
-var AUTO_REFRESH_INTERVAL_MS = 5000;
-var CLOSED_REFRESH_INTERVAL_MS = 30000;
+var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
 
 /**
  * Value of any option in the shard selector that does not
@@ -985,13 +921,15 @@ var CLOSED_REFRESH_INTERVAL_MS = 30000;
 var SELECTOR_NONE_VALUE = 'none';
 
 /**
+ * Generator and controller for shard lobby/connection controls.
+ *
  * @param {NetSimConnection} connection - The shard connection that this
  *        lobby control will manipulate.
  * @param {DashboardUser} user - The current user, logged in or not.
  * @param {string} [shardID]
  * @constructor
  */
-var NetSimLobby = function (connection, user, shardID) {
+var NetSimLobby = module.exports = function (connection, user, shardID) {
 
   /**
    * Shard connection that this lobby control will manipulate.
@@ -1000,6 +938,16 @@ var NetSimLobby = function (connection, user, shardID) {
    */
   this.connection_ = connection;
   this.connection_.statusChanges.register(this.refresh_.bind(this));
+  logger.info("NetSimLobby registered to connection statusChanges");
+  this.connection_.shardChange.register(this.onShardChange_.bind(this));
+  logger.info("NetSimLobby registered to connection shardChanges");
+
+  /**
+   * A reference to the currently connected shard.
+   * @type {?NetSimShard}
+   * @private
+   */
+  this.shard_ = null;
 
   /**
    * Current user, logged in or no.
@@ -1016,14 +964,6 @@ var NetSimLobby = function (connection, user, shardID) {
   this.overrideShardID_ = shardID;
 
   /**
-   * Helper for running a regular lobby refresh
-   * @type {periodicAction}
-   * @private
-   */
-  this.periodicRefresh_ = periodicAction(this.refresh_.bind(this),
-      AUTO_REFRESH_INTERVAL_MS);
-
-  /**
    * Which item in the lobby is currently selected
    * @type {number}
    * @private
@@ -1037,13 +977,12 @@ var NetSimLobby = function (connection, user, shardID) {
    */
   this.selectedListItem_ = undefined;
 };
-module.exports = NetSimLobby;
 
 /**
  * Generate a new NetSimLobby object, putting
  * its markup within the provided element and returning
  * the controller object.
- * @param {DOMElement} element The container for the lobby markup
+ * @param {HTMLElement} element The container for the lobby markup
  * @param {NetSimConnection} connection The connection manager to use
  * @param {DashboardUser} user The current user info
  * @param {string} [shardID] A particular shard ID to use, can be omitted which
@@ -1111,11 +1050,30 @@ NetSimLobby.prototype.bindElements_ = function () {
 };
 
 /**
- * Attach own handlers to run loop events.
- * @param {RunLoop} runLoop
+ * Called whenever the connection notifies us that we've connected to,
+ * or disconnected from, a shard.
+ * @param {?NetSimShard} newShard - null if disconnected.
+ * @private
  */
-NetSimLobby.prototype.attachToRunLoop = function (runLoop) {
-  this.periodicRefresh_.attachToRunLoop(runLoop);
+NetSimLobby.prototype.onShardChange_= function (newShard) {
+  this.shard_ = newShard;
+  if (this.shard_ !== null) {
+    this.shard_.nodeTable.tableChange
+        .register(this.onNodeTableChange_.bind(this));
+    logger.info("NetSimLobby registered to nodeTable tableChange");
+  }
+};
+
+/**
+ * Called whenever a change is detected in the nodes table - which should
+ * trigger a refresh of the lobby listing
+ * @param {!Array} rows
+ * @private
+ */
+NetSimLobby.prototype.onNodeTableChange_ = function (rows) {
+  // Refresh lobby listing.
+  var nodes = netsimUtils.nodesFromRows(this.shard_, rows);
+  this.refreshLobbyList_(nodes);
 };
 
 NetSimLobby.prototype.setNameButtonClick_ = function () {
@@ -1129,7 +1087,6 @@ NetSimLobby.prototype.setNameButtonClick_ = function () {
 NetSimLobby.prototype.onShardSelectorChange_ = function () {
   if (this.connection_.isConnectedToShard()) {
     this.connection_.disconnectFromShard();
-    this.periodicRefresh_.disable();
     this.nameInput_.disabled = false;
   }
 
@@ -1264,9 +1221,6 @@ NetSimLobby.prototype.refreshClosedLobby_ = function () {
   // Share link state?
 
   // Disconnect button state?
-
-  this.periodicRefresh_.setActionInterval(CLOSED_REFRESH_INTERVAL_MS);
-  this.periodicRefresh_.enable();
 };
 
 /**
@@ -1283,7 +1237,6 @@ NetSimLobby.prototype.refreshOpenLobby_ = function () {
     this.setNameButton_.show();
 
     this.shardView_.hide();
-    this.periodicRefresh_.disable();
     return;
   }
 
@@ -1298,7 +1251,6 @@ NetSimLobby.prototype.refreshOpenLobby_ = function () {
     this.addRouterButton_.hide();
     this.lobbyList_.hide();
     this.connectButton_.hide();
-    this.periodicRefresh_.disable();
     return;
   }
 
@@ -1306,57 +1258,55 @@ NetSimLobby.prototype.refreshOpenLobby_ = function () {
   this.addRouterButton_.show();
   this.lobbyList_.show();
   this.connectButton_.show();
-  this.refreshLobbyList_();
+  this.connection_.getAllNodes(function (lobbyData) {
+    this.refreshLobbyList_(lobbyData);
+  }.bind(this));
 };
 
 /**
  * Reload the lobby listing of nodes.
+ * @param {!Array.<NetSimClientNode>} lobbyData
  * @private
  */
-NetSimLobby.prototype.refreshLobbyList_ = function () {
-  var self = this;
-  this.connection_.getAllNodes(function (lobbyData) {
-    self.lobbyList_.empty();
+NetSimLobby.prototype.refreshLobbyList_ = function (lobbyData) {
+  this.lobbyList_.empty();
 
-    lobbyData.sort(function (a, b) {
-      if (a.getDisplayName() > b.getDisplayName()) {
-        return 1;
-      }
-      return -1;
-    });
-
-    self.selectedListItem_ = undefined;
-    lobbyData.forEach(function (simNode) {
-      var item = $('<li>').html(
-          simNode.getDisplayName() + ' : ' +
-          simNode.getStatus() + ' ' +
-          simNode.getStatusDetail());
-
-      // Style rows by row type.
-      if (simNode.getNodeType() === NetSimNodeRouter.getNodeType()) {
-        item.addClass('router_row');
-      } else {
-        item.addClass('user_row');
-        if (simNode.entityID === self.connection_.myNode.entityID) {
-          item.addClass('own_row');
-        }
-      }
-
-      // Preserve selected item across refresh.
-      if (simNode.entityID === self.selectedID_) {
-        item.addClass('selected_row');
-        self.selectedListItem_ = item;
-      }
-
-      dom.addClickTouchEvent(item[0], self.onRowClick_.bind(self, item, simNode));
-      item.appendTo(self.lobbyList_);
-    });
-
-    self.onSelectionChange();
-
-    self.periodicRefresh_.setActionInterval(AUTO_REFRESH_INTERVAL_MS);
-    self.periodicRefresh_.enable();
+  lobbyData.sort(function (a, b) {
+    // TODO (bbuchanan): Make this sort localization-friendly.
+    if (a.getDisplayName() > b.getDisplayName()) {
+      return 1;
+    }
+    return -1;
   });
+
+  this.selectedListItem_ = undefined;
+  lobbyData.forEach(function (simNode) {
+    var item = $('<li>').html(
+        simNode.getDisplayName() + ' : ' +
+        simNode.getStatus() + ' ' +
+        simNode.getStatusDetail());
+
+    // Style rows by row type.
+    if (simNode.getNodeType() === NetSimRouterNode.getNodeType()) {
+      item.addClass('router_row');
+    } else {
+      item.addClass('user_row');
+      if (simNode.entityID === this.connection_.myNode.entityID) {
+        item.addClass('own_row');
+      }
+    }
+
+    // Preserve selected item across refresh.
+    if (simNode.entityID === this.selectedID_) {
+      item.addClass('selected_row');
+      this.selectedListItem_ = item;
+    }
+
+    dom.addClickTouchEvent(item[0], this.onRowClick_.bind(this, item, simNode));
+    item.appendTo(this.lobbyList_);
+  }.bind(this));
+
+  this.onSelectionChange();
 };
 
 /**
@@ -1365,7 +1315,7 @@ NetSimLobby.prototype.refreshLobbyList_ = function () {
  */
 NetSimLobby.prototype.onRowClick_ = function (listItem, connectionTarget) {
   // Can't select user rows (for now)
-  if (NetSimNodeClient.getNodeType() === connectionTarget.getNodeType()) {
+  if (NetSimClientNode.getNodeType() === connectionTarget.getNodeType()) {
     return;
   }
 
@@ -1410,7 +1360,44 @@ NetSimLobby.prototype.getUserSections_ = function (callback) {
   });
 };
 
-},{"../dom":44,"../utils":182,"./NetSimLobby.html":114,"./NetSimNodeClient":121,"./NetSimNodeRouter":122,"./periodicAction":137}],114:[function(require,module,exports){
+},{"../dom":44,"../utils":184,"./NetSimClientNode":112,"./NetSimLobby.html":116,"./NetSimLogger":121,"./NetSimRouterNode":124,"./netsimUtils":138}],138:[function(require,module,exports){
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+
+ maxlen: 90,
+ maxparams: 3,
+ maxstatements: 200
+ */
+'use strict';
+
+var NetSimClientNode = require('./NetSimClientNode');
+var NetSimRouterNode = require('./NetSimRouterNode');
+
+/**
+ * Given a set of rows from the node table on a shard, gives back a set of node
+ * controllers (of appropriate types).
+ * @param {!NetSimShard} shard
+ * @param {!Array.<Object>} rows
+ * @throws when a row doesn't have a mappable node type.
+ * @return {Array.<NetSimNode>} nodes for the rows
+ */
+module.exports.nodesFromRows = function (shard, rows) {
+  return rows
+      .map(function (row) {
+        if (row.type === NetSimClientNode.getNodeType()) {
+          return new NetSimClientNode(shard, row);
+        } else if (row.type == NetSimRouterNode.getNodeType()) {
+          return new NetSimRouterNode(shard, row);
+        }
+        // Oops!  We probably shouldn't ever get here.
+        throw new Error("Unable to map row to node.");
+      });
+};
+},{"./NetSimClientNode":112,"./NetSimRouterNode":124}],116:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1430,28 +1417,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":203}],112:[function(require,module,exports){
-/**
- * Copyright 2015 Code.org
- * http://code.org/
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-/**
- * @fileoverview Handles client connection status with netsim data services
- */
-
+},{"ejs":205}],113:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -1466,22 +1432,13 @@ return buf.join('');
 'use strict';
 
 var NetSimLogger = require('./NetSimLogger');
-var NetSimNodeClient = require('./NetSimNodeClient');
-var NetSimNodeRouter = require('./NetSimNodeRouter');
-var NetSimWire = require('./NetSimWire');
+var NetSimClientNode = require('./NetSimClientNode');
+var NetSimRouterNode = require('./NetSimRouterNode');
+var NetSimLocalClientNode = require('./NetSimLocalClientNode');
 var ObservableEvent = require('./ObservableEvent');
-var periodicAction = require('./periodicAction');
 var NetSimShard = require('./NetSimShard');
 
 var logger = new NetSimLogger(NetSimLogger.LogLevel.VERBOSE);
-
-/**
- * How often the client should run its clean-up job, removing expired rows
- * from the shard tables
- * @type {number}
- * @const
- */
-var CLEAN_UP_INTERVAL_MS = 10000;
 
 /**
  * A connection to a NetSim shard
@@ -1489,7 +1446,7 @@ var CLEAN_UP_INTERVAL_MS = 10000;
  * @param {!NetSimLogWidget} receivedLog - Widget to post received messages to
  * @constructor
  */
-var NetSimConnection = function (sentLog, receivedLog) {
+var NetSimConnection = module.exports = function (sentLog, receivedLog) {
   /**
    * Display name for user on local end of connection, to be uploaded to others.
    * @type {string}
@@ -1524,9 +1481,16 @@ var NetSimConnection = function (sentLog, receivedLog) {
 
   /**
    * The local client's node representation within the shard.
-   * @type {NetSimNodeClient}
+   * @type {NetSimClientNode}
    */
   this.myNode = null;
+
+  /**
+   * Event: Connected to, or disconnected from, a shard.
+   * Specifically, added or removed our client node from the shard's node table.
+   * @type {ObservableEvent}
+   */
+  this.shardChange = new ObservableEvent();
 
   /**
    * Allows others to subscribe to connection status changes.
@@ -1541,38 +1505,23 @@ var NetSimConnection = function (sentLog, receivedLog) {
    */
   this.statusChanges = new ObservableEvent();
 
-  /**
-   * Helper for performing shard clean-up on a regular interval
-   * @type {periodicAction}
-   * @private
-   */
-  this.periodicCleanUp_ = periodicAction(this.cleanLobby_.bind(this),
-      CLEAN_UP_INTERVAL_MS);
-
   // Bind to onBeforeUnload event to attempt graceful disconnect
   window.addEventListener('beforeunload', this.onBeforeUnload_.bind(this));
 };
-module.exports = NetSimConnection;
 
 /**
  * Attach own handlers to run loop events.
  * @param {RunLoop} runLoop
  */
 NetSimConnection.prototype.attachToRunLoop = function (runLoop) {
-  this.periodicCleanUp_.attachToRunLoop(runLoop);
-  this.periodicCleanUp_.enable();
-
   runLoop.tick.register(this.tick.bind(this));
 };
 
 /** @param {!RunLoop.Clock} clock */
 NetSimConnection.prototype.tick = function (clock) {
-  if (this.shard_) {
-    this.shard_.tick(clock);
-  }
-
   if (this.myNode) {
     this.myNode.tick(clock);
+    this.shard_.tick(clock);
   }
 };
 
@@ -1619,11 +1568,12 @@ NetSimConnection.prototype.disconnectFromShard = function () {
     this.disconnectFromRouter();
   }
 
-  var self = this;
   this.myNode.destroy(function () {
-    self.myNode = null;
-    self.statusChanges.notifyObservers();
-  });
+    this.myNode.stopSimulation();
+    this.myNode = null;
+    this.shardChange.notifyObservers(null, null);
+    this.statusChanges.notifyObservers();
+  }.bind(this));
 };
 
 /**
@@ -1633,20 +1583,20 @@ NetSimConnection.prototype.disconnectFromShard = function () {
  * @private
  */
 NetSimConnection.prototype.createMyClientNode_ = function (displayName) {
-  var self = this;
-  NetSimNodeClient.create(this.shard_, function (node) {
+  NetSimLocalClientNode.create(this.shard_, function (node) {
     if (node) {
-      self.myNode = node;
-      self.myNode.onChange.register(self.onMyNodeChange_.bind(self));
-      self.myNode.setDisplayName(displayName);
-      self.myNode.setLogs(self.sentLog_, self.receivedLog_);
-      self.myNode.update(function () {
-        self.statusChanges.notifyObservers();
-      });
+      this.myNode = node;
+      this.myNode.onChange.register(this.onMyNodeChange_.bind(this));
+      this.myNode.setDisplayName(displayName);
+      this.myNode.initializeSimulation(this.sentLog_, this.receivedLog_);
+      this.myNode.update(function () {
+        this.shardChange.notifyObservers(this.shard_, this.myNode);
+        this.statusChanges.notifyObservers();
+      }.bind(this));
     } else {
       logger.error("Failed to create client node.");
     }
-  });
+  }.bind(this));
 };
 
 /**
@@ -1671,6 +1621,8 @@ NetSimConnection.prototype.isConnectedToShard = function () {
 /**
  * Gets all rows in the lobby and passes them to callback.  Callback will
  * get an empty array if we were unable to get lobby data.
+ * TODO: Remove this, get rows from the table and use the netsimUtils methods
+ * instead.
  * @param callback
  */
 NetSimConnection.prototype.getAllNodes = function (callback) {
@@ -1689,10 +1641,10 @@ NetSimConnection.prototype.getAllNodes = function (callback) {
     }
 
     var nodes = rows.map(function (row) {
-      if (row.type === NetSimNodeClient.getNodeType()) {
-        return new NetSimNodeClient(self.shard_, row);
-      } else if (row.type === NetSimNodeRouter.getNodeType()) {
-        return new NetSimNodeRouter(self.shard_, row);
+      if (row.type === NetSimClientNode.getNodeType()) {
+        return new NetSimClientNode(self.shard_, row);
+      } else if (row.type === NetSimRouterNode.getNodeType()) {
+        return new NetSimRouterNode(self.shard_, row);
       }
     }).filter(function (node) {
       return node !== undefined;
@@ -1702,45 +1654,10 @@ NetSimConnection.prototype.getAllNodes = function (callback) {
   });
 };
 
-/**
- * Triggers a sweep of the lobby table that removes timed-out client rows.
- * @private
- */
-NetSimConnection.prototype.cleanLobby_ = function () {
-  if (!this.shard_) {
-    return;
-  }
-
-  var self = this;
-
-  // Cleaning the lobby of old users and routers
-  this.getAllNodes(function (nodes) {
-    nodes.forEach(function (node) {
-     if (node.isExpired()) {
-       node.destroy();
-     }
-    });
-  });
-
-  // Cleaning wires
-  // TODO (bbuchanan): Extract method to get all wires.
-  this.shard_.wireTable.readAll(function (rows) {
-    if (rows) {
-      rows.map(function (row) {
-        return new NetSimWire(self.shard_, row);
-      }).forEach(function (wire) {
-        if (wire.isExpired()) {
-          wire.destroy();
-        }
-      });
-    }
-  });
-};
-
 /** Adds a row to the lobby for a new router node. */
 NetSimConnection.prototype.addRouterToLobby = function () {
   var self = this;
-  NetSimNodeRouter.create(this.shard_, function () {
+  NetSimRouterNode.create(this.shard_, function () {
     self.statusChanges.notifyObservers();
   });
 };
@@ -1765,7 +1682,7 @@ NetSimConnection.prototype.connectToRouter = function (routerID) {
   }
 
   var self = this;
-  NetSimNodeRouter.get(routerID, this.shard_, function (router) {
+  NetSimRouterNode.get(routerID, this.shard_, function (router) {
     if (!router) {
       logger.warn('Failed to find router with ID ' + routerID);
       return;
@@ -1795,132 +1712,7 @@ NetSimConnection.prototype.disconnectFromRouter = function () {
     self.statusChanges.notifyObservers();
   });
 };
-},{"./NetSimLogger":118,"./NetSimNodeClient":121,"./NetSimNodeRouter":122,"./NetSimShard":127,"./NetSimWire":129,"./ObservableEvent":130,"./periodicAction":137}],137:[function(require,module,exports){
-/**
- * Copyright 2015 Code.org
- * http://code.org/
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-/**
- * @fileoverview Utility for creating an action that occurs on a regular
- *               interval when hooked up to a RunLoop tick.
- */
-
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
-
- maxlen: 90,
- maxparams: 3,
- maxstatements: 200
- */
-'use strict';
-
-/**
- * @param {function} action
- * @param {number} interval - time between calls to action in milliseconds
- * @returns {{tick: Function, enable: Function, disable: Function}}
- */
-var periodicAction = function (action, interval) {
-  var nextActionTime = Infinity;
-  var actionInterval = interval;
-
-  return {
-
-    /**
-     * Attach action to provided RunLoop tick event.
-     * @param {RunLoop} runLoop
-     */
-    attachToRunLoop: function (runLoop) {
-      runLoop.tick.register(this.tick);
-    },
-
-    /** @param clock */
-    tick: function (clock) {
-      if (clock.time >= nextActionTime) {
-        action(clock);
-
-        if (nextActionTime === 0) {
-          nextActionTime = clock.time + actionInterval;
-        } else {
-          // Stable-increment
-          while (nextActionTime < clock.time) {
-            nextActionTime += actionInterval;
-          }
-        }
-      }
-    },
-
-    /** Cause the action to resume running on the next tick. */
-    enable: function () {
-      if (nextActionTime === Infinity) {
-        nextActionTime = 0;
-      }
-    },
-
-    /** Cause the action to stop running. */
-    disable: function () {
-      nextActionTime = Infinity;
-    },
-
-    /**
-     * Whether the periodic action is scheduled to fire again.
-     * @returns {boolean}
-     */
-    isEnabled: function () {
-      return nextActionTime !== Infinity;
-    },
-
-    /**
-     * Change the interval at which action occurs
-     * @param interval - time between calls to action in milliseconds
-     */
-    setActionInterval: function (interval) {
-      actionInterval = interval;
-    }
-
-  };
-};
-
-module.exports = periodicAction;
-},{}],127:[function(require,module,exports){
-/**
- * Copyright 2015 Code.org
- * http://code.org/
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-/**
- * @fileoverview Wraps a shard ID with helpers for getting certain tables
- * out of the shard.
- */
-
+},{"./NetSimClientNode":112,"./NetSimLocalClientNode":118,"./NetSimLogger":121,"./NetSimRouterNode":124,"./NetSimShard":129,"./ObservableEvent":132}],129:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -1970,6 +1762,10 @@ var NetSimShard = module.exports = function (shardID) {
   /** @type {NetSimTable} */
   this.messageTable = new NetSimTable(
       new SharedTable(APP_PUBLIC_KEY, shardID + '_m'));
+
+  /** @type {NetSimTable} */
+  this.heartbeatTable = new NetSimTable(
+      new SharedTable(APP_PUBLIC_KEY, shardID + '_h'));
 };
 
 /**
@@ -1979,29 +1775,11 @@ var NetSimShard = module.exports = function (shardID) {
 NetSimShard.prototype.tick = function (clock) {
   // TODO (bbuchanan): Eventaully, these polling events should just be
   //                   backup for the notification system.
-
-  // Only tick the message table for now - not clear that lobby or wire
-  // tables need this yet.
+  this.nodeTable.tick(clock);
+  this.wireTable.tick(clock);
   this.messageTable.tick(clock);
 };
-},{"../appsApi":16,"./NetSimTable":128}],128:[function(require,module,exports){
-/**
- * Copyright 2015 Code.org
- * http://code.org/
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
+},{"../appsApi":16,"./NetSimTable":130}],130:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2046,7 +1824,7 @@ var NetSimTable = module.exports = function (storageTable) {
    * when rows are added, or when rows are removed, or when rows change.
    * @type {ObservableEvent}
    */
-  this.tableChangeEvent = new ObservableEvent();
+  this.tableChange = new ObservableEvent();
 
   /**
    * Store table contents locally, so we can detect when changes occur.
@@ -2119,7 +1897,7 @@ NetSimTable.prototype.fullCacheUpdate_ = function (allRows) {
   // Check for changes, if anything changed notify all observers on table.
   if (!_.isEqual(this.cache_, newCache)) {
     this.cache_ = newCache;
-    this.tableChangeEvent.notifyObservers(this.arrayFromCache_());
+    this.tableChange.notifyObservers(this.arrayFromCache_());
   }
 
   this.lastFullUpdateTime_ = Date.now();
@@ -2127,13 +1905,13 @@ NetSimTable.prototype.fullCacheUpdate_ = function (allRows) {
 
 NetSimTable.prototype.addRowToCache_ = function (row) {
   this.cache_[row.id] = row;
-  this.tableChangeEvent.notifyObservers(this.arrayFromCache_());
+  this.tableChange.notifyObservers(this.arrayFromCache_());
 };
 
 NetSimTable.prototype.removeRowFromCache_ = function (id) {
   if (this.cache_[id] !== undefined) {
     delete this.cache_[id];
-    this.tableChangeEvent.notifyObservers(this.arrayFromCache_());
+    this.tableChange.notifyObservers(this.arrayFromCache_());
   }
 };
 
@@ -2146,7 +1924,7 @@ NetSimTable.prototype.updateCacheRow_ = function (id, row) {
 
   if (!_.isEqual(oldRow, newRow)) {
     this.cache_[id] = newRow;
-    this.tableChangeEvent.notifyObservers(this.arrayFromCache_());
+    this.tableChange.notifyObservers(this.arrayFromCache_());
   }
 };
 
@@ -2167,38 +1945,7 @@ NetSimTable.prototype.tick = function () {
   }
 };
 
-},{"../utils":182,"./ObservableEvent":130}],122:[function(require,module,exports){
-/**
- * Copyright 2015 Code.org
- * http://code.org/
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-/**
- * @fileoverview Client model of simulated router
- *
- * Represents the client's view of a given router, provides methods for
- *   letting the client interact with the router, and wraps the client's
- *   work doing part of the router simulation.
- *
- * A router -exists- when it has a row in the lobby table of type 'router'
- * A router is connected to a user when a 'user' row exists in the lobby
- *   table that has a status 'Connected to {router ID} by wires {X, Y}'.
- * A router will also share a wire (simplex) or wires (duplex) with each user,
- *   which appear in the wire table.
- */
-
+},{"../utils":184,"./ObservableEvent":132}],124:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2212,11 +1959,15 @@ NetSimTable.prototype.tick = function () {
  */
 'use strict';
 
-var superClass = require('./NetSimNode');
+var utils = require('../utils');
+var _ = utils.getLodash();
+var NetSimNode = require('./NetSimNode');
 var NetSimEntity = require('./NetSimEntity');
 var NetSimLogger = require('./NetSimLogger');
 var NetSimWire = require('./NetSimWire');
 var NetSimMessage = require('./NetSimMessage');
+var NetSimHeartbeat = require('./NetSimHeartbeat');
+var ObservableEvent = require('./ObservableEvent');
 
 var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
 
@@ -2227,30 +1978,114 @@ var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
 var MAX_CLIENT_CONNECTIONS = 6;
 
 /**
+ * Client model of simulated router
+ *
+ * Represents the client's view of a given router, provides methods for
+ *   letting the client interact with the router, and wraps the client's
+ *   work doing part of the router simulation.
+ *
+ * A router -exists- when it has a row in the lobby table of type 'router'
+ * A router is connected to a user when a 'user' row exists in the lobby
+ *   table that has a status 'Connected to {router ID} by wires {X, Y}'.
+ * A router will also share a wire (simplex) or wires (duplex) with each user,
+ *   which appear in the wire table.
+ *
  * @param {!NetSimShard} shard
  * @param {Object} [routerRow] - Lobby row for this router.
  * @constructor
  * @augments NetSimNode
  */
-var NetSimNodeRouter = function (shard, routerRow) {
-  superClass.call(this, shard, routerRow);
+var NetSimRouterNode = module.exports = function (shard, row) {
+  row = row !== undefined ? row : {};
+  NetSimNode.call(this, shard, row);
+
+  /**
+   * Sets current DNS mode for the router's local network.
+   * This value is manipulated by all clients.
+   * @type {DnsMode}
+   * @private
+   */
+  this.dnsMode = row.dnsMode !== undefined ?
+      row.dnsMode : NetSimRouterNode.DnsMode.NONE;
+
+  /**
+   * Sets current DNS node ID for the router's local network.
+   * This value is manipulated by all clients.
+   * @type {number}
+   * @private
+   */
+  this.dnsNodeID = row.dnsNodeID;
 
   /**
    * Determines a subset of connection and message events that this
    * router will respond to, only managing events from the given node ID,
    * to avoid conflicting with other clients also simulating this router.
+   *
+   * Not persisted on server.
+   *
    * @type {number}
    * @private
    */
   this.simulateForSender_ = undefined;
 
-  // Subscribe to message table changes
-  this.shard_.messageTable.tableChangeEvent
-      .register(this.onMessageTableChange_.bind(this));
+  /**
+   * If ticked, tells the network that this router is being used.
+   *
+   * Not persisted on server (though the heartbeat does its own persisting)
+   *
+   * @type {NetSimHeartbeat}
+   * @private
+   */
+  this.heartbeat_ = null;
+
+  /**
+   * Local cache of our remote row, used to decide whether our state has
+   * changed.
+   * 
+   * Not persisted to server.
+   * 
+   * @type {Object}
+   * @private
+   */
+  this.stateCache_ = {};
+  
+  /**
+   * Event others can observe, which we fire when our own remote row changes.
+   * 
+   * @type {ObservableEvent}
+   */
+  this.stateChange = new ObservableEvent();
+
+  /**
+   * Local cache of wires attached to this router, used for detecting and
+   * broadcasting relevant changes.
+   *
+   * Not persisted on server.
+   *
+   * @type {Array}
+   * @private
+   */
+  this.myWireRowCache_ = [];
+
+  /**
+   * Event others can observe, which we fire when the router's set of wires
+   * changes indicating a change in the local network.
+   *
+   * @type {ObservableEvent}
+   */
+  this.wiresChange = new ObservableEvent();
 };
-NetSimNodeRouter.prototype = Object.create(superClass.prototype);
-NetSimNodeRouter.prototype.constructor = NetSimNodeRouter;
-module.exports = NetSimNodeRouter;
+NetSimRouterNode.inherits(NetSimNode);
+
+/**
+ * @enum {string}
+ */
+var DnsMode = {
+  NONE: 'none',
+  MANUAL: 'manual',
+  AUTOMATIC: 'automatic'
+};
+NetSimRouterNode.DnsMode = DnsMode;
 
 /**
  * Static async creation method. See NetSimEntity.create().
@@ -2258,17 +2093,26 @@ module.exports = NetSimNodeRouter;
  * @param {!function} onComplete - Method that will be given the
  *        created entity, or null if entity creation failed.
  */
-NetSimNodeRouter.create = function (shard, onComplete) {
-  NetSimEntity.create(NetSimNodeRouter, shard, function (router) {
-    // Always try and update router immediately, to set its DisplayName
-    // correctly.
-    if (router) {
+NetSimRouterNode.create = function (shard, onComplete) {
+  NetSimEntity.create(NetSimRouterNode, shard, function (router) {
+    if (router === null) {
+      onComplete(null);
+      return;
+    }
+
+    NetSimHeartbeat.getOrCreate(shard, router.entityID, function (heartbeat) {
+      if (heartbeat === null) {
+        onComplete(null);
+        return;
+      }
+
+      // Always try and update router immediately, to set its DisplayName
+      // correctly.
+      router.heartbeat_ = heartbeat;
       router.update(function () {
         onComplete(router);
       });
-    } else {
-      onComplete(router);
-    }
+    });
   });
 };
 
@@ -2279,27 +2123,65 @@ NetSimNodeRouter.create = function (shard, onComplete) {
  * @param {!function} onComplete - Method that will be given the
  *        found entity, or null if entity search failed.
  */
-NetSimNodeRouter.get = function (routerID, shard, onComplete) {
-  NetSimEntity.get(NetSimNodeRouter, routerID, shard, onComplete);
+NetSimRouterNode.get = function (routerID, shard, onComplete) {
+  NetSimEntity.get(NetSimRouterNode, routerID, shard, function (router) {
+    if (router === null) {
+      onComplete(null);
+      return;
+    }
+
+    NetSimHeartbeat.getOrCreate(shard, routerID, function (heartbeat) {
+      if (heartbeat === null) {
+        onComplete(null);
+        return;
+      }
+
+      router.heartbeat_ = heartbeat;
+      onComplete(router);
+    });
+  });
 };
 
 /**
  * @readonly
  * @enum {string}
  */
-NetSimNodeRouter.RouterStatus = {
+NetSimRouterNode.RouterStatus = {
   INITIALIZING: 'Initializing',
   READY: 'Ready',
   FULL: 'Full'
 };
-var RouterStatus = NetSimNodeRouter.RouterStatus;
+var RouterStatus = NetSimRouterNode.RouterStatus;
+
+/**
+ * Build table row for this node.
+ * @private
+ * @override
+ */
+NetSimRouterNode.prototype.buildRow_ = function () {
+  return utils.extend(
+      NetSimRouterNode.superPrototype.buildRow_.call(this),
+      {
+        dnsMode: this.dnsMode,
+        dnsNodeID: this.dnsNodeID
+      }
+  );
+};
+
+/**
+ * Ticks heartbeat, telling the network that router is in use.
+ * @param {RunLoop.Clock} clock
+ */
+NetSimRouterNode.prototype.tick = function (clock) {
+  this.heartbeat_.tick(clock);
+};
 
 /**
  * Updates router status and lastPing time in lobby table - both keepAlive
  * and making sure router's connection count is valid.
  * @param {function} [onComplete] - Optional success/failure callback
  */
-NetSimNodeRouter.prototype.update = function (onComplete) {
+NetSimRouterNode.prototype.update = function (onComplete) {
   onComplete = onComplete || function () {};
 
   var self = this;
@@ -2307,20 +2189,20 @@ NetSimNodeRouter.prototype.update = function (onComplete) {
     self.status_ = count >= MAX_CLIENT_CONNECTIONS ?
         RouterStatus.FULL : RouterStatus.READY;
     self.statusDetail_ = '(' + count + '/' + MAX_CLIENT_CONNECTIONS + ')';
-    superClass.prototype.update.call(self, onComplete);
+    NetSimRouterNode.superPrototype.update.call(self, onComplete);
   });
 };
 
 /** @inheritdoc */
-NetSimNodeRouter.prototype.getDisplayName = function () {
+NetSimRouterNode.prototype.getDisplayName = function () {
   return "Router " + this.entityID;
 };
 
 /** @inheritdoc */
-NetSimNodeRouter.prototype.getNodeType = function () {
-  return NetSimNodeRouter.getNodeType();
+NetSimRouterNode.prototype.getNodeType = function () {
+  return NetSimRouterNode.getNodeType();
 };
-NetSimNodeRouter.getNodeType = function () {
+NetSimRouterNode.getNodeType = function () {
   return 'router';
 };
 
@@ -2329,16 +2211,51 @@ NetSimNodeRouter.getNodeType = function () {
  * simulate for connection and messages -from- the given node.
  * @param {!number} nodeID
  */
-NetSimNodeRouter.prototype.setSimulateForSender = function (nodeID) {
+NetSimRouterNode.prototype.initializeSimulation = function (nodeID) {
   this.simulateForSender_ = nodeID;
+  if (nodeID !== undefined) {
+    var nodeChangeEvent = this.shard_.nodeTable.tableChange;
+    var nodeChangeHandler = this.onNodeTableChange_.bind(this);
+    this.nodeChangeKey_ = nodeChangeEvent.register(nodeChangeHandler);
+    logger.info("Router registered for nodeTable tableChange");
+    
+    var wireChangeEvent = this.shard_.wireTable.tableChange;
+    var wireChangeHandler = this.onWireTableChange_.bind(this);
+    this.wireChangeKey_ = wireChangeEvent.register(wireChangeHandler);
+    logger.info("Router registered for wireTable tableChange");
+
+    var newMessageEvent = this.shard_.messageTable.tableChange;
+    var newMessageHandler = this.onMessageTableChange_.bind(this);
+    this.newMessageEventKey_ = newMessageEvent.register(newMessageHandler);
+    logger.info("Router registered for messageTable tableChange");
+  }
 };
 
 /**
- * Helper for getting wires table of configured shard.
- * @returns {NetSimTable}
+ * Gives the simulating node a chance to unregister from anything it
+ * was observing.
  */
-NetSimNodeRouter.prototype.getWireTable = function () {
-  return this.shard_.wireTable;
+NetSimRouterNode.prototype.stopSimulation = function () {
+  if (this.nodeChangeKey_ !== undefined) {
+    var nodeChangeEvent = this.shard_.messageTable.tableChange;
+    nodeChangeEvent.unregister(this.nodeChangeKey_);
+    this.nodeChangeKey_ = undefined;
+    logger.info("Router unregistered from nodeTable tableChange");
+  }
+  
+  if (this.wireChangeKey_ !== undefined) {
+    var wireChangeEvent = this.shard_.messageTable.tableChange;
+    wireChangeEvent.unregister(this.wireChangeKey_);
+    this.wireChangeKey_ = undefined;
+    logger.info("Router unregistered from wireTable tableChange");
+  }
+
+  if (this.newMessageEventKey_ !== undefined) {
+    var newMessageEvent = this.shard_.messageTable.tableChange;
+    newMessageEvent.unregister(this.newMessageEventKey_);
+    this.newMessageEventKey_ = undefined;
+    logger.info("Router unregistered from messageTable tableChange");
+  }
 };
 
 /**
@@ -2346,7 +2263,7 @@ NetSimNodeRouter.prototype.getWireTable = function () {
  * where all of the rows are wires attached to this router.
  * @param {function} onComplete which accepts an Array of NetSimWire.
  */
-NetSimNodeRouter.prototype.getConnections = function (onComplete) {
+NetSimRouterNode.prototype.getConnections = function (onComplete) {
   onComplete = onComplete || function () {};
 
   var shard = this.shard_;
@@ -2374,7 +2291,7 @@ NetSimNodeRouter.prototype.getConnections = function (onComplete) {
  * connected to this router.
  * @param {function} onComplete which accepts a number.
  */
-NetSimNodeRouter.prototype.countConnections = function (onComplete) {
+NetSimRouterNode.prototype.countConnections = function (onComplete) {
   onComplete = onComplete || function () {};
 
   this.getConnections(function (wires) {
@@ -2404,7 +2321,7 @@ var contains = function (haystack, needle) {
  * @param {!function} onComplete response method - should call with TRUE
  *        if connection is allowed, FALSE if connection is rejected.
  */
-NetSimNodeRouter.prototype.acceptConnection = function (otherNode, onComplete) {
+NetSimRouterNode.prototype.acceptConnection = function (otherNode, onComplete) {
   var self = this;
   this.countConnections(function (count) {
     if (count > MAX_CLIENT_CONNECTIONS) {
@@ -2424,7 +2341,7 @@ NetSimNodeRouter.prototype.acceptConnection = function (otherNode, onComplete) {
  * @param {string} hostname of requesting node
  * @param {function} [onComplete] reports success or failure.
  */
-NetSimNodeRouter.prototype.requestAddress = function (wire, hostname, onComplete) {
+NetSimRouterNode.prototype.requestAddress = function (wire, hostname, onComplete) {
   onComplete = onComplete || function () {};
 
 
@@ -2456,33 +2373,75 @@ NetSimNodeRouter.prototype.requestAddress = function (wire, hostname, onComplete
 };
 
 /**
- * Query the wires table and pass the callback a list of addresses and
- * hostnames, which includes this router node and all of the nodes that are
- * connected to this router by an active wire.
- * Returns list of objects in form { hostname:{string}, address:{number} }
- * @param onComplete
+ * @returns {Array} A list of remote nodes connected to this router, including
+ *          their hostname, address, whether they are the local node, and
+ *          whether they are the current DNS node for the network.
  */
-NetSimNodeRouter.prototype.getAddressTable = function (onComplete) {
-  onComplete = onComplete || function () {};
-
-  this.getConnections(function (wires) {
-    var addressTable = wires.map(function (wire) {
-      return {
-        hostname: wire.localHostname,
-        address: wire.localAddress
-      };
-    });
-    onComplete(addressTable);
-  });
+NetSimRouterNode.prototype.getAddressTable = function () {
+  return this.myWireRowCache_.map(function (row) {
+    return {
+      hostname: row.localHostname,
+      address: row.localAddress,
+      isLocal: (row.localNodeID === this.simulateForSender_),
+      isDnsNode: (row.localNodeID === this.dnsNodeID)
+    };
+  }.bind(this));
 };
 
+/**
+ * When the node table changes, we check whether our own row has changed
+ * and propagate those changes as appropriate.
+ * @param rows
+ * @private
+ * @throws
+ */
+NetSimRouterNode.prototype.onNodeTableChange_ = function (rows) {
+  var myRow = _.find(rows, function (row) {
+    return row.id === this.entityID;
+  }.bind(this));
+
+  if (myRow === undefined) {
+    throw new Error("Unable to find router node in node table listing.");
+  }
+
+  if (!_.isEqual(this.stateCache_, myRow)) {
+    this.stateCache_ = myRow;
+    logger.info("Router state changed.");
+    this.onMyStateChange_(myRow);
+  }
+};
+
+NetSimRouterNode.prototype.onMyStateChange_ = function (remoteRow) {
+  this.dnsMode = remoteRow.dnsMode;
+  this.dnsNodeID = remoteRow.dnsNodeID;
+  this.stateChange.notifyObservers(this);
+};
+
+/**
+ * When the wires table changes, we may have a new connection or have lost
+ * a connection.  Propagate updates about our connections
+ * @param rows
+ * @private
+ */
+NetSimRouterNode.prototype.onWireTableChange_ = function (rows) {
+  var myWireRows = rows.filter(function (row) {
+    return row.remoteNodeID === this.entityID;
+  }.bind(this));
+
+  if (!_.isEqual(this.myWireRowCache_, myWireRows)) {
+    this.myWireRowCache_ = myWireRows;
+    logger.info("Router wires changed.");
+    this.wiresChange.notifyObservers();
+  }
+};
 
 /**
  * When the message table changes, we might have a new message to handle.
  * Check for and handle unhandled messages.
+ * @param rows
  * @private
  */
-NetSimNodeRouter.prototype.onMessageTableChange_ = function (rows) {
+NetSimRouterNode.prototype.onMessageTableChange_ = function (rows) {
 
   if (!this.simulateForSender_) {
     // Not configured to handle anything yet; don't process messages.
@@ -2525,7 +2484,7 @@ NetSimNodeRouter.prototype.onMessageTableChange_ = function (rows) {
   }
 };
 
-NetSimNodeRouter.prototype.routeMessage_ = function (message, myWires) {
+NetSimRouterNode.prototype.routeMessage_ = function (message, myWires) {
   // Find a connection to route this message to.
   var toAddress = message.payload.toAddress;
   if (toAddress === undefined) {
@@ -2572,32 +2531,7 @@ NetSimNodeRouter.prototype.routeMessage_ = function (message, myWires) {
       }
   );
 };
-},{"./NetSimEntity":113,"./NetSimLogger":118,"./NetSimMessage":119,"./NetSimNode":120,"./NetSimWire":129}],121:[function(require,module,exports){
-/**
- * Copyright 2015 Code.org
- * http://code.org/
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-/**
- * @fileoverview Client model of simulated node
- *
- * Represents the client's view of a node that is controlled by a user client,
- * either by our own client or somebody else's.  Is a NetSimEntity, meaning
- * it wraps a row in the node table and provides functionality around it.
- */
-
+},{"../utils":184,"./NetSimEntity":114,"./NetSimHeartbeat":115,"./NetSimLogger":121,"./NetSimMessage":122,"./NetSimNode":123,"./NetSimWire":131,"./ObservableEvent":132}],118:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2611,37 +2545,34 @@ NetSimNodeRouter.prototype.routeMessage_ = function (message, myWires) {
  */
 'use strict';
 
-var superClass = require('./NetSimNode');
+require('../utils');
+var NetSimClientNode = require('./NetSimClientNode');
 var NetSimEntity = require('./NetSimEntity');
 var NetSimMessage = require('./NetSimMessage');
+var NetSimHeartbeat = require('./NetSimHeartbeat');
 var NetSimLogger = require('./NetSimLogger');
+var ObservableEvent = require('./ObservableEvent');
 
 var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
 
 /**
+ * Client model of node being simulated on the local client.
+ *
+ * Provides special access for manipulating the locally-owned client node in
+ * ways that you aren't allowed to manipulate other client nodes.
+ *
  * @param {!NetSimShard} shard
  * @param {Object} [clientRow] - Lobby row for this router.
  * @constructor
- * @augments NetSimNode
+ * @augments NetSimClientNode
  */
-var NetSimNodeClient = function (shard, clientRow) {
-  superClass.call(this, shard, clientRow);
+var NetSimLocalClientNode = module.exports = function (shard, clientRow) {
+  NetSimClientNode.call(this, shard, clientRow);
 
-  /**
-   * How long (in milliseconds) this entity is allowed to remain in
-   * storage without being cleaned up.
-   * @type {number}
-   * @override
-   */
-  this.ENTITY_TIMEOUT_MS = 30000;
-
-  /**
-   * How often (in milliseconds) this entity's status should be pushed
-   * to the server to keep the row active.
-   * @type {number}
-   * @override
-   */
-  this.ENTITY_KEEPALIVE_MS = 2000;
+  // TODO (bbuchanan): Consider:
+  //      Do we benefit from inheritance here?  Would it be cleaner to make this
+  //      not-an-entity that manipulates a stock NetSimClientNode?  Will another
+  //      developer find it easy to understand how this class works?
 
   /**
    * Client nodes can only have one wire at a time.
@@ -2652,7 +2583,7 @@ var NetSimNodeClient = function (shard, clientRow) {
   /**
    * Client nodes can be connected to a router, which they will
    * help to simulate.
-   * @type {NetSimNodeRouter}
+   * @type {NetSimRouterNode}
    */
   this.myRouter = null;
 
@@ -2669,10 +2600,22 @@ var NetSimNodeClient = function (shard, clientRow) {
    * @private
    */
   this.receivedLog_ = null;
+
+  /**
+   * Tells the network that we're alive
+   * @type {NetSimHeartbeat}
+   * @private
+   */
+  this.heartbeat_ = null;
+
+  /**
+   * Change event others can observe, which we will fire when we
+   * connect to a router or disconnect from a router.
+   * @type {ObservableEvent}
+   */
+  this.routerChange = new ObservableEvent();
 };
-NetSimNodeClient.prototype = Object.create(superClass.prototype);
-NetSimNodeClient.prototype.constructor = NetSimNodeClient;
-module.exports = NetSimNodeClient;
+NetSimLocalClientNode.inherits(NetSimClientNode);
 
 /**
  * Static async creation method. See NetSimEntity.create().
@@ -2680,54 +2623,74 @@ module.exports = NetSimNodeClient;
  * @param {!function} onComplete - Method that will be given the
  *        created entity, or null if entity creation failed.
  */
-NetSimNodeClient.create = function (shard, onComplete) {
-  NetSimEntity.create(NetSimNodeClient, shard, onComplete);
+NetSimLocalClientNode.create = function (shard, onComplete) {
+  NetSimEntity.create(NetSimLocalClientNode, shard, function (node) {
+    if (node === null) {
+      onComplete(null);
+      return;
+    }
+
+    // Give our newly-created local node a heartbeat
+    NetSimHeartbeat.getOrCreate(shard, node.entityID, function (heartbeat) {
+      if (heartbeat === null) {
+        onComplete(null);
+        return;
+      }
+
+      node.heartbeat_ = heartbeat;
+      onComplete(node);
+    });
+  });
 };
 
 /** @inheritdoc */
-NetSimNodeClient.prototype.getNodeType = function () {
-  return NetSimNodeClient.getNodeType();
-};
-NetSimNodeClient.getNodeType = function () {
-  return 'user';
-};
-
-/** @inheritdoc */
-NetSimNodeClient.prototype.getStatus = function () {
+NetSimLocalClientNode.prototype.getStatus = function () {
   return this.status_ ? this.status_ : 'Online';
 };
 
 /** Set node's display name.  Does not trigger an update! */
-NetSimNodeClient.prototype.setDisplayName = function (displayName) {
+NetSimLocalClientNode.prototype.setDisplayName = function (displayName) {
   this.displayName_ = displayName;
 };
 
 /**
- * Configure this node controller to post sent and received messages to the
- * given log widgets.
+ * Configure this node controller to actively simulate, and to post sent and
+ * received messages to the given log widgets.
  * @param {!NetSimLogWidget} sentLog
  * @param {!NetSimLogWidget} receivedLog
  */
-NetSimNodeClient.prototype.setLogs = function (sentLog, receivedLog) {
+NetSimLocalClientNode.prototype.initializeSimulation = function (sentLog,
+    receivedLog) {
   this.sentLog_ = sentLog;
   this.receivedLog_ = receivedLog;
 
   // Subscribe to message table changes
-  this.shard_.messageTable.tableChangeEvent
-      .register(this.onMessageTableChange_.bind(this));
+  var newMessageEvent = this.shard_.messageTable.tableChange;
+  var newMessageHandler = this.onMessageTableChange_.bind(this);
+  this.newMessageEventKey_ = newMessageEvent.register(newMessageHandler);
+  logger.info("Local node registered for messageTable tableChange");
 };
 
 /**
- * Our client tick can also tick its connected wire and its remote client.
+ * Gives the simulating node a chance to unregister from anything it was
+ * observing.
+ */
+NetSimLocalClientNode.prototype.stopSimulation = function () {
+  if (this.newMessageEventKey_ !== undefined) {
+    var newMessageEvent = this.shard_.messageTable.tableChange;
+    newMessageEvent.unregister(this.newMessageEventKey_);
+    this.newMessageEventKey_ = undefined;
+    logger.info("Local node registered for messageTable tableChange");
+  }
+};
+
+/**
+ * Our own client must send a regular heartbeat to broadcast its presence on
+ * the shard.
  * @param {!RunLoop.Clock} clock
  */
-NetSimNodeClient.prototype.tick = function (clock) {
-  superClass.prototype.tick.call(this, clock);
-
-  if (this.myWire) {
-    this.myWire.tick(clock);
-  }
-
+NetSimLocalClientNode.prototype.tick = function (clock) {
+  this.heartbeat_.tick(clock);
   if (this.myRouter) {
     this.myRouter.tick(clock);
   }
@@ -2738,7 +2701,7 @@ NetSimNodeClient.prototype.tick = function (clock) {
  * @param {function} [onComplete]
  * @param {boolean} [autoReconnect=true]
  */
-NetSimNodeClient.prototype.update = function (onComplete, autoReconnect) {
+NetSimLocalClientNode.prototype.update = function (onComplete, autoReconnect) {
   if (!onComplete) {
     onComplete = function () {};
   }
@@ -2747,7 +2710,7 @@ NetSimNodeClient.prototype.update = function (onComplete, autoReconnect) {
   }
 
   var self = this;
-  superClass.prototype.update.call(this, function (success) {
+  NetSimLocalClientNode.superPrototype.update.call(this, function (success) {
     if (!success && autoReconnect) {
       self.reconnect_(function (success) {
         if (!success){
@@ -2768,9 +2731,9 @@ NetSimNodeClient.prototype.update = function (onComplete, autoReconnect) {
  * @param {!function} onComplete (success)
  * @private
  */
-NetSimNodeClient.prototype.reconnect_ = function (onComplete) {
+NetSimLocalClientNode.prototype.reconnect_ = function (onComplete) {
   var self = this;
-  NetSimNodeClient.create(this.shard_, function (node) {
+  NetSimLocalClientNode.create(this.shard_, function (node) {
     if (!node) {
       // Reconnect failed
       onComplete(false);
@@ -2808,10 +2771,10 @@ NetSimNodeClient.prototype.reconnect_ = function (onComplete) {
 };
 
 /**
- * @param {!NetSimNodeRouter} router
+ * @param {!NetSimRouterNode} router
  * @param {function} onComplete (success)
  */
-NetSimNodeClient.prototype.connectToRouter = function (router, onComplete) {
+NetSimLocalClientNode.prototype.connectToRouter = function (router, onComplete) {
   if (!onComplete) {
     onComplete = function () {};
   }
@@ -2825,7 +2788,7 @@ NetSimNodeClient.prototype.connectToRouter = function (router, onComplete) {
 
     self.myWire = wire;
     self.myRouter = router;
-    self.myRouter.setSimulateForSender(self.entityID);
+    self.myRouter.initializeSimulation(self.entityID);
 
     router.requestAddress(wire, self.getHostname(), function (success) {
       if (!success) {
@@ -2837,14 +2800,16 @@ NetSimNodeClient.prototype.connectToRouter = function (router, onComplete) {
 
       self.myWire = wire;
       self.myRouter = router;
+      self.routerChange.notifyObservers(self.myWire, self.myRouter);
+
       self.status_ = "Connected to " + router.getDisplayName() +
-          " with address " + wire.localAddress;
+      " with address " + wire.localAddress;
       self.update(onComplete);
     });
   });
 };
 
-NetSimNodeClient.prototype.disconnectRemote = function (onComplete) {
+NetSimLocalClientNode.prototype.disconnectRemote = function (onComplete) {
   if (!onComplete) {
     onComplete = function () {};
   }
@@ -2859,7 +2824,9 @@ NetSimNodeClient.prototype.disconnectRemote = function (onComplete) {
     self.myWire = null;
     // Trigger an immediate router update so its connection count is correct.
     self.myRouter.update(onComplete);
+    self.myRouter.stopSimulation();
     self.myRouter = null;
+    self.routerChange.notifyObservers(null, null);
   });
 };
 
@@ -2868,7 +2835,7 @@ NetSimNodeClient.prototype.disconnectRemote = function (onComplete) {
  * at the moment.
  * @param payload
  */
-NetSimNodeClient.prototype.sendMessage = function (payload) {
+NetSimLocalClientNode.prototype.sendMessage = function (payload) {
   if (!this.myWire) {
     return;
   }
@@ -2896,7 +2863,7 @@ NetSimNodeClient.prototype.sendMessage = function (payload) {
  * @param {Array} rows
  * @private
  */
-NetSimNodeClient.prototype.onMessageTableChange_ = function (rows) {
+NetSimLocalClientNode.prototype.onMessageTableChange_ = function (rows) {
   if (this.isProcessingMessages_) {
     // We're already in this method, getting called recursively because
     // we are making changes to the table.  Ignore this call.
@@ -2935,38 +2902,107 @@ NetSimNodeClient.prototype.onMessageTableChange_ = function (rows) {
  * @param {!NetSimMessage} message
  * @private
  */
-NetSimNodeClient.prototype.handleMessage_ = function (message) {
+NetSimLocalClientNode.prototype.handleMessage_ = function (message) {
   // TODO: How much validation should we do here?
   if (this.receivedLog_) {
     this.receivedLog_.log(JSON.stringify(message.payload));
   }
 };
-},{"./NetSimEntity":113,"./NetSimLogger":118,"./NetSimMessage":119,"./NetSimNode":120}],120:[function(require,module,exports){
-/**
- * Copyright 2015 Code.org
- * http://code.org/
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+},{"../utils":184,"./NetSimClientNode":112,"./NetSimEntity":114,"./NetSimHeartbeat":115,"./NetSimLogger":121,"./NetSimMessage":122,"./ObservableEvent":132}],122:[function(require,module,exports){
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+
+ maxlen: 90,
+ maxparams: 5,
+ maxstatements: 200
  */
+'use strict';
+
+require('../utils');
+var NetSimEntity = require('./NetSimEntity');
 
 /**
- * @fileoverview Client model of simulated network entity, which lives
- * in a shard table.
+ * Local controller for a message that is 'on the wire'
  *
- * Wraps the entity row with helper methods for examining and maintaining
- * the entity state in shared storage.
+ * Doesn't actually have any association with the wire - one could,
+ * theoretically, send a message from any node in the simulation to any other
+ * node in the simulation.
+ *
+ * Any message that exists in the table is 'in transit' to a node.  Nodes
+ * should remove messages as soon as they receive them.
+ *
+ * @param {!NetSimShard} shard - The shard where this wire lives.
+ * @param {Object} [messageRow] - A row out of the _message table on the
+ *        shard.  If provided, will initialize this message with the given
+ *        data.  If not, this message will initialize to default values.
+ * @constructor
+ * @augments NetSimEntity
  */
+var NetSimMessage = module.exports = function (shard, messageRow) {
+  messageRow = messageRow !== undefined ? messageRow : {};
+  NetSimEntity.call(this, shard, messageRow);
 
+  /**
+   * Node ID that this message is 'in transit' from.
+   * @type {number}
+   */
+  this.fromNodeID = messageRow.fromNodeID;
+
+  /**
+   * Node ID that this message is 'in transit' to.
+   * @type {number}
+   */
+  this.toNodeID = messageRow.toNodeID;
+
+  /**
+   * All other message content, including the 'packets' students will send.
+   * @type {*}
+   */
+  this.payload = messageRow.payload;
+};
+NetSimMessage.inherits(NetSimEntity);
+
+/**
+ * Static async creation method.  Creates a new message on the given shard,
+ * and then calls the callback with a success boolean.
+ * @param {!NetSimShard} shard
+ * @param {!number} fromNodeID - sender node ID
+ * @param {!number} toNodeID - destination node ID
+ * @param {*} payload - message content
+ * @param {!function} onComplete (success)
+ */
+NetSimMessage.send = function (shard, fromNodeID, toNodeID, payload, onComplete) {
+  var entity = new NetSimMessage(shard);
+  entity.fromNodeID = fromNodeID;
+  entity.toNodeID = toNodeID;
+  entity.payload = payload;
+  entity.getTable_().create(entity.buildRow_(), function (row) {
+    onComplete(row !== undefined);
+  });
+};
+
+/**
+ * Helper that gets the wires table for the configured instance.
+ * @returns {NetSimTable}
+ */
+NetSimMessage.prototype.getTable_ = function () {
+  return this.shard_.messageTable;
+};
+
+/** Build own row for the message table  */
+NetSimMessage.prototype.buildRow_ = function () {
+  return {
+    fromNodeID: this.fromNodeID,
+    toNodeID: this.toNodeID,
+    payload: this.payload
+  };
+};
+
+},{"../utils":184,"./NetSimEntity":114}],121:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2978,24 +3014,330 @@ NetSimNodeClient.prototype.handleMessage_ = function (message) {
  maxparams: 3,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
-var superClass = require('./NetSimEntity');
+/**
+ * Logging API to control log levels and support different browsers
+ * @constructor
+ * @param {Console} window console API
+ * @param {LogLevel} verbosity
+ */
+var NetSimLogger = module.exports = function (outputConsole, verbosity /*=VERBOSE*/) {
+  /**
+   * @type {Console}
+   * @private
+   */
+  this.outputConsole_ = outputConsole;
+
+  /**
+   * Always mapped to console.log, or no-op if not available.
+   * @type {Function}
+   * @private
+   */
+  this.log_ = function () {};
+
+  /**
+   * If configured for info logging, gets mapped to console.info,
+   * falls back to console.log, or no-op.
+   * @type {Function}
+   */
+  this.info = function () {};
+
+  /**
+   * If configured for warning logging, gets mapped to console.warn,
+   * falls back to console.log, or no-op.
+   * @type {Function}
+   */
+  this.warn = function () {};
+
+  /**
+   * If configured for error logging, gets mapped to console.error,
+   * falls back to console.log, or no-op.
+   * @type {Function}
+   */
+  this.error = function () {};
+
+  this.initializeWithVerbosity_((undefined === verbosity) ?
+      LogLevel.VERBOSE : verbosity);
+};
+
+/**
+ * Log verbosity levels enum.
+ * @readonly
+ * @enum {number}
+ */
+var LogLevel = {
+  NONE: 0,
+  ERROR: 1,
+  WARN: 2,
+  INFO: 3,
+  VERBOSE: 4
+};
+NetSimLogger.LogLevel = LogLevel;
+
+/**
+ * Binds internal function calls according to given verbosity level.
+ * @param verbosity
+ * @private
+ */
+NetSimLogger.prototype.initializeWithVerbosity_ = function (verbosity) {
+  this.log_ = (this.outputConsole_ && this.outputConsole_.log) ?
+      this.outputConsole_.log.bind(this.outputConsole_) : function () {};
+
+  if (verbosity >= LogLevel.INFO) {
+    this.info = (this.outputConsole_ && this.outputConsole_.info) ?
+        this.outputConsole_.info.bind(this.outputConsole_) : this.log_;
+  } else {
+    this.info = function () {};
+  }
+
+  if (verbosity >= LogLevel.WARN) {
+    this.warn = (this.outputConsole_ && this.outputConsole_.warn) ?
+        this.outputConsole_.warn.bind(this.outputConsole_) : this.log_;
+  } else {
+    this.warn = function () {};
+  }
+
+  if (verbosity >= LogLevel.ERROR) {
+    this.error = (this.outputConsole_ && this.outputConsole_.error) ?
+        this.outputConsole_.error.bind(this.outputConsole_) : this.log_;
+  } else {
+    this.error = function () {};
+  }
+};
+
+/**
+ * Writes to output, depending on log level
+ * @param {*} message
+ * @param {LogLevel} logLevel
+ */
+NetSimLogger.prototype.log = function (message, logLevel /*=INFO*/) {
+  if (undefined === logLevel) {
+    logLevel = LogLevel.INFO;
+  }
+
+  switch (logLevel) {
+    case LogLevel.ERROR:
+      this.error(message);
+      break;
+    case LogLevel.WARN:
+      this.warn(message);
+      break;
+    case LogLevel.INFO:
+      this.info(message);
+      break;
+    default:
+      this.log_(message);
+  }
+};
+
+},{}],115:[function(require,module,exports){
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+
+ maxlen: 90,
+ maxparams: 3,
+ maxstatements: 200
+ */
+'use strict';
+
+require('../utils');
+var NetSimEntity = require('./NetSimEntity');
+
+/**
+ * How often a heartbeat is sent, in milliseconds
+ * @type {number}
+ * @const
+ */
+var HEARTBEAT_INTERVAL_MS = 5000;
+
+/**
+ * Sends regular heartbeat messages to the heartbeat table on the given
+ * shard, for the given node.
+ * @param {!NetSimShard} shard
+ * @param {*} row
+ * @constructor
+ * @augments NetSimEntity
+ */
+var NetSimHeartbeat = module.exports = function (shard, row) {
+  // TODO (bbuchanan): Consider:
+  //      Will this scale?  Can we move the heartbeat system to an in-memory
+  //      store on the server - or even better, hook into whatever our
+  //      notification service uses to read presence on a channel?
+  
+  row = row !== undefined ? row : {};
+  NetSimEntity.call(this, shard, row);
+
+  /** @type {number} Row ID in node table */
+  this.nodeID = row.nodeID;
+
+  /** @type {number} unix timestamp (ms) */
+  this.time_ = row.time !== undefined ? row.time : 0;
+};
+NetSimHeartbeat.inherits(NetSimEntity);
+
+/**
+ * Static async creation method.  See NetSimEntity.create().
+ * @param {!NetSimShard} shard
+ * @param {!function} onComplete - Method that will be given the
+ *        created entity, or null if entity creation failed.
+ */
+NetSimHeartbeat.create = function (shard, onComplete) {
+  NetSimEntity.create(NetSimHeartbeat, shard, onComplete);
+};
+
+// TODO (bbuchanan): Extend storage API to support an upsert operation, and
+//      use that here.  Would be even better if our backend storage supported
+//      it (like mongodb).
+NetSimHeartbeat.getOrCreate = function (shard, nodeID, onComplete) {
+  shard.heartbeatTable.readAll(function (rows) {
+    var nodeRows = rows
+        .filter(function (row) {
+          return row.nodeID == nodeID;
+        })
+        .sort(function (a, b) {
+          return a.time < b.time ? 1 : -1;
+        });
+
+    if (nodeRows.length > 0) {
+      onComplete(new NetSimHeartbeat(shard, nodeRows[0]));
+    } else {
+      NetSimHeartbeat.create(shard, function (newHeartbeat) {
+        if (newHeartbeat) {
+          newHeartbeat.nodeID = nodeID;
+        }
+        newHeartbeat.update(function (success) {
+          if (!success) {
+            // Failed to fully create heartbeat
+            newHeartbeat.destroy();
+            onComplete(null);
+            return;
+          }
+          onComplete(newHeartbeat);
+        });
+      });
+    }
+  });
+};
+
+/**
+ * Helper that gets the wires table for the configured shard.
+ * @returns {NetSimTable}
+ * @override
+ */
+NetSimHeartbeat.prototype.getTable_ = function () {
+  return this.shard_.heartbeatTable;
+};
+
+/**
+ * Build own row for the wire table
+ * @override
+ */
+NetSimHeartbeat.prototype.buildRow_ = function () {
+  return {
+    nodeID: this.nodeID,
+    time: this.time_
+  };
+};
+
+/**
+ * Updates own row on regular interval, as long as something's making
+ * it tick.
+ */
+NetSimHeartbeat.prototype.tick = function () {
+  if (Date.now() - this.time_ > HEARTBEAT_INTERVAL_MS) {
+    this.time_ = Date.now();
+    this.update();
+  }
+};
+
+},{"../utils":184,"./NetSimEntity":114}],112:[function(require,module,exports){
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+
+ maxlen: 90,
+ maxparams: 3,
+ maxstatements: 200
+ */
+'use strict';
+
+require('../utils');
+var NetSimNode = require('./NetSimNode');
+
+/**
+ * Client model of simulated node
+ *
+ * Represents the client's view of a node that is controlled by a user client,
+ * either by our own client or somebody else's.  Is a NetSimEntity, meaning
+ * it wraps a row in the node table and provides functionality around it.
+ *
+ * You may be looking for NetSimLocalClientNode if you're trying to manipulate
+ * your local client node.
+ *
+ * @param {!NetSimShard} shard
+ * @param {Object} [clientRow] - Lobby row for this router.
+ * @constructor
+ * @augments NetSimNode
+ */
+var NetSimClientNode = module.exports = function (shard, clientRow) {
+  NetSimNode.call(this, shard, clientRow);
+};
+NetSimClientNode.inherits(NetSimNode);
+
+/** @inheritdoc */
+NetSimClientNode.prototype.getNodeType = function () {
+  return NetSimClientNode.getNodeType();
+};
+NetSimClientNode.getNodeType = function () {
+  return 'user';
+};
+
+/** @inheritdoc */
+NetSimClientNode.prototype.getStatus = function () {
+  return this.status_ ? this.status_ : 'Online';
+};
+
+},{"../utils":184,"./NetSimNode":123}],123:[function(require,module,exports){
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+
+ maxlen: 90,
+ maxparams: 3,
+ maxstatements: 200
+ */
+'use strict';
+
+require('../utils');
+var NetSimEntity = require('./NetSimEntity');
 var NetSimWire = require('./NetSimWire');
 
 /**
+ * Client model of simulated network entity, which lives
+ * in a shard table.
+ *
+ * Wraps the entity row with helper methods for examining and maintaining
+ * the entity state in shared storage.
+ *
  * @param {!NetSimShard} shard
  * @param {Object} [nodeRow] JSON row from table.
  * @constructor
  * @augments NetSimEntity
  */
-var NetSimNode = function (shard, nodeRow) {
-  superClass.call(this, shard, nodeRow);
-
-  if (nodeRow === undefined) {
-    nodeRow = {};
-  }
+var NetSimNode = module.exports = function (shard, nodeRow) {
+  nodeRow = nodeRow !== undefined ? nodeRow : {};
+  NetSimEntity.call(this, shard, nodeRow);
 
   /**
    * @type {string}
@@ -3015,9 +3357,7 @@ var NetSimNode = function (shard, nodeRow) {
    */
   this.statusDetail_ = nodeRow.statusDetail;
 };
-NetSimNode.prototype = Object.create(superClass.prototype);
-NetSimNode.prototype.constructor = NetSimNode;
-module.exports = NetSimNode;
+NetSimNode.inherits(NetSimEntity);
 
 /**
  * Get shared table for nodes
@@ -3030,12 +3370,12 @@ NetSimNode.prototype.getTable_= function () {
 
 /** Build table row for this node */
 NetSimNode.prototype.buildRow_ = function () {
-  return $.extend(superClass.prototype.buildRow_.call(this), {
-    name: this.getDisplayName(),
+  return {
     type: this.getNodeType(),
+    name: this.getDisplayName(),
     status: this.getStatus(),
     statusDetail: this.getStatusDetail()
-  });
+  };
 };
 
 /**
@@ -3134,34 +3474,7 @@ NetSimNode.prototype.connectToNode = function (otherNode, onComplete) {
 NetSimNode.prototype.acceptConnection = function (otherNode, onComplete) {
   onComplete(true);
 };
-},{"./NetSimEntity":113,"./NetSimWire":129}],129:[function(require,module,exports){
-/**
- * Copyright 2015 Code.org
- * http://code.org/
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-/**
- * @fileoverview Client model simulated connection to another node.
- *
- * Distinct from NetSimConnection, which represents the client's actual
- * connection to the simulator shard, this is a simulated connection
- * between simulated nodes.
- *
- * In shared storage, this shows up as a row in the {shardID}_wire table.
- */
-
+},{"../utils":184,"./NetSimEntity":114,"./NetSimWire":131}],131:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3173,14 +3486,14 @@ NetSimNode.prototype.acceptConnection = function (otherNode, onComplete) {
  maxparams: 3,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
-var superClass = require('./NetSimEntity');
+require('../utils');
+var NetSimEntity = require('./NetSimEntity');
 
 /**
- * Create a local controller for a simulated connection between nodes,
- * which is stored in the _wire table on the shard.  The controller can
+ * Local controller for a simulated connection between nodes,
+ * which is stored in the wire table on the shard.  The controller can
  * be initialized with the JSON row from the table, effectively wrapping that
  * data in helpful methods.
  *
@@ -3191,13 +3504,9 @@ var superClass = require('./NetSimEntity');
  * @constructor
  * @augments NetSimEntity
  */
-var NetSimWire = function (shard, wireRow) {
-  superClass.call(this, shard, wireRow);
-
-  // Default empty wireRow object
-  if (wireRow === undefined) {
-    wireRow = {};
-  }
+var NetSimWire = module.exports = function (shard, wireRow) {
+  wireRow = wireRow !== undefined ? wireRow : {};
+  NetSimEntity.call(this, shard, wireRow);
 
   /**
    * Connected node row IDs within the _lobby table
@@ -3221,17 +3530,8 @@ var NetSimWire = function (shard, wireRow) {
    */
   this.localHostname = wireRow.localHostname;
   this.remoteHostname = wireRow.remoteHostname;
-
-  /**
-   * Not used yet.
-   * @type {string}
-   */
-  this.wireMode = wireRow.wireMode !== undefined ?
-      wireRow.wireMode : 'duplex'; // Or simplex?
 };
-NetSimWire.prototype = Object.create(superClass.prototype);
-NetSimWire.prototype.constructor = NetSimWire;
-module.exports = NetSimWire;
+NetSimWire.inherits(NetSimEntity);
 
 /**
  * Static async creation method.  See NetSimEntity.create().
@@ -3240,12 +3540,12 @@ module.exports = NetSimWire;
  *        created entity, or null if entity creation failed.
  */
 NetSimWire.create = function (shard, onComplete) {
-  superClass.create(NetSimWire, shard, onComplete);
+  NetSimEntity.create(NetSimWire, shard, onComplete);
 };
 
 /**
  * Helper that gets the wires table for the configured shard.
- * @returns {exports.SharedTable}
+ * @returns {NetSimTable}
  */
 NetSimWire.prototype.getTable_ = function () {
   return this.shard_.wireTable;
@@ -3253,166 +3553,17 @@ NetSimWire.prototype.getTable_ = function () {
 
 /** Build own row for the wire table  */
 NetSimWire.prototype.buildRow_ = function () {
-  return $.extend(superClass.prototype.buildRow_.call(this), {
+  return {
     localNodeID: this.localNodeID,
     remoteNodeID: this.remoteNodeID,
     localAddress: this.localAddress,
     remoteAddress: this.remoteAddress,
     localHostname: this.localHostname,
-    remoteHostname: this.remoteHostname,
-    wireMode: this.wireMode
-  });
+    remoteHostname: this.remoteHostname
+  };
 };
 
-},{"./NetSimEntity":113}],119:[function(require,module,exports){
-/**
- * Copyright 2015 Code.org
- * http://code.org/
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-/**
- * @fileoverview Entity for message transmitted between two nodes
- *
- * These should really never be updated, only created and deleted.
- */
-
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
-
- maxlen: 90,
- maxparams: 5,
- maxstatements: 200
- */
-/* global $ */
-'use strict';
-
-var superClass = require('./NetSimEntity');
-
-/**
- * Local controller for a message that is 'on the wire'
- *
- * Doesn't actually have any association with the wire - one could,
- * theoretically, send a message from any node in the simulation to any other
- * node in the simulation.
- *
- * Any message that exists in the table is 'in transit' to a node.  Nodes
- * should remove messages as soon as they receive them.
- *
- * @param {!NetSimShard} shard - The shard where this wire lives.
- * @param {Object} [messageRow] - A row out of the _message table on the
- *        shard.  If provided, will initialize this message with the given
- *        data.  If not, this message will initialize to default values.
- * @constructor
- * @augments NetSimEntity
- */
-var NetSimMessage = function (shard, messageRow) {
-  superClass.call(this, shard, messageRow);
-
-  // Default empty wireRow object
-  if (messageRow === undefined) {
-    messageRow = {};
-  }
-
-  /**
-   * Node ID that this message is 'in transit' from.
-   * @type {number}
-   */
-  this.fromNodeID = messageRow.fromNodeID;
-
-  /**
-   * Node ID that this message is 'in transit' to.
-   * @type {number}
-   */
-  this.toNodeID = messageRow.toNodeID;
-
-  /**
-   * All other message content, including the 'packets' students will send.
-   * @type {*}
-   */
-  this.payload = messageRow.payload;
-};
-NetSimMessage.prototype = Object.create(superClass.prototype);
-NetSimMessage.prototype.constructor = NetSimMessage;
-module.exports = NetSimMessage;
-
-/**
- * Static async creation method.  Creates a new message on the given shard,
- * and then calls the callback with a success boolean.
- * @param {!NetSimShard} shard
- * @param {!number} fromNodeID - sender node ID
- * @param {!number} toNodeID - destination node ID
- * @param {*} payload - message content
- * @param {!function} onComplete (success)
- */
-NetSimMessage.send = function (shard, fromNodeID, toNodeID, payload, onComplete) {
-  var entity = new NetSimMessage(shard);
-  entity.fromNodeID = fromNodeID;
-  entity.toNodeID = toNodeID;
-  entity.payload = payload;
-  entity.getTable_().create(entity.buildRow_(), function (row) {
-    onComplete(row !== undefined);
-  });
-};
-
-/**
- * Helper that gets the wires table for the configured instance.
- * @returns {NetSimTable}
- */
-NetSimMessage.prototype.getTable_ = function () {
-  return this.shard_.messageTable;
-};
-
-/** Build own row for the message table  */
-NetSimMessage.prototype.buildRow_ = function () {
-  return $.extend(superClass.prototype.buildRow_.call(this), {
-    fromNodeID: this.fromNodeID,
-    toNodeID: this.toNodeID,
-    payload: this.payload
-  });
-};
-
-},{"./NetSimEntity":113}],113:[function(require,module,exports){
-/**
- * Copyright 2015 Code.org
- * http://code.org/
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-/**
- * @fileoverview Client model of simulated network entity, which lives
- * in a shard table.
- *
- * Wraps the entity row with helper methods for examining and maintaining
- * the entity state in shared storage.
- */
-
+},{"../utils":184,"./NetSimEntity":114}],114:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3423,17 +3574,21 @@ NetSimMessage.prototype.buildRow_ = function () {
  maxlen: 90,
  maxstatements: 200
  */
-/* global Date */
 'use strict';
 
 var ObservableEvent = require('./ObservableEvent');
 
 /**
+ * Client model of simulated network entity, which lives in a shard table.
+ *
+ * Wraps the entity row with helper methods for examining and maintaining
+ * the entity state in shared storage.
+ *
  * @param {!NetSimShard} shard
  * @param {Object} [entityRow] JSON row from table.
  * @constructor
  */
-var NetSimEntity = function (shard, entityRow) {
+var NetSimEntity = module.exports = function (shard, entityRow) {
   if (entityRow === undefined) {
     entityRow = {};
   }
@@ -3445,31 +3600,10 @@ var NetSimEntity = function (shard, entityRow) {
   this.shard_ = shard;
 
   /**
-   * Cached last ping time for this entity
-   * @type {number}
-   * @private
-   */
-  this.lastPing_ = entityRow.lastPing;
-
-  /**
    * Node's row ID within the _lobby table.  Unique within instance.
    * @type {number}
    */
   this.entityID = entityRow.id;
-
-  /**
-   * How long (in milliseconds) this entity is allowed to remain in
-   * storage without being cleaned up.
-   * @type {number}
-   */
-  this.ENTITY_TIMEOUT_MS = 300000;
-
-  /**
-   * How often (in milliseconds) this entity's status should be pushed
-   * to the server to keep the row active.
-   * @type {number}
-   */
-  this.ENTITY_KEEPALIVE_MS = 30000;
 
   /**
    * Change event fired when entity's state changes in a way that
@@ -3478,7 +3612,6 @@ var NetSimEntity = function (shard, entityRow) {
    */
   this.onChange = new ObservableEvent();
 };
-module.exports = NetSimEntity;
 
 /**
  * Static async creation method.  Creates a new entity on the given shard,
@@ -3529,7 +3662,6 @@ NetSimEntity.get = function (EntityType, entityID, shard, onComplete) {
 NetSimEntity.prototype.update = function (onComplete) {
   onComplete = onComplete || function () {};
 
-  this.lastPing_ = Date.now();
   this.getTable_().update(this.entityID, this.buildRow_(), onComplete);
 };
 
@@ -3542,59 +3674,16 @@ NetSimEntity.prototype.destroy = function (onComplete) {
 
 /** Get storage table for this entity type. */
 NetSimEntity.prototype.getTable_ = function () {
-  // This method should be implemented by an inheriting class.
+  // This method should be implemented by a child class.
   throw new Error('Method getTable_ is not implemented.');
 };
 
 /** Construct table row for this entity. */
 NetSimEntity.prototype.buildRow_ = function () {
-  return {
-    lastPing: Date.now()
-  };
+  return {};
 };
 
-/**
- * Whether this entity's row has been touched within its timeout.
- * @returns {boolean}
- */
-NetSimEntity.prototype.isExpired = function () {
-  // TODO: Subclasses should reimplement this method to include
-  // validation checks; e.g. a NetSimWire is expired if one of its
-  // endpoints no longer exists.
-  return Date.now() - this.lastPing_ >= this.ENTITY_TIMEOUT_MS;
-};
-
-/**
- * Default Entity tick ensures keepAlive messages get sent for this entity.
- * @param {!RunLoop.Clock} clock
- */
-NetSimEntity.prototype.tick = function () {
-  if (Date.now() - this.lastPing_ >= this.ENTITY_KEEPALIVE_MS){
-    this.update();
-  }
-};
-},{"./ObservableEvent":130}],130:[function(require,module,exports){
-/**
- * Copyright 2015 Code.org
- * http://code.org/
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-/**
- * @fileoverview Observer/ObservableEvent pattern utilities
- */
-
+},{"./ObservableEvent":132}],132:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3613,7 +3702,7 @@ NetSimEntity.prototype.tick = function () {
  * without attaching anything to the DOM or other global scope.
  * @constructor
  */
-var ObservableEvent = function () {
+var ObservableEvent = module.exports = function () {
   /**
    * Objects observing this.
    * @type {Array}
@@ -3621,7 +3710,6 @@ var ObservableEvent = function () {
    */
   this.observerList_ = [];
 };
-module.exports = ObservableEvent;
 
 /**
  * Subscribe a method to be called when notifyObservers is called.
@@ -3663,175 +3751,7 @@ ObservableEvent.prototype.notifyObservers = function () {
     observer.toCall.apply(undefined, args);
   });
 };
-},{}],118:[function(require,module,exports){
-/**
- * Copyright 2015 Code.org
- * http://code.org/
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-/**
- * @fileoverview Logging API to control log levels and support different browsers
- */
-
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
-
- maxlen: 90,
- maxparams: 3,
- maxstatements: 200
- */
-'use strict';
-
-/**
- * A logger instance
- * @constructor
- * @param {Console} window console API
- * @param {LogLevel} verbosity
- */
-var NetSimLogger = function (outputConsole, verbosity /*=VERBOSE*/) {
-  /**
-   * @type {Console}
-   * @private
-   */
-  this.outputConsole_ = outputConsole;
-
-  /**
-   * Always mapped to console.log, or no-op if not available.
-   * @type {Function}
-   * @private
-   */
-  this.log_ = function () {};
-
-  /**
-   * If configured for info logging, gets mapped to console.info,
-   * falls back to console.log, or no-op.
-   * @type {Function}
-   */
-  this.info = function () {};
-
-  /**
-   * If configured for warning logging, gets mapped to console.warn,
-   * falls back to console.log, or no-op.
-   * @type {Function}
-   */
-  this.warn = function () {};
-
-  /**
-   * If configured for error logging, gets mapped to console.error,
-   * falls back to console.log, or no-op.
-   * @type {Function}
-   */
-  this.error = function () {};
-
-  this.initializeWithVerbosity_((undefined === verbosity) ?
-      LogLevel.VERBOSE : verbosity);
-};
-module.exports = NetSimLogger;
-
-/**
- * Log verbosity levels enum.
- * @readonly
- * @enum {number}
- */
-var LogLevel = {
-  NONE: 0,
-  ERROR: 1,
-  WARN: 2,
-  INFO: 3,
-  VERBOSE: 4
-};
-NetSimLogger.LogLevel = LogLevel;
-
-/**
- * Binds internal function calls according to given verbosity level.
- * @param verbosity
- * @private
- */
-NetSimLogger.prototype.initializeWithVerbosity_ = function (verbosity) {
-  this.log_ = (this.outputConsole_ && this.outputConsole_.log) ?
-      this.outputConsole_.log.bind(this.outputConsole_) : function () {};
-
-  if (verbosity >= LogLevel.INFO) {
-    this.info = (this.outputConsole_ && this.outputConsole_.info) ?
-        this.outputConsole_.info.bind(this.outputConsole_) : this.log_;
-  } else {
-    this.info = function () {};
-  }
-
-  if (verbosity >= LogLevel.WARN) {
-    this.warn = (this.outputConsole_ && this.outputConsole_.warn) ?
-        this.outputConsole_.warn.bind(this.outputConsole_) : this.log_;
-  } else {
-    this.warn = function () {};
-  }
-
-  if (verbosity >= LogLevel.ERROR) {
-    this.error = (this.outputConsole_ && this.outputConsole_.error) ?
-        this.outputConsole_.error.bind(this.outputConsole_) : this.log_;
-  } else {
-    this.error = function () {};
-  }
-};
-
-/**
- * Writes to output, depending on log level
- * @param {*} message
- * @param {LogLevel} logLevel
- */
-NetSimLogger.prototype.log = function (message, logLevel /*=INFO*/) {
-  if (undefined === logLevel) {
-    logLevel = LogLevel.INFO;
-  }
-
-  switch (logLevel) {
-    case LogLevel.ERROR:
-      this.error(message);
-      break;
-    case LogLevel.WARN:
-      this.warn(message);
-      break;
-    case LogLevel.INFO:
-      this.info(message);
-      break;
-    default:
-      this.log_(message);
-  }
-};
-
 },{}],111:[function(require,module,exports){
-/**
- * Copyright 2015 Code.org
- * http://code.org/
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 /**
  * @fileoverview Interface to dashboard user data API.
  */
@@ -3857,7 +3777,7 @@ NetSimLogger.prototype.log = function (message, logLevel /*=INFO*/) {
  * Represents a Dashboard user account - could be a teacher, a student, etc.
  * @constructor
  */
-var DashboardUser = function () {
+var DashboardUser = module.exports = function () {
   /**
    * Indicates whether the async call has completed yet.
    * @type {boolean}
@@ -3883,7 +3803,6 @@ var DashboardUser = function () {
    */
   this.name = "";
 };
-module.exports = DashboardUser;
 
 /**
  * @type {DashboardUser}
@@ -4169,4 +4088,4 @@ appsApi.UserPropertyBag = function (app_publickey) {
   '/user-properties');
 };
 appsApi.UserPropertyBag.inherits(appsApi.PropertyBag);
-},{"./utils":182}]},{},[134]);
+},{"./utils":184}]},{},[136]);

@@ -333,6 +333,8 @@
       %{student_name}
   user:
     email_confirm_needed: 'E-pasta adrese nav apstiprināta:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Atkārtoti nosūtīt apstiprinājumu instrukcijas
     new_password_hint: (atstājiet tukšu, ja nevēlaties mainīt to)
     current_password_hint: (nepieciešama jūsu pašreizējā parole, lai apstiprinātu

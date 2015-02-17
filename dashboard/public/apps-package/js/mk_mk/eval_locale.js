@@ -154,9 +154,12 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
+"badColorStringError":function(d){return "You used an invalid color string: "+appLocale.v(d,"val")},
+"badStyleStringError":function(d){return "You used an invalid style string: "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "круг (радиус, стил, боја)"},
 "displayBlockTitle":function(d){return "Покажи"},
 "ellipseBlockTitle":function(d){return "елипса (ширина, висина, стил, боја)"},
+"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "extraTopBlocks":function(d){return "Имате неповрзани блокови. Дали мислевте да се закачите на овие на \"Прикажи\" блок?"},
 "overlayBlockTitle":function(d){return "шалче (горе, долу)"},
 "placeImageBlockTitle":function(d){return "место-на сликата (x, y, слика)"},

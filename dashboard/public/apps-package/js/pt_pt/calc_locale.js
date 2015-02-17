@@ -154,10 +154,14 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"compute":function(d){return "computar"},
+"compute":function(d){return "cálculo"},
+"emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
+"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "equivalentExpression":function(d){return "Tente reordenar os seus argumentos para obter exactamente a mesma expressão."},
-"extraTopBlocks":function(d){return "Tem blocos não ligados. Tencionava ligar-los ao bloco \"computar\"?"},
-"failedInput":function(d){return "Your function does not return the right result for all values."},
+"extraTopBlocks":function(d){return "Você tem blocos desligados. Você quis dizer para anexar estes para o bloco \"cálculo\"?"},
+"failedInput":function(d){return "Sua função não retorna o resultado certo para todos os valores."},
 "goal":function(d){return "Objectivo:"},
-"reinfFeedbackMsg":function(d){return "Here is your story! Continue working on it, or move on to the next puzzle!"},
-"yourExpression":function(d){return "A sua expressão:"}};
+"levelIncompleteError":function(d){return "Your expression does not match the goal."},
+"reinfFeedbackMsg":function(d){return "Aqui está o seu cálculo! Continue trabalhando nele, ou passar para o próximo quebra-cabeça!"},
+"yourExpression":function(d){return "A sua expressão:"},
+"wrongInput":function(d){return "You are calling your function with the wrong value."}};

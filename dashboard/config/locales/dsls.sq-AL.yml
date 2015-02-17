@@ -45,6 +45,7 @@
         Blocks to Math 1.blocks.start_blocks, 200: Blloqet te Matematika 1.blloqe.fillon
           blloqe, 200
         4 + 5: 4 + 5
+        (4+5): (4+5)
         Type the arithmetic expression here: Shtyp shprehjen matematikore këtu
       Blocks to Math 2:
         Convert Blocks to Math: Kthe Blloqet te Matematika
@@ -53,6 +54,7 @@
         Blocks to Math 2.blocks.start_blocks, 200: Blloqet te Matematika 2.blloqe.fillon
           blloqe, 200
         7 * 6: 7 * 6
+        (7 * 6): (7 * 6)
         Type the arithmetic expression here: Shtyp shprehjen matematikore këtu
       Blocks to Math 3:
         Convert Blocks to Math: Kthe Blloqet te Matematika
@@ -62,6 +64,7 @@
           blloqe
         (2 * 3) - (1 + 0): (2 * 3) - (1 + 0)
         2 * 3 - (1 + 0): 2 * 3 - (1 + 0)
+        ((2 * 3) - (1 + 0)): ((2 * 3) - (1 + 0))
         Type the arithmetic expression here: Shtyp shprehjen matematikore këtu
       Blocks to Math 4:
         Convert Blocks to Math: Kthe Blloqet te Matematika
@@ -71,6 +74,7 @@
           blloqe
         (5 + 8) - 12: (5 + 8) - 12
         5 + 8 - 12: 5 + 8 - 12
+        ((5 + 8) - 12): ((5 + 8) - 12)
         Type the arithmetic expression here: Shtyp shprehjen matematikore këtu
       Blocks to Math 5:
         Convert Blocks to Math: Kthe Blloqet te Matematika
@@ -80,6 +84,7 @@
           blloqe
         (-2) * (-6):
         - 2 * -6: -2 * -6
+        ((-2) * (-6)): ((-2) * (-6))
         Type the arithmetic expression here: Shtyp shprehjen matematikore këtu
         -2 * -6: -2 * -6
       Blocks to Math 6:
@@ -92,6 +97,7 @@
         ((4 - 1) * -2) + 12: ((4 - 1) * -2) + 12
         (4 - 1) * (-2) + 12: (4 - 1) * (-2) + 12
         (4 - 1) * -2 + 12: (4 - 1) * -2 + 12
+        ((4 - 1) * (-2)) + 12): ((4 - 1) * (-2)) + 12)
         Type the arithmetic expression here: Shtyp shprehjen matematikore këtu
       Blocks to Math 7:
         Convert Blocks to Math: Kthe Blloqet te Matematika
@@ -100,6 +106,7 @@
         Blocks to Math 7.blocks.start_blocks: Blloqet te Matematika 7.blloqe.fillon
           blloqe
         10 / (2 * (3 + 1)): 10 / (2 * (3 + 1))
+        (10 / (2 * (3 + 1)): (10 / (2 * (3 + 1))
         Type the arithmetic expression here: Shtyp shprehjen matematikore këtu
       text match test:
         Mathematical Expression Assessment: Vlerësimi i Shprehjes Matematikore
@@ -115,29 +122,26 @@
         9-3+4*7: 9-3+4*7
     contract_match:
       CREATING CONTRACTS FROM EXAMPLES 1:
-        CREATING CONTRACTS FROM EXAMPLES 1: KRIJIMI I SPECIFIKIMEVE NGA SHEMBUJT 1
+        Big Triangle: Big Triangle
         Write a contract for a big red triangle that is 100 pixels in size: Shkruaj
           një specifikim për një trekëndor të madh të kuq që është 100 piksela në
           madhësi
         EXAMPLE 1.solution_blocks, 300: SHEMBULLI 1.blloqet e zgjidhjes, 300
         Big Triangle|image|color:string|size:Number: Trekëndor i Madh|imazhi|ngjyra:string|madhësia:Numër
       Creating Contracts From Examples 2:
-        Creating Contracts From Examples 2: Krijimi i Specifikimeve nga Shembujt 2
+        Square Contract: Square Contract
         Write a contract for a purple square that is 15 pixels in size.: Shkruaj një
           funksion për një katror lejla që është 15 piksela në madhësi.
         Example 2.solution_blocks, 300: Shembulli 2.blloqet e zgjidhjes, 300
         Square|image|color:string|size:Number: Katror|imazh|ngjyra:string|madhësia:Numër
       Creating Contracts From Examples 3A:
-        Creating Contracts From Examples 3A: Krijimi i Specifikimeve nga Shembujt
-          3A
+        Banner Contract: Banner Contract
         Banner Function block: blloku i Funksionit Flamur
         Examples 3.solution_blocks, 300: Shembujt 3.blloqet e zgjidhjes, 300
         banner|image|text:string: reklama|imazhi|teksti:string
       Creating Contracts From Examples 4:
-        Creating Contracts From Examples 4: Krijimi i Specifikimeve nga Shembujt 4
-        Try using the "text" function to write this red text at size 40.: Përpiqu
-          të përdorësh funksionin "tekst" për të shkruar këtë tekst të kuq në madhësinë
-          40.
+        Shrink Contract: Shrink Contract
+        Try using the "shrink" function.: Try using the "shrink" function.
         Examples 4.solution_blocks, 300: Shembujt 4.blloqet e zgjidhjes, 300
         shrink|image|image:image: shrink|image|image:image
       Design Recipe 1.contract:
@@ -186,6 +190,28 @@
         Eval Contracts 4 A.solution_blocks, 300: Specifikimet e funksionit Eval 4
           A.blloqet e zgjidhjes, 300
         scale|image|factor:Number|image:image: shkallëzimi|imazhi|faktori:Numër|imazhi:imazh
+      Eval Contracts B:
+        Star Contract: Specifikimet Yll
+        Write a contract for the star function: Shkruaj një specifikim për funksionin
+          star
+        Eval Contracts 1 A.solution_blocks, 300: Specifikimet e funksionit Eval 1
+          A.blloqet e zgjidhjes, 300
+        star|image|color:string|radius:Number|style:string: 'yll|imazh|ngjyra:string|rrezja:
+          Numër|stili:string'
+      Eval Contracts D:
+        Rotate Contract: Specifikimi i Rrotullimit
+        Write a contract for the rotate function: Shkruaj një specifikim për funksionin
+          e rrotullimit
+        Eval Contracts 2 A.solution_blocks, 300: Specifikimet e funksionit EVal 2
+          A.blloqt e zgjidhjes, 300
+        rotate|image|degrees:Number|image:image: rrotullo|imazh|gradët:Numër|imazh:imazh
+      Eval Contracts F:
+        Text Contract: Specifikimi Tekst
+        Write a contract for the text function: Shkruaj një specifikim për funksionin
+          e tekstit
+        Eval Contracts 3 A.solution_blocks, 300: Specifikimet e funksionit Eval 3
+          A.blloqet e zgjidhjes, 300
+        text|image|color:string|size:Number|string:string: teksti|imazh|ngjyra:string|madhësia:Numër|string:string
       Eval Design Recipe 1.contract:
         Design Recipe 1 Contract: Specifikimi i Udhëzimit të Dizenjimit
         0: '? Shkruaj specifikimin për funksionin e quajtur "wide-rect", i cili krijon
@@ -210,3 +236,21 @@
           të quajtur gjatësia-raketë që kontrollon numrin e sekondave që kanë kaluar
           që kur raketa u nis, dhe prodhon gjatësinë e raketës në atë moment.'
         rocket-height|Number|seconds:Number: gjatësia-raketë|Numri|sekondat:Numër
+        ? A rocket blasts off, traveling at 15 meters per second. Write a function
+          called rocket-height that takes in the number of seconds that have passed
+          since the rocket took off, and which produces the height of the rocket at
+          that time.
+        : A rocket blasts off, traveling at 15 meters per second. Write a function
+          called rocket-height that takes in the number of seconds that have passed
+          since the rocket took off, and which produces the height of the rocket at
+          that time.
+    external:
+      Pixelation 1:
+        Pixelation 1: Pixelation 1
+        Create images with bits and bytes.: Create images with bits and bytes.
+      Pixelation 2:
+        Pixelation 2: Pixelation 2
+        Create images with bits and bytes.: Create images with bits and bytes.
+      Pixelation 3:
+        Pixelation 3: Pixelation 3
+        Create images with bits and bytes.: Create images with bits and bytes.

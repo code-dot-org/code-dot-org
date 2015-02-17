@@ -154,9 +154,12 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
+"badColorStringError":function(d){return "You used an invalid color string: "+appLocale.v(d,"val")},
+"badStyleStringError":function(d){return "You used an invalid style string: "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "çember (yarıçap,stil,renk)"},
 "displayBlockTitle":function(d){return "görüntüle"},
 "ellipseBlockTitle":function(d){return "Elips (genişlik, yükseklik, stil, renk)"},
+"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "extraTopBlocks":function(d){return "Bağlantı yapılmamış bloklarınız var. Bunları \"görüntüleme\" bloğuyla mı ilişkilendirecek istediniz?"},
 "overlayBlockTitle":function(d){return "kaplama (üst, alt)"},
 "placeImageBlockTitle":function(d){return "Görüntü Yerleştir (x, y, resim)"},

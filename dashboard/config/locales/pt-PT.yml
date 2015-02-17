@@ -11,7 +11,7 @@
         name: Nome a exibir
         email: Email
         username: nome de utilizador
-        password: palavra-passe
+        password: Palavra-passe
         password_confirmation: Confirmar Palavra-passe
         current_password: Palavra-passe atual
         locale: Língua
@@ -349,6 +349,8 @@
       for %{student_name}'
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Resend confirmation instructions
     new_password_hint: (deixa em branco se não quiseres alterá-lo)
     current_password_hint: (precisamos da tua palavra-passe para confirmar as tuas
@@ -413,7 +415,7 @@
     female: Feminino
     none: Prefiro não responder
   user_type:
-    student: estudante
+    student: Aluno
     teacher: Teacher
   footer:
     help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped
@@ -441,7 +443,7 @@
     notes: Nenhum vídeo? Mostrar notas.
     notes_coming_soon: Notes for this video coming soon.
     autoplay_option: visualização automatica de vídeos
-    download: Baixar o vídeo
+    download: Descarregar o vídeo
   compatability:
     working:
       header: Estamos a trabalhar no suporte ao teu browser.
@@ -465,7 +467,7 @@
   download_pdf: Abre o plano de aula
   lesson_plan: Lesson Plan
   view_lesson_plan: View Lesson Plan
-  pdf_download: Download PDF
+  pdf_download: Descarregar PDF
   download_coming_soon: Downloadable activity coming soon.
   video_coming_soon: Video Coming Soon!
   share_code:
