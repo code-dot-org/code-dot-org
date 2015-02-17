@@ -28,8 +28,6 @@ var commonMsg = require('../../locale/current/common');
 
 var evalUtils = require('./evalUtils');
 var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
-var functionalBlockUtils = require('../functionalBlockUtils');
-var initTitledFunctionalBlock = functionalBlockUtils.initTitledFunctionalBlock;
 
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function(blockly, blockInstallOptions) {
@@ -246,7 +244,7 @@ exports.install = function(blockly, blockInstallOptions) {
     ]
   });
 
-  functionalBlockUtils.installStringPicker(blockly, generator, {
+  blockly.FunctionalBlockUtils.installStringPicker(blockly, generator, {
     blockName: 'functional_style',
     values: [
       [msg.solid(), 'solid'],
@@ -268,7 +266,7 @@ function installFunctionalBlock (blockly, generator, gensym, options) {
 
   blockly.Blocks[blockName] = {
     init: function () {
-      initTitledFunctionalBlock(this, blockTitle, returnType, args);
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, blockTitle, returnType, args);
     }
   };
 
