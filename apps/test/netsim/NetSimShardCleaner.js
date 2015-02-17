@@ -67,14 +67,12 @@ describe("NetSimShardCleaner", function () {
   });
 
   it ("gets Cleaning Lock by putting a special row in the heartbeat table", function () {
-    testShard.heartbeatTable.readAll(function (rows) {
-      assertEqual(rows.length, 0);
-    });
+    assertTableSize(testShard, 'heartbeatTable', 0);
     cleaner.getCleaningLock(function (success) {
       assert(success === true, "Callback takes a boolean success value");
     });
+    assertTableSize(testShard, 'heartbeatTable', 1);
     testShard.heartbeatTable.readAll(function (rows) {
-      assertEqual(rows.length, 1);
       assertOwnProperty(rows[0], 'cleaner');
     });
   });
@@ -84,9 +82,7 @@ describe("NetSimShardCleaner", function () {
       assert(success === true, "First cleaner gets lock.");
     });
 
-    testShard.heartbeatTable.readAll(function (rows) {
-      assertEqual(rows.length, 1);
-    });
+    assertTableSize(testShard, 'heartbeatTable', 1);
     assert(cleaner.hasCleaningLock());
 
     var cleaner2 = new NetSimShardCleaner(testShard);
@@ -95,9 +91,7 @@ describe("NetSimShardCleaner", function () {
     });
 
     // Make sure clean-up of second lock happens
-    testShard.heartbeatTable.readAll(function (rows) {
-      assertEqual(rows.length, 1);
-    });
+    assertTableSize(testShard, 'heartbeatTable', 1);
     assert(!cleaner2.hasCleaningLock());
   });
 
@@ -122,18 +116,14 @@ describe("NetSimShardCleaner", function () {
       assert(success === true, "Cleaner gets lock.");
     });
 
-    testShard.heartbeatTable.readAll(function (rows) {
-      assertEqual(rows.length, 1);
-    });
+    assertTableSize(testShard, 'heartbeatTable', 1);
     assert(cleaner.hasCleaningLock());
 
     cleaner.releaseCleaningLock(function (success) {
       assert(success === true, "Cleaner releases lock.");
     });
 
-    testShard.heartbeatTable.readAll(function (rows) {
-      assertEqual(rows.length, 0);
-    });
+    assertTableSize(testShard, 'heartbeatTable', 0);
     assert(!cleaner.hasCleaningLock());
   });
 
