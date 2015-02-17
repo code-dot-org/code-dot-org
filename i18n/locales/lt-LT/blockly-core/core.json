@@ -23,6 +23,7 @@
   "COLOUR_RGB_RED":"raudona spalva",
   "COLOUR_RGB_TITLE":"spalvinti su",
   "COLOUR_RGB_TOOLTIP":"Sukurk spalvą su tam tikru raudonos, žalios ir mėlynos spalvų kiekiu. Visos vertės turi būti nuo 0 iki 100.",
+  "CONTRACT_EDITOR_HEADER":"Design Recipe",
   "CONTROLS_FLOW_STATEMENTS_HELPURL":"https:\/\/code.google.com\/p\/blockly\/wiki\/Loops#Loop_Termination_Blocks",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK":"nutraukti ciklą",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE":"pratęsti kitą ciklo pakartojimą",
@@ -377,7 +378,7 @@
   "VARIABLES_GET_TOOLTIP":"Paima kintamojo reikšmę.",
   "VARIABLES_SET_CREATE_GET":"Sukurti kintamąjį '%1'",
   "VARIABLES_SET_HELPURL":"http:\/\/code.google.com\/p\/blockly\/wiki\/Variables#Set",
-  "VARIABLES_SET_TAIL":"komanda:",
-  "VARIABLES_SET_TITLE":"nustatyk",
+  "VARIABLES_SET_TAIL":"=",
+  "VARIABLES_SET_TITLE":" ",
   "VARIABLES_SET_TOOLTIP":"Priskiria kintamajam nurodytą reikšmę."
 }

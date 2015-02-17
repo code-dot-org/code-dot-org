@@ -292,6 +292,8 @@ vi:
     student_teacher_disassociated: '%{teacher_name} has been removed as a teacher for %{student_name}'
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Resend confirmation instructions
     new_password_hint: (để trống nếu bạn không muốn thay đổi nó)
     current_password_hint: (chúng tôi cần mật khẩu của bạn để xác nhận thay đổi)
@@ -475,7 +477,7 @@ vi:
           title: Khóa giới thiệu về khoa học máy tính cho học sinh K-8 (15 đến 25 giờ)
           description: Khóa học 20-giờ sẽ giới thiệu mục đích ngành khoa học máy tính và các khái niệm lập trình. Khóa học được soạn cho các lớp K-8, tuy nhiên nó khá thú vị để tìm hiểu ở tất cả các lứa tuổi.
         Hour of Code:
-          title: Giờ của mã
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: Hiệu chỉnh mã

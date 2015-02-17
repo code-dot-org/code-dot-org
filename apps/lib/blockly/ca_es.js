@@ -1,6 +1,6 @@
 goog.provide('Blockly.Msg.ca_es');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "real";
+Blockly.Msg.ACTUAL = "crida";
 Blockly.Msg.ADD = "Afegeix";
 Blockly.Msg.ADD_COMMENT = "Afegeix un comentari";
 Blockly.Msg.ADD_PARAMETER = "Afegeix el paràmetre";
@@ -24,6 +24,7 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "vermell";
 Blockly.Msg.COLOUR_RGB_TITLE = "color amb";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "Crea un color amb la quantitat justa de vermell, verd i blau. Tots els valors han d'estar entre 0 i 100.";
+Blockly.Msg.CONTRACT_EDITOR_HEADER = "Design Recipe";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blocs/wiki/Loops#Loop_Termination_Blocs";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "surt del bucle";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "continua amb la següent iteració del bucle";

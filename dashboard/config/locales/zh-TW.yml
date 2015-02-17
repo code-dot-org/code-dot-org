@@ -1,7 +1,7 @@
 "zh":
   errors:
     messages:
-      not_saved: 'Please correct the following errors:'
+      not_saved: 請修正下列錯誤：
   activerecord:
     errors:
       messages:
@@ -198,9 +198,8 @@
         not_earned: |
           為了獎勵第一次參與電腦科學課程的教師，透過指導一整個班級進行K-8的入門課程，您將有機會贏取由<a href="http://DonorsChoose.org">DonorsChoose.org</a>所提供高達$1000美元的儲值。符合資格的門檻為，你必需指導班上超過15名學生完成K-8的入門課程，所有參加學生必需完成所有課程並獲取所有 %{num_trophies}個獎盃。如果有超過7個女學生獲得所有獎盃，獎勵為$1000美元<a href="http://DonorsChoose.org">DonorsChoose.org</a>儲值。其它情況獎勵為為$750美元<a href="http://DonorsChoose.org">DonorsChoose.org</a>儲值。<a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>儲值僅限美國公立學校教師使用。
         bonus:
-          not_earned_title: You can still earn an additional $250 in <a target="_blank"
-            href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers
-            only)
+          not_earned_title: 您仍然可以在<a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>賺取額外$250
+            credits (僅限美國教師)
           earned: 7個或以上的女學生完成全部 %{num_trophies}個獎盃的收集。你已獲得額外的獎章！(僅限美國教師)
           not_earned: 如果至少7個以上的女學生完成了所有 %{num_trophies}個獎盃的收集，你將獲得價值$250美元的 <a target="_blank"
             href="http://DonorsChoose.org">DonorsChoose.org</a>儲值。<a target="_blank"
@@ -310,6 +309,8 @@
     student_teacher_disassociated: '%{student_name}的老師%{teacher_name}已經被移除'
   user:
     email_confirm_needed: 電子郵件地址尚未被確認：
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: 重新發送確認指令
     new_password_hint: （如果你不想變更它就保留空白）
     current_password_hint: （我們需要您現在的密碼以確認您的更改）
