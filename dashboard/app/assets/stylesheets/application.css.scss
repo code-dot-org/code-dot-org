@@ -220,15 +220,15 @@ em strong {
   background-color: #ccc;
 }
 
-.puzzle_outer_current {
-  background-color: $level_current;
+.puzzle_outer_assessment {
+  background-color: yellow;
   padding: 1px;
   display: inline-block;
   border-radius: 20px;
 }
 
-.puzzle_outer_assessment {
-  background-color: yellow;
+.puzzle_outer_current {
+  background-color: $level_current;
   padding: 1px;
   display: inline-block;
   border-radius: 20px;
