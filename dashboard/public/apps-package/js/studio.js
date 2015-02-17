@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({154:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({153:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Studio = require('./studio');
@@ -16,7 +16,7 @@ window.studioMain = function(options) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":3,"./blocks":148,"./levels":153,"./skins":156,"./studio":157}],157:[function(require,module,exports){
+},{"../appMain":3,"./blocks":147,"./levels":152,"./skins":155,"./studio":156}],156:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -719,8 +719,9 @@ Studio.onTick = function() {
 
     var isWalking = true;
 
-    // After 5 ticks of no movement, turn sprite forward
-    if (Studio.tickCount - Studio.sprite[i].lastMove > TICKS_BEFORE_FACE_SOUTH) {
+    // After 5 ticks of no movement, turn sprite forward.
+    if (Studio.sprite[i].lastMove === Infinity ||
+        Studio.tickCount - Studio.sprite[i].lastMove > TICKS_BEFORE_FACE_SOUTH) {
       Studio.sprite[i].dir = Direction.SOUTH;
       isWalking = false;
     }
@@ -2925,7 +2926,7 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/current/common":190,"../../locale/current/studio":196,"../StudioApp":2,"../canvg/StackBlur.js":38,"../canvg/canvg.js":39,"../canvg/rgbcolor.js":40,"../canvg/svg_todataurl":41,"../codegen":42,"../constants":43,"../dom":44,"../skins":144,"../templates/page.html":165,"../utils":185,"../xml":186,"./api":146,"./bigGameLogic":147,"./blocks":148,"./collidable":149,"./constants":150,"./controls.html":151,"./extraControlRows.html":152,"./projectile":155,"./visualization.html":158}],158:[function(require,module,exports){
+},{"../../locale/current/common":189,"../../locale/current/studio":195,"../StudioApp":2,"../canvg/StackBlur.js":38,"../canvg/canvg.js":39,"../canvg/rgbcolor.js":40,"../canvg/svg_todataurl":41,"../codegen":42,"../constants":43,"../dom":44,"../skins":143,"../templates/page.html":164,"../utils":184,"../xml":185,"./api":145,"./bigGameLogic":146,"./blocks":147,"./collidable":148,"./constants":149,"./controls.html":150,"./extraControlRows.html":151,"./projectile":154,"./visualization.html":157}],157:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2945,7 +2946,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":206}],155:[function(require,module,exports){
+},{"ejs":205}],154:[function(require,module,exports){
 var Collidable = require('./collidable');
 var Direction = require('./constants').Direction;
 var constants = require('./constants');
@@ -3119,7 +3120,7 @@ Projectile.prototype.moveToNextPosition = function () {
   this.y = next.y;
 };
 
-},{"./collidable":149,"./constants":150}],156:[function(require,module,exports){
+},{"./collidable":148,"./constants":149}],155:[function(require,module,exports){
 /**
  * Load Skin for Studio.
  */
@@ -3461,7 +3462,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../../locale/current/studio":196,"../skins":144,"./constants":150}],153:[function(require,module,exports){
+},{"../../locale/current/studio":195,"../skins":143,"./constants":149}],152:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/studio');
@@ -4930,7 +4931,7 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
   'startBlocks': "",
 });
 
-},{"../../locale/current/studio":196,"../block_utils":17,"../utils":185,"./constants":150}],152:[function(require,module,exports){
+},{"../../locale/current/studio":195,"../block_utils":17,"../utils":184,"./constants":149}],151:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4950,7 +4951,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":190,"ejs":206}],151:[function(require,module,exports){
+},{"../../locale/current/common":189,"ejs":205}],150:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4970,7 +4971,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":190,"ejs":206}],149:[function(require,module,exports){
+},{"../../locale/current/common":189,"ejs":205}],148:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -5076,7 +5077,7 @@ Collidable.prototype.outOfBounds = function () {
          (this.y > studioApp.MAZE_HEIGHT + (this.height / 2));
 };
 
-},{"../StudioApp":2,"./constants":150}],148:[function(require,module,exports){
+},{"../StudioApp":2,"./constants":149}],147:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -5474,7 +5475,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.00, 0.74);
       this.appendValueInput('SPRITE')
-          .setCheck('Number')
+          .setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(msg.stopSpriteN({spriteIndex: ''}));
       this.setPreviousStatement(true);
       this.setInputsInline(true);
@@ -5668,7 +5669,7 @@ exports.install = function(blockly, blockInstallOptions) {
       this.setHSV(184, 1.00, 0.74);
       if (spriteCount > 1) {
         this.appendValueInput('SPRITE')
-          .setCheck('Number')
+          .setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(msg.moveSpriteN({spriteIndex: ''}));
       } else {
         this.appendDummyInput()
@@ -5677,9 +5678,9 @@ exports.install = function(blockly, blockInstallOptions) {
       this.appendDummyInput()
         .appendTitle(msg.toXY());
       this.appendValueInput('XPOS')
-        .setCheck('Number');
+        .setCheck(blockly.BlockValueType.NUMBER);
       this.appendValueInput('YPOS')
-        .setCheck('Number');
+        .setCheck(blockly.BlockValueType.NUMBER);
       this.setPreviousStatement(true);
       this.setInputsInline(true);
       this.setNextStatement(true);
@@ -5852,7 +5853,7 @@ exports.install = function(blockly, blockInstallOptions) {
       this.setHSV(184, 1.00, 0.74);
       if (options.sprite) {
         this.appendValueInput('SPRITE')
-            .setCheck('Number')
+            .setCheck(blockly.BlockValueType.NUMBER)
             .appendTitle(msg.moveSpriteN({spriteIndex: ''}));
       } else if (spriteCount > 1) {
         if (isK1) {
@@ -5881,7 +5882,7 @@ exports.install = function(blockly, blockInstallOptions) {
         .appendTitle('\t');
       if (options.params) {
         this.appendValueInput('DISTANCE')
-          .setCheck('Number');
+          .setCheck(blockly.BlockValueType.NUMBER);
         this.appendDummyInput()
           .appendTitle(msg.moveDistancePixels());
       } else {
@@ -6176,9 +6177,9 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       this.setHSV(184, 1.00, 0.74);
-      this.appendValueInput('SPRITE').setCheck('Number')
+      this.appendValueInput('SPRITE').setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(msg.setSpriteN({spriteIndex: ''}));
-      this.appendValueInput('VALUE').setCheck('Number')
+      this.appendValueInput('VALUE').setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(msg.speed());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -6246,9 +6247,9 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       this.setHSV(184, 1.00, 0.74);
-      this.appendValueInput('SPRITE').setCheck('Number')
+      this.appendValueInput('SPRITE').setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(msg.setSpriteN({spriteIndex: ''}));
-      this.appendValueInput('VALUE').setCheck('Number')
+      this.appendValueInput('VALUE').setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(msg.size());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -6356,11 +6357,11 @@ exports.install = function(blockly, blockInstallOptions) {
         .appendTitle(msg.showTitleScreen());
       if (options.params) {
         this.appendValueInput('TITLE')
-          .setCheck('String')
+          .setCheck(blockly.BlockValueType.STRING)
           .setAlign(Blockly.ALIGN_RIGHT)
           .appendTitle(msg.showTitleScreenTitle());
         this.appendValueInput('TEXT')
-          .setCheck('String')
+          .setCheck(blockly.BlockValueType.STRING)
           .setAlign(Blockly.ALIGN_RIGHT)
           .appendTitle(msg.showTitleScreenText());
       } else {
@@ -6474,7 +6475,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
         this.setHSV(312, 0.32, 0.62);
         this.appendValueInput('SPRITE')
-            .setCheck('Number')
+            .setCheck(blockly.BlockValueType.NUMBER)
             .appendTitle(msg.setSpriteN({spriteIndex: ''}));
         this.appendDummyInput()
             .appendTitle(dropdown, 'VALUE');
@@ -6573,7 +6574,7 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       this.setHSV(184, 1.00, 0.74);
-      this.appendValueInput('SPRITE').setCheck('Number')
+      this.appendValueInput('SPRITE').setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(msg.setSpriteN({spriteIndex: ''}));
       var dropdown = new blockly.FieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[1][1]);  // default to normal
@@ -6623,7 +6624,7 @@ exports.install = function(blockly, blockInstallOptions) {
     block.init = function() {
       this.setHSV(184, 1.00, 0.74);
       if (options.time) {
-        this.appendValueInput('SPRITE').setCheck('Number')
+        this.appendValueInput('SPRITE').setCheck(blockly.BlockValueType.NUMBER)
             .appendTitle(msg.actor());
         this.appendDummyInput()
             .appendTitle(msg.saySprite());
@@ -6660,7 +6661,7 @@ exports.install = function(blockly, blockInstallOptions) {
               Blockly.assetUrl('media/quote1.png'), 12, 12));
       }
       if (options.time) {
-        this.appendValueInput('TIME').setCheck('Number').appendTitle(msg.for());
+        this.appendValueInput('TIME').setCheck(blockly.BlockValueType.NUMBER).appendTitle(msg.for());
         this.appendDummyInput().appendTitle(msg.waitSeconds());
       }
       this.setInputsInline(true);
@@ -6724,7 +6725,7 @@ exports.install = function(blockly, blockInstallOptions) {
         this.appendDummyInput()
           .appendTitle(msg.waitFor());
         this.appendValueInput('VALUE')
-          .setCheck('Number');
+          .setCheck(blockly.BlockValueType.NUMBER);
         this.appendDummyInput()
           .appendTitle(msg.waitSeconds());
       } else {
@@ -6779,8 +6780,8 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.functional_start_setValue = {
     init: function() {
       var blockName = msg.startSetValue();
-      var blockType = 'none';
-      var blockArgs = [{name: 'VALUE', type: 'function'}];
+      var blockType = blockly.BlockValueType.NONE;
+      var blockArgs = [{name: 'VALUE', type: blockly.BlockValueType.FUNCTION}];
       initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
     }
   };
@@ -6795,14 +6796,14 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.functional_start_setVars = {
     init: function() {
       var blockName = msg.startSetVars();
-      var blockType = 'none';
+      var blockType = blockly.BlockValueType.NONE;
       var blockArgs = [
-        {name: 'title', type: 'string'},
-        {name: 'subtitle', type: 'string'},
-        {name: 'background', type: 'image'},
-        {name: 'player', type: 'image'},
-        {name: 'target', type: 'image'},
-        {name: 'danger', type: 'image'}
+        {name: 'title', type: blockly.BlockValueType.STRING},
+        {name: 'subtitle', type: blockly.BlockValueType.STRING},
+        {name: 'background', type: blockly.BlockValueType.IMAGE},
+        {name: 'player', type: blockly.BlockValueType.IMAGE},
+        {name: 'target', type: blockly.BlockValueType.IMAGE},
+        {name: 'danger', type: blockly.BlockValueType.IMAGE}
       ];
       initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
     }
@@ -6824,22 +6825,22 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.functional_start_setFuncs = {
     init: function() {
       this.blockArgs = [
-        {name: 'title', type: 'string'},
-        {name: 'subtitle', type: 'string'},
-        {name: 'background', type: 'image'},
-        {name: 'danger', type: 'image'},
-        {name: 'target', type: 'image'},
-        {name: 'player', type: 'image'},
-        {name: 'update-target', type: 'function'},
-        {name: 'update-danger', type: 'function'},
-        {name: 'update-player', type: 'function'},
-        {name: 'collide?', type: 'function'},
-        {name: 'on-screen?', type: 'function'}
+        {name: 'title', type: blockly.BlockValueType.STRING},
+        {name: 'subtitle', type: blockly.BlockValueType.STRING},
+        {name: 'background', type: blockly.BlockValueType.IMAGE},
+        {name: 'danger', type: blockly.BlockValueType.IMAGE},
+        {name: 'target', type: blockly.BlockValueType.IMAGE},
+        {name: 'player', type: blockly.BlockValueType.IMAGE},
+        {name: 'update-target', type: blockly.BlockValueType.FUNCTION},
+        {name: 'update-danger', type: blockly.BlockValueType.FUNCTION},
+        {name: 'update-player', type: blockly.BlockValueType.FUNCTION},
+        {name: 'collide?', type: blockly.BlockValueType.FUNCTION},
+        {name: 'on-screen?', type: blockly.BlockValueType.FUNCTION}
       ];
       this.setFunctional(true, {
         headerHeight: 30
       });
-      this.setHSV.apply(this, functionalBlockUtils.colors.none);
+      this.setHSV.apply(this, functionalBlockUtils.colors[blockly.BlockValueType.NONE]);
 
       var options = {
         fixedSize: { height: 35 }
@@ -6898,20 +6899,20 @@ exports.install = function(blockly, blockInstallOptions) {
   installFunctionalApiCallBlock(blockly, generator, {
     blockName: 'functional_start_dummyOnMove',
     blockTitle: 'on-move (on-screen)',
-    args: [{name: 'VAL', type: 'function'}]
+    args: [{name: 'VAL', type: blockly.BlockValueType.FUNCTION}]
   });
 
   installFunctionalApiCallBlock(blockly, generator, {
     blockName: 'functional_start_setBackground',
     blockTitle: 'start (background)',
     apiName: 'Studio.setBackground',
-    args: [{ name: 'BACKGROUND', type: 'string', default: 'space'}]
+    args: [{ name: 'BACKGROUND', type: blockly.BlockValueType.STRING, default: 'space'}]
   });
 
   blockly.Blocks.functional_start_setSpeeds = {
     init: function() {
       var blockName = 'start (player-speed, enemy-speed)';
-      var blockType = 'none';
+      var blockType = blockly.BlockValueType.NONE;
       var blockArgs = [
         {name: 'PLAYER_SPEED', type: 'Number'},
         {name: 'ENEMY_SPEED', type: 'Number'}
@@ -6936,9 +6937,9 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.functional_start_setBackgroundAndSpeeds = {
     init: function() {
       var blockName = 'start (background, player-speed, enemy-speed)';
-      var blockType = 'none';
+      var blockType = blockly.BlockValueType.NONE;
       var blockArgs = [
-        {name: 'BACKGROUND', type: 'string'},
+        {name: 'BACKGROUND', type: blockly.BlockValueType.STRING},
         {name: 'PLAYER_SPEED', type: 'Number'},
         {name: 'ENEMY_SPEED', type: 'Number'}
       ];
@@ -6980,7 +6981,7 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       this.setHSV(184, 1.00, 0.74);
-      this.appendValueInput('SPRITE').setCheck('Number')
+      this.appendValueInput('SPRITE').setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(msg.vanishActorN({spriteIndex: ''}));
       this.setPreviousStatement(true);
       this.setInputsInline(true);
@@ -7001,7 +7002,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.functional_sprite_dropdown = {
     helpUrl: '',
     init: function() {
-      this.setHSV.apply(this, functionalBlockUtils.colors.image);
+      this.setHSV.apply(this, functionalBlockUtils.colors[blockly.BlockValueType.IMAGE]);
 
       this.VALUES = skin.spriteChoices;
 
@@ -7029,7 +7030,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.functional_background_dropdown = {
     helpUrl: '',
     init: function() {
-      this.setHSV.apply(this, functionalBlockUtils.colors.image);
+      this.setHSV.apply(this, functionalBlockUtils.colors[blockly.BlockValueType.IMAGE]);
 
       this.VALUES = skin.backgroundChoicesK1;
       var dropdown = new blockly.FieldImageDropdown(skin.backgroundChoicesK1,
@@ -7071,7 +7072,7 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       // todo = localize
-      initTitledFunctionalBlock(this, 'keydown?', 'boolean', [
+      initTitledFunctionalBlock(this, 'keydown?', blockly.BlockValueType.BOOLEAN, [
         { name: 'ARG1', type: 'Number' }
       ]);
     }
@@ -7110,9 +7111,9 @@ function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpr
   };
 }
 
-},{"../../locale/current/common":190,"../../locale/current/studio":196,"../StudioApp":2,"../codegen":42,"../functionalBlockUtils":74,"../sharedFunctionalBlocks":143,"../utils":185,"./constants":150}],196:[function(require,module,exports){
+},{"../../locale/current/common":189,"../../locale/current/studio":195,"../StudioApp":2,"../codegen":42,"../functionalBlockUtils":74,"../sharedFunctionalBlocks":142,"../utils":184,"./constants":149}],195:[function(require,module,exports){
 /*studio*/ module.exports = window.blockly.appLocale;
-},{}],147:[function(require,module,exports){
+},{}],146:[function(require,module,exports){
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
 var Position = studioConstants.Position;
@@ -7331,7 +7332,7 @@ BigGameLogic.prototype.collide = function (px, py, cx, cy) {
 
 module.exports = BigGameLogic;
 
-},{"../codegen":42,"./api":146,"./constants":150}],146:[function(require,module,exports){
+},{"../codegen":42,"./api":145,"./constants":149}],145:[function(require,module,exports){
 var constants = require('./constants');
 
 exports.SpriteSpeed = {
@@ -7495,7 +7496,7 @@ exports.isKeyDown = function (keyCode) {
   return Studio.keyState[keyCode] === 'keydown';
 };
 
-},{"./constants":150}],150:[function(require,module,exports){
+},{"./constants":149}],149:[function(require,module,exports){
 'use strict';
 
 exports.Direction = {
@@ -8797,4 +8798,4 @@ function BlurStack()
 	this.a = 0;
 	this.next = null;
 }
-},{}]},{},[154]);
+},{}]},{},[153]);

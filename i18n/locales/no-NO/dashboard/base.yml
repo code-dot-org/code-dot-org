@@ -296,6 +296,8 @@ nn:
     student_teacher_disassociated: '%{teacher_name} er fjerna som lærar for %{student_name}'
   user:
     email_confirm_needed: 'E-postadressa er ikkje stadfesta:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Send ny stadfesting
     new_password_hint: (la stå tomt hvis du ikke vil endre det)
     current_password_hint: (vi trenger ditt gjeldende passord for å bekrefte dine endringer)
@@ -478,7 +480,7 @@ nn:
           title: Barneskuleintroduksjon til informatikkurs (15-25 timar)
           description: Denne 20-timers kurset introduserer kjernebegreper innen informatikk og programmering. Kurset er utviklet for bruk i 5.klasse og oppover, men det er morsomt å lære for alle aldersgrupper.
         Hour of Code:
-          title: Hour of Code (kodetimen)
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: Rediger kode

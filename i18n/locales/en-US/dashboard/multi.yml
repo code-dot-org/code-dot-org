@@ -495,7 +495,7 @@ en:
         left top right: crwdns6644:0crwdne6644:0
       Circle to code:
         Code from Circle: crwdns7407:0crwdne7407:0
-        /script_assets/msm/Unit%202/exercise_1.png: 'crwdns7408:0%20crwdne7408:0'
+        "/script_assets/msm/Unit%202/exercise_1.png": 'crwdns7408:0%20crwdne7408:0'
         Pick the Racket code that comes from the circle of evaluation!: crwdns7409:0crwdne7409:0
         (+ 5 (* (- 6 8) 4)): crwdns7410:0crwdne7410:0
         (+ 5 (* 4 (- 8 6))): crwdns7411:0crwdne7411:0
@@ -511,12 +511,108 @@ en:
         "circle: 5 solid blue -> circle ": crwdns8809:0crwdne8809:0
       image code from circle:
         Code from Circle: crwdns7421:0crwdne7421:0
-        /script_assets/msm/Unit%202/exercise_5.png: 'crwdns7422:0%20crwdne7422:0'
+        "/script_assets/msm/Unit%202/exercise_5.png": 'crwdns7422:0%20crwdne7422:0'
         Pick the Racket code that comes from the circle of evaluation!: crwdns7423:0crwdne7423:0
         (rectangle (10) (2) "solid" "red"): crwdns7424:0crwdne7424:0
         (rectangle 10 2 "solid" "red"): crwdns7425:0crwdne7425:0
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): crwdns7426:0crwdne7426:0
         (rectangle (+ 8 2) (- 7 5) solid red): crwdns7427:0crwdne7427:0
+      msm variables multi 1:
+        x = 15<br/>a = 2<br>b = 6: crwdns34704:0crwdne34704:0
+        What is the value of x?: crwdns34705:0crwdne34705:0
+        a function: crwdns34706:0crwdne34706:0
+        15: crwdns34707:0crwdne34707:0
+        x: crwdns34708:0crwdne34708:0
+      msm variables multi 10:
+        f(x) = x * 17: crwdns34709:0crwdne34709:0
+        What is the name of the function?: crwdns34710:0crwdne34710:0
+        f: crwdns34711:0crwdne34711:0
+        x: crwdns34712:0crwdne34712:0
+        17: crwdns34713:0crwdne34713:0
+      msm variables multi 11:
+        f(x) = x * 17: crwdns34714:0crwdne34714:0
+        What is the name of the parameter?: crwdns34715:0crwdne34715:0
+        f: crwdns34716:0crwdne34716:0
+        x: crwdns34717:0crwdne34717:0
+        17: crwdns34718:0crwdne34718:0
+      msm variables multi 12:
+        (define (f x) (*x 17)): crwdns34719:0crwdne34719:0
+        What is the name of the variable?: crwdns34720:0crwdne34720:0
+        f: crwdns34721:0crwdne34721:0
+        x: crwdns34722:0crwdne34722:0
+        17: crwdns34723:0crwdne34723:0
+      msm variables multi 13:
+        f(x) = x * 17: crwdns34724:0crwdne34724:0
+        What is f(1)?: crwdns34725:0crwdne34725:0
+        x: crwdns34726:0crwdne34726:0
+        117: crwdns34727:0crwdne34727:0
+        17: crwdns34728:0crwdne34728:0
+      msm variables multi 2:
+        x = 15<br>a = 2<br>b = 6: crwdns34729:0crwdne34729:0
+        What is the value of a + b?: crwdns34730:0crwdne34730:0
+        8: crwdns34731:0crwdne34731:0
+        function: crwdns34732:0crwdne34732:0
+        ab: crwdns34733:0crwdne34733:0
+      msm variables multi 3:
+        x = 15<br/>a = 2<br>b = 6: crwdns34734:0crwdne34734:0
+        What is the value of x-10?: crwdns34735:0crwdne34735:0
+        a function: crwdns34736:0crwdne34736:0
+        5: crwdns34737:0crwdne34737:0
+        x: crwdns34738:0crwdne34738:0
+      msm variables multi 4:
+        define x 3<br>define p 8<br>define q hello: crwdns34739:0crwdne34739:0
+        What is the value of x?: crwdns34740:0crwdne34740:0
+        3: crwdns34741:0crwdne34741:0
+        15: crwdns34742:0crwdne34742:0
+        do not know: crwdns34743:0crwdne34743:0
+      msm variables multi 5:
+        define x 3<br>define p 8<br>define q hello: crwdns34744:0crwdne34744:0
+        What is the value of (p - x)?: crwdns34745:0crwdne34745:0
+        q: crwdns34746:0crwdne34746:0
+        3: crwdns34747:0crwdne34747:0
+        5: crwdns34748:0crwdne34748:0
+      msm variables multi 6:
+        define x 3<br>define p 8<br>define q hello: crwdns34749:0crwdne34749:0
+        What is the value of string-length(q)?: crwdns34750:0crwdne34750:0
+        1: crwdns34751:0crwdne34751:0
+        hello: crwdns34752:0crwdne34752:0
+        5: crwdns34753:0crwdne34753:0
+      msm variables multi 7:
+        f(x) = x + 3: crwdns34754:0crwdne34754:0
+        What is the name of the function?: crwdns34755:0crwdne34755:0
+        f: crwdns34756:0crwdne34756:0
+        x: crwdns34757:0crwdne34757:0
+        3: crwdns34758:0crwdne34758:0
+      msm variables multi 8:
+        f(x) = x + 3: crwdns34759:0crwdne34759:0
+        What is the name of the variable?: crwdns34760:0crwdne34760:0
+        f: crwdns34761:0crwdne34761:0
+        x: crwdns34762:0crwdne34762:0
+        3: crwdns34763:0crwdne34763:0
+      msm variables multi 9:
+        f(x) = x + 3: crwdns34764:0crwdne34764:0
+        What is f(2)?: crwdns34765:0crwdne34765:0
+        6: crwdns34766:0crwdne34766:0
+        5: crwdns34767:0crwdne34767:0
+        x: crwdns34768:0crwdne34768:0
+      Multi Define Funcs 1:
+        g(y) = y + 3: crwdns34769:0crwdne34769:0
+        What is the name of this function?: crwdns34770:0crwdne34770:0
+        g: crwdns34771:0crwdne34771:0
+        "y": true
+        3: crwdns34772:0crwdne34772:0
+      Multi Define Funcs 2:
+        g(y) = y + 3: crwdns34773:0crwdne34773:0
+        What is the name of the parameter?: crwdns34774:0crwdne34774:0
+        g: crwdns34775:0crwdne34775:0
+        "y": true
+        3: crwdns34776:0crwdne34776:0
+      Multi Define Funcs 3:
+        g(y) = y + 3: crwdns34777:0crwdne34777:0
+        What should g(2) return?: crwdns34778:0crwdne34778:0
+        6: crwdns34779:0crwdne34779:0
+        5: crwdns34780:0crwdne34780:0
+        "y": true
       Multi Strings Images 1:
         Strings and Images Multiple Choice: crwdns27304:0crwdne27304:0
         Multi Strings Images 1.blocks3.level: crwdns27305:0crwdne27305:0
@@ -525,6 +621,37 @@ en:
         Multi Strings Images 1.blocks2.start_blocks, 300, 100: crwdns27308:0crwdne27308:0
         Multi Strings Images 1.blocks3.start_blocks, 300, 100: crwdns27309:0crwdne27309:0
         Multi Strings Images 1.blocks4.start_blocks, 300, 100: crwdns27310:0crwdne27310:0
+      PDK5 Basic CS:
+        Video Follow-up Question: crwdns34781:0crwdne34781:0
+        Answer this question based on the video you just watched.: crwdns34782:0crwdne34782:0
+        "A computer program, or code, is:": crwdns34783:0crwdne34783:0
+        a part inside of a computer: crwdns34784:0crwdne34784:0
+        a week-long course to learn about computers: crwdns34785:0crwdne34785:0
+        a set of instructions you give a computer to execute: crwdns34786:0crwdne34786:0
+        a secret password: crwdns34787:0crwdne34787:0
+      Play Lab Rocket 6:
+        Rocket Multiple Choice: crwdns34788:0crwdne34788:0
+        Which function would describe a rocket that reaches 24 meters at 2 seconds, 60 meters at 5 seconds, and 108 meters at 9 seconds?: crwdns34789:0crwdne34789:0
+        rocket-height (seconds) = seconds + 12: crwdns34790:0crwdne34790:0
+        rocket-height (seconds) = seconds * 12: crwdns34791:0crwdne34791:0
+        rocket-height (seconds) = 48 / seconds: crwdns34792:0crwdne34792:0
+        rocket-height (seconds)  = seconds * 48: crwdns34793:0crwdne34793:0
+      Play Lab Rocket 7:
+        Rocket Multiple Choice: crwdns34794:0crwdne34794:0
+        0: crwdns34795:0crwdne34795:0
+        1: crwdns34796:0crwdne34796:0
+        rocket-height(seconds) = seconds * 2: crwdns34797:0crwdne34797:0
+        rocket-height(seconds) = seconds * seconds: crwdns34798:0crwdne34798:0
+        rocket-height(seconds) = seconds * 4: crwdns34799:0crwdne34799:0
+        rocket-height(seconds) = seconds * 16: crwdns34800:0crwdne34800:0
+      Play Lab Rocket 8:
+        Rocket Multiple Choice: crwdns34801:0crwdne34801:0
+        0: crwdns34802:0crwdne34802:0
+        1: crwdns34803:0crwdne34803:0
+        rocket-height(seconds) = seconds * 7 + 10: crwdns34804:0crwdne34804:0
+        rocket-height(seconds) = seconds * 10 + 7: crwdns34805:0crwdne34805:0
+        rocket-height(seconds) = seconds * 7 + 3: crwdns34806:0crwdne34806:0
+        rocket-height(seconds) = seconds * 10 - 3: crwdns34807:0crwdne34807:0
       test multi image:
         Maze Multiple Choice Two: crwdns6190:0crwdne6190:0
         /script_assets/matches/images/head.jpg,400: crwdns6191:0crwdne6191:0
@@ -545,8 +672,14 @@ en:
         Martha Washington: crwdns6204:0crwdne6204:0
         George Washington: crwdns6205:0crwdne6205:0
         George Jetson: crwdns6206:0crwdne6206:0
+      Test 1:
+        This is a test: crwdns34808:0crwdne34808:0
+        whatever: crwdns34809:0crwdne34809:0
+        this is a question?: crwdns34810:0crwdne34810:0
+        wrong answer: crwdns34811:0crwdne34811:0
+        right answer: crwdns34812:0crwdne34812:0
       unique level name here:
-        title: crwdns21783:0crwdne21783:0
+        line1<br/>line2: crwdns34813:0crwdne34813:0
         description here: crwdns21784:0crwdne21784:0
         Question: crwdns21785:0crwdne21785:0
         wrong answer: crwdns21786:0crwdne21786:0

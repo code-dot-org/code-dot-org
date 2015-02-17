@@ -333,22 +333,55 @@ uk:
           description: Складіть історію або створіть гру в Ігровій студії!
           Play Lab: Ігрова студія
         algebrademo:
-          description: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
-          Algebra Demo: Algebra Demo
+          description: Декілька задач, що демонструють середовище та мову програмування, що використовується у Code.org CS в Алгебрі
+          Algebra Demo: Демонстрація Алгебри
           Evaluation Blocks: Оцінкові блоки
-          Making Pictures: Making Pictures
+          Making Pictures: Зробити зображення
           Defining Variables: Визначення змінних
-          Defining Simple Functions: Defining Simple Functions
+          Defining Simple Functions: Визначити прості функції
           The Design Recipe: Створення рецепту
         K5PD:
-          Introduction to PD: Introduction to PD
+          Introduction to PD: Знайомство з профессійним кодуванням
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and 3
         netsim:
-          title: Internet Simulator
+          title: Інтернет симулятор
           description_short: ""
           description: ""
-          Internet Simulator: Internet Simulator
+          Internet Simulator: Інтернет симулятор
         Infinity:
           title: Infinity Playlab
-          description_short: Create a story or make a game with Infinity Play Lab!!
-          description: Create a story or make a game with Infinity Play Lab!
+          description_short: Створити історію або гру за допомогою Infinity Play Lab!!
+          description: Створити історію або гру за допомогою Infinity Play Lab!
           Infinity: Нескінченність
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: Вступ в курс інформатики для 5-8 класів (15-25 годин)
+          description: "Цей 20-годинний курс охоплює базові поняття комп'ютерних наук та програмування. Цей курс розроблено для використання на заняттях в основній школі, але може бути цікавим для будь-якого віку."
+          Introduction to Computer Science: Вступ до інформатики
+          The Maze: Лабіринт
+          Computational Thinking: Обчислювальне мислення
+          Graph Paper Programming: Програмування по клітинках
+          The Artist: Художник
+          Algorithms: Алгоритми
+          The Artist 2: Художник 2
+          Functions: Функції
+          The Farmer: Фермерка
+          Conditionals: Умови
+          The Artist 3: Художник 3
+          Song Writing: Написання пісень
+          The Farmer 2: Фермерка 2
+          Abstraction: Абстракції
+          The Artist 4: Художник 4
+          Relay Programming: Релейне програмування
+          The Farmer 3: Фермерка 3
+          The Internet: Інтернет
+          The Artist 5: Художник 5
+          Wrap-up: Підведення підсумків

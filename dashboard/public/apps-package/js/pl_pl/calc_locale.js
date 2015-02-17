@@ -155,9 +155,13 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "compute":function(d){return "Oblicz"},
+"emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
+"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "equivalentExpression":function(d){return "Spróbuj zmienić kolejność argumentów, aby dostać dokładnie to samo wyrażenie."},
 "extraTopBlocks":function(d){return "Masz niezałączone bloki. Czy chciałeś je dołączyć do bloku obliczeniowego?"},
 "failedInput":function(d){return "Your function does not return the right result for all values."},
 "goal":function(d){return "Cel:"},
+"levelIncompleteError":function(d){return "Your expression does not match the goal."},
 "reinfFeedbackMsg":function(d){return "Oto Twoja opowieść! Pracuj nadal nad nią lub przejdź do następnej zagadki!"},
-"yourExpression":function(d){return "Twoje wyrażenie:"}};
+"yourExpression":function(d){return "Twoje wyrażenie:"},
+"wrongInput":function(d){return "You are calling your function with the wrong value."}};

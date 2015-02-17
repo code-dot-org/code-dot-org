@@ -11,7 +11,7 @@ window.calcMain = function(options) {
   appMain(window.Calc, levels, options);
 };
 
-},{"../appMain":3,"../skins":144,"./blocks":29,"./calc":30,"./levels":35}],30:[function(require,module,exports){
+},{"../appMain":3,"../skins":143,"./blocks":29,"./calc":30,"./levels":35}],30:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -74,7 +74,6 @@ var appState = {
   message: null,
   result: null,
   testResults: null,
-  currentAnimationDepth: 0,
   failedInput: null
 };
 Calc.appState_ = appState;
@@ -249,7 +248,6 @@ Calc.resetButtonClick = function () {
   appState.message = null;
   appState.result = null;
   appState.testResults = null;
-  appState.currentAnimationDepth = 0;
   appState.failedInput = null;
 
   timeoutList.clearTimeouts();
@@ -426,6 +424,8 @@ Calc.execute = function() {
 
   studioApp.report(reportData);
 
+  studioApp.playAudio(appState.result === ResultType.SUCCESS ? 'win' : 'failure');
+
   // Display feedback immediately
   if (isPreAnimationFailure(appState.testResults)) {
     return displayFeedback();
@@ -435,7 +435,7 @@ Calc.execute = function() {
   if (appState.result === ResultType.SUCCESS &&
       !appState.userSet.hasVariablesOrFunctions() &&
       !level.edit_blocks) {
-    Calc.step();
+    Calc.step(0);
   } else {
     displayComplexUserExpressions();
     timeoutList.setTimeout(function () {
@@ -577,15 +577,16 @@ function stopAnimatingAndDisplayFeedback() {
  * collapsing the next node in our tree. If that node failed expectations, we
  * will stop further evaluation.
  */
-Calc.step = function () {
-  if (animateUserExpression(appState.currentAnimationDepth)) {
-    stopAnimatingAndDisplayFeedback();
-    return;
-  }
-  appState.currentAnimationDepth++;
-
+Calc.step = function (animationDepth) {
+  var isFinal = animateUserExpression(animationDepth);
   timeoutList.setTimeout(function () {
-    Calc.step();
+    if (isFinal) {
+      // one deeper to remove highlighting
+      animateUserExpression(animationDepth + 1);
+      stopAnimatingAndDisplayFeedback();
+    } else {
+      Calc.step(animationDepth + 1);
+    }
   }, stepSpeed);
 };
 
@@ -623,27 +624,33 @@ function animateUserExpression (maxNumSteps) {
 
   var current = userExpression.clone();
   var previousExpression = current;
-  var currentDepth = 0;
+  var numCollapses = 0;
+  // Each step draws a single line
   for (var currentStep = 0; currentStep <= maxNumSteps && !finished; currentStep++) {
     var tokenList;
-    if (currentDepth === maxNumSteps) {
+    if (numCollapses === maxNumSteps) {
+      // This is the last line in the current animation, highlight what has
+      // changed since the last line
       tokenList = current.getTokenListDiff(previousExpression);
-    } else if (currentDepth + 1 === maxNumSteps) {
+    } else if (numCollapses + 1 === maxNumSteps) {
+      // This is the second to last line. Highlight the block being collapsed,
+      // and the deepest operation (that will be collapsed on the next line)
       var deepest = current.getDeepestOperation();
       if (deepest) {
         studioApp.highlight('block_id_' + deepest.blockId);
       }
       tokenList = current.getTokenList(true);
     } else {
+      // Don't highlight anything
       tokenList = current.getTokenList(false);
     }
-    displayEquation('userExpression', null, tokenList, currentDepth, 'markedToken');
+    displayEquation('userExpression', null, tokenList, numCollapses, 'markedToken');
     previousExpression = current.clone();
     if (current.collapse()) {
-      currentDepth++;
-    } else if (currentStep - currentDepth > 2) {
-      // we want to go one more step after the last collapse so that we show
-      // our last line without highlighting it
+      numCollapses++;
+    } else if (currentStep === numCollapses + 1) {
+      // go one past our num collapses so that the last line gets highlighted
+      // on its own
       finished = true;
     }
   }
@@ -774,7 +781,7 @@ Calc.__testonly__ = {
 };
 /* end-test-block */
 
-},{"../../locale/current/calc":189,"../../locale/current/common":190,"../StudioApp":2,"../block_utils":17,"../dom":44,"../skins":144,"../templates/page.html":165,"../timeoutList":171,"../utils":185,"./api":28,"./controls.html":31,"./equationSet":32,"./expressionNode":33,"./inputIterator":34,"./levels":35,"./visualization.html":37}],37:[function(require,module,exports){
+},{"../../locale/current/calc":188,"../../locale/current/common":189,"../StudioApp":2,"../block_utils":17,"../dom":44,"../skins":143,"../templates/page.html":164,"../timeoutList":170,"../utils":184,"./api":28,"./controls.html":31,"./equationSet":32,"./expressionNode":33,"./inputIterator":34,"./levels":35,"./visualization.html":37}],37:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -794,7 +801,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/calc":189,"ejs":206}],35:[function(require,module,exports){
+},{"../../locale/current/calc":188,"ejs":205}],35:[function(require,module,exports){
 var msg = require('../../locale/current/calc');
 var blockUtils = require('../block_utils');
 
@@ -833,7 +840,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/current/calc":189,"../block_utils":17}],34:[function(require,module,exports){
+},{"../../locale/current/calc":188,"../block_utils":17}],34:[function(require,module,exports){
 /**
  * Given a set of values (i.e. [1,2,3], and a number of parameters, generates
  * all possible combinations of values.
@@ -1193,7 +1200,7 @@ EquationSet.__testonly__ = {
 };
 /* end-test-block */
 
-},{"../utils":185,"./expressionNode":33}],31:[function(require,module,exports){
+},{"../utils":184,"./expressionNode":33}],31:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1216,7 +1223,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/calc":189,"../../locale/current/common":190,"ejs":206}],29:[function(require,module,exports){
+},{"../../locale/current/calc":188,"../../locale/current/common":189,"ejs":205}],29:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -1286,18 +1293,18 @@ function initFunctionalBlock(block, title, numArgs) {
     block.appendFunctionalInput('ARG' + i)
          .setInline(i > 1)
          .setHSV(184, 1.00, 0.74)
-         .setCheck('Number');
+         .setCheck(Blockly.BlockValueType.NUMBER);
   }
 
-  block.setFunctionalOutput(true, 'Number');
+  block.setFunctionalOutput(true, Blockly.BlockValueType.NUMBER);
 }
 
 function installCompute(blockly, generator, gensym) {
   blockly.Blocks.functional_compute = {
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, msg.compute(), 'none', [
-        { name: 'ARG1', type: 'Number' }
+      initTitledFunctionalBlock(this, msg.compute(), blockly.BlockValueType.NONE, [
+        { name: 'ARG1', type: blockly.BlockValueType.NUMBER }
       ]);
     }
   };
@@ -1308,7 +1315,7 @@ function installCompute(blockly, generator, gensym) {
   };
 }
 
-},{"../../locale/current/calc":189,"../../locale/current/common":190,"../functionalBlockUtils":74,"../sharedFunctionalBlocks":143}],189:[function(require,module,exports){
+},{"../../locale/current/calc":188,"../../locale/current/common":189,"../functionalBlockUtils":74,"../sharedFunctionalBlocks":142}],188:[function(require,module,exports){
 /*calc*/ module.exports = window.blockly.appLocale;
 },{}],28:[function(require,module,exports){
 var ExpressionNode = require('./expressionNode');
@@ -1738,4 +1745,4 @@ var Token = function (str, marked) {
 };
 ExpressionNode.Token = Token;
 
-},{"../utils":185}]},{},[36]);
+},{"../utils":184}]},{},[36]);
