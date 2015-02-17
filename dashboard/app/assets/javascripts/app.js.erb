@@ -458,7 +458,11 @@
           console.error('skipping ' + arguments[1]);
           this.skip = true;
         }
-        this.setRequestHeader('X-CSRF-Token', token);
+
+        // TODO: We're using JQuery from Rails, so it automatically adds this.
+        // Is that really what we want to do?
+        // this.setRequestHeader('X-CSRF-Token', token);
+
         return resp;
       };
     }
