@@ -5,10 +5,28 @@ template: none
 
 %h1 Cohorts
 
--#%button.btn-white{'ng-click' => 'district.creation = true'}
--#  New District
+%a.btn.btn-default{style: 'color: #fff;', "ng-href" => "#/cohorts/new"} Add cohort
+%br/
+%br/
 
-%table{'ng-controller' => 'DistrictsController', style:'width:100%; margin-top:20px;'}
-  %ul{"ng-repeat" => "cohort in cohorts"}
-    %li
-      {{cohort.name}}
+%div.jumbotron{'ng-show' => 'hasWorkshops && workshops.length <= 0'}
+  No cohorts are available.
+
+%div{'ng-controller' => 'CohortsController'}
+
+  %table{style: "width:950px; table-layout:fixed;"}
+    %tr
+      %th.manage-th
+        Name
+      %th.manage-th
+    %tr{"ng-repeat" => "cohort in cohorts | orderBy:'cohort.name'", style: "vertical-align:top"}
+      %td
+        {{cohort.name}}
+      %td{nowrap: true, style: 'white-space: nowrap;'}
+        %span{"ng-show" => "cohort.confirmDelete"}
+          %span Delete?
+          %a.btn.btn-danger.btn-xs{"ng-click"=>'del(cohort)'} Yes
+          %a.btn.btn-success.btn-xs{"ng-click"=>'cohort.confirmDelete = false'} No
+        %span{"ng-hide" => "cohort.confirmDelete"}
+          %a.btn.btn-white.btn-xs{"ng-href" => "#/{{cohort.secret}}/edit"} Edit
+          %a.btn.btn-white.btn-xs{"ng-click" => "confirm_delete(cohort)"} Delete

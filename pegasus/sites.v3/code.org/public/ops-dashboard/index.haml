@@ -17,7 +17,8 @@ theme: angular
                         {templateUrl: '/ops-dashboard/landing'});
     $routeProvider.when('/districts',              {templateUrl: '/ops-dashboard/districts', controller: 'DistrictsController'});
     $routeProvider.when('/workshops',              {templateUrl: '/ops-dashboard/workshops', controller: 'WorkshopsController'});
-    $routeProvider.when('/cohorts',              {templateUrl: '/ops-dashboard/cohorts', controller: 'WorkshopsController'});
+    $routeProvider.when('/cohorts',              {templateUrl: '/ops-dashboard/cohorts', controller: 'CohortsController'});
+    $routeProvider.when('/cohorts/new',       {templateUrl: '/ops-dashboard/cohort-edit', controller:  'CohortController'});
     $routeProvider.otherwise({redirectTo: '/'});
   }]).config(['$httpProvider', function($httpProvider) {
     // X-Requested-With header required for CSRF requests protected by Rack::Protection::JsonCsrf included by Sinatra.
@@ -162,5 +163,51 @@ theme: angular
           );
         }
       }
+    }
+  ]);
 
-  }]);
+  controllers.controller('CohortsController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'cohortsService',
+    function($scope, $route, $routeParams, $location, $window, workshopsService, cohortsService) {
+      $scope.hasCohorts = false;
+      $scope.cohorts = cohortsService.query();
+
+      $scope.confirm_delete = function(cohort)
+      {
+        cohort.confirmDelete = true;
+      }
+
+      $scope.del = function(cohort) {
+        $scope.cohorts.splice($scope.cohorts.indexOf(cohort), 1); // remove from array
+        cohortsService.remove({id: cohort.id}); // service call
+        cohort.confirmDelete = false;
+      };
+    }
+  ]);
+
+  controllers.controller('CohortController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'cohortsService',
+    function($scope, $route, $routeParams, $location, $window, workshopsService, cohortsService) {
+      if ($routeParams.id) {
+        $scope.cohort = cohortsService.get({id: $routeParams.id});
+      } else {
+        $scope.cohort = {};
+      }
+
+      $scope.save = function() {
+        if ($scope.cohort.id) { // existing
+          $scope.cohort =
+            cohortsService.update({id: $scope.cohort.id}, $scope.cohort, function() {
+              $location.path("/cohorts");
+            });
+        } else { // new
+          $scope.cohort =
+            workshopsService.save($scope.cohort, function() {
+              $location.path("/cohorts");
+            });
+        }
+      };
+
+      $scope.cancel_edit = function() {
+        $location.path("/cohorts");
+      };
+    }
+  ]);
