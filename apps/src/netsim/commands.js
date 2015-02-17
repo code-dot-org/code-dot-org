@@ -51,27 +51,53 @@ var Command = commands.Command = function () {
   this.status_ = commandState.NOT_STARTED;
 };
 
+/**
+ * Whether the command has started working.
+ * @returns {boolean}
+ */
 Command.prototype.isStarted = function () {
   return this.status_ !== commandState.NOT_STARTED;
 };
 
+/**
+ * Whether the command has succeeded or failed, and is
+ * finished with its work.
+ * @returns {boolean}
+ */
 Command.prototype.isFinished = function () {
   return this.succeeded() || this.failed();
 };
 
+/**
+ * Whether the command has finished with its work and reported success.
+ * @returns {boolean}
+ */
 Command.prototype.succeeded = function () {
   return this.status_ === commandState.SUCCESS;
 };
 
+/**
+ * Whether the command has finished with its work and reported failure.
+ * @returns {boolean}
+ */
 Command.prototype.failed = function () {
   return this.status_ === commandState.FAILURE;
 };
 
+/**
+ * Tells the command to start working.
+ */
 Command.prototype.begin = function () {
   this.status_ = commandState.WORKING;
   this.onBegin_();
 };
 
+/**
+ * Called to mark that the command is done with its work and has
+ * succeeded.  Might be called by the command itself, or by an external
+ * controller.
+ * @throws if called before begin()
+ */
 Command.prototype.succeed = function () {
   if (!this.isStarted()) {
     throw new Error("Command cannot succeed before it begins.");
@@ -80,6 +106,12 @@ Command.prototype.succeed = function () {
   this.onEnd_();
 };
 
+/**
+ * Called to mark that the command is done with its work and has
+ * failed.  Might be called by the command itself, or by an external
+ * controller.
+ * @throws if called before begin()
+ */
 Command.prototype.fail = function () {
   if (!this.isStarted()) {
     throw new Error("Command cannot fail before it begins.");
@@ -88,18 +120,26 @@ Command.prototype.fail = function () {
   this.onEnd_();
 };
 
-Command.prototype.onBegin_ = function () {
+/**
+ * Stub to be implemented by descendant classes, of operations to perform
+ * when the command begins.
+ * @private
+ */
+Command.prototype.onBegin_ = function () {};
 
-};
+/**
+ * Stub to be implemented by descendant classes, of operations to perform
+ * on tick.
+ * @param {RunLoop.Clock} clock - Time information passed into all tick methods.
+ */
+Command.prototype.tick = function (/*clock*/) {};
 
-
-Command.prototype.tick = function () {
-
-};
-
-Command.prototype.onEnd_ = function () {
-
-};
+/**
+ * Stub to be implemented by descendant classes, of operations to perform
+ * when the command either succeeds or fails.
+ * @private
+ */
+Command.prototype.onEnd_ = function () {};
 
 /**
  * A CommandSequence is constructed with a list of commands to be executed
