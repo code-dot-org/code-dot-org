@@ -88,24 +88,7 @@ SQL
         end
 
         sl_group.sort_by {|sl| sl.stage_or_game_position}
-        sl_group.each do |sl|
-          if sl.level.unplugged?
-            kind = 'unplugged'
-          elsif sl.assessment
-            kind = 'assessment'
-          elsif
-            kind = 'blockly'
-          end
-
-          level = {
-            id: sl.level.id,
-            position: script.id < 9 ? sl.chapter : sl.stage_or_game_position,
-            kind: kind,
-            title: sl.level_display_text,
-            x_path: build_script_level_path(sl)   # <-- moved to client-side generation
-          }
-          stage[:levels].push level
-        end
+        stage[:levels] = sl_group.map { |sl| sl.summarize }
 
         s[:stages].push stage
     end
@@ -135,16 +118,7 @@ SQL
       script_id: script.id,
       script_stages: script.stages.to_a.count,
       title: stage_title(script, script_level.stage_or_game),
-      levels: game_levels.map do |sl|
-        {
-          id: sl.level.id,
-          position: script.id < 9 ? sl.chapter : sl.stage_or_game_position,
-          label: sl.level_display_text,
-          x_link: build_script_level_path(sl),   # <-- moved to client-side generation
-          unplugged: !!sl.level.unplugged?,
-          assessment: !!sl.assessment
-        }
-      end
+      levels: game_levels.map { |sl| sl.summarize }
     }
 
     if script.hoc?
@@ -157,10 +131,14 @@ SQL
     # Level-specific data
     if level.unplugged?
       # TODO: what does an unplugged level need?  'levels/unplug', locals: {app: @game.app}
-      level_data = {}
+      level_data = {
+        kind: 'unplugged'
+      }
     elsif level.is_a?(DSLDefined)
       # TODO: partial "levels/#{level.class.to_s.underscore}"
-      level_data = {}
+      level_data = {
+        kind: 'dsl'
+      }
     else
       # Prepare some globals for blockly_options()
       # Intentionally does not set @current_user since this is a static callback
@@ -190,6 +168,7 @@ SQL
     if level.ideal_level_source_id
       level_data[:solutionPath] = script_level_solution_path(script, level)  # TODO: Only for teachers?
     end
+    level_data[:end_of_stage] = true if script_level.end_of_stage?
     level_data[:locale] = js_locale
     if !level.related_videos.nil? && !level.related_videos.empty?
       level_data[:relatedVideos] = level.related_videos.map do |video|

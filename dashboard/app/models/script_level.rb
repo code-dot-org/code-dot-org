@@ -48,6 +48,17 @@ class ScriptLevel < ActiveRecord::Base
     stage ? I18n.t('stage_number', number: stage.position) : I18n.t("data.script.name.#{script.name}.#{level.game.name}")
   end
 
+  def stage_position
+    return 1 if stage.nil? || stage.position.nil?
+    return stage.position
+  end
+
+  def level_position
+    # Note (stevee): This is just acknowledging that things were different for scripts < 9 but
+    # all past that are consistent
+    script.id < 9 ? chapter : stage_or_game_position
+  end
+
   def name
     I18n.t("data.script.name.#{script.name}.#{stage ? stage.name : level.game.name}")
   end
@@ -88,4 +99,41 @@ class ScriptLevel < ActiveRecord::Base
     @@script_level_map ||= ScriptLevel.includes([{level: [:game, :concepts]}, :script]).index_by(&:id)
     @@script_level_map[id]
   end
+
+  def summarize
+    if level.unplugged?
+      kind = 'unplugged'
+    elsif assessment
+      kind = 'assessment'
+    elsif
+      kind = 'blockly'
+    end
+
+    summary = {
+      id: level.id,
+      position: level_position,
+      kind: kind,
+      title: level_display_text
+    }
+
+    if previous_level
+      if previous_level.stage_position != stage_position
+        summary[:previous] = [ previous_level.stage_position, previous_level.level_position ]
+      end
+    else
+      summary[:previous] = false
+    end
+
+    if end_of_stage?
+      if next_level
+        summary[:next] = [ next_progression_level.stage_position, next_progression_level.level_position ]
+      else
+        summary[:next] = false
+      end
+    end
+
+    summary
+  end
+
+
 end

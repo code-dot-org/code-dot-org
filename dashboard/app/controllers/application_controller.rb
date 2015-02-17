@@ -82,7 +82,7 @@ class ApplicationController < ActionController::Base
         response[:total_lines] = options[:total_lines]
         response[:trophy_updates] = options[:trophy_updates] unless options[:trophy_updates].blank?
         response[:new_level_completed] = options[:new_level_completed]
-        response[:level_path] = build_script_level_path(script_level)
+        response[:x_level_path] = build_script_level_path(script_level)
         script_level_solved_response(response, script_level)
       else # not solved
         response[:message] = 'try again'

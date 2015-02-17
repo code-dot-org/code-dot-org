@@ -516,8 +516,8 @@
     }
 
     // Return a route to a link.  This interface will be improved when we use a real router.
-    UIFrame.prototype.linkTo = function(route) {
-      if (this.isStatic)
+    UIFrame.prototype.linkTo = function(route, forceOnline) {
+      if (this.isStatic && !forceOnline)
         return window.location.pathname + "?" + $.param( route, true );
 
       // Some hardcoded URLs for special scripts
@@ -539,8 +539,12 @@
         case 'hourofcode':
           return "/hoc/" + route.level;
         default:
-          return "/s/" + route.script + "/stage/" + route.stage + "/level/" + route.level;
+          return "/s/" + route.script + "/stage/" + route.stage + "/puzzle/" + route.level;
       }
+    }
+
+    UIFrame.prototype.goTo = function(route) {
+      window.location.href = this.linkTo(route);
     }
 
     return UIFrame;
@@ -679,11 +683,18 @@
         // Set up the blockly options, starting from some default values
         var opts = $.extend({
           baseUrl: '/blockly/',
-          containerId: _this.$el.attr('id')
+          containerId: _this.$el.attr('id'),
+          script_name: data.stage.script_name,
+          scriptPath: Frame.linkTo({
+              script: data.stage.script_name,
+              stage: data.stage.position,
+              level: data.level.position
+            }, true) // Normalize for a live URL because these are just tracking metrics
         }, data.level);
 
         // Blockly baseUrl must be an absolute path.
         opts.baseUrl = Frame.getAbsolutePath(opts.baseUrl);
+        opts.level_info = opts.level;   // Creating this for now because .level gets overwritten by a bunch of stuff. TODO: OK to just use .level?
 
         // Kick-start the blockly scripts
         _this.loadAssets(opts)
@@ -869,7 +880,7 @@
           trackEvent('Activity', 'Lines of Code', this.scriptPath, report.lines);
 
           // Send the report
-          sendReport(report);
+          sendReport(report, this.scriptPath);
         },
         onResetPressed: function() {
           cancelReport();
@@ -879,13 +890,33 @@
           if (lastServerResponse.videoInfo) {
             showVideoDialog(lastServerResponse.videoInfo);
           } else if (lastServerResponse.nextRedirect) {
-            window.location.href = lastServerResponse.nextRedirect;
+            if (opts.level_info.next === false) {
+              // TODO: COMPLETED!
+              return;
+            }
+
+            var next = opts.level_info.next || [ opts.level_info.stage, opts.level_info.position + 1];
+            Frame.goTo({
+              script: opts.script_name,
+              stage: next[0],
+              level: next[1]
+            });
           }
         },
         backToPreviousLevel: function() {
           // TODO: Should not be using a global "lastServerResponse" here?
           if (lastServerResponse.previousLevelRedirect) {
-            window.location.href = lastServerResponse.previousLevelRedirect;
+            if (opts.level_info.previous === false) {
+              // TODO: BEGINNING
+              return
+            }
+
+            var prev = opts.level_info.previous || [ opts.level_info.stage, opts.level_info.position - 1];
+            Frame.goTo({
+              script: opts.script_name,
+              stage: prev[0],
+              level: prev[1]
+            });
           }
         },
         showInstructionsWrapper: function(showInstructions) {

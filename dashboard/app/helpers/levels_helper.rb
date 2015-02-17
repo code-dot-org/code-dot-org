@@ -187,11 +187,10 @@ module LevelsHelper
   # Code for generating the blockly options hash
   def blockly_options(local_assigns={})
     # Use values from properties json when available (use String keys instead of Symbols for consistency)
-    level = @level.properties.dup || {}
+    level = @script_level.summarize.stringify_keys.merge(@level.properties)
+    level['stage'] = @script_level.stage_position
 
-    # Set some specific values
-    level['position'] = @script_level.script.id < 9 ? @script_level.chapter : @script_level.stage_or_game_position
-
+    # Set some specific values - TODO: can we do this entirely from summarize?
     level['puzzle_number'] = @script_level ? @script_level.stage_or_game_position : 1
     level['stage_total'] = @script_level ? @script_level.stage_or_game_total : @level.game.levels.count
     if @level.is_a?(Maze) && @level.step_mode
@@ -302,7 +301,6 @@ module LevelsHelper
 
     # Set some values that Blockly expects on the root of its options string
     app_options = {
-      id: @level.id,
       baseUrl: "#{ActionController::Base.asset_host}/blockly/",
       app: @game.try(:app),
       levelId: @level.level_num,

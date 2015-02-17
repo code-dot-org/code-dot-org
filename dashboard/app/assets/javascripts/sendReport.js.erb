@@ -1,10 +1,30 @@
 var lastAjaxRequest;
 var lastServerResponse = {};
-var sendReport = function(report) {
+var sendReport = function(report, scriptPath) {
   var thisAjax;
 
   var data = $.extend({}, report);
   delete data.onComplete;
+
+  var reportComplete = function (response, textStatus, xhr) {
+    if (thisAjax !== lastAjaxRequest) {
+      return;
+    }
+
+    lastAjaxRequest = null;
+    lastServerResponse = {
+      report_error: report['error']
+    };
+    if (response) {
+      lastServerResponse.nextRedirect = response['redirect'];
+      lastServerResponse.previousLevelRedirect = response['previous_level'];
+      lastServerResponse.videoInfo = response['video_info'];
+      response.levelPath = scriptPath;  // This used to be passed back from the milestone API
+    }
+
+    if (report.onComplete)
+      report.onComplete(response);
+  };
 
   lastAjaxRequest = thisAjax = Frame.load({
     type: 'POST',
@@ -12,38 +32,10 @@ var sendReport = function(report) {
     contentType: 'application/x-www-form-urlencoded',
     data: data,
     dataType: 'json',
-    success: function (response) {
-      if (thisAjax !== lastAjaxRequest) {
-        return;
-      }
-
-      lastAjaxRequest = null;
-      lastServerResponse.report_error = null;
-      lastServerResponse.nextRedirect = response['redirect'];
-      lastServerResponse.previousLevelRedirect = response['previous_level'];
-      lastServerResponse.videoInfo = response['video_info'];
-
-      if (report.onComplete)
-        report.onComplete(response);
-    },
+    success: reportComplete,
     error: function (xhr, textStatus, thrownError) {
-      if (thisAjax !== lastAjaxRequest) {
-        return;
-      }
       report['error'] = xhr.responseText;
-
-      lastAjaxRequest = null;
-      if (report.fallbackResponse) {
-        var response = report.fallbackResponse[report.pass ? 'success' : 'failure'];
-
-        lastServerResponse.report_error = report['error'];
-        lastServerResponse.nextRedirect = response['redirect'];
-        lastServerResponse.previousLevelRedirect = response['previous_level'];
-        lastServerResponse.videoInfo = response['video_info'];
-      }
-
-      if (report.onComplete)
-        report.onComplete(response);
+      reportComplete(report.fallbackResponse[report.pass ? 'success' : 'failure']);
     }
   });
 };
