@@ -78,6 +78,7 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
   this.userVisible_ = true;
   this.collapsed_ = false;
   this.dragging_ = false;
+  this.visible_ = true;
   /**
    * The label which can be clicked to edit this block. This field is
    * currently set only for functional_call blocks.
@@ -1304,6 +1305,10 @@ Blockly.Block.prototype.isUserVisible = function() {
   return this.userVisible_;
 };
 
+Blockly.Block.prototype.isVisible = function () {
+  return this.visible_;
+};
+
 /**
  * Set whether this block is visible to the user.
  * @param {boolean} userVisible True if visible to user.
@@ -2132,6 +2137,7 @@ Blockly.Block.prototype.setVisible = function (visible) {
     throw 'Uninitialized block cannot set visibility.  Call block.initSvg()';
   }
   this.svg_.setVisible(visible);
+  this.visible_ = visible;
 };
 
 /**

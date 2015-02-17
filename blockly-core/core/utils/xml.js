@@ -139,6 +139,9 @@ Blockly.Xml.blockToDom = function(block, ignoreChildBlocks) {
   if (!block.isUserVisible()) {
     element.setAttribute('uservisible', false);
   }
+  if (!block.isVisible()) {
+    element.setAttribute('visible', false);
+  }
   if (/^procedures_def/.test(block.type) && block.userCreated) {
     element.setAttribute('usercreated', true);
   }
@@ -286,6 +289,10 @@ Blockly.Xml.domToBlock = function(blockSpace, xmlBlock) {
   var userCreated = xmlBlock.getAttribute('usercreated');
   if (userCreated) {
     block.userCreated = (userCreated === 'true');
+  }
+  var visible = xmlBlock.getAttribute('visible');
+  if (visible) {
+    block.setVisible(visible === 'true');
   }
 
   var blockChild = null;

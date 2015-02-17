@@ -304,7 +304,7 @@ Blockly.FunctionEditor.prototype.hideAndRestoreBlocks_ = function() {
  * @protected
  */
 Blockly.FunctionEditor.prototype.moveToMainBlockSpace_ = function(blockToMove) {
-  blockToMove.setUserVisible(false);
+  blockToMove.setVisible(false);
   blockToMove.setMovable(true);
   var dom = Blockly.Xml.blockToDom(blockToMove);
   blockToMove.dispose(false, false, true);
@@ -318,6 +318,7 @@ Blockly.FunctionEditor.prototype.moveToMainBlockSpace_ = function(blockToMove) {
  * @returns {Blockly.Block} copy of block in modal BlockSpace
  */
 Blockly.FunctionEditor.prototype.moveToModalBlockSpace_ = function(blockToMove) {
+  blockToMove.setVisible(true);
   blockToMove.setUserVisible(true);
   var dom = Blockly.Xml.blockToDom(blockToMove);
   blockToMove.dispose(false, false, true);
