@@ -42,14 +42,11 @@ module LevelsHelper
     @callouts = select_and_remember_callouts(@script_level.nil?)
 
     if @level.is_a? Blockly
-      @toolbox_blocks =
-        @toolbox_blocks ||
+      @toolbox_blocks ||=
         @level.try(:project_template_level).try(:toolbox_blocks) ||
         @level.toolbox_blocks
 
-      @start_blocks =
-        initial_blocks(current_user, @level) || # check if this level inherits solution from previous level
-        @start_blocks ||
+      @start_blocks ||=
         @level.try(:project_template_level).try(:start_blocks) ||
         @level.start_blocks
     end
@@ -110,25 +107,6 @@ module LevelsHelper
       end
       callout_hash
     end
-  end
-
-  # this defines which levels should be seeded with th last result from a different level
-  def initial_blocks(user, level)
-    return nil unless user
-
-    # initial blocks from previous level
-    if level.game.app == Game::TURTLE
-      from_level_num = case level.level_num
-                       when '3_8' then '3_7'
-                       when '3_9' then '3_8'
-                       end
-
-      if from_level_num
-        from_level = Level.find_by_game_id_and_level_num(level.game_id, from_level_num)
-        return user.last_attempt(from_level).try(:level_source).try(:data)
-      end
-    end
-    nil
   end
 
   # XXX Since Blockly doesn't play nice with the asset pipeline, a query param
@@ -258,6 +236,7 @@ module LevelsHelper
       custom_game_type
       project_template_level_name
       scrollbars
+      original_start_blocks
     ).map{ |x| x.include?(':') ? x.split(':') : [x,x.camelize(:lower)]}]
     .each do |dashboard, blockly|
       # Select first valid value from 1. local_assigns, 2. property of @level object, 3. named instance variable, 4. properties json
