@@ -1,0 +1,10 @@
+//= require epiceditor
+//= require_self
+var editor = new EpicEditor({
+  'basePath': '<%= ActionController::Base.asset_host %>',
+  'theme': {
+    'base': '<%= stylesheet_path('epiceditor/epiceditor')%>',
+    'preview': '<%=stylesheet_path('epiceditor/github')%>',
+    'editor': '<%=stylesheet_path('epiceditor/light')%>'
+  }
+}).load();
