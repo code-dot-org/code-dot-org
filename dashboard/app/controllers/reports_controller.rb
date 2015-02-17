@@ -102,7 +102,7 @@ SQL
         s[:stages].push stage
     end
 
-    render json: s
+    render :json => s, :callback => params['jsonp']
   end
 
   def user_progress
@@ -228,7 +228,7 @@ SQL
       level_data[:reportBugLink] = script_level.report_bug_url(request)
     end
 
-    render json: {
+    reply = {
       script: {
         id: script.id,
         stages: script.stages.to_a.count,
@@ -238,6 +238,8 @@ SQL
       level: level_data,
       progress: user_data
     }
+
+    render :json => reply, :callback => params['jsonp']
   end
 
 

@@ -160,6 +160,8 @@ Dashboard::Application.routes.draw do
   get '/popup/stats', to: 'reports#header_stats', as: 'header_stats'
   get '/popup/progress', to: 'reports#user_progress', as: 'user_progress'
   get '/popup/script', to: 'reports#get_script', as: 'get_script'
+  get '/script-:script_id.js', to: 'reports#get_script', as: 'get_script_resource', defaults: {jsonp: 'RESOURCE'}
+  get '/level-:script_name-:stage_id-:level_id.js', to: 'reports#user_progress', as: 'get_level_resource', defaults: {jsonp: 'RESOURCE'}
   get '/redeemprizes', to: 'reports#prizes', as: 'my_prizes'
 
   get '/notes/:key', to: 'notes#index'

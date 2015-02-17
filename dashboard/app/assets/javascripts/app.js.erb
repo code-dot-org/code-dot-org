@@ -401,11 +401,14 @@
         // For now, initial scripts and CSS are still loaded from the server using a BASE HREF
         // pointing at the server.  Once the initial assets are loaded, everything else
         // is loaded from relative paths on the static site, so we remove it.
-        // Once assets are bundled for static mode, we won't need to have the BASE HREF at all.
+        // Once assets are bundled for static mode, we won't need to have the BASE HREF at all,
+        // and we will remove all references to this.serverRoot.
+        this.serverRoot = this.baseURI();
+        this.serverRoot = this.serverRoot.substr(0, this.serverRoot.length-1); // Remove the trailing /
         $('base').remove();
       } else {
         this.baseUrl = this.baseURI();
-        this.rootUrl = window.location.protocol + "//" + window.location.host;
+        this.serverRoot = this.rootUrl = window.location.protocol + "//" + window.location.host;
       }
 
       // Hook into the global CSRF handler so that all requests are made with a valid token
@@ -442,10 +445,12 @@
       };
     }
 
-    UIFrame.prototype.getAbsolutePath = function(path) {
+    // Create an absolute path to a resource.  The second parameter is temporary - only used in a static
+    // site that still has references to a dynamic server.
+    UIFrame.prototype.getAbsolutePath = function(path, rootUrl) {
       if (path[0] == '/')
-        return this.rootUrl + path;
-      return this.baseUrl + "/" + path;
+        return (rootUrl || this.rootUrl) + path;
+      return (rootUrl || this.baseUrl) + "/" + path;
     }
 
     UIFrame.prototype.baseURI = function() {
@@ -468,20 +473,25 @@
       if (this.isStatic) {
         ajax.type = ajax.type || 'GET';
 
-        // All resources must be loaded via <SCRIPT> tag when offline.
-        ajax.dataType = "static";
-
         // Static resolution replaces the URL with a static equivalent
         if (resolveStatic) {
           // All static resources are wrapped as .JS files
-          ajax.url = this.getAbsolutePath(resolveStatic(ajax.data)) + ".js";
+          var staticPath = resolveStatic(ajax.data) + ".js";
+
+          // When we have a static asset pipeline, use the 2nd one instead.
+          ajax.url = this.getAbsolutePath(staticPath, this.serverRoot);
+          // ajax.url = this.getAbsolutePath(staticPath);
+
           delete ajax.data;
           ajax.cache = true;
           ajax.isStaticResource = true;
         } else {
-          // For now, we still load real javascripts from the live server.
+          if (ajax.dataType != 'script')
+            console.error("Request for " + ajax.url + " has no static handler.")
         }
 
+        // All resources must be loaded via <SCRIPT> tag when offline.
+        ajax.dataType = "static";
       }
 
       return $.ajax(ajax);
