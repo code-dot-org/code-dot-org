@@ -648,11 +648,12 @@ Blockly.Connection.prototype.setCheck = function(check) {
 
     var legacyTypeFound = Blockly.Connection.findLegacyType_(check);
     if (legacyTypeFound) {
-      // Intended for temporary post-rename debugging
-      // Should not be hit by normal usage
-      // TODO(bjordan): Remove once confident no remaining usages
-      console.log("Legacy type format found: " + legacyTypeFound + " ... converting.");
-      this.check_ = this.check_.map(goog.string.toTitleCase);
+      /**
+       * Intended for temporary post-rename debugging
+       * Should not be hit by normal usage
+       * TODO(bjordan): Remove once confident no remaining usages
+       */
+      throw "Legacy type format found: " + legacyTypeFound;
     }
 
     // The new value type may not be compatible with the existing connection.
