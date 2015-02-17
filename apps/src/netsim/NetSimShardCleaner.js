@@ -38,7 +38,7 @@ var NetSimWire = require('./NetSimWire');
 var NetSimMessage = require('./NetSimMessage');
 var NetSimLogger = require('./NetSimLogger');
 
-var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
+var logger = NetSimLogger.getSingleton();
 
 /**
  * How often a cleaning job should be kicked off.
@@ -70,7 +70,7 @@ CleaningHeartbeat.getAllCurrent = function (shard, onComplete) {
     var heartbeats = rows
         .filter(function (row) {
           return row.cleaner === true &&
-              Date.now() - row.time_ < CLEANING_HEARTBEAT_TIMEOUT;
+              Date.now() - row.time < CLEANING_HEARTBEAT_TIMEOUT;
         })
         .map(function (row) {
           return new CleaningHeartbeat(shard, row);
@@ -81,7 +81,7 @@ CleaningHeartbeat.getAllCurrent = function (shard, onComplete) {
 
 CleaningHeartbeat.prototype.buildRow_ = function () {
   return utils.extend(
-      CleaningHeartbeat.superPrototype.buildRow_(),
+      CleaningHeartbeat.superPrototype.buildRow_.call(this),
       { cleaner: true }
   );
 };
@@ -97,7 +97,7 @@ CleaningHeartbeat.prototype.buildRow_ = function () {
  * @param {!NetSimShard} shard
  * @constructor
  */
-var NetSimShardCleaner = module.exports = function (shard) {
+var NetSimShardCleaner = module.exports = function (shard, logger) {
   this.shard_ = shard;
 
   this.nextAttempt_ = Date.now();
@@ -110,7 +110,7 @@ var NetSimShardCleaner = module.exports = function (shard) {
  * attempt, and if so try to start a cleaning routine.
  */
 NetSimShardCleaner.prototype.tick = function (clock) {
-  if (Date.now() > this.nextAttempt_) {
+  if (Date.now() >= this.nextAttempt_) {
     this.nextAttempt_ = Date.now() + CLEANING_INTERVAL_MS;
     this.cleanShard();
   }
@@ -154,6 +154,10 @@ NetSimShardCleaner.prototype.cleanShard = function () {
   }.bind(this));
 };
 
+NetSimShardCleaner.prototype.hasCleaningLock = function () {
+  return this.heartbeat_ !== null;
+};
+
 NetSimShardCleaner.prototype.getCleaningLock = function (onComplete) {
   CleaningHeartbeat.create(this.shard_, function (heartbeat) {
     if (heartbeat === null) {
@@ -167,8 +171,9 @@ NetSimShardCleaner.prototype.getCleaningLock = function (onComplete) {
       if (heartbeats.length > 1) {
         // Someone else is already cleaning, back out and try again later.
         logger.info("Failed to acquire cleaning lock");
-        heartbeat.destroy();
-        onComplete(false);
+        heartbeat.destroy(function () {
+          onComplete(false);
+        });
         return;
       }
 
@@ -350,7 +355,7 @@ CleanWires.inherits(CommandSequence);
  */
 CleanWires.prototype.onBegin_ = function () {
   var nodeRows = this.cleaner_.getTableCache('node');
-  var wireRows = this.cleaner_.getTableRows('wire');
+  var wireRows = this.cleaner_.getTableCache('wire');
   this.commandList_ = wireRows.filter(function (row) {
     // Only wires whose ends point to valid nodes?
     return false;
@@ -377,7 +382,7 @@ CleanMessages.inherits(CommandSequence);
  */
 CleanMessages.prototype.onBegin_ = function () {
   var nodeRows = this.cleaner_.getTableCache('node');
-  var messageRows = this.cleaner_.getTableRows('message');
+  var messageRows = this.cleaner_.getTableCache('message');
   this.commandList_ = messageRows.filter(function (row) {
     // Only messages with a valid destination?
     return false;
