@@ -109,8 +109,7 @@ Blockly.FunctionalBlockUtils.initTitledFunctionalBlock = function (block, title,
  * if no apiName is specified, a "dummy" block is generated which
  * accepts arguments but generates no code.
  */
-Blockly.FunctionalBlockUtils.installFunctionalApiCallBlock = function(blockly, generator,
-                                                        options) {
+Blockly.FunctionalBlockUtils.installFunctionalApiCallBlock = function(blockly, generator, options) {
   var blockName = options.blockName;
   var blockTitle = options.blockTitle;
   var apiName = options.apiName;
@@ -122,8 +121,7 @@ Blockly.FunctionalBlockUtils.installFunctionalApiCallBlock = function(blockly, g
   var blockType = 'none';
   blockly.Blocks[blockName] = {
     init: function () {
-      Blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, blockTitle, blockType,
-        blockArgs);
+      Blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, blockTitle, blockType, blockArgs);
     }
   };
 
