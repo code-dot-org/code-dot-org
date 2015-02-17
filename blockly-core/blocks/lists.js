@@ -33,7 +33,7 @@ Blockly.Blocks.lists_create_empty = {
   init: function() {
     this.setHelpUrl(Blockly.Msg.LISTS_CREATE_EMPTY_HELPURL);
     this.setHSV(40, 1.0, 0.99);
-    this.setOutput(true, 'Array');
+    this.setOutput(true, Blockly.BlockValueType.ARRAY);
     this.appendDummyInput()
         .appendTitle(Blockly.Msg.LISTS_CREATE_EMPTY_TITLE);
     this.setTooltip(Blockly.Msg.LISTS_CREATE_EMPTY_TOOLTIP);
@@ -48,7 +48,7 @@ Blockly.Blocks.lists_create_with = {
         .appendTitle(Blockly.Msg.LISTS_CREATE_WITH_INPUT_WITH);
     this.appendValueInput('ADD1');
     this.appendValueInput('ADD2');
-    this.setOutput(true, 'Array');
+    this.setOutput(true, Blockly.BlockValueType.ARRAY);
     this.setMutator(new Blockly.Mutator(['lists_create_with_item']));
     this.setTooltip(Blockly.Msg.LISTS_CREATE_WITH_TOOLTIP);
     this.itemCount_ = 3;
@@ -161,7 +161,7 @@ Blockly.Blocks.lists_repeat = {
   init: function() {
     this.setHelpUrl(Blockly.Msg.LISTS_REPEAT_HELPURL);
     this.setHSV(40, 1.0, 0.99);
-    this.setOutput(true, 'Array');
+    this.setOutput(true, Blockly.BlockValueType.ARRAY);
     this.interpolateMsg(Blockly.Msg.LISTS_REPEAT_TITLE,
                         ['ITEM', null, Blockly.ALIGN_RIGHT],
                         ['NUM', 'Number', Blockly.ALIGN_RIGHT],
@@ -176,9 +176,9 @@ Blockly.Blocks.lists_length = {
     this.setHelpUrl(Blockly.Msg.LISTS_LENGTH_HELPURL);
     this.setHSV(40, 1.0, 0.99);
     this.appendValueInput('VALUE')
-        .setCheck(['Array', 'String'])
+        .setCheck([Blockly.BlockValueType.ARRAY, Blockly.BlockValueType.STRING])
         .appendTitle(Blockly.Msg.LISTS_LENGTH_INPUT_LENGTH);
-    this.setOutput(true, 'Number');
+    this.setOutput(true, Blockly.BlockValueType.NUMBER);
     this.setTooltip(Blockly.Msg.LISTS_LENGTH_TOOLTIP);
   }
 };
@@ -192,7 +192,7 @@ Blockly.Blocks.lists_isEmpty = {
                         ['VALUE', ['Array', 'String'], Blockly.ALIGN_RIGHT],
                         Blockly.ALIGN_RIGHT)
     this.setInputsInline(true);
-    this.setOutput(true, 'Boolean');
+    this.setOutput(true, Blockly.BlockValueType.BOOLEAN);
     this.setTooltip(Blockly.Msg.LISTS_TOOLTIP);
   }
 };
@@ -205,9 +205,9 @@ Blockly.Blocks.lists_indexOf = {
          [Blockly.Msg.LISTS_INDEX_OF_LAST, 'LAST']];
     this.setHelpUrl(Blockly.Msg.LISTS_INDEX_OF_HELPURL);
     this.setHSV(40, 1.0, 0.99);
-    this.setOutput(true, 'Number');
+    this.setOutput(true, Blockly.BlockValueType.NUMBER);
     this.appendValueInput('VALUE')
-        .setCheck('Array')
+        .setCheck(Blockly.BlockValueType.ARRAY)
         .appendTitle(Blockly.Msg.LISTS_INDEX_OF_INPUT_IN_LIST);
     this.appendValueInput('FIND')
         .appendTitle(new Blockly.FieldDropdown(OPERATORS), 'END');
@@ -236,7 +236,7 @@ Blockly.Blocks.lists_getIndex = {
       this.sourceBlock_.updateStatement(isStatement);
     });
     this.appendValueInput('VALUE')
-        .setCheck('Array')
+        .setCheck(Blockly.BlockValueType.ARRAY)
         .appendTitle(Blockly.Msg.LISTS_GET_INDEX_INPUT_IN_LIST);
     this.appendDummyInput()
         .appendTitle(modeMenu, 'MODE')
@@ -299,7 +299,7 @@ Blockly.Blocks.lists_getIndex = {
     this.removeInput('ORDINAL', true);
     // Create either a value 'AT' input or a dummy input.
     if (isAt) {
-      this.appendValueInput('AT').setCheck('Number');
+      this.appendValueInput('AT').setCheck(Blockly.BlockValueType.NUMBER);
       if (Blockly.Msg.ORDINAL_NUMBER_SUFFIX) {
         this.appendDummyInput('ORDINAL')
             .appendTitle(Blockly.Msg.ORDINAL_NUMBER_SUFFIX);
@@ -341,7 +341,7 @@ Blockly.Blocks.lists_setIndex = {
     this.setHelpUrl(Blockly.Msg.LISTS_SET_INDEX_HELPURL);
     this.setHSV(40, 1.0, 0.99);
     this.appendValueInput('LIST')
-        .setCheck('Array')
+        .setCheck(Blockly.BlockValueType.ARRAY)
         .appendTitle(Blockly.Msg.LISTS_SET_INDEX_INPUT_IN_LIST);
     this.appendDummyInput()
         .appendTitle(new Blockly.FieldDropdown(MODE), 'MODE')
@@ -383,7 +383,7 @@ Blockly.Blocks.lists_setIndex = {
     this.removeInput('ORDINAL', true);
     // Create either a value 'AT' input or a dummy input.
     if (isAt) {
-      this.appendValueInput('AT').setCheck('Number');
+      this.appendValueInput('AT').setCheck(Blockly.BlockValueType.NUMBER);
       if (Blockly.Msg.ORDINAL_NUMBER_SUFFIX) {
         this.appendDummyInput('ORDINAL')
             .appendTitle(Blockly.Msg.ORDINAL_NUMBER_SUFFIX);
@@ -426,7 +426,7 @@ Blockly.Blocks.lists_getSublist = {
     this.setHelpUrl(Blockly.Msg.LISTS_GET_SUBLIST_HELPURL);
     this.setHSV(40, 1.0, 0.99);
     this.appendValueInput('LIST')
-        .setCheck('Array')
+        .setCheck(Blockly.BlockValueType.ARRAY)
         .appendTitle(Blockly.Msg.LISTS_GET_SUBLIST_INPUT_IN_LIST);
     this.appendDummyInput('AT1');
     this.appendDummyInput('AT2');
@@ -435,7 +435,7 @@ Blockly.Blocks.lists_getSublist = {
           .appendTitle(Blockly.Msg.LISTS_GET_SUBLIST_TAIL);
     }
     this.setInputsInline(true);
-    this.setOutput(true, 'Array');
+    this.setOutput(true, Blockly.BlockValueType.ARRAY);
     this.updateAt(1, true);
     this.updateAt(2, true);
     this.setTooltip(Blockly.Msg.LISTS_GET_SUBLIST_TOOLTIP);
@@ -463,7 +463,7 @@ Blockly.Blocks.lists_getSublist = {
     this.removeInput('ORDINAL' + n, true);
     // Create either a value 'AT' input or a dummy input.
     if (isAt) {
-      this.appendValueInput('AT' + n).setCheck('Number');
+      this.appendValueInput('AT' + n).setCheck(Blockly.BlockValueType.NUMBER);
       if (Blockly.Msg.ORDINAL_NUMBER_SUFFIX) {
         this.appendDummyInput('ORDINAL' + n)
             .appendTitle(Blockly.Msg.ORDINAL_NUMBER_SUFFIX);
