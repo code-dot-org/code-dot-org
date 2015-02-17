@@ -1,10 +1,10 @@
 ---
-from: 'Hadi Partovi (Code.org) <hadi_partovi@code.org>'
+from: 'Hadi Partovi <hadi_partovi@code.org>'
 subject: "Have we met your expectations?"
-litmus_tracking_id: "y8czo8o9"
+litmus_tracking_id: "2owikxnq"
 ---
 
-Thank you for attending a Code.org workshop. You were among our first 4,000 attendees, and I hope you’re already introducing your classroom to computer science with Code Studio.
+Thank you for attending a Code.org workshop! You were among our first 4,000 attendees, and I hope you’re already introducing your classroom to computer science with Code Studio.
 
 ### Help us spread the word
 
@@ -14,11 +14,23 @@ Please ask other elementary school teachers to attend a workshop. [Find local wo
 
 ### How can you help?
 
-- Email a fellow teacher (see sample email)
-- Share on Facebook or Twitter
+- Email a fellow teacher (see [sample email](https://code.org/educate/k5/resources))
 
 
+<%
+facebook = {:u=>"http://code.org/k5"}
+facebook_link = "https://www.facebook.com/sharer/sharer.php?#{facebook.to_query}"
+twitter = {:related=>'codeorg', :hashtags=>'', :text=>"I'm bringing computer science to my classroom with @codeorg! Find a local workshop to join me.", :url=>'http://code.org/k5'}
+twitter_link = "https://twitter.com/intent/tweet?#{twitter.to_query}"
+%>
 
+- Share on [Facebook](<%= facebook_link %>)
+- Share on [Twitter](<%= twitter_link %>)
+
+Together, we can give **all** our children the opportunity to learn foundational computer science. 
+
+
+Thanks for your support,
 
 
 Hadi Partovi
@@ -28,7 +40,7 @@ Hadi Partovi
 
 <hr/>
 
-You’re receiving this email because you signed the petition on [Code.org](https://code.org/) or registered to host an Hour of Code at [hourofcode.com](http://hourofcode.com/). We’ll send you only a few updates a year on our progress and the outcomes of your generous support. Don’t like these emails? [Unsubscribe](<%= unsubscribe_link %>).
+You’re receiving this email because you attended a [Code.org](https://code.org/) professional development workshop. We’ll send you only a few updates a year on our progress and the outcomes of your generous support. Don’t like these emails? [Unsubscribe](<%= unsubscribe_link %>).
 
 ![](<%= tracking_pixel %>)
 
