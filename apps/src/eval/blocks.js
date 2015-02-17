@@ -29,7 +29,6 @@ var commonMsg = require('../../locale/current/common');
 var evalUtils = require('./evalUtils');
 var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
 var functionalBlockUtils = require('../functionalBlockUtils');
-var colors = functionalBlockUtils.colors;
 var initTitledFunctionalBlock = functionalBlockUtils.initTitledFunctionalBlock;
 
 // Install extensions to Blockly's language and JavaScript generator.
