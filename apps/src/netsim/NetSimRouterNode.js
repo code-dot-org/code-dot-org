@@ -161,6 +161,7 @@ NetSimRouterNode.create = function (shard, onComplete) {
 
       // Always try and update router immediately, to set its DisplayName
       // correctly.
+      router.info("Router initialized");
       router.heartbeat_ = heartbeat;
       router.update(function () {
         onComplete(router);
@@ -189,7 +190,6 @@ NetSimRouterNode.get = function (routerID, shard, onComplete) {
         return;
       }
 
-      router.info("Router initialized");
       router.heartbeat_ = heartbeat;
       onComplete(router);
     });
