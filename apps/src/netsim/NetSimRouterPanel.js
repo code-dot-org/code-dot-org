@@ -105,13 +105,30 @@ NetSimRouterPanel.prototype.onShardChange_= function (newShard, localNode) {
  * @private
  */
 NetSimRouterPanel.prototype.onRouterChange_ = function (wire, router) {
+
+  // Unhook old handlers
+  if (this.routerStateChangeKey !== undefined) {
+    this.myConnectedRouter.stateChange.unregister(this.routerStateChangeKey);
+    this.routerStateChangeKey = undefined;
+    logger.info("RouterPanel unregistered from router stateChange");
+  }
+
+  if (this.routerWireChangeKey !== undefined) {
+    this.myConnectedRouter.wiresChange.unregister(this.routerWireChangeKey);
+    this.routerWireChangeKey = undefined;
+    logger.info("RouterPanel unregistered from router wiresChange");
+  }
+
+  // Update connected router
   this.myConnectedRouter = router;
   this.refresh();
+
+  // Hook up new handlers
   if (router) {
-    router.stateChange.register(this.onRouterStateChange_.bind(this));
+    this.routerStateChangeKey = router.stateChange.register(this.onRouterStateChange_.bind(this));
     logger.info("RouterPanel registered to router stateChange");
 
-    router.wiresChange.register(this.onRouterWiresChange_.bind(this));
+    this.routerWireChangeKey = router.wiresChange.register(this.onRouterWiresChange_.bind(this));
     logger.info("RouterPanel registered to router wiresChange");
   }
 };
