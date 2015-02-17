@@ -231,4 +231,29 @@ describe("NetSimShardCleaner", function () {
       assertEqual(rows[0].toNodeID, validNodeID);
     });
   });
+
+  it ("deletes logs associated with bad nodes", function () {
+    var validNodeID = makeNodeWithHeartbeat(testShard);
+    var invalidNodeID = makeNode(testShard);
+
+    testShard.logTable.create({
+      nodeID: validNodeID
+    }, function () {});
+    testShard.logTable.create({
+      nodeID: invalidNodeID
+    }, function () {});
+
+    assertTableSize(testShard, 'nodeTable', 2);
+    assertTableSize(testShard, 'logTable', 2);
+
+    cleaner.tick(); // First tick triggers cleaning and starts it
+    cleaner.tick(); // Second tick triggers node cleanup
+    cleaner.tick(); // Third tick triggers log cleanup
+
+    assertTableSize(testShard, 'nodeTable', 1);
+    assertTableSize(testShard, 'logTable', 1);
+    testShard.logTable.readAll(function (rows) {
+      assertEqual(rows[0].nodeID, validNodeID);
+    });
+  });
 });
