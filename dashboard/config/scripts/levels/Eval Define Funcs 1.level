@@ -24,7 +24,7 @@
           <mutation>
             <arg name="size" type="Number"/>
             <description>Produce a green triangle of given size</description>
-            <outputtype>image</outputtype>
+            <outputtype>Image</outputtype>
           </mutation>
           <title name="NAME">green-triangle</title>
           <functional_input name="STACK">
@@ -75,7 +75,7 @@
           <mutation>
             <arg name="size" type="Number"/>
             <description>Produce a green triangle of given size</description>
-            <outputtype>image</outputtype>
+            <outputtype>Image</outputtype>
           </mutation>
           <title name="NAME">green-triangle</title>
           <functional_input name="STACK">

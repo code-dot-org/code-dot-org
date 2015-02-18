@@ -35,6 +35,17 @@
 .field
   = f.label :open_function_definition, 'Auto-open function definition'
   = f.text_field :open_function_definition, placeholder: 'name of function to open'
+%table.contract-editor-config
+  %tr
+    %th Section
+    %th Highlight
+    %th Collapse
+  -%w(contract examples definition).each_with_index do |section, i|
+    %tr
+      %td #{i + 1}. #{section.titleize}
+      %td= boolean_check_box f, "#{section}_highlight".to_sym
+      %td= boolean_check_box f, "#{section}_collapse".to_sym
+
 .field
   = f.label :disable_param_editing, 'Enable param editing in function blocks'
   = f.check_box :disable_param_editing, {}, 'false', 'true'
@@ -113,7 +124,7 @@
               %option{value: 'bottom left'} Bottom left
               %option{value: 'left bottom'} Left bottom
               %option{value: 'left center'} Left center
-              %option{value: 'left top'} Left top  
+              %option{value: 'left top'} Left top
           %td
             %select{class: "qtip_position_at"}
               %option{value: 'top left'} Top left
@@ -127,7 +138,7 @@
               %option{value: 'bottom left'} Bottom left
               %option{value: 'left bottom'} Left bottom
               %option{value: 'left center'} Left center
-              %option{value: 'left top'} Left top  
+              %option{value: 'left top'} Left top
           %td
             %input{class: "on", type: 'text', placeholder: 'function_editor_opened'}     
           %td
@@ -159,6 +170,10 @@
     = f.label :embed, 'Embed'
     %p Embedded levels hide the Blockly workspace, only showing the visualization area (and the 'finish' button, if 'freeplay' is also set).
     = boolean_check_box f, :embed
+- if @level.respond_to? :coordinate_grid_background
+  .field
+    = f.label :coordinate_grid_background, 'Coordinate grid background'
+    = boolean_check_box f, :coordinate_grid_background
 .field
   = f.label :project_template_level_name, 'Project Template Level Name'
   %p What this does:

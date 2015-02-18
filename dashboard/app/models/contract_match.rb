@@ -5,7 +5,7 @@ class ContractMatch < DSLDefined
 name 'Enter name here'
 title 'Enter title here'
 content1 'Enter prompt here'
-answer 'Contract Name|Number|Domain1:Number|Domain2:string'
+answer 'Contract Name|Number|Domain1:Number|Domain2:String'
 ruby
   end
 end
