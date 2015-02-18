@@ -127,6 +127,23 @@ var NetSimRouterNode = module.exports = function (shard, row) {
    * @type {ObservableEvent}
    */
   this.wiresChange = new ObservableEvent();
+
+  /**
+   * Local cache of log rows associated with this router, used for detecting
+   * and broadcasting relevant changes.
+   * 
+   * @type {Array}
+   * @private
+   */
+  this.myLogRowCache_ = [];
+  
+  /**
+   * Event others can observe, which we fire when the router's log content
+   * changes.
+   * 
+   * @type {ObservableEvent}
+   */
+  this.logChange = new ObservableEvent();
 };
 NetSimRouterNode.inherits(NetSimNode);
 
@@ -278,6 +295,11 @@ NetSimRouterNode.prototype.initializeSimulation = function (nodeID) {
     this.wireChangeKey_ = wireChangeEvent.register(wireChangeHandler);
     logger.info("Router registered for wireTable tableChange");
 
+    var logChangeEvent = this.shard_.logTable.tableChange;
+    var logChangeHandler = this.onLogTableChange_.bind(this);
+    this.logChangeKey_ = logChangeEvent.register(logChangeHandler);
+    logger.info("Router registered for logTable tableChange");
+
     var newMessageEvent = this.shard_.messageTable.tableChange;
     var newMessageHandler = this.onMessageTableChange_.bind(this);
     this.newMessageEventKey_ = newMessageEvent.register(newMessageHandler);
@@ -302,6 +324,13 @@ NetSimRouterNode.prototype.stopSimulation = function () {
     wireChangeEvent.unregister(this.wireChangeKey_);
     this.wireChangeKey_ = undefined;
     logger.info("Router unregistered from wireTable tableChange");
+  }
+
+  if (this.logChangeKey_ !== undefined) {
+    var logChangeEvent = this.shard_.messageTable.tableChange;
+    logChangeEvent.unregister(this.logChangeKey_);
+    this.logChangeKey_ = undefined;
+    logger.info("Router unregistered from logTable tableChange");
   }
 
   if (this.newMessageEventKey_ !== undefined) {
@@ -515,6 +544,30 @@ NetSimRouterNode.prototype.onWireTableChange_ = function (rows) {
     logger.info("Router wires changed.");
     this.wiresChange.notifyObservers();
   }
+};
+
+/**
+ * When the logs table changes, we may have a new connection or have lost
+ * a connection.  Propagate updates about our connections
+ * @param rows
+ * @private
+ */
+NetSimRouterNode.prototype.onLogTableChange_ = function (rows) {
+  var myLogRows = rows.filter(function (row) {
+    return row.nodeID === this.entityID;
+  }.bind(this));
+
+  if (!_.isEqual(this.myLogRowCache_, myLogRows)) {
+    this.myLogRowCache_ = myLogRows;
+    logger.info("Router logs changed.");
+    this.logChange.notifyObservers();
+  }
+};
+
+NetSimRouterNode.prototype.getLog = function () {
+  return this.myLogRowCache_.map(function (row) {
+    return new NetSimLogEntry(this.shard_, row);
+  }.bind(this));
 };
 
 /**
