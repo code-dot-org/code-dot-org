@@ -54,6 +54,18 @@
             </block>
           </statement>
         </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">up</title>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">down</title>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">left</title>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">right</title>
+        </block>
       </xml>
     </start_blocks>
     <toolbox_blocks>
