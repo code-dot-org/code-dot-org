@@ -14,9 +14,10 @@
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
 
+  var cs = React.addons.classSet;
 
-  // ProgressBox: stage={stage} selected={level_id} progress={progress}
-  ProgressBox = React.createClass({
+  // ProgressBox: stage={} selected=id progress={}
+  var ProgressBox = React.createClass({
     render: function() {
       var P = this.props || {};
 
@@ -35,22 +36,22 @@
           level: level.position
         });
 
-        var classes1 = React.addons.classSet({
+        var classes1 = {
           'puzzle_outer_level': level.kind != 'assessment',
           'puzzle_outer_assessment': level.kind == 'assessment',
           'puzzle_outer_current': level.id == P.selected,
           'last': index === levels.length - 1
-        });
+        };
 
-        var classes2 = React.addons.classSet({
+        var classes2 = {
           'level_link': true,
           'unplugged_level': level.kind == 'unplugged'
-        });
+        };
         classes2[status.status || 'not_tried'] = true;
 
         return (
-          <div className={classes1} key={level.id}>
-            <a className={classes2} href={href}>{level.title}</a>
+          <div className={cs(classes1)} key={level.id}>
+            <a className={cs(classes2)} href={href}>{level.title}</a>
           </div>
         );
       });
@@ -60,16 +61,20 @@
   });
 
 
-  // HeaderPopup: script="" progress=""
-  HeaderPopup = React.createClass({
+  // HeaderPopup: script="" progress={} selected=id onShow=fn
+  var HeaderPopup = React.createClass({
     render: function() {
       var P = this.props || {};
+      var S = this.state || {};
+
       var progress = P.progress || {};
+      var levelProgress = P.progress.levels || {};
+      var script = S.script;
 
       var body;
-      if (P.script) {
+      if (script) {
 
-        var stages = $.map(P.script.stages, function(stage) {
+        var stages = $.map(script.stages, function(stage) {
           var lessonPlan;
 
           if (stage.lesson_plan_html_url) {
@@ -82,10 +87,10 @@
           }
 
           var levels = $.map(stage.levels, function(level, index) {
-            var status = progress[level.id] || {};
+            var status = levelProgress[level.id] || {};
 
             var href = Frame.linkTo({
-              script: P.script.name,
+              script: script.name,
               stage: stage.position,
               level: level.position
             });
@@ -98,22 +103,22 @@
               contents = <span className="puzzle-number">{level.title}</span>;
             }
 
-            var classes1 = React.addons.classSet({
+            var classes1 = {
               'puzzle_outer_level': true,
               'puzzle_outer_assessment': level.kind == 'assessment',
               'puzzle_outer_current': level.id == P.selected,
               'last': index === stage.levels.length - 1
-            });
+            };
 
-            var classes2 = React.addons.classSet({
+            var classes2 = {
               'level_link': true
-            });
+            };
             classes2[status.status || 'not_tried'] = true;
 
             return (
               <div className="level" key={level.position}>
-                <span className={classes1}>
-                  <a className={classes2} href={href}>
+                <span className={cs(classes1)}>
+                  <a className={cs(classes2)} href={href}>
                     { contents }
                   </a>
                 </span>
@@ -135,25 +140,19 @@
         });
 
         body = (
-          <div className="header_popup_body">
-            <div className="user-stats-block">
-              { stages }
-              <HeaderPopupKey />
-            </div>
+          <div className="user-stats-block">
+            { stages }
+            <HeaderPopupKey />
           </div>
         );
 
       } else {
-        body = (
-          <div className="header_popup_body">
-            <div className="loading" />
-          </div>
-        );
+        body = <div className="loading" />;
       }
 
       var style = {
         'float': 'right'
-      }
+      };
 
       return (
         <div className="header_popup">
@@ -161,17 +160,56 @@
             <span><%= I18n.t("nav.popup.progress") %></span>
             <div className="header_text" style={style}>{progress.linesOfCodeText}</div>
           </div>
-          {body}
+          <div className="header_popup_body">
+            {body}
+          </div>
           <div className="header_popup_footer">
-            <div className="header_popup_close"><%= I18n.t("nav.popup.close") %></div>
+            <div className="header_popup_close" onClick={this.handleClose}><%= I18n.t("nav.popup.close") %></div>
           </div>
         </div>
       );
 
+    },
+
+    componentDidMount: function() {
+      var _this = this;
+
+      // This store is used to load the HTML overview of the entire script
+      window.scriptStore.subscribe(function(script) {
+        _this.setState({
+          script: script
+        });
+      });
+    },
+
+
+    handleClose: function(ev) {
+      this.props.onShow(false);
     }
   });
 
-  HelloBar = React.createClass({
+
+
+  HeaderPopupKey = React.createClass({
+    render: function() {
+      return (
+        <div className="key">
+          <dl>
+            <dt><span className="puzzle_outer_level"><a className="level_link not_tried"><span className="puzzle-number">1</span></a></span></dt>
+            <dd><%= I18n.t("progress.not_completed") %></dd>
+            <dt><span className="puzzle_outer_level"><a className="level_link passed"><span className="puzzle-number">2</span></a></span></dt>
+            <dd><%= I18n.t("progress.completed_too_many_blocks") %></dd>
+            <dt><span className="puzzle_outer_level"><a className="level_link perfect"><span className="puzzle-number">3</span></a></span></dt>
+            <dd><%= I18n.t("progress.completed_perfect") %></dd>
+          </dl>
+        </div>
+      );
+    }
+  });
+
+
+
+  var HelloBar = React.createClass({
 
     render: function() {
       var cl, el;
@@ -190,6 +228,8 @@
       // This is a bit of a hack.  Level.level.id gets overwritten when blockly initializes, so it's been cached in another
       // location until we can fix that.
       var level_id = level.level_id;
+      if (!level_id && level.level)
+        level_id = level.level.id;
 
       // Title
       var titleBox;
@@ -249,7 +289,7 @@
       // Popup stage navigation
       var headerPopup;
       if (state.popped) {
-        headerPopup = <HeaderPopup script={state.scriptDefinition} progress={progress} selected={level_id} />;
+        headerPopup = <HeaderPopup progress={progress} selected={level_id} onShow={this.showPopup} />;
         // Catch clicks anywhere else and close the popup
         $(document).on('click', this.onModalClick);
       } else {
@@ -277,21 +317,10 @@
 
       // TODO: Is this the right place to put this?
       // It guarantees there will be at least one render cycle before we try to load the header.
-      this.props.headerStore.subscribe( __bind(this.replaceState, this) );
-
-      // This store is used to load the HTML overview of the entire script
-      this.scriptStore = new ScriptStore();
-      this.scriptStore.subscribe(function(script) {
-        _this.setState({
-          scriptDefinition: script
-        });
-      });
+      window.headerStore.subscribe( __bind(this.replaceState, this) );
     },
 
     componentDidUpdate: function() {
-      // This is totally cheating by React rules.  But it's intentional: we don't want to force another
-      // update so we just edit the state directly.  (React would notice that the change had no DOM effect,
-      // but we don't have that optimization.)
       if (this.state.scriptDefinition && this.state.jumpToTrophies) {
         var off = $('#trophies').offset();
         if (off)
@@ -307,14 +336,12 @@
         jumpToTrophies: show == 'trophies'
       });
 
-      console.log(this.state);
-
       // Have we loaded the stage HTML already?  If not, load it now.
       if (!!show && !this.descLoaded) {
         this.descLoaded = true; // prevent multiple loads
 
         // Ask the script store to load a particular script.
-        this.scriptStore.load({
+        window.scriptStore.load({
           script_id: this.state.stage.script_id
         });
 
@@ -323,19 +350,18 @@
 
     onTrophyClick: function(ev) {
       this.showPopup("trophies");
+      ev.stopPropagation();
     },
     onTogglePopup: function(ev) {
       this.showPopup(!this.state.popped);
-    },
-    onClosePopup: function(ev) {
-      this.showPopup(false);
+      ev.stopPropagation();
     },
 
     onModalClick: function(ev) {
       var el;
 
       // Clicks outside the popup close it
-      el = $(ev.target).closest('.header_popup');
+      el = $(ev.target).closest('.header_popup, .header_popup_link');
       if (!el.length) {
         this.showPopup(false);
         return;
@@ -343,34 +369,18 @@
     }
   });
 
-  HeaderPopupKey = React.createClass({
-    render: function() {
-      return (
-        <div className="key">
-          <dl>
-            <dt><span className="puzzle_outer_level"><a className="level_link not_tried"><span className="puzzle-number">1</span></a></span></dt>
-            <dd><%= I18n.t("progress.not_completed") %></dd>
-            <dt><span className="puzzle_outer_level"><a className="level_link passed"><span className="puzzle-number">2</span></a></span></dt>
-            <dd><%= I18n.t("progress.completed_too_many_blocks") %></dd>
-            <dt><span className="puzzle_outer_level"><a className="level_link perfect"><span className="puzzle-number">3</span></a></span></dt>
-            <dd><%= I18n.t("progress.completed_perfect") %></dd>
-          </dl>
-        </div>
-      );
-    }
-  });
-
-
-
-  var h = new HeaderStore();
-  React.render(<HelloBar headerStore={h} />, document.getElementsByClassName('header_middle')[0]);
-  h.load({
-    script_name: 'course1',
-    stage_id: 3,
-    level_id: 5
-  });
-
   // Exports:
   window.HelloBar = HelloBar;
+
+  window.Frame = new UIFrame();
+  window.headerStore = new HeaderStore();
+  window.scriptStore = new ScriptStore();
+
+  $(document).ready(function() {
+    Frame.init();
+
+    React.render(<HelloBar />, document.getElementsByClassName('header_middle')[0]);
+  });
+
 
 }).call(this);

@@ -9,6 +9,9 @@
     = tag :meta, name: 'viewport', content: 'minimal-ui'
     /[if IE 9]
       %meta{'http-equiv' => 'X-UA-Compatible', content: 'IE=Edge'}
+    %script{src:'http://fb.me/react-with-addons-0.12.2.js'}
+    %script{src:'http://fb.me/JSXTransformer-0.12.2.js'}
+    %script{type:'text/jsx', src: '/assets/header.jsx'}
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
     = javascript_include_tag '//cdn.optimizely.com/js/400912536.js' if Rails.env.production?
