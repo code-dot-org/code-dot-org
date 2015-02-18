@@ -203,7 +203,7 @@ theme: angular
             });
         } else { // new
           $scope.cohort =
-            workshopsService.save($scope.cohort, function() {
+            cohortsService.save($scope.cohort, function() {
               $location.path("/cohorts");
             });
         }
