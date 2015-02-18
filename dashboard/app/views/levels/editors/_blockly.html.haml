@@ -1,5 +1,11 @@
 :css
-  textarea { width: 100% }
+  textarea { 
+    width: 100% 
+  }
+  
+  button {
+    font-size: 100%; 
+  }
 
 - content_for(:head) do
   = stylesheet_link_tag    'editor/blockly_editor', media: 'all'
@@ -71,34 +77,29 @@
   = f.number_field :step_speed
 
 .field.callouteditor
-  %div{id: "callout_template"}
-    %div{class: "callout_0"}
-      %label Callout
+  %label Callout Editor
+  %div{id: "callout_template", style: "display: none;"}
+    %div
       %table
         %tr
-          %td Remove Callout?
           %td Element ID
           %td Localization Key
           %td Callout text
         %tr
           %td
-            %input{class: "remove_callout id_0", type: 'checkbox'}
-          %td
             %input{class: "element_id", type: 'text', placeholder: '#runButton'}          
           %td
             %input{class: "localization_key", type: 'text', placeholder: 'level_name_callout1'}
-          %td{colspan: 3}
-            %input{class: "callout_text", type: 'text', placeholder: 'Text of callout', style: "width: 97%"}
+          %td{colspan: 4}
+            %input{class: "callout_text", type: 'text', placeholder: 'Text of callout', style: "width: 100%"}
         %tr
-          %td Hide qtip?
           %td Qtip on callout
           %td Qtip points to Element
+          %td Show when
           %td X distance
           %td Y distance
-          %td Show when
-        %tr    
-          %td
-            %input{class: "qtip_hide", type: 'checkbox'}
+          %td Hide qtip?
+        %tr   
           %td
             %select{class: "qtip_position_my"}
               %option{value: 'top left'} Top left
@@ -128,21 +129,20 @@
               %option{value: 'left center'} Left center
               %option{value: 'left top'} Left top  
           %td
+            %input{class: "on", type: 'text', placeholder: 'function_editor_opened'}     
+          %td
             %input{class: "qtip_position_adjust_x" , type: 'number', style: 'width: 80px;'}
           %td
             %input{class: "qtip_position_adjust_y", type: 'number', style: 'width: 80px;'}
           %td
-            %input{class: "on", type: 'text', placeholder: 'function_editor_opened'}
+            %input{class: "qtip_hide", type: 'checkbox'}
+      %button{id: "remove_callout", type: 'button'} X Remove callout
       %hr      
   %div{id: "all_callouts_editor"}
-  %h5{id: "add_callout", style: "color: blue;"} + Add a callout
+  %button{id: "add_callout", type: 'button'} + Add a callout
     
-
 .field
   = f.label :callout_json
-  %div{style: '-webkit-user-select: text'}
-    %pre
-      = preserve "Example: [\n  {\"localization_key\": \"run\", \"callout_text\": \"Hit \"Run\" to try your program\", \"element_id\": \"#runButton\"},\n  {\"localization_key\": \"drag_blocks\", \"callout_text\": \"Drag a \"move\" block and snap it below the other block\", \"element_id\": \"[block-id='1']\", \"qtip_config\": {\n    \"position\": {\"my\": \"top left\", \"at\": \"bottom right\", \"adjust\": {\"x\": 22, \"y\":60}},\n    \"style\": { \"classes\": \"no-tip\" }}\n  }\n]"
   = f.text_area :callout_json, rows: 4
 - if @level.respond_to? :free_play
   .field
@@ -186,8 +186,6 @@
     var callout_spaces = [];
     var updated_callouts = [];
     var space_id = 0;
-    callout_spaces.push(space_id);
-    add_empty_callout();
 
     fill_form_with_existing_callouts();
 
@@ -195,8 +193,9 @@
       var callout_json = callout_editor.getValue();
       var callouts = [];
 
-      if(callout_json.length > 0) 
+      if(callout_json.length > 0) {
         callouts = JSON.parse(callout_json);
+      }
 
       for(var i=0; i<callouts.length; i++) {
         if(callouts[i].callout_text) {
@@ -206,16 +205,21 @@
           $(".callout_" + id + " .callout_text").val(callouts[i].callout_text);
           $(".callout_" + id + " .element_id").val(callouts[i].element_id);
           $(".callout_" + id + " .on").val(callouts[i].on);
-          if ((callouts[i].qtip_config) && (callouts[i].qtip_config.position))
+          if ((callouts[i].qtip_config) && (callouts[i].qtip_config.position)) {
             $(".callout_" + id + " .qtip_position_my").val(callouts[i].qtip_config.position.my);
-          if ((callouts[i].qtip_config) && (callouts[i].qtip_config.position))
+          }
+          if ((callouts[i].qtip_config) && (callouts[i].qtip_config.position)) {
             $(".callout_" + id + " .qtip_position_at").val(callouts[i].qtip_config.position.at);
-          if ((callouts[i].qtip_config) && (callouts[i].qtip_config.position) && (callouts[i].qtip_config.position.adjust))
+          }
+          if ((callouts[i].qtip_config) && (callouts[i].qtip_config.position) && (callouts[i].qtip_config.position.adjust)) {
             $(".callout_" + id + " .qtip_position_adjust_x").val(callouts[i].qtip_config.position.adjust.x);
-          if ((callouts[i].qtip_config) && (callouts[i].qtip_config.position) && (callouts[i].qtip_config.position.adjust))
+          }
+          if ((callouts[i].qtip_config) && (callouts[i].qtip_config.position) && (callouts[i].qtip_config.position.adjust)) {
             $(".callout_" + id + " .qtip_position_adjust_y").val(callouts[i].qtip_config.position.adjust.y);
-          if ((callouts[i].qtip_config) && (callouts[i].qtip_config.style) && (callouts[i].qtip_config.style.classes) && (callouts[i].qtip_config.style.classes == "no-tip"))
+          }
+          if ((callouts[i].qtip_config) && (callouts[i].qtip_config.style) && (callouts[i].qtip_config.style.classes) && (callouts[i].qtip_config.style.classes == "no-tip")) {
             $(".callout_" + id + " .qtip_hide").prop("checked", true);
+          }
         }
         update_callout_json();
       }
@@ -225,11 +229,14 @@
       for(i=0; i<updated_callouts.length; i++) {
         save_callouts_in_updated_callouts(i);
       }
-      callout_editor.setValue(JSON.stringify(updated_callouts, null, ' '));
+      callout_json = JSON.stringify(updated_callouts, null, ' ');
+      callout_editor.setValue(callout_json);
     }
 
     function save_callouts_in_updated_callouts(i) {
       id = callout_spaces[i];
+      console.log(id);
+      console.log($('.callout_' + id + ' .callout_text').val());
       updated_callouts[i].localization_key = $('.callout_' + id + ' .localization_key').val();
       updated_callouts[i].callout_text = $('.callout_' + id + ' .callout_text').val();
       updated_callouts[i].element_id = $('.callout_' + id + ' .element_id').val();
@@ -238,10 +245,12 @@
       updated_callouts[i].qtip_config.position.at = $('.callout_' + id + ' .qtip_position_at').val();
       updated_callouts[i].qtip_config.position.adjust.x = parseInt($('.callout_' + id + ' .qtip_position_adjust_x').val());
       updated_callouts[i].qtip_config.position.adjust.y = parseInt($('.callout_' + id + ' .qtip_position_adjust_y').val());
-      if ($('.callout_' + id + ' .qtip_hide').prop("checked") == true)
+      if ($('.callout_' + id + ' .qtip_hide').prop("checked") == true) {
         updated_callouts[i].qtip_config.style.classes = "no-tip";
-      else
+      }
+      else {
         updated_callouts[i].qtip_config.style.classes = "";
+      }
     }
 
     function add_empty_callout() {
@@ -258,10 +267,8 @@
     }
 
     function create_new_callout_space() {
-      var callout_html = $("#callout_template").html();
-      callout_html = callout_html.replace(/_\d/g, "_" + ++space_id);
-      $("#all_callouts_editor").append(callout_html);
-      callout_spaces.push(space_id);
+      $("#callout_template").children(":first").clone().addClass("callout_" + space_id).appendTo("#all_callouts_editor").show();
+      callout_spaces.push(space_id++);
       add_empty_callout();
     }
 
@@ -270,27 +277,14 @@
       update_callout_json();
     });
 
-    $(document).on("click", ".remove_callout", function(){
-      callout_class = $(this).attr('class');
-      id = callout_class.match(/\d/g);
+    $(document).on("click", "#remove_callout", function(){
+      callout_class = $(this).parent().attr('class');
+      $("." + callout_class).remove();
 
-      if(id == 0) {
-        $(".callout_0 .localization_key").val("");
-        $(".callout_0 .callout_text").val("");
-        $(".callout_0 .element_id").val("");
-        $(".callout_0 .on").val("");
-        $(".callout_0 .qtip_position_my").val("top left");
-        $(".callout_0 .qtip_position_at").val("top left");
-        $(".callout_0 .qtip_position_adjust_x").val("");
-        $(".callout_0 .qtip_position_adjust_y").val("");
-        $(".callout_0 .id_0").prop("checked", false);
-      }
-      else {
-        $(".callout_" + id).remove();
-        var index = callout_spaces.indexOf(parseInt(id));
-        callout_spaces.splice(index, 1);
-        updated_callouts.splice(index, 1);
-      }
+      id = callout_class.match(/\d+/g);
+      var index = callout_spaces.indexOf(parseInt(id));
+      callout_spaces.splice(index, 1);
+      updated_callouts.splice(index, 1);
 
       update_callout_json();
     });
