@@ -12,7 +12,7 @@
 'use strict';
 
 var _ = require('../utils').getLodash();
-var ObservableEvent = require('./ObservableEvent');
+var ObservableEvent = require('../ObservableEvent');
 
 /**
  * Maximum time (in milliseconds) that tables should wait between full cache

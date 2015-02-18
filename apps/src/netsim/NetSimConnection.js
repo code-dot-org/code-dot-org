@@ -15,7 +15,7 @@ var NetSimLogger = require('./NetSimLogger');
 var NetSimClientNode = require('./NetSimClientNode');
 var NetSimRouterNode = require('./NetSimRouterNode');
 var NetSimLocalClientNode = require('./NetSimLocalClientNode');
-var ObservableEvent = require('./ObservableEvent');
+var ObservableEvent = require('../ObservableEvent');
 var NetSimShard = require('./NetSimShard');
 var NetSimShardCleaner = require('./NetSimShardCleaner');
 
