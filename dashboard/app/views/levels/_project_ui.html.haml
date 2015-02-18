@@ -72,8 +72,10 @@
         appOptions && appOptions.level && appOptions.level.projectTemplateLevelName) { // level wants us to find or create a project
       apps.all(function(data) {
         if (data) {
-          var projects = $.grep(data,
-              function(app) { return (app.projectTemplateLevelName && app.projectTemplateLevelName === appOptions.level.projectTemplateLevelName)});
+          var projects = $.grep(data, function(app) {
+              return (app.projectTemplateLevelName &&
+                      app.projectTemplateLevelName === appOptions.level.projectTemplateLevelName);
+          });
           if (projects.length == 0) {
             createApp({projectTemplateLevelName: appOptions.level.projectTemplateLevelName,
                        name: appOptions.level.projectTemplateLevelName});

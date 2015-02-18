@@ -9,7 +9,7 @@
     "background": "grassy",
     "success_condition": "function () {\r\n  var currentTime = new Date().getTime();\r\n\r\n  // Let's wait 2 seconds before indicating the success.\r\n  if (window.successTime && successTime + 2000 < currentTime)\r\n  {\r\n    //console.log(\"success!\");\r\n    return true;\r\n  }\r\n  else if (! window.successTime && Studio.sprite[0].isCollidingWith(1))\r\n  {\r\n    //console.log(\"setting success\");\r\n    window.successTime = currentTime;\r\n  }\r\n}",
     "failure_condition": "function () {\r\n}",
-    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,16,0,0,16,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,16,0,0,0,16,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
     "instructions": "Hiro is Actor 1.  Move him right to Baymax, and play a sound when they touch.",
     "is_k1": "false",
@@ -47,7 +47,7 @@
         <block type="studio_moveDistance">
           <title name="SPRITE">0</title>
           <title name="DIR">2</title>
-          <title name="DISTANCE">100</title>
+          <title name="DISTANCE">200</title>
         </block>
         <block type="studio_playSound">
           <title name="SOUND">winpoint2</title>
@@ -59,7 +59,7 @@
         <block type="studio_moveDistance">
           <title name="SPRITE">0</title>
           <title name="DIR">2</title>
-          <title name="DISTANCE">100</title>
+          <title name="DISTANCE">200</title>
         </block>
         <block type="studio_playSound">
           <title name="SOUND">hit</title>
