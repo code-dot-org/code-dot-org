@@ -2,10 +2,18 @@
 en:
   data:
     contract_match:
+      errors:
+        wrong_title: Incorrect answer
+        badname: Your contract has the wrong name.
+        badrange: Your contract has the wrong range.
+        baddomainsize: Your contract doesn't have the right number of items in the domain.
+        baddomainname: One or more of your domain items has the wrong name.
+        baddomaintype: One or more of your domain items has the wrong type.
       Enter name here:
         Enter title here: Enter title here
         Enter prompt here: Enter prompt here
         Contract Name|Number|Domain1:Number|Domain2:string: Contract Name|Number|Domain1:Number|Domain2:string
+        text|Image|color:String|size:Number|string:String: text|Image|color:String|size:Number|string:String
       Eval Contracts 1 B:
         Eval Contracts 1 B: Eval Contracts 1 B
         Write a contract for the star function: Write a contract for the star function
