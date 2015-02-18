@@ -95,7 +95,16 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
 .netsim_log_widget {
   border: solid darkgray thin;
   margin: 0.5em;
-  padding: 0.5em;
+  padding: 10px;
+
+  h1 {
+    margin: -10px -10px 10px -10px;
+    padding: 0.5em;
+    font-size: 120%;
+    line-height: 20px;
+    background-color: #7665A0;
+    color: whitesmoke;
+  }
 
   #scroll_area {
     border: inset darkgray 2px;
@@ -109,7 +118,65 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
 .netsim_send_widget {
   border: solid darkgray thin;
   margin: 0.5em;
-  padding: 0.5em;
+  padding: 10px;
+
+  h1 {
+    margin: -10px -10px 10px -10px;
+    padding: 0.5em;
+    font-size: 120%;
+    line-height: 20px;
+    background-color: #7665A0;
+    color: whitesmoke;
+  }
+
+  .netsim_packet {
+    border: solid darkgray thin;
+    background-color: lightgray;
+    padding: 0.5em;
+    border-radius: 0.5em;
+
+    .packet_header {
+      label {
+        display: inline;
+      }
+
+      label[for="from_address"] {
+        margin-left: 1em;
+      }
+
+      label[for="packet_index"] {
+        margin-left: 1em;
+      }
+
+      input[type="text"] {
+        width: 2em;
+        text-align: center;
+      }
+    }
+
+    .packet_body {
+      div {
+        display: inline-block;
+
+        h2 {
+          line-height: 11pt;
+          font-size: 11pt;
+        }
+
+        #bit_counter {
+          float: right;
+          line-height: 11pt;
+          font-size: 9pt;
+          color: darkgray;
+        }
+      }
+    }
+  }
+
+  .send_widget_footer {
+    text-align: right;
+    margin-top: 0.5em;
+  }
 }
 
 #netsim_router_panel {
