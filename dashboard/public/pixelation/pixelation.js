@@ -23,7 +23,7 @@ function isHex() {
 }
 
 function drawGraph() {
-  ctx.fillStyle = "#000";
+  ctx.fillStyle = "#ccc";
   ctx.fillRect(0, 0, MAX_SIZE, MAX_SIZE);
 
   var binCode = "";

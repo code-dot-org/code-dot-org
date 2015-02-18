@@ -102,6 +102,12 @@ Eval.init = function(config) {
     // (execute) and the infinite loop detection function.
     Blockly.JavaScript.addReservedWords('Eval,code');
 
+    if (level.coordinateGridBackground) {
+      var background = document.getElementById('background');
+      background.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
+        skin.assetUrl('background_grid.png'));
+    }
+
     if (level.solutionBlocks) {
       var solutionBlocks = blockUtils.forceInsertTopBlock(level.solutionBlocks,
         config.forceInsertTopBlock);
@@ -245,6 +251,7 @@ Eval.execute = function() {
     }
 
     if (level.freePlay) {
+      Eval.result = true;
       Eval.testResults = TestResults.FREE_PLAY;
     }
   }
