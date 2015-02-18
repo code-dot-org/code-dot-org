@@ -12,7 +12,7 @@
 /* global window */
 'use strict';
 
-var ObservableEvent = require('./ObservableEvent');
+var ObservableEvent = require('./netsim/ObservableEvent');
 
 // It is more accurate to use performance.now(), but we use Date.now()
 // for compatibility with Safari and older browsers. This should only cause
