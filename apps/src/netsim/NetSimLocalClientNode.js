@@ -17,7 +17,7 @@ var NetSimEntity = require('./NetSimEntity');
 var NetSimMessage = require('./NetSimMessage');
 var NetSimHeartbeat = require('./NetSimHeartbeat');
 var NetSimLogger = require('./NetSimLogger');
-var ObservableEvent = require('./ObservableEvent');
+var ObservableEvent = require('../ObservableEvent');
 
 var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
 
