@@ -8,7 +8,7 @@ def create_storage_id_cookie
   response.set_cookie(storage_id_cookie_name, {
     value:CGI.escape(storage_encrypt_id(storage_id)),
     domain:".#{site}",
-    path:'/v3/apps',
+    path:'/',
     expires:Time.now + (365 * 24 * 3600)
   })
 
@@ -59,6 +59,17 @@ def storage_encrypt_app_id(storage_id, app_id)
   app_id = app_id.to_i
   raise ArgumentError, "`app_id` must be an integer > 0" unless app_id > 0
   Base64.urlsafe_encode64(storage_encrypt("#{storage_id}:#{app_id}"))
+end
+
+def stub_storage_user_id
+  app_id = 1337 # Stub value, until unique app_id's become available.
+  storage_user_id(app_id)
+end
+
+# Unique, consistent ID for this user of this app.
+def storage_user_id(app_id)
+  user_id = storage_id('user')
+  storage_encrypt_app_user_id(app_id, user_id)
 end
 
 # Concatenates, encrypts, web64-encodes, and *trims* (app_id, user_id)
