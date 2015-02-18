@@ -73,51 +73,16 @@
     = render partial: 'levels/dialog', locals: {app: app, data: data}
   .clear
   %div{style: 'display: none;'}
-    #badname-dialogcontent
-      .modal-content
-        %p.dialog-title
-          =t('data.contract_match.errors.wrong_title')
-        %p
-          =t('data.contract_match.errors.badname')
-        .farSide
-          %button#ok-button.secondary
-            =t('dialog.ok')
-    #badrange-dialogcontent
-      .modal-content
-        %p.dialog-title
-          =t('data.contract_match.errors.wrong_title')
-        %p
-          =t('data.contract_match.errors.badrange')
-        .farSide
-          %button#ok-button.secondary
-            =t('dialog.ok')
-    #baddomainsize-dialogcontent
-      .modal-content
-        %p.dialog-title
-          =t('data.contract_match.errors.wrong_title')
-        %p
-          =t('data.contract_match.errors.baddomainsize')
-        .farSide
-          %button#ok-button.secondary
-            =t('dialog.ok')
-    #baddomainname-dialogcontent
-      .modal-content
-        %p.dialog-title
-          =t('data.contract_match.errors.wrong_title')
-        %p
-          =t('data.contract_match.errors.baddomainname')
-        .farSide
-          %button#ok-button.secondary
-            =t('dialog.ok')
-    #baddomaintype-dialogcontent
-      .modal-content
-        %p.dialog-title
-          =t('data.contract_match.errors.wrong_title')
-        %p
-          =t('data.contract_match.errors.baddomaintype')
-        .farSide
-          %button#ok-button.secondary
-            =t('dialog.ok')
+    - ['badname', 'badrange', 'baddomainsize', 'baddomainname', 'baddomaintype'].each do |error_type|
+      %div{id: "#{error_type}-dialogcontent"}
+        .modal-content
+          %p.dialog-title
+            =t('data.contract_match.errors.wrong_title')
+          %p
+            =t("data.contract_match.errors.#{error_type}")
+          .farSide
+            %button#ok-button.secondary
+              =t('dialog.ok')
 
 = render partial: 'levels/common_audio'
 :javascript
