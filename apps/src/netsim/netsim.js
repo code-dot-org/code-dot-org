@@ -24,7 +24,7 @@ var NetSimLobby = require('./NetSimLobby');
 var NetSimRouterPanel = require('./NetSimRouterPanel');
 var NetSimSendWidget = require('./NetSimSendWidget');
 var NetSimLogWidget = require('./NetSimLogWidget');
-var RunLoop = require('./RunLoop');
+var RunLoop = require('../RunLoop');
 
 /**
  * The top-level Internet Simulator controller.
