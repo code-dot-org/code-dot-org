@@ -1,8 +1,8 @@
-var testUtils = require('../util/testUtils');
+var testUtils = require('./util/testUtils');
 var assert = testUtils.assert;
 
 describe("ObservableEvent", function () {
-  var ObservableEvent = testUtils.requireWithGlobalsCheckBuildFolder('netsim/ObservableEvent');
+  var ObservableEvent = testUtils.requireWithGlobalsCheckBuildFolder('ObservableEvent');
   var eventA, eventB, log, funcX, funcY;
 
   beforeEach(function () {

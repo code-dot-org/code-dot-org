@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({13:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({15:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Applab = require('./applab');
@@ -16,7 +16,7 @@ window.applabMain = function(options) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":3,"./applab":6,"./blocks":7,"./levels":12,"./skins":14}],14:[function(require,module,exports){
+},{"../appMain":5,"./applab":8,"./blocks":9,"./levels":14,"./skins":16}],16:[function(require,module,exports){
 /**
  * Load Skin for Applab.
  */
@@ -35,7 +35,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":142}],12:[function(require,module,exports){
+},{"../skins":144}],14:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/applab');
@@ -81,6 +81,8 @@ levels.ec_simple = {
     'showElement': null,
     'hideElement': null,
     'setPosition': null,
+    'getXPosition': null,
+    'getYPosition': null,
     'button': null,
     'textInput': null,
     'textLabel': null,
@@ -227,7 +229,7 @@ levels.full_sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-},{"../../locale/current/applab":185,"../block_utils":17,"../utils":183}],6:[function(require,module,exports){
+},{"../../locale/current/applab":187,"../block_utils":19,"../utils":185}],8:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -1500,6 +1502,7 @@ function getTurtleContext() {
     turtleImage.src = studioApp.assetUrl('media/applab/turtle.png');
     turtleImage.id = 'turtleImage';
     updateTurtleImage(turtleImage);
+    turtleImage.ondragstart = function () { return false; };
     divApplab.appendChild(turtleImage);
   }
 
@@ -1654,9 +1657,17 @@ Applab.dot = function (opts) {
   var ctx = getTurtleContext();
   if (ctx) {
     ctx.beginPath();
+    if (Applab.turtle.penUpColor) {
+      // If the pen is up and the color has been changed, use that color:
+      ctx.strokeStyle = Applab.turtle.penUpColor;
+    }
     ctx.arc(Applab.turtle.x, Applab.turtle.y, opts.radius, 0, 2 * Math.PI);
     ctx.fill();
     ctx.stroke();
+    if (Applab.turtle.penUpColor) {
+      // If the pen is up, reset strokeStyle back to transparent:
+      ctx.strokeStyle = "rgba(255, 255, 255, 0)";
+    }
     return true;
   }
 
@@ -1674,7 +1685,6 @@ Applab.penDown = function (opts) {
   var ctx = getTurtleContext();
   if (ctx && Applab.turtle.penUpColor) {
     ctx.strokeStyle = Applab.turtle.penUpColor;
-    ctx.fillStyle = Applab.turtle.penUpColor;
     delete Applab.turtle.penUpColor;
   }
 };
@@ -1694,8 +1704,8 @@ Applab.penColor = function (opts) {
       Applab.turtle.penUpColor = opts.color;
     } else {
       ctx.strokeStyle = opts.color;
-      ctx.fillStyle = opts.color;
     }
+    ctx.fillStyle = opts.color;
   }
 };
 
@@ -2105,6 +2115,34 @@ Applab.setPosition = function (opts) {
     return true;
   }
   return false;
+};
+
+Applab.getXPosition = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  var div = document.getElementById(opts.elementId);
+  if (divApplab.contains(div)) {
+    var x = div.offsetLeft;
+    while (div !== divApplab) {
+      div = div.offsetParent;
+      x += div.offsetLeft;
+    }
+    return x;
+  }
+  return 0;
+};
+
+Applab.getYPosition = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  var div = document.getElementById(opts.elementId);
+  if (divApplab.contains(div)) {
+    var y = div.offsetTop;
+    while (div !== divApplab) {
+      div = div.offsetParent;
+      y += div.offsetTop;
+    }
+    return y;
+  }
+  return 0;
 };
 
 Applab.onEventFired = function (opts, e) {
@@ -2596,7 +2634,7 @@ var getPegasusHost = function() {
         return Array(multiplier + 1).join(input)
     }
 
-},{"../../locale/current/applab":185,"../../locale/current/common":188,"../StudioApp":2,"../codegen":42,"../constants":43,"../dom":44,"../skins":142,"../slider":143,"../templates/page.html":163,"../utils":183,"../xml":184,"./api":4,"./appStorage":5,"./blocks":7,"./controls.html":8,"./dropletConfig":9,"./extraControlRows.html":10,"./formStorage":11,"./visualization.html":15}],15:[function(require,module,exports){
+},{"../../locale/current/applab":187,"../../locale/current/common":190,"../StudioApp":4,"../codegen":44,"../constants":46,"../dom":47,"../skins":144,"../slider":145,"../templates/page.html":165,"../utils":185,"../xml":186,"./api":6,"./appStorage":7,"./blocks":9,"./controls.html":10,"./dropletConfig":11,"./extraControlRows.html":12,"./formStorage":13,"./visualization.html":17}],17:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2616,7 +2654,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":204}],11:[function(require,module,exports){
+},{"ejs":206}],13:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -2799,7 +2837,7 @@ FormStorage.getAppSecret = function() {
 };
 
 
-},{}],10:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2819,7 +2857,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/applab":185,"../../locale/current/common":188,"ejs":204}],9:[function(require,module,exports){
+},{"../../locale/current/applab":187,"../../locale/current/common":190,"ejs":206}],11:[function(require,module,exports){
 module.exports.blocks = [
   {'func': 'onEvent', 'title': 'Execute code in response to an event for the specified element. Additional parameters are passed to the callback function.', 'category': 'UI controls', 'params': ["'id'", "'click'", "function(event) {\n  \n}"] },
   {'func': 'button', 'title': 'Create a button and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "'text'"] },
@@ -2840,6 +2878,8 @@ module.exports.blocks = [
   {'func': 'hideElement', 'title': 'Hide the element with the specified id', 'category': 'UI controls', 'params': ["'id'"] },
   {'func': 'deleteElement', 'title': 'Delete the element with the specified id', 'category': 'UI controls', 'params': ["'id'"] },
   {'func': 'setPosition', 'title': 'Position an element with x, y, width, and height coordinates', 'category': 'UI controls', 'params': ["'id'", "0", "0", "100", "100"] },
+  {'func': 'getXPosition', 'title': "Get the element's x position", 'category': 'UI controls', 'params': ["'id'"], 'type': 'value' },
+  {'func': 'getYPosition', 'title': "Get the element's y position", 'category': 'UI controls', 'params': ["'id'"], 'type': 'value' },
 
   {'func': 'createCanvas', 'title': 'Create a canvas with the specified id, and optionally set width and height dimensions', 'category': 'Canvas', 'params': ["'id'", "320", "480"] },
   {'func': 'setActiveCanvas', 'title': 'Set the canvas id for subsequent canvas commands (only needed when there are multiple canvas elements)', 'category': 'Canvas', 'params': ["'id'"] },
@@ -2921,7 +2961,7 @@ module.exports.categories = {
   },
 };
 
-},{}],8:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2941,7 +2981,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":188,"ejs":204}],7:[function(require,module,exports){
+},{"../../locale/current/common":190,"ejs":206}],9:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -3014,9 +3054,9 @@ function installContainer(blockly, generator, blockInstallOptions) {
   };
 }
 
-},{"../../locale/current/applab":185,"../../locale/current/common":188,"../codegen":42,"../utils":183}],185:[function(require,module,exports){
+},{"../../locale/current/applab":187,"../../locale/current/common":190,"../codegen":44,"../utils":185}],187:[function(require,module,exports){
 /*applab*/ module.exports = window.blockly.appLocale;
-},{}],5:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 'use strict';
 
 /**
@@ -3256,7 +3296,7 @@ var handleDeleteRecord = function(tableName, record, onSuccess, onError) {
   onSuccess();
 };
 
-},{}],4:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 
 exports.randomFromArray = function (values) {
   var key = Math.floor(Math.random() * values.length);
@@ -3319,6 +3359,18 @@ exports.setPosition = function (blockId, elementId, left, top, width, height) {
                            'top': top,
                            'width': width,
                            'height': height });
+};
+
+exports.getXPosition = function (blockId, elementId) {
+  return Applab.executeCmd(blockId,
+                          'getXPosition',
+                          {'elementId': elementId });
+};
+
+exports.getYPosition = function (blockId, elementId) {
+  return Applab.executeCmd(blockId,
+                          'getYPosition',
+                          {'elementId': elementId });
 };
 
 exports.createCanvas = function (blockId, elementId, width, height) {
@@ -3717,4 +3769,4 @@ exports.penColor = function (blockId, color) {
 };
 
 
-},{}]},{},[13]);
+},{}]},{},[15]);
