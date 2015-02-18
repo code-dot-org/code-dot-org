@@ -429,13 +429,13 @@ NetSimRouterNode.prototype.acceptConnection = function (otherNode, onComplete) {
   var self = this;
   this.countConnections(function (count) {
     if (count > MAX_CLIENT_CONNECTIONS) {
-      self.warn('Rejected connection from "' + otherNode.getHostname() +
+      self.warn('Rejected connection from host "' + otherNode.getHostname() +
           '"; connection limit reached.');
       onComplete(false);
       return;
     }
 
-    self.info('Accepted connection from "' + otherNode.getHostname() + '"');
+    self.info('Accepted connection from host "' + otherNode.getHostname() + '"');
 
     // Trigger an update, which will correct our connection count
     self.update(onComplete);
