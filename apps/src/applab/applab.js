@@ -1270,6 +1270,7 @@ function getTurtleContext() {
     turtleImage.src = studioApp.assetUrl('media/applab/turtle.png');
     turtleImage.id = 'turtleImage';
     updateTurtleImage(turtleImage);
+    turtleImage.ondragstart = function () { return false; };
     divApplab.appendChild(turtleImage);
   }
 
@@ -1875,6 +1876,34 @@ Applab.setPosition = function (opts) {
     return true;
   }
   return false;
+};
+
+Applab.getXPosition = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  var div = document.getElementById(opts.elementId);
+  if (divApplab.contains(div)) {
+    var x = div.offsetLeft;
+    while (div !== divApplab) {
+      div = div.offsetParent;
+      x += div.offsetLeft;
+    }
+    return x;
+  }
+  return 0;
+};
+
+Applab.getYPosition = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  var div = document.getElementById(opts.elementId);
+  if (divApplab.contains(div)) {
+    var y = div.offsetTop;
+    while (div !== divApplab) {
+      div = div.offsetParent;
+      y += div.offsetTop;
+    }
+    return y;
+  }
+  return 0;
 };
 
 Applab.onEventFired = function (opts, e) {
