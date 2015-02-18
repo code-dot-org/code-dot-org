@@ -225,42 +225,48 @@ class Script < ActiveRecord::Base
     stage_position = 0; script_level_position = Hash.new(0)
     script_stages = []
     script_levels_by_stage = {}
-    levels_by_key = script.levels.index_by(&:key)
+    levels_by_name = script.levels.index_by(&:name)
+    levels_by_num = script.levels.index_by do |level|
+      "#{level.game_id} #{level.level_num}"
+    end
 
     # Overwrites current script levels
     script.script_levels = data.map do |row|
       row.symbolize_keys!
 
       # Concepts are comma-separated, indexed by name
-      row[:concept_ids] = (concepts = row.delete(:concepts)) && concepts.split(',').map(&:strip).map do |concept_name|
-        (Concept.by_name(concept_name) || raise("missing concept '#{concept_name}'"))
-      end
+#      if row[:concepts]
+        row[:concept_ids] = (concepts = row.delete(:concepts)) && concepts.split(',').map(&:strip).map do |concept_name|
+          (Concept.by_name(concept_name) || raise("missing concept '#{concept_name}'"))
+        end
+#      end
 
+        # TODO use Level.find_by_key
+      if row[:name].try(:start_with?, 'blockly:')
+        row[:name], row[:game], row[:level_num] = row.delete(:name).split(':')
+      end
       row_data = row.dup
       stage_name = row.delete(:stage)
       assessment = row.delete(:assessment)
-
-      key = row.delete(:name)
-
-      if row[:level_num] && !key.starts_with?('blockly')
-        # a levels.js level in a old style script -- give it the same key that we use for levels.js levels in new style scripts
-        key = ['blockly', row.delete(:game), row.delete(:level_num)].join(':')
+      begin
+        # if :level_num is present, find/create the reference to the Blockly level.
+        if row[:level_num]
+          key = {game_id: Game.by_name(row.delete(:game)), level_num: row.delete(:level_num)}
+          level = levels_by_num["#{key[:game_id]} #{key[:level_num]}"] ||
+          Level.includes(:concepts).create_with(name: row.delete(:name)).find_or_create_by!(key)
+          row[:type] ||= 'Blockly'
+        else
+          name = row.delete(:name)
+          level = levels_by_name[name] ||
+            Level.find_by(name: name) ||
+            raise(ActiveRecord::RecordNotFound)
+        end
+      rescue ActiveRecord::RecordNotFound => e
+        raise e, "#{$!}, Level: #{row_data.to_json}, Script: #{script.name}", e.backtrace
       end
 
-      level = levels_by_key[key] || Level.find_by_key(key)
-
-      if key.starts_with?('blockly')
-        # this level is defined in levels.js. find/create the reference to this level
-        level = Level.
-          create_with(name: 'blockly').
-          find_or_create_by!(Level.key_to_params(key))
-        level = level.with_type(row.delete(:type) || 'Blockly') if level.type.nil?
-        level.update(row)
-      end
-
-      unless level
-        raise ActiveRecord::RecordNotFound, "Level: #{row_data.to_json}, Script: #{script.name}"
-      end
+      level = level.with_type(row.delete(:type)) if level.type.nil?
+      level.update(row) if row_data[:level_num]
 
       script_level_attributes = {
         script_id: script.id,
