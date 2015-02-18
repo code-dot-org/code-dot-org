@@ -4,7 +4,7 @@ subject: "Bring computer science to your classroom"
 litmus_tracking_id: "y8czo8o9"
 ---
 
-We want to you to know that Code.org is preparing NYC teachers to offer computer science, at all levels — kindergarten through high school. 
+I'm writing to let you know that Code.org is preparing NYC teachers to offer computer science, at all levels — kindergarten through high school. 
 
 ### Get started with high-quality professional development — at no cost to you or your school
 
@@ -18,11 +18,12 @@ Participating teachers consistently call our professional development, "The best
 
 **Middle & high school teachers:**
 
-- Research-based professional development is open to all NYC DOE high school and middle school science teachers
+- Research-based professional development open to all NYC DOE high school and middle school *science* teachers
 - Per-session stipends to teachers are paid by Code.org!<br />
 [Sign up](https://code.org/educate/nyc/)
 
 ### Why computer science?
+
 It opens more doors for students than any other discipline in today’s world. This is a chance to lead your school and give your students a head start.
 
 [Bring computer science to your NYC schools](https://code.org/educate/nyc/)
