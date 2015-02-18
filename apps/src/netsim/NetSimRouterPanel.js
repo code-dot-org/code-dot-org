@@ -80,6 +80,9 @@ NetSimRouterPanel.prototype.bindElements_ = function () {
   this.connectedSpan_ = this.rootDiv_.find('#connected');
   this.notConnectedSpan_ = this.rootDiv_.find('#not_connected');
   this.networkTable_ = this.rootDiv_.find('#netsim_router_network_table');
+
+  this.routerLogDiv_ = this.rootDiv_.find('#router_log');
+  this.routerLogTable_ = this.routerLogDiv_.find('#netsim_router_log_table');
 };
 
 /**
@@ -119,6 +122,12 @@ NetSimRouterPanel.prototype.onRouterChange_ = function (wire, router) {
     logger.info("RouterPanel unregistered from router wiresChange");
   }
 
+  if (this.routerLogChangeKey !== undefined) {
+    this.myConnectedRouter.logChange.unregister(this.routerLogChangeKey);
+    this.routerLogChangeKey = undefined;
+    logger.info("RouterPanel unregistered from router logChange");
+  }
+
   // Update connected router
   this.myConnectedRouter = router;
   this.refresh();
@@ -132,6 +141,9 @@ NetSimRouterPanel.prototype.onRouterChange_ = function (wire, router) {
     this.routerWireChangeKey = router.wiresChange.register(
         this.onRouterWiresChange_.bind(this));
     logger.info("RouterPanel registered to router wiresChange");
+
+    this.routerLogChangeKey = router.logChange.register(
+        this.onRouterLogChange_.bind(this));
   }
 };
 
@@ -141,6 +153,10 @@ NetSimRouterPanel.prototype.onRouterStateChange_ = function () {
 
 NetSimRouterPanel.prototype.onRouterWiresChange_ = function () {
   this.refreshAddressTable_(this.myConnectedRouter.getAddressTable());
+};
+
+NetSimRouterPanel.prototype.onRouterLogChange_ = function () {
+  this.refreshLogTable_(this.myConnectedRouter.getLog());
 };
 
 NetSimRouterPanel.prototype.onDnsModeChange_ = function () {
@@ -162,6 +178,7 @@ NetSimRouterPanel.prototype.refresh = function () {
     this.notConnectedSpan_.hide();
     this.refreshDnsModeSelector_();
     this.refreshAddressTable_(this.myConnectedRouter.getAddressTable());
+    this.refreshLogTable_(this.myConnectedRouter.getLog());
   } else {
     this.notConnectedSpan_.show();
     this.connectedSpan_.hide();
@@ -211,6 +228,40 @@ NetSimRouterPanel.prototype.refreshAddressTable_ = function (addressTableData) {
 
     tableRow.appendTo(tableBody);
   });
+};
+
+NetSimRouterPanel.prototype.refreshLogTable_ = function (logTableData) {
+  var tableBody = this.routerLogTable_.find('tbody');
+  tableBody.empty();
+
+  // Sort: Most recent first
+  logTableData.sort(function (a, b) {
+    return a.timestamp > b.timestamp ? -1 : 1;
+  });
+
+  logTableData.forEach(function (entry) {
+    var tableRow = $('<tr>');
+    $('<td>').html(this.toRelativeTimeString_(entry.timestamp))
+        .appendTo(tableRow);
+    $('<td>').html(entry.logLevel).appendTo(tableRow);
+    $('<td>').html(entry.logText).appendTo(tableRow);
+
+    tableRow.appendTo(tableBody);
+  }.bind(this));
+};
+
+NetSimRouterPanel.prototype.toRelativeTimeString_ = function (timestamp) {
+  var deltaMS = Math.max(0, Date.now() - timestamp);
+  if (deltaMS < 1000) {
+    return 'Now';
+  } else if (deltaMS < 60000) {
+    return Math.floor(deltaMS / 1000) + "s ago";
+  } else if (deltaMS < 3600000) {
+    return Math.floor(deltaMS / 60000) + "m ago";
+  } else {
+    var date = new Date(timestamp);
+    return date.toLocaleTimeString();
+  }
 };
 
 NetSimRouterPanel.prototype.getDnsMode_ = function () {
