@@ -75,6 +75,7 @@ div#visualization {
 
 #divApplab {
   overflow: hidden;
+  outline: none;
   position: relative;
   z-index: 1;
   background-color: white;

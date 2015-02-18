@@ -150,8 +150,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catText":function(d){return "текст"},
 "catVariables":function(d){return "Променљиве"},
 "continue":function(d){return "Настави"},
-"createHtmlBlock":function(d){return "направи хипертекст блок"},
-"createHtmlBlockTooltip":function(d){return "Прави блок хипертекста у апликацији."},
+"container":function(d){return "create container"},
+"containerTooltip":function(d){return "Creates a division container and sets its inner HTML."},
 "finalLevel":function(d){return "Честитамо! Решили сте финалну слагалицу."},
 "nextLevel":function(d){return "Честитке! Завршили сте пузлу."},
 "no":function(d){return "не"},
@@ -166,5 +166,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "stepIn":function(d){return "Ускочи"},
 "stepOver":function(d){return "Прескочи"},
 "stepOut":function(d){return "Искочи"},
-"viewData":function(d){return "View Data"},
+"viewData":function(d){return "Погледај Податке"},
 "yes":function(d){return "Да"}};

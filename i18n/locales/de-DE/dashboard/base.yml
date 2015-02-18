@@ -299,6 +299,8 @@ de:
     student_teacher_disassociated: '%{teacher_name} wurde als Lehrerin für %{student_name} entfernt'
   user:
     email_confirm_needed: 'E-Mail-Adresse ist nicht bestätigt worden:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Anmeldebestätigung erneut senden
     new_password_hint: (freilassen, wenn Sie es nicht verändern möchten)
     current_password_hint: (wir benötigen Ihr aktuelle Kennwort, um Ihre Änderungen zu bestätigen)
@@ -481,7 +483,7 @@ de:
           title: Einführung in die Informatik (15-25 Stunden)
           description: 'Dieser 20-stündige Kurs führt in die wichtigsten Konzepte der Informatik und des Programmierens ein. Der Kurs wurde für den Gebrauch in den Klassenstufen 1 - 9 entworfen, aber es macht in jedem Alter Spaß zu lernen.'
         Hour of Code:
-          title: Stunde der Code
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: Code bearbeiten

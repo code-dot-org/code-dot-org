@@ -18,6 +18,8 @@ module.exports.blocks = [
   {'func': 'hideElement', 'title': 'Hide the element with the specified id', 'category': 'UI controls', 'params': ["'id'"] },
   {'func': 'deleteElement', 'title': 'Delete the element with the specified id', 'category': 'UI controls', 'params': ["'id'"] },
   {'func': 'setPosition', 'title': 'Position an element with x, y, width, and height coordinates', 'category': 'UI controls', 'params': ["'id'", "0", "0", "100", "100"] },
+  {'func': 'getXPosition', 'title': "Get the element's x position", 'category': 'UI controls', 'params': ["'id'"], 'type': 'value' },
+  {'func': 'getYPosition', 'title': "Get the element's y position", 'category': 'UI controls', 'params': ["'id'"], 'type': 'value' },
 
   {'func': 'createCanvas', 'title': 'Create a canvas with the specified id, and optionally set width and height dimensions', 'category': 'Canvas', 'params': ["'id'", "320", "480"] },
   {'func': 'setActiveCanvas', 'title': 'Set the canvas id for subsequent canvas commands (only needed when there are multiple canvas elements)', 'category': 'Canvas', 'params': ["'id'"] },

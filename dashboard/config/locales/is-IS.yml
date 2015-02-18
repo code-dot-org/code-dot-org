@@ -347,6 +347,8 @@
       %{student_name}'
   user:
     email_confirm_needed: 'Netfangið hefur ekki verið staðfest:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Endursenda leiðbeiningar um staðfestingu
     new_password_hint: (hafðu autt ef þú vilt ekki breyta því)
     current_password_hint: (við þurfum að fá núverandi lykilorð þitt til að staðfesta

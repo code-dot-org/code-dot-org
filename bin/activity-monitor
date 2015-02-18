@@ -10,7 +10,7 @@
 #   an RDS database, MongoDB, or even just a regular log file and eliminate the cost of
 #   LogEntries.
 #
-require File.expand_path('../../dashboard/config/environment', __FILE__)
+require File.expand_path('../../deployment', __FILE__)
 require 'cdo/only_one'
 require 'cdo/hip_chat'
 require 'cdo/user_agent_parser'

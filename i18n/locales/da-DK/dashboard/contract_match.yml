@@ -56,14 +56,14 @@ da:
         Eval contracts 1 A.solution_blocks, 300: Eval kontrakter 1 A.løsning_blokke, 300
         "big triangle|image|radius:Number|style:string|color:string": stor trekant|Billede|radius:Nummer|stil:streng|farve:streng
         Creating Contracts From Examples 1 A.solution_blocks, 300: Opretter kontrakter fra eksempler 1 A.løsning_blokke, 300
-        Write a contract for a red triangle that is 100 pixels.: Write a contract for a red triangle that is 100 pixels.
-        "triangle|image|radius:Number|style:string|color:string": triangle|image|radius:Number|style:string|color:string
+        Write a contract for a red triangle that is 100 pixels.: Skriv en kontrakt for en rød trekant på 100 pixels.
+        "triangle|image|radius:Number|style:string|color:string": trekant|billede|radius:Nummer|stil:streng|farve:streng
       CREATING CONTRACTS FROM EXAMPLES 1:
-        CREATING CONTRACTS FROM EXAMPLES 1: CREATING CONTRACTS FROM EXAMPLES 1
-        Write a contract for a big red triangle: Write a contract for a big red triangle
-        CREATING CONTRACTS FROM EXAMPLES 1 A.solution_block,300: CREATING CONTRACTS FROM EXAMPLES 1 A.solution_block,300
-        "big triangle|image|color:string|radius:number|style:string": big triangle|image|color:string|radius:number|style:string
-        Write a contract for a big red triangle that is 100 pixels in size: Write a contract for a big red triangle that is 100 pixels in size
+        CREATING CONTRACTS FROM EXAMPLES 1: OPRETTELSE AF KONTRAKTER FRA EKSEMPLER 1
+        Write a contract for a big red triangle: Skrive en kontrakt for en stor rød trekant
+        CREATING CONTRACTS FROM EXAMPLES 1 A.solution_block,300: OPRETTELSE AF KONTRAKTER FRA EKSEMPEL 1 A.solution_block,300
+        "big triangle|image|color:string|radius:number|style:string": stor trekant|billede|farve:streng|radius:nummer|stil:streng
+        Write a contract for a big red triangle that is 100 pixels in size: Skrive en kontrakt for en stor rød trekant, der er 100 pixels i størrelse
         CREATING CONTRACTS FROM EXAMPLES 1 A.solution_block, 300: CREATING CONTRACTS FROM EXAMPLES 1 A.solution_block, 300
         EXAMPLE 1.solution_block, 300: EXAMPLE 1.solution_block, 300
         EXAMPLE 1.solution_blocks, 300: EXAMPLE 1.solution_blocks, 300
@@ -73,12 +73,14 @@ da:
         Write a contract for a big orange red that is 100 pixels in size: Write a contract for a big orange red that is 100 pixels in size
         Write a contract for a big red that is 100 pixels in size: Write a contract for a big red that is 100 pixels in size
         "Big Triangle|image|color:string|size:Number": Big Triangle|image|color:string|size:Number
+        Big Triangle: Big Triangle
       Creating Contracts From Examples 2:
         Creating Contracts From Examples 2: Creating Contracts From Examples 2
         Write a contract for a purple square that is 15 pixels in size.: Write a contract for a purple square that is 15 pixels in size.
         EXAMPLE 2.solution_blocks, 300: EXAMPLE 2.solution_blocks, 300
         "Square|image|color:string|size:Number": Square|image|color:string|size:Number
         Example 2.solution_blocks, 300: Example 2.solution_blocks, 300
+        Square Contract: Square Contract
       Creating Contracts From Examples 3:
         Creating Contracts From Examples 3: Creating Contracts From Examples 3
         Try using the "text" function to write this red text at size 40.: 'Try using the "text" function to write this red text at size 40.'
@@ -104,9 +106,27 @@ da:
         "banner|text:string": banner|text:string
         "banner:image|text:string": banner:image|text:string
         "banner|image|text:string": banner|image|text:string
+        Banner Contract: Banner Contract
       Creating Contracts From Examples 4:
         Creating Contracts From Examples 4: Creating Contracts From Examples 4
         Try using the "text" function to write this red text at size 40.: 'Try using the "text" function to write this red text at size 40.'
         Examples 4.solution_blocks, 300: Examples 4.solution_blocks, 300
         "shrink|image|circle:image": shrink|image|circle:image
         "shrink|image|image:image": shrink|image|image:image
+        Try using the "shrink" function.: 'Try using the "shrink" function.'
+        Shrink Contract: Shrink Contract
+      Eval Contracts B:
+        Star Contract: Stjerne kontrakt
+        Write a contract for the star function: Skriv en kontrakt for stjernefunktionen
+        Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks, 300
+        "star|image|color:string|radius:Number|style:string": stjerne|billede|farve:streng|radius:Nummer|stil:streng
+      Eval Contracts D:
+        Rotate Contract: Rotér kontrakt
+        Write a contract for the rotate function: Skriv en kontrakt for stjernefunktionen
+        Eval Contracts 2 A.solution_blocks, 300: Eval kontrakter 2 A.solution_blocks, 300
+        "rotate|image|degrees:Number|image:image": rotate|image|Degrees:Number|image:image
+      Eval Contracts F:
+        Text Contract: Tekst kontrakt
+        Write a contract for the text function: Skrive en kontrakt for tekstfunktionen
+        Eval Contracts 3 A.solution_blocks, 300: Eval kontrakter 3 A.solution_blocks, 300
+        "text|image|color:string|size:Number|string:string": Tekst|Billede|Farve:streng|Størrelse:Nummer|Streng:streng

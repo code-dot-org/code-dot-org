@@ -43,6 +43,8 @@ levels.ec_simple = {
     'showElement': null,
     'hideElement': null,
     'setPosition': null,
+    'getXPosition': null,
+    'getYPosition': null,
     'button': null,
     'textInput': null,
     'textLabel': null,

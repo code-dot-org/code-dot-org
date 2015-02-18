@@ -155,9 +155,13 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "compute":function(d){return "beregn"},
+"emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
+"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "equivalentExpression":function(d){return "Prøv at ændre rækkefølgen på dine argumenter for at få præcis det samme udtryk."},
 "extraTopBlocks":function(d){return "Du har blokke, som ikke er knyttet til andre. Ville du fastgøre dem  til \"beregn\" blokken?"},
-"failedInput":function(d){return "Your function does not return the right result for all values."},
+"failedInput":function(d){return "Din funktion returnerer ikke det korrekte resultat for alle værdier."},
 "goal":function(d){return "Mål:"},
-"reinfFeedbackMsg":function(d){return "Her er din historie! Fortsæt med at arbejde på den, eller gå videre til den næste opgave!"},
-"yourExpression":function(d){return "Dit udtryk:"}};
+"levelIncompleteError":function(d){return "Your expression does not match the goal."},
+"reinfFeedbackMsg":function(d){return "Her er din beregning! Fortsæt med at arbejde på det, eller gå videre til det næste puslespil!"},
+"yourExpression":function(d){return "Dit udtryk:"},
+"wrongInput":function(d){return "You are calling your function with the wrong value."}};

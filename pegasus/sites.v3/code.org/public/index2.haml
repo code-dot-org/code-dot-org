@@ -45,9 +45,13 @@ social:
 
 ---
 
-
 #top{style: "position:relative; width:100%; overflow:hidden"}
-  #fullwidth0{style: "z-index: -5; position:absolute; left: 0; top: 0; background-image: url('/images/obama_podium.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 1; background-position: 0% 0%"}
+  - heroes = DB[:cdo_homepage].where(type_s: "widehero", active_s: ["show","hide"]).all
+  - heroes.shuffle!
+  - heroes.each_with_index do |entry, index|
+    - display = entry[:active_s] == "hide" ? "none" : "block"
+    - opacity = index == 0 ? 1 : 0
+    %div{id: "fullwidth#{index}", style: "display: #{display}; z-index: -5; position:absolute; left: 0; top: 0; background-image: url(#{entry[:image_t]}); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: #{opacity}; background-position: 50% 20%"}
 
   #fullwidth{style: "width: 100%;"}
     .thegap{style: "height: 1px"}
@@ -59,19 +63,23 @@ social:
 
   .container_responsive{style: "color: white; font-size: 24px"}
     .col-66{style: "position:relative;"}
+
+      - heroes.each_with_index do |entry, index|
+        - display = entry[:active_s] == "hide" ? "none" : "block"
+        - unless entry[:text1_s].nil_or_empty?
+          - lines = entry[:text1_s].lines 
+          %div{id: "captionarea#{index}", style: "position:absolute; left:0; top:0; text-align:center; width:100%; color:#eee"}
+            .caption1{style: "left: 0px; top: 68px; position: absolute; opacity: 0"}
+              =lines[0]
+            .caption2{style: "left: 200px; top: 107px; position: absolute; opacity: 0"}
+              =lines[1]
+            .caption3{style: "left: 140px; top: 156px; position: absolute; opacity: 0; font-size: 18px"}
+              =lines[2]
+
       #leftvideo{style: "width: 100%"}
         = view :index_video_reveal
         %div{style:"clear:both"}
         %br/
-
-      #leftbutton{style: "position:absolute; left:0; top:0; text-align:center; width:100%"}
-
-        #caption1{style: "left: 0px; top: 68px; position: absolute; opacity: 0"}
-          &ldquo;Don't just play on your phone, 
-        #caption2{style: "left: 200px; top: 107px; position: absolute; opacity: 0"}
-          program it.&rdquo; 
-        #caption3{style: "left: 140px; top: 156px; position: absolute; opacity: 0; font-size: 18px"}
-          President Barack Obama
 
     .col-33{style: "position:relative; padding: 20px; margin-top:40px; text-align:center"}     
       #playvideo{style: "opacity: 0"}
@@ -121,11 +129,29 @@ social:
   
   $(document).ready()
   {
-    $("#caption1").delay(500).animate({ left: "50px", opacity: 0.8 }, { duration: 2000 });
-    $("#caption2").delay(1000).animate({ left: "90px", opacity: 0.8 }, { duration: 2000 });
-    $("#caption3").delay(3500).animate({ opacity: 0.6 }, { duration: 2000 });
+    showQuote(null, 0);
+  }
 
-    $("#playbutton").delay(5000).animate({ opacity: 1 }, { duration: 2000 });
+  function showQuote(lastImage, nextImage)
+  {
+    if (lastImage !== null)
+    {
+      var lastImageId = "#captionarea" + lastImage;
+      //console.log("hiding", lastImageId);
+      $(lastImageId + " .caption1").animate({left: "0px", opacity:0}, { duration: 2000 });
+      $(lastImageId + " .caption2").animate({left: "200px", opacity:0}, { duration: 2000 });
+      $(lastImageId + " .caption3").animate({opacity:0}, { duration: 2000 });
+    }
+
+    if (nextImageId !== null) 
+    {
+      var nextImageId = "#captionarea" + nextImage;
+      //console.log("showing", nextImageId);
+      $(nextImageId + " .caption1").delay(500).animate({ left: "50px", opacity: 0.8 }, { duration: 2000 });
+      $(nextImageId + " .caption2").delay(1000).animate({ left: "90px", opacity: 0.8 }, { duration: 2000 });
+      $(nextImageId + " .caption3").delay(3500).animate({ opacity: 0.6 }, { duration: 2000 });
+    }
+
     $("#playvideo").delay(4000).animate({ opacity: 1 }, { duration: 2000 });
     $("#action").delay(5000).animate({ opacity: 1 }, { duration: 2000 });
   }
@@ -144,8 +170,6 @@ social:
       });
     });
 
-
-
 :javascript
 
   function adjustScroll(destination)
@@ -161,21 +185,18 @@ social:
 
   function cycleImage()
   {
+    var lastImage = currentImage;
     var nextImage = (currentImage + 1) % 4;
-    $("#fullwidth" + currentImage).fadeTo(2000, 0);
-    $("#fullwidth" + nextImage ).fadeTo(2000, videoStarted ? 0.3 : 1);
+    $("#fullwidth" + currentImage).fadeTo(4000, 0);
+    $("#fullwidth" + nextImage ).fadeTo(4000, videoStarted ? 0.3 : 1);
     currentImage = nextImage;
 
-    /*if (videoStarted)
-      console.log("fading light to ", nextImage);
-    else
-      console.log("fading normal to ", nextImage);*/
+    showQuote(lastImage, currentImage);
   }
 
-  $.not_ready()
+  $.ready()
   {
-    timerId = setInterval(cycleImage, 6000);
-
+    timerId = setInterval(cycleImage, 13000);
   }
 
   function startVideo()
@@ -192,4 +213,6 @@ social:
 
     videoStarted = true;
     clearInterval(timerId);
+
+    showQuote(currentImage, null);
   }

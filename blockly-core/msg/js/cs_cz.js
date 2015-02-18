@@ -24,6 +24,7 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "červená";
 Blockly.Msg.COLOUR_RGB_TITLE = "Vybarvi";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "Vytvoř barvu se zadaným množstvím červené, zelené a modré.  Všechny hodnoty musí být mezi 0 a 100.";
+Blockly.Msg.CONTRACT_EDITOR_HEADER = "Design Recipe";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "přerušit smyčku";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "pokračuj dalším opakováním smyčky";

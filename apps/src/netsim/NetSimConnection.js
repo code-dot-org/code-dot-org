@@ -15,8 +15,9 @@ var NetSimLogger = require('./NetSimLogger');
 var NetSimClientNode = require('./NetSimClientNode');
 var NetSimRouterNode = require('./NetSimRouterNode');
 var NetSimLocalClientNode = require('./NetSimLocalClientNode');
-var ObservableEvent = require('./ObservableEvent');
+var ObservableEvent = require('../ObservableEvent');
 var NetSimShard = require('./NetSimShard');
+var NetSimShardCleaner = require('./NetSimShardCleaner');
 
 var logger = new NetSimLogger(NetSimLogger.LogLevel.VERBOSE);
 
@@ -58,6 +59,13 @@ var NetSimConnection = module.exports = function (sentLog, receivedLog) {
    * @private
    */
   this.shard_ = null;
+
+  /**
+   *
+   * @type {NetSimShardCleaner}
+   * @private
+   */
+  this.shardCleaner_ = null;
 
   /**
    * The local client's node representation within the shard.
@@ -102,6 +110,7 @@ NetSimConnection.prototype.tick = function (clock) {
   if (this.myNode) {
     this.myNode.tick(clock);
     this.shard_.tick(clock);
+    this.shardCleaner_.tick(clock);
   }
 };
 
@@ -134,6 +143,7 @@ NetSimConnection.prototype.connectToShard = function (shardID, displayName) {
   }
 
   this.shard_ = new NetSimShard(shardID);
+  this.shardCleaner_ = new NetSimShardCleaner(this.shard_);
   this.createMyClientNode_(displayName);
 };
 
@@ -151,7 +161,7 @@ NetSimConnection.prototype.disconnectFromShard = function () {
   this.myNode.destroy(function () {
     this.myNode.stopSimulation();
     this.myNode = null;
-    this.shardChange.notifyObservers(null);
+    this.shardChange.notifyObservers(null, null);
     this.statusChanges.notifyObservers();
   }.bind(this));
 };
@@ -170,7 +180,7 @@ NetSimConnection.prototype.createMyClientNode_ = function (displayName) {
       this.myNode.setDisplayName(displayName);
       this.myNode.initializeSimulation(this.sentLog_, this.receivedLog_);
       this.myNode.update(function () {
-        this.shardChange.notifyObservers(this.shard_);
+        this.shardChange.notifyObservers(this.shard_, this.myNode);
         this.statusChanges.notifyObservers();
       }.bind(this));
     } else {
