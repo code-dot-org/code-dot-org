@@ -1,5 +1,5 @@
 ---
-title: Bring Computer Science to Your School (NYC)
+title: Bring Computer Science to Your School (Houston)
 nav: educate_nav
 ---
 
@@ -7,7 +7,7 @@ nav: educate_nav
 
 ## Why Computer Science?
 
-Computer science opens more doors for students than any other discipline in today’s world. Learning even the basics will help students lead in virtually any career -- from architecture to zoology.  Just as we teach students multiplication and division, or how electricity works, it’s important for every 21st century student to have a chance to “dissect an app,” or learn how the Internet works.
+Computer science opens more doors for students than any other discipline in today’s world. Learning even the basics will help students lead in virtually any career  from architecture to zoology.  Just as we teach students multiplication and division, or how electricity works, it’s important for every 21st century student to have a chance to “dissect an app,” or learn how the Internet works.
 
 <br />
 
@@ -19,7 +19,7 @@ Computer science opens more doors for students than any other discipline in toda
 
 <%= view :testimonials %>
 
-## NYC teachers and administrators:
+## Houston teachers and administrators:
 
 ### Grades K-5
 
@@ -35,14 +35,14 @@ Code.org offers an elementary school curriculum that allows even the youngest st
 
 ### Middle School
 
-Code.org has partnered with the award-winning Project GUTS (Growing Up Thinking Scientifically) to deliver a middle school science program consisting of 4 instructional modules and professional development for the introduction of computer science concepts into science classrooms within the context of modeling and simulation. For more information on the curriculum visit [Code.org/curriculum/mss.](Code.org/curriculum/mss)
+Code.org has partnered with the award-winning Project GUTS (Growing Up Thinking Scientifically) to deliver a middle school science program consisting of 4 instructional modules and professional development for the introduction of computer science concepts into science classrooms within the context of modeling and simulation. For more information on the curriculum visit [Code.org/curriculum/mss](Code.org/curriculum/mss).
 
 - There is no cost for schools to apply
 - Per-session stipends to teachers are paid by Code.org
-- This program is open to all NYC DOE middle schools<br />
+- This program is open to all Houston Independent School District middle schools<br />
 [Learn more](/educate/professional-development)
 
-[<button>Sign up</button>](http://izonenyc.org/initiatives/blended-learning-institute/#computer-science-track)
+[<button>Sign up</button>](bit.ly/ApplyToCode)
 
 ### High School
 
@@ -51,14 +51,14 @@ Schools and teachers can [sign up now](http://izonenyc.org/initiatives/blended-l
 - No prior computer science experience is required!
 - Per-session stipends to teachers are paid by Code.org
 - Teachers undergo research-based professional development starting in spring 2015
-- This program is open to all NYC DOE high schools.<br />
+- This program is open to all Houston Independent School District high schools.<br />
 [Learn more](/educate/professional-development)
 
-[<button>Sign up</button>](http://izonenyc.org/initiatives/blended-learning-institute/#computer-science-track)
+[<button>Sign up</button>](bit.ly/ApplyToCode)
 
-## NYC Parents
+## Houston Parents
 
-Help Code.org bring computer science courses to New York schools:
+Help Code.org bring computer science courses to Houston schools:
 
 * Share this page with your teacher or principal (see [sample letter](/promote/nycletter))
 * Make a [generous donation to Code.org](/donate)
