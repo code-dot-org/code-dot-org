@@ -39,11 +39,6 @@ describe("NetSimLogEntry", function () {
       assertEqual(row.logText, '');
     });
 
-    it ("logLevel (default INFO)", function () {
-      assertOwnProperty(row, 'logLevel');
-      assertEqual(row.logLevel, NetSimLogEntry.LogLevel.INFO);
-    });
-
     it ("timestamp (default Date.now())", function () {
       assertOwnProperty(row, 'timestamp');
       assertWithinRange(row.timestamp, Date.now(), 10);
@@ -55,7 +50,6 @@ describe("NetSimLogEntry", function () {
       id: 1,
       nodeID: 42,
       logText: 'Non-default log text',
-      logLevel: NetSimLogEntry.LogLevel.ERROR,
       timestamp: 52000
     };
     var logEntry = new NetSimLogEntry(testShard, row);
@@ -63,7 +57,6 @@ describe("NetSimLogEntry", function () {
     assertEqual(logEntry.entityID, 1);
     assertEqual(logEntry.nodeID, 42);
     assertEqual(logEntry.logText, 'Non-default log text');
-    assertEqual(logEntry.logLevel, NetSimLogEntry.LogLevel.ERROR);
     assertEqual(logEntry.timestamp, 52000);
   });
 
@@ -71,7 +64,7 @@ describe("NetSimLogEntry", function () {
     it ("adds an entry to the log table", function () {
       assertTableSize(testShard, 'logTable', 0);
 
-      NetSimLogEntry.create(testShard, null, null, null, function () {});
+      NetSimLogEntry.create(testShard, null, null, function () {});
 
       assertTableSize(testShard, 'logTable', 1);
     });
@@ -79,21 +72,19 @@ describe("NetSimLogEntry", function () {
     it ("Puts row values in remote table", function () {
       var nodeID = 1;
       var logText = 'xyzzy';
-      var logLevel = NetSimLogEntry.LogLevel.WARN;
 
-      NetSimLogEntry.create(testShard, nodeID, logText, logLevel, function () {});
+      NetSimLogEntry.create(testShard, nodeID, logText, function () {});
 
       testShard.logTable.readAll(function (rows) {
         var row = rows[0];
         assertEqual(row.nodeID, nodeID);
         assertEqual(row.logText, logText);
-        assertEqual(row.logLevel, logLevel);
         assertWithinRange(row.timestamp, Date.now(), 10);
       });
     });
 
     it ("Returns a success boolean to its callback", function () {
-      NetSimLogEntry.create(testShard, null, null, null, function (result) {
+      NetSimLogEntry.create(testShard, null, null, function (result) {
         assert(result === true, "Result is boolean true");
       });
     });
