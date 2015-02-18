@@ -235,8 +235,6 @@
 
     function save_callouts_in_updated_callouts(i) {
       id = callout_spaces[i];
-      console.log(id);
-      console.log($('.callout_' + id + ' .callout_text').val());
       updated_callouts[i].localization_key = $('.callout_' + id + ' .localization_key').val();
       updated_callouts[i].callout_text = $('.callout_' + id + ' .callout_text').val();
       updated_callouts[i].element_id = $('.callout_' + id + ' .element_id').val();
