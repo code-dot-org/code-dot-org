@@ -6,7 +6,8 @@ module Seeded
     # (USE WITH CAUTION) Deletes ALL data from the specified DB table
     def reset_db
       self.delete_all # use delete instead of destroy so callbacks are not called
-      reset_autoincrement
+    # (disable reset_autoincrement until tested on production server)
+    #   reset_autoincrement
     end
 
     # Reset autoincrement primary key
@@ -14,6 +15,9 @@ module Seeded
     def reset_autoincrement
       connection = self.connection
       table = self.table_name
+      id = self.primary_key
+      connection.execute("SET @count = 0")
+      connection.execute("UPDATE #{table} SET #{table}.#{id} = @count:= @count + 1")
       connection.execute("ALTER TABLE #{table} auto_increment = 1")
     end
 

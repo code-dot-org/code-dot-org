@@ -185,17 +185,9 @@ class Level < ActiveRecord::Base
   def self.key_to_params(key)
     if key.start_with?('blockly:')
       _, game_name, level_num = key.split(':')
-      {game_id: Game.by_name(game_name), level_num: level_num}
+      {game_id: Game.by_name(game_name).id, level_num: level_num}
     else
       {name: key}
-    end
-  end
-
-  def key
-    if level_num == 'custom'
-      name
-    else
-      ["blockly", game.name, level_num].join(':')
     end
   end
 
