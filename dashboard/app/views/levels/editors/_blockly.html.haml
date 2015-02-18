@@ -201,24 +201,26 @@
         if(callouts[i].callout_text) {
           create_new_callout_space();
           id = callout_spaces[i];
-          $(".callout_" + id + " .localization_key").val(callouts[i].localization_key);
-          $(".callout_" + id + " .callout_text").val(callouts[i].callout_text);
-          $(".callout_" + id + " .element_id").val(callouts[i].element_id);
-          $(".callout_" + id + " .on").val(callouts[i].on);
+          var calloutSpace = $('.callout_' + id);
+
+          calloutSpace.find(".localization_key").val(callouts[i].localization_key);
+          calloutSpace.find(".callout_text").val(callouts[i].callout_text);
+          calloutSpace.find(".element_id").val(callouts[i].element_id);
+          calloutSpace.find(".on").val(callouts[i].on);
           if ((callouts[i].qtip_config) && (callouts[i].qtip_config.position)) {
-            $(".callout_" + id + " .qtip_position_my").val(callouts[i].qtip_config.position.my);
+            calloutSpace.find(".qtip_position_my").val(callouts[i].qtip_config.position.my);
           }
           if ((callouts[i].qtip_config) && (callouts[i].qtip_config.position)) {
-            $(".callout_" + id + " .qtip_position_at").val(callouts[i].qtip_config.position.at);
+            calloutSpace.find(".qtip_position_at").val(callouts[i].qtip_config.position.at);
           }
           if ((callouts[i].qtip_config) && (callouts[i].qtip_config.position) && (callouts[i].qtip_config.position.adjust)) {
-            $(".callout_" + id + " .qtip_position_adjust_x").val(callouts[i].qtip_config.position.adjust.x);
+            calloutSpace.find(".qtip_position_adjust_x").val(callouts[i].qtip_config.position.adjust.x);
           }
           if ((callouts[i].qtip_config) && (callouts[i].qtip_config.position) && (callouts[i].qtip_config.position.adjust)) {
-            $(".callout_" + id + " .qtip_position_adjust_y").val(callouts[i].qtip_config.position.adjust.y);
+            calloutSpace.find(".qtip_position_adjust_y").val(callouts[i].qtip_config.position.adjust.y);
           }
           if ((callouts[i].qtip_config) && (callouts[i].qtip_config.style) && (callouts[i].qtip_config.style.classes) && (callouts[i].qtip_config.style.classes == "no-tip")) {
-            $(".callout_" + id + " .qtip_hide").prop("checked", true);
+            calloutSpace.find(".qtip_hide").prop("checked", true);
           }
         }
         update_callout_json();
@@ -235,14 +237,17 @@
 
     function save_callouts_in_updated_callouts(i) {
       id = callout_spaces[i];
-      updated_callouts[i].localization_key = $('.callout_' + id + ' .localization_key').val();
-      updated_callouts[i].callout_text = $('.callout_' + id + ' .callout_text').val();
-      updated_callouts[i].element_id = $('.callout_' + id + ' .element_id').val();
-      updated_callouts[i].on = $('.callout_' + id + ' .on').val();
-      updated_callouts[i].qtip_config.position.my = $('.callout_' + id + ' .qtip_position_my').val();
-      updated_callouts[i].qtip_config.position.at = $('.callout_' + id + ' .qtip_position_at').val();
-      updated_callouts[i].qtip_config.position.adjust.x = parseInt($('.callout_' + id + ' .qtip_position_adjust_x').val());
-      updated_callouts[i].qtip_config.position.adjust.y = parseInt($('.callout_' + id + ' .qtip_position_adjust_y').val());
+      var calloutSpace = $('.callout_' + id);
+
+      updated_callouts[i].localization_key = calloutSpace.find('.localization_key').val();
+      updated_callouts[i].callout_text = calloutSpace.find('.callout_text').val();
+      updated_callouts[i].element_id = calloutSpace.find('.element_id').val();
+      updated_callouts[i].on = calloutSpace.find('.on').val();
+      updated_callouts[i].qtip_config.position.my = calloutSpace.find('.qtip_position_my').val();
+      updated_callouts[i].qtip_config.position.at = calloutSpace.find('.qtip_position_at').val();
+      updated_callouts[i].qtip_config.position.adjust.x = parseInt(calloutSpace.find('.qtip_position_adjust_x').val());
+      updated_callouts[i].qtip_config.position.adjust.y = parseInt(calloutSpace.find('.qtip_position_adjust_y').val());
+      
       if ($('.callout_' + id + ' .qtip_hide').prop("checked") == true) {
         updated_callouts[i].qtip_config.style.classes = "no-tip";
       }
