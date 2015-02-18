@@ -285,7 +285,7 @@ class AppsApi < Sinatra::Base
     dont_cache
     content_type :json
     app_id = storage_decrypt_app_id(app_id).last
-    storage_encrypt_app_user_id(app_id, storage_id('user')).to_json
+    storage_user_id(app_id).to_json
   end
 
 end
