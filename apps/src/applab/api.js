@@ -62,6 +62,18 @@ exports.setPosition = function (blockId, elementId, left, top, width, height) {
                            'height': height });
 };
 
+exports.getXPosition = function (blockId, elementId) {
+  return Applab.executeCmd(blockId,
+                          'getXPosition',
+                          {'elementId': elementId });
+};
+
+exports.getYPosition = function (blockId, elementId) {
+  return Applab.executeCmd(blockId,
+                          'getYPosition',
+                          {'elementId': elementId });
+};
+
 exports.createCanvas = function (blockId, elementId, width, height) {
   return Applab.executeCmd(blockId,
                           'createCanvas',
