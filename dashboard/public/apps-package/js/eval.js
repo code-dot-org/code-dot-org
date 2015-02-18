@@ -117,6 +117,12 @@ Eval.init = function(config) {
     // (execute) and the infinite loop detection function.
     Blockly.JavaScript.addReservedWords('Eval,code');
 
+    if (level.coordinateGridBackground) {
+      var background = document.getElementById('background');
+      background.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
+        skin.assetUrl('background_grid.png'));
+    }
+
     if (level.solutionBlocks) {
       var solutionBlocks = blockUtils.forceInsertTopBlock(level.solutionBlocks,
         config.forceInsertTopBlock);
@@ -369,7 +375,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgEval">\n  <g id="answer">\n  </g>\n  <g id="user">\n  </g>\n</svg>\n'); })();
+ buf.push('<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgEval">\n  <image id="background" height="400" width="400" x="0" y="0"></image>\n  <g id="answer">\n  </g>\n  <g id="user">\n  </g>\n</svg>\n'); })();
 } 
 return buf.join('');
 };
