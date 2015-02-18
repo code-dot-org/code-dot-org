@@ -72,6 +72,53 @@
     .clear
     = render partial: 'levels/dialog', locals: {app: app, data: data}
   .clear
+  %div{style: 'display: none;'}
+    #badname-dialogcontent
+      .modal-content
+        %p.dialog-title
+          =t('data.contract_match.errors.wrong_title')
+        %p
+          =t('data.contract_match.errors.badname')
+        .farSide
+          %button#ok-button.secondary
+            =t('dialog.ok')
+    #badrange-dialogcontent
+      .modal-content
+        %p.dialog-title
+          =t('data.contract_match.errors.wrong_title')
+        %p
+          =t('data.contract_match.errors.badrange')
+        .farSide
+          %button#ok-button.secondary
+            =t('dialog.ok')
+    #baddomainsize-dialogcontent
+      .modal-content
+        %p.dialog-title
+          =t('data.contract_match.errors.wrong_title')
+        %p
+          =t('data.contract_match.errors.baddomainsize')
+        .farSide
+          %button#ok-button.secondary
+            =t('dialog.ok')
+    #baddomainname-dialogcontent
+      .modal-content
+        %p.dialog-title
+          =t('data.contract_match.errors.wrong_title')
+        %p
+          =t('data.contract_match.errors.baddomainname')
+        .farSide
+          %button#ok-button.secondary
+            =t('dialog.ok')
+    #baddomaintype-dialogcontent
+      .modal-content
+        %p.dialog-title
+          =t('data.contract_match.errors.wrong_title')
+        %p
+          =t('data.contract_match.errors.baddomaintype')
+        .farSide
+          %button#ok-button.secondary
+            =t('dialog.ok')
+
 = render partial: 'levels/common_audio'
 :javascript
   $('#addButton').click(function()
@@ -102,17 +149,62 @@
     var rangeInput = $('#rangeInput').val();
     var items = $('#domainItems').children().map(function(item, element) {
       return $(element).find('.domainItemText')[0].textContent;
-     });
+    });
+
+    var answers = #{data['answers'].to_json};
 
     // Order domain inputs alphabetically sorted
-    var domainInput = $.makeArray(items).slice().sort().join('|');
+    var domainInput = $.makeArray(items).slice().join('|');
     var response = functionName + '|' + rangeInput + '|' + domainInput;
     console.log('input="' + response + '"');
-    var result = #{data['answers'].to_json}.some(function(element) {
-      return response == element;
+
+    var checkUserAnswer = checkAnswer.bind(null, functionName, rangeInput, domainInput);
+    var resultPerAnswer = answers.map(checkUserAnswer);
+
+    // If any succeeded, we succeed. Otherwise, grab the first error.
+    var result = resultPerAnswer.some(function (answerResult) {
+      return answerResult === '';
     });
+    errorType = result ? null : resultPerAnswer[0];
+
     return {
       response: response,
-      result: result
+      result: result,
+      errorType: errorType
     };
+  }
+
+  /**
+   * Given the user's submission and a correct answer, returns the error type,
+   * or empty string if correct.
+   */
+  function checkAnswer(functionName, rangeInput, domainInput, correctAnswer) {
+    var items = correctAnswer.split('|');
+    var correctName = items[0];
+    var correctRange = items[1];
+    var correctDomain = items.slice(2);
+    var domainInputItems = domainInput.split('|');
+
+    if (correctName !== functionName) {
+      return 'badname';
+    }
+    if (correctRange !== rangeInput) {
+      return 'badrange';
+    }
+    if (correctDomain.length !== domainInputItems.length) {
+      return 'baddomainsize';
+    }
+    for (var i = 0; i < correctDomain.length; i++) {
+      var correctDomainName = correctDomain[i].split(':')[0];
+      var correctDomainType = correctDomain[i].split(':')[1];
+      var domainName = domainInputItems[i].split(':')[0];
+      var domainType = domainInputItems[i].split(':')[1];
+      if (correctDomainName !== domainName) {
+        return 'baddomainname';
+      }
+      if (correctDomainType !== domainType) {
+        return 'baddomaintype';
+      }
+    }
+    return '';
   }
