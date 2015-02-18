@@ -81,6 +81,8 @@ levels.ec_simple = {
     'showElement': null,
     'hideElement': null,
     'setPosition': null,
+    'getXPosition': null,
+    'getYPosition': null,
     'button': null,
     'textInput': null,
     'textLabel': null,
@@ -1500,6 +1502,7 @@ function getTurtleContext() {
     turtleImage.src = studioApp.assetUrl('media/applab/turtle.png');
     turtleImage.id = 'turtleImage';
     updateTurtleImage(turtleImage);
+    turtleImage.ondragstart = function () { return false; };
     divApplab.appendChild(turtleImage);
   }
 
@@ -2105,6 +2108,34 @@ Applab.setPosition = function (opts) {
     return true;
   }
   return false;
+};
+
+Applab.getXPosition = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  var div = document.getElementById(opts.elementId);
+  if (divApplab.contains(div)) {
+    var x = div.offsetLeft;
+    while (div !== divApplab) {
+      div = div.offsetParent;
+      x += div.offsetLeft;
+    }
+    return x;
+  }
+  return 0;
+};
+
+Applab.getYPosition = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  var div = document.getElementById(opts.elementId);
+  if (divApplab.contains(div)) {
+    var y = div.offsetTop;
+    while (div !== divApplab) {
+      div = div.offsetParent;
+      y += div.offsetTop;
+    }
+    return y;
+  }
+  return 0;
 };
 
 Applab.onEventFired = function (opts, e) {
@@ -2840,6 +2871,8 @@ module.exports.blocks = [
   {'func': 'hideElement', 'title': 'Hide the element with the specified id', 'category': 'UI controls', 'params': ["'id'"] },
   {'func': 'deleteElement', 'title': 'Delete the element with the specified id', 'category': 'UI controls', 'params': ["'id'"] },
   {'func': 'setPosition', 'title': 'Position an element with x, y, width, and height coordinates', 'category': 'UI controls', 'params': ["'id'", "0", "0", "100", "100"] },
+  {'func': 'getXPosition', 'title': "Get the element's x position", 'category': 'UI controls', 'params': ["'id'"], 'type': 'value' },
+  {'func': 'getYPosition', 'title': "Get the element's y position", 'category': 'UI controls', 'params': ["'id'"], 'type': 'value' },
 
   {'func': 'createCanvas', 'title': 'Create a canvas with the specified id, and optionally set width and height dimensions', 'category': 'Canvas', 'params': ["'id'", "320", "480"] },
   {'func': 'setActiveCanvas', 'title': 'Set the canvas id for subsequent canvas commands (only needed when there are multiple canvas elements)', 'category': 'Canvas', 'params': ["'id'"] },
@@ -3319,6 +3352,18 @@ exports.setPosition = function (blockId, elementId, left, top, width, height) {
                            'top': top,
                            'width': width,
                            'height': height });
+};
+
+exports.getXPosition = function (blockId, elementId) {
+  return Applab.executeCmd(blockId,
+                          'getXPosition',
+                          {'elementId': elementId });
+};
+
+exports.getYPosition = function (blockId, elementId) {
+  return Applab.executeCmd(blockId,
+                          'getYPosition',
+                          {'elementId': elementId });
 };
 
 exports.createCanvas = function (blockId, elementId, width, height) {
