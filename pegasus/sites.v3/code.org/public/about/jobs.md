@@ -7,6 +7,7 @@ nav: about_nav
 
 - [Head of Product/Marketing](#head-product)
 - [Head of Engineering](#head-engineering)
+- [Operations Intern](#operations-intern)
 - [HR Generalist](#hr-generalist)
 - [Grant Writer and Relationships Manager](#grant-writer)
 - [K-8 Program Manager](#K8-PM)
@@ -16,6 +17,7 @@ nav: about_nav
 - [Data Scientist / Quantitative Data Analyst](#data-scientist)
 - [Operations/Developer](#ops-dev)
 - [Software Engineer](#engineer)
+
 
 ## <a name="hr-generalist" href="#hr-generalist">HR Generalist (Seattle, WA preferred)</a>
 **Job Summary:**
@@ -168,6 +170,26 @@ Code.org is recruiting for an experienced Head of Engineering. Full-time, salari
 - Mobile development experience (iOS, Android) desired but not required
 
 Interested candidates should email a resume or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+## <a name="operations-intern" href="operations-intern">Operations Intern (Seattle,Wa)</a>
+**Job Summary:**
+
+Code.org is looking for an Operations Intern to join Code.org’s Operations team. Responsibilities of the position include:
+
+- Coordinate event logistics (dates, location, travel, accommodations, catering); act as primary logistics point-of-contact
+- Update and manage attendee lists
+- Utilize our customer service system to respond to professional development questions from teachers in a timely manner
+- Attend and participate in meetings and record notes/follow-up items, as appropriate
+- Respond to requests for information, distribute materials externally
+- Special projects (perform research, prepare documentation, develop templates, etc.)
+
+**Qualifications:**
+
+- Minimum 2 years of undergraduate studies completed
+- Experience with Google suite of products
+- Ability to work legally in the United States
+
+Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>
 
 ## <a name="data-scientist" href="#data-scientist">Data Scientist / Quantitative Data Analyst (Seattle, WA preferred)</a>
 

@@ -395,9 +395,11 @@ en:
           description: ''
           Internet Simulator: Internet Simulator
         Infinity:
-          title: Infinity Playlab
-          description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
-          description: Use Play Lab to create a story or game starring Disney Infinity characters.
+          title: Infinity Play Lab
+          description_short: Use Play Lab to create a story or game starring Disney
+            Infinity characters.
+          description: Use Play Lab to create a story or game starring Disney Infinity
+            characters.
           Infinity: Infinity
         pixelation:
           title: Pixelation
@@ -429,7 +431,7 @@ en:
           The Artist 5: The Artist 5
           Wrap-up: Wrap-up
         Code Studio Puzzle Challenge:
-          title: Code Studio Puzzles
+          title: Code Studio Puzzle Challenge
           description_short: Challenge yourself!
-          Puzzles: Puzzles
           description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
