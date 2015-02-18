@@ -54,7 +54,7 @@ NetSimSendWidget.createWithin = function (element, connection) {
 NetSimSendWidget.prototype.bindElements_ = function () {
   this.rootDiv_ = $('#netsim_send_widget');
   this.toAddressTextbox_ = this.rootDiv_.find('#to_address');
-  this.payloadTextbox_ = this.rootDiv_.find('#payload');
+  this.payloadTextbox_ = this.rootDiv_.find('#binary_payload');
   this.sendButton_ = this.rootDiv_.find('#send_button');
 
   dom.addClickTouchEvent(this.sendButton_[0], this.onSendButtonPress_.bind(this));
@@ -69,9 +69,12 @@ NetSimSendWidget.prototype.onConnectionStatusChange_ = function () {
 
 };
 
-/** Update the address table to show the list of nodes in the local network. */
+/** Update send widget display */
 NetSimSendWidget.prototype.refresh = function () {
-
+  // Non-interactive right now
+  this.rootDiv_.find('#from_address').val('?');
+  this.rootDiv_.find('#packet_index').val(1);
+  this.rootDiv_.find('#packet_count').val(1);
 };
 
 /** Send message to connected remote */
