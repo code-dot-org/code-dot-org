@@ -1,5 +1,5 @@
 ---
-title: Bring Computer Science to Your School (NYC)
+title: Bring Computer Science to Your School (LA)
 nav: educate_nav
 ---
 
@@ -19,7 +19,7 @@ Computer science opens more doors for students than any other discipline in toda
 
 <%= view :testimonials %>
 
-## NYC teachers and administrators:
+## Los Angeles Teachers and administrators:
 
 ### Grades K-5
 
@@ -39,22 +39,22 @@ Code.org has partnered with the award-winning Project GUTS (Growing Up Thinking 
 
 - There is no cost for schools to apply
 - Per-session stipends to teachers are paid by Code.org
-- This program is open to all NYC DOE middle schools<br />
+- This program is open to all LAUSD middle schools<br />
 [Learn more](/educate/professional-development)
 
-[<button>Sign up</button>](http://izonenyc.org/initiatives/blended-learning-institute/#computer-science-track)
+[<button>Sign up</button>]()
 
 ### High School
 
-Schools and teachers can [sign up now](http://izonenyc.org/initiatives/blended-learning-institute/#computer-science-track) to offer [Exploring Computer Science](exploringcs.org/curriculum) a year-long, nationally recognized, introductory course in computer science for the 15-16 school year.
+Schools and teachers can [sign up now]() to offer [Exploring Computer Science](exploringcs.org/curriculum) a year-long, nationally recognized, introductory course in computer science for the 15-16 school year.
 
 - No prior computer science experience is required!
 - Per-session stipends to teachers are paid by Code.org
 - Teachers undergo research-based professional development starting in spring 2015
-- This program is open to all NYC DOE high schools.<br />
+- This program is open to all LAUSD high schools.<br />
 [Learn more](/educate/professional-development)
 
-[<button>Sign up</button>](http://izonenyc.org/initiatives/blended-learning-institute/#computer-science-track)
+[<button>Sign up</button>]()
 
 ## NYC Parents
 
