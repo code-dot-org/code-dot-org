@@ -19,6 +19,7 @@ theme: angular
     $routeProvider.when('/workshops',              {templateUrl: '/ops-dashboard/workshops', controller: 'WorkshopsController'});
     $routeProvider.when('/cohorts',              {templateUrl: '/ops-dashboard/cohorts', controller: 'CohortsController'});
     $routeProvider.when('/cohorts/new',       {templateUrl: '/ops-dashboard/cohort-edit', controller:  'CohortController'});
+    $routeProvider.when('/cohorts/:id/edit',       {templateUrl: '/ops-dashboard/cohort-edit', controller:  'CohortController'});
     $routeProvider.otherwise({redirectTo: '/'});
   }]).config(['$httpProvider', function($httpProvider) {
     // X-Requested-With header required for CSRF requests protected by Rack::Protection::JsonCsrf included by Sinatra.
