@@ -44,29 +44,12 @@ var NetSimLogEntry = module.exports = function (shard, row) {
   this.logText = (row.logText !== undefined) ? row.logText : '';
 
   /**
-   * Log priority level, used for filtering
-   * @type {NetSimLogEntry.LogLevel}
-   */
-  this.logLevel = (row.logLevel !== undefined) ?
-      row.logLevel : NetSimLogEntry.LogLevel.INFO;
-
-  /**
    * Unix timestamp (local) of log creation time.
    * @type {number}
    */
   this.timestamp = (row.timestamp !== undefined) ? row.timestamp : Date.now();
 };
 NetSimLogEntry.inherits(NetSimEntity);
-
-/**
- * @enum {string}
- */
-var LogLevel = {
-  INFO: 'info',
-  WARN: 'warn',
-  ERROR: 'error'
-};
-NetSimLogEntry.LogLevel = LogLevel;
 
 /**
  * Helper that gets the log table for the configured instance.
@@ -81,7 +64,6 @@ NetSimLogEntry.prototype.buildRow_ = function () {
   return {
     nodeID: this.nodeID,
     logText: this.logText,
-    logLevel: this.logLevel,
     timestamp: this.timestamp
   };
 };
@@ -92,14 +74,12 @@ NetSimLogEntry.prototype.buildRow_ = function () {
  * @param {!NetSimShard} shard
  * @param {!number} nodeID - associated node's row ID
  * @param {!string} logText - log contents
- * @param {!NetSimLogEntry.LogLevel} logLevel - log priority level
  * @param {!function} onComplete (success)
  */
-NetSimLogEntry.create = function (shard, nodeID, logText, logLevel, onComplete) {
+NetSimLogEntry.create = function (shard, nodeID, logText, onComplete) {
   var entity = new NetSimLogEntry(shard);
   entity.nodeID = nodeID;
   entity.logText = logText;
-  entity.logLevel = logLevel;
   entity.timestamp = Date.now();
   entity.getTable_().create(entity.buildRow_(), function (row) {
     onComplete(row !== undefined);

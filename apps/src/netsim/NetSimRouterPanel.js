@@ -241,27 +241,10 @@ NetSimRouterPanel.prototype.refreshLogTable_ = function (logTableData) {
 
   logTableData.forEach(function (entry) {
     var tableRow = $('<tr>');
-    $('<td>').html(this.toRelativeTimeString_(entry.timestamp))
-        .appendTo(tableRow);
-    $('<td>').html(entry.logLevel).appendTo(tableRow);
     $('<td>').html(entry.logText).appendTo(tableRow);
 
     tableRow.appendTo(tableBody);
   }.bind(this));
-};
-
-NetSimRouterPanel.prototype.toRelativeTimeString_ = function (timestamp) {
-  var deltaMS = Math.max(0, Date.now() - timestamp);
-  if (deltaMS < 1000) {
-    return 'Now';
-  } else if (deltaMS < 60000) {
-    return Math.floor(deltaMS / 1000) + "s ago";
-  } else if (deltaMS < 3600000) {
-    return Math.floor(deltaMS / 60000) + "m ago";
-  } else {
-    var date = new Date(timestamp);
-    return date.toLocaleTimeString();
-  }
 };
 
 NetSimRouterPanel.prototype.getDnsMode_ = function () {
