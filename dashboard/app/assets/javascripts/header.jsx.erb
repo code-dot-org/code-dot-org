@@ -1,0 +1,376 @@
+/**
+ * Dynamic header generation and event bindings for header actions.
+ */
+
+// TODO: Enable the 'destroyed' method?   No need if we're just going to switch to React later.
+// (function($){ $.event.special.destroyed = { remove: function(o) { if (o.handler) { o.handler() } } } })(jQuery);
+
+
+// New private scope -- a lot of this is boilerplate for class structures, taken from coffeescript
+(function() {
+  var
+    __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
+    __hasProp = {}.hasOwnProperty,
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+    __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
+
+
+  // ProgressBox: stage={stage} selected={level_id} progress={progress}
+  ProgressBox = React.createClass({
+    render: function() {
+      var P = this.props || {};
+
+      var levels = P.stage.levels || [];
+      if (!levels.length)
+        return false;
+
+      var levelProgress = P.progress.levels || {};
+
+      var els = $.map(levels, function(level, index) {
+        var status = levelProgress[level.id] || {};
+
+        var href = Frame.linkTo({
+          script: P.stage.script_name,
+          stage: P.stage.position,
+          level: level.position
+        });
+
+        var classes1 = React.addons.classSet({
+          'puzzle_outer_level': level.kind != 'assessment',
+          'puzzle_outer_assessment': level.kind == 'assessment',
+          'puzzle_outer_current': level.id == P.selected,
+          'last': index === levels.length - 1
+        });
+
+        var classes2 = React.addons.classSet({
+          'level_link': true,
+          'unplugged_level': level.kind == 'unplugged'
+        });
+        classes2[status.status || 'not_tried'] = true;
+
+        return (
+          <div className={classes1} key={level.id}>
+            <a className={classes2} href={href}>{level.title}</a>
+          </div>
+        );
+      });
+
+      return <div className="progress_container">{els}</div>;
+    }
+  });
+
+
+  // HeaderPopup: script="" progress=""
+  HeaderPopup = React.createClass({
+    render: function() {
+      var P = this.props || {};
+      var progress = P.progress || {};
+
+      var body;
+      if (P.script) {
+
+        var stages = $.map(P.script.stages, function(stage) {
+          var lessonPlan;
+
+          if (stage.lesson_plan_html_url) {
+            // TODO: SHOW ONLY IF A TEACHER
+            lessonPlan = (
+              <div className="stage-lesson-plan-link">
+                <a href={stage.lesson_plan_html_url}><%= I18n.t("view_lesson_plan") %></a>
+              </div>
+            );
+          }
+
+          var levels = $.map(stage.levels, function(level, index) {
+            var status = progress[level.id] || {};
+
+            var href = Frame.linkTo({
+              script: P.script.name,
+              stage: stage.position,
+              level: level.position
+            });
+
+            if (level.kind == 'unplugged') {
+              contents = <span className="puzzle-named">{level.title}</span>;
+            } else if (status.status == 'perfect' || status.status == 'perfect') {
+              contents = <img src="/assets/white-checkmark.png" />;
+            } else {
+              contents = <span className="puzzle-number">{level.title}</span>;
+            }
+
+            var classes1 = React.addons.classSet({
+              'puzzle_outer_level': true,
+              'puzzle_outer_assessment': level.kind == 'assessment',
+              'puzzle_outer_current': level.id == P.selected,
+              'last': index === stage.levels.length - 1
+            });
+
+            var classes2 = React.addons.classSet({
+              'level_link': true
+            });
+            classes2[status.status || 'not_tried'] = true;
+
+            return (
+              <div className="level" key={level.position}>
+                <span className={classes1}>
+                  <a className={classes2} href={href}>
+                    { contents }
+                  </a>
+                </span>
+              </div>
+            );
+          });
+
+          return (
+            <div className="game-group" key={stage.position}>
+              <div className="stage">
+                <span>{stage.title}</span>
+                { lessonPlan }
+              </div>
+              <div className="games">
+                { levels }
+              </div>
+            </div>
+          );
+        });
+
+        body = (
+          <div className="header_popup_body">
+            <div className="user-stats-block">
+              { stages }
+              <HeaderPopupKey />
+            </div>
+          </div>
+        );
+
+      } else {
+        body = (
+          <div className="header_popup_body">
+            <div className="loading" />
+          </div>
+        );
+      }
+
+      var style = {
+        'float': 'right'
+      }
+
+      return (
+        <div className="header_popup">
+          <div className="header_popup_header">
+            <span><%= I18n.t("nav.popup.progress") %></span>
+            <div className="header_text" style={style}>{progress.linesOfCodeText}</div>
+          </div>
+          {body}
+          <div className="header_popup_footer">
+            <div className="header_popup_close"><%= I18n.t("nav.popup.close") %></div>
+          </div>
+        </div>
+      );
+
+    }
+  });
+
+  HelloBar = React.createClass({
+
+    render: function() {
+      var cl, el;
+      var _this = this;
+      var state = this.state || {};
+
+      var script = state.script || {};
+      var stage = state.stage || {};
+      var level = state.level || {};
+      var progress = state.progress || {};
+
+      // Don't render the progress buttons unless we are initialized with a script
+      if (!script)
+        return;
+
+      // This is a bit of a hack.  Level.level.id gets overwritten when blockly initializes, so it's been cached in another
+      // location until we can fix that.
+      var level_id = level.level_id;
+
+      // Title
+      var titleBox;
+      if (stage.title) {
+        titleBox = <div className="header_text header_level_text">{stage.title}</div>;
+      }
+
+      // Finished link
+      var finishLink;
+      if (stage.finishText) {
+        var href = Frame.linkTo({
+          complete: stage.script_name
+        });
+
+        finishLink = (
+          <div className="header_finished_link">
+            <a href={href}>{stage.finishText}</a>
+          </div>
+        );
+      }
+
+      // Trophies
+      var trophyLink;
+      if (progress.trophies) {
+        trophyLink = (
+          <span className="header_trophy_link" onClick={this.onTrophyClick}>
+            <div className="header_text"><%= I18n.t(:trophies) %></div>
+            <div className="header_status_bar current_trophies">{progress.trophies.current}</div>
+            <div className="header_text max_trophies">{progress.trophies.of + ' ' + progress.trophies.max}</div>
+          </span>
+        );
+      }
+
+      // More less toggle
+      var popupToggle;
+      if (stage.script_stages > 1 || progress.trophies) {
+        var arrow, label;
+
+        if (state.popped) {
+          arrow = <div className="header_popup_link_glyph">&#x25B2;</div>; // ▲
+          label = '<%= I18n.t(:less) %>';
+        } else {
+          arrow = <div className="header_popup_link_glyph">&#x25BC;</div>; // ▼
+          label = '<%= I18n.t(:more) %>';
+        }
+
+        popupToggle = (
+          <span className="header_popup_link" onClick={this.onTogglePopup}>
+            { arrow }
+            <div className="header_popup_link_text">{label}</div>
+          </span>
+        );
+      }
+
+      // TODO: $('.freeplay_links').show(); or hide();
+
+      // Popup stage navigation
+      var headerPopup;
+      if (state.popped) {
+        headerPopup = <HeaderPopup script={state.scriptDefinition} progress={progress} selected={level_id} />;
+        // Catch clicks anywhere else and close the popup
+        $(document).on('click', this.onModalClick);
+      } else {
+        $(document).off('click', this.onModalClick);
+      }
+
+      return (
+        <div>
+          <div className="header_level">
+            <div className="header_level_container">
+              { titleBox }
+              <ProgressBox stage={stage} selected={level_id} progress={progress} />
+              { finishLink }
+              { trophyLink }
+              { popupToggle }
+            </div>
+          </div>
+          { headerPopup }
+        </div>
+      );
+    },
+
+    componentDidMount: function() {
+      var _this = this;
+
+      // TODO: Is this the right place to put this?
+      // It guarantees there will be at least one render cycle before we try to load the header.
+      this.props.headerStore.subscribe( __bind(this.replaceState, this) );
+
+      // This store is used to load the HTML overview of the entire script
+      this.scriptStore = new ScriptStore();
+      this.scriptStore.subscribe(function(script) {
+        _this.setState({
+          scriptDefinition: script
+        });
+      });
+    },
+
+    componentDidUpdate: function() {
+      // This is totally cheating by React rules.  But it's intentional: we don't want to force another
+      // update so we just edit the state directly.  (React would notice that the change had no DOM effect,
+      // but we don't have that optimization.)
+      if (this.state.scriptDefinition && this.state.jumpToTrophies) {
+        var off = $('#trophies').offset();
+        if (off)
+          window.scrollTo(0, +off.top);
+        this.setState({ jumpToTrophies: false });
+      }
+    },
+
+    // Three possible arguments: true, false, or "trophies" (the last one autoscrolls the page to the bottom of the popup)
+    showPopup: function(show) {
+      this.setState({
+        popped: !!show,
+        jumpToTrophies: show == 'trophies'
+      });
+
+      console.log(this.state);
+
+      // Have we loaded the stage HTML already?  If not, load it now.
+      if (!!show && !this.descLoaded) {
+        this.descLoaded = true; // prevent multiple loads
+
+        // Ask the script store to load a particular script.
+        this.scriptStore.load({
+          script_id: this.state.stage.script_id
+        });
+
+      }
+    },
+
+    onTrophyClick: function(ev) {
+      this.showPopup("trophies");
+    },
+    onTogglePopup: function(ev) {
+      this.showPopup(!this.state.popped);
+    },
+    onClosePopup: function(ev) {
+      this.showPopup(false);
+    },
+
+    onModalClick: function(ev) {
+      var el;
+
+      // Clicks outside the popup close it
+      el = $(ev.target).closest('.header_popup');
+      if (!el.length) {
+        this.showPopup(false);
+        return;
+      }
+    }
+  });
+
+  HeaderPopupKey = React.createClass({
+    render: function() {
+      return (
+        <div className="key">
+          <dl>
+            <dt><span className="puzzle_outer_level"><a className="level_link not_tried"><span className="puzzle-number">1</span></a></span></dt>
+            <dd><%= I18n.t("progress.not_completed") %></dd>
+            <dt><span className="puzzle_outer_level"><a className="level_link passed"><span className="puzzle-number">2</span></a></span></dt>
+            <dd><%= I18n.t("progress.completed_too_many_blocks") %></dd>
+            <dt><span className="puzzle_outer_level"><a className="level_link perfect"><span className="puzzle-number">3</span></a></span></dt>
+            <dd><%= I18n.t("progress.completed_perfect") %></dd>
+          </dl>
+        </div>
+      );
+    }
+  });
+
+
+
+  var h = new HeaderStore();
+  React.render(<HelloBar headerStore={h} />, document.getElementsByClassName('header_middle')[0]);
+  h.load({
+    script_name: 'course1',
+    stage_id: 3,
+    level_id: 5
+  });
+
+  // Exports:
+  window.HelloBar = HelloBar;
+
+}).call(this);
