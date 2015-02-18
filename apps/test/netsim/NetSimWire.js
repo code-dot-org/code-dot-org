@@ -4,6 +4,7 @@ var assertEqual = testUtils.assertEqual;
 var assertOwnProperty = testUtils.assertOwnProperty;
 var netsimTestUtils = require('../util/netsimTestUtils');
 var fauxShard = netsimTestUtils.fauxShard;
+var assertTableSize = netsimTestUtils.assertTableSize;
 
 var NetSimWire = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimWire');
 
@@ -61,19 +62,24 @@ describe("NetSimWire", function () {
 
   describe("static method create", function () {
     it ("adds an entry to the wire table", function () {
-      wireTable.readAll(function (rows) {
-        assert(rows.length === 0, "Table is empty");
-      });
+      assertTableSize(testShard, 'wireTable', 0);
 
-      NetSimWire.create(testShard, function () {});
+      NetSimWire.create(testShard, 0, 0, function () {});
+
+      assertTableSize(testShard, 'wireTable', 1);
+    });
+
+    it ("immediately initializes entry with endpoints", function () {
+      NetSimWire.create(testShard, 1, 2, function () {});
 
       wireTable.readAll(function (rows) {
-        assert(rows.length === 1, "Table has one row");
+        assertEqual(rows[0].localNodeID, 1);
+        assertEqual(rows[0].remoteNodeID, 2);
       });
     });
 
     it ("Returns a NetSimWire to its callback", function () {
-      NetSimWire.create(testShard, function (result) {
+      NetSimWire.create(testShard, 0, 0, function (result) {
         assert(result instanceof NetSimWire, "Result is a NetSimWire");
       });
     });
@@ -119,11 +125,7 @@ describe("NetSimWire", function () {
     wire.destroy();
 
     // Verify that wire is gone from the remote table.
-    var rowCount = Infinity;
-    wireTable.readAll(function (rows) {
-      rowCount = rows.length;
-    });
-    assertEqual(rowCount, 0);
+    assertTableSize(testShard, 'wireTable', 0);
   });
 
 });

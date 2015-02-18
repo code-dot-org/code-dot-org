@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({153:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({154:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Studio = require('./studio');
@@ -16,7 +16,7 @@ window.studioMain = function(options) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":3,"./blocks":147,"./levels":152,"./skins":155,"./studio":156}],156:[function(require,module,exports){
+},{"../appMain":5,"./blocks":148,"./levels":153,"./skins":156,"./studio":157}],157:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -720,9 +720,16 @@ Studio.onTick = function() {
     var isWalking = true;
 
     // After 5 ticks of no movement, turn sprite forward.
-    if (Studio.sprite[i].lastMove === Infinity ||
-        Studio.tickCount - Studio.sprite[i].lastMove > TICKS_BEFORE_FACE_SOUTH) {
+    if (Studio.tickCount - Studio.sprite[i].lastMove > TICKS_BEFORE_FACE_SOUTH) {
       Studio.sprite[i].dir = Direction.SOUTH;
+      isWalking = false;
+    }
+
+    // Also if the character has never moved, they are also not walking.
+    // Separate to the above case because we don't want to force them to
+    // face south in this case.  They are still allowed to face a different
+    // direction even if they've never walked.
+    if (Studio.sprite[i].lastMove === Infinity) {
       isWalking = false;
     }
 
@@ -2926,7 +2933,7 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/current/common":189,"../../locale/current/studio":195,"../StudioApp":2,"../canvg/StackBlur.js":38,"../canvg/canvg.js":39,"../canvg/rgbcolor.js":40,"../canvg/svg_todataurl":41,"../codegen":42,"../constants":43,"../dom":44,"../skins":143,"../templates/page.html":164,"../utils":184,"../xml":185,"./api":145,"./bigGameLogic":146,"./blocks":147,"./collidable":148,"./constants":149,"./controls.html":150,"./extraControlRows.html":151,"./projectile":154,"./visualization.html":157}],157:[function(require,module,exports){
+},{"../../locale/current/common":190,"../../locale/current/studio":196,"../StudioApp":4,"../canvg/StackBlur.js":40,"../canvg/canvg.js":41,"../canvg/rgbcolor.js":42,"../canvg/svg_todataurl":43,"../codegen":44,"../constants":46,"../dom":47,"../skins":144,"../templates/page.html":165,"../utils":185,"../xml":186,"./api":146,"./bigGameLogic":147,"./blocks":148,"./collidable":149,"./constants":150,"./controls.html":151,"./extraControlRows.html":152,"./projectile":155,"./visualization.html":158}],158:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2946,7 +2953,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":205}],154:[function(require,module,exports){
+},{"ejs":206}],155:[function(require,module,exports){
 var Collidable = require('./collidable');
 var Direction = require('./constants').Direction;
 var constants = require('./constants');
@@ -3120,7 +3127,7 @@ Projectile.prototype.moveToNextPosition = function () {
   this.y = next.y;
 };
 
-},{"./collidable":148,"./constants":149}],155:[function(require,module,exports){
+},{"./collidable":149,"./constants":150}],156:[function(require,module,exports){
 /**
  * Load Skin for Studio.
  */
@@ -3462,7 +3469,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../../locale/current/studio":195,"../skins":143,"./constants":149}],152:[function(require,module,exports){
+},{"../../locale/current/studio":196,"../skins":144,"./constants":150}],153:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/studio');
@@ -4931,7 +4938,7 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
   'startBlocks': "",
 });
 
-},{"../../locale/current/studio":195,"../block_utils":17,"../utils":184,"./constants":149}],151:[function(require,module,exports){
+},{"../../locale/current/studio":196,"../block_utils":19,"../utils":185,"./constants":150}],152:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4951,7 +4958,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":189,"ejs":205}],150:[function(require,module,exports){
+},{"../../locale/current/common":190,"ejs":206}],151:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4971,7 +4978,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":189,"ejs":205}],148:[function(require,module,exports){
+},{"../../locale/current/common":190,"ejs":206}],149:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -5077,7 +5084,7 @@ Collidable.prototype.outOfBounds = function () {
          (this.y > studioApp.MAZE_HEIGHT + (this.height / 2));
 };
 
-},{"../StudioApp":2,"./constants":149}],147:[function(require,module,exports){
+},{"../StudioApp":4,"./constants":150}],148:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -5092,10 +5099,6 @@ var msg = require('../../locale/current/studio');
 var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
 var commonMsg = require('../../locale/current/common');
 var codegen = require('../codegen');
-var functionalBlockUtils = require('../functionalBlockUtils');
-var installFunctionalApiCallBlock =
-  functionalBlockUtils.installFunctionalApiCallBlock;
-var initTitledFunctionalBlock = functionalBlockUtils.initTitledFunctionalBlock;
 var constants = require('./constants');
 var utils = require('../utils');
 var _ = utils.getLodash();
@@ -6782,7 +6785,7 @@ exports.install = function(blockly, blockInstallOptions) {
       var blockName = msg.startSetValue();
       var blockType = blockly.BlockValueType.NONE;
       var blockArgs = [{name: 'VALUE', type: blockly.BlockValueType.FUNCTION}];
-      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
     }
   };
 
@@ -6805,7 +6808,7 @@ exports.install = function(blockly, blockInstallOptions) {
         {name: 'target', type: blockly.BlockValueType.IMAGE},
         {name: 'danger', type: blockly.BlockValueType.IMAGE}
       ];
-      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
     }
   };
 
@@ -6840,7 +6843,7 @@ exports.install = function(blockly, blockInstallOptions) {
       this.setFunctional(true, {
         headerHeight: 30
       });
-      this.setHSV.apply(this, functionalBlockUtils.colors[blockly.BlockValueType.NONE]);
+      this.setHSV.apply(this, blockly.FunctionalTypeColors[blockly.BlockValueType.NONE]);
 
       var options = {
         fixedSize: { height: 35 }
@@ -6871,7 +6874,7 @@ exports.install = function(blockly, blockInstallOptions) {
             if (index !== 0) {
               input.setInline(true);
             }
-            input.setHSV.apply(input, functionalBlockUtils.colors[blockArg.type]);
+            input.setHSV.apply(input, blockly.FunctionalTypeColors[blockArg.type]);
             input.setCheck(blockArg.type);
             input.setAlign(Blockly.ALIGN_LEFT);
           }, this);
@@ -6896,13 +6899,13 @@ exports.install = function(blockly, blockInstallOptions) {
     }, this);
   };
 
-  installFunctionalApiCallBlock(blockly, generator, {
+  blockly.FunctionalBlockUtils.installFunctionalApiCallBlock(blockly, generator, {
     blockName: 'functional_start_dummyOnMove',
     blockTitle: 'on-move (on-screen)',
     args: [{name: 'VAL', type: blockly.BlockValueType.FUNCTION}]
   });
 
-  installFunctionalApiCallBlock(blockly, generator, {
+  blockly.FunctionalBlockUtils.installFunctionalApiCallBlock(blockly, generator, {
     blockName: 'functional_start_setBackground',
     blockTitle: 'start (background)',
     apiName: 'Studio.setBackground',
@@ -6917,7 +6920,7 @@ exports.install = function(blockly, blockInstallOptions) {
         {name: 'PLAYER_SPEED', type: 'Number'},
         {name: 'ENEMY_SPEED', type: 'Number'}
       ];
-      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
     }
   };
 
@@ -6943,7 +6946,7 @@ exports.install = function(blockly, blockInstallOptions) {
         {name: 'PLAYER_SPEED', type: 'Number'},
         {name: 'ENEMY_SPEED', type: 'Number'}
       ];
-      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
     }
   };
 
@@ -6972,7 +6975,7 @@ exports.install = function(blockly, blockInstallOptions) {
   // API instead of here.
   var functional_background_values = skin.backgroundChoices.slice(1);
 
-  functionalBlockUtils.installStringPicker(blockly, generator, {
+  blockly.FunctionalBlockUtils.installStringPicker(blockly, generator, {
     blockName: 'functional_background_string_picker',
     values: functional_background_values
   });
@@ -7002,7 +7005,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.functional_sprite_dropdown = {
     helpUrl: '',
     init: function() {
-      this.setHSV.apply(this, functionalBlockUtils.colors[blockly.BlockValueType.IMAGE]);
+      this.setHSV.apply(this, blockly.FunctionalTypeColors[blockly.BlockValueType.IMAGE]);
 
       this.VALUES = skin.spriteChoices;
 
@@ -7030,7 +7033,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.functional_background_dropdown = {
     helpUrl: '',
     init: function() {
-      this.setHSV.apply(this, functionalBlockUtils.colors[blockly.BlockValueType.IMAGE]);
+      this.setHSV.apply(this, blockly.FunctionalTypeColors[blockly.BlockValueType.IMAGE]);
 
       this.VALUES = skin.backgroundChoicesK1;
       var dropdown = new blockly.FieldImageDropdown(skin.backgroundChoicesK1,
@@ -7054,7 +7057,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.functional_sqrt = {
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, 'sqrt', 'Number', [
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, 'sqrt', 'Number', [
         { name: 'ARG1', type: 'Number' }
       ]);
     }
@@ -7072,7 +7075,7 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       // todo = localize
-      initTitledFunctionalBlock(this, 'keydown?', blockly.BlockValueType.BOOLEAN, [
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, 'keydown?', blockly.BlockValueType.BOOLEAN, [
         { name: 'ARG1', type: 'Number' }
       ]);
     }
@@ -7111,9 +7114,9 @@ function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpr
   };
 }
 
-},{"../../locale/current/common":189,"../../locale/current/studio":195,"../StudioApp":2,"../codegen":42,"../functionalBlockUtils":74,"../sharedFunctionalBlocks":142,"../utils":184,"./constants":149}],195:[function(require,module,exports){
+},{"../../locale/current/common":190,"../../locale/current/studio":196,"../StudioApp":4,"../codegen":44,"../sharedFunctionalBlocks":143,"../utils":185,"./constants":150}],196:[function(require,module,exports){
 /*studio*/ module.exports = window.blockly.appLocale;
-},{}],146:[function(require,module,exports){
+},{}],147:[function(require,module,exports){
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
 var Position = studioConstants.Position;
@@ -7332,7 +7335,7 @@ BigGameLogic.prototype.collide = function (px, py, cx, cy) {
 
 module.exports = BigGameLogic;
 
-},{"../codegen":42,"./api":145,"./constants":149}],145:[function(require,module,exports){
+},{"../codegen":44,"./api":146,"./constants":150}],146:[function(require,module,exports){
 var constants = require('./constants');
 
 exports.SpriteSpeed = {
@@ -7496,7 +7499,7 @@ exports.isKeyDown = function (keyCode) {
   return Studio.keyState[keyCode] === 'keydown';
 };
 
-},{"./constants":149}],149:[function(require,module,exports){
+},{"./constants":150}],150:[function(require,module,exports){
 'use strict';
 
 exports.Direction = {
@@ -7673,7 +7676,7 @@ exports.HIDDEN_VALUE = '"hidden"';
 exports.CLICK_VALUE = '"click"';
 exports.VISIBLE_VALUE = '"visible"';
 
-},{}],41:[function(require,module,exports){
+},{}],43:[function(require,module,exports){
 /**
 	The missing SVG.toDataURL library for your SVG elements.
 
@@ -7896,7 +7899,7 @@ SVGElement.prototype.toDataURL = function(type, options) {
 	}
 }
 
-},{}],40:[function(require,module,exports){
+},{}],42:[function(require,module,exports){
 /**
  * A class to parse color values
  * @author Stoyan Stefanov <sstoo@gmail.com>
@@ -8186,7 +8189,7 @@ function RGBColor(color_string)
 }
 
 
-},{}],38:[function(require,module,exports){
+},{}],40:[function(require,module,exports){
 /*
 
 StackBlur - a fast almost Gaussian Blur For Canvas
@@ -8798,4 +8801,4 @@ function BlurStack()
 	this.a = 0;
 	this.next = null;
 }
-},{}]},{},[153]);
+},{}]},{},[154]);
