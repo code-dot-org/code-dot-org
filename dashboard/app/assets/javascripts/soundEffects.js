@@ -223,7 +223,7 @@ function isIE9() {
   var version = -1;
 
   if (/MSIE\s([\d.]+)/.test(navigator.userAgent)) {
-    version = (new Number(RegExp.$1)).valueOf();
+    version = parseInt(RegExp.$1);
   }
 
   return version === 9;
