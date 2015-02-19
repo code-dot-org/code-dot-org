@@ -116,6 +116,7 @@ var whitelistCharacters = function (whitelistRegex) {
       return false;
     }
   };
+  return keyPressHandler;
 };
 
 /**
