@@ -106,7 +106,7 @@ private
     elsif current_user.try(:admin?)
       last_attempt = current_user.last_attempt(@level).try(:level_source).try(:data)
       if last_attempt
-        @original_start_blocks = @start_blocks || '<xml/>'
+        @original_start_blocks = @start_blocks.presence || '<xml/>'
         @start_blocks = last_attempt
       end
     end
