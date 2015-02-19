@@ -154,7 +154,7 @@ module LevelsHelper
   end
 
   def localize_levelbuilder_instructions
-    if language != 'en'
+    if I18n.locale != 'en-us'
       loc_val = data_t("instructions", "#{@level.name}_instruction")
       @level.properties['instructions'] = loc_val unless loc_val.nil?
     end
