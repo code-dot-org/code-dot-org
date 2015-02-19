@@ -92,3 +92,7 @@
 #netsim_router_panel #netsim_router_network_table .dnsNode {
   color: white;
   background-color: darkorange; }
+#netsim_router_panel #netsim_router_log_table {
+  display: block;
+  max-height: 200px;
+  overflow-y: scroll; }
