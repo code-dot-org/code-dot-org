@@ -26,13 +26,21 @@
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
     "timeout_failure_tick": "200",
-    "generate_function_pass_blocks": "false"
+    "generate_function_pass_blocks": "false",
+    "callout_json": "[\r\n  {\"localization_key\":\"Infinity_repeat_callout\",\"callout_text\":\"Place Move blocks inside here\",\"element_id\":\"#repeatForever\",\"on\":\"\",\"qtip_config\":{\"position\":{\"adjust\":{\"y\":30,\"x\":null},\"my\":\"top left\",\"at\":\"top center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "timeout_after_when_run": "false"
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="studio_repeatForever"/>
+        <block type="studio_repeatForever" id="repeatForever"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>
@@ -45,6 +53,7 @@
           <title name="DIR">4</title>
           <title name="DISTANCE">400</title>
         </block>
+        <block type="studio_repeatForever"/>
       </xml>
     </toolbox_blocks>
     <required_blocks>
