@@ -1,6 +1,6 @@
 goog.provide('Blockly.Msg.ro_ro');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "actual";
+Blockly.Msg.ACTUAL = "sună";
 Blockly.Msg.ADD = "Adaugă";
 Blockly.Msg.ADD_COMMENT = "Adaugă un comentariu";
 Blockly.Msg.ADD_PARAMETER = "Adaugă parametrul";
@@ -24,6 +24,7 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "roşu";
 Blockly.Msg.COLOUR_RGB_TITLE = "colorează cu";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "Creează o culoare cu cantitatea specificată de roşu, verde şi albastru.  Toate valorile trebuie să fie între 0 şi 100.";
+Blockly.Msg.CONTRACT_EDITOR_HEADER = "Rețetă de proiectare";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "ieşi din buclă";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "continuă cu următoarea iterație a buclei";
@@ -74,7 +75,7 @@ Blockly.Msg.EXAMPLE = "Exemplu";
 Blockly.Msg.EXAMPLE_DESCRIPTION = "Definește un exemplu cu comportamentul așteptat și cel real";
 Blockly.Msg.EXPAND_ALL = "Extinde blocuri";
 Blockly.Msg.EXPAND_BLOCK = "Extinde bloc";
-Blockly.Msg.EXPECTED = "aşteptat";
+Blockly.Msg.EXPECTED = "rezultat";
 Blockly.Msg.EXTERNAL_INPUTS = "Intrări Externe";
 Blockly.Msg.FUNCTION_CREATE = "Creare funcţie";
 Blockly.Msg.FUNCTION_EDIT = "editează";

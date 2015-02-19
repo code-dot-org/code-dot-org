@@ -1,7 +1,10 @@
 {
+  "badColorStringError": "You used an invalid color string: {val}",
+  "badStyleStringError": "You used an invalid style string: {val}",
   "circleBlockTitle": "sirkel (radius, stil, farge)",
   "displayBlockTitle": "vis",
   "ellipseBlockTitle": "ellipse (breidd, høyde, stil, farge)",
+  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "extraTopBlocks": "Du har ledige blokker. Meinte du å knyte desse til \"Vis\"-blokka?",
   "overlayBlockTitle": "overlegg (topp, botn)",
   "placeImageBlockTitle": "plasser-bilde(x,y,bilde)",

@@ -37,12 +37,14 @@ function loadInfinity(skin, assetUrl) {
   skin.avatarList.forEach(function (name) {
     skin[name] = {
       sprite: skin.assetUrl('avatar_' + name + '.png'),
+      walk: skin.assetUrl('walk_' + name + '.png'),
       dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
       frameCounts: {
-        normal: 20,
+        normal: 19,
         animation: 0,
-        turns: 7,
-        emotions: 0
+        turns: 8,
+        emotions: 0,
+        walk: 12
       },
       timePerFrame: 100
     };

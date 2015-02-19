@@ -1,7 +1,10 @@
 {
+  "badColorStringError":"You used an invalid color string: {val}",
+  "badStyleStringError":"You used an invalid style string: {val}",
   "circleBlockTitle":"apskritimas(spindulys, stilius, spalva)",
   "displayBlockTitle":"parodyk",
   "ellipseBlockTitle":"elipsė(plotis, aukštis, stilius, spalva)",
+  "emptyFunctionalBlock":"You have a block with an unfilled input.",
   "extraTopBlocks":"Yra neprijungtų blokelių. Ar norėjai juos prijungti prie \"parodyk\"?",
   "overlayBlockTitle":"padėk-aukščiau(viršutinis, apatinis)",
   "placeImageBlockTitle":"padėk-vaizdą(x, y, vaizdas)",

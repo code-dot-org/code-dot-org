@@ -62,6 +62,18 @@ exports.setPosition = function (blockId, elementId, left, top, width, height) {
                            'height': height });
 };
 
+exports.getXPosition = function (blockId, elementId) {
+  return Applab.executeCmd(blockId,
+                          'getXPosition',
+                          {'elementId': elementId });
+};
+
+exports.getYPosition = function (blockId, elementId) {
+  return Applab.executeCmd(blockId,
+                          'getYPosition',
+                          {'elementId': elementId });
+};
+
 exports.createCanvas = function (blockId, elementId, width, height) {
   return Applab.executeCmd(blockId,
                           'createCanvas',
@@ -389,6 +401,44 @@ exports.turnLeft = function (blockId, degrees) {
   return Applab.executeCmd(blockId,
                           'turnLeft',
                           {'degrees': degrees });
+};
+
+exports.turnTo = function (blockId, direction) {
+  return Applab.executeCmd(blockId,
+                           'turnTo',
+                           {'direction': direction });
+};
+
+exports.arcRight = function (blockId, degrees, radius) {
+  return Applab.executeCmd(blockId,
+                           'arcRight',
+                           {'degrees': degrees,
+                            'radius': radius });
+};
+
+exports.arcLeft = function (blockId, degrees, radius) {
+  return Applab.executeCmd(blockId,
+                           'arcLeft',
+                           {'degrees': degrees,
+                            'radius': radius });
+};
+
+exports.dot = function (blockId, radius) {
+  return Applab.executeCmd(blockId,
+                           'dot',
+                           {'radius': radius });
+};
+
+exports.getX = function (blockId) {
+  return Applab.executeCmd(blockId, 'getX');
+};
+
+exports.getY = function (blockId) {
+  return Applab.executeCmd(blockId, 'getY');
+};
+
+exports.getDirection = function (blockId) {
+  return Applab.executeCmd(blockId, 'getDirection');
 };
 
 exports.penUp = function (blockId) {

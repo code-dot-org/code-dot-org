@@ -294,6 +294,8 @@ bg:
     student_teacher_disassociated: '%{teacher_name} е премахнат като учител на %{student_name}'
   user:
     email_confirm_needed: 'Имейл адресът не е потвърден:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Повторно изпращане на инструкции
     new_password_hint: (Оставете празно, ако не искате да го промените)
     current_password_hint: (нуждаем се от вашата текуща парола, за да потвърдим вашите промени)
@@ -476,7 +478,7 @@ bg:
           title: K-8 въведение в компютърните науки (15-25 часа)
           description: Този 20-часов курс, представя основните компютърни науки, концепции и термини в програмирането. Курсът е предназначен най-вече за използване в класните стаи за учениците в 7-8 клас, но е забавен за всички възрасти.
         Hour of Code:
-          title: Час на Кодирането
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: Редактиране на кода

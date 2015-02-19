@@ -1,9 +1,13 @@
 {
   "compute": "calcular",
+  "emptyComputeBlock": "You must attach a block to the \"compute\" block.",
+  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "equivalentExpression": "Intenta reordenant els teus arguments per aconseguir exactament la mateixa expressió.",
   "extraTopBlocks": "Tens blocs no afegits.  Volies afegir aquests al bloc d'execució?",
   "failedInput": "Your function does not return the right result for all values.",
   "goal": "Objectiu:",
+  "levelIncompleteError": "Your expression does not match the goal.",
   "reinfFeedbackMsg": "Aquí està la teva història! Continuar-hi treballant, o passar al següent trencaclosques!",
-  "yourExpression": "La teva expressió:"
+  "yourExpression": "La teva expressió:",
+  "wrongInput": "You are calling your function with the wrong value."
 }

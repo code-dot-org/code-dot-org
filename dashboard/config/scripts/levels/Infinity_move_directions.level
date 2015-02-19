@@ -11,7 +11,7 @@
     "failure_condition": "function () {\r\n}",
     "maze": "[[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "Move Baymax to touch two other characters.",
+    "instructions": "Baymax is Actor 3.  Add Move blocks and then move Baymax using the arrows.  Make him touch two other characters.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -34,13 +34,16 @@
     "first_sprite_index": "1",
     "protaganist_sprite_index": "0",
     "predraw_blocks": "<xml></xml>",
-    "generate_function_pass_blocks": "false"
+    "generate_function_pass_blocks": "false",
+    "maze_data": null,
+    "timeout_after_when_run": "false",
+    "callout_json": "[\r\n  {\"localization_key\":\"Infinity_move_directions_callout\",\"callout_text\":\"Which block will make Baymax move up when the up arrow is pressed?\",\"element_id\":\"#whenUp\",\"on\":\"\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top left\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n]"
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="studio_whenArrow" y="0">
+        <block type="studio_whenArrow" y="0" id="whenUp">
           <title name="VALUE">up</title>
         </block>
         <block type="studio_whenArrow" y="100">

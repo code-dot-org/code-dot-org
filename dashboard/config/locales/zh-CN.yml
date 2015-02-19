@@ -305,6 +305,8 @@
     student_teacher_disassociated: '%{teacher_name} 已被移为 %{student_name}的一位老师'
   user:
     email_confirm_needed: 没有确认的电子邮件地址：
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: 重新发送确认指令
     new_password_hint: （如果你不想改变它，留空白）
     current_password_hint: （我们需要您的当前密码以确认您的更改）

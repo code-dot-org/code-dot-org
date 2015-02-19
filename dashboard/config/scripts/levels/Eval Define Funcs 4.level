@@ -76,7 +76,7 @@
           <mutation>
             <arg name="radius"/>
             <description>Produces an aqua star of given radius</description>
-            <outputtype>image</outputtype>
+            <outputtype>Image</outputtype>
           </mutation>
           <title name="NAME">aqua star</title>
           <functional_input name="STACK">

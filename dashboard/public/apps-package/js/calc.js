@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({36:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({38:[function(require,module,exports){
 var appMain = require('../appMain');
 window.Calc = require('./calc');
 var blocks = require('./blocks');
@@ -11,7 +11,7 @@ window.calcMain = function(options) {
   appMain(window.Calc, levels, options);
 };
 
-},{"../appMain":3,"../skins":140,"./blocks":29,"./calc":30,"./levels":35}],30:[function(require,module,exports){
+},{"../appMain":5,"../skins":144,"./blocks":31,"./calc":32,"./levels":37}],32:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -74,9 +74,9 @@ var appState = {
   message: null,
   result: null,
   testResults: null,
-  currentAnimationDepth: 0,
   failedInput: null
 };
+Calc.appState_ = appState;
 
 var stepSpeed = 2000;
 
@@ -248,7 +248,6 @@ Calc.resetButtonClick = function () {
   appState.message = null;
   appState.result = null;
   appState.testResults = null;
-  appState.currentAnimationDepth = 0;
   appState.failedInput = null;
 
   timeoutList.clearTimeouts();
@@ -339,6 +338,12 @@ Calc.evaluateFunction_ = function (targetSet, userSet) {
     outcome.result = ResultType.FAILURE;
     outcome.testResults = TestResults.APP_SPECIFIC_FAIL;
     outcome.message = calcMsg.failedInput();
+  } else if (!targetSet.computeEquation().expression.isIdenticalTo(
+      userSet.computeEquation().expression)) {
+    // we have the right function, but are calling with the wrong inputs
+    outcome.result = ResultType.FAILURE;
+    outcome.testResults = TestResults.APP_SPECIFIC_FAIL;
+    outcome.message = calcMsg.wrongInput();
   } else {
     outcome.result = ResultType.SUCCESS;
     outcome.testResults = TestResults.ALL_PASS;
@@ -346,6 +351,9 @@ Calc.evaluateFunction_ = function (targetSet, userSet) {
   return outcome;
 };
 
+/**
+ * @returns outcome object
+ */
 Calc.evaluateResults_ = function (targetSet, userSet) {
   var identical, user, target;
   var outcome = {
@@ -399,20 +407,7 @@ Calc.evaluateResults_ = function (targetSet, userSet) {
  * Execute the user's code.
  */
 Calc.execute = function() {
-  appState.userSet = new EquationSet(Blockly.mainBlockSpace.getTopBlocks());
-  appState.failedInput = null;
-
-  if (level.freePlay || level.edit_blocks) {
-    appState.result = ResultType.SUCCESS;
-    appState.testResults = TestResults.FREE_PLAY;
-    appState.message = undefined;
-  } else {
-    var outcome = Calc.evaluateResults_(appState.targetSet, appState.userSet);
-    appState.result = outcome.result;
-    appState.testResults = outcome.testResults;
-    appState.message = outcome.message;
-    appState.failedInput = outcome.failedInput;
-  }
+  generateResults();
 
   var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   var textBlocks = Blockly.Xml.domToText(xml);
@@ -429,8 +424,10 @@ Calc.execute = function() {
 
   studioApp.report(reportData);
 
+  studioApp.playAudio(appState.result === ResultType.SUCCESS ? 'win' : 'failure');
+
   // Display feedback immediately
-  if (appState.testResults === TestResults.QUESTION_MARKS_IN_NUMBER_FIELD) {
+  if (isPreAnimationFailure(appState.testResults)) {
     return displayFeedback();
   }
 
@@ -438,7 +435,7 @@ Calc.execute = function() {
   if (appState.result === ResultType.SUCCESS &&
       !appState.userSet.hasVariablesOrFunctions() &&
       !level.edit_blocks) {
-    Calc.step();
+    Calc.step(0);
   } else {
     displayComplexUserExpressions();
     timeoutList.setTimeout(function () {
@@ -446,6 +443,68 @@ Calc.execute = function() {
     }, stepSpeed);
   }
 };
+
+function isPreAnimationFailure(testResult) {
+  return testResult === TestResults.QUESTION_MARKS_IN_NUMBER_FIELD ||
+    testResult === TestResults.EMPTY_FUNCTIONAL_BLOCK ||
+    testResult === TestResults.EXTRA_TOP_BLOCKS_FAIL;
+}
+
+/**
+ * Fill appState with the results of program execution.
+ */
+function generateResults() {
+  appState.message = undefined;
+
+  // Check for pre-execution errors
+  if (studioApp.hasExtraTopBlocks()) {
+    appState.result = ResultType.FAILURE;
+    appState.testResults = TestResults.EXTRA_TOP_BLOCKS_FAIL;
+    return;
+  }
+
+  if (studioApp.hasUnfilledBlock()) {
+    appState.result = ResultType.FAILURE;
+    appState.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
+
+    // Gate message on whether or not it's the compute block that's empty
+    var compute = _.find(Blockly.mainBlockSpace.getTopBlocks(), function (item) {
+      return item.type === 'functional_compute';
+    });
+    if (compute && !compute.getInputTargetBlock('ARG1')) {
+      appState.message = calcMsg.emptyComputeBlock();
+    } else {
+      appState.message = calcMsg.emptyFunctionalBlock();
+    }
+    return;
+  }
+
+  if (studioApp.hasQuestionMarksInNumberField()) {
+    appState.result = ResultType.FAILURE;
+    appState.testResults = TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
+    return;
+  }
+
+  appState.userSet = new EquationSet(Blockly.mainBlockSpace.getTopBlocks());
+  appState.failedInput = null;
+
+  if (level.freePlay || level.edit_blocks) {
+    appState.result = ResultType.SUCCESS;
+    appState.testResults = TestResults.FREE_PLAY;
+  } else {
+    var outcome = Calc.evaluateResults_(appState.targetSet, appState.userSet);
+    appState.result = outcome.result;
+    appState.testResults = outcome.testResults;
+    appState.message = outcome.message;
+    appState.failedInput = outcome.failedInput;
+  }
+
+  // Override default message for LEVEL_INCOMPLETE_FAIL
+  if (appState.testResults === TestResults.LEVEL_INCOMPLETE_FAIL &&
+      !appState.message) {
+    appState.message = calcMsg.levelIncompleteError();
+  }
+}
 
 /**
  * If we have any functions or variables in our expression set, we don't support
@@ -478,23 +537,19 @@ function displayComplexUserExpressions () {
 
   // Now display our compute equation and the result of evaluating it
   var computeType = computeEquation && computeEquation.expression.getType();
-  if (computeType === ExpressionNode.ValueType.FUNCTION_CALL ||
-      computeType === ExpressionNode.ValueType.VARIABLE) {
-    var targetEquation = appState.targetSet.computeEquation();
+  var targetEquation = appState.targetSet.computeEquation();
 
-    // We're either a variable or a function call. Generate a tokenList (since
-    // we could actually be different than the goal)
-    tokenList = getTokenList(computeEquation, targetEquation);
+  // We're either a variable or a function call. Generate a tokenList (since
+  // we could actually be different than the goal)
+  tokenList = getTokenList(computeEquation, targetEquation);
 
-    result = appState.userSet.evaluate().toString();
-    var expectedResult = appState.targetSet.computeEquation() === null ?
-      result : appState.targetSet.evaluate().toString();
+  result = appState.userSet.evaluate().toString();
+  var expectedResult = appState.targetSet.computeEquation() === null ?
+    result : appState.targetSet.evaluate().toString();
 
-    tokenList = tokenList.concat(getTokenList(' = '),
-      getTokenList(result, expectedResult));
-  } else {
-    tokenList = getTokenList(computeEquation, appState.targetSet.computeEquation());
-  }
+  // add a tokenList diffing our results
+  tokenList = tokenList.concat(getTokenList(' = '),
+    getTokenList(result, expectedResult));
 
   displayEquation('userExpression', null, tokenList, nextRow++, 'errorToken');
 
@@ -522,15 +577,16 @@ function stopAnimatingAndDisplayFeedback() {
  * collapsing the next node in our tree. If that node failed expectations, we
  * will stop further evaluation.
  */
-Calc.step = function () {
-  if (animateUserExpression(appState.currentAnimationDepth)) {
-    stopAnimatingAndDisplayFeedback();
-    return;
-  }
-  appState.currentAnimationDepth++;
-
+Calc.step = function (animationDepth) {
+  var isFinal = animateUserExpression(animationDepth);
   timeoutList.setTimeout(function () {
-    Calc.step();
+    if (isFinal) {
+      // one deeper to remove highlighting
+      animateUserExpression(animationDepth + 1);
+      stopAnimatingAndDisplayFeedback();
+    } else {
+      Calc.step(animationDepth + 1);
+    }
   }, stepSpeed);
 };
 
@@ -568,27 +624,33 @@ function animateUserExpression (maxNumSteps) {
 
   var current = userExpression.clone();
   var previousExpression = current;
-  var currentDepth = 0;
+  var numCollapses = 0;
+  // Each step draws a single line
   for (var currentStep = 0; currentStep <= maxNumSteps && !finished; currentStep++) {
     var tokenList;
-    if (currentDepth === maxNumSteps) {
+    if (numCollapses === maxNumSteps) {
+      // This is the last line in the current animation, highlight what has
+      // changed since the last line
       tokenList = current.getTokenListDiff(previousExpression);
-    } else if (currentDepth + 1 === maxNumSteps) {
+    } else if (numCollapses + 1 === maxNumSteps) {
+      // This is the second to last line. Highlight the block being collapsed,
+      // and the deepest operation (that will be collapsed on the next line)
       var deepest = current.getDeepestOperation();
       if (deepest) {
         studioApp.highlight('block_id_' + deepest.blockId);
       }
       tokenList = current.getTokenList(true);
     } else {
+      // Don't highlight anything
       tokenList = current.getTokenList(false);
     }
-    displayEquation('userExpression', null, tokenList, currentDepth, 'markedToken');
+    displayEquation('userExpression', null, tokenList, numCollapses, 'markedToken');
     previousExpression = current.clone();
     if (current.collapse()) {
-      currentDepth++;
-    } else if (currentStep - currentDepth > 2) {
-      // we want to go one more step after the last collapse so that we show
-      // our last line without highlighting it
+      numCollapses++;
+    } else if (currentStep === numCollapses + 1) {
+      // go one past our num collapses so that the last line gets highlighted
+      // on its own
       finished = true;
     }
   }
@@ -678,7 +740,7 @@ function displayFeedback() {
   level.extraTopBlocks = calcMsg.extraTopBlocks();
   var appDiv = null;
   // Show svg in feedback dialog
-  if (appState.testResults !== TestResults.QUESTION_MARKS_IN_NUMBER_FIELD) {
+  if (!isPreAnimationFailure(appState.testResults)) {
     appDiv = cloneNodeWithoutIds('svgCalc');
   }
   var options = {
@@ -714,11 +776,12 @@ function onReportComplete(response) {
 /* start-test-block */
 // export private function(s) to expose to unit testing
 Calc.__testonly__ = {
-  displayGoal: displayGoal
+  displayGoal: displayGoal,
+  appState: appState
 };
 /* end-test-block */
 
-},{"../../locale/current/calc":184,"../../locale/current/common":185,"../StudioApp":2,"../block_utils":17,"../dom":44,"../skins":140,"../templates/page.html":160,"../timeoutList":166,"../utils":180,"./api":28,"./controls.html":31,"./equationSet":32,"./expressionNode":33,"./inputIterator":34,"./levels":35,"./visualization.html":37}],37:[function(require,module,exports){
+},{"../../locale/current/calc":189,"../../locale/current/common":190,"../StudioApp":4,"../block_utils":19,"../dom":47,"../skins":144,"../templates/page.html":165,"../timeoutList":171,"../utils":185,"./api":30,"./controls.html":33,"./equationSet":34,"./expressionNode":35,"./inputIterator":36,"./levels":37,"./visualization.html":39}],39:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -738,7 +801,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/calc":184,"ejs":201}],35:[function(require,module,exports){
+},{"../../locale/current/calc":189,"ejs":206}],37:[function(require,module,exports){
 var msg = require('../../locale/current/calc');
 var blockUtils = require('../block_utils');
 
@@ -777,7 +840,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/current/calc":184,"../block_utils":17}],34:[function(require,module,exports){
+},{"../../locale/current/calc":189,"../block_utils":19}],36:[function(require,module,exports){
 /**
  * Given a set of values (i.e. [1,2,3], and a number of parameters, generates
  * all possible combinations of values.
@@ -831,7 +894,7 @@ InputIterator.prototype.remaining = function () {
   return this.remaining_;
 };
 
-},{}],32:[function(require,module,exports){
+},{}],34:[function(require,module,exports){
 var _ = require('../utils').getLodash();
 var ExpressionNode = require('./expressionNode');
 
@@ -1137,7 +1200,7 @@ EquationSet.__testonly__ = {
 };
 /* end-test-block */
 
-},{"../utils":180,"./expressionNode":33}],31:[function(require,module,exports){
+},{"../utils":185,"./expressionNode":35}],33:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1160,7 +1223,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/calc":184,"../../locale/current/common":185,"ejs":201}],29:[function(require,module,exports){
+},{"../../locale/current/calc":189,"../../locale/current/common":190,"ejs":206}],31:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -1191,9 +1254,6 @@ var commonMsg = require('../../locale/current/common');
 
 var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
 
-var functionalBlockUtils = require('../functionalBlockUtils');
-var initTitledFunctionalBlock = functionalBlockUtils.initTitledFunctionalBlock;
-
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function(blockly, blockInstallOptions) {
   var skin = blockInstallOptions.skin;
@@ -1212,36 +1272,12 @@ exports.install = function(blockly, blockInstallOptions) {
 
 };
 
-function initFunctionalBlock(block, title, numArgs) {
-  block.setHSV(184, 1.00, 0.74);
-  block.setFunctional(true, {
-    headerHeight: 30,
-  });
-
-  var options = {
-    fixedSize: { height: 35 },
-    fontSize: 25 // in pixels
-  };
-
-  block.appendDummyInput()
-      .appendTitle(new Blockly.FieldLabel(title, options))
-      .setAlign(Blockly.ALIGN_CENTRE);
-  for (var i = 1; i <= numArgs; i++) {
-    block.appendFunctionalInput('ARG' + i)
-         .setInline(i > 1)
-         .setHSV(184, 1.00, 0.74)
-         .setCheck('Number');
-  }
-
-  block.setFunctionalOutput(true, 'Number');
-}
-
 function installCompute(blockly, generator, gensym) {
   blockly.Blocks.functional_compute = {
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, msg.compute(), 'none', [
-        { name: 'ARG1', type: 'Number' }
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, msg.compute(), blockly.BlockValueType.NONE, [
+        { name: 'ARG1', type: blockly.BlockValueType.NUMBER }
       ]);
     }
   };
@@ -1252,9 +1288,9 @@ function installCompute(blockly, generator, gensym) {
   };
 }
 
-},{"../../locale/current/calc":184,"../../locale/current/common":185,"../functionalBlockUtils":74,"../sharedFunctionalBlocks":139}],184:[function(require,module,exports){
+},{"../../locale/current/calc":189,"../../locale/current/common":190,"../sharedFunctionalBlocks":143}],189:[function(require,module,exports){
 /*calc*/ module.exports = window.blockly.appLocale;
-},{}],28:[function(require,module,exports){
+},{}],30:[function(require,module,exports){
 var ExpressionNode = require('./expressionNode');
 
 exports.compute = function (expr, blockId) {
@@ -1266,7 +1302,7 @@ exports.expression = function (operator, arg1, arg2, blockId) {
   return new ExpressionNode(operator, [arg1, arg2], blockId);
 };
 
-},{"./expressionNode":33}],33:[function(require,module,exports){
+},{"./expressionNode":35}],35:[function(require,module,exports){
 var utils = require('../utils');
 var _ = utils.getLodash();
 
@@ -1682,4 +1718,4 @@ var Token = function (str, marked) {
 };
 ExpressionNode.Token = Token;
 
-},{"../utils":180}]},{},[36]);
+},{"../utils":185}]},{},[38]);

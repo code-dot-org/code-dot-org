@@ -379,6 +379,13 @@
           The Design Recipe: Design oppskrifta
         K5PD:
           Introduction to PD: Introduction to PD
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and
+            3
         netsim:
           title: Internet Simulator
           description_short: ''
@@ -389,3 +396,32 @@
           description_short: Create a story or make a game with Infinity Play Lab!!
           description: Create a story or make a game with Infinity Play Lab!
           Infinity: Uendelig
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: Barneskuleintroduksjon til informatikkurs (15-25 timar)
+          description: Denne 20-timers kurset introduserer kjernebegreper innen informatikk
+            og programmering. Kurset er utviklet for bruk i 5.klasse og oppover, men
+            det er morsomt å lære for alle aldersgrupper.
+          Introduction to Computer Science: Introduksjon til informatikk
+          The Maze: Labyrinten
+          Computational Thinking: Programmeringstenkning
+          Graph Paper Programming: Millimeterpapirprogrammering
+          The Artist: Kunstneren
+          Algorithms: Algoritmer
+          The Artist 2: Kunstneren 2
+          Functions: Funksjoner
+          The Farmer: Bonden
+          Conditionals: Betingelser
+          The Artist 3: Kunstneren 3
+          Song Writing: Låtskriving
+          The Farmer 2: Bonden 2
+          Abstraction: Abstraksjon
+          The Artist 4: Kunstneren 4
+          Relay Programming: Relé-programmering
+          The Farmer 3: Bonden 3
+          The Internet: Internett
+          The Artist 5: Kunstneren 5
+          Wrap-up: Oppsummering

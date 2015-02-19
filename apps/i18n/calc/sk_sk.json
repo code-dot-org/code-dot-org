@@ -1,9 +1,13 @@
 {
   "compute": "vypočítať",
+  "emptyComputeBlock": "You must attach a block to the \"compute\" block.",
+  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "equivalentExpression": "Skús zmeniť poradie argumentov a tak získať úplne rovnaký výraz.",
   "extraTopBlocks": "Máš nepripojené bloky. Nechcel si ich pripojiť na blok \"vypočítať\"?",
   "failedInput": "Your function does not return the right result for all values.",
   "goal": "Cieľ:",
+  "levelIncompleteError": "Your expression does not match the goal.",
   "reinfFeedbackMsg": "Tu je tvoj príbeh! Pokračuj v práci, alebo choď na ďalšiu úlohu!",
-  "yourExpression": "Tvoj výraz:"
+  "yourExpression": "Tvoj výraz:",
+  "wrongInput": "You are calling your function with the wrong value."
 }
