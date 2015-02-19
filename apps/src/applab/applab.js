@@ -1270,6 +1270,7 @@ function getTurtleContext() {
     turtleImage.src = studioApp.assetUrl('media/applab/turtle.png');
     turtleImage.id = 'turtleImage';
     updateTurtleImage(turtleImage);
+    turtleImage.ondragstart = function () { return false; };
     divApplab.appendChild(turtleImage);
   }
 
@@ -1424,9 +1425,17 @@ Applab.dot = function (opts) {
   var ctx = getTurtleContext();
   if (ctx) {
     ctx.beginPath();
+    if (Applab.turtle.penUpColor) {
+      // If the pen is up and the color has been changed, use that color:
+      ctx.strokeStyle = Applab.turtle.penUpColor;
+    }
     ctx.arc(Applab.turtle.x, Applab.turtle.y, opts.radius, 0, 2 * Math.PI);
     ctx.fill();
     ctx.stroke();
+    if (Applab.turtle.penUpColor) {
+      // If the pen is up, reset strokeStyle back to transparent:
+      ctx.strokeStyle = "rgba(255, 255, 255, 0)";
+    }
     return true;
   }
 
@@ -1444,7 +1453,6 @@ Applab.penDown = function (opts) {
   var ctx = getTurtleContext();
   if (ctx && Applab.turtle.penUpColor) {
     ctx.strokeStyle = Applab.turtle.penUpColor;
-    ctx.fillStyle = Applab.turtle.penUpColor;
     delete Applab.turtle.penUpColor;
   }
 };
@@ -1464,8 +1472,8 @@ Applab.penColor = function (opts) {
       Applab.turtle.penUpColor = opts.color;
     } else {
       ctx.strokeStyle = opts.color;
-      ctx.fillStyle = opts.color;
     }
+    ctx.fillStyle = opts.color;
   }
 };
 
@@ -1875,6 +1883,34 @@ Applab.setPosition = function (opts) {
     return true;
   }
   return false;
+};
+
+Applab.getXPosition = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  var div = document.getElementById(opts.elementId);
+  if (divApplab.contains(div)) {
+    var x = div.offsetLeft;
+    while (div !== divApplab) {
+      div = div.offsetParent;
+      x += div.offsetLeft;
+    }
+    return x;
+  }
+  return 0;
+};
+
+Applab.getYPosition = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  var div = document.getElementById(opts.elementId);
+  if (divApplab.contains(div)) {
+    var y = div.offsetTop;
+    while (div !== divApplab) {
+      div = div.offsetParent;
+      y += div.offsetTop;
+    }
+    return y;
+  }
+  return 0;
 };
 
 Applab.onEventFired = function (opts, e) {

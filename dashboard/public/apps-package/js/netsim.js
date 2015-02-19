@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({136:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({137:[function(require,module,exports){
 var appMain = require('../appMain');
 var studioApp = require('../StudioApp').singleton;
 var NetSim = require('./netsim');
@@ -15,7 +15,7 @@ window.netsimMain = function(options) {
   appMain(netSim, levels, options);
 };
 
-},{"../StudioApp":2,"../appMain":3,"./levels":135,"./netsim":137,"./skins":140}],140:[function(require,module,exports){
+},{"../StudioApp":4,"../appMain":5,"./levels":136,"./netsim":138,"./skins":141}],141:[function(require,module,exports){
 var skinBase = require('../skins');
 
 exports.load = function (assetUrl, id) {
@@ -23,7 +23,7 @@ exports.load = function (assetUrl, id) {
   return skin;
 };
 
-},{"../skins":143}],137:[function(require,module,exports){
+},{"../skins":144}],138:[function(require,module,exports){
 /**
  * @fileoverview Internet Simulator app for Code.org.
  */
@@ -50,7 +50,7 @@ var NetSimLobby = require('./NetSimLobby');
 var NetSimRouterPanel = require('./NetSimRouterPanel');
 var NetSimSendWidget = require('./NetSimSendWidget');
 var NetSimLogWidget = require('./NetSimLogWidget');
-var RunLoop = require('./RunLoop');
+var RunLoop = require('../RunLoop');
 
 /**
  * The top-level Internet Simulator controller.
@@ -247,7 +247,7 @@ NetSim.prototype.onResizeOverride_ = function() {
   div.style.width = parentWidth + 'px';
 };
 
-},{"./DashboardUser":111,"./NetSimConnection":113,"./NetSimLobby":117,"./NetSimLogWidget":120,"./NetSimRouterPanel":126,"./NetSimSendWidget":128,"./RunLoop":133,"./controls.html":134,"./page.html":139}],139:[function(require,module,exports){
+},{"../RunLoop":3,"./DashboardUser":113,"./NetSimConnection":115,"./NetSimLobby":119,"./NetSimLogWidget":122,"./NetSimRouterPanel":128,"./NetSimSendWidget":130,"./controls.html":135,"./page.html":140}],140:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -271,7 +271,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":189,"../../locale/current/netsim":194,"ejs":205}],135:[function(require,module,exports){
+},{"../../locale/current/common":190,"../../locale/current/netsim":195,"ejs":206}],136:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/netsim');
@@ -285,9 +285,9 @@ levels.netsim_demo = {
   'freePlay': true
 };
 
-},{"../../locale/current/netsim":194}],194:[function(require,module,exports){
+},{"../../locale/current/netsim":195}],195:[function(require,module,exports){
 /*netsim*/ module.exports = window.blockly.appLocale;
-},{}],134:[function(require,module,exports){
+},{}],135:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -307,147 +307,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":205}],133:[function(require,module,exports){
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
-
- maxlen: 90,
- maxparams: 3,
- maxstatements: 200
- */
-/* global window */
-'use strict';
-
-var ObservableEvent = require('./ObservableEvent');
-
-// It is more accurate to use performance.now(), but we use Date.now()
-// for compatibility with Safari and older browsers. This should only cause
-// a small error in the deltaTime for the initial frame anyway.
-// See Also:
-// * https://developer.mozilla.org/en-US/docs/Web/API/window.requestAnimationFrame
-// * https://developer.mozilla.org/en-US/docs/Web/API/Performance.now
-var windowNow = (window.performance && window.performance.now) ?
-    window.performance.now.bind(window.performance) : Date.now;
-
-/**
- * Ticks per second on older browsers where we can't lock to the repaint event.
- * @type {number}
- * @const
- */
-var FALLBACK_FPS = 30;
-
-/**
- * Precalculated milliseconds per tick for fallback case
- * @type {number}
- * @const
- */
-var FALLBACK_MS_PER_TICK = (1000 / FALLBACK_FPS);
-
-
-
-/**
- * Simple run-loop manager
- * @constructor
- */
-var RunLoop = module.exports = function () {
-
-  /**
-   * Whether the run-loop will continue running.
-   * @type {boolean}
-   */
-  this.enabled = false;
-
-  /**
-   * Tracks current time and delta time for the loop.
-   * Passed to observers when events fire.
-   * @type {RunClock}
-   */
-  this.clock = new RunLoop.Clock();
-
-  /**
-   * Method that gets called over and over.
-   * @type {Function}
-   * @private
-   */
-  this.tick_ = this.buildTickMethod_();
-
-  /**  @type {ObservableEvent} */
-  this.tick = new ObservableEvent();
-
-  /** @type {ObservableEvent} */
-  this.render = new ObservableEvent();
-};
-
-/**
- * Simple tracking for time values
- * @constructor
- */
-RunLoop.Clock = function () {
-  /**
-   * Time the current/most recent tick started, in ms.
-   * Depending on browser this might be epoch time or time since load -
-   *  therefore, don't use for absolute time!
-   * @type {number}
-   */
-  this.time = windowNow();
-
-  /**
-   * Time in ms between the latest/current tick and the previous tick.
-   * Precision dependent on browser capabilities.
-   * @type {number}
-   */
-  this.deltaTime = 0;
-};
-
-RunLoop.prototype.buildTickMethod_ = function () {
-  var tickMethod;
-  var self = this;
-  if (window.requestAnimationFrame) {
-    tickMethod = function (hiResTimeStamp) {
-      if (self.enabled) {
-        self.clock.deltaTime = hiResTimeStamp - self.clock.time;
-        self.clock.time = hiResTimeStamp;
-        self.tick.notifyObservers(self.clock);
-        self.render.notifyObservers(self.clock);
-        requestAnimationFrame(tickMethod);
-      }
-    };
-  } else {
-    tickMethod = function () {
-      if (self.enabled) {
-        var curTime = windowNow();
-        self.clock.deltaTime = curTime - self.clock.time;
-        self.clock.time = curTime;
-        self.tick.notifyObservers(self.clock);
-        self.render.notifyObservers(self.clock);
-        setTimeout(tickMethod, FALLBACK_MS_PER_TICK - self.clock.deltaTime);
-      }
-    };
-  }
-  return tickMethod;
-};
-
-/** Start the run loop (runs immediately) */
-RunLoop.prototype.begin = function () {
-  this.enabled = true;
-  this.clock.time = windowNow();
-  this.tick_(this.clock.time);
-};
-
-/**
- * Stop the run loop
- * If in the middle of a tick, will finish the current tick.
- * If called by an event between ticks, will prevent the next tick from firing.
- */
-RunLoop.prototype.end = function () {
-  this.enabled = false;
-};
-
-},{"./ObservableEvent":132}],128:[function(require,module,exports){
+},{"ejs":206}],130:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -537,7 +397,7 @@ NetSimSendWidget.prototype.onSendButtonPress_ = function () {
   });
 };
 
-},{"../dom":44,"./NetSimSendWidget.html":127}],127:[function(require,module,exports){
+},{"../dom":47,"./NetSimSendWidget.html":129}],129:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -557,7 +417,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":205}],126:[function(require,module,exports){
+},{"ejs":206}],128:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -760,7 +620,7 @@ NetSimRouterPanel.prototype.getDnsMode_ = function () {
   }
   return DnsMode.NONE;
 };
-},{"./NetSimLogger":121,"./NetSimRouterNode":124,"./NetSimRouterPanel.html":125}],125:[function(require,module,exports){
+},{"./NetSimLogger":123,"./NetSimRouterNode":126,"./NetSimRouterPanel.html":127}],127:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -780,7 +640,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":205}],120:[function(require,module,exports){
+},{"ejs":206}],122:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -867,7 +727,7 @@ NetSimLogWidget.prototype.log = function (message) {
   }
 };
 
-},{"../dom":44,"./NetSimLogWidget.html":119}],119:[function(require,module,exports){
+},{"../dom":47,"./NetSimLogWidget.html":121}],121:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -887,7 +747,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":205}],117:[function(require,module,exports){
+},{"ejs":206}],119:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -1360,7 +1220,7 @@ NetSimLobby.prototype.getUserSections_ = function (callback) {
   });
 };
 
-},{"../dom":44,"../utils":184,"./NetSimClientNode":112,"./NetSimLobby.html":116,"./NetSimLogger":121,"./NetSimRouterNode":124,"./netsimUtils":138}],138:[function(require,module,exports){
+},{"../dom":47,"../utils":185,"./NetSimClientNode":114,"./NetSimLobby.html":118,"./NetSimLogger":123,"./NetSimRouterNode":126,"./netsimUtils":139}],139:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -1397,7 +1257,7 @@ module.exports.nodesFromRows = function (shard, rows) {
         throw new Error("Unable to map row to node.");
       });
 };
-},{"./NetSimClientNode":112,"./NetSimRouterNode":124}],116:[function(require,module,exports){
+},{"./NetSimClientNode":114,"./NetSimRouterNode":126}],118:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1417,7 +1277,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":205}],113:[function(require,module,exports){
+},{"ejs":206}],115:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -1435,8 +1295,9 @@ var NetSimLogger = require('./NetSimLogger');
 var NetSimClientNode = require('./NetSimClientNode');
 var NetSimRouterNode = require('./NetSimRouterNode');
 var NetSimLocalClientNode = require('./NetSimLocalClientNode');
-var ObservableEvent = require('./ObservableEvent');
+var ObservableEvent = require('../ObservableEvent');
 var NetSimShard = require('./NetSimShard');
+var NetSimShardCleaner = require('./NetSimShardCleaner');
 
 var logger = new NetSimLogger(NetSimLogger.LogLevel.VERBOSE);
 
@@ -1478,6 +1339,13 @@ var NetSimConnection = module.exports = function (sentLog, receivedLog) {
    * @private
    */
   this.shard_ = null;
+
+  /**
+   *
+   * @type {NetSimShardCleaner}
+   * @private
+   */
+  this.shardCleaner_ = null;
 
   /**
    * The local client's node representation within the shard.
@@ -1522,6 +1390,7 @@ NetSimConnection.prototype.tick = function (clock) {
   if (this.myNode) {
     this.myNode.tick(clock);
     this.shard_.tick(clock);
+    this.shardCleaner_.tick(clock);
   }
 };
 
@@ -1554,6 +1423,7 @@ NetSimConnection.prototype.connectToShard = function (shardID, displayName) {
   }
 
   this.shard_ = new NetSimShard(shardID);
+  this.shardCleaner_ = new NetSimShardCleaner(this.shard_);
   this.createMyClientNode_(displayName);
 };
 
@@ -1712,7 +1582,572 @@ NetSimConnection.prototype.disconnectFromRouter = function () {
     self.statusChanges.notifyObservers();
   });
 };
-},{"./NetSimClientNode":112,"./NetSimLocalClientNode":118,"./NetSimLogger":121,"./NetSimRouterNode":124,"./NetSimShard":129,"./ObservableEvent":132}],129:[function(require,module,exports){
+},{"../ObservableEvent":1,"./NetSimClientNode":114,"./NetSimLocalClientNode":120,"./NetSimLogger":123,"./NetSimRouterNode":126,"./NetSimShard":131,"./NetSimShardCleaner":132}],132:[function(require,module,exports){
+/**
+ * Copyright 2015 Code.org
+ * http://code.org/
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+
+ maxlen: 90,
+ maxparams: 3,
+ maxstatements: 200
+ */
+'use strict';
+
+var utils = require('../utils');
+var commands = require('../commands');
+var Command = commands.Command;
+var CommandSequence = commands.CommandSequence;
+var NetSimEntity = require('./NetSimEntity');
+var NetSimHeartbeat = require('./NetSimHeartbeat');
+var NetSimNode = require('./NetSimNode');
+var NetSimWire = require('./NetSimWire');
+var NetSimMessage = require('./NetSimMessage');
+var NetSimLogger = require('./NetSimLogger');
+
+var logger = NetSimLogger.getSingleton();
+
+/**
+ * How often a cleaning job should be kicked off.
+ * @type {number}
+ */
+var CLEANING_RETRY_INTERVAL_MS = 60000;
+var CLEANING_SUCCESS_INTERVAL_MS = 300000;
+
+/**
+ * How long a cleaning lock (heartbeat) must be untouched before can be
+ * ignored and cleaned up by another client.
+ * @type {number}
+ */
+var CLEANING_HEARTBEAT_TIMEOUT = 15000;
+
+/**
+ * Special heartbeat type that acts as a cleaning lock across the shard
+ * for the NetSimShardCleaner module.
+ *
+ * @param {!NetSimShard} shard
+ * @param {*} row
+ * @constructor
+ * @augments NetSimHeartbeat
+ */
+var CleaningHeartbeat = function (shard, row) {
+  row = row !== undefined ? row : {};
+  NetSimHeartbeat.call(this, shard, row);
+
+  /**
+   * @type {number}
+   * @private
+   * @override
+   */
+  this.nodeID_ = 0;
+};
+CleaningHeartbeat.inherits(NetSimHeartbeat);
+
+/**
+ * Static creation method for a CleaningHeartbeat.
+ * @param {!NetSimShard} shard
+ * @param {!function} onComplete - Callback that is passed the new
+ *        CleaningHeartbeat object.
+ */
+CleaningHeartbeat.create = function (shard, onComplete) {
+  NetSimEntity.create(CleaningHeartbeat, shard, onComplete);
+};
+
+/**
+ * Static getter for all non-expired cleaning locks on the shard.
+ * @param {!NetSimShard} shard
+ * @param {!function} onComplete - callback that receives an array of the non-
+ *        expired cleaning locks.
+ */
+CleaningHeartbeat.getAllCurrent = function (shard, onComplete) {
+  shard.heartbeatTable.readAll(function (rows) {
+    var heartbeats = rows
+        .filter(function (row) {
+          return row.cleaner === true &&
+              Date.now() - row.time < CLEANING_HEARTBEAT_TIMEOUT;
+        })
+        .map(function (row) {
+          return new CleaningHeartbeat(shard, row);
+        });
+    onComplete(heartbeats);
+  });
+};
+
+/**
+ * CleaningHeartbeat row has an extra field to indicate its special type.
+ * @returns {*}
+ * @private
+ * @override
+ */
+CleaningHeartbeat.prototype.buildRow_ = function () {
+  return utils.extend(
+      CleaningHeartbeat.superPrototype.buildRow_.call(this),
+      { cleaner: true }
+  );
+};
+
+/**
+ * Special subsystem that performs periodic cleanup on the shard tables.
+ *
+ * Every once in a while, a client will invoke the cleaning routine, which
+ * begins by attempting to get a cleaning lock on the shard.  If lock is
+ * obtained we can be sure that no other client is trying to clean the shard
+ * right now, and we proceed to clean the tables of expired rows.
+ *
+ * @param {!NetSimShard} shard
+ * @constructor
+ */
+var NetSimShardCleaner = module.exports = function (shard) {
+
+  /**
+   * Shard we intend to keep clean.
+   * @type {NetSimShard}
+   * @private
+   */
+  this.shard_ = shard;
+
+  /**
+   * Local timestamp (milliseconds) of when we next intend to
+   * kick off a cleaning routine.
+   * @type {number}
+   * @private
+   */
+  this.nextAttemptTime_ = Date.now();
+
+  /**
+   * A special heartbeat that acts as our cleaning lock on the shard
+   * and prevents other clients from cleaning at the same time.
+   * @type {CleaningHeartbeat}
+   * @private
+   */
+  this.heartbeat_ = null;
+};
+
+/**
+ * Check whether enough time has passed since our last cleaning
+ * attempt, and if so try to start a cleaning routine.
+ * @param {RunLoop.Clock} clock
+ */
+NetSimShardCleaner.prototype.tick = function (clock) {
+  if (Date.now() >= this.nextAttemptTime_) {
+    this.nextAttemptTime_ = Date.now() + CLEANING_RETRY_INTERVAL_MS;
+    this.cleanShard();
+  }
+
+  if (this.heartbeat_) {
+    this.heartbeat_.tick(clock);
+  }
+
+  if (this.steps_){
+    this.steps_.tick(clock);
+    if (this.steps_.isFinished()){
+      this.steps_ = undefined;
+    }
+  }
+};
+
+/**
+ * Attempt to begin a cleaning routine.
+ */
+NetSimShardCleaner.prototype.cleanShard = function () {
+  this.getCleaningLock(function (isLockAcquired) {
+    if (!isLockAcquired) {
+      return;
+    }
+
+    this.steps_ = new CommandSequence([
+      new CacheTable(this, 'heartbeat', this.shard_.heartbeatTable),
+      new CleanHeartbeats(this),
+
+      new CacheTable(this, 'heartbeat', this.shard_.heartbeatTable),
+      new CacheTable(this, 'node', this.shard_.nodeTable),
+      new CleanNodes(this),
+
+      new CacheTable(this, 'node', this.shard_.nodeTable),
+      new CacheTable(this, 'wire', this.shard_.wireTable),
+      new CleanWires(this),
+
+      new CacheTable(this, 'message', this.shard_.messageTable),
+      new CleanMessages(this),
+
+      new ReleaseCleaningLock(this)
+    ]);
+    this.steps_.begin();
+  }.bind(this));
+};
+
+/**
+ * Whether this cleaner currently has the only permission to clean
+ * shard tables.
+ * @returns {boolean}
+ */
+NetSimShardCleaner.prototype.hasCleaningLock = function () {
+  return this.heartbeat_ !== null;
+};
+
+/**
+ * Attempt to acquire a cleaning lock by creating a CleaningHeartbeat
+ * of our own, that does not collide with any existing CleaningHeartbeats.
+ * @param {!function} onComplete - called when operation completes, with
+ *        boolean "success" argument.
+ */
+NetSimShardCleaner.prototype.getCleaningLock = function (onComplete) {
+  CleaningHeartbeat.create(this.shard_, function (heartbeat) {
+    if (heartbeat === null) {
+      onComplete(false);
+      return;
+    }
+
+    // We made a heartbeat - now check to make sure there wasn't already
+    // another one.
+    CleaningHeartbeat.getAllCurrent(this.shard_, function (heartbeats) {
+      if (heartbeats.length > 1) {
+        // Someone else is already cleaning, back out and try again later.
+        logger.info("Failed to acquire cleaning lock");
+        heartbeat.destroy(function () {
+          onComplete(false);
+        });
+        return;
+      }
+
+      // Success, we have cleaning lock.
+      this.heartbeat_ = heartbeat;
+      logger.info("Cleaning lock acquired");
+      onComplete(true);
+    }.bind(this));
+  }.bind(this));
+};
+
+/**
+ * Remove and destroy this cleaner's CleaningHeartbeat, giving another
+ * client the chance to acquire a lock.
+ * @param {!function} onComplete - called when operation completes, with
+ *        boolean "success" argument.
+ */
+NetSimShardCleaner.prototype.releaseCleaningLock = function (onComplete) {
+  this.heartbeat_.destroy(function (success) {
+    this.heartbeat_ = null;
+    this.nextAttemptTime_ = Date.now() + CLEANING_SUCCESS_INTERVAL_MS;
+    logger.info("Cleaning lock released");
+    onComplete(success);
+  }.bind(this));
+};
+
+/**
+ * Sets key-value pair on cleaner's table cache.
+ * @param {!string} key - usually table's name.
+ * @param {!Array} rows - usually table data.
+ */
+NetSimShardCleaner.prototype.cacheTable = function (key, rows) {
+  if (this.tableCache === undefined) {
+    this.tableCache = {};
+  }
+  this.tableCache[key] = rows;
+};
+
+/**
+ * Look up value for key in cleaner's table cache.
+ * @param {!string} key - usually table's name.
+ * @returns {Array} table's cached data.
+ */
+NetSimShardCleaner.prototype.getTableCache = function (key) {
+  return this.tableCache[key];
+};
+
+/**
+ * Get shard that cleaner is operating on.
+ * @returns {NetSimShard}
+ */
+NetSimShardCleaner.prototype.getShard = function () {
+  return this.shard_;
+};
+
+/**
+ * Command that asynchronously fetches all rows for the given table
+ * and stores them in the cleaner's tableCache for the given key.
+ *
+ * @param {!NetSimShardCleaner} cleaner
+ * @param {!string} key
+ * @param {!NetSimTable} table
+ * @constructor
+ * @augments Command
+ */
+var CacheTable = function (cleaner, key, table) {
+  Command.call(this);
+
+  /**
+   * @type {NetSimShardCleaner}
+   * @private
+   */
+  this.cleaner_ = cleaner;
+
+  /**
+   * @type {string}
+   * @private
+   */
+  this.key_ = key;
+
+  /**
+   * @type {!NetSimTable}
+   * @private
+   */
+  this.table_ = table;
+};
+CacheTable.inherits(Command);
+
+/**
+ * Trigger asynchronous readAll request on table.
+ * @private
+ */
+CacheTable.prototype.onBegin_ = function () {
+  logger.info('Begin CacheTable[' + this.key_ + ']');
+  this.table_.readAll(function (rows) {
+    this.cleaner_.cacheTable(this.key_, rows);
+    this.succeed();
+  }.bind(this));
+};
+
+/**
+ * Command that calls destroy() on the provided entity.
+ *
+ * @param {!NetSimEntity} entity
+ * @constructor
+ * @augments Command
+ */
+var DestroyEntity = function (entity) {
+  Command.call(this);
+
+  /**
+   * @type {!NetSimEntity}
+   * @private
+   */
+  this.entity_ = entity;
+};
+DestroyEntity.inherits(Command);
+
+/**
+ * Call destory() on stored entity.
+ * @private
+ */
+DestroyEntity.prototype.onBegin_ = function () {
+
+  logger.info('Begin DestroyEntity[' + this.entity_.entityID + ']');
+  this.entity_.destroy(function (success) {
+    if (success) {
+      logger.info("Deleted entity");
+      this.succeed();
+    } else {
+      this.fail();
+    }
+  }.bind(this));
+};
+
+/**
+ * Command that tells cleaner to release its cleaning lock.
+ *
+ * @param {!NetSimShardCleaner} cleaner
+ * @constructor
+ * @augments Command
+ */
+var ReleaseCleaningLock = function (cleaner) {
+  Command.call(this);
+
+  /**
+   * @type {!NetSimShardCleaner}
+   * @private
+   */
+  this.cleaner_ = cleaner;
+};
+ReleaseCleaningLock.inherits(Command);
+
+/**
+ * Tell cleaner to release its cleaning lock.
+ * @private
+ */
+ReleaseCleaningLock.prototype.onBegin_ = function () {
+  logger.info('Begin ReleaseCleaningLock');
+  this.cleaner_.releaseCleaningLock(function (success) {
+    if (success) {
+      this.succeed();
+    } else {
+      this.fail();
+    }
+  }.bind(this));
+};
+
+/**
+ * Command that scans cleaner's heartbeat table cache for expired heartbeats,
+ * and deletes them one at a time.
+ *
+ * @param {!NetSimShardCleaner} cleaner
+ * @constructor
+ * @augments CommandSequence
+ */
+var CleanHeartbeats = function (cleaner) {
+  CommandSequence.call(this);
+
+  /**
+   * @type {!NetSimShardCleaner}
+   * @private
+   */
+  this.cleaner_ = cleaner;
+};
+CleanHeartbeats.inherits(CommandSequence);
+
+/**
+ * How old a heartbeat can be without being cleaned up.
+ * @type {number}
+ * @const
+ */
+var HEARTBEAT_TIMEOUT_MS = 30000;
+
+/**
+ * @private
+ * @override
+ */
+CleanHeartbeats.prototype.onBegin_ = function () {
+  logger.info('Begin CleanHeartbeats');
+  var heartbeatRows = this.cleaner_.getTableCache('heartbeat');
+  this.commandList_ = heartbeatRows.filter(function (row) {
+    return Date.now() - row.time > HEARTBEAT_TIMEOUT_MS;
+  }).map(function (row) {
+    return new DestroyEntity(new NetSimHeartbeat(this.cleaner_.getShard(), row));
+  }.bind(this));
+  CommandSequence.prototype.onBegin_.call(this);
+};
+
+/**
+ * Command that scans cleaner's node table cache, and then deletes all
+ * nodes that don't have matching heartbeats in the heartbeat table cache.
+ *
+ * @param {!NetSimShardCleaner} cleaner
+ * @constructor
+ * @augments CommandSequence
+ */
+var CleanNodes = function (cleaner) {
+  CommandSequence.call(this);
+
+  /**
+   * @type {!NetSimShardCleaner}
+   * @private
+   */
+  this.cleaner_ = cleaner;
+};
+CleanNodes.inherits(CommandSequence);
+
+/**
+ * @private
+ * @override
+ */
+CleanNodes.prototype.onBegin_ = function () {
+  logger.info('Begin CleanNodes');
+  var heartbeatRows = this.cleaner_.getTableCache('heartbeat');
+  var nodeRows = this.cleaner_.getTableCache('node');
+  this.commandList_ = nodeRows.filter(function (row) {
+    return heartbeatRows.every(function (heartbeat) {
+      return heartbeat.nodeID !== row.id;
+    });
+  }).map(function (row) {
+    return new DestroyEntity(new NetSimNode(this.cleaner_.getShard(), row));
+  }.bind(this));
+  CommandSequence.prototype.onBegin_.call(this);
+};
+
+/**
+ * Command that scans cleaner's Wires table cache, and deletes any wires
+ * that are associated with nodes that aren't in the node table cache.
+ *
+ * @param {!NetSimShardCleaner} cleaner
+ * @constructor
+ * @augments CommandSequence
+ */
+var CleanWires = function (cleaner) {
+  CommandSequence.call(this);
+
+  /**
+   * @type {!NetSimShardCleaner}
+   * @private
+   */
+  this.cleaner_ = cleaner;
+};
+CleanWires.inherits(CommandSequence);
+
+/**
+ * @private
+ * @override
+ */
+CleanWires.prototype.onBegin_ = function () {
+  logger.info('Begin CleanWires');
+  var nodeRows = this.cleaner_.getTableCache('node');
+  var wireRows = this.cleaner_.getTableCache('wire');
+  this.commandList_ = wireRows.filter(function (wireRow) {
+    return !(nodeRows.some(function (nodeRow) {
+      return nodeRow.id === wireRow.localNodeID;
+    }) && nodeRows.some(function (nodeRow) {
+      return nodeRow.id === wireRow.remoteNodeID;
+    }));
+  }).map(function (row) {
+    return new DestroyEntity(new NetSimWire(this.cleaner_.getShard(), row));
+  }.bind(this));
+  CommandSequence.prototype.onBegin_.call(this);
+};
+
+/**
+ * Command that scans the cleaner's message table cache, and deletes any
+ * messages in transit to nodes that no longer exist in the node table cache.
+ *
+ * @param {!NetSimShardCleaner} cleaner
+ * @constructor
+ * @augments CommandSequence
+ */
+var CleanMessages = function (cleaner) {
+  CommandSequence.call(this);
+
+  /**
+   * @type {!NetSimShardCleaner}
+   * @private
+   */
+  this.cleaner_ = cleaner;
+};
+CleanMessages.inherits(CommandSequence);
+
+/**
+ * @private
+ * @override
+ */
+CleanMessages.prototype.onBegin_ = function () {
+  logger.info('Begin CleanMessages');
+  var nodeRows = this.cleaner_.getTableCache('node');
+  var messageRows = this.cleaner_.getTableCache('message');
+  this.commandList_ = messageRows.filter(function (messageRow) {
+    return nodeRows.every(function (nodeRow) {
+      return nodeRow.id !== messageRow.toNodeID;
+    });
+  }).map(function (row) {
+    return new DestroyEntity(new NetSimMessage(this.cleaner_.getShard(), row));
+  }.bind(this));
+  CommandSequence.prototype.onBegin_.call(this);
+};
+
+},{"../commands":45,"../utils":185,"./NetSimEntity":116,"./NetSimHeartbeat":117,"./NetSimLogger":123,"./NetSimMessage":124,"./NetSimNode":125,"./NetSimWire":134}],131:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -1779,7 +2214,7 @@ NetSimShard.prototype.tick = function (clock) {
   this.wireTable.tick(clock);
   this.messageTable.tick(clock);
 };
-},{"../appsApi":16,"./NetSimTable":130}],130:[function(require,module,exports){
+},{"../appsApi":18,"./NetSimTable":133}],133:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -1794,7 +2229,7 @@ NetSimShard.prototype.tick = function (clock) {
 'use strict';
 
 var _ = require('../utils').getLodash();
-var ObservableEvent = require('./ObservableEvent');
+var ObservableEvent = require('../ObservableEvent');
 
 /**
  * Maximum time (in milliseconds) that tables should wait between full cache
@@ -1945,7 +2380,7 @@ NetSimTable.prototype.tick = function () {
   }
 };
 
-},{"../utils":184,"./ObservableEvent":132}],124:[function(require,module,exports){
+},{"../ObservableEvent":1,"../utils":185}],126:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -1967,7 +2402,7 @@ var NetSimLogger = require('./NetSimLogger');
 var NetSimWire = require('./NetSimWire');
 var NetSimMessage = require('./NetSimMessage');
 var NetSimHeartbeat = require('./NetSimHeartbeat');
-var ObservableEvent = require('./ObservableEvent');
+var ObservableEvent = require('../ObservableEvent');
 
 var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
 
@@ -2531,7 +2966,7 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires) {
       }
   );
 };
-},{"../utils":184,"./NetSimEntity":114,"./NetSimHeartbeat":115,"./NetSimLogger":121,"./NetSimMessage":122,"./NetSimNode":123,"./NetSimWire":131,"./ObservableEvent":132}],118:[function(require,module,exports){
+},{"../ObservableEvent":1,"../utils":185,"./NetSimEntity":116,"./NetSimHeartbeat":117,"./NetSimLogger":123,"./NetSimMessage":124,"./NetSimNode":125,"./NetSimWire":134}],120:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2551,7 +2986,7 @@ var NetSimEntity = require('./NetSimEntity');
 var NetSimMessage = require('./NetSimMessage');
 var NetSimHeartbeat = require('./NetSimHeartbeat');
 var NetSimLogger = require('./NetSimLogger');
-var ObservableEvent = require('./ObservableEvent');
+var ObservableEvent = require('../ObservableEvent');
 
 var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
 
@@ -2908,7 +3343,7 @@ NetSimLocalClientNode.prototype.handleMessage_ = function (message) {
     this.receivedLog_.log(JSON.stringify(message.payload));
   }
 };
-},{"../utils":184,"./NetSimClientNode":112,"./NetSimEntity":114,"./NetSimHeartbeat":115,"./NetSimLogger":121,"./NetSimMessage":122,"./ObservableEvent":132}],122:[function(require,module,exports){
+},{"../ObservableEvent":1,"../utils":185,"./NetSimClientNode":114,"./NetSimEntity":116,"./NetSimHeartbeat":117,"./NetSimLogger":123,"./NetSimMessage":124}],124:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3002,7 +3437,7 @@ NetSimMessage.prototype.buildRow_ = function () {
   };
 };
 
-},{"../utils":184,"./NetSimEntity":114}],121:[function(require,module,exports){
+},{"../utils":185,"./NetSimEntity":116}],123:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3057,7 +3492,7 @@ var NetSimLogger = module.exports = function (outputConsole, verbosity /*=VERBOS
    */
   this.error = function () {};
 
-  this.initializeWithVerbosity_((undefined === verbosity) ?
+  this.setVerbosity((undefined === verbosity) ?
       LogLevel.VERBOSE : verbosity);
 };
 
@@ -3076,11 +3511,27 @@ var LogLevel = {
 NetSimLogger.LogLevel = LogLevel;
 
 /**
+ * Global singleton
+ * @type {NetSimLogger}
+ */
+var singletonInstance;
+
+/**
+ * Static getter/lazy-creator for the global singleton instance.
+ * @returns {NetSimLogger}
+ */
+NetSimLogger.getSingleton = function () {
+  if (singletonInstance === undefined) {
+    singletonInstance = new NetSimLogger(console, LogLevel.VERBOSE);
+  }
+  return singletonInstance;
+};
+
+/**
  * Binds internal function calls according to given verbosity level.
  * @param verbosity
- * @private
  */
-NetSimLogger.prototype.initializeWithVerbosity_ = function (verbosity) {
+NetSimLogger.prototype.setVerbosity = function (verbosity) {
   this.log_ = (this.outputConsole_ && this.outputConsole_.log) ?
       this.outputConsole_.log.bind(this.outputConsole_) : function () {};
 
@@ -3131,7 +3582,7 @@ NetSimLogger.prototype.log = function (message, logLevel /*=INFO*/) {
   }
 };
 
-},{}],115:[function(require,module,exports){
+},{}],117:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3176,7 +3627,7 @@ var NetSimHeartbeat = module.exports = function (shard, row) {
   this.nodeID = row.nodeID;
 
   /** @type {number} unix timestamp (ms) */
-  this.time_ = row.time !== undefined ? row.time : 0;
+  this.time_ = row.time !== undefined ? row.time : Date.now();
 };
 NetSimHeartbeat.inherits(NetSimEntity);
 
@@ -3255,7 +3706,7 @@ NetSimHeartbeat.prototype.tick = function () {
   }
 };
 
-},{"../utils":184,"./NetSimEntity":114}],112:[function(require,module,exports){
+},{"../utils":185,"./NetSimEntity":116}],114:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3305,7 +3756,7 @@ NetSimClientNode.prototype.getStatus = function () {
   return this.status_ ? this.status_ : 'Online';
 };
 
-},{"../utils":184,"./NetSimNode":123}],123:[function(require,module,exports){
+},{"../utils":185,"./NetSimNode":125}],125:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3429,20 +3880,16 @@ NetSimNode.prototype.getStatusDetail = function () {
  * @param {function} [onComplete]
  */
 NetSimNode.prototype.connectToNode = function (otherNode, onComplete) {
-  if (!onComplete) {
-    onComplete = function () {};
-  }
+  onComplete = (onComplete !== undefined) ? onComplete : function () {};
 
   var self = this;
-  NetSimWire.create(this.shard_, function (wire) {
+  NetSimWire.create(this.shard_, this.entityID, otherNode.entityID, function (wire) {
     if (wire === null) {
       onComplete(null);
       return;
     }
 
-    wire.localNodeID = self.entityID;
-    wire.remoteNodeID = otherNode.entityID;
-    wire.update(function (success) {
+    otherNode.acceptConnection(self, function (success) {
       if (!success) {
         wire.destroy(function () {
           onComplete(null);
@@ -3450,16 +3897,7 @@ NetSimNode.prototype.connectToNode = function (otherNode, onComplete) {
         return;
       }
 
-      otherNode.acceptConnection(self, function (success) {
-        if (!success) {
-          wire.destroy(function () {
-            onComplete(null);
-          });
-          return;
-        }
-
-        onComplete(wire);
-      });
+      onComplete(wire);
     });
   });
 };
@@ -3474,7 +3912,7 @@ NetSimNode.prototype.connectToNode = function (otherNode, onComplete) {
 NetSimNode.prototype.acceptConnection = function (otherNode, onComplete) {
   onComplete(true);
 };
-},{"../utils":184,"./NetSimEntity":114,"./NetSimWire":131}],131:[function(require,module,exports){
+},{"../utils":185,"./NetSimEntity":116,"./NetSimWire":134}],134:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3483,7 +3921,6 @@ NetSimNode.prototype.acceptConnection = function (otherNode, onComplete) {
  unused: true,
 
  maxlen: 90,
- maxparams: 3,
  maxstatements: 200
  */
 'use strict';
@@ -3536,11 +3973,22 @@ NetSimWire.inherits(NetSimEntity);
 /**
  * Static async creation method.  See NetSimEntity.create().
  * @param {!NetSimShard} shard
+ * @param {!number} localNodeID
+ * @param {!number} remoteNodeID
  * @param {!function} onComplete - Method that will be given the
  *        created entity, or null if entity creation failed.
  */
-NetSimWire.create = function (shard, onComplete) {
-  NetSimEntity.create(NetSimWire, shard, onComplete);
+NetSimWire.create = function (shard, localNodeID, remoteNodeID, onComplete) {
+  var entity = new NetSimWire(shard);
+  entity.localNodeID = localNodeID;
+  entity.remoteNodeID = remoteNodeID;
+  entity.getTable_().create(entity.buildRow_(), function (row) {
+    if (row === undefined) {
+      onComplete(null);
+      return;
+    }
+    onComplete(new NetSimWire(shard, row));
+  });
 };
 
 /**
@@ -3563,7 +4011,7 @@ NetSimWire.prototype.buildRow_ = function () {
   };
 };
 
-},{"../utils":184,"./NetSimEntity":114}],114:[function(require,module,exports){
+},{"../utils":185,"./NetSimEntity":116}],116:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3576,7 +4024,7 @@ NetSimWire.prototype.buildRow_ = function () {
  */
 'use strict';
 
-var ObservableEvent = require('./ObservableEvent');
+var ObservableEvent = require('../ObservableEvent');
 
 /**
  * Client model of simulated network entity, which lives in a shard table.
@@ -3683,75 +4131,7 @@ NetSimEntity.prototype.buildRow_ = function () {
   return {};
 };
 
-},{"./ObservableEvent":132}],132:[function(require,module,exports){
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
-
- maxlen: 90,
- maxparams: 3,
- maxstatements: 200
- */
-'use strict';
-
-/**
- * A subscription/notification atom, used to cleanly hook up callbacks
- * without attaching anything to the DOM or other global scope.
- * @constructor
- */
-var ObservableEvent = module.exports = function () {
-  /**
-   * Objects observing this.
-   * @type {Array}
-   * @private
-   */
-  this.observerList_ = [];
-};
-
-/**
- * Subscribe a method to be called when notifyObservers is called.
- * @param {function} onNotify - method called when notifyObservers gets called.
- *        Will receive any arguments passed to notifyObservers.
- * @returns {Object} key - used to unregister from observable
- */
-ObservableEvent.prototype.register = function (onNotify) {
-  var key = {toCall:onNotify};
-  Object.freeze(key);
-  this.observerList_.push(key);
-  return key;
-};
-
-/**
- * Unsubscribe from notifications.
- * @param {Object} keyObj - Key generated when registering
- * @returns {boolean} - Whether an unregistration actually occurred
- */
-ObservableEvent.prototype.unregister = function (keyObj) {
-  for (var i = 0; i < this.observerList_.length; i++) {
-    if (keyObj === this.observerList_[i]) {
-      this.observerList_.splice(i, 1);
-      return true;
-    }
-  }
-  return false;
-};
-
-/**
- * Call all methods subscribed to this ObservableEvent, passing through
- * any arguments.
- * @param {...} Any arguments, which are passed through to the observing
- *              functions.
- */
-ObservableEvent.prototype.notifyObservers = function () {
-  var args = Array.prototype.slice.call( arguments, 0 );
-  this.observerList_.forEach(function (observer) {
-    observer.toCall.apply(undefined, args);
-  });
-};
-},{}],111:[function(require,module,exports){
+},{"../ObservableEvent":1}],113:[function(require,module,exports){
 /**
  * @fileoverview Interface to dashboard user data API.
  */
@@ -3867,7 +4247,231 @@ DashboardUser.prototype.whenReady = function (callback) {
     this.whenReadyCallbacks_.push(callback);
   }
 };
-},{}],16:[function(require,module,exports){
+},{}],45:[function(require,module,exports){
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+
+ maxlen: 90,
+ maxparams: 3,
+ maxstatements: 200
+ */
+'use strict';
+
+require('./utils');
+
+var commands = module.exports;
+
+/**
+ * @enum {int}
+ */
+var commandState = {
+  NOT_STARTED: 0,
+  WORKING: 1,
+  SUCCESS: 2,
+  FAILURE: 3
+};
+
+/**
+ * A command is an operation that can be constructed with parameters now,
+ * triggered later, and completed even later than that.
+ *
+ * Similar to a promise or a deferred, commands are useful for non-blocking
+ * operations that need to take place with a particular relationship to time
+ * or to one another - asynchronous calls that should happen in order, events
+ * that should be triggered on a timeline, etc.  Instead of nesting callbacks
+ * N-layers-deep, create a queue of commands to run.
+ *
+ * You'll usually want to define commands for your own unique needs.  A child
+ * command should always call the Command constructor from its own constructor,
+ * it will almost always need to override onBegin_, and it may want to override
+ * tick and onEnd_.  Commands can call success() or fail() on themselves, or
+ * wait for others to do so; usage is up to you.
+ *
+ * @constructor
+ */
+var Command = commands.Command = function () {
+  /**
+   * @type {commandState}
+   * @private
+   */
+  this.status_ = commandState.NOT_STARTED;
+};
+
+/**
+ * Whether the command has started working.
+ * @returns {boolean}
+ */
+Command.prototype.isStarted = function () {
+  return this.status_ !== commandState.NOT_STARTED;
+};
+
+/**
+ * Whether the command has succeeded or failed, and is
+ * finished with its work.
+ * @returns {boolean}
+ */
+Command.prototype.isFinished = function () {
+  return this.succeeded() || this.failed();
+};
+
+/**
+ * Whether the command has finished with its work and reported success.
+ * @returns {boolean}
+ */
+Command.prototype.succeeded = function () {
+  return this.status_ === commandState.SUCCESS;
+};
+
+/**
+ * Whether the command has finished with its work and reported failure.
+ * @returns {boolean}
+ */
+Command.prototype.failed = function () {
+  return this.status_ === commandState.FAILURE;
+};
+
+/**
+ * Tells the command to start working.
+ */
+Command.prototype.begin = function () {
+  this.status_ = commandState.WORKING;
+  this.onBegin_();
+};
+
+/**
+ * Called to mark that the command is done with its work and has
+ * succeeded.  Might be called by the command itself, or by an external
+ * controller.
+ * @throws if called before begin()
+ */
+Command.prototype.succeed = function () {
+  if (!this.isStarted()) {
+    throw new Error("Command cannot succeed before it begins.");
+  }
+  this.status_ = commandState.SUCCESS;
+  this.onEnd_();
+};
+
+/**
+ * Called to mark that the command is done with its work and has
+ * failed.  Might be called by the command itself, or by an external
+ * controller.
+ * @throws if called before begin()
+ */
+Command.prototype.fail = function () {
+  if (!this.isStarted()) {
+    throw new Error("Command cannot fail before it begins.");
+  }
+  this.status_ = commandState.FAILURE;
+  this.onEnd_();
+};
+
+/**
+ * Stub to be implemented by descendant classes, of operations to perform
+ * when the command begins.
+ * @private
+ */
+Command.prototype.onBegin_ = function () {};
+
+/**
+ * Stub to be implemented by descendant classes, of operations to perform
+ * on tick.
+ * @param {RunLoop.Clock} clock - Time information passed into all tick methods.
+ */
+Command.prototype.tick = function (/*clock*/) {};
+
+/**
+ * Stub to be implemented by descendant classes, of operations to perform
+ * when the command either succeeds or fails.
+ * @private
+ */
+Command.prototype.onEnd_ = function () {};
+
+/**
+ * A CommandSequence is constructed with a list of commands to be executed
+ * in order, either until a command fails or the end of the list is reached.
+ * Each command will be started on the first tick where the previous command
+ * is found to be successful: If a command succeeds between ticks, the next
+ * command will start on the next tick, but if a command succeeds _during_
+ * a tick (in its tick() or onBegin_() methods) then the next command may
+ * begin immediately.
+ *
+ * The CommandSequence is itself a command which succeeds after all of the
+ * commands it contains have succeeded, or fails if any of the commands it
+ * contains have failed.  CommandSequences may thus be nested, and it is
+ * often useful for a custom command to inherit from CommandSequence or to
+ * contain a CommandSequence.
+ *
+ * @param {Array.<Command>} commandList - List of commands to be executed
+ *        in order, provided each command succeeds.
+ * @constructor
+ */
+var CommandSequence = commands.CommandSequence = function (commandList) {
+  Command.call(this);
+
+  /**
+   * @type {Array.<Command>}
+   * @private
+   */
+  this.commandList_ = commandList;
+
+  /**
+   * @type {number}
+   * @private
+   */
+  this.currentCommandIndex_ = 0;
+};
+CommandSequence.inherits(Command);
+
+/**
+ * @private
+ */
+CommandSequence.prototype.onBegin_ = function () {
+  this.currentCommandIndex_ = 0;
+
+  // Empty sequence succeeds immediately
+  if (this.commandList_.length === 0) {
+    this.succeed();
+  }
+};
+
+/**
+ * @returns {Command}
+ */
+CommandSequence.prototype.currentCommand = function () {
+  return this.commandList_[this.currentCommandIndex_];
+};
+
+/**
+ * @param {RunLoop.Clock} clock
+ */
+CommandSequence.prototype.tick = function (clock) {
+  while (this.isStarted() && !this.isFinished() && this.currentCommand()) {
+    if (!this.currentCommand().isStarted()) {
+      this.currentCommand().begin();
+    } else {
+      this.currentCommand().tick(clock);
+    }
+
+    if (this.currentCommand().succeeded()) {
+      this.currentCommandIndex_++;
+      if (this.currentCommand() === undefined) {
+        this.succeed();
+      }
+    } else if (this.currentCommand().failed()) {
+      this.fail();
+    } else {
+      // Let the current command work
+      break;
+    }
+  }
+};
+
+},{"./utils":185}],18:[function(require,module,exports){
 /**
  * Code.org Apps
  *
@@ -4088,4 +4692,212 @@ appsApi.UserPropertyBag = function (app_publickey) {
   '/user-properties');
 };
 appsApi.UserPropertyBag.inherits(appsApi.PropertyBag);
-},{"./utils":184}]},{},[136]);
+},{"./utils":185}],3:[function(require,module,exports){
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+
+ maxlen: 90,
+ maxparams: 3,
+ maxstatements: 200
+ */
+/* global window */
+'use strict';
+
+var ObservableEvent = require('./ObservableEvent');
+
+// It is more accurate to use performance.now(), but we use Date.now()
+// for compatibility with Safari and older browsers. This should only cause
+// a small error in the deltaTime for the initial frame anyway.
+// See Also:
+// * https://developer.mozilla.org/en-US/docs/Web/API/window.requestAnimationFrame
+// * https://developer.mozilla.org/en-US/docs/Web/API/Performance.now
+var windowNow = (window.performance && window.performance.now) ?
+    window.performance.now.bind(window.performance) : Date.now;
+
+/**
+ * Ticks per second on older browsers where we can't lock to the repaint event.
+ * @type {number}
+ * @const
+ */
+var FALLBACK_FPS = 30;
+
+/**
+ * Precalculated milliseconds per tick for fallback case
+ * @type {number}
+ * @const
+ */
+var FALLBACK_MS_PER_TICK = (1000 / FALLBACK_FPS);
+
+
+
+/**
+ * Simple run-loop manager
+ * @constructor
+ */
+var RunLoop = module.exports = function () {
+
+  /**
+   * Whether the run-loop will continue running.
+   * @type {boolean}
+   */
+  this.enabled = false;
+
+  /**
+   * Tracks current time and delta time for the loop.
+   * Passed to observers when events fire.
+   * @type {RunClock}
+   */
+  this.clock = new RunLoop.Clock();
+
+  /**
+   * Method that gets called over and over.
+   * @type {Function}
+   * @private
+   */
+  this.tick_ = this.buildTickMethod_();
+
+  /**  @type {ObservableEvent} */
+  this.tick = new ObservableEvent();
+
+  /** @type {ObservableEvent} */
+  this.render = new ObservableEvent();
+};
+
+/**
+ * Simple tracking for time values
+ * @constructor
+ */
+RunLoop.Clock = function () {
+  /**
+   * Time the current/most recent tick started, in ms.
+   * Depending on browser this might be epoch time or time since load -
+   *  therefore, don't use for absolute time!
+   * @type {number}
+   */
+  this.time = windowNow();
+
+  /**
+   * Time in ms between the latest/current tick and the previous tick.
+   * Precision dependent on browser capabilities.
+   * @type {number}
+   */
+  this.deltaTime = 0;
+};
+
+RunLoop.prototype.buildTickMethod_ = function () {
+  var tickMethod;
+  var self = this;
+  if (window.requestAnimationFrame) {
+    tickMethod = function (hiResTimeStamp) {
+      if (self.enabled) {
+        self.clock.deltaTime = hiResTimeStamp - self.clock.time;
+        self.clock.time = hiResTimeStamp;
+        self.tick.notifyObservers(self.clock);
+        self.render.notifyObservers(self.clock);
+        requestAnimationFrame(tickMethod);
+      }
+    };
+  } else {
+    tickMethod = function () {
+      if (self.enabled) {
+        var curTime = windowNow();
+        self.clock.deltaTime = curTime - self.clock.time;
+        self.clock.time = curTime;
+        self.tick.notifyObservers(self.clock);
+        self.render.notifyObservers(self.clock);
+        setTimeout(tickMethod, FALLBACK_MS_PER_TICK - self.clock.deltaTime);
+      }
+    };
+  }
+  return tickMethod;
+};
+
+/** Start the run loop (runs immediately) */
+RunLoop.prototype.begin = function () {
+  this.enabled = true;
+  this.clock.time = windowNow();
+  this.tick_(this.clock.time);
+};
+
+/**
+ * Stop the run loop
+ * If in the middle of a tick, will finish the current tick.
+ * If called by an event between ticks, will prevent the next tick from firing.
+ */
+RunLoop.prototype.end = function () {
+  this.enabled = false;
+};
+
+},{"./ObservableEvent":1}],1:[function(require,module,exports){
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+
+ maxlen: 90,
+ maxparams: 3,
+ maxstatements: 200
+ */
+'use strict';
+
+/**
+ * A subscription/notification atom, used to cleanly hook up callbacks
+ * without attaching anything to the DOM or other global scope.
+ * @constructor
+ */
+var ObservableEvent = module.exports = function () {
+  /**
+   * Objects observing this.
+   * @type {Array}
+   * @private
+   */
+  this.observerList_ = [];
+};
+
+/**
+ * Subscribe a method to be called when notifyObservers is called.
+ * @param {function} onNotify - method called when notifyObservers gets called.
+ *        Will receive any arguments passed to notifyObservers.
+ * @returns {Object} key - used to unregister from observable
+ */
+ObservableEvent.prototype.register = function (onNotify) {
+  var key = {toCall:onNotify};
+  Object.freeze(key);
+  this.observerList_.push(key);
+  return key;
+};
+
+/**
+ * Unsubscribe from notifications.
+ * @param {Object} keyObj - Key generated when registering
+ * @returns {boolean} - Whether an unregistration actually occurred
+ */
+ObservableEvent.prototype.unregister = function (keyObj) {
+  for (var i = 0; i < this.observerList_.length; i++) {
+    if (keyObj === this.observerList_[i]) {
+      this.observerList_.splice(i, 1);
+      return true;
+    }
+  }
+  return false;
+};
+
+/**
+ * Call all methods subscribed to this ObservableEvent, passing through
+ * any arguments.
+ * @param {...} Any arguments, which are passed through to the observing
+ *              functions.
+ */
+ObservableEvent.prototype.notifyObservers = function () {
+  var args = Array.prototype.slice.call( arguments, 0 );
+  this.observerList_.forEach(function (observer) {
+    observer.toCall.apply(undefined, args);
+  });
+};
+},{}]},{},[137]);

@@ -6,7 +6,6 @@
  unused: true,
 
  maxlen: 90,
- maxparams: 3,
  maxstatements: 200
  */
 'use strict';
@@ -59,11 +58,22 @@ NetSimWire.inherits(NetSimEntity);
 /**
  * Static async creation method.  See NetSimEntity.create().
  * @param {!NetSimShard} shard
+ * @param {!number} localNodeID
+ * @param {!number} remoteNodeID
  * @param {!function} onComplete - Method that will be given the
  *        created entity, or null if entity creation failed.
  */
-NetSimWire.create = function (shard, onComplete) {
-  NetSimEntity.create(NetSimWire, shard, onComplete);
+NetSimWire.create = function (shard, localNodeID, remoteNodeID, onComplete) {
+  var entity = new NetSimWire(shard);
+  entity.localNodeID = localNodeID;
+  entity.remoteNodeID = remoteNodeID;
+  entity.getTable_().create(entity.buildRow_(), function (row) {
+    if (row === undefined) {
+      onComplete(null);
+      return;
+    }
+    onComplete(new NetSimWire(shard, row));
+  });
 };
 
 /**
