@@ -671,7 +671,7 @@ Applab.init = function(config) {
     }
   }
 
-  user = {storageUserId: config.storageUserId};
+  user = {applabUserId: config.applabUserId};
 };
 
 /**
@@ -2136,10 +2136,10 @@ Applab.handleDeleteRecord = function(successCallback) {
 };
 
 Applab.getUserId = function (opts) {
-  if (!user.storageUserId) {
+  if (!user.applabUserId) {
     throw new Error("User ID failed to load.");
   }
-  return user.storageUserId;
+  return user.applabUserId;
 };
 
 /*
