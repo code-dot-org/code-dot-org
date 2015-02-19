@@ -483,7 +483,7 @@
 
     // Eventually we could support various modes of offline (disconnects, etc)
     UIFrame.prototype.detectStatic = function() {
-      return window.location.protocol == "file:";
+      return window.location.protocol == "file:" || window.location.host.substr(0,6) == 'react.';
     }
 
     // Load the script at a given URL and return a promise that resolves when it has executed

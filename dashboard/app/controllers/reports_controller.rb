@@ -116,6 +116,9 @@ SQL
       s[:stages].push summarize_stage(script, stage_or_game, sl_group)
     end
 
+    if params['jsonp']
+      expires_in 10000  # TODO: Real static asset caching
+    end
     render :json => JSON.pretty_generate(s), :callback => params['jsonp']
   end
 
@@ -223,6 +226,9 @@ SQL
         }
       end
 
+      if params['jsonp']
+        expires_in 10000  # TODO: Real static asset caching
+      end
       reply[:progress] = user_data
     end
 
