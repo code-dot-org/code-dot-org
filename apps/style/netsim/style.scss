@@ -136,4 +136,10 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
       background-color: darkorange;
     }
   }
+
+  #netsim_router_log_table {
+    display: block;
+    max-height: 200px;
+    overflow-y: scroll;
+  }
 }

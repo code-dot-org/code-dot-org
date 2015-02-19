@@ -187,7 +187,6 @@ Code.org is looking for an Operations Intern to join Code.org’s Operations tea
 
 - Minimum 2 years of undergraduate studies completed
 - Experience with Google suite of products
-- Ability to work legally in the United States
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>
 
