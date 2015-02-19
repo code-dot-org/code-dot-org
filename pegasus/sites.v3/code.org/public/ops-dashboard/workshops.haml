@@ -39,6 +39,8 @@ template: none
           Start: {{segment.start}}
         %p
           End: {{segment.end}}
+        %button{'ng-click' => 'segment.$remove({id: segment.id}) && workshopSegments.splice($index, 1);'}
+          Delete
     %td
       Segment Start
       %input{type:'datetime-local', 'ng-model' => 'segment.start'}
