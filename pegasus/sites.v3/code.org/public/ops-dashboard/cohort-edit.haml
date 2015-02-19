@@ -2,8 +2,8 @@
 layout: none
 theme: none
 ---
-%h1{"ng-show" => "action == 'edit'"} Edit {{cohort.name}}
-%h1{"ng-show" => "action != 'edit'"} Add cohort
+%h1{"ng-show" => "cohort.name"} Edit {{cohort.name}}
+%h1{"ng-show" => "!cohort.name"} Add cohort
 
 %form#cohort-edit-form{role: "form"}
   .row
