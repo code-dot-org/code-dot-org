@@ -700,9 +700,17 @@ Studio.onTick = function() {
 
     var isWalking = true;
 
-    // After 5 ticks of no movement, turn sprite forward
+    // After 5 ticks of no movement, turn sprite forward.
     if (Studio.tickCount - Studio.sprite[i].lastMove > TICKS_BEFORE_FACE_SOUTH) {
       Studio.sprite[i].dir = Direction.SOUTH;
+      isWalking = false;
+    }
+
+    // Also if the character has never moved, they are also not walking.
+    // Separate to the above case because we don't want to force them to
+    // face south in this case.  They are still allowed to face a different
+    // direction even if they've never walked.
+    if (Studio.sprite[i].lastMove === Infinity) {
       isWalking = false;
     }
 
