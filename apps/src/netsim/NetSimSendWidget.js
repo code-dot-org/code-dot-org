@@ -14,10 +14,7 @@
 
 var markup = require('./NetSimSendWidget.html');
 var dom = require('../dom');
-
-function binaryStringToUnsignedInteger(binaryString) {
-  return parseInt(binaryString, 2);
-}
+var PacketEncoder = require('./PacketEncoder');
 
 function unsignedIntegerToBinaryString(integer, size) {
   var binary = integer.toString(2);
@@ -26,18 +23,6 @@ function unsignedIntegerToBinaryString(integer, size) {
   }
   // TODO: Deal with overflow?
   return binary;
-}
-
-function binaryStringToAscii(binaryString) {
-  var result = '';
-  for (var i = 0; i < binaryString.length; i += 8) {
-    var chunk = binaryString.slice(i, i+8);
-    while (chunk.length < 8) {
-      chunk += '0';
-    }
-    result += String.fromCharCode(parseInt(chunk, 2));
-  }
-  return result;
 }
 
 function asciiToBinaryString(ascii) {
@@ -99,23 +84,47 @@ NetSimSendWidget.createWithin = function (element, connection) {
 NetSimSendWidget.prototype.bindElements_ = function () {
   this.rootDiv_ = $('#netsim_send_widget');
   this.toAddressTextbox_ = this.rootDiv_.find('#to_address');
+  this.toAddressTextbox_.bind('keyPress', function (event) {
+    // Don't block control combinations (copy, paste, etc);
+    if (event.metaKey || event.ctrlKey) {
+      return true;
+    }
+
+    // Prevent non-digit characters
+    var charCode = !event.charCode ? event.which : event.charCode;
+    if (charCode >= 32 && charCode <= 126) {
+      var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+
+      if (!/\d/.test(key)) {
+        event.preventDefault();
+        return false;
+      }
+    }
+  });
+  this.toAddressTextbox_.change(this.onToAddressChange_.bind(this));
+
   this.fromAddressTextbox_ = this.rootDiv_.find('#from_address');
 
   this.binaryPayloadTextbox_ = this.rootDiv_.find('#binary_payload');
-  this.binaryPayloadTextbox_.change(this.onBinaryPayloadChange_.bind(this));
-  this.binaryPayloadTextbox_.bind('keyup', this.onBinaryPayloadChange_.bind(this));
   this.binaryPayloadTextbox_.bind('keypress', function (event) {
-    var charCode = !event.charCode ? event.which : event.charCode;
+    // Don't block control combinations (copy, paste, etc);
+    if (event.metaKey || event.ctrlKey) {
+      return true;
+    }
 
     // Prevent VISIBLE characters that aren't on our whitelist
+    var charCode = !event.charCode ? event.which : event.charCode;
     if (charCode >= 32 && charCode <= 126) {
       var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+
       if (!/[01]/.test(key)) {
         event.preventDefault();
         return false;
       }
     }
   }.bind(this));
+  this.binaryPayloadTextbox_.bind('keyup', this.onBinaryPayloadChange_.bind(this));
+  this.binaryPayloadTextbox_.change(this.onBinaryPayloadChange_.bind(this));
 
   this.asciiPayloadTextbox_ = this.rootDiv_.find('#ascii_payload');
   this.asciiPayloadTextbox_.change(this.onAsciiPayloadChange_.bind(this));
@@ -137,17 +146,36 @@ NetSimSendWidget.prototype.onConnectionStatusChange_ = function () {
 
 };
 
+var packetEncoder = new PacketEncoder([
+  { key: 'toAddress', bits: 4 },
+  { key: 'fromAddress', bits: 4 },
+  { key: 'payload', bits: Infinity }
+]);
+
+NetSimSendWidget.prototype.onToAddressChange_ = function () {
+  this.packetBinary = packetEncoder.createBinary({
+    toAddress: unsignedIntegerToBinaryString(this.toAddressTextbox_.val(), 4),
+    fromAddress: unsignedIntegerToBinaryString(this.fromAddressTextbox_.val(), 4),
+    payload: this.binaryPayloadTextbox_.val().replace(/[^01]/g, '')
+  });
+  this.refresh();
+};
+
 NetSimSendWidget.prototype.onBinaryPayloadChange_ = function () {
-  this.packetBinary = unsignedIntegerToBinaryString(this.toAddressTextbox_.val(), 4);
-  this.packetBinary += unsignedIntegerToBinaryString(this.fromAddressTextbox_.val(), 4);
-  this.packetBinary += this.binaryPayloadTextbox_.val().replace(/\s/, '');
+  this.packetBinary = packetEncoder.createBinary({
+    toAddress: unsignedIntegerToBinaryString(this.toAddressTextbox_.val(), 4),
+    fromAddress: unsignedIntegerToBinaryString(this.fromAddressTextbox_.val(), 4),
+    payload: this.binaryPayloadTextbox_.val().replace(/[^01]/g, '')
+  });
   this.refresh();
 };
 
 NetSimSendWidget.prototype.onAsciiPayloadChange_ = function () {
-  this.packetBinary = unsignedIntegerToBinaryString(this.toAddressTextbox_.val(), 4);
-  this.packetBinary += unsignedIntegerToBinaryString(this.fromAddressTextbox_.val(), 4);
-  this.packetBinary += asciiToBinaryString(this.asciiPayloadTextbox_.val());
+  this.packetBinary = packetEncoder.createBinary({
+    toAddress: unsignedIntegerToBinaryString(this.toAddressTextbox_.val(), 4),
+    fromAddress: unsignedIntegerToBinaryString(this.fromAddressTextbox_.val(), 4),
+    payload: asciiToBinaryString(this.asciiPayloadTextbox_.val())
+  });
   this.refresh();
 };
 
@@ -158,29 +186,18 @@ NetSimSendWidget.prototype.refresh = function () {
   this.rootDiv_.find('#packet_index').val(1);
   this.rootDiv_.find('#packet_count').val(1);
 
-  // Extract to address from packetBinary
-  var toAddressBinary = this.packetBinary.slice(0, 4);
-  while (toAddressBinary.length < 4) {
-    toAddressBinary += '0';
-  }
-  var toAddress = binaryStringToUnsignedInteger(toAddressBinary);
+  var toAddress = packetEncoder.getFieldAsInt('toAddress', this.packetBinary);
   this.toAddressTextbox_.val(toAddress);
 
-  // Extract from address from packetBinary
-  var fromAddressBinary = this.packetBinary.slice(4, 8);
-  while (fromAddressBinary.length < 4) {
-    fromAddressBinary += '0';
-  }
-  var fromAddress = binaryStringToUnsignedInteger(fromAddressBinary);
+  var fromAddress = packetEncoder.getFieldAsInt('fromAddress', this.packetBinary);
   this.fromAddressTextbox_.val(fromAddress);
-
-  // Extract message body from packetBinary
-  var binaryPayload = this.packetBinary.slice(8);
-  this.binaryPayloadTextbox_.val(formatToChunkSize(binaryPayload, 8));
 
   this.bitCounter_.html(this.packetBinary.length + '/Infinity bits');
 
-  var asciiPayload = binaryStringToAscii(binaryPayload);
+  var binaryPayload = packetEncoder.getField('payload', this.packetBinary);
+  this.binaryPayloadTextbox_.val(formatToChunkSize(binaryPayload, 8));
+
+  var asciiPayload = packetEncoder.getFieldAsAscii('payload', this.packetBinary);
   this.asciiPayloadTextbox_.val(asciiPayload);
 };
 

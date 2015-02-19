@@ -21,6 +21,7 @@ var NetSimWire = require('./NetSimWire');
 var NetSimMessage = require('./NetSimMessage');
 var NetSimHeartbeat = require('./NetSimHeartbeat');
 var ObservableEvent = require('../ObservableEvent');
+var PacketEncoder = require('./PacketEncoder');
 
 var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
 
@@ -606,11 +607,18 @@ NetSimRouterNode.prototype.onMessageTableChange_ = function (rows) {
   }
 };
 
+var packetEncoder = new PacketEncoder([
+  { key: 'toAddress', bits: 4 },
+  { key: 'fromAddress', bits: 4 },
+  { key: 'payload', bits: Infinity }
+]);
+
 NetSimRouterNode.prototype.routeMessage_ = function (message, myWires) {
   // Find a connection to route this message to.
-  var toAddress = message.payload.toAddress;
-  if (toAddress === undefined) {
-    //Malformed packet? Throw it away
+  try {
+    var toAddress = packetEncoder.getFieldAsInt('toAddress', message.payload);
+  } catch (error) {
+    // Malformed packet?
     this.log("Blocked malformed packet: " + message.payload);
     return;
   }
