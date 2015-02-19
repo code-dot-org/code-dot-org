@@ -66,7 +66,7 @@
             <arg name="amount"/>
             <arg name="color"/>
             <description>Draw this sweet star.</description>
-            <outputtype>image</outputtype>
+            <outputtype>Image</outputtype>
           </mutation>
           <title name="NAME">Draw a Cool Rotated Star</title>
           <functional_input name="STACK">
@@ -106,7 +106,7 @@
                   <functional_input name="COLOR">
                     <block type="functional_parameters_get" uservisible="false">
                       <mutation>
-                        <outputtype>string</outputtype>
+                        <outputtype>String</outputtype>
                       </mutation>
                       <title name="VAR">color</title>
                     </block>
