@@ -11,6 +11,8 @@
   = stylesheet_link_tag    'editor/blockly_editor', media: 'all'
   = javascript_include_tag 'editor/blockly_editor'
 .field
+  = f.label :edit_code, @level.game.uses_droplet? ? 'Droplet JavaScript level' : 'Blockly level'
+.field
   = f.label :instructions
   = f.text_area :instructions, placeholder: 'Instructions', rows: 4
 = render partial: 'levels/editors/ani_gif', locals: {f: f}
@@ -61,21 +63,34 @@
     = f.radio_button :scrollbars, true
     False:
     = f.radio_button :scrollbars, false
+- if @level.game.uses_droplet?
+  .field
+    = f.label :code_functions, 'Edit Droplet Palette'
+    = f.text_area :code_functions, placeholder: 'Droplet Palette', rows: 4, value: JSON.pretty_generate(@level.code_functions)
+    :javascript
+      codeMirror('code_functions', 'javascript');
+- else
+  .field
+    = link_to 'Edit Toolbox Blocks', level_edit_blocks_path( @level, :toolbox_blocks) unless @level.new_record?
+    = f.text_area :toolbox_blocks, placeholder: 'Toolbox Blocks', rows: 4, value: @level.pretty_block('toolbox')
+    :javascript
+      codeMirror('toolbox_blocks', 'xml');
 .field
-  = link_to 'Edit Toolbox Blocks', level_edit_blocks_path( @level, :toolbox_blocks) unless @level.new_record?
-  = f.text_area :toolbox_blocks, placeholder: 'Toolbox Blocks', rows: 4, value: @level.pretty_block('toolbox')
-  :javascript
-    codeMirror('toolbox');
-.field
-  = link_to 'Edit Start Blocks', level_edit_blocks_path(@level, :start_blocks) unless @level.new_record?
+  - if @level.game.uses_droplet?
+    = f.label :start_blocks, 'Edit Starting JavaScript Program'
+  - else
+    = link_to 'Edit Start Blocks', level_edit_blocks_path(@level, :start_blocks) unless @level.new_record?
   = f.text_area :start_blocks, placeholder: 'Start Blocks', rows: 4, value: @level.pretty_block('start')
   :javascript
-    codeMirror('start');
+    codeMirror('start_blocks', '#{@level.game.uses_droplet? ? 'javascript' : 'xml'}');
 .field
-  = link_to 'Edit Required Blocks', level_edit_blocks_path(@level, :required_blocks) unless @level.new_record?
+  - if @level.game.uses_droplet?
+    = f.label :required_blocks, 'Edit Required Blocks'
+  - else
+    = link_to 'Edit Required Blocks', level_edit_blocks_path(@level, :required_blocks) unless @level.new_record?
   = f.text_area :required_blocks, placeholder: 'Required Blocks', rows: 4, value: @level.pretty_block('required')
   :javascript
-    codeMirror('required');
+    codeMirror('required_blocks', '#{@level.game.uses_droplet? ? 'javascript' : 'xml'}');
 .field
   = f.label :ideal, 'Ideal block number'
   = f.number_field :ideal
@@ -185,10 +200,13 @@
   = f.text_field :project_template_level_name, placeholder: 'name of level you want to use as the project template'
 -if @level.respond_to? :solution_blocks
   .field
-    = link_to 'Edit Solution Blocks', level_edit_blocks_path(@level, :solution_blocks) unless @level.new_record?
+    - if @level.game.uses_droplet?
+      = f.label :solution_blocks, 'Edit Solution Blocks'
+    - else
+      = link_to 'Edit Solution Blocks', level_edit_blocks_path(@level, :solution_blocks) unless @level.new_record?
     = f.text_area :solution_blocks, placeholder: 'Solution Blocks', rows: 4, value: @level.pretty_block('solution')
     :javascript
-      codeMirror('solution');
+      codeMirror('solution_blocks', '#{@level.game.uses_droplet? ? 'javascript' : 'xml'}');
 
 :javascript
   // <![CDATA[
