@@ -1,3 +1,5 @@
+require 'digest/sha1'
+
 module LevelsHelper
 
   def build_script_level_path(script_level)
@@ -291,7 +293,7 @@ module LevelsHelper
       },
       droplet: @game.try(:uses_droplet?),
       pretty: Rails.configuration.pretty_apps ? '' : '.min',
-      storageUserId: @storage_user_id,
+      applabUserId: @applab_user_id,
     }
     app_options[:scriptId] = @script.id if @script
     app_options[:levelGameName] = @level.game.name if @level.game
@@ -393,5 +395,12 @@ module LevelsHelper
         SoftButton.new('Down', 'downButton'),
         SoftButton.new('Up', 'upButton'),
     ]
+  end
+
+  # Unique, consistent ID for a user of an applab app.
+  def applab_user_id
+    app_id = "1337" # Stub value, until storage for app_id's is available.
+    user_id = current_user ? current_user.id.to_s : session.id
+    Digest::SHA1.base64digest("#{app_id}:#{user_id}").tr('=', '')
   end
 end

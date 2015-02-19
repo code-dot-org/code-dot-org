@@ -7,7 +7,7 @@ class LevelSourcesController < ApplicationController
   skip_authorize_resource only: [:edit, :generate_image, :original_image] # edit is more like show
 
   before_action :set_level_source
-  before_action :set_storage_user_id, only: [:show, :edit]
+  before_action :set_applab_user_id, only: [:show, :edit]
 
   def show
     @hide_source = true
@@ -92,8 +92,8 @@ class LevelSourcesController < ApplicationController
 
   protected
 
-  def set_storage_user_id
-    @storage_user_id = stub_storage_user_id
+  def set_applab_user_id
+    @applab_user_id = applab_user_id
   end
 
   def set_level_source
