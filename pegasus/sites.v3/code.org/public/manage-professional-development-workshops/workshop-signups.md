@@ -15,12 +15,15 @@ title: Workshop signups
 %>
 # Workshop signups
 
-## Filter by date:
-
-<form>
-  From: <input type="text" name="from" value="<%= params[:from] ? URI.escape(params[:from]) : '' %>"/>
-  To: <input type="text" name="to" value="<%= params[:to] ? URI.escape(params[:to]) : '' %>"/>
-  <input type="submit"/>
+<form class="form-inline">
+  <h3> Filter by date:</h3>
+  <div class="form-group">
+    <input type="text" class="form-control" name="from" id="filter-date-from" value="<%= params[:from] ? URI.escape(params[:from]) : '' %>" placeholder="From">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" name="to" id="filter-date-to" value="<%= params[:to] ? URI.escape(params[:to]) : '' %>" placeholder="To">
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
 </form>
 
 <% if rows.empty? %>
