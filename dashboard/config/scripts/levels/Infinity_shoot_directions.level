@@ -69,5 +69,29 @@
         </block>
       </xml>
     </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="studio_throw">
+          <title name="SPRITE">2</title>
+          <title name="VALUE">"projectile_cherry"</title>
+          <title name="DIR">1</title>
+        </block>
+        <block type="studio_throw">
+          <title name="SPRITE">2</title>
+          <title name="VALUE">"projectile_baymax"</title>
+          <title name="DIR">4</title>
+        </block>
+        <block type="studio_throw">
+          <title name="SPRITE">2</title>
+          <title name="VALUE">"projectile_rapunzel"</title>
+          <title name="DIR">8</title>
+        </block>
+        <block type="studio_throw">
+          <title name="SPRITE">2</title>
+          <title name="VALUE">"projectile_duck"</title>
+          <title name="DIR">2</title>
+        </block>
+      </xml>
+    </required_blocks>
   </blocks>
 </Studio>

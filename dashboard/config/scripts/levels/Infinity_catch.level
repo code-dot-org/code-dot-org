@@ -11,7 +11,7 @@
     "failure_condition": "function () {\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "Control Anna to catch Elsa who is moving back and forth.",
+    "instructions": "Control Elsa (Actor 2) to catch Anna (Actor 1) who is moving back and forth.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -32,7 +32,16 @@
       "upButton"
     ],
     "predraw_blocks": "<xml><block type=\"studio_setBackground\"><title name=\"VALUE\">\"tile\"</title></block></xml>",
-    "generate_function_pass_blocks": "false"
+    "generate_function_pass_blocks": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "timeout_after_when_run": "false",
+    "maze_data": null,
+    "timeout_failure_tick": "250"
   }
 }]]></config>
   <blocks>
@@ -77,6 +86,29 @@
           <title name="SPRITE">1</title>
           <title name="DIR">1</title>
         </block>
+        <block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">4</title>
+        </block>
+        <block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">8</title>
+        </block>
+        <block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">2</title>
+        </block>
+        <block type="studio_repeatForever"/>
+        <block type="studio_moveDistance">
+          <title name="SPRITE">0</title>
+          <title name="DIR">1</title>
+          <title name="DISTANCE">400</title>
+        </block>
+        <block type="studio_moveDistance">
+          <title name="SPRITE">0</title>
+          <title name="DIR">4</title>
+          <title name="DISTANCE">400</title>
+        </block>
       </xml>
     </toolbox_blocks>
     <required_blocks>
@@ -91,6 +123,10 @@
           <title name="SPRITE">0</title>
           <title name="DIR">4</title>
           <title name="DISTANCE">400</title>
+        </block>
+        <block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">2</title>
         </block>
       </xml>
     </required_blocks>
