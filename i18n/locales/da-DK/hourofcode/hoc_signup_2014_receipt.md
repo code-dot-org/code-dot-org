@@ -34,7 +34,7 @@ Fortæl dine venner om #HourOfCode.
 
 ## 3. Lav reklame for Hour of Code i dit lokalområde
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+Kontakt lokale grupper — spejdere, kirker, universiteter eller fagforeninger. Eller arranger selv Hour of Code i din opgang eller for børnene på vejen.
 
 ## 4. Bed en lokal politiker om at støtte Hour of Code
 

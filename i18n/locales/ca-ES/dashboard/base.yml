@@ -301,6 +301,8 @@ ca:
     student_teacher_disassociated: "%{teacher_name} s'ha esborrat com a mestre de %{student_name}"
   user:
     email_confirm_needed: "L'adreça de correu electrònic no ha estat confirmada:"
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Torna a enviar les instruccions de confirmació
     new_password_hint: (deixa-ho en blanc si no vols canviar-lo)
     current_password_hint: (necessitem la teva contrasenya actual per a confirmar els canvis)
@@ -485,7 +487,7 @@ ca:
           title: "Curs d'introducció a la informàtica per a ESO (15-25 hores)"
           description: "Aquest curs de 20 hores és una introducció als conceptes bàsics d'informàtica i programació. El curs ha estat dissenyat per impartir a alumnes de 1er d'ESO, però és divertit d'aprendre a qualsevol edat."
         Hour of Code:
-          title: Hora del codi
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: Edita el codi

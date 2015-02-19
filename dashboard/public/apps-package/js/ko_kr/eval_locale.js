@@ -154,9 +154,12 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
+"badColorStringError":function(d){return "You used an invalid color string: "+appLocale.v(d,"val")},
+"badStyleStringError":function(d){return "You used an invalid style string: "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "원(반지름, 형태, 색)"},
 "displayBlockTitle":function(d){return "보이기"},
 "ellipseBlockTitle":function(d){return "타원(가로길이, 세로높이, 형태, 색)"},
+"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "extraTopBlocks":function(d){return "붙이지 않은 블럭들이 있습니다. 이 블럭들을 \"그리기\"블럭에 붙이려고 했나요?"},
 "overlayBlockTitle":function(d){return "위에그리기(맨위, 아래)"},
 "placeImageBlockTitle":function(d){return "이미지배치(x, y, 이미지)"},

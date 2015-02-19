@@ -8,8 +8,8 @@ var solutionXml = blockUtils.mathBlockXml('place_image', {
     'STYLE': blockUtils.mathBlockXml('functional_string', null, { VAL: 'outline' }),
     'SIZE': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 50 } )
   }),
-  'X': 0,
-  'Y': 0
+  'X': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 0 } ),
+  'Y': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 0 } )
 });
 
 module.exports = {

@@ -80,6 +80,15 @@ Inspire girls to take on the digital world with confidence. A fully resourced sc
 
 [resources-item]
 
+<div class="resources-logo"><a href="http://codekingdoms.com/teachers/"><IMG src="/images/codekingdom.png" /></a></div>
+
+Code Kingdoms is a creative game to get kids excited about coding and computational thinking. Code Kingdoms is tied directly to the new Computing curriculum where kids design and build their own coded worlds in JavaScript, they then share and challenge their friends to play.
+Logo attached.
+
+[/resources-item]
+
+[resources-item]
+
 <div class="resources-logo"><a href="http://staffroom.educationcity.com/uk/topical-printables/freemium"><IMG src="/images/educationcity.jpg" /></a></div>
 
 EducationCity’s new Computing module launches this summer to help primary schools meet the new National Curriculum for Computing. With its comprehensive Learn Screens, Activities and follow-up Activity Sheets, it‘s the perfect companion for teachers with no prior knowledge of coding and includes our highly acclaimed Student Tool for programming, Code Crunch. Access to the ‘Freemium’ version of the content is available now.

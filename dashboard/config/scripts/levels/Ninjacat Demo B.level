@@ -15,7 +15,7 @@
       "upButton"
     ],
     "embed": "true",
-    "instructions": "\r\nLet’s begin by exploring a simple videogame, and then figuring out how it works. You can use the arrow keys to move the ninja left, right and jump - try to catch the unicorn and avoid the dragon!\r\n\r\n\r\n\r\n  \r\n\r\n",
+    "instructions": "Let’s begin by exploring a simple videogame, and then figuring out how it works. You can use the arrow keys to move the ninja left, right and jump - try to catch the unicorn and avoid the dragon!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",
@@ -28,7 +28,9 @@
     "sprites_hidden_to_start": "true",
     "coordinate_grid_background": "false",
     "free_play": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "generate_function_pass_blocks": "false",
+    "timeout_after_when_run": "false"
   }
 }]]></config>
   <blocks>
@@ -73,7 +75,7 @@
                                       <next>
                                         <block type="studio_setSpriteSpeed">
                                           <title name="SPRITE">1</title>
-                                          <title name="VALUE">Studio.SpriteSpeed.FAST</title>
+                                          <title name="VALUE">Studio.SpriteSpeed.SLOW</title>
                                           <next>
                                             <block type="studio_setSpritePosition">
                                               <title name="SPRITE">2</title>
@@ -85,7 +87,7 @@
                                                   <next>
                                                     <block type="studio_setSpriteSpeed">
                                                       <title name="SPRITE">2</title>
-                                                      <title name="VALUE">Studio.SpriteSpeed.SLOW</title>
+                                                      <title name="VALUE">Studio.SpriteSpeed.VERY_SLOW</title>
                                                     </block>
                                                   </next>
                                                 </block>
@@ -135,24 +137,6 @@
           </statement>
         </block>
         <block type="studio_whenArrow">
-          <title name="VALUE">right</title>
-          <next>
-            <block type="studio_move">
-              <title name="SPRITE">0</title>
-              <title name="DIR">2</title>
-            </block>
-          </next>
-        </block>
-        <block type="studio_whenArrow">
-          <title name="VALUE">left</title>
-          <next>
-            <block type="studio_move">
-              <title name="SPRITE">0</title>
-              <title name="DIR">8</title>
-            </block>
-          </next>
-        </block>
-        <block type="studio_whenArrow">
           <title name="VALUE">up</title>
           <next>
             <block type="studio_moveDistanceParams" inline="true">
@@ -174,6 +158,24 @@
                   </value>
                 </block>
               </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">right</title>
+          <next>
+            <block type="studio_move">
+              <title name="SPRITE">0</title>
+              <title name="DIR">2</title>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">left</title>
+          <next>
+            <block type="studio_move">
+              <title name="SPRITE">0</title>
+              <title name="DIR">8</title>
             </block>
           </next>
         </block>

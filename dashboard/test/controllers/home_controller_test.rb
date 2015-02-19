@@ -137,7 +137,7 @@ class HomeControllerTest < ActionController::TestCase
       elsif script.flappy?
         url = "http://test.host/flappy"
       else
-        url = "http://test.host/s/#{script.to_param}"
+        url = "http://test.host/s/#{CGI.escape(script.to_param).gsub('+', '%20')}"
       end
       assert_select "#continue a[href^=#{url}]" # continue link
       assert_select 'h3',  I18n.t("data.script.name.#{script.name}.title") # script title
@@ -222,5 +222,36 @@ class HomeControllerTest < ActionController::TestCase
     # this stuff is not really a hash but it pretends to be
     assert_equal "{}", @response.cookies.inspect
     assert_equal "{}", session.inspect
+  end
+
+  test 'index shows alert for unconfirmed email for teachers' do
+    user = create :teacher, email: 'my_email@test.xx'
+
+    sign_in user
+    get :index
+
+    assert_response :success
+    assert_select '.alert span', /Your email address my_email@test.xx has not been confirmed:/
+    assert_select '.alert .btn[value="Resend confirmation instructions"]'
+  end
+
+  test 'index does not show alert for unconfirmed email for teachers if already confirmed' do
+    user = create :teacher, email: 'my_email@test.xx', confirmed_at: Time.now
+
+    sign_in user
+    get :index
+
+    assert_response :success
+    assert_select '.alert', 0
+  end
+
+  test 'index does not show alert for unconfirmed email for students' do
+    user = create :student, email: 'my_email@test.xx'
+
+    sign_in user
+    get :index
+
+    assert_response :success
+    assert_select '.alert', 0
   end
 end

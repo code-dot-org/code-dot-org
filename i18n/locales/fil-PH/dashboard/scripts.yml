@@ -342,6 +342,12 @@ fil:
           The Design Recipe: The Design Recipe
         K5PD:
           Introduction to PD: Introduction to PD
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and 3
         netsim:
           title: Internet Simulator
           description_short: ""
@@ -352,3 +358,30 @@ fil:
           description_short: Create a story or make a game with Infinity Play Lab!!
           description: Create a story or make a game with Infinity Play Lab!
           Infinity: Walang katapusan
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: K-8 Intro to Computer Science Course (15-25 oras)
+          description: 'Ang kursong ito ay binubuo ng 20 oras upang ipakilala ang buod ng computer science at mga konsepto ng programming. Ang kursong ito ay ginawa para magamit sa loob ng silid-paaralan  ng mga baitang ng K-8, at para na rin sa lahat ng edad. '
+          Introduction to Computer Science: Panimula sa Computer Science
+          The Maze: The Maze
+          Computational Thinking: Computational Thinking
+          Graph Paper Programming: Graph Paper Programming
+          The Artist: The Artist
+          Algorithms: Mga algorithm
+          The Artist 2: The Artist 2
+          Functions: Mga function
+          The Farmer: The Farmer
+          Conditionals: Mga conditional
+          The Artist 3: The Artist 3
+          Song Writing: Song Writing
+          The Farmer 2: The Farmer 2
+          Abstraction: Abstraction
+          The Artist 4: The Artist 4
+          Relay Programming: Relay Programming
+          The Farmer 3: The Farmer 3
+          The Internet: The Internet
+          The Artist 5: The Artist 5
+          Wrap-up: Wrap-up

@@ -296,6 +296,8 @@ sl:
     student_teacher_disassociated: '%{teacher_name} je bil/a odstranjen/a kot učitelj/ica %{student_name}'
   user:
     email_confirm_needed: 'Elektronska pošta ni bila potrjena:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Ponovno pošlji potrditvena navodila
     new_password_hint: (pusti prazno, če tega nočeš spremeniti)
     current_password_hint: (potrebujemo tvoje trenutno geslo, da potrdimo tvoje spremembe)
@@ -478,7 +480,7 @@ sl:
           title: Uvod v računalništvo (15-25 ur) za osnovno šolo (ZDA)
           description: Ta 20-urni tečaj predstavlja bistvo računalništva in konceptov programiranja. Tečaj je namenjen za uporabo v razredih K-8, vendar je zabaven za učenje v vseh starostih.
         Hour of Code:
-          title: Ura kode
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: Uredi kodo

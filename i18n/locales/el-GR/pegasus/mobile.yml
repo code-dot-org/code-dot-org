@@ -6,7 +6,7 @@ el-GR:
   csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: 'H  <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> Ώρα του Κώδικα</a> πλησιάζει!. Καλούμε όλους τους εκπαιδευτικούς και διοργανωτές να σχεδιάσουν τη δική τους, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">  Ώρα του Κώδικα</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400"> Είστε καθηγητής πληροφορικής; Δείτε άλλους πόρους του CSEdWeek</a>'
-  n_have_learned_an_hoc: '<h1>#</h1><h3>έχουν δοκιμάσει την</h3><h2>Ώρα του Κώδικα</h2>'
+  n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
   anybody_can_learn: Οποιοσδήποτε μπορεί να μάθει.
   learn_now: Μάθε τώρα
   petition_message: Κάθε μαθητής σε κάθε σχολείο θα πρέπει να έχει την ευκαιρία να μάθει την επιστήμη των υπολογιστών

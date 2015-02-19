@@ -38,6 +38,10 @@ da:
   whats_next_promote: "<a href='http://hourofcode.com/resources'> Frem Hour of Code</a>"
   n_have_learned_an_hoc: '<h1>#</h1><h3>har prøvet en</h3><h2>Hour of Code</h2>'
   anybody_can_learn: Alle kan lære.
+  share_on_facebook: Del på Facebook
+  share_on_twitter: Del på Twitter
+  beyond_an_hour: Lær mere når du har gennemført Hour of Code
+  get_started: Start
   register_now: Registrér dig nu
   front_join_us_heading: 'Hour of Code - programmering for alle elever.'
   front_join_us_description: Programmering er et godt grundlag for alle elever. Hjælp os med at nå ud til 100 millioner.

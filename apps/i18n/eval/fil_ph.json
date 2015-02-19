@@ -1,7 +1,10 @@
 {
+  "badColorStringError": "You used an invalid color string: {val}",
+  "badStyleStringError": "You used an invalid style string: {val}",
   "circleBlockTitle": "bilog (radius, klase, kulay)",
   "displayBlockTitle": "display",
   "ellipseBlockTitle": "ellipse (lapad, taas, style, kulay)",
+  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "extraTopBlocks": "Mayroon kang hindi isinama na block. Ibig mo bang isama ito sa \"display\" block?",
   "overlayBlockTitle": "overlay (taas, baba)",
   "placeImageBlockTitle": "place-image (x, y, image)",
