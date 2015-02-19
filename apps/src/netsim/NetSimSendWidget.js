@@ -48,6 +48,17 @@ function asciiToBinaryString(ascii) {
   return result;
 }
 
+function formatToChunkSize(rawBinary, chunkSize) {
+  var result = '';
+  for (var i = 0; i < rawBinary.length; i += chunkSize) {
+    if (result.length > 0) {
+      result += ' ';
+    }
+    result += rawBinary.slice(i, i+chunkSize);
+  }
+  return result;
+}
+
 /**
  * Generator and controller for message sending view.
  * @param {NetSimConnection} connection
@@ -110,6 +121,8 @@ NetSimSendWidget.prototype.bindElements_ = function () {
   this.asciiPayloadTextbox_.change(this.onAsciiPayloadChange_.bind(this));
   this.asciiPayloadTextbox_.bind('keyup', this.onAsciiPayloadChange_.bind(this));
 
+  this.bitCounter_ = this.rootDiv_.find('#bit_counter');
+
   this.sendButton_ = this.rootDiv_.find('#send_button');
 
   dom.addClickTouchEvent(this.sendButton_[0], this.onSendButtonPress_.bind(this));
@@ -127,7 +140,7 @@ NetSimSendWidget.prototype.onConnectionStatusChange_ = function () {
 NetSimSendWidget.prototype.onBinaryPayloadChange_ = function () {
   this.packetBinary = unsignedIntegerToBinaryString(this.toAddressTextbox_.val(), 4);
   this.packetBinary += unsignedIntegerToBinaryString(this.fromAddressTextbox_.val(), 4);
-  this.packetBinary += this.binaryPayloadTextbox_.val();
+  this.packetBinary += this.binaryPayloadTextbox_.val().replace(/\s/, '');
   this.refresh();
 };
 
@@ -163,7 +176,9 @@ NetSimSendWidget.prototype.refresh = function () {
 
   // Extract message body from packetBinary
   var binaryPayload = this.packetBinary.slice(8);
-  this.binaryPayloadTextbox_.val(binaryPayload);
+  this.binaryPayloadTextbox_.val(formatToChunkSize(binaryPayload, 8));
+
+  this.bitCounter_.html(this.packetBinary.length + '/Infinity bits');
 
   var asciiPayload = binaryStringToAscii(binaryPayload);
   this.asciiPayloadTextbox_.val(asciiPayload);
