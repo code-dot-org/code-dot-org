@@ -12,24 +12,11 @@
 'use strict';
 
 /**
- *
- * @constructor
- */
-var PacketEncoder = module.exports = function (formatSpec) {
-  PacketEncoder.validateSpec(formatSpec);
-
-  /**
-   * @type {Array.<Object>}
-   */
-  this.formatSpec_ = formatSpec;
-};
-
-/**
  * Verify that a given format specification describes a valid format that
  * can be used by the PacketEncoder object.
  * @param {Array.<Object>} formatSpec
  */
-PacketEncoder.validateSpec = function (formatSpec) {
+var validateSpec = function (formatSpec) {
   var keyCache = {};
 
   for (var i = 0; i < formatSpec.length; i++) {
@@ -50,9 +37,28 @@ PacketEncoder.validateSpec = function (formatSpec) {
 
     if (formatSpec[i].bits === Infinity && i+1 < formatSpec.length) {
       throw new Error("Invalid packet format: Infinity field length is only " +
-          "allowed in the last field.");
+      "allowed in the last field.");
     }
   }
+};
+
+/**
+ * Given a particular packet format, can convert a set of fields down
+ * into a binary string matching the specification, or extract fields
+ * on demand from a binary string.
+ * @param {Array} formatSpec - Specification of packet format, an ordered set
+ *        of objects in the form {key:string, bits:number} where key is the
+ *        field name you'll use to retrieve the information, and bits is the
+ *        length of the field.
+ * @constructor
+ */
+var PacketEncoder = module.exports = function (formatSpec) {
+  validateSpec(formatSpec);
+
+  /**
+   * @type {Array.<Object>}
+   */
+  this.formatSpec_ = formatSpec;
 };
 
 PacketEncoder.prototype.getField = function (key, binary) {
