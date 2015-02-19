@@ -75,12 +75,16 @@ When /^I press "([^"]*)" using jQuery$/ do |selector|
   @browser.execute_script("$('" + selector + "').click()");
 end
 
+
 When /^I press "([^"]*)" DOM using jQuery$/ do |selector|
   @browser.execute_script("$('" + selector + "').get(0).click()");
+
+When /^I press SVG selector "([^"]*)"$/ do |selector|
+  @browser.execute_script("$('" + selector + "').simulate('drag', function(){});")
 end
 
 When /^I press dropdown item "([^"]*)"$/ do |index|
-  @browser.execute_script("$('.goog-menuitem').eq(#{index}).simulate('drag', function(){})");
+  @browser.execute_script("$('.goog-menuitem').eq(#{index}).simulate('drag', function(){});")
 end
 
 When /^I press a button with xpath "([^"]*)"$/ do |xpath|

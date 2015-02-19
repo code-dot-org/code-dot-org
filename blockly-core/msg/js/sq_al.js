@@ -24,6 +24,7 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "e kuqe";
 Blockly.Msg.COLOUR_RGB_TITLE = "ngjyros me";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "Krijo një ngjyrë me sasinë e përcaktuar të të kuqes, të gjelbrës dhe blusë. Të gjitha vlerat duhet të jenë ndërmjet 0 dhe 100.";
+Blockly.Msg.CONTRACT_EDITOR_HEADER = "Receta Dizenjimit";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "dil nga një fazë përsëritëse";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "vazhdo me elementin tjetër të një faze përsëritëse";

@@ -268,7 +268,7 @@ EOS
     template_level.start_blocks = '<xml/>'
     template_level.save!
 
-    assert !template_level.project_template_level
+    assert_nil template_level.project_template_level
     assert_equal '<xml/>', template_level.start_blocks
 
     real_level1 = Blockly.create(name: 'level 1')
@@ -277,5 +277,4 @@ EOS
 
     assert_equal template_level, real_level1.project_template_level
   end
-  
 end

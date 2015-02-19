@@ -335,6 +335,8 @@
       %{student_name}'
   user:
     email_confirm_needed: 'Elektronska pošta ni bila potrjena:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Ponovno pošlji potrditvena navodila
     new_password_hint: (pusti prazno, če tega nočeš spremeniti)
     current_password_hint: (potrebujemo tvoje trenutno geslo, da potrdimo tvoje spremembe)

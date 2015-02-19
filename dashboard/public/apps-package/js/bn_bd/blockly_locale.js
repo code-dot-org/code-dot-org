@@ -24,6 +24,7 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "লাল";
 Blockly.Msg.COLOUR_RGB_TITLE = "রং করুন";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "লাল, সবুজ ও নীল নির্দিষ্ট পরিমান দিয়ে রঙ তৈরি করুন।  সব পরিমান  0 এবং 100 এর মাঝে হতে হবে।";
+Blockly.Msg.CONTRACT_EDITOR_HEADER = "Design Recipe";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "লুপ নংঘ্নন বিরতি";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "লুপ এর পরবর্তী পুনরাবৃত্তিতে অগ্রসর";

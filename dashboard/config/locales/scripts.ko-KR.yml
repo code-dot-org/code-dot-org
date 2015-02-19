@@ -355,6 +355,13 @@
           The Design Recipe: 디자인 레시피
         K5PD:
           Introduction to PD: Introduction to PD
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and
+            3
         netsim:
           title: Internet Simulator
           description_short: ''
@@ -365,3 +372,31 @@
           description_short: Create a story or make a game with Infinity Play Lab!!
           description: Create a story or make a game with Infinity Play Lab!
           Infinity: 무한
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: 유치원~중2(K-8) 학생들을 위한 컴퓨터과학(CS, 정보과학) 코스
+          description: 본 20시간 과정은 컴퓨터과학(정보과학)에서의 프로그래밍 기초 개념들을 소개합니다. 유치원~중2(K-8)
+            학생들을 대상으로 설계되어있지만, 연령에 상관없이 재미있게 배울 수 있습니다.
+          Introduction to Computer Science: 컴퓨터과학(Computer Science, 정보과학) 소개
+          The Maze: 미로 퍼즐
+          Computational Thinking: 컴퓨터과학적(정보과학적)사고
+          Graph Paper Programming: 모눈종이 프로그래밍
+          The Artist: The Artist
+          Algorithms: 알고리즘
+          The Artist 2: 예술가 퍼즐 2
+          Functions: 함수
+          The Farmer: 농부 퍼즐
+          Conditionals: 조건
+          The Artist 3: 예술가 퍼즐 3
+          Song Writing: 노래 만들기
+          The Farmer 2: 농부 퍼즐 2
+          Abstraction: 추상화
+          The Artist 4: 예술가 퍼즐 4
+          Relay Programming: 릴레이 프로그래밍
+          The Farmer 3: 농부 퍼즐 3
+          The Internet: 인터넷
+          The Artist 5: 예술가 퍼즐 5
+          Wrap-up: 마무리

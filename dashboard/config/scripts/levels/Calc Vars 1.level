@@ -7,7 +7,6 @@
   "properties": {
     "skin": "calc",
     "embed": "false",
-    "instructions": "Variables allow us to store values that we can then use repeatedly throughout our programs. Here's a variable called \"age\" - set it to  14 and click run.",
     "instructions": "Variables allow us to store values that we can then use repeatedly throughout our programs. Here's a variable called \"age\" - set its value to 14 and click run.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -15,7 +14,8 @@
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "true",
-    "free_play": "false"
+    "free_play": "false",
+    "callout_json": "[\r\n  {\"localization_key\":\"Calc Vars 1_edit_option\",\"callout_text\":\"Click on edit to open the function block editor\",\"element_id\":\"#callout_here\",\"on\":\"\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"left center\",\"at\":\"right center\"},\"style\":{\"classes\":\"\"}}}\r\n,  {\"localization_key\":\"Calc Vars1_edit_option\",\"callout_text\":\"use the drop down and select the age you want, then click on save and close\",\"element_id\":\"#callout_here1\",\"on\":\"function_editor_opened\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":66,\"y\":35},\"my\":\"top left\",\"at\":\"top left\"},\"style\":{\"classes\":\"\"}}}\r\n]"
   }
 }]]></config>
   <blocks>
@@ -23,7 +23,7 @@
       <xml>
         <block type="functional_compute" inline="false" deletable="false" movable="false">
           <functional_input name="ARG1">
-            <block type="functional_call" movable="false">
+            <block type="functional_call" movable="false" id="callout_here">
               <mutation name="age"/>
             </block>
           </functional_input>
@@ -35,7 +35,7 @@
           </mutation>
           <title name="NAME">age</title>
           <functional_input name="STACK">
-            <block type="functional_math_number_dropdown">
+            <block type="functional_math_number_dropdown" id="callout_here1">
               <title name="NUM" config="10,11,12,13,14,15">???</title>
             </block>
           </functional_input>

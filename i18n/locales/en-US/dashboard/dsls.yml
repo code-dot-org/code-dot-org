@@ -36,12 +36,14 @@ en:
         Type out the arithmetic expression that matches this code: crwdns24859:0crwdne24859:0
         Blocks to Math 1.blocks.start_blocks, 200: crwdns27797:0crwdne27797:0
         4 + 5: crwdns24861:0crwdne24861:0
+        (4+5): crwdns33887:0crwdne33887:0
         Type the arithmetic expression here: crwdns24862:0crwdne24862:0
       Blocks to Math 2:
         Convert Blocks to Math: crwdns24863:0crwdne24863:0
         Type out the arithmetic expression that matches this code: crwdns24864:0crwdne24864:0
         Blocks to Math 2.blocks.start_blocks, 200: crwdns27798:0crwdne27798:0
         7 * 6: crwdns24866:0crwdne24866:0
+        (7 * 6): crwdns33888:0crwdne33888:0
         Type the arithmetic expression here: crwdns24867:0crwdne24867:0
       Blocks to Math 3:
         Convert Blocks to Math: crwdns24868:0crwdne24868:0
@@ -49,6 +51,7 @@ en:
         Blocks to Math 3.blocks.start_blocks: crwdns27799:0crwdne27799:0
         (2 * 3) - (1 + 0): crwdns24871:0crwdne24871:0
         2 * 3 - (1 + 0): crwdns24872:0crwdne24872:0
+        ((2 * 3) - (1 + 0)): crwdns33889:0crwdne33889:0
         Type the arithmetic expression here: crwdns24873:0crwdne24873:0
       Blocks to Math 4:
         Convert Blocks to Math: crwdns24874:0crwdne24874:0
@@ -56,6 +59,7 @@ en:
         Blocks to Math 4.blocks.start_blocks: crwdns27800:0crwdne27800:0
         (5 + 8) - 12: crwdns24877:0crwdne24877:0
         5 + 8 - 12: crwdns24878:0crwdne24878:0
+        ((5 + 8) - 12): crwdns33890:0crwdne33890:0
         Type the arithmetic expression here: crwdns24879:0crwdne24879:0
       Blocks to Math 5:
         Convert Blocks to Math: crwdns24880:0crwdne24880:0
@@ -64,6 +68,7 @@ en:
         (-2) * (-6):
           - 
             2 * -6: crwdns24883:0crwdne24883:0
+        ((-2) * (-6)): crwdns33891:0crwdne33891:0
         Type the arithmetic expression here: crwdns24884:0crwdne24884:0
       Blocks to Math 6:
         Convert Blocks to Math: crwdns24885:0crwdne24885:0
@@ -73,12 +78,14 @@ en:
         ((4 - 1) * -2) + 12: crwdns24889:0crwdne24889:0
         (4 - 1) * (-2) + 12: crwdns24890:0crwdne24890:0
         (4 - 1) * -2 + 12: crwdns24891:0crwdne24891:0
+        ((4 - 1) * (-2)) + 12): crwdns33892:0crwdne33892:0
         Type the arithmetic expression here: crwdns24892:0crwdne24892:0
       Blocks to Math 7:
         Convert Blocks to Math: crwdns24893:0crwdne24893:0
         Type out the arithmetic expression that matches this code: crwdns24894:0crwdne24894:0
         Blocks to Math 7.blocks.start_blocks: crwdns27803:0crwdne27803:0
         10 / (2 * (3 + 1)): crwdns24896:0crwdne24896:0
+        (10 / (2 * (3 + 1)): crwdns33893:0crwdne33893:0
         Type the arithmetic expression here: crwdns24897:0crwdne24897:0
       text match test:
         Mathematical Expression Assessment: crwdns23416:0crwdne23416:0
@@ -90,23 +97,23 @@ en:
         Type the arithmetic expression here: crwdns23420:0crwdne23420:0
     contract_match:
       CREATING CONTRACTS FROM EXAMPLES 1:
-        CREATING CONTRACTS FROM EXAMPLES 1: crwdns27903:0crwdne27903:0
+        Big Triangle: crwdns33894:0crwdne33894:0
         Write a contract for a big red triangle that is 100 pixels in size: crwdns27904:0crwdne27904:0
         EXAMPLE 1.solution_blocks, 300: crwdns27905:0crwdne27905:0
         "Big Triangle|image|color:string|size:Number": crwdns27906:0crwdne27906:0
       Creating Contracts From Examples 2:
-        Creating Contracts From Examples 2: crwdns27907:0crwdne27907:0
+        Square Contract: crwdns33895:0crwdne33895:0
         Write a contract for a purple square that is 15 pixels in size.: crwdns27908:0crwdne27908:0
         Example 2.solution_blocks, 300: crwdns27909:0crwdne27909:0
         "Square|image|color:string|size:Number": crwdns27910:0crwdne27910:0
       Creating Contracts From Examples 3A:
-        Creating Contracts From Examples 3A: crwdns27911:0crwdne27911:0
+        Banner Contract: crwdns33896:0crwdne33896:0
         Banner Function block: crwdns27912:0crwdne27912:0
         Examples 3.solution_blocks, 300: crwdns27913:0crwdne27913:0
         "banner|image|text:string": crwdns27914:0crwdne27914:0
       Creating Contracts From Examples 4:
-        Creating Contracts From Examples 4: crwdns27915:0crwdne27915:0
-        Try using the "text" function to write this red text at size 40.: crwdns27916:0crwdne27916:0
+        Shrink Contract: crwdns33897:0crwdne33897:0
+        Try using the "shrink" function.: crwdns33898:0crwdne33898:0
         Examples 4.solution_blocks, 300: crwdns27917:0crwdne27917:0
         "shrink|image|image:image": crwdns27918:0crwdne27918:0
       Design Recipe 1.contract:
@@ -138,6 +145,21 @@ en:
         Write a contract for the scale function: crwdns27824:0crwdne27824:0
         Eval Contracts 4 A.solution_blocks, 300: crwdns27825:0crwdne27825:0
         "scale|image|factor:Number|image:image": crwdns27826:0crwdne27826:0
+      Eval Contracts B:
+        Star Contract: crwdns33899:0crwdne33899:0
+        Write a contract for the star function: crwdns33900:0crwdne33900:0
+        Eval Contracts 1 A.solution_blocks, 300: crwdns33901:0crwdne33901:0
+        "star|image|color:string|radius:Number|style:string": crwdns33902:0crwdne33902:0
+      Eval Contracts D:
+        Rotate Contract: crwdns33903:0crwdne33903:0
+        Write a contract for the rotate function: crwdns33904:0crwdne33904:0
+        Eval Contracts 2 A.solution_blocks, 300: crwdns33905:0crwdne33905:0
+        "rotate|image|degrees:Number|image:image": crwdns33906:0crwdne33906:0
+      Eval Contracts F:
+        Text Contract: crwdns33907:0crwdne33907:0
+        Write a contract for the text function: crwdns33908:0crwdne33908:0
+        Eval Contracts 3 A.solution_blocks, 300: crwdns33909:0crwdne33909:0
+        "text|image|color:string|size:Number|string:string": crwdns33910:0crwdne33910:0
       Eval Design Recipe 1.contract:
         Design Recipe 1 Contract: crwdns27827:0crwdne27827:0
         0: crwdns27828:0crwdne27828:0
@@ -149,3 +171,13 @@ en:
         0: crwdns27924:0crwdne27924:0
         1: crwdns27925:0crwdne27925:0
         "rocket-height|Number|seconds:Number": crwdns27926:0crwdne27926:0
+    external:
+      Pixelation 1:
+        Pixelation 1: crwdns33911:0crwdne33911:0
+        Create images with bits and bytes.: crwdns33912:0crwdne33912:0
+      Pixelation 2:
+        Pixelation 2: crwdns33913:0crwdne33913:0
+        Create images with bits and bytes.: crwdns33914:0crwdne33914:0
+      Pixelation 3:
+        Pixelation 3: crwdns33915:0crwdne33915:0
+        Create images with bits and bytes.: crwdns33916:0crwdne33916:0

@@ -1778,12 +1778,13 @@ Blockly.BlockSvg.prototype.renderDrawRightNextStatement_ = function(renderInfo, 
 Blockly.BlockSvg.prototype.renderDrawRightInline_ = function(renderInfo, inputRows, rowIndex, connectionsXY) {
   var row = inputRows[rowIndex];
   var hasFunctionalInput = false;
+  var align = row[0].align;
   if(row[0].type === Blockly.FUNCTIONAL_INPUT) {
     var widths = BS.SEP_SPACE_X * (row.length - 1);
     row.forEach(function(input) {
       widths += input.renderWidth
     });
-    if(inputRows.rightEdge > widths) {
+    if(inputRows.rightEdge > widths && align === Blockly.ALIGN_CENTRE) {
       renderInfo.curX = (inputRows.rightEdge - widths) / 2
     }
   }
@@ -12977,6 +12978,8 @@ Blockly.Mutator.prototype.dispose = function() {
 goog.provide("Blockly.Connection");
 goog.provide("Blockly.ConnectionDB");
 goog.require("Blockly.BlockSpace");
+goog.require("goog.array");
+goog.require("goog.string");
 var ROUNDED_NOTCH_PATHS = {left:"l 6,4 3,0 6,-4", leftHighlight:"l 6.5,4 2,0 6.5,-4", right:"l -6,4 -3,0 -6,-4"};
 var SQUARE_NOTCH_PATHS = {left:"l 0,5 15,0 0,-5", leftHighlight:"l 0,5 15,0 0,-5", right:"l 0,5 -15,0 0,-5"};
 Blockly.Connection = function(source, type) {
@@ -12986,7 +12989,8 @@ Blockly.Connection = function(source, type) {
   this.x_ = 0;
   this.y_ = 0;
   this.inDB_ = false;
-  this.dbList_ = this.sourceBlock_.blockSpace.connectionDBList
+  this.dbList_ = this.sourceBlock_.blockSpace.connectionDBList;
+  this.check_ = null
 };
 Blockly.Connection.prototype.isConnected_ = function() {
   return this.targetConnection !== null
@@ -13114,7 +13118,7 @@ Blockly.Connection.singleConnection_ = function(block, orphanBlock) {
   var connection = false;
   for(var x = 0;x < block.inputList.length;x++) {
     var thisConnection = block.inputList[x].connection;
-    if(thisConnection && (thisConnection.type == Blockly.INPUT_VALUE && orphanBlock.outputConnection.checkType_(thisConnection))) {
+    if(thisConnection && (thisConnection.type == Blockly.INPUT_VALUE && orphanBlock.outputConnection.checkAllowedConnectionType_(thisConnection))) {
       if(connection) {
         return null
       }
@@ -13220,8 +13224,11 @@ Blockly.Connection.prototype.unhighlight = function() {
   delete Blockly.Connection.highlightedPath_
 };
 Blockly.Connection.prototype.getNotchPaths = function() {
+  if(Blockly.Connection.NOTCH_PATHS_OVERRIDE) {
+    return Blockly.Connection.NOTCH_PATHS_OVERRIDE
+  }
   var constraints = this && this.check_ || [];
-  if(constraints.length === 1 && constraints[0] === "function") {
+  if(constraints.length === 1 && constraints[0] === Blockly.BlockValueType.FUNCTION) {
     return SQUARE_NOTCH_PATHS
   }
   return ROUNDED_NOTCH_PATHS
@@ -13283,7 +13290,7 @@ Blockly.Connection.prototype.closest = function(maxLimit, dx, dy) {
         return true
       }
     }
-    if(!thisConnection.checkType_(connection)) {
+    if(!thisConnection.checkAllowedConnectionType_(connection)) {
       return true
     }
     do {
@@ -13309,16 +13316,22 @@ Blockly.Connection.prototype.closest = function(maxLimit, dx, dy) {
   }
   return{connection:closestConnection, radius:maxLimit}
 };
-Blockly.Connection.prototype.checkType_ = function(otherConnection) {
-  if(!this.check_ || !otherConnection.check_) {
+Blockly.Connection.prototype.checkAllowedConnectionType_ = function(otherConnection) {
+  if(this.acceptsAnyType() || otherConnection.acceptsAnyType()) {
     return true
   }
   for(var x = 0;x < this.check_.length;x++) {
-    if(otherConnection.check_.indexOf(this.check_[x]) != -1) {
+    if(otherConnection.acceptsType_(this.check_[x])) {
       return true
     }
   }
   return false
+};
+Blockly.Connection.prototype.acceptsAnyType = function() {
+  return!this.check_ || this.acceptsType_(Blockly.BlockValueType.NONE)
+};
+Blockly.Connection.prototype.acceptsType_ = function(type) {
+  return!this.check_ || goog.array.contains(this.check_, type)
 };
 Blockly.Connection.prototype.setCheck = function(check) {
   if(check) {
@@ -13326,7 +13339,11 @@ Blockly.Connection.prototype.setCheck = function(check) {
       check = [check]
     }
     this.check_ = check;
-    if(this.targetConnection && !this.checkType_(this.targetConnection)) {
+    var legacyTypeFound = Blockly.Connection.findLegacyType_(check);
+    if(legacyTypeFound) {
+      throw"Legacy type format found: " + legacyTypeFound;
+    }
+    if(this.targetConnection && !this.checkAllowedConnectionType_(this.targetConnection)) {
       if(this.isSuperior()) {
         this.targetBlock().setParent(null)
       }else {
@@ -13338,6 +13355,22 @@ Blockly.Connection.prototype.setCheck = function(check) {
     this.check_ = null
   }
   return this
+};
+Blockly.Connection.findLegacyType_ = function(checkArray) {
+  if(!checkArray) {
+    return false
+  }
+  for(var i = 0;i < checkArray.length;i++) {
+    var type = checkArray[i];
+    if(Blockly.Connection.isLegacyType_(type)) {
+      return type
+    }
+  }
+  return null
+};
+Blockly.Connection.isLegacyType_ = function(type) {
+  var startsWithLowercase = /^[a-z]/.test(type);
+  return startsWithLowercase
 };
 Blockly.Connection.prototype.neighbours_ = function(maxLimit) {
   var oppositeType = Blockly.OPPOSITE_TYPE[this.type];
@@ -15064,7 +15097,7 @@ Blockly.Block.prototype.setFunctionalOutput = function(hasOutput, opt_check) {
   }
 };
 Blockly.Block.prototype.changeFunctionalOutput = function(newType) {
-  this.setHSV.apply(this, Blockly.ContractEditor.typesToColorsHSV[newType]);
+  this.setHSV.apply(this, Blockly.FunctionalTypeColors[newType]);
   this.previousConnection = this.previousConnection || new Blockly.Connection(this, Blockly.FUNCTIONAL_OUTPUT);
   this.previousConnection.setCheck(newType);
   if(this.rendered) {
@@ -18934,6 +18967,11 @@ Blockly.FunctionEditor = function() {
 };
 Blockly.FunctionEditor.prototype.definitionBlockType = "procedures_defnoreturn";
 Blockly.FunctionEditor.prototype.parameterBlockType = "parameters_get";
+Blockly.FunctionEditor.prototype.openWithLevelConfiguration = function(levelConfig) {
+  if(levelConfig.openFunctionDefinition) {
+    this.openAndEditFunction(levelConfig.openFunctionDefinition)
+  }
+};
 Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
   var targetFunctionDefinitionBlock = Blockly.mainBlockSpace.findFunction(functionName);
   if(!targetFunctionDefinitionBlock) {
@@ -19152,12 +19190,12 @@ Blockly.FunctionEditor.prototype.create_ = function() {
 Blockly.FunctionEditor.prototype.calculateMetrics_ = function() {
   var metrics = Blockly.mainBlockSpace.getMetrics();
   metrics.absoluteLeft += FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH + 1;
-  metrics.absoluteTop += this.getBlockSpaceEditorTopOffset();
+  metrics.absoluteTop += this.getBlockSpaceEditorToScreenTop_();
   metrics.viewWidth -= (FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH) * 2;
   metrics.viewHeight -= FRAME_MARGIN_TOP + Blockly.Bubble.BORDER_WIDTH + this.getWindowBorderChromeHeight();
   return metrics
 };
-Blockly.FunctionEditor.prototype.getBlockSpaceEditorTopOffset = function() {
+Blockly.FunctionEditor.prototype.getBlockSpaceEditorToScreenTop_ = function() {
   return this.getWindowBorderChromeHeight() + this.getContractDivHeight()
 };
 Blockly.FunctionEditor.prototype.getWindowBorderChromeHeight = function() {
@@ -19219,10 +19257,20 @@ Blockly.FunctionEditor.prototype.position_ = function() {
     this.frameInner_.setAttribute("x", FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH + 1);
     this.frameText_.setAttribute("x", width - 2 * FRAME_MARGIN_SIDE)
   }
-  this.contractDiv_.style.width = width + "px";
+  this.positionSizeContractDom_();
   this.closeButton_.setAttribute("transform", "translate(" + (Blockly.RTL ? 5 : metrics.absoluteLeft + metrics.viewWidth + 14 - this.closeButton_.firstElementChild.getAttribute("width")) + ",19)");
   this.modalBlockSpaceEditor.svgResize();
   this.layOutBlockSpaceItems_()
+};
+Blockly.FunctionEditor.prototype.positionSizeContractDom_ = function() {
+  var metrics = this.modalBlockSpace.getMetrics();
+  var left = metrics.absoluteLeft;
+  this.contractDiv_.style.left = left + "px";
+  this.contractDiv_.style.top = this.getContractDomTopY_() + "px";
+  this.contractDiv_.style.width = metrics.viewWidth + "px"
+};
+Blockly.FunctionEditor.prototype.getContractDomTopY_ = function() {
+  return this.getWindowBorderChromeHeight()
 };
 Blockly.FunctionEditor.prototype.createContractDom_ = function() {
   this.contractDiv_ = goog.dom.createDom("div", "blocklyToolboxDiv paramToolbox blocklyText");
@@ -19233,32 +19281,122 @@ Blockly.FunctionEditor.prototype.createContractDom_ = function() {
   if(!Blockly.disableParamEditing) {
     this.contractDiv_.innerHTML += "<div>" + Blockly.Msg.FUNCTION_PARAMETERS_LABEL + "</div>" + '<div><input id="paramAddText" type="text" style="width: 200px;"> ' + '<button id="paramAddButton" class="btn">' + Blockly.Msg.ADD_PARAMETER + "</button>"
   }
-  var metrics = this.modalBlockSpace.getMetrics();
-  var left = metrics.absoluteLeft;
-  this.contractDiv_.style.left = left + "px";
-  this.contractDiv_.style.top = metrics.absoluteTop + "px";
-  this.contractDiv_.style.width = metrics.viewWidth + "px";
+  this.positionSizeContractDom_();
   this.contractDiv_.style.display = "block";
   this.container_.insertBefore(this.contractDiv_, this.container_.firstChild)
 };
+goog.provide("Blockly.BlockValueType");
+Blockly.BlockValueType = {NONE:"None", STRING:"String", NUMBER:"Number", IMAGE:"Image", BOOLEAN:"Boolean", FUNCTION:"Function", COLOUR:"Colour", ARRAY:"Array"};
+goog.provide("Blockly.FunctionalBlockUtils");
+goog.provide("Blockly.FunctionalTypeColors");
+goog.require("Blockly.BlockValueType");
+var typesToColors = {};
+typesToColors[Blockly.BlockValueType.NONE] = [0, 0, 0.6];
+typesToColors[Blockly.BlockValueType.NUMBER] = [192, 1, 0.99];
+typesToColors[Blockly.BlockValueType.STRING] = [180, 1, 0.6];
+typesToColors[Blockly.BlockValueType.IMAGE] = [285, 1, 0.8];
+typesToColors[Blockly.BlockValueType.BOOLEAN] = [90, 1, 0.4];
+Blockly.FunctionalTypeColors = typesToColors;
+Blockly.FunctionalBlockUtils.initTitledFunctionalBlock = function(block, title, type, args, wrapWidth) {
+  block.setFunctional(true, {headerHeight:30});
+  block.setHSV.apply(block, Blockly.FunctionalTypeColors[type]);
+  var options = {fixedSize:{height:35}};
+  block.appendDummyInput().appendTitle(new Blockly.FieldLabel(title, options)).setAlign(Blockly.ALIGN_CENTRE);
+  for(var i = 0;i < args.length;i++) {
+    var arg = args[i];
+    var input = block.appendFunctionalInput(arg.name);
+    var wrapNextArg = wrapWidth && i % wrapWidth === 0;
+    input.setInline(i > 0 && !wrapNextArg);
+    if(arg.type === Blockly.BlockValueType.NONE) {
+      input.setHSV(0, 0, 0.99)
+    }else {
+      input.setHSV.apply(input, Blockly.FunctionalTypeColors[arg.type]);
+      input.setCheck(arg.type)
+    }
+    input.setAlign(Blockly.ALIGN_CENTRE)
+  }
+  if(type === Blockly.BlockValueType.NONE) {
+    block.setFunctionalOutput(false)
+  }else {
+    block.setFunctionalOutput(true, type)
+  }
+};
+Blockly.FunctionalBlockUtils.installFunctionalApiCallBlock = function(blockly, generator, options) {
+  var blockName = options.blockName;
+  var blockTitle = options.blockTitle;
+  var apiName = options.apiName;
+  var args = options.args;
+  var blockArgs = args.filter(function(arg) {
+    return arg.constantValue === undefined
+  });
+  var blockType = "none";
+  blockly.Blocks[blockName] = {init:function() {
+    Blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, blockTitle, blockType, blockArgs)
+  }};
+  generator[blockName] = function() {
+    if(!apiName) {
+      return""
+    }
+    var apiArgs = [];
+    apiArgs.push("'block_id_" + this.id + "'");
+    for(var i = 0;i < args.length;i++) {
+      var arg = args[i];
+      var value = arg.constantValue !== undefined ? arg.constantValue : Blockly.JavaScript.statementToCode(this, arg.name, false) || arg["default"];
+      apiArgs.push(value)
+    }
+    return apiName + "(" + apiArgs.join(",") + ");\n"
+  }
+};
+Blockly.FunctionalBlockUtils.installStringPicker = function(blockly, generator, options) {
+  var values = options.values;
+  var blockName = options.blockName;
+  blockly.Blocks[blockName] = {init:function() {
+    this.setFunctional(true, {headerHeight:0, rowBuffer:3});
+    this.setHSV.apply(this, Blockly.FunctionalTypeColors[Blockly.BlockValueType.STRING]);
+    this.appendDummyInput().appendTitle(new Blockly.FieldLabel('"')).appendTitle(new blockly.FieldDropdown(values), "VAL").appendTitle(new Blockly.FieldLabel('"')).setAlign(Blockly.ALIGN_CENTRE);
+    this.setFunctionalOutput(true, blockly.BlockValueType.STRING)
+  }};
+  generator[blockName] = function() {
+    return blockly.JavaScript.quote_(this.getTitleValue("VAL"))
+  }
+};
+goog.provide("Blockly.SvgHighlightBox");
+Blockly.SvgHighlightBox = function(parent, opt_options) {
+  opt_options = opt_options || {};
+  var color = opt_options.color || "#000";
+  var thickness = opt_options.thickness || "30";
+  var extraStyle = "pointer-events: none;";
+  this.svgGroup_ = Blockly.createSvgElement("g", {style:extraStyle}, parent);
+  this.highlightRectangle_ = Blockly.createSvgElement("rect", {"fill":"none", "stroke-width":thickness, "stroke":color}, this.svgGroup_)
+};
+Blockly.SvgHighlightBox.prototype.setPositionSize = function(yOffset, width, height) {
+  this.svgGroup_.setAttribute("transform", "translate(" + 0 + "," + yOffset + ")");
+  this.highlightRectangle_.setAttribute("width", width);
+  this.highlightRectangle_.setAttribute("height", height)
+};
 goog.provide("Blockly.ContractEditorSectionView");
+var DOWN_TRIANGLE_CHARACTER = "\u25bc";
+var RIGHT_TRIANGLE_CHARACTER = "\u25b6";
+var DARK_GRAY_HEX = "#898989";
+var YELLOW_HEX = "#ffa400";
+var HIGHLIGHT_BOX_WIDTH = 10;
+var DEFAULT_HEADER_HEIGHT = 50;
 Blockly.ContractEditorSectionView = function(canvas, opt_options) {
   this.headerText_ = opt_options.headerText;
   this.onCollapseCallback_ = opt_options.onCollapseCallback;
   this.placeContentCallback = opt_options.placeContentCallback;
-  this.headerHeight = opt_options.headerHeight || Blockly.ContractEditorSectionView.DEFAULT_HEADER_HEIGHT;
-  this.header = new Blockly.SvgHeader(canvas, {headerText:this.textForCurrentState_(), onMouseDown:goog.bind(this.toggleCollapse, this), backgroundColor:Blockly.ContractEditorSectionView.DARK_GRAY_HEX});
-  this.collapsed_ = false
+  this.headerHeight = opt_options.headerHeight || DEFAULT_HEADER_HEIGHT;
+  this.highlightBox_ = opt_options.highlightBox || null;
+  this.highlighted_ = false;
+  this.header_ = new Blockly.SvgHeader(canvas, {headerText:this.textForCurrentState_(), onMouseDown:goog.bind(this.toggleCollapse, this), backgroundColor:DARK_GRAY_HEX});
+  this.collapsed_ = false;
+  this.showHeader_ = true
 };
-Blockly.ContractEditorSectionView.DOWN_TRIANGLE_CHARACTER = "\u25bc";
-Blockly.ContractEditorSectionView.RIGHT_TRIANGLE_CHARACTER = "\u25b6";
-Blockly.ContractEditorSectionView.DARK_GRAY_HEX = "#898989";
-Blockly.ContractEditorSectionView.DEFAULT_HEADER_HEIGHT = 50;
 Blockly.ContractEditorSectionView.prototype.textForCurrentState_ = function() {
   if(!this.onCollapseCallback_) {
     return this.headerText_
   }
-  var arrow = this.collapsed_ ? Blockly.ContractEditorSectionView.RIGHT_TRIANGLE_CHARACTER : Blockly.ContractEditorSectionView.DOWN_TRIANGLE_CHARACTER;
+  var arrow = this.collapsed_ ? RIGHT_TRIANGLE_CHARACTER : DOWN_TRIANGLE_CHARACTER;
   return arrow + " " + this.headerText_
 };
 Blockly.ContractEditorSectionView.prototype.toggleCollapse = function() {
@@ -19269,18 +19407,428 @@ Blockly.ContractEditorSectionView.prototype.setCollapsed_ = function(isCollapsed
   if(this.onCollapseCallback_) {
     this.onCollapseCallback_(this.collapsed_)
   }
-  this.header.setText(this.textForCurrentState_())
+  this.header_.setText(this.textForCurrentState_())
+};
+Blockly.ContractEditorSectionView.prototype.hideCompletely = function() {
+  this.setCollapsed_(true);
+  this.setHeaderVisible(false)
+};
+Blockly.ContractEditorSectionView.prototype.showHeaderAndExpand = function() {
+  this.setCollapsed_(false);
+  this.setHeaderVisible(true)
+};
+Blockly.ContractEditorSectionView.prototype.setHighlighted = function(highlighted) {
+  this.highlighted_ = highlighted
+};
+Blockly.ContractEditorSectionView.prototype.setHeaderVisible = function(showHeader) {
+  this.showHeader_ = showHeader
 };
 Blockly.ContractEditorSectionView.prototype.placeAndGetNewY = function(currentY, width) {
-  this.header.setPositionSize(currentY, width, this.headerHeight);
-  currentY += this.headerHeight;
-  if(this.collapsed_) {
-    return currentY
+  var startY = currentY;
+  this.header_.setVisible(this.showHeader_);
+  if(this.showHeader_) {
+    this.header_.setPositionSize(currentY, width, this.headerHeight);
+    currentY += this.headerHeight
   }
-  if(this.placeContentCallback) {
-    currentY += this.placeContentCallback(currentY)
+  if(!this.collapsed_) {
+    currentY = this.placeAndGetNewYInnerSegment_(currentY)
+  }
+  if(this.highlighted_) {
+    this.highlightBox_.setPositionSize(startY, width, currentY - startY)
   }
   return currentY
+};
+Blockly.ContractEditorSectionView.prototype.placeAndGetNewYInnerSegment_ = function(currentY) {
+  if(this.placeContentCallback) {
+    currentY = this.placeContentCallback(currentY)
+  }
+  return currentY
+};
+goog.provide("Blockly.SvgHeader");
+var TEXT_PADDING_LEFT = "10";
+Blockly.SvgHeader = function(parent, opt_options) {
+  var options = opt_options || {backgroundColor:"#000", headerText:"Default Header"};
+  var extraStyle = options.onMouseDown ? "" : "pointer-events: none;";
+  this.svgGroup_ = Blockly.createSvgElement("g", {style:extraStyle}, parent, {belowExisting:true});
+  this.grayRectangleElement_ = Blockly.createSvgElement("rect", {"fill":options.backgroundColor, "style":extraStyle}, this.svgGroup_);
+  this.textElement_ = Blockly.createSvgElement("text", {"class":"contractEditorHeaderText", "style":extraStyle}, this.svgGroup_);
+  if(options.headerText) {
+    this.textElement_.textContent = options.headerText
+  }
+  if(options.onMouseDown) {
+    Blockly.bindEvent_(this.svgGroup_, "mousedown", null, options.onMouseDown)
+  }
+};
+Blockly.SvgHeader.prototype.setPositionSize = function(yOffset, width, height) {
+  this.svgGroup_.setAttribute("transform", "translate(" + 0 + "," + yOffset + ")");
+  this.grayRectangleElement_.setAttribute("width", width);
+  this.grayRectangleElement_.setAttribute("height", height);
+  this.textElement_.setAttribute("x", TEXT_PADDING_LEFT);
+  var rectangleMiddleY = height / 2;
+  var thirdTextHeight = this.textElement_.getBBox().height / 3;
+  this.textElement_.setAttribute("y", rectangleMiddleY + thirdTextHeight)
+};
+Blockly.SvgHeader.prototype.setText = function(text) {
+  this.textElement_.textContent = text
+};
+Blockly.SvgHeader.prototype.setVisible = function(visible) {
+  goog.style.showElement(this.svgGroup_, visible)
+};
+Blockly.SvgHeader.prototype.removeSelf = function() {
+  goog.dom.removeNode(this.svgGroup_)
+};
+goog.provide("goog.color.names");
+goog.color.names = {"aliceblue":"#f0f8ff", "antiquewhite":"#faebd7", "aqua":"#00ffff", "aquamarine":"#7fffd4", "azure":"#f0ffff", "beige":"#f5f5dc", "bisque":"#ffe4c4", "black":"#000000", "blanchedalmond":"#ffebcd", "blue":"#0000ff", "blueviolet":"#8a2be2", "brown":"#a52a2a", "burlywood":"#deb887", "cadetblue":"#5f9ea0", "chartreuse":"#7fff00", "chocolate":"#d2691e", "coral":"#ff7f50", "cornflowerblue":"#6495ed", "cornsilk":"#fff8dc", "crimson":"#dc143c", "cyan":"#00ffff", "darkblue":"#00008b", "darkcyan":"#008b8b", 
+"darkgoldenrod":"#b8860b", "darkgray":"#a9a9a9", "darkgreen":"#006400", "darkgrey":"#a9a9a9", "darkkhaki":"#bdb76b", "darkmagenta":"#8b008b", "darkolivegreen":"#556b2f", "darkorange":"#ff8c00", "darkorchid":"#9932cc", "darkred":"#8b0000", "darksalmon":"#e9967a", "darkseagreen":"#8fbc8f", "darkslateblue":"#483d8b", "darkslategray":"#2f4f4f", "darkslategrey":"#2f4f4f", "darkturquoise":"#00ced1", "darkviolet":"#9400d3", "deeppink":"#ff1493", "deepskyblue":"#00bfff", "dimgray":"#696969", "dimgrey":"#696969", 
+"dodgerblue":"#1e90ff", "firebrick":"#b22222", "floralwhite":"#fffaf0", "forestgreen":"#228b22", "fuchsia":"#ff00ff", "gainsboro":"#dcdcdc", "ghostwhite":"#f8f8ff", "gold":"#ffd700", "goldenrod":"#daa520", "gray":"#808080", "green":"#008000", "greenyellow":"#adff2f", "grey":"#808080", "honeydew":"#f0fff0", "hotpink":"#ff69b4", "indianred":"#cd5c5c", "indigo":"#4b0082", "ivory":"#fffff0", "khaki":"#f0e68c", "lavender":"#e6e6fa", "lavenderblush":"#fff0f5", "lawngreen":"#7cfc00", "lemonchiffon":"#fffacd", 
+"lightblue":"#add8e6", "lightcoral":"#f08080", "lightcyan":"#e0ffff", "lightgoldenrodyellow":"#fafad2", "lightgray":"#d3d3d3", "lightgreen":"#90ee90", "lightgrey":"#d3d3d3", "lightpink":"#ffb6c1", "lightsalmon":"#ffa07a", "lightseagreen":"#20b2aa", "lightskyblue":"#87cefa", "lightslategray":"#778899", "lightslategrey":"#778899", "lightsteelblue":"#b0c4de", "lightyellow":"#ffffe0", "lime":"#00ff00", "limegreen":"#32cd32", "linen":"#faf0e6", "magenta":"#ff00ff", "maroon":"#800000", "mediumaquamarine":"#66cdaa", 
+"mediumblue":"#0000cd", "mediumorchid":"#ba55d3", "mediumpurple":"#9370db", "mediumseagreen":"#3cb371", "mediumslateblue":"#7b68ee", "mediumspringgreen":"#00fa9a", "mediumturquoise":"#48d1cc", "mediumvioletred":"#c71585", "midnightblue":"#191970", "mintcream":"#f5fffa", "mistyrose":"#ffe4e1", "moccasin":"#ffe4b5", "navajowhite":"#ffdead", "navy":"#000080", "oldlace":"#fdf5e6", "olive":"#808000", "olivedrab":"#6b8e23", "orange":"#ffa500", "orangered":"#ff4500", "orchid":"#da70d6", "palegoldenrod":"#eee8aa", 
+"palegreen":"#98fb98", "paleturquoise":"#afeeee", "palevioletred":"#db7093", "papayawhip":"#ffefd5", "peachpuff":"#ffdab9", "peru":"#cd853f", "pink":"#ffc0cb", "plum":"#dda0dd", "powderblue":"#b0e0e6", "purple":"#800080", "red":"#ff0000", "rosybrown":"#bc8f8f", "royalblue":"#4169e1", "saddlebrown":"#8b4513", "salmon":"#fa8072", "sandybrown":"#f4a460", "seagreen":"#2e8b57", "seashell":"#fff5ee", "sienna":"#a0522d", "silver":"#c0c0c0", "skyblue":"#87ceeb", "slateblue":"#6a5acd", "slategray":"#708090", 
+"slategrey":"#708090", "snow":"#fffafa", "springgreen":"#00ff7f", "steelblue":"#4682b4", "tan":"#d2b48c", "teal":"#008080", "thistle":"#d8bfd8", "tomato":"#ff6347", "turquoise":"#40e0d0", "violet":"#ee82ee", "wheat":"#f5deb3", "white":"#ffffff", "whitesmoke":"#f5f5f5", "yellow":"#ffff00", "yellowgreen":"#9acd32"};
+goog.provide("goog.color");
+goog.provide("goog.color.Hsl");
+goog.provide("goog.color.Hsv");
+goog.provide("goog.color.Rgb");
+goog.require("goog.color.names");
+goog.require("goog.math");
+goog.color.Rgb;
+goog.color.Hsv;
+goog.color.Hsl;
+goog.color.parse = function(str) {
+  var result = {};
+  str = String(str);
+  var maybeHex = goog.color.prependHashIfNecessaryHelper(str);
+  if(goog.color.isValidHexColor_(maybeHex)) {
+    result.hex = goog.color.normalizeHex(maybeHex);
+    result.type = "hex";
+    return result
+  }else {
+    var rgb = goog.color.isValidRgbColor_(str);
+    if(rgb.length) {
+      result.hex = goog.color.rgbArrayToHex(rgb);
+      result.type = "rgb";
+      return result
+    }else {
+      if(goog.color.names) {
+        var hex = goog.color.names[str.toLowerCase()];
+        if(hex) {
+          result.hex = hex;
+          result.type = "named";
+          return result
+        }
+      }
+    }
+  }
+  throw Error(str + " is not a valid color string");
+};
+goog.color.isValidColor = function(str) {
+  var maybeHex = goog.color.prependHashIfNecessaryHelper(str);
+  return!!(goog.color.isValidHexColor_(maybeHex) || (goog.color.isValidRgbColor_(str).length || goog.color.names && goog.color.names[str.toLowerCase()]))
+};
+goog.color.parseRgb = function(str) {
+  var rgb = goog.color.isValidRgbColor_(str);
+  if(!rgb.length) {
+    throw Error(str + " is not a valid RGB color");
+  }
+  return rgb
+};
+goog.color.hexToRgbStyle = function(hexColor) {
+  return goog.color.rgbStyle_(goog.color.hexToRgb(hexColor))
+};
+goog.color.hexTripletRe_ = /#(.)(.)(.)/;
+goog.color.normalizeHex = function(hexColor) {
+  if(!goog.color.isValidHexColor_(hexColor)) {
+    throw Error("'" + hexColor + "' is not a valid hex color");
+  }
+  if(hexColor.length == 4) {
+    hexColor = hexColor.replace(goog.color.hexTripletRe_, "#$1$1$2$2$3$3")
+  }
+  return hexColor.toLowerCase()
+};
+goog.color.hexToRgb = function(hexColor) {
+  hexColor = goog.color.normalizeHex(hexColor);
+  var r = parseInt(hexColor.substr(1, 2), 16);
+  var g = parseInt(hexColor.substr(3, 2), 16);
+  var b = parseInt(hexColor.substr(5, 2), 16);
+  return[r, g, b]
+};
+goog.color.rgbToHex = function(r, g, b) {
+  r = Number(r);
+  g = Number(g);
+  b = Number(b);
+  if(isNaN(r) || (r < 0 || (r > 255 || (isNaN(g) || (g < 0 || (g > 255 || (isNaN(b) || (b < 0 || b > 255)))))))) {
+    throw Error('"(' + r + "," + g + "," + b + '") is not a valid RGB color');
+  }
+  var hexR = goog.color.prependZeroIfNecessaryHelper(r.toString(16));
+  var hexG = goog.color.prependZeroIfNecessaryHelper(g.toString(16));
+  var hexB = goog.color.prependZeroIfNecessaryHelper(b.toString(16));
+  return"#" + hexR + hexG + hexB
+};
+goog.color.rgbArrayToHex = function(rgb) {
+  return goog.color.rgbToHex(rgb[0], rgb[1], rgb[2])
+};
+goog.color.rgbToHsl = function(r, g, b) {
+  var normR = r / 255;
+  var normG = g / 255;
+  var normB = b / 255;
+  var max = Math.max(normR, normG, normB);
+  var min = Math.min(normR, normG, normB);
+  var h = 0;
+  var s = 0;
+  var l = 0.5 * (max + min);
+  if(max != min) {
+    if(max == normR) {
+      h = 60 * (normG - normB) / (max - min)
+    }else {
+      if(max == normG) {
+        h = 60 * (normB - normR) / (max - min) + 120
+      }else {
+        if(max == normB) {
+          h = 60 * (normR - normG) / (max - min) + 240
+        }
+      }
+    }
+    if(0 < l && l <= 0.5) {
+      s = (max - min) / (2 * l)
+    }else {
+      s = (max - min) / (2 - 2 * l)
+    }
+  }
+  return[Math.round(h + 360) % 360, s, l]
+};
+goog.color.rgbArrayToHsl = function(rgb) {
+  return goog.color.rgbToHsl(rgb[0], rgb[1], rgb[2])
+};
+goog.color.hueToRgb_ = function(v1, v2, vH) {
+  if(vH < 0) {
+    vH += 1
+  }else {
+    if(vH > 1) {
+      vH -= 1
+    }
+  }
+  if(6 * vH < 1) {
+    return v1 + (v2 - v1) * 6 * vH
+  }else {
+    if(2 * vH < 1) {
+      return v2
+    }else {
+      if(3 * vH < 2) {
+        return v1 + (v2 - v1) * (2 / 3 - vH) * 6
+      }
+    }
+  }
+  return v1
+};
+goog.color.hslToRgb = function(h, s, l) {
+  var r = 0;
+  var g = 0;
+  var b = 0;
+  var normH = h / 360;
+  if(s == 0) {
+    r = g = b = l * 255
+  }else {
+    var temp1 = 0;
+    var temp2 = 0;
+    if(l < 0.5) {
+      temp2 = l * (1 + s)
+    }else {
+      temp2 = l + s - s * l
+    }
+    temp1 = 2 * l - temp2;
+    r = 255 * goog.color.hueToRgb_(temp1, temp2, normH + 1 / 3);
+    g = 255 * goog.color.hueToRgb_(temp1, temp2, normH);
+    b = 255 * goog.color.hueToRgb_(temp1, temp2, normH - 1 / 3)
+  }
+  return[Math.round(r), Math.round(g), Math.round(b)]
+};
+goog.color.hslArrayToRgb = function(hsl) {
+  return goog.color.hslToRgb(hsl[0], hsl[1], hsl[2])
+};
+goog.color.validHexColorRe_ = /^#(?:[0-9a-f]{3}){1,2}$/i;
+goog.color.isValidHexColor_ = function(str) {
+  return goog.color.validHexColorRe_.test(str)
+};
+goog.color.normalizedHexColorRe_ = /^#[0-9a-f]{6}$/;
+goog.color.isNormalizedHexColor_ = function(str) {
+  return goog.color.normalizedHexColorRe_.test(str)
+};
+goog.color.rgbColorRe_ = /^(?:rgb)?\((0|[1-9]\d{0,2}),\s?(0|[1-9]\d{0,2}),\s?(0|[1-9]\d{0,2})\)$/i;
+goog.color.isValidRgbColor_ = function(str) {
+  var regExpResultArray = str.match(goog.color.rgbColorRe_);
+  if(regExpResultArray) {
+    var r = Number(regExpResultArray[1]);
+    var g = Number(regExpResultArray[2]);
+    var b = Number(regExpResultArray[3]);
+    if(r >= 0 && (r <= 255 && (g >= 0 && (g <= 255 && (b >= 0 && b <= 255))))) {
+      return[r, g, b]
+    }
+  }
+  return[]
+};
+goog.color.prependZeroIfNecessaryHelper = function(hex) {
+  return hex.length == 1 ? "0" + hex : hex
+};
+goog.color.prependHashIfNecessaryHelper = function(str) {
+  return str.charAt(0) == "#" ? str : "#" + str
+};
+goog.color.rgbStyle_ = function(rgb) {
+  return"rgb(" + rgb.join(",") + ")"
+};
+goog.color.hsvToRgb = function(h, s, brightness) {
+  var red = 0;
+  var green = 0;
+  var blue = 0;
+  if(s == 0) {
+    red = brightness;
+    green = brightness;
+    blue = brightness
+  }else {
+    var sextant = Math.floor(h / 60);
+    var remainder = h / 60 - sextant;
+    var val1 = brightness * (1 - s);
+    var val2 = brightness * (1 - s * remainder);
+    var val3 = brightness * (1 - s * (1 - remainder));
+    switch(sextant) {
+      case 1:
+        red = val2;
+        green = brightness;
+        blue = val1;
+        break;
+      case 2:
+        red = val1;
+        green = brightness;
+        blue = val3;
+        break;
+      case 3:
+        red = val1;
+        green = val2;
+        blue = brightness;
+        break;
+      case 4:
+        red = val3;
+        green = val1;
+        blue = brightness;
+        break;
+      case 5:
+        red = brightness;
+        green = val1;
+        blue = val2;
+        break;
+      case 6:
+      ;
+      case 0:
+        red = brightness;
+        green = val3;
+        blue = val1;
+        break
+    }
+  }
+  return[Math.floor(red), Math.floor(green), Math.floor(blue)]
+};
+goog.color.rgbToHsv = function(red, green, blue) {
+  var max = Math.max(Math.max(red, green), blue);
+  var min = Math.min(Math.min(red, green), blue);
+  var hue;
+  var saturation;
+  var value = max;
+  if(min == max) {
+    hue = 0;
+    saturation = 0
+  }else {
+    var delta = max - min;
+    saturation = delta / max;
+    if(red == max) {
+      hue = (green - blue) / delta
+    }else {
+      if(green == max) {
+        hue = 2 + (blue - red) / delta
+      }else {
+        hue = 4 + (red - green) / delta
+      }
+    }
+    hue *= 60;
+    if(hue < 0) {
+      hue += 360
+    }
+    if(hue > 360) {
+      hue -= 360
+    }
+  }
+  return[hue, saturation, value]
+};
+goog.color.rgbArrayToHsv = function(rgb) {
+  return goog.color.rgbToHsv(rgb[0], rgb[1], rgb[2])
+};
+goog.color.hsvArrayToRgb = function(hsv) {
+  return goog.color.hsvToRgb(hsv[0], hsv[1], hsv[2])
+};
+goog.color.hexToHsl = function(hex) {
+  var rgb = goog.color.hexToRgb(hex);
+  return goog.color.rgbToHsl(rgb[0], rgb[1], rgb[2])
+};
+goog.color.hslToHex = function(h, s, l) {
+  return goog.color.rgbArrayToHex(goog.color.hslToRgb(h, s, l))
+};
+goog.color.hslArrayToHex = function(hsl) {
+  return goog.color.rgbArrayToHex(goog.color.hslToRgb(hsl[0], hsl[1], hsl[2]))
+};
+goog.color.hexToHsv = function(hex) {
+  return goog.color.rgbArrayToHsv(goog.color.hexToRgb(hex))
+};
+goog.color.hsvToHex = function(h, s, v) {
+  return goog.color.rgbArrayToHex(goog.color.hsvToRgb(h, s, v))
+};
+goog.color.hsvArrayToHex = function(hsv) {
+  return goog.color.hsvToHex(hsv[0], hsv[1], hsv[2])
+};
+goog.color.hslDistance = function(hsl1, hsl2) {
+  var sl1, sl2;
+  if(hsl1[2] <= 0.5) {
+    sl1 = hsl1[1] * hsl1[2]
+  }else {
+    sl1 = hsl1[1] * (1 - hsl1[2])
+  }
+  if(hsl2[2] <= 0.5) {
+    sl2 = hsl2[1] * hsl2[2]
+  }else {
+    sl2 = hsl2[1] * (1 - hsl2[2])
+  }
+  var h1 = hsl1[0] / 360;
+  var h2 = hsl2[0] / 360;
+  var dh = (h1 - h2) * 2 * Math.PI;
+  return(hsl1[2] - hsl2[2]) * (hsl1[2] - hsl2[2]) + sl1 * sl1 + sl2 * sl2 - 2 * sl1 * sl2 * Math.cos(dh)
+};
+goog.color.blend = function(rgb1, rgb2, factor) {
+  factor = goog.math.clamp(factor, 0, 1);
+  return[Math.round(factor * rgb1[0] + (1 - factor) * rgb2[0]), Math.round(factor * rgb1[1] + (1 - factor) * rgb2[1]), Math.round(factor * rgb1[2] + (1 - factor) * rgb2[2])]
+};
+goog.color.darken = function(rgb, factor) {
+  var black = [0, 0, 0];
+  return goog.color.blend(black, rgb, factor)
+};
+goog.color.lighten = function(rgb, factor) {
+  var white = [255, 255, 255];
+  return goog.color.blend(white, rgb, factor)
+};
+goog.color.highContrast = function(prime, suggestions) {
+  var suggestionsWithDiff = [];
+  for(var i = 0;i < suggestions.length;i++) {
+    suggestionsWithDiff.push({color:suggestions[i], diff:goog.color.yiqBrightnessDiff_(suggestions[i], prime) + goog.color.colorDiff_(suggestions[i], prime)})
+  }
+  suggestionsWithDiff.sort(function(a, b) {
+    return b.diff - a.diff
+  });
+  return suggestionsWithDiff[0].color
+};
+goog.color.yiqBrightness_ = function(rgb) {
+  return Math.round((rgb[0] * 299 + rgb[1] * 587 + rgb[2] * 114) / 1E3)
+};
+goog.color.yiqBrightnessDiff_ = function(rgb1, rgb2) {
+  return Math.abs(goog.color.yiqBrightness_(rgb1) - goog.color.yiqBrightness_(rgb2))
+};
+goog.color.colorDiff_ = function(rgb1, rgb2) {
+  return Math.abs(rgb1[0] - rgb2[0]) + Math.abs(rgb1[1] - rgb2[1]) + Math.abs(rgb1[2] - rgb2[2])
 };
 goog.provide("goog.style.bidi");
 goog.require("goog.dom");
@@ -20653,389 +21201,6 @@ goog.ui.Select.prototype.setOpen = function(open, opt_e) {
 goog.ui.registry.setDecoratorByClassName(goog.getCssName("goog-select"), function() {
   return new goog.ui.Select(null)
 });
-goog.provide("Blockly.SvgHeader");
-var TEXT_PADDING_LEFT = "10";
-Blockly.SvgHeader = function(parent, opt_options) {
-  var options = opt_options || {backgroundColor:"#000", headerText:"Default Header"};
-  var extraStyle = options.onMouseDown ? "" : "pointer-events: none;";
-  this.svgGroup_ = Blockly.createSvgElement("g", {style:extraStyle}, parent, {belowExisting:true});
-  this.grayRectangleElement_ = Blockly.createSvgElement("rect", {"fill":options.backgroundColor, "style":extraStyle}, this.svgGroup_);
-  this.textElement_ = Blockly.createSvgElement("text", {"class":"contractEditorHeaderText", "style":extraStyle}, this.svgGroup_);
-  if(options.headerText) {
-    this.textElement_.textContent = options.headerText
-  }
-  if(options.onMouseDown) {
-    Blockly.bindEvent_(this.svgGroup_, "mousedown", null, options.onMouseDown)
-  }
-};
-Blockly.SvgHeader.prototype.setPositionSize = function(yOffset, width, height) {
-  this.svgGroup_.setAttribute("transform", "translate(" + 0 + "," + yOffset + ")");
-  this.grayRectangleElement_.setAttribute("width", width);
-  this.grayRectangleElement_.setAttribute("height", height);
-  this.textElement_.setAttribute("x", TEXT_PADDING_LEFT);
-  var rectangleMiddleY = height / 2;
-  var thirdTextHeight = this.textElement_.getBBox().height / 3;
-  this.textElement_.setAttribute("y", rectangleMiddleY + thirdTextHeight)
-};
-Blockly.SvgHeader.prototype.setText = function(text) {
-  this.textElement_.textContent = text
-};
-Blockly.SvgHeader.prototype.removeSelf = function() {
-  goog.dom.removeNode(this.svgGroup_)
-};
-goog.provide("goog.color.names");
-goog.color.names = {"aliceblue":"#f0f8ff", "antiquewhite":"#faebd7", "aqua":"#00ffff", "aquamarine":"#7fffd4", "azure":"#f0ffff", "beige":"#f5f5dc", "bisque":"#ffe4c4", "black":"#000000", "blanchedalmond":"#ffebcd", "blue":"#0000ff", "blueviolet":"#8a2be2", "brown":"#a52a2a", "burlywood":"#deb887", "cadetblue":"#5f9ea0", "chartreuse":"#7fff00", "chocolate":"#d2691e", "coral":"#ff7f50", "cornflowerblue":"#6495ed", "cornsilk":"#fff8dc", "crimson":"#dc143c", "cyan":"#00ffff", "darkblue":"#00008b", "darkcyan":"#008b8b", 
-"darkgoldenrod":"#b8860b", "darkgray":"#a9a9a9", "darkgreen":"#006400", "darkgrey":"#a9a9a9", "darkkhaki":"#bdb76b", "darkmagenta":"#8b008b", "darkolivegreen":"#556b2f", "darkorange":"#ff8c00", "darkorchid":"#9932cc", "darkred":"#8b0000", "darksalmon":"#e9967a", "darkseagreen":"#8fbc8f", "darkslateblue":"#483d8b", "darkslategray":"#2f4f4f", "darkslategrey":"#2f4f4f", "darkturquoise":"#00ced1", "darkviolet":"#9400d3", "deeppink":"#ff1493", "deepskyblue":"#00bfff", "dimgray":"#696969", "dimgrey":"#696969", 
-"dodgerblue":"#1e90ff", "firebrick":"#b22222", "floralwhite":"#fffaf0", "forestgreen":"#228b22", "fuchsia":"#ff00ff", "gainsboro":"#dcdcdc", "ghostwhite":"#f8f8ff", "gold":"#ffd700", "goldenrod":"#daa520", "gray":"#808080", "green":"#008000", "greenyellow":"#adff2f", "grey":"#808080", "honeydew":"#f0fff0", "hotpink":"#ff69b4", "indianred":"#cd5c5c", "indigo":"#4b0082", "ivory":"#fffff0", "khaki":"#f0e68c", "lavender":"#e6e6fa", "lavenderblush":"#fff0f5", "lawngreen":"#7cfc00", "lemonchiffon":"#fffacd", 
-"lightblue":"#add8e6", "lightcoral":"#f08080", "lightcyan":"#e0ffff", "lightgoldenrodyellow":"#fafad2", "lightgray":"#d3d3d3", "lightgreen":"#90ee90", "lightgrey":"#d3d3d3", "lightpink":"#ffb6c1", "lightsalmon":"#ffa07a", "lightseagreen":"#20b2aa", "lightskyblue":"#87cefa", "lightslategray":"#778899", "lightslategrey":"#778899", "lightsteelblue":"#b0c4de", "lightyellow":"#ffffe0", "lime":"#00ff00", "limegreen":"#32cd32", "linen":"#faf0e6", "magenta":"#ff00ff", "maroon":"#800000", "mediumaquamarine":"#66cdaa", 
-"mediumblue":"#0000cd", "mediumorchid":"#ba55d3", "mediumpurple":"#9370db", "mediumseagreen":"#3cb371", "mediumslateblue":"#7b68ee", "mediumspringgreen":"#00fa9a", "mediumturquoise":"#48d1cc", "mediumvioletred":"#c71585", "midnightblue":"#191970", "mintcream":"#f5fffa", "mistyrose":"#ffe4e1", "moccasin":"#ffe4b5", "navajowhite":"#ffdead", "navy":"#000080", "oldlace":"#fdf5e6", "olive":"#808000", "olivedrab":"#6b8e23", "orange":"#ffa500", "orangered":"#ff4500", "orchid":"#da70d6", "palegoldenrod":"#eee8aa", 
-"palegreen":"#98fb98", "paleturquoise":"#afeeee", "palevioletred":"#db7093", "papayawhip":"#ffefd5", "peachpuff":"#ffdab9", "peru":"#cd853f", "pink":"#ffc0cb", "plum":"#dda0dd", "powderblue":"#b0e0e6", "purple":"#800080", "red":"#ff0000", "rosybrown":"#bc8f8f", "royalblue":"#4169e1", "saddlebrown":"#8b4513", "salmon":"#fa8072", "sandybrown":"#f4a460", "seagreen":"#2e8b57", "seashell":"#fff5ee", "sienna":"#a0522d", "silver":"#c0c0c0", "skyblue":"#87ceeb", "slateblue":"#6a5acd", "slategray":"#708090", 
-"slategrey":"#708090", "snow":"#fffafa", "springgreen":"#00ff7f", "steelblue":"#4682b4", "tan":"#d2b48c", "teal":"#008080", "thistle":"#d8bfd8", "tomato":"#ff6347", "turquoise":"#40e0d0", "violet":"#ee82ee", "wheat":"#f5deb3", "white":"#ffffff", "whitesmoke":"#f5f5f5", "yellow":"#ffff00", "yellowgreen":"#9acd32"};
-goog.provide("goog.color");
-goog.provide("goog.color.Hsl");
-goog.provide("goog.color.Hsv");
-goog.provide("goog.color.Rgb");
-goog.require("goog.color.names");
-goog.require("goog.math");
-goog.color.Rgb;
-goog.color.Hsv;
-goog.color.Hsl;
-goog.color.parse = function(str) {
-  var result = {};
-  str = String(str);
-  var maybeHex = goog.color.prependHashIfNecessaryHelper(str);
-  if(goog.color.isValidHexColor_(maybeHex)) {
-    result.hex = goog.color.normalizeHex(maybeHex);
-    result.type = "hex";
-    return result
-  }else {
-    var rgb = goog.color.isValidRgbColor_(str);
-    if(rgb.length) {
-      result.hex = goog.color.rgbArrayToHex(rgb);
-      result.type = "rgb";
-      return result
-    }else {
-      if(goog.color.names) {
-        var hex = goog.color.names[str.toLowerCase()];
-        if(hex) {
-          result.hex = hex;
-          result.type = "named";
-          return result
-        }
-      }
-    }
-  }
-  throw Error(str + " is not a valid color string");
-};
-goog.color.isValidColor = function(str) {
-  var maybeHex = goog.color.prependHashIfNecessaryHelper(str);
-  return!!(goog.color.isValidHexColor_(maybeHex) || (goog.color.isValidRgbColor_(str).length || goog.color.names && goog.color.names[str.toLowerCase()]))
-};
-goog.color.parseRgb = function(str) {
-  var rgb = goog.color.isValidRgbColor_(str);
-  if(!rgb.length) {
-    throw Error(str + " is not a valid RGB color");
-  }
-  return rgb
-};
-goog.color.hexToRgbStyle = function(hexColor) {
-  return goog.color.rgbStyle_(goog.color.hexToRgb(hexColor))
-};
-goog.color.hexTripletRe_ = /#(.)(.)(.)/;
-goog.color.normalizeHex = function(hexColor) {
-  if(!goog.color.isValidHexColor_(hexColor)) {
-    throw Error("'" + hexColor + "' is not a valid hex color");
-  }
-  if(hexColor.length == 4) {
-    hexColor = hexColor.replace(goog.color.hexTripletRe_, "#$1$1$2$2$3$3")
-  }
-  return hexColor.toLowerCase()
-};
-goog.color.hexToRgb = function(hexColor) {
-  hexColor = goog.color.normalizeHex(hexColor);
-  var r = parseInt(hexColor.substr(1, 2), 16);
-  var g = parseInt(hexColor.substr(3, 2), 16);
-  var b = parseInt(hexColor.substr(5, 2), 16);
-  return[r, g, b]
-};
-goog.color.rgbToHex = function(r, g, b) {
-  r = Number(r);
-  g = Number(g);
-  b = Number(b);
-  if(isNaN(r) || (r < 0 || (r > 255 || (isNaN(g) || (g < 0 || (g > 255 || (isNaN(b) || (b < 0 || b > 255)))))))) {
-    throw Error('"(' + r + "," + g + "," + b + '") is not a valid RGB color');
-  }
-  var hexR = goog.color.prependZeroIfNecessaryHelper(r.toString(16));
-  var hexG = goog.color.prependZeroIfNecessaryHelper(g.toString(16));
-  var hexB = goog.color.prependZeroIfNecessaryHelper(b.toString(16));
-  return"#" + hexR + hexG + hexB
-};
-goog.color.rgbArrayToHex = function(rgb) {
-  return goog.color.rgbToHex(rgb[0], rgb[1], rgb[2])
-};
-goog.color.rgbToHsl = function(r, g, b) {
-  var normR = r / 255;
-  var normG = g / 255;
-  var normB = b / 255;
-  var max = Math.max(normR, normG, normB);
-  var min = Math.min(normR, normG, normB);
-  var h = 0;
-  var s = 0;
-  var l = 0.5 * (max + min);
-  if(max != min) {
-    if(max == normR) {
-      h = 60 * (normG - normB) / (max - min)
-    }else {
-      if(max == normG) {
-        h = 60 * (normB - normR) / (max - min) + 120
-      }else {
-        if(max == normB) {
-          h = 60 * (normR - normG) / (max - min) + 240
-        }
-      }
-    }
-    if(0 < l && l <= 0.5) {
-      s = (max - min) / (2 * l)
-    }else {
-      s = (max - min) / (2 - 2 * l)
-    }
-  }
-  return[Math.round(h + 360) % 360, s, l]
-};
-goog.color.rgbArrayToHsl = function(rgb) {
-  return goog.color.rgbToHsl(rgb[0], rgb[1], rgb[2])
-};
-goog.color.hueToRgb_ = function(v1, v2, vH) {
-  if(vH < 0) {
-    vH += 1
-  }else {
-    if(vH > 1) {
-      vH -= 1
-    }
-  }
-  if(6 * vH < 1) {
-    return v1 + (v2 - v1) * 6 * vH
-  }else {
-    if(2 * vH < 1) {
-      return v2
-    }else {
-      if(3 * vH < 2) {
-        return v1 + (v2 - v1) * (2 / 3 - vH) * 6
-      }
-    }
-  }
-  return v1
-};
-goog.color.hslToRgb = function(h, s, l) {
-  var r = 0;
-  var g = 0;
-  var b = 0;
-  var normH = h / 360;
-  if(s == 0) {
-    r = g = b = l * 255
-  }else {
-    var temp1 = 0;
-    var temp2 = 0;
-    if(l < 0.5) {
-      temp2 = l * (1 + s)
-    }else {
-      temp2 = l + s - s * l
-    }
-    temp1 = 2 * l - temp2;
-    r = 255 * goog.color.hueToRgb_(temp1, temp2, normH + 1 / 3);
-    g = 255 * goog.color.hueToRgb_(temp1, temp2, normH);
-    b = 255 * goog.color.hueToRgb_(temp1, temp2, normH - 1 / 3)
-  }
-  return[Math.round(r), Math.round(g), Math.round(b)]
-};
-goog.color.hslArrayToRgb = function(hsl) {
-  return goog.color.hslToRgb(hsl[0], hsl[1], hsl[2])
-};
-goog.color.validHexColorRe_ = /^#(?:[0-9a-f]{3}){1,2}$/i;
-goog.color.isValidHexColor_ = function(str) {
-  return goog.color.validHexColorRe_.test(str)
-};
-goog.color.normalizedHexColorRe_ = /^#[0-9a-f]{6}$/;
-goog.color.isNormalizedHexColor_ = function(str) {
-  return goog.color.normalizedHexColorRe_.test(str)
-};
-goog.color.rgbColorRe_ = /^(?:rgb)?\((0|[1-9]\d{0,2}),\s?(0|[1-9]\d{0,2}),\s?(0|[1-9]\d{0,2})\)$/i;
-goog.color.isValidRgbColor_ = function(str) {
-  var regExpResultArray = str.match(goog.color.rgbColorRe_);
-  if(regExpResultArray) {
-    var r = Number(regExpResultArray[1]);
-    var g = Number(regExpResultArray[2]);
-    var b = Number(regExpResultArray[3]);
-    if(r >= 0 && (r <= 255 && (g >= 0 && (g <= 255 && (b >= 0 && b <= 255))))) {
-      return[r, g, b]
-    }
-  }
-  return[]
-};
-goog.color.prependZeroIfNecessaryHelper = function(hex) {
-  return hex.length == 1 ? "0" + hex : hex
-};
-goog.color.prependHashIfNecessaryHelper = function(str) {
-  return str.charAt(0) == "#" ? str : "#" + str
-};
-goog.color.rgbStyle_ = function(rgb) {
-  return"rgb(" + rgb.join(",") + ")"
-};
-goog.color.hsvToRgb = function(h, s, brightness) {
-  var red = 0;
-  var green = 0;
-  var blue = 0;
-  if(s == 0) {
-    red = brightness;
-    green = brightness;
-    blue = brightness
-  }else {
-    var sextant = Math.floor(h / 60);
-    var remainder = h / 60 - sextant;
-    var val1 = brightness * (1 - s);
-    var val2 = brightness * (1 - s * remainder);
-    var val3 = brightness * (1 - s * (1 - remainder));
-    switch(sextant) {
-      case 1:
-        red = val2;
-        green = brightness;
-        blue = val1;
-        break;
-      case 2:
-        red = val1;
-        green = brightness;
-        blue = val3;
-        break;
-      case 3:
-        red = val1;
-        green = val2;
-        blue = brightness;
-        break;
-      case 4:
-        red = val3;
-        green = val1;
-        blue = brightness;
-        break;
-      case 5:
-        red = brightness;
-        green = val1;
-        blue = val2;
-        break;
-      case 6:
-      ;
-      case 0:
-        red = brightness;
-        green = val3;
-        blue = val1;
-        break
-    }
-  }
-  return[Math.floor(red), Math.floor(green), Math.floor(blue)]
-};
-goog.color.rgbToHsv = function(red, green, blue) {
-  var max = Math.max(Math.max(red, green), blue);
-  var min = Math.min(Math.min(red, green), blue);
-  var hue;
-  var saturation;
-  var value = max;
-  if(min == max) {
-    hue = 0;
-    saturation = 0
-  }else {
-    var delta = max - min;
-    saturation = delta / max;
-    if(red == max) {
-      hue = (green - blue) / delta
-    }else {
-      if(green == max) {
-        hue = 2 + (blue - red) / delta
-      }else {
-        hue = 4 + (red - green) / delta
-      }
-    }
-    hue *= 60;
-    if(hue < 0) {
-      hue += 360
-    }
-    if(hue > 360) {
-      hue -= 360
-    }
-  }
-  return[hue, saturation, value]
-};
-goog.color.rgbArrayToHsv = function(rgb) {
-  return goog.color.rgbToHsv(rgb[0], rgb[1], rgb[2])
-};
-goog.color.hsvArrayToRgb = function(hsv) {
-  return goog.color.hsvToRgb(hsv[0], hsv[1], hsv[2])
-};
-goog.color.hexToHsl = function(hex) {
-  var rgb = goog.color.hexToRgb(hex);
-  return goog.color.rgbToHsl(rgb[0], rgb[1], rgb[2])
-};
-goog.color.hslToHex = function(h, s, l) {
-  return goog.color.rgbArrayToHex(goog.color.hslToRgb(h, s, l))
-};
-goog.color.hslArrayToHex = function(hsl) {
-  return goog.color.rgbArrayToHex(goog.color.hslToRgb(hsl[0], hsl[1], hsl[2]))
-};
-goog.color.hexToHsv = function(hex) {
-  return goog.color.rgbArrayToHsv(goog.color.hexToRgb(hex))
-};
-goog.color.hsvToHex = function(h, s, v) {
-  return goog.color.rgbArrayToHex(goog.color.hsvToRgb(h, s, v))
-};
-goog.color.hsvArrayToHex = function(hsv) {
-  return goog.color.hsvToHex(hsv[0], hsv[1], hsv[2])
-};
-goog.color.hslDistance = function(hsl1, hsl2) {
-  var sl1, sl2;
-  if(hsl1[2] <= 0.5) {
-    sl1 = hsl1[1] * hsl1[2]
-  }else {
-    sl1 = hsl1[1] * (1 - hsl1[2])
-  }
-  if(hsl2[2] <= 0.5) {
-    sl2 = hsl2[1] * hsl2[2]
-  }else {
-    sl2 = hsl2[1] * (1 - hsl2[2])
-  }
-  var h1 = hsl1[0] / 360;
-  var h2 = hsl2[0] / 360;
-  var dh = (h1 - h2) * 2 * Math.PI;
-  return(hsl1[2] - hsl2[2]) * (hsl1[2] - hsl2[2]) + sl1 * sl1 + sl2 * sl2 - 2 * sl1 * sl2 * Math.cos(dh)
-};
-goog.color.blend = function(rgb1, rgb2, factor) {
-  factor = goog.math.clamp(factor, 0, 1);
-  return[Math.round(factor * rgb1[0] + (1 - factor) * rgb2[0]), Math.round(factor * rgb1[1] + (1 - factor) * rgb2[1]), Math.round(factor * rgb1[2] + (1 - factor) * rgb2[2])]
-};
-goog.color.darken = function(rgb, factor) {
-  var black = [0, 0, 0];
-  return goog.color.blend(black, rgb, factor)
-};
-goog.color.lighten = function(rgb, factor) {
-  var white = [255, 255, 255];
-  return goog.color.blend(white, rgb, factor)
-};
-goog.color.highContrast = function(prime, suggestions) {
-  var suggestionsWithDiff = [];
-  for(var i = 0;i < suggestions.length;i++) {
-    suggestionsWithDiff.push({color:suggestions[i], diff:goog.color.yiqBrightnessDiff_(suggestions[i], prime) + goog.color.colorDiff_(suggestions[i], prime)})
-  }
-  suggestionsWithDiff.sort(function(a, b) {
-    return b.diff - a.diff
-  });
-  return suggestionsWithDiff[0].color
-};
-goog.color.yiqBrightness_ = function(rgb) {
-  return Math.round((rgb[0] * 299 + rgb[1] * 587 + rgb[2] * 114) / 1E3)
-};
-goog.color.yiqBrightnessDiff_ = function(rgb1, rgb2) {
-  return Math.abs(goog.color.yiqBrightness_(rgb1) - goog.color.yiqBrightness_(rgb2))
-};
-goog.color.colorDiff_ = function(rgb1, rgb2) {
-  return Math.abs(rgb1[0] - rgb2[0]) + Math.abs(rgb1[1] - rgb2[1]) + Math.abs(rgb1[2] - rgb2[2])
-};
 goog.provide("goog.ui.Option");
 goog.require("goog.ui.Component");
 goog.require("goog.ui.MenuItem");
@@ -21151,8 +21316,12 @@ goog.ui.registry.setDecoratorByClassName(goog.ui.FlatMenuButtonRenderer.CSS_CLAS
 });
 goog.provide("Blockly.ContractEditor");
 goog.require("Blockly.FunctionEditor");
+goog.require("Blockly.FunctionalBlockUtils");
+goog.require("Blockly.BlockValueType");
+goog.require("Blockly.FunctionalTypeColors");
 goog.require("Blockly.ContractEditorSectionView");
 goog.require("Blockly.SvgHeader");
+goog.require("Blockly.SvgHighlightBox");
 goog.require("Blockly.CustomCssClassMenuRenderer");
 goog.require("goog.ui.Component.EventType");
 goog.require("goog.ui.FlatMenuButtonRenderer");
@@ -21168,8 +21337,15 @@ var EXAMPLE_BLOCK_MARGIN_BELOW = 20;
 var EXAMPLE_BLOCK_MARGIN_LEFT = 15;
 var EXAMPLE_BLOCK_SECTION_MAGIN_BELOW = 10;
 var EXAMPLE_BLOCK_SECTION_MAGIN_ABOVE = 15;
-var FUNCTION_BLOCK_MARGIN_ABOVE = 15;
+var FUNCTION_BLOCK_VERTICAL_MARGIN = 15;
 var HEADER_HEIGHT = 50;
+var USER_TYPE_CHOICES = [Blockly.BlockValueType.NUMBER, Blockly.BlockValueType.STRING, Blockly.BlockValueType.IMAGE, Blockly.BlockValueType.BOOLEAN];
+var CONTRACT_SECTION_NAME = "contract";
+var EXAMPLES_SECTION_NAME = "examples";
+var DEFINITION_SECTION_NAME = "definition";
+var HIGHLIGHT_CONFIG_SUFFIX = "_highlight";
+var COLLAPSE_CONFIG_SUFFIX = "_collapse";
+var TRUE_CONFIG_VALUE = "true";
 Blockly.ContractEditor = function() {
   Blockly.ContractEditor.superClass_.constructor.call(this);
   this.inputTypeSelector = null;
@@ -21178,37 +21354,43 @@ Blockly.ContractEditor = function() {
   this.contractSectionView_ = null;
   this.examplesSectionView_ = null;
   this.definitionSectionView_ = null;
-  this.sections = new goog.structs.LinkedMap
+  this.allSections_ = new goog.structs.LinkedMap;
+  this.levelConfigForFirstOpen_ = null
 };
 goog.inherits(Blockly.ContractEditor, Blockly.FunctionEditor);
 Blockly.ContractEditor.EXAMPLE_BLOCK_TYPE = "functional_example";
 Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME = "ACTUAL";
-Blockly.ContractEditor.typesToColorsHSV = {"none":[0, 0, 0.6], "Number":[192, 1, 0.99], "string":[180, 1, 0.6], "image":[285, 1, 0.8], "boolean":[90, 1, 0.4]};
-Blockly.ContractEditor.DEFAULT_OUTPUT_TYPE = "none";
-Blockly.ContractEditor.DEFAULT_PARAMETER_TYPE = "none";
+Blockly.ContractEditor.DEFAULT_OUTPUT_TYPE = Blockly.BlockValueType.NUMBER;
+Blockly.ContractEditor.DEFAULT_PARAMETER_TYPE = Blockly.BlockValueType.NUMBER;
 Blockly.ContractEditor.prototype.definitionBlockType = "functional_definition";
 Blockly.ContractEditor.prototype.parameterBlockType = "functional_parameters_get";
 Blockly.ContractEditor.prototype.create_ = function() {
   Blockly.ContractEditor.superClass_.create_.call(this);
   var canvasToDrawOn = this.modalBlockSpace.svgBlockCanvas_;
+  var sharedHighlightBox = new Blockly.SvgHighlightBox(canvasToDrawOn, {color:YELLOW_HEX, thickness:HIGHLIGHT_BOX_WIDTH});
   this.contractSectionView_ = new Blockly.ContractEditorSectionView(canvasToDrawOn, {onCollapseCallback:goog.bind(function(isNowCollapsed) {
     this.contractDiv_.style.display = isNowCollapsed ? "none" : "block";
     this.position_()
-  }, this), headerText:"1. Contract and Purpose Statement"});
+  }, this), placeContentCallback:goog.bind(function(currentY) {
+    return currentY + this.getContractDivHeight()
+  }, this), highlightBox:sharedHighlightBox, headerText:"1. Contract and Purpose Statement"});
   this.hiddenExampleBlocks_ = [];
-  this.examplesSectionView_ = new Blockly.ContractEditorSectionView(canvasToDrawOn, {headerText:"2. Examples", placeContentCallback:goog.bind(function(newY) {
-    var currentY = newY;
-    currentY += EXAMPLE_BLOCK_SECTION_MAGIN_ABOVE;
+  this.examplesSectionView_ = new Blockly.ContractEditorSectionView(canvasToDrawOn, {headerText:"2. Examples", placeContentCallback:goog.bind(function(currentY) {
+    if(this.exampleBlocks.length === 0) {
+      return currentY
+    }
+    var newY = currentY;
+    newY += EXAMPLE_BLOCK_SECTION_MAGIN_ABOVE;
     this.exampleBlocks.forEach(function(block, i) {
       if(i !== 0) {
-        currentY += EXAMPLE_BLOCK_MARGIN_BELOW
+        newY += EXAMPLE_BLOCK_MARGIN_BELOW
       }
-      block.moveTo(EXAMPLE_BLOCK_MARGIN_LEFT, currentY);
-      currentY += block.getHeightWidth().height
+      block.moveTo(EXAMPLE_BLOCK_MARGIN_LEFT, newY);
+      newY += block.getHeightWidth().height
     }, this);
-    currentY += EXAMPLE_BLOCK_SECTION_MAGIN_BELOW;
-    return currentY
-  }, this), onCollapseCallback:goog.bind(function(isNowCollapsed) {
+    newY += EXAMPLE_BLOCK_SECTION_MAGIN_BELOW;
+    return newY
+  }, this), highlightBox:sharedHighlightBox, onCollapseCallback:goog.bind(function(isNowCollapsed) {
     this.setBlockSubsetVisibility(!isNowCollapsed, goog.bind(this.isBlockInExampleArea, this), this.hiddenExampleBlocks_);
     this.position_()
   }, this)});
@@ -21217,7 +21399,44 @@ Blockly.ContractEditor.prototype.create_ = function() {
     this.flyout_.setVisibility(!isNowCollapsed);
     this.setBlockSubsetVisibility(!isNowCollapsed, goog.bind(this.isBlockInFunctionArea, this), this.hiddenDefinitionBlocks_);
     this.position_()
-  }, this)})
+  }, this), highlightBox:sharedHighlightBox, placeContentCallback:goog.bind(function(currentY) {
+    if(this.flyout_) {
+      currentY += this.flyout_.getHeight();
+      this.flyout_.customYOffset = currentY;
+      this.flyout_.position_()
+    }
+    currentY += FUNCTION_BLOCK_VERTICAL_MARGIN;
+    if(this.functionDefinitionBlock) {
+      var fullWidth = Blockly.modalBlockSpace.getMetrics().viewWidth;
+      var functionDefinitionX = Blockly.RTL ? fullWidth - FRAME_MARGIN_SIDE : FRAME_MARGIN_SIDE;
+      this.functionDefinitionBlock.moveTo(functionDefinitionX, currentY);
+      currentY += this.functionDefinitionBlock.getHeightWidth().height
+    }
+    return currentY + FUNCTION_BLOCK_VERTICAL_MARGIN
+  }, this)});
+  this.allSections_.set(CONTRACT_SECTION_NAME, this.contractSectionView_);
+  this.allSections_.set(EXAMPLES_SECTION_NAME, this.examplesSectionView_);
+  this.allSections_.set(DEFINITION_SECTION_NAME, this.definitionSectionView_)
+};
+Blockly.ContractEditor.prototype.firstOpenLevelConfig_ = function(levelConfig) {
+  this.allSections_.forEach(function(sectionView, sectionName) {
+    var highlight = levelConfig[sectionName + HIGHLIGHT_CONFIG_SUFFIX];
+    if(highlight === TRUE_CONFIG_VALUE) {
+      this.setSectionHighlighted(sectionView)
+    }
+    var collapse = levelConfig[sectionName + COLLAPSE_CONFIG_SUFFIX];
+    sectionView.setCollapsed_(collapse === TRUE_CONFIG_VALUE)
+  }, this)
+};
+Blockly.ContractEditor.prototype.openWithLevelConfiguration = function(levelConfig) {
+  this.levelConfigForFirstOpen_ = levelConfig;
+  Blockly.ContractEditor.superClass_.openWithLevelConfiguration.call(this, levelConfig)
+};
+Blockly.ContractEditor.prototype.setSectionHighlighted = function(viewToHighlight) {
+  this.allSections_.forEach(function(view) {
+    view.setHighlighted(false)
+  }, this);
+  viewToHighlight.setHighlighted(true)
 };
 Blockly.ContractEditor.prototype.setBlockSubsetVisibility = function(isVisible, blockFilter, hiddenBlockArray) {
   if(isVisible) {
@@ -21233,10 +21452,10 @@ Blockly.ContractEditor.prototype.setBlockSubsetVisibility = function(isVisible, 
   }
 };
 Blockly.ContractEditor.prototype.isBlockInFunctionArea = function(block) {
-  return block.blockSpace === this.modalBlockSpace && (block.isUserVisible() && block.getRelativeToSurfaceXY().y >= this.getFlyoutTopPosition())
+  return block === this.functionDefinitionBlock || block.blockSpace === this.modalBlockSpace && (block.isUserVisible() && block.getRelativeToSurfaceXY().y >= this.getFlyoutTopPosition())
 };
 Blockly.ContractEditor.prototype.isBlockInExampleArea = function(block) {
-  return block.blockSpace === this.modalBlockSpace && (block.isUserVisible() && block.getRelativeToSurfaceXY().y < this.getFlyoutTopPosition())
+  return goog.array.contains(this.exampleBlocks, block) || block.blockSpace === this.modalBlockSpace && (block.isUserVisible() && block.getRelativeToSurfaceXY().y < this.getFlyoutTopPosition())
 };
 Blockly.ContractEditor.prototype.getFlyoutTopPosition = function() {
   return this.flyout_.getYPosition() - this.flyout_.getHeight()
@@ -21250,11 +21469,15 @@ Blockly.ContractEditor.prototype.hideAndRestoreBlocks_ = function() {
 };
 Blockly.ContractEditor.prototype.openAndEditFunction = function(functionName) {
   Blockly.ContractEditor.superClass_.openAndEditFunction.call(this, functionName);
-  this.createExampleBlocks_(functionName);
+  this.moveExampleBlocksToModal_(functionName);
   this.position_();
-  this.setTypeDropdownDefaults()
+  this.setTypeDropdownDefaults();
+  if(this.levelConfigForFirstOpen_) {
+    this.firstOpenLevelConfig_(this.levelConfigForFirstOpen_);
+    this.levelConfigForFirstOpen_ = null
+  }
 };
-Blockly.ContractEditor.prototype.createExampleBlocks_ = function(functionName) {
+Blockly.ContractEditor.prototype.moveExampleBlocksToModal_ = function(functionName) {
   var exampleBlocks = Blockly.mainBlockSpace.findFunctionExamples(functionName);
   exampleBlocks.forEach(function(exampleBlock) {
     var movedExampleBlock = this.moveToModalBlockSpace_(exampleBlock);
@@ -21263,11 +21486,12 @@ Blockly.ContractEditor.prototype.createExampleBlocks_ = function(functionName) {
 };
 Blockly.ContractEditor.prototype.setTypeDropdownDefaults = function() {
   this.inputTypeSelector.setValue(Blockly.ContractEditor.DEFAULT_PARAMETER_TYPE);
-  this.outputTypeSelector.setValue(this.functionDefinitionBlock.getOutputType() || "none")
+  this.outputTypeSelector.setValue(this.functionDefinitionBlock.getOutputType() || Blockly.ContractEditor.DEFAULT_OUTPUT_TYPE)
 };
 Blockly.ContractEditor.prototype.openWithNewFunction = function(opt_blockCreationCallback) {
   this.ensureCreated_();
   var tempFunctionDefinitionBlock = Blockly.Xml.domToBlock(Blockly.mainBlockSpace, Blockly.createSvgElement("block", {type:this.definitionBlockType}));
+  tempFunctionDefinitionBlock.updateOutputType(Blockly.ContractEditor.DEFAULT_OUTPUT_TYPE);
   if(opt_blockCreationCallback) {
     opt_blockCreationCallback(tempFunctionDefinitionBlock)
   }
@@ -21287,34 +21511,25 @@ Blockly.ContractEditor.prototype.layOutBlockSpaceItems_ = function() {
     return
   }
   var fullWidth = Blockly.modalBlockSpace.getMetrics().viewWidth;
-  var currentX = Blockly.RTL ? fullWidth - FRAME_MARGIN_SIDE : FRAME_MARGIN_SIDE;
-  this.contractSectionView_.placeAndGetNewY(-this.getContractDivHeight() - HEADER_HEIGHT, fullWidth);
+  this.contractSectionView_.placeAndGetNewY(-this.getBlockSpaceEditorToContractSectionTop_(), fullWidth);
   this.positionTrashcanVerticalMiddleOfTopHeader_();
   var currentY = 0;
   currentY = this.examplesSectionView_.placeAndGetNewY(currentY, fullWidth);
-  currentY = this.definitionSectionView_.placeAndGetNewY(currentY, fullWidth);
-  if(this.flyout_) {
-    currentY += this.flyout_.getHeight();
-    this.flyout_.customYOffset = currentY;
-    this.flyout_.position_()
-  }
-  currentY += FUNCTION_BLOCK_MARGIN_ABOVE;
-  if(this.functionDefinitionBlock) {
-    this.functionDefinitionBlock.moveTo(currentX, currentY)
-  }
+  this.definitionSectionView_.placeAndGetNewY(currentY, fullWidth)
 };
 Blockly.ContractEditor.prototype.positionTrashcanVerticalMiddleOfTopHeader_ = function() {
   var trashcan = this.modalBlockSpace.trashcan;
   var trashcanHeaderDifference = trashcan.getHeight() - HEADER_HEIGHT;
-  trashcan.repositionBelowBlockSpaceTop(-trashcanHeaderDifference / 2)
+  trashcan.repositionBelowBlockSpaceTop(-trashcanHeaderDifference / 2);
+  this.modalBlockSpace.moveElementToFront(trashcan.svgGroup_)
 };
 Blockly.ContractEditor.prototype.createContractDom_ = function() {
   this.contractDiv_ = goog.dom.createDom("div", "blocklyToolboxDiv paramToolbox blocklyText");
   if(Blockly.RTL) {
     this.contractDiv_.setAttribute("dir", "RTL")
   }
-  this.contractDiv_.innerHTML = "<div>" + Blockly.Msg.FUNCTIONAL_NAME_LABEL + "</div>" + '<div><input id="functionNameText" type="text"></div>' + '<div id="domain-area" style="margin: 0px;">' + "<div>" + Blockly.Msg.FUNCTIONAL_DOMAIN_LABEL + "</div>" + '<div><input id="paramAddText" type="text" style="width: 200px;" ' + 'placeholder="' + Blockly.Msg.FUNCTIONAL_NAME_LABEL + '"> ' + '<span id="paramTypeDropdown"></span>' + '<button id="paramAddButton" class="btn">' + Blockly.Msg.ADD + "</button>" + 
-  "</div>" + '<div id="outputTypeTitle">' + Blockly.Msg.FUNCTIONAL_RANGE_LABEL + "</div>" + '<span id="outputTypeDropdown"></span>' + '<div id="description-area" style="margin: 0px;">' + "<div>" + Blockly.Msg.FUNCTIONAL_DESCRIPTION_LABEL + "</div>" + '<div><textarea id="functionDescriptionText" rows="2"></textarea></div>' + "</div>" + "</div>";
+  this.contractDiv_.innerHTML = "<div>" + Blockly.Msg.FUNCTIONAL_NAME_LABEL + "</div>" + '<div><input id="functionNameText" type="text"></div>' + '<div id="domain-area" style="margin: 0;">' + "<div>" + Blockly.Msg.FUNCTIONAL_DOMAIN_LABEL + "</div>" + '<div><input id="paramAddText" type="text" style="width: 200px;" ' + 'placeholder="' + Blockly.Msg.FUNCTIONAL_NAME_LABEL + '"> ' + '<span id="paramTypeDropdown"></span>' + '<button id="paramAddButton" class="btn">' + Blockly.Msg.ADD + "</button>" + "</div>" + 
+  "</div>" + '<div id="range-area" style="margin: 0;">' + '<div id="outputTypeTitle">' + Blockly.Msg.FUNCTIONAL_RANGE_LABEL + "</div>" + '<span id="outputTypeDropdown"></span>' + "</div>" + '<div id="description-area" style="margin: 0px;">' + "<div>" + Blockly.Msg.FUNCTIONAL_DESCRIPTION_LABEL + "</div>" + '<div><textarea id="functionDescriptionText" rows="2"></textarea></div>' + "</div>";
   var metrics = this.modalBlockSpace.getMetrics();
   this.contractDiv_.style.left = metrics.absoluteLeft + "px";
   this.contractDiv_.style.top = metrics.absoluteTop + "px";
@@ -21324,8 +21539,17 @@ Blockly.ContractEditor.prototype.createContractDom_ = function() {
   this.initializeInputTypeDropdown_();
   this.initializeOutputTypeDropdown_()
 };
-Blockly.ContractEditor.prototype.getBlockSpaceEditorTopOffset = function() {
-  return this.getWindowBorderChromeHeight() + this.getContractDivHeight() + HEADER_HEIGHT
+Blockly.ContractEditor.prototype.chromeBottomToContractDivDistance_ = function() {
+  return this.isShowingHeaders_() ? HEADER_HEIGHT : 0
+};
+Blockly.ContractEditor.prototype.getContractDomTopY_ = function() {
+  return this.getWindowBorderChromeHeight() + this.chromeBottomToContractDivDistance_()
+};
+Blockly.ContractEditor.prototype.getBlockSpaceEditorToContractSectionTop_ = function() {
+  return this.getContractDivHeight() + this.chromeBottomToContractDivDistance_()
+};
+Blockly.ContractEditor.prototype.getBlockSpaceEditorToScreenTop_ = function() {
+  return this.getWindowBorderChromeHeight() + this.getBlockSpaceEditorToContractSectionTop_()
 };
 Blockly.ContractEditor.prototype.setupUIForBlock_ = function(targetFunctionDefinitionBlock) {
   var isEditingVariable = targetFunctionDefinitionBlock.isVariable();
@@ -21333,7 +21557,25 @@ Blockly.ContractEditor.prototype.setupUIForBlock_ = function(targetFunctionDefin
   goog.dom.setTextContent(goog.dom.getElement("outputTypeTitle"), isEditingVariable ? Blockly.Msg.FUNCTIONAL_VARIABLE_TYPE : Blockly.Msg.FUNCTIONAL_RANGE_LABEL);
   goog.style.showElement(goog.dom.getElement("domain-area"), !isEditingVariable);
   goog.style.showElement(goog.dom.getElement("description-area"), !isEditingVariable);
+  if(isEditingVariable) {
+    this.contractSectionView_.setHeaderVisible(false);
+    this.examplesSectionView_.hideCompletely();
+    this.definitionSectionView_.setHeaderVisible(false)
+  }else {
+    this.expandAllSections_()
+  }
   Blockly.ContractEditor.superClass_.show.call(this)
+};
+Blockly.ContractEditor.prototype.expandAllSections_ = function() {
+  this.contractSectionView_.showHeaderAndExpand();
+  this.examplesSectionView_.showHeaderAndExpand();
+  this.definitionSectionView_.showHeaderAndExpand()
+};
+Blockly.ContractEditor.prototype.isShowingHeaders_ = function() {
+  return!this.isEditingVariable()
+};
+Blockly.ContractEditor.prototype.isEditingVariable = function() {
+  return this.functionDefinitionBlock && this.functionDefinitionBlock.isVariable()
 };
 Blockly.ContractEditor.prototype.addParameter = function(newParameterName, opt_newParameterType) {
   this.orderedParamIDsToBlocks_.set(goog.events.getUniqueId("parameter"), this.newParameterBlock(newParameterName, opt_newParameterType))
@@ -21365,11 +21607,12 @@ Blockly.ContractEditor.prototype.outputTypeDropdownChange_ = function(comboBoxEv
   var newType = comboBoxEvent.target.getContent();
   var menuButtonRenderer = goog.ui.FlatMenuButtonRenderer.getInstance();
   var menuButtonElement = menuButtonRenderer.getContentElement(this.getOutputTypeDropdownElement_());
-  var newColorHSV = Blockly.ContractEditor.typesToColorsHSV[newType];
+  var newColorHSV = Blockly.FunctionalTypeColors[newType];
   this.setBackgroundFromHSV(menuButtonElement, newColorHSV);
   this.setFrameColor_(newColorHSV);
   if(this.functionDefinitionBlock) {
-    this.functionDefinitionBlock.updateOutputType(newType)
+    this.functionDefinitionBlock.updateOutputType(newType);
+    this.modalBlockSpace.events.dispatchEvent(Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE)
   }
 };
 Blockly.ContractEditor.prototype.setFrameColor_ = function(hsvColor) {
@@ -21393,14 +21636,14 @@ Blockly.ContractEditor.prototype.inputTypeDropdownChange_ = function(comboBoxEve
 Blockly.ContractEditor.prototype.colorInputButtonForType_ = function(newType) {
   var menuButtonRenderer = goog.ui.FlatMenuButtonRenderer.getInstance();
   var menuButtonElement = menuButtonRenderer.getContentElement(this.getInputTypeDropdownElement_());
-  this.setBackgroundFromHSV(menuButtonElement, Blockly.ContractEditor.typesToColorsHSV[newType])
+  this.setBackgroundFromHSV(menuButtonElement, Blockly.FunctionalTypeColors[newType])
 };
 Blockly.ContractEditor.prototype.createTypeDropdown_ = function() {
   var newTypeDropdown = new goog.ui.Select(null, null, goog.ui.FlatMenuButtonRenderer.getInstance(), null, new Blockly.CustomCssClassMenuRenderer("colored-type-dropdown"));
-  goog.object.forEach(Blockly.ContractEditor.typesToColorsHSV, function(color, key) {
-    var menuItem = new goog.ui.MenuItem(key);
+  USER_TYPE_CHOICES.forEach(function(choiceKey) {
+    var menuItem = new goog.ui.MenuItem(choiceKey);
     newTypeDropdown.addItem(menuItem);
-    this.setMenuItemColor_(menuItem, color)
+    this.setMenuItemColor_(menuItem, Blockly.FunctionalTypeColors[choiceKey])
   }, this);
   return newTypeDropdown
 };
@@ -23583,7 +23826,7 @@ goog.provide("Blockly.inject");
 goog.require("Blockly.Css");
 goog.require("Blockly.BlockSpaceEditor");
 goog.require("goog.dom");
-Blockly.inject = function(container, opt_options) {
+Blockly.inject = function(container, opt_options, opt_audioPlayer) {
   if(!goog.dom.contains(document, container)) {
     throw"Error: container is not in current document.";
   }
@@ -23592,7 +23835,10 @@ Blockly.inject = function(container, opt_options) {
   }
   goog.ui.Component.setDefaultRightToLeft(Blockly.RTL);
   Blockly.Css.inject();
-  Blockly.initUISounds_();
+  if(opt_audioPlayer) {
+    Blockly.audioPlayer = opt_audioPlayer;
+    Blockly.registerUISounds_(Blockly.audioPlayer)
+  }
   Blockly.mainBlockSpaceEditor = new Blockly.BlockSpaceEditor(container);
   Blockly.mainBlockSpace = Blockly.mainBlockSpaceEditor.blockSpace;
   if(Blockly.useModalFunctionEditor) {
@@ -23654,9 +23900,9 @@ Blockly.parseOptions_ = function(options) {
   }, hasCategories:hasCategories, hasScrollbars:hasScrollbars, hasTrashcan:hasTrashcan, varsInGlobals:options["varsInGlobals"] || false, generateFunctionPassBlocks:options["generateFunctionPassBlocks"] || false, languageTree:tree, disableParamEditing:options["disableParamEditing"] || false, disableVariableEditing:options["disableVariableEditing"] || false, useModalFunctionEditor:options["useModalFunctionEditor"] || false, useContractEditor:options["useContractEditor"] || false, defaultNumExampleBlocks:options["defaultNumExampleBlocks"] || 
   2, grayOutUndeletableBlocks:grayOutUndeletableBlocks, editBlocks:options["editBlocks"] || false}
 };
-Blockly.initUISounds_ = function() {
-  Blockly.loadAudio_([Blockly.assetUrl("media/click.mp3"), Blockly.assetUrl("media/click.wav"), Blockly.assetUrl("media/click.ogg")], "click");
-  Blockly.loadAudio_([Blockly.assetUrl("media/delete.mp3"), Blockly.assetUrl("media/delete.ogg"), Blockly.assetUrl("media/delete.wav")], "delete")
+Blockly.registerUISounds_ = function(audioPlayer) {
+  audioPlayer.register({id:"click", mp3:Blockly.assetUrl("media/click.mp3"), wav:Blockly.assetUrl("media/click.wav"), ogg:Blockly.assetUrl("media/click.ogg")});
+  audioPlayer.register({id:"delete", mp3:Blockly.assetUrl("media/delete.mp3"), wav:Blockly.assetUrl("media/delete.wav"), ogg:Blockly.assetUrl("media/delete.ogg")})
 };
 goog.provide("Blockly.WidgetDiv");
 goog.require("Blockly.Css");
@@ -23905,6 +24151,9 @@ goog.require("Blockly.FunctionEditor");
 goog.require("Blockly.ContractEditor");
 goog.require("Blockly.Generator");
 goog.require("Blockly.ImageDimensionCache");
+goog.require("Blockly.FunctionalBlockUtils");
+goog.require("Blockly.BlockValueType");
+goog.require("Blockly.FunctionalTypeColors");
 goog.require("Blockly.Msg");
 goog.require("Blockly.Procedures");
 goog.require("Blockly.Toolbox");
@@ -23944,11 +24193,6 @@ Blockly.OPPOSITE_TYPE[Blockly.NEXT_STATEMENT] = Blockly.PREVIOUS_STATEMENT;
 Blockly.OPPOSITE_TYPE[Blockly.PREVIOUS_STATEMENT] = Blockly.NEXT_STATEMENT;
 Blockly.OPPOSITE_TYPE[Blockly.FUNCTIONAL_INPUT] = Blockly.FUNCTIONAL_OUTPUT;
 Blockly.OPPOSITE_TYPE[Blockly.FUNCTIONAL_OUTPUT] = Blockly.FUNCTIONAL_INPUT;
-Blockly.SOUNDS_ = {};
-window.AudioContext = window.AudioContext || window.webkitAudioContext;
-if(window.AudioContext) {
-  Blockly.CONTEXT = new AudioContext
-}
 Blockly.selected = null;
 Blockly.readOnly = false;
 Blockly.highlightedConnection_ = null;
@@ -23961,102 +24205,9 @@ Blockly.COLLAPSE_CHARS = 30;
 Blockly.mainBlockSpace = null;
 Blockly.mainBlockSpaceEditor = null;
 Blockly.clipboard_ = null;
-Blockly.onSoundLoad_ = function(request, name) {
-  var onload = function() {
-    Blockly.CONTEXT.decodeAudioData(request.response, function(buffer) {
-      Blockly.SOUNDS_[name] = Blockly.createSoundFromBuffer_({buffer:buffer})
-    })
-  };
-  return onload
-};
-Blockly.createSoundFromBuffer_ = function(options) {
-  var source = Blockly.CONTEXT.createBufferSource();
-  source.buffer = options.buffer;
-  source.loop = options.loop;
-  var gainNode;
-  if(Blockly.CONTEXT.createGain) {
-    gainNode = Blockly.CONTEXT.createGain()
-  }else {
-    if(Blockly.CONTEXT.createGainNode) {
-      gainNode = Blockly.CONTEXT.createGainNode()
-    }else {
-      return null
-    }
-  }
-  source.connect(gainNode);
-  gainNode.connect(Blockly.CONTEXT.destination);
-  gainNode.gain.value = options.volume || 1;
-  return source
-};
-Blockly.loadWebAudio_ = function(filename, name) {
-  var request = new XMLHttpRequest;
-  request.open("GET", filename, true);
-  request.responseType = "arraybuffer";
-  request.onload = Blockly.onSoundLoad_(request, name);
-  request.send()
-};
-Blockly.loadAudio_ = function(filenames, name) {
-  if(window.Audio && filenames.length) {
-    var audioTest = new window.Audio;
-    for(var i = 0, filename;filename = filenames[i];i++) {
-      var ext = filename.match(/\.(\w+)(\?.*)?$/);
-      if(ext && audioTest.canPlayType("audio/" + ext[1])) {
-        break
-      }
-    }
-    if(filename) {
-      if(window.AudioContext) {
-        Blockly.loadWebAudio_(filename, name)
-      }else {
-        var sound = new window.Audio(filename);
-        if(sound && sound.play) {
-          if(!goog.userAgent.isDocumentMode(9)) {
-            sound.play();
-            sound.pause()
-          }
-          Blockly.SOUNDS_[name] = sound
-        }
-      }
-    }
-  }
-};
-Blockly.playAudio = function(name, options) {
-  var sound = Blockly.SOUNDS_[name];
-  var options = options || {};
-  if(sound) {
-    if(window.AudioContext) {
-      options.buffer = sound.buffer;
-      var newSound = Blockly.createSoundFromBuffer_(options);
-      newSound.start ? newSound.start(0) : newSound.noteOn(0);
-      Blockly.SOUNDS_[name] = newSound
-    }else {
-      if(!goog.userAgent.MOBILE) {
-        sound.volume = options.volume !== undefined ? options.volume : 1;
-        sound.loop = options.loop;
-        sound.play()
-      }
-    }
-  }
-};
-Blockly.stopLoopingAudio = function(name) {
-  var sound = Blockly.SOUNDS_[name];
-  try {
-    if(sound) {
-      if(sound.stop) {
-        sound.stop(0)
-      }else {
-        if(sound.noteOff) {
-          sound.noteOff(0)
-        }else {
-          sound.pause()
-        }
-      }
-    }
-  }catch(e) {
-    if(e.name === "InvalidStateError") {
-    }else {
-      throw e;
-    }
+Blockly.playAudio = function(name) {
+  if(Blockly.audioPlayer) {
+    Blockly.audioPlayer.play(name)
   }
 };
 Blockly.removeAllRanges = function() {

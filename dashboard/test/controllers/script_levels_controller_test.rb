@@ -367,40 +367,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert !session['warden.user.user.key']
   end
 
-  test "should select only callouts for current script level" do
-    @controller.expects :slog
-
-    script = create(:script)
-    level = create(:level, :blockly, user_id: nil)
-    stage = create(:stage, script: script)
-    script_level = create(:script_level, script: script, level: level, stage: stage)
-
-    callout1 = create(:callout, script_level: script_level)
-    callout2 = create(:callout, script_level: script_level)
-    irrelevant_callout = create(:callout)
-
-    get :show, script_id: script.name, stage_id: stage.position, id: script_level.position
-
-    assert(assigns(:callouts_to_show).include?(callout1))
-    assert(assigns(:callouts_to_show).include?(callout2))
-    assert(!assigns(:callouts_to_show).include?(irrelevant_callout))
-  end
-
-  test "should localize callouts" do
-    @controller.expects :slog
-
-    script = create(:script)
-    level = create(:level, :blockly, user_id: nil)
-    stage = create(:stage, script: script)
-    script_level = create(:script_level, script: script, level: level, stage: stage)
-
-    create(:callout, script_level: script_level, localization_key: 'run')
-
-    get :show, script_id: script.name, stage_id: stage.position, id: script_level.position
-
-    assert assigns(:callouts).find{|c| c['localized_text'] == 'Hit "Run" to try your program'}
-  end
-
   test "should render blockly partial for blockly levels" do
     @controller.expects :slog
 
@@ -429,17 +395,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     get :show, script_id: script.name, stage_id: stage.position, id: script_level.position
 
     assert(@response.body.include?('Drag a \"move\" block and snap it below the other block'))
-  end
-
-  test "should carry over previous blocks" do
-    blocks = "<hey>"
-    level = Level.where(level_num: "3_8").first
-    script_level = ScriptLevel.where(level_id: level.id).first
-    level_source = LevelSource.find_identical_or_create(level, blocks)
-    Activity.create!(user: @admin, level: level, lines: "1", attempt: "1", test_result: "100", time: "1000", level_source_id: level_source.id)
-    next_script_level = ScriptLevel.where(level: Level.where(level_num: "3_9").first).first
-    get :show, script_id: script_level.script.id, id: next_script_level.id
-    assert_equal blocks, assigns["start_blocks"]
   end
 
   test 'should render title for puzzle in default script' do
@@ -570,5 +525,4 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       get :show, script_id: 'course1', stage_id: 1, id: 4000
     end
   end
-
 end

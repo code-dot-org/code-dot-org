@@ -155,9 +155,13 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "compute":function(d){return "محاسبه"},
+"emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
+"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "equivalentExpression":function(d){return "سعی کنید ایده ها و فکرهایتان را منظم و مرتب کنید تا دقیقا همان عبارت را به دست بیاورید."},
 "extraTopBlocks":function(d){return "شما بلوک های متصل نشده دارید. آیا منظورتان متصل کردن اینها به بلوک \"محاسبه\" بود؟"},
-"failedInput":function(d){return "Your function does not return the right result for all values."},
+"failedInput":function(d){return "تابع تو نتیجه مناسبی برای همه مقادیر برنمیگرداند."},
 "goal":function(d){return "هدف:"},
-"reinfFeedbackMsg":function(d){return "این داستان شماست! کار کردن روی آن را ادامه دهید, یا به پازل بعدی بروید!"},
-"yourExpression":function(d){return "عبارت شما:"}};
+"levelIncompleteError":function(d){return "Your expression does not match the goal."},
+"reinfFeedbackMsg":function(d){return "این هم محاسبات خوذت! یا روی آنها کار کن، یا برو به پازل بعدی!"},
+"yourExpression":function(d){return "عبارت شما:"},
+"wrongInput":function(d){return "You are calling your function with the wrong value."}};

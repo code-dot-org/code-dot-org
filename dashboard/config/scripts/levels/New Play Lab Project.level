@@ -10,9 +10,9 @@
     "failure_condition": "function () {\r\n}",
     "maze": "[[16,0,0,16,0,0,16,0],[0,0,0,0,0,0,0,0],[16,0,0,16,0,0,16,0],[0,0,0,0,0,0,0,0],[16,0,0,16,0,0,16,0],[0,0,0,0,0,0,0,0],[16,0,0,16,0,0,16,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "Create your own story or game! Have fun with all the blocks in your tool box. ",
+    "instructions": "Create your own story or game! Your code is saved as a project you can return to at any time.",
     "is_k1": "false",
-    "skip_instructions_popup": "false",
+    "skip_instructions_popup": "true",
     "disable_param_editing": "false",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "true",
@@ -33,13 +33,14 @@
     ],
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false",
-    "maze_data": null
+    "maze_data": null,
+    "callout_json": "[\r\n  {\"localization_key\":\"New Play Lab Project_callout1\",\"callout_text\":\"Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program\",\"element_id\":\"#when_run\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":-75,\"y\":100},\"my\":\"left center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n,  {\"localization_key\":\"New Play Lab Project_callout2\",\"callout_text\":\"Hit \\\"Run\\\" to try your program\",\"element_id\":\"#runButton\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":15,\"y\":null},\"my\":\"bottom left\",\"at\":\"top left\"},\"style\":{\"classes\":\"\"}}}\r\n]"
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run"/>
+        <block type="when_run" id="when_run"/>
         <block type="procedures_defnoreturn" uservisible="false">
           <mutation>
             <arg name="height"/>

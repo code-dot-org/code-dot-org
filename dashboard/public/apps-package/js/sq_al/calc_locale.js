@@ -155,9 +155,13 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "compute":function(d){return "llogarit"},
+"emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
+"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "equivalentExpression":function(d){return "Përpiqu të riformulosh argumentat e tu për të pasur egzaktësisht të njëjtën shprehje."},
 "extraTopBlocks":function(d){return "Ke shkëputur blloqet. Doje t'i bashkangjisje te blloku \" i llogaritur\"?"},
 "failedInput":function(d){return "Your function does not return the right result for all values."},
 "goal":function(d){return "Qëllimi:"},
+"levelIncompleteError":function(d){return "Your expression does not match the goal."},
 "reinfFeedbackMsg":function(d){return "Ky është krimi yt/jote! Vazhdo të punosh me të, ose kalo në pjesën tjetër!"},
-"yourExpression":function(d){return "Thënia jote:"}};
+"yourExpression":function(d){return "Thënia jote:"},
+"wrongInput":function(d){return "You are calling your function with the wrong value."}};

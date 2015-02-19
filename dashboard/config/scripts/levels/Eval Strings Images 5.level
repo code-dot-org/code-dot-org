@@ -14,7 +14,8 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "free_play": "false",
-    "embed": "false"
+    "embed": "false",
+    "callout_json": "[\r\n  {\"localization_key\":\"Eval Strings Images 5_callout1\",\"callout_text\":\"Overlay a triangle by filling in this slot\",\"element_id\":\"#callout_here\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":45,\"y\":null},\"my\":\"left center\",\"at\":\"left center\"},\"style\":{\"classes\":\"\"}}}\r\n]"
   }
 }]]></config>
   <blocks>
@@ -22,7 +23,7 @@
       <xml>
         <block type="functional_display" inline="false" deletable="false" movable="false">
           <functional_input name="ARG1">
-            <block type="overlay" inline="false">
+            <block type="overlay" inline="false" id="callout_here">
               <functional_input name="BOTTOM">
                 <block type="functional_circle" inline="false">
                   <functional_input name="SIZE">
