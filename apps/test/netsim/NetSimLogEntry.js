@@ -4,7 +4,7 @@ var assertEqual = testUtils.assertEqual;
 var assertWithinRange = testUtils.assertWithinRange;
 var assertOwnProperty = testUtils.assertOwnProperty;
 var netsimTestUtils = require('../util/netsimTestUtils');
-var fauxShard = netsimTestUtils.fauxShard;
+var fakeShard = netsimTestUtils.fakeShard;
 var assertTableSize = netsimTestUtils.assertTableSize;
 
 var NetSimLogEntry = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimLogEntry');
@@ -13,7 +13,7 @@ describe("NetSimLogEntry", function () {
   var testShard;
 
   beforeEach(function () {
-    testShard = fauxShard();
+    testShard = fakeShard();
   });
 
   it ("uses the logEntry table", function () {

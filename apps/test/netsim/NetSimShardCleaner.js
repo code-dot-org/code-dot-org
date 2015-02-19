@@ -4,7 +4,7 @@ var assertEqual = testUtils.assertEqual;
 var assertWithinRange = testUtils.assertWithinRange;
 var assertOwnProperty = testUtils.assertOwnProperty;
 var netsimTestUtils = require('../util/netsimTestUtils');
-var fauxShard = netsimTestUtils.fauxShard;
+var fakeShard = netsimTestUtils.fakeShard;
 var assertTableSize = netsimTestUtils.assertTableSize;
 
 var NetSimShardCleaner = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimShardCleaner');
@@ -49,7 +49,7 @@ describe("NetSimShardCleaner", function () {
 
   beforeEach(function () {
     NetSimLogger.getSingleton().setVerbosity(NetSimLogger.LogLevel.NONE);
-    testShard = fauxShard();
+    testShard = fakeShard();
     cleaner = new NetSimShardCleaner(testShard);
   });
 
