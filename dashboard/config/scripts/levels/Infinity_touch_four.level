@@ -34,7 +34,15 @@
       "upButton"
     ],
     "predraw_blocks": "<xml><block type=\"studio_setBackground\"><title name=\"VALUE\">\"snowy\"</title></block></xml>",
-    "generate_function_pass_blocks": "false"
+    "generate_function_pass_blocks": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "timeout_failure_tick": "250",
+    "timeout_after_when_run": "false"
   }
 }]]></config>
   <blocks>
@@ -70,5 +78,33 @@
         </block>
       </xml>
     </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="studio_whenArrow">
+          <title name="VALUE">up</title>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">down</title>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">left</title>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">right</title>
+        </block>
+        <block type="studio_move">
+          <title name="DIR">1</title>
+        </block>
+        <block type="studio_move">
+          <title name="DIR">4</title>
+        </block>
+        <block type="studio_move">
+          <title name="DIR">8</title>
+        </block>
+        <block type="studio_move">
+          <title name="DIR">2</title>
+        </block>
+      </xml>
+    </required_blocks>
   </blocks>
 </Studio>
