@@ -14,8 +14,10 @@ template: none
     %th.manage-th
       Cohort
     %th.manage-th
+      Segments
+    %th.manage-th
       Manage
-  %tr{"ng-repeat" => "workshop in workshops"}
+  %tr{"ng-repeat" => "workshop in workshops", 'ng-controller' => 'WorkshopController'}
     %td
       %span{'ng-hide' => 'workshop.editing', }
         {{workshop.name}}
@@ -30,11 +32,16 @@ template: none
         {{cohortName(workshop.cohort_id)}}
       %input{'ng-show' => 'workshop.editing', 'ng-model' => 'workshop.cohort_id', type:'text', value:'{{workshop.cohort_id}}'}
     %td
+      %div{'ng-repeat' => 'segment in workshopSegments'}
+        %p
+          Start: {{segment.start}}
+        %p
+          End: {{segment.end}}
+    %td
       %button.btn.btn-white{'ng-click' => 'workshop.editing = true', 'ng-hide' => 'workshop.editing'} Edit
       %button.btn.btn-danger{'ng-click' => 'workshop.$remove({id: workshop.id}) && workshops.splice($index, 1);', 'ng-hide' => 'workshop.editing'} Delete
       %button.btn.btn-primary{'ng-click' => 'save(workshop)', 'ng-show' => 'workshop.editing'} Save
       %button.btn.btn-white{'ng-click' => 'workshop.editing = false', 'ng-show' => 'workshop.editing'} Cancel
-
     %tr
     %td
       %input{'ng-model' => 'workshop.name', type:'text'}
@@ -46,6 +53,9 @@ template: none
       %select{'ng-model' => 'workshop.cohort_id'}
         %option{'ng-repeat' => 'cohort in cohorts', 'value' => '{{cohort.id}}'}
           {{cohort.name}}
+    %td
+      %p
+        Hello!
     %td
       %button.btn.btn-primary{'ng-click' => 'save(workshop)', style:'width:100%'}
         Create new workshop

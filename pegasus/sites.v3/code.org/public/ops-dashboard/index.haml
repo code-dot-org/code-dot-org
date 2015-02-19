@@ -62,6 +62,20 @@ theme: angular
       return Workshop;
     }]);
 
+  services.factory('segmentsService', ['$resource',
+    function($resource){
+      var Segment = $resource('/ops/workshops/:id/segments', {}, {
+        // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
+        //  'get':    {method:'GET'},
+        //  'save':   {method:'POST'},
+        //  'query':  {method:'GET', isArray:true},
+        //  'remove': {method:'DELETE'},
+        //  'delete': {method:'DELETE'}
+      });
+
+      return Segment;
+    }]);
+
   services.factory('cohortsService', ['$resource',
     function($resource){
       var Cohort = $resource('/ops/cohorts/:id', {}, {
@@ -214,5 +228,11 @@ theme: angular
       $scope.cancel_edit = function() {
         $location.path("/cohorts");
       };
+    }
+  ]);
+
+  controllers.controller('WorkshopController', ['$scope', '$route', '$routeParams', '$location', '$window', 'segmentsService',
+    function($scope, $route, $routeParams, $location, $window, segmentsService) {
+      $scope.workshopSegments = segmentsService.query({id: $scope.workshop.id});
     }
   ]);
