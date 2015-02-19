@@ -17,24 +17,45 @@ var dom = require('../dom');
 var PacketEncoder = require('./PacketEncoder');
 var KeyCodes = require('../constants').KeyCodes;
 
-function unsignedIntegerToBinaryString(integer, size) {
+/**
+ * Converts a number to a binary representation using the given number of bits.
+ * @param {number} integer - the base-10 number to convert
+ * @param {number} size - how many bits the output should use
+ * @returns {string} - string of binary representation of integer
+ */
+var unsignedIntegerToBinaryString = function (integer, size) {
   var binary = integer.toString(2);
   while (binary.length < size) {
     binary = '0' + binary;
   }
   // TODO: Deal with overflow?
   return binary;
-}
+};
 
-function asciiToBinaryString(ascii) {
+/**
+ * Converts a string to a string of its ascii binary representation.
+ * Not, strictly-speaking, ascii; uses the native String.prototype.charCodeAt
+ * which is consistent within the ASCII table (0-127) but not necessarily
+ * beyond it.
+ * @param {string} ascii - A plain text string
+ * @returns {string} binary representation of string
+ */
+var asciiToBinaryString = function (ascii) {
   var result = '';
   for (var i = 0; i < ascii.length; i++) {
     result += unsignedIntegerToBinaryString(ascii.charCodeAt(i), 8);
   }
   return result;
-}
+};
 
-function formatToChunkSize(rawBinary, chunkSize) {
+/**
+ * Given a binary string and a chunk size, whitespace-formats the binary
+ * string a returns the result.
+ * @param {string} rawBinary - binary string with no whitespace
+ * @param {number} chunkSize - how many
+ * @returns {string} formatted binary string
+ */
+var formatToChunkSize = function (rawBinary, chunkSize) {
   var result = '';
   for (var i = 0; i < rawBinary.length; i += chunkSize) {
     if (result.length > 0) {
@@ -43,7 +64,7 @@ function formatToChunkSize(rawBinary, chunkSize) {
     result += rawBinary.slice(i, i+chunkSize);
   }
   return result;
-}
+};
 
 /**
  * Generator and controller for message sending view.
