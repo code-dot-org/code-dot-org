@@ -4,7 +4,7 @@ var assert = testUtils.assert;
 /**
  * Checks whether the given table has the specified number of rows.
  *
- * @param {!NetSimShard} shard - Ideally a fauxShard
+ * @param {!NetSimShard} shard - Ideally a fakeShard
  * @param {!string} tableName - Passed a string instead of the table for error
  *        message readability.  Should be name of a member of the shard.
  * @param {!number} size - Expected number of rows.
@@ -98,7 +98,7 @@ exports.fauxStorageTable = function () {
   };
 };
 
-exports.fauxShard = function () {
+exports.fakeShard = function () {
   return {
     nodeTable: exports.fauxStorageTable(),
     wireTable: exports.fauxStorageTable(),
