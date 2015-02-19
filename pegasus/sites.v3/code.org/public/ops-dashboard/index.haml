@@ -234,5 +234,11 @@ theme: angular
   controllers.controller('WorkshopController', ['$scope', '$route', '$routeParams', '$location', '$window', 'segmentsService',
     function($scope, $route, $routeParams, $location, $window, segmentsService) {
       $scope.workshopSegments = segmentsService.query({id: $scope.workshop.id});
+
+      $scope.saveSegment = function (segment) {
+        var newSegment = new segmentsService($scope.segment);
+        newSegment.$save({id: $scope.workshop.id});
+      }
+
     }
   ]);

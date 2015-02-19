@@ -16,6 +16,8 @@ template: none
     %th.manage-th
       Segments
     %th.manage-th
+      Add Segment
+    %th.manage-th
       Manage
   %tr{"ng-repeat" => "workshop in workshops", 'ng-controller' => 'WorkshopController'}
     %td
@@ -38,6 +40,15 @@ template: none
         %p
           End: {{segment.end}}
     %td
+      Segment Start
+      %input{type:'datetime-local', 'ng-model' => 'segment.start'}
+      Segment End
+      %input{type:'datetime-local', 'ng-model' => 'segment.end'}
+      %br
+      %br
+      %button{'ng-click' => 'saveSegment(segment)'}
+        Save
+    %td
       %button.btn.btn-white{'ng-click' => 'workshop.editing = true', 'ng-hide' => 'workshop.editing'} Edit
       %button.btn.btn-danger{'ng-click' => 'workshop.$remove({id: workshop.id}) && workshops.splice($index, 1);', 'ng-hide' => 'workshop.editing'} Delete
       %button.btn.btn-primary{'ng-click' => 'save(workshop)', 'ng-show' => 'workshop.editing'} Save
@@ -53,6 +64,9 @@ template: none
       %select{'ng-model' => 'workshop.cohort_id'}
         %option{'ng-repeat' => 'cohort in cohorts', 'value' => '{{cohort.id}}'}
           {{cohort.name}}
+    %td
+      %p
+        Hello!
     %td
       %p
         Hello!
