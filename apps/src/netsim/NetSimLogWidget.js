@@ -74,7 +74,7 @@ NetSimLogWidget.prototype.log = function (message) {
       scrollArea[0].scrollHeight - scrollArea[0].scrollTop <=
       scrollArea.outerHeight();
 
-  this.scrollArea_.val(this.scrollArea_.val() + message + '\n');
+  scrollArea.val(this.scrollArea_.val() + message + '\n');
 
   // Auto-scroll
   if (wasScrolledToEnd) {

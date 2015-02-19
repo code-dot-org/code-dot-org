@@ -607,16 +607,33 @@ NetSimRouterNode.prototype.onMessageTableChange_ = function (rows) {
   }
 };
 
+/**
+ * Format router uses to decode packet.
+ * TODO (bbuchanan): Pull this from a common location; should be fixed across
+ *                   simulation.
+ * @type {PacketEncoder}
+ */
 var packetEncoder = new PacketEncoder([
   { key: 'toAddress', bits: 4 },
   { key: 'fromAddress', bits: 4 },
   { key: 'payload', bits: Infinity }
 ]);
 
+/**
+ * Read the given message to find its destination address, try and map that
+ * address to one of our connections, and send the message payload to
+ * the new address.
+ *
+ * @param {NetSimMessage} message
+ * @param {Array.<NetSimWire>} myWires
+ * @private
+ */
 NetSimRouterNode.prototype.routeMessage_ = function (message, myWires) {
+  var toAddress;
+
   // Find a connection to route this message to.
   try {
-    var toAddress = packetEncoder.getFieldAsInt('toAddress', message.payload);
+    toAddress = packetEncoder.getFieldAsInt('toAddress', message.payload);
   } catch (error) {
     // Malformed packet?
     this.log("Blocked malformed packet: " + message.payload);
