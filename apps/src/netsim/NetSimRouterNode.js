@@ -615,12 +615,6 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires) {
     return;
   }
 
-  if (toAddress === 0) {
-    // Message was sent to me, the router.  It's arrived!
-    this.log("Packet addressed to router: " + message.payload);
-    return;
-  }
-
   var destWires = myWires.filter(function (wire) {
     return wire.localAddress === toAddress;
   });
