@@ -28,7 +28,8 @@ The link below is a dataset of anonymized, aggregated data of student attempts t
 [<button>Download data (ZIP)</button>](/files/anonymizeddata.zip)
 
 ## A note on privacy
-This dataset has absolutely zero identifiable information, database IDs or personal information - not even timestamps, gender age, or location data. The dataset is FERPA compliant. Absolutely no information is included in the dataset which could be used to identify a student. For more information on how we protect private information, see our [terms of service](/tos) and [privacy policy](/privacy).
+
+The dataset is FERPA compliant.  It does not contain any identifiable information such as database IDs, timestamps, gender, age, or location data. Absolutely no information is included in the dataset which could be used to identify a student. For more information on how we protect private information, see our [terms of service](/tos) and [privacy policy](/privacy).
 
 ## Explanation of the dataset
 

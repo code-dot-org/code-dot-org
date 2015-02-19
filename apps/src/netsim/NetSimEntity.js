@@ -10,7 +10,7 @@
  */
 'use strict';
 
-var ObservableEvent = require('./ObservableEvent');
+var ObservableEvent = require('../ObservableEvent');
 
 /**
  * Client model of simulated network entity, which lives in a shard table.

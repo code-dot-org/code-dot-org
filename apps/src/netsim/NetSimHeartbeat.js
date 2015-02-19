@@ -42,7 +42,7 @@ var NetSimHeartbeat = module.exports = function (shard, row) {
   this.nodeID = row.nodeID;
 
   /** @type {number} unix timestamp (ms) */
-  this.time_ = row.time !== undefined ? row.time : 0;
+  this.time_ = row.time !== undefined ? row.time : Date.now();
 };
 NetSimHeartbeat.inherits(NetSimEntity);
 
