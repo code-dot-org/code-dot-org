@@ -204,7 +204,6 @@ module LevelsHelper
       images
       free_play
       min_workspace_height
-      slider_speed
       permitted_errors
       disable_param_editing
       disable_variable_editing
@@ -230,6 +229,10 @@ module LevelsHelper
       share
       no_padding
       show_finish
+      edit_code
+      code_functions
+      app_width
+      app_height
       embed
       generate_function_pass_blocks
       timeout_after_when_run
