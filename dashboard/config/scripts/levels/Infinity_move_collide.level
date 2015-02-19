@@ -27,7 +27,6 @@
     "coordinate_grid_background": "false",
     "first_sprite_index": "2",
     "generate_function_pass_blocks": "false",
-    "maze_data": null,
     "timeout_after_when_run": "false",
     "callout_json": "[\r\n  {\"localization_key\":\"Infinity_move_collide_callout\",\"callout_text\":\"Play a sound when this event occurs.\",\"element_id\":\"#eventBlock\",\"on\":\"\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top left\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n]"
   }
@@ -62,7 +61,7 @@
           <title name="DISTANCE">200</title>
         </block>
         <block type="studio_playSound">
-          <title name="SOUND">hit</title>
+          <title name="SOUND">winpoint2</title>
         </block>
       </xml>
     </required_blocks>

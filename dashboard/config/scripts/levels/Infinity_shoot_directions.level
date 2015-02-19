@@ -11,7 +11,7 @@
     "failure_condition": "function () {\r\n}",
     "maze": "[[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[16,0,0,16,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "Hiro is Actor 3.  Make Hiro send projectiles to each of the four characters.",
+    "instructions": "Hiro is Actor 3.  Make Hiro send projectiles to each of the four characters.  Wait one second each time.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -25,7 +25,15 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
-    "generate_function_pass_blocks": "false"
+    "generate_function_pass_blocks": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "timeout_failure_tick": "250",
+    "timeout_after_when_run": "false"
   }
 }]]></config>
   <blocks>
@@ -55,6 +63,9 @@
           <title name="SPRITE">2</title>
           <title name="VALUE">"projectile_duck"</title>
           <title name="DIR">2</title>
+        </block>
+        <block type="studio_wait">
+          <title name="VALUE">1000</title>
         </block>
       </xml>
     </toolbox_blocks>
