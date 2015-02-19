@@ -427,10 +427,6 @@ html, body {
   display: inline-block;
 }
 
-.user_menu {
-  cursor: pointer;
-}
-
 .user_options {
   display: inline-block;
   background-color: white;
@@ -514,20 +510,34 @@ html, body {
   }
 }
 
-.header_logo {
+.header_left {
   position: absolute;
-  float: left;
   left: 25px;
+  z-index: 2;
+  .header_button, .header_input, .header_text {
+    margin-left: 10px;
+  }
+}
+
+.header_left, .header_right {
+  margin-top: 9px;
+  @media screen and (max-width: 1150px) {
+    margin-top: 5px;
+  }
+}
+
+.header_logo {
+  float: left;
   width: 86px;
   max-width: 86px;
   min-width: 86px;
   z-index: 1;
-  margin-top: -15px;
+  margin-top: -24px;
   @media screen and (max-width: 1150px) {
     width: 55px;
     max-width: 55px;
     min-width: 55px;
-    padding-top: 10px;
+    padding-top: 14px;
     min-width: 0px;
   }
   a:hover {
@@ -539,6 +549,9 @@ html, body {
   position: absolute;
   left: 0;
   right: 0;
+  .header_button {
+    margin-top: 3px;
+  }
 }
 
 .header_level_container {
@@ -628,10 +641,6 @@ html, body {
   position: absolute;
   float: left;
   right: 25px;
-  margin-top: 9px;
-  @media screen and (max-width: 1150px) {
-    margin-top: 5px;
-  }
 }
 
 .freeplay_links {
@@ -639,20 +648,30 @@ html, body {
   text-align: center;
 }
 
-.header_user {
+.header_button {
   display: inline-block;
-  text-align: right;
   background-color: rgb(255, 164, 0);
   border-radius: 5px;
   padding: 7px 14px;
-  margin-left: 5px;
   font-size: 14px;
   line-height: 20px;
   box-sizing: border-box;
+  cursor: pointer;
   a:hover {
     text-decoration: none;
     background-color: rgb(255, 164, 0);
   }
+}
+
+input.header_input {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 3px;
+}
+
+.header_user {
+  text-align: right;
+  margin-left: 5px;
 }
 .header_popup {
   display: none;

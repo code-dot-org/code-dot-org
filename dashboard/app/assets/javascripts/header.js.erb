@@ -24,7 +24,60 @@ if (!window.dashboard) {
  *   }>
  * }}
  */
+
 dashboard.buildHeader = function (scriptData) {
+
+  function projectNameShow() {
+    $('.project_info').empty().append($('<div>').addClass('header_text').text(dashboard.currentApp.name))
+        .append($('<div class="project_edit header_button">').text('<%= I18n.t('project.rename') %>'));
+  }
+
+  function projectNameEdit() {
+    $('.project_info').empty().append($('<input>', {type: 'text'}).addClass('header_input').val(dashboard.currentApp.name))
+        .append($('<div class="project_save header_button">').text('<%= I18n.t('project.save') %>'));
+  }
+
+  function returnToCourseShow() {
+    $('.header_level').empty().append($('<div class="project_exit header_button">').append('<i class="fa fa-arrow-left">')
+        .append($('<span>').css('margin-left', '5px').text('<%= I18n.t('project.exit') %>')));
+    $('.freeplay_links').before($('<div class="project_list header_button">').text('<%= I18n.t('project.my_projects') %>'));
+  }
+
+  $(function () {
+    if (window.location.hash && window.location.hash.length > 1) {
+      // Try to load a project from the # param
+      apps.fetch(window.location.hash.slice(1), function(data) {
+        if (data) {
+          dashboard.currentApp = data;
+          projectNameShow();
+          returnToCourseShow();
+        }
+      });
+    } else if (appOptions.level.freePlay) {
+      $('.project_info').append($('<div class="project_create header_button">').text('<%= I18n.t('project.create') %>'));
+    }
+  });
+
+  $(document).on('click', '.project_edit', projectNameEdit);
+
+  $(document).on('click', '.project_save', function () {
+    // TODO: apps.update
+    projectNameShow();
+  });
+
+  $(document).on('click', '.project_exit', function () {
+    // TODO: apps.update
+    location.hash = '';
+    location.reload();
+  });
+
+  $(document).on('click', '.project_create', function () {
+    // TODO: apps.create
+    dashboard.currentApp = {name: 'Untitled'};
+    projectNameEdit();
+    returnToCourseShow();
+  });
+
   $('.header_text').first().text(scriptData.title);
   if (scriptData.finishLink) {
     $('.header_finished_link').show().append($('<a>').attr('href', scriptData.finishLink.href).text(scriptData.finishLink.text));

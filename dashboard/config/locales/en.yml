@@ -541,3 +541,9 @@ en:
     courses_working_on: "Courses you're working on"
     completed_courses: "Completed courses"
     all_courses: "All courses"
+  project:
+    create: "Create Project"
+    rename: "Rename"
+    save: "Save"
+    exit: "Return to Course"
+    my_projects: "My Projects"
