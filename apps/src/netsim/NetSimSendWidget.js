@@ -60,6 +60,8 @@ var NetSimSendWidget = module.exports = function (connection) {
       .register(this.onConnectionStatusChange_.bind(this));
 
   this.packetBinary = '';
+  this.toAddress_ = 0;
+  this.fromAddress_ = 0;
 };
 
 /**
@@ -137,60 +139,62 @@ NetSimSendWidget.prototype.bindElements_ = function () {
   dom.addClickTouchEvent(this.sendButton_[0], this.onSendButtonPress_.bind(this));
 };
 
-/**
- * Handler for connection status changes.  Can update configuration and
- * trigger a refresh of this view.
- * @private
- */
-NetSimSendWidget.prototype.onConnectionStatusChange_ = function () {
-
-};
-
 var packetEncoder = new PacketEncoder([
   { key: 'toAddress', bits: 4 },
   { key: 'fromAddress', bits: 4 },
   { key: 'payload', bits: Infinity }
 ]);
 
+/**
+ * Handler for connection status changes.  Can update configuration and
+ * trigger a refresh of this view.
+ * @private
+ */
+NetSimSendWidget.prototype.onConnectionStatusChange_ = function () {
+  if (this.connection_.myNode && this.connection_.myNode.myWire) {
+    this.fromAddress_ = this.connection_.myNode.myWire.localAddress;
+  } else {
+    this.fromAddress_ = 0;
+  }
+
+  this.rebuildPacketBinary_();
+  this.refresh();
+};
+
 NetSimSendWidget.prototype.onToAddressChange_ = function () {
-  this.packetBinary = packetEncoder.createBinary({
-    toAddress: unsignedIntegerToBinaryString(this.toAddressTextbox_.val(), 4),
-    fromAddress: unsignedIntegerToBinaryString(this.fromAddressTextbox_.val(), 4),
-    payload: this.binaryPayloadTextbox_.val().replace(/[^01]/g, '')
-  });
+  this.toAddress_ = parseInt(this.toAddressTextbox_.val(), 10);
+  this.rebuildPacketBinary_();
   this.refresh();
 };
 
 NetSimSendWidget.prototype.onBinaryPayloadChange_ = function () {
-  this.packetBinary = packetEncoder.createBinary({
-    toAddress: unsignedIntegerToBinaryString(this.toAddressTextbox_.val(), 4),
-    fromAddress: unsignedIntegerToBinaryString(this.fromAddressTextbox_.val(), 4),
-    payload: this.binaryPayloadTextbox_.val().replace(/[^01]/g, '')
-  });
+  this.rebuildPacketBinary_();
   this.refresh();
 };
 
 NetSimSendWidget.prototype.onAsciiPayloadChange_ = function () {
-  this.packetBinary = packetEncoder.createBinary({
-    toAddress: unsignedIntegerToBinaryString(this.toAddressTextbox_.val(), 4),
-    fromAddress: unsignedIntegerToBinaryString(this.fromAddressTextbox_.val(), 4),
-    payload: asciiToBinaryString(this.asciiPayloadTextbox_.val())
-  });
+  this.binaryPayloadTextbox_.val(asciiToBinaryString(this.asciiPayloadTextbox_.val()));
+  this.rebuildPacketBinary_();
   this.refresh();
+};
+
+NetSimSendWidget.prototype.rebuildPacketBinary_ = function () {
+  this.packetBinary = packetEncoder.createBinary({
+    toAddress: unsignedIntegerToBinaryString(this.toAddress_, 4),
+    fromAddress: unsignedIntegerToBinaryString(this.fromAddress_, 4),
+    payload: this.binaryPayloadTextbox_.val().replace(/[^01]/g, '')
+  });
 };
 
 /** Update send widget display */
 NetSimSendWidget.prototype.refresh = function () {
   // Non-interactive right now
-  this.rootDiv_.find('#from_address').val('?');
   this.rootDiv_.find('#packet_index').val(1);
   this.rootDiv_.find('#packet_count').val(1);
 
-  var toAddress = packetEncoder.getFieldAsInt('toAddress', this.packetBinary);
-  this.toAddressTextbox_.val(toAddress);
+  this.toAddressTextbox_.val(this.toAddress_);
 
-  var fromAddress = packetEncoder.getFieldAsInt('fromAddress', this.packetBinary);
-  this.fromAddressTextbox_.val(fromAddress);
+  this.fromAddressTextbox_.val(this.fromAddress_);
 
   this.bitCounter_.html(this.packetBinary.length + '/Infinity bits');
 
