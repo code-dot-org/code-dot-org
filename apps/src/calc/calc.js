@@ -338,6 +338,7 @@ Calc.evaluateFunction_ = function (targetSet, userSet) {
 };
 
 /**
+ * @static
  * @returns outcome object
  */
 Calc.evaluateResults_ = function (targetSet, userSet) {
@@ -393,7 +394,7 @@ Calc.evaluateResults_ = function (targetSet, userSet) {
  * Execute the user's code.
  */
 Calc.execute = function() {
-  generateResults();
+  Calc.generateResults_();
 
   var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   var textBlocks = Blockly.Xml.domToText(xml);
@@ -438,8 +439,9 @@ function isPreAnimationFailure(testResult) {
 
 /**
  * Fill appState with the results of program execution.
+ * @static
  */
-function generateResults() {
+Calc.generateResults_ = function () {
   appState.message = undefined;
 
   // Check for pre-execution errors
