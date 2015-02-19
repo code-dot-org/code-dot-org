@@ -7,11 +7,11 @@
   "properties": {
     "skin": "infinity",
     "background": "icy",
-    "success_condition": "function () {\r\n}",
+    "success_condition": "function () {\r\n  return Studio.allWhenRunBlocksComplete() && Studio.sayComplete > 0;\r\n}",
     "failure_condition": "function () {\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "Make your character say something, by using the Say block.  It contains a number of choices.",
+    "instructions": "Make your character say \"Hi there!\" by using the Say block.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -26,7 +26,7 @@
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
     "generate_function_pass_blocks": "false",
-    "timeout_after_when_run": "false",
+    "timeout_after_when_run": "true",
     "callout_json": "[\r\n]",
     "contract_highlight": "false",
     "contract_collapse": "false",
@@ -35,7 +35,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "first_sprite_index": "0",
-    "protaganist_sprite_index": "0"
+    "protaganist_sprite_index": "0",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
@@ -51,5 +52,12 @@
         </block>
       </xml>
     </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="studio_saySpriteChoices">
+          <title name="VALUE">Hi there!</title>
+        </block>
+      </xml>
+    </required_blocks>
   </blocks>
 </Studio>
