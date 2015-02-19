@@ -163,9 +163,9 @@
 
         script_name = params.script;
         headerStore.load({
-          script_name: params.script,
-          stage_id: params.stage,
-          level_id: params.level
+          script_name: params.script || '20-hour',
+          stage_id: params.stage || 1,
+          level_id: params.level || 1
         });
 
         return;
