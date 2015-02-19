@@ -27,7 +27,7 @@
     "coordinate_grid_background": "false",
     "timeout_failure_tick": "200",
     "generate_function_pass_blocks": "false",
-    "callout_json": "[\r\n  {\"localization_key\":\"Infinity_repeat_callout\",\"callout_text\":\"Place Move blocks inside here\",\"element_id\":\"#repeatForever\",\"on\":\"\",\"qtip_config\":{\"position\":{\"adjust\":{\"y\":30,\"x\":null},\"my\":\"top left\",\"at\":\"top center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"Infinity_repeat_callout\",\r\n  \"callout_text\": \"Place Move blocks inside here\",\r\n  \"element_id\": \"#repeatForever\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": null,\r\n     \"y\": 30\r\n    },\r\n    \"my\": \"top left\",\r\n    \"at\": \"top center\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n }\r\n]",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -58,7 +58,6 @@
     </toolbox_blocks>
     <required_blocks>
       <xml>
-        <block type="studio_repeatForever"/>
         <block type="studio_moveDistance">
           <title name="DIR">1</title>
           <title name="DISTANCE">400</title>
