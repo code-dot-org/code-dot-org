@@ -1270,7 +1270,7 @@ Blockly.Blocks.functional_definition = {init:function() {
   for(var a = document.createElement("mutation"), b = 0;b < this.parameterNames_.length;b++) {
     var c = document.createElement("arg");
     c.setAttribute("name", this.parameterNames_[b]);
-    c.setAttribute("type", this.parameterTypes_[b]);
+    this.parameterTypes_[b] && c.setAttribute("type", this.parameterTypes_[b]);
     a.appendChild(c)
   }
   this.description_ && (b = document.createElement("description"), b.innerHTML = this.description_, a.appendChild(b));
