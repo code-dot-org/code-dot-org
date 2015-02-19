@@ -15,6 +15,7 @@
 var markup = require('./NetSimSendWidget.html');
 var dom = require('../dom');
 var PacketEncoder = require('./PacketEncoder');
+var KeyCodes = require('../constants').KeyCodes;
 
 function unsignedIntegerToBinaryString(integer, size) {
   var binary = integer.toString(2);
@@ -80,57 +81,63 @@ NetSimSendWidget.createWithin = function (element, connection) {
 };
 
 /**
+ * Creates a keyPress handler that allows only the given characters to be
+ * typed into a text field.
+ * @param {RegExp} whitelistRegex
+ * @return {function} appropriate to pass to .keypress()
+ */
+var whitelistCharacters = function (whitelistRegex) {
+  /**
+   * A keyPress handler that blocks all visible characters except those
+   * matching the whitelist.  Passes through invisible characters (backspace,
+   * delete) and control combinations (copy, paste).
+   *
+   * @param keyEvent
+   * @returns {boolean} - Whether to propagate this event.  Should return
+   *          FALSE if we handle the event and don't want to pass it on, TRUE
+   *          if we are not handling the event.
+   */
+  var keyPressHandler = function (keyEvent) {
+
+    // Don't block control combinations (copy, paste, etc.)
+    if (keyEvent.metaKey || keyEvent.ctrlKey) {
+      return true;
+    }
+
+    // Don't block invisible characters; we want to allow backspace, delete, etc.
+    if (keyEvent.which < KeyCodes.SPACE || keyEvent.which >= KeyCodes.DELETE) {
+      return true;
+    }
+
+    // At this point, if the character doesn't match, we should block it.
+    var key = String.fromCharCode(keyEvent.which);
+    if (!whitelistRegex.test(key)) {
+      keyEvent.preventDefault();
+      return false;
+    }
+  };
+};
+
+/**
  * Get relevant elements from the page and bind them to local variables.
  * @private
  */
 NetSimSendWidget.prototype.bindElements_ = function () {
   this.rootDiv_ = $('#netsim_send_widget');
   this.toAddressTextbox_ = this.rootDiv_.find('#to_address');
-  this.toAddressTextbox_.bind('keyPress', function (event) {
-    // Don't block control combinations (copy, paste, etc);
-    if (event.metaKey || event.ctrlKey) {
-      return true;
-    }
-
-    // Prevent non-digit characters
-    var charCode = !event.charCode ? event.which : event.charCode;
-    if (charCode >= 32 && charCode <= 126) {
-      var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
-
-      if (!/\d/.test(key)) {
-        event.preventDefault();
-        return false;
-      }
-    }
-  });
+  this.toAddressTextbox_.keypress(whitelistCharacters(/[0-9]/));
   this.toAddressTextbox_.change(this.onToAddressChange_.bind(this));
 
   this.fromAddressTextbox_ = this.rootDiv_.find('#from_address');
 
   this.binaryPayloadTextbox_ = this.rootDiv_.find('#binary_payload');
-  this.binaryPayloadTextbox_.bind('keypress', function (event) {
-    // Don't block control combinations (copy, paste, etc);
-    if (event.metaKey || event.ctrlKey) {
-      return true;
-    }
-
-    // Prevent VISIBLE characters that aren't on our whitelist
-    var charCode = !event.charCode ? event.which : event.charCode;
-    if (charCode >= 32 && charCode <= 126) {
-      var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
-
-      if (!/[01]/.test(key)) {
-        event.preventDefault();
-        return false;
-      }
-    }
-  }.bind(this));
-  this.binaryPayloadTextbox_.bind('keyup', this.onBinaryPayloadChange_.bind(this));
+  this.binaryPayloadTextbox_.keypress(whitelistCharacters(/[01]/));
+  this.binaryPayloadTextbox_.keyup(this.onBinaryPayloadChange_.bind(this));
   this.binaryPayloadTextbox_.change(this.onBinaryPayloadChange_.bind(this));
 
   this.asciiPayloadTextbox_ = this.rootDiv_.find('#ascii_payload');
+  this.asciiPayloadTextbox_.keyup(this.onAsciiPayloadChange_.bind(this));
   this.asciiPayloadTextbox_.change(this.onAsciiPayloadChange_.bind(this));
-  this.asciiPayloadTextbox_.bind('keyup', this.onAsciiPayloadChange_.bind(this));
 
   this.bitCounter_ = this.rootDiv_.find('#bit_counter');
 
@@ -139,6 +146,7 @@ NetSimSendWidget.prototype.bindElements_ = function () {
   dom.addClickTouchEvent(this.sendButton_[0], this.onSendButtonPress_.bind(this));
 };
 
+// TODO (bbuchanan) : This should live somewhere common across the client.
 var packetEncoder = new PacketEncoder([
   { key: 'toAddress', bits: 4 },
   { key: 'fromAddress', bits: 4 },
