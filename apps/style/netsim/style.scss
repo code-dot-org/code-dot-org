@@ -169,6 +169,10 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
           font-size: 9pt;
           color: darkgray;
         }
+
+        textarea {
+          font-family: monospace;
+        }
       }
     }
   }
