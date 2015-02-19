@@ -397,17 +397,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert(@response.body.include?('Drag a \"move\" block and snap it below the other block'))
   end
 
-  test "should carry over previous blocks" do
-    blocks = "<hey>"
-    level = Level.where(level_num: "3_8").first
-    script_level = ScriptLevel.where(level_id: level.id).first
-    level_source = LevelSource.find_identical_or_create(level, blocks)
-    Activity.create!(user: @admin, level: level, lines: "1", attempt: "1", test_result: "100", time: "1000", level_source_id: level_source.id)
-    next_script_level = ScriptLevel.where(level: Level.where(level_num: "3_9").first).first
-    get :show, script_id: script_level.script.id, id: next_script_level.id
-    assert_equal blocks, assigns["start_blocks"]
-  end
-
   test 'should render title for puzzle in default script' do
     get :show, script_id: @script.id, id: @script_level.id
     assert_equal 'Code.org - The Maze #4',

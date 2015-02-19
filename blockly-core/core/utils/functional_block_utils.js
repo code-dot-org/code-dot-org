@@ -1,18 +1,47 @@
-var utils = require('./utils');
-var _ = utils.getLodash();
+/**
+ * Visual Blocks Editor
+ *
+ * Copyright 2011 Google Inc.
+ * http://blockly.googlecode.com/
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
-var colors = {
-  'Number': [192, 1.00, 0.99], // 00ccff
-  'string': [180, 1.00, 0.60], // 0099999
-  'image': [285, 1.00, 0.80], // 9900cc
-  'boolean': [90, 1.00, 0.4], // 336600
-  'none': [0, 0, 0.6]
-};
-module.exports.colors = colors;
+/**
+ * @fileoverview Class for caching image dimensions which have been dynamically determined
+ */
+'use strict';
+
+goog.provide('Blockly.FunctionalBlockUtils');
+goog.provide('Blockly.FunctionalTypeColors');
+goog.require('Blockly.BlockValueType');
+
+var typesToColors = {};
+typesToColors[Blockly.BlockValueType.NONE] = [0, 0, 0.6];
+typesToColors[Blockly.BlockValueType.NUMBER] = [192, 1.00, 0.99]; // 00ccff
+typesToColors[Blockly.BlockValueType.STRING] = [180, 1.00, 0.60]; // 0099999
+typesToColors[Blockly.BlockValueType.IMAGE] = [285, 1.00, 0.80]; // 9900cc
+typesToColors[Blockly.BlockValueType.BOOLEAN] = [90, 1.00, 0.4]; // 336600
+
+/**
+ * Map of colors associated with given types
+ * @type {Object.<Blockly.BlockValueType, Array>}
+ */
+Blockly.FunctionalTypeColors = typesToColors;
 
 /**
  * Helper function to create the init section for a functional block.
- * @param {Blockly.block} block The block to initialize.
+ * @param {Blockly.Block} block The block to initialize.
  * @param {string} title Localized block title to display.
  * @param {string} type Block type which appears in xml.
  * @param {Array} args Arguments to this block.
@@ -20,11 +49,11 @@ module.exports.colors = colors;
  *     to wrap the next argument onto a new line when rendering the
  *     block.
  */
-module.exports.initTitledFunctionalBlock = function (block, title, type, args, wrapWidth) {
+Blockly.FunctionalBlockUtils.initTitledFunctionalBlock = function (block, title, type, args, wrapWidth) {
   block.setFunctional(true, {
     headerHeight: 30
   });
-  block.setHSV.apply(block, colors[type]);
+  block.setHSV.apply(block, Blockly.FunctionalTypeColors[type]);
 
   var options = {
     fixedSize: { height: 35 }
@@ -39,16 +68,16 @@ module.exports.initTitledFunctionalBlock = function (block, title, type, args, w
     var input = block.appendFunctionalInput(arg.name);
     var wrapNextArg = wrapWidth && (i % wrapWidth) === 0;
     input.setInline(i > 0 && !wrapNextArg);
-    if (arg.type === 'none') {
+    if (arg.type === Blockly.BlockValueType.NONE) {
       input.setHSV(0, 0, 0.99);
     } else {
-      input.setHSV.apply(input, colors[arg.type]);
+      input.setHSV.apply(input, Blockly.FunctionalTypeColors[arg.type]);
       input.setCheck(arg.type);
     }
     input.setAlign(Blockly.ALIGN_CENTRE);
   }
 
-  if (type === 'none') {
+  if (type === Blockly.BlockValueType.NONE) {
     block.setFunctionalOutput(false);
   } else {
     block.setFunctionalOutput(true, type);
@@ -80,8 +109,7 @@ module.exports.initTitledFunctionalBlock = function (block, title, type, args, w
  * if no apiName is specified, a "dummy" block is generated which
  * accepts arguments but generates no code.
  */
-module.exports.installFunctionalApiCallBlock = function(blockly, generator,
-    options) {
+Blockly.FunctionalBlockUtils.installFunctionalApiCallBlock = function(blockly, generator, options) {
   var blockName = options.blockName;
   var blockTitle = options.blockTitle;
   var apiName = options.apiName;
@@ -93,8 +121,7 @@ module.exports.installFunctionalApiCallBlock = function(blockly, generator,
   var blockType = 'none';
   blockly.Blocks[blockName] = {
     init: function () {
-      module.exports.initTitledFunctionalBlock(this, blockTitle, blockType,
-          blockArgs);
+      Blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, blockTitle, blockType, blockArgs);
     }
   };
 
@@ -108,16 +135,15 @@ module.exports.installFunctionalApiCallBlock = function(blockly, generator,
     for (var i = 0; i < args.length; i++) {
       var arg = args[i];
       var value = arg.constantValue !== undefined ?
-            arg.constantValue :
-            Blockly.JavaScript.statementToCode(this, arg.name, false) ||
-                arg.default;
+        arg.constantValue :
+      Blockly.JavaScript.statementToCode(this, arg.name, false) || arg['default'];
       apiArgs.push(value);
     }
     return apiName + '(' + apiArgs.join(',') + ');\n';
   };
 };
 
-module.exports.installStringPicker = function(blockly, generator, options) {
+Blockly.FunctionalBlockUtils.installStringPicker = function(blockly, generator, options) {
   var values = options.values;
   var blockName = options.blockName;
   blockly.Blocks[blockName] = {
@@ -126,13 +152,13 @@ module.exports.installStringPicker = function(blockly, generator, options) {
         headerHeight: 0,
         rowBuffer: 3
       });
-      this.setHSV.apply(this, colors.string);
+      this.setHSV.apply(this, Blockly.FunctionalTypeColors[Blockly.BlockValueType.STRING]);
       this.appendDummyInput()
-          .appendTitle(new Blockly.FieldLabel('"'))
-          .appendTitle(new blockly.FieldDropdown(values), 'VAL')
-          .appendTitle(new Blockly.FieldLabel('"'))
-          .setAlign(Blockly.ALIGN_CENTRE);
-      this.setFunctionalOutput(true, 'string');
+        .appendTitle(new Blockly.FieldLabel('"'))
+        .appendTitle(new blockly.FieldDropdown(values), 'VAL')
+        .appendTitle(new Blockly.FieldLabel('"'))
+        .setAlign(Blockly.ALIGN_CENTRE);
+      this.setFunctionalOutput(true, blockly.BlockValueType.STRING);
     }
   };
 

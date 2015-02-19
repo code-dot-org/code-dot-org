@@ -890,7 +890,7 @@ Blockly.BlockSvg.prototype.renderDraw_ = function(iconWidth, inputRows) {
  * @private
  */
 Blockly.BlockSvg.prototype.renderDrawTop_ = function(renderInfo, rightEdge,
-  connectionsXY) {
+    connectionsXY) {
   // Position the cursor at the top-left starting point.
   if (this.squareTopLeftCorner_) {
     renderInfo.core.push('m 0,0');
