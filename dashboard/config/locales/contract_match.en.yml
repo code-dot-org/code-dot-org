@@ -13,7 +13,6 @@ en:
         Enter title here: Enter title here
         Enter prompt here: Enter prompt here
         Contract Name|Number|Domain1:Number|Domain2:string: Contract Name|Number|Domain1:Number|Domain2:string
-        text|Image|color:String|size:Number|string:String: text|Image|color:String|size:Number|string:String
       Eval Contracts 1 B:
         Eval Contracts 1 B: Eval Contracts 1 B
         Write a contract for the star function: Write a contract for the star function
