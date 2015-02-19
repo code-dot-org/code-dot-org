@@ -4,6 +4,7 @@ module Ops
   class SegmentsController < ::ApplicationController
     # CanCan provides automatic resource loading and authorization for default index + CRUD actions
     load_and_authorize_resource :workshop
+    skip_before_filter :verify_authenticity_token
 
     # Load shallow nested resource. See https://github.com/CanCanCommunity/cancancan/wiki/Nested-Resources#shallow-nesting
     load_and_authorize_resource through: :workshop, shallow: true
