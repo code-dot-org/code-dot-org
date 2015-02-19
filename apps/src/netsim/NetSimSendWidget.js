@@ -97,7 +97,7 @@ var whitelistCharacters = function (whitelistRegex) {
    *          FALSE if we handle the event and don't want to pass it on, TRUE
    *          if we are not handling the event.
    */
-  var keyPressHandler = function (keyEvent) {
+  return function (keyEvent) {
 
     // Don't block control combinations (copy, paste, etc.)
     if (keyEvent.metaKey || keyEvent.ctrlKey) {
@@ -116,7 +116,6 @@ var whitelistCharacters = function (whitelistRegex) {
       return false;
     }
   };
-  return keyPressHandler;
 };
 
 /**
