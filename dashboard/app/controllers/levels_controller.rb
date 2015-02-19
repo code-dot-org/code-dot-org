@@ -167,17 +167,12 @@ class LevelsController < ApplicationController
     authorize! :read, :level
     level = Level.find(params[:level_id])
     block_type = params[:block_type]
-    blocks = level.properties[block_type]
-    if level.game.app == 'eval'
-      match = /<xml><block type="functional_display".*?><functional_input.*?>(.*)<\/functional_input><\/block><\/xml>/.match(blocks)
-      blocks = match[1] unless match[1].nil?
-    end
     options = {
         app: level.game.app,
         readonly: true,
         locale: js_locale,
         baseUrl: "#{ActionController::Base.asset_host}/blockly/",
-        blocks: blocks
+        blocks: level.embed_blocks(level.properties[block_type])
     }
     render :embed_blocks, layout: false, locals: options
   end

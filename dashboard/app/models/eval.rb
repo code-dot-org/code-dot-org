@@ -89,4 +89,10 @@ class Eval < Blockly
   def toolbox(type)
     Eval.toolbox
   end
+
+  def embed_blocks(blocks)
+    match = /<xml><block type="functional_display".*?><functional_input.*?>(.*)<\/functional_input><\/block><\/xml>/.match(blocks)
+    return match[1] || blocks
+  end
+
 end
