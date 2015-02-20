@@ -33,22 +33,20 @@ var ExpressionNode = function (val, args, blockId) {
     return item;
   });
 
-  if (this.getType() === ValueType.NUMBER && args.length > 0) {
+  if (this.isNumber() && args.length > 0) {
     throw new Error("Can't have args for number ExpressionNode");
   }
 
-  if (this.getType() === ValueType.ARITHMETIC && args.length !== 2) {
+  if (this.isArithmetic() && args.length !== 2) {
     throw new Error("Arithmetic ExpressionNode needs 2 args");
   }
 };
 module.exports = ExpressionNode;
 
-ExpressionNode.ValueType = ValueType;
-
 /**
  * What type of expression node is this?
  */
-ExpressionNode.prototype.getType = function () {
+ExpressionNode.prototype.getType_ = function () {
   if (["+", "-", "*", "/"].indexOf(this.value_) !== -1) {
     return ValueType.ARITHMETIC;
   }
@@ -63,6 +61,19 @@ ExpressionNode.prototype.getType = function () {
   if (typeof(this.value_) === 'number') {
     return ValueType.NUMBER;
   }
+};
+
+ExpressionNode.prototype.isArithmetic = function () {
+  return this.getType_() === ValueType.ARITHMETIC;
+};
+ExpressionNode.prototype.isFunctionCall = function () {
+  return this.getType_() === ValueType.FUNCTION_CALL;
+};
+ExpressionNode.prototype.isVariable = function () {
+  return this.getType_() === ValueType.VARIABLE;
+};
+ExpressionNode.prototype.isNumber = function () {
+  return this.getType_() === ValueType.NUMBER;
 };
 
 /**
@@ -93,7 +104,7 @@ ExpressionNode.prototype.canEvaluate = function (mapping) {
  */
 ExpressionNode.prototype.evaluate = function (mapping) {
   mapping = mapping || {};
-  var type = this.getType();
+  var type = this.getType_();
 
   if (type === ValueType.VARIABLE && mapping[this.value_] !== undefined) {
     var clone = this.clone();
@@ -216,7 +227,7 @@ ExpressionNode.prototype.getTokenListDiff = function (other) {
   var tokens;
   var nodesMatch = other && (this.value_ === other.value_) &&
     (this.children_.length === other.children_.length);
-  var type = this.getType();
+  var type = this.getType_();
 
   // Empty function calls look slightly different, i.e. foo() instead of foo
   if (this.children_.length === 0) {
@@ -250,7 +261,7 @@ ExpressionNode.prototype.getTokenListDiff = function (other) {
     }
 
     tokens.push(new Token(")", !nodesMatch));
-  } else if (this.getType() === ValueType.VARIABLE) {
+  } else if (this.getType_() === ValueType.VARIABLE) {
 
   }
   return _.flatten(tokens);
@@ -268,7 +279,7 @@ ExpressionNode.prototype.getTokenList = function (markDeepest) {
     return this.getTokenListDiff(markDeepest ? null : this);
   }
 
-  if (this.getType() !== ValueType.ARITHMETIC) {
+  if (this.getType_() !== ValueType.ARITHMETIC) {
     // Don't support getTokenList for functions
     throw new Error("Unsupported");
   }
@@ -310,8 +321,8 @@ ExpressionNode.prototype.hasSameSignature = function (other) {
     return false;
   }
 
-  if (this.getType() !== ValueType.FUNCTION_CALL ||
-      other.getType() !== ValueType.FUNCTION_CALL) {
+  if (this.getType_() !== ValueType.FUNCTION_CALL ||
+      other.getType_() !== ValueType.FUNCTION_CALL) {
     return false;
   }
 
@@ -331,7 +342,7 @@ ExpressionNode.prototype.hasSameSignature = function (other) {
  */
 ExpressionNode.prototype.isEquivalentTo = function (other) {
   // only ignore argument order for ARITHMETIC
-  if (this.getType() !== ValueType.ARITHMETIC) {
+  if (this.getType_() !== ValueType.ARITHMETIC) {
     return this.isIdenticalTo(other);
   }
 
@@ -365,7 +376,7 @@ ExpressionNode.prototype.numChildren = function () {
  * Modify this ExpressionNode's value
  */
 ExpressionNode.prototype.setValue = function (value) {
-  var type = this.getType();
+  var type = this.getType_();
   if (type !== ValueType.VARIABLE && type !== ValueType.NUMBER) {
     throw new Error("Can't modify value");
   }
