@@ -9,8 +9,6 @@
   %p.content3!= string_or_image(app, data['content3']) unless data['content3'].blank?
   / Markdown support using the 'markdown' property.
   - unless data['markdown'].blank?
-    = javascript_include_tag 'Showdown.min.js'
     #markdown
-    :javascript
-      var markdown = #{data['markdown'].to_json};
-      $('#markdown').html(new Showdown.converter().makeHtml(markdown));
+      / Render markdown text through the ActionView template engine.
+      = ActionView::Base.new.render(inline: data['markdown'], type: :md)
