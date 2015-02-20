@@ -1,15 +1,13 @@
 !!! 5
 - show_footer = !(@share && browser.mobile?) && !@embed
-- show_header = !(@embed)
 %html{dir: locale_dir}
   %head
     - # TODO OFFLINE
-    %title= @page_title ? "#{t(:appname)} - #{@page_title}" : t(:appname)
+    %title= t(:appname) + (@page_title ? " - #{@page_title}" : "")
     = ::NewRelic::Agent.browser_timing_header rescue ''
     = tag :meta, name: 'viewport', content: 'minimal-ui'
     /[if IE 9]
       %meta{'http-equiv' => 'X-UA-Compatible', content: 'IE=Edge'}
-    = javascript_include_tag 'react'
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
     = javascript_include_tag '//cdn.optimizely.com/js/400912536.js' if Rails.env.production?
@@ -22,7 +20,7 @@
       = render partial: 'layouts/age_interstitial'
 
     .wrapper{style: ('background-color: #ffffff' if @embed)}
-      = render partial: 'layouts/header' if show_header
+      = render partial: 'layouts/header' if !(@embed)
       - page = yield
       - if @full_width
         .full_container{style: ('padding: 0px;' if @no_padding)}
