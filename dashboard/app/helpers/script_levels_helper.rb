@@ -58,7 +58,7 @@ module ScriptLevelsHelper
       kind = 'unplugged'
     elsif sl.assessment
       kind = 'assessment'
-    elsif
+    else
       kind = 'blockly'
     end
 
