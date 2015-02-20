@@ -1,7 +1,7 @@
 <Studio>
   <config><![CDATA[{
   "game_id": 33,
-  "created_at": "2015-02-13T18:07:20.000Z",
+  "created_at": "2015-02-19T18:20:22.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -10,7 +10,7 @@
     "timeout_after_when_run": "true",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "When you last worked on your game we got our target and danger sprites to fly across the screen, but they never come back. Click run to see how your game is currently working, and then click finish and we'll work on making those sprites reappear on screen after they've left.",
+    "instructions": "You made it! At this point your game should be fully functioning, take some time to enjoy your new game and make any final tweaks to it. When you're happy with the final product, click Finish and you'll have an opportunity to share a link to your game. Good work!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -20,22 +20,28 @@
     "default_num_example_blocks": "2",
     "project_template_level_name": "Big Game Template",
     "free_play": "true",
-    "disable_sharing": "true",
+    "disable_sharing": "false",
     "edge_collisions": "false",
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "true",
     "sprites_hidden_to_start": "true",
     "coordinate_grid_background": "false",
     "generate_function_pass_blocks": "true",
-    "callout_json": "[\r\n]",
+    "callout_json": "[]",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "maze_data": null,
-    "custom_game_type": "Big Game"
+    "custom_game_type": "Big Game",
+    "min_workspace_height": "1500",
+    "open_function_definition": "distance",
+    "soft_buttons": [
+      "downButton",
+      "upButton"
+    ],
+    "maze_data": null
   }
 }]]></config>
   <blocks/>
