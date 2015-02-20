@@ -7,7 +7,7 @@ testUtils.setupLocales('calc');
 
 var Calc = require(testUtils.buildPath('/calc/calc.js'));
 var EquationSet = require(testUtils.buildPath('/calc/equationSet.js'));
-var Equation = EquationSet.Equation;
+var Equation = require(testUtils.buildPath('/calc/equation.js'));
 var ExpressionNode = require(testUtils.buildPath('/calc/expressionNode.js'));
 var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
 var ResultType = require(testUtils.buildPath('constants.js')).ResultType;

@@ -6,7 +6,7 @@ var blockUtils = require(testUtils.buildPath('block_utils'));
 var studioApp = require(testUtils.buildPath('StudioApp')).singleton;
 var Calc = require(testUtils.buildPath('calc/calc.js'));
 var EquationSet = require(testUtils.buildPath('calc/equationSet.js'));
-var Equation = EquationSet.Equation;
+var Equation = require(testUtils.buildPath('/calc/equation.js'));
 var ExpressionNode = require(testUtils.buildPath('calc/expressionNode.js'));
 
 /**
