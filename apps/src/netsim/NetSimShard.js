@@ -49,6 +49,10 @@ var NetSimShard = module.exports = function (shardID) {
       new SharedTable(APP_PUBLIC_KEY, shardID + '_m'));
 
   /** @type {NetSimTable} */
+  this.logTable = new NetSimTable(
+      new SharedTable(APP_PUBLIC_KEY, shardID + '_l'));
+
+  /** @type {NetSimTable} */
   this.heartbeatTable = new NetSimTable(
       new SharedTable(APP_PUBLIC_KEY, shardID + '_h'));
 };
@@ -63,4 +67,5 @@ NetSimShard.prototype.tick = function (clock) {
   this.nodeTable.tick(clock);
   this.wireTable.tick(clock);
   this.messageTable.tick(clock);
+  this.logTable.tick(clock);
 };

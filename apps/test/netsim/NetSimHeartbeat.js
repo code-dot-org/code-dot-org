@@ -1,9 +1,11 @@
 var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
+var assertWithinRange = testUtils.assertWithinRange;
 var assertOwnProperty = testUtils.assertOwnProperty;
 var netsimTestUtils = require('../util/netsimTestUtils');
-var fauxShard = netsimTestUtils.fauxShard;
+var fakeShard = netsimTestUtils.fakeShard;
+var assertTableSize = netsimTestUtils.assertTableSize;
 
 var NetSimHeartbeat = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimHeartbeat');
 
@@ -11,7 +13,7 @@ describe("NetSimHeartbeat", function () {
   var testShard;
 
   beforeEach(function () {
-    testShard = fauxShard();
+    testShard = fakeShard();
   });
 
   describe("default row structure", function () {
@@ -27,9 +29,9 @@ describe("NetSimHeartbeat", function () {
       assertEqual(row.fromNodeID, undefined);
     });
 
-    it ("time (default 0)", function () {
+    it ("time (default Date.now())", function () {
       assertOwnProperty(row, 'time');
-      assertEqual(row.time, 0);
+      assertWithinRange(row.time, Date.now(), 10);
     });
   });
 
@@ -131,7 +133,7 @@ describe("NetSimHeartbeat", function () {
     testShard.heartbeatTable.log('');
     originalHeartbeat.tick();
     assertEqual("update", testShard.heartbeatTable.log().slice(0, 6));
-    assert(originalHeartbeat.time_ > fiveSecondsAgo, "Time has been updated");
+    assertWithinRange(Date.now(), originalHeartbeat.time_, 10);
   });
 
   it ("can be removed from the remote table with destroy()", function () {
@@ -145,9 +147,7 @@ describe("NetSimHeartbeat", function () {
     assert(heartbeat, "Created a heartbeat");
 
     // Check that table is not empty
-    testShard.heartbeatTable.readAll(function (rows) {
-      assertEqual(rows.length, 1);
-    });
+    assertTableSize(testShard, 'heartbeatTable', 1);
 
     // Destory heartbeat
     testShard.heartbeatTable.log('');
@@ -155,9 +155,7 @@ describe("NetSimHeartbeat", function () {
     assert("destroy", testShard.heartbeatTable.log().slice(0, 7));
 
     // Check that table is empty
-    testShard.heartbeatTable.readAll(function (rows) {
-      assertEqual(rows.length, 0);
-    });
+    assertTableSize(testShard, 'heartbeatTable', 0);
   });
 
 });

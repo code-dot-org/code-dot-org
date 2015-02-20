@@ -156,7 +156,7 @@ module LevelsHelper
   end
 
   def localize_levelbuilder_instructions
-    if language != 'en'
+    if I18n.locale != 'en-us'
       loc_val = data_t("instructions", "#{@level.name}_instruction")
       @level.properties['instructions'] = loc_val unless loc_val.nil?
     end
@@ -206,7 +206,6 @@ module LevelsHelper
       images
       free_play
       min_workspace_height
-      slider_speed
       permitted_errors
       disable_param_editing
       disable_variable_editing
@@ -232,6 +231,10 @@ module LevelsHelper
       share
       no_padding
       show_finish
+      edit_code
+      code_functions
+      app_width
+      app_height
       embed
       generate_function_pass_blocks
       timeout_after_when_run
@@ -305,7 +308,7 @@ module LevelsHelper
     app_options[:disableSocialShare] = true if (@current_user && @current_user.under_13?) || @embed
 
     # Move these values up to the root
-    %w(hideSource share noPadding showFinish embed).each do |key|
+    %w(hideSource share noPadding embed).each do |key|
       app_options[key.to_sym] = level[key]
       level.delete key
     end

@@ -12,7 +12,7 @@ nav: about_nav
 - [Grant Writer and Relationships Manager](#grant-writer)
 - [K-8 Program Manager](#K8-PM)
 - [High School Program Manager](#HS-PM)
-- [Regional Program Manager (Los Angeles, NYC, Ft. Lauderdale/Miami area)](#reg-PM)
+- [Regional Program Manager (Los Angeles, New York City, Ft. Lauderdale/Miami area)](#reg-PM)
 - [Policy Research Analyst](#advocacy-researcher)
 - [Data Scientist / Quantitative Data Analyst](#data-scientist)
 - [Operations/Developer](#ops-dev)
@@ -167,7 +167,9 @@ Code.org is recruiting for an experienced Head of Engineering. Full-time, salari
 - 5+ years as a manager of software engineers; past experience managing a team of at least 7 engineers
 - Full stack Web engineering experience, i.e. databases, application, front-end
 - Experienced in what it takes to scale a large back-end; scalability, analytics, particularly the modern tools of the trade
-- Mobile development experience (iOS, Android) desired but not required
+- Experience building and running a large scale consumer-focused Web service, with at least 1M users
+- Mobile development experience (iOS, Android) desired, but not required
+- Experience in a fast growth start-up environment desired
 
 Interested candidates should email a resume or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
@@ -187,7 +189,6 @@ Code.org is looking for an Operations Intern to join Code.org’s Operations tea
 
 - Minimum 2 years of undergraduate studies completed
 - Experience with Google suite of products
-- Ability to work legally in the United States
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>
 
@@ -263,7 +264,7 @@ Please DO NOT apply for this position if you do not have experience in writing s
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="reg-PM" href="#reg-PM">Regional Program Manager (Los Angeles, NYC, Ft. Lauderdale/Miami area)</a>
+## <a name="reg-PM" href="#reg-PM">Regional Program Manager (Los Angeles, New York City, Ft. Lauderdale/Miami area)</a>
 
 **Job Summary:** 
 

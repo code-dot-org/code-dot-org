@@ -4,7 +4,11 @@ view: page_curriculum
 theme: none
 ---
 
+[worksheet]
+
 <%= partial('doc_header', :title => 'Videogame Design', :disclaimer=>'Code.org CS in Algebra') %>
+
+[/worksheet]
 
 [content]
 
@@ -26,6 +30,7 @@ theme: none
 
 
 [/together]
+
 <br/><br/>
 <a href="http://creativecommons.org/"><img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0"></a>  
 

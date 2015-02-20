@@ -1,3 +1,24 @@
+var testUtils = require('../util/testUtils');
+var assert = testUtils.assert;
+
+/**
+ * Checks whether the given table has the specified number of rows.
+ *
+ * @param {!NetSimShard} shard - Ideally a fakeShard
+ * @param {!string} tableName - Passed a string instead of the table for error
+ *        message readability.  Should be name of a member of the shard.
+ * @param {!number} size - Expected number of rows.
+ */
+exports.assertTableSize = function (shard, tableName, size) {
+  var rowCount;
+  shard[tableName].readAll(function (rows) {
+    rowCount = rows.length;
+  });
+  assert(rowCount === size, "Expected table '" + tableName +
+      "' to contain " + size + " rows, but it had " + rowCount +
+      " rows.");
+};
+
 /**
  * Storage table API placeholder for testing, always hits callbacks immediately
  * so tests can be written imperatively.
@@ -77,11 +98,12 @@ exports.fauxStorageTable = function () {
   };
 };
 
-exports.fauxShard = function () {
+exports.fakeShard = function () {
   return {
     nodeTable: exports.fauxStorageTable(),
     wireTable: exports.fauxStorageTable(),
     messageTable: exports.fauxStorageTable(),
+    logTable: exports.fauxStorageTable(),
     heartbeatTable: exports.fauxStorageTable()
   };
 };

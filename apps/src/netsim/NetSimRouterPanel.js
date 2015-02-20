@@ -80,6 +80,9 @@ NetSimRouterPanel.prototype.bindElements_ = function () {
   this.connectedSpan_ = this.rootDiv_.find('#connected');
   this.notConnectedSpan_ = this.rootDiv_.find('#not_connected');
   this.networkTable_ = this.rootDiv_.find('#netsim_router_network_table');
+
+  this.routerLogDiv_ = this.rootDiv_.find('#router_log');
+  this.routerLogTable_ = this.routerLogDiv_.find('#netsim_router_log_table');
 };
 
 /**
@@ -105,14 +108,42 @@ NetSimRouterPanel.prototype.onShardChange_= function (newShard, localNode) {
  * @private
  */
 NetSimRouterPanel.prototype.onRouterChange_ = function (wire, router) {
+
+  // Unhook old handlers
+  if (this.routerStateChangeKey !== undefined) {
+    this.myConnectedRouter.stateChange.unregister(this.routerStateChangeKey);
+    this.routerStateChangeKey = undefined;
+    logger.info("RouterPanel unregistered from router stateChange");
+  }
+
+  if (this.routerWireChangeKey !== undefined) {
+    this.myConnectedRouter.wiresChange.unregister(this.routerWireChangeKey);
+    this.routerWireChangeKey = undefined;
+    logger.info("RouterPanel unregistered from router wiresChange");
+  }
+
+  if (this.routerLogChangeKey !== undefined) {
+    this.myConnectedRouter.logChange.unregister(this.routerLogChangeKey);
+    this.routerLogChangeKey = undefined;
+    logger.info("RouterPanel unregistered from router logChange");
+  }
+
+  // Update connected router
   this.myConnectedRouter = router;
   this.refresh();
+
+  // Hook up new handlers
   if (router) {
-    router.stateChange.register(this.onRouterStateChange_.bind(this));
+    this.routerStateChangeKey = router.stateChange.register(
+        this.onRouterStateChange_.bind(this));
     logger.info("RouterPanel registered to router stateChange");
 
-    router.wiresChange.register(this.onRouterWiresChange_.bind(this));
+    this.routerWireChangeKey = router.wiresChange.register(
+        this.onRouterWiresChange_.bind(this));
     logger.info("RouterPanel registered to router wiresChange");
+
+    this.routerLogChangeKey = router.logChange.register(
+        this.onRouterLogChange_.bind(this));
   }
 };
 
@@ -122,6 +153,10 @@ NetSimRouterPanel.prototype.onRouterStateChange_ = function () {
 
 NetSimRouterPanel.prototype.onRouterWiresChange_ = function () {
   this.refreshAddressTable_(this.myConnectedRouter.getAddressTable());
+};
+
+NetSimRouterPanel.prototype.onRouterLogChange_ = function () {
+  this.refreshLogTable_(this.myConnectedRouter.getLog());
 };
 
 NetSimRouterPanel.prototype.onDnsModeChange_ = function () {
@@ -143,6 +178,7 @@ NetSimRouterPanel.prototype.refresh = function () {
     this.notConnectedSpan_.hide();
     this.refreshDnsModeSelector_();
     this.refreshAddressTable_(this.myConnectedRouter.getAddressTable());
+    this.refreshLogTable_(this.myConnectedRouter.getLog());
   } else {
     this.notConnectedSpan_.show();
     this.connectedSpan_.hide();
@@ -192,6 +228,23 @@ NetSimRouterPanel.prototype.refreshAddressTable_ = function (addressTableData) {
 
     tableRow.appendTo(tableBody);
   });
+};
+
+NetSimRouterPanel.prototype.refreshLogTable_ = function (logTableData) {
+  var tableBody = this.routerLogTable_.find('tbody');
+  tableBody.empty();
+
+  // Sort: Most recent first
+  logTableData.sort(function (a, b) {
+    return a.timestamp > b.timestamp ? -1 : 1;
+  });
+
+  logTableData.forEach(function (entry) {
+    var tableRow = $('<tr>');
+    $('<td>').html(entry.logText).appendTo(tableRow);
+
+    tableRow.appendTo(tableBody);
+  }.bind(this));
 };
 
 NetSimRouterPanel.prototype.getDnsMode_ = function () {

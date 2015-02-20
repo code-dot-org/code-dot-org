@@ -5,7 +5,7 @@ class LevelsController < ApplicationController
   include LevelsHelper
   include ActiveSupport::Inflector
   before_filter :authenticate_user!, except: [:embed_blocks, :embed_level]
-  before_filter :can_modify?, except: [:show, :index]
+  before_filter :can_modify?, except: [:show, :index, :embed_blocks, :embed_level]
   skip_before_filter :verify_params_before_cancan_loads_model, only: [:create, :update_blocks]
   load_and_authorize_resource except: [:create, :update_blocks, :edit_blocks, :embed_blocks, :embed_level]
   check_authorization
@@ -140,6 +140,8 @@ class LevelsController < ApplicationController
         @game = Game.calc
       elsif @type_class <= Eval
         @game = Game.eval
+      elsif @type_class <= Applab
+        @game = Game.applab
       elsif @type_class <= Maze
         @game = Game.custom_maze
       elsif @type_class <= DSLDefined

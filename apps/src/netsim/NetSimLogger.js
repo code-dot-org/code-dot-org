@@ -52,7 +52,7 @@ var NetSimLogger = module.exports = function (outputConsole, verbosity /*=VERBOS
    */
   this.error = function () {};
 
-  this.initializeWithVerbosity_((undefined === verbosity) ?
+  this.setVerbosity((undefined === verbosity) ?
       LogLevel.VERBOSE : verbosity);
 };
 
@@ -71,11 +71,27 @@ var LogLevel = {
 NetSimLogger.LogLevel = LogLevel;
 
 /**
+ * Global singleton
+ * @type {NetSimLogger}
+ */
+var singletonInstance;
+
+/**
+ * Static getter/lazy-creator for the global singleton instance.
+ * @returns {NetSimLogger}
+ */
+NetSimLogger.getSingleton = function () {
+  if (singletonInstance === undefined) {
+    singletonInstance = new NetSimLogger(console, LogLevel.VERBOSE);
+  }
+  return singletonInstance;
+};
+
+/**
  * Binds internal function calls according to given verbosity level.
  * @param verbosity
- * @private
  */
-NetSimLogger.prototype.initializeWithVerbosity_ = function (verbosity) {
+NetSimLogger.prototype.setVerbosity = function (verbosity) {
   this.log_ = (this.outputConsole_ && this.outputConsole_.log) ?
       this.outputConsole_.log.bind(this.outputConsole_) : function () {};
 
