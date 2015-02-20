@@ -32,7 +32,15 @@
       "upButton"
     ],
     "protaganist_sprite_index": "0",
-    "generate_function_pass_blocks": "false"
+    "generate_function_pass_blocks": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "timeout_failure_tick": "250",
+    "timeout_after_when_run": "false"
   }
 }]]></config>
   <blocks>
@@ -86,5 +94,12 @@
         </block>
       </xml>
     </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="studio_changeScore">
+          <title name="VALUE">1</title>
+        </block>
+      </xml>
+    </required_blocks>
   </blocks>
 </Studio>

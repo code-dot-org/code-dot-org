@@ -1,3 +1,5 @@
+require 'digest/sha1'
+
 module LevelsHelper
 
   def build_script_level_path(script_level)
@@ -154,7 +156,7 @@ module LevelsHelper
   end
 
   def localize_levelbuilder_instructions
-    if language != 'en'
+    if I18n.locale != 'en-us'
       loc_val = data_t("instructions", "#{@level.name}_instruction")
       @level.properties['instructions'] = loc_val unless loc_val.nil?
     end
@@ -205,7 +207,6 @@ module LevelsHelper
       images
       free_play
       min_workspace_height
-      slider_speed
       permitted_errors
       disable_param_editing
       disable_variable_editing
@@ -231,6 +232,10 @@ module LevelsHelper
       share
       no_padding
       show_finish
+      edit_code
+      code_functions
+      app_width
+      app_height
       embed
       generate_function_pass_blocks
       timeout_after_when_run
@@ -289,6 +294,7 @@ module LevelsHelper
       milestone: @callback,
       droplet: @game.try(:uses_droplet?),
       pretty: Rails.configuration.pretty_apps ? '' : '.min',
+      applabUserId: @applab_user_id,
     }
     app_options[:scriptId] = @script.id if @script
     app_options[:levelGameName] = @level.game.name if @level.game
@@ -390,5 +396,12 @@ module LevelsHelper
         SoftButton.new('Down', 'downButton'),
         SoftButton.new('Up', 'upButton'),
     ]
+  end
+
+  # Unique, consistent ID for a user of an applab app.
+  def applab_user_id
+    app_id = "1337" # Stub value, until storage for app_id's is available.
+    user_id = current_user ? current_user.id.to_s : session.id
+    Digest::SHA1.base64digest("#{app_id}:#{user_id}").tr('=', '')
   end
 end

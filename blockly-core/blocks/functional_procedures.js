@@ -64,7 +64,9 @@ Blockly.Blocks.functional_definition = {
     for (var x = 0; x < this.parameterNames_.length; x++) {
       var parameter = document.createElement('arg');
       parameter.setAttribute('name', this.parameterNames_[x]);
-      parameter.setAttribute('type', this.parameterTypes_[x]);
+      if (this.parameterTypes_[x]) {
+        parameter.setAttribute('type', this.parameterTypes_[x]);
+      }
       container.appendChild(parameter);
     }
     // Add description mutation
