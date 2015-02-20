@@ -11,6 +11,8 @@
 = render partial: 'levels/common_audio'
 
 :javascript
+  // Pre-fill text area with previous response content
+  $('textarea.response').val(#{@start_blocks.to_json});
   function getResult()
   {
     var response = $('textarea.response').val();
