@@ -2,14 +2,13 @@ var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
 var assertThrows = testUtils.assertThrows;
-var netsimTestUtils = require('../util/netsimTestUtils');
 
-var netsimUtils = testUtils.requireWithGlobalsCheckBuildFolder('netsim/netsimUtils');
+var dataConverters = testUtils.requireWithGlobalsCheckBuildFolder('netsim/dataConverters');
 
-describe("netsimUtils", function () {
+describe("dataConverters", function () {
 
   describe("minifyBinary", function () {
-    var minifyBinary = netsimUtils.minifyBinary;
+    var minifyBinary = dataConverters.minifyBinary;
 
     it("strips all characters except zeroes and ones", function () {
       assertEqual('00101', minifyBinary(' 0ABX$0K10Z  TU1'));
@@ -17,7 +16,7 @@ describe("netsimUtils", function () {
   });
 
   describe("minifyHex", function () {
-    var minifyHex = netsimUtils.minifyHex;
+    var minifyHex = dataConverters.minifyHex;
 
     it ("strips whitespace", function () {
       assertEqual('89AB', minifyHex('89 AB'));
@@ -33,7 +32,7 @@ describe("netsimUtils", function () {
   });
 
   describe("minifyDecimal", function () {
-    var minifyDecimal = netsimUtils.minifyDecimal;
+    var minifyDecimal = dataConverters.minifyDecimal;
 
     it ("strips leading whitespace", function () {
       assertEqual('1 1 1', minifyDecimal('  1 1 1'));
@@ -53,7 +52,7 @@ describe("netsimUtils", function () {
   });
 
   describe("formatBinary", function() {
-    var formatBinary = netsimUtils.formatBinary;
+    var formatBinary = dataConverters.formatBinary;
 
     it ("is identity for empty string", function () {
       assertEqual('', formatBinary(''));
@@ -82,7 +81,7 @@ describe("netsimUtils", function () {
   });
 
   describe("formatHex", function() {
-    var formatHex = netsimUtils.formatHex;
+    var formatHex = dataConverters.formatHex;
 
     it ("is identity for empty string", function () {
       assertEqual('', formatHex(''));
@@ -111,7 +110,7 @@ describe("netsimUtils", function () {
   });
 
   describe("formatDecimal", function () {
-    var formatDecimal = netsimUtils.formatDecimal;
+    var formatDecimal = dataConverters.formatDecimal;
 
     it ("is identity for empty string", function () {
       assertEqual('', formatDecimal(''));
@@ -129,7 +128,7 @@ describe("netsimUtils", function () {
   });
 
   describe("binaryToInt", function () {
-    var binaryToInt = netsimUtils.binaryToInt;
+    var binaryToInt = dataConverters.binaryToInt;
 
     it ("converts empty string to NaN", function () {
       assert(isNaN(binaryToInt('')));
@@ -147,7 +146,7 @@ describe("netsimUtils", function () {
   });
 
   describe("intToBinary", function () {
-    var intToBinary = netsimUtils.intToBinary;
+    var intToBinary = dataConverters.intToBinary;
 
     it ("converts a number to its binary representation", function () {
       var width = 4;
@@ -188,7 +187,7 @@ describe("netsimUtils", function () {
   });
 
   describe("hexToInt", function () {
-    var hexToInt = netsimUtils.hexToInt;
+    var hexToInt = dataConverters.hexToInt;
 
     it ("converts empty string to NaN", function () {
       assert(isNaN(hexToInt('')));
@@ -206,7 +205,7 @@ describe("netsimUtils", function () {
   });
 
   describe("intToHex", function () {
-    var intToHex = netsimUtils.intToHex;
+    var intToHex = dataConverters.intToHex;
 
     it ("converts a number to its hex representation", function () {
       var width = 4;
@@ -252,7 +251,7 @@ describe("netsimUtils", function () {
   });
 
   describe("hexToBinary", function () {
-    var hexToBinary = netsimUtils.hexToBinary;
+    var hexToBinary = dataConverters.hexToBinary;
 
     it ("converts empty string to empty string", function () {
       assertEqual('', hexToBinary(''));
@@ -285,7 +284,7 @@ describe("netsimUtils", function () {
   });
 
   describe("binaryToHex", function () {
-    var binaryToHex = netsimUtils.binaryToHex;
+    var binaryToHex = dataConverters.binaryToHex;
 
     it ("converts empty string to empty string", function () {
       assertEqual('', binaryToHex(''));
@@ -322,7 +321,7 @@ describe("netsimUtils", function () {
   });
 
   describe("decimalToBinary", function () {
-    var decimalToBinary = netsimUtils.decimalToBinary;
+    var decimalToBinary = dataConverters.decimalToBinary;
 
     it ("converts empty string to empty string", function () {
       assertEqual('', decimalToBinary('', 8));
@@ -358,7 +357,7 @@ describe("netsimUtils", function () {
   });
 
   describe("binaryToDecimal", function () {
-    var binaryToDecimal = netsimUtils.binaryToDecimal;
+    var binaryToDecimal = dataConverters.binaryToDecimal;
 
     it ("converts empty string to empty string", function () {
       assertEqual('', binaryToDecimal('', 8));
@@ -397,7 +396,7 @@ describe("netsimUtils", function () {
   });
 
   describe("asciiToBinary", function () {
-    var asciiToBinary = netsimUtils.asciiToBinary;
+    var asciiToBinary = dataConverters.asciiToBinary;
 
     it ("converts empty string to empty string", function () {
       assertEqual('', asciiToBinary('', 8));
@@ -440,7 +439,7 @@ describe("netsimUtils", function () {
   });
 
   describe("binaryToAscii", function () {
-    var binaryToAscii = netsimUtils.binaryToAscii;
+    var binaryToAscii = dataConverters.binaryToAscii;
 
     it ("converts empty string to empty string", function () {
       assertEqual('', binaryToAscii('', 8));

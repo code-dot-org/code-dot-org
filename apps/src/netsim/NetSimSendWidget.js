@@ -15,22 +15,22 @@
 var markup = require('./NetSimSendWidget.html');
 var KeyCodes = require('../constants').KeyCodes;
 var PacketEncoder = require('./PacketEncoder');
-var netsimUtils = require('./netsimUtils');
+var dataConverters = require('./dataConverters');
 
-var minifyBinary = netsimUtils.minifyBinary;
-var formatBinary = netsimUtils.formatBinary;
-var formatHex = netsimUtils.formatHex;
-var formatDecimal = netsimUtils.formatDecimal;
-var binaryToInt = netsimUtils.binaryToInt;
-var intToBinary = netsimUtils.intToBinary;
-var hexToInt = netsimUtils.hexToInt;
-var intToHex = netsimUtils.intToHex;
-var hexToBinary = netsimUtils.hexToBinary;
-var binaryToHex = netsimUtils.binaryToHex;
-var decimalToBinary = netsimUtils.decimalToBinary;
-var binaryToDecimal = netsimUtils.binaryToDecimal;
-var asciiToBinary = netsimUtils.asciiToBinary;
-var binaryToAscii = netsimUtils.binaryToAscii;
+var minifyBinary = dataConverters.minifyBinary;
+var formatBinary = dataConverters.formatBinary;
+var formatHex = dataConverters.formatHex;
+var formatDecimal = dataConverters.formatDecimal;
+var binaryToInt = dataConverters.binaryToInt;
+var intToBinary = dataConverters.intToBinary;
+var hexToInt = dataConverters.hexToInt;
+var intToHex = dataConverters.intToHex;
+var hexToBinary = dataConverters.hexToBinary;
+var binaryToHex = dataConverters.binaryToHex;
+var decimalToBinary = dataConverters.decimalToBinary;
+var binaryToDecimal = dataConverters.binaryToDecimal;
+var asciiToBinary = dataConverters.asciiToBinary;
+var binaryToAscii = dataConverters.binaryToAscii;
 
 /**
  * Generator and controller for message sending view.
