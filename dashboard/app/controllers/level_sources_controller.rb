@@ -7,6 +7,7 @@ class LevelSourcesController < ApplicationController
   skip_authorize_resource only: [:edit, :generate_image, :original_image] # edit is more like show
 
   before_action :set_level_source
+  before_action :set_applab_user_id, only: [:show, :edit]
 
   def show
     @hide_source = true
@@ -90,6 +91,10 @@ class LevelSourcesController < ApplicationController
   end
 
   protected
+
+  def set_applab_user_id
+    @applab_user_id = applab_user_id
+  end
 
   def set_level_source
     if current_user && current_user.admin?
