@@ -27,6 +27,7 @@ class ProjectsController < ApplicationController
     @full_width = true
     @level = Level.find_by_key APPS[params[:app]]
     @game = @level.game
+    @is_project = true
 
     set_videos_and_blocks_and_callouts_and_instructions
 

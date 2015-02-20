@@ -113,7 +113,7 @@ var baseOptions = {
     } else {
       showInstructions();
     }
-  },
+  }
 };
 $.extend(appOptions, baseOptions);
 
@@ -150,7 +150,34 @@ $(window).on('function_editor_closed', function() {
   }
 })(appOptions.level);
 
+function saveProject() {
+  var app_id = dashboard.currentApp.id;
+  dashboard.currentApp.startBlocks = Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
+  if (app_id) {
+    storageApps().update(app_id, dashboard.currentApp, function(data) {
+      console.log('Updated!');
+    });
+  } else {
+    storageApps().create(dashboard.currentApp, function(data) {
+      console.log('Saved!');
+      if (history) {
+        history.pushState({}, '', '?id=' + data.id);
+      }
+    });
+  }
+}
+
 function initApp() {
+  if (appOptions.level.isProject) {
+    if (dashboard.currentApp) {
+      appOptions.level.startBlocks = dashboard.currentApp.startBlocks;
+    } else {
+      dashboard.currentApp = {
+        name: 'Untitled'
+      };
+    }
+    $(document).on('mousedown', '#runButton', saveProject);
+  }
   window[appOptions.app + 'Main'](appOptions);
 }
 
@@ -190,6 +217,21 @@ if (appOptions.droplet) {
 } else {
   promise = loadSource('blockly')()
     .then(loadSource(appOptions.locale + '/blockly_locale'));
+  if (appOptions.level.isProject) {
+    var matches = location.search.match(/id=([^&]+)/);
+    if (matches) {
+      // Load the project ID, if one exists
+      var app_id = matches[1];
+      promise.then(function () {
+        var deferred = new $.Deferred();
+        storageApps().fetch(app_id, function (data) {
+          dashboard.currentApp = data;
+          deferred.resolve();
+        });
+        return deferred;
+      });
+    }
+  }
 }
 promise.then(loadSource('common' + appOptions.pretty))
   .then(loadSource(appOptions.locale + '/common_locale'))
