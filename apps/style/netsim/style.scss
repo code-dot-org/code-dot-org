@@ -135,13 +135,20 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
     padding: 0.5em;
     border-radius: 0.5em;
 
+    th {
+      font-size: 10pt;
+      font-variant: small-caps;
+    }
+
     /* All input fields */
     input, textarea {
       padding: 0.2em;
       margin-bottom: 0.2em;
+      font-family: monospace;
     }
 
     /* All columns but "message" */
+    th.rowType, td.rowType,
     th.toAddress, td.toAddress,
     th.fromAddress, td.fromAddress,
     th.packetInfo, td.packetInfo {
@@ -152,6 +159,11 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
         width: 3em;
         text-align: center;
       }
+    }
+
+    th.rowType, td.rowType {
+      text-align: right;
+      vertical-align: top;
     }
 
     /* toAddress column */
@@ -201,14 +213,12 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
     /* hexadecimal row */
     tr.hexadecimal {
       input, textarea {
-        font-family: monospace;
       }
     }
 
     /* binary row */
     tr.binary {
       input, textarea {
-        font-family: monospace;
       }
     }
   }
