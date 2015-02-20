@@ -619,15 +619,16 @@ function displayComplexUserExpressions () {
     return;
   }
 
-  // in single function mode, we're only going to highlight the differences
-  // in evaluation
-  var hasSingleFunction = appState.targetSet.hasSingleFunction();
+  // in single function/variable mode, we're only going to highlight the differences
+  // in the evaluated result
+  var highlightErrors = !appState.targetSet.hasSingleFunction() &&
+    !appState.targetSet.computesSingleVariable();
 
   var nextRow = 0;
   var tokenList;
   appState.userSet.sortedEquations().forEach(function (userEquation) {
-    var expectedEquation = hasSingleFunction ? null :
-      appState.targetSet.getEquation(userEquation.name);
+    var expectedEquation = highlightErrors ?
+      appState.targetSet.getEquation(userEquation.name) : null
 
     tokenList = getTokenList(userEquation, expectedEquation);
 
@@ -643,8 +644,14 @@ function displayComplexUserExpressions () {
   tokenList = getTokenList(computeEquation, targetEquation);
 
   result = appState.userSet.evaluate().toString();
-  var expectedResult = appState.targetSet.computeEquation() === null ?
-    result : appState.targetSet.evaluate().toString();
+
+  var expectedResult = result;
+  // TODO - could make singleVariable case smarter and evaluate target using
+  // user constant value
+  if (appState.targetSet.computeEquation() !== null &&
+      !appState.targetSet.computesSingleVariable()) {
+    expectedResult = appState.targetSet.evaluate().toString();
+  }
 
   // add a tokenList diffing our results
   tokenList = tokenList.concat(getTokenList(' = '),
@@ -876,6 +883,7 @@ function onReportComplete(response) {
 // export private function(s) to expose to unit testing
 Calc.__testonly__ = {
   displayGoal: displayGoal,
+  displayComplexUserExpressions: displayComplexUserExpressions,
   appState: appState
 };
 /* end-test-block */
