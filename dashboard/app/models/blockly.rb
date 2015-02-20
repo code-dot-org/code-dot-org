@@ -39,8 +39,7 @@ class Blockly < Level
 
   # These serialized fields will be serialized/deserialized as straight XML
   def xml_blocks
-    return %w(start_blocks toolbox_blocks required_blocks) unless self.game.try(:uses_droplet?)
-    %w()
+    return %w(start_blocks toolbox_blocks required_blocks)
   end
 
   def to_xml(options={})

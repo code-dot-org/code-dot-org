@@ -28,6 +28,10 @@ class Applab < Blockly
     ))
   end
 
+  def xml_blocks
+    %w()
+  end
+
   def update_palette
     if self.code_functions.present? && self.code_functions.is_a?(String)
       self.code_functions = JSON.parse(self.code_functions)

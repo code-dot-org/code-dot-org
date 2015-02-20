@@ -24,6 +24,7 @@ var BigGameLogic = require('./bigGameLogic');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
 var _ = utils.getLodash();
+var dropletConfig = require('./dropletConfig');
 var Hammer = utils.getHammer();
 
 if (typeof SVGElement !== 'undefined') { // tests don't have svgelement??
@@ -1135,6 +1136,7 @@ Studio.init = function(config) {
   config.enableShowCode = false;
   config.varsInGlobals = true;
   config.generateFunctionPassBlocks = !!config.level.generateFunctionPassBlocks;
+  config.dropletConfig = dropletConfig;
 
   Studio.initSprites();
 
@@ -1526,17 +1528,10 @@ var nativeGetCallback = function () {
  * Execute the story
  */
 Studio.execute = function() {
-  var code;
   Studio.result = studioApp.UNSET;
   Studio.testResults = TestResults.NO_TESTS_RUN;
   Studio.waitingForReport = false;
   Studio.response = null;
-  var i;
-
-  if (level.editCode) {
-    code = utils.generateCodeAliases(level.codeFunctions, null, 'Studio');
-    code += studioApp.editor.getValue();
-  }
 
   var handlers = [];
   if (studioApp.isUsingBlockly()) {
@@ -1572,7 +1567,7 @@ Studio.execute = function() {
   studioApp.reset(false);
 
   if (level.editCode) {
-    var codeWhenRun = utils.generateCodeAliases(level.codeFunctions, null, 'Studio');
+    var codeWhenRun = utils.generateCodeAliases(dropletConfig, 'Studio');
     Studio.userCodeStartOffset = codeWhenRun.length;
     codeWhenRun += studioApp.editor.getValue();
     Studio.userCodeLength = codeWhenRun.length - Studio.userCodeStartOffset;

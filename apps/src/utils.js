@@ -160,12 +160,7 @@ exports.dropletGlobalConfigBlocks = [
 function mergeFunctionsWithConfig(codeFunctions, dropletConfig) {
   var merged = [];
 
-  if (codeFunctions instanceof Array) {
-    // codeFunctions is in an array, use those exactly:
-    merged = codeFunctions;
-  } else if (codeFunctions instanceof Object &&
-             dropletConfig &&
-             dropletConfig.blocks) {
+  if (codeFunctions && dropletConfig && dropletConfig.blocks) {
     var dropletBlocks = dropletConfig.blocks;
     // codeFunctions is an object with named key/value pairs
     //  key is a block name from dropletBlocks
@@ -182,23 +177,12 @@ function mergeFunctionsWithConfig(codeFunctions, dropletConfig) {
   return merged;
 }
 
-function selectFunctionsOrFullConfig(codeFunctions, dropletConfig) {
-  if (codeFunctions instanceof Array) {
-    // codeFunctions is in an array, use those exactly:
-    return codeFunctions;
-  } else if (dropletConfig && dropletConfig.blocks) {
-    // use dropletConfig.blocks in its entirety (including all functions, even
-    // those not in this level's palette)
-    return dropletConfig.blocks;
-  }
-}
-
 /**
  * Generate code aliases in Javascript based on some level data.
  */
-exports.generateCodeAliases = function (codeFunctions, dropletConfig, parentObjName) {
+exports.generateCodeAliases = function (dropletConfig, parentObjName) {
   var code = '';
-  var aliasFunctions = selectFunctionsOrFullConfig(codeFunctions, dropletConfig);
+  var aliasFunctions = dropletConfig.blocks;
 
   // Insert aliases from aliasFunctions into code
   for (var i = 0; i < aliasFunctions.length; i++) {
@@ -403,13 +387,11 @@ function populateCompleterApisFromConfigBlocks(apis, configBlocks) {
 /**
  * Generate an Ace editor completer for a set of APIs based on some level data.
  */
-exports.generateAceApiCompleter = function (codeFunctions, dropletConfig) {
+exports.generateAceApiCompleter = function (dropletConfig) {
   var apis = [];
 
   populateCompleterApisFromConfigBlocks(apis, exports.dropletGlobalConfigBlocks);
-
-  var configBlocks = selectFunctionsOrFullConfig(codeFunctions, dropletConfig);
-  populateCompleterApisFromConfigBlocks(apis, configBlocks);
+  populateCompleterApisFromConfigBlocks(apis, dropletConfig.blocks);
 
   return {
     getCompletions: function(editor, session, pos, prefix, callback) {
@@ -439,7 +421,7 @@ function populateModeOptionsFromConfigBlocks(modeOptions, configBlocks) {
 /**
  * Generate modeOptions for the droplet editor based on some level data.
  */
-exports.generateDropletModeOptions = function (codeFunctions, dropletConfig) {
+exports.generateDropletModeOptions = function (dropletConfig) {
   var modeOptions = {
     blockFunctions: [],
     valueFunctions: [],
@@ -456,9 +438,7 @@ exports.generateDropletModeOptions = function (codeFunctions, dropletConfig) {
 */
 
   populateModeOptionsFromConfigBlocks(modeOptions, exports.dropletGlobalConfigBlocks);
-
-  var configBlocks = selectFunctionsOrFullConfig(codeFunctions, dropletConfig);
-  populateModeOptionsFromConfigBlocks(modeOptions, configBlocks);
+  populateModeOptionsFromConfigBlocks(modeOptions, dropletConfig.blocks);
 
   return modeOptions;
 };
