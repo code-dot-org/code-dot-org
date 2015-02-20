@@ -18,6 +18,10 @@ var Equation = function (name, params, expression) {
   this.params = params || [];
   this.expression = expression;
 
+  if (arguments.length !== 3) {
+    throw new Error('Equation requires name, params, and expression');
+  }
+
   this.signature = this.name;
   if (this.params.length > 0) {
     this.signature += '(' + this.params.join(',') + ')';

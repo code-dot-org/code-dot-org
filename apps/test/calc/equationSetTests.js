@@ -325,7 +325,7 @@ describe('EquationSet', function () {
       var set = new EquationSet();
       set.addEquation_(new Equation(null, [], new ExpressionNode('age_in_months')));
       set.addEquation_(new Equation('age', [], new ExpressionNode(17)));
-      set.addEquation_(new Equation('age_in_months',
+      set.addEquation_(new Equation('age_in_months', [],
         new ExpressionNode('*', ['age', 12])));
       assert.equal(set.computesSingleVariable(), true);
     });

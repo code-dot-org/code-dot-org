@@ -363,8 +363,10 @@ Calc.evaluateSingleVariable_ = function (targetSet, userSet) {
 
   if (!targetSet.computeEquation().expression.isIdenticalTo(
       userSet.computeEquation().expression)) {
-    // TODO - text content, i18n
-    return appSpecificFailureOutcome('bad compute expression');
+    // TODO - do we need a custom error message here, or can we show where
+    // their compute expresison is wrong by highlighting.
+    // TODO - make sure you're happy with this error message (using generic)
+    return appSpecificFailureOutcome(calcMsg.levelIncompleteError());
   }
 
   // Make sure our target set has a constant variable we can use as our
@@ -372,6 +374,13 @@ Calc.evaluateSingleVariable_ = function (targetSet, userSet) {
   var targetConstants = targetSet.getConstants();
   if (targetConstants.length === 0) {
     throw new Error('Unexpected: single variable with no constants');
+  }
+
+  // The code is in place to theoretically support varying multiple constants,
+  // but we decided we don't need to support that, so I'm going to explicitly
+  // disallow it to reduce the test matrix.
+  if (targetConstants.length !== 1) {
+    throw new Error('No support for multiple constants');
   }
 
   // Make sure each of our pseudo inputs has a corresponding variable in the
@@ -383,8 +392,8 @@ Calc.evaluateSingleVariable_ = function (targetSet, userSet) {
 
   for (var i = 0; i < targetConstants.length; i++) {
     if (userConstantNames.indexOf(targetConstants[i].name) === -1) {
-      // TODO - text content, i18n
-      return appSpecificFailureOutcome('Missing variable: ' + targetConstants[i].name);
+      return appSpecificFailureOutcome(calcMsg.missingVariableX(
+        {var: targetConstants[i].name}));
     }
   }
 
@@ -428,7 +437,8 @@ Calc.evaluateSingleVariable_ = function (targetSet, userSet) {
   }
 
   if (outcome.failedInput) {
-    return appSpecificFailureOutcome('wrong for other values', outcome.failedInput);
+    var message = calcMsg.wrongOtherValuesX({var: targetConstants[0].name});
+    return appSpecificFailureOutcome(message);
   }
 
   outcome.result = ResultType.SUCCESS;
