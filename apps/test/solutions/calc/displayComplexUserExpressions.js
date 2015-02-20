@@ -43,7 +43,7 @@ module.exports = {
 function setEquationSets(targetSet, userSet) {
   Calc.__testonly__.appState.targetSet = targetSet;
   Calc.__testonly__.appState.userSet = userSet;
-};
+}
 
 
 /**
@@ -56,7 +56,7 @@ function customValidator(assert) {
   var validateTextElement = function (element, textContent, className) {
     assert.equal(element.textContent, textContent);
     assert.equal(element.getAttribute('class'), className);
-  }
+  };
 
 
   // compute: age_in_months
@@ -131,6 +131,42 @@ function customValidator(assert) {
     validateTextElement(g.children[0], 'age_in_months', null);
     validateTextElement(g.children[1], ' = ', null);
     validateTextElement(g.children[2], '120', null);
+  });
+
+  displayComplexUserExpressionTest(assert, 'age hard coded', function () {
+    // compute: age_in_months
+    // age = 17
+    // age_in_months = 17 * 12
+    var userSet = new EquationSet();
+    userSet.addEquation_(new Equation(null, [], new ExpressionNode('age_in_months')));
+    userSet.addEquation_(new Equation('age', [], new ExpressionNode(17)));
+    userSet.addEquation_(new Equation('age_in_months', [],
+      new ExpressionNode('*', [17, 12])));
+    setEquationSets(targetSet, userSet);
+
+    displayComplexUserExpressions();
+
+    assert.equal(userExpression.children.length, 3);
+
+    // line 1: age = 17
+    var g = userExpression.children[0];
+    validateTextElement(g.children[0], 'age = ', null);
+    validateTextElement(g.children[1], '17', null);
+
+    // line 2: age_in_months = (17 * 12)
+    g = userExpression.children[1];
+    validateTextElement(g.children[0], 'age_in_months = ', null);
+    validateTextElement(g.children[1], '(', null);
+    validateTextElement(g.children[2], '17', null);
+    validateTextElement(g.children[3], ' * ', null);
+    validateTextElement(g.children[4], '12', null);
+    validateTextElement(g.children[5], ')', null);
+
+    // line 3: age_in_months = 120
+    g = userExpression.children[2];
+    validateTextElement(g.children[0], 'age_in_months', null);
+    validateTextElement(g.children[1], ' = ', null);
+    validateTextElement(g.children[2], '204', null);
   });
 
   return true;
