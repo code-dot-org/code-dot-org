@@ -67,5 +67,7 @@ module Dashboard
     ::CACHE_BUST = File.read(cache_bust_path).strip.gsub('.', '_') rescue ''
 
     config.assets.precompile += ['**/blockly_editor*']
+
+    config.react.addons = true
   end
 end
