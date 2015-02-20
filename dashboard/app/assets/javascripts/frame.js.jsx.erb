@@ -372,11 +372,11 @@
   // Exports:
   window.HelloBar = HelloBar;
 
-  window.Frame = new UIFrame();
-  window.headerStore = new HeaderStore();
-  window.scriptStore = new ScriptStore();
-
   $(document).ready(function() {
+    window.headerStore = new HeaderStore();
+    window.scriptStore = new ScriptStore();
+
+    window.Frame = new UIFrame();
     Frame.init();
 
     React.render(<HelloBar />, document.getElementsByClassName('header_middle')[0]);
