@@ -500,7 +500,13 @@
 
     // Eventually we could support various modes of offline (disconnects, etc)
     UIFrame.prototype.detectStatic = function() {
-      return window.location.protocol == "file:" || window.location.host.substr(0,6) == 'react.' || window.location.port == 3000;
+      if (window.location.protocol == "file:" || window.location.host.substr(0,6) == 'react.')
+        return true;
+      /* Enable this to test static on your local dev machine.
+      if (window.location.port == 3000)
+        return true;
+      */
+      return false;
     }
 
     // Load the script at a given URL and return a promise that resolves when it has executed
