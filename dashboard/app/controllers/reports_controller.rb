@@ -232,7 +232,9 @@ SQL
       reply[:progress] = user_data
     end
 
-
+    if params['jsonp']
+      expires_in 10000, public: true  # TODO: Real static asset caching
+    end
     render :json => JSON.pretty_generate(reply), :callback => params['jsonp']
   end
 

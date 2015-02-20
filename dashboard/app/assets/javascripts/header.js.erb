@@ -43,7 +43,7 @@
     }
 
     HeaderStore.prototype.resolveStatic = function(args) {
-      return "/level-" + args.script_name + "-" + args.stage_id + "-" + args.level_id;
+      return "/level-" + (args.script_name || args.script_id) + "-" + (args.stage_id || "1") + "-" + args.level_id;
     }
 
     return HeaderStore;
@@ -65,7 +65,7 @@
     }
 
     ScriptStore.prototype.resolveStatic = function(args) {
-      return "/script-" + args.script_id;
+      return "/script-" + (args.script_name || args.script_id);
     }
 
     return ScriptStore;
