@@ -63,7 +63,7 @@
           %i.fa.fa-caret-down{'ng-show' => "order == 'createdAt' && reverse == true"}
             %i.fa.fa-caret-up{'ng-show' => "order == 'createdAt' && reverse == false"}
       %th
-    %tr{"ng-repeat" => "project in projects | orderBy:order:reverse", style: "vertical-align:top"}
+    %tr{"ng-repeat" => "project in projects | filter:projectVisible | orderBy:order:reverse", style: "vertical-align:top"}
       %td
         %span{'ng-hide' => 'project.editing'}
           %span.name{'ng-if' => 'project.url()'}
