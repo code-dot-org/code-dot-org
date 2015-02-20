@@ -337,6 +337,105 @@ Calc.evaluateFunction_ = function (targetSet, userSet) {
   return outcome;
 };
 
+function appSpecificFailureOutcome(message, failedInput) {
+  return {
+    result: ResultType.FAILURE,
+    testResults: TestResults.APP_SPECIFIC_FAIL,
+    message: message,
+    failedInput: failedInput
+  };
+}
+
+/**
+ * Evaluates a target set against a user set when our compute expression is
+ * just a naked variable. It does this by looking for a constant in the
+ * equation set, and then validating that (a) we have a variable of the same
+ * name in the user set and (b) that changing that value in both sets still
+ * results in the same evaluation
+ */
+Calc.evaluateSingleVariable_ = function (targetSet, userSet) {
+  var outcome = {
+    result: ResultType.UNSET,
+    testResults: TestResults.NO_TESTS_RUN,
+    message: undefined,
+    failedInput: null
+  };
+
+  if (!targetSet.computeEquation().expression.isIdenticalTo(
+      userSet.computeEquation().expression)) {
+    // TODO - text content, i18n
+    return appSpecificFailureOutcome('bad compute expression');
+  }
+
+  // Make sure our target set has a constant variable we can use as our
+  // pseudo input
+  var targetConstants = targetSet.getConstants();
+  if (targetConstants.length === 0) {
+    throw new Error('Unexpected: single variable with no constants');
+  }
+
+  // Make sure each of our pseudo inputs has a corresponding variable in the
+  // user set.
+  var userConstants = userSet.getConstants();
+  var userConstantNames = userConstants.map(function (item) {
+    return item.name;
+  });
+
+  for (var i = 0; i < targetConstants.length; i++) {
+    if (userConstantNames.indexOf(targetConstants[i].name) === -1) {
+      // TODO - text content, i18n
+      return appSpecificFailureOutcome('Missing variable: ' + targetConstants[i].name);
+    }
+  }
+
+  // Check to see that evaluating target set with the user value of the constant(s)
+  // gives the same result as evaluating the user set.
+  var userResult = userSet.evaluate();
+
+  var targetClone = targetSet.clone();
+  // overwrite our inputs with user's values
+  targetConstants.forEach(function (item) {
+    // TODO - accessing private
+    var userValue = userSet.getEquation(item.name).expression.value_;
+    targetClone.getEquation(item.name).expression.setValue(userValue);
+  });
+  var targetResult = targetClone.evaluate();
+
+  if (userResult !== targetResult) {
+    return appSpecificFailureOutcome('wrong answer');
+  }
+
+  var userClone = userSet.clone();
+  var setConstantsToValue = function (val, index) {
+    var name = targetConstants[index].name;
+    targetClone.getEquation(name).expression.setValue(val);
+    userClone.getEquation(name).expression.setValue(val);
+  };
+
+  // The user got the right value for their input. Let's try changing it and
+  // see if they still get the right value
+  var possibleValues = _.range(1, 101).concat(_.range(-0, -101, -1));
+  var numParams = targetConstants.length;
+  var iterator = new InputIterator(possibleValues, numParams);
+
+  while (iterator.remaining() > 0 && !outcome.failedInput) {
+    var values = iterator.next();
+    values.forEach(setConstantsToValue);
+
+    if (targetClone.evaluate() !== userClone.evaluate()) {
+      outcome.failedInput = _.clone(values);
+    }
+  }
+
+  if (outcome.failedInput) {
+    return appSpecificFailureOutcome('wrong for other values', outcome.failedInput);
+  }
+
+  outcome.result = ResultType.SUCCESS;
+  outcome.testResults = TestResults.ALL_PASS;
+  return outcome;
+};
+
 /**
  * @static
  * @returns outcome object
@@ -353,6 +452,8 @@ Calc.evaluateResults_ = function (targetSet, userSet) {
   if (targetSet.hasSingleFunction()) {
     // Evaluate function by testing it with a series of inputs
     return Calc.evaluateFunction_(targetSet, userSet);
+  } else if (targetSet.computesSingleVariable()) {
+    return Calc.evaluateSingleVariable_(targetSet, userSet);
   } else if (userSet.hasVariablesOrFunctions() ||
       targetSet.hasVariablesOrFunctions()) {
     // We have multiple expressions. Either our set of expressions are equal,
@@ -524,7 +625,6 @@ function displayComplexUserExpressions () {
   });
 
   // Now display our compute equation and the result of evaluating it
-  var computeType = computeEquation && computeEquation.expression.getType();
   var targetEquation = appState.targetSet.computeEquation();
 
   // We're either a variable or a function call. Generate a tokenList (since
