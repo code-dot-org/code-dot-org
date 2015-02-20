@@ -740,7 +740,7 @@ function displayFeedback() {
     },
     appDiv: appDiv
   };
-  if (appState.message) {
+  if (appState.message && !level.edit_blocks) {
     options.message = appState.message;
   }
 

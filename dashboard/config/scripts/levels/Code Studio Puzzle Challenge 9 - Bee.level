@@ -20,8 +20,7 @@
     "step_mode": "0",
     "nectar_goal": "1",
     "honey_goal": "1",
-    "flower_type": "redWithNectar",
-    "maze_data": null
+    "flower_type": "redWithNectar"
   }
 }]]></config>
   <blocks>
@@ -33,8 +32,8 @@
         </block>
         <block type="maze_nectar"/>
         <block type="maze_honey"/>
-        <block type="controls_repeat_dropdown">
-          <title name="TIMES" config="3-10">???</title>
+        <block type="controls_repeat">
+          <title name="TIMES">5</title>
         </block>
         <block type="bee_ifElseFlower">
           <title name="LOC">atFlower</title>
