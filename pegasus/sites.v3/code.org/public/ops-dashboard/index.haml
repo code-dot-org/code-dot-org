@@ -15,11 +15,12 @@ theme: angular
   ]).config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/',
                         {templateUrl: '/ops-dashboard/landing'});
-    $routeProvider.when('/districts',              {templateUrl: '/ops-dashboard/districts', controller: 'DistrictsController'});
-    $routeProvider.when('/workshops',              {templateUrl: '/ops-dashboard/workshops', controller: 'WorkshopsController'});
-    $routeProvider.when('/cohorts',              {templateUrl: '/ops-dashboard/cohorts', controller: 'CohortsController'});
-    $routeProvider.when('/cohorts/new',       {templateUrl: '/ops-dashboard/cohort-edit', controller:  'CohortController'});
-    $routeProvider.when('/cohorts/:id/edit',       {templateUrl: '/ops-dashboard/cohort-edit', controller:  'CohortController'});
+    $routeProvider.when('/districts',                                 {templateUrl: '/ops-dashboard/districts',   controller: 'DistrictsController'});
+    $routeProvider.when('/workshops',                                 {templateUrl: '/ops-dashboard/workshops',   controller: 'WorkshopsController'});
+    $routeProvider.when('/workshops/:workshopid/attendance',          {templateUrl: '/ops-dashboard/attendance',  controller: 'AttendanceController'});
+    $routeProvider.when('/cohorts',                                   {templateUrl: '/ops-dashboard/cohorts',     controller: 'CohortsController'});
+    $routeProvider.when('/cohorts/new',                               {templateUrl: '/ops-dashboard/cohort-edit', controller: 'CohortController'});
+    $routeProvider.when('/cohorts/:id/edit',                          {templateUrl: '/ops-dashboard/cohort-edit', controller: 'CohortController'});
     $routeProvider.otherwise({redirectTo: '/'});
   }]).config(['$httpProvider', function($httpProvider) {
     // X-Requested-With header required for CSRF requests protected by Rack::Protection::JsonCsrf included by Sinatra.
@@ -89,6 +90,20 @@ theme: angular
       });
 
       return Cohort;
+    }]);
+
+  services.factory('teachersService', ['$resource',
+    function($resource){
+      var Teacher = $resource('/ops/workshops/:workshopid/teachers', {}, {
+        // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
+        //  'get':    {method:'GET'},
+        //  'save':   {method:'POST'},
+        //  'query':  {method:'GET', isArray:true},
+        //  'remove': {method:'DELETE'},
+        //  'delete': {method:'DELETE'}
+      });
+
+      return Teacher;
     }]);
 
   // CONTROLLERS
@@ -181,6 +196,16 @@ theme: angular
       }
     }
   ]);
+
+  controllers.controller('AttendanceController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'segmentsService', 'teachersService',
+    function($scope, $route, $routeParams, $location, $window, workshopsService, segmentsService, teachersService) {
+      $scope.districtsLoaded = false;
+
+      $scope.workshop = workshopsService.get({id: $routeParams.workshopid});
+      $scope.segments = segmentsService.query({id: $routeParams.workshopid});
+      $scope.teachers = teachersService.query({workshopid: $routeParams.workshopid});
+
+  }]);
 
   controllers.controller('CohortsController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'cohortsService',
     function($scope, $route, $routeParams, $location, $window, workshopsService, cohortsService) {

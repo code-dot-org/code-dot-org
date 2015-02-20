@@ -1,0 +1,16 @@
+---
+layout: none
+template: none
+---
+
+%h1
+  Attendance for {{workshop.name}}
+
+%table
+  %tr
+    %th
+    %th.manage-th{'ng-repeat' => 'segment in segments'}
+      {{segment.start}} to {{segment.end}}
+  %tr{'ng-repeat' => 'teacher in teachers'}
+    %td
+      {{teacher.name}}

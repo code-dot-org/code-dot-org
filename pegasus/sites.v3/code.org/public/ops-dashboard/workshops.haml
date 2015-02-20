@@ -21,8 +21,10 @@ template: none
       Manage
   %tr{"ng-repeat" => "workshop in workshops", 'ng-controller' => 'WorkshopController'}
     %td
-      %span{'ng-hide' => 'workshop.editing', }
+      %p{'ng-hide' => 'workshop.editing', }
         {{workshop.name}}
+      %a{href:'#/workshops/{{workshop.id}}/attendance'}
+        View attendance
       %input{'ng-show' => 'workshop.editing', 'ng-model' => 'workshop.name', type:'text', value:'{{workshop.name}}'}
     %td
       %span{'ng-hide' => 'workshop.editing', }
@@ -75,8 +77,3 @@ template: none
     %td
       %button.btn.btn-primary{'ng-click' => 'save(workshop)', style:'width:100%'}
         Create new workshop
-
-:css
-  .btn {
-    width:48%
-  }
