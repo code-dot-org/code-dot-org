@@ -1,11 +1,8 @@
 /**
  * Component Structure:
  *
- * - ContractEditor
- *   - NameForm
- *   - DomainsList
- *     - DomainForm
- *   - RangeForm
+ * - DomainsList
+ *   - TypeChooser
  */
 
 // What is className="" vs class=""?
