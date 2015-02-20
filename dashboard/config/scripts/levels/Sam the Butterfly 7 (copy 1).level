@@ -1,7 +1,7 @@
 <Studio>
   <config><![CDATA[{
   "game_id": 33,
-  "created_at": "2014-11-17T22:19:36.000Z",
+  "created_at": "2015-02-20T20:01:11.780Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -34,16 +34,7 @@
     "protaganist_sprite_index": "0",
     "disable_sharing": "false",
     "min_workspace_height": "1000",
-    "default_num_example_blocks": "2",
-    "contract_highlight": "false",
-    "contract_collapse": "false",
-    "examples_highlight": "false",
-    "examples_collapse": "false",
-    "definition_highlight": "false",
-    "definition_collapse": "false",
-    "maze_data": null,
-    "generate_function_pass_blocks": "false",
-    "timeout_after_when_run": "false"
+    "default_num_example_blocks": "2"
   }
 }]]></config>
   <blocks>

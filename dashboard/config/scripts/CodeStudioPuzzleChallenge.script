@@ -4,6 +4,8 @@ description "Try out these fun coding puzzles. Do your best!"
 hidden 'false'
 
 stage 'Puzzles'
+level 'Code Studio Puzzle Challenge Artist Screencast'
+level 'Code Studio Puzzle Challenge Bee Screencast'
 level 'Code Studio Puzzle Challenge 1 - Artist'
 level 'Code Studio Puzzle Challenge 2 - Artist'
 level 'Code Studio Puzzle Challenge 3 - Artist'

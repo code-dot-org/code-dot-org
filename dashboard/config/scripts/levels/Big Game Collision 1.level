@@ -1,7 +1,7 @@
 <Studio>
   <config><![CDATA[{
   "game_id": 33,
-  "created_at": "2015-02-13T18:07:20.000Z",
+  "created_at": "2015-02-19T05:26:56.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -34,8 +34,8 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "maze_data": null,
-    "custom_game_type": "Big Game"
+    "custom_game_type": "Big Game",
+    "maze_data": null
   }
 }]]></config>
   <blocks/>
