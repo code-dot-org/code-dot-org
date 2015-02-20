@@ -6,7 +6,7 @@ var blockUtils = require(testUtils.buildPath('block_utils'));
 var studioApp = require(testUtils.buildPath('StudioApp')).singleton;
 var Calc = require(testUtils.buildPath('calc/calc.js'));
 var EquationSet = require(testUtils.buildPath('calc/equationSet.js'));
-var Equation = EquationSet.Equation;
+var Equation = require(testUtils.buildPath('/calc/equation.js'));
 var ExpressionNode = require(testUtils.buildPath('calc/expressionNode.js'));
 
 /**
@@ -165,6 +165,42 @@ function customValidator(assert) {
     // line 3: age_in_months = 120
     g = userExpression.children[2];
     validateTextElement(g.children[0], 'age_in_months', null);
+    validateTextElement(g.children[1], ' = ', null);
+    validateTextElement(g.children[2], '204', null);
+  });
+
+  displayComplexUserExpressionTest(assert, 'wrong variable name', function () {
+    // compute: age_in_months2
+    // age = 17
+    // age_in_months2 = age * 12
+    var userSet = new EquationSet();
+    userSet.addEquation_(new Equation(null, [], new ExpressionNode('age_in_months2')));
+    userSet.addEquation_(new Equation('age', [], new ExpressionNode(17)));
+    userSet.addEquation_(new Equation('age_in_months2', [],
+      new ExpressionNode('*', ['age', 12])));
+    setEquationSets(targetSet, userSet);
+
+    displayComplexUserExpressions();
+
+    assert.equal(userExpression.children.length, 3);
+
+    // line 1: age = 10
+    var g = userExpression.children[0];
+    validateTextElement(g.children[0], 'age = ', null);
+    validateTextElement(g.children[1], '17', null);
+
+    // line 2: age_in_months = (age * 12)
+    g = userExpression.children[1];
+    validateTextElement(g.children[0], 'age_in_months2 = ', null);
+    validateTextElement(g.children[1], '(', null);
+    validateTextElement(g.children[2], 'age', null);
+    validateTextElement(g.children[3], ' * ', null);
+    validateTextElement(g.children[4], '12', null);
+    validateTextElement(g.children[5], ')', null);
+
+    // line 3: age_in_months = 120
+    g = userExpression.children[2];
+    validateTextElement(g.children[0], 'age_in_months2', 'errorToken');
     validateTextElement(g.children[1], ' = ', null);
     validateTextElement(g.children[2], '204', null);
   });

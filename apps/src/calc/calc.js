@@ -36,6 +36,7 @@ var timeoutList = require('../timeoutList');
 
 var ExpressionNode = require('./expressionNode');
 var EquationSet = require('./equationSet');
+var Equation = require('./equation');
 var Token = ExpressionNode.Token;
 var InputIterator = require('./inputIterator');
 
@@ -73,10 +74,10 @@ var stepSpeed = 2000;
  * If one input is given, we return the tokenlist for that input.
  */
 function getTokenList(one, two) {
-  if (one instanceof EquationSet.Equation) {
+  if (one instanceof Equation) {
     one = one.expression;
   }
-  if (two instanceof EquationSet.Equation) {
+  if (two instanceof Equation) {
     two = two.expression;
   }
   if (typeof(one) === 'string') {
@@ -170,15 +171,18 @@ Calc.init = function(config) {
   studioApp.init(config);
 };
 
-// TODO - validate comment is still up to date
 /**
  * A few possible scenarios
  * (1) We don't have a target compute expression (i.e. freeplay). Show nothing.
  * (2) We have a target compute expression, one function, and no variables.
  *     Show the compute expression + evaluation, and nothing else
- * (3) We have a target compute expression, and possibly some number of
- *     variables, but no functions. Display compute expression and variables
- * (4) We have a target compute expression, and either multiple functions or
+ * (3) We have a target compute expression that is just a single variable, and
+ *     some number of additional variables, but no functions. Display only
+ *     the name of the single variable
+ * (4) We have a target compute expression that is not a single variable, and
+ *     possible some number of additional variables, but no functions. Display
+ *     compute expression and variables.
+ * (5) We have a target compute expression, and either multiple functions or
  *     one function and variable(s). Currently not supported.
  * @param {EquationSet} targetSet The target equation set.
  */
@@ -364,9 +368,6 @@ Calc.evaluateSingleVariable_ = function (targetSet, userSet) {
 
   if (!targetSet.computeEquation().expression.isIdenticalTo(
       userSet.computeEquation().expression)) {
-    // TODO - do we need a custom error message here, or can we show where
-    // their compute expresison is wrong by highlighting.
-    // TODO - make sure you're happy with this error message (using generic)
     return appSpecificFailureOutcome(calcMsg.levelIncompleteError());
   }
 
@@ -658,7 +659,7 @@ function displayComplexUserExpressions () {
   result = appState.userSet.evaluate().toString();
 
   var expectedResult = result;
-  // TODO - could make singleVariable case smarter and evaluate target using
+  // Note: we could make singleVariable case smarter and evaluate target using
   // user constant value
   if (appState.targetSet.computeEquation() !== null &&
       !appState.targetSet.computesSingleVariable()) {

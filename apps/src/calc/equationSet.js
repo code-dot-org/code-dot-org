@@ -1,43 +1,6 @@
 var _ = require('../utils').getLodash();
 var ExpressionNode = require('./expressionNode');
-
-// TODO - does Equation deserve its own file?
-/**
- * An equation is an expression attached to a particular name. For example:
- *   f(x) = x + 1
- *   name: f
- *   equation: x + 1
- *   params: ['x']
- * In many cases, this will just be an expression with no name.
- * @param {string} name Function or variable name. Null if compute expression
- * @param {string[]} params List of parameter names if a function.
- * @param {ExpressionNode} expression
- */
-var Equation = function (name, params, expression) {
-  this.name = name;
-  this.params = params || [];
-  this.expression = expression;
-
-  if (arguments.length !== 3) {
-    throw new Error('Equation requires name, params, and expression');
-  }
-
-  this.signature = this.name;
-  if (this.params.length > 0) {
-    this.signature += '(' + this.params.join(',') + ')';
-  }
-};
-
-/**
- * @returns True if a function
- */
-Equation.prototype.isFunction = function () {
-  return this.params.length > 0;
-};
-
-Equation.prototype.clone = function () {
-  return new Equation(this.name, this.params.slice(), this.expression.clone());
-};
+var Equation = require('./equation');
 
 /**
  * An EquationSet consists of a top level (compute) equation, and optionally
@@ -57,7 +20,6 @@ var EquationSet = function (blocks) {
     }, this);
   }
 };
-EquationSet.Equation = Equation;
 module.exports = EquationSet;
 
 EquationSet.prototype.clone = function () {
@@ -150,9 +112,7 @@ EquationSet.prototype.computesSingleVariable = function () {
  * Returns a list of equations that consist of setting a variable to a constant
  * value, without doing any additional math. i.e. foo = 1
  */
-// TODO - name something other than constants since we're changing them?
 EquationSet.prototype.getConstants = function () {
-  // TODO - unit tests
   return this.equations_.filter(function (item) {
     return item.params.length === 0 && item.expression.isNumber();
   });
