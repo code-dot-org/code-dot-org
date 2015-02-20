@@ -593,7 +593,7 @@ Calc.generateResults_ = function () {
       !appState.message) {
     appState.message = calcMsg.levelIncompleteError();
   }
-}
+};
 
 /**
  * If we have any functions or variables in our expression set, we don't support
