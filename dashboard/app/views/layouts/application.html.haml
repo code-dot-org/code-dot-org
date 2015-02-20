@@ -8,6 +8,7 @@
     = tag :meta, name: 'viewport', content: 'minimal-ui'
     /[if IE 9]
       %meta{'http-equiv' => 'X-UA-Compatible', content: 'IE=Edge'}
+    = javascript_include_tag 'react'
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
     = javascript_include_tag '//cdn.optimizely.com/js/400912536.js' if Rails.env.production?
