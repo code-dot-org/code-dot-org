@@ -150,12 +150,13 @@ $(window).on('function_editor_closed', function() {
   }
 })(appOptions.level);
 
-function saveProject() {
+dashboard.saveProject = function(callback) {
   var app_id = dashboard.currentApp.id;
   dashboard.currentApp.startBlocks = Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
   if (app_id) {
     storageApps().update(app_id, dashboard.currentApp, function(data) {
       console.log('Updated!');
+      callback(data);
     });
   } else {
     storageApps().create(dashboard.currentApp, function(data) {
@@ -163,9 +164,10 @@ function saveProject() {
       if (history) {
         history.pushState({}, '', '?id=' + data.id);
       }
+      callback(data);
     });
   }
-}
+};
 
 function initApp() {
   if (appOptions.level.isProject) {
@@ -176,7 +178,8 @@ function initApp() {
         name: 'Untitled'
       };
     }
-    $(document).on('mousedown', '#runButton', saveProject);
+    $(document).on('mousedown', '#runButton', dashboard.saveProject);
+    dashboard.showProjectHeader();
   }
   window[appOptions.app + 'Main'](appOptions);
 }
