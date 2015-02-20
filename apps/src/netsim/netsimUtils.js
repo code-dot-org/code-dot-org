@@ -77,6 +77,14 @@ exports.minifyHex = function (hexString) {
 };
 
 /**
+ * Reduces all whitespace to single characters and strips non-digits.
+ * @param decimalString
+ */
+exports.minifyDecimal = function (decimalString) {
+  return decimalString.replace(/(^\s+|\s+$|[^0-9\s])/g, '').replace(/\s+/g, ' ');
+};
+
+/**
  * Converts a hex string to a formatted representation, with chunks of
  * a set size separated by a space.
  * @param {string} hexString
@@ -96,6 +104,37 @@ exports.formatHex = function (hexString, chunkSize) {
   }
 
   return chunks.join(' ');
+};
+
+/**
+ * Takes a set of whitespace-separated numbers and pads the spacing between
+ * them to the width of the widest number, so that they line up when they
+ * wrap.
+ * @param {string} decimalString
+ * @returns {string} aligned decimal string
+ */
+exports.formatDecimal = function (decimalString) {
+  if (decimalString.replace(/\D/g, '') === '') {
+    return '';
+  }
+
+  var numbers = exports.minifyDecimal(decimalString).split(/\s+/);
+
+  // Find the widest number
+  var mostDigits = numbers.reduce(function(prev, cur) {
+    if (cur.length > prev) {
+      return cur.length;
+    }
+    return prev;
+  }, 0);
+
+  return numbers.map(function (numString) {
+    // Left-pad each number with non-breaking spaces up to max width.
+    while (numString.length < mostDigits) {
+      numString = "\xA0" + numString;
+    }
+    return numString;
+  }).join(' ');
 };
 
 /**
@@ -198,14 +237,12 @@ exports.binaryToHex = function (binaryString) {
  * @returns {string} Binary representation.
  */
 exports.decimalToBinary = function (decimalString, byteSize) {
-  var decimal = decimalString.replace(/[^0-9\s]/g, '');
-
   // Special case: No numbers
-  if (decimal.replace(/\s/g, '') === '') {
+  if (decimalString.replace(/\D/g, '') === '') {
     return '';
   }
 
-  return decimal
+  return exports.minifyDecimal(decimalString)
       .split(/\s+/)
       .map(function (numString) {
         return exports.intToBinary(parseInt(numString, 10), byteSize);

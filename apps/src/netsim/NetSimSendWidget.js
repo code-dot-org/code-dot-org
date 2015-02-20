@@ -18,9 +18,9 @@ var PacketEncoder = require('./PacketEncoder');
 var netsimUtils = require('./netsimUtils');
 
 var minifyBinary = netsimUtils.minifyBinary;
-var minifyHex = netsimUtils.minifyHex;
 var formatBinary = netsimUtils.formatBinary;
 var formatHex = netsimUtils.formatHex;
+var formatDecimal = netsimUtils.formatDecimal;
 var binaryToInt = netsimUtils.binaryToInt;
 var intToBinary = netsimUtils.intToBinary;
 var hexToInt = netsimUtils.hexToInt;
@@ -293,7 +293,7 @@ NetSimSendWidget.prototype.render = function (skipElement) {
 
   liveFields.push({
     inputElement: this.decimalUI.message,
-    newValue: binaryToDecimal(this.message, 8),
+    newValue: formatDecimal(binaryToDecimal(this.message, 8)),
     watermark: 'Decimal'
   });
 
