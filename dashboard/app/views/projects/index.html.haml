@@ -69,6 +69,10 @@
       $scope.projectsLoaded = true;
     }).catch($scope.genericError);
 
+    $scope.projectVisible = function(project) {
+      return (!project.hidden);
+    }
+
     $scope.genericError = function(result) {
       $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
     };

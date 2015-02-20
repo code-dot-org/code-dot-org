@@ -78,13 +78,17 @@
           });
           if (projects.length == 0) {
             createApp({projectTemplateLevelName: appOptions.level.projectTemplateLevelName,
-                       name: appOptions.level.projectTemplateLevelName});
+                       name: appOptions.level.projectTemplateLevelName,
+                       hidden: true});
           } else {
-            var app = projects[0];
+            currentApp = projects[0];
             // TODO this should just load the code in the workspace, not refresh
-            if (app.levelUrl && app.levelSourceId && app.id) {
+            if (currentApp.levelUrl && currentApp.levelSourceId && currentApp.id) {
               // load code by navigating to the current level with the project's level source (hack, see above TODO)
               window.location = window.location.origin + window.location.pathname + '?level_source_id=' + app.levelSourceId + '#' + app.id;
+            } else {
+              // we have an app but it's empty because we never ran anything
+              displayCurrentApp();
             }
           }
         } else {
