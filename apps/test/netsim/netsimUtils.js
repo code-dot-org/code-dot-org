@@ -29,7 +29,27 @@ describe("netsimUtils", function () {
 
     it ("coerces letters to uppercase", function () {
       assertEqual('AB', minifyHex('Ab'));
-    })
+    });
+  });
+
+  describe("minifyDecimal", function () {
+    var minifyDecimal = netsimUtils.minifyDecimal;
+
+    it ("strips leading whitespace", function () {
+      assertEqual('1 1 1', minifyDecimal('  1 1 1'));
+    });
+
+    it ("strips trailing whitespace", function () {
+      assertEqual('1 1 1', minifyDecimal('1 1 1  '));
+    });
+
+    it ("collapses internal whitespace to one space", function () {
+      assertEqual('1 1 1', minifyDecimal('1  1   1'));
+    });
+
+    it ("strips characters that aren't whitespace or decimal", function () {
+      assertEqual('1 1 1', minifyDecimal('a1 1B 1c'));
+    });
   });
 
   describe("formatBinary", function() {
@@ -90,6 +110,24 @@ describe("netsimUtils", function () {
     });
   });
 
+  describe("formatDecimal", function () {
+    var formatDecimal = netsimUtils.formatDecimal;
+
+    it ("is identity for empty string", function () {
+      assertEqual('', formatDecimal(''));
+    });
+
+    it ("puts final digits of all numbers at equal distances apart", function () {
+      assertEqual("1 1 1", formatDecimal('1  1    1'));
+      assertEqual("10 \xA01 10", formatDecimal('10 1 10'));
+      assertEqual("100 \xA010 \xA0\xA01", formatDecimal('100 10 1'));
+    });
+
+    it ("pads leading numbers", function () {
+      assertEqual('\xA0\xA01 \xA010 100', formatDecimal('1 10 100'));
+    });
+  });
+
   describe("binaryToInt", function () {
     var binaryToInt = netsimUtils.binaryToInt;
 
@@ -105,7 +143,7 @@ describe("netsimUtils", function () {
 
     it ("minifies and cleans input before converting", function () {
       assertEqual(16, binaryToInt('0001 0000'));
-    })
+    });
   });
 
   describe("intToBinary", function () {
@@ -305,6 +343,11 @@ describe("netsimUtils", function () {
       assertEqual('000', decimalToBinary('00', 3));
       assertEqual('000000', decimalToBinary('0 0', 3));
       assertEqual('101011', decimalToBinary('5 3', 3));
+    });
+
+    it ("handles leading and trailing spaces", function () {
+      assertEqual('100001', decimalToBinary(' 4 1', 3));
+      assertEqual('100001', decimalToBinary('4 1 ', 3));
     });
 
     it ("truncates left bits when numbers overflow byte-size", function () {
