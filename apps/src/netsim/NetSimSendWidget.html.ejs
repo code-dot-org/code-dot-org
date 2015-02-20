@@ -1,28 +1,43 @@
 <div id="netsim_send_widget" class="netsim_send_widget">
   <h1>Send a Message</h1>
   <div class="netsim_packet">
-    <div class="packet_header">
-      <label for="to_address">To:</label>
-      <input id="to_address" type="text" />
-      <label for="from_address">From:</label>
-      <input id="from_address" type="text" disabled />
-      <label for="packet_index">Packet</label>
-      <input id="packet_index" type="text" disabled />
-      <label for="packet_count">of</label>
-      <input id="packet_count" type="text" disabled />
-    </div>
-    <div class="packet_body">
-      <div id="ascii_payload_wrap">
-        <h2>Ascii</h2>
-        <textarea id="ascii_payload"></textarea>
-      </div>
-      <div id="binary_payload_wrap">
-        <h2>Binary
-          <span id="bit_counter">160/100 bits</span>
-        </h2>
-        <textarea id="binary_payload"></textarea>
-      </div>
-    </div>
+    <table>
+      <thead>
+        <tr>
+          <th nowrap class="toAddress">To</th>
+          <th nowrap class="fromAddress">From</th>
+          <th nowrap class="packetInfo">Packet</th>
+          <th class="message">Message</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="ascii">
+          <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>
+          <td nowrap class="fromAddress"><input type="text" class="fromAddress" /></td>
+          <td nowrap class="packetInfo"><input type="text" class="packetIndex" /> of <input type="text" class="packetCount" /></td>
+          <td class="message"><div><textarea class="message"></textarea></div></td>
+        </tr>
+        <tr class="decimal">
+          <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>
+          <td nowrap class="fromAddress"><input type="text" class="fromAddress" /></td>
+          <td nowrap class="packetInfo"><input type="text" class="packetIndex" /> of <input type="text" class="packetCount" /></td>
+          <td class="message"><div><textarea class="message"></textarea></div></td>
+        </tr>
+        <tr class="hexadecimal">
+          <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>
+          <td nowrap class="fromAddress"><input type="text" class="fromAddress" /></td>
+          <td nowrap class="packetInfo"><input type="text" class="packetIndex" /> of <input type="text" class="packetCount" /></td>
+          <td class="message"><div><textarea class="message"></textarea></div></td>
+        </tr>
+        <tr class="binary">
+          <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>
+          <td nowrap class="fromAddress"><input type="text" class="fromAddress" /></td>
+          <td nowrap class="packetInfo"><input type="text" class="packetIndex" /> of <input type="text" class="packetCount" /></td>
+          <td class="message"><div><textarea class="message"></textarea></div></td>
+        </tr>
+      </tbody>
+    </table>
+    <span class="bit_counter"></span>
   </div>
   <div class="send_widget_footer">
     <!-- Packet size slider -->
