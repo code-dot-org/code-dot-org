@@ -117,6 +117,7 @@ levels.ec_simple = {
     'readRecords': null,
     'updateRecord': null,
     'deleteRecord': null,
+    'getUserId': null,
     'moveForward': null,
     'moveBackward': null,
     'move': null,
@@ -272,6 +273,7 @@ var Applab = module.exports;
 
 var level;
 var skin;
+var user;
 
 //TODO: Make configurable.
 studioApp.setCheckForEmptyBlocks(true);
@@ -904,6 +906,8 @@ Applab.init = function(config) {
       dom.addClickTouchEvent(viewDataButton, Applab.onViewData);
     }
   }
+
+  user = {applabUserId: config.applabUserId};
 };
 
 /**
@@ -2367,6 +2371,12 @@ Applab.handleDeleteRecord = function(successCallback) {
   }
 };
 
+Applab.getUserId = function (opts) {
+  if (!user.applabUserId) {
+    throw new Error("User ID failed to load.");
+  }
+  return user.applabUserId;
+};
 
 /*
 var onWaitComplete = function (opts) {
@@ -2904,6 +2914,7 @@ module.exports.blocks = [
   {'func': 'readRecords', 'title': 'readRecords(table, searchParams, onSuccess); Reads all records whose properties match those on the searchParams object.', 'category': 'Data', 'params': ["'mytable'", "{id:1}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    createTextLabel('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
   {'func': 'updateRecord', 'title': 'updateRecord(table, record, onSuccess); Updates a record, identified by record.id.', 'category': 'Data', 'params': ["'mytable'", "{id:1, name:'Bob'}", "function() {\n  \n}"] },
   {'func': 'deleteRecord', 'title': 'deleteRecord(table, record, onSuccess); Deletes a record, identified by record.id.', 'category': 'Data', 'params': ["'mytable'", "{id:1}", "function() {\n  \n}"] },
+  {'func': 'getUserId', 'title': 'getUserId(); Gets a unique identifier for the current user of this app.', 'category': 'Data', 'params': [] },
 
   {'func': 'moveForward', 'title': 'Move the turtle forward the specified distance', 'category': 'Turtle', 'params': ["25"] },
   {'func': 'moveBackward', 'title': 'Move the turtle backward the specified distance', 'category': 'Turtle', 'params': ["25"] },
@@ -3665,6 +3676,12 @@ exports.deleteRecord = function (blockId, table, record, onSuccess, onError) {
                            'record': record,
                            'onSuccess': onSuccess,
                            'onError': onError});
+};
+
+exports.getUserId = function (blockId) {
+  return Applab.executeCmd(blockId,
+                          'getUserId',
+                          {});
 };
 
 exports.moveForward = function (blockId, distance) {
