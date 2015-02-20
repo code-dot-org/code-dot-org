@@ -147,6 +147,15 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
       font-family: monospace;
     }
 
+    .watermark {
+      color: #d3d3d3;
+    }
+
+    .bit_counter {
+      text-align: right;
+      color: darkgray;
+    }
+
     /* All columns but "message" */
     th.rowType, td.rowType,
     th.toAddress, td.toAddress,
