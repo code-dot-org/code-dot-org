@@ -330,7 +330,7 @@ var displayFeedback = function(response) {
       reinfFeedbackMsg: evalMsg.reinfFeedbackMsg()
     }
   };
-  if (Eval.message) {
+  if (Eval.message && !level.edit_blocks) {
     options.message = Eval.message;
   }
   studioApp.displayFeedback(options);
