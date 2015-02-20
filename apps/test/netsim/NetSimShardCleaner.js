@@ -4,7 +4,7 @@ var assertEqual = testUtils.assertEqual;
 var assertWithinRange = testUtils.assertWithinRange;
 var assertOwnProperty = testUtils.assertOwnProperty;
 var netsimTestUtils = require('../util/netsimTestUtils');
-var fauxShard = netsimTestUtils.fauxShard;
+var fakeShard = netsimTestUtils.fakeShard;
 var assertTableSize = netsimTestUtils.assertTableSize;
 
 var NetSimShardCleaner = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimShardCleaner');
@@ -49,7 +49,7 @@ describe("NetSimShardCleaner", function () {
 
   beforeEach(function () {
     NetSimLogger.getSingleton().setVerbosity(NetSimLogger.LogLevel.NONE);
-    testShard = fauxShard();
+    testShard = fakeShard();
     cleaner = new NetSimShardCleaner(testShard);
   });
 
@@ -229,6 +229,31 @@ describe("NetSimShardCleaner", function () {
     assertTableSize(testShard, 'messageTable', 1);
     testShard.messageTable.readAll(function (rows) {
       assertEqual(rows[0].toNodeID, validNodeID);
+    });
+  });
+
+  it ("deletes logs associated with bad nodes", function () {
+    var validNodeID = makeNodeWithHeartbeat(testShard);
+    var invalidNodeID = makeNode(testShard);
+
+    testShard.logTable.create({
+      nodeID: validNodeID
+    }, function () {});
+    testShard.logTable.create({
+      nodeID: invalidNodeID
+    }, function () {});
+
+    assertTableSize(testShard, 'nodeTable', 2);
+    assertTableSize(testShard, 'logTable', 2);
+
+    cleaner.tick(); // First tick triggers cleaning and starts it
+    cleaner.tick(); // Second tick triggers node cleanup
+    cleaner.tick(); // Third tick triggers log cleanup
+
+    assertTableSize(testShard, 'nodeTable', 1);
+    assertTableSize(testShard, 'logTable', 1);
+    testShard.logTable.readAll(function (rows) {
+      assertEqual(rows[0].nodeID, validNodeID);
     });
   });
 });
