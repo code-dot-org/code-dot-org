@@ -15,6 +15,22 @@
 var markup = require('./NetSimSendWidget.html');
 var KeyCodes = require('../constants').KeyCodes;
 var PacketEncoder = require('./PacketEncoder');
+var netsimUtils = require('./netsimUtils');
+
+var minifyBinary = netsimUtils.minifyBinary;
+var minifyHex = netsimUtils.minifyHex;
+var formatBinary = netsimUtils.formatBinary;
+var formatHex = netsimUtils.formatHex;
+var binaryToInt = netsimUtils.binaryToInt;
+var intToBinary = netsimUtils.intToBinary;
+var hexToInt = netsimUtils.hexToInt;
+var intToHex = netsimUtils.intToHex;
+var hexToBinary = netsimUtils.hexToBinary;
+var binaryToHex = netsimUtils.binaryToHex;
+var decimalToBinary = netsimUtils.decimalToBinary;
+var binaryToDecimal = netsimUtils.binaryToDecimal;
+var asciiToBinary = netsimUtils.asciiToBinary;
+var binaryToAscii = netsimUtils.binaryToAscii;
 
 /**
  * Generator and controller for message sending view.
@@ -113,125 +129,6 @@ var whitelistCharacters = function (whitelistRegex) {
   };
 };
 
-var uglifyBinary = function (binaryString) {
-  return binaryString.replace(/[^01]/g, '');
-};
-
-var prettifyBinary = function (binaryString, chunkSize) {
-  var uglyBinary = uglifyBinary(binaryString);
-
-  var chunks = [];
-  for (var i = 0; i < uglyBinary.length; i += chunkSize) {
-    chunks.push(uglyBinary.substr(i, chunkSize));
-  }
-
-  return chunks.join(' ');
-};
-
-var binaryToInt = function (binaryString) {
-  return parseInt(uglifyBinary(binaryString), 2);
-};
-
-var intToBinary = function (int, width) {
-  var padding = new Array(width + 1).join('0');
-  return (padding + int.toString(2)).slice(-width);
-};
-
-var hexadecimalToInt = function (hexadecimalString) {
-  return parseInt(hexadecimalString.replace(/[^0-9a-f]/ig, ''), 16);
-};
-
-var intToHexadecimal = function (int, width) {
-  var padding = new Array(width + 1).join('0');
-  return (padding + int.toString(16)).slice(-width).toUpperCase();
-};
-
-var hexadecimalToBinary = function (hexadecimalString) {
-  var uglyHex = hexadecimalString.replace(/[^0-9a-f]/ig, '');
-  var binary = '';
-
-  for (var i = 0; i < uglyHex.length; i++) {
-    binary += intToBinary(parseInt(uglyHex.substr(i, 1), 16), 4);
-  }
-
-  return binary;
-};
-
-var binaryToHexadecimal = function (binaryString, chunkSize) {
-  var uglyBinary = uglifyBinary(binaryString);
-  var uglyHex = '';
-  var nibble;
-  var padding = '0000';
-  var i;
-  for (i = 0; i < uglyBinary.length; i += 4) {
-    // Right-pad nibble with zeroes
-    nibble = (uglyBinary.substr(i, 4) + padding).slice(0, 4);
-    uglyHex += intToHexadecimal(binaryToInt(nibble),1);
-  }
-
-  var chunks = [];
-  for (i = 0; i < uglyHex.length; i += chunkSize) {
-    chunks.push(uglyHex.substr(i, chunkSize));
-  }
-
-  return chunks.join(' ').toUpperCase();
-};
-
-var decimalToBinary = function (decimalString) {
-  var uglyDecimal = decimalString.replace(/[^0-9\s]/g, '');
-
-  // Special case: No numbers
-  if (uglyDecimal.replace(/\s/g, '') === '') {
-    return '';
-  }
-
-  var numbers = uglyDecimal.split(/\s+/).map(function (nString) {
-    return parseInt(nString, 10);
-  });
-  var uglyBinary = '';
-  for (var i = 0; i < numbers.length; i++) {
-    // TODO (bbuchanan): Make width configurable for decimal mode.
-    uglyBinary += intToBinary(numbers[i], 8);
-  }
-
-  return uglyBinary;
-};
-
-var binaryToDecimal = function (binaryString) {
-  // TODO (bbuchanan): Make width configurable for decimal mode.
-  var uglyBinary = uglifyBinary(binaryString);
-  var numbers = [];
-  var byte;
-  var padding = '00000000';
-  for (var i = 0; i < uglyBinary.length; i += 8) {
-    byte = (uglyBinary.substr(i, 8) + padding).slice(0, 8);
-    numbers.push(binaryToInt(byte));
-  }
-
-  return numbers.join(' ');
-};
-
-var asciiToBinary = function (asciiString) {
-  var bytes = [];
-  for (var i = 0; i < asciiString.length; i++) {
-    bytes.push(intToBinary(asciiString.charCodeAt(i), 8));
-  }
-  return bytes.join('');
-};
-
-var binaryToAscii = function (binaryString) {
-  var byte, charCode;
-  var uglyBinary = uglifyBinary(binaryString);
-  var chars = [];
-  var padding = '00000000';
-  for (var i = 0; i < uglyBinary.length; i += 8) {
-    byte = (uglyBinary.substr(i, 8) + padding).slice(0, 8);
-    charCode = binaryToDecimal(byte);
-    chars.push(String.fromCharCode(charCode));
-  }
-  return chars.join('');
-};
-
 NetSimSendWidget.prototype.makeKeyupHandler = function (fieldName, converterFunction) {
   return function (jqueryEvent) {
     var newValue = converterFunction(jqueryEvent.target.value);
@@ -273,28 +170,32 @@ NetSimSendWidget.prototype.bindElements_ = function () {
       shortNumberAllowedCharacters: /[01]/,
       shortNumberConversion: binaryToInt,
       messageAllowedCharacters: /[01\s]/,
-      messageConversion: uglifyBinary
+      messageConversion: minifyBinary
     },
     {
       typeName: 'hexadecimal',
       shortNumberAllowedCharacters: /[0-9a-f]/i,
-      shortNumberConversion: hexadecimalToInt,
+      shortNumberConversion: hexToInt,
       messageAllowedCharacters: /[0-9a-f\s]/i,
-      messageConversion: hexadecimalToBinary
+      messageConversion: hexToBinary
     },
     {
       typeName: 'decimal',
       shortNumberAllowedCharacters: /[0-9]/,
       shortNumberConversion: parseInt,
       messageAllowedCharacters: /[0-9\s]/,
-      messageConversion: decimalToBinary
+      messageConversion: function (decimalString) {
+        return decimalToBinary(decimalString, 8);
+      }
     },
     {
       typeName: 'ascii',
       shortNumberAllowedCharacters: /[0-9]/,
       shortNumberConversion: parseInt,
       messageAllowedCharacters: /./,
-      messageConversion: asciiToBinary
+      messageConversion: function (asciiString) {
+        return asciiToBinary(asciiString, 8);
+      }
     }
   ];
 
@@ -364,7 +265,7 @@ NetSimSendWidget.prototype.render = function (skipElement) {
 
     liveFields.push({
       inputElement: this.hexadecimalUI[fieldName],
-      newValue: intToHexadecimal(this[fieldName], 1)
+      newValue: intToHex(this[fieldName], 1)
     });
 
     liveFields.push({
@@ -380,25 +281,25 @@ NetSimSendWidget.prototype.render = function (skipElement) {
 
   liveFields.push({
     inputElement: this.binaryUI.message,
-    newValue: prettifyBinary(this.message, 8),
+    newValue: formatBinary(this.message, 8),
     watermark: 'Binary'
   });
 
   liveFields.push({
     inputElement: this.hexadecimalUI.message,
-    newValue: binaryToHexadecimal(this.message, 2),
+    newValue: formatHex(binaryToHex(this.message), 2),
     watermark: 'Hexadecimal'
   });
 
   liveFields.push({
     inputElement: this.decimalUI.message,
-    newValue: binaryToDecimal(this.message),
+    newValue: binaryToDecimal(this.message, 8),
     watermark: 'Decimal'
   });
 
   liveFields.push({
     inputElement: this.asciiUI.message,
-    newValue: binaryToAscii(this.message),
+    newValue: binaryToAscii(this.message, 8),
     watermark: 'ASCII'
   });
 
