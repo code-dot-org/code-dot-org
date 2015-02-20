@@ -170,6 +170,7 @@ Calc.init = function(config) {
   studioApp.init(config);
 };
 
+// TODO - validate comment is still up to date
 /**
  * A few possible scenarios
  * (1) We don't have a target compute expression (i.e. freeplay). Show nothing.
@@ -192,7 +193,7 @@ function displayGoal(targetSet) {
   var tokenList;
   var nextRow = 0;
   var hasSingleFunction = targetSet.hasSingleFunction();
-  if (!hasSingleFunction) {
+  if (!hasSingleFunction && !targetSet.computesSingleVariable()) {
     var sortedEquations = targetSet.sortedEquations();
     sortedEquations.forEach(function (equation) {
       if (equation.isFunction() && sortedEquations.length > 1) {

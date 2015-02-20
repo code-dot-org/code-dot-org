@@ -308,7 +308,7 @@ describe('evaluateResults_/evaluateSingleVariable_', function () {
     // age_in_months = age * 12
     var userSet = new EquationSet();
     userSet.addEquation_(new Equation(null, [], new ExpressionNode('age_in_months')));
-    userSet.addEquation_(new Equation('age', [], new ExpressionNode(17)));
+    userSet.addEquation_(new Equation('age', [], new ExpressionNode(12)));
     userSet.addEquation_(new Equation('age_in_months', [],
       new ExpressionNode('*', ['age', 12])));
 
