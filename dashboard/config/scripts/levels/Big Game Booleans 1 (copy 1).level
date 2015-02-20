@@ -1,7 +1,7 @@
 <Studio>
   <config><![CDATA[{
   "game_id": 33,
-  "created_at": "2015-02-13T18:15:01.758Z",
+  "created_at": "2015-02-19T05:26:56.618Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -27,7 +27,14 @@
     "sprites_hidden_to_start": "true",
     "coordinate_grid_background": "false",
     "generate_function_pass_blocks": "true",
-    "callout_json": "[\r\n]"
+    "callout_json": "[\r\n]",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "custom_game_type": "Big Game"
   }
 }]]></config>
   <blocks/>

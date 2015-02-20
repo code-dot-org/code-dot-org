@@ -34,7 +34,16 @@
     "protaganist_sprite_index": "0",
     "disable_sharing": "false",
     "min_workspace_height": "1000",
-    "default_num_example_blocks": "2"
+    "default_num_example_blocks": "2",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "maze_data": null,
+    "generate_function_pass_blocks": "false",
+    "timeout_after_when_run": "false"
   }
 }]]></config>
   <blocks>

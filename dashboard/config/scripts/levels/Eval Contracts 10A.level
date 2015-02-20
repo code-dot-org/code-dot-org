@@ -20,43 +20,13 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="functional_display" inline="false" deletable="false" movable="false">
-          <functional_input name="ARG1">
-            <block type="functional_call" inline="false">
-              <mutation name="sqaure">
-                <arg name="size" type="Number"/>
-                <arg name="color" type="String"/>
-              </mutation>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_example" inline="false" uservisible="false">
-          <functional_input name="ACTUAL">
-            <block type="functional_call" inline="false" uservisible="false">
-              <mutation name="sqaure">
-                <arg name="size" type="Number"/>
-                <arg name="color" type="String"/>
-              </mutation>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_example" inline="false" uservisible="false">
-          <functional_input name="ACTUAL">
-            <block type="functional_call" inline="false" uservisible="false">
-              <mutation name="sqaure">
-                <arg name="size" type="Number"/>
-                <arg name="color" type="String"/>
-              </mutation>
-            </block>
-          </functional_input>
-        </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
             <arg name="size" type="Number"/>
             <arg name="color" type="String"/>
             <outputtype>Image</outputtype>
           </mutation>
-          <title name="NAME">sqaure</title>
+          <title name="NAME">square</title>
           <functional_input name="STACK">
             <block type="functional_square" inline="false" uservisible="false">
               <functional_input name="SIZE">
@@ -80,6 +50,36 @@
                   <title name="VAR">color</title>
                 </block>
               </functional_input>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_example" inline="false" uservisible="false">
+          <functional_input name="ACTUAL">
+            <block type="functional_call" inline="false" uservisible="false">
+              <mutation name="square">
+                <arg name="size" type="Number"/>
+                <arg name="color" type="String"/>
+              </mutation>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_example" inline="false" uservisible="false">
+          <functional_input name="ACTUAL">
+            <block type="functional_call" inline="false" uservisible="false">
+              <mutation name="square">
+                <arg name="size" type="Number"/>
+                <arg name="color" type="String"/>
+              </mutation>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_display" inline="false" deletable="false" movable="false">
+          <functional_input name="ARG1">
+            <block type="functional_call" inline="false">
+              <mutation name="square">
+                <arg name="size" type="Number"/>
+                <arg name="color" type="String"/>
+              </mutation>
             </block>
           </functional_input>
         </block>
