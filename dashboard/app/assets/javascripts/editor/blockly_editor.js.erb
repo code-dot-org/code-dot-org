@@ -6,9 +6,9 @@
 //= require codemirror/modes/xml
 //= require codemirror/modes/javascript
 //= require_tree .
-function codeMirror(name) {
-    var editor = CodeMirror.fromTextArea(document.getElementById('level_' + name + '_blocks'), {
-        mode: 'xml',
+function codeMirror(name, mode) {
+    var editor = CodeMirror.fromTextArea(document.getElementById('level_' + name), {
+        mode: mode,
         htmlMode: false,
         viewportMargin: Infinity,
         matchTags: {bothTags: true},

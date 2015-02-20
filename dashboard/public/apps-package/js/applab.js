@@ -35,7 +35,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":145}],14:[function(require,module,exports){
+},{"../skins":146}],14:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/applab');
@@ -63,6 +63,9 @@ levels.simple = {
         <value name="HTML"><block type="text"><title name="TEXT">html</title></block></value></block>'),
   'startBlocks':
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
+};
+
+levels.custom = {
 };
 
 levels.ec_simple = {
@@ -114,6 +117,7 @@ levels.ec_simple = {
     'readRecords': null,
     'updateRecord': null,
     'deleteRecord': null,
+    'getUserId': null,
     'moveForward': null,
     'moveBackward': null,
     'move': null,
@@ -229,7 +233,7 @@ levels.full_sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-},{"../../locale/current/applab":188,"../block_utils":19,"../utils":186}],8:[function(require,module,exports){
+},{"../../locale/current/applab":189,"../block_utils":19,"../utils":187}],8:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -269,6 +273,7 @@ var Applab = module.exports;
 
 var level;
 var skin;
+var user;
 
 //TODO: Make configurable.
 studioApp.setCheckForEmptyBlocks(true);
@@ -901,6 +906,8 @@ Applab.init = function(config) {
       dom.addClickTouchEvent(viewDataButton, Applab.onViewData);
     }
   }
+
+  user = {applabUserId: config.applabUserId};
 };
 
 /**
@@ -2364,6 +2371,12 @@ Applab.handleDeleteRecord = function(successCallback) {
   }
 };
 
+Applab.getUserId = function (opts) {
+  if (!user.applabUserId) {
+    throw new Error("User ID failed to load.");
+  }
+  return user.applabUserId;
+};
 
 /*
 var onWaitComplete = function (opts) {
@@ -2634,7 +2647,7 @@ var getPegasusHost = function() {
         return Array(multiplier + 1).join(input)
     }
 
-},{"../../locale/current/applab":188,"../../locale/current/common":191,"../StudioApp":4,"../codegen":44,"../constants":46,"../dom":47,"../skins":145,"../slider":146,"../templates/page.html":166,"../utils":186,"../xml":187,"./api":6,"./appStorage":7,"./blocks":9,"./controls.html":10,"./dropletConfig":11,"./extraControlRows.html":12,"./formStorage":13,"./visualization.html":17}],17:[function(require,module,exports){
+},{"../../locale/current/applab":189,"../../locale/current/common":192,"../StudioApp":4,"../codegen":44,"../constants":46,"../dom":47,"../skins":146,"../slider":147,"../templates/page.html":167,"../utils":187,"../xml":188,"./api":6,"./appStorage":7,"./blocks":9,"./controls.html":10,"./dropletConfig":11,"./extraControlRows.html":12,"./formStorage":13,"./visualization.html":17}],17:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2654,7 +2667,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":207}],13:[function(require,module,exports){
+},{"ejs":208}],13:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -2857,7 +2870,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/applab":188,"../../locale/current/common":191,"ejs":207}],11:[function(require,module,exports){
+},{"../../locale/current/applab":189,"../../locale/current/common":192,"ejs":208}],11:[function(require,module,exports){
 module.exports.blocks = [
   {'func': 'onEvent', 'title': 'Execute code in response to an event for the specified element. Additional parameters are passed to the callback function.', 'category': 'UI controls', 'params': ["'id'", "'click'", "function(event) {\n  \n}"] },
   {'func': 'button', 'title': 'Create a button and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "'text'"] },
@@ -2901,6 +2914,7 @@ module.exports.blocks = [
   {'func': 'readRecords', 'title': 'readRecords(table, searchParams, onSuccess); Reads all records whose properties match those on the searchParams object.', 'category': 'Data', 'params': ["'mytable'", "{id:1}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    createTextLabel('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
   {'func': 'updateRecord', 'title': 'updateRecord(table, record, onSuccess); Updates a record, identified by record.id.', 'category': 'Data', 'params': ["'mytable'", "{id:1, name:'Bob'}", "function() {\n  \n}"] },
   {'func': 'deleteRecord', 'title': 'deleteRecord(table, record, onSuccess); Deletes a record, identified by record.id.', 'category': 'Data', 'params': ["'mytable'", "{id:1}", "function() {\n  \n}"] },
+  {'func': 'getUserId', 'title': 'getUserId(); Gets a unique identifier for the current user of this app.', 'category': 'Data', 'params': [] },
 
   {'func': 'moveForward', 'title': 'Move the turtle forward the specified distance', 'category': 'Turtle', 'params': ["25"] },
   {'func': 'moveBackward', 'title': 'Move the turtle backward the specified distance', 'category': 'Turtle', 'params': ["25"] },
@@ -2981,7 +2995,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":191,"ejs":207}],9:[function(require,module,exports){
+},{"../../locale/current/common":192,"ejs":208}],9:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -3054,7 +3068,7 @@ function installContainer(blockly, generator, blockInstallOptions) {
   };
 }
 
-},{"../../locale/current/applab":188,"../../locale/current/common":191,"../codegen":44,"../utils":186}],188:[function(require,module,exports){
+},{"../../locale/current/applab":189,"../../locale/current/common":192,"../codegen":44,"../utils":187}],189:[function(require,module,exports){
 /*applab*/ module.exports = window.blockly.appLocale;
 },{}],7:[function(require,module,exports){
 'use strict';
@@ -3662,6 +3676,12 @@ exports.deleteRecord = function (blockId, table, record, onSuccess, onError) {
                            'record': record,
                            'onSuccess': onSuccess,
                            'onError': onError});
+};
+
+exports.getUserId = function (blockId) {
+  return Applab.executeCmd(blockId,
+                          'getUserId',
+                          {});
 };
 
 exports.moveForward = function (blockId, distance) {

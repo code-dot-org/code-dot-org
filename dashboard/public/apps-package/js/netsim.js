@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({138:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({139:[function(require,module,exports){
 var appMain = require('../appMain');
 var studioApp = require('../StudioApp').singleton;
 var NetSim = require('./netsim');
@@ -15,7 +15,7 @@ window.netsimMain = function(options) {
   appMain(netSim, levels, options);
 };
 
-},{"../StudioApp":4,"../appMain":5,"./levels":137,"./netsim":139,"./skins":142}],142:[function(require,module,exports){
+},{"../StudioApp":4,"../appMain":5,"./levels":138,"./netsim":140,"./skins":143}],143:[function(require,module,exports){
 var skinBase = require('../skins');
 
 exports.load = function (assetUrl, id) {
@@ -23,7 +23,7 @@ exports.load = function (assetUrl, id) {
   return skin;
 };
 
-},{"../skins":145}],139:[function(require,module,exports){
+},{"../skins":146}],140:[function(require,module,exports){
 /**
  * @fileoverview Internet Simulator app for Code.org.
  */
@@ -247,7 +247,7 @@ NetSim.prototype.onResizeOverride_ = function() {
   div.style.width = parentWidth + 'px';
 };
 
-},{"../RunLoop":3,"./DashboardUser":113,"./NetSimConnection":115,"./NetSimLobby":119,"./NetSimLogWidget":123,"./NetSimRouterPanel":129,"./NetSimSendWidget":131,"./controls.html":136,"./page.html":141}],141:[function(require,module,exports){
+},{"../RunLoop":3,"./DashboardUser":113,"./NetSimConnection":115,"./NetSimLobby":119,"./NetSimLogWidget":123,"./NetSimRouterPanel":129,"./NetSimSendWidget":131,"./controls.html":137,"./page.html":142}],142:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -271,7 +271,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":191,"../../locale/current/netsim":196,"ejs":207}],137:[function(require,module,exports){
+},{"../../locale/current/common":192,"../../locale/current/netsim":197,"ejs":208}],138:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/netsim');
@@ -285,9 +285,9 @@ levels.netsim_demo = {
   'freePlay': true
 };
 
-},{"../../locale/current/netsim":196}],196:[function(require,module,exports){
+},{"../../locale/current/netsim":197}],197:[function(require,module,exports){
 /*netsim*/ module.exports = window.blockly.appLocale;
-},{}],136:[function(require,module,exports){
+},{}],137:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -307,7 +307,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":207}],131:[function(require,module,exports){
+},{"ejs":208}],131:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -324,7 +324,57 @@ return buf.join('');
 
 var markup = require('./NetSimSendWidget.html');
 var dom = require('../dom');
+var PacketEncoder = require('./PacketEncoder');
+var KeyCodes = require('../constants').KeyCodes;
 
+/**
+ * Converts a number to a binary representation using the given number of bits.
+ * @param {number} integer - the base-10 number to convert
+ * @param {number} size - how many bits the output should use
+ * @returns {string} - string of binary representation of integer
+ */
+var unsignedIntegerToBinaryString = function (integer, size) {
+  var binary = integer.toString(2);
+  while (binary.length < size) {
+    binary = '0' + binary;
+  }
+  // TODO: Deal with overflow?
+  return binary;
+};
+
+/**
+ * Converts a string to a string of its ascii binary representation.
+ * Not, strictly-speaking, ascii; uses the native String.prototype.charCodeAt
+ * which is consistent within the ASCII table (0-127) but not necessarily
+ * beyond it.
+ * @param {string} ascii - A plain text string
+ * @returns {string} binary representation of string
+ */
+var asciiToBinaryString = function (ascii) {
+  var result = '';
+  for (var i = 0; i < ascii.length; i++) {
+    result += unsignedIntegerToBinaryString(ascii.charCodeAt(i), 8);
+  }
+  return result;
+};
+
+/**
+ * Given a binary string and a chunk size, whitespace-formats the binary
+ * string a returns the result.
+ * @param {string} rawBinary - binary string with no whitespace
+ * @param {number} chunkSize - how many
+ * @returns {string} formatted binary string
+ */
+var formatToChunkSize = function (rawBinary, chunkSize) {
+  var result = '';
+  for (var i = 0; i < rawBinary.length; i += chunkSize) {
+    if (result.length > 0) {
+      result += ' ';
+    }
+    result += rawBinary.slice(i, i+chunkSize);
+  }
+  return result;
+};
 
 /**
  * Generator and controller for message sending view.
@@ -340,6 +390,10 @@ var NetSimSendWidget = module.exports = function (connection) {
   this.connection_ = connection;
   this.connection_.statusChanges
       .register(this.onConnectionStatusChange_.bind(this));
+
+  this.packetBinary = '';
+  this.toAddress_ = 0;
+  this.fromAddress_ = 0;
 };
 
 /**
@@ -358,17 +412,77 @@ NetSimSendWidget.createWithin = function (element, connection) {
 };
 
 /**
+ * Creates a keyPress handler that allows only the given characters to be
+ * typed into a text field.
+ * @param {RegExp} whitelistRegex
+ * @return {function} appropriate to pass to .keypress()
+ */
+var whitelistCharacters = function (whitelistRegex) {
+  /**
+   * A keyPress handler that blocks all visible characters except those
+   * matching the whitelist.  Passes through invisible characters (backspace,
+   * delete) and control combinations (copy, paste).
+   *
+   * @param keyEvent
+   * @returns {boolean} - Whether to propagate this event.  Should return
+   *          FALSE if we handle the event and don't want to pass it on, TRUE
+   *          if we are not handling the event.
+   */
+  return function (keyEvent) {
+
+    // Don't block control combinations (copy, paste, etc.)
+    if (keyEvent.metaKey || keyEvent.ctrlKey) {
+      return true;
+    }
+
+    // Don't block invisible characters; we want to allow backspace, delete, etc.
+    if (keyEvent.which < KeyCodes.SPACE || keyEvent.which >= KeyCodes.DELETE) {
+      return true;
+    }
+
+    // At this point, if the character doesn't match, we should block it.
+    var key = String.fromCharCode(keyEvent.which);
+    if (!whitelistRegex.test(key)) {
+      keyEvent.preventDefault();
+      return false;
+    }
+  };
+};
+
+/**
  * Get relevant elements from the page and bind them to local variables.
  * @private
  */
 NetSimSendWidget.prototype.bindElements_ = function () {
   this.rootDiv_ = $('#netsim_send_widget');
   this.toAddressTextbox_ = this.rootDiv_.find('#to_address');
-  this.payloadTextbox_ = this.rootDiv_.find('#payload');
+  this.toAddressTextbox_.keypress(whitelistCharacters(/[0-9]/));
+  this.toAddressTextbox_.change(this.onToAddressChange_.bind(this));
+
+  this.fromAddressTextbox_ = this.rootDiv_.find('#from_address');
+
+  this.binaryPayloadTextbox_ = this.rootDiv_.find('#binary_payload');
+  this.binaryPayloadTextbox_.keypress(whitelistCharacters(/[01]/));
+  this.binaryPayloadTextbox_.keyup(this.onBinaryPayloadChange_.bind(this));
+  this.binaryPayloadTextbox_.change(this.onBinaryPayloadChange_.bind(this));
+
+  this.asciiPayloadTextbox_ = this.rootDiv_.find('#ascii_payload');
+  this.asciiPayloadTextbox_.keyup(this.onAsciiPayloadChange_.bind(this));
+  this.asciiPayloadTextbox_.change(this.onAsciiPayloadChange_.bind(this));
+
+  this.bitCounter_ = this.rootDiv_.find('#bit_counter');
+
   this.sendButton_ = this.rootDiv_.find('#send_button');
 
   dom.addClickTouchEvent(this.sendButton_[0], this.onSendButtonPress_.bind(this));
 };
+
+// TODO (bbuchanan) : This should live somewhere common across the client.
+var packetEncoder = new PacketEncoder([
+  { key: 'toAddress', bits: 4 },
+  { key: 'fromAddress', bits: 4 },
+  { key: 'payload', bits: Infinity }
+]);
 
 /**
  * Handler for connection status changes.  Can update configuration and
@@ -376,12 +490,58 @@ NetSimSendWidget.prototype.bindElements_ = function () {
  * @private
  */
 NetSimSendWidget.prototype.onConnectionStatusChange_ = function () {
+  if (this.connection_.myNode && this.connection_.myNode.myWire) {
+    this.fromAddress_ = this.connection_.myNode.myWire.localAddress;
+  } else {
+    this.fromAddress_ = 0;
+  }
 
+  this.rebuildPacketBinary_();
+  this.refresh();
 };
 
-/** Update the address table to show the list of nodes in the local network. */
-NetSimSendWidget.prototype.refresh = function () {
+NetSimSendWidget.prototype.onToAddressChange_ = function () {
+  this.toAddress_ = parseInt(this.toAddressTextbox_.val(), 10);
+  this.rebuildPacketBinary_();
+  this.refresh();
+};
 
+NetSimSendWidget.prototype.onBinaryPayloadChange_ = function () {
+  this.rebuildPacketBinary_();
+  this.refresh();
+};
+
+NetSimSendWidget.prototype.onAsciiPayloadChange_ = function () {
+  this.binaryPayloadTextbox_.val(asciiToBinaryString(this.asciiPayloadTextbox_.val()));
+  this.rebuildPacketBinary_();
+  this.refresh();
+};
+
+NetSimSendWidget.prototype.rebuildPacketBinary_ = function () {
+  this.packetBinary = packetEncoder.createBinary({
+    toAddress: unsignedIntegerToBinaryString(this.toAddress_, 4),
+    fromAddress: unsignedIntegerToBinaryString(this.fromAddress_, 4),
+    payload: this.binaryPayloadTextbox_.val().replace(/[^01]/g, '')
+  });
+};
+
+/** Update send widget display */
+NetSimSendWidget.prototype.refresh = function () {
+  // Non-interactive right now
+  this.rootDiv_.find('#packet_index').val(1);
+  this.rootDiv_.find('#packet_count').val(1);
+
+  this.toAddressTextbox_.val(this.toAddress_);
+
+  this.fromAddressTextbox_.val(this.fromAddress_);
+
+  this.bitCounter_.html(this.packetBinary.length + '/Infinity bits');
+
+  var binaryPayload = packetEncoder.getField('payload', this.packetBinary);
+  this.binaryPayloadTextbox_.val(formatToChunkSize(binaryPayload, 8));
+
+  var asciiPayload = packetEncoder.getFieldAsAscii('payload', this.packetBinary);
+  this.asciiPayloadTextbox_.val(asciiPayload);
 };
 
 /** Send message to connected remote */
@@ -391,13 +551,10 @@ NetSimSendWidget.prototype.onSendButtonPress_ = function () {
     return;
   }
 
-  myNode.sendMessage({
-    toAddress: parseInt(this.toAddressTextbox_.val(), 10),
-    messageContent: this.payloadTextbox_.val()
-  });
+  myNode.sendMessage(this.packetBinary);
 };
 
-},{"../dom":47,"./NetSimSendWidget.html":130}],130:[function(require,module,exports){
+},{"../constants":46,"../dom":47,"./NetSimSendWidget.html":130,"./PacketEncoder":136}],130:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -409,7 +566,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<div id="netsim_send_widget" class="netsim_send_widget">\n  <h1>Send a Message</h1>\n  <label for="to_address">To:</label>\n  <input id="to_address" type="text" />\n  <label for="payload">Payload</label>\n  <textarea id="payload"></textarea>\n  <input type="button" id="send_button" value="Send" />\n</div>'); })();
+ buf.push('<div id="netsim_send_widget" class="netsim_send_widget">\n  <h1>Send a Message</h1>\n  <div class="netsim_packet">\n    <div class="packet_header">\n      <label for="to_address">To:</label>\n      <input id="to_address" type="text" />\n      <label for="from_address">From:</label>\n      <input id="from_address" type="text" disabled />\n      <label for="packet_index">Packet</label>\n      <input id="packet_index" type="text" disabled />\n      <label for="packet_count">of</label>\n      <input id="packet_count" type="text" disabled />\n    </div>\n    <div class="packet_body">\n      <div id="ascii_payload_wrap">\n        <h2>Ascii</h2>\n        <textarea id="ascii_payload"></textarea>\n      </div>\n      <div id="binary_payload_wrap">\n        <h2>Binary\n          <span id="bit_counter">160/100 bits</span>\n        </h2>\n        <textarea id="binary_payload"></textarea>\n      </div>\n    </div>\n  </div>\n  <div class="send_widget_footer">\n    <!-- Packet size slider -->\n    <!-- Add packet button -->\n    <input type="button" id="send_button" value="Send" />\n  </div>\n</div>'); })();
 } 
 return buf.join('');
 };
@@ -417,7 +574,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":207}],129:[function(require,module,exports){
+},{"ejs":208}],129:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -693,7 +850,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":207}],123:[function(require,module,exports){
+},{"ejs":208}],123:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -770,7 +927,7 @@ NetSimLogWidget.prototype.log = function (message) {
       scrollArea[0].scrollHeight - scrollArea[0].scrollTop <=
       scrollArea.outerHeight();
 
-  $('<div>').html(message).appendTo(this.scrollArea_);
+  scrollArea.val(this.scrollArea_.val() + message + '\n');
 
   // Auto-scroll
   if (wasScrolledToEnd) {
@@ -792,7 +949,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<div id="netsim_log_widget_', escape((1,  logInstanceID )), '" class="netsim_log_widget">\n  <h1>', escape((2,  logTitle )), '</h1>\n  <div id="scroll_area"></div>\n  <input type="button" id="clear_button" value="Clear" />\n</div>'); })();
+ buf.push('<div id="netsim_log_widget_', escape((1,  logInstanceID )), '" class="netsim_log_widget">\n  <h1>', escape((2,  logTitle )), '</h1>\n  <textarea id="scroll_area"></textarea>\n  <input type="button" id="clear_button" value="Clear" />\n</div>'); })();
 } 
 return buf.join('');
 };
@@ -800,7 +957,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":207}],119:[function(require,module,exports){
+},{"ejs":208}],119:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -1273,7 +1430,7 @@ NetSimLobby.prototype.getUserSections_ = function (callback) {
   });
 };
 
-},{"../dom":47,"../utils":186,"./NetSimClientNode":114,"./NetSimLobby.html":118,"./NetSimLogger":124,"./NetSimRouterNode":127,"./netsimUtils":140}],140:[function(require,module,exports){
+},{"../dom":47,"../utils":187,"./NetSimClientNode":114,"./NetSimLobby.html":118,"./NetSimLogger":124,"./NetSimRouterNode":127,"./netsimUtils":141}],141:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -1330,7 +1487,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":207}],115:[function(require,module,exports){
+},{"ejs":208}],115:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2219,7 +2376,7 @@ CleanLogs.prototype.onBegin_ = function () {
   CommandSequence.prototype.onBegin_.call(this);
 };
 
-},{"../commands":45,"../utils":186,"./NetSimEntity":116,"./NetSimHeartbeat":117,"./NetSimLogEntry":121,"./NetSimLogger":124,"./NetSimMessage":125,"./NetSimNode":126,"./NetSimWire":135}],132:[function(require,module,exports){
+},{"../commands":45,"../utils":187,"./NetSimEntity":116,"./NetSimHeartbeat":117,"./NetSimLogEntry":121,"./NetSimLogger":124,"./NetSimMessage":125,"./NetSimNode":126,"./NetSimWire":135}],132:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2457,7 +2614,7 @@ NetSimTable.prototype.tick = function () {
   }
 };
 
-},{"../ObservableEvent":1,"../utils":186}],127:[function(require,module,exports){
+},{"../ObservableEvent":1,"../utils":187}],127:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2481,6 +2638,7 @@ var NetSimWire = require('./NetSimWire');
 var NetSimMessage = require('./NetSimMessage');
 var NetSimHeartbeat = require('./NetSimHeartbeat');
 var ObservableEvent = require('../ObservableEvent');
+var PacketEncoder = require('./PacketEncoder');
 
 var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
 
@@ -3066,11 +3224,35 @@ NetSimRouterNode.prototype.onMessageTableChange_ = function (rows) {
   }
 };
 
+/**
+ * Format router uses to decode packet.
+ * TODO (bbuchanan): Pull this from a common location; should be fixed across
+ *                   simulation.
+ * @type {PacketEncoder}
+ */
+var packetEncoder = new PacketEncoder([
+  { key: 'toAddress', bits: 4 },
+  { key: 'fromAddress', bits: 4 },
+  { key: 'payload', bits: Infinity }
+]);
+
+/**
+ * Read the given message to find its destination address, try and map that
+ * address to one of our connections, and send the message payload to
+ * the new address.
+ *
+ * @param {NetSimMessage} message
+ * @param {Array.<NetSimWire>} myWires
+ * @private
+ */
 NetSimRouterNode.prototype.routeMessage_ = function (message, myWires) {
+  var toAddress;
+
   // Find a connection to route this message to.
-  var toAddress = message.payload.toAddress;
-  if (toAddress === undefined) {
-    //Malformed packet? Throw it away
+  try {
+    toAddress = packetEncoder.getFieldAsInt('toAddress', message.payload);
+  } catch (error) {
+    // Malformed packet?
     this.log("Blocked malformed packet: " + message.payload);
     return;
   }
@@ -3103,7 +3285,147 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires) {
       }.bind(this)
   );
 };
-},{"../ObservableEvent":1,"../utils":186,"./NetSimEntity":116,"./NetSimHeartbeat":117,"./NetSimLogEntry":121,"./NetSimLogger":124,"./NetSimMessage":125,"./NetSimNode":126,"./NetSimWire":135}],121:[function(require,module,exports){
+},{"../ObservableEvent":1,"../utils":187,"./NetSimEntity":116,"./NetSimHeartbeat":117,"./NetSimLogEntry":121,"./NetSimLogger":124,"./NetSimMessage":125,"./NetSimNode":126,"./NetSimWire":135,"./PacketEncoder":136}],136:[function(require,module,exports){
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+
+ maxlen: 90,
+ maxparams: 3,
+ maxstatements: 200
+ */
+'use strict';
+
+/**
+ * Verify that a given format specification describes a valid format that
+ * can be used by the PacketEncoder object.
+ * @param {Array.<Object>} formatSpec
+ */
+var validateSpec = function (formatSpec) {
+  var keyCache = {};
+
+  for (var i = 0; i < formatSpec.length; i++) {
+
+    if (!formatSpec[i].hasOwnProperty('key')) {
+      throw new Error("Invalid packet format: Each field must have a key.");
+    }
+
+    if (!formatSpec[i].hasOwnProperty('bits')) {
+      throw new Error("Invalid packet format: Each field must have a length.");
+    }
+
+    if (keyCache.hasOwnProperty(formatSpec[i].key)) {
+      throw new Error("Invalid packet format: Field keys must be unique.");
+    } else {
+      keyCache[formatSpec[i].key] = 'used';
+    }
+
+    if (formatSpec[i].bits === Infinity && i+1 < formatSpec.length) {
+      throw new Error("Invalid packet format: Infinity field length is only " +
+      "allowed in the last field.");
+    }
+  }
+};
+
+/**
+ * Given a particular packet format, can convert a set of fields down
+ * into a binary string matching the specification, or extract fields
+ * on demand from a binary string.
+ * @param {Array} formatSpec - Specification of packet format, an ordered set
+ *        of objects in the form {key:string, bits:number} where key is the
+ *        field name you'll use to retrieve the information, and bits is the
+ *        length of the field.
+ * @constructor
+ */
+var PacketEncoder = module.exports = function (formatSpec) {
+  validateSpec(formatSpec);
+
+  /**
+   * @type {Array.<Object>}
+   */
+  this.formatSpec_ = formatSpec;
+};
+
+PacketEncoder.prototype.getField = function (key, binary) {
+  var ruleIndex = 0, binaryIndex = 0;
+
+  // Strip whitespace so we don't worry about being passed formatted binary
+  binary = binary.replace(/\s/g,'');
+
+  while (this.formatSpec_[ruleIndex].key !== key) {
+    binaryIndex += this.formatSpec_[ruleIndex].bits;
+    ruleIndex++;
+
+    if (ruleIndex >= this.formatSpec_.length) {
+      // Didn't find key
+      throw new Error('Key "' + key + '" not found in packet spec.');
+    }
+  }
+
+  // Read value
+  var bits = binary.slice(binaryIndex, binaryIndex + this.formatSpec_[ruleIndex].bits);
+
+  // Right-pad with zeroes to desired size
+  if (this.formatSpec_[ruleIndex].bits !== Infinity) {
+    while (bits.length < this.formatSpec_[ruleIndex].bits) {
+      bits += '0';
+    }
+  }
+
+  return bits;
+};
+
+PacketEncoder.prototype.getFieldAsInt = function (key, binary) {
+  var fieldBinary = this.getField(key, binary);
+  return parseInt(fieldBinary, 2);
+};
+
+PacketEncoder.prototype.getFieldAsAscii = function (key, binary) {
+  var fieldBinary = this.getField(key, binary);
+  var result = '';
+  for (var i = 0; i < fieldBinary.length; i += 8) {
+    var chunk = fieldBinary.slice(i, i+8);
+    while (chunk.length < 8) {
+      chunk += '0';
+    }
+    result += String.fromCharCode(parseInt(chunk, 2));
+  }
+  return result;
+};
+
+PacketEncoder.prototype.createBinary = function (data) {
+  var result = '';
+
+  // For each field
+  for (var i = 0; i < this.formatSpec_.length; i++) {
+    var fieldBits = '';
+
+    // If the field exists in the data, grab it
+    if (data.hasOwnProperty(this.formatSpec_[i].key)) {
+      fieldBits = data[this.formatSpec_[i].key];
+    }
+
+    // Right-truncate to the desired size
+    if (fieldBits.length > this.formatSpec_[i].bits) {
+      fieldBits = fieldBits.slice(0, this.formatSpec_[i].bits);
+    }
+
+    // Left-pad data to desired size
+    if (this.formatSpec_[i].bits !== Infinity) {
+      while (fieldBits.length < this.formatSpec_[i].bits) {
+        fieldBits = '0' + fieldBits;
+      }
+    }
+
+    // Append field to result
+    result += fieldBits;
+  }
+  return result;
+};
+},{}],121:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3191,7 +3513,7 @@ NetSimLogEntry.create = function (shard, nodeID, logText, onComplete) {
     onComplete(row !== undefined);
   });
 };
-},{"../utils":186,"./NetSimEntity":116}],120:[function(require,module,exports){
+},{"../utils":187,"./NetSimEntity":116}],120:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3508,7 +3830,7 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload) {
         if (success) {
           logger.info('Local node sent message: ' + JSON.stringify(payload));
           if (self.sentLog_) {
-            self.sentLog_.log(JSON.stringify(payload));
+            self.sentLog_.log(payload);
           }
         } else {
           logger.error('Failed to send message: ' + JSON.stringify(payload));
@@ -3565,10 +3887,10 @@ NetSimLocalClientNode.prototype.onMessageTableChange_ = function (rows) {
 NetSimLocalClientNode.prototype.handleMessage_ = function (message) {
   // TODO: How much validation should we do here?
   if (this.receivedLog_) {
-    this.receivedLog_.log(JSON.stringify(message.payload));
+    this.receivedLog_.log(message.payload);
   }
 };
-},{"../ObservableEvent":1,"../utils":186,"./NetSimClientNode":114,"./NetSimEntity":116,"./NetSimHeartbeat":117,"./NetSimLogger":124,"./NetSimMessage":125}],125:[function(require,module,exports){
+},{"../ObservableEvent":1,"../utils":187,"./NetSimClientNode":114,"./NetSimEntity":116,"./NetSimHeartbeat":117,"./NetSimLogger":124,"./NetSimMessage":125}],125:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3662,7 +3984,7 @@ NetSimMessage.prototype.buildRow_ = function () {
   };
 };
 
-},{"../utils":186,"./NetSimEntity":116}],124:[function(require,module,exports){
+},{"../utils":187,"./NetSimEntity":116}],124:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3931,7 +4253,7 @@ NetSimHeartbeat.prototype.tick = function () {
   }
 };
 
-},{"../utils":186,"./NetSimEntity":116}],114:[function(require,module,exports){
+},{"../utils":187,"./NetSimEntity":116}],114:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3981,7 +4303,7 @@ NetSimClientNode.prototype.getStatus = function () {
   return this.status_ ? this.status_ : 'Online';
 };
 
-},{"../utils":186,"./NetSimNode":126}],126:[function(require,module,exports){
+},{"../utils":187,"./NetSimNode":126}],126:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4137,7 +4459,7 @@ NetSimNode.prototype.connectToNode = function (otherNode, onComplete) {
 NetSimNode.prototype.acceptConnection = function (otherNode, onComplete) {
   onComplete(true);
 };
-},{"../utils":186,"./NetSimEntity":116,"./NetSimWire":135}],135:[function(require,module,exports){
+},{"../utils":187,"./NetSimEntity":116,"./NetSimWire":135}],135:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4236,7 +4558,7 @@ NetSimWire.prototype.buildRow_ = function () {
   };
 };
 
-},{"../utils":186,"./NetSimEntity":116}],116:[function(require,module,exports){
+},{"../utils":187,"./NetSimEntity":116}],116:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4696,7 +5018,7 @@ CommandSequence.prototype.tick = function (clock) {
   }
 };
 
-},{"./utils":186}],18:[function(require,module,exports){
+},{"./utils":187}],18:[function(require,module,exports){
 /**
  * Code.org Apps
  *
@@ -4917,7 +5239,7 @@ appsApi.UserPropertyBag = function (app_publickey) {
   '/user-properties');
 };
 appsApi.UserPropertyBag.inherits(appsApi.PropertyBag);
-},{"./utils":186}],3:[function(require,module,exports){
+},{"./utils":187}],3:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -5125,4 +5447,4 @@ ObservableEvent.prototype.notifyObservers = function () {
     observer.toCall.apply(undefined, args);
   });
 };
-},{}]},{},[138]);
+},{}]},{},[139]);
