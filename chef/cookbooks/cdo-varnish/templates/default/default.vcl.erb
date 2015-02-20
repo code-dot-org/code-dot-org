@@ -4,6 +4,7 @@
     return "daemon.#{domain}" if node.name == 'production-daemon'
     return "levelbuilder.#{domain}" if node.name == 'levelbuilder-staging'
     return "levelbuilder-dev.#{domain}" if node.name == 'levelbuilder-development'
+    return "react.#{domain}" if node.name == 'react'
     return "#{node.name}.#{domain}" if ['hoc-levels'].include?(node.name)
     return domain if rack_env?(:production)
     "#{node.chef_environment}.#{domain}"
