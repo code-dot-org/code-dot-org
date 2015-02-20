@@ -3,7 +3,7 @@ var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
 var assertOwnProperty = testUtils.assertOwnProperty;
 var netsimTestUtils = require('../util/netsimTestUtils');
-var fauxShard = netsimTestUtils.fauxShard;
+var fakeShard = netsimTestUtils.fakeShard;
 var assertTableSize = netsimTestUtils.assertTableSize;
 
 var NetSimWire = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimWire');
@@ -12,7 +12,7 @@ describe("NetSimWire", function () {
   var testShard, wireTable;
 
   beforeEach(function () {
-    testShard = fauxShard();
+    testShard = fakeShard();
     wireTable = testShard.wireTable;
   });
 

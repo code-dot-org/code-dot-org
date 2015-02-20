@@ -4,7 +4,7 @@ var assertEqual = testUtils.assertEqual;
 var assertWithinRange = testUtils.assertWithinRange;
 var assertOwnProperty = testUtils.assertOwnProperty;
 var netsimTestUtils = require('../util/netsimTestUtils');
-var fauxShard = netsimTestUtils.fauxShard;
+var fakeShard = netsimTestUtils.fakeShard;
 var assertTableSize = netsimTestUtils.assertTableSize;
 
 var NetSimHeartbeat = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimHeartbeat');
@@ -13,7 +13,7 @@ describe("NetSimHeartbeat", function () {
   var testShard;
 
   beforeEach(function () {
-    testShard = fauxShard();
+    testShard = fakeShard();
   });
 
   describe("default row structure", function () {
