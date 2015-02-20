@@ -13,58 +13,7 @@
 'use strict';
 
 var markup = require('./NetSimSendWidget.html');
-var dom = require('../dom');
-var PacketEncoder = require('./PacketEncoder');
 var KeyCodes = require('../constants').KeyCodes;
-
-/**
- * Converts a number to a binary representation using the given number of bits.
- * @param {number} integer - the base-10 number to convert
- * @param {number} size - how many bits the output should use
- * @returns {string} - string of binary representation of integer
- */
-var unsignedIntegerToBinaryString = function (integer, size) {
-  var binary = integer.toString(2);
-  while (binary.length < size) {
-    binary = '0' + binary;
-  }
-  // TODO: Deal with overflow?
-  return binary;
-};
-
-/**
- * Converts a string to a string of its ascii binary representation.
- * Not, strictly-speaking, ascii; uses the native String.prototype.charCodeAt
- * which is consistent within the ASCII table (0-127) but not necessarily
- * beyond it.
- * @param {string} ascii - A plain text string
- * @returns {string} binary representation of string
- */
-var asciiToBinaryString = function (ascii) {
-  var result = '';
-  for (var i = 0; i < ascii.length; i++) {
-    result += unsignedIntegerToBinaryString(ascii.charCodeAt(i), 8);
-  }
-  return result;
-};
-
-/**
- * Given a binary string and a chunk size, whitespace-formats the binary
- * string a returns the result.
- * @param {string} rawBinary - binary string with no whitespace
- * @param {number} chunkSize - how many
- * @returns {string} formatted binary string
- */
-var formatToChunkSize = function (rawBinary, chunkSize) {
-  var result = '';
-  for (var i = 0; i < rawBinary.length; i += chunkSize) {
-    if (result.length > 0) {
-      result += ' ';
-    }
-    result += rawBinary.slice(i, i+chunkSize);
-  }
-  return result;
-};
 
 /**
  * Generator and controller for message sending view.
@@ -81,9 +30,19 @@ var NetSimSendWidget = module.exports = function (connection) {
   this.connection_.statusChanges
       .register(this.onConnectionStatusChange_.bind(this));
 
-  this.packetBinary = '';
-  this.toAddress_ = 0;
-  this.fromAddress_ = 0;
+  /** @type {number} */
+  this.toAddress = 0;
+  /** @type {number} */
+  this.fromAddress = 0;
+  /** @type {number} */
+  this.packetIndex = 1;
+  /** @type {number} */
+  this.packetCount = 1;
+  /**
+   * Binary string of message body, live-interpreted to other values.
+   * @type {string}
+   */
+  this.message = '';
 };
 
 /**
@@ -97,7 +56,7 @@ NetSimSendWidget.createWithin = function (element, connection) {
   var controller = new NetSimSendWidget(connection);
   element.innerHTML = markup({});
   controller.bindElements_();
-  controller.refresh();
+  controller.render();
   return controller;
 };
 
@@ -139,99 +98,290 @@ var whitelistCharacters = function (whitelistRegex) {
   };
 };
 
+var uglifyBinary = function (binaryString) {
+  return binaryString.replace(/[^01]/g, '');
+};
+
+var prettifyBinary = function (binaryString, chunkSize) {
+  var uglyBinary = uglifyBinary(binaryString);
+
+  var chunks = [];
+  for (var i = 0; i < uglyBinary.length; i += chunkSize) {
+    chunks.push(uglyBinary.substr(i, chunkSize));
+  }
+
+  return chunks.join(' ');
+};
+
+var binaryToInt = function (binaryString) {
+  return parseInt(uglifyBinary(binaryString), 2);
+};
+
+var intToBinary = function (int, width) {
+  var padding = new Array(width + 1).join('0');
+  return (padding + int.toString(2)).slice(-width);
+};
+
+var hexadecimalToInt = function (hexadecimalString) {
+  return parseInt(hexadecimalString.replace(/[^0-9a-f]/ig, ''), 16);
+};
+
+var intToHexadecimal = function (int, width) {
+  var padding = new Array(width + 1).join('0');
+  return (padding + int.toString(16)).slice(-width).toUpperCase();
+};
+
+var hexadecimalToBinary = function (hexadecimalString) {
+  var uglyHex = hexadecimalString.replace(/[^0-9a-f]/ig, '');
+  var binary = '';
+
+  for (var i = 0; i < uglyHex.length; i++) {
+    binary += intToBinary(parseInt(uglyHex.substr(i, 1), 16), 4);
+  }
+
+  return binary;
+};
+
+var binaryToHexadecimal = function (binaryString, chunkSize) {
+  var uglyBinary = uglifyBinary(binaryString);
+  var uglyHex = '';
+  var nibble;
+  var padding = '0000';
+  var i;
+  for (i = 0; i < uglyBinary.length; i += 4) {
+    // Right-pad nibble with zeroes
+    nibble = (uglyBinary.substr(i, 4) + padding).slice(0, 4);
+    uglyHex += intToHexadecimal(binaryToInt(nibble),1);
+  }
+
+  var chunks = [];
+  for (i = 0; i < uglyHex.length; i += chunkSize) {
+    chunks.push(uglyHex.substr(i, chunkSize));
+  }
+
+  return chunks.join(' ').toUpperCase();
+};
+
+var decimalToBinary = function (decimalString) {
+  var uglyDecimal = decimalString.replace(/[^0-9\s]/g, '');
+  var numbers = uglyDecimal.split(/\s+/).map(function (nString) {
+    return parseInt(nString, 10);
+  });
+  var uglyBinary = '';
+  for (var i = 0; i < numbers.length; i++) {
+    // TODO (bbuchanan): Make width configurable for decimal mode.
+    uglyBinary += intToBinary(numbers[i], 8);
+  }
+
+  return uglyBinary;
+};
+
+var binaryToDecimal = function (binaryString) {
+  // TODO (bbuchanan): Make width configurable for decimal mode.
+  var uglyBinary = uglifyBinary(binaryString);
+  var numbers = [];
+  var byte;
+  var padding = '00000000';
+  for (var i = 0; i < uglyBinary.length; i += 8) {
+    byte = (uglyBinary.substr(i, 8) + padding).slice(0, 8);
+    numbers.push(binaryToInt(byte));
+  }
+
+  return numbers.join(' ');
+};
+
+var asciiToBinary = function (asciiString) {
+  var bytes = [];
+  for (var i = 0; i < asciiString.length; i++) {
+    bytes.push(intToBinary(asciiString.charCodeAt(i), 8));
+  }
+  return bytes.join('');
+};
+
+var binaryToAscii = function (binaryString) {
+  var byte, charCode;
+  var uglyBinary = uglifyBinary(binaryString);
+  var chars = [];
+  var padding = '00000000';
+  for (var i = 0; i < uglyBinary.length; i += 8) {
+    byte = (uglyBinary.substr(i, 8) + padding).slice(0, 8);
+    charCode = binaryToDecimal(byte);
+    chars.push(String.fromCharCode(charCode));
+  }
+  return chars.join('');
+};
+
+NetSimSendWidget.prototype.makeKeyupHandler = function (fieldName, converterFunction) {
+  return function (jqueryEvent) {
+    var newValue = converterFunction(jqueryEvent.target.value);
+    if (!isNaN(newValue)) {
+      this[fieldName] = newValue;
+      this.render(jqueryEvent.target);
+    }
+  }.bind(this);
+};
+
+NetSimSendWidget.prototype.makeChangeHandler = function (fieldName, converterFunction) {
+  return function (jqueryEvent) {
+    var newValue = converterFunction(jqueryEvent.target.value);
+    if (isNaN(newValue)) {
+      newValue = converterFunction('0');
+    }
+    this[fieldName] = newValue;
+    this.render();
+  }.bind(this);
+};
+
 /**
  * Get relevant elements from the page and bind them to local variables.
  * @private
  */
 NetSimSendWidget.prototype.bindElements_ = function () {
-  this.rootDiv_ = $('#netsim_send_widget');
-  this.toAddressTextbox_ = this.rootDiv_.find('#to_address');
-  this.toAddressTextbox_.keypress(whitelistCharacters(/[0-9]/));
-  this.toAddressTextbox_.change(this.onToAddressChange_.bind(this));
+  var rootDiv = $('#netsim_send_widget');
 
-  this.fromAddressTextbox_ = this.rootDiv_.find('#from_address');
+  var shortNumberFields = [
+    'toAddress',
+    'fromAddress',
+    'packetIndex',
+    'packetCount'
+  ];
 
-  this.binaryPayloadTextbox_ = this.rootDiv_.find('#binary_payload');
-  this.binaryPayloadTextbox_.keypress(whitelistCharacters(/[01]/));
-  this.binaryPayloadTextbox_.keyup(this.onBinaryPayloadChange_.bind(this));
-  this.binaryPayloadTextbox_.change(this.onBinaryPayloadChange_.bind(this));
+  var rowTypes = [
+    {
+      typeName: 'binary',
+      shortNumberAllowedCharacters: /[01]/,
+      shortNumberConversion: binaryToInt,
+      messageAllowedCharacters: /[01]/,
+      messageConversion: uglifyBinary
+    },
+    {
+      typeName: 'hexadecimal',
+      shortNumberAllowedCharacters: /[0-9a-f]/i,
+      shortNumberConversion: hexadecimalToInt,
+      messageAllowedCharacters: /[0-9a-f]/i,
+      messageConversion: hexadecimalToBinary
+    },
+    {
+      typeName: 'decimal',
+      shortNumberAllowedCharacters: /[0-9]/,
+      shortNumberConversion: parseInt,
+      messageAllowedCharacters: /[0-9\s]/,
+      messageConversion: decimalToBinary
+    },
+    {
+      typeName: 'ascii',
+      shortNumberAllowedCharacters: /[0-9]/,
+      shortNumberConversion: parseInt,
+      messageAllowedCharacters: /./,
+      messageConversion: asciiToBinary
+    }
+  ];
 
-  this.asciiPayloadTextbox_ = this.rootDiv_.find('#ascii_payload');
-  this.asciiPayloadTextbox_.keyup(this.onAsciiPayloadChange_.bind(this));
-  this.asciiPayloadTextbox_.change(this.onAsciiPayloadChange_.bind(this));
+  rowTypes.forEach(function (rowType) {
+    var tr = rootDiv.find('tr.' + rowType.typeName);
+    this[rowType.typeName + 'UI'] = {};
+    var rowFields = this[rowType.typeName + 'UI'];
 
-  this.bitCounter_ = this.rootDiv_.find('#bit_counter');
+    shortNumberFields.forEach(function (fieldName) {
+      rowFields[fieldName] = tr.find('input.' + fieldName);
+      rowFields[fieldName].keypress(
+          whitelistCharacters(rowType.shortNumberAllowedCharacters));
+      rowFields[fieldName].keyup(
+          this.makeKeyupHandler(fieldName, rowType.shortNumberConversion));
+      rowFields[fieldName].change(
+          this.makeChangeHandler(fieldName, rowType.shortNumberConversion));
+    }.bind(this));
 
-  this.sendButton_ = this.rootDiv_.find('#send_button');
+    rowFields.message = tr.find('textarea.message');
+    rowFields.message.keypress(
+        whitelistCharacters(rowType.messageAllowedCharacters));
+    rowFields.message.keyup(
+        this.makeKeyupHandler('message', rowType.messageConversion));
+    rowFields.message.change(
+        this.makeChangeHandler('message', rowType.messageConversion));
+  }.bind(this));
 
-  dom.addClickTouchEvent(this.sendButton_[0], this.onSendButtonPress_.bind(this));
+  this.bitCounter = rootDiv.find('.bit_counter');
+
+  this.sendButton_ = rootDiv.find('#send_button');
+  this.sendButton_.click(this.onSendButtonPress_.bind(this));
 };
-
-// TODO (bbuchanan) : This should live somewhere common across the client.
-var packetEncoder = new PacketEncoder([
-  { key: 'toAddress', bits: 4 },
-  { key: 'fromAddress', bits: 4 },
-  { key: 'payload', bits: Infinity }
-]);
 
 /**
  * Handler for connection status changes.  Can update configuration and
- * trigger a refresh of this view.
+ * trigger a render of this view.
  * @private
  */
 NetSimSendWidget.prototype.onConnectionStatusChange_ = function () {
   if (this.connection_.myNode && this.connection_.myNode.myWire) {
-    this.fromAddress_ = this.connection_.myNode.myWire.localAddress;
+    this.fromAddress = this.connection_.myNode.myWire.localAddress;
   } else {
-    this.fromAddress_ = 0;
+    this.fromAddress = 0;
   }
 
-  this.rebuildPacketBinary_();
-  this.refresh();
+  this.render();
 };
 
-NetSimSendWidget.prototype.onToAddressChange_ = function () {
-  this.toAddress_ = parseInt(this.toAddressTextbox_.val(), 10);
-  this.rebuildPacketBinary_();
-  this.refresh();
-};
+/**
+ * Update send widget display
+ * @param {*} [skipElement]
+ */
+NetSimSendWidget.prototype.render = function (skipElement) {
+  var liveFields = [];
 
-NetSimSendWidget.prototype.onBinaryPayloadChange_ = function () {
-  this.rebuildPacketBinary_();
-  this.refresh();
-};
+  [
+    'toAddress',
+    'fromAddress',
+    'packetIndex',
+    'packetCount'
+  ].forEach(function (fieldName) {
+    liveFields.push({
+      inputElement: this.binaryUI[fieldName],
+      newValue: intToBinary(this[fieldName], 4)
+    });
 
-NetSimSendWidget.prototype.onAsciiPayloadChange_ = function () {
-  this.binaryPayloadTextbox_.val(asciiToBinaryString(this.asciiPayloadTextbox_.val()));
-  this.rebuildPacketBinary_();
-  this.refresh();
-};
+    liveFields.push({
+      inputElement: this.hexadecimalUI[fieldName],
+      newValue: intToHexadecimal(this[fieldName], 1)
+    });
 
-NetSimSendWidget.prototype.rebuildPacketBinary_ = function () {
-  this.packetBinary = packetEncoder.createBinary({
-    toAddress: unsignedIntegerToBinaryString(this.toAddress_, 4),
-    fromAddress: unsignedIntegerToBinaryString(this.fromAddress_, 4),
-    payload: this.binaryPayloadTextbox_.val().replace(/[^01]/g, '')
+    liveFields.push({
+      inputElement: this.decimalUI[fieldName],
+      newValue: this[fieldName].toString(10)
+    });
+
+    liveFields.push({
+      inputElement: this.asciiUI[fieldName],
+      newValue: this[fieldName].toString(10)
+    });
+  }.bind(this));
+
+  liveFields.push({
+    inputElement: this.binaryUI.message,
+    newValue: prettifyBinary(this.message, 8)
   });
-};
 
-/** Update send widget display */
-NetSimSendWidget.prototype.refresh = function () {
-  // Non-interactive right now
-  this.rootDiv_.find('#packet_index').val(1);
-  this.rootDiv_.find('#packet_count').val(1);
+  liveFields.push({
+    inputElement: this.hexadecimalUI.message,
+    newValue: binaryToHexadecimal(this.message, 2)
+  });
 
-  this.toAddressTextbox_.val(this.toAddress_);
+  liveFields.push({
+    inputElement: this.decimalUI.message,
+    newValue: binaryToDecimal(this.message)
+  });
 
-  this.fromAddressTextbox_.val(this.fromAddress_);
+  liveFields.push({
+    inputElement: this.asciiUI.message,
+    newValue: binaryToAscii(this.message)
+  });
 
-  this.bitCounter_.html(this.packetBinary.length + '/Infinity bits');
-
-  var binaryPayload = packetEncoder.getField('payload', this.packetBinary);
-  this.binaryPayloadTextbox_.val(formatToChunkSize(binaryPayload, 8));
-
-  var asciiPayload = packetEncoder.getFieldAsAscii('payload', this.packetBinary);
-  this.asciiPayloadTextbox_.val(asciiPayload);
+  liveFields.forEach(function (field) {
+    if (field.inputElement[0] !== skipElement) {
+      field.inputElement.val(field.newValue);
+      // TODO: If textarea, scroll to bottom?
+    }
+  });
 };
 
 /** Send message to connected remote */
@@ -241,5 +391,5 @@ NetSimSendWidget.prototype.onSendButtonPress_ = function () {
     return;
   }
 
-  myNode.sendMessage(this.packetBinary);
+  //myNode.sendMessage(this.packetBinary);
 };
