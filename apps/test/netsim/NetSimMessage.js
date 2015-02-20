@@ -3,7 +3,7 @@ var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
 var assertOwnProperty = testUtils.assertOwnProperty;
 var netsimTestUtils = require('../util/netsimTestUtils');
-var fauxShard = netsimTestUtils.fauxShard;
+var fakeShard = netsimTestUtils.fakeShard;
 
 var NetSimMessage = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimMessage');
 
@@ -11,7 +11,7 @@ describe("NetSimMessage", function () {
   var testShard, messageTable;
 
   beforeEach(function () {
-    testShard = fauxShard();
+    testShard = fakeShard();
     messageTable = testShard.messageTable;
   });
 

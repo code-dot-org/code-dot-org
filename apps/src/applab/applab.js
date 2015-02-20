@@ -21,7 +21,6 @@ var utils = require('../utils');
 var dropletConfig = require('./dropletConfig');
 var Slider = require('../slider');
 var AppStorage = require('./appStorage');
-var FormStorage = require('./formStorage');
 var constants = require('../constants');
 var KeyCodes = constants.KeyCodes;
 var _ = utils.getLodash();
@@ -37,6 +36,7 @@ var Applab = module.exports;
 
 var level;
 var skin;
+var user;
 
 //TODO: Make configurable.
 studioApp.setCheckForEmptyBlocks(true);
@@ -669,6 +669,8 @@ Applab.init = function(config) {
       dom.addClickTouchEvent(viewDataButton, Applab.onViewData);
     }
   }
+
+  user = {applabUserId: config.applabUserId};
 };
 
 /**
@@ -2132,6 +2134,12 @@ Applab.handleDeleteRecord = function(successCallback) {
   }
 };
 
+Applab.getUserId = function (opts) {
+  if (!user.applabUserId) {
+    throw new Error("User ID failed to load.");
+  }
+  return user.applabUserId;
+};
 
 /*
 var onWaitComplete = function (opts) {
