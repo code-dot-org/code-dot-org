@@ -82,6 +82,7 @@ en:
         Write a contract for a big red that is 100 pixels in size: Write a contract for a big red that is 100 pixels in size
         Big Triangle|image|color:string|size:Number: Big Triangle|image|color:string|size:Number
         Big Triangle: Big Triangle
+        Big Triangle|Image|size:Number|color:String: Big Triangle|Image|size:Number|color:String
       Creating Contracts From Examples 2:
         Creating Contracts From Examples 2: Creating Contracts From Examples 2
         Write a contract for a purple square that is 15 pixels in size.: Write a contract for a purple square that is 15 pixels in size.
@@ -89,6 +90,7 @@ en:
         Square|image|color:string|size:Number: Square|image|color:string|size:Number
         Example 2.solution_blocks, 300: Example 2.solution_blocks, 300
         Square Contract: Square Contract
+        Square|Image|size:Number|color:String: Square|Image|size:Number|color:String
       Creating Contracts From Examples 3:
         Creating Contracts From Examples 3: Creating Contracts From Examples 3
         Try using the "text" function to write this red text at size 40.: Try using the "text" function to write this red text at size 40.
@@ -128,6 +130,8 @@ en:
         Write a contract for the star function: Write a contract for the star function
         Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks, 300
         star|image|color:string|radius:Number|style:string: star|image|color:string|radius:Number|style:string
+        star|Image|radius:Number|style:String|color:String|: star|Image|radius:Number|style:String|color:String|
+        star|Image|radius:Number|style:String|color:String: star|Image|radius:Number|style:String|color:String
       Eval Contracts D:
         Rotate Contract: Rotate Contract
         Write a contract for the rotate function: Write a contract for the rotate function
@@ -138,3 +142,4 @@ en:
         Write a contract for the text function: Write a contract for the text function
         Eval Contracts 3 A.solution_blocks, 300: Eval Contracts 3 A.solution_blocks, 300
         text|image|color:string|size:Number|string:string: text|image|color:string|size:Number|string:string
+        text|Image|string:String|size:Number|color:String: text|Image|string:String|size:Number|color:String

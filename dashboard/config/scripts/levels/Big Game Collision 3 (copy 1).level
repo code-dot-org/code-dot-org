@@ -1,7 +1,7 @@
 <Studio>
   <config><![CDATA[{
   "game_id": 33,
-  "created_at": "2015-02-13T18:07:20.000Z",
+  "created_at": "2015-02-19T18:00:11.134Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -10,7 +10,7 @@
     "timeout_after_when_run": "true",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "When you last worked on your game we got our target and danger sprites to fly across the screen, but they never come back. Click run to see how your game is currently working, and then click finish and we'll work on making those sprites reappear on screen after they've left.",
+    "instructions": "Our target, danger, and player all move now - the only thing left to do is figure out when they're touching so we can update the score accordingly. First you'll need to complete the distance function so that we can measure the distance between two points on the plane. We've provided a working line-length function to help you out.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -27,15 +27,16 @@
     "sprites_hidden_to_start": "true",
     "coordinate_grid_background": "false",
     "generate_function_pass_blocks": "true",
-    "callout_json": "[\r\n]",
+    "callout_json": "[]",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "maze_data": null,
-    "custom_game_type": "Big Game"
+    "custom_game_type": "Big Game",
+    "min_workspace_height": "1500",
+    "open_function_definition": "distance"
   }
 }]]></config>
   <blocks/>
