@@ -80,4 +80,5 @@ Dashboard::Application.configure do
 
   # Whether or not to display pretty blockly.
   config.pretty_apps = true
+  config.react.variant = :development
 end
