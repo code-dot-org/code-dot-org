@@ -12,7 +12,6 @@
     = javascript_include_tag 'react'
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
-    %script{src: '/assets/header.js'}
     = javascript_include_tag '//cdn.optimizely.com/js/400912536.js' if Rails.env.production?
     = csrf_meta_tags
     = yield :head
