@@ -1,6 +1,7 @@
 require 'image_lib'
 
 class LevelSourcesController < ApplicationController
+  include LevelsHelper
   before_filter :authenticate_user!, only: [:update]
   load_and_authorize_resource
   check_authorization
