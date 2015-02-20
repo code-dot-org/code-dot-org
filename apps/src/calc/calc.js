@@ -403,24 +403,36 @@ Calc.evaluateSingleVariable_ = function (targetSet, userSet) {
   var userResult = userSet.evaluate();
 
   var targetClone = targetSet.clone();
-  // overwrite our inputs with user's values
-  targetConstants.forEach(function (item) {
-    // TODO - accessing private
-    var userValue = userSet.getEquation(item.name).expression.value_;
-    targetClone.getEquation(item.name).expression.setValue(userValue);
-  });
-  var targetResult = targetClone.evaluate();
-
-  if (userResult !== targetResult) {
-    return appSpecificFailureOutcome('wrong answer');
-  }
-
   var userClone = userSet.clone();
   var setConstantsToValue = function (val, index) {
     var name = targetConstants[index].name;
     targetClone.getEquation(name).expression.setValue(val);
     userClone.getEquation(name).expression.setValue(val);
   };
+
+  // // overwrite our inputs with user's values
+  // targetConstants.forEach(function (item) {
+  //   var userValue = userSet.getEquation(item.name).expression.getValue();
+  //   targetClone.getEquation(item.name).expression.setValue(userValue);
+  // });
+  //
+  if (userResult !== targetSet.evaluate()) {
+    // Our result can different from the target result for two reasons
+    // (1) We have the right equation, but our "constant" has a different value.
+    // (2) We have the wrong equation
+    // Check to see if we evaluate to the same as target if we give it the
+    // values from our userSet.
+    targetConstants.forEach(function (item, index) {
+      var name = item.name;
+      var val = userClone.getEquation(name).expression.getValue();
+      setConstantsToValue(val, index);
+    });
+
+    var targetResult = targetClone.evaluate();
+    if (userResult !== targetResult) {
+      return appSpecificFailureOutcome(calcMsg.wrongResult());
+    }
+  }
 
   // The user got the right value for their input. Let's try changing it and
   // see if they still get the right value
@@ -628,7 +640,7 @@ function displayComplexUserExpressions () {
   var tokenList;
   appState.userSet.sortedEquations().forEach(function (userEquation) {
     var expectedEquation = highlightErrors ?
-      appState.targetSet.getEquation(userEquation.name) : null
+      appState.targetSet.getEquation(userEquation.name) : null;
 
     tokenList = getTokenList(userEquation, expectedEquation);
 

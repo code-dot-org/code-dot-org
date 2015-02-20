@@ -373,6 +373,14 @@ ExpressionNode.prototype.numChildren = function () {
 };
 
 /**
+ * Get the value
+ */
+ExpressionNode.prototype.getValue = function () {
+  return this.value_;
+};
+
+
+/**
  * Modify this ExpressionNode's value
  */
 ExpressionNode.prototype.setValue = function (value) {
