@@ -1,0 +1,47 @@
+.contract select {
+  color: white;
+  background-color: #999999;
+  margin-top: 10px;
+}
+
+#functionNameText {
+  margin-top: 10px;
+}
+
+.domainItem {
+  /*width: 160px;*/
+  height: 36px;
+  color: white;
+  border-radius: 5px;
+  float: left;
+  margin-right: 5px;
+}
+
+#domainItemText {
+  margin-top: 10px;
+}
+
+.domainItem .domainItemText {
+  font-size: 16px;
+  padding: 10px;
+  color: white;
+  overflow: hidden;
+}
+
+.domain-x-button {
+  float: right;
+  width: 27px;
+  height: 27px;
+  font-size: 22px;
+  padding: 0;
+  margin: 4px;
+}
+
+.contract .buttons {
+  margin-top: 8px;
+}
+
+#sectionTitle {
+  font-size: 20px;
+}
+

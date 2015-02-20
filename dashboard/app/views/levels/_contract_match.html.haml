@@ -1,53 +1,13 @@
-:css
-  .contract select {
-    color: white;
-    background-color: #999999;
-    margin-top: 10px;
-  }
+- data = @level.properties
+:javascript
+  window.levelData = #{data.to_json};
 
-  #functionNameText {
-    margin-top: 10px;
-  }
-
-  .domainItem {
-    /*width: 160px;*/
-    height: 36px;
-    color: white;
-    border-radius: 5px;
-    float: left;
-    margin-right: 5px;
-  }
-
-  #domainItemText {
-    margin-top: 10px;
-  }
-
-  .domainItem .domainItemText {
-    font-size: 16px;
-    padding: 10px;
-    color: white;
-    overflow: hidden;
-  }
-
-  .domain-x-button {
-    float: right;
-    width: 27px;
-    height: 27px;
-    font-size: 22px;
-    padding: 0;
-    margin: 4px;
-  }
-
-  .contract .buttons {
-    margin-top: 8px;
-  }
-
-  #sectionTitle {
-    font-size: 20px;
-  }
+= javascript_include_tag 'react'
+= javascript_include_tag 'levels/contract_match'
+= stylesheet_link_tag 'levels/contract_match'
+= render partial: 'levels/common_audio'
 
 .contract
-  - data = @level.properties
   - app = 'contract_match'
 
   - options_to_colors = { None: "#999999", Number: "#00ccff", String: "#0099999", Image: "#9900cc", Boolean: "#336600" }
@@ -62,16 +22,13 @@
       - options_to_colors.each do |type_name, color|
         %option{"data-color" => "#{color}"}= type_name
     #sectionTitle Domain
-    %div
-      %input#domainItemText{type: 'text', placeholder: 'Name'}
-      %select#domainInput
-        - options_to_colors.each do |type_name, color|
-          %option{"data-color" => "#{color}"}= type_name
-      %button#addButton Add
+    #domains
     #domainItems
     .clear
     = render partial: 'levels/dialog', locals: {app: app, data: data}
   .clear
+
+
   %div{style: 'display: none;'}
     - ['badname', 'badrange', 'baddomainsize', 'baddomainname', 'baddomaintype'].each do |error_type|
       %div{id: "#{error_type}-dialogcontent"}
@@ -84,92 +41,3 @@
             %button#ok-button.secondary
               =t('dialog.ok')
 
-= render partial: 'levels/common_audio'
-:javascript
-  $('#addButton').click(function()
-  {
-    var domainItemText = $('#domainItemText').val();
-    var domainInput = $('#domainInput').val();
-    var domainOptionSelected = $("#domainInput option:selected");
-    $('#domainItemText').val('');
-    var $div = $('<div/>').addClass('domainItem')
-    $div.css("background-color", $(domainOptionSelected).data("color"));
-    var $button = $('<button class="domain-x-button">x</button>');
-    $div.append($button);
-    $div.append($('<div/>').text(domainItemText + ':' + domainInput).addClass('domainItemText'));
-    $button.click(function(event) {
-      $(event.target.parentElement).remove();
-    });
-    $('#domainItems').append($div);
-  });
-
-  $('.contract select').on('change', function (e) {
-    var optionSelected = $("option:selected", this);
-    $(this).css("background-color", $(optionSelected).data("color"));
-  });
-
-  function getResult()
-  {
-    var functionName = $('#functionNameText').val();
-    var rangeInput = $('#rangeInput').val();
-    var items = $('#domainItems').children().map(function(item, element) {
-      return $(element).find('.domainItemText')[0].textContent;
-    });
-
-    var answers = #{data['answers'].to_json};
-
-    // Order domain inputs alphabetically sorted
-    var domainInput = $.makeArray(items).slice().join('|');
-    var response = functionName + '|' + rangeInput + '|' + domainInput;
-    console.log('input="' + response + '"');
-
-    var checkUserAnswer = checkAnswer.bind(null, functionName, rangeInput, domainInput);
-    var resultPerAnswer = answers.map(checkUserAnswer);
-
-    // If any succeeded, we succeed. Otherwise, grab the first error.
-    var result = resultPerAnswer.some(function (answerResult) {
-      return answerResult === '';
-    });
-    errorType = result ? null : resultPerAnswer[0];
-
-    return {
-      response: response,
-      result: result,
-      errorType: errorType
-    };
-  }
-
-  /**
-   * Given the user's submission and a correct answer, returns the error type,
-   * or empty string if correct.
-   */
-  function checkAnswer(functionName, rangeInput, domainInput, correctAnswer) {
-    var items = correctAnswer.split('|');
-    var correctName = items[0];
-    var correctRange = items[1];
-    var correctDomain = items.slice(2);
-    var domainInputItems = domainInput.split('|');
-
-    if (correctName !== functionName) {
-      return 'badname';
-    }
-    if (correctRange !== rangeInput) {
-      return 'badrange';
-    }
-    if (correctDomain.length !== domainInputItems.length) {
-      return 'baddomainsize';
-    }
-    for (var i = 0; i < correctDomain.length; i++) {
-      var correctDomainName = correctDomain[i].split(':')[0];
-      var correctDomainType = correctDomain[i].split(':')[1];
-      var domainName = domainInputItems[i].split(':')[0];
-      var domainType = domainInputItems[i].split(':')[1];
-      if (correctDomainName !== domainName) {
-        return 'baddomainname';
-      }
-      if (correctDomainType !== domainType) {
-        return 'baddomaintype';
-      }
-    }
-    return '';
-  }
