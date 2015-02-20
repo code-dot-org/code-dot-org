@@ -15,11 +15,13 @@ var utils = require('../utils');
 var _ = utils.getLodash();
 var NetSimNode = require('./NetSimNode');
 var NetSimEntity = require('./NetSimEntity');
+var NetSimLogEntry = require('./NetSimLogEntry');
 var NetSimLogger = require('./NetSimLogger');
 var NetSimWire = require('./NetSimWire');
 var NetSimMessage = require('./NetSimMessage');
 var NetSimHeartbeat = require('./NetSimHeartbeat');
-var ObservableEvent = require('./ObservableEvent');
+var ObservableEvent = require('../ObservableEvent');
+var PacketEncoder = require('./PacketEncoder');
 
 var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
 
@@ -126,6 +128,23 @@ var NetSimRouterNode = module.exports = function (shard, row) {
    * @type {ObservableEvent}
    */
   this.wiresChange = new ObservableEvent();
+
+  /**
+   * Local cache of log rows associated with this router, used for detecting
+   * and broadcasting relevant changes.
+   * 
+   * @type {Array}
+   * @private
+   */
+  this.myLogRowCache_ = [];
+  
+  /**
+   * Event others can observe, which we fire when the router's log content
+   * changes.
+   * 
+   * @type {ObservableEvent}
+   */
+  this.logChange = new ObservableEvent();
 };
 NetSimRouterNode.inherits(NetSimNode);
 
@@ -160,6 +179,7 @@ NetSimRouterNode.create = function (shard, onComplete) {
 
       // Always try and update router immediately, to set its DisplayName
       // correctly.
+      router.log("Router initialized");
       router.heartbeat_ = heartbeat;
       router.update(function () {
         onComplete(router);
@@ -276,6 +296,11 @@ NetSimRouterNode.prototype.initializeSimulation = function (nodeID) {
     this.wireChangeKey_ = wireChangeEvent.register(wireChangeHandler);
     logger.info("Router registered for wireTable tableChange");
 
+    var logChangeEvent = this.shard_.logTable.tableChange;
+    var logChangeHandler = this.onLogTableChange_.bind(this);
+    this.logChangeKey_ = logChangeEvent.register(logChangeHandler);
+    logger.info("Router registered for logTable tableChange");
+
     var newMessageEvent = this.shard_.messageTable.tableChange;
     var newMessageHandler = this.onMessageTableChange_.bind(this);
     this.newMessageEventKey_ = newMessageEvent.register(newMessageHandler);
@@ -300,6 +325,13 @@ NetSimRouterNode.prototype.stopSimulation = function () {
     wireChangeEvent.unregister(this.wireChangeKey_);
     this.wireChangeKey_ = undefined;
     logger.info("Router unregistered from wireTable tableChange");
+  }
+
+  if (this.logChangeKey_ !== undefined) {
+    var logChangeEvent = this.shard_.messageTable.tableChange;
+    logChangeEvent.unregister(this.logChangeKey_);
+    this.logChangeKey_ = undefined;
+    logger.info("Router unregistered from logTable tableChange");
   }
 
   if (this.newMessageEventKey_ !== undefined) {
@@ -351,6 +383,14 @@ NetSimRouterNode.prototype.countConnections = function (onComplete) {
   });
 };
 
+NetSimRouterNode.prototype.log = function (logText) {
+  NetSimLogEntry.create(
+      this.shard_,
+      this.entityID,
+      logText,
+      function () {});
+};
+
 /**
  * @param {Array} haystack
  * @param {*} needle
@@ -377,9 +417,13 @@ NetSimRouterNode.prototype.acceptConnection = function (otherNode, onComplete) {
   var self = this;
   this.countConnections(function (count) {
     if (count > MAX_CLIENT_CONNECTIONS) {
+      self.log('Rejected connection from host "' + otherNode.getHostname() +
+          '"; connection limit reached.');
       onComplete(false);
       return;
     }
+
+    self.log('Accepted connection from host "' + otherNode.getHostname() + '"');
 
     // Trigger an update, which will correct our connection count
     self.update(onComplete);
@@ -418,7 +462,10 @@ NetSimRouterNode.prototype.requestAddress = function (wire, hostname, onComplete
     wire.localHostname = hostname;
     wire.remoteAddress = 0; // Always 0 for routers
     wire.remoteHostname = self.getHostname();
-    wire.update(onComplete);
+    wire.update(function (success) {
+      self.log('Address ' + newAddress + ' assigned to host "' + hostname + '"');
+      onComplete(success);
+    });
     // TODO: Fix possibility of two routers getting addresses by verifying
     //       after updating the wire.
   });
@@ -488,6 +535,30 @@ NetSimRouterNode.prototype.onWireTableChange_ = function (rows) {
 };
 
 /**
+ * When the logs table changes, we may have a new connection or have lost
+ * a connection.  Propagate updates about our connections
+ * @param rows
+ * @private
+ */
+NetSimRouterNode.prototype.onLogTableChange_ = function (rows) {
+  var myLogRows = rows.filter(function (row) {
+    return row.nodeID === this.entityID;
+  }.bind(this));
+
+  if (!_.isEqual(this.myLogRowCache_, myLogRows)) {
+    this.myLogRowCache_ = myLogRows;
+    logger.info("Router logs changed.");
+    this.logChange.notifyObservers();
+  }
+};
+
+NetSimRouterNode.prototype.getLog = function () {
+  return this.myLogRowCache_.map(function (row) {
+    return new NetSimLogEntry(this.shard_, row);
+  }.bind(this));
+};
+
+/**
  * When the message table changes, we might have a new message to handle.
  * Check for and handle unhandled messages.
  * @param rows
@@ -536,19 +607,36 @@ NetSimRouterNode.prototype.onMessageTableChange_ = function (rows) {
   }
 };
 
-NetSimRouterNode.prototype.routeMessage_ = function (message, myWires) {
-  // Find a connection to route this message to.
-  var toAddress = message.payload.toAddress;
-  if (toAddress === undefined) {
-    //Malformed packet? Throw it away
-    logger.warn("Router encountered a malformed packet: " +
-    JSON.stringify(message.payload));
-    return;
-  }
+/**
+ * Format router uses to decode packet.
+ * TODO (bbuchanan): Pull this from a common location; should be fixed across
+ *                   simulation.
+ * @type {PacketEncoder}
+ */
+var packetEncoder = new PacketEncoder([
+  { key: 'toAddress', bits: 4 },
+  { key: 'fromAddress', bits: 4 },
+  { key: 'payload', bits: Infinity }
+]);
 
-  if (toAddress === 0) {
-    // Message was sent to me, the router.  It's arrived!  We're done with it.
-    logger.info("Router received: " + JSON.stringify(message.payload));
+/**
+ * Read the given message to find its destination address, try and map that
+ * address to one of our connections, and send the message payload to
+ * the new address.
+ *
+ * @param {NetSimMessage} message
+ * @param {Array.<NetSimWire>} myWires
+ * @private
+ */
+NetSimRouterNode.prototype.routeMessage_ = function (message, myWires) {
+  var toAddress;
+
+  // Find a connection to route this message to.
+  try {
+    toAddress = packetEncoder.getFieldAsInt('toAddress', message.payload);
+  } catch (error) {
+    // Malformed packet?
+    this.log("Blocked malformed packet: " + message.payload);
     return;
   }
 
@@ -557,8 +645,7 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires) {
   });
   if (destWires.length === 0) {
     // Destination address not in local network.
-    // Route message out of network (for now, throw it away)
-    logger.info("Message left network: " + JSON.stringify(message.payload));
+    this.log("Packet routed out of network: " + message.payload);
     return;
   }
 
@@ -574,12 +661,10 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires) {
       message.payload,
       function (success) {
         if (success) {
-          logger.info("Message re-routed to " + destWire.localHostname +
-              " (node " + destWire.localNodeID + ")");
-          // TODO: add to router log here.
+          this.log("Packet routed to " + destWire.localHostname);
         } else {
-          logger.info("Dropped packet: " + JSON.stringify(message.payload));
+          this.log("Dropped packet: " + JSON.stringify(message.payload));
         }
-      }
+      }.bind(this)
   );
 };
