@@ -272,14 +272,14 @@ NetSimSendWidget.prototype.bindElements_ = function () {
       typeName: 'binary',
       shortNumberAllowedCharacters: /[01]/,
       shortNumberConversion: binaryToInt,
-      messageAllowedCharacters: /[01]/,
+      messageAllowedCharacters: /[01\s]/,
       messageConversion: uglifyBinary
     },
     {
       typeName: 'hexadecimal',
       shortNumberAllowedCharacters: /[0-9a-f]/i,
       shortNumberConversion: hexadecimalToInt,
-      messageAllowedCharacters: /[0-9a-f]/i,
+      messageAllowedCharacters: /[0-9a-f\s]/i,
       messageConversion: hexadecimalToBinary
     },
     {
