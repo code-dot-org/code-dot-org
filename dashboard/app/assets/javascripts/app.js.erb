@@ -158,20 +158,6 @@
         });
       }
 
-      // Right now, the static is a fixed route
-      if (window.Frame.isStatic) {
-        var params = Frame.queryParams();
-
-        script_name = params.script;
-        headerStore.load({
-          script_name: params.script,
-          stage_id: params.stage,
-          level_id: params.level
-        });
-
-        return;
-      }
-
       // s/:script_id/level/:level_id
       // (only applies to the default scripts ID < 8)
       re = /\/s\/(\d+)\/(level|puzzle)\/(\d+)$/i;
@@ -217,6 +203,24 @@
           script_name: parts[1],
           stage_id: parts[2],
           level_id: parts[3]
+        });
+
+        return;
+      }
+
+      // Right now, the static is a fixed route
+      if (window.Frame.isStatic) {
+        var params = Frame.queryParams() || {
+          script: '20-hour',
+          stage: 3,
+          level: 3
+        };
+
+        script_name = params.script;
+        headerStore.load({
+          script_name: params.script,
+          stage_id: params.stage,
+          level_id: params.level
         });
 
         return;
@@ -388,13 +392,21 @@
       };
     });
 
+    var rootUrl = function(url) {
+      var root = url.match(/^\w+:\/\/[^\/]*/);
+      return root[0];
+    }
+
     function UIFrame() {
     }
 
     UIFrame.prototype.init = function() {
       // Static environment ignores BASE HREF and looks for resources in the directory of this script.
       this.isStatic = this.detectStatic();
-      if (this.isStatic) {
+
+      // There are three possible environments:
+      if (window.location.protocol == "file:") {
+        // a file:// URL
         this.rootUrl = this.baseUrl = document.URL.substr(0, document.URL.lastIndexOf('/'));
 
         // For now, initial scripts and CSS are still loaded from the server using a BASE HREF
@@ -402,16 +414,19 @@
         // is loaded from relative paths on the static site, so we remove it.
         // Once assets are bundled for static mode, we won't need to have the BASE HREF at all,
         // and we will remove all references to this.serverRoot.
-        this.serverRoot = this.baseURI();
-        this.serverRoot = this.serverRoot.substr(0, this.serverRoot.length-1); // Remove the trailing /
+        this.serverRoot = rootUrl(this.baseURI());
         $('base').remove();
+
+        // Hook into the global CSRF handler for debugging requests to the server.
+        this.patchCSRF();
+      } else if (this.isStatic) {
+        // a static server URL
+        this.serverRoot = this.rootUrl = this.baseUrl = rootUrl(document.URL.substr(0, document.URL.lastIndexOf('/')));
       } else {
+        // a live server URL
         this.baseUrl = this.baseURI();
         this.serverRoot = this.rootUrl = window.location.protocol + "//" + window.location.host;
       }
-
-      // Hook into the global CSRF handler so that all requests are made with a valid token
-      this.patchCSRF();
 
       this.router = new UIRouter();
       this.router.route();
@@ -421,8 +436,10 @@
     // Decode query parameters
     UIFrame.prototype.queryParams = function (url) {
       url = url || location.search;
-      var qd = {};
+      if (!url)
+        return null;
 
+      var qd = {};
       url.substr(1).split("&").forEach(function(item) {
         var k = item.split("=")[0],
           v = decodeURIComponent(item.split("=")[1]); 
@@ -482,7 +499,7 @@
 
     // Eventually we could support various modes of offline (disconnects, etc)
     UIFrame.prototype.detectStatic = function() {
-      return window.location.protocol == "file:" || window.location.host.substr(0,6) == 'react.';
+      return window.location.protocol == "file:" || window.location.host.substr(0,6) == 'react.' || window.location.port == 3000;
     }
 
     // Load the script at a given URL and return a promise that resolves when it has executed
