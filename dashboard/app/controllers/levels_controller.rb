@@ -172,7 +172,7 @@ class LevelsController < ApplicationController
         readonly: true,
         locale: js_locale,
         baseUrl: "#{ActionController::Base.asset_host}/blockly/",
-        blocks: level.embed_blocks(level.properties[block_type])
+        blocks: level.blocks_to_embed(level.properties[block_type])
     }
     render :embed_blocks, layout: false, locals: options
   end
