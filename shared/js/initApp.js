@@ -155,12 +155,10 @@ dashboard.saveProject = function(callback) {
   dashboard.currentApp.startBlocks = Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
   if (app_id) {
     storageApps().update(app_id, dashboard.currentApp, function(data) {
-      console.log('Updated!');
       callback(data);
     });
   } else {
     storageApps().create(dashboard.currentApp, function(data) {
-      console.log('Saved!');
       if (history) {
         history.pushState({}, '', '?id=' + data.id);
       }
