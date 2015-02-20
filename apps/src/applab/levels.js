@@ -27,6 +27,9 @@ levels.simple = {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
+levels.custom = {
+};
+
 levels.ec_simple = {
   'freePlay': true,
   'editCode': true,
@@ -76,6 +79,7 @@ levels.ec_simple = {
     'readRecords': null,
     'updateRecord': null,
     'deleteRecord': null,
+    'getUserId': null,
     'moveForward': null,
     'moveBackward': null,
     'move': null,
