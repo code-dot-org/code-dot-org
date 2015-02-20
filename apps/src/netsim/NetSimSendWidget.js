@@ -14,6 +14,7 @@
 
 var markup = require('./NetSimSendWidget.html');
 var KeyCodes = require('../constants').KeyCodes;
+var PacketEncoder = require('./PacketEncoder');
 
 /**
  * Generator and controller for message sending view.
@@ -58,6 +59,20 @@ NetSimSendWidget.createWithin = function (element, connection) {
   controller.bindElements_();
   controller.render();
   return controller;
+};
+
+/**
+ * Focus event handler.  If the target element has a 'watermark' class then
+ * it contains text we intend to clear before any editing occurs.  This
+ * handler clears that text and removes the class.
+ * @param focusEvent
+ */
+var removeWatermark = function (focusEvent) {
+  var target = $(focusEvent.target);
+  if (target.hasClass('watermark')) {
+    target.val('');
+    target.removeClass('watermark');
+  }
 };
 
 /**
@@ -164,6 +179,12 @@ var binaryToHexadecimal = function (binaryString, chunkSize) {
 
 var decimalToBinary = function (decimalString) {
   var uglyDecimal = decimalString.replace(/[^0-9\s]/g, '');
+
+  // Special case: No numbers
+  if (uglyDecimal.replace(/\s/g, '') === '') {
+    return '';
+  }
+
   var numbers = uglyDecimal.split(/\s+/).map(function (nString) {
     return parseInt(nString, 10);
   });
@@ -221,7 +242,7 @@ NetSimSendWidget.prototype.makeKeyupHandler = function (fieldName, converterFunc
   }.bind(this);
 };
 
-NetSimSendWidget.prototype.makeChangeHandler = function (fieldName, converterFunction) {
+NetSimSendWidget.prototype.makeBlurHandler = function (fieldName, converterFunction) {
   return function (jqueryEvent) {
     var newValue = converterFunction(jqueryEvent.target.value);
     if (isNaN(newValue)) {
@@ -288,17 +309,18 @@ NetSimSendWidget.prototype.bindElements_ = function () {
           whitelistCharacters(rowType.shortNumberAllowedCharacters));
       rowFields[fieldName].keyup(
           this.makeKeyupHandler(fieldName, rowType.shortNumberConversion));
-      rowFields[fieldName].change(
-          this.makeChangeHandler(fieldName, rowType.shortNumberConversion));
+      rowFields[fieldName].blur(
+          this.makeBlurHandler(fieldName, rowType.shortNumberConversion));
     }.bind(this));
 
     rowFields.message = tr.find('textarea.message');
+    rowFields.message.focus(removeWatermark);
     rowFields.message.keypress(
         whitelistCharacters(rowType.messageAllowedCharacters));
     rowFields.message.keyup(
         this.makeKeyupHandler('message', rowType.messageConversion));
-    rowFields.message.change(
-        this.makeChangeHandler('message', rowType.messageConversion));
+    rowFields.message.blur(
+        this.makeBlurHandler('message', rowType.messageConversion));
   }.bind(this));
 
   this.bitCounter = rootDiv.find('.bit_counter');
@@ -358,38 +380,73 @@ NetSimSendWidget.prototype.render = function (skipElement) {
 
   liveFields.push({
     inputElement: this.binaryUI.message,
-    newValue: prettifyBinary(this.message, 8)
+    newValue: prettifyBinary(this.message, 8),
+    watermark: 'Binary'
   });
 
   liveFields.push({
     inputElement: this.hexadecimalUI.message,
-    newValue: binaryToHexadecimal(this.message, 2)
+    newValue: binaryToHexadecimal(this.message, 2),
+    watermark: 'Hexadecimal'
   });
 
   liveFields.push({
     inputElement: this.decimalUI.message,
-    newValue: binaryToDecimal(this.message)
+    newValue: binaryToDecimal(this.message),
+    watermark: 'Decimal'
   });
 
   liveFields.push({
     inputElement: this.asciiUI.message,
-    newValue: binaryToAscii(this.message)
+    newValue: binaryToAscii(this.message),
+    watermark: 'ASCII'
   });
 
   liveFields.forEach(function (field) {
     if (field.inputElement[0] !== skipElement) {
-      field.inputElement.val(field.newValue);
+      if (field.watermark && field.newValue === '') {
+        field.inputElement.val(field.watermark);
+        field.inputElement.addClass('watermark');
+      } else {
+        field.inputElement.val(field.newValue);
+        field.inputElement.removeClass('watermark');
+      }
+
       // TODO: If textarea, scroll to bottom?
     }
   });
+
+  var packetBinary = this.getPacketBinary_();
+  this.bitCounter.html(packetBinary.length + '/Infinity bits');
 };
 
 /** Send message to connected remote */
 NetSimSendWidget.prototype.onSendButtonPress_ = function () {
   var myNode = this.connection_.myNode;
-  if (!myNode) {
-    return;
+  if (myNode) {
+    myNode.sendMessage(this.getPacketBinary_());
   }
+};
 
-  //myNode.sendMessage(this.packetBinary);
+/**
+ * Produces a single binary string in the current packet format, based
+ * on the current state of the widget (content of its internal fields).
+ * @returns {string} - binary representation of packet
+ * @private
+ */
+NetSimSendWidget.prototype.getPacketBinary_ = function () {
+  var encoder = new PacketEncoder([
+    { key: 'toAddress', bits: 4 },
+    { key: 'fromAddress', bits: 4 },
+    { key: 'packetIndex', bits: 4 },
+    { key: 'packetCount', bits: 4 },
+    { key: 'message', bits: Infinity }
+  ]);
+  return encoder.createBinary({
+    toAddress: intToBinary(this.toAddress, 4),
+    fromAddress: intToBinary(this.fromAddress, 4),
+    packetIndex: intToBinary(this.packetIndex, 4),
+    packetCount: intToBinary(this.packetCount, 4),
+    message: this.message
+  });
 };
