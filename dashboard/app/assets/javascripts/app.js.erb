@@ -130,7 +130,7 @@
 
   // class UIRouter: this is an incredibly simple router with our routes baked into it.
   // This will be completely replaced when we choose a router.
-  UIRouter = (function() {
+  var UIRouter = (function() {
 
     function UIRouter() { }
 
@@ -138,24 +138,23 @@
       var re, parts, el,
         url = window.location.pathname;
 
-      var headerStore = new HeaderStore();
-      window.headerBar = new HeaderBar( $('.header-wrapper'), {
-        headerStore: headerStore
-      });
+      /* TODO: Need a way to wait until JSX is loaded.
+      React.render(React.createElement(HelloBar), document.getElementsByClassName('header_middle')[0] );
+      */
+
+      /*
+      window.headerBar = new HeaderBar( $('.header-wrapper') );
+      */
 
       // Special handling for #blocklyApp, which could be on any route.
       el = $('#blocklyApp');
       if (el.length) {
-        window.blocklyApp = new BlocklyApp( el, {
-          headerStore: headerStore
-        });
+        window.blocklyApp = new BlocklyApp( el );
       }
 
       el = $('#reference_area');
       if (el.length) {
-        window.blocklyApp = new ReferenceArea( el, {
-          headerStore: headerStore
-        });
+        window.blocklyApp = new ReferenceArea( el );
       }
 
       // s/:script_id/level/:level_id
@@ -256,6 +255,8 @@
     // When this store changes, notify via callback(data)
     UIStore.prototype.subscribe = function(callback) {
       this.subscribers.push(callback);
+      if (this.value)
+        callback(this.value);
     }
 
     // Internal call to process any data that's being saved
@@ -499,7 +500,13 @@
 
     // Eventually we could support various modes of offline (disconnects, etc)
     UIFrame.prototype.detectStatic = function() {
-      return window.location.protocol == "file:" || window.location.host.substr(0,6) == 'react.' || window.location.port == 3000;
+      if (window.location.protocol == "file:" || window.location.host.substr(0,6) == 'react.')
+        return true;
+      /* Enable this to test static on your local dev machine.
+      if (window.location.port == 3000)
+        return true;
+      */
+      return false;
     }
 
     // Load the script at a given URL and return a promise that resolves when it has executed
@@ -678,7 +685,7 @@
       var _this = this;
 
       // When the headerStore gets data, update blockly
-      this.props.headerStore.subscribe( function(data) {
+      window.headerStore.subscribe( function(data) {
         _this.setState({
           level: $.extend({}, data.level)
         });
@@ -746,7 +753,7 @@
       }, 10000);
 
       // When the headerStore gets data, update blockly
-      this.props.headerStore.subscribe( function(data) {
+      window.headerStore.subscribe( function(data) {
 
         data.level.level_id = data.level.level.id; // because level.id gets overwritten by the DIV id inside blockly somewhere
 
@@ -1079,21 +1086,11 @@
   })(UIComponent);
 
 
-
-
-
-
   // Exports:
   window.UIStore = UIStore;
   window.UIComponent = UIComponent;
   window.UIRouter = UIRouter;
   window.UIFrame = UIFrame;
   window.BlocklyApp = BlocklyApp;
-
-  window.Frame = new UIFrame();
-
-  $(document).ready(function() {
-    Frame.init();
-  });
 
 }).call(this);
