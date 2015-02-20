@@ -4,6 +4,7 @@
 #
 
 require 'chef/user'
+require 'chef/client'
 
 apt_package 'awscli' # AWS command-line tools
 
@@ -87,9 +88,9 @@ node['cdo-users'].each_pair do |user_name, user_data|
   end
   
   template File.join(ssh_directory, 'config') do
-    action :create_if_missing
+    #action :create_if_missing
     source 'ssh_config.erb'
-    #variables(  )
+    variables( hosts:search(:node, "*:*") )
     owner user_name
     group user_name
     mode '0600'
@@ -116,6 +117,26 @@ node['cdo-users'].each_pair do |user_name, user_data|
     not_if aws_config.nil?
     source 'aws_config.erb'
     variables( config:aws_config )
+    owner user_name
+    group user_name
+    mode '0600'
+  end
+  
+  #
+  #
+  # Configure CHEF
+  #
+  #
+  
+  chef_directory = File.join(home_directory, '.chef')
+  directory chef_directory do
+    owner user_name
+    group user_name
+  end
+
+  template File.join(chef_directory, 'knife.rb') do
+    source 'chef_knife.rb.erb'
+    variables( chef_user_name:user_data['chef-user'] )
     owner user_name
     group user_name
     mode '0600'
