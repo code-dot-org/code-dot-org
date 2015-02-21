@@ -127,10 +127,12 @@ $(window).load(function () {
           float: 'left'
         } : {};
         nthChoice++;
+        // TODO(bjordan): why does key not get set as a prop when set as key={domainChoice.key}?
+        //                & tried removing wrapping div as well
         return (
         <div style={divStyle}>
-          <TypeChooser uniqueKey={domainChoice.key}/> // TODO(bjordan): why does key not get set as a prop when set as key={domainChoice.key}?
-        </div>                                        // <--- tried removing wrapping div as well
+          <TypeChooser uniqueKey={domainChoice.key}/>
+        </div>
         );
       }, this);
       return (
