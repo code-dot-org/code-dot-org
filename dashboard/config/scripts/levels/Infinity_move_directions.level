@@ -49,16 +49,16 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="studio_whenArrow" y="0" id="whenUp">
+        <block type="studio_whenArrow" deletable="false" movable="false" y="0" id="whenUp">
           <title name="VALUE">up</title>
         </block>
-        <block type="studio_whenArrow" y="100">
+        <block type="studio_whenArrow" deletable="false" movable="false" y="100">
           <title name="VALUE">down</title>
         </block>
-        <block type="studio_whenArrow" y="200">
+        <block type="studio_whenArrow" deletable="false" movable="false" y="200">
           <title name="VALUE">left</title>
         </block>
-        <block type="studio_whenArrow" y="300">
+        <block type="studio_whenArrow" deletable="false" movable="false" y="300">
           <title name="VALUE">right</title>
         </block>
       </xml>
