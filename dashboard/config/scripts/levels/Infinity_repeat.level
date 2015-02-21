@@ -40,7 +40,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="studio_repeatForever" id="repeatForever"/>
+        <block type="studio_repeatForever" deletable="false" movable="false" id="repeatForever"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>
@@ -53,7 +53,6 @@
           <title name="DIR">4</title>
           <title name="DISTANCE">400</title>
         </block>
-        <block type="studio_repeatForever"/>
       </xml>
     </toolbox_blocks>
     <required_blocks>
