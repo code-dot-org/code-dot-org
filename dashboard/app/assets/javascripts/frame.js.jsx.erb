@@ -207,6 +207,18 @@
     }
   });
 
+  SignInButton = React.createClass({
+    render: function() {
+      return (
+        <div className="header_user">
+          <a href="/users/sign_in" id="signin_button" className="button-signin">
+            <%= I18n.t("nav.user.signin") %>
+          </a>
+        </div>
+      );
+    }
+  })
+
 
 
   var HelloBar = React.createClass({
@@ -380,6 +392,16 @@
     Frame.init();
 
     React.render(<HelloBar />, document.getElementsByClassName('header_middle')[0]);
+
+    // The user signin button is rendered by client code if it wasn't sent by the server
+    if (!Frame.isStatic) {
+      // Show the signin button, but not if offline
+      var $right = $('.header_right');
+      if (!$right.find('.header_user').length) {
+        React.render(<SignInButton />, $right[0]);
+      }
+    }
+
   });
 
 
