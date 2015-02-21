@@ -89,14 +89,14 @@ exports.formatHex = function (hexString, chunkSize) {
  * @param {string} decimalString
  * @returns {string} aligned decimal string
  */
-exports.formatDecimal = function (decimalString) {
+exports.alignDecimal = function (decimalString) {
   if (decimalString.replace(/\D/g, '') === '') {
     return '';
   }
 
   var numbers = exports.minifyDecimal(decimalString).split(/\s+/);
 
-  // Find the widest number
+  // Find the length of the longest number
   var mostDigits = numbers.reduce(function(prev, cur) {
     if (cur.length > prev) {
       return cur.length;
@@ -104,12 +104,12 @@ exports.formatDecimal = function (decimalString) {
     return prev;
   }, 0);
 
+  var nbspChar = "\xA0";
+  var nbspPadding = new Array(mostDigits + 1).join(nbspChar);
+
   return numbers.map(function (numString) {
     // Left-pad each number with non-breaking spaces up to max width.
-    while (numString.length < mostDigits) {
-      numString = "\xA0" + numString;
-    }
-    return numString;
+    return (nbspPadding + numString).slice(-mostDigits);
   }).join(' ');
 };
 
@@ -193,14 +193,13 @@ exports.hexToBinary = function (hexadecimalString) {
  * @returns {string}
  */
 exports.binaryToHex = function (binaryString) {
-  var nibble;
+  var currentNibble;
   var nibbleWidth = 4;
   var chars = [];
   var uglyBinary = exports.minifyBinary(binaryString);
   for (var i = 0; i < uglyBinary.length; i += nibbleWidth) {
-    // Right-pad nibble with zeroes
-    nibble = zeroPadRight(uglyBinary.substr(i, nibbleWidth), nibbleWidth);
-    chars.push(exports.intToHex(exports.binaryToInt(nibble), 1));
+    currentNibble = zeroPadRight(uglyBinary.substr(i, nibbleWidth), nibbleWidth);
+    chars.push(exports.intToHex(exports.binaryToInt(currentNibble), 1));
   }
   return chars.join('');
 };
@@ -233,12 +232,12 @@ exports.decimalToBinary = function (decimalString, byteSize) {
  * @returns {string} decimal numbers
  */
 exports.binaryToDecimal = function (binaryString, byteSize) {
-  var byte;
+  var currentByte;
   var numbers = [];
   var binary = exports.minifyBinary(binaryString);
   for (var i = 0; i < binary.length; i += byteSize) {
-    byte = zeroPadRight(binary.substr(i, byteSize), byteSize);
-    numbers.push(exports.binaryToInt(byte));
+    currentByte = zeroPadRight(binary.substr(i, byteSize), byteSize);
+    numbers.push(exports.binaryToInt(currentByte));
   }
   return numbers.join(' ');
 };
@@ -272,12 +271,12 @@ exports.binaryToAscii = function (binaryString, byteSize) {
     throw new RangeError("Parameter byteSize must be greater than zero");
   }
 
-  var byte;
+  var currentByte;
   var chars = [];
   var binary = exports.minifyBinary(binaryString);
   for (var i = 0; i < binary.length; i += byteSize) {
-    byte = zeroPadRight(binary.substr(i, byteSize), byteSize);
-    chars.push(String.fromCharCode(exports.binaryToInt(byte)));
+    currentByte = zeroPadRight(binary.substr(i, byteSize), byteSize);
+    chars.push(String.fromCharCode(exports.binaryToInt(currentByte)));
   }
   return chars.join('');
 };
