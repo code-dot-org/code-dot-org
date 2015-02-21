@@ -7,44 +7,34 @@
     __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
 
 
-  // class HeaderStore extends UIStore
-      /**
-     * @param data {{
-     *   title: string,
-     *   finishLink: string,
-     *   showStageLinks: boolean,
-     *   trophies: Object,
-     *   levels: Array.<{
-     *     displayText: string,
-     *     status: string,
-     *     unplugged: boolean,
-     *     assessment: boolean
-     *   }>
-     * }}
-     */
-  HeaderStore = (function(_super) {
-    __extends(HeaderStore, _super);
+  // class LevelStore extends UIStore
+  var LevelStore = (function(_super) {
+    __extends(LevelStore, _super);
 
     // Must have a constructor
-    function HeaderStore() {
-      return HeaderStore.__super__.constructor.apply(this, arguments);
+    function LevelStore() {
+      return LevelStore.__super__.constructor.apply(this, arguments);
     }
 
-    HeaderStore.prototype.resolveUrl = function(args, dataType) {
+    LevelStore.prototype.resolveUrl = function(args, dataType) {
       return "/popup/progress";
     }
 
-    HeaderStore.prototype.resolveStatic = function(args) {
+    LevelStore.prototype.resolveStatic = function(args) {
       return "/level-" + (args.script_name || args.script_id) + "-" + (args.stage_id || "1") + "-" + args.level_id;
     }
 
-    return HeaderStore;
+    LevelStore.prototype.save = function(data) {
+      window.userProgressStore.save(data.progress);
+      return LevelStore.__super__.save.apply(this, arguments);
+    }
+
+    return LevelStore;
   })(UIStore);
 
 
-
   // ScriptStore: load the script progress (used in the header dropdown)
-  ScriptStore = (function(_super) {
+  var ScriptStore = (function(_super) {
     __extends(ScriptStore, _super);
 
     // Must have a constructor
@@ -63,9 +53,24 @@
     return ScriptStore;
   })(UIStore);
 
+
+  // UserProgressStore: stores the current user's progress
+  var UserProgressStore = (function(_super) {
+    __extends(UserProgressStore, _super);
+
+    // Must have a constructor
+    function UserProgressStore() {
+      return UserProgressStore.__super__.constructor.apply(this, arguments);
+    }
+
+    return UserProgressStore;
+  })(UIStore);
+
+
   // For now, create a global.  Later, this should be in module.exports
   // (Note these are already global since they're not declared via 'var'.
-  window.HeaderBar = HeaderBar;
-  window.HeaderStore = HeaderStore;
+  window.ScriptStore = ScriptStore;
+  window.UserProgressStore = UserProgressStore;
+  window.LevelStore = LevelStore;
 
 }).call(this);

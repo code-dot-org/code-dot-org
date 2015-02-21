@@ -16,12 +16,19 @@
 
   var cs = React.addons.classSet;
 
+  var TEMP_UPDATE = function() {
+    this.setState({
+      updated: Math.random()
+    });
+  }
+
   // ProgressBox: stage={} selected=id progress={}
   var ProgressBox = React.createClass({
     render: function() {
       var P = this.props || {};
 
-      var levels = P.stage.levels || [];
+      var stage = P.stage || {};
+      var levels = stage.levels || [];
       if (!levels.length)
         return false;
 
@@ -31,8 +38,8 @@
         var status = levelProgress[level.id] || {};
 
         var href = Frame.linkTo({
-          script: P.stage.script_name,
-          stage: P.stage.position,
+          script: stage.script_name,
+          stage: stage.position,
           level: level.position
         });
 
@@ -61,18 +68,30 @@
   });
 
 
-  // HeaderPopup: script="" progress={} selected=id onShow=fn
+  // HeaderPopup: script="" progress={} selected=id onShow=fn 
+  // + scriptStore
   var HeaderPopup = React.createClass({
+    componentDidMount: function() {
+      window.scriptStore.subscribe(__bind(TEMP_UPDATE, this));
+
+      // Ask the script store to load a particular script.
+      window.scriptStore.load({
+        script_id: this.props.script_id
+      });
+
+    },
+
     render: function() {
       var P = this.props || {};
-      var S = this.state || {};
 
       var progress = P.progress || {};
-      var levelProgress = P.progress.levels || {};
-      var script = S.script;
+      var levelProgress = progress.levels || {};
+      var script = window.scriptStore.value;
 
       var body;
-      if (script) {
+      if (!script) {
+        body = <div className="loading" />;
+      } else {
 
         var stages = $.map(script.stages, function(stage) {
           var lessonPlan;
@@ -146,8 +165,6 @@
           </div>
         );
 
-      } else {
-        body = <div className="loading" />;
       }
 
       var style = {
@@ -170,18 +187,6 @@
       );
 
     },
-
-    componentDidMount: function() {
-      var _this = this;
-
-      // This store is used to load the HTML overview of the entire script
-      window.scriptStore.subscribe(function(script) {
-        _this.setState({
-          script: script
-        });
-      });
-    },
-
 
     handleClose: function(ev) {
       this.props.onShow(false);
@@ -207,6 +212,7 @@
     }
   });
 
+
   SignInButton = React.createClass({
     render: function() {
       return (
@@ -221,17 +227,19 @@
 
 
 
-  var HelloBar = React.createClass({
+  var HeaderBar = React.createClass({
+    componentDidMount: function() {
+      window.levelStore.subscribe( __bind(TEMP_UPDATE, this) );
+      window.userProgressStore.subscribe( __bind(TEMP_UPDATE, this) );
+    },
 
     render: function() {
-      var cl, el;
-      var _this = this;
       var state = this.state || {};
-
-      var script = state.script || {};
-      var stage = state.stage || {};
-      var level = state.level || {};
-      var progress = state.progress || {};
+      var thisLevel = window.levelStore.value || {};
+      var script = thisLevel.script || {};
+      var stage = thisLevel.stage || {};
+      var level = thisLevel.level || {};
+      var progress = window.userProgressStore.value || {};
 
       // Don't render the progress buttons unless we are initialized with a script
       if (!script)
@@ -301,7 +309,7 @@
       // Popup stage navigation
       var headerPopup;
       if (state.popped) {
-        headerPopup = <HeaderPopup progress={progress} selected={level_id} onShow={this.showPopup} />;
+        headerPopup = <HeaderPopup script_id={stage.script_id} progress={progress} selected={level_id} onShow={this.showPopup} />;
         // Catch clicks anywhere else and close the popup
         $(document).on('click', this.onModalClick);
       } else {
@@ -324,20 +332,15 @@
       );
     },
 
-    componentDidMount: function() {
-      var _this = this;
-
-      // TODO: Is this the right place to put this?
-      // It guarantees there will be at least one render cycle before we try to load the header.
-      window.headerStore.subscribe( __bind(this.replaceState, this) );
-    },
-
     componentDidUpdate: function() {
-      if (this.state.scriptDefinition && this.state.jumpToTrophies) {
-        var off = $('#trophies').offset();
-        if (off)
-          window.scrollTo(0, +off.top);
-        this.setState({ jumpToTrophies: false });
+      if (this.state && this.state.jumpToTrophies) {
+        var el = $('#trophies');
+        if (el.length) {
+          var off = el.offset();
+          if (off)
+            window.scrollTo(0, +off.top);
+          this.setState({ jumpToTrophies: false });
+        }
       }
     },
 
@@ -347,17 +350,6 @@
         popped: !!show,
         jumpToTrophies: show == 'trophies'
       });
-
-      // Have we loaded the stage HTML already?  If not, load it now.
-      if (!!show && !this.descLoaded) {
-        this.descLoaded = true; // prevent multiple loads
-
-        // Ask the script store to load a particular script.
-        window.scriptStore.load({
-          script_id: this.state.stage.script_id
-        });
-
-      }
     },
 
     onTrophyClick: function(ev) {
@@ -381,21 +373,84 @@
     }
   });
 
-  // Exports:
-  window.HelloBar = HelloBar;
+
+  // ReferenceArea
+  // + levelStore
+  var ReferenceArea = React.createClass({
+    componentDidMount: function() {
+      // When the levelStore gets data, update blockly
+      window.levelStore.subscribe( __bind(TEMP_UPDATE, this));
+    },
+
+    render: function() {
+      var state = window.levelStore.value || {};
+      var level = state.level || {}
+
+      // if (current_user.teacher? || current_user.admin?)
+      var solutionLink;
+      if (level.solutionPath) {
+        solutionLink = (
+          <div className="solution_link">
+            <a href={level.solutionPath}><%= I18n.t("reference_area.teacher") %></a>
+          </div>
+        );
+      }
+
+      var relatedVideos = [];
+      if (level.relatedVideos) {
+        relatedVideos.push(<p className="help_title"><%= I18n.t("reference_area.title") %></p>);
+        relatedVideos.push(<p className="help_subtitle"><%= I18n.t("reference_area.subtitle") %></p>);
+
+        for (var i = 0; i < level.relatedVideos.length; i++) {
+          var video = level.relatedVideos[i];
+
+          // TODO: does the data work?
+          relatedVideos.push(
+            <a data={video.data} href="#" className="video_link" onClick={this.onVideoClick}>
+              <img className="video_thumbnail" src={video.thumbnail_url} width={39*4.7} />
+              <div className="video_name"><span>{video.name}</span></div>
+            </a>
+          );
+
+          if ((i % 2) == 1)
+            relatedVideos.push(<div className="clear" />);
+        }
+
+        relatedVideos.push(<div className="clear" />);
+      }
+
+      return (
+        <div class="reference_area">
+          { solutionLink }
+          { relatedVideos }
+        </div>
+      );
+    },
+
+    onVideoClick: function(ev) {
+      var el = $(el.target);
+
+      showVideoDialog( $.extend({
+        enable_fallback: true,
+        autoplay: true
+      }, el.data()) );
+    }
+  });
+
+  window.ReferenceArea = ReferenceArea;
 
   $(document).ready(function() {
-    window.headerStore = new HeaderStore();
+    window.levelStore = new LevelStore();
     window.scriptStore = new ScriptStore();
+    window.userProgressStore = new UserProgressStore();
 
     window.Frame = new UIFrame();
     Frame.init();
 
-    React.render(<HelloBar />, document.getElementsByClassName('header_middle')[0]);
-
-    // The user signin button is rendered by client code if it wasn't sent by the server
+    React.render(<HeaderBar />, document.getElementsByClassName('header_middle')[0]);
     if (!Frame.isStatic) {
-      // Show the signin button, but not if offline
+      // The user signin button is rendered by client code if it wasn't sent by the server
+      // Don't show it if offline
       var $right = $('.header_right');
       if (!$right.find('.header_user').length) {
         React.render(<SignInButton />, $right[0]);

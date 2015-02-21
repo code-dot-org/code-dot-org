@@ -162,7 +162,7 @@
       re = /\/s\/(\d+)\/(level|puzzle)\/(\d+)$/i;
       parts = url.match(re);
       if (parts) {
-        headerStore.load({
+        levelStore.load({
           script_id: parts[1],
           level_id: parts[3]
         });
@@ -185,7 +185,7 @@
 
         var app = apps[parts[1]];
         if (app) {
-          headerStore.load({
+          levelStore.load({
             script_name: app,
             level_id: parts[2]
           });
@@ -198,7 +198,7 @@
       re = /\/s\/(.+)\/stage\/(\d+)\/puzzle\/(\d+)$/i;
       parts = url.match(re);
       if (parts) {
-        headerStore.load({
+        levelStore.load({
           script_name: parts[1],
           stage_id: parts[2],
           level_id: parts[3]
@@ -216,7 +216,7 @@
         };
 
         script_name = params.script;
-        headerStore.load({
+        levelStore.load({
           script_name: params.script,
           stage_id: params.stage,
           level_id: params.level
@@ -634,93 +634,6 @@
   })();
 
 
-  // class ReferenceArea extends UIComponent
-  var ReferenceArea = (function(_super) {
-    __extends(ReferenceArea, _super);
-
-    // Must have a constructor
-    function ReferenceArea() {
-      ReferenceArea.__super__.constructor.apply(this, arguments);
-
-      return this;
-    }
-
-    ReferenceArea.prototype.render = function() {
-      var el;
-
-      var state = this.state || {};
-      var level = state.level || {}
-
-      this.$el.html('');  // Clear out the children
-      this.$el.addClass('reference_area');
-
-      // if (current_user.teacher? || current_user.admin?)
-      if (level.solutionPath) {
-        el = $('<div>').addClass('solution_link').appendTo(this.$el);
-
-        $('<a>').attr('href', level.solutionPath).text('<%= I18n.t("reference_area.teacher") %>').appendTo(el);
-      }
-
-      if (level.relatedVideos) {
-        $('<p>').addClass('help_title').text('<%= I18n.t("reference_area.title") %>').appendTo(this.$el);
-        $('<p>').addClass('help_subtitle').text('<%= I18n.t("reference_area.subtitle") %>').appendTo(this.$el);
-
-        for (var i = 0; i < level.relatedVideos.length; i++) {
-          var video = level.relatedVideos[i];
-
-          el = $('<a>', {
-            data: video.data,  // Note this doesn't show as data- attributes, but does work.
-            href: '#'
-          }).addClass('video_link').appendTo(this.$el);
-          var img = $('<img>', {
-            id: 'thumbnail_' + video.youtube_code,
-            src: video.thumbnail_url,
-            width: 39*4.7
-            // height: 50*4.7,
-          }).addClass('video_thumbnail').appendTo(el);
-          el.append( $('<div>').addClass('video_name').append( $('<span>').text(video.name) ) );
-
-          if ((i % 2) == 1)
-            $('<div>').addClass('clear').appendTo(this.$el);
-        }
-
-        $('<div>').addClass('clear').appendTo(this.$el);
-      }
-    }
-
-
-    ReferenceArea.prototype.componentDidMount = function() {
-      var _this = this;
-
-      // When the headerStore gets data, update blockly
-      window.headerStore.subscribe( function(data) {
-        _this.setState({
-          level: $.extend({}, data.level)
-        });
-      });
-
-    }
-
-    ReferenceArea.prototype.onClick = function(ev) {
-      var el;
-
-      // Click on a video
-      el = $(ev.target).closest('.video_link');
-      if (el.length) {
-        ev.stopPropagation();
-
-        showVideoDialog( $.extend({
-          enable_fallback: true,
-          autoplay: true
-        }, el.data()) );
-
-        return;
-      }
-    }
-
-
-    return ReferenceArea;
-  })(UIComponent);
 
 
 
@@ -760,8 +673,8 @@
         slow_load.show();
       }, 10000);
 
-      // When the headerStore gets data, update blockly
-      window.headerStore.subscribe( function(data) {
+      // When the levelStore gets data, update blockly
+      window.levelStore.subscribe( function(data) {
 
         data.level.level_id = data.level.level.id; // because level.id gets overwritten by the DIV id inside blockly somewhere
 
