@@ -46,12 +46,12 @@ social:
 ---
 
 #top{style: "position:relative; width:100%; overflow:hidden"}
-  - heroes = DB[:cdo_homepage].where(type_s: "widehero", active_s: ["show","hide"]).all
+  - heroes = DB[:cdo_homepage].where(type_s: "widehero", active_s: ["show","hide"], site_s: [request.site,"both"]).all
   - heroes.shuffle!
   - heroes.each_with_index do |entry, index|
     - display = entry[:active_s] == "hide" ? "none" : "block"
     - opacity = index == 0 ? 1 : 0
-    %div{id: "fullwidth#{index}", style: "display: #{display}; z-index: -5; position:absolute; left: 0; top: 0; background-image: url(#{entry[:image_t]}); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: #{opacity}; background-position: 50% 20%"}
+    .widehero{id: "fullwidth#{index}", style: "display: #{display}; z-index: -5; position:absolute; left: 0; top: 0; background-image: url(#{entry[:image_t]}); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: #{opacity}; background-position: 50% 20%"}
 
   #fullwidth{style: "width: 100%;"}
     .thegap{style: "height: 1px"}
@@ -92,7 +92,7 @@ social:
           Sign the petition
 
 #slots{style: "text-align:center"}
-  - DB[:cdo_homepage].where(type_s: "slot", active_s: ["show","hide"]).all do |entry|
+  - DB[:cdo_homepage].where(type_s: "slot", active_s: ["show","hide"], site_s: [request.site,"both"]).all do |entry|
     - display = entry[:active_s] == "hide" ? "none" : "block"
     .slot{style: "display: #{display}"}
       = view :homepage_quarterslot, entry: entry
@@ -185,8 +185,10 @@ social:
 
   function cycleImage()
   {
+    var numWideHeroes = $(".widehero").length;
+
     var lastImage = currentImage;
-    var nextImage = (currentImage + 1) % 4;
+    var nextImage = (currentImage + 1) % numWideHeroes;
     $("#fullwidth" + currentImage).fadeTo(4000, 0);
     $("#fullwidth" + nextImage ).fadeTo(4000, videoStarted ? 0.3 : 1);
     currentImage = nextImage;
