@@ -440,6 +440,8 @@
   window.ReferenceArea = ReferenceArea;
 
   $(document).ready(function() {
+    var el;
+
     window.levelStore = new LevelStore();
     window.scriptStore = new ScriptStore();
     window.userProgressStore = new UserProgressStore();
@@ -447,7 +449,16 @@
     window.Frame = new UIFrame();
     Frame.init();
 
-    React.render(<HeaderBar />, document.getElementsByClassName('header_middle')[0]);
+    el = $('.header_middle');
+    if (el.length) {
+      React.render(<HeaderBar />, el[0]);
+    }
+
+    el = $('#reference_area');
+    if (el.length) {
+      React.render(<ReferenceArea />, el[0]);
+    }
+
     if (!Frame.isStatic) {
       // The user signin button is rendered by client code if it wasn't sent by the server
       // Don't show it if offline

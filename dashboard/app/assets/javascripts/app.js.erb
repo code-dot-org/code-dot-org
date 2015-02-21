@@ -152,11 +152,6 @@
         window.blocklyApp = new BlocklyApp( el );
       }
 
-      el = $('#reference_area');
-      if (el.length) {
-        window.blocklyApp = new ReferenceArea( el );
-      }
-
       // s/:script_id/level/:level_id
       // (only applies to the default scripts ID < 8)
       re = /\/s\/(\d+)\/(level|puzzle)\/(\d+)$/i;
