@@ -8,6 +8,7 @@
 // What is className="" vs class=""?
 
 $(window).load(function () {
+
   /**
    * Enum of block types. Used for block and domain/range coloring
    * @enum {string}
@@ -30,31 +31,106 @@ $(window).load(function () {
   typesToColors[blockValueType.IMAGE] = "#9900cc";
   typesToColors[blockValueType.BOOLEAN] = "#336600";
 
+  /**
+   * @param data {{
+   *   name: string,
+   *   rangeType: BlockValueType,
+   *   domainTypes: {
+   *     type: BlockValueType,
+   *     key: string
+   *   },
+   * }}
+   */
+  var ContractStore = (function ($) {
+
+    var eventObject = $({});
+    var saveEvent = "SAVE";
+    var currentUniqueID = 0;
+
+    function getUniqueID() {
+      return "uid" + (currentUniqueID++).toString();
+    }
+
+    function ContractStore() {
+      this.save = this.save.bind(this);
+      this.data = {
+        domainTypes: []
+      };
+      this.getData = this.getData.bind(this);
+    }
+
+    ContractStore.prototype.getData = function() {
+      return this.data;
+    };
+
+    ContractStore.prototype.save = function() {
+      eventObject.trigger(saveEvent, this.data);
+    };
+
+    ContractStore.prototype.addDomain = function(newDomainData) {
+      newDomainData.key = getUniqueID();
+      this.data.domainTypes.push(newDomainData);
+    };
+
+    ContractStore.prototype.getDomain = function(key) {
+      return $.grep(this.data.domainTypes, function (domainData) {
+        return domainData.key == key;
+      })[0];
+    };
+
+    ContractStore.prototype.setDomainType = function(key, newType) {
+      this.getDomain(key).type = newType;
+      this.save();
+    };
+
+    ContractStore.prototype.subscribe = function(callback) {
+      eventObject.on(saveEvent, callback);
+      callback(saveEvent, this.data);
+    };
+
+    return ContractStore;
+  })($);
+
+  window.contractStore = new ContractStore();
+  window.contractStore.addDomain({
+    type: blockValueType.NUMBER
+  });
+  window.contractStore.save();
+
   var DomainsList = React.createClass({
     getInitialState: function() {
       return {
-        domainChoices: [
-          this.props.defaultType
-        ]
+        contract: {
+          domainTypes: []
+        }
       }
     },
+    componentDidMount: function() {
+      var self = this;
+      window.contractStore.subscribe(function (event, contract) {
+        self.setState({
+          contract: contract
+        })
+      });
+    },
     handleAddDomain: function () {
-      var newState = this.state;
-      newState.domainChoices.push(this.props.defaultType);
-      this.setState(newState);
+      window.contractStore.addDomain({
+        type: this.props.defaultType
+      });
+      window.contractStore.save();
     },
     render: function() {
       var nthChoice = 0;
-      var typeChoiceNodes = this.state.domainChoices.map(function (domainType) {
-        var isLastNode = nthChoice === this.state.domainChoices.length - 1;
+      var typeChoiceNodes = window.contractStore.getData().domainTypes.map(function (domainChoice) {
+        var isLastNode = nthChoice === window.contractStore.getData().domainTypes.length - 1;
         var divStyle = isLastNode ? {
           float: 'left'
         } : {};
         nthChoice++;
         return (
-          <div style={divStyle}>
-            <TypeChooser selectedType={domainType} key={domainChoice.key}/>
-          </div>
+        <div style={divStyle}>
+          <TypeChooser uniqueKey={domainChoice.key}/> // TODO(bjordan): why does key not get set as a prop when set as key={domainChoice.key}?
+        </div>                                        // <--- tried removing wrapping div as well
         );
       }, this);
       return (
@@ -67,22 +143,24 @@ $(window).load(function () {
   });
 
   var TypeChooser = React.createClass({
-    getInitialState: function() {
-      return {
-        selectedType: this.props.selectedType
-      }
+    componentDidMount: function() {
+      var self = this;
+      window.contractStore.subscribe(function (event, contract) {
+        self.setState({
+          domain: window.contractStore.getDomain(self.props.uniqueKey)
+        });
+      });
     },
     handleChange: function(event) {
-      this.setState({
-        selectedType: event.target.value
-      });
+      window.contractStore.setDomainType(this.props.uniqueKey, event.target.value);
+      window.contractStore.save();
     },
     render: function () {
       var divStyle = {
-        backgroundColor: typesToColors[this.state.selectedType]
+        backgroundColor: typesToColors[window.contractStore.getDomain(this.props.uniqueKey).type]
       };
       return (
-        <select value={this.state.selectedType} onChange={this.handleChange} style={divStyle}>
+        <select value={window.contractStore.getDomain(this.props.uniqueKey).type} onChange={this.handleChange} style={divStyle}>
           <option value={blockValueType.NONE}>{blockValueType.NONE}</option>
           <option value={blockValueType.NUMBER}>{blockValueType.NUMBER}</option>
           <option value={blockValueType.STRING}>{blockValueType.STRING}</option>
