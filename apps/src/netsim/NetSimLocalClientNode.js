@@ -314,7 +314,7 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload) {
         if (success) {
           logger.info('Local node sent message: ' + JSON.stringify(payload));
           if (self.sentLog_) {
-            self.sentLog_.log(JSON.stringify(payload));
+            self.sentLog_.log(payload);
           }
         } else {
           logger.error('Failed to send message: ' + JSON.stringify(payload));
@@ -371,6 +371,6 @@ NetSimLocalClientNode.prototype.onMessageTableChange_ = function (rows) {
 NetSimLocalClientNode.prototype.handleMessage_ = function (message) {
   // TODO: How much validation should we do here?
   if (this.receivedLog_) {
-    this.receivedLog_.log(JSON.stringify(message.payload));
+    this.receivedLog_.log(message.payload);
   }
 };

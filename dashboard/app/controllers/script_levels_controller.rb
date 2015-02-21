@@ -93,7 +93,7 @@ private
   def load_level_source
     # Set start blocks to the user's previous attempt at this puzzle
     # or the user's project's level_source if necessary. Must be
-    # called after set_videos_and_blocks_and_callouts_and_instructions
+    # called after set_videos_and_blocks_and_callouts
     # because we override @start_blocks set there.
     # TODO this whole thing should be done on the client side
 
@@ -103,7 +103,7 @@ private
       level_source = LevelSource.find(params[:level_source_id])
       # we do multiple level projects, so we don't check that the level_source.level_id matches the loaded level
       @start_blocks = level_source.data
-    elsif current_user.try(:admin?)
+    elsif false # current_user.try(:admin?)
       last_attempt = current_user.last_attempt(@level).try(:level_source).try(:data)
       if last_attempt
         @original_start_blocks = @start_blocks.presence || '<xml/>'
@@ -118,12 +118,14 @@ private
     @game = @level.game
     @stage = @script_level.stage
 
-    set_videos_and_blocks_and_callouts_and_instructions
+    set_videos_and_blocks_and_callouts
 
     load_level_source
 
     @callback = milestone_url(user_id: current_user.try(:id) || 0, script_level_id: @script_level)
     @full_width = true
+
+    @applab_user_id = applab_user_id
 
     @@fallback_responses ||= {}
     @fallback_response = @@fallback_responses[@script_level.id] ||= {
