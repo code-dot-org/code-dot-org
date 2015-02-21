@@ -2933,7 +2933,7 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/current/common":191,"../../locale/current/studio":197,"../StudioApp":4,"../canvg/StackBlur.js":40,"../canvg/canvg.js":41,"../canvg/rgbcolor.js":42,"../canvg/svg_todataurl":43,"../codegen":44,"../constants":46,"../dom":47,"../skins":145,"../templates/page.html":166,"../utils":186,"../xml":187,"./api":147,"./bigGameLogic":148,"./blocks":149,"./collidable":150,"./constants":151,"./controls.html":152,"./extraControlRows.html":153,"./projectile":156,"./visualization.html":159}],159:[function(require,module,exports){
+},{"../../locale/current/common":191,"../../locale/current/studio":197,"../StudioApp":4,"../canvg/StackBlur.js":39,"../canvg/canvg.js":40,"../canvg/rgbcolor.js":41,"../canvg/svg_todataurl":42,"../codegen":43,"../constants":45,"../dom":46,"../skins":145,"../templates/page.html":166,"../utils":186,"../xml":187,"./api":147,"./bigGameLogic":148,"./blocks":149,"./collidable":150,"./constants":151,"./controls.html":152,"./extraControlRows.html":153,"./projectile":156,"./visualization.html":159}],159:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4938,7 +4938,7 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
   'startBlocks': "",
 });
 
-},{"../../locale/current/studio":197,"../block_utils":19,"../utils":186,"./constants":151}],153:[function(require,module,exports){
+},{"../../locale/current/studio":197,"../block_utils":18,"../utils":186,"./constants":151}],153:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7114,7 +7114,7 @@ function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpr
   };
 }
 
-},{"../../locale/current/common":191,"../../locale/current/studio":197,"../StudioApp":4,"../codegen":44,"../sharedFunctionalBlocks":144,"../utils":186,"./constants":151}],197:[function(require,module,exports){
+},{"../../locale/current/common":191,"../../locale/current/studio":197,"../StudioApp":4,"../codegen":43,"../sharedFunctionalBlocks":144,"../utils":186,"./constants":151}],197:[function(require,module,exports){
 /*studio*/ module.exports = window.blockly.appLocale;
 },{}],148:[function(require,module,exports){
 var studioConstants = require('./constants');
@@ -7335,7 +7335,7 @@ BigGameLogic.prototype.collide = function (px, py, cx, cy) {
 
 module.exports = BigGameLogic;
 
-},{"../codegen":44,"./api":147,"./constants":151}],147:[function(require,module,exports){
+},{"../codegen":43,"./api":147,"./constants":151}],147:[function(require,module,exports){
 var constants = require('./constants');
 
 exports.SpriteSpeed = {
@@ -7676,7 +7676,7 @@ exports.HIDDEN_VALUE = '"hidden"';
 exports.CLICK_VALUE = '"click"';
 exports.VISIBLE_VALUE = '"visible"';
 
-},{}],43:[function(require,module,exports){
+},{}],42:[function(require,module,exports){
 /**
 	The missing SVG.toDataURL library for your SVG elements.
 
@@ -7899,7 +7899,7 @@ SVGElement.prototype.toDataURL = function(type, options) {
 	}
 }
 
-},{}],42:[function(require,module,exports){
+},{}],41:[function(require,module,exports){
 /**
  * A class to parse color values
  * @author Stoyan Stefanov <sstoo@gmail.com>
@@ -8189,7 +8189,7 @@ function RGBColor(color_string)
 }
 
 
-},{}],40:[function(require,module,exports){
+},{}],39:[function(require,module,exports){
 /*
 
 StackBlur - a fast almost Gaussian Blur For Canvas

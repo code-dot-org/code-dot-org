@@ -36,7 +36,14 @@
     "disable_sharing": "false",
     "min_workspace_height": "1000",
     "generate_function_pass_blocks": "true",
-    "maze_data": null
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "maze_data": null,
+    "timeout_after_when_run": "false"
   }
 }]]></config>
   <blocks>

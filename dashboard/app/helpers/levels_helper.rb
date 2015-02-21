@@ -1,3 +1,5 @@
+require 'digest/sha1'
+
 module LevelsHelper
 
   def build_script_level_path(script_level)
@@ -37,7 +39,7 @@ module LevelsHelper
     "#{root_url.chomp('/')}#{path}"
   end
 
-  def set_videos_and_blocks_and_callouts_and_instructions
+  def set_videos_and_blocks_and_callouts
     @autoplay_video_info = select_and_track_autoplay_video
     @callouts = select_and_remember_callouts(@script_level.nil?)
 
@@ -50,8 +52,6 @@ module LevelsHelper
         @level.try(:project_template_level).try(:start_blocks) ||
         @level.start_blocks
     end
-
-    localize_levelbuilder_instructions
   end
 
   def select_and_track_autoplay_video
@@ -151,13 +151,6 @@ module LevelsHelper
 
   def boolean_string_false
     "false"
-  end
-
-  def localize_levelbuilder_instructions
-    if I18n.locale != 'en-us'
-      loc_val = data_t("instructions", "#{@level.name}_instruction")
-      @level.properties['instructions'] = loc_val unless loc_val.nil?
-    end
   end
 
   # Code for generating the blockly options hash
@@ -271,12 +264,15 @@ module LevelsHelper
       level.delete('fn_failureCondition')
     end
 
-    # Fetch localized strings
-    %w(instructions).each do |label|
-      val = [@level.game.app, @level.game.name].map { |name|
-        data_t("level.#{label}", "#{name}_#{@level.level_num}")
-      }.compact.first
-      level[label] ||= val unless val.nil?
+    #Fetch localized strings
+    if @level.level_num_custom?    
+      loc_val = data_t("instructions", "#{@level.name}_instruction")
+      unless I18n.locale.to_s == 'en-us' || loc_val.nil?
+        level['instructions'] = loc_val
+      end
+    else
+      loc_val = data_t("level.instructions", "#{@level.game.name}_#{@level.level_num}")
+      level['instructions'] = loc_val unless loc_val.nil?
     end
 
     # Set some values that Blockly expects on the root of its options string
@@ -294,6 +290,7 @@ module LevelsHelper
       },
       droplet: @game.try(:uses_droplet?),
       pretty: Rails.configuration.pretty_apps ? '' : '.min',
+      applabUserId: @applab_user_id,
     }
     app_options[:scriptId] = @script.id if @script
     app_options[:levelGameName] = @level.game.name if @level.game
@@ -319,7 +316,7 @@ module LevelsHelper
     if %w(.jpg .png .gif).include? File.extname(path)
       "<img src='#{path.strip}' #{"width='#{width.strip}'" if width}></img>"
     elsif File.extname(path).ends_with? '_blocks'
-      # '.start_blocks' takes the XML from the start_blocks of the specified level.
+      # '.start_blocks' takes the XML from the start_bslocks of the specified level.
       ext = File.extname(path)
       base_level = File.basename(path, ext)
       level = Level.find_by(name: base_level)
@@ -395,5 +392,12 @@ module LevelsHelper
         SoftButton.new('Down', 'downButton'),
         SoftButton.new('Up', 'upButton'),
     ]
+  end
+
+  # Unique, consistent ID for a user of an applab app.
+  def applab_user_id
+    app_id = "1337" # Stub value, until storage for app_id's is available.
+    user_id = current_user ? current_user.id.to_s : session.id
+    Digest::SHA1.base64digest("#{app_id}:#{user_id}").tr('=', '')
   end
 end
