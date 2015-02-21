@@ -11,7 +11,7 @@ describe("dataConverters", function () {
     var minifyBinary = dataConverters.minifyBinary;
 
     it("strips all characters except zeroes and ones", function () {
-      assertEqual('00101', minifyBinary(' 0ABX$0K10Z  TU1'));
+      assertEqual('00101', minifyBinary(' 0ABX$0K\x0D10Z  TU1'));
     });
   });
 
@@ -47,7 +47,7 @@ describe("dataConverters", function () {
     });
 
     it ("strips characters that aren't whitespace or decimal", function () {
-      assertEqual('1 1 1', minifyDecimal('a1 1B 1c'));
+      assertEqual('1 1 1', minifyDecimal('a1 \x071B 1c'));
     });
   });
 
@@ -70,7 +70,7 @@ describe("dataConverters", function () {
     });
 
     it ("minifies and cleans input before formatting", function () {
-      var rawInput = "01 101 A10010 1";
+      var rawInput = "01 101 A10\x15010 1";
       assertEqual('0110 1100 101', formatBinary(rawInput, 4));
     });
 
@@ -99,7 +99,7 @@ describe("dataConverters", function () {
     });
 
     it ("minifies and cleans input before formatting", function () {
-      var rawInput = "ABG cde 12xyz";
+      var rawInput = "ABG cde 12xyz\x18";
       assertEqual('AB CD E1 2', formatHex(rawInput, 2));
     });
 
@@ -109,21 +109,26 @@ describe("dataConverters", function () {
     });
   });
 
-  describe("formatDecimal", function () {
-    var formatDecimal = dataConverters.formatDecimal;
+  describe("alignDecimal", function () {
+    var alignDecimal = dataConverters.alignDecimal;
+
+    // Note: \xA0 is a non-breaking space, which is what this method
+    // pads numbers with so that they'll wrap and still align properly.
+    // Regular spaces are used between numbers, non-breaking spaces are
+    // used to pad numbers.
 
     it ("is identity for empty string", function () {
-      assertEqual('', formatDecimal(''));
+      assertEqual('', alignDecimal(''));
     });
 
     it ("puts final digits of all numbers at equal distances apart", function () {
-      assertEqual("1 1 1", formatDecimal('1  1    1'));
-      assertEqual("10 \xA01 10", formatDecimal('10 1 10'));
-      assertEqual("100 \xA010 \xA0\xA01", formatDecimal('100 10 1'));
+      assertEqual("1 1 1", alignDecimal('1  1    1'));
+      assertEqual("10 \xA01 10", alignDecimal('10 1 10'));
+      assertEqual("100 \xA010 \xA0\xA01", alignDecimal('100 10 1'));
     });
 
     it ("pads leading numbers", function () {
-      assertEqual('\xA0\xA01 \xA010 100', formatDecimal('1 10 100'));
+      assertEqual('\xA0\xA01 \xA010 100', alignDecimal('1 10 100'));
     });
   });
 
@@ -141,7 +146,7 @@ describe("dataConverters", function () {
     });
 
     it ("minifies and cleans input before converting", function () {
-      assertEqual(16, binaryToInt('0001 0000'));
+      assertEqual(16, binaryToInt('0001 \x1B \x1D \x1F 0000'));
     });
   });
 
@@ -200,7 +205,7 @@ describe("dataConverters", function () {
     });
 
     it ("minifies and cleans input before converting", function () {
-      assertEqual(2571, hexToInt('0A 0B <= ?'));
+      assertEqual(2571, hexToInt('0A 0B <= • ?'));
     });
   });
 
@@ -310,7 +315,7 @@ describe("dataConverters", function () {
     });
 
     it ("cleans binary before parsing", function () {
-      assertEqual('F8F8', binaryToHex('1111 1000 11 11 10 00'));
+      assertEqual('F8F8', binaryToHex('1111 10‰00 11 “11” 10 00'));
     });
 
     it ("right-pads when binary length is not a multiple of 4", function () {
@@ -375,7 +380,7 @@ describe("dataConverters", function () {
     });
 
     it ("cleans binary first", function () {
-      assertEqual('7 5', binaryToDecimal('11 11 01', 3));
+      assertEqual('7 5', binaryToDecimal('11 11 01™', 3));
     });
 
     it ("can extract multiple numbers from binary", function () {

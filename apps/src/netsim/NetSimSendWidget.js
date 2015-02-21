@@ -20,7 +20,7 @@ var dataConverters = require('./dataConverters');
 var minifyBinary = dataConverters.minifyBinary;
 var formatBinary = dataConverters.formatBinary;
 var formatHex = dataConverters.formatHex;
-var formatDecimal = dataConverters.formatDecimal;
+var alignDecimal = dataConverters.alignDecimal;
 var binaryToInt = dataConverters.binaryToInt;
 var intToBinary = dataConverters.intToBinary;
 var hexToInt = dataConverters.hexToInt;
@@ -201,8 +201,9 @@ NetSimSendWidget.prototype.bindElements_ = function () {
 
   rowTypes.forEach(function (rowType) {
     var tr = rootDiv.find('tr.' + rowType.typeName);
-    this[rowType.typeName + 'UI'] = {};
-    var rowFields = this[rowType.typeName + 'UI'];
+    var rowUIKey = rowType.typeName + 'UI';
+    this[rowUIKey] = {};
+    var rowFields = this[rowUIKey];
 
     shortNumberFields.forEach(function (fieldName) {
       rowFields[fieldName] = tr.find('input.' + fieldName);
@@ -212,7 +213,7 @@ NetSimSendWidget.prototype.bindElements_ = function () {
           this.makeKeyupHandler(fieldName, rowType.shortNumberConversion));
       rowFields[fieldName].blur(
           this.makeBlurHandler(fieldName, rowType.shortNumberConversion));
-    }.bind(this));
+    }, this);
 
     rowFields.message = tr.find('textarea.message');
     rowFields.message.focus(removeWatermark);
@@ -222,7 +223,7 @@ NetSimSendWidget.prototype.bindElements_ = function () {
         this.makeKeyupHandler('message', rowType.messageConversion));
     rowFields.message.blur(
         this.makeBlurHandler('message', rowType.messageConversion));
-  }.bind(this));
+  }, this);
 
   this.bitCounter = rootDiv.find('.bit_counter');
 
@@ -247,7 +248,7 @@ NetSimSendWidget.prototype.onConnectionStatusChange_ = function () {
 
 /**
  * Update send widget display
- * @param {*} [skipElement]
+ * @param {HTMLElement} [skipElement]
  */
 NetSimSendWidget.prototype.render = function (skipElement) {
   var liveFields = [];
@@ -277,7 +278,7 @@ NetSimSendWidget.prototype.render = function (skipElement) {
       inputElement: this.asciiUI[fieldName],
       newValue: this[fieldName].toString(10)
     });
-  }.bind(this));
+  }, this);
 
   liveFields.push({
     inputElement: this.binaryUI.message,
@@ -293,7 +294,7 @@ NetSimSendWidget.prototype.render = function (skipElement) {
 
   liveFields.push({
     inputElement: this.decimalUI.message,
-    newValue: formatDecimal(binaryToDecimal(this.message, 8)),
+    newValue: alignDecimal(binaryToDecimal(this.message, 8)),
     watermark: 'Decimal'
   });
 
@@ -336,18 +337,19 @@ NetSimSendWidget.prototype.onSendButtonPress_ = function () {
  * @private
  */
 NetSimSendWidget.prototype.getPacketBinary_ = function () {
+  var shortNumberFieldWidth = 4;
   var encoder = new PacketEncoder([
-    { key: 'toAddress', bits: 4 },
-    { key: 'fromAddress', bits: 4 },
-    { key: 'packetIndex', bits: 4 },
-    { key: 'packetCount', bits: 4 },
+    { key: 'toAddress', bits: shortNumberFieldWidth },
+    { key: 'fromAddress', bits: shortNumberFieldWidth },
+    { key: 'packetIndex', bits: shortNumberFieldWidth },
+    { key: 'packetCount', bits: shortNumberFieldWidth },
     { key: 'message', bits: Infinity }
   ]);
   return encoder.createBinary({
-    toAddress: intToBinary(this.toAddress, 4),
-    fromAddress: intToBinary(this.fromAddress, 4),
-    packetIndex: intToBinary(this.packetIndex, 4),
-    packetCount: intToBinary(this.packetCount, 4),
+    toAddress: intToBinary(this.toAddress, shortNumberFieldWidth),
+    fromAddress: intToBinary(this.fromAddress, shortNumberFieldWidth),
+    packetIndex: intToBinary(this.packetIndex, shortNumberFieldWidth),
+    packetCount: intToBinary(this.packetCount, shortNumberFieldWidth),
     message: this.message
   });
 };
