@@ -19,7 +19,7 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "use_modal_function_editor": "true",
-    "instructions": "Now we've got flags that are too high for our current jump! Let's add a parameter to our jump function called \"height.\" The up arrow should jump 100 pixels, but the down arrow should jump 200 pixels. Click \"edit\" on the jump function and update it so that it uses the height parameter instead of just jumping 100 pixels.",
+    "instructions": "Now we've got flags that are too high for our current jump! Let's add a parameter to our jump function called \"height.\" The up arrow should jump 200 pixels, but the down arrow should jump 100 pixels. Click \"edit\" on the jump function and update it so that it uses the height parameter instead of just jumping 100 pixels.",
     "soft_buttons": [
       "leftButton",
       "rightButton",
@@ -30,8 +30,16 @@
     "coordinate_grid_background": "false",
     "embed": "false",
     "disable_sharing": "false",
+    "protaganist_sprite_index": "0",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
     "maze_data": null,
-    "protaganist_sprite_index": "0"
+    "generate_function_pass_blocks": "false",
+    "timeout_after_when_run": "false"
   }
 }]]></config>
   <blocks>
