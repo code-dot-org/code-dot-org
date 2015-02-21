@@ -79,6 +79,7 @@ levels.ec_simple = {
     'readRecords': null,
     'updateRecord': null,
     'deleteRecord': null,
+    'getUserId': null,
     'moveForward': null,
     'moveBackward': null,
     'move': null,
