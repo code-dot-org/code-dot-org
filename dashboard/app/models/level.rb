@@ -70,6 +70,10 @@ class Level < ActiveRecord::Base
     user_id.present?
   end
 
+  def level_num_custom?
+    level_num.eql? 'custom'
+  end
+
   def self.load_custom_levels
     Dir.glob(Rails.root.join('config/scripts/**/*.level')).sort.map do |path|
       load_custom_level(File.basename(path, File.extname(path)))
