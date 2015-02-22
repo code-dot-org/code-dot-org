@@ -35,6 +35,7 @@ var BigGameLogic = function (studio) {
 BigGameLogic.prototype.onTick = function () {
   if (this.studio_.tickCount === 1) {
     this.onFirstTick_();
+    this.studio_.playerScore = 100;
     return;
   }
 
@@ -43,6 +44,10 @@ BigGameLogic.prototype.onTick = function () {
   if (titleScreenTitle.getAttribute('visibility') === "visible") {
     return;
   }
+      
+  var playerSprite = this.studio_.sprite[this.playerSpriteIndex];
+  var targetSprite = this.studio_.sprite[this.targetSpriteIndex];
+  var dangerSprite = this.studio_.sprite[this.dangerSpriteIndex];
 
   // Update target, using onscreen and update_target
   this.updateSpriteX_(this.targetSpriteIndex, this.update_target.bind(this));
@@ -68,6 +73,34 @@ BigGameLogic.prototype.onTick = function () {
         this.handleUpdatePlayer_(40);
       }
     }
+  }
+  
+  if (this.collide(playerSprite.x, playerSprite.y, dangerSprite.x, dangerSprite.y) && playerSprite.visible && dangerSprite.visible) {
+    this.studio_.vanishActor({spriteIndex:this.playerSpriteIndex});
+    setTimeout((function() {this.studio_.setSprite({spriteIndex:this.playerSpriteIndex,value:"visible"});}).bind(this), 500);
+    this.studio_.playerScore -= 20;
+
+    // send sprite back offscreen
+    this.resetSprite_(dangerSprite);
+  }
+
+  if (this.collide(playerSprite.x, playerSprite.y, targetSprite.x, targetSprite.y) && playerSprite.visible && targetSprite.visible) {
+
+    this.studio_.playerScore += 10;
+
+    // send sprite back offscreen
+    this.resetSprite_(targetSprite);
+}
+  
+  if (this.studio_.playerScore <= 0) {
+    var score = document.getElementById('score');
+    score.setAttribute('visibility', 'hidden');
+    this.studio_.showTitleScreen({title:'Game Over', text:'Click Reset to Play Again'});
+    for (var i = 0; i < this.studio_.spriteCount; i++) {
+      this.studio_.vanishActor({spriteIndex:i});
+    }
+  } else {
+    this.studio_.displayScore();
   }
 };
 
@@ -104,12 +137,7 @@ BigGameLogic.prototype.updateSpriteX_ = function (spriteIndex, updateFunction) {
   // side. We could add a delay if we want.
   if (!this.onscreen(newCenterX)) {
     // reset to other side
-    if (sprite.dir === Direction.EAST) {
-      sprite.x = 0 - sprite.width;
-    } else {
-      sprite.x = this.studio_.MAZE_WIDTH;
-    }
-    sprite.y = Math.floor(Math.random() * (this.studio_.MAZE_HEIGHT - sprite.height));
+    this.resetSprite_(sprite);
   }
 };
 
@@ -131,6 +159,18 @@ BigGameLogic.prototype.handleUpdatePlayer_ = function (key) {
 BigGameLogic.prototype.cacheBlock = function (key, block) {
   this.cached_[key] = block;
 };
+
+/**
+ * Reset sprite to the opposite side of the screen
+ */
+BigGameLogic.prototype.resetSprite_ = function (sprite) {
+  if (sprite.dir === Direction.EAST) {
+    sprite.x = 0 - sprite.width;
+  } else {
+    sprite.x = this.studio_.MAZE_WIDTH;
+  }
+  sprite.y = Math.floor(Math.random() * (this.studio_.MAZE_HEIGHT - sprite.height));
+}
 
 /**
  * Takes a cached block for a function of variable, and calculates the value
