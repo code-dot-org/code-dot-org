@@ -69,9 +69,9 @@ social:
         - unless entry[:text1_s].nil_or_empty?
           - lines = entry[:text1_s].lines 
           %div{id: "captionarea#{index}", style: "position:absolute; left:0; top:0; text-align:center; width:100%; color:#eee"}
-            .caption1{style: "left: 0px; top: 68px; position: absolute; opacity: 0"}
+            .caption1{style: "left: 50px; top: 68px; position: absolute; opacity: 0"}
               =lines[0]
-            .caption2{style: "left: 200px; top: 107px; position: absolute; opacity: 0"}
+            .caption2{style: "left: 30px; top: 107px; position: absolute; opacity: 0"}
               =lines[1]
             .caption3{style: "left: 140px; top: 156px; position: absolute; opacity: 0; font-size: 18px"}
               =lines[2]
@@ -138,8 +138,8 @@ social:
     {
       var lastImageId = "#captionarea" + lastImage;
       //console.log("hiding", lastImageId);
-      $(lastImageId + " .caption1").animate({left: "0px", opacity:0}, { duration: 2000 });
-      $(lastImageId + " .caption2").animate({left: "200px", opacity:0}, { duration: 2000 });
+      $(lastImageId + " .caption1").animate({left: "50px", opacity:0}, { duration: 2000 });
+      $(lastImageId + " .caption2").animate({left: "30px", opacity:0}, { duration: 2000 });
       $(lastImageId + " .caption3").animate({opacity:0}, { duration: 2000 });
     }
 
@@ -147,8 +147,8 @@ social:
     {
       var nextImageId = "#captionarea" + nextImage;
       //console.log("showing", nextImageId);
-      $(nextImageId + " .caption1").delay(500).animate({ left: "50px", opacity: 0.8 }, { duration: 2000 });
-      $(nextImageId + " .caption2").delay(1000).animate({ left: "90px", opacity: 0.8 }, { duration: 2000 });
+      $(nextImageId + " .caption1").delay(500).animate({ left: "0px", opacity: 0.8 }, { duration: 2000 });
+      $(nextImageId + " .caption2").delay(1000).animate({ left: "80px", opacity: 0.8 }, { duration: 2000 });
       $(nextImageId + " .caption3").delay(3500).animate({ opacity: 0.6 }, { duration: 2000 });
     }
 
