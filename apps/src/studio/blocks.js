@@ -1744,8 +1744,8 @@ exports.install = function(blockly, blockInstallOptions) {
         {name: 'title', type: blockly.BlockValueType.STRING},
         {name: 'subtitle', type: blockly.BlockValueType.STRING},
         {name: 'background', type: blockly.BlockValueType.IMAGE},
-        {name: 'danger', type: blockly.BlockValueType.IMAGE},
         {name: 'target', type: blockly.BlockValueType.IMAGE},
+        {name: 'danger', type: blockly.BlockValueType.IMAGE},
         {name: 'player', type: blockly.BlockValueType.IMAGE},
         {name: 'update-target', type: blockly.BlockValueType.FUNCTION},
         {name: 'update-danger', type: blockly.BlockValueType.FUNCTION},
@@ -1769,11 +1769,11 @@ exports.install = function(blockly, blockInstallOptions) {
       var rows = [
         'title, subtitle, background',
         [this.blockArgs[0], this.blockArgs[1], this.blockArgs[2]],
-        'danger, target, player',
+        'target, danger, player',
         [this.blockArgs[3], this.blockArgs[4], this.blockArgs[5]],
         'update-target, update-danger, update-player',
         [this.blockArgs[6], this.blockArgs[7], this.blockArgs[8]],
-        'collide?, on-screen?',
+        'collide?, onscreen?',
         [this.blockArgs[9], this.blockArgs[10]]
       ];
 
