@@ -170,7 +170,7 @@ BigGameLogic.prototype.resetSprite_ = function (sprite) {
     sprite.x = this.studio_.MAZE_WIDTH;
   }
   sprite.y = Math.floor(Math.random() * (this.studio_.MAZE_HEIGHT - sprite.height));
-}
+};
 
 /**
  * Takes a cached block for a function of variable, and calculates the value
