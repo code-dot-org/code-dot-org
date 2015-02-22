@@ -12,6 +12,7 @@
     "embed": "false",
     "instructions": "Create your own story or game! Your code is saved as a project you can return to at any time.",
     "is_k1": "false",
+    "is_project": "true",
     "skip_instructions_popup": "true",
     "disable_param_editing": "false",
     "disable_variable_editing": "false",

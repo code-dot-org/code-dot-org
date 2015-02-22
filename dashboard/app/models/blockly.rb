@@ -29,6 +29,7 @@ class Blockly < Level
     definition_highlight
     definition_collapse
     project_template_level_name
+    is_project
   )
 
   before_validation {
