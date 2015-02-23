@@ -234,6 +234,10 @@ var drawMap = function () {
     svg.appendChild(tile);
   }
 
+  if (level.coordinateGridBackground) {
+    Studio.createCoordinateGridBackground_();
+  }
+
   if (Studio.spriteStart_) {
     for (i = 0; i < Studio.spriteCount; i++) {
       // Sprite clipPath element
@@ -1224,6 +1228,7 @@ Studio.clearEventHandlersKillTickLoop = function() {
 studioApp.reset = function(first) {
   var i;
   Studio.clearEventHandlersKillTickLoop();
+  var svg = document.getElementById('svgStudio');
 
   // Soft buttons
   var softButtonCount = 0;
@@ -1313,8 +1318,6 @@ studioApp.reset = function(first) {
     }
   }
 
-  var svg = document.getElementById('svgStudio');
-
   var goalAsset = skin.goal;
   if (level.goalOverride && level.goalOverride.goal) {
     goalAsset = skin[level.goalOverride.goal];
@@ -1365,6 +1368,32 @@ studioApp.runButtonClick = function() {
 
   if (level.showZeroScore) {
     Studio.displayScore();
+  }
+};
+
+Studio.createCoordinateGridBackground_ = function () {
+  var svg = document.getElementById('svgStudio');
+  var backgroundElement = document.getElementById('background');
+
+  var origin = 0;
+  var text, bbox;
+  for (var label = 0; label <= 400; label += 100) {
+    text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    // Position text just inside the bottom right corner.
+    text.appendChild(document.createTextNode(label));
+    svg.insertBefore(text, backgroundElement.nextSibling);
+    bbox = text.getBBox();
+    text.setAttribute('x', label - origin - bbox.width - 3);
+    text.setAttribute('y', Studio.MAZE_HEIGHT - bbox.height);
+    text.setAttribute('dominant-baseline', 'hanging');
+
+    text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    // Position text just inside the bottom right corner.
+    text.appendChild(document.createTextNode(label));
+    svg.insertBefore(text, backgroundElement.nextSibling);
+    bbox = text.getBBox();
+    text.setAttribute('x', 0);
+    text.setAttribute('y', Studio.MAZE_WIDTH - (label - origin) + bbox.height);
   }
 };
 
