@@ -14,6 +14,7 @@
 
 var markup = require('./NetSimLogWidget.html');
 var dom = require('../dom');
+var NetSimEncodingSelector = require('./NetSimEncodingSelector');
 var PacketEncoder = require('./PacketEncoder');
 var dataConverters = require('./dataConverters');
 var formatBinary = dataConverters.formatBinary;
@@ -29,6 +30,12 @@ var binaryToAscii = dataConverters.binaryToAscii;
  * @constructor
  */
 var NetSimLogWidget = module.exports = function () {
+  /**
+   * A message encoding (display) setting.
+   * @type {string}
+   * @private
+   */
+  this.currentEncoding_ = 'all';
 };
 
 /**
@@ -70,7 +77,7 @@ NetSimLogWidget.prototype.bindElements_ = function (instanceID) {
 };
 
 NetSimLogWidget.prototype.onClearButtonPress_ = function () {
-  this.tableBody_.empty();
+  this.scrollArea_.empty();
 };
 
 /**
@@ -172,6 +179,7 @@ NetSimLogWidget.prototype.log = function (packet) {
       formatBinary(message, 8)
   ).addClass('binary').appendTo(packetBody);
 
+  NetSimEncodingSelector.hideRowsByEncoding(packetDiv, this.currentEncoding_);
   packetDiv.appendTo(this.scrollArea_);
 
   // Auto-scroll
@@ -180,4 +188,14 @@ NetSimLogWidget.prototype.log = function (packet) {
     scrollArea.animate({ scrollTop: scrollArea[0].scrollHeight},
         scrollTimeMs);
   }
+};
+
+/**
+ * Show or hide parts of the send UI based on the currently selected encoding
+ * mode.
+ * @param {string} newEncoding
+ */
+NetSimLogWidget.prototype.setEncoding = function (newEncoding) {
+  NetSimEncodingSelector.hideRowsByEncoding(this.rootDiv_, newEncoding);
+  this.currentEncoding_ = newEncoding;
 };
