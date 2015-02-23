@@ -19,3 +19,4 @@
 /i18n/curriculum/crowdin.yaml
 /dashboard/config/newrelic.yml
 /pegasus/config/newrelic.yml
+/pegasus/.sass-cache

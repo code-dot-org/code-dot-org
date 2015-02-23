@@ -271,8 +271,12 @@ module LevelsHelper
         level['instructions'] = loc_val
       end
     else
-      loc_val = data_t("level.instructions", "#{@level.game.name}_#{@level.level_num}")
-      level['instructions'] = loc_val unless loc_val.nil?
+      %w(instructions).each do |label|
+        val = [@level.game.app, @level.game.name].map { |name|
+          data_t("level.#{label}", "#{name}_#{@level.level_num}")
+        }.compact.first
+        level[label] ||= val unless val.nil?
+      end
     end
 
     # Set some values that Blockly expects on the root of its options string
