@@ -42,7 +42,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" id="whenRun"/>
+        <block type="when_run" deletable="false" movable="false" id="whenRun"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>
