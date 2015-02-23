@@ -1,9 +1,7 @@
 %link{rel: 'stylesheet', href: asset_path('blockly/css/common.css')}
-
+- href = asset_path @level.properties['href']
+:javascript
+  var options = #{@level.properties['options'].to_json}
 #external
-  :javascript
-    var options = #{@level.properties['options'].to_json}
-
-    $.ajax("#{asset_path @level.properties['href']}").done(function (data) {
-      $('#external').html(data);
-    });
+  / Load the external file through ActionView templates.
+  = ActionView::Base.new('public', {}, ActionController::Base.new).render(file: href)
