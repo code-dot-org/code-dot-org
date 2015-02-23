@@ -21,6 +21,7 @@ var dom = require('../dom');
 var Collidable = require('./collidable');
 var Projectile = require('./projectile');
 var BigGameLogic = require('./bigGameLogic');
+var SamBatLogic = require('./samBatLogic');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
@@ -160,9 +161,8 @@ function loadLevel() {
     case 'Big Game':
       Studio.customLogic = new BigGameLogic(Studio);
       break;
-    case 'SamTheButterfly':
-      // Going forward, we may also want to move Sam the Butterfly logic
-      // into code
+    case 'Sam the Bat':
+      Studio.customLogic = new SamBatLogic(Studio);
       break;
   }
 
@@ -234,6 +234,10 @@ var drawMap = function () {
     tile.setAttribute('x', 0);
     tile.setAttribute('y', 0);
     svg.appendChild(tile);
+  }
+
+  if (level.coordinateGridBackground) {
+    Studio.createCoordinateGridBackground_();
   }
 
   if (Studio.spriteStart_) {
@@ -1227,6 +1231,7 @@ Studio.clearEventHandlersKillTickLoop = function() {
 studioApp.reset = function(first) {
   var i;
   Studio.clearEventHandlersKillTickLoop();
+  var svg = document.getElementById('svgStudio');
 
   // Soft buttons
   var softButtonCount = 0;
@@ -1316,8 +1321,6 @@ studioApp.reset = function(first) {
     }
   }
 
-  var svg = document.getElementById('svgStudio');
-
   var goalAsset = skin.goal;
   if (level.goalOverride && level.goalOverride.goal) {
     goalAsset = skin[level.goalOverride.goal];
@@ -1368,6 +1371,32 @@ studioApp.runButtonClick = function() {
 
   if (level.showZeroScore) {
     Studio.displayScore();
+  }
+};
+
+Studio.createCoordinateGridBackground_ = function () {
+  var svg = document.getElementById('svgStudio');
+  var backgroundElement = document.getElementById('background');
+
+  var origin = 0;
+  var text, bbox;
+  for (var label = 0; label <= 400; label += 100) {
+    text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    // Position text just inside the bottom right corner.
+    text.appendChild(document.createTextNode(label));
+    svg.insertBefore(text, backgroundElement.nextSibling);
+    bbox = text.getBBox();
+    text.setAttribute('x', label - origin - bbox.width - 3);
+    text.setAttribute('y', Studio.MAZE_HEIGHT - bbox.height);
+    text.setAttribute('dominant-baseline', 'hanging');
+
+    text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    // Position text just inside the bottom right corner.
+    text.appendChild(document.createTextNode(label));
+    svg.insertBefore(text, backgroundElement.nextSibling);
+    bbox = text.getBBox();
+    text.setAttribute('x', 0);
+    text.setAttribute('y', Studio.MAZE_WIDTH - (label - origin) + bbox.height);
   }
 };
 
@@ -1542,6 +1571,7 @@ Studio.execute = function() {
     registerHandlers(handlers, 'functional_start_setBackgroundAndSpeeds',
         'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setFuncs', 'whenGameStarts');
+    registerHandlers(handlers, 'functional_start_setValue', 'whenGameStarts');
     registerHandlers(handlers, 'studio_whenLeft', 'when-left');
     registerHandlers(handlers, 'studio_whenRight', 'when-right');
     registerHandlers(handlers, 'studio_whenUp', 'when-up');

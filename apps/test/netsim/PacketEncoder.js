@@ -210,34 +210,4 @@ describe("PacketEncoder", function () {
     });
   });
 
-  describe("retrieving fields as ints", function () {
-
-    it ("reads binary and returns unsigned integer", function () {
-      var packet = '00000001 0010';
-
-      var format = new PacketEncoder([
-        { key: 'toAddress', bits: 8 },
-        { key: 'payload', bits: Infinity }
-      ]);
-
-      assertEqual(1, format.getFieldAsInt('toAddress', packet));
-      assertEqual(2, format.getFieldAsInt('payload', packet));
-    });
-
-  });
-
-  describe("retrieving fields as ascii", function () {
-
-    it ("reads binary and returns ascii string", function () {
-      var packet = '00000000 01100001 01100010 01100011';
-      var format = new PacketEncoder([
-        { key: 'toAddress', bits: 8 },
-        { key: 'payload', bits: Infinity }
-      ]);
-
-      assertEqual('abc', format.getFieldAsAscii('payload', packet));
-    });
-
-  });
-
 });
