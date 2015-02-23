@@ -7,6 +7,99 @@
     __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
 
 
+
+
+  // class UIStore: this is a lightweight inheritable *ABSTRACT* class modeled after Flux
+  // UIStore is "offline-aware", meaning that it will load assets in a different way when
+  // it knows that there is no network connection.
+  var UIStore = (function() {
+
+    function UIStore() {
+      this.save = __bind(this.save, this);
+
+      this.value = null; // Empty store
+      this.subscribers = [];
+      this.offline = false;
+    }
+
+    // Get the value of this store
+    UIStore.prototype.value = function() { return this.value; }
+
+    // When this store changes, notify via callback(data)
+    UIStore.prototype.subscribe = function(callback) {
+      this.subscribers.push(callback);
+      if (this.value)
+        callback(this.value);
+    }
+
+    // Internal call to process any data that's being saved
+    UIStore.prototype.process = function(data) { return data; }
+
+    // Set the value of this store and notify the dependent
+    UIStore.prototype.save = function(data) {
+      this.value = this.process(data);
+
+      // Note: Flux uses emitters...
+      for (var i = 0; i < this.subscribers.length; i++)
+        this.subscribers[i](this.value);
+    }
+
+    // Resolve a dynamic asset by combining the base asset filename + a serialized version of the args
+    // MUST override this.  It's okay to use args and dataType to determine the URL.
+    UIStore.prototype.resolveUrl = function(args, dataType) {
+      throw new Error("This store has not specified its URL.");
+    }
+
+    // Resolve a static asset by combining the base asset filename + a serialized version of the args
+    // MUST override this if you want to support offline access.
+    // Example: return "/data/file_" + args.id;
+    UIStore.prototype.resolveStatic = function(args) {
+      throw new Error("This store does not support offline mode.");
+    }
+
+    // Resolve the AJAX parameters for a dynamic request
+    // Okay to override this to, for instance, move some of the args into the URL, etc.
+    UIStore.prototype.resolve = function(args, dataType) {
+      return {
+        url: this.resolveUrl(args, dataType),
+        data: args
+      };
+    }
+
+    // Load data into this store
+    UIStore.prototype.$load = function(args, dataType, fnSave) {
+      dataType = dataType || "json";
+
+      // Set up the AJAX call to request the asset and then store the data, or raise an error.
+      var ajax = this.resolve(args, dataType);
+      ajax.dataType = dataType;
+      ajax.success = fnSave || this.save;
+      ajax.error = this.onAjaxError;
+
+      return window.Frame.load(ajax, this.resolveStatic);
+    }
+
+    // Load JSON data into this store.
+    UIStore.prototype.load = function(args) {
+      return this.$load(args, "json");
+    }
+
+    // Helper: Load XML and return it as a JSON structure
+    UIStore.prototype.loadXML = function(args) {
+      return this.$load(args, "xml");
+    }
+
+    // Helper: Load HTML into this store, as a string
+    UIStore.prototype.loadHTML = function(args) {
+      return this.$load(args, "html");
+    }
+
+    return UIStore;
+  })();
+
+
+
+
   // class LevelStore extends UIStore
   var LevelStore = (function(_super) {
     __extends(LevelStore, _super);
@@ -68,7 +161,7 @@
 
 
   // For now, create a global.  Later, this should be in module.exports
-  // (Note these are already global since they're not declared via 'var'.
+  window.UIStore = UIStore;
   window.ScriptStore = ScriptStore;
   window.UserProgressStore = UserProgressStore;
   window.LevelStore = LevelStore;

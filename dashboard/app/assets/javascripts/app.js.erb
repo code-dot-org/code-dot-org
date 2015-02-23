@@ -1,17 +1,3 @@
-// ****************
-//  IMPORTANT NOTE
-// ****************
-//
-// This file contains proof-of-concept code (though it's safe for production)
-// - UIComponent is an example React implementation
-// - UIStore is an example Flux implementation
-// - UIRouter is a really simple router
-//
-// These classes (and the derived ones) look pretty 'bulky' as they are written today.
-// If we begin using React, this file will shrink to less than half of its current size.
-// With CoffeeScript it'll shrink at least another half.
-// There's really not that much "logic" here, it's just boilerplate that can be eliminated!
-
 // New private scope -- a lot of this is boilerplate for class structures, taken from coffeescript
 (function() {
   var
@@ -19,112 +5,6 @@
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
-
-
-  // class UIComponent: this is a lightweight inheritable class modeled after React
-  var UIComponent = (function() {
-
-    function UIComponent($el, props) {
-      this.onClick = __bind(this.onClick, this);
-      this.onUpdate = __bind(this.onUpdate, this);
-      this.onDestroy = __bind(this.onDestroy, this);
-
-      this.$el = $el;
-      this.$el.on('click touchstart', this.onClick);
-      this.$el.on('destroyed', this.onDestroy);
-
-      this.props = $.extend({}, $el.data(), props);
-      this.isMounting = true;
-
-      // Set the initial state
-      this.replaceState( this.getInitialState() || {} );
-    }
-
-    // Destroy a UI component
-    UIComponent.prototype.onDestroy = function() {
-      // Don't do anything if already not mounted
-      if (!this.isMounted())
-        return;
-
-      this.componentWillUnmount();
-
-      // Remove any event handlers
-      var $el = this.$el;
-      this.$el = null;
-      $el.off('click touchstart', this.onClick);
-      $el.on('destroyed', this.onDestroy);
-
-      this.componentDidUnmount();
-    }
-
-    // Return a default state for this component
-    UIComponent.prototype.getInitialState = function() { }
-
-    // Extend/merge my state and possibly re-render
-    UIComponent.prototype.setState = function(state) {
-      if (!this.isUpdating) {
-        // Allow things to settle - no need to call more than once per execution
-        this.isUpdating = setTimeout( this.onUpdate, 1 );
-      }
-
-      // Merge this into our state
-      for (var key in state) {
-        if (__hasProp.call(state, key))
-          this.state[key] = state[key];
-      }
-    }
-
-    // Replace my state and possibly re-render
-    UIComponent.prototype.replaceState = function(state) {
-      if (!this.isUpdating) {
-        // Allow things to settle - no need to call more than once per execution
-        this.isUpdating = setTimeout( this.onUpdate, 1 );
-      }
-
-      this.state = state || {};
-    }
-
-    // My state has been changed, and we've let all other processes yield, so we know
-    // there are no more changes coming.  Time to update the DOM.
-    UIComponent.prototype.onUpdate = function(ev) {
-      // Don't do anything if no longer mounted
-      if (!this.isMounted())
-        return;
-
-      this.isMounting ? this.componentWillMount() : this.componentWillUpdate();
-
-      this.render();
-      delete this.isUpdating;
-
-      this.$el.addClass('ui-rendered');
-
-      this.isMounting ? this.componentDidMount() : this.componentDidUpdate();
-      delete this.isMounting;
-    }
-
-    // Render into this element, given some state
-    // There is no default rendering
-    UIComponent.prototype.render = function() { }
-
-    // Handle a click
-    // There is no default click behavior
-    UIComponent.prototype.onClick = function(ev) { }
-
-    // Mount/unmount notifications
-    UIComponent.prototype.componentWillMount = function() { }
-    UIComponent.prototype.componentDidMount = function() { }
-    UIComponent.prototype.componentWillUnmount = function() { }
-    UIComponent.prototype.componentDidUnmount = function() { }
-    UIComponent.prototype.componentWillUpdate = function() { }
-    UIComponent.prototype.componentDidUpdate = function() { }
-    UIComponent.prototype.isMounted = function() {
-      return this.$el !== null;
-    }
-
-    return UIComponent;
-  })();
-
-
 
 
 
@@ -138,19 +18,6 @@
       var re, parts, el,
         url = window.location.pathname;
 
-      /* TODO: Need a way to wait until JSX is loaded.
-      React.render(React.createElement(HelloBar), document.getElementsByClassName('header_middle')[0] );
-      */
-
-      /*
-      window.headerBar = new HeaderBar( $('.header-wrapper') );
-      */
-
-      // Special handling for #blocklyApp, which could be on any route.
-      el = $('#blocklyApp');
-      if (el.length) {
-        window.blocklyApp = new BlocklyApp( el );
-      }
 
       // s/:script_id/level/:level_id
       // (only applies to the default scripts ID < 8)
@@ -203,10 +70,10 @@
       }
 
       // Right now, the static is a fixed route
-      if (window.Frame.isStatic) {
+      if (window.Frame.isSinglePage) {
         var params = Frame.queryParams() || {
           script: '20-hour',
-          stage: 3,
+          stage: 3,  // TODO: Default route
           level: 3
         };
 
@@ -230,94 +97,6 @@
 
 
 
-
-  // class UIStore: this is a lightweight inheritable *ABSTRACT* class modeled after Flux
-  // UIStore is "offline-aware", meaning that it will load assets in a different way when
-  // it knows that there is no network connection.
-  var UIStore = (function() {
-
-    function UIStore() {
-      this.save = __bind(this.save, this);
-
-      this.value = null; // Empty store
-      this.subscribers = [];
-      this.offline = false;
-    }
-
-    // Get the value of this store
-    UIStore.prototype.value = function() { return this.value; }
-
-    // When this store changes, notify via callback(data)
-    UIStore.prototype.subscribe = function(callback) {
-      this.subscribers.push(callback);
-      if (this.value)
-        callback(this.value);
-    }
-
-    // Internal call to process any data that's being saved
-    UIStore.prototype.process = function(data) { return data; }
-
-    // Set the value of this store and notify the dependent
-    UIStore.prototype.save = function(data) {
-      this.value = this.process(data);
-
-      // Note: Flux uses emitters...
-      for (var i = 0; i < this.subscribers.length; i++)
-        this.subscribers[i](this.value);
-    }
-
-    // Resolve a dynamic asset by combining the base asset filename + a serialized version of the args
-    // MUST override this.  It's okay to use args and dataType to determine the URL.
-    UIStore.prototype.resolveUrl = function(args, dataType) {
-      throw new Error("This store has not specified its URL.");
-    }
-
-    // Resolve a static asset by combining the base asset filename + a serialized version of the args
-    // MUST override this if you want to support offline access.
-    // Example: return "/data/file_" + args.id;
-    UIStore.prototype.resolveStatic = function(args) {
-      throw new Error("This store does not support offline mode.");
-    }
-
-    // Resolve the AJAX parameters for a dynamic request
-    // Okay to override this to, for instance, move some of the args into the URL, etc.
-    UIStore.prototype.resolve = function(args, dataType) {
-      return {
-        url: this.resolveUrl(args, dataType),
-        data: args
-      };
-    }
-
-    // Load data into this store
-    UIStore.prototype.$load = function(args, dataType, fnSave) {
-      dataType = dataType || "json";
-
-      // Set up the AJAX call to request the asset and then store the data, or raise an error.
-      var ajax = this.resolve(args, dataType);
-      ajax.dataType = dataType;
-      ajax.success = fnSave || this.save;
-      ajax.error = this.onAjaxError;
-
-      return window.Frame.load(ajax, this.resolveStatic);
-    }
-
-    // Load JSON data into this store.
-    UIStore.prototype.load = function(args) {
-      return this.$load(args, "json");
-    }
-
-    // Helper: Load XML and return it as a JSON structure
-    UIStore.prototype.loadXML = function(args) {
-      return this.$load(args, "xml");
-    }
-
-    // Helper: Load HTML into this store, as a string
-    UIStore.prototype.loadHTML = function(args) {
-      return this.$load(args, "html");
-    }
-
-    return UIStore;
-  })();
 
 
 
@@ -631,115 +410,16 @@
 
 
 
-
-  // class BlocklyApp extends UIComponent
-  var BlocklyApp = (function(_super) {
-    __extends(BlocklyApp, _super);
+  // class App, the base class for all level apps
+  var App = (function() {
 
     // Must have a constructor
-    function BlocklyApp() {
-      BlocklyApp.__super__.constructor.apply(this, arguments);
-
-      return this;
-    }
-
-    BlocklyApp.prototype.render = function() {
-      var el;
-
-      this.$el.html('');
-
-      $('<div>').addClass('loading').appendTo(this.$el);
-
-      el = $('<div>').addClass('slow_load').text('<%= I18n.t(:slow_loading) %>').appendTo(this.$el);
-
-      $('<br>').appendTo(el);
-
-      $('<a>', {
-        href: 'javascript: location.reload();'
-      }).text('<%= I18n.t(:try_reloading) %>').appendTo(el);
-    }
-
-    BlocklyApp.prototype.componentDidMount = function() {
-      var _this = this;
-
-      // Show the slow-loading warning if it takes more than 10 seconds to initialize
-      var slow_load = _this.$el.find('.slow_load');
-      setTimeout(function() {
-        slow_load.show();
-      }, 10000);
-
-      // When the levelStore gets data, update blockly
-      window.levelStore.subscribe( function(data) {
-
-        data.level.level_id = data.level.level.id; // because level.id gets overwritten by the DIV id inside blockly somewhere
-
-        // Set up the blockly options, starting from some default values
-        var opts = $.extend({
-          baseUrl: '/blockly/',
-          containerId: _this.$el.attr('id'),
-          script_name: data.stage.script_name,
-          scriptPath: Frame.linkTo({
-              script: data.stage.script_name,
-              stage: data.stage.position,
-              level: data.level.position
-            }, true) // Normalize for a live URL because these are just tracking metrics
-        }, data.level);
-
-        // Blockly baseUrl must be an absolute path.
-        opts.baseUrl = Frame.getAbsolutePath(opts.baseUrl);
-        opts.level.stage_name = data.stage.name;
-
-        // Kick-start the blockly scripts
-        _this.loadAssets(opts)
-        .then(function() {
-          _this.startBlockly(opts);
-        });
-
-      });
-
-    }
-
-    BlocklyApp.prototype.loadSource = function(name) {
-      var _this = this;
-
-      return function () {
-        return Frame.loadSource(_this.baseUrl + 'js/' + name + '.js');
-      };
-    }
-
-    BlocklyApp.prototype.loadStyle = function(name) {
-      return Frame.loadStyle(this.baseUrl + 'css/' + name + '.css');
-    }
-
-    // Load the assets required for a certain level
-    BlocklyApp.prototype.loadAssets = function(opts) {
-      this.baseUrl = opts.baseUrl;
-
-      this.loadStyle('common');
-      this.loadStyle(opts.app);
-
-      var promise;
-      if (opts.droplet) {
-        this.loadStyle('droplet/droplet.min');
-        promise = this.loadSource('jsinterpreter/acorn_interpreter')()
-          .then(this.loadSource('requirejs/require'))
-          .then(this.loadSource('ace/ace'))
-          .then(this.loadSource('ace/ext-language_tools'))
-          .then(this.loadSource('droplet/droplet-full.min'));
-      } else {
-        promise = this.loadSource('blockly')()
-          .then(this.loadSource(opts.locale + '/blockly_locale'));
-      }
-      return promise.then(this.loadSource('common' + opts.pretty))
-        .then(this.loadSource(opts.locale + '/common_locale'))
-        .then(this.loadSource(opts.locale + '/' + opts.app + '_locale'))
-        .then(this.loadSource(opts.app + opts.pretty));
-    }
-
-    // Sets up default options and initializes blockly
-    BlocklyApp.prototype.startBlockly = function(opts) {
-      if (!this.isMounted())
-        return;
+    function App(opts) {
+      $.extend(this, {
+        Dialog: Dialog,
+        cdoSounds: CDOSounds,
+        position: { blockYCoordinateInterval: 25 }
+      }, opts);
 
       // Turn string values into functions for keys that begin with 'fn_' (JSON can't contain function definitions)
       // E.g. { fn_example: 'function () { return; }' } becomes { example: function () { return; } }
@@ -755,256 +435,301 @@
             fixUpFunctions(node[i]);
           }
         }
-      })(opts.level);
+      })(this.level);
 
-      // Add all the default options for blockly.
-      // Note that "this" in functions below is the blockly object, not this component.
-      $.extend(opts, {
-        Dialog: Dialog,
-        cdoSounds: CDOSounds,
-        position: { blockYCoordinateInterval: 25 },
+      this.onAttempt = __bind(this.onAttempt, this);
+      this.onContinue = __bind(this.onContinue, this);
+      this.backToPreviousLevel = __bind(this.backToPreviousLevel, this);
+      this.onResetPressed = __bind(this.onResetPressed, this);
 
-        onInitialize: function() {
-          // When called, "this" is bound to the options hash itself
+      return this;
+    }
 
-          // TODO: Confirm that moving this to onInitialize is ok - no timing effects?
-          window.startTiming('Puzzle', this.scriptPath, '');
+    App.prototype.init = function() {
+      var _this = this;
+      this.loadAssets().then(function() {
+        window[_this.app + 'Main'](_this);
+      });
+    }
 
-          // Hide callouts when the function editor is closed (otherwise they jump to the top left corner)
-          $(window).on('function_editor_closed', function() {
-            $('.cdo-qtips').qtip('hide');
-          });
+    App.prototype.loadAssets = function(name) {
+    }
 
-          this.createCallouts();
-          if (window.wrapExistingClipPaths && window.handleClipPathChanges) {
-            wrapExistingClipPaths();
-            handleClipPathChanges();
-          }
+    App.prototype.loadSource = function(filename, locale) {
+      var _this = this;
 
-          $(document).trigger('appInitialized', this);
-        },
+      return function () {
+        if (locale)
+          filename = locale + "/" + filename;
+        return Frame.loadSource(_this.baseUrl + "js/" + filename + ".js");
+      };
+    }
 
-        createCallouts: function() {
-          $.fn.qtip.zindex = 500;
-          this.callouts && this.callouts.every(function(callout) {
-            var selector = callout.element_id; // jquery selector.
-            if ($(selector).length === 0 && !callout.on) {
-              return true;
-            }
+    App.prototype.loadStyle = function(name) {
+      return Frame.loadStyle(this.baseUrl + 'css/' + name + '.css');
+    }
 
-            var defaultConfig = {
-              content: {
-                text: callout.localized_text,
-                title: {
-                  button: $('<div class="tooltip-x-close"/>')
-                }
-              },
-              style: {
-                classes: "",
-                tip: {
-                  width: 20,
-                  height: 20
-                }
-              },
-              position: {
-                my: "bottom left",
-                at: "top right"
-              },
-              hide: {
-                event: 'click mousedown touchstart'
-              },
-              show: false // don't show on mouseover
-            };
+    return App;
+  })();
 
-            var customConfig = $.parseJSON(callout.qtip_config);
-            var config = $.extend(true, {}, defaultConfig, customConfig);
-            config.style.classes = config.style.classes.concat(" cdo-qtips");
 
-            function reverseDirection(token) {
-              if (/left/i.test(token)) {
-                token = 'right';
-              } else if (/right/i.test(token)) {
-                token = 'left';
-              }
-              return token;
-            }
+  // class BlocklyApp extends App
+  var BlocklyApp = (function(_super) {
+    __extends(BlocklyApp, _super);
 
-            function reverseCallout(position) {
-              position = position.split(/\s+/);
-              var a = position[0];
-              var b = position[1];
-              return reverseDirection(a) + reverseDirection(b);
-            }
+    // Must have a constructor
+    function BlocklyApp(opts) {
+      BlocklyApp.__super__.constructor.apply(this, arguments);
 
-            // Reverse callouts in RTL mode
-            if (Blockly.RTL) {
-              config.position.my = reverseCallout(config.position.my);
-              config.position.at = reverseCallout(config.position.at);
-              if (config.position.adjust) {
-                config.position.adjust.x *= -1;
-              }
-            }
+      return this;
+    }
 
-            if (callout.on) {
-              window.addEventListener(callout.on, function() {
-                if (!callout.seen && $(selector).length > 0) {
-                  callout.seen = true;
-                  $(selector).qtip(config).qtip('show');
-                }
-              });
-            } else {
-              $(selector).qtip(config).qtip('show');
-            }
+    $.extend(BlocklyApp.prototype, {
+      loadAssets: function() {
+        this.loadStyle('common');
+        this.loadStyle(this.app);
 
+        var promise;
+        if (this.droplet) {
+          this.loadStyle('droplet/droplet.min');
+          promise = this.loadSource('jsinterpreter/acorn_interpreter')()
+            .then(this.loadSource('requirejs/require'))
+            .then(this.loadSource('ace/ace'))
+            .then(this.loadSource('ace/ext-language_tools'))
+            .then(this.loadSource('droplet/droplet-full.min'));
+        } else {
+          promise = this.loadSource('blockly')()
+            .then(this.loadSource('blockly_locale', this.locale));
+        }
+        return promise
+          .then(this.loadSource('common' + this.pretty))
+          .then(this.loadSource('common_locale', this.locale))
+          .then(this.loadSource(this.app + '_locale', this.locale))
+          .then(this.loadSource(this.app + this.pretty));
+      },
+
+      onInitialize: function() {
+        // TODO: Confirm that moving this to onInitialize is ok - no timing effects?
+        window.startTiming('Puzzle', this.scriptPath, '');
+
+        // Hide callouts when the function editor is closed (otherwise they jump to the top left corner)
+        $(window).on('function_editor_closed', function() {
+          $('.cdo-qtips').qtip('hide');
+        });
+
+        this.createCallouts();
+        if (window.wrapExistingClipPaths && window.handleClipPathChanges) {
+          wrapExistingClipPaths();
+          handleClipPathChanges();
+        }
+
+        $(document).trigger('appInitialized', this);
+      },
+
+      createCallouts: function() {
+        $.fn.qtip.zindex = 500;
+        this.callouts && this.callouts.every(function(callout) {
+          var selector = callout.element_id; // jquery selector.
+          if ($(selector).length === 0 && !callout.on) {
             return true;
-          });
-        },
-
-        onAttempt: function(report) {
-          var scriptPath = this.scriptPath;
-          var _this = this;
-
-          // Track puzzle attempt event
-          trackEvent('Puzzle', 'Attempt', scriptPath, report.pass ? 1 : 0);
-          if (report.pass) {
-            trackEvent('Puzzle', 'Success', scriptPath, report.attempt);
-            window.stopTiming('Puzzle', scriptPath, '');
-          }
-          trackEvent('Activity', 'Lines of Code', scriptPath, report.lines);
-
-          // ==============
-          // TODO: Removing lastServerResponse -- and therefore nextRedirect, previousLevelRedirect, and videoInfo has broken
-          // all other level types besides Blockly.
-          // They'll need to be updated to the new method of querying the level info (which is a good idea anyway since they are just
-          // extra copies of the same code.)
-          // ==============
-
-          var onMilestone = function(response) {
-            _this.report = null;
-
-            // This used to be passed back from the milestone API.  It's used in a place that might not have easy access to
-            // scriptPath, so we pack it in until we can remove that location.
-            response.levelPath = scriptPath;
-
-            if (report.onComplete)
-              report.onComplete(response);
           }
 
-          var data = $.extend({}, report);
-          delete data.onComplete;
-
-          // Make a POST request to the milestone API
-          if (this.report)
-            this.report.abort();
-          this.report = Frame.save({
-            url: this.milestone,
-            data: data,
-            success: onMilestone,
-            error: function (xhr, textStatus, thrownError) {
-              // Ignore an aborted API call
-              if (textStatus == "abort")
-                return;
-
-              // It's okay if milestone fails. Catch the error and pretend it succeeded with minimal info.
-              onMilestone({
-                'error': xhr.responseText,
-                message: report.pass ? 'good job' : 'try again',
-                design: 'white_background'
-              });
-            }
-          });
-        },
-        onResetPressed: function() {
-          if (this.report) {
-            this.report.abort();
-            this.report = null;
-          }
-        },
-        onContinue: function() {
-          var route;
-
-          // Is this level the script completion?
-          if (opts.level.next === false) {
-            route = {
-              complete: opts.script_name
-            };
-          } else {
-            // Calculate the next level and route to it.
-            var next = opts.level.next || [ opts.level.stage, opts.level.position + 1];
-            route = {
-              script: opts.script_name,
-              stage: next[0],
-              level: next[1]
-            };
-          }
-
-          // If this level has a wrap-up video, show it before moving on.
-          if (opts.level.wrapupVideo) {
-            opts.level.wrapupVideo.redirect = Frame.linkTo(route);  // someday, can just pass in a route.
-            showVideoDialog(opts.level.wrapupVideo);
-          } else {
-            if (!Frame.goTo(route)) {
-              // What kind of message should the user get?
-            }
-          }
-        },
-        backToPreviousLevel: function() {
-          if (opts.level.previous === false) {
-            // Does this mean anything or do we just fail silently?
-            return;
-          }
-
-          // Calculate the previous level and route to it.
-          var prev = opts.level.previous || [ opts.level.stage, opts.level.position - 1];
-          var route = {
-            script: opts.script_name,
-            stage: prev[0],
-            level: prev[1]
+          var defaultConfig = {
+            content: {
+              text: callout.localized_text,
+              title: {
+                button: $('<div class="tooltip-x-close"/>')
+              }
+            },
+            style: {
+              classes: "",
+              tip: {
+                width: 20,
+                height: 20
+              }
+            },
+            position: {
+              my: "bottom left",
+              at: "top right"
+            },
+            hide: {
+              event: 'click mousedown touchstart'
+            },
+            show: false // don't show on mouseover
           };
+
+          var customConfig = $.parseJSON(callout.qtip_config);
+          var config = $.extend(true, {}, defaultConfig, customConfig);
+          config.style.classes = config.style.classes.concat(" cdo-qtips");
+
+          function reverseDirection(token) {
+            if (/left/i.test(token)) {
+              token = 'right';
+            } else if (/right/i.test(token)) {
+              token = 'left';
+            }
+            return token;
+          }
+
+          function reverseCallout(position) {
+            position = position.split(/\s+/);
+            var a = position[0];
+            var b = position[1];
+            return reverseDirection(a) + reverseDirection(b);
+          }
+
+          // Reverse callouts in RTL mode
+          if (Blockly.RTL) {
+            config.position.my = reverseCallout(config.position.my);
+            config.position.at = reverseCallout(config.position.at);
+            if (config.position.adjust) {
+              config.position.adjust.x *= -1;
+            }
+          }
+
+          if (callout.on) {
+            window.addEventListener(callout.on, function() {
+              if (!callout.seen && $(selector).length > 0) {
+                callout.seen = true;
+                $(selector).qtip(config).qtip('show');
+              }
+            });
+          } else {
+            $(selector).qtip(config).qtip('show');
+          }
+
+          return true;
+        });
+      },
+
+      onAttempt: function(report) {
+        var scriptPath = this.scriptPath;
+        var _this = this;
+
+        // Track puzzle attempt event
+        trackEvent('Puzzle', 'Attempt', scriptPath, report.pass ? 1 : 0);
+        if (report.pass) {
+          trackEvent('Puzzle', 'Success', scriptPath, report.attempt);
+          window.stopTiming('Puzzle', scriptPath, '');
+        }
+        trackEvent('Activity', 'Lines of Code', scriptPath, report.lines);
+
+        // ==============
+        // TODO: Removing lastServerResponse -- and therefore nextRedirect, previousLevelRedirect, and videoInfo has broken
+        // all other level types besides Blockly.
+        // They'll need to be updated to the new method of querying the level info (which is a good idea anyway since they are just
+        // extra copies of the same code.)
+        // ==============
+
+        var onMilestone = function(response) {
+          _this.report = null;
+
+          // This used to be passed back from the milestone API.  It's used in a place that might not have easy access to
+          // scriptPath, so we pack it in until we can remove that location.
+          response.levelPath = scriptPath;
+
+          if (report.onComplete)
+            report.onComplete(response);
+        }
+
+        var data = $.extend({}, report);
+        delete data.onComplete;
+
+        // Make a POST request to the milestone API
+        if (this.report)
+          this.report.abort();
+        this.report = Frame.save({
+          url: this.milestone,
+          data: data,
+          success: onMilestone,
+          error: function (xhr, textStatus, thrownError) {
+            // Ignore an aborted API call
+            if (textStatus == "abort")
+              return;
+
+            // It's okay if milestone fails. Catch the error and pretend it succeeded with minimal info.
+            onMilestone({
+              'error': xhr.responseText,
+              message: report.pass ? 'good job' : 'try again',
+              design: 'white_background'
+            });
+          }
+        });
+      },
+      onResetPressed: function() {
+        if (this.report) {
+          this.report.abort();
+          this.report = null;
+        }
+      },
+      onContinue: function() {
+        var route;
+
+        // Is this level the script completion?
+        if (opts.level.next === false) {
+          route = {
+            complete: opts.script_name
+          };
+        } else {
+          // Calculate the next level and route to it.
+          var next = opts.level.next || [ opts.level.stage, opts.level.position + 1];
+          route = {
+            script: opts.script_name,
+            stage: next[0],
+            level: next[1]
+          };
+        }
+
+        // If this level has a wrap-up video, show it before moving on.
+        if (opts.level.wrapupVideo) {
+          opts.level.wrapupVideo.redirect = Frame.linkTo(route);  // someday, can just pass in a route.
+          showVideoDialog(opts.level.wrapupVideo);
+        } else {
           if (!Frame.goTo(route)) {
             // What kind of message should the user get?
           }
-        },
-        showInstructionsWrapper: function(showInstructions) {
-          var hasInstructions = this.level.instructions || this.level.aniGifURL;
-          if (!hasInstructions || this.share || this.level.skipInstructionsPopup) {
-            return;
-          }
-
-          if (this.autoplayVideo) {
-            showVideoDialog(this.autoplayVideo);
-            $('.video-modal').on('hidden.bs.modal', function () {
-              showInstructions();
-            });
-          } else {
-            showInstructions();
-          }
         }
-      });
+      },
+      backToPreviousLevel: function() {
+        if (opts.level.previous === false) {
+          // Does this mean anything or do we just fail silently?
+          return;
+        }
 
-      // TODO: need a better way to bind this.
-      // Summary of the problem: onAttempt (and others) used global variables to get at the option
-      // state like .scriptPath, as well as global functions like sendReport()
-      // Ideally these would be available as local methods, but the current appMain & StudioApp code
-      // does not offer any way to get at options.scriptPath when calling .onAttempt.
-      // We could bind functions in onInitialize, but that's called *after* the functions have already
-      // been copied out into the StudioApp.
-      // The bigger question is: what *should* "this" be when calling parameters in the config block?
-      opts.onAttempt = __bind(opts.onAttempt, opts);
-      opts.onContinue = __bind(opts.onContinue, opts);
-      opts.backToPreviousLevel = __bind(opts.backToPreviousLevel, opts);
-      opts.onResetPressed = __bind(opts.onResetPressed, opts);
+        // Calculate the previous level and route to it.
+        var prev = opts.level.previous || [ opts.level.stage, opts.level.position - 1];
+        var route = {
+          script: opts.script_name,
+          stage: prev[0],
+          level: prev[1]
+        };
+        if (!Frame.goTo(route)) {
+          // What kind of message should the user get?
+        }
+      },
+      showInstructionsWrapper: function(showInstructions) {
+        var hasInstructions = this.level.instructions || this.level.aniGifURL;
+        if (!hasInstructions || this.share || this.level.skipInstructionsPopup) {
+          return;
+        }
 
-      window[opts.app + 'Main'](opts);
-    }
+        if (this.autoplayVideo) {
+          showVideoDialog(this.autoplayVideo);
+          $('.video-modal').on('hidden.bs.modal', function () {
+            showInstructions();
+          });
+        } else {
+          showInstructions();
+        }
+      }
+
+    });
 
     return BlocklyApp;
-  })(UIComponent);
+  })(App);
 
 
   // Exports:
-  window.UIStore = UIStore;
-  window.UIComponent = UIComponent;
   window.UIRouter = UIRouter;
   window.UIFrame = UIFrame;
   window.BlocklyApp = BlocklyApp;

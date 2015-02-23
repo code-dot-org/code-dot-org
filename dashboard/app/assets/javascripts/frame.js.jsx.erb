@@ -1,11 +1,3 @@
-/**
- * Dynamic header generation and event bindings for header actions.
- */
-
-// TODO: Enable the 'destroyed' method?   No need if we're just going to switch to React later.
-// (function($){ $.event.special.destroyed = { remove: function(o) { if (o.handler) { o.handler() } } } })(jQuery);
-
-
 // New private scope -- a lot of this is boilerplate for class structures, taken from coffeescript
 (function() {
   var
@@ -226,20 +218,16 @@
   })
 
 
-
   var HeaderBar = React.createClass({
-    componentDidMount: function() {
-      window.levelStore.subscribe( __bind(TEMP_UPDATE, this) );
-      window.userProgressStore.subscribe( __bind(TEMP_UPDATE, this) );
-    },
-
     render: function() {
+      var P = this.props || {};
       var state = this.state || {};
-      var thisLevel = window.levelStore.value || {};
+
+      var thisLevel = P.level || {};
+      var progress = P.progress || {};
       var script = thisLevel.script || {};
       var stage = thisLevel.stage || {};
       var level = thisLevel.level || {};
-      var progress = window.userProgressStore.value || {};
 
       // Don't render the progress buttons unless we are initialized with a script
       if (!script)
@@ -374,16 +362,12 @@
   });
 
 
-  // ReferenceArea
-  // + levelStore
-  var ReferenceArea = React.createClass({
-    componentDidMount: function() {
-      // When the levelStore gets data, update blockly
-      window.levelStore.subscribe( __bind(TEMP_UPDATE, this));
-    },
 
+  // ReferenceArea level={}
+  var ReferenceArea = React.createClass({
     render: function() {
-      var state = window.levelStore.value || {};
+      var P = this.props || {};
+      var state = P.level || {};
       var level = state.level || {}
 
       // if (current_user.teacher? || current_user.admin?)
@@ -420,7 +404,7 @@
       }
 
       return (
-        <div class="reference_area">
+        <div className="reference_area">
           { solutionLink }
           { relatedVideos }
         </div>
@@ -437,7 +421,101 @@
     }
   });
 
-  window.ReferenceArea = ReferenceArea;
+
+
+  var Application = React.createClass({
+    componentDidMount: function() {
+      var dom = this.getDOMNode();
+
+      // Show the slow-loading warning if it takes more than 10 seconds to initialize
+      setTimeout(function() {
+        $(dom).find('.slow_load').show();
+      }, 10000);
+
+      // When the levelStore gets data, update blockly
+      window.levelStore.subscribe( function(data) {
+
+        data.level.level_id = data.level.level.id; // because level.id gets overwritten by the DIV id inside blockly somewhere
+
+        // Set up the blockly options, starting from some default values
+        var opts = $.extend({
+          baseUrl: '/blockly/',
+          containerId: dom.id,
+          script_name: data.stage.script_name,
+          scriptPath: Frame.linkTo({
+              script: data.stage.script_name,
+              stage: data.stage.position,
+              level: data.level.position
+            }, true) // Normalize for a live URL because these are just tracking metrics
+        }, data.level);
+
+        // Blockly baseUrl must be an absolute path.
+        opts.baseUrl = Frame.getAbsolutePath(opts.baseUrl);
+        opts.level.stage_name = data.stage.name;
+
+        switch (opts.app) {
+          case 'maze':
+            this.app = new BlocklyApp(opts);
+            this.app.init();
+            break;
+        }
+      });
+
+    },
+
+    render: function() {
+      return (
+        <div id="gogogo">
+          <div className="loading" />
+          <div className="slow_load">
+            <div><%= I18n.t(:slow_loading) %></div>
+            <a href="javascript: location.reload();"><%= I18n.t(:try_reloading) %></a>
+          </div>
+        </div>
+      );
+    }
+  });
+
+
+  // This is a wrapper to create a NEW component that watches some Stores and renders a component
+  // using the values from those stores as properties.
+  // TODO: formalize its location/usage
+  Watching = function(component, stores) {
+    return component.Watching = React.createClass({
+      componentDidMount: function() {
+        var changed = __bind(TEMP_UPDATE, this);
+
+        for (var key in stores) {
+          var store = (stores[key] || this.props[key + "Store"]);
+          if (!store || !store.subscribe) {
+            delete stores[key];
+            continue;
+          }
+
+          stores[key] = store;
+          store.subscribe( changed );
+        }
+      },
+
+      componentDidUnmount: function() {
+        for (var key in stores) {
+          stores[key].unsubscribe( changed );
+        }
+      }
+
+      render: function() {
+        var props = React.__spread( {}, this.props);
+        for (var key in stores) {
+          props[key] = stores[key].value;
+        }
+
+        return React.createElement(component, props);
+      }
+
+    });
+  };
+
+
 
   $(document).ready(function() {
     var el;
@@ -449,14 +527,30 @@
     window.Frame = new UIFrame();
     Frame.init();
 
+
+    // Create component classes that are bound to the Stores
+    var AppHeaderBar = Watching(HeaderBar, {
+      level: window.levelStore,
+      progress: window.UserProgressStore
+    });
+    var AppReferenceArea = Watching(ReferenceArea, {
+      level: window.levelStore
+    });
+
+    // Create components that are attached at known locations on the screen
     el = $('.header_middle');
     if (el.length) {
-      React.render(<HeaderBar />, el[0]);
+      React.render(<AppHeaderBar />, el[0]);
     }
 
     el = $('#reference_area');
     if (el.length) {
-      React.render(<ReferenceArea />, el[0]);
+      React.render(<AppReferenceArea />, el[0]);
+    }
+
+    el = $('#application');
+    if (el.length) {
+      React.render(<Application />, el[0]);
     }
 
     if (!Frame.isStatic) {
