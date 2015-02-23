@@ -47,7 +47,25 @@ module Ops
     end
 
     test 'Facilitators can view attendance for all segments in their workshop' do
+      #87055150 (part)
+      sign_out @admin
+      workshop = @attendance.segment.workshop
+      facilitator = workshop.facilitators.first
+      sign_in facilitator
+      get :workshop, workshop_id: workshop.id
+      assert_response :success
+      puts JSON.parse(@response.body)
+    end
 
+    test 'Facilitators can view attendance by teacher for all segments in their workshop' do
+      #87055150 (part)
+      sign_out @admin
+      workshop = @attendance.segment.workshop
+      facilitator = workshop.facilitators.first
+      sign_in facilitator
+      get :workshop, workshop_id: workshop.id, by_teacher: true
+      assert_response :success
+      puts JSON.parse(@response.body)
     end
 
     test 'Facilitators can mark attendance for each segment' do

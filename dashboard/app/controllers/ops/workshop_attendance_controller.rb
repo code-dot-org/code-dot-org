@@ -4,10 +4,10 @@ module Ops
 
     check_authorization
     # CanCan provides automatic resource loading and authorization for default index + CRUD actions
-    load_and_authorize_resource :segment, except: [:teacher, :cohort]
+    load_and_authorize_resource :segment, except: [:teacher, :cohort, :workshop]
     # Load shallow nested resource. See https://github.com/CanCanCommunity/cancancan/wiki/Nested-Resources#shallow-nesting
     load_and_authorize_resource through: :segment, through_association: :attendances, shallow: true
-    skip_load_resource only: [:teacher, :cohort]
+    skip_load_resource only: [:teacher, :cohort, :workshop]
 
     # GET /ops/attendance/teacher/1
     def teacher
@@ -36,11 +36,28 @@ module Ops
       end
     end
 
+    # GET /ops/attendance/workshop/1
+    # View attendance for all segments in a single workshop
+    def workshop
+      workshop = Workshop.includes(segments: :attendances).find(params.require(:workshop_id))
+      if params[:by_teacher]
+        # ?by_teacher=1 to index the results by teacher_id
+        by_teacher = workshop.segments.inject({}) do |hash, s|
+          attendance = s.attendances.as_json(include: :segment).group_by { |a| a['teacher_id'] }
+          hash.merge(attendance){|_,a,b|a+b}
+        end
+        respond_with by_teacher
+      else
+        respond_with workshop do |format|
+          format.json { render json: workshop.as_json(include: {segments: {include: :attendances}}) }
+        end
+      end
+    end
+
     # Batched version of #create.
     # POST /ops/segments/1/attendance/batch
     def batch
       attendances = params.require(:attendance)
-      p "attendances: #{attendances}"
       workshop = @segment.workshop
       teachers = workshop.teacher_ids
       attendances.each do |id, status|
