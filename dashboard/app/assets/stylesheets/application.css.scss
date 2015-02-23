@@ -225,27 +225,12 @@ em strong {
   display: inline-block;
 }
 
-<<<<<<< HEAD
-.puzzle_outer_assessment {
-  background-color: yellow;
-  padding: 1px;
-  display: inline-block;
-  border-radius: 20px;
-}
-
-.puzzle_outer_current {
-  background-color: $level_current;
-  padding: 1px;
-  display: inline-block;
-  border-radius: 20px;
-=======
 .puzzle_outer_assessment .level_link {
   border: 2px solid $assessment;
 }
 
 .user-stats-block .puzzle_outer_current .level_link {
   border: 2px solid $level_current;
->>>>>>> origin/staging
 }
 
 .user-stats-block
@@ -255,29 +240,6 @@ em strong {
   overflow:hidden;
   float:left;
   width:100%;
-
-  .key {
-    margin: 10px 0;
-    width: 100%;
-    float: left;
-    padding: 10px;
-    background-color: #eee;
-    dl {
-      margin: 0;
-      float: left;
-      white-space: nowrap;
-    }
-    dd, dt {
-      float: left;
-      height: 36px;
-    }
-    dt { margin-right: 5px; }
-    dd {
-      line-height: 36px;
-      margin-left: 0;
-      margin-right: 25px;
-    }
-  }
 }
 
 .stage-lesson-plan-link a,
@@ -603,15 +565,7 @@ html, body {
     background-color: #eee;
     border: 1px solid #ccc;
     display: inline-block;
-<<<<<<< HEAD
-<<<<<<< HEAD
     padding: 5px 5px 5px 10px;
-=======
-    padding: 4px 8px;
->>>>>>> origin/staging
-=======
-    padding: 5px 5px 5px 10px;
->>>>>>> ajaxify_header
     border-radius: 5px;
 
     .puzzle_outer_level,
@@ -621,10 +575,6 @@ html, body {
       margin: 0 -2px;
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ajaxify_header
 
   /* most puzzles are small dot */
   .puzzle_outer_level,
@@ -645,20 +595,6 @@ html, body {
     }
   }
 
-<<<<<<< HEAD
-  /* current and last dots are large */
-  .puzzle_outer_current,
-  .puzzle_outer_level.last,
-  .puzzle_outer_assessment.last {
-    margin: 0 5px 0 -1px;
-    vertical-align: middle;
-    border-radius: 20px;
-=======
->>>>>>> origin/staging
-
-
-=======
->>>>>>> ajaxify_header
   /* current puzzle is a large dot */
   .puzzle_outer_current {
     .level_link {
@@ -682,31 +618,6 @@ html, body {
     }
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-  /* other puzzles are small dot */
-  .puzzle_outer_level,
-  .puzzle_outer_assessment {
-    line-height: 1px;
-    .level_link {
-      box-sizing: border-box;
-      min-width: 11px;
-      width: 11px;
-      height: 11px;
-      border-radius: 11px;
-      padding: 3px;
-      margin: 0px;
-      /* hack to hide the number: */
-      font-size: 0px;
-      color: transparent;
-    }
-  }
->>>>>>> origin/staging
-
-=======
->>>>>>> ajaxify_header
   .level_link:hover {
     text-decoration: none;
     background-color: $level_current;
