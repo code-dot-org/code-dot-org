@@ -124,7 +124,7 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
 
   .scroll_area {
     background-color: white;
-    height: 180px;
+    height: 160px;
     width: 100%;
     overflow-y: scroll;
   }
@@ -134,7 +134,7 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
   }
 
   th, td {
-    padding: 5px;
+    padding: 1px 5px;
     border: solid lightgray 1px;
     border-collapse: collapse;
   }
@@ -207,6 +207,12 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
     background-color: lightgray;
     padding: 0.5em;
     border-radius: 0.5em;
+
+    th, td {
+      padding: 1px 5px;
+      border: solid lightgray 1px;
+      border-collapse: collapse;
+    }
 
     th {
       font-size: 10pt;
