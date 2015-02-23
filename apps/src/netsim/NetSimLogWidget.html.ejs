@@ -1,5 +1,25 @@
 <div id="netsim_log_widget_<%= logInstanceID %>" class="netsim_log_widget">
-  <h1><%= logTitle %></h1>
-  <textarea id="scroll_area"></textarea>
-  <input type="button" id="clear_button" value="Clear" />
+  <h1><%= logTitle %>
+    <div class="log_header_controls">
+      <input type="button" class="clear_button" value="Clear" />
+    </div>
+  </h1>
+  <div class="log_body">
+    <table>
+      <thead>
+        <tr>
+          <th nowrap class="toAddress">To</th>
+          <th nowrap class="fromAddress">From</th>
+          <th nowrap class="packetInfo">Packet</th>
+          <th nowrap class="message">Message</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div class="scroll_area">
+      <table>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
 </div>
