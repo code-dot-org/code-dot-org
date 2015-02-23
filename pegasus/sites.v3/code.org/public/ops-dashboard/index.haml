@@ -106,6 +106,20 @@ theme: angular
       return Teacher;
     }]);
 
+  services.factory('attendancesService', ['$resource',
+    function($resource){
+      var Attendance = $resource('/ops/workshops/:workshopid/teachers', {}, {
+        // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
+        //  'get':    {method:'GET'},
+        //  'save':   {method:'POST'},
+        //  'query':  {method:'GET', isArray:true},
+        //  'remove': {method:'DELETE'},
+        //  'delete': {method:'DELETE'}
+      });
+
+      return Attendance;
+    }]);
+
   // CONTROLLERS
 
   var controllers = angular.module('opsApp.controllers', []).
@@ -204,6 +218,8 @@ theme: angular
       $scope.workshop = workshopsService.get({id: $routeParams.workshopid});
       $scope.segments = segmentsService.query({id: $routeParams.workshopid});
       $scope.teachers = teachersService.query({workshopid: $routeParams.workshopid});
+      $scope.workshopTeacherSegmentAttendance = teachersService.query({workshopid: $routeParams.workshopid});
+
 
   }]);
 

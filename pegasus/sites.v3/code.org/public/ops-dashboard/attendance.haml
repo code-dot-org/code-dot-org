@@ -10,7 +10,30 @@ template: none
   %tr
     %th
     %th.manage-th{'ng-repeat' => 'segment in segments'}
-      {{segment.start}} to {{segment.end}}
+      {{segment.start | date:'shortDate'}}
+      %br
+      {{segment.start | date:'shortTime'}} - {{segment.end | date:'shortTime'}}
+
   %tr{'ng-repeat' => 'teacher in teachers'}
-    %td
+    %td{'ng-model' => 'workshop_attendance.teacher_id'}
       {{teacher.name}}
+    %td{'ng-repeat' => 'segment in segments'}
+
+
+      %form{'ng-init' => 'workshop_attendance.status="absent"; workshop_attendance.teacher_id=teacher.id'}
+        %label
+          Attended
+          %input{type:'radio', 'ng-model' => 'workshop_attendance.status', value:'present'}
+        %label
+          Absent
+          %input{type:'radio', 'ng-model' => 'workshop_attendance.status', value:'absent'}
+        %label
+          Excused absence
+          %input{type:'radio', 'ng-model' => 'workshop_attendance.status', value:'excused'}
+          %input{style:'display:none', 'ng-model' => 'workshop_attendance.teacher_id', type:'text'}
+        %br
+        -#%label
+        -#  Notes
+        -#  %input{type:'textarea'}
+        %button.btn.btn-primary{'ng-click' => 'recordSegmentAttendance(workshop_attendance)'}
+          Save
