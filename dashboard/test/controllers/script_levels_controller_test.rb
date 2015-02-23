@@ -10,7 +10,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     @admin = create(:admin)
     sign_in(@admin)
 
-    @script = Script.find(Script::TWENTY_HOUR_ID)
+    @script = Script.twenty_hour_script
     @script_level = @script.script_levels.fifth
 
     @custom_script = create(:script, :name => 'laurel')
@@ -139,16 +139,16 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "show redirects to canonical url for 20 hour" do
-    sl = ScriptLevel.find_by script_id: Script::TWENTY_HOUR_ID, chapter: 3
+    sl = ScriptLevel.find_by script_id: Script::TWENTY_HOUR_NAME, chapter: 3
     get :show, script_id: sl.script, chapter: sl.chapter
 
     assert_redirected_to build_script_level_path(sl)
   end
 
   test "updated routing for 20 hour script" do
-    sl = ScriptLevel.find_by(script_id: Script::TWENTY_HOUR_ID, chapter: 3)
+    sl = ScriptLevel.find_by(script_id: Script::TWENTY_HOUR_NAME, chapter: 3)
     assert_routing({method: "get", path: "/s/1/level/#{sl.id}"},
-                   {controller: "script_levels", action: "show", script_id: Script::TWENTY_HOUR_ID.to_s, id: sl.id.to_s})
+                   {controller: "script_levels", action: "show", script_id: Script::TWENTY_HOUR_NAME, id: sl.id.to_s})
     assert_equal '/s/20-hour/stage/2/puzzle/2', build_script_level_path(sl)
   end
 
@@ -163,7 +163,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     # we don't actually use this
     assert_routing({method: "get", path: '/k8intro/5'},
-                   {controller: "script_levels", action: "show", script_id: Script::TWENTY_HOUR_ID, chapter: "5"})
+                   {controller: "script_levels", action: "show", script_id: Script::TWENTY_HOUR_NAME, chapter: "5"})
 
     flappy_level = ScriptLevel.find_by(script_id: Script::FLAPPY_ID, chapter: 5)
     assert_routing({method: "get", path: '/flappy/5'},
@@ -548,7 +548,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "should 404 for invalid script level for twenty hour" do
     assert_raises(ActiveRecord::RecordNotFound) do # renders a 404 in prod
-      get :show, script_id: Script::TWENTY_HOUR_ID, id: 40000
+      get :show, script_id: Script::TWENTY_HOUR_NAME, id: 40000
     end
   end
 

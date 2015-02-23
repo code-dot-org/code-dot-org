@@ -48,7 +48,7 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "should redirect old k-8" do
-    get :show, id: Script::TWENTY_HOUR_ID
+    get :show, id: Script::TWENTY_HOUR_NAME
     assert_redirected_to script_path(Script.find_by_name('20-hour'))
   end
 
