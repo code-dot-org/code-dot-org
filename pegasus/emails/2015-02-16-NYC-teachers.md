@@ -23,7 +23,7 @@ Participating teachers consistently call our professional development, "The best
 
 - Integrate computer science into any middle school science class
 - Per-session stipends to teachers are paid by Code.org!
-- Open to all NYC DOE middle school science teachers & no cost to apply
+- Open to all NYC DOE middle school science teachers & no cost to apply<br />
 [Sign up](https://code.org/educate/nyc/)
 
 **For high schools:**
@@ -40,7 +40,7 @@ It opens more doors for students than any other discipline in today’s world. T
 [Bring computer science to your NYC schools](https://code.org/educate/nyc/)
 
 
-Hadi Partovi
+Hadi Partovi<br />
 founder, Code.org
 
 
