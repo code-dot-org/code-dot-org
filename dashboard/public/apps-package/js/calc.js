@@ -71,6 +71,7 @@ var appState = {
   targetSet: null,
   userSet: null,
   animating: false,
+  waitingForReport: false,
   response: null,
   message: null,
   result: null,
@@ -249,6 +250,7 @@ studioApp.runButtonClick = function() {
  */
 Calc.resetButtonClick = function () {
   appState.animating = false;
+  appState.waitingForReport = false;
   appState.response = null;
   appState.message = null;
   appState.result = null;
@@ -548,6 +550,7 @@ Calc.execute = function() {
     onComplete: onReportComplete
   };
 
+  appState.waitingForReport = true;
   studioApp.report(reportData);
 
   studioApp.playAudio(appState.result === ResultType.SUCCESS ? 'win' : 'failure');
@@ -865,7 +868,7 @@ function cloneNodeWithoutIds(elementId) {
  * studioApp.displayFeedback when appropriate
  */
 function displayFeedback() {
-  if (!appState.response || appState.animating) {
+  if (appState.waitingForReport || appState.animating) {
     return;
   }
 
@@ -903,6 +906,7 @@ function onReportComplete(response) {
   var runButton = document.getElementById('runButton');
   runButton.disabled = false;
   appState.response = response;
+  appState.waitingForReport = false;
   displayFeedback();
 }
 
