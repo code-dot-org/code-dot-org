@@ -110,9 +110,16 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
     }
   }
 
-  .tbody {
-    border: inset darkgray 2px;
+  .packet {
     margin: 10px;
+    padding: 5px;
+    border: solid darkgray thin;
+    border-radius: 3px;
+    background-color: lightgray;
+
+    td {
+      border-color: lightgray;
+    }
   }
 
   .scroll_area {
@@ -128,7 +135,7 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
 
   th, td {
     padding: 5px;
-    border: solid white 1px;
+    border: solid lightgray 1px;
     border-collapse: collapse;
   }
 
@@ -162,6 +169,10 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
 
   th.packetInfo, td.packetInfo {
     width: 100px;
+  }
+
+  td.message {
+    background-color: white;
   }
 
   td.toAddress {
