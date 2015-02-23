@@ -2,6 +2,15 @@
 title: Data for Research
 nav: educate_nav
 rightbar: blank
+social:
+  "og:description": "How students solve puzzles"
+  "og:image": "/images/research.png"
+  "og:image:width": 968
+  "og:image:height": 577
+  "og:video": ""
+  "og:video:width": ""
+  "og:video:height": ""
+  "og:video:type": ""
 ---
 
 
@@ -20,6 +29,8 @@ In the meantime, we've done one experiment with researchers at Stanford Universi
 
 
 ## Data from 2 puzzles from Hour of Code 2013 
+
+[![image](/images/fit-400/research.png)](http://stanford.edu/~cpiech/demos/research/blossoms.html)
 
 Our first foray in this space has been a partnership with a Stanford University research team led by [Mehran Sahami](http://robotics.stanford.edu/users/sahami/bio.html). Stanford researcher [Chris Piech](http://stanford.edu/~cpiech/bio/index.html) evaluated the various computer programs that students submitted to two computer programming puzzles from our popular Hour of Code tutorial. The dataset below was generated for the paper [Autonomously Generating Hints by Inferring Problem Solving Policies](http://stanford.edu/~cpiech/bio/papers/inferringProblemSolvingPolicies.pdf) by Piech, C. Mehran S. Huang J and Guibas L. 
 
