@@ -269,7 +269,6 @@ angular: teacherDashboard
                 student.highest_level = l;
                 student.highest_level_in_stage = getLevelNumberInStage(l);
               }
-              debugger;
               $timeout(delayedSetHighestLevel(student, l), 500); // add a delay so we get animation
               break;
             }
