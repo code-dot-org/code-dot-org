@@ -169,9 +169,7 @@ dashboard.saveProject = function(callback) { console.log('saving')
     });
   } else {
     storageApps().create(dashboard.currentApp, function(data) {
-      if (history) {
-        history.pushState({}, '', '?id=' + data.id);
-      }
+      location.hash = data.id;
       callbackSafe(callback, data);
     });
   }
@@ -229,10 +227,9 @@ if (appOptions.droplet) {
   promise = loadSource('blockly')()
     .then(loadSource(appOptions.locale + '/blockly_locale'));
   if (appOptions.level.isProject) {
-    var matches = location.search.match(/id=([^&]+)/);
-    if (matches) {
+    var app_id = location.hash.slice(1);
+    if (app_id) {
       // Load the project ID, if one exists
-      var app_id = matches[1];
       promise.then(function () {
         var deferred = new $.Deferred();
         storageApps().fetch(app_id, function (data) {
