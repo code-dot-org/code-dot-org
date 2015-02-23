@@ -67,6 +67,7 @@ module Dashboard
     ::CACHE_BUST = File.read(cache_bust_path).strip.gsub('.', '_') rescue ''
 
     config.assets.precompile += %w(
+      epiceditor/*.css
       editor/markdown_editor.css
       editor/markdown_editor.js
       editor/blockly_editor.css
