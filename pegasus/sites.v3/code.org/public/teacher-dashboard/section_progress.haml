@@ -9,10 +9,11 @@ theme: none
   = I18n.t('dashboard_landing_loading')
 
 :scss
-  $level_passed: rgb(159, 212, 159);
   $level_perfect: rgb(14, 190, 14);
-  $level_attempted: #fefefe;
+  $level_passed: rgb(159, 212, 159);
+  $level_attempted: yellow;
   $level_not_tried: #fefefe;
+
   $progress_background: #eee;
 
   table#progress {
@@ -101,13 +102,19 @@ theme: none
       border: none;
       background-color: $level_attempted;
     }
+
+    &.not_tried {
+      border: none;
+      background-color: $level_not_tried;
+    }
+
   }
 
   .dot {
     box-sizing: content-box;
     border-radius: 20px;
     border: 2px solid #ccc;
-    background-color: $level_attempted;
+    background-color: $level_not_tried;
     padding: 5px 7px 9px 7px;
     color: #333;
     width: 18px;
@@ -127,6 +134,16 @@ theme: none
       border: none;
       background-color: $level_passed;
       color: white;
+    }
+
+    &.attempted {
+      border: none;
+      background-color: $level_attempted;
+    }
+
+    &.not_tried {
+      border: none;
+      background-color: $level_not_tried;
     }
   }
 
@@ -194,8 +211,11 @@ theme: none
 .key
   %dl
     %dt
+      %span.bar.not_tried &nbsp;
+    %dd= I18n.t('dashboard_progress_not_started')
+    %dt
       %span.bar.attempted &nbsp;
-    %dd= I18n.t('dashboard_progress_not_completed')
+    %dd= I18n.t('dashboard_progress_attempted')
     %dt
       %span.bar.passed &nbsp;
     %dd= I18n.t('dashboard_progress_completed_too_many_blocks')

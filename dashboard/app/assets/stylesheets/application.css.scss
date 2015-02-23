@@ -153,6 +153,7 @@ em strong {
 }
 
 .level_link, .level_link:link, .level_link:visited {
+  box-sizing: content-box;
   border-radius: 20px;
   min-width: 22px;
   line-height: 22px;
