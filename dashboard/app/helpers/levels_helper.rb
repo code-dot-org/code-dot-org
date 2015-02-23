@@ -295,7 +295,7 @@ module LevelsHelper
     app_options[:scriptId] = @script.id if @script
     app_options[:levelGameName] = @level.game.name if @level.game
     app_options[:skinId] = @level.skin if @level.is_a?(Blockly)
-    app_options[:level_source_id] = @level_source_id if @level_source_id
+    app_options[:level_source_id] = @level_source.id if @level_source
     app_options[:sendToPhone] = request.location.try(:country_code) == 'US' ||
         (!Rails.env.production? && request.location.try(:country_code) == 'RD') if request
     app_options[:send_to_phone_url] = @phone_share_url if @phone_share_url
