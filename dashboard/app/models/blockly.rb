@@ -30,6 +30,8 @@ class Blockly < Level
     definition_collapse
     project_template_level_name
     is_project
+    edit_code
+    code_functions
   )
 
   before_validation {
@@ -38,7 +40,8 @@ class Blockly < Level
 
   # These serialized fields will be serialized/deserialized as straight XML
   def xml_blocks
-    %w(start_blocks toolbox_blocks required_blocks)
+    return %w(start_blocks toolbox_blocks required_blocks) unless self.game.try(:uses_droplet?)
+    %w()
   end
 
   def to_xml(options={})
@@ -136,4 +139,10 @@ class Blockly < Level
     return if !self.respond_to?(:solution_blocks) || solution_blocks.blank?
     self.ideal_level_source_id = LevelSource.find_identical_or_create(self, solution_blocks).id
   end
+
+  # What blocks should be embedded for the given block_xml. Default behavior is to change nothing.
+  def blocks_to_embed(block_xml)
+    return block_xml
+  end
+
 end

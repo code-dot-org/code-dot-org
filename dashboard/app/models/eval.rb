@@ -89,4 +89,18 @@ class Eval < Blockly
   def toolbox(type)
     Eval.toolbox
   end
+
+  # What blocks should be embedded for the given block_xml
+  def blocks_to_embed(block_xml)
+    # Solution blocks are defined in the form
+    # <block type="functional_display" (some attributes)>
+    #   <block type="function_input" (some attributes)>
+    #     (the blocks we care about)
+    #   </block>
+    # </block>
+    # This regex extracts the blocks we care about
+    match = /<xml><block type="functional_display".*?><functional_input.*?>(.*)<\/functional_input><\/block><\/xml>/.match(block_xml)
+    return match[1] || block_xml
+  end
+
 end
