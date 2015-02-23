@@ -14,7 +14,6 @@
 
 var markup = require('./NetSimEncodingSelector.html');
 
-
 /**
  * Generator and controller for message encoding selector: A dropdown that
  * controls whether messages are displayed in some combination of binary, hex,
@@ -61,10 +60,10 @@ NetSimEncodingSelector.prototype.bindElements_ = function (instanceID) {
   this.select_.change(this.onSelectChange_.bind(this));
 };
 
-NetSimEncodingSelector.prototype.render = function () {
-  // What changes?
-};
-
+/**
+ * Send new value to registered callback on change.
+ * @private
+ */
 NetSimEncodingSelector.prototype.onSelectChange_ = function () {
   this.changeEncodingCallback_(this.select_.val());
 };
