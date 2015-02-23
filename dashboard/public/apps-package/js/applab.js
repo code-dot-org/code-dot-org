@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({15:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({14:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Applab = require('./applab');
@@ -16,7 +16,7 @@ window.applabMain = function(options) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":5,"./applab":8,"./blocks":9,"./levels":14,"./skins":16}],16:[function(require,module,exports){
+},{"../appMain":5,"./applab":8,"./blocks":9,"./levels":13,"./skins":15}],15:[function(require,module,exports){
 /**
  * Load Skin for Applab.
  */
@@ -35,7 +35,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":145}],14:[function(require,module,exports){
+},{"../skins":147}],13:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/applab');
@@ -63,6 +63,9 @@ levels.simple = {
         <value name="HTML"><block type="text"><title name="TEXT">html</title></block></value></block>'),
   'startBlocks':
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
+};
+
+levels.custom = {
 };
 
 levels.ec_simple = {
@@ -114,6 +117,7 @@ levels.ec_simple = {
     'readRecords': null,
     'updateRecord': null,
     'deleteRecord': null,
+    'getUserId': null,
     'moveForward': null,
     'moveBackward': null,
     'move': null,
@@ -229,7 +233,7 @@ levels.full_sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-},{"../../locale/current/applab":188,"../block_utils":19,"../utils":186}],8:[function(require,module,exports){
+},{"../../locale/current/applab":191,"../block_utils":18,"../utils":189}],8:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -253,7 +257,6 @@ var utils = require('../utils');
 var dropletConfig = require('./dropletConfig');
 var Slider = require('../slider');
 var AppStorage = require('./appStorage');
-var FormStorage = require('./formStorage');
 var constants = require('../constants');
 var KeyCodes = constants.KeyCodes;
 var _ = utils.getLodash();
@@ -269,6 +272,7 @@ var Applab = module.exports;
 
 var level;
 var skin;
+var user;
 
 //TODO: Make configurable.
 studioApp.setCheckForEmptyBlocks(true);
@@ -901,6 +905,8 @@ Applab.init = function(config) {
       dom.addClickTouchEvent(viewDataButton, Applab.onViewData);
     }
   }
+
+  user = {applabUserId: config.applabUserId};
 };
 
 /**
@@ -2364,6 +2370,12 @@ Applab.handleDeleteRecord = function(successCallback) {
   }
 };
 
+Applab.getUserId = function (opts) {
+  if (!user.applabUserId) {
+    throw new Error("User ID failed to load.");
+  }
+  return user.applabUserId;
+};
 
 /*
 var onWaitComplete = function (opts) {
@@ -2634,7 +2646,7 @@ var getPegasusHost = function() {
         return Array(multiplier + 1).join(input)
     }
 
-},{"../../locale/current/applab":188,"../../locale/current/common":191,"../StudioApp":4,"../codegen":44,"../constants":46,"../dom":47,"../skins":145,"../slider":146,"../templates/page.html":166,"../utils":186,"../xml":187,"./api":6,"./appStorage":7,"./blocks":9,"./controls.html":10,"./dropletConfig":11,"./extraControlRows.html":12,"./formStorage":13,"./visualization.html":17}],17:[function(require,module,exports){
+},{"../../locale/current/applab":191,"../../locale/current/common":194,"../StudioApp":4,"../codegen":44,"../constants":46,"../dom":47,"../skins":147,"../slider":148,"../templates/page.html":169,"../utils":189,"../xml":190,"./api":6,"./appStorage":7,"./blocks":9,"./controls.html":10,"./dropletConfig":11,"./extraControlRows.html":12,"./visualization.html":16}],16:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2654,190 +2666,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":207}],13:[function(require,module,exports){
-/**
- * CodeOrgApp: Applab
- *
- * Copyright 2014-2015 Code.org
- *
- */
-
-'use strict';
-
-/**
- * Namespace for form storage.
- */ 
-var FormStorage = module.exports;
-
-
-/**
- * Creates a new record in the specified table.
- * @param {string} record.tableName The name of the table to read from.
- * @param {Object} record Object containing other properties to store
- *     on the record.
- * @param {Function} callback Function to call with the resulting record.
- */
-FormStorage.createRecord = function(record, callback) {
-  var tableName = record.tableName;
-  if (!tableName) {
-    // TODO(dave): remove console.log for IE9 compatability, here and below.
-    console.log('readRecords: missing required property "tableName"');
-    return;
-  }
-  FormStorage.fetchTableSecret(
-      tableName, 
-      putRecord.bind(this, record, callback));
-};
-
-var putRecord = function(record, callback, tableSecret) {
-  var req = new XMLHttpRequest();
-  req.onreadystatechange = handlePutRecord.bind(req, record, callback, tableSecret);
-  var url = '//' + getFormDataHost() + '/v2/forms/CspTable/' + tableSecret +
-      '/children/CspRecord';
-  delete record.tableName;
-  var postData = {record_data_s: JSON.stringify(record)};
-  req.open('POST', url, true);
-  req.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
-  req.send(JSON.stringify(postData));
-};
-
-var handlePutRecord = function(record, callback, tableSecret) {
-  if (this.readyState !== 4) {
-    return;
-  }
-  if (this.status !== 201) {
-    console.log('unexpected http status ' + this.status);
-    return;
-  }
-  
-  // TODO(dave): merge tableSecret into record once XSS issues are resolved.
-  callback(record);
-};
-
-/**
- * Reads records which match the searchParams specified by the user,
- * and passes them to the callback.
- * @param {string} searchParams.tableName The name of the table to read from.
- * @param {string} searchParams.recordId Optional id of record to read.
- * @param {Object} searchParams Other search criteria. Only records
- *     whose contents match all criteria will be returned.
- * @param {Function} callback Function to call with an array of record objects.
- */
-FormStorage.readRecords = function(searchParams, callback) {
-  var tableName = searchParams.tableName;
-  if (!tableName) {
-    console.log('readRecords: missing required property "tableName"');
-    return;
-  }
-  // TODO(dave): optimization: call fetchRecords here if table data is cached.
-  FormStorage.fetchTableSecret(
-      tableName, 
-      fetchRecords.bind(this, tableName, searchParams, callback));
-};
-
-var fetchRecords = function(tableName, searchParams, callback, tableSecret) {
-  var req = new XMLHttpRequest();
-  req.onreadystatechange = handleFetchRecords.bind(req, tableName,
-      searchParams, callback);
-  var url = '//' + getFormDataHost() + '/v2/forms/CspTable/' + tableSecret +
-      '/children/CspRecord';
-  req.open('GET', url, true);
-  req.send();
-};
-
-var handleFetchRecords = function(tableName, searchParams, callback) {
-  if (this.readyState !== 4) {
-    return;
-  }
-  if (this.status !== 200) {
-    console.log('readRecords failed with status ' + this.status);
-    return;
-  }
-  var forms = JSON.parse(this.responseText);
-  var records = forms.map(function(form) {
-    var record = JSON.parse(form.record_data_s);
-    record.tableName = tableName;
-    record.recordId = form.secret;
-    return record;
-  });
-  records = records.filter(function(record) {
-    for (var prop in searchParams) {
-      if (record[prop] !== searchParams[prop]) {
-        return false;
-      }
-    }
-    return true;
-  });
-  callback(records);
-};
-
-// Helper methods
-
-/**
- * Retrieves the table secret for a given table name.
- * @param {string} tableName Table name.
- * @param {function(string)} callback Callback to call with the table secret.
- */
-FormStorage.fetchTableSecret = function(tableName, callback) {
-  var req = new XMLHttpRequest();
-  req.onreadystatechange =
-      handleFetchTableSecret.bind(req, tableName, callback);
-  var url = '//' + getFormDataHost() + '/v2/forms/CspApp/' + 
-      FormStorage.getAppSecret() + '/children/CspTable';
-  req.open('GET', url, true);
-  req.send();
-};
-
-var handleFetchTableSecret = function(tableName, callback) {
-  if (this.readyState !== 4) {
-    return;
-  }
-  if (this.status !== 200) {
-    console.log('unexpected http status ' + this.status);
-    return;
-  }
-  var formData = JSON.parse(this.responseText);
-  if (!(formData instanceof Array)) {
-    console.log('formData is not an array');
-    return;
-  }
-
-  var tableData = formData.filter(function(table) {
-    return table.table_name_s === tableName;
-  });
-  var tableSecret = tableData[0] && tableData[0].secret;
-  if (!tableSecret) {
-    console.log('table not found: ' + tableName);
-    console.log(tableData);
-    return;
-  }
-  callback(tableSecret);
-};
-
-// TODO(dave): move this logic to dashboard.
-var getFormDataHost = function() {
-  // Forms api is already mapped to pegasus on all non-local deployments.
-  // Caveat: local api access only works with temporary hacks in place
-  // to set dashboard_user cookie and access-control-allow-origin header.
-  return window.location.hostname.split('.')[0] === 'localhost' ?
-      'localhost.code.org:9393' : window.location.hostname;
-};
-
-// TODO(dave): store secret with the app in the database.
-FormStorage.getAppSecret = function() {
-  var name = window.location.hostname.split('.')[0];
-  switch(name) {
-    case 'localhost':
-      return 'ededb6d4a8ced65f8a011ce0e194094e';
-    case 'staging':
-      return 'b0a06b8bbd7352a3fdb1b6738262defd';
-    default:
-      return null;
-  }
-};
-
-
-},{}],12:[function(require,module,exports){
+},{"ejs":210}],12:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2857,7 +2686,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/applab":188,"../../locale/current/common":191,"ejs":207}],11:[function(require,module,exports){
+},{"../../locale/current/applab":191,"../../locale/current/common":194,"ejs":210}],11:[function(require,module,exports){
 module.exports.blocks = [
   {'func': 'onEvent', 'title': 'Execute code in response to an event for the specified element. Additional parameters are passed to the callback function.', 'category': 'UI controls', 'params': ["'id'", "'click'", "function(event) {\n  \n}"] },
   {'func': 'button', 'title': 'Create a button and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "'text'"] },
@@ -2901,6 +2730,7 @@ module.exports.blocks = [
   {'func': 'readRecords', 'title': 'readRecords(table, searchParams, onSuccess); Reads all records whose properties match those on the searchParams object.', 'category': 'Data', 'params': ["'mytable'", "{id:1}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    createTextLabel('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
   {'func': 'updateRecord', 'title': 'updateRecord(table, record, onSuccess); Updates a record, identified by record.id.', 'category': 'Data', 'params': ["'mytable'", "{id:1, name:'Bob'}", "function() {\n  \n}"] },
   {'func': 'deleteRecord', 'title': 'deleteRecord(table, record, onSuccess); Deletes a record, identified by record.id.', 'category': 'Data', 'params': ["'mytable'", "{id:1}", "function() {\n  \n}"] },
+  {'func': 'getUserId', 'title': 'getUserId(); Gets a unique identifier for the current user of this app.', 'category': 'Data', 'params': [] },
 
   {'func': 'moveForward', 'title': 'Move the turtle forward the specified distance', 'category': 'Turtle', 'params': ["25"] },
   {'func': 'moveBackward', 'title': 'Move the turtle backward the specified distance', 'category': 'Turtle', 'params': ["25"] },
@@ -2981,7 +2811,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":191,"ejs":207}],9:[function(require,module,exports){
+},{"../../locale/current/common":194,"ejs":210}],9:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -3054,7 +2884,7 @@ function installContainer(blockly, generator, blockInstallOptions) {
   };
 }
 
-},{"../../locale/current/applab":188,"../../locale/current/common":191,"../codegen":44,"../utils":186}],188:[function(require,module,exports){
+},{"../../locale/current/applab":191,"../../locale/current/common":194,"../codegen":44,"../utils":189}],191:[function(require,module,exports){
 /*applab*/ module.exports = window.blockly.appLocale;
 },{}],7:[function(require,module,exports){
 'use strict';
@@ -3664,6 +3494,12 @@ exports.deleteRecord = function (blockId, table, record, onSuccess, onError) {
                            'onError': onError});
 };
 
+exports.getUserId = function (blockId) {
+  return Applab.executeCmd(blockId,
+                          'getUserId',
+                          {});
+};
+
 exports.moveForward = function (blockId, distance) {
   return Applab.executeCmd(blockId,
                           'moveForward',
@@ -3769,4 +3605,4 @@ exports.penColor = function (blockId, color) {
 };
 
 
-},{}]},{},[15]);
+},{}]},{},[14]);
