@@ -183,9 +183,7 @@ NetSimLogWidget.prototype.log = function (packet) {
 
   // Auto-scroll
   if (wasScrolledToEnd) {
-    var scrollTimeMs = 250;
-    scrollArea.animate({ scrollTop: scrollArea[0].scrollHeight},
-        scrollTimeMs);
+    scrollArea.scrollTop(scrollArea[0].scrollHeight);
   }
 };
 
