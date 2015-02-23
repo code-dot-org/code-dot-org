@@ -21,16 +21,16 @@ class LevelsHelperTest < ActionView::TestCase
   test "non-custom level displays localized instruction after locale switch" do
     DEFAULT_LOCALE = 'en-us'
     NEW_LOCALE = 'es-es'
-    @level.game.name = 'maze'
+    @level.instructions = nil
     @level.level_num = '2_2'
 
     I18n.locale = DEFAULT_LOCALE
     options = blockly_options
-    assert_equal I18n.t("data.level.instructions.#{@level.game.name}_#{@level.level_num}", locale: DEFAULT_LOCALE), options[:level]['instructions']
+    assert_equal I18n.t('data.level.instructions.maze_2_2', locale: DEFAULT_LOCALE), options[:level]['instructions']
 
     I18n.locale = NEW_LOCALE
     options = blockly_options
-    assert_equal I18n.t("data.level.instructions.#{@level.game.name}_#{@level.level_num}", locale: NEW_LOCALE), options[:level]['instructions']
+    assert_equal I18n.t('data.level.instructions.maze_2_2', locale: NEW_LOCALE), options[:level]['instructions']
     I18n.locale = DEFAULT_LOCALE
   end
 
