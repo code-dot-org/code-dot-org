@@ -118,9 +118,7 @@ Eval.init = function(config) {
     Blockly.JavaScript.addReservedWords('Eval,code');
 
     if (level.coordinateGridBackground) {
-      var background = document.getElementById('background');
-      background.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-        skin.assetUrl('background_grid.png'));
+      Eval.createCoordinateGridBackground_();
     }
 
     if (level.solutionBlocks) {
@@ -165,6 +163,34 @@ Eval.resetButtonClick = function () {
     user.removeChild(user.firstChild);
   }
 
+};
+
+Eval.createCoordinateGridBackground_ = function () {
+  var svg = document.getElementById('svgEval');
+  var background = document.getElementById('background');
+  background.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
+    skin.assetUrl('background_grid.png'));
+
+  var origin = -200;
+  var bbox, text;
+  for (var label = origin; label <= 200; label += 100) {
+    text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    // Position text just inside the bottom right corner.
+    text.appendChild(document.createTextNode(label));
+    svg.appendChild(text);
+    bbox = text.getBBox();
+    text.setAttribute('x', label - origin - bbox.width - 3);
+    text.setAttribute('y', CANVAS_HEIGHT - bbox.height);
+    text.setAttribute('dominant-baseline', 'hanging');
+
+    text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    // Position text just inside the bottom right corner.
+    text.appendChild(document.createTextNode(label));
+    svg.appendChild(text);
+    bbox = text.getBBox();
+    text.setAttribute('x', 0);
+    text.setAttribute('y', CANVAS_WIDTH - (label - origin) + bbox.height);
+  }
 };
 
 /**
