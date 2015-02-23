@@ -6,7 +6,6 @@
  unused: true,
 
  maxlen: 90,
- maxparams: 3,
  maxstatements: 200
  */
 /* global $ */
