@@ -63,7 +63,7 @@ var NetSim = module.exports = function () {
    * @type {string}
    * @private
    */
-  this.encodingMode_ = 'all';
+  this.encodingMode_ = 'binary';
 };
 
 
@@ -183,6 +183,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
   this.sendWidget_ = NetSimSendWidget.createWithin(sendWidgetContainer,
       this.connection_);
 
+  this.changeEncoding(this.encodingMode_);
   this.refresh_();
 };
 
