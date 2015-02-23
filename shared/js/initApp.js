@@ -152,7 +152,7 @@ $(window).on('function_editor_closed', function() {
 
 dashboard.saveProject = function(callback) {
   var app_id = dashboard.currentApp.id;
-  dashboard.currentApp.startBlocks = Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
+  dashboard.currentApp.levelSource = Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
   if (app_id) {
     storageApps().update(app_id, dashboard.currentApp, function(data) {
       callback(data);
@@ -170,7 +170,7 @@ dashboard.saveProject = function(callback) {
 function initApp() {
   if (appOptions.level.isProject) {
     if (dashboard.currentApp) {
-      appOptions.level.startBlocks = dashboard.currentApp.startBlocks;
+      appOptions.level.startBlocks = dashboard.currentApp.levelSource;
     } else {
       dashboard.currentApp = {
         name: 'Untitled'
