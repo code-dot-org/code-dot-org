@@ -604,10 +604,14 @@ html, body {
     border: 1px solid #ccc;
     display: inline-block;
 <<<<<<< HEAD
+<<<<<<< HEAD
     padding: 5px 5px 5px 10px;
 =======
     padding: 4px 8px;
 >>>>>>> origin/staging
+=======
+    padding: 5px 5px 5px 10px;
+>>>>>>> ajaxify_header
     border-radius: 5px;
 
     .puzzle_outer_level,
@@ -618,28 +622,30 @@ html, body {
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ajaxify_header
 
-  /* most dots are small */
+  /* most puzzles are small dot */
   .puzzle_outer_level,
   .puzzle_outer_assessment {
-    margin: 0 5px 0 -1px;
-    vertical-align: middle;
-    border-radius: 11px;
     line-height: 1px;
-
     .level_link {
-      min-width: 1px;
-      width: 1px;
-      height: 1px;
-      border-radius: 9px;
+      box-sizing: border-box;
+      min-width: 11px;
+      width: 11px;
+      height: 11px;
+      border-radius: 11px;
       padding: 3px;
-      margin: 1px;
+      margin: 0px;
       /* hack to hide the number: */
       font-size: 0px;
       color: transparent;
+      margin-right: 5px;
     }
   }
 
+<<<<<<< HEAD
   /* current and last dots are large */
   .puzzle_outer_current,
   .puzzle_outer_level.last,
@@ -651,6 +657,8 @@ html, body {
 >>>>>>> origin/staging
 
 
+=======
+>>>>>>> ajaxify_header
   /* current puzzle is a large dot */
   .puzzle_outer_current {
     .level_link {
@@ -675,6 +683,7 @@ html, body {
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   /* other puzzles are small dot */
@@ -696,6 +705,8 @@ html, body {
   }
 >>>>>>> origin/staging
 
+=======
+>>>>>>> ajaxify_header
   .level_link:hover {
     text-decoration: none;
     background-color: $level_current;
