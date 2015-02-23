@@ -192,6 +192,7 @@ Dashboard::Application.routes.draw do
     end
     get 'attendance/teacher/:teacher_id', action: 'teacher', controller: 'workshop_attendance'
     get 'attendance/cohort/:cohort_id', action: 'cohort', controller: 'workshop_attendance'
+    get 'attendance/workshop/:workshop_id', action: 'workshop', controller: 'workshop_attendance'
     post 'segments/:segment_id/attendance/batch', action: 'batch', controller: 'workshop_attendance'
   end
 
