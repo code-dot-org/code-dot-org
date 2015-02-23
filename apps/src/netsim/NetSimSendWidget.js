@@ -14,6 +14,7 @@
 
 var markup = require('./NetSimSendWidget.html');
 var KeyCodes = require('../constants').KeyCodes;
+var NetSimEncodingSelector = require('./NetSimEncodingSelector');
 var PacketEncoder = require('./PacketEncoder');
 var dataConverters = require('./dataConverters');
 
@@ -352,4 +353,13 @@ NetSimSendWidget.prototype.getPacketBinary_ = function () {
     packetCount: intToBinary(this.packetCount, shortNumberFieldWidth),
     message: this.message
   });
+};
+
+/**
+ * Show or hide parts of the send UI based on the currently selected encoding
+ * mode.
+ * @param {string} newEncoding
+ */
+NetSimSendWidget.prototype.setEncoding = function (newEncoding) {
+  NetSimEncodingSelector.hideRowsByEncoding($('#netsim_send_widget'), newEncoding);
 };
