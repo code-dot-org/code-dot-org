@@ -153,6 +153,7 @@ em strong {
 }
 
 .level_link, .level_link:link, .level_link:visited {
+  box-sizing: content-box;
   border-radius: 20px;
   min-width: 22px;
   line-height: 22px;
@@ -161,10 +162,10 @@ em strong {
   text-align: center;
   cursor: pointer;
   display: inline-block;
-  margin: 2px;
   font-family: 'Gotham 4r', sans-serif;
   font-weight: normal;
   color: white;
+  border: 2px solid #ccc;
 }
 
 .level_link.not_tried, .level_link.not_tried:link, .level_link.not_tried:visited {
@@ -208,18 +209,23 @@ em strong {
   }
 }
 
+.level_link.attempted, .level_link.attempted:link, .level_link.attempted:visited {
+  background-color: $level_attempted;
+  color: #666 !important;
+  &:hover {
+    background-color: $level_attempted;
+    text-decoration: none;
+  }
+}
+
 .puzzle_outer_level,
 .puzzle_outer_assessment,
 .puzzle_outer_current {
   padding: 1px;
   display: inline-block;
-  border-radius: 20px;
 }
 
-.puzzle_outer_level {
-  background-color: #ccc;
-}
-
+<<<<<<< HEAD
 .puzzle_outer_assessment {
   background-color: yellow;
   padding: 1px;
@@ -232,6 +238,14 @@ em strong {
   padding: 1px;
   display: inline-block;
   border-radius: 20px;
+=======
+.puzzle_outer_assessment .level_link {
+  border: 2px solid $assessment;
+}
+
+.user-stats-block .puzzle_outer_current .level_link {
+  border: 2px solid $level_current;
+>>>>>>> origin/staging
 }
 
 .user-stats-block
@@ -243,13 +257,15 @@ em strong {
   width:100%;
 
   .key {
-    width:100%;
+    margin: 10px 0;
+    width: 100%;
     float: left;
     padding: 10px;
     background-color: #eee;
     dl {
       margin: 0;
       float: left;
+      white-space: nowrap;
     }
     dd, dt {
       float: left;
@@ -262,10 +278,11 @@ em strong {
       margin-right: 25px;
     }
   }
-
 }
 
-.stage-lesson-plan-link a
+.stage-lesson-plan-link a,
+.stage-lesson-plan-link a:link,
+.stage-lesson-plan-link a:visited,
 {
   font-size: 10px;
   color: $purple;
@@ -586,9 +603,21 @@ html, body {
     background-color: #eee;
     border: 1px solid #ccc;
     display: inline-block;
+<<<<<<< HEAD
     padding: 5px 5px 5px 10px;
+=======
+    padding: 4px 8px;
+>>>>>>> origin/staging
     border-radius: 5px;
+
+    .puzzle_outer_level,
+    .puzzle_outer_assessment,
+    .puzzle_outer_current {
+      vertical-align: middle;
+      margin: 0 -2px;
+    }
   }
+<<<<<<< HEAD
 
   /* most dots are small */
   .puzzle_outer_level,
@@ -618,14 +647,21 @@ html, body {
     margin: 0 5px 0 -1px;
     vertical-align: middle;
     border-radius: 20px;
+=======
+>>>>>>> origin/staging
 
+
+  /* current puzzle is a large dot */
+  .puzzle_outer_current {
     .level_link {
-      border-radius: 20px;
-      height: 18px;
-      min-width: 18px;
-      width: 18px;
+      box-sizing: border-box;
+      border-radius: 28px;
+      height: 28px;
+      min-width: 28px;
+      width: 28px;
       font-size: 14px;
-      padding: 0 2px 4px 2px;
+      line-height: 24px;
+      padding: 0px;
       text-align: center;
       display: inline-block;
     }
@@ -638,19 +674,32 @@ html, body {
     }
   }
 
+<<<<<<< HEAD
 
+=======
+  /* other puzzles are small dot */
+  .puzzle_outer_level,
+  .puzzle_outer_assessment {
+    line-height: 1px;
+    .level_link {
+      box-sizing: border-box;
+      min-width: 11px;
+      width: 11px;
+      height: 11px;
+      border-radius: 11px;
+      padding: 3px;
+      margin: 0px;
+      /* hack to hide the number: */
+      font-size: 0px;
+      color: transparent;
+    }
+  }
+>>>>>>> origin/staging
 
   .level_link:hover {
     text-decoration: none;
     background-color: $level_current;
   }
-
-  .puzzle_outer_current,
-  .puzzle_outer_current .level_link {
-    background-color: $level_current;
-    color: white !important;
-  }
-
 }
 
 .header_right {

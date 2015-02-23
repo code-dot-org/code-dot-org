@@ -392,3 +392,8 @@ en:
           description_short: Challenge yourself!
           description: Try out these fun coding puzzles. Do your best!
           Puzzles: Puzzles
+        CodeStudioPuzzleChallenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles

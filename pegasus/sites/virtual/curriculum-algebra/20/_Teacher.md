@@ -33,7 +33,11 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 ### <a name="GetStarted"></a> 1) Introduction
 
+Let's get back into that Big Game from stages 7, 12, and 16.
 
+Previous work with the game has created movement for both the main character and the danger and target characters.  Conditional statements have been added to ensure the characters all stay on the screen.  The last step being added now is to reward for making contact with target and to penalize for making contact with danger.
+
+The Pythagorean Theorem studied in the last lesson will be used to determine when the characters have made contact.  A key point of trouble shooting will be getting this expression correct as constructing it in the drag and drop system is somewhat prone to errors.
 
 [/together]
 
