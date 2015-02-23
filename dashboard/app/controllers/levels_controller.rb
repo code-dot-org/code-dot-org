@@ -200,7 +200,11 @@ class LevelsController < ApplicationController
 
     # Use callbacks to share common setup or constraints between actions.
     def set_level
-      @level = Level.find(params[:id])
+      @level = if params.include? :key
+        Level.find_by_key params[:key]
+      else
+        Level.find(params[:id])
+      end
       @game = @level.game
     end
 
