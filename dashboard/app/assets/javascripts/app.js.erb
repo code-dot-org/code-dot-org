@@ -666,24 +666,24 @@
         var route;
 
         // Is this level the script completion?
-        if (opts.level.next === false) {
+        if (this.level.next === false) {
           route = {
-            complete: opts.script_name
+            complete: this.script_name
           };
         } else {
           // Calculate the next level and route to it.
-          var next = opts.level.next || [ opts.level.stage, opts.level.position + 1];
+          var next = this.level.next || [ this.level.stage, this.level.position + 1];
           route = {
-            script: opts.script_name,
+            script: this.script_name,
             stage: next[0],
             level: next[1]
           };
         }
 
         // If this level has a wrap-up video, show it before moving on.
-        if (opts.level.wrapupVideo) {
-          opts.level.wrapupVideo.redirect = Frame.linkTo(route);  // someday, can just pass in a route.
-          showVideoDialog(opts.level.wrapupVideo);
+        if (this.level.wrapupVideo) {
+          this.level.wrapupVideo.redirect = Frame.linkTo(route);  // someday, can just pass in a route.
+          showVideoDialog(this.level.wrapupVideo);
         } else {
           if (!Frame.goTo(route)) {
             // What kind of message should the user get?
@@ -691,15 +691,15 @@
         }
       },
       backToPreviousLevel: function() {
-        if (opts.level.previous === false) {
+        if (this.level.previous === false) {
           // Does this mean anything or do we just fail silently?
           return;
         }
 
         // Calculate the previous level and route to it.
-        var prev = opts.level.previous || [ opts.level.stage, opts.level.position - 1];
+        var prev = this.level.previous || [ this.level.stage, this.level.position - 1];
         var route = {
-          script: opts.script_name,
+          script: this.script_name,
           stage: prev[0],
           level: prev[1]
         };
