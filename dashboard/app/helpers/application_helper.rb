@@ -41,11 +41,6 @@ module ApplicationHelper
     end
   end
 
-  def bullet_html
-    #raw "&#9679;"
-    image_tag('white-dot-grid.png')
-  end
-
   def check_mark_html
     #raw "&#x2714;"
     image_tag(image_url('white-checkmark.png'))
