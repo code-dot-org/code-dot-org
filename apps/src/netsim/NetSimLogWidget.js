@@ -64,7 +64,6 @@ NetSimLogWidget.createWithin = function (element, title) {
 NetSimLogWidget.prototype.bindElements_ = function (instanceID) {
   this.rootDiv_ = $('#netsim_log_widget_' + instanceID);
   this.scrollArea_ = this.rootDiv_.find('.scroll_area');
-  this.tableBody_ = this.scrollArea_.find('tbody');
   this.clearButton_ = this.rootDiv_.find('.clear_button');
 
   dom.addClickTouchEvent(this.clearButton_[0], this.onClearButtonPress_.bind(this));
@@ -89,6 +88,34 @@ var packetEncoder = new PacketEncoder([
 ]);
 
 /**
+ * @param {string} toAddress
+ * @param {string} fromAddress
+ * @param {string} packetInfo
+ * @param {string} message
+ * @returns {jQuery} wrapper on new table-row element
+ */
+var makeLogRow = function (toAddress, fromAddress, packetInfo, message) {
+  var row = $('<tr>');
+  $('<td nowrap>')
+      .addClass('toAddress')
+      .html(toAddress)
+      .appendTo(row);
+  $('<td nowrap>')
+      .addClass('fromAddress')
+      .html(fromAddress)
+      .appendTo(row);
+  $('<td nowrap>')
+      .addClass('packetInfo')
+      .html(packetInfo)
+      .appendTo(row);
+  $('<td>')
+      .addClass('message')
+      .html(message)
+      .appendTo(row);
+  return row;
+};
+
+/**
  * Put a message into the log.
  */
 NetSimLogWidget.prototype.log = function (packet) {
@@ -104,84 +131,48 @@ NetSimLogWidget.prototype.log = function (packet) {
   var message = packetEncoder.getField('message', packet);
 
   // Create log rows
-  var asciiRow = $('<tr>').addClass('ascii');
-  $('<td nowrap>')
-      .addClass('toAddress')
-      .html(binaryToInt(toAddress))
-      .appendTo(asciiRow);
-  $('<td nowrap>')
-      .addClass('fromAddress')
-      .html(binaryToInt(fromAddress))
-      .appendTo(asciiRow);
-  $('<td nowrap>')
-      .addClass('packetInfo')
-      .html(binaryToInt(packetIndex) + " of " + binaryToInt(packetCount))
-      .appendTo(asciiRow);
-  $('<td>')
-      .addClass('message')
-      .html(binaryToAscii(message, 8))
-      .appendTo(asciiRow);
+  var packetDiv = $('<div>').addClass('packet');
+  var packetTable = $('<table>').appendTo(packetDiv);
+  var packetHead = $('<thead>').appendTo(packetTable);
+  var packetBody = $('<tbody>').appendTo(packetTable);
 
-  var decimalRow = $('<tr>').addClass('decimal');
-  $('<td nowrap>')
-      .addClass('toAddress')
-      .html(binaryToInt(toAddress))
-      .appendTo(decimalRow);
-  $('<td nowrap>')
-      .addClass('fromAddress')
-      .html(binaryToInt(fromAddress))
-      .appendTo(decimalRow);
-  $('<td nowrap>')
-      .addClass('packetInfo')
-      .html(binaryToInt(packetIndex) + " of " + binaryToInt(packetCount))
-      .appendTo(decimalRow);
+  var headerRow = $('<tr>').appendTo(packetHead);
+  $('<th nowrap>').addClass('toAddress').html('To').appendTo(headerRow);
+  $('<th nowrap>').addClass('fromAddress').html('From').appendTo(headerRow);
+  $('<th nowrap>').addClass('packetInfo').html('Packet').appendTo(headerRow);
+  $('<th>').addClass('message').html('Message').appendTo(headerRow);
+
+  makeLogRow(
+      binaryToInt(toAddress),
+      binaryToInt(fromAddress),
+      binaryToInt(packetIndex) + ' of ' + binaryToInt(packetCount),
+      binaryToAscii(message, 8)
+  ).addClass('ascii').appendTo(packetBody);
+
   // TODO (bbuchanan): Parse at selected bytesize
-  $('<td>')
-      .addClass('message')
-      .html(alignDecimal(binaryToDecimal(message, 8)))
-      .appendTo(decimalRow);
+  makeLogRow(
+      binaryToInt(toAddress),
+      binaryToInt(fromAddress),
+      binaryToInt(packetIndex) + ' of ' + binaryToInt(packetCount),
+      alignDecimal(binaryToDecimal(message, 8))
+  ).addClass('decimal').appendTo(packetBody);
 
-  var hexRow = $('<tr>').addClass('hexadecimal');
-  $('<td nowrap>')
-      .addClass('toAddress')
-      .html(binaryToHex(toAddress))
-      .appendTo(hexRow);
-  $('<td nowrap>')
-      .addClass('fromAddress')
-      .html(binaryToHex(fromAddress))
-      .appendTo(hexRow);
-  $('<td nowrap>')
-      .addClass('packetInfo')
-      .html(binaryToHex(packetIndex) + " of " + binaryToHex(packetCount))
-      .appendTo(hexRow);
-  $('<td>')
-      .addClass('message')
-      .html(formatHex(binaryToHex(message), 2))
-      .appendTo(hexRow);
+  makeLogRow(
+      binaryToHex(toAddress),
+      binaryToHex(fromAddress),
+      binaryToHex(packetIndex) + ' of ' + binaryToHex(packetCount),
+      formatHex(binaryToHex(message), 2)
+  ).addClass('hexadecimal').appendTo(packetBody);
 
-  var binaryRow = $('<tr>').addClass('binary');
-  $('<td nowrap>')
-      .addClass('toAddress')
-      .html(formatBinary(toAddress, 4))
-      .appendTo(binaryRow);
-  $('<td nowrap>')
-      .addClass('fromAddress')
-      .html(formatBinary(fromAddress, 4))
-      .appendTo(binaryRow);
-  $('<td nowrap>')
-      .addClass('packetInfo')
-      .html(formatBinary(packetIndex + packetCount, 4))
-      .appendTo(binaryRow);
   // TODO (bbuchanan): Format to selected bytesize
-  $('<td>')
-      .addClass('message')
-      .html(formatBinary(message, 8))
-      .appendTo(binaryRow);
+  makeLogRow(
+      formatBinary(toAddress, 4),
+      formatBinary(fromAddress, 4),
+      formatBinary(packetIndex, 4) + ' ' + formatBinary(packetCount, 4),
+      formatBinary(message, 8)
+  ).addClass('binary').appendTo(packetBody);
 
-  asciiRow.appendTo(this.tableBody_);
-  decimalRow.appendTo(this.tableBody_);
-  hexRow.appendTo(this.tableBody_);
-  binaryRow.appendTo(this.tableBody_);
+  packetDiv.appendTo(this.scrollArea_);
 
   // Auto-scroll
   if (wasScrolledToEnd) {
