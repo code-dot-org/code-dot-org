@@ -7,6 +7,7 @@
     dl {
       margin: 0;
       float: left;
+      white-space: nowrap;
     }
     dd, dt {
       float: left;
@@ -25,14 +26,28 @@
       %span.puzzle_outer_level
         %a.level_link{ href: '', class: 'not_tried', onclick: 'return false;'}
           %span.puzzle-number 1
-    %dd= t('progress.not_completed')
+    %dd= t('progress.not_started')
+  %dl
+    %dt
+      %span.puzzle_outer_level
+        %a.level_link{ href: '', class: 'attempted', onclick: 'return false;'}
+          %span.puzzle-number 1
+    %dd= t('progress.in_progress')
+  %dl
     %dt
       %span.puzzle_outer_level
         %a.level_link{ href: '', class: 'passed', onclick: 'return false;'}
           = check_mark_html
     %dd= t('progress.completed_too_many_blocks')
+  %dl
     %dt
       %span.puzzle_outer_level
         %a.level_link{ href: '', class: 'perfect', onclick: 'return false'}
           = check_mark_html
     %dd= t('progress.completed_perfect')
+  %dl
+    %dt
+      %span.puzzle_outer_assessment
+        %a.level_link{ href: '', class: 'not_tried', onclick: 'return false'}
+          %span.puzzle-number 1
+    %dd= t('progress.assessment')

@@ -3,7 +3,7 @@ var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
 var blockUtils = require(testUtils.buildPath('block_utils'));
 var studioApp = require(testUtils.buildPath('StudioApp')).singleton;
 var EquationSet = require(testUtils.buildPath('calc/equationSet'));
-var Equation = EquationSet.Equation;
+var Equation = require(testUtils.buildPath('/calc/equation.js'));
 var ExpressionNode = require(testUtils.buildPath('calc/expressionNode'));
 
 /**
