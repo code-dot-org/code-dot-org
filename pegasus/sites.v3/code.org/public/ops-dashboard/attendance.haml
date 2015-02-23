@@ -17,23 +17,22 @@ template: none
   %tr{'ng-repeat' => 'teacher in teachers'}
     %td{'ng-model' => 'workshop_attendance.teacher_id'}
       {{teacher.name}}
-    %td{'ng-repeat' => 'segment in segments'}
+      %br
+      {{teacher.id}}
+    %td{'ng-repeat' => 'segment in attendances.segments'}
+      {{getAttendanceFromTeacherAndSegment(teacher.id, segment.attendances)}}
 
-
-      %form{'ng-init' => 'workshop_attendance.status="absent"; workshop_attendance.teacher_id=teacher.id'}
-        %label
-          Attended
-          %input{type:'radio', 'ng-model' => 'workshop_attendance.status', value:'present'}
-        %label
-          Absent
-          %input{type:'radio', 'ng-model' => 'workshop_attendance.status', value:'absent'}
-        %label
-          Excused absence
-          %input{type:'radio', 'ng-model' => 'workshop_attendance.status', value:'excused'}
-          %input{style:'display:none', 'ng-model' => 'workshop_attendance.teacher_id', type:'text'}
-        %br
-        -#%label
-        -#  Notes
-        -#  %input{type:'textarea'}
-        %button.btn.btn-primary{'ng-click' => 'recordSegmentAttendance(workshop_attendance)'}
-          Save
+      -#%form{'ng-init' => 'workshop_attendance.status="absent"; workshop_attendance.teacher_id=teacher.id'}
+      -#  %label
+      -#    Attended
+      -#    %input{type:'radio', 'ng-model' => 'workshop_attendance.status', value:'present'}
+      -#  %label
+      -#    Absent
+      -#    %input{type:'radio', 'ng-model' => 'workshop_attendance.status', value:'absent'}
+      -#  %label
+      -#    Excused absence
+      -#    %input{type:'radio', 'ng-model' => 'workshop_attendance.status', value:'excused'}
+      -#    %input{style:'display:none', 'ng-model' => 'workshop_attendance.teacher_id', type:'text'}
+      -#  %br
+      -#  %button.btn.btn-primary
+      -#    Save
