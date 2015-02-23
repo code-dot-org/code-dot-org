@@ -284,7 +284,7 @@ class Script < ActiveRecord::Base
           stage_id: stage.id,
           position: (script_level_position[stage.id] += 1)
         )
-        (script_levels_by_stage[stage] ||= []) << script_level
+        (script_levels_by_stage[stage.id] ||= []) << script_level
         unless script_stages.include?(stage)
           stage.assign_attributes(position: (stage_position += 1))
           stage.save! if stage.changed?
@@ -296,7 +296,7 @@ class Script < ActiveRecord::Base
       script_level
     end
     script_stages.each do |stage|
-      stage.script_levels = script_levels_by_stage[stage]
+      stage.script_levels = script_levels_by_stage[stage.id]
     end
     script.stages = script_stages
     script.reload.stages
