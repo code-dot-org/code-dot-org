@@ -75,17 +75,25 @@ BigGameLogic.prototype.onTick = function () {
     }
   }
   
-  if (this.collide(playerSprite.x, playerSprite.y, dangerSprite.x, dangerSprite.y) && playerSprite.visible && dangerSprite.visible) {
+  if (playerSprite.visible && dangerSprite.visible &&
+      this.collide(playerSprite.x, playerSprite.y,
+                   dangerSprite.x, dangerSprite.y)) {
     this.studio_.vanishActor({spriteIndex:this.playerSpriteIndex});
-    setTimeout((function() {this.studio_.setSprite({spriteIndex:this.playerSpriteIndex,value:"visible"});}).bind(this), 500);
+    setTimeout((function ()  {
+      this.studio_.setSprite({
+        spriteIndex: this.playerSpriteIndex,
+        value:"visible"
+      });
+    }).bind(this), 500);
     this.studio_.playerScore -= 20;
 
     // send sprite back offscreen
     this.resetSprite_(dangerSprite);
   }
 
-  if (this.collide(playerSprite.x, playerSprite.y, targetSprite.x, targetSprite.y) && playerSprite.visible && targetSprite.visible) {
-
+  if (playerSprite.visible && targetSprite.visible &&
+      this.collide(playerSprite.x, playerSprite.y,
+                   targetSprite.x, targetSprite.y)) {
     this.studio_.playerScore += 10;
 
     // send sprite back offscreen

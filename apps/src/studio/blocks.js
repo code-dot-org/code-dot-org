@@ -1706,14 +1706,6 @@ exports.install = function(blockly, blockInstallOptions) {
     // For each of our inputs (i.e. update-target, update-danger, etc.) get
     // the attached block and figure out what it's function name is. Store
     // that on BigGameLogic so we can know what functions to call later.
-    /*this.blockArgs.forEach(function (arg) {
-      var inputBlock = this.getInputTargetBlock(arg.name);
-      if (!inputBlock) {
-        return;
-      }
-
-      Studio.customLogic.cacheBlock(arg.name, inputBlock);
-    }, this);*/
     Studio.customLogic.cacheBlock('VALUE', this.getInputTargetBlock('VALUE'));
   };
 
