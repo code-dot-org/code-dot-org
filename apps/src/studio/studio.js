@@ -1224,6 +1224,7 @@ Studio.clearEventHandlersKillTickLoop = function() {
 studioApp.reset = function(first) {
   var i;
   Studio.clearEventHandlersKillTickLoop();
+  var svg = document.getElementById('svgStudio');
 
   // Soft buttons
   var softButtonCount = 0;
@@ -1255,27 +1256,27 @@ studioApp.reset = function(first) {
   // Reset configurable variables
   if (level.coordinateGridBackground) {
     Studio.setBackground({value: 'grid'});
-    var svg = document.getElementById('svgStudio');
     var backgroundElement = document.getElementById('background');
 
     var origin = 0;
-    for (var i = 0; i <= 400; i += 100) {
-      var text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    var text, bbox;
+    for (var label = 0; label <= 400; label += 100) {
+      text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
       // Position text just inside the bottom right corner.
-      text.appendChild(document.createTextNode(i));
+      text.appendChild(document.createTextNode(label));
       svg.insertBefore(text, backgroundElement.nextSibling);
-      var bbox = text.getBBox()
-      text.setAttribute('x', i - origin - bbox.width - 3);
+      bbox = text.getBBox();
+      text.setAttribute('x', label - origin - bbox.width - 3);
       text.setAttribute('y', Studio.MAZE_HEIGHT - bbox.height);
       text.setAttribute('dominant-baseline', 'hanging');
 
       text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
       // Position text just inside the bottom right corner.
-      text.appendChild(document.createTextNode(i));
+      text.appendChild(document.createTextNode(label));
       svg.insertBefore(text, backgroundElement.nextSibling);
-      var bbox = text.getBBox()
+      bbox = text.getBBox();
       text.setAttribute('x', 0);
-      text.setAttribute('y', Studio.MAZE_WIDTH - (i - origin) + bbox.height);
+      text.setAttribute('y', Studio.MAZE_WIDTH - (label - origin) + bbox.height);
     }
 
   } else {
@@ -1335,8 +1336,6 @@ studioApp.reset = function(first) {
       explosion.setAttribute('visibility', 'hidden');
     }
   }
-
-  var svg = document.getElementById('svgStudio');
 
   var goalAsset = skin.goal;
   if (level.goalOverride && level.goalOverride.goal) {
