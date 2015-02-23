@@ -1255,6 +1255,29 @@ studioApp.reset = function(first) {
   // Reset configurable variables
   if (level.coordinateGridBackground) {
     Studio.setBackground({value: 'grid'});
+    var svg = document.getElementById('svgStudio');
+    var backgroundElement = document.getElementById('background');
+
+    var origin = 0;
+    for (var i = 0; i <= 400; i += 100) {
+      var text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      // Position text just inside the bottom right corner.
+      text.appendChild(document.createTextNode(i));
+      svg.insertBefore(text, backgroundElement.nextSibling);
+      var bbox = text.getBBox()
+      text.setAttribute('x', i - origin - bbox.width - 3);
+      text.setAttribute('y', Studio.MAZE_HEIGHT - bbox.height);
+      text.setAttribute('dominant-baseline', 'hanging');
+
+      text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      // Position text just inside the bottom right corner.
+      text.appendChild(document.createTextNode(i));
+      svg.insertBefore(text, backgroundElement.nextSibling);
+      var bbox = text.getBBox()
+      text.setAttribute('x', 0);
+      text.setAttribute('y', Studio.MAZE_WIDTH - (i - origin) + bbox.height);
+    }
+
   } else {
     Studio.setBackground({value: level.background || skin.defaultBackground});
   }
