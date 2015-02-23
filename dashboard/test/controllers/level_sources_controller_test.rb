@@ -191,13 +191,17 @@ class LevelSourcesControllerTest < ActionController::TestCase
   end
 
   test 'include level source ID for send to phone dialog' do
+    # Prevents regressions in #79201066
+    # Note: This test depends on the current structure of the 'appOptions' interface to Blockly in LevelSourcesController#show.
+    # If that interface changes, this test will fail and need to be updated or removed/disabled.
+
     # Since loading, running and testing functionality within the full Blockly app is too complex,
     # for now just test that the level source ID is correctly set in the appOptions global.
     get :show, id: @level_source.id
     assert_response :success
 
-    # This is a little hack but it works for now - select the first script block containing 'appOptions',
-    # then execute it in a JavaScript engine and return the computed value we want to compare against.
+    # Select the first script block containing 'appOptions', then execute it in a JavaScript engine
+    # and return the computed value we want to compare against.
     element = css('script').select{|x|x.to_s.match(/appOptions/) }.first
     level_source_id = ExecJS.exec("#{element.child.text};\nreturn appOptions.level_source_id")
     assert_equal @level_source.id, level_source_id
