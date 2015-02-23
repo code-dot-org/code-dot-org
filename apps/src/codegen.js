@@ -1,4 +1,61 @@
-var utils = require('./utils');
+var dropletUtils = require('./dropletUtils');
+
+/**
+ * Evaluates a string of code parameterized with a dictionary.
+ */
+exports.evalWith = function(code, options) {
+  if (options.StudioApp && options.StudioApp.editCode) {
+    // Use JS interpreter on editCode levels
+    var initFunc = function(interpreter, scope) {
+      exports.initJSInterpreter(interpreter, scope, options);
+    };
+    var myInterpreter = new Interpreter(code, initFunc);
+    // interpret the JS program all at once:
+    myInterpreter.run();
+  } else {
+    // execute JS code "natively"
+    var params = [];
+    var args = [];
+    for (var k in options) {
+      params.push(k);
+      args.push(options[k]);
+    }
+    params.push(code);
+    var ctor = function() {
+      return Function.apply(this, params);
+    };
+    ctor.prototype = Function.prototype;
+    return new ctor().apply(null, args);
+  }
+};
+
+/**
+ * Returns a function based on a string of code parameterized with a dictionary.
+ */
+exports.functionFromCode = function(code, options) {
+  if (options.StudioApp && options.StudioApp.editCode) {
+    // Since this returns a new native function, it doesn't make sense in the
+    // editCode case (we assume that the app will be using JSInterpreter)
+    throw "Unexpected";
+  } else {
+    var params = [];
+    var args = [];
+    for (var k in options) {
+      params.push(k);
+      args.push(options[k]);
+    }
+    params.push(code);
+    var ctor = function() {
+      return Function.apply(this, params);
+    };
+    ctor.prototype = Function.prototype;
+    return new ctor();
+  }
+};
+
+//
+// Blockly specific codegen functions:
+//
 
 var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
@@ -52,6 +109,10 @@ exports.workspaceCode = function(blockly) {
   var code = blockly.Generator.blockSpaceToCode('JavaScript');
   return exports.strip(code);
 };
+
+//
+// Droplet/JavaScript/Interpreter codegen functions:
+//
 
 exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativeParentObj, maxDepth) {
   var i, retVal;
@@ -168,8 +229,8 @@ function populateFunctionsIntoScope(interpreter, scope, funcsObj, parentObj) {
 }
 
 function populateGlobalFunctions(interpreter, scope) {
-  for (var i = 0; i < utils.dropletGlobalConfigBlocks.length; i++) {
-    var gf = utils.dropletGlobalConfigBlocks[i];
+  for (var i = 0; i < dropletUtils.dropletGlobalConfigBlocks.length; i++) {
+    var gf = dropletUtils.dropletGlobalConfigBlocks[i];
     var func = gf.parent[gf.func];
     var wrapper = exports.makeNativeMemberFunction(interpreter, func, gf.parent);
     interpreter.setProperty(scope,
@@ -368,57 +429,4 @@ exports.getUserCodeLine = function (interpreter, cumulativeLength,
     }
   }
   return userCodeRow;
-};
-
-/**
- * Evaluates a string of code parameterized with a dictionary.
- */
-exports.evalWith = function(code, options) {
-  if (options.StudioApp && options.StudioApp.editCode) {
-    // Use JS interpreter on editCode levels
-    var initFunc = function(interpreter, scope) {
-      exports.initJSInterpreter(interpreter, scope, options);
-    };
-    var myInterpreter = new Interpreter(code, initFunc);
-    // interpret the JS program all at once:
-    myInterpreter.run();
-  } else {
-    // execute JS code "natively"
-    var params = [];
-    var args = [];
-    for (var k in options) {
-      params.push(k);
-      args.push(options[k]);
-    }
-    params.push(code);
-    var ctor = function() {
-      return Function.apply(this, params);
-    };
-    ctor.prototype = Function.prototype;
-    return new ctor().apply(null, args);
-  }
-};
-
-/**
- * Returns a function based on a string of code parameterized with a dictionary.
- */
-exports.functionFromCode = function(code, options) {
-  if (options.StudioApp && options.StudioApp.editCode) {
-    // Since this returns a new native function, it doesn't make sense in the
-    // editCode case (we assume that the app will be using JSInterpreter)
-    throw "Unexpected";
-  } else {
-    var params = [];
-    var args = [];
-    for (var k in options) {
-      params.push(k);
-      args.push(options[k]);
-    }
-    params.push(code);
-    var ctor = function() {
-      return Function.apply(this, params);
-    };
-    ctor.prototype = Function.prototype;
-    return new ctor();
-  }
 };

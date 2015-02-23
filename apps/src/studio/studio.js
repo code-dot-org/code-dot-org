@@ -23,6 +23,7 @@ var Projectile = require('./projectile');
 var BigGameLogic = require('./bigGameLogic');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
+var dropletUtils = require('../dropletUtils');
 var _ = utils.getLodash();
 var dropletConfig = require('./dropletConfig');
 var Hammer = utils.getHammer();
@@ -1567,7 +1568,7 @@ Studio.execute = function() {
   studioApp.reset(false);
 
   if (level.editCode) {
-    var codeWhenRun = utils.generateCodeAliases(dropletConfig, 'Studio');
+    var codeWhenRun = dropletUtils.generateCodeAliases(dropletConfig, 'Studio');
     Studio.userCodeStartOffset = codeWhenRun.length;
     codeWhenRun += studioApp.editor.getValue();
     Studio.userCodeLength = codeWhenRun.length - Studio.userCodeStartOffset;
