@@ -397,7 +397,7 @@
 
           // TODO: does the data work?
           relatedVideos.push(
-            <a data={video.data} href="#" className="video_link" onClick={this.onVideoClick}>
+            <a key={'video' + i} data={video.data} href="#" className="video_link" onClick={this.onVideoClick}>
               <img className="video_thumbnail" src={video.thumbnail_url} width={39*4.7} />
               <div className="video_name"><span>{video.name}</span></div>
             </a>
